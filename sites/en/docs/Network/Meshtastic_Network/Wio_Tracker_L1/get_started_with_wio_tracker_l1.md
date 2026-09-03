@@ -8,7 +8,7 @@ slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 07/31/2026
+  date: 09/02/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
 updatedAt: '2026-08-06'
@@ -377,35 +377,225 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ## FAQ
 
-### Device bricked & Bootloader installation
+### Device Bricked & Bootloader Recovery {#device-bricked--bootloader-installation}
 
 **Description:**
 
 The device is not responding, no LED, can not pair with your App. If you found the device completely dead after flashing your own firmware, you can try re-install the bootloader too.
 
+The bootloader is restored over the USB serial port (Serial DFU) with `adafruit-nrfutil`.
+
 :::danger note
-When you are flashing the bootloader, please make sure the cable connection is stable and **DO NOT** disconnect it during the flash process.
+During flashing, keep the cable connection stable and **DO NOT** disconnect it — even if the serial port number changes.
 :::
 
-- Step 1: [Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+**Step 1: Prepare**
 
-- step 2: Enter DFU mode
+- A Wio Tracker L1 series device (L1 / L1 Pro)
+- A known-good USB data cable (not a charge-only cable)
+- A Windows, macOS or Linux PC with Python 3 and pip
+- The bootloader package: [Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — do NOT extract the ZIP; `adafruit-nrfutil` uses it as it is
 
-  Double click the RST button to enter DFU mode. The disk name "Tracker L1" will pop out.
+**Step 2: Install adafruit-nrfutil**
 
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
+<Tabs>
+<TabItem value="windows" label="Windows">
 
-- step 3: Paste the bootloader file
+Check that Python 3 and pip are available (if pip is missing, run `python -m ensurepip --upgrade` first):
 
-  Cover all the files in the disk with the downloaded bootloader file.
+```
+python --version
+python -m pip --version
+```
 
-- step 4: Flash the firmware
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/00_python_pip_check.png" alt="Check Python and pip on Windows" width={600} height="auto" /></p>
 
-  When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) to flash the application firmware. You may need to [enter the DFUmode manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+Then install and verify (the version tested for this guide is `0.5.3.post16`):
+
+```
+python -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/01_nrfutil_version.png" alt="adafruit-nrfutil version output on Windows" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+python3 --version
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+If pip is missing, run `python3 -m ensurepip --upgrade` first.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+```
+python3 --version
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+If pip is missing, run `python3 -m ensurepip --upgrade` first.
+
+</TabItem>
+</Tabs>
+
+:::note
+Always check the version with `adafruit-nrfutil version`. Do NOT use `adafruit-nrfutil --version`.
+:::
+
+**Step 3: Check the serial port**
+
+Note the device’s serial port — the examples below vary by PC:
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+Open **Device Manager → Ports (COM & LPT)**, for example:
+
+```
+USB Serial Device (COM43)
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/02_normal_com_port.png" alt="Wio Tracker L1 serial port in Windows Device Manager" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+ls /dev/cu.*
+```
+
+The device appears as `/dev/cu.usbmodemXXXX`.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+```
+ls /dev/ttyACM*
+```
+
+The device usually appears as `/dev/ttyACM0`; if nothing is listed, also try `ls /dev/ttyUSB*`.
+
+</TabItem>
+</Tabs>
+
+**Step 4: Flash the bootloader**
+
+Replace the port with the one you found in Step 3:
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p COM43 -b 115200 --singlebank --touch 1200
+```
+
+If the ZIP is not in your terminal’s current folder, pass its full path to `--package`, e.g. `"C:\path\to\wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip"`.
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
+```
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/ttyACM0 -b 115200 --singlebank --touch 1200
+```
+
+</TabItem>
+</Tabs>
+
+**Step 5: Handle the serial port change**
+
+`--touch 1200` restarts the device into DFU mode, so the serial port usually changes and the first command may stop with a traceback like this:
+
+```
+Touched serial port COM43
+...
+FileNotFoundError: could not open port 'COM43'
+```
+
+This is NOT a failure — the device already entered DFU mode on a NEW port. On the tested Windows PC, for example, it changed from `COM43` to `COM45`:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/03_dfu_com_port.png" alt="DFU serial port after re-enumeration in Windows Device Manager" width={600} height="auto" /></p>
+
+**Keep the USB cable connected.** Find the new port (refresh **Device Manager → Ports (COM & LPT)**, or re-run `ls /dev/cu.*` / `ls /dev/ttyACM*`), then flash again on the new port WITHOUT `--touch 1200`:
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p COM45 -b 115200 --singlebank
+```
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/cu.usbmodemXXXX -b 115200 --singlebank
+```
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+```
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/ttyACM0 -b 115200 --singlebank
+```
+
+</TabItem>
+</Tabs>
+
+**Step 6: Confirm the result**
+
+The flashing succeeded when the output ends with `Device programmed.`:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="adafruit-nrfutil output ending with Device programmed" width={600} height="auto" /></p>
+
+After that, a UF2 drive appears on your PC (screenshot from the tested Windows PC). Its volume label varies with the bootloader build — the tested unit showed `XIAO-BOOT` — and is NOT a pass/fail criterion; do not judge the result by the drive name or by `INFO_UF2.TXT`:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/05_uf2_drive.png" alt="UF2 drive appears after bootloader flashing" width={600} height="auto" /></p>
+
+**Step 7: Reinstall the application firmware**
+
+:::warning
+Restoring the bootloader does NOT reinstall the application firmware — the device still has no working firmware until you flash it again.
+:::
+
+When you have completed the above steps, follow [Flash Firmware](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) to flash the application firmware.
+
+**Troubleshooting**
+
+- `adafruit-nrfutil` is not recognized after installation: the Python user scripts directory is not on your PATH (`Scripts` on Windows, `bin` under your home directory on macOS/Linux) — add it to PATH, or reinstall without `--user`.
+- Port busy / access denied: close serial monitors, web flasher tabs, Arduino IDE, or anything else holding the port.
+- `FileNotFoundError: could not open port ...` after `Touched serial port ...`: the device entered DFU mode on a new port — follow Step 5.
+- Unable to enter DFU mode: see [Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually).
+
+**Manual DFU recovery**
+
+If `--touch 1200` cannot put the device into DFU mode (e.g. the firmware is completely unresponsive), enter it by hand: connect the device, double-press `Reset` (the yellow LED stays solid), find the DFU serial port as in Step 3, then run the Step 5 command on that port WITHOUT `--touch 1200`. Success looks the same as Step 6.
 
 ### Unable to enter DFU & Entering DFU Mode Manually
 
-Connect the device to your PC, double-press the `Reset` button. The yellow LED will stay solid, and a new USB drive named `Tracker L1` will appear on your PC.
+Connect the device to your PC and double-press the `Reset` button — the yellow LED stays solid and a DFU serial port appears on your PC.
+
+To flash the bootloader in this mode, follow [Device Bricked & Bootloader Recovery](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#device-bricked--bootloader-installation), but skip `--touch 1200` — the device is already in DFU mode.
 
 ### Exiting DFU Mode
 
@@ -499,7 +689,7 @@ If you need a antenna replacement for L1 Pro, [click here](https://www.seeedstud
 
 ## Resources
 
-- [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- [Bootloader (Serial DFU package)](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip)
 - [(V1) 3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
 - [(V2 New Four-way Joystick) 3D printing reference file](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [L1 Enclosure Design Challenge](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)

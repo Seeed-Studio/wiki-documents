@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone_Green
 sku: 102010027
 last_update:
-  date: 1/10/2023
+  date: 9/2/2026
   author: jianjing Huang
 createdAt: '2023-01-10'
 updatedAt: '2026-01-07'
@@ -410,6 +410,8 @@ There're many references to help you to get more information about the board.
 * **[PDF]** [Seeed Studio BeagleBone® Green SRM(v3)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V3_20150804.pdf)
 * **[PDF]** [Seeed Studio BeagleBone® Green Schematics v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.pdf)
 * **[ZIP]** [Seeed Studio BeagleBone® Green Schematics v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.zip)
+* **[PDF]** [Seeed Studio BeagleBone® Green Schematics v1.2](https://files.seeedstudio.com/products/102010027/Res/BeagleBone_Green_REV1.2_SCH_240816.pdf)
+* **[ZIP]** [Seeed Studio BeagleBone® Green Schematics v1.2](https://files.seeedstudio.com/products/102010027/Res/202003277_BeagleBone_Green_REV1.2.zip)
 * **[PDF]** [Seeed Studio BeagleBone® Green Schematics v1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1.pdf)
 * **[Zip]** [Seeed Studio BeagleBone® Green Schematics(OrCAD) v1c](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip)
 * **[RAR]** [Seeed Studio BeagleBone® Green Schematics(OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
@@ -431,4 +433,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

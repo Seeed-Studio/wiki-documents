@@ -2281,6 +2281,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/respeaker_clip_chat_architecture',
               ],
             },
           ],
@@ -3855,6 +3856,7 @@ const sidebars = {
           type: 'category',
           label: 'Getting Started',
           items: [
+            'Edge/NVIDIA_Jetson/Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',

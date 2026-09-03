@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/24/2026
+  date: 08/31/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-08-24'
+updatedAt: '2026-08-31'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,35 +18,65 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 24th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 31th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Build a Four-Camera Fisheye Surround View Demo on Jetson](https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/)
+### [JetPack 7.2 Memory Optimization: Software Advances and an LLM Deployment Budget](https://wiki.seeedstudio.com/jetpack_7_2_memory_optimization_deep_dive/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/jetpack-7.2/unified_mem.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
+This article focuses on two questions for Jetson Orin developers: which JetPack 7.2 software updates can improve memory efficiency, and how to turn the available memory into a practical LLM deployment budget. It distinguishes JetPack 7.2 features from general TensorRT and LLM techniques, helping you measure each optimization accurately.
 
 </div>
 
-### [Get Started with SenseCAP Combo](https://wiki.seeedstudio.com/get_started_with_sensecap_combo/)
+### [Build a Visual Wake and Offline Speech Recognition System with reCamera Pro](https://wiki.seeedstudio.com/recamera_pro_visual_wake_stt/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Combo/combo-intro.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/gpt_images.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces how to get started with the SenseCAP Combo 5-in-1 Sensor with 4G, including SIM card and sensor installation, device configuration, SenseCAP Cloud connection, and data monitoring.
+This project implements a natural, fully on-device interaction flow for reCamera Pro (RV1126B). The camera detects a face and estimates head pose. Only after a person has looked at the camera continuously does the application open the microphone and start streaming speech recognition. It then enters a brief cooldown period to prevent repeat triggers. It is suitable for voice assistants, exhibition kiosks, and privacy-first edge voice entry points. Vision, pose evaluation, speech features, and Zipformer inference run locally. The web dashboard requires no cloud service, Node.js process, CDN, or external font.
 
 </div>
 
-### [Build a reCamera and NVIDIA Jetson VLM Event Gateway](https://wiki.seeedstudio.com/recamera_jetson_vlm_gateway/)
+### [Build Real-Time Audio Streaming with reSpeaker Clip RTC SDK](https://wiki.seeedstudio.com/respeaker_clip_rtc_streaming/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/rtc/rtc_fft_demo_pipeline.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces how to build a VLM event gateway using reCamera Basic and NVIDIA Jetson, combining YOLOv8 and Qwen3-VL for scene analysis, event alerts, and real-time video streaming.
+This tutorial teaches you how to receive live audio from a reSpeaker Clip while it is being captured, instead of recording first and downloading later. You will run a real-time FFT spectrum demo, understand how an RTC session is established, write a minimal streaming application yourself, and learn what the audio data actually looks like on the host.
+
+</div>
+
+### [reCamera Pro GPIO Pin Usage Guide](https://wiki.seeedstudio.com/recamera_pro_gpio_guide/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Expansion_CON.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This article describes how to use GPIO pins on the reCamera Pro. You will learn how to determine the target GPIO pin using the pin number calculation formula, export and configure pin direction and level via the sysfs interface, and use Python scripts to control GPIO outputs or read input levels.
+
+</div>
+
+### [Convert and Quantize Models for reCamera Pro with RKNN-Toolkit2](https://wiki.seeedstudio.com/recamera_pro_rknn_model_conversion/)
+
+<div style={{ textAlign: "justify" }}>
+
+reCamera Pro uses the Rockchip RV1126B. To run a custom neural-network model on its NPU, export the model to ONNX and compile it to an RKNN model for **RV1126B** on an x86_64 Linux PC or WSL environment. This guide creates an FP16 baseline and an INT8-quantized model. Conversion occurs on the host PC; a connected reCamera Pro is needed only for final validation and deployment.
+
+</div>
+
+### [Using I2C Commands to Control reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_xvf_3800_i2c_list/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This section provides the I2C control command list for the ReSpeaker XVF3800, along with I2C read/write examples and hardware signal-path diagrams for the two operating modes. For an application example of controlling the ReSpeaker XVF3800 via the I2C interface, please refer to the [Device Control](/respeaker_xvf3800_xiao_rgb) section.
 
 </div>
 
@@ -201,5 +231,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.8.03rd](/Seeed_Elderly/weekly_wiki/2026/wiki260803)
 - [weekly wiki on 2026.8.10th](/Seeed_Elderly/weekly_wiki/2026/wiki260810)
 - [weekly wiki on 2026.8.17th](/Seeed_Elderly/weekly_wiki/2026/wiki260817)
+- [weekly wiki on 2026.8.24th](/Seeed_Elderly/weekly_wiki/2026/wiki260824)
 
 </details>
