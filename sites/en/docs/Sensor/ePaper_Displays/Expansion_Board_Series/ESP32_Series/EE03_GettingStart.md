@@ -121,14 +121,14 @@ Use your mobile phone to scan the QR code displayed on the screen. Follow the pr
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
-**Step 5. Obtain Pairing Code**
+**Step 5. Obtain Pair Code**
 Once the network configuration is successful, the screen will refresh again and display a unique **Pair Code**. You will need this code for the next step.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_2.png" style={{width:300,height:'auto'}}/></div>
 
 ### Platform Binding & Update
 
 **Step 6. Bind Device on SenseCraft HMI**
-Go to the [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "New Device". Enter the Pairing Code displayed on your E-ink screen.
+Go to the [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "New Device". Enter the Pair Code displayed on your E-ink screen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
@@ -213,10 +213,9 @@ Now you will see the feedback in your epaper screen! Following is the result of 
 *   This is normal for ePaper displays. The high-voltage driving circuit produces an audible sound during the refresh cycle, especially with larger screens. It does not indicate a hardware fault and will stop once refresh is complete.
 
 **Q5: SenseCraft HMI device binding fails.**
-*   Double-check that the Pairing Code is entered correctly (case-sensitive).
-*   Ensure the device is online — check the Wi-Fi icon on the screen.
-*   Make sure your phone and the device are on the same 2.4GHz Wi-Fi network during pairing.
-*   If the device shows as offline, press the Reset button and try pairing again.
+*   Double-check that the Pair Code is entered correctly (case-sensitive).
+*   Make sure your phone and the device are on the same 2.4GHz Wi-Fi network during pair binding.
+*   If the device shows as offline, press the Reset button and try pair binding again.
 
 ## Resources
 - **[PDF]** [Seeed Studio XIAO ePaper Display EE03 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE03/XIAO_ePaper_Display_Board_EE03_V1.0_SCH_251217.pdf)
