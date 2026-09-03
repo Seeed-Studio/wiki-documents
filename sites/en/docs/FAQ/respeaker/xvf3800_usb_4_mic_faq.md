@@ -23,6 +23,7 @@ This page contains verified answers for the reSpeaker XVF3800 USB 4-Mic Array. E
 - Check the current firmware version before applying version-specific steps.
 - Answers on this page were last verified on 2026-08-31; re-check the linked official sources if you are reading this later.
 
+<!-- RESPEAKER_FAQ_AUTO_START -->
 ## Documentation & Usage {#documentation-and-usage}
 
 ### How do I open the XVF3800 casing without damaging it? {#open-casing-safely}
@@ -445,6 +446,7 @@ Yes. The current official hardware overview describes a built-in unique device s
 - [XVF3800 hardware overview](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#hardware-overview)
 - [Official XVF3800 DFU guide](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/dfu_guide.md)
 
+<!-- RESPEAKER_FAQ_AUTO_END -->
 
 ## Tech Support & Product Discussion
 

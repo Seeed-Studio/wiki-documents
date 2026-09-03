@@ -24,6 +24,7 @@ This page contains verified answers for the reSpeaker Lite. Each answer states t
 - Check the current firmware version before applying version-specific steps.
 - Answers on this page were last verified on 2026-08-31; re-check the linked official sources if you are reading this later.
 
+<!-- RESPEAKER_FAQ_AUTO_START -->
 ## Documentation & Usage {#documentation-and-usage}
 
 ### Where can I download the ReSpeaker Lite STEP file? {#step-mechanical-file}
@@ -302,6 +303,7 @@ Do not treat direct single-cell battery input as supported. The published ReSpea
 
 - [ReSpeaker Lite power specification and hardware overview](https://wiki.seeedstudio.com/reSpeaker_usb_v3/)
 
+<!-- RESPEAKER_FAQ_AUTO_END -->
 
 ## Tech Support & Product Discussion
 

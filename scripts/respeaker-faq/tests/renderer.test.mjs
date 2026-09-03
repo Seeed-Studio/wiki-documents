@@ -9,12 +9,18 @@ import {
   PRODUCT_ORDER,
   PRODUCTS,
   PRODUCT_LABELS,
+  FAQ_AUTO_START_MARKER,
+  FAQ_AUTO_END_MARKER,
   loadManifest,
   validateManifest,
+  renderManagedFaqRegion,
   renderProductPage,
   renderSearchIndex,
   planTargets,
+  extractManagedRegion,
+  patchManagedRegion,
   classifyTarget,
+  classifyManagedTarget,
 } from '../pipeline.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', '..', '..');
@@ -333,5 +339,181 @@ test('manifest and generated sources stay in sync (no drift after apply)', () =>
   for (const t of targets) {
     const onDisk = fs.readFileSync(path.join(REPO_ROOT, t.rel), 'utf8');
     assert.strictEqual(onDisk, t.content, `${t.rel} drifted from manifest`);
+  }
+});
+
+test('managed region: exactly one AUTO marker pair per rendered page, shell content outside', () => {
+  const manifest = loadManifest();
+  const docTargets = planTargets(manifest).filter((t) => t.rel.endsWith('.md'));
+  assert.strictEqual(docTargets.length, 6);
+  for (const t of docTargets) {
+    const starts = (t.content.match(/<!-- RESPEAKER_FAQ_AUTO_START -->/g) || []).length;
+    const ends = (t.content.match(/<!-- RESPEAKER_FAQ_AUTO_END -->/g) || []).length;
+    assert.strictEqual(starts, 1, `${t.rel}: exactly one AUTO_START marker`);
+    assert.strictEqual(ends, 1, `${t.rel}: exactly one AUTO_END marker`);
+
+    const parsed = extractManagedRegion(t.content);
+    assert.ok(parsed, `${t.rel}: markers must delimit an extractable region`);
+    assert.strictEqual(parsed.region, t.managedRegion, `${t.rel}: rendered region must match extracted region`);
+
+    // Every FAQ question heading lives inside the managed region, so the
+    // search-index deep links (slug#anchor) are pipeline-owned.
+    const regionQuestions = [...parsed.region.matchAll(/^### .*\{#[a-z0-9-]+\}$/gm)].map((m) => m[0]);
+    const pageQuestions = [...t.content.matchAll(/^### .*\{#[a-z0-9-]+\}$/gm)].map((m) => m[0]);
+    assert.deepStrictEqual(regionQuestions, pageQuestions, `${t.rel}: all FAQ blocks must live inside the managed region`);
+
+    // Frontmatter, intro and support sections stay in the manually-owned shell.
+    const before = t.content.slice(0, t.content.indexOf(FAQ_AUTO_START_MARKER));
+    const after = t.content.slice(t.content.indexOf(FAQ_AUTO_END_MARKER) + FAQ_AUTO_END_MARKER.length);
+    assert.match(before, /^---\r?\ntitle:/, `${t.rel}: frontmatter must stay outside the managed region`);
+    assert.ok(before.includes('# '), `${t.rel}: H1 must stay outside the managed region`);
+    assert.ok(before.includes('## Before you begin'), `${t.rel}: intro section must stay outside the managed region`);
+    assert.ok(after.includes('## Tech Support & Product Discussion'), `${t.rel}: support section must stay outside the managed region`);
+    assert.ok(after.includes('</div>'), `${t.rel}: closing wrapper must stay outside the managed region`);
+  }
+});
+
+test('patchManagedRegion: only the managed span is replaced, outside bytes preserved', () => {
+  const manifest = loadManifest();
+  const t = planTargets(manifest).find((x) => x.rel.endsWith('.md'));
+  const changed = '## New Section {#new-section}\n\n### New question {#new-question}';
+  const patched = patchManagedRegion(t.content, changed);
+  assert.ok(patched, 'patched content expected');
+
+  const parsed = extractManagedRegion(patched);
+  assert.strictEqual(parsed.region, changed);
+  const patchedEnd = patched.indexOf(FAQ_AUTO_END_MARKER) + FAQ_AUTO_END_MARKER.length;
+  const originalEnd = t.content.indexOf(FAQ_AUTO_END_MARKER) + FAQ_AUTO_END_MARKER.length;
+  assert.strictEqual(patched.slice(0, patched.indexOf(FAQ_AUTO_START_MARKER)), t.content.slice(0, t.content.indexOf(FAQ_AUTO_START_MARKER)), 'bytes before the start marker must be preserved');
+  assert.strictEqual(patched.slice(patchedEnd), t.content.slice(originalEnd), 'bytes after the end marker must be preserved');
+});
+
+test('idempotency: applying a rendered region to its own page is a byte no-op', () => {
+  const manifest = loadManifest();
+  for (const t of planTargets(manifest).filter((x) => x.rel.endsWith('.md'))) {
+    assert.strictEqual(patchManagedRegion(t.content, t.managedRegion), t.content, `${t.rel}: second apply must be a no-op`);
+    assert.strictEqual(extractManagedRegion(t.content).region, t.managedRegion, `${t.rel}: extraction round-trip`);
+  }
+});
+
+test('classifyManagedTarget: create-needed / update-needed / conflict rules on the managed region', () => {
+  const manifest = loadManifest();
+  const t = planTargets(manifest).find((x) => x.rel.endsWith('.md'));
+  const oldRegion = '## Old Section {#old-section}\n\n### Old question {#old-question}';
+  const oldMarked = patchManagedRegion(t.content, oldRegion);
+
+  // Missing file -> create-needed.
+  assert.deepStrictEqual(
+    classifyManagedTarget({ onDisk: null, renderedRegion: t.managedRegion, baselineHash: null, baselineRegionHash: null, stateRegionHash: undefined }),
+    { status: 'create-needed', reason: '' },
+  );
+  // Region equals the committed baseline region -> source-driven update.
+  assert.deepStrictEqual(
+    classifyManagedTarget({
+      onDisk: oldMarked,
+      renderedRegion: t.managedRegion,
+      baselineHash: null,
+      baselineRegionHash: sha256(oldRegion),
+      stateRegionHash: undefined,
+    }),
+    { status: 'update-needed', reason: 'source changed since last publish' },
+  );
+  // Region equals the last applied state region -> renderer-driven update.
+  assert.deepStrictEqual(
+    classifyManagedTarget({
+      onDisk: oldMarked,
+      renderedRegion: t.managedRegion,
+      baselineHash: null,
+      baselineRegionHash: null,
+      stateRegionHash: sha256(oldRegion),
+    }),
+    { status: 'update-needed', reason: 'renderer changed since last apply' },
+  );
+  // An edit inside the managed region must conflict and never be overwritten.
+  const tampered = patchManagedRegion(t.content, '## Tampered {#tampered}\n\nHuman edit inside the managed region.');
+  assert.deepStrictEqual(
+    classifyManagedTarget({
+      onDisk: tampered,
+      renderedRegion: t.managedRegion,
+      baselineHash: sha256(t.content),
+      baselineRegionHash: sha256(t.managedRegion),
+      stateRegionHash: sha256(t.managedRegion),
+    }),
+    { status: 'conflict', reason: 'manual edit inside managed FAQ region' },
+  );
+});
+
+test('classifyManagedTarget: frontmatter reformat and external edits never conflict', () => {
+  const manifest = loadManifest();
+  for (const t of planTargets(manifest).filter((x) => x.rel.endsWith('.md'))) {
+    // normalize-frontmatter-like rewrite: reordered keys plus added
+    // createdAt/updatedAt/url fields, plus ordinary hand edits in the shell.
+    const closingIdx = t.content.indexOf('\n---\n');
+    const body = t.content.slice(closingIdx + 1); // '---\n' + body
+    const fmLines = [
+      `slug: ${t.content.match(/^slug: (\S+)$/m)[1]}`,
+      `description: ${t.content.match(/^description: (.+)$/m)[1]}`,
+      `title: ${t.content.match(/^title: (.+)$/m)[1]}`,
+      'keywords:',
+      ...t.content.match(/^  - .+$/gm),
+      'createdAt: 2026-08-31',
+      'updatedAt: 2026-09-02',
+      `url: https://wiki.seeedstudio.com${t.content.match(/^slug: (\S+)$/m)[1]}/`,
+      'last_update:',
+      '  date: 9/2/2026',
+      '  author: ray',
+    ];
+    const edited =
+      `---\n${fmLines.join('\n')}\n` +
+      body
+        .replace('Each answer states the product variant', 'Each answer describes the product variant')
+        .replace('## Tech Support & Product Discussion', '## Tech Support & Product Discussion (revised)');
+
+    const decision = classifyManagedTarget({
+      onDisk: edited,
+      renderedRegion: t.managedRegion,
+      baselineHash: sha256(t.content),
+      baselineRegionHash: sha256(t.managedRegion),
+      stateRegionHash: sha256(t.managedRegion),
+    });
+    assert.deepStrictEqual(decision, { status: 'up-to-date', reason: '' }, `${t.rel}: external edits must not conflict`);
+
+    // Even without any baseline/state hashes the unchanged region is up-to-date.
+    assert.deepStrictEqual(
+      classifyManagedTarget({ onDisk: edited, renderedRegion: t.managedRegion, baselineHash: null, baselineRegionHash: null, stateRegionHash: undefined }),
+      { status: 'up-to-date', reason: '' },
+      `${t.rel}: unchanged region is up-to-date without baseline/state`,
+    );
+  }
+});
+
+test('classifyManagedTarget: marker-less legacy pages migrate only when they match the committed baseline', () => {
+  const manifest = loadManifest();
+  const t = planTargets(manifest).find((x) => x.rel.endsWith('.md'));
+  const legacy = t.content
+    .split('\n')
+    .filter((l) => l !== FAQ_AUTO_START_MARKER && l !== FAQ_AUTO_END_MARKER)
+    .join('\n');
+
+  // Byte-identical to HEAD baseline -> safe migration.
+  assert.deepStrictEqual(
+    classifyManagedTarget({ onDisk: legacy, renderedRegion: t.managedRegion, baselineHash: sha256(legacy), baselineRegionHash: null, stateRegionHash: undefined }),
+    { status: 'update-needed', reason: 'legacy page without markers (migrate)' },
+  );
+  // Manually edited legacy page -> conflict, never overwritten.
+  const edited = legacy.replace('## Before you begin', '## Before you begin (changed)');
+  assert.deepStrictEqual(
+    classifyManagedTarget({ onDisk: edited, renderedRegion: t.managedRegion, baselineHash: sha256(legacy), baselineRegionHash: null, stateRegionHash: undefined }),
+    { status: 'conflict', reason: 'manual edit detected after last publish' },
+  );
+});
+
+test('published pages: on-disk managed region matches a fresh render (no region drift)', () => {
+  const manifest = loadManifest();
+  for (const t of planTargets(manifest).filter((x) => x.rel.endsWith('.md'))) {
+    const onDisk = fs.readFileSync(path.join(REPO_ROOT, t.rel), 'utf8');
+    const parsed = extractManagedRegion(onDisk);
+    assert.ok(parsed, `${t.rel}: published page must carry the AUTO markers`);
+    assert.strictEqual(parsed.region, t.managedRegion, `${t.rel}: on-disk managed region drifted from render`);
   }
 });

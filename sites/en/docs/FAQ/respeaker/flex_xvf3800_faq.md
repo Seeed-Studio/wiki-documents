@@ -23,6 +23,7 @@ This page contains verified answers for the reSpeaker Flex. Each answer states t
 - Check the current firmware version before applying version-specific steps.
 - Answers on this page were last verified on 2026-08-31; re-check the linked official sources if you are reading this later.
 
+<!-- RESPEAKER_FAQ_AUTO_START -->
 ## Documentation & Usage {#documentation-and-usage}
 
 ### Where can I download ReSpeaker Flex 2D and 3D mechanical files? {#mechanical-cad-files}
@@ -169,6 +170,7 @@ The official Flex guide documents a keyed 24-pin, 0.5 mm-pitch FPC interface and
 - [ReSpeaker Flex FPC specification and installation](https://wiki.seeedstudio.com/respeaker_flex_introduction/#24-fpc-cable)
 - [ReSpeaker Flex I2S link test](https://wiki.seeedstudio.com/respeaker_flex_xiao_i2s/)
 
+<!-- RESPEAKER_FAQ_AUTO_END -->
 
 ## Tech Support & Product Discussion
 

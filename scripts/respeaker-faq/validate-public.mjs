@@ -109,6 +109,42 @@ check('frontmatter: FAQ pages have required fields', () => {
   return problems;
 });
 
+check('pipeline markers: generated product pages carry exactly one AUTO region with all manifest anchors inside', () => {
+  const AUTO_START = '<!-- RESPEAKER_FAQ_AUTO_START -->';
+  const AUTO_END = '<!-- RESPEAKER_FAQ_AUTO_END -->';
+  const problems = [];
+  const entryAnchorsBySlug = new Map();
+  for (const entry of manifest.entries) {
+    if (!entryAnchorsBySlug.has(entry.wikiSlug)) entryAnchorsBySlug.set(entry.wikiSlug, []);
+    entryAnchorsBySlug.get(entry.wikiSlug).push(entry.wikiAnchor);
+  }
+  for (const file of faqFiles) {
+    if (path.basename(file) === FAQ_CENTER_FILE) continue;
+    const content = fs.readFileSync(file, 'utf8');
+    const start = content.indexOf(AUTO_START);
+    const end = content.indexOf(AUTO_END);
+    const starts = content.split(AUTO_START).length - 1;
+    const ends = content.split(AUTO_END).length - 1;
+    if (starts !== 1 || ends !== 1) {
+      problems.push(`${path.basename(file)}: expected exactly one AUTO_START/AUTO_END pair, got ${starts}/${ends}`);
+      continue;
+    }
+    if (end < start) {
+      problems.push(`${path.basename(file)}: AUTO_END appears before AUTO_START`);
+      continue;
+    }
+    const region = content.slice(start + AUTO_START.length, end);
+    const regionAnchors = new Set(extractAnchors(region));
+    const slug = docSlug(file);
+    for (const anchor of entryAnchorsBySlug.get(slug) || []) {
+      if (!regionAnchors.has(anchor)) {
+        problems.push(`${path.basename(file)}: manifest anchor ${anchor} missing from the managed region`);
+      }
+    }
+  }
+  return problems;
+});
+
 check('slugs: FAQ slugs globally unique and consistent with the manifest', () => {
   const problems = [];
   const expected = new Set(manifest.entries.map((e) => e.wikiSlug));

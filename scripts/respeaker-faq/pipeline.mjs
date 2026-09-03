@@ -8,6 +8,13 @@
  *
  * Behavior:
  *   - Deterministic/idempotent: identical manifest => byte-identical output.
+ *   - Product FAQ pages carry a pipeline-managed region delimited by
+ *     <!-- RESPEAKER_FAQ_AUTO_START --> / <!-- RESPEAKER_FAQ_AUTO_END -->.
+ *     Only that region is pipeline-owned: frontmatter, intro and support
+ *     sections are manually owned and preserved byte-for-byte.
+ *   - Reconcile compares managed-region hashes for product pages, so
+ *     normalize-frontmatter.js reformatting or ordinary hand edits outside
+ *     the region never cause a false conflict or later overwrite.
  *   - Dry-run by default: prints a reconcile report, writes nothing.
  *   - `--apply` writes only "create-needed"/"update-needed" files and never
  *     overwrites a file that was manually edited after the last publish
@@ -144,6 +151,9 @@ export const DOMAIN_LABELS = {
 export const FAQ_PAGE_CLASS = 'respeaker-faq-page';
 export const FAQ_PAGE_WRAPPER_OPEN = `<div class="${FAQ_PAGE_CLASS}">`;
 
+export const FAQ_AUTO_START_MARKER = '<!-- RESPEAKER_FAQ_AUTO_START -->';
+export const FAQ_AUTO_END_MARKER = '<!-- RESPEAKER_FAQ_AUTO_END -->';
+
 /* ------------------------------------------------------------------ */
 /* Manifest loading & validation                                        */
 /* ------------------------------------------------------------------ */
@@ -262,6 +272,29 @@ function renderFaqBlock(entry) {
   return lines.join('\n');
 }
 
+export function renderManagedFaqRegion(productKey, entries) {
+  const product = PRODUCTS[productKey];
+  if (!product) throw new Error(`unknown productKey ${productKey}`);
+  const byDomain = new Map();
+  for (const d of DOMAINS) byDomain.set(d.key, []);
+  for (const e of entries) byDomain.get(e.primaryDomain).push(e);
+
+  const lines = [];
+  for (const d of DOMAINS) {
+    const faqs = byDomain.get(d.key);
+    if (!faqs.length) continue;
+    lines.push(`## ${d.label} {#${d.anchor}}`);
+    lines.push('');
+    for (const e of faqs) {
+      lines.push(renderFaqBlock(e));
+    }
+  }
+  // The managed region ends at the last FAQ block; page assembly places the
+  // AUTO_END marker directly after it, so no trailing blank lines.
+  while (lines.length && lines[lines.length - 1] === '') lines.pop();
+  return lines.join('\n');
+}
+
 export function renderProductPage(productKey, entries) {
   const product = PRODUCTS[productKey];
   const slug = entries[0].wikiSlug;
@@ -270,9 +303,7 @@ export function renderProductPage(productKey, entries) {
       throw new Error(`${e.publicFaqId}: multiple slugs for product ${productKey}`);
     }
   }
-  const byDomain = new Map();
-  for (const d of DOMAINS) byDomain.set(d.key, []);
-  for (const e of entries) byDomain.get(e.primaryDomain).push(e);
+  const managed = renderManagedFaqRegion(productKey, entries);
 
   const lines = [];
   lines.push('---');
@@ -300,15 +331,9 @@ export function renderProductPage(productKey, entries) {
   lines.push('- Check the current firmware version before applying version-specific steps.');
   lines.push(`- Answers on this page were last verified on ${entries[0].lastVerifiedAt}; re-check the linked official sources if you are reading this later.`);
   lines.push('');
-  for (const d of DOMAINS) {
-    const faqs = byDomain.get(d.key);
-    if (!faqs.length) continue;
-    lines.push(`## ${d.label} {#${d.anchor}}`);
-    lines.push('');
-    for (const e of faqs) {
-      lines.push(renderFaqBlock(e));
-    }
-  }
+  lines.push(FAQ_AUTO_START_MARKER);
+  lines.push(managed);
+  lines.push(FAQ_AUTO_END_MARKER);
   lines.push('');
   lines.push('## Tech Support & Product Discussion');
   lines.push('');
@@ -371,12 +396,15 @@ export function planTargets(manifest) {
     targets.push({
       rel: `sites/en/docs/FAQ/respeaker/${product.file}`,
       abs: path.join(FAQ_DOC_DIR, product.file),
+      kind: 'doc',
+      managedRegion: renderManagedFaqRegion(p, entries),
       content: renderProductPage(p, entries),
     });
   }
   targets.push({
     rel: 'src/data/respeaker_faq_index.json',
     abs: INDEX_TARGET,
+    kind: 'json',
     content: `${JSON.stringify(renderSearchIndex(manifest), null, 2)}\n`,
   });
   return targets;
@@ -418,30 +446,154 @@ export function classifyTarget({ rendered, onDisk, baselineHash, stateHash }) {
   return { status: 'conflict', reason: 'manual edit detected after last publish' };
 }
 
+/* ------------------------------------------------------------------ */
+/* Managed-region helpers (product FAQ pages)                          */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Locates the pipeline-managed region delimited by
+ * <!-- RESPEAKER_FAQ_AUTO_START --> / <!-- RESPEAKER_FAQ_AUTO_END -->.
+ *
+ * @param {string} content full file content
+ * @returns {{ region: string, startLine: number, endLine: number }|null}
+ *   null when either marker is missing or out of order.
+ */
+export function extractManagedRegion(content) {
+  if (typeof content !== 'string') return null;
+  const lines = content.split('\n');
+  const startLine = lines.findIndex((l) => l.trim() === FAQ_AUTO_START_MARKER);
+  if (startLine === -1) return null;
+  const endLine = lines.findIndex((l, i) => i > startLine && l.trim() === FAQ_AUTO_END_MARKER);
+  if (endLine === -1) return null;
+  return { region: lines.slice(startLine + 1, endLine).join('\n'), startLine, endLine };
+}
+
+/**
+ * Replaces the managed region in `content` with `newRegion`, preserving every
+ * byte outside the markers. Returns null when the markers are absent.
+ */
+export function patchManagedRegion(content, newRegion) {
+  const parsed = extractManagedRegion(content);
+  if (!parsed) return null;
+  const lines = content.split('\n');
+  const replacement = [FAQ_AUTO_START_MARKER, ...newRegion.split('\n'), FAQ_AUTO_END_MARKER];
+  return [...lines.slice(0, parsed.startLine), ...replacement, ...lines.slice(parsed.endLine + 1)].join('\n');
+}
+
+/**
+ * Pure classification for a product FAQ page target. Compares only the
+ * pipeline-managed region: edits outside the markers (frontmatter, intro,
+ * support section) never conflict and are always preserved.
+ *
+ * @param {object} args
+ * @param {string|null} args.onDisk current full file content (null if absent)
+ * @param {string} args.renderedRegion freshly rendered managed region
+ * @param {string|null} args.baselineHash sha256 of the committed HEAD version (whole file)
+ * @param {string|null} args.baselineRegionHash sha256 of the managed region of the committed HEAD version
+ * @param {string|undefined} args.stateRegionHash sha256 of the managed region from the last applied state
+ * @returns {{ status: 'up-to-date'|'create-needed'|'update-needed'|'conflict', reason: string }}
+ */
+export function classifyManagedTarget({ onDisk, renderedRegion, baselineHash, baselineRegionHash, stateRegionHash }) {
+  if (onDisk === null) return { status: 'create-needed', reason: '' };
+  const parsed = extractManagedRegion(onDisk);
+  if (parsed !== null) {
+    const onDiskRegionHash = sha256(parsed.region);
+    if (parsed.region === renderedRegion) return { status: 'up-to-date', reason: '' };
+    if (baselineRegionHash !== null && onDiskRegionHash === baselineRegionHash) {
+      return { status: 'update-needed', reason: 'source changed since last publish' };
+    }
+    if (stateRegionHash !== undefined && onDiskRegionHash === stateRegionHash) {
+      return { status: 'update-needed', reason: 'renderer changed since last apply' };
+    }
+    return { status: 'conflict', reason: 'manual edit inside managed FAQ region' };
+  }
+  // Legacy page without markers: the whole file is provably pipeline output
+  // only when it matches the committed baseline; anything else is a manual
+  // edit and must be left alone.
+  const onDiskHash = sha256(onDisk);
+  if (baselineHash !== null && onDiskHash === baselineHash) {
+    return { status: 'update-needed', reason: 'legacy page without markers (migrate)' };
+  }
+  return { status: 'conflict', reason: 'manual edit detected after last publish' };
+}
+
+/* ------------------------------------------------------------------ */
+/* Reconcile state                                                     */
+/* ------------------------------------------------------------------ */
+
+const STATE_SCHEMA_VERSION = '1.1';
+
+function readState() {
+  if (!fs.existsSync(STATE_PATH)) return null;
+  try {
+    const state = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'));
+    const files = state && state.files ? state.files : {};
+    const upgraded = {};
+    for (const [rel, value] of Object.entries(files)) {
+      if (typeof value === 'string') {
+        // Legacy schema 1.0 stored whole-file hashes. Product pages keep no
+        // region hash until the next apply migrates them to markers.
+        upgraded[rel] = rel.endsWith('.json')
+          ? { kind: 'json', hash: value }
+          : { kind: 'doc', managedHash: null };
+      } else if (value && typeof value === 'object') {
+        upgraded[rel] = value;
+      }
+    }
+    state.files = upgraded;
+    state.schemaVersion = STATE_SCHEMA_VERSION;
+    return state;
+  } catch {
+    return null;
+  }
+}
+
+function stateValueFor(state, rel) {
+  const v = state && state.files ? state.files[rel] : undefined;
+  return v && typeof v === 'object' ? v : undefined;
+}
+
+function stateValueForTarget(t) {
+  return t.kind === 'json'
+    ? { kind: 'json', hash: sha256(t.content) }
+    : { kind: 'doc', managedHash: sha256(t.managedRegion) };
+}
+
 export function computeReconcile(manifest) {
   const sourceHash = sha256(fs.readFileSync(MANIFEST_PATH));
-  let state = null;
-  if (fs.existsSync(STATE_PATH)) {
-    try {
-      state = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'));
-    } catch {
-      state = null;
-    }
-  }
+  const state = readState();
   const targets = planTargets(manifest);
   const rows = [];
   let conflicts = 0;
   let drift = 0;
   for (const t of targets) {
     const onDisk = fs.existsSync(t.abs) ? fs.readFileSync(t.abs, 'utf8') : null;
-    const rendered = t.content;
-    const baseline = gitHeadContent(t.rel);
     const onDiskHash = onDisk === null ? null : sha256(onDisk);
-    const renderedHash = sha256(rendered);
+    const renderedHash = sha256(t.content);
+    const baseline = gitHeadContent(t.rel);
     const baselineHash = baseline === null ? null : sha256(baseline);
-    const stateHash = state && state.files ? state.files[t.rel] : undefined;
 
-    const decision = classifyTarget({ rendered, onDisk, baselineHash, stateHash });
+    let decision;
+    let stateHash = null;
+    if (t.kind === 'json') {
+      const stateValue = stateValueFor(state, t.rel);
+      const stateWholeHash = stateValue && stateValue.hash !== undefined ? stateValue.hash : undefined;
+      decision = classifyTarget({ rendered: t.content, onDisk, baselineHash, stateHash: stateWholeHash });
+      stateHash = stateValue && stateValue.hash !== undefined ? stateValue.hash : null;
+    } else {
+      const baselineParsed = baseline === null ? null : extractManagedRegion(baseline);
+      const baselineRegionHash = baselineParsed === null ? null : sha256(baselineParsed.region);
+      const stateValue = stateValueFor(state, t.rel);
+      const stateRegionHash = stateValue && stateValue.managedHash != null ? stateValue.managedHash : undefined;
+      decision = classifyManagedTarget({
+        onDisk,
+        renderedRegion: t.managedRegion,
+        baselineHash,
+        baselineRegionHash,
+        stateRegionHash,
+      });
+      stateHash = stateRegionHash === undefined ? null : stateRegionHash;
+    }
     const status = decision.status;
     const reason = decision.reason;
     if (status === 'update-needed' || status === 'create-needed') {
@@ -452,12 +604,13 @@ export function computeReconcile(manifest) {
 
     rows.push({
       rel: t.rel,
+      kind: t.kind,
       status,
       reason,
       onDiskHash,
       renderedHash,
       baselineHash,
-      stateHash: stateHash || null,
+      stateHash,
     });
   }
 
@@ -481,20 +634,12 @@ export function applyTargets(reconcile) {
   const skipped = [];
   // Preserve every previously recorded hash so skipped/conflicted files keep
   // their last-applied baseline and cannot be mistaken for manual edits.
-  let prevState = null;
-  if (fs.existsSync(STATE_PATH)) {
-    try {
-      prevState = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'));
-    } catch {
-      prevState = null;
-    }
-  }
-  /** @type {Record<string,string>} */
+  const prevState = readState();
   const stateFiles = prevState && prevState.files ? { ...prevState.files } : {};
   for (const row of reconcile.rows) {
     const t = byRel.get(row.rel);
     if (row.status === 'up-to-date') {
-      stateFiles[row.rel] = row.renderedHash;
+      stateFiles[row.rel] = stateValueForTarget(t);
       continue;
     }
     if (row.status === 'conflict') {
@@ -502,14 +647,23 @@ export function applyTargets(reconcile) {
       continue;
     }
     fs.mkdirSync(path.dirname(t.abs), { recursive: true });
-    fs.writeFileSync(t.abs, t.content);
+    if (t.kind === 'json') {
+      fs.writeFileSync(t.abs, t.content);
+    } else {
+      // Product pages: patch only the managed region. The full shell is
+      // written only for brand-new pages and marker-less legacy migrations.
+      const currentOnDisk = fs.existsSync(t.abs) ? fs.readFileSync(t.abs, 'utf8') : null;
+      const patched =
+        currentOnDisk === null ? null : patchManagedRegion(currentOnDisk, t.managedRegion);
+      fs.writeFileSync(t.abs, patched === null ? t.content : patched);
+    }
     written.push(row.rel);
-    stateFiles[row.rel] = row.renderedHash;
+    stateFiles[row.rel] = stateValueForTarget(t);
   }
   if (written.length || skipped.length) {
     fs.mkdirSync(path.dirname(STATE_PATH), { recursive: true });
     const state = {
-      schemaVersion: '1.0',
+      schemaVersion: STATE_SCHEMA_VERSION,
       sourceHash: reconcile.sourceHash,
       publishedAt: new Date().toISOString(),
       files: stateFiles,

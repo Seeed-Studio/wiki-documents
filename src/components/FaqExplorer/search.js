@@ -4,7 +4,8 @@
  * These functions are intentionally free of React/Docusaurus so they can be
  * unit-tested with plain Node (scripts/respeaker-faq/tests/search.test.js).
  *
- * Data shape (one FAQ item from src/data/respeaker_faq_index.json):
+ * Data shape (one FAQ item from the per-locale search index published by
+ * plugins/respeaker-faq-index through Docusaurus global data):
  *   { id, question, summary, product, productLabel, primaryDomain,
  *     domains: string[], skus: string[], keywords: string[],
  *     lastVerifiedAt, url }

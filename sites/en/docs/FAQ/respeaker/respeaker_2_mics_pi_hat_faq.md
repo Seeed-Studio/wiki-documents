@@ -24,6 +24,7 @@ This page contains verified answers for the reSpeaker 2-Mics Pi HAT V2.0. Each a
 - Check the current firmware version before applying version-specific steps.
 - Answers on this page were last verified on 2026-09-01; re-check the linked official sources if you are reading this later.
 
+<!-- RESPEAKER_FAQ_AUTO_START -->
 ## Hardware Issues {#hardware-issues}
 
 ### What is the codec I2C address on ReSpeaker 2-Mics Pi HAT V2.0? {#v2-codec-i2c-address}
@@ -58,6 +59,7 @@ ReSpeaker 2-Mics Pi HAT V2.0 uses a TLV320AIC3104 codec at the 7-bit I2C address
 - [Official V2.0 Raspberry Pi device-tree overlay](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/blob/master/overlays/rpi/respeaker-2mic-v2_0-overlay.dts)
 - [Official ReSpeaker 2-Mics Pi HAT V2.0 schematic](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/202004059_ReSpeaker-2-Mics-Pi-HAT-V2.0_SCH_PDF_241121.pdf)
 
+<!-- RESPEAKER_FAQ_AUTO_END -->
 
 ## Tech Support & Product Discussion
 

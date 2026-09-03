@@ -24,6 +24,7 @@ This page contains verified answers for the reSpeaker Clip. Each answer states t
 - Check the current firmware version before applying version-specific steps.
 - Answers on this page were last verified on 2026-09-01; re-check the linked official sources if you are reading this later.
 
+<!-- RESPEAKER_FAQ_AUTO_START -->
 ## Documentation & Usage {#documentation-and-usage}
 
 ### Where can I find the current official ReSpeaker Clip documentation? {#official-documentation}
@@ -121,6 +122,7 @@ A revision-labeled mechanical drawing is not currently published. The official G
 
 - [ReSpeaker Clip specifications and resources](https://wiki.seeedstudio.com/respeaker_clip/)
 
+<!-- RESPEAKER_FAQ_AUTO_END -->
 
 ## Tech Support & Product Discussion
 
