@@ -7,23 +7,23 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone_Green
 sku: 102010027
 last_update:
-  date: 1/10/2023
+  date: 9/2/2026
   author: jianjing Huang
 createdAt: '2023-01-10'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/BeagleBone_Green/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cover.jpg" /></div>
 
-Seeed Studio BeagleBone® Green é uma plataforma de desenvolvimento de baixo custo, open-source e suportada pela comunidade, voltada para desenvolvedores e entusiastas. É um esforço conjunto da [BeagleBoard.org](https://beagleboard.org/) e da Seeed Studio. Baseia-se no design clássico de hardware open-source da [BeagleBone® Black](https://beagleboard.org/black) e foi desenvolvida nesta versão diferenciada. A Seeed Studio BeagleBone® Green inclui dois conectores Grove, facilitando a conexão com a grande família de sensores Grove. O HDMI on‑board foi removido para abrir espaço para esses conectores Grove.
+Seeed Studio BeagleBone® Green é uma plataforma de desenvolvimento de baixo custo, open-source e suportada pela comunidade, voltada para desenvolvedores e entusiastas. É um esforço conjunto da [BeagleBoard.org](https://beagleboard.org/) e da Seeed Studio. Baseia-se no design clássico de hardware open-source da [BeagleBone® Black](https://beagleboard.org/black) e foi desenvolvida nesta versão diferenciada. A Seeed Studio BeagleBone® Green inclui dois conectores Grove, tornando mais fácil a conexão com a grande família de sensores Grove. A interface HDMI on-board foi removida para abrir espaço para esses conectores Grove.
 
 Inicialize o Linux em menos de 10 segundos e comece o desenvolvimento em menos de 5 minutos usando apenas um único cabo USB.
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -37,20 +37,20 @@ Inicialize o Linux em menos de 10 segundos e comece o desenvolvimento em menos d
 
 ## Recursos
 
-* **Totalmente Compatível com a BeagleBone® Black**
+* **Totalmente compatível com BeagleBone® Black**
 * **Processador: AM335x 1GHz ARMR Cortex-A8**
   * 512MB DDR3 RAM
-  * 4GB de armazenamento flash eMMC on‑board de 8 bits
+  * 4GB de armazenamento flash eMMC on-board de 8 bits
   * Acelerador de gráficos 3D
   * Acelerador de ponto flutuante NEON
   * 2x microcontroladores PRU de 32 bits
 * **Conectividade**
-  * Cliente USB para alimentação e comunicação
+  * Cliente USB para alimentação e comunicações
   * Host USB
   * Ethernet
   * 2x cabeçalhos de 46 pinos
   * 2x conectores Grove (I2C e UART)
-* **Compatibilidade de Software**
+* **Compatibilidade de software**
   * Debian
   * Android
   * Ubuntu
@@ -63,28 +63,28 @@ Inicialize o Linux em menos de 10 segundos e comece o desenvolvimento em menos d
 |----|------|
 |Processador| AM335x 1GHz ARMR Cortex-A8|
 |RAM| 512MB DDR3|
-|Armazenamento Flash on‑board |4GB eMMC|
+|Armazenamento Flash on-board |4GB eMMC|
 |CPU Suporta |Acelerador de ponto flutuante NEON e gráficos 3D|
 |Micro USB Suporta |alimentação e comunicações|
 |USB |Host 1|
 |Conectores Grove |2 (Um I2C e Um UART) |
 |GPIO |2 x cabeçalhos de 46 pinos|
 |Ethernet |1|
-|Temperatura de Operação |0 ~ 75 |
+|Temperatura de operação |0 ~ 75 |
 
-## Ideias de Aplicação
+## Ideias de aplicação
 
 * Internet das Coisas
-* Casa Inteligente
+* Casa inteligente
 * Industrial
 * Automação e Controle de Processos
-* Interface Homem‑Máquina
-* Hub de Sensores
+* Interface Homem-Máquina
+* Hub de sensores
 * Robô
 
 Aqui estão alguns projetos divertidos para sua referência.
 
-|Central Residencial|Luminária Retrô|Acionar um Motor|
+|Central Residencial|Lâmpada Retrô|Acionar um Motor|
 |---------------|-----|--------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project1.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project2.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project3.jpg" /></div>|
 |[FAÇA AGORA MESMO!](https://www.instructables.com/id/Home-Control-Center-Using-BeagleBone-Green-Wireles/)|[FAÇA AGORA MESMO!](https://www.instructables.com/id/DIY-a-Retro-Wooden-Lamp-with-BBG/)|[FAÇA AGORA MESMO!](https://www.instructables.com/id/A-BeagleBone-Tutorial-Getting-Started-With-Motor-B/)|
@@ -94,48 +94,48 @@ Aqui estão alguns projetos divertidos para sua referência.
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project5.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project6.png" /></div>|
 |[FAÇA AGORA MESMO!](https://www.instructables.com/id/5-Design-of-Laser-Cut-Cases-for-5-Popular-Platform/)|[FAÇA AGORA MESMO!](https://community.seeedstudio.com/How-to-use-the-Grove-UART-port-as-a-GPIO-on-BBG-p-365.html)|[FAÇA AGORA MESMO!](https://community.seeedstudio.com/Smart-Light-Demo-with-BBG-%26amp%3B-BBG-Start-Kit(HA)-p-366.html)|
 
-## Visão Geral do Hardware
+## Visão geral de hardware
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/10201002703.jpg" /></div>
 
-* **USB Host** - USB Host
-* **Alimentação CC e USB Client** - Alimenta a placa e atua como cliente
+* **USB Host** - Host USB
+* **Alimentação DC e USB Client** - Alimenta a placa e atua como cliente
 * **LEDs**
   * **D2** é configurado na inicialização para piscar em um padrão de batimento cardíaco
   * **D3** é configurado na inicialização para acender durante acessos ao cartão microSD
   * **D4** é configurado na inicialização para acender durante a atividade da CPU
   * **D5** é configurado na inicialização para acender durante acessos à eMMC
-* **Botão de Boot**
-  * Quando houver um cartão SD inserido, o sistema dará boot primeiro a partir do cartão SD; se você quiser dar boot a partir da eMMC, pressione este botão e então ligue a alimentação.
-  * Use como um botão normal após o boot, conectado ao **GPIO_72**
+* **Botão de boot**
+  * Quando houver um cartão SD inserido, o sistema irá inicializar primeiro a partir do cartão SD; se você quiser inicializar a partir da eMMC, pressione este botão e então ligue a alimentação.
+  * Use como um botão normal após a inicialização, conectado ao **GPIO_72**
 * **Interface Grove I2C** - Conectada ao **I2C2**
 * **Interface Grove Uart** - Conectada ao **UART2**
-* **Depuração Serial** - Conectada ao **UART0**, PIN1~PIN6: GND, NC, NC, RX, TX, NC, observe que o pino 1 fica próximo ao USB.
+* **Depuração serial** - Conecte ao **UART0**, PIN1~PIN6: GND, NC, NC, RX, TX, NC, observe que o pino 1 fica próximo ao USB.
 
-**Mapa de Pinos**
+**Mapa de pinos**
 
-Cada pino de I/O digital possui 8 modos diferentes que podem ser selecionados, incluindo GPIO.
+Cada pino de E/S digital possui 8 modos diferentes que podem ser selecionados, incluindo GPIO.
 
-**65 Possíveis I/Os Digitais**
+**65 possíveis E/S digitais**
 
 :::note
-    No modo GPIO, cada I/O digital pode gerar interrupções.
+    No modo GPIO, cada E/S digital pode gerar interrupções.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_IO.png" /></div>
 
-**PWMs e Temporizadores**
+**PWMs e temporizadores**
 
 :::note
-Até 8 pinos de I/O digital podem ser configurados com moduladores de largura de pulso (PWM) para produzir sinais para controlar motores ou criar níveis de tensão pseudoanalógicos, sem consumir ciclos extras da CPU.
+Até 8 pinos de E/S digitais podem ser configurados com moduladores de largura de pulso (PWM) para produzir sinais para controlar motores ou criar níveis de tensão pseudoanalógicos, sem consumir ciclos extras da CPU.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_TIMER.png" /></div>
 
-**Entradas Analógicas**
+**Entradas analógicas**
 
 :::note
-Certifique‑se de não aplicar mais de 1,8V aos pinos de entrada analógica. Este é um conversor analógico‑digital de 12 bits único com 8 canais, dos quais 7 estão disponíveis nos cabeçalhos.
+Certifique-se de não aplicar mais de 1,8V aos pinos de entrada analógica. Este é um conversor analógico-digital de 12 bits com 8 canais, dos quais 7 estão disponíveis nos cabeçalhos.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_ANALOG.png" /></div>
@@ -143,7 +143,7 @@ Certifique‑se de não aplicar mais de 1,8V aos pinos de entrada analógica. Es
 **UART**
 
 :::note
-Há um cabeçalho dedicado para acessar os pinos UART0 e conectar um cabo de depuração. Cinco portas seriais adicionais são disponibilizadas nos cabeçalhos de expansão, mas uma delas possui apenas uma direção trazida para os cabeçalhos.
+Há um cabeçalho dedicado para acessar os pinos UART0 e conectar um cabo de depuração. Cinco portas seriais adicionais são disponibilizadas nos cabeçalhos de expansão, mas uma delas possui apenas uma direção exposta nos cabeçalhos.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_UART.png" /></div>
@@ -151,7 +151,7 @@ Há um cabeçalho dedicado para acessar os pinos UART0 e conectar um cabo de dep
 **I2C**
 
 :::note
-O primeiro barramento I2C é utilizado para ler as EEPROMs nas placas de expansão cape e não pode ser usado para outras operações de I/O digital sem interferir nessa função, mas você ainda pode usá‑lo para adicionar outros dispositivos I2C em endereços disponíveis. O segundo barramento I2C está disponível para você configurar e usar.
+O primeiro barramento I2C é utilizado para leitura das EEPROMs nas placas de expansão cape e não pode ser usado para outras operações de E/S digital sem interferir nessa função, mas você ainda pode usá-lo para adicionar outros dispositivos I2C em endereços disponíveis. O segundo barramento I2C está disponível para você configurar e usar.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_I2C.png" /></div>
@@ -164,7 +164,7 @@ O primeiro barramento I2C é utilizado para ler as EEPROMs nas placas de expans�
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_SPI.png)
 
-## Desenho Mecânico
+## Desenho mecânico
 
 ![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/BBG_drawing_1.png)
 
@@ -172,7 +172,7 @@ O primeiro barramento I2C é utilizado para ler as EEPROMs nas placas de expans�
 
 <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=26887ef4-fe20-4d82-b4dc-25f58774d64f" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
 
-## Primeiros Passos
+## Introdução
 
 :::note
 Este capítulo foi escrito no Win10. Os passos são semelhantes para outros sistemas operacionais.
@@ -180,9 +180,9 @@ Este capítulo foi escrito no Win10. Os passos são semelhantes para outros sist
 
 **PASSO 1. Conecte sua Seeed Studio BeagleBone® Green via USB**
 
-Use o cabo micro USB fornecido para conectar sua Seeed Studio BeagleBone® Green ao computador. Isso irá tanto alimentar a placa quanto fornecer uma interface de desenvolvimento. A Seeed Studio BeagleBone® Green iniciará o Linux a partir da eMMC on‑board de 2GB ou 4GB.
+Use o cabo micro USB fornecido para conectar sua Seeed Studio BeagleBone® Green ao computador. Isso irá tanto alimentar a placa quanto fornecer uma interface de desenvolvimento. A Seeed Studio BeagleBone® Green irá inicializar o Linux a partir da eMMC on-board de 2GB ou 4GB.
 
-A Seeed Studio BeagleBone® Green funcionará como uma unidade flash, fornecendo uma cópia local da documentação e dos drivers. Observe que essa interface não pode ser usada para reconfigurar o cartão microSD com uma nova imagem, mas pode ser usada para atualizar os parâmetros de boot usando o arquivo uEnv.txt.
+A Seeed Studio BeagleBone® Green irá operar como uma unidade flash, fornecendo a você uma cópia local da documentação e dos drivers. Observe que esta interface não pode ser usada para reconfigurar o cartão microSD com uma nova imagem, mas pode ser usada para atualizar os parâmetros de boot usando o arquivo uEnv.txt.
 
 Você verá o LED PWR aceso continuamente. Em até 10 segundos, você deverá ver os outros LEDs piscando em suas configurações padrão.
 
@@ -191,22 +191,22 @@ Você verá o LED PWR aceso continuamente. Em até 10 segundos, você deverá ve
 * D4 é configurado na inicialização para acender durante a atividade da CPU
 * D5 é configurado na inicialização para acender durante acessos à eMMC
 
-**PASSO 2. Instale os Drivers**
+**PASSO 2. Instale os drivers**
 
-Instale os drivers para o seu sistema operacional para obter acesso de rede‑sobre‑USB ao seu Beagle. Drivers adicionais fornecem acesso serial à sua placa.
+Instale os drivers para o seu sistema operacional para obter acesso de rede via USB à sua Beagle. Drivers adicionais fornecem acesso serial à sua placa.
 
 |Sistema Operacional | Drivers USB | Comentários |
 |---------------------|---------|------------|
 |Windows (64-bit) | [64-bit installer](https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe)  | |
 |Windows (32-bit) | [32-bit installer](https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe)||
 |Mac OS X|[Network](https://beagleboard.org/static/Drivers/MacOSX/RNDIS/HoRNDIS.pkg) [Serial](https://beagleboard.org/static/Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg) | Instale ambos os conjuntos de drivers.|
-|Linux|[mkudevrule.sh](https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh)|A instalação de driver não é necessária, mas você pode achar algumas regras udev úteis.|
+|Linux|[mkudevrule.sh](https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh)|A instalação de drivers não é necessária, mas você pode achar algumas regras udev úteis.|
 
 :::note
     Para o sistema Windows, observe que:
 
 * O aviso de Certificação de Driver do Windows pode aparecer duas ou três vezes. Clique em "Ignore", "Install" ou "Run"
-* Para verificar se você está executando o Windows 32 ou 64‑bit veja [isto](https://support.microsoft.com/kb/827218).
+* Para verificar se você está executando o Windows 32 ou 64-bit veja [isto](https://support.microsoft.com/kb/827218).
 * Em sistemas sem a versão mais recente do service release, você pode receber um erro (0xc000007b). Nesse caso, por favor [instale](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523) e tente novamente:
 * Talvez seja necessário reiniciar o Windows.
 * Esses drivers foram testados e funcionam até o Windows 10
@@ -220,16 +220,16 @@ Informações adicionais e drivers FTDI USB para serial/JTAG estão disponíveis
 Informações adicionais e drivers USB para Ethernet virtual estão disponíveis em [https://www.linux-usb.org/gadget/](https://www.linux-usb.org/gadget/) e [https://joshuawise.com/horndis](https://joshuawise.com/horndis).
 :::
 
-**ETAPA 3. Acesse seu Beagle**
+**PASSO 3. Acesse seu Beagle**
 
-Usando o Chrome ou o Firefox (Internet Explorer NÃO funcionará), acesse o servidor web em execução na sua placa. Será carregada uma apresentação mostrando as capacidades da placa. Use as teclas de seta do teclado para navegar pela apresentação.
+Usando o Chrome ou o Firefox (Internet Explorer NÃO funciona), acesse o servidor web em execução na sua placa. Ele carregará uma apresentação mostrando as capacidades da placa. Use as setas do teclado para navegar pela apresentação.
 
-Clique em [http://192.168.7.2](http://192.168.7.2) para iniciar seu Seeed Studio BeagleBone® Green.
-Imagens de software mais antigas exigem que você EJECT a unidade BeagleBone® para iniciar a rede. Com a imagem de software mais recente, essa etapa não é mais necessária.
+Clique em [http://192.168.7.2](http://192.168.7.2) para iniciar o seu Seeed Studio BeagleBone® Green.
+Imagens de software mais antigas exigem que você EJETE a unidade BeagleBone® para iniciar a rede. Com a imagem de software mais recente, essa etapa não é mais necessária.
 
 [![Click to view larger image](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
-**ETAPA 4. Cloud9 IDE**
+**PASSO 4. Cloud9 IDE**
 
 Para começar a editar programas que estão na sua placa, você pode usar o Cloud9 IDE clicando
 
@@ -239,19 +239,19 @@ Para começar a editar programas que estão na sua placa, você pode usar o Clou
 
 Você precisa atualizar a placa para o software mais recente para manter um melhor desempenho; aqui mostraremos como fazer isso passo a passo.
 
-**ETAPA 1. Baixe a imagem de software mais recente**
+**PASSO 1. Baixe a imagem de software mais recente**
 
 Antes de tudo, você precisa baixar a imagem adequada aqui.
 
 [![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](https://beagleboard.org/latest-images)
 
 :::note
-Devido a necessidades de tamanho, esse download pode levar cerca de 30 minutos ou mais.
+Devido ao tamanho, esse download pode levar cerca de 30 minutos ou mais.
 :::
 
-O arquivo que você baixar terá a extensão **.img.xz**. Esta é uma imagem comprimida, setor por setor, do cartão SD.
+O arquivo que você baixar terá a extensão **.img.xz**. Esta é uma imagem comprimida, setor a setor, do cartão SD.
 
-**ETAPA 2. Instale o utilitário de compactação e descompacte a imagem**
+**PASSO 2. Instale o utilitário de compactação e descompacte a imagem**
 
 Baixe e instale o [7-zip.](http://www.7-zip.org/download.html)
 
@@ -259,15 +259,15 @@ Baixe e instale o [7-zip.](http://www.7-zip.org/download.html)
     Escolha uma versão adequada para o seu sistema.
 :::
 
-Use o 7-zip para descompactar o **arquivo .img** do cartão SD
+Use o 7-zip para descompactar o arquivo **.img** do cartão SD
 
-**ETAPA 3. Instale o utilitário de gravação do cartão SD**
+**PASSO 3. Instale o utilitário de gravação do cartão SD**
 
 Baixe e instale o [Image Writer for Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download). Certifique-se de baixar a distribuição binária.
 
-**ETAPA 4. Grave a imagem no seu cartão SD**
+**PASSO 4. Grave a imagem no seu cartão SD**
 
-Primeiro, você precisa de um adaptador SD para conectar seu cartão microSD ao computador. Em seguida, use o software Image Write for Windows para gravar a imagem descompactada no seu cartão SD.
+Primeiro, você precisa de um adaptador SD para conectar seu cartão microSD ao computador. Em seguida, use o software Image Writer for Windows para gravar a imagem descompactada no seu cartão SD.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image.png)
 
@@ -277,20 +277,20 @@ Clique no botão **Write**, então o processo será iniciado.
 
 :::note
 
-* Você pode ver um aviso sobre danificar seu dispositivo. Está tudo bem aceitar, desde que você esteja apontando para o seu cartão SD para a gravação.
+* Você pode ver um aviso sobre danificar seu dispositivo. Não há problema em aceitar, desde que você esteja apontando para o seu cartão SD para gravação.
 * Você não deve ter o seu BeagleBone® conectado ao computador neste momento.
 * Esse processo pode levar até 10 minutos.
 :::
 
-**ETAPA 5. Inicialize sua placa a partir do cartão SD**
+**PASSO 5. Inicialize sua placa a partir do cartão SD**
 
-Insira o cartão SD na sua placa (primeiro desligada). Em seguida, a placa irá iniciar a partir do cartão SD.
+Insira o cartão SD na sua placa (primeiro desligada). Em seguida, a placa será inicializada a partir do cartão SD.
 
 :::note
-Se você não precisar gravar a imagem no eMMC on-board, não precisa ler o restante deste capítulo. Caso contrário, por favor continue.
+Se você não precisar gravar a imagem na eMMC integrada, não precisa ler o restante deste capítulo. Caso contrário, por favor continue.
 :::
 
-Se você desejar gravar a imagem no eMMC on-board, será necessário acessar a placa e modificar um arquivo.
+Se você quiser gravar a imagem na eMMC integrada, precisa acessar a placa e modificar um arquivo.
 
 Em **/boot/uEnv.txt**:
 
@@ -306,14 +306,14 @@ Então você verá os 4 LEDs de usuário acesos como abaixo
 ![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/flashing.gif)
 
 :::note
-Se você não encontrar o rastreamento de luz acima, por favor pressione o botão RESET para reiniciar a placa.
+Se você não encontrar a luz de rastreamento acima, pressione o botão RESET para reiniciar a placa.
 :::
 
-Quando a gravação estiver completa, todos os 4 LEDs USRx estarão **apagados**. As imagens mais recentes do Debian flasher desligam automaticamente a placa ao final. Isso pode levar até **10 minutos**. Desligue a placa, remova o cartão SD e ligue novamente para concluir.
+Quando a gravação estiver completa, todos os 4 LEDs USRx estarão **apagados**. As imagens mais recentes do flasher Debian desligam automaticamente a placa ao concluir. Isso pode levar até **10 minutos**. Desligue a placa, remova o cartão SD e ligue novamente para concluir.
 
 ## Grove para Seeed Studio BeagleBone® Green
 
-Grove é um sistema de prototipagem modular com conector padronizado. Grove adota uma abordagem de blocos de montar para montar eletrônicos. Comparado ao sistema baseado em jumpers ou solda, é mais fácil conectar, experimentar e construir, e simplifica o sistema de aprendizado, mas não a ponto de ficar simplório demais. Alguns dos outros sistemas de prototipagem por aí reduzem o nível a simples blocos de montar. Há coisas boas a serem aprendidas dessa forma, mas o sistema Grove permite que você construa sistemas reais. Ele exige algum aprendizado e experiência para conectar as coisas.
+Grove é um sistema modular de prototipagem com conector padronizado. Grove adota uma abordagem de blocos de montar para montar eletrônicos. Em comparação com o sistema baseado em jumpers ou solda, é mais fácil conectar, experimentar e construir e simplifica o sistema de aprendizado, mas não a ponto de ficar simplório. Alguns dos outros sistemas de prototipagem por aí reduzem o nível para blocos de montar. Há coisas boas a serem aprendidas dessa forma, mas o sistema Grove permite que você construa sistemas reais. Ele exige algum aprendizado e conhecimento para conectar as coisas.
 
 Abaixo estão listados os módulos Grove que funcionam bem com o Seeed Studio BeagleBone® Green.
 
@@ -331,15 +331,15 @@ Abaixo estão listados os módulos Grove que funcionam bem com o Seeed Studio Be
 |107020000 |Grove - Buzzer                                 |I/O| [link](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 |104030006 |Grove - LED RGB Encadeável                     |I2C| [link](https://www.seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html)|
 |101020030 |Grove - Sensor de Luz Digital                 |I2C| [link](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
-|103020024 |Grove - Sensor de Batimento Cardíaco de Dedo com Clipe         |I2C| [link](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-p-2425.html)|
-|101020082 |Grove - Sensor de Batimento Cardíaco de Dedo com Clipe e Case |I2C|[link](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-with-shell-p-2420.html)|
+|103020024 |Grove - Sensor de Frequência Cardíaca de Presilha de Dedo         |I2C| [link](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-p-2425.html)|
+|101020082 |Grove - Sensor de Frequência Cardíaca de Presilha de Dedo com Case |I2C|[link](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-with-shell-p-2420.html)|
 |113020003 |Grove - GPS                         |UART| [link](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
 |104030007 |Grove - LED Verde |I/O| [link](https://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|
 |103020013 |Grove - I2C ADC |I2C| [link](https://wiki.seeedstudio.com/pt-br/Grove-I2C_ADC/)|
 |103020006 |Grove - I2C Hub |I2C| [link](https://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)|
 |101020079 |Grove - IMU 10DOF |I2C| [link](https://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)|
 |101020080 |Grove - IMU 9DOF v2.0 |I2C| [link](https://www.seeedstudio.com/Grove-IMU-9DOF-v2.0-p-2400.html)|
-|101020040 |Grove - Interrupter de Distância IR |I/O| [link](https://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)|
+|101020040 |Grove - Interruptor de Distância IR |I/O| [link](https://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)|
 |104030011 |Grove - Display OLED 0,96'' |I2C| [link](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|
 |104030008 |Grove - Display OLED 1,12'' |I2C| [link](https://www.seeedstudio.com/Grove-OLED-Display-0.96%22-p-781.html)|
 |104030005 |Grove - LED Vermelho |I/O| [link](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|
@@ -352,19 +352,19 @@ Abaixo estão listados os módulos Grove que funcionam bem com o Seeed Studio Be
 
 ## Cape para Seeed Studio BeagleBone® Green
 
-Você vai precisar de alguma placa de expansão quando iniciar um projeto. Já existem muitos capes para o Seeed Studio BeagleBone® Green, incluindo display LCD, driver de motor, bem como expansão HDMI etc. Abaixo estão alguns dos recomendados.
+Você vai precisar de alguma placa de expansão quando iniciar um projeto. Já existem muitos capes para o Seeed Studio BeagleBone® Green; eles incluem display LCD, driver de motor, bem como expansão HDMI etc. Abaixo estão alguns dos recomendados.
 
 |Grove Cape| Motor Bridge Cape|HDMI Cape|
 |------------|----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product3.jpg)|
-|[Adquira agora!](https://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)|[Adquira agora!](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)|[Adquira agora!](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)|[GET ONE NOW!](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)|[GET ONE NOW!](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html)|
 
-|Grove Cape| LCD de 5 Polegadas|LCD de 7 Polegadas|
+|Grove Cape| LCD de 5 polegadas|LCD de 7 polegadas|
 |------------|----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product6.jpg)|
 |[Adquira agora!](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[Adquira agora!](https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[Adquira agora!](https://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
-## Perguntas Frequentes (FAQ)
+## FAQ
 
 **1. Qual é a diferença entre o Seeed Studio BeagleBone® Green 1 e o Seeed Studio BeagleBone® Green 2?**
 
@@ -372,19 +372,19 @@ Você vai precisar de alguma placa de expansão quando iniciar um projeto. Já e
 
 ![](https://files.seeedstudio.com/wiki/BeagleBone_Green/bbg12.png)
 
- **2. Às vezes a porta de rede do Seeed Studio BeagleBone® Green não funciona e é necessário reiniciar para voltar a funcionar. Isso acontece ocasionalmente.**
+ **2. Às vezes, a porta de rede do Seeed Studio BeagleBone® Green não funciona e é necessário reiniciar para voltar a funcionar. Ocasionalmente isso acontece.**
 
-Substitua por uma fonte de alimentação estável e tente novamente. Normalmente o adaptador de energia USB de telefone celular é mais estável que a porta USB do computador. Ou você pode remover o capacitor C162.
+Substitua por uma fonte de alimentação estável e tente novamente. Normalmente, o adaptador de energia USB de telefone celular é mais estável do que a USB do computador. Ou você pode remover o capacitor C162.
 
 ![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/Capatictor.png)
 
 :::note
-O BeagleBone Green foi revisado em 2021, e o capacitor C162 mencionado acima não está mais presente nas placas atualizadas. Este FAQ se aplica somente às versões do BeagleBone Green lançadas antes de 2021.
+O BeagleBone Green foi revisado em 2021, e o capacitor C162 mencionado acima não está mais presente nas placas atualizadas. Este FAQ se aplica apenas às versões do BeagleBone Green lançadas antes de 2021.
 :::
 
 **3. Qual é a faixa de temperatura de operação do Seeed Studio BeagleBone® Green?**
 
-O BeagleBone® Green funciona na faixa de temperatura de 0–75 °C.
+O BeagleBone® Green funciona na faixa de temperatura de 0 a 75 graus Celsius.
 
 ## Referências
 
@@ -392,14 +392,14 @@ Há muitas referências para ajudá-lo a obter mais informações sobre a placa.
 
 * [Página principal do BeagleBoard](https://beagleboard.org/)
 * [Informações do Seeed Studio BeagleBone® Green na página do BeagleBoard](https://beagleboard.org/green)
-* [Primeiros passos com BeagleBoard](https://beagleboard.org/getting-started)
+* [Introdução ao BeagleBoard](https://beagleboard.org/getting-started)
 * [Solução de problemas](https://beagleboard.org/getting-started#troubleshooting)
 * [Documentação de hardware](https://beagleboard.org/getting-started#hardware)
-* [Projetos com BeagleBoard](https://beagleboard.org/project)
+* [Projetos do BeagleBoard](https://beagleboard.org/project)
 * [Certificação CE do Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/CE.zip)
 * [Certificação FCC do Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/FCC.zip)
 
-## Visualizador Online do Esquemático
+## Visualizador online de esquemático
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
@@ -408,19 +408,21 @@ Há muitas referências para ajudá-lo a obter mais informações sobre a placa.
 
 * **[PDF]** [Seeed Studio BeagleBone® Green SRM(v1a)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V1a_20151009.pdf)
 * **[PDF]** [Seeed Studio BeagleBone® Green SRM(v3)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V3_20150804.pdf)
-* **[PDF]** [Esquemático do Seeed Studio BeagleBone® Green v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.pdf)
-* **[ZIP]** [Esquemático do Seeed Studio BeagleBone® Green v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.zip)
-* **[PDF]** [Esquemático do Seeed Studio BeagleBone® Green v1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1.pdf)
-* **[Zip]** [Esquemático do Seeed Studio BeagleBone® Green (OrCAD) v1c](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip)
-* **[RAR]** [Esquemático do Seeed Studio BeagleBone® Green (OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
+* **[PDF]** [Esquemáticos do Seeed Studio BeagleBone® Green v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.pdf)
+* **[ZIP]** [Esquemáticos do Seeed Studio BeagleBone® Green v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.zip)
+* **[PDF]** [Esquemáticos do Seeed Studio BeagleBone® Green v1.2](https://files.seeedstudio.com/products/102010027/Res/BeagleBone_Green_REV1.2_SCH_240816.pdf)
+* **[ZIP]** [Esquemáticos do Seeed Studio BeagleBone® Green v1.2](https://files.seeedstudio.com/products/102010027/Res/202003277_BeagleBone_Green_REV1.2.zip)
+* **[PDF]** [Esquemáticos do Seeed Studio BeagleBone® Green v1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1.pdf)
+* **[Zip]** [Esquemáticos do Seeed Studio BeagleBone® Green (OrCAD) v1c](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip)
+* **[RAR]** [Esquemáticos do Seeed Studio BeagleBone® Green (OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
 * **[RAR]** [PCB do Seeed Studio BeagleBone® Green (OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1.166%28board%29.rar)
-* **[Zip]** [Folha de dados do AM335X](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
+* **[Zip]** [AM335X Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
 * **[3D]** [Modelo 3D do Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG.zip)
 * **[PDF]** [Desenho mecânico do Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG-PCBA.pdf)
 
-## Suporte Técnico e Discussão do Produto
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
@@ -431,4 +433,3 @@ Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tip
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
