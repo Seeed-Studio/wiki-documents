@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { useLocation } from '@docusaurus/router';
 
 // Product data parsed from "Jetson产品参数对比.xlsx" (Sheet 1: 整机对比, Sheet 3: 模组对比).
 // Regenerate via the one-off parser; do not hand-edit individual entries.
@@ -89,216 +90,1335 @@ const PRESETS = {
 };
 
 const TEXT = {
-  zh: {
-    title: 'Jetson 选型工具',
-    intro:
-      '不知道选哪款？直接搜索型号或 SKU，或点击场景卡片一键预设条件；结果按匹配度排序，可勾选最多 4 款产品进行对比。',
-    searchPlaceholder: '搜索型号 / SKU / 关键词，如 J5012、Rugged、GMSL',
-    presetTitle: '场景速选',
-    presets: {
-      plant_pest: { title: '植物病虫害 / 无人机巡检', desc: 'AGX 级算力 + 多路 GMSL 相机 + CAN/RS485 + 5G + 车载宽压' },
-      industrial_ai: { title: '工业视觉检测', desc: 'IP40 防护 + 宽温 + RS485/CAN/PoE 工业接口' },
-      robotics: { title: '机器人 / AMR', desc: '多路 CAN + UART/I2C + 宽压供电' },
-      in_vehicle: { title: '车载 / 户外', desc: 'IP66 + M12 车规连接器 + PoE + 宽温' },
-      devkit: { title: '开发学习 / 原型', desc: '入门预算，快速上手边缘 AI' },
-      custom: { title: '自定义', desc: '清空预设，手动组合筛选条件' },
+  "zh": {
+    "title": "Jetson 选型工具",
+    "intro": "不知道选哪款？直接搜索型号或 SKU，或点击场景卡片一键预设条件；结果按匹配度排序，可勾选最多 4 款产品进行对比。",
+    "searchPlaceholder": "搜索型号 / SKU / 关键词，如 J5012、Rugged、GMSL",
+    "presetTitle": "场景速选",
+    "presets": {
+      "plant_pest": {
+        "title": "植物病虫害 / 无人机巡检",
+        "desc": "AGX 级算力 + 多路 GMSL 相机 + CAN/RS485 + 5G + 车载宽压"
+      },
+      "industrial_ai": {
+        "title": "工业视觉检测",
+        "desc": "IP40 防护 + 宽温 + RS485/CAN/PoE 工业接口"
+      },
+      "robotics": {
+        "title": "机器人 / AMR",
+        "desc": "多路 CAN + UART/I2C + 宽压供电"
+      },
+      "in_vehicle": {
+        "title": "车载 / 户外",
+        "desc": "IP66 + M12 车规连接器 + PoE + 宽温"
+      },
+      "devkit": {
+        "title": "开发学习 / 原型",
+        "desc": "入门预算，快速上手边缘 AI"
+      },
+      "custom": {
+        "title": "自定义",
+        "desc": "清空预设，手动组合筛选条件"
+      }
     },
-    filters: {
-      type: '产品类型',
-      typeAll: '全部',
-      typeMachine: '整机',
-      typeCarrier: '载板',
-      module: '模组',
-      aiPerf: '最低 AI 算力 (TOPS)',
-      memory: '最小内存 (GB)',
-      storage: '存储扩展',
-      ifaces: '必备接口',
-      env: '防护与环境',
-      jetpack: 'JetPack 版本',
-      scenario: '应用场景',
-      scenarioAny: '不限',
-      ip: '最低防护等级',
-      temp: '最低工作温度',
-      vehicle: '需要 12/24V 车载电源',
-      any: '不限',
-      m2one: '≥1× M.2 Key M',
-      m2two: '≥2× M.2 Key M',
-      sata: '需要 SATA',
+    "filters": {
+      "type": "产品类型",
+      "typeAll": "全部",
+      "typeMachine": "整机",
+      "typeCarrier": "载板",
+      "module": "模组",
+      "aiPerf": "最低 AI 算力 (TOPS)",
+      "memory": "最小内存 (GB)",
+      "storage": "存储扩展",
+      "ifaces": "必备接口",
+      "env": "防护与环境",
+      "jetpack": "JetPack 版本",
+      "scenario": "应用场景",
+      "scenarioAny": "不限",
+      "ip": "最低防护等级",
+      "temp": "最低工作温度",
+      "vehicle": "需要 12/24V 车载电源",
+      "any": "不限",
+      "m2one": "≥1× M.2 Key M",
+      "m2two": "≥2× M.2 Key M",
+      "sata": "需要 SATA"
     },
-    modules: {
-      nano: 'Jetson Nano',
-      tx2_nx: 'Jetson TX2 NX',
-      xavier_nx: 'Jetson Xavier NX',
-      orin_nano: 'Jetson Orin Nano',
-      orin_nx: 'Jetson Orin NX 8GB',
-      orin_nx_16: 'Jetson Orin NX 16GB',
-      agx_orin_32: 'AGX Orin 32GB',
-      agx_orin_64: 'AGX Orin 64GB',
-      agx_thor: 'AGX Thor（载板）',
+    "modules": {
+      "nano": "Jetson Nano",
+      "tx2_nx": "Jetson TX2 NX",
+      "xavier_nx": "Jetson Xavier NX",
+      "orin_nano": "Jetson Orin Nano",
+      "orin_nx": "Jetson Orin NX 8GB",
+      "orin_nx_16": "Jetson Orin NX 16GB",
+      "agx_orin_32": "AGX Orin 32GB",
+      "agx_orin_64": "AGX Orin 64GB",
+      "agx_thor": "AGX Thor（载板）"
     },
-    scenarios: {
-      devkit: '入门/开发套件',
-      edge_ai: '边缘 AI/视频分析',
-      industrial: '工业控制',
-      robotics: '机器人/AMR',
-      rugged: '车载/户外/严苛环境',
-      autonomous: '自动驾驶/高端研发',
+    "scenarios": {
+      "devkit": "入门/开发套件",
+      "edge_ai": "边缘 AI/视频分析",
+      "industrial": "工业控制",
+      "robotics": "机器人/AMR",
+      "rugged": "车载/户外/严苛环境",
+      "autonomous": "自动驾驶/高端研发"
     },
-    ifaces: {
-      CAN: 'CAN', RS485: 'RS485/232', GMSL: 'GMSL', MIPI: 'MIPI CSI', SATA: 'SATA',
-      GPIO: 'GPIO', UART: 'UART', I2C: 'I2C', SPI: 'SPI', HDMI: 'HDMI', DP: 'DP',
-      USB3: 'USB 3.x', USB_C: 'USB Type-C', WIFI: 'WiFi/BT', LTE4G: '4G/LTE 蜂窝', '5G': '5G 蜂窝', SIM: 'SIM 卡槽', POE: 'PoE 供电', RTC: 'RTC',
-      ETH1G: '1G 以太网', ETH10G: '10G 以太网', TPM: 'TPM',
+    "ifaces": {
+      "CAN": "CAN",
+      "RS485": "RS485/232",
+      "GMSL": "GMSL",
+      "MIPI": "MIPI CSI",
+      "SATA": "SATA",
+      "GPIO": "GPIO",
+      "UART": "UART",
+      "I2C": "I2C",
+      "SPI": "SPI",
+      "HDMI": "HDMI",
+      "DP": "DP",
+      "USB3": "USB 3.x",
+      "USB_C": "USB Type-C",
+      "WIFI": "WiFi/BT",
+      "LTE4G": "4G/LTE 蜂窝",
+      "5G": "5G 蜂窝",
+      "SIM": "SIM 卡槽",
+      "POE": "PoE 供电",
+      "RTC": "RTC",
+      "ETH1G": "1G 以太网",
+      "ETH10G": "10G 以太网",
+      "TPM": "TPM"
     },
-    results: '推荐结果',
-    sortedByMatch: '按匹配度排序',
-    resultCount: (n) => `共 ${n} 款产品`,
-    resetAll: '重置全部筛选',
-    badges: { best: '最佳匹配', second: '次选', third: '备选' },
-    specs: {
-      module: '模组', tops: 'AI 算力', memory: '内存', temp: '工作温度',
-      ip: '防护', jetpack: 'JetPack', score: '匹配度', normal: '普通',
+    "results": "推荐结果",
+    "sortedByMatch": "按匹配度排序",
+    "resetAll": "重置全部筛选",
+    "badges": {
+      "best": "最佳匹配",
+      "second": "次选",
+      "third": "备选"
     },
-    reasons: {
-      aiOk: 'AI 算力满足', ifaceOk: '接口全部满足', ipOk: '防护等级满足', tempOk: '温度范围满足',
-      vehicleOk: '支持车载电源', scenarioOk: '场景匹配', jetpackOk: 'JetPack 版本满足',
+    "specs": {
+      "module": "模组",
+      "tops": "AI 算力",
+      "memory": "内存",
+      "temp": "工作温度",
+      "ip": "防护",
+      "jetpack": "JetPack",
+      "score": "匹配度",
+      "normal": "普通"
     },
-    gaps: {
-      aiGap: 'AI 算力不足', ifaceGap: '缺少接口', ipGap: '防护等级不足', tempGap: '低温不达标',
-      vehicleGap: '不支持车载电源', scenarioGap: '场景不匹配', jetpackGap: 'JetPack 版本不支持',
+    "reasons": {
+      "aiOk": "AI 算力满足",
+      "ifaceOk": "接口全部满足",
+      "ipOk": "防护等级满足",
+      "tempOk": "温度范围满足",
+      "vehicleOk": "支持车载电源",
+      "scenarioOk": "场景匹配",
+      "jetpackOk": "JetPack 版本满足"
     },
-    card: { expand: '查看详情', collapse: '收起', addCompare: '加入对比' },
-    detail: {
-      ifaces: '完整接口清单', module: '模组规格', jetpack: 'JetPack 支持', factory: '出厂固件',
-      supported: '支持版本', power: '供电与结构', powerConn: '电源接口', powerRange: '供电范围',
-      dimension: '尺寸', weight: '重量', install: '安装方式', cooling: '散热', other: '其他信息',
-      warranty: '保修', lifetime: '供货至', cert: '认证', application: '应用领域',
-      gmslChip: 'GMSL 解串器', none: '—',
+    "gaps": {
+      "aiGap": "AI 算力不足",
+      "ifaceGap": "缺少接口",
+      "ipGap": "防护等级不足",
+      "tempGap": "低温不达标",
+      "vehicleGap": "不支持车载电源",
+      "scenarioGap": "场景不匹配",
+      "jetpackGap": "JetPack 版本不支持"
     },
-    compare: {
-      btn: '开始对比', clear: '清空', title: '产品对比', close: '关闭', remove: '移除',
-      maxHint: '最多选择 4 款产品', diffHint: '高亮行表示所选产品之间存在差异',
-      selected: (n) => `已选 ${n} / 4 款`,
+    "card": {
+      "expand": "查看详情",
+      "collapse": "收起",
+      "addCompare": "加入对比"
     },
-    cRows: {
-      score: '匹配度', module: '模组', tops: 'AI 算力', aiPerf: '模组 AI 性能',
-      gpu: 'GPU', cpu: 'CPU', memGb: '内存容量', memSpec: '内存规格', power: '模组功耗',
-      video: '视频编解码', csi: 'CSI 摄像头', gmsl: 'GMSL', can: 'CAN', rs: 'RS485/232',
-      uart: 'UART', i2c: 'I2C', spi: 'SPI', usb3: 'USB 3.x', usb2: 'USB 2.0', mipi: 'MIPI CSI',
-      poe: 'PoE', eth: '以太网', m2: 'M.2 Key M', sata: 'SATA', storage: '随机存储',
-      connectivity: '无线/蜂窝', sim: 'SIM 卡', jetpack: 'JetPack 版本', temp: '工作温度',
-      ip: '防护等级', vehicle: '车载电源', powerSupply: '整机供电', dimension: '尺寸',
-      weight: '重量', install: '安装方式', cooling: '散热', warranty: '保修', lifetime: '供货周期',
-      scenarios: '适用场景',
+    "detail": {
+      "ifaces": "完整接口清单",
+      "module": "模组规格",
+      "jetpack": "JetPack 支持",
+      "factory": "出厂固件",
+      "supported": "支持版本",
+      "power": "供电与结构",
+      "powerConn": "电源接口",
+      "powerRange": "供电范围",
+      "dimension": "尺寸",
+      "weight": "重量",
+      "install": "安装方式",
+      "cooling": "散热",
+      "other": "其他信息",
+      "warranty": "保修",
+      "lifetime": "供货至",
+      "cert": "认证",
+      "application": "应用领域",
+      "gmslChip": "GMSL 解串器",
+      "none": "—"
     },
-    empty: '没有符合条件的产品，试试放宽筛选条件。',
+    "compare": {
+      "btn": "开始对比",
+      "clear": "清空",
+      "title": "产品对比",
+      "close": "关闭",
+      "remove": "移除",
+      "maxHint": "最多选择 4 款产品",
+      "diffHint": "高亮行表示所选产品之间存在差异"
+    },
+    "cRows": {
+      "score": "匹配度",
+      "module": "模组",
+      "tops": "AI 算力",
+      "aiPerf": "模组 AI 性能",
+      "gpu": "GPU",
+      "cpu": "CPU",
+      "memGb": "内存容量",
+      "memSpec": "内存规格",
+      "power": "模组功耗",
+      "video": "视频编解码",
+      "csi": "CSI 摄像头",
+      "gmsl": "GMSL",
+      "can": "CAN",
+      "rs": "RS485/232",
+      "uart": "UART",
+      "i2c": "I2C",
+      "spi": "SPI",
+      "usb3": "USB 3.x",
+      "usb2": "USB 2.0",
+      "mipi": "MIPI CSI",
+      "poe": "PoE",
+      "eth": "以太网",
+      "m2": "M.2 Key M",
+      "sata": "SATA",
+      "storage": "随机存储",
+      "connectivity": "无线/蜂窝",
+      "sim": "SIM 卡",
+      "jetpack": "JetPack 版本",
+      "temp": "工作温度",
+      "ip": "防护等级",
+      "vehicle": "车载电源",
+      "powerSupply": "整机供电",
+      "dimension": "尺寸",
+      "weight": "重量",
+      "install": "安装方式",
+      "cooling": "散热",
+      "warranty": "保修",
+      "lifetime": "供货周期",
+      "scenarios": "适用场景"
+    },
+    "empty": "没有符合条件的产品，试试放宽筛选条件。"
   },
-  en: {
-    title: 'Jetson Product Selector',
-    intro:
-      "Not sure which one to pick? Search by model or SKU, or click a scenario card to apply a preset. Results are ranked by match score; select up to 4 products to compare.",
-    searchPlaceholder: 'Search model / SKU / keyword, e.g. J5012, Rugged, GMSL',
-    presetTitle: 'Quick Scenario Pick',
-    presets: {
-      plant_pest: { title: 'Plant Pest / Drone Inspection', desc: 'AGX-class compute + multi GMSL cameras + CAN/RS485 + 5G + wide-range vehicle power' },
-      industrial_ai: { title: 'Industrial Vision', desc: 'IP40 + wide temp + RS485/CAN/PoE industrial I/O' },
-      robotics: { title: 'Robotics / AMR', desc: 'Multi CAN + UART/I2C + wide-range power' },
-      in_vehicle: { title: 'In-Vehicle / Outdoor', desc: 'IP66 + M12 connectors + PoE + wide temp' },
-      devkit: { title: 'Learning / Prototyping', desc: 'Entry-level budget to start edge AI' },
-      custom: { title: 'Custom', desc: 'Clear presets and combine filters manually' },
+  "en": {
+    "title": "Jetson Product Selector",
+    "intro": "Not sure which one to pick? Search by model or SKU, or click a scenario card to apply a preset. Results are ranked by match score; select up to 4 products to compare.",
+    "searchPlaceholder": "Search model / SKU / keyword, e.g. J5012, Rugged, GMSL",
+    "presetTitle": "Quick Scenario Pick",
+    "presets": {
+      "plant_pest": {
+        "title": "Plant Pest / Drone Inspection",
+        "desc": "AGX-class compute + multi GMSL cameras + CAN/RS485 + 5G + wide-range vehicle power"
+      },
+      "industrial_ai": {
+        "title": "Industrial Vision",
+        "desc": "IP40 + wide temp + RS485/CAN/PoE industrial I/O"
+      },
+      "robotics": {
+        "title": "Robotics / AMR",
+        "desc": "Multi CAN + UART/I2C + wide-range power"
+      },
+      "in_vehicle": {
+        "title": "In-Vehicle / Outdoor",
+        "desc": "IP66 + M12 connectors + PoE + wide temp"
+      },
+      "devkit": {
+        "title": "Learning / Prototyping",
+        "desc": "Entry-level budget to start edge AI"
+      },
+      "custom": {
+        "title": "Custom",
+        "desc": "Clear presets and combine filters manually"
+      }
     },
-    filters: {
-      type: 'Product Type',
-      typeAll: 'All',
-      typeMachine: 'Machine',
-      typeCarrier: 'Carrier Board',
-      module: 'Module',
-      aiPerf: 'Min AI Performance (TOPS)',
-      memory: 'Min Memory (GB)',
-      storage: 'Storage Expansion',
-      ifaces: 'Required Interfaces',
-      env: 'Protection & Environment',
-      jetpack: 'JetPack Version',
-      scenario: 'Scenario',
-      scenarioAny: 'Any',
-      ip: 'Min IP Rating',
-      temp: 'Min Operating Temp',
-      vehicle: 'Need 12/24V vehicle power',
-      any: 'Any',
-      m2one: '≥1× M.2 Key M',
-      m2two: '≥2× M.2 Key M',
-      sata: 'SATA required',
+    "filters": {
+      "type": "Product Type",
+      "typeAll": "All",
+      "typeMachine": "System",
+      "typeCarrier": "Carrier Board",
+      "module": "Module",
+      "aiPerf": "Min AI Performance (TOPS)",
+      "memory": "Min Memory (GB)",
+      "storage": "Storage Expansion",
+      "ifaces": "Required Interfaces",
+      "env": "Protection & Environment",
+      "jetpack": "JetPack Version",
+      "scenario": "Scenario",
+      "scenarioAny": "Any",
+      "ip": "Min IP Rating",
+      "temp": "Min Operating Temp",
+      "vehicle": "Need 12/24V vehicle power",
+      "any": "Any",
+      "m2one": "≥1× M.2 Key M",
+      "m2two": "≥2× M.2 Key M",
+      "sata": "SATA required"
     },
-    modules: {
-      nano: 'Jetson Nano',
-      tx2_nx: 'Jetson TX2 NX',
-      xavier_nx: 'Jetson Xavier NX',
-      orin_nano: 'Jetson Orin Nano',
-      orin_nx: 'Jetson Orin NX 8GB',
-      orin_nx_16: 'Jetson Orin NX 16GB',
-      agx_orin_32: 'AGX Orin 32GB',
-      agx_orin_64: 'AGX Orin 64GB',
-      agx_thor: 'AGX Thor (carrier)',
+    "modules": {
+      "nano": "Jetson Nano",
+      "tx2_nx": "Jetson TX2 NX",
+      "xavier_nx": "Jetson Xavier NX",
+      "orin_nano": "Jetson Orin Nano",
+      "orin_nx": "Jetson Orin NX 8GB",
+      "orin_nx_16": "Jetson Orin NX 16GB",
+      "agx_orin_32": "AGX Orin 32GB",
+      "agx_orin_64": "AGX Orin 64GB",
+      "agx_thor": "AGX Thor (carrier)"
     },
-    scenarios: {
-      devkit: 'Entry / DevKit',
-      edge_ai: 'Edge AI / Video Analytics',
-      industrial: 'Industrial Control',
-      robotics: 'Robotics / AMR',
-      rugged: 'In-Vehicle / Outdoor / Harsh',
-      autonomous: 'Autonomous / High-end R&D',
+    "scenarios": {
+      "devkit": "Entry / DevKit",
+      "edge_ai": "Edge AI / Video Analytics",
+      "industrial": "Industrial Control",
+      "robotics": "Robotics / AMR",
+      "rugged": "In-Vehicle / Outdoor / Harsh",
+      "autonomous": "Autonomous / High-end R&D"
     },
-    ifaces: {
-      CAN: 'CAN', RS485: 'RS485/232', GMSL: 'GMSL', MIPI: 'MIPI CSI', SATA: 'SATA',
-      GPIO: 'GPIO', UART: 'UART', I2C: 'I2C', SPI: 'SPI', HDMI: 'HDMI', DP: 'DP',
-      USB3: 'USB 3.x', USB_C: 'USB Type-C', WIFI: 'WiFi/BT', LTE4G: '4G/LTE cellular', '5G': '5G cellular', SIM: 'SIM slot', POE: 'PoE', RTC: 'RTC',
-      ETH1G: '1G Ethernet', ETH10G: '10G Ethernet', TPM: 'TPM',
+    "ifaces": {
+      "CAN": "CAN",
+      "RS485": "RS485/232",
+      "GMSL": "GMSL",
+      "MIPI": "MIPI CSI",
+      "SATA": "SATA",
+      "GPIO": "GPIO",
+      "UART": "UART",
+      "I2C": "I2C",
+      "SPI": "SPI",
+      "HDMI": "HDMI",
+      "DP": "DP",
+      "USB3": "USB 3.x",
+      "USB_C": "USB Type-C",
+      "WIFI": "WiFi/BT",
+      "LTE4G": "4G/LTE cellular",
+      "5G": "5G cellular",
+      "SIM": "SIM slot",
+      "POE": "PoE",
+      "RTC": "RTC",
+      "ETH1G": "1G Ethernet",
+      "ETH10G": "10G Ethernet",
+      "TPM": "TPM"
     },
-    results: 'Recommendations',
-    sortedByMatch: 'sorted by match score',
-    resultCount: (n) => `${n} product${n === 1 ? '' : 's'}`,
-    resetAll: 'Reset all filters',
-    badges: { best: 'Best Match', second: 'Runner-up', third: 'Alternative' },
-    specs: {
-      module: 'Module', tops: 'AI Perf', memory: 'Memory', temp: 'Temp',
-      ip: 'IP', jetpack: 'JetPack', score: 'Match', normal: 'Standard',
+    "results": "Recommendations",
+    "sortedByMatch": "sorted by match score",
+    "resetAll": "Reset all filters",
+    "badges": {
+      "best": "Best Match",
+      "second": "Runner-up",
+      "third": "Alternative"
     },
-    reasons: {
-      aiOk: 'AI performance OK', ifaceOk: 'All interfaces OK', ipOk: 'IP rating OK', tempOk: 'Temp range OK',
-      vehicleOk: 'Vehicle power OK', scenarioOk: 'Scenario match', jetpackOk: 'JetPack OK',
+    "specs": {
+      "module": "Module",
+      "tops": "AI Perf",
+      "memory": "Memory",
+      "temp": "Temp",
+      "ip": "IP",
+      "jetpack": "JetPack",
+      "score": "Match",
+      "normal": "Standard"
     },
-    gaps: {
-      aiGap: 'AI performance insufficient', ifaceGap: 'Missing interfaces', ipGap: 'IP rating insufficient',
-      tempGap: 'Low temp insufficient', vehicleGap: 'No 12/24V vehicle power', scenarioGap: 'Scenario mismatch',
-      jetpackGap: 'JetPack unsupported',
+    "reasons": {
+      "aiOk": "AI performance OK",
+      "ifaceOk": "All interfaces OK",
+      "ipOk": "IP rating OK",
+      "tempOk": "Temp range OK",
+      "vehicleOk": "Vehicle power OK",
+      "scenarioOk": "Scenario match",
+      "jetpackOk": "JetPack OK"
     },
-    card: { expand: 'Details', collapse: 'Collapse', addCompare: 'Compare' },
-    detail: {
-      ifaces: 'Full Interface List', module: 'Module Specs', jetpack: 'JetPack Support', factory: 'Factory firmware',
-      supported: 'Supported versions', power: 'Power & Mechanical', powerConn: 'Power connector', powerRange: 'Power range',
-      dimension: 'Dimension', weight: 'Weight', install: 'Installation', cooling: 'Cooling', other: 'Other Info',
-      warranty: 'Warranty', lifetime: 'Available until', cert: 'Certifications', application: 'Applications',
-      gmslChip: 'GMSL deserializer', none: '—',
+    "gaps": {
+      "aiGap": "AI performance insufficient",
+      "ifaceGap": "Missing interfaces",
+      "ipGap": "IP rating insufficient",
+      "tempGap": "Low temp insufficient",
+      "vehicleGap": "No 12/24V vehicle power",
+      "scenarioGap": "Scenario mismatch",
+      "jetpackGap": "JetPack unsupported"
     },
-    compare: {
-      btn: 'Compare', clear: 'Clear', title: 'Product Comparison', close: 'Close', remove: 'Remove',
-      maxHint: 'Select up to 4 products', diffHint: 'Highlighted rows differ across selected products',
-      selected: (n) => `${n} / 4 selected`,
+    "card": {
+      "expand": "Details",
+      "collapse": "Collapse",
+      "addCompare": "Compare"
     },
-    cRows: {
-      score: 'Match score', module: 'Module', tops: 'AI Performance', aiPerf: 'Module AI Perf',
-      gpu: 'GPU', cpu: 'CPU', memGb: 'Memory Size', memSpec: 'Memory Spec', power: 'Module Power',
-      video: 'Video Encode/Decode', csi: 'CSI Cameras', gmsl: 'GMSL', can: 'CAN', rs: 'RS485/232',
-      uart: 'UART', i2c: 'I2C', spi: 'SPI', usb3: 'USB 3.x', usb2: 'USB 2.0', mipi: 'MIPI CSI',
-      poe: 'PoE', eth: 'Ethernet', m2: 'M.2 Key M', sata: 'SATA', storage: 'Included Storage',
-      connectivity: 'Wireless/Cellular', sim: 'SIM Slot', jetpack: 'JetPack Versions', temp: 'Operating Temp',
-      ip: 'IP Rating', vehicle: 'Vehicle Power', powerSupply: 'System Power', dimension: 'Dimension',
-      weight: 'Weight', install: 'Installation', cooling: 'Cooling', warranty: 'Warranty', lifetime: 'Production Lifetime',
-      scenarios: 'Scenarios',
+    "detail": {
+      "ifaces": "Full Interface List",
+      "module": "Module Specs",
+      "jetpack": "JetPack Support",
+      "factory": "Factory firmware",
+      "supported": "Supported versions",
+      "power": "Power & Mechanical",
+      "powerConn": "Power connector",
+      "powerRange": "Power range",
+      "dimension": "Dimension",
+      "weight": "Weight",
+      "install": "Installation",
+      "cooling": "Cooling",
+      "other": "Other Info",
+      "warranty": "Warranty",
+      "lifetime": "Available until",
+      "cert": "Certifications",
+      "application": "Applications",
+      "gmslChip": "GMSL deserializer",
+      "none": "—"
     },
-    empty: 'No products match the current filters. Try relaxing them.',
+    "compare": {
+      "btn": "Compare",
+      "clear": "Clear",
+      "title": "Product Comparison",
+      "close": "Close",
+      "remove": "Remove",
+      "maxHint": "Select up to 4 products",
+      "diffHint": "Highlighted rows differ across selected products"
+    },
+    "cRows": {
+      "score": "Match score",
+      "module": "Module",
+      "tops": "AI Performance",
+      "aiPerf": "Module AI Perf",
+      "gpu": "GPU",
+      "cpu": "CPU",
+      "memGb": "Memory Size",
+      "memSpec": "Memory Spec",
+      "power": "Module Power",
+      "video": "Video Encode/Decode",
+      "csi": "CSI Cameras",
+      "gmsl": "GMSL",
+      "can": "CAN",
+      "rs": "RS485/232",
+      "uart": "UART",
+      "i2c": "I2C",
+      "spi": "SPI",
+      "usb3": "USB 3.x",
+      "usb2": "USB 2.0",
+      "mipi": "MIPI CSI",
+      "poe": "PoE",
+      "eth": "Ethernet",
+      "m2": "M.2 Key M",
+      "sata": "SATA",
+      "storage": "Included Storage",
+      "connectivity": "Wireless/Cellular",
+      "sim": "SIM Slot",
+      "jetpack": "JetPack Versions",
+      "temp": "Operating Temp",
+      "ip": "IP Rating",
+      "vehicle": "Vehicle Power",
+      "powerSupply": "System Power",
+      "dimension": "Dimension",
+      "weight": "Weight",
+      "install": "Installation",
+      "cooling": "Cooling",
+      "warranty": "Warranty",
+      "lifetime": "Production Lifetime",
+      "scenarios": "Scenarios"
+    },
+    "empty": "No products match the current filters. Try relaxing them."
   },
+  "ja": {
+    "title": "Jetson 製品選定ツール",
+    "intro": "どの製品を選べばよいか迷ったら、モデル名や SKU で検索するか、シナリオカードから条件を一括設定できます。結果は一致度順に表示され、最大 4 製品まで比較できます。",
+    "searchPlaceholder": "モデル / SKU / キーワードを検索（例: J5012、Rugged、GMSL）",
+    "presetTitle": "シナリオから選ぶ",
+    "presets": {
+      "plant_pest": {
+        "title": "植物病害虫 / ドローン点検",
+        "desc": "AGX クラスの演算性能 + 複数 GMSL カメラ + CAN/RS485 + 5G + 車載向け広範囲電源"
+      },
+      "industrial_ai": {
+        "title": "産業用画像検査",
+        "desc": "IP40 + 広温度範囲 + RS485/CAN/PoE 産業用 I/O"
+      },
+      "robotics": {
+        "title": "ロボティクス / AMR",
+        "desc": "複数 CAN + UART/I2C + 広範囲電源"
+      },
+      "in_vehicle": {
+        "title": "車載 / 屋外",
+        "desc": "IP66 + M12 コネクタ + PoE + 広温度範囲"
+      },
+      "devkit": {
+        "title": "学習 / プロトタイピング",
+        "desc": "エッジ AI を始めやすいエントリー構成"
+      },
+      "custom": {
+        "title": "カスタム",
+        "desc": "プリセットを解除して条件を自由に組み合わせる"
+      }
+    },
+    "filters": {
+      "type": "製品タイプ",
+      "typeAll": "すべて",
+      "typeMachine": "完成品システム",
+      "typeCarrier": "キャリアボード",
+      "module": "モジュール",
+      "aiPerf": "最低 AI 性能 (TOPS)",
+      "memory": "最小メモリ (GB)",
+      "storage": "ストレージ拡張",
+      "ifaces": "必須インターフェース",
+      "env": "保護等級・動作環境",
+      "jetpack": "JetPack バージョン",
+      "scenario": "用途",
+      "scenarioAny": "指定なし",
+      "ip": "最低 IP 等級",
+      "temp": "最低動作温度",
+      "vehicle": "12/24V 車載電源が必要",
+      "any": "指定なし",
+      "m2one": "≥1× M.2 Key M",
+      "m2two": "≥2× M.2 Key M",
+      "sata": "SATA が必要"
+    },
+    "modules": {
+      "nano": "Jetson Nano",
+      "tx2_nx": "Jetson TX2 NX",
+      "xavier_nx": "Jetson Xavier NX",
+      "orin_nano": "Jetson Orin Nano",
+      "orin_nx": "Jetson Orin NX 8GB",
+      "orin_nx_16": "Jetson Orin NX 16GB",
+      "agx_orin_32": "AGX Orin 32GB",
+      "agx_orin_64": "AGX Orin 64GB",
+      "agx_thor": "AGX Thor（キャリアボード）"
+    },
+    "scenarios": {
+      "devkit": "エントリー / 開発キット",
+      "edge_ai": "エッジ AI / 映像解析",
+      "industrial": "産業制御",
+      "robotics": "ロボティクス / AMR",
+      "rugged": "車載 / 屋外 / 過酷環境",
+      "autonomous": "自動運転 / 高度な研究開発"
+    },
+    "ifaces": {
+      "CAN": "CAN",
+      "RS485": "RS485/232",
+      "GMSL": "GMSL",
+      "MIPI": "MIPI CSI",
+      "SATA": "SATA",
+      "GPIO": "GPIO",
+      "UART": "UART",
+      "I2C": "I2C",
+      "SPI": "SPI",
+      "HDMI": "HDMI",
+      "DP": "DP",
+      "USB3": "USB 3.x",
+      "USB_C": "USB Type-C",
+      "WIFI": "WiFi/BT",
+      "LTE4G": "4G/LTE セルラー",
+      "5G": "5G セルラー",
+      "SIM": "SIM スロット",
+      "POE": "PoE",
+      "RTC": "RTC",
+      "ETH1G": "1G Ethernet",
+      "ETH10G": "10G Ethernet",
+      "TPM": "TPM"
+    },
+    "results": "推奨製品",
+    "sortedByMatch": "一致度順",
+    "resetAll": "すべてのフィルターをリセット",
+    "badges": {
+      "best": "最適",
+      "second": "次点",
+      "third": "候補"
+    },
+    "specs": {
+      "module": "モジュール",
+      "tops": "AI 性能",
+      "memory": "メモリ",
+      "temp": "動作温度",
+      "ip": "IP",
+      "jetpack": "JetPack",
+      "score": "一致度",
+      "normal": "標準"
+    },
+    "reasons": {
+      "aiOk": "AI 性能を満たす",
+      "ifaceOk": "必要なインターフェースをすべて満たす",
+      "ipOk": "IP 等級を満たす",
+      "tempOk": "温度条件を満たす",
+      "vehicleOk": "車載電源に対応",
+      "scenarioOk": "用途に適合",
+      "jetpackOk": "JetPack 条件を満たす"
+    },
+    "gaps": {
+      "aiGap": "AI 性能が不足",
+      "ifaceGap": "不足インターフェース",
+      "ipGap": "IP 等級が不足",
+      "tempGap": "低温条件を満たさない",
+      "vehicleGap": "車載電源に非対応",
+      "scenarioGap": "用途が一致しない",
+      "jetpackGap": "JetPack バージョンが非対応"
+    },
+    "card": {
+      "expand": "詳細",
+      "collapse": "閉じる",
+      "addCompare": "比較に追加"
+    },
+    "detail": {
+      "ifaces": "インターフェース一覧",
+      "module": "モジュール仕様",
+      "jetpack": "JetPack 対応",
+      "factory": "出荷時ファームウェア",
+      "supported": "対応バージョン",
+      "power": "電源・構造",
+      "powerConn": "電源コネクタ",
+      "powerRange": "入力電圧範囲",
+      "dimension": "寸法",
+      "weight": "重量",
+      "install": "設置方法",
+      "cooling": "冷却方式",
+      "other": "その他",
+      "warranty": "保証",
+      "lifetime": "供給予定",
+      "cert": "認証",
+      "application": "用途",
+      "gmslChip": "GMSL デシリアライザ",
+      "none": "—"
+    },
+    "compare": {
+      "btn": "比較する",
+      "clear": "クリア",
+      "title": "製品比較",
+      "close": "閉じる",
+      "remove": "削除",
+      "maxHint": "最大 4 製品まで選択できます",
+      "diffHint": "ハイライトされた行は、選択した製品間で値が異なります"
+    },
+    "cRows": {
+      "score": "一致度",
+      "module": "モジュール",
+      "tops": "AI 性能",
+      "aiPerf": "モジュール AI 性能",
+      "gpu": "GPU",
+      "cpu": "CPU",
+      "memGb": "メモリ容量",
+      "memSpec": "メモリ仕様",
+      "power": "モジュール消費電力",
+      "video": "動画エンコード/デコード",
+      "csi": "CSI カメラ",
+      "gmsl": "GMSL",
+      "can": "CAN",
+      "rs": "RS485/232",
+      "uart": "UART",
+      "i2c": "I2C",
+      "spi": "SPI",
+      "usb3": "USB 3.x",
+      "usb2": "USB 2.0",
+      "mipi": "MIPI CSI",
+      "poe": "PoE",
+      "eth": "Ethernet",
+      "m2": "M.2 Key M",
+      "sata": "SATA",
+      "storage": "付属ストレージ",
+      "connectivity": "無線 / セルラー",
+      "sim": "SIM スロット",
+      "jetpack": "JetPack バージョン",
+      "temp": "動作温度",
+      "ip": "IP 等級",
+      "vehicle": "車載電源",
+      "powerSupply": "システム電源",
+      "dimension": "寸法",
+      "weight": "重量",
+      "install": "設置方法",
+      "cooling": "冷却方式",
+      "warranty": "保証",
+      "lifetime": "供給期間",
+      "scenarios": "適用シナリオ"
+    },
+    "empty": "条件に一致する製品がありません。フィルター条件を緩めてください。"
+  },
+  "es": {
+    "title": "Selector de productos Jetson",
+    "intro": "¿No sabes cuál elegir? Busca por modelo o SKU, o usa una tarjeta de escenario para aplicar condiciones predefinidas. Los resultados se ordenan por nivel de coincidencia y puedes comparar hasta 4 productos.",
+    "searchPlaceholder": "Buscar modelo / SKU / palabra clave, p. ej. J5012, Rugged, GMSL",
+    "presetTitle": "Selección rápida por escenario",
+    "presets": {
+      "plant_pest": {
+        "title": "Plagas vegetales / Inspección con drones",
+        "desc": "Cómputo de clase AGX + varias cámaras GMSL + CAN/RS485 + 5G + alimentación vehicular de amplio rango"
+      },
+      "industrial_ai": {
+        "title": "Visión industrial",
+        "desc": "IP40 + amplio rango térmico + E/S industrial RS485/CAN/PoE"
+      },
+      "robotics": {
+        "title": "Robótica / AMR",
+        "desc": "Varios CAN + UART/I2C + alimentación de amplio rango"
+      },
+      "in_vehicle": {
+        "title": "Vehicular / Exterior",
+        "desc": "IP66 + conectores M12 + PoE + amplio rango térmico"
+      },
+      "devkit": {
+        "title": "Aprendizaje / Prototipado",
+        "desc": "Configuración de entrada para comenzar con edge AI"
+      },
+      "custom": {
+        "title": "Personalizado",
+        "desc": "Borra los ajustes predefinidos y combina los filtros manualmente"
+      }
+    },
+    "filters": {
+      "type": "Tipo de producto",
+      "typeAll": "Todos",
+      "typeMachine": "Sistema completo",
+      "typeCarrier": "Placa portadora",
+      "module": "Módulo",
+      "aiPerf": "Rendimiento de IA mínimo (TOPS)",
+      "memory": "Memoria mínima (GB)",
+      "storage": "Expansión de almacenamiento",
+      "ifaces": "Interfaces requeridas",
+      "env": "Protección y entorno",
+      "jetpack": "Versión de JetPack",
+      "scenario": "Escenario",
+      "scenarioAny": "Cualquiera",
+      "ip": "Clasificación IP mínima",
+      "temp": "Temperatura mínima de operación",
+      "vehicle": "Requiere alimentación vehicular de 12/24 V",
+      "any": "Cualquiera",
+      "m2one": "≥1× M.2 Key M",
+      "m2two": "≥2× M.2 Key M",
+      "sata": "Requiere SATA"
+    },
+    "modules": {
+      "nano": "Jetson Nano",
+      "tx2_nx": "Jetson TX2 NX",
+      "xavier_nx": "Jetson Xavier NX",
+      "orin_nano": "Jetson Orin Nano",
+      "orin_nx": "Jetson Orin NX 8GB",
+      "orin_nx_16": "Jetson Orin NX 16GB",
+      "agx_orin_32": "AGX Orin 32GB",
+      "agx_orin_64": "AGX Orin 64GB",
+      "agx_thor": "AGX Thor (placa portadora)"
+    },
+    "scenarios": {
+      "devkit": "Entrada / Kit de desarrollo",
+      "edge_ai": "Edge AI / Analítica de video",
+      "industrial": "Control industrial",
+      "robotics": "Robótica / AMR",
+      "rugged": "Vehicular / Exterior / Entorno exigente",
+      "autonomous": "Autónomo / I+D avanzada"
+    },
+    "ifaces": {
+      "CAN": "CAN",
+      "RS485": "RS485/232",
+      "GMSL": "GMSL",
+      "MIPI": "MIPI CSI",
+      "SATA": "SATA",
+      "GPIO": "GPIO",
+      "UART": "UART",
+      "I2C": "I2C",
+      "SPI": "SPI",
+      "HDMI": "HDMI",
+      "DP": "DP",
+      "USB3": "USB 3.x",
+      "USB_C": "USB Type-C",
+      "WIFI": "WiFi/BT",
+      "LTE4G": "4G/LTE celular",
+      "5G": "5G celular",
+      "SIM": "Ranura SIM",
+      "POE": "PoE",
+      "RTC": "RTC",
+      "ETH1G": "Ethernet 1G",
+      "ETH10G": "Ethernet 10G",
+      "TPM": "TPM"
+    },
+    "results": "Recomendaciones",
+    "sortedByMatch": "ordenadas por coincidencia",
+    "resetAll": "Restablecer todos los filtros",
+    "badges": {
+      "best": "Mejor coincidencia",
+      "second": "Segunda opción",
+      "third": "Alternativa"
+    },
+    "specs": {
+      "module": "Módulo",
+      "tops": "Rendimiento de IA",
+      "memory": "Memoria",
+      "temp": "Temperatura",
+      "ip": "IP",
+      "jetpack": "JetPack",
+      "score": "Coincidencia",
+      "normal": "Estándar"
+    },
+    "reasons": {
+      "aiOk": "Rendimiento de IA adecuado",
+      "ifaceOk": "Cumple todas las interfaces",
+      "ipOk": "Clasificación IP adecuada",
+      "tempOk": "Rango térmico adecuado",
+      "vehicleOk": "Compatible con alimentación vehicular",
+      "scenarioOk": "Escenario compatible",
+      "jetpackOk": "Versión de JetPack compatible"
+    },
+    "gaps": {
+      "aiGap": "Rendimiento de IA insuficiente",
+      "ifaceGap": "Faltan interfaces",
+      "ipGap": "Clasificación IP insuficiente",
+      "tempGap": "No cumple la temperatura mínima",
+      "vehicleGap": "Sin alimentación vehicular de 12/24 V",
+      "scenarioGap": "Escenario no compatible",
+      "jetpackGap": "Versión de JetPack no compatible"
+    },
+    "card": {
+      "expand": "Detalles",
+      "collapse": "Cerrar",
+      "addCompare": "Añadir a comparación"
+    },
+    "detail": {
+      "ifaces": "Lista completa de interfaces",
+      "module": "Especificaciones del módulo",
+      "jetpack": "Compatibilidad con JetPack",
+      "factory": "Firmware de fábrica",
+      "supported": "Versiones compatibles",
+      "power": "Alimentación y mecánica",
+      "powerConn": "Conector de alimentación",
+      "powerRange": "Rango de alimentación",
+      "dimension": "Dimensiones",
+      "weight": "Peso",
+      "install": "Instalación",
+      "cooling": "Refrigeración",
+      "other": "Otra información",
+      "warranty": "Garantía",
+      "lifetime": "Disponible hasta",
+      "cert": "Certificaciones",
+      "application": "Aplicaciones",
+      "gmslChip": "Deserializador GMSL",
+      "none": "—"
+    },
+    "compare": {
+      "btn": "Comparar",
+      "clear": "Limpiar",
+      "title": "Comparación de productos",
+      "close": "Cerrar",
+      "remove": "Quitar",
+      "maxHint": "Selecciona hasta 4 productos",
+      "diffHint": "Las filas resaltadas muestran diferencias entre los productos seleccionados"
+    },
+    "cRows": {
+      "score": "Coincidencia",
+      "module": "Módulo",
+      "tops": "Rendimiento de IA",
+      "aiPerf": "Rendimiento de IA del módulo",
+      "gpu": "GPU",
+      "cpu": "CPU",
+      "memGb": "Capacidad de memoria",
+      "memSpec": "Especificación de memoria",
+      "power": "Potencia del módulo",
+      "video": "Codificación/decodificación de video",
+      "csi": "Cámaras CSI",
+      "gmsl": "GMSL",
+      "can": "CAN",
+      "rs": "RS485/232",
+      "uart": "UART",
+      "i2c": "I2C",
+      "spi": "SPI",
+      "usb3": "USB 3.x",
+      "usb2": "USB 2.0",
+      "mipi": "MIPI CSI",
+      "poe": "PoE",
+      "eth": "Ethernet",
+      "m2": "M.2 Key M",
+      "sata": "SATA",
+      "storage": "Almacenamiento incluido",
+      "connectivity": "Inalámbrico/Celular",
+      "sim": "Ranura SIM",
+      "jetpack": "Versiones de JetPack",
+      "temp": "Temperatura de operación",
+      "ip": "Clasificación IP",
+      "vehicle": "Alimentación vehicular",
+      "powerSupply": "Alimentación del sistema",
+      "dimension": "Dimensiones",
+      "weight": "Peso",
+      "install": "Instalación",
+      "cooling": "Refrigeración",
+      "warranty": "Garantía",
+      "lifetime": "Ciclo de suministro",
+      "scenarios": "Escenarios"
+    },
+    "empty": "No hay productos que coincidan con los filtros actuales. Prueba a flexibilizar las condiciones."
+  },
+  "pt": {
+    "title": "Seletor de produtos Jetson",
+    "intro": "Não sabe qual escolher? Pesquise por modelo ou SKU, ou use um cartão de cenário para aplicar condições predefinidas. Os resultados são ordenados por compatibilidade e você pode comparar até 4 produtos.",
+    "searchPlaceholder": "Pesquisar modelo / SKU / palavra-chave, ex.: J5012, Rugged, GMSL",
+    "presetTitle": "Seleção rápida por cenário",
+    "presets": {
+      "plant_pest": {
+        "title": "Pragas em plantas / Inspeção por drone",
+        "desc": "Computação de classe AGX + várias câmeras GMSL + CAN/RS485 + 5G + alimentação veicular de ampla faixa"
+      },
+      "industrial_ai": {
+        "title": "Visão industrial",
+        "desc": "IP40 + ampla faixa de temperatura + E/S industrial RS485/CAN/PoE"
+      },
+      "robotics": {
+        "title": "Robótica / AMR",
+        "desc": "Múltiplos CAN + UART/I2C + alimentação de ampla faixa"
+      },
+      "in_vehicle": {
+        "title": "Veicular / Externo",
+        "desc": "IP66 + conectores M12 + PoE + ampla faixa de temperatura"
+      },
+      "devkit": {
+        "title": "Aprendizado / Prototipagem",
+        "desc": "Configuração de entrada para começar com edge AI"
+      },
+      "custom": {
+        "title": "Personalizado",
+        "desc": "Limpe as predefinições e combine os filtros manualmente"
+      }
+    },
+    "filters": {
+      "type": "Tipo de produto",
+      "typeAll": "Todos",
+      "typeMachine": "Sistema completo",
+      "typeCarrier": "Placa carrier",
+      "module": "Módulo",
+      "aiPerf": "Desempenho mínimo de IA (TOPS)",
+      "memory": "Memória mínima (GB)",
+      "storage": "Expansão de armazenamento",
+      "ifaces": "Interfaces obrigatórias",
+      "env": "Proteção e ambiente",
+      "jetpack": "Versão do JetPack",
+      "scenario": "Cenário",
+      "scenarioAny": "Qualquer",
+      "ip": "Classificação IP mínima",
+      "temp": "Temperatura mínima de operação",
+      "vehicle": "Precisa de alimentação veicular de 12/24 V",
+      "any": "Qualquer",
+      "m2one": "≥1× M.2 Key M",
+      "m2two": "≥2× M.2 Key M",
+      "sata": "Requer SATA"
+    },
+    "modules": {
+      "nano": "Jetson Nano",
+      "tx2_nx": "Jetson TX2 NX",
+      "xavier_nx": "Jetson Xavier NX",
+      "orin_nano": "Jetson Orin Nano",
+      "orin_nx": "Jetson Orin NX 8GB",
+      "orin_nx_16": "Jetson Orin NX 16GB",
+      "agx_orin_32": "AGX Orin 32GB",
+      "agx_orin_64": "AGX Orin 64GB",
+      "agx_thor": "AGX Thor (placa carrier)"
+    },
+    "scenarios": {
+      "devkit": "Entrada / Kit de desenvolvimento",
+      "edge_ai": "Edge AI / Análise de vídeo",
+      "industrial": "Controle industrial",
+      "robotics": "Robótica / AMR",
+      "rugged": "Veicular / Externo / Ambiente severo",
+      "autonomous": "Autônomo / P&D avançada"
+    },
+    "ifaces": {
+      "CAN": "CAN",
+      "RS485": "RS485/232",
+      "GMSL": "GMSL",
+      "MIPI": "MIPI CSI",
+      "SATA": "SATA",
+      "GPIO": "GPIO",
+      "UART": "UART",
+      "I2C": "I2C",
+      "SPI": "SPI",
+      "HDMI": "HDMI",
+      "DP": "DP",
+      "USB3": "USB 3.x",
+      "USB_C": "USB Type-C",
+      "WIFI": "WiFi/BT",
+      "LTE4G": "4G/LTE celular",
+      "5G": "5G celular",
+      "SIM": "Slot SIM",
+      "POE": "PoE",
+      "RTC": "RTC",
+      "ETH1G": "Ethernet 1G",
+      "ETH10G": "Ethernet 10G",
+      "TPM": "TPM"
+    },
+    "results": "Recomendações",
+    "sortedByMatch": "ordenadas por compatibilidade",
+    "resetAll": "Redefinir todos os filtros",
+    "badges": {
+      "best": "Melhor opção",
+      "second": "Segunda opção",
+      "third": "Alternativa"
+    },
+    "specs": {
+      "module": "Módulo",
+      "tops": "Desempenho de IA",
+      "memory": "Memória",
+      "temp": "Temperatura",
+      "ip": "IP",
+      "jetpack": "JetPack",
+      "score": "Compatibilidade",
+      "normal": "Padrão"
+    },
+    "reasons": {
+      "aiOk": "Desempenho de IA atendido",
+      "ifaceOk": "Todas as interfaces atendidas",
+      "ipOk": "Classificação IP atendida",
+      "tempOk": "Faixa de temperatura atendida",
+      "vehicleOk": "Compatível com alimentação veicular",
+      "scenarioOk": "Cenário compatível",
+      "jetpackOk": "Versão do JetPack compatível"
+    },
+    "gaps": {
+      "aiGap": "Desempenho de IA insuficiente",
+      "ifaceGap": "Interfaces ausentes",
+      "ipGap": "Classificação IP insuficiente",
+      "tempGap": "Temperatura mínima não atendida",
+      "vehicleGap": "Sem alimentação veicular de 12/24 V",
+      "scenarioGap": "Cenário não compatível",
+      "jetpackGap": "Versão do JetPack não compatível"
+    },
+    "card": {
+      "expand": "Detalhes",
+      "collapse": "Fechar",
+      "addCompare": "Adicionar à comparação"
+    },
+    "detail": {
+      "ifaces": "Lista completa de interfaces",
+      "module": "Especificações do módulo",
+      "jetpack": "Suporte ao JetPack",
+      "factory": "Firmware de fábrica",
+      "supported": "Versões compatíveis",
+      "power": "Alimentação e estrutura",
+      "powerConn": "Conector de alimentação",
+      "powerRange": "Faixa de alimentação",
+      "dimension": "Dimensões",
+      "weight": "Peso",
+      "install": "Instalação",
+      "cooling": "Refrigeração",
+      "other": "Outras informações",
+      "warranty": "Garantia",
+      "lifetime": "Disponível até",
+      "cert": "Certificações",
+      "application": "Aplicações",
+      "gmslChip": "Desserializador GMSL",
+      "none": "—"
+    },
+    "compare": {
+      "btn": "Comparar",
+      "clear": "Limpar",
+      "title": "Comparação de produtos",
+      "close": "Fechar",
+      "remove": "Remover",
+      "maxHint": "Selecione até 4 produtos",
+      "diffHint": "As linhas destacadas mostram diferenças entre os produtos selecionados"
+    },
+    "cRows": {
+      "score": "Compatibilidade",
+      "module": "Módulo",
+      "tops": "Desempenho de IA",
+      "aiPerf": "Desempenho de IA do módulo",
+      "gpu": "GPU",
+      "cpu": "CPU",
+      "memGb": "Capacidade de memória",
+      "memSpec": "Especificação de memória",
+      "power": "Potência do módulo",
+      "video": "Codificação/decodificação de vídeo",
+      "csi": "Câmeras CSI",
+      "gmsl": "GMSL",
+      "can": "CAN",
+      "rs": "RS485/232",
+      "uart": "UART",
+      "i2c": "I2C",
+      "spi": "SPI",
+      "usb3": "USB 3.x",
+      "usb2": "USB 2.0",
+      "mipi": "MIPI CSI",
+      "poe": "PoE",
+      "eth": "Ethernet",
+      "m2": "M.2 Key M",
+      "sata": "SATA",
+      "storage": "Armazenamento incluído",
+      "connectivity": "Sem fio/Celular",
+      "sim": "Slot SIM",
+      "jetpack": "Versões do JetPack",
+      "temp": "Temperatura de operação",
+      "ip": "Classificação IP",
+      "vehicle": "Alimentação veicular",
+      "powerSupply": "Alimentação do sistema",
+      "dimension": "Dimensões",
+      "weight": "Peso",
+      "install": "Instalação",
+      "cooling": "Refrigeração",
+      "warranty": "Garantia",
+      "lifetime": "Ciclo de fornecimento",
+      "scenarios": "Cenários"
+    },
+    "empty": "Nenhum produto corresponde aos filtros atuais. Tente flexibilizar as condições."
+  }
 };
+
+// Product data is regenerated from the spreadsheet, so localize user-facing source values here
+// instead of hand-editing individual product rows.
+const PRODUCT_VALUE_TRANSLATIONS = {
+  "开发套件": {
+    "en": "Developer Kit",
+    "ja": "開発キット",
+    "es": "Kit de desarrollo",
+    "pt": "Kit de desenvolvimento"
+  },
+  "商用级": {
+    "en": "Commercial-grade",
+    "ja": "商用グレード",
+    "es": "Grado comercial",
+    "pt": "Nível comercial"
+  },
+  "工业级": {
+    "en": "Industrial-grade",
+    "ja": "産業グレード",
+    "es": "Grado industrial",
+    "pt": "Nível industrial"
+  },
+  "半工业级": {
+    "en": "Semi-industrial",
+    "ja": "セミ産業グレード",
+    "es": "Semiindustrial",
+    "pt": "Semi-industrial"
+  },
+  "工业级、部分车规级、IP66防护等级（防尘、防强力喷水）": {
+    "en": "Industrial-grade, partially automotive-grade, IP66 protection (dust-tight and resistant to powerful water jets)",
+    "ja": "産業グレード、一部車載グレード、IP66 保護（防塵・強い噴流水に対応）",
+    "es": "Grado industrial, parcialmente automotriz, protección IP66 (hermético al polvo y resistente a chorros de agua potentes)",
+    "pt": "Nível industrial, parcialmente automotivo, proteção IP66 (vedado contra poeira e resistente a jatos fortes de água)"
+  },
+  "视觉模型": {
+    "en": "Vision models",
+    "ja": "ビジョンモデル",
+    "es": "Modelos de visión",
+    "pt": "Modelos de visão"
+  },
+  "edge AI，视频分析": {
+    "en": "Edge AI, video analytics",
+    "ja": "エッジ AI、映像解析",
+    "es": "Edge AI, analítica de video",
+    "pt": "Edge AI, análise de vídeo"
+  },
+  "edge AI，视频分析，公共领域": {
+    "en": "Edge AI, video analytics, public-sector applications",
+    "ja": "エッジ AI、映像解析、公共分野",
+    "es": "Edge AI, analítica de video, aplicaciones del sector público",
+    "pt": "Edge AI, análise de vídeo, aplicações do setor público"
+  },
+  "edge AI，视频分析，大语言模型": {
+    "en": "Edge AI, video analytics, large language models",
+    "ja": "エッジ AI、映像解析、大規模言語モデル",
+    "es": "Edge AI, analítica de video, modelos de lenguaje grandes",
+    "pt": "Edge AI, análise de vídeo, modelos de linguagem de grande porte"
+  },
+  "工业环境，edge AI，视频分析通用领域": {
+    "en": "Industrial environments, edge AI, general video analytics",
+    "ja": "産業環境、エッジ AI、汎用映像解析",
+    "es": "Entornos industriales, edge AI y analítica general de video",
+    "pt": "Ambientes industriais, edge AI e análise geral de vídeo"
+  },
+  "cobot，AMR，service robot，飞控": {
+    "en": "Cobots, AMRs, service robots, flight control",
+    "ja": "協働ロボット、AMR、サービスロボット、飛行制御",
+    "es": "Cobots, AMR, robots de servicio, control de vuelo",
+    "pt": "Cobots, AMRs, robôs de serviço, controle de voo"
+  },
+  "edge AI，视频分析，性能提升，室内室外场景": {
+    "en": "Edge AI, video analytics, performance upgrades, indoor/outdoor scenarios",
+    "ja": "エッジ AI、映像解析、性能向上、屋内/屋外用途",
+    "es": "Edge AI, analítica de video, mejora de rendimiento, escenarios interiores/exteriores",
+    "pt": "Edge AI, análise de vídeo, ganho de desempenho, cenários internos/externos"
+  },
+  "机器人应用，AMR，cobot，机械狗，service robot，底盘机器人等": {
+    "en": "Robotics, AMRs, cobots, robot dogs, service robots, mobile-base robots, etc.",
+    "ja": "ロボティクス、AMR、協働ロボット、ロボット犬、サービスロボット、移動台車ロボットなど",
+    "es": "Robótica, AMR, cobots, robots cuadrúpedos, robots de servicio, robots de base móvil, etc.",
+    "pt": "Robótica, AMRs, cobots, cães-robô, robôs de serviço, robôs de base móvel etc."
+  },
+  "机器人应用，AMR，cobot，机械狗，service robot，底盘机器人，人形机器人等": {
+    "en": "Robotics, AMRs, cobots, robot dogs, service robots, mobile-base robots, humanoid robots, etc.",
+    "ja": "ロボティクス、AMR、協働ロボット、ロボット犬、サービスロボット、移動台車ロボット、ヒューマノイドなど",
+    "es": "Robótica, AMR, cobots, robots cuadrúpedos, robots de servicio, robots de base móvil, robots humanoides, etc.",
+    "pt": "Robótica, AMRs, cobots, cães-robô, robôs de serviço, robôs de base móvel, robôs humanoides etc."
+  },
+  "船载、车载（后装/改装）、港口 AGV、野外巡检等": {
+    "en": "Marine, in-vehicle (aftermarket/retrofit), port AGVs, field inspection, etc.",
+    "ja": "船舶、車載（後付け/改装）、港湾 AGV、屋外点検など",
+    "es": "Aplicaciones marítimas, vehiculares (posventa/retrofit), AGV portuarios, inspección de campo, etc.",
+    "pt": "Aplicações marítimas, veiculares (pós-venda/retrofit), AGVs portuários, inspeção de campo etc."
+  },
+  "人形机器人、底盘机器人、自动驾驶等": {
+    "en": "Humanoid robots, mobile-base robots, autonomous driving, etc.",
+    "ja": "ヒューマノイド、移動台車ロボット、自動運転など",
+    "es": "Robots humanoides, robots de base móvil, conducción autónoma, etc.",
+    "pt": "Robôs humanoides, robôs de base móvel, direção autônoma etc."
+  },
+  "人形机器人": {
+    "en": "Humanoid robots",
+    "ja": "ヒューマノイド",
+    "es": "Robots humanoides",
+    "pt": "Robôs humanoides"
+  },
+  "reComputer Mini Extension Board（扩展板，无算力）": {
+    "en": "reComputer Mini Extension Board (extension board, no compute)",
+    "ja": "reComputer Mini Extension Board（拡張ボード、演算機能なし）",
+    "es": "reComputer Mini Extension Board (placa de extensión, sin cómputo)",
+    "pt": "reComputer Mini Extension Board (placa de extensão, sem computação)"
+  },
+  "reServer Industrial J501 GMSL Extension Board（扩展板，无算力）": {
+    "en": "reServer Industrial J501 GMSL Extension Board (extension board, no compute)",
+    "ja": "reServer Industrial J501 GMSL Extension Board（拡張ボード、演算機能なし）",
+    "es": "reServer Industrial J501 GMSL Extension Board (placa de extensión, sin cómputo)",
+    "pt": "reServer Industrial J501 GMSL Extension Board (placa de extensão, sem computação)"
+  },
+  "无算力（扩展板）": {
+    "en": "No compute (extension board)",
+    "ja": "演算機能なし（拡張ボード）",
+    "es": "Sin cómputo (placa de extensión)",
+    "pt": "Sem computação (placa de extensão)"
+  },
+  "暂无申请": {
+    "en": "Pending",
+    "ja": "申請待ち",
+    "es": "Pendiente",
+    "pt": "Pendente"
+  },
+  "99(原价139) / 131": {
+    "en": "99 (original 139) / 131",
+    "ja": "99（通常価格 139）/ 131",
+    "es": "99 (precio original 139) / 131",
+    "pt": "99 (preço original 139) / 131"
+  }
+};
+
+const COMMON_VALUE_TRANSLATIONS = {
+  "Desk": {
+    "zh": "桌面",
+    "ja": "デスク設置",
+    "es": "Sobremesa",
+    "pt": "Mesa"
+  },
+  "Desk, wall-mounting": {
+    "zh": "桌面、壁挂",
+    "ja": "デスク設置、壁面取付",
+    "es": "Sobremesa, montaje en pared",
+    "pt": "Mesa, montagem em parede"
+  },
+  "Desk, DIN rail, VESA": {
+    "zh": "桌面、DIN 导轨、VESA",
+    "ja": "デスク設置、DIN レール、VESA",
+    "es": "Sobremesa, carril DIN, VESA",
+    "pt": "Mesa, trilho DIN, VESA"
+  },
+  "Desk, DIN rail, wall-mounting, VESA": {
+    "zh": "桌面、DIN 导轨、壁挂、VESA",
+    "ja": "デスク設置、DIN レール、壁面取付、VESA",
+    "es": "Sobremesa, carril DIN, montaje en pared, VESA",
+    "pt": "Mesa, trilho DIN, montagem em parede, VESA"
+  },
+  "Active": {
+    "zh": "主动散热",
+    "ja": "アクティブ冷却",
+    "es": "Activa",
+    "pt": "Ativa"
+  },
+  "Passive": {
+    "zh": "被动散热",
+    "ja": "パッシブ冷却",
+    "es": "Pasiva",
+    "pt": "Passiva"
+  },
+  "1 year": {
+    "zh": "1 年",
+    "ja": "1 年",
+    "es": "1 año",
+    "pt": "1 ano"
+  },
+  "1 Year": {
+    "zh": "1 年",
+    "ja": "1 年",
+    "es": "1 año",
+    "pt": "1 ano"
+  },
+  "2 Year": {
+    "zh": "2 年",
+    "ja": "2 年",
+    "es": "2 años",
+    "pt": "2 anos"
+  },
+  "2 Years": {
+    "zh": "2 年",
+    "ja": "2 年",
+    "es": "2 años",
+    "pt": "2 anos"
+  },
+  "January 2027": {
+    "zh": "2027 年 1 月",
+    "ja": "2027年1月",
+    "es": "enero de 2027",
+    "pt": "janeiro de 2027"
+  },
+  "January 2028": {
+    "zh": "2028 年 1 月",
+    "ja": "2028年1月",
+    "es": "enero de 2028",
+    "pt": "janeiro de 2028"
+  },
+  "January 2032": {
+    "zh": "2032 年 1 月",
+    "ja": "2032年1月",
+    "es": "enero de 2032",
+    "pt": "janeiro de 2032"
+  }
+};
+
+const HTML_LANG = { en: 'en', zh: 'zh-CN', ja: 'ja', es: 'es', pt: 'pt-BR' };
+
+function getLangFromPathname(pathname = '/') {
+  const firstSegment = String(pathname).split('/').filter(Boolean)[0]?.toLowerCase() || '';
+  if (firstSegment === 'cn' || firstSegment === 'zh' || firstSegment === 'zh-cn') return 'zh';
+  if (firstSegment === 'ja') return 'ja';
+  if (firstSegment === 'es') return 'es';
+  if (firstSegment === 'pt-br' || firstSegment === 'pt') return 'pt';
+  return 'en';
+}
+
+function localizeValue(value, lang) {
+  if (value == null || value === '') return value;
+  const translated = PRODUCT_VALUE_TRANSLATIONS[value]?.[lang] ?? COMMON_VALUE_TRANSLATIONS[value]?.[lang];
+  return translated ?? value;
+}
+
+function localizeProduct(product, lang) {
+  const moduleSpec = product.moduleSpec
+    ? {
+        ...product.moduleSpec,
+        aiPerformance: localizeValue(product.moduleSpec.aiPerformance, lang),
+      }
+    : product.moduleSpec;
+
+  return {
+    ...product,
+    fullName: localizeValue(product.fullName, lang),
+    price: localizeValue(product.price, lang),
+    positioning: localizeValue(product.positioning, lang),
+    application: localizeValue(product.application, lang),
+    module: localizeValue(product.module, lang),
+    installation: localizeValue(product.installation, lang),
+    cooling: localizeValue(product.cooling, lang),
+    warranty: localizeValue(product.warranty, lang),
+    lifetime: localizeValue(product.lifetime, lang),
+    moduleSpec,
+  };
+}
+
+function formatResultCount(lang, n) {
+  switch (lang) {
+    case 'zh': return `共 ${n} 款产品`;
+    case 'ja': return `${n} 製品`;
+    case 'es': return `${n} producto${n === 1 ? '' : 's'}`;
+    case 'pt': return `${n} produto${n === 1 ? '' : 's'}`;
+    default: return `${n} product${n === 1 ? '' : 's'}`;
+  }
+}
+
+function formatSelectedCount(lang, n) {
+  switch (lang) {
+    case 'zh': return `已选 ${n} / 4 款`;
+    case 'ja': return `${n} / 4 製品を選択`;
+    case 'es': return `${n} / 4 seleccionados`;
+    case 'pt': return `${n} / 4 selecionados`;
+    default: return `${n} / 4 selected`;
+  }
+}
 
 const STYLES = `
 .jps-layout { display: grid; grid-template-columns: 265px minmax(0, 1fr); gap: 16px; align-items: start; }
@@ -358,33 +1478,34 @@ function hasInterface(p, key) {
   }
 }
 
-function formatInterfaces(p) {
+function formatInterfaces(p, t) {
   const parts = [];
   const push = (n, label) => { if (n) parts.push(n > 1 ? `${label} ×${n}` : label); };
-  push(count(p, 'usb3_count'), 'USB 3.x');
+  push(count(p, 'usb3_count'), t.ifaces.USB3);
   push(count(p, 'usb2_count'), 'USB 2.0');
-  push(count(p, 'can_count'), 'CAN');
-  push(count(p, 'rs_count'), 'RS485/232');
+  push(count(p, 'can_count'), t.ifaces.CAN);
+  push(count(p, 'rs_count'), t.ifaces.RS485);
   push(count(p, 'gmsl_count'), 'GMSL2');
-  push(count(p, 'mipi_count'), 'MIPI CSI');
-  push(count(p, 'poe_count'), 'PoE');
-  push(count(p, 'eth_1g_count'), '1G Ethernet');
-  push(count(p, 'eth_10g_count'), '10G Ethernet');
-  push(count(p, 'uart_count'), 'UART');
-  push(count(p, 'i2c_count'), 'I2C');
-  push(count(p, 'spi_count'), 'SPI');
-  push(count(p, 'sata_count'), 'SATA');
-  push(count(p, 'hdmi_count'), 'HDMI');
-  push(count(p, 'dp_count'), 'DP');
+  push(count(p, 'mipi_count'), t.ifaces.MIPI);
+  push(count(p, 'poe_count'), t.ifaces.POE);
+  push(count(p, 'eth_1g_count'), t.ifaces.ETH1G);
+  push(count(p, 'eth_10g_count'), t.ifaces.ETH10G);
+  push(count(p, 'uart_count'), t.ifaces.UART);
+  push(count(p, 'i2c_count'), t.ifaces.I2C);
+  push(count(p, 'spi_count'), t.ifaces.SPI);
+  push(count(p, 'sata_count'), t.ifaces.SATA);
+  push(count(p, 'hdmi_count'), t.ifaces.HDMI);
+  push(count(p, 'dp_count'), t.ifaces.DP);
   push(count(p, 'm2_keym_count'), 'M.2 Key M');
   push(count(p, 'm2_keye_count'), 'M.2 Key E (WiFi/BT)');
   push(count(p, 'm2_keyb_count'), 'M.2 Key B (5G/LTE)');
   const c = p.interfaceCounts || {};
-  if (c.has_wifi) parts.push('WiFi/BT');
-  if (c.has_lte && !count(p, 'm2_keyb_count')) parts.push('LTE');
-  if (c.has_sim) parts.push('SIM');
-  if (c.has_gpio) parts.push('GPIO');
-  if (c.has_tpm) parts.push('TPM');
+  if (c.has_wifi) parts.push(t.ifaces.WIFI);
+  if (c.has_lte && !count(p, 'm2_keyb_count')) parts.push(t.ifaces.LTE4G);
+  if (c.has_5g && !count(p, 'm2_keyb_count')) parts.push(t.ifaces['5G']);
+  if (c.has_sim) parts.push(t.ifaces.SIM);
+  if (c.has_gpio) parts.push(t.ifaces.GPIO);
+  if (c.has_tpm) parts.push(t.ifaces.TPM);
   return parts;
 }
 
@@ -552,8 +1673,15 @@ function CompareDrawer({ items, t, onClose, onRemove }) {
   );
 }
 
-export default function JetsonProductSelector({ lang = 'zh' }) {
-  const t = TEXT[lang] || TEXT.zh;
+export default function JetsonProductSelector() {
+  const location = useLocation();
+  const lang = getLangFromPathname(location.pathname);
+  const t = TEXT[lang] || TEXT.en;
+
+  const localizedProducts = useMemo(
+    () => PRODUCTS.map((product) => localizeProduct(product, lang)),
+    [lang]
+  );
 
   const [search, setSearch] = useState('');
   const [typeFilter, setTypeFilter] = useState('all');
@@ -575,13 +1703,13 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
 
   const jetpackOptions = useMemo(() => {
     const set = new Set();
-    PRODUCTS.forEach((p) => p.jetpackVersions.forEach((v) => set.add(v)));
+    localizedProducts.forEach((p) => p.jetpackVersions.forEach((v) => set.add(v)));
     return Array.from(set).sort((a, b) => {
       const pa = a.split('.').map(Number);
       const pb = b.split('.').map(Number);
       return pa[0] - pb[0] || (pa[1] || 0) - (pb[1] || 0) || (pa[2] || 0) - (pb[2] || 0);
     });
-  }, []);
+  }, [localizedProducts]);
 
   const resetFilters = () => {
     setSearch('');
@@ -597,7 +1725,6 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
     setMinTemp(0);
     setVehiclePower(false);
     setJetpackFilter('');
-    setMaxPrice('');
     setActivePreset('');
   };
 
@@ -608,6 +1735,7 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
     }
     const preset = PRESETS[key];
     setSearch('');
+    setTypeFilter('all');
     setModuleFilter([]);
     setMinTops(preset.minTops);
     setMinMemory(0);
@@ -629,6 +1757,7 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
 
   const toggleModule = (key) => {
     setModuleFilter((prev) => (prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]));
+    setActivePreset('');
   };
 
   const toggleExpand = (id) => {
@@ -646,7 +1775,7 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
 
   const results = useMemo(() => {
     const tokens = search.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    const filtered = PRODUCTS.filter((p) => {
+    const filtered = localizedProducts.filter((p) => {
       if (tokens.length) {
         const hay = [
           p.name, p.fullName, p.series || '', p.module, p.positioning || '', p.application || '',
@@ -739,12 +1868,14 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
         || a.name.localeCompare(b.name)
     );
     return scored;
-  }, [search, typeFilter, scenario, moduleFilter, minTops, minMemory, minM2, needSata, requiredIfaces, minIp, minTemp, vehiclePower, jetpackFilter, t]);
+  }, [localizedProducts, search, typeFilter, scenario, moduleFilter, minTops, minMemory, minM2, needSata, requiredIfaces, minIp, minTemp, vehiclePower, jetpackFilter, t]);
 
   const compareItems = useMemo(() => {
     const byId = new Map(results.map((p) => [p.id, p]));
-    return compareIds.map((id) => byId.get(id) || PRODUCTS.find((p) => p.id === id));
-  }, [compareIds, results]);
+    return compareIds
+      .map((id) => byId.get(id) || localizedProducts.find((p) => p.id === id))
+      .filter(Boolean);
+  }, [compareIds, results, localizedProducts]);
 
   const badgeFor = (index, score) => {
     if (score <= 0 || index > 2) return null;
@@ -754,7 +1885,7 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
   };
 
   return (
-    <div style={box} className="jps-wrap">
+    <div style={box} className="jps-wrap" lang={HTML_LANG[lang] || HTML_LANG.en}>
       <style>{STYLES}</style>
       <h3 style={{ marginTop: 0 }}>{t.title}</h3>
       <p style={muted}>{t.intro}</p>
@@ -892,7 +2023,7 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
             <h4 style={{ margin: 0 }}>
               {t.results}
               <span style={{ ...muted, marginLeft: 8, fontWeight: 'normal' }}>
-                {t.resultCount(results.length)} · {t.sortedByMatch}
+                {formatResultCount(lang, results.length)} · {t.sortedByMatch}
               </span>
             </h4>
             <button onClick={resetFilters} style={{ padding: '4px 12px' }}>{t.resetAll}</button>
@@ -935,7 +2066,7 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
                   </div>
                   <div><SpecChips items={formatSpec(p, t)} /></div>
                   <div style={{ fontSize: 12.5, color: 'var(--ifm-color-emphasis-700)' }}>
-                    {t.specs.jetpack}: {p.jetpackVersions.join(' / ')}
+                    {t.specs.jetpack}: {p.jetpackVersions.length ? p.jetpackVersions.join(' / ') : t.detail.none}
                   </div>
 
                   {p.reasons.length > 0 && (
@@ -958,19 +2089,19 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
                   {isExpanded && (
                     <div style={{ borderTop: '1px solid var(--ifm-color-emphasis-200)', paddingTop: 8 }}>
                       <div style={sectionTitle}>{t.detail.ifaces}</div>
-                      <div><SpecChips items={formatInterfaces(p)} /></div>
+                      <div><SpecChips items={formatInterfaces(p, t)} /></div>
 
                       <div style={sectionTitle}>{t.detail.module}</div>
                       <table style={{ borderCollapse: 'collapse', fontSize: 12.5, width: '100%' }}>
                         <tbody>
                           {[
-                            ['AI Performance', (p.moduleSpec || {}).aiPerformance],
-                            ['GPU', (p.moduleSpec || {}).gpu],
-                            ['CPU', (p.moduleSpec || {}).cpu],
-                            ['Memory', (p.moduleSpec || {}).memory],
-                            ['Power', (p.moduleSpec || {}).power],
-                            ['Video', (p.moduleSpec || {}).video],
-                            ['CSI', (p.moduleSpec || {}).csi],
+                            [t.cRows.aiPerf, (p.moduleSpec || {}).aiPerformance],
+                            [t.cRows.gpu, (p.moduleSpec || {}).gpu],
+                            [t.cRows.cpu, (p.moduleSpec || {}).cpu],
+                            [t.cRows.memSpec, (p.moduleSpec || {}).memory],
+                            [t.cRows.power, (p.moduleSpec || {}).power],
+                            [t.cRows.video, (p.moduleSpec || {}).video],
+                            [t.cRows.csi, (p.moduleSpec || {}).csi],
                           ].map(([label, value]) => (
                             <tr key={label}>
                               <th style={{ textAlign: 'left', fontWeight: 600, padding: '3px 8px 3px 0', verticalAlign: 'top', whiteSpace: 'nowrap' }}>{label}</th>
@@ -1018,7 +2149,7 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
 
       {compareIds.length > 0 && !compareOpen && (
         <div className="jps-bar" style={{ background: 'var(--ifm-background-surface)', padding: '10px 16px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <strong style={{ fontSize: 13.5 }}>{t.compare.title} · {t.compare.selected(compareIds.length)}</strong>
+          <strong style={{ fontSize: 13.5 }}>{t.compare.title} · {formatSelectedCount(lang, compareIds.length)}</strong>
           {compareItems.map((p) => (
             <span key={p.id} style={chip}>
               {p.name}
@@ -1041,7 +2172,6 @@ export default function JetsonProductSelector({ lang = 'zh' }) {
           t={t}
           onClose={() => setCompareOpen(false)}
           onRemove={(id) => {
-            toggleCompare(id);
             setCompareIds((prev) => {
               const next = prev.filter((x) => x !== id);
               if (next.length < 2) setCompareOpen(false);
