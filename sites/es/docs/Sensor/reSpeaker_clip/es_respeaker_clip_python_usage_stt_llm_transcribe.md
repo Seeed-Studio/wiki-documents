@@ -1,5 +1,5 @@
 ---
-description: Aprende a crear tus propias aplicaciones para reSpeaker Clip con el SDK de Python para flujos de trabajo de Live STT (transmisión RTC) en tiempo real, transcripción, diarización y resumen. Este tutorial cubre comunicación por BLE y Wi‑Fi, transmisión de audio RTC, grabación de audio, sincronización de archivos, configuración del dispositivo y más.
+description: Aprende a crear tus propias aplicaciones para reSpeaker Clip con el SDK de Python para flujos de trabajo de Live STT (transmisión RTC) en tiempo real, transcripción, diarización y resúmenes. Este tutorial cubre comunicación por BLE y Wi‑Fi, transmisión de audio RTC, grabación de audio, sincronización de archivos, configuración del dispositivo y más.
 title: Crea tu propia app para reSpeaker Clip con Live STT, Transcripción, Diarización y Resumen usando el SDK de Python
 keywords:
   - reSpeaker clip
@@ -23,44 +23,50 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_python_build_app/
 
 ## Introducción
 
-**reSpeaker STT Web** transforma el reSpeaker Clip en un asistente de voz y de reuniones inteligente con IA, conectando hardware de audio embebido con tecnologías modernas de IA web y en la nube. Usando BLE o Wi‑Fi, sincroniza continuamente las grabaciones desde el dispositivo y las procesa mediante potentes canalizaciones de IA de voz y lenguaje. También añade una **pestaña de Live STT en tiempo real** que transmite el audio del micrófono del Clip por BLE (modo RTC) y lo transcribe a texto mientras hablas.
+**reSpeaker STT Web** transforma el reSpeaker Clip en un asistente de voz y de reuniones inteligente impulsado por IA, conectando hardware de audio embebido con tecnologías modernas de IA web y en la nube. Usando BLE o Wi‑Fi, sincroniza continuamente las grabaciones desde el dispositivo y las procesa mediante potentes canalizaciones de IA de voz y lenguaje. También añade una **pestaña de Live STT en tiempo real** que transmite el audio del micrófono del Clip por BLE (modo RTC) y lo transcribe a texto mientras hablas.
 
-Con flujos de trabajo dedicados para **conversión de voz a texto en vivo y en tiempo real**, **transcripción de voz**, **diarización de hablantes** y **resúmenes de reuniones generados por IA**, los usuarios pueden convertir conversaciones en información estructurada y accionable, ya sea al instante o después. Desarrollado con Python y una arquitectura modular, el proyecto proporciona una base flexible para que desarrolladores e ingenieros embebidos creen aplicaciones de voz e IA de próxima generación con el reSpeaker Clip.
+Con flujos de trabajo dedicados para **conversión de voz a texto en vivo y en tiempo real**, **transcripción de voz**, **diarización de hablantes** y **resúmenes de reuniones generados por IA**, los usuarios pueden convertir conversaciones en información estructurada y procesable, al instante o después. Creado con Python y una arquitectura modular, el proyecto proporciona una base flexible para que desarrolladores e ingenieros embebidos creen aplicaciones de voz e IA de próxima generación con el reSpeaker Clip.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip_python_app_overview.png" alt="pir" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png" alt="reSpeaker Clip" width={600} height="auto" /></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora </font></span></strong>
+    </a>
+</div>
 
 ## Cómo funciona
 
-La app tiene **cuatro pestañas**. La pestaña **Live STT** es en tiempo real; las otras tres graban en la tarjeta SD y procesan después de que te detienes.
+La aplicación tiene **cuatro pestañas**. La pestaña **Live STT** es en tiempo real; las otras tres graban en la tarjeta SD y procesan después de que te detengas.
 
 **Live STT (en tiempo real, solo BLE):**
 1. Conéctate al Clip por BLE (escaneo automático o escanea y elige un dispositivo específico).
 2. Pulsa **Start Streaming**. El backend envía `AT+START=RTC` (sesión en vivo, nada se escribe en la tarjeta SD) y luego `AT+DOWNLOAD=<session>` para iniciar la transmisión.
-3. El Clip envía un **paquete Opus de 20 ms por frame** por BLE (característica de File Data).
+3. El Clip envía un **paquete Opus de 20 ms por fotograma** a través de BLE (característica File Data).
 4. El backend decodifica cada paquete a PCM, ejecuta un **VAD en capas** (WebRTC + compuerta de energía adaptativa) y solo envía **enunciados de voz** completos a Groq; el silencio nunca se sube.
-5. Las transcripciones se envían en vivo al navegador por un WebSocket como líneas de texto; un indicador `listening`/`SPEAKING` muestra el estado del VAD.
-6. Pulsa **Stop** para vaciar el enunciado final y cerrar la transmisión (`AT+STOP`).
+5. Las transcripciones se envían en vivo al navegador a través de un WebSocket como líneas de texto; un indicador `listening`/`SPEAKING` muestra el estado del VAD.
+6. Pulsa **Stop** para vaciar el último enunciado y cerrar la transmisión (`AT+STOP`).
 
-**Pestañas de grabar‑y‑procesar (BLE o WiFi):**
+**Pestañas de grabar y procesar (BLE o WiFi):**
 1. Conéctate al Clip por BLE (predeterminado) o WiFi.
-2. Elige una pestaña y pulsa Start. El audio se transmite desde el dispositivo en segundo plano mientras graba (sincronización continua, igual que la herramienta original `clip-web`). La pestaña desde la que iniciaste determina la canalización que se ejecuta sobre esa grabación.
-3. Detén la grabación. Una vez que termina la sincronización final, la app:
+2. Elige una pestaña y pulsa Start. El audio se transmite desde el dispositivo en segundo plano mientras graba (sincronización continua, igual que la herramienta original `clip-web`). La pestaña desde la que iniciaste decide la canalización que se ejecuta sobre esa grabación.
+3. Detén la grabación. Una vez que termina la sincronización final, la aplicación:
    - codifica el audio combinado a `.ogg` (Opus),
    - lo convierte a un `.wav` mono de 16 kHz (mediante PyAV, no se necesita instalación separada de ffmpeg),
-   - **Pestaña Transcription:** envía el `.wav` a Groq y obtiene texto plano de vuelta.
+   - **Pestaña Transcription:** envía el `.wav` a Groq y recibe texto plano.
    - **Pestaña Diarization:** envía el `.wav` a Speechmatics con `diarization: "speaker"`, obtiene la transcripción JSON a nivel de palabra y la agrupa en turnos de hablante (`S1`, `S2`, ...).
-   - **Pestaña Summary:** envía el `.wav` a Groq para transcripción y luego pasa la transcripción a la API de chat de Groq (`openai/gpt-oss-20b`) para generar actas de reunión estructuradas (título, puntos clave, tareas, decisiones).
-   - envía el resultado al navegador por el WebSocket existente.
+   - **Pestaña Summary:** envía el `.wav` a Groq para transcripción y luego pasa la transcripción a la API de chat de Groq (`openai/gpt-oss-20b`) para generar minutas de reunión estructuradas (título, puntos clave, tareas, decisiones).
+   - envía el resultado al navegador a través del WebSocket existente.
 4. Cada pestaña tiene su propia lista de "Recordings" (filtrada por la canalización bajo la cual se grabó la sesión), con reproducción y un botón Process/Re-run por grabación.
 
 > Las sesiones de Live STT nunca se almacenan en la tarjeta SD, por lo que no aparecen en las listas de Recordings; la transcripción es la salida.
 
 ## Claves de API
 
-Cada pestaña tiene su propia tarjeta de Settings: clave de Groq en las pestañas Live STT, Transcription y Summary (compartida: se configura una vez y la usan las tres), y clave de Speechmatics en la pestaña Diarization. Nada está codificado ni se sube al repositorio. Las claves viven en memoria durante la vida del proceso del servidor. Marca "Remember on this machine" para guardarlas también en `app/settings.local.json` (ignorado por git) y que sobrevivan a un reinicio.
+Cada pestaña tiene su propia tarjeta de Settings: clave de Groq en las pestañas Live STT, Transcription y Summary (compartida, se configura una vez y la usan las tres), y clave de Speechmatics en la pestaña Diarization. Nada está codificado ni se sube al repositorio. Las claves viven en memoria durante la vida del proceso del servidor. Marca "Remember on this machine" para guardarlas también en `app/settings.local.json` (ignorado por git) y que sobrevivan a un reinicio.
 
 - **Groq:** consigue una clave en https://console.groq.com — se usa para Live STT (`whisper-large-v3-turbo`, llamadas por enunciado), transcripción (`whisper-large-v3-turbo`) y resumen (`openai/gpt-oss-20b` chat completions).
-- **Speechmatics:** consigue una clave en https://portal.speechmatics.com — usa la API REST batch con `diarization: "speaker"` (enviar → sondear → obtener transcripción JSON → agrupar en turnos de hablante), con el punto de operación `enhanced` por defecto. Consulta [Batch diarization](https://docs.speechmatics.com/speech-to-text/batch/batch-diarization) en su documentación.
+- **Speechmatics:** consigue una clave en https://portal.speechmatics.com — usa la API REST por lotes con `diarization: "speaker"` (enviar → sondear → obtener transcripción JSON → agrupar en turnos de hablante), punto de operación `enhanced` por defecto. Consulta [Batch diarization](https://docs.speechmatics.com/speech-to-text/batch/batch-diarization) en su documentación.
 
 ## Estructura del proyecto
 
@@ -94,7 +100,7 @@ Cada grabación sincronizada obtiene un `meta.json` (escrito al inicio de la gra
 
 - Python 3.10+
 - No se necesita instalación separada de ffmpeg: la conversión a WAV usa PyAV (`av` en PyPI), que incluye sus propias bibliotecas de códecs integradas, también en Windows
-- `webrtcvad-wheels` para la capa WebRTC VAD (si no se puede instalar, recurre automáticamente a la compuerta de energía adaptativa)
+- `webrtcvad-wheels` para la capa VAD de WebRTC (si no se puede instalar, vuelve automáticamente a la compuerta de energía adaptativa)
 - Un dispositivo reSpeaker Clip emparejado (BLE) para la grabación real; esta parte no se puede probar sin el hardware
 - Para la pestaña **Live STT**: un Clip con firmware que admita **transmisión en vivo RTC** (`AT+START=RTC`) y transporte BLE (la transmisión RTC es solo por BLE)
 
@@ -109,7 +115,7 @@ python app/main.py
 
 Luego abre `http://localhost:5000`.
 
-Para usar transporte WiFi en lugar de BLE (solo pestañas de grabación; Live STT requiere BLE):
+Para transporte por WiFi en lugar de BLE (solo pestañas de grabación; Live STT requiere BLE):
 
 ```bash
 python app/main.py --transport wifi --wifi-host 192.168.4.1 --wifi-port 8089

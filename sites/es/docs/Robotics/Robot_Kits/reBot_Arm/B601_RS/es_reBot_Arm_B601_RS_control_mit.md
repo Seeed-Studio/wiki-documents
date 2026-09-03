@@ -8,9 +8,9 @@ keywords:
   - MotorBridge
   - RobStride
   - CAN
-  - robot arm
+  - brazo robótico
   - gripper
-  - temperature protection
+  - protección de temperatura
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_mit_control
 sku: 100019336
@@ -22,7 +22,21 @@ updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_mit_control/
 ---
 
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+
 # Introducción al control de posición MIT en reBot Arm B601-RS
+
+<RebotRsDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="https://github.com/LAN-GER/rebot_control/blob/main/LICENSE">
@@ -36,8 +50,6 @@ url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_mit_control/
 <p align="center">
   <strong>6+1 GDL · RobStride · CAN @ 1 Mbps · Control de posición MIT · Protección de temperatura · Retorno seguro a cero · API de Python de código abierto</strong>
 </p>
-
-![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png)
 
 [MotorBridge](https://github.com/motorbridge/motorbridge) es un SDK CAN en Python para motores RobStride / Damiao. [rebot_control](https://github.com/LAN-GER/rebot_control) lo envuelve con una API de control de posición MIT para el **reBot Arm B601-RS**: configuración YAML, límites de velocidad por articulación, protección de temperatura MOS de tres niveles y retorno suave a cero mediante Esc / Ctrl+C / `stop()`.
 
@@ -63,13 +75,13 @@ Este tutorial te guía a través de: configuración del entorno → configuraci�
    Monitorización en tiempo real de la temperatura MOS: alarma y continuar → sobretemperatura con retorno lento a cero y luego deshabilitar → deshabilitado de emergencia (sin retorno a cero).
 
 4. **Salida segura y retorno a cero**  
-   Esc / Ctrl+C / `arm.stop()` activan un retorno a cero tipo smoothstep; un segundo Ctrl+C durante el retorno a cero aborta inmediatamente y deshabilita los motores.
+   Esc / Ctrl+C / `arm.stop()` activan un retorno suave a cero con función smoothstep; un segundo Ctrl+C durante el retorno a cero aborta inmediatamente y deshabilita los motores.
 
 5. **Configuración basada en YAML**  
-   Canal CAN, umbrales de temperatura, parámetros de retorno a cero y `kp`/`kd` del motor se encuentran en `config/rebotarm_rs.yaml` — ajusta sin cambiar código.
+   Canal CAN, umbrales de temperatura, parámetros de retorno a cero y `kp`/`kd` MIT de los motores se encuentran en `config/rebotarm_rs.yaml` — ajusta sin cambiar el código.
 
 6. **Lista para usar como biblioteca**  
-   Capas claras (config / API / ejemplos); importa con `from rebot import ReBotRSMITController`.
+   Capas claras (configuración / API / ejemplos); importa con `from rebot import ReBotRSMITController`.
 
 ---
 
@@ -79,11 +91,11 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
 
 | Parámetro | Especificación |
 |-----------|---------------|
-| Modelo de brazo | Kit ensamblado reBot Arm B601-RS con gripper |
+| Modelo de brazo | reBot Arm B601-RS Kit ensamblado con gripper |
 | GDL | 6+1 (incluyendo gripper) |
 | Radio de trabajo | 754.7 mm (con gripper) / 587.5 mm (sin gripper) |
 | Carga útil | Nominal 2.5 kg / Máx 5 kg |
-| Rango de articulación | J1: ±150° / J2: 220° ~ 0° / J3: 220° ~ 0° / J4: ±90° / J5: ±90° / J6: ±180° / Gripper: 345° ~ 0° |
+| Rango de articulaciones | J1: ±150° / J2: 220° ~ 0° / J3: 220° ~ 0° / J4: ±90° / J5: ±90° / J6: ±180° / Gripper: 345° ~ 0° |
 | Repetibilidad | 0.1 mm |
 | Peso | 6.7 kg |
 | Servomotores | RobStride 06 × 3 / RobStride 00 × 4 (incluyendo gripper) |
@@ -207,8 +219,8 @@ Edita `config/rebotarm_rs.yaml`:
 | `return_zero.max_speed_deg_s` | Velocidad pico normal de retorno a cero | 30°/s |
 | `return_zero.thermal_max_speed_deg_s` | Velocidad pico térmica de retorno a cero | 30°/s |
 | `return_zero.min_time_s` | Duración mínima de retorno a cero | 3.0 s |
-| `return_zero.settle_time_s` | Tiempo de mantenimiento en cero después del retorno | 0.30 s |
-| `motors` | ID / modelo del motor / MIT `kp` / `kd` | Ver YAML |
+| `return_zero.settle_time_s` | Tiempo de espera en cero después del retorno | 0.30 s |
+| `motors` | ID de motor / modelo / `kp` / `kd` MIT | Ver YAML |
 
 Las claves que faltan usan valores por defecto en el código; las claves desconocidas generan un error para detectar errores tipográficos.
 
@@ -265,15 +277,15 @@ Para lectura pasiva de posición (Tutorial 5), llama a `disable_motors()` despu�
 
 ### Protección de temperatura de tres niveles
 
-| Umbral (por defecto) | Comportamiento |
+| Umbral (predeterminado) | Comportamiento |
 |---------------------|----------|
-| ≥ 80°C | Alarma de temperatura (una vez por motor por cruce de sobretemperatura), continuar en funcionamiento |
-| ≥ 125°C | Detener el movimiento, retorno lento a cero a velocidad pico térmica y luego deshabilitar |
+| ≥ 80°C | Alarma de temperatura (una vez por motor por flanco de sobretemperatura), continúa funcionando |
+| ≥ 125°C | Detener el movimiento, retorno a cero lento a velocidad térmica máxima y luego deshabilitar |
 | ≥ 140°C | Deshabilitado de emergencia inmediato, **sin retorno a cero** |
 
-### Retorno seguro a cero
+### Retorno a cero seguro
 
-El retorno a cero utiliza una trayectoria **smoothstep**. Duración:
+El retorno a cero usa una trayectoria **smoothstep**. Duración:
 
 ```
 duration = max(min_time_s, per-joint time estimated from peak speed)
@@ -283,8 +295,8 @@ La velocidad máxima es `max_speed_deg_s` (normal) o `thermal_max_speed_deg_s` (
 
 | Método de salida | Comportamiento |
 |-------------|----------|
-| Esc / primer Ctrl+C / `arm.stop()` | Retorno lento a cero → deshabilitar → cerrar CAN |
-| Segundo Ctrl+C durante el retorno a cero | Aborta el retorno a cero y deshabilita inmediatamente |
+| Esc / primer Ctrl+C / `arm.stop()` | Retorno a cero lento → deshabilitar → cerrar CAN |
+| Segundo Ctrl+C durante el retorno a cero | Abortar el retorno a cero y deshabilitar inmediatamente |
 | Error de comunicación | Deshabilitado de emergencia, sin retorno a cero |
 
 ### Unidades
@@ -304,7 +316,7 @@ Ejecuta todos los ejemplos desde la **raíz del proyecto**. Cada script document
 |----------|------|---------|
 | 1. Inicio rápido | `examples/quick_start.py` | `python3 examples/quick_start.py` |
 | 2. Configuración personalizada | `examples/custom_config.py` | `python3 examples/custom_config.py` |
-| 3. Monitorizar estado | `examples/monitor_status.py` | `python3 examples/monitor_status.py` |
+| 3. Supervisar estado | `examples/monitor_status.py` | `python3 examples/monitor_status.py` |
 | 4. Articulación única + pinza | `examples/single_joint_adjust.py` | `python3 examples/single_joint_adjust.py` |
 | 5. Leer posiciones | `examples/read_joint_angles.py` | `python3 examples/read_joint_angles.py` |
 | 6. Opciones de parada | `examples/stop_options.py` | `python3 examples/stop_options.py default` |
@@ -313,7 +325,7 @@ Ejecuta todos los ejemplos desde la **raíz del proyecto**. Cada script document
 
 ### 1. Inicio rápido (`quick_start.py`)
 
-**Movimiento esperado**: J1 se mueve a +20° a ~15°/s; las demás articulaciones y la pinza permanecen en 0°; luego retorno lento a cero y deshabilitar.
+**Movimiento esperado**: J1 se mueve a +20° a ~15°/s; las otras articulaciones y la pinza permanecen en 0°; luego retorno a cero lento y deshabilitar.
 
 ```bash
 python3 examples/quick_start.py
@@ -322,7 +334,7 @@ python3 examples/quick_start.py
 Flujo: `start()` → `set_max_speeds()` → `set_joint_angles()` → **esperar al movimiento** → `stop()`.
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/quick_start/quick_start.mp4" title="Demostración en video - Inicio rápido" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/quick_start/quick_start.mp4" title="Video demo - Quick start" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -338,7 +350,7 @@ python3 examples/custom_config.py config/rebotarm_rs.yaml
 
 ---
 
-### 3. Monitorizar mientras se ejecuta (`monitor_status.py`)
+### 3. Supervisar mientras se ejecuta (`monitor_status.py`)
 
 ```bash
 python3 examples/monitor_status.py
@@ -348,16 +360,16 @@ python3 examples/monitor_status.py
 
 Notas:
 
-- **Objetivo vs enviado**: los ángulos enviados van con retraso respecto a los objetivos (suavizado limitado por velocidad).
-- **Temperatura**: lee `arm.last_temperatures`; no necesitas sondear el bus CAN tú mismo.
+- **Objetivo vs enviado**: los ángulos enviados van por detrás de los objetivos (suavizado limitado por velocidad).
+- **Temperatura**: lee `arm.last_temperatures`; no necesitas sondear CAN tú mismo.
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/monitor_status/monitor_status.mp4" title="Demostración en video - Monitorizar estado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/monitor_status/monitor_status.mp4" title="Video demo - Monitor status" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
 
-### 4. Ajuste de una sola articulación y pinza (`single_joint_adjust.py`)
+### 4. Ajuste de articulación única y pinza (`single_joint_adjust.py`)
 
 ```bash
 python3 examples/single_joint_adjust.py
@@ -372,7 +384,7 @@ python3 examples/single_joint_adjust.py
 `joint_id`: 1–6 son articulaciones del brazo; **7 es la pinza (ID CAN 7)**.
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/single_joint_adjust/single_joint_adjust.mp4" title="Demostración en video - Articulación única y pinza" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/single_joint_adjust/single_joint_adjust.mp4" title="Video demo - Single joint and gripper" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -385,10 +397,10 @@ python3 examples/read_joint_angles.py
 
 **Movimiento esperado**:
 
-1. `connect()`: cambia al modo MIT y habilita (establece la comunicación), lee los ángulos actuales como semillas de objetivo.
-2. `disable_motors()`: deshabilita inmediatamente para que puedas mover el brazo a mano.
+1. `connect()`: cambiar al modo MIT y habilitar (establecer comunicación), leer los ángulos actuales como semillas objetivo.
+2. `disable_motors()`: deshabilitar inmediatamente para que puedas mover el brazo a mano.
 3. La terminal imprime los ángulos reales de las articulaciones a ~**30 Hz**; los valores deberían cambiar cuando muevas el brazo.
-4. Pulsa **Ctrl+C** para salir; `stop(return_to_zero=False)` cierra el bus CAN **sin retorno a cero**.
+4. Pulsa **Ctrl+C** para salir; `stop(return_to_zero=False)` cierra CAN **sin retorno a cero**.
 
 Este ejemplo **no** llama a `start()`, por lo que no se ejecuta ningún hilo de control MIT y no se envían objetivos de movimiento.
 
@@ -407,11 +419,11 @@ arm.stop(return_to_zero=False, wait=True)
 ```
 
 :::tip
-`read_joint_angles()` accede al bus CAN de forma síncrona (lee `mechPos` de los 7 motores en secuencia), por lo que la frecuencia alcanzable depende del tiempo de ida y vuelta del bus. El ejemplo apunta a 30 Hz; si cada lectura tarda más, la frecuencia real será menor. Mientras el control MIT está en ejecución, usa `get_command_angles()` para monitorizar el movimiento comandado en lugar de llamar a `read_joint_angles()` a alta frecuencia.
+`read_joint_angles()` accede a CAN de forma síncrona (lee `mechPos` de los 7 motores en secuencia), por lo que la frecuencia alcanzable depende del tiempo de ida y vuelta del bus. El ejemplo apunta a 30 Hz; si cada lectura tarda más, la frecuencia real será menor. Mientras el control MIT está en ejecución, usa `get_command_angles()` para supervisar el movimiento comandado en lugar de llamar a `read_joint_angles()` a alta frecuencia.
 :::
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/read_joint/read_joint_angles.mp4" title="Demostración en video - Leer posiciones reales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/read_joint/read_joint_angles.mp4" title="Video demo - Read actual positions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -432,7 +444,7 @@ python3 examples/stop_options.py emergency    # emergency disable, no return-to-
 :::
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/stop_options/stop_options.mp4" title="Demostración en video - Opciones de parada" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/stop_options/stop_options.mp4" title="Video demo - Stop options" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -449,7 +461,7 @@ python3 examples/recommended_structure.py
 
 ### Demostración completa de parámetros (`mit_position_control.py`)
 
-Edita `TARGET_ANGLES` (longitud 7) y `JOINT_SPEEDS_DEG_S` al principio del archivo, luego ejecuta:
+Edita `TARGET_ANGLES` (longitud 7) y `JOINT_SPEEDS_DEG_S` al principio del archivo y luego ejecuta:
 
 ```bash
 python3 examples/mit_position_control.py
@@ -458,11 +470,11 @@ python3 examples/mit_position_control.py
 Predeterminado: J1 → +50° (20°/s), las demás y la pinza en 0°; la terminal muestra objetivo / enviado / temperatura; Esc / Ctrl+C sale con retorno a cero.
 
 :::danger
-El brazo puede moverse rápidamente en modo MIT. Mantén a las personas y el equipo alejados, y permanece dentro de aproximadamente el 70% del espacio de trabajo.
+El brazo puede moverse rápidamente en modo MIT. Mantén a las personas y el equipo alejados y permanece dentro de aproximadamente el 70% del espacio de trabajo.
 :::
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/mit_position_control/mit_position_control.mp4" title="Demostración en video - Demostración completa de parámetros" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/cn_reBot_Arm_B601_RS_control_mit/V2.0/mit_position_control/mit_position_control.mp4" title="Video demo - Full parameter demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
@@ -523,7 +535,7 @@ arm.stop(return_to_zero=False, wait=True)  # close CAN, no return-to-zero
 create → start() → set_max_speeds() → set_joint_angles() / set_joint_angle() → … → stop()
 ```
 
-**Lectura pasiva de posición** (sin movimiento comandado):
+**Lectura pasiva de posición** (sin movimiento ordenado):
 
 ```
 create → connect() → disable_motors() → read_joint_angles() → … → stop(return_to_zero=False)
@@ -533,31 +545,31 @@ create → connect() → disable_motors() → read_joint_angles() → … → st
 
 | Método / atributo | Descripción |
 |--------------------|-------------|
-| `connect()` | Conecta CAN, modo MIT, habilita, lee los ángulos actuales; llamado automáticamente por `start()` |
-| `disable_motors()` | Deshabilita todos los motores sin cerrar el bus CAN (para lectura pasiva) |
-| `start(enable_esc=True, install_signal_handlers=True)` | Inicia los hilos de control y de temperatura |
+| `connect()` | Conecta CAN, modo MIT, habilita, lee ángulos actuales; se llama automáticamente mediante `start()` |
+| `disable_motors()` | Deshabilita todos los motores sin cerrar CAN (para lectura pasiva) |
+| `start(enable_esc=True, install_signal_handlers=True)` | Inicia los hilos de control y temperatura |
 | `set_joint_angles(angles_deg)` | Establece 7 ángulos objetivo (grados) |
 | `set_joint_angle(joint_id, angle_deg)` | Establece una articulación / pinza (1–7) |
-| `set_max_speeds(speeds_deg_s)` | Establece 7 velocidades máximas (deg/s) |
+| `set_max_speeds(speeds_deg_s)` | Establece 7 velocidades máximas (grados/s) |
 | `get_target_angles()` / `get_command_angles()` | Ángulos objetivo / de comando suavizados |
 | `read_joint_angles()` | Lectura síncrona de posiciones mecánicas reales (grados); usa CAN |
-| `last_temperatures` | Temperatura del MOS por motor |
-| `is_stopped` | Indica si la parada segura ha finalizado |
-| `stop(return_to_zero=True, wait=True)` | Detiene (retorno a cero por defecto) |
+| `last_temperatures` | Temperatura MOS por motor |
+| `is_stopped` | Indica si el apagado seguro ha finalizado |
+| `stop(return_to_zero=True, wait=True)` | Detiene (vuelve a cero por defecto) |
 | `request_stop(..., emergency=True)` | Parada avanzada / deshabilitado de emergencia |
 
 Constantes exportadas: `GRIPPER_MOTOR_ID = 7`, `GRIPPER_JOINT_ID = 7`.
 
 ---
 
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
 - **`Permission denied` / no se puede abrir can0**  
   Asegúrate de que la interfaz CAN esté `up` y de que tu usuario pueda acceder a los dispositivos de red. Usa `sudo` para `ip link` si es necesario, o revisa las reglas de udev.
 
 - **Sin respuesta del motor / fallo al habilitar**  
-  1. Confirma que la velocidad de transmisión es 1 Mbps;  
-  2. Confirma que `channel`, `host_id` y los IDs de los motores en `config/rebotarm_rs.yaml` coinciden con el hardware;  
+  1. Confirma que la tasa de bits es 1 Mbps;  
+  2. Confirma que `channel`, `host_id` y los IDs de motor en `config/rebotarm_rs.yaml` coinciden con el hardware;  
   3. Vuelve a ejecutar `ip link` después de reconectar el USB CAN.
 
 - **Se establecen ángulos pero el brazo apenas se mueve**  
@@ -566,20 +578,20 @@ Constantes exportadas: `GRIPPER_MOTOR_ID = 7`, `GRIPPER_JOINT_ID = 7`.
 - **La pinza no se mueve**  
   La pinza es **J7 / CAN ID 7**. Pasa **7 valores** a `set_joint_angles` (el último es la pinza), o usa `set_joint_angle(7, angle)`.
 
-- **Tiempo de espera al leer posición / no se pueden leer ángulos**  
-  `mechPos` se puede leer de forma fiable en modo MIT después de habilitar. El tutorial 5 usa `connect()` y luego `disable_motors()` para que puedas mover el brazo a mano y seguir leyendo. Si `ensure_mode` o las lecturas de parámetros agotan el tiempo de espera, revisa el cableado CAN, la terminación y la alimentación de los motores.
+- **Tiempo de espera agotado al leer posición / no se pueden leer ángulos**  
+  `mechPos` se puede leer de forma fiable en modo MIT después de habilitar. El Tutorial 5 usa `connect()` y luego `disable_motors()` para que puedas mover el brazo a mano y seguir leyendo. Si `ensure_mode` o las lecturas de parámetros agotan el tiempo de espera, revisa el cableado CAN, la terminación y la alimentación de los motores.
 
 - **Spam de alarma de temperatura**  
   Las alarmas se disparan por flancos con histéresis: una alarma por motor por evento de sobretemperatura; se vuelve a alarmar solo después de que la temperatura baje por debajo de `alarm_c - 2°C`.
 
 - **Protección contra bloqueo de la articulación 2 / el brazo cae**  
-  A menudo es causado por permanecer más allá de ~70% de extensión del espacio de trabajo. Apaga y enciende para borrar la protección y reduce los ángulos objetivo y el tiempo de permanencia.
+  A menudo se debe a permanecer más allá de ~70% de extensión del espacio de trabajo. Cicla la alimentación para borrar la protección y reduce los ángulos objetivo y el tiempo de permanencia.
 
 - **Comportamiento tras errores de comunicación**  
   Ante un fallo de comunicación en el bucle de control, el programa **deshabilita de emergencia sin volver a cero** para evitar movimiento bajo malas comunicaciones.
 
 - **Pinocchio / MeshCat / compensación de gravedad**  
-  Este repositorio se centra en el control de posición MIT. Para cinemática, simulación y compensación de gravedad, consulta [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) y la guía de Pinocchio y MeshCat en el Wiki de Seeed.
+  Este repositorio se centra en el control de posición MIT. Para cinemática, simulación y compensación de gravedad, consulta [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) y la guía de Pinocchio & MeshCat en el Wiki de Seeed.
 
 ---
 

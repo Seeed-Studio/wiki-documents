@@ -27,19 +27,21 @@ url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_web_simulator_developer_g
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # Guía para Desarrolladores del Simulador Web reBot Arm B601-DM y ROS2/MuJoCo
 
-<p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png" alt="reBot Arm B601-DM" />
-</p>
+<RebotDmDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 </a></div>
-
-<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -56,13 +58,13 @@ import TabItem from '@theme/TabItem';
   <strong>Visualización con Three.js · Carga de URDF · Puente rosbridge · Control LLM/MCP</strong>
 </p>
 
-Esta guía está dirigida a desarrolladores. Explica cómo ejecutar y ampliar el simulador web `reBotArm_simulator-DM`. El simulador es una consola web ligera basada en Node.js + Three.js que lee el URDF y las mallas STL del workspace de ROS2 en el mismo repositorio, renderiza en el navegador el cuerpo de 6 GDL y la garra del reBot Arm B601-DM, y se comunica con ROS2 a través de un WebSocket de rosbridge. Admite todo el flujo de trabajo de desarrollo: espejado de articulaciones, bloqueo de control, compensación de gravedad, agarre visual y control por texto mediante LLM.
+Esta guía es para desarrolladores. Explica cómo ejecutar y ampliar el simulador web `reBotArm_simulator-DM`. El simulador es una consola web ligera basada en Node.js + Three.js que lee el URDF y las mallas STL del workspace de ROS2 en el mismo repositorio, renderiza en el navegador el cuerpo de 6 GDL y la garra del reBot Arm B601-DM, y se comunica con ROS2 a través de un WebSocket de rosbridge. Admite todo el flujo de trabajo de desarrollo: espejado de articulaciones, bloqueo de control, compensación de gravedad, agarre visual y control por texto mediante LLM.
 
 :::note
-Esta guía utiliza `Ubuntu 24.04 + ROS2 Jazzy` como backend de ROS2. El front-end web se ejecuta en cualquier navegador moderno en Windows, macOS o Linux. ROS2 Humble / Ubuntu 22.04 pueden seguir el mismo flujo de trabajo.
+Esta guía utiliza `Ubuntu 24.04 + ROS2 Jazzy` como backend de ROS2. El front-end web se ejecuta en cualquier navegador moderno en Windows, macOS o Linux. ROS2 Humble / Ubuntu 22.04 puede seguir el mismo flujo de trabajo.
 :::
 
-## Funciones del Proyecto
+## Funciones del proyecto
 
 1. **Front-end sin compilación**  
    No depende de empaquetadores como Webpack/Vite. Todos los recursos de front-end son HTML/CSS/JS simples servidos directamente por un servidor estático de Node.js, lo que mantiene muy bajos los costes de despliegue y depuración.
@@ -74,12 +76,12 @@ Esta guía utiliza `Ubuntu 24.04 + ROS2 Jazzy` como backend de ROS2. El front-en
    `ReBotRosClient` encapsula el protocolo JSON de rosbridge y se suscribe al estado de las articulaciones, estado de la garra, estado del brazo, imagen de la cámara virtual y resultados de detección de visión, y publica comandos de articulación única, comandos de la garra y poses objetivo.
 
 4. **Control por texto con LLM/MCP**  
-   La página web no llama a ROS directamente. En su lugar, se comunica a través del servidor Node.js con un servicio HTTP de agente de texto que se ejecuta en la máquina virtual, y un servidor MCP restringe la intención en lenguaje natural a operaciones estructuradas del robot.
+   La página web no llama a ROS directamente. En su lugar, hace proxy a través del servidor Node.js hacia un servicio HTTP de agente de texto que se ejecuta en la VM, y un Servidor MCP restringe la intención en lenguaje natural a operaciones estructuradas del robot.
 
 5. **Instalación con un clic y lanzamiento unificado**  
    `setup.sh` instala automáticamente las dependencias del sistema, clona el SDK, crea el entorno virtual de Python, instala las dependencias y ejecuta `colcon build`. El punto de entrada unificado `rebotarm` proporciona comandos como `start web / dm / sim`, `doctor`, `status` y `stop`. Es idempotente: los componentes que ya existen y cumplen los requisitos se omiten automáticamente.
 
-## Notas sobre Cableado y Red
+## Notas sobre cableado y red
 
 El propio simulador web no se conecta directamente al hardware. Todos los comandos de control se reenvían a ROS2 a través de rosbridge. Deben confirmarse dos cosas:
 
@@ -95,11 +97,11 @@ ls /dev/ttyACM*
 /dev/ttyACM0
 ```
 
-Ver `/dev/ttyACM0` (o `ttyACM1`, etc.) en la lista significa que se ha reconocido el puerto serie.
+Ver `/dev/ttyACM0` (o `ttyACM1`, etc.) en la lista significa que se reconoce el puerto serie.
 
 </details>
 
-2. **Lado del host web**: Confirma que puedes acceder al puerto rosbridge del host Ubuntu (por defecto `9090`). Prueba la conectividad WebSocket desde el navegador o la terminal del host web, por ejemplo:
+2. **Lado del host web**: Confirma que puedes alcanzar el puerto rosbridge del host Ubuntu (por defecto `9090`). Prueba la conectividad WebSocket desde el navegador o la terminal del host web, por ejemplo:
 
 ```bash
 # Confirm the Ubuntu host IP is reachable
@@ -121,7 +123,7 @@ Es mejor añadir el usuario actual al grupo `dialout`, lo que surtirá efecto tr
 sudo usermod -a -G dialout $USER
 ```
 
-## Requisitos de Entorno
+## Requisitos de entorno
 
 | Elemento | Recomendado |
 |---|---|
@@ -132,18 +134,18 @@ sudo usermod -a -G dialout $USER
 | Navegador | Chrome / Edge 90+, Firefox 90+, Safari 14+ |
 | MuJoCo (opcional) | 3.10+, solo necesario para la pila completa de simulación física |
 
-## Pasos de Instalación
+## Pasos de instalación
 
 ### Paso 0. Completar la configuración básica del brazo
 
-Antes de comenzar el desarrollo del simulador web, completa los pasos de [reBot Arm B601-DM Quick Start](https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/), incluyendo el montaje del brazo, la configuración de los ID de los motores, la inicialización del punto cero y las comprobaciones básicas de conectividad.
+Antes de comenzar el desarrollo del simulador web, completa los pasos de [reBot Arm B601-DM Quick Start](https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/), incluyendo el montaje del brazo, la configuración de ID de los motores, la inicialización del punto cero y las comprobaciones básicas de conectividad.
 
 El repositorio del proyecto ya contiene el workspace de ROS2, el URDF y las mallas STL que requiere el simulador web. No necesitas compilar otro workspace siguiendo la guía [reBot Arm B601-DM ROS2 Integration](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_ros2_integration/).
 
 :::tip
-`reBotArm_control_py` es la dependencia externa principal, que proporciona los drivers del robot real, cinemática inversa, cálculo de dinámica y compensación de gravedad. El simulador web no importa directamente este SDK, pero el nodo de robot real `rebotarmcontroller` en el backend ROS2, el bucle de par de MuJoCo y la función de compensación de gravedad dependen de él. Si solo ejecutas el modo de simulación pura con Fake Driver + web, el SDK no es necesario; en cuanto quieras controlar el robot real o usar la compensación de gravedad, debe estar instalado.
+`reBotArm_control_py` es la dependencia externa principal, que proporciona drivers para el robot real, cinemática inversa, cálculo de dinámica y compensación de gravedad. El simulador web no importa directamente este SDK, pero el nodo de robot real `rebotarmcontroller` en el backend ROS2, el bucle de par de MuJoCo y la función de compensación de gravedad dependen de él. Si solo ejecutas el modo de simulación pura con Fake Driver + web, el SDK no es necesario; en cuanto quieras controlar el robot real o usar la compensación de gravedad, debe estar instalado.
 
-`setup.sh` obtiene automáticamente el SDK desde [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) y lo instala en `~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM/third_party/reBotArm_control_py/` (bloqueado en un commit verificado). Si `~/reBotArm_control_py/` ya existe, se detecta automáticamente y no se clona de nuevo.
+`setup.sh` obtiene automáticamente el SDK desde [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) y lo instala en `~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM/third_party/reBotArm_control_py/` (bloqueado a un commit verificado). Si `~/reBotArm_control_py/` ya existe, se detecta automáticamente y no se clona de nuevo.
 
 Estructura de directorios después de la instalación:
 
@@ -267,7 +269,7 @@ Web: http://localhost:3001
 Ctrl+C stops processes started by this command.
 ```
 
-Abre `http://localhost:3001` en un navegador y espera a que terminen de cargarse el URDF y el STL; cuando aparezca el modelo 3D significa que el front-end está funcionando. La página ya está conectada al rosbridge local por defecto, así que puedes operar directamente en el panel "ROS2 Bridge".
+Abre `http://localhost:3001` en un navegador y espera a que terminen de cargarse el URDF y el STL; cuando aparezca el modelo 3D significa que el front-end está funcionando. La página ya está conectada por defecto al rosbridge local, así que puedes operar directamente en el panel "ROS2 Bridge".
 
 :::note
 Si solo quieres ejecutar una demo web pura (sin iniciar rosbridge), también puedes iniciarla manualmente desde el directorio web:
@@ -283,7 +285,7 @@ En este caso la página te permite arrastrar los deslizadores de las articulacio
 ## Puesta en marcha del proyecto
 
 :::note
-El comando `./rebotarm` carga el entorno internamente, por lo que no necesitas ejecutar manualmente `source scripts/source_rebotarm_env.sh`. Sin embargo, si ejecutas comandos `ros2` sueltos directamente, cada nueva terminal sigue necesitando cargar el entorno primero.
+El comando `./rebotarm` carga internamente el entorno, por lo que no necesitas ejecutar manualmente `source scripts/source_rebotarm_env.sh`. Sin embargo, si ejecutas directamente comandos `ros2` sin envoltorio, cada nueva terminal sigue necesitando cargar el entorno primero.
 :::
 
 <Tabs defaultValue="fake" groupId="launch-mode" queryString>
@@ -297,7 +299,7 @@ cd ~/reBot_Arm_Mujoco-DM/reBotArm_simulator-DM
 node server.js
 ```
 
-Abre `http://localhost:3001` en un navegador. Puedes arrastrar los deslizadores de las articulaciones, usar preajustes de pose, arrastre del TCP y enseñanza-grabación, pero todas las operaciones solo afectan al modelo 3D y no accionarán ningún hardware ni nodo ROS.
+Abre `http://localhost:3001` en un navegador. Puedes arrastrar los deslizadores de las articulaciones, usar preajustes de pose, arrastre del TCP y enseñanza-grabación, pero todas las operaciones solo afectan al modelo 3D y no moverán ningún hardware ni nodo ROS.
 
 
 ![Interfaz del simulador web](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png)
@@ -330,7 +332,7 @@ Después de que la página se conecte a `ws://localhost:9090`, marca "Mirror rea
 
 <TabItem value="mujoco" label="Simulación física completa">
 
-Un solo comando inicia toda la pila: Fake Driver, física de agarre MuJoCo, servidor de tareas, cámara virtual, detector de color y rosbridge:
+Un solo comando inicia toda la pila: Fake Driver, agarre físico MuJoCo, servidor de tareas, cámara virtual, detector de color y rosbridge:
 
 ```bash
 cd ~/reBot_Arm_Mujoco-DM
@@ -349,11 +351,11 @@ cd ~/reBot_Arm_Mujoco-DM
 [rebot-mujoco-all] starting rosbridge_websocket on :9090...
 ```
 
-Todos los nodos se inician en secuencia; si no hay ningún `ERROR`, se considera correcto.
+Todos los nodos se inician en secuencia; si no aparece ningún `ERROR`, se considera correcto.
 
 </details>
 
-Este script es internamente equivalente a `reBotArm_ros2_DM/scripts/start_rebot_mujoco_all.sh`. De forma predeterminada inicia el Fake Driver, robot_state_publisher, física de agarre MuJoCo, servidor de tareas, cámara RGB cenital, detector de color y rosbridge. Luego ejecuta `./rebotarm start web` en otra terminal para iniciar la página web. Después de que el navegador se conecte a ROS, puedes usar la demo de agarre visual.
+Este script es internamente equivalente a `reBotArm_ros2_DM/scripts/start_rebot_mujoco_all.sh`. De forma predeterminada inicia el Fake Driver, robot_state_publisher, el agarre físico MuJoCo, el servidor de tareas, la cámara RGB cenital, el detector de color y rosbridge. Luego ejecuta `./rebotarm start web` en otra terminal para iniciar la página web. Después de que el navegador se conecte a ROS, puedes usar la demo de agarre visual.
 
 
 ![Simulación física MuJoCo](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_mujoco_physics.png)
@@ -381,7 +383,7 @@ cd ~/reBot_Arm_Mujoco-DM
 ```
 
 :::warning
-Cuando estés conectado al controlador del robot real, los comandos web accionan hardware real. Verifica siempre primero las direcciones y límites de las articulaciones con el Fake Driver. Al usar el robot real por primera vez, prueba la articulación final con movimientos pequeños. Si algo es anómalo, haz clic inmediatamente en "Disable" o cancela el bloqueo de control. No confíes solo en las casillas de verificación de la web; mantén un paro de emergencia, límites y aislamiento del espacio operativo en el lugar.
+Cuando estés conectado al controlador del robot real, los comandos web moverán hardware real. Verifica siempre primero las direcciones y límites de las articulaciones con el Fake Driver. Al usar el robot real por primera vez, prueba la articulación final con movimientos pequeños. Si algo es anómalo, haz clic inmediatamente en "Disable" o cancela el bloqueo de control. No confíes solo en las casillas de verificación de la web; mantén in situ un paro de emergencia, límites y aislamiento del espacio operativo.
 :::
 
 </TabItem>
@@ -413,21 +415,21 @@ reBot_Arm_Mujoco-DM/
    └─ split_meshes/grouped_gripper/ Web gripper meshes
 ```
 
-Flujo de datos: el navegador accede al servidor estático de Node.js a través de `HTTP /api` y se comunica bidireccionalmente con ROS2 mediante `rosbridge WebSocket`; el lenguaje natural es proxied por Node.js al Text Agent / MCP Server y luego se convierte en llamadas de herramientas estructuradas que entran en ROS2. ROS2 acciona hacia abajo el driver Fake/real y el brazo, y se conecta lateralmente a la simulación física MuJoCo, al servidor de tareas y a la cámara virtual. La página web, el LLM Agent y el robot real no codifican llamadas directas entre sí; están desacoplados mediante topics, servicios y acciones de ROS2.
+Flujo de datos: el navegador accede al servidor estático de Node.js mediante `HTTP /api` y se comunica bidireccionalmente con ROS2 a través de `rosbridge WebSocket`; el lenguaje natural es reenviado por Node.js al Text Agent / MCP Server y luego se convierte en llamadas de herramientas estructuradas que entran en ROS2. ROS2 impulsa hacia abajo el driver falso/real y el brazo, y se conecta lateralmente a la simulación física MuJoCo, al servidor de tareas y a la cámara virtual. La página web, el Agente LLM y el robot real no codifican llamadas directas entre sí; están desacoplados mediante topics, servicios y acciones de ROS2.
 
 El punto de entrada unificado `rebotarm` es la forma principal de operar el proyecto:
 
 | Comando | Descripción |
 |---|---|
 | `./rebotarm start web` | Iniciar rosbridge + servidor web (carga automáticamente el entorno) |
-| `./rebotarm start dm` | Iniciar el driver de robot real DM (terminal separada, carga automáticamente el entorno) |
+| `./rebotarm start dm` | Iniciar el driver DM del robot real (terminal separada, carga automáticamente el entorno) |
 | `./rebotarm start sim` | Iniciar toda la pila de simulación MuJoCo (no iniciar junto con el robot real) |
 | `./rebotarm doctor` | Comprobación de diagnóstico (equivalente a `./setup.sh --check`) |
 | `./rebotarm status` | Ver el estado de procesos, puertos, puertos serie y nodos ROS |
 | `./rebotarm stop` | Detener los procesos en segundo plano gestionados por `start web` |
 
 :::note
-Todos los comandos `./rebotarm` ejecutan internamente `source scripts/source_rebotarm_env.sh`, por lo que no necesitas cargar el entorno manualmente. Sin embargo, si ejecutas comandos `ros2` sueltos directamente (como iniciar manualmente un archivo de lanzamiento), aún necesitas cargar el entorno primero:
+Todos los comandos `./rebotarm` ejecutan internamente `source scripts/source_rebotarm_env.sh`, por lo que no necesitas cargar el entorno manualmente. Sin embargo, si ejecutas directamente comandos `ros2` sin envoltorio (como iniciar manualmente un archivo de lanzamiento), aún necesitas cargar el entorno primero:
 
 ```bash
 cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
@@ -441,7 +443,7 @@ Este script carga, en orden, ROS2 (`/opt/ros/jazzy/setup.bash`), el entorno virt
 <summary><b>Notas sobre los módulos principales</b> (haz clic para desplegar)</summary>
 
 
-**server.js — servidor estático Node.js**
+**server.js — servidor estático de Node.js**
 
 `server.js` es un servidor HTTP de Node.js sin dependencias. Sus principales responsabilidades:
 
@@ -451,7 +453,7 @@ Este script carga, en orden, ROS2 (`/opt/ros/jazzy/setup.bash`), el entorno virt
 - Hacer proxy de las solicitudes de chat del LLM `/api/llm/chat` y de la comprobación de estado `/api/llm/health` al servicio HTTP del agente de texto en la VM;
 - Proporcionar el endpoint de configuración MCP `/api/mcp/config`, devolviendo `textAgentUrl` y `mcpUrl`.
 
-Resolución de ruta de claves (`server.js`):
+Resolución de ruta clave (`server.js`):
 
 ```javascript
 const BRINGUP_DIR = path.resolve(
@@ -471,11 +473,11 @@ const GRIPPER_MESHES_DIR = path.join(ROOT, 'split_meshes', 'grouped_gripper');
 `rebot-sim.js` es el núcleo del front-end (unas 1700 líneas), responsable de:
 
 - Inicializar la escena de Three.js, la cámara, el renderizador y el controlador de órbita personalizado;
-- Cargar el URDF mediante `URDFLoader`; `loader.packages` asigna `package://rebotarm_bringup` a `${origin}/api` para que las solicitudes de mallas pasen por el endpoint de Node.js;
+- Cargar el URDF mediante `URDFLoader`; `loader.packages` asigna `package://rebotarm_bringup` a `${origin}/api` para que las solicitudes de malla pasen por el endpoint de Node.js;
 - Adjuntar el grupo visual del gripper solo web (4 STL) al `end_link`, con un rango de accionamiento de 0–90mm;
 - Implementar el solucionador de cinemática inversa DLS (mínimos cuadrados amortiguados) `IKSolver`, que admite arrastre del TCP y resolución de pose objetivo;
-- Proporcionar presets de pose, deslizadores de articulaciones, arrastre del TCP, grabación/reproducción/exportación de enseñanza, estimación del sobre de alcance y objetivo fantasma;
-- Exponer la API a través del objeto `window.reBotSim` para que `rebot-ros-ui.js` lo llame.
+- Proporcionar preajustes de pose, deslizadores de articulaciones, arrastre del TCP, grabación/reproducción/exportación de enseñanza, estimación del sobre de alcance y objetivo fantasma;
+- Exponer la API a través del objeto `window.reBotSim` para que lo llame `rebot-ros-ui.js`.
 
 Definiciones de articulaciones (`rebot-sim.js`):
 
@@ -492,7 +494,7 @@ const jointDefs = [
 ```
 
 :::note
-El sistema de coordenadas de Three.js en la web difiere del marco de ROS. Three.js usa por defecto Y hacia arriba, mientras que ROS usa por defecto Z hacia arriba. `rebot-sim.js` realiza la conversión con `threeToRos(v)`: `{ x: v.x, y: -v.z, z: v.y }`. Al desarrollar funciones de pose personalizadas, debes usar esta conversión; de lo contrario, las coordenadas serán incorrectas.
+El sistema de coordenadas de Three.js en la web difiere del marco ROS. Three.js usa Y hacia arriba por defecto, mientras que ROS usa Z hacia arriba. `rebot-sim.js` realiza la conversión con `threeToRos(v)`: `{ x: v.x, y: -v.z, z: v.y }`. Al desarrollar funciones de pose personalizadas, debes usar esta conversión; de lo contrario, las coordenadas serán incorrectas.
 :::
 
 **rebot-ros-client.js — cliente rosbridge**
@@ -513,7 +515,7 @@ El espacio de nombres predeterminado es `rebotarm`, y todas las rutas de tópico
 `rebot-ros-ui.js` (unas 1500 líneas) es la capa de negocio que conecta `ReBotRosClient` y `reBotSim`, responsable de:
 
 - Suscribirse al estado de las articulaciones, estado del gripper, estado del brazo, imagen de la cámara virtual, resultados de detección de visión y eventos de animación de simulación;
-- Implementar los dos interruptores "Mirror real joint state to the web" y "Allow the web to send control to the real arm";
+- Implementar los dos interruptores "Reflejar el estado real de las articulaciones en la web" y "Permitir que la web envíe control al brazo real";
 - Limitación de comandos de articulaciones (`COMMAND_INTERVAL_MS = 45ms`) y retención del espejo (`MIRROR_HOLD_MS = 1800ms`);
 - Inicio/parada de la compensación de gravedad y consulta de estado;
 - Control del gripper y espera hasta alcanzar (`commandGripperAndWait`);
@@ -535,7 +537,7 @@ web rebot-llm.js
   -> ROS 2 service/action/topic
 ```
 
-Al iniciarse, primero llama a `/api/llm/health` para comprobar el estado del agente de texto; tras el éxito habilita el cuadro de entrada. Los mensajes se envían mediante proxy al agente de texto a través de `/api/llm/chat`, y el `text` y los `events` devueltos (proceso de llamada de herramientas) se renderizan en el área de chat. Al detenerse, envía `{ text: '__reset__', reset: true }` para limpiar el contexto.
+Al iniciarse, primero llama a `/api/llm/health` para comprobar el estado del agente de texto; tras el éxito habilita el cuadro de entrada. Los mensajes se envían al agente de texto a través de `/api/llm/chat`, y el `text` y los `events` devueltos (proceso de llamada de herramientas) se renderizan en el área de chat. Al detenerse, envía `{ text: '__reset__', reset: true }` para limpiar el contexto.
 
 </details>
 
@@ -605,7 +607,7 @@ El firmware del motor usa **radianes** (0.0 = cerrado, −5.0 = abierto). La con
 
 En el URDF, `finger_left` / `finger_right` son articulaciones prismáticas con límites `0~0.0285` (m). La página web asigna la apertura de `finger_left` al rango de comando del gripper 0~0.09 m mediante `fingerOpeningToGripperCommand()`.
 
-Para el sistema de coordenadas, Three.js en la web usa por defecto Y hacia arriba, mientras que ROS usa por defecto Z hacia arriba. Todas las poses del TCP se convierten con `threeToRos()` antes de publicarse en ROS:
+Para el sistema de coordenadas, Three.js en la web usa Y hacia arriba por defecto, mientras que ROS usa Z hacia arriba. Todas las poses del TCP se convierten con `threeToRos()` antes de publicarse en ROS:
 
 ```javascript
 function threeToRos(v) {
@@ -615,7 +617,7 @@ function threeToRos(v) {
 
 ## Control de texto LLM/MCP
 
-El control en lenguaje natural no se llama directamente desde el navegador a ROS. Se hace proxy a través de Node.js. El diseño por capas permite que el LLM entienda la intención mientras que la capa MCP restringe la intención a operaciones de robot estructuradas.
+El control en lenguaje natural no se llama directamente desde el navegador a ROS. Se hace proxy a través de Node.js. El diseño por capas permite que el LLM entienda la intención mientras que la capa MCP restringe la intención en operaciones de robot estructuradas.
 
 ### Iniciar el servidor MCP y el agente de texto
 
@@ -654,7 +656,7 @@ Cuando aparezca `Uvicorn running on http://0.0.0.0:8082`, estará listo.
 
 De forma predeterminada escucha en `0.0.0.0:8082`, MCP apunta a `http://127.0.0.1:8081/mcp`, y el LLM usa `qwen-plus` por defecto.
 
-### Uso vía web
+### Uso web
 
 En el panel "LLM text control" de la página web, haz clic en "Start AI assistant". La página primero realiza un health-check del text-agent; tras tener éxito habilita el cuadro de entrada. Puedes escribir directamente comandos en lenguaje natural, por ejemplo:
 
@@ -674,7 +676,7 @@ REBOTARM_TEXT_AGENT_URL=http://<Ubuntu IP>:8082
 REBOTARM_MCP_URL=http://<Ubuntu IP>:8081/mcp
 ```
 
-Después de cambiarlo, reinicia `./rebotarm start web` (o `node server.js`). Al arrancar, la página lee y muestra el backend de proxy actual desde `/api/mcp/config`.
+Después de cambiarlo, reinicia `./rebotarm start web` (o `node server.js`). Al iniciarse, la página lee y muestra el backend de proxy actual desde `/api/mcp/config`.
 
 ### Panel de visualización MCP Dashboard
 
@@ -711,7 +713,7 @@ Abre `http://<Ubuntu IP>:8082/` en un navegador para acceder; no se necesita ins
 - **Formulario de parámetros**: genera automáticamente cuadros de entrada basados en el `inputSchema` de cada herramienta; rellena los parámetros y haz clic en "Call" para llamar directamente a la herramienta MCP correspondiente;
 - **Etiqueta de movimiento**: las herramientas que requieren `motion_mode=allow` se marcan con una etiqueta "Motion";
 - **Registro de herramientas personalizadas**: haz clic en el botón "Register new tool", rellena el nombre de la herramienta, descripción, categoría, URL del Webhook y el esquema de parámetros (JSON) para añadir una herramienta personalizada al panel. Al llamarla, los parámetros se envían por POST como JSON a la URL del Webhook;
-- **Conmutador CN/EN**: el botón de idioma en la esquina superior derecha cambia la interfaz CN/EN con un clic; la elección se guarda en el `localStorage` del navegador;
+- **Cambio CN/EN**: el botón de idioma en la esquina superior derecha cambia la interfaz CN/EN con un clic; la elección se guarda en el `localStorage` del navegador;
 - **Entrada en lenguaje natural**: escribe comandos en lenguaje natural en el cuadro de chat de la derecha; pasan por el endpoint `/chat` a través de la cadena LLM → MCP, y la respuesta y el proceso de llamada de herramientas se muestran en el área de registro en tiempo real.
 
 :::tip
@@ -728,25 +730,25 @@ El MCP Dashboard es una entrada de depuración independiente y no depende del si
 | `/register_tool` | POST | Registra una herramienta personalizada, cuerpo: `{"name":"...", "description":"...", "category":"...", "webhook_url":"...", "parameters":{...}}` |
 | `/unregister_tool` | POST | Elimina una herramienta personalizada registrada, cuerpo: `{"name":"..."}` |
 | `/chat` | POST | Conversación en lenguaje natural, cuerpo: `{"text":"..."}` |
-| `/health` | GET | Comprobación de estado (health check) |
+| `/health` | GET | Comprobación de estado |
 
 ## Guía de desarrollo secundario
 
 ### Modificar límites de articulaciones o preajustes
 
-Los límites de articulaciones y las poses preestablecidas se definen en los objetos `jointDefs` y `presets` al principio de `rebot-sim.js`. Después de modificarlos, actualiza la página para que surtan efecto; no es necesario recompilar. Ten en cuenta que los límites de articulaciones deben ser coherentes con `<limit>` en el URDF, de lo contrario el modelo web y el comportamiento en ROS no coincidirán.
+Los límites de articulaciones y las poses preestablecidas se definen en los objetos `jointDefs` y `presets` al principio de `rebot-sim.js`. Después de modificarlos, actualiza la página para que surtan efecto; no es necesario recompilar. Ten en cuenta que los límites de articulaciones deben ser coherentes con `<limit>` en el URDF, de lo contrario el modelo web y el comportamiento de ROS no coincidirán.
 
 ### Añadir una interfaz ROS personalizada
 
 Si necesitas suscribirte a un nuevo tópico o llamar a un nuevo servicio, añádelo a `REQUIRED_TOPICS` o `REQUIRED_SERVICES` en `rebot-ros-ui.js`, y llama a `client.subscribe()` o `client.callService()` en los eventos de los botones. `ReBotRosClient` ya encapsula el protocolo rosbridge, por lo que no necesitas escribir la comunicación WebSocket a mano.
 
-### Ampliar herramientas del LLM
+### Ampliar herramientas LLM
 
-Las herramientas del LLM están definidas por el MCP Server en `rebotarm_agent`. Añadir una nueva herramienta requiere implementarla en el paquete `rebotarm_agent` en el espacio de trabajo ROS2; después de recompilar, el text-agent la expone automáticamente. No se necesitan cambios en la parte web; el proceso de llamada de herramientas se devuelve a través del campo `events` de `/api/llm/chat` y se renderiza.
+Las herramientas LLM están definidas por el MCP Server en `rebotarm_agent`. Añadir una nueva herramienta requiere implementarla en el paquete `rebotarm_agent` en el espacio de trabajo ROS2; después de recompilar, el text-agent la expone automáticamente. No se necesitan cambios en la parte web; el proceso de llamada de herramientas se devuelve a través del campo `events` de `/api/llm/chat` y se representa.
 
-### Modificar las mallas de la pinza en la web
+### Modificar las mallas de la pinza web
 
-Los STLs de la pinza solo para la web están en `split_meshes/grouped_gripper/`, incluyendo `gripper_base.stl`, `gripper_hardware.stl`, `left_finger.stl` y `right_finger.stl`. Sustituye estos archivos y actualiza la página. No añadas una segunda copia de `urdf/` o `meshes/` en el directorio web; en tiempo de ejecución solo se usan estos cuatro STLs de la pinza.
+Los STLs de la pinza solo para web están en `split_meshes/grouped_gripper/`, incluyendo `gripper_base.stl`, `gripper_hardware.stl`, `left_finger.stl` y `right_finger.stl`. Sustituye estos archivos y actualiza la página. No añadas una segunda copia de `urdf/` o `meshes/` en el directorio web; en tiempo de ejecución solo se usan estos cuatro STLs de la pinza.
 
 ### Modificar la dirección de conexión de rosbridge
 
@@ -769,13 +771,13 @@ La página intenta cargar la última dirección guardada cuando el cuadro de ent
 | `reBotArm_simulator-DM/public/index.html` | Entrada de la aplicación de una sola página y diseño del panel de control |
 | `reBotArm_simulator-DM/public/css/rebot-sim.css` | Estilos de tema oscuro |
 | `reBotArm_simulator-DM/public/js/rebot-sim.js` | Escena 3D, IK, enseñanza, núcleo de arrastre |
-| `reBotArm_simulator-DM/public/js/rebot-llm.js` | Interfaz de chat del LLM |
+| `reBotArm_simulator-DM/public/js/rebot-llm.js` | Interfaz de chat LLM |
 | `reBotArm_simulator-DM/public/js/ros/rebot-ros-client.js` | Cliente WebSocket de rosbridge |
 | `reBotArm_simulator-DM/public/js/ros/rebot-ros-ui.js` | Interfaz del panel de control ROS y lógica de negocio |
 | `reBotArm_simulator-DM/public/lib/three-r128.min.js` | Motor de renderizado Three.js |
 | `reBotArm_simulator-DM/public/lib/STLLoader-umd.js` | Cargador de mallas STL |
 | `reBotArm_simulator-DM/public/lib/URDFLoader.js` | Analizador URDF |
-| `reBotArm_simulator-DM/split_meshes/grouped_gripper/` | STLs de la pinza solo para la web (4 archivos) |
+| `reBotArm_simulator-DM/split_meshes/grouped_gripper/` | STLs de la pinza solo para web (4 archivos) |
 
 </details>
 
@@ -785,25 +787,25 @@ La página intenta cargar la última dirección guardada cuando el cuadro de ent
 
 Si la página se queda atascada en la superposición de carga, la solicitud del URDF o de la malla STL ha fallado. Abre el panel Network en las herramientas de desarrollador del navegador y comprueba si `/api/urdf` y `/api/description/meshes/*.STL` devuelven 200. Causas comunes:
 
-- La ruta `BRINGUP_DIR` en `server.js` se resuelve de forma incorrecta (el directorio web se movió a una ubicación que no es monorepo), por lo que no se puede encontrar `src/rebotarm_bringup/description/`;
+- La ruta `BRINGUP_DIR` en `server.js` se resuelve incorrectamente (el directorio web se movió a una ubicación que no es monorepo), por lo que no se puede encontrar `src/rebotarm_bringup/description/`;
 - `package://rebotarm_bringup/...` en el URDF no se puede mapear; confirma que `loader.packages` apunta a `${origin}/api`;
-- Falta el archivo STL o la mayúscula/minúscula de la ruta no coincide (Linux distingue entre mayúsculas y minúsculas).
+- Falta el archivo STL o la coincidencia de mayúsculas y minúsculas de la ruta no es correcta (Linux distingue entre mayúsculas y minúsculas).
 
-### 2. Después de conectarse a ROS, el estado permanece en "offline"
+### 2. Después de conectar a ROS, el estado permanece en "offline"
 
 Comprueba en este orden:
 
-- Si rosbridge se está ejecutando en el lado de Ubuntu y escuchando en `0.0.0.0:9090` (no en `127.0.0.1`);
-- Si el host web puede alcanzar el puerto 9090 de Ubuntu (firewall, modo de red de la VM);
-- Si la dirección WebSocket comienza con `ws://` (como `ws://localhost:9090`);
+- Que rosbridge se esté ejecutando en el lado de Ubuntu y escuchando en `0.0.0.0:9090` (no en `127.0.0.1`);
+- Que el host web pueda alcanzar el puerto 9090 de Ubuntu (firewall, modo de red de la VM);
+- Que la dirección WebSocket comience con `ws://` (como `ws://localhost:9090`);
 
 ### 3. El deslizador de articulaciones no puede controlar el robot real
 
 Controlar el robot real desde la página web requiere tres pasos de desbloqueo:
 
 1. Conectarse a ROS en el panel "ROS2 Bridge" (el WebSocket se conecta al rosbridge del controlador del robot real);
-2. Marcar "Allow the web to send control to the real arm" → haz clic en "OK" en el cuadro de confirmación;
-3. Haz clic en el botón "Enable".
+2. Marcar "Allow the web to send control to the real arm" → hacer clic en "OK" en el cuadro de confirmación;
+3. Hacer clic en el botón "Enable".
 
 Los tres pasos son necesarios. Cuando el bloqueo de control no está marcado, arrastrar el deslizador solo mueve el modelo 3D y no envía comandos ROS.
 
@@ -833,13 +835,13 @@ El agarre visual depende de toda la pila de simulación física. Comprueba:
 
 ### 7. Los cambios en el código del front-end no surten efecto
 
-Los recursos del front-end se sirven de forma estática mediante Node.js; después de cambiar, actualiza el navegador. La versión actual no registra un Service Worker, por lo que no hay caché sin conexión que impida que se actualice la versión antigua. Si el navegador sigue mostrando contenido antiguo, usa una recarga forzada (Ctrl+Shift+R) o borra la caché normal.
+Los recursos del front-end son servidos de forma estática por Node.js; después de cambiar, actualiza el navegador. La versión actual no registra un Service Worker, por lo que no hay caché sin conexión que impida que se actualice la versión antigua. Si el navegador sigue mostrando contenido antiguo, usa una actualización forzada (Ctrl+Shift+R) o borra la caché normal.
 
 ### 8. "URDFLoader" o "THREE" no encontrados
 
 Son bibliotecas de terceros bajo `public/lib/`, cargadas por `index.html` mediante etiquetas `<script>`. Confirma:
 
-- Existen `public/lib/three-r128.min.js`, `public/lib/URDFLoader.js` y `public/lib/STLLoader-umd.js`;
+- `public/lib/three-r128.min.js`, `public/lib/URDFLoader.js` y `public/lib/STLLoader-umd.js` existen;
 - Las rutas de las etiquetas `<script>` en `index.html` son correctas, y el orden de carga es Three.js → STLLoader → URDFLoader → scripts de negocio;
 - No hay errores 404 ni errores de orden de carga en la consola del navegador.
 
@@ -847,8 +849,8 @@ Son bibliotecas de terceros bajo `public/lib/`, cargadas por `index.html` median
 
 `setup.sh` es idempotente; los componentes que fallan se enumeran en el `Failed or still missing` del resumen final. Casos comunes:
 
-- Fuente apt de ROS no configurada: el instalador descarga automáticamente el paquete `ros2-apt-source` y añade la fuente, lo que requiere sudo;
-- Versión de Python no coincidente: Jazzy necesita 3.12, Humble necesita 3.10; una discrepancia se enumera en `Version/platform mismatches`;
+- Fuente apt de ROS no configurada: el instalador descarga automáticamente el paquete `ros2-apt-source` y añade la fuente, lo cual requiere sudo;
+- Incompatibilidad de versión de Python: Jazzy necesita 3.12, Humble necesita 3.10; una incompatibilidad se enumera en `Version/platform mismatches`;
 - Fallo al clonar el SDK: comprueba la red y la accesibilidad a GitHub, o clona manualmente en `reBotArm_ros2_DM/third_party/reBotArm_control_py/` y vuelve a ejecutar;
 - `colcon build` falló: comprueba si `rosdep` está inicializado (`sudo rosdep init && rosdep update`), luego vuelve a ejecutar `./setup.sh`.
 
