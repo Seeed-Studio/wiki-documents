@@ -368,6 +368,10 @@ module.exports = (async () => {
       ],
       
       path.resolve(__dirname, '../../plugins/image-zoom'),
+      [
+        path.resolve(__dirname, '../../plugins/respeaker-faq-index'),
+        { locale: 'ja' },
+      ],
       'docusaurus-plugin-sass',
       [
         'docusaurus-plugin-copy-page-button',
