@@ -7,7 +7,7 @@ keywords:
   - 10.3 inch
   - ESP32
   - SenseCraft HMI
-image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.jpg
+image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.webp
 slug: /getting_started_with_ee03
 sidebar_position: 2
 sku: 100080566
