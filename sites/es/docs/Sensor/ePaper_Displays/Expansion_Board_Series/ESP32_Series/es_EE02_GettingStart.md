@@ -1,6 +1,6 @@
 ---
-description: Primeros pasos con la placa controladora de tinta electrónica EE02 de 13,3 pulgadas
-title: Primeros pasos con EE02
+description: Introducción a la placa controladora de tinta electrónica EE02 de 13,3 pulgadas
+title: Introducción a EE02
 keywords:
   - E-ink
   - Placa controladora
@@ -15,11 +15,11 @@ last_update:
   date: 8/18/2026
   author: Nemo
 createdAt: '2025-12-19'
-updatedAt: '2026-08-18'
+updatedAt: '2026-08-25'
 url: https://wiki.seeedstudio.com/es/getting_started_with_ee02/
 ---
 
-# Primeros pasos con la XIAO ePaper Display Board - EE02
+# Introducción a la XIAO ePaper Display Board - EE02
 
 <div class="table-center">
 <table align="center">
@@ -46,17 +46,17 @@ url: https://wiki.seeedstudio.com/es/getting_started_with_ee02/
 
 ## Introducción
 
-La **XIAO ePaper Display Board EE02** es una placa controladora de pantalla ePaper de alto rendimiento diseñada específicamente para pantallas de papel electrónico **Spectra™ 6 de 13,3 pulgadas y seis colores**. Impulsada por la **XIAO ESP32-S3 Plus**, es compatible con conectividad Wi-Fi y Bluetooth, y viene **pregrabada con el firmware SenseCraft HMI**, lo que permite un diseño de interfaz de usuario con IA, mediante arrastrar y soltar y sin necesidad de programación. Es una solución ideal para aplicaciones de visualización inalámbrica como paneles en tiempo real, señalización digital y paneles de control para el hogar inteligente.
+La **XIAO ePaper Display Board EE02** es una placa controladora de pantalla ePaper de alto rendimiento diseñada específicamente para pantallas de papel electrónico **Spectra™ 6 de seis colores y 13,3 pulgadas**. Impulsada por la **XIAO ESP32-S3 Plus**, es compatible con conectividad Wi-Fi y Bluetooth, y viene **pregrabada con el firmware SenseCraft HMI**, lo que permite un diseño de interfaz de usuario con IA, mediante arrastrar y soltar y sin necesidad de programación. Es una solución ideal para aplicaciones de visualización inalámbrica como paneles en tiempo real, señalización digital y paneles de control para el hogar inteligente.
 
-Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la EE02 ofrece una experiencia fluida para los desarrolladores que buscan integrar pantallas ePaper de gran formato en sus proyectos de IoT. Simplifica el proceso de control y es compatible con la plataforma SenseCraft HMI para una fácil gestión de contenido.
+Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la EE02 ofrece una experiencia fluida para los desarrolladores que buscan integrar pantallas ePaper de gran formato en sus proyectos de IoT. Simplifica el proceso de control y es compatible con la plataforma SenseCraft HMI para una gestión sencilla del contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### Características
 
 - **XIAO ESP32-S3 Plus integrado:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible.
-- **Compatibilidad dedicada con Spectra™ 6 E-Ink de 13,3":** Diseñada específicamente para pantallas Spectra™ 6 de 13,3", lo que garantiza una configuración rápida y un funcionamiento estable.
-- **Conector BAT con interruptor:** Proporciona una conexión sencilla de la batería e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
+- **Compatibilidad dedicada con E-Ink Spectra™ 6 de 13,3":** Diseñada específicamente para pantallas Spectra™ 6 de 13,3", lo que garantiza una configuración rápida y un funcionamiento estable.
+- **Conector BAT con interruptor:** Proporciona una conexión sencilla de la batería e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro de consumo.
 - **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, lo que ofrece flexibilidad para acelerar proyectos y funciones personalizables.
 - **Firmware SenseCraft HMI pregrabado:** Simplemente conéctalo y empieza a usarlo de inmediato con SenseCraft HMI, nuestra plataforma de diseño de interfaces sin código impulsada por IA. Elige entre plantillas variadas o crea interfaces mediante arrastrar y soltar (con asistencia opcional de IA) y despliega el contenido en la pantalla ePaper con solo unos clics.
 
@@ -69,12 +69,12 @@ Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la E
 | **Tamaño de pantalla compatible** | Pantalla E-ink de 13,3 pulgadas |
 | **Conectividad** | Wi-Fi 802.11 b/g/n, Bluetooth 5.0 (LE) |
 | **Alimentación** | 5V mediante USB Type-C / batería de 3,7V (JST 2,0 mm) |
-| **Conector de batería** | Conector JST 2,0 mm de 2 pines |
+| **Conector de batería** | JST 2,0 mm de 2 pines |
 | **Tensión de funcionamiento** | 3,3V |
 | **Interfaz** | USB Type-C, conector FPC para ePaper |
 | **Dimensiones** | 80 mm x 43 mm x 7 mm |
 | **Temperatura de funcionamiento** | -20°C a 70°C |
-| **Interruptor** | Encendido/Apagado de alimentación por batería |
+| **Interruptor** | Encendido/Apagado de la alimentación por batería |
 | **Botón** | 1x botón de reinicio <br/> 3x botones de usuario |
 
 ### Aplicaciones
@@ -83,7 +83,7 @@ Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la E
 - **Alertas de seguridad**: Pantallas de notificación de bajo consumo para el estado del sistema de seguridad y mensajes de alerta.
 - **Marco de fotos digital**: Marcos de fotos ePaper con refresco suave y consumo de energía ultrabajo.
 - **Panel de llegadas de transporte público**: Pantallas de información de llegada de autobuses/trenes en estaciones y paradas.
-- **Señalización digital**: Menús de restaurantes, rótulos de salas de reuniones y etiquetas de precios en comercios.
+- **Señalización digital**: Menús de restaurante, carteles de salas de reuniones y etiquetas de precio en comercios.
 - **Hogar inteligente**: Paneles de información para clima, calendario y estado de la automatización del hogar.
 - **HMI industrial**: Pantallas de estado de bajo consumo para maquinaria y gestión de almacenes.
 - **Educación**: Lectores de libros electrónicos o paneles de información en aulas.
@@ -99,10 +99,10 @@ Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la E
 - **Botones**: Son "refresh the page","switch previous page" y "switch next page"
 - **Interruptor**: Controla el encendido/apagado de la alimentación por batería.
 - **Botón de arranque (Boot)**: Se utiliza para entrar en modo bootloader.
-- **Indicadores LED**: Parpadeando significa que no hay batería conectada. Luz verde encendida significa que la batería se está cargando.
-- **Conector JST**: Conector JST 2,0 mm de 2 pines para conectar la batería.
+- **LED indicadores**: Parpadeando significa que no hay batería conectada. Luz verde encendida significa que la batería se está cargando.
+- **Conector JST**: Conector JST de 2 pines y 2,0 mm para conectar la batería.
 
-## Primeros pasos con SenseCraft HMI
+## Introducción a SenseCraft HMI
 
 Esta sección te guiará para conectar tu EE02 a la plataforma SenseCraft HMI, lo que te permitirá actualizar fácilmente el contenido de la pantalla de forma inalámbrica.
 
@@ -116,7 +116,7 @@ Antes de comenzar, asegúrate de tener lo siguiente:
 ### Instalación del equipo
 
 **Paso 1. Conecta la pantalla y la placa**
-Conecta con cuidado el cable FPC de la pantalla E-ink de 13,3 pulgadas al conector de la placa controladora EE02. Asegúrate de que el mecanismo de bloqueo esté bien asegurado.
+Conecta con cuidado el cable FPC de la pantalla E-ink de 13,3 pulgadas al conector de la placa controladora EE02. Asegúrate de que el mecanismo de bloqueo esté bien fijado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -145,7 +145,7 @@ Una vez que la configuración de red sea correcta, la pantalla se actualizará d
 ### Vinculación con la plataforma y actualización
 
 **Paso 6. Vincula el dispositivo en SenseCraft HMI**
-Ve a la [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "Add Device". Introduce el código de vinculación que aparece en tu pantalla E-ink para vincular el dispositivo a tu cuenta.
+Ve a la [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "New Device". Introduce el código de vinculación que aparece en tu pantalla E-ink para vincular el dispositivo a tu cuenta.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
@@ -159,25 +159,25 @@ En la plataforma SenseCraft HMI, utiliza el editor para crear una nueva interfaz
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/11.png" style={{width:500, height:'auto'}}/></div>
 
 **Paso 8. Aplica tus imágenes**
-Una vez terminado, haz clic en el botón "Apply" en la esquina superior derecha y, a continuación, selecciona el dispositivo que quieres que reciba la imagen. La EE02 recibirá los datos y actualizará la pantalla de 13,3 pulgadas con tu nuevo contenido.
+Una vez terminado, haz clic en el botón "Apply" en la esquina superior derecha y luego selecciona el dispositivo que quieres que reciba la imagen. La EE02 recibirá los datos y actualizará la pantalla de 13,3 pulgadas con tu nuevo contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/12.png" style={{width:800, height:'auto'}}/></div>
 
-**Paso 9. Muestra en la pantalla**
+**Paso 9. Visualización en la pantalla**
 
 Finalmente, la EE02 recibirá los datos y actualizará la pantalla de 13,3 pulgadas con tu nuevo contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/13.png" style={{width:300, height:'auto'}}/></div>
 
-## Primeros pasos con Arduino
+## Introducción con Arduino
 
-### Instalar la biblioteca Seeed GFX2
+### Instalar la librería Seeed GFX2
 
 :::tip
-Esta biblioteca tiene la misma función que la biblioteca TFT y **no** es compatible con ella. Si has instalado la biblioteca TFT u otras bibliotecas de pantalla similares, desinstálalas primero.
+Esta librería tiene la misma función que la librería TFT y **no** es compatible con ella. Si has instalado la librería TFT u otras librerías de pantalla similares, desinstálalas primero.
 :::
 
-Descarga e instala la biblioteca Seeed GFX2 desde GitHub.
+Descarga e instala la librería Seeed GFX2 desde GitHub.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/14.png" style={{width:800, height:'auto'}}/></div>
 
@@ -193,7 +193,7 @@ Después de descargar la biblioteca, ve a **Sketch** -> **Include Library** -> *
 
 ### Configurar y grabar el programa
 
-Como se muestra en la imagen, navega al ejemplo a través de este menú:
+Como se muestra en la imagen, navega hasta el ejemplo a través de este menú:
 File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → EE02 → 13.3-inch ePaper Displays → 13_3_inch_Spectra6_HelloWorld
 
 
@@ -224,8 +224,8 @@ Luego haz clic en **Upload** para cargar el código.
 **P3: La pantalla se ve borrosa o tiene efecto fantasma.**
 *   Esto puede ocurrir si la pantalla no se ha actualizado durante mucho tiempo o si la fuente de alimentación es inestable. Intenta actualizar la pantalla de nuevo a través de la plataforma HMI.
 
-**P4: Escucho un sonido de alta frecuencia durante el funcionamiento.**
-*   ¡Esto es normal! El circuito de alimentación del ePaper puede producir un sonido de alta frecuencia ocasional durante la actualización. No afecta al rendimiento ni a la vida útil del producto.
+**P4: Oigo un sonido de alta frecuencia durante el funcionamiento.**
+*   ¡Esto es normal! El circuito de alimentación del ePaper puede producir sonidos ocasionales de alta frecuencia durante la actualización. No afecta al rendimiento ni a la vida útil del producto.
 
 **P5: No puedo vincular el dispositivo en SenseCraft HMI / la vinculación falla.**
 *   Verifica dos veces que introdujiste correctamente el código de vinculación (distingue mayúsculas y minúsculas).
