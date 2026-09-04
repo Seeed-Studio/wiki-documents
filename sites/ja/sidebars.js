@@ -2205,6 +2205,24 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'よくある質問',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/ja_respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/ja_xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/ja_flex_xvf3800_faq',
+            'FAQ/respeaker/ja_respeaker_lite_faq',
+            'FAQ/respeaker/ja_xvf3000_faq',
+            'FAQ/respeaker/ja_respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/ja_respeaker_clip_faq',
+          ],
+        },
+        {
+          type: 'category',
           label: 'アプリケーション',
           collapsed: true,
           collapsible: true,
