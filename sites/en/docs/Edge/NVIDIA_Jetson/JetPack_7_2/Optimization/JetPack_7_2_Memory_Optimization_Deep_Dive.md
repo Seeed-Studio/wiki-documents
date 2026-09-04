@@ -15,7 +15,7 @@ last_update:
   date: 08/27/2026
   author: zibo
 createdAt: '2026-08-27'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/jetpack_7_2_memory_optimization_deep_dive/
 ---
 

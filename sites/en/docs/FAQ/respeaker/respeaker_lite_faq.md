@@ -10,6 +10,9 @@ keywords:
   - reSpeaker Lite troubleshooting
   - reSpeaker Lite USB audio
   - ESPHome
+createdAt: '2026-08-31'
+url: https://wiki.seeedstudio.com/respeaker_lite_faq/
+updatedAt: '2026-09-03'
 ---
 
 <div class="respeaker-faq-page">

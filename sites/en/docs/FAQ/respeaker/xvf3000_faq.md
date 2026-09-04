@@ -10,6 +10,9 @@ keywords:
   - reSpeaker XVF3000 DSP tuning
   - reSpeaker Mic Array tuning
   - tuning.py
+createdAt: '2026-09-01'
+url: https://wiki.seeedstudio.com/respeaker_xvf3000_faq/
+updatedAt: '2026-09-03'
 ---
 
 <div class="respeaker-faq-page">

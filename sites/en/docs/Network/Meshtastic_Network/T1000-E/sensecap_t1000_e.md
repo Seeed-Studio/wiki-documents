@@ -11,7 +11,7 @@ last_update:
   date: 09/01/2026
   author: Advent Jiang
 createdAt: '2024-07-24'
-updatedAt: '2026-08-06'
+updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';

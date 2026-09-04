@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-09'
-updatedAt: '2026-07-07'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 ---
 

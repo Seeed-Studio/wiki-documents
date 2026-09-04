@@ -10,6 +10,9 @@ keywords:
   - reSpeaker 2-Mics Pi HAT V2.0
   - TLV320AIC3104
   - codec I2C address
+createdAt: '2026-09-01'
+url: https://wiki.seeedstudio.com/respeaker_2_mics_pi_hat_faq/
+updatedAt: '2026-09-03'
 ---
 
 <div class="respeaker-faq-page">
