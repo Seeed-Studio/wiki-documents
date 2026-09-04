@@ -10,7 +10,7 @@ last_update:
   date: 9/2/2026
   author: jianjing Huang
 createdAt: '2023-01-10'
-updatedAt: '2026-01-07'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/BeagleBone_Green/
 ---
 

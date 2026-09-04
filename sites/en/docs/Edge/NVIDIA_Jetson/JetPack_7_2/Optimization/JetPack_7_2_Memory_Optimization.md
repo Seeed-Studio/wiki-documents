@@ -15,7 +15,7 @@ last_update:
   date: 07/31/2026
   author: Dayu
 createdAt: '2026-07-31'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/jetpack_7_2_memory_optimization/
 ---
 

@@ -17,7 +17,7 @@ last_update:
   date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-08-19'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 

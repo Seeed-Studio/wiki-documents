@@ -10,6 +10,9 @@ keywords:
   - reSpeaker Clip documentation
   - live transcription
   - mechanical drawing
+createdAt: '2026-09-01'
+url: https://wiki.seeedstudio.com/respeaker_clip_faq/
+updatedAt: '2026-09-03'
 ---
 
 <div class="respeaker-faq-page">
