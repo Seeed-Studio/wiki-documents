@@ -13,7 +13,7 @@ slug: /recamera_pro_rknn_model_conversion
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 08/28/2026
+  date: 09/03/2026
   author: yylin
 createdAt: '2026-08-28'
 updatedAt: '2026-08-28'
@@ -21,6 +21,8 @@ url: https://wiki.seeedstudio.com/recamera_pro_rknn_model_conversion/
 ---
 
 # Convert and Quantize Models for reCamera Pro with RKNN-Toolkit2
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/Model_Conversion/20260903-190057.png" alt="Workflow of converting and quantizing ONNX models to RKNN format for reCamera Pro" /></div>
 
 ## Introduction
 
