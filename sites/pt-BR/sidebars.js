@@ -2204,6 +2204,24 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Perguntas frequentes',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/pt_respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/pt_xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/pt_flex_xvf3800_faq',
+            'FAQ/respeaker/pt_respeaker_lite_faq',
+            'FAQ/respeaker/pt_xvf3000_faq',
+            'FAQ/respeaker/pt_respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/pt_respeaker_clip_faq',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Aplicações',
           collapsed: true,
           collapsible: true,
