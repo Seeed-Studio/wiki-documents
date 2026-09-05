@@ -1,0 +1,722 @@
+<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Contribution/Contributors/ReCamera_Model_Converstion_Mac_README" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>YOLO11n Model Conversion for reCamera: Complete Guide | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/Contribution/Contributors/ReCamera_Model_Converstion_Mac_README/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="YOLO11n Model Conversion for reCamera: Complete Guide | Seeed Studio Wiki"><meta data-rh=true name=description content="Table of Contents"><meta data-rh=true property=og:description content="Table of Contents"><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/Contribution/Contributors/ReCamera_Model_Converstion_Mac_README/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/Contribution/Contributors/ReCamera_Model_Converstion_Mac_README/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/Contribution/Contributors/ReCamera_Model_Converstion_Mac_README/ hreflang=x-default><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,o){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var r=t.getElementsByTagName(a)[0],d=t.createElement(a);d.async=!0,d.src="https://www.googletagmanager.com/gtm.js?id="+o+("dataLayer"!=n?"&l="+n:""),r.parentNode.insertBefore(d,r)}(window,document,"script","dataLayer","GTM-M4JG2HVB"),window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","gemini"],generateMarkdownRoutes:!1,placement:"auto",mcpServer:null,id:"default"}</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.4a5b609e.css><script src=/assets/js/runtime~main.583e44e9.js defer></script><script src=/assets/js/main.68921d9f.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+
+
+<svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="dark",e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><div role=region aria-label="Skip to main content"><a class=skipToContent_G6ar href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><div class="theme-announcement-bar announcementBar_ncOr" style=background-color:#013949;color:#FFFFFF role=banner><div class="content_L1uV announcementBarContent__57G"><span id=announcement-text>Collaborate with Seeed - <a target=_blank href=https://www.seeedstudio.com/blog/affiliate-program/>Creator</a>, <a target=_blank href=https://www.seeedstudio.com/ranger-program/>Ranger</a>, or <a target=_blank href=https://wiki.seeedstudio.com/contributors/>Contributor</a>, there is always a role ideal for you!</span></div></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img class=navbar_logo_items src=https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png alt="Seeed Studio" loading=eager decoding=async></div></a><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items js_getting_started" aria-haspopup=true aria-expanded=false role=button href=/Getting_Started/>Quick Links</a><ul class=dropdown__menu><li><a class=dropdown__link href=/Sensor_Network/>Sensor and Sensing</a><li><a class=dropdown__link href=/Network/>Networking</a><li><a class=dropdown__link href=/Edge_Computing/>Edge Computing</a><li><a class=dropdown__link href=/Cloud/>Cloud</a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items js_explore_learn" aria-haspopup=true aria-expanded=false role=button href=/topicintroduction/>Explore with Topics</a><ul class=dropdown__menu><li><a class=dropdown__link href=/tinyml_topic/>TinyML</a><li><a class=dropdown__link href=/ModelAssistant_Introduce_Overview/>SenseCraft Model Assistant</a><li><a class=dropdown__link href=/home_assistant_topic/>Home Assistant</a><li><a class=dropdown__link href=/open_source_topic/>Open Source</a><li><a class=dropdown__link href=/edge_ai_topic/>Edge AI</a><li><a href=https://wiki.seeedstudio.com/cn/Getting_Started target=_blank rel="noopener noreferrer" class=dropdown__link>Wiki 矽递科技 (中文)</a><li><a href=https://wiki.seeedstudio.com/ja/Getting_Started target=_blank rel="noopener noreferrer" class=dropdown__link>Wiki SeeedStudio (日本語)</a><li><a href=https://wiki.seeedstudio.com/es/Getting_Started target=_blank rel="noopener noreferrer" class=dropdown__link>Wiki SeeedStudio (Español)</a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items" aria-haspopup=true aria-expanded=false role=button href=/knowledgebase/>FAQs</a><ul class=dropdown__menu><li><a class=dropdown__link href=/Jetson_FAQ/>NVIDIA Jetson Series</a><li><a class=dropdown__link href=/XIAO_FAQ/>Seeed Studio XIAO Series</a><li><a class=dropdown__link href=/reComputer_R1000_FAQ/>reComputer R1000 Series</a><li><a class=dropdown__link href=/reTerminal-new_FAQ/>reTerminal</a><li><a class=dropdown__link href=/FAQs_For_openWrt/>reRouter</a><li><a class=dropdown__link href=/ODYSSEY_FAQ/>Odyssey</a><li><a class=dropdown__link href=/wio_terminal_faq/>Wio Terminal</a><li class=""><hr style="margin: 8px 0;"><li><a href=https://discord.com/invite/eWkprNDMU7 target=_blank rel="noopener noreferrer" class=dropdown__link>Discord<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=dropdown__link>Email<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=dropdown__link>Forum<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 target=_blank rel="noopener noreferrer" class=dropdown__link>Have Suggestions?<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a href=https://www.seeedstudio.com/ranger-program target=_blank rel="noopener noreferrer" aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar_dorp_items">Get Involved</a><ul class=dropdown__menu><li><a href=https://www.seeedstudio.com/blog/affiliate-program/ target=_blank rel="noopener noreferrer" class=dropdown__link>Affiliate & Creator</a><li><a href=https://www.seeedstudio.com/ranger-program/ target=_blank rel="noopener noreferrer" class=dropdown__link>Rangers</a><li><a class=dropdown__link href=/contributors/>Contributors</a><li><a href=https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform target=_blank rel="noopener noreferrer" class=dropdown__link>Apply for Rangers<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://github.com/orgs/Seeed-Studio/projects/6 target=_blank rel="noopener noreferrer" class=dropdown__link>Direct to Assignments<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/ target=_blank rel="noopener noreferrer" class=dropdown__link>More about Rangers<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://wiki.seeedstudio.com/Contributor target=_blank rel="noopener noreferrer" class=dropdown__link>More about Contributors<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class="navbar__item navbar__link navbar_doc_right_items">Bazaar 🛍️</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar_doc_right_items ai-platform-dropdown">AI Platform</a><ul class=dropdown__menu><li><a href=https://sensecraft.seeed.cc/ai/#/home target=_blank rel="noopener noreferrer" class="dropdown__link ai-platform-menu-item sensecraft-ai-menu-item">SenseCraft AI</a><li><a href=https://sensecraft.seeed.cc/ai-lab target=_blank rel="noopener noreferrer" class="dropdown__link ai-platform-menu-item recomputer-ai-lab-menu-item">reComputer AI Lab</a></ul></div><a href=https://github.com/Seeed-Studio/wiki-documents target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="toggle_OLSw colorModeToggle_Hg9V"><button class="clean-btn toggleButton_wYmb toggleButtonDisabled_vaDU" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_KEbZ lightToggleIcon_Sxwe"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_KEbZ darkToggleIcon_Yem1"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_KEbZ systemToggleIcon_txm5"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_bmvg><button type=button class="DocSearch DocSearch-Button" aria-label=Search><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke=currentColor fill=none fill-rule=evenodd stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Search</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_UyTV"><div class=docsWrapper_XLvK><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_z1FD" type=button></button><div class=docRoot_HciC><main class="docMainContainer_namt docMainContainerEnhanced_sRjM"><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_gTko" data-sku="" data-doc-type=""><div class=docItemContainer_HGmz><article><div class="tocCollapsible_O_Qc theme-doc-toc-mobile tocMobile_tjDr"><button type=button class="clean-btn tocCollapsibleButton_htYj">On this page</button></div><div class=mobileCopyPageButton_Ttvy></div><div class="theme-doc-markdown markdown"><header><h1>YOLO11n Model Conversion for reCamera: Complete Guide</h1></header>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=table-of-contents>Table of Contents<a href=#table-of-contents class=hash-link aria-label="Direct link to Table of Contents" title="Direct link to Table of Contents">​</a></h2>
+<ol>
+<li><a href=#introduction>Introduction</a></li>
+<li><a href=#understanding-the-hardware-constraints>Understanding the Hardware Constraints</a></li>
+<li><a href=#prerequisites>Prerequisites</a></li>
+<li><a href=#cloud-provider-setup-options>Cloud Provider Setup Options</a></li>
+<li><a href=#step-by-step-conversion-process>Step-by-Step Conversion Process</a></li>
+<li><a href=#common-issues-and-troubleshooting>Common Issues and Troubleshooting</a></li>
+<li><a href=#deployment-to-recamera>Deployment to reCamera</a></li>
+<li><a href=#frequently-asked-questions>Frequently Asked Questions</a></li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=introduction>Introduction<a href=#introduction class=hash-link aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=why-model-conversion-is-necessary>Why Model Conversion is Necessary<a href=#why-model-conversion-is-necessary class=hash-link aria-label="Direct link to Why Model Conversion is Necessary" title="Direct link to Why Model Conversion is Necessary">​</a></h3>
+<p>The reCamera series devices are edge AI cameras powered by the Sophgo CV181x chip, which uses a specialized Tensor Processing Unit (TPU) for machine learning inference. Unlike general-purpose CPUs or GPUs, TPUs require models to be in a specific format optimized for their architecture.</p>
+<p><strong>Key Reasons for Conversion:</strong></p>
+<ol>
+<li><strong>Hardware Optimization</strong>: The CV181x chip uses INT8 quantization instead of FP32, reducing model size by ~75% and increasing inference speed by 4-8x</li>
+<li><strong>Memory Constraints</strong>: reCamera devices have limited RAM (256MB-512MB), requiring compressed models</li>
+<li><strong>Power Efficiency</strong>: TPU-optimized models consume significantly less power than CPU/GPU alternatives</li>
+<li><strong>Real-time Performance</strong>: Edge devices need sub-100ms inference times for practical applications</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=about-recamera-hardware>About reCamera Hardware<a href=#about-recamera-hardware class=hash-link aria-label="Direct link to About reCamera Hardware" title="Direct link to About reCamera Hardware">​</a></h3>
+<p>The reCamera family includes several variants, all built around the Sophgo CV181x SoC:</p>
+<ul>
+<li><strong>reCamera Default</strong>: Basic model with 2MP sensor, USB-C connectivity</li>
+<li><strong>reCamera Microscope</strong>: Specialized for close-up imaging with interchangeable lenses</li>
+<li><strong>reCamera HD POE</strong>: Higher resolution with Power-over-Ethernet support</li>
+<li><strong>reCamera Gimbal</strong>: Motorized gimbal with object tracking capabilities</li>
+</ul>
+<p><strong>Technical Specifications:</strong></p>
+<ul>
+<li><strong>Processor</strong>: Sophgo CV181x (RISC-V + TPU)</li>
+<li><strong>AI Performance</strong>: 0.5 TOPS INT8</li>
+<li><strong>Memory</strong>: 256MB DDR3</li>
+<li><strong>Storage</strong>: 16MB SPI Flash + microSD</li>
+<li><strong>Supported Formats</strong>: CVI models (Sophgo's proprietary format)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=the-conversion-challenge>The Conversion Challenge<a href=#the-conversion-challenge class=hash-link aria-label="Direct link to The Conversion Challenge" title="Direct link to The Conversion Challenge">​</a></h3>
+<p>YOLO11n models are typically trained in PyTorch and exported to ONNX format. However, the reCamera's CV181x chip cannot directly run ONNX models. The conversion process involves:</p>
+<ol>
+<li><strong>Model Architecture Translation</strong>: Converting ONNX to MLIR (Multi-Level Intermediate Representation)</li>
+<li><strong>Quantization</strong>: Converting FP32 weights to INT8 while maintaining accuracy</li>
+<li><strong>Hardware Optimization</strong>: Adapting layer operations for TPU acceleration</li>
+<li><strong>Format Conversion</strong>: Creating the final CVI model format</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=understanding-the-hardware-constraints>Understanding the Hardware Constraints<a href=#understanding-the-hardware-constraints class=hash-link aria-label="Direct link to Understanding the Hardware Constraints" title="Direct link to Understanding the Hardware Constraints">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=memory-limitations>Memory Limitations<a href=#memory-limitations class=hash-link aria-label="Direct link to Memory Limitations" title="Direct link to Memory Limitations">​</a></h3>
+<ul>
+<li><strong>Model Size Limit</strong>: Typically 8-16MB for practical deployment</li>
+<li><strong>Input Resolution</strong>: Usually 640x640 for YOLO11n to balance accuracy and performance</li>
+<li><strong>Batch Size</strong>: Limited to 1 due to memory constraints</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=processing-constraints>Processing Constraints<a href=#processing-constraints class=hash-link aria-label="Direct link to Processing Constraints" title="Direct link to Processing Constraints">​</a></h3>
+<ul>
+<li><strong>Supported Operations</strong>: Not all ONNX operations have TPU equivalents</li>
+<li><strong>Precision Loss</strong>: INT8 quantization may reduce accuracy by 1-3%</li>
+<li><strong>Inference Speed</strong>: Target is 10-30 FPS depending on model complexity</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=why-standard-ml-frameworks-dont-work>Why Standard ML Frameworks Don't Work<a href=#why-standard-ml-frameworks-dont-work class=hash-link aria-label="Direct link to Why Standard ML Frameworks Don't Work" title="Direct link to Why Standard ML Frameworks Don't Work">​</a></h3>
+<ul>
+<li><strong>TensorFlow/PyTorch</strong>: Designed for x86/ARM CPUs and NVIDIA GPUs</li>
+<li><strong>ONNX Runtime</strong>: Lacks CV181x backend support</li>
+<li><strong>TensorRT</strong>: NVIDIA-specific, incompatible with Sophgo hardware</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=prerequisites>Prerequisites<a href=#prerequisites class=hash-link aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=required-knowledge>Required Knowledge<a href=#required-knowledge class=hash-link aria-label="Direct link to Required Knowledge" title="Direct link to Required Knowledge">​</a></h3>
+<ul>
+<li>Basic Linux command line operations</li>
+<li>Understanding of Docker containers</li>
+<li>Familiarity with YOLO model architecture</li>
+<li>Basic networking concepts for cloud deployment</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=required-software>Required Software<a href=#required-software class=hash-link aria-label="Direct link to Required Software" title="Direct link to Required Software">​</a></h3>
+<ul>
+<li>Docker Desktop (for local development)</li>
+<li>SSH client (Terminal on macOS, PuTTY on Windows)</li>
+<li>Web browser for cloud provider management</li>
+<li>Text editor for configuration files</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=required-files>Required Files<a href=#required-files class=hash-link aria-label="Direct link to Required Files" title="Direct link to Required Files">​</a></h3>
+<ul>
+<li>Trained YOLO11n model in ONNX format</li>
+<li>100 calibration images (representative of your dataset)</li>
+<li>1 test image for validation</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=cloud-provider-setup-options>Cloud Provider Setup Options<a href=#cloud-provider-setup-options class=hash-link aria-label="Direct link to Cloud Provider Setup Options" title="Direct link to Cloud Provider Setup Options">​</a></h2>
+<p>Since the conversion process requires Linux and specific toolchains, cloud providers offer the most reliable environment. Here are setup guides for major providers:</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=option-1-digitalocean-recommended-for-beginners>Option 1: DigitalOcean (Recommended for Beginners)<a href=#option-1-digitalocean-recommended-for-beginners class=hash-link aria-label="Direct link to Option 1: DigitalOcean (Recommended for Beginners)" title="Direct link to Option 1: DigitalOcean (Recommended for Beginners)">​</a></h3>
+<p><strong>Advantages</strong>: Simple interface, predictable pricing, good documentation</p>
+<p><strong>Setup Steps:</strong></p>
+<ol>
+<li>
+<p>Create DigitalOcean account at <a href=https://www.digitalocean.com target=_blank rel="noopener noreferrer">digitalocean.com</a></p>
+</li>
+<li>
+<p>Create new Droplet with these specifications:</p>
+<ul>
+<li><strong>Image</strong>: Ubuntu 22.04 LTS</li>
+<li><strong>Plan</strong>: Basic, 4GB RAM, 2 vCPUs ($24/month, can delete after use)</li>
+<li><strong>Region</strong>: Choose closest to your location</li>
+<li><strong>Authentication</strong>: SSH Key (recommended) or Password</li>
+</ul>
+</li>
+<li>
+<p><strong>SSH Connection:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><span class="token plain"> root@your_droplet_ip</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p><strong>Install Dependencies:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> update </span><span class="token operator">&&</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> upgrade </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> docker.io </span><span class="token function" style="color:rgb(80, 250, 123)">git</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">wget</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">systemctl start </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">systemctl </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">enable</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<p><strong>Estimated Cost</strong>: $0.50-2.00 for conversion process (if deleted immediately after)</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=option-2-aws-ec2>Option 2: AWS EC2<a href=#option-2-aws-ec2 class=hash-link aria-label="Direct link to Option 2: AWS EC2" title="Direct link to Option 2: AWS EC2">​</a></h3>
+<p><strong>Advantages</strong>: Most comprehensive cloud platform, free tier available</p>
+<p><strong>Setup Steps:</strong></p>
+<ol>
+<li>
+<p>Create AWS account at <a href=https://aws.amazon.com target=_blank rel="noopener noreferrer">aws.amazon.com</a></p>
+</li>
+<li>
+<p>Launch EC2 instance:</p>
+<ul>
+<li><strong>AMI</strong>: Ubuntu Server 22.04 LTS</li>
+<li><strong>Instance Type</strong>: t3.medium (2 vCPU, 4GB RAM)</li>
+<li><strong>Security Group</strong>: Allow SSH (port 22) from your IP</li>
+</ul>
+</li>
+<li>
+<p><strong>SSH Connection:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-i</span><span class="token plain"> your-key.pem ubuntu@your-instance-ip</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p><strong>Install Dependencies:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> update </span><span class="token operator">&&</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> upgrade </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> docker.io </span><span class="token function" style="color:rgb(80, 250, 123)">git</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">wget</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> systemctl start </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> systemctl </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">enable</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">usermod</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-aG</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> ubuntu</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<p><strong>Estimated Cost</strong>: $0.10-0.50 for conversion process (t3.medium pricing)</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=option-3-google-cloud-platform>Option 3: Google Cloud Platform<a href=#option-3-google-cloud-platform class=hash-link aria-label="Direct link to Option 3: Google Cloud Platform" title="Direct link to Option 3: Google Cloud Platform">​</a></h3>
+<p><strong>Advantages</strong>: $300 free credits for new users, excellent performance</p>
+<p><strong>Setup Steps:</strong></p>
+<ol>
+<li>
+<p>Create GCP account at <a href=https://cloud.google.com target=_blank rel="noopener noreferrer">cloud.google.com</a></p>
+</li>
+<li>
+<p>Create Compute Engine instance:</p>
+<ul>
+<li><strong>Machine Type</strong>: e2-standard-2 (2 vCPU, 8GB RAM)</li>
+<li><strong>Boot Disk</strong>: Ubuntu 22.04 LTS, 20GB</li>
+<li><strong>Firewall</strong>: Allow HTTP/HTTPS traffic</li>
+</ul>
+</li>
+<li>
+<p><strong>SSH via Browser</strong> (built-in terminal) or use gcloud CLI</p>
+</li>
+<li>
+<p><strong>Install Dependencies:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> update </span><span class="token operator">&&</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> upgrade </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> docker.io </span><span class="token function" style="color:rgb(80, 250, 123)">git</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">wget</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> systemctl start </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> systemctl </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">enable</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">usermod</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-aG</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> </span><span class="token environment constant" style="color:rgb(189, 147, 249)">$USER</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<p><strong>Estimated Cost</strong>: Free with credits, otherwise ~$0.20-0.60 for conversion</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=option-4-microsoft-azure>Option 4: Microsoft Azure<a href=#option-4-microsoft-azure class=hash-link aria-label="Direct link to Option 4: Microsoft Azure" title="Direct link to Option 4: Microsoft Azure">​</a></h3>
+<p><strong>Advantages</strong>: Good integration with Windows ecosystem, student discounts</p>
+<p><strong>Setup Steps:</strong></p>
+<ol>
+<li>
+<p>Create Azure account at <a href=https://azure.microsoft.com target=_blank rel="noopener noreferrer">azure.microsoft.com</a></p>
+</li>
+<li>
+<p>Create Virtual Machine:</p>
+<ul>
+<li><strong>Image</strong>: Ubuntu Server 22.04 LTS</li>
+<li><strong>Size</strong>: Standard_B2s (2 vCPUs, 4GB RAM)</li>
+<li><strong>Authentication</strong>: SSH public key</li>
+</ul>
+</li>
+<li>
+<p><strong>SSH Connection:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><span class="token plain"> azureuser@your-vm-ip</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p><strong>Install Dependencies:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> update </span><span class="token operator">&&</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> upgrade </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> docker.io </span><span class="token function" style="color:rgb(80, 250, 123)">git</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">wget</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> systemctl start </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> systemctl </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">enable</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">usermod</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-aG</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> azureuser</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<p><strong>Estimated Cost</strong>: ~$0.30-0.80 for conversion process</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=option-5-alibaba-cloud>Option 5: Alibaba Cloud<a href=#option-5-alibaba-cloud class=hash-link aria-label="Direct link to Option 5: Alibaba Cloud" title="Direct link to Option 5: Alibaba Cloud">​</a></h3>
+<p><strong>Advantages</strong>: Strong presence in Asia, competitive pricing</p>
+<p><strong>Setup Steps:</strong></p>
+<ol>
+<li>
+<p>Create account at <a href=https://www.alibabacloud.com target=_blank rel="noopener noreferrer">alibabacloud.com</a></p>
+</li>
+<li>
+<p>Create ECS instance:</p>
+<ul>
+<li><strong>Image</strong>: Ubuntu 22.04 64-bit</li>
+<li><strong>Instance Type</strong>: ecs.t6-c1m2.large (2 vCPU, 4GB RAM)</li>
+<li><strong>Security Group</strong>: Allow SSH (22/22)</li>
+</ul>
+</li>
+<li>
+<p><strong>SSH Connection:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><span class="token plain"> root@your-ecs-ip</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p><strong>Install Dependencies:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> update </span><span class="token operator">&&</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> upgrade </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> docker.io </span><span class="token function" style="color:rgb(80, 250, 123)">git</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">wget</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">systemctl start </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">systemctl </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">enable</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<p><strong>Estimated Cost</strong>: ~$0.20-0.50 for conversion process</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=option-6-tencent-cloud>Option 6: Tencent Cloud<a href=#option-6-tencent-cloud class=hash-link aria-label="Direct link to Option 6: Tencent Cloud" title="Direct link to Option 6: Tencent Cloud">​</a></h3>
+<p><strong>Advantages</strong>: Good for users in China, affordable pricing</p>
+<p><strong>Setup Steps:</strong></p>
+<ol>
+<li>
+<p>Create account at <a href=https://intl.cloud.tencent.com target=_blank rel="noopener noreferrer">intl.cloud.tencent.com</a></p>
+</li>
+<li>
+<p>Create CVM instance:</p>
+<ul>
+<li><strong>Image</strong>: Ubuntu Server 22.04 LTS 64-bit</li>
+<li><strong>Model</strong>: S5.MEDIUM4 (2 vCPU, 4GB RAM)</li>
+<li><strong>Security Group</strong>: Allow SSH (port 22)</li>
+</ul>
+</li>
+<li>
+<p><strong>SSH Connection:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><span class="token plain"> ubuntu@your-cvm-ip</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p><strong>Install Dependencies:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> update </span><span class="token operator">&&</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> upgrade </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> docker.io </span><span class="token function" style="color:rgb(80, 250, 123)">git</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">wget</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> systemctl start </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> systemctl </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">enable</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">usermod</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-aG</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> ubuntu</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<p><strong>Estimated Cost</strong>: ~$0.15-0.40 for conversion process</p>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=step-by-step-conversion-process>Step-by-Step Conversion Process<a href=#step-by-step-conversion-process class=hash-link aria-label="Direct link to Step-by-Step Conversion Process" title="Direct link to Step-by-Step Conversion Process">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-1-prepare-your-environment>Step 1: Prepare Your Environment<a href=#step-1-prepare-your-environment class=hash-link aria-label="Direct link to Step 1: Prepare Your Environment" title="Direct link to Step 1: Prepare Your Environment">​</a></h3>
+<ol>
+<li>
+<p><strong>Connect to your cloud instance via SSH</strong></p>
+</li>
+<li>
+<p><strong>Set up TPU-MLIR environment:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># Pull the official TPU-MLIR Docker image</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> pull sophgo/tpuc_dev:v3.1</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Create working directory</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">mkdir</span><span class="token plain"> ~/yolo_conversion </span><span class="token operator">&&</span><span class="token plain"> </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> ~/yolo_conversion</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Start Docker container</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> run </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--privileged</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--name</span><span class="token plain"> tpu_converter </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-v</span><span class="token plain"> </span><span class="token environment constant" style="color:rgb(189, 147, 249)">$PWD</span><span class="token plain">:/workspace </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-it</span><span class="token plain"> sophgo/tpuc_dev:v3.1</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p><strong>Install TPU-MLIR tools inside container:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">pip </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> tpu_mlir</span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain">all</span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token operator">==</span><span class="token number">1.7</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Clone and build TPU-MLIR</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">git</span><span class="token plain"> clone </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-b</span><span class="token plain"> v1.7 </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--depth</span><span class="token plain"> </span><span class="token number">1</span><span class="token plain"> https://github.com/sophgo/tpu-mlir.git</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> tpu-mlir</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">source</span><span class="token plain"> ./envsetup.sh</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">./build.sh</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-2-upload-your-model-files>Step 2: Upload Your Model Files<a href=#step-2-upload-your-model-files class=hash-link aria-label="Direct link to Step 2: Upload Your Model Files" title="Direct link to Step 2: Upload Your Model Files">​</a></h3>
+<p><strong>From your local machine, upload files to cloud instance:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># Upload ONNX model</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">scp</span><span class="token plain"> your_model.onnx user@your-cloud-ip:~/yolo_conversion/</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Upload calibration images (create zip first)</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">zip</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-r</span><span class="token plain"> calibration_images.zip /path/to/calibration/images/</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">scp</span><span class="token plain"> calibration_images.zip user@your-cloud-ip:~/yolo_conversion/</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Upload test image</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">scp</span><span class="token plain"> test_image.jpg user@your-cloud-ip:~/yolo_conversion/</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-3-prepare-directory-structure>Step 3: Prepare Directory Structure<a href=#step-3-prepare-directory-structure class=hash-link aria-label="Direct link to Step 3: Prepare Directory Structure" title="Direct link to Step 3: Prepare Directory Structure">​</a></h3>
+<p><strong>Inside your cloud instance:</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># Create required directory structure</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">mkdir</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-p</span><span class="token plain"> model_yolo11n/</span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain">COCO2017,image,Workspace</span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Extract and organize files</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">unzip</span><span class="token plain"> calibration_images.zip</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">mv</span><span class="token plain"> calibration_images/* model_yolo11n/COCO2017/</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">mv</span><span class="token plain"> test_image.jpg model_yolo11n/image/test.jpg</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">mv</span><span class="token plain"> your_model.onnx model_yolo11n/Workspace/yolo11n.onnx</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Rename calibration images to expected format</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> model_yolo11n/COCO2017/</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">count</span><span class="token operator">=</span><span class="token number">1</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">for</span><span class="token plain"> </span><span class="token for-or-select variable" style="color:rgb(189, 147, 249);font-style:italic">file</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">in</span><span class="token plain"> *.jpg *.png *.jpeg</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">do</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">if</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-f</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"</span><span class="token string variable" style="color:rgb(189, 147, 249);font-style:italic">$file</span><span class="token string" style="color:rgb(255, 121, 198)">"</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">then</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        </span><span class="token function" style="color:rgb(80, 250, 123)">mv</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"</span><span class="token string variable" style="color:rgb(189, 147, 249);font-style:italic">$file</span><span class="token string" style="color:rgb(255, 121, 198)">"</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"Calibration</span><span class="token string variable" style="color:rgb(189, 147, 249);font-style:italic">${count}</span><span class="token string" style="color:rgb(255, 121, 198)">.jpg"</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        </span><span class="token variable punctuation" style="color:rgb(248, 248, 242);font-style:italic">((</span><span class="token variable" style="color:rgb(189, 147, 249);font-style:italic">count</span><span class="token variable operator" style="color:rgb(189, 147, 249);font-style:italic">++</span><span class="token variable punctuation" style="color:rgb(248, 248, 242);font-style:italic">))</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">if</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"> </span><span class="token variable" style="color:rgb(189, 147, 249);font-style:italic">$count</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-gt</span><span class="token plain"> </span><span class="token number">100</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">then</span><span class="token plain"> </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">break</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">fi</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">fi</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">done</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">..</span><span class="token plain">/</span><span class="token punctuation" style="color:rgb(248, 248, 242)">..</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-4-enter-docker-container-and-begin-conversion>Step 4: Enter Docker Container and Begin Conversion<a href=#step-4-enter-docker-container-and-begin-conversion class=hash-link aria-label="Direct link to Step 4: Enter Docker Container and Begin Conversion" title="Direct link to Step 4: Enter Docker Container and Begin Conversion">​</a></h3>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># Copy model folder into Docker container</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">cp</span><span class="token plain"> model_yolo11n tpu_converter:/workspace/tpu-mlir/</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Enter Docker container</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">exec</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-it</span><span class="token plain"> tpu_converter /bin/bash</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Navigate to workspace</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> /workspace/tpu-mlir/model_yolo11n/Workspace</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-5-model-conversion-pipeline>Step 5: Model Conversion Pipeline<a href=#step-5-model-conversion-pipeline class=hash-link aria-label="Direct link to Step 5: Model Conversion Pipeline" title="Direct link to Step 5: Model Conversion Pipeline">​</a></h3>
+<p><strong>5.1: ONNX Version Downgrade</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">python /workspace/tpu-mlir/downgrade_onnx.py yolo11n.onnx yolo11n_v8.onnx</span><br></span></code></pre></div></div>
+<p><strong>5.2: Convert ONNX to MLIR</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">model_transform </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--model_name</span><span class="token plain"> yolo11n </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--model_def</span><span class="token plain"> yolo11n_v8.onnx </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--input_shapes</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"[[1,3,640,640]]"</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--mean</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"0.0,0.0,0.0"</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--scale</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"0.0039216,0.0039216,0.0039216"</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--keep_aspect_ratio</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--pixel_format</span><span class="token plain"> rgb </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--output_names</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"/model.23/cv2.0/cv2.0.2/Conv_output_0,/model.23/cv3.0/cv3.0.2/Conv_output_0,/model.23/cv2.1/cv2.1.2/Conv_output_0,/model.23/cv3.1/cv3.1.2/Conv_output_0,/model.23/cv2.2/cv2.2.2/Conv_output_0,/model.23/cv3.2/cv3.2.2/Conv_output_0"</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--test_input</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">..</span><span class="token plain">/image/test.jpg </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--test_result</span><span class="token plain"> yolo11n_top_outputs.npz </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--mlir</span><span class="token plain"> yolo11n.mlir</span><br></span></code></pre></div></div>
+<p><strong>Parameter Explanations:</strong></p>
+<ul>
+<li>
+<p><strong><code>--model_name</code></strong>: Identifier for your model in the conversion pipeline</p>
+<ul>
+<li><em>Purpose</em>: Creates consistent naming throughout the process</li>
+<li><em>Can be changed</em>: Yes, use descriptive names like "traffic_detection" or "person_counter"</li>
+<li><em>Effect</em>: Only affects internal naming, no impact on performance</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--model_def</code></strong>: Path to your ONNX model file</p>
+<ul>
+<li><em>Purpose</em>: Specifies which model to convert</li>
+<li><em>Can be changed</em>: Yes, must match your actual ONNX file name</li>
+<li><em>Effect</em>: Different models will produce different results</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--input_shapes</code></strong>: Defines input tensor dimensions <code>[batch, channels, height, width]</code></p>
+<ul>
+<li><em>Purpose</em>: Tells the converter the expected input image format</li>
+<li><em>Standard value</em>: <code>[[1,3,640,640]]</code> for YOLO11n</li>
+<li><em>Can be changed</em>: ⚠️ <strong>Caution</strong> - Must match your training resolution</li>
+<li><em>Effects of changes</em>:<!-- -->
+<ul>
+<li>Smaller (e.g., <code>320x320</code>): Faster inference, lower accuracy</li>
+<li>Larger (e.g., <code>1280x1280</code>): Higher accuracy, much slower, may exceed memory limits</li>
+<li>Different aspect ratio: Will distort images, poor results</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--mean</code></strong>: Pixel normalization mean values for RGB channels</p>
+<ul>
+<li><em>Purpose</em>: Centers pixel values around zero (standard preprocessing)</li>
+<li><em>Standard value</em>: <code>"0.0,0.0,0.0"</code> (no mean subtraction)</li>
+<li><em>Can be changed</em>: Only if your model was trained with different normalization</li>
+<li><em>Common alternatives</em>:<!-- -->
+<ul>
+<li>ImageNet: <code>"123.675,116.28,103.53"</code> (if model uses ImageNet preprocessing)</li>
+<li>Custom: Match your training preprocessing exactly</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--scale</code></strong>: Pixel normalization scale factors</p>
+<ul>
+<li><em>Purpose</em>: Scales pixel values from 0-255 range to 0-1 range</li>
+<li><em>Standard value</em>: <code>"0.0039216,0.0039216,0.0039216"</code> (equivalent to 1/255)</li>
+<li><em>Can be changed</em>: Only if your model expects different input range</li>
+<li><em>Effects of changes</em>:<!-- -->
+<ul>
+<li>Wrong scale values will cause complete model failure</li>
+<li>Must match exactly what your model was trained with</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--keep_aspect_ratio</code></strong>: Maintains image proportions during resize</p>
+<ul>
+<li><em>Purpose</em>: Prevents image distortion by padding instead of stretching</li>
+<li><em>Can be changed</em>: Yes, use <code>--no_keep_aspect_ratio</code> to disable</li>
+<li><em>Effects</em>:<!-- -->
+<ul>
+<li>Enabled (default): Better accuracy, black padding on images</li>
+<li>Disabled: Slightly faster, but images may be distorted</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--pixel_format</code></strong>: Color channel ordering</p>
+<ul>
+<li><em>Purpose</em>: Specifies whether input uses RGB or BGR color order</li>
+<li><em>Standard value</em>: <code>rgb</code> for most modern models</li>
+<li><em>Can be changed</em>: Yes, to <code>bgr</code> if your model expects it</li>
+<li><em>Effects of wrong setting</em>: Colors will be swapped (red appears blue, etc.)</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--output_names</code></strong>: Specifies which model layers to use as outputs</p>
+<ul>
+<li><em>Purpose</em>: Tells converter which layers contain detection results</li>
+<li><em>Standard for YOLO11n</em>: The 6 output layers shown (3 scales × 2 heads each)</li>
+<li><em>Can be changed</em>: ⚠️ <strong>Advanced users only</strong> - requires deep model knowledge</li>
+<li><em>Effects</em>: Wrong outputs will prevent detection from working</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--test_input</code></strong>: Path to validation image</p>
+<ul>
+<li><em>Purpose</em>: Tests conversion accuracy by comparing before/after results</li>
+<li><em>Can be changed</em>: Yes, use any representative image from your dataset</li>
+<li><em>Recommended</em>: Use image similar to your deployment scenario</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--test_result</code></strong>: Output file for validation data</p>
+<ul>
+<li><em>Purpose</em>: Stores reference results for later comparison</li>
+<li><em>Can be changed</em>: Yes, any filename ending in <code>.npz</code></li>
+<li><em>Effect</em>: Only affects file naming</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--mlir</code></strong>: Output MLIR file name</p>
+<ul>
+<li><em>Purpose</em>: Intermediate representation for next conversion step</li>
+<li><em>Can be changed</em>: Yes, but keep <code>.mlir</code> extension</li>
+<li><em>Effect</em>: Only affects file naming</li>
+</ul>
+</li>
+</ul>
+<p><strong>5.3: Generate Calibration Table</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">run_calibration </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">yolo11n.mlir </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--dataset</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">..</span><span class="token plain">/COCO2017 </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--input_num</span><span class="token plain"> </span><span class="token number">100</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-o</span><span class="token plain"> yolo11n_calib_table</span><br></span></code></pre></div></div>
+<p><strong>Parameter Explanations:</strong></p>
+<ul>
+<li>
+<p><strong><code>yolo11n.mlir</code></strong>: Input MLIR model from previous step</p>
+<ul>
+<li><em>Purpose</em>: The model file that needs calibration data</li>
+<li><em>Can be changed</em>: Must match the output filename from step 5.2</li>
+<li><em>Effect</em>: Different models will produce different calibration tables</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--dataset</code></strong>: Path to calibration images directory</p>
+<ul>
+<li><em>Purpose</em>: Provides representative images for analyzing activation ranges</li>
+<li><em>Can be changed</em>: Yes, but must contain images similar to deployment scenario</li>
+<li><em>Requirements</em>: Images should be <code>.jpg</code>, <code>.png</code>, or <code>.bmp</code> format</li>
+<li><em>Quality impact</em>: More diverse, representative images = better calibration</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--input_num</code></strong>: Number of calibration images to use</p>
+<ul>
+<li><em>Purpose</em>: Determines how many images are processed for statistical analysis</li>
+<li><em>Standard value</em>: <code>100</code> (good balance of accuracy vs. processing time)</li>
+<li><em>Can be changed</em>: Yes, within practical limits</li>
+<li><em>Effects of changes</em>:<!-- -->
+<ul>
+<li><strong>Fewer images (25-50)</strong>: Faster calibration, potentially less accurate quantization</li>
+<li><strong>More images (200-500)</strong>: Better calibration accuracy, much longer processing time</li>
+<li><strong>Too few (&lt;10)</strong>: Poor quantization, significant accuracy loss</li>
+<li><strong>Too many (>1000)</strong>: Diminishing returns, very long processing time</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>-o</code> (output file)</strong>: Name for the calibration table file</p>
+<ul>
+<li><em>Purpose</em>: Stores statistical data about layer activations for quantization</li>
+<li><em>Can be changed</em>: Yes, any filename (no extension needed)</li>
+<li><em>Effect</em>: Only affects filename, content is the same</li>
+</ul>
+</li>
+</ul>
+<p><strong>What Happens During Calibration:</strong></p>
+<ol>
+<li><strong>Statistical Analysis</strong>: Each calibration image is processed through the model</li>
+<li><strong>Activation Mapping</strong>: The tool records the range of values each layer produces</li>
+<li><strong>Quantization Planning</strong>: Determines how to map FP32 values to INT8 efficiently</li>
+<li><strong>Accuracy Preservation</strong>: Finds optimal scaling factors to minimize precision loss</li>
+</ol>
+<p><strong>Expected Output</strong>: This process will take 5-15 minutes and should show progress like:</p>
+<div class="language-text codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-text codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">input_num = 100, ref = 100</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">real input_num = 100</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">activation_collect_and_calc_th for op: /model.23/cv3.2/cv3.2.2/Conv_output_0_Conv</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">[Progress bar showing completion]</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">auto tune end, run time: XXX seconds</span><br></span></code></pre></div></div>
+<p><strong>5.4: Compile Final INT8 Model</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">model_deploy </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--mlir</span><span class="token plain"> yolo11n.mlir </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--quantize</span><span class="token plain"> INT8 </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--quant_input</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--processor</span><span class="token plain"> cv181x </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--calibration_table</span><span class="token plain"> yolo11n_calib_table </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--test_input</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">..</span><span class="token plain">/image/test.jpg </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--test_reference</span><span class="token plain"> yolo11n_top_outputs.npz </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--customization_format</span><span class="token plain"> RGB_PACKED </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--fuse_preprocess</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--aligned_input</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--model</span><span class="token plain"> yolo11n_sym_int8.cvimodel</span><br></span></code></pre></div></div>
+<p><strong>Parameter Explanations:</strong></p>
+<ul>
+<li>
+<p><strong><code>--mlir</code></strong>: Input MLIR model file</p>
+<ul>
+<li><em>Purpose</em>: The model representation to be compiled for TPU</li>
+<li><em>Can be changed</em>: Must match output from step 5.2</li>
+<li><em>Effect</em>: Different MLIR files will produce different final models</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--quantize</code></strong>: Quantization precision level</p>
+<ul>
+<li><em>Purpose</em>: Determines numerical precision for model weights and activations</li>
+<li><em>Standard value</em>: <code>INT8</code> for reCamera (required for CV181x TPU)</li>
+<li><em>Can be changed</em>: Limited options on CV181x</li>
+<li><em>Available options</em>:<!-- -->
+<ul>
+<li><code>INT8</code>: Required for reCamera, 4x smaller, 4-8x faster</li>
+<li><code>F16</code>: Higher precision, larger size, may not fit in memory</li>
+<li><code>F32</code>: Original precision, too large for reCamera deployment</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--quant_input</code></strong>: Quantizes input preprocessing</p>
+<ul>
+<li><em>Purpose</em>: Moves input scaling/normalization to TPU for efficiency</li>
+<li><em>Can be changed</em>: Yes, omit this flag to keep input processing on CPU</li>
+<li><em>Effects</em>:<!-- -->
+<ul>
+<li><strong>Enabled</strong> (recommended): Faster inference, better TPU utilization</li>
+<li><strong>Disabled</strong>: Slightly slower, but more flexible input formats</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--processor</code></strong>: Target hardware specification</p>
+<ul>
+<li><em>Purpose</em>: Optimizes code generation for specific chip architecture</li>
+<li><em>Standard value</em>: <code>cv181x</code> for all reCamera models</li>
+<li><em>Can be changed</em>: ⚠️ <strong>Never change</strong> - other values won't work on reCamera</li>
+<li><em>Effect</em>: Wrong processor setting will cause deployment failure</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--calibration_table</code></strong>: Quantization reference data</p>
+<ul>
+<li><em>Purpose</em>: Provides statistical data for optimal INT8 conversion</li>
+<li><em>Can be changed</em>: Must match output filename from step 5.3</li>
+<li><em>Effect</em>: Different calibration data affects model accuracy</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--test_input</code></strong>: Validation image for accuracy testing</p>
+<ul>
+<li><em>Purpose</em>: Verifies model accuracy after quantization</li>
+<li><em>Can be changed</em>: Yes, should represent typical use case</li>
+<li><em>Recommendation</em>: Use same image as in step 5.2 for consistency</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--test_reference</code></strong>: Reference output for comparison</p>
+<ul>
+<li><em>Purpose</em>: Compares quantized model output to original FP32 results</li>
+<li><em>Can be changed</em>: Must match output filename from step 5.2</li>
+<li><em>Effect</em>: Used only for validation, doesn't affect final model</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--customization_format</code></strong>: Input data layout optimization</p>
+<ul>
+<li><em>Purpose</em>: Optimizes memory layout for TPU processing</li>
+<li><em>Standard value</em>: <code>RGB_PACKED</code> for image data</li>
+<li><em>Can be changed</em>: Advanced users only</li>
+<li><em>Effects</em>:<!-- -->
+<ul>
+<li><code>RGB_PACKED</code>: Optimized for RGB images (recommended)</li>
+<li><code>NCHW</code>: Standard tensor format, may be slower</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--fuse_preprocess</code></strong>: Integrates preprocessing into model</p>
+<ul>
+<li><em>Purpose</em>: Combines image resizing/normalization with inference</li>
+<li><em>Can be changed</em>: Yes, omit flag to handle preprocessing separately</li>
+<li><em>Effects</em>:<!-- -->
+<ul>
+<li><strong>Enabled</strong> (recommended): Single-step deployment, better performance</li>
+<li><strong>Disabled</strong>: More flexibility, but requires external preprocessing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--aligned_input</code></strong>: Memory alignment optimization</p>
+<ul>
+<li><em>Purpose</em>: Ensures optimal memory access patterns for TPU</li>
+<li><em>Can be changed</em>: Yes, but recommended to keep for performance</li>
+<li><em>Effects</em>:<!-- -->
+<ul>
+<li><strong>Enabled</strong>: Better memory bandwidth utilization</li>
+<li><strong>Disabled</strong>: May be slightly slower</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--model</code></strong>: Output filename for final converted model</p>
+<ul>
+<li><em>Purpose</em>: Creates the <code>.cvimodel</code> file for reCamera deployment</li>
+<li><em>Can be changed</em>: Yes, use descriptive names like <code>person_detection.cvimodel</code></li>
+<li><em>Requirement</em>: Must end with <code>.cvimodel</code> extension</li>
+<li><em>Effect</em>: Only affects filename</li>
+</ul>
+</li>
+</ul>
+<p><strong>What Happens During Compilation:</strong></p>
+<ol>
+<li><strong>Layer Conversion</strong>: Each neural network layer is converted to TPU instructions</li>
+<li><strong>Memory Optimization</strong>: Model weights are arranged for efficient TPU access</li>
+<li><strong>Quantization Application</strong>: FP32 weights are converted to INT8 using calibration data</li>
+<li><strong>Hardware Mapping</strong>: Operations are mapped to specific TPU functional units</li>
+<li><strong>Validation</strong>: Final model is tested against reference outputs</li>
+</ol>
+<p><strong>Expected Output</strong>: The conversion should complete with validation results showing similarity scores >99%:</p>
+<div class="language-text codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-text codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">npz compare PASSED</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">230 compared</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">230 passed</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">min_similarity = (0.9999997615814209, 0.9999984392787142, 116.13544464111328)</span><br></span></code></pre></div></div>
+<p><strong>Performance Expectations After Conversion:</strong></p>
+<ul>
+<li><strong>Model Size</strong>: 3-8MB (compared to 20-40MB original ONNX)</li>
+<li><strong>Inference Speed</strong>: 15-30 FPS on reCamera</li>
+<li><strong>Accuracy</strong>: 97-99% of original model performance</li>
+<li><strong>Memory Usage</strong>: ~10-20MB RAM during inference</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-6-download-converted-model>Step 6: Download Converted Model<a href=#step-6-download-converted-model class=hash-link aria-label="Direct link to Step 6: Download Converted Model" title="Direct link to Step 6: Download Converted Model">​</a></h3>
+<p><strong>6.1: Exit Docker and copy file to host</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># Exit Docker container</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">exit</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Copy converted model from container to host</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">cp</span><span class="token plain"> tpu_converter:/workspace/tpu-mlir/model_yolo11n/Workspace/yolo11n_sym_int8.cvimodel ./</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Verify file exists and check size (should be 2-10MB)</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">ls</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-lh</span><span class="token plain"> yolo11n_sym_int8.cvimodel</span><br></span></code></pre></div></div>
+<p><strong>6.2: Download to your local machine</strong></p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># From your local machine</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">scp</span><span class="token plain"> user@your-cloud-ip:~/yolo_conversion/yolo11n_sym_int8.cvimodel ~/Downloads/</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-7-clean-up-cloud-resources>Step 7: Clean Up Cloud Resources<a href=#step-7-clean-up-cloud-resources class=hash-link aria-label="Direct link to Step 7: Clean Up Cloud Resources" title="Direct link to Step 7: Clean Up Cloud Resources">​</a></h3>
+<p><strong>Don't forget to terminate your cloud instance to avoid ongoing charges!</strong></p>
+<ul>
+<li><strong>DigitalOcean</strong>: Destroy Droplet from control panel</li>
+<li><strong>AWS</strong>: Terminate EC2 instance</li>
+<li><strong>GCP</strong>: Delete Compute Engine instance</li>
+<li><strong>Azure</strong>: Delete Virtual Machine</li>
+<li><strong>Alibaba/Tencent</strong>: Release ECS/CVM instance</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=common-issues-and-troubleshooting>Common Issues and Troubleshooting<a href=#common-issues-and-troubleshooting class=hash-link aria-label="Direct link to Common Issues and Troubleshooting" title="Direct link to Common Issues and Troubleshooting">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=issue-1-file-not-found-errors-during-conversion>Issue 1: "File not found" errors during conversion<a href=#issue-1-file-not-found-errors-during-conversion class=hash-link aria-label='Direct link to Issue 1: "File not found" errors during conversion' title='Direct link to Issue 1: "File not found" errors during conversion'>​</a></h3>
+<p><strong>Symptoms</strong>:</p>
+<div class="language-text codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-text codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">../image/test.jpg doesn't existed !!!</span><br></span></code></pre></div></div>
+<p><strong>Solution</strong>:</p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># Check if file exists and has correct extension</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">ls</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-la</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">..</span><span class="token plain">/image/</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># If file has .img extension, rename it</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">mv</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">..</span><span class="token plain">/image/test.img </span><span class="token punctuation" style="color:rgb(248, 248, 242)">..</span><span class="token plain">/image/test.jpg</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=issue-2-directory-not-empty-when-moving-files>Issue 2: "Directory not empty" when moving files<a href=#issue-2-directory-not-empty-when-moving-files class=hash-link aria-label='Direct link to Issue 2: "Directory not empty" when moving files' title='Direct link to Issue 2: "Directory not empty" when moving files'>​</a></h3>
+<p><strong>Symptoms</strong>:</p>
+<div class="language-text codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-text codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">mv: cannot move 'Download/model_yolo11n' to 'tpu-mlir/model_yolo11n': Directory not empty</span><br></span></code></pre></div></div>
+<p><strong>Solution</strong>:</p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># Remove existing directory and replace</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">rm</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-rf</span><span class="token plain"> tpu-mlir/model_yolo11n</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">mv</span><span class="token plain"> Download/model_yolo11n tpu-mlir/</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=issue-3-calibration-fails-with-there-is-no-inputs>Issue 3: Calibration fails with "There is no inputs"<a href=#issue-3-calibration-fails-with-there-is-no-inputs class=hash-link aria-label='Direct link to Issue 3: Calibration fails with "There is no inputs"' title='Direct link to Issue 3: Calibration fails with "There is no inputs"'>​</a></h3>
+<p><strong>Symptoms</strong>:</p>
+<div class="language-text codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-text codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">RuntimeError: There is no inputs</span><br></span></code></pre></div></div>
+<p><strong>Solution</strong>:</p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># Ensure calibration images are in correct format (.jpg, .png)</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">..</span><span class="token plain">/COCO2017/</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">for</span><span class="token plain"> </span><span class="token for-or-select variable" style="color:rgb(189, 147, 249);font-style:italic">file</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">in</span><span class="token plain"> *.img</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">do</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">mv</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"</span><span class="token string variable" style="color:rgb(189, 147, 249);font-style:italic">$file</span><span class="token string" style="color:rgb(255, 121, 198)">"</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"</span><span class="token string variable" style="color:rgb(189, 147, 249);font-style:italic">${file</span><span class="token string variable operator" style="color:rgb(189, 147, 249);font-style:italic">%</span><span class="token string variable" style="color:rgb(189, 147, 249);font-style:italic">.img}</span><span class="token string" style="color:rgb(255, 121, 198)">.jpg"</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">done</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=issue-4-docker-permission-errors>Issue 4: Docker permission errors<a href=#issue-4-docker-permission-errors class=hash-link aria-label="Direct link to Issue 4: Docker permission errors" title="Direct link to Issue 4: Docker permission errors">​</a></h3>
+<p><strong>Symptoms</strong>:</p>
+<div class="language-text codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-text codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">permission denied while trying to connect to the Docker daemon socket</span><br></span></code></pre></div></div>
+<p><strong>Solution</strong>:</p>
+<div class="language-bash codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-bash codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token comment" style="color:rgb(98, 114, 164)"># Add user to docker group</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">usermod</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-aG</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><span class="token plain"> </span><span class="token environment constant" style="color:rgb(189, 147, 249)">$USER</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># Log out and log back in, or run:</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">newgrp </span><span class="token function" style="color:rgb(80, 250, 123)">docker</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=issue-5-out-of-memory-errors>Issue 5: Out of memory errors<a href=#issue-5-out-of-memory-errors class=hash-link aria-label="Direct link to Issue 5: Out of memory errors" title="Direct link to Issue 5: Out of memory errors">​</a></h3>
+<p><strong>Symptoms</strong>:</p>
+<div class="language-text codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-text codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">CUDA out of memory</span><br></span></code></pre></div></div>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Upgrade to larger cloud instance (8GB+ RAM)</li>
+<li>Reduce batch size in conversion commands</li>
+<li>Use fewer calibration images (minimum 50)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=issue-6-model-validation-fails>Issue 6: Model validation fails<a href=#issue-6-model-validation-fails class=hash-link aria-label="Direct link to Issue 6: Model validation fails" title="Direct link to Issue 6: Model validation fails">​</a></h3>
+<p><strong>Symptoms</strong>:</p>
+<div class="language-text codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-text codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">npz compare FAILED</span><br></span></code></pre></div></div>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Check if test image is representative of training data</li>
+<li>Verify ONNX model is correct version</li>
+<li>Try different test image</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=issue-7-ssh-connection-issues>Issue 7: SSH connection issues<a href=#issue-7-ssh-connection-issues class=hash-link aria-label="Direct link to Issue 7: SSH connection issues" title="Direct link to Issue 7: SSH connection issues">​</a></h3>
+<p><strong>Symptoms</strong>:</p>
+<div class="language-text codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-text codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">Connection refused</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">ssh: connect to host [IP] port 22: Connection refused</span><br></span></code></pre></div></div>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Check cloud provider security groups allow SSH (port 22)</li>
+<li>Verify instance is running</li>
+<li>Try different SSH key or password authentication</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=deployment-to-recamera>Deployment to reCamera<a href=#deployment-to-recamera class=hash-link aria-label="Direct link to Deployment to reCamera" title="Direct link to Deployment to reCamera">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-1-connect-recamera>Step 1: Connect reCamera<a href=#step-1-connect-recamera class=hash-link aria-label="Direct link to Step 1: Connect reCamera" title="Direct link to Step 1: Connect reCamera">​</a></h3>
+<ol>
+<li>Connect reCamera to your computer via USB-C cable</li>
+<li>Access web interface at <code>http://192.168.42.1</code></li>
+<li>Login with username: <code>root</code>, password: <code>recamera.1</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-2-upload-model>Step 2: Upload Model<a href=#step-2-upload-model class=hash-link aria-label="Direct link to Step 2: Upload Model" title="Direct link to Step 2: Upload Model">​</a></h3>
+<ol>
+<li>Navigate to Workspace section</li>
+<li>Click on model node in the flow editor</li>
+<li>Click "Upload" button</li>
+<li>Select your <code>.cvimodel</code> file</li>
+<li>Configure model parameters:<!-- -->
+<ul>
+<li><strong>Model Name</strong>: <code>yolo11n_detection</code></li>
+<li><strong>Classes</strong>: Enter your class names (comma-separated)</li>
+<li><strong>Confidence Threshold</strong>: 0.5 (adjust as needed)</li>
+<li><strong>IoU Threshold</strong>: 0.45</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=step-3-deploy-and-test>Step 3: Deploy and Test<a href=#step-3-deploy-and-test class=hash-link aria-label="Direct link to Step 3: Deploy and Test" title="Direct link to Step 3: Deploy and Test">​</a></h3>
+<ol>
+<li>Click "Deploy" button</li>
+<li>Wait for "Successfully deployed" message</li>
+<li>Navigate to Dashboard for live preview</li>
+<li>Adjust confidence/IoU thresholds as needed</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=frequently-asked-questions>Frequently Asked Questions<a href=#frequently-asked-questions class=hash-link aria-label="Direct link to Frequently Asked Questions" title="Direct link to Frequently Asked Questions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=q-how-long-does-the-conversion-process-take>Q: How long does the conversion process take?<a href=#q-how-long-does-the-conversion-process-take class=hash-link aria-label="Direct link to Q: How long does the conversion process take?" title="Direct link to Q: How long does the conversion process take?">​</a></h3>
+<p><strong>A</strong>: Typically 20-45 minutes depending on model complexity and cloud instance performance. The calibration step is usually the longest.</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=q-can-i-use-a-different-yolo-version>Q: Can I use a different YOLO version?<a href=#q-can-i-use-a-different-yolo-version class=hash-link aria-label="Direct link to Q: Can I use a different YOLO version?" title="Direct link to Q: Can I use a different YOLO version?">​</a></h3>
+<p><strong>A</strong>: This guide is specific to YOLO11n. Other versions (YOLOv8, YOLOv9) require different output layer names and may have compatibility issues.</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=q-what-if-my-model-accuracy-drops-significantly-after-conversion>Q: What if my model accuracy drops significantly after conversion?<a href=#q-what-if-my-model-accuracy-drops-significantly-after-conversion class=hash-link aria-label="Direct link to Q: What if my model accuracy drops significantly after conversion?" title="Direct link to Q: What if my model accuracy drops significantly after conversion?">​</a></h3>
+<p><strong>A</strong>: Some accuracy loss (1-3%) is normal due to INT8 quantization. If loss is >5%, try:</p>
+<ul>
+<li>Using more representative calibration images</li>
+<li>Increasing calibration image count to 200-500</li>
+<li>Adjusting confidence thresholds during deployment</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=q-can-i-convert-models-trained-on-custom-datasets>Q: Can I convert models trained on custom datasets?<a href=#q-can-i-convert-models-trained-on-custom-datasets class=hash-link aria-label="Direct link to Q: Can I convert models trained on custom datasets?" title="Direct link to Q: Can I convert models trained on custom datasets?">​</a></h3>
+<p><strong>A</strong>: Yes, but ensure your calibration images are representative of your custom dataset. The 100 calibration images should cover the variety of scenarios your model will encounter.</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=q-whats-the-maximum-model-size-supported>Q: What's the maximum model size supported?<a href=#q-whats-the-maximum-model-size-supported class=hash-link aria-label="Direct link to Q: What's the maximum model size supported?" title="Direct link to Q: What's the maximum model size supported?">​</a></h3>
+<p><strong>A</strong>: The reCamera's memory limits practical model size to ~8-16MB. YOLO11n typically produces 3-8MB models after conversion.</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=q-do-i-need-to-keep-the-cloud-instance-running>Q: Do I need to keep the cloud instance running?<a href=#q-do-i-need-to-keep-the-cloud-instance-running class=hash-link aria-label="Direct link to Q: Do I need to keep the cloud instance running?" title="Direct link to Q: Do I need to keep the cloud instance running?">​</a></h3>
+<p><strong>A</strong>: No, you can terminate the instance immediately after downloading your converted model. The conversion is a one-time process.</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=q-can-i-batch-convert-multiple-models>Q: Can I batch convert multiple models?<a href=#q-can-i-batch-convert-multiple-models class=hash-link aria-label="Direct link to Q: Can I batch convert multiple models?" title="Direct link to Q: Can I batch convert multiple models?">​</a></h3>
+<p><strong>A</strong>: Yes, you can keep the same environment and convert multiple models by repeating steps 5-6 with different model files.</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=q-what-if-i-encounter-an-error-not-covered-here>Q: What if I encounter an error not covered here?<a href=#q-what-if-i-encounter-an-error-not-covered-here class=hash-link aria-label="Direct link to Q: What if I encounter an error not covered here?" title="Direct link to Q: What if I encounter an error not covered here?">​</a></h3>
+<p><strong>A</strong>:</p>
+<ol>
+<li>Check the Docker container logs: <code>docker logs tpu_converter</code></li>
+<li>Verify your ONNX model loads correctly in a Python environment first</li>
+<li>Try with a simpler test model to isolate the issue</li>
+<li>Contact Seeed Studio support with specific error messages</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=q-are-there-alternatives-to-cloud-deployment>Q: Are there alternatives to cloud deployment?<a href=#q-are-there-alternatives-to-cloud-deployment class=hash-link aria-label="Direct link to Q: Are there alternatives to cloud deployment?" title="Direct link to Q: Are there alternatives to cloud deployment?">​</a></h3>
+<p><strong>A</strong>: Yes, you can:</p>
+<ul>
+<li>Use Docker Desktop locally on Mac/Windows (requires significant RAM)</li>
+<li>Set up WSL2 on Windows with Docker</li>
+<li>Use a local Linux machine or VM</li>
+</ul>
+<p>However, cloud deployment is recommended for reliability and performance.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=conclusion>Conclusion<a href=#conclusion class=hash-link aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>Converting YOLO11n models for reCamera deployment requires understanding both the hardware constraints and the TPU-MLIR toolchain. While the process has several steps, following this guide should result in a successfully converted model ready for edge AI deployment.</p>
+<p>The key to success is:</p>
+<ol>
+<li><strong>Preparation</strong>: Having all files in the correct format and structure</li>
+<li><strong>Environment</strong>: Using a properly configured Linux environment (cloud recommended)</li>
+<li><strong>Patience</strong>: Allowing sufficient time for the calibration and conversion steps</li>
+<li><strong>Validation</strong>: Testing your converted model thoroughly before deployment</li>
+</ol>
+<p>For additional support, consult the <a href=https://wiki.seeedstudio.com/recamera_getting_started/ target=_blank rel="noopener noreferrer">SeeedStudio ReCamera wiki</a> or the <a href=https://github.com/sophgo/tpu-mlir target=_blank rel="noopener noreferrer">TPU-MLIR documentation</a>.</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/en/docs/Contribution/Contributors/ReCamera_Model_Converstion_Mac_README.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_UohW aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_g62E"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2026-09-05T15:03:34.000Z itemprop=dateModified>Sep 5, 2026</time></b> by <b>Frank Nie</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div><div>Loading Comments...</div></div><div class="col col--3"><div class=copyPageButtonWrapper_UocS></div><div class="tableOfContents_TN1Q thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#table-of-contents class="table-of-contents__link toc-highlight">Table of Contents</a><li><a href=#introduction class="table-of-contents__link toc-highlight">Introduction</a><ul><li><a href=#why-model-conversion-is-necessary class="table-of-contents__link toc-highlight">Why Model Conversion is Necessary</a><li><a href=#about-recamera-hardware class="table-of-contents__link toc-highlight">About reCamera Hardware</a><li><a href=#the-conversion-challenge class="table-of-contents__link toc-highlight">The Conversion Challenge</a></ul><li><a href=#understanding-the-hardware-constraints class="table-of-contents__link toc-highlight">Understanding the Hardware Constraints</a><ul><li><a href=#memory-limitations class="table-of-contents__link toc-highlight">Memory Limitations</a><li><a href=#processing-constraints class="table-of-contents__link toc-highlight">Processing Constraints</a><li><a href=#why-standard-ml-frameworks-dont-work class="table-of-contents__link toc-highlight">Why Standard ML Frameworks Don't Work</a></ul><li><a href=#prerequisites class="table-of-contents__link toc-highlight">Prerequisites</a><ul><li><a href=#required-knowledge class="table-of-contents__link toc-highlight">Required Knowledge</a><li><a href=#required-software class="table-of-contents__link toc-highlight">Required Software</a><li><a href=#required-files class="table-of-contents__link toc-highlight">Required Files</a></ul><li><a href=#cloud-provider-setup-options class="table-of-contents__link toc-highlight">Cloud Provider Setup Options</a><ul><li><a href=#option-1-digitalocean-recommended-for-beginners class="table-of-contents__link toc-highlight">Option 1: DigitalOcean (Recommended for Beginners)</a><li><a href=#option-2-aws-ec2 class="table-of-contents__link toc-highlight">Option 2: AWS EC2</a><li><a href=#option-3-google-cloud-platform class="table-of-contents__link toc-highlight">Option 3: Google Cloud Platform</a><li><a href=#option-4-microsoft-azure class="table-of-contents__link toc-highlight">Option 4: Microsoft Azure</a><li><a href=#option-5-alibaba-cloud class="table-of-contents__link toc-highlight">Option 5: Alibaba Cloud</a><li><a href=#option-6-tencent-cloud class="table-of-contents__link toc-highlight">Option 6: Tencent Cloud</a></ul><li><a href=#step-by-step-conversion-process class="table-of-contents__link toc-highlight">Step-by-Step Conversion Process</a><ul><li><a href=#step-1-prepare-your-environment class="table-of-contents__link toc-highlight">Step 1: Prepare Your Environment</a><li><a href=#step-2-upload-your-model-files class="table-of-contents__link toc-highlight">Step 2: Upload Your Model Files</a><li><a href=#step-3-prepare-directory-structure class="table-of-contents__link toc-highlight">Step 3: Prepare Directory Structure</a><li><a href=#step-4-enter-docker-container-and-begin-conversion class="table-of-contents__link toc-highlight">Step 4: Enter Docker Container and Begin Conversion</a><li><a href=#step-5-model-conversion-pipeline class="table-of-contents__link toc-highlight">Step 5: Model Conversion Pipeline</a><li><a href=#step-6-download-converted-model class="table-of-contents__link toc-highlight">Step 6: Download Converted Model</a><li><a href=#step-7-clean-up-cloud-resources class="table-of-contents__link toc-highlight">Step 7: Clean Up Cloud Resources</a></ul><li><a href=#common-issues-and-troubleshooting class="table-of-contents__link toc-highlight">Common Issues and Troubleshooting</a><ul><li><a href=#issue-1-file-not-found-errors-during-conversion class="table-of-contents__link toc-highlight">Issue 1: "File not found" errors during conversion</a><li><a href=#issue-2-directory-not-empty-when-moving-files class="table-of-contents__link toc-highlight">Issue 2: "Directory not empty" when moving files</a><li><a href=#issue-3-calibration-fails-with-there-is-no-inputs class="table-of-contents__link toc-highlight">Issue 3: Calibration fails with "There is no inputs"</a><li><a href=#issue-4-docker-permission-errors class="table-of-contents__link toc-highlight">Issue 4: Docker permission errors</a><li><a href=#issue-5-out-of-memory-errors class="table-of-contents__link toc-highlight">Issue 5: Out of memory errors</a><li><a href=#issue-6-model-validation-fails class="table-of-contents__link toc-highlight">Issue 6: Model validation fails</a><li><a href=#issue-7-ssh-connection-issues class="table-of-contents__link toc-highlight">Issue 7: SSH connection issues</a></ul><li><a href=#deployment-to-recamera class="table-of-contents__link toc-highlight">Deployment to reCamera</a><ul><li><a href=#step-1-connect-recamera class="table-of-contents__link toc-highlight">Step 1: Connect reCamera</a><li><a href=#step-2-upload-model class="table-of-contents__link toc-highlight">Step 2: Upload Model</a><li><a href=#step-3-deploy-and-test class="table-of-contents__link toc-highlight">Step 3: Deploy and Test</a></ul><li><a href=#frequently-asked-questions class="table-of-contents__link toc-highlight">Frequently Asked Questions</a><ul><li><a href=#q-how-long-does-the-conversion-process-take class="table-of-contents__link toc-highlight">Q: How long does the conversion process take?</a><li><a href=#q-can-i-use-a-different-yolo-version class="table-of-contents__link toc-highlight">Q: Can I use a different YOLO version?</a><li><a href=#q-what-if-my-model-accuracy-drops-significantly-after-conversion class="table-of-contents__link toc-highlight">Q: What if my model accuracy drops significantly after conversion?</a><li><a href=#q-can-i-convert-models-trained-on-custom-datasets class="table-of-contents__link toc-highlight">Q: Can I convert models trained on custom datasets?</a><li><a href=#q-whats-the-maximum-model-size-supported class="table-of-contents__link toc-highlight">Q: What's the maximum model size supported?</a><li><a href=#q-do-i-need-to-keep-the-cloud-instance-running class="table-of-contents__link toc-highlight">Q: Do I need to keep the cloud instance running?</a><li><a href=#q-can-i-batch-convert-multiple-models class="table-of-contents__link toc-highlight">Q: Can I batch convert multiple models?</a><li><a href=#q-what-if-i-encounter-an-error-not-covered-here class="table-of-contents__link toc-highlight">Q: What if I encounter an error not covered here?</a><li><a href=#q-are-there-alternatives-to-cloud-deployment class="table-of-contents__link toc-highlight">Q: Are there alternatives to cloud deployment?</a></ul><li><a href=#conclusion class="table-of-contents__link toc-highlight">Conclusion</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Navigation</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/Getting_Started/>Getting Started</a><li class=footer__item><a class=footer__link-item href=/Sensor_Network/>Sensor and Sensing</a><li class=footer__item><a class=footer__link-item href=/Network/>Network</a><li class=footer__item><a class=footer__link-item href=/Edge_Computing/>Edge Computing</a><li class=footer__item><a class=footer__link-item href=/Cloud/>Cloud</a><li class=footer__item><a href=https://solution.seeed.cc/ target=_blank rel="noopener noreferrer" class=footer__link-item>Solutions</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Ecosystem</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://discord.com/invite/QqMgVwHT3X target=_blank rel="noopener noreferrer" class=footer__link-item>Discord</a><li class=footer__item><a href=https://project.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Project Hub</a><li class=footer__item><a href=https://www.seeedstudio.com/ecosystem/ target=_blank rel="noopener noreferrer" class=footer__link-item>Partners</a><li class=footer__item><a href=https://www.seeedstudio.com/distributors.html target=_blank rel="noopener noreferrer" class=footer__link-item>Distributors</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Quick Guide</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Bazaar</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/HowToGetHelp target=_blank rel="noopener noreferrer" class=footer__link-item>How to get help</a><li class=footer__item><a href=https://support.seeedstudio.com/knowledgebase target=_blank rel="noopener noreferrer" class=footer__link-item>FAQs</a><li class=footer__item><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Forum</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/TechnicalSupport target=_blank rel="noopener noreferrer" class=footer__link-item>Technical Support</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Company</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/about-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>About Seeed</a><li class=footer__item><a href=https://www.seeedstudio.com/join-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>Join us</a><li class=footer__item><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=footer__link-item>Contact Us</a><li class=footer__item><a href=https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/ target=_blank rel="noopener noreferrer" class=footer__link-item>Press</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Seeed Studio, Inc. Built with Docusaurus.</div></div></div></footer></div>

@@ -1,0 +1,892 @@
+<!doctype html><html lang=ja-JP dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Network/RaspberryPi_Devices/reRouter/ja_Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>reRouterキャリアボード | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/><meta data-rh=true property=og:locale content=ja_JP><meta data-rh=true name=docusaurus_locale content=ja><meta data-rh=true name=docsearch:language content=ja><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="reRouterキャリアボード | Seeed Studio Wiki"><meta data-rh=true name=description content=reRouterキャリアボード><meta data-rh=true property=og:description content=reRouterキャリアボード><meta data-rh=true name=keywords content=デバイス><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=docsearch:sku_tag content=102110497,110110090,110110110><link data-rh=true rel=icon href=/ja/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/ hreflang=ja-JP><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/reRouter_Intro","name":"reRouter","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4","name":"reRouterキャリアボード","position":2}]}</script><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,i,n){e[i]=e[i]||[],e[i].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],o=t.createElement(a);o.async=!0,o.src="https://www.googletagmanager.com/gtm.js?id="+n+("dataLayer"!=i?"&l="+i:""),d.parentNode.insertBefore(o,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB"),window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","gemini"],generateMarkdownRoutes:!1,placement:"auto",mcpServer:null,labels:{button:{label:"ページをコピー"},copy:{title:"Markdown としてコピー",description:"このページの内容を Markdown としてコピーします"},view:{title:"Markdown で表示",description:"このページの内容を Markdown 形式で表示します"},chatgpt:{title:"ChatGPT で開く",description:"このページの内容をコンテキストとして ChatGPT で開きます"},claude:{title:"Claude で開く",description:"このページの内容をコンテキストとして Claude で開きます"},gemini:{title:"Gemini で開く",description:"このページの内容をコンテキストとして Gemini で開きます"}},id:"default"}</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/ja/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/ja/assets/css/styles.41b8fa22.css><script src=/ja/assets/js/runtime~main.f7fcfc20.js defer></script><script src=/ja/assets/js/main.5bae3894.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+
+
+<svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="dark",e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_G6ar href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><div class="theme-announcement-bar announcementBar_ncOr" style=background-color:#013949;color:#FFFFFF role=banner><div class="content_L1uV announcementBarContent__57G"><span id=announcement-text>Collaborate with Seeed - <a target=_blank href=https://www.seeedstudio.com/blog/affiliate-program/>Creator</a>, <a target=_blank href=https://www.seeedstudio.com/ranger-program/>Ranger</a>, or <a target=_blank href=https://wiki.seeedstudio.com/contributors/>Contributor</a>, there is always a role ideal for you!</span></div></div><nav aria-label=ナビゲーション class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーを開く aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/ja/><div class=navbar__logo><img class=navbar_logo_items src=https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png alt="Seeed Studio" loading=eager decoding=async></div></a><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items js_getting_started" aria-haspopup=true aria-expanded=false role=button href=/ja/Getting_Started/>クイックリンク</a><ul class=dropdown__menu><li><a class=dropdown__link href=/ja/Sensor_Network/>センサーとセンシング</a><li><a class=dropdown__link href=/ja/Network/>ネットワーキング</a><li><a class=dropdown__link href=/ja/Edge_Computing/>エッジコンピューティング</a><li><a class=dropdown__link href=/ja/Cloud/>クラウド</a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items js_explore_learn" aria-haspopup=true aria-expanded=false role=button href=/ja/topicintroduction/>トピックで探す</a><ul class=dropdown__menu><li><a class=dropdown__link href=/ja/tinyml_topic/>TinyML</a><li><a class=dropdown__link href=/ja/ModelAssistant_Introduce_Overview/>SenseCraft モデルアシスタント</a><li><a class=dropdown__link href=/ja/home_assistant_topic/>Home Assistant</a><li><a class=dropdown__link href=/ja/open_source_topic/>オープンソース</a><li><a class=dropdown__link href=/ja/edge_ai_topic/>エッジAI</a><li><a href=https://wiki.seeedstudio.com/cn/Getting_Started target=_blank rel="noopener noreferrer" class=dropdown__link>Wiki 矽递科技 (中文)</a><li><a href=https://wiki.seeedstudio.com/ja/Getting_Started target=_blank rel="noopener noreferrer" class=dropdown__link>Wiki SeeedStudio (日本語)</a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items" aria-haspopup=true aria-expanded=false role=button href=/ja/knowledgebase/>よくある質問</a><ul class=dropdown__menu><li><a class=dropdown__link href=/ja/Jetson_FAQ/>NVIDIA Jetson シリーズ</a><li><a class=dropdown__link href=/ja/XIAO_FAQ/>Seeed Studio XIAO シリーズ</a><li><a class=dropdown__link href=/ja/reComputer_R1000_FAQ/>reComputer R1000 シリーズ</a><li><a class=dropdown__link href=/ja/reTerminal-new_FAQ/>reTerminal</a><li><a class=dropdown__link href=/ja/FAQs_For_openWrt/>reRouter</a><li><a class=dropdown__link href=/ja/ODYSSEY_FAQ/>Odyssey</a><li><a class=dropdown__link href=/ja/wio_terminal_faq/>Wio Terminal</a><li class=""><hr style="margin: 8px 0;"><li><a href=https://discord.com/invite/eWkprNDMU7 target=_blank rel="noopener noreferrer" class=dropdown__link>Discord<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=dropdown__link>メール<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=dropdown__link>フォーラム<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 target=_blank rel="noopener noreferrer" class=dropdown__link>ご意見はありますか？<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a href=https://www.seeedstudio.com/ranger-program target=_blank rel="noopener noreferrer" aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar_dorp_items">参加する</a><ul class=dropdown__menu><li><a href=https://www.seeedstudio.com/blog/affiliate-program/ target=_blank rel="noopener noreferrer" class=dropdown__link>アフィリエイト & クリエイター</a><li><a href=https://www.seeedstudio.com/ranger-program/ target=_blank rel="noopener noreferrer" class=dropdown__link>コミュニティアンバサダー</a><li><a class=dropdown__link href=/ja/contributors/>コントリビューター</a><li><a href=https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform target=_blank rel="noopener noreferrer" class=dropdown__link>コミュニティアンバサダーへの応募<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://github.com/orgs/Seeed-Studio/projects/6 target=_blank rel="noopener noreferrer" class=dropdown__link>課題ボードへ<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/ target=_blank rel="noopener noreferrer" class=dropdown__link>コミュニティアンバサダーの詳細<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://wiki.seeedstudio.com/ja/Contributor target=_blank rel="noopener noreferrer" class=dropdown__link>コントリビューターの詳細<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class="navbar__item navbar__link navbar_doc_right_items">ストア 🛍️</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar_doc_right_items ai-platform-dropdown">AIプラットフォーム</a><ul class=dropdown__menu><li><a href=https://sensecraft.seeed.cc/ai/#/home target=_blank rel="noopener noreferrer" class="dropdown__link ai-platform-menu-item sensecraft-ai-menu-item">SenseCraft AI</a><li><a href=https://sensecraft.seeed.cc/ai-lab target=_blank rel="noopener noreferrer" class="dropdown__link ai-platform-menu-item recomputer-ai-lab-menu-item">reComputer AI Lab</a></ul></div><a href=https://github.com/Seeed-Studio/wiki-documents target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="toggle_OLSw colorModeToggle_Hg9V"><button class="clean-btn toggleButton_wYmb toggleButtonDisabled_vaDU" type=button disabled title=システムモード aria-label=ダークモードを切り替える(現在はシステムモード)><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_KEbZ lightToggleIcon_Sxwe"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_KEbZ darkToggleIcon_Yem1"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_KEbZ systemToggleIcon_txm5"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_bmvg><button type=button class="DocSearch DocSearch-Button" aria-label=Search><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke=currentColor fill=none fill-rule=evenodd stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Search</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_UyTV"><div class=docsWrapper_XLvK><button aria-label=先頭へ戻る class="clean-btn theme-back-to-top-button backToTopButton_z1FD" type=button></button><div class=docRoot_HciC><aside class="theme-doc-sidebar-container docSidebarContainer_e5ai"><div class=sidebarViewport_N8x0><div class=sidebar_vJCc><nav aria-label=ドキュメントのサイドバー class="menu thin-scrollbar menu_qiME menuWithAnnouncementBar_hRfJ"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/Getting_Started/>はじめに</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/Sensor_Network/>センシング</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/Grove_System/>Grove</a><button aria-label="'Grove'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/SenseCAP_introduction/>SenseCAP</a><button aria-label="'SenseCAP'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/watcher/>SenseCAP Watcher</a><button aria-label="'SenseCAP Watcher'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/mmwave_radar_Intro/>mmWaveレーダーセンサー</a><button aria-label="'mmWaveレー��ダーセンサー'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/SeeedStudio_XIAO_Series_Introduction/>XIAO</a><button aria-label="'XIAO'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/xiao_w5500_ethernet_adapter/>XIAOガジェット</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/seeed_epaper_displays/>電子ペーパーディスプレイ</a><button aria-label="'電子ペーパーディスプレイ'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/reterminal_d10xx_main_page/>LCDディスプレイ（液晶ディスプレイ）</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/Wio_Terminal_Intro/>Wio Terminal</a><button aria-label="'Wio Terminal'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/respeaker/>reSpeaker</a><button aria-label="'reSpeaker'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/Ultra_Sonic_range_measurement_module/>その他のセンシングモジュール</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/Wio/>その他のマイクロコントローラー</a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/Network/>ネットワーク</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/meshtastic_introduction/>Meshtastic Network</a><button aria-label="'Meshtastic Network'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/wio_sx1262_class/>LoRa Wioシリーズ</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/Network/SenseCAP_Network/SenseCAP_Gateway_Intro/>SenseCAP Gateway</a><button aria-label="'SenseCAP Gateway'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/SenseCAP_K1100_Intro/>SenseCAP K1100</a><button aria-label="'SenseCAP K1100'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/M2_Kit_Getting_Started/>SenseCAP LoRaWAN Starter Kit</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/ja/reRouter_Intro/>Raspberry Piソリューション</a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--active" tabindex=0 href=/ja/reRouter_Intro/>reRouter</a><button aria-label="'reRouter'の目次を隠す" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/ja/Raspberry-OpenWrt-Getting-Started/>reRouterの紹介</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/ja/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/>reRouterキャリアボード</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/ja/FAQs_For_openWrt/>OpenWrt に関するよくある質問 (FAQs)</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/ja/OpenWrt-Getting-Started/>アプリケーション</a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/ja/getting_started_raspberry_pi_4g_lte_hat/> Raspberry Pi 4G LTE Hat</a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/Rockchip_network_solutions/>Rockchipソリューション</a><button aria-label="'Rockchipソリューション'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/The-Things-Indoor-Gateway/>その他のネットワークデバイス</a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/Edge_Computing/>エッジコンピューティング</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/object_detection_with_yolov11_on_recomputer_rk/>RK デバイス</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/raspberry-pi-devices/>Raspberry Piデバイス</a><button aria-label="'Raspberry Piデバイス'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/NVIDIA_Jetson/>NVIDIA® Jetson™</a><button aria-label="'NVIDIA® Jetson™'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/Edgebox-ESP-100-Arduino/>ESP デバイス</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/BeagleBone/>BeagleBone®</a><button aria-label="'BeagleBone®'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/ODYSSEY_Intro/>ODYSSEY</a><button aria-label="'ODYSSEY'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/recamera/>reCamera</a><button aria-label="'reCamera'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/reServer-Getting-Started/>その他のエッジデバイス</a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/robotics_page/>ロボティクスページ</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/>ロボットキット</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/hightorque_series/>アクチュエーター</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/robosense_lidar/>センサー</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/installing_ros1/>ソフトウェア</a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/Cloud/>SenseCraft & Cloud</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/sensecraft-ai/overview/>SenseCraft AI</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/codecraft/codecraft-overview/>CodeCraft</a><button aria-label="'CodeCraft'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/sensecraft-app/overview/>SenseCraft APP</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/cloud/sensecraft-data/sensecraft-data-platform/overview/>SenseCraft Data Platform</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/sensecraft_hmi_overview/>SenseCraft HMI</a><button aria-label="'SenseCraft HMI'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/sensecraft-blockchain/blockchain-dashboard/dashboard-basics/>SenseCraft Blockchain</a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a href=https://www.seeed.cc/category/solutions target=_blank rel="noopener noreferrer" class="menu__link menuExternalLink_xK2O">ソリューション<svg width=13.5 height=13.5 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed _ai-perception"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/ai-vision/>AIビジョン</a><button aria-label="'AIビジョン'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed _ai-sound"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/ai-sound/>AIサウンド</a><button aria-label="'AIサウンド'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed _ai-intelligent"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/solutions/hello_watcher_llms/>AI インテリジェント</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed _device-integration-control"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/ha_dify_watcher_llms/>デバイス統合・制御</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed _environmental-monitoring"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/non_invasive_ct_energy_consumption/>環境モニタリング</a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed _hazard-response"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/hazard-response/>危険対応</a><button aria-label="'危険対応'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed _indoor-outdoor-positioning"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/solutions/indoor-positioning-bluetooth-lorawan-tracker/>屋内外測位</a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/topicintroduction/>技術トピック</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/home_assistant_topic/>Home Assistant</a><button aria-label="'Home Assistant'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/tinyml_topic/>TinyML</a><button aria-label="'TinyML'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/ja/open_source_topic/>オープンソース</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/ja/edge_ai_topic/>Edge AI</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/Contributor/>コントリビューション</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/Contribution-Guide/>Github コントリビューションガイド</a><button aria-label="'Github コントリビューションガイド'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/ja/Scale-up-Your-Creation-with-Fusion/>Seeed Studio Fusionであなたの創造を拡大</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/popularplatforms/>人気プラットフォーム</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/Arduino/>Arduino</a><button aria-label="'Arduino'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/Raspberry_Pi/>Raspberry Pi</a><button aria-label="'Raspberry Pi'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/ja/microbit_wiki_page/>Micro:bit</a><button aria-label="'Micro:bit'の目次を開く" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sideboard_calss"><a class=menu__link href=/ja/discontinuedproducts/>廃止製品</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ja/ReSpeaker_Product_Guide/>製品リスト</a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/ja/ja_About/>Seeedについて</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/ja/License/>ライセンス</a></ul></nav><button type=button title=サイドバーを隠す aria-label=サイドバーを隠す class="button button--secondary button--outline collapseSidebarButton_Ftvb"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_c4WT><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_namt><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_gTko" data-sku=102110497,110110090,110110110 data-doc-type=""><div class=docItemContainer_HGmz><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_zCmv" aria-label=パンくずリストのナビゲーション><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=ホームページ class=breadcrumbs__link href=/ja/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_JFrk><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>Raspberry Piソリューション</span><li class=breadcrumbs__item><a class=breadcrumbs__link href=/ja/reRouter_Intro/><span>reRouter</span></a><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>reRouterキャリアボード</span></ul></nav><div class="tocCollapsible_O_Qc theme-doc-toc-mobile tocMobile_tjDr"><button type=button class="clean-btn tocCollapsibleButton_htYj">このページの見出し</button></div><div class=mobileCopyPageButton_Ttvy></div><div class="theme-doc-markdown markdown"><header><h1>Raspberry Pi Compute Module 4用デュアルギガビットイーサネットキャリアボードの使い方</h1></header>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/thumb.png alt=pir width=600 height=auto></p>
+<p>Raspberry Pi Compute Module 4を搭載したデュアルギガビットキャリアボードは、デュアルギガビットイーサネットポートとデュアルUSB 3.0ポートを備えており、ソフトルーターアプリケーションに適している一方で、ハードウェアを最小限に抑えています。</p>
+<p>MIPI CSI、MIPI DSI、micro-HDMIを使用してディスプレイやカメラを接続できるほか、標準的な9ピンUSB 3.0ヘッダーによるUSB拡張、micro-SDカードスロット、FPCコネクタなど、多様なI/O周辺機器を備えています。また、コンパクトなフォームファクターを維持しています。このボードは、HTPCメーカー、Linux開発者、ソフトウェアルーター愛好家、そして一般的なRaspberry Piユーザーに最適です。</p>
+<div class=get_one_now_container style=text-align:center><a class=get_one_now_item href=https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html target=_blank><strong><span><font color=FFFFFF size=4> 今すぐ購入 🖱️</font></span></strong></a></div>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=特徴>特徴<a href=#特徴 class=hash-link aria-label="特徴 への直接リンク" title="特徴 への直接リンク">​</a></h2>
+<ul>
+<li>コンパクトサイズ (75x64x21mm) と豊富なI/O周辺機器</li>
+<li>ソフトルーターアプリケーション向けのデュアルギガビットイーサネットコネクタ</li>
+<li>MIPI CSI、MIPI DSI、micro-HDMIインターフェースを使用したカメラ/ディスプレイ接続</li>
+<li>オンボードデュアルUSB 3.0と追加のUSB 3.0 9ピンヘッダーによる外部ポート拡張</li>
+<li>eMMC非搭載版CM4用のシステムイメージをロードするためのmicro-SDカードスロット</li>
+<li>FPCコネクタ(I2C、SPI)によるさらなる拡張性</li>
+<li>ファン電源コネクタによる外部ファン対応</li>
+<li>USB Type-Cによる電源供給</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=仕様>仕様<a href=#仕様 class=hash-link aria-label="仕様 への直接リンク" title="仕様 への直接リンク">​</a></h2>
+<table><thead><tr><th>仕様<th>詳細<tbody><tr><td>ネットワーキング<td>デュアルギガビットイーサネットコネクタ<tr><td>USB 3.0 to GbE<br>(ギガビットイーサネットブリッジ)<td>MicrochipのLAN7800<tr><td>USB<td>2 x USB 3.0ポート<br>1 x USB 3.0 9ピンヘッダー<tr><td>ストレージ<td>micro-SDカードスロット (eMMC非搭載CM4版用システムイメージロード)<tr><td>カメラ<td>1 x MIPI CSIコネクタ<tr><td>ディスプレイ<td>1 x MIPI DSIコネクタ<br>1 x micro-HDMIコネクタ<tr><td>FPC<td>I2CおよびSPI用インターフェース<tr><td>外部ファン<td>ファン用電源コネクタ<tr><td>電源<td>USB Type-Cポートを使用した5V/3A<tr><td>寸法<td>75x64x21mm<tr><td>重量<td>43g</table>
+<div class="theme-admonition theme-admonition-caution admonition_IZjC alert alert--warning"><div class=admonitionHeading_uVvU><span class=admonitionIcon_HiR3><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>注意</div><div class=admonitionContent_bl22><p>この製品は高い統合度を持つため、<a href=https://www.seeedstudio.com/Aluminum-Alloy-CNC-Heat-Sink-with-Fan-for-Raspberry-Pi-CM4-Module-p-4923.html target=_blank rel="noopener noreferrer">CM4ヒートシンク</a>と一緒に使用する必要があります。そうしない場合、USBやイーサネットの不安定性を引き起こす可能性があります。</div></div>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=ハードウェア概要>ハードウェア概要<a href=#ハードウェア概要 class=hash-link aria-label="ハードウェア概要 への直接リンク" title="ハードウェア概要 への直接リンク">​</a></h2>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/hw-overview.png alt=pir width=900 height=auto></p>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=ハードウェア紹介>ハードウェア紹介<a href=#ハードウェア紹介 class=hash-link aria-label="ハードウェア紹介 への直接リンク" title="ハードウェア紹介 への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=raspberry-pi-compute-module-4用200ピンインターフェース>Raspberry Pi Compute Module 4用200ピンインターフェース<a href=#raspberry-pi-compute-module-4用200ピンインターフェース class=hash-link aria-label="Raspberry Pi Compute Module 4用200ピンインターフェース への直接リンク" title="Raspberry Pi Compute Module 4用200ピンインターフェース への直接リンク">​</a></h3>
+<p>このキャリアボードには<strong>200ピンインターフェース</strong>があり、各列に100ピンずつ配置されています。これにより、<a href=https://www.seeedstudio.com/Raspberry-Pi-Compute-Module-CM4001000-p-4720.html target=_blank rel="noopener noreferrer">Raspberry Pi Compute Module 4</a>を接続してプロジェクトを実現できます。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=回路図>回路図<a href=#回路図 class=hash-link aria-label="回路図 への直接リンク" title="回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/CM4.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は<a href=https://files.seeedstudio.com/wiki/102110497/CM4.png target=_blank rel="noopener noreferrer">こちら</a>をクリックしてください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=デュアルギガビットイーサネットポート>デュアルギガビットイーサネットポート<a href=#デュアルギガビットイーサネットポート class=hash-link aria-label="デュアルギガビットイーサネットポート への直接リンク" title="デュアルギガビットイーサネットポート への直接リンク">​</a></h3>
+<p>このキャリアボードには<strong>2つのギガビットイーサネットポート(RJ45)<strong>が搭載されています。1つのイーサネットポートは、CM4モジュールの</strong>Gigabit Ethernet PHY</strong>に接続されており、これは<strong>Broadcom BCM54210PE</strong>に基づいています。一方、もう1つのギガビットイーサネットポートは<strong>MicrochipのLAN7800</strong>に接続されており、これは<strong>USB 3.0 to GbE (ギガビットイーサネットブリッジ)<strong>です。ここでの</strong>USB 3.0インターフェース</strong>は、CM4モジュールの<strong>PCIeインターフェース</strong>から拡張されています。また、両方のポートは最大1Gbpsの速度をサポートできます。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=デュアルギガビットイーサネットポートの回路図>デュアルギガビットイーサネットポートの回路図<a href=#デュアルギガビットイーサネットポートの回路図 class=hash-link aria-label="デュアルギガビットイーサネットポートの回路図 への直接リンク" title="デュアルギガビットイーサネットポートの回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/RJ45.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は<a href=https://files.seeedstudio.com/wiki/102110497/RJ45.png target=_blank rel="noopener noreferrer">こちら</a>をクリックしてください。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=usb-30-to-gbe-ギガビットイーサネットブリッジの回路図>USB 3.0 to GbE (ギガビットイーサネットブリッジ)の回路図<a href=#usb-30-to-gbe-ギガビットイーサネットブリッジの回路図 class=hash-link aria-label="USB 3.0 to GbE (ギガビットイーサネットブリッジ)の回路図 への直接リンク" title="USB 3.0 to GbE (ギガビットイーサネットブリッジ)の回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/LAN7800.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は<a href=https://files.seeedstudio.com/wiki/102110497/LAN7800.png target=_blank rel="noopener noreferrer">こちら</a>をクリックしてください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=csiカメラインターフェース>CSIカメラインターフェース<a href=#csiカメラインターフェース class=hash-link aria-label="CSIカメラインターフェース への直接リンク" title="CSIカメラインターフェース への直接リンク">​</a></h3>
+<p>このキャリアボードには<strong>MIPI CSIカメラインターフェース</strong>があり、<strong>15ピンCSIフレックスケーブル</strong>を介してカメラを接続できます。このカメラインターフェースは、物体検出や機械学習アプリケーションに使用できます。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=回路図-1>回路図<a href=#回路図-1 class=hash-link aria-label="回路図 への直接リンク" title="回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/CSI.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は<a href=https://files.seeedstudio.com/wiki/102110497/CSI.png target=_blank rel="noopener noreferrer">こちら</a>をクリックしてください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=dsiディスプレイインターフェース>DSIディスプレイインターフェース<a href=#dsiディスプレイインターフェース class=hash-link aria-label="DSIディスプレイインターフェース への直接リンク" title="DSIディスプレイインターフェース への直接リンク">​</a></h3>
+<p>このキャリアボードには<strong>MIPI DSIディスプレイインターフェース</strong>があり、<strong>15ピンDSIフレックスケーブル</strong>を介してディスプレイを接続できます。このディスプレイインターフェースは、キャリアボードとのインタラクションに使用できます。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=回路図-2>回路図<a href=#回路図-2 class=hash-link aria-label="回路図 への直接リンク" title="回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/DSI.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は<a href=https://files.seeedstudio.com/wiki/102110497/DSI.png target=_blank rel="noopener noreferrer">こちら</a>をクリックしてください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=fpcインターフェース>FPCインターフェース<a href=#fpcインターフェース class=hash-link aria-label="FPCインターフェース への直接リンク" title="FPCインターフェース への直接リンク">​</a></h3>
+<p>このキャリアボードには<strong>8ピンFPC</strong>インターフェースがあり、<strong>0.5mmピッチH2.5</strong>を備えています。このインターフェースを使用して、カメラやディスプレイなどの追加ハードウェアをキャリアボードに接続できます。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=仕様-1>仕様<a href=#仕様-1 class=hash-link aria-label="仕様 への直接リンク" title="仕様 への直接リンク">​</a></h4>
+<ul>
+<li>定格電流: 0.5A</li>
+<li>定格電圧: 50V</li>
+<li>耐電圧: 500V</li>
+<li>接触抵抗: 20mΩ</li>
+<li>絶縁抵抗: 800mΩ</li>
+<li>動作温度: -20°C ~ +85°C</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=回路図-3>回路図<a href=#回路図-3 class=hash-link aria-label="回路図 への直接リンク" title="回路図 への�直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/FPC_Schematics.png alt=pir width=550 height=auto></p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/FPC_connect.png alt=pir width=1000 height=auto></p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=デュアル-usb-30-ポートと-9-ピンヘッダー>デュアル USB 3.0 ポートと 9 ピンヘッダー<a href=#デュアル-usb-30-ポートと-9-ピンヘッダー class=hash-link aria-label="デュアル USB 3.0 ポートと 9 ピンヘッダー への直接リンク" title="デュアル USB 3.0 ポートと 9 ピンヘッダー への直接リンク">​</a></h3>
+<p>Compute Module 4 は標準で <strong>USB 2.0 インターフェース</strong>のみを備えています。しかし、CM4 の既存の <strong>PCIe インターフェース</strong>を利用し、これを拡張して <strong>2 x USB 3.0 ポートを備えた USB 3.0 インターフェース</strong>を提供しています。この USB ポートは最大 5Gbps の転送速度を提供します。</p>
+<p>さらに、<strong>USB 3.0 9 ピンヘッダー</strong>があり、このヘッダーを使用してさらに多くの USB デバイスを接続することができます。</p>
+<p>まず、このボードの 9 ピンヘッダーに <a href="https://www.amazon.com/SIENOC-Female-Motherboard-Housing-Adapter/dp/B00EOI3VC8/ref=sr_1_4?dchild=1&keywords=9+pin+to+20+pin&qid=1630315040&sr=8-4" target=_blank rel="noopener noreferrer">9 ピンメスから 20 ピンメスアダプター</a> を接続し、その後 <a href="https://www.amazon.com/Motherboard-Adapter-Header-Convert-Female/dp/B071NZHWHG/ref=sr_1_9?dchild=1&keywords=20-pin+usb3.0&qid=1630315493&sr=8-9" target=_blank rel="noopener noreferrer">20 ピンオスから USB3.0 アダプター</a> を前述の 20 ピンメスヘッダーに接続します。この 2 つの製品が必要なのは、現在市場に <strong>9 ピンから USB3.0 アダプター</strong>が存在せず、<strong>9 ピンから USB2.0 アダプター</strong>のみが利用可能だからです。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/USB-pins.jpg alt=pir width=1000 height=auto></p>
+<p><strong>注意:</strong> このボードに <strong>ジャンパーワイヤー</strong>を使用して <a href=https://www.seeedstudio.com/Aluminum-Alloy-CNC-Heat-Sink-with-Fan-for-Raspberry-Pi-CM4-Module-p-4923.html target=_blank rel="noopener noreferrer">5V ファン</a> を接続したい場合、ファンの <strong>正極 (+)</strong> を <strong>VBUS</strong> に、ファンの <strong>負極 (-)</strong> を <strong>GND</strong> ピンに接続することができます。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/fan-connect.jpg alt=pir width=1000 height=auto></p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=usb-30-host-の回路図>USB 3.0 HOST の回路図<a href=#usb-30-host-の回路図 class=hash-link aria-label="USB 3.0 HOST の回路図 への直接リンク" title="USB 3.0 HOST の回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/USB3.0.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は <a href=https://files.seeedstudio.com/wiki/102110497/USB3.0.png target=_blank rel="noopener noreferrer">こちら</a> をクリックしてください。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=pcie-から-usb-30-の回路図>PCIe から USB 3.0 の回路図<a href=#pcie-から-usb-30-の回路図 class=hash-link aria-label="PCIe から USB 3.0 の回路図 への直接リンク" title="PCIe から USB 3.0 の回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/PCIe_to_USB.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は <a href=https://files.seeedstudio.com/wiki/102110497/PCIe_to_USB.png target=_blank rel="noopener noreferrer">こちら</a> をクリックしてください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=micro-hdmi-ポート>Micro HDMI ポート<a href=#micro-hdmi-ポート class=hash-link aria-label="Micro HDMI ポート への直接リンク" title="Micro HDMI ポート への直接リンク">​</a></h3>
+<p>キャリアボードには micro HDMI ポートがあり、<strong>micro HDMI から標準 HDMI ケーブル</strong>を使用して HDMI ディスプレイに接続することができます。最大 4K 解像度で 60fps の動画をサポートしています。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=回路図-4>回路図<a href=#回路図-4 class=hash-link aria-label="回路図 への直接リンク" title="回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/micro-HDMI.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は <a href=https://files.seeedstudio.com/wiki/102110497/micro-HDMI.png target=_blank rel="noopener noreferrer">こちら</a> をクリックしてください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=uart-io>UART IO<a href=#uart-io class=hash-link aria-label="UART IO への直接リンク" title="UART IO への直接リンク">​</a></h3>
+<p>キャリアボードには <strong>UART 通信</strong>用の <strong>4 ピンインターフェース</strong>があります。このインターフェースを使用して、<strong>USB からシリアルアダプターケーブル</strong>を使用して直接 <strong>Raspberry Pi OS</strong> にログインすることができます。このインターフェースには <strong>TX, RX, 3V3, GND</strong> のピンがあります。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/UART.png alt=pir width=1000 height=auto></p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=ブートモードピン>ブートモードピン<a href=#ブートモードピン class=hash-link aria-label="ブートモードピン への直接リンク" title="ブートモードピン への直接リンク">​</a></h3>
+<p>この <strong>3 ピンインターフェース</strong>は、キャリアボードを <strong>USB デバイス</strong>として使用したい場合に使用されます。<strong>GND</strong> と <strong>BOOT</strong> ピンをショートすると、<strong>eMMC ストレージ</strong>または <strong>micro-SD カードストレージ</strong>に <strong>ホスト PC</strong> を使用してアクセスすることができます。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/boot-pins.png alt=pir width=1000 height=auto></p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=リセットボタン>リセットボタン<a href=#リセットボタン class=hash-link aria-label="リセットボタン への直接リンク" title="リセットボタン への直接リンク">​</a></h3>
+<p>このボタンは CM4 を <strong>リセット</strong>するために使用されます。<strong>ハードウェアリブート</strong>として機能します。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=回路図-5>回路図<a href=#回路図-5 class=hash-link aria-label="回路図 への直接リンク" title="回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/RESET.png alt=pir width=650 height=auto></p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=micro---sd-カードスロット>Micro - SD カードスロット<a href=#micro---sd-カードスロット class=hash-link aria-label="Micro - SD カードスロット への直接リンク" title="Micro - SD カードスロット への直接リンク">​</a></h3>
+<p>このボードには <strong>micro-sd カードスロット</strong>が装備されています。これは、<strong>eMMC を搭載していない CM4 モジュール</strong>を使用する際に、micro-SD カードに <strong>オペレーティングシステムをインストール</strong>するために便利です。最低でも 8GB 以上のカードを使用することを推奨します。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=回路図-6>回路図<a href=#回路図-6 class=hash-link aria-label="回路図 への直接リンク" title="回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/micro_SD.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は <a href=https://files.seeedstudio.com/wiki/102110497/micro_SD.png target=_blank rel="noopener noreferrer">こちら</a> をクリックしてください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=usb-type-c-ポート>USB Type-C ポート<a href=#usb-type-c-ポート class=hash-link aria-label="USB Type-C ポート への直接リンク" title="USB Type-C ポート への直接リンク">​</a></h3>
+<p>キャリアボードの <strong>USB Type-C ポート</strong>は <strong>5V/3A の電力でキャリアボードを給電</strong>するために使用できます。しかし、このポートは <strong>USB デバイス</strong>としても機能し、キャリアボードを <strong>ホスト PC</strong> に接続すると、キャリアボードが <strong>USB マスストレージデバイス</strong>として動作します。この場合、PC を介してキャリアボードの <strong>オンボード eMMC</strong> および接続された <strong>micro-SD カード</strong>にアクセスすることができます。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=usb-type-c-を-usb-デバイスとして使用する際の回路図>USB Type-C を USB デバイスとして使用する際の回路図<a href=#usb-type-c-を-usb-デバイスとして使用する際の回路図 class=hash-link aria-label="USB Type-C を USB デバイスとして使用する際の回路図 への直接リンク" title="USB Type-C を USB デバイスとして使用する際の回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/type-c.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は <a href=https://files.seeedstudio.com/wiki/102110497/type-c.png target=_blank rel="noopener noreferrer">こちら</a> をクリックしてください。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=電源管理の回路図>電源管理の回路図<a href=#電源管理の回路図 class=hash-link aria-label="電源管理の回路図 への直接リンク" title="電源管理の回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/power-manage.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は <a href=https://files.seeedstudio.com/wiki/102110497/power-manage.png target=_blank rel="noopener noreferrer">こちら</a> をクリックしてください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=4-ピンファンコネクター>4 ピンファンコネクター<a href=#4-ピンファンコネクター class=hash-link aria-label="4 ピンファンコネクター への直接リンク" title="4 ピンファンコネクター への直接リンク">​</a></h3>
+<p><strong>4 ピン PWM ファン</strong>をこのコネクターに接続し、ソフトウェアを使用して制御することができます。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=回路図-7>回路図<a href=#回路図-7 class=hash-link aria-label="回路図 への直接リンク" title="回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/Fan.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度画像は <a href=https://files.seeedstudio.com/wiki/102110497/Fan.png target=_blank rel="noopener noreferrer">こちら</a> をクリックしてください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=電源および動作-led>電源および動作 LED<a href=#電源および動作-led class=hash-link aria-label="電源および動作 LED への直接リンク" title="電源および動作 LED への直接リンク">​</a></h3>
+<p>キャリアボードには3つのLEDがあります。1つは電源がオンであることを示すもので、<strong>青色</strong>に点灯します。他の2つのLEDはキャリアボードの動作状態を示すもので、それぞれ<strong>緑色</strong>と<strong>白色</strong>に点灯します。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=回路図-8>回路図<a href=#回路図-8 class=hash-link aria-label="回路図 への直接リンク" title="回路図 への直接リンク">​</a></h4>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/LEDs.png alt=pir width=1000 height=auto></p>
+<p><strong>ヒント:</strong> 高解像度の画像は<a href=https://files.seeedstudio.com/wiki/102110497/LEDs.png target=_blank rel="noopener noreferrer">こちら</a>をクリックしてください。</p>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=はじめに---必要なハードウェア>はじめに - 必要なハードウェア<a href=#はじめに---必要なハードウェア class=hash-link aria-label="はじめに - 必要なハードウェア への直接リンク" title="はじめに - 必要なハードウェア への直接リンク">​</a></h2>
+<p>Raspberry Pi CM4用デュアルギガビットイーサネットキャリアボードを使用する前に、以下のハードウェアを準備してください。</p>
+<ul>
+<li>Raspberry Pi CM4用デュアルギガビットイーサネットキャリアボード</li>
+<li>16GB（またはそれ以上）のmicro-SDカード</li>
+<li>micro-SDカードリーダー</li>
+<li>コンピュータ（PC/Mac/Linux）</li>
+<li>電源アダプタ（5V/3A）</li>
+<li>USB Type-Cケーブル</li>
+<li>USBシリアルコンバータ、イーサネットケーブル（オプション）</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=はじめに---ソフトウェアセットアップ>はじめに - ソフトウェアセットアップ<a href=#はじめに---ソフトウェアセットアップ class=hash-link aria-label="はじめに - ソフトウェアセットアップ への直接リンク" title="はじめに - ソフトウェアセットアップ への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=raspberry-pi-osのフラッシュ>Raspberry Pi OSのフラッシュ<a href=#raspberry-pi-osのフラッシュ class=hash-link aria-label="Raspberry Pi OSのフラッシュ への直接リンク" title="Raspberry Pi OSのフラッシュ への直接リンク">​</a></h3>
+<p>次に、<strong>Raspberry Pi OS</strong>を**micro-SDカード（非eMMCバージョンの場合）<strong>または</strong>eMMCストレージ（eMMCバージョンの場合）**にフラッシュする必要があります。これにより、Raspberry Pi Compute Module 4で動作するようになります。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=micro-sdカードへのフラッシュcm4非emmcバージョン>micro-SDカードへのフラッシュ（CM4非eMMCバージョン）<a href=#micro-sdカードへのフラッシュcm4非emmcバージョン class=hash-link aria-label="micro-SDカードへのフラッシュ（CM4非eMMCバージョン） への直接リンク" title="micro-SDカードへのフラッシュ（CM4非eMMC��バージョン） への直接リンク">​</a></h4>
+<p>eMMCを搭載していないCompute Module 4をお持ちの場合は、micro-SDカードを挿入してRaspberry Pi OSをフラッシュする必要があります。以下の手順に従ってください（使用しているオペレーティングシステムに応じて異なります）。</p>
+<ul>
+<li>
+<p><strong>ステップ1.</strong> <strong>micro-SDカードリーダー</strong>を使用してmicro-SDカードをコンピュータに挿入するか、ノートパソコンの<strong>内蔵カードリーダー</strong>を使用します。</p>
+</li>
+<li>
+<p><strong>ステップ2.</strong> <a href=https://www.raspberrypi.org/software/ target=_blank rel="noopener noreferrer">このリンク</a>から<strong>Raspberry Pi Imager</strong>ソフトウェアをダウンロードします。</p>
+</li>
+</ul>
+<p><strong>注意:</strong> <strong>Windows、Mac、またはUbuntu</strong>用を選択してダウンロードできます。</p>
+<ul>
+<li><strong>ステップ3.</strong> Raspberry Pi Imagerソフトウェアを開きます。</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png alt=pir width=600 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ4.</strong> <strong>CHOOSE OS</strong>をクリックして、最新バージョンの**Raspberry Pi OS（32-bit）**を選択します。</p>
+</li>
+<li>
+<p><strong>ステップ5.</strong> <strong>CHOOSE STORAGE</strong>をクリックして、接続されたmicro-SDカードを選択します。</p>
+</li>
+<li>
+<p><strong>ステップ6.</strong> 最後に、<strong>WRITE</strong>をクリックします。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png alt=pir width=600 height=auto></p>
+<p>フラッシュプロセスが完了するまで数分お待ちください。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=emmcへのフラッシュcm4-emmcバー�ジョン>eMMCへのフラッシュ（CM4 eMMCバージョン）<a href=#emmcへのフラッシュcm4-emmcバージョン class=hash-link aria-label="eMMCへのフラッシュ（CM4 eMMCバージョン） への直接リンク" title="eMMCへのフラッシュ（CM4 eMMCバージョン） への直接リンク">​</a></h4>
+<p>eMMCを搭載したCompute Module 4をお持ちの場合は、直接eMMCストレージにRaspberry Pi OSをフラッシュできます。必要なドライバをインストールした後、CM4のUSB Type-CポートをPCに接続すると、外部ドライブとして表示されます。以下の手順に従ってください（使用しているオペレーティングシステムに応じて異なります）。</p>
+<h5 class="anchor anchorWithStickyNavbar_fF9Z" id=windowsの場合>Windowsの場合<a href=#windowsの場合 class=hash-link aria-label="Windowsの場合 への直接リンク" title="Windowsの場合 への直接リンク">​</a></h5>
+<ul>
+<li>
+<p><strong>ステップ1.</strong> 必要なドライバとブートツールをインストールするために、<a href=https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe target=_blank rel="noopener noreferrer">このインストーラ</a>をダウンロードして実行します。</p>
+</li>
+<li>
+<p><strong>ステップ2.</strong> プログラミングモードを有効にするために、<strong>Boot</strong>ピンと<strong>GND</strong>ピンの間にジャンパーワイヤを接続します。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/boot-pins.png alt=pir width=1000 height=auto></p>
+<ul>
+<li><strong>ステップ3.</strong> USB Type-Cケーブルを介してキャリアボードをPCに接続します。</li>
+</ul>
+<p>Windowsがハードウェアを検出し、必要なドライバをインストールします。</p>
+<ul>
+<li>
+<p><strong>ステップ4.</strong> 先ほどインストールした<strong>rpiboot</strong>ツールを検索して開きます。</p>
+</li>
+<li>
+<p><strong>ステップ5.</strong> <strong>ファイルエクスプローラー</strong>を開くと、Compute Module 4のeMMCが<strong>USBマスストレージデバイス</strong>として表示されます。</p>
+</li>
+<li>
+<p><strong>ステップ6.</strong> <a href=https://www.raspberrypi.org/software/ target=_blank rel="noopener noreferrer">このリンク</a>から<strong>Raspberry Pi Imager</strong>ソフトウェアをダウンロードします。</p>
+</li>
+<li>
+<p><strong>ステップ7.</strong> Raspberry Pi Imagerソフトウェアを開きます。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png alt=pir width=600 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ8.</strong> <strong>CHOOSE OS</strong>をクリックして、最新バージョンの**Raspberry Pi OS（32-bit）**を選択します。</p>
+</li>
+<li>
+<p><strong>ステップ9.</strong> <strong>CHOOSE STORAGE</strong>をクリックして、接続されたeMMCドライブを選択します。</p>
+</li>
+<li>
+<p><strong>ステップ10.</strong> 最後に、<strong>WRITE</strong>をクリックします。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png alt=pir width=600 height=auto></p>
+<p>フラッシュプロセスが完了するまで数分お待ちください。</p>
+<h5 class="anchor anchorWithStickyNavbar_fF9Z" id=maclinuxの場合>Mac/Linuxの場合<a href=#maclinuxの場合 class=hash-link aria-label="Mac/Linuxの場合 への直接リンク" title="Mac/Linuxの場合 への直接リンク">​</a></h5>
+<p>Gitを使用して<strong>rpiboot</strong>のソースコードを取得します。そのため、Gitがインストールされていることを確認してください。</p>
+<ul>
+<li><strong>ステップ1.</strong> <strong>ターミナル</strong>ウィンドウを開き、以下を入力して<strong>パッケージリスト</strong>を更新します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt-get</span><span class="token plain"> update</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ2.</strong> 以下のコマンドで<strong>Git</strong>をインストールします。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">git</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ3.</strong> 日付が正しく設定されていない場合、Gitがエラーを出すことがあります。以下を入力して修正します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">date</span><span class="token plain"> MMDDhhmm</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> <strong>MM</strong>は月、<strong>DD</strong>は日付、<strong>hh</strong>は時間、<strong>mm</strong>は分を表します。</p>
+<ul>
+<li><strong>ステップ4.</strong> <strong>usbboot</strong>ツールリポジトリをクローンします。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">git</span><span class="token plain"> clone </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--depth</span><span class="token operator">=</span><span class="token number">1</span><span class="token plain"> https://github.com/raspberrypi/usbboot</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> usbboot</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ5.</strong> 以下を入力して<strong>libusb</strong>をインストールします。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> libusb-1.0-0-dev</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ6.</strong> usbbootツールをビルドしてインストールします。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">make</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ7.</strong> usbbootツールを実行し、接続を待機します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> ./rpiboot</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ8.</strong> プログラミングモードを有効にするために、<strong>Boot</strong>ピンと<strong>GND</strong>ピンの間にジャンパーワイヤを接続します。</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/boot-pins.png alt=pir width=1000 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ9.</strong> USB Type-Cケーブルを介してキャリアボードをPCに接続します。</p>
+</li>
+<li>
+<p><strong>ステップ10.</strong> <a href=https://www.raspberrypi.org/software/ target=_blank rel="noopener noreferrer">このリンク</a>から<strong>Raspberry Pi Imager</strong>ソフトウェアをダウンロードします。</p>
+</li>
+<li>
+<p><strong>ステップ11.</strong> Raspberry Pi Imagerソフトウェアを開きます。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png alt=pir width=600 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ12.</strong> <strong>CHOOSE OS</strong>をクリックして、最新バージョンの**Raspberry Pi OS（32-bit）**を選択します。</p>
+</li>
+<li>
+<p><strong>ステップ13.</strong> <strong>CHOOSE STORAGE</strong>をクリックして、接続されたeMMCドライブを選択します。</p>
+</li>
+<li>
+<p><strong>ステップ14.</strong> 最後に、<strong>WRITE</strong>をクリックします。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png alt=pir width=600 height=auto></p>
+<p>フラッシュプロセスが完了するまで数分お待ちください。</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=raspberry-pi-os-にログインする>Raspberry Pi OS にログインする<a href=#raspberry-pi-os-にログインする class=hash-link aria-label="Raspberry Pi OS にログインする への直接リンク" title="Raspberry Pi OS にログインする への直接リンク">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=方法-1-wi-fi-経由で-ssh-を使用する>方法 1: Wi-Fi 経由で SSH を使用する<a href=#方法-1-wi-fi-経由で-ssh-を使用する class=hash-link aria-label="方法 1: Wi-Fi 経由で SSH を使用する への直接リ�ンク" title="方法 1: Wi-Fi 経由で SSH を使用する への直接リンク">​</a></h4>
+<p><strong>Wi-Fi 経由で SSH</strong> を使用して Raspberry Pi OS にログインしたい場合は、以下の手順に従ってください。お使いのオペレーティングシステムに応じて手順を進めてください。</p>
+<h5 class="anchor anchorWithStickyNavbar_fF9Z" id=windowsの場合-1>Windowsの場合<a href=#windowsの場合-1 class=hash-link aria-label="Windowsの場合 への直接リンク" title="Windowsの場合 への直接リンク">​</a></h5>
+<ul>
+<li>
+<p><strong>ステップ 1.</strong> <strong>micro-SDカードリーダー</strong>を使用して、またはノートパソコンの<strong>内蔵カードリーダー</strong>を使用して、Raspberry Pi OS がインストールされた micro-SD カードをコンピュータに挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 2.</strong> <strong>メモ帳</strong>を開き、以下を入力します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">country</span><span class="token operator">=</span><span class="token plain">CN</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">ctrl_interface</span><span class="token operator">=</span><span class="token plain">DIR</span><span class="token operator">=</span><span class="token plain">/var/run/wpa_supplicant </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">GROUP</span><span class="token operator">=</span><span class="token plain">netdev</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">update_config</span><span class="token operator">=</span><span class="token number">1</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"> </span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">network</span><span class="token operator">=</span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">ssid</span><span class="token operator">=</span><span class="token string" style="color:rgb(255, 121, 198)">"WiFi-name"</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">psk</span><span class="token operator">=</span><span class="token string" style="color:rgb(255, 121, 198)">"WiFi-password"</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">key_mgmt</span><span class="token operator">=</span><span class="token plain">WPA-PSK</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">priority</span><span class="token operator">=</span><span class="token number">1</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> 国コード (country) は、ボードを使用している国の <a href=https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements target=_blank rel="noopener noreferrer">ISO/IEC alpha2 コード</a> に設定してください。</p>
+<ul>
+<li>
+<p><strong>ステップ 3.</strong> <code>ファイル > 名前を付けて保存</code> をクリックします。</p>
+</li>
+<li>
+<p><strong>ステップ 4.</strong> micro-SD カードの接続されたドライブ名に移動します。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/select_USB.png alt=pir width=650 height=auto></p>
+<ul>
+<li><strong>ステップ 5.</strong> ファイル名を <strong>wpa_supplicant.conf</strong> と入力し、<strong>保存するファイルの種類</strong>を <strong>すべてのファイル</strong> に設定して <strong>保存</strong> をクリックします。</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/wpa_supplicant.png alt=pir width=650 height=auto></p>
+<ul>
+<li><strong>ステップ 6.</strong> <strong>コマンドプロンプト</strong>を開き、micro-SD カードに移動します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">例: </span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">C:</span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain">Users</span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain">user</span><span class="token operator">></span><span class="token plain"> F:</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">F:</span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token operator">></span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 7.</strong> micro-SD カード内にいる場合、以下を入力して空のファイル <strong>SSH</strong> を作成します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token builtin class-name" style="color:rgb(189, 147, 249)">echo</span><span class="token plain"> </span><span class="token operator">></span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> これは Raspberry Pi OS で SSH を有効にするために行います。</p>
+<ul>
+<li>
+<p><strong>ステップ 8.</strong> PC から micro-SD カードを取り出し、Dual Gigabit Ethernet Carrier Board に挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 9.</strong> USB Type-C ケーブルをキャリアボードの Type-C ポートに接続し、ケーブルのもう一方を電源アダプタに接続して電源を入れます。</p>
+</li>
+<li>
+<p><strong>ステップ 10.</strong> <a href=https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html target=_blank rel="noopener noreferrer">このリンク</a>から <strong>Putty</strong> をダウンロードしてインストールします。</p>
+</li>
+</ul>
+<p><strong>注意:</strong> Putty は SSH および telnet クライアントで、これを使用してキャリアボードに SSH 経由で接続できます。</p>
+<ul>
+<li>
+<p><strong>ステップ 11.</strong> PC をキャリアボードに接続するために Putty を開きます。</p>
+</li>
+<li>
+<p><strong>ステップ 12.</strong> <strong>Connection Type</strong> で <strong>SSH</strong> を選択します。</p>
+</li>
+<li>
+<p><strong>ステップ 13.</strong> <strong>Host Name</strong> に <strong>raspberrypi.local</strong> を入力し、<strong>Port</strong> は <strong>22</strong> のままにします。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss3.png alt=pir width=450 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ 14.</strong> <strong>Open</strong> をクリックします。</p>
+</li>
+<li>
+<p><strong>ステップ 15.</strong> Putty ウィンドウで以下のログイン情報を入力します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">- ユーザー名: pi</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">- パスワード: raspberry</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 16.</strong> Raspberry Pi OS に正常にログインできた場合、以下の出力が表示されます。</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/SSH_WiFi.png alt=pir width=900 height=auto></p>
+<h5 class="anchor anchorWithStickyNavbar_fF9Z" id=maclinuxの場合-1>Mac/Linuxの場合<a href=#maclinuxの場合-1 class=hash-link aria-label="Mac/Linuxの場合 への直接リンク" title="Mac/Linuxの場合 への直接リンク">​</a></h5>
+<ul>
+<li>
+<p><strong>ステップ 1.</strong> <strong>micro-SDカードリーダー</strong>を使用して、またはノートパソコンの<strong>内蔵カードリーダー</strong>を使用して、Raspberry Pi OS がインストールされた micro-SD カードをコンピュータに挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 2.</strong> <strong>ターミナル</strong>を開き、micro-SD カードに移動します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">例: </span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> /media/user/boot</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> <strong>/media/user/boot</strong> の <strong>user</strong> を PC のユーザー名に置き換えてください。</p>
+<ul>
+<li><strong>ステップ 3.</strong> micro-SD カード内にいる場合、<strong>wpa_supplicant.conf</strong> というファイルを作成して開きます。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">nano</span><span class="token plain"> wpa_supplicant.conf</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 4.</strong> ファイルに以下の内容を入力します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">country</span><span class="token operator">=</span><span class="token plain">CN</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">ctrl_interface</span><span class="token operator">=</span><span class="token plain">DIR</span><span class="token operator">=</span><span class="token plain">/var/run/wpa_supplicant </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">GROUP</span><span class="token operator">=</span><span class="token plain">netdev</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">update_config</span><span class="token operator">=</span><span class="token number">1</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"> </span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">network</span><span class="token operator">=</span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">ssid</span><span class="token operator">=</span><span class="token string" style="color:rgb(255, 121, 198)">"WiFi-name"</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">psk</span><span class="token operator">=</span><span class="token string" style="color:rgb(255, 121, 198)">"WiFi-password"</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">key_mgmt</span><span class="token operator">=</span><span class="token plain">WPA-PSK</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">priority</span><span class="token operator">=</span><span class="token number">1</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> 国コード (country) は、ボードを使用している国の <a href=https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements target=_blank rel="noopener noreferrer">ISO/IEC alpha2 コード</a> に設定してください。</p>
+<ul>
+<li>
+<p><strong>ステップ 5.</strong> キーボードで <strong>Ctrl + x</strong> を押してファイルを保存し、<strong>y</strong> を押して変更を確認し、<strong>Enter</strong> を押します。</p>
+</li>
+<li>
+<p><strong>ステップ 6.</strong> <strong>boot</strong> ドライブ内にいる間に、以下を入力して空のファイル <strong>SSH</strong> を作成します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">touch</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> これは Raspberry Pi OS で SSH を有効にするために行います。</p>
+<ul>
+<li>
+<p><strong>ステップ 7.</strong> PC から micro-SD カードを取り出し、Dual Gigabit Ethernet Carrier Board に挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 8.</strong> USB Type-C ケーブルをキャリアボードの Type-C ポートに接続し、ケーブルのもう一方を電源アダプタに接続して電源を入れます。</p>
+</li>
+<li>
+<p><strong>ステップ 9.</strong> 再び PC 上で <strong>ターミナル</strong> を開き、以下を入力します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><span class="token plain"> pi@raspberrypi.local</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 10.</strong> 以下のメッセージが表示されたら <strong>yes</strong> と入力します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">ECDSA key fingerprint is SHA256:XXXXXXX.</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">Are you sure you want to </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">continue</span><span class="token plain"> connecting </span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">yes/no/</span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain">fingerprint</span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain">?</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 11.</strong> パスワードを求められたら、以下を入力します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">raspberry</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 12.</strong> Raspberry Pi OS に正常にログインできた場合、以下の出力が表示されます。</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png alt=pir width=900 height=auto></p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=方法-2-ethernet-経由で-ssh-を使用する>方法 2: Ethernet 経由で SSH を使用する<a href=#方法-2-ethernet-経由で-ssh-を使用する class=hash-link aria-label="方法 2: Ethernet 経由で SSH を使用する への直接リンク" title="方法 2: Ethernet 経由で SSH を使用する への直接リンク">​</a></h4>
+<p><strong>Ethernet 経由で SSH</strong> を使用して Raspberry Pi OS にログインしたい場合は、以下の手順に従ってください。お使いのオペレーティングシステムに応じて手順を進めてください。</p>
+<h5 class="anchor anchorWithStickyNavbar_fF9Z" id=windowsの場合-2>Windowsの場合<a href=#windowsの場合-2 class=hash-link aria-label="Windowsの場合 への直接リンク" title="Windowsの場合 への直接リンク">​</a></h5>
+<ul>
+<li>
+<p><strong>ステップ 1.</strong> <strong>micro-SDカードリーダー</strong>を使用して、またはノートパソコンの<strong>内蔵カードリーダー</strong>を使用して、Raspberry Pi OS がインストールされた micro-SD カードをコンピュータに挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 2.</strong> <strong>コマンドプロンプト</strong>を開き、micro-SD カードに移動します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">例: </span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">C:</span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain">Users</span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token plain">user</span><span class="token operator">></span><span class="token plain"> F:</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">F:</span><span class="token punctuation" style="color:rgb(248, 248, 242)">\</span><span class="token operator">></span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 3.</strong> micro-SD カード内にいる場合、以下を入力して空のファイル <strong>SSH</strong> を作成します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token builtin class-name" style="color:rgb(189, 147, 249)">echo</span><span class="token plain"> </span><span class="token operator">></span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><br></span></code></pre></div></div>
+<p>これは Raspberry Pi OS で SSH を有効にするための手順です。</p>
+<ul>
+<li>
+<p><strong>ステップ 4.</strong> PC から micro-SD カードを取り出し、Dual Gigabit Ethernet Carrier Board に挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 5.</strong> USB Type-C ケーブルをキャリアボードの Type-C ポートに接続し、Ethernet ケーブルをキャリアボードの Ethernet ポートのいずれかに接続します。</p>
+</li>
+<li>
+<p><strong>ステップ 6.</strong> Ethernet ケーブルのもう一方の端をルーターに接続し、Type-C ケーブルのもう一方の端を電源アダプターに接続して電源を入れます。</p>
+</li>
+<li>
+<p><strong>ステップ 7.</strong> <a href=https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html target=_blank rel="noopener noreferrer">このリンク</a>から <strong>Putty</strong> をダウンロードしてインストールします。</p>
+</li>
+</ul>
+<p><strong>注意:</strong> Putty は SSH および telnet クライアントであり、これを使用してキャリアボードに SSH 経由で接続できます。</p>
+<ul>
+<li>
+<p><strong>ステップ 8.</strong> PC をキャリアボードに接続するために Putty を開きます。</p>
+</li>
+<li>
+<p><strong>ステップ 9.</strong> <strong>Connection Type</strong> で <strong>SSH</strong> を選択します。</p>
+</li>
+<li>
+<p><strong>ステップ 10.</strong> <strong>Host Name</strong> に <strong>raspberrypi.local</strong> と入力し、<strong>Port</strong> は <strong>22</strong> のままにします。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/ss3.png alt=pir width=450 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ 11.</strong> <strong>Open</strong> をクリックします。</p>
+</li>
+<li>
+<p><strong>ステップ 12.</strong> Putty ウィンドウで以下のログイン情報を入力します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">- ユーザー名: pi</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">- パスワード: raspberry</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 13.</strong> Raspberry Pi OS に正常にログインできた場合、以下の出力が表示されます。</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/SSH_WiFi.png alt=pir width=900 height=auto></p>
+<h5 class="anchor anchorWithStickyNavbar_fF9Z" id=maclinux-の場合>Mac/Linux の場合<a href=#maclinux-の場合 class=hash-link aria-label="Mac/Linux の場合 への直接リンク" title="Mac/Linux の場合 への直接リンク">​</a></h5>
+<ul>
+<li>
+<p><strong>ステップ 1.</strong> Raspberry Pi OS がインストールされた micro-SD カードを <strong>micro-SD カードリーダー</strong> を使用してコンピュータに挿入するか、ノートパソコンの <strong>内蔵カードリーダー</strong> を使用します。</p>
+</li>
+<li>
+<p><strong>ステップ 2.</strong> <strong>Terminal</strong> を開き、micro-SD カードに移動します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">例: </span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> /media/user/boot</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> <strong>/media/user/boot</strong> の <strong>user</strong> を PC のユーザー名に置き換えてください。</p>
+<ul>
+<li><strong>ステップ 3.</strong> micro-SD カード内にいる場合、以下を入力して空のファイル <strong>SSH</strong> を作成します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">touch</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> これは Raspberry Pi OS で SSH を有効にするために行います。</p>
+<ul>
+<li>
+<p><strong>ステップ 4.</strong> PC から micro-SD カードを取り出し、Dual Gigabit Ethernet Carrier Board に挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 5.</strong> USB Type-C ケーブルをキャリアボードの Type-C ポートに接続し、Ethernet ケーブルをキャリアボードの Ethernet ポートのいずれかに接続します。</p>
+</li>
+<li>
+<p><strong>ステップ 6.</strong> Ethernet ケーブルのもう一方の端をルーターに接続し、Type-C ケーブルのもう一方の端を電源アダプターに接続して電源を入れます。</p>
+</li>
+<li>
+<p><strong>ステップ 7.</strong> 再度 PC で <strong>Terminal</strong> を開き、以下を入力します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">ssh</span><span class="token plain"> pi@raspberrypi.local</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 8.</strong> 以下のメッセージに対して <strong>yes</strong> と入力します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">ECDSA key fingerprint is SHA256:XXXXXXX.</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">Are you sure you want to </span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">continue</span><span class="token plain"> connecting </span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">yes/no/</span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain">fingerprint</span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain">?</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 9.</strong> パスワードを求められたら、以下を入力します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">raspberry</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 10.</strong> Raspberry Pi OS に正常にログインできた場合、以下の出力が表示されます。</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png alt=pir width=900 height=auto></p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=方法-3-usb-to-serial-converter-を使用する>方法 3: USB to Serial Converter を使用する<a href=#方法-3-usb-to-serial-converter-を使用する class=hash-link aria-label="方法 3: USB to Serial Converter を使用する への直接リンク" title="方法 3: USB to Serial Converter を使用する への直接リンク">​</a></h4>
+<h5 class="anchor anchorWithStickyNavbar_fF9Z" id=windows-の場合>Windows の場合<a href=#windows-の場合 class=hash-link aria-label="Windows の場合 への直接リンク" title="Windows の場合 への直接リンク">​</a></h5>
+<p><strong>USB to Serial Converter</strong> を使用して、以下の手順で Raspberry Pi OS にログインできます。</p>
+<ul>
+<li>
+<p><strong>ステップ 1.</strong> Raspberry Pi OS がインストールされた micro-SD カードを <strong>micro-SD カードリーダー</strong> を使用してコンピュータに挿入するか、ノートパソコンの <strong>内蔵カードリーダー</strong> を使用します。</p>
+</li>
+<li>
+<p><strong>ステップ 2.</strong> <strong>File Explorer</strong> を開き、接続された micro-SD カードに移動します。</p>
+</li>
+<li>
+<p><strong>ステップ 3.</strong> <strong>config.txt</strong> ファイルを開き、最後に以下の行を追加します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">enable_uart</span><span class="token operator">=</span><span class="token number">1</span><br></span></code></pre></div></div>
+<p>これは PC とキャリアボード間の UART 通信を有効にするためです。</p>
+<ul>
+<li>
+<p><strong>ステップ 4.</strong> <code>File > Save</code> をクリックして設定を保存します。</p>
+</li>
+<li>
+<p><strong>ステップ 5.</strong> PC から micro-SD カードを取り出し、キャリアボードに戻します。</p>
+</li>
+<li>
+<p><strong>ステップ 6.</strong> キャリアボードの <strong>UART IO</strong> に <strong>4-Pin Male Header</strong> をハンダ付けします。</p>
+</li>
+<li>
+<p><strong>ステップ 7.</strong> USB to Serial Converter のジャンパーワイヤーをキャリアボードの <strong>UART IO ピンヘッダー</strong> に以下のように接続します。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/UART.png alt=pir width=1000 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ 8.</strong> USB to Serial Converter を PC に接続します。</p>
+</li>
+<li>
+<p><strong>ステップ 9.</strong> Windows の検索ボックスに <strong>Device Manager</strong> と入力して <strong>Device Manager</strong> を開きます。</p>
+</li>
+<li>
+<p><strong>ステップ 10.</strong> <strong>Ports (COM & LPT)</strong> のドロップダウン矢印をクリックし、接続されたシリアルポートの名前を確認します (例: <strong>COM42</strong>)。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/BBG-LCD-Cape-with-Resistive-Touch/img/com-show.png alt=pir width=320 height=auto></p>
+<ul>
+<li><strong>ステップ 11.</strong> <a href=https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html target=_blank rel="noopener noreferrer">このリンク</a>から <strong>Putty</strong> をダウンロードしてインストールします。</li>
+</ul>
+<p><strong>注意:</strong> Putty は SSH および telnet クライアントであり、これを使用してキャリアボードに SSH 経由で接続できます。すでに Putty をインストールしている場合、このステップはスキップできます。</p>
+<ul>
+<li>
+<p><strong>ステップ 12.</strong> PC をキャリアボードに接続するために Putty を開きます。</p>
+</li>
+<li>
+<p><strong>ステップ 13.</strong> <strong>Connection Type</strong> で <strong>Serial</strong> を選択します。</p>
+</li>
+<li>
+<p><strong>ステップ 14.</strong> 以下のように設定を構成します:</p>
+<ul>
+<li>Serial line: COM4 (使用する COM ポートを選択)</li>
+<li>Speed: 115200</li>
+</ul>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/Putty_Serial_1.png alt=pir width=450 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ 15.</strong> <strong>Open</strong> をクリックします。</p>
+</li>
+<li>
+<p><strong>ステップ 16.</strong> Putty ウィンドウで以下のログイン情報を入力します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">- ユーザー名: pi</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">- パスワード: raspberry</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 17.</strong> Raspberry Pi OS に正常にログインできた場合、以下の出力が表示されます。</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/SSH_WiFi.png alt=pir width=900 height=auto></p>
+<h5 class="anchor anchorWithStickyNavbar_fF9Z" id=maclinux-の場合-1>Mac/Linux の場合<a href=#maclinux-の場合-1 class=hash-link aria-label="Mac/Linux の場合 への直接リンク" title="Mac/Linux の場合 への直接リンク">​</a></h5>
+<p><strong>USB to Serial Converter</strong> を使用して、以下の手順で Raspberry Pi OS にログインできます。</p>
+<ul>
+<li>
+<p><strong>ステップ 1.</strong> Raspberry Pi OS がインストールされた micro-SD カードを、<strong>micro-SD カードリーダー</strong>を使用してコンピュータに接続するか、ノートパソコンの<strong>内蔵カードリーダー</strong>を使用してコンピュータに挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 2.</strong> <strong>boot</strong> ドライブを開き、接続された micro-SD カードに移動します。</p>
+</li>
+<li>
+<p><strong>ステップ 3.</strong> <strong>config.txt</strong> ファイルを開き、以下の行を末尾に追加します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">enable_uart</span><span class="token operator">=</span><span class="token number">1</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> これは PC とキャリアボード間の UART 通信を有効にするためです。</p>
+<ul>
+<li>
+<p><strong>ステップ 4.</strong> <code>ファイル > 保存</code> をクリックして設定を保存します。</p>
+</li>
+<li>
+<p><strong>ステップ 5.</strong> micro-SD カードを PC から取り出し、キャリアボードに再挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 6.</strong> キャリアボードの <strong>UART IO</strong> に <strong>4ピンオスヘッダー</strong> を以下のようにハンダ付けします。</p>
+</li>
+<li>
+<p><strong>ステップ 7.</strong> USB からシリアルコンバータのジャンパーワイヤーをキャリアボードの <strong>UART IO ピンヘッダー</strong> に接続します。</p>
+</li>
+</ul>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/UART.png alt=pir width=1000 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ 8.</strong> USB からシリアルコンバータを PC に接続します。</p>
+</li>
+<li>
+<p><strong>ステップ 9.</strong> Mac/Linux で <strong>ターミナルウィンドウ</strong> を開きます。</p>
+</li>
+<li>
+<p><strong>ステップ 10.</strong> 以下を入力して <strong>パッケージリスト</strong> を更新します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt-get</span><span class="token plain"> update</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 11.</strong> 以下を入力して <strong>minicom</strong> をインストールします。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">apt-get</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> minicom</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 12.</strong> ターミナルで以下を入力して接続されたシリアルデバイスを確認します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">dmesg</span><span class="token plain"> </span><span class="token operator">|</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">grep</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">tty</span><br></span></code></pre></div></div>
+<blockquote>
+<p>例:<br>
+[ 1562.048241] cdc_acm 1-3:1.0: ttyACM0: USB ACM device</p>
+</blockquote>
+<ul>
+<li><strong>ステップ 13.</strong> 以下を入力してシリアルデバイスに接続します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">minicom </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-D</span><span class="token plain"> /dev/ttyACM0 </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-b</span><span class="token plain"> </span><span class="token number">115200</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> ボーレートは 115200 に設定されています。</p>
+<ul>
+<li><strong>ステップ 14.</strong> 上記のハードウェア接続後、壁の電源ソケットから電源をオンにしてキャリアボードを起動します。</li>
+</ul>
+<p>これで Raspberry Pi OS に正常にログインできました。</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=方法-4-キーボードマウスディスプレイを使用する>方法 4: キーボード、マウス、ディスプレイを使用する<a href=#方法-4-キーボードマウスディスプレイを使用する class=hash-link aria-label="方法 4: キーボード、マウス、ディスプレイを使用する への直接リンク" title="方法 4: キーボード、マウス、ディスプレイを使用する への直接リンク">​</a></h4>
+<p><strong>HDMI ディスプレイ、micro-HDMI からフルサイズ HDMI ケーブル、キーボード、マウス</strong>をお持ちの場合、それらをデュアルギガビットイーサネットキャリアボードに接続して Raspberry Pi OS にログインできます。</p>
+<p>(図を描く - あまり重要ではありません)</p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=usb-ポートの設定>USB ポートの設定<a href=#usb-ポートの設定 class=hash-link aria-label="USB ポートの設定 への直接リンク" title="USB ポートの設定 への直接リンク">​</a></h3>
+<p>デフォルトでは、<strong>2つの USB 3.0 ポート</strong>は CM4 の電力を節約するために<strong>無効</strong>になっており、すぐには使用できません。ただし、<strong>USB 3.0 9ピンヘッダー</strong>は初期状態で<strong>使用可能</strong>です。</p>
+<p>2つの USB 3.0 ポートを有効にするには、<strong>/boot</strong> ディレクトリ内の <strong>config.txt</strong> ファイルの末尾に以下の行を追加する必要があります。</p>
+<p>これを行う方法は2つあります：</p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=方法-1-pc-に接続された-micro-sd-カードからファイルを�変更する>方法 1: PC に接続された micro-SD カードからファイルを変更する<a href=#方法-1-pc-に接続された-micro-sd-カードからファイルを変更する class=hash-link aria-label="方法 1: PC に接続された micro-SD カードからファイルを変更する への直接リンク" title="方法 1: PC に接続された micro-SD カードからファイルを変更する への直接リンク">​</a></h4>
+<ul>
+<li>
+<p><strong>ステップ 1.</strong> Raspberry Pi OS がインストールされた micro-SD カードをコンピュータに挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ 2.</strong> <strong>ファイルエクスプローラー</strong>を開き、接続された micro-SD カードに移動します。</p>
+</li>
+<li>
+<p><strong>ステップ 3.</strong> <strong>config.txt</strong> ファイルを開き、以下の行を末尾に追加します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">dtoverlay</span><span class="token operator">=</span><span class="token plain">dwc2,dr_mode</span><span class="token operator">=</span><span class="token plain">host</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 4.</strong> ファイルを保存します。</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=方法-2-キャリアボードからファイルを変更する>方法 2: キャリアボードからファイルを変更する<a href=#方法-2-キャリアボードからファイルを変更する class=hash-link aria-label="方法 2: キャリアボードからファイルを変更��する への直接リンク" title="方法 2: キャリアボードからファイルを変更する への直接リンク">​</a></h4>
+<ul>
+<li>
+<p><strong>ステップ 1.</strong> micro-SD カードをキャリアボードに挿入し、電源をオンにします。</p>
+</li>
+<li>
+<p><strong>ステップ 2.</strong> 前述のいずれかの方法を使用して Raspberry Pi OS にログインします。</p>
+</li>
+<li>
+<p><strong>ステップ 3.</strong> 以下を入力して <strong>boot</strong> ディレクトリに移動します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> /boot</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 4.</strong> <strong>nano テキストエディタ</strong>を使用して <strong>config.txt</strong> を開きます。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">nano</span><span class="token plain"> config.txt</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 5.</strong> 以下の行を末尾に追加します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">dtoverlay</span><span class="token operator">=</span><span class="token plain">dwc2,dr_mode</span><span class="token operator">=</span><span class="token plain">host</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 6.</strong> キーボードで <strong>Ctrl + X</strong> を押し、<strong>Y</strong> を押してから <strong>Enter</strong> を押してファイルを保存します。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=usb-ポート速度テスト>USB ポート速度テスト<a href=#usb-ポート速度テスト class=hash-link aria-label="USB ポート速度テスト への直接リンク" title="USB ポート速度テスト への直接リンク">​</a></h3>
+<p>USB ポートの速度をテストする場合、Raspberry Pi OS ターミナルで以下のコマンドを実行できます。</p>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">dd</span><span class="token plain"> </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">if</span><span class="token operator">=</span><span class="token plain">/dev/sda1 </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">of</span><span class="token operator">=</span><span class="token plain">/dev/null </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">bs</span><span class="token operator">=</span><span class="token plain">512k </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">count</span><span class="token operator">=</span><span class="token number">5000</span><br></span></code></pre></div></div>
+<p>出力は以下のようになります。</p>
+<p style=text-align:center><img src=https://raw.githubusercontent.com/lakshanthad/Image/master/CM4_wiki/USB_test.png alt=pir width=900 height=auto></p>
+<p><strong>注意:</strong> <strong>if=/dev/sda1</strong> の <strong>sda1</strong> は接続された USB ドライブです。以下のように <strong>lsblk</strong> を入力して確認できます。</p>
+<p style=text-align:center><img src=https://raw.githubusercontent.com/lakshanthad/Image/master/CM4_wiki/find_usb.png alt=pir width=700 height=auto></p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=イーサネットポートの設定>イーサネットポートの設定<a href=#イーサネットポートの設定 class=hash-link aria-label="イーサネットポートの設定 への直接リンク" title="イーサネットポートの設定 への直接リンク">​</a></h3>
+<p>CM4 モジュールに Raspberry Pi OS をフラッシュすると、<strong>Gigabit Ethernet PHY</strong> に接続されたイーサネットポート（右側のポート）でのみフルギガビット速度（1Gbps）を得ることができます。このポートは <strong>Broadcom BCM54210PE</strong> に基づいています。一方、<strong>Microchip の LAN7800 USB 3.0 to GbE (Gigabit Ethernet Bridge)</strong> に接続されたポート（左側のポート）は、フル速度の 1Gbps を提供せず、速度が大幅に低下します。これは、Raspberry Pi コアの lan78xx ドライバーが最新ではないためです。</p>
+<p>以下の手順に従ってスクリプトをインストールし、この問題を修正してください：</p>
+<ul>
+<li>
+<p><strong>ステップ 1.</strong> Raspberry Pi OS ターミナルウィンドウを開きます。</p>
+</li>
+<li>
+<p><strong>ステップ 2.</strong> 以下を入力してリポジトリをダウンロードします。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">git</span><span class="token plain"> clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 3.</strong> リポジトリディレクトリに移動します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> seeed-linux-dtoverlays</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 4.</strong> 以下を入力してスクリプトをインストールします。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> ./scripts/cm4_lan7800.sh</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 5.</strong> キャリアボードを再起動します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">reboot</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ 6.</strong> 以下を入力してインストール状況を確認します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">dmesg</span><span class="token plain"> </span><span class="token operator">|</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">grep</span><span class="token plain"> lan</span><br></span></code></pre></div></div>
+<p>以下の出力が表示された場合、ドライバーが正常に動作しています。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/LAN78_Driver.png alt=pir width=900 height=auto></p>
+<p><strong>注意:</strong> 使用方法のヘルプにアクセスする場合は、以下を入力してください。</p>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> ./cm4_lan7800.sh </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-h</span><br></span></code></pre></div></div>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/LAN78_help.png alt=pir width=900 height=auto></p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=sd-カード速度テスト>SD カード速度テスト<a href=#sd-カード速度テスト class=hash-link aria-label="SD カード速度テスト への直接リンク" title="SD カード速度テスト への直接リンク">​</a></h3>
+<p>Raspberry Pi OS ターミナルウィンドウにアクセスし、以下のコマンドを実行します。</p>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">dd</span><span class="token plain"> </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">if</span><span class="token operator">=</span><span class="token plain">/dev/mmcblk0p2 </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">of</span><span class="token operator">=</span><span class="token plain">/dev/null </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">bs</span><span class="token operator">=</span><span class="token plain">512k </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">count</span><span class="token operator">=</span><span class="token number">5000</span><br></span></code></pre></div></div>
+<p>出力は以下のようになります。</p>
+<p style=text-align:center><img src=https://raw.githubusercontent.com/lakshanthad/Image/master/CM4_wiki/SD_Test.png alt=pir width=900 height=auto></p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=dsiおよびcsiコネクタの設定>DSIおよびCSIコネクタの設定<a href=#dsiおよびcsiコネクタの設定 class=hash-link aria-label="DSIおよびCSIコネクタの設定 への直接リンク" title="DSIおよびCSIコネクタの設定 への直接リンク">​</a></h3>
+<p>DSIインターフェースを介してディスプレイを接続し、CSIインターフェースを介してカメラをキャリアボードに接続したい場合は、以下の手順に従ってください。</p>
+<ul>
+<li>
+<p><strong>ステップ1.</strong> ディスプレイをDSI1ポートに接続し、カメラをCSI1ポートに接続します。接続方法は以下の通りです。</p>
+</li>
+<li>
+<p><strong>ステップ2.</strong> Raspberry Pi OSのターミナルウィンドウ内で以下を実行して、ディスプレイとカメラを有効にします。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">wget</span><span class="token plain"> https://datasheets.raspberrypi.org/cmio/dt-blob-disp1-cam1.bin </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-O</span><span class="token plain"> /boot/dt-blob.bin</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> ここでの設定方法は、<a href=https://github.com/raspberrypi/documentation/blob/master/hardware/computemodule/cmio-display.md target=_blank rel="noopener noreferrer">cmio-display</a>および<a href=https://www.raspberrypi.org/documentation/configuration/camera.md target=_blank rel="noopener noreferrer">rpistill</a>から選択されています。</p>
+<ul>
+<li><strong>ステップ3.</strong> 以下のコマンドを実行して、カメラで写真を撮影し、ディスプレイでプレビューします。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">raspistill </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-v</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-o</span><span class="token plain"> test.jpg </span><br></span></code></pre></div></div>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/DSI_CSI.png alt=pir width=850 height=auto></p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=i2cの設定>I2Cの設定<a href=#i2cの設定 class=hash-link aria-label="I2Cの設定 への直接リンク" title="I2Cの設定 への直接リンク">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=ハードウェアセットアップ>ハードウェアセットアップ<a href=#ハードウェアセットアップ class=hash-link aria-label="ハードウェアセットアップ への直接リンク" title="ハードウェアセットアップ への直接リンク">​</a></h4>
+<p><strong>I2Cデバイス</strong>を<strong>FPCインターフェース</strong>に接続したい場合は、以下の接続を行ってください。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/FPC_I2C.png alt=pir width=1000 height=auto></p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/FPC_connect.png alt=pir width=1000 height=auto></p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=ソフトウェアセットアップ>ソフトウェアセットアップ<a href=#ソフトウェアセットアップ class=hash-link aria-label="ソフトウェアセットアップ への直接リンク" title="ソフトウェアセットアップ への直接リンク">​</a></h4>
+<p><strong>8ピンFPCコネクタ</strong>にI2Cデバイスを接続し、Raspberry Pi OSを使用して制御できます。</p>
+<ul>
+<li><strong>ステップ1.</strong> <strong>Raspberry Piソフトウェア設定ツール</strong>を開きます。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> raspi-config</span><br></span></code></pre></div></div>
+<ul>
+<li>
+<p><strong>ステップ2.</strong> <code>Interface Options > I2C</code>に移動し、<strong>Enter</strong>を押します。</p>
+</li>
+<li>
+<p><strong>ステップ3.</strong> <strong>Yes</strong>を選択してI2Cを有効にします。</p>
+</li>
+<li>
+<p><strong>ステップ4.</strong> キャリアボードを<strong>再起動</strong>します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">reboot</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=i2cデバッグ>I2Cデバッグ<a href=#i2cデバッグ class=hash-link aria-label="I2Cデバッグ への直接リンク" title="I2Cデバッグ への直接リンク">​</a></h3>
+<ul>
+<li>
+<p><strong>ステップ1.</strong> キャリアボードの<strong>8ピンFPCコネクタ</strong>にI2Cデバイスを接続します。</p>
+</li>
+<li>
+<p><strong>ステップ2.</strong> 利用可能なすべてのI2Cバスをリストします。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">i2cdetect </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-l</span><br></span></code></pre></div></div>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/I2C_Detect.png alt=pir width=1000 height=auto></p>
+<ul>
+<li><strong>ステップ3.</strong> 標準アドレスを即座にスキャンします（I2Cバス1（i2c-1）を使用）。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">i2cdetect </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> </span><span class="token number">1</span><br></span></code></pre></div></div>
+<p><strong>注意:</strong> 1はI2Cバス番号を表します。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/detect.png alt=pir width=1000 height=auto></p>
+<p>上記の画像は、I2Cアドレス0x5cでデバイスが検出されたことを示しています。</p>
+<ul>
+<li><strong>ステップ4.</strong> 以下を入力してレジスタの内容を読み取ります。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">i2cget </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-f</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> </span><span class="token number">1</span><span class="token plain"> 0x5c 0x0f</span><br></span></code></pre></div></div>
+<ul>
+<li>-yはインタラクティブモードを無効にします。デフォルトでは、i2cdetectはI2Cバスを操作する前にユーザーの確認を待ちます。このフラグを使用すると、直接操作を実行します。</li>
+<li>1はI2Cバス番号を表します。</li>
+<li>0x5cはI2Cデバイスアドレスを表します。</li>
+<li>0x0fはメモリアドレスを表します。</li>
+</ul>
+<p>出力は以下のようになります。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/i2cget.png alt=pir width=400 height=auto></p>
+<ul>
+<li><strong>ステップ5.</strong> 以下を入力してレジスタにデータを書き込みます。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">i2cset </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> </span><span class="token number">1</span><span class="token plain"> 0x5c 0x11 0x10</span><br></span></code></pre></div></div>
+<ul>
+<li>-yはインタラクティブモードを無効にします。デフォルトでは、i2cdetectはI2Cバスを操作する前にユーザーの確認を待ちます。このフラグを使用すると、直接操作を実行します。</li>
+<li>1はI2Cバス番号を表します。</li>
+<li>0x5cはI2Cデバイスアドレスを表します。</li>
+<li>0x11はメモリアドレスを表します。</li>
+<li>0x10はメモリアドレス内の特定の内容を表します。</li>
+</ul>
+<br>
+<ul>
+<li><strong>ステップ6.</strong> 以下を入力してすべてのレジスタ値を読み取ります。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">i2cdump </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-y</span><span class="token plain"> </span><span class="token number">1</span><span class="token plain"> 0x5c</span><br></span></code></pre></div></div>
+<ul>
+<li>-yはインタラクティブモードを無効にします。デフォルトでは、i2cdetectはI2Cバスを操作する前にユーザーの確認を待ちます。このフラグを使用すると、直接操作を実行します。</li>
+<li>1はI2Cバス番号を表します。</li>
+<li>0x5cはI2Cデバイスアドレスを表します。</li>
+</ul>
+<p>出力は以下のようになります。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/i2cdump.png alt=pir width=1000 height=auto></p>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=spiの設定>SPIの設定<a href=#spiの設定 class=hash-link aria-label="SPIの設定 への直接リンク" title="SPIの設定 への直接リンク">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=ハードウェアセットアップ-1>ハードウェアセットアップ<a href=#ハードウェアセットアップ-1 class=hash-link aria-label="ハードウェアセットアップ への直接リンク" title="ハードウェアセットアップ への直接リンク">​</a></h4>
+<p><strong>SPIデバイス</strong>を<strong>FPCインターフェース</strong>に接続したい場合は、以下の接続を行ってください。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/FPC_SPI.png alt=pir width=1000 height=auto></p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/latest-board/FPC_connect.png alt=pir width=1000 height=auto></p>
+<h4 class="anchor anchorWithStickyNavbar_fF9Z" id=ソフトウェアセットアップ-1>ソフトウェアセットアップ<a href=#ソフトウェアセットアップ-1 class=hash-link aria-label="ソフトウェアセットアップ への直接リンク" title="ソフトウェアセットアップ への直接リンク">​</a></h4>
+<p><strong>8ピンFPCコネクタ</strong>にSPIデバイスを接続し、Raspberry Pi OSを使用して制御できます。</p>
+<ul>
+<li><strong>ステップ1.</strong> <strong>Raspberry Piソフトウェア設定ツール</strong>を開きます。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> raspi-config</span><br></span></code></pre></div></div>
+<ul>
+<li>
+<p><strong>ステップ2.</strong> <code>Interface Options > SPI</code>に移動し、<strong>Enter</strong>を押します。</p>
+</li>
+<li>
+<p><strong>ステップ3.</strong> <strong>Yes</strong>を選択してSPIを有効にします。</p>
+</li>
+<li>
+<p><strong>ステップ4.</strong> キャリアボードを<strong>再起動</strong>します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">reboot</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_fF9Z" id=spiデバッグ>SPIデバッグ<a href=#spiデバッグ class=hash-link aria-label="SPIデバッグ への直接リンク" title="SPIデバッグ への直接リンク">​</a></h3>
+<ul>
+<li>
+<p><strong>ステップ1.</strong> キャリアボードの<strong>8ピンFPCコネクタ</strong>にSPIデバイスを接続します。</p>
+</li>
+<li>
+<p><strong>ステップ2.</strong> 利用可能なすべてのSPIデバイスをリストします。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token function" style="color:rgb(80, 250, 123)">ls</span><span class="token plain"> /dev/spi*</span><br></span></code></pre></div></div>
+<p>出力は以下のようになります。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/spi_list.png alt=pir width=450 height=auto></p>
+<ul>
+<li>
+<p><strong>ステップ3.</strong> micro-SDカードをPCに挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ4.</strong> <strong>boot</strong>ドライブに移動します。</p>
+</li>
+<li>
+<p><strong>ステップ5.</strong> <a href=https://files.seeedstudio.com/wiki/102110497/spidev_test target=_blank rel="noopener noreferrer">このファイル</a>をダウンロードして<strong>boot</strong>ドライブに移動します。</p>
+</li>
+<li>
+<p><strong>ステップ6.</strong> micro-SDカードをPCから取り外し、キャリアボードに挿入します。</p>
+</li>
+<li>
+<p><strong>ステップ7.</strong> キャリアボードをオンにして<strong>boot</strong>ディレクトリに移動します。</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token builtin class-name" style="color:rgb(189, 147, 249)">cd</span><span class="token plain"> /boot</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>ステップ8.</strong> ジャンパーワイヤを使用して**GPIO 10 (Pin 6)<strong>と</strong>GPIO 9 (Pin 7)**をショートします。</li>
+</ul>
+<p><strong>注意:</strong> ここでは<strong>MOSI</strong>と<strong>MISO</strong>ピンを短絡します。</p>
+<ul>
+<li><strong>ステップ9.</strong> 以下のSPIテストツールを実行します。</li>
+</ul>
+<div class="language-sh codeBlockContainer_ZGJx theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_kX1v><pre tabindex=0 class="prism-code language-sh codeBlock_TAPP thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_AdAo><span class=token-line style=color:#F8F8F2><span class="token plain">./spidev_test </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-D</span><span class="token plain"> /dev/spidev0.0 </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-v</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-p</span><span class="token plain"> hello</span><br></span></code></pre></div></div>
+<p>以下の出力が表示されれば、SPIは正常に動作しています。</p>
+<p style=text-align:center><img src=https://files.seeedstudio.com/wiki/102110497/SPI_test.jpg alt=pir width=1000 height=auto></p>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=リソース>リソース<a href=#リソース class=hash-link aria-label="リソース への直接リンク" title="リソース への直接リンク">​</a></h2>
+<ul>
+<li>
+<p><strong>[PDF]</strong> <a href=https://files.seeedstudio.com/wiki/102110497/RapberryPi-CM4-Dual-GbE-Carrier-Board-V1.1_SCH.pdf target=_blank rel="noopener noreferrer">Raspberry Pi CM4用デュアルギガビットイーサネットキャリアボードの回路図</a></p>
+</li>
+<li>
+<p><strong>[PDF]</strong> <a href=https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf target=_blank rel="noopener noreferrer">Raspberry Pi Compute Module 4 データシート</a></p>
+</li>
+<li>
+<p><strong>[Web Page]</strong> <a href=https://www.raspberrypi.org/documentation/ target=_blank rel="noopener noreferrer">Raspberry Pi 公式ドキュメント</a></p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=技術サポート--製品ディスカッション>技術サポート & 製品ディスカッション<a href=#技術サポート--製品ディスカッション class=hash-link aria-label="技術サポート & 製品ディスカッション への直接リンク" title="技術サポート & 製品ディスカッション への直接リンク">​</a></h2>
+<p>弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。</p>
+<div class=button_tech_support_container><a href=https://forum.seeedstudio.com/ class=button_forum></a><a href=https://www.seeedstudio.com/contacts class=button_email></a></div>
+<div class=button_tech_support_container><a href=https://discord.gg/eWkprNDMU7 class=button_discord></a><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 class=button_discussion></a></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/ja/docs/Network/RaspberryPi_Devices/reRouter/ja_Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_UohW aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>このページを編集</a></div><div class="col lastUpdated_g62E"><span class=theme-last-updated><b><time datetime=2025-05-15T00:00:00.000Z itemprop=dateModified>2025年5月15日</time></b>に<b>jianjing Huang</b>が<!-- -->最終更新</span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=ドキュメントページ><a class="pagination-nav__link pagination-nav__link--prev" href=/ja/Raspberry-OpenWrt-Getting-Started/><div class=pagination-nav__sublabel>前へ</div><div class=pagination-nav__label>reRouterの紹介</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/ja/FAQs_For_openWrt/><div class=pagination-nav__sublabel>次へ</div><div class=pagination-nav__label>OpenWrt に関するよくある質問 (FAQs)</div></a></nav></div><div>Loading Comments...</div></div><div class="col col--3"><div class=copyPageButtonWrapper_UocS></div><div class="tableOfContents_TN1Q thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#特徴 class="table-of-contents__link toc-highlight">特徴</a><li><a href=#仕様 class="table-of-contents__link toc-highlight">仕様</a><li><a href=#ハードウェア概要 class="table-of-contents__link toc-highlight">ハードウェア概要</a><li><a href=#ハードウェア紹介 class="table-of-contents__link toc-highlight">ハードウェア紹介</a><ul><li><a href=#raspberry-pi-compute-module-4用200ピンインターフェース class="table-of-contents__link toc-highlight">Raspberry Pi Compute Module 4用200ピンインターフェース</a><ul><li><a href=#回路図 class="table-of-contents__link toc-highlight">回路図</a></ul><li><a href=#デュアルギガビットイーサネットポート class="table-of-contents__link toc-highlight">デュアルギガビットイーサネットポート</a><ul><li><a href=#デュアルギガビットイーサネットポートの回路図 class="table-of-contents__link toc-highlight">デュアルギガビットイーサネットポートの回路図</a><li><a href=#usb-30-to-gbe-ギガビットイーサネットブリッジの回路図 class="table-of-contents__link toc-highlight">USB 3.0 to GbE (ギガビットイーサネットブリッジ)の回路図</a></ul><li><a href=#csiカメラインターフェース class="table-of-contents__link toc-highlight">CSIカメラインターフェース</a><ul><li><a href=#回路図-1 class="table-of-contents__link toc-highlight">回路図</a></ul><li><a href=#dsiディスプレイインターフェース class="table-of-contents__link toc-highlight">DSIディスプレイインターフェース</a><ul><li><a href=#回路図-2 class="table-of-contents__link toc-highlight">回路図</a></ul><li><a href=#fpcインターフェース class="table-of-contents__link toc-highlight">FPCインターフェース</a><ul><li><a href=#仕様-1 class="table-of-contents__link toc-highlight">仕様</a><li><a href=#回路図-3 class="table-of-contents__link toc-highlight">回路図</a></ul><li><a href=#デュアル-usb-30-ポートと-9-ピンヘッダー class="table-of-contents__link toc-highlight">デュアル USB 3.0 ポートと 9 ピンヘッダー</a><ul><li><a href=#usb-30-host-の回路図 class="table-of-contents__link toc-highlight">USB 3.0 HOST の回路図</a><li><a href=#pcie-から-usb-30-の回路図 class="table-of-contents__link toc-highlight">PCIe から USB 3.0 の回路図</a></ul><li><a href=#micro-hdmi-ポート class="table-of-contents__link toc-highlight">Micro HDMI ポート</a><ul><li><a href=#回路図-4 class="table-of-contents__link toc-highlight">回路図</a></ul><li><a href=#uart-io class="table-of-contents__link toc-highlight">UART IO</a><li><a href=#ブートモードピン class="table-of-contents__link toc-highlight">ブートモードピン</a><li><a href=#リセットボタン class="table-of-contents__link toc-highlight">リセットボタン</a><ul><li><a href=#回路図-5 class="table-of-contents__link toc-highlight">回路図</a></ul><li><a href=#micro---sd-カードスロット class="table-of-contents__link toc-highlight">Micro - SD カードスロット</a><ul><li><a href=#回路図-6 class="table-of-contents__link toc-highlight">回路図</a></ul><li><a href=#usb-type-c-ポート class="table-of-contents__link toc-highlight">USB Type-C ポート</a><ul><li><a href=#usb-type-c-を-usb-デバイスとして使用する際の回路図 class="table-of-contents__link toc-highlight">USB Type-C を USB デバイスとして使用する際の回路図</a><li><a href=#電源管理の回路図 class="table-of-contents__link toc-highlight">電源管理の回路図</a></ul><li><a href=#4-ピンファンコネクター class="table-of-contents__link toc-highlight">4 ピンファンコネクター</a><ul><li><a href=#回路図-7 class="table-of-contents__link toc-highlight">回路図</a></ul><li><a href=#電源および動作-led class="table-of-contents__link toc-highlight">電源および動作 LED</a><ul><li><a href=#回路図-8 class="table-of-contents__link toc-highlight">回路図</a></ul></ul><li><a href=#はじめに---必要なハードウェア class="table-of-contents__link toc-highlight">はじめに - 必要なハードウェア</a><li><a href=#はじめに---ソフトウェアセットアップ class="table-of-contents__link toc-highlight">はじめに - ソフトウェアセットアップ</a><ul><li><a href=#raspberry-pi-osのフラッシュ class="table-of-contents__link toc-highlight">Raspberry Pi OSのフラッシュ</a><ul><li><a href=#micro-sdカードへのフラッシュcm4非emmcバージョン class="table-of-contents__link toc-highlight">micro-SDカードへのフラッシュ（CM4非eMMCバージョン）</a><li><a href=#emmcへのフラッシュcm4-emmcバージョン class="table-of-contents__link toc-highlight">eMMCへのフラッシュ（CM4 eMMCバージョン）</a><ul><li><a href=#windowsの場合 class="table-of-contents__link toc-highlight">Windowsの場合</a><li><a href=#maclinuxの場合 class="table-of-contents__link toc-highlight">Mac/Linuxの場合</a></ul></ul><li><a href=#raspberry-pi-os-にログインする class="table-of-contents__link toc-highlight">Raspberry Pi OS にログインする</a><ul><li><a href=#方法-1-wi-fi-経由で-ssh-を使用する class="table-of-contents__link toc-highlight">方法 1: Wi-Fi 経由で SSH を使用する</a><ul><li><a href=#windowsの場合-1 class="table-of-contents__link toc-highlight">Windowsの場合</a><li><a href=#maclinuxの場合-1 class="table-of-contents__link toc-highlight">Mac/Linuxの場合</a></ul><li><a href=#方法-2-ethernet-経由で-ssh-を使用する class="table-of-contents__link toc-highlight">方法 2: Ethernet 経由で SSH を使用する</a><ul><li><a href=#windows��の場合-2 class="table-of-contents__link toc-highlight">Windowsの場合</a><li><a href=#maclinux-の場合 class="table-of-contents__link toc-highlight">Mac/Linux の場合</a></ul><li><a href=#方法-3-usb-to-serial-converter-を使用する class="table-of-contents__link toc-highlight">方法 3: USB to Serial Converter を使用する</a><ul><li><a href=#windows-の場合 class="table-of-contents__link toc-highlight">Windows の場合</a><li><a href=#maclinux-の場合-1 class="table-of-contents__link toc-highlight">Mac/Linux の場合</a></ul><li><a href=#方法-4-キーボードマウスディスプレイを使用する class="table-of-contents__link toc-highlight">方法 4: キーボード、マウス、ディスプレイを使用する</a></ul><li><a href=#usb-ポートの設定 class="table-of-contents__link toc-highlight">USB ポートの設定</a><ul><li><a href=#方法-1-pc-に接続された-micro-sd-カードからファイルを変更する class="table-of-contents__link toc-highlight">方法 1: PC に接続された micro-SD カードからファイルを変更する</a><li><a href=#方法-2-キャリアボードからファイルを変更する class="table-of-contents__link toc-highlight">方法 2: キャリアボードからファイルを変更する</a></ul><li><a href=#usb-ポート速度テスト class="table-of-contents__link toc-highlight">USB ポート速度テスト</a><li><a href=#イーサネットポートの設定 class="table-of-contents__link toc-highlight">イーサネットポートの設定</a><li><a href=#sd-カード速度テスト class="table-of-contents__link toc-highlight">SD カード速度テスト</a><li><a href=#dsiおよびcsiコネクタの設定 class="table-of-contents__link toc-highlight">DSIおよびCSIコネクタの設定</a><li><a href=#i2cの設定 class="table-of-contents__link toc-highlight">I2Cの設定</a><ul><li><a href=#ハードウェアセットアップ class="table-of-contents__link toc-highlight">ハードウェアセットアップ</a><li><a href=#ソフトウェアセットアップ class="table-of-contents__link toc-highlight">ソフトウェアセットアップ</a></ul><li><a href=#i2cデバッグ class="table-of-contents__link toc-highlight">I2Cデバッグ</a><li><a href=#spiの設定 class="table-of-contents__link toc-highlight">SPIの設定</a><ul><li><a href=#ハードウェアセットアップ-1 class="table-of-contents__link toc-highlight">ハードウェアセットアップ</a><li><a href=#ソフトウェアセットアップ-1 class="table-of-contents__link toc-highlight">ソフトウェアセットアップ</a></ul><li><a href=#spiデバッグ class="table-of-contents__link toc-highlight">SPIデバッグ</a></ul><li><a href=#リソース class="table-of-contents__link toc-highlight">リソース</a><li><a href=#技術サポート--製品ディスカッション class="table-of-contents__link toc-highlight">技術サポート & 製品ディスカッション</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>ナビゲーション</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/ja/Getting_Started/>はじめに</a><li class=footer__item><a class=footer__link-item href=/ja/Sensor_Network/>センサーとセンシング</a><li class=footer__item><a class=footer__link-item href=/ja/Network/>ネットワーク</a><li class=footer__item><a class=footer__link-item href=/ja/Edge_Computing/>エッジコンピューティング</a><li class=footer__item><a class=footer__link-item href=/ja/Cloud/>クラウド</a><li class=footer__item><a href=https://solution.seeed.cc/ target=_blank rel="noopener noreferrer" class=footer__link-item>ソリューション</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>エコシステム</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://discord.com/invite/QqMgVwHT3X target=_blank rel="noopener noreferrer" class=footer__link-item>Discord</a><li class=footer__item><a href=https://project.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>プロジェクトハブ</a><li class=footer__item><a href=https://www.seeedstudio.com/ecosystem/ target=_blank rel="noopener noreferrer" class=footer__link-item>パートナー</a><li class=footer__item><a href=https://www.seeedstudio.com/distributors.html target=_blank rel="noopener noreferrer" class=footer__link-item>販売代理店</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>クイックガイド</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>ストア</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/HowToGetHelp target=_blank rel="noopener noreferrer" class=footer__link-item>ヘルプの受け方</a><li class=footer__item><a href=https://support.seeedstudio.com/knowledgebase target=_blank rel="noopener noreferrer" class=footer__link-item>よくある質問</a><li class=footer__item><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>フォーラム</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/TechnicalSupport target=_blank rel="noopener noreferrer" class=footer__link-item>技術サポート</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>会社情報</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/about-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>会社概要</a><li class=footer__item><a href=https://www.seeedstudio.com/join-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>採用情報</a><li class=footer__item><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=footer__link-item>お問い合わせ</a><li class=footer__item><a href=https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/ target=_blank rel="noopener noreferrer" class=footer__link-item>プレス</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Seeed Studio, Inc. Built with Docusaurus.</div></div></div></footer></div>

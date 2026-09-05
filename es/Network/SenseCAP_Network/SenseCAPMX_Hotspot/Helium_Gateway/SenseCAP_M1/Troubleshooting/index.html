@@ -1,0 +1,427 @@
+<!doctype html><html lang=es-ES dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/es_Troubleshooting" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Solución de Problemas | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/Troubleshooting/><meta data-rh=true property=og:locale content=es_ES><meta data-rh=true name=docusaurus_locale content=es><meta data-rh=true name=docsearch:language content=es><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Solución de Problemas | Seeed Studio Wiki"><meta data-rh=true name=description content="SenseCAP M1 Trouble Shooting"><meta data-rh=true property=og:description content="SenseCAP M1 Trouble Shooting"><meta data-rh=true name=keywords content="SenseCAP Network"><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/es/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/Troubleshooting/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/Troubleshooting/ hreflang=es-ES><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/Troubleshooting/ hreflang=x-default><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,n,o,a){e[o]=e[o]||[],e[o].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var i=t.getElementsByTagName(n)[0],r=t.createElement(n);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id="+a+("dataLayer"!=o?"&l="+o:""),i.parentNode.insertBefore(r,i)}(window,document,"script","dataLayer","GTM-M4JG2HVB"),window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","gemini"],generateMarkdownRoutes:!1,placement:"auto",mcpServer:null,labels:{button:{label:"Copiar p\xe1gina"},copy:{title:"Copiar como Markdown",description:"Copia el contenido de esta p\xe1gina como Markdown"},view:{title:"Ver como Markdown",description:"Ver el contenido de esta p\xe1gina en formato Markdown"},chatgpt:{title:"Abrir en ChatGPT",description:"Abrir el contenido de esta p\xe1gina como contexto en ChatGPT"},claude:{title:"Abrir en Claude",description:"Abrir el contenido de esta p\xe1gina como contexto en Claude"},gemini:{title:"Abrir en Gemini",description:"Abrir el contenido de esta p\xe1gina como contexto en Gemini"}},id:"default"}</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/es/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/es/assets/css/styles.c21f1dfc.css><script src=/es/assets/js/runtime~main.15716006.js defer></script><script src=/es/assets/js/main.67870841.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+
+
+<svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="dark",e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><div role=region aria-label="Saltar al contenido principal"><a class=skipToContent_G6ar href=#__docusaurus_skipToContent_fallback>Saltar al contenido principal</a></div><div class="theme-announcement-bar announcementBar_ncOr" style=background-color:#013949;color:#FFFFFF role=banner><div class="content_L1uV announcementBarContent__57G"><span id=announcement-text>Collaborate with Seeed - <a target=_blank href=https://www.seeedstudio.com/blog/affiliate-program/>Creator</a>, <a target=_blank href=https://www.seeedstudio.com/ranger-program/>Ranger</a>, or <a target=_blank href=https://wiki.seeedstudio.com/contributors/>Contributor</a>, there is always a role ideal for you!</span></div></div><nav aria-label=Principal class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar barra lateral" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/es/><div class=navbar__logo><img class=navbar_logo_items src=https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png alt="Seeed Studio" loading=eager decoding=async></div></a><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items js_getting_started" aria-haspopup=true aria-expanded=false role=button href=/es/Getting_Started/>Enlaces rápidos</a><ul class=dropdown__menu><li><a class=dropdown__link href=/es/Sensor_Network/>Sensores y sensado</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/es/Network/>Redes</a><li><a class=dropdown__link href=/es/Edge_Computing/>Computación perimetral</a><li><a class=dropdown__link href=/es/Cloud/>Nube</a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items js_explore_learn" aria-haspopup=true aria-expanded=false role=button href=/es/topicintroduction/>Explorar por temas</a><ul class=dropdown__menu><li><a class=dropdown__link href=/es/tinyml_topic/>TinyML</a><li><a class=dropdown__link href=/es/ModelAssistant_Introduce_Overview/>Asistente de modelos SenseCraft</a><li><a class=dropdown__link href=/es/home_assistant_topic/>Home Assistant</a><li><a class=dropdown__link href=/es/open_source_topic/>Código abierto</a><li><a class=dropdown__link href=/es/edge_ai_topic/>IA de borde</a><li><a href=https://wiki.seeedstudio.com/cn/Getting_Started target=_blank rel="noopener noreferrer" class=dropdown__link>Wiki 矽递科技 (中文)</a><li><a href=https://wiki.seeedstudio.com/ja/Getting_Started target=_blank rel="noopener noreferrer" class=dropdown__link>Wiki SeeedStudio (日本語)</a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items" aria-haspopup=true aria-expanded=false role=button href=/es/knowledgebase/>Preguntas frecuentes</a><ul class=dropdown__menu><li><a class=dropdown__link href=/es/Jetson_FAQ/>Serie NVIDIA Jetson</a><li><a class=dropdown__link href=/es/XIAO_FAQ/>Serie Seeed Studio XIAO</a><li><a class=dropdown__link href=/es/reComputer_R1000_FAQ/>Serie reComputer R1000</a><li><a class=dropdown__link href=/es/reTerminal-new_FAQ/>reTerminal</a><li><a class=dropdown__link href=/es/FAQs_For_openWrt/>reRouter</a><li><a class=dropdown__link href=/es/ODYSSEY_FAQ/>Odyssey</a><li><a class=dropdown__link href=/es/wio_terminal_faq/>Wio Terminal</a><li class=""><hr style="margin: 8px 0;"><li><a href=https://discord.com/invite/eWkprNDMU7 target=_blank rel="noopener noreferrer" class=dropdown__link>Discord<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=dropdown__link>Correo electrónico<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=dropdown__link>Foro<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 target=_blank rel="noopener noreferrer" class=dropdown__link>¿Tienes sugerencias?<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a href=https://www.seeedstudio.com/ranger-program target=_blank rel="noopener noreferrer" aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar_dorp_items">Participa</a><ul class=dropdown__menu><li><a href=https://www.seeedstudio.com/blog/affiliate-program/ target=_blank rel="noopener noreferrer" class=dropdown__link>Afiliados y Creadores</a><li><a href=https://www.seeedstudio.com/ranger-program/ target=_blank rel="noopener noreferrer" class=dropdown__link>Embajador/a de la comunidad</a><li><a class=dropdown__link href=/es/contributors/>Colaboradores</a><li><a href=https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform target=_blank rel="noopener noreferrer" class=dropdown__link>Solicitar Embajador/a de la comunidad<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://github.com/orgs/Seeed-Studio/projects/6 target=_blank rel="noopener noreferrer" class=dropdown__link>Ir a las tareas<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/ target=_blank rel="noopener noreferrer" class=dropdown__link>Más sobre los Embajador/a de la comunidad<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a><li><a href=https://wiki.seeedstudio.com/es/Contributor target=_blank rel="noopener noreferrer" class=dropdown__link>Más sobre los colaboradores<svg width=12 height=12 aria-hidden=true class=iconExternalLink_awgD><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class="navbar__item navbar__link navbar_doc_right_items">Tienda 🛍️</a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class="navbar__link navbar_doc_right_items ai-platform-dropdown">Plataformas de IA</a><ul class=dropdown__menu><li><a href=https://sensecraft.seeed.cc/ai/#/home target=_blank rel="noopener noreferrer" class="dropdown__link ai-platform-menu-item sensecraft-ai-menu-item">SenseCraft AI</a><li><a href=https://sensecraft.seeed.cc/ai-lab target=_blank rel="noopener noreferrer" class="dropdown__link ai-platform-menu-item recomputer-ai-lab-menu-item">reComputer AI Lab</a></ul></div><a href=https://github.com/Seeed-Studio/wiki-documents target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="toggle_OLSw colorModeToggle_Hg9V"><button class="clean-btn toggleButton_wYmb toggleButtonDisabled_vaDU" type=button disabled title="system mode" aria-label="Cambiar entre modo oscuro y claro (actualmente system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_KEbZ lightToggleIcon_Sxwe"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_KEbZ darkToggleIcon_Yem1"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_KEbZ systemToggleIcon_txm5"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_bmvg><button type=button class="DocSearch DocSearch-Button" aria-label=Search><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke=currentColor fill=none fill-rule=evenodd stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Search</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_UyTV"><div class=docsWrapper_XLvK><button aria-label="Volver al principio" class="clean-btn theme-back-to-top-button backToTopButton_z1FD" type=button></button><div class=docRoot_HciC><main class="docMainContainer_namt docMainContainerEnhanced_sRjM"><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_gTko" data-sku="" data-doc-type=""><div class=docItemContainer_HGmz><article><div class="tocCollapsible_O_Qc theme-doc-toc-mobile tocMobile_tjDr"><button type=button class="clean-btn tocCollapsibleButton_htYj">En esta página</button></div><div class=mobileCopyPageButton_Ttvy></div><div class="theme-doc-markdown markdown"><header><h1>Solución de Problemas SenseCAP M1</h1></header>
+<h1>Relacionado con Hardware</h1>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=no-parpadea-el-led-azul><strong>No parpadea el LED azul</strong><a href=#no-parpadea-el-led-azul class=hash-link aria-label="Enlace directo al no-parpadea-el-led-azul" title="Enlace directo al no-parpadea-el-led-azul">​</a></h2>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/blue-led-1.webp alt="SenseCAP M1 Blue LED" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/08/back-front-led-m1.png alt="SenseCAP M1 Blue LED Not Good" class=img__Ss2></p>
+<p><strong>Pasos de Solución de Problemas</strong></p>
+<ol>
+<li>Verifique si el LED ETH está parpadeando. Si las luces verde y amarilla de ETH están encendidas y el LED azul está apagado, <strong><a href=https://www.sensecapmx.com/docs/sensecap-m1/m1-troubleshooting/#how-to-flash-a-new-image-to-a-new-micro-sd-card target=_blank rel="noopener noreferrer">por favor flashee primero una nueva tarjeta SD</a></strong>. Si la luz azul sigue apagada, sería un problema de defecto de hardware.</li>
+<li>Si los LED verde y amarillo están apagados, trate de asegurarse de que el adaptador de corriente esté bien. Puede verificar reemplazándolo con un cargador de teléfono de 5V-3A con un cable tipo-C y un nuevo cable de red para ver si el problema se resuelve.</li>
+<li>Si el hotspot se conecta a internet vía Wi-Fi, por favor verifique si la luz roja está encendida a través del panel frontal, si no, sería un problema de defecto de hardware.</li>
+</ol>
+<hr>
+<h1>Relacionado con Red</h1>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=no-puede-conectarse-a-internet><strong>¿No puede conectarse a Internet?</strong><a href=#no-puede-conectarse-a-internet class=hash-link aria-label="Enlace directo al no-puede-conectarse-a-internet" title="Enlace directo al no-puede-conectarse-a-internet">​</a></h2>
+<p>Tener su configuración de red configurada correctamente juega un papel importante. Por favor asegúrese de leer todos los detalles a continuación para garantizar una configuración adecuada.</p>
+<p>Los Hotspots de Helium pueden no funcionar si el Hotspot está detrás de un firewall o usa un tipo de NAT incompatible como se describe a continuación. En otros casos, puede ser debido a una configuración del router/configuración de red o su conexión simplemente está desconectada (sin Internet).</p>
+<p><strong>Nota</strong>: Si no puede configurar adecuadamente la configuración de red o los pasos a continuación no funcionan para usted, por favor visite nuestro >> Canal Oficial de Discord para mayor orientación.</p>
+<p><strong>Pasos de Solución de Problemas - Conexión Ethernet</strong></p>
+<p><strong>Por favor verifique sus cables Ethernet si no está usando Wi-Fi</strong>: Asegúrese de que su cable Ethernet esté conectado de forma segura al Hotspot desde su router/módem.</p>
+<ul>
+<li><strong>Luces ámbar parpadeando junto al puerto Ethernet en el Hotspot</strong>: Conexión sólida establecida.</li>
+<li>Si no ve luces ámbar parpadeando en el puerto Ethernet, por favor pruebe un cable diferente ya que los cables con el tiempo tienden a fallar.</li>
+</ul>
+<p><strong>Verifique su conexión a Internet</strong>: Por favor asegúrese de que pueda conectarse a Internet desde su ubicación usando su computadora/laptop/teléfono doméstico, en la misma red. Si no puede conectarse a Internet, necesitará contactar a su Proveedor de Servicios de Internet (ISP) para asistencia adicional con respecto a su conexión.</p>
+<p><strong>Pasos de Solución de Problemas - Conexión Wi-Fi</strong></p>
+<ul>
+<li><strong>Si está usando Wi-Fi</strong>: Por favor confirme que puede conectarse a su red inalámbrica con su contraseña de seguridad WEP o WPA (es decir, contraseña Wi-Fi). Si no sabe cómo conectarse o acceder a su módem inalámbrico, necesitará contactar directamente al fabricante del equipo.</li>
+<li>Si no puede conectarse a internet, reinicie su router. Desconecte su Hotspot y router de la pared o regleta de corriente por 2 minutos. Luego, conéctelos de nuevo para ver si puede conectarse a Internet.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=cómo-conectar-el-hotspot-al-wifi-de-mi-teléfono><strong>¿Cómo conectar el Hotspot al WiFi de mi Teléfono?</strong><a href=#cómo-conectar-el-hotspot-al-wifi-de-mi-teléfono class=hash-link aria-label="Enlace directo al cómo-conectar-el-hotspot-al-wifi-de-mi-teléfono" title="Enlace directo al cómo-conectar-el-hotspot-al-wifi-de-mi-teléfono">​</a></h2>
+<p><strong>Este ejemplo se muestra para dispositivos Apple iOS a continuación.</strong></p>
+<ul>
+<li>Encuentre "<strong>Configuración</strong>" en su teléfono.</li>
+<li>Haga clic en "<strong>Zona</strong> <strong>WiFi</strong>".</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/hotspot.png alt="iOS Personal Hotspot" class=img__Ss2></p>
+<ul>
+<li>Habilite para permitir que otros se unan.</li>
+<li>Empareje su Hotspot.</li>
+<li>Conecte su Hotspot al nombre de Zona WiFi de su teléfono Apple iOS.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/hotspot-setup.png alt="iOS Hotspot Setup" class=img__Ss2></p>
+<p>Ahora puede emparejar su SenseCAP Gateway a la zona wifi personal de su teléfono vía Wi-Fi para solucionar problemas de actualizaciones de firmware y conectividad de red.</p>
+<hr>
+<h1>Relacionado con Tarjeta SD</h1>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=cómo-reemplazar-el-archivo-configjson><strong>Cómo Reemplazar El Archivo 'config.json'</strong><a href=#cómo-reemplazar-el-archivo-configjson class=hash-link aria-label="Enlace directo al cómo-reemplazar-el-archivo-configjson" title="Enlace directo al cómo-reemplazar-el-archivo-configjson">​</a></h2>
+<p><strong>PROCEDA CON PRECAUCIÓN</strong>: Los siguientes pasos deben usarse SOLO si ha sido aconsejado por nuestro Equipo de Soporte Técnico. No necesita replicar estos pasos si <strong>NO</strong> ha sido aconsejado.</p>
+<p><strong>NOTA:</strong> <strong>NO</strong> use los mismos archivos '<strong>config.json</strong>' para otros Hotspots. Cada Hotspot tiene un archivo '<strong>config.json</strong>' único adjunto a su número de serie.</p>
+<hr>
+<p><strong>Instrucciones</strong></p>
+<p>Las instrucciones a continuación le ayudarán a reemplazar el archivo 'config.json' en la tarjeta Micro SD. Si encuentra que el dispositivo está atascado en firmware/versión antigua y considera que puede ser un error potencial causando la falla, por favor siga las instrucciones para resolver el problema.</p>
+<p><strong>NOTA</strong>: Por favor verifique su conexión a Internet primero para asegurarse de que el problema no esté relacionado con Internet antes de seguir los pasos a continuación para reemplazar la tarjeta micro SD.</p>
+<hr>
+<p><strong>Requisitos</strong></p>
+<ol>
+<li>Tarjeta Micro SD en su SenseCAP M1 Hotspot</li>
+<li>Lector de tarjetas Micro SD</li>
+<li>Destornillador</li>
+<li>El archivo '<strong>config.json</strong>' copiado de la tarjeta original</li>
+</ol>
+<p><strong>Nota</strong>: Por favor pida a nuestros Agentes de Soporte Técnico que le proporcionen uno si no puede recuperar el original.</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/requirements-sd-flash.png alt="Swap Config.json File Requirements" class=img__Ss2></p>
+<p><em>Elementos Requeridos</em></p>
+<hr>
+<p><strong>Pasos</strong></p>
+<ul>
+<li><strong>Paso 1</strong>: Apague su Hotspot</li>
+<li><strong>Paso 2</strong>: Retire la antena</li>
+<li><strong>Paso 3</strong>: gire hacia el lado frontal del panel</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step1-1.png alt="Config.json File Swap 1" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 4</strong>: Use el destornillador para aflojar los dos tornillos en el frente del panel</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step2-1.png alt="Config.json File Swap 2" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 5</strong>: Mueva el panel frontal y póngalo a un lado</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step3-1.png alt="Config.json File Swap 3" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 6</strong>: Retire el adhesivo amarillo de la parte superior de la tarjeta Micro SD usando pinzas y extraiga la tarjeta Micro SD</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step4-1.png alt="Config.json File Swap 4" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step5-1.png alt="Config.json File Swap 5" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step6-1.png alt="Config.json File Swap 6" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 7</strong>: Conecte la tarjeta Micro SD a un lector de tarjetas y conéctelo a su computadora</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step7-1.png alt="Config.json File Swap 7" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step8-1.png alt="Config.json File Swap 7B" class=img__Ss2></p>
+<p><strong>NOTA</strong>: Si está usando un sistema operativo Windows y se le pregunta "<strong>Necesita formatear el disco en la unidad</strong> "<strong>X</strong>" antes de poder usarlo", haga clic en "<strong>Cancelar</strong>" de lo contrario los datos de su tarjeta Micro SD se borrarán.</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/format-1.png alt="Format SD Card" class=img__Ss2></p>
+<p><em>Mensaje de Windows al insertar la tarjeta Micro SD</em></p>
+<ul>
+<li><strong>Paso 8</strong>: Ahora encontrará que hay un archivo '<strong>config.json'</strong> en la carpeta '<strong>resin-boot</strong>', por favor ábralo usando el bloc de notas para confirmar que está vacío.</li>
+</ul>
+<p>Si <strong>NO</strong> está vacío, hay un problema de OTA (actualización por aire) causado por el archivo de configuración, es un problema de conexión de red. Por favor verifique su red y configuraciones de seguridad/firewall.</p>
+<p>Si <strong>ESTÁ</strong> vacío, por favor reemplácelo usando el nuevo archivo 'config.json' que le proporcionamos para reemplazarlo.</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/config-1.png alt="Empty config.json File" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 9</strong>: Si el archivo '<strong>config.json</strong>' está vacío, necesitará reemplazarlo con el que proporcionamos. Arrastre el nuevo archivo al disco y haga clic en 'Reemplazar'.</li>
+</ul>
+<p><strong>NOTA</strong>: Por favor NO elimine ningún otro archivo, de lo contrario, causará problemas inesperados con su SenseCAP M1.</p>
+<p><strong>NOTA</strong>: Cada dispositivo tiene un archivo 'config.json' diferente registrado para él, por favor no comparta su archivo 'config.json' con otros o use archivos de otros.</p>
+<p><strong>Para MacOS</strong></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-1.png alt="MacOS Copy Config.json File" class=img__Ss2></p>
+<p><em>MacOS - Copiar archivo</em> 'config.json'</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-2.png alt="MacOS Swap Config.json File" class=img__Ss2></p>
+<p><strong>Para Windows</strong></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-1.png alt="Windows Copy Config.json File" class=img__Ss2></p>
+<p><em>Windows - Copiar archivo "config.json"</em></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-2.png alt="Windows Swap Config.json File" class=img__Ss2></p>
+<p><strong>Nota</strong>: Se recomienda verificar dos veces que hay contenido dentro del archivo '<strong>config.json</strong>' después de copiarlo simplemente abriéndolo en el Bloc de notas.</p>
+<ul>
+<li><strong>Paso 10</strong>: Vuelva a colocar la tarjeta Micro SD dentro del Hotspot</li>
+</ul>
+<p><strong>CONSEJO</strong>: Ensamble el panel frontal después de confirmar que su Hotspot está funcionando.</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step10-1.png alt="Put Together SenseCAP M1" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step11-1.png alt="Put Together SenseCAP M1 - 2" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step12-1.png alt="Put Together SenseCAP M1 - 3" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step13-1.png alt="Put Together SenseCAP M1 - 4" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 11</strong>: Ensamble la antena y encienda su Hotspot</li>
+</ul>
+<p>Encienda el SenseCAP M1, conéctelo a internet (mejor con cable ethernet), espere ~20 minutos para las actualizaciones OTA, y verifique el estado en el Panel de Control (<a href=https://status.sensecapmx.cloud/ target=_blank rel="noopener noreferrer"><strong>https://status.sensecapmx.cloud/</strong></a>) o ejecute diagnósticos dentro de la APP de Helium.</p>
+<p>Si tiene más problemas o preguntas, por favor abra un ticket aquí: <a href=https://support.sensecapmx.com target=_blank rel="noopener noreferrer"><strong>https://support.sensecapmx.com</strong></a></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=cómo-flashear-una-nueva-imagen-a-una-nueva-tarjeta-micro-sd><strong>Cómo Flashear una Nueva Imagen a una Nueva Tarjeta Micro SD</strong><a href=#cómo-flashear-una-nueva-imagen-a-una-nueva-tarjeta-micro-sd class=hash-link aria-label="Enlace directo al cómo-flashear-una-nueva-imagen-a-una-nueva-tarjeta-micro-sd" title="Enlace directo al cómo-flashear-una-nueva-imagen-a-una-nueva-tarjeta-micro-sd">​</a></h2>
+<p><strong>PROCEDA CON PRECAUCIÓN</strong>: Los siguientes pasos deben usarse SOLO si ha sido aconsejado por nuestro Equipo de Soporte Técnico. No necesita replicar estos pasos si NO ha sido aconsejado.</p>
+<p>Debido al mal uso de los Hotspots por parte de los usuarios, hemos encontrado que el ciclo frecuente de encendido y apagado, conectar y desconectar la tarjeta micro SD, puede resultar en errores desconocidos de la tarjeta micro SD, como la alineación del sistema de archivos.</p>
+<p><strong>Si ha sido aconsejado reemplazar la tarjeta micro SD para depurar el problema, por favor siga las instrucciones a continuación cuidadosamente.</strong></p>
+<hr>
+<p><strong>Instrucciones</strong></p>
+<p>Las instrucciones proporcionadas a continuación le ayudarán a flashear imágenes a una nueva tarjeta micro SD y a reemplazar la original en el SenseCAP M1 para solucionar el problema causado por posibles errores de la tarjeta micro SD.</p>
+<p><strong>NOTA</strong>: Por favor verifique su conexión a Internet primero para asegurarse de que el problema no esté relacionado con Internet antes de seguir los pasos a continuación para reemplazar la tarjeta micro SD.</p>
+<hr>
+<p><strong>Requisitos</strong></p>
+<p><strong>Nota</strong>: Ahora tenemos disponible el kit de reemplazo de tarjeta SD, que puede comprar haciendo clic <a href=https://www.seeedstudio.com/SenseCAP-M1-SD-Card-Replacement-Kit-p-5279.html target=_blank rel="noopener noreferrer"><strong>aquí</strong></a> .</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card.png alt="SenseCAP M1 Replacement SD Card Kit" class=img__Ss2></p>
+<p><em>El kit viene con un destornillador, un lector de tarjetas MicroSD, una tarjeta MicroSD de 64GB, y una instrucción sobre cómo reemplazar la MicroSD.</em></p>
+<ol>
+<li>Nueva tarjeta Micro SD (SanDisk High Endurance 64GB)</li>
+<li>Lector de tarjetas Micro SD</li>
+<li>Destornillador</li>
+<li>El archivo '<strong>config.json</strong>' copiado de la tarjeta original<!-- -->
+<ol>
+<li><strong>Nota</strong>: Por favor pida a nuestros Agentes de Soporte Técnico que le proporcionen uno si no puede recuperar el original.</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p><strong>Pasos</strong></p>
+<ol>
+<li>Apague el dispositivo, abra el panel frontal, retire la etiqueta amarilla en la parte superior de la tarjeta micro SD (puede usar pinzas), y desconecte y saque la tarjeta micro SD original.</li>
+<li>Conecte la tarjeta micro SD original a su computadora con un lector de tarjetas micro SD y copie el archivo 'config.json' de la partición "resin-boot" de la tarjeta SD original, guárdelo en su computadora<!-- -->
+<ol>
+<li><strong>Nota</strong>: Por favor pida a nuestros Agentes de Soporte Técnico que le proporcionen uno si no puede recuperar el original.</li>
+</ol>
+</li>
+<li>Descargue la <strong>Imagen SenseCap M1</strong> desde aquí: <a href="https://drive.google.com/open?id=17nbsZ6wnQVxOh4KVfImaNwHNbdWz6LBh&authuser=0" target=_blank rel="noopener noreferrer"><strong>sensecap-m1-sd-version-20220213.img.zip</strong></a></li>
+<li>Descargue la <strong>herramienta Balena Etcher</strong> desde aquí: <a href=https://www.balena.io/etcher/ target=_blank rel="noopener noreferrer"><strong>balenaEtcher - Flash OS images to SD cards & USB drives</strong></a></li>
+<li>Flashee la <strong>Imagen SenseCap M1</strong> a la nueva tarjeta micro SD con Balena Etcher.</li>
+<li>Copie el archivo "<strong>config.json</strong>" que proporcionamos desde su computadora a la partición "<strong>resin-boot</strong>" de la nueva tarjeta micro SD después de flashear.</li>
+<li>Desconecte la nueva tarjeta micro SD de su computadora, y conéctela al SenseCap M1.</li>
+<li>Encienda el SenseCap M1, conéctelo a internet (mejor con cable ethernet), espere 20 minutos para las actualizaciones, y verifique el estado en el Panel de Control (<a href=https://status.sensecapmx.cloud/ target=_blank rel="noopener noreferrer"><strong>https://status.sensecapmx.cloud</strong></a>/) o ejecute diagnósticos en la App de Helium.</li>
+</ol>
+<p><strong>Nota</strong>: Solo debes ensamblar el panel frontal del Hotspot después de confirmar que tu Hotspot está funcionando correctamente.</p>
+<hr>
+<p><strong>Cómo Abrir el SenseCAP M1 y Reemplazar la Tarjeta Micro SD</strong></p>
+<ul>
+<li><strong>Paso 1:</strong> Apaga tu Hotspot, luego retira la antena.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png alt="SenseCAP M1 SD Card Step 1" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 2</strong>:  Usa el destornillador para aflojar los dos tornillos del panel frontal.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png alt="SenseCAP M1 SD Card Step 2" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 3</strong>:  Mueve el panel frontal y ponlo a un lado.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png alt="SenseCAP M1 SD Card Step 3" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 4</strong>:  Retira la etiqueta amarilla de la parte superior de la tarjeta Micro SD (puedes usar pinzas).</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png alt="SenseCAP M1 SD Card Step 4" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png alt="SenseCAP M1 SD Card Step 4B" class=img__Ss2></p>
+<hr>
+<p><strong>Cómo Leer la Micro SD y Grabar la Imagen</strong></p>
+<ul>
+<li><strong>Paso 1</strong>: Conecta una nueva tarjeta Micro SD al lector de tarjetas Micro SD.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png alt="SenseCAP M1 SD Card Image Step 1" class=img__Ss2></p>
+<p><em>Nueva Tarjeta Micro SD en el Lector de Tarjetas Micro SD</em></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png alt="SenseCAP M1 SD Card Image Step 1B" class=img__Ss2></p>
+<p><em>Asegúrate de que Esté Completamente Conectada</em></p>
+<ul>
+<li><strong>Paso 2</strong>: Graba la imagen del SenseCAP M1 en la nueva tarjeta Micro SD con Balena Etcher.<!-- -->
+<ul>
+<li>Descarga la <strong>Imagen del SenseCap M1</strong> desde aquí: <a href="https://drive.google.com/file/d/1fZf09U2_jQOpsSKPWc8TAZ_Jl82X9tzx/view?usp=sharing" target=_blank rel="noopener noreferrer"><strong>sensecap-m1.img.zip</strong></a></li>
+<li>Descarga la <strong>herramienta Balena Etcher</strong> desde aquí: <a href=https://www.balena.io/etcher/ target=_blank rel="noopener noreferrer"><strong>balenaEtcher - Flash OS images to SD cards & USB drives ​</strong></a></li>
+</ul>
+</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/balena.png alt="Balena Etcher" class=img__Ss2></p>
+<p><em>Selecciona Según Tu Sistema Operativo</em></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/balena-2.png alt="Balena Etcher 2" class=img__Ss2></p>
+<p><em>Arrastra el Archivo Image.ZIP a Balena Etcher</em></p>
+<ul>
+<li><strong>Paso 3</strong>:  Después de haber grabado exitosamente la imagen en la tarjeta MicroSD, copia el archivo "config.json" que proporcionamos/o que copiaste originalmente, desde tu computadora a una partición llamada "resin-boot".</li>
+</ul>
+<p><strong>Para MacOS</strong></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-1.png alt="MacOS Copy Config.json File" class=img__Ss2></p>
+<p>_MacOS - Copiar Archivo '<em>config.json'</em></p>
+<p><strong>Para Windows</strong></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-1.png alt="Windows Copy Config.json File" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 4</strong>: Desconecta la nueva tarjeta Micro SD de tu computadora.</li>
+<li><strong>Paso 5</strong>: Conecta la nueva tarjeta Micro SD a tu SenseCAP M1.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png alt="SenseCAP M1 SD Card Step 5" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 6</strong>: Enciende el SenseCAP M1, y conéctalo de nuevo a Internet (preferiblemente con cable Ethernet).</li>
+<li><strong>Paso 7</strong>: Espera aproximadamente ~20 minutos para aplicar las actualizaciones y verifica el Panel de Control (<strong><a href=https://status.sensecapmx.cloud/ target=_blank rel="noopener noreferrer">https://status.sensecapmx.cloud/)</a>)</strong> o ejecuta diagnósticos en la aplicación Helium después de que esto se complete.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png alt="SenseCAP M1 SD Card Step 6" class=img__Ss2></p>
+<p><strong>Nota</strong>: Solo debes ensamblar el panel frontal del Hotspot después de confirmar que tu Hotspot está funcionando correctamente.</p>
+<p>Si tienes más problemas o preguntas, por favor abre un ticket aquí: <a href=https://support.sensecapmx.com/ target=_blank rel="noopener noreferrer"><strong>https://support.sensecapmx.com/</strong></a></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=cómo-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen><strong>Cómo Formatear la Tarjeta Micro SD y Grabar la Imagen</strong><a href=#cómo-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen class=hash-link aria-label="Enlace directo al cómo-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen" title="Enlace directo al cómo-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen">​</a></h2>
+<p><strong>PROCEDE CON PRECAUCIÓN</strong>: Los siguientes pasos deben usarse SOLO si has sido aconsejado por nuestro Equipo de Soporte Técnico. No necesitas replicar estos pasos si <strong>NO</strong> has sido aconsejado.</p>
+<p>Debido al mal uso de los Hotspots por parte de los usuarios, hemos encontrado que el encendido y apagado frecuente, conectar y desconectar la tarjeta micro SD, puede resultar en errores desconocidos de la tarjeta micro SD, como la alineación del sistema de archivos.</p>
+<p><strong>Si has sido aconsejado de reemplazar la tarjeta micro SD para depurar el problema, por favor sigue las instrucciones a continuación cuidadosamente.</strong></p>
+<hr>
+<p><strong>Instrucciones</strong></p>
+<p>Las instrucciones proporcionadas a continuación te ayudarán a grabar imágenes en una nueva tarjeta micro SD y a reemplazar la original en el SenseCAP M1 para solucionar el problema causado por posibles errores de la tarjeta micro SD.</p>
+<p><strong>NOTA</strong>: Por favor verifica tu conexión a Internet primero para asegurarte de que el problema no esté relacionado con Internet antes de seguir los pasos a continuación para reemplazar la tarjeta micro SD.</p>
+<hr>
+<p><strong>Requisitos</strong></p>
+<ol>
+<li>Tarjeta Micro SD en tu Hotspot SenseCAP M1</li>
+<li>Lector de tarjetas Micro SD</li>
+<li>Destornillador</li>
+<li>El archivo '<strong>config.json</strong>' copiado de la tarjeta original<!-- -->
+<ol>
+<li><strong>Nota</strong>: Por favor pide a nuestros Agentes de Soporte Técnico que te proporcionen uno si no puedes recuperar el original.</li>
+</ol>
+</li>
+<li>SD Card Formatter 5.0.1</li>
+<li>Para <strong>Windows</strong> => <a href="https://drive.google.com/file/d/15KMqnVpeOMRcFOYIRLbwA4CJooNsdkLM/view?usp=sharing" target=_blank rel="noopener noreferrer"><strong>Haz clic aquí</strong></a> para descargar e instalar</li>
+<li>Para <strong>Mac OS</strong> => <a href="https://drive.google.com/file/d/1FjxMOdGDjW3iKx3COeexY7E2bpF2cqDy/view?usp=sharing" target=_blank rel="noopener noreferrer"><strong>Haz clic aquí</strong></a> para descargar e instalar</li>
+<li>Imagen del SenseCAP M1 => <a href="https://drive.google.com/open?id=17nbsZ6wnQVxOh4KVfImaNwHNbdWz6LBh&authuser=0" target=_blank rel="noopener noreferrer"><strong>Haz clic aquí</strong></a> para descargar</li>
+<li>Balena Etcher => <a href=https://www.balena.io/etcher/ target=_blank rel="noopener noreferrer"><strong>Haz clic aquí</strong></a> para descargar</li>
+</ol>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card.png alt="SenseCAP M1 Replacement SD Card Kit" class=img__Ss2></p>
+<p><em>El kit viene con un destornillador, un lector de tarjetas MicroSD, una tarjeta MicroSD de 64GB, y una instrucción sobre cómo reemplazar la MicroSD.</em></p>
+<hr>
+<p><strong>Pasos</strong></p>
+<ol>
+<li>Apaga el dispositivo, abre el panel frontal, retira la etiqueta amarilla de la parte superior de la tarjeta Micro SD, desconecta la tarjeta Micro SD.</li>
+<li>Conecta la tarjeta Micro SD a tu computadora con un lector de tarjetas Micro SD y copia el archivo '<strong>config.json'</strong> de la partición "resin-boot", guárdalo en tu computadora.<!-- -->
+<ol>
+<li><strong>Nota</strong>: Por favor pide a nuestros Agentes de Soporte Técnico que te proporcionen uno si no puedes recuperar el original.</li>
+</ol>
+</li>
+<li>Formatea la tarjeta MicroSD usando "<strong>SD Card Formatter 5.0.1</strong>"</li>
+<li>Graba la <strong>Imagen del SenseCap M1</strong> en la tarjeta MicroSD con <strong>Balena Etcher</strong>.</li>
+<li>Copia el archivo '<strong>config.json</strong>' desde tu computadora a la partición "<strong>resin-boot</strong>" de la tarjeta Micro SD.</li>
+<li>Conecta de nuevo la tarjeta Micro SD desde tu computadora al Hotspot SenseCap M1.</li>
+<li>Enciende el SenseCap M1, conéctalo a internet (mejor con cable ethernet), espera ~20 minutos para las actualizaciones OTA, y verifica el estado en el <a href=https://docs.sensecapmx.com/home/sensecap-dashboard target=_blank rel="noopener noreferrer"><strong>Panel de Control</strong></a> o ejecuta diagnósticos dentro de la aplicación Helium.</li>
+</ol>
+<p><strong>Nota</strong>: Debes ensamblar el panel frontal del Hotspot solo después de confirmar que tu Hotspot está funcionando correctamente.</p>
+<hr>
+<p><strong>Cómo Abrir el SenseCAP M1 y Reemplazar la Tarjeta Micro SD</strong></p>
+<ul>
+<li><strong>Paso 1:</strong> Apaga tu Hotspot, luego retira la antena.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png alt="SenseCAP M1 SD Card Step 1" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 2</strong>:  Usa el destornillador para aflojar los dos tornillos del panel frontal.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png alt="SenseCAP M1 SD Card Step 2" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 3</strong>:  Mueve el panel frontal y ponlo a un lado.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png alt="SenseCAP M1 SD Card Step 3" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 4</strong>:  Retira la etiqueta amarilla de la parte superior de la tarjeta Micro SD (puedes usar pinzas).</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png alt="SenseCAP M1 SD Card Step 4" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png alt="SenseCAP M1 SD Card Step 4B" class=img__Ss2></p>
+<hr>
+<p><strong>Cómo Formatear la Tarjeta Micro SD (Windows)</strong></p>
+<ul>
+<li><strong>Paso 1</strong>**:** Conecta una nueva tarjeta Micro SD al lector de tarjetas Micro SD.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png alt="SenseCAP M1 SD Card Image Step 1" class=img__Ss2></p>
+<p><em>Nueva Tarjeta Micro SD en el Lector de Tarjetas Micro SD</em></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png alt="SenseCAP M1 SD Card Image Step 1B" class=img__Ss2></p>
+<p><em>Asegúrate de que Esté Completamente Conectada</em></p>
+<ul>
+<li><strong>Paso 2</strong>**:** Instala y ejecuta SD Card Formatter</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-formatter-1.png alt="SD Card Formatter" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 3</strong>**:**  Selecciona la tarjeta Micro SD que conectaste a la computadora, elige "Overwrite format", escribe "resin-boot" en la etiqueta de volumen, y haz clic en el botón "Format"</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/formatter-resin-1.png alt="SD Card Formatter Resin-Boot Folder" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 4</strong>**:**  Selecciona "Yes" en la ventana de diálogo</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-2.png alt="Format SD Card" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 5</strong>: Espera aproximadamente 30-45 minutos y el proceso de formateo se completará</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/formatter-3-1.png alt="SD Card Formatter Screen" class=img__Ss2></p>
+<hr>
+<p><strong>Cómo Formatear la Tarjeta Micro SD (MacOS)</strong></p>
+<p>Los pasos son similares, por favor consulta las imágenes a continuación:</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/mac-formatter-1-1.png alt="SD Card Formatter MacOS" class=img__Ss2></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/mac-formatter-2-1.png alt="SD Card Formatter MacOS Complete" class=img__Ss2></p>
+<hr>
+<p><strong>Cómo Grabar la Imagen en la Tarjeta Micro SD</strong></p>
+<ul>
+<li>Descarga la <strong>Imagen SenseCap M1</strong> desde aquí: <a href="https://drive.google.com/open?id=17nbsZ6wnQVxOh4KVfImaNwHNbdWz6LBh&authuser=0" target=_blank rel="noopener noreferrer"><strong>sensecap-m1-sd-version-20220213.img.zip</strong></a></li>
+<li>Descarga la <strong>herramienta Balena Etcher</strong> desde aquí: <a href=https://www.balena.io/etcher/ target=_blank rel="noopener noreferrer"><strong>balenaEtcher - Flash OS images to SD cards & USB drives</strong></a></li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/balena.png alt="Balena Etcher" class=img__Ss2></p>
+<p><em>Selecciona Según Tu Sistema Operativo</em></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/balena-2.png alt="Balena Etcher 2" class=img__Ss2></p>
+<p><em>Arrastra el Archivo Image.ZIP a Balena Etcher</em></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=cómo-agregar-el-archivo-configjson-a-la-tarjeta-micro-sd><strong>Cómo Agregar el Archivo 'config.json' a la Tarjeta Micro SD</strong><a href=#cómo-agregar-el-archivo-configjson-a-la-tarjeta-micro-sd class=hash-link aria-label="Enlace directo al cómo-agregar-el-archivo-configjson-a-la-tarjeta-micro-sd" title="Enlace directo al cómo-agregar-el-archivo-configjson-a-la-tarjeta-micro-sd">​</a></h2>
+<p>Después de haber grabado exitosamente la imagen en la tarjeta MicroSD, copia el archivo "<strong>config.json</strong>" que proporcionamos/o que copiaste originalmente, desde tu computadora a una partición llamada "resin-boot".</p>
+<p><strong>NOTA</strong>: Por favor NO elimines ningún otro archivo, de lo contrario, causará problemas inesperados con tu SenseCAP M1.</p>
+<p><strong>NOTA</strong>: Cada dispositivo tiene un archivo '<strong>config.json</strong>' diferente registrado para él, por favor no compartas tu archivo '<strong>config.json</strong>' con otros o uses archivos de otros.</p>
+<p><strong>Para macOS</strong></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-1.png alt="MacOS Copy Config.json File" class=img__Ss2></p>
+<p><em>MacOS - Copiar Archivo</em> 'config.json'</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-2.png alt="MacOS Swap Config.json File" class=img__Ss2></p>
+<p><strong>Para Windows</strong></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-1.png alt="Windows Copy Config.json File" class=img__Ss2></p>
+<p><em>Windows - Copiar Archivo 'config.json'</em></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-2.png alt="Windows Swap Config.json File" class=img__Ss2></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=después-de-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen><strong>Después de Formatear la Tarjeta Micro SD y Grabar la Imagen</strong><a href=#después-de-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen class=hash-link aria-label="Enlace directo al después-de-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen" title="Enlace directo al después-de-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen">​</a></h2>
+<ul>
+<li><strong>Paso 1</strong>: Desconecta la nueva tarjeta Micro SD de tu computadora.</li>
+<li><strong>Paso 2</strong>: Conecta la nueva tarjeta Micro SD a tu SenseCAP M1.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png alt="SenseCAP M1 SD Card Step 5" class=img__Ss2></p>
+<ul>
+<li><strong>Paso 6</strong>: Enciende el SenseCAP M1, y conéctalo de nuevo a Internet (preferiblemente con cable Ethernet).</li>
+<li><strong>Paso 7</strong>: Espera aproximadamente 20 minutos para aplicar actualizaciones y verifica el Panel de Control (<strong><a href=https://status.sensecapmx.cloud/ target=_blank rel="noopener noreferrer">https://status.sensecapmx.cloud/)</a>)</strong> o ejecuta diagnósticos en la App Helium después de que esto se complete.</li>
+</ul>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png alt="SenseCAP M1 SD Card Step 6" class=img__Ss2></p>
+<p><strong>Nota</strong>: Debes ensamblar el panel frontal del Hotspot solo después de confirmar que tu Hotspot está funcionando correctamente.</p>
+<p>Si tienes más problemas o preguntas, por favor abre un ticket aquí: <a href=https://support.sensecapmx.com/ target=_blank rel="noopener noreferrer"><strong>https://support.sensecapmx.com/</strong></a></p>
+<hr>
+<h1>Error de la App Helium</h1>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=no-onboarding-key-found><strong>No Onboarding Key Found</strong><a href=#no-onboarding-key-found class=hash-link aria-label="Enlace directo al no-onboarding-key-found" title="Enlace directo al no-onboarding-key-found">​</a></h2>
+<p>Por favor abre un ticket de soporte aquí: <a href=https://support.sensecapmx.com target=_blank rel="noopener noreferrer"><strong>https://support.sensecapmx.com</strong></a> y envía el SN (número de serie) de tu hotspot para que podamos resolver tu problema.</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/onboarding.png alt="Helium App - No Onboarding Key Found" class=img__Ss2></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=no-hotspot-found><strong>No Hotspot Found</strong><a href=#no-hotspot-found class=hash-link aria-label="Enlace directo al no-hotspot-found" title="Enlace directo al no-hotspot-found">​</a></h2>
+<p>"No Hotspots Found" mostrado en la App Helium</p>
+<p><strong>Pasos de Solución de Problemas</strong></p>
+<ol>
+<li>Verifica primero el LED azul, debería estar en modo de parpadeo lento.</li>
+<li>Si no es así, eso indica que tu SenseCAP M1 no ha habilitado el modo de configuración Bluetooth. Verifica con tu hotspot y teléfono móvil para asegurarte de que el Bluetooth esté activado.</li>
+<li>Presiona el botón en la parte trasera del SenseCAP M1 durante 6-10 segundos para habilitar el modo de configuración del SenseCAP M1, encontrarás que el LED azul cambia a modo de parpadeo lento (parpadeando 1 vez cada 2 segundos), luego escanea el hotspot nuevamente.</li>
+</ol>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/no-hotspots-found.png alt="Errores de la App Helium - No se Encontraron Hotspots" class=img__Ss2></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=dispositivo-desconectado><strong>Dispositivo Desconectado</strong><a href=#dispositivo-desconectado class=hash-link aria-label="Enlace directo al dispositivo-desconectado" title="Enlace directo al dispositivo-desconectado">​</a></h2>
+<p>El dispositivo se desconectó al emparejarse vía Bluetooth</p>
+<p><strong>Pasos de Solución de Problemas</strong></p>
+<p>Ocurre un problema de compatibilidad cuando estás usando un teléfono Samsung más nuevo que el S9.</p>
+<p>Por favor <a href=https://www.sensecapmx.com/docs/sensecap-m1/m1-troubleshooting/#how-to-flash-a-new-image-to-a-new-micro-sd-card target=_blank rel="noopener noreferrer"><strong>Flashea la tarjeta SD con la nueva imagen</strong></a>.</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/error-device-disconnected.png alt="Errores de la App Helium - Dispositivo Desconectado" class=img__Ss2></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=fallo-en-escritura-de-característica><strong>Fallo en Escritura de Característica</strong><a href=#fallo-en-escritura-de-característica class=hash-link aria-label="Enlace directo al fallo-en-escritura-de-característica" title="Enlace directo al fallo-en-escritura-de-característica">​</a></h2>
+<p>No se puede registrar el Hotspot dentro de la App Helium</p>
+<p><strong>Pasos de Solución de Problemas</strong></p>
+<ol>
+<li>Si registras tu hotspot justo después de conectarte vía Ethernet o Wi-Fi, verás este error ya que las actualizaciones OTA (over-the-air) están ejecutándose.</li>
+<li>Por favor deja tu Hotspot conectado vía Ethernet o Wi-Fi por otros 10+ minutos. Esto permitirá que las actualizaciones OTA terminen.</li>
+<li>Mantén presionado el botón por 6-10s para entrar al modo de configuración y luego intenta registrar nuevamente.</li>
+</ol>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/unable-to-register.webp alt="Errores de la App Helium - Fallo en Escritura de Característica" class=img__Ss2></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=fallo-en-lectura-de-característica><strong>Fallo en Lectura de Característica</strong><a href=#fallo-en-lectura-de-característica class=hash-link aria-label="Enlace directo al fallo-en-lectura-de-característica" title="Enlace directo al fallo-en-lectura-de-característica">​</a></h2>
+<p>Error al emparejarse con Bluetooth o conectarse a Wi-Fi</p>
+<p>Si recibes el siguiente mensaje de error al intentar emparejar tu Hotspot para conectarte vía Bluetooth o conectarte a Wi-Fi, esto significa que el SSID de tu red Wi-Fi contiene caracteres inválidos que no son reconocidos.</p>
+<p>Por favor evita usar caracteres no alfanuméricos (ej. caracteres distintos a a - z, 0 - 9) y símbolos.</p>
+<p><strong>Solución</strong>: Renombra tu red Wi-Fi sin símbolos y caracteres no alfanuméricos.</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/read-error.png alt="Errores de la App Helium - Fallo en Lectura de Característica" class=img__Ss2></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=construyendo-transacción-de-agregar-hotspot><strong>Construyendo Transacción de Agregar Hotspot</strong><a href=#construyendo-transacción-de-agregar-hotspot class=hash-link aria-label="Enlace directo al construyendo-transacción-de-agregar-hotspot" title="Enlace directo al construyendo-transacción-de-agregar-hotspot">​</a></h2>
+<p>La App Helium muestra un error construyendo la transacción de agregar hotspot al registrar el Hotspot</p>
+<p><strong>Pasos de Solución de Problemas</strong></p>
+<ol>
+<li>Si registras tu hotspot justo después de conectar Ethernet o Wi-Fi, verás este error ya que las actualizaciones OTA (over-the-air) están ejecutándose o los bloques aún no se han sincronizado completamente.</li>
+<li>Por favor deja tu hotspot conectado a Ethernet o Wifi por al menos 30 minutos para esperar a que termine el OTA del firmware y el proceso de sincronización de bloques. Después de eso, por favor mantén presionado el botón por 6-10s para entrar al modo de configuración y luego intenta registrar nuevamente.</li>
+<li>Verifica la versión del firmware después de completado usando diagnósticos o el Panel de SenseCAP para asegurarte de que esté actualizado.<!-- -->
+<ol>
+<li><strong>Nota</strong>: Si el firmware de tu hotspot no puede actualizarse a la versión más nueva, entonces se sugiere cambiar la red que tu dispositivo está usando a otra red, como el hotspot de tu teléfono móvil, y luego seguir el segundo paso mencionado arriba.</li>
+<li><strong>Nota</strong>: Si los bloques no pueden ser completamente sincronizados por el dispositivo mismo después de que el OTA del firmware esté terminado, entonces se sugiere resetear bloques en la consola local.</li>
+</ol>
+</li>
+</ol>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/transaction-failed-add-hotspot.png alt="Errores de la App Helium - Construyendo Transacción de Agregar Hotspot" class=img__Ss2></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_fF9Z" id=afirmando-ubicaciónantena><strong>Afirmando Ubicación/Antena</strong><a href=#afirmando-ubicaciónantena class=hash-link aria-label="Enlace directo al afirmando-ubicaciónantena" title="Enlace directo al afirmando-ubicaciónantena">​</a></h2>
+<p>Al intentar actualizar los Detalles de Antena o Afirmar Ubicación, ves el siguiente error</p>
+<p><strong>Pasos de Solución de Problemas</strong></p>
+<p>El problema está relacionado con la conexión de red o la App. Intenta reiniciar tu APP o inténtalo nuevamente más tarde.</p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/assert-location-error.png alt="Errores de la App Helium - Afirmando Ubicación/Antena" class=img__Ss2></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/es/docs/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/es_Troubleshooting.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_UohW aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Editar esta página</a></div><div class="col lastUpdated_g62E"><span class=theme-last-updated>Última actualización<!-- --> en <b><time datetime=2023-02-14T00:00:00.000Z itemprop=dateModified>14 feb 2023</time></b> por <b>Matthew</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Página del documento"></nav></div><div>Loading Comments...</div></div><div class="col col--3"><div class=copyPageButtonWrapper_UocS></div><div class="tableOfContents_TN1Q thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#no-parpadea-el-led-azul class="table-of-contents__link toc-highlight"><strong>No parpadea el LED azul</strong></a><li><a href=#no-puede-conectarse-a-internet class="table-of-contents__link toc-highlight"><strong>¿No puede conectarse a Internet?</strong></a><li><a href=#cómo-conectar-el-hotspot-al-wifi-de-mi-teléfono class="table-of-contents__link toc-highlight"><strong>¿Cómo conectar el Hotspot al WiFi de mi Teléfono?</strong></a><li><a href=#cómo-reemplazar-el-archivo-configjson class="table-of-contents__link toc-highlight"><strong>Cómo Reemplazar El Archivo 'config.json'</strong></a><li><a href=#cómo-flashear-una-nueva-imagen-a-una-nueva-tarjeta-micro-sd class="table-of-contents__link toc-highlight"><strong>Cómo Flashear una Nueva Imagen a una Nueva Tarjeta Micro SD</strong></a><li><a href=#cómo-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen class="table-of-contents__link toc-highlight"><strong>Cómo Formatear la Tarjeta Micro SD y Grabar la Imagen</strong></a><li><a href=#cómo-agregar-el-archivo-configjson-a-la-tarjeta-micro-sd class="table-of-contents__link toc-highlight"><strong>Cómo Agregar el Archivo 'config.json' a la Tarjeta Micro SD</strong></a><li><a href=#después-de-formatear-la-tarjeta-micro-sd-y-grabar-la-imagen class="table-of-contents__link toc-highlight"><strong>Después de Formatear la Tarjeta Micro SD y Grabar la Imagen</strong></a><li><a href=#no-onboarding-key-found class="table-of-contents__link toc-highlight"><strong>No Onboarding Key Found</strong></a><li><a href=#no-hotspot-found class="table-of-contents__link toc-highlight"><strong>No Hotspot Found</strong></a><li><a href=#dispositivo-desconectado class="table-of-contents__link toc-highlight"><strong>Dispositivo Desconectado</strong></a><li><a href=#fallo-en-escritura-de-característica class="table-of-contents__link toc-highlight"><strong>Fallo en Escritura de Característica</strong></a><li><a href=#fallo-en-lectura-de-característica class="table-of-contents__link toc-highlight"><strong>Fallo en Lectura de Característica</strong></a><li><a href=#construyendo-transacción-de-agregar-hotspot class="table-of-contents__link toc-highlight"><strong>Construyendo Transacción de Agregar Hotspot</strong></a><li><a href=#afirmando-ubicaciónantena class="table-of-contents__link toc-highlight"><strong>Afirmando Ubicación/Antena</strong></a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Navegación</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/es/Getting_Started/>Primeros pasos</a><li class=footer__item><a class=footer__link-item href=/es/Sensor_Network/>Sensores y sensado</a><li class=footer__item><a class=footer__link-item href=/es/Network/>Red</a><li class=footer__item><a class=footer__link-item href=/es/Edge_Computing/>Computación perimetral</a><li class=footer__item><a class=footer__link-item href=/es/Cloud/>Nube</a><li class=footer__item><a href=https://solution.seeed.cc/ target=_blank rel="noopener noreferrer" class=footer__link-item>Soluciones</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Ecosistema</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://discord.com/invite/QqMgVwHT3X target=_blank rel="noopener noreferrer" class=footer__link-item>Discord</a><li class=footer__item><a href=https://project.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Centro de proyectos</a><li class=footer__item><a href=https://www.seeedstudio.com/ecosystem/ target=_blank rel="noopener noreferrer" class=footer__link-item>Socios</a><li class=footer__item><a href=https://www.seeedstudio.com/distributors.html target=_blank rel="noopener noreferrer" class=footer__link-item>Distribuidores</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Guía rápida</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Tienda</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/HowToGetHelp target=_blank rel="noopener noreferrer" class=footer__link-item>Cómo obtener ayuda</a><li class=footer__item><a href=https://support.seeedstudio.com/knowledgebase target=_blank rel="noopener noreferrer" class=footer__link-item>Preguntas frecuentes</a><li class=footer__item><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Foro</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/TechnicalSupport target=_blank rel="noopener noreferrer" class=footer__link-item>Soporte técnico</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Compañía</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/about-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>Acerca de Seeed</a><li class=footer__item><a href=https://www.seeedstudio.com/join-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>Únete a nosotros</a><li class=footer__item><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=footer__link-item>Contáctanos</a><li class=footer__item><a href=https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/ target=_blank rel="noopener noreferrer" class=footer__link-item>Prensa</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Seeed Studio, Inc. Built with Docusaurus.</div></div></div></footer></div>
