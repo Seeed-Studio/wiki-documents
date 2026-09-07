@@ -12,6 +12,7 @@ keywords:
   - memory recall
   - Flask
   - agent workflow
+image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-tools.png
 slug: /respeaker_clip_ai_chat_system_architecture
 sku: 100020126
 last_update:
