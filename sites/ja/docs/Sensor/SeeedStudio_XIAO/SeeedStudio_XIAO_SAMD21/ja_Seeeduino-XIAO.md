@@ -108,7 +108,7 @@ Microchip の SAMD21G18A ARM Cortex-M0+ 32 ビットプロセッサを搭載し�
           Microchip SAMD21G18
         </a>
       </td>
-    </tr]
+    </tr>
     <tr>
       <th>Processor</th>
       <td colspan="2">Arm® Cortex®-M0+ プロセッサ（最大 48 MHz 動作）</td>

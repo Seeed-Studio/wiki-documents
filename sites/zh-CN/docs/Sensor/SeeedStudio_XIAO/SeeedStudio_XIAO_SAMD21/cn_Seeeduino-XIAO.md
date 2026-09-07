@@ -116,7 +116,7 @@ Seeed Studio XIAO SAMD21 具有 14 个引脚，可通过引脚复用用作 11 �
     <tr>
       <th>RAM</th>
       <td colspan="2">32 KB SRAM</td>
-    </tr]
+    </tr>
     <tr>
       <th>Flash</th>
       <td colspan="2">256 KB Flash</td>
