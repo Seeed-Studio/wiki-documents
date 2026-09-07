@@ -4191,6 +4191,7 @@ const sidebars = {
               type: 'category',
               label: '具身智能',
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Microduck_RL_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Voice_LLM_for_Reachy_Mini',
