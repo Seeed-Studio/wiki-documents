@@ -8,6 +8,8 @@ last_update:
   date: 09/07/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/pt-br/ai_robotics_microduck_rl_custom_motion_training/
+updatedAt: '2026-09-07'
 ---
 
 # Criar um Movimento Personalizado do Microduck
@@ -21,16 +23,16 @@ Este capítulo apresenta o fluxo de trabalho do projeto para construir um novo m
 
 ## Entender o Contrato da Policy
 
-Todas as policies intercambiáveis do Microduck compartilham a mesma interface:
+Todas as policies hot-swappable do Microduck compartilham a mesma interface:
 
 - **Observação do ator de 61 dimensões**: 48 valores de propriocepção mais o bloco de comando de 13 dimensões `[twist(3), head_pose(4), body_pose(6)]`.
 - **Saída de ação de 14 dimensões** para as juntas de servo ativas.
 - Slots de comando não utilizados continuam presentes e são preenchidos com zeros.
-- As juntas passivas das rodas e de folga usam a convenção de nomenclatura `passive_*` e não devem ser selecionadas como juntas atuadas.
+- As juntas passivas de roda e folga usam a convenção de nomenclatura `passive_*` e não devem ser selecionadas como juntas atuadas.
 - Os IDs das juntas devem ser resolvidos pelos helpers do projeto em vez de codificados diretamente.
-- A exportação para ONNX deve passar por `scripts/export.py` para que o normalizador de observação seja incluído.
+- A exportação ONNX deve passar por `scripts/export.py` para que o normalizador de observação seja incluído.
 
-Quebrar esse contrato pode produzir uma policy que funciona em um visualizador, mas não pode ser trocada ou implantada corretamente.
+Quebrar esse contrato pode produzir uma policy que funciona em um viewer, mas não pode ser trocada ou implantada corretamente.
 
 ## Selecionar o Template Mais Próximo
 
@@ -133,7 +135,7 @@ Confirme o registro:
 uv run --no-sync list-envs | grep Mjlab-Bow
 ```
 
-## Inspecionar Antes de Treinar
+## Inspecionar Antes do Treinamento
 
 Inicie uma policy aleatória para verificar o modelo, estado de reset, sensores, gerenciador de comandos e configuração de termos:
 
@@ -179,7 +181,7 @@ uv run --no-sync train Mjlab-Bow-Flat-MicroDuck \
   --agent.max_iterations 2000
 ```
 
-Observe a recompensa principal da tarefa em vez de apenas a recompensa total. Uma policy pode melhorar métricas de regularização sem nunca completar o movimento pretendido.
+Observe a recompensa principal da tarefa em vez de apenas a recompensa total. Uma policy pode melhorar métricas de regularização e ainda assim nunca completar o movimento pretendido.
 
 ## Visualizar e Exportar
 
@@ -206,7 +208,7 @@ Para adicionar disparo por teclado, estenda `scripts/infer_policy.py` usando os 
 
 ## Exemplo Verificado: Equilíbrio em Uma Perna
 
-A seguinte tarefa personalizada foi implementada e passou no smoke test no sistema de referência Jetson. O movimento transfere o peso do robô para o **pé esquerdo**, levanta o **pé direito**, mantém a pose de equilíbrio em uma perna e depois retorna à pose normal de pé com dois pés.
+A tarefa personalizada a seguir foi implementada e passou no smoke test no sistema de referência Jetson. O movimento transfere o peso do robô para o **pé esquerdo**, levanta o **pé direito**, mantém a pose de equilíbrio em uma perna e depois retorna à pose normal de pé com dois pés.
 
 O ID de tarefa registrado é:
 
@@ -279,7 +281,42 @@ As funções existentes `phase_pose_track()`, `phase_pose_track_l1()`, `single_f
 
 ### Registrar a Tarefa
 
-Adicione a importação e o registro da configuração da tarefa em `src/mjlab_microduck/tasks/__init__.py`:
+`Mjlab-OneLegBalance-Flat-MicroDuck` é o **ID de tarefa usado pelo registro de tarefas do MJLab**. Não é um nome de arquivo e não é passado para `make_microduck_one_leg_balance_env_cfg()` como argumento de função. O lançador de linha de comando usa essa string para localizar o ambiente, a configuração de execução, a configuração de RL e o runner registrados em `src/mjlab_microduck/tasks/__init__.py`.
+
+O caminho de definição e registro é:
+
+| Item | Localização | Finalidade |
+|---|---|---|
+| Configuração do ambiente | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | Define a pose de uma perna, o tempo de fase, recompensas, cena e `make_microduck_one_leg_balance_env_cfg()` |
+| Configuração de RL | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | Define `MicroduckOneLegBalanceRlCfg` e os hiperparâmetros de treinamento |
+| Registro da tarefa | `src/mjlab_microduck/tasks/__init__.py` | Vincula o ID de tarefa à configuração de ambiente e de RL |
+| Ponto de entrada da CLI | `uv run --no-sync train <task-id>` | Procura a tarefa registrada e inicia o treinamento |
+
+A relação é:
+
+```text
+Mjlab-OneLegBalance-Flat-MicroDuck
+        ↓ task_id lookup
+register_mjlab_task(...)
+        ↓
+make_microduck_one_leg_balance_env_cfg()
++ MicroduckOneLegBalanceRlCfg
++ MicroduckOnPolicyRunner
+```
+
+Portanto, este é o comando completo usado para selecionar a tarefa personalizada:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+  --env.scene.num-envs 64 \
+  --agent.logger tensorboard \
+  --agent.max_iterations 5
+```
+
+Se `list-envs` não mostrar a tarefa, verifique se o novo arquivo de configuração existe e se tanto a sua importação quanto a chamada de `register_mjlab_task()` estão presentes em `src/mjlab_microduck/tasks/__init__.py`. O ID de tarefa no comando deve corresponder exatamente à string `task_id`, incluindo maiúsculas, minúsculas e hifens.
+
+Adicione a importação e o registro da configuração de tarefa em `src/mjlab_microduck/tasks/__init__.py`:
 
 ```python
 from .microduck_one_leg_balance_env_cfg import (
@@ -296,7 +333,7 @@ register_mjlab_task(
 )
 ```
 
-Confirme que o MJLab detecta a nova tarefa:
+Confirme que o MJLab descobre a nova tarefa:
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
@@ -311,7 +348,7 @@ Mjlab-OneLegBalance-Flat-MicroDuck
 
 ### Editar e Capturar a Pose no MuJoCo
 
-O exemplo inclui `scripts/one_leg_pose_editor.py`. Ele desativa a gravidade e fixa a base flutuante para que alvos de juntas individuais possam ser ajustados com segurança antes do treinamento.
+O exemplo inclui `scripts/one_leg_pose_editor.py`. Ele desativa a gravidade e fixa a base flutuante para que os alvos das juntas individuais possam ser ajustados com segurança antes do treinamento.
 
 Execute-o diretamente a partir de um terminal na área de trabalho do Jetson:
 
@@ -320,7 +357,7 @@ cd ~/microduck-jetson/microduck_rl
 uv run --no-sync python scripts/one_leg_pose_editor.py
 ```
 
-Expanda o painel **Control** no lado direito da janela do MuJoCo e ajuste os controles deslizantes das juntas. Fechar a janela imprime o dicionário nomeado final `ONE_LEG_POSE` no terminal. Os botões **Save XML** e **Save MJB** do MuJoCo salvam arquivos de modelo; eles não salvam o dicionário de pose-alvo em Python usado por esta tarefa.
+Expanda o painel **Control** no lado direito da janela do MuJoCo e ajuste os controles deslizantes das juntas. Fechar a janela imprime no terminal o dicionário final nomeado `ONE_LEG_POSE`. Os botões **Save XML** e **Save MJB** do MuJoCo salvam arquivos de modelo; eles não salvam o dicionário Python de pose alvo usado por esta tarefa.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_one_leg_balance.png" alt="Interactive MuJoCo pose editor showing the Microduck one-leg balance target pose" />
@@ -389,7 +426,7 @@ uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
   --env.viewer.elevation -12
 ```
 
-O editor de pose mostra o alvo pretendido imediatamente. O visualizador de treinamento inicialmente mostra uma política não treinada, então o comportamento estável em uma perna só aparece apenas depois que a política aprende a sequência de transferência, elevação, manutenção e recuperação.
+O editor de pose mostra o alvo pretendido imediatamente. O visualizador de treinamento inicialmente mostra uma política não treinada, portanto o comportamento estável em uma perna só aparece apenas depois que a política aprendeu a sequência de transferência, elevação, sustentação e recuperação.
 
 ### Iniciar uma Execução Completa de Treinamento
 
@@ -402,16 +439,16 @@ uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
   --agent.max_iterations 20000
 ```
 
-Os smoke tests confirmam que a configuração da tarefa, termos de recompensa, sensores, backend CUDA e grande contagem de ambientes paralelos funcionam corretamente. Eles, por si só, não provam a convergência da política. Avalie checkpoints salvos no MuJoCo e ajuste a pose, pesos de recompensa, temporização de fase ou currículo se o robô levantar o pé sem transferir seu centro de massa, pular ou falhar em retornar à posição em pé.
+Os smoke tests confirmam que a configuração da tarefa, termos de recompensa, sensores, backend CUDA e grande contagem de ambientes paralelos funcionam corretamente. Eles, por si só, não provam a convergência da política. Avalie checkpoints salvos no MuJoCo e ajuste a pose, pesos de recompensa, tempo de fase ou currículo se o robô levantar o pé sem transferir seu centro de massa, pular ou falhar em retornar à posição em pé.
 
 ## Checklist de Desenvolvimento
 
 - [ ] O layout de observação permanece 61D.
 - [ ] A saída da política permanece 14D.
 - [ ] As juntas passivas são excluídas das ações e observações de servo.
-- [ ] O evento de inicialização do BAM e a randomização de domínio permanecem ativos onde necessário.
+- [ ] O evento de inicialização BAM e a randomização de domínio permanecem ativos onde necessário.
 - [ ] A tarefa aparece em `list-envs`.
-- [ ] A inspeção com o Random-policy Viewer é bem-sucedida.
+- [ ] A inspeção com o Viewer de política aleatória é bem-sucedida.
 - [ ] O smoke test com 64 ambientes é bem-sucedido.
 - [ ] As principais métricas da tarefa melhoram no TensorBoard.
 - [ ] O checkpoint PT final se comporta corretamente no MuJoCo.

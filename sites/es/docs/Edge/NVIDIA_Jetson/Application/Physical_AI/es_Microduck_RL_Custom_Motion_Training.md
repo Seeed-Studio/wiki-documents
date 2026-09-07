@@ -8,11 +8,13 @@ last_update:
   date: 09/07/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/es/ai_robotics_microduck_rl_custom_motion_training/
+updatedAt: '2026-09-07'
 ---
 
 # Crear un movimiento personalizado de Microduck
 
-Este capítulo presenta el flujo de trabajo del proyecto para construir un nuevo movimiento. El ejemplo usa un comportamiento basado en fases de **reverencia (Bow)**, pero el mismo proceso se aplica a asentir con la cabeza, agacharse, estirarse, habilidades de recuperación y otros movimientos del robot.
+Este capítulo presenta el flujo de trabajo del proyecto para construir un nuevo movimiento. El ejemplo utiliza un comportamiento basado en fases de **reverencia** (Bow), pero el mismo proceso se aplica a asentir con la cabeza, agacharse, estirarse, habilidades de recuperación y otros movimientos del robot.
 
 <div style={{display:'flex', gap:'12px', flexWrap:'wrap', margin:'18px 0 30px'}}>
   <a href="/es/ai_robotics_microduck_rl_on_jetson/" style={{display:'inline-flex', alignItems:'center', gap:'10px', padding:'9px 16px 9px 10px', borderRadius:'9px', background:'#172b4d', color:'#fff', fontWeight:'700', textDecoration:'none'}}><span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'28px', height:'28px', borderRadius:'50%', background:'rgba(255,255,255,.2)', fontSize:'21px', lineHeight:'1'}}>←</span> Demo Home</a>
@@ -23,11 +25,11 @@ Este capítulo presenta el flujo de trabajo del proyecto para construir un nuevo
 
 Todas las políticas intercambiables en caliente de Microduck comparten la misma interfaz:
 
-- **Observación del actor de 61 dimensiones**: 48 valores de propiocepción más el bloque de comandos de 13 dimensiones `[twist(3), head_pose(4), body_pose(6)]`.
-- **Salida de acción de 14 dimensiones** para las articulaciones de servos activas.
+- **Observación del actor de 61 dimensiones**: 48 valores de propiocepción más el bloque de comando de 13 dimensiones `[twist(3), head_pose(4), body_pose(6)]`.
+- **Salida de acción de 14 dimensiones** para las articulaciones de los servos activos.
 - Las ranuras de comando no utilizadas siguen presentes y se rellenan con ceros.
-- Las articulaciones pasivas de ruedas y holguras usan la convención de nombres `passive_*` y no deben seleccionarse como articulaciones accionadas.
-- Los ID de articulaciones deben resolverse mediante los helpers del proyecto en lugar de codificarse de forma rígida.
+- Las ruedas pasivas y las articulaciones con holgura usan la convención de nombres `passive_*` y no deben seleccionarse como articulaciones accionadas.
+- Los ID de las articulaciones deben resolverse mediante los helpers del proyecto en lugar de codificarse de forma rígida.
 - La exportación a ONNX debe hacerse a través de `scripts/export.py` para que se incluya el normalizador de observaciones.
 
 Romper este contrato puede producir una política que funcione en un visor pero que no pueda cambiarse ni desplegarse correctamente.
@@ -66,16 +68,16 @@ cp src/mjlab_microduck/tasks/mdp.py \
 
 ## Diseñar la línea de tiempo del movimiento
 
-Una reverencia simple puede usar una fase normalizada de `0.0` a `1.0`:
+Una reverencia sencilla puede usar una fase normalizada de `0.0` a `1.0`:
 
 | Fase | Comportamiento |
 |---|---|
 | `0.00–0.25` | Descender hacia la pose de reverencia |
 | `0.25–0.55` | Mantener la reverencia |
 | `0.55–0.85` | Volver a la pose inicial |
-| `0.85–1.00` | Estabilizarse en posición erguida |
+| `0.85–1.00` | Estabilizar en posición erguida |
 
-Usa interpolación suave en lugar de cambiar directamente entre dos poses. Los cambios bruscos de objetivo suelen causar altas tasas de acción, impactos o gradientes de recompensa inestables.
+Utiliza interpolación suave en lugar de cambiar directamente entre dos poses. Los cambios bruscos de objetivo suelen causar altas tasas de acción, impactos o gradientes de recompensa inestables.
 
 ## Definir una pose objetivo
 
@@ -102,11 +104,11 @@ Una recompensa útil para movimientos personalizados suele combinar:
 
 - Seguimiento de la pose objetivo condicionado por la fase.
 - Una recompensa por el resultado de la tarea, como bajar la cabeza durante la reverencia.
-- Recompensas de verticalidad y recuperación cerca del final de la secuencia.
+- Recompensas de posición erguida y recuperación cerca del final de la secuencia.
 - Términos de contacto de pies y estabilidad lateral.
 - Penalizaciones por límites articulares, colisiones, tasa de acción e impactos.
 
-Reutiliza las recompensas de la plantilla y las funciones compartidas en `src/mjlab_microduck/tasks/mdp.py` siempre que sea posible. Añade una función nueva solo cuando la medición deseada aún no exista.
+Reutiliza las recompensas de la plantilla y las funciones compartidas en `src/mjlab_microduck/tasks/mdp.py` siempre que sea posible. Añade una función nueva solo cuando la medida deseada aún no exista.
 
 :::warning
 Comprueba la convención de signos antes de asignar un peso. Una función que ya devuelve una penalización negativa normalmente usa un peso positivo solo cuando eso coincide con la convención del proyecto. Inspecciona las configuraciones de tareas cercanas y confirma la métrica ponderada en TensorBoard.
@@ -125,7 +127,7 @@ register_mjlab_task(
 )
 ```
 
-Usa exactamente los mismos nombres de funciones implementados en tu nuevo módulo y refleja la firma actual del registro.
+Utiliza exactamente los mismos nombres invocables implementados en tu nuevo módulo y refleja la firma actual del registro.
 
 Confirma el registro:
 
@@ -147,7 +149,7 @@ uv run --no-sync play Mjlab-Bow-Flat-MicroDuck \
   --viewer native
 ```
 
-Busca contactos no válidos, penetración al aparecer, errores en la dirección de las articulaciones, terminación inmediata, valores NaN y poses objetivo imposibles.
+Busca contactos no válidos, penetración al generar el robot, errores en la dirección de las articulaciones, terminación inmediata, valores NaN y poses objetivo imposibles.
 
 ## Ejecutar una prueba rápida (smoke test)
 
@@ -160,15 +162,15 @@ uv run --no-sync train Mjlab-Bow-Flat-MicroDuck \
   --agent.max_iterations 5
 ```
 
-Solo inicia una ejecución de entrenamiento larga después de que esto termine sin excepciones ni NaNs.
+Solo inicies una ejecución de entrenamiento larga después de que esto termine sin excepciones ni NaNs.
 
 ## Entrenar por etapas
 
 Un plan de estudios práctico es:
 
-1. **Descubrimiento del movimiento**: estado de aparición fácil, recompensa de pose amplia, perturbación mínima.
+1. **Descubrimiento del movimiento**: estado inicial fácil, recompensa de pose amplia, perturbación mínima.
 2. **Finalización del movimiento**: refuerza los términos de mantenimiento y recuperación; añade recompensas basadas en el resultado.
-3. **Robustez**: aumenta la diversidad de aparición, la aleatorización de fricción, los empujes externos y las variantes de holgura.
+3. **Robustez**: aumenta la diversidad de estados iniciales, la aleatorización de fricción, los empujes externos y las variantes de holgura.
 
 Ejemplo de ejecución larga:
 
@@ -216,14 +218,14 @@ Mjlab-OneLegBalance-Flat-MicroDuck
 
 ### Línea de tiempo del movimiento
 
-La tarea usa un comando de fase cíclica de seis segundos:
+La tarea utiliza un comando de fase cíclica de seis segundos:
 
 | Fase normalizada | Comportamiento |
 |---|---|
 | `0.00–0.30` | Transferir el peso al pie izquierdo y levantar la pierna derecha |
 | `0.30–0.58` | Mantener la pose de equilibrio sobre una pierna |
-| `0.58–0.78` | Bajar el pie derecho y volver a estar de pie |
-| `0.78–1.00` | Estabilizarse en la pose inicial de dos pies |
+| `0.58–0.78` | Bajar el pie derecho y volver a la posición de pie |
+| `0.78–1.00` | Estabilizar en la pose inicial de apoyo en dos pies |
 
 Estos límites se definen en `microduck_one_leg_balance_env_cfg.py`:
 
@@ -254,7 +256,7 @@ ONE_LEG_POSE = {
 }
 ```
 
-La pierna izquierda permanece cerca de su configuración de pie. La cadera y la rodilla derechas pliegan la pierna oscilante hacia delante, mientras que el pequeño balanceo de la cabeza ayuda a comunicar el lado de apoyo previsto.
+La pierna izquierda permanece cerca de su configuración de pie. La cadera y la rodilla derechas pliegan la pierna oscilante hacia delante, mientras que el pequeño giro de la cabeza ayuda a comunicar el lado de apoyo previsto.
 
 ### Construir la recompensa de equilibrio
 
@@ -262,7 +264,7 @@ El ejemplo combina cinco objetivos específicos de la tarea:
 
 | Recompensa | Propósito |
 |---|---|
-| `one_leg_pose` | Seguir la pose articular interpolada de estar de pie a equilibrio |
+| `one_leg_pose` | Seguir la pose articular interpolada de pie a equilibrio |
 | `support_foot_grounded` | Mantener el pie de apoyo izquierdo en contacto con el terreno |
 | `swing_foot_airborne` | Evitar que el pie derecho permanezca en el suelo durante la fase de mantenimiento |
 | `swing_foot_height` | Seguir la altura deseada del pie derecho por encima del terreno |
@@ -270,7 +272,7 @@ El ejemplo combina cinco objetivos específicos de la tarea:
 
 La tarea también conserva los términos de límites articulares, autocolisión, velocidad angular, tasa de acción, actuador, codificador, fricción, masa, inercia y aleatorización del centro de masa heredados del entorno de entrenamiento de Microduck.
 
-Se añadieron dos pequeñas mediciones reutilizables a `src/mjlab_microduck/tasks/mdp.py`:
+Se añadieron dos pequeñas medidas reutilizables a `src/mjlab_microduck/tasks/mdp.py`:
 
 - `phase_single_foot_airborne_reward()` limita la recompensa de pie derecho en el aire a la fase de equilibrio activa.
 - `phase_site_height_track()` interpola el objetivo de altura del pie derecho entre los estados de pie y levantado.
@@ -279,7 +281,42 @@ Las funciones existentes `phase_pose_track()`, `phase_pose_track_l1()`, `single_
 
 ### Registrar la tarea
 
-Añade la importación y el registro de la configuración de la tarea en `src/mjlab_microduck/tasks/__init__.py`:
+`Mjlab-OneLegBalance-Flat-MicroDuck` es el **ID de tarea usado por el registro de tareas de MJLab**. No es un nombre de archivo y no se pasa a `make_microduck_one_leg_balance_env_cfg()` como argumento de función. El lanzador de línea de comandos usa esta cadena para buscar el entorno, la configuración de juego, la configuración de RL y el runner registrados en `src/mjlab_microduck/tasks/__init__.py`.
+
+La ruta de definición y registro es:
+
+| Elemento | Ubicación | Propósito |
+|---|---|---|
+| Configuración del entorno | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | Define la pose de una pierna, el tiempo de fase, las recompensas, la escena y `make_microduck_one_leg_balance_env_cfg()` |
+| Configuración de RL | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | Define `MicroduckOneLegBalanceRlCfg` y los hiperparámetros de entrenamiento |
+| Registro de la tarea | `src/mjlab_microduck/tasks/__init__.py` | Vincula el ID de tarea con el entorno y la configuración de RL |
+| Punto de entrada de la CLI | `uv run --no-sync train <task-id>` | Busca la tarea registrada e inicia el entrenamiento |
+
+La relación es:
+
+```text
+Mjlab-OneLegBalance-Flat-MicroDuck
+        ↓ task_id lookup
+register_mjlab_task(...)
+        ↓
+make_microduck_one_leg_balance_env_cfg()
++ MicroduckOneLegBalanceRlCfg
++ MicroduckOnPolicyRunner
+```
+
+Por lo tanto, este es el comando completo usado para seleccionar la tarea personalizada:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+  --env.scene.num-envs 64 \
+  --agent.logger tensorboard \
+  --agent.max_iterations 5
+```
+
+Si `list-envs` no muestra la tarea, comprueba que el nuevo archivo de configuración exista y que tanto su importación como la llamada a `register_mjlab_task()` estén presentes en `src/mjlab_microduck/tasks/__init__.py`. El ID de tarea en el comando debe coincidir exactamente con la cadena `task_id`, incluyendo mayúsculas y guiones.
+
+Añade la importación y el registro de la configuración de la tarea a `src/mjlab_microduck/tasks/__init__.py`:
 
 ```python
 from .microduck_one_leg_balance_env_cfg import (
@@ -320,7 +357,7 @@ cd ~/microduck-jetson/microduck_rl
 uv run --no-sync python scripts/one_leg_pose_editor.py
 ```
 
-Expande el panel **Control** en el lado derecho de la ventana de MuJoCo y ajusta los deslizadores de las articulaciones. Al cerrar la ventana se imprime en la terminal el diccionario final nombrado `ONE_LEG_POSE`. Los botones **Save XML** y **Save MJB** de MuJoCo guardan archivos de modelo; no guardan el diccionario de pose objetivo de Python usado por esta tarea.
+Expande el panel **Control** en el lado derecho de la ventana de MuJoCo y ajusta los deslizadores de las articulaciones. Al cerrar la ventana se imprime en la terminal el diccionario final nombrado `ONE_LEG_POSE`. Los botones de MuJoCo **Save XML** y **Save MJB** guardan archivos de modelo; no guardan el diccionario de pose objetivo de Python usado por esta tarea.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_one_leg_balance.png" alt="Editor de pose interactivo de MuJoCo que muestra la pose objetivo de equilibrio sobre una pierna de Microduck" />
@@ -343,7 +380,7 @@ export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 El número de display puede cambiar después de un reinicio o cuando cambia la sesión de escritorio. Desde una terminal abierta directamente en el escritorio del Jetson, `echo $DISPLAY` muestra el valor activo.
 :::
 
-### Ejecutar las pruebas rápidas verificadas
+### Ejecutar las pruebas de humo verificadas
 
 Comienza con 64 entornos y cinco iteraciones:
 
@@ -367,7 +404,7 @@ uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
   --agent.max_iterations 5
 ```
 
-La prueba rápida con 4096 entornos se completó sin errores de falta de memoria ni terminaciones por NaN y alcanzó aproximadamente `4.6k steps/s`. La observación del actor se mantuvo en 61 dimensiones y la salida de acción se mantuvo en 14 dimensiones.
+La prueba de humo con 4096 entornos se completó sin un error de falta de memoria ni terminación por NaN y alcanzó aproximadamente `4.6k steps/s`. La observación del actor se mantuvo de 61 dimensiones y la salida de acción se mantuvo de 14 dimensiones.
 
 :::tip
 En un Jetson Orin NX de 8 GB o Jetson Orin Nano, comienza con `--env.scene.num-envs 1024`. Auméntalo solo después de comprobar la memoria disponible con `jtop`.
@@ -393,7 +430,7 @@ El editor de poses muestra inmediatamente el objetivo previsto. El visor de entr
 
 ### Iniciar una ejecución de entrenamiento completa
 
-Para el sistema de referencia de 16 GB, utiliza el siguiente punto de partida:
+Para el sistema de referencia de 16 GB, usa el siguiente punto de partida:
 
 ```bash
 uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
@@ -402,17 +439,17 @@ uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
   --agent.max_iterations 20000
 ```
 
-Las pruebas rápidas confirman que la configuración de la tarea, los términos de recompensa, los sensores, el backend CUDA y el gran número de entornos paralelos funcionan correctamente. Por sí solas no prueban la convergencia de la política. Evalúa los checkpoints guardados en MuJoCo y ajusta la pose, los pesos de recompensa, el temporizado de fase o el currículo si el robot levanta el pie sin transferir su centro de masa, salta o no logra volver a la posición de pie.
+Las pruebas de humo confirman que la configuración de la tarea, los términos de recompensa, los sensores, el backend de CUDA y el gran número de entornos paralelos funcionan correctamente. Por sí solas no prueban la convergencia de la política. Evalúa los checkpoints guardados en MuJoCo y ajusta la pose, los pesos de recompensa, el tiempo de fase o el currículo si el robot levanta el pie sin transferir su centro de masa, salta o no logra volver a la posición de pie.
 
 ## Lista de comprobación de desarrollo
 
-- [ ] La disposición de la observación se mantiene en 61D.
-- [ ] La salida de la política se mantiene en 14D.
+- [ ] La disposición de la observación sigue siendo de 61D.
+- [ ] La salida de la política sigue siendo de 14D.
 - [ ] Las articulaciones pasivas se excluyen de las acciones y de las observaciones de los servos.
-- [ ] El evento de inicio de BAM y la aleatorización de dominio permanecen activos donde se requiere.
+- [ ] El evento de inicio de BAM y la aleatorización de dominio siguen activos donde se requiere.
 - [ ] La tarea aparece en `list-envs`.
 - [ ] La inspección con el visor de política aleatoria se completa correctamente.
-- [ ] La prueba rápida con 64 entornos se completa correctamente.
+- [ ] La prueba de humo con 64 entornos se completa correctamente.
 - [ ] Las métricas principales de la tarea mejoran en TensorBoard.
 - [ ] El checkpoint PT final se comporta correctamente en MuJoCo.
 - [ ] ONNX se exporta con el script del proyecto y se ensaya antes del despliegue en el robot.

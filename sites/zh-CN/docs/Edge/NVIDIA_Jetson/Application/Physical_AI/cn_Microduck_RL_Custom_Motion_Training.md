@@ -8,6 +8,8 @@ last_update:
   date: 09/07/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/cn/ai_robotics_microduck_rl_custom_motion_training/
+updatedAt: '2026-09-07'
 ---
 
 # 创建自定义 Microduck 动作
@@ -19,18 +21,18 @@ createdAt: '2026-09-04'
   <a href="/cn/ai_robotics_microduck_rl_official_policies/" style={{display:'inline-flex', alignItems:'center', gap:'10px', padding:'9px 16px 9px 10px', borderRadius:'9px', background:'#00a86b', color:'#fff', fontWeight:'700', textDecoration:'none'}}><span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'28px', height:'28px', borderRadius:'50%', background:'rgba(255,255,255,.22)', fontSize:'21px', lineHeight:'1'}}>←</span> 官方动作</a>
 </div>
 
-## 理解策略约定（Policy Contract）
+## 理解策略约定
 
-所有可热插拔的 Microduck 策略共享同一接口：
+所有可热插拔的 Microduck 策略共享相同的接口：
 
-- **61 维 actor 观测**：48 个本体感知值，加上 13 维命令块 `[twist(3), head_pose(4), body_pose(6)]`。
+- **61 维 actor 观测**：48 个本体感知值加上 13 维命令块 `[twist(3), head_pose(4), body_pose(6)]`。
 - **14 维动作输出**，对应激活的舵机关节。
 - 未使用的命令槽仍然存在，并用零填充。
 - 被动轮子和间隙关节使用 `passive_*` 命名约定，且不得被选为驱动关节。
 - 关节 ID 应由项目辅助函数解析，而不是硬编码。
 - ONNX 导出必须通过 `scripts/export.py`，以便包含观测归一化器。
 
-破坏这一约定可能会产生只在某个 Viewer 中可用、但无法正确切换或部署的策略。
+破坏这一约定可能会产生只在某个查看器中可用、但无法正确切换或部署的策略。
 
 ## 选择最接近的模板
 
@@ -70,7 +72,7 @@ cp src/mjlab_microduck/tasks/mdp.py \
 
 | 阶段 | 行为 |
 |---|---|
-| `0.00–0.25` | 向鞠躬姿态下降 |
+| `0.00–0.25` | 向鞠躬姿态下沉 |
 | `0.25–0.55` | 保持鞠躬 |
 | `0.55–0.85` | 返回到初始姿态 |
 | `0.85–1.00` | 稳定直立 |
@@ -79,7 +81,7 @@ cp src/mjlab_microduck/tasks/mdp.py \
 
 ## 定义目标姿态
 
-在 `microduck_bow_env_cfg.py` 中创建关节名称映射。从保守的角度开始设置角度，并在训练前使用 Viewer 检查它们。
+在 `microduck_bow_env_cfg.py` 中创建关节名称映射。先从保守的角度值开始，并在训练前使用 Viewer 检查它们。
 
 ```python
 BOW_POSE = {
@@ -94,11 +96,11 @@ BOW_POSE = {
 }
 ```
 
-上述数值只是起点。请在机器人配置中确认实际的关节名称和符号方向。
+上面的数值只是起点。请在机器人配置中确认实际的关节名称和符号方向。
 
 ## 构建奖励
 
-一个有用的自定义动作奖励通常结合以下内容：
+一个有用的自定义动作奖励通常组合以下内容：
 
 - 基于阶段的目标姿态跟踪。
 - 任务结果奖励，例如在鞠躬时降低头部。
@@ -147,7 +149,7 @@ uv run --no-sync play Mjlab-Bow-Flat-MicroDuck \
   --viewer native
 ```
 
-留意无效接触、生成时的穿模、关节方向错误、立即终止、NaN 值以及不可能实现的目标姿态。
+留意无效接触、生成时的相互穿透、关节方向错误、立即终止、NaN 值以及不可能的目标姿态。
 
 ## 运行冒烟测试
 
@@ -164,13 +166,13 @@ uv run --no-sync train Mjlab-Bow-Flat-MicroDuck \
 
 ## 分阶段训练
 
-一个实用的课程设计是：
+一个实用的课程安排是：
 
-1. **动作探索**：简单的初始状态、宽松的姿态奖励、最小扰动。
+1. **动作探索**：简单的生成状态、宽松的姿态奖励、最小扰动。
 2. **动作完成**：加强保持和恢复项；添加基于结果的奖励。
-3. **鲁棒性**：增加初始状态多样性、摩擦随机化、外部推力和间隙变体。
+3. **鲁棒性**：增加生成多样性、摩擦随机化、外部推力和间隙变体。
 
-示例长跑命令：
+示例长跑训练：
 
 ```bash
 uv run --no-sync train Mjlab-Bow-Flat-MicroDuck \
@@ -236,7 +238,7 @@ RETURN_END = 0.78
 
 ### 定义目标姿态
 
-目标使用关节名称而不是原始 MuJoCo 关节索引来表示。这样可以保持意图可读，并避免在机器人模型变化时发生意外的索引偏移。
+目标使用关节名称而不是原始 MuJoCo 关节索引来表达。这样可以保持意图可读，并避免在机器人模型变化时发生索引意外偏移。
 
 ```python
 ONE_LEG_POSE = {
@@ -258,7 +260,7 @@ ONE_LEG_POSE = {
 
 ### 构建平衡奖励
 
-该示例结合了五个任务特定目标：
+该示例组合了五个任务特定目标：
 
 | 奖励 | 目的 |
 |---|---|
@@ -268,18 +270,53 @@ ONE_LEG_POSE = {
 | `swing_foot_height` | 跟踪右脚相对于地形的期望离地高度 |
 | `com_over_support` | 将水平质心移动到左支撑脚上方 |
 
-该任务还保留了 Microduck 训练环境中继承的关节极限、自碰撞、角速度、动作速率、执行器、编码器、摩擦、质量、惯量以及质心随机化项。
+该任务还保留了 Microduck 训练环境继承的关节极限、自碰撞、角速度、动作速率、执行器、编码器、摩擦、质量、惯量以及质心随机化项。
 
 在 `src/mjlab_microduck/tasks/mdp.py` 中添加了两个小型可复用测量：
 
 - `phase_single_foot_airborne_reward()` 将右脚腾空奖励限制在当前激活的平衡相位内。
-- `phase_site_height_track()` 在站立和抬起状态之间插值右脚高度目标。
+- `phase_site_height_track()` 在站立和抬起状态之间插值右脚的高度目标。
 
 现有的 `phase_pose_track()`, `phase_pose_track_l1()`, `single_foot_grounded_reward()`, 和 `com_over_support_foot()` 函数被直接复用。
 
 ### 注册任务
 
-将任务配置的导入和注册添加到 `src/mjlab_microduck/tasks/__init__.py`：
+`Mjlab-OneLegBalance-Flat-MicroDuck` 是 **MJLab 任务注册表使用的任务 ID**。它不是文件名，也不会作为函数参数传递给 `make_microduck_one_leg_balance_env_cfg()`。命令行启动器使用该字符串查找在 `src/mjlab_microduck/tasks/__init__.py` 中注册的环境、play 配置、RL 配置和运行器。
+
+定义和注册路径为：
+
+| 项目 | 位置 | 目的 |
+|---|---|---|
+| 环境配置 | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | 定义单腿姿态、相位时序、奖励、场景以及 `make_microduck_one_leg_balance_env_cfg()` |
+| RL 配置 | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | 定义 `MicroduckOneLegBalanceRlCfg` 和训练超参数 |
+| 任务注册 | `src/mjlab_microduck/tasks/__init__.py` | 将任务 ID 绑定到环境和 RL 配置 |
+| CLI 入口 | `uv run --no-sync train <task-id>` | 查找已注册任务并启动训练 |
+
+其关系为：
+
+```text
+Mjlab-OneLegBalance-Flat-MicroDuck
+        ↓ task_id lookup
+register_mjlab_task(...)
+        ↓
+make_microduck_one_leg_balance_env_cfg()
++ MicroduckOneLegBalanceRlCfg
++ MicroduckOnPolicyRunner
+```
+
+因此，用于选择自定义任务的完整命令为：
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+  --env.scene.num-envs 64 \
+  --agent.logger tensorboard \
+  --agent.max_iterations 5
+```
+
+如果 `list-envs` 没有显示该任务，请检查新的配置文件是否存在，并且其 import 和 `register_mjlab_task()` 调用都已添加到 `src/mjlab_microduck/tasks/__init__.py` 中。命令中的任务 ID 必须与 `task_id` 字符串完全一致，包括大小写和连字符。
+
+将任务配置的 import 和注册添加到 `src/mjlab_microduck/tasks/__init__.py`：
 
 ```python
 from .microduck_one_leg_balance_env_cfg import (
@@ -313,20 +350,20 @@ Mjlab-OneLegBalance-Flat-MicroDuck
 
 示例包含 `scripts/one_leg_pose_editor.py`。它会禁用重力并固定浮动基座，以便在训练前可以安全地调整各个关节目标。
 
-在 Jetson 桌面上从终端直接运行它：
+在 Jetson 桌面上的终端中直接运行：
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
 uv run --no-sync python scripts/one_leg_pose_editor.py
 ```
 
-展开 MuJoCo 窗口右侧的 **Control** 面板并调整关节滑块。关闭窗口会在终端打印最终命名的 `ONE_LEG_POSE` 字典。MuJoCo 的 **Save XML** 和 **Save MJB** 按钮用于保存模型文件；它们不会保存此任务使用的 Python 目标姿态字典。
+在 MuJoCo 窗口右侧展开 **Control** 面板并调整关节滑块。关闭窗口会在终端中打印最终命名的 `ONE_LEG_POSE` 字典。MuJoCo 的 **Save XML** 和 **Save MJB** 按钮用于保存模型文件；它们不会保存此任务使用的 Python 目标姿态字典。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_one_leg_balance.png" alt="Interactive MuJoCo pose editor showing the Microduck one-leg balance target pose" />
 </div>
 
-如果通过 SSH 启动编辑器并希望它显示在 Jetson 本地连接的显示器上，请先导出活动桌面会话。已验证的 Jetson 会话使用了 `DISPLAY=:1`：
+如果通过 SSH 启动编辑器并希望其显示在 Jetson 本地连接的显示器上，请先导出活动桌面会话。已验证的 Jetson 会话使用 `DISPLAY=:1`：
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
@@ -340,7 +377,7 @@ export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 ```
 
 :::note
-显示编号在重启或桌面会话变化后可能会改变。在 Jetson 桌面上直接打开的终端中，运行 `echo $DISPLAY` 会显示当前活动值。
+显示编号在重启或桌面会话变化后可能会改变。在直接从 Jetson 桌面打开的终端中，`echo $DISPLAY` 会显示当前活动值。
 :::
 
 ### 运行已验证的冒烟测试
@@ -367,10 +404,10 @@ uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
   --agent.max_iterations 5
 ```
 
-4096 环境的冒烟测试在没有出现内存溢出错误或 NaN 终止的情况下完成，并达到了约 `4.6k steps/s`。Actor 观测保持为 61 维，动作输出保持为 14 维。
+4096 环境的冒烟测试在没有出现内存不足错误或 NaN 终止的情况下完成，并达到了约 `4.6k steps/s`。Actor 观测维度保持为 61，动作输出维度保持为 14。
 
 :::tip
-在 8 GB 的 Jetson Orin NX 或 Jetson Orin Nano 上，请从 `--env.scene.num-envs 1024` 开始。只有在使用 `jtop` 检查可用内存后再增加该值。
+在 8 GB 的 Jetson Orin NX 或 Jetson Orin Nano 上，请从 `--env.scene.num-envs 1024` 开始。仅在使用 `jtop` 检查可用内存后再增加该值。
 :::
 
 ### 打开训练查看器
@@ -389,7 +426,7 @@ uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
   --env.viewer.elevation -12
 ```
 
-姿态编辑器会立即显示预期目标。训练查看器最初显示的是未训练策略，因此只有在策略学会转移、抬起、保持和恢复序列后，稳定的单腿行为才会出现。
+姿态编辑器会立即显示预期目标。训练查看器最初显示的是未训练策略，因此只有在策略学会转移、抬脚、保持和恢复序列后，稳定的单腿行为才会出现。
 
 ### 启动完整训练运行
 
@@ -402,7 +439,7 @@ uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
   --agent.max_iterations 20000
 ```
 
-冒烟测试确认任务配置、奖励项、传感器、CUDA 后端以及大量并行环境数量工作正常。它们本身并不能证明策略收敛。请在 MuJoCo 中评估保存的检查点，并在机器人在未转移质心的情况下抬脚、跳跃或无法恢复到站立时，调整姿态、奖励权重、相位时序或课程。
+冒烟测试确认任务配置、奖励项、传感器、CUDA 后端以及大量并行环境数量均能正常工作。但它们本身并不能证明策略收敛。请在 MuJoCo 中评估保存的检查点，并在机器人在未转移质心的情况下抬脚、跳跃或无法恢复到站立时，调整姿态、奖励权重、相位时序或课程。
 
 ## 开发检查清单
 
@@ -411,8 +448,8 @@ uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
 - [ ] 被动关节从动作和舵机观测中排除。
 - [ ] BAM 启动事件和域随机化在需要的地方保持激活。
 - [ ] 任务出现在 `list-envs` 中。
-- [ ] 随机策略查看器检查成功。
-- [ ] 64 环境冒烟测试成功。
+- [ ] Random-policy Viewer 检查通过。
+- [ ] 64 环境冒烟测试通过。
 - [ ] 主要任务指标在 TensorBoard 中得到改善。
 - [ ] 最终 PT 检查点在 MuJoCo 中表现正确。
 - [ ] 使用项目脚本导出 ONNX，并在机器人部署前进行演练。
