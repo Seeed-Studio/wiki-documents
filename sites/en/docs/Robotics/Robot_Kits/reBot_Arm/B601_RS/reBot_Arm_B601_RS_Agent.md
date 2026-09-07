@@ -1,5 +1,5 @@
 ---
-description: "wrc_demo Operation Guide: Complete steps for the reBot Arm B601-RS visual grasping demo — environment setup, model download, LLM switching, hand-eye calibration, demo running, troubleshooting."
+description: 'wrc_demo Operation Guide: Complete steps for the reBot Arm B601-RS visual grasping demo — environment setup, model download, LLM switching, hand-eye calibration, demo running, troubleshooting.'
 title: Embodied Agent Architecture Design for reBot B601 RS Robotic Arm
 keywords:
   - wrc_demo
@@ -16,11 +16,10 @@ last_update:
   date: 2026-08-28
   author: Seeed Studio
 translation:
-  skip:
-    - [zh-CN]
+  skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-08-28'
-url: https://wiki.seeedstudio.com/cn/wrc_demo_tutorial/
+updatedAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/wrc_demo_tutorial/
 ---
 
 # Embodied Agent Architecture Design for reBot B601 RS Robotic Arm

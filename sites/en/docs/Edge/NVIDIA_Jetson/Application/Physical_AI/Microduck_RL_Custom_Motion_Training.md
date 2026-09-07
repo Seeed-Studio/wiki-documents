@@ -8,6 +8,8 @@ last_update:
   date: 09/07/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/ai_robotics_microduck_rl_custom_motion_training/
+updatedAt: '2026-09-07'
 ---
 
 # Create a Custom Microduck Motion

@@ -16,7 +16,7 @@ last_update:
   date: 09/03/2026
   author: yylin
 createdAt: '2026-08-28'
-updatedAt: '2026-08-28'
+updatedAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/recamera_pro_rknn_model_conversion/
 ---
 

@@ -13,7 +13,7 @@ last_update:
   date: 3/13/2026
   author: Michelle Huang
 createdAt: '2025-06-17'
-updatedAt: '2026-05-15'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/l2_sd_card/
 ---
 

@@ -6,43 +6,39 @@ keywords:
   - IP66
   - Jetson
   - 入门指南
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg
 slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
-  date: 03/04/2026
+  date: 09/01/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-08-07'
+updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
 # reComputer Rugged J40 入门指南
 
-:::note
-本产品目前仍在开发中。规格和供货情况可能会发生变化。
-:::
-
 <div align="center">
-  <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
+  <img width="700" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J4012" />
 </div>
 
-reComputer Rugged J40 是一款通过 IP66 认证的无风扇边缘 AI 计算机，由 NVIDIA Jetson Orin NX/Nano 模组提供算力。专为包括海事、车载和工业部署在内的严苛户外环境而设计，在紧凑的被动散热机箱中提供高达 100 TOPS 的 AI 性能，并配备全防水 M12 接口。
+reComputer Rugged J4012 是一款基于 NVIDIA Jetson Orin NX 16GB 的 IP66 级边缘 AI 计算机。其全密封 M12 接口提供 USB、带 PSE 的以太网、CAN、RS-232/422/485 和 DI/DO 接口，同时配备 M.2 Key B 插槽以支持 5G 扩展，非常适合用于 AMR、机器人、农业、工业自动化以及海事等应用场景。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}>立即获取 🖱️</font></span></strong>
   </a>
 </div>
 
 ## 特性
 
-- **IP66 防水**：全密封机箱，所有外部接口均采用 M12 防水连接器
+- **IP66 防水**：全密封外壳，所有外部接口均采用 M12 防水连接器
 - **无风扇被动散热**：在 -20°C 至 +60°C、0.7 m/s 气流条件下静音运行
-- **坚固耐用且抗振动**：3 Grms @ 5–500 Hz，1 小时/轴——适用于车载和海事场景
-- **丰富工业 I/O**：CAN-FD（隔离）、RS-232/422/485、DI/DO，全部通过 M12 A-code 接口提供
-- **灵活网络连接**：4× PoE GbE + 1× GbE（M12），M.2 Key E（Wi-Fi/BT），M.2 Key B（5G/GPS）
-- **宽电压输入**：通过 M12 B/A-code 接口提供 19–48 V DC 输入
+- **坚固耐用且抗振动**：3 Grms @ 5–500 Hz，1 小时/轴——适用于车辆和海事应用
+- **丰富的工业 I/O**：CAN-FD（隔离）、RS-232/422/485、DI/DO，全部通过 M12 A-code 连接器提供
+- **灵活的网络连接**：4× PoE GbE + 1× GbE（M12），M.2 Key E（Wi-Fi/BT），M.2 Key B（5G/GPS）
+- **宽电压输入**：通过 M12 B/A-code 连接器提供 19–48 V DC 输入
 - **认证**：CE、FCC、RoHS、REACH
 
 ## 规格参数
@@ -127,7 +123,7 @@ reComputer Rugged J40 是一款通过 IP66 认证的无风扇边缘 AI 计算机
     </tr>
     <tr>
       <td>天线</td>
-      <td colSpan={2}>4× SMA 防水天线接口</td>
+      <td colSpan={2}>4× SMA 防水天线连接器</td>
     </tr>
     <tr>
       <td rowSpan={2}>扩展</td>
@@ -141,7 +137,7 @@ reComputer Rugged J40 是一款通过 IP66 认证的无风扇边缘 AI 计算机
     <tr>
       <td rowSpan={2}>电源</td>
       <td>输入</td>
-      <td colSpan={2}>通过 M12 B/A-code 接口提供 19–48 V DC</td>
+      <td colSpan={2}>通过 M12 B/A-code 连接器提供 19–48 V DC</td>
     </tr>
     <tr>
       <td>功耗</td>
@@ -200,7 +196,7 @@ reComputer Rugged J40 是一款通过 IP66 认证的无风扇边缘 AI 计算机
 ## 烧录 JetPack
 
 :::note
-BSP 可用后将补充烧录说明。烧录流程与其他 reComputer J40 系列设备相同。
+烧录说明将在 BSP 可用后补充。烧录流程与其他 reComputer J40 系列设备相同。
 :::
 
 请参考 [Flash BSP with Jetpack to Selected Jetson](/cn/flash/jetpack_to_selected_product) 页面获取最新的烧录指南。
@@ -237,7 +233,7 @@ lsusb
 
 ## 解压与烧录
 
-**步骤 1：** 解压已下载的镜像文件：
+**步骤 1：** 解压下载的镜像文件：
 
 ```bash
 cd <path-to-image>
@@ -253,13 +249,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 资源
 
-- [reComputer Rugged J40 规格书](#) *(即将推出)*
+- [reComputer Rugged J401 规格书](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf)
 - [Linux_for_Tegra 源码](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson 设备对比](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中体验顺畅。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

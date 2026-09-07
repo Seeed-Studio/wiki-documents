@@ -10,7 +10,7 @@ last_update:
   date: 9/7/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-08-25'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/Seeeduino-XIAO/
 ---
 

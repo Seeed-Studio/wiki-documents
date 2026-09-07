@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/31/2026
+  date: 09/07/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-09-02'
+updatedAt: '2026-09-07'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,65 +18,66 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 31th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 7th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [JetPack 7.2 Memory Optimization: Software Advances and an LLM Deployment Budget](https://wiki.seeedstudio.com/jetpack_7_2_memory_optimization_deep_dive/)
+### [Wio Tracker L2 Introduction](https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/jetpack-7.2/unified_mem.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="Wio Tracker L2" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This article focuses on two questions for Jetson Orin developers: which JetPack 7.2 software updates can improve memory efficiency, and how to turn the available memory into a practical LLM deployment budget. It distinguishes JetPack 7.2 features from general TensorRT and LLM techniques, helping you measure each optimization accurately.
+The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtastic.org/) node featuring LoRa (862–930 MHz), the ESP32S3 for efficient processing, and an L76K GPS module for accurate location tracking. Designed for flexibility, it supports QSPI touch screen, E-Ink displays, TF Card, as well as solar panels and battery power, making it ideal for a wide range of IoT and off-grid applications.
+
+**More Wio Tracker L2 guides updated this week:**
+
+- [Get Started with Wio Tracker L2](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l2/)
+- [MUI Introduction](https://wiki.seeedstudio.com/l2_mui/)
+- [SD Card Usage](https://wiki.seeedstudio.com/l2_sd_card/)
+- [MQTT Gateway](https://wiki.seeedstudio.com/set_up_mqtt_gateway_l2/)
+- [Meshtastic Node Map](https://wiki.seeedstudio.com/meshtastic_node_map_l2/)
+- [Meshtastic Network Monitor](https://wiki.seeedstudio.com/meshtastic_node_monitor_l2/)
 
 </div>
 
-### [Build a Visual Wake and Offline Speech Recognition System with reCamera Pro](https://wiki.seeedstudio.com/recamera_pro_visual_wake_stt/)
+### [Microduck RL on Jetson](https://wiki.seeedstudio.com/ai_robotics_microduck_rl_on_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/gpt_images.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project implements a natural, fully on-device interaction flow for reCamera Pro (RV1126B). The camera detects a face and estimates head pose. Only after a person has looked at the camera continuously does the application open the microphone and start streaming speech recognition. It then enters a brief cooldown period to prevent repeat triggers. It is suitable for voice assistants, exhibition kiosks, and privacy-first edge voice entry points. Vision, pose evaluation, speech features, and Zipformer inference run locally. The web dashboard requires no cloud service, Node.js process, CDN, or external font.
+This demo builds a complete robot-learning workflow for **Microduck** on a **Seeed reComputer powered by NVIDIA Jetson Orin NX 16GB**. It covers GPU environment deployment, PPO training with MuJoCo, visualization of local checkpoints, keyboard-controlled inference with official ONNX policies, and the development of new custom motions.
 
 </div>
 
-### [Build Real-Time Audio Streaming with reSpeaker Clip RTC SDK](https://wiki.seeedstudio.com/respeaker_clip_rtc_streaming/)
+### [Embodied Agent Architecture Design for reBot B601 RS Robotic Arm](https://wiki.seeedstudio.com/wrc_demo_tutorial/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/rtc/rtc_fft_demo_pipeline.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent3.PNG" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This tutorial teaches you how to receive live audio from a reSpeaker Clip while it is being captured, instead of recording first and downloading later. You will run a real-time FFT spectrum demo, understand how an RTC session is established, write a minimal streaming application yourself, and learn what the audio data actually looks like on the host.
+This tutorial is the **operation guide** for the [wrc_demo](https://github.com/TheMoonAstronaut/wrc) project. Follow the steps in this guide to go from zero cloning to a running demo in **1-2 hours**. wrc_demo is a visual grasping demo for the [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) (RobStride bus), running on Ubuntu 22.04 + Python 3.10 + conda `wrc-demo` environment. The demo receives natural language instructions (e.g. "pick up the red block"), automatically plans the grasp and executes it.
 
 </div>
 
-### [reCamera Pro GPIO Pin Usage Guide](https://wiki.seeedstudio.com/recamera_pro_gpio_guide/)
+### [reSpeaker Clip AI Chat System Architecture](https://wiki.seeedstudio.com/respeaker_clip_ai_chat_system_architecture/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Expansion_CON.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This article describes how to use GPIO pins on the reCamera Pro. You will learn how to determine the target GPIO pin using the pin number calculation formula, export and configure pin direction and level via the sysfs interface, and use Python scripts to control GPIO outputs or read input levels.
+This document introduces the architecture of the reSpeaker Clip AI chat system, including its core components, workflow, tool calling, and memory mechanism.
 
 </div>
 
-### [Convert and Quantize Models for reCamera Pro with RKNN-Toolkit2](https://wiki.seeedstudio.com/recamera_pro_rknn_model_conversion/)
+### [Flash the Debian 13 Image to reCamera Pro](https://wiki.seeedstudio.com/recamera_pro_debian/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-reCamera Pro uses the Rockchip RV1126B. To run a custom neural-network model on its NPU, export the model to ONNX and compile it to an RKNN model for **RV1126B** on an x86_64 Linux PC or WSL environment. This guide creates an FP16 baseline and an INT8-quantized model. Conversion occurs on the host PC; a connected reCamera Pro is needed only for final validation and deployment.
-
-</div>
-
-### [Using I2C Commands to Control reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_xvf_3800_i2c_list/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This section provides the I2C control command list for the ReSpeaker XVF3800, along with I2C read/write examples and hardware signal-path diagrams for the two operating modes. For an application example of controlling the ReSpeaker XVF3800 via the I2C interface, please refer to the [Device Control](/respeaker_xvf3800_xiao_rgb) section.
+reCamera Pro is powered by the RV1126B chip and is available with 2 GB or 4 GB of memory. It ships with Buildroot firmware for a quick start with AI inference. This page provides a Debian 13 image for users who need more flexibility for development and deployment.
 
 </div>
 
@@ -232,5 +233,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.8.10th](/Seeed_Elderly/weekly_wiki/2026/wiki260810)
 - [weekly wiki on 2026.8.17th](/Seeed_Elderly/weekly_wiki/2026/wiki260817)
 - [weekly wiki on 2026.8.24th](/Seeed_Elderly/weekly_wiki/2026/wiki260824)
+- [weekly wiki on 2026.8.31st](/Seeed_Elderly/weekly_wiki/2026/wiki260831)
 
 </details>
