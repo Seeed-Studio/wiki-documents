@@ -5,32 +5,28 @@ keywords:
   - reComputer Rugged
   - IP66
   - Jetson
-  - Introducción
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+  - Getting Started
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg
 slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
-  date: 03/04/2026
+  date: 09/01/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-08-07'
+updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/es/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
 # Introducción a reComputer Rugged J40
 
-:::note
-Este producto se encuentra actualmente en desarrollo. Las especificaciones y la disponibilidad están sujetas a cambios.
-:::
-
 <div align="center">
-  <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
+  <img width="700" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J4012" />
 </div>
 
-El reComputer Rugged J40 es un ordenador de borde de IA sin ventilador con clasificación IP66, impulsado por módulos NVIDIA Jetson Orin NX/Nano. Diseñado para entornos exteriores hostiles, incluidos despliegues marinos, montados en vehículos e industriales, ofrece hasta 100 TOPS de rendimiento de IA en un chasis compacto con refrigeración pasiva y conectores M12 totalmente impermeables.
+El reComputer Rugged J4012 es un ordenador de borde de IA con clasificación IP66, impulsado por NVIDIA Jetson Orin NX 16GB. Su conectividad M12 sellada proporciona interfaces USB, Ethernet con PSE, CAN, RS-232/422/485 y DI/DO, mientras que una ranura M.2 Key B admite expansión 5G, lo que lo hace muy adecuado para aplicaciones de AMR, robótica, agricultura, automatización industrial y marítimas.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}>Consigue uno ahora 🖱️</font></span></strong>
   </a>
 </div>
@@ -38,9 +34,9 @@ El reComputer Rugged J40 es un ordenador de borde de IA sin ventilador con clasi
 ## Características
 
 - **Impermeabilidad IP66**: Carcasa totalmente sellada con conectores M12 impermeables para todas las interfaces externas
-- **Refrigeración pasiva sin ventilador**: Funcionamiento silencioso entre -20°C y +60°C con un flujo de aire de 0,7 m/s
-- **Robusto y resistente a vibraciones**: 3 Grms @ 5–500 Hz, 1 hr/eje — adecuado para uso en vehículos y aplicaciones marinas
-- **Amplio I/O industrial**: CAN-FD (aislado), RS-232/422/485, DI/DO, todo a través de conectores M12 con código A
+- **Refrigeración pasiva sin ventilador**: Funcionamiento silencioso entre -20°C y +60°C con flujo de aire de 0,7 m/s
+- **Robusto y resistente a vibraciones**: 3 Grms @ 5–500 Hz, 1 h/eje — adecuado para uso en vehículos y aplicaciones marinas
+- **I/O industrial abundante**: CAN-FD (aislado), RS-232/422/485, DI/DO, todo a través de conectores M12 con código A
 - **Redes flexibles**: 4× PoE GbE + 1× GbE (M12), M.2 Key E (Wi-Fi/BT), M.2 Key B (5G/GPS)
 - **Entrada de voltaje amplia**: 19–48 V CC mediante conector M12 con código B/A
 - **Certificaciones**: CE, FCC, RoHS, REACH
@@ -80,12 +76,12 @@ El reComputer Rugged J40 es un ordenador de borde de IA sin ventilador con clasi
     <tr>
       <td>CPU</td>
       <td>8 núcleos Arm Cortex-A78AE v8.2 de 64 bits, 2MB L2 + 4MB L3</td>
-      <td>6 núcleos Arm Cortex-A78AE v8.2 de 64 bits, 1.5MB L2 + 4MB L3</td>
+      <td>6 núcleos Arm Cortex-A78AE v8.2 de 64 bits, 1,5MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Memoria</td>
-      <td>16GB 128-bit LPDDR5 @ 102.4 GB/s</td>
-      <td>8GB 128-bit LPDDR5 @ 68 GB/s</td>
+      <td>16GB LPDDR5 de 128 bits @ 102,4 GB/s</td>
+      <td>8GB LPDDR5 de 128 bits @ 68 GB/s</td>
     </tr>
     <tr>
       <td rowSpan={2}>Almacenamiento</td>
@@ -162,7 +158,7 @@ El reComputer Rugged J40 es un ordenador de borde de IA sin ventilador con clasi
     </tr>
     <tr>
       <td>Vibración</td>
-      <td colSpan={2}>3 Grms @ 5–500 Hz, aleatoria, 1 hr/eje</td>
+      <td colSpan={2}>3 Grms @ 5–500 Hz, aleatoria, 1 h/eje</td>
     </tr>
     <tr>
       <td>Dimensiones</td>
@@ -253,8 +249,8 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## Recursos
 
-- [Hoja de datos de reComputer Rugged J40](#) *(próximamente)*
-- [Linux_for_Tegra Source Code](https://github.com/Seeed-Studio/Linux_for_Tegra)
+- [Hoja de datos de reComputer Rugged J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf)
+- [Código fuente de Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [Comparación de dispositivos NVIDIA Jetson](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 
 ## Soporte técnico y debate sobre el producto

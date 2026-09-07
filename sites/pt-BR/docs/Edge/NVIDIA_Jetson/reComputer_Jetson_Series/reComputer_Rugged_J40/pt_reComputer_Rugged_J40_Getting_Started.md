@@ -6,43 +6,39 @@ keywords:
   - IP66
   - Jetson
   - Introdução
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg
 slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
-  date: 03/04/2026
+  date: 09/01/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-08-07'
+updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
 # Introdução ao reComputer Rugged J40
 
-:::note
-Este produto está atualmente em desenvolvimento. As especificações e a disponibilidade estão sujeitas a alterações.
-:::
-
 <div align="center">
-  <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
+  <img width="700" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J4012" />
 </div>
 
-O reComputer Rugged J40 é um computador de borda de IA sem ventoinha, com classificação IP66, alimentado por módulos NVIDIA Jetson Orin NX/Nano. Projetado para ambientes externos severos, incluindo aplicações marítimas, veiculares e industriais, ele oferece até 100 TOPS de desempenho de IA em um gabinete compacto, com resfriamento passivo e conectores M12 totalmente à prova d'água.
+O reComputer Rugged J4012 é um computador de borda de IA com classificação IP66, equipado com NVIDIA Jetson Orin NX 16GB. Sua conectividade M12 selada oferece interfaces USB, Ethernet com PSE, CAN, RS-232/422/485 e DI/DO, enquanto um slot M.2 Key B suporta expansão 5G, tornando-o ideal para AMR, robótica, agricultura, automação industrial e aplicações marítimas.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}>Adquira agora 🖱️</font></span></strong>
   </a>
 </div>
 
 ## Recursos
 
-- **À prova d'água IP66**: Gabinete totalmente vedado com conectores M12 à prova d'água para todas as interfaces externas
+- **À prova d'água IP66**: Gabinete totalmente selado com conectores M12 à prova d'água para todas as interfaces externas
 - **Resfriamento passivo sem ventoinha**: Operação silenciosa entre -20°C e +60°C com fluxo de ar de 0,7 m/s
-- **Robusto e resistente a vibrações**: 3 Grms @ 5–500 Hz, 1 h/eixo — adequado para uso veicular e marítimo
+- **Robusto e resistente a vibrações**: 3 Grms @ 5–500 Hz, 1 hr/eixo — adequado para uso veicular e marítimo
 - **I/O industrial rico**: CAN-FD (isolado), RS-232/422/485, DI/DO, todos via conectores M12 A-code
 - **Rede flexível**: 4× PoE GbE + 1× GbE (M12), M.2 Key E (Wi-Fi/BT), M.2 Key B (5G/GPS)
-- **Entrada de tensão ampla**: 19–48 V DC via conector M12 B/A-code
+- **Entrada de ampla faixa de tensão**: 19–48 V DC via conector M12 B/A-code
 - **Certificações**: CE, FCC, RoHS, REACH
 
 ## Especificações
@@ -74,13 +70,13 @@ O reComputer Rugged J40 é um computador de borda de IA sem ventoinha, com class
     </tr>
     <tr>
       <td>GPU</td>
-      <td>1024-core NVIDIA Ampere, 32 Tensor Cores</td>
-      <td>1024-core NVIDIA Ampere, 32 Tensor Cores</td>
+      <td>1024 núcleos NVIDIA Ampere, 32 Tensor Cores</td>
+      <td>1024 núcleos NVIDIA Ampere, 32 Tensor Cores</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td>8-core Arm Cortex-A78AE v8.2 64-bit, 2MB L2 + 4MB L3</td>
-      <td>6-core Arm Cortex-A78AE v8.2 64-bit, 1.5MB L2 + 4MB L3</td>
+      <td>8 núcleos Arm Cortex-A78AE v8.2 64-bit, 2MB L2 + 4MB L3</td>
+      <td>6 núcleos Arm Cortex-A78AE v8.2 64-bit, 1.5MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Memória</td>
@@ -103,7 +99,7 @@ O reComputer Rugged J40 é um computador de borda de IA sem ventoinha, com class
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={2}>4× USB 3.2 Tipo-A (M12 à prova d'água) + 1× USB 2.0/3.0 Tipo-C (gravação, tampa à prova d'água) + 1× USB Tipo-C (debug)</td>
+      <td colSpan={2}>4× USB 3.2 Type-A (M12 à prova d'água) + 1× USB 2.0/3.0 Type-C (gravação, tampa à prova d'água) + 1× USB Type-C (debug)</td>
     </tr>
     <tr>
       <td>Display</td>
@@ -111,15 +107,15 @@ O reComputer Rugged J40 é um computador de borda de IA sem ventoinha, com class
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={2}>2× CAN-FD (isolado, 120 Ω) via M12 A-code de 8 pinos</td>
+      <td colSpan={2}>2× CAN-FD (isolado, 120 Ω) via M12 A-code 8 pinos</td>
     </tr>
     <tr>
       <td>Serial</td>
-      <td colSpan={2}>1× RS-232/422/485 via M12 A-code de 8 pinos</td>
+      <td colSpan={2}>1× RS-232/422/485 via M12 A-code 8 pinos</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td colSpan={2}>2× DI + 2× DO via M12 de 12 pinos / 8 pinos</td>
+      <td colSpan={2}>2× DI + 2× DO via M12 12 pinos / 8 pinos</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -158,11 +154,11 @@ O reComputer Rugged J40 é um computador de borda de IA sem ventoinha, com class
     </tr>
     <tr>
       <td>Umidade</td>
-      <td colSpan={2}>10–95% UR (sem condensação)</td>
+      <td colSpan={2}>10–95% RH (sem condensação)</td>
     </tr>
     <tr>
       <td>Vibração</td>
-      <td colSpan={2}>3 Grms @ 5–500 Hz, aleatório, 1 h/eixo</td>
+      <td colSpan={2}>3 Grms @ 5–500 Hz, aleatório, 1 hr/eixo</td>
     </tr>
     <tr>
       <td>Dimensões</td>
@@ -186,15 +182,15 @@ O reComputer Rugged J40 é um computador de borda de IA sem ventoinha, com class
 ## Visão geral do hardware
 
 :::note
-As imagens da visão geral de hardware serão adicionadas assim que o produto for finalizado.
+As imagens de visão geral do hardware serão adicionadas assim que o produto for finalizado.
 :::
 
 **Indicadores LED:**
 
 | LED | Cor | Status | Descrição |
 |-----|-------|--------|-------------|
-| PWR | Verde | On | Dispositivo está ligado |
-| PWR | Verde | Off | Dispositivo não está ligado |
+| PWR | Verde | On | O dispositivo está ligado |
+| PWR | Verde | Off | O dispositivo está desligado |
 | ACT | Verde | Flashing | Atividade de acesso ao SSD |
 
 ## Gravar o JetPack
@@ -203,14 +199,14 @@ As imagens da visão geral de hardware serão adicionadas assim que o produto fo
 As instruções de gravação serão adicionadas assim que o BSP estiver disponível. O processo de gravação segue o mesmo procedimento de outros dispositivos da série reComputer J40.
 :::
 
-Consulte a página [Flash BSP with Jetpack to Selected Jetson](/pt-br/flash/jetpack_to_selected_product) para o guia de gravação mais recente.
+Consulte a página [Flash BSP with Jetpack to Selected Jetson](/pt-br/flash/jetpack_to_selected_product) para obter o guia de gravação mais recente.
 
 ### Pré-requisitos
 
 - reComputer Rugged J40
 - Fonte de alimentação (19–48 V DC)
-- PC host Ubuntu (20.04 ou 22.04)
-- Cabo de dados USB Tipo-C (para gravação)
+- PC host com Ubuntu (20.04 ou 22.04)
+- Cabo de dados USB Type-C (para gravação)
 - Monitor externo + cabo HDMI
 - Teclado e mouse
 
@@ -220,12 +216,12 @@ Consulte a página [Flash BSP with Jetpack to Selected Jetson](/pt-br/flash/jetp
   <img width="700" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg"/>
 </div>
 
-1. Conecte um cabo USB Tipo-C entre a porta **DEVICE** e o seu PC host Ubuntu.
+1. Conecte um cabo USB Type-C entre a porta **DEVICE** e o PC host com Ubuntu.
 2. Pressione e segure o botão **REC** (Recovery).
 3. Enquanto mantém o REC pressionado, conecte a fonte de alimentação para ligar a placa.
 4. Solte o botão Recovery.
 
-No PC host Ubuntu, verifique o modo de recuperação com:
+No PC host com Ubuntu, verifique o modo de recuperação com:
 
 ```bash
 lsusb
@@ -253,13 +249,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## Recursos
 
-- [reComputer Rugged J40 Datasheet](#) *(em breve)*
+- [reComputer Rugged J401 Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf)
 - [Linux_for_Tegra Source Code](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson Devices Comparison](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
