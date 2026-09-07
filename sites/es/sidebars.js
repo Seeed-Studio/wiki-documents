@@ -4190,6 +4190,7 @@ const sidebars = {
               type: 'category',
               label: 'IA Encarnada',
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Microduck_RL_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Voice_LLM_for_Reachy_Mini',
