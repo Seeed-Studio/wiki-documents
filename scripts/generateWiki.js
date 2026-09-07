@@ -19,17 +19,17 @@ const excludedPaths = [
   path.join(docsDirectory, 'Seeed_Elderly', 'weekly_wiki'), // weekly wiki 的历史目录
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
+  path.join(docsDirectory, 'FAQ', 'respeaker'), // 9.2 排除 respeaker FAQ目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_clip', 'respeaker_clip_sensecraft_voice_sdk.md'), //8.7
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Jetson_Initrd_Flash_Fails_with_ZFS_Host.md'), //8.13
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Headless_Setup_and_Recovery_for_A603.md'), //8.7
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot.md'), //8.17
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Use_Arducam_OV9281_Camera_with_A603.md'), //8.7
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'faqs', 'FAQs.md'), //8.19
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Data_Logger', 'SenseCAP_Combo', 'Get_Started_with_SenseCAP_Combo.md'), //8.23
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Hardware_Usage', 'GPIO_Usage.md'), //8.25
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Secondary_Development', 'reCamera_Pro_RKNN_Model_Conversion.md'), //8.28
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Custom_Motion_Training.md'), //9.7
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Jetson_Environment.md'), //9.7
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Official_Policies.md'), //9.7
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

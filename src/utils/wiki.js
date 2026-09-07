@@ -1,6 +1,28 @@
 const docList = [
   [
     {
+      "path": "/ai_robotics_microduck_rl_on_jetson",
+      "image": "https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png",
+      "title": "Microduck RL on Jetson",
+      "date": "2026-09-04",
+      "title_cn": "Jetson 上的 Microduck 强化学习",
+      "title_ja": "Jetson 上の Microduck RL",
+      "title_es": "Microduck RL en Jetson",
+      "title_pt": "Microduck RL no Jetson"
+    },
+    {
+      "path": "/respeaker_clip_ai_chat_system_architecture",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-tools.png",
+      "title": "reSpeaker Clip AI Chat System Architecture",
+      "date": "2026-09-01",
+      "title_cn": "reSpeaker Clip AI 聊天系统架构",
+      "title_ja": "reSpeaker Clip AI チャットシステムアーキテクチャ",
+      "title_es": "Arquitectura del sistema de chat con IA de reSpeaker Clip",
+      "title_pt": "Arquitetura do Sistema de Chat reSpeaker Clip AI"
+    }
+  ],
+  [
+    {
       "path": "/jetpack_7_2_memory_optimization_deep_dive",
       "image": "https://files.seeedstudio.com/wiki/jetpack-7.2/unified_mem.png",
       "title": "JetPack 7.2 Memory Optimization: Software Advances and an LLM Deployment Budget",
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "Isaac Sim を使用した reBot-B601-DM のシミュレーション",
       "title_es": "Simulación de reBot-B601-DM con Isaac Sim",
       "title_pt": "Simulando o reBot-B601-DM com Isaac Sim"
-    }
-  ],
-  [
-    {
-      "path": "/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage",
-      "image": "https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png",
-      "title": "reComputer Rugged J401 Hardware and Interface Usage",
-      "date": "2026-08-14",
-      "title_cn": "reComputer Rugged J401 硬件与接口使用",
-      "title_ja": "reComputer Rugged J401 ハードウェアおよびインターフェースの使用方法",
-      "title_es": "Uso de hardware e interfaces de reComputer Rugged J401",
-      "title_pt": "Uso de Hardware e Interfaces do reComputer Rugged J401"
-    },
-    {
-      "path": "/recamera_pro_development_cpp_skill",
-      "image": "https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/cpp_skill/recamera_skill.png",
-      "title": "Develop reCamera Pro Applications with AI Coding Agents",
-      "date": "2026-08-14",
-      "title_cn": "使用 AI 编码代理开发 reCamera Pro 应用",
-      "title_ja": "AI コーディングエージェントで reCamera Pro アプリケーションを開発する",
-      "title_es": "Desarrolla aplicaciones reCamera Pro con agentes de programación con IA",
-      "title_pt": "Desenvolva aplicações reCamera Pro com agentes de codificação em IA"
     }
   ]
 ];
