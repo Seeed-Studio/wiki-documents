@@ -10,7 +10,7 @@ slug: /recamera_pro_debian
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 09/07/2026
+  date: 09/04/2026
   author: yylin
 createdAt: '2026-08-04'
 updatedAt: '2026-08-04'
@@ -31,7 +31,7 @@ reCamera Pro 由 RV1126B 芯片驱动，提供 2 GB 或 4 GB 内存版本。其�
 
 ### 下载镜像
 
-[从 Google Drive 下载 Debian 13 镜像](https://drive.google.com/file/d/1qLlbsgUB88qC2xBn4-_Decl8XBZgr7EI/view?usp=drive_link)。
+[从 Google Drive 下载 Debian 13 镜像](https://drive.google.com/file/d/1qLlbsgUB88qC2xBn4-Decl8XBZgr7EI/view?usp=drive_link)。
 
 ### 下载烧录工具和驱动
 

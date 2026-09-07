@@ -22,8 +22,6 @@ url: https://wiki.seeedstudio.com/es/recamera_pro_rknn_model_conversion/
 
 # Convertir y Cuantizar Modelos para reCamera Pro con RKNN-Toolkit2
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/Model_Conversion/20260903-190057.png" alt="Workflow of converting and quantizing ONNX models to RKNN format for reCamera Pro" /></div>
-
 ## Introducción
 
 reCamera Pro utiliza el Rockchip RV1126B. Para ejecutar un modelo de red neuronal personalizado en su NPU, exporta el modelo a ONNX y compílalo a un modelo RKNN para **RV1126B** en un PC Linux x86_64 o en un entorno WSL.
