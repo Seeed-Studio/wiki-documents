@@ -281,6 +281,41 @@ The existing `phase_pose_track()`, `phase_pose_track_l1()`, `single_foot_grounde
 
 ### Register the Task
 
+`Mjlab-OneLegBalance-Flat-MicroDuck` is the **task ID used by the MJLab task registry**. It is not a file name and it is not passed to `make_microduck_one_leg_balance_env_cfg()` as a function argument. The command-line launcher uses this string to look up the environment, play configuration, RL configuration, and runner registered in `src/mjlab_microduck/tasks/__init__.py`.
+
+The definition and registration path is:
+
+| Item | Location | Purpose |
+|---|---|---|
+| Environment configuration | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | Defines the one-leg pose, phase timing, rewards, scene, and `make_microduck_one_leg_balance_env_cfg()` |
+| RL configuration | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | Defines `MicroduckOneLegBalanceRlCfg` and the training hyperparameters |
+| Task registration | `src/mjlab_microduck/tasks/__init__.py` | Binds the task ID to the environment and RL configuration |
+| CLI entry point | `uv run --no-sync train <task-id>` | Looks up the registered task and starts training |
+
+The relationship is:
+
+```text
+Mjlab-OneLegBalance-Flat-MicroDuck
+        ↓ task_id lookup
+register_mjlab_task(...)
+        ↓
+make_microduck_one_leg_balance_env_cfg()
++ MicroduckOneLegBalanceRlCfg
++ MicroduckOnPolicyRunner
+```
+
+Therefore, this is the complete command used to select the custom task:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+  --env.scene.num-envs 64 \
+  --agent.logger tensorboard \
+  --agent.max_iterations 5
+```
+
+If `list-envs` does not show the task, check that the new configuration file exists and that both its import and `register_mjlab_task()` call are present in `src/mjlab_microduck/tasks/__init__.py`. The task ID in the command must exactly match the `task_id` string, including capitalization and hyphens.
+
 Add the task configuration import and registration to `src/mjlab_microduck/tasks/__init__.py`:
 
 ```python
