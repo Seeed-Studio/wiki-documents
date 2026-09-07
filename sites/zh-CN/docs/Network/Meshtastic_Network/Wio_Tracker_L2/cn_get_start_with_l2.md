@@ -497,7 +497,7 @@ import TabItem from '@theme/TabItem';
 | 选择 "Device Role" | 在不同设备角色之间切换 |
 | 选择 "Radio Preset" | 从可用预设中进行选择|
 
-</TabItem]
+</TabItem>
 
 <TabItem value="26" label="System">
 | 交互方式 | 效果 |

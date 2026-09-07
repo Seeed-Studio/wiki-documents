@@ -173,7 +173,7 @@ MUI を使用する場合は、スマートフォンとペアリングする前�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BaseUILoRa.png" alt="pir" width={900} height="auto" /></p>
 
-</TabItem]
+</TabItem>
 
 <TabItem value="9" label="スマートフォンで設定">
 
