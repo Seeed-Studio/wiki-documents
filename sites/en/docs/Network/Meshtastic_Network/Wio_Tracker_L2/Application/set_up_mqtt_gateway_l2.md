@@ -9,7 +9,7 @@ last_update:
   date: 3/4/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-03-19'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/set_up_mqtt_gateway_l2/
 ---
 
