@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-04 16:34:19 (北京时间)
-// 多语言页面: 2470 个
+// 生成时间: 2026-09-07 14:05:38 (北京时间)
+// 多语言页面: 2482 个
 
 (function() {
   'use strict';
@@ -1228,6 +1228,34 @@
     "pt"
   ],
   "/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_microduck_rl_custom_motion_training": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_microduck_rl_jetson_environment": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_microduck_rl_official_policies": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_microduck_rl_on_jetson": [
     "cn",
     "en",
     "es",
@@ -5096,6 +5124,55 @@
     "ja",
     "pt"
   ],
+  "/l2_mui": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/l2_sd_card": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_l2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_monitor_l2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/set_up_mqtt_gateway_l2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_started_with_meshtastic_wio_tracker_l2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_wio_tracker_l2_intro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/get_started_with_meshcore_remote_terminal": [
     "cn",
     "en",
@@ -6651,6 +6728,13 @@
     "pt"
   ],
   "/rebot_arm_b601_dm_web_simulator_developer_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wrc_demo_tutorial": [
     "cn",
     "en",
     "es",

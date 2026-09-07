@@ -93,7 +93,7 @@ import '/src/css/robotics-page-style.css';
     <div className="product-meta-grid">
       <div><strong>推荐人群</strong><span>第一次使用 reBot Arm、想快速完成真实机械臂控制的用户</span></div>
       <div><strong>学习目标</strong><span>从硬件上电到完成 LeRobot 遥操作、视觉夹取和 ROS2 集成</span></div>
-      <div><strong>建议顺序</strong><span>快速开始 → LeRobot → Pinocchio → 视觉夹取 → ROS2</span></div>
+<div><strong>建议顺序</strong><span>快速开始 → LeRobot → Pinocchio → 视觉夹取 → ROS2 → Web 仿真器 → Isaac Sim → MIT 位置控制 → 具身 Agent</span></div>
     </div>
     <div className="learning-steps">
       <a className="step-card" href="/cn/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>快速开始</b><small>先完成开箱、接线、供电、驱动检查和基础运动测试，确认机械臂能正常工作。</small></div><em>新手必做</em></a>
@@ -104,6 +104,7 @@ import '/src/css/robotics-page-style.css';
       <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web 仿真器开发</b><small>学习 Web 仿真器与 ROS2/MuJoCo 的集成开发，实现虚拟与现实同步控制。</small></div><em>仿真开发</em></a>
       <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim 集成</b><small>将机械臂接入Isaac Sim进行仿真，并且实现虚拟与现实同步。</small></div><em>仿真</em></a>
       <a className="step-card" href="/cn/rebot_arm_b601_rs_mit_control/"><span className="step-index">8</span><div><b>MIT 位置控制</b><small>学习 reBot Arm B601-RS 的 MIT 位置控制入门，掌握基础控制算法。</small></div><em>控制进阶</em></a>
+      <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>具身 Agent 架构设计</b><small>把视觉语言模型接入机械臂，让自然语言指令驱动基于视觉的安全抓取与控制。</small></div><em>Agent 架构</em></a>
     </div>
   </div>
 </details>
