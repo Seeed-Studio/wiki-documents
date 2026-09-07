@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_
 slug: /ai_robotics_microduck_rl_custom_motion_training
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/07/2026
   author: Dayu
 createdAt: '2026-09-04'
 ---
@@ -203,6 +203,206 @@ uv run --no-sync python3 scripts/export.py \
 ```
 
 To add keyboard triggering, extend `scripts/infer_policy.py` using the existing sit/stand, ground-pick, roulade, and kick policy-switching patterns. Write to the command slot expected by the new policy and keep the 61-dimensional observation layout unchanged.
+
+## Verified Example: One-Leg Balance
+
+The following custom task was implemented and smoke-tested on the Jetson reference system. The motion transfers the robot's weight onto its **left foot**, lifts the **right foot**, holds the balance pose, and then returns to the normal two-foot standing pose.
+
+The registered task ID is:
+
+```text
+Mjlab-OneLegBalance-Flat-MicroDuck
+```
+
+### Motion Timeline
+
+The task uses a six-second cyclic phase command:
+
+| Normalized phase | Behavior |
+|---|---|
+| `0.00–0.30` | Transfer weight to the left foot and lift the right leg |
+| `0.30–0.58` | Hold the one-leg balance pose |
+| `0.58–0.78` | Lower the right foot and return to standing |
+| `0.78–1.00` | Stabilize in the two-foot home pose |
+
+These boundaries are defined in `microduck_one_leg_balance_env_cfg.py`:
+
+```python
+BALANCE_PERIOD = 6.0
+LIFT_END = 0.30
+HOLD_END = 0.58
+RETURN_END = 0.78
+```
+
+### Define the Target Pose
+
+The target is expressed with joint names rather than raw MuJoCo joint indexes. This keeps the intent readable and avoids accidental index shifts when the robot model changes.
+
+```python
+ONE_LEG_POSE = {
+    "left_hip_roll": -0.25,
+    "left_hip_pitch": -0.40,
+    "left_knee": -0.05,
+    "left_ankle": 0.45,
+    "right_hip_roll": -0.10,
+    "right_hip_pitch": 0.95,
+    "right_knee": -1.25,
+    "right_ankle": 0.30,
+    "neck_pitch": 0.30,
+    "head_pitch": 0.30,
+    "head_roll": -0.10,
+}
+```
+
+The left leg remains close to its standing configuration. The right hip and knee fold the swing leg forward, while the small head roll helps communicate the intended support side.
+
+### Build the Balance Reward
+
+The example combines five task-specific objectives:
+
+| Reward | Purpose |
+|---|---|
+| `one_leg_pose` | Track the interpolated standing-to-balance joint pose |
+| `support_foot_grounded` | Keep the left support foot in contact with the terrain |
+| `swing_foot_airborne` | Prevent the right foot from remaining on the floor during the hold phase |
+| `swing_foot_height` | Track the desired right-foot clearance above the terrain |
+| `com_over_support` | Move the horizontal center of mass over the left support foot |
+
+The task also retains joint-limit, self-collision, angular-velocity, action-rate, actuator, encoder, friction, mass, inertia, and center-of-mass randomization terms inherited from the Microduck training environment.
+
+Two small reusable measurements were added to `src/mjlab_microduck/tasks/mdp.py`:
+
+- `phase_single_foot_airborne_reward()` gates the right-foot airborne reward to the active balance phase.
+- `phase_site_height_track()` interpolates the right-foot height target between standing and lifted states.
+
+The existing `phase_pose_track()`, `phase_pose_track_l1()`, `single_foot_grounded_reward()`, and `com_over_support_foot()` functions are reused directly.
+
+### Register the Task
+
+Add the task configuration import and registration to `src/mjlab_microduck/tasks/__init__.py`:
+
+```python
+from .microduck_one_leg_balance_env_cfg import (
+    make_microduck_one_leg_balance_env_cfg,
+    MicroduckOneLegBalanceRlCfg,
+)
+
+register_mjlab_task(
+    task_id="Mjlab-OneLegBalance-Flat-MicroDuck",
+    env_cfg=make_microduck_one_leg_balance_env_cfg(),
+    play_env_cfg=make_microduck_one_leg_balance_env_cfg(play=True),
+    rl_cfg=MicroduckOneLegBalanceRlCfg,
+    runner_cls=MicroduckOnPolicyRunner,
+)
+```
+
+Confirm that MJLab discovers the new task:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+uv run --no-sync list-envs | grep OneLegBalance
+```
+
+Expected output:
+
+```text
+Mjlab-OneLegBalance-Flat-MicroDuck
+```
+
+### Edit and Capture the Pose in MuJoCo
+
+The example includes `scripts/one_leg_pose_editor.py`. It disables gravity and fixes the floating base so that individual joint targets can be adjusted safely before training.
+
+Run it directly from a terminal on the Jetson desktop:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+uv run --no-sync python scripts/one_leg_pose_editor.py
+```
+
+Expand the **Control** panel on the right side of the MuJoCo window and adjust the joint sliders. Closing the window prints the final named `ONE_LEG_POSE` dictionary to the terminal. The MuJoCo **Save XML** and **Save MJB** buttons save model files; they do not save the Python target-pose dictionary used by this task.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_one_leg_balance.png" alt="Interactive MuJoCo pose editor showing the Microduck one-leg balance target pose" />
+</div>
+
+If the editor is launched through SSH and should appear on the Jetson's locally connected monitor, export the active desktop session first. The verified Jetson session used `DISPLAY=:1`:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+
+export DISPLAY=:1
+export XAUTHORITY=/run/user/1000/gdm/Xauthority
+export XDG_RUNTIME_DIR=/run/user/1000
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+~/.local/bin/uv run --no-sync python scripts/one_leg_pose_editor.py
+```
+
+:::note
+The display number can change after reboot or when the desktop session changes. From a terminal opened directly on the Jetson desktop, `echo $DISPLAY` shows the active value.
+:::
+
+### Run the Verified Smoke Tests
+
+Start with 64 environments and five iterations:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+
+export MUJOCO_GL=egl
+
+uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+  --env.scene.num-envs 64 \
+  --agent.logger tensorboard \
+  --agent.max_iterations 5
+```
+
+The task was also tested with 4096 parallel environments on a 16 GB Jetson:
+
+```bash
+uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+  --env.scene.num-envs 4096 \
+  --agent.logger tensorboard \
+  --agent.max_iterations 5
+```
+
+The 4096-environment smoke test completed without an out-of-memory error or NaN termination and reached approximately `4.6k steps/s`. The actor observation remained 61-dimensional and the action output remained 14-dimensional.
+
+:::tip
+On an 8 GB Jetson Orin NX or Jetson Orin Nano, begin with `--env.scene.num-envs 1024`. Increase it only after checking available memory with `jtop`.
+:::
+
+### Open the Training Viewer
+
+To visualize one environment while the custom task trains, run the following command from the Jetson desktop:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+
+uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+  --env.scene.num-envs 1 \
+  --agent.logger tensorboard \
+  --agent.max_iterations 1000 \
+  --env.viewer.distance 0.55 \
+  --env.viewer.azimuth 145 \
+  --env.viewer.elevation -12
+```
+
+The pose editor shows the intended target immediately. The training viewer initially shows an untrained policy, so stable one-leg behavior appears only after the policy has learned the transfer, lift, hold, and recovery sequence.
+
+### Start a Full Training Run
+
+For the 16 GB reference system, use the following starting point:
+
+```bash
+uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+  --env.scene.num-envs 4096 \
+  --agent.logger tensorboard \
+  --agent.max_iterations 20000
+```
+
+The smoke tests confirm that the task configuration, reward terms, sensors, CUDA backend, and large parallel environment count work correctly. They do not by themselves prove policy convergence. Evaluate saved checkpoints in MuJoCo and adjust the pose, reward weights, phase timing, or curriculum if the robot lifts its foot without transferring its center of mass, hops, or fails to recover to standing.
 
 ## Development Checklist
 
