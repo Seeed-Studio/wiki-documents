@@ -13,18 +13,18 @@ last_update:
   date: 09/07/2026
   author: yylin
 createdAt: '2026-08-04'
-updatedAt: '2026-08-04'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/cn/recamera_pro_debian/
 ---
 
 ## 介绍
 
-reCamera Pro 由 RV1126B 芯片驱动，提供 2 GB 或 4 GB 内存版本。其出厂预装 Buildroot 固件，便于快速开始进行 AI 推理。本页面为需要在开发和部署上获得更高灵活性的用户提供 Debian 13 镜像。
+reCamera Pro 由 RV1126B 芯片驱动，提供 2 GB 或 4 GB 内存版本。其默认搭载 Buildroot 固件，便于快速开始进行 AI 推理。本页面为需要更高开发与部署灵活性的用户提供 Debian 13 镜像。
 
-烧录 Debian 13 镜像后，你可以使用 CMake 编译自己的应用程序，使用 `apt` 安装所需依赖，并运行 Docker 容器。该镜像兼容 Seeed 的出厂驱动，无需修改设备树。摄像头、麦克风、扬声器和 Wi-Fi 均可正常工作；不支持蓝牙。
+烧录 Debian 13 镜像后，你可以使用 CMake 编译自己的应用程序，使用 `apt` 安装所需依赖，并运行 Docker 容器。该镜像兼容 Seeed 出厂驱动，无需修改设备树。摄像头、麦克风、扬声器和 Wi-Fi 均可正常工作；不支持蓝牙。
 
 :::warning
-该固件目前为实验性固件。Seeed 目前不对其进行维护，仅作为额外的开发选项提供。
+该固件目前为实验性质。Seeed 目前不对其进行维护，仅作为额外的开发选项提供。
 :::
 
 ## 下载
@@ -44,7 +44,7 @@ reCamera Pro 由 RV1126B 芯片驱动，提供 2 GB 或 4 GB 内存版本。其�
 
 ### 安装驱动
 
-1. 解压下载好的 `DriverAssistant_v5.12.zip` 压缩包。
+1. 解压下载的 `DriverAssistant_v5.12.zip` 压缩包。
 2. 打开解压后的目录并运行 `DriverInstall.exe`。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image.png" /></div>
@@ -53,7 +53,7 @@ reCamera Pro 由 RV1126B 芯片驱动，提供 2 GB 或 4 GB 内存版本。其�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-1.png" /></div>
 
-出现如下界面表示驱动安装成功。
+出现如下界面表示驱动已成功安装。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-2.png" /></div>
 
@@ -77,14 +77,14 @@ reCamera Pro 由 RV1126B 芯片驱动，提供 2 GB 或 4 GB 内存版本。其�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-7.png" /></div>
 
-7. 选中 `rootfs` 条目，点击其右侧的省略号（`...`）。将其镜像文件替换为解压后的固件目录中的 `rootfs_debian_clean.img`。
+7. 选中 `rootfs` 条目并点击其右侧的省略号（`...`）。将其镜像文件替换为解压后的固件目录中的 `rootfs_debian_clean.img`。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-11.png" /></div>
 
 ### 将 reCamera Pro 置于 Loader 模式
 
-1. 使用 USB 线将 reCamera Pro 上的 USB 3.0 接口连接到 Windows 电脑，然后通过其 DC 口为设备供电。
-2. 在设备侧面找到 `BOOT` 和 `RESET` 小孔。
+1. 使用 USB 线将 reCamera Pro 上的 USB 3.0 接口连接到 Windows 电脑，然后通过 DC 口为设备供电。
+2. 找到设备侧面的 `BOOT` 和 `RESET` 小孔。
 3. 按住 `BOOT`，然后短按 `RESET` 以重启设备。
 4. 在按下 `RESET` 后继续按住 `BOOT` 约 5 秒，然后松开。设备将进入 Loader 模式。
 
@@ -106,9 +106,90 @@ reCamera Pro 由 RV1126B 芯片驱动，提供 2 GB 或 4 GB 内存版本。其�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-14.png" /></div>
 
+### 在 Linux 上烧录
+
+你也可以在 Linux 上使用 Rockchip 的 `upgrade_tool` 将固件烧录到 reCamera Pro。本节以 Ubuntu 24.04 为例。
+
+:::caution
+烧录会覆盖设备上的系统数据。继续之前，请备份重要数据，并确保设备已进入 Loader 模式。
+:::
+
+#### 环境准备
+
+克隆 Rockchip 工具仓库，并确认其中包含 `upgrade_tool`：
+
+```bash
+cd ~
+
+git clone https://github.com/rockchip-linux/rkbin.git
+
+cd ~/rkbin/tools
+
+ls -lh upgrade_tool
+```
+
+然后克隆 `Linux_Upgrade_Tool` 并将 `upgrade_tool` 设为可执行：
+
+```bash
+cd ~
+
+git clone https://github.com/vicharak-in/Linux_Upgrade_Tool.git
+
+cd Linux_Upgrade_Tool
+
+chmod +x upgrade_tool
+
+sudo ./upgrade_tool -v
+```
+
+确认你的 Ubuntu 主机已连接到 reCamera Pro，且设备处于 Loader 模式：
+
+```bash
+sudo ./upgrade_tool LD
+```
+
+预期输出类似如下：
+
+```bash
+List of rockusb connected(1)
+DevNo=1 Vid=0x2207,Pid=0x110f,LocationID=18     Mode=Loader     SerialNo=f28999835716f3be
+```
+
+这表明设备已连接并处于 Loader 模式。
+
+#### 烧录固件
+
+确保所有镜像文件都已下载并解压。然后使用 `upgrade_tool` 将每个分区写入设备。请将下面示例中的镜像路径替换为你实际解压后的固件文件路径：
+
+```bash
+# 1. env
+sudo ./upgrade_tool WL 0x00000000 "/home/seeed/recaemra_pro/debian_img/env.img"
+
+# 2. idblock
+sudo ./upgrade_tool WL 0x00000040 "/home/seeed/recaemra_pro/debian_img/idblock.img"
+
+# 3. uboot
+sudo ./upgrade_tool WL 0x00000800 "/home/seeed/recaemra_pro/debian_img/uboot.img"
+
+# 4. misc
+sudo ./upgrade_tool WL 0x00002800 "/home/seeed/recaemra_pro/debian_img/misc.img"
+
+# 5. recovery
+sudo ./upgrade_tool WL 0x00002880 "/home/seeed/recaemra_pro/debian_img/recovery.img"
+
+# 6. boot
+sudo ./upgrade_tool WL 0x00007880 "/home/seeed/recaemra_pro/debian_img/boot.img"
+
+# 7. Debian rootfs
+sudo ./upgrade_tool WL 0x0000d080 "/home/seeed/recaemra_pro/debian_img/rootfs.img"
+
+# reboot
+sudo ./upgrade_tool RD
+```
+
 ## 关于新固件
 
-烧录完成后，使用以太网线将设备连接到你的网络。该镜像不支持原有的 USB-C 虚拟网卡。你可以在路由器或 Wi-Fi 管理界面中找到设备的 IP 地址。镜像中已启用 SSH，因此你可以直接通过 SSH 登录。如果无法连接网络，请使用波特率为 `1500000` 的 UART 串口控制台。
+烧录完成后，使用网线将设备连接到你的网络。该镜像不支持原有的 USB-C 虚拟网卡。你可以在路由器或 Wi-Fi 管理界面中找到设备的 IP 地址。镜像中已启用 SSH，因此可以直接通过 SSH 登录。如果无法联网，请使用波特率为 `1500000` 的 UART 串口控制台。
 
 系统仅提供 `root` 用户，默认密码为 `123123`。首次登录后请立即修改密码：
 
@@ -120,7 +201,7 @@ passwd
 
 ## 临时配置 HTTP 代理
 
-如果你在访问网络时需要 HTTP 代理（例如使用 `apt` 时），可以临时设置以下环境变量。如果不使用代理，请跳过此步骤。将示例地址和端口替换为你的代理服务器地址和端口。
+如果你在访问网络时需要 HTTP 代理（例如使用 `apt` 时），可以临时设置以下环境变量。如果不使用代理，请跳过此步骤。将示例中的地址和端口替换为你的代理服务器地址和端口。
 
 ```bash
 export http_proxy="http://192.168.4.78:7890"
@@ -208,13 +289,13 @@ ffmpeg \
 
 ## 配置麦克风和扬声器
 
-安装所需依赖：
+安装所需的依赖项：
 
 ```bash
 apt install ffmpeg alsa-utils
 ```
 
-查看可用的录音和播放设备：
+查看可用的录制和回放设备：
 
 ```bash
 arecord -l
@@ -230,7 +311,7 @@ aplay -l
 apt install docker-cli
 ```
 
-确认 Docker 是否正确安装：
+确认 Docker 是否已正确安装：
 
 ```bash
 command -v docker
@@ -248,7 +329,7 @@ Docker version 26.1.5+dfsg1, build 411e817
 
 ### 配置 Docker
 
-创建 Docker 守护进程配置文件，用于设置数据目录并禁用默认网络：
+创建 Docker 守护进程配置文件以设置数据目录并禁用默认网络：
 
 ```bash
 cat >/etc/docker/daemon.json <<'EOF'
@@ -261,7 +342,7 @@ cat >/etc/docker/daemon.json <<'EOF'
 EOF
 ```
 
-停止 Docker 并删除残留运行时文件：
+停止 Docker 并删除残留的运行时文件：
 
 ```bash
 service docker stop 2>/dev/null || true
@@ -285,13 +366,13 @@ service docker restart
 ps aux | grep '[d]ockerd'
 ```
 
-运行测试容器：
+运行一个测试容器：
 
 ```bash
 docker run --rm hello-world
 ```
 
-如果 Docker 配置正确，输出中会包含：
+如果 Docker 配置正确，输出包括：
 
 ```bash
 Hello from Docker!
@@ -316,7 +397,7 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-## 安装 GStreamer 工具并采集摄像头数据
+## 安装 GStreamer 工具并采集相机数据
 
 安装所需工具：
 
@@ -346,7 +427,7 @@ gst-launch-1.0 -e \
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供不同层级的支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供不同层级的支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

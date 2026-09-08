@@ -13,13 +13,13 @@ last_update:
   date: 09/07/2026
   author: yylin
 createdAt: '2026-08-04'
-updatedAt: '2026-08-04'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/es/recamera_pro_debian/
 ---
 
 ## Introducción
 
-reCamera Pro está impulsada por el chip RV1126B y está disponible con 2 GB o 4 GB de memoria. Se entrega con firmware Buildroot para un inicio rápido con inferencia de IA. Esta página proporciona una imagen de Debian 13 para usuarios que necesitan más flexibilidad para desarrollo y despliegue.
+reCamera Pro está impulsada por el chip RV1126B y está disponible con 2 GB o 4 GB de memoria. Se entrega con firmware Buildroot para un inicio rápido con inferencia de IA. Esta página proporciona una imagen de Debian 13 para usuarios que necesitan más flexibilidad para el desarrollo y el despliegue.
 
 Después de flashear la imagen de Debian 13, puedes compilar tus propias aplicaciones con CMake, instalar las dependencias necesarias con `apt` y ejecutar contenedores Docker. La imagen es compatible con los controladores de fábrica de Seeed y no requiere cambios en el device tree. La cámara, el micrófono, el altavoz y el Wi‑Fi funcionan como se espera; Bluetooth no es compatible.
 
@@ -40,7 +40,7 @@ Esta guía utiliza SocToolKit en Windows para flashear la imagen. Descarga los s
 - [Driver (DriverAssistant_v5.12.zip)](https://drive.google.com/file/d/1_Efm8nJlQivU2F7BgVokVPfGUl12fI6E/view?usp=drive_link)
 - [Flashing tool (SocToolKit-window.zip)](https://drive.google.com/file/d/1wFMHF_KSmbTPvuaAefqutDP-DPQ_NONp/view?usp=drive_link)
 
-## Preparación para el flasheo
+## Prepararse para el flasheo
 
 ### Instalar el controlador
 
@@ -106,11 +106,92 @@ Cuando el flasheo se complete, la interfaz debería verse como la siguiente:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-14.png" /></div>
 
+### Flashear en Linux
+
+También puedes flashear el firmware en reCamera Pro desde Linux usando `upgrade_tool` de Rockchip. Esta sección utiliza Ubuntu 24.04 como ejemplo.
+
+:::caution
+El flasheo sobrescribe los datos del sistema en el dispositivo. Haz una copia de seguridad de los datos importantes y asegúrate de que el dispositivo esté en modo Loader antes de continuar.
+:::
+
+#### Preparar el entorno
+
+Clona el repositorio de herramientas de Rockchip y verifica que contenga `upgrade_tool`:
+
+```bash
+cd ~
+
+git clone https://github.com/rockchip-linux/rkbin.git
+
+cd ~/rkbin/tools
+
+ls -lh upgrade_tool
+```
+
+Luego clona `Linux_Upgrade_Tool` y haz que `upgrade_tool` sea ejecutable:
+
+```bash
+cd ~
+
+git clone https://github.com/vicharak-in/Linux_Upgrade_Tool.git
+
+cd Linux_Upgrade_Tool
+
+chmod +x upgrade_tool
+
+sudo ./upgrade_tool -v
+```
+
+Confirma que tu host Ubuntu está conectado a reCamera Pro y que el dispositivo está en modo Loader:
+
+```bash
+sudo ./upgrade_tool LD
+```
+
+La salida esperada es similar a:
+
+```bash
+List of rockusb connected(1)
+DevNo=1 Vid=0x2207,Pid=0x110f,LocationID=18     Mode=Loader     SerialNo=f28999835716f3be
+```
+
+Esto confirma que el dispositivo está conectado y en modo Loader.
+
+#### Flashear el firmware
+
+Asegúrate de que todos los archivos de imagen se hayan descargado y extraído. Luego usa `upgrade_tool` para escribir cada partición en el dispositivo. Sustituye las rutas de imagen de ejemplo que aparecen a continuación por la ruta real a tus archivos de firmware extraídos:
+
+```bash
+# 1. env
+sudo ./upgrade_tool WL 0x00000000 "/home/seeed/recaemra_pro/debian_img/env.img"
+
+# 2. idblock
+sudo ./upgrade_tool WL 0x00000040 "/home/seeed/recaemra_pro/debian_img/idblock.img"
+
+# 3. uboot
+sudo ./upgrade_tool WL 0x00000800 "/home/seeed/recaemra_pro/debian_img/uboot.img"
+
+# 4. misc
+sudo ./upgrade_tool WL 0x00002800 "/home/seeed/recaemra_pro/debian_img/misc.img"
+
+# 5. recovery
+sudo ./upgrade_tool WL 0x00002880 "/home/seeed/recaemra_pro/debian_img/recovery.img"
+
+# 6. boot
+sudo ./upgrade_tool WL 0x00007880 "/home/seeed/recaemra_pro/debian_img/boot.img"
+
+# 7. Debian rootfs
+sudo ./upgrade_tool WL 0x0000d080 "/home/seeed/recaemra_pro/debian_img/rootfs.img"
+
+# reboot
+sudo ./upgrade_tool RD
+```
+
 ## Acerca del nuevo firmware
 
 Después de flashear, conecta el dispositivo a tu red usando un cable Ethernet. Esta imagen no es compatible con el adaptador de red virtual USB‑C original. Puedes encontrar la dirección IP del dispositivo en tu router o en la interfaz de gestión de Wi‑Fi. SSH está habilitado en la imagen, por lo que puedes iniciar sesión directamente mediante SSH. Si no hay conexión de red disponible, utiliza la consola serie UART a una velocidad en baudios de `1500000`.
 
-El sistema solo proporciona el usuario `root`, con la contraseña predeterminada `123123`. Cambia la contraseña inmediatamente después del primer inicio de sesión:
+El sistema proporciona solo el usuario `root`, con la contraseña predeterminada `123123`. Cambia la contraseña inmediatamente después del primer inicio de sesión:
 
 ```bash
 passwd
@@ -131,7 +212,7 @@ export no_proxy="localhost,127.0.0.1,::1,192.168.0.0/16"
 
 ## Configurar la hora
 
-En el primer arranque, la hora del sistema puede estar establecida en 1970, lo que provoca que falle la validación de certificados SSL. Dado que el sistema no tiene configurada la sincronización automática de hora mediante systemd, establece manualmente la hora correcta antes de actualizar el índice de paquetes:
+En el primer arranque, la hora del sistema puede estar establecida en 1970, lo que provoca que falle la validación de los certificados SSL. Dado que el sistema no tiene configurada la sincronización automática de hora mediante systemd, establece manualmente la hora correcta antes de actualizar el índice de paquetes:
 
 ```bash
 date -s "2026-09-02 15:20:00"
@@ -185,7 +266,7 @@ vertical_flip: 0
 
 ## Probar la cámara
 
-Utiliza V4L2 para capturar un fotograma crudo NV12 y luego usa FFmpeg para convertirlo a JPEG:
+Usa V4L2 para capturar un fotograma crudo NV12 y luego usa FFmpeg para convertirlo a JPEG:
 
 ```bash
 v4l2-ctl -d /dev/video12 \
@@ -214,7 +295,7 @@ Instala las dependencias necesarias:
 apt install ffmpeg alsa-utils
 ```
 
-Consulta los dispositivos de grabación y reproducción disponibles:
+Visualiza los dispositivos de grabación y reproducción disponibles:
 
 ```bash
 arecord -l
@@ -261,7 +342,7 @@ cat >/etc/docker/daemon.json <<'EOF'
 EOF
 ```
 
-Detén Docker y elimina los archivos de runtime sobrantes:
+Detén Docker y elimina los archivos de tiempo de ejecución restantes:
 
 ```bash
 service docker stop 2>/dev/null || true

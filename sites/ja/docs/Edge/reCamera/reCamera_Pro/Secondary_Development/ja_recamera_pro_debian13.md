@@ -13,15 +13,15 @@ last_update:
   date: 09/07/2026
   author: yylin
 createdAt: '2026-08-04'
-updatedAt: '2026-08-04'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/ja/recamera_pro_debian/
 ---
 
 ## はじめに
 
-reCamera Pro は RV1126B チップを搭載し、2 GB または 4 GB メモリのモデルがあります。AI 推論をすぐに始められるよう、出荷時には Buildroot ファームウェアがプリインストールされています。本ページでは、開発やデプロイをより柔軟に行いたいユーザー向けに Debian 13 イメージを提供します。
+reCamera Pro は RV1126B チップを搭載し、メモリは 2 GB または 4 GB の構成が用意されています。AI 推論をすぐに始められるよう、出荷時には Buildroot ファームウェアがプリインストールされています。本ページでは、開発やデプロイをより柔軟に行いたいユーザー向けに Debian 13 イメージを提供します。
 
-Debian 13 イメージを書き込んだ後は、CMake を使って独自アプリケーションをコンパイルし、`apt` で必要な依存パッケージをインストールし、Docker コンテナを実行できます。このイメージは Seeed の工場出荷時ドライバと互換性があり、デバイスツリーの変更は不要です。カメラ、マイク、スピーカー、Wi-Fi は期待どおり動作しますが、Bluetooth には対応していません。
+Debian 13 イメージを書き込んだ後は、CMake を使って独自アプリケーションをコンパイルし、`apt` で必要な依存関係をインストールし、Docker コンテナを実行できます。このイメージは Seeed の工場出荷時ドライバと互換性があり、デバイスツリーの変更は不要です。カメラ、マイク、スピーカー、Wi-Fi は期待どおり動作しますが、Bluetooth には対応していません。
 
 :::warning
 このファームウェアは現在実験的なものです。現時点で Seeed による保守は行われておらず、追加の開発オプションとして提供されています。
@@ -77,7 +77,7 @@ Debian 13 イメージを書き込んだ後は、CMake を使って独自アプ�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-7.png" /></div>
 
-7. `rootfs` エントリを選択し、右側の三点リーダー（`...`）をクリックします。イメージファイルを、展開したファームウェアディレクトリ内の `rootfs_debian_clean.img` に置き換えます。
+7. `rootfs` エントリを選択し、右側の三点リーダー（`...`）をクリックします。展開したファームウェアディレクトリ内の `rootfs_debian_clean.img` にイメージファイルを置き換えます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-11.png" /></div>
 
@@ -102,15 +102,96 @@ SocToolKit がデバイスを検出し、ファームウェアを読み込んだ
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-13.png" /></div>
 
-書き込みが完了すると、インターフェースは次のようになります：
+書き込みが完了すると、インターフェースは次のようになります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-14.png" /></div>
 
+### Linux で書き込む
+
+Linux から Rockchip の `upgrade_tool` を使用して、reCamera Pro にファームウェアを書き込むこともできます。このセクションでは Ubuntu 24.04 を例に説明します。
+
+:::caution
+書き込みを行うと、デバイス上のシステムデータは上書きされます。重要なデータはバックアップを取り、続行する前にデバイスがローダーモードになっていることを確認してください。
+:::
+
+#### 環境を準備する
+
+Rockchip tools リポジトリをクローンし、`upgrade_tool` が含まれていることを確認します：
+
+```bash
+cd ~
+
+git clone https://github.com/rockchip-linux/rkbin.git
+
+cd ~/rkbin/tools
+
+ls -lh upgrade_tool
+```
+
+次に `Linux_Upgrade_Tool` をクローンし、`upgrade_tool` を実行可能にします：
+
+```bash
+cd ~
+
+git clone https://github.com/vicharak-in/Linux_Upgrade_Tool.git
+
+cd Linux_Upgrade_Tool
+
+chmod +x upgrade_tool
+
+sudo ./upgrade_tool -v
+```
+
+Ubuntu ホストが reCamera Pro に接続されており、デバイスがローダーモードになっていることを確認します：
+
+```bash
+sudo ./upgrade_tool LD
+```
+
+期待される出力は次のようになります。
+
+```bash
+List of rockusb connected(1)
+DevNo=1 Vid=0x2207,Pid=0x110f,LocationID=18     Mode=Loader     SerialNo=f28999835716f3be
+```
+
+これにより、デバイスが接続されローダーモードになっていることが確認できます。
+
+#### ファームウェアを書き込む
+
+すべてのイメージファイルがダウンロードおよび展開されていることを確認します。その後、`upgrade_tool` を使用して各パーティションをデバイスに書き込みます。以下のサンプルのイメージパスは、展開したファームウェアファイルへの実際のパスに置き換えてください。
+
+```bash
+# 1. env
+sudo ./upgrade_tool WL 0x00000000 "/home/seeed/recaemra_pro/debian_img/env.img"
+
+# 2. idblock
+sudo ./upgrade_tool WL 0x00000040 "/home/seeed/recaemra_pro/debian_img/idblock.img"
+
+# 3. uboot
+sudo ./upgrade_tool WL 0x00000800 "/home/seeed/recaemra_pro/debian_img/uboot.img"
+
+# 4. misc
+sudo ./upgrade_tool WL 0x00002800 "/home/seeed/recaemra_pro/debian_img/misc.img"
+
+# 5. recovery
+sudo ./upgrade_tool WL 0x00002880 "/home/seeed/recaemra_pro/debian_img/recovery.img"
+
+# 6. boot
+sudo ./upgrade_tool WL 0x00007880 "/home/seeed/recaemra_pro/debian_img/boot.img"
+
+# 7. Debian rootfs
+sudo ./upgrade_tool WL 0x0000d080 "/home/seeed/recaemra_pro/debian_img/rootfs.img"
+
+# reboot
+sudo ./upgrade_tool RD
+```
+
 ## 新しいファームウェアについて
 
-書き込み後、デバイスを Ethernet ケーブルでネットワークに接続します。このイメージは、元の USB-C 仮想ネットワークアダプタをサポートしていません。デバイスの IP アドレスは、ルーターや Wi-Fi 管理画面で確認できます。このイメージでは SSH が有効になっているため、SSH で直接ログインできます。ネットワーク接続が利用できない場合は、ボーレート `1500000` の UART シリアルコンソールを使用してください。
+書き込み後、Ethernet ケーブルを使用してデバイスをネットワークに接続します。このイメージは、元の USB-C 仮想ネットワークアダプタをサポートしていません。デバイスの IP アドレスは、ルーターまたは Wi-Fi 管理画面で確認できます。このイメージでは SSH が有効になっているため、SSH で直接ログインできます。ネットワーク接続が利用できない場合は、ボーレート `1500000` の UART シリアルコンソールを使用してください。
 
-システムには `root` ユーザーのみが用意されており、デフォルトパスワードは `123123` です。初回ログイン後、すぐにパスワードを変更してください：
+システムには `root` ユーザーのみが用意されており、デフォルトパスワードは `123123` です。初回ログイン後すぐにパスワードを変更してください。
 
 ```bash
 passwd
@@ -118,7 +199,7 @@ passwd
 
 その後、次のシステム設定手順を完了します。
 
-## 一時的に HTTP プロキシを設定
+## 一時的に HTTP プロキシを設定する
 
 ネットワークへのアクセスに HTTP プロキシが必要な場合（たとえば `apt` を使用する際など）は、以下の環境変数を一時的に設定します。プロキシを使用しない場合は、この手順をスキップしてください。サンプルのアドレスとポートは、使用しているプロキシサーバーのものに置き換えてください。
 
@@ -129,9 +210,9 @@ export https_proxy="http://192.168.4.78:7890"
 export no_proxy="localhost,127.0.0.1,::1,192.168.0.0/16"
 ```
 
-## 時刻を設定
+## 時刻を設定する
 
-初回起動時、システム時刻が 1970 年に設定されている場合があり、その場合は SSL 証明書の検証に失敗します。このシステムでは systemd による自動時刻同期が設定されていないため、パッケージインデックスを更新する前に正しい時刻を手動で設定してください：
+初回起動時、システム時刻が 1970 年に設定されている場合があり、その場合は SSL 証明書の検証に失敗します。このシステムでは systemd による自動時刻同期が設定されていないため、パッケージインデックスを更新する前に正しい時刻を手動で設定してください。
 
 ```bash
 date -s "2026-09-02 15:20:00"
@@ -139,9 +220,9 @@ date -s "2026-09-02 15:20:00"
 apt update
 ```
 
-### カメラの向きを設定
+### カメラの向きを設定する
 
-まず、反転制御をサポートするセンサーノードを探します：
+まず、反転制御をサポートするセンサーノードを探します。
 
 ```bash
 for dev in /dev/v4l-subdev*; do
@@ -152,7 +233,7 @@ for dev in /dev/v4l-subdev*; do
 done
 ```
 
-通常、次のような出力が表示されます：
+通常、次のような出力が表示されます。
 
 ```bash
 ========== /dev/v4l-subdev2 ==========
@@ -162,14 +243,14 @@ done
             horizontal_blanking 0x009e0902 (int)    : min=4294965822 max=4294965822 step=1 default=4294965822 value=-1474 flags=read-only
 ```
 
-デフォルトでは、水平方向と垂直方向の両方の反転が有効になっている場合があります。前の出力に表示されたデバイスノードに合わせてコマンドを調整してください。この例では `/dev/v4l-subdev2` を使用しています：
+デフォルトでは、水平方向と垂直方向の両方の反転が有効になっている場合があります。前の出力に表示されたデバイスノードに合わせてコマンドを調整してください。この例では `/dev/v4l-subdev2` を使用しています。
 
 ```bash
 v4l2-ctl -d /dev/v4l-subdev2 \
   --set-ctrl=horizontal_flip=0,vertical_flip=0
 ```
 
-設定を確認します：
+設定を確認します。
 
 ```bash
 v4l2-ctl -d /dev/v4l-subdev2 \
@@ -183,9 +264,9 @@ horizontal_flip: 0
 vertical_flip: 0
 ```
 
-## カメラをテスト
+## カメラをテストする
 
-V4L2 を使用して NV12 の生フレームを 1 枚キャプチャし、FFmpeg で JPEG に変換します：
+V4L2 を使用して NV12 の生フレームを 1 枚キャプチャし、FFmpeg で JPEG に変換します。
 
 ```bash
 v4l2-ctl -d /dev/video12 \
@@ -206,7 +287,7 @@ ffmpeg \
 
 コマンドの実行が完了したら、`/tmp/camera.jpg` に保存された、ISP 処理済みで向きが正しい JPEG 画像を確認します。
 
-## マイクとスピーカーを設定
+## マイクとスピーカーを設定する
 
 必要な依存パッケージをインストールします：
 
@@ -214,7 +295,7 @@ ffmpeg \
 apt install ffmpeg alsa-utils
 ```
 
-利用可能な録音デバイスと再生デバイスを確認します：
+利用可能な録音デバイスと再生デバイスを表示します：
 
 ```bash
 arecord -l
@@ -222,7 +303,7 @@ arecord -l
 aplay -l
 ```
 
-## Docker を設定
+## Docker を設定する
 
 Docker をインストールします：
 
@@ -238,7 +319,7 @@ docker --version
 dockerd --version
 ```
 
-期待される出力は次のようなものです：
+期待される出力は次のようになります：
 
 ```bash
 /usr/bin/docker
@@ -246,9 +327,9 @@ Docker version 26.1.5+dfsg1, build a72d7cd
 Docker version 26.1.5+dfsg1, build 411e817
 ```
 
-### Docker を設定
+### Docker を設定する
 
-Docker デーモンの設定ファイルを作成し、データディレクトリを指定してデフォルトネットワークを無効化します：
+データディレクトリを設定し、デフォルトネットワークを無効にするために Docker デーモンの設定ファイルを作成します：
 
 ```bash
 cat >/etc/docker/daemon.json <<'EOF'
@@ -277,9 +358,9 @@ Docker を再起動します：
 service docker restart
 ```
 
-### Docker をテスト
+### Docker をテストする
 
-Docker デーモンが動作していることを確認します：
+Docker デーモンが実行中であることを確認します：
 
 ```bash
 ps aux | grep '[d]ockerd'
@@ -316,7 +397,7 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-## GStreamer ツールをインストールしてカメラデータを取得
+## GStreamer ツールをインストールしてカメラデータを取得する
 
 必要なツールをインストールします：
 
@@ -342,9 +423,9 @@ gst-launch-1.0 -e \
   ! filesink location=/tmp/camera.jpg
 ```
 
-コマンドの実行が完了したら、`/tmp/camera.jpg` にある ISP 処理済み画像を確認します。
+コマンドの実行が完了したら、`/tmp/camera.jpg` にある ISP 処理済み画像を表示します。
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなレベルのサポートを提供しています。お客様それぞれの好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
