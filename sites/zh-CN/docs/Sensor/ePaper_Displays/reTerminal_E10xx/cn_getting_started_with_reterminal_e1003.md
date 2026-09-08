@@ -511,7 +511,7 @@ reTerminal E1003 配备了一个 6 针扩展排针（J2），为添加外部传�
 			<td>GPIO20</td>
 			<td>GPIO/I2C SCL</td>
 			<td>GPIO 或 I2C 时钟信号</td>
-		</tr]
+		</tr>
 		<tr>
 			<td>6</td>
 			<td>ESP_IO19/I2C0_SDA</td>

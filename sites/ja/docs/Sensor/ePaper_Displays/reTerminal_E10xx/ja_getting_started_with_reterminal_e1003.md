@@ -193,7 +193,6 @@ reTerminal E1003 は、FAT32 形式の **64 GB** までの microSD カードを�
 Mac を使用していて、これまでに CH34X ドライバーを手動インストールしていない場合は、以下の手順に従ってインストールを完了してください：
 
 **ステップ 1. ドライバーをダウンロードしてインストールする**
-
 ドライバーを [WCH 公式ページ](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) からダウンロードし、`CH34xVCPDriver.pkg` を実行します。 
 :::tip
 macOS によってインストールがブロックされた場合は、**System Settings → Privacy & Security** に移動し、ブロックされた WCH ソフトウェアをスクロールして見つけ、**Allow** をクリックします。
@@ -203,6 +202,7 @@ macOS によってインストールがブロックされた場合は、**System
   <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
 </div>
 
+**ステップ 2. ドライバー拡張機能を有効にする（重要）**
 Launchpad から **CH34xVCPDriver** アプリを開き、**Install** をクリックします。その後、**System Settings → General → Login Items & Extensions → Driver Extensions** に移動し、**CH34xVCPDriver Extensions** を **ON**（青）に切り替えます。
 <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
   <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
