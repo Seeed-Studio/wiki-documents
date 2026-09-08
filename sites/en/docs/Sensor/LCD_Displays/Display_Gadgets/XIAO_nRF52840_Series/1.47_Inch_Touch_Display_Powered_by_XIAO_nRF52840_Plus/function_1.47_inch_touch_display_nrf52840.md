@@ -1,6 +1,7 @@
 ---
 description: Standalone function-level demos for each onboard peripheral of the XIAO 1.47'' IPS Display (nRF52840). Covers screen, touch, SD card, microphone, IMU, buttons, and battery voltage detection.
 title: Onboard Peripheral Usage
+sidebar_label: Function
 keywords:
   - XIAO
   - nRF52840

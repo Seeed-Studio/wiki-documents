@@ -1,6 +1,7 @@
 ---
 description: Getting Started with XIAO 0.96'' IPS Display (nRF52840).
 title: Getting Started with XIAO 0.96'' IPS Display (nRF52840)
+sidebar_label: Getting Started
 keywords:
   - XIAO
   - nRF52840

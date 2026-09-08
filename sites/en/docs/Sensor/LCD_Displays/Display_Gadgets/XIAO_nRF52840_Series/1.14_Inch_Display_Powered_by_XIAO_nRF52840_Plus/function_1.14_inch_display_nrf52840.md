@@ -1,6 +1,7 @@
 ---
 description: Standalone function-level demos for each onboard peripheral of the XIAO 1.14'' IPS Display (nRF52840). Covers screen, IMU, PDM microphone, internal Flash recording and I2S audio playback, buttons, battery, and Grove I2C.
 title: Onboard Peripheral Usage
+sidebar_label: Function
 keywords:
   - XIAO
   - nRF52840
