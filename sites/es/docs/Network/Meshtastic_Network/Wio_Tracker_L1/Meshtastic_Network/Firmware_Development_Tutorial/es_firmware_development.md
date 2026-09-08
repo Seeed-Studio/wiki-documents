@@ -370,7 +370,7 @@ pio pkg install -e seeed_wio_tracker_L1
 ```
 
 </TabItem>
-</Tabs]
+</Tabs>
 
 Este enfoque tiene varias ventajas:
 

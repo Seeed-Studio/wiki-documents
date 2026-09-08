@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-07 14:05:38 (北京时间)
-// 多语言页面: 2482 个
+// 生成时间: 2026-09-08 10:46:34 (北京时间)
+// 多语言页面: 2483 个
 
 (function() {
   'use strict';
@@ -4907,6 +4907,20 @@
     "ja",
     "pt"
   ],
+  "/meshcore_source_code_pratical_tutorial_meshtracker_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_meshtracker_x1_meshcore": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_node_map_x1": [
     "cn",
     "en",
@@ -4921,21 +4935,7 @@
     "ja",
     "pt"
   ],
-  "/meshcore_source_code_pratical_tutorial_meshtracker_x1": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/x1_get_started_for_meshtastic": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecap_meshtracker_x1_meshcore": [
     "cn",
     "en",
     "es",
@@ -4963,14 +4963,21 @@
     "ja",
     "pt"
   ],
-  "/meshtastic_node_map_solar_node": [
+  "/meshcore_source_code_pratical_tutorial_solar_node": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/meshcore_source_code_pratical_tutorial_solar_node": [
+  "/get_started_with_meshcore_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_solar_node": [
     "cn",
     "en",
     "es",
@@ -4991,13 +4998,6 @@
     "ja",
     "pt"
   ],
-  "/get_started_with_meshcore_solar_node": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/meshtastic_solar_node": [
     "cn",
     "en",
@@ -5012,20 +5012,6 @@
     "ja",
     "pt"
   ],
-  "/meshtastic_node_map_t1000_e": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/meshtastic_source_code_practical_tutorial_t1000_e": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/meshcore_source_code_pratical_tutorial_t1000_e": [
     "cn",
     "en",
@@ -5034,6 +5020,20 @@
     "pt"
   ],
   "/sensecap_t1000_e_meshcore": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_t1000_e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_source_code_practical_tutorial_t1000_e": [
     "cn",
     "en",
     "es",
@@ -5068,7 +5068,7 @@
     "ja",
     "pt"
   ],
-  "/wio_tracker_l1_3d_enclosure": [
+  "/wio_tracker_l1_3d_enclosure_meshcore": [
     "cn",
     "en",
     "es",
@@ -5076,6 +5076,27 @@
     "pt"
   ],
   "/meshcore_node_map_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_started_with_other_mesh_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_tracker_l1_3d_enclosure": [
     "cn",
     "en",
     "es",
@@ -5096,13 +5117,6 @@
     "ja",
     "pt"
   ],
-  "/meshcore_source_code_pratical_tutorial_l1": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/get_started_with_meshtastic_wio_tracker_l1": [
     "cn",
     "en",
@@ -5110,14 +5124,14 @@
     "ja",
     "pt"
   ],
-  "/get_started_with_other_mesh_firmware": [
+  "/wio_tracker_l1_node": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/wio_tracker_l1_node": [
+  "/meshtastic_wio_tracker_l2_intro": [
     "cn",
     "en",
     "es",
@@ -5160,13 +5174,6 @@
     "pt"
   ],
   "/get_started_with_meshtastic_wio_tracker_l2": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/meshtastic_wio_tracker_l2_intro": [
     "cn",
     "en",
     "es",
