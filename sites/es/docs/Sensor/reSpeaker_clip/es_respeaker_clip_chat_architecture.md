@@ -12,13 +12,14 @@ keywords:
   - recuperación de memoria
   - Flask
   - flujo de trabajo del agente
+image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-tools.png
 slug: /respeaker_clip_ai_chat_system_architecture
 sku: 100020126
 last_update:
   date: 09/01/2026
   author: Kasun Thushara
 createdAt: '2026-09-01'
-updatedAt: '2026-09-01'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/es/respeaker_clip_ai_chat_system_architecture/
 ---
 
@@ -46,7 +47,7 @@ Tres ideas hacen que esto funcione:
 
 - Un enrutador clasifica cada solicitud en una de tres rutas.
 - Un agente en una de esas rutas puede llamar a herramientas (búsqueda web, calculadora, Notion, búsqueda en conversaciones pasadas).
-- Un almacén vectorial + una capa de memoria permiten al agente recordar tus conversaciones pasadas y hechos a largo plazo.
+- Un almacén vectorial + una capa de memoria permiten que el agente recuerde tus conversaciones pasadas y hechos a largo plazo.
 
 ---
 
@@ -59,7 +60,7 @@ Las piezas encajan así:
 - Flask es la superficie del API (chat, streaming, voz, TTS).
 - LangGraph es la máquina de estados que enruta la solicitud y ejecuta el nodo elegido.
 - Groq proporciona el LLM, speech-to-text (Whisper) y text-to-speech (Orpheus).
-- Mem0 proporciona memoria a largo plazo; Pinecone + embeddings locales proporcionan búsqueda en conversaciones pasadas.
+- Mem0 suministra la memoria a largo plazo; Pinecone + embeddings locales proporcionan la búsqueda en conversaciones pasadas.
 - Supabase (con un respaldo en SQLite) almacena conversaciones, mensajes y resúmenes.
 
 ---
@@ -84,7 +85,7 @@ Cada solicitud se enruta exactamente a uno de tres nodos. El código asigna la c
 ### `persona` — Con estilo
 
 - El usuario pide explícitamente un estilo, personalidad, rol o estilo de enseñanza.
-- La misma mecánica que `simple`, pero con un prompt de sistema diferente que indica al modelo que adapte su tono.
+- Misma mecánica que `simple`, pero con un prompt de sistema diferente que indica al modelo que adapte su tono.
 - Nodo: `persona_node` (`backend/graph/nodes/persona.py`), LLM = el modelo principal de Groq.
 
 ---
@@ -110,10 +111,10 @@ El enrutamiento ocurre en `router_node` (`backend/graph/router.py`) usando una p
    | `context` | Puede necesitar información/herramientas externas, gestión de datos (Notion/calendario), preguntas sobre el dispositivo/archivos/información almacenada del usuario |
    | `persona` | El usuario pide explícitamente un estilo, personalidad, estilo de enseñanza, rol o comportamiento |
 
-3. Respaldo. La salida se pasa a minúsculas y se recorta. Cualquier cosa que no esté en `{simple, context, persona}` vuelve a `simple`.
+3. Fallback. La salida se pasa a minúsculas y se recortan espacios. Cualquier cosa que no esté en `{simple, context, persona}` recae en `simple`.
 
 
-## 5. El sistema de herramientas del agente
+## 5. Sistema de herramientas del agente
 
 ### Cómo funciona la llamada a herramientas
 
@@ -135,9 +136,12 @@ Detalles a tener en cuenta:
 
 | Herramienta | Servicio de respaldo | Propósito | Clave(s) de configuración |
 | --- | --- | --- | --- |
-| `web_search` | Tavily | Información web en vivo/actual (noticias, firmware, detalles de productos) | `TAVILY_API_KEY` |
-| `calculator` | evaluación AST local y segura | Matemáticas mediante un evaluador con lista blanca de `+ - * / ** %` | — (siempre disponible) |
+| `calculator` | local, evaluación AST segura | Matemáticas mediante un evaluador con lista blanca de `+ - * / ** %` | — (siempre disponible) |
 | `search_conversations` | Pinecone + embeddings locales | Encontrar las propias conversaciones pasadas del usuario por relevancia | `PINECONE_API_KEY` |
+| `composio_search` | Composio | Buscar herramientas de apps de Composio que coincidan con una solicitud en lenguaje natural | `COMPOSIO_API_KEY` |
+| `composio_execute` | Composio | Ejecutar una herramienta encontrada por slug con argumentos JSON | igual |
+| `composio_connect` | Composio | Autorizar un conjunto de herramientas (por ejemplo, `github`) mediante un Connect Link | igual |
+| `web_search` | Tavily | Información web en vivo/actual (noticias, firmware, detalles de productos) | `TAVILY_API_KEY` |
 | `add_todo` | Notion | Añadir una tarea a la lista de pendientes | `NOTION_API_KEY` / `NOTION_DATABASE_ID` |
 | `list_todos` | Notion | Listar tareas con su estado | igual |
 | `complete_todo` | Notion | Marcar una tarea como hecha (coincide por nombre/palabra clave) | igual |
@@ -145,6 +149,10 @@ Detalles a tener en cuenta:
 
 - Las herramientas de Notion solo se añaden si Notion está configurado.
 - Las herramientas que no están configuradas devuelven un mensaje amigable (por ejemplo, "Web search is unavailable…"), de modo que el sistema se degrada de forma elegante.
+
+#### Herramientas configuradas
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-tool-add.gif" alt="pir" width={800} height="auto"/></p>
 
 ---
 
@@ -156,11 +164,11 @@ Detalles a tener en cuenta:
 
 Todos los ajustes de vectores viven en `config.py` / `.env`:
 
-| Ajuste | Predeterminado | Significado |
+| Ajuste | Valor por defecto | Significado |
 | --- | --- | --- |
 | `PINECONE_API_KEY` | — | Habilita la búsqueda vectorial |
 | `PINECONE_INDEX_NAME` | `conversations` | Nombre del índice de Pinecone |
-| `PINECONE_CLOUD` | `aws` | Proveedor serverless en la nube |
+| `PINECONE_CLOUD` | `aws` | Proveedor serverless |
 | `PINECONE_REGION` | `us-east-1` | Región serverless |
 | `EMBEDDING_MODEL` | `all-MiniLM-L6-v2` | Modelo local de sentence-transformers |
 | `EMBEDDING_DIM` | `384` | Dimensión del vector (debe coincidir con el índice) |
@@ -199,7 +207,7 @@ Cuando el agente llama a `search_conversations`, el flujo es:
 Puntos clave:
 
 - La consulta se incrusta con el mismo modelo local y luego se busca con un filtro `user_id` para que los usuarios solo vean sus propias conversaciones.
-- La coincidencia devuelve id + puntuación + metadatos; los resúmenes completos se extraen del almacén relacional por id.
+- La coincidencia devuelve id + puntuación + metadatos; los resúmenes completos se obtienen del almacén relacional por id.
 - Las coincidencias se formatean con su puntuación de similitud para que el agente pueda juzgar la relevancia.
 
 ---
@@ -210,7 +218,7 @@ La memoria a largo plazo usa Mem0, limitada a un solo usuario (`MEM0_USER_ID`, p
 
 ### Categorías de memoria
 
-No hay compartimentos codificados en el código; en su lugar, `MEM0_CUSTOM_INSTRUCTIONS` indica a Mem0 qué hechos duraderos debe extraer, en orden de prioridad:
+No hay compartimentos codificados en el código; en su lugar, `MEM0_CUSTOM_INSTRUCTIONS` indica a Mem0 qué hechos duraderos extraer, en orden de prioridad:
 
 1. Restricciones de salud y alergias, especialmente cualquier cosa que un médico haya aconsejado (interpretado como aplicable al usuario).
 2. Agenda: reuniones, citas, recordatorios.
@@ -225,7 +233,7 @@ La recuperación proactiva ocurre en cada solicitud, antes del enrutamiento (`re
 1. El mensaje entrante se envía a la búsqueda semántica de Mem0 (`top_k = 5`).
 2. Los resultados se filtran mediante una comprobación de relevancia de dos niveles sobre el desglose de puntuaciones:
    - `semantic ≥ 0.28` → se mantiene, O
-   - `semantic ≥ 0.24` y `bm25 > 0.01` (un acierto reforzado por palabra clave) → se mantiene.
+   - `semantic ≥ 0.24` y `bm25 > 0.01` (un acierto reforzado por palabras clave) → se mantiene.
 3. Las memorias que sobreviven se ordenan por `created_at` (las más recientes primero) y se formatean como:
 
    ```text
@@ -233,9 +241,9 @@ La recuperación proactiva ocurre en cada solicitud, antes del enrutamiento (`re
    - <memory text> (created 2026-08-30)
    ```
 
-4. Ese bloque se antepone al mensaje del usuario antes de que llegue a cualquier nodo, de modo que el LLM lo vea como contexto pero se le indique que lo use solo cuando sea directamente relevante para el tema.
+4. Ese bloque se antepone al mensaje del usuario antes de que llegue a cualquier nodo, por lo que el LLM lo ve como contexto pero se le indica que lo use solo cuando sea directamente relevante para el tema.
 
-La escritura ocurre después de cada intercambio (`save_exchange`): el par usuario/asistente se envía a Mem0 con las instrucciones personalizadas. El guardado y la recuperación de memoria fallan de forma segura (se registran, se ignoran) si falta la clave de Mem0.
+La escritura ocurre después de cada intercambio (`save_exchange`): el par usuario/asistente se envía a Mem0 con las instrucciones personalizadas. Tanto el guardado como la recuperación de memoria fallan de forma controlada (se registran y se ignoran) si falta la clave de Mem0.
 
 
 
@@ -265,7 +273,7 @@ El contexto ensamblado para el LLM es intencionalmente pequeño y por capas:
 | Componente | Origen | Tamaño |
 | --- | --- | --- |
 | System prompt | constante por ruta (`simple`/`persona`/agent `SYSTEM_PROMPT`) | fijo |
-| Historial de conversación | `get_recent_messages(conversation_id, 10)` | últimos 10 turnos (10 mensajes de usuario + 10 de asistente), en orden cronológico |
+| Historial de conversación | `get_recent_messages(conversation_id, 10)` | últimos 10 turnos (10 mensajes de usuario + 10 del asistente), en orden cronológico |
 | Recuerdos recuperados | Mem0 `recall()`, top-5, filtrados | hasta 5 recuerdos |
 | Mensaje actual del usuario | `format_memories(...) + transcript` | la solicitud |
 
@@ -276,7 +284,7 @@ Notas:
 
 - El historial proviene del almacén relacional, no del almacén vectorial (el almacén vectorial contiene resúmenes, no turnos).
 - Los recuerdos se inyectan en línea con el mensaje del usuario, por lo que el modelo los trata como "contexto relevante de tus conversaciones pasadas".
-- La ruta del agente construye los mensajes como `[history..., ("user", memories + transcript)]` y deja que el agente itere con herramientas.
+- La ruta del agente construye los mensajes como `[history..., ("user", memories + transcript)]` y permite que el agente itere con herramientas.
 
 ---
 
@@ -291,18 +299,18 @@ Hay cuatro system prompts:
 | `PERSONA_PROMPT` (`persona.py`) | `backend/graph/nodes/persona.py` | `persona_node` | Igual que simple pero adapta el estilo/la enseñanza a la solicitud del usuario |
 | `SYSTEM_PROMPT` (agentic) | `backend/graph/nodes/agentic.py` | agent | Asistente habilitado con herramientas; explica cada herramienta y cuándo usarla |
 
-Los prompts simple, persona y agentic comparten un estilo común al final:
+Los prompts simple, persona y agentic comparten un remate de estilo común:
 
 - Responde en un máximo de 2–3 oraciones cortas.
 - Solo texto plano: sin markdown, sin asteriscos, sin emojis.
-- Los recuerdos recuperados se usan solo cuando son directamente relevantes para el tema (la separación entre horario y comida se aplica explícitamente).
-- En caso de conflictos, confía en el recuerdo creado más recientemente.
-- Cuando el usuario declara un nuevo hecho, reconoce solo ese hecho; no repitas recuerdos no relacionados.
+- Los recuerdos recuperados se usan solo cuando son directamente relevantes para el tema (la separación entre agenda y comida se aplica explícitamente).
+- En caso de conflicto, confía en el recuerdo creado más recientemente.
+- Cuando el usuario declara un hecho nuevo, reconoce solo ese hecho; no repitas recuerdos no relacionados.
 
 El prompt agentic además:
 
 - Nombra las herramientas (`web_search`, `calculator`, `search_conversations`, herramientas de Notion).
-- Indica hacer llamadas mínimas a herramientas: detenerse una vez que se haya reunido suficiente información.
+- Indica hacer llamadas mínimas a herramientas: detente una vez que se haya reunido suficiente información.
 - Mantiene el formato de respuesta corta y en texto plano.
 
 ---
@@ -314,16 +322,24 @@ Todos los modelos se ejecutan en Groq. Definidos en `backend/llm/client.py`, `co
 | Rol | Variable de entorno | Modelo predeterminado | Temperatura | Notas |
 | --- | --- | --- | --- | --- |
 | LLM principal (router, simple, persona, resúmenes) | `GROQ_LLM_MODEL` | `qwen/qwen3.6-27b` | 0.7 | Instancia de `ChatGroq` `llm` |
-| LLM de agente / llamadas a herramientas | `GROQ_AGENT_MODEL` | `openai/gpt-oss-20b` | 0.0 | Instancia de `ChatGroq` `agent_llm`, usada por `create_agent` |
-| Voz a texto | `GROQ_STT_MODEL` | `whisper-large-v3` | 0.0 | Transcripción con Whisper |
-| Texto a voz | `GROQ_TTS_MODEL` | `canopylabs/orpheus-v1-english` | — | Voz = `TTS_VOICE` (`autumn`) |
+| LLM de agente/llamadas a herramientas | `GROQ_AGENT_MODEL` | `openai/gpt-oss-20b` | 0.0 | Instancia de `ChatGroq` `agent_llm`, usada por `create_agent` |
+| Speech-to-text | `GROQ_STT_MODEL` | `whisper-large-v3` | 0.0 | Transcripción con Whisper |
+| Text-to-speech | `GROQ_TTS_MODEL` | `canopylabs/orpheus-v1-english` | — | Voz = `TTS_VOICE` (`autumn`) |
 | Embeddings (local, no Groq) | `EMBEDDING_MODEL` | `all-MiniLM-L6-v2` | — | `sentence-transformers`, 384 dimensiones, normalizado |
 
-Los valores predeterminados de inferencia del LLM (a través de `groq_client.chat`): `max_completion_tokens = 2048`, `top_p = 1.0`, temperatura reemplazable.
+Valores predeterminados de inferencia LLM (a través de `groq_client.chat`): `max_completion_tokens = 2048`, `top_p = 1.0`, temperatura sobrescribible.
 
+## 11. Demostración de llamada de agente
 
+### Leer correo electrónico
 
-## Soporte técnico y debate sobre productos
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-ReadEmail.gif" alt="pir" width={800} height="auto"/></p>
+
+### Añadir calendario
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-AddCalendar.gif" alt="pir" width={800} height="auto"/></p>
+
+## Soporte técnico y debate sobre el producto
 
 Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
