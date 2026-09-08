@@ -14,7 +14,6 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /function_0.96_inch_display_nrf52840
 sku: 100063377
-sidebar_label: Function
 sidebar_position: 2
 last_update:
   date: 08/25/2026

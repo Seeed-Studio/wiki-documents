@@ -11,7 +11,6 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /getting_started_0.96_inch_display_nrf52840
 sku: 100063377
-sidebar_label: Getting Started
 sidebar_position: 1
 type: gettingstarted
 last_update:
@@ -198,7 +197,7 @@ The display board packs several onboard peripherals. The [Function](/function_0.
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/function_0.96_inch_display_nrf52840#imu) — 6-axis motion effects and wake-on-motion</td></tr>
     <tr><td>Microphone & Speaker</td><td>[Flash Recorder](/function_0.96_inch_display_nrf52840#microphone--speaker--flash-recorder) — record and play back audio</td></tr>
     <tr><td>Buttons</td><td>[User Buttons](/function_0.96_inch_display_nrf52840#user-buttons) — read presses and debounce with interrupts</td></tr>
-    <tr><td>Battery</td><td>[Battery Voltage Detection](/function_0.96_inch_display_nrf52840#battery-voltage-detection) — measure voltage and convert to a percentage</td></tr>
+    <tr><td>Battery</td><td>[Battery Voltage Detection](/function_0.96_inch_display_nrf52840#battery-status) — measure voltage and convert to a percentage</td></tr>
   </table>
 </div>
 

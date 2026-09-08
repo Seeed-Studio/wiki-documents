@@ -11,7 +11,6 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /getting_started_1.14_inch_display_nrf52840
 sku: 100069374
-sidebar_label: Getting Started
 sidebar_position: 1
 type: gettingstarted
 last_update:
@@ -199,7 +198,7 @@ The display board packs several onboard peripherals. The [Function](/function_1.
     <tr><td>Microphone & Speaker</td><td>[Voice Bar + Flash Recorder](/function_1.14_inch_display_nrf52840#microphone--speaker) — live PDM level meter and recording with I2S playback</td></tr>
     <tr><td>Grove I2C</td><td>[SHT31 Temperature & Humidity](/function_1.14_inch_display_nrf52840#grove-i2c) — read a Grove SHT31 sensor</td></tr>
     <tr><td>Buttons</td><td>[User Buttons](/function_1.14_inch_display_nrf52840#user-buttons) — read presses and debounce with interrupts</td></tr>
-    <tr><td>Battery</td><td>[Battery Voltage Detection](/function_1.14_inch_display_nrf52840#battery-voltage-detection) — measure voltage and convert to a percentage</td></tr>
+    <tr><td>Battery</td><td>[Battery Voltage Detection](/function_1.14_inch_display_nrf52840#battery-status) — measure voltage and convert to a percentage</td></tr>
   </table>
 </div>
 
