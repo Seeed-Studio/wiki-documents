@@ -197,7 +197,7 @@ The display board packs several onboard peripherals. The [Function](/function_0.
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/function_0.96_inch_display_nrf52840#imu) — 6-axis motion effects and wake-on-motion</td></tr>
     <tr><td>Microphone & Speaker</td><td>[Flash Recorder](/function_0.96_inch_display_nrf52840#microphone--speaker--flash-recorder) — record and play back audio</td></tr>
     <tr><td>Buttons</td><td>[User Buttons](/function_0.96_inch_display_nrf52840#user-buttons) — read presses and debounce with interrupts</td></tr>
-    <tr><td>Battery</td><td>[Battery Voltage Detection](/function_0.96_inch_display_nrf52840#battery-status) — measure voltage and convert to a percentage</td></tr>
+    <tr><td>Battery</td><td>[Battery Status](/function_0.96_inch_display_nrf52840#battery-status) — measure voltage and convert to a percentage</td></tr>
   </table>
 </div>
 

@@ -194,7 +194,7 @@ The display board packs several onboard peripherals. The [Function](/function_1.
     <tr><td>Microphone & Speaker</td><td>[Volume Bar + Record to SD](/function_1.47_inch_touch_display_nrf52840#microphone--speaker) — live PDM level meter and recording to SD</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/function_1.47_inch_touch_display_nrf52840#imu) — 6-axis motion effects and wake-on-motion</td></tr>
     <tr><td>Buttons</td><td>[User Button](/function_1.47_inch_touch_display_nrf52840#user-button) — read presses and debounce with interrupts</td></tr>
-    <tr><td>Battery</td><td>[Battery Voltage Detection](/function_1.47_inch_touch_display_nrf52840#battery-status) — measure voltage and convert to a percentage</td></tr>
+    <tr><td>Battery</td><td>[Battery Status](/function_1.47_inch_touch_display_nrf52840#battery-status) — measure voltage and convert to a percentage</td></tr>
   </table>
 </div>
 
