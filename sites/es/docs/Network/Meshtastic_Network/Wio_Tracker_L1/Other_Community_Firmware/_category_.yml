@@ -1,5 +1,0 @@
-position: 4 # float position is supported
-label: 'Otro firmware de la comunidad'
-collapsible: true # make the category collapsible
-collapsed: true # keep the category open by default
-className: other_community_firmware
