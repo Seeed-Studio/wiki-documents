@@ -210,7 +210,6 @@ Double-click the reset button on the XIAO nRF52840 Plus. The USR LED will breath
 - **📄[Schematic]** [XIAO 1.47'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[3D Model]** [XIAO 1.47'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
 - **📄[Datasheet]** [1.47 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
-- **🏠[3D Enclosure]** [XIAO 1.47'' IPS Display Enclosure (Design by gokul)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/enclosure/XIAO%201.47%27%27%20IPS%20Display%20Enclosure.zip)
 - **💾[Factory Firmware]** [XIAO 1.47'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
 
 ## Tech Support & Product Discussion
