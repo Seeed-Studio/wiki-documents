@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg
 slug: /XIAO_BLE
 sku: 102010448, 102010469, 102010632, 102010631, 102010672, 102010694, 101991463, 101991465
 last_update:
-  date: 9/2/2026
+  date: 9/7/2026
   author: Clara
 createdAt: '2023-01-16'
 updatedAt: '2026-09-02'
@@ -643,7 +643,7 @@ Here , We would like to express our special thanks to the author for providing t
 
 ## Battery Charging current
 
-The battery charging current is selectable as 50mA or 100mA, where you can set **Pin13** as high or low to change it to 50mA or 100mA. The low current charging current is at the input model set up as HIGH LEVEL and the high current charging current is at the output model set up as LOW LEVEL.
+The battery charging current can be set to approximately 50 mA or 100 mA using P0.13. Configure P0.13 as a high-impedance input with no pull-up or pull-down to select 50 mA, or as an output driven LOW to select 100 mA. These values apply during the constant-current charging phase; the actual charging current decreases as the battery approaches full charge.
 
 **Low Charging Current**
 

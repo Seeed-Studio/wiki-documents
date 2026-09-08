@@ -13,7 +13,7 @@ last_update:
   date: 09/07/2026
   author: yylin
 createdAt: '2026-08-04'
-updatedAt: '2026-08-04'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/recamera_pro_debian/
 ---
 

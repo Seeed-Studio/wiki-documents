@@ -12,13 +12,14 @@ keywords:
   - memory recall
   - Flask
   - agent workflow
+image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-tools.png
 slug: /respeaker_clip_ai_chat_system_architecture
 sku: 100020126
 last_update:
   date: 09/01/2026
   author: Kasun Thushara
 createdAt: '2026-09-01'
-updatedAt: '2026-09-02'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/respeaker_clip_ai_chat_system_architecture/
 ---
 
@@ -135,9 +136,12 @@ Details worth noting:
 
 | Tool | Backing service | Purpose | Config key(s) |
 | --- | --- | --- | --- |
-| `web_search` | Tavily | Live/current web info (news, firmware, product details) | `TAVILY_API_KEY` |
 | `calculator` | local, safe AST eval | Math via a whitelisted `+ - * / ** %` evaluator | — (always available) |
 | `search_conversations` | Pinecone + local embeddings | Find the user's own past conversations by relevance | `PINECONE_API_KEY` |
+| `composio_search` | Composio | Search for Composio app tools matching a natural-language request | `COMPOSIO_API_KEY` |
+| `composio_execute` | Composio | Run a matched tool by slug with JSON args | same |
+| `composio_connect` | Composio | Authorize a toolkit (e.g. `github`) via a Connect Link | same |
+| `web_search` | Tavily | Live/current web info (news, firmware, product details) | `TAVILY_API_KEY` |
 | `add_todo` | Notion | Add a task to the to-do list | `NOTION_API_KEY` / `NOTION_DATABASE_ID` |
 | `list_todos` | Notion | List tasks with status | same |
 | `complete_todo` | Notion | Mark a task done (matches by name/keyword) | same |
@@ -145,6 +149,10 @@ Details worth noting:
 
 - The Notion tools are only added if Notion is configured.
 - Tools that are unconfigured return a friendly message (for example, "Web search is unavailable…"), so the system degrades gracefully.
+
+#### Configured Tools
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-tool-add.gif" alt="pir" width={800} height="auto"/></p>
 
 ---
 
@@ -321,7 +329,15 @@ All models run on Groq. Defined in `backend/llm/client.py`, `config.py`, and `gr
 
 LLM inference defaults (via `groq_client.chat`): `max_completion_tokens = 2048`, `top_p = 1.0`, temperature overridable.
 
+## 11. Agent Call Demonstration
 
+### Read Email
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-ReadEmail.gif" alt="pir" width={800} height="auto"/></p>
+
+### Add Calendar
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-AddCalendar.gif" alt="pir" width={800} height="auto"/></p>
 
 ## Tech Support & Product Discussion
 

@@ -4202,6 +4202,10 @@ const sidebars = {
             {
               type: 'category',
               label: 'Physical AI',
+              link: {
+                type: 'doc',
+                id: 'Edge/NVIDIA_Jetson/Application/Physical_AI/Microduck_RL_on_Jetson',
+              },
               items: [
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Microduck_RL_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
@@ -4650,7 +4654,8 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_isaacsim',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_control_mit'
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_control_mit',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Agent'
               ]
             }
           ]
