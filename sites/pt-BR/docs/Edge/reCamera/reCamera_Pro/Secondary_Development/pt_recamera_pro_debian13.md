@@ -1,5 +1,5 @@
 ---
-description: Grave a imagem Debian 13 na reCamera Pro
+description: Gravar a imagem Debian 13 na reCamera Pro
 title: Gravar a imagem Debian 13 na reCamera Pro
 keywords:
   - reCamera
@@ -13,13 +13,13 @@ last_update:
   date: 09/07/2026
   author: yylin
 createdAt: '2026-08-04'
-updatedAt: '2026-08-04'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_debian/
 ---
 
 ## Introdução
 
-A reCamera Pro é alimentada pelo chip RV1126B e está disponível com 2 GB ou 4 GB de memória. Ela vem com firmware Buildroot para um início rápido com inferência de IA. Esta página fornece uma imagem Debian 13 para usuários que precisam de mais flexibilidade para desenvolvimento e implantação.
+A reCamera Pro é equipada com o chip RV1126B e está disponível com 2 GB ou 4 GB de memória. Ela vem com firmware Buildroot para um início rápido com inferência de IA. Esta página fornece uma imagem Debian 13 para usuários que precisam de mais flexibilidade para desenvolvimento e implantação.
 
 Após gravar a imagem Debian 13, você pode compilar seus próprios aplicativos com CMake, instalar as dependências necessárias com `apt` e executar contêineres Docker. A imagem é compatível com os drivers de fábrica da Seeed e não requer alterações na device tree. A câmera, o microfone, o alto-falante e o Wi-Fi funcionam conforme o esperado; Bluetooth não é suportado.
 
@@ -77,16 +77,16 @@ A tela a seguir indica que o driver foi instalado com sucesso.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-7.png" /></div>
 
-7. Selecione a entrada `rootfs` e clique na reticência (`...`) à sua direita. Substitua seu arquivo de imagem por `rootfs_debian_clean.img` do diretório de firmware extraído.
+7. Selecione a entrada `rootfs` e clique na elipse (`...`) à sua direita. Substitua o arquivo de imagem por `rootfs_debian_clean.img` do diretório de firmware extraído.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-11.png" /></div>
 
 ### Colocar a reCamera Pro em modo Loader
 
-1. Conecte a porta USB 3.0 da reCamera Pro ao seu computador Windows usando um cabo USB e, em seguida, alimente o dispositivo pela porta DC.
+1. Conecte a porta USB 3.0 da reCamera Pro ao seu computador com Windows usando um cabo USB e, em seguida, alimente o dispositivo pela porta DC.
 2. Localize os orifícios dos pinos `BOOT` e `RESET` na lateral do dispositivo.
 3. Pressione e segure `BOOT`, depois pressione rapidamente `RESET` para reiniciar o dispositivo.
-4. Continue segurando `BOOT` por aproximadamente 5 segundos após pressionar `RESET` e depois solte. O dispositivo entra no modo Loader.
+4. Continue segurando `BOOT` por aproximadamente 5 segundos após pressionar `RESET` e então solte. O dispositivo entra no modo Loader.
 
 O SocToolKit agora deve indicar que o dispositivo foi detectado.
 
@@ -102,9 +102,90 @@ Clique em **Download** para iniciar a gravação do firmware.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-13.png" /></div>
 
-Quando a gravação for concluída, a interface deve se parecer com a seguinte:
+Quando a gravação for concluída, a interface deverá se parecer com a seguinte:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-14.png" /></div>
+
+### Gravar no Linux
+
+Você também pode gravar o firmware na reCamera Pro a partir do Linux usando o `upgrade_tool` da Rockchip. Esta seção usa o Ubuntu 24.04 como exemplo.
+
+:::caution
+A gravação sobrescreve os dados do sistema no dispositivo. Faça backup dos dados importantes e certifique-se de que o dispositivo esteja em modo Loader antes de continuar.
+:::
+
+#### Preparar o ambiente
+
+Clone o repositório de ferramentas da Rockchip e verifique se ele contém o `upgrade_tool`:
+
+```bash
+cd ~
+
+git clone https://github.com/rockchip-linux/rkbin.git
+
+cd ~/rkbin/tools
+
+ls -lh upgrade_tool
+```
+
+Em seguida, clone `Linux_Upgrade_Tool` e torne o `upgrade_tool` executável:
+
+```bash
+cd ~
+
+git clone https://github.com/vicharak-in/Linux_Upgrade_Tool.git
+
+cd Linux_Upgrade_Tool
+
+chmod +x upgrade_tool
+
+sudo ./upgrade_tool -v
+```
+
+Confirme que o seu host Ubuntu está conectado à reCamera Pro e que o dispositivo está em modo Loader:
+
+```bash
+sudo ./upgrade_tool LD
+```
+
+A saída esperada é semelhante a:
+
+```bash
+List of rockusb connected(1)
+DevNo=1 Vid=0x2207,Pid=0x110f,LocationID=18     Mode=Loader     SerialNo=f28999835716f3be
+```
+
+Isso confirma que o dispositivo está conectado e em modo Loader.
+
+#### Gravar o firmware
+
+Certifique-se de que todos os arquivos de imagem foram baixados e extraídos. Em seguida, use o `upgrade_tool` para gravar cada partição no dispositivo. Substitua os caminhos de imagem de exemplo abaixo pelo caminho real dos seus arquivos de firmware extraídos:
+
+```bash
+# 1. env
+sudo ./upgrade_tool WL 0x00000000 "/home/seeed/recaemra_pro/debian_img/env.img"
+
+# 2. idblock
+sudo ./upgrade_tool WL 0x00000040 "/home/seeed/recaemra_pro/debian_img/idblock.img"
+
+# 3. uboot
+sudo ./upgrade_tool WL 0x00000800 "/home/seeed/recaemra_pro/debian_img/uboot.img"
+
+# 4. misc
+sudo ./upgrade_tool WL 0x00002800 "/home/seeed/recaemra_pro/debian_img/misc.img"
+
+# 5. recovery
+sudo ./upgrade_tool WL 0x00002880 "/home/seeed/recaemra_pro/debian_img/recovery.img"
+
+# 6. boot
+sudo ./upgrade_tool WL 0x00007880 "/home/seeed/recaemra_pro/debian_img/boot.img"
+
+# 7. Debian rootfs
+sudo ./upgrade_tool WL 0x0000d080 "/home/seeed/recaemra_pro/debian_img/rootfs.img"
+
+# reboot
+sudo ./upgrade_tool RD
+```
 
 ## Sobre o novo firmware
 
@@ -120,7 +201,7 @@ Em seguida, conclua as seguintes etapas de configuração do sistema.
 
 ## Configurar temporariamente um proxy HTTP
 
-Se você precisar de um proxy HTTP para acessar a rede, por exemplo ao usar `apt`, defina temporariamente as seguintes variáveis de ambiente. Pule esta etapa se você não usar um proxy. Substitua o endereço e a porta de exemplo pelos do seu servidor proxy.
+Se você precisar de um proxy HTTP para acessar a rede, por exemplo ao usar o `apt`, defina temporariamente as seguintes variáveis de ambiente. Pule esta etapa se você não usar um proxy. Substitua o endereço e a porta de exemplo pelos do seu servidor proxy.
 
 ```bash
 export http_proxy="http://192.168.4.78:7890"
@@ -131,7 +212,7 @@ export no_proxy="localhost,127.0.0.1,::1,192.168.0.0/16"
 
 ## Configurar a hora
 
-Na primeira inicialização, a hora do sistema pode estar definida para 1970, o que faz com que a validação de certificados SSL falhe. Como o sistema não possui sincronização automática de horário configurada via systemd, defina manualmente a hora correta antes de atualizar o índice de pacotes:
+Na primeira inicialização, a hora do sistema pode estar definida para 1970, o que faz com que a validação de certificados SSL falhe. Como o sistema não tem sincronização automática de horário configurada via systemd, defina manualmente a hora correta antes de atualizar o índice de pacotes:
 
 ```bash
 date -s "2026-09-02 15:20:00"
@@ -185,7 +266,7 @@ vertical_flip: 0
 
 ## Testar a câmera
 
-Use V4L2 para capturar um quadro bruto NV12 e, em seguida, use o FFmpeg para convertê-lo em JPEG:
+Use o V4L2 para capturar um quadro bruto NV12 e, em seguida, use o FFmpeg para convertê-lo em JPEG:
 
 ```bash
 v4l2-ctl -d /dev/video12 \
@@ -248,7 +329,7 @@ Docker version 26.1.5+dfsg1, build 411e817
 
 ### Configurar o Docker
 
-Crie o arquivo de configuração do daemon do Docker para definir o diretório de dados e desabilitar a rede padrão:
+Crie o arquivo de configuração do daemon do Docker para definir o diretório de dados e desativar a rede padrão:
 
 ```bash
 cat >/etc/docker/daemon.json <<'EOF'

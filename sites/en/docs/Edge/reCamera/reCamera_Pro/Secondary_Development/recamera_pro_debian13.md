@@ -106,6 +106,87 @@ When flashing is complete, the interface should look like the following:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-14.png" /></div>
 
+### Flash on Linux
+
+You can also flash the firmware to reCamera Pro from Linux using Rockchip's `upgrade_tool`. This section uses Ubuntu 24.04 as an example.
+
+:::caution
+Flashing overwrites the system data on the device. Back up important data and make sure the device is in Loader mode before continuing.
+:::
+
+#### Prepare the Environment
+
+Clone the Rockchip tools repository and verify that it contains `upgrade_tool`:
+
+```bash
+cd ~
+
+git clone https://github.com/rockchip-linux/rkbin.git
+
+cd ~/rkbin/tools
+
+ls -lh upgrade_tool
+```
+
+Then clone `Linux_Upgrade_Tool` and make `upgrade_tool` executable:
+
+```bash
+cd ~
+
+git clone https://github.com/vicharak-in/Linux_Upgrade_Tool.git
+
+cd Linux_Upgrade_Tool
+
+chmod +x upgrade_tool
+
+sudo ./upgrade_tool -v
+```
+
+Confirm that your Ubuntu host is connected to reCamera Pro and that the device is in Loader mode:
+
+```bash
+sudo ./upgrade_tool LD
+```
+
+Expected output is similar to:
+
+```bash
+List of rockusb connected(1)
+DevNo=1 Vid=0x2207,Pid=0x110f,LocationID=18     Mode=Loader     SerialNo=f28999835716f3be
+```
+
+This confirms that the device is connected and in Loader mode.
+
+#### Flash the Firmware
+
+Make sure that all image files have been downloaded and extracted. Then use `upgrade_tool` to write each partition to the device. Replace the example image paths below with the actual path to your extracted firmware files:
+
+```bash
+# 1. env
+sudo ./upgrade_tool WL 0x00000000 "/home/seeed/recaemra_pro/debian_img/env.img"
+
+# 2. idblock
+sudo ./upgrade_tool WL 0x00000040 "/home/seeed/recaemra_pro/debian_img/idblock.img"
+
+# 3. uboot
+sudo ./upgrade_tool WL 0x00000800 "/home/seeed/recaemra_pro/debian_img/uboot.img"
+
+# 4. misc
+sudo ./upgrade_tool WL 0x00002800 "/home/seeed/recaemra_pro/debian_img/misc.img"
+
+# 5. recovery
+sudo ./upgrade_tool WL 0x00002880 "/home/seeed/recaemra_pro/debian_img/recovery.img"
+
+# 6. boot
+sudo ./upgrade_tool WL 0x00007880 "/home/seeed/recaemra_pro/debian_img/boot.img"
+
+# 7. Debian rootfs
+sudo ./upgrade_tool WL 0x0000d080 "/home/seeed/recaemra_pro/debian_img/rootfs.img"
+
+# reboot
+sudo ./upgrade_tool RD
+```
+
 ## About the New Firmware
 
 After flashing, connect the device to your network using an Ethernet cable. This image does not support the original USB-C virtual network adapter. You can find the device IP address in your router or Wi-Fi management interface. SSH is enabled in the image, so you can log in through SSH directly. If a network connection is unavailable, use the UART serial console at a baud rate of `1500000`.
