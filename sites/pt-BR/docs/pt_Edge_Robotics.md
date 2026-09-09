@@ -137,6 +137,8 @@ import '/src/css/robotics-page-style.css';
   <a className="step-card" href="/pt-br/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Use ROS2 com MoveIt, percepção e aplicações de sistema.</small></div><em>Integração de sistema</em></a>
 
   <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator Development</b><small>Aprenda a integração do Web Simulator com ROS2/MuJoCo para controle sincronizado virtual-real.</small></div><em>Desenvolvimento de simulação</em></a>
+
+  <a className="step-card" href="/pt-br/rebot_arm_b601_dm_isaacsim/"><span className="step-index">7</span><div><b>Integração com o Isaac Sim</b><small>Implante o reBot B601-DM no Isaac Sim para simulação, depuração e validação de algoritmos de controle.</small></div><em>Simulação</em></a>
 </div>
 </div>
 </details>
