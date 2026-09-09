@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-08 10:46:34 (北京时间)
-// 多语言页面: 2483 个
+// 生成时间: 2026-09-09 10:48:16 (北京时间)
+// 多语言页面: 2489 个
 
 (function() {
   'use strict';
@@ -11332,6 +11332,48 @@
     "pt"
   ],
   "/seeed_iot_button_with_zigbee": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_0.96_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_0.96_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_1.14_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_1.14_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_1.47_inch_touch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_1.47_inch_touch_display_nrf52840": [
     "cn",
     "en",
     "es",
