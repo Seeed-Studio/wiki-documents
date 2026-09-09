@@ -144,7 +144,7 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 </div>
 
 相信你已经跟随上方视频完成了电源安装和机械臂组装前期准备工作,接下来开始介绍写入电机ID和校准机械臂的步骤。
-
+电源和机械臂的连接在下方视频
 
 使用请参考视频和文字教程,在控制机械臂运动之前，需要重新设置一次零点。
 
@@ -736,25 +736,24 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 
 #### 写入零点和调试
 
-在浏览器中打开地址 [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/)，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
-
+在浏览器中打开地址 [motorbridge-studio（点击跳转）](https://motorbridge.github.io/motorbridge-studio/)，打开网页后点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
+优先尝试
 
 ```bash
 motorbridge-gateway --bind 127.0.0.1:9002  
 ```
 
-macOS:
 
-```bash
-motorbridge-gateway --bind 127.0.0.1:9002 
-```
+**macOS：**
 
-or
+如果运行命令后提示找不到动态库，请根据 Mac 的硬件架构和 Homebrew 安装路径，使用对应的命令。
 
+这两条命令的核心区别在于搜索动态依赖库的目录不同，这直接对应了 macOS 下 Apple Silicon（M 系列芯片）与 Intel 芯片的 Homebrew 默认安装路径差异。
 
-```bash
-DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002 
-```
+| 命令 | 库搜索路径 | 对应的硬件架构与环境 |
+| --- | --- | --- |
+| `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib motorbridge-gateway --bind 127.0.0.1:9002` | `/opt/homebrew/lib` | **Apple Silicon（M1/M2/M3/M4 系列芯片）**：原生 ARM64 架构下，Homebrew 安装的软件和动态库所在目录。 |
+| `DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9002` | `/usr/local/lib` | **Intel（x86_64）芯片**，或在 Apple Silicon 上通过 Rosetta 2 模拟运行的 x86_64 环境。 |
 
 #### 写入电机控制参数
 

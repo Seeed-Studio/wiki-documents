@@ -106,11 +106,40 @@ Assembly reference video:
       <h4>Assemble the reBot Arm</h4>
       <p className="rebot-step-label">Step 1</p>
 
+<Tabs>
+<TabItem value="unassembled" label="Unassembled Version">
+
+<div class="video-container">
+  <iframe width="900" height="600" src="https://www.youtube.com/embed/Bv60NPO0TRo?list=PLpH_4mf13-A38iXew5DxqswGLjPQ0BflR&amp;index=6" title="reBot Arm B601-RS assembly video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 - Before assembly, please read the following instructions carefully. To ensure a smooth assembly process and a complete hands-on experience, please be patient, stay focused, and always follow these key points:
   1. This kit includes numerous screws and structural parts, some of which look similar. Please carefully verify the screw specifications and part models, and confirm the installation orientation before fastening.
   2. The video was recorded in early April. There may be minor adjustments to parts later, but this does not affect the assembly quality when following the video. The final parts are subject to what is shipped.
   3. For ease of screw installation and removal, the open-source BOM specifies standard screws. However, the screws shipped with the kit have thread-lock applied. You may also use your own preferred tools or an electric screwdriver (highly recommended to have one ready). If using an electric tool, be sure to set the torque to a low-to-medium level (3–6 kgf·cm) to avoid excessive torque that could strip the screws, causing irreversible damage where parts cannot be removed. If there is any sign of stripping, immediately replace the screw or realign and retry. Stripped thread-lock screws cannot be removed with a screw extractor and will scrap the entire part. Therefore, please proceed with caution.
   4. Please prioritize safety during assembly to avoid pinched fingers or crush injuries. Children should complete this project with the accompaniment of a parent or guardian.
+
+</TabItem>
+<TabItem value="assembled" label="Assembled Version">
+
+Connect the robotic arm cables, then use MotorBridge Studio to write the motor parameters and set the zero position.
+
+Refer to the reBot Arm B601-RS unboxing and getting-started video below for this step.
+
+Connect Motor 1 and Motor 2 as shown below.
+
+<div align="center">
+  <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="Connect Motor 1 and Motor 2 on the reBot Arm B601-RS" />
+</div>
+
+Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cable, and XT30 2+2 cable as shown below. Connect the other end of the XT30 2+2 cable to Motor 1 and connect the power cable to the 48 V power supply.
+
+<div align="center">
+  <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="Connect the USB-to-CAN module and power cables to the reBot Arm B601-RS" />
+</div>
+
+</TabItem>
+</Tabs>
 
 </div>
 </section>
