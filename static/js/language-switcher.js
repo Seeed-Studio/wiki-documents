@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-09 10:48:16 (北京时间)
-// 多语言页面: 2489 个
+// 生成时间: 2026-09-09 17:55:35 (北京时间)
+// 多语言页面: 2490 个
 
 (function() {
   'use strict';
@@ -14433,6 +14433,13 @@
     "pt"
   ],
   "/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_s1000_v2_co2_calibration": [
     "cn",
     "en",
     "es",
