@@ -73,18 +73,25 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 
   2. 如果你的家庭电压是220V，请把电源侧面拨码调至230V，如果你的家庭电压是110V，请把你电源的拨码调至115V。
 
-  | **220V** | **110V** |
-  |:---:|:---:|
-  | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="300" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="300" /> |
-
-  <div align="center">
-    <img width={800}
-    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" />
+<div className="rebot-power-gallery">
+  <figure className="rebot-power-gallery-item">
+    <figcaption>220V</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" alt="电源电压拨码调至 230V" />
+  </figure>
+  <figure className="rebot-power-gallery-item">
+    <figcaption>110V</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" alt="电源电压拨码调至 115V" />
+  </figure>
+  <figure className="rebot-power-gallery-item rebot-power-gallery-item--wide">
+    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" alt="reBot Arm B601-RS MeanWell 电源适配器" />
+  </figure>
 </div>
 
-  3. 选择我们开源的24V14.6AMeanWell电源外壳进行自组装，文字步骤和BOM在[github仓库](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README_zh.md#%E5%85%B3%E4%BA%8E%E7%94%B5%E6%BA%90)中开源（只推荐有过相关电源组装经验的开发者使用）
+### 组装电源
 
-  组装参考视频：
+选择我们开源的24V14.6AMeanWell电源外壳进行自组装，文字步骤和BOM在[github仓库](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README_zh.md#%E5%85%B3%E4%BA%8E%E7%94%B5%E6%BA%90)中开源（只推荐有过相关电源组装经验的开发者使用）
+
+电源组装参考视频：
   
   <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116793196675417&bvid=BV15i7K69EnQ&cid=39314066536&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -92,7 +99,14 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 
 
 
-## 第一步：组装机械臂
+## 组装机械臂
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>组装 reBot Arm</h4>
+      <p className="rebot-step-label">第 1 步</p>
 
 <Tabs>
 <TabItem value="unassembled" label="未组装版本">
@@ -112,7 +126,7 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 
 机械臂需要连接线和使用motorbridge-studio写入参数和设置零点
 
-该步骤可以参考第二步中的视频来进行。
+该步骤可以参考下方（reBot Arm B601-RS机械臂开箱和上手）中的视频来进行。
 按照如下图示，连接 motor1 和 motor2
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="确认写入 B601-RS 电机参数" />
@@ -125,8 +139,20 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 </TabItem>
 </Tabs>
 
+</div>
+</section>
+</div>
 
-## 第二步：Motorbridge-studio 校准机械臂及参数写入
+相信你已经跟随上方视频完成了电源安装和机械臂组装前期准备工作,接下来开始介绍写入电机ID和校准机械臂的步骤。
+
+
+使用请参考视频和文字教程,在控制机械臂运动之前，需要重新设置一次零点。
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MEJV6TELk&p=1&autoplay=0&muted=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## 使用 MotorBridge 平台校准机械臂并完成首次运行
 
 :::tip
 1. 探索我们的 **MotorBridge** 平台。该平台为一站式综合解决方案，支持电机种类持续扩充，涵盖[达妙电机](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride电机](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[高擎电机](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[脉塔电机](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow 等多款电机，同时兼容 reBot 等持续更新迭代的机械臂产品。平台面向入门用户友好易用，同时也为开发者提供功能完全一致的 Python SDK。
@@ -137,33 +163,32 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 :::
 
 :::tip
-1.已验证虚拟机的性能不足以支撑 demo 运行且存在配置问题，建议优先使用 ubuntu 物理机来控制机械臂
+1. 已验证虚拟机的性能不足以支撑 Demo 运行且存在配置问题，建议优先使用 Ubuntu 物理机控制机械臂。
 
-2.(Beta版)让 agent 来帮助你初始化机械臂，复制以下内容发送给 agent：
+2. （Beta）可以让 Agent 帮助你初始化机械臂。复制以下内容发送给 Agent：
 
 ```text
 请参考 AGENTS.md（https://github.com/Welt-liu/reBot-B601-Agent-Guide/blob/main/zh/AGENTS.md）中的流程，帮助用户完成新机械臂的初始化。
 ```
 
-  注意：如果你购买的是成品套件，请在写入电机id环节提示agent：我购买的是成品套件，帮我扫描1~7电机是否都在线，不要写入重新写入电机id。
+如果购买的是成品套件，请在写入电机 ID 环节告诉 Agent：我购买的是成品套件，帮我扫描 1～7 号电机是否全部在线，不要重新写入电机 ID。
 
-3.agent使用cli命令完成写入电机ID，wiki则是使用web ui交互的方式来完成。两者都可行。
-
+3. Agent 使用 CLI 命令写入电机 ID，本 Wiki 使用 Web UI 完成，两种方式都可行。
 :::
 
-相信你已经跟随视频完成了机械臂组装前期准备工作,接下来开始介绍写入电机ID和校准机械臂的步骤。
+### 软件配置与校准流程
 
+按照正确的先后顺序操作，即可安装 Miniforge 并为 reBot 创建独立的 Python 环境。
 
-使用请参考视频和文字教程,在控制机械臂运动之前，需要重新设置一次零点。
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>安装 Miniforge</h4>
+      <p className="rebot-step-label">第 1 步</p>
 
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MEJV6TELk&p=1&autoplay=0&muted=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+根据操作系统下载并安装 Miniforge：
 
-
-### 1.安装 Miniforge（建议）（支持 Windows\Ubuntu\macOS\Jetson\树莓派）
-
-1. 安装miniforge，创建虚拟环境，避免其他环境包的干扰导致demo运行失败。
 <Tabs>
 <TabItem value="Ubuntu" label="Ubuntu\Jetson\树莓派">
 
@@ -171,6 +196,20 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
+
+安装过程中按 <kbd>Enter</kbd> 确认，提示条款时输入 `yes`，询问是否初始化 Conda 时也输入 `yes`。
+
+重启终端后运行 `conda --version` 验证安装。
+
+:::tip 如果找不到 `conda`
+加载 Miniforge 并初始化 Bash：
+
+```bash
+source ~/miniforge3/etc/profile.d/conda.sh
+conda init bash
+```
+:::
+
 </TabItem>
 <TabItem value="macOS" label="macOS">
 
@@ -179,53 +218,105 @@ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mi
 bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
-</TabItem>
-<TabItem value="windows" label="windows">
+安装过程中按 <kbd>Enter</kbd> 确认，提示条款时输入 `yes`，询问是否初始化 Conda 时也输入 `yes`。
 
-　　在浏览器中打开 Miniforge 的 Release 页面，找到最新版本的 `Miniforge3-Windows-x86_64.exe` 点击下载：
+重启终端后运行 `conda --version` 验证安装。
 
-```text
-https://github.com/conda-forge/miniforge/releases
+:::tip 如果找不到 `conda`
+加载 Miniforge，并为当前 macOS 默认使用的 Zsh 初始化 Conda：
+
+```bash
+source ~/miniforge3/etc/profile.d/conda.sh
+conda init zsh
 ```
+:::
+
+</TabItem>
+<TabItem value="windows" label="Windows">
+
+打开 [Miniforge Releases 页面](https://github.com/conda-forge/miniforge/releases)，找到最新版本的 `Miniforge3-Windows-x86_64.exe` 并下载。
+
+:::tip 根据终端初始化 Conda
+**Git Bash 用户**：如果找不到 `conda`，请先加载 Conda：
+
+```bash
+# 临时生效：将 <安装路径> 替换为实际路径
+source <安装路径>/etc/profile.d/conda.sh
+
+# 永久生效：写入 bashrc，仅需执行一次
+echo 'source <安装路径>/etc/profile.d/conda.sh' >> ~/.bashrc
+source ~/.bashrc
+```
+
+PowerShell 用户可执行：
+
+```bash
+conda init powershell
+```
+:::
 
 </TabItem>
 </Tabs>
 
-2. 创建 Python 3.12 版本虚拟环境：
+</div>
+</section>
 
-:::tip
-  **Git Bash 用户**：如果 `conda` 命令找不到，说明 Git Bash 未加载 conda 环境。需要先初始化：
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>关闭自动激活 base（可选）</h4>
+      <p className="rebot-step-label">第 2 步</p>
 
-  ```bash
-  # 临时生效（当前终端），<安装路径> 替换为实际路径
-  source <安装路径>/etc/profile.d/conda.sh
+Miniforge 完成 Conda 初始化后，每次打开新终端都会自动激活 `(base)` 环境。如果不想默认进入 `(base)`，可以关闭自动激活：
 
-  # 永久生效（写入 bashrc，执行一次即可）
-  echo 'source <安装路径>/etc/profile.d/conda.sh' >> ~/.bashrc
-  source ~/.bashrc
-  ```
+```bash
+conda config --set auto_activate_base false
+```
 
-  让 PowerShell 能够自动激活 conda 环境：
+**验证方式：** 关闭当前终端并重新打开，新终端的命令行提示符前不再出现 `(base)`。需要使用 Conda base环境时，手动运行 `conda activate base` 即可。
 
-  ```bash
-  conda init powershell
-  ```
+**恢复默认：** 如果后续想恢复自动激活 base，运行 `conda config --set auto_activate_base true`。
 
-:::
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>创建 Python 环境</h4>
+      <p className="rebot-step-label">第 3 步</p>
+
+创建 Python 3.12 环境：
 
 ```bash
 conda create -y -n rebot python=3.12
 ```
 
-3. 激活虚拟环境。**每次打开终端使用 reBot 相关功能时，都需要重新执行该激活命令**：
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>激活环境</h4>
+      <p className="rebot-step-label">第 4 步</p>
+
+每次打开新终端使用 rebot 时，都需要执行：
 
 ```bash
 conda activate rebot
 ```
 
-### 2.安装 Motorbridge
+</div>
+</section>
 
-激活 reBot 虚拟环境后，执行以下命令安装 motorbridge：
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>安装 Motorbridge</h4>
+      <p className="rebot-step-label">第 5 步</p>
+
+激活 rebot 虚拟环境后，执行以下命令安装 motorbridge：
 
 :::tip 提示 macOS 用户注意
 如果您在 macOS 上遥操时帧率偏低，可能是沁恒（WCH）CH34x 驱动版本过旧导致。对于 **macOS 10.14 及以上版本**，系统已内置 AppleUSBCHC0M 驱动，您可以先卸载旧版驱动，改用 macOS 内置驱动，通常能有效提升帧率。
@@ -236,7 +327,14 @@ conda activate rebot
 pip install motorbridge
 ```
 
-### 3.pcan-usb
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+      <h4>配置 PCAN-USB</h4>
+      <p className="rebot-step-label">第 6 步</p>
 
 让 PCAN-USB 设备以 1Mbps 速率工作在 CAN 总线上，供机械臂通信使用
 
@@ -253,6 +351,44 @@ sudo ip link set can0 down 2>/dev/null
 sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
+
+
+:::tip 注意！！！
+电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
+:::
+
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤 - Ubuntu</summary>
+
+Ubuntu 用户请参考本指南
+
+1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN 拨到 BOOT
+
+3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_ubuntu.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
+
+[点击下载 flash_pcan_ubuntu.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
+
+如果是从别的电脑传过去的（比如 scp）：
+
+```text
+scp flash_pcan.sh pcan_canable_hw.bin seeed@你的Ubuntu的IP:~/Downloads/
+```
+或者直接拖进优盘再插到 Ubuntu 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+
+4.执行：
+
+```text
+bash flash_pcan_ubuntu.sh
+```
+ 输入密码；等待完成
+
+完成后重新拨回"120R"
+
+重新插 USB。
+</details>
 
 </TabItem>
 
@@ -374,7 +510,7 @@ sudo ip link set $PCAN_IF up
 ```
 
 </TabItem>
-<TabItem value="macos" label="macos">
+<TabItem value="macos" label="macOS">
 `libPCBUSB.dylib` 无法加载时，请先安装 PCBUSB：
 
 ```bash
@@ -425,22 +561,51 @@ python3 -c "import ctypes; ctypes.CDLL('PCBUSB'); print('PCBUSB load OK')"
 motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 --timeout-ms 300
 ```
 
+
+:::tip 注意！！！
+电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
+:::
+
+<details>
+
+<summary>PCAN 固件下载与驱动修复步骤 - macOS</summary>
+
+MAC 用户请参考本指南
+
+1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.USB2CAN 拨到 BOOT
+
+3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_mac.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
+
+[点击下载 flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
+
+如果是从别的电脑传过去的（比如 scp）：
+
+```text
+scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
+```
+
+或者直接拖进优盘再插到 MAC 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+
+4.执行：
+
+```text
+ bash /Users/"你的用户名"/Downloads/pcan_flash_mac.sh "/Users/"你的用户名"/Downloads/pcan_canable_hw.bin"
+```
+以上命令为文件放置在mac下载路径，按实际路径更改
+
+输入密码；等待完成
+
+完成后重新拨回"120R"
+
+重新插 USB。
+</details>
+
 </TabItem>
-<TabItem value="windows" label="windows">
+<TabItem value="windows" label="Windows">
 
 请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
-
-</TabItem>
-
-
-
-</Tabs>
-
-
-
-
-
-
 
 
 :::tip 注意！！！
@@ -449,7 +614,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 
 <details>
 
-<summary>PCAN 固件下载与驱动修复步骤</summary>
+<summary>PCAN 固件下载与驱动修复步骤 - Windows</summary>
 
 如果安装驱动后仍然无法使用 PCAN-USB，并且设备管理器中没有识别到如下图所示的 **PCAN-USB** 设备，请下载 PCAN 固件压缩包，并按照以下步骤安装 DFU 驱动和重新烧录固件。
 
@@ -509,74 +674,17 @@ C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
 
 </details>
 
-<details>
+</TabItem>
 
-<summary>PCAN 固件下载与驱动修复步骤-Ubuntu</summary>
 
-Ubuntu 用户请参考本指南
 
-1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+</Tabs>
 
-2.USB2CAN 拨到 BOOT
 
-3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_ubuntu.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
 
-[点击下载 flash_pcan_ubuntu.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
 
-如果是从别的电脑传过去的（比如 scp）：
 
-```text
-scp flash_pcan.sh pcan_canable_hw.bin seeed@你的Ubuntu的IP:~/Downloads/
-```
-或者直接拖进优盘再插到 Ubuntu 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
 
-4.执行：
-
-```text
-bash flash_pcan_ubuntu.sh
-```
- 输入密码；等待完成
-
-完成后重新拨回"120R"
-
-重新插 USB。
-</details>
-
-<details>
-
-<summary>PCAN 固件下载与驱动修复步骤-MAC</summary>
-
-MAC 用户请参考本指南
-
-1.> 📦 [点击下载 USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
-
-2.USB2CAN 拨到 BOOT
-
-3.请将第一步的USB2CAN.zip压缩包解压，将flash_pcan_mac.sh 和 USB2CAN.zip里面的pcan_canable_hw.bin 放同一目录
-
-[点击下载 flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
-
-如果是从别的电脑传过去的（比如 scp）：
-
-```text
-scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
-```
-
-或者直接拖进优盘再插到 MAC 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
-
-4.执行：
-
-```text
- bash /Users/"你的用户名"/Downloads/pcan_flash_mac.sh "/Users/"你的用户名"/Downloads/pcan_canable_hw.bin"
-```
-以上命令为文件放置在mac下载路径，按实际路径更改
-
-输入密码；等待完成
-
-完成后重新拨回"120R"
-
-重新插 USB。
-</details>
 
 <!-- ### 3.写入电机id
 
@@ -605,7 +713,14 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 ``` -->
 
 
-### 4.启动 MotorBridge-gateway写入零点和调试
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">7</span>
+<div className="rebot-step-content">
+      <h4>使用 MotorBridge Gateway 写入零点和调试</h4>
+      <p className="rebot-step-label">第 7 步</p>
 
 #### 电机复位前须知
 
@@ -673,3 +788,7 @@ reBot Arm B601-RS 的大多数示例使用 MIT 模式运行。
 1. 在机械臂零点校准完成后，点击读取参数，如读取成功，网页会下载 tsv 文件，该文件可以使用文本或表格打开，其内提供的参数与电机厂商提供的参数功能一致，将该文件修改后，再写入机械臂。
 
 2. 如您正在寻求技术支持，请将该文件提供给工程师，更有助于工程师分析问题。
+
+</div>
+</section>
+</div>
