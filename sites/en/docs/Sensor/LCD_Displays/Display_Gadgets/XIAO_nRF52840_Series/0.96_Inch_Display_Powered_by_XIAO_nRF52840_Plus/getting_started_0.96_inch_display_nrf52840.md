@@ -68,7 +68,7 @@ This combination makes it an ideal platform for ultra-compact wearables, keychai
 </div>
 
 :::note
-This display board is designed for the **XIAO nRF52840 Plus**. If you are using the XIAO ESP32-S3 Plus version, please refer to the [XIAO 0.96'' IPS Display (ESP32-S3)](/getting_started_0.96_inch_display_esp32s3) guide instead.
+This display board is designed for the **XIAO nRF52840 Plus**. If you are using the XIAO ESP32-S3 Plus version, please refer to the XIAO 0.96'' IPS Display (ESP32-S3) guide instead.
 :::
 
 ## Hardware Overview

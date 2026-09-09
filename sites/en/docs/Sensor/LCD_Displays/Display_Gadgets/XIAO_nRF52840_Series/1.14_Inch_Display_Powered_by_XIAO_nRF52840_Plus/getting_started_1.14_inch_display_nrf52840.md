@@ -68,7 +68,7 @@ This combination makes it an ideal platform for wearable devices, compact sensor
 </div>
 
 :::note
-This display board is designed for the **XIAO nRF52840 Plus**. If you are using the XIAO ESP32-S3 Plus version, please refer to the [XIAO 1.14'' IPS Display (ESP32-S3)](/getting_started_1.14_inch_display_esp32s3) guide instead.
+This display board is designed for the **XIAO nRF52840 Plus**. If you are using the XIAO ESP32-S3 Plus version, please refer to the XIAO 1.14'' IPS Display (ESP32-S3) guide instead.
 :::
 
 ## Hardware Overview
