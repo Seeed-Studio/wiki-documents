@@ -1431,6 +1431,20 @@
     font-weight: 600;
     color: #1a1a1a;
     line-height: 1.4;
+    margin: 0 0 8px;
+  }
+
+  .project_description {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #76b900;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   // ========== Old Community Styles (Legacy) ==========
@@ -1967,6 +1981,10 @@
 
     .project_title {
       color: #f5f6f7;
+    }
+
+    .project_description {
+      color: #76b900;
     }
 
     .hero_section {
@@ -3241,4 +3259,9 @@
       }
     }
   }
+}
+
+// J601 demo grid embedded in wiki doc pages
+.j601_demo_embed {
+  margin: 24px 0;
 }

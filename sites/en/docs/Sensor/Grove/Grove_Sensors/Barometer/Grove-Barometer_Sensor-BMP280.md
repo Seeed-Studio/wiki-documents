@@ -10,7 +10,7 @@ last_update:
   date: 1/4/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-01-07'
+updatedAt: '2026-08-21'
 url: https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/
 ---
 

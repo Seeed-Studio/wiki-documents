@@ -71,7 +71,7 @@ export const productFamily: ProductCategory[] = [
         description:
           'Entry-level open-source AI camera. SG2002 (RISC-V), 1 TOPS NPU, Node-RED visual programming. The most affordable reCamera for quick project prototyping and validation. Available with/without WiFi and in 8GB/64GB storage options.',
         image: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102991895_2.jpg',
-        href: 'https://wiki.seeedstudio.com/recamera_2002_series_quick_start_guide/',
+        href: 'https://wiki.seeedstudio.com/recamera_getting_started/',
         tags: ['RISC-V', '1 TOPS', 'Entry-Level'],
       },
       {

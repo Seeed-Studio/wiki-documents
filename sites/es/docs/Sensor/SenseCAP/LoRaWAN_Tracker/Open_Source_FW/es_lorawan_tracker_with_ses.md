@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_opens
 slug: /open_source_lorawan
 sidebar_position: 3
 last_update:
-  date: 2/4/2026
-  author: Janet
+  date: 9/1/2026
+  author: Advent Jiang
 createdAt: '2025-09-03'
 updatedAt: '2026-02-04'
 url: https://wiki.seeedstudio.com/es/open_source_lorawan/
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/es/open_source_lorawan/
 ## Preparación
 
 :::caution note
-Antes de flashear el firmware, asegúrese de que su dispositivo sea la versión `T1000-E for LoRaWAN` y por favor no flashee otro firmware Meshtastic a este modelo de tracker, puede causar que el dispositivo quede completamente inoperativo.
+Antes de flashear el firmware, asegúrese de que su dispositivo sea la versión `T1000-E for LoRaWAN` y por favor no flashee otro firmware Meshtastic o MeshCore a este modelo de tracker, puede causar que el dispositivo quede completamente inoperativo.
 :::
 
 ### Preparación de Hardware

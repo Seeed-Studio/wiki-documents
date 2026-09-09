@@ -8,6 +8,7 @@ keywords:
   - operação remota
   - cinemática
   - Damiao
+image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_arm_b601_dm_isaacsim
 last_update:
   date: 2026-08-17
@@ -15,19 +16,33 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-77'
-updatedAt: '2026-08-18'
+updatedAt: '2026-08-19'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_isaacsim/
 ---
+
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+
+<RebotDmDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+</a></div>
 
 ## Introdução
 
 Este é um projeto de simulação para o robô reBot-B601-DM construído com o NVIDIA Isaac Sim. Ele utiliza o mecanismo de física de alta fidelidade do Isaac Sim para reproduzir com precisão o comportamento cinemático do robô e a coordenação da garra em um ambiente virtual, fornecendo uma plataforma limpa, apenas de simulação, para desenvolvimento de algoritmos de controle, validação de planejamento de trajetória e teste de protocolos de comunicação.
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png"/>
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png" alt="reBot Arm B601-DM Isaac Sim" />
 </div>
 
-## Requisitos de Sistema
+## Requisitos de sistema
 - Sistema operacional: Ubuntu 22.04 LTS / 24.04 LTS (recomendado) ou Windows 11 (requer WSL2)
 - GPU: placa de vídeo NVIDIA série RTX (recomendado RTX 3070 ou mais recente), VRAM ≥ 8GB
 - Driver: driver oficial NVIDIA ≥ 535.x, com suporte a CUDA 12.x
@@ -48,7 +63,7 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaa
 
 ### Baixar o pacote Standalone do Isaac Sim
 
-> 💡 Adequado para a maioria dos usuários; não requer compilação e funciona imediatamente após a instalação.
+> 💡 Adequado para a maioria dos usuários; não requer compilação e funciona imediatamente.
 
 #### Download e extração
 
@@ -135,7 +150,7 @@ reBot-Isaacsim/
 
 ## Inicialização (modo de dois terminais)
 
-São necessários dois terminais separados. **O Terminal 1 é o receptor do Isaac Sim**, e **o Terminal 2 executa o módulo de envio com base no modo selecionado**.
+São necessários dois terminais separados. **O Terminal 1 é o receptor do Isaac Sim**, e **o Terminal 2 executa o sender com base no modo selecionado**.
 
 ### Terminal 1 — Iniciar o receptor do Isaac Sim (usado por todos os modos)
 Execute o script do receptor com o Python do Isaac Sim.
@@ -159,11 +174,11 @@ ${ISAACSIM_PYTHON_EXE}  gravity_joint_sender.py
 - Iniciar a interface gráfica (GUI) do Isaac Sim
 - Carregar o chão e os assets USD do robô
 - Escutar em UDP `DEFAULT_SIM_HOST:5005`
-- Aguardar a conexão do módulo de envio
+- Aguardar a conexão do sender
 
-### Terminal 2 — Iniciar o módulo de envio apropriado para o modo selecionado
+### Terminal 2 — Iniciar o sender apropriado para o modo selecionado
 
-**Ordem de inicialização: primeiro o receptor, depois o módulo de envio.**
+**Ordem de inicialização: primeiro o receptor, depois o sender.**
 
 :::tip
 
@@ -192,11 +207,11 @@ cd reBotArm_Isaacsim
 uv run python isaacsim_joint_test_sender.py
 ```
 
-O módulo de envio interpola lentamente entre várias poses de junta predefinidas e as envia em loop sem exigir uma conexão CAN.
+O sender interpola lentamente entre várias poses de junta predefinidas e as envia em loop sem exigir uma conexão CAN.
 
-#### ② Modo de Cinemática Inversa (`isaacsim_ik_sender`)
+#### ② Modo de cinemática inversa (`isaacsim_ik_sender`)
 
-Insira a pose do efetuador final (posição/orientação), resolva a IK e acione o robô simulado no Isaac Sim. Execute diretamente com `uv run` no diretório `reBotArm_Isaacsim/`:
+Insira a pose do efetuador final (posição/orientação), resolva o IK e acione o robô simulado no Isaac Sim. Execute diretamente com `uv run` no diretório `reBotArm_Isaacsim/`:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -213,7 +228,7 @@ gripper <0~1>                # update the gripper independently
 
 #### ③ Modo de planejamento de trajetória (`isaacsim_traj_sender`)
 
-Este modo é baseado em IK e adiciona planejamento de trajetória no espaço de juntas (MIN_JERK) para um movimento suave. Execute diretamente com `uv run` no diretório `reBotArm_Isaacsim/`:
+Este modo se baseia no IK e adiciona planejamento de trajetória no espaço de juntas (MIN_JERK) para um movimento suave. Execute diretamente com `uv run` no diretório `reBotArm_Isaacsim/`:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -240,7 +255,7 @@ cd reBotArm_Isaacsim
 ```
 
 **Comportamento esperado:**
-- Conectar ao robô real e habilitar MIT + compensação de alimentação antecipada de gravidade
+- Conectar ao robô real e habilitar MIT + compensação de alimentação de gravidade (gravity feedforward)
 - O robô pode ser movido livremente à mão
 - Os ângulos das juntas são enviados continuamente via UDP a 60 Hz
 
@@ -256,13 +271,13 @@ uv run python joint_reader_sender.py
 **Comportamento esperado:**
 - Apenas lê os ângulos das juntas (modo de feedback passivo), sem enviar nenhum comando de controle
 - Os ângulos das juntas são enviados continuamente via UDP a 60 Hz
-- Quando o robô real é controlado por outro projeto, o movimento pode ser visualizado simultaneamente no Isaac Sim
+- Quando o robô real é controlado por outro projeto, o movimento pode ser visualizado no Isaac Sim ao mesmo tempo
 
 ## Protocolo de comunicação
 
 UDP JSON na porta `DEFAULT_SIM_HOST:5005`.
 
-**Payload enviado pelo módulo de envio por frame:**
+**Payload enviado pelo sender por frame:**
 
 ```json
 {
@@ -277,23 +292,23 @@ UDP JSON na porta `DEFAULT_SIM_HOST:5005`.
 |------|------|------|
 | `sequence` | int | Número de sequência incremental |
 | `timestamp` | float | Timestamp Unix (segundos) |
-| `joint_positions` | float[6] | Primeiros 6 ângulos de junta (rad) |
-| `gripper_position` | float | Posição da garra (m), convertida pelo módulo de envio usando `GRIPPER_POSITION_SCALE` |
+| `joint_positions` | float[6] | Primeiros 6 ângulos das juntas (rad) |
+| `gripper_position` | float | Posição do gripper (m), convertida pelo remetente usando `GRIPPER_POSITION_SCALE` |
 
-## Parâmetros de configuração
+## Parâmetros de Configuração
 
-### Módulo de envio (`gravity_joint_sender.py`)
+### Remetente (`gravity_joint_sender.py`)
 
-| Parâmetro | Valor padrão | Descrição |
+| Parâmetro | Valor Padrão | Descrição |
 |------|--------|------|
 | `ARM_JOINT_COUNT`| 6 | Número de juntas |
 | `DEFAULT_PORT` | 5005 | Porta UDP |
 | `DEFAULT_SEND_HZ` | 60.0 | Frequência de envio (Hz) |
-| `GRIPPER_POSITION_SCALE` | 0.007 | Fator de escala do ângulo da garra para posição |
+| `GRIPPER_POSITION_SCALE` | 0.007 | Fator de escala do ângulo do gripper para posição |
 
 ### Receptor (`isaacsim_joint_receiver.py`)
 
-| Parâmetro | Valor padrão | Descrição |
+| Parâmetro | Valor Padrão | Descrição |
 |------|--------|------|
 | `ARM_JOINT_COUNT` | 6 | Número de juntas |
 | `DEFAULT_PORT` | 5005 | Porta UDP |
@@ -316,22 +331,22 @@ sudo lsof -i :5005
 kill <PID>
 ```
 
-### Ângulos das juntas estão fora de sincronia
+### Ângulos das Juntas Estão Fora de Sincronização
 
-- Confirme que o emissor e o receptor usam a mesma porta (ambos 5005)
-- Verifique se `[send]` aparece continuamente nos logs do emissor
+- Confirme que o remetente e o receptor usam a mesma porta (ambos 5005)
+- Verifique se `[send]` aparece continuamente nos logs do remetente
 - Verifique se `[recv]` aparece continuamente nos logs do receptor
 - Tente usar `isaacsim_joint_test_sender.py` para descartar problemas de hardware
 
-### Componentes e ambiente Python
+### Componentes e Ambiente Python
 
-| Componente | Ambiente Python | Script de inicialização |
+| Componente | Ambiente Python | Script de Inicialização |
 |------|------------|---------|
-| Emissor (robô real) | ambiente uv `reBotArm_control_py` | `gravity_joint_sender.py` |
-| Emissor (modo de teste) | ambiente uv `reBotArm_control_py` | `isaacsim_joint_test_sender.py` |
+| Remetente (robô real) | Ambiente uv `reBotArm_control_py` | `gravity_joint_sender.py` |
+| Remetente (modo de teste) | Ambiente uv `reBotArm_control_py` | `isaacsim_joint_test_sender.py` |
 | Receptor | Python oficial do Isaac Sim (`python.sh`) | `isaacsim_joint_receiver.py` |
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Fornecemos vários canais de suporte para ajudar a garantir uma experiência tranquila com nossos produtos. Oferecemos diversos métodos de comunicação para atender a diferentes preferências e necessidades.
 

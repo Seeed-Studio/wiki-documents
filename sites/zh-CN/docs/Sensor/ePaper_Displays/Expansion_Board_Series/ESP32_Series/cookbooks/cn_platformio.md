@@ -1,6 +1,6 @@
 ---
-description: 适用于 XIAO ePaper Driver Board（EE0x）系列的 PlatformIO 使用手册——硬件概览、项目初始化、库配置，以及在 ESP32-S3 上的端到端编程。文中以 EE04 为示例；EE02 / EE03 / EE05 共享相同的工作流程。
-title: PlatformIO 使用手册
+description: 适用于 XIAO ePaper Driver Board（EE0x）系列的 PlatformIO cookbook——硬件概览、项目初始化、库配置，以及在 ESP32-S3 上的端到端编程。文中以 EE04 为示例；EE02 / EE03 / EE05 共享相同的工作流程。
+title: PlatformIO Cookbook
 keywords:
   - ePaper 显示屏
   - PlatformIO
@@ -22,16 +22,16 @@ updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/cn/ee04_with_platformio/
 ---
 
-# PlatformIO 使用手册：XIAO ePaper Driver Board（EE0x）
+# PlatformIO Cookbook：XIAO ePaper Driver Board（EE0x）
 
-:::tip 本手册覆盖整个 EE0x 系列
+:::tip 本 cookbook 覆盖整个 EE0x 系列
 适用于 **EE02 / EE03 / EE04 / EE05**。由于这四块板都基于相同的 XIAO ESP32-S3，并使用相同的 `Seeed_GFX` 驱动流水线，因此项目配置、库列表和代码模式完全一致；它们之间唯一的差别，是你在 `driver.h` 的[配置工具](https://seeed-studio.github.io/Seeed_GFX/)中选择的 `BOARD_SCREEN_COMBO` 值。
 
 **示例工程：EE04 + 7.5" 800×480 单色 ePaper 屏幕。** 你只需在 `driver.h` 中替换为自己的板卡 + 屏幕组合，其余工作流程（按键 GPIO、电池 ADC、仪表盘 UI、按键驱动的页面切换）都可以直接沿用。
 :::
 
 :::note 想用 Arduino 吗？
-本手册**专门面向 PlatformIO**。如果你更倾向于使用 **Arduino IDE**（这是我们 ePaper 产品线更常见的路径），请参考 **[使用 Arduino](/cn/epaper_work_with_arduino)** 获取平台级指南，参考 [reTerminal E 系列 — ePaper 显示屏使用手册](/cn/reterminal_e10xx_with_arduino) 获取显示渲染示例，以及 [reTerminal E 系列 — 板载外设使用手册](/cn/reterminal_e10xx_with_arduino_peripherals) 获取硬件级示例（LED、蜂鸣器、按键、SHT4x、电池、microSD），这些示例同样适用于 EE0x 板卡。
+本 cookbook **专门面向 PlatformIO**。如果你更倾向于使用 **Arduino IDE**（这是我们 ePaper 产品线更常见的路径），请参考 **[使用 Arduino](/cn/epaper_work_with_arduino)** 获取平台级指南，参考 [reTerminal E 系列 — ePaper 显示屏 cookbook](/cn/reterminal_e10xx_with_arduino) 获取显示渲染示例，以及 [reTerminal E 系列 — 板载外设 cookbook](/cn/reterminal_e10xx_with_arduino_peripherals) 获取硬件级示例（LED、蜂鸣器、按键、SHT4x、电池、microSD），这些示例同样适用于 EE0x 板卡。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>

@@ -1,16 +1,16 @@
 ---
 description: Getting Started with Seeed Studio XIAO SAMD21
-title: Getting Started with Seeed Studio XIAO SAMD21
+title: Getting Started with Seeed Studio XIAO SAMD21 Series
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/get_sarted.webp
 slug: /Seeeduino-XIAO
 sku: 110010004, 102010388, 102010328
 last_update:
-  date: 6/30/2026
+  date: 9/7/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-08-06'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/Seeeduino-XIAO/
 ---
 
@@ -18,14 +18,31 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Getting Started with Seeed Studio XIAO SAMD21
+# Getting Started with Seeed Studio XIAO SAMD21 Series
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/get_1.jpg" alt="pir" width={400} height="auto" /></p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<div class="table-center">
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO SAMD21</th>
+   <th>Seeed Studio XIAO SAMD21 Plus</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/xiao-samd21-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/xiao-samd21-plus-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-SAMD21-Plus-p-6933.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Overview
@@ -325,6 +342,31 @@ All pins on Seeed Studio XIAO SAMD21 support interrupts, but two pins cannot be 
 
 ### Hardware
 
+<div class="table-center">
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO SAMD21</th>
+   <th>Seeed Studio XIAO SAMD21 Plus</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/xiao-samd21-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/xiao-samd21-plus-pre.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-SAMD21-Plus-p-6933.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
 **Materials required**
 
 - Seeed Studio XIAO SAMD21 x1
@@ -419,7 +461,7 @@ On the XIAO SAMD21 Plus, the L (LED) pin has been removed. It is replaced by the
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/gst_2.png" alt="pir" width={800} height="auto" /></p>
 
-‑ Replace the code with the snippet below. The pin for RGB_LED is PA27, which has been redefined as PIN_LED_RGB.
+‑ Replace the code with the snippet below. RGB_LED's data pin is PA27 (PIN_NEOPIXEL). The power-control pin is D11 — please add '#define NEOPIXEL_POWER 11' to your sketch.
 
 :::caution
 
@@ -429,6 +471,7 @@ The RGB LEDs may cause eye strain or injury if operated at excessive brightness;
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
+#define NEOPIXEL_POWER 11
 
 #define NUMPIXELS 1
 

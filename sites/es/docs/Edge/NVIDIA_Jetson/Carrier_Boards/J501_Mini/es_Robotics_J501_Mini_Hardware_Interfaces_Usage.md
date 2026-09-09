@@ -2,10 +2,10 @@
 description: Este wiki proporciona una introducción completa a las características de hardware y al uso de las interfaces de la placa carrier Jetson Mini J501. Diseñada para escenarios de IA en el borde y robótica, cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar interfaces como M.2, Ethernet, USB, CAN, UART, DI/DO, I2S y expansión de cámara GMSL2.
 title: Mini J501 Flashear JetPack y Uso de Interfaces
 tags:
-  - Mini J501 carrier board
-  - Flash JetPack
-  - Robotics
-  - Interfaces Usage
+  - Placa carrier Mini J501
+  - Flashear JetPack
+  - Robótica
+  - Uso de interfaces
   - Interfaces
   - Hardware
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
@@ -15,12 +15,12 @@ last_update:
   date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-08-18'
+updatedAt: '2026-08-17'
 url: https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/
 ---
-# Hardware de la placa carrier Mini J501 y Guía de Inicio
+# Hardware de la placa carrier Mini J501 e Introducción
 
-La Mini J501 es una placa carrier compacta y de alto rendimiento para IA en el borde, diseñada para módulos NVIDIA Jetson AGX Orin (32GB/64GB). Ofrece hasta 275 TOPS de rendimiento de IA en modo MAXN y proporciona amplias opciones de conectividad, incluyendo puertos Ethernet Gigabit dobles, ranuras M.2 para módulos 5G y Wi‑Fi/Bluetooth, 2 puertos USB 3.2, CAN, GMSL2 mediante expansión opcional, I2C y UART. Con JetPack 6.2.1 y Linux BSP preinstalados, admite un despliegue rápido para aplicaciones de IA en el borde.
+La Mini J501 es una placa carrier compacta y de alto rendimiento para IA en el borde, destinada a módulos NVIDIA Jetson AGX Orin (32GB/64GB). Ofrece hasta 275 TOPS de rendimiento de IA en modo MAXN y proporciona amplias opciones de conectividad, incluyendo puertos Ethernet Gigabit dobles, ranuras M.2 para módulos 5G y Wi‑Fi/Bluetooth, 2 puertos USB 3.2, CAN, GMSL2 mediante expansión opcional, I2C y UART. Con JetPack 6.2.1 y Linux BSP preinstalados, admite un despliegue rápido para aplicaciones de IA en el borde.
 
 La Mini J501 también puede utilizarse en escenarios de robótica. Con compatibilidad para frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1, puede conectar la toma de decisiones basada en modelos con el control físico de la robótica, incluyendo planificación de movimiento, fusión de sensores y percepción multicámara.
 
@@ -104,11 +104,11 @@ La Mini J501 también puede utilizarse en escenarios de robótica. Con compatibi
     <tr>
       <th rowSpan="13">E/S</th>
       <td>USB</td>
-      <td>2x USB 3.2 Tipo‑A (10Gbps);<br />1x USB 2.0 Tipo C (Depuración);<br />1x USB 3.0 Tipo C (Recuperación/Depuración)</td>
+      <td>2x USB 3.2 Tipo A (10Gbps);<br />1x USB 2.0 Tipo C (Depuración);<br />1x USB 3.0 Tipo C (Recuperación/Depuración)</td>
     </tr>
     <tr>
       <td>Cámara</td>
-      <td>2x Conector Mini‑Fakra GMSL2 4 en 1 (Opcional);</td>
+      <td>2x Conector Mini-Fakra GMSL2 4 en 1 (Opcional);</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -128,7 +128,7 @@ La Mini J501 también puede utilizarse en escenarios de robótica. Con compatibi
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x Conector UART JST de 6 pines (multiplexado con DO)</td>
+      <td>1x Conector UART JST de 6 pines (Multiplexado con DO)</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -190,12 +190,12 @@ La Mini J501 también puede utilizarse en escenarios de robótica. Con compatibi
   </tbody>
 </table>
 
-## 📦 Flashear el sistema operativo JetPack
+## 📦 Flashear el SO JetPack
 
 ### Módulo compatible
 
-- [NVIDIA® Jetson AGX Orin™ Module 64GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-64GB-p-5957.html)
-- [NVIDIA® Jetson AGX Orin™ Module 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5956.html)
+- [Módulo NVIDIA® Jetson AGX Orin™ 64GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-64GB-p-5957.html)
+- [Módulo NVIDIA® Jetson AGX Orin™ 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5956.html)
 
 ### Requisitos previos
 
@@ -204,12 +204,12 @@ La Mini J501 también puede utilizarse en escenarios de robótica. Con compatibi
 - Módulo NVIDIA® Jetson AGX Orin
 - Ventilador activo para módulo Nano/NX
 - SSD interno NVMe M.2 2280
-- Cable de transmisión de datos USB Tipo‑C
+- Cable de transmisión de datos USB Tipo C
 
 :::info
 
 Recomendamos que utilice dispositivos host físicos con Ubuntu en lugar de máquinas virtuales.
-Consulte la siguiente tabla para preparar la máquina host.
+Consulte la tabla siguiente para preparar la máquina host.
 
 <table style={{textAlign: 'center'}}>
   <tbody>
@@ -265,26 +265,26 @@ Aquí necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu corre
       <td> AGX Orin 64GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBraqxVv-rUQKkcwG2EXybtAUKJgIvgi77ze4eig_Hj3Ns">Download</a></td>
-      <td>F95E91C3BFB00D50EB999383F85949B4</td>
+      <td>1cd0d7004f426a524a55761bf01dd22280829b9834cbd11d4094b29865f46fe9</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBj3DRU7fhETozDjV3BAOG2Ac69rCRZhqNqr_RXuCliXXM">Download</a></td>
-      <td>8FA6E750C2C21678168DAE377E95CE6C</td>
+      <td>c369b02c979a8d0e1bd926725e94eba19be0e1b6a1a145e03a1179e77b72c5fd</td>
     </tr>
     <tr>
       <td rowSpan={2}>6.2.1</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAUQ4ithrVMQLSE274ftNcLAdScXb2OFE8LXfabvKzaGS8">Download</a></td>
-      <td>F95E91C3BFB00D50EB999383F85949B4</td>
+      <td>53859b314aba332c417c7295d9f6b6711bc7d8c4352dad55aa917af80757330c</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBvVrfoK43HRL2Y3PDLtz8wAUzka-auuvvWTx0J4QCrtwc">Download</a></td>
-      <td>8FA6E750C2C21678168DAE377E95CE6C</td>
+      <td>16408ec8d3b8b0e01eb7edd81b0367357f7dddfdee09388da4c74591d31f917a</td>
     </tr>
   </tbody>
 </table>
@@ -306,14 +306,14 @@ En una máquina host con Ubuntu, abra la terminal y ejecute el comando `sha256su
 ### Entrar en modo de recuperación forzada
 
 :::info
-Antes de continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo de recuperación forzada.
+Antes de poder continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo de recuperación forzada.
 :::
 
 <details>
 
 <summary> Paso a paso </summary>
 
-**Paso 1.** Mantenga presionado el botón REC.
+**Paso 1.** Mantenga presionado el botón **REC**.
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
@@ -379,7 +379,7 @@ Completa la **Configuración del sistema** según tus necesidades.
 
 ## 🔌 Uso de interfaces
 
-Las siguientes secciones presentan las distintas interfaces de la placa Mini J501 y cómo utilizarlas.
+Las siguientes secciones presentan las diversas interfaces de la placa Mini J501 y cómo utilizarlas.
 
 ## M.2 Key M
 
@@ -445,7 +445,7 @@ sudo chmod +x test_nvme.sh
 
 ## M.2 Key E
 
-La interfaz M.2 Key E es un conector M.2 estándar que se utiliza principalmente para conectar módulos inalámbricos, como Wi-Fi y Bluetooth, para ampliar las capacidades de comunicación inalámbrica.
+La interfaz M.2 Key E es un conector M.2 estándar utilizado principalmente para conectar módulos inalámbricos, como Wi‑Fi y Bluetooth, para ampliar las capacidades de comunicación inalámbrica.
 
 ### Conexión de hardware
 
@@ -455,7 +455,7 @@ La interfaz M.2 Key E es un conector M.2 estándar que se utiliza principalmente
 
 ### Instrucciones de uso
 
-Para probar el rendimiento de Wi-Fi, utiliza el siguiente comando (reemplaza la dirección IP con la de tu servidor de pruebas):
+Para probar el rendimiento de Wi‑Fi, utiliza el siguiente comando (reemplaza la dirección IP con la de tu servidor de pruebas):
 
 ```bash
 iperf3 -c 192.168.6.191
@@ -530,9 +530,9 @@ El efecto de control de los LED se muestra en la siguiente figura:
 
 ## USB
 
-La placa carrier Mini J501 está equipada con una variedad de puertos USB, incluidos 2 puertos USB 3.2 Type-A (10Gbps), un puerto USB 3.0 Type-C y un puerto USB 2.0 Type-C para modo dispositivo/depuración, ofreciendo opciones de conectividad versátiles.
+La placa carrier Mini J501 está equipada con una variedad de puertos USB, incluidos 2 puertos USB 3.2 Type‑A (10Gbps), un puerto USB 3.0 Type‑C y un puerto USB 2.0 Type‑C para modo dispositivo/depuración, ofreciendo opciones de conectividad versátiles.
 
-### Prueba de velocidad USB-A
+### Prueba de velocidad USB‑A
 
 Crea un script para probar la velocidad del dispositivo USB:
 
@@ -565,9 +565,9 @@ sudo chmod +x test_usb
 
 
 
-### Puerto USB 2.0 Type-C
+### Puerto USB 2.0 Type‑C
 
-Usando este puerto serie, a través del cable de datos USB-C, puedes monitorizar en el PC la información de depuración de entrada y salida.
+Usando este puerto serie, a través del cable de datos USB‑C, puedes monitorizar en el PC la información de depuración de entrada y salida.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/debug-port-real.png"/>
@@ -582,7 +582,7 @@ sudo apt install screen
 screen /dev/ttyUSB0 115200
 ```
 
-A continuación podrás controlar la terminal del Jetson a través del puerto serie en otro host Linux, como se muestra a continuación:
+A continuación, puedes controlar la terminal del Jetson a través del puerto serie en otro host Linux, como se muestra a continuación:
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/login-usb.png"/>
@@ -670,7 +670,7 @@ Las definiciones de pines para **CAN0** y **CAN1** son similares, y el diagrama 
 </div>
 
 ### Comunicación CAN
-En esta sección se conectan CAN0 y CAN1 en la Jetson para demostrar cómo enviar y recibir datos entre CAN0 y CAN1 en `Classic CAN mode` y `CAN-FD mode`.
+En esta sección se conectan CAN0 y CAN1 en el Jetson para demostrar cómo enviar y recibir datos entre CAN0 y CAN1 en `Classic CAN mode` y `CAN-FD mode`.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/CAN-connect.png"/>
@@ -775,7 +775,7 @@ En la [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reCompute
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_datasheet.png"/>
 </div> -->
 
-<!-- Aquí te mostraremos cómo realizar la comunicación de datos utilizando la interfaz CAN1, mediante el uso del [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html). -->
+<!-- Here we will demonstrate to you how to conduct data communication using the CAN1 interface, by utilizing the [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html). -->
 
 Crea `test_canfd.sh` para probar la transmisión y recepción de datos entre CAN0 y CAN1 en modo CAN-FD:
 
@@ -926,7 +926,7 @@ El Mini J501 proporciona un conector JST estándar de 6 pines para la comunicaci
 UART y GPO utilizan la misma interfaz JST. Esta interfaz tiene por defecto la funcionalidad de GPO. **Si necesitas cambiar a la funcionalidad UART, debes apuntar a un nuevo device tree y reiniciar el dispositivo para que el cambio surta efecto.**
 
 
-Para la comunicación **UART**, sigue el siguiente cableado. Aquí utilizamos la herramienta USB a TTL como ejemplo.
+Para la comunicación **UART**, sigue el siguiente cableado. Aquí utilizamos como ejemplo la herramienta USB a TTL.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/uart-real.png"/>
@@ -950,7 +950,7 @@ Las definiciones de pines para **J14** son las siguientes:
 UART y GPO comparten la misma interfaz física. De forma predeterminada, esta interfaz funciona como GPO. Si necesitas cambiar a UART, consulta el contenido de esta sección.
 :::
 
-Para diferentes módulos, debes descargar el archivo de device tree correspondiente.
+Para diferentes módulos, necesitas descargar el archivo de device tree correspondiente.
 
 Enlace de descarga `.dtb` para AGX Orin 32G:  
 [https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb](https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb)  
@@ -974,7 +974,7 @@ sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
 sudo vim /boot/extlinux/extlinux.conf
 ```
 
-Según el nombre del archivo del árbol de dispositivos que estés utilizando, añade una línea `FDT=/your_path` en `extlinux.conf`. Tomando AGX Orin 32G como ejemplo:
+Según el nombre del archivo del device tree que estés usando, añade una línea `FDT=/your_path` en `extlinux.conf`. Tomando AGX Orin 32G como ejemplo:
 
 ```python
 LABEL primary
@@ -998,7 +998,7 @@ sudo minicom -D /dev/ttyTHS1
 
 ## RS485
 
-La interfaz RS485 proporciona un canal de comunicación diferencial robusto y resistente al ruido, que se utiliza comúnmente en entornos industriales. Admite comunicación serie multidrop a larga distancia y es ideal para conectar sensores, controladores de motor, PLC y otros dispositivos industriales. 
+La interfaz RS485 proporciona un canal de comunicación diferencial robusto y resistente al ruido, comúnmente utilizado en entornos industriales. Admite comunicación serie multidrop a larga distancia y es ideal para conectar sensores, controladores de motor, PLC y otros dispositivos industriales. 
 
 ### Conexión de hardware
 
@@ -1181,12 +1181,12 @@ Después de habilitar **I2S**, esta sección muestra cómo usar I2S para control
 amixer -c APE cset name="I2S2 Mux" "ADMAIF1" # Speaker
 ```
 
-Si estás utilizando un micrófono:
+Si estás usando un micrófono:
 ```bash
 amixer -c APE cset name="ADMAIF2 Mux" "I2S2" # Microphone
 ```
 
-Consulta el siguiente comando para controlar el altavoz, donde `-c` debe cambiarse al número de canales de altavoz que estés utilizando:
+Consulta el siguiente comando para controlar el altavoz, donde `-c` debe cambiarse al número de canales de altavoz que estés usando:
 
 ```bash
 speaker-test -t sine -f 440 -c 2
@@ -1241,7 +1241,7 @@ A continuación se muestran las ranuras de conexión de la placa de expansión d
   <img width="450" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gmsl-real2.png"/>
 </div>
 
-A continuación se muestran los modelos de cámaras GMSL que ya hemos soportado:
+A continuación se muestran los modelos de cámara GMSL que ya hemos soportado:
 
 - [SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)
 - SG2-AR0233C-5200-G2A
@@ -1269,10 +1269,10 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 </div>
 
 :::note
-En total hay tres archivos de superposición, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4 y Orbbec Gemini 335Lg. Estos corresponden respectivamente a la cámara 3G de SG3S, la cámara 6G de SG2 y SG8S, y la cámara de Orbbec. Como se muestra en la Figura 3, configura el archivo io según el modelo de tu cámara.
+Hay tres archivos overlay en total, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4 y Orbbec Gemini 335Lg. Estos corresponden respectivamente a la cámara 3G de SG3S, la cámara 6G de SG2 y SG8S, y la cámara de Orbbec. Como se muestra en la Figura 3, configura el archivo io según el modelo de tu cámara.
 :::
 
-**paso 2.** Instala las herramientas de configuración de la interfaz de vídeo.
+**step 2.** Instala las herramientas de configuración de la interfaz de vídeo.
 
 ```bash
 sudo apt update
@@ -1295,7 +1295,7 @@ The first time you turn it on, you might need to update the firmware.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/update.png"/>
 </div>
 
-Al abrir el flujo de datos, puedes ver el video de la cámara.
+Al abrir el flujo de datos, puedes ver el vídeo de la cámara.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
 </div> -->
@@ -1329,14 +1329,14 @@ Al abrir el flujo de datos, puedes ver el video de la cámara.
 ```
 
 :::note
-`ser_0_ch_0` es el primer canal del decodificador, `des_ch_0` es el serializador en la primera cámara, y lo mismo se aplica a los demás. Si la cámara conectada tiene una resolución diferente, entonces la configuración aquí se basará en el formato real de la cámara.
+`ser_0_ch_0` es el primer canal del decodificador, `des_ch_0` es el serializador de la primera cámara, y lo mismo se aplica a las demás. Si la cámara conectada tiene una resolución diferente, entonces la configuración aquí se basará en el formato real de la cámara.
 Necesitamos configurar el formato de canal para el serializador y el deserializador cada vez que el dispositivo se reinicia.
 :::
 
 **paso 2.** Configura la resolución de la cámara.
 
 :::info
-Aquí demostramos cómo configurar cámaras de diferentes modelos y resoluciones.
+Aquí mostramos cómo configurar cámaras de diferentes modelos y resoluciones.
 :::
 
 ```bash
@@ -1347,7 +1347,7 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 ```
 
 :::note
-`--set-fmt-video` va seguido de la resolución que se selecciona según la cámara que esté conectada. El sensor_mode también se elige en consecuencia. Actualmente, hay tres opciones de sensor_mode, cada una correspondiente a una resolución diferente.
+`--set-fmt-video` va seguido de la resolución que se selecciona según la cámara conectada. El `sensor_mode` también se elige en consecuencia. Actualmente, hay tres opciones de `sensor_mode`, cada una correspondiente a una resolución diferente.
 
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
@@ -1381,7 +1381,7 @@ videoconvert ! autovideosink -ev
 
 ## Pantalla
 
-La Mini J501 está equipada con un HDMI para salida de pantalla de alta resolución.
+El Mini J501 está equipado con un HDMI para salida de pantalla de alta resolución.
 
 ## Recursos
 

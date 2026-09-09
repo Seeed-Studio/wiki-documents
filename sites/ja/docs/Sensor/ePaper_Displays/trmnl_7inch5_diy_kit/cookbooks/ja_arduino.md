@@ -1,6 +1,6 @@
 ---
-description: TRMNL 7.5" (OG) DIY Kit 向けのエンドツーエンド Arduino クックブック - XIAO ESP32-S3 Plus を活用して、TRMNL クラウドプラットフォームではなくカスタム Arduino スケッチから 7.5" ePaper ディスプレイを直接駆動します。
-title: Arduino クックブック
+description: TRMNL 7.5" (OG) DIY Kit 向けのエンドツーエンド Arduino cookbook - XIAO ESP32-S3 Plus を活用して、TRMNL クラウドプラットフォームではなくカスタム Arduino スケッチから 7.5" ePaper ディスプレイを直接駆動します。
+title: Arduino Cookbook
 keywords:
   - ePaper ディスプレイ
   - TRMNL
@@ -17,10 +17,10 @@ updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino/
 ---
 
-# Arduino クックブック: TRMNL 7.5" (OG) DIY Kit
+# Arduino Cookbook: TRMNL 7.5" (OG) DIY Kit
 
 :::tip まずメインの Arduino ガイドを読んでください
-このページは **TRMNL DIY Kit 専用のクックブック**です。共通の手順 ― Arduino IDE のセットアップ、ESP32 ボードパッケージ、`Seeed_GFX` のインストール、Configuration Tool からの `driver.h` 生成 ― は **[Work with Arduino](/ja/epaper_work_with_arduino)** にまとまっています。Seeed の ePaper で Arduino を使うのが初めての場合は、まずそちらに目を通してください。このページでは TRMNL DIY Kit ハードウェアに特有の部分に焦点を当てます。
+このページは **TRMNL DIY Kit 専用の cookbook**です。共通の手順 ― Arduino IDE のセットアップ、ESP32 ボードパッケージ、`Seeed_GFX` のインストール、Configuration Tool からの `driver.h` 生成 ― は **[Work with Arduino](/ja/epaper_work_with_arduino)** にまとまっています。Seeed の ePaper で Arduino を使うのが初めての場合は、まずそちらに目を通してください。このページでは TRMNL DIY Kit ハードウェアに特有の部分に焦点を当てます。
 
 カスタムコード不要でプラグイン駆動のダッシュボードを使う **TRMNL クラウドダッシュボード** ワークフローをお探しですか？その場合は **[Work with TRMNL](/ja/reterminal_e10xx_trmnl)** を参照してください。
 :::

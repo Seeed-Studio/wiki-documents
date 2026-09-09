@@ -258,9 +258,9 @@ Quando o firmware inicializa e entra na sua rede Wi-Fi, o Home Assistant descobr
 
 Agora você pode arrastar as entidades para um painel Lovelace ou — muito mais interessante em ePaper — usar o bloco `display.lambda` para renderizar qualquer entidade do HA diretamente na tela por meio do componente [`homeassistant`](https://esphome.io/components/homeassistant.html).
 
-## Para onde ir em seguida — Livros de receitas
+## Para onde ir em seguida — Cookbooks
 
-Esta página termina propositalmente no modelo básico. O YAML específico de cada produto, exemplos de periféricos e receitas ponta a ponta ficam no livro de receitas de cada produto:
+Esta página termina propositalmente no modelo básico. O YAML específico de cada produto, exemplos de periféricos e receitas ponta a ponta ficam no cookbook de cada produto:
 
 - **[reTerminal E Series — ESPHome Display](/pt-br/reterminal_e10xx_with_esphome)** — primeiro painel, configuração de Wi-Fi e exemplos de desenho em ePaper para E1001/E1002/E1003/E1004.
 - **[reTerminal E Series — ESPHome I/O, Battery, Touch & Power](/pt-br/reterminal_e10xx_with_esphome_advanced)** — botões, buzzer, LED onboard, monitoramento de bateria, sensor SHT4x, toque capacitivo (E1003), deep sleep e painéis com várias páginas.
@@ -269,7 +269,7 @@ Esta página termina propositalmente no modelo básico. O YAML específico de ca
 - **[XIAO 7.5" ePaper Panel — ESPHome](/pt-br/xiao_075inch_epaper_panel_esphome)** — painel minimalista com ESP32-C3.
 - **[TRMNL 7.5" DIY Kit — ESPHome](/pt-br/ogdiy_kit_works_with_esphome)** — usando o hardware do kit com ESPHome em vez da plataforma em nuvem TRMNL.
 
-Quando novos produtos de ePaper forem lançados, o livro de receitas correspondente será adicionado na pasta de cada produto; esta página principal será atualizada para apontar para ele.
+Quando novos produtos de ePaper forem lançados, o cookbook correspondente será adicionado na pasta de cada produto; esta página principal será atualizada para apontar para ele.
 
 ## Problemas comuns
 

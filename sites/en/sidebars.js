@@ -1009,7 +1009,7 @@ const sidebars = {
         'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects',
         {
           type: 'category',
-          label: 'XIAO SAMD21',
+          label: 'XIAO SAMD21 Series',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-Zephyr-RTOS',
@@ -1066,7 +1066,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'XIAO RP2040',
+          label: 'XIAO RP2040 Series',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040',
             {
@@ -1962,6 +1962,7 @@ const sidebars = {
                 id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro',
               },
               items: [
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_i2c_list',
                 {
                   type: 'category',
                   label: 'Playback & Recording',
@@ -2179,6 +2180,7 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/respeaker_clip_rtc_streaming',
             'Sensor/reSpeaker_clip/respeaker_clip_service_integration',
             'Sensor/reSpeaker_clip/respeaker_clip_sensecraft_voice_sdk',
             {
@@ -2204,6 +2206,24 @@ const sidebars = {
                 },
               ],
             },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'FAQ',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/flex_xvf3800_faq',
+            'FAQ/respeaker/respeaker_lite_faq',
+            'FAQ/respeaker/xvf3000_faq',
+            'FAQ/respeaker/respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/respeaker_clip_faq',
           ],
         },
         {
@@ -2261,6 +2281,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/respeaker_clip_chat_architecture',
               ],
             },
           ],
@@ -3835,6 +3856,7 @@ const sidebars = {
           type: 'category',
           label: 'Getting Started',
           items: [
+            'Edge/NVIDIA_Jetson/Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',
@@ -4129,7 +4151,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson_AGX_Thor',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/industrial_vision_monitoring_on_industrial',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Streaming_Vision_Agent_on_Jetson',
               ]
@@ -4180,7 +4202,12 @@ const sidebars = {
             {
               type: 'category',
               label: 'Physical AI',
+              link: {
+                type: 'doc',
+                id: 'Edge/NVIDIA_Jetson/Application/Physical_AI/Microduck_RL_on_Jetson',
+              },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Microduck_RL_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Voice_LLM_for_Reachy_Mini',
@@ -4289,6 +4316,7 @@ const sidebars = {
               label: 'Memory Optimization',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {
@@ -4626,7 +4654,8 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_isaacsim',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_control_mit'
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_control_mit',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Agent'
               ]
             }
           ]

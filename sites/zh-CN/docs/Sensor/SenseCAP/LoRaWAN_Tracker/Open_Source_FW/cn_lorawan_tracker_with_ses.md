@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_opens
 slug: /open_source_lorawan
 sidebar_position: 3
 last_update:
-  date: 2/4/2026
-  author: Janet
+  date: 9/1/2026
+  author: Advent Jiang
 createdAt: '2025-05-30'
 updatedAt: '2026-02-04'
 url: https://wiki.seeedstudio.com/cn/open_source_lorawan/
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/cn/open_source_lorawan/
 ## 准备工作
 
 :::caution note
-在刷写固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本，请不要将其他 Meshtastic 固件刷写到此追踪器型号，这可能导致设备完全损坏。
+在刷写固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本，请不要将其他 Meshtastic 或 MeshCore 固件刷写到此追踪器型号，这可能导致设备完全损坏。
 :::
 
 ### 硬件准备

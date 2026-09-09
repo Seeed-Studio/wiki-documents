@@ -319,9 +319,14 @@ html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgb
 .kit-index-grid strong { grid-area: title; color: var(--rp-text); }
 .kit-index-grid small { grid-area: desc; color: var(--rp-text-muted); line-height: 1.35; }
 .product-card { scroll-margin-top: 6rem; }
-.product-card .summary-action { position: relative; min-width: 6.3rem; text-align: center; }
+.product-card .summary-action { position: relative; min-width: 10.5rem; text-align: center; }
 .product-card[open] .summary-action { font-size: 0; }
-.product-card[open] .summary-action::after { content: "收起学习计划"; font-size: 0.76rem; }
+.product-card[open] .summary-action::after { content: "Collapse learning plan"; font-size: 0.76rem; }
+html[lang="zh-CN"] .product-card .summary-action { min-width: 6.3rem; }
+html[lang="zh-CN"] .product-card[open] .summary-action::after { content: "收起学习计划"; }
+html[lang="ja-JP"] .product-card[open] .summary-action::after { content: "学習プランを閉じる"; }
+html[lang="pt-BR"] .product-card[open] .summary-action::after { content: "Recolher plano de aprendizado"; }
+html[lang="es-ES"] .product-card[open] .summary-action::after { content: "Contraer plan de aprendizaje"; }
 .product-card:not([open]) summary { background: linear-gradient(90deg, var(--rp-card-bg), var(--rp-card-bg-soft)); }
 .product-card:not([open]) .product-head span { color: var(--rp-text-muted); }
 .product-body { animation: rpFadeIn 0.18s ease-out; }

@@ -1,6 +1,6 @@
 ---
-description: Livro de receitas ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - botões, buzzer, LED onboard, monitoramento de bateria, sensor SHT4x, toque capacitivo (E1003), deep sleep e dashboards com várias páginas.
-title: 'Livro de Receitas ESPHome: Botões, Buzzer, LED, Bateria, Toque e Baixo Consumo (reTerminal E Series)'
+description: cookbook ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - botões, buzzer, LED onboard, monitoramento de bateria, sensor SHT4x, toque capacitivo (E1003), deep sleep e dashboards com várias páginas.
+title: 'Cookbook ESPHome: Botões, Buzzer, LED, Bateria, Toque e Baixo Consumo (reTerminal E Series)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 4
@@ -16,10 +16,10 @@ url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome_advanced/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Livro de Receitas ESPHome: Botões, Buzzer, LED, Bateria, Toque e Baixo Consumo (reTerminal E Series)
+# Cookbook ESPHome: Botões, Buzzer, LED, Bateria, Toque e Baixo Consumo (reTerminal E Series)
 
 :::tip Pré-requisitos
-Esta página pressupõe que você já passou pelo [livro de receitas de display ESPHome para reTerminal E Series](/pt-br/reterminal_e10xx_with_esphome) (dispositivo no Wi-Fi, integração com Home Assistant online, primeiro dashboard renderizado). Para o esqueleto YAML em nível de plataforma e etapas de integração com o Home Assistant, consulte [Trabalhar com ESPHome](/pt-br/epaper_work_with_esphome). Para RTC, detecção de cartão microSD e configuração do microfone, consulte [Livro de Receitas ESPHome: RTC, Cartão SD e Microfone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone). O toque capacitivo (GT911) é abordado mais adiante nesta página e se aplica apenas ao **reTerminal E1003**.
+Esta página pressupõe que você já passou pelo [cookbook de display ESPHome para reTerminal E Series](/pt-br/reterminal_e10xx_with_esphome) (dispositivo no Wi-Fi, integração com Home Assistant online, primeiro dashboard renderizado). Para o esqueleto YAML em nível de plataforma e etapas de integração com o Home Assistant, consulte [Trabalhar com ESPHome](/pt-br/epaper_work_with_esphome). Para RTC, detecção de cartão microSD e configuração do microfone, consulte [Cookbook ESPHome: RTC, Cartão SD e Microfone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone). O toque capacitivo (GT911) é abordado mais adiante nesta página e se aplica apenas ao **reTerminal E1003**.
 :::
 
 :::tip Gere YAML do ESPHome ou grave demos no navegador
@@ -36,7 +36,7 @@ O mesmo Hub também pode gravar firmware de demonstração diretamente pelo nave
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-Este artigo aborda as configurações ESPHome relacionadas a E/S onboard e energia para o seu dispositivo reTerminal E Series ePaper Display, com base nos conceitos fundamentais apresentados em nosso [livro de receitas de display ESPHome](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome). Se você é novo em ESPHome ou no reTerminal E Series, recomendamos começar pelo guia de display antes de usar estes exemplos de hardware.
+Este artigo aborda as configurações ESPHome relacionadas a E/S onboard e energia para o seu dispositivo reTerminal E Series ePaper Display, com base nos conceitos fundamentais apresentados em nosso [cookbook de display ESPHome](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome). Se você é novo em ESPHome ou no reTerminal E Series, recomendamos começar pelo guia de display antes de usar estes exemplos de hardware.
 
 ## Capacidades de Hardware
 

@@ -1,6 +1,6 @@
 ---
-title: Wifi Halow クイックスタートガイド
-description: このアプリケーションケースでは、reCamera エッジコンピューティングプラットフォーム上で最新の YOLO11n モデルを実行した際の、極限の性能と計測データを示します。
+title: Wifi Halow 入門ガイド
+description: このアプリケーションケースでは、最新の YOLO11n モデルを reCamera エッジコンピューティングプラットフォーム上で実行した際の、極限のパフォーマンスと測定データを示します。
 keywords:
   - reCamera
   - エッジ AI
@@ -17,17 +17,17 @@ updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/ja/wifi_halow_getting_started/
 ---
 
-# Wifi Halow クイックスタートガイド
+# Wifi Halow 入門ガイド
 
 設定を開始する前に、以下のハードウェアが準備できていることを確認してください：
 * **データケーブル**：データ転送機能を備えた USB Type-C ケーブル（充電専用ケーブルは使用しないでください）。
-* **reCamera**：ボトムボードを取り外した状態の reCamera デバイス。
+* **reCamera**：ボトムボードを取り外した reCamera 2002 デバイス。
 ---
 
 
 ## はじめに
 
-Wifi Halow は reCamera 用の無線ネットワークモジュールで、reCamera を無線ネットワークに接続し、遠隔監視や管理を行うことができます。従来の Wifi 接続と比較して、Wifi Halow はより強力な壁貫通性と電波浸透性、超長距離伝送、極めて低い消費電力、大量デバイス接続といった利点を備えています。
+Wifi Halow は reCamera 用の無線ネットワークモジュールであり、reCamera を無線ネットワークに接続してリモート監視および管理を行うことができます。従来の Wifi 接続と比較して、Wifi Halow はより強力な壁貫通性と信号浸透能力、超長距離伝送、極めて低い消費電力、大量デバイス接続能力といった利点を備えています。
 
 ---
 
@@ -37,12 +37,12 @@ Wifi Halow は reCamera 用の無線ネットワークモジュールで、reCam
 商品を受け取ると、箱の中には次の 3 点が入っています：
 
 1. Wifi Halow モジュール
-2. バックカバー
+2. 背面カバー
 3. ネジ
 
 ![Item List](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_list.png)
 
-次に、バックカバーを取り外した状態の reCamera を用意します。下図のようになります：
+次に、背面カバーを取り外した reCamera を用意する必要があります。下図のようになります：
 
 ![reCamera with back cover removed](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/reCamera_uncover.jpg)
 
@@ -52,7 +52,7 @@ Wifi Halow は reCamera 用の無線ネットワークモジュールで、reCam
   controls
   width="100%"
   preload="metadata">
-  お使いのブラウザはこの動画の再生に対応していません。
+  お使いのブラウザはこの動画の再生をサポートしていません。
 </video>
 
 
@@ -73,7 +73,7 @@ Wifi Halow モジュールには複数のインターフェースがあり、次
 ---
 
 
-## Web 接続インターフェースの説明
+## Web 接続インターフェースの紹介
 
 USB ケーブルを接続し、IP アドレス ***192.168.42.1*** から Web インターフェースにログインした後、左側の ***Network*** をクリックしてネットワーク設定画面に入ります。下図のようになります：
 
@@ -81,7 +81,7 @@ USB ケーブルを接続し、IP アドレス ***192.168.42.1*** から Web イ
 - ***Enable Halow***：Wifi Halow モジュールを有効にするスイッチ
 - ***Keep-Alive***：サーバーとの接続を維持するための Keep-Alive 機能のスイッチ（Keep-Alive の時間間隔は設定で最小 1s まで調整可能）で、切断を防ぎます
 - ***Networks Found***：現在スキャンされた無線ネットワークの一覧を表示します（接続したい wifi がスキャンされない場合は、右側の「+」ボタンをクリックしてネットワークを手動で追加できます）
-- ***IPEX Antenna***：アンテナの切り替え（Wifi Halow モジュールには外付け SMA アンテナと内蔵 IPEX アンテナの 2 本のアンテナがあります）。これをオンにすると内蔵アンテナが有効になります。詳細は下図を参照してください：
+- ***IPEX Antenna***：アンテナの切り替え（Wifi Halow モジュールには外部 SMA アンテナと内部 IPEX アンテナの 2 つのアンテナがあります）。これをオンにすると内部アンテナが有効になります。詳細は下図を参照してください：
 
   ![Antenna location](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_antenna.jpg)
 
@@ -91,7 +91,7 @@ USB ケーブルを接続し、IP アドレス ***192.168.42.1*** から Web イ
 
 1. ***Networks Found*** の下から参加したい Wifi Halow ネットワークを選択します
 2. 接続したいネットワークをクリックし、自身のネットワークと同じ設定を維持したままパスワードを入力し、***Confirm*** をクリックして接続します
-3. 接続に成功したら、***My Networks*** 配下のネットワークをクリックして、IP などの詳細情報を確認できます。下図のようになります：
+3. 接続に成功したら、***My Networks*** の下にあるネットワークをクリックして、IP などの詳細情報を確認します。下図のようになります：
 ![Antenna location](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_detial.png)
 
 ---
@@ -104,22 +104,22 @@ Wifi Halow モジュールにはバッテリー接続用の PH インターフ�
 ![Battery](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_BAT.jpg)
 
 ### 1. Node-Red モジュールでバッテリー電圧を確認
-***node-red*** パネル左側のリストから ***reCamera*** セクションを探します。その中に ***Battery Voltage*** モジュールがあります。このモジュールの目的はバッテリー残量を確認することです。これをパネルにドラッグし、右上の deploy をクリックします。デプロイが成功すると、その下にバッテリー電圧が表示されます。下図のようになります：
+***node-red*** パネル左側のリストから ***reCamera*** セクションを探します。その下に ***Battery Voltage*** モジュールがあります。このモジュールの目的はバッテリー残量を確認することです。これをパネルにドラッグし、右上の deploy をクリックします。デプロイが成功すると、その下にバッテリー電圧が表示されます。下図のようになります：
 ![node-red_battery_voltage](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_node-red_bat.png)
 
 ### 2. Linux コマンドでバッテリー電圧を確認
 
-***ssh*** コマンドで reCamera に接続した後、ターミナルで次のコマンドを入力してバッテリー電圧を確認します（取得される値の単位は ***mV*** です）：
+***ssh*** コマンドで reCamera に接続した後、ターミナルに次のコマンドを入力してバッテリー電圧を確認します（取得される値の単位は ***mV*** です）：
 ```bash
 curl -s [http://192.168.42.1/api/deviceMgr/queryBatteryInfo](http://192.168.42.1/api/deviceMgr/queryBatteryInfo) | python3 -c 'import sys,json; print(json.load(sys.stdin)["data"]["voltage"])'
 ```
 
-実行結果は下図のようになります：
+結果は下図のようになります：
 ![linux_battery_voltage](https://files.seeedstudio.com/wiki/reCamera/reCamera_Wifi_Halow/wifi_halow_linux_bat.png)
 
 :::note Note
 1. バッテリーが接続されていない場合、上記 2 つの方法で表示される値は大きく変動します。
-2. 長距離での連続ビデオ伝送を行うと、このときアンテナの消費電力が高くなるため、ボード全体の発熱がより大きくなります。
+2. 長距離の連続ビデオ伝送を行うと、このときアンテナの消費電力が高くなるため、ボード全体の発熱がより大きくなります。
 :::
 
 ---
@@ -127,7 +127,7 @@ curl -s [http://192.168.42.1/api/deviceMgr/queryBatteryInfo](http://192.168.42.1
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

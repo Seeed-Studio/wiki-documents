@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/24/2026
+  date: 09/07/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-08-24'
+updatedAt: '2026-09-07'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,35 +18,66 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 24th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 7th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Build a Four-Camera Fisheye Surround View Demo on Jetson](https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/)
+### [Wio Tracker L2 Introduction](https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="Wio Tracker L2" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
+The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtastic.org/) node featuring LoRa (862–930 MHz), the ESP32S3 for efficient processing, and an L76K GPS module for accurate location tracking. Designed for flexibility, it supports QSPI touch screen, E-Ink displays, TF Card, as well as solar panels and battery power, making it ideal for a wide range of IoT and off-grid applications.
+
+**More Wio Tracker L2 guides updated this week:**
+
+- [Get Started with Wio Tracker L2](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l2/)
+- [MUI Introduction](https://wiki.seeedstudio.com/l2_mui/)
+- [SD Card Usage](https://wiki.seeedstudio.com/l2_sd_card/)
+- [MQTT Gateway](https://wiki.seeedstudio.com/set_up_mqtt_gateway_l2/)
+- [Meshtastic Node Map](https://wiki.seeedstudio.com/meshtastic_node_map_l2/)
+- [Meshtastic Network Monitor](https://wiki.seeedstudio.com/meshtastic_node_monitor_l2/)
 
 </div>
 
-### [Get Started with SenseCAP Combo](https://wiki.seeedstudio.com/get_started_with_sensecap_combo/)
+### [Microduck RL on Jetson](https://wiki.seeedstudio.com/ai_robotics_microduck_rl_on_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Combo/combo-intro.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces how to get started with the SenseCAP Combo 5-in-1 Sensor with 4G, including SIM card and sensor installation, device configuration, SenseCAP Cloud connection, and data monitoring.
+This demo builds a complete robot-learning workflow for **Microduck** on a **Seeed reComputer powered by NVIDIA Jetson Orin NX 16GB**. It covers GPU environment deployment, PPO training with MuJoCo, visualization of local checkpoints, keyboard-controlled inference with official ONNX policies, and the development of new custom motions.
 
 </div>
 
-### [Build a reCamera and NVIDIA Jetson VLM Event Gateway](https://wiki.seeedstudio.com/recamera_jetson_vlm_gateway/)
+### [Embodied Agent Architecture Design for reBot B601 RS Robotic Arm](https://wiki.seeedstudio.com/wrc_demo_tutorial/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent3.PNG" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces how to build a VLM event gateway using reCamera Basic and NVIDIA Jetson, combining YOLOv8 and Qwen3-VL for scene analysis, event alerts, and real-time video streaming.
+This tutorial is the **operation guide** for the [wrc_demo](https://github.com/TheMoonAstronaut/wrc) project. Follow the steps in this guide to go from zero cloning to a running demo in **1-2 hours**. wrc_demo is a visual grasping demo for the [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) (RobStride bus), running on Ubuntu 22.04 + Python 3.10 + conda `wrc-demo` environment. The demo receives natural language instructions (e.g. "pick up the red block"), automatically plans the grasp and executes it.
+
+</div>
+
+### [reSpeaker Clip AI Chat System Architecture](https://wiki.seeedstudio.com/respeaker_clip_ai_chat_system_architecture/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document introduces the architecture of the reSpeaker Clip AI chat system, including its core components, workflow, tool calling, and memory mechanism.
+
+</div>
+
+### [Flash the Debian 13 Image to reCamera Pro](https://wiki.seeedstudio.com/recamera_pro_debian/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+reCamera Pro is powered by the RV1126B chip and is available with 2 GB or 4 GB of memory. It ships with Buildroot firmware for a quick start with AI inference. This page provides a Debian 13 image for users who need more flexibility for development and deployment.
 
 </div>
 
@@ -201,5 +232,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.8.03rd](/Seeed_Elderly/weekly_wiki/2026/wiki260803)
 - [weekly wiki on 2026.8.10th](/Seeed_Elderly/weekly_wiki/2026/wiki260810)
 - [weekly wiki on 2026.8.17th](/Seeed_Elderly/weekly_wiki/2026/wiki260817)
+- [weekly wiki on 2026.8.24th](/Seeed_Elderly/weekly_wiki/2026/wiki260824)
+- [weekly wiki on 2026.8.31st](/Seeed_Elderly/weekly_wiki/2026/wiki260831)
 
 </details>

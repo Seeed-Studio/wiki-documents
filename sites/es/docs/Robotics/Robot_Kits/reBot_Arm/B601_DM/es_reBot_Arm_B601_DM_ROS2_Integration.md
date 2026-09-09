@@ -22,18 +22,21 @@ updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_ros2_integration/
 ---
 
-# Guía de Integración ROS2 de reBot Arm B601-DM
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
-</p>
+# Guía de integración ROS2 de reBot Arm B601-DM
+
+<RebotDmDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 </a></div>
-
-<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -177,7 +180,7 @@ Si usas Ubuntu 22.04, debes instalar ROS 2 Humble.
 
 ### Paso 2. Instalar herramientas de compilación y dependencias de ROS
 
-Instala colcon, pip, Git y los paquetes ROS requeridos por este espacio de trabajo:
+Instala colcon, pip, Git y los paquetes de ROS requeridos por este espacio de trabajo:
 
 ```bash
 sudo apt update
@@ -209,6 +212,7 @@ Usa por defecto el repositorio oficial de Seeed-Projects:
 git clone https://github.com/Seeed-Projects/reBotArmController_ROS2.git rebotarm_ros2
 cd rebotarm_ros2
 ```
+
 ### Paso 4. Instalar motorbridge
 
 Instala `motorbridge` desde la fuente oficial de PyPI:
@@ -251,11 +255,7 @@ rebotarmcontroller MoveToPose
 ## Inicio rápido
 
 :::caution
-Antes de usar el robot, ten en cuenta lo siguiente: **El controlador del brazo tiene un alto
-grado de libertad. Antes de habilitar el controlador o alimentar el brazo, asegúrate
-de que el espacio de trabajo esté libre de personas y obstáculos. Revisa con cuidado
-cada comando de movimiento para evitar accidentes. Las operaciones peligrosas están
-estrictamente prohibidas; eres responsable de cualquier consecuencia.**
+Antes de usar el robot, ten en cuenta lo siguiente: **El controlador del brazo tiene un alto grado de libertad. Antes de habilitar el controlador o alimentar el brazo, asegúrate de que el área de trabajo esté libre de personas y obstáculos. Revisa cuidadosamente cada comando de movimiento para evitar accidentes. Las operaciones peligrosas están estrictamente prohibidas; eres responsable de cualquier consecuencia.**
 :::
 
 ### Iniciar el sistema completo
@@ -313,11 +313,9 @@ También puedes ejecutar el nodo directamente:
 ```bash
 ros2 run rebotarmcontroller reBotArmController
 ```
+
 :::tip
-A diferencia de `driver.launch.py`, que pasa archivos de configuración desde
-`rebotarm_bringup/config`, al ejecutar el controlador directamente se recurre a la
-configuración predeterminada del brazo del SDK. Para un uso normal, se recomienda
-iniciar a través de ROS.
+A diferencia de `driver.launch.py`, que pasa archivos de configuración desde `rebotarm_bringup/config`, ejecutar el controlador directamente recurre a la configuración de brazo predeterminada del SDK. Para un uso normal, se recomienda el lanzamiento a través de ROS.
 :::
 
 ## Espacio de nombres de ROS2
@@ -328,7 +326,7 @@ El espacio de nombres predeterminado es:
 /rebotarm
 ```
 
-Por lo tanto, todos los tópicos, servicios y acciones se anteponen con `/rebotarm`, por ejemplo:
+Por lo tanto, todos los tópicos, servicios y acciones tienen el prefijo `/rebotarm`, por ejemplo:
 
 ```text
 /rebotarm/joint_states
@@ -382,7 +380,7 @@ ros2 topic echo /rebotarm/arm_status --once
 |---|---|---|
 | `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | Movimiento de la pose del efector final |
 | `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | Punto de entrada estándar compatible con trayectorias de articulaciones |
-| `/rebotarm/gripper/command` | `control_msgs/action/GripperCommand` | Acción estándar de la pinza |
+| `/rebotarm/gripper/command` | `control_msgs/action/GripperCommand` | Acción estándar de pinza |
 
 ## Ejemplos de control básico
 
@@ -408,7 +406,7 @@ ros2 action send_goal /rebotarm/follow_joint_trajectory \
     points: [{positions: [0.1,0,0,0,0,0], time_from_start: {sec: 5}}]}}"
 ```
 
-### 4. Posición segura de origen y deshabilitar
+### 4. Volver a origen seguro y deshabilitar
 
 ```bash
 ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger
@@ -471,13 +469,13 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger
 ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 ```
 
-### Ejemplo interactivo de la pinza
+### Ejemplo de pinza interactiva
 
 ```bash
 ros2 run rebotarmcontroller GripperControl
 ```
 
-Después de iniciar, introduce:
+Después de lanzar, introduce:
 
 ```text
 o / open    Open the gripper
@@ -495,23 +493,23 @@ src/rebotarm_bringup/config/
 
 | Archivo | Descripción |
 |---|---|
-| `arm.yaml` | ID de motor, de realimentación y parámetros de control para las 6 articulaciones del brazo |
-| `gripper.yaml` | ID de motor de la pinza, ID de realimentación, proveedor y parámetros de control |
+| `arm.yaml` | ID de motor, de retroalimentación y parámetros de control para las 6 articulaciones del brazo |
+| `gripper.yaml` | ID de motor de la pinza, ID de retroalimentación, proveedor y parámetros de control |
 | `driver_params.yaml` | Ejemplos de parámetros de ROS |
 
 Parámetros de lanzamiento comunes:
 
 | Parámetro | Predeterminado | Descripción |
 |---|---|---|
-| `arm_config` | `arm.yaml` integrado desde bringup | Ruta de configuración del brazo |
-| `gripper_config` | `gripper.yaml` integrado desde bringup | Ruta de configuración de la pinza |
+| `arm_config` | `arm.yaml` integrado de bringup | Ruta de configuración del brazo |
+| `gripper_config` | `gripper.yaml` integrado de bringup | Ruta de configuración de la pinza |
 | `channel` | Cadena vacía | Usar YAML por defecto. Sobrescribe el puerto serie cuando no está vacío |
 | `joint_state_rate` | `100.0` | Frecuencia de publicación de `/rebotarm/joint_states` |
-| `cmd_arbitration` | `reject` | Arbitraje de comandos de bajo nivel durante la ejecución de trayectorias del brazo. `reject` o `preempt`; los comandos de bajo nivel de la pinza no tienen prioridad sobre las trayectorias del brazo |
-| `arm_namespace` | `rebotarm` | Prefijo del espacio de nombres de ROS |
+| `cmd_arbitration` | `reject` | Arbitraje de comandos de bajo nivel durante la ejecución de trayectorias del brazo. `reject` o `preempt`; los comandos de bajo nivel de la pinza no interrumpen las trayectorias del brazo |
+| `arm_namespace` | `rebotarm` | Prefijo de espacio de nombres de ROS |
 | `frame_id` | `base_link` | Marco base del brazo robótico |
 | `ee_frame_id` | `end_link` | Marco del efector final |
-| `use_rviz` | `false` | Si se debe iniciar RViz |
+| `use_rviz` | `false` | Indica si se inicia RViz |
 
 ## Tópicos de comandos de bajo nivel
 
@@ -519,44 +517,36 @@ El espacio de trabajo de ROS2 también proporciona tópicos de depuración de mo
 
 | API | Tipo | Descripción |
 |---|---|---|
-| `/rebotarm/joints/<joint>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Comando MIT de bajo nivel para una sola articulación |
-| `/rebotarm/joints/<joint>/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Comando de posición-velocidad de bajo nivel para una sola articulación |
-| `/rebotarm/joints/<joint>/cmd/vel` | `rebotarm_msgs/msg/JointVelCmd` | Comando de velocidad de bajo nivel para una sola articulación |
-| `/rebotarm/gripper/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Comando MIT de bajo nivel para la pinza |
-| `/rebotarm/gripper/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Comando de posición-velocidad de bajo nivel para la pinza |
-| `/rebotarm/gripper/cmd/vel` | `rebotarm_msgs/msg/JointVelCmd` | Comando de velocidad de bajo nivel para la pinza |
+| `/rebotarm/joints/<joint>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Comando MIT de articulación única en bruto |
+| `/rebotarm/joints/<joint>/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Comando en bruto de posición-velocidad de articulación única |
+| `/rebotarm/joints/<joint>/cmd/vel` | `rebotarm_msgs/msg/JointVelCmd` | Comando en bruto de velocidad de articulación única |
+| `/rebotarm/gripper/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Comando MIT en bruto de la pinza |
+| `/rebotarm/gripper/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Comando en bruto de posición-velocidad de la pinza |
+| `/rebotarm/gripper/cmd/vel` | `rebotarm_msgs/msg/JointVelCmd` | Comando en bruto de velocidad de la pinza |
 
 :::caution
-Los tópicos de comandos de bajo nivel están pensados para depuración y experimentos. No realizan IK, planificación de trayectorias ni comprobaciones de límites del URDF. Para movimiento a nivel de aplicación, es preferible usar servicios y acciones como `/move_to_pose`, `/follow_joint_trajectory` y `/gripper/set`.
+Los tópicos de comandos de bajo nivel están pensados para depuración y experimentos. No realizan IK, planificación de trayectorias ni comprobaciones de límites de URDF. Para movimiento a nivel de aplicación, es preferible usar servicios y acciones como `/move_to_pose`, `/follow_joint_trajectory` y `/gripper/set`.
 :::
 
 ## MoveIt 2
 
-MoveIt 2 es el framework de planificación de movimiento utilizado aquí para cinemática inversa,
-comprobación de colisiones, planificación de trayectorias y ejecución. Las demostraciones se separan
-en su propio paquete para que los flujos de aplicación permanezcan aislados del controlador base.
-Para más detalles, consulta la [documentación oficial de MoveIt 2](https://moveit.picknik.ai/main/index.html).
+MoveIt 2 es el framework de planificación de movimiento utilizado aquí para cinemática inversa, comprobación de colisiones, planificación de trayectorias y ejecución. Las demos están separadas en su propio paquete para que los flujos de aplicación permanezcan aislados del driver base.
+Para más detalles, consulta la [Documentación oficial de MoveIt 2](https://moveit.picknik.ai/main/index.html).
 
 El contenido relacionado con MoveIt se divide en dos paquetes:
 
 | Paquete | Propósito |
 |---|---|
 | `rebotarm_moveit_config` | Modelo del robot, SRDF, cinemática, límites de articulaciones, controlador y configuración de RViz |
-| `rebotarm_moveit_demos` | Demostraciones de aplicaciones basadas en MoveIt 2 |
+| `rebotarm_moveit_demos` | Demos de aplicación basadas en MoveIt 2 |
 
-El entorno de MoveIt utiliza hardware simulado a través de `ros2_control` y
-`move_group` para la planificación y ejecución. Está pensado para validar el
-modelo, la IK, la planificación de trayectorias y el flujo de demostraciones en RViz.
+El entorno de MoveIt utiliza hardware simulado a través de `ros2_control` y `move_group` para la planificación y ejecución. Está pensado para validar el modelo, la IK, la planificación de trayectorias y el flujo de las demos en RViz.
 
-Este repositorio también es compatible con hardware real. Antes de conectar hardware real,
-asegúrate de que la configuración cero del brazo, las direcciones de las articulaciones, los límites de las articulaciones, los límites de velocidad
-y el rango de la pinza sean correctos, o mantén la configuración
-predeterminada del repositorio.
+Este repositorio también es compatible con hardware real. Antes de conectar hardware real, asegúrate de que la configuración de cero del brazo, las direcciones de las articulaciones, los límites de articulaciones, los límites de velocidad y el rango de la pinza sean todos correctos, o mantén la configuración predeterminada del repositorio.
 
 ### Configuración del entorno MoveIt
 
-Primero asegúrate de que el entorno ROS2 esté disponible. Puedes instalar paquetes para
-la distribución de ROS actualmente cargada a través de `ROS_DISTRO`:
+Primero asegúrate de que el entorno ROS2 esté disponible. Puedes instalar paquetes para la distribución de ROS actualmente cargada a través de `ROS_DISTRO`:
 
 ```bash
 sudo apt update
@@ -571,8 +561,7 @@ sudo apt install -y \
   ros-${ROS_DISTRO}-xacro
 ```
 
-La configuración de MoveIt y las demostraciones están incluidas en este espacio de trabajo. Después de instalar
-las dependencias, vuelve a compilar el espacio de trabajo:
+La configuración de MoveIt y las demos están incluidas en este espacio de trabajo. Después de instalar las dependencias, vuelve a compilar el espacio de trabajo:
 
 ```bash
 cd your/path/to/rebotarm_ros2
@@ -580,7 +569,7 @@ colcon build --symlink-install
 source install/setup.bash
 ```
 
-Verifica los paquetes de MoveIt y los puntos de entrada de las demostraciones:
+Verifica los paquetes de MoveIt y los puntos de entrada de las demos:
 
 ```bash
 ros2 pkg list | grep rebotarm_moveit
@@ -596,8 +585,7 @@ rebotarm_moveit_demos pick_place
 
 ### Usar MoveIt
 
-La planificación con MoveIt se puede usar a través de la interfaz gráfica de RViz o mediante nodos de ROS, tanto en
-simulación como en escenas reales.
+La planificación con MoveIt se puede usar a través de la GUI de RViz o mediante nodos de ROS, tanto en simulación como en escenas reales.
 
 #### Usar MoveIt en simulación
 
@@ -609,7 +597,7 @@ source install/setup.bash
 ros2 launch rebotarm_moveit_config demo.launch.py
 ```
 
-Por defecto, esto inicia:
+Por defecto esto inicia:
 
 - `move_group`
 - `robot_state_publisher`
@@ -619,8 +607,7 @@ Por defecto, esto inicia:
 - `gripper_controller`
 - RViz con el plugin MoveIt MotionPlanning
 
-RViz se abre automáticamente y carga el modelo URDF del robot. Puedes controlar el movimiento
-a través del panel en el lado izquierdo de la interfaz gráfica.
+RViz se abre automáticamente y carga el modelo URDF del robot. Puedes controlar el movimiento a través del panel en el lado izquierdo de la GUI.
 
 Para ejecutar el entorno MoveIt sin RViz:
 
@@ -628,10 +615,9 @@ Para ejecutar el entorno MoveIt sin RViz:
 ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
 ```
 
-#### Usar MoveIt con el hardware reBotArm
+#### Usar MoveIt con hardware reBotArm
 
-Para el robot real, primero inicia el controlador con la interfaz de hardware
-en lugar del controlador virtual, y luego inicia el entorno MoveIt para hardware:
+Para el robot real, primero inicia el controlador con la interfaz de hardware en lugar del controlador virtual, luego inicia el entorno MoveIt para hardware:
 
 ```bash
 ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
@@ -645,9 +631,7 @@ source install/setup.bash
 ros2 launch rebotarm_moveit_config hardware.launch.py
 ```
 
-Para repetirlo: antes de ejecutar cualquier demostración en hardware real, asegúrate de que el espacio de trabajo esté
-libre de personas y obstáculos, verifica la trayectoria planificada en RViz y estate preparado para
-detener el controlador en cualquier momento.
+Para repetir: antes de ejecutar cualquier demo en hardware real, asegúrate de que el espacio de trabajo esté libre de personas y obstáculos, verifica la trayectoria planificada en RViz y está listo para detener el controlador en cualquier momento.
 
 ### Ejecutar la demo draw-square
 
@@ -670,15 +654,15 @@ Parámetros comunes:
 
 | Parámetro | Descripción |
 |---|---|
-| `start_point` | Posición de reinicio de la articulación antes de que comience la demo |
+| `start_point` | Posición de reinicio de las articulaciones antes de que comience la demostración |
 | `rectangle_center` | Centro del rectángulo en `base_link` |
 | `rectangle_width` / `rectangle_height` | Dimensiones del rectángulo en metros |
 | `tcp_rpy` | Orientación del TCP, por defecto una garra orientada hacia abajo |
 | `tcp_yaw_offsets` | Valores alternativos de yaw de IK usados para evitar grandes giros de la articulación 6 |
 
-### Ejecutar la demo de pick-place
+### Ejecutar la demostración de pick-place
 
-Primero inicia el entorno de MoveIt y luego ejecuta en otra terminal:
+Inicia primero el entorno de MoveIt y luego ejecuta en otra terminal:
 
 ```bash
 cd your/path/to/rebotarm_ros2
@@ -703,7 +687,7 @@ Parámetros comunes:
 | `max_gripper_width` | Apertura total máxima de la garra, por defecto `0.09m` |
 | `open_gripper_position` / `closed_gripper_position` | Posiciones de apertura/cierre de la articulación de la garra de un solo lado simulada |
 | `hardware_open_gripper_position` / `hardware_closed_gripper_position` | Posiciones de apertura/cierre del motor de la garra de hardware |
-| `grasp_gripper_to_object_width` | Calcular la posición de agarre a partir del ancho del objeto |
+| `grasp_gripper_to_object_width` | Calcula la posición de agarre a partir del ancho del objeto |
 
 ### Archivos de configuración de MoveIt
 
@@ -716,8 +700,8 @@ Parámetros comunes:
 | `rebotarm_moveit_config/config/moveit_controllers.yaml` | Configuración del controlador de ejecución de trayectorias de MoveIt |
 | `rebotarm_moveit_config/config/ros2_controllers.yaml` | Configuración de controladores de ros2_control |
 | `rebotarm_moveit_config/config/initial_positions.yaml` | Posiciones iniciales de articulaciones para hardware simulado |
-| `rebotarm_moveit_demos/config/draw_square.yaml` | Parámetros de la demo de dibujar un cuadrado |
-| `rebotarm_moveit_demos/config/pick_place.yaml` | Parámetros de la demo de pick-place |
+| `rebotarm_moveit_demos/config/draw_square.yaml` | Parámetros de la demostración de dibujar un cuadrado |
+| `rebotarm_moveit_demos/config/pick_place.yaml` | Parámetros de la demostración de pick-place |
 
 ## Preguntas frecuentes (FAQ)
 
@@ -747,7 +731,7 @@ Detén el proceso que ocupa el puerto serie y reinicia. El brazo y la garra debe
 
 ### 3. Permiso denegado
 
-Si el dispositivo serie existe pero el permiso es denegado:
+Si el dispositivo serie existe pero se deniega el permiso:
 
 ```bash
 sudo usermod -a -G dialout $USER
@@ -764,9 +748,9 @@ sudo chmod 666 /dev/ttyACM0
 Comprueba lo siguiente:
 
 - Si el espacio de trabajo ha sido cargado con: `source install/setup.bash`
-- Si `Fixed Frame` está configurado en `base_link`
+- Si `Fixed Frame` está configurado como `base_link`
 - Si `robot_state_publisher` se inició correctamente
-- Si la ruta de malla del URDF es `package://rebotarm_bringup/description/meshes/...`
+- Si la ruta de malla URDF es `package://rebotarm_bringup/description/meshes/...`
 
 ### 5. Aparece una advertencia de puerto FastDDS SHM
 
@@ -776,9 +760,9 @@ Si la terminal muestra algo como:
 [RTPS_TRANSPORT_SHM Error] Failed init_port fastrtps_port7002: open_and_lock_file failed
 ```
 
-Esto suele ser causado por archivos de bloqueo de memoria compartida de FastDDS sobrantes después de que un proceso ROS2 anterior salió de forma anormal. Si los servicios y acciones aún responden con normalidad, esta advertencia normalmente no afecta al control.
+Esto suele ser causado por archivos de bloqueo de memoria compartida de FastDDS sobrantes después de que un proceso ROS2 anterior haya salido de forma anormal. Si los servicios y acciones aún responden con normalidad, esta advertencia normalmente no afecta al control.
 
-Para limpiarlo, primero detén los procesos ROS2 relacionados y luego ejecuta:
+Para limpiarlo, detén primero los procesos ROS2 relacionados y luego ejecuta:
 
 ```bash
 pkill -f ros2
@@ -835,10 +819,10 @@ Después de cargar Jazzy, deberías ver una ruta similar a
 
 ## Referencias
 
-- [reBot Arm B601-DM Guía de inicio](https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/)
-- [reBot Arm B601-DM Demo de agarre visual](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_grasping_demo/)
+- [Guía de inicio rápido de reBot Arm B601-DM](https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/)
+- [Demostración de agarre visual de reBot Arm B601-DM](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_grasping_demo/)
 - [reBot Arm B601-DM Pinocchio y MeshCat](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_pinocchio_meshcat/)
-- [reBot Arm B601-DM Tutorial de LeRobot](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_lerobot/)
+- [Tutorial de reBot Arm B601-DM LeRobot](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_lerobot/)
 - [Documentación de ROS2 Humble](https://docs.ros.org/en/humble/)
 - [Documentación de ROS2 Jazzy](https://docs.ros.org/en/jazzy/)
 - [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py)

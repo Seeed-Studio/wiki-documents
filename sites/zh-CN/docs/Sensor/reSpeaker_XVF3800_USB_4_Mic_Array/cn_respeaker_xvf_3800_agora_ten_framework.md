@@ -16,7 +16,7 @@ image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf380
 slug: /respeaker_xvf3800_agora_ten_framework_client
 sku: 114993702,114993700
 last_update:
-  date: 2/09/2026
+  date: 09/02/2026
   author: Jiayu Zhan(Jack)
 createdAt: '2026-02-10'
 updatedAt: '2026-02-27'
@@ -155,12 +155,21 @@ Workflow:
 3. 前往 API Keys 页面
 4. 创建一个新的 secret key
 
-#### 🔹 Cartesia（TTS）– 必需
+#### 🔹 Cartesia（TTS）– 默认
 
 1. 访问 https://cartesia.ai/sonic
 2. 注册一个免费账号（提供免费额度）
 3. 前往 API Key → New API Key
 4. 复制该 API Key
+
+#### 🔹 FlowSpeech（TTS）– 可选
+
+如果需要上下文感知、情感和停顿控制，可以将默认 TTS 扩展切换为 [AI 文本转语音](https://flowspeech.io/zh) 服务：
+
+1. 注册 FlowSpeech 账号
+2. 前往 Settings → API Keys
+3. 创建并复制 API Key
+4. 按下方的“可选：切换到 FlowSpeech TTS”配置扩展
 
 ### 软件需求
 
@@ -261,6 +270,9 @@ Workflow:
    # ==============================
    Cartesia_TTS_KEY=your_cartesia_api_key
 
+   # Optional: FlowSpeech TTS
+   FLOWSPEECH_API_KEY=your_flowspeech_api_key
+
    # ==============================
    # Server config (usually no changes needed)
    # ==============================
@@ -270,6 +282,30 @@ Workflow:
    SERVER_PORT=8080
    WORKERS_MAX=100
    ```
+
+#### 可选：切换到 FlowSpeech TTS
+
+FlowSpeech 扩展输出 24 kHz、单声道、16 位 PCM 音频，可以直接接入本示例的 `tts` 节点。打开 `agents/examples/voice-assistant/tenapp/property.json`，将名为 `tts` 的节点替换为：
+
+```json
+{
+  "type": "extension",
+  "name": "tts",
+  "addon": "flowspeech_tts_python",
+  "extension_group": "tts",
+  "property": {
+    "dump": false,
+    "dump_path": "./",
+    "params": {
+      "api_key": "${env:FLOWSPEECH_API_KEY}",
+      "base_url": "https://flowspeech.io",
+      "voice_name": "Kore"
+    }
+  }
+}
+```
+
+保存后继续执行 `task install` 和 `task run`。API Key 只应保存在本地 `.env` 文件中，不要提交到 Git 仓库。
 
 #### 步骤 C：启动 Docker 服务
 

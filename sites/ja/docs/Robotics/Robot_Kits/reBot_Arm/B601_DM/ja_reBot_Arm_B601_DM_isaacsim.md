@@ -8,6 +8,7 @@ keywords:
   - 遠隔操作
   - 運動学
   - Damiao
+image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_arm_b601_dm_isaacsim
 last_update:
   date: 2026-08-17
@@ -15,27 +16,41 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-77'
-updatedAt: '2026-08-18'
+updatedAt: '2026-08-19'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_isaacsim/
 ---
 
-## はじめに
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
-これは、NVIDIA Isaac Sim を用いて構築された reBot-B601-DM ロボット用のシミュレーションプロジェクトです。Isaac Sim の高精度な物理エンジンを使用して、仮想環境内でロボットの運動学的挙動とグリッパー協調動作を正確に再現し、制御アルゴリズム開発、軌道計画の検証、および通信プロトコルのテストのための、シミュレーション専用のクリーンなプラットフォームを提供します。
+<RebotDmDocNav />
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png"/>
+    <img width={800}
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+</a></div>
+
+## はじめに
+
+これは、NVIDIA Isaac Sim を用いて構築された reBot-B601-DM ロボット用のシミュレーションプロジェクトです。Isaac Sim の高精度な物理エンジンを利用して、仮想環境内でロボットの運動学的挙動とグリッパ協調動作を正確に再現し、制御アルゴリズム開発、軌道計画の検証、および通信プロトコルのテストのための、純粋なシミュレーションプラットフォームを提供します。
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png" alt="reBot Arm B601-DM Isaac Sim" />
 </div>
 
 ## システム要件
 - オペレーティングシステム：Ubuntu 22.04 LTS / 24.04 LTS（推奨）または Windows 11（WSL2 が必要）
-- GPU：NVIDIA RTX シリーズグラフィックスカード（RTX 3070 以降を推奨）、VRAM ≥ 8GB
-- ドライバ：NVIDIA 公式ドライバ ≥ 535.x、CUDA 12.x をサポート
-- メモリ：≥ 32GB RAM（Isaac Sim のシーン読み込みと物理シミュレーションは多くのメモリを消費します）
-- ストレージ：≥ 100GB の SSD 空き容量（Isaac Sim のインストール、キャッシュ、USD アセット用）
+- GPU：NVIDIA RTX シリーズグラフィックスカード（RTX 3070 以降を推奨）、VRAM 8GB 以上
+- ドライバ：NVIDIA 公式ドライバ 535.x 以上、CUDA 12.x をサポート
+- メモリ：32GB 以上の RAM（Isaac Sim のシーン読み込みと物理シミュレーションは多くのメモリを消費します）
+- ストレージ：100GB 以上の SSD 空き容量（Isaac Sim のインストール、キャッシュ、USD アセット用）
 
 :::info
-この Wiki では、PC はロボットに接続され、サーバーは Isaac Sim シミュレーションを実行します。サーバーには NVIDIA RTX 4090 GPU が搭載され、Ubuntu 22.04 LTS を実行しています。
+この Wiki では、PC がロボットに接続され、サーバー側で Isaac Sim シミュレーションを実行します。サーバーには NVIDIA RTX 4090 GPU が搭載され、Ubuntu 22.04 LTS を実行しています。
 :::
 
 ## Isaac Sim のインストール
@@ -48,7 +63,7 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaa
 
 ### Isaac Sim スタンドアロンパッケージのダウンロード
 
-> 💡 ほとんどのユーザーに適しており、コンパイル不要ですぐに使用できます。
+> 💡 ほとんどのユーザーに適しており、コンパイル不要ですぐに利用できます。
 
 #### ダウンロードと展開
 
@@ -64,7 +79,7 @@ cd ~/isaacsim
 
 #### 環境変数の設定
 
-次を `~/.bashrc` または `~/.zshrc` に追加します：
+`~/.bashrc` または `~/.zshrc` に次を追加します：
 
 ```Bash
 export ISAACSIM_PATH="${HOME}/isaacsim"
@@ -94,15 +109,15 @@ uv sync
 
 ### 機能コンポーネントの概要
 
-このプロジェクトは、さまざまな利用シナリオをサポートする複数の送信モジュールを提供します：
+このプロジェクトは、さまざまな利用シナリオをサポートする複数の sender モジュールを提供します：
 
 | コンポーネント | 説明 |
 |------|------|
-| `gravity_joint_sender` | **重力補償ハンドルモード**：改造済みロボット（グリッパーを取り外し、ハンドルを装着）向けで、重力補償により関節を手で動かし、その関節角度を Isaac Sim にリアルタイム同期します |
+| `gravity_joint_sender` | **重力補償ハンドルモード**：改造済みロボット（グリッパを取り外し、ハンドルを装着）向け。重力補償により、手で関節を動かし、その関節角度を Isaac Sim にリアルタイム同期します |
 | `isaacsim_ik_sender` | **逆運動学（IK）モード**：エンドエフェクタの姿勢を入力し、IK ソルバで関節角度を求めて Isaac Sim に送信します |
 | `isaacsim_traj_sender` | **軌道計画（Traj）モード**：IK を拡張し、関節空間での軌道計画（MIN_JERK タイミングプロファイル）によりスムーズなモーション制御を実現します |
-| `isaacsim_joint_test_sender` | **関節テストモード**：実機ロボットは不要で、あらかじめ設定された関節角度軌道を送信し、Isaac Sim 受信側と通信リンクを検証します |
-| `joint_reader_sender` | **実機からシミュレーションへのマッピングモード**：関節角度のみを読み取り Isaac Sim にマッピングします。他の制御プロジェクトと併用するのに適しており（たとえば実機ロボットが別のタスクを実行中でも）、その関節状態を Isaac Sim に同期して可視化できます |
+| `isaacsim_joint_test_sender` | **関節テストモード**：実機ロボットは不要で、あらかじめ設定された関節角度軌道を送信し、Isaac Sim の receiver と通信リンクを検証します |
+| `joint_reader_sender` | **実機からシミュレーションへのマッピングモード**：関節角度のみを読み取り、それを Isaac Sim にマッピングします。他の制御プロジェクトと併用するのに適しており（たとえば、実機ロボットが別のタスクを実行している間、その関節状態を Isaac Sim に同期して可視化できます）、 |
 
 ### ディレクトリ構成
 
@@ -135,10 +150,10 @@ reBot-Isaacsim/
 
 ## 起動方法（デュアルターミナルモード）
 
-2 つの別々のターミナルが必要です。**ターミナル 1 は Isaac Sim 受信側**、**ターミナル 2 は選択したモードに応じた送信側**を実行します。
+2 つの別々のターミナルが必要です。**ターミナル 1 は Isaac Sim の receiver**、**ターミナル 2 は選択したモードに応じた sender を実行**します。
 
-### ターミナル 1 — Isaac Sim 受信側の起動（全モード共通）
-Isaac Sim の Python で受信スクリプトを実行します。
+### ターミナル 1 — Isaac Sim Receiver の起動（全モード共通）
+Isaac Sim の Python で receiver スクリプトを実行します。
 
 :::tip
 環境に応じて `DEFAULT_SIM_HOST` と `DEFAULT_REBOT_ARM_HOST` の値を変更してください。
@@ -155,15 +170,15 @@ cd reBotArm_Isaacsim
 ${ISAACSIM_PYTHON_EXE}  gravity_joint_sender.py 
 ```
 
-**想定される出力：**
+**期待される出力：**
 - Isaac Sim の GUI が起動する
 - 地面とロボットの USD アセットが読み込まれる
 - UDP `DEFAULT_SIM_HOST:5005` で待ち受ける
-- 送信側からの接続を待機する
+- sender からの接続を待機する
 
-### ターミナル 2 — 選択したモードに応じた送信側の起動
+### ターミナル 2 — 選択したモードに応じた Sender の起動
 
-**起動順序：先に受信側、次に送信側。**
+**起動順序：先に receiver、次に sender。**
 
 :::tip
 
@@ -185,18 +200,18 @@ sudo chmod 666 /dev/ttyACM*
 
 #### ① 関節テストモード（`isaacsim_joint_test_sender`）
 
-実機ハードウェアは不要です。あらかじめ設定された軌道をループ送信して、通信および Isaac Sim 受信側を検証します：
+実機ハードウェアは不要です。あらかじめ設定された軌道をループ送信して、通信および Isaac Sim receiver を検証します：
 
 ```bash
 cd reBotArm_Isaacsim
 uv run python isaacsim_joint_test_sender.py
 ```
 
-送信側は、いくつかのプリセット関節姿勢間をゆっくり補間し、CAN 接続を必要とせずにそれらをループ送信します。
+sender は複数のプリセット関節姿勢間をゆっくり補間し、CAN 接続を必要とせずに、それらをループで送信します。
 
 #### ② 逆運動学モード（`isaacsim_ik_sender`）
 
-エンドエフェクタの姿勢（位置／姿勢）を入力し、IK を解いて Isaac Sim 内のシミュレーションロボットを駆動します。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します：
+エンドエフェクタの姿勢（位置／姿勢）を入力し、IK を解いて Isaac Sim 内のシミュレートされたロボットを駆動します。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します：
 
 ```bash
 cd reBotArm_Isaacsim
@@ -232,37 +247,37 @@ resync                       # re-read the current joint angles from the simulat
 
 #### ④ 重力補償ハンドルモード（`gravity_joint_sender`）
 
-改造済みロボット（グリッパーを取り外し、ハンドルを装着）に適しており、手動での動作によって Isaac Sim 上のロボットを制御できます：
+改造済みロボット（グリッパを取り外し、ハンドルを装着）に適しており、手動での動作によって Isaac Sim 上のロボットを制御できます：
 
 ```bash
 cd reBotArm_Isaacsim
 ./run_sender.sh
 ```
 
-**想定される動作：**
+**期待される動作：**
 - 実機ロボットに接続し、MIT + 重力フィードフォワード補償を有効化する
 - ロボットを手で自由に動かすことができる
-- 関節角度が UDP で 60 Hz 連続送信される
+- 関節角度が UDP 経由で 60 Hz で連続送信される
 
 #### ⑤ 実機からシミュレーションへのマッピングモード（`joint_reader_sender`）
 
-関節角度のみを読み取り、それを Isaac Sim にマッピングします。実機ロボットが他のタスクを実行しているときに、その同じ動作を Isaac Sim で可視化したい場合に適しています。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します：
+関節角度のみを読み取り、それを Isaac Sim にマッピングします。実機ロボットが他のタスクを実行している際に、その動作を Isaac Sim 上で同時に可視化したい場合に適しています。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します：
 
 ```bash
 cd reBotArm_Isaacsim
 uv run python joint_reader_sender.py
 ```
 
-**想定される動作：**
+**期待される動作：**
 - 関節角度のみを読み取る（パッシブフィードバックモード）だけで、制御コマンドは一切送信しない
-- 関節角度が UDP で 60 Hz 連続送信される
-- 実機ロボットが別プロジェクトによって制御されている場合でも、その動作を同時に Isaac Sim 上で可視化できる
+- 関節角度が UDP 経由で 60 Hz で連続送信される
+- 実機ロボットが別プロジェクトによって制御されている場合でも、その動作を Isaac Sim 上で同時に可視化できる
 
 ## 通信プロトコル
 
 UDP JSON（ポート `DEFAULT_SIM_HOST:5005`）を使用します。
 
-**送信側がフレームごとに送信するペイロード：**
+**sender がフレームごとに送信するペイロード：**
 
 ```json
 {
@@ -278,7 +293,7 @@ UDP JSON（ポート `DEFAULT_SIM_HOST:5005`）を使用します。
 | `sequence` | int | インクリメントされるシーケンス番号 |
 | `timestamp` | float | Unix タイムスタンプ（秒） |
 | `joint_positions` | float[6] | 最初の 6 関節角度（rad） |
-| `gripper_position` | float | グリッパー位置（m）。送信側で `GRIPPER_POSITION_SCALE` を用いて変換されます |
+| `gripper_position` | float | 送信側で `GRIPPER_POSITION_SCALE` を用いて変換されたグリッパ位置（m） |
 
 ## 設定パラメータ
 
@@ -289,7 +304,7 @@ UDP JSON（ポート `DEFAULT_SIM_HOST:5005`）を使用します。
 | `ARM_JOINT_COUNT`| 6 | 関節数 |
 | `DEFAULT_PORT` | 5005 | UDP ポート |
 | `DEFAULT_SEND_HZ` | 60.0 | 送信周波数（Hz） |
-| `GRIPPER_POSITION_SCALE` | 0.007 | グリッパー角度から位置へのスケール係数 |
+| `GRIPPER_POSITION_SCALE` | 0.007 | グリッパ角度から位置へのスケール係数 |
 
 ### 受信側（`isaacsim_joint_receiver.py`）
 
@@ -299,7 +314,7 @@ UDP JSON（ポート `DEFAULT_SIM_HOST:5005`）を使用します。
 | `DEFAULT_PORT` | 5005 | UDP ポート |
 | `DEFAULT_RENDER_HZ` | 120.0 | シミュレーション描画周波数（Hz） |
 | `GRIPPER_POSITION_SCALE` | 0.0073 | グリッパ位置のスケーリング係数 |
-| `ROBOT_PRIM_PATH` | `/World/reBotArm` | Isaac Sim におけるロボット Prim パス |
+| `ROBOT_PRIM_PATH` | `/World/reBotArm` | Isaac Sim 内の Robot Prim パス |
 | `ASSET_RELATIVE_PATH` | usd/reBot_B601_DM/reBot_B601_DM.usda | USD アセットへの相対パス |
 
 ## よくある問題
@@ -318,10 +333,10 @@ kill <PID>
 
 ### 関節角度が同期していない
 
-- 送信側と受信側が同じポート（どちらも 5005）を使用していることを確認します
-- 送信側のログに `[send]` が継続的に表示されているか確認します
-- 受信側のログに `[recv]` が継続的に表示されているか確認します
-- ハードウェアの問題を切り分けるために `isaacsim_joint_test_sender.py` を試します
+- 送信側と受信側が同じポート（両方とも 5005）を使用していることを確認する
+- 送信側のログに `[send]` が継続的に表示されているか確認する
+- 受信側のログに `[recv]` が継続的に表示されているか確認する
+- ハードウェアの問題を切り分けるために `isaacsim_joint_test_sender.py` を試す
 
 ### コンポーネントと Python 環境
 
@@ -333,7 +348,7 @@ kill <PID>
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をスムーズにご利用いただくため、複数のサポートチャネルをご用意しています。お好みやニーズに合わせて、さまざまなコミュニケーション手段をご利用いただけます。
+弊社製品をお選びいただきありがとうございます。製品をスムーズにご利用いただくため、複数のサポートチャネルをご用意しています。さまざまなご希望やニーズに対応できるよう、複数のコミュニケーション手段を提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

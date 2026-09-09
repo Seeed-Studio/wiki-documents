@@ -1,6 +1,6 @@
 ---
-description: Recetario de PlatformIO para la familia de XIAO ePaper Driver Board (EE0x) - descripción de hardware, arranque de proyecto, configuración de librerías y programación de extremo a extremo en el ESP32-S3. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
-title: Recetario de PlatformIO
+description: cookbook de PlatformIO para la familia de XIAO ePaper Driver Board (EE0x) - descripción de hardware, arranque de proyecto, configuración de librerías y programación de extremo a extremo en el ESP32-S3. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
+title: Cookbook de PlatformIO
 keywords:
   - Pantalla ePaper
   - PlatformIO
@@ -22,16 +22,16 @@ updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/es/ee04_with_platformio/
 ---
 
-# Recetario de PlatformIO: XIAO ePaper Driver Boards (EE0x)
+# Cookbook de PlatformIO: XIAO ePaper Driver Boards (EE0x)
 
-:::tip Este recetario cubre toda la familia EE0x
+:::tip Este cookbook cubre toda la familia EE0x
 Aplicable a **EE02 / EE03 / EE04 / EE05**. Como las cuatro placas comparten la misma base XIAO ESP32-S3 y la misma canalización de controlador `Seeed_GFX`, la configuración del proyecto, la lista de librerías y los patrones de código son idénticos; lo único que cambia entre ellas es el valor de `BOARD_SCREEN_COMBO` que eliges en la [Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) para `driver.h`.
 
 **Ejemplo práctico: EE04 + pantalla ePaper monocroma de 7,5" y 800×480.** Sustituye tu propio par placa + pantalla en `driver.h` y el resto del flujo de trabajo (GPIO de botones, ADC de batería, panel de control, cambio de página mediante botones) se mantiene igual.
 :::
 
 :::note ¿Buscas Arduino en su lugar?
-Este recetario es **específico de PlatformIO**. Si prefieres usar el **Arduino IDE** (la ruta más común para nuestra línea de ePaper), consulta **[Work with Arduino](/es/epaper_work_with_arduino)** para la guía a nivel de plataforma, el [reTerminal E Series — ePaper Display cookbook](/es/reterminal_e10xx_with_arduino) para ejemplos de renderizado de pantalla y el [reTerminal E Series — Onboard Peripherals cookbook](/es/reterminal_e10xx_with_arduino_peripherals) para ejemplos a nivel de hardware (LED, zumbador, botones, SHT4x, batería, microSD) que también se aplican a las placas EE0x.
+Este cookbook es **específico de PlatformIO**. Si prefieres usar el **Arduino IDE** (la ruta más común para nuestra línea de ePaper), consulta **[Work with Arduino](/es/epaper_work_with_arduino)** para la guía a nivel de plataforma, el [reTerminal E Series — ePaper Display cookbook](/es/reterminal_e10xx_with_arduino) para ejemplos de renderizado de pantalla y el [reTerminal E Series — Onboard Peripherals cookbook](/es/reterminal_e10xx_with_arduino_peripherals) para ejemplos a nivel de hardware (LED, zumbador, botones, SHT4x, batería, microSD) que también se aplican a las placas EE0x.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>

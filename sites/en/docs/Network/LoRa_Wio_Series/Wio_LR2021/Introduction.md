@@ -20,7 +20,7 @@ last_update:
   date: 06/03/2026
   author: David Du
 createdAt: '2026-06-03'
-updatedAt: '2026-06-18'
+updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/wio_lr2021_introduction/
 ---
 
@@ -146,6 +146,8 @@ All DIO functions must be configured via SPI `SetDioFunction` command while in S
 - **[ZIP]** [Wio-LR2021 Module KiCad Library](https://files.seeedstudio.com/wiki/Wio-LR2021/res/kicad-library.zip)
 
 - **[ZIP]** [Wio-LR2021 Module Allegro Library](https://files.seeedstudio.com/wiki/Wio-LR2021/res/allegro-library.zip)
+
+- **[LINK]** [Semtech's LoRa USP™ firmware platform](https://github.com/Lora-net/usp)
 
 ## Tech Support & Product Discussion
 

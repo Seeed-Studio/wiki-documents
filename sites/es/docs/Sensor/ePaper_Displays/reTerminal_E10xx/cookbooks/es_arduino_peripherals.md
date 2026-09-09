@@ -1,6 +1,6 @@
 ---
-description: Recetario de Arduino para reTerminal E1001 / E1002 / E1003 / E1004 - ejemplos de periféricos de hardware integrados, incluyendo LED, zumbador, tres botones de usuario, sensor de temperatura/humedad SHT4x, monitorización de batería, tarjeta microSD y una canalización de imagen de extremo a extremo (JPEG / BMP / PNG → tramado → ePaper) para las cuatro variantes de panel.
-title: 'Recetario de Arduino: Periféricos Integrados (reTerminal E Serie)'
+description: cookbook de Arduino para reTerminal E1001 / E1002 / E1003 / E1004 - ejemplos de periféricos de hardware integrados, incluyendo LED, zumbador, tres botones de usuario, sensor de temperatura/humedad SHT4x, monitorización de batería, tarjeta microSD y una canalización de imagen de extremo a extremo (JPEG / BMP / PNG → tramado → ePaper) para las cuatro variantes de panel.
+title: 'Cookbook de Arduino: Periféricos Integrados (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals
 sidebar_position: 2
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Recetario de Arduino: Periféricos Integrados (reTerminal E Serie)
+# Cookbook de Arduino: Periféricos Integrados (reTerminal E Serie)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/245.png" style={{width:600, height:'auto'}}/></div>
 
@@ -30,16 +30,16 @@ Si quieres previsualizar rápidamente los resultados del proyecto o probar el fi
 </div><br />
 :::
 
-:::tip Otros recetarios en esta serie
+:::tip Otros cookbooks en esta serie
 - **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino)** — representación de texto, gráficos e imágenes en la pantalla de ePaper.
 - **[Arduino Cookbook: RTC, Low Power, Audio & Touch](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals_2)** — gestión de tiempo con RTC, deep sleep / light sleep, grabación con micrófono I2S y dibujo táctil capacitivo (solo E1003).
 :::
 
 ## Introducción
 
-La reTerminal E Serie es más que solo una pantalla de ePaper: cada modelo también expone un LED integrado, un zumbador, tres botones de usuario, un sensor de temperatura y humedad SHT4x, monitorización del voltaje de la batería y una ranura para tarjeta microSD. Este recetario recopila ejemplos listos para flashear en Arduino para cada uno de esos periféricos, además de una canalización de imagen de extremo a extremo que carga un archivo JPEG / BMP / PNG desde la tarjeta SD, lo traba para la paleta del panel y lo representa en la pantalla de ePaper: un sketch ya preparado por variante de panel (E1001 BW, E1001 Gray4, E1002, E1003, E1004).
+La reTerminal E Serie es más que solo una pantalla de ePaper: cada modelo también expone un LED integrado, un zumbador, tres botones de usuario, un sensor de temperatura y humedad SHT4x, monitorización del voltaje de la batería y una ranura para tarjeta microSD. Este cookbook recopila ejemplos listos para flashear en Arduino para cada uno de esos periféricos, además de una canalización de imagen de extremo a extremo que carga un archivo JPEG / BMP / PNG desde la tarjeta SD, lo traba para la paleta del panel y lo representa en la pantalla de ePaper: un sketch ya preparado por variante de panel (E1001 BW, E1001 Gray4, E1002, E1003, E1004).
 
-Lo que cubre este recetario:
+Lo que cubre este cookbook:
 
 - **Control del LED** en GPIO6 (lógica invertida).
 - **Zumbador** para alertas y tonos musicales en GPIO45.
@@ -51,7 +51,7 @@ Lo que cubre este recetario:
 
 ### Materiales necesarios
 
-Este recetario se aplica a los cuatro modelos de reTerminal E Serie. Elige el dispositivo que tengas a mano:
+Este cookbook se aplica a los cuatro modelos de reTerminal E Serie. Elige el dispositivo que tengas a mano:
 
 <div class="table-center">
   <table align="center">
@@ -100,7 +100,7 @@ Antes de ejecutar cualquier ejemplo de abajo, ya deberías tener:
 - Un **cable de datos USB-C** funcional y el puerto serie correcto seleccionado.
 - Verificado que puedes flashear un sketch básico al dispositivo; consulta la preparación del entorno en [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino#preparación-del-entorno) si aún no lo has hecho.
 
-Todos los sketches de este recetario imprimen información de depuración a través de `Serial1` en los pines **GPIO44 (RX) / GPIO43 (TX)** a **115200 baudios**. Abre el Monitor Serie de Arduino y selecciona el puerto y la velocidad en baudios correspondientes para seguir la salida.
+Todos los sketches de este cookbook imprimen información de depuración a través de `Serial1` en los pines **GPIO44 (RX) / GPIO43 (TX)** a **115200 baudios**. Abre el Monitor Serie de Arduino y selecciona el puerto y la velocidad en baudios correspondientes para seguir la salida.
 
 ## Control del LED
 
