@@ -31,7 +31,7 @@ Este firmware es actualmente experimental. Seeed no lo mantiene por el momento; 
 
 ### Descargar la imagen
 
-[Descarga la imagen de Debian 13 desde Google Drive](https://drive.google.com/file/d/1qLlbsgUB88qC2xBn4-_Decl8XBZgr7EI/view?usp=drive_link).
+[Descargar la imagen de Debian 13](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz).
 
 ### Descargar la herramienta de flasheo y el controlador
 

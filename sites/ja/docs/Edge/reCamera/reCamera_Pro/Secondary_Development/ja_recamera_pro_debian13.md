@@ -31,7 +31,7 @@ Debian 13 イメージを書き込んだ後は、CMake を使って独自アプ�
 
 ### イメージをダウンロード
 
-[Google Drive から Debian 13 イメージをダウンロードします](https://drive.google.com/file/d/1qLlbsgUB88qC2xBn4-_Decl8XBZgr7EI/view?usp=drive_link)。
+[Debian 13 イメージをダウンロード](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz)。
 
 ### 書き込みツールとドライバをダウンロード
 

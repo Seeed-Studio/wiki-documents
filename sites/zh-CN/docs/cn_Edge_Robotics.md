@@ -138,6 +138,8 @@ import '/src/css/robotics-page-style.css';
   <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 集成</b><small>把机械臂接入 ROS2，方便与 MoveIt、感知节点和系统级应用组合。</small></div><em>系统集成</em></a>
 
   <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web 仿真器开发</b><small>学习 Web 仿真器与 ROS2/MuJoCo 的集成开发，实现虚拟与现实同步控制。</small></div><em>仿真开发</em></a>
+
+  <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim 集成</b><small>将 reBot B601-DM 部署到 Isaac Sim 仿真环境中，进行开发、调试与控制算法验证。</small></div><em>仿真</em></a>
 </div>
 </div>
 </details>

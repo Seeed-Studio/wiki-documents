@@ -10,7 +10,7 @@ slug: /recamera_pro_debian
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 09/07/2026
+  date: 09/08/2026
   author: yylin
 createdAt: '2026-08-04'
 updatedAt: '2026-09-07'
@@ -31,7 +31,7 @@ This firmware is currently experimental. Seeed does not maintain it at this time
 
 ### Download the Image
 
-[Download the Debian 13 image from Google Drive](https://drive.google.com/file/d/1qLlbsgUB88qC2xBn4-_Decl8XBZgr7EI/view?usp=drive_link).
+[Download the Debian 13 image](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz).
 
 ### Download the Flashing Tool and Driver
 
