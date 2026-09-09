@@ -31,7 +31,7 @@ reCamera Pro 由 RV1126B 芯片驱动，提供 2 GB 或 4 GB 内存版本。其�
 
 ### 下载镜像
 
-[从 Google Drive 下载 Debian 13 镜像](https://drive.google.com/file/d/1qLlbsgUB88qC2xBn4-_Decl8XBZgr7EI/view?usp=drive_link)。
+[下载 Debian 13 镜像](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz)。
 
 ### 下载烧录工具和驱动
 
