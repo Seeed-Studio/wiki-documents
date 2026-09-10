@@ -11,11 +11,11 @@ image: https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.webp
 slug: /EE04_with_hmi
 sidebar_position: 1
 last_update:
-  date: 06/15/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/EE04_with_hmi/
-updatedAt: '2026-06-16'
+updatedAt: '2026-09-10'
 ---
 
 import Tabs from '@theme/Tabs';

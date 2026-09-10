@@ -12,10 +12,10 @@ sidebar_position: 1
 slug: /getting_started_with_ee02
 sku: 100067144
 last_update:
-  date: 8/18/2026
-  author: Nemo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-12-19'
-updatedAt: '2026-09-02'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/getting_started_with_ee02/
 ---
 
@@ -85,7 +85,7 @@ Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers
 - **Public Transit Arrival Board**: Bus/train arrival information displays at stations and stops.
 - **Digital Signage**: Restaurant menus, conference room signs, and retail price tags.
 - **Smart Home**: Information dashboards for weather, calendar, and home automation status.
-- **Industrial Seeedash**: Low-power status displays for machinery and warehouse management.
+- **Industrial HMI**: Low-power status displays for machinery and warehouse management.
 - **Education**: E-book readers or classroom information boards.
 - **Office**: Desk nameplates or notice boards.
 

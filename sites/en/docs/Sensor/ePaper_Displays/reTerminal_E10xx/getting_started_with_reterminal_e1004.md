@@ -9,14 +9,14 @@ keywords:
   - SenseCraft Seeedash
   - E Ink Spectra 6
   - Smart Home Dashboard
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.webp
 slug: /getting_started_with_reterminal_e1004
 sku: 100064156
 last_update:
-  date: 4/24/2026
-  author: Citric
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-01-29'
-updatedAt: '2026-08-05'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/
 ---
 import Tabs from '@theme/Tabs';

@@ -6,10 +6,10 @@ slug: /getting_started_with_reterminal_e1003
 sidebar_position: 4
 sku: 100090602
 last_update:
-  date: 05/09/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-03-18'
-updatedAt: '2026-08-05'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
 ---
 import Tabs from '@theme/Tabs';

@@ -12,14 +12,14 @@ image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp
 slug: /reterminal_e10xx_trmnl
 sidebar_position: 3
 last_update:
-  date: 08/05/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 aliases:
   - /ogdiy_kit_works_with_trmnl
   - /xiao_7_5_inch_epaper_panel_with_trmnl
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/
-updatedAt: '2026-08-05'
+updatedAt: '2026-09-10'
 ---
 
 import Tabs from '@theme/Tabs';

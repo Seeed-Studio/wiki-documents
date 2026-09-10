@@ -8,10 +8,10 @@ slug: /epaper_ee04
 sidebar_position: 3
 sku: 104990861,100075670,100064541,E25102101
 last_update:
-  date: 09/25/2025
-  author: Jason
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-09-25'
-updatedAt: '2026-04-27'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/epaper_ee04/
 ---
 

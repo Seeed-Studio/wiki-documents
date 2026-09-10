@@ -5,10 +5,10 @@ image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 slug: /xiao_epaper_display_board_overview
 sidebar_position: 1
 last_update:
-  date: 8/13/2026
-  author: Nemo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-12-19'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/xiao_epaper_display_board_overview/
 ---
 

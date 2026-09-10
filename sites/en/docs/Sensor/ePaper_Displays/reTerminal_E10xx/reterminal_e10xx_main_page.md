@@ -1,15 +1,15 @@
 ---
 description: This article is a collection page for the reTerminal E Series.
 title: reTerminal E Series
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.webp
 slug: /reterminal_e10xx_main_page
 sku: 100017057,100073581
 sidebar_position: 1
 last_update:
-  date: 08/05/2026
-  author: Citric
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-07-25'
-updatedAt: '2026-08-05'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
 # reTerminal E Series ePaper Display Overview
@@ -430,7 +430,7 @@ Beyond SenseCraft Seeedash, the reTerminal E Series integrates with several indu
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio">Work with EEZ Studio</a></td>
-			<td>Design Seeedash screens visually and deploy through Arduino IDE.</td>
+			<td>Design HMI screens visually and deploy through Arduino IDE.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">—</td>

@@ -1,14 +1,14 @@
 ---
 description: A complete overview of Seeed Studio's ePaper display product matrix, from integrated reTerminal E Series terminals to driver boards, DIY kits, and the application frameworks that power them.
 title: Seeed ePaper Displays
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.webp
 slug: /seeed_epaper_displays
 sidebar_position: 1
 last_update:
-  date: 05/18/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-04-28'
-updatedAt: '2026-06-30'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/seeed_epaper_displays/
 ---
 
@@ -269,7 +269,7 @@ Every Seeed ePaper product converges into the same software ecosystem. Pick the 
     <tr>
       <td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio" target="_blank" rel="noopener noreferrer"><strong>EEZ Studio</strong></a></td>
       <td align="center">Visual UI design</td>
-      <td>Design Seeedash screens visually and deploy through Arduino IDE.</td>
+      <td>Design HMI screens visually and deploy through Arduino IDE.</td>
       <td>reTerminal E1001 / E1002 · EE04</td>
     </tr>
     <tr>

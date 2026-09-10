@@ -12,10 +12,10 @@ slug: /getting_started_with_ee03
 sidebar_position: 2
 sku: 100080566
 last_update:
-  date: 9/2/2026
-  author: Nemo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-03-02'
-updatedAt: '2026-09-03'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/getting_started_with_ee03/
 ---
 

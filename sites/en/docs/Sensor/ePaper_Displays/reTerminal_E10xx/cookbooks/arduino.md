@@ -6,10 +6,10 @@ slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
 sidebar_label: Arduino – Display
 last_update:
-  date: 05/15/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-08-21'
-updatedAt: '2026-06-16'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -37,7 +37,7 @@ The shared boilerplate — Arduino IDE setup, ESP32 board package, installing `S
 
 ## Introduction
 
-The reTerminal E Series is Seeed Studio's industrial Seeedash line, built on the XIAO ESP32-S3 and featuring integrated ePaper displays. This cookbook walks through everything you need to render text, graphics, and images on the screen:
+The reTerminal E Series is Seeed Studio's industrial HMI line, built on the XIAO ESP32-S3 and featuring integrated ePaper displays. This cookbook walks through everything you need to render text, graphics, and images on the screen:
 
 - Hardware overview & buying links for E1001 / E1002 / E1003 / E1004.
 - Arduino IDE environment setup for all four models (XIAO_ESP32S3 board, OPI PSRAM).
