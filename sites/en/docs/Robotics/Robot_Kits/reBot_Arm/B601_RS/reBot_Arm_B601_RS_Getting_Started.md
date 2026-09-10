@@ -55,16 +55,19 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
-The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). This guide will take you through the quick start of B601-RS, from assembly to operation.
-The content of this guide is racing towards you at the speed of light — stay tuned.
+<p align="center">
+  The reBot Arm project is open source on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm)—please visit the repository and give it a Star! The repository contains the complete BOM. This guide will help you get started with the B601-RS, from assembly to operation.
+</p>
 
 ## Safety Disclaimer and Risk Notice
 
-<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+<div className="rebot-disclaimer-gallery">
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="reBot Arm safety disclaimer and risk notice in Chinese" />
+  </figure>
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="reBot Arm safety disclaimer and risk notice in English" />
+  </figure>
 </div>
 
 ## About Power Supply
@@ -166,6 +169,8 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 
 :::tip
 1. Virtual machines do not provide sufficient performance for reliable demo operation and may introduce configuration issues. Use a physical Ubuntu machine whenever possible.
+
+   Recommended Bilibili installation tutorial: [Ubuntu Dual-Boot Installation Tutorial](https://www.bilibili.com/video/BV1Cc41127B9/)
 
 2. (Beta) You can ask an agent to initialize the robotic arm. Send it the following prompt:
 
@@ -609,7 +614,7 @@ Re-plug the USB.
 </TabItem>
 <TabItem value="windows" label="Windows">
 
-Please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
+Download [PEAK-System_Driver-Setup.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/PEAK-System_Driver-Setup.zip) and install the PCAN-USB driver.
 
 
 :::tip Attention
