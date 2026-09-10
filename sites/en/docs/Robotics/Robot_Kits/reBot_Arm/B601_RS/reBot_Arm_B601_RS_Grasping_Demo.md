@@ -1,5 +1,5 @@
 ---
-description: This tutorial shows how to build a complete visual grasping demo for the reBot Arm B601-RS using an RGB-D depth camera and a YOLO/OBB grasping pipeline.
+description: This tutorial covers two visual grasping implementations for the reBot Arm B601-RS, including a YOLO/OBB pipeline and a ROS2-based grasping workflow.
 title: reBot Arm B601-RS Visual Grasping Demo
 keywords:
   - reBot Arm
@@ -12,12 +12,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif
 slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
-  date: 2026-06-30
+  date: 2026-09-10
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/
 ---
 
@@ -51,27 +51,29 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>Depth Perception · Object Detection · Hand-Eye Calibration · Autonomous Grasping · Fully Open Source</strong>
 </p>
 
-YOLO is a widely used family of real-time object detection models that can localize and classify targets in a single forward pass. This tutorial uses YOLO, an RGB-D depth camera, and the reBot Arm B601-RS to build a working desktop visual grasping demo, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
+This page covers two visual grasping demos with different implementations:
+
+- **Visual Grasping Method 1**: A YOLO + RGB-D + Python SDK pipeline covering environment setup, camera integration, hand-eye calibration, and grasp debugging.
+- **Visual Grasping Method 2**: A ROS2 + YOLOE workflow that starts the arm, Gemini 2 camera, and grasp nodes in multiple terminals to pick and place objects.
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping demo" />
 </p>
 
-## Project Features
+## Visual Grasping Method 1
+
+### 1. Project Features
 
 1. **Direct grasp pose estimation from YOLO + OBB**
    The pipeline uses detection boxes or OBB minimum-area rectangles directly and takes the short axis as the gripper opening direction, avoiding complex 3D point-cloud processing.
-
 2. **GraspNet-Baseline 6D grasp pose estimation (optional)**
    The project also supports GraspNet-Baseline (`graspnet/graspnet-baseline`) for 6D grasp pose estimation from RGB-D point clouds, with YOLO bounding boxes used to select target candidates for more complex grasping experiments.
-
 3. **Robotic arm and gripper driver integration**
    The main grasping script is based on the robotic arm and end-pose controller from `reBotArm_control_py`, with a lightweight grasp helper for gripper opening, force-controlled grasping, and TCP pose reading.
-
 4. **Open Source and Extensible**
    All source code is open, and users can customize control algorithms and effects based on their own needs.
 
-## Specifications
+### 2. Specifications
 
 The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedstudio.com/)
 
@@ -118,10 +120,10 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
   </tbody>
 </table>
 
-## Bill of Materials (BOM)
+### 3. Bill of Materials (BOM)
 
 | Component | Quantity | Included |
-|--|--|--|
+|-----------|----------|----------|
 | reBot Arm B601-RS Robotic Arm | 1 | ✅ |
 | Gripper | 1 | ✅ |
 | USB2CAN Serial Bridge | 1 | ✅ |
@@ -130,7 +132,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 | RGB-D Depth Camera | 1 | ✅ |
 | Camera Connector / Mounting Bracket | 1 | ✅ |
 
-### Wiring
+#### Wiring
 
 1. Connect the depth camera to the host via USB 3.0.
 2. Connect the USB2CAN adapter to the arm CAN bus.
@@ -142,20 +144,20 @@ sudo chmod a+rw /dev/bus/usb/*/*
 sudo chmod 666 /dev/ttyUSB0
 ```
 
-## Environment Requirements
+### 4. Environment Requirements
 
 | Item | Requirement |
 |------|-------------|
 | Operating System | Ubuntu 22.04+ |
 | Python | 3.10 |
 
-## Installation Steps
+### 5. Installation Steps
 
-### Step 0. Complete the basic robotic arm preparation first
+#### Step 0. Complete the basic robotic arm preparation first
 
 Before starting this tutorial, please finish the content in [reBot Arm B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/), including robotic arm assembly, zero-point initialization, motor ID configuration, and basic connectivity checks.
 
-### Step 1. Clone the repository
+#### Step 1. Clone the repository
 
 Prefer the official Seeed-Projects repository:
 
@@ -164,7 +166,7 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-### Step 2. Create and configure the conda environment
+#### Step 2. Create and configure the conda environment
 
 ```bash
 conda env create -f environment.yml -n rebotarm
@@ -173,7 +175,7 @@ conda activate rebotarm
 
 If you want to use a different environment name, replace `rebotarm` in the command with your own name.
 
-### Step 3. Install the robotic arm SDK
+#### Step 3. Install the robotic arm SDK
 
 ```bash
 git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
@@ -197,7 +199,7 @@ hardware_yaml: rebotarm_rs.yaml
 
 The visual grasping programs read this SDK configuration and automatically select the matching arm control mode and gripper parameters.
 
-### Step 4. Install the depth camera SDK
+#### Step 4. Install the depth camera SDK
 
 This project supports RGB-D depth cameras such as Orbbec Gemini 2 and RealSense D435i / D405. Install the SDK that matches your camera; if your environment can already import the camera driver, you can skip this step.
 
@@ -261,7 +263,7 @@ If your system needs the full RealSense toolchain or udev rules, install `librea
 **SDK Resource Summary**
 
 | Resource | Link |
-|------|------|
+|----------|------|
 | Gemini 2 Product Page | https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51 |
 | Development Resources | https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1 |
 | Orbbec SDK v2 | https://github.com/orbbec/OrbbecSDK_v2 |
@@ -271,7 +273,7 @@ If your system needs the full RealSense toolchain or udev rules, install `librea
 | ROS2 Wrapper | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
 | Intel RealSense SDK | https://github.com/realsenseai/librealsense |
 
-### Step 5. Configure GraspNet (optional)
+#### Step 5. Configure GraspNet (optional)
 
 You do not need GraspNet for `scripts/main.py` or `scripts/ordinary_grasp_pipeline.py`. Configure it only when you want to run `scripts/graspnet_camera_demo.py` or `scripts/grasp.py`, which require GraspNet, CUDA-enabled PyTorch, the PointNet2/knn CUDA operators, and a pretrained checkpoint.
 
@@ -349,7 +351,7 @@ graspnet:
 
 The `checkpoint` field supports three forms: a file name is resolved under `sdk/graspnet-baseline/checkpoints/`; a relative path is resolved from the project root; an absolute path is used directly.
 
-## Directory Structure
+### 6. Directory Structure
 
 ```
 rebot_grasp/
@@ -384,7 +386,7 @@ rebot_grasp/
 └── environment.yml               # Recommended conda environment file
 ```
 
-## Hand-Eye Calibration
+### 7. Hand-Eye Calibration
 
 Before running the full grasping pipeline, complete the Eye-in-Hand hand-eye calibration first.
 
@@ -431,9 +433,9 @@ config/calibration/<camera_type>/hand_eye.npz
 
 Recommended sample count is at least 5 samples, with 15 or more recommended.
 
-## Running and Debugging
+### 8. Running and Debugging
 
-### 1. Verify object detection only
+#### 1. Verify object detection only
 
 ```bash
 python scripts/object_detection.py
@@ -458,7 +460,7 @@ This step is useful to confirm:
 - The YOLO model loads correctly
 - YOLO object detection works as expected
 
-### 2. Verify grasp estimation only
+#### 2. Verify grasp estimation only
 
 ```bash
 python scripts/ordinary_grasp_pipeline.py
@@ -488,7 +490,7 @@ Key controls:
 - `G`: print the current best grasp pose
 - `Q` / `Esc`: exit
 
-### 3. Run the main grasping program
+#### 3. Run the main grasping program
 
 ```bash
 python scripts/main.py
@@ -529,11 +531,12 @@ Runtime keys:
 - `R`: resume live preview
 - `Q` / `Esc`: exit
 
-### 4. `scripts/set.py` — Grasp and Place Program
+#### 4. `scripts/set.py` — Grasp and Place Program
 
 Function: Grasp the banana and place it in the box.
 
 Completed flow:
+
 1. Camera and arm initialization, move to ready position
 2. Real-time camera preview + YOLO object detection and instance segmentation
 3. Press `G` to freeze frame, compute arm target pose via hand-eye transformation
@@ -541,7 +544,7 @@ Completed flow:
 5. Arm places banana in the box and returns to initial pose
 6. Press `Q` to exit system, arm returns to zero position
 
-### 5. GraspNet camera estimation demo (optional)
+#### 5. GraspNet camera estimation demo (optional)
 
 ```bash
 python scripts/graspnet_camera_demo.py
@@ -557,7 +560,7 @@ Key controls:
 
 After inference, Open3D can visualize the point cloud and grasp candidates.
 
-### 6. GraspNet robotic grasping program (optional)
+#### 6. GraspNet robotic grasping program (optional)
 
 ```bash
 python scripts/grasp.py
@@ -569,9 +572,9 @@ This script connects the GraspNet estimate to the robotic arm execution flow. YO
 
 Running `python scripts/grasp.py` starts the full GraspNet robotic grasping flow and actually controls the robotic arm. `--dry-run` only prints the target pose and candidate filtering result without executing the grasp motion. `--target-class "light blue coffee cup"` specifies the YOLO target class and only filters and grasps GraspNet candidates for that class.
 
-## FAQ
+### 9. FAQ
 
-### 1. `ModuleNotFoundError: No module named 'motorbridge'`
+<h4>1. <code>ModuleNotFoundError: No module named 'motorbridge'</code></h4>
 
 This usually means the robotic arm SDK dependencies are not installed in the current Python environment. Please check:
 
@@ -581,7 +584,7 @@ conda env update -n rebotarm -f environment.yml
 cd sdk/reBotArm_control_py && pip install -e .
 ```
 
-### 2. Pressing `G` does not execute grasping
+<h4>2. Pressing <code>G</code> does not execute grasping</h4>
 
 Common causes:
 
@@ -595,7 +598,7 @@ It is recommended to run:
 python scripts/main.py --dry-run
 ```
 
-### 3. The grasp depth is unstable
+<h4>3. The grasp depth is unstable</h4>
 
 You can try adjusting:
 
@@ -603,7 +606,7 @@ You can try adjusting:
 - The installation height of the camera relative to the workspace
 - Reflective properties of the target surface
 
-### 4. GraspNet reports that `pointnet2_utils` cannot be imported from `pointnet2`
+<h4>4. GraspNet reports that <code>pointnet2_utils</code> cannot be imported from <code>pointnet2</code></h4>
 
 This usually means the local CUDA extension under `sdk/graspnet-baseline/pointnet2` was not built in the active conda environment, or Python is resolving a different `pointnet2` package. Make sure the project environment is active, then rebuild both `pointnet2` and `knn` in that same environment:
 
@@ -622,7 +625,7 @@ Verify:
 python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
 ```
 
-### 5. CUDA architecture compatibility issues on newer GPUs when running GraspNet
+<h4>5. CUDA architecture compatibility issues on newer GPUs when running GraspNet</h4>
 
 If you see `no kernel image is available for execution on the device`, or PyTorch reports that the current GPU CUDA capability is unsupported, the installed PyTorch wheel likely does not include CUDA kernels for that GPU architecture. Install a PyTorch build that supports your current CUDA/GPU architecture, then rebuild the GraspNet local CUDA extensions.
 
@@ -638,7 +641,7 @@ pip install . --no-build-isolation
 
 If you need to specify the build architecture manually, set `TORCH_CUDA_ARCH_LIST` before rebuilding. Choose the value according to your GPU architecture and PyTorch/CUDA version.
 
-### 6. GraspNet inference reports `RuntimeError: CPU not supported`
+<h4>6. GraspNet inference reports <code>RuntimeError: CPU not supported</code></h4>
 
 The sampling operators in `pointnet2` only support CUDA tensors. Confirm that CUDA is available, the GraspNet network and input point cloud are on GPU, and `pointnet2` / `knn` were built against the PyTorch version in the active environment.
 
@@ -647,6 +650,190 @@ python -c "import torch; print(torch.cuda.is_available())"
 ```
 
 If the output is `False`, fix the CUDA / PyTorch installation first. If it is `True` but the error remains, rebuild `pointnet2` and `knn`.
+
+## Visual Grasping Method 2
+
+### 1. Project Overview
+
+This solution uses **ROS2** and **YOLO** on the reBot Arm B601-RS for object detection, grasping, and placing. The system starts the arm, Gemini 2 camera, and grasp nodes in separate terminals.
+
+The depth camera currently supports **Orbbec Gemini 2** only. This workflow does not require a calibration board for hand-eye calibration. Because of mounting and printed-part tolerances, each arm may show a small grasping offset.
+
+### 2. Environment Setup
+
+#### Step 1. Install the robotic arm ROS2 workspace
+
+First complete the installation and build of the `rebotarm_ros2` workspace by following [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/).
+
+#### Step 2. Install the camera
+
+Clone the Orbbec ROS2 SDK into the workspace and switch to the `v2-main` branch:
+
+```bash
+cd ~/rebotarm_ros2/src
+git clone https://github.com/xiehuangbao888/OrbbecSDK_ROS2.git
+cd OrbbecSDK_ROS2
+git checkout v2-main
+```
+
+Build the workspace:
+
+```bash
+cd ~/rebotarm_ros2
+colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+Install udev rules:
+
+```bash
+cd ~/rebotarm_ros2/src/OrbbecSDK_ROS2/orbbec_camera/scripts
+sudo bash install_udev_rules.sh
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+#### Step 3. Import the visual grasping package
+
+```bash
+cd ~/rebotarm_ros2/src/
+git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
+```
+
+#### Step 4. Install the YOLO / YOLOE environment
+
+`grasp_yolo` calls Ultralytics YOLOE from Python. Use a dedicated conda environment and do not use system `/usr/bin/python3`.
+
+**Create the environment**
+
+```bash
+conda create -n yolo python=3.10
+conda activate yolo
+
+pip install -U ultralytics
+pip install "numpy==1.26.4" transforms3d
+
+# YOLOE open-vocabulary classes require the Ultralytics CLIP package, not the PyPI clip package
+pip install git+https://github.com/ultralytics/CLIP.git
+```
+
+If you have an NVIDIA GPU, first confirm that CUDA is available. If the output is `False`, install a matching CUDA / PyTorch build. You can also continue on CPU, but the detection frame rate will be lower:
+
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+
+Verify YOLOE:
+
+```bash
+python -c "from ultralytics import YOLOE; print('YOLOE OK')"
+```
+
+**Download weights to `~/rebot_visual_model`**
+
+```bash
+mkdir -p ~/rebot_visual_model && cd ~/rebot_visual_model
+
+# MobileCLIP (required by YOLOE set_classes, about 242MB)
+wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobileclip2_b.ts
+
+# YOLOE segmentation weights can also download on first run; placing them here is recommended
+wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
+```
+
+#### Step 5. Build the workspace
+
+```bash
+cd ~/rebotarm_ros2
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install
+source ~/rebotarm_ros2/install/setup.bash
+```
+
+The visual grasping environment is now ready. In every new terminal, source the following before running visual grasping commands:
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+```
+
+### 3. Run the Project
+
+Before starting, confirm that the arm is powered on, the CAN interface is `can0`, and Gemini 2 is connected over USB. Then bring up CAN:
+
+```bash
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000
+sudo ip link set can0 up
+```
+
+Start the stack in separate terminals so the grasping logic is easier to follow. If you want a one-click launch, you can write your own startup script.
+
+#### Terminal A — Start the arm + RViz
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch rebot_visual_grasp bringup_with_camera.launch.py model:=rs channel:=can0 use_rviz:=true
+```
+
+#### Terminal B — Start Gemini 2
+
+```bash
+source /opt/ros/humble/setup.bash
+
+ros2 launch orbbec_camera gemini2.launch.py
+```
+
+#### Terminal C — Move to the observation pose + YOLO detection
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+conda activate yolo
+
+python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:=$HOME/rebot_visual_model/yoloe-26s-seg.pt \
+  -p target_class:="cube" \
+  -p place_class:="box" \
+  -p yolo_device:=0 \
+  -p grasp_z_offset_m:=0.02 \
+  -p place_z_offset_m:=0.1 \
+  -p grasp_x_offset_m:=-0.04 \
+  -p move_to_observation_on_start:=true \
+  -p auto_publish_on_detect:=true
+```
+
+| Parameter | Description |
+|-----------|-------------|
+| `yolo_device:=0` | GPU 0; use `cpu` if you do not have a discrete GPU |
+| `target_class` | YOLOE text class name of the object to grasp; change it to match the real object |
+| `place_class` | YOLOE text class name of the place target; change it to match the real object |
+| `grasp_x_offset_m` | Forward/back offset in `base_link`; a negative value pulls the pose backward |
+| `grasp_z_offset_m` | Grasp height fine-tune. The default is for the flexible gripper, which is longer than the standard gripper |
+| `place_z_offset_m` | Extra lift used when placing, to control how high the object is released above the place point |
+
+#### Terminal D — One-click grasp and place
+
+The default trigger delay is 3 seconds. To change it, append a parameter. For example, trigger after 5 seconds:
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch rebot_visual_grasp grasp_go.launch.py
+```
+
+```bash
+ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
+```
+
+#### Terminal E — Return to home (optional)
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
+```
 
 ## Contact
 
@@ -658,6 +845,8 @@ If the output is `False`, fix the CUDA / PyTorch installation first. If it is `T
 
 - [reBot Arm B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/)
 - [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/)
+- [rebot_visual_grasp](https://github.com/xiehuangbao888/rebot_visual_grasp)
+- [OrbbecSDK_ROS2](https://github.com/xiehuangbao888/OrbbecSDK_ROS2)
 - [Orbbec Gemini 2 Product Page](https://www.orbbec.com/products/stereo-vision-camera/gemini-2/)
 - [Orbbec Development Resources](https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
