@@ -1,5 +1,5 @@
 ---
-description: 本指南将帮助您快速上手 reBot Arm B601-DM 机械臂，包括购买选项、组装、校准和软件配置。
+description: 本指南将帮助您快速上手 reBot Arm B601-DM 机械臂，包括组装、校准和软件配置。
 title: reBot Arm B601-DM 快速入门
 keywords:
   - reBot
@@ -21,6 +21,9 @@ updatedAt: '2026-08-19'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 ---
 
+import '/src/css/rebot-wiki-style.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # reBot Arm B601-DM 快速入门
@@ -50,54 +53,55 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
-reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-DM，从组装到使用。
-本文的内容正在光速赶来，各位敬请期待。
+<p align="center">
+  reBot Arm 项目已经在 [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) 上开源了，欢迎前往仓库点亮 Star 小星星！仓库中包含完整的 BOM 清单。本文将带领你快速入门 B601-DM，从组装到使用。
+</p>
 
 :::tip
 如果你购入的是已组装的成品套件，请直接跳到文章末尾 **第三步** 的教程视频，按照视频教程使用，无需给电机写入ID和校准零位
 
 已验证虚拟机的性能不足以支撑 demo 运行且存在配置问题，建议优先使用 ubuntu 物理机来控制机械臂
+
+推荐B站安装教程：[Ubuntu双系统安装教程](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
-
-## 购买选项
-
-reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
-
-### 选项对比
-
-| 配置 | 本体 | 夹爪 | 电机 | 结构件 | 购买链接 |
-|:---|:---:|:---:|:---:|:---:|:---|
-| **完整套装** | ✅ | ✅ | ✅ | ✅ |  |
-| **仅夹爪** | ❌ | ✅ | ❌ | ❌ |  |
-| **仅本体 (结构)** | ✅ | ❌ | ❌ | ✅ |  |
-| **仅本体 (电机)** | ✅ | ❌ | ✅ | ❌ |  |
 
 
 ## 风险告知及免责声明
 
-<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+<div className="rebot-disclaimer-gallery">
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="reBot Arm 中文风险告知及免责声明" />
+  </figure>
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="reBot Arm 英文风险告知及免责声明" />
+  </figure>
 </div>
 
 ## 关于电源
 
   1. 机械臂在发货时并未配备电源/默认情况下不带电源。您可自行连接电池，或选购一款我们开源的[24V 14.6A MeanWell电源](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html)电源适配器, 或者在[京东购买](https://item.jd.com/10161209537214.html?pcdk=PnAKnVITa6CLRCfJa1bRuUjjKE-kqYkXpDPGKHbwO4IuChTalUbxo5XvL-gKQSl9.rQ4a.tlbT&spmTag=YTAyNDAuYjAwMjQ5My5jMDAwMDQwMjcuMSUyM3NrdV9jYXJkJTQwMTc4MTYxMTAyODQwNiUyMzE3NTAwNjczMzc4MzgxNzg2NTc2MTE1JTIzMjAzMTA0NjkzMw#switch-sku),切勿使用杂牌和不安全的渠道购买电源，造成风险后果均由个人承担。
-    如果你的家庭电压是220V，请把电源侧面拨码调至230V，如果你的家庭电压是110V，请把你电源的拨码调至115V。
 
-| **220V** | **110V** |
-|:---:|:---:|
-| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="300" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="300" /> |
+  2. 如果你的家庭电压是220V，请把电源侧面拨码调至230V，如果你的家庭电压是110V，请把你电源的拨码调至115V。
 
-  <div align="center">
-    <img width={800}
-    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" />
+<div className="rebot-power-gallery">
+  <figure className="rebot-power-gallery-item">
+    <figcaption>220V</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" alt="电源电压拨码调至 230V" />
+  </figure>
+  <figure className="rebot-power-gallery-item">
+    <figcaption>110V</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" alt="电源电压拨码调至 115V" />
+  </figure>
+  <figure className="rebot-power-gallery-item rebot-power-gallery-item--wide">
+    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" alt="reBot Arm B601-DM MeanWell 电源适配器" />
+  </figure>
 </div>
 
-  2. 选择我们开源的24V14.6AMeanWell电源外壳进行自组装，文字步骤和BOM在[github仓库](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/readme_zh.md/#%E5%85%B3%E4%BA%8E%E7%94%B5%E6%BA%90)中开源（只推荐有过相关电源组装经验的开发者使用）
-  组装参考视频：
+### 组装电源
+
+选择我们开源的24V14.6AMeanWell电源外壳进行自组装，文字步骤和BOM在[github仓库](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/readme_zh.md/#%E5%85%B3%E4%BA%8E%E7%94%B5%E6%BA%90)中开源（只推荐有过相关电源组装经验的开发者使用）
+
+电源组装参考视频：
   
   <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116798867506587&bvid=BV1mLjm6xEzn&cid=39341657580&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -184,16 +188,17 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 
 #### 写入电机ID并测试使能
 
-按照表格中的参数设置各关节电机对应的 CAN ID 与 Master ID
-| 电机编号 | CAN ID | Master ID | 
-|:---|:---:|:---:|
-| 1号电机 | 0x01 | 0x11 |
-| 2号电机 | 0x02 | 0x12 |
-| 3号电机 | 0x03 | 0x13 |
-| 4号电机 | 0x04 | 0x14 |
-| 5号电机 | 0x05 | 0x15 |
-| 6号电机 | 0x06 | 0x16 |
-| 7号电机 | 0x07 | 0x17 |
+按照表格中的参数设置各关节电机对应的 CAN ID 与 Master ID。
+
+| 电机编号 | 电机型号 | CAN ID | Master ID |
+|:---|:---:|:---:|:---:|
+| 1号电机 | J4340P | 0x01 | 0x11 |
+| 2号电机 | J4340P | 0x02 | 0x12 |
+| 3号电机 | J4340P | 0x03 | 0x13 |
+| 4号电机 | J4310 | 0x04 | 0x14 |
+| 5号电机 | J4310 | 0x05 | 0x15 |
+| 6号电机 | J4310 | 0x06 | 0x16 |
+| 7号电机 | J4310 | 0x07 | 0x17 |
 
 :::danger
 
@@ -250,10 +255,17 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116440455775862&bvid=BV1r9d1BuESN&cid=37680973414&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## 第三步：校准机械臂及上手初体验
+## 第三步：使用 MotorBridge 平台校准机械臂并完成首次运行
 
 相信你已经跟随视频完成了机械臂组装、零点初始化、电机ID配置等全部前期准备工作。现在你可以正式开始体验我们提供的一系列教程与工具。
 
+:::tip
+1. 探索我们的 **MotorBridge** 平台。该平台为一站式综合解决方案，支持电机种类持续扩充，涵盖[达妙电机](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride电机](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[高擎电机](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[脉塔电机](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow 等多款电机，同时兼容 reBot 等持续更新迭代的机械臂产品。平台面向入门用户友好易用，同时也为开发者提供功能完全一致的 Python SDK。
+
+2. 体验专为 reBot 机械臂适配的 MotorBridge 全新功能与细节，包含一键零点校准、参数写入、界面拖拽式电机控制，以及内置模型可视化界面。
+
+3. 本工具全面兼容 **Windows、Ubuntu、macOS** 操作系统。
+:::
 
 使用请参考视频和文字教程,在控制机械臂运动之前，需要重新设置一次零点。
 
@@ -261,38 +273,96 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116440455775355&bvid=BV1r9d1BuE6w&cid=37680974119&p=1&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-1. 探索我们的 **MotorBridge** 平台。该平台为一站式综合解决方案，支持电机种类持续扩充，涵盖[达妙电机](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride电机](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[高擎电机](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[脉塔电机](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow 等多款电机，同时兼容 reBot 等持续更新迭代的机械臂产品。平台面向入门用户友好易用，同时也为开发者提供功能完全一致的 Python SDK。
+### 软件配置与校准流程
 
-2. 体验专为 reBot 机械臂适配的 MotorBridge 全新功能与细节，包含一键零点校准、参数写入、界面拖拽式电机控制，以及内置模型可视化界面。
+按照正确的先后顺序操作，即可安装 Miniforge 并为 reBot 创建独立的 Python 环境。
 
-3. 本工具全面兼容 **Windows、Ubuntu、macOS** 操作系统。
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>安装 Miniforge</h4>
+      <p className="rebot-step-label">第 1 步</p>
 
-### 步骤 1：安装 Miniforge（支持 Windows\Ubuntu\macOS\Jetson\树莓派）
+根据操作系统下载并安装 Miniforge：
 
-1.安装miniforge，创建虚拟环境，避免其他环境包的干扰导致demo运行失败。
-
-Ubuntu\Jetson\树莓派:
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Jetson\树莓派">
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-or macOS:
+安装过程中按 <kbd>Enter</kbd> 确认，提示条款时输入 `yes`，询问是否初始化 Conda 时也输入 `yes`。
+
+重启终端后运行 `conda --version` 验证安装。
+
+:::tip 如果找不到 `conda`
+加载 Miniforge 并初始化 Bash：
+
+```bash
+source ~/miniforge3/etc/profile.d/conda.sh
+conda init bash
+```
+:::
+
+</TabItem>
+<TabItem value="macOS" label="macOS">
+
 ```bash
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
 bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
-or windows:
+安装过程中按 <kbd>Enter</kbd> 确认，提示条款时输入 `yes`，询问是否初始化 Conda 时也输入 `yes`。
 
-在浏览器中打开 Miniforge 的 Release 页面，找到最新版本的 `Miniforge3-Windows-x86_64.exe` 点击下载：
+重启终端后运行 `conda --version` 验证安装。
 
-```text
-https://github.com/conda-forge/miniforge/releases
+:::tip 如果找不到 `conda`
+加载 Miniforge，并为当前 macOS 默认使用的 Zsh 初始化 Conda：
+
+```bash
+source ~/miniforge3/etc/profile.d/conda.sh
+conda init zsh
+```
+:::
+
+</TabItem>
+<TabItem value="windows" label="Windows">
+
+打开 [Miniforge Releases 页面](https://github.com/conda-forge/miniforge/releases)，找到最新版本的 `Miniforge3-Windows-x86_64.exe` 并下载。
+
+:::tip 根据终端初始化 Conda
+**Git Bash 用户**：如果找不到 `conda`，请先加载 Conda：
+
+```bash
+# 临时生效：将 <安装路径> 替换为实际路径
+source <安装路径>/etc/profile.d/conda.sh
+
+# 永久生效：写入 bashrc，仅需执行一次
+echo 'source <安装路径>/etc/profile.d/conda.sh' >> ~/.bashrc
+source ~/.bashrc
 ```
 
-### 步骤 2：环境配置
+PowerShell 用户可执行：
+
+```bash
+conda init powershell
+```
+:::
+
+</TabItem>
+</Tabs>
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>环境配置</h4>
+      <p className="rebot-step-label">第 2 步</p>
 
 创建 Python 3.12 版本虚拟环境：
 
@@ -306,7 +376,14 @@ conda create -y -n rebot python=3.12
 conda activate rebot
 ```
 
-### 步骤 3：安装 motorbridge
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>安装 Motorbridge</h4>
+      <p className="rebot-step-label">第 3 步</p>
 
 :::tip
 
@@ -321,15 +398,31 @@ conda activate rebot
 pip install motorbridge
 ```
 
-### 步骤 4：连接机械臂
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>连接机械臂</h4>
+      <p className="rebot-step-label">第 4 步</p>
+
 使用 USB 数据线将机械臂连接至电脑并接通电源后，需要为串口配置 666 权限。（Windows系统不需要配置权限，跳过此步骤即可）
+
 ```bash
 sudo chmod 666 /dev/ttyACM*
 ```
 
-### 步骤 5：启动 MotorBridge
+</div>
+</section>
 
-在浏览器中打开地址 `https://motorbridge.github.io/motorbridge-studio/`，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>启动 MotorBridge</h4>
+      <p className="rebot-step-label">第 5 步</p>
+
+在浏览器中打开地址 [motorbridge-studio（点击跳转）](https://motorbridge.github.io/motorbridge-studio/)，打开网页后点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
 
 以 Windows 系统为例：
 
@@ -342,6 +435,9 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/motorbridge_help.png" />
 </div>
 
+</div>
+</section>
+</div>
 
 
 ## 常见问题

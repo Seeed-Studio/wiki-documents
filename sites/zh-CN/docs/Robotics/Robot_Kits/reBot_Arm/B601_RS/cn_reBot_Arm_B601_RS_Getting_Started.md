@@ -54,18 +54,20 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
+<p align="center">
+  reBot Arm 项目已经在 [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) 上开源了，欢迎前往仓库点亮 Star 小星星！仓库中包含完整的 BOM 清单。本文将带领你快速入门 B601-RS，从组装到使用。
+</p>
 
 ## 风险告知及免责声明
 
-<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+<div className="rebot-disclaimer-gallery">
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="reBot Arm 中文风险告知及免责声明" />
+  </figure>
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="reBot Arm 英文风险告知及免责声明" />
+  </figure>
 </div>
-
-reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-RS，从组装到使用。
-
 
 ## 关于电源
 
@@ -164,6 +166,8 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 
 :::tip
 1. 已验证虚拟机的性能不足以支撑 Demo 运行且存在配置问题，建议优先使用 Ubuntu 物理机控制机械臂。
+
+   推荐B站安装教程：[Ubuntu双系统安装教程](https://www.bilibili.com/video/BV1Cc41127B9/)
 
 2. （Beta）可以让 Agent 帮助你初始化机械臂。复制以下内容发送给 Agent：
 
@@ -605,7 +609,7 @@ scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
 </TabItem>
 <TabItem value="windows" label="Windows">
 
-请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
+下载 [PEAK-System_Driver-Setup.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/PEAK-System_Driver-Setup.zip)，并安装 PCAN-USB 驱动。
 
 
 :::tip 注意！！！
