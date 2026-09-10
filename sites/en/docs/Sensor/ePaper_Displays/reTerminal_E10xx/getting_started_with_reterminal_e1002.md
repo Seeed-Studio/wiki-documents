@@ -48,13 +48,13 @@ We recommend that you **[complete your product's firmware update](#preliminary)*
 
 ## Introduction
 
-reTerminal E1002 is a 7.3 inch open-source full color ePaper display with exceptional 3-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation,  while supporting Home Assistant, TRMNL E-ink dashboard, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visulization.
+reTerminal E1002 is a 7.3 inch open-source full color ePaper display with exceptional 3-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft Seeedash no-code UI platform for effortless dashboard creation,  while supporting Home Assistant, TRMNL E-ink dashboard, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visulization.
 
 ### Features
 
 - **Beautiful, Ready-to-Use E Ink® Spectra™6 Color ePaper Display**
 - **Ultra-Low Power with 3-Month Battery Life**
-- **No-Code UI Design & Deployment with SenseCraft HMI**
+- **No-Code UI Design & Deployment with SenseCraft Seeedash**
 - **Works with Popular Software Platforms**
 - **Flexible Hardware & Software Customization**
 
@@ -242,11 +242,11 @@ The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5
 
 ### Connecting to SenseCraft Platform
 
-**Step 1.** Visit [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) in your web browser and create an account or sign in.
+**Step 1.** Visit [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) in your web browser and create an account or sign in.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft Seeedash 🖱️</font></span></strong>
     </a>
 </div><br />
 
@@ -345,17 +345,17 @@ You can also check the firmware version manually at any time:
 
 ## Display Content on Your reTerminal E1002
 
-Once your device is paired, you can start using it to display whatever you like. We recommend **SenseCraft HMI** — a no-code cloud platform that lets you design and deploy content to your reTerminal E1002 in just a few clicks.
+Once your device is paired, you can start using it to display whatever you like. We recommend **SenseCraft Seeedash** — a no-code cloud platform that lets you design and deploy content to your reTerminal E1002 in just a few clicks.
 
-SenseCraft HMI has its own dedicated Wiki with full tutorials and feature documentation. For in-depth guides (account setup, firmware flashing, advanced editor usage, deployment, etc.), please refer to:
+SenseCraft Seeedash has its own dedicated Wiki with full tutorials and feature documentation. For in-depth guides (account setup, firmware flashing, advanced editor usage, deployment, etc.), please refer to:
 
-- **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
+- **[SenseCraft Seeedash Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
 Since this article is a product **Getting Started**, we will not repeat the same content here — the following only shows how to quickly display something on your reTerminal E1002.
 
 ### Home — Start From a Community Template
 
-The fastest way to get something on your screen is to start from a ready-made template. On the **Home** page of SenseCraft HMI, you will find a large and continuously growing collection of templates contributed by the community — dashboards, clocks, weather panels, quote walls, calendars, photo frames, and more. Browse the gallery, pick whichever design you like, and deploy it to your reTerminal E1002 with one click.
+The fastest way to get something on your screen is to start from a ready-made template. On the **Home** page of SenseCraft Seeedash, you will find a large and continuously growing collection of templates contributed by the community — dashboards, clocks, weather panels, quote walls, calendars, photo frames, and more. Browse the gallery, pick whichever design you like, and deploy it to your reTerminal E1002 with one click.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -372,7 +372,7 @@ The **Workspace** page is where you manage all pages and content shown on the cu
 
 Once your design is saved, click **Deploy to Device**, select your paired reTerminal E1002, and the content will be transmitted wirelessly to the device. The ePaper display will update to show your design, and you can use the left/right navigation buttons on the device to switch between multiple pages if you created them.
 
-For everything else — detailed editor operations, tips, and release notes — refer to the [SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
+For everything else — detailed editor operations, tips, and release notes — refer to the [SenseCraft Seeedash Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
 
 ## Operating the Device
 
@@ -525,7 +525,7 @@ The 8-pin expansion header (J2) has the following pinout:
 - Verify the device is connected to Wi-Fi (no disconnection icon in the corner)
 - Check your SenseCraft account to ensure the dashboard is properly deployed
 - If the problem persists, try restarting the device
-- If the device still does not respond after restarting, re-flash the corresponding firmware on the SenseCraft HMI platform and check whether the device can refresh normally
+- If the device still does not respond after restarting, re-flash the corresponding firmware on the SenseCraft Seeedash platform and check whether the device can refresh normally
 
 ### Q4: Network Connection Lost
 
@@ -572,7 +572,7 @@ If you find that the device is not charging, please try replacing the charging h
 
 - [reTerminal E1002 Schematic (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004321_reTerminal_E1002_V1_2_SCH_251120.pdf)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [SenseCraft HMI Platform Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
+- [SenseCraft Seeedash Platform Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
 - [reTerminal E1002 Enclosure 3D Model (STP)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_E1001_E1002_3D.stp)
 <!-- - [GitHub Repository](/getting_started_with_reterminal_e1002) -->
 

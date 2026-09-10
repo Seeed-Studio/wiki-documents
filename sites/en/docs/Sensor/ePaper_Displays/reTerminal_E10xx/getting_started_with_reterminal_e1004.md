@@ -1,12 +1,12 @@
 ---
-description: reTerminal E1004 is a 13.3-inch open-source full-color ePaper display powered by ESP32-S3, featuring E Ink® Spectra™ 6 technology and SenseCraft HMI support.
+description: reTerminal E1004 is a 13.3-inch open-source full-color ePaper display powered by ESP32-S3, featuring E Ink® Spectra™ 6 technology and SenseCraft Seeedash support.
 title: Getting Started with reTerminal E1004
 sidebar_position: 5
 keywords:
   - reTerminal E1004
   - ePaper Display
   - ESP32-S3
-  - SenseCraft HMI
+  - SenseCraft Seeedash
   - E Ink Spectra 6
   - Smart Home Dashboard
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg
@@ -44,12 +44,12 @@ If you want to quickly preview project results or try the basic demo firmware be
 
 ## Introduction
 
-reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant via [ESPHome](/reterminal_e10xx_with_esphome), Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visualization. ESPHome **2026.7.0 or later** is required for the E1004 display driver.
+reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft Seeedash no-code UI platform for effortless dashboard creation, while supporting Home Assistant via [ESPHome](/reterminal_e10xx_with_esphome), Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visualization. ESPHome **2026.7.0 or later** is required for the E1004 display driver.
 
 ### Features
 
 - High-resolution, Beautiful and Ready-to-Use E Ink® Spectra™ 6 Color ePaper Display
-- No-Code UI Design & Deployment with SenseCraft HMI
+- No-Code UI Design & Deployment with SenseCraft Seeedash
 - Image Slideshows with Live Data Sync & Battery Lasts for Months
 - Adapting to decoration and display needs in different scenarios
 
@@ -139,7 +139,7 @@ reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to
 
 ## Getting Started
 
-The reTerminal E1004 comes pre-loaded with firmware that supports **SenseCraft HMI**, a no-code platform that allows you to design and deploy personalized dashboards effortlessly.
+The reTerminal E1004 comes pre-loaded with firmware that supports **SenseCraft Seeedash**, a no-code platform that allows you to design and deploy personalized dashboards effortlessly.
 
 ### Preliminary
 
@@ -239,11 +239,11 @@ The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5
 
 ### Connecting to SenseCraft Platform
 
-**Step 1.** Visit [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) in your web browser and create an account or sign in.
+**Step 1.** Visit [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) in your web browser and create an account or sign in.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft Seeedash 🖱️</font></span></strong>
     </a>
 </div><br />
 
@@ -340,17 +340,17 @@ You can also check the firmware version manually at any time:
 
 ## Display Content on Your reTerminal E1004
 
-Once your device is paired, you can start using it to display whatever you like. We recommend **SenseCraft HMI** — a no-code cloud platform that lets you design and deploy content to your reTerminal E1004 in just a few clicks.
+Once your device is paired, you can start using it to display whatever you like. We recommend **SenseCraft Seeedash** — a no-code cloud platform that lets you design and deploy content to your reTerminal E1004 in just a few clicks.
 
-SenseCraft HMI has its own dedicated Wiki with full tutorials and feature documentation. For in-depth guides (account setup, firmware flashing, advanced editor usage, deployment, etc.), please refer to:
+SenseCraft Seeedash has its own dedicated Wiki with full tutorials and feature documentation. For in-depth guides (account setup, firmware flashing, advanced editor usage, deployment, etc.), please refer to:
 
-- **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
+- **[SenseCraft Seeedash Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
 Since this article is a product **Getting Started**, we will not repeat the same content here — the following only shows how to quickly display something on your reTerminal E1004.
 
 ### Home — Start From a Community Template
 
-The fastest way to get something on your screen is to start from a ready-made template. On the **Home** page of SenseCraft HMI, you will find a large and continuously growing collection of templates contributed by the community — dashboards, clocks, weather panels, quote walls, calendars, photo frames, and more. Browse the gallery, pick whichever design you like, and deploy it to your reTerminal E1004 with one click.
+The fastest way to get something on your screen is to start from a ready-made template. On the **Home** page of SenseCraft Seeedash, you will find a large and continuously growing collection of templates contributed by the community — dashboards, clocks, weather panels, quote walls, calendars, photo frames, and more. Browse the gallery, pick whichever design you like, and deploy it to your reTerminal E1004 with one click.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -371,7 +371,7 @@ Once your design is saved, click **Deploy to Device**, select your paired reTerm
 Due to the nature of E Ink technology, the screen refresh may take a few seconds to fully update the image and clear any ghosting.
 :::
 
-For everything else — detailed editor operations, tips, and release notes — refer to the [SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
+For everything else — detailed editor operations, tips, and release notes — refer to the [SenseCraft Seeedash Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
 
 ## Operating the Device
 
@@ -525,7 +525,7 @@ The expansion connector (J2) is a 2×4 header (part number **ST-FH-254-0148-2×4
 - Verify the device is connected to Wi-Fi (no disconnection icon in the corner)
 - Check your SenseCraft account to ensure the dashboard is properly deployed
 - If the problem persists, try restarting the device
-- If the device still does not respond after restarting, re-flash the corresponding firmware on the SenseCraft HMI platform and check whether the device can refresh normally
+- If the device still does not respond after restarting, re-flash the corresponding firmware on the SenseCraft Seeedash platform and check whether the device can refresh normally
 
 ### Q4: Network Connection Lost
 

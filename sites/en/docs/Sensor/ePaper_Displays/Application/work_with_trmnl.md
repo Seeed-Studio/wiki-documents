@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 This guide is the single source of truth for using **TRMNL** with any compatible Seeed ePaper product. Pick your hardware once at each step that needs it, and the rest of the workflow is identical.
 
 :::caution Hardware support
-TRMNL officially supports the **reTerminal E1001**, **reTerminal E1002**, **reTerminal E1003**, **reTerminal E1004**, **TRMNL 7.5" (OG) DIY Kit**, and **XIAO 7.5" ePaper Panel**. The **E1002** and **E1004** have full-color Spectra™ 6 panels, but TRMNL firmware renders their content in **monochrome mode**. The **E1003** capacitive touch panel is available under SenseCraft HMI firmware only; TRMNL firmware uses the physical buttons on the device.
+TRMNL officially supports the **reTerminal E1001**, **reTerminal E1002**, **reTerminal E1003**, **reTerminal E1004**, **TRMNL 7.5" (OG) DIY Kit**, and **XIAO 7.5" ePaper Panel**. The **E1002** and **E1004** have full-color Spectra™ 6 panels, but TRMNL firmware renders their content in **monochrome mode**. The **E1003** capacitive touch panel is available under SenseCraft Seeedash firmware only; TRMNL firmware uses the physical buttons on the device.
 :::
 
 ## What is [TRMNL](https://trmnl.app/)?
@@ -527,7 +527,7 @@ The reTerminal E1003 exposes three top-mounted buttons under TRMNL firmware:
 - **Power switch**: slide to **OFF** then **ON** to reboot the device.
 
 :::note
-Capacitive touch is supported under SenseCraft HMI firmware only. TRMNL firmware does not use the touch panel — all interaction is through the physical buttons above.
+Capacitive touch is supported under SenseCraft Seeedash firmware only. TRMNL firmware does not use the touch panel — all interaction is through the physical buttons above.
 :::
 
 </TabItem>

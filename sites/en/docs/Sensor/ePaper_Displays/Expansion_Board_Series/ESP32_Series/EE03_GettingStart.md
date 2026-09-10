@@ -6,7 +6,7 @@ keywords:
   - Driver Board
   - 10.3 inch
   - ESP32
-  - SenseCraft HMI
+  - SenseCraft Seeedash
 image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.webp
 slug: /getting_started_with_ee03
 sidebar_position: 2
@@ -61,7 +61,7 @@ Powered by **XIAO ESP32-S3 Plus**, the ePaper driver board EE03 supports **10.3 
 - **High-Speed Refresh Enabled:** Integrated T-CON timing control ensures precise high-speed driving, while the onboard SHT40 provides real-time temperature sensing for waveform compensation.
 - **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
 - **User-Friendly Buttons:** Features 1 reset button and 3 user-programmable buttons, providing flexibility for project acceleration and customizable functions.
-- **SenseCraft HMI Firmware Pre-Flashed:** Simply plug in and start right away with SenseCraft HMI, our AI-powered no-code UI design platform. Choose from rich templates or drag-and-drop UI building (with optional AI assistance), and deploy to the ePaper display in just a few clicks.
+- **SenseCraft Seeedash Firmware Pre-Flashed:** Simply plug in and start right away with SenseCraft Seeedash, our AI-powered no-code UI design platform. Choose from rich templates or drag-and-drop UI building (with optional AI assistance), and deploy to the ePaper display in just a few clicks.
 
 ### Specification
 
@@ -93,9 +93,9 @@ Powered by **XIAO ESP32-S3 Plus**, the ePaper driver board EE03 supports **10.3 
 - **LED Indicators**: Status indicators for power and charging.
 - **JST Connector**: 2 pins JST 2.0mm connector to connect battery.
 
-## Getting Started with SenseCraft HMI
+## Getting Started with SenseCraft Seeedash
 
-This section will guide you through connecting your EE03 to the SenseCraft HMI platform, allowing you to easily update the screen content wirelessly.
+This section will guide you through connecting your EE03 to the SenseCraft Seeedash platform, allowing you to easily update the screen content wirelessly.
 
 ### Equipment Installation
 
@@ -127,15 +127,15 @@ Once the network configuration is successful, the screen will refresh again and 
 
 ### Platform Binding & Update
 
-**Step 6. Bind Device on SenseCraft HMI**
-Go to the [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "New Device". Enter the Pair Code displayed on your E-ink screen.
+**Step 6. Bind Device on SenseCraft Seeedash**
+Go to the [SenseCraft Seeedash Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "New Device". Enter the Pair Code displayed on your E-ink screen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
 
 **Step 7. Create and Push New Interface**     
-On the SenseCraft HMI platform, select the template suitable for the 10.3-inch screen to create a new interface or upload an image.
+On the SenseCraft Seeedash platform, select the template suitable for the 10.3-inch screen to create a new interface or upload an image.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -207,12 +207,12 @@ Now you will see the feedback in your epaper screen! Following is the result of 
 *   Check if the Wi-Fi password was entered correctly.
 
 **Q3: The screen display is blurry or has ghosting.**
-*   This can happen if the screen hasn't been refreshed for a long time or if the power supply is unstable. Try refreshing the screen again via the HMI platform.
+*   This can happen if the screen hasn't been refreshed for a long time or if the power supply is unstable. Try refreshing the screen again via the Seeedash platform.
 
 **Q4: The screen makes a high-frequency buzzing sound during refresh.**
 *   This is normal for ePaper displays. The high-voltage driving circuit produces an audible sound during the refresh cycle, especially with larger screens. It does not indicate a hardware fault and will stop once refresh is complete.
 
-**Q5: SenseCraft HMI device binding fails.**
+**Q5: SenseCraft Seeedash device binding fails.**
 *   Double-check that the Pair Code is entered correctly (case-sensitive).
 *   Make sure your phone and the device are on the same 2.4GHz Wi-Fi network during device binding.
 *   If the device shows as offline, press the Reset button and try binding the device again.

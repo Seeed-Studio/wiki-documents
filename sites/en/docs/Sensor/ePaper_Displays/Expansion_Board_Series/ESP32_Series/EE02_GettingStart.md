@@ -6,7 +6,7 @@ keywords:
   - Driver Board
   - 13.3 inch
   - ESP32
-  - SenseCraft HMI
+  - SenseCraft Seeedash
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 sidebar_position: 1
 slug: /getting_started_with_ee02
@@ -46,9 +46,9 @@ url: https://wiki.seeedstudio.com/getting_started_with_ee02/
 
 ## Introduction
 
-The **XIAO ePaper Display Board EE02** is a high-performance ePaper screen driver board specifically designed for **13.3-inch Spectra™ 6 six-color** electronic paper displays. Powered by the **XIAO ESP32-S3 Plus**, it supports Wi-Fi and Bluetooth connectivity, and comes **pre-flashed with SenseCraft HMI firmware** — enabling AI-powered, drag-and-drop UI design with zero coding required. It is an ideal solution for wireless display applications such as real-time dashboards, digital signage, and smart home control panels.
+The **XIAO ePaper Display Board EE02** is a high-performance ePaper screen driver board specifically designed for **13.3-inch Spectra™ 6 six-color** electronic paper displays. Powered by the **XIAO ESP32-S3 Plus**, it supports Wi-Fi and Bluetooth connectivity, and comes **pre-flashed with SenseCraft Seeedash firmware** — enabling AI-powered, drag-and-drop UI design with zero coding required. It is an ideal solution for wireless display applications such as real-time dashboards, digital signage, and smart home control panels.
 
-Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers a seamless experience for developers looking to integrate large-format ePaper displays into their IoT projects. It simplifies the driving process and supports the SenseCraft HMI platform for easy content management.
+Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers a seamless experience for developers looking to integrate large-format ePaper displays into their IoT projects. It simplifies the driving process and supports the SenseCraft Seeedash platform for easy content management.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -58,7 +58,7 @@ Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers
 - **Dedicated 13.3" Spectra™ 6 E-Ink Support:** Specifically designed for 13.3" Spectra™ 6 displays, ensuring quick setup and stable operation.
 - **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
 - **User-Friendly Buttons:** Features 1 reset button and 3 user-programmable buttons, providing flexibility for project acceleration and customizable functions.
-- **SenseCraft HMI Firmware Pre-Flashed:** Simply plug in and start right away with SenseCraft HMI, our AI-powered no-code UI design platform. Choose from rich templates or drag-and-drop UI building (with optional AI assistance), and deploy to the ePaper display in just a few clicks.
+- **SenseCraft Seeedash Firmware Pre-Flashed:** Simply plug in and start right away with SenseCraft Seeedash, our AI-powered no-code UI design platform. Choose from rich templates or drag-and-drop UI building (with optional AI assistance), and deploy to the ePaper display in just a few clicks.
 
 ### Specification
 
@@ -85,7 +85,7 @@ Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers
 - **Public Transit Arrival Board**: Bus/train arrival information displays at stations and stops.
 - **Digital Signage**: Restaurant menus, conference room signs, and retail price tags.
 - **Smart Home**: Information dashboards for weather, calendar, and home automation status.
-- **Industrial HMI**: Low-power status displays for machinery and warehouse management.
+- **Industrial Seeedash**: Low-power status displays for machinery and warehouse management.
 - **Education**: E-book readers or classroom information boards.
 - **Office**: Desk nameplates or notice boards.
 
@@ -102,15 +102,15 @@ Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers
 - **LED Indicators**: Blinking means no battery connection. Green light on means battery is charging.
 - **JST Connector**: 2 pins JST 2.0mm connector to connect battery.
 
-## Getting Started with SenseCraft HMI
+## Getting Started with SenseCraft Seeedash
 
-This section will guide you through connecting your EE02 to the SenseCraft HMI platform, allowing you to easily update the screen content wirelessly.
+This section will guide you through connecting your EE02 to the SenseCraft Seeedash platform, allowing you to easily update the screen content wirelessly.
 
 ### Prerequisites
 
 Before you begin, make sure you have the following:
 
-- A Seeed Studio account for the SenseCraft HMI platform ([sign up here](https://sensecraft.seeed.cc/hmi) if you don't have one)
+- A Seeed Studio account for the SenseCraft Seeedash platform ([sign up here](https://sensecraft.seeed.cc/hmi) if you don't have one)
 - A 2.4GHz Wi-Fi network (5GHz is not supported)
 
 ### Equipment Installation
@@ -144,15 +144,15 @@ Once the network configuration is successful, the screen will refresh again and 
 
 ### Platform Binding & Update
 
-**Step 6. Bind Device on SenseCraft HMI**
-Go to the [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "New Device". Enter the Pairing Code displayed on your E-ink screen to bind the device to your account.
+**Step 6. Bind Device on SenseCraft Seeedash**
+Go to the [SenseCraft Seeedash Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "New Device". Enter the Pairing Code displayed on your E-ink screen to bind the device to your account.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
 
 **Step 7. Create and Push New Interface**
-On the SenseCraft HMI platform, use the editor to create a new interface (e.g., upload an image or design a dashboard). 
+On the SenseCraft Seeedash platform, use the editor to create a new interface (e.g., upload an image or design a dashboard). 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -222,12 +222,12 @@ Now you will see the feedback in your epaper screen! Following is the result of 
 *   Move closer to the router to ensure a strong signal.
 
 **Q3: The screen display is blurry or has ghosting.**
-*   This can happen if the screen hasn't been refreshed for a long time or if the power supply is unstable. Try refreshing the screen again via the HMI platform.
+*   This can happen if the screen hasn't been refreshed for a long time or if the power supply is unstable. Try refreshing the screen again via the Seeedash platform.
 
 **Q4: I hear a high-frequency sound during operation.**
 *   This is normal! The ePaper power circuit may produce occasional high-frequency sound during refresh. It does not affect performance or the lifespan of the product.
 
-**Q5: I cannot bind the device on SenseCraft HMI / pairing fails.**
+**Q5: I cannot bind the device on SenseCraft Seeedash / pairing fails.**
 *   Double-check that you entered the pairing code correctly (it is case-sensitive).
 *   Ensure the EE02 is powered on and connected to Wi-Fi (check the screen status).
 *   Make sure your phone and the EE02 are on the same 2.4GHz Wi-Fi network during setup.

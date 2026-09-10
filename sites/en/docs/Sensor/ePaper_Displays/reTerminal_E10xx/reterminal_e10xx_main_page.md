@@ -26,7 +26,7 @@ Open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/O
 
 ## Introduction
 
-The reTerminal E Series is Seeed Studio's family of ESP32-S3-powered ePaper display terminals, purpose-built for **always-on, low-power information display**. The lineup spans four models — **E1001, E1002, E1003, E1004** — covering monochrome and full-color panels from 7.3" to 13.3", with options for touch interaction and multi-month battery life. They all share the same software stack (SenseCraft HMI, Home Assistant / ESPHome, Arduino, and more), so you only have to learn it once and then pick the form-factor that fits your scenario.
+The reTerminal E Series is Seeed Studio's family of ESP32-S3-powered ePaper display terminals, purpose-built for **always-on, low-power information display**. The lineup spans four models — **E1001, E1002, E1003, E1004** — covering monochrome and full-color panels from 7.3" to 13.3", with options for touch interaction and multi-month battery life. They all share the same software stack (SenseCraft Seeedash, Home Assistant / ESPHome, Arduino, and more), so you only have to learn it once and then pick the form-factor that fits your scenario.
 
 Unlike traditional displays that consume power continuously, the reTerminal E Series only draws current when redrawing content, making it ideal for digital photo frames, smart-home dashboards, retail signage, meeting-room boards, classroom displays, and other always-on use cases.
 
@@ -117,7 +117,7 @@ All four models share the same ESP32-S3 platform, Wi-Fi 4 / Bluetooth 5.0 wirele
 			<td align="center"><strong>Touch</strong></td>
 			<td align="center">—</td>
 			<td align="center">—</td>
-			<td align="center">✅ Capacitive touch<br/>(SenseCraft HMI v1.1.2+)</td>
+			<td align="center">✅ Capacitive touch<br/>(SenseCraft Seeedash v1.1.2+)</td>
 			<td align="center">—</td>
 		</tr>
 		<tr>
@@ -221,7 +221,7 @@ Use the quick guide below to narrow down to one model. If multiple rows apply, t
 		<tr>
 			<td>Touch interaction / interactive dashboards / large monochrome reader</td>
 			<td align="center"><strong>E1003</strong></td>
-			<td>10.3" 16-level grayscale with capacitive touch (HMI v1.1.2+) and 6-month battery.</td>
+			<td>10.3" 16-level grayscale with capacitive touch (Seeedash v1.1.2+) and 6-month battery.</td>
 		</tr>
 		<tr>
 			<td>Largest, sharpest, photo-frame-grade color display</td>
@@ -303,16 +303,16 @@ The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with 
   </a>
 </div><br />
 
-reTerminal E1003 is a 10.3-inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high resolution of 1404×1872 pixels, with up to 6-month battery life. Touch interaction is currently supported on SenseCraft HMI firmware v1.1.2. Powered by ESP32-S3, it natively supports SenseCraft HMI no-code UI design, while Arduino, PlatformIO, and ESPHome (Home Assistant) are available for further development.
+reTerminal E1003 is a 10.3-inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high resolution of 1404×1872 pixels, with up to 6-month battery life. Touch interaction is currently supported on SenseCraft Seeedash firmware v1.1.2. Powered by ESP32-S3, it natively supports SenseCraft Seeedash no-code UI design, while Arduino, PlatformIO, and ESPHome (Home Assistant) are available for further development.
 
 The touch-related Arduino library is planned for future open-source release, providing greater flexibility to customize panels. More updates will be shared soon. ESPHome already supports the E1003 display driver and GT911 capacitive touch — see the [ESPHome cookbooks](/reterminal_e10xx_with_esphome).
 
 ### Key Features
 
-- 10.3-inch monochrome ePaper display with touch interaction support on HMI firmware v1.1.2
+- 10.3-inch monochrome ePaper display with touch interaction support on Seeedash firmware v1.1.2
 - 16-level grayscale with 1404×1872 high resolution
 - Up to 6-month battery life with ultra-low power operation
-- Native SenseCraft HMI support plus Arduino, PlatformIO, and ESPHome (Home Assistant) compatibility
+- Native SenseCraft Seeedash support plus Arduino, PlatformIO, and ESPHome (Home Assistant) compatibility
 
 ## reTerminal E1004
 
@@ -327,39 +327,39 @@ The touch-related Arduino library is planned for future open-source release, pro
   </a>
 </div><br />
 
-The reTerminal E1004 features a 13.3-inch full-color ePaper display and up to 6-month battery life. Powered by ESP32-S3, it supports SenseCraft HMI for no-code dashboard creation and image uploading, while also supporting Home Assistant via ESPHome, Arduino, and ESP-IDF for advanced development workflows. ESPHome **2026.7.0 or later** is required for the E1004 display driver — see the [ESPHome cookbooks](/reterminal_e10xx_with_esphome).
+The reTerminal E1004 features a 13.3-inch full-color ePaper display and up to 6-month battery life. Powered by ESP32-S3, it supports SenseCraft Seeedash for no-code dashboard creation and image uploading, while also supporting Home Assistant via ESPHome, Arduino, and ESP-IDF for advanced development workflows. ESPHome **2026.7.0 or later** is required for the E1004 display driver — see the [ESPHome cookbooks](/reterminal_e10xx_with_esphome).
 
 ### Key Features
 
 - 13.3-inch full-color ePaper display
 - Up to 6-month battery life for always-on scenarios
-- ESP32-S3 platform with SenseCraft HMI no-code support
+- ESP32-S3 platform with SenseCraft Seeedash no-code support
 - Compatible with Home Assistant / ESPHome, Arduino, and ESP-IDF
 
-## SenseCraft HMI — The Default No-Code Platform
+## SenseCraft Seeedash — The Default No-Code Platform
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft Seeedash 🖱️</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI Wiki</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft Seeedash Wiki</font></span></strong>
   </a>
 </div><br />
 
-Every reTerminal E Series device ships with **SenseCraft HMI** firmware out of the box, so you can be up and running without writing a single line of code. The web app handles login, dashboard design, and over-the-air deployment to your device:
+Every reTerminal E Series device ships with **SenseCraft Seeedash** firmware out of the box, so you can be up and running without writing a single line of code. The web app handles login, dashboard design, and over-the-air deployment to your device:
 
 - **AI Generator** — describe a dashboard in plain text and let the AI lay it out for you.
 - **Gallery** — push images and slideshows directly to the panel for digital-frame use cases.
 - **Canvas** — drag-and-drop widgets to build custom dashboards.
 - **RSS / Web Content** — pull live news, weather, calendar, or any web feed onto the screen.
-- **Touch interaction** — fully supported on E1003 starting from HMI firmware v1.1.2.
+- **Touch interaction** — fully supported on E1003 starting from Seeedash firmware v1.1.2.
 
 If you need more control than the no-code workflow gives you, every device also exposes the underlying ESP32-S3, so you can drop down to ESPHome / Home Assistant, Arduino, and the application tutorials below at any time. For a ready-made ESPHome YAML, use the [Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/) ESPHome card and check the features you need.
 
 ## Applications & Tutorials
 
-Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-standard platforms and visual UI design tools. The matrix below tells you, for each tutorial, which models it currently covers.
+Beyond SenseCraft Seeedash, the reTerminal E Series integrates with several industry-standard platforms and visual UI design tools. The matrix below tells you, for each tutorial, which models it currently covers.
 
 ### Smart-home & dashboard frameworks
 
@@ -430,7 +430,7 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio">Work with EEZ Studio</a></td>
-			<td>Design HMI screens visually and deploy through Arduino IDE.</td>
+			<td>Design Seeedash screens visually and deploy through Arduino IDE.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">—</td>
@@ -496,7 +496,7 @@ Looking for the per-device getting-started instructions (unboxing, Wi-Fi setup, 
 
 ## Resources
 
-- [SenseCraft HMI Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
+- [SenseCraft Seeedash Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [reTerminal MIC Radio Certificate](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
 

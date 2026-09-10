@@ -37,7 +37,7 @@ The shared boilerplate — Arduino IDE setup, ESP32 board package, installing `S
 
 ## Introduction
 
-The reTerminal E Series is Seeed Studio's industrial HMI line, built on the XIAO ESP32-S3 and featuring integrated ePaper displays. This cookbook walks through everything you need to render text, graphics, and images on the screen:
+The reTerminal E Series is Seeed Studio's industrial Seeedash line, built on the XIAO ESP32-S3 and featuring integrated ePaper displays. This cookbook walks through everything you need to render text, graphics, and images on the screen:
 
 - Hardware overview & buying links for E1001 / E1002 / E1003 / E1004.
 - Arduino IDE environment setup for all four models (XIAO_ESP32S3 board, OPI PSRAM).
