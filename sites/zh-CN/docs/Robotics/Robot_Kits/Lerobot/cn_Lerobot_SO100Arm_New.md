@@ -16,7 +16,6 @@ createdAt: '2025-01-08'
 updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/cn/lerobot_so100m_new/
 ---
-
 import '/src/css/rebot-wiki-style.css';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
@@ -88,7 +87,7 @@ import TabItem from '@theme/TabItem';
     <p>如果你是第一次使用 SO-ARM10x，建议先完成硬件、环境和校准，再进入遥操作、相机、数据集、训练与评估。</p>
   </div>
 
-  <div className="course-path-grid">
+<div className="course-path-grid">
     <div className="course-path-item"><span className="course-index">1</span><div className="course-path-copy"><strong>认识套件与规格</strong><p>确认 SO-ARM100 / SO-ARM101 版本、供电、电机和 BOM。</p></div><span className="course-tag">准备</span></div>
     <div className="course-path-item"><span className="course-index">2</span><div className="course-path-copy"><strong>安装 LeRobot</strong><p>搭建 Miniforge、LeRobot、ffmpeg、PyTorch 和相机依赖。</p></div><span className="course-tag">环境</span></div>
     <div className="course-path-item"><span className="course-index">3</span><div className="course-path-copy"><strong>舵机校准与组装</strong><p>为每个舵机设置 ID 和波特率，再按步骤完成 leader / follower 组装。</p></div><span className="course-tag">硬件</span></div>
@@ -142,8 +141,6 @@ SO-ARM10x 可以与 reComputer Jetson AI 智能机器人套件组合使用，将
     立即购买 / Get One Now 🖱️
   </a>
 </div>
-
-
 
 <div className="notice-grid">
   <div className="notice-card warning">
@@ -303,12 +300,13 @@ SO-ARM10x 可以与 reComputer Jetson AI 智能机器人套件组合使用，将
 <details className="content-details">
 <summary>点击查看材料清单</summary>
 
-| 部件             | 数量 | 是否包含 |
-| ---------------- | ---- | -------- |
-| 舵机             | 12   | ✅       |
-| 舵机驱动板       | 2    | ✅       |
-| USB-C线缆（2条） | 1    | ✅       |
-| 电源适配器       | 2    | ✅       |
+
+| 部件              | 数量 | 是否包含 |
+| ----------------- | ---- | -------- |
+| 舵机              | 12   | ✅       |
+| 舵机驱动板        | 2    | ✅       |
+| USB-C线缆（2条）  | 1    | ✅       |
+| 电源适配器        | 2    | ✅       |
 | 3D 打印桌面夹具   | 4    | ✅       |
 | 手臂的3D 打印部件 | 1    | Option   |
 
@@ -362,9 +360,9 @@ SO-ARM10x 可以与 reComputer Jetson AI 智能机器人套件组合使用，将
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
-**第四步：打印柔性夹爪（可选）**
+**第四步：打印柔性夹和摄像头支架插件（可选）**
 
-如果你希望让机械臂具备抓取柔软、易碎或形状不规则物体的能力，可以选择打印柔性夹爪来替换默认的刚性夹爪。打印文件可在 [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) 仓库中获取。
+如果你希望让机械臂具备抓取柔软、易碎或形状不规则物体的能力，可以选择打印柔性夹爪来替换默认的刚性夹爪。如果需要安装摄像头，也可以一并打印摄像头支架插件。打印文件可在 [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) 仓库中获取。
 
 打印材料说明：
 
@@ -614,7 +612,7 @@ exit()   #  退出python`}
     <p>对散件舵机设置 ID、波特率和中位值，并按步骤完成机械臂组装。</p>
   </div>
 
-  <div className="safety-alert compact">
+<div className="safety-alert compact">
     <div className="safety-alert-icon">⚠️</div>
     <div className="safety-alert-content">
       <strong>运行前安全确认</strong>
@@ -643,12 +641,13 @@ SO101 的舵机校准初始化与 SO100 方法和代码一致，只是需要注�
 
 后续我们用 F1–F6 表示 Follower 机械臂的 1–6 号关节舵机，用 L1–L6 表示 Leader 机械臂的 1–6 号关节舵机。对应的舵机型号、关节与减速比信息如下。
 
-| 舵机型号                                   | 减速比 | 对应机械臂关节 |
-| ------------------------------------------ | ------ | -------------- |
-| ST-3215-C044(7.4V)                         | 1:191  | L1             |
-| ST-3215-C001(7.4V)                         | 1:345  | L2             |
-| ST-3215-C044(7.4V)                         | 1:191  | L3             |
-| ST-3215-C046(7.4V)                         | 1:147  | L4–L6         |
+
+| 舵机型号                                     | 减速比 | 对应机械臂关节 |
+| -------------------------------------------- | ------ | -------------- |
+| ST-3215-C044(7.4V)                           | 1:191  | L1             |
+| ST-3215-C001(7.4V)                           | 1:345  | L2             |
+| ST-3215-C044(7.4V)                           | 1:191  | L3             |
+| ST-3215-C046(7.4V)                           | 1:147  | L4–L6         |
 | ST-3215-C001(7.4V) / C018(12 V) / C047(12 V) | 1:345  | F1–F6         |
 
 :::danger
@@ -699,11 +698,13 @@ sudo chmod 666 /dev/ttyACM1`}
 
 **Leader 舵机校准参考图**
 
+
 |                              **Leader机械臂6号舵机校准**                              |                              **Leader机械臂5号舵机校准**                              |                              **Leader机械臂4号舵机校准**                              |                              **Leader机械臂3号舵机校准**                              |                              **Leader机械臂2号舵机校准**                              |                              **Leader机械臂1号舵机校准**                              |
 | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) | ![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) | ![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
 
 **Follower 舵机校准参考图**
+
 
 |                             **Follower机械臂6号舵机校准**                             |                             **Follower机械臂5号舵机校准**                             |                             **Follower机械臂4号舵机校准**                             |                             **Follower机械臂3号舵机校准**                             |                             **Follower机械臂2号舵机校准**                             |                             **Follower机械臂1号舵机校准**                             |
 | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
@@ -788,6 +789,7 @@ sudo chmod 666 /dev/ttyACM1`}
 
 **组装领导臂**
 
+
 |                                         **步骤 1**                                         |                                         **步骤 2**                                         |                                         **步骤 3**                                         |                                         **步骤 4**                                         |                                         **步骤 5**                                         |                                         **步骤 6**                                         |
 | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L1.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L3.jpg) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L4.jpg) | ![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L5.jpg) | ![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L6.jpg) |
@@ -805,6 +807,7 @@ sudo chmod 666 /dev/ttyACM1`}
 - 从动臂的组装步骤与领导臂基本相同。唯一的区别在于第12步之后，末端执行器（夹爪和手柄）的安装方式有所不同。
 
 :::
+
 
 |                                         **步骤 1**                                         |                                         **步骤 2**                                         |                                         **步骤 3**                                         |                                          **步骤 4**                                          |                                         **步骤 5**                                         |                                         **步骤 6**                                         |
 | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
@@ -826,7 +829,7 @@ sudo chmod 666 /dev/ttyACM1`}
     <p>校准 follower 与 leader，使主从臂在相同物理位置下保持一致。</p>
   </div>
 
-  <div className="safety-alert compact">
+<div className="safety-alert compact">
     <div className="safety-alert-icon">⚠️</div>
     <div className="safety-alert-content">
       <strong>运行前安全确认</strong>
@@ -943,7 +946,7 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
     <p>运行 leader 到 follower 的遥操作链路，确认机械臂运动稳定。</p>
   </div>
 
-  <div className="safety-alert compact">
+<div className="safety-alert compact">
     <div className="safety-alert-icon">⚠️</div>
     <div className="safety-alert-content">
       <strong>运行前安全确认</strong>
@@ -980,6 +983,7 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 
 1. 识别任何缺失的校准文件并启动校准程序。
 2. 连接机器人和遥控设备，并开始遥控操作。
+
 </section>
 
 ## 添加摄像头
@@ -1404,7 +1408,7 @@ Camera #0:
     <p>从一个简单、稳定、重复性高的任务开始，先完成本地录制，再根据需要上传到 Hugging Face Hub。</p>
   </div>
 
-  <div className="safety-alert compact">
+<div className="safety-alert compact">
     <div className="safety-alert-icon">⚠️</div>
     <div className="safety-alert-content">
       <strong>运行前安全确认</strong>
@@ -1415,7 +1419,7 @@ Camera #0:
     </div>
   </div>
 
-  <div className="video-container">
+<div className="video-container">
     <iframe
       loading="lazy"
       width="900"
@@ -1429,7 +1433,7 @@ Camera #0:
     ></iframe>
   </div>
 
-  <div className="notice-grid">
+<div className="notice-grid">
     <div className="notice-card">
       <strong>推荐任务</strong>
       <span>先从“抓取黑色方块”这类短流程任务开始，确保动作稳定、相机固定、物体始终在画面中。</span>
@@ -1440,11 +1444,10 @@ Camera #0:
     </div>
   </div>
 
-  <details className="content-details" open>
+<details className="content-details" open>
     <summary>方式一：保存数据集到本地</summary>
 
-    如果你只想先在本地验证流程，可以直接运行下面的命令。`repo_id` 可按需要自定义；当 `push_to_hub=false` 时，数据集会保存在 `~/.cache/huggingface/lerobot` 下，并创建对应的 `seeedstudio123/test` 文件夹。
-
+如果你只想先在本地验证流程，可以直接运行下面的命令。`repo_id` 可按需要自定义；当 `push_to_hub=false` 时，数据集会保存在 `~/.cache/huggingface/lerobot` 下，并创建对应的 `seeedstudio123/test` 文件夹。
 <CodeBlock language="bash">
 {`lerobot-record \
     --robot.type=so101_follower \
@@ -1464,24 +1467,21 @@ Camera #0:
 </CodeBlock>
   </details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>方式二：上传数据集到 Hugging Face Hub</summary>
 
-    如果你希望使用 Hugging Face Hub 管理数据集，请先使用具有写入权限的 token 登录。Token 可在 [Hugging Face 设置](https://huggingface.co/settings/tokens) 中生成。
-
+如果你希望使用 Hugging Face Hub 管理数据集，请先使用具有写入权限的 token 登录。Token 可在 [Hugging Face 设置](https://huggingface.co/settings/tokens) 中生成。
 <CodeBlock language="bash">
 {`huggingface-cli login --token \${HUGGINGFACE_TOKEN} --add-to-git-credential`}
 </CodeBlock>
 
-    将 Hugging Face 用户名保存到变量中，方便后续命令复用：
-
+将 Hugging Face 用户名保存到变量中，方便后续命令复用：
 <CodeBlock language="bash">
 {`HF_USER=$(huggingface-cli whoami | head -n 1)
 echo $HF_USER`}
 </CodeBlock>
 
-    下面的命令会记录 5 个 episode，并将数据集上传到 Hub：
-
+下面的命令会记录 5 个 episode，并将数据集上传到 Hub：
 <CodeBlock language="bash">
 {`lerobot-record \
     --robot.type=so101_follower \
@@ -1500,16 +1500,15 @@ echo $HF_USER`}
     --dataset.reset_time_s=30`}
 </CodeBlock>
 
-    运行过程中会看到类似如下日志：
-
+运行过程中会看到类似如下日志：
 <CodeBlock language="text">
 {`INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)`}
 </CodeBlock>
   </details>
 
-  <h3>记录功能说明</h3>
+<h3>记录功能说明</h3>
 
-  <div className="feature-grid">
+<div className="feature-grid">
     <div>
       <strong>数据存储</strong>
       <span>数据以 LeRobotDataset 格式写入磁盘。默认会在记录结束后推送到 Hugging Face；如需关闭上传，请使用 <code>--dataset.push_to_hub=false</code>。</span>
@@ -1528,40 +1527,43 @@ echo $HF_USER`}
     </div>
   </div>
 
-  <h3>常用记录参数</h3>
+<h3>常用记录参数</h3>
 
-  | 参数 | 描述 | 默认值 |
-  | --- | --- | --- |
-  | `--dataset.episode_time_s` | 每个 episode 的持续时间，单位为秒。 | 60 |
-  | `--dataset.reset_time_s` | 每个 episode 结束后的环境重置时间，单位为秒。 | 60 |
-  | `--dataset.num_episodes` | 要记录的 episode 总数。 | 50 |
 
-  <h3>录制过程中的键盘控制</h3>
+| 参数                       | 描述                                          | 默认值 |
+| -------------------------- | --------------------------------------------- | ------ |
+| `--dataset.episode_time_s` | 每个 episode 的持续时间，单位为秒。           | 60     |
+| `--dataset.reset_time_s`   | 每个 episode 结束后的环境重置时间，单位为秒。 | 60     |
+| `--dataset.num_episodes`   | 要记录的 episode 总数。                       | 50     |
 
-  | 键 | 动作 |
-  | --- | --- |
-  | →（右箭头） | 提前结束当前 episode 或 reset，进入下一阶段。 |
-  | ←（左箭头） | 取消当前 episode，并重新录制。 |
-  | ESC | 立即停止会话，编码视频，并上传数据集。 |
+<h3>录制过程中的键盘控制</h3>
 
-  :::tip
-  假设你正在执行“将红色方块抓取并放入盒子”的任务：如果方块掉落或本次动作质量较差，可以先将机械臂操控至休息状态，然后按下左箭头键舍弃当前 episode；如果任务提前完成，也可以按下右箭头键跳过剩余等待时间，直接进入下一个 episode 的准备阶段。
 
-  在录制过程中合理使用方向键，有助于避免失败动作污染数据集，并提升整体录制效率。如需删除或修改已录制数据集，请参阅[数据集工具](/cn/lerobot_dataset_tool)。
-  :::
+| 键           | 动作                                          |
+| ------------ | --------------------------------------------- |
+| →（右箭头） | 提前结束当前 episode 或 reset，进入下一阶段。 |
+| ←（左箭头） | 取消当前 episode，并重新录制。                |
+| ESC          | 立即停止会话，编码视频，并上传数据集。        |
 
-  <h3>数据收集技巧</h3>
+:::tip
+假设你正在执行“将红色方块抓取并放入盒子”的任务：如果方块掉落或本次动作质量较差，可以先将机械臂操控至休息状态，然后按下左箭头键舍弃当前 episode；如果任务提前完成，也可以按下右箭头键跳过剩余等待时间，直接进入下一个 episode 的准备阶段。
 
-  <div className="tips-grid">
+在录制过程中合理使用方向键，有助于避免失败动作污染数据集，并提升整体录制效率。如需删除或修改已录制数据集，请参阅[数据集工具](/cn/lerobot_dataset_tool)。
+:::
+
+<h3>数据收集技巧</h3>
+
+<div className="tips-grid">
     <div><strong>任务建议</strong><span>在不同位置抓取物体并将其放入箱子中。</span></div>
     <div><strong>数据规模</strong><span>建议记录 ≥50 个 episode，例如 5 个位置 × 每个位置 10 个 episode。</span></div>
     <div><strong>保持一致</strong><span>固定摄像头，保持相同抓取行为，并确保目标物体始终可见。</span></div>
     <div><strong>逐步增加难度</strong><span>先录制可靠抓取，再加入位置变化、抓取方式变化或相机调整。</span></div>
   </div>
 
-  💡 **经验法则**：仅使用摄像头画面作为指导，只根据屏幕反馈的视频图像来控制机械臂完成任务。
+💡 **经验法则**：仅使用摄像头画面作为指导，只根据屏幕反馈的视频图像来控制机械臂完成任务。
 
-  如果你想深入了解什么是好的数据集，可以查看 Hugging Face 的[数据集博客文章](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset)。
+如果你想深入了解什么是好的数据集，可以查看 Hugging Face 的[数据集博客文章](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset)。
+
 </section>
 
 ## 可视化数据集
@@ -1610,7 +1612,7 @@ echo $HF_USER`}
     <p>将已录制 episode 回放到真实机械臂，检查数据与执行一致性。</p>
   </div>
 
-  <div className="safety-alert compact">
+<div className="safety-alert compact">
     <div className="safety-alert-icon">⚠️</div>
     <div className="safety-alert-content">
       <strong>运行前安全确认</strong>
@@ -1636,6 +1638,7 @@ echo $HF_USER`}
 此时，机器人应该做出与你遥操记录时一样的动作。
 
 这里，`dataset.root` 是指定数据集的物理路径，`dataset.repo_id` 是数据收集时自定义的名称。
+
 </section>
 
 ## 训练与评估
@@ -1647,7 +1650,7 @@ echo $HF_USER`}
     <p>使用 ACT、SmolVLA、Pi0、Pi0.5、GR00T、PEFT 和异步推理完成训练与部署。</p>
   </div>
 
-  <div className="safety-alert compact">
+<div className="safety-alert compact">
     <div className="safety-alert-icon">⚠️</div>
     <div className="safety-alert-content">
       <strong>运行前安全确认</strong>
@@ -2215,18 +2218,20 @@ LoRA 的学习率通常可以比全量微调更大一个量级（常见经验：
 
 关键的 `accelerate` 参数说明如下。
 
-| 参数 | 说明 |
-| --- | --- |
-| `--multi_gpu` | 启用多 GPU 训练。 |
-| `--num_processes=2` | 使用的 GPU 数量，通常等于 GPU 张数。 |
+
+| 参数                     | 说明                                                |
+| ------------------------ | --------------------------------------------------- |
+| `--multi_gpu`            | 启用多 GPU 训练。                                   |
+| `--num_processes=2`      | 使用的 GPU 数量，通常等于 GPU 张数。                |
 | `--mixed_precision=fp16` | 使用 fp16 混合精度；如果硬件支持，也可以使用 bf16。 |
 
 请注意，**bf16 需要硬件支持**，并非所有 GPU 都可以使用。
 
-| 精度类型 | 硬件支持情况 |
-| --- | --- |
-| fp16 | 几乎所有 NVIDIA GPU 均支持。 |
-| bf16 | 仅部分较新的 GPU 支持，如 Ampere 及更新架构。 |
+
+| 精度类型 | 硬件支持情况                                  |
+| -------- | --------------------------------------------- |
+| fp16     | 几乎所有 NVIDIA GPU 均支持。                  |
+| bf16     | 仅部分较新的 GPU 支持，如 Ampere 及更新架构。 |
 
 如果你的 GPU 不支持 bf16，请在 `accelerate` 配置中选择 fp16，或在命令行中显式指定 fp16。
 
@@ -2242,13 +2247,14 @@ LoRA 的学习率通常可以比全量微调更大一个量级（常见经验：
 
 单机多 GPU 的常见配置如下。
 
-| 配置项 | 建议选择 |
-| --- | --- |
-| Compute environment | This machine |
-| Number of machines | 1 |
-| Number of processes | 使用的 GPU 数量，通常等于 GPU 张数 |
-| GPU ids to use | 直接回车，表示使用所有 GPU |
-| Mixed precision | 优先选择 fp16；确认 GPU 支持 bf16 时也可选择 bf16 |
+
+| 配置项              | 建议选择                                          |
+| ------------------- | ------------------------------------------------- |
+| Compute environment | This machine                                      |
+| Number of machines  | 1                                                 |
+| Number of processes | 使用的 GPU 数量，通常等于 GPU 张数                |
+| GPU ids to use      | 直接回车，表示使用所有 GPU                        |
+| Mixed precision     | 优先选择 fp16；确认 GPU 支持 bf16 时也可选择 bf16 |
 
 完成配置后，可以直接使用以下命令进行训练。
 
@@ -2547,6 +2553,7 @@ macOS：
 
 在异步推理中，有两个同步推理没有的额外参数需要调整：
 
+
 | 参数                 | 建议初始值 | 说明                                                                                           |
 | -------------------- | ---------: | ---------------------------------------------------------------------------------------------- |
 | actions_per_chunk    |         50 | 策略一次输出多少动作。典型值：10-50。                                                          |
@@ -2583,7 +2590,6 @@ macOS：
 ></iframe>
 </div>
 
-
 训练可能需要几个小时。您将在 `outputs/train/act_so101_test/checkpoints` 目录中找到训练结果权重文件。
 
 要从某个训练结果权重文件恢复训练，下面是一个从 `act_so101_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
@@ -2604,7 +2610,7 @@ macOS：
     <p>这里集中整理串口、舵机、ffmpeg、数据集、相机与训练评估中最常见的问题。</p>
   </div>
 
-  <div className="notice-grid">
+<div className="notice-grid">
     <div className="notice-card">
       <strong>优先使用验证仓库</strong>
       <span>如果使用本文档教程，请 clone 推荐仓库 <code>https://github.com/Seeed-Projects/lerobot.git</code>。该仓库是经过验证的稳定版本。</span>
@@ -2615,213 +2621,208 @@ macOS：
     </div>
   </div>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>校准舵机 ID 时提示找不到 gripper motor</summary>
 
 <CodeBlock language="text">
 {`Motor 'gripper' was not found, Make sure it is connected`}
 </CodeBlock>
 
-    请仔细检查通信线是否与舵机连接正常，并确认电源电压正确。
-  </details>
+请仔细检查通信线是否与舵机连接正常，并确认电源电压正确。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>串口存在但无法连接 /dev/ttyACM0</summary>
 
 <CodeBlock language="text">
 {`Could not connect on port "/dev/ttyACM0"`}
 </CodeBlock>
 
-    如果通过 `ls /dev/ttyACM*` 可以看到 `ttyACM0`，通常是忘记给串口权限。可以运行：
-
+如果通过 `ls /dev/ttyACM*` 可以看到 `ttyACM0`，通常是忘记给串口权限。可以运行：
 <CodeBlock language="bash">
 {`sudo chmod 666 /dev/ttyACM*`}
 </CodeBlock>
   </details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>ffmpeg 报 No valid stream found</summary>
 
 <CodeBlock language="text">
 {`No valid stream found in input file. Is -1 of the desired media type?`}
 </CodeBlock>
 
-    请安装 ffmpeg 7.1.1：
-
+请安装 ffmpeg 7.1.1：
 <CodeBlock language="bash">
 {`conda install ffmpeg=7.1.1 -c conda-forge`}
 </CodeBlock>
 
-    <div className="image-frame">
-      <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="No valid stream error" />
-    </div>
-  </details>
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="No valid stream error" />
+</div>
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>读取舵机位置失败或总线无响应</summary>
 
 <CodeBlock language="text">
 {`ConnectionError: Failed to sync read 'Present_Position' on ids=[1,2,3,4,5,6] after 1 tries. [TxRxResult] There is no status packet!`}
 </CodeBlock>
 
-    请检查对应端口号的机械臂是否接通电源，并检查总线舵机数据线是否松动或脱落。通常哪个舵机灯不亮，就需要优先检查它前面的连接线。
-  </details>
+请检查对应端口号的机械臂是否接通电源，并检查总线舵机数据线是否松动或脱落。通常哪个舵机灯不亮，就需要优先检查它前面的连接线。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>校准时出现 Magnitude exceeds 2047</summary>
 
 <CodeBlock language="text">
 {`Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)`}
 </CodeBlock>
 
-    先对机械臂重新断电和上电，再次尝试校准。如果校准过程中 MAX 角度达到上万，也可以使用同样方法；如果仍然无效，则需要对相应舵机重新进行中位校准和 ID 写入。
-  </details>
+先对机械臂重新断电和上电，再次尝试校准。如果校准过程中 MAX 角度达到上万，也可以使用同样方法；如果仍然无效，则需要对相应舵机重新进行中位校准和 ID 写入。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>评估阶段提示 eval 文件夹已存在</summary>
 
 <CodeBlock language="text">
 {`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'`}
 </CodeBlock>
 
-    请先删除 `eval_` 开头的文件夹，然后再次运行评估程序。
-  </details>
+请先删除 `eval_` 开头的文件夹，然后再次运行评估程序。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>评估阶段提示 mean is infinity</summary>
 
 <CodeBlock language="text">
 {`mean is infinity. You should either initialize with stats as an argument or use a pretrained model`}
 </CodeBlock>
 
-    请确认 `--robot.cameras` 参数中的 `front`、`side` 等关键词与采集数据集时完全一致。
-  </details>
+请确认 `--robot.cameras` 参数中的 `front`、`side` 等关键词与采集数据集时完全一致。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>维修或更换零件后需要重新校准吗？</summary>
 
-    如果维修或更换过机械臂零件，请完全删除 `~/.cache/huggingface/lerobot/calibration/robots` 或 `~/.cache/huggingface/lerobot/calibration/teleoperators` 下的文件，并重新校准机械臂。否则可能沿用旧校准数据导致报错或运动异常。
-  </details>
+如果维修或更换过机械臂零件，请完全删除 `~/.cache/huggingface/lerobot/calibration/robots` 或 `~/.cache/huggingface/lerobot/calibration/teleoperators` 下的文件，并重新校准机械臂。否则可能沿用旧校准数据导致报错或运动异常。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>训练时间大概多久？</summary>
 
-    在 3060 8 GB 笔记本上训练 ACT 的 50 组数据大约需要 6 小时；在 4090 或 A100 上训练 50 组数据大约需要 2～3 小时。实际耗时会受到 batch size、显卡性能、数据集大小和视频读取速度影响。
-  </details>
+在 3060 8 GB 笔记本上训练 ACT 的 50 组数据大约需要 6 小时；在 4090 或 A100 上训练 50 组数据大约需要 2～3 小时。实际耗时会受到 batch size、显卡性能、数据集大小和视频读取速度影响。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>数据采集时有哪些稳定性要求？</summary>
 
-    数据采集过程中要保持摄像头位置、角度和环境光线稳定，并减少摄像头画面中的不稳定背景和行人。部署环境变化过大时，机械臂可能无法正常抓取。
-  </details>
+数据采集过程中要保持摄像头位置、角度和环境光线稳定，并减少摄像头画面中的不稳定背景和行人。部署环境变化过大时，机械臂可能无法正常抓取。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>采集命令可以中途暂停吗？</summary>
 
-    不建议中途手动暂停。`num_episodes` 要确保采集数据足够，因为数据采集结束后才会计算均值和方差，这些统计量是后续训练所必需的。
-  </details>
+不建议中途手动暂停。`num_episodes` 要确保采集数据足够，因为数据采集结束后才会计算均值和方差，这些统计量是后续训练所必需的。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>程序无法读取 USB 摄像头图像怎么办？</summary>
 
-    请确认 USB 摄像头没有接在 USB Hub 上。建议将 USB 摄像头直接接入设备，并优先使用 USB 3.0 接口，以确保图像传输速率稳定。
-  </details>
+请确认 USB 摄像头没有接在 USB Hub 上。建议将 USB 摄像头直接接入设备，并优先使用 USB 3.0 接口，以确保图像传输速率稳定。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>如何重新校准机械臂？</summary>
 
-    如果需要重新校准机械臂，有两种方案。
+如果需要重新校准机械臂，有两种方案。
 
-    **方案 1：删除本地校准文件后重新校准**
+**方案 1：删除本地校准文件后重新校准**
 
-    请完全删除 `~/.cache/huggingface/lerobot/calibration/robots` 或 `~/.cache/huggingface/lerobot/calibration/teleoperators` 下的文件，然后重新校准机械臂。否则可能会沿用旧校准数据，导致报错或运动异常。校准信息会存储在该目录下的 json 文件中。
+请完全删除 `~/.cache/huggingface/lerobot/calibration/robots` 或 `~/.cache/huggingface/lerobot/calibration/teleoperators` 下的文件，然后重新校准机械臂。否则可能会沿用旧校准数据，导致报错或运动异常。校准信息会存储在该目录下的 json 文件中。
 
-    **方案 2：在校准命令中选择重新校准**
+**方案 2：在校准命令中选择重新校准**
 
-    直接在终端输入校准机械臂的命令。如果机械臂曾经被校准过，终端会出现是否重新校准的提示：
-
+直接在终端输入校准机械臂的命令。如果机械臂曾经被校准过，终端会出现是否重新校准的提示：
 <CodeBlock language="text">
 {`Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration:`}
 </CodeBlock>
 
-    输入 `c` 并按下 **Enter** 会重新校准；直接按下 **Enter** 会沿用之前的校准数据。
-  </details>
+输入 `c` 并按下 **Enter** 会重新校准；直接按下 **Enter** 会沿用之前的校准数据。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>舵机 ID 错误、识别不到舵机或需要中位校准怎么办？</summary>
 
-    如果出现舵机 ID 错误、识别不到舵机、需要验证舵机是否正常，或需要将当前位置设为中位值 **2048**，可以使用 Seeed Studio SoARM 系列快捷校准工具。该工具支持 Windows、Ubuntu 和 macOS。
+如果出现舵机 ID 错误、识别不到舵机、需要验证舵机是否正常，或需要将当前位置设为中位值 **2048**，可以使用 Seeed Studio SoARM 系列快捷校准工具。该工具支持 Windows、Ubuntu 和 macOS。
 
-    <div className="hero-actions">
-      <a href="/cn/lerobot_steering_gear_debugging_tool">▶ 打开舵机调试工具使用教程</a>
-    </div>
-  </details>
+<div className="hero-actions">
+  <a href="/cn/lerobot_steering_gear_debugging_tool">▶ 打开舵机调试工具使用教程</a>
+</div>
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>Orbbec 相机提示 No Orbbec camera found</summary>
 
 <CodeBlock language="text">
 {`No Orbbec camera found for 'XXXX'`}
 </CodeBlock>
 
-    通常说明配置中的序列号与当前在线设备不一致。请先运行：
-
+通常说明配置中的序列号与当前在线设备不一致。请先运行：
 <CodeBlock language="bash">
 {`lerobot-find-cameras orbbec`}
 </CodeBlock>
 
-    确认实际 `serial` 后，再更新命令中的 `serial_number_or_name`。
-  </details>
+确认实际 `serial` 后，再更新命令中的 `serial_number_or_name`。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>Orbbec 相机等待帧超时怎么办？</summary>
 
 <CodeBlock language="text">
 {`TimeoutError: Timed out waiting for frame from <lerobot.cameras.orbbec.camera_orbbec.OrbbecDepthCamera object at ...>`}
 </CodeBlock>
 
-    如果已经增大 USBFS 缓存后仍然超时，可以先重新插拔 Orbbec 相机，再重新运行相机检测或遥操作命令。
-  </details>
+如果已经增大 USBFS 缓存后仍然超时，可以先重新插拔 Orbbec 相机，再重新运行相机检测或遥操作命令。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>macOS 使用 RealSense 时提示 failed to set power state</summary>
 
 <CodeBlock language="text">
 {`Error finding RealSense cameras: failed to set power state`}
 </CodeBlock>
 
-    可以尝试使用 `sudo` 权限运行相同命令。需要注意的是，在 macOS 中使用 Intel RealSense 摄像头并不稳定，建议优先在 Linux 环境中调试。
-  </details>
+可以尝试使用 `sudo` 权限运行相同命令。需要注意的是，在 macOS 中使用 Intel RealSense 摄像头并不稳定，建议优先在 Linux 环境中调试。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>数据采集时方向键或 ESC 没有反应怎么办？</summary>
 
-    如果键盘按下后没有反应，可能需要降低 `pynput` 版本，例如安装 1.6.8：
-
+如果键盘按下后没有反应，可能需要降低 `pynput` 版本，例如安装 1.6.8：
 <CodeBlock language="bash">
 {`pip install pynput==1.6.8`}
 </CodeBlock>
 
-    如果在 Linux 记录过程中右箭头、左箭头或 ESC 仍然无响应，请确认 `$DISPLAY` 环境变量已设置，并参考 [pynput 限制说明](https://pynput.readthedocs.io/en/latest/limitations.html)。
-  </details>
+如果在 Linux 记录过程中右箭头、左箭头或 ESC 仍然无响应，请确认 `$DISPLAY` 环境变量已设置，并参考 [pynput 限制说明](https://pynput.readthedocs.io/en/latest/limitations.html)。
+</details>
 
-  <details className="content-details">
+<details className="content-details">
     <summary>训练时报 TypeError: stack(): argument 'tensors' 怎么办？</summary>
 
 <CodeBlock language="text">
 {`TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Column`}
 </CodeBlock>
 
-    可以尝试安装指定版本的 `datasets`：
-
+可以尝试安装指定版本的 `datasets`：
 <CodeBlock language="bash">
 {`pip install datasets==2.19`}
 </CodeBlock>
   </details>
 
-  :::tip
-  如果仍遇到无法解决的软件或环境依赖问题，可以在 [LeRobot 平台](https://github.com/huggingface/lerobot) 或 [LeRobot Discord 频道](https://discord.gg/8TnwDdjFGU) 反馈。
-  :::
+:::tip
+如果仍遇到无法解决的软件或环境依赖问题，可以在 [LeRobot 平台](https://github.com/huggingface/lerobot) 或 [LeRobot Discord 频道](https://discord.gg/8TnwDdjFGU) 反馈。
+:::
+
 </section>
 
 ## 参考文档
@@ -2833,7 +2834,7 @@ macOS：
     <p>查看官方文档、开源项目和相关算法资料。</p>
   </div>
 
-  <div className="path-grid">
+<div className="path-grid">
     <a className="path-card" href="https://wiki.seeedstudio.com/cn/lerobot_so100m_new/" target="_blank" rel="noopener noreferrer"><strong>English Document</strong><span>Seeed Studio Wiki documentation.</span></a>
     <a className="path-card" href="https://github.com/TheRobotStudio/SO-ARM100" target="_blank" rel="noopener noreferrer"><strong>SO-ARM10x</strong><span>TheRobotStudio open-source robotic arm project.</span></a>
     <a className="path-card" href="https://github.com/huggingface/lerobot/tree/main" target="_blank" rel="noopener noreferrer"><strong>LeRobot</strong><span>Hugging Face robotics models, datasets, and tools.</span></a>
