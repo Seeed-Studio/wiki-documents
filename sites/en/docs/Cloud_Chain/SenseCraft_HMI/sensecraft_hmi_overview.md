@@ -1,7 +1,7 @@
 ---
 description: Introducing SenseCraft Seeedash, the human-computer interaction page platform built specifically for the reTerminal series.
 title: SenseCraft Seeedash Overview
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.webp
+image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft_hmi_overview
 sidebar_position: 1
 last_update:

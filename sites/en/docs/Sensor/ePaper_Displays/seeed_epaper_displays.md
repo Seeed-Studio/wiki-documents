@@ -1,7 +1,7 @@
 ---
 description: A complete overview of Seeed Studio's ePaper display product matrix, from integrated reTerminal E Series terminals to driver boards, DIY kits, and the application frameworks that power them.
 title: Seeed ePaper Displays
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.webp
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png
 slug: /seeed_epaper_displays
 sidebar_position: 1
 last_update:
