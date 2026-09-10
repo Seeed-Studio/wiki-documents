@@ -1,5 +1,5 @@
 ---
-description: Este artigo irá guiá-lo para começar rapidamente a usar o reTerminal E1002.
+description: Este artigo irá guiá-lo para começar rapidamente com o reTerminal E1002.
 title: Introdução ao reTerminal E1002
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /getting_started_with_reterminal_e1002
@@ -29,7 +29,7 @@ Se você quiser visualizar rapidamente os resultados do projeto ou testar o firm
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Gravador de Firmware 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
     </a>
 </div><br />
 :::
@@ -39,16 +39,16 @@ Recomendamos que você **[conclua a atualização de firmware do seu produto](#p
 :::
 
 :::danger Aviso sobre a vida útil da tela
-1. Se o seu reTerminal ficar inativo por muito tempo, você pode pressionar e segurar o botão verde no dispositivo por 5 segundos para limpar o conteúdo da tela (usando o firmware de fábrica), o que pode prevenir efetivamente sombras residuais e aumentar a vida útil da tela.
+1. Se o seu reTerminal estiver inativo por muito tempo, você pode pressionar e segurar o botão verde no dispositivo por 5 segundos para limpar o conteúdo da tela (usando o firmware de fábrica), o que pode efetivamente evitar sombra residual e aumentar a vida útil da tela.
 
-2. Sempre que possível, não mantenha uma mesma imagem exibida por um longo período de tempo (mais de 1 dia), pois isso pode criar uma imagem residual. Recomenda-se que a imagem da tela seja atualizada pelo menos uma vez por dia. Se o dispositivo não for usado por um longo tempo, é recomendável limpar o conteúdo exibido na tela do dispositivo.
+2. Sempre que possível, não mantenha uma mesma imagem na tela por um longo período de tempo (mais de 1 dia), pois isso pode criar uma imagem residual, sendo recomendado que a imagem da tela seja atualizada pelo menos uma vez por dia. Se o dispositivo não for usado por um longo tempo, é recomendável limpar o conteúdo exibido no dispositivo.
 
 3. Atualize a tela com a menor frequência possível ao usar e depurar o programa. Atualizar a tela em alta velocidade por um longo período de tempo também pode reduzir a vida útil da tela.
 :::
 
 ## Introdução
 
-O reTerminal E1002 é um display ePaper colorido de 7,3 polegadas, open-source e em cores completas, com excepcional duração de bateria de 3 meses. Alimentado por ESP32-S3, ele oferece suporte nativo à nossa plataforma de interface sem código SenseCraft HMI para criação fácil de dashboards, além de suportar Home Assistant, TRMNL E-ink dashboard, Arduino e ESP-IDF para desenvolvimento adicional. Com o display ePaper colorido completo E Ink® Spectra™ 6, é perfeito para porta-retratos digitais e visualização de dashboards coloridos.
+O reTerminal E1002 é um display ePaper colorido de 7,3 polegadas, open-source, com excepcional duração de bateria de 3 meses. Alimentado por ESP32-S3, ele oferece suporte nativo à nossa plataforma de UI sem código SenseCraft HMI para criação de dashboards sem esforço, além de suportar Home Assistant, TRMNL E-ink dashboard, Arduino e ESP-IDF para desenvolvimento adicional. Com o display ePaper colorido E Ink® Spectra™ 6, é perfeito para porta-retratos digitais e visualização de dashboards coloridos.
 
 ### Recursos
 
@@ -80,7 +80,7 @@ O reTerminal E1002 é um display ePaper colorido de 7,3 polegadas, open-source e
 		</tr>
 		<tr>
 			<td align="center"><strong>Display</strong></td>
-			<td align="center">7,3" Colorido Completo (E Ink® Spectra™ 6)</td>
+			<td align="center">7,3" Colorido (E Ink® Spectra™ 6)</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Resolução</strong></td>
@@ -131,38 +131,38 @@ O reTerminal E1002 é um display ePaper colorido de 7,3 polegadas, open-source e
 
 O hardware do reTerminal E1002 inclui:
 
-1. **Display ePaper colorido completo de 7,3 polegadas**: Tela colorida com resolução de 800×480
+1. **Display ePaper colorido de 7,3 polegadas**: Display colorido com resolução de 800×480
 2. **Botões**: Localizados na parte superior do dispositivo para uso manual da tela
 3. **Microfone**
 4. **Slot para cartão MicroSD**: Para armazenamento expansível
 5. **Interruptor de energia**: Localizado na parte traseira para ligar/desligar o dispositivo
 6. **LED de status**: Indicador de usuário (verde)
 7. **LED de energia**: Indicador de carregamento (vermelho)
-8. **Porta USB-C**: Para carregamento e atualização de firmware
+8. **Porta USB-C**: Para carregamento e atualizações de firmware
 9. **Porta de expansão**: Conector de expansão de 8 pinos fornecendo conexões VDD, GND, UART, I2C e GPIO
-10. **Inserções para montagem do suporte**: Porcas embutidas (furos para parafusos) na parte inferior traseira do dispositivo para fixar o suporte impresso em 3D
+10. **Inserções para montagem do suporte**: Porcas embutidas (furos para parafuso) na parte inferior traseira do dispositivo para fixar o suporte impresso em 3D
 
 ## Primeiros passos
 
 ### Preparação
 
-**Passo 1.** Desembale o seu reTerminal E1002 e verifique se todos os componentes estão incluídos:
+**Passo 1.** Desembale o seu reTerminal E1002 e certifique-se de que todos os componentes estão incluídos:
 
 - Dispositivo reTerminal E1002
 - Cabo USB-C
 - Guia de início rápido
 - Chave de fenda longa
 - Parafusos
-- Suporte de apoio impresso em 3D
+- Suporte impresso em 3D
 
 **Passo 2.** (Opcional) Instale o suporte impresso em 3D para posicionar o dispositivo na vertical:
 
-Localize o suporte impresso em 3D incluído na embalagem. Posicione o suporte na área de montagem designada na parte inferior traseira do reTerminal E1002, onde estão localizadas as porcas embutidas. Use uma chave de fenda longa para fixar o suporte ao dispositivo apertando os parafusos nas porcas embutidas na parte traseira do reTerminal E1002. Depois de bem fixado, coloque o reTerminal E1002 sobre uma superfície plana, onde o suporte o manterá em posição vertical.
+Localize o suporte impresso em 3D incluído na embalagem. Posicione o suporte na área de montagem designada na parte inferior traseira do reTerminal E1002, onde as porcas embutidas estão localizadas. Use uma chave de fenda longa para fixar o suporte ao dispositivo apertando os parafusos nas porcas embutidas na parte traseira do reTerminal E1002. Depois de bem fixado, coloque o reTerminal E1002 em uma superfície plana, onde o suporte irá mantê-lo em posição vertical.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::note
-O suporte oferece um ângulo de visualização fixo e não pode ser ajustado. Essa posição fixa foi projetada para oferecer visibilidade ideal na maioria dos cenários de uso.
+O suporte oferece um ângulo de visualização fixo e não pode ser ajustado. Esse posicionamento fixo foi projetado para oferecer visibilidade ideal na maioria dos cenários de uso.
 :::
 
 **Passo 3.** (Opcional) Insira um cartão microSD se você planeja usar o dispositivo como porta-retratos digital ou se precisar de armazenamento adicional.
@@ -170,7 +170,7 @@ O suporte oferece um ângulo de visualização fixo e não pode ser ajustado. Es
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-O display ePaper da linha reTerminal E Series suporta apenas cartões MicroSD de até 32GB no formato Fat32.  
+O display ePaper da linha reTerminal E Series suporta apenas cartões MicroSD de até 32GB em formato Fat32.  
 O cartão SD de 32GB vem formatado como exFAT por padrão. Após formatá-lo para FAT32, ele pode ser montado com sucesso e usado para armazenar imagens.
 :::
 
@@ -199,7 +199,7 @@ A maioria das distribuições Linux modernas inclui os drivers necessários por 
 </TabItem>
 </Tabs>
 
-### Ligar o dispositivo
+### Ligar
 
 **Passo 1.** Ligue o dispositivo deslizando o interruptor de energia para a posição **ON**. O interruptor de energia está localizado na parte traseira da unidade.
 
@@ -211,10 +211,10 @@ A maioria das distribuições Linux modernas inclui os drivers necessários por 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/17.png" style={{width:600, height:'auto'}}/></div><br />
 
 
-**Passo 3.** O LED verde de usuário acenderá por aproximadamente 30 segundos, indicando que o dispositivo está ligado e inicializando. Após 30 segundos sem operação do dispositivo, para garantir a energia, o dispositivo entrará automaticamente no modo de suspensão e o LED será desligado automaticamente.
+**Passo 3.** O LED verde de usuário acenderá por aproximadamente 30 segundos, indicando que o dispositivo está ligado e inicializando. Após 30 segundos sem operação do dispositivo, para garantir a energia, o dispositivo entrará automaticamente em modo de suspensão e o LED será desligado automaticamente.
 
 :::tip
-Portanto, precisamos concluir as próximas etapas de configuração da rede durante esse período. Quando o dispositivo entra em suspensão, você não conseguirá encontrar o hotspot do dispositivo. Se isso acontecer, você pode acordar o dispositivo clicando uma vez no botão verde de Wake do dispositivo.
+Portanto, precisamos concluir as próximas etapas de configuração da rede durante esse período. Quando o dispositivo entra em suspensão, você não conseguirá encontrar o hotspot do dispositivo. Se isso acontecer, você pode despertar o dispositivo clicando uma vez no botão verde Wake do dispositivo.
 :::
 
 ### Configuração de rede
@@ -222,7 +222,7 @@ Portanto, precisamos concluir as próximas etapas de configuração da rede dura
 <Tabs>
 <TabItem value="Network Setup via PC" label="Configuração de rede via PC" default>
 
-**Passo 1.** Conecte-se ao ponto de acesso Wi-Fi do dispositivo a partir do seu smartphone ou computador. O nome do AP aparecerá na tela (nenhuma senha é necessária). As credenciais da rede são `reTerminal E1002-{MAC Adress}`.
+**Passo 1.** Conecte-se ao ponto de acesso Wi-Fi do dispositivo a partir do seu smartphone ou computador. O nome do AP aparecerá na tela (sem necessidade de senha). As credenciais da rede são `reTerminal E1002-{MAC Adress}`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:400, height:'auto'}}/></div><br />
 
@@ -230,7 +230,7 @@ Portanto, precisamos concluir as próximas etapas de configuração da rede dura
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/6.png" style={{width:700, height:'auto'}}/></div><br />
 
-**Passo 3.** Selecione a sua rede Wi‑Fi local e insira a senha, depois clique em "Connect".
+**Passo 3.** Selecione sua rede Wi‑Fi local e insira a senha, depois clique em "Connect".
 
 :::note
 O display ePaper da reTerminal E Series suporta apenas redes Wi‑Fi de 2,4 GHz, não 5 GHz ou outras bandas.
@@ -268,7 +268,7 @@ O display ePaper da reTerminal E Series suporta apenas redes Wi‑Fi de 2,4 GHz,
 
 Este método usa o aplicativo móvel SenseCraft para configurar a rede do dispositivo e adicioná‑lo à sua conta SenseCraft via Bluetooth.
 
-Primeiro, baixe o SenseCraft App. Você pode encontrá‑lo pesquisando por "SenseCraft" na Google Play Store ou na Apple App Store. Como alternativa, você pode baixá‑lo a partir deste site.
+Primeiro, baixe o SenseCraft App. Você pode encontrá‑lo pesquisando por "SenseCraft" na Google Play Store ou Apple App Store. Como alternativa, você pode baixá‑lo a partir deste site.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
@@ -296,7 +296,7 @@ O dispositivo só pode ser configurado por meio de uma rede Wi‑Fi de 2,4G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/154.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Passo 5.** O aplicativo enviará as credenciais de Wi‑Fi para o dispositivo e o adicionará à sua conta SenseCraft. Uma mensagem "Device added successfully" aparecerá ao concluir. Agora você pode tocar em **Start exploring!** para continuar.
+**Passo 5.** O aplicativo enviará as credenciais de Wi‑Fi para o dispositivo e o adicionará à sua conta SenseCraft. Uma mensagem "Device added successfully" aparecerá ao final. Agora você pode tocar em **Start exploring!** para continuar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/155.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -304,7 +304,7 @@ O dispositivo só pode ser configurado por meio de uma rede Wi‑Fi de 2,4G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Passo 7.** Você pode tocar no dispositivo na lista para ver a página de **Device Detail**. A partir daí, é possível gerenciar o dispositivo e enviar fotos. Para um design de dashboard e canvas mais complexo, será solicitado que você use a versão em navegador web do SenseCraft.
+**Passo 7.** Você pode tocar no dispositivo na lista para visualizar sua página de **Device Detail**. A partir daí, é possível gerenciar o dispositivo e enviar fotos. Para um design de dashboard e canvas mais complexo, será solicitado que você use a versão em navegador web do SenseCraft.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -329,7 +329,7 @@ Você também pode verificar manualmente a versão do firmware a qualquer moment
 
 1. **Select your device** — conecte o reTerminal E1002 ao computador por meio do cabo USB‑C, certifique‑se de que o interruptor de energia esteja **ON**, depois clique em **Select** e escolha o seu dispositivo na lista.
 
-2. **Select firmware** — escolha o firmware mais recente nas opções do menu suspenso de versões.
+2. **Select firmware** — escolha o firmware mais recente no menu suspenso de versões.
 
 3. **Flash** — clique em **Flash** e aguarde a conclusão da atualização. Ative **Full Flash** somente se quiser redefinir o dispositivo para o estado de fábrica (todos os dados, configurações e designs serão apagados).
 
@@ -388,7 +388,7 @@ O botão de atualização na parte superior do dispositivo possui várias funç�
 
 ### Botões de Navegação
 
-Os botões esquerdo e direito permitem navegar entre várias páginas se o seu dashboard contiver mais de uma página:
+Os botões esquerdo e direito permitem que você navegue entre várias páginas se o seu dashboard contiver mais de uma página:
 
 - **Botão Esquerdo**: Navega para a página anterior
 
@@ -402,7 +402,7 @@ Se você precisar se conectar a uma rede Wi-Fi diferente:
 
 **Passo 1.** Pressione e segure ambos os botões de navegação (esquerdo e direito) simultaneamente por 2 segundos.
 
-**Passo 2.** O dispositivo entrará no modo de configuração de Wi-Fi e você poderá seguir novamente as etapas de [Configuração de Rede](#configuração-de-rede) para se conectar a uma nova rede.
+**Passo 2.** O dispositivo entrará no modo de configuração de Wi-Fi, e você poderá seguir novamente as etapas de [Configuração de Rede](#Configuração-de-Rede) para se conectar a uma nova rede.
 
 ### Indicadores LED
 
@@ -415,11 +415,11 @@ Se você precisar se conectar a uma rede Wi-Fi diferente:
 
 ### Funcionamento com Bateria
 
-Ao operar com energia da bateria:
+Ao operar com alimentação por bateria:
 
 - O dispositivo entrará automaticamente em modo de baixo consumo entre as atualizações
 
-- A vida útil da bateria depende da frequência de atualização (normalmente 3 meses com carga completa usando as configurações padrão)
+- A duração da bateria depende da frequência de atualização (normalmente 3 meses com carga completa usando as configurações padrão)
 
 - O dispositivo exibirá um ícone de bateria fraca no canto superior direito quando o nível da bateria estiver abaixo de 20%
 
@@ -507,16 +507,16 @@ O conector de expansão de 8 pinos (J2) possui a seguinte pinagem:
 
 ### P1: O Dispositivo Não Liga
 
-- Certifique-se de que o interruptor de energia esteja na posição ON
+- Certifique-se de que o interruptor de alimentação esteja na posição ON
 - Conecte o cabo USB-C para carregar o dispositivo
 - Verifique se o LED vermelho está sempre ligado (indicando carregamento)
-- Se estiver usando energia da bateria, certifique-se de que a bateria esteja devidamente conectada e carregada
+- Se estiver usando alimentação por bateria, certifique-se de que a bateria esteja devidamente conectada e carregada
 
 ### P2: Não Consigo Conectar ao Wi-Fi
 
-- Verifique se você está inserindo a senha correta do Wi-Fi
+- Verifique se você está digitando a senha correta do Wi-Fi
 - Certifique-se de que sua rede Wi-Fi esteja operacional
-- Verifique se o seu roteador Wi-Fi suporta redes de 2,4GHz (5GHz não é suportado)
+- Verifique se o seu roteador Wi-Fi oferece suporte a redes de 2,4GHz (5GHz não é suportado)
 - Tente posicionar o dispositivo mais próximo do seu roteador Wi-Fi
 
 ### P3: Tela Não Atualiza
@@ -529,11 +529,11 @@ O conector de expansão de 8 pinos (J2) possui a seguinte pinagem:
 
 ### P4: Conexão de Rede Perdida
 
-- O dispositivo tentará automaticamente reconectar-se a redes conhecidas
+- O dispositivo tentará automaticamente se reconectar às redes conhecidas
 - Quando reconectado, o ícone de desconexão do Wi-Fi desaparecerá
-- Se não conseguir reconectar, siga o procedimento de Redefinição de Rede acima
+- Se não conseguir se reconectar, siga o procedimento de Redefinição de Rede acima
 
-### P5: Não Consigo Encontrar a Porta Serial (COM) no macOS
+### P5: Não é Possível Encontrar a Porta Serial (COM) no macOS
 
 Se o seu Mac não reconhecer o reTerminal via USB, siga este guia compacto para instalar o driver CH340/CH340K:
 
@@ -555,7 +555,7 @@ Abra o app **CH34xVCPDriver** a partir do Launchpad, clique em **Install**, depo
 </div>
 
 **Passo 3. Conectar e Verificar**
-Certifique-se de que o **interruptor de energia do dispositivo esteja em ON** e use um **cabo USB-C de dados** (não apenas de carregamento). Abra o Terminal e execute:
+Certifique-se de que o **interruptor de alimentação do dispositivo esteja em ON** e use um **cabo USB-C de dados** (não apenas de carregamento). Abra o Terminal e execute:
 ```bash
 ls /dev/tty.wch*
 # Expected output: /dev/tty.wchusbserialxxx
@@ -573,10 +573,10 @@ Se você perceber que o dispositivo não está carregando, tente substituir o ca
 - [Esquemático do reTerminal E1002 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004321_reTerminal_E1002_V1_2_SCH_251120.pdf)
 - [Datasheet do ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [Documentação da Plataforma SenseCraft HMI](https://wiki.seeedstudio.com/pt-br/sensecraft_hmi_overview)
-- [Arquivo STP do modelo 3D geral do exterior](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_E1001_E1002_3D.stp)
+- [Modelo 3D do Gabinete do reTerminal E1002 (STP)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_E1001_E1002_3D.stp)
 <!-- - [GitHub Repository](/pt-br/getting_started_with_reterminal_e1002) -->
 
-## Suporte Técnico & Discussão sobre o Produto
+## Suporte Técnico e Discussão sobre o Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

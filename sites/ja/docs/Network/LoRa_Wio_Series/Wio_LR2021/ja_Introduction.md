@@ -147,6 +147,8 @@ Wio-LR2021 はアプリケーションプロセッサを内蔵しない純粋な
 
 - **[ZIP]** [Wio-LR2021 モジュール Allegro ライブラリ](https://files.seeedstudio.com/wiki/Wio-LR2021/res/allegro-library.zip)
 
+- **[LINK]** [Semtech の LoRa USP™ ファームウェアプラットフォーム](https://github.com/Lora-net/usp)
+
 ## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルをご用意しています。

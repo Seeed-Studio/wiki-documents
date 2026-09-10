@@ -12,15 +12,16 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 08/13/2026
+  date: 08/28/2026
   author: haochen
 createdAt: '2026-04-24'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-28'
 url: https://wiki.seeedstudio.com/es/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import J601DemoGrid from '@site/src/components/jetson/J601DemoGrid';
 
 # Introducción a reComputer Robotics J601
 
@@ -28,7 +29,7 @@ import TabItem from '@theme/TabItem';
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg"/>
 </div>
 
-La reComputer J601 es una placa carrier de edge AI compacta pero potente para Jetson AGX Thor, que ofrece hasta 2070 TFLOPS. Diseñada para desarrollo y producción, incorpora M.2 Key E/M/B, 4x 10Gb RJ45, 4×USB 3.2, HDMI 2.1, 8×GMSL y varias E/S, garantizando una integración fluida. Puede servir como el cerebro de un humanoide. Al ser compatible con frameworks de LLM y Physical AI como NVIDIA Isaac, Hugging Face, PyTorch y ROS2/1, conecta la IA con la robótica. Con un procesamiento en tiempo real optimizado, ejecuta visión por IA, transformers y modelos multimodales, desbloqueando IA avanzada para dispositivos de borde.
+La reComputer J601 es una placa carrier de IA de borde compacta pero potente para Jetson AGX Thor, que ofrece hasta 2070 TFLOPS. Diseñada para desarrollo y producción, incorpora M.2 Key E/M/B, 4x 10Gb RJ45, 4×USB 3.2, HDMI 2.1, 8×GMSL y varias E/S, garantizando una integración fluida. Puede servir como el cerebro de un humanoide. Al ser compatible con frameworks de LLM y Physical AI como NVIDIA Isaac, Hugging Face, PyTorch y ROS2/1, conecta la IA con la robótica. Con un procesamiento en tiempo real optimizado, ejecuta visión por IA, transformers y modelos multimodales, desbloqueando IA avanzada para dispositivos de borde.
 
 ## Características
 
@@ -37,7 +38,7 @@ La reComputer J601 es una placa carrier de edge AI compacta pero potente para Je
 - Hasta **4x 10GbE RJ45** puertos
 - **4x USB 3.2 Type-A** puertos de hasta 10Gbps
 - Salida de pantalla **HDMI 2.1**
-- **M.2 Key M** para SSD PCIe Gen 4 NVMe 2280
+- **M.2 Key M** para SSD NVMe 2280 PCIe Gen 4
 - **M.2 Key E** para módulos Wi‑Fi M.2 2230
 - **M.2 Key B** para módulos 4G/5G
 - Hasta **8x cámaras GMSL2** mediante dos conectores Mini-Fakra y placas de extensión GMSL
@@ -72,7 +73,7 @@ La reComputer J601 es una placa carrier de edge AI compacta pero potente para Je
     </tr>
     <tr>
       <td>M.2 Key M</td>
-      <td>1x M.2 Key M para SSD PCIe Gen 4 NVMe 2280</td>
+      <td>1x M.2 Key M para SSD NVMe 2280 PCIe Gen 4</td>
     </tr>
     <tr>
       <td>M.2 Key E</td>
@@ -100,7 +101,7 @@ La reComputer J601 es una placa carrier de edge AI compacta pero potente para Je
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x header RTC de 2 pines</td>
+      <td>1x cabecera RTC de 2 pines</td>
     </tr>
     <tr>
       <td>LEDs</td>
@@ -158,7 +159,7 @@ Aquí mostraremos cómo flashear JetPack en un SSD NVMe conectado a la reCompute
 - Al menos 220 GB de almacenamiento libre en el PC host
 
 :::info
-Recomendamos usar un host físico con Ubuntu en lugar de una máquina virtual. Seeed Jetson DevelopTool también es compatible con Windows a través de WSL2, pero un host nativo con Ubuntu ofrece la experiencia de flasheo más fiable.
+Recomendamos utilizar un host físico con Ubuntu en lugar de una máquina virtual. Seeed Jetson DevelopTool también es compatible con Windows a través de WSL2, pero un host nativo con Ubuntu ofrece la experiencia de flasheo más fiable.
 
 <table style={{textAlign: 'center'}}>
   <tbody>
@@ -182,7 +183,7 @@ Recomendamos usar un host físico con Ubuntu en lugar de una máquina virtual. S
 
 :::
 
-### Elegir un método de flasheo
+### Elige un método de flasheo
 
 Selecciona a continuación el flujo de trabajo gráfico de Seeed Jetson DevelopTool o el flujo de trabajo por línea de comandos.
 
@@ -212,7 +213,7 @@ Seeed Jetson DevelopTool proporciona un flujo de trabajo gráfico guiado que des
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_08.jpg"/></div>
 
-**Paso 3.** Haz clic en **Detect Device**. Confirma que se detecta el módulo Jetson conectado (por ejemplo, **AGX Thor T5000**) y luego haz clic en **Next**.
+**Paso 3.** Haz clic en **Detect Device**. Confirma que el módulo Jetson conectado se detecta (por ejemplo, **AGX Thor T5000**) y luego haz clic en **Next**.
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_09.jpg"/></div>
 
@@ -220,7 +221,7 @@ Seeed Jetson DevelopTool proporciona un flujo de trabajo gráfico guiado que des
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_10.jpg"/></div>
 
-**Paso 5.** Haz clic en **Start Flash** y espera hasta que la interfaz indique que el flasheo ha finalizado. No desconectes la fuente de alimentación ni el cable USB durante este proceso.
+**Paso 5.** Haz clic en **Start Flash** y espera hasta que la interfaz indique que el flasheo se ha completado. No desconectes la fuente de alimentación ni el cable USB durante este proceso.
 
 :::caution
 El flasheo borra los datos del SSD NVMe de destino. Haz una copia de seguridad de los datos importantes antes de comenzar.
@@ -280,7 +281,7 @@ Descarga y flashea la imagen de JetPack que coincida con el módulo Jetson de tu
 El archivo de imagen de JetPack es grande y puede tardar alrededor de 60 minutos en descargarse. Espera a que la descarga termine antes de extraer el archivo.
 :::
 
-Para verificar el firmware descargado, ejecuta `sha256sum <file>` en el host con Ubuntu y compara el resultado con el valor SHA256 de la tabla.
+Para verificar el firmware descargado, ejecuta `sha256sum <file>` en el host Ubuntu y compara el resultado con el valor SHA256 de la tabla.
 
 #### Entrar en modo Force Recovery
 
@@ -294,7 +295,7 @@ Antes de flashear, asegúrate de que la placa esté en modo Force Recovery.
 
 **Paso 2.** Mantén presionado el botón **RECOVERY**.
 
-**Paso 3.** Conecta la fuente de alimentación (19V a 48V CC a través de XT30).
+**Paso 3.** Conecta la fuente de alimentación (19V a 48V DC a través de XT30).
 
 **Paso 4.** Suelta el botón **RECOVERY** después de dos segundos.
 
@@ -378,13 +379,13 @@ Para verificar el firmware descargado, ejecuta `sha256sum <file>` en el host Ubu
 Antes de flashear, asegúrate de que la placa esté en modo Force Recovery.
 :::
 
-**Paso 1.** Conecta el PC host con Ubuntu al **puerto de flasheo USB 3.0 Tipo C** usando un cable de datos USB Tipo C.
+**Paso 1.** Conecta el PC host con Ubuntu al **puerto de flasheo USB 3.0 Type-C** usando un cable de datos USB Type-C.
 
 <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_03.jpg"/></div>
 
 **Paso 2.** Mantén presionado el botón **RECOVERY**.
 
-**Paso 3.** Conecta la fuente de alimentación (19V a 48V CC a través de XT30).
+**Paso 3.** Conecta la fuente de alimentación (19V a 48V DC a través de XT30).
 
 **Paso 4.** Suelta el botón **RECOVERY** después de dos segundos.
 
@@ -422,7 +423,7 @@ El comando de flasheo suele tardar de 2 a 10 minutos. La siguiente salida indica
 
 </Tabs>
 
-⚙️ **Todos los archivos `.dts` y demás código fuente de las carrier boards Jetson de Seeed se pueden descargar desde** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra).
+⚙️ **Todos los archivos `.dts` y demás código fuente de las placas carrier Jetson de Seeed se pueden descargar desde** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra).
 
 </TabItem>
 
@@ -432,16 +433,24 @@ El comando de flasheo suele tardar de 2 a 10 minutos. La siguiente salida indica
 Completa la **Configuración del sistema** según tus necesidades después del primer arranque.
 :::
 
+Para un uso detallado de las interfaces, consulta [Uso de interfaces de hardware de Robotics J601](/es/recomputer_jetson_robotics_j601_interfaces_usage).
+
+## ¿Qué puedes hacer con J601?
+
+Después de flashear JetPack, explora los wikis de demostración a continuación para ver qué puedes construir en reComputer Robotics J601. Estas tarjetas se generan automáticamente a partir de wikis publicados de **Application** de Jetson y **Other Devices** que mencionan **J601** o **Jetson Thor**.
+
+<J601DemoGrid />
+
 ## Recursos
 
-- [Hoja de datos de la carrier board reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_J601_datasheet.pdf)
-- [Esquemático de la carrier board reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20J601%20Carrier%20Board_V1.0_SCH_260612.pdf)
+- [Hoja de datos de la placa carrier reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_J601_datasheet.pdf)
+- [Esquemático de la placa carrier reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20J601%20Carrier%20Board_V1.0_SCH_260612.pdf)
 - [Archivo 3D de reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_J601.stp)
 - [Catálogo de productos Seeed NVIDIA Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Casos de éxito de Seeed NVIDIA Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson AGX One Pager](https://files.seeedstudio.com/wiki/reComputer-Jetson/seeed_jetson_agx_new_series.pdf)
+- [Hoja informativa Seeed Jetson AGX](https://files.seeedstudio.com/wiki/reComputer-Jetson/seeed_jetson_agx_new_series.pdf)
 - [Código fuente del BSP Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
-- [Página de producto de la carrier board reComputer J601](https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html)
+- [Página de producto de la placa carrier reComputer J601](https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html)
 
 ## Soporte técnico
 

@@ -1,6 +1,6 @@
 ---
-description: Livro de receitas de display ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - integração com Home Assistant, primeiro dashboard, configuração de Wi‑Fi, firmware pré‑compilado em ZIP e exemplos de desenho em ePaper.
-title: Livro de Receitas ESPHome - Noções Básicas de Display (reTerminal E Series)
+description: cookbook de display ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - integração com Home Assistant, primeiro dashboard, configuração de Wi‑Fi, firmware pré‑compilado em ZIP e exemplos de desenho em ePaper.
+title: Cookbook ESPHome - Noções Básicas de Display (reTerminal E Series)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
 aliases:
@@ -19,10 +19,10 @@ url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Livro de Receitas ESPHome - Noções Básicas de Display: reTerminal E Series
+# Cookbook ESPHome - Noções Básicas de Display: reTerminal E Series
 
 :::tip Leia primeiro o guia principal do ESPHome
-Esta página é o **livro de receitas de display do ESPHome específico para a reTerminal E Series**. O boilerplate compartilhado — escolher um caminho de gravação, o esqueleto genérico de YAML, conectar ao Home Assistant — está em **[Trabalhar com ESPHome](/pt-br/epaper_work_with_esphome)**. Dê uma olhada nele primeiro se você é novo em ESPHome no ePaper da Seeed. Para botões, buzzer, LED, bateria, SHT4x e deep sleep, consulte o [livro de receitas de E/S, bateria, toque e baixo consumo](/pt-br/reterminal_e10xx_with_esphome_advanced). Para RTC, detecção de cartão microSD e configuração de microfone, consulte o [livro de receitas de RTC, cartão SD e microfone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone).
+Esta página é o **cookbook de display do ESPHome específico para a reTerminal E Series**. O boilerplate compartilhado — escolher um caminho de gravação, o esqueleto genérico de YAML, conectar ao Home Assistant — está em **[Trabalhar com ESPHome](/pt-br/epaper_work_with_esphome)**. Dê uma olhada nele primeiro se você é novo em ESPHome no ePaper da Seeed. Para botões, buzzer, LED, bateria, SHT4x e deep sleep, consulte o [cookbook de E/S, bateria, toque e baixo consumo](/pt-br/reterminal_e10xx_with_esphome_advanced). Para RTC, detecção de cartão microSD e configuração de microfone, consulte o [cookbook de RTC, cartão SD e microfone](/pt-br/reterminal_e10xx_with_esphome_rtc_sd_microphone).
 :::
 
 :::tip Gere YAML do ESPHome ou grave demos no navegador
@@ -92,7 +92,7 @@ Antes de começar o conteúdo do tutorial deste artigo, você pode precisar ter 
 ### Materiais necessários
 
 :::tip Modelos compatíveis
-Este livro de receitas abrange **reTerminal E1001, E1002, E1003 e E1004**. Escolha a aba correspondente em cada exemplo para o seu dispositivo. E1003 e E1004 exigem **ESPHome 2026.7.0 ou posterior**.
+Este cookbook abrange **reTerminal E1001, E1002, E1003 e E1004**. Escolha a aba correspondente em cada exemplo para o seu dispositivo. E1003 e E1004 exigem **ESPHome 2026.7.0 ou posterior**.
 :::
 
 <div class="table-center">
@@ -169,7 +169,7 @@ Recomendamos usar o Home Assistant Green como host do Home Assistant para este t
 
 ### Gere seu primeiro YAML do ESPHome (recomendado)
 
-Antes de copiar os trechos do livro de receitas abaixo, você pode montar uma configuração completa e correspondente ao dispositivo em um só lugar:
+Antes de copiar os trechos do cookbook abaixo, você pode montar uma configuração completa e correspondente ao dispositivo em um só lugar:
 
 **Passo 1.** Abra o **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** no Chrome ou Edge para desktop.
 

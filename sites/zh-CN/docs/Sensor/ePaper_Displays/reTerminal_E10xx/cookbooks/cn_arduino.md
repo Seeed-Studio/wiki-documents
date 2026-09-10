@@ -1,6 +1,6 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino 菜谱——使用 Seeed_GFX 和 GxEPD2 库从 Arduino 驱动电子纸显示屏，包括 Hello World 示例，以及在 E1001 上实现 4 级灰度、在 E1003 上实现 16 级灰度。
-title: Arduino 菜谱：电子纸显示屏 (reTerminal E 系列)
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino cookbook——使用 Seeed_GFX 和 GxEPD2 库从 Arduino 驱动电子纸显示屏，包括 Hello World 示例，以及在 E1001 上实现 4 级灰度、在 E1003 上实现 16 级灰度。
+title: Arduino Cookbook：电子纸显示屏 (reTerminal E 系列)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
@@ -15,7 +15,7 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino 菜谱：电子纸显示屏 (reTerminal E 系列)
+# Arduino Cookbook：电子纸显示屏 (reTerminal E 系列)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/244.png" style={{width:650, height:'auto'}}/></div>
 
@@ -30,14 +30,14 @@ import TabItem from '@theme/TabItem';
 :::
 
 :::tip 在找硬件外设相关内容？
-本页重点介绍如何在 Arduino 中**驱动电子纸屏幕**。如果你想使用板载 LED、蜂鸣器、按键、SHT4x 传感器、电池电量监测或 microSD 卡槽，请前往 **[Arduino 菜谱：板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)**。关于 RTC、低功耗模式、板载麦克风和电容触摸绘图，请参阅 **[Arduino 菜谱：RTC、低功耗、音频与触摸](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)**。
+本页重点介绍如何在 Arduino 中**驱动电子纸屏幕**。如果你想使用板载 LED、蜂鸣器、按键、SHT4x 传感器、电池电量监测或 microSD 卡槽，请前往 **[Arduino Cookbook：板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)**。关于 RTC、低功耗模式、板载麦克风和电容触摸绘图，请参阅 **[Arduino Cookbook：RTC、低功耗、音频与触摸](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)**。
 
 通用的样板内容——Arduino IDE 配置、ESP32 开发板包、安装 `Seeed_GFX`、生成 `driver.h`——也都在 **[使用 Arduino 进行开发](https://wiki.seeedstudio.com/cn/epaper_work_with_arduino)** 中。如果你是第一次在 Seeed 电子纸上使用 Arduino，建议先快速浏览那一页。
 :::
 
 ## 介绍
 
-reTerminal E 系列是 Seeed Studio 的工业 HMI 产品线，基于 XIAO ESP32-S3，集成电子纸显示屏。本菜谱将逐步讲解在屏幕上渲染文本、图形和图像所需的一切内容：
+reTerminal E 系列是 Seeed Studio 的工业 HMI 产品线，基于 XIAO ESP32-S3，集成电子纸显示屏。本 cookbook 将逐步讲解在屏幕上渲染文本、图形和图像所需的一切内容：
 
 - E1001 / E1002 / E1003 / E1004 的硬件概览与购买链接。
 - 四款型号通用的 Arduino IDE 环境配置（XIAO_ESP32S3 开发板、OPI PSRAM）。

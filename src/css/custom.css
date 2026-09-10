@@ -2284,3 +2284,59 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 .hidden-sidebar-item {
   display: none !important;
 }
+
+/* ------------------------------------------------------------------ */
+/* ReSpeaker FAQ question callouts                                     */
+/* Scoped strictly to the generated product FAQ pages (wrapper class   */
+/* emitted by scripts/respeaker-faq/pipeline.mjs renderProductPage).   */
+/* No global h3 selector is used; all other docs keep their styles.    */
+/* Dark theme is the visual priority; a readable light fallback is     */
+/* provided. Supports widths down to 320px.                            */
+/* ------------------------------------------------------------------ */
+
+/* Light-theme fallback: normal-contrast card, darker lime accents */
+.respeaker-faq-page h3 {
+	position: relative;
+	margin: 1.75rem 0 0.75rem;
+	padding: 0.7rem 0.9rem 0.85rem;
+	border: 1px solid rgba(96, 126, 96, 0.45);
+	border-left: 6px solid #79a314;
+	border-radius: 9px;
+	background: rgba(244, 250, 242, 0.9);
+	color: #1d4700;
+	font-weight: 700;
+	font-size: clamp(1.02rem, 1rem + 0.6vw, 1.4rem);
+	line-height: 1.5;
+	overflow: hidden;
+}
+
+.respeaker-faq-page h3::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 3px;
+	border-radius: 0 0 9px 9px;
+	background: linear-gradient(90deg, rgba(121, 163, 20, 0.7), rgba(121, 163, 20, 0.12));
+}
+
+/* Dark theme (visual priority): near-black translucent card, bright lime */
+[data-theme='dark'] .respeaker-faq-page h3 {
+	border-color: rgba(124, 140, 124, 0.35);
+	border-left-color: #b6f30d;
+	background: rgba(11, 13, 11, 0.62);
+	color: #b6f30d;
+}
+
+[data-theme='dark'] .respeaker-faq-page h3::after {
+	background: linear-gradient(90deg, rgba(182, 243, 13, 0.85), rgba(182, 243, 13, 0.15));
+}
+
+/* Narrow viewports (down to 320px): smaller padding/icon/font, no clipping */
+@media (max-width: 480px) {
+	.respeaker-faq-page h3 {
+		padding: 0.6rem 0.65rem 0.8rem;
+		font-size: clamp(0.98rem, 0.9rem + 1vw, 1.15rem);
+	}
+}

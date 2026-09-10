@@ -1,6 +1,6 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け ESPHome ディスプレイ・クックブック - Home Assistant 連携、最初のダッシュボード、Wi-Fi 設定、ビルド済みファームウェア ZIP、ePaper 描画サンプル。
-title: ESPHome クックブック - ディスプレイ基礎 (reTerminal E シリーズ)
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け ESPHome ディスプレイ・ cookbook - Home Assistant 連携、最初のダッシュボード、Wi-Fi 設定、ビルド済みファームウェア ZIP、ePaper 描画サンプル。
+title: ESPHome Cookbook - ディスプレイ基礎 (reTerminal E シリーズ)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
 aliases:
@@ -19,10 +19,10 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome クックブック - ディスプレイ基礎: reTerminal E シリーズ
+# ESPHome Cookbook - ディスプレイ基礎: reTerminal E シリーズ
 
 :::tip まずメインの ESPHome ガイドを読んでください
-このページは **reTerminal E シリーズ専用の ESPHome ディスプレイ・クックブック**です。共通のボイラープレート — 書き込み方法の選択、汎用 YAML スケルトン、Home Assistant への接続 — は **[Work with ESPHome](/ja/epaper_work_with_esphome)** にまとまっています。Seeed ePaper で ESPHome を使うのが初めての場合は、まずそちらに目を通してください。ボタン、ブザー、LED、バッテリー、SHT4x、ディープスリープについては [I/O、バッテリー、タッチ、低消費電力クックブック](/ja/reterminal_e10xx_with_esphome_advanced) を参照してください。RTC、microSD カード検出、マイクのセットアップについては [RTC、SD カード、マイククックブック](/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone) を参照してください。
+このページは **reTerminal E シリーズ専用の ESPHome ディスプレイ・ cookbook**です。共通のボイラープレート — 書き込み方法の選択、汎用 YAML スケルトン、Home Assistant への接続 — は **[Work with ESPHome](/ja/epaper_work_with_esphome)** にまとまっています。Seeed ePaper で ESPHome を使うのが初めての場合は、まずそちらに目を通してください。ボタン、ブザー、LED、バッテリー、SHT4x、ディープスリープについては [I/O、バッテリー、タッチ、低消費電力 cookbook](/ja/reterminal_e10xx_with_esphome_advanced) を参照してください。RTC、microSD カード検出、マイクのセットアップについては [RTC、SD カード、マイク cookbook](/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone) を参照してください。
 :::
 
 :::tip ブラウザで ESPHome YAML を生成したりデモを書き込んだりする
@@ -92,7 +92,7 @@ ESPHome は、ESP8266/ESP32 デバイス向けに特化したオープンソー�
 ### 必要なもの
 
 :::tip 対応モデル
-このクックブックは **reTerminal E1001、E1002、E1003、E1004** を対象としています。各サンプルでは、お使いのデバイスに対応するタブを選択してください。E1003 と E1004 には **ESPHome 2026.7.0 以降** が必要です。
+この cookbook は **reTerminal E1001、E1002、E1003、E1004** を対象としています。各サンプルでは、お使いのデバイスに対応するタブを選択してください。E1003 と E1004 には **ESPHome 2026.7.0 以降** が必要です。
 :::
 
 <div class="table-center">
@@ -169,7 +169,7 @@ Home Assistant Green は、最も簡単かつプライバシー重視のホー�
 
 ### 最初の ESPHome YAML を生成する（推奨）
 
-以下のクックブックのスニペットをコピーする前に、1 か所でデバイスに合った完全な設定を構築できます。
+以下の cookbook のスニペットをコピーする前に、1 か所でデバイスに合った完全な設定を構築できます。
 
 **ステップ 1.** デスクトップ版 Chrome または Edge で **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** を開きます。
 
@@ -188,7 +188,7 @@ Home Assistant Green は、最も簡単かつプライバシー重視のホー�
 </div><br />
 
 :::tip
-Firmware Hub は、ボード、バス、および周辺ピンを自動で設定してくれます。各ドローイングやディスプレイのサンプルをステップバイステップで学びたいとき、または生成された YAML をカスタマイズしたいときに、このクックブックを使用してください。共有ワークフロー全体は **[ESPHome を使う](/ja/epaper_work_with_esphome)** に記載されています。
+Firmware Hub は、ボード、バス、および周辺ピンを自動で設定してくれます。各ドローイングやディスプレイのサンプルをステップバイステップで学びたいとき、または生成された YAML をカスタマイズしたいときに、この cookbook を使用してください。共有ワークフロー全体は **[ESPHome を使う](/ja/epaper_work_with_esphome)** に記載されています。
 :::
 
 :::tip install Home Assistant
@@ -1500,11 +1500,11 @@ lambda: |-
 
 ## 続きを読む
 
-この記事では、ディスプレイの接続と ePaper 画面へのコンテンツ描画に焦点を当てました。オンボードハードウェアの残りを使いたい場合は、次の ESPHome クックブックを続けてお読みください：
+この記事では、ディスプレイの接続と ePaper 画面へのコンテンツ描画に焦点を当てました。オンボードハードウェアの残りを使いたい場合は、次の ESPHome cookbooks を続けてお読みください：
 
 - **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** - デバイスを選択してオンボード機能にチェックを入れることで完全な ESPHome YAML を生成したり、ブラウザからデモファームウェアを書き込んだりできます。
-- **[ESPHome クックブック：ボタン、ブザー、LED、バッテリー、タッチ & 低消費電力](/ja/reterminal_e10xx_with_esphome_advanced)** - ユーザーボタン、ブザーのフィードバック、オンボード LED、バッテリー監視、SHT4x センサー、静電容量式タッチ（E1003）、ディープスリープ、およびマルチページダッシュボード。
-- **[ESPHome クックブック：RTC、SD カード & マイク](/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone)** - PCF8563 RTC の時刻同期、microSD カードの電源/検出ピン、およびオンボード PDM マイクの初期化。
+- **[ESPHome Cookbook：ボタン、ブザー、LED、バッテリー、タッチ & 低消費電力](/ja/reterminal_e10xx_with_esphome_advanced)** - ユーザーボタン、ブザーのフィードバック、オンボード LED、バッテリー監視、SHT4x センサー、静電容量式タッチ（E1003）、ディープスリープ、およびマルチページダッシュボード。
+- **[ESPHome Cookbook：RTC、SD カード & マイク](/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone)** - PCF8563 RTC の時刻同期、microSD カードの電源/検出ピン、およびオンボード PDM マイクの初期化。
 
 ## FAQ
 

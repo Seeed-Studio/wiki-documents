@@ -1,6 +1,6 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino クックブック — LED、ブザー、3 つのユーザーボタン、SHT4x 温度・湿度センサー、バッテリー監視、microSD カード、そして 4 種類すべてのパネルバリエーションに対応したエンドツーエンドの画像パイプライン（JPEG / BMP / PNG → ディザ → ePaper）を含むオンボードハードウェアペリフェラルのサンプル集です。
-title: 'Arduino クックブック: オンボードペリフェラル (reTerminal E シリーズ)'
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino cookbook — LED、ブザー、3 つのユーザーボタン、SHT4x 温度・湿度センサー、バッテリー監視、microSD カード、そして 4 種類すべてのパネルバリエーションに対応したエンドツーエンドの画像パイプライン（JPEG / BMP / PNG → ディザ → ePaper）を含むオンボードハードウェアペリフェラルのサンプル集です。
+title: 'Arduino Cookbook: オンボードペリフェラル (reTerminal E シリーズ)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals
 sidebar_position: 2
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino クックブック: オンボードペリフェラル (reTerminal E シリーズ)
+# Arduino Cookbook: オンボードペリフェラル (reTerminal E シリーズ)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/245.png" style={{width:600, height:'auto'}}/></div>
 
@@ -30,16 +30,16 @@ import TabItem from '@theme/TabItem';
 </div><br />
 :::
 
-:::tip このシリーズの他のクックブック
+:::tip このシリーズの他の cookbooks
 - **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino)** — ePaper 画面へのテキスト、グラフィックス、画像の描画。
 - **[Arduino Cookbook: RTC, Low Power, Audio & Touch](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2)** — RTC 時刻管理、ディープスリープ / ライトスリープ、I2S マイク録音、および静電容量式タッチ描画（E1003 のみ）。
 :::
 
 ## はじめに
 
-reTerminal E シリーズは単なる ePaper 画面ではありません。すべてのモデルにオンボード LED、ブザー、3 つのユーザーボタン、SHT4x 温度・湿度センサー、バッテリー電圧監視、microSD カードスロットが搭載されています。このクックブックでは、それぞれのペリフェラル向けにすぐに書き込める Arduino サンプルをまとめており、さらに SD カードから JPEG / BMP / PNG ファイルを読み込み、パネルのパレット向けにディザ処理を行い、ePaper 画面に描画するエンドツーエンドの画像パイプラインも含まれています。各パネルバリエーション（E1001 BW、E1001 Gray4、E1002、E1003、E1004）ごとに 1 つの完成済みスケッチが用意されています。
+reTerminal E シリーズは単なる ePaper 画面ではありません。すべてのモデルにオンボード LED、ブザー、3 つのユーザーボタン、SHT4x 温度・湿度センサー、バッテリー電圧監視、microSD カードスロットが搭載されています。この cookbook では、それぞれのペリフェラル向けにすぐに書き込める Arduino サンプルをまとめており、さらに SD カードから JPEG / BMP / PNG ファイルを読み込み、パネルのパレット向けにディザ処理を行い、ePaper 画面に描画するエンドツーエンドの画像パイプラインも含まれています。各パネルバリエーション（E1001 BW、E1001 Gray4、E1002、E1003、E1004）ごとに 1 つの完成済みスケッチが用意されています。
 
-このクックブックで扱う内容：
+この cookbook で扱う内容：
 
 - GPIO6（反転ロジック）による **LED 制御**。
 - GPIO45 を使った **ブザー** のアラートおよび音階トーン。
@@ -51,7 +51,7 @@ reTerminal E シリーズは単なる ePaper 画面ではありません。す�
 
 ### 必要なもの
 
-このクックブックは、すべての reTerminal E シリーズ 4 モデルに適用できます。手元にあるデバイスを 1 つ選んでください：
+この cookbook は、すべての reTerminal E シリーズ 4 モデルに適用できます。手元にあるデバイスを 1 つ選んでください：
 
 <div class="table-center">
   <table align="center">
@@ -100,7 +100,7 @@ reTerminal E シリーズは単なる ePaper 画面ではありません。す�
 - 動作する **USB-C データケーブル** があり、正しいシリアルポートを選択していること。
 - デバイスに基本的なスケッチを書き込めることを確認していること — まだの場合は、[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino#環境準備) の環境構築手順を参照してください。
 
-このクックブック内のすべてのスケッチは、`Serial1` を通じて **GPIO44 (RX) / GPIO43 (TX)**、**115200 ボー**でデバッグ情報を出力します。Arduino シリアルモニタを開き、対応するポートとボーレートを選択してログを確認してください。
+この cookbook 内のすべてのスケッチは、`Serial1` を通じて **GPIO44 (RX) / GPIO43 (TX)**、**115200 ボー**でデバッグ情報を出力します。Arduino シリアルモニタを開き、対応するポートとボーレートを選択してログを確認してください。
 
 ## LED 制御
 

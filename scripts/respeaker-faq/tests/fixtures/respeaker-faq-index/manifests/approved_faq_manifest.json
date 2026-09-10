@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "respeaker_faq_manifest",
+  "entries": [
+    {
+      "publicFaqId": "flex_mechanical_cad_files",
+      "productKey": "flex_xvf3800",
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": ["product_business"],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-08-31",
+      "wikiSlug": "/respeaker_flex_faq",
+      "wikiAnchor": "mechanical-cad-files",
+      "questionEn": "Where can I download ReSpeaker Flex mechanical files?",
+      "directAnswerEn": "Use the official Flex Resources section.",
+      "skus": ["100005504", "100099135"],
+      "keywords": ["mechanical files", "CAD", "DXF", "STEP"]
+    },
+    {
+      "publicFaqId": "flex_fpc_cable_spec",
+      "productKey": "flex_xvf3800",
+      "primaryDomain": "hardware",
+      "secondaryDomains": [],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "wikiSlug": "/respeaker_flex_faq",
+      "wikiAnchor": "fpc-cable-spec",
+      "questionEn": "What FPC cable is documented for the ReSpeaker Flex microphone array?",
+      "directAnswerEn": "The official Flex guide documents a keyed 24-pin FPC interface.",
+      "skus": [],
+      "keywords": ["FPC", "cable", "24-pin"]
+    }
+  ]
+}

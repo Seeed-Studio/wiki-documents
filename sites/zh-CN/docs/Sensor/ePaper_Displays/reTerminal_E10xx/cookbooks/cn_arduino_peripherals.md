@@ -1,6 +1,6 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino 菜谱——包含板载硬件外设示例，如 LED、蜂鸣器、三个用户按键、SHT4x 温湿度传感器、电池监测、microSD 卡，以及一个端到端图像处理流水线（JPEG / BMP / PNG → 抖动 → 电子纸）覆盖全部四种面板版本。
-title: Arduino 菜谱：板载外设（reTerminal E 系列）
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino cookbook——包含板载硬件外设示例，如 LED、蜂鸣器、三个用户按键、SHT4x 温湿度传感器、电池监测、microSD 卡，以及一个端到端图像处理流水线（JPEG / BMP / PNG → 抖动 → 电子纸）覆盖全部四种面板版本。
+title: Arduino Cookbook：板载外设（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals
 sidebar_position: 2
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino 菜谱：板载外设（reTerminal E 系列）
+# Arduino Cookbook：板载外设（reTerminal E 系列）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/245.png" style={{width:600, height:'auto'}}/></div>
 
@@ -30,16 +30,16 @@ import TabItem from '@theme/TabItem';
 </div><br />
 :::
 
-:::tip 本系列中的其他菜谱
-- **[Arduino 菜谱：电子纸显示](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)** —— 在电子纸屏幕上渲染文本、图形和图像。
-- **[Arduino 菜谱：RTC、低功耗、音频与触控](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)** —— RTC 时间管理、深度睡眠 / 轻度睡眠、I2S 麦克风录音，以及电容触控绘图（仅限 E1003）。
+:::tip 本系列中的其他 cookbooks
+- **[Arduino Cookbook：电子纸显示](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)** —— 在电子纸屏幕上渲染文本、图形和图像。
+- **[Arduino Cookbook：RTC、低功耗、音频与触控](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)** —— RTC 时间管理、深度睡眠 / 轻度睡眠、I2S 麦克风录音，以及电容触控绘图（仅限 E1003）。
 :::
 
 ## 介绍
 
-reTerminal E 系列不仅仅是一块电子纸屏幕——每一款型号还提供板载 LED、蜂鸣器、三个用户按键、SHT4x 温湿度传感器、电池电压监测以及 microSD 卡槽。本菜谱收集了针对这些外设的可直接烧录的 Arduino 示例，外加一个端到端图像处理流水线：从 SD 卡加载 JPEG / BMP / PNG 文件，为面板的调色板进行抖动处理，并将其渲染到电子纸屏幕上——每种面板版本（E1001 BW、E1001 Gray4、E1002、E1003、E1004）都提供一份现成的示例草图。
+reTerminal E 系列不仅仅是一块电子纸屏幕——每一款型号还提供板载 LED、蜂鸣器、三个用户按键、SHT4x 温湿度传感器、电池电压监测以及 microSD 卡槽。本 cookbook 收集了针对这些外设的可直接烧录的 Arduino 示例，外加一个端到端图像处理流水线：从 SD 卡加载 JPEG / BMP / PNG 文件，为面板的调色板进行抖动处理，并将其渲染到电子纸屏幕上——每种面板版本（E1001 BW、E1001 Gray4、E1002、E1003、E1004）都提供一份现成的示例草图。
 
-本菜谱涵盖内容：
+本 cookbook 涵盖内容：
 
 - **LED 控制**，通过 GPIO6（反向逻辑）。
 - **蜂鸣器** 警报和音乐音调，使用 GPIO45。
@@ -51,7 +51,7 @@ reTerminal E 系列不仅仅是一块电子纸屏幕——每一款型号还提�
 
 ### 所需材料
 
-本菜谱适用于全部四款 reTerminal E 系列型号。请选择你手头拥有的设备：
+本 cookbook 适用于全部四款 reTerminal E 系列型号。请选择你手头拥有的设备：
 
 <div class="table-center">
   <table align="center">
@@ -98,9 +98,9 @@ reTerminal E 系列不仅仅是一块电子纸屏幕——每一款型号还提�
 
 - 已安装 **Arduino IDE**，并安装好 **ESP32 开发板包**，选择 **XIAO_ESP32S3** 开发板。
 - 一根可用的 **USB-C 数据线**，并选择正确的串口。
-- 已确认可以向设备烧录基础示例草图——如果尚未完成，请参考 [Arduino 菜谱：电子纸显示](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino#环境准备) 中的环境搭建部分。
+- 已确认可以向设备烧录基础示例草图——如果尚未完成，请参考 [Arduino Cookbook：电子纸显示](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino#环境准备) 中的环境搭建部分。
 
-本菜谱中的所有草图都会通过 `Serial1` 在 **GPIO44 (RX) / GPIO43 (TX)** 上以 **115200 波特率** 输出调试信息。请打开 Arduino 串口监视器，并选择匹配的端口和波特率以便查看输出。
+本 cookbook 中的所有草图都会通过 `Serial1` 在 **GPIO44 (RX) / GPIO43 (TX)** 上以 **115200 波特率** 输出调试信息。请打开 Arduino 串口监视器，并选择匹配的端口和波特率以便查看输出。
 
 ## LED 控制
 

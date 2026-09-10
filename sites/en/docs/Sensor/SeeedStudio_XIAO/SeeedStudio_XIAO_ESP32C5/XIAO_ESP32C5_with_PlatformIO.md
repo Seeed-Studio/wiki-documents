@@ -11,7 +11,7 @@ last_update:
   date: 12/18/2025
   author: Zeller
 createdAt: '2025-12-15'
-updatedAt: '2025-12-26'
+updatedAt: '2026-08-21'
 url: https://wiki.seeedstudio.com/xiao_esp32c5_with_platformio/
 ---
 

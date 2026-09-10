@@ -1,0 +1,657 @@
+---
+description: Comienza con SenseCAP Solar Node para Meshtastic y LoRa
+title: Comienza con Meshtastic
+keywords:
+  - Meshtastic
+  - Solar
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
+slug: /get_started_with_meshtastic_solar_node
+sku: 114993633,114993643
+sidebar_position: 2
+last_update:
+  date: 3/10/2026
+  author: Michelle Huang
+createdAt: '2025-05-13'
+updatedAt: '2026-08-06'
+url: https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/
+---
+
+:::danger note
+Cuando el dispositivo se encuentre en cualquiera de los estados siguientes, no lo reinicies manualmente ni lo apagues. De lo contrario, el dispositivo podría quedar inutilizable.
+1. No ha finalizado el proceso de transmisión de mensajes
+2. Está siendo configurado
+:::
+## Comienza
+
+Antes del despliegue formal, primero prueba y configura el nodo.
+
+### Flashear firmware
+
+:::caution note
+No uses `NRF-OTA` para actualizar el firmware, ya que podría hacer que el dispositivo deje de responder por completo.
+Antes de flashear el firmware, ejecuta primero el paso de borrado del flash.
+:::
+
+Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/). Selecciona `Seeed SenseCAP Solar Node` como dispositivo de destino.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
+
+#### Borrado del flash
+
+Haz clic en el símbolo de `trash`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/FlashEraseIcon.png" alt="pir" width={800} height="auto" /></p>
+
+Descarga y copia el firmware de borrado.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
+
+Haz clic en `Enter DFU Mode`, selecciona y conéctate al puerto serie llamado `XIAO-xxx`, y debería aparecer una unidad llamada `XIAO-xxx`. Copia el firmware de borrado a esa unidad.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
+
+Este proceso puede llevar algo de tiempo. Espera a que la unidad "XIAO-XXX" desaparezca.
+
+#### Flashear firmware de aplicación
+
+Elige la versión de firmware que desees. Haz clic en `flash`.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
+
+Descarga el archivo UF2 y entra en modo DFU. Arrastra el archivo UF2 a la unidad DFU. El firmware debería flashearse después de copiar el archivo y de que el dispositivo se reinicie.
+
+### Instalar batería y módulo GPS (opcional)
+
+:::tip
+Cuando necesites instalar o reemplazar la batería, usa una batería 18650 (3,6 V) de `button-top`.
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
+La versión P1-Pro tiene una batería y un módulo GPS integrados. Para la versión P1, los usuarios deben instalar manualmente la batería y el módulo GPS si es necesario.
+:::
+
+
+
+- Paso 1: Retira todos los tornillos y la tapa.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
+
+- Paso 2: Instala la batería y el módulo GPS.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/install-bat-gps.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps_install.png" alt="pir" width={800} height="auto" /></p>
+
+- Paso 3: Ensambla la carcasa.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
+
+:::caution note
+Asegúrate de que la carcasa esté correctamente montada y los tornillos bien apretados para mantener la estanqueidad del dispositivo.
+:::
+
+### Encender el dispositivo
+
+El dispositivo debe activarse conectando el cable USB antes del primer uso. Si la luz azul de Mesh parpadea, el dispositivo se ha encendido correctamente, como se muestra en el siguiente video:
+
+<div class="table-center">
+<iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::tip
+Si el dispositivo no responde cuando presionas el botón, cárgalo primero. No uses un cargador rápido.
+:::
+
+### Conectar mediante la app
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+<TabItem value="ios" label="App para iOS">
+
+- Selecciona el dispositivo de destino en el panel de Bluetooth.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/device_select123.jpeg" alt="pir" width={300} height="auto" /></p>
+
+- Introduce el código (el código predeterminado es `123456`) y luego haz clic en `OK` para conectar el dispositivo.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/pairing_code123.png" alt="pir" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="android" label="App para Android">
+
+- Haz clic en `+` y elige el dispositivo de destino.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
+
+- Introduce el código (el código predeterminado es `123456`) y luego haz clic en `OK` para conectar el dispositivo.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+
+### Conectar mediante el sitio web
+
+Si quieres enviar mensajes de texto y comunicarte con otros nodos en el cliente web, ahora puedes conectar el dispositivo al [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0).
+
+  Paso 1: Abre el sitio web
+
+[Haz clic aquí](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web.
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  Paso 2: Añadir el nuevo dispositivo 
+
+    Haz clic en "+ New Connection". 
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    Hay dos formas de conectar. Puedes elegir el método que prefieras.
+
+ Método 1: Vía Bluetooth
+
+    Elige el método Bluetooth. Selecciona el ID del dispositivo en la ventana emergente.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ Método 2: Vía serie
+
+    Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Selecciona ese puerto en la ventana emergente.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión tiene éxito, podrás ver el estado del dispositivo directamente en el sitio web.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
+
+### Configurar LoRa
+
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias usa tu dispositivo y debe configurarse según tu ubicación regional.
+
+<Tabs>
+<TabItem value="ios" label="App para iOS">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_LoRa123.png" alt="pir" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="android" label="App para Android">
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+**Lista de regiones**
+
+|**Código de región**|**Descripción**|**Rango de frecuencias (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
+| :-: | :-: | :-: | :-: | :-: |
+|UNSET|Sin establecer|N/A|N/A|N/A|
+|US|Estados Unidos|902.0 - 928.0|100|30|
+|EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
+
+Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para obtener una lista más completa.
+
+:::info
+**EU_868** debe cumplir una limitación de ciclo de trabajo horario del 10 %, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que vuelva a estar permitido.
+:::
+
+Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para adaptarlo a tus necesidades.
+
+### Configurar GPS
+
+Activa el GPS. Puedes ajustar el intervalo de actualización y el intervalo de difusión para obtener información de ubicación más actualizada.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
+
+En iOS, activa `Accurate Location`. De lo contrario, el posicionamiento puede ser inexacto.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
+
+### Botón
+
+|Acción del botón|Descripción|
+|--|--|
+|Presiona PWR durante 3 s|Encender|
+|Presiona PWR dos veces|Actualizar información de nodo/ubicación|
+|Presiona PWR tres veces|Activar/desactivar el GPS|
+|Presiona PWR durante 5 s|Apagar|
+|Presiona RST dos veces|Entrar manualmente en DFU|
+
+## Instalación
+
+:::danger note
+Dado que el dispositivo se utilizará en exteriores durante períodos prolongados, evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para evitar la acumulación de agua. Además, asegúrate de que todos los tornillos estén bien apretados y la tapa correctamente instalada. Para una protección impermeable mejorada, también puedes considerar aplicar medidas de sellado adicionales.
+:::
+
+- **Lista de piezas**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
+
+
+
+### Guía de instalación paso a paso
+
+- Paso 1: Conecta la pieza 1 a la parte inferior del dispositivo usando arandelas y tornillos.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+- Paso 2: Conecta la rótula universal (parte 2) y el soporte (parte 3) con tornillos.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+- Paso 3: Conecta el cable RF (parte 4) y la antena (parte 5).
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+- Paso 4: Instala el aro de sujeción en la posición adecuada.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+- Paso 5: Conecta el soporte de la rótula universal.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+- Paso 6: Afloja los tornillos, ajusta la rótula universal a la posición adecuada y luego aprieta los tornillos.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+- Paso 7: Conecta la antena al dispositivo.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+### Guía completa de instalación
+
+- Puedes completar todo el proceso de instalación e inicialización mediante un vídeo.
+
+<div class="video-container">
+<iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Añadir sensores al Solar Node (Opcional)
+
+- Puedes instalar tu sensor siguiendo este vídeo.
+
+<div class="video-container">
+<iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+- Los siguientes sensores han sido verificados como compatibles con la interfaz Grove del dispositivo.
+
+<table>
+  <tr>
+    <th colspan="2">Tipo de sensor</th>
+    <th colspan="1">Modelo de sensor</th>
+  </tr>
+  <tr>
+    <td rowspan="4">Sensor ambiental</td>
+    <td>Presión</td>
+    <td>BMP085</td>
+  </tr>
+  <tr>
+    <td>Temperatura</td>
+    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td>
+  </tr>
+  <tr>
+    <td>Temperatura y humedad</td>
+    <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
+  </tr>
+  <tr>
+    <td>Temperatura, humedad y presión</td>
+    <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Otros</td>
+    <td>Frecuencia cardíaca y SpO₂</td>
+    <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
+  </tr>
+  <tr>
+    <td>Teclado I2C</td>
+    <td>CardKB</td>
+  </tr>
+</table>
+
+### Actualizar la antena (Opcional)
+
+- Puedes sustituir la antena por una de fibra de vidrio viendo este vídeo.
+
+Si necesitas una antena con mayor ganancia, recomendamos la antena de [fibra de vidrio de 860-930MHz 3dBi](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) y la antena de [fibra de vidrio de 902-928MHz 5.8dBi](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html).
+
+<div class="video-container">
+<iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+## Preguntas frecuentes
+
+### Bucle de arranque
+
+- Motivo 
+
+Esto suele deberse a un fallo al flashear el firmware. Al flashear el firmware, mantén una conexión estable.
+
+- Solución de problemas
+
+[Haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-firmware) para volver a flashear el firmware.
+
+### Dispositivo bloqueado (bricked)
+
+#### Descripción
+
+El dispositivo no responde, el LED no se enciende y no puede emparejarse con tu aplicación.
+
+**1) El dispositivo aún puede entrar en modo DFU, entonces intenta flashear el bootloader**.
+
+#### Flashear el Bootloader
+
+- [Descarga del bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
+
+:::danger note
+Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de flasheo.
+:::
+
+**Paso 1: Instalación de Adafruit-nrfutil**
+
+Para usuarios de Windows, presiona la tecla "Win" y la tecla "R", luego introduce "cmd" en la ventana emergente y presiona "Enter". Esto abre la línea de comandos.
+
+Para usuarios de Mac, presiona la tecla "Command" y la tecla "Espacio" para abrir Spotlight. Luego introduce "terminal" y presiona "Return". Esto abre la línea de comandos.
+
+**Requisitos previos**
+
+- [Python3](https://www.python.org/downloads/)
+- [pip3](https://pip.pypa.io/en/stable/installation/)
+
+
+Comprueba en tu línea de comandos si Python y pip se han instalado correctamente.
+
+```
+python --version
+```
+
+```
+python -m pip --version
+```
+
+Entonces deberían aparecer "Python xxx" y "pip xxx". Si no aparecen, intenta instalar Python de nuevo.
+
+<Tabs>
+<TabItem value="pypi" label="Instalación desde PyPI">
+
+Este es el método recomendado para instalar la última versión:
+
+```
+pip3 install --user adafruit-nrfutil
+```
+
+
+Comprueba la ruta de instalación:
+
+```
+python -m pip show adafruit-nrfutil
+```
+
+Esta es la ubicación de instalación:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
+
+Para usuarios de Windows, puede que necesites añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela de la siguiente manera:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
+
+
+</TabItem>
+
+<TabItem value="sou" label="Instalación desde el código fuente">
+
+Utiliza este método si tienes problemas al instalar con PyPI o si quieres modificar la herramienta. Primero, clona este repositorio y entra en su carpeta.
+
+```
+git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
+cd Adafruit_nRF52_nrfutil
+```
+
+Nota: Los siguientes comandos usan `python3`; sin embargo, si estás en Windows, puede que necesites cambiarlo a `python`, ya que las instalaciones de Windows de Python 3.x siguen usando el nombre `python.exe`.
+
+Para instalar en el espacio de usuario en tu directorio personal:
+
+```
+pip3 install -r requirements.txt
+python3 setup.py install
+```
+
+Si obtienes errores de permisos al ejecutar `pip3 install`, tu `pip3` es antiguo o está configurado para intentar instalar en los directorios del sistema. En ese caso usa la opción `--user`:
+
+```
+pip3 install -r --user requirements.txt
+python3 setup.py install
+```
+
+Si quieres instalar en los directorios del sistema (generalmente no recomendado):
+
+```
+sudo pip3 install -r requirements.txt
+sudo python3 setup.py install
+```
+
+Para generar un binario ejecutable autónomo de la utilidad (Windows y MacOS), ejecuta estos comandos:
+
+```
+pip3 install pyinstaller
+cd Adafruit_nRF52_nrfutil
+pip3 install -r requirements.txt
+cd Adafruit_nRF52_nrfutil\nordicsemi
+pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
+```
+
+Encontrarás el ejecutable en `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` (con `.exe` si estás en Windows).
+Cópialo o muévelo a otro lugar para tu comodidad, como un directorio en tu `%PATH%`.
+
+</TabItem>
+</Tabs>
+
+**Paso 2: Comprueba tu número de puerto**
+
+Conecta tu dispositivo a tu PC y comprueba el número de puerto.
+
+Para usuarios de Windows, por ejemplo:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
+
+Para usuarios de Mac, por ejemplo:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
+
+**Paso 3: Flashea el bootloader**
+
+En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto por el correcto para tu dispositivo:
+
+- **Para Windows**:
+
+```
+adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
+```
+Cambia COMXX por tu número de puerto COM. Por ejemplo, si tu dispositivo está en COM6, cambia el comando a:
+
+`adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
+
+ Algunos dispositivos cambiarán su número de puerto después de introducir este comando. Si la instalación falla, comprueba de nuevo el número de puerto.
+
+
+- **Para otros**:
+
+```
+adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
+
+Cuando hayas completado los pasos anteriores, sigue este [paso](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-firmware) para flashear el firmware de la aplicación.
+
+### No se puede comunicar en el canal primario
+
+Si el dispositivo no puede comunicarse con los nodos cercanos o enviar mensajes, primero comprueba que la región LoRa y el preset del módem coincidan con los nodos circundantes. También debes comprobar si la **PSK** predeterminada se ha cambiado. Una PSK diferente en el canal primario impedirá que el dispositivo se comunique con otros nodos en ese canal.
+
+La forma más sencilla de encontrar este problema es a través de la app móvil. Abre la app, conéctate al dispositivo de destino y luego navega a `Settings` -> `Channels`. Selecciona el canal primario y comprueba el valor de **PSK**. Si es diferente al de los nodos circundantes, actualízalo a la misma PSK y guarda la configuración del canal.
+
+<Tabs>
+<TabItem value="ios" label="App de iOS">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problems_ios.png" alt="Comprobar la PSK del canal primario en la app de iOS" width={500} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="android" label="App de Android">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problem_and.png" alt="Comprobar la PSK del canal primario en la app de Android" width={900} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+**Solución**
+
+Si no estás seguro de qué ajustes se cambiaron, restaura el dispositivo a su configuración predeterminada siguiendo la guía de [Restablecimiento de fábrica](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#factory-reset). Si solo se cambió la PSK, vuelve a establecerla en `AQ==`.
+
+ ### El dispositivo se apaga automáticamente
+
+ #### Descripción
+
+ - Después de encender el dispositivo, se apaga o se reinicia automáticamente después de un tiempo.
+ - El registro del puerto serie funcionó durante un tiempo y luego se detuvo.
+
+ Esto puede deberse a reiniciar o apagar manualmente y por la fuerza el dispositivo mientras se encuentra en uno de los siguientes estados: sin haber terminado el proceso de transmisión de mensajes o mientras está siendo configurado.
+
+ #### Solución de problemas
+
+[Haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-erase) para realizar un borrado de la flash y luego vuelve a flashear el firmware más reciente.
+
+
+### Restablecimiento de fábrica
+
+Si quieres restaurar la configuración predeterminada, puedes realizar un restablecimiento de fábrica. Hay dos métodos para hacer el restablecimiento de fábrica.
+
+- [Haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-erase) para realizar un borrado de la flash y luego volver a flashear el firmware más reciente.
+
+- Haz clic en el botón `Factory Reset` en la app. El dispositivo se reiniciará automáticamente con la configuración de fábrica.
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
+
+### Fallo en mensaje directo
+
+#### Restablecer NodeDB
+
+NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con cierto nodo, podría deberse a que tu NodeDB ha almacenado información desactualizada de ese nodo. Necesitarás actualizarla.
+
+NodeDB almacena detalles como:
+
+- **ID de nodo**
+- **Nombre de usuario**
+- **Información de ubicación**
+- **Información de señal (SNR)**
+- **Hora de última visualización**
+
+Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="Ajustes del dispositivo y botón Reset NodeDB en la app" width={600} height="auto" /></p>
+
+#### Intercambiar información de usuario
+
+Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo en Settings" width={300} height="auto" /></p>
+
+#### Regenerar clave privada
+
+Dos nodos necesitan conocer su clave privada entre sí para poder comunicarse entre ellos. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar la clave privada para él.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo en Settings" width={600} height="auto" /></p>
+
+Reinicia el dispositivo defectuoso para que la configuración surta efecto.
+
+:::note
+Después de la regeneración de la clave, otro dispositivo necesita volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos del otro dispositivo.
+:::
+
+:::tip
+Ten en cuenta la diferencia entre las siguientes opciones:
+
+- **Reset NodeDB**: Solo borra la base de datos de nodos.
+- **Factory Reset**: Restaura el dispositivo a la configuración de fábrica y elimina los datos de configuración adicionales.
+:::
+
+### Consumo de energía
+
+El consumo de energía depende principalmente de factores como la frecuencia de transmisión de datos y la tasa de actualización del GPS.
+Las cifras siguientes son solo de referencia; el consumo real puede variar según las condiciones de uso en el mundo real.
+
+- **Consumo de energía en modo de suspensión con apagado**
+
+|Descripción|Consumo|
+|---|---|
+|Corriente de funcionamiento del GPS_LED|1.02 mA|
+|Alimentado pero no activado|56.195 μA|
+|Alimentado y activado|611 μA|
+
+**Ejemplo:**
+
+|Capacidad de la batería |Vida de la batería|
+|---|---|
+|3350|136.8|
+|12000|490.2|
+
+- **Consumo de energía en modo activo**
+
+|Modo|Corriente|
+|---|---|
+|Corriente estática|10.65 mA|
+|Corriente de transmisión EU868|157.74 mA|
+|Corriente de transmisión US915|205.22 mA|
+|Corriente de funcionamiento del GPS|50 mA|
+|Corriente de funcionamiento del GPS_LED|1.02 mA|
+
+### Calidad de la señal
+
+- **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
+
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
+
+      Para lograr el mejor rendimiento de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con interferencias mínimas.
+
+### Corriente de carga
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
+
+La corriente máxima de carga del Xiao nRF-52840 Plus es de 200 mA. El chip de gestión de carga CN3165 soporta 0.99 A. Por lo tanto, la corriente máxima de carga es de 1 A.
+
+## Recursos
+- [Tabla de cálculo de vida útil de la batería del Solar Node](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+    </div>
+    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 ---
-description: Livro de receitas Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — controle o display de ePaper a partir do Arduino usando as bibliotecas Seeed_GFX e GxEPD2, incluindo exemplos Hello World mais escala de cinza de 4 níveis no E1001 e de 16 níveis no E1003.
-title: 'Livro de Receitas Arduino: Display ePaper (reTerminal E Série)'
+description: cookbook Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — controle o display de ePaper a partir do Arduino usando as bibliotecas Seeed_GFX e GxEPD2, incluindo exemplos Hello World mais escala de cinza de 4 níveis no E1001 e de 16 níveis no E1003.
+title: 'Cookbook Arduino: Display ePaper (reTerminal E Série)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
@@ -15,7 +15,7 @@ url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Livro de Receitas Arduino: Display ePaper (reTerminal E Série)
+# Cookbook Arduino: Display ePaper (reTerminal E Série)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/244.png" style={{width:650, height:'auto'}}/></div>
 
@@ -30,14 +30,14 @@ Se você quiser visualizar rapidamente os resultados do projeto ou testar o firm
 :::
 
 :::tip Procurando os periféricos de hardware?
-Esta página se concentra em **controlar a tela de ePaper** a partir do Arduino. Se você quiser usar o LED onboard, buzzer, botões, sensor SHT4x, monitor de bateria ou slot para cartão microSD, vá para **[Livro de Receitas Arduino: Periféricos Onboard](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals)**. Para RTC, modos de baixo consumo, microfone onboard e desenho com toque capacitivo, consulte **[Livro de Receitas Arduino: RTC, Baixo Consumo, Áudio e Toque](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals_2)**.
+Esta página se concentra em **controlar a tela de ePaper** a partir do Arduino. Se você quiser usar o LED onboard, buzzer, botões, sensor SHT4x, monitor de bateria ou slot para cartão microSD, vá para **[Cookbook Arduino: Periféricos Onboard](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals)**. Para RTC, modos de baixo consumo, microfone onboard e desenho com toque capacitivo, consulte **[Cookbook Arduino: RTC, Baixo Consumo, Áudio e Toque](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals_2)**.
 
 O código base compartilhado — configuração da IDE Arduino, pacote de placas ESP32, instalação de `Seeed_GFX`, geração de `driver.h` — também está em **[Trabalhar com Arduino](https://wiki.seeedstudio.com/pt-br/epaper_work_with_arduino)**. Dê uma olhada nisso primeiro se você é novo em Arduino em ePaper da Seeed.
 :::
 
 ## Introdução
 
-A reTerminal E Série é a linha de IHM industrial da Seeed Studio, construída sobre o XIAO ESP32-S3 e com displays de ePaper integrados. Este livro de receitas percorre tudo o que você precisa para renderizar texto, gráficos e imagens na tela:
+A reTerminal E Série é a linha de IHM industrial da Seeed Studio, construída sobre o XIAO ESP32-S3 e com displays de ePaper integrados. Este cookbook percorre tudo o que você precisa para renderizar texto, gráficos e imagens na tela:
 
 - Visão geral de hardware e links de compra para E1001 / E1002 / E1003 / E1004.
 - Configuração do ambiente da IDE Arduino para todos os quatro modelos (placa XIAO_ESP32S3, OPI PSRAM).

@@ -1,6 +1,6 @@
 ---
-description: Recetario de Arduino para reTerminal E1001 / E1002 / E1003 / E1004 - controla la pantalla de tinta electrónica desde Arduino usando las bibliotecas Seeed_GFX y GxEPD2, incluyendo ejemplos de Hello World más escala de grises de 4 niveles en E1001 y de 16 niveles en E1003.
-title: 'Recetario de Arduino: pantalla de tinta electrónica (reTerminal E Serie)'
+description: cookbook de Arduino para reTerminal E1001 / E1002 / E1003 / E1004 - controla la pantalla de tinta electrónica desde Arduino usando las bibliotecas Seeed_GFX y GxEPD2, incluyendo ejemplos de Hello World más escala de grises de 4 niveles en E1001 y de 16 niveles en E1003.
+title: 'Cookbook de Arduino: pantalla de tinta electrónica (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
@@ -15,7 +15,7 @@ url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Recetario de Arduino: pantalla de tinta electrónica (reTerminal E Serie)
+# Cookbook de Arduino: pantalla de tinta electrónica (reTerminal E Serie)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/244.png" style={{width:650, height:'auto'}}/></div>
 
@@ -30,14 +30,14 @@ Si quieres previsualizar rápidamente los resultados del proyecto o probar el fi
 :::
 
 :::tip ¿Buscas los periféricos de hardware?
-Esta página se centra en **controlar la pantalla de tinta electrónica** desde Arduino. Si quieres usar el LED integrado, el zumbador, los botones, el sensor SHT4x, el monitor de batería o la ranura para tarjeta microSD, dirígete a **[Recetario de Arduino: periféricos integrados](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals)**. Para el RTC, modos de bajo consumo, el micrófono integrado y el dibujo con toque capacitivo, consulta **[Recetario de Arduino: RTC, bajo consumo, audio y toque](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals_2)**.
+Esta página se centra en **controlar la pantalla de tinta electrónica** desde Arduino. Si quieres usar el LED integrado, el zumbador, los botones, el sensor SHT4x, el monitor de batería o la ranura para tarjeta microSD, dirígete a **[Cookbook de Arduino: periféricos integrados](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals)**. Para el RTC, modos de bajo consumo, el micrófono integrado y el dibujo con toque capacitivo, consulta **[Cookbook de Arduino: RTC, bajo consumo, audio y toque](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals_2)**.
 
 El código base compartido — configuración del IDE de Arduino, paquete de placas ESP32, instalación de `Seeed_GFX`, generación de `driver.h` — también se encuentra en **[Trabajar con Arduino](https://wiki.seeedstudio.com/es/epaper_work_with_arduino)**. Échale un vistazo primero si eres nuevo en Arduino en pantallas de tinta electrónica de Seeed.
 :::
 
 ## Introducción
 
-La reTerminal E Serie es la línea HMI industrial de Seeed Studio, basada en la XIAO ESP32-S3 y que incorpora pantallas de tinta electrónica integradas. Este recetario te guía por todo lo que necesitas para renderizar texto, gráficos e imágenes en la pantalla:
+La reTerminal E Serie es la línea HMI industrial de Seeed Studio, basada en la XIAO ESP32-S3 y que incorpora pantallas de tinta electrónica integradas. Este cookbook te guía por todo lo que necesitas para renderizar texto, gráficos e imágenes en la pantalla:
 
 - Descripción general del hardware y enlaces de compra para E1001 / E1002 / E1003 / E1004.
 - Configuración del entorno del IDE de Arduino para los cuatro modelos (placa XIAO_ESP32S3, OPI PSRAM).

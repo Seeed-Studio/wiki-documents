@@ -27,19 +27,21 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_web_simulator_developer_g
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # reBot Arm B601-DM Web シミュレータおよび ROS2/MuJoCo 開発者ガイド
 
-<p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png" alt="reBot Arm B601-DM" />
-</p>
+<RebotDmDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
-
-<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -56,7 +58,7 @@ import TabItem from '@theme/TabItem';
   <strong>Three.js 可視化 · URDF ロード · rosbridge ブリッジ · LLM/MCP 制御</strong>
 </p>
 
-このガイドは開発者向けです。`reBotArm_simulator-DM` Web シミュレータの実行方法と拡張方法を説明します。このシミュレータは軽量な Node.js + Three.js 製 Web コンソールで、同一リポジトリ内の ROS2 ワークスペースから URDF と STL メッシュを読み込み、ブラウザ上に reBot Arm B601-DM の 6 自由度ボディとグリッパを描画し、rosbridge WebSocket 経由で ROS2 と通信します。ジョイントミラーリング、制御ロック、重力補償、ビジュアルグラスピング、LLM テキスト制御まで、開発ワークフロー全体をサポートします。
+このガイドは開発者向けです。`reBotArm_simulator-DM` Web シミュレータの実行方法と拡張方法を説明します。このシミュレータは軽量な Node.js + Three.js 製 Web コンソールで、同一リポジトリ内の ROS2 ワークスペースから URDF と STL メッシュを読み込み、reBot Arm B601-DM の 6 自由度ボディとグリッパをブラウザ上に描画し、rosbridge WebSocket 経由で ROS2 と通信します。ジョイントミラーリング、制御ロック、重力補償、ビジュアルグラスピング、LLM テキスト制御まで、開発ワークフロー全体をサポートします。
 
 :::note
 このガイドでは ROS2 バックエンドとして `Ubuntu 24.04 + ROS2 Jazzy` を使用します。Web フロントエンドは Windows、macOS、Linux 上の任意のモダンブラウザで動作します。ROS2 Humble / Ubuntu 22.04 でも同じワークフローに従うことができます。
@@ -71,19 +73,19 @@ import TabItem from '@theme/TabItem';
    `URDFLoader` は、同一リポジトリ内の `reBotArm_ros2_DM` ワークスペースにある `src/rebotarm_bringup/description/` から `ReBot_Arm_DM.urdf` と STL メッシュを読み込むため、ボディモデルを Web ディレクトリ側に二重管理する必要がありません。この URDF には完全なグリッパ定義が含まれています。Web 描画時には、`end_link` 配下の元のグリッパビジュアルを非表示にし、`split_meshes/grouped_gripper/` から最適化済みの 4 つのグリッパ STL メッシュをロードします。
 
 3. **双方向 rosbridge ブリッジ**  
-   `ReBotRosClient` は rosbridge の JSON プロトコルをラップし、ジョイント状態、グリッパ状態、アームステータス、仮想カメラ画像、ビジョン検出結果を購読し、単一ジョイントコマンド、グリッパコマンド、ターゲットポーズを配信します。
+   `ReBotRosClient` は rosbridge の JSON プロトコルをラップし、ジョイント状態、グリッパ状態、アームステータス、仮想カメラ画像、ビジョン検出結果を購読し、単一ジョイントコマンド、グリッパコマンド、ターゲットポーズをパブリッシュします。
 
 4. **LLM/MCP テキスト制御**  
    Web ページは ROS を直接呼び出しません。代わりに、Node.js サーバーをプロキシとして、VM 上で動作するテキストエージェント HTTP サービスへ転送し、MCP Server が自然言語のインテントを構造化されたロボット操作へ制約します。
 
-5. **ワンクリックインストールと統合起動**  
+5. **ワンクリックインストールと統合ランチャー**  
    `setup.sh` はシステム依存パッケージのインストール、SDK のクローン、Python 仮想環境の作成、依存関係のインストール、`colcon build` の実行を自動で行います。統合エントリポイント `rebotarm` は、`start web / dm / sim`、`doctor`、`status`、`stop` などのコマンドを提供します。これは冪等であり、すでに存在して要件を満たしているコンポーネントは自動的にスキップされます。
 
 ## 配線とネットワークに関する注意
 
 Web シミュレータ自体はハードウェアに直接接続しません。すべての制御コマンドは rosbridge を介して ROS2 に転送されます。次の 2 点を確認してください：
 
-1. **Ubuntu ホスト側**: USB2CAN シリアルブリッジがアームの CAN バスに接続されており、グリッパモータも同じ CAN バス上にあり、24V 電源が接続されていることを確認します。ホストがシリアルポートを認識しているか確認します：
+1. **Ubuntu ホスト側**: USB2CAN シリアルブリッジがアームの CAN バスに接続されており、グリッパモーターも同じ CAN バス上にあり、24V 電源が接続されていることを確認します。ホストがシリアルポートを認識しているか確認します：
 
 ```bash
 ls /dev/ttyACM*
@@ -99,7 +101,7 @@ ls /dev/ttyACM*
 
 </details>
 
-2. **Web ホスト側**: Ubuntu ホストの rosbridge ポート（デフォルトは `9090`）へ到達できることを確認します。Web ホスト側のブラウザまたはターミナルから WebSocket 接続をテストします。例：
+2. **Web ホスト側**: Ubuntu ホストの rosbridge ポート（デフォルトは `9090`）に到達できることを確認します。Web ホスト側のブラウザまたはターミナルから WebSocket 接続をテストします。例えば：
 
 ```bash
 # Confirm the Ubuntu host IP is reachable
@@ -109,7 +111,7 @@ ping <Ubuntu IP>
 curl -i http://<Ubuntu IP>:9090
 ```
 
-Ubuntu 側で一時的にシリアルポートの権限を開放する必要がある場合：
+一時的にシリアルポートの権限を開放する必要がある場合（Ubuntu 側）：
 
 ```bash
 sudo chmod 666 /dev/ttyACM0
@@ -121,7 +123,7 @@ sudo chmod 666 /dev/ttyACM0
 sudo usermod -a -G dialout $USER
 ```
 
-## 動作環境要件
+## 動作環境
 
 | 項目 | 推奨 |
 |---|---|
@@ -136,12 +138,12 @@ sudo usermod -a -G dialout $USER
 
 ### ステップ 0. アームの基本セットアップを完了する
 
-Web シミュレータ開発を始める前に、[reBot Arm B601-DM クイックスタート](https://wiki.seeedstudio.com/ja/rebot_b601_dm_getting_started/) の手順（アームの組み立て、モータ ID 設定、ゼロ点初期化、基本的な接続確認）を完了してください。
+Web シミュレータ開発を始める前に、[reBot Arm B601-DM クイックスタート](https://wiki.seeedstudio.com/ja/rebot_b601_dm_getting_started/) の手順（アームの組み立て、モーター ID 設定、ゼロ点初期化、基本的な接続確認）を完了してください。
 
-プロジェクトリポジトリには、すでに Web シミュレータに必要な ROS2 ワークスペース、URDF、STL メッシュが含まれています。[reBot Arm B601-DM ROS2 連携](https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/) ガイドに従って別のワークスペースを構築する必要はありません。
+プロジェクトリポジトリには、Web シミュレータに必要な ROS2 ワークスペース、URDF、STL メッシュがすでに含まれています。[reBot Arm B601-DM ROS2 連携](https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/) ガイドに従って別のワークスペースをビルドする必要はありません。
 
 :::tip
-`reBotArm_control_py` は、実機ドライバ、逆運動学、動力学計算、重力補償を提供する中核の外部依存コンポーネントです。Web シミュレータ自体はこの SDK を直接インポートしませんが、ROS2 バックエンド上の実機ノード `rebotarmcontroller`、MuJoCo トルクロープ、重力補償機能はすべてこれに依存しています。Fake Driver + Web のみの純粋なシミュレーションモードを実行する場合は SDK は不要ですが、実機を制御したり重力補償を使用したりする場合は必須です。
+`reBotArm_control_py` は、実機ドライバ、逆運動学、動力学計算、重力補償を提供する中核の外部依存コンポーネントです。Web シミュレータはこの SDK を直接インポートしませんが、ROS2 バックエンド上の実機ノード `rebotarmcontroller`、MuJoCo トルクロープ、重力補償機能はすべてこれに依存しています。Fake Driver + Web の純粋なシミュレーションモードのみを実行する場合は SDK は不要ですが、実機を制御したり重力補償を使用したりする場合は必須です。
 
 `setup.sh` は [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) から SDK を自動取得し、`~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM/third_party/reBotArm_control_py/` にインストールします（検証済みコミットに固定）。すでに `~/reBotArm_control_py/` が存在する場合は自動的に検出され、再クローンは行われません。
 
@@ -172,14 +174,14 @@ git clone https://github.com/Yang-Ci/Borot-Arm_Mujoco.git ~/reBot_Arm_Mujoco-DM
 cd ~/reBot_Arm_Mujoco-DM
 ```
 
-リポジトリルートにある `setup.sh` は冪等であり、環境全体を自動的にセットアップします：
+リポジトリルートにある `setup.sh` は冪等であり、環境全体を自動セットアップします：
 
 - 不足している apt システムパッケージ（ROS 2、Node.js、ros-dev-tools など）をインストール
 - `reBotArm_control_py` SDK を `third_party/` にクローン（すでに存在する場合はスキップ）
 - Python 仮想環境（`reBotArm_ros2_DM/.venv`、`--system-site-packages` 付き）を作成
 - `requirements.txt` から Python 依存パッケージをインストール
-- Web 用 `.env` を `.env.example` から作成
-- `rosdep` による依存関係解決と `colcon build --symlink-install` の実行
+- Web 用 `.env.example` から `.env` を作成
+- `rosdep` による依存解決と `colcon build --symlink-install` を実行
 
 ```bash
 ./setup.sh
@@ -231,12 +233,12 @@ Setup complete. Next:
   ./rebotarm start dm
 ```
 
-`Failed or still missing` セクションが空の `Setup complete` メッセージが表示されれば、セットアップは成功です。
+`Failed or still missing` セクションが空の `Setup complete` メッセージが表示されていれば、セットアップは成功しています。
 
 </details>
 
 :::note
-もし `setup.sh` が自動的に ROS 2 をインストールしない場合（例：ROS の apt ソースがまだシステムに追加されていない場合）、インストーラは自動的に GitHub から公式の `ros2-apt-source` パッケージをダウンロードしてソースを追加し、再試行します。apt ソースを手動で設定する必要はありません。
+もし `setup.sh` が自動的に ROS 2 をインストールしない場合（たとえば ROS の apt ソースがまだシステムに追加されていない場合）、インストーラは自動的に GitHub から公式の `ros2-apt-source` パッケージをダウンロードしてソースを追加し、再試行します。apt ソースを手動で設定する必要はありません。
 :::
 
 ### ステップ 2. 環境変数を設定する
@@ -270,42 +272,42 @@ Ctrl+C stops processes started by this command.
 ブラウザで `http://localhost:3001` を開き、URDF と STL の読み込みが完了するまで待ちます。3D モデルが表示されればフロントエンドは正常に動作しています。ページはデフォルトでローカルの rosbridge に接続されているため、「ROS2 Bridge」パネルから直接操作できます。
 
 :::note
-rosbridge を起動せずに純粋な Web デモだけを実行したい場合は、Web ディレクトリから手動で起動することもできます：
+純粋な Web デモのみを実行したい場合（rosbridge を起動しない場合）は、Web ディレクトリから手動で起動することもできます：
 
 ```bash
 cd ~/reBot_Arm_Mujoco-DM/reBotArm_simulator-DM
 node server.js
 ```
 
-この場合、ページではジョイントスライダーのドラッグ、姿勢プリセット、TCP ドラッグが利用できますが、いかなる ROS ノードにも接続されません。
+この場合、ページ上では関節スライダーのドラッグ、姿勢プリセット、TCP ドラッグが利用できますが、いかなる ROS ノードにも接続されません。
 :::
 
 ## プロジェクトの起動
 
 :::note
-`./rebotarm` コマンドは内部で環境を source するため、`source scripts/source_rebotarm_env.sh` を手動で実行する必要はありません。ただし、素の `ros2` コマンドを直接実行する場合は、各ターミナルで最初に source する必要があります。
+`./rebotarm` コマンドは内部で環境を source するため、`source scripts/source_rebotarm_env.sh` を手動で実行する必要はありません。ただし、素の `ros2` コマンドを直接実行する場合は、各ターミナルで事前に source する必要があります。
 :::
 
 <Tabs defaultValue="fake" groupId="launch-mode" queryString>
 
 <TabItem value="web" label="純粋な Web デモ">
 
-最も軽量な実行方法です：Web サーバーのみを起動し、ROS2 には接続しません。姿勢デモ、ティーチング、UI 開発に適しています：
+最も軽量な実行方法です。Web サーバーのみを起動し、ROS2 には接続しません。姿勢デモ、ティーチング、UI 開発に適しています：
 
 ```bash
 cd ~/reBot_Arm_Mujoco-DM/reBotArm_simulator-DM
 node server.js
 ```
 
-ブラウザで `http://localhost:3001` を開きます。ジョイントスライダーのドラッグ、姿勢プリセット、TCP ドラッグ、ティーチ・レコードが利用できますが、すべての操作は 3D モデルのみに影響し、ハードウェアや ROS ノードは一切駆動されません。
+ブラウザで `http://localhost:3001` を開きます。関節スライダーのドラッグ、姿勢プリセット、TCP ドラッグ、ティーチング記録が利用できますが、すべての操作は 3D モデルのみに影響し、ハードウェアや ROS ノードは一切駆動されません。
 
 
-![Web シミュレータのインターフェース](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png)
+![Web simulator interface](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png)
 </TabItem>
 
 <TabItem value="fake" label="Fake Driver シミュレーション">
 
-Fake Driver、rosbridge、Web サーバーを起動します。Web ページは rosbridge を通じてジョイント状態をミラーし、制御コマンドを送信します。インターフェース、関節方向、リミットの検証に適しています。
+Fake Driver、rosbridge、Web サーバーを起動します。Web ページは rosbridge を通じて関節状態をミラーし、制御コマンドを送信します。インターフェース、関節方向、リミットの検証に適しています。
 
 ターミナル 1 — Fake Driver を起動：
 
@@ -322,10 +324,10 @@ cd ~/reBot_Arm_Mujoco-DM
 ./rebotarm start web
 ```
 
-ページが `ws://localhost:9090` に接続したら、「Mirror real joint state to the web」にチェックを入れて、Fake Driver のジョイント状態が 3D モデルに同期されることを確認します。「Allow the web to send control to the real arm」にチェックを入れると、ジョイントスライダーと Pose モーションが rosbridge を通じてコマンドを送信します。
+ページが `ws://localhost:9090` に接続したら、「Mirror real joint state to the web」にチェックを入れると Fake Driver の関節状態が 3D モデルに同期されます。「Allow the web to send control to the real arm」にチェックを入れると、関節スライダーと Pose モーションが rosbridge を通じてコマンドを送信します。
 
 
-![RViz モデルの可視化](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_rviz_model.png)
+![RViz model visualization](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_rviz_model.png)
 </TabItem>
 
 <TabItem value="mujoco" label="完全な物理シミュレーション">
@@ -356,7 +358,7 @@ cd ~/reBot_Arm_Mujoco-DM
 このスクリプトは内部的には `reBotArm_ros2_DM/scripts/start_rebot_mujoco_all.sh` と同等です。デフォルトでは Fake Driver、robot_state_publisher、MuJoCo 物理グラスプ、タスクサーバー、オーバーヘッド RGB カメラ、カラー検出器、rosbridge を起動します。その後、別のターミナルで `./rebotarm start web` を実行して Web ページを起動します。ブラウザが ROS に接続したら、ビジュアルグラスプのデモを利用できます。
 
 
-![MuJoCo 物理シミュレーション](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_mujoco_physics.png)
+![MuJoCo physics simulation](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_mujoco_physics.png)
 </TabItem>
 
 <TabItem value="real" label="実機ロボット制御">
@@ -413,28 +415,28 @@ reBot_Arm_Mujoco-DM/
    └─ split_meshes/grouped_gripper/ Web gripper meshes
 ```
 
-データフロー：ブラウザは `HTTP /api` を介して Node.js の静的サーバーにアクセスし、`rosbridge WebSocket` を通じて ROS2 と双方向通信を行います。自然言語は Node.js によって Text Agent / MCP Server へプロキシされ、構造化されたツール呼び出しに変換されて ROS2 に入ります。ROS2 は Fake/実機ドライバとアームを下流側に駆動し、MuJoCo 物理シミュレーション、タスクサーバー、仮想カメラと横方向に接続します。Web ページ、LLM Agent、実機ロボットは互いへの呼び出しをハードコードしておらず、ROS2 のトピック、サービス、アクションによって疎結合化されています。
+データフロー：ブラウザは `HTTP /api` を介して Node.js の静的サーバーにアクセスし、`rosbridge WebSocket` を通じて ROS2 と双方向通信を行います。自然言語は Node.js によって Text Agent / MCP Server へプロキシされ、構造化されたツール呼び出しに変換されて ROS2 に入ります。ROS2 は Fake/実機ドライバとアームを下流側に駆動し、MuJoCo 物理シミュレーション、タスクサーバー、仮想カメラと横方向に接続します。Web ページ、LLM Agent、実機ロボットは互いへの呼び出しをハードコードしておらず、ROS2 のトピック、サービス、アクションを介して疎結合になっています。
 
 `rebotarm` の統一エントリポイントが、このプロジェクトを操作する主な方法です：
 
-| コマンド | 説明 |
+| Command | Description |
 |---|---|
 | `./rebotarm start web` | rosbridge + Web サーバーを起動（環境を自動で source） |
-| `./rebotarm start dm` | DM 実機ロボットドライバを起動（別ターミナル、環境を自動で source） |
-| `./rebotarm start sim` | フル MuJoCo シミュレーションスタックを起動（実機ロボットと同時起動しないこと） |
+| `./rebotarm start dm` | DM 実機ドライバを起動（別ターミナル、環境を自動で source） |
+| `./rebotarm start sim` | MuJoCo のフルシミュレーションスタックを起動（実機と同時には起動しないでください） |
 | `./rebotarm doctor` | 診断チェック（`./setup.sh --check` と同等） |
 | `./rebotarm status` | プロセス、ポート、シリアルポート、ROS ノードの状態を表示 |
 | `./rebotarm stop` | `start web` によって管理されているバックグラウンドプロセスを停止 |
 
 :::note
-すべての `./rebotarm` コマンドは内部で `source scripts/source_rebotarm_env.sh` を実行するため、環境を手動で読み込む必要はありません。ただし、（launch ファイルを手動で起動するなど）素の `ros2` コマンドを直接実行する場合は、依然として最初に source する必要があります：
+すべての `./rebotarm` コマンドは内部で `source scripts/source_rebotarm_env.sh` を実行するため、環境を手動で読み込む必要はありません。ただし、素の `ros2` コマンド（たとえば launch ファイルを手動で起動する場合）を直接実行する場合は、事前に source する必要があります：
 
 ```bash
 cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 source scripts/source_rebotarm_env.sh
 ```
 
-このスクリプトは、ROS2（`/opt/ros/jazzy/setup.bash`）、Python venv（`.venv/bin/activate`）、cmeel パス（Pinocchio の C 拡張）、ワークスペース（`install/setup.bash`）をこの順に読み込みます。
+このスクリプトは、ROS2（`/opt/ros/jazzy/setup.bash`）、Python venv（`.venv/bin/activate`）、cmeel のパス（Pinocchio の C 拡張）、ワークスペース（`install/setup.bash`）をこの順に読み込みます。
 :::
 
 <details>
@@ -447,11 +449,11 @@ source scripts/source_rebotarm_env.sh
 
 - `public/` 配下の静的フロントエンドアセットを配信する；
 - 同一リポジトリ内の ROS2 ワークスペースから URDF と STL メッシュを読み取り、`/api/urdf` および `/api/description/meshes/<file>` エンドポイントとして公開する；
-- Web 専用のグリッパーメッシュ `/api/gripper_meshes/<file>` を提供します（`split_meshes/grouped_gripper/` から）;
-- LLM チャットリクエスト `/api/llm/chat` とヘルスチェック `/api/llm/health` を VM 内の text-agent HTTP サービスへプロキシします;
+- Web 専用のグリッパーメッシュ `/api/gripper_meshes/<file>`（`split_meshes/grouped_gripper/` から）を配信します；
+- LLM チャットリクエスト `/api/llm/chat` とヘルスチェック `/api/llm/health` を VM 内の text-agent HTTP サービスへプロキシします；
 - MCP 設定エンドポイント `/api/mcp/config` を提供し、`textAgentUrl` と `mcpUrl` を返します。
 
-キーとなるパス解決（`server.js`）:
+キーのパス解決（`server.js`）：
 
 ```javascript
 const BRINGUP_DIR = path.resolve(
@@ -463,21 +465,21 @@ const GRIPPER_MESHES_DIR = path.join(ROOT, 'split_meshes', 'grouped_gripper');
 ```
 
 :::note
-`server.js` は相対パス `../reBotArm_ros2_DM/...` を通じて ROS2 ワークスペースを特定します。web ディレクトリを別の場所に移動する場合は、これらのパスを適宜更新するか、ROS2 ワークスペースと同じバージョンのモデルコピーを web ディレクトリ内に保持する必要があります。
+`server.js` は相対パス `../reBotArm_ros2_DM/...` を通じて ROS2 ワークスペースを見つけます。web ディレクトリを別の場所に移動する場合は、これらのパスを適切に更新するか、ROS2 ワークスペースと同じバージョンのモデルコピーを web ディレクトリ内に保持する必要があります。
 :::
 
-**rebot-sim.js — 3D シーンのコア**
+**rebot-sim.js — 3D シーンコア**
 
 `rebot-sim.js` はフロントエンドのコア（約 1700 行）で、次の役割を担います：
 
-- Three.js のシーン、カメラ、レンダラー、およびカスタム軌道コントローラの初期化;
-- `URDFLoader` を通じて URDF を読み込みます。`loader.packages` は `package://rebotarm_bringup` を `${origin}/api` にマッピングし、メッシュ要求が Node.js エンドポイントを経由するようにします;
-- Web 専用のグリッパー可視グループ（4 つの STL）を `end_link` にアタッチし、駆動範囲を 0–90mm とします;
-- DLS（damped least squares）逆運動学ソルバ `IKSolver` を実装し、TCP ドラッグと目標姿勢の解決をサポートします;
-- 姿勢プリセット、関節スライダー、TCP ドラッグ、ティーチングの記録/再生/エクスポート、到達可能領域推定、ターゲットゴーストを提供します;
+- Three.js のシーン、カメラ、レンダラー、およびカスタム軌道コントローラの初期化；
+- `URDFLoader` を通じて URDF を読み込みます；`loader.packages` は `package://rebotarm_bringup` を `${origin}/api` にマッピングし、メッシュリクエストが Node.js エンドポイントを経由するようにします；
+- Web 専用のグリッパー可視グループ（4 つの STL）を `end_link` にアタッチし、駆動範囲を 0–90mm とします；
+- DLS（damped least squares）逆運動学ソルバ `IKSolver` を実装し、TCP ドラッグと目標姿勢の解決をサポートします；
+- 姿勢プリセット、関節スライダー、TCP ドラッグ、ティーチングの記録/再生/エクスポート、到達エンベロープ推定、およびターゲットゴーストを提供します；
 - `window.reBotSim` オブジェクトを通じて API を公開し、`rebot-ros-ui.js` から呼び出せるようにします。
 
-関節定義（`rebot-sim.js`）:
+関節定義（`rebot-sim.js`）：
 
 ```javascript
 const jointDefs = [
@@ -492,18 +494,18 @@ const jointDefs = [
 ```
 
 :::note
-Web の Three.js 座標フレームは ROS のフレームと異なります。Three.js はデフォルトで Y-up、ROS はデフォルトで Z-up です。`rebot-sim.js` は `threeToRos(v)` によって `{ x: v.x, y: -v.z, z: v.y }` という変換を行います。カスタム姿勢機能を開発する際は必ずこの変換を使用してください。そうしないと座標が誤ったものになります。
+Web の Three.js 座標フレームは ROS のフレームと異なります。Three.js はデフォルトで Y-up、ROS はデフォルトで Z-up です。`rebot-sim.js` は `threeToRos(v)` によって `{ x: v.x, y: -v.z, z: v.y }` という変換を行います。カスタム姿勢機能を開発する際は必ずこの変換を使用してください。そうしないと座標が誤ってしまいます。
 :::
 
 **rebot-ros-client.js — rosbridge クライアント**
 
 `ReBotRosClient` は `EventTarget` を継承し、rosbridge v2 JSON プロトコルをラップして、次の機能を提供します：
 
-- `connect(url)` / `disconnect()`: WebSocket 接続管理（自動再接続機能付き：`autoReconnect`, `reconnectDelay`）;
-- `subscribe(topic, type, callback, options)`: トピックを購読し、`throttleRate` によるスロットリングをサポート;
-- `callService(service, type, args)`: サービスを呼び出し、Promise を返します;
-- `sendActionGoal(actionName, actionType, goal)`: `/_action/send_goal` を通じてアクションを呼び出します;
-- 高レベルラッパー：`enable()`, `disable()`, `safeHome()`, `startGravityCompensation()`, `setGripper()`, `moveToPose()`, `solveMoveToPoseIK()`, `followJointTrajectory()`;
+- `connect(url)` / `disconnect()`: WebSocket 接続管理（自動再接続機能付き：`autoReconnect`, `reconnectDelay`）；
+- `subscribe(topic, type, callback, options)`: トピックを購読し、`throttleRate` によるスロットリングをサポート；
+- `callService(service, type, args)`: サービスを呼び出し、Promise を返します；
+- `sendActionGoal(actionName, actionType, goal)`: `/_action/send_goal` を通じてアクションを呼び出します；
+- 高レベルラッパー：`enable()`, `disable()`, `safeHome()`, `startGravityCompensation()`, `setGripper()`, `moveToPose()`, `solveMoveToPoseIK()`, `followJointTrajectory()`；
 - パブリッシュ用ラッパー：`publishJointCommand()`, `publishGripperCommand()`, `publishTargetPose()`。
 
 デフォルトのネームスペースは `rebotarm` で、すべてのトピック/サービスパスは `/rebotarm/` で始まります。
@@ -512,16 +514,16 @@ Web の Three.js 座標フレームは ROS のフレームと異なります。T
 
 `rebot-ros-ui.js`（約 1500 行）は、`ReBotRosClient` と `reBotSim` を接続するビジネスレイヤーで、次の役割を担います：
 
-- 関節状態、グリッパー状態、アームステータス、仮想カメラ画像、ビジョン検出結果、シミュレーションアニメーションイベントの購読;
-- 「実機の関節状態を Web にミラーする」と「Web から実機アームへの制御送信を許可する」という 2 つのスイッチの実装;
-- 関節コマンドのスロットリング（`COMMAND_INTERVAL_MS = 45ms`）とミラーホールド（`MIRROR_HOLD_MS = 1800ms`）;
-- 重力補償の開始/停止およびステータス問い合わせ;
-- グリッパー制御と到達待ち（`commandGripperAndWait`）;
-- IK チェック、姿勢モーション、軌道送信、および低レベル再生フォールバック;
-- 完全なビジュアル把持フロー（退避、整列、事前下降、下降、把持、持ち上げ、搬送）;
+- 関節状態、グリッパー状態、アームステータス、仮想カメラ画像、ビジョン検出結果、およびシミュレーションアニメーションイベントの購読；
+- 「実機の関節状態を Web にミラーする」と「Web から実機アームへの制御送信を許可する」という 2 つのスイッチの実装；
+- 関節コマンドのスロットリング（`COMMAND_INTERVAL_MS = 45ms`）とミラーホールド（`MIRROR_HOLD_MS = 1800ms`）；
+- 重力補償の開始/停止およびステータス問い合わせ；
+- グリッパー制御と到達待ち（`commandGripperAndWait`）；
+- IK チェック、姿勢モーション、軌道送信、およびローレベル再生フォールバック；
+- 完全なビジュアル把持フロー（退避、整列、予備下降、下降、把持、持ち上げ、移動）；
 - シミュレーションアニメーションイベント（`attach_object` / `release_object`）により、Web グリッパーがオブジェクトに追従するよう駆動します。
 
-コントロールロックは誤操作を防ぐための重要な安全装置です。`controlAllowed()` は一元的にチェックを行い、ROS が接続されていない場合やコントロールロックにチェックが入っていない場合は、すべての制御コマンドを遮断し、ページは 3D モデルのみを更新します。
+コントロールロックは、誤操作を防ぐための重要なセーフガードです。`controlAllowed()` は一元的にチェックを行い、ROS が接続されていない場合やコントロールロックにチェックが入っていない場合は、すべての制御コマンドを遮断し、ページは 3D モデルのみを更新します。
 
 **rebot-llm.js — LLM テキスト制御 UI**
 
@@ -535,7 +537,7 @@ web rebot-llm.js
   -> ROS 2 service/action/topic
 ```
 
-起動時にはまず `/api/llm/health` を呼び出して text-agent のヘルスチェックを行い、成功後に入力ボックスを有効化します。メッセージは `/api/llm/chat` を通じて text-agent にプロキシされ、返ってきた `text` と `events`（ツール呼び出しプロセス）がチャットエリアにレンダリングされます。停止時には、コンテキストをクリアするために `{ text: '__reset__', reset: true }` を送信します。
+起動時にはまず `/api/llm/health` を呼び出して text-agent のヘルスチェックを行い、成功後に入力ボックスを有効化します。メッセージは `/api/llm/chat` を通じて text-agent にプロキシされ、返ってきた `text` と `events`（ツール呼び出しプロセス）がチャットエリアにレンダリングされます。停止時には `{ text: '__reset__', reset: true }` を送信してコンテキストをクリアします。
 
 </details>
 
@@ -547,7 +549,7 @@ Web シミュレータが購読およびパブリッシュする主要な ROS2 �
 
 **購読トピック**
 
-| トピック | 型 | 説明 |
+| Topic | Type | Description |
 |---|---|---|
 | `/rebotarm/joint_states` | `sensor_msgs/msg/JointState` | 6 関節 + グリッパーのリアルタイム位置 |
 | `/rebotarm/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | グリッパーの位置/速度/トルク |
@@ -558,7 +560,7 @@ Web シミュレータが購読およびパブリッシュする主要な ROS2 �
 
 **パブリッシュトピック**
 
-| トピック | 型 | 説明 |
+| Topic | Type | Description |
 |---|---|---|
 | `/rebotarm/joints/<jointN>/cmd` | `rebotarm_msgs/msg/JointMotorCmd` | 単一関節のスパースコマンド（mode=1 POS_VEL） |
 | `/rebotarm/gripper/cmd` | `rebotarm_msgs/msg/JointMotorCmd` | グリッパーコマンド（m, 0~0.09） |
@@ -566,7 +568,7 @@ Web シミュレータが購読およびパブリッシュする主要な ROS2 �
 
 **呼び出されるサービス**
 
-| サービス | 型 | 説明 |
+| Service | Type | Description |
 |---|---|---|
 | `/rebotarm/enable` | `std_srvs/srv/Trigger` | すべてのモーターを有効化 |
 | `/rebotarm/disable` | `std_srvs/srv/Trigger` | すべてのモーターを無効化 |
@@ -581,13 +583,13 @@ Web シミュレータが購読およびパブリッシュする主要な ROS2 �
 
 **呼び出されるアクション**
 
-| アクション | 型 | 説明 |
+| Action | Type | Description |
 |---|---|---|
 | `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | デカルト姿勢モーション |
 | `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | 関節軌道の実行 |
 
 :::note
-ROS2 環境で `FollowJointTrajectory` または `MoveToPose` の `_action/send_goal` サービスが見つからない場合、Web ページは自動的に「低レベル再生」モードにフォールバックします。このモードでは、軌道ポイントのタイムスタンプに従って単一関節コマンドをポイントごとにパブリッシュし、3D モデル側でも補間を同期します。これにより、Fake Driver のみが存在する最小構成環境でも、Web ページ上で軌道をデモすることができます。
+ROS2 環境で `FollowJointTrajectory` または `MoveToPose` の `_action/send_goal` サービスが見つからない場合、Web ページは自動的に「ローレベル再生」モードにフォールバックします：軌道ポイントのタイムスタンプに従って単一関節コマンドをポイントごとにパブリッシュし、3D モデル側でも補間を同期します。これにより、Fake Driver のみを備えた最小構成環境でも、Web ページ上で軌道をデモすることができます。
 :::
 
 </details>
@@ -605,7 +607,7 @@ open:  0.09 m
 
 URDF では、`finger_left` / `finger_right` はリニア（プリズマティック）ジョイントで、リミットは `0~0.0285`（m）です。Web ページは `fingerOpeningToGripperCommand()` を通じて、`finger_left` の開き量を 0~0.09 m のグリッパーコマンド範囲にマッピングします。
 
-座標フレームについて、Web の Three.js はデフォルトで Y-up、ROS はデフォルトで Z-up です。すべての TCP 姿勢は ROS へパブリッシュされる前に `threeToRos()` で変換されます：
+座標フレームについて、Web の Three.js はデフォルトで Y-up、ROS はデフォルトで Z-up です。すべての TCP 姿勢は ROS にパブリッシュされる前に `threeToRos()` で変換されます：
 
 ```javascript
 function threeToRos(v) {
@@ -619,7 +621,7 @@ function threeToRos(v) {
 
 ### MCP サーバーと Text Agent の起動
 
-Ubuntu VM 内で MCP サーバーを起動します（デフォルトはロックモードで読み取り専用）:
+Ubuntu VM 内で MCP サーバーを起動します（デフォルトはロックモードで読み取り専用）：
 
 ```bash
 cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
@@ -627,13 +629,13 @@ source scripts/source_rebotarm_env.sh
 ros2 launch rebotarm_agent rebotarm_mcp.launch.py
 ```
 
-シミュレーションモーションモード（モーション許可）:
+シミュレーションモーションモード（モーション許可）：
 
 ```bash
 ros2 launch rebotarm_agent rebotarm_mcp.launch.py motion_mode:=allow
 ```
 
-text-agent HTTP サービスを起動します（Web ページから呼び出すため）:
+Text-agent HTTP サービスを起動します（Web ページから呼び出すため）：
 
 ```bash
 cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
@@ -654,13 +656,13 @@ INFO:     Uvicorn running on http://0.0.0.0:8082
 
 デフォルトでは `0.0.0.0:8082` をリッスンし、MCP は `http://127.0.0.1:8081/mcp` を指し、LLM はデフォルトで `qwen-plus` を使用します。
 
-### Web での利用方法
+### Web での利用
 
-Web ページの「LLM text control」パネルで「Start AI assistant」をクリックします。ページはまず text-agent のヘルスチェックを行い、成功すると入力ボックスが有効になります。以下のように自然言語でコマンドを直接入力できます：
+Web ページの「LLM text control」パネルで「Start AI assistant」をクリックします。ページはまず text-agent のヘルスチェックを行い、成功すると入力ボックスが有効になります。自然言語で直接コマンドを入力できます。例えば：
 
 - アームの状態を問い合わせる
 - X=0.3 Y=0 Z=0.3 に移動
-- グリッパを開く
+- グリッパーを開く
 - 赤いブロックを把持する
 
 text-agent の応答とツール呼び出しのプロセスはチャットエリアに表示されます。
@@ -678,7 +680,7 @@ REBOTARM_MCP_URL=http://<Ubuntu IP>:8081/mcp
 
 ### MCP Dashboard 可視化パネル
 
-MCP Dashboard は独立したデバッグ用エントリであり、Web シミュレータを必要としません。起動には 2 ステップ必要です：
+MCP Dashboard は独立したデバッグ用エントリであり、Web シミュレータを必要としません。起動は 2 ステップです：
 ![MCP Dashboard](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_mcp.png)
 
 **ターミナル 1 — MCP Server を起動：**
@@ -706,16 +708,16 @@ http://localhost:8082/
 
 **機能**：
 
-- **ツール概要**：MCP Server から登録済みツールをすべて自動取得し、カテゴリ（ステータス & 診断、有効化制御、モーション制御、グリッパ制御、重力補償、ビジュアルグラスピング、記録 & 再生）ごとにグループ化します；
+- **ツール概要**：MCP Server から登録済みツールを自動取得し、カテゴリ（ステータス & 診断、有効化制御、モーション制御、グリッパー制御、重力補償、ビジュアルグラスピング、記録 & 再生）ごとにグループ化します；
 - **検索フィルタ**：上部の検索ボックスでツール名と説明をリアルタイムにフィルタします；
-- **パラメータフォーム**：各ツールの `inputSchema` に基づいて入力ボックスを自動生成し、パラメータを入力して「Call」をクリックすると対応する MCP ツールを直接呼び出します；
-- **モーションタグ**：`motion_mode=allow` が必要なツールには「Motion」ラベルが付与されます；
-- **カスタムツール登録**：「Register new tool」ボタンをクリックし、ツール名、説明、カテゴリ、Webhook URL、パラメータ Schema（JSON）を入力して、カスタムツールをパネルに追加します。呼び出し時にはパラメータが JSON として Webhook URL に POST されます；
+- **パラメータフォーム**：各ツールの `inputSchema` に基づいて入力ボックスを自動生成します。パラメータを入力し「Call」をクリックすると、対応する MCP ツールを直接呼び出します；
+- **モーションタグ**：`motion_mode=allow` を必要とするツールには「Motion」ラベルが付与されます；
+- **カスタムツール登録**：「Register new tool」ボタンをクリックし、ツール名、説明、カテゴリ、Webhook URL、パラメータ Schema（JSON）を入力して、カスタムツールをパネルに追加します。呼び出し時には、パラメータが JSON として Webhook URL に POST されます；
 - **CN/EN 切り替え**：右上の言語ボタンで CN/EN インターフェースをワンクリックで切り替えます。選択はブラウザの `localStorage` に保存されます；
-- **自然言語入力**：右側のチャットボックスに自然言語コマンドを入力すると、LLM → MCP チェーンを通じて `/chat` エンドポイントに送られ、応答とツール呼び出しプロセスがログエリアにリアルタイム表示されます。
+- **自然言語入力**：右側のチャットボックスに自然言語コマンドを入力すると、LLM → MCP チェーンを通じて `/chat` エンドポイントに送信され、応答とツール呼び出しプロセスがログエリアにリアルタイム表示されます。
 
 :::tip
-MCP Dashboard は独立したデバッグ用エントリであり、Web シミュレータに依存しません。MCP Server（`:8081`）と Text Agent（`:8082`）が動作していれば、`http://<Ubuntu IP>:8082/` を開くだけで 18 個すべての MCP ツールを閲覧・呼び出しできます。
+MCP Dashboard は独立したデバッグ用エントリであり、Web シミュレータに依存しません。MCP Server（`:8081`）と Text Agent（`:8082`）が動作していれば、`http://<Ubuntu IP>:8082/` を開くだけで、全 18 個の MCP ツールを閲覧・呼び出しできます。
 :::
 
 **エンドポイント概要**：
@@ -723,18 +725,18 @@ MCP Dashboard は独立したデバッグ用エントリであり、Web シミ�
 | エンドポイント | メソッド | 説明 |
 |---|---|---|
 | `/` または `/dashboard` | GET | Dashboard の HTML ページを返します（ダークなガラスパネルテーマ、CN/EN 切り替え対応） |
-| `/tools` | GET | MCP ツール一覧 JSON（名前、説明、パラメータスキーマ、カテゴリ、カスタムフラグ）を返します |
+| `/tools` | GET | MCP ツール一覧の JSON（名前、説明、パラメータスキーマ、カテゴリ、カスタムフラグ）を返します |
 | `/call_tool` | POST | 指定した MCP ツールを直接呼び出します。ボディ：`{"name":"...", "arguments":{...}}` |
 | `/register_tool` | POST | カスタムツールを登録します。ボディ：`{"name":"...", "description":"...", "category":"...", "webhook_url":"...", "parameters":{...}}` |
 | `/unregister_tool` | POST | 登録済みカスタムツールを削除します。ボディ：`{"name":"..."}` |
 | `/chat` | POST | 自然言語での対話。ボディ：`{"text":"..."}` |
 | `/health` | GET | ヘルスチェック |
 
-## 二次開発ガイド
+## セカンダリ開発ガイド
 
 ### 関節リミットやプリセットの変更
 
-関節リミットとプリセットポーズは、`rebot-sim.js` の先頭にある `jointDefs` と `presets` オブジェクトで定義されています。変更後、ページをリロードすれば反映され、再ビルドは不要です。関節リミットは URDF 内の `<limit>` と一致させる必要があります。一致していない場合、Web モデルと ROS の挙動が一致しません。
+関節リミットとプリセットポーズは、`rebot-sim.js` の先頭にある `jointDefs` と `presets` オブジェクトで定義されています。変更後、ページをリロードすれば反映され、再ビルドは不要です。関節リミットは URDF 内の `<limit>` と一致させてください。一致していないと、Web モデルと ROS の挙動が一致しません。
 
 ### カスタム ROS インターフェースの追加
 
@@ -742,11 +744,11 @@ MCP Dashboard は独立したデバッグ用エントリであり、Web シミ�
 
 ### LLM ツールの拡張
 
-LLM ツールは `rebotarm_agent` 内の MCP Server によって定義されています。新しいツールを追加するには、ROS2 ワークスペース内の `rebotarm_agent` パッケージに実装を追加します。再ビルド後、text-agent が自動的に公開します。Web 側の変更は不要で、ツール呼び出しプロセスは `/api/llm/chat` の `events` フィールドを通じて返され、レンダリングされます。
+LLM ツールは `rebotarm_agent` 内の MCP Server によって定義されています。新しいツールを追加するには、ROS2 ワークスペース内の `rebotarm_agent` パッケージに実装を追加します。再ビルド後、text-agent が自動的にそれを公開します。Web 側の変更は不要で、ツール呼び出しプロセスは `/api/llm/chat` の `events` フィールドを通じて返され、レンダリングされます。
 
-### Web グリッパメッシュの変更
+### Web グリッパーメッシュの変更
 
-Web 専用のグリッパ STL は `split_meshes/grouped_gripper/` にあり、`gripper_base.stl`、`gripper_hardware.stl`、`left_finger.stl`、`right_finger.stl` が含まれます。これらのファイルを置き換えてページをリロードしてください。Web ディレクトリ内に 2 つ目の `urdf/` や `meshes/` コピーを追加しないでください。実行時に使用されるのはこれら 4 つのグリッパ STL のみです。
+Web 専用のグリッパー STL は `split_meshes/grouped_gripper/` にあり、`gripper_base.stl`、`gripper_hardware.stl`、`left_finger.stl`、`right_finger.stl` が含まれます。これらのファイルを置き換えてページをリロードしてください。Web ディレクトリ内に 2 つ目の `urdf/` や `meshes/` コピーを追加しないでください。実行時に使用されるのはこれら 4 つのグリッパー STL のみです。
 
 ### rosbridge 接続アドレスの変更
 
@@ -775,7 +777,7 @@ rosbridge の WebSocket アドレスは、Web ページの「ROS2 Bridge」パ�
 | `reBotArm_simulator-DM/public/lib/three-r128.min.js` | Three.js レンダリングエンジン |
 | `reBotArm_simulator-DM/public/lib/STLLoader-umd.js` | STL メッシュローダー |
 | `reBotArm_simulator-DM/public/lib/URDFLoader.js` | URDF パーサー |
-| `reBotArm_simulator-DM/split_meshes/grouped_gripper/` | Web 専用グリッパ STL（4 ファイル） |
+| `reBotArm_simulator-DM/split_meshes/grouped_gripper/` | Web 専用グリッパー STL（4 ファイル） |
 
 </details>
 
@@ -785,8 +787,8 @@ rosbridge の WebSocket アドレスは、Web ページの「ROS2 Bridge」パ�
 
 ページがローディングオーバーレイのまま止まっている場合、URDF または STL メッシュのリクエストが失敗しています。ブラウザの開発者ツールで Network パネルを開き、`/api/urdf` と `/api/description/meshes/*.STL` が 200 を返しているか確認してください。よくある原因：
 
-- `server.js` 内の `BRINGUP_DIR` パスの解決が誤っており（Web ディレクトリをモノレポ以外の場所に移動した）、`src/rebotarm_bringup/description/` が見つからない；
-- URDF 内の `package://rebotarm_bringup/...` がマッピングできない。`loader.packages` が `${origin}/api` を指しているか確認してください；
+- `server.js` 内の `BRINGUP_DIR` パスの解決が誤っており（Web ディレクトリをモノレポ外に移動したなど）、`src/rebotarm_bringup/description/` が見つからない；
+- URDF 内の `package://rebotarm_bringup/...` がマッピングできていない。`loader.packages` が `${origin}/api` を指しているか確認する；
 - STL ファイルが欠落している、またはパスの大文字小文字が一致していない（Linux は大文字小文字を区別します）。
 
 ### 2. ROS に接続してもステータスが「offline」のまま
@@ -797,7 +799,7 @@ rosbridge の WebSocket アドレスは、Web ページの「ROS2 Bridge」パ�
 - Web ホストから Ubuntu の 9090 ポートに到達できるか（ファイアウォール、VM のネットワークモード）；
 - WebSocket アドレスが `ws://` で始まっているか（例：`ws://localhost:9090`）；
 
-### 3. ジョイントスライダで実機ロボットを制御できない
+### 3. ジョイントスライダーで実機ロボットを制御できない
 
 Web ページから実機ロボットを制御するには、3 つのアンロックステップが必要です：
 
@@ -805,11 +807,11 @@ Web ページから実機ロボットを制御するには、3 つのアンロ�
 2. 「Allow the web to send control to the real arm」にチェックを入れ、確認ダイアログで「OK」をクリック；
 3. 「Enable」ボタンをクリック。
 
-この 3 ステップはすべて必要です。コントロールロックにチェックが入っていない場合、スライダをドラッグしても 3D モデルのみが動き、ROS コマンドは送信されません。
+この 3 ステップはすべて必要です。制御ロックにチェックが入っていない場合、スライダーをドラッグしても 3D モデルのみが動き、ROS コマンドは送信されません。
 
-### 4. グリッパが Web と同期しない
+### 4. グリッパーが Web と同期しない
 
-`/rebotarm/gripper/state` の `position` はラジアンではなくメートル（0〜0.09）である必要があります。同期しない場合は、ROS2 コントローラ内の `ros_publishers.py` が `gripper_position_m()` を使用しているか確認してください。Web ページはフォールバックのフィードバックソースとして、`/rebotarm/joint_states` 内の `finger_left` からもグリッパ開度を推定します。
+`/rebotarm/gripper/state` の `position` はラジアンではなくメートル（0〜0.09）である必要があります。同期しない場合は、ROS2 コントローラ内の `ros_publishers.py` が `gripper_position_m()` を使用しているか確認してください。Web ページはフォールバックのフィードバックソースとして、`/rebotarm/joint_states` 内の `finger_left` からもグリッパー開度を推定します。
 
 ### 5. LLM アシスタントが起動に失敗する
 
@@ -820,7 +822,7 @@ cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
-また、`.env` 内の `REBOTARM_TEXT_AGENT_URL` が正しい VM の IP とポート（デフォルトは `8082`）を指していることを確認してください。ページはまず `/api/llm/health` を呼び出してヘルスチェックを行い、失敗した場合はメッセージエリアに具体的なエラー内容を表示します。
+また、`.env` 内の `REBOTARM_TEXT_AGENT_URL` が正しい VM の IP とポート（デフォルトは `8082`）を指していることを確認してください。ページは最初に `/api/llm/health` を呼び出してヘルスチェックを行い、失敗した場合はメッセージエリアに具体的なエラー内容を表示します。
 
 ### 6. ビジュアル把持デモが動作しない
 
@@ -828,19 +830,19 @@ cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 
 - MuJoCo のオーバーヘッド RGB カメラが動作しており、`/rebotarm/mujoco/overhead_rgb/image_raw` に画像があるかどうか；
 - カラーディテクタが動作しており、`/rebotarm/vision/color_blocks/detections` に結果があるかどうか；
-- Web カメラのプレビューにフレームが表示されており、色認識ステータスが「N / target X」と表示されているかどうか；
+- Web カメラのプレビューにフレームが表示されており、色認識ステータスが "N / target X" と表示されているかどうか；
 - ターゲットカラーの選択が正しいかどうか（auto/red/yellow/blue）。
 
 ### 7. フロントエンドコードの変更が反映されない
 
-フロントエンドアセットは Node.js によって静的に配信されます。変更後はブラウザをリロードしてください。現在のバージョンでは Service Worker を登録していないため、旧バージョンが更新されない原因となるオフラインキャッシュはありません。ブラウザに古いコンテンツが表示される場合は、ハードリフレッシュ（Ctrl+Shift+R）を行うか、通常のキャッシュをクリアしてください。
+フロントエンドアセットは Node.js によって静的に配信されます。変更後はブラウザをリロードしてください。現在のバージョンでは Service Worker を登録していないため、旧バージョンが更新されない原因となるオフラインキャッシュはありません。ブラウザに古いコンテンツが表示され続ける場合は、ハードリフレッシュ（Ctrl+Shift+R）を行うか、通常のキャッシュをクリアしてください。
 
 ### 8. "URDFLoader" または "THREE" が見つからない
 
 これらは `public/lib/` 配下のサードパーティライブラリで、`index.html` によって `<script>` タグ経由で読み込まれます。次を確認してください：
 
 - `public/lib/three-r128.min.js`、`public/lib/URDFLoader.js`、`public/lib/STLLoader-umd.js` が存在すること；
-- `index.html` 内の `<script>` タグのパスが正しく、読み込み順が Three.js → STLLoader → URDFLoader → ビジネスロジック用スクリプトになっていること；
+- `index.html` 内の `<script>` タグのパスが正しく、読み込み順が Three.js → STLLoader → URDFLoader → ビジネススクリプト になっていること；
 - ブラウザコンソールに 404 や読み込み順序のエラーが出ていないこと。
 
 ### 9. `setup.sh` がエラーを報告する、またはインストールに失敗する
@@ -849,8 +851,8 @@ cd ~/reBot_Arm_Mujoco-DM/reBotArm_ros2_DM
 
 - ROS apt ソースが設定されていない：インストーラは自動的に `ros2-apt-source` パッケージをダウンロードしてソースを追加しますが、これには sudo が必要です；
 - Python バージョンの不一致：Jazzy には 3.12、Humble には 3.10 が必要です。不一致は `Version/platform mismatches` に一覧表示されます；
-- SDK のクローンに失敗した：ネットワークと GitHub への到達性を確認するか、`reBotArm_ros2_DM/third_party/reBotArm_control_py/` に手動でクローンしてから再実行してください；
-- `colcon build` が失敗した：`rosdep` が初期化されているかどうか（`sudo rosdep init && rosdep update`）を確認し、その後 `./setup.sh` を再実行してください。
+- SDK のクローンに失敗した：ネットワークと GitHub への到達性を確認するか、`reBotArm_ros2_DM/third_party/reBotArm_control_py/` に手動でクローンして再実行してください；
+- `colcon build` が失敗した：`rosdep` が初期化されているかどうかを確認し（`sudo rosdep init && rosdep update`）、その後 `./setup.sh` を再実行してください。
 
 ## 連絡先
 

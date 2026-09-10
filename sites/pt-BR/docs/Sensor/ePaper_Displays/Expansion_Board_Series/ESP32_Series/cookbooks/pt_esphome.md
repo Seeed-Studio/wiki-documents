@@ -1,6 +1,6 @@
 ---
-description: Livro de receitas ESPHome para a família XIAO ePaper Driver Board (EE0x) - integração com Home Assistant na XIAO ESP32-S3 + placa driver EE0x com a tela ePaper de sua escolha. EE04 é usado como exemplo em execução; EE02 / EE03 / EE05 compartilham o mesmo fluxo de trabalho.
-title: Livro de Receitas ESPHome
+description: cookbook ESPHome para a família XIAO ePaper Driver Board (EE0x) - integração com Home Assistant na XIAO ESP32-S3 + placa driver EE0x com a tela ePaper de sua escolha. EE04 é usado como exemplo em execução; EE02 / EE03 / EE05 compartilham o mesmo fluxo de trabalho.
+title: Cookbook ESPHome
 keywords:
   - display ePaper
   - ESPHome
@@ -26,10 +26,10 @@ url: https://wiki.seeedstudio.com/pt-br/EE04_with_esphome_advanced/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Livro de Receitas ESPHome: XIAO ePaper Driver Boards (EE0x)
+# Cookbook ESPHome: XIAO ePaper Driver Boards (EE0x)
 
 :::tip Leia primeiro o guia principal do ESPHome
-Esta página é o **livro de receitas ESPHome da placa driver EE0x** — aplicável a **EE02 / EE03 / EE04 / EE05**. Como todas as quatro placas compartilham a mesma base XIAO ESP32-S3 e a mesma interface ePaper conectada por SPI, o fluxo de trabalho é idêntico; a única coisa que muda entre elas é o modelo de tela que você seleciona no bloco YAML `display:`.
+Esta página é o **cookbook ESPHome da placa driver EE0x** — aplicável a **EE02 / EE03 / EE04 / EE05**. Como todas as quatro placas compartilham a mesma base XIAO ESP32-S3 e a mesma interface ePaper conectada por SPI, o fluxo de trabalho é idêntico; a única coisa que muda entre elas é o modelo de tela que você seleciona no bloco YAML `display:`.
 
 **Exemplo prático: EE04 com a tela mono de 7,5" 800×480.** Substitua o seu próprio par placa + tela na linha `display.model` e o restante da configuração se aplica como está.
 

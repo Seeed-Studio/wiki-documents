@@ -293,7 +293,7 @@ Seeed Studio は、次の 3 つの製品ラインを中心に構成されたエ�
 
 ### スマートホーム & ダッシュボードフレームワーク
 
-- [Work with ESPHome](https://wiki.seeedstudio.com/ja/epaper_work_with_esphome) — 主要なリファレンス：書き込みパス、汎用YAMLスケルトン、Home Assistant連携。製品別クックブック：[reTerminal E（Basic）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)、[reTerminal E（Advanced）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/ja/EE04_with_esphome_advanced)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome)。
+- [Work with ESPHome](https://wiki.seeedstudio.com/ja/epaper_work_with_esphome) — 主要なリファレンス：書き込みパス、汎用YAMLスケルトン、Home Assistant連携。製品別 cookbooks：[reTerminal E（Basic）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)、[reTerminal E（Advanced）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/ja/EE04_with_esphome_advanced)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome)。
 - [Work with TRMNL](https://wiki.seeedstudio.com/ja/reterminal_e10xx_trmnl) — TRMNLクラウドプラットフォームを通じてE-Inkダッシュボードをデプロイします。1つの記事でreTerminal E1001/E1002、TRMNL DIY Kit、XIAO 7.5" ePaper Panelをまとめて扱っており、タブで使用するハードウェアを選択できます。
 
 ### ノーコード / ビジュアルUIデザインツール
@@ -305,8 +305,8 @@ Seeed Studio は、次の 3 つの製品ラインを中心に構成されたエ�
 
 ### コードベース開発
 
-- [Work with Arduino](https://wiki.seeedstudio.com/ja/epaper_work_with_arduino) — 主要なリファレンス：IDEセットアップ、`Seeed_GFX`ライブラリ、`driver.h`生成。製品別クックブック：reTerminal E シリーズ — [ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) & [Onboard Peripherals](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino)。
-- [Work with PlatformIO](https://wiki.seeedstudio.com/ja/epaper_work_with_platformio) — 主要なリファレンス：VS Codeセットアップ、`platformio.ini`設定、`Seeed_GFX`セットアップ、および製品別PlatformIO環境の選択。製品別クックブック：[EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/ja/ee04_with_platformio)。
+- [Work with Arduino](https://wiki.seeedstudio.com/ja/epaper_work_with_arduino) — 主要なリファレンス：IDEセットアップ、`Seeed_GFX`ライブラリ、`driver.h`生成。製品別 cookbooks：reTerminal E シリーズ — [ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) & [Onboard Peripherals](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino)。
+- [Work with PlatformIO](https://wiki.seeedstudio.com/ja/epaper_work_with_platformio) — 主要なリファレンス：VS Codeセットアップ、`platformio.ini`設定、`Seeed_GFX`セットアップ、および製品別PlatformIO環境の選択。製品別 cookbook：[EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/ja/ee04_with_platformio)。
 - [Work with Zephyr](https://wiki.seeedstudio.com/ja/epaper_work_with_zephyr) — reTerminal E1001、E1002、E1003向けZephyr RTOSサポートのエントリーページで、公式Zephyrボードドキュメントへのリンクとボードターゲットを含みます。
 
 ### オープンソースESL / OEPL

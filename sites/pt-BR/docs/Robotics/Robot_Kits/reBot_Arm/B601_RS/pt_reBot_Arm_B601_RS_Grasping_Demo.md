@@ -7,7 +7,7 @@ keywords:
   - Preensão
   - RGB-D
   - YOLO
-  - Calibração mão-olho
+  - Calibração Mão-Olho
   - Robô
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif
 slug: /rebot_arm_b601_rs_grasping_demo
@@ -21,38 +21,43 @@ updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_grasping_demo/
 ---
 
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+
 # Demonstração de Preensão Visual com reBot Arm B601-RS
 
-<p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
-</p>
+<RebotRsDocNav />
 
-<p align="center">
-    <a href="./LICENSE">
-        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
-    </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Camera-RGB--D-green.svg" alt="Camera" />
-    <img src="https://img.shields.io/badge/Detection-YOLO-yellow.svg" alt="YOLO" />
-</p>
-
-<p align="center">
-  <strong>Percepção de profundidade · Detecção de objetos · Calibração mão-olho · Preensão autônoma · Totalmente open source</strong>
-</p>
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
 </a></div>
 
-YOLO é uma família amplamente utilizada de modelos de detecção de objetos em tempo real que podem localizar e classificar alvos em uma única passagem direta. Este tutorial usa YOLO, uma câmera de profundidade RGB-D e o reBot Arm B601-RS para construir uma demonstração funcional de preensão visual em desktop, cobrindo preparação do ambiente, integração da câmera, calibração mão-olho e validação da preensão.
+<p align="center">
+    <a href="./LICENSE">
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Licença: MIT" />
+    </a>
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Versão do Python" />
+    <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Plataforma" />
+    <img src="https://img.shields.io/badge/Camera-RGB--D-green.svg" alt="Câmera" />
+    <img src="https://img.shields.io/badge/Detection-YOLO-yellow.svg" alt="YOLO" />
+</p>
+
+<p align="center">
+  <strong>Percepção de Profundidade · Detecção de Objetos · Calibração Mão-Olho · Preensão Autônoma · Totalmente Open Source</strong>
+</p>
+
+YOLO é uma família amplamente utilizada de modelos de detecção de objetos em tempo real que podem localizar e classificar alvos em uma única passagem direta. Este tutorial usa YOLO, uma câmera de profundidade RGB-D e o reBot Arm B601-RS para construir uma demonstração funcional de preensão visual em desktop, cobrindo configuração de ambiente, integração da câmera, calibração mão-olho e validação da preensão.
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="Demonstração de preensão visual com reBot Arm B601-RS" />
 </p>
 
-## Recursos do projeto
+## Recursos do Projeto
 
 1. **Estimativa direta de pose de preensão a partir de YOLO + OBB**
    O pipeline usa diretamente caixas de detecção ou retângulos de área mínima OBB e toma o eixo curto como direção de abertura do gripper, evitando o processamento complexo de nuvens de pontos 3D.
@@ -61,9 +66,9 @@ YOLO é uma família amplamente utilizada de modelos de detecção de objetos em
    O projeto também oferece suporte ao GraspNet-Baseline (`graspnet/graspnet-baseline`) para estimativa de pose de preensão 6D a partir de nuvens de pontos RGB-D, com caixas delimitadoras YOLO usadas para selecionar candidatos-alvo para experimentos de preensão mais complexos.
 
 3. **Integração do driver do braço robótico e do gripper**
-   O script principal de preensão é baseado no braço robótico e no controlador de pose final de `reBotArm_control_py`, com um auxiliar de preensão leve para abertura do gripper, preensão com controle de força e leitura da pose TCP.
+   O script principal de preensão é baseado no controlador de braço robótico e de pose final de `reBotArm_control_py`, com um auxiliar de preensão leve para abertura do gripper, preensão com controle de força e leitura da pose TCP.
 
-4. **Open source e extensível**
+4. **Open Source e Extensível**
    Todo o código-fonte é aberto, e os usuários podem personalizar algoritmos de controle e efeitos com base em suas próprias necessidades.
 
 ## Especificações
@@ -79,51 +84,51 @@ O hardware para este tutorial é fornecido pela [Seeed Studio](https://www.seeed
   </thead>
   <tbody>
     <tr>
-      <td>Modelo do braço robótico</td>
+      <td>Modelo do Braço Robótico</td>
       <td>reBot Arm B601-RS</td>
     </tr>
     <tr>
-      <td>Graus de liberdade</td>
-      <td>6-DOF + gripper</td>
+      <td>Graus de Liberdade</td>
+      <td>6-DOF + Gripper</td>
     </tr>
     <tr>
-      <td>Modelo da câmera</td>
+      <td>Modelo da Câmera</td>
       <td>Orbbec Gemini 2 / Intel RealSense D435i / D405</td>
     </tr>
     <tr>
-      <td>Método de detecção</td>
-      <td>YOLO + retângulo de área mínima OBB</td>
+      <td>Método de Detecção</td>
+      <td>YOLO + Retângulo de Área Mínima OBB</td>
     </tr>
     <tr>
-      <td>Método de comunicação</td>
+      <td>Método de Comunicação</td>
       <td>Barramento CAN via adaptador USB2CAN; conexão de câmera USB 3.0</td>
     </tr>
     <tr>
-      <td>Tensão de operação</td>
+      <td>Tensão de Operação</td>
       <td>48V CC</td>
     </tr>
     <tr>
-      <td>Plataforma host</td>
+      <td>Plataforma Host</td>
       <td>PC com Ubuntu 22.04+</td>
     </tr>
     <tr>
-      <td>Versão recomendada do Python</td>
+      <td>Versão Recomendada do Python</td>
       <td>Python 3.10</td>
     </tr>
   </tbody>
 </table>
 
-## Lista de materiais (BOM)
+## Lista de Materiais (BOM)
 
 | Componente | Quantidade | Incluído |
 |--|--|--|
-| Braço robótico reBot Arm B601-RS | 1 | ✅ |
+| Braço Robótico reBot Arm B601-RS | 1 | ✅ |
 | Gripper | 1 | ✅ |
-| Ponte serial USB2CAN | 1 | ✅ |
-| Adaptador de energia (48V) | 1 | ✅ |
-| Cabo USB-C / comunicação | 1 | ✅ |
-| Câmera de profundidade RGB-D | 1 | ✅ |
-| Conector da câmera / suporte de fixação | 1 | ✅ |
+| Ponte Serial USB2CAN | 1 | ✅ |
+| Adaptador de Energia (48V) | 1 | ✅ |
+| Cabo USB-C / Comunicação | 1 | ✅ |
+| Câmera de Profundidade RGB-D | 1 | ✅ |
+| Conector da Câmera / Suporte de Montagem | 1 | ✅ |
 
 ### Fiação
 
@@ -137,14 +142,14 @@ sudo chmod a+rw /dev/bus/usb/*/*
 sudo chmod 666 /dev/ttyUSB0
 ```
 
-## Requisitos de ambiente
+## Requisitos de Ambiente
 
 | Item | Requisito |
 |------|-------------|
-| Sistema operacional | Ubuntu 22.04+ |
+| Sistema Operacional | Ubuntu 22.04+ |
 | Python | 3.10 |
 
-## Etapas de instalação
+## Etapas de Instalação
 
 ### Etapa 0. Conclua primeiro a preparação básica do braço robótico
 
@@ -158,6 +163,7 @@ Dê preferência ao repositório oficial Seeed-Projects:
 git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
+
 ### Etapa 2. Criar e configurar o ambiente conda
 
 ```bash
@@ -205,7 +211,7 @@ A câmera de profundidade Orbbec Gemini 2 depende de `pyorbbecsdk`, o wrapper Py
 pip install pyorbbecsdk2
 ```
 
-**Opção 2: Obter no GitHub**
+**Opção 2: Obter a partir do GitHub**
 
 ```bash
 sudo apt-get update
@@ -252,12 +258,12 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 
 Se o seu sistema precisar da cadeia de ferramentas completa RealSense ou de regras udev, instale `librealsense2` seguindo a documentação oficial do RealSense SDK.
 
-**Resumo de recursos do SDK**
+**Resumo de Recursos do SDK**
 
 | Recurso | Link |
 |------|------|
-| Página do produto Gemini 2 | https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51 |
-| Recursos de desenvolvimento | https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1 |
+| Página do Produto Gemini 2 | https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51 |
+| Recursos de Desenvolvimento | https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1 |
 | Orbbec SDK v2 | https://github.com/orbbec/OrbbecSDK_v2 |
 | Documentação da API do SDK v2 | https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/ |
 | pyorbbecsdk | https://github.com/orbbec/pyorbbecsdk |
@@ -319,22 +325,22 @@ Observação: se você seguir a documentação do repositório oficial graspnet-
 :::
 
 :::tip
-Se a compilação falhar com `fatal error: cusparse.h: No such file or directory`, execute `find $CONDA_PREFIX -name cusparse.h` e certifique-se de que o diretório que contém `cusparse.h` esteja incluído em `CPATH` / `CPLUS_INCLUDE_PATH`. Se você instalou os cabeçalhos CUDA a partir do pacote conda `cuda-toolkit`, o caminho de include geralmente é `$CONDA_PREFIX/targets/x86_64-linux/include` em vez do caminho pip `nvidia/cu13/include` mostrado acima.
+Se a compilação falhar com `fatal error: cusparse.h: No such file or directory`, execute `find $CONDA_PREFIX -name cusparse.h` e certifique-se de que o diretório que contém `cusparse.h` esteja incluído em `CPATH` / `CPLUS_INCLUDE_PATH`. Se você instalou os cabeçalhos CUDA a partir do pacote conda `cuda-toolkit`, o caminho de include geralmente é `$CONDA_PREFIX/targets/x86_64-linux/include` em vez do caminho `nvidia/cu13/include` do pip mostrado acima.
 :::
 
 :::tip
-Além disso, dependências antigas da API do GraspNet ainda podem usar o nome de pacote obsoleto `sklearn`. O comando `sed` o substitui pelo nome de pacote atualmente recomendado `scikit-learn` para evitar `The 'sklearn' PyPI package is deprecated` durante a instalação. A menos que você também atualize as dependências antigas da API do GraspNet, mantenha a restrição `numpy==1.23.4`, pois `transforms3d==0.3.1` ainda usa aliases antigos do NumPy como `np.float`.
+Além disso, dependências antigas da API do GraspNet ainda podem usar o nome de pacote obsoleto `sklearn`. O comando `sed` o substitui pelo nome de pacote atualmente recomendado `scikit-learn` para evitar `The 'sklearn' PyPI package is deprecated` durante a instalação. A menos que você também atualize as dependências antigas da API do GraspNet, mantenha a restrição `numpy==1.23.4` porque `transforms3d==0.3.1` ainda usa aliases antigos do NumPy como `np.float`.
 :::
 
 **Configurar modelo pré-treinado**
 
-Baixe os pesos oficiais pré-treinados do GraspNet a partir do repositório oficial graspnet-baseline [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A) e, em seguida, coloque `checkpoint-rs.tar` em:
+Baixe os pesos oficiais pré-treinados do GraspNet a partir do repositório oficial graspnet-baseline [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A) e então coloque `checkpoint-rs.tar` em:
 
 ```bash
 sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
 ```
 
-Depois verifique em `config/default.yaml`:
+Em seguida, verifique em `config/default.yaml`:
 
 ```yaml
 graspnet:
@@ -411,10 +417,10 @@ Se você quiser mover o braço robótico manualmente durante a coleta, use o mod
 python scripts/collect_handeye_eih.py --manual
 ```
 
-No modo manual, o braço entra em modo de compensação de gravidade. Mova o efetuador final para um ângulo de visualização adequado, pressione `Enter` para capturar e pressione `c` ou `q` para finalizar e calcular o resultado.
+No modo manual, o braço entra em modo de compensação de gravidade. Mova o efetuador final para um ângulo de visão adequado, pressione `Enter` para capturar e pressione `c` ou `q` para finalizar e calcular o resultado.
 
 :::tip
-Se, após a calibração, você achar que a precisão de preensão do braço robótico não atende aos seus requisitos, você pode definir os parâmetros `X` (frente-trás), `Y` (esquerda-direita), `Z` (cima-baixo) em `config/default.yaml` sob `calibration.hand_eye_compensation_m` para fornecer compensação de posição.
+Se, após a calibração, você perceber que a precisão de preensão do braço robótico não atende aos seus requisitos, pode definir os parâmetros `X` (frente-trás), `Y` (esquerda-direita), `Z` (cima-baixo) em `config/default.yaml` sob `calibration.hand_eye_compensation_m` para fornecer compensação de posição.
 :::
 
 O resultado da calibração é salvo em:
@@ -433,7 +439,7 @@ A contagem de amostras recomendada é de pelo menos 5 amostras, sendo 15 ou mais
 python scripts/object_detection.py
 ```
 
-Se você precisar alterar o modelo de detecção ou as classes, modifique `config/default.yaml`:
+Se você precisar alterar o modelo ou as classes de detecção, modifique `config/default.yaml`:
 
 ```yaml
 yolo:
@@ -448,9 +454,9 @@ yolo:
 
 Esta etapa é útil para confirmar:
 
-- A câmera abre corretamente
-- O modelo YOLO é carregado corretamente
-- A detecção de objetos com YOLO funciona conforme o esperado
+- Se a câmera abre corretamente
+- Se o modelo YOLO é carregado corretamente
+- Se a detecção de objetos com YOLO funciona como esperado
 
 ### 2. Verificar apenas a estimativa de preensão
 
@@ -473,13 +479,13 @@ grasp_pipeline:
 Este script não se conecta ao braço robótico. Ele é usado apenas para verificar:
 
 - Se o OBB ou o retângulo de área mínima é razoável
-- Se o ponto de preensão fica próximo da área central do alvo
+- Se o ponto de preensão está próximo da área central do alvo
 - Se a direção do eixo curto corresponde à direção esperada de abertura da garra
 
 Controles principais:
 
 - Botão esquerdo do mouse: inspecionar a profundidade no pixel selecionado
-- `G`: imprimir a melhor pose de preensão atual
+- `G`: imprimir a pose de preensão atual considerada a melhor
 - `Q` / `Esc`: sair
 
 ### 3. Executar o programa principal de preensão
@@ -515,7 +521,7 @@ robot:
 
 4. Detectar alvos sobre a mesa em tempo real.
 5. Estimar a pose de preensão a partir do eixo curto.
-6. Pressione `G` para capturar o quadro atual e executar a preensão.
+6. Pressionar `G` para capturar o quadro atual e executar a preensão.
 
 Teclas em tempo de execução:
 
@@ -529,11 +535,11 @@ Função: pegar a banana e colocá-la na caixa.
 
 Fluxo concluído:
 1. Inicialização da câmera e do braço, mover para a posição de prontidão
-2. Pré-visualização da câmera em tempo real + detecção de objetos YOLO e segmentação por instância
-3. Pressione `G` para congelar o quadro, calcular a pose alvo do braço via transformação mão-olho
-4. O braço se move para pegar a banana e erguer
+2. Visualização em tempo real da câmera + detecção de objetos YOLO e segmentação por instância
+3. Pressionar `G` para congelar o quadro, calcular a pose alvo do braço via transformação mão-olho
+4. O braço se move para agarrar a banana e erguer
 5. O braço coloca a banana na caixa e retorna à pose inicial
-6. Pressione `Q` para sair do sistema, o braço retorna à posição zero
+6. Pressionar `Q` para sair do sistema, o braço retorna à posição zero
 
 ### 5. Demo de estimativa de câmera com GraspNet (opcional)
 
@@ -541,7 +547,7 @@ Fluxo concluído:
 python scripts/graspnet_camera_demo.py
 ```
 
-Este script executa a estimativa de pose de preensão 6D do GraspNet usando apenas a câmera RGB-D, sem conectar ao braço robótico. Ele mantém uma pré-visualização ao vivo da câmera, usa caixas delimitadoras do YOLO para selecionar a área alvo e filtra candidatos de cena completa do GraspNet viáveis pela bbox do alvo.
+Este script executa a estimativa de pose de preensão 6D do GraspNet usando apenas a câmera RGB-D, sem conectar ao braço robótico. Ele mantém uma visualização ao vivo da câmera, usa caixas delimitadoras do YOLO para selecionar a área alvo e filtra candidatos de cena completa viáveis do GraspNet pela bbox do alvo.
 
 Controles principais:
 
@@ -559,7 +565,7 @@ python scripts/grasp.py --dry-run
 python scripts/grasp.py --target-class "light blue coffee cup"
 ```
 
-Este script conecta a estimativa do GraspNet ao fluxo de execução do braço robótico. O YOLO seleciona o alvo, o GraspNet gera uma pose de preensão 6D, a calibração mão-olho a transforma para o referencial da base do robô e o script verifica a alcançabilidade por IK antes de executar a sequência de movimentos de pré-preensão, preensão e recuo.
+Este script conecta a estimativa do GraspNet ao fluxo de execução do braço robótico. O YOLO seleciona o alvo, o GraspNet gera uma pose de preensão 6D, a calibração mão-olho a transforma para o referencial da base do robô e o script verifica a alcançabilidade de IK antes de executar a sequência de movimentos de pré-preensão, preensão e recuo.
 
 Executar `python scripts/grasp.py` inicia o fluxo completo de preensão robótica com GraspNet e de fato controla o braço robótico. `--dry-run` apenas imprime a pose alvo e o resultado de filtragem de candidatos sem executar o movimento de preensão. `--target-class "light blue coffee cup"` especifica a classe alvo do YOLO e apenas filtra e agarra candidatos do GraspNet para essa classe.
 
@@ -618,7 +624,7 @@ python -c "from pointnet2 import pointnet2_utils; print('Submodule import works'
 
 ### 5. Problemas de compatibilidade de arquitetura CUDA em GPUs mais recentes ao executar o GraspNet
 
-Se você vir `no kernel image is available for execution on the device`, ou se o PyTorch informar que a capacidade CUDA atual da GPU não é suportada, é provável que o wheel do PyTorch instalado não inclua kernels CUDA para essa arquitetura de GPU. Instale uma compilação do PyTorch que ofereça suporte à sua arquitetura atual de CUDA/GPU e, em seguida, reconstrua as extensões CUDA locais do GraspNet.
+Se você vir `no kernel image is available for execution on the device`, ou se o PyTorch informar que a capacidade CUDA da GPU atual não é suportada, é provável que o wheel do PyTorch instalado não inclua kernels CUDA para essa arquitetura de GPU. Instale uma compilação do PyTorch que ofereça suporte à sua arquitetura atual de CUDA/GPU e, em seguida, reconstrua as extensões CUDA locais do GraspNet.
 
 ```bash
 python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0))"
@@ -632,7 +638,7 @@ pip install . --no-build-isolation
 
 Se você precisar especificar manualmente a arquitetura de compilação, defina `TORCH_CUDA_ARCH_LIST` antes de recompilar. Escolha o valor de acordo com a arquitetura da sua GPU e a versão do PyTorch/CUDA.
 
-### 6. Inferência do GraspNet relata `RuntimeError: CPU not supported`
+### 6. Inferência do GraspNet informa `RuntimeError: CPU not supported`
 
 Os operadores de amostragem em `pointnet2` oferecem suporte apenas a tensores CUDA. Confirme que o CUDA está disponível, que a rede GraspNet e a nuvem de pontos de entrada estão na GPU e que `pointnet2` / `knn` foram compilados com a versão do PyTorch no ambiente ativo.
 
@@ -650,15 +656,15 @@ Se a saída for `False`, corrija primeiro a instalação do CUDA / PyTorch. Se f
 
 ## Referências
 
-- [reBot Arm B601-RS Quick Start](https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/)
-- [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_ros2_integration/)
-- [Orbbec Gemini 2 Product Page](https://www.orbbec.com/products/stereo-vision-camera/gemini-2/)
-- [Orbbec Development Resources](https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1)
+- [reBot Arm B601-RS Guia de início rápido](https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/)
+- [Integração ROS2 do reBot Arm B601-RS](https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_ros2_integration/)
+- [Página do produto Orbbec Gemini 2](https://www.orbbec.com/products/stereo-vision-camera/gemini-2/)
+- [Recursos de desenvolvimento Orbbec](https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
-- [Orbbec SDK v2 API Guide](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/)
-- [pyorbbecsdk Repository](https://github.com/orbbec/pyorbbecsdk)
-- [pyorbbecsdk Documentation](https://orbbec.github.io/pyorbbecsdk/index.html)
+- [Guia da API do Orbbec SDK v2](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/)
+- [Repositório pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
+- [Documentação do pyorbbecsdk](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
 - [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
-- [Graspnet(Anygrasp) Docs](https://graspnet.net/)
+- [Documentação Graspnet(Anygrasp)](https://graspnet.net/)

@@ -1,6 +1,6 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome 显示菜谱——Home Assistant 集成、首个仪表盘、Wi-Fi 设置、预构建固件 ZIP，以及电子纸绘图示例。
-title: ESPHome 菜谱 - 显示基础（reTerminal E 系列）
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome 显示 cookbook——Home Assistant 集成、首个仪表盘、Wi-Fi 设置、预构建固件 ZIP，以及电子纸绘图示例。
+title: ESPHome Cookbook - 显示基础（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
 aliases:
@@ -19,10 +19,10 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome 菜谱 - 显示基础：reTerminal E 系列
+# ESPHome Cookbook - 显示基础：reTerminal E 系列
 
 :::tip 请先阅读主 ESPHome 指南
-本页是**针对 reTerminal E 系列的 ESPHome 显示菜谱**。通用的样板内容——选择烧录路径、通用 YAML 骨架、连接 Home Assistant——都在 **[使用 ESPHome 工作](/cn/epaper_work_with_esphome)** 中。如果你是第一次在 Seeed 电子纸上使用 ESPHome，建议先快速浏览那一页。关于按键、蜂鸣器、LED、电池、SHT4x 和深度睡眠，请参阅 [I/O、电池、触摸和低功耗菜谱](/cn/reterminal_e10xx_with_esphome_advanced)。关于 RTC、microSD 卡检测和麦克风设置，请参阅 [RTC、SD 卡和麦克风菜谱](/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone)。
+本页是**针对 reTerminal E 系列的 ESPHome 显示 cookbook**。通用的样板内容——选择烧录路径、通用 YAML 骨架、连接 Home Assistant——都在 **[使用 ESPHome 工作](/cn/epaper_work_with_esphome)** 中。如果你是第一次在 Seeed 电子纸上使用 ESPHome，建议先快速浏览那一页。关于按键、蜂鸣器、LED、电池、SHT4x 和深度睡眠，请参阅 [I/O、电池、触摸和低功耗 cookbook](/cn/reterminal_e10xx_with_esphome_advanced)。关于 RTC、microSD 卡检测和麦克风设置，请参阅 [RTC、SD 卡和麦克风 cookbook](/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone)。
 :::
 
 :::tip 在浏览器中生成 ESPHome YAML 或烧录演示固件
@@ -92,7 +92,7 @@ ESPHome 是一个专为 ESP8266/ESP32 设备设计的开源固件创建工具。
 ### 所需材料
 
 :::tip 支持的型号
-本菜谱涵盖 **reTerminal E1001、E1002、E1003 和 E1004**。在每个示例中，请为你的设备选择对应的选项卡。E1003 和 E1004 需要 **ESPHome 2026.7.0 或更高版本**。
+本 cookbook 涵盖 **reTerminal E1001、E1002、E1003 和 E1004**。在每个示例中，请为你的设备选择对应的选项卡。E1003 和 E1004 需要 **ESPHome 2026.7.0 或更高版本**。
 :::
 
 <div class="table-center">
@@ -169,7 +169,7 @@ Home Assistant Green 是自动化家庭的最简单、最注重隐私的方式�
 
 ### 生成你的第一个 ESPHome YAML（推荐）
 
-在复制下面的菜谱代码片段之前，你可以先在一个地方构建完整且与设备匹配的配置：
+在复制下面的 cookbook 代码片段之前，你可以先在一个地方构建完整且与设备匹配的配置：
 
 **步骤 1.** 在桌面版 Chrome 或 Edge 中打开 **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**。
 
@@ -188,7 +188,7 @@ Home Assistant Green 是自动化家庭的最简单、最注重隐私的方式�
 </div><br />
 
 :::tip
-Firmware Hub 会为你填好开发板、总线和外设引脚。当你想要一步步学习每个绘图或显示示例，或者想自定义生成的 YAML 时，请使用本菜谱。完整的共享工作流程记录在 **[Work with ESPHome](/cn/epaper_work_with_esphome)** 中。
+Firmware Hub 会为你填好开发板、总线和外设引脚。当你想要一步步学习每个绘图或显示示例，或者想自定义生成的 YAML 时，请使用本 cookbook。完整的共享工作流程记录在 **[Work with ESPHome](/cn/epaper_work_with_esphome)** 中。
 :::
 
 :::tip install Home Assistant
@@ -1500,11 +1500,11 @@ lambda: |-
 
 ## 继续阅读
 
-本文重点介绍连接显示屏以及在电子纸屏幕上绘制内容。当你想要使用其余板载硬件时，请继续阅读以下 ESPHome 使用示例：
+本文重点介绍连接显示屏以及在电子纸屏幕上绘制内容。当你想要使用其余板载硬件时，请继续阅读以下 ESPHome cookbooks：
 
 - **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)** - 通过选择你的设备并勾选板载功能来生成完整的 ESPHome YAML，或直接在浏览器中烧录演示固件。
-- **[ESPHome 使用示例：按键、蜂鸣器、LED、电池、触摸与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)** - 用户按键、蜂鸣器反馈、板载 LED、电池监测、SHT4x 传感器、电容触摸（E1003）、深度睡眠以及多页面仪表盘。
-- **[ESPHome 使用示例：RTC、SD 卡与麦克风](/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone)** - PCF8563 RTC 时间同步、microSD 卡电源/检测引脚以及板载 PDM 麦克风初始化。
+- **[ESPHome Cookbook：按键、蜂鸣器、LED、电池、触摸与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)** - 用户按键、蜂鸣器反馈、板载 LED、电池监测、SHT4x 传感器、电容触摸（E1003）、深度睡眠以及多页面仪表盘。
+- **[ESPHome Cookbook：RTC、SD 卡与麦克风](/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone)** - PCF8563 RTC 时间同步、microSD 卡电源/检测引脚以及板载 PDM 麦克风初始化。
 
 ## 常见问题
 

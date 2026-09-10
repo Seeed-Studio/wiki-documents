@@ -814,6 +814,7 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/ja_Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/ja_Benchmark_Labs_Forecast_Integration_for_Seeed_Weather_Stations',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/ja_Firmware_Update',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ja_SenseCAP_S1000_V2_CO2_Calibration',
                   ],
                 },
               ],
@@ -1003,7 +1004,7 @@ const sidebars = {
         'Sensor/SeeedStudio_XIAO/ja_SeeedStudio_XIAO_Series_Projects',
         {
           type: 'category',
-          label: 'XIAO SAMD21',
+          label: 'XIAO SAMD21 シリーズ',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/ja_Seeeduino-XIAO',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/ja_XIAO-SAMD21-Zephyr-RTOS',
@@ -1060,7 +1061,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'XIAO RP2040',
+          label: 'XIAO RP2040 シリーズ',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/ja_XIAO-RP2040',
             {
@@ -1957,6 +1958,7 @@ const sidebars = {
                 id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_with_xiao_intro',
               },
               items: [
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_i2c_list',
                 {
                   type: 'category',
                   label: '再生と録音',
@@ -2174,6 +2176,8 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/ja_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/ja_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_rtc_streaming',
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_service_integration',
             'Sensor/reSpeaker_clip/ja_respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
@@ -2198,6 +2202,24 @@ const sidebars = {
                 },
               ],
             },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'よくある質問',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/ja_respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/ja_xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/ja_flex_xvf3800_faq',
+            'FAQ/respeaker/ja_respeaker_lite_faq',
+            'FAQ/respeaker/ja_xvf3000_faq',
+            'FAQ/respeaker/ja_respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/ja_respeaker_clip_faq',
           ],
         },
         {
@@ -2255,6 +2277,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/ja_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/ja_respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/ja_respeaker_clip_chat_architecture',
               ],
             },
           ],
@@ -3829,6 +3852,7 @@ const sidebars = {
           type: 'category',
           label: 'はじめに',
           items: [
+            'Edge/NVIDIA_Jetson/ja_Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',
@@ -4167,7 +4191,12 @@ const sidebars = {
             {
               type: 'category',
               label: 'エンボディド AI',
+              link: {
+                type: 'doc',
+                id: 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Microduck_RL_on_Jetson',
+              },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Microduck_RL_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
@@ -4276,6 +4305,7 @@ const sidebars = {
               label: 'メモリ最適化',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/ja_JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/ja_JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {
@@ -4613,7 +4643,8 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_isaacsim',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_control_mit'
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_control_mit',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_Agent'
               ]
             }
           ]

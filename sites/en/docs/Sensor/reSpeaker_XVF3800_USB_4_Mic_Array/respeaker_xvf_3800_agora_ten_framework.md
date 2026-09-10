@@ -16,10 +16,10 @@ image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf380
 slug: /respeaker_xvf3800_agora_ten_framework_client
 sku: 114993702,114993700
 last_update:
-  date: 2/09/2026
+  date: 09/02/2026
   author: Jiayu Zhan(Jack)
 createdAt: '2026-02-09'
-updatedAt: '2026-02-12'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_agora_ten_framework_client/
 ---
 
@@ -155,12 +155,21 @@ Before deployment, you need to register and obtain API keys for the following se
 3. Go to the API Keys page
 4. Create a new secret key
 
-#### 🔹 Cartesia (TTS) – Required
+#### 🔹 Cartesia (TTS) – Default
 
 1. Visit https://cartesia.ai/sonic
 2. Sign up for a free account (free quota available)
 3. Go to API Key → New API Key
 4. Copy the API key
+
+#### 🔹 FlowSpeech (TTS) – Optional
+
+If you need context-aware, emotion, and pause control, you can switch the default TTS extension to the [AI Text-to-Speech](https://flowspeech.io) service:
+
+1. Sign up for a FlowSpeech account
+2. Go to Settings → API Keys
+3. Create and copy the API key
+4. Configure the extension by following “Optional: Switch to FlowSpeech TTS” below
 
 ### Software Requirements
 
@@ -261,6 +270,9 @@ Firmware update is a required step, and it is strongly recommended for the best 
    # ==============================
    Cartesia_TTS_KEY=your_cartesia_api_key
 
+   # Optional: FlowSpeech TTS
+   FLOWSPEECH_API_KEY=your_flowspeech_api_key
+
    # ==============================
    # Server config (usually no changes needed)
    # ==============================
@@ -270,6 +282,30 @@ Firmware update is a required step, and it is strongly recommended for the best 
    SERVER_PORT=8080
    WORKERS_MAX=100
    ```
+
+#### Optional: Switch to FlowSpeech TTS
+
+The FlowSpeech extension outputs 24 kHz, mono, 16-bit PCM audio and can be connected directly to the `tts` node in this example. Open `agents/examples/voice-assistant/tenapp/property.json` and replace the node named `tts` with:
+
+```json
+{
+  "type": "extension",
+  "name": "tts",
+  "addon": "flowspeech_tts_python",
+  "extension_group": "tts",
+  "property": {
+    "dump": false,
+    "dump_path": "./",
+    "params": {
+      "api_key": "${env:FLOWSPEECH_API_KEY}",
+      "base_url": "https://flowspeech.io",
+      "voice_name": "Kore"
+    }
+  }
+}
+```
+
+After saving, continue with `task install` and `task run`. Keep the API key only in your local `.env` file and do not commit it to the Git repository.
 
 #### Step C: Start Docker services
 

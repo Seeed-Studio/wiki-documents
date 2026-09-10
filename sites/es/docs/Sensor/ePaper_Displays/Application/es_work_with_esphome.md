@@ -258,9 +258,9 @@ Una vez que el firmware arranca y se une a tu red Wi‑Fi, Home Assistant detect
 
 Ahora puedes arrastrar las entidades a un panel de Lovelace o — mucho más interesante en tinta electrónica — usar el bloque `display.lambda` para renderizar cualquier entidad de HA directamente en la pantalla mediante el componente [`homeassistant`](https://esphome.io/components/homeassistant.html).
 
-## Próximos pasos — Recetarios
+## Próximos pasos — Cookbooks
 
-Esta página se detiene intencionadamente en el boilerplate. El YAML específico de cada producto, los ejemplos de periféricos y las recetas de extremo a extremo se encuentran en el recetario de cada producto:
+Esta página se detiene intencionadamente en el boilerplate. El YAML específico de cada producto, los ejemplos de periféricos y las recetas de extremo a extremo se encuentran en el cookbook de cada producto:
 
 - **[reTerminal E Series — ESPHome Display](/es/reterminal_e10xx_with_esphome)** — primer panel, configuración de Wi‑Fi y ejemplos de dibujo en tinta electrónica para E1001/E1002/E1003/E1004.
 - **[reTerminal E Series — ESPHome I/O, Battery, Touch & Power](/es/reterminal_e10xx_with_esphome_advanced)** — botones, zumbador, LED integrado, monitorización de batería, sensor SHT4x, panel táctil capacitivo (E1003), deep sleep y paneles de varias páginas.
@@ -269,7 +269,7 @@ Esta página se detiene intencionadamente en el boilerplate. El YAML específico
 - **[XIAO 7.5" ePaper Panel — ESPHome](/es/xiao_075inch_epaper_panel_esphome)** — panel mínimo con ESP32-C3.
 - **[TRMNL 7.5" DIY Kit — ESPHome](/es/ogdiy_kit_works_with_esphome)** — uso del hardware del kit con ESPHome en lugar de la plataforma en la nube TRMNL.
 
-Cuando se envían nuevos productos de tinta electrónica, el recetario correspondiente se añade en la carpeta de cada producto; esta página principal se actualiza para enlazarlo.
+Cuando se envían nuevos productos de tinta electrónica, el cookbook correspondiente se añade en la carpeta de cada producto; esta página principal se actualiza para enlazarlo.
 
 ## Problemas comunes
 

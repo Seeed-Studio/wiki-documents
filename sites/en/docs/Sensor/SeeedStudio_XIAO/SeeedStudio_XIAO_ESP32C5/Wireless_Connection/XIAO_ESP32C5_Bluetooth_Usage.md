@@ -12,7 +12,7 @@ last_update:
   date: 01/06/2026
   author: Zeller
 createdAt: '2026-01-06'
-updatedAt: '2026-01-19'
+updatedAt: '2026-08-21'
 url: https://wiki.seeedstudio.com/xiao_esp32c5_bluetooth_usage/
 ---
 

@@ -8,6 +8,7 @@ keywords:
   - operación remota
   - cinemática
   - Damiao
+image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_arm_b601_dm_isaacsim
 last_update:
   date: 2026-08-17
@@ -15,16 +16,30 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-77'
-updatedAt: '2026-08-18'
+updatedAt: '2026-08-19'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_isaacsim/
 ---
 
-## Introducción
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
-Este es un proyecto de simulación para el robot reBot-B601-DM construido con NVIDIA Isaac Sim. Utiliza el motor de física de alta fidelidad de Isaac Sim para reproducir con precisión el comportamiento cinemático del robot y la coordinación de la pinza en un entorno virtual, proporcionando una plataforma limpia solo de simulación para el desarrollo de algoritmos de control, la validación de planificación de trayectorias y las pruebas de protocolos de comunicación.
+<RebotDmDocNav />
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png"/>
+    <img width={800}
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+</a></div>
+
+## Introducción
+
+Este es un proyecto de simulación para el robot reBot-B601-DM construido con NVIDIA Isaac Sim. Utiliza el motor de física de alta fidelidad de Isaac Sim para reproducir con precisión el comportamiento cinemático del robot y la coordinación del efector final en un entorno virtual, proporcionando una plataforma limpia solo de simulación para el desarrollo de algoritmos de control, la validación de planificación de trayectorias y las pruebas de protocolos de comunicación.
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png" alt="reBot Arm B601-DM Isaac Sim" />
 </div>
 
 ## Requisitos del sistema
@@ -48,7 +63,7 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaa
 
 ### Descargar el paquete Standalone de Isaac Sim
 
-> 💡 Adecuado para la mayoría de los usuarios; no requiere compilación y funciona nada más instalarlo.
+> 💡 Adecuado para la mayoría de los usuarios; no requiere compilación y funciona directamente.
 
 #### Descargar y extraer
 
@@ -62,7 +77,7 @@ cd ~/isaacsim
 ./post_install.sh
 ```
 
-#### Establecer variables de entorno
+#### Configurar variables de entorno
 
 Añade lo siguiente a `~/.bashrc` o `~/.zshrc`:
 
@@ -94,11 +109,11 @@ uv sync
 
 ### Descripción general de los componentes funcionales
 
-Este proyecto proporciona múltiples módulos de envío para admitir diferentes escenarios de uso:
+Este proyecto proporciona múltiples módulos emisores para admitir diferentes escenarios de uso:
 
 | Componente | Descripción |
 |------|------|
-| `gravity_joint_sender` | **Modo de compensación de gravedad con asa**: para un robot modificado (pinza retirada, asa instalada), la compensación de gravedad permite el movimiento manual de las articulaciones y la sincronización en tiempo real de los ángulos articulares con Isaac Sim |
+| `gravity_joint_sender` | **Modo de compensación de gravedad con asa**: para un robot modificado (efector final retirado, asa instalada), la compensación de gravedad permite el movimiento manual de las articulaciones y la sincronización en tiempo real de los ángulos articulares con Isaac Sim |
 | `isaacsim_ik_sender` | **Modo de cinemática inversa (IK)**: introduce la pose del efector final, resuelve los ángulos articulares mediante el solucionador IK y los envía a Isaac Sim |
 | `isaacsim_traj_sender` | **Modo de planificación de trayectoria (Traj)**: amplía IK con planificación de trayectorias en el espacio articular (perfil de temporización MIN_JERK) para lograr un control de movimiento suave |
 | `isaacsim_joint_test_sender` | **Modo de prueba de articulaciones**: no se requiere un robot real; envía una trayectoria de ángulos articulares preestablecida para verificar el receptor de Isaac Sim y el enlace de comunicación |
@@ -138,10 +153,10 @@ reBot-Isaacsim/
 Se requieren dos terminales independientes. **La Terminal 1 es el receptor de Isaac Sim**, y **la Terminal 2 ejecuta el emisor según el modo seleccionado**.
 
 ### Terminal 1 — Iniciar el receptor de Isaac Sim (usado por todos los modos)
-Ejecuta el script del receptor con el Python de Isaac Sim.
+Ejecuta el script receptor con el Python de Isaac Sim.
 
 :::tip
-Modifica los valores de `DEFAULT_SIM_HOST` y `DEFAULT_REBOT_ARM_HOST` de acuerdo con tu configuración.
+Modifica los valores de `DEFAULT_SIM_HOST` y `DEFAULT_REBOT_ARM_HOST` según tu configuración.
 
 `DEFAULT_SIM_HOST` es la dirección IP del host que ejecuta el entorno Isaac Sim.
 
@@ -176,7 +191,7 @@ ls ttyACM*
 # Grant port permissions
 sudo chmod 666 /dev/ttyACM*
 ```
-Configura `DEFAULT_SIM_HOST` de acuerdo con tu dispositivo.
+Configura `DEFAULT_SIM_HOST` según tu dispositivo.
 
 `DEFAULT_SIM_HOST` es la dirección IP del host que ejecuta el entorno Isaac Sim.
 
@@ -196,7 +211,7 @@ El emisor interpola lentamente entre varias poses articulares preestablecidas y 
 
 #### ② Modo de cinemática inversa (`isaacsim_ik_sender`)
 
-Introduce la pose del efector final (posición/orientación), resuelve la IK y acciona el robot simulado en Isaac Sim. Ejecútalo directamente con `uv run` en el directorio `reBotArm_Isaacsim/`:
+Introduce la pose del efector final (posición/orientación), resuelve la IK y mueve el robot simulado en Isaac Sim. Ejecútalo directamente con `uv run` en el directorio `reBotArm_Isaacsim/`:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -232,7 +247,7 @@ resync                       # re-read the current joint angles from the simulat
 
 #### ④ Modo de compensación de gravedad con asa (`gravity_joint_sender`)
 
-Adecuado para un robot modificado (pinza retirada, asa acoplada), lo que permite el movimiento manual para controlar el robot en Isaac Sim:
+Adecuado para un robot modificado (efector final retirado, asa acoplada), lo que permite el movimiento manual para controlar el robot en Isaac Sim:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -241,7 +256,7 @@ cd reBotArm_Isaacsim
 
 **Comportamiento esperado:**
 - Conectarse al robot real y habilitar MIT + compensación de alimentación directa de gravedad
-- El robot se puede mover libremente a mano
+- El robot puede moverse libremente a mano
 - Los ángulos articulares se envían continuamente por UDP a 60 Hz
 
 #### ⑤ Modo de mapeo Real-a-Sim (`joint_reader_sender`)
@@ -277,7 +292,7 @@ UDP JSON sobre el puerto `DEFAULT_SIM_HOST:5005`.
 |------|------|------|
 | `sequence` | int | Número de secuencia incremental |
 | `timestamp` | float | Marca de tiempo Unix (segundos) |
-| `joint_positions` | float[6] | Primeros 6 ángulos articulares (rad) |
+| `joint_positions` | float[6] | Primeros 6 ángulos de las articulaciones (rad) |
 | `gripper_position` | float | Posición de la pinza (m), convertida por el emisor usando `GRIPPER_POSITION_SCALE` |
 
 ## Parámetros de configuración
@@ -289,7 +304,7 @@ UDP JSON sobre el puerto `DEFAULT_SIM_HOST:5005`.
 | `ARM_JOINT_COUNT`| 6 | Número de articulaciones |
 | `DEFAULT_PORT` | 5005 | Puerto UDP |
 | `DEFAULT_SEND_HZ` | 60.0 | Frecuencia de envío (Hz) |
-| `GRIPPER_POSITION_SCALE` | 0.007 | Factor de escala de ángulo de la pinza a posición |
+| `GRIPPER_POSITION_SCALE` | 0.007 | Factor de escala del ángulo de la pinza a posición |
 
 ### Receptor (`isaacsim_joint_receiver.py`)
 
@@ -306,7 +321,7 @@ UDP JSON sobre el puerto `DEFAULT_SIM_HOST:5005`.
 
 ### `OSError: [Errno 98] Address already in use`
 
-El puerto 5005 ya está en uso. Primero confirma y termina el proceso que está ocupando el puerto:
+El puerto 5005 ya está en uso. Primero confirma y termina el proceso que mantiene el puerto:
 
 ```bash
 # Check which process is using the port
@@ -331,9 +346,9 @@ kill <PID>
 | Emisor (modo de prueba) | entorno uv `reBotArm_control_py` | `isaacsim_joint_test_sender.py` |
 | Receptor | Python oficial de Isaac Sim (`python.sh`) | `isaacsim_joint_receiver.py` |
 
-## Soporte técnico y discusión de productos
+## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Proporcionamos múltiples canales de soporte para ayudarte a garantizar una experiencia fluida con nuestros productos. Ofrecemos varios métodos de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Proporcionamos múltiples canales de soporte para ayudar a garantizar una experiencia fluida con nuestros productos. Ofrecemos varios métodos de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

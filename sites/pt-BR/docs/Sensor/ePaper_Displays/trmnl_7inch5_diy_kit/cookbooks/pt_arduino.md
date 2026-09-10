@@ -1,6 +1,6 @@
 ---
-description: Livro de receitas Arduino ponta a ponta para o TRMNL 7.5" (OG) DIY Kit - utiliza o XIAO ESP32-S3 Plus para acionar diretamente o display ePaper de 7,5" a partir de sketches Arduino personalizados (em vez da plataforma em nuvem TRMNL).
-title: Livro de Receitas Arduino
+description: cookbook Arduino ponta a ponta para o TRMNL 7.5" (OG) DIY Kit - utiliza o XIAO ESP32-S3 Plus para acionar diretamente o display ePaper de 7,5" a partir de sketches Arduino personalizados (em vez da plataforma em nuvem TRMNL).
+title: Cookbook Arduino
 keywords:
   - display ePaper
   - TRMNL
@@ -17,10 +17,10 @@ updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_arduino/
 ---
 
-# Livro de Receitas Arduino: TRMNL 7.5" (OG) DIY Kit
+# Cookbook Arduino: TRMNL 7.5" (OG) DIY Kit
 
 :::tip Leia primeiro o guia principal de Arduino
-Esta página é o **livro de receitas específico do TRMNL DIY Kit**. O conteúdo comum — configuração da IDE Arduino, pacote de placas ESP32, instalação de `Seeed_GFX`, geração de `driver.h` a partir da Configuration Tool — está em **[Work with Arduino](/pt-br/epaper_work_with_arduino)**. Dê uma olhada nele primeiro se você é novo em Arduino em ePaper da Seeed; esta página foca nas partes específicas do hardware do TRMNL DIY Kit.
+Esta página é o **cookbook específico do TRMNL DIY Kit**. O conteúdo comum — configuração da IDE Arduino, pacote de placas ESP32, instalação de `Seeed_GFX`, geração de `driver.h` a partir da Configuration Tool — está em **[Work with Arduino](/pt-br/epaper_work_with_arduino)**. Dê uma olhada nele primeiro se você é novo em Arduino em ePaper da Seeed; esta página foca nas partes específicas do hardware do TRMNL DIY Kit.
 
 Procurando em vez disso pelo fluxo de trabalho do **dashboard em nuvem TRMNL** (sem código personalizado, dashboards controlados por plug-ins)? Veja **[Work with TRMNL](/pt-br/reterminal_e10xx_trmnl)**.
 :::
