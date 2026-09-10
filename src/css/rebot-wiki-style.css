@@ -271,6 +271,111 @@
   font-size: 0.86rem;
 }
 
+/* 简洁的纵向操作步骤 */
+.rebot-step-flow {
+  --rebot-step-line: var(--ifm-color-emphasis-400);
+  --rebot-step-muted: var(--ifm-color-emphasis-700);
+  margin: 1.5rem 0 2rem;
+}
+
+.rebot-step-item {
+  position: relative;
+  min-width: 0;
+  padding: 0 0 2.75rem 4rem;
+}
+
+.rebot-step-item:last-child {
+  padding-bottom: 0.25rem;
+}
+
+.rebot-step-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 2.75rem;
+  bottom: 0.55rem;
+  left: 1.14rem;
+  border-left: 2px dotted var(--rebot-step-line);
+}
+
+.rebot-step-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: inline-flex;
+  width: 2.35rem;
+  height: 2.35rem;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--ifm-font-color-base);
+  border-radius: 999px;
+  color: var(--ifm-font-color-base);
+  background: var(--ifm-background-color);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.rebot-step-content {
+  min-width: 0;
+}
+
+.rebot-step-content > h4 {
+  margin: 0 0 0.35rem;
+  font-size: 1.28rem;
+  line-height: 1.5;
+}
+
+.rebot-step-label {
+  margin: 0 0 1.6rem;
+  color: var(--rebot-step-muted);
+  font-style: italic;
+}
+
+.rebot-step-content .tabs-container {
+  margin: 1.1rem 0 1.35rem;
+}
+
+.rebot-step-content pre {
+  border-radius: 16px;
+}
+
+/* 电源图片：上方双列，下方通栏并保持左右边缘对齐 */
+.rebot-power-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 1.5rem auto 2rem;
+}
+
+.rebot-power-gallery-item {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 14px;
+  background: var(--ifm-background-surface-color, var(--ifm-background-color));
+}
+
+.rebot-power-gallery-item figcaption {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  font-weight: 700;
+  text-align: center;
+}
+
+.rebot-power-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rebot-power-gallery-item--wide {
+  grid-column: 1 / -1;
+}
+
 /* details 卡片 */
 .content-details {
   margin: 0.9rem 0;
@@ -540,5 +645,29 @@ html[data-theme='dark'] .course-path-item.active {
 
   .safety-alert {
     grid-template-columns: 1fr;
+  }
+
+  .rebot-step-item {
+    padding-left: 3.25rem;
+  }
+
+  .rebot-step-number {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.88rem;
+  }
+
+  .rebot-step-item:not(:last-child)::after {
+    top: 2.4rem;
+    left: 0.96rem;
+  }
+
+  .rebot-power-gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .rebot-power-gallery-item--wide {
+    grid-column: auto;
   }
 }
