@@ -10,17 +10,17 @@ keywords:
   - SenseCraft Robotics
   - SenseCraft Data Platform
   - SenseCraft App
-  - SenseCraft HMI
+  - SenseCraft Seeedash
   - Device Management Platform
   - SenseCAP MX
   - SenseCAP Hotspot
 image: https://sensecraft-statics.seeed.cc/sensecraft-ai/Banner1.650c5596.png
 slug: /Cloud
 last_update:
-  date: 08/06/2026
-  author: Jancee
+  date: 09/11/2026
+  author: Luki
 createdAt: '2023-01-05'
-updatedAt: '2026-08-06'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/Cloud/
 ---
 
@@ -54,7 +54,7 @@ SenseCraft brings together software for building AI and hardware applications, t
 | Collect demonstrations, train, and validate a robotic-arm behavior | [SenseCraft Robotics](#sensecraft-robotics) |
 | Connect IoT devices and collect or view sensor data | [SenseCraft Data Platform](#sensecraft-data-platform) |
 | Configure supported devices and monitor them from a phone | [SenseCraft App](#sensecraft-app) |
-| Create dashboards and display experiences for reTerminal | [SenseCraft HMI](#sensecraft-hmi) |
+| Create dashboards and display experiences for reTerminal | [SenseCraft Seeedash](#sensecraft-hmi) |
 | Operate distributed edge devices and roll out applications | [SenseCraft Device Management Platform](#sensecraft-device-management-platform) |
 | Deploy or manage SenseCAP gateways for decentralized networks | [SenseCAP MX / Hotspot](#sensecap-mx-hotspot) |
 
@@ -235,25 +235,25 @@ SenseCraft brings together software for building AI and hardware applications, t
       <div className="card__image">
         <img
           src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/23.png"
-          alt="SenseCraft HMI website showing dashboard and display scenarios"
+          alt="SenseCraft Seeedash website showing dashboard and display scenarios"
           loading="lazy"
           style={{ width: '100%', height: '220px', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
         />
       </div>
       <div className="card__body">
         <div className="badge badge--primary margin-bottom--sm">Visualize</div>
-        <h3 id="sensecraft-hmi">SenseCraft HMI</h3>
+        <h3 id="sensecraft-hmi">SenseCraft Seeedash</h3>
         <div className="margin-bottom--sm"><strong>Create or explore dashboard designs for reTerminal.</strong></div>
         <div className="margin-bottom--sm">
-          Start from a dashboard template or design your own display on the canvas, then manage and push the result to supported reTerminal devices. SenseCraft HMI is intended for information displays, control interfaces, and data-rich device experiences.
+          Start from a dashboard template or design your own display on the canvas, then manage and push the result to supported reTerminal devices. SenseCraft Seeedash is intended for information displays, control interfaces, and data-rich device experiences.
         </div>
         <div className="margin-bottom--sm">
           <a href="https://sensecraft.seeed.cc/hmi/workspace/page?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_canvas" target="_blank" rel="noopener noreferrer">Design on canvas</a>
         </div>
       </div>
       <div className="card__footer">
-        <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home" target="_blank" rel="noopener noreferrer">Open SenseCraft HMI</a>
-        <a className="button button--outline button--secondary margin-bottom--sm" href="/sensecraft_hmi_overview/">Read the HMI overview</a>
+        <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home" target="_blank" rel="noopener noreferrer">Open SenseCraft Seeedash</a>
+        <a className="button button--outline button--secondary margin-bottom--sm" href="/sensecraft_hmi_overview/">Read the Seeedash overview</a>
       </div>
     </div>
   </div>
