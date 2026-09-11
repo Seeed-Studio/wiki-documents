@@ -109,7 +109,7 @@ The XIAO ESP32S3 Sense card slot occupies 4 GPIOs of the ESP32-S3, and the pin d
             <th align="center">microSD Card Slot</th>
         </tr>
         <tr>
-            <td align="center">GPIO3</td>
+            <td align="center">GPIO21</td>
             <td align="center">CS</td>
         </tr>
         <tr>
