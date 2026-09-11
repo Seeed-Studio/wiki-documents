@@ -1,5 +1,5 @@
 ---
-description: 为边缘 AI、硬件编程、机器人、物联网数据、HMI 仪表盘、设备运维，以及 SenseCAP MX 或 Hotspot 工作流选择合适的 SenseCraft 产品。
+description: 为边缘 AI、硬件编程、机器人、物联网数据、HMI 仪表盘、设备运维以及 SenseCAP MX 或 Hotspot 工作流选择合适的 SenseCraft 产品。
 title: SenseCraft 产品与用户指南
 hide_title: true
 keywords:
@@ -10,17 +10,17 @@ keywords:
   - SenseCraft Robotics
   - SenseCraft Data Platform
   - SenseCraft App
-  - SenseCraft HMI
+  - SenseCraft Seeedash
   - Device Management Platform
   - SenseCAP MX
   - SenseCAP Hotspot
 image: https://sensecraft-statics.seeed.cc/sensecraft-ai/Banner1.650c5596.png
 slug: /Cloud
 last_update:
-  date: 08/06/2026
-  author: Jancee
+  date: 09/11/2026
+  author: Luki
 createdAt: '2023-01-05'
-updatedAt: '2026-08-06'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/Cloud/
 ---
 
@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/cn/Cloud/
   <div className="container">
     <h1 className="hero__title">找到适合你的 SenseCraft 产品</h1>
     <div className="hero__subtitle">
-      从你想要创建、连接、可视化或运维的内容开始。本指南会将每个目标映射到合适的 SenseCraft 产品、平台、下载资源和用户指南。
+      从你想要创建、连接、可视化或运维的内容开始。本指南将每个目标映射到合适的 SenseCraft 产品、平台、下载资源和用户指南。
     </div>
     <div className="margin-top--md">
       <a className="button button--secondary button--lg margin-right--sm margin-bottom--sm" href="#choose-by-goal">
@@ -51,10 +51,10 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
 | 创建、训练或部署边缘 AI 应用 | [SenseCraft AI](#sensecraft-ai) |
 | 将一个想法变成可运行的硬件代码 | [CodeCraft](#codecraft) |
 | 在 reComputer 硬件上运行优化的 AI 模型和工具 | [reComputer AI Lab](#recomputer-ai-lab) |
-| 采集演示、训练并验证机械臂行为 | [SenseCraft Robotics](#sensecraft-robotics) |
+| 收集演示、训练并验证机械臂行为 | [SenseCraft Robotics](#sensecraft-robotics) |
 | 连接物联网设备并采集或查看传感器数据 | [SenseCraft Data Platform](#sensecraft-data-platform) |
-| 配置受支持的设备并在手机上监控它们 | [SenseCraft App](#sensecraft-app) |
-| 为 reTerminal 创建仪表盘和显示体验 | [SenseCraft HMI](#sensecraft-hmi) |
+| 配置受支持的设备并通过手机监控它们 | [SenseCraft App](#sensecraft-app) |
+| 为 reTerminal 创建仪表盘和显示体验 | [SenseCraft Seeedash](#sensecraft-hmi) |
 | 运维分布式边缘设备并发布应用 | [SenseCraft Device Management Platform](#sensecraft-device-management-platform) |
 | 为去中心化网络部署或管理 SenseCAP 网关 | [SenseCAP MX / Hotspot](#sensecap-mx-hotspot) |
 
@@ -72,11 +72,11 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
         />
       </div>
       <div className="card__body">
-        <div className="badge badge--success margin-bottom--sm">Create</div>
+        <div className="badge badge--success margin-bottom--sm">创建</div>
         <h3 id="sensecraft-ai">SenseCraft AI</h3>
         <div className="margin-bottom--sm"><strong>创建、分享、探索和部署 AI 应用。</strong></div>
         <div className="margin-bottom--sm">
-          使用模型库、零代码训练和应用社区，将一个 AI 想法变成在受支持边缘设备上运行的推理。SenseCraft AI 为 SBC 设备提供 400 多个模型，并支持从社区应用一键部署。
+          使用模型库、零代码训练和应用社区，将一个 AI 想法转化为在受支持边缘设备上的推理。SenseCraft AI 为 SBC 设备提供 400 多个模型，并支持从社区应用一键部署。
         </div>
         <div className="margin-bottom--sm">
           <a href="https://sensecraft.seeed.cc/ai/model?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_model_library" target="_blank" rel="noopener noreferrer">模型库</a>
@@ -104,11 +104,11 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
         />
       </div>
       <div className="card__body">
-        <div className="badge badge--success margin-bottom--sm">Create</div>
+        <div className="badge badge--success margin-bottom--sm">创建</div>
         <h3 id="codecraft">CodeCraft</h3>
         <div className="margin-bottom--sm"><strong>一款以硬件为中心的 AI 编码助手，让你的想法在几分钟内变为现实。</strong></div>
         <div className="margin-bottom--sm">
-          描述你想要构建的硬件项目，生成其代码，在云端编译，并直接从浏览器烧录。CodeCraft 支持基于 Wio Terminal、XIAO、Grove、Arduino 项目以及基于浏览器的 WebSerial 的实用原型开发和学习工作流。
+          描述你想要构建的硬件项目，生成其代码，在云端编译，并通过浏览器烧录。CodeCraft 支持基于 Wio Terminal、XIAO、Grove、Arduino 项目以及基于浏览器的 WebSerial 的实用原型开发和学习工作流。
         </div>
         <div className="margin-bottom--sm">
           <a href="https://codecraft.seeed.cc/workspace?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_workspace" target="_blank" rel="noopener noreferrer">打开工作区</a>
@@ -134,7 +134,7 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
         />
       </div>
       <div className="card__body">
-        <div className="badge badge--info margin-bottom--sm">Develop</div>
+        <div className="badge badge--info margin-bottom--sm">开发</div>
         <h3 id="recomputer-ai-lab">reComputer AI Lab</h3>
         <div className="margin-bottom--sm"><strong>为 reComputer 硬件优化的边缘 AI 模型、工具和教程。</strong></div>
         <div className="margin-bottom--sm">
@@ -164,11 +164,11 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
         />
       </div>
       <div className="card__body">
-        <div className="badge badge--info margin-bottom--sm">Develop</div>
+        <div className="badge badge--info margin-bottom--sm">开发</div>
         <h3 id="sensecraft-robotics">SenseCraft Robotics</h3>
         <div className="margin-bottom--sm"><strong>一套开箱即用的机械臂训练平台。</strong></div>
         <div className="margin-bottom--sm">
-          遵循一个连贯的工作流完成校准、演示数据采集、云端训练和验证。它专为教育和实验室、机器人研发概念验证以及无需高端本地训练机器的早期集成验证而设计。
+          遵循一个连贯的工作流来完成校准、演示数据采集、云端训练和验证。它专为教育和实验室、机器人研发概念验证以及在无需高端本地训练机器的情况下进行早期集成验证而设计。
         </div>
       </div>
       <div className="card__footer">
@@ -195,7 +195,7 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
         <h3 id="sensecraft-data-platform">SenseCraft 数据平台</h3>
         <div className="margin-bottom--sm"><strong>一个用于 IoT 设备和数据管理的平台。</strong></div>
         <div className="margin-bottom--sm">
-          配对支持的网关和传感器，收集数据，并在一个云平台中检查设备状态和遥测信息。它作为 SenseCAP 设备和常见 IoT 工作流的数据枢纽，支持 LoRaWAN、MQTT、Wi‑Fi、气象和环境感知。
+          将支持的网关和传感器配对、采集数据，并在一个云平台中检查设备状态和遥测数据。它作为 SenseCAP 设备和常见 IoT 工作流的数据枢纽，支持 LoRaWAN、MQTT、Wi-Fi、气象和环境感知。
         </div>
       </div>
       <div className="card__footer">
@@ -220,7 +220,7 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
         <h3 id="sensecraft-app">SenseCraft App</h3>
         <div className="margin-bottom--sm"><strong>一个在 iOS 和 Android 上用于 IoT 设备管理和 AI 配置的移动枢纽。</strong></div>
         <div className="margin-bottom--sm">
-          使用该应用添加支持的设备，监控其数据和状态，更改可用设置，查看事件，并执行支持的蓝牙配置或升级。将此应用用于通用 SenseCAP 设备和数据工作流；它与 SenseCAP Hotspot App 相互独立。
+          使用该应用添加支持的设备、监控其数据和状态、更改可用设置、查看事件，并执行支持的蓝牙配置或升级。将此应用用于通用 SenseCAP 设备和数据工作流；它与 SenseCAP Hotspot App 相互独立。
         </div>
       </div>
       <div className="card__footer">
@@ -235,25 +235,25 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
       <div className="card__image">
         <img
           src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/23.png"
-          alt="SenseCraft HMI website showing dashboard and display scenarios"
+          alt="SenseCraft Seeedash website showing dashboard and display scenarios"
           loading="lazy"
           style={{ width: '100%', height: '220px', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
         />
       </div>
       <div className="card__body">
         <div className="badge badge--primary margin-bottom--sm">可视化</div>
-        <h3 id="sensecraft-hmi">SenseCraft HMI</h3>
+        <h3 id="sensecraft-hmi">SenseCraft Seeedash</h3>
         <div className="margin-bottom--sm"><strong>为 reTerminal 创建或探索仪表盘设计。</strong></div>
         <div className="margin-bottom--sm">
-          从仪表盘模板开始，或在画布上设计自己的显示界面，然后管理并将结果推送到支持的 reTerminal 设备。SenseCraft HMI 适用于信息展示、控制界面以及数据密集型设备体验。
+          从仪表盘模板开始，或在画布上设计自己的显示界面，然后管理并将结果推送到支持的 reTerminal 设备。SenseCraft Seeedash 适用于信息展示、控制界面以及数据丰富的设备体验。
         </div>
         <div className="margin-bottom--sm">
           <a href="https://sensecraft.seeed.cc/hmi/workspace/page?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_canvas" target="_blank" rel="noopener noreferrer">在画布上设计</a>
         </div>
       </div>
       <div className="card__footer">
-        <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home" target="_blank" rel="noopener noreferrer">打开 SenseCraft HMI</a>
-        <a className="button button--outline button--secondary margin-bottom--sm" href="/cn/sensecraft_hmi_overview/">阅读 HMI 概览</a>
+        <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home" target="_blank" rel="noopener noreferrer">打开 SenseCraft Seeedash</a>
+        <a className="button button--outline button--secondary margin-bottom--sm" href="/cn/sensecraft_hmi_overview/">阅读 Seeedash 概览</a>
       </div>
     </div>
   </div>
@@ -273,7 +273,7 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
         <h3 id="sensecraft-device-management-platform">SenseCraft 设备管理平台</h3>
         <div className="margin-bottom--sm"><strong>管理分布式边缘设备，并从一个控制平面下发应用、模型和更新。</strong></div>
         <div className="margin-bottom--sm">
-          在部署后使用该平台监控支持的边缘节点，应用一致的运行时策略，并在多台设备上管理应用生命周期。它支持主流边缘硬件，包括 NVIDIA Jetson、Rockchip、Raspberry Pi 和 x86 边缘 PC。
+          在部署后使用该平台监控支持的边缘节点、应用一致的运行时策略，并在多台设备间管理应用生命周期。它支持主流边缘硬件，包括 NVIDIA Jetson、Rockchip、Raspberry Pi 和 x86 边缘 PC。
         </div>
         <div className="margin-bottom--sm">
           <a href="https://seeed-fleet.com/apps?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_apps" target="_blank" rel="noopener noreferrer">浏览可用应用</a>
@@ -306,16 +306,16 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
         <div className="col col--8">
           <div className="card__body">
             <div className="badge badge--secondary margin-bottom--sm">DePIN</div>
-            <h3 id="sensecap-mx-hotspot">SenseCAP MX / 热点</h3>
+            <h3 id="sensecap-mx-hotspot">SenseCAP MX / Hotspot</h3>
             <div className="margin-bottom--sm"><strong>适用于 Helium、Flux、Mysterium 和 Weather XM 网络的网关与管理工具。</strong></div>
             <div className="margin-bottom--sm">
-              探索 SenseCAP MX 网关产品、文档以及受支持的去中心化网络工作流的服务状态。使用独立的 SenseCAP Hotspot App 来部署和管理受支持的 SenseCAP 网关和热点设备；不要将其与通用的 SenseCraft App 混淆。
+              浏览 SenseCAP MX 网关产品、文档以及受支持去中心化网络工作流的服务状态。使用独立的 SenseCAP Hotspot App 来部署和管理受支持的 SenseCAP 网关和热点设备；不要将其与通用的 SenseCraft App 混淆。
             </div>
           </div>
           <div className="card__footer">
             <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://www.sensecapmx.com/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_home" target="_blank" rel="noopener noreferrer">探索 SenseCAP MX</a>
             <a className="button button--outline button--secondary margin-right--sm margin-bottom--sm" href="https://www.sensecapmx.com/docs/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecap_mx_docs" target="_blank" rel="noopener noreferrer">阅读 MX 文档</a>
-            <a className="button button--outline button--secondary margin-bottom--sm" href="/cn/sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app/">阅读热点指南</a>
+            <a className="button button--outline button--secondary margin-bottom--sm" href="/cn/sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app/">阅读 Hotspot 指南</a>
           </div>
         </div>
       </div>
@@ -327,7 +327,7 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
 
 - **reComputer AI Lab** 是当前以 reComputer 为核心的模型、工具、教程和项目资源中心的官方名称。
 - **SenseCraft Device Management Platform** 是用于管理已部署边缘设备和应用的运营层；先从一个具体的应用或解决方案入手，然后使用设备管理在规模化场景下进行运营。
-- **SenseCraft App** 和 **SenseCAP Hotspot App** 是不同的移动产品。对受支持的 IoT 设备和数据工作流使用 SenseCraft App，对受支持的网关和热点工作流使用 SenseCAP Hotspot App。
+- **SenseCraft App** 和 **SenseCAP Hotspot App** 是不同的移动产品。使用 SenseCraft App 处理受支持的 IoT 设备和数据工作流，使用 SenseCAP Hotspot App 处理受支持的网关和热点工作流。
 
 :::
 

@@ -1,28 +1,28 @@
 ---
-description: Presentamos SenseCraft HMI, la plataforma de páginas de interacción humano-computadora creada específicamente para la serie reTerminal.
-title: Descripción general de SenseCraft HMI
+description: Presentamos SenseCraft Seeedash, la plataforma de páginas de interacción humano-computadora creada específicamente para la serie reTerminal.
+title: Descripción general de SenseCraft Seeedash
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft_hmi_overview
 sidebar_position: 1
 last_update:
-  date: 07/21/2025
-  author: Citric
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-07-25'
-updatedAt: '2026-08-04'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/es/sensecraft_hmi_overview/
 ---
 
-# Descripción general de SenseCraft HMI
+# Descripción general de SenseCraft Seeedash
 
 ## Introducción
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home) es la potente plataforma de diseño de interfaces en la nube de Seeed Studio que te permite crear interfaces visuales profesionales para dispositivos con pantalla sin necesidad de programar. Con un editor intuitivo de arrastrar y soltar, plantillas predefinidas y capacidades de diseño impulsadas por IA, SenseCraft HMI facilita transformar tu hardware en atractivas pantallas de información, paneles de control, señalización digital y consolas de control.
+[SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home) es la potente plataforma de diseño de interfaces en la nube de Seeed Studio que te permite crear interfaces visuales profesionales para dispositivos con pantalla sin necesidad de programar. Con un editor intuitivo de arrastrar y soltar, plantillas prediseñadas y capacidades de diseño impulsadas por IA, SenseCraft Seeedash facilita transformar tu hardware en atractivas pantallas de información, paneles de control, señalización digital y consolas de control.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/23.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Funciones clave
 
-- **Creador de interfaces sin código**: Crea pantallas profesionales con sencillas herramientas de arrastrar y soltar
+- **Constructor de interfaces sin código**: Crea pantallas profesionales con sencillas herramientas de arrastrar y soltar
 
 - **Diseño impulsado por IA**: Genera diseños completos e imágenes usando descripciones en lenguaje natural
 
@@ -30,7 +30,7 @@ url: https://wiki.seeedstudio.com/es/sensecraft_hmi_overview/
 
 - **Funciones de visualización múltiples**: Funciones de Galería, Canvas, RSS y Web para diferentes casos de uso
 
-- **Plantillas listas para usar**: Diseños preconfigurados para aplicaciones comunes
+- **Plantillas listas para usar**: Diseños predefinidos para aplicaciones comunes
 
 - **Implementación con un clic**: Envía los diseños directamente a los dispositivos conectados
 
@@ -38,9 +38,9 @@ url: https://wiki.seeedstudio.com/es/sensecraft_hmi_overview/
 
 ## Primeros pasos
 
-Para comenzar a usar SenseCraft HMI:
+Para comenzar a usar SenseCraft Seeedash:
 
-1. **Accede a la plataforma**: Visita [SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
+1. **Accede a la plataforma**: Visita [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
 
 2. **Crea una cuenta**: Regístrate para obtener una cuenta gratuita de SenseCraft si aún no tienes una
 
@@ -52,11 +52,11 @@ Para comenzar a usar SenseCraft HMI:
 
 6. **Implementa en el dispositivo**: Envía tu diseño al dispositivo conectado con un solo clic
 
-## Guías de inicio
+## Guías de primeros pasos
 
 ### [Primeros pasos](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting-started/)
 
-Aprende a crear tu cuenta de SenseCraft HMI y acceder a la plataforma.
+Aprende cómo crear tu cuenta de SenseCraft Seeedash y acceder a la plataforma.
 
 ### [Actualización y flasheo de firmware](https://sensecraft-hmi-docs.seeed.cc/en/guides/firmware-update/)
 
@@ -68,23 +68,23 @@ Guía completa para comprender y usar las barras de herramientas principales, la
 
 ### [Herramientas avanzadas](https://sensecraft-hmi-docs.seeed.cc/en/guides/advanced-tools/)
 
-Aprende a usar las herramientas Firmware Flasher y Image Dithering para optimizar tu dispositivo y contenido.
+Aprende a usar las herramientas Firmware Flasher e Image Dithering para optimizar tu dispositivo y contenido.
 
 ### [Implementación en tu dispositivo](https://sensecraft-hmi-docs.seeed.cc/en/guides/deploying-to-device/)
 
-Guía paso a paso para implementar tus proyectos de SenseCraft HMI en tus dispositivos de pantalla de papel electrónico.
+Guía paso a paso para implementar tus proyectos de SenseCraft Seeedash en tus dispositivos de pantalla de papel electrónico.
 
 ## Documentación de funciones
 
-SenseCraft HMI ofrece varias funciones especializadas, cada una diseñada para diferentes necesidades de visualización:
+SenseCraft Seeedash ofrece varias funciones especializadas, cada una diseñada para diferentes necesidades de visualización:
 
 ### [Función de generación con IA](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)
 
-Crea hermosos diseños e imágenes simplemente describiendo lo que quieres en lenguaje natural, eliminando la necesidad de habilidades de diseño.
+Crea diseños e imágenes atractivos simplemente describiendo lo que quieres en lenguaje natural, eliminando la necesidad de habilidades de diseño.
 
-### [Función de galería](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/)
+### [Función Gallery](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/)
 
-Transforma tu dispositivo en un marco de fotos digital con visualizaciones de imágenes personalizables, transiciones y efectos visuales.
+Transforma tu dispositivo en un marco de fotos digital con pantallas de imágenes personalizables, transiciones y efectos visuales.
 
 ### [Función Canvas](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-canvas/)
 
@@ -106,24 +106,24 @@ Lista completa de dispositivos compatibles y requisitos de hardware.
 
 ### [Guía en video](https://sensecraft-hmi-docs.seeed.cc/en/video-guide/)
 
-Tutoriales en video paso a paso para la plataforma SenseCraft HMI.
+Tutoriales en video paso a paso para la plataforma SenseCraft Seeedash.
 
 ### [Precios](https://sensecraft-hmi-docs.seeed.cc/en/pricing/)
 
-Información y planes de precios actuales.
+Información actual sobre precios y planes.
 
 ### [Notas de la versión](https://sensecraft-hmi-docs.seeed.cc/en/release-notes/)
 
-Últimas actualizaciones e historial de versiones de la plataforma SenseCraft HMI.
+Actualizaciones más recientes e historial de versiones de la plataforma SenseCraft Seeedash.
 
 ## Recursos
 
-- [Plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
+- [Plataforma SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
 - [Dispositivos compatibles - reTerminal E Serie](https://wiki.seeedstudio.com/es/reterminal_e10xx_main_page/)
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
