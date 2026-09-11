@@ -1423,6 +1423,10 @@ void setup() {
   }
 
   sensor_t *s = esp_camera_sensor_get();
+  // --- OV5640 Heat Optimization: lower IO drive (0x302C bit[7:6] 11->00) ---
+  if (s && s->id.PID == OV5640_PID) {
+    s->set_reg(s, 0x302C, 0xC0, 0x00);
+  }
   // --- OV5640 自动对焦初始化（仅 OV5640，定焦模组跳过） ---
   if (s && s->id.PID == OV5640_PID) {
     Serial.println("OV5640 detected, initializing auto-focus...");
@@ -1488,7 +1492,7 @@ void loop() {
 Before uploading the program, you need to change the WiFi name and password in the code to your own. After uploading the program, if the XIAO ESP32C3 successfully connects to your WiFi, its IP address will be printed out.
 
 :::caution
-XIAO ESP32S3 If you perform this project for a long time, please pay attention to heat dissipation, XIAO will become very hot, please be careful of burns!
+XIAO ESP32S3 will get very hot during long-running streaming — please be careful of burns. To reduce the temperature, apply the [OV5640 Heat Optimization](#ov5640-heat-optimization) patch below.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/97.png" style={{width:800, height:'auto'}}/></div>
@@ -1633,6 +1637,10 @@ void setup() {
   }
 
   sensor_t * s = esp_camera_sensor_get();
+  // --- OV5640 Heat Optimization: lower IO drive (0x302C bit[7:6] 11->00) ---
+  if (s && s->id.PID == OV5640_PID) {
+    s->set_reg(s, 0x302C, 0xC0, 0x00);
+  }
   ov5640.start(s);
 
     if (ov5640.focusInit() == 0) {
@@ -1767,6 +1775,10 @@ void setup() {
   // auto focus
 #if 1
   sensor_t* sensor = esp_camera_sensor_get();
+  // --- OV5640 Heat Optimization: lower IO drive (0x302C bit[7:6] 11->00) ---
+  if (sensor && sensor->id.PID == OV5640_PID) {
+    sensor->set_reg(sensor, 0x302C, 0xC0, 0x00);
+  }
   int ret = 0;
   ov5640.start(sensor);
 
@@ -1835,6 +1847,68 @@ void loop() {
 Mode 1 is recommended because it has a more pronounced focusing effect than Mode 2 and provides a sharper image.
 :::
 
+## OV5640 Heat Optimization
+
+:::tip
+This section applies only to the **OV5640** camera module. The OV2640 has no such register and is skipped automatically by the `PID` check in the code below.
+:::
+
+When the OV5640 runs continuously for a long time — video streaming, live preview, or continuous auto-focus — the chip temperature can rise above 70°C. This is a hardware-level root cause and cannot be fully eliminated in software; it can only be mitigated.
+
+### Why the OV5640 heats up
+
+1. **Internal DVDD regulator drop**: when the I/O supply (DOVDD) is 2.8V and the internal DVDD regulator is used, the large voltage drop itself dissipates significant power (noted in the official datasheet).
+2. **Improper power-up sequence** introduces leakage current and raises static power consumption.
+3. The datasheet **strongly recommends cutting all power (including external DVDD) when the sensor is not in use**, which confirms that OV5640 standby consumption is not ideal.
+
+The only effective software lever is to **lower the IO pin drive current** to reduce dynamic power.
+
+### How it works — register 0x302C
+
+Register `0x302C` (named `DRIVE_CAPABILITY` in the esp32-camera source) controls the drive capability of the IO pins (D0–D7, PCLK, VSYNC, HREF). The key field is **Bit[7:6]**:
+
+| Bit[7:6] | Drive capability |
+|---|---|
+| `11` | 4x (chip power-on default) |
+| `10` | 3x |
+| `01` | 2x |
+| `00` | 1x (weakest, lowest current, least heat) |
+
+Changing Bit[7:6] from `11` to `00` drops the drive capability from 4x to 1x. That is the entire principle — there is no other magic involved.
+
+:::note
+**IDF project (equivalent, already shipped):** in the ESP-IDF project the same effect is achieved by editing `ov5640_settings.h` and adding `{DRIVE_CAPABILITY, 0x03}` to the `sensor_default_regs[]` table, which is written into the chip during `sensor.reset()` inside `esp_camera_init()`. `0x03 = 0b00000011`, so Bit[7:6] = `00` → 1x drive. The `esp_camera_init()` function itself is unchanged — only the register value it writes differs.
+
+**Arduino (this wiki):** the Arduino `esp32-camera` lives inside the boards package directory (the path varies by OS/version and is overwritten on every package update), so we cannot ask users to edit the `.h` file. Instead we write the register at runtime with `set_reg` — the same style already used in [Method 2](#method-2) for focus control: `sensor->set_reg(sensor, 0x3022, 0xff, 0x03)`.
+:::
+
+### Code — add this right after `esp_camera_init()`
+
+```cpp
+// --- OV5640 Heat Optimization ---
+// Lower IO drive capability via register 0x302C.
+// Bit[7:6]: 11=4x (chip default) -> 00=1x (lowest current, least heat).
+// Drops chip temperature from ~70°C+ to ~54°C during continuous streaming.
+// OV5640 only; the PID check skips OV2640, which has no such register.
+sensor_t * s = esp_camera_sensor_get();
+if (s && s->id.PID == OV5640_PID) {
+  s->set_reg(s, 0x302C, 0xC0, 0x00);
+}
+```
+
+Line by line:
+
+- `esp_camera_init(&config)` — called as usual, the function is **not** modified. Internally it calls `sensor.reset()`, which writes a batch of default registers.
+- `esp_camera_sensor_get()` — gets the `sensor_t *` pointer needed to talk to the sensor.
+- `if (s->id.PID == OV5640_PID)` — only applies to the OV5640. All examples in this wiki are also compatible with the OV2640, and `0x302C` is OV5640-specific, so it must not be written to an OV2640. The video-streaming example already uses the same `if (s->id.PID == OV3660_PID)` pattern.
+- `s->set_reg(s, 0x302C, 0xC0, 0x00)` — reads back `0x302C`, clears only **Bit[7:6]** to `00` (mask `0xC0 = 0b11000000`, value `0x00`), and leaves the other bits at whatever the library set. This is safer than writing `0x03` directly — it does not depend on the library's default value and touches only the drive-capability bits.
+
+### Effect & risk
+
+- **Effect**: under long-running continuous streaming, the OV5640 chip temperature drops from ~70°C+ to ~54°C (varies with ambient temperature and heat-sink).
+- **Risk**: lower drive capability slows signal edges, which raises the bar for PCB trace noise immunity; in extreme cases it may introduce image noise or sampling distortion. On the XIAO ESP32S3 Sense + OV5640 (heat-sink version) the impact is acceptable in testing.
+- **Scope**: OV5640 only; the OV2640 has no such register and is skipped by the `PID` check.
+
 ## Troubleshooting
 
 ### Q1: When XIAO ESP32S3 Sense and Round Display are used together, do I have to cut the J3 pin? Which SD card slot can be used?
@@ -1842,6 +1916,10 @@ Mode 1 is recommended because it has a more pronounced focusing effect than Mode
 A: In principle, you need to cut the J3 pin when XIAO ESP32S3 Sense is used together with Round Display to use microSD card. The reason is that there are pull-up resistors in the design of the circuit of both expansion boards, so theoretically, if two pull-up resistors work at the same time, then the SD card slot will not work properly. An error message of SD card mount failure will appear. Since the pull-up resistor on the Round Display cannot be blocked, you need to cut J3 on the sense expansion board to make sure only one pull-up resistor is working when the two are used together. This also determines that when both are used together, there is and only the SD card slot on the Round Display is active.
 
 However, **we need to thank engineer Mjrovai for the new method of using the microSD card slot on the XIAO ESP32S3 Sense at the same time**, which is also possible at software level. We can refer to **[his methods and procedures](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
+
+### Q2: The OV5640 gets very hot during long-running streaming. What should I do?
+
+A: This is expected for the OV5640 under continuous capture. Lower the IO drive capability via register `0x302C` as described in [OV5640 Heat Optimization](#ov5640-heat-optimization) — it drops the chip temperature from ~70°C+ to ~54°C. If you do not need high resolution, also lowering the frame size and switching to `CAMERA_GRAB_WHEN_EMPTY` further reduces power.
 
 ## Tech Support & Product Discussion
 
