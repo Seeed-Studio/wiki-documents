@@ -54,7 +54,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 This page covers two visual grasping demos with different implementations:
 
 - **Visual Grasping Method 1**: A YOLO + RGB-D + Python SDK pipeline covering environment setup, camera integration, hand-eye calibration, and grasp debugging.
-- **Visual Grasping Method 2**: A ROS2 + YOLOE workflow that starts the arm, Gemini 2 camera, and grasp nodes in multiple terminals to pick and place objects.
+- **Visual Grasping Method 2**: A ROS2 + YOLOE workflow that starts the arm, Gemini 2 / D405 camera, and grasp nodes in multiple terminals to pick and place objects.
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping demo" />
@@ -655,9 +655,9 @@ If the output is `False`, fix the CUDA / PyTorch installation first. If it is `T
 
 ### 1. Project Overview
 
-This solution uses **ROS2** and **YOLO** on the reBot Arm B601-RS for object detection, grasping, and placing. The system starts the arm, Gemini 2 camera, and grasp nodes in separate terminals.
+This solution uses **ROS2** and **YOLO** on the reBot Arm B601-RS for object detection, grasping, and placing. The system starts the arm, depth camera, and grasp nodes in separate terminals.
 
-The depth camera currently supports **Orbbec Gemini 2** only. This workflow does not require a calibration board for hand-eye calibration. Because of mounting and printed-part tolerances, each arm may show a small grasping offset.
+The depth camera currently supports **Orbbec Gemini 2** and **Intel RealSense D405**. This workflow does not require a calibration board for hand-eye calibration. Because of mounting and printed-part tolerances, each arm may show a small grasping offset.
 
 ### 2. Environment Setup
 
@@ -666,6 +666,11 @@ The depth camera currently supports **Orbbec Gemini 2** only. This workflow does
 First complete the installation and build of the `rebotarm_ros2` workspace by following [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/).
 
 #### Step 2. Install the camera
+
+Choose one of the camera setups below and expand the matching section.
+
+<details className="content-details">
+<summary>Click to expand Gemini 2 setup</summary>
 
 Clone the Orbbec ROS2 SDK into the workspace and switch to the `v2-main` branch:
 
@@ -691,11 +696,65 @@ sudo bash install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
+</details>
+
+<details className="content-details">
+<summary>Click to expand D405 setup</summary>
+
+1. Clone the RealSense SDK and switch to `v2.58.1`:
+
+```bash
+cd ~
+git clone https://github.com/realsenseai/librealsense.git
+cd librealsense
+git checkout v2.58.1
+```
+
+2. Install udev rules:
+
+```bash
+sudo apt install -y v4l-utils
+cd ~/librealsense
+./scripts/setup_udev_rules.sh
+```
+
+3. Build and install the SDK:
+
+:::tip
+If a proxy is enabled, disable it before configuring again:
+
+```bash
+unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
+```
+:::
+
+```bash
+cd ~/librealsense
+mkdir -p build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j$(nproc)
+sudo make install
+sudo ldconfig
+```
+
+4. Build the RealSense ROS2 package:
+
+```bash
+cd ~/rebotarm_ros2/src
+git clone https://github.com/xiehuangbao888/realsense-ros.git
+cd ~/rebotarm_ros2
+colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
+```
+
+</details>
+
 #### Step 3. Import the visual grasping package
 
 ```bash
 cd ~/rebotarm_ros2/src/
 git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
+cd ~/rebotarm_ros2
+colcon build --symlink-install
 ```
 
 #### Step 4. Install the YOLO / YOLOE environment
@@ -757,7 +816,7 @@ source ~/rebotarm_ros2/install/setup.bash
 
 ### 3. Run the Project
 
-Before starting, confirm that the arm is powered on, the CAN interface is `can0`, and Gemini 2 is connected over USB. Then bring up CAN:
+Before starting, confirm that the arm is powered on, the CAN interface is `can0`, and Gemini 2 or D405 is connected over USB. Then bring up CAN:
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -765,9 +824,12 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-Start the stack in separate terminals so the grasping logic is easier to follow. If you want a one-click launch, you can write your own startup script.
+Start the stack in separate terminals so the grasping logic is easier to follow. Gemini 2 and D405 use different launch commands; pick the ones for your camera. If you want a one-click launch, you can write your own startup script.
 
 #### Terminal A — Start the arm + RViz
+
+<details className="content-details">
+<summary>Click to expand Gemini 2</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -776,7 +838,24 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp bringup_with_camera.launch.py model:=rs channel:=can0 use_rviz:=true
 ```
 
-#### Terminal B — Start Gemini 2
+</details>
+
+<details className="content-details">
+<summary>Click to expand D405</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=can0 use_rviz:=true
+```
+
+</details>
+
+#### Terminal B — Start the camera
+
+<details className="content-details">
+<summary>Click to expand Gemini 2</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -784,15 +863,38 @@ source /opt/ros/humble/setup.bash
 ros2 launch orbbec_camera gemini2.launch.py
 ```
 
-#### Terminal C — Move to the observation pose + YOLO detection
+</details>
+
+<details className="content-details">
+<summary>Click to expand D405</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
-conda activate yolo
 
-python -m rebot_visual_grasp.grasp_yolo --ros-args \
-  -p yolo_model:=$HOME/rebot_visual_model/yoloe-26s-seg.pt \
+ros2 launch realsense2_camera rs_launch.py \
+  align_depth.enable:=true \
+  depth_module.depth_profile:=640x360x30 \
+  depth_module.color_profile:=640x360x30
+```
+
+</details>
+
+#### Terminal C — Move to the observation pose + YOLO detection
+
+Activate your conda environment first with `conda activate yolo`. If the environment name is not `yolo`, replace it with your actual conda environment name.
+
+<details className="content-details">
+<summary>Click to expand Gemini 2</summary>
+
+Change the Python path to the YOLO environment you created.
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
   -p target_class:="cube" \
   -p place_class:="box" \
   -p yolo_device:=0 \
@@ -803,18 +905,47 @@ python -m rebot_visual_grasp.grasp_yolo --ros-args \
   -p auto_publish_on_detect:=true
 ```
 
+</details>
+
+<details className="content-details">
+<summary>Click to expand D405</summary>
+
+Change the Python path to the YOLO environment you created.
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args 
+-p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt 
+-p color_topic:=/camera/camera/color/image_raw 
+-p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw 
+-p color_info_topic:=/camera/camera/color/camera_info 
+-p optical_frame:=camera_color_optical_frame 
+-p target_class:="cube" 
+-p place_class:="box" 
+-p yolo_device:=gpu 
+-p grasp_z_offset_m:=0.01 
+-p place_z_offset_m:=0.1 
+-p grasp_x_offset_m:=-0.04 
+-p move_to_observation_on_start:=true 
+-p auto_publish_on_detect:=true
+```
+
+</details>
+
 | Parameter | Description |
 |-----------|-------------|
-| `yolo_device:=0` | GPU 0; use `cpu` if you do not have a discrete GPU |
-| `target_class` | YOLOE text class name of the object to grasp; change it to match the real object |
-| `place_class` | YOLOE text class name of the place target; change it to match the real object |
+| `yolo_device:=gpu` | Use the GPU; set `cpu` if you do not have a discrete GPU. You can also use `yolo_device:=0` for GPU 0 |
+| `target_class` | YOLOE text class name of the object to grasp; change it to match the real object. Supports the default YOLO classes |
+| `place_class` | YOLOE text class name of the place target; change it to match the real object. Supports the default YOLO classes |
 | `grasp_x_offset_m` | Forward/back offset in `base_link`; a negative value pulls the pose backward |
 | `grasp_z_offset_m` | Grasp height fine-tune. The default is for the flexible gripper, which is longer than the standard gripper |
 | `place_z_offset_m` | Extra lift used when placing, to control how high the object is released above the place point |
 
 #### Terminal D — One-click grasp and place
 
-The default trigger delay is 3 seconds. To change it, append a parameter. For example, trigger after 5 seconds:
+The default trigger delay is 3 seconds.
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -823,11 +954,15 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py
 ```
 
+To change the delay, append a parameter. For example, trigger after 5 seconds:
+
 ```bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 ```
 
 #### Terminal E — Return to home (optional)
+
+On the newer `rebotarm` build, pressing `Ctrl + C` in the terminal returns the arm to home automatically. To home it manually:
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -854,6 +989,7 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [pyorbbecsdk Repository](https://github.com/orbbec/pyorbbecsdk)
 - [pyorbbecsdk Documentation](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
+- [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
 - [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) Docs](https://graspnet.net/)
