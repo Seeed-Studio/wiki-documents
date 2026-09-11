@@ -145,9 +145,9 @@ url: https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/
 | D5                     | SCL        | GPIO24    |                          | GPIO, I2C Clock              |
 | D6                     | TX         | GPIO11    |                          | GPIO, UART Transmit          |
 | D7                     | RX         | GPIO12    |                          | GPIO, UART Receive           |
-| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO, SPI Clock              |
-| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO, SPI Data               |
-| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO, SPI Data               |
+| D8                     | SCK        | GPIO8     |                          | GPIO, SPI Clock              |
+| D9                     | MISO       | GPIO9     |                          | GPIO, SPI Data               |
+| D10                    | MOSI       | GPIO10    |                          | GPIO, SPI Data               |
 | MTDO                   |            | GPIO5     | LP_UART_TXD, LP_GPIO5    | JTAG                         |
 | MTDI                   |            | GPIO3     | LP_I2C_SCL, LP_GPIO3     | JTAG, ADC                    |
 | MTCK                   |            | GPIO4     | LP_UART_RXD, LP_GPIO4    | JTAG, ADC                    |
