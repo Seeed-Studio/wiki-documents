@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_
 slug: /ai_robotics_microduck_rl_on_jetson
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/ai_robotics_microduck_rl_on_jetson/
@@ -18,7 +18,7 @@ updatedAt: '2026-09-05'
   <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png" alt="Microduck reinforcement learning on Jetson" />
 </div>
 
-This demo builds a complete robot-learning workflow for **Microduck** on a **Seeed reComputer powered by NVIDIA Jetson Orin NX 16GB**. It covers GPU environment deployment, PPO training with MuJoCo, visualization of local checkpoints, keyboard-controlled inference with official ONNX policies, and the development of new custom motions.
+This demo builds a complete robot-learning workflow for **Microduck** on a **Seeed reComputer powered by NVIDIA Jetson Orin NX 16GB**. It covers GPU environment deployment, PPO training with MuJoCo, visualization of local checkpoints, keyboard-controlled inference with official and custom ONNX policies, and the development of new custom motions.
 
 The verified reference platform uses **JetPack 7.2**, **Ubuntu 24.04**, **CUDA 13.2**, **Python 3.12**, and **MuJoCo 3.10**. This tutorial is based on the [`jjjadand/microduck_rl`](https://github.com/jjjadand/microduck_rl) repository, which contains the source code, deployment script, official ONNX policies, and Jetson-trained checkpoints used throughout the guide.
 
@@ -86,7 +86,7 @@ Click a card to open the corresponding chapter. Only this landing page is listed
   <a href="/ai_robotics_microduck_rl_custom_motion_training/" style={{display:'flex', flexDirection:'column', padding:'28px', minHeight:'330px', borderRadius:'16px', border:'3px solid #3182ce', background:'linear-gradient(145deg, #dceeff, #ffffff)', color:'#172b4d', textDecoration:'none', boxShadow:'0 14px 36px rgba(49,130,206,0.22)', transition:'transform .2s ease, box-shadow .2s ease'}}>
     <div style={{fontSize:'42px', fontWeight:'800', color:'#2368a2', marginBottom:'14px'}}>03</div>
     <div style={{fontSize:'24px', lineHeight:'1.35', color:'#172b4d', fontWeight:'900', marginBottom:'14px'}}>Create a Custom Motion</div>
-    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>Select a task template, define motion phases and rewards, register a new task, test it in MuJoCo, train it, and export ONNX.</div>
+    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>Select a task template, define motion phases and rewards, register a new task, test it in MuJoCo, train it, and export ONNX. The validated example is a double-support front-back split.</div>
     <div style={{marginTop:'auto', paddingTop:'24px'}}><span style={{display:'inline-flex', alignItems:'center', gap:'14px', padding:'11px 12px 11px 18px', borderRadius:'9px', background:'#2368a2', color:'#ffffff', fontWeight:'900', letterSpacing:'.3px', boxShadow:'0 7px 18px rgba(35,104,162,.28)'}}>OPEN CHAPTER <span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'30px', height:'30px', borderRadius:'50%', background:'rgba(255,255,255,.22)', fontSize:'22px', lineHeight:'1'}}>➜</span></span></div>
   </a>
 </div>
@@ -97,8 +97,9 @@ Click a card to open the corresponding chapter. Only this landing page is listed
 - PPO training with parallel MuJoCo environments.
 - Native and browser-based simulation visualization.
 - Official ONNX inference for walking, standing, sit/stand, ground pick, roulade, kicking, and roller motions.
+- A trained front-back split policy triggered with `O`, replacing the unsuccessful one-leg balance demo.
 - Keyboard command input and live behavior switching.
-- A reusable workflow for creating a custom phase-based motion such as a bow.
+- A reusable workflow for creating a custom phase-based motion, using front-back split as the validated example.
 
 ## Demo Architecture
 
