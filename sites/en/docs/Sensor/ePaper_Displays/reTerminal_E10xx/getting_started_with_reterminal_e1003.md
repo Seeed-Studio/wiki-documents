@@ -1,15 +1,15 @@
 ---
-description: reTerminal E1003 is a 10.3 inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with touch interaction support on HMI firmware v1.1.2.
+description: reTerminal E1003 is a 10.3 inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with touch interaction support on Seeedash firmware v1.1.2.
 title: Getting Started with reTerminal E1003
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.webp
 slug: /getting_started_with_reterminal_e1003
 sidebar_position: 4
 sku: 100090602
 last_update:
-  date: 05/09/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-03-18'
-updatedAt: '2026-08-05'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
 ---
 import Tabs from '@theme/Tabs';
@@ -37,10 +37,10 @@ If you want to quickly preview project results or try the basic demo firmware be
 
 ## Introduction
 
-reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life (based on one refresh per day). Powered by ESP32-S3, it natively supports our [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) no-code UI platform for effortless dashboard creation. Whether for smart home dashboard visualization and control, office information displays, or educational projects, this ready-to-use touch-enabled device delivers stunning visuals and flexible customization to meet all your needs.
+reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life (based on one refresh per day). Powered by ESP32-S3, it natively supports our [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) no-code UI platform for effortless dashboard creation. Whether for smart home dashboard visualization and control, office information displays, or educational projects, this ready-to-use touch-enabled device delivers stunning visuals and flexible customization to meet all your needs.
 
 :::tip
-Touch interaction for reTerminal E1003 is supported starting from [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) firmware v1.1.2. The current latest version is v1.1.4.3 — we recommend updating to it for the best experience.
+Touch interaction for reTerminal E1003 is supported starting from [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) firmware v1.1.2. The current latest version is v1.1.4.3 — we recommend updating to it for the best experience.
 Touch-related library support is planned for future open-source release, providing greater flexibility to customize panels. More updates will be shared soon.
 
 reTerminal E1003 supports [ESPHome](/reterminal_e10xx_with_esphome) with Home Assistant. Start with the [display cookbook](/reterminal_e10xx_with_esphome), then continue to [I/O, battery, touch, and low power](/reterminal_e10xx_with_esphome_advanced) and [RTC, SD card, and microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone). ESPHome **2026.7.0 or later** is required for the E1003 display driver.
@@ -49,7 +49,7 @@ reTerminal E1003 supports [ESPHome](/reterminal_e10xx_with_esphome) with Home As
 ### Features
 
 - 3-Second Full Refresh for Faster ePaper Responsive Dashboards
-- Build Interactive Interfaces Easily with [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) and Touch Support
+- Build Interactive Interfaces Easily with [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) and Touch Support
 - Crisp Visuals with 16-Level Grayscale and High-Resolution ePaper Display
 - Up to 6-Month Battery Life (Based on One Refresh per Day)
 - Flexible Hardware & Software Customization
@@ -126,7 +126,7 @@ reTerminal E1003 supports [ESPHome](/reterminal_e10xx_with_esphome) with Home As
 ## Applications
 
 - **Home Automation Dashboards:** Display real-time smart home data like temperature, humidity, and air quality via Home Assistant.
-- **Low-power monochrome electronic photo frame:** With [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) or the app, you can easily upload a series of photos from your album remotely. Combined with a large, high-resolution monochrome e-ink screen, it delivers ultra-low-power image display, so you no longer need to worry about battery life.
+- **Low-power monochrome electronic photo frame:** With [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) or the app, you can easily upload a series of photos from your album remotely. Combined with a large, high-resolution monochrome e-ink screen, it delivers ultra-low-power image display, so you no longer need to worry about battery life.
 - **Smart Office Displays:** Show meeting room availability, office schedules, or directional guidance in low-power, always-on ePaper displays.
 - **Retail & Public Information Displays:** Low-power ePaper signs for menus, schedules, or occupancy indicators with long battery life.
 
@@ -148,7 +148,7 @@ reTerminal E1003 supports [ESPHome](/reterminal_e10xx_with_esphome) with Home As
 
 ## Getting Started
 
-The reTerminal E1003 comes pre-loaded with firmware that supports **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)**, a no-code platform that allows you to design and deploy personalized dashboards effortlessly.
+The reTerminal E1003 comes pre-loaded with firmware that supports **[SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi)**, a no-code platform that allows you to design and deploy personalized dashboards effortlessly.
 
 ### Preliminary
 
@@ -273,7 +273,7 @@ The reTerminal E Series ePaper Display only supports 2.4 GHz Wi-Fi networks, not
 
 ### Connecting to SenseCraft Platform
 
-**Step 1.** Visit [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) in your web browser and create an account or sign in.
+**Step 1.** Visit [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) in your web browser and create an account or sign in.
 
 
 
@@ -371,17 +371,17 @@ You can also check the firmware version manually at any time:
 
 ## Display Content on Your reTerminal E1003
 
-Once your device is paired, you can start using it to display whatever you like. We recommend **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)** — a no-code cloud platform that lets you design and deploy content to your reTerminal E1003 in just a few clicks.
+Once your device is paired, you can start using it to display whatever you like. We recommend **[SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi)** — a no-code cloud platform that lets you design and deploy content to your reTerminal E1003 in just a few clicks.
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) has its own dedicated Wiki with full tutorials and feature documentation. For in-depth guides (account setup, firmware flashing, advanced editor usage, deployment, etc.), please refer to:
+[SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) has its own dedicated Wiki with full tutorials and feature documentation. For in-depth guides (account setup, firmware flashing, advanced editor usage, deployment, etc.), please refer to:
 
-- **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
+- **[SenseCraft Seeedash Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
 Since this article is a product **Getting Started**, we will not repeat the same content here — the following only shows how to quickly display something on your reTerminal E1003.
 
 ### Home — Start From a Community Template
 
-The fastest way to get something on your screen is to start from a ready-made template. On the **Home** page of [SenseCraft HMI](https://sensecraft.seeed.cc/hmi), you will find a large and continuously growing collection of templates contributed by the community — dashboards, clocks, weather panels, quote walls, calendars, photo frames, and more. Browse the gallery, pick whichever design you like, and deploy it to your reTerminal E1003 with one click.
+The fastest way to get something on your screen is to start from a ready-made template. On the **Home** page of [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi), you will find a large and continuously growing collection of templates contributed by the community — dashboards, clocks, weather panels, quote walls, calendars, photo frames, and more. Browse the gallery, pick whichever design you like, and deploy it to your reTerminal E1003 with one click.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -398,7 +398,7 @@ The **Workspace** page is where you manage all pages and content shown on the cu
 
 Once your design is saved, click **Deploy to Device**, select your paired reTerminal E1003, and the content will be transmitted wirelessly to the device. The ePaper display will update to show your design. Touch interaction requires firmware **v1.1.2 or later** — the current latest version is **v1.1.4.3**, and we recommend updating to it for the best experience.
 
-For everything else — detailed editor operations, tips, and release notes — refer to the [SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
+For everything else — detailed editor operations, tips, and release notes — refer to the [SenseCraft Seeedash Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
 
 ## Manual Device Controls
 
@@ -544,7 +544,7 @@ The 6-pin expansion header (J2) has the following pinout:
 - Verify the device is connected to Wi-Fi (no disconnection icon in the corner)
 - Check your SenseCraft account to ensure the dashboard is properly deployed
 - If the problem persists, try restarting the device
-- If the device still does not respond after restarting, re-flash the corresponding firmware on the [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) platform and check whether normal refresh is restored
+- If the device still does not respond after restarting, re-flash the corresponding firmware on the [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) platform and check whether normal refresh is restored
 
 ### Q4: Network Connection Lost
 
