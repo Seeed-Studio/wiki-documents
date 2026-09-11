@@ -471,7 +471,7 @@ reTerminal E1002 配备了一个 8 针扩展排针（J2），可用于连接外�
 			<td>GPIO2</td>
 			<td>GPIO/ADC</td>
 			<td>通用 I/O，具备模拟输入能力（ADC1 通道 4）</td>
-		</tr]
+		</tr>
 		<tr>
 			<td>5</td>
 			<td>ESP_IO17/TX1</td>

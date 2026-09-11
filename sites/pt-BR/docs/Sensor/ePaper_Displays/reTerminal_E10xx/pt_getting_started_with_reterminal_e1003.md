@@ -78,7 +78,7 @@ O reTerminal E1003 é compatível com [ESPHome](/pt-br/reterminal_e10xx_with_esp
 		<tr>
 			<td align="center"><strong>Display</strong></td>
 			<td align="center">10,3" Monocromático / 16 níveis de escala de cinza</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>Resolução</strong></td>
 			<td align="center">1404 x 1872 Pixels</td>

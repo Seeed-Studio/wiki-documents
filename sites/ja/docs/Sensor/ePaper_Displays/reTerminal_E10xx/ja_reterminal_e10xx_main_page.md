@@ -98,7 +98,7 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
 			<td align="center">800 × 480</td>
 			<td align="center">1404 × 1872</td>
 			<td align="center">1200 × 1600</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>部分リフレッシュ</strong></td>
 			<td align="center">✅</td>
