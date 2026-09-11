@@ -53,9 +53,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Introducción
 
-La Serie Seeed Studio XIAO son diminutas placas de desarrollo que comparten una estructura de hardware similar, donde el tamaño es literalmente como el de un pulgar. El nombre en clave "XIAO" aquí representa la mitad de su característica "Tiny" (minúsculo), y la otra mitad será "Puissant" (potente).
+La Serie Seeed Studio XIAO son diminutas placas de desarrollo, que comparten una estructura de hardware similar, donde el tamaño es literalmente del tamaño de un pulgar. El nombre en clave "XIAO" aquí representa la mitad de su característica "Tiny" (minúsculo), y la otra mitad será "Puissant" (potente).
 
-Seeed Studio XIAO ESP32-S3 Sense integra un sensor de cámara, un micrófono digital y compatibilidad con tarjeta SD. Combinando la potencia de computación de ML embebido y la capacidad de fotografía, esta placa de desarrollo puede ser una gran herramienta para comenzar con IA inteligente de voz y visión.
+Seeed Studio XIAO ESP32-S3 Sense integra un sensor de cámara, micrófono digital y compatibilidad con tarjeta SD. Combinando la potencia de computación de ML embebido y la capacidad de fotografía, esta placa de desarrollo puede ser tu gran herramienta para comenzar con IA inteligente de voz y visión.
 
 :::tip
 La **cámara OV2640** ha sido descontinuada, y la posterior XIAO ESP32-S3 Sense utiliza el modelo de cámara **OV3660**. Sin embargo, el código de ejemplo de la cámara en el Wiki sigue siendo aplicable.
@@ -71,7 +71,7 @@ La **cámara OV2640** ha sido descontinuada, y la posterior XIAO ESP32-S3 Sense 
   </tr>
   <tr>
     <th>Procesador</th>
-    <td colspan="3">ESP32-S3R8<br/>Procesador Xtensa LX7 de doble núcleo y 32 bits que funciona hasta 240 MHz</td>
+    <td colspan="3">ESP32-S3R8<br/>Procesador Xtensa LX7 de doble núcleo, 32 bits, que funciona hasta 240 MHz</td>
   </tr>
   <tr>
     <th>Inalámbrico</th>
@@ -113,24 +113,24 @@ La **cámara OV2640** ha sido descontinuada, y la posterior XIAO ESP32-S3 Sense 
   </tr>
   <tr>
     <td>/</td>
-    <td>Aplicación web de cámara web:<br/>- Type-C:<br/>-- Consumo de energía promedio: 5V/~140mA<br/>-- Consumo de energía máximo (captura de imagen): 5V/~347mA<br/>- Batería:<br/>-- Consumo de energía promedio: 3.8V/~155mA<br/>-- Consumo de energía máximo (captura de imagen): 3.8V/~366mA</td>
+    <td>Aplicación web de cámara web:<br/>- Type-C:<br/>-- Consumo medio de energía: 5V/~140mA<br/>-- Consumo máximo de energía (captura de imagen): 5V/~347mA<br/>- Batería:<br/>-- Consumo medio de energía: 3.8V/~155mA<br/>-- Consumo máximo de energía (captura de imagen): 3.8V/~366mA</td>
     <td>/</td>
   </tr>
   <tr>
     <td>/</td>
-    <td>Grabación de micrófono y escritura en tarjeta SD:<br/>- Type-C:<br/>-- Consumo de energía promedio: 5V/54.58mA<br/>-- Consumo de energía máximo: 5V/86.7mA<br/>- Batería:<br/>-- Consumo de energía promedio: 3.8V/64.5mA<br/>-- Consumo de energía máximo: 3.8V/109.3mA</td>
+    <td>Grabación de micrófono y escritura en tarjeta SD:<br/>- Type-C:<br/>-- Consumo medio de energía: 5V/54.58mA<br/>-- Consumo máximo de energía: 5V/86.7mA<br/>- Batería:<br/>-- Consumo medio de energía: 3.8V/64.5mA<br/>-- Consumo máximo de energía: 3.8V/109.3mA</td>
     <td>/</td>
   </tr>
   <tr>
-    <td>50mA (rápido) / 3.8mA (mantenimiento)</td>
+    <td>50mA (rápida) / 3.8mA (mantenimiento)</td>
     <td>/</td>
-    <td>Corriente de carga:<br/>100mA (rápido) / 0.9mA (mantenimiento)</td>
+    <td>Corriente de carga:<br/>100mA (rápida) / 0.9mA (mantenimiento)</td>
   </tr>
   <tr>
-    <th>Modelo de bajo consumo (Típ.)<br/>(Alimentación: 3.8V)</th>
-    <td>Modo modem-sleep: 27mA<br/>Modo light-sleep: 2mA<br/>Modo deep sleep: 14μA</td>
-    <td>Modo modem-sleep: 44mA<br/>Modo light-sleep: 5mA<br/>Modo deep sleep: 3mA</td>
-    <td>Modo modem-sleep: 3.8V/31.6 mA<br/>Modo light-sleep: 3.8V/2.45 mA<br/>Modo deep sleep: 3.8V/33.51 μA</td>
+    <th>Modo de bajo consumo (Típ.)<br/>(Alimentación: 3.8V)</th>
+    <td>Modo Modem-sleep: 27mA<br/>Modo Light-sleep: 2mA<br/>Modo Deep Sleep: 14μA</td>
+    <td>Modo Modem-sleep: 44mA<br/>Modo Light-sleep: 5mA<br/>Modo Deep Sleep: 3mA</td>
+    <td>Modo Modem-sleep: 3.8V/31.6 mA<br/>Modo Light-sleep: 3.8V/2.45 mA<br/>Modo Deep Sleep: 3.8V/33.51 μA</td>
   </tr>
   <tr>
     <th>Consumo de energía con Wi-Fi activado (Típ.)</th>
@@ -152,12 +152,12 @@ La **cámara OV2640** ha sido descontinuada, y la posterior XIAO ESP32-S3 Sense 
 
 ### Características
 
-- **Potente placa MCU**: Incorpora el chip procesador ESP32S3 de 32 bits, doble núcleo, Xtensa que funciona hasta 240 MHz, con múltiples puertos de desarrollo montados, compatible con Arduino / MicroPython
-- **Funcionalidad avanzada** (para Sense): Sensor de cámara **OV2640 desmontable para resolución de 1600x1200** y sensor de cámara **OV3660 para 2048x1536** compatible con el sensor de cámara OV5640, integrando un micrófono digital adicional
-- **Diseño de alimentación elaborado**: Capacidad de gestión de carga de batería de litio, ofrece 4 modelos de consumo de energía que permiten un modo de deep sleep con un consumo tan bajo como 14μA
-- **Gran memoria para más posibilidades**: Ofrece 8MB PSRAM y 8MB FLASH (16MB en la versión **Plus**), con ranura para tarjeta SD compatible con memoria externa 32GB FAT (solo para XIAO ESP32-S3)
+- **Potente placa MCU**: Incorpora el chip procesador ESP32S3 de 32 bits, doble núcleo, Xtensa que funciona hasta 240 MHz, monta múltiples puertos de desarrollo, compatible con Arduino / MicroPython
+- **Funcionalidad avanzada** (para Sense): Sensor de cámara **OV2640 desmontable para resolución de 1600x1200** y **sensor de cámara OV3660 para 2048x1536** compatible con el sensor de cámara OV5640, integrando un micrófono digital adicional
+- **Diseño de alimentación elaborado**: Capacidad de gestión de carga de batería de litio, ofrece 4 modos de consumo de energía que permiten un modo de suspensión profunda con un consumo de energía tan bajo como 14μA
+- **Gran memoria para más posibilidades**: Ofrece 8MB PSRAM y 8MB FLASH (16MB en la versión **Plus**), con ranura para tarjeta SD que admite memoria externa FAT de 32GB (solo para XIAO ESP32-S3)
 - **Rendimiento RF sobresaliente**: Soporta comunicación inalámbrica dual Wi-Fi de 2.4GHz y BLE, soporta comunicación remota de más de 100m cuando se conecta con antena U.FL
-- **Diseño compacto del tamaño de un pulgar**: 21 x 17.8mm, adoptando el factor de forma clásico de XIAO, adecuado para proyectos con espacio limitado como dispositivos portables
+- **Diseño compacto del tamaño de un pulgar**: 21 x 17.8mm, adoptando el factor de forma clásico de XIAO, adecuado para proyectos con espacio limitado como dispositivos portátiles
 
 <table align="center">
  <tr>
@@ -171,7 +171,7 @@ La **cámara OV2640** ha sido descontinuada, y la posterior XIAO ESP32-S3 Sense 
         <td align="center">Modo activo: <strong>~ 0.65A</strong></td>
     </tr>
     <tr>
-        <th>Consumo promedio de energía en (640*480)</th>
+        <th>Consumo medio de energía en (640*480)</th>
         <td align="center">Modo activo: <strong>~ 0.12A</strong></td>
         <td align="center">Modo activo: <strong>~ 0.24A</strong></td>
     </tr>
@@ -201,7 +201,7 @@ Antes de empezar con todo, es bastante esencial tener algunos parámetros básic
 
 | Pin XIAO                | Función          | Pin del chip | Funciones alternativas | Descripción                          |
 | :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
-| 5V                      | VBUS             |           |                    | Entrada/salida de alimentación       |
+| 5V                      | VBUS             |           |                    | Entrada/Salida de alimentación       |
 | GND                     |                  |           |                    |                                      |
 | 3V3                     | 3V3_OUT          |           |                    | Salida de alimentación               |
 | D0                      | Analógico        | GPIO1     | TOUCH1             | GPIO, ADC                            |
@@ -240,7 +240,7 @@ Antes de empezar con todo, es bastante esencial tener algunos parámetros básic
 
 **Mapa de pines**
 
-| Pin de XIAO             | Función          | Pin del chip | Funciones alternativas | Descripción                          |
+| Pin XIAO                 | Función          | Pin del chip | Funciones alternativas | Descripción                          |
 | :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
 | 5V                      | VBUS             |           |                    | Entrada/Salida de alimentación       |
 | GND                     |                  |           |                    |                                      |
@@ -265,33 +265,33 @@ Antes de empezar con todo, es bastante esencial tener algunos parámetros básic
 | Reset                   |                  | CHIP_PU   |                    |                                      |
 | Boot                    |                  | GPIO0     |                    | Entrar en modo de arranque           |
 | U.FL-R-SMT1             |                  | LNA_IN    |                    | Antena UFL                           |
-| CHARGE_LED              |                  |           |                    | CHG-LED                              |
+| CHARGE_LED              |                  |           |                    | LED de carga                         |
 | USER_LED                |                  | GPIO21    |                    | Luz de usuario                       |
 | Digital microphone_CLK  |                  | GPIO42    |                    | Pin de reloj PDM para MIC            |
 | Digital microphone_DATA |                  | GPIO41    |                    | Pin de datos PDM para MIC            |
-| Onboard SD Card__CS     |                  | GPIO3     |                    | Pin de selección de chip de tarjeta SD|
+| Onboard SD Card__CS     |                  | GPIO21     |                    | Pin de selección de chip de tarjeta SD |
 | Onboard SD Card_SCK     |                  | GPIO7     |                    | Pin de reloj de tarjeta SD           |
-| Onboard SD Card_MISO    |                  | GPIO8     |                    | Pin de entrada de datos de tarjeta SD|
+| Onboard SD Card_MISO    |                  | GPIO8     |                    | Pin de entrada de datos de tarjeta SD |
 | Onboard SD Card Slot_MOSI|                 | GPIO9     |                    | Pin de salida de datos de tarjeta SD |
 
 **Cámara**
 
 | Pin del chip | Descripción                          |
 | :-------: | :---------------------------------- |
-| GPIO10    | Pin de reloj relacionado con la cámara|
-| GPIO11    | Pin de datos de vídeo de la cámara (Y8)|
-| GPIO12    | Pin de datos de vídeo de la cámara (Y7)|
+| GPIO10    | Pin de reloj relacionado con la cámara |
+| GPIO11    | Pin de datos de vídeo de la cámara (Y8) |
+| GPIO12    | Pin de datos de vídeo de la cámara (Y7) |
 | GPIO13    | Pin de reloj de píxeles de la cámara  |
-| GPIO14    | Pin de datos de vídeo de la cámara (Y6)|
-| GPIO15    | Pin de datos de vídeo de la cámara (Y2)|
-| GPIO16    | Pin de datos de vídeo de la cámara (Y5)|
-| GPIO17    | Pin de datos de vídeo de la cámara (Y3)|
-| GPIO18    | Pin de datos de vídeo de la cámara (Y4)|
+| GPIO14    | Pin de datos de vídeo de la cámara (Y6) |
+| GPIO15    | Pin de datos de vídeo de la cámara (Y2) |
+| GPIO16    | Pin de datos de vídeo de la cámara (Y5) |
+| GPIO17    | Pin de datos de vídeo de la cámara (Y3) |
+| GPIO18    | Pin de datos de vídeo de la cámara (Y4) |
 | GPIO40    | Pin de datos I2C para la cámara       |
 | GPIO39    | Pin de reloj I2C para la cámara       |
-| GPIO38    | Pin de sincronización vertical de la cámara|
-| GPIO47    | Pin de sincronización horizontal de la cámara|
-| GPIO48    | Pin de datos de vídeo de la cámara (Y9)|
+| GPIO38    | Pin de sincronización vertical de la cámara |
+| GPIO47    | Pin de sincronización horizontal de la cámara |
+| GPIO48    | Pin de datos de vídeo de la cámara (Y9) |
 
 </TabItem>
 <TabItem value="ESP32S3Plus" label="XIAO ESP32-S3 Plus">
@@ -306,7 +306,7 @@ Antes de empezar con todo, es bastante esencial tener algunos parámetros básic
 
 **Mapa de pines**
 
-| Pin de XIAO             | Función          | Pin del chip | Funciones alternativas | Descripción                          |
+| Pin XIAO                 | Función          | Pin del chip | Funciones alternativas | Descripción                          |
 | :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
 | 5V                      | VBUS             |           |                    | Entrada/Salida de alimentación       |
 | GND                     |                  |           |                    |                                      |
@@ -337,9 +337,9 @@ Antes de empezar con todo, es bastante esencial tener algunos parámetros básic
 | MTMS                    |                  | GPIO42    |                    | JTAG, ADC                            |
 | Reset                   |                  | CHIP_PU   |                    |                                      |
 | Boot                    |                  | GPIO0     |                    | Entrar en modo de arranque           |
-| ADC_BAT                 |                  | GPIO10    |                    | Leer el valor de voltaje de la batería|
+| ADC_BAT                 |                  | GPIO10    |                    | Leer el valor de voltaje de la batería |
 | U.FL-R-SMT1             |                  | LNA_IN    |                    | Antena UFL                           |
-| CHARGE_LED              |                  | VCC_3V3   |                    | CHG-LED                              |
+| CHARGE_LED              |                  | VCC_3V3   |                    | LED de carga                         |
 | USER_LED                |                  | GPIO21    |                    | Luz de usuario                       |
 
 </TabItem>
@@ -353,11 +353,11 @@ Antes de empezar con todo, es bastante esencial tener algunos parámetros básic
 
 ### Pines de alimentación
 
-- 5V - Esta es la salida de 5 V desde el puerto USB. También puedes usarla como entrada de voltaje, pero debes tener algún tipo de diodo (schottky, de señal, de potencia) entre tu fuente de alimentación externa y este pin, con el ánodo a la batería y el cátodo al pin de 5V.
+- 5V - Esta es una salida de 5 V desde el puerto USB. También puedes usarla como entrada de voltaje, pero debes tener algún tipo de diodo (Schottky, de señal, de potencia) entre tu fuente de alimentación externa y este pin, con el ánodo a la batería y el cátodo al pin de 5 V.
 - 3V3 - Esta es la salida regulada del regulador integrado. Puedes extraer 700 mA
 - GND - Tierra de alimentación/datos/señal
 
-### Pines de configuración (strapping pins)
+### Pines de configuración (Strapping Pins)
 
 En cada inicio o reinicio, un chip requiere algunos parámetros de configuración inicial, como en qué modo de arranque cargar el chip, el voltaje de la memoria flash, etc. Estos parámetros se transmiten a través de los pines de configuración. Después del reinicio, los pines de configuración funcionan como pines IO normales.
 
@@ -377,13 +377,13 @@ Para cambiar los valores de bit, los pines de configuración deben conectarse a 
 
 Todos los pines de configuración tienen biestables (latches). En el reinicio del sistema, los biestables muestrean los valores de bit de sus respectivos pines de configuración y los almacenan hasta que el chip se apague o se desconecte. Los estados de los biestables no se pueden cambiar de ninguna otra manera. Esto hace que los valores de los pines de configuración estén disponibles durante todo el funcionamiento del chip, y los pines quedan libres para usarse como pines IO normales después del reinicio.
 
-Con respecto a los requisitos de temporización para los pines de configuración, existen parámetros como el tiempo de preparación (setup) y el tiempo de retención (hold).
+Con respecto a los requisitos de temporización para los pines de configuración, existen parámetros como el tiempo de preparación (setup time) y el tiempo de retención (hold time).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/111.png" style={{width:600, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/112.png" style={{width:600, height:'auto'}}/></div>
 
-## Primeros pasos
+## Introducción
 
 Para permitirte comenzar más rápido con el XIAO ESP32-S3, lee la preparación de hardware y software a continuación para preparar el XIAO.
 
@@ -395,12 +395,12 @@ El programa de fábrica preestablecido en la versión normal es el programa de e
 
 2. **XIAO ESP32-S3 Sense**
 
-El XIAO ESP32-S3 Sense se envía con el programa de ejemplo WebCam preinstalado. Puedes usar este programa instalando correctamente la antena en el XIAO y encendiéndolo. Para más detalles, puedes leer la Wiki sobre este programa.
+El XIAO ESP32-S3 Sense se envía con el programa de ejemplo WebCam preinstalado. Puedes usar este programa instalando correctamente la antena en el XIAO y encendiéndolo. Para más detalles, puedes leer el Wiki sobre este programa.
 
 - [Transmisión de video](https://wiki.seeedstudio.com/es/xiao_esp32s3_camera_usage#project-ii-video-streaming)
 
 :::note
-A partir de **junio de 2025**, el firmware de fábrica de XIAO ESP32-S3 Sense habilita un Wi‑Fi AP predeterminado con las siguientes credenciales:
+A partir de **junio de 2025**, el firmware de fábrica de XIAO ESP32-S3 Sense habilita un AP Wi‑Fi predeterminado con las siguientes credenciales:
 
 - **SSID:** `XIAO_ESP32S3_Sense`
 - **Password:** `seeedstudio`
@@ -414,7 +414,7 @@ A partir de **junio de 2025**, el firmware de fábrica de XIAO ESP32-S3 Sense ha
 
 XIAO ESP32-S3 se envía sin pines de cabecera por defecto, necesitas preparar tus propios pines de cabecera y soldarlos a los pines correspondientes del XIAO para que puedas conectarlo a la placa de expansión o al sensor.
 
-Debido al tamaño miniatura del XIAO ESP32-S3, ten cuidado al soldar los pines, no juntes pines diferentes y no dejes que la soldadura toque el blindaje u otros componentes. De lo contrario, puede causar un cortocircuito en el XIAO o que no funcione correctamente, y las consecuencias causadas por esto serán asumidas por el usuario.
+Debido al tamaño miniatura del XIAO ESP32-S3, ten cuidado al soldar los pines de cabecera, no juntes pines diferentes y no dejes que la soldadura toque el blindaje u otros componentes. De lo contrario, puede causar un cortocircuito en el XIAO o que no funcione correctamente, y las consecuencias causadas por esto serán asumidas por el usuario.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/4.jpg" style={{width:400, height:'auto'}}/></div>
 
@@ -422,9 +422,9 @@ Debido al tamaño miniatura del XIAO ESP32-S3, ten cuidado al soldar los pines, 
 
 En la parte inferior izquierda del frontal del XIAO ESP32-S3, hay un "Conector de antena WiFi/BT" independiente. Para obtener una mejor señal de WiFi/Bluetooth, debes sacar la antena del interior del paquete e instalarla en el conector.
 
-La instalación de la antena tiene un pequeño truco: si la presionas directamente con fuerza hacia abajo, verás que es muy difícil de presionar y ¡te dolerán los dedos! La forma correcta de instalar la antena es colocar primero un lado del conector de la antena en el bloque del conector, luego presionar un poco el otro lado y la antena quedará instalada.
+La instalación de la antena tiene un pequeño truco: si la presionas directamente con fuerza hacia abajo, verás que es muy difícil presionarla y te dolerán los dedos. La forma correcta de instalar la antena es colocar primero un lado del conector de la antena en el bloque del conector, luego presionar un poco el otro lado, y la antena quedará instalada.
 
-Para retirar la antena es lo mismo, no uses fuerza bruta para tirar de la antena directamente; aplica fuerza levantando desde un lado y la antena se quitará fácilmente.
+Para retirar la antena es el mismo caso, no uses fuerza bruta para tirar directamente de la antena; haz palanca levantando un lado, y la antena se quitará fácilmente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -434,7 +434,7 @@ Si estás comprando el XIAO ESP32-S3 Sense, entonces también deberías incluir 
 
 Al instalar la placa de expansión con el XIAO ESP32-S3 Sense, puedes utilizar las funciones de la placa de expansión.
 
-Instalar la placa de expansión es muy sencillo, solo necesitas alinear el conector de la placa de expansión con el conector B2B del XIAO ESP32-S3, presionar con fuerza y escuchar un "clic", la instalación estará completa.
+Instalar la placa de expansión es muy sencillo, solo necesitas alinear el conector de la placa de expansión con el conector B2B del XIAO ESP32-S3, presionarlo con fuerza y escuchar un "clic"; la instalación estará completa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -453,18 +453,18 @@ Si necesitas conocer la información detallada de los parámetros de la OV5640, 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-Todos los programas sobre cámaras en la Wiki son compatibles tanto con las cámaras OV5640, OV2640 como OV3660.
+Todos los programas sobre cámaras en el Wiki son compatibles con las cámaras OV5640, OV2640 y OV3660.
 :::
 
 ##### Retirar la placa de expansión
 
 Si necesitas separar la placa de expansión Sense del XIAO ESP32-S3, utiliza el mismo enfoque de entrada lateral que en la instalación, pero a la inversa.
 
-**Paso 1.** Sujeta firmemente el XIAO ESP32-S3 con una mano y la placa de expansión con la otra.
+**Paso 1.** Sujeta el XIAO ESP32-S3 firmemente con una mano y la placa de expansión con la otra.
 
 **Paso 2.** Aplica una ligera presión desde el **lado** del par de placas y desliza la placa de expansión fuera del conector B2B. Trabaja primero a lo largo de un borde y luego libera gradualmente el resto del conector.
 
-**Paso 3.** Una vez que la placa de expansión esté libre, colócala sobre una superficie plana y protegida contra estática.
+**Paso 3.** Una vez que la placa de expansión esté libre, colócala a un lado sobre una superficie plana y protegida contra estática.
 
 <div style={{textAlign:'center'}}>
 <iframe style={{width:'80%', aspectRatio:'16/9'}} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/xiao-s3_exp.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -473,7 +473,7 @@ Si necesitas separar la placa de expansión Sense del XIAO ESP32-S3, utiliza el 
 :::caution Do not pry the boards apart vertically
 Nunca tires de la placa de expansión **directamente hacia arriba** o **directamente hacia abajo**, y no tuerzas ni balancees las dos placas como si abrieras un libro. El XIAO y la placa de expansión están unidos por un **conector B2B (board-to-board)**; hacer palanca en dirección vertical puede doblar los pines, agrietar la carcasa del conector o romper el zócalo B2B del propio XIAO.
 
-Separa siempre las placas empujando o deslizando desde el **lado**, manteniendo el movimiento paralelo al conector. Si parece atascado, vuelve a comprobar el ángulo y aplica una presión lateral constante en lugar de aumentar la fuerza hacia arriba.
+Separa siempre las placas empujando o deslizándolas desde el **lado**, manteniendo el movimiento paralelo al conector. Si parece atascado, vuelve a comprobar el ángulo y aplica una presión lateral constante en lugar de aumentar la fuerza hacia arriba.
 :::
 
 #### Instalación del disipador de calor mejorado
@@ -488,13 +488,13 @@ Nuestras pruebas han demostrado las ventajas del disipador de calor mejorado fre
 | Muestra de prueba        | Temperatura máxima en la parte trasera |
 | --------------------- | -------------------------------------- |
 | **Sin disipador de calor** | 63.6°C                             |
-| **Con disipadores de calor dobles** | 53.5°C (🔻10°C)           |
+| **Con doble disipador de calor** | 53.5°C (🔻10°C)              |
 
 ***Detalles de la prueba:***
 
 - **Entorno**: Habitación con aire acondicionado (aproximadamente 27°C)
 - **Herramienta de medición de temperatura**: termopar OMEGA CL3515R
-- **Ubicación de la medición**: almohadilla térmica trasera del XIAO ESP32-S3
+- **Ubicación de la medición**: Almohadilla térmica trasera del XIAO ESP32-S3
 - **Firmware de prueba**: WebCamera
 - **Fuente de alimentación**: Type-C 5V
 - **Duración de funcionamiento**: 1 hora
@@ -505,7 +505,7 @@ Nuestras pruebas han demostrado las ventajas del disipador de calor mejorado fre
 - Durante las pruebas con WebCamera en modo SVGA (800x600):
   - El XIAO ESP32-S3 funcionó sin problemas.
   - La salida de vídeo fue fluida.
-  - Hubo una reducción significativa de la temperatura, lo que garantiza un rendimiento fiable sin caídas de fotogramas ni desconexiones.
+  - Hubo una reducción significativa de la temperatura, lo que garantizó un rendimiento fiable sin caídas de fotogramas ni desconexiones.
 
 </details>
 
@@ -520,13 +520,13 @@ Asegúrate de que tu dispositivo esté apagado y desconectado de cualquier fuent
 
 ***Nota de compra:*** Al comprar tu XIAO ESP32-S3 Sense, es importante tener en cuenta que solo los **modelos equipados con cámara** incluyen un disipador de calor. Si tienes una versión del ESP32S3 que no incluye cámara, tendrás que comprar un disipador de calor por separado.
 
-***Consejo de instalación:*** Da prioridad a cubrir la almohadilla térmica (Thermal PAD) con el disipador de calor, ya que está directamente encima del chip ESP32S3, la principal fuente de calor. Una alineación adecuada garantiza una disipación óptima del calor, y ten en cuenta mantener los pines BAT lo más desobstruidos posible.
+***Consejo de instalación:*** Da prioridad a cubrir el Thermal PAD con el disipador de calor, ya que está directamente encima del chip ESP32S3, la principal fuente de calor. Una alineación adecuada garantiza una disipación óptima del calor, y ten en cuenta mantener los pines BAT lo más desobstruidos posible.
 :::
 
 Ahora, comencemos el proceso de instalación:
 
 ***Paso 1. Preparar el disipador de calor:***
-Comienza retirando la cubierta protectora del disipador de calor para dejar al descubierto el adhesivo térmico. Esto preparará el disipador de calor para una fijación segura al chip ESP32S3.
+Comienza retirando la cubierta protectora del disipador de calor para exponer el adhesivo térmico. Esto preparará el disipador de calor para una fijación segura al chip ESP32S3.
 
 <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/heat-sink.jpg" style={{width:400, height:'auto'}}/></div></td>
 <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/remove-heat-sink-cover.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -558,7 +558,7 @@ Si quieres utilizar el pin BAT del XIAO ESP32-S3 Plus, en este caso el disipador
 
 Después de la instalación, asegúrate de que todo esté bien fijado y sin riesgo de cortocircuitos. Verifica que el disipador de calor esté correctamente alineado y firmemente sujeto.
 
-### Preparación del software
+### Preparación de software
 
 La herramienta de programación recomendada para el XIAO ESP32-S3 es el Arduino IDE, por lo que, como parte de la preparación del software, deberás completar la instalación de Arduino.
 
@@ -566,7 +566,7 @@ La herramienta de programación recomendada para el XIAO ESP32-S3 es el Arduino 
 Si es la primera vez que utilizas Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-- **Paso 1.** Descarga e instala la versión estable de Arduino IDE de acuerdo con tu sistema operativo.
+- **Paso 1.** Descarga e instala la versión estable de Arduino IDE según tu sistema operativo.
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
@@ -698,7 +698,7 @@ Cuando te encuentres con las dos situaciones anteriores, puedes intentar poner e
 
 - **Paso 1**. Mantén pulsado el botón `BOOT` en el XIAO ESP32-S3 sin soltarlo.
 - **Paso 2**. Mantén pulsado el botón `BOOT` y luego conéctalo al ordenador mediante el cable de datos. Suelta el botón `BOOT` después de conectarlo al ordenador.
-- **Paso 3**. Carga el programa **File > Examples > 01.Basics > Blink** para comprobar el funcionamiento del XIAO ESP32-S3.
+- **Paso 3**. Sube el programa **File > Examples > 01.Basics > Blink** para comprobar el funcionamiento del XIAO ESP32-S3.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -710,7 +710,7 @@ Cuando mantienes presionada la tecla `BOOT` mientras enciendes y luego presionas
 
 ### Ejecuta tu primer programa Blink
 
-Hasta ahora, creo que ya tienes un buen entendimiento de las funciones y el hardware del XIAO ESP32-S3. A continuación, tomemos el programa Blink más sencillo como ejemplo y realicemos el primer parpadeo para tu XIAO ESP32-S3.
+Hasta ahora, creo que ya tienes un buen entendimiento de las características y el hardware del XIAO ESP32-S3. A continuación, tomemos el programa Blink más sencillo como ejemplo y realicemos el primer parpadeo para tu XIAO ESP32-S3.
 
 - **Paso 1.** Inicia la aplicación Arduino.
 - **Paso 2.** Navega a **File > Examples > 01.Basics > Blink** y abre el programa.
@@ -721,7 +721,7 @@ Hasta ahora, creo que ya tienes un buen entendimiento de las funciones y el hard
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/12.png" style={{width:1000, height:'auto'}}/></div>
 
-Una vez que el programa se cargue correctamente, verás el siguiente mensaje de salida y podrás observar que el LED naranja en el lado derecho del XIAO ESP32-S3 está parpadeando.
+Una vez que el programa se haya cargado correctamente, verás el siguiente mensaje de salida y podrás observar que el LED naranja en el lado derecho del XIAO ESP32-S3 está parpadeando.
 
 <table align="center">
  <tr>
@@ -733,14 +733,14 @@ Una vez que el programa se cargue correctamente, verás el siguiente mensaje de 
 Enhorabuena, has aprendido cómo escribir y cargar programas para el XIAO ESP32-S3.
 
 :::note
-El LED solo se apagará cuando el pin del LED de usuario en el XIAO ESP32-S3 se establezca en nivel alto, y solo se encenderá cuando el pin se establezca en nivel bajo.
+El LED solo se apagará cuando el pin del LED de usuario en el XIAO ESP32-S3 se configure a nivel alto, y solo se encenderá cuando el pin se configure a nivel bajo.
 :::
 
 ## Uso de la batería
 
 La serie XIAO ESP32-S3 tiene un chip de gestión de energía integrado que permite que el XIAO ESP32-S3 sea alimentado de forma independiente mediante una batería o que cargue la batería a través del puerto USB del XIAO ESP32-S3.
 
-Si quieres conectar la batería para XIAO, te recomendamos comprar una batería de litio recargable de 3,7 V cualificada. Al soldar la batería, ten cuidado de distinguir entre los terminales positivo y negativo. El terminal negativo de la fuente de alimentación debe ser el lado más cercano al puerto USB, y el terminal positivo de la fuente de alimentación es el lado más alejado del puerto USB.
+Si quieres conectar la batería para XIAO, te recomendamos comprar una batería de litio recargable de 3,7 V certificada. Al soldar la batería, ten cuidado de distinguir entre los terminales positivo y negativo. El terminal negativo de la fuente de alimentación debe ser el lado más cercano al puerto USB, y el terminal positivo de la fuente de alimentación es el lado más alejado del puerto USB.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/16.jpg" style={{width:400, height:'auto'}}/></div>
 
@@ -785,7 +785,7 @@ Después de compilar y guardar un programa de Arduino, puedes exportar el archiv
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/106.png" style={{width:600, height:'auto'}}/></div>
 
-Copia el archivo `BIN` al directorio **xiaos3-bin2uf2** que extrajiste anteriormente. Luego, ejecuta el script **convert_uf2.bat** para generar un archivo UF2, para lo cual se requerirá el nombre de tu archivo `bin`.
+Copia el archivo `BIN` al directorio **xiaos3-bin2uf2** que extrajiste anteriormente. Luego, ejecuta el script **convert_uf2.bat** para generar un archivo UF2, lo que requerirá el nombre de tu archivo `bin`.
 
 **Paso 3**: Entrar en el modo UF2 BootLoader
 
@@ -795,7 +795,7 @@ Conecta el XIAO a tu ordenador y ejecuta el script **boot_uf2.bat**. El XIAO apa
 
 **Paso 4**: Copiar el archivo UF2 a XIAO ESP32-S3
 
-Accede a la unidad USB del XIAO ESP32-S3 y copia en ella el archivo UF2 convertido. Una vez que la copia se complete, la unidad USB del XIAO desaparecerá automáticamente y el programa comenzará a ejecutarse.
+Accede a la unidad USB del XIAO ESP32-S3 y copia en ella el archivo UF2 convertido. Una vez que la copia se haya completado, la unidad USB del XIAO desaparecerá automáticamente y el programa comenzará a ejecutarse.
 
 :::tip
 
@@ -829,13 +829,13 @@ El proyecto se compone de personalizar el bootloader de segunda etapa desde IDF 
 
 ### P1: ¿Qué debo hacer si la carga del programa falla/el programa se ejecuta de forma anormal/no se encuentra el puerto del dispositivo?
 
-Si encuentras el problema anterior, se recomienda que primero intentes presionar el botón de reinicio en el XIAO ESP32-S3 para intentar que el programa vuelva a ejecutarse. Si el problema persiste, vuelve a comprobar tu programa y lee los métodos proporcionados en **[BootLoader Mode](#BootLoader-Mode)** para restaurar el dispositivo.
+Si encuentras el problema anterior, se recomienda que primero intentes presionar el botón de reinicio en el XIAO ESP32-S3 para intentar que el programa vuelva a ejecutarse. Si el problema persiste, vuelve a comprobar tu programa y lee los métodos proporcionados en **[Modo BootLoader](#Modo-BootLoader)** para restaurar el dispositivo.
 
 ### P2: ¿Por qué mi XIAO tiene el problema de no estar al ras en las esquinas redondeadas? ¿Es esto un problema de calidad?
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/corners.png" style={{width:500, height:'auto'}}/></div>
 
-En primer lugar, debe señalarse que esto no es un problema de calidad y no afectará al funcionamiento normal de XIAO.
+En primer lugar, cabe señalar que esto no es un problema de calidad y no afectará al funcionamiento normal de XIAO.
 
 XIAO ESP32-S3 es el más complejo de todos los XIAO debido a su alta integración, y el PCB necesita ensamblarse en la producción de fábrica. Debido al alto nivel de integración, la conexión de la placa de empalme solo puede colocarse en las cuatro esquinas redondeadas, lo que dará lugar al problema de esquinas redondeadas desiguales que se ve en la imagen. Intentaremos mejorar el proceso para garantizar que este problema se resuelva en la producción posterior.
 
@@ -885,12 +885,12 @@ Para flashear el firmware, simplemente ejecuta el archivo `.bat` apropiado. Si e
 **Diseño de hardware**
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
 - **📄[Schematic]** [Esquemático de XIAO ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
-- **🗃️[Archivos de diseño de PCB]** 
+- **🗃️[PCB Design Files]** 
   - [Proyecto KiCad de XIAO ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH&PCB_260226.zip)
-- **🗃️[Librerías de diseño de PCB]** 
+- **🗃️[PCB Design Libraries]** 
   - [Huellas KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [Símbolos SCH KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de pinout]** [Hoja de pinout de XIAO ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx )
+- **📄[Pinout Diagram]** [Hoja de pinout de XIAO ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx )
 
 **Diseño mecánico**
 - **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-S3 en DXF](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf )
@@ -908,14 +908,14 @@ Para flashear el firmware, simplemente ejecuta el archivo `.bat` apropiado. Si e
 - **📄[Esquemático]** [Esquemático de XIAO ESP32-S3 ExpBoard](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf)
 - **🗃️[Archivos de diseño de PCB]** 
   - [Proyecto KiCad de XIAO ESP32-S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_v1.5_SCH&PCB_260226.zip)
-- **🗃️[Bibliotecas de diseño de PCB]** 
+- **🗃️[Librerías de diseño de PCB]** 
   - [Huellas KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [Símbolos SCH KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de pinout]** [Hoja de pinout de XIAO ESP32-S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx )
+- **📄[Diagrama de pines]** [Hoja de pines de XIAO ESP32-S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx )
 
 **Diseño mecánico**
-- **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-S3 Sense en DXF (superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf )
-- **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-S3 Sense en DXF (inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_bot.dxf )
+- **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-S3 Sense en DXF (Superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf )
+- **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-S3 Sense en DXF (Inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_bot.dxf )
 - **🗃️[Modelo 3D]** [Modelo 3D de XIAO ESP32-S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip )
 - **📄[Modelo 3D]** [Carcasa morada superior para impresión 3D de XIAO ESP32-S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp )
 - **📄[Modelo 3D]** [Carcasa morada inferior para impresión 3D de XIAO ESP32-S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp )
@@ -932,14 +932,14 @@ Para flashear el firmware, simplemente ejecuta el archivo `.bat` apropiado. Si e
   - [Proyecto KiCad de XIAO ESP32-S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.1_KiCad_260115.zip )
   - [Proyecto KiCad de XIAO Plus Base (con salida de pad inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip )
   - [Proyecto KiCad de XIAO Plus Base (sin salida de pad inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip )
-- **🗃️[Bibliotecas de diseño de PCB]** 
+- **🗃️[Librerías de diseño de PCB]** 
   - [Huellas KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [Símbolos SCH KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de pinout]** [Hoja de pinout de XIAO ESP32-S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_Pinout.xlsx )
+- **📄[Diagrama de pines]** [Hoja de pines de XIAO ESP32-S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_Pinout.xlsx )
 
 **Diseño mecánico**
-- **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-S3 Plus en DXF (superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf )
-- **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-S3 Plus en DXF (inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf )
+- **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-S3 Plus en DXF (Superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf )
+- **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-S3 Plus en DXF (Inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf )
 - **🔗[Modelo 3D]** [Modelo 3D de XIAO ESP32-S3 Plus](https://grabcad.com/library/seeed-studio-xiao-esp32s3-plus-1/files )
 
 ### Para Seeed Studio XIAO ESP32-S3 Sense Camera
@@ -965,7 +965,7 @@ Para flashear el firmware, simplemente ejecuta el archivo `.bat` apropiado. Si e
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Gran potencia, placa pequeña. Domina Arduino y TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ### Otros
 
@@ -976,7 +976,7 @@ Para flashear el firmware, simplemente ejecuta el archivo `.bat` apropiado. Si e
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
