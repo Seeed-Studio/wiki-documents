@@ -1,5 +1,5 @@
 ---
-description: Usa TRMNL con cualquier producto Seeed ePaper compatible - reTerminal E1001, E1002, E1003, E1004, TRMNL 7.5" (OG) DIY Kit o XIAO 7.5" ePaper Panel.
+description: Usa TRMNL con cualquier producto Seeed ePaper compatible: reTerminal E1001, E1002, E1003, E1004, TRMNL 7.5" (OG) DIY Kit o XIAO 7.5" ePaper Panel.
 title: Trabajar con TRMNL
 keywords:
   - pantalla ePaper
@@ -12,14 +12,14 @@ image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp
 slug: /reterminal_e10xx_trmnl
 sidebar_position: 3
 last_update:
-  date: 08/05/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 aliases:
   - /ogdiy_kit_works_with_trmnl
   - /xiao_7_5_inch_epaper_panel_with_trmnl
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_trmnl/
-updatedAt: '2026-08-06'
+updatedAt: '2026-09-10'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -29,25 +29,25 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.jpg" style={{width:700, height:'auto'}}/></div>
 
-Esta guía es la única fuente de referencia para usar **TRMNL** con cualquier producto Seeed ePaper compatible. Elige tu hardware una vez en cada paso que lo requiera, y el resto del flujo de trabajo será idéntico.
+Esta guía es la única fuente de referencia para usar **TRMNL** con cualquier producto Seeed ePaper compatible. Elige tu hardware una vez en cada paso que lo requiera, y el resto del flujo de trabajo es idéntico.
 
 :::caution Compatibilidad de hardware
-TRMNL admite oficialmente **reTerminal E1001**, **reTerminal E1002**, **reTerminal E1003**, **reTerminal E1004**, **TRMNL 7.5" (OG) DIY Kit** y **XIAO 7.5" ePaper Panel**. Los **E1002** y **E1004** tienen paneles Spectra™ 6 a todo color, pero el firmware de TRMNL representa su contenido en **modo monocromo**. El panel táctil capacitivo del **E1003** solo está disponible con el firmware SenseCraft HMI; el firmware de TRMNL utiliza los botones físicos del dispositivo.
+TRMNL es compatible oficialmente con **reTerminal E1001**, **reTerminal E1002**, **reTerminal E1003**, **reTerminal E1004**, **TRMNL 7.5" (OG) DIY Kit** y **XIAO 7.5" ePaper Panel**. Los **E1002** y **E1004** tienen paneles Spectra™ 6 a todo color, pero el firmware de TRMNL representa su contenido en **modo monocromo**. El panel táctil capacitivo del **E1003** solo está disponible con el firmware SenseCraft Seeedash; el firmware de TRMNL utiliza los botones físicos del dispositivo.
 :::
 
 ## ¿Qué es [TRMNL](https://trmnl.app/)?
 
-TRMNL es una plataforma innovadora diseñada para ayudar a las personas a mantenerse concentradas y tranquilas en nuestro mundo digital cada vez más distractor. Fundada en 2023, TRMNL se ha convertido rápidamente en una solución líder para la gestión de paneles de control con E Ink®, ofreciendo un enfoque único para mostrar información sin las notificaciones constantes y distracciones de las pantallas tradicionales.
+TRMNL es una plataforma innovadora diseñada para ayudar a las personas a mantenerse concentradas y tranquilas en nuestro mundo digital cada vez más distractor. Fundada en 2023, TRMNL se ha convertido rápidamente en una solución líder para la gestión de paneles E Ink®, ofreciendo un enfoque único para mostrar información sin las notificaciones constantes y distracciones de las pantallas tradicionales.
 
 En esencia, TRMNL se basa en la filosofía de que la tecnología debe mejorar nuestras vidas sin exigir atención constante. La plataforma proporciona una forma elegante de ver información importante de un vistazo a través de pantallas E Ink®, creando una experiencia tecnológica más consciente y menos intrusiva.
 
 ### ¿Por qué usar TRMNL?
 
-- **Creación simplificada de paneles de control**: La creciente biblioteca de aplicaciones e integraciones de TRMNL facilita la creación de pantallas de información personalizadas sin programación compleja.
+- **Creación de paneles simplificada**: La creciente biblioteca de aplicaciones e integraciones de TRMNL facilita la creación de pantallas de información personalizadas sin programación compleja.
 - **Bajo consumo de energía**: El software eficiente de TRMNL combinado con los requisitos mínimos de energía de E Ink® crea una solución extremadamente eficiente energéticamente.
 - **Información sin distracciones**: Obtén la información que necesitas sin notificaciones ni fatiga visual.
 - **Actualizaciones periódicas**: El desarrollo activo de TRMNL significa que se añaden nuevas funciones e integraciones cada semana.
-- **Amigable para desarrolladores**: La API abierta y las herramientas para desarrolladores de TRMNL permiten complementos e integraciones personalizadas.
+- **Amigable para desarrolladores**: La API abierta y las herramientas para desarrolladores de TRMNL permiten plugins e integraciones personalizadas.
 
 ## Hardware compatible
 
@@ -111,7 +111,7 @@ En esencia, TRMNL se basa en la filosofía de que la tecnología debe mejorar nu
   </table>
 </div>
 
-### TRMNL DIY Kit y panel XIAO
+### TRMNL DIY Kit y XIAO Panel
 
 <div class="table-center">
   <table align="center">
@@ -125,7 +125,7 @@ En esencia, TRMNL se basa en la filosofía de que la tecnología debe mejorar nu
     </tr>
     <tr>
       <td align="center">7.5" mono + carcasa DIY<br/>Controlador XIAO ESP32-S3 Plus</td>
-      <td align="center">Panel desnudo 7.5" mono<br/>XIAO ESP32-C3 directamente</td>
+      <td align="center">Panel desnudo 7.5" mono<br/>Directamente con XIAO ESP32-C3</td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -170,7 +170,7 @@ Si encuentras algún problema, contacta directamente con el equipo de TRMNL en [
 
 ## Paso 2: Configuración del hardware
 
-La reTerminal E Serie y el panel XIAO 7.5" vienen preensamblados: solo necesitas encenderlos. El TRMNL DIY Kit requiere montaje.
+La reTerminal E Serie y el XIAO 7.5" Panel vienen preensamblados: solo necesitas encenderlos. El TRMNL DIY Kit requiere montaje.
 
 <Tabs groupId="trmnl-hardware">
 <TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1003 / E1004" default>
@@ -243,18 +243,18 @@ Si tu kit TRMNL está lejos de tu router, puedes sacar la antena fuera de la car
 :::
 
 </TabItem>
-<TabItem value="xiao-075-panel" label="Panel XIAO 7.5&quot;">
+<TabItem value="xiao-075-panel" label="XIAO 7.5&quot; Panel">
 
-El panel de papel electrónico XIAO 7.5" se envía con el XIAO ESP32-C3 conectado directamente al panel. Solo conéctalo mediante USB-C; no se requiere más ensamblaje.
+El panel XIAO 7.5" ePaper se envía con el XIAO ESP32-C3 conectado directamente al panel. Solo conéctalo por USB-C; no se requiere más ensamblaje.
 
 </TabItem>
 </Tabs>
 
 ## Paso 3: Flashear el firmware de TRMNL
 
-Hay disponibles tres métodos de flasheo. **Método 1 (Web Flasher)** es el más sencillo y funciona para todo el hardware compatible. **Método 2 (reTerminal E-Series Firmware Flasher)** es exclusivo para reTerminal E Serie. **Método 3 (Compilar desde el código fuente)** es para usuarios avanzados.
+Hay tres métodos de flasheo disponibles. **Método 1 (Web Flasher)** es el más sencillo y funciona para todo el hardware compatible. **Método 2 (reTerminal E-Series Firmware Flasher)** es exclusivo para reTerminal E Serie. **Método 3 (Compilar desde el código fuente)** es para usuarios avanzados.
 
-:::tip Los kits TRMNL DIY totalmente nuevos ya se envían con el firmware TRMNL
+:::tip Los kits TRMNL DIY totalmente nuevos ya se envían con firmware TRMNL
 Si compraste un kit TRMNL 7.5" (OG) DIY totalmente nuevo, ya tiene el firmware TRMNL preinstalado; puedes omitir por completo el paso de flasheo y pasar al Paso 4.
 :::
 
@@ -263,7 +263,7 @@ Si compraste un kit TRMNL 7.5" (OG) DIY totalmente nuevo, ya tiene el firmware T
 El TRMNL Web Flasher funciona directamente en el navegador y es compatible con todos los dispositivos de esta página.
 
 1. Visita [https://usetrmnl.com/flash](https://usetrmnl.com/flash).
-2. Conecta tu dispositivo mediante USB-C y sigue las instrucciones en pantalla.
+2. Conecta tu dispositivo por USB-C y sigue las instrucciones en pantalla.
 3. Elige el firmware que coincida con tu hardware:
 
 <Tabs groupId="trmnl-hardware">
@@ -283,9 +283,9 @@ Usa **FW 1.5.12 o posterior** para compatibilidad con Seeed en el TRMNL DIY Kit.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/259.png" style={{width:700, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="xiao-075-panel" label="Panel XIAO 7.5&quot;">
+<TabItem value="xiao-075-panel" label="XIAO 7.5&quot; Panel">
 
-Usa **FW 1.5.12 o posterior** para compatibilidad con Seeed en el panel de papel electrónico XIAO 7.5".
+Usa **FW 1.5.12 o posterior** para compatibilidad con Seeed en el panel XIAO 7.5" ePaper.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/260.png" style={{width:700, height:'auto'}}/></div>
 
@@ -305,7 +305,7 @@ Usa primero el [Método 1: TRMNL Web Flasher](#método-1-trmnl-web-flasher-recom
 :::
 
 <details>
-<summary>Haz clic para desplegar los pasos de reTerminal E-Series Firmware Flasher</summary>
+<summary>Haz clic para desplegar los pasos del reTerminal E-Series Firmware Flasher</summary>
 
 1. Visita el [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/). Para una entrada directa de TRMNL en E1004, también puedes abrir el [enlace E1004 TRMNL 1.8.10 Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/?platform=trmnl&device=E1004&firmware=TRMNL_reTerminal_E1004&version=1.8.10).
 
@@ -331,13 +331,13 @@ Para la primera instalación, selecciona **Erase flash + flash** para que el dis
 :::
 
 :::tip Solo reTerminal E1003
-Asegúrate de que el interruptor de encendido esté en **ON**. Si el dispositivo está en reposo y el flasheo no comienza, pulsa el botón **Refresh** en la parte superior de la unidad para activarlo y vuelve a intentarlo.
+Asegúrate de que el interruptor de encendido esté en **ON**. Si el dispositivo está en reposo y el flasheo no comienza, pulsa el botón **Refresh** en la parte superior de la unidad para despertarlo y vuelve a intentarlo.
 :::
 
 :::note Comportamiento de pantalla de reTerminal E1002 / E1004
-El reTerminal E1002 utiliza una pantalla de papel electrónico a todo color, pero el firmware TRMNL actualmente muestra el contenido del E1002 en modo monocromo. Durante la provisión de Wi-Fi, la pantalla AP del E1002 muestra un diseño compacto con el logotipo TRMNL en la esquina inferior derecha. Cuando veas esta pantalla, busca y conéctate al punto de acceso E1002 y luego continúa con el mismo flujo de configuración Wi-Fi que para los otros dispositivos.
+El reTerminal E1002 usa una pantalla ePaper a todo color, pero el firmware TRMNL actualmente muestra el contenido del E1002 en modo monocromo. Durante la provisión de Wi-Fi, la pantalla AP del E1002 muestra un diseño compacto con el logotipo TRMNL en la esquina inferior derecha. Cuando veas esta pantalla, busca y conéctate al punto de acceso E1002 y luego continúa con el mismo flujo de configuración Wi-Fi que en los otros dispositivos.
 
-El reTerminal E1004 también utiliza un panel Spectra™ 6 a todo color, pero el firmware TRMNL igualmente muestra su contenido en modo monocromo. Elige **reTerminal E1004** en la herramienta de flasheo para que se use el panel correcto.
+El reTerminal E1004 también usa un panel Spectra™ 6 a todo color, pero el firmware TRMNL igualmente muestra su contenido en modo monocromo. Elige **reTerminal E1004** en la herramienta de flasheo para que se use el panel correcto.
 :::
 
 Cuando el flasheo haya finalizado, continúa con el [Paso 4: Conectar el dispositivo a Wi-Fi](#paso-4-conectar-el-dispositivo-a-wi-fi).
@@ -348,7 +348,7 @@ Cuando el flasheo haya finalizado, continúa con el [Paso 4: Conectar el disposi
 
 1. **Clona el repositorio de firmware**
 
-   - Visita el [repositorio oficial de firmware](https://github.com/usetrmnl/trmnl-firmware) y clónalo:
+   - Visita el [repositorio de firmware oficial](https://github.com/usetrmnl/trmnl-firmware) y clónalo:
 
      ```bash
      git clone https://github.com/usetrmnl/trmnl-firmware.git
@@ -391,7 +391,7 @@ Cuando el flasheo haya finalizado, continúa con el [Paso 4: Conectar el disposi
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/5.png" style={{width:1000, height:'auto'}}/></div>
 
    </TabItem>
-   <TabItem value="xiao-075-panel" label="Panel XIAO 7.5&quot;">
+   <TabItem value="xiao-075-panel" label="XIAO 7.5&quot; Panel">
 
    En `platformio.ini`, selecciona el entorno `seeed_xiao_esp32c3`.
 
@@ -400,7 +400,7 @@ Cuando el flasheo haya finalizado, continúa con el [Paso 4: Conectar el disposi
    </TabItem>
    </Tabs>
 
-5. **Conecta tu dispositivo** mediante USB-C.
+5. **Conecta tu dispositivo** por USB-C.
 
 6. **Compila y sube**: haz clic en el botón **Upload** de PlatformIO o ejecuta:
 
@@ -412,7 +412,7 @@ Cuando el flasheo haya finalizado, continúa con el [Paso 4: Conectar el disposi
 
 ## Paso 4: Configurar Wi‑Fi y aprovisionar el dispositivo
 
-El flujo de trabajo de aprovisionamiento de Wi‑Fi es idéntico para todo el hardware compatible.
+El flujo de aprovisionamiento de Wi‑Fi es idéntico para todo el hardware compatible.
 
 > 💡 **¿Problemas para conectar el Wi‑Fi?** Consulta la [Guía de solución de problemas de Wi‑Fi del dispositivo TRMNL](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting).
 
@@ -438,9 +438,9 @@ Después de flashear el firmware de TRMNL y encender tu dispositivo, este entrar
 </TabItem>
 </Tabs>
 
-### Conectarse al Wi‑Fi de TRMNL
+### Conectarse al Wi‑Fi TRMNL
 
-En tu teléfono u ordenador, abre la lista de redes Wi‑Fi disponibles. Busca una red llamada **TRMNL** y conéctate a ella (de forma predeterminada no se requiere contraseña).
+En tu teléfono u ordenador, abre la lista de redes Wi‑Fi disponibles. Busca una red llamada **TRMNL** y conéctate a ella (no se requiere contraseña de forma predeterminada).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/217.png" style={{width:400, height:'auto'}}/></div>
 
@@ -459,14 +459,14 @@ Una vez conectado, abre un navegador web. El dispositivo debería redirigirte au
 
 ### El dispositivo se une a tu red
 
-El dispositivo se desconectará del Wi‑Fi de TRMNL y se unirá a tu red doméstica. La ventana del portal cautivo mostrará la dirección MAC del dispositivo. **Anota la dirección MAC** — la necesitarás en el siguiente paso.
+El dispositivo se desconectará del Wi‑Fi TRMNL y se unirá a tu red doméstica. La ventana del portal cautivo mostrará la dirección MAC del dispositivo. **Anota la dirección MAC** — la necesitarás en el siguiente paso.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
 
 > ⚠️ **Nota:** la dirección MAC solo es visible en el portal cautivo durante 1–2 segundos. Si te la pierdes también puedes:
 >
 > - Recuperarla desde los registros de compilación/carga de VS Code → PlatformIO.
-> - Usar el método de [usetrmnl.com/flash](https://usetrmnl.com/flash) y comprobar la consola de desarrollador del navegador durante el flasheo.
+> - Usar el método [usetrmnl.com/flash](https://usetrmnl.com/flash) y revisar la consola de desarrollador del navegador durante el flasheo.
 > - Encontrarla en la lista de dispositivos conectados de tu router o de la app de tu red mallada.
 >
 > Consulta la guía oficial: [Encontrar la dirección MAC de tu TRMNL](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address).
@@ -493,7 +493,7 @@ Después de que tu dispositivo esté conectado a Wi‑Fi y tengas su dirección 
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/213.png" style={{width:700, height:'auto'}}/></div>
 
-¡Tu dispositivo ahora está vinculado a tu cuenta de TRMNL! Ahora puedes enviar listas de reproducción, imágenes y otros contenidos directamente desde la interfaz de TRMNL.
+¡Tu dispositivo ahora está vinculado a tu cuenta TRMNL! Ahora puedes enviar listas de reproducción, imágenes y otros contenidos directamente desde la interfaz de TRMNL.
 
 > 💡 **Consejo:** si tienes varios dispositivos, repite los pasos anteriores para cada uno usando sus Device IDs únicos.
 
@@ -510,30 +510,30 @@ Mantén siempre ambas opciones desactivadas para garantizar un funcionamiento es
 <Tabs groupId="trmnl-hardware">
 <TabItem value="reterminal-e1001" label="reTerminal E1001 / E1002 / E1004" default>
 
-Los reTerminal E1001 y E1002 exponen un único botón orientado al usuario bajo el firmware de TRMNL:
+El reTerminal E1001 y el E1002 exponen un único botón orientado al usuario bajo el firmware TRMNL:
 
 - **Botón verde — pulsación larga 5 s**: entrar en modo de reconfiguración de Wi‑Fi.
-- **Botón de reinicio**: clic único para reiniciar el dispositivo.
+- **Botón Reset**: clic único para reiniciar el dispositivo.
 
-El reTerminal E1004 utiliza los botones físicos frontales bajo el firmware de TRMNL. Usa esos botones para activar o refrescar el panel, y desliza el interruptor de encendido a **OFF** y luego a **ON** para reiniciar. Para la reconfiguración de Wi‑Fi, sigue el mismo flujo de pulsación larga / aprovisionamiento que se muestra en la pantalla del dispositivo después de un flasheo de fábrica o un restablecimiento de red.
+El reTerminal E1004 utiliza los botones físicos frontales bajo el firmware TRMNL. Usa esos botones para activar o refrescar el panel, y desliza el interruptor de encendido a **OFF** y luego a **ON** para reiniciar. Para la reconfiguración de Wi‑Fi, sigue el mismo flujo de pulsación larga / aprovisionamiento que se muestra en la pantalla del dispositivo después de un flasheo de fábrica o un restablecimiento de red.
 
 </TabItem>
 <TabItem value="reterminal-e1003" label="reTerminal E1003">
 
-El reTerminal E1003 expone tres botones montados en la parte superior bajo el firmware de TRMNL:
+El reTerminal E1003 expone tres botones montados en la parte superior bajo el firmware TRMNL:
 
-- **Botón de refresco — pulsación única**: activar el dispositivo o refrescar inmediatamente la pantalla actual.
+- **Botón Refresh — pulsación única**: activar el dispositivo o refrescar inmediatamente la pantalla actual.
 - **Page Up + Page Down — mantener pulsados 2 s**: entrar en modo de reconfiguración de Wi‑Fi.
 - **Interruptor de encendido**: deslizar a **OFF** y luego a **ON** para reiniciar el dispositivo.
 
 :::note
-El toque capacitivo solo es compatible con el firmware SenseCraft HMI. El firmware de TRMNL no usa el panel táctil — toda la interacción se realiza mediante los botones físicos superiores.
+El tacto capacitivo solo es compatible con el firmware SenseCraft Seeedash. El firmware TRMNL no utiliza el panel táctil — toda la interacción se realiza mediante los botones físicos superiores.
 :::
 
 </TabItem>
 <TabItem value="trmnl-diy-kit" label="TRMNL DIY Kit">
 
-La XIAO ePaper Display Board tiene 4 botones (RESET / KEY1 / KEY2 / KEY3). **Solo RESET y KEY3 son usados por el firmware de TRMNL.**
+La XIAO ePaper Display Board tiene 4 botones (RESET / KEY1 / KEY2 / KEY3). **Solo RESET y KEY3 son usados por el firmware TRMNL.**
 
 **Uso de KEY3:**
 
@@ -546,7 +546,7 @@ La XIAO ePaper Display Board tiene 4 botones (RESET / KEY1 / KEY2 / KEY3). **Sol
 </TabItem>
 <TabItem value="xiao-075-panel" label="XIAO 7.5&quot; Panel">
 
-La XIAO ESP32-C3 tiene los botones estándar **RESET** y **BOOT**.
+El XIAO ESP32-C3 tiene los botones estándar **RESET** y **BOOT**.
 
 - **Reset → soltar → mantener BOOT durante 5 s**: reconfigurar la red (vuelve al portal de aprovisionamiento de TRMNL).
 - **Clic único en RESET**: reiniciar el dispositivo.
@@ -565,7 +565,7 @@ La Playlist de TRMNL controla exactamente qué se muestra en tu dispositivo de e
 - **Playlist Title**: el nombre de tu dispositivo TRMNL.
 - **Display Time Range**: cuándo está activa la playlist (p. ej. 00:00–23:45).
 - **Update Interval**: con qué frecuencia se actualiza la pantalla (p. ej. cada 5 minutos).
-- **Add a Group / Add a Plugin**: organizar la playlist en grupos o añadir nuevos plugins de contenido.
+- **Add a Group / Add a Plugin**: organiza la playlist en grupos o añade nuevos plugins de contenido.
 
 ### Elementos de la Playlist
 
@@ -594,7 +594,7 @@ Los plugins son bloques de contenido modulares que pueden mostrar el tiempo, eve
 
 ### Plugins conectados
 
-En la parte superior de la página de Plugins ves todos los plugins ya conectados a tu cuenta de TRMNL. Algunos ejemplos son Weather, Days Left This Year, Stock Price, RSS Feed, Reddit, Hacker News, Language Learning, Motivational Quote, Custom Text, …
+En la parte superior de la página Plugins verás todos los plugins ya conectados a tu cuenta TRMNL. Algunos ejemplos son Weather, Days Left This Year, Stock Price, RSS Feed, Reddit, Hacker News, Language Learning, Motivational Quote, Custom Text, …
 
 ### Marketplace de plugins
 
@@ -618,7 +618,7 @@ Mantén presionado el **Botón Verde** durante 5 segundos. El dispositivo volver
 
 Mantén presionados **Page Up** y **Page Down** juntos durante 2 segundos. El dispositivo volverá a la interfaz inicial de TRMNL y activará el AP.
 
-Si la pantalla está en reposo, presiona primero una vez el botón **Refresh** para activar el dispositivo.
+Si la pantalla está en reposo, presiona una vez el botón **Refresh** primero para activar el dispositivo.
 
 </TabItem>
 <TabItem value="trmnl-diy-kit" label="TRMNL DIY Kit">
@@ -628,7 +628,7 @@ Mantén presionado **KEY3** (junto al botón Reset) durante 5 segundos. El dispo
 </TabItem>
 <TabItem value="xiao-075-panel" label="XIAO 7.5&quot; Panel">
 
-Presiona el botón **Reset** en la XIAO, suéltalo y luego mantén presionado el botón **BOOT** durante 5 segundos. El dispositivo volverá a la interfaz inicial de TRMNL y activará el AP.
+Presiona el botón **Reset** en el XIAO, suéltalo y luego mantén presionado el botón **BOOT** durante 5 segundos. El dispositivo volverá a la interfaz inicial de TRMNL y activará el AP.
 
 </TabItem>
 </Tabs>
@@ -657,14 +657,14 @@ Dos situaciones diferentes pueden activar esta pantalla:
 
 ### P3: Web Flasher / PlatformIO no puede encontrar el dispositivo o la carga falla
 
-A veces, el programa incorrecto puede hacer que la XIAO pierda su puerto o no funcione correctamente:
+A veces, el programa incorrecto puede hacer que el XIAO pierda su puerto o no funcione correctamente:
 
-- La XIAO está conectada pero **no se encuentra ningún número de puerto**.
-- La XIAO está conectada, el puerto aparece, pero la **carga falla**.
+- El XIAO está conectado pero **no se encuentra ningún número de puerto**.
+- El XIAO está conectado, el puerto aparece, pero la **carga falla**.
 
-Pon la XIAO en modo BootLoader para recuperarla:
+Pon el XIAO en modo BootLoader para recuperarlo:
 
-- **Paso 1**: mantén presionado el botón `BOOT` en la XIAO ESP32-S3 / ESP32-C3 sin soltarlo.
+- **Paso 1**: mantén presionado el botón `BOOT` en el XIAO ESP32-S3 / ESP32-C3 sin soltarlo.
 - **Paso 2**: mientras sigues manteniendo `BOOT`, conecta el dispositivo al ordenador mediante USB-C. Suelta `BOOT` después de que el dispositivo esté conectado.
 - **Paso 3**: vuelve a ejecutar la carga / flasheo. La mayoría de los problemas de "dispositivo no reconocido" o "carga fallida" se resuelven con esto.
 
@@ -713,7 +713,7 @@ Su experiencia hizo posible esta integración y mejoró enormemente la experienc
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

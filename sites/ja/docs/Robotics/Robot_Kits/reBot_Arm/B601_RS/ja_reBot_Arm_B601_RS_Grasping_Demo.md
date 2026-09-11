@@ -54,7 +54,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 本ページでは、実装の異なる 2 つのビジュアル把持デモを紹介します。
 
 - **一、ビジュアル把持方式1**：YOLO + RGB-D + Python SDK によるパイプラインで、環境構築、カメラ統合、ハンドアイキャリブレーション、把持デバッグまでをカバーします。
-- **二、ビジュアル把持方式2**：ROS2 + YOLOE によるワークフローで、複数のターミナルからアーム、Gemini 2 / D405 カメラ、把持ノードを起動し、物体の把持と配置を行います。
+- **二、ビジュアル把持方式2**：ROS2 + YOLOE によるワークフローで、複数のターミナルからアーム、Gemini 2 カメラ、把持ノードを起動し、物体の把持と配置を行います。
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping demo" />
@@ -655,9 +655,9 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ### 1. プロジェクト紹介
 
-本ソリューションでは、reBot Arm B601-RS 上で **ROS2** と **YOLO** を使用し、物体検出、把持、配置を行います。システムは複数のターミナルでアーム、デプスカメラ、把持ノードをそれぞれ起動します。
+本ソリューションでは、reBot Arm B601-RS 上で **ROS2** と **YOLO** を使用し、物体検出、把持、配置を行います。システムは複数のターミナルでアーム、Gemini 2 カメラ、把持ノードをそれぞれ起動します。
 
-現在、デプスカメラは **Orbbec Gemini 2** と **Intel RealSense D405** をサポートしています。このワークフローでは、ハンドアイキャリブレーション用のキャリブレーションボードは不要です。取り付けおよびプリント部品の公差により、アームごとにわずかな把持オフセットが生じる場合があります。
+現在、デプスカメラは **Orbbec Gemini 2** のみをサポートしています。このワークフローでは、ハンドアイキャリブレーション用のキャリブレーションボードは不要です。取り付けおよびプリント部品の公差により、アームごとにわずかな把持オフセットが生じる場合があります。
 
 ### 2. 環境構築
 
@@ -667,12 +667,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 #### ステップ 2. カメラをインストールする
 
-使用するカメラに合わせて、下のいずれか一方を展開してインストールします。
-
-<details className="content-details">
-<summary>クリックして Gemini 2 のインストール手順を展開</summary>
-
-Orbbec ROS2 SDK をワークスペースにクローンし、`v2-main` ブランチに切り替えます。
+Orbbec ROS2 SDK をワークスペースにクローンし、`v2-main` ブランチに切り替えます：
 
 ```bash
 cd ~/rebotarm_ros2/src
@@ -681,14 +676,14 @@ cd OrbbecSDK_ROS2
 git checkout v2-main
 ```
 
-ワークスペースをビルドします。
+ワークスペースをビルドします：
 
 ```bash
 cd ~/rebotarm_ros2
 colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
-udev ルールをインストールします。
+udev ルールをインストールします：
 
 ```bash
 cd ~/rebotarm_ros2/src/OrbbecSDK_ROS2/orbbec_camera/scripts
@@ -696,72 +691,18 @@ sudo bash install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-</details>
-
-<details className="content-details">
-<summary>クリックして D405 のインストール手順を展開</summary>
-
-1. RealSense SDK をクローンし、`v2.58.1` に切り替えます。
-
-```bash
-cd ~
-git clone https://github.com/realsenseai/librealsense.git
-cd librealsense
-git checkout v2.58.1
-```
-
-2. udev ルールをインストールします。
-
-```bash
-sudo apt install -y v4l-utils
-cd ~/librealsense
-./scripts/setup_udev_rules.sh
-```
-
-3. SDK をビルドしてインストールします。
-
-:::tip
-プロキシが有効な場合は、再設定の前に無効化してください。
-
-```bash
-unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
-```
-:::
-
-```bash
-cd ~/librealsense
-mkdir -p build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$(nproc)
-sudo make install
-sudo ldconfig
-```
-
-4. RealSense ROS2 パッケージをビルドします。
-
-```bash
-cd ~/rebotarm_ros2/src
-git clone https://github.com/xiehuangbao888/realsense-ros.git
-cd ~/rebotarm_ros2
-colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
-```
-
-</details>
-
-#### ステップ 3. ビジュアル把持パッケージを取り込む
+#### ステップ 3. ビジュアル把持パッケージをインポートする
 
 ```bash
 cd ~/rebotarm_ros2/src/
 git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
-cd ~/rebotarm_ros2
-colcon build --symlink-install
 ```
 
 #### ステップ 4. YOLO / YOLOE 環境をインストールする
 
-`grasp_yolo` は Python から Ultralytics YOLOE を呼び出します。専用の conda 環境を使い、システムの `/usr/bin/python3` は使わないでください。
+`grasp_yolo` は Python から Ultralytics YOLOE を呼び出します。専用の conda 環境を使用し、システムの `/usr/bin/python3` は使用しないでください。
 
-**環境を作成する**
+**環境の作成**
 
 ```bash
 conda create -n yolo python=3.10
@@ -774,19 +715,19 @@ pip install "numpy==1.26.4" transforms3d
 pip install git+https://github.com/ultralytics/CLIP.git
 ```
 
-NVIDIA GPU がある場合は、先に CUDA が使えることを確認します。出力が `False` の場合は、対応する CUDA / PyTorch をインストールしてください。CPU のまま進めることもできますが、検出フレームレートは低くなります。
+NVIDIA GPU をお持ちの場合は、まず CUDA が利用可能であることを確認してください。出力が `False` の場合は、対応する CUDA / PyTorch ビルドをインストールしてください。CPU でも続行できますが、検出のフレームレートは低下します：
 
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
 ```
 
-YOLOE を確認します。
+YOLOE を検証します：
 
 ```bash
 python -c "from ultralytics import YOLOE; print('YOLOE OK')"
 ```
 
-**重みを `~/rebot_visual_model` にダウンロードする**
+**重みを `~/rebot_visual_model` にダウンロード**
 
 ```bash
 mkdir -p ~/rebot_visual_model && cd ~/rebot_visual_model
@@ -807,16 +748,16 @@ colcon build --symlink-install
 source ~/rebotarm_ros2/install/setup.bash
 ```
 
-これでビジュアル把持の環境構築は完了です。以降、新しいターミナルでビジュアル把持コマンドを実行する前に、次を source してください。
+これでビジュアル把持の環境は準備完了です。新しいターミナルごとに、ビジュアル把持コマンドを実行する前に次を source してください：
 
 ```bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 ```
 
-### 3. プロジェクトを実行する
+### 3. プロジェクトの実行
 
-起動前に、アームの電源が入っていること、CAN インターフェースが `can0` であること、Gemini 2 または D405 が USB 接続されていることを確認し、先に CAN を立ち上げます。
+開始前に、アームの電源が入っていること、CAN インターフェースが `can0` であること、Gemini 2 が USB で接続されていることを確認してください。その後、CAN を起動します：
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -824,12 +765,9 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-把持の流れが分かりやすいように、ターミナルごとに起動します。Gemini 2 と D405 では起動コマンドが異なります。使用するカメラに合わせて選んでください。ワンクリック起動にしたい場合は、起動スクリプトを自作できます。
+把持ロジックを追いやすいよう、スタックはターミナルごとに分けて起動します。ワンクリック起動にしたい場合は、独自の起動スクリプトを作成できます。
 
 #### ターミナル A — アーム + RViz を起動
-
-<details className="content-details">
-<summary>クリックして Gemini 2 を展開</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -838,24 +776,7 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp bringup_with_camera.launch.py model:=rs channel:=can0 use_rviz:=true
 ```
 
-</details>
-
-<details className="content-details">
-<summary>クリックして D405 を展開</summary>
-
-```bash
-source /opt/ros/humble/setup.bash
-source ~/rebotarm_ros2/install/setup.bash
-
-ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=can0 use_rviz:=true
-```
-
-</details>
-
-#### ターミナル B — カメラを起動
-
-<details className="content-details">
-<summary>クリックして Gemini 2 を展開</summary>
+#### ターミナル B — Gemini 2 を起動
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -863,38 +784,15 @@ source /opt/ros/humble/setup.bash
 ros2 launch orbbec_camera gemini2.launch.py
 ```
 
-</details>
-
-<details className="content-details">
-<summary>クリックして D405 を展開</summary>
+#### ターミナル C — 観察姿勢へ移動 + YOLO 検出
 
 ```bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
+conda activate yolo
 
-ros2 launch realsense2_camera rs_launch.py \
-  align_depth.enable:=true \
-  depth_module.depth_profile:=640x360x30 \
-  depth_module.color_profile:=640x360x30
-```
-
-</details>
-
-#### ターミナル C — 観察姿勢へ移動 + YOLO 認識
-
-先に `conda activate yolo` を実行してください。環境名が `yolo` でない場合は、実際の conda 環境名に置き換えます。
-
-<details className="content-details">
-<summary>クリックして Gemini 2 を展開</summary>
-
-自分で作成した YOLO 環境のパスに変更してください。
-
-```bash
-source /opt/ros/humble/setup.bash
-source ~/rebotarm_ros2/install/setup.bash
-
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
-  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:=$HOME/rebot_visual_model/yoloe-26s-seg.pt \
   -p target_class:="cube" \
   -p place_class:="box" \
   -p yolo_device:=0 \
@@ -905,47 +803,18 @@ source ~/rebotarm_ros2/install/setup.bash
   -p auto_publish_on_detect:=true
 ```
 
-</details>
-
-<details className="content-details">
-<summary>クリックして D405 を展開</summary>
-
-自分で作成した YOLO 環境のパスに変更してください。
-
-```bash
-source /opt/ros/humble/setup.bash
-source ~/rebotarm_ros2/install/setup.bash
-
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args 
--p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt 
--p color_topic:=/camera/camera/color/image_raw 
--p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw 
--p color_info_topic:=/camera/camera/color/camera_info 
--p optical_frame:=camera_color_optical_frame 
--p target_class:="cube" 
--p place_class:="box" 
--p yolo_device:=gpu 
--p grasp_z_offset_m:=0.01 
--p place_z_offset_m:=0.1 
--p grasp_x_offset_m:=-0.04 
--p move_to_observation_on_start:=true 
--p auto_publish_on_detect:=true
-```
-
-</details>
-
 | パラメータ | 説明 |
-|------|------|
-| `yolo_device:=gpu` | GPU を使用します。独立 GPU がない場合は `cpu` に変更します。GPU 0 を指定する場合は `yolo_device:=0` でも構いません |
-| `target_class` | 把持対象の YOLOE テキストクラス名。実物に合わせて変更できます。YOLO のデフォルト認識クラスに対応します |
-| `place_class` | 配置対象の YOLOE テキストクラス名。実物に合わせて変更できます。YOLO のデフォルト認識クラスに対応します |
-| `grasp_x_offset_m` | `base_link` の前後方向。負の値は後方へ引きます |
-| `grasp_z_offset_m` | 把持高さの微調整。デフォルトはフレキシブルグリッパ向け（標準グリッパより長い）です |
-| `place_z_offset_m` | 配置時の持ち上げ高さ。配置点のどれだけ上で離すかを調整します |
+|-----------|-------------|
+| `yolo_device:=0` | GPU 0。ディスクリート GPU がない場合は `cpu` を使用 |
+| `target_class` | 把持対象の YOLOE テキストクラス名。実際の物体に合わせて変更 |
+| `place_class` | 配置対象の YOLOE テキストクラス名。実際の物体に合わせて変更 |
+| `grasp_x_offset_m` | `base_link` における前後オフセット。負の値は姿勢を後ろに引きます |
+| `grasp_z_offset_m` | 把持高さの微調整。デフォルトはフレキシブルグリッパ向けで、標準グリッパより長いです |
+| `place_z_offset_m` | 配置時の追加持ち上げ量。配置点の上でどれだけ高い位置で物体を離すかを制御します |
 
 #### ターミナル D — ワンクリック把持と配置
 
-デフォルトでは 3 秒後にトリガーします。
+デフォルトのトリガー遅延は 3 秒です。変更する場合はパラメータを追加します。例：5 秒後にトリガー：
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -954,15 +823,11 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py
 ```
 
-遅延を変更する場合は、起動コマンドにパラメータを追加します。例: 5 秒後にトリガーする。
-
 ```bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 ```
 
-#### ターミナル E — ホームに戻す（オプション）
-
-新しい `rebotarm` では、ターミナルで `Ctrl + C` を押すと自動でホームに戻ります。手動で戻す場合:
+#### ターミナル E — ホームに戻る（オプション）
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -989,7 +854,6 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [pyorbbecsdk リポジトリ](https://github.com/orbbec/pyorbbecsdk)
 - [pyorbbecsdk ドキュメント](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
-- [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
 - [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) ドキュメント](https://graspnet.net/)

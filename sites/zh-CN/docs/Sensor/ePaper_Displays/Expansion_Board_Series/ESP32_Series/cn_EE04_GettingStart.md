@@ -8,10 +8,10 @@ slug: /epaper_ee04
 sidebar_position: 3
 sku: 104990861,100075670,100064541,E25102101
 last_update:
-  date: 09/25/2025
-  author: Jason
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-09-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/cn/epaper_ee04/
 ---
 
@@ -39,13 +39,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 介绍
 
-由 **XIAO ESP32-S3** Plus 提供算力，显示板 EE04 支持 **24-pin** 和 **50-pin** 两种 ePaper 显示屏。它配备带电源开关的 JST 2.0 mm 电池接口、内置充电 IC，并带有 1 个复位按键和 3 个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息看板。
+由 **XIAO ESP32-S3** Plus 提供算力，显示板 EE04 支持 **24-pin** 和 **50-pin** 两种 ePaper 显示屏。它配备带电源开关的 JST 2.0 mm 电池连接器、内置充电 IC，并带有一个复位按键和三个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息板。
 
 ### 特性
 
 - **由 XIAO ESP32-S3 Plus 驱动：** 连接兼容的 ePaper 显示屏即可立即工作。
 - **多样化显示支持：** 兼容多种 ePaper 屏幕，通过跳线帽轻松切换，支持 24-Pin 和 50-Pin 接口。
-- **带开关的电池接口：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
+- **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
 - **用户友好按键：** 包含 1 个复位按键和 3 个用户可编程按键，为项目加速和自定义功能提供灵活性。
 
 ### 规格
@@ -63,11 +63,11 @@ import Steppers from '@site/src/components/utils/Stepper';
       <td>XIAO ESP32-S3 Plus</td>
     </tr>
     <tr>
-      <th>ePaper 接口</th>
+      <th>ePaper 连接器</th>
       <td>FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm</td>
     </tr>
     <tr>
-      <th>电池接口</th>
+      <th>电池连接器</th>
       <td>JST 2.0mm</td>
     </tr>
     <tr>
@@ -75,7 +75,7 @@ import Steppers from '@site/src/components/utils/Stepper';
       <td>电池电源 ON/OFF</td>
     </tr>
     <tr>
-      <th>电源供给</th>
+      <th>电源</th>
       <td>- 3.7V 锂电池<br />- USB Type-C</td>
     </tr>
     <tr>
@@ -104,19 +104,19 @@ import Steppers from '@site/src/components/utils/Stepper';
             <td>XIAO 系列</td>
         </tr>
         <tr>
-            <th>兼容 ePaper 显示屏</th>
+            <th>兼容的 ePaper 显示屏</th>
             <td>24 Pin ePaper<br />50 Pin ePaper</td>
             <td>24 Pin ePaper</td>
             <td>24 Pin ePaper</td>
         </tr>
         <tr>
-            <th>ePaper 接口</th>
+            <th>ePaper 连接器</th>
             <td>FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm</td>
             <td>FPC 24 Pin 0.5mm</td>
             <td>FPC 24 Pin 0.5mm</td>
         </tr>
         <tr>
-            <th>电池接口</th>
+            <th>电池连接器</th>
             <td>JST 2.0mm</td>
             <td>/</td>
             <td>JST 2.0mm</td>
@@ -128,10 +128,10 @@ import Steppers from '@site/src/components/utils/Stepper';
             <td>电池电源 ON/OFF</td>
         </tr>
         <tr>
-            <th>扩展 IO 端口</th>
+            <th>按键</th>
+            <td>1x 复位按键<br />3x 用户按键</td>
             <td>/</td>
-            <td>连接其他控制器</td>
-            <td>连接额外传感器</td>
+            <td>/</td>
         </tr>
         <tr>
             <th>扩展 IO 端口</th>
@@ -144,11 +144,11 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ### 应用
 
-- **智能家居仪表盘**：显示天气更新、日历事件以及来自各类智能家居设备的通知等实时信息。
+- **智能家居仪表盘**：显示天气更新、日历事件以及来自各种智能家居设备的通知等实时信息。
 - **能耗监测**：显示来自智能电表的能耗数据，帮助用户更高效地跟踪和管理能源使用。
-- **安防告警**：显示安防事件的告警和通知，例如运动检测或门/窗传感器触发。
+- **安防警报**：显示安防事件的警报和通知，例如运动检测或门/窗传感器触发。
 - **智能恒温器显示**：显示温度和湿度水平，以及智能恒温器的控制设置。
-- **数字相框**：打造一款支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
+- **数字相框**：创建一个支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
 
 ## 硬件概览
 
@@ -162,18 +162,18 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ### 支持的 ePaper
 
-#### 24-Pin 接口
+#### 24-Pin 连接器
 
-- [1.54 英寸 ePaper - 单色 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [2.13 英寸 ePaper - 柔性单色 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [2.13 英寸 ePaper - 四色 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9 英寸 ePaper - 单色 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [2.9 英寸 ePaper - 四色 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [4.2 英寸 ePaper - 单色 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [4.26 英寸 ePaper - 单色 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.83 英寸 ePaper - 单色 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [7.5 英寸 ePaper - 单色 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-- [7.5 英寸 ePaper - 三色 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [2.13-inch ePaper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [2.13-inch ePaper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9-inch ePaper - Quadruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [7.5-inch ePaper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
 
@@ -186,9 +186,9 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 :::
 
-#### 50-Pin 接口
+#### 50-Pin 连接器
 
-- [7.3 英寸 Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
+- [7.3-inch Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
@@ -235,7 +235,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
-库中有 4 个基础示例，打开一个你喜欢的基础示例：
+这里有 4 个基础示例，打开一个你喜欢的基础示例：
 
 1. Bitmap：显示位图图像。
 2. Clock：显示时钟。
@@ -257,7 +257,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
 ```
 
-之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。然后点击 **Upload** 上传代码。
+之后，依次进入 **Tools** -> **Board** -> **XIAO ESP32S3** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。然后点击 **Upload** 上传代码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -265,17 +265,17 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 :::tip
 ⚠️ 注意：电子纸排线方向
-将电子纸显示屏连接到 XIAO 电子纸显示板时，请确保 FPC 排线插入方向正确。
+将电子纸显示屏连接到 XIAO 电子纸显示板时，请确保 FPC 线缆插入方向正确。
 
-⚠️ 请勿反向插入连接器！将排线倒置插入可能导致电子纸无法显示，甚至损坏屏幕/电路板。
+⚠️ 请不要反向插入连接器！将线缆倒置插入可能导致电子纸无法显示，甚至损坏屏幕/电路板。
 下图展示了正确的连接方式：
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.jpg" style={{width:500, height:'auto'}}/></div>
 
-### XIAO 电子纸显示板(ESP32-S3) - EE04 上的用户按键
+### XIAO 电子纸显示板（ESP32-S3）- EE04 上的用户按键
 
-EE04 提供了 3 个用户可编程按键，可用于各种控制用途。本节演示如何使用 Arduino 读取按键状态并响应按键按下。
+EE04 提供了 3 个用户可编程按键，可用于各种控制用途。本节演示如何使用 Arduino 读取按键状态并对按键按下做出响应。
 
 在 EE04 上，这 3 个按键连接到 XIAO ESP32-S3 Plus 的以下引脚：
 
@@ -389,7 +389,7 @@ void loop() {
 }
 ```
 
-### XIAO 电子纸显示板(ESP32-S3) - EE04 的电池使用
+### XIAO 电子纸显示板（ESP32-S3）- EE04 上的电池使用
 
 当使用电池供电时：
 
@@ -400,7 +400,7 @@ void loop() {
 - 当电池电量低于 20% 时，设备会在右上角显示低电量图标
 
 :::tip
-如果你想自己编写代码读取电池电压，在 `analogRead()` 函数前加入 10ms 延时会更精确。
+如果你想自己编写代码读取电池电压，在调用 analogRead() 函数前增加 10ms 延时会更精确。
 :::
 
 
@@ -433,28 +433,28 @@ void loop() {
 }
 ```
 
-### 在 XIAO 电子纸显示板 (ESP32-S3) - EE04 上显示自定义图片
+### 在 XIAO 电子纸显示板（ESP32-S3）- EE04 上显示自定义图像
 
 在 GFX 库中找到 Bitmap 示例并选择它。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image1.png" style={{width:700, height:'auto'}}/></div>
 
-请注意，你需要在项目目录中创建一个 driver.h 文件。[详情请点击了解更多。](#install-seeed-gfx-library)。
+请注意，你需要在项目目录中创建一个 driver.h 文件。[详情请点击了解更多。](#install-seeed-gfx-library).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image2.png" style={{width:700, height:'auto'}}/></div>
 
-接下来，访问 SenseCraft HMI Tool：https://sensecraft.seeed.cc/hmi/tools/dither，并上传你希望显示的图片。
+接下来，访问 SenseCraft Seeedash 工具：https://sensecraft.seeed.cc/hmi/tools/dither，并上传你希望显示的图像。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image3m.png" style={{width:700, height:'auto'}}/></div>
 
-上传图片后，生成 C 数组（图像数据）。
+上传图像后，生成 C 数组（图像数据）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image4.png" style={{width:700, height:'auto'}}/></div>
 
 复制数组内容。注意只复制十六进制数据，不要包含任何无关字符。
 
 :::tip 
-如果显示屏上的颜色与原始设计相比是反色的，请在生成代码前在 HMI 工具中勾选 Invert Colors 选项。
+如果显示屏上的颜色与原始设计相比出现反色，请在 Seeedash 工具中勾选 Invert Colors 选项后再生成代码。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image5.png" style={{width:700, height:'auto'}}/></div>
@@ -463,7 +463,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image6.png" style={{width:700, height:'auto'}}/></div>
 
-最后，将程序上传到你的 XIAO ESP32-S3。现在你应该能在电子纸屏幕上看到自定义图片。
+最后，将程序上传到你的 XIAO ESP32-S3。现在你应该能在电子纸屏幕上看到自定义图像。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image7.png" style={{width:700, height:'auto'}}/></div>
 
@@ -477,7 +477,7 @@ void loop() {
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

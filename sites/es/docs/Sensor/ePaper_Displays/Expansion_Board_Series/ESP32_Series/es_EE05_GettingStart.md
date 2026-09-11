@@ -1,28 +1,28 @@
 ---
-description: Introducción a XIAO ePaper Display Board(ESP32-S3) - EE05
+description: Primeros pasos con XIAO ePaper Display Board(ESP32-S3) - EE05
 sku: 100057220
-title: Introducción a EE05
+title: Primeros pasos con EE05
 image: https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp
 slug: /epaper_ee05
 sidebar_position: 4
 last_update:
-  date: 04/27/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/es/epaper_ee05/
-updatedAt: '2026-04-28'
+updatedAt: '2026-09-10'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Introducción a XIAO ePaper Display Board - EE05
+# Primeros pasos con XIAO ePaper Display Board - EE05
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>Placa de pantalla XIAO ePaper EE05</th>
+        <th>XIAO ePaper Display Board EE05</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.jpg"/></div>
@@ -37,25 +37,25 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Impulsada por el **XIAO ESP32-S3 Plus**, la placa de pantalla EE05 es compatible con una amplia gama de pantallas ePaper de 24 pines y permite el diseño e implementación de interfaces sin código con SenseCraft HMI. Con IO de extensión y un interruptor de alimentación para el conector de batería, es ideal para aplicaciones de pantalla inteligente de bajo consumo.
+Impulsada por el **XIAO ESP32-S3 Plus**, la placa de pantalla EE05 es compatible con una amplia gama de pantallas ePaper de 24 pines y permite el diseño e implementación de interfaces de usuario sin código con SenseCraft Seeedash. Con IO de extensión y un interruptor de alimentación para el conector de batería, es ideal para aplicaciones de pantalla inteligente de bajo consumo.
 
 ### Características
 
-- **Impulsada por XIAO ESP32-S3 Plus:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible.
+- **Impulsada por XIAO ESP32-S3 Plus:** Funciona inmediatamente cuando se conecta a una pantalla ePaper compatible.
 - **Compatibilidad versátil de pantalla:** Compatible con una amplia gama de pantallas ePaper de 24 pines para distintos requisitos de proyecto.
-- **Puerto de E/S de extensión:** Permite la conexión de sensores adicionales, como sensores de temperatura y humedad, para una funcionalidad mejorada.
-- **Conector de batería con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
-- **Diseño e implementación de UI sin código con SenseCraft HMI:** Diseña e implementa paneles personalizados sin esfuerzo con SenseCraft HMI, nuestra nueva plataforma sin código impulsada por IA. Crea tu interfaz mediante simples elementos de arrastrar y soltar, elige entre nuestras ricas plantillas o deja que la IA te ayude. Conecta datos en tiempo real desde APIs web y luego implementa tu panel terminado en la pantalla ePaper con solo unos clics. Desde el diseño hasta la configuración de datos y la implementación, todo sucede de forma fluida en una única plataforma.
+- **Puerto de extensión IO:** Permite la conexión de sensores adicionales, como sensores de temperatura y humedad, para una funcionalidad mejorada.
+- **Conector BAT con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
+- **Diseño e implementación de UI sin código con SenseCraft Seeedash:** Diseña e implementa paneles personalizados sin esfuerzo con SenseCraft Seeedash, nuestra nueva plataforma sin código impulsada por IA. Crea tu interfaz mediante simples elementos de arrastrar y soltar, elige entre nuestras ricas plantillas o deja que la IA te ayude. Conecta datos en tiempo real desde APIs web y luego implementa tu panel terminado en la pantalla ePaper con solo unos clics. Desde el diseño hasta la configuración de datos y la implementación, todo sucede de forma fluida en una única plataforma.
 
 ### Especificaciones
 
 | Parámetro | Descripción |
 |---|---|
 | **Procesador** | XIAO ESP32-S3 Plus |
-| **Conector ePaper** | SPI FPC 24 pines 0,5 mm |
-| **Conector de batería** | JST 2,0 mm |
+| **Conector ePaper** | SPI FPC 24 pines 0.5mm |
+| **Conector de batería** | JST 2.0mm |
 | **Interruptor** | Interruptor deslizante de alimentación por hardware |
-| **Alimentación** | Batería de litio de 3,7 V / USB Type-C |
+| **Fuente de alimentación** | Batería de litio de 3.7V / USB Type-C |
 | Botón | 1x botón de reinicio (montado lateralmente) <br/> 3x botones de usuario (montados lateralmente) |
 
 ## Descripción general del hardware
@@ -64,14 +64,14 @@ Impulsada por el **XIAO ESP32-S3 Plus**, la placa de pantalla EE05 es compatible
 
 La EE05 es compatible con una variedad de pantallas ePaper SPI de 24 pines, incluidas, entre otras:
 
-- [Pantalla E-paper de 1,54 pulgadas - Matriz de puntos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Pantalla E-Paper de 2,13 pulgadas - Flexible monocroma 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [Pantalla E-Paper de 2,13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Pantalla E-paper de 2,9 pulgadas - Monocroma 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [Pantalla E-Paper de 4,2 pulgadas - Monocroma 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Pantalla E-Paper de 4,26 pulgadas - Monocroma 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Pantalla E-paper de 5,83 pulgadas - Monocroma 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [Pantalla ePaper monocroma de 7,5 pulgadas con 800x480 píxeles](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [Pantalla E-paper de 1.54 pulgadas - Matriz de puntos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [Pantalla E-Paper de 2.13 pulgadas - Flexible monocroma 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [Pantalla E-Paper de 2.13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [Pantalla E-paper de 2.9 pulgadas - Monocroma 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [Pantalla E-Paper de 4.2 pulgadas - Monocroma 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [Pantalla E-Paper de 4.26 pulgadas - Monocroma 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [Pantalla E-paper de 5.83 pulgadas - Monocroma 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [Pantalla ePaper monocroma de 7.5 pulgadas con 800x480 píxeles](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 
 
 
@@ -113,7 +113,7 @@ Después de descargar la biblioteca, ve a **Sketch** -> **Include Library** -> *
 
 ## Primeros pasos
 
-Aquí usamos una pantalla monocroma de 7,5 pulgadas como ejemplo. Los pasos son idénticos para otras pantallas compatibles; solo necesitas seleccionar el identificador de tamaño de pantalla adecuado en el controlador.
+Aquí usamos una pantalla monocroma de 7.5 pulgadas como ejemplo. Los pasos son idénticos para otras pantallas compatibles; simplemente necesitas seleccionar el identificador de tamaño de pantalla adecuado en el controlador.
 
 ### Configurar y grabar el programa
 Selecciona el ejemplo que se muestra en la figura
@@ -145,20 +145,20 @@ Luego haz clic en **Upload** para subir el código.
 ## Solución de problemas
 
 **P1: La pantalla no muestra nada después de subir el código.**
-- **Comprueba el cable FPC**: Asegúrate de que el cable FPC de la pantalla ePaper esté insertado con la orientación correcta y bien bloqueado en el conector.
+- **Comprueba el cable FPC**: Asegúrate de que el cable FPC de la pantalla ePaper esté insertado en la orientación correcta y bien bloqueado en el conector.
 - **Verifica la configuración del controlador**: Vuelve a comprobar `driver.h` para asegurarte de que el `BOARD_SCREEN_COMBO` correcto esté seleccionado para tu tamaño de pantalla específico.
 
 **P2: Los colores están invertidos o la pantalla muestra patrones anormales.**
-- **Selecciona el modelo exacto**: Los diferentes tamaños de pantalla o revisiones de IC requieren configuraciones de controlador específicas. Asegúrate de que el número de combinación coincida perfectamente con el modelo de tu pantalla.
-- **Comprueba la alimentación**: Para pantallas más grandes (como la de 7,5 pulgadas), asegúrate de que tu fuente de alimentación pueda proporcionar la corriente adecuada durante la actualización de la pantalla.
+- **Selecciona el modelo exacto**: Los diferentes tamaños de pantalla o revisiones de IC requieren configuraciones de controlador específicas. Asegúrate de que el número de combo coincida perfectamente con el modelo de tu pantalla.
+- **Comprueba la fuente de alimentación**: Para pantallas más grandes (como la de 7.5 pulgadas), asegúrate de que tu fuente de alimentación pueda proporcionar la corriente adecuada durante la actualización de la pantalla.
 
 **P3: La placa no se enciende cuando se conecta a una batería.**
 - **Interruptor de hardware**: Verifica que el interruptor deslizante de hardware de la placa esté en la posición ON.
-- **Conexión de la batería**: Comprueba la polaridad del conector JST de 2,0 mm para asegurarte de que coincida con el diseño de la placa.
+- **Conexión de la batería**: Comprueba la polaridad del conector JST 2.0mm para asegurarte de que coincida con el diseño de la placa.
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

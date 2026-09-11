@@ -52,7 +52,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 本页包含两种不同逻辑的视觉夹取 Demo：
 
 - **一、视觉抓取方式1**：基于 YOLO、RGB-D 深度相机和 Python SDK，完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。
-- **二、视觉抓取方式2**：基于 ROS2 与 YOLOE，通过多终端启动机械臂、Gemini 2 / D405 相机和抓取节点，完成抓取与放置。
+- **二、视觉抓取方式2**：基于 ROS2 与 YOLOE，通过多终端启动机械臂、Gemini 2 相机和抓取节点，完成抓取与放置。
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS 视觉夹取 Demo" />
@@ -656,9 +656,9 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ### 1. 项目介绍
 
-本方案基于 **ROS2** 与 **YOLO**，在 reBot Arm B601-RS 上完成目标检测、抓取与放置。系统通过多终端分别启动机械臂、深度相机和抓取节点。
+本方案基于 **ROS2** 与 **YOLO**，在 reBot Arm B601-RS 上完成目标检测、抓取与放置。系统通过多终端分别启动机械臂、Gemini 2 相机和抓取节点。
 
-当前深度相机支持 **Orbbec Gemini 2** 与 **Intel RealSense D405**。本方案不需要标定板做手眼标定；受安装和打印件公差影响，每台机械臂抓取时会有微小误差。
+当前深度相机仅支持 **Orbbec Gemini 2**。本方案不需要标定板做手眼标定；受安装和打印件公差影响，每台机械臂抓取时会有微小误差。
 
 ### 2. 环境安装
 
@@ -667,11 +667,6 @@ python -c "import torch; print(torch.cuda.is_available())"
 请先按 [reBot Arm B601-RS ROS2 集成](https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/) 完成 `rebotarm_ros2` 工作空间的安装与编译。
 
 #### 步骤 2. 安装相机
-
-按实际使用的相机选择下面其中一套，点击展开对应安装步骤即可。
-
-<details className="content-details">
-<summary>点击展开 Gemini 2 安装步骤</summary>
 
 将 Orbbec ROS2 SDK 克隆到工作空间，并切换到 `v2-main` 分支：
 
@@ -697,66 +692,11 @@ sudo bash install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-</details>
-
-<details className="content-details">
-<summary>点击展开 D405 安装步骤</summary>
-
-1. 克隆 RealSense SDK，并切换到 `v2.58.1`：
-
-```bash
-cd ~
-git clone https://github.com/realsenseai/librealsense.git
-cd librealsense
-git checkout v2.58.1
-```
-
-2. 安装 udev 规则：
-
-```bash
-sudo apt install -y v4l-utils
-cd ~/librealsense
-./scripts/setup_udev_rules.sh
-```
-
-3. 编译并安装 SDK：
-
-:::tip
-如有代理,先关闭代理再重新配置：
-
-```bash
-unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
-```
-
-:::
-
-```bash
-cd ~/librealsense
-mkdir -p build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$(nproc)
-sudo make install
-sudo ldconfig
-```
-
-```4.
-
-```bash
-cd ~/rebotarm_ros2/src
-git clone https://github.com/xiehuangbao888/realsense-ros.git
-cd ~/rebotarm_ros2
-colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
-```
-
-</details>
-
 #### 步骤 3. 导入视觉抓取包
 
 ```bash
 cd ~/rebotarm_ros2/src/
 git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
-cd ~/rebotarm_ros2
-colcon build --symlink-install
 ```
 
 #### 步骤 4. 安装 YOLO / YOLOE 环境
@@ -818,7 +758,7 @@ source ~/rebotarm_ros2/install/setup.bash
 
 ### 3. 运行项目
 
-启动前请确认：机械臂已上电，CAN 接口为 `can0`，Gemini 2 或 D405 已通过 USB 连接。然后先拉起 CAN：
+启动前请确认：机械臂已上电，CAN 接口为 `can0`，Gemini 2 已通过 USB 连接。然后先拉起 CAN：
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -826,12 +766,9 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-下面按终端分别启动，方便看清视觉抓取的逻辑。Gemini 2 与 D405 的启动命令不同，请按实际相机选择。如果希望一键启动，可以自行编写启动脚本。
+下面按终端分别启动，方便看清视觉抓取的逻辑。如果希望一键启动，可以自行编写启动脚本。
 
 #### 终端 A — 启动机械臂 + RViz
-
-<details className="content-details">
-<summary>点击展开 Gemini 2</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -840,24 +777,7 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp bringup_with_camera.launch.py model:=rs channel:=can0 use_rviz:=true
 ```
 
-</details>
-
-<details className="content-details">
-<summary>点击展开 D405</summary>
-
-```bash
-source /opt/ros/humble/setup.bash
-source ~/rebotarm_ros2/install/setup.bash
-
-ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=can0 use_rviz:=true
-```
-
-</details>
-
-#### 终端 B — 启动相机
-
-<details className="content-details">
-<summary>点击展开 Gemini 2</summary>
+#### 终端 B — 启动 Gemini 2
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -865,38 +785,15 @@ source /opt/ros/humble/setup.bash
 ros2 launch orbbec_camera gemini2.launch.py
 ```
 
-</details>
-
-<details className="content-details">
-<summary>点击展开 D405</summary>
-
-```bash
-source /opt/ros/humble/setup.bash
-source ~/rebotarm_ros2/install/setup.bash
-
-ros2 launch realsense2_camera rs_launch.py \
-  align_depth.enable:=true \
-  depth_module.depth_profile:=640x360x30 \
-  depth_module.color_profile:=640x360x30
-```
-
-</details>
-
 #### 终端 C — 机械臂到达观察位 + YOLO 识别
 
-运行前请先 `conda activate yolo`。如果环境名不是 `yolo`，把命令中的环境名换成实际 conda 环境。
-
-<details className="content-details">
-<summary>点击展开 Gemini 2</summary>
-
-需改为自己所设定的yolo安装的环境路径
-
 ```bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
+conda activate yolo
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
-  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:=$HOME/rebot_visual_model/yoloe-26s-seg.pt \
   -p target_class:="cube" \
   -p place_class:="box" \
   -p yolo_device:=0 \
@@ -907,48 +804,19 @@ source ~/rebotarm_ros2/install/setup.bash
   -p auto_publish_on_detect:=true
 ```
 
-</details>
-
-<details className="content-details">
-<summary>点击展开 D405</summary>
-
-需改为自己所设定的yolo安装的环境路径
-
-```bash
-source /opt/ros/humble/setup.bash
-source ~/rebotarm_ros2/install/setup.bash
-
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args 
--p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt 
--p color_topic:=/camera/camera/color/image_raw 
--p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw 
--p color_info_topic:=/camera/camera/color/camera_info 
--p optical_frame:=camera_color_optical_frame 
--p target_class:="cube" 
--p place_class:="box" 
--p yolo_device:=gpu 
--p grasp_z_offset_m:=0.01 
--p place_z_offset_m:=0.1 
--p grasp_x_offset_m:=-0.04 
--p move_to_observation_on_start:=true 
--p auto_publish_on_detect:=true
-```
-
-</details>
-
 
 | 参数               | 说明                                                                         |
 | ------------------ | ---------------------------------------------------------------------------- |
-| `yolo_device:=gpu` | 使用 GPU；无独显时改为`cpu`。也可写成 `yolo_device:=0` 指定第 0 块 GPU       |
-| `target_class`     | 目标抓取物体的 YOLOE 文本类名，可按实际物体修改,支持所有yolo默认能识别的物体 |
-| `place_class`      | 目标放置物体的 YOLOE 文本类名，可按实际物体修改,支持所有yolo默认能识别的物体 |
+| `yolo_device:=0`   | 第 0 块 GPU；无独显时改为`cpu`                                               |
+| `target_class`     | 目标抓取物体的 YOLOE 文本类名，可按实际物体修改                              |
+| `place_class`      | 目标放置物体的 YOLOE 文本类名，可按实际物体修改                              |
 | `grasp_x_offset_m` | `base_link` 前后方向，负数表示往后拉，可按需要调整                           |
 | `grasp_z_offset_m` | 抓取高度微调。默认参数按柔性夹爪设置（比普通夹爪更长），可按实际夹爪高度调整 |
 | `place_z_offset_m` | 放置时的抬高高度，用于控制到达放置点后多高再放下物体                         |
 
 #### 终端 D — 一键抓取放置
 
-默认 3 秒后触发。
+默认 3 秒后触发。如需修改延时，可在启动命令后追加参数，例如 5 秒后触发：
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -957,15 +825,11 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py
 ```
 
-如需修改延时，可在启动命令后追加参数，例如 5 秒后触发：
-
 ```bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 ```
 
 #### 终端 E — 回零（可选）
-
-新版 `rebotarm` 在终端里按 `Ctrl + C` 退出后会自动回零。如果需要手动回零：
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -992,7 +856,6 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [pyorbbecsdk 仓库](https://github.com/orbbec/pyorbbecsdk)
 - [pyorbbecsdk 文档](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
-- [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
 - [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) 文档](https://graspnet.net/)
