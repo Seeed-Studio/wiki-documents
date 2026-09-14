@@ -16,11 +16,13 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
+import '/src/css/rebot-wiki-style.css';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # Getting Started with Pinocchio and MeshCat for reBot Arm B601-DM
 
@@ -55,9 +57,17 @@ This example code can be used to control the robotic arm motors or poses, includ
 :::
 
 
-[Pinocchio](https://github.com/stack-of-tasks/pinocchio) is an open-source library for robotics dynamics analysis and optimization. It provides efficient forward/inverse kinematics, dynamics calculations, and trajectory planning capabilities. [MeshCat](https://github.com/rdeits/meshcat) is a web-based 3D visualization tool that can display robot status and motion trajectories in real-time.
+<div align="center">
+  <a href="https://github.com/stack-of-tasks/pinocchio">Pinocchio</a> is an open-source library for robotics dynamics analysis and optimization. It provides efficient forward/inverse kinematics, dynamics calculations, and trajectory planning capabilities.
+</div>
+
+<div align="center">
+  <a href="https://github.com/rdeits/meshcat">MeshCat</a> is a web-based 3D visualization tool that can display robot status and motion trajectories in real-time.
+</div>
 
 This project combines Pinocchio's powerful computing capabilities with MeshCat's intuitive visualization, providing a complete set of kinematic analysis and debugging tools for reBot Arm B601-DM.
+
+<GitHubStarButton owner="Seeed-Projects" repo="reBotArm_control_py" />
 
 ---
 
@@ -147,20 +157,44 @@ This tutorial assumes the arm is already responsive on the bus, joints are zeroe
 | Item | Requirement |
 |------|-------------|
 | **Python** | 3.10+ |
-| **Operating System** | Ubuntu 22.04+ |
+| **Operating System** | Ubuntu (Ubuntu 24.04 LTS recommended) |
 | **Communication Interface** | USB2CAN Serial Bridge or CAN Interface |
 
 ---
 
 ## Installation Steps
 
-### Step 1. Install uv (if not installed)
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4>Install uv (if not installed)</h4>
+<p className="rebot-step-label">Step 1</p>
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### Step 2. Sync Environment (Install All Dependencies)
+After installation, run the following command to verify that `uv` is available:
+
+```bash
+uv --version
+```
+
+If the installation succeeded, you should see output similar to the following (the version and platform may differ):
+
+```text
+uv 0.11.31 (x86_64-unknown-linux-gnu)
+```
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4>Sync Environment (Install All Dependencies)</h4>
+<p className="rebot-step-label">Step 2</p>
 
 ```bash
 git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
@@ -172,6 +206,9 @@ uv sync
 `uv sync` will automatically create a virtual environment (if it doesn't exist) and install all dependencies according to `pyproject.toml` and `uv.lock`.
 :::
 
+</div>
+</section>
+</div>
 
 ## Tuning MIT / POS_VEL Controller Parameters {#tune-controller-params}
 
@@ -242,6 +279,10 @@ How to locate:
 Damiao (DM) and Robostride (RS) motors use different protocol-layer units, so **the same field name has no cross-vendor comparability**. Modifying RS's `vel_kp` and modifying DM's `vel_kp` mean different things. Please interpret each YAML according to its own field order, do not compare values across config files.
 :::
 
+:::caution Limit the Test Scope Before Tuning
+Large `kp` / `kd` changes across several joints can cause immediate oscillation, overcurrent, or hard-stop collisions if any joint direction or sign is wrong. Before tuning, clear the arm's workspace and plan to test **one joint and one mode at a time, in small steps**.
+:::
+
 ### Editing Procedure
 
 1. **Stop any running script**. The motor is enabled when you edit YAML, changes do not take effect immediately, and inconsistent behavior is easy to trigger.
@@ -264,10 +305,6 @@ Damiao (DM) and Robostride (RS) motors use different protocol-layer units, so **
   uv run python -c "import yaml; print(yaml.safe_load(open('config/rebotarm_dm.yaml'))['joints'][0])"
   ```
 - **Quick rollback**: `git checkout config/rebotarm_dm.yaml` restores the repository defaults.
-
-:::caution Do not tune many joints at once
-Tweaking `kp` / `kd` drastically on multiple joints simultaneously — if one joint's direction or sign is wrong — can instantly cause oscillation, overcurrent, or hard stops. Please **iterate one joint and one mode at a time, in small steps**.
-:::
 
 ---
 
@@ -329,16 +366,31 @@ uv run python example/2_zero_and_read.py
 ---
 </details>
 
-<details>
-<summary>MIT Control Mode (alternative on reBot DM, view on demand — POS_VEL is recommended)</summary>
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--optional">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4>MIT Control Mode (alternative on reBot DM, view on demand — POS_VEL is recommended)</h4>
+<p className="rebot-step-label">Demo 3 · 3_mit_control.py</p>
 
-:::warning Suitability Note
-For **reBot Arm B601-DM**, **POS_VEL (Position‑Velocity) is the recommended control mode** — the Damiao motor protocol natively supports position‑velocity hybrid control with built‑in speed limiting, giving the smoothest results out of the box. MIT mode is **the alternative** and typically requires more careful `kp` / `kd` tuning to behave well. Therefore MIT mode is **not the default** for DM hardware, but since some users do need it, **this demo is kept for on-demand reference and tuning**. If you have no special need, please prefer the POS_VEL mode example below.
+:::warning Optional — MIT Is the Alternative Mode on DM
+For the **reBot Arm B601-DM**, POS_VEL (Position‑Velocity) is generally the more appropriate joint-control mode; the Damiao motor protocol natively supports position‑velocity hybrid control with built-in speed limiting. MIT mode usually requires more careful `kp` / `kd` tuning.
+
+This example is not required to complete the tutorial. Unless you specifically need to debug MIT mode, **skip this example** and use the POS_VEL example below. If your goal is smooth end-effector motion along a planned path, go directly to [Smooth Trajectory IK Control (`8_arm_traj_control.py`)](#demo8-traj-control).
 :::
 
-**MIT Control Mode (`3_mit_control.py`)**
-
 Input target angles for all joints to complete motor control in MIT control mode, typically used for force control, impedance control, or scenarios requiring high dynamic response.
+
+:::danger Before Running — This Example Has No Smooth Trajectory Planning
+This example sends target joint angles directly to the motors, with **no path or velocity planning**. A large target change can cause sudden high-speed motion and trigger overcurrent protection.
+
+- Run it only when you need to verify low-level MIT joint control. Start by moving one joint by only 5–10 degrees, then increase the change gradually after confirming the response and direction;
+- If you need a complete smooth trajectory, skip this example and go to [Smooth Trajectory IK Control (`8_arm_traj_control.py`)](#demo8-traj-control);
+- Clear the arm's workspace before running and make sure you can cut power immediately.
+:::
+
+<details className="rebot-demo-details">
+<summary>Expand Run Instructions (Optional)</summary>
 
 **How to Run**:
 ```bash
@@ -348,20 +400,30 @@ uv run python example/3_mit_control.py
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
 ```
-:::danger
-This example has **no path planning or speed planning**. Large target joint angles will cause motors to move at very high speed, and may even **directly trigger motor overcurrent protection**. Recommendations:
 
-- First verify with **small angles** (e.g., move a single joint only 5~10 degrees), confirm motor response and direction are correct before scaling up;
-- This section has **no built-in smooth trajectory version**. If you need smooth transitions between multiple targets, control your targets and timing carefully, or refer to the subsequent [Inverse Kinematics Control with Smooth Trajectory (8_arm_traj_control.py)](#demo8-traj-control) and port the minimum jerk / acceleration-deceleration planning approach into your own script;
-- Keep people and other devices away from the arm's working radius during operation.
-:::
-
----
 </details>
 
-### Position-Velocity Control Mode (`4_pos_vel_control.py`)
+</div>
+</section>
 
-Input target angles for all joints to complete motor control in POS_VEL (Position-Velocity) hybrid control mode, achieving smoother and more controllable motion when reaching target angles, reducing vibration.
+<section className="rebot-step-item rebot-step-item--optional">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4>Position-Velocity Control Mode</h4>
+<p className="rebot-step-label">Demo 4 · 4_pos_vel_control.py</p>
+
+Enter target angles for all joints to control the motors in POS_VEL (Position-Velocity) hybrid mode. Damiao's built-in speed limiting can reduce the impact of target changes, but this example itself does not provide complete smooth trajectory planning.
+
+:::danger Optional — Speed Limiting Is Not Complete Trajectory Planning
+Although POS_VEL is the recommended joint-control mode for DM, this example still updates joint position targets directly and does not plan the intermediate path. A large target change can still cause sudden motion, collision, or overcurrent.
+
+- This example is not required to complete the tutorial. If you only need smooth end-effector motion, **skip this example** and go directly to [Smooth Trajectory IK Control (`8_arm_traj_control.py`)](#demo8-traj-control);
+- When verifying POS_VEL joint control, start by moving one joint by only 5–10 degrees, then increase the target change gradually;
+- Clear the arm's workspace before running and make sure you can cut power immediately.
+:::
+
+<details className="rebot-demo-details">
+<summary>Expand Run Instructions (Optional)</summary>
 
 **How to Run**:
 ```bash
@@ -371,19 +433,23 @@ uv run python example/4_pos_vel_control.py
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
 ```
-:::danger
-This example has **no path planning or speed planning**. Large target joint angles will cause motors to move at very high speed, and may even **directly trigger motor overcurrent protection**. Recommendations:
 
-- First verify with **small angles** (e.g., move a single joint only 5~10 degrees), confirm motor response and direction are correct before scaling up;
-- This section has **no built-in smooth trajectory version**. If you need smooth transitions between multiple targets, control your targets and timing carefully, or refer to the subsequent [Inverse Kinematics Control with Smooth Trajectory (8_arm_traj_control.py)](#demo8-traj-control) and port the minimum jerk / acceleration-deceleration planning approach into your own script;
-- Keep people and other devices away from the arm's working radius during operation.
-:::
+</details>
+
+</div>
+</section>
+</div>
 
 ---
 
 ## Kinematics Testing
 
-### Forward Kinematics Testing (`5_fk_test.py`)
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4>Forward Kinematics Testing</h4>
+<p className="rebot-step-label">Demo 5 · 5_fk_test.py</p>
 
 Calculate end-effector pose based on joint angles.
 
@@ -416,9 +482,14 @@ uv run python example/5_fk_test.py
     yaw    = +0.0000
 ```
 
----
+</div>
+</section>
 
-### Inverse Kinematics Testing (`6_ik_test.py`)
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4>Inverse Kinematics Testing</h4>
+<p className="rebot-step-label">Demo 6 · 6_ik_test.py</p>
 
 Solve joint angles based on desired end-effector pose.
 
@@ -465,7 +536,15 @@ uv run python example/6_ik_test.py
     joint5     =  -0.0003 deg  (-0.0000 rad)
     joint6     =  +0.0057 deg  (+0.0001 rad)
 ```
-### Inverse Kinematics Control in MIT Mode (`7_arm_ik_control.py`)
+
+</div>
+</section>
+
+<section className="rebot-step-item rebot-step-item--optional">
+<span className="rebot-step-number">7</span>
+<div className="rebot-step-content">
+<h4>Inverse Kinematics Control in MIT Mode</h4>
+<p className="rebot-step-label">Demo 7 · 7_arm_ik_control.py</p>
 
 Use inverse kinematics (IK) in MIT mode to specify the 3D coordinates (X, Y, Z) and orientation (Euler angles) where the robotic arm end-effector should move.
 
@@ -474,6 +553,17 @@ Use inverse kinematics (IK) in MIT mode to specify the 3D coordinates (X, Y, Z) 
 - Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
 - Input `state`: View current actual radian values of each joint.
 - Input `end_state`: View current end-effector actual coordinates (m) and Euler angles (rad) in space.
+
+:::danger Optional — This Example Has No Smooth Trajectory Planning
+This example sends the IK solution directly as the joint target, with **no path or velocity planning**. A large target-pose change can cause sudden high-speed motion and trigger overcurrent protection.
+
+- This example is not required to complete the tutorial. In most cases, **skip this example** and use the next section, [Smooth Trajectory IK Control (`8_arm_traj_control.py`)](#demo8-traj-control), which includes minimum-jerk acceleration/deceleration planning;
+- Run it only when you need to compare or debug IK control without trajectory planning. Keep the first target within 5–10 cm of the current end-effector position;
+- Before running, confirm the target pose is reachable, clear the workspace of people and obstacles, and make sure you can cut power immediately.
+:::
+
+<details className="rebot-demo-details">
+<summary>Expand Run Instructions (Optional)</summary>
 
 **How to Run**:
 ```bash
@@ -487,15 +577,17 @@ uv run python example/7_arm_ik_control.py
 
 > ctrl + c # Return to zero position and exit system
 ```
-:::danger
-This example has **no path planning or speed planning**. Large target angles will cause motors to move at very high speed, and may even **directly trigger motor overcurrent protection**. Recommendations:
 
-- First verify with **small angles** (e.g., move the end-effector only 5~10 cm from its current position), confirm pose and direction are correct before scaling up;
-- For smooth transitions between targets, jump directly to the next section [Inverse Kinematics Control with Smooth Trajectory (8_arm_traj_control.py)](#demo8-traj-control) which uses minimum jerk / acceleration-deceleration planning;
-- Keep people and other devices away from the arm's working radius during operation.
-:::
+</details>
 
-### Inverse Kinematics Control with Smooth Trajectory (`8_arm_traj_control.py`) {#demo8-traj-control}
+</div>
+</section>
+
+<section className="rebot-step-item rebot-step-item--recommended">
+<span className="rebot-step-number">8</span>
+<div className="rebot-step-content">
+<h4 id="demo8-traj-control">Inverse Kinematics Control with Smooth Trajectory</h4>
+<p className="rebot-step-label">Demo 8 · 8_arm_traj_control.py</p>
 
 Use inverse kinematics (IK) in MIT mode to automatically plan a uniform or smooth acceleration/deceleration motion trajectory within the target time, avoiding severe joint vibration.
 
@@ -526,11 +618,20 @@ uv run python example/8_arm_traj_control.py
 If you notice that the **read end-effector pose** differs from the **commanded target pose**, and the **pose itself is reachable** (not outside workspace, not at a singularity), the problem is likely in your MIT / POS_VEL controller parameters. In that case, please refer to the earlier [Tuning MIT / POS_VEL Controller Parameters](#tune-controller-params) section and manually tune `kp` / `kd` etc. using the "single joint, mode by mode, small steps" approach; once tuned, return to this example to verify.
 :::
 
+</div>
+</section>
+</div>
+
 ---
 
 ## Gravity Compensation Testing
 
-### Gravity Compensation Control — Basic Version (`9_gravity_compensation.py`)
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--caution">
+<span className="rebot-step-number">9</span>
+<div className="rebot-step-content">
+<h4>Gravity Compensation Control — Basic Version</h4>
+<p className="rebot-step-label">Demo 9 · 9_gravity_compensation.py</p>
 
 Use the Pinocchio dynamics model to compensate for joint gravity.
 
@@ -546,6 +647,12 @@ kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 - Won't fall due to its own weight when released
 - Can be manually moved to any position
 
+:::caution Normal Exit Performs a Safe Return Home
+When you stop the script normally with `Ctrl+C`, it first stops gravity-compensation control and holds the current pose with stiff gains and gravity feedforward. It then returns the arm to zero through a minimum-jerk trajectory; only after homing completes does it disconnect and disable the motors.
+
+Automatic homing depends on normal program execution, communication, and power. Keep people and obstacles outside the arm's workspace and be ready to support the arm during homing. A communication failure, unexpected power loss, or forced termination may prevent the protection sequence from completing; cut power immediately if abnormal motion occurs.
+:::
+
 **How to Run**:
 ```bash
 uv run python example/9_gravity_compensation.py
@@ -554,10 +661,6 @@ uv run python example/9_gravity_compensation.py
 **Output**:
 - Real-time display of desired torque for each joint (N·m)
 - Press `Ctrl+C` to stop and disconnect
-
-:::caution Return to Home Before Exiting Gravity Compensation
-When stopping the script (`Ctrl+C`), the program will **directly disable all motors**, and the robotic arm **will not automatically return to zero**. Please hold the robotic arm by hand or move it to a safe/home pose before exiting to avoid sudden joint drops that may cause collisions or damage.
-:::
 
 :::tip Adjusting Individual Joint Compensation
 If some joints are under-compensated or over-compensated due to structural friction or assembly differences, you can apply additional scaling to the corresponding element of the `tau_g` array in the code:
@@ -570,8 +673,14 @@ tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually 
 For example, `tau_g[2] *= 1.2` means increasing the gravity compensation torque of joint 2 by 20%. It is recommended to adjust item by item based on the actual floating effect to avoid making excessively large changes at once.
 :::
 
+</div>
+</section>
 
-### Gravity Compensation Control — End-Effector Velocity Lock Version (`10_gravity_compensation_lock.py`)
+<section className="rebot-step-item rebot-step-item--caution">
+<span className="rebot-step-number">10</span>
+<div className="rebot-step-content">
+<h4>Gravity Compensation Control — End-Effector Velocity Lock Version</h4>
+<p className="rebot-step-label">Demo 10 · 10_gravity_compensation_lock.py</p>
 
 Based on the basic gravity compensation, adds end-effector velocity detection and joint angle locking mechanism.
 
@@ -594,6 +703,12 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
 - Robotic arm locks in current position, requiring force to change target angle
 - More stable than basic version, suitable for scenarios requiring pose maintenance
 
+:::caution Normal Exit Performs a Safe Return Home
+When you stop the script normally with `Ctrl+C`, it first stops gravity-compensation control and holds the current pose with stiff gains and gravity feedforward. It then returns the arm to zero through a minimum-jerk trajectory; only after homing completes does it disconnect and disable the motors.
+
+Automatic homing depends on normal program execution, communication, and power. Keep people and obstacles outside the arm's workspace and be ready to support the arm during homing. A communication failure, unexpected power loss, or forced termination may prevent the protection sequence from completing; cut power immediately if abnormal motion occurs.
+:::
+
 **How to Run**:
 ```bash
 uv run python example/10_gravity_compensation_lock.py
@@ -604,10 +719,6 @@ uv run python example/10_gravity_compensation_lock.py
 - End linear velocity, angular velocity
 - Gravity compensation torque for each joint (N·m)
 - Press `Ctrl+C` to stop and disconnect
-
-:::caution Return to Home Before Exiting Gravity Compensation
-When stopping the script (`Ctrl+C`), the program will **directly disable all motors**, and the robotic arm **will not automatically return to zero**. Please hold the robotic arm by hand or move it to a safe/home pose before exiting to avoid sudden joint drops that may cause collisions or damage.
-:::
 
 :::tip Adjusting Individual Joint Compensation
 If some joints are under-compensated or over-compensated due to structural friction or assembly differences, you can apply additional scaling to the corresponding element of the `tau_g` array in the code:
@@ -626,17 +737,25 @@ You can modify the `ENABLED_JOINTS` list at the top of the script to enable only
 ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 ```
 
+</div>
+</section>
+</div>
+
 ---
 
-### Simulation Environment
+## Simulation Environment
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/traj_sim_geodesic.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/meshcat_DM.png" alt="MeshCat simulation of the reBot Arm B601-DM" />
 </div>
 
-
-#### Forward Kinematics Simulation (`sim/fk_sim.py`)
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S1</span>
+<div className="rebot-step-content">
+<h4>Forward Kinematics Simulation</h4>
+<p className="rebot-step-label">Simulation Demo 1 · sim/fk_sim.py</p>
 
 Interactive forward kinematics simulation, visualize robot arm pose by inputting joint angles in MeshCat.
 
@@ -656,9 +775,14 @@ uv run python example/sim/fk_sim.py
 - Supports continuous input to test different poses
 - Formatted pose information output
 
----
+</div>
+</section>
 
-#### Inverse Kinematics Simulation (`sim/ik_sim.py`)
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S2</span>
+<div className="rebot-step-content">
+<h4>Inverse Kinematics Simulation</h4>
+<p className="rebot-step-label">Simulation Demo 2 · sim/ik_sim.py</p>
 
 Interactive inverse kinematics simulation, automatically solve joint angles from target pose and visualize.
 
@@ -682,9 +806,14 @@ uv run python example/sim/ik_sim.py
 - Display iteration count and error
 - Real-time robot pose updates
 
----
+</div>
+</section>
 
-#### Trajectory Planning Simulation (`sim/traj_sim.py`)
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S3</span>
+<div className="rebot-step-content">
+<h4>Trajectory Planning Simulation</h4>
+<p className="rebot-step-label">Simulation Demo 3 · sim/traj_sim.py</p>
 
 SE(3) geodesic based trajectory planning simulation, including CLIK tracking and MeshCat animation playback.
 
@@ -705,9 +834,14 @@ uv run python example/sim/traj_sim.py
 - Complete trajectory animation playback in MeshCat
 - Display reference path (gray) and actual path (green)
 
----
+</div>
+</section>
 
-#### Visualizer Tool (`sim/visualizer.py`)
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S4</span>
+<div className="rebot-step-content">
+<h4>Visualizer Tool</h4>
+<p className="rebot-step-label">Simulation Demo 4 · sim/visualizer.py</p>
 
 MeshCat visualizer wrapper, providing unified robot display interface.
 
@@ -724,6 +858,10 @@ viz = Visualizer()
 viz.update(q)  # Update robot pose
 viz.draw_path(points, "path_name", color)  # Draw path
 ```
+
+</div>
+</section>
+</div>
 
 ---
 
