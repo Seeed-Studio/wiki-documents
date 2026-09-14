@@ -205,7 +205,7 @@ python -m rebotclip --web                      # http://127.0.0.1:8000
 python -m rebotclip --web --host 0.0.0.0 --port 8000   # expose on your LAN
 ```
 
-次に **http://127.0.0.1:8000**（または `0.0.0.0` にバインドした場合は `http://<pc-ip>:8000`）を開き、以下を行います：
+次に **http://127.0.0.1:8000** （または `0.0.0.0` にバインドした場合は `http://<pc-ip>:8000`）を開き、以下を行います：
 
 1. **Scan devices** → ドロップダウンから `Clip XXXX` を選択 → **Connect**。
 2. **Start RTC** → 話しかけます。VAD メーター、ライブ文字起こし、検出された **action** バッジと応答を確認します。（または **Demo (no Clip)** にチェックを入れて、ハードウェアなしで同梱の音声を再生します。）
