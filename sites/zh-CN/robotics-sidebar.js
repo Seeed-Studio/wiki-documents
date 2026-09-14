@@ -86,7 +86,7 @@ const sidebars = {
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Agent'
               ]
             },
-            {
+            /*{
               type: 'category',
               label: '课程',
               collapsed: false,
@@ -110,7 +110,7 @@ const sidebars = {
                   ],
                 },
               ],
-            },
+            },*/
 
           ]
         },
