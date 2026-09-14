@@ -8,10 +8,10 @@ slug: /epaper_ee04
 sidebar_position: 3
 sku: 104990861,100075670,100064541,E25102101
 last_update:
-  date: 09/25/2025
-  author: Jason
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-09-25'
-updatedAt: '2026-04-27'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/epaper_ee04/
 ---
 
@@ -443,7 +443,7 @@ Please note that you need to create a driver.h file within your project director
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image2.png" style={{width:700, height:'auto'}}/></div>
 
-Next, navigate to the SenseCraft HMI Tool at https://sensecraft.seeed.cc/hmi/tools/dither and upload the image you wish to display.
+Next, navigate to the SenseCraft Seeedash Tool at https://sensecraft.seeed.cc/hmi/tools/dither and upload the image you wish to display.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image3m.png" style={{width:700, height:'auto'}}/></div>
 
@@ -454,7 +454,7 @@ After uploading the image, generate the C array (image data).
 Copy the array content. Be careful to only copy the hex data and not include any irrelevant characters.
 
 :::tip 
-If the colors on your display appear inverted compared to your original design, select the Invert Colors option in the HMI tool before generating the code.
+If the colors on your display appear inverted compared to your original design, select the Invert Colors option in the Seeedash tool before generating the code.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image5.png" style={{width:700, height:'auto'}}/></div>

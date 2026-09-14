@@ -6,10 +6,10 @@ slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
 sidebar_label: Arduino – Display
 last_update:
-  date: 05/15/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-08-21'
-updatedAt: '2026-06-16'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';

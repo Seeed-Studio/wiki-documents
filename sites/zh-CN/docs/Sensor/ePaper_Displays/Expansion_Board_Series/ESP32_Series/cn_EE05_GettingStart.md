@@ -6,11 +6,11 @@ image: https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp
 slug: /epaper_ee05
 sidebar_position: 4
 last_update:
-  date: 04/27/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/cn/epaper_ee05/
-updatedAt: '2026-04-28'
+updatedAt: '2026-09-10'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -37,15 +37,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 介绍
 
-由 **XIAO ESP32-S3 Plus** 提供算力，显示板 EE05 支持多种 24 针 ePaper 显示屏，并可通过 SenseCraft HMI 实现零代码的 UI 设计与部署。借助扩展 IO 和带电池连接器的电源开关，它非常适合低功耗智能显示应用。
+由 **XIAO ESP32-S3 Plus** 提供算力的 EE05 显示板支持多种 24 针 ePaper 显示屏，并可通过 SenseCraft Seeedash 实现零代码 UI 设计与部署。借助扩展 IO 和带电池连接器的电源开关，它非常适合低功耗智能显示应用。
 
 ### 特性
 
 - **由 XIAO ESP32-S3 Plus 驱动：** 连接兼容的 ePaper 显示屏后即可立即工作。
-- **多样化显示支持：** 兼容多种 24 针 ePaper 显示屏，以满足不同项目需求。
-- **扩展 IO 端口：** 可连接额外传感器，如温湿度传感器，以增强功能。
-- **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效的电源管理和节能。
-- **基于 SenseCraft HMI 的零代码 UI 设计与部署：** 借助我们全新的 AI 驱动零代码平台 SenseCraft HMI，轻松设计并部署个性化仪表盘。通过简单的拖拽元素创建 UI，从丰富模板中进行选择，或让 AI 帮助你完成设计。将来自 Web API 的实时数据接入，然后只需几次点击即可将完成的仪表盘部署到 ePaper 显示屏。从设计到数据配置再到部署，全流程都在同一平台上无缝完成。
+- **多功能显示支持：** 兼容多种 24 针 ePaper 显示屏，以满足不同项目需求。
+- **扩展 IO 端口：** 可连接额外传感器，例如温湿度传感器，以增强功能。
+- **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
+- **基于 SenseCraft Seeedash 的零代码 UI 设计与部署：** 借助我们全新的 AI 驱动零代码平台 SenseCraft Seeedash，轻松设计和部署个性化仪表盘。通过简单的拖拽组件创建 UI，从丰富模板中进行选择，或让 AI 帮助你完成设计。将来自 Web API 的实时数据接入后，只需几次点击即可将完成的仪表盘部署到 ePaper 显示屏。从设计到数据配置再到部署，全流程都在同一平台上无缝完成。
 
 ### 规格参数
 
@@ -102,7 +102,7 @@ EE05 支持多种 24 针 SPI ePaper 显示屏，包括但不限于：
 :::tip
 如果选择错误，屏幕将不会显示任何内容。
 
-因此请务必确认你选择了正确的设备或元件类型。
+所以请务必确保你选择了正确的设备或组件类型。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/1.jpg" style={{width:800, height:'auto'}}/></div>
@@ -111,9 +111,9 @@ EE05 支持多种 24 针 SPI ePaper 显示屏，包括但不限于：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
-## 入门
+## 入门指南
 
-这里我们以 7.5 英寸黑白显示屏为例。其他受支持的屏幕步骤完全相同，你只需在驱动中选择合适的屏幕尺寸标识符即可。
+这里我们以 7.5 英寸黑白显示屏为例。其他受支持的屏幕步骤完全相同，你只需在驱动中选择合适的屏幕尺寸标识即可。
 
 ### 配置并烧录程序
 选择图中所示的示例
@@ -144,15 +144,15 @@ EE05 支持多种 24 针 SPI ePaper 显示屏，包括但不限于：
 
 ## 故障排查
 
-**Q1: 上传代码后屏幕没有任何显示。**
+**Q1：上传代码后屏幕没有任何显示。**
 - **检查 FPC 线缆：** 确保 ePaper 的 FPC 线缆插入方向正确，并且已经牢固锁紧在连接器中。
 - **确认驱动配置：** 再次检查 `driver.h`，确保为你的具体屏幕尺寸选择了正确的 `BOARD_SCREEN_COMBO`。
 
-**Q2: 颜色反转或显示异常图案。**
+**Q2：颜色反转或显示异常图案。**
 - **选择完全匹配的型号：** 不同屏幕尺寸或 IC 版本需要特定的驱动配置。请确保组合编号与屏幕型号完全匹配。
 - **检查电源供给：** 对于较大尺寸的屏幕（如 7.5 英寸），请确保电源在屏幕刷新期间能够提供足够电流。
 
-**Q3: 使用电池连接时开发板无法上电。**
+**Q3：连接电池后开发板无法上电。**
 - **硬件开关：** 确认板载硬件滑动开关已拨到 ON 位置。
 - **电池连接：** 检查 JST 2.0mm 连接器的极性，确保与开发板设计相匹配。
 

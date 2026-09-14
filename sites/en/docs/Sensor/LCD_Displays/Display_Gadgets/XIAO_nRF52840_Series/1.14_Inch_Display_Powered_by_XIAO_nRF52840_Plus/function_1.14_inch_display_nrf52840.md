@@ -11,7 +11,7 @@ keywords:
   - 1.14
   - I2S
   - Audio
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /function_1.14_inch_display_nrf52840
 sku: 100069374
 sidebar_position: 2

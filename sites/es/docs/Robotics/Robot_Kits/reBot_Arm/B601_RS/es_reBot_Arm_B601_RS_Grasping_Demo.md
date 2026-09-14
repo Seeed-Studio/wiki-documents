@@ -54,7 +54,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 Esta página cubre dos demos de agarre visual con implementaciones diferentes:
 
 - **Método 1 de agarre visual**: Un pipeline de YOLO + RGB-D + SDK de Python que cubre la configuración del entorno, la integración de la cámara, la calibración mano-ojo y la depuración del agarre.
-- **Método 2 de agarre visual**: Un flujo de trabajo ROS2 + YOLOE que inicia el brazo, la cámara Gemini 2 y los nodos de agarre en varios terminales para recoger y colocar objetos.
+- **Método 2 de agarre visual**: Un flujo de trabajo ROS2 + YOLOE que inicia el brazo, la cámara Gemini 2 / D405 y los nodos de agarre en varios terminales para recoger y colocar objetos.
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="Demo de agarre visual con reBot Arm B601-RS" />
@@ -655,9 +655,9 @@ Si la salida es `False`, corrige primero la instalación de CUDA / PyTorch. Si e
 
 ### 1. Presentación del proyecto
 
-Esta solución usa **ROS2** y **YOLO** en el reBot Arm B601-RS para la detección de objetos, el agarre y la colocación. El sistema inicia el brazo, la cámara Gemini 2 y los nodos de agarre en terminales separados.
+Esta solución usa **ROS2** y **YOLO** en el reBot Arm B601-RS para la detección de objetos, el agarre y la colocación. El sistema inicia el brazo, la cámara de profundidad y los nodos de agarre en terminales separados.
 
-La cámara de profundidad actualmente solo es compatible con **Orbbec Gemini 2**. Este flujo de trabajo no requiere una placa de calibración para la calibración mano-ojo. Debido a las tolerancias de montaje y de las piezas impresas, cada brazo puede presentar un pequeño desfase de agarre.
+La cámara de profundidad actualmente es compatible con **Orbbec Gemini 2** e **Intel RealSense D405**. Este flujo de trabajo no requiere una placa de calibración para la calibración mano-ojo. Debido a las tolerancias de montaje y de las piezas impresas, cada brazo puede presentar un pequeño desfase de agarre.
 
 ### 2. Instalación del entorno
 
@@ -666,6 +666,11 @@ La cámara de profundidad actualmente solo es compatible con **Orbbec Gemini 2**
 Primero completa la instalación y la compilación del espacio de trabajo `rebotarm_ros2` siguiendo [Integración ROS2 de reBot Arm B601-RS](https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_ros2_integration/).
 
 #### Paso 2. Instala la cámara
+
+Elige una de las dos cámaras e inicia la instalación expandiendo la sección correspondiente.
+
+<details className="content-details">
+<summary>Haz clic para expandir la instalación de Gemini 2</summary>
 
 Clona el SDK ROS2 de Orbbec en el espacio de trabajo y cambia a la rama `v2-main`:
 
@@ -691,18 +696,72 @@ sudo bash install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
+</details>
+
+<details className="content-details">
+<summary>Haz clic para expandir la instalación de D405</summary>
+
+1. Clona el SDK de RealSense y cambia a `v2.58.1`:
+
+```bash
+cd ~
+git clone https://github.com/realsenseai/librealsense.git
+cd librealsense
+git checkout v2.58.1
+```
+
+2. Instala las reglas udev:
+
+```bash
+sudo apt install -y v4l-utils
+cd ~/librealsense
+./scripts/setup_udev_rules.sh
+```
+
+3. Compila e instala el SDK:
+
+:::tip
+Si hay un proxy activo, desactívalo antes de volver a configurar:
+
+```bash
+unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
+```
+:::
+
+```bash
+cd ~/librealsense
+mkdir -p build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j$(nproc)
+sudo make install
+sudo ldconfig
+```
+
+4. Compila el paquete ROS2 de RealSense:
+
+```bash
+cd ~/rebotarm_ros2/src
+git clone https://github.com/xiehuangbao888/realsense-ros.git
+cd ~/rebotarm_ros2
+colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
+```
+
+</details>
+
 #### Paso 3. Importa el paquete de agarre visual
 
 ```bash
 cd ~/rebotarm_ros2/src/
 git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
+cd ~/rebotarm_ros2
+colcon build --symlink-install
 ```
 
 #### Paso 4. Instala el entorno YOLO / YOLOE
 
-`grasp_yolo` llama a Ultralytics YOLOE desde Python. Usa un entorno conda dedicado y no uses el `/usr/bin/python3` del sistema.
+`grasp_yolo` llama a Ultralytics YOLOE desde Python. Usa un entorno conda independiente y no uses el `/usr/bin/python3` del sistema.
 
-**Crear el entorno**
+**Crea el entorno**
 
 ```bash
 conda create -n yolo python=3.10
@@ -715,7 +774,7 @@ pip install "numpy==1.26.4" transforms3d
 pip install git+https://github.com/ultralytics/CLIP.git
 ```
 
-Si tienes una GPU NVIDIA, confirma primero que CUDA está disponible. Si la salida es `False`, instala una compilación de CUDA / PyTorch coincidente. También puedes continuar en CPU, pero la tasa de fotogramas de detección será menor:
+Si tienes una GPU NVIDIA, primero confirma que CUDA está disponible. Si la salida es `False`, instala una versión compatible de CUDA / PyTorch. También puedes continuar con CPU, aunque la tasa de fotogramas de detección será menor:
 
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
@@ -727,7 +786,7 @@ Verifica YOLOE:
 python -c "from ultralytics import YOLOE; print('YOLOE OK')"
 ```
 
-**Descargar los pesos a `~/rebot_visual_model`**
+**Descarga los pesos en `~/rebot_visual_model`**
 
 ```bash
 mkdir -p ~/rebot_visual_model && cd ~/rebot_visual_model
@@ -748,16 +807,16 @@ colcon build --symlink-install
 source ~/rebotarm_ros2/install/setup.bash
 ```
 
-El entorno de agarre visual ya está listo. En cada terminal nuevo, haz `source` de lo siguiente antes de ejecutar comandos de agarre visual:
+El entorno de agarre visual ya está listo. En cada terminal nuevo, ejecuta source de lo siguiente antes de las órdenes de agarre visual:
 
 ```bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 ```
 
-### 3. Ejecutar el proyecto
+### 3. Ejecuta el proyecto
 
-Antes de empezar, confirma que el brazo está encendido, que la interfaz CAN es `can0` y que Gemini 2 está conectada por USB. Luego levanta CAN:
+Antes de empezar, confirma que el brazo está encendido, que la interfaz CAN es `can0` y que Gemini 2 o D405 está conectada por USB. Luego levanta CAN:
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -765,9 +824,12 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-Inicia el conjunto en terminales separados para que la lógica de agarre sea más fácil de seguir. Si quieres un arranque con un solo clic, puedes escribir tu propio script de inicio.
+Arranca cada parte en un terminal distinto para ver con claridad la lógica de agarre. Gemini 2 y D405 usan órdenes de arranque distintas; elige las de tu cámara. Si quieres un arranque en un clic, puedes escribir tu propio script.
 
-#### Terminal A — Iniciar el brazo + RViz
+#### Terminal A — Arranca el brazo + RViz
+
+<details className="content-details">
+<summary>Haz clic para expandir Gemini 2</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -776,7 +838,24 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp bringup_with_camera.launch.py model:=rs channel:=can0 use_rviz:=true
 ```
 
-#### Terminal B — Iniciar Gemini 2
+</details>
+
+<details className="content-details">
+<summary>Haz clic para expandir D405</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=can0 use_rviz:=true
+```
+
+</details>
+
+#### Terminal B — Arranca la cámara
+
+<details className="content-details">
+<summary>Haz clic para expandir Gemini 2</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -784,15 +863,38 @@ source /opt/ros/humble/setup.bash
 ros2 launch orbbec_camera gemini2.launch.py
 ```
 
-#### Terminal C — Mover a la pose de observación + detección YOLO
+</details>
+
+<details className="content-details">
+<summary>Haz clic para expandir D405</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
-conda activate yolo
 
-python -m rebot_visual_grasp.grasp_yolo --ros-args \
-  -p yolo_model:=$HOME/rebot_visual_model/yoloe-26s-seg.pt \
+ros2 launch realsense2_camera rs_launch.py \
+  align_depth.enable:=true \
+  depth_module.depth_profile:=640x360x30 \
+  depth_module.color_profile:=640x360x30
+```
+
+</details>
+
+#### Terminal C — Ir a la pose de observación + detección YOLO
+
+Primero ejecuta `conda activate yolo`. Si el nombre del entorno no es `yolo`, cámbialo por el de tu entorno conda.
+
+<details className="content-details">
+<summary>Haz clic para expandir Gemini 2</summary>
+
+Cambia la ruta de Python al entorno YOLO que hayas creado.
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
   -p target_class:="cube" \
   -p place_class:="box" \
   -p yolo_device:=0 \
@@ -803,18 +905,47 @@ python -m rebot_visual_grasp.grasp_yolo --ros-args \
   -p auto_publish_on_detect:=true
 ```
 
+</details>
+
+<details className="content-details">
+<summary>Haz clic para expandir D405</summary>
+
+Cambia la ruta de Python al entorno YOLO que hayas creado.
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args 
+-p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt 
+-p color_topic:=/camera/camera/color/image_raw 
+-p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw 
+-p color_info_topic:=/camera/camera/color/camera_info 
+-p optical_frame:=camera_color_optical_frame 
+-p target_class:="cube" 
+-p place_class:="box" 
+-p yolo_device:=gpu 
+-p grasp_z_offset_m:=0.01 
+-p place_z_offset_m:=0.1 
+-p grasp_x_offset_m:=-0.04 
+-p move_to_observation_on_start:=true 
+-p auto_publish_on_detect:=true
+```
+
+</details>
+
 | Parámetro | Descripción |
 |-----------|-------------|
-| `yolo_device:=0` | GPU 0; usa `cpu` si no tienes una GPU dedicada |
-| `target_class` | Nombre de clase de texto YOLOE del objeto a agarrar; cámbialo para que coincida con el objeto real |
-| `place_class` | Nombre de clase de texto YOLOE del objetivo de colocación; cámbialo para que coincida con el objeto real |
-| `grasp_x_offset_m` | Desplazamiento adelante/atrás en `base_link`; un valor negativo retrasa la pose hacia atrás |
-| `grasp_z_offset_m` | Ajuste fino de la altura de agarre. El valor predeterminado es para la pinza flexible, que es más larga que la pinza estándar |
-| `place_z_offset_m` | Elevación adicional al colocar, para controlar a qué altura se suelta el objeto sobre el punto de colocación |
+| `yolo_device:=gpu` | Usa la GPU; cámbialo a `cpu` si no hay GPU dedicada. También puedes usar `yolo_device:=0` para la GPU 0 |
+| `target_class` | Nombre de clase de texto YOLOE del objeto a agarrar; cámbialo según el objeto real. Admite las clases predeterminadas de YOLO |
+| `place_class` | Nombre de clase de texto YOLOE del objetivo de colocación; cámbialo según el objeto real. Admite las clases predeterminadas de YOLO |
+| `grasp_x_offset_m` | Desplazamiento adelante/atrás en `base_link`; un valor negativo tira hacia atrás |
+| `grasp_z_offset_m` | Ajuste fino de la altura de agarre. El valor predeterminado es para la pinza flexible, más larga que la pinza estándar |
+| `place_z_offset_m` | Elevación extra al colocar, para controlar a qué altura se suelta el objeto |
 
-#### Terminal D — Agarre y colocación con un clic
+#### Terminal D — Agarre y colocación en un clic
 
-El retardo de disparo predeterminado es de 3 segundos. Para cambiarlo, añade un parámetro. Por ejemplo, para disparar a los 5 segundos:
+El retardo de disparo predeterminado es de 3 segundos.
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -823,11 +954,15 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py
 ```
 
+Para cambiar el retardo, añade un parámetro. Por ejemplo, disparar a los 5 segundos:
+
 ```bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 ```
 
 #### Terminal E — Volver a home (opcional)
+
+En la versión nueva de `rebotarm`, pulsar `Ctrl + C` en el terminal hace que el brazo vuelva a home automáticamente. Para hacerlo a mano:
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -854,6 +989,7 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [Repositorio pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
 - [Documentación de pyorbbecsdk](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
+- [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
 - [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Documentación de Graspnet(Anygrasp)](https://graspnet.net/)
