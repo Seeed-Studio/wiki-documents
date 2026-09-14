@@ -1,6 +1,16 @@
 const docList = [
   [
     {
+      "path": "/sensecap_s1000_v2_co2_calibration",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_S1000_V2_CO2_Calibration.jpg",
+      "title": "SenseCAP S1000 V2 CO₂ Calibration",
+      "date": "2026-09-09",
+      "title_cn": "SenseCAP S1000 V2 CO₂ 标定",
+      "title_ja": "SenseCAP S1000 V2 CO₂ キャリブレーション",
+      "title_es": "Calibración de CO₂ del SenseCAP S1000 V2",
+      "title_pt": "Calibração de CO₂ do SenseCAP S1000 V2"
+    },
+    {
       "path": "/ai_robotics_microduck_rl_on_jetson",
       "image": "https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png",
       "title": "Microduck RL on Jetson",
@@ -9,7 +19,9 @@ const docList = [
       "title_ja": "Jetson 上の Microduck RL",
       "title_es": "Microduck RL en Jetson",
       "title_pt": "Microduck RL no Jetson"
-    },
+    }
+  ],
+  [
     {
       "path": "/respeaker_clip_ai_chat_system_architecture",
       "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-tools.png",
@@ -18,7 +30,17 @@ const docList = [
       "title_cn": "reSpeaker Clip AI 聊天系统架构",
       "title_ja": "reSpeaker Clip AI チャットシステムアーキテクチャ",
       "title_es": "Arquitectura del sistema de chat con IA de reSpeaker Clip",
-      "title_pt": "Arquitetura do Sistema de Chat reSpeaker Clip AI"
+      "title_pt": "Arquitetura do Sistema de Chat com IA do reSpeaker Clip"
+    },
+    {
+      "path": "/display_gadgets",
+      "image": "https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp",
+      "title": "XIAO Display Gadgets Series",
+      "date": "2026-08-31",
+      "title_cn": "XIAO Display Gadgets 系列",
+      "title_ja": "XIAO Display Gadgets シリーズ",
+      "title_es": "XIAO Display Gadgets Serie",
+      "title_pt": "Série XIAO Display Gadgets"
     }
   ],
   [
@@ -89,6 +111,16 @@ const docList = [
   ],
   [
     {
+      "path": "/getting_started_0.96_inch_display_esp32s3",
+      "image": "https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_esp32s3.webp",
+      "title": "Getting Started with XIAO 0.96'' IPS Display (ESP32-S3)",
+      "date": "2026-08-20",
+      "title_cn": "XIAO 0.96'' IPS Display (ESP32-S3) 入门指南",
+      "title_ja": "XIAO 0.96'' IPS Display (ESP32-S3) のはじめに",
+      "title_es": "Introducción a XIAO 0.96'' IPS Display (ESP32-S3)",
+      "title_pt": "Introdução ao XIAO 0.96'' IPS Display (ESP32-S3)"
+    },
+    {
       "path": "/jetson_fisheye_surround_view_demo",
       "image": "https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif",
       "title": "Build a Four-Camera Fisheye Surround View Demo on Jetson AGX Thor",
@@ -97,38 +129,6 @@ const docList = [
       "title_ja": "Jetson AGX Thor 上で 4 台の魚眼カメラによるサラウンドビュー デモを構築する",
       "title_es": "Crea una demo de vista envolvente con ojo de pez y cuatro cámaras en Jetson AGX Thor",
       "title_pt": "Crie uma Demonstração de Visão Surround com Quatro Câmeras Olho de Peixe no Jetson AGX Thor"
-    },
-    {
-      "path": "/recamera_deploy_monocular_depth",
-      "image": "https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-indoor-office-result.png",
-      "title": "Deploy Monocular Depth Estimation on reCamera (FastDepth, INT8)",
-      "date": "2026-08-18",
-      "title_cn": "在 reCamera 上部署单目深度估计（FastDepth，INT8）",
-      "title_ja": "reCamera で単眼深度推定をデプロイする (FastDepth, INT8)",
-      "title_es": "Desplegar Estimación de Profundidad Monocular en reCamera (FastDepth, INT8)",
-      "title_pt": "Implantar Estimação de Profundidade Monocular na reCamera (FastDepth, INT8)"
-    }
-  ],
-  [
-    {
-      "path": "/install_ubuntu_on_sensecap_m4",
-      "image": "https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview.png",
-      "title": "Install Ubuntu on SenseCAP M4 via USB",
-      "date": "2026-08-18",
-      "title_cn": "通过 USB 在 SenseCAP M4 上安装 Ubuntu",
-      "title_ja": "USB 経由で SenseCAP M4 に Ubuntu をインストールする",
-      "title_es": "Instalar Ubuntu en SenseCAP M4 vía USB",
-      "title_pt": "Instalar o Ubuntu no SenseCAP M4 via USB"
-    },
-    {
-      "path": "/rebot_arm_b601_dm_isaacsim",
-      "image": "https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png",
-      "title": "Simulating reBot-B601-DM with Isaac Sim",
-      "date": "2026-08-17T00:00:00.000Z",
-      "title_cn": "通过 Isaacsim 仿真 reBot-B601-DM",
-      "title_ja": "Isaac Sim を使用した reBot-B601-DM のシミュレーション",
-      "title_es": "Simulación de reBot-B601-DM con Isaac Sim",
-      "title_pt": "Simulando o reBot-B601-DM com Isaac Sim"
     }
   ]
 ];
