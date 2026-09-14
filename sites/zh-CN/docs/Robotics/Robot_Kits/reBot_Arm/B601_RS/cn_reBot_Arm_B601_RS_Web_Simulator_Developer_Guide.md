@@ -1,6 +1,6 @@
 ---
-description: 本教程面向开发者，介绍 reBot Arm B601-RS 网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
-title: reBot Arm B601-RS Web 仿真器与 ROS 2/MuJoCo 开发者教程
+description: 本教程面向开发者，介绍 ReBot Arm Digital Twin & Control Stack — B601-RS 的网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
+title: ReBot Arm Digital Twin & Control Stack — B601-RS
 keywords:
   - reBot Arm
   - B601-RS
@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# reBot Arm B601-RS Web 仿真器与 ROS 2/MuJoCo 开发者教程
+# ReBot Arm Digital Twin & Control Stack — B601-RS
 
 <RebotRsDocNav />
 
@@ -57,12 +57,12 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <strong>Three.js 可视化 · ROS 2 · SocketCAN · MuJoCo 仿真 · LLM/MCP 控制</strong>
 </p>
 
-reBot Arm B601-RS 工程集成了 Three.js 网页控制台、ROS 2 真机驱动、RS 专用 MuJoCo 动力学场景、视觉检测、轨迹与逆运动学，以及可选的 LLM/MCP 抓取 Agent。本教程介绍如何安装、启动和二次开发整套系统。
+ReBot Arm Digital Twin & Control Stack — B601-RS 工程集成了 Three.js 网页控制台、ROS 2 真机驱动、RS 专用 MuJoCo 动力学场景、视觉检测、轨迹与逆运动学，以及可选的 LLM/MCP 抓取 Agent。本教程介绍如何安装、启动和二次开发整套系统。
 
 <GitHubStarButton
   owner="Yang-Ci"
-  repo="ReBot_Arm_web_RS"
-  ariaLabel="在 GitHub 上为 ReBot_Arm_web_RS 点亮 Star"
+  repo="ReBot_Arm_DigitalTwin_RS"
+  ariaLabel="在 GitHub 上为 ReBot_Arm_DigitalTwin_RS 点亮 Star"
 />
 
 > **重要安全提示**
@@ -175,11 +175,11 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
       <p className="rebot-step-label">第 1 步</p>
 
 ```bash
-git clone https://github.com/Yang-Ci/ReBot_Arm_web_RS.git ~/reBot_Arm_Mujoco-RS
-cd ~/reBot_Arm_Mujoco-RS
+git clone https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS.git ~/ReBot_Arm_DigitalTwin_RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ```
 
-下文以项目目录 `~/reBot_Arm_Mujoco-RS` 为例。如果实际目录不同，请替换命令中的路径。
+下文以项目目录 `~/ReBot_Arm_DigitalTwin_RS` 为例。如果实际目录不同，请替换命令中的路径。
 
 </div>
 </section>
@@ -193,7 +193,7 @@ cd ~/reBot_Arm_Mujoco-RS
       <p className="rebot-step-label">第 2 步</p>
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./setup.sh --check
 ```
 
@@ -281,7 +281,7 @@ MOTORBRIDGE_WS_TOKEN=
 只启动 Node.js 网页服务器，不启动 rosbridge 或 ROS 2：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS/reBotArm_simulator-RS
+cd ~/ReBot_Arm_DigitalTwin_RS/reBotArm_simulator-RS
 npm start
 ```
 
@@ -303,14 +303,14 @@ http://localhost:3002
 终端 1 启动 Fake Driver、MuJoCo、相机、检测、MCP Agent 和 rosbridge：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start rs_sim
 ```
 
 终端 2 启动网页：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start web
 ```
 
@@ -353,7 +353,7 @@ ip -details -statistics link show can0
 确认急停可用、工作区无人后，在终端 1 启动真机控制器：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE \
   ./rebotarm start rs
 ```
@@ -416,7 +416,7 @@ export REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE
 ## 项目架构
 
 ```text
-reBot_Arm_Mujoco-RS/
+ReBot_Arm_DigitalTwin_RS/
 ├─ setup.sh                              一键检查、安装与构建
 ├─ rebotarm                              统一启动、状态和停止入口
 ├─ requirements-rs-hardware.txt          RS 真机 Python 依赖
@@ -669,7 +669,7 @@ LLM 用于理解自然语言，MCP 层将意图约束为结构化工具调用。
 完整仿真默认启动 MCP Agent。启用自然语言入口时，另开终端：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 export DASHSCOPE_API_KEY='你的 Key'
 export REBOTARM_LLM_MODEL='qwen-plus'
 ./scripts/start_rs_text_agent.sh
