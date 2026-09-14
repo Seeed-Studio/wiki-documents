@@ -881,7 +881,7 @@ uv run python example/sim/traj_sim.py
 <h4>Herramienta de visualización</h4>
 <p className="rebot-step-label">Demostración de simulación 4 · sim/visualizer.py</p>
 
-[LINE_98>Wrapper del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.</p>
+Wrapper del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.
 
 **Funciones principales**:
 
