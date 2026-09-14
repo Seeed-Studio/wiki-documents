@@ -27,6 +27,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_web_simulator_developer_g
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS Web 仿真器与 ROS 2/MuJoCo 开发者教程
 
@@ -57,6 +58,12 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 </p>
 
 reBot Arm B601-RS 工程集成了 Three.js 网页控制台、ROS 2 真机驱动、RS 专用 MuJoCo 动力学场景、视觉检测、轨迹与逆运动学，以及可选的 LLM/MCP 抓取 Agent。本教程介绍如何安装、启动和二次开发整套系统。
+
+<GitHubStarButton
+  owner="Yang-Ci"
+  repo="ReBot_Arm_web_RS"
+  ariaLabel="在 GitHub 上为 ReBot_Arm_web_RS 点亮 Star"
+/>
 
 > **重要安全提示**
 >
@@ -158,7 +165,14 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 
 ## 安装步骤
 
-### 步骤 1：获取工程
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+      #### 步骤 1：获取工程
+
+      <p className="rebot-step-label">第 1 步</p>
 
 ```bash
 git clone https://github.com/Yang-Ci/ReBot_Arm_web_RS.git ~/reBot_Arm_Mujoco-RS
@@ -167,7 +181,16 @@ cd ~/reBot_Arm_Mujoco-RS
 
 下文以项目目录 `~/reBot_Arm_Mujoco-RS` 为例。如果实际目录不同，请替换命令中的路径。
 
-### 步骤 2：只读检查环境
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+      #### 步骤 2：只读检查环境
+
+      <p className="rebot-step-label">第 2 步</p>
 
 ```bash
 cd ~/reBot_Arm_Mujoco-RS
@@ -183,7 +206,16 @@ cd ~/reBot_Arm_Mujoco-RS
 - ROS 2 工作区构建结果；
 - 网页 `package.json` 和 `.env`。
 
-### 步骤 3：一键安装和构建
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+      #### 步骤 3：一键安装和构建
+
+      <p className="rebot-step-label">第 3 步</p>
 
 ```bash
 ./setup.sh --yes
@@ -212,7 +244,16 @@ cd rebotarm_ros2_RS
 colcon build --symlink-install
 ```
 
-### 步骤 4：配置网页环境变量
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+      #### 步骤 4：配置网页环境变量
+
+      <p className="rebot-step-label">第 4 步</p>
 
 首次安装会从 `.env.example` 创建 `reBotArm_simulator-RS/.env`。关键字段如下：
 
@@ -226,6 +267,10 @@ MOTORBRIDGE_WS_TOKEN=
 ```
 
 如果网页与 ROS 2/Agent 不在同一台机器，请将代理地址改为后端机器的 IP。API Key 和 Token 只应存放在环境变量或未提交的本地 `.env` 中。
+
+</div>
+</section>
+</div>
 
 ## 项目启动
 

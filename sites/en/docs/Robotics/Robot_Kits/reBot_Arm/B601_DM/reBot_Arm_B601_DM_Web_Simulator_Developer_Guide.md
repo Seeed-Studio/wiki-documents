@@ -28,6 +28,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_web_simulator_developer_guid
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM Web Simulator and ROS2/MuJoCo Developer Guide
 
@@ -59,6 +60,8 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 </p>
 
 This guide is for developers. It explains how to run and extend the `reBotArm_simulator-DM` web simulator. The simulator is a lightweight Node.js + Three.js web console that reads the URDF and STL meshes from the ROS2 workspace in the same repository, renders the 6-DOF body and gripper of the reBot Arm B601-DM in the browser, and talks to ROS2 over a rosbridge WebSocket. It supports the full development workflow: joint mirroring, control lock, gravity compensation, visual grasping, and LLM text control.
+
+<GitHubStarButton owner="Yang-Ci" repo="Borot-Arm_Mujoco" />
 
 :::note
 This guide uses `Ubuntu 24.04 + ROS2 Jazzy` as the ROS2 backend. The web front-end runs in any modern browser on Windows, macOS, or Linux. ROS2 Humble / Ubuntu 22.04 can follow the same workflow.
@@ -136,7 +139,14 @@ sudo usermod -a -G dialout $USER
 
 ## Installation Steps
 
-### Step 0. Complete the basic arm setup
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">0</span>
+<div className="rebot-step-content">
+
+      #### Step 0. Complete the basic arm setup
+
+      <p className="rebot-step-label">Step 0</p>
 
 Before starting web simulator development, complete the steps in [reBot Arm B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/), including arm assembly, motor ID configuration, zero-point initialization, and basic connectivity checks.
 
@@ -165,9 +175,16 @@ reBotArm_control_py/
 The SDK's `pyproject.toml` declares `requires-python >=3.10,<3.12`, but this project references it via `sys.path` instead of pip install, so it works fine on Python 3.12. If `pip install -e .` reports a version conflict, skip that step and just make sure the directory is at `reBotArm_ros2_DM/third_party/reBotArm_control_py/` or `~/reBotArm_control_py/` (the code searches these paths automatically).
 :::
 
-### Step 1. One-click install
+</div>
+</section>
 
-The official reBot Arm open-source project is available at [Seeed-Projects/reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm). The web simulator, ROS2 workspace, and MuJoCo simulation code used in this guide are hosted in [Yang-Ci/Borot-Arm_Mujoco](https://github.com/Yang-Ci/Borot-Arm_Mujoco). Clone the software repository into `~/reBot_Arm_Mujoco-DM/`:
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+      #### Step 1. One-click install
+
+      <p className="rebot-step-label">Step 1</p>
 
 ```bash
 git clone https://github.com/Yang-Ci/Borot-Arm_Mujoco.git ~/reBot_Arm_Mujoco-DM
@@ -241,7 +258,16 @@ A `Setup complete` message with an empty `Failed or still missing` section means
 If `setup.sh` does not automatically install ROS 2 (for example, the ROS apt source has not yet been added to the system), the installer automatically downloads the official `ros2-apt-source` package from GitHub, adds the source, and retries. You do not need to configure the apt source manually.
 :::
 
-### Step 2. Configure environment variables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+      #### Step 2. Configure environment variables
+
+      <p className="rebot-step-label">Step 2</p>
 
 `setup.sh` already created `.env` from `.env.example`. To change the port or proxy target, edit `.env`:
 
@@ -254,7 +280,16 @@ REBOTARM_MCP_URL=http://localhost:8081/mcp
 
 If the web page runs on Windows and ROS2 runs in an Ubuntu VM, change `REBOTARM_TEXT_AGENT_URL` and `REBOTARM_MCP_URL` to the actual IP of the Ubuntu VM, for example `http://<Ubuntu IP>:8082`.
 
-### Step 3. Start the web server
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+      #### Step 3. Start the web server
+
+      <p className="rebot-step-label">Step 3</p>
 
 ```bash
 cd ~/reBot_Arm_Mujoco-DM
@@ -281,6 +316,10 @@ node server.js
 
 In this case the page lets you drag joint sliders, use pose presets, and TCP drag, but it will not connect to any ROS node.
 :::
+
+</div>
+</section>
+</div>
 
 ## Launching the Project
 

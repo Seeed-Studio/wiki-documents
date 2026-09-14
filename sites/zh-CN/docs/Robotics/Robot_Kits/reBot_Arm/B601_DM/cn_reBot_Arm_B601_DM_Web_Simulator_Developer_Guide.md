@@ -27,6 +27,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_web_simulator_developer_g
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM Web 仿真器与 ROS2/MuJoCo 开发者教程
 
@@ -58,6 +59,12 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 </p>
 
 本教程面向开发者，介绍如何运行和二次开发 `reBotArm_simulator-DM` 网页仿真器。该仿真器是一个基于 Node.js + Three.js 的轻量网页控制台，从同仓库的 ROS2 工作空间读取 URDF 与 STL 网格，在浏览器中渲染 reBot Arm B601-DM 的 6 自由度本体与夹爪，并通过 rosbridge WebSocket 与 ROS2 通信，支持关节镜像、控制锁、重力补偿、视觉抓取和 LLM 文本控制等完整开发流程。
+
+<GitHubStarButton
+  owner="Yang-Ci"
+  repo="Borot-Arm_Mujoco"
+  ariaLabel="在 GitHub 上为 Borot-Arm_Mujoco 点亮 Star"
+/>
 
 :::note
 本文默认以 `Ubuntu 24.04 + ROS2 Jazzy` 作为 ROS2 后端环境，网页前端可在 Windows、macOS 或 Linux 任意现代浏览器中运行。ROS2 Humble / Ubuntu 22.04 可参考相同流程使用。
@@ -136,7 +143,14 @@ sudo usermod -a -G dialout $USER
 
 ## 安装步骤
 
-### 步骤 0. 完成机械臂基础准备
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">0</span>
+<div className="rebot-step-content">
+
+      #### 步骤 0. 完成机械臂基础准备
+
+      <p className="rebot-step-label">步骤 0</p>
 
 开始网页仿真器开发前，请先完成 [reBot Arm B601-DM 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/) 中的内容，包括机械臂组装、电机 ID 配置、零点初始化和基础连通性确认。
 
@@ -165,9 +179,16 @@ reBotArm_control_py/
 SDK 的 `pyproject.toml` 声明 `requires-python >=3.10,<3.12`，但本项目通过 `sys.path` 引用而非 pip 安装，在 Python 3.12 下可正常工作。如果 `pip install -e .` 报版本冲突，跳过该步，确保目录在 `reBotArm_ros2_DM/third_party/reBotArm_control_py/` 或 `~/reBotArm_control_py/` 即可（代码会自动搜索这些路径）。
 :::
 
-### 步骤 1. 一键安装
+</div>
+</section>
 
-reBot Arm 官方开源项目地址为 [Seeed-Projects/reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm)。本教程所用的 Web 仿真器、ROS2 工作空间和 MuJoCo 仿真代码位于 [Yang-Ci/Borot-Arm_Mujoco](https://github.com/Yang-Ci/Borot-Arm_Mujoco)，请将该软件仓库克隆到 `~/reBot_Arm_Mujoco-DM/`：
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+      #### 步骤 1. 一键安装
+
+      <p className="rebot-step-label">步骤 1</p>
 
 ```bash
 git clone https://github.com/Yang-Ci/Borot-Arm_Mujoco.git ~/reBot_Arm_Mujoco-DM
@@ -241,7 +262,16 @@ Setup complete. Next:
 如果 `setup.sh` 未自动安装 ROS 2（例如系统尚未添加 ROS apt 源），安装器会自动从 GitHub 下载官方 `ros2-apt-source` 包并添加源后重试。无需手动配置 apt 源。
 :::
 
-### 步骤 2. 配置环境变量
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+      #### 步骤 2. 配置环境变量
+
+      <p className="rebot-step-label">步骤 2</p>
 
 `setup.sh` 已自动从 `.env.example` 创建 `.env`。如需修改端口或代理目标，编辑 `.env`：
 
@@ -254,7 +284,16 @@ REBOTARM_MCP_URL=http://localhost:8081/mcp
 
 如果网页运行在 Windows、ROS2 运行在 Ubuntu 虚拟机，将 `REBOTARM_TEXT_AGENT_URL` 与 `REBOTARM_MCP_URL` 改为 Ubuntu 虚拟机的实际 IP，例如 `http://<Ubuntu IP>:8082`。
 
-### 步骤 3. 启动网页服务器
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+      #### 步骤 3. 启动网页服务器
+
+      <p className="rebot-step-label">步骤 3</p>
 
 ```bash
 cd ~/reBot_Arm_Mujoco-DM
@@ -281,6 +320,10 @@ node server.js
 
 此时网页可拖动关节滑块、使用姿态预设和 TCP 拖拽，但不会连接任何 ROS 节点。
 :::
+
+</div>
+</section>
+</div>
 
 ## 项目启动
 

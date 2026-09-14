@@ -27,6 +27,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_web_simulator_developer_guid
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS Web Simulator and ROS 2/MuJoCo Developer Guide
 
@@ -57,6 +58,8 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 </p>
 
 The reBot Arm B601-RS project integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, and an optional LLM/MCP grasping agent. This guide explains how to install, launch, and develop on the full system.
+
+<GitHubStarButton owner="Yang-Ci" repo="ReBot_Arm_web_RS" />
 
 > **Important safety note**
 >
@@ -159,7 +162,14 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 
 ## Installation Steps
 
-### Step 1: Get the project
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+      #### Step 1: Get the project
+
+      <p className="rebot-step-label">Step 1</p>
 
 ```bash
 git clone https://github.com/Yang-Ci/ReBot_Arm_web_RS.git ~/reBot_Arm_Mujoco-RS
@@ -168,7 +178,16 @@ cd ~/reBot_Arm_Mujoco-RS
 
 The commands below use `~/reBot_Arm_Mujoco-RS` as the project directory. If your directory is different, replace the paths accordingly.
 
-### Step 2: Read-only environment check
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+      #### Step 2: Read-only environment check
+
+      <p className="rebot-step-label">Step 2</p>
 
 ```bash
 cd ~/reBot_Arm_Mujoco-RS
@@ -184,7 +203,16 @@ This command only checks the system and does not modify the environment. Checks 
 - ROS 2 workspace build results;
 - the web `package.json` and `.env`.
 
-### Step 3: One-click install and build
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+      #### Step 3: One-click install and build
+
+      <p className="rebot-step-label">Step 3</p>
 
 ```bash
 ./setup.sh --yes
@@ -213,7 +241,16 @@ cd rebotarm_ros2_RS
 colcon build --symlink-install
 ```
 
-### Step 4: Configure web environment variables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+      #### Step 4: Configure web environment variables
+
+      <p className="rebot-step-label">Step 4</p>
 
 On first install, `reBotArm_simulator-RS/.env` is created from `.env.example`. Key fields:
 
@@ -227,6 +264,10 @@ MOTORBRIDGE_WS_TOKEN=
 ```
 
 If the web console and ROS 2/Agent are not on the same machine, change the proxy addresses to the backend machine's IP. API keys and tokens should only be stored in environment variables or the uncommitted local `.env`.
+
+</div>
+</section>
+</div>
 
 ## Launching the Project
 

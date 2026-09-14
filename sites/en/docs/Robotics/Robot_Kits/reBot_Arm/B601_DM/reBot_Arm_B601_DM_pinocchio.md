@@ -22,6 +22,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 
 import '/src/css/rebot-wiki-style.css';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # Getting Started with Pinocchio and MeshCat for reBot Arm B601-DM
 
@@ -65,6 +66,8 @@ This example code can be used to control the robotic arm motors or poses, includ
 </div>
 
 This project combines Pinocchio's powerful computing capabilities with MeshCat's intuitive visualization, providing a complete set of kinematic analysis and debugging tools for reBot Arm B601-DM.
+
+<GitHubStarButton owner="Seeed-Projects" repo="reBotArm_control_py" />
 
 ---
 

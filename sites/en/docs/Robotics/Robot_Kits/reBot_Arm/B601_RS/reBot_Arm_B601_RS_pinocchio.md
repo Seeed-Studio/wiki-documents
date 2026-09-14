@@ -24,6 +24,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/
 
 import '/src/css/rebot-wiki-style.css';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # Getting Started with Pinocchio and MeshCat for reBot Arm B601-RS
 
@@ -61,6 +62,8 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 </p>
 
 This project combines Pinocchio's powerful computation capabilities with MeshCat's intuitive visualization, providing a complete set of kinematics analysis and debugging tools for reBot Arm B601-RS.
+
+<GitHubStarButton owner="Seeed-Projects" repo="reBotArm_control_py" />
 
 
 ---
