@@ -93,6 +93,7 @@ The web simulator itself does not connect to hardware directly. All control comm
 ```bash
 ls /dev/ttyACM*
 ```
+
 <details>
 <summary>Expected output</summary>
 
@@ -129,7 +130,7 @@ sudo usermod -a -G dialout $USER
 ## Environment Requirements
 
 | Item | Recommended |
-|---|---|
+| --- | --- |
 | Operating system (backend) | Ubuntu 24.04; Ubuntu 22.04 also works |
 | ROS2 | Jazzy; Humble also works |
 | Python | System Python, 3.12 for Jazzy |
@@ -340,7 +341,6 @@ node server.js
 
 Open `http://localhost:3001` in a browser. You can drag joint sliders, use pose presets, TCP drag, and teach-record, but all operations only affect the 3D model and will not drive any hardware or ROS node.
 
-
 ![Web simulator interface](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png)
 </TabItem>
 
@@ -364,7 +364,6 @@ cd ~/ReBot_Arm_DigitalTwin_DM
 ```
 
 After the page connects to `ws://localhost:9090`, check "Mirror real joint state to the web" to see the Fake Driver's joint state sync to the 3D model. After checking "Allow the web to send control to the real arm", joint sliders and Pose motion will send commands through rosbridge.
-
 
 ![RViz model visualization](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_rviz_model.png)
 </TabItem>
@@ -395,7 +394,6 @@ All nodes start in sequence; success if there is no `ERROR`.
 </details>
 
 This script is internally equivalent to `reBotArm_ros2_DM/scripts/start_rebot_mujoco_all.sh`. By default it starts the Fake Driver, robot_state_publisher, MuJoCo physics grasp, task server, overhead RGB camera, color detector, and rosbridge. Then run `./rebotarm start web` in another terminal to start the web page. After the browser connects to ROS, you can use the visual grasping demo.
-
 
 ![MuJoCo physics simulation](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_mujoco_physics.png)
 </TabItem>
@@ -459,7 +457,7 @@ Data flow: The browser accesses the Node.js static server over `HTTP /api` and c
 The `rebotarm` unified entry point is the main way to operate the project:
 
 | Command | Description |
-|---|---|
+| --- | --- |
 | `./rebotarm start web` | Start rosbridge + web server (auto-sources the environment) |
 | `./rebotarm start dm` | Start the DM real-robot driver (separate terminal, auto-sources the environment) |
 | `./rebotarm start sim` | Start the full MuJoCo simulation stack (do not start together with the real robot) |
@@ -480,7 +478,6 @@ This script loads, in order, ROS2 (`/opt/ros/jazzy/setup.bash`), the Python venv
 
 <details>
 <summary><b>Core module notes</b> (click to expand)</summary>
-
 
 **server.js — Node.js static server**
 
@@ -583,13 +580,12 @@ On startup it first calls `/api/llm/health` to health-check the text-agent; afte
 <details>
 <summary><b>ROS2 interface overview</b> (click to expand)</summary>
 
-
 The key ROS2 interfaces that the web simulator subscribes to and publishes are listed below. The default namespace is `rebotarm`.
 
 **Subscribed topics**
 
 | Topic | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/joint_states` | `sensor_msgs/msg/JointState` | Real-time position of 6 joints + gripper |
 | `/rebotarm/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | Gripper position/velocity/torque |
 | `/rebotarm/arm_status` | `rebotarm_msgs/msg/ArmStatus` | Enable, mode, state machine |
@@ -600,7 +596,7 @@ The key ROS2 interfaces that the web simulator subscribes to and publishes are l
 **Published topics**
 
 | Topic | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/joints/<jointN>/cmd` | `rebotarm_msgs/msg/JointMotorCmd` | Single-joint sparse command (mode=1 POS_VEL) |
 | `/rebotarm/gripper/cmd` | `rebotarm_msgs/msg/JointMotorCmd` | Gripper command (m, 0~0.09) |
 | `/rebotarm/mujoco/target_pose` | `geometry_msgs/msg/PoseStamped` | TCP drag target pose |
@@ -608,7 +604,7 @@ The key ROS2 interfaces that the web simulator subscribes to and publishes are l
 **Services called**
 
 | Service | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/enable` | `std_srvs/srv/Trigger` | Enable all motors |
 | `/rebotarm/disable` | `std_srvs/srv/Trigger` | Disable all motors |
 | `/rebotarm/safe_home` | `std_srvs/srv/Trigger` | Safe return to zero |
@@ -623,7 +619,7 @@ The key ROS2 interfaces that the web simulator subscribes to and publishes are l
 **Actions called**
 
 | Action | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | Cartesian pose motion |
 | `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | Joint trajectory execution |
 
@@ -680,6 +676,7 @@ Start the text-agent HTTP service (for the web page to call):
 cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
+
 <details>
 <summary>Expected output</summary>
 
@@ -762,7 +759,7 @@ The MCP Dashboard is an independent debugging entry and does not depend on the w
 **Endpoint overview**:
 
 | Endpoint | Method | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/` or `/dashboard` | GET | Returns the Dashboard HTML page (dark glass-panel theme, supports CN/EN switch) |
 | `/tools` | GET | Returns the MCP tool list JSON (name, description, parameter schema, category, custom flag) |
 | `/call_tool` | POST | Directly call the specified MCP tool, body: `{"name":"...", "arguments":{...}}` |
@@ -801,9 +798,8 @@ The page tries to load the last saved address when the input box is empty. Modif
 <details>
 <summary><b>Key file quick reference</b> (click to expand)</summary>
 
-
 | File | Purpose |
-|---|---|
+| --- | --- |
 | `reBotArm_simulator-DM/server.js` | Node.js static server + LLM proxy |
 | `reBotArm_simulator-DM/package.json` | npm scripts (start / dev) |
 | `reBotArm_simulator-DM/.env` | Port and proxy target config |

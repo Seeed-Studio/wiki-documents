@@ -51,11 +51,9 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
-
 :::tip
 This example code can be used to control the robotic arm motors or poses, including single motor control, forward/inverse kinematics control and testing, arm zero position setting and motor angle reading, MeshCat visualization system, and more.
 :::
-
 
 <div align="center">
   <a href="https://github.com/stack-of-tasks/pinocchio">Pinocchio</a> is an open-source library for robotics dynamics analysis and optimization. It provides efficient forward/inverse kinematics, dynamics calculations, and trajectory planning capabilities.
@@ -134,13 +132,12 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 ## Bill of Materials (BOM)
 
 | Component | Quantity | Included |
-|--|--|--|
+| -- | -- | -- |
 | reBot Arm B601-DM Robotic Arm | 1 | ✅ |
 | USB2CAN Serial Bridge | 1 | ✅ |
 | Power Adapter (24V) | 1 | ✅ |
 | USB-C Cable | 1 | ✅ |
 | Gripper | 1 | ✅ |
-
 
 ## Environment Requirements
 
@@ -155,7 +152,7 @@ This tutorial assumes the arm is already responsive on the bus, joints are zeroe
 :::
 
 | Item | Requirement |
-|------|-------------|
+| ------ | ------------- |
 | **Python** | 3.10+ |
 | **Operating System** | Ubuntu (Ubuntu 24.04 LTS recommended) |
 | **Communication Interface** | USB2CAN Serial Bridge or CAN Interface |
@@ -221,7 +218,7 @@ Suitable parameters can only be obtained through **on-hardware tuning**. This se
 ### Configuration File Location
 
 | Hardware version | Motor config file | Switch entry |
-|---|---|---|
+| --- | --- | --- |
 | **reBot Arm B601-DM** (this document) | `config/rebotarm_dm.yaml` | Set `hardware_yaml: "rebotarm_dm.yaml"` in `config/rebotarm.yaml` |
 | **reBot Arm B601-RS** | `config/rebotarm_rs.yaml` | Set `hardware_yaml: "rebotarm_rs.yaml"` in `config/rebotarm.yaml` |
 
@@ -261,14 +258,14 @@ How to locate:
 ### MIT Mode Field Meanings
 
 | Field | Role |
-|---|---|
+| --- | --- |
 | `kp` | Position-loop proportional gain: the "stiffness" of tracking the target position. |
 | `kd` | Velocity-loop damping gain: suppresses oscillations caused by position error. |
 
 ### POS_VEL Mode Field Meanings
 
 | Field | Role |
-|---|---|
+| --- | --- |
 | `vel_kp` | Velocity-loop proportional gain. |
 | `vel_ki` | Velocity-loop integral gain. |
 | `pos_kp` | Position-loop proportional gain. |
@@ -287,13 +284,15 @@ Large `kp` / `kd` changes across several joints can cause immediate oscillation,
 
 1. **Stop any running script**. The motor is enabled when you edit YAML, changes do not take effect immediately, and inconsistent behavior is easy to trigger.
 2. **Edit the corresponding YAML file**:
+
    ```bash
    # Example for DM
    vim config/rebotarm_dm.yaml
    ```
+
    - Only change the joint you need to tune (e.g., `joint1`); leave unrelated joints alone;
    - Within one joint, only change the mode you need to tune (MIT or POS_VEL); do not modify the other mode's fields without reason.
-3. **Preserve YAML indentation**: 2 spaces per level, keys separated from values by `: `. Wrong indentation causes `yaml.safe_load` parsing to fail, and all parameters will fall back to defaults.
+3. **Preserve YAML indentation**: 2 spaces per level, keys separated from values by `:`. Wrong indentation causes `yaml.safe_load` parsing to fail, and all parameters will fall back to defaults.
 4. **Restart the script after saving**. The YAML is read once at script startup; **runtime edits do not take effect immediately**.
 5. **Single-joint verification**: use a script like `3_mit_control.py` (MIT) / `4_pos_vel_control.py` (POS_VEL) to verify the change with a **small single-joint motion** before doing a full-arm test.
 
@@ -301,9 +300,11 @@ Large `kp` / `kd` changes across several joints can cause immediate oscillation,
 
 - **Runtime observation**: enable the motor in `3_mit_control.py` / `4_pos_vel_control.py` and check `state`; if parameters look unchanged or the motor behaves exactly as before, the YAML was edited incorrectly or got overridden by defaults.
 - **YAML self-check**: parse it directly with Python and print one joint's fields to confirm the values match what you just wrote:
+
   ```bash
   uv run python -c "import yaml; print(yaml.safe_load(open('config/rebotarm_dm.yaml'))['joints'][0])"
   ```
+
 - **Quick rollback**: `git checkout config/rebotarm_dm.yaml` restores the repository defaults.
 
 ---
@@ -320,6 +321,7 @@ sudo chmod 666 /dev/ttyACM0
 # Or set CAN device permissions (e.g., can0)
 sudo chmod 666 /dev/can0
 ```
+
 :::
 <details>
 <summary>Debugging Tools (use only when an exception occurs)</summary>
@@ -329,13 +331,15 @@ sudo chmod 666 /dev/can0
 Direct single motor testing using the motorbridge SDK.
 
 **How to Run**:
+
 ```bash
 uv run python example/0x01damiao_test.py
 ```
 
 **Interactive Commands**:
+
 | Command | Description |
-|------|------|
+| ------ | ------ |
 | `enable` / `disable` | Enable/Disable motor |
 | `set_zero` | Set zero position |
 | `state` | View status |
@@ -349,6 +353,7 @@ uv run python example/0x01damiao_test.py
 | `write_param <id> <value> [type]` | Write motor parameters |
 | `loop` | Enter loop control mode |
 | `q` / `quit` | Quit |
+
 ---
 
 **Zero Calibration and Angle Monitoring (`2_zero_and_read.py`)**
@@ -356,6 +361,7 @@ uv run python example/0x01damiao_test.py
 Automatically set all joint zeros and display joint angles in real-time.
 
 **How to Run**:
+
 ```bash
 uv run python example/2_zero_and_read.py
 
@@ -393,6 +399,7 @@ This example sends target joint angles directly to the motors, with **no path or
 <summary>Expand Run Instructions (Optional)</summary>
 
 **How to Run**:
+
 ```bash
 uv run python example/3_mit_control.py
 > 30 0 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
@@ -426,6 +433,7 @@ Although POS_VEL is the recommended joint-control mode for DM, this example stil
 <summary>Expand Run Instructions (Optional)</summary>
 
 **How to Run**:
+
 ```bash
 uv run python example/4_pos_vel_control.py
 > 30 0 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
@@ -456,11 +464,13 @@ Calculate end-effector pose based on joint angles.
 **Input**: 6 joint angles (degrees)
 
 **Output**:
+
 - End-effector position (X, Y, Z) — Unit: meters
 - Rotation matrix (3×3)
 - Euler angles (roll/pitch/yaw) — Unit: degrees
 
 **Example**:
+
 ```bash
 uv run python example/5_fk_test.py
 > 0 0 0 0 0 0
@@ -494,10 +504,12 @@ uv run python example/5_fk_test.py
 Solve joint angles based on desired end-effector pose.
 
 **Input Format**:
+
 - Position only: `<x> <y> <z>` (meters)
 - Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
 
 **Example**:
+
 ```bash
 uv run python example/6_ik_test.py
 
@@ -549,6 +561,7 @@ uv run python example/6_ik_test.py
 Use inverse kinematics (IK) in MIT mode to specify the 3D coordinates (X, Y, Z) and orientation (Euler angles) where the robotic arm end-effector should move.
 
 **Input Format**:
+
 - Position only: `<x> <y> <z>` (meters)
 - Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
 - Input `state`: View current actual radian values of each joint.
@@ -566,6 +579,7 @@ This example sends the IK solution directly as the joint target, with **no path 
 <summary>Expand Run Instructions (Optional)</summary>
 
 **How to Run**:
+
 ```bash
 uv run python example/7_arm_ik_control.py
 
@@ -592,6 +606,7 @@ uv run python example/7_arm_ik_control.py
 Use inverse kinematics (IK) in MIT mode to automatically plan a uniform or smooth acceleration/deceleration motion trajectory within the target time, avoiding severe joint vibration.
 
 **Input Format**:
+
 - Position only: `<x> <y> <z>` (meters)
 - Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
 - Position + Orientation + Time (default 2.0): `<x> <y> <z> <roll> <pitch> <yaw> <time>` (degrees)
@@ -599,6 +614,7 @@ Use inverse kinematics (IK) in MIT mode to automatically plan a uniform or smoot
 - Input `end_state`: View current end-effector actual coordinates (m) and Euler angles (rad) in space.
 
 **How to Run**:
+
 ```bash
 uv run python example/8_arm_traj_control.py
 
@@ -636,6 +652,7 @@ If you notice that the **read end-effector pose** differs from the **commanded t
 Use the Pinocchio dynamics model to compensate for joint gravity.
 
 **Control Law**:
+
 ```
 tau = g(q)          — Gravity feedforward
 pos = current motor position   — Joint position follows current position
@@ -643,6 +660,7 @@ kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 ```
 
 **Expected Behavior**:
+
 - The arm can "float" at any pose
 - Won't fall due to its own weight when released
 - Can be manually moved to any position
@@ -654,11 +672,13 @@ Automatic homing depends on normal program execution, communication, and power. 
 :::
 
 **How to Run**:
+
 ```bash
 uv run python example/9_gravity_compensation.py
 ```
 
 **Output**:
+
 - Real-time display of desired torque for each joint (N·m)
 - Press `Ctrl+C` to stop and disconnect
 
@@ -685,6 +705,7 @@ For example, `tau_g[2] *= 1.2` means increasing the gravity compensation torque 
 Based on the basic gravity compensation, adds end-effector velocity detection and joint angle locking mechanism.
 
 **Control Law**:
+
 ```
 tau = g(q) + integral_term    — Gravity feedforward + integral term
 pos = q_target                 — Target joint angle (locked or updated)
@@ -692,6 +713,7 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
 ```
 
 **Lock Logic**:
+
 - When end linear velocity `||v_ee|| < 0.04 m/s` and angular velocity `||w_ee|| < 0.08 rad/s`:
   - Target joint angle `q_target` remains locked
   - Robotic arm locks in current position
@@ -700,6 +722,7 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
   - Allows manual pushing to change position
 
 **Expected Behavior**:
+
 - Robotic arm locks in current position, requiring force to change target angle
 - More stable than basic version, suitable for scenarios requiring pose maintenance
 
@@ -710,11 +733,13 @@ Automatic homing depends on normal program execution, communication, and power. 
 :::
 
 **How to Run**:
+
 ```bash
 uv run python example/10_gravity_compensation_lock.py
 ```
 
 **Output**:
+
 - Real-time display of lock status (LOCKED / UPDATE)
 - End linear velocity, angular velocity
 - Gravity compensation torque for each joint (N·m)
@@ -733,6 +758,7 @@ For example, `tau_g[2] *= 1.2` means increasing the gravity compensation torque 
 
 **Safety Test Configuration**:
 You can modify the `ENABLED_JOINTS` list at the top of the script to enable only specified joints for safety testing:
+
 ```python
 ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 ```
@@ -760,17 +786,20 @@ ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 Interactive forward kinematics simulation, visualize robot arm pose by inputting joint angles in MeshCat.
 
 **How to Run**:
+
 ```bash
 uv run python example/sim/fk_sim.py
 ```
 
 **Interactive Commands**:
+
 - Input 6 joint angles (degrees), space separated
 - Example: `0 0 0 0 0 0`
 - Example: `45 -30 15 -60 90 -180`
 - `q`/`quit`/`exit`: Exit
 
 **Features**:
+
 - Real-time display of end-effector position and orientation
 - Supports continuous input to test different poses
 - Formatted pose information output
@@ -787,21 +816,25 @@ uv run python example/sim/fk_sim.py
 Interactive inverse kinematics simulation, automatically solve joint angles from target pose and visualize.
 
 **How to Run**:
+
 ```bash
 uv run python example/sim/ik_sim.py
 ```
 
 **Input Format**:
+
 - Position only: `x y z` (meters)
 - Position+Orientation: `x y z roll pitch yaw` (radians)
 
 **Example**:
+
 ```bash
 > 0.25 0.0 0.25              # Position only
 > 0.25 0.0 0.25 0 0 0        # Position+Orientation
 ```
 
 **Features**:
+
 - Automatic judgment of IK convergence
 - Display iteration count and error
 - Real-time robot pose updates
@@ -818,16 +851,19 @@ uv run python example/sim/ik_sim.py
 SE(3) geodesic based trajectory planning simulation, including CLIK tracking and MeshCat animation playback.
 
 **How to Run**:
+
 ```bash
 uv run python example/sim/traj_sim.py
 ```
 
 **Interactive Commands**:
+
 - Input: `x y z [roll pitch yaw]` (meters/radians)
 - Press Enter to use default configuration
 - `q`: Exit
 
 **Features**:
+
 - Plan from current position to target position
 - Use minimum jerk trajectory profile
 - Real-time display of trajectory statistics
@@ -846,12 +882,14 @@ uv run python example/sim/traj_sim.py
 MeshCat visualizer wrapper, providing unified robot display interface.
 
 **Main Features**:
+
 - Load URDF model and display robot
 - Draw 3D polyline paths (reference/actual)
 - Display IK target pose (tricolor axes + sphere)
 - Support joint trajectory animation playback
 
 **Usage Example**:
+
 ```python
 from example.sim.visualizer import Visualizer
 viz = Visualizer()
