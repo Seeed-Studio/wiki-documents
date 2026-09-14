@@ -30,7 +30,6 @@ import TabItem from '@theme/TabItem';
 
 <RebotRsDocNav />
 
-
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
@@ -55,7 +54,6 @@ import TabItem from '@theme/TabItem';
 </p>
 
 [reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) is an open-source robotic arm project launched by Seeed, dedicated to lowering the threshold for learning embodied intelligence. We open-source all structural designs and code without reservation, making robotics technology accessible to everyone.
-
 
 [LeRobot](https://github.com/huggingface/lerobot/tree/main) is committed to providing models, datasets and tools for real-world robotics in PyTorch. Its aim is to reduce the entry barrier of robotics, enabling everyone to contribute and benefit from sharing datasets and pretrained models. LeRobot integrates cutting-edge methodologies validated for real-world application, centering on imitation learning and reinforcement learning. It has furnished a suite of pre-trained models, datasets featuring human-gathered demonstrations, and simulation environments, enabling users to commence without the necessity of robot assembly.
 
@@ -138,10 +136,11 @@ git clone https://github.com/Seeed-Projects/lerobot.git
 
 :::tip
 For details about the function packages, refer to:
+
 - [lerobot-teleoperator-rebot-arm-102](https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102)
 - [lerobot-robot-seeed-b601](https://github.com/Seeed-Projects/lerobot-robot-seeed-b601)
-:::
 
+:::
 
 The LeRobot repository includes a `pyproject.toml`. Create a Conda environment and install all dependencies.
 
@@ -179,12 +178,16 @@ conda install ffmpeg -c conda-forge
 
 :::tip
 **Version Notes**:
+
 - By default, ffmpeg 7.X will be installed, which supports the `libsvtav1` encoder.
 - If you encounter version compatibility issues, install ffmpeg 7.1.1:
+
   ```bash
   conda install ffmpeg=7.1.1 -c conda-forge
   ```
+
 - Check whether the `libsvtav1` encoder is supported with `ffmpeg -encoders | grep svtav1`.
+
 :::
 
 </div>
@@ -236,6 +239,7 @@ NVIDIA RTX 50-series GPUs require the PyTorch preview version with CUDA 12.8 or 
 ```bash
 pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
 ```
+
 :::
 
 </div>
@@ -295,7 +299,6 @@ The port number for all subsequent follower commands must match the output here.
 
 If your Jetson lacks the PCAN driver, communication will consistently fail. Refer to the Jetson PCAN driver installation guide in the [Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/#3pcan-usb) section.
 
-
 ### Calibrate the Leader Arm
 
 The calibration steps are crucial and will directly affect whether the robotic arm runs normally. Please follow the process strictly.
@@ -306,6 +309,7 @@ The calibration steps are crucial and will directly affect whether the robotic a
 
 :::tip
 **reBot 102 leader Calibration Notes**:
+
 - When calibration starts, each servo's current position on reBot Arm 102 will be **reset to zero**
 - `joint_ranges` (joint limits) are taken from the configuration file `config_rebot_arm_102_leader.py`, not from calibration data
 - If a joint always seems stuck near a limit, check the `joint_ranges` configuration first
@@ -319,6 +323,7 @@ If this is the first connection, you may get an error that `/dev/ttyACM0` cannot
 sudo dmesg | grep ttyUSB #Check the last line shows "disconnected"
 sudo apt remove brltty #Remove brltty
 ```
+
 :::
 
 <div align="center">
@@ -371,6 +376,7 @@ sudo ip link set can0 up
 ```
 
 Run teleoperation:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=seeed_b601_rs_follower \
@@ -558,7 +564,7 @@ providing synchronized RGB and depth streams with precise depth-to-color alignme
 
 Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
 
-* 🚀 Step 1: Install Orbbec SDK Dependencies
+- 🚀 Step 1: Install Orbbec SDK Dependencies
 
 **1. Switch to the Camera Branch**
 
@@ -820,6 +826,7 @@ lerobot-record \
 ```
 
 You will see a lot of lines appearing like this one:
+
 ```bash
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
@@ -842,6 +849,7 @@ The **record** function provides a suite of tools for capturing and managing dat
 - To resume after an interruption, re-run the same command with: `--resume=true`
 
 ⚠️ **Important Note**: When resuming, set `--dataset.num_episodes` to the number of additional episodes to record (not the targeted total number of episodes in the dataset).
+
 - To start recording from scratch, **manually delete** the dataset directory.
 
 **3. Recording Parameters**
@@ -849,7 +857,7 @@ The **record** function provides a suite of tools for capturing and managing dat
 Set the flow of data recording using command-line arguments:
 
 | Parameter | Description | Default |
-|------|------|--------|
+| ------ | ------ | -------- |
 | --dataset.episode_time_s | Duration per data episode (seconds) | 60 |
 | --dataset.reset_time_s | Environment reset time after each episode (seconds) | 60 |
 | --dataset.num_episodes | Total episodes to record | 50 |
@@ -859,16 +867,18 @@ Set the flow of data recording using command-line arguments:
 Control the data recording flow using keyboard shortcuts:
 
 | Key | Action |
-|----|------|
+| ---- | ------ |
 | → (Right Arrow) | Early-stop current episode/reset; move to next. |
 | ← (Left Arrow) | Cancel current episode; re-record it. |
 | ESC | Stop session immediately, encode videos, and upload dataset. |
 
 :::tip
 If your keyboard presses are not responding, you may need to downgrade your pynput version, such as installing version 1.6.8.
+
 ```bash
 pip install pynput==1.6.8
 ```
+
 :::
 
 **Tips for Gathering Data**
@@ -891,6 +901,7 @@ If you want to dive deeper into this important topic, you can check out the [blo
 
 Linux-specific Issue:
 If Right Arrow/Left Arrow/ESC keys are unresponsive during recording:
+
 - Verify the `$DISPLAY` environment variable is set (see [pynput limitations](https://pynput.readthedocs.io/en/latest/limitations.html)).
 
 ## Visualize the Dataset
@@ -1287,6 +1298,7 @@ If you are using RTX 50 series, you need: Python=3.10, CUDA=12.8, Torch=2.7.1
 ```bash
 pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
 ```
+
 :::
 
 3. Install flash-attn dependency and flash-attn itself:
@@ -1303,6 +1315,7 @@ If you are using RTX 50 series, you need: flash_attn=2.8.0
 ```bash
 pip install flash_attn==2.8.0.post2 torch==2.7.1 --no-build-isolation
 ```
+
 :::
 
 4. Install LeRobot's groot dependency:
@@ -1490,7 +1503,7 @@ Key accelerate parameter explanation:
 Note that **bf16 requires hardware support** and is not available on all GPUs.
 
 | Precision Type | Hardware Support |
-|--|--|
+| -- | -- |
 | fp16 | Supported by almost all NVIDIA GPUs |
 | bf16 | Only supported on newer GPUs (Ampere architecture and newer) |
 
@@ -1777,15 +1790,19 @@ Async inference needs to balance: the server's action chunk generation speed mus
 - If you are following this documentation tutorial, please git clone the recommended GitHub repository `https://github.com/Seeed-Projects/lerobot.git`. The repository recommended in this documentation is a verified stable version; the official LeRobot repository is continuously updated to the latest version, which may cause unforeseen issues such as different dataset versions, different commands, etc.
 
 - If you encounter:
+
   ```bash
   Could not connect on port "/dev/ttyUSB0" or "/dev/ttyACM0"
   ```
+
   And you can see the device exists when running `ls /dev/ttyUSB*` or `ls /dev/ttyACM*`, it means you forgot to grant serial port permissions. Enter `sudo chmod 666 /dev/ttyUSB* /dev/ttyACM*` in the terminal to fix it.
 
 - If you encounter:
+
   ```bash
   No valid stream found in input file. Is -1 of the desired media type?
   ```
+
   Please install ffmpeg 7.1.1 using `conda install ffmpeg=7.1.1 -c conda-forge`.
 
 - Training ACT on 50 sets of data takes approximately 6 hours on a laptop with an RTX 3060 (8GB), and about 2-3 hours on computers with RTX 4090 or A100 GPUs.

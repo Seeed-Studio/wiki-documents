@@ -65,7 +65,6 @@ This project combines Pinocchio's powerful computation capabilities with MeshCat
 
 <GitHubStarButton owner="Seeed-Projects" repo="reBotArm_control_py" />
 
-
 ---
 
 ## Project Features
@@ -93,7 +92,7 @@ This project combines Pinocchio's powerful computation capabilities with MeshCat
 The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedstudio.com/)
 
 | Parameter | Specification |
-|-----------|--------------|
+| ----------- | -------------- |
 | Robot Arm Model | reBot Arm B601-RS Assembled Kit with Gripper |
 | Degrees of Freedom | 6+1 (with gripper) |
 | Reach | 754.7 mm (with gripper) / 587.5 mm (without gripper) |
@@ -111,7 +110,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 ### Supported Software Platforms
 
 | Platform | Support Status |
-|----------|---------------|
+| ---------- | --------------- |
 | ROS1 | ✅ |
 | MoveIt1 | ✅ |
 | ROS2 | ✅ |
@@ -124,7 +123,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 ### Joint Motor Parameters
 
 | Parameter | RobStride 00 | RobStride 06 |
-|-----------|--------------|--------------|
+| ----------- | -------------- | -------------- |
 | Rated Voltage | 48V | 48V |
 | Rated Current | 4.7 Apk ± 10% | 14.3 Apk ± 10% |
 | Peak Current | 15.5 Apk ± 10% | 57 Apk ± 10% |
@@ -150,13 +149,12 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 ## Bill of Materials (BOM)
 
 | Component | Quantity | Included |
-|-----------|----------|----------|
+| ----------- | ---------- | ---------- |
 | reBot Arm B601-RS Robotic Arm | 1 | ✅ |
 | CANABLE | 1 | ✅ |
 | Power Adapter (DC 48V 15A) | 1 | ✅ |
 | USB-C Cable | 1 | ✅ |
 | Gripper | 1 | ✅ |
-
 
 ## Environment Requirements
 
@@ -171,7 +169,7 @@ This tutorial assumes the arm is already responsive on the CAN bus, joints are z
 :::
 
 | Item | Requirement |
-|------|-------------|
+| ------ | ------------- |
 | **Python** | 3.10+ |
 | **Operating System** | Ubuntu (Ubuntu 24.04 LTS recommended) |
 | **Communication Interface** | CAN interface (can0) |
@@ -283,13 +281,15 @@ sudo ip link set can0 up    # Bring up can0
 Directly use the motorbridge SDK for Robostride RS06 single motor testing. RS06 motors communicate via **CAN bus**.
 
 **Run Command**:
+
 ```bash
 uv run python example/0x01rs06_test.py
 ```
 
 **Interactive Commands**:
+
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `enable` / `disable` | Enable/Disable |
 | `set_zero` | Set software zero position |
 | `state` | View current state |
@@ -313,6 +313,7 @@ uv run python example/0x01rs06_test.py
 Automatically set all joint zero positions and display joint angles in real time.
 
 **Run Command**:
+
 ```bash
 uv run python example/2_zero_and_read.py
 
@@ -340,7 +341,7 @@ Suitable parameters can only be obtained through **on-hardware tuning**. This se
 ### Configuration File Location
 
 | Hardware version | Motor config file | Switch entry |
-|---|---|---|
+| --- | --- | --- |
 | **reBot Arm B601-RS** (this document) | `config/rebotarm_rs.yaml` | Set `hardware_yaml: "rebotarm_rs.yaml"` in `config/rebotarm.yaml` |
 | **reBot Arm B601-DM** | `config/rebotarm_dm.yaml` | Set `hardware_yaml: "rebotarm_dm.yaml"` in `config/rebotarm.yaml` |
 
@@ -379,14 +380,14 @@ How to locate:
 ### MIT Mode Field Meanings
 
 | Field | Role |
-|---|---|
+| --- | --- |
 | `kp` | Position-loop proportional gain: the "stiffness" of tracking the target position. |
 | `kd` | Velocity-loop damping gain: suppresses oscillations caused by position error. |
 
 ### POS_VEL Mode Field Meanings
 
 | Field | Role |
-|---|---|
+| --- | --- |
 | `vel_kp` | Velocity-loop proportional gain. |
 | `vel_ki` | Velocity-loop integral gain. |
 | `pos_kp` | Position-loop proportional gain (works with `vlim` for position‑velocity hybrid control). |
@@ -404,13 +405,15 @@ Large `kp` / `kd` changes across several joints can cause immediate oscillation,
 
 1. **Stop any running script**. The motor is enabled when you edit YAML, changes do not take effect immediately, and inconsistent behavior is easy to trigger.
 2. **Edit the corresponding YAML file**:
+
    ```bash
    # Example for RS
    vim config/rebotarm_rs.yaml
    ```
+
    - Only change the joint you need to tune (e.g., `joint1`); leave unrelated joints alone;
    - Within one joint, only change the mode you need to tune (MIT or POS_VEL); do not modify the other mode's fields without reason.
-3. **Preserve YAML indentation**: 2 spaces per level, keys separated from values by `: `. Wrong indentation causes `yaml.safe_load` parsing to fail, and all parameters will fall back to defaults.
+3. **Preserve YAML indentation**: 2 spaces per level, keys separated from values by `:`. Wrong indentation causes `yaml.safe_load` parsing to fail, and all parameters will fall back to defaults.
 4. **Restart the script after saving**. The YAML is read once at script startup; **runtime edits do not take effect immediately**.
 5. **Single-joint verification**: use a script like demo3 (MIT) / demo4 (POS_VEL) to verify the change with a **small single-joint motion** before doing a full-arm test.
 
@@ -418,9 +421,11 @@ Large `kp` / `kd` changes across several joints can cause immediate oscillation,
 
 - **Runtime observation**: enable the motor in demo3 / demo4 and check `state`; if parameters look unchanged or the motor behaves exactly as before, the YAML was edited incorrectly or got overridden by defaults.
 - **YAML self-check**: parse it directly with Python and print one joint's fields to confirm the values match what you just wrote:
+
   ```bash
   uv run python -c "import yaml; print(yaml.safe_load(open('config/rebotarm_rs.yaml'))['joints'][0])"
   ```
+
 - **Quick rollback**: `git checkout config/rebotarm_rs.yaml` restores the repository defaults.
 
 ---
@@ -450,6 +455,7 @@ This example sends target joint angles directly to the motors, with **no path or
 <summary>Show Run Instructions (Optional)</summary>
 
 **Run Command**:
+
 ```bash
 uv run python example/3_mit_control.py
 > 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
@@ -481,6 +487,7 @@ Enter target angles for all joints to control the motors in POS_VEL (Position-Ve
 <summary>Show Run Instructions (Optional)</summary>
 
 **Run Command**:
+
 ```bash
 uv run python example/4_pos_vel_control.py
 > 30 0 0 0 0 0 # Control motor 1 to rotate 30 degrees
@@ -509,11 +516,13 @@ Calculate the end-effector pose based on joint angles.
 **Input**: 6 joint angles (degrees)
 
 **Output**:
+
 - End-effector position (X, Y, Z) — unit: meters
 - Rotation matrix (3×3)
 - Euler angles (roll/pitch/yaw) — unit: degrees
 
 **Example**:
+
 ```bash
 uv run python example/5_fk_test.py
 > 0 0 0 0 0 0
@@ -532,10 +541,12 @@ uv run python example/5_fk_test.py
 Solve joint angles based on the desired end-effector pose.
 
 **Input Format**:
+
 - Position only: `<x> <y> <z>` (meters)
 - Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
 
 **Example**:
+
 ```bash
 uv run python example/6_ik_test.py
 > 0.25 0.0 0.15              # Position only
@@ -554,6 +565,7 @@ uv run python example/6_ik_test.py
 Use inverse kinematics (IK) in MIT mode to specify the 3D coordinates (X, Y, Z) and orientation (Euler angles) where the robotic arm end-effector should move.
 
 **Input Format**:
+
 - Position only: `<x> <y> <z>` (meters)
 - Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
 - Input `state`: View current actual radian values of each joint.
@@ -571,6 +583,7 @@ This example sends the IK solution directly as the joint target, with **no path 
 <summary>Show Run Instructions (Optional)</summary>
 
 **Run Command**:
+
 ```bash
 uv run python example/7_arm_ik_control.py
 
@@ -597,6 +610,7 @@ uv run python example/7_arm_ik_control.py
 Use inverse kinematics (IK) in MIT mode to automatically plan a uniform or smooth acceleration/deceleration motion trajectory within the target time, avoiding severe joint vibration.
 
 **Input Format**:
+
 - Position only: `<x> <y> <z>` (meters)
 - Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
 - Position + Orientation + Time (default 2.0): `<x> <y> <z> <roll> <pitch> <yaw> <time>` (degrees)
@@ -604,6 +618,7 @@ Use inverse kinematics (IK) in MIT mode to automatically plan a uniform or smoot
 - Input `end_state`: View current end-effector actual coordinates (m) and Euler angles (rad) in space.
 
 **Run Command**:
+
 ```bash
 uv run python example/8_arm_traj_control.py
 
@@ -639,6 +654,7 @@ If you notice that the **read end-effector pose** differs from the **commanded t
 Use the Pinocchio dynamics model to compensate for joint gravity.
 
 **Control Law**:
+
 ```
 tau = g(q)          — Gravity feedforward
 pos = current motor position   — Joint position follows current position
@@ -646,6 +662,7 @@ kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 ```
 
 **Expected Behavior**:
+
 - The robotic arm can "float" at any pose
 - Will not fall due to self-weight after release
 - Can be manually moved to any position
@@ -657,11 +674,13 @@ Automatic homing depends on normal program execution, communication, and power. 
 :::
 
 **Run Command**:
+
 ```bash
 uv run python example/9_gravity_compensation.py
 ```
 
 **Output**:
+
 - Display desired torque for each joint in real time (N·m)
 - Press `Ctrl+C` to stop and disconnect
 
@@ -688,6 +707,7 @@ For example, `tau_g[2] *= 1.2` means increasing the gravity compensation torque 
 Based on the basic gravity compensation, adds end-effector velocity detection and joint angle locking mechanism.
 
 **Control Law**:
+
 ```
 tau = g(q) + integral_term    — Gravity feedforward + integral term
 pos = q_target                 — Target joint angle (locked or updated)
@@ -695,6 +715,7 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
 ```
 
 **Lock Logic**:
+
 - When end linear velocity `||v_ee|| < 0.04 m/s` and angular velocity `||w_ee|| < 0.08 rad/s`:
   - Target joint angle `q_target` remains locked
   - Robotic arm locks in current position
@@ -703,6 +724,7 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
   - Allows manual pushing to change position
 
 **Expected Behavior**:
+
 - Robotic arm locks in current position, requiring force to change target angle
 - More stable than basic version, suitable for scenarios requiring pose maintenance
 
@@ -713,11 +735,13 @@ Automatic homing depends on normal program execution, communication, and power. 
 :::
 
 **Run Command**:
+
 ```bash
 uv run python example/10_gravity_compensation_lock.py
 ```
 
 **Output**:
+
 - Display lock status in real time (LOCKED / UPDATE)
 - End linear velocity, angular velocity
 - Gravity compensation torque for each joint (N·m)
@@ -736,6 +760,7 @@ For example, `tau_g[2] *= 1.2` means increasing the gravity compensation torque 
 
 **Safety Test Configuration**:
 You can modify the `ENABLED_JOINTS` list at the top of the script to enable only specified joints for safety testing:
+
 ```python
 ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 ```
@@ -763,17 +788,20 @@ ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 Interactive forward kinematics simulation, visualizing the robotic arm's pose in MeshCat by inputting joint angles.
 
 **Run Command**:
+
 ```bash
 uv run python example/sim/fk_sim.py
 ```
 
 **Interactive Commands**:
+
 - Input 6 joint angles (degrees), space-separated
 - Example: `0 0 0 0 0 0`
 - Example: `45 -30 15 -60 90 -180`
 - `q`/`quit`/`exit`: Exit
 
 **Features**:
+
 - Display end-effector position and orientation in real time
 - Support continuous input to test different poses
 - Output formatted pose information
@@ -790,21 +818,25 @@ uv run python example/sim/fk_sim.py
 Interactive inverse kinematics simulation, automatically solving joint angles and visualizing for a target pose.
 
 **Run Command**:
+
 ```bash
 uv run python example/sim/ik_sim.py
 ```
 
 **Input Format**:
+
 - Position only: `x y z` (meters)
 - Position + Orientation: `x y z roll pitch yaw` (radians)
 
 **Example**:
+
 ```bash
 > 0.25 0.0 0.25              # Position only
 > 0.29545 0.0 0.28664 0 0.17453 0  # Position + orientation
 ```
 
 **Features**:
+
 - Automatically determine whether IK converges
 - Display iteration count and error
 - Update robot pose in real time
@@ -821,16 +853,19 @@ uv run python example/sim/ik_sim.py
 SE(3) geodesic trajectory planning simulation, including CLIK tracking and MeshCat animation playback.
 
 **Run Command**:
+
 ```bash
 uv run python example/sim/traj_sim.py
 ```
 
 **Interactive Commands**:
+
 - Input: `x y z [roll pitch yaw]` (meters/radians)
 - Press Enter directly to use default configuration
 - `q`: Quit
 
 **Features**:
+
 - Plan from current position to target pose
 - Use minimum jerk trajectory profile
 - Display trajectory statistics in real time
@@ -849,12 +884,14 @@ uv run python example/sim/traj_sim.py
 MeshCat visualizer wrapper, providing a unified robot display interface.
 
 **Main Functions**:
+
 - Load URDF model and display robot
 - Draw 3D polyline paths (reference/actual)
 - Display IK target pose (three-color axes + sphere)
 - Support joint trajectory animation playback
 
 **Usage Example**:
+
 ```python
 from example.sim.visualizer import Visualizer
 viz = Visualizer()
