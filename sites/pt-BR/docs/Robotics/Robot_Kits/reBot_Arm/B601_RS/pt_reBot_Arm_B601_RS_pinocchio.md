@@ -843,7 +843,7 @@ uv run python example/sim/traj_sim.py
 <h4>Ferramenta de Visualização</h4>
 <p className="rebot-step-label">Demonstração de Simulação 4 · sim/visualizer.py</p>
 
-[LINE_88>Wrapper do visualizador MeshCat, fornecendo uma interface unificada de exibição do robô.</p>
+Wrapper do visualizador MeshCat, fornecendo uma interface unificada de exibição do robô.
 
 **Funções principais**:
 - Carregar modelo URDF e exibir o robô
