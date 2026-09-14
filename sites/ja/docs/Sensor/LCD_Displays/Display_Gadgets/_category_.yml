@@ -2,3 +2,6 @@ position: 4
 label: 'XIAO ディスプレイガジェット'
 collapsible: true
 collapsed: true
+link:
+  type: doc
+  id: ja_display_gadgets_introduction
