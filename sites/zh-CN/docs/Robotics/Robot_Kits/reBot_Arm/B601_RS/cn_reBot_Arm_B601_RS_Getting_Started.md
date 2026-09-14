@@ -18,7 +18,7 @@ last_update:
   date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-08-17'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -26,6 +26,7 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS 快速入门
 
@@ -57,6 +58,12 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 <p align="center">
   reBot Arm 项目已经在 [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) 上开源了，欢迎前往仓库点亮 Star 小星星！仓库中包含完整的 BOM 清单。本文将带领你快速入门 B601-RS，从组装到使用。
 </p>
+
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-DevArm"
+  ariaLabel="在 GitHub 上为 reBot-DevArm 点亮 Star"
+/>
 
 ## 风险告知及免责声明
 
@@ -166,6 +173,8 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 :::tip
 1. 已验证虚拟机的性能不足以支撑 Demo 运行且存在配置问题，建议优先使用 Ubuntu 物理机控制机械臂。
+
+   推荐安装 **Ubuntu 24.04 LTS**。
 
    推荐B站安装教程：[Ubuntu双系统安装教程](https://www.bilibili.com/video/BV1Cc41127B9/)
 

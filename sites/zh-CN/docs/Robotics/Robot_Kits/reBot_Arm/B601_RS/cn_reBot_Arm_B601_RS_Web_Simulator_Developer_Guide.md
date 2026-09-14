@@ -153,7 +153,6 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 | Python | 3.12（Jazzy）或 3.10（Humble） |
 | Node.js | 18 及以上 |
 | 浏览器 | 当前稳定版 Chrome、Chromium、Edge 或 Firefox |
-| CAN 工具 | `iproute2`、`can-utils` |
 | 真机 CAN | `can0`，1 Mbps |
 | MuJoCo | 由项目 Python 环境安装 |
 
