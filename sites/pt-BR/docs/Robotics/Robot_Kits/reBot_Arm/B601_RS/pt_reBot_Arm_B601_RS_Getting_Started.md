@@ -18,7 +18,7 @@ last_update:
   date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/
 ---
 
@@ -27,6 +27,7 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # Introdução ao reBot Arm B601-RS
 
@@ -56,23 +57,25 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 </p>
 
 <p align="center">
-  O projeto reBot Arm é open source no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm)—visite o repositório e deixe uma estrela! O repositório contém a lista completa de materiais (BOM). Este guia ajudará você a começar a usar o B601-RS, desde a montagem até a operação.
+  O projeto reBot Arm é open source no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) — visite o repositório e deixe uma Star! O repositório contém a lista completa de materiais (BOM). Este guia ajudará você a começar a usar o B601-RS, desde a montagem até a operação.
 </p>
 
-## Aviso de segurança e comunicado de risco
+<GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
+
+## Aviso de Segurança e Notificação de Risco
 
 <div className="rebot-disclaimer-gallery">
   <figure className="rebot-disclaimer-gallery-item">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="Aviso de segurança e comunicado de risco do reBot Arm em chinês" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="Aviso de segurança e notificação de risco do reBot Arm em chinês" />
   </figure>
   <figure className="rebot-disclaimer-gallery-item">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="Aviso de segurança e comunicado de risco do reBot Arm em inglês" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="Aviso de segurança e notificação de risco do reBot Arm em inglês" />
   </figure>
 </div>
 
-## Sobre a fonte de alimentação
+## Sobre a Fonte de Alimentação
 
-1. O braço robótico não é enviado com fonte de alimentação / não inclui uma fonte de alimentação por padrão. Você pode conectar uma bateria por conta própria ou adquirir nossa [fonte de alimentação MeanWell 48V 12,5A open source](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html) ou pela [Amazon](https://www.amazon.com/LRS-600-48-Switching-Upgrade-Version-SE-600-48/dp/B0BV5XFYNS/ref=sr_1_1?crid=2MK5Y1UI66CW9&dib=eyJ2IjoiMSJ9.FAt8rrpVeLIbeU2px5Bpe3WU2xsHpE3Kw1Fc6ZdPBFrIpRsaASOwU1dL9jPUNnpXO5u67hvlSXTsKCXH7jehZ8VWfiSFbcHmsVhJY_ua86iPUltJFeWlT9LIXphFER27jHWGnaJb2NdRIpPBMVdae8qgIllUI1J-Q8pZranpyjkkiJP2RmiEdhUBXTvvH3-vhk8z2uhf7BJrGW7hjRbjyCO7WHwwBQ3tMcnEKwto2doy9qus35djHRzODSFPbMuiA66PdgPuib4VL1aQghehDEiceMIpTUiCHHeRHfpB71M._yrosm8mVfpUq-5PjNTLSaYPgv8Dot6YbQTaGULjlLQ&dib_tag=se&keywords=LRS-600-48&qid=1781762081&s=electronics&sprefix=lrs-600-48%2Celectronics%2C351&sr=1-1). Não adquira fontes de alimentação de fabricantes sem marca ou por canais inseguros. Quaisquer riscos ou consequências decorrentes disso serão de responsabilidade do próprio indivíduo.
+1. O braço robótico não é enviado com fonte de alimentação / não inclui uma fonte de alimentação por padrão. Você pode conectar uma bateria por conta própria ou adquirir nossa [fonte de alimentação MeanWell 48V 12,5A open source](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html) ou pela [Amazon](https://www.amazon.com/LRS-600-48-Switching-Upgrade-Version-SE-600-48/dp/B0BV5XFYNS/ref=sr_1_1?crid=2MK5Y1UI66CW9&dib=eyJ2IjoiMSJ9.FAt8rrpVeLIbeU2px5Bpe3WU2xsHpE3Kw1Fc6ZdPBFrIpRsaASOwU1dL9jPUNnpXO5u67hvlSXTsKCXH7jehZ8VWfiSFbcHmsVhJY_ua86iPUltJFeWlT9LIXphFER27jHWGnaJb2NdRIpPBMVdae8qgIllUI1J-Q8pZranpyjkkiJP2RmiEdhUBXTvvH3-vhk8z2uhf7BJrGW7hjRbjyCO7WHwwBQ3tMcnEKwto2doy9qus35djHRzODSFPbMuiA66PdgPuib4VL1aQghehDEiceMIpTUiCHHeRHfpB71M._yrosm8mVfpUq-5PjNTLSaYPgv8Dot6YbQTaGULjlLQ&dib_tag=se&keywords=LRS-600-48&qid=1781762081&s=electronics&sprefix=lrs-600-48%2Celectronics%2C351&sr=1-1). Não adquira fontes de alimentação de fabricantes sem marca ou por canais inseguros. Quaisquer riscos ou consequências decorrentes disso serão de responsabilidade do indivíduo.
 
 Se a tensão da sua residência for 220 V, ajuste a chave seletora de tensão na lateral da fonte de alimentação para 230 V. Se a tensão da sua residência for 110 V, ajuste-a para 115 V.
 
@@ -90,7 +93,7 @@ Se a tensão da sua residência for 220 V, ajuste a chave seletora de tensão na
   </figure>
 </div>
 
-### Montar a fonte de alimentação
+### Montar a Fonte de Alimentação
 
 Como alternativa, você pode escolher nosso gabinete open source para fonte de alimentação MeanWell 24V 14,6A para auto-montagem. As instruções em texto e a BOM são open source no [repositório GitHub](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_RS) (recomendado apenas para desenvolvedores com experiência relevante em montagem de fontes de alimentação).
 
@@ -100,7 +103,7 @@ Vídeo de referência para montagem:
      <iframe width="900" height="600" src="https://www.youtube.com/embed/5GitUWT9gx0?si=I_dnd2bSNHbB95BW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
    </div>
 
-## Guia de montagem
+## Guia de Montagem
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -117,9 +120,9 @@ Vídeo de referência para montagem:
 </div>
 
 - Antes da montagem, leia atentamente as instruções a seguir. Para garantir um processo de montagem tranquilo e uma experiência prática completa, seja paciente, mantenha o foco e siga sempre estes pontos-chave:
-  1. Este kit inclui numerosos parafusos e peças estruturais, alguns dos quais são semelhantes. Verifique cuidadosamente as especificações dos parafusos e os modelos das peças e confirme a orientação de instalação antes de apertar.
+  1. Este kit inclui numerosos parafusos e peças estruturais, alguns dos quais são semelhantes. Verifique cuidadosamente as especificações dos parafusos e os modelos das peças, e confirme a orientação de instalação antes de apertar.
   2. O vídeo foi gravado no início de abril. Pode haver pequenos ajustes nas peças posteriormente, mas isso não afeta a qualidade da montagem ao seguir o vídeo. As peças finais são as que acompanham o produto enviado.
-  3. Para facilitar a instalação e remoção dos parafusos, a BOM open source especifica parafusos padrão. No entanto, os parafusos enviados com o kit têm trava química aplicada. Você também pode usar suas próprias ferramentas preferidas ou uma parafusadeira elétrica (altamente recomendado ter uma à mão). Se usar uma ferramenta elétrica, certifique-se de ajustar o torque para um nível baixo a médio (3–6 kgf·cm) para evitar torque excessivo que possa espanar os parafusos, causando danos irreversíveis em que as peças não podem ser removidas. Se houver qualquer sinal de espanamento, substitua imediatamente o parafuso ou realinhe e tente novamente. Parafusos com trava química espanados não podem ser removidos com extrator de parafusos e inutilizarão toda a peça. Portanto, proceda com cautela.
+  3. Para facilitar a instalação e remoção dos parafusos, a BOM open source especifica parafusos padrão. No entanto, os parafusos enviados com o kit possuem trava química aplicada. Você também pode usar suas próprias ferramentas preferidas ou uma parafusadeira elétrica (altamente recomendado ter uma à mão). Se usar uma ferramenta elétrica, certifique-se de ajustar o torque para um nível baixo a médio (3–6 kgf·cm) para evitar torque excessivo que possa espanar os parafusos, causando danos irreversíveis em que as peças não podem ser removidas. Se houver qualquer sinal de espanamento, substitua imediatamente o parafuso ou realinhe e tente novamente. Parafusos com trava química espanados não podem ser removidos com extrator de parafusos e inutilizarão toda a peça. Portanto, prossiga com cautela.
   4. Priorize a segurança durante a montagem para evitar dedos presos ou lesões por esmagamento. Crianças devem concluir este projeto acompanhadas por um dos pais ou responsável.
 
 </TabItem>
@@ -127,7 +130,7 @@ Vídeo de referência para montagem:
 
 Conecte os cabos do braço robótico e, em seguida, use o MotorBridge Studio para gravar os parâmetros do motor e definir a posição zero.
 
-Consulte o vídeo de unboxing e início rápido do reBot Arm B601-RS abaixo para esta etapa.
+Consulte o vídeo de unboxing e primeiros passos do reBot Arm B601-RS abaixo para esta etapa.
 
 Conecte o Motor 1 e o Motor 2 conforme mostrado abaixo.
 
@@ -135,7 +138,7 @@ Conecte o Motor 1 e o Motor 2 conforme mostrado abaixo.
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="Conecte o Motor 1 e o Motor 2 no reBot Arm B601-RS" />
 </div>
 
-Em seguida, conecte o módulo USB-para-CAN, a placa divisora de energia e sinal, o cabo de alimentação XT30 e o cabo XT30 2+2 conforme mostrado abaixo. Conecte a outra extremidade do cabo XT30 2+2 ao Motor 1 e conecte o cabo de alimentação à fonte de alimentação de 48 V.
+Em seguida, conecte o módulo USB-para-CAN, a placa divisora de energia e sinal, o cabo de alimentação XT30 e o cabo XT30 2+2 conforme mostrado abaixo. Conecte a outra extremidade do cabo XT30 2+2 ao Motor 1 e conecte o cabo de alimentação à fonte de 48 V.
 
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="Conecte o módulo USB-para-CAN e os cabos de alimentação ao reBot Arm B601-RS" />
@@ -157,20 +160,22 @@ Consulte o vídeo e o tutorial em texto. Antes de controlar o braço robótico, 
 <iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Use o MotorBridge para calibrar o braço e concluir a primeira execução
+## Use o MotorBridge para Calibrar o Braço e Concluir a Primeira Execução
 
 :::tip
 1. Explore nossa plataforma **MotorBridge**. Esta solução tudo-em-um oferece suporte a uma gama crescente de motores, incluindo [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [RobStride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [HighTorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [MyActuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow e braços robóticos continuamente atualizados, como o reBot. Ela é amigável para iniciantes e fornece aos desenvolvedores um SDK em Python que corresponde às funcionalidades da interface Web.
 
-2. Os recursos do MotorBridge desenvolvidos para o reBot incluem calibração de zero com um clique, gravação de parâmetros, controle de motor por arrastar e soltar e visualização de modelo integrada.
+2. Os recursos do MotorBridge voltados para o reBot incluem calibração de zero com um clique, gravação de parâmetros, controle de motor por arrastar e soltar e visualização de modelo integrada.
 
-3. O MotorBridge é compatível com **Windows, Ubuntu e macOS**.
+3. MotorBridge é compatível com **Windows, Ubuntu e macOS**.
 :::
 
 :::tip
-1. Máquinas virtuais não fornecem desempenho suficiente para uma operação de demonstração confiável e podem introduzir problemas de configuração. Sempre que possível, use uma máquina física com Ubuntu.
+1. Máquinas virtuais não fornecem desempenho suficiente para uma operação de demonstração confiável e podem introduzir problemas de configuração. Use um computador físico com Ubuntu sempre que possível.
 
-   Tutorial de instalação recomendado no Bilibili: [Tutorial de Instalação de Dual-Boot do Ubuntu](https://www.bilibili.com/video/BV1Cc41127B9/)
+   Recomendamos instalar o **Ubuntu 24.04 LTS**.
+
+   Tutorial de instalação recomendado no Bilibili: [Ubuntu Dual-Boot Installation Tutorial](https://www.bilibili.com/video/BV1Cc41127B9/)
 
 2. (Beta) Você pode pedir para um agente inicializar o braço robótico. Envie o seguinte prompt:
 
@@ -183,9 +188,9 @@ Se você comprou um kit pré-montado, diga ao agente durante a etapa de ID do mo
 3. O agente grava os IDs dos motores por meio de comandos de CLI, enquanto este Wiki usa a interface Web. Ambos os métodos funcionam.
 :::
 
-### Fluxo de Trabalho de Configuração de Software e Calibração
+### Fluxo de Configuração de Software e Calibração
 
-Siga estas etapas na ordem para instalar o Miniforge e criar um ambiente Python isolado para o desenvolvimento com o reBot.
+Siga estas etapas na ordem para instalar o Miniforge e criar um ambiente Python isolado para o desenvolvimento do reBot.
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -241,10 +246,10 @@ conda init zsh
 </TabItem>
 <TabItem value="windows" label="Windows">
 
-Abra a [página de Releases do Miniforge](https://github.com/conda-forge/miniforge/releases), encontre o `Miniforge3-Windows-x86_64.exe` mais recente e faça o download.
+Abra a [página de lançamentos do Miniforge](https://github.com/conda-forge/miniforge/releases), encontre o `Miniforge3-Windows-x86_64.exe` mais recente e faça o download.
 
 :::tip Inicialize o Conda para o seu terminal
-**Usuários de Git Bash:** Se `conda` não for encontrado, carregue o Conda primeiro:
+**Usuários do Git Bash:** Se `conda` não for encontrado, carregue o Conda primeiro:
 
 ```bash
 # Temporary: replace <install_path> with the actual path
@@ -308,7 +313,7 @@ conda create -y -n rebot python=3.12
       <h4>Ativar o Ambiente</h4>
       <p className="rebot-step-label">Etapa 4</p>
 
-Execute este comando sempre que você abrir um novo terminal para o reBot:
+Execute este comando sempre que abrir um novo terminal para o reBot:
 
 ```bash
 conda activate rebot
@@ -365,7 +370,7 @@ Se o dispositivo PCAN tiver firmware incorreto após a instalação do driver, e
 :::
 
 <details>
-<summary>Download de Firmware do PCAN &amp; Etapas de Reparo do Driver - Ubuntu</summary>
+<summary>Download do Firmware PCAN &amp; Etapas de Reparo do Driver - Ubuntu</summary>
 
 Usuários de Ubuntu, por favor, consultem este guia
 
@@ -382,7 +387,7 @@ Se estiver transferindo de outro computador (por exemplo, scp):
 ```text
 scp flash_pcan_ubuntu.sh pcan_canable_hw.bin seeed@your_Ubuntu_IP:~/Downloads/
 ```
-Ou simplesmente copie para um pendrive USB e conecte-o à máquina Ubuntu — desde que os arquivos terminem em ~/Downloads, no diretório atual ou em /tmp, o script os encontrará automaticamente.
+Ou simplesmente copie para um pen drive USB e conecte-o ao computador com Ubuntu — desde que os arquivos terminem em ~/Downloads, no diretório atual ou em /tmp, o script os encontrará automaticamente.
 
 4.Execute:
 
@@ -410,7 +415,7 @@ No Jetson, o brltty pode ocupar a porta serial USB usada pelo líder. Remova-o p
 sudo apt remove -y brltty
 ```
 
-- Instalar Dependências
+- Instalar dependências
 ```bash
 sudo apt update
 sudo apt install -y \
@@ -443,7 +448,7 @@ Compile no modo netdev:
 make netdev
 ```
 O modo netdev registra o PCAN-USB como uma interface de rede Linux SocketCAN.
-**Não** use `make` simples. O `make` simples compila o modo chardev, enquanto o LeRobot e o motorbridge-cli dependem de interfaces SocketCAN.
+**Não** use `make` simples. O `make` simples compila no modo chardev, enquanto o LeRobot e o motorbridge-cli dependem de interfaces SocketCAN.
 
 - Instalar e Carregar o Driver
 Instale o driver:
@@ -505,7 +510,7 @@ Em caso de sucesso, a saída será:
 ```
 PCAN_IF=can1
 ```
-Use `$PCAN_IF` em todos os comandos subsequentes em vez de codificar diretamente `can1` ou `can2`.
+Use `$PCAN_IF` em todos os comandos subsequentes em vez de fixar `can1` ou `can2` no código.
 
 ```bash
 sudo modprobe peak_usb
@@ -529,7 +534,7 @@ cd PCBUSB
 sudo ./install.sh
 ```
 
-`install.sh` apenas cria `libPCBUSB.dylib`. O carregador nativo do motorbridge faz `dlopen` apenas do nome simples `PCBUSB`, então adicione este link simbólico. Sem isso, a conexão com o braço falha com `load PCBUSB failed` mesmo quando uma verificação com `libPCBUSB.dylib` via ctypes passaria:
+`install.sh` apenas cria `libPCBUSB.dylib`. O carregador nativo do motorbridge faz `dlopen` apenas do nome simples `PCBUSB`, então adicione este link simbólico. Sem ele, a conexão com o braço falha com `load PCBUSB failed` mesmo quando uma verificação com `libPCBUSB.dylib` via ctypes passaria:
 
 ```zsh
 sudo ln -sf /usr/local/lib/libPCBUSB.dylib /usr/local/lib/PCBUSB
@@ -555,7 +560,7 @@ ln -sf "$HOME/.local/lib/libPCBUSB.dylib" "$HOME/.local/lib/PCBUSB"
 
 Aponte o script de ativação do conda para `$HOME/.local/lib` em vez de `/usr/local/lib`.
 
-Verifique se está pronto. Conecte primeiro o adaptador PCAN. `ctypes.CDLL('libPCBUSB.dylib')` não é uma verificação de tempo de execução válida — o motorbridge nunca carrega esse nome.
+Verifique se está pronto. Primeiro conecte o adaptador PCAN. `ctypes.CDLL('libPCBUSB.dylib')` não é uma verificação de tempo de execução válida — o motorbridge nunca carrega esse nome.
 
 ```zsh
 # Check Python package and CLI are ready
@@ -587,13 +592,13 @@ Usuários de MAC, por favor, consultem este guia
 
 [Clique para baixar flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
 
-Se estiver transferindo de outro computador (por exemplo, scp):
+Se estiver transferindo de outro computador (por exemplo, via scp):
 
 ```text
 scp flash_pcan_mac.sh pcan_canable_hw.bin seeed@your_MAC_IP:~/Downloads/
 ```
 
-Ou simplesmente copie para um pen drive USB e conecte-o ao MAC — contanto que os arquivos acabem em ~/Downloads, no diretório atual ou em /tmp, o script os encontrará automaticamente.
+Ou simplesmente copie para um pendrive USB e conecte-o ao MAC — desde que os arquivos terminem em ~/Downloads, no diretório atual ou em /tmp, o script irá encontrá-los automaticamente.
 
 4.Execute:
 
@@ -601,9 +606,9 @@ Ou simplesmente copie para um pen drive USB e conecte-o ao MAC — contanto que 
 bash /Users/"your_username"/Downloads/flash_pcan_mac.sh "/Users/"your_username"/Downloads/pcan_canable_hw.bin"
 ```
 
-O comando acima assume que os arquivos foram colocados no caminho Downloads do Mac; ajuste de acordo com o seu caminho real
+O comando acima assume que os arquivos estão colocados no caminho Downloads do Mac; ajuste de acordo com o seu caminho real
 
-Digite sua senha; aguarde a conclusão
+Digite sua senha e aguarde a conclusão
 
 Após a conclusão, altere de volta para "120R"
 
@@ -625,9 +630,9 @@ Se **PCAN-USB** não for detectado no Gerenciador de Dispositivos após instalar
 
 <summary>Download de Firmware do PCAN &amp; Etapas de Reparo do Driver - Windows</summary>
 
-Se o PCAN-USB ainda não funcionar após instalar o driver e o Gerenciador de Dispositivos não mostrar o dispositivo **PCAN-USB** ilustrado abaixo, baixe o pacote de firmware do PCAN e siga estas etapas para instalar o driver DFU e regravar o firmware.
+Se o PCAN-USB ainda não funcionar após instalar o driver e o Gerenciador de Dispositivos não mostrar o dispositivo **PCAN-USB** ilustrado abaixo, baixe o pacote de firmware do PCAN e siga estes passos para instalar o driver DFU e regravar o firmware.
 
-![PCAN-USB detectado no Gerenciador de Dispositivos](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/01-pcan-usb-device.png)
+![PCAN-USB detected in Device Manager](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/01-pcan-usb-device.png)
 
 > 📦 [Baixar USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
 
@@ -635,7 +640,7 @@ Se o PCAN-USB ainda não funcionar após instalar o driver e o Gerenciador de Di
 
 1. Extraia o pacote baixado. Ele contém as pastas `Dfu tool` e `pcan`.
 
-![Pastas Dfu tool e pcan extraídas do pacote](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/02-extracted-folders.png)
+![Dfu tool and pcan folders extracted from the package](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/02-extracted-folders.png)
 
 2. Abra a pasta `Dfu tool` e execute o instalador `.exe`. Após a instalação, anote o caminho de instalação do driver, por exemplo:
 
@@ -643,42 +648,42 @@ Se o PCAN-USB ainda não funcionar após instalar o driver e o Gerenciador de Di
 C:\Program Files (x86)\STMicroelectronics\Software\DfuSe v3.0.6\Bin\Driver
 ```
 
-![Instalador DfuSe e caminho de instalação do driver](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/03-dfuse-install-location.png)
+![DfuSe installer and driver installation path](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/03-dfuse-install-location.png)
 
 3. Ajuste a chave DIP no módulo USB2CAN para **BOOT** e conecte o módulo ao computador.
 
-![Ajuste a chave DIP do USB2CAN para BOOT](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/04-usb2can-boot-switch.jpg)
+![Set the USB2CAN DIP switch to BOOT](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/04-usb2can-boot-switch.jpg)
 
 4. Abra o **Gerenciador de Dispositivos**, localize **Outros dispositivos → STM32 BOOTLOADER**, clique com o botão direito, selecione **Atualizar driver** e, em seguida, selecione **Procurar software de driver no computador**.
 
-![STM32 BOOTLOADER no Gerenciador de Dispositivos](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/05-stm32-bootloader.png)
+![STM32 BOOTLOADER in Device Manager](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/05-stm32-bootloader.png)
 
-![Selecione Procurar software de driver no computador](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/06-update-driver.png)
+![Select Browse my computer for drivers](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/06-update-driver.png)
 
 5. Cole o caminho do driver DfuSeDemo anotado anteriormente no campo de localização, selecione **Incluir subpastas** e clique em **Avançar**.
 
-![Insira o caminho do driver DfuSeDemo e selecione Incluir subpastas](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/07-driver-path.png)
+![Enter the DfuSeDemo driver path and select Include subfolders](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/07-driver-path.png)
 
 6. Desconecte e reconecte o módulo USB2CAN. Se ele agora for identificado como **STM Device in DFU Mode**, a atualização do driver foi bem-sucedida.
 
 7. Abra o **DfuSeDemo** e confirme se ele detecta corretamente o módulo USB2CAN.
 
-![DfuSeDemo detecta corretamente o módulo USB2CAN](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/08-dfuse-detects-usb2can.png)
+![DfuSeDemo correctly detects the USB2CAN module](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/08-dfuse-detects-usb2can.png)
 
 ### Gravar o Firmware do PCAN
 
 1. No DfuSeDemo, clique em **Upgrade or Verify Action → Choose...** e selecione o firmware da pasta `pcan` extraída.
 2. Clique em **Upgrade**, clique em **Yes** na caixa de confirmação e aguarde a conclusão do processo de gravação do firmware. Você pode então fechar o DfuSeDemo.
 
-![Selecione o firmware do PCAN e clique em Upgrade no DfuSeDemo](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/09-select-pcan-firmware.png)
+![Select the PCAN firmware and click Upgrade in DfuSeDemo](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/09-select-pcan-firmware.png)
 
-![Atualização de firmware concluída](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/10-firmware-upgrade-complete.png)
+![Firmware upgrade completed](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/10-firmware-upgrade-complete.png)
 
 ### Restaurar e Verificar o Dispositivo
 
 Desconecte o módulo USB2CAN, ajuste a chave DIP para **120R** e reconecte-o ao computador. Abra o Gerenciador de Dispositivos. Se o dispositivo for identificado como **PCAN-USB**, o problema foi resolvido e você pode continuar com este guia.
 
-![PCAN-USB detectado com sucesso no Gerenciador de Dispositivos](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/11-pcan-usb-recognized.png)
+![PCAN-USB successfully detected in Device Manager](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/11-pcan-usb-recognized.png)
 
 </details>
 
@@ -720,19 +725,19 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 <section className="rebot-step-item">
     <span className="rebot-step-number">7</span>
 <div className="rebot-step-content">
-      <h4>Gravar Pontos Zero e Depurar com MotorBridge Gateway</h4>
+      <h4>Gravar Pontos Zero e Depurar com o MotorBridge Gateway</h4>
       <p className="rebot-step-label">Etapa 7</p>
 
-#### Antes de Resetar o Motor
+#### Antes do Reset do Motor
 
 Antes da configuração dos parâmetros do motor, observe as seguintes preparações e regras de segurança:
 
 - Prepare 2 grampos de fixação (tamanho ≥3 polegadas) e uma fonte de alimentação chaveada de 48 V com saída XT30 (escolha uma marca confiável; não use fontes de baixa qualidade).
 - Durante a depuração e operação, mantenha uma distância segura de pelo menos 1 metro.
-- Não conecte ou desconecte motores com o sistema energizado; desligue a fonte de alimentação antes de conectar/desconectar o conector XT30 2+2.
-- Não sobrecarregue nem opere os motores em excesso de velocidade; verifique a fiação e os fixadores antes da partida; não utilize em ambientes úmidos, de alta temperatura ou empoeirados.
-- Defina parâmetros de programa razoáveis e função de parada de emergência para evitar fuga descontrolada do equipamento.
-- **Siga rigorosamente as regras acima. O vendedor não se responsabiliza por quaisquer riscos e perdas causados por operações em desacordo ou erros humanos.**
+- Não conecte ou desconecte os motores com o sistema energizado; desligue a fonte de alimentação antes de conectar/desconectar o conector XT30 2+2.
+- Não sobrecarregue nem opere os motores em velocidade excessiva; verifique a fiação e os fixadores antes da partida; não utilize em ambientes úmidos, de alta temperatura ou empoeirados.
+- Defina parâmetros de programa razoáveis e uma função de parada de emergência para evitar perda de controle do equipamento.
+- **Siga rigorosamente as regras acima. O vendedor não se responsabiliza por quaisquer riscos e perdas causados por operações em desacordo com as instruções ou por erro humano.**
 
 
 #### Escrita e depuração do ponto zero pela interface Web
@@ -762,10 +767,10 @@ DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9
 
 A maioria dos exemplos do reBot Arm B601-RS é executada no modo MIT. O modo Native Position (`pos_vel`) usa diretamente o ganho do loop de posição `loc_kp` e a velocidade máxima `vel_max`. Seu comportamento de movimento também é afetado pelo ganho do loop de velocidade `spd_kp` e pelo parâmetro de aceleração `acc_rad`. Se os parâmetros recomendados do B601-RS não tiverem sido inicializados ou se os parâmetros salvos em cada junta forem inconsistentes, o modo Position pode apresentar resposta, velocidade ou comportamento de aceleração e desaceleração anormais.
 
-Primeiro selecione `rebot-arm-robstride` em **Robot Model** no [MotorBridge Studio](https://motorbridge.github.io/motorbridge-studio/), faça a varredura e confirme que as Juntas 1-7 estão todas online e conclua a calibração de zero do braço robótico descrita acima. Em seguida, execute as seguintes etapas:
+Primeiro selecione `rebot-arm-robstride` em **Robot Model** no [MotorBridge Studio](https://motorbridge.github.io/motorbridge-studio/), faça a varredura e confirme que as Joints 1-7 estão todas online e conclua a calibração de zero do braço robótico descrita acima. Em seguida, execute as seguintes etapas:
 
 1. Clique em **Read Parameters** para ler os parâmetros atualmente salvos em todas as juntas online. Esta operação apenas lê os dados e não modifica os motores. Aguarde até que a página informe que os parâmetros de controle foram lidos com sucesso e mantenha os valores atuais como registro.
-2. Clique em **Apply Default Template** e confirme que a página informa que o template de parâmetros padrão do reBot Arm RobStride foi aplicado às Juntas 1-7. Esta operação apenas carrega os valores recomendados na página; ela ainda não os grava nos motores.
+2. Clique em **Apply Default Template** e confirme que a página informa que o template de parâmetros padrão reBot Arm RobStride foi aplicado às Joints 1-7. Esta operação apenas carrega os valores recomendados na página; ela ainda não os grava nos motores.
 
 <div align="center">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/en_b601_rs_motorbridge_read_params.png" alt="Ler os parâmetros do motor B601-RS e aplicar o template padrão" />

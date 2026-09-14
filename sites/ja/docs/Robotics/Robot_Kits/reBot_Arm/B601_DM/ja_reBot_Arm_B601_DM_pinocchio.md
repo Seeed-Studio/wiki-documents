@@ -1,5 +1,5 @@
 ---
-description: このチュートリアルでは、reBot Arm B601-DM ロボットアームでの運動学解析と可視化に Pinocchio と MeshCat を使用する方法を紹介します。
+description: このチュートリアルでは、reBot Arm B601-DM ロボットアーム上での運動学解析と可視化に Pinocchio と MeshCat を使用する方法を紹介します。
 title: reBot Arm B601-DM 向け Pinocchio と MeshCat 入門
 keywords:
   - Pinocchio
@@ -16,10 +16,11 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-08-11'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
+import '/src/css/rebot-wiki-style.css';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # reBot Arm B601-DM 向け Pinocchio と MeshCat 入門
@@ -46,25 +47,31 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 </p>
 
 <p align="center">
-  <strong>6 自由度ロボットアーム · マルチモーター対応 · 運動学ソルバ · 軌道計画 · 完全オープンソース</strong>
+  <strong>6 自由度ロボットアーム · マルチモータ対応 · 運動学ソルバ · 軌道計画 · 完全オープンソース</strong>
 </p>
 
 
 :::tip
-このサンプルコードは、単一モーター制御、順運動学 / 逆運動学の制御とテスト、アームのゼロ位置設定とモーター角度読み取り、MeshCat 可視化システムなどを含め、ロボットアームのモーターや姿勢を制御するために使用できます。
+このサンプルコードは、単一モータ制御、順運動学 / 逆運動学の制御とテスト、アームのゼロ位置設定とモータ角度読み取り、MeshCat 可視化システムなどを含め、ロボットアームのモータや姿勢を制御するために使用できます。
 :::
 
 
-[Pinocchio](https://github.com/stack-of-tasks/pinocchio) は、ロボットのダイナミクス解析と最適化のためのオープンソースライブラリです。効率的な順 / 逆運動学、動力学計算、および軌道計画機能を提供します。[MeshCat](https://github.com/rdeits/meshcat) は Web ベースの 3D 可視化ツールで、ロボットの状態や動作軌跡をリアルタイムに表示できます。
+<div align="center">
+  <a href="https://github.com/stack-of-tasks/pinocchio">Pinocchio</a> は、ロボットのダイナミクス解析と最適化のためのオープンソースライブラリです。効率的な順 / 逆運動学、動力学計算、および軌道計画機能を提供します。
+</div>
 
-本プロジェクトは、Pinocchio の強力な計算機能と MeshCat の直感的な可視化を組み合わせ、reBot Arm B601-DM 向けに完全な運動学解析およびデバッグツール一式を提供します。
+<div align="center">
+  <a href="https://github.com/rdeits/meshcat">MeshCat</a> は、ロボットの状態や動作軌跡をリアルタイムに表示できる Web ベースの 3D 可視化ツールです。
+</div>
+
+このプロジェクトは、Pinocchio の強力な計算能力と MeshCat の直感的な可視化を組み合わせ、reBot Arm B601-DM 向けに完全な運動学解析およびデバッグツール一式を提供します。
 
 ---
 
 ## プロジェクトの特長
 
 1. **完全な運動学解析**
-   順運動学 (FK) と逆運動学 (IK) の計算をサポートし、ロボットアームのエンドエフェクタ姿勢をリアルタイムに求めることができます。
+   順運動学（FK）および逆運動学（IK）計算をサポートし、ロボットアームのエンドエフェクタ姿勢をリアルタイムに解くことができます。
 
 2. **リアルタイム 3D 可視化**
    ブラウザ上の MeshCat を通じてロボットアームの状態と動作軌跡をリアルタイムに表示し、追加ソフトウェアは不要です。
@@ -80,7 +87,7 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 ## 仕様
 
-このチュートリアルで使用するハードウェアは [Seeed Studio](https://www.seeedstudio.com/) によって提供されています。
+このチュートリアルのハードウェアは [Seeed Studio](https://www.seeedstudio.com/) によって提供されています。
 
 <table>
   <thead>
@@ -96,10 +103,10 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
     </tr>
     <tr>
       <td>自由度</td>
-      <td>6 自由度 + グリッパ</td>
+      <td>6-DOF + グリッパ</td>
     </tr>
     <tr>
-      <td>モーターモデル</td>
+      <td>モータモデル</td>
       <td>Damiao DM4340 / DM4310</td>
     </tr>
     <tr>
@@ -121,13 +128,13 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
   </tbody>
 </table>
 
-## 部品表 (BOM)
+## 部品表（BOM）
 
 | コンポーネント | 数量 | 同梱 |
 |--|--|--|
 | reBot Arm B601-DM ロボットアーム | 1 | ✅ |
 | USB2CAN シリアルブリッジ | 1 | ✅ |
-| 電源アダプタ (24V) | 1 | ✅ |
+| 電源アダプタ（24V） | 1 | ✅ |
 | USB-C ケーブル | 1 | ✅ |
 | グリッパ | 1 | ✅ |
 
@@ -135,32 +142,56 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 ## 動作環境要件
 
 :::caution 前提条件 — 先にアームのクイックスタートを完了してください
-このチュートリアルを進める前に、**[reBot Arm B601-DM クイックスタート](/ja/rebot_b601_dm_getting_started)** ドキュメントを、次を含めて最初から最後まで**必ず**完了してください：
+このチュートリアルを進める前に、**必ず** **[reBot Arm B601-DM クイックスタート](/ja/rebot_b601_dm_getting_started)** ドキュメントを最初から最後まで完了し、次の内容を含めてください：
 
 - ハードウェアの開梱、配線、および電源投入チェックリスト
-- シリアル / CAN デバイス権限の設定（`sudo chmod 666 /dev/ttyACM0` または `/dev/can0`）
-- すべての関節のゼロキャリブレーション（`2_zero_and_read.py`）と、アームが MIT / POS_VEL モードで指令に従うことの確認
+- シリアル / CAN デバイス権限（`sudo chmod 666 /dev/ttyACM0` または `/dev/can0`）
+- すべての関節のゼロキャリブレーション（`2_zero_and_read.py`）と、アームが MIT / POS_VEL モードでコマンドに従うことの確認
 
-このチュートリアルでは、アームがすでにバス上で応答し、関節がゼロ出しされており、オペレータが関連する安全制限に精通していることを前提としています。クイックスタートを省略すると、モーター設定ミス、関節のスタック、アームの落下などにつながる可能性があります。
+このチュートリアルでは、アームがすでにバス上で応答し、関節がゼロ出しされており、オペレータが関連する安全制限に精通していることを前提としています。クイックスタートを省略すると、モータ設定ミス、関節のスタック、アームの落下などにつながる可能性があります。
 :::
 
 | 項目 | 要件 |
 |------|-------------|
 | **Python** | 3.10+ |
-| **オペレーティングシステム** | Ubuntu 22.04+ |
+| **オペレーティングシステム** | Ubuntu（Ubuntu 24.04 LTS 推奨） |
 | **通信インターフェース** | USB2CAN シリアルブリッジまたは CAN インターフェース |
 
 ---
 
 ## インストール手順
 
-### ステップ 1. uv をインストールする（未インストールの場合）
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4>uv をインストールする（未インストールの場合）</h4>
+<p className="rebot-step-label">Step 1</p>
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### ステップ 2. 環境を同期する（すべての依存関係をインストール）
+インストール後、次のコマンドを実行して `uv` が利用可能か確認します：
+
+```bash
+uv --version
+```
+
+インストールが成功していれば、次のような出力が表示されます（バージョンやプラットフォームは異なる場合があります）：
+
+```text
+uv 0.11.31 (x86_64-unknown-linux-gnu)
+```
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4>環境を同期する（すべての依存関係をインストール）</h4>
+<p className="rebot-step-label">Step 2</p>
 
 ```bash
 git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
@@ -169,32 +200,35 @@ uv sync
 ```
 
 :::tip
-`uv sync` は（存在しない場合は）自動的に仮想環境を作成し、`pyproject.toml` と `uv.lock` に従ってすべての依存関係をインストールします。
+`uv sync` は、（存在しない場合は）自動的に仮想環境を作成し、`pyproject.toml` と `uv.lock` に従ってすべての依存関係をインストールします。
 :::
 
+</div>
+</section>
+</div>
 
 ## MIT / POS_VEL コントローラパラメータのチューニング {#tune-controller-params}
 
-このセクションでは、アームの各関節について **MIT モード** および **POS_VEL モード** でのコントローラパラメータを**どのように変更するか**、そしてその変更を有効にする方法を説明します。
+このセクションでは、**MIT モード** および **POS_VEL モード** において、アーム各関節のコントローラパラメータを**どのように変更するか**、そしてその変更を有効にする方法を説明します。
 
-:::tip このセクションは「どこ / どのように変更するか」のみを扱い、「どの値を使うべきか」は扱いません
-適切なパラメータは、**実機でのチューニング** を通じてのみ得られます。このセクションでは、パラメータがどこにあり、各フィールドが何を制御し、どのように変更を有効化して検証するかのみを扱います。具体的なチューニング手法（試行錯誤、Ziegler‑Nichols など）については、一般的なモーター制御の参考資料を参照してください。
+:::tip このセクションは「どこ / どう変えるか」のみを扱い、「どの値を使うか」は扱いません
+適切なパラメータは、**実機でのチューニング** を通じてのみ得られます。このセクションでは、パラメータがどこにあり、各フィールドが何を制御し、どのように変更を有効化して検証するかのみを扱います。具体的なチューニング手法（試行錯誤法、Ziegler‑Nichols など）については、一般的なモータ制御の参考資料を参照してください。
 :::
 
 ### 設定ファイルの場所
 
-| ハードウェアバージョン | モーター設定ファイル | 切り替え項目 |
+| ハードウェアバージョン | モータ設定ファイル | 切り替え項目 |
 |---|---|---|
-| **reBot Arm B601-DM**（本ドキュメント） | `config/rebotarm_dm.yaml` | `config/rebotarm.yaml` 内で `hardware_yaml: "rebotarm_dm.yaml"` を設定 |
-| **reBot Arm B601-RS** | `config/rebotarm_rs.yaml` | `config/rebotarm.yaml` 内で `hardware_yaml: "rebotarm_rs.yaml"` を設定 |
+| **reBot Arm B601-DM**（本ドキュメント） | `config/rebotarm_dm.yaml` | `config/rebotarm.yaml` 内の `hardware_yaml: "rebotarm_dm.yaml"` を設定 |
+| **reBot Arm B601-RS** | `config/rebotarm_rs.yaml` | `config/rebotarm.yaml` 内の `hardware_yaml: "rebotarm_rs.yaml"` を設定 |
 
 :::caution `rebotarm.yaml` を直接編集しないでください
-このファイルには `hardware_yaml: ...` という 1 行だけが含まれており、すべてのモーターパラメータは `rebotarm_dm.yaml` / `rebotarm_rs.yaml` に記述されています。
+このファイルには `hardware_yaml: ...` という 1 行のみが含まれており、すべてのモータパラメータは `rebotarm_dm.yaml` / `rebotarm_rs.yaml` に記述されています。
 :::
 
-### 設定ファイルの構造
+### 設定ファイル構造
 
-各関節にはそれぞれのエントリがあり、**制御モード** ごとにグループ化されています：
+各関節にはそれぞれエントリがあり、**制御モード** ごとにグループ化されています：
 
 ```yaml
 joints:
@@ -217,57 +251,57 @@ joints:
 
 特定箇所の見つけ方：
 
-- **関節名で探す**：ある関節を変更するには、`- name: jointX` ブロックを探します。
-- **モードで探す**：その関節の下で、`MIT:` には MIT モードのパラメータが、`POS_VEL:` には POS_VEL モードのパラメータが入っています。
-- **現在のモードが送信されるセットを決める**：スクリプトは `mode mit` / `mode posvel` によってモードを切り替えます。モーターには、対応するサブブロック内のパラメータが実際に送信されます。
+- **関節名で探す**：特定の関節を変更するには、`- name: jointX` ブロックを探します。
+- **モードで探す**：その関節の下で、`MIT:` は MIT モードのパラメータ、`POS_VEL:` は POS_VEL モードのパラメータを保持します。
+- **現在のモードが送信されるセットを決める**：スクリプトは `mode mit` / `mode posvel` によってモードを切り替え、モータは対応するサブブロック内のパラメータを実際に受け取ります。
 
 ### MIT モードのフィールドの意味
 
 | フィールド | 役割 |
 |---|---|
-| `kp` | 位置ループの比例ゲイン：目標位置追従の「剛性」。 |
-| `kd` | 速度ループの減衰ゲイン：位置誤差による振動を抑制します。 |
+| `kp` | 位置ループ比例ゲイン：目標位置追従の「剛性」。 |
+| `kd` | 速度ループ減衰ゲイン：位置誤差による振動を抑制します。 |
 
 ### POS_VEL モードのフィールドの意味
 
 | フィールド | 役割 |
 |---|---|
-| `vel_kp` | 速度ループの比例ゲイン。 |
-| `vel_ki` | 速度ループの積分ゲイン。 |
-| `pos_kp` | 位置ループの比例ゲイン。 |
-| `pos_ki` | 位置ループの積分ゲイン（一部のベンダー設定にのみ存在）。 |
-| `vlim` | 速度制限。動作速度の上限を制限します。 |
+| `vel_kp` | 速度ループ比例ゲイン。 |
+| `vel_ki` | 速度ループ積分ゲイン。 |
+| `pos_kp` | 位置ループ比例ゲイン。 |
+| `pos_ki` | 位置ループ積分ゲイン（一部のベンダ設定にのみ存在）。 |
+| `vlim` | 速度制限。最大移動速度の上限を設定します。 |
 
-:::warning フィールド定義はベンダーごとに異なります
-Damiao (DM) と Robostride (RS) のモーターはプロトコル層の単位が異なるため、**同じフィールド名でもベンダー間で比較可能ではありません**。RS の `vel_kp` を変更することと DM の `vel_kp` を変更することは意味が異なります。それぞれの YAML を、そのフィールド順序に従って解釈し、設定ファイル間で値を比較しないでください。
+:::warning フィールド定義はベンダごとに異なります
+Damiao（DM）と Robostride（RS）のモータは、プロトコル層の単位が異なるため、**同じフィールド名でもベンダ間で比較可能ではありません**。RS の `vel_kp` を変更することと DM の `vel_kp` を変更することは、意味が異なります。各 YAML はそれぞれのフィールド順序に従って解釈し、設定ファイル間で値を比較しないでください。
+:::
+
+:::caution チューニング前にテスト範囲を制限する
+複数関節にわたる大きな `kp` / `kd` 変更は、いずれかの関節方向や符号が誤っている場合、即座に振動、過電流、またはハードストップ衝突を引き起こす可能性があります。チューニング前にアームの作業空間を片付け、**1 関節・1 モードずつ、小さなステップで** テストする計画を立ててください。
 :::
 
 ### 編集手順
 
-1. **実行中のスクリプトをすべて停止します**。モーターは YAML 編集時に有効化されており、変更はすぐには反映されないため、挙動の不整合が起きやすくなります。
-2. **該当する YAML ファイルを編集します**：
+1. **実行中のスクリプトをすべて停止します**。YAML を編集している間もモータは有効な状態であり、変更は即座には反映されないため、不整合な挙動が発生しやすくなります。
+2. **対応する YAML ファイルを編集します**：
    ```bash
    # Example for DM
    vim config/rebotarm_dm.yaml
    ```
-   - 調整が必要な関節（例：`joint1`）だけを変更し、関係のない関節はそのままにします。
-   - 1 つの関節内では、調整が必要なモード（MIT または POS_VEL）のみを変更し、理由なく他方のモードのフィールドを変更しないでください。
-3. **YAML のインデントを保持します**：レベルごとにスペース 2 個、キーと値は `: ` で区切ります。インデントが誤っていると `yaml.safe_load` のパースに失敗し、すべてのパラメータがデフォルトにフォールバックします。
-4. **保存後にスクリプトを再起動します**。YAML はスクリプト起動時に 1 度だけ読み込まれ、**実行中に編集してもすぐには反映されません**。
-5. **単一関節での検証**：`3_mit_control.py`（MIT）/ `4_pos_vel_control.py`（POS_VEL）などのスクリプトを使用し、**小さな単一関節動作**で変更を検証してから、アーム全体のテストを行ってください。
+   - チューニングが必要な関節（例：`joint1`）のみを変更し、無関係な関節はそのままにします。
+   - 1 つの関節内では、チューニングが必要なモード（MIT または POS_VEL）のみを変更し、理由なく他方のモードのフィールドを変更しないでください。
+3. **YAML のインデントを保持します**：レベルごとに半角スペース 2 つ、キーと値は `: ` で区切ります。インデントが誤っていると `yaml.safe_load` のパースが失敗し、すべてのパラメータがデフォルトにフォールバックします。
+4. **保存後にスクリプトを再起動してください**。YAML はスクリプト起動時に一度だけ読み込まれます；**実行中に編集しても即座には反映されません**。
+5. **単一関節での検証**：`3_mit_control.py`（MIT） / `4_pos_vel_control.py`（POS_VEL）のようなスクリプトを使い、フルアームテストの前に、**小さな単一関節の動き**で変更を検証します。
 
-### 変更が反映されたことの確認方法
+### 変更が反映されたことの確認
 
-- **実行時の観察**：`3_mit_control.py` / `4_pos_vel_control.py` でモーターを有効化し、`state` を確認します。パラメータが変わっていないように見える、またはモーターの挙動が以前とまったく同じであれば、YAML の編集が誤っているか、デフォルトに上書きされています。
-- **YAML の自己チェック**：Python で直接パースし、1 つの関節のフィールドを出力して、値が自分が書き込んだ内容と一致しているか確認します。
+- **実行時の観察**：`3_mit_control.py` / `4_pos_vel_control.py` でモーターを有効化し、`state` を確認します。パラメータが変わっていないように見える、またはモーターの挙動が以前と全く同じであれば、YAML の編集が誤っているか、デフォルト値で上書きされています。
+- **YAML 自己チェック**：Python で直接パースし、1 つの関節のフィールドを出力して、値が自分で書き込んだ内容と一致するか確認します：
   ```bash
   uv run python -c "import yaml; print(yaml.safe_load(open('config/rebotarm_dm.yaml'))['joints'][0])"
   ```
-- **クイックロールバック**：`git checkout config/rebotarm_dm.yaml` でリポジトリのデフォルト設定を復元できます。
-
-:::caution 多くの関節を一度にチューニングしないでください
-複数の関節に対して `kp` / `kd` を一度に大きく変更すると、もし1つでも関節の向きや符号が間違っている場合、即座に振動、過電流、または急停止を引き起こす可能性があります。**必ず 1 関節・1 モードずつ、小さなステップで反復調整してください。**
-:::
+- **クイックロールバック**：`git checkout config/rebotarm_dm.yaml` でリポジトリのデフォルトを復元できます。
 
 ---
 
@@ -299,7 +333,7 @@ uv run python example/0x01damiao_test.py
 **対話コマンド**：
 | コマンド | 説明 |
 |------|------|
-| `enable` / `disable` | モーターを有効化/無効化 |
+| `enable` / `disable` | モーターを有効化 / 無効化 |
 | `set_zero` | ゼロ位置を設定 |
 | `state` | ステータスを表示 |
 | `ping` | モーターに Ping を送り応答を取得 |
@@ -316,7 +350,7 @@ uv run python example/0x01damiao_test.py
 
 **ゼロキャリブレーションと角度モニタリング（`2_zero_and_read.py`）**
 
-すべての関節のゼロ位置を自動的に設定し、関節角度をリアルタイムに表示します。
+すべての関節のゼロを自動設定し、関節角度をリアルタイムに表示します。
 
 **実行方法**：
 ```bash
@@ -329,16 +363,31 @@ uv run python example/2_zero_and_read.py
 ---
 </details>
 
-<details>
-<summary>MIT 制御モード（reBot DM での代替オプション、必要に応じて参照 — POS_VEL を推奨）</summary>
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--optional">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4>MIT 制御モード（reBot DM での代替モード、必要に応じて参照 — POS_VEL 推奨）</h4>
+<p className="rebot-step-label">デモ 3 · 3_mit_control.py</p>
 
-:::warning 適合性に関する注意
-**reBot Arm B601-DM** では、**POS_VEL（位置・速度ハイブリッド）が推奨される制御モードです**。Damiao モータープロトコルはネイティブに位置・速度ハイブリッド制御と内蔵の速度制限をサポートしており、箱出しで最もスムーズな結果が得られます。MIT モードは**代替手段**であり、良好な動作のためには通常、より慎重な `kp` / `kd` のチューニングが必要です。そのため MIT モードは DM ハードウェアの**デフォルトではありません**が、一部のユーザーには必要となるため、**必要に応じた参照とチューニング用にこのデモを残しています**。特別な必要がなければ、以下の POS_VEL モードのサンプルを優先して使用してください。
+:::warning オプション — MIT は DM における代替モードです
+**reBot Arm B601-DM** では、POS_VEL（位置・速度）は一般的により適した関節制御モードです。Damiao モーターのプロトコルは、速度制限内蔵の位置・速度ハイブリッド制御をネイティブにサポートしています。MIT モードでは通常、`kp` / `kd` のより慎重なチューニングが必要です。
+
+このサンプルはチュートリアルを完了するために必須ではありません。特に MIT モードのデバッグが必要な場合を除き、**このサンプルはスキップ**して、下の POS_VEL サンプルを使用してください。目標が計画された経路に沿ったエンドエフェクタのスムーズな動きであれば、[スムーズ軌道 IK 制御（`8_arm_traj_control.py`）](#demo8-traj-control) に直接進んでください。
 :::
 
-**MIT 制御モード（`3_mit_control.py`）**
+すべての関節に目標角度を入力して MIT 制御モードでモーター制御を行います。これは通常、力制御、インピーダンス制御、または高い動的応答が求められるシナリオで使用されます。
 
-すべての関節の目標角度を入力して MIT 制御モードでモーター制御を行います。主に力制御、インピーダンス制御、または高い動的応答が求められるシナリオで使用されます。
+:::danger 実行前の注意 — このサンプルにはスムーズな軌道計画がありません
+このサンプルは、**経路や速度の計画なしに**目標関節角度を直接モーターに送信します。大きな目標変更は、高速な急激な動きを引き起こし、過電流保護をトリガーする可能性があります。
+
+- 低レベルの MIT 関節制御を検証する必要がある場合にのみ実行してください。最初は 1 つの関節を 5〜10 度だけ動かし、応答と方向を確認してから徐々に変化量を増やしてください；
+- 完全なスムーズ軌道が必要な場合は、このサンプルをスキップして [スムーズ軌道 IK 制御（`8_arm_traj_control.py`）](#demo8-traj-control) に進んでください；
+- 実行前にアームの作業空間を片付け、すぐに電源を切れるようにしておいてください。
+:::
+
+<details className="rebot-demo-details">
+<summary>実行手順を展開（オプション）</summary>
 
 **実行方法**：
 ```bash
@@ -348,20 +397,30 @@ uv run python example/3_mit_control.py
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
 ```
-:::danger
-このサンプルには**経路計画や速度計画が一切ありません**。大きな目標関節角度を指定すると、モーターが非常に高速で動作し、**直接モーターの過電流保護をトリガーする**可能性もあります。推奨事項：
 
-- まずは**小さな角度**（例：単一関節を 5〜10 度だけ動かす）で検証し、スケールアップする前にモーターの応答と方向が正しいことを確認してください。
-- このセクションには**スムーズな軌道のバージョンは組み込まれていません**。複数の目標間でスムーズに遷移させる必要がある場合は、目標値とタイミングを慎重に制御するか、後述の [スムーズな軌道付き逆運動学制御（8_arm_traj_control.py）](#demo8-軌道制御) を参照し、最小ジャーク／加減速計画の手法を自身のスクリプトに移植してください。
-- 動作中は、アームの作業半径内に人や他の機器を近づけないでください。
-:::
-
----
 </details>
 
-### 位置・速度ハイブリッド制御モード（`4_pos_vel_control.py`）
+</div>
+</section>
 
-すべての関節の目標角度を入力して、POS_VEL（位置・速度ハイブリッド）制御モードでモーター制御を行い、目標角度到達時の動作をよりスムーズかつ制御しやすくし、振動を低減します。
+<section className="rebot-step-item rebot-step-item--optional">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4>位置・速度ハイブリッド制御モード</h4>
+<p className="rebot-step-label">デモ 4 · 4_pos_vel_control.py</p>
+
+すべての関節に目標角度を入力して、POS_VEL（位置・速度）ハイブリッドモードでモーターを制御します。Damiao の内蔵速度制限により目標変更の影響を軽減できますが、このサンプル自体は完全なスムーズ軌道計画を提供しません。
+
+:::danger オプション — 速度制限は完全な軌道計画ではありません
+POS_VEL は DM に推奨される関節制御モードですが、このサンプルでも関節位置ターゲットを直接更新し、中間経路を計画しません。大きな目標変更は依然として急激な動きや衝突、過電流を引き起こす可能性があります。
+
+- このサンプルはチュートリアルを完了するために必須ではありません。エンドエフェクタのスムーズな動きだけが必要な場合は、**このサンプルをスキップ**して [スムーズ軌道 IK 制御（`8_arm_traj_control.py`）](#demo8-traj-control) に直接進んでください；
+- POS_VEL 関節制御を検証する際は、最初は 1 つの関節を 5〜10 度だけ動かし、その後ターゲット変更量を徐々に増やしてください；
+- 実行前にアームの作業空間を片付け、すぐに電源を切れるようにしておいてください。
+:::
+
+<details className="rebot-demo-details">
+<summary>実行手順を展開（オプション）</summary>
 
 **実行方法**：
 ```bash
@@ -371,28 +430,32 @@ uv run python example/4_pos_vel_control.py
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # Exit system
 ```
-:::danger
-このサンプルには**経路計画や速度計画が一切ありません**。大きな目標関節角度を指定すると、モーターが非常に高速で動作し、**直接モーターの過電流保護をトリガーする**可能性もあります。推奨事項：
 
-- まずは**小さな角度**（例：単一関節を 5〜10 度だけ動かす）で検証し、スケールアップする前にモーターの応答と方向が正しいことを確認してください。
-- このセクションには**スムーズな軌道のバージョンは組み込まれていません**。複数の目標間でスムーズに遷移させる必要がある場合は、目標値とタイミングを慎重に制御するか、後述の [スムーズな軌道付き逆運動学制御（8_arm_traj_control.py）](#demo8-軌道制御) を参照し、最小ジャーク／加減速計画の手法を自身のスクリプトに移植してください。
-- 動作中は、アームの作業半径内に人や他の機器を近づけないでください。
-:::
+</details>
+
+</div>
+</section>
+</div>
 
 ---
 
 ## 運動学テスト
 
-### 順運動学テスト（`5_fk_test.py`）
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4>順運動学テスト</h4>
+<p className="rebot-step-label">デモ 5 · 5_fk_test.py</p>
 
 関節角度に基づいてエンドエフェクタの姿勢を計算します。
 
 **入力**：6 関節角度（度）
 
 **出力**：
-- エンドエフェクタ位置（X, Y, Z）— 単位：メートル
+- エンドエフェクタ位置（X, Y, Z） — 単位：メートル
 - 回転行列（3×3）
-- オイラー角（ロール/ピッチ/ヨー）— 単位：度
+- オイラー角（ロール / ピッチ / ヨー） — 単位：度
 
 **例**：
 ```bash
@@ -416,9 +479,14 @@ uv run python example/5_fk_test.py
     yaw    = +0.0000
 ```
 
----
+</div>
+</section>
 
-### 逆運動学テスト（`6_ik_test.py`）
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4>逆運動学テスト</h4>
+<p className="rebot-step-label">デモ 6 · 6_ik_test.py</p>
 
 所望のエンドエフェクタ姿勢に基づいて関節角度を求めます。
 
@@ -465,7 +533,15 @@ uv run python example/6_ik_test.py
     joint5     =  -0.0003 deg  (-0.0000 rad)
     joint6     =  +0.0057 deg  (+0.0001 rad)
 ```
-### MIT モードでの逆運動学制御（`7_arm_ik_control.py`）
+
+</div>
+</section>
+
+<section className="rebot-step-item rebot-step-item--optional">
+<span className="rebot-step-number">7</span>
+<div className="rebot-step-content">
+<h4>MIT モードでの逆運動学制御</h4>
+<p className="rebot-step-label">デモ 7 · 7_arm_ik_control.py</p>
 
 MIT モードで逆運動学（IK）を使用し、ロボットアームのエンドエフェクタが移動すべき 3D 座標（X, Y, Z）と姿勢（オイラー角）を指定します。
 
@@ -473,7 +549,18 @@ MIT モードで逆運動学（IK）を使用し、ロボットアームのエ�
 - 位置のみ：`<x> <y> <z>`（メートル）
 - 位置 + 姿勢：`<x> <y> <z> <roll> <pitch> <yaw>`（度）
 - `state` を入力：各関節の現在の実際のラジアン値を表示。
-- `end_state` を入力：空間内での現在のエンドエフェクタの実際の座標（m）とオイラー角（rad）を表示。
+- `end_state` を入力：空間内での現在のエンドエフェクタ実座標（m）とオイラー角（rad）を表示。
+
+:::danger オプション — このサンプルにはスムーズな軌道計画がありません
+この例では、IK の解を経路や速度の計画を**一切行わずに**そのまま関節目標として送信します。目標姿勢の変化が大きいと、急激な高速動作が発生して過電流保護が作動する可能性があります。
+
+- この例はチュートリアルを完了するために必須ではありません。ほとんどの場合は**この例をスキップ**し、最小ジャークの加減速計画を含む次のセクション [Smooth Trajectory IK Control (`8_arm_traj_control.py`)](#demo8-traj-control) を使用してください。
+- 経路計画なしの IK 制御を比較・デバッグする必要がある場合にのみ実行してください。最初の目標は、現在のエンドエフェクタ位置から 5〜10 cm 以内に収めてください。
+- 実行前に、目標姿勢が到達可能であることを確認し、作業空間から人や障害物を取り除き、すぐに電源を切れるようにしておいてください。
+:::
+
+<details className="rebot-demo-details">
+<summary>実行手順を展開（任意）</summary>
 
 **実行方法**：
 ```bash
@@ -487,24 +574,26 @@ uv run python example/7_arm_ik_control.py
 
 > ctrl + c # Return to zero position and exit system
 ```
-:::danger
-このサンプルには**経路計画や速度計画が一切ありません**。大きな目標角度を指定すると、モーターが非常に高速で動作し、**直接モーターの過電流保護をトリガーする**可能性もあります。推奨事項：
 
-- まずは**小さな角度**（例：エンドエフェクタを現在位置から 5〜10 cm だけ動かす）で検証し、スケールアップする前に姿勢と方向が正しいことを確認してください。
-- 目標間をスムーズに遷移させるには、最小ジャーク／加減速計画を使用する次のセクション [スムーズな軌道付き逆運動学制御（8_arm_traj_control.py）](#demo8-軌道制御) に直接進んでください。
-- 動作中は、アームの作業半径内に人や他の機器を近づけないでください。
-:::
+</details>
 
-### スムーズな軌道付き逆運動学制御（`8_arm_traj_control.py`） {#demo8-traj-control}
+</div>
+</section>
 
-MIT モードで逆運動学（IK）を使用し、目標時間内で一様またはスムーズな加減速の動作軌道を自動的に計画して、関節の激しい振動を回避します。
+<section className="rebot-step-item rebot-step-item--recommended">
+<span className="rebot-step-number">8</span>
+<div className="rebot-step-content">
+<h4 id="demo8-traj-control">スムーズな軌道による逆運動学制御</h4>
+<p className="rebot-step-label">Demo 8 · 8_arm_traj_control.py</p>
+
+MIT モードで逆運動学（IK）を使用し、目標時間内で一様またはスムーズな加減速の動作軌道を自動計画して、関節の激しい振動を回避します。
 
 **入力形式**：
 - 位置のみ：`<x> <y> <z>`（メートル）
 - 位置 + 姿勢：`<x> <y> <z> <roll> <pitch> <yaw>`（度）
 - 位置 + 姿勢 + 時間（デフォルト 2.0）：`<x> <y> <z> <roll> <pitch> <yaw> <time>`（度）
-- `state` を入力：各関節の現在の実際のラジアン値を表示。
-- `end_state` を入力：空間内での現在のエンドエフェクタの実際の座標（m）とオイラー角（rad）を表示。
+- `state` を入力：各関節の現在の実ラジアン値を表示。
+- `end_state` を入力：空間内の現在のエンドエフェクタ実座標（m）とオイラー角（rad）を表示。
 
 **実行方法**：
 ```bash
@@ -523,16 +612,25 @@ uv run python example/8_arm_traj_control.py
 ```
 
 :::tip 姿勢のずれが見られる場合は？
-**読み取ったエンドエフェクタ姿勢**が**指令した目標姿勢**と異なり、かつその**姿勢自体は到達可能**（ワークスペース外でも特異姿勢でもない）な場合、多くは MIT / POS_VEL コントローラのパラメータ設定に問題があります。その場合は、前述の [MIT / POS_VEL コントローラパラメータのチューニング](#MIT--POS_VEL-コントローラパラメータのチューニング) セクションを参照し、「単一関節・モードごと・小さなステップ」で `kp` / `kd` などを手動調整してください。調整が完了したら、このサンプルに戻って動作を確認します。
+**読み取ったエンドエフェクタ姿勢**が**指令した目標姿勢**と異なり、かつその**姿勢自体は到達可能**（作業空間外でも特異姿勢でもない）な場合、問題は MIT / POS_VEL コントローラのパラメータにある可能性が高いです。その場合は、前述の [MIT / POS_VEL コントローラパラメータのチューニング](#tune-controller-params) セクションを参照し、「単一関節・モードごと・小さなステップ」というアプローチで `kp` / `kd` などを手動で調整してください。調整後、この例に戻って検証します。
 :::
+
+</div>
+</section>
+</div>
 
 ---
 
 ## 重力補償テスト
 
-### 重力補償制御 — 基本バージョン（`9_gravity_compensation.py`）
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--caution">
+<span className="rebot-step-number">9</span>
+<div className="rebot-step-content">
+<h4>重力補償制御 — 基本バージョン</h4>
+<p className="rebot-step-label">Demo 9 · 9_gravity_compensation.py</p>
 
-Pinocchio の動力学モデルを用いて、各関節の重力を補償します。
+Pinocchio の動力学モデルを使用して、関節の重力を補償します。
 
 **制御則**：
 ```
@@ -542,9 +640,15 @@ kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 ```
 
 **期待される動作**：
-- アームが任意の姿勢で「浮いている」ように保持される
+- アームが任意の姿勢で「浮いて」いられる
 - 手を離しても自重で落下しない
 - 手で任意の位置に動かすことができる
+
+:::caution 通常終了時には安全なホーム復帰を実行
+`Ctrl+C` でスクリプトを通常停止すると、まず重力補償制御を停止し、剛性の高いゲインと重力フィードフォワードで現在姿勢を保持します。その後、最小ジャーク軌道でアームをゼロ位置に戻し、原点復帰が完了してからモータを切り離して無効化します。
+
+自動原点復帰は、プログラムの正常な実行、通信、および電源に依存します。アームの作業空間内に人や障害物を入れず、原点復帰中にアームを支えられるよう準備しておいてください。通信障害、予期しない電源断、強制終了などが発生すると、保護シーケンスが完了しない可能性があります。異常な動作が発生した場合は、直ちに電源を切ってください。
+:::
 
 **実行方法**：
 ```bash
@@ -552,28 +656,30 @@ uv run python example/9_gravity_compensation.py
 ```
 
 **出力**：
-- 各関節の目標トルクをリアルタイム表示（N·m）
-- `Ctrl+C` で停止して切断
+- 各関節の目標トルク（N·m）をリアルタイム表示
+- `Ctrl+C` を押して停止および切断
 
-:::caution 重力補償を終了する前にホームに戻す
-スクリプトを停止する際（`Ctrl+C`）、プログラムは**すべてのモータを直接無効化**し、ロボットアームは**自動でゼロ位置に戻りません**。関節が急に落下して衝突や破損を招かないよう、終了前に必ずロボットアームを手で支えるか、安全／ホーム姿勢に移動させてください。
-:::
-
-:::tip 個別関節の補償調整
-一部の関節が構造的な摩擦や組み立て誤差により、重力補償が不足または過剰になっている場合、コード内の `tau_g` 配列の該当要素に追加のスケーリングを適用できます：
+:::tip 個々の関節補償の調整
+構造的な摩擦や組み立ての違いにより、一部の関節で重力補償が不足または過剰になる場合は、コード内の `tau_g` 配列の該当要素に追加のスケーリングを適用できます：
 
 ```python
 tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
 # This compensation is generally only used for joints 2 and 3
 ```
 
-例えば、`tau_g[2] *= 1.2` は、関節 2 の重力補償トルクを 20% 増加させることを意味します。一度に大きく変更しすぎないよう、実際の「浮き」具合を見ながら項目ごとに調整することを推奨します。
+例えば、`tau_g[2] *= 1.2` は、関節 2 の重力補償トルクを 20% 増加させることを意味します。一度に大きく変更しすぎないよう、実際の浮遊状態を見ながら項目ごとに調整することを推奨します。
 :::
 
+</div>
+</section>
 
-### 重力補償制御 — エンドエフェクタ速度ロック版（`10_gravity_compensation_lock.py`）
+<section className="rebot-step-item rebot-step-item--caution">
+<span className="rebot-step-number">10</span>
+<div className="rebot-step-content">
+<h4>重力補償制御 — エンドエフェクタ速度ロックバージョン</h4>
+<p className="rebot-step-label">Demo 10 · 10_gravity_compensation_lock.py</p>
 
-基本的な重力補償に基づき、エンドエフェクタ速度の検出と関節角ロック機構を追加したバージョンです。
+基本的な重力補償に基づき、エンドエフェクタ速度の検出と関節角ロック機構を追加します。
 
 **制御則**：
 ```
@@ -591,8 +697,14 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
   - 手で押して位置を変更できる
 
 **期待される動作**：
-- ロボットアームが現在位置にロックされ、目標角度を変えるには力を加える必要がある
-- 基本版より安定しており、姿勢保持が必要なシナリオに適している
+- ロボットアームが現在位置にロックされ、目標角度を変えるには力が必要
+- 基本バージョンより安定しており、姿勢維持が必要なシナリオに適している
+
+:::caution 通常終了時には安全なホーム復帰を実行
+`Ctrl+C` でスクリプトを通常停止すると、まず重力補償制御を停止し、剛性の高いゲインと重力フィードフォワードで現在姿勢を保持します。その後、最小ジャーク軌道でアームをゼロ位置に戻し、原点復帰が完了してからモータを切り離して無効化します。
+
+自動原点復帰は、プログラムの正常な実行、通信、および電源に依存します。アームの作業空間内に人や障害物を入れず、原点復帰中にアームを支えられるよう準備しておいてください。通信障害、予期しない電源断、強制終了などが発生すると、保護シーケンスが完了しない可能性があります。異常な動作が発生した場合は、直ちに電源を切ってください。
+:::
 
 **実行方法**：
 ```bash
@@ -603,42 +715,46 @@ uv run python example/10_gravity_compensation_lock.py
 - ロック状態（LOCKED / UPDATE）をリアルタイム表示
 - エンドの並進速度・角速度
 - 各関節の重力補償トルク（N·m）
-- `Ctrl+C` で停止して切断
+- `Ctrl+C` を押して停止および切断
 
-:::caution 重力補償を終了する前にホームに戻す
-スクリプトを停止する際（`Ctrl+C`）、プログラムは**すべてのモータを直接無効化**し、ロボットアームは**自動でゼロ位置に戻りません**。関節が急に落下して衝突や破損を招かないよう、終了前に必ずロボットアームを手で支えるか、安全／ホーム姿勢に移動させてください。
-:::
-
-:::tip 個別関節の補償調整
-一部の関節が構造的な摩擦や組み立て誤差により、重力補償が不足または過剰になっている場合、コード内の `tau_g` 配列の該当要素に追加のスケーリングを適用できます：
+:::tip 個々の関節補償の調整
+構造的な摩擦や組み立ての違いにより、一部の関節で重力補償が不足または過剰になる場合は、コード内の `tau_g` 配列の該当要素に追加のスケーリングを適用できます：
 
 ```python
 tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually starting from 1
 # This compensation is generally only used for joints 2 and 3
 ```
 
-例えば、`tau_g[2] *= 1.2` は、関節 2 の重力補償トルクを 20% 増加させることを意味します。一度に大きく変更しすぎないよう、実際の「浮き」具合を見ながら項目ごとに調整することを推奨します。
+例えば、`tau_g[2] *= 1.2` は、関節 2 の重力補償トルクを 20% 増加させることを意味します。一度に大きく変更しすぎないよう、実際の浮遊状態を見ながら項目ごとに調整することを推奨します。
 :::
 
-**安全テスト用設定**：
-スクリプト冒頭の `ENABLED_JOINTS` リストを変更することで、安全テストのために指定した関節のみを有効化できます：
+**安全テスト構成**：
+スクリプト先頭の `ENABLED_JOINTS` リストを変更することで、安全テストのために指定した関節のみを有効にできます：
 ```python
 ENABLED_JOINTS = ["joint1"]  # Enable only joint1
 ```
 
+</div>
+</section>
+</div>
+
 ---
 
-### シミュレーション環境
+## シミュレーション環境
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/traj_sim_geodesic.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/meshcat_DM.png" alt="MeshCat simulation of the reBot Arm B601-DM" />
 </div>
 
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S1</span>
+<div className="rebot-step-content">
+<h4>順運動学シミュレーション</h4>
+<p className="rebot-step-label">Simulation Demo 1 · sim/fk_sim.py</p>
 
-#### 順運動学シミュレーション（`sim/fk_sim.py`）
-
-対話的な順運動学シミュレーションで、MeshCat 上で関節角を入力してロボットアームの姿勢を可視化します。
+対話的な順運動学シミュレーションで、MeshCat に関節角を入力してロボットアームの姿勢を可視化します。
 
 **実行方法**：
 ```bash
@@ -656,68 +772,83 @@ uv run python example/sim/fk_sim.py
 - 連続入力により、さまざまな姿勢をテスト可能
 - 整形された姿勢情報の出力
 
----
+</div>
+</section>
 
-#### 逆運動学シミュレーション（`sim/ik_sim.py`）
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S2</span>
+<div className="rebot-step-content">
+<h4>逆運動学シミュレーション</h4>
+<p className="rebot-step-label">シミュレーションデモ 2 · sim/ik_sim.py</p>
 
-対話的な逆運動学シミュレーションで、目標姿勢から自動的に関節角を解き、可視化します。
+インタラクティブな逆運動学シミュレーションで、目標姿勢から関節角度を自動的に解き、可視化します。
 
-**実行方法**：
+**実行方法**:
 ```bash
 uv run python example/sim/ik_sim.py
 ```
 
-**入力形式**：
-- 位置のみ：`x y z`（メートル）
-- 位置＋姿勢：`x y z roll pitch yaw`（ラジアン）
+**入力形式**:
+- 位置のみ: `x y z`（メートル）
+- 位置＋姿勢: `x y z roll pitch yaw`（ラジアン）
 
-**例**：
+**例**:
 ```bash
 > 0.25 0.0 0.25              # Position only
 > 0.25 0.0 0.25 0 0 0        # Position+Orientation
 ```
 
-**機能**：
+**機能**:
 - IK 収束の自動判定
 - 反復回数と誤差の表示
 - ロボット姿勢のリアルタイム更新
 
----
+</div>
+</section>
 
-#### 軌道計画シミュレーション（`sim/traj_sim.py`）
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S3</span>
+<div className="rebot-step-content">
+<h4>軌道計画シミュレーション</h4>
+<p className="rebot-step-label">シミュレーションデモ 3 · sim/traj_sim.py</p>
 
-SE(3) 測地線に基づく軌道計画シミュレーションで、CLIK 追従および MeshCat でのアニメーション再生を含みます。
+SE(3) 測地線に基づく軌道計画シミュレーションで、CLIK 追従および MeshCat アニメーション再生を含みます。
 
-**実行方法**：
+**実行方法**:
 ```bash
 uv run python example/sim/traj_sim.py
 ```
 
-**対話コマンド**：
-- 入力：`x y z [roll pitch yaw]`（メートル／ラジアン）
-- Enter キーでデフォルト設定を使用
-- `q`：終了
+**インタラクティブコマンド**:
+- 入力: `x y z [roll pitch yaw]`（メートル／ラジアン）
+- Enter キーを押すとデフォルト設定を使用
+- `q`: 終了
 
-**機能**：
+**機能**:
 - 現在位置から目標位置までの軌道を計画
 - 最小ジャーク軌道プロファイルを使用
 - 軌道統計情報をリアルタイム表示
-- MeshCat で軌道アニメーションを再生
+- MeshCat で軌道アニメーションを完全再生
 - 参照経路（灰色）と実際の経路（緑色）を表示
 
----
+</div>
+</section>
 
-#### ビジュアライザツール（`sim/visualizer.py`）
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S4</span>
+<div className="rebot-step-content">
+<h4>ビジュアライザーツール</h4>
+<p className="rebot-step-label">シミュレーションデモ 4 · sim/visualizer.py</p>
 
-MeshCat ビジュアライザのラッパーで、統一されたロボット表示インターフェースを提供します。
+MeshCat ビジュアライザーのラッパーで、統一されたロボット表示インターフェースを提供します。
 
-**主な機能**：
-- URDF モデルを読み込み、ロボットを表示
+**主な機能**:
+- URDF モデルを読み込みロボットを表示
 - 3D ポリライン経路（参照／実際）を描画
 - IK 目標姿勢を表示（三色軸＋球）
-- 関節軌道アニメーションの再生をサポート
+- 関節軌道アニメーション再生をサポート
 
-**使用例**：
+**使用例**:
 ```python
 from example.sim.visualizer import Visualizer
 viz = Visualizer()
@@ -725,26 +856,30 @@ viz.update(q)  # Update robot pose
 viz.draw_path(points, "path_name", color)  # Draw path
 ```
 
+</div>
+</section>
+</div>
+
 ---
 
 ## FAQ
 
 - **`Permission denied` エラーが発生する**
-  デバイス権限を設定するために、`sudo chmod 666 /dev/ttyACM0` または `sudo chmod 666 /dev/can0` を実行していることを確認してください。
+  デバイスのパーミッションを設定するために、`sudo chmod 666 /dev/ttyACM0` または `sudo chmod 666 /dev/can0` を実行したことを確認してください。
 
-- **IK の解が得られない、または結果がおかしい**
-  目標姿勢がロボットアームのワークスペース内にあるか確認し、関節リミットの設定が正しいことを確認してください。
+- **IK の解が失敗する、または結果が異常**
+  目標姿勢がロボットアームの作業空間内にあるか確認し、関節リミット設定が正しいことを確認してください。
 
 - **重力補償の効果が良くない**
-  構造誤差や加工精度が原因の可能性があります。本プロジェクトの重力補償は URDF と Pinocchio に依存しています。実測したパラメータに合わせて URDF を修正してみてください（このステップは AI に相談することもできます）。
+  これは構造誤差や加工精度が原因の可能性があります。本プロジェクトの重力補償は URDF と Pinocchio に依存しています。実測パラメータに合わせて URDF を修正してみてください（このステップについては AI に相談することもできます）。
 
 ---
 
 ## 連絡先
 
-- **技術サポート**： [Submit Issue](https://github.com/Seeed-Projects/reBotArm_control_py/issues)
-- **プロジェクトリポジトリ**： [GitHub](https://github.com/Seeed-Projects/reBotArm_control_py)
-- **フォーラム**： [Seeed Studio Forum](https://forum.seeedstudio.com/)
+- **技術サポート**: [Submit Issue](https://github.com/Seeed-Projects/reBotArm_control_py/issues)
+- **プロジェクトリポジトリ**: [GitHub](https://github.com/Seeed-Projects/reBotArm_control_py)
+- **フォーラム**: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---
 
@@ -757,5 +892,5 @@ viz.draw_path(points, "path_name", color)  # Draw path
 ---
 
 <div align="center">
-  <strong>このプロジェクトが役に立った場合は、ぜひ Star をお願いします！</strong>
+  <strong>このプロジェクトが役に立った場合は、Star を付けていただけると嬉しいです！</strong>
 </div>
