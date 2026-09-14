@@ -44,6 +44,28 @@ The 1.14'' model features a **135×240 IPS display**, onboard PDM microphone, 6-
 
 The 1.47'' model features a **172×320 capacitive touch display**, onboard PDM microphone, 6-axis IMU (LSM6DS3), MicroSD card slot, and battery power management, making it suitable for portable HMI applications, IoT dashboards, and interactive prototypes.
 
+### XIAO IPS Displays with ESP32-S3
+
+The XIAO IPS Display series powered by the XIAO ESP32-S3 Plus comes in multiple screen sizes, combining compact color displays with onboard sensing, interaction, battery monitoring, and Wi-Fi and Bluetooth connectivity for a wide range of connected applications.
+
+**[XIAO 0.96'' IPS Display (ESP32-S3)](https://wiki.seeedstudio.com/getting_started_0.96_inch_display_esp32s3/)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_hero.jpg" alt="XIAO 0.96 inch IPS Display ESP32-S3" width={800} height="auto" /></p>
+
+The 0.96'' model features an **80×160 IPS display**, onboard PDM microphone, 6-axis IMU, two user buttons, I2C and I2S expansion pads, and battery voltage sensing, making it well suited for compact wearables, portable sensor dashboards, keychain gadgets, and wireless IoT prototypes.
+
+**[XIAO 1.14'' IPS Display (ESP32-S3)](https://wiki.seeedstudio.com/getting_started_1.14_inch_display_esp32s3/)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_display_hardware_hero.jpg" alt="XIAO 1.14 inch IPS Display ESP32-S3" width={800} height="auto" /></p>
+
+The 1.14'' model features a **135×240 IPS display**, onboard PDM microphone, 6-axis IMU, Grove I2C connector, three user buttons, and battery voltage measurement, making it suitable for wearable devices, sensor dashboards, portable instruments, and connected IoT projects.
+
+**[XIAO 1.47'' IPS Display (ESP32-S3)](https://wiki.seeedstudio.com/getting_started_1.47_inch_touch_display_esp32s3/)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_hero.jpg" alt="XIAO 1.47 inch IPS Display ESP32-S3" width={800} height="auto" /></p>
+
+The 1.47'' model features a **172×320 color display with capacitive touch**, onboard PDM microphone, 6-axis IMU, MicroSD card slot, and battery voltage measurement, making it suitable for portable HMI applications, IoT dashboards, wearable devices, and interactive prototypes.
+
 ### [SenseCAP S1000 V2 CO₂ Calibration](https://wiki.seeedstudio.com/sensecap_s1000_v2_co2_calibration/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_S1000_V2_CO2_Calibration.jpg" alt="pir" width={800} height="auto" /></p>
