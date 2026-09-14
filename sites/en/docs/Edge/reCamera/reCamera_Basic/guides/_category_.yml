@@ -6,5 +6,5 @@ className: guides
 link:
   type: generated-index
   slug: recamera_guides
-  title: reCamera 集成
-  description: 您可以在这里找到所有与 reCamera 基础版相关的知识！
+  title: reCamera guides
+  description: You can find all the information about integrating various ecosystems with reCamera here!
