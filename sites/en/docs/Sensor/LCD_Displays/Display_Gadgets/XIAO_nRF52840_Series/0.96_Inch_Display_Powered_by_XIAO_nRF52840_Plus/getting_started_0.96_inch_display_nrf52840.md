@@ -110,6 +110,10 @@ The 0.96'' IPS Display breaks out all XIAO nRF52840 Plus pins. The table below l
 
 ## Getting Started
 
+:::caution
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_handing_tips.jpg" style={{width:600, height:'auto'}}/></div>
+:::
+
 This guide uploads a minimal **"Hello, XIAO"** sketch to the display board: the screen turns on its backlight, fills black, and prints **"Hello,"** and **"XIAO"** as two centered lines of large green text. It is the fastest way to confirm the screen and your development environment are working before diving into the individual peripheral demos.
 
 ### Software Preparation
