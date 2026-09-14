@@ -8,10 +8,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /faq_for_SenseCAP_T1000
 sku: 114993073,114993106,114993207,114993208
 last_update:
-  date: 2/14/2026
+  date: 9/14/2026
   author: Janet
 createdAt: '2023-09-21'
-updatedAt: '2026-02-14'
+updatedAt: '2026-09-14'
 url: https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/
 ---
 
@@ -37,6 +37,54 @@ Therefore, in a wide unobstructed area you will get a better GPS signal, thereby
 - Ensure proper device installation by orienting the device with its front facing upward to prevent obstruction of the antenna's position
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/install.png" alt="pir" width={700} height="auto" /></p>
+
+If your T1000 does not provide GNSS location data, please follow the troubleshooting steps below to check the device configuration, installation environment, and GNSS positioning status.
+
+
+#### 1. Check the Device Installation Environment
+
+GNSS performance can be affected by the device installation environment.
+
+Please make sure that:
+
+- The **front side of the T1000 is not obstructed**.
+- The device is not placed inside a metal enclosure or surrounded by materials that may significantly block GNSS signals.
+- There are **no metal objects close to the device**.
+- The device is tested in an **open outdoor environment** with a clear view of the sky.
+
+
+#### 2. Increase the GNSS Scan Time
+
+The GNSS Scan Time determines how long the T1000 searches for GNSS satellites during a positioning operation.
+
+If the GNSS Scan Time is too short, the device may not have enough time to obtain a valid GNSS fix, especially when the device is being tested for the first time or in an environment with relatively weak GNSS signals.
+
+Please open the **General settings** of the T1000 in the SenseCraft App and increase the **GNSS Scan Time**.
+
+The maximum GNSS Scan Time is **120 seconds**.
+
+> **Tip:** For troubleshooting, we recommend using a longer GNSS Scan Time first to determine whether the issue is related to the available time for satellite acquisition.
+
+#### 3. Check the GNSS Positioning Status in the LoRaWAN Uplink Payload
+
+If the T1000 still does not provide a location, please check the **raw LoRaWAN uplink payload**.
+
+The uplink payload contains the positioning result and positioning status. By checking the raw payload, you can determine whether:
+
+- GNSS scanning timed out;
+- Another positioning method was used;
+
+For example, the following payload is an example of a GNSS scan timeout:
+
+`110100000064a763a0014100002f`
+
+In this example, the first byte 11 indicates the Positioning Status and Sensor Packet, and the second byte 01 indicates that the GNSS scan timed out and failed to obtain the location. You can find more details in the T1000 Payload Format documentation.
+
+
+#### 4. Provide the Raw LoRaWAN Uplink Payload
+
+If the issue persists after checking the above items, please provide **several raw LoRaWAN uplink payloads** from the T1000 and contact our techsupport team at techsupport@seeed.io.
+
 
 ### Why doesn't Wi-Fi or Bluetooth location display on the SenseCAP App map?
 
@@ -193,6 +241,14 @@ Check [Firmware Upgrade and Release Note](https://wiki.seeedstudio.com/fm_releas
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/time-error.png" alt="pir" width={400} height="auto" /></p>
 
+## Application error
+
+### Can I view the device status and data in the SenseCraft App?
+
+If the device is connected to SenseCAP Cloud, you can view the device’s status and data, such as online status, sensor data, and positioning information, directly in the SenseCraft App.
+
+If the device is connected to another LoRaWAN cloud platform, the device information and data will not be synchronized to the SenseCraft App. In this case, you should check the corresponding device status and uplink data on the LoRaWAN platform you are using.
+
 ## Integration
 
 Integrating an application can be done in a variety of ways, depending on your needs and goals. Here are some common integration options:
@@ -210,3 +266,7 @@ Check [SenseCAP API](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_API/Sense
 You can use the [SenseCAP M2 Multi-Platform gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html), then you can directly use the built-in LoRaWAN Network Server for integration.
 
 Check the [LNS Configuration](https://wiki.seeedstudio.com/SenseCAP_m2_LNS_config) for more details.
+
+## How to reset the DevNonce on the T1000
+
+If the T1000 cannot join the LoRaWAN network because of a DevNonce issue, please contact the Seeed technical support team. We can provide a dedicated firmware to clear or reset the DevNonce, allowing the device to join the LoRaWAN network normally again.
