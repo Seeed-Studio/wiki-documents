@@ -348,3 +348,4 @@ html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
   .kit-index-panel { padding: 1rem; border-radius: 20px; }
   .kit-index-grid { grid-template-columns: 1fr; }
 }
+
