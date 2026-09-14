@@ -6,16 +6,16 @@ keywords:
   - Placa controladora
   - 13.3 inch
   - ESP32
-  - SenseCraft HMI
+  - SenseCraft Seeedash
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 sidebar_position: 1
 slug: /getting_started_with_ee02
 sku: 100067144
 last_update:
-  date: 8/18/2026
-  author: Nemo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-12-19'
-updatedAt: '2026-08-25'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/es/getting_started_with_ee02/
 ---
 
@@ -46,9 +46,9 @@ url: https://wiki.seeedstudio.com/es/getting_started_with_ee02/
 
 ## Introducción
 
-La **XIAO ePaper Display Board EE02** es una placa controladora de pantalla ePaper de alto rendimiento diseñada específicamente para pantallas de papel electrónico **Spectra™ 6 de seis colores y 13,3 pulgadas**. Impulsada por la **XIAO ESP32-S3 Plus**, es compatible con conectividad Wi-Fi y Bluetooth, y viene **pregrabada con el firmware SenseCraft HMI**, lo que permite un diseño de interfaz de usuario con IA, mediante arrastrar y soltar y sin necesidad de programación. Es una solución ideal para aplicaciones de visualización inalámbrica como paneles en tiempo real, señalización digital y paneles de control para el hogar inteligente.
+La **XIAO ePaper Display Board EE02** es una placa controladora de pantalla ePaper de alto rendimiento diseñada específicamente para pantallas de papel electrónico **Spectra™ 6 de 13,3 pulgadas y seis colores**. Impulsada por la **XIAO ESP32-S3 Plus**, es compatible con conectividad Wi-Fi y Bluetooth, y viene **pregrabada con el firmware SenseCraft Seeedash**, lo que permite un diseño de interfaz de usuario con IA, mediante arrastrar y soltar y sin necesidad de programación. Es una solución ideal para aplicaciones de visualización inalámbrica como paneles en tiempo real, señalización digital y paneles de control para el hogar inteligente.
 
-Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la EE02 ofrece una experiencia fluida para los desarrolladores que buscan integrar pantallas ePaper de gran formato en sus proyectos de IoT. Simplifica el proceso de control y es compatible con la plataforma SenseCraft HMI para una gestión sencilla del contenido.
+Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la EE02 ofrece una experiencia fluida para los desarrolladores que buscan integrar pantallas ePaper de gran formato en sus proyectos de IoT. Simplifica el proceso de control y es compatible con la plataforma SenseCraft Seeedash para una gestión sencilla del contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -57,8 +57,8 @@ Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la E
 - **XIAO ESP32-S3 Plus integrado:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible.
 - **Compatibilidad dedicada con E-Ink Spectra™ 6 de 13,3":** Diseñada específicamente para pantallas Spectra™ 6 de 13,3", lo que garantiza una configuración rápida y un funcionamiento estable.
 - **Conector BAT con interruptor:** Proporciona una conexión sencilla de la batería e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro de consumo.
-- **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, lo que ofrece flexibilidad para acelerar proyectos y funciones personalizables.
-- **Firmware SenseCraft HMI pregrabado:** Simplemente conéctalo y empieza a usarlo de inmediato con SenseCraft HMI, nuestra plataforma de diseño de interfaces sin código impulsada por IA. Elige entre plantillas variadas o crea interfaces mediante arrastrar y soltar (con asistencia opcional de IA) y despliega el contenido en la pantalla ePaper con solo unos clics.
+- **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, que ofrecen flexibilidad para acelerar el desarrollo del proyecto y funciones personalizables.
+- **Firmware SenseCraft Seeedash pregrabado:** Solo tienes que conectarla y empezar a usarla de inmediato con SenseCraft Seeedash, nuestra plataforma de diseño de interfaces sin código impulsada por IA. Elige entre plantillas enriquecidas o crea interfaces mediante arrastrar y soltar (con asistencia opcional de IA) y despliega el contenido en la pantalla ePaper con solo unos clics.
 
 ### Especificaciones
 
@@ -74,7 +74,7 @@ Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la E
 | **Interfaz** | USB Type-C, conector FPC para ePaper |
 | **Dimensiones** | 80 mm x 43 mm x 7 mm |
 | **Temperatura de funcionamiento** | -20°C a 70°C |
-| **Interruptor** | Encendido/Apagado de la alimentación por batería |
+| **Interruptor** | Encendido/Apagado de alimentación por batería |
 | **Botón** | 1x botón de reinicio <br/> 3x botones de usuario |
 
 ### Aplicaciones
@@ -83,7 +83,7 @@ Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la E
 - **Alertas de seguridad**: Pantallas de notificación de bajo consumo para el estado del sistema de seguridad y mensajes de alerta.
 - **Marco de fotos digital**: Marcos de fotos ePaper con refresco suave y consumo de energía ultrabajo.
 - **Panel de llegadas de transporte público**: Pantallas de información de llegada de autobuses/trenes en estaciones y paradas.
-- **Señalización digital**: Menús de restaurante, carteles de salas de reuniones y etiquetas de precio en comercios.
+- **Señalización digital**: Menús de restaurantes, rótulos de salas de reuniones y etiquetas de precio en comercios.
 - **Hogar inteligente**: Paneles de información para clima, calendario y estado de la automatización del hogar.
 - **HMI industrial**: Pantallas de estado de bajo consumo para maquinaria y gestión de almacenes.
 - **Educación**: Lectores de libros electrónicos o paneles de información en aulas.
@@ -98,78 +98,78 @@ Al igual que su hermana, la EE04 (diseñada para pantallas más pequeñas), la E
 - **Botón de reinicio**: Para reiniciar la placa.
 - **Botones**: Son "refresh the page","switch previous page" y "switch next page"
 - **Interruptor**: Controla el encendido/apagado de la alimentación por batería.
-- **Botón de arranque (Boot)**: Se utiliza para entrar en modo bootloader.
-- **LED indicadores**: Parpadeando significa que no hay batería conectada. Luz verde encendida significa que la batería se está cargando.
+- **Botón de arranque (Boot)**: Se utiliza para entrar en el modo bootloader.
+- **Indicadores LED**: Parpadeando significa que no hay batería conectada. Luz verde encendida significa que la batería se está cargando.
 - **Conector JST**: Conector JST de 2 pines y 2,0 mm para conectar la batería.
 
-## Introducción a SenseCraft HMI
+## Introducción a SenseCraft Seeedash
 
-Esta sección te guiará para conectar tu EE02 a la plataforma SenseCraft HMI, lo que te permitirá actualizar fácilmente el contenido de la pantalla de forma inalámbrica.
+Esta sección te guiará para conectar tu EE02 a la plataforma SenseCraft Seeedash, lo que te permitirá actualizar fácilmente el contenido de la pantalla de forma inalámbrica.
 
 ### Requisitos previos
 
 Antes de comenzar, asegúrate de tener lo siguiente:
 
-- Una cuenta de Seeed Studio para la plataforma SenseCraft HMI ([regístrate aquí](https://sensecraft.seeed.cc/hmi) si aún no tienes una)
+- Una cuenta de Seeed Studio para la plataforma SenseCraft Seeedash ([regístrate aquí](https://sensecraft.seeed.cc/hmi) si aún no tienes una)
 - Una red Wi-Fi de 2,4 GHz (no se admite 5 GHz)
 
 ### Instalación del equipo
 
-**Paso 1. Conecta la pantalla y la placa**
+**Paso 1. Conectar la pantalla y la placa**
 Conecta con cuidado el cable FPC de la pantalla E-ink de 13,3 pulgadas al conector de la placa controladora EE02. Asegúrate de que el mecanismo de bloqueo esté bien fijado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.gif" style={{width:800, height:'auto'}}/></div>
 
-**Paso 2. Encendido**
+**Paso 2. Encender**
 Conecta la placa EE02 a una fuente de alimentación (ordenador o adaptador USB) utilizando un cable USB Type-C. Al encenderla, la pantalla se actualizará y mostrará una imagen de bienvenida.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/4.JPG" style={{width:300,height:'auto'}}/></div>
 
-**Paso 3. Entra en modo de configuración de red**
+**Paso 3. Entrar en modo de configuración de red**
 Después de la imagen de bienvenida, la pantalla se actualizará automáticamente para mostrar la interfaz de configuración de red. Esto indica que el dispositivo está listo para conectarse a la red Wi-Fi.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/5.JPG" style={{width:300,height:'auto'}}/></div>
 
 ### Configuración de red
 
-**Paso 4. Configura el Wi-Fi mediante el teléfono móvil**
+**Paso 4. Configurar el Wi-Fi mediante el teléfono móvil**
 Utiliza tu teléfono móvil para escanear el código QR que aparece en la pantalla (o conéctate al punto de acceso indicado). Sigue las indicaciones en tu teléfono para introducir el SSID y la contraseña de tu red Wi-Fi local y conectar la EE02 a Internet.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
-**Paso 5. Obtén el código de vinculación**
-Una vez que la configuración de red sea correcta, la pantalla se actualizará de nuevo y mostrará un **código de vinculación** (o ID de dispositivo) único. Necesitarás este código para el siguiente paso.
+**Paso 5. Obtener el código de vinculación**
+Una vez que la configuración de red se haya realizado correctamente, la pantalla se actualizará de nuevo y mostrará un **código de vinculación** (o ID de dispositivo) único. Necesitarás este código para el siguiente paso.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.jpg" style={{width:300,height:'auto'}}/></div>
 
 ### Vinculación con la plataforma y actualización
 
-**Paso 6. Vincula el dispositivo en SenseCraft HMI**
-Ve a la [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "New Device". Introduce el código de vinculación que aparece en tu pantalla E-ink para vincular el dispositivo a tu cuenta.
+**Paso 6. Vincular el dispositivo en SenseCraft Seeedash**
+Ve a la [plataforma SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "New Device". Introduce el código de vinculación que aparece en tu pantalla E-ink para vincular el dispositivo a tu cuenta.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
 
-**Paso 7. Crea y envía una nueva interfaz**
-En la plataforma SenseCraft HMI, utiliza el editor para crear una nueva interfaz (por ejemplo, sube una imagen o diseña un panel).
+**Paso 7. Crear y enviar una nueva interfaz**
+En la plataforma SenseCraft Seeedash, utiliza el editor para crear una nueva interfaz (por ejemplo, subir una imagen o diseñar un panel).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/11.png" style={{width:500, height:'auto'}}/></div>
 
-**Paso 8. Aplica tus imágenes**
-Una vez terminado, haz clic en el botón "Apply" en la esquina superior derecha y luego selecciona el dispositivo que quieres que reciba la imagen. La EE02 recibirá los datos y actualizará la pantalla de 13,3 pulgadas con tu nuevo contenido.
+**Paso 8. Aplicar tus imágenes**
+Una vez terminado, haz clic en el botón "Apply" en la esquina superior derecha y, a continuación, selecciona el dispositivo que quieres que reciba la imagen. La EE02 recibirá los datos y actualizará la pantalla de 13,3 pulgadas con tu nuevo contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/12.png" style={{width:800, height:'auto'}}/></div>
 
-**Paso 9. Visualización en la pantalla**
+**Paso 9. Mostrar en la pantalla**
 
 Finalmente, la EE02 recibirá los datos y actualizará la pantalla de 13,3 pulgadas con tu nuevo contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/13.png" style={{width:300, height:'auto'}}/></div>
 
-## Introducción con Arduino
+## Introducción a Arduino
 
 ### Instalar la librería Seeed GFX2
 
@@ -193,7 +193,7 @@ Después de descargar la biblioteca, ve a **Sketch** -> **Include Library** -> *
 
 ### Configurar y grabar el programa
 
-Como se muestra en la imagen, navega hasta el ejemplo a través de este menú:
+Como se muestra en la imagen, navega al ejemplo a través de este menú:
 File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → EE02 → 13.3-inch ePaper Displays → 13_3_inch_Spectra6_HelloWorld
 
 
@@ -204,7 +204,7 @@ Después de eso, ve a **Tools** -> **Board** -> **XIAO ESP32S3 Plus** y **Tools*
 Ten en cuenta que PSRAM debe estar habilitada.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
-Luego haz clic en **Upload** para cargar el código.
+Luego haz clic en **Upload** para subir el código.
 ¡Ahora verás la respuesta en tu pantalla de epaper! A continuación se muestra el resultado del ejemplo HelloWorld.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/18.png" style={{width:500, height:'auto'}}/></div>
 
@@ -222,13 +222,13 @@ Luego haz clic en **Upload** para cargar el código.
 *   Acércate más al router para garantizar una señal fuerte.
 
 **P3: La pantalla se ve borrosa o tiene efecto fantasma.**
-*   Esto puede ocurrir si la pantalla no se ha actualizado durante mucho tiempo o si la fuente de alimentación es inestable. Intenta actualizar la pantalla de nuevo a través de la plataforma HMI.
+*   Esto puede ocurrir si la pantalla no se ha actualizado durante mucho tiempo o si la fuente de alimentación es inestable. Intenta actualizar la pantalla de nuevo a través de la plataforma Seeedash.
 
-**P4: Oigo un sonido de alta frecuencia durante el funcionamiento.**
+**P4: Escucho un sonido de alta frecuencia durante el funcionamiento.**
 *   ¡Esto es normal! El circuito de alimentación del ePaper puede producir sonidos ocasionales de alta frecuencia durante la actualización. No afecta al rendimiento ni a la vida útil del producto.
 
-**P5: No puedo vincular el dispositivo en SenseCraft HMI / la vinculación falla.**
-*   Verifica dos veces que introdujiste correctamente el código de vinculación (distingue mayúsculas y minúsculas).
+**P5: No puedo vincular el dispositivo en SenseCraft Seeedash / la vinculación falla.**
+*   Verifica que introdujiste correctamente el código de vinculación (distingue mayúsculas y minúsculas).
 *   Asegúrate de que el EE02 está encendido y conectado a Wi-Fi (comprueba el estado en la pantalla).
 *   Asegúrate de que tu teléfono y el EE02 están en la misma red Wi-Fi de 2.4GHz durante la configuración.
 *   Si el dispositivo aparece como desconectado, pulsa el botón Reset e intenta vincularlo de nuevo.
