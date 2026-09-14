@@ -1,21 +1,21 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino cookbook——使用 Seeed_GFX 和 GxEPD2 库从 Arduino 驱动电子纸显示屏，包括 Hello World 示例，以及在 E1001 上实现 4 级灰度、在 E1003 上实现 16 级灰度。
-title: Arduino Cookbook：电子纸显示屏 (reTerminal E 系列)
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino cookbook —— 使用 Seeed_GFX 和 GxEPD2 库从 Arduino 驱动 ePaper 显示屏，包括 Hello World 示例，以及在 E1001 上实现 4 级灰度、在 E1003 上实现 16 级灰度。
+title: 'Arduino Cookbook：ePaper 显示屏（reTerminal E 系列）'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
 sidebar_label: Arduino – 显示屏
 last_update:
-  date: 05/15/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-08-21'
-updatedAt: '2026-06-16'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino Cookbook：电子纸显示屏 (reTerminal E 系列)
+# Arduino Cookbook：ePaper 显示屏（reTerminal E 系列）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/244.png" style={{width:650, height:'auto'}}/></div>
 
@@ -30,25 +30,25 @@ import TabItem from '@theme/TabItem';
 :::
 
 :::tip 在找硬件外设相关内容？
-本页重点介绍如何在 Arduino 中**驱动电子纸屏幕**。如果你想使用板载 LED、蜂鸣器、按键、SHT4x 传感器、电池电量监测或 microSD 卡槽，请前往 **[Arduino Cookbook：板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)**。关于 RTC、低功耗模式、板载麦克风和电容触摸绘图，请参阅 **[Arduino Cookbook：RTC、低功耗、音频与触摸](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)**。
+本页重点介绍如何在 Arduino 中**驱动 ePaper 屏幕**。如果你想使用板载 LED、蜂鸣器、按键、SHT4x 传感器、电池监测或 microSD 卡槽，请前往 **[Arduino Cookbook：板载外设](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)**。关于 RTC、低功耗模式、板载麦克风和电容触摸绘图，请参阅 **[Arduino Cookbook：RTC、低功耗、音频与触摸](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)**。
 
-通用的样板内容——Arduino IDE 配置、ESP32 开发板包、安装 `Seeed_GFX`、生成 `driver.h`——也都在 **[使用 Arduino 进行开发](https://wiki.seeedstudio.com/cn/epaper_work_with_arduino)** 中。如果你是第一次在 Seeed 电子纸上使用 Arduino，建议先快速浏览那一页。
+通用的样板内容——Arduino IDE 配置、ESP32 开发板包、安装 `Seeed_GFX`、生成 `driver.h`——也都在 **[使用 Arduino 开发](https://wiki.seeedstudio.com/cn/epaper_work_with_arduino)** 中。如果你是第一次在 Seeed ePaper 上使用 Arduino，建议先快速浏览那一页。
 :::
 
 ## 介绍
 
-reTerminal E 系列是 Seeed Studio 的工业 HMI 产品线，基于 XIAO ESP32-S3，集成电子纸显示屏。本 cookbook 将逐步讲解在屏幕上渲染文本、图形和图像所需的一切内容：
+reTerminal E 系列是 Seeed Studio 的工业 HMI 产品线，基于 XIAO ESP32-S3，集成了 ePaper 显示屏。本 cookbook 将带你完成在屏幕上渲染文本、图形和图像所需的一切步骤：
 
 - E1001 / E1002 / E1003 / E1004 的硬件概览与购买链接。
 - 四款型号通用的 Arduino IDE 环境配置（XIAO_ESP32S3 开发板、OPI PSRAM）。
 - 使用 **Seeed_GFX** 库（配套的 `BOARD_SCREEN_COMBO`）在每款型号上实现第一个 **Hello World**。
 - 使用 Seeed_GFX 的**面板专用进阶示例**——**E1001 上的 4 级灰度**以及 **E1003 上的 16 级灰度**。
 - 使用流行的 **GxEPD2** 库实现另一种 **Hello World**。
-- 电子纸刷新问题与烧录失败的排查技巧。
+- ePaper 刷新问题与烧录失败的排查技巧。
 
 ### 所需材料
 
-要完成本教程，请准备以下任意一款 reTerminal E 系列设备：
+要完成本教程，请准备以下 reTerminal E 系列设备之一：
 
 <div class="table-center">
   <table align="center">
@@ -91,7 +91,7 @@ reTerminal E 系列是 Seeed Studio 的工业 HMI 产品线，基于 XIAO ESP32-
 
 ### 环境准备
 
-要在 Arduino 中为 reTerminal E 系列电子纸显示屏编程，你需要在 Arduino IDE 中配置 ESP32 支持。
+要使用 Arduino 为 reTerminal E 系列 ePaper 显示屏编程，你需要在 Arduino IDE 中配置 ESP32 支持。
 
 :::tip
 如果这是你第一次使用 Arduino，我们强烈建议你参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
@@ -119,23 +119,23 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 **步骤 3.** 安装 ESP32 开发板包。
 
-依次点击 **Tools > Board > Boards Manager**，搜索 “esp32”，并安装 Espressif Systems 提供的 ESP32 开发板包。
+依次进入 **Tools > Board > Boards Manager**，搜索 “esp32”，并安装 Espressif Systems 提供的 ESP32 包。
 
 **步骤 4.** 选择正确的开发板。
 
-依次点击 **Tools > Board > ESP32 Arduino**，然后选择 **XIAO_ESP32S3**。
+依次进入 **Tools > Board > ESP32 Arduino**，并选择 **XIAO_ESP32S3**。
 
-**步骤 5.** 使用 USB-C 线将 reTerminal E 系列电子纸显示屏连接到电脑。
+**步骤 5.** 使用 USB-C 线将 reTerminal E 系列 ePaper 显示屏连接到电脑。
 
 **步骤 6.** 在 **Tools > Port** 中选择正确的端口。
 
-## 电子纸显示屏编程
+## ePaper 显示屏编程
 
-**reTerminal E1001 配备 7.5 英寸黑白电子纸显示屏**，而 **reTerminal E1002 则配备 7.3 英寸全彩电子纸显示屏**。这两款显示屏在各种光照条件下都具有出色的可视性，并且功耗极低，非常适合需要始终点亮显示、但又要尽量降低功耗的工业应用场景。
+**reTerminal E1001 配备 7.5 英寸黑白 ePaper 显示屏**，而 **reTerminal E1002 则配备 7.3 英寸全彩 ePaper 显示屏**。这两款显示屏在各种光照条件下都具有出色的可视性，并且功耗极低，非常适合需要长时间常亮、但又要尽量降低功耗的工业应用。
 
 ### 使用 Seeed_GFX 库
 
-为了控制电子纸显示屏，我们将使用 Seeed_GFX 库，它为多种 Seeed Studio 显示设备提供了全面支持。
+为了控制 ePaper 显示屏，我们将使用 Seeed_GFX 库，它为多种 Seeed Studio 显示设备提供了全面支持。
 
 **步骤 1.** 从 GitHub 下载 Seeed_GFX 库：
 
@@ -145,18 +145,18 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
     </a>
 </div><br />
 
-**步骤 2.** 在 Arduino IDE 中通过添加 ZIP 文件来安装该库。依次点击 **Sketch > Include Library > Add .ZIP Library**，然后选择刚刚下载的 ZIP 文件。
+**步骤 2.** 在 Arduino IDE 中通过添加 ZIP 文件的方式安装该库。依次点击 **Sketch > Include Library > Add .ZIP Library**，然后选择刚刚下载的 ZIP 文件。
 
 :::note
-如果你之前安装过 TFT_eSPI 库，可能需要暂时从 Arduino 库文件夹中移除或重命名它，以避免冲突，因为 Seeed_GFX 是在 TFT_eSPI 的基础上进行分支开发，并为 Seeed Studio 显示屏增加了额外功能。
+如果你之前安装过 TFT_eSPI 库，可能需要暂时从 Arduino 库文件夹中移除或重命名它，以避免冲突，因为 Seeed_GFX 是在 TFT_eSPI 基础上进行扩展的分支，专门为 Seeed Studio 显示屏增加了额外特性。
 :::
 
 <Tabs>
-<TabItem value="Programming reTerminal E1001" label="编程 reTerminal E1001" default>
+<TabItem value="Programming reTerminal E1001" label="Programming reTerminal E1001" default>
 
-#### 编程 reTerminal E1001（7.5 英寸黑白电子纸）
+#### 为 reTerminal E1001 编程（7.5 英寸黑白 ePaper）
 
-下面我们通过一个简单示例来演示在黑白电子纸显示屏上的基础绘图操作。
+下面我们通过一个简单示例来演示在黑白 ePaper 显示屏上的基础绘图操作。
 
 **步骤 1.** 在 Seeed_GFX 库中打开示例草图：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
@@ -183,7 +183,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 #### 编程 reTerminal E1002（7.3 英寸全彩色电子纸）
 
-全彩色电子纸显示屏支持红色、黑色和白色，可以实现更丰富的可视化界面。
+全彩色电子纸显示屏支持红色、黑色和白色，可以实现更加丰富的可视化界面。
 
 **步骤 1.** 从 Seeed_GFX 库中打开彩色示例程序：**File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
@@ -191,7 +191,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/open_opi_psram.jpg" style={{width:800, height:'auto'}}/></div>
 
-**步骤 3.** 在与你的示例程序相同的文件夹中创建一个名为 `driver.h` 的新文件，流程与之前相同。
+**步骤 3.** 在与你的示例程序相同的文件夹中创建一个名为 `driver.h` 的新文件，操作流程与之前相同。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select2.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -201,7 +201,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
 ```
 
-**步骤 5.** 将示例程序上传到你的 reTerminal E1002。显示屏将展示彩色图形，以演示电子纸显示屏的全彩能力。
+**步骤 5.** 将示例程序上传到你的 reTerminal E1002。显示屏将展示彩色图形，用于演示电子纸显示屏的全彩能力。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/149.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -210,7 +210,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 #### 编程 reTerminal E1003（10.3 英寸电子纸）
 
-使用相同的工作流程和 Seeed_GFX 库，在 reTerminal E1003 上配置并驱动电子纸。
+使用 Seeed_GFX 库，以相同的工作流程来配置并驱动 reTerminal E1003 上的电子纸。
 
 **步骤 1.** 从 Seeed_GFX 库中打开一个示例程序：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
@@ -222,13 +222,13 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_1.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**步骤 4.** 复制生成的配置代码，并将其粘贴到用于 E1003 的 `driver.h` 文件中。
+**步骤 4.** 复制生成的配置代码，并将其粘贴到 E1003 使用的 `driver.h` 文件中。
 
 ```cpp
 #define BOARD_SCREEN_COMBO 522 // reTerminal E1003 (ED103TC2)
 ```
 
-**步骤 5.** 将示例程序上传到你的 reTerminal E1003，以验证基本图元绘制、文本渲染以及全屏刷新行为。
+**步骤 5.** 将示例程序上传到你的 reTerminal E1003，以验证绘图基本图元、文本渲染以及全屏刷新行为。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -237,7 +237,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 #### 编程 reTerminal E1004（13.3 英寸全彩色电子纸）
 
-使用 Seeed_GFX 库在 reTerminal E1004 上配置并驱动 E Ink® Spectra™ 6 全彩色电子纸显示屏。
+使用 Seeed_GFX 库，在 reTerminal E1004 上配置并驱动 E Ink® Spectra™ 6 全彩电子纸显示屏。
 
 **步骤 1.** 从 Seeed_GFX 库中打开彩色示例程序：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
@@ -249,13 +249,13 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_1.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**步骤 4.** 复制生成的配置代码，并将其粘贴到用于 E1004 的 `driver.h` 文件中。
+**步骤 4.** 复制生成的配置代码，并将其粘贴到 E1004 使用的 `driver.h` 文件中。
 
 ```cpp
 #define BOARD_SCREEN_COMBO 523 // reTerminal E1004 (T133A01)
 ```
 
-**步骤 5.** 将示例程序上传到你的 reTerminal E1004，以验证颜色渲染、基本图元绘制、文本渲染以及全屏刷新行为。
+**步骤 5.** 将示例程序上传到你的 reTerminal E1004，以验证颜色渲染、绘图基本图元、文本渲染以及全屏刷新行为。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -264,14 +264,14 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ### 使用 Seeed_GFX 实现多级灰度
 
-上面的 Hello World 示例刻意保持精简，以便适配每一款型号。E1001 和 E1003 上的单色面板实际上在纯黑白之上还支持多级灰度——E1001 支持 4 级，E1003 支持 16 级——而 Seeed_GFX 通过 `epaper.initGrayMode(...)` 加上一组 `TFT_GRAY_*` 调色板常量同时暴露了这两种模式。下面两个示例分别进行讲解。
+上面的 Hello World 示例程序刻意保持精简，以便适配每一款型号。E1001 和 E1003 上的单色面板实际上在纯黑白之上还支持多级灰度——E1001 支持 4 级，E1003 支持 16 级——并且 Seeed_GFX 通过 `epaper.initGrayMode(...)` 加上一组 `TFT_GRAY_*` 调色板常量同时暴露这两种模式。下面两个示例分别进行讲解。
 
 <Tabs>
 <TabItem value="E1001 Advanced" label="E1001 — 4-Level Grayscale" default>
 
-#### reTerminal E1001 上的 4 级灰度
+#### 在 reTerminal E1001 上实现 4 级灰度
 
-reTerminal E1001 的 7.5 英寸单色面板可以渲染**4 级灰度**，而不仅仅是纯黑白。Seeed_GFX 通过 `epaper.initGrayMode(GRAY_LEVEL4)` 和四个调色板常量来提供这一能力：
+reTerminal E1001 的 7.5 英寸单色面板可以渲染**4 级灰度**，而不仅仅是纯黑白。Seeed_GFX 通过 `epaper.initGrayMode(GRAY_LEVEL4)` 和四个调色板常量来实现这一点：
 
 <div class="table-center">
 	<table align="center">
@@ -306,7 +306,7 @@ reTerminal E1001 的 7.5 英寸单色面板可以渲染**4 级灰度**，而不�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/open_opi_psram.jpg" style={{width:800, height:'auto'}}/></div>
 
-**步骤 3.** 在示例程序旁边添加一个 `driver.h` 文件（与 Hello World 相同的工作流程），并选择 E1001 的板卡–屏幕组合：
+**步骤 3.** 在示例程序旁边添加一个 `driver.h` 文件（与 Hello World 相同的工作流程），并选择 E1001 的板卡与屏幕组合：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 520 // reTerminal E1001 (UC8179)
@@ -314,7 +314,7 @@ reTerminal E1001 的 7.5 英寸单色面板可以渲染**4 级灰度**，而不�
 
 **步骤 4.** 上传示例程序。显示屏首先会显示四条灰度条纹——顶部为黑色，然后是深灰、浅灰，底部为白色——随后清屏并渲染来自 `image.h` 的位图。
 
-供参考，示例程序如下所示：
+作为参考，示例程序如下所示：
 
 ```cpp
 /*
@@ -363,19 +363,19 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/236.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip 想使用你自己的图片吗？
-`image.h` 中的 `L4_GRAY` 数组只是一个 800×480 的灰度位图，预先转换成了 C 数组。若要替换为你自己的图片，请使用任意标准的“image to C array”转换工具，从一张 800×480 的灰度源图重新生成数组，并在 `image.h` 中替换 `L4_GRAY`。示例程序本身无需做任何修改。
+`image.h` 中的 `L4_GRAY` 数组只是一个 800×480 的灰度位图，预先转换成了 C 数组。若要替换为你自己的图片，请从一个 800×480 的灰度源图像生成数组（使用任意标准的“image to C array”转换工具），然后在 `image.h` 中替换 `L4_GRAY`。示例程序本身无需修改。
 :::
 
 :::tip
-4 级灰度刷新大约比 1 位黑白更新慢 4 倍，因为控制器需要将每个像素驱动到四个目标电压，而不是两个。请将其用于照片、插图或细节丰富的仪表盘等静态内容，而对于需要快速更新的 UI，建议坚持使用标准的 1 位模式。
+4 级灰度刷新大约比 1 位黑白更新慢 4 倍，因为控制器需要将每个像素从两个目标电压扩展为四个。请将其用于照片、插画或细节丰富的仪表盘等静态内容，而对于需要快速更新的 UI，请坚持使用标准的 1 位模式。
 :::
 
 </TabItem>
 <TabItem value="E1003 Advanced" label="E1003 — 16-Level Grayscale">
 
-#### reTerminal E1003 上的 16 级灰度
+#### 在 reTerminal E1003 上实现 16 级灰度
 
-reTerminal E1003 的 10.3 英寸面板在 1404×1872 分辨率下将灰度级提升到**16 级灰度**。Seeed_GFX 通过 `epaper.initGrayMode(GRAY_LEVEL16)` 和从 `TFT_GRAY_0`（黑色）一直到 `TFT_GRAY_15`（白色）的 16 个调色板常量来提供这一能力：
+reTerminal E1003 的 10.3 英寸面板在 1404×1872 分辨率下将灰度级提升到**16 级灰度**。Seeed_GFX 通过 `epaper.initGrayMode(GRAY_LEVEL16)` 和从 `TFT_GRAY_0`（黑色）一直到 `TFT_GRAY_15`（白色）的 16 个调色板常量来实现这一点：
 
 <div class="table-center">
 	<table align="center">
@@ -398,13 +398,13 @@ reTerminal E1003 的 10.3 英寸面板在 1404×1872 分辨率下将灰度级提
 	</table>
 </div>
 
-下面的示例会绘制 16 条水平色带——每个灰度级一条——这样你就可以在面板上直观地验证完整调色板。Seeed_GFX 库已经将此示例作为可直接烧录的示例提供，并且配套的 `driver.h` 已为 E1003 预先配置好，因此你无需手动连接任何线路。
+下面的示例会绘制 16 条水平带状区域——每个灰度级一条——这样你就可以在面板上直观地验证完整调色板。Seeed_GFX 库已经将此示例作为可直接烧录的示例提供，并且配套的 `driver.h` 已为 E1003 预先配置好，因此你无需手动连接任何线路。
 
-**步骤 1.** 从 Seeed_GFX 库中打开示例草图：**File > Examples > Seeed_GFX > ePaper > Gray > GrayLevel16**。草图会与其捆绑的 `driver.h` 一起打开（已为 E1003 的 ED103TC2 面板设置为 `BOARD_SCREEN_COMBO 522`）——你不需要对其进行编辑。
+**步骤 1.** 在 Seeed_GFX 库中打开示例草图：**File > Examples > Seeed_GFX > ePaper > Gray > GrayLevel16**。草图会与其捆绑的 `driver.h` 一起打开（已为 E1003 的 ED103TC2 面板设置为 `BOARD_SCREEN_COMBO 522`）——你不需要对其进行任何编辑。
 
 **步骤 2.** 在 Arduino IDE 中启用 OPI PSRAM：**Tools > PSRAM > OPI PSRAM**。
 
-**步骤 3.** 上传草图。显示屏会显示 16 条水平灰度色带，从顶部的纯黑到底部的纯白。
+**步骤 3.** 上传草图。显示屏会显示 16 条水平灰度带，从顶部的纯黑到底部的纯白。
 
 作为参考，示例草图如下所示：
 
@@ -464,7 +464,7 @@ void loop()
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/237.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-在此面板上，16 级灰度是刷新速度最慢的模式，因为每个像素必须在 16 个电压目标之间逐级稳定，而不是 2 个。请将其用于静态照片风格内容和仪表盘，并在需要快速 UI 更新时退回到标准的 1 位模式。
+在该面板上，16 级灰度是刷新速度最慢的模式，因为每个像素必须经过 16 个电压目标而不是 2 个。请将其用于静态照片风格内容和仪表盘，并在需要快速 UI 更新时退回到标准的 1 位模式。
 :::
 
 </TabItem>
@@ -472,7 +472,7 @@ void loop()
 
 ### 使用 GxEPD2 库
 
-除了 Seeed_GFX，你还可以使用 `GxEPD2` 库来驱动 reTerminal 的电子纸显示屏。Seeed 已经 fork 了流行的 `GxEPD2` 库，并为 reTerminal E10xx 系列添加了专用支持，使其成为 reTerminal 用户的推荐选择。
+除了 Seeed_GFX，你还可以使用 `GxEPD2` 库来驱动 reTerminal 的电子墨水屏显示。Seeed 已经 fork 了流行的 `GxEPD2` 库，并为 reTerminal E10xx 系列添加了专用支持，使其成为 reTerminal 用户的推荐选择。
 
 **安装 Seeed_GxEPD2 库**
 
@@ -482,7 +482,7 @@ void loop()
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Seeed_GxEPD2/" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -491,15 +491,15 @@ void loop()
 **步骤 3.** `Seeed_GxEPD2` 库需要 `Adafruit GFX Library` 才能工作，你也必须安装它。最简单的方式是通过库管理器：进入 **Tools > Manage Libraries...**，搜索 "Adafruit GFX Library"，然后点击 "Install"。
 
 :::note
-`Seeed_GxEPD2` 是 Seeed 在原始 `GxEPD2` 库基础上定制的 fork，针对 reTerminal E10xx 系列提供了专用驱动和优化。我们强烈建议使用这个 fork，而不是上游库，以确保与你的 reTerminal 设备完全兼容。
+`Seeed_GxEPD2` 是 Seeed 基于原始 `GxEPD2` 库定制的 fork，针对 reTerminal E10xx 系列提供了专用驱动和优化。我们强烈建议使用这个 fork，而不是上游库，以确保与你的 reTerminal 设备完全兼容。
 :::
 
 <Tabs>
 <TabItem value="Programming reTerminal E1001 GxEPD2" label="reTerminal E1001" default>
 
-#### 使用 GxEPD2 为 reTerminal E1001 编程（7.5" 黑白屏）
+#### 编程 reTerminal E1001（7.5" 黑白屏）
 
-reTerminal E1001 配备一块 7.5" 黑白电子纸显示屏（800×480，GDEY075T7 面板，UC8179 控制器）。下面的示例演示了多个屏幕，包括启动画面、系统信息、排版、几何图形、图案以及仪表盘布局。
+reTerminal E1001 配备一块 7.5" 黑白电子墨水屏（800×480，GDEY075T7 面板，UC8179 控制器）。下面的示例演示了多个屏幕，包括启动画面、系统信息、排版、几何图形、图案以及仪表盘布局。
 
 安装 `Seeed_GxEPD2` 库后，你可以在 Arduino IDE 中通过 **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1001** 找到此示例，或者在 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1001/GxEPD2_reTerminal_E1001.ino` 中手动定位。
 
@@ -1476,14 +1476,14 @@ void showDashboard()
 </TabItem>
 <TabItem value="Programming reTerminal E1003 GxEPD2" label="reTerminal E1003">
 
-#### 编程 reTerminal E1003（10.3" 黑白屏幕）
+#### 编程 reTerminal E1003（10.3" 单色屏幕）
 
-reTerminal E1003 配备 10.3" 黑白电子纸显示屏（1872×1404，ED103TC2 面板，IT8951 控制器）。它支持 16 级灰度，并且需要 OPI PSRAM。本示例依赖于示例文件夹中包含的自定义驱动文件 `GxEPD2_ED103TC2_1872x1404.h`。
+reTerminal E1003 配备 10.3" 单色电子纸显示屏（1872×1404，ED103TC2 面板，IT8951 控制器）。它支持 16 级灰度，并且需要 OPI PSRAM。本示例依赖于示例文件夹中包含的自定义驱动文件 `GxEPD2_ED103TC2_1872x1404.h`。
 
-安装 `Seeed_GxEPD2` 库后，你可以在 Arduino IDE 中通过 **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1003** 找到此示例，或者在 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003/` 路径下手动定位。
+安装 `Seeed_GxEPD2` 库后，你可以在 Arduino IDE 中通过 **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1003** 找到此示例，或者在 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003/` 中手动定位。
 
 ::::note
-E1003 需要在 Arduino IDE 中启用 **OPI PSRAM**：**Tools > PSRAM > OPI PSRAM**。约 321 kB 的帧缓冲区存储在 PSRAM 中。
+E1003 需要在 Arduino IDE 中启用 **OPI PSRAM**：**Tools > PSRAM > OPI PSRAM**。约 321 kB 的帧缓冲区存放在 PSRAM 中。
 ::::
 
 <details>
@@ -2148,16 +2148,16 @@ void showDashboardDemo()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/240.png" style={{width:600, height:'auto'}}/></div>
 
-E1003 示例的完整源代码（包含所有 6 个演示界面，并完整实现了 Splash、System Info、Typography、Geometry、Patterns 和 Dashboard）可在仓库 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003/` 中获取。该示例包含用于居中文本、页面页眉/页脚以及针对 10.3" 大屏优化的卡片式布局的辅助函数。
+E1003 示例的完整源代码（包含所有 6 个演示界面，并完整实现了 Splash、System Info、Typography、Geometry、Patterns 和 Dashboard）可在仓库 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003/` 中找到。该示例包含用于居中文本、页面页眉/页脚以及针对 10.3" 大屏优化的卡片式布局的辅助函数。
 
 </TabItem>
 <TabItem value="Programming reTerminal E1004 GxEPD2" label="reTerminal E1004">
 
 #### 编程 reTerminal E1004（13.3" 6 色屏幕）
 
-reTerminal E1004 配备一块 13.3" 6 色电子纸显示屏（1200×1600，T133A01 面板，双芯片控制器，Spectra 6）。它支持黑、白、红、绿、蓝和黄六种颜色。此示例依赖于示例文件夹中包含的自定义驱动文件 `GxEPD2_T133A01_1200x1600.h`。
+reTerminal E1004 配备一块 13.3" 6 色电子纸显示屏（1200×1600，T133A01 面板，双芯片控制器，Spectra 6）。它支持黑、白、红、绿、蓝和黄六种颜色。该示例依赖示例文件夹中包含的自定义驱动文件 `GxEPD2_T133A01_1200x1600.h`。
 
-安装 `Seeed_GxEPD2` 库后，你可以在 Arduino IDE 中通过 **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1004** 找到此示例，或者在 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/` 路径下手动定位。
+安装 `Seeed_GxEPD2` 库后，你可以在 Arduino IDE 中通过 **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1004** 找到该示例，或者在 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/` 路径下手动定位。
 
 ::::note
 E1004 需要在 Arduino IDE 中启用 **OPI PSRAM**：**Tools > PSRAM > OPI PSRAM**。约 937 KB 的帧缓冲区存放在 PSRAM 中。
@@ -2789,26 +2789,26 @@ void showDashboard()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/241.jpeg" style={{width:600, height:'auto'}}/></div>
 
-E1004 示例的完整源代码（包括 Splash、Color Palette、Typography、Geometry、Patterns 和 Dashboard 共 6 个演示界面的完整实现）可在仓库 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/` 中获取。该示例包含色卡、多色进度条、状态卡片和活动日志，并针对 13.3" 六色大屏进行了优化。
+E1004 示例的完整源代码（包括 Splash、Color Palette、Typography、Geometry、Patterns 和 Dashboard 共 6 个演示界面的完整实现）可在仓库 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/` 中找到。该示例包含色卡、多色进度条、状态卡片和活动日志，并针对 13.3 英寸 6 色大屏进行了优化。
 
 </TabItem>
 </Tabs>
 
 ### 使用 GxEPD2 库实现多级灰度显示
 
-除了标准的黑白和六色模式外，一些 reTerminal 显示屏还支持多级灰度渲染。`Seeed_GxEPD2` 库包含专门的灰度示例，这些示例绕过常规的 `GxEPD2_BW` / `GxEPD2_7C` 驱动，改为使用自定义 LUT 波形直接驱动显示控制器，同时仍然利用 `Adafruit_GFX` 进行绘图。
+除了标准的黑白和 6 色模式外，一些 reTerminal 显示屏还支持多级灰度渲染。`Seeed_GxEPD2` 库包含专门的灰度示例，这些示例绕过常规的 `GxEPD2_BW` / `GxEPD2_7C` 驱动，改为使用自定义 LUT 波形直接驱动显示控制器，同时仍然利用 `Adafruit_GFX` 进行绘图。
 
-- **reTerminal E1001 (7.5" B&W)**：UC8179 控制器通过专用的 VCOM/WW/KW/WK/KK LUT 表支持 **4 级灰度** 模式。使用 2bpp（96 KB）帧缓冲区，每个像素可以为黑色、深灰、浅灰或白色。
+- **reTerminal E1001 (7.5" B&W)**：UC8179 控制器通过专用的 VCOM/WW/KW/WK/KK LUT 表支持 **4 级灰度** 模式。使用 2bpp（96 KB）帧缓冲区，每个像素可以是黑色、深灰、浅灰或白色。
 - **reTerminal E1003 (10.3" Monochrome)**：IT8951 控制器通过其 GC16 波形模式原生支持 **16 级灰度**。在 PSRAM 中分配 4bpp（约 1.25 MB）帧缓冲区，每个像素可以呈现 16 个灰度级之一。
 
 <Tabs>
-<TabItem value="Programming reTerminal E1001 Grayscale" label="reTerminal E1001（4 级灰度）" default>
+<TabItem value="Programming reTerminal E1001 Grayscale" label="reTerminal E1001 (4-Gray)" default>
 
 #### 编程 reTerminal E1001 — 4 级灰度
 
-E1001 的 UC8179 控制器可以通过上传自定义 LUT 表（VCOM、LUTWW、LUTKW、LUTWK、LUTKK），从普通的 1 位模式切换到 4 级灰度模式。该示例创建了一个 `Gray4Canvas`（2bpp，96 KB），并使用 `Adafruit_GFX` 进行绘图，然后将两个位平面上传到控制器以实现灰度渲染。
+E1001 的 UC8179 控制器可以通过上传自定义 LUT 表（VCOM、LUTWW、LUTKW、LUTWK、LUTKK），从正常的 1 位模式切换到 4 级灰度模式。该示例创建一个 `Gray4Canvas`（2bpp，96 KB），并使用 `Adafruit_GFX` 进行绘图，然后将两个位平面上传到控制器以实现灰度渲染。
 
-安装 `Seeed_GxEPD2` 库后，你可以在 Arduino IDE 中通过 **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1001_Gray4** 找到该示例，或在 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1001_Gray4/GxEPD2_reTerminal_E1001_Gray4.ino` 路径下手动定位。
+安装 `Seeed_GxEPD2` 库后，你可以在 Arduino IDE 中通过 **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1001_Gray4** 找到此示例，或在 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1001_Gray4/GxEPD2_reTerminal_E1001_Gray4.ino` 中手动定位。
 
 <details>
 <summary>点击此处查看完整代码</summary>
@@ -3236,13 +3236,13 @@ void loop() {}
 
 #### 编程 reTerminal E1003 — 16 级灰度
 
-E1003 的 IT8951 控制器通过其 GC16 波形模式原生支持 16 级灰度。此示例在 PSRAM 中分配一个 4bpp（约 1.25 MB）帧缓冲区，并通过 `Gray16Canvas` 类配合 `Adafruit_GFX` 进行绘图，然后将该帧以 8BPP 数据上传到 IT8951 以进行 GC16 刷新。
+E1003 的 IT8951 控制器通过其 GC16 波形模式原生支持 16 级灰度。此示例在 PSRAM 中分配一个 4bpp（约 1.25 MB）帧缓冲区，并通过 `Gray16Canvas` 类配合 `Adafruit_GFX` 进行绘图，然后将该帧以 8BPP 数据上传到 IT8951 进行 GC16 刷新。
 
 ::::note
 此示例需要在 Arduino IDE 中启用 **OPI PSRAM**：**Tools > PSRAM > OPI PSRAM**。约 1.25 MB 的帧缓冲区存放在 PSRAM 中。
 ::::
 
-安装 `Seeed_GxEPD2` 库后，你可以在 Arduino IDE 中通过 **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1003_Gray16** 找到此示例，或在 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003_Gray16/GxEPD2_reTerminal_E1003_Gray16.ino` 手动定位。
+安装 `Seeed_GxEPD2` 库后，你可以在 Arduino IDE 中通过 **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1003_Gray16** 找到此示例，或在 `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003_Gray16/GxEPD2_reTerminal_E1003_Gray16.ino` 中手动定位。
 
 <details>
 <summary>点击此处查看完整代码</summary>
@@ -3612,14 +3612,14 @@ void loop() {}
 </Tabs>
 
 ::::note
-ePaper 显示屏的刷新率相对较慢。黑白显示屏（E1001、E1003）通常在 1–3 秒内完成刷新，而 6 色显示屏（E1002、E1004）进行一次完整刷新可能需要 25–40 秒。这是正常现象，是为了实现超低功耗以及在无背光条件下仍具备出色可视性的权衡。
+ePaper 显示屏的刷新率相对较慢。黑白显示屏（E1001、E1003）通常在 1–3 秒内完成刷新，而 6 色显示屏（E1002、E1004）一次完整刷新可能需要 25–40 秒。这是正常现象，是为了实现超低功耗以及在无背光条件下仍具备出色可视性的权衡。
 ::::
 
 ## 故障排查
 
 ### Q1：为什么在运行上述代码时，reTerminal 的 ePaper 显示屏没有任何显示或不刷新？
 
-如果你在 reTerminal 中插入了 MicroSD 卡，可能会出现此问题。原因是 MicroSD 卡和 ePaper 显示屏在 reTerminal 上共用同一条 SPI 总线。如果插入了 MicroSD 卡，但其使能（片选）引脚未被正确管理，就会在 SPI 总线上产生冲突。具体来说，MicroSD 卡可能会将 BUSY 线保持为高电平，从而阻止 ePaper 显示屏正常工作——导致没有显示更新或刷新。
+如果你在 reTerminal 中插入了 MicroSD 卡，可能会出现此问题。原因是 MicroSD 卡和 ePaper 显示屏在 reTerminal 上共用同一条 SPI 总线。如果插入了 MicroSD 卡但其使能（片选）引脚未被正确管理，就会在 SPI 总线上产生冲突。具体来说，MicroSD 卡可能会将 BUSY 线保持为高电平，从而阻止 ePaper 显示屏正常工作——导致没有显示更新或刷新。
 
 ```cpp
 // Initialize SD Card
@@ -3628,13 +3628,13 @@ digitalWrite(SD_EN_PIN, HIGH);
 pinMode(SD_DET_PIN, INPUT_PULLUP);
 ```
 
-要解决这个问题，你必须确保使用上面提供的代码正确使能 MicroSD 卡。该代码通过设置正确的引脚状态来初始化并使能 MicroSD 卡，从而避免 SPI 总线冲突，使 SD 卡和 ePaper 显示屏可以同时正常工作。在 reTerminal 上使用 MicroSD 卡时，请务必使用推荐的初始化代码，以避免此类问题。
+要解决这个问题，你必须确保使用上面提供的代码正确使能 MicroSD 卡。该代码通过设置正确的引脚状态来初始化并使能 MicroSD 卡，从而避免 SPI 总线冲突，并使 SD 卡和 ePaper 显示屏都能正常协同工作。在 reTerminal 上使用 MicroSD 卡时，请务必使用推荐的初始化代码，以避免此类问题。
 
 如果你的项目中不使用 MicroSD 卡，我们建议先关闭设备电源并取出卡片，然后再运行显示程序。如果卡已经插入 reTerminal，则无论你是否实际使用 MicroSD 卡，都需要添加上述代码，以确保屏幕能够正常显示。
 
 ### Q2：为什么我无法向 reTerminal 上传程序？
 
-如果你在向 reTerminal 上传程序时遇到如下错误：
+如果你在向 reTerminal 上传程序时遇到如下错误。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/158.png" style={{width:1000, height:'auto'}}/></div>
 
