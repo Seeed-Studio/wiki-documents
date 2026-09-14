@@ -1,26 +1,24 @@
 ---
-description: Standalone function-level demos for each onboard peripheral of the XIAO 1.14'' IPS Display (nRF52840). Covers screen, IMU, PDM microphone, internal Flash recording and I2S audio playback, buttons, battery, and Grove I2C.
+description: Standalone function-level demos for each onboard peripheral of the XIAO 1.14'' IPS Display (ESP32-S3). Covers screen, IMU, PDM microphone and I2S audio (voice bar + flash recorder), Grove I2C, buttons, and battery voltage detection.
 title: Onboard Peripheral Usage
-sidebar_label: Function
 keywords:
   - XIAO
-  - nRF52840
+  - ESP32-S3
   - Display
   - LCD
   - Function
   - 1.14
-  - I2S
-  - Audio
-image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
-slug: /function_1.14_inch_display_nrf52840
-sku: 100069374
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_esp32s3.webp
+slug: /function_1.14_inch_display_esp32s3
+sku: 100086099
+sidebar_label: Function
 sidebar_position: 2
 last_update:
-  date: 08/12/2026
+  date: 08/25/2026
   author: FaiyuetCik
 createdAt: '2026-08-13'
-updatedAt: '2026-08-24'
-url: https://wiki.seeedstudio.com/function_1.14_inch_display_nrf52840/
+updatedAt: '2026-08-25'
+url: https://wiki.seeedstudio.com/function_1.14_inch_display_esp32s3/
 ---
 
 # Onboard Peripheral Usage
@@ -32,17 +30,8 @@ The demo GIFs on this page are sped up to keep them short.
 :::
 
 :::note
-All demos in this page require **Seeed nRF52 Boards (1.1.13)** as described in [Getting Started](/getting_started_1.14_inch_display_nrf52840), plus the **Seeed_GFX2** library installed manually as described below.
+All demos in this page require **esp32 Boards by Espressif (3.3.11)** as described in [Getting Started](/getting_started_1.14_inch_display_esp32s3), plus the **Seeed_GFX2** library installed manually as described below.
 :::
-
-- **Library Manager** — go to **Sketch > Include Library > Manage Libraries...**, search for and install:
-
-<div class="table-center">
-  <table align="center">
-    <tr><th>Library</th><th>Search Keyword</th><th>Author</th><th>Required by</th></tr>
-    <tr><td><strong>Seeed Arduino LSM6DS3</strong></td><td><code>Seeed Arduino LSM6DS3</code></td><td>Seeed Studio</td><td>IMU demos</td></tr>
-  </table>
-</div>
 
 - **Seeed_GFX2 (Manual Installation)** — this library is not available in Library Manager and must be installed manually:
 
@@ -61,15 +50,9 @@ All demos in this page require **Seeed nRF52 Boards (1.1.13)** as described in [
 
 :::tip
 - **Seeed_GFX2** is Seeed Studio's graphics library built on a layered `Board` + `Panel Config` architecture. Each demo initializes the display with a single `display.begin<Board_..., Config_...>()` call — the **Board** template owns the pin map (CS/DC/SCK/MOSI/RST/BL), and the **Panel Config** bakes in the 135×240 resolution, color order, and inversion. No `driver.h` or manual pin setup is needed.
-- On this board the demos use `Board_XIAO_1inch14_LCD<38, 37>` (RST=38, BL=37) with `Config_Seeed_1inch14_LCD_ST7789` (135×240). A few demos define a sketch-local `Config_XIAO_1inch14_LCD_ST7789_BGR` override for the BGR color order.
-- The **IMU** demos use the **Seeed Arduino LSM6DS3** library (installed above).
+- On this board the demos use `Board_XIAO_1inch14_LCD<13, 12>` (RST=13, BL=12) with `Config_Seeed_1inch14_LCD_ST7789` (135×240). A few demos define a sketch-local `Config_XIAO_1inch14_LCD_ST7789_BGR` override for the BGR color order.
+- The **IMU** is read directly over I2C (`Wire`) in these demos — no external IMU library is needed. The **PDM microphone** and **I2S output** use the ESP-IDF 5 drivers (`driver/i2s_pdm.h`, `driver/i2s_std.h`) and `LittleFS`, all included with the esp32 board package.
 - The 1.14'' IPS Display has **no touch controller, no SD card slot**, so no touch or SD libraries are needed.
-:::
-
-:::note
-The **PDM**, **Adafruit TinyUSB**, **Adafruit LittleFS**, and **InternalFileSystem** libraries used by the **Flash Recorder** tutorial are bundled with **Seeed nRF52 Boards 1.1.13** — do not install separate versions from the Library Manager.
-
-The recording is stored in the nRF52840's **internal Flash filesystem**. This display has no SD card slot, and the tutorial does not use SdFat.
 :::
 
 ## Getting the Demo Code
@@ -79,7 +62,7 @@ Every demo on this page lives in the [Display-Gadgets](https://github.com/Seeed-
 **Option A — Download the repository as a ZIP (recommended):**
 
 1. Open [github.com/Seeed-Projects/Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets) and click **Code > Download ZIP**, then extract the archive anywhere convenient.
-2. Navigate into `code_GFX2/Function/` and open the folder shown in each demo's **Code location** line. For example, the GraphicTest demo for this board lives in `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_graphictest/`.
+2. Navigate into `code_GFX2/Function/` and open the folder shown in each demo's **Code location** line. For example, the GraphicTest demo for this board lives in `code_GFX2/Function/114_ESP32/xiao_esp32s3_114_graphictest/`.
 3. **Double-click the `.ino` file** to open it in the Arduino IDE.
 
 **Option B — git clone:**
@@ -94,10 +77,10 @@ Then open the demo's `.ino` file from the cloned `code_GFX2/Function/...` folder
 
 This demo runs a full graphics benchmark on the 1.14-inch ST7789 IPS panel (135×240), covering color bars, lines, rectangles, circles, triangles, rounded rectangles, text, and a pixel gradient. Use it to verify that the screen is wired correctly and that all draw calls work as expected.
 
-**Code location:** `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_graphictest/`
+**Code location:** `code_GFX2/Function/114_ESP32/xiao_esp32s3_114_graphictest/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_graphictest" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_ESP32/xiao_esp32s3_114_graphictest" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
@@ -110,53 +93,58 @@ The sketch initializes the ST7789 IPS panel via **Seeed_GFX2**, then runs throug
 The display is initialized with a single template call:
 
 ```cpp
-display.begin<Board_XIAO_1inch14_LCD<38, 37>,
+display.begin<Board_XIAO_1inch14_LCD<13, 12>,
               Config_Seeed_1inch14_LCD_ST7789>();
 ```
 
-The **Board** template owns the pin map — CS=D2, DC=D3, SCK=D8, MOSI=D10 — and its `<RST, BL>` template parameters take bare GPIO numbers, so `<38, 37>` sets RST=GPIO38 and BL=GPIO37. The **Panel Config** bakes in the 135×240 resolution, color order, and inversion (`invert = true`), so no `driver.h` or manual `invertDisplay()` call is needed.
+The **Board** template owns the pin map — CS=D2, DC=D3, SCK=D8, MOSI=D10 — and its `<RST, BL>` template parameters take bare GPIO numbers, so `<13, 12>` sets RST=GPIO13 (D17) and BL=GPIO12 (D18). The **Panel Config** bakes in the 135×240 resolution, color order, and inversion (`invert = true`), so no `driver.h` or manual `invertDisplay()` call is needed.
 
 ### Running the Demo
 
-**Step 1.** Open `xiao_nrf52840_114_graphictest.ino` in Arduino IDE.
+**Step 1.** Open `xiao_esp32s3_114_graphictest.ino` in Arduino IDE.
 
-**Step 2.** Select **Tools > Board > Seeed nRF52 Boards > Seeed XIAO nRF52840 Plus** and the correct **Port**.
+**Step 2.** Select **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** and the correct **Port**.
 
 **Step 3.** Click **Upload**.
 
-**Step 4.** Open **Tools > Serial Monitor** (115200 baud). You should see timing output for each test:
+**Step 4.** Open **Tools > Serial Monitor** (115200 baud). You should see the panel size followed by timing output for each test:
 
 ```
+=== XIAO ESP32-S3 Plus 1.14 graphic test ===
 LCD width: 135
 LCD height: 240
-Color bars: 34.18 ms
-Lines: 2599.61 ms
-Fast lines: 57.62 ms
-Rectangles: 44.92 ms
-Filled rectangles: 125.98 ms
-Circles: 291.02 ms
-Triangles: 289.06 ms
-Round rectangles: 95.70 ms
-Text: 1416.02 ms
-Pixel gradient: 4774.42 ms
+Color bars: 96.02 ms
+Lines: 2634.02 ms
+Fast lines: 143.65 ms
+Rectangles: 113.85 ms
+Filled rectangles: 340.06 ms
+Circles: 358.57 ms
+Triangles: 378.17 ms
+Round rectangles: 163.69 ms
+Text: 1458.63 ms
+Pixel gradient: 4670.28 ms
 Graphic test finished.
 ```
 
-On the screen, you will see each test pattern displayed for about one second before the next one starts. When all tests complete, a "Finished" screen appears.
+On the screen, you will see each test pattern displayed for about one second before the next one starts. When all tests complete, a "Graphic / Finished" screen appears with a blue rounded-rectangle border.
 
 ### Expected Result
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_graphictest.gif" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_function_graphictest.gif" style={{width:500, height:'auto'}}/></div>
 
-After the sketch runs through all patterns, the screen shows a "Finished" message. Reset the board to run the test again.
+After the sketch runs through all patterns, the screen shows a "Graphic / Finished" message with "Reset to rerun" below it. Reset the board to run the test again.
 
 ---
 
 ## IMU
 
-The 1.14'' IPS Display features an onboard 6-axis IMU (LSM6DS3) connected via I2C on D4/D5. The motion interrupt line on **D14** supports hardware wake-up and gesture detection.
+The 1.14'' IPS Display features an onboard **LSM6DS3** 6-axis IMU (3-axis accelerometer + 3-axis gyroscope) connected via I2C on D4/D5 at address **0x6A**. The motion interrupt line on **D14** supports hardware wake-up and gesture detection.
 
-Both demos below use the LSM6DS3 at I2C address **0x6A**.
+:::note
+The onboard IMU is the **LSM6DS3** (confirmed from the board schematic, I2C address `0x6A`). The Electronic Quicksand demo probes for a QMI8658-compatible sensor as a defensive fallback. The Raise to Wake demo targets the onboard LSM6DS3 wake-up registers.
+:::
+
+The demos below read the IMU directly over I2C (`Wire`) — no external IMU library is required.
 
 <a id="imu-quicksand"></a>
 
@@ -164,10 +152,10 @@ Both demos below use the LSM6DS3 at I2C address **0x6A**.
 
 This demo turns the screen into an interactive fluid simulation — golden sand particles that flow and settle according to gravity, as measured by the onboard 6-axis IMU. Tilt the board and the sand shifts direction in real time.
 
-**Code location:** `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_electronic_quicksand/`
+**Code location:** `code_GFX2/Function/114_ESP32/xiao_esp32s3_114_electronic_quicksand/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_electronic_quicksand" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_ESP32/xiao_esp32s3_114_electronic_quicksand" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
@@ -177,7 +165,7 @@ This demo turns the screen into an interactive fluid simulation — golden sand 
 
 The simulation uses a **22×40 occupancy grid** overlaid on the 135×240 screen, where each cell is 6×6 pixels. Around **150 particles** are placed in the grid, each with a position, velocity, and a golden color gradient.
 
-The IMU is read via I2C (D4/D5) using the Seeed Arduino LSM6DS3 library at address `0x6A`. Raw acceleration values are low-pass filtered and used to derive a gravity vector. When you tilt the board:
+The IMU is read via I2C (D4/D5). The sketch probes for an IMU at both known addresses — QMI8658 first, then LSM6DS3 — and uses whichever one responds. Raw acceleration values are low-pass filtered and used to derive a gravity vector. When you tilt the board:
 
 1. **Gravity vector updates** — accelerometer data is smoothed with an exponential moving average to avoid jitter.
 2. **Particle velocity** — each particle accelerates in the direction of the gravity vector, with damping and a per-particle mobility factor based on its depth in the flow.
@@ -188,7 +176,7 @@ Particles near the surface flow freely (higher mobility); particles buried deepe
 
 ### Running the Demo
 
-**Step 1.** Open `xiao_nrf52840_114_electronic_quicksand.ino` in Arduino IDE.
+**Step 1.** Open `xiao_esp32s3_114_electronic_quicksand.ino` in Arduino IDE.
 
 **Step 2.** Select the board and port, then click **Upload**.
 
@@ -198,25 +186,25 @@ Particles near the surface flow freely (higher mobility); particles buried deepe
 
 ```
 === Electronic Quicksand 1.14 ===
-imu.begin=0
+[IMU] LSM6-compatible at 0x6A, WHO=0x6A
 ```
 
 ### Expected Result
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_quicksand.gif" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_function_quicksand.gif" style={{width:500, height:'auto'}}/></div>
 
-The golden sand particles flow smoothly as you tilt the board. When held flat, the sand settles at the bottom of the screen. Rotate the board 90 degrees and the sand flows to the new "bottom" within a second.
+The particles flow toward the lower edge as you tilt the board. When the display lies flat, the demo retains the previous gravity direction.
 
 ---
 
 ### Demo 2: Raise to Wake
 
-This demo implements a **screen sleep/wake system** driven by the IMU's built-in motion interrupt on **D14**. The screen automatically turns off (backlight off + nRF52 system ON sleep) after a configurable idle period, and wakes instantly when you pick up or move the device.
+This demo implements a **screen sleep/wake system** driven by the IMU's built-in wake-up interrupt on **D14**. The screen automatically turns off (backlight off + ESP32 light sleep) after 8 seconds of inactivity, and wakes instantly when you pick up or move the device.
 
-**Code location:** `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_wakeup/`
+**Code location:** `code_GFX2/Function/114_ESP32/xiao_esp32s3_114_wakeup/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_wakeup" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_ESP32/xiao_esp32s3_114_wakeup" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
@@ -224,14 +212,16 @@ This demo implements a **screen sleep/wake system** driven by the IMU's built-in
 
 ### How It Works
 
-The demo uses the LSM6DS3's **embedded wake-up event detector** — a hardware feature that monitors accelerometer data internally and asserts the INT1 pin (routed to D14 on this board) when motion exceeds a configurable threshold. This means the MCU does not need to poll the accelerometer continuously.
+The demo uses the LSM6-compatible IMU's **embedded wake-up event detector** — a hardware feature that monitors accelerometer data internally and asserts the INT1 pin (routed to D14 on this board) when motion exceeds a configurable threshold. This means the MCU does not need to poll the accelerometer continuously.
 
-**IMU configuration (LSM6DS3):**
+**IMU configuration (LSM6-compatible):**
 
 <div class="table-center">
   <table align="center">
     <tr><th>Register</th><th>Value</th><th>Purpose</th></tr>
+    <tr><td><code>CTRL3_C</code></td><td><code>0x44</code></td><td>Enable BDU + auto-increment for block reads</td></tr>
     <tr><td><code>CTRL1_XL</code></td><td><code>0x40</code></td><td>Accelerometer @ 104 Hz, ±2g</td></tr>
+    <tr><td><code>CTRL2_G</code></td><td><code>0x40</code></td><td>Gyroscope @ 104 Hz</td></tr>
     <tr><td><code>TAP_CFG</code></td><td><code>0x80</code></td><td>Enable embedded interrupts</td></tr>
     <tr><td><code>WAKE_UP_THS</code></td><td><code>0x05</code></td><td>Wake-up threshold (medium-low sensitivity)</td></tr>
     <tr><td><code>WAKE_UP_DUR</code></td><td><code>0x00</code></td><td>No duration filter (responsive wake)</td></tr>
@@ -241,9 +231,9 @@ The demo uses the LSM6DS3's **embedded wake-up event detector** — a hardware f
 
 **Sleep/wake flow:**
 
-1. **Active state** — screen is on, backlight at full brightness, UI refreshes every 250 ms with real-time IMU data. A countdown timer shows seconds remaining until auto-sleep.
-2. **Auto-sleep** — after the idle timeout, the sketch turns off the backlight, displays a "Sleeping... Pick up device to wake" message, and enters nRF52 System ON sleep (low-power mode with RAM retention). The IMU wake interrupt on D14 was already configured at startup, so motion detection remains active during sleep.
-3. **Wake-up** — when the user picks up the board, the IMU detects motion and asserts D14 HIGH. The nRF52840 exits System ON sleep, restores the backlight, and redraws the UI. The LCD and IMU are **not** re-initialized — System ON sleep retains RAM and peripheral configuration, so both keep the settings applied at startup.
+1. **Active state** — screen is on, backlight at PWM 160. IMU data and battery voltage refresh periodically. A countdown timer shows seconds remaining until auto-sleep.
+2. **Auto-sleep** — after 8 seconds of no activity, the sketch turns off the backlight, displays a "Sleeping... Pick up device to wake" message, configures D14 as a wake-up source via `esp_sleep_enable_gpio_wakeup()`, and enters ESP32 light sleep.
+3. **Wake-up** — when the user picks up the board, the IMU detects motion and asserts D14 HIGH. The ESP32 wakes from light sleep and redraws the UI.
 
 **Manual test buttons:**
 
@@ -257,36 +247,30 @@ The demo uses the LSM6DS3's **embedded wake-up event detector** — a hardware f
 
 ### Running the Demo
 
-**Step 1.** Open `xiao_nrf52840_114_wakeup.ino` in Arduino IDE, select the board and port, and click **Upload**.
+**Step 1.** Open `xiao_esp32s3_114_wakeup.ino` in Arduino IDE, select the board and port, and click **Upload**.
 
-**Step 2.** The screen shows a dashboard with power state, motion data, and a countdown timer. Let the board sit still — it will automatically enter sleep after the idle period.
+**Step 2.** The screen shows a dashboard with power state, motion data, and a countdown timer. Let the board sit still for 8 seconds — it will automatically sleep.
 
 **Step 3.** Pick up the board or shake it gently — the screen wakes immediately.
 
-**Step 4.** Open **Tools > Serial Monitor** (115200 baud) to observe the sleep/wake transitions:
+**Step 4.** Open **Tools > Serial Monitor** (115200 baud) to confirm initialization:
 
 ```
-LCD: 135x240
-[IMU] Seeed LSM6DS3 begin=0
-[IMU] D14 wake interrupt OK
-[BOOT] done. Screen should be on.
-[WAKE] reason=IMU_D14 wakeCount=1 sleptMs=3568 sleepLoops=0
-[SLEEP] screen off, entering System ON sleep
-[SLEEP] loops=1 D14=0 awake=N
-[WAKE] reason=IMU_D14 wakeCount=2 sleptMs=1378 sleepLoops=439
+=== XIAO ESP32-S3 Plus 1.14 IMU Wake Demo ===
+[IMU] LSM6-compatible at 0x6A, WHO=0x6A
 ```
 
 ### Expected Result
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_wakeup.gif" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_function_wakeup.gif" style={{width:500, height:'auto'}}/></div>
 
-The screen displays real-time motion data while awake. After the idle period of stillness, the screen goes dark and the nRF52840 enters low-power sleep. Pick up the device and the screen restores instantly, with the wake counter incremented.
+The screen displays real-time motion data while awake. After 8 seconds of stillness, the screen goes dark and the ESP32-S3 enters light sleep. Pick up the device and the screen restores within a fraction of a second, with the wake counter incremented.
 
 ---
 
 ## Microphone & Speaker
 
-The 1.14'' IPS Display features the same PDM digital microphone as the 1.47" version, connected to the same pins:
+The 1.14'' IPS Display has an onboard **PDM (Pulse Density Modulation) digital microphone** for audio input, plus I2S output pads for driving an external speaker/amplifier. This section shows two demos: a real-time **Voice Bar** visualization of the microphone input (no extra hardware), and a **Flash Recorder** that records audio to onboard Flash and plays it back through an external I2S amplifier.
 
 <div class="table-center">
   <table align="center">
@@ -298,12 +282,12 @@ The 1.14'' IPS Display features the same PDM digital microphone as the 1.47" ver
 
 ### Demo 1: Voice Bar
 
-This demo visualizes the PDM microphone's real-time audio input as a dynamic equalizer-style waveform and a segmented volume bar. Speak, clap, or blow into the onboard microphone and watch the bars react instantly.
+This demo visualizes the PDM microphone's real-time audio input as a dynamic equalizer-style waveform and a segmented volume bar. Speak, clap, or blow into the onboard microphone and watch the bars react instantly — no external hardware is required.
 
-**Code location:** `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_voice_bar/`
+**Code location:** `code_GFX2/Function/114_ESP32/xiao_esp32s3_114_voice_bar/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_voice_bar" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_ESP32/xiao_esp32s3_114_voice_bar" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
@@ -311,14 +295,20 @@ This demo visualizes the PDM microphone's real-time audio input as a dynamic equ
 
 #### How It Works
 
-The sketch uses the nRF52840's PDM peripheral via the `PDM` library (bundled with Seeed nRF52 Boards) at 16 kHz, single channel. The ISR (`onPDMdata`) captures raw PDM samples into a 256-sample ring buffer and computes the peak amplitude.
+The sketch captures the onboard PDM microphone through the ESP32-S3's I2S peripheral configured in **PDM RX mode**, using the ESP-IDF v5 driver API (`driver/i2s_pdm.h`). This requires **esp32 Boards by Espressif 3.x** — the legacy `i2s_config_t` API from core 2.x will not compile.
+
+:::note
+The ESP-IDF v5 API (`i2s_new_channel()` / `i2s_channel_read()`) is different from the nRF52840 version of this demo, which uses the nRF52 `PDM` library. If you are porting the nRF52840 code, you must replace the PDM setup entirely.
+:::
+
+The microphone is sampled at **16 kHz mono** into 256-sample DMA buffers (4 descriptors). In `loop()`, `i2s_channel_read()` fetches a buffer, removes the DC offset, computes the peak amplitude, and down-samples the signal into 27 bins for the waveform visualizer. The PDM clock drive strength is also reduced with `gpio_set_drive_capability()` to cut EMI/coupling noise.
 
 The screen is divided into three zones:
 
 <div class="table-center">
   <table align="center">
     <tr><th>Zone</th><th>Position</th><th>Description</th></tr>
-    <tr><td><strong>Waveform</strong></td><td>Top (y=30–95)</td><td>27-bar equalizer visualizer. Raw samples are down-sampled and drawn as symmetric bars around a center baseline. Waveform color is driven by the same smoothed volume as the volume bar and percentage label — green (&lt;50%), yellow (50–90%), red (&gt;90%).</td></tr>
+    <tr><td><strong>Waveform</strong></td><td>Top (y=30–95)</td><td>27-bar equalizer visualizer. Raw samples are down-sampled and drawn as symmetric bars around a center baseline. Waveform color follows the smoothed volume — green (&lt;50%), yellow (50–90%), red (&gt;90%).</td></tr>
     <tr><td><strong>Percentage</strong></td><td>Middle</td><td>Large numeric volume percentage (0–100%), color-coded green (&lt;50%), yellow (50–90%), red (&gt;90%).</td></tr>
     <tr><td><strong>Volume Bar</strong></td><td>Bottom (y=130–225)</td><td>10-segment bar (green/yellow/red gradient). Updates with smoothed volume from the PDM peak.</td></tr>
   </table>
@@ -326,22 +316,24 @@ The screen is divided into three zones:
 
 **Signal processing:**
 
-1. **PDM ISR** — `onPDMdata()` fires at ~62 Hz (16000 / 256). It reads raw samples, computes the peak magnitude, and down-samples into 27 bins for the waveform visualizer.
-2. **Normalization** — peak values below 10 are treated as silence. Values above 1500 saturate to 100%. In between, linear mapping produces a 0.0–1.0 volume level.
+1. **I2S PDM RX** — `i2s_channel_read()` fetches 256 PDM samples. The sketch removes the DC offset (mean) so the peak reflects actual loudness, then computes the peak magnitude.
+2. **Normalization** — peak values below `VOL_FLOOR` (20) are treated as silence. Values above `VOL_CEIL` (2400) saturate to 100%. In between, linear mapping produces a 0.0–1.0 volume level.
 3. **Exponential smoothing** — the displayed volume is smoothed with a 20% mix factor (`SMOOTH = 0.20`) to avoid jitter. During silence, the volume decays at 6% per frame.
 4. **Differential rendering** — the volume bar and percentage label are only redrawn when the value changes, minimizing SPI traffic.
 
 #### Running the Demo
 
-**Step 1.** Open `xiao_nrf52840_114_voice_bar.ino` in Arduino IDE.
+**Step 1.** Open `xiao_esp32s3_114_voice_bar.ino` in Arduino IDE.
 
-**Step 2.** Select **Tools > Board > Seeed nRF52 Boards > Seeed XIAO nRF52840 Plus** and the correct **Port**.
+**Step 2.** Select **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** and the correct **Port**.
 
 **Step 3.** Click **Upload**.
 
 **Step 4.** Open **Tools > Serial Monitor** (115200 baud). You should see:
 
 ```
+=== Voice Bar | XIAO ESP32-S3 Plus 1.14 ===
+[MIC] PDM RX ready (ESP-IDF v5)
 [MIC] ready
 ```
 
@@ -349,96 +341,101 @@ The screen is divided into three zones:
 
 #### Expected Result
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_voice_bar.gif" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_function_voice_bar.gif" style={{width:500, height:'auto'}}/></div>
 
 When silent, the waveform is flat and the volume bar is empty (0%). Speak into the microphone and the equalizer bars animate while the volume bar fills up from green through yellow to red. The percentage label updates in real time.
 
-### Demo 2: Flash Recorder with I2S Playback
+---
 
-This demo records a short audio clip from the onboard PDM microphone into the nRF52840's **internal Flash filesystem**, then plays it back through an external I2S amplifier and speaker:
+### Demo 2: Flash Recorder
 
-- **USR1** records from the onboard PDM microphone.
-- The recording is **16 kHz, 16-bit, mono**.
-- Each clip is about **0.7 seconds** — 11,200 samples (22,400 bytes of PCM).
-- The clip is saved as **`/REC_RAW.WAV`** in the internal Flash filesystem.
-- **USR2** plays the recording back through an external **MAX98357A** and speaker.
-- This demo has been compiled, flashed, and hardware-verified on the XIAO nRF52840 Plus with **Seeed nRF52 Boards 1.1.13**.
+This demo records 5 seconds of audio from the onboard PDM microphone into onboard Flash memory, then plays it back through an external speaker connected to the I2S output. Press one button to record, another to play.
 
-**Code location:** `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_flash_record/`
+**Code location:** `code_GFX2/Function/114_ESP32/xiao_esp32s3_114_flash_record/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_flash_record" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_ESP32/xiao_esp32s3_114_flash_record" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-#### Hardware Setup
+### Hardware Setup
 
 Playback requires an external **I2S audio amplifier and speaker**. The demo is written for a **MAX98357A** breakout connected to the board's I2S output pads:
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Display Board</th><th>MAX98357A</th></tr>
-    <tr><td>3V3</td><td>VIN</td></tr>
-    <tr><td>GND</td><td>GND</td></tr>
-    <tr><td>D11 / I2S_SD</td><td>DIN</td></tr>
-    <tr><td>D12 / I2S_SCK</td><td>BCLK</td></tr>
-    <tr><td>D13 / I2S_WS</td><td>LRC / WS</td></tr>
+    <tr><th>I2S Pad</th><th>XIAO Pin</th><th>MAX98357A</th></tr>
+    <tr><td>3V3</td><td>3V3</td><td>VIN</td></tr>
+    <tr><td>GND</td><td>GND</td><td>GND</td></tr>
+    <tr><td>I2S_SD</td><td>D11</td><td>DIN</td></tr>
+    <tr><td>I2S_SCK</td><td>D12</td><td>BCLK</td></tr>
+    <tr><td>I2S_WS</td><td>D13</td><td>LRC</td></tr>
   </table>
 </div>
 
-Connect the speaker to the **SPK+** and **SPK-** terminals of the MAX98357A. Do **not** connect one speaker wire to GND — the MAX98357A is a bridge-tied-load (BTL) amplifier, so both speaker terminals must go to the SPK outputs.
+The I2S pads (3V3, GND, D11, D12, D13) are exposed on the bottom expansion pad group of the display board.
+
+### How It Works
+
+**Recording** — the onboard **PDM (Pulse Density Modulation) digital microphone** is sampled through the ESP32-S3's I2S peripheral configured in PDM RX mode. On ESP-IDF v5 (Arduino core 3.3.11), this uses the new driver API (`driver/i2s_pdm.h`). The microphone is captured at **16 kHz mono** with 4 DMA descriptors of 256 frames each. When you press **USR1**, the sketch samples 5 seconds of audio into a RAM buffer, then writes it to onboard Flash as a WAV file (`/REC_RAW.WAV`) using `LittleFS`.
+
+After the PDM microphone starts, the sketch discards the first **300 ms** of captured data as warm-up data to reduce the startup transient at the beginning of the recording.
+
+If the sketch cannot capture all samples within **7 seconds**, it stops recording and displays **"Mic capture timeout"** instead of remaining blocked in the recording loop.
+
+**Playback** — pressing **USR2** reads the WAV back from Flash and streams it out through the I2S peripheral in standard (Philips) stereo mode on D11/D12/D13. The mono samples are duplicated to both channels with a `0.75×` gain applied to avoid clipping. The amplifier drives a small speaker so you can hear the recording.
+
+**On-screen states:**
+
+<div class="table-center">
+  <table align="center">
+    <tr><th>State</th><th>Description</th></tr>
+    <tr><td><strong>Ready</strong></td><td>"Flash Recorder" title with "USR1: record" and "USR2: play Flash WAV" (or "No saved recording")</td></tr>
+    <tr><td><strong>Warm-up</strong></td><td>"Warming up mic..." with "Please wait" before capture begins</td></tr>
+    <tr><td><strong>Recording</strong></td><td>"Capturing 5 seconds" shown while capturing (no live progress)</td></tr>
+    <tr><td><strong>Error</strong></td><td>"Mic capture timeout" with "Try recording again" when capture exceeds 7 seconds</td></tr>
+    <tr><td><strong>Saved</strong></td><td>"Done — Saved Flash WAV" confirmation, then returns to Ready</td></tr>
+    <tr><td><strong>Playback</strong></td><td>"Playing raw audio" while streaming, then "Finished"</td></tr>
+  </table>
+</div>
+
+### Running the Demo
+
+**Step 1.** Connect a MAX98357A amplifier and speaker to the I2S pads as described above.
+
+**Step 2.** Open `xiao_esp32s3_114_flash_record.ino` in Arduino IDE.
+
+**Step 3.** Select the board: **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** (using esp32 Boards **3.3.11**).
+
+**Step 4.** Select **Tools > Partition Scheme > "Default with spiffs (3MB APP/1.5MB SPIFFS)"**.
+
+**Step 5.** Select the correct **Port**, then click **Upload**.
 
 :::caution
-Disconnect the USB power before wiring the amplifier and speaker.
+The recorder stores the WAV file in `LittleFS`, which uses the **SPIFFS** partition. The board's default partition scheme (`16M Flash (2MB APP/12.5MB FATFS)`) contains no SPIFFS partition, so `LittleFS.begin()` returns `false` and the screen shows "Flash write failed / Check partition". You **must** select the SPIFFS partition scheme above, or recording will not work.
 :::
 
-#### How It Works
+**Step 6.** Press **USR1 (D6)** to record 5 seconds of audio from the onboard microphone. The screen shows "Capturing 5 seconds" while recording.
 
-- The PDM microphone uses **D0 (CLK)** and **D1 (DATA)**.
-- The `PDM` library captures the microphone at **16 kHz mono**.
-- The WAV file consists of a **44-byte header** plus **22,400 bytes of PCM** data.
-- The internal Flash filesystem (InternalFS) is only about **28 KB**, which limits each recording to roughly **0.7 seconds**.
-- Playback uses the nRF52840's **I2S hardware peripheral** in Philips I2S format, **16-bit, stereo** output.
-- The mono samples are duplicated to both the left and right channels.
-- The I2S pins are **D11**, **D12**, and **D13**.
+**Step 7.** Press **USR2 (D7)** to play the recording back through the speaker.
 
-#### Running the Tutorial
-
-**Step 1.** Disconnect the USB power and wire the MAX98357A and speaker as shown above.
-
-**Step 2.** Open `xiao_nrf52840_114_flash_record.ino` in the Arduino IDE.
-
-**Step 3.** Select **Tools > Board > Seeed nRF52 Boards > Seeed XIAO nRF52840 Plus** and the correct **Port**.
-
-**Step 4.** Compile and upload the sketch.
-
-**Step 5.** Press **USR1** and immediately speak into the onboard microphone for about **0.7 seconds**.
-
-:::tip
-Recording starts the moment you press **USR1** — do not wait for the red progress bar to appear. The 0.7-second window is counted from the moment **USR1** is pressed, so speak immediately or you will miss the beginning of your clip.
+:::note
+The recording is stored in onboard Flash (`LittleFS`), so it survives a power cycle — you can record once and play it back later. Recording again overwrites the previous file.
 :::
 
-**Step 6.** Wait for the screen to show **Saved WAV**.
+### Expected Result
 
-**Step 7.** Press **USR2** and the speaker plays back your recording.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_function_flash_record.gif" style={{width:500, height:'auto'}}/></div>
 
-#### Expected Result
-
-- On startup the screen shows **Flash Recorder**.
-- When no recording exists, the screen shows **No recording**.
-- While recording, the screen shows a progress readout.
-- When saving completes, the screen shows **Saved WAV**.
-- Press **USR2** and you hear the recording through the speaker.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_flash_record_i2s.gif" style={{width:500, height:'auto'}}/></div>
+Press USR1 and the screen shows "Capturing 5 seconds". After 5 seconds it confirms the WAV was saved. Press USR2 and the audio plays through the connected speaker while the screen shows the playback status.
 
 ---
 
 ## Grove I2C
 
-The 1.14'' IPS Display features a dedicated **Grove I2C connector** that exposes D4 (SDA) and D5 (SCL) on a standard 4-pin Grove socket (GND / 3V3 / SDA / SCL). Unlike the 1.47" version where D4/D5 are additionally shared with the touch controller, the 1.14" display shares D4/D5 only with the onboard IMU (it has no touch controller).
+The 1.14'' IPS Display features a dedicated **Grove I2C connector** that exposes D4 (SDA) and D5 (SCL) on a standard 4-pin Grove socket (GND / 3V3 / SDA / SCL). D4/D5 are shared internally with the onboard IMU.
 
 <div class="table-center">
   <table align="center">
@@ -458,10 +455,10 @@ D4/D5 are shared between the Grove connector and the onboard IMU. The IMU is at 
 
 This demo reads temperature and humidity from a **Grove SHT31** sensor plugged into the Grove I2C connector and displays the readings on the screen. The sketch talks to the sensor directly over I2C with `Wire.h` — no SHT31 library is needed — and validates each reading with the sensor's CRC.
 
-**Code location:** `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_sht31_temperature_humidity/`
+**Code location:** `code_GFX2/Function/114_ESP32/xiao_esp32s3_114_sht31_temperature_humidity/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_sht31_temperature_humidity" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_ESP32/xiao_esp32s3_114_sht31_temperature_humidity" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
@@ -490,18 +487,18 @@ The sketch reads the SHT31 directly over I2C (`Wire`) at address `0x44`:
 3. **CRC check** — each 16-bit value is verified against its CRC byte; a mismatch is reported as an error (wiring or a damaged/noisy module).
 4. **Conversion** — raw values are converted to temperature (`-45 + 175 × raw / 65535` °C) and relative humidity (`100 × raw / 65535` %).
 
-The display is initialized with `Board_XIAO_1inch14_LCD<38, 37>` and a sketch-local `Config_XIAO_1inch14_LCD_ST7789_BGR` (135×240, BGR color order, inverted) so colors render correctly. The screen shows "SHT31 OK" with the live temperature and humidity, or "SHT31 ERROR" plus an error code if a read fails.
+The display is initialized with `Board_XIAO_1inch14_LCD<13, 12>` and a sketch-local `Config_XIAO_1inch14_LCD_ST7789_BGR` (135×240, BGR color order, inverted) so colors render correctly. The screen shows "SHT31 OK" with the live temperature and humidity, or "SHT31 ERROR" plus an error code if a read fails.
 
 #### Running the Demo
 
-**Step 1.** Open `xiao_nrf52840_114_sht31_temperature_humidity.ino` in Arduino IDE.
+**Step 1.** Open `xiao_esp32s3_114_sht31_temperature_humidity.ino` in Arduino IDE.
 
-**Step 2.** Select **Tools > Board > Seeed nRF52 Boards > Seeed XIAO nRF52840 Plus** and the correct **Port**, then click **Upload**.
+**Step 2.** Select **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** and the correct **Port**, then click **Upload**.
 
 **Step 3.** Open **Tools > Serial Monitor** (115200 baud). You should see:
 
 ```
-=== XIAO nRF52840 1.14 SHT31 Temperature/Humidity ===
+=== XIAO ESP32-S3 1.14 SHT31 Temperature/Humidity ===
 [PIN] SDA=D4 SCL=D5 address=0x44
 [I2C] scan start
 [I2C] found 0x44
@@ -513,7 +510,7 @@ The screen shows "SHT31 OK" with the temperature and humidity, updating once per
 
 #### Expected Result
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_sht31.gif" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_function_sht31.gif" style={{width:500, height:'auto'}}/></div>
 
 The temperature and humidity update once per second on the screen. Breathe on the sensor and the humidity reading rises.
 
@@ -521,7 +518,7 @@ The temperature and humidity update once per second on the screen. Breathe on th
 
 ## User Buttons
 
-The 1.14'' IPS Display has **three physical push buttons** connected to the XIAO nRF52840 Plus. All three buttons have external **1 KΩ pull-up resistors** on the board, so you can configure the corresponding pins as `INPUT` (no internal pull-up needed):
+The 1.14'' IPS Display has **three physical push buttons** connected to the XIAO ESP32-S3 Plus:
 
 <div class="table-center">
   <table align="center">
@@ -532,9 +529,9 @@ The 1.14'' IPS Display has **three physical push buttons** connected to the XIAO
   </table>
 </div>
 
-### Reading Buttons
+### Reading a Button
 
-With the external 1 KΩ pull-up already on the board, you can read the buttons with a simple direct read:
+The three buttons have external 1 KΩ pull-up resistors on the board, and the demo code additionally enables the XIAO's internal pull-ups (`INPUT_PULLUP`). A simple polled read with debounce looks like this:
 
 ```cpp
 const int USR1 = D6;
@@ -542,10 +539,9 @@ const int USR2 = D7;
 const int USR3 = D19;
 
 void setup() {
-  // External 1K pull-up on the board — no internal pull-up needed.
-  pinMode(USR1, INPUT);
-  pinMode(USR2, INPUT);
-  pinMode(USR3, INPUT);
+  pinMode(USR1, INPUT_PULLUP);
+  pinMode(USR2, INPUT_PULLUP);
+  pinMode(USR3, INPUT_PULLUP);
   Serial.begin(115200);
 }
 
@@ -567,7 +563,7 @@ void loop() {
 
 ### Debounce with Interrupts
 
-For responsive, debounced button handling without blocking the main loop, you can use pin-change interrupts:
+For responsive, debounced button handling, you can use GPIO interrupts with a short settling delay:
 
 ```cpp
 volatile bool btn1Flag = false;
@@ -579,9 +575,9 @@ void btn2Isr() { btn2Flag = true; }
 void btn3Isr() { btn3Flag = true; }
 
 void setup() {
-  pinMode(D6, INPUT);
-  pinMode(D7, INPUT);
-  pinMode(D19, INPUT);
+  pinMode(D6, INPUT_PULLUP);
+  pinMode(D7, INPUT_PULLUP);
+  pinMode(D19, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(D6), btn1Isr, FALLING);
   attachInterrupt(digitalPinToInterrupt(D7), btn2Isr, FALLING);
   attachInterrupt(digitalPinToInterrupt(D19), btn3Isr, FALLING);
@@ -619,7 +615,7 @@ In the preloaded factory firmware, the buttons are mapped as follows (you can ov
 <div class="table-center">
   <table align="center">
     <tr><th>Button</th><th>Pin</th><th>Action</th></tr>
-    <tr><td><strong>USR1</strong></td><td>D6</td><td>Cycle screen brightness (100% → 75% → 50% → 25% → 100%)</td></tr>
+    <tr><td><strong>USR1</strong></td><td>D6</td><td>Cycle screen brightness (100% → 75% → 50% → 25% → 0% → 100%)</td></tr>
     <tr><td><strong>USR2</strong></td><td>D7</td><td>Toggle screen off / restore to last brightness</td></tr>
     <tr><td><strong>USR3</strong></td><td>D19</td><td>Toggle header title between "Hello,XIAO!" and "Seeed"</td></tr>
   </table>
@@ -629,16 +625,14 @@ The button breakout pads (labeled U1, U2, and U3 on the board) mirror D6, D7, an
 
 ---
 
-## Battery Status
+## Battery Voltage Detection
 
-This demo shows the battery status — a battery icon with charge level and charging state — on the 1.14'' IPS Display. It detects whether a LiPo battery is physically connected and shows one of three states: **USB PWR** (no battery), **percentage** (battery only), or **charging** (USB + battery).
+This demo reads the onboard battery voltage divider on **D16** and shows two live yellow readings on the 1.14'' IPS Display: the raw D16 divider voltage and the calculated battery voltage. It displays voltage readings only; it does not estimate battery percentage or report charging status.
 
-The 1.14'' IPS Display includes an onboard battery voltage measurement circuit connected to the XIAO nRF52840 Plus.
-
-**Code location:** `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_battery_status/`
+**Code location:** `code_GFX2/Function/114_ESP32/xiao_esp32s3_114_battery_status/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_battery_status" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/114_ESP32/xiao_esp32s3_114_battery_status" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
@@ -646,83 +640,66 @@ The 1.14'' IPS Display includes an onboard battery voltage measurement circuit c
 
 ### How It Works
 
-**Display:**
-
-The screen is driven by **Seeed_GFX2** with `Board_XIAO_1inch14_LCD<38, 37>` and a BGR override of `Config_Seeed_1inch14_LCD_ST7789` (135×240, BGR, rotation 2) over 10 MHz hardware SPI.
-
 **Battery circuit:**
 
-The nRF52840 Plus uses **three GPIO pins** to form a complete battery monitoring system:
+The ESP32-S3 Plus reads the LiPo battery voltage through an onboard voltage divider connected to **D16**:
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Signal</th><th>nRF52840 Pin</th><th>Function</th></tr>
-    <tr><td><code>READ_BAT</code></td><td><strong>P0.14</strong></td><td>Battery voltage divider enable. Active-low — set LOW to enable the divider, then release to HIGH (high-impedance) to save power.</td></tr>
-    <tr><td><code>VBAT_ADC</code></td><td><strong>PIN_VBAT</strong> (AIN7 / P0.31)</td><td>Analog input reading the divided battery voltage.</td></tr>
-    <tr><td><code>CHG</code></td><td><strong>P0.17</strong></td><td>Charging status indicator. Active-low — reads LOW when a charger is connected and the battery is charging.</td></tr>
+    <tr><th>Signal</th><th>ESP32-S3 Pin</th><th>Function</th></tr>
+    <tr><td><code>BAT_ADC</code></td><td><strong>D16</strong></td><td>Analog input reading the divided battery voltage. Internally connected to a voltage divider circuit (316K / 160K). <strong>Do not use this pin externally.</strong></td></tr>
   </table>
 </div>
 
-**Detection:**
+**Voltage divider ratio:** R13 = 316 kΩ, R14 = 160 kΩ → **Divider ratio = (316 + 160) / 160 ≈ 2.975**
 
-Under USB-C, a static VBAT voltage cannot tell whether a battery is present — the charger's BAT node can look like a real Li-ion cell even with no battery attached. So the demo first learns a **USB-only baseline**, then confirms battery insertion only after a sustained downward VBAT shift, and confirms removal after a noisy/jumped reading combined with `~CHG` going HIGH. This mirrors the factory Dashboard's detection logic.
+**Reading:**
 
-**Icon states:**
-
-- **No battery** — grey outline battery with a red cross, labelled **USB PWR**.
-- **Battery present** — white outline battery with a coloured fill (green / yellow / red by percentage), labelled with the **percentage** and **voltage**.
-- **Charging** — cyan fill with a lightning-bolt icon, labelled with the percentage and voltage.
+The sketch initializes the display with `Board_XIAO_1inch14_LCD<13, 12>` and a sketch-local `Config_XIAO_1inch14_LCD_ST7789_BGR` (135×240, BGR, invert = true), then samples **D16** twelve times (700 µs apart) using `analogReadMilliVolts()` at 12-bit resolution with 11 dB attenuation. It averages the samples into the raw divider voltage, multiplies by the divider ratio to get the battery voltage (`Calc = D16 × 2.975`), and draws both as two centered yellow lines. The screen refreshes only when either value changes by a meaningful amount (D16 ≥ 0.02 V or Calc ≥ 0.05 V).
 
 :::note
-The `~CHG` pin is read through the nRF52840's **raw GPIO registers** (`nrf_gpio_cfg_input()` and `NRF_P0->IN`) instead of `digitalRead()`. In the Arduino API, pin numbers follow the board package's mapping, where `digitalRead(17)` actually reads **P0.07** (the 6D IMU's I2C data line) rather than P0.17. The constants `14` and `17` here are **raw Nordic P0.x pin numbers** (P0.14 and P0.17), which is exactly what the register calls expect.
-:::
-
-:::note
-The demo uses the factory-calibrated **499 kΩ** low-side resistor (divider ratio ≈ 3.004), not the 510 kΩ nominal value. The divider is built into the XIAO nRF52840 Plus module itself, not the display board. The P0.14 enable pin is **active-low**: drive it LOW to enable the divider, then release it to high-impedance (INPUT) to minimize quiescent current drain when the battery is not being measured.
+No charging-status signal is connected to an ESP32-S3 GPIO. This demo displays voltage readings only; it does not detect battery presence or charging status, or estimate battery percentage.
 :::
 
 ### Running the Demo
 
-**Step 1.** Open `xiao_nrf52840_114_battery_status.ino` in Arduino IDE.
+**Step 1.** Open `xiao_esp32s3_114_battery_status.ino` in Arduino IDE.
 
-**Step 2.** Select **Tools > Board > Seeed nRF52 Boards > Seeed XIAO nRF52840 Plus** and the correct **Port**.
+**Step 2.** Select **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** and the correct **Port**.
 
 **Step 3.** Click **Upload**.
 
-**Step 4.** Observe the screen — it shows the battery icon with the current state. Plug or unplug a LiPo battery (or the USB-C cable) to watch the icon switch between the three states.
+**Step 4.** Observe the screen — it shows two yellow lines: the raw D16 divider voltage and the calculated battery voltage. Connect or disconnect a LiPo battery (or the USB-C cable) to watch the values update.
 
 ### Expected Result
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_battery_status_state1.jpg" style={{width:300, height:'auto'}}/><br/><strong>USB PWR</strong> (no battery)</div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_battery_status_state2.jpg" style={{width:300, height:'auto'}}/><br/><strong>Percentage</strong> (battery only)</div></td>
-    </tr>
-    <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_battery_status_state3.jpg" style={{width:300, height:'auto'}}/><br/><strong>Charging</strong> (USB + battery)</div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_battery_status_back.jpg" style={{width:300, height:'auto'}}/><br/><strong>Battery connector</strong> (back)</div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_function_battery_status_display.jpg" style={{width:300, height:'auto'}}/><br/><strong>Voltage reading</strong> (D16 + Calc)</div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_function_battery_status_back.jpg" style={{width:300, height:'auto'}}/><br/><strong>Battery connector</strong> (back)</div></td>
     </tr>
   </table>
 </div>
 
-Without a battery, the screen shows a grey battery with a red cross and the label **USB PWR**. Insert a LiPo battery and the icon switches to a coloured fill with the percentage and voltage. Plug in USB-C while a battery is present and the fill turns cyan with a lightning bolt, indicating charging.
+The screen shows the raw D16 divider voltage on the top line and the calculated battery voltage (`Calc`) on the bottom line. With a LiPo battery connected, `Calc` approximates the battery terminal voltage. A reading can also appear under USB power alone, so `Calc` cannot by itself confirm whether a battery is attached.
 
-The demo also prints a diagnostic line to the Serial Monitor every 500 ms, for example:
+The demo also prints a diagnostic line to the Serial Monitor every second, for example:
 
 ```
-VBAT 3.87V  charging  85  spread=5  usb=ON  base=4.140  baseValid=Y  state=PRESENT  filter=STABLE  removeCount=0
+D16 1.39V | Calc 4.14V
 ```
+
 ---
 
 ## Resources
 
-- **🗃️[PCB Design Files]** [XIAO 1.14'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
-- **📄[Schematic]** [XIAO 1.14'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
+- **🗃️[PCB Design Files]** [XIAO 1.14'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
+- **📄[Schematic]** [XIAO 1.14'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[3D Model]** [XIAO 1.14'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.14%27%27%20IPS%20Display.step)
 - **📄[Datasheet]** [1.14 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.14%20Inch%20Display%20Datasheet.pdf)
-- **💾[Factory Firmware]** [XIAO 1.14'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
-- **[Demo]** [XIAO Display Board Demo Code](https://github.com/Seeed-Projects/Display-Gadgets) — all Function demos are in the `code_GFX2/Function/114_nRF52840/` directory
+- **💾[Factory Firmware]** [XIAO 1.14'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
+- **[Demo]** [XIAO Display Board Demo Code](https://github.com/Seeed-Projects/Display-Gadgets) — all Function demos are in the `code_GFX2/Function/114_ESP32/` directory
 
 ## Tech Support & Product Discussion
 
