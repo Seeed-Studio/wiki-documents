@@ -2251,6 +2251,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
                 'Sensor/reSpeaker_flex/reSpeaker_flex_ros',
+                'Sensor/reSpeaker_clip/respeaker_clip_rebot_arm',
               ],
             },
             {
