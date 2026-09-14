@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-19 10:59:37 (北京时间)
-// 多语言页面: 2451 个
+// 生成时间: 2026-09-09 17:55:35 (北京时间)
+// 多语言页面: 2490 个
 
 (function() {
   'use strict';
@@ -1234,6 +1234,34 @@
     "ja",
     "pt"
   ],
+  "/ai_robotics_microduck_rl_custom_motion_training": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_microduck_rl_jetson_environment": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_microduck_rl_official_policies": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_microduck_rl_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/ai_robotics_reachy_fleet_dance": [
     "cn",
     "en",
@@ -1675,7 +1703,14 @@
     "ja",
     "pt"
   ],
-  "/build_and_flash_yocto_for_recomputer_super_bk": [
+  "/jetpack_7_2_memory_optimization_deep_dive": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/build_and_flash_yocto_for_seeed_jetson_carrier_boards": [
     "cn",
     "en",
     "es",
@@ -1774,6 +1809,13 @@
     "pt"
   ],
   "/jetson_developtool_supported_devices": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson-product-selection-guide": [
     "cn",
     "en",
     "es",
@@ -3726,6 +3768,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_jetson_vlm_gateway": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_meshtastic_ha_security_system": [
     "cn",
     "en",
@@ -3950,6 +3999,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_visual_wake_stt": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_faqs": [
     "cn",
     "en",
@@ -3965,6 +4021,13 @@
     "pt"
   ],
   "/recamera_pro_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_gpio_guide": [
     "cn",
     "en",
     "es",
@@ -4055,7 +4118,21 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_debian": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_development_cpp_skill": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_rknn_model_conversion": [
     "cn",
     "en",
     "es",
@@ -4250,6 +4327,55 @@
     "pt"
   ],
   "/R1000_default_username_password": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_2_mics_pi_hat_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_lite_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3000_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_faq": [
     "cn",
     "en",
     "es",
@@ -4781,6 +4907,20 @@
     "ja",
     "pt"
   ],
+  "/meshcore_source_code_pratical_tutorial_meshtracker_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_meshtracker_x1_meshcore": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_node_map_x1": [
     "cn",
     "en",
@@ -4795,21 +4935,7 @@
     "ja",
     "pt"
   ],
-  "/meshcore_source_code_pratical_tutorial_meshtracker_x1": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/x1_get_started_for_meshtastic": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecap_meshtracker_x1_meshcore": [
     "cn",
     "en",
     "es",
@@ -4837,14 +4963,21 @@
     "ja",
     "pt"
   ],
-  "/meshtastic_node_map_solar_node": [
+  "/meshcore_source_code_pratical_tutorial_solar_node": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/meshcore_source_code_pratical_tutorial_solar_node": [
+  "/get_started_with_meshcore_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_solar_node": [
     "cn",
     "en",
     "es",
@@ -4865,13 +4998,6 @@
     "ja",
     "pt"
   ],
-  "/get_started_with_meshcore_solar_node": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/meshtastic_solar_node": [
     "cn",
     "en",
@@ -4886,20 +5012,6 @@
     "ja",
     "pt"
   ],
-  "/meshtastic_node_map_t1000_e": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/meshtastic_source_code_practical_tutorial_t1000_e": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/meshcore_source_code_pratical_tutorial_t1000_e": [
     "cn",
     "en",
@@ -4908,6 +5020,20 @@
     "pt"
   ],
   "/sensecap_t1000_e_meshcore": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_t1000_e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_source_code_practical_tutorial_t1000_e": [
     "cn",
     "en",
     "es",
@@ -4942,7 +5068,7 @@
     "ja",
     "pt"
   ],
-  "/wio_tracker_l1_3d_enclosure": [
+  "/wio_tracker_l1_3d_enclosure_meshcore": [
     "cn",
     "en",
     "es",
@@ -4950,6 +5076,27 @@
     "pt"
   ],
   "/meshcore_node_map_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_started_with_other_mesh_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_tracker_l1_3d_enclosure": [
     "cn",
     "en",
     "es",
@@ -4970,13 +5117,6 @@
     "ja",
     "pt"
   ],
-  "/meshcore_source_code_pratical_tutorial_l1": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/get_started_with_meshtastic_wio_tracker_l1": [
     "cn",
     "en",
@@ -4984,14 +5124,56 @@
     "ja",
     "pt"
   ],
-  "/get_started_with_other_mesh_firmware": [
+  "/wio_tracker_l1_node": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/wio_tracker_l1_node": [
+  "/meshtastic_wio_tracker_l2_intro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/l2_mui": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/l2_sd_card": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_l2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_monitor_l2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/set_up_mqtt_gateway_l2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_started_with_meshtastic_wio_tracker_l2": [
     "cn",
     "en",
     "es",
@@ -6553,6 +6735,13 @@
     "pt"
   ],
   "/rebot_arm_b601_dm_web_simulator_developer_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wrc_demo_tutorial": [
     "cn",
     "en",
     "es",
@@ -11149,6 +11338,48 @@
     "ja",
     "pt"
   ],
+  "/function_0.96_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_0.96_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_1.14_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_1.14_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_1.47_inch_touch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_1.47_inch_touch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/1-47inch_lcd_spi_display": [
     "cn",
     "en",
@@ -11730,6 +11961,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_clip_ai_chat_system_architecture": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_clip_customization_at_command": [
     "cn",
     "en",
@@ -11766,6 +12004,13 @@
     "pt"
   ],
   "/respeaker_clip_python_build_app_with_memory": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_rtc_streaming": [
     "cn",
     "en",
     "es",
@@ -12101,6 +12346,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_xvf_3800_i2c_list": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
     "cn",
     "en",
@@ -12423,7 +12675,7 @@
     "ja",
     "pt"
   ],
-  "/xiao_esp32c5_buletooth_usage": [
+  "/xiao_esp32c5_bluetooth_usage": [
     "cn",
     "en",
     "es",
@@ -13970,6 +14222,20 @@
     "ja",
     "pt"
   ],
+  "/get_started_with_sensecap_combo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_combo_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger": [
     "cn",
     "en",
@@ -14167,6 +14433,13 @@
     "pt"
   ],
   "/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_s1000_v2_co2_calibration": [
     "cn",
     "en",
     "es",

@@ -1,6 +1,6 @@
 ---
-description: Guia completo de ESPHome / Home Assistant para o Kit DIY TRMNL 7.5" (OG) - gravar firmware ESPHome, criar dashboards em YAML e integrar com o Home Assistant.
-title: Livro de Receitas ESPHome
+description: Cookbook completo de ESPHome / Home Assistant para o Kit DIY TRMNL 7.5" (OG) - gravar firmware ESPHome, criar dashboards em YAML e integrar com o Home Assistant.
+title: Cookbook ESPHome
 keywords:
   - display ePaper
   - TRMNL
@@ -22,10 +22,10 @@ url: https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Livro de Receitas ESPHome: TRMNL 7.5" (OG) Kit DIY
+# Cookbook ESPHome: TRMNL 7.5" (OG) Kit DIY
 
 :::tip Leia primeiro o guia principal do ESPHome
-Esta página é o **livro de receitas ESPHome específico para o Kit DIY TRMNL**. O boilerplate compartilhado — escolher um método de gravação, o esqueleto YAML genérico, conexão ao Home Assistant — está em **[Work with ESPHome](/pt-br/epaper_work_with_esphome)**. Dê uma olhada nele primeiro se você é novo em ESPHome no ePaper da Seeed. Procurando em vez disso pelo fluxo de trabalho do **dashboard em nuvem TRMNL** (sem YAML, baseado em plug-ins)? Veja [Work with TRMNL](/pt-br/reterminal_e10xx_trmnl).
+Esta página é o **cookbook ESPHome específico para o Kit DIY TRMNL**. O boilerplate compartilhado — escolher um método de gravação, o esqueleto YAML genérico, conexão ao Home Assistant — está em **[Work with ESPHome](/pt-br/epaper_work_with_esphome)**. Dê uma olhada nele primeiro se você é novo em ESPHome no ePaper da Seeed. Procurando em vez disso pelo fluxo de trabalho do **dashboard em nuvem TRMNL** (sem YAML, baseado em plug-ins)? Veja [Work with TRMNL](/pt-br/reterminal_e10xx_trmnl).
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/byod_main.png" style={{width:900, height:'auto'}}/></div>

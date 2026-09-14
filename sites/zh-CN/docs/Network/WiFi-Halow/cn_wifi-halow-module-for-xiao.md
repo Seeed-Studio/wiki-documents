@@ -1,6 +1,6 @@
 ---
-description: XIAO ESP32S3 with Wio-WM6108 Wi-Fi HaLow Module Tutorial
-title: XIAO Wi-Fi HaLow 模块入门指南
+description: XIAO ESP32S3 搭配 Wio-WM6108 Wi-Fi HaLow 模组教程
+title: XIAO Wi-Fi HaLow 模组快速上手
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/20.webp
 slug: /getting_started_with_wifi_halow_module_for_xiao
 sku: 109100041
@@ -8,115 +8,127 @@ sidebar_class_name: hidden
 last_update:
   date: 02/12/2025
   author: Citric
-createdAt: '2025-08-07'
+createdAt: '2025-02-13'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_wifi_halow_module_for_xiao/
 ---
 
 
-# XIAO Wi-Fi HaLow 模块入门指南
+# XIAO Wi-Fi HaLow 模组快速上手
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/20.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-HaLow-Module-for-XIAO-p-6395.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
-## 简介
+## 介绍
 
-本教程将指导您设置和使用 Wio-WM6108 Wi-Fi HaLow 模块与 XIAO ESP32S3 来构建 Wi-Fi HaLow 客户端。Wi-Fi HaLow（IEEE 802.11ah）专为长距离、低功耗物联网应用而设计，工作在 1 GHz 以下频段。我们将介绍硬件设置、软件配置，并演示如何为您的物联网项目建立 Wi-Fi HaLow 连接。
+本教程将指导你使用 Wio-WM6108 Wi-Fi HaLow 模组与 XIAO ESP32S3 搭建一个 Wi-Fi HaLow 客户端。Wi-Fi HaLow（IEEE 802.11ah）专为远距离、低功耗的物联网应用设计，工作在 Sub-1 GHz 频段。我们将依次完成硬件搭建、软件配置，并演示如何为你的物联网项目建立 Wi-Fi HaLow 连接。
 
 ### 主要特性
 
-- 长距离 Wi-Fi 连接，视距可达 1 公里
+- 最远可达 1km 视距的长距离 Wi-Fi 连接
 - 低功耗，非常适合物联网设备
-- 1 GHz 以下频段工作，具有更好的墙体和障碍物穿透能力
+- Sub-1 GHz 工作频段，可更好地穿透墙体和障碍物
 - 兼容 XIAO ESP32S3 开发板
-- 易于遵循的设置和配置过程
+- 简单易懂的搭建与配置流程
 
-## 硬件概述
+## 硬件概览
 
-下表概述了 Wio-WM6108 Wi-Fi HaLow 模块的主要规格：
+下表列出了 Wio-WM6108 Wi-Fi HaLow 模组的关键规格：
 
-| 特性 | 值 | 单位 |
+| 特性 | 数值 | 单位 |
 |:-------------:|:-----:|:----:|
-| 工作电压 | 3.3 | V |
+| 工作电压 | 3.3（数字）/ 5.0（射频前端）| V |
 | 工作电流 | TBD | mA |
 | Wi-Fi 协议 | IEEE 802.11ah | - |
-| 频段 | 1 GHz 以下 | - |
-| 范围 | 最高 1 | km |
+| 频段 | Sub-1 GHz | - |
+| 通信距离 | 最远 1 | km |
 | 接口 | SPI | - |
 | 尺寸 | TBD | mm |
 
+:::caution 同时需要 3.3/5.0V 电源供电
+该板卡需要**两个**独立的电源输入：
+- **3.3V 焊盘**为模组的数字电源轨供电。
+- **5.0V 焊盘**通过独立电源轨为射频前端（发射功率放大器）供电。
+
+当模组插在 XIAO 扩展板上时，这两路电源会通过扩展连接器自动提供。
+
+但是，**当通过焊盘接口将该板连接到主机系统（例如通过 SPI 连接到 Raspberry Pi）时，你必须同时连接 5V、3.3V 和 GND。**
+
+如果只连接 3.3V，模组仍然可以加载固件并正常接收，但**无法以额定功率进行发射。**
+:::
+
 ## 什么是 Wi-Fi HaLow？
 
-Wi-Fi HaLow 是基于 IEEE 802.11ah 标准的无线网络协议，专为物联网（IoT）应用而设计。工作在 1 GHz 以下频段（通常为 900 MHz），Wi-Fi HaLow 相比传统 Wi-Fi 具有几个显著优势：
+Wi-Fi HaLow 是基于 IEEE 802.11ah 标准的无线网络协议，专门为物联网（IoT）应用设计。它工作在 Sub-1 GHz 频段（通常为 900 MHz），相较于传统 Wi-Fi，Wi-Fi HaLow 具有以下显著优势：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/Wi-Fi_HaLow_frequency_band_graphic.png" style={{width:800, height:'auto'}}/></div>
 
-1. **扩展范围**：Wi-Fi HaLow 在视距条件下可达到 1 公里的距离，远超传统 Wi-Fi 的范围。
+1. **更长的传输距离**：在视距条件下，Wi-Fi HaLow 的传输距离可达 1 公里，远超传统 Wi-Fi 的覆盖范围。
 
-2. **改善穿透性**：较低频率的信号能更好地穿透墙体和其他障碍物，使其非常适合具有挑战性的环境。
+2. **更强的穿透能力**：较低的工作频率使信号更容易穿透墙体和其他障碍物，非常适合复杂环境。
 
-3. **低功耗**：专为物联网设备设计，Wi-Fi HaLow 可使连接设备实现数年的电池寿命。
+3. **低功耗**：以物联网设备为设计初衷，Wi-Fi HaLow 能够让连接设备实现多年电池续航。
 
-4. **可扩展性**：支持数千台设备连接到单个接入点，非常适合大规模物联网部署。
+4. **高可扩展性**：支持在单个接入点下连接数千台设备，非常适合大规模物联网部署。
 
-5. **安全性**：继承了 Wi-Fi 系列的强大安全功能，包括 WPA3 加密。
+5. **安全性**：继承了 Wi-Fi 家族强大的安全特性，包括 WPA3 加密。
 
-### 为什么 Wi-Fi HaLow 很重要
+### Wi-Fi HaLow 的重要性
 
-Wi-Fi HaLow 满足了物联网应用日益增长的需求，这些应用需要长距离连接、低功耗以及同时处理大量设备的能力。它弥合了传统 Wi-Fi 和 LPWAN 技术之间的差距，提供：
+Wi-Fi HaLow 满足了物联网应用在远距离连接、低功耗以及同时连接大量设备方面日益增长的需求。它弥合了传统 Wi-Fi 与 LPWAN 技术之间的差距，提供了如下应用场景：
 
 - **工业物联网**：在工厂、仓库和工业环境中实现可靠连接。
-- **智慧农业**：为传感器网络提供大型农业区域的覆盖。
-- **智慧城市**：支持城市环境中连接设备的广泛网络。
-- **资产跟踪**：允许对有价值的资产和设备进行长距离跟踪。
+- **智慧农业**：为大面积农田中的传感器网络提供覆盖。
+- **智慧城市**：支持城市环境中大规模的连接设备网络。
+- **资产追踪**：实现对高价值资产和设备的远距离追踪。
 
-通过将 Wi-Fi 的熟悉性与低功耗、长距离连接的优势相结合，Wi-Fi HaLow 有望在各行业物联网应用的扩展中发挥关键作用。
+通过将人们熟悉的 Wi-Fi 生态与低功耗、长距离连接的优势相结合，Wi-Fi HaLow 有望在各行各业的物联网应用扩展中发挥关键作用。
 
 ### Wi-Fi HaLow 系统架构
 
-典型的 Wi-Fi HaLow 网络由几个关键组件组成，它们协同工作以实现长距离、低功耗的物联网连接：
+一个典型的 Wi-Fi HaLow 网络由若干关键组件构成，它们协同工作以实现远距离、低功耗的物联网连接：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/wifi-halow-architecture.png" style={{width:800, height:'auto'}}/></div>
 
-1. **接入点（AP）**：Wi-Fi HaLow 网络的中央枢纽，负责管理连接并在设备和互联网之间路由数据。
+1. **接入点（AP）**：Wi-Fi HaLow 网络的中心节点，负责管理连接并在设备与互联网之间转发数据。
 
-2. **站点（STA）**：连接到接入点的客户端设备。这些可以是传感器、执行器或其他物联网设备。
+2. **站点（STA）**：连接到接入点的客户端设备，可以是传感器、执行器或其他物联网设备。
 
-3. **网关**：充当 Wi-Fi HaLow 网络与其他网络（如以太网或蜂窝网络）之间的桥梁。
+3. **网关**：在 Wi-Fi HaLow 网络与其他网络（如以太网或蜂窝网络）之间充当桥梁。
 
-在本教程中，我们将把 XIAO ESP32S3 配置为连接到 Wi-Fi HaLow 接入点的站点（STA）客户端。XIAO 将使用 WM6108 模块来建立和维护 HaLow 连接。
+在本教程中，我们将把 XIAO ESP32S3 配置为连接到 Wi-Fi HaLow 接入点的站点（STA）客户端。XIAO 将通过 WM6108 模组建立并维持 HaLow 连接。
 
 ## MM-IoT-SDK 框架
 
-WM6108 模块使用 [MorseMicro 的 MM-IoT-SDK](https://github.com/MorseMicro/mm-iot-esp32)，它提供：
+WM6108 模组使用了 [MorseMicro 的 MM-IoT-SDK](https://github.com/MorseMicro/mm-iot-esp32)，它提供：
 
-- **多协议支持**：实现与各种物联网协议的无缝集成
+- **多协议支持**：可与多种物联网协议无缝集成
 - **低功耗管理**：为电池供电设备优化功耗
-- **安全功能**：内置加密和身份验证机制
-- **简易配置**：简化的网络设置和管理 API
+- **安全特性**：内置加密与认证机制
+- **简易配置**：提供简化的 API 用于网络配置与管理
 
-MM-IoT-SDK 架构由几个层组成：
+MM-IoT-SDK 的架构由多个层次组成：
 
 1. **硬件抽象层（HAL）**：为不同硬件平台提供统一接口
-2. **网络栈**：实现 Wi-Fi HaLow 协议栈
+2. **网络协议栈**：实现 Wi-Fi HaLow 协议栈
 3. **应用层**：为应用开发和设备管理提供 API
 
-该框架允许开发人员快速实现 Wi-Fi HaLow 功能，同时保持自定义应用的灵活性。
+该框架使开发者能够在保持应用灵活性的同时，快速实现 Wi-Fi HaLow 功能。
 
 ## 所需材料
 
-以下是运行本教程所需的材料。
+以下是完成本教程所需的材料。
 
 <div class="table-center">
     <table align="center">
         <tr>
             <th>XIAO ESP32S3 Sense</th>
-            <th>Wio-WM6108 Wi-Fi HaLow Module for XIAO</th>
+            <th>Wio-WM6108 Wi-Fi HaLow 模组（适用于 XIAO）</th>
         </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -125,12 +137,12 @@ MM-IoT-SDK 架构由几个层组成：
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-HaLow-Module-for-XIAO-p-6395.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
@@ -138,10 +150,10 @@ MM-IoT-SDK 架构由几个层组成：
 </div>
 
 :::note
-本教程仅适用于 XIAO ESP32-S3 系列。我们将在本教程中以 XIAO ESP32S3 Sense 为例。
+本教程仅适用于 XIAO ESP32-S3 系列。我们将在本教程中以 XIAO ESP32S3 Sense 为例进行说明。
 :::
 
-除了上述内容外，您可能还需要准备适合 WiFi-Halow 使用的额外天线。以下是经过验证的推荐天线型号。
+除了上述材料外，你可能还需要准备适用于 WiFi-Halow 的额外天线。以下是已经验证并推荐的天线型号。
 
 <div class="table-center">
     <table align="center">
@@ -156,24 +168,24 @@ MM-IoT-SDK 架构由几个层组成：
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/LoRa-Indoor-Antenna-Kit-860-930MHz-3dBi-295mm-p-5434.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/External-Antenna-915MHZ-2-6dBi-SMA-L195mm-p-5047.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
     </table>
 </div>
 
-要将天线连接到 WiFi-Halow 模块，您可能还需要购买 **SMA 转 I-PEX 天线电缆**。
+要将天线连接到 WiFi-Halow 模组，你可能还需要购买 **SMA 转 I-PEX 天线线缆**。
 
 <div class="table-center">
     <table align="center">
         <tr>
-            <th>SMA 转 I-PEX 天线电缆</th>
+            <th>SMA 转 I-PEX 天线线缆</th>
         </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/antenna_cable.png" style={{width:250, height:'auto'}}/></div></td>
@@ -181,14 +193,14 @@ MM-IoT-SDK 架构由几个层组成：
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/UF-L-SMA-K-1-13-120mm-p-5046.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
     </table>
 </div>
 
-如果您是第一次使用，可以参考以下视频进行天线安装。
+如果您是第一次使用，可以参考下面的视频进行天线安装。
 
 <div class="table-center">
 <iframe width="600" height="350" src="https://files.seeedstudio.com/wiki/wifi_halow/pic/install_xiao_wifi_halow_module.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -196,7 +208,7 @@ MM-IoT-SDK 架构由几个层组成：
 
 ## 安装 ESP-IDF v5.1.1
 
-在开始编程之前，我们需要在您的计算机上安装 ESP-IDF v5.1.1。ESP-IDF 是 ESP32 系列芯片的官方开发框架。
+在开始编程之前，我们需要在您的电脑上安装 ESP-IDF v5.1.1。ESP-IDF 是 ESP32 系列芯片的官方开发框架。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -206,35 +218,35 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1.** 下载适用于 Windows 的 ESP-IDF 工具安装程序
 
-下载适用于 Windows 的 [ESP-IDF 工具安装程序](https://dl.espressif.com/dl/esp-idf/?idf=5.1.1)。此安装程序包含 ESP-IDF 开发所需的所有工具。
+下载适用于 Windows 的 [ESP-IDF Tools Installer](https://dl.espressif.com/dl/esp-idf/?idf=5.1.1)。该安装程序包含 ESP-IDF 开发所需的所有工具。
 
 **步骤 2.** 运行安装程序
 
 1. 以管理员身份运行下载的安装程序
-2. 按照提示安装 Python、Git 和其他必需工具
-3. 出现提示时，选择以下选项：
+2. 按提示安装 Python、Git 和其他所需工具
+3. 在提示时，选择以下选项：
    - 安装 ESP-IDF v5.1.1
    - 安装 Python
    - 安装 Git
-   - 将 ESP-IDF 工具添加到路径
+   - 将 ESP-IDF Tools 添加到 Path
 
 **步骤 3.** 验证安装
 
-打开新的命令提示符并运行：
+打开一个新的命令提示符并运行：
 
 ```bash
 esp-idf --version
 ```
 
-如果安装成功，您应该看到版本号 5.1.1。
+如果安装成功，您应该会看到版本号 5.1.1。
 
 </TabItem>
 
 <TabItem value="MacOS" label="MacOS">
 
-**步骤 1.** 安装先决条件
+**步骤 1.** 安装前置依赖
 
-打开终端，如果您还没有安装 Homebrew，请先安装：
+打开 Terminal，如果尚未安装 Homebrew，请先安装：
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -268,7 +280,7 @@ cd esp-idf
 
 <TabItem value="Linux" label="Linux">
 
-**步骤 1.** 安装先决条件
+**步骤 1.** 安装前置依赖
 
 对于 Ubuntu 和 Debian：
 
@@ -300,11 +312,11 @@ cd esp-idf
 </Tabs>
 
 :::tip
-安装后，您可能需要重启计算机以确保所有环境变量都正确设置。
+安装完成后，您可能需要重启电脑，以确保所有环境变量都已正确设置。
 :::
 
 :::note
-有关安装 ESP-IDF v5.1.1 的更详细说明，您可以参考官方 Espressif 文档：
+有关安装 ESP-IDF v5.1.1 的更详细说明，您可以参考乐鑫官方文档：
 
 - [ESP-IDF 入门指南](https://docs.espressif.com/projects/esp-idf/en/v5.1.1/esp32s3/get-started/index.html)
 
@@ -333,16 +345,16 @@ export.bat
 
 **步骤 3.** 设置 MMIOT_ROOT 环境变量
 
-您可以通过 Windows 系统属性永久设置：
+您可以通过 Windows 系统属性永久设置该变量：
 
 1. 打开系统属性（Win + R，输入 `sysdm.cpl`）
 2. 点击 "Environment Variables"
-3. 在 "User variables" 下，点击 "New"
+3. 在 "User variables" 下点击 "New"
 4. 变量名：`MMIOT_ROOT`
 5. 变量值：`C:\Users\YourUsername\mm-iot-esp32`（替换为您的实际路径）
 6. 点击 "OK" 保存
 
-或者，您可以在命令提示符中临时设置：
+或者，您也可以在命令提示符中临时设置：
 
 ```bash
 set MMIOT_ROOT=C:\Users\YourUsername\mm-iot-esp32
@@ -374,7 +386,7 @@ source export.sh
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
-永久使用，添加到您的 shell 配置文件：
+若需永久生效，请添加到您的 shell 配置文件中：
 
 ```bash
 # For bash users (add to ~/.bash_profile or ~/.bashrc)
@@ -420,7 +432,7 @@ source export.sh
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
-永久使用，添加到您的 shell 配置文件：
+若需永久生效，请添加到您的 shell 配置文件中：
 
 ```bash
 # For bash users
@@ -444,33 +456,33 @@ source ~/.zshrc
 </Tabs>
 
 :::tip
-设置 MMIOT_ROOT 环境变量时，请确保使用绝对路径。相对路径可能会在构建项目时引起问题。
+在设置 MMIOT_ROOT 环境变量时，请务必使用绝对路径。使用相对路径在构建项目时可能会导致问题。
 :::
 
 :::note
-设置环境变量后，您可能需要关闭并重新打开终端以使更改生效。
+在设置环境变量后，您可能需要关闭并重新打开终端，使更改生效。
 :::
 
 ## 构建示例固件
 
-mm-iot-esp32 仓库包含多个示例应用程序，演示不同的功能。以下是如何构建和配置这些示例：
+mm-iot-esp32 仓库包含多个示例应用程序，用于演示不同的功能。以下是构建和配置这些示例的方法：
 
-### 示例应用程序位置
+### 示例应用位置
 
-所有示例应用程序都可以在仓库的 `examples` 目录中找到。可用的示例包括：
+所有示例应用都位于仓库的 `examples` 目录中。可用示例包括：
 
 - `scan`：Wi-Fi 扫描示例
 - `iperf`：iperf 服务器示例
-- `sta_reboot`：Wi-Fi 站点重启示例
-- `sta_connect`：Wi-Fi 站点连接示例
-- `web_camera_server`：网络摄像头服务器示例
-- 以及更多...
+- `sta_reboot`：Wi-Fi station 重启示例
+- `sta_connect`：Wi-Fi station 连接示例
+- `web_camera_server`：Web 摄像头服务器示例
+- 以及更多……
 
 ### 配置网络凭据
 
 在构建固件之前，您需要在示例的配置文件中配置网络设置：
 
-1. 导航到您选择的示例目录：
+1. 进入您选择的示例目录：
 
 ```bash
 cd $MMIOT_ROOT/examples/example_name
@@ -485,22 +497,22 @@ nano src/mm_app_loadconfig.c
 
 3. 在此文件中，您可以修改：
 
-- 国家代码（应设置为 **US**，因为该产品目前仅在北美地区可用）
+- 国家代码（应设置为 **US**，因为该产品目前仅在北美地区提供）
 - Wi-Fi HaLow 网络凭据
-- 其他网络相关参数
+- 其他与网络相关的参数
 
 :::caution
 关于国家代码的重要说明：
 
-- 国家代码必须设置为 "US"，因为该产品目前仅在北美市场可用
-- 由于监管要求，该产品尚未在其他地区上市
-- 在北美以外的地区使用该产品可能违反当地法规
+- 国家代码必须设置为 "US"，因为该产品目前仅在北美市场提供
+- 由于监管要求，该产品目前尚未在其他地区上市
+- 在北美以外地区使用该产品可能会违反当地法规
 
 :::
 
-### 构建过程
+### 构建流程
 
-配置网络设置后，您可以使用以下命令构建固件：
+在配置好网络设置后，您可以使用以下命令构建固件：
 
 ```bash
 idf.py set-target esp32s3
@@ -511,14 +523,14 @@ idf.py build
 :::note
 
 - `idf.py set-target` 命令对于每个示例只需运行一次
-- `idf.py fullclean` 通过删除所有先前的构建产物来确保干净的构建
+- `idf.py fullclean` 通过删除所有先前的构建产物来确保干净构建
 - 构建成功后，固件二进制文件将位于 `build` 目录中
 
 :::
 
 ### 构建输出
 
-构建成功后，您应该看到类似以下的输出：
+构建成功后，您应该会看到类似如下的输出：
 
 ```bash
 # Project build complete. To flash, run this command:
@@ -529,9 +541,9 @@ idf.py -p (PORT) flash
 
 ## 示例 1. scan
 
-此示例演示如何扫描您附近可用的 Wi-Fi HaLow 网络。按照以下步骤构建并运行扫描示例：
+此示例演示如何扫描您附近可用的 Wi-Fi HaLow 网络。请按照以下步骤构建并运行 scan 示例：
 
-### 步骤 1：导航到扫描示例
+### 步骤 1：进入 Scan 示例目录
 
 ```bash
 cd ~/mm-iot-esp32/example/scan
@@ -545,19 +557,19 @@ cd ~/mm-iot-esp32/example/scan
 nano main/src/mm_app_loadconfig.c
 ```
 
-2. 找到并修改国家代码行：
+2. 找到并修改国家代码所在的行：
 
 ```c
 #define COUNTRY_CODE "US"  // Must use "US" as the product is only available for North America
 ```
 
-### 步骤 3：硬件设置
+### 步骤 3：硬件连接
 
 1. 将 Wio-WM6108 Wi-Fi HaLow 模块连接到您的 XIAO ESP32S3
 
-2. 通过 USB 将 XIAO ESP32S3 连接到您的计算机
+2. 通过 USB 将 XIAO ESP32S3 连接到您的电脑
 
-### 步骤 4：构建和烧录
+### 步骤 4：构建并烧录
 
 按顺序执行以下命令：
 
@@ -568,13 +580,13 @@ idf.py build
 idf.py flash monitor
 ```
 
-### 步骤 5：监控结果
+### 步骤 5：监视结果
 
-如果一切正常工作：
+如果一切正常：
 
-- 烧录后串口监视器将自动启动
+- 烧录完成后串口监视器会自动启动
 - 程序将开始扫描 Wi-Fi HaLow 网络
-- 如果范围内有任何 Wi-Fi HaLow 网关，它们的信息将显示在串口监视器中
+- 如果附近有任何 Wi-Fi HaLow 网关，其信息将显示在串口监视器中
 
 串口监视器中的示例输出：
 
@@ -582,26 +594,26 @@ idf.py flash monitor
 
 :::tip
 
-- 确保您附近有 Wi-Fi HaLow 网关以检测网络
-- 扫描过程持续运行，因此您会看到可用网络的定期更新
-- 按 Ctrl+C 停止监视器并退出程序
+- 请确保您附近有 Wi-Fi HaLow 网关，以便检测到网络
+- 扫描过程是持续进行的，因此您会看到可用网络的周期性更新
+- 按 Ctrl+C 停止监视并退出程序
 
 :::
 
 :::note
 如果您没有看到任何网络：
 
-- 验证您的 Wi-Fi HaLow 网关已开机并正常工作
-- 检查您是否在网关的范围内
-- 确保模块正确连接到您的 XIAO ESP32S3
+- 请确认您的 Wi-Fi HaLow 网关已通电并正常工作
+- 检查你是否在网关的覆盖范围内
+- 确保模块已正确连接到你的 XIAO ESP32S3
 
 :::
 
 ## 示例 2. iperf
 
-此示例演示如何使用 iPerf 测试您的 Wi-Fi HaLow 连接的网络性能。按照以下步骤构建并运行 iPerf 示例：
+本示例演示如何使用 iPerf 测试你的 Wi-Fi HaLow 连接的网络性能。请按照以下步骤构建并运行 iPerf 示例：
 
-### 步骤 1：导航到 iPerf 示例
+### 步骤 1：进入 iPerf 示例目录
 
 ```bash
 cd ~/mm-iot-esp32/example/iperf
@@ -626,12 +638,12 @@ nano main/src/mm_app_loadconfig.c
 #define SAE_PASSPHRASE   Your_Password             // Replace with your network password
 ```
 
-### 步骤 3：硬件设置
+### 步骤 3：硬件连接
 
-1. 将 Wio-WM6108 Wi-Fi HaLow 模块连接到您的 XIAO ESP32S3
-2. 通过 USB 将 XIAO ESP32S3 连接到您的计算机
+1. 将 Wio-WM6108 Wi-Fi HaLow 模块连接到你的 XIAO ESP32S3
+2. 通过 USB 将 XIAO ESP32S3 连接到你的电脑
 
-### 步骤 4：构建和烧录
+### 步骤 4：编译与烧录
 
 按顺序执行以下命令：
 
@@ -644,15 +656,15 @@ idf.py flash monitor
 
 ### 步骤 5：运行性能测试
 
-程序成功运行后，您将看到 iPerf 服务启动。现在您可以从 Wi-Fi HaLow 网关运行性能测试。
+程序成功运行后，你会看到 iPerf 服务启动。现在你可以在 Wi-Fi HaLow 网关上运行性能测试。
 
-对于 IPv4 测试，在您的网关上执行此命令：
+对于 IPv4 测试，在网关上执行以下命令：
 
 ```bash
 iperf -c <device_ip> -p <port> -i 1 -u -b 20M
 ```
 
-对于 IPv6 测试，在您的网关上执行此命令：
+对于 IPv6 测试，在网关上执行以下命令：
 
 ```bash
 iperf -c <device_ip>%wlan0 -p <port> -i 1 -V -u -b 20M
@@ -660,37 +672,37 @@ iperf -c <device_ip>%wlan0 -p <port> -i 1 -V -u -b 20M
 
 参数说明：
 
-- `-c`：以客户端模式运行
-- `-p`：端口号
-- `-i`：报告间隔（1 秒）
-- `-u`：使用 UDP 协议
-- `-b`：目标带宽（20 Mbps）
-- `-V`：IPv6 模式（仅用于 IPv6 测试）
+- `-c`: 以客户端模式运行
+- `-p`: 端口号
+- `-i`: 报告间隔（1 秒）
+- `-u`: 使用 UDP 协议
+- `-b`: 目标带宽（20 Mbps）
+- `-V`: IPv6 模式（仅用于 IPv6 测试）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/11.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
 
-- 在运行性能测试之前，请确保您的设备已成功连接到 Wi-Fi HaLow 网络
-- 连接后，设备的 IP 地址将显示在串口监视器中
-- 您可以根据测试需求调整带宽（-b 参数）
+- 在运行性能测试前，确保你的设备已成功连接到 Wi-Fi HaLow 网络
+- 连接成功后，设备的 IP 地址会显示在串口监视器中
+- 你可以根据测试需求调整带宽（`-b` 参数）
 
 :::
 
 :::note
-常见问题和解决方案：
+常见问题与解决方案：
 
-- 如果连接失败，请验证您的网络凭据
-- 如果 iPerf 服务未启动，请检查您的硬件连接
-- 如果性能较差，请确保您在网关的良好信号范围内
+- 如果连接失败，请检查你的网络凭据
+- 如果 iPerf 服务未启动，请检查硬件连接
+- 如果性能较差，请确保你处于网关的良好覆盖范围内
 
 :::
 
 ## 示例 3. web_camera_server
 
-此示例演示如何通过 Wi-Fi HaLow 网络从 XIAO ESP32S3 Sense 流式传输摄像头画面。按照以下步骤构建和运行网络摄像头服务器：
+本示例演示如何通过 Wi-Fi HaLow 网络从 XIAO ESP32S3 Sense 进行摄像头视频流传输。请按照以下步骤构建并运行 Web 摄像头服务器：
 
-### 步骤 1：导航到网络摄像头示例
+### 步骤 1：进入 Web 摄像头示例目录
 
 ```bash
 cd ~/mm-iot-esp32/example/web_camera_serve
@@ -712,13 +724,13 @@ nano main/src/mm_app_loadconfig.c
 #define SAE_PASSPHRASE    Your_Password             // Replace with your network password
 ```
 
-### 步骤 3：硬件设置
+### 步骤 3：硬件连接
 
-1. 将 Wio-WM6108 Wi-Fi HaLow 模块连接到您的 XIAO ESP32S3 Sense
-2. 确保 XIAO ESP32S3 Sense 上的摄像头模块正确连接
-3. 通过 USB 将 XIAO ESP32S3 Sense 连接到您的计算机
+1. 将 Wio-WM6108 Wi-Fi HaLow 模块连接到你的 XIAO ESP32S3 Sense
+2. 确保 XIAO ESP32S3 Sense 上的摄像头模块连接正确
+3. 通过 USB 将 XIAO ESP32S3 Sense 连接到你的电脑
 
-### 步骤 4：构建和烧录
+### 步骤 4：编译与烧录
 
 按顺序执行以下命令：
 
@@ -729,14 +741,14 @@ idf.py build
 idf.py flash monitor
 ```
 
-### 步骤 5：访问摄像头画面
+### 步骤 5：访问摄像头视频流
 
-程序成功运行后：
+当程序成功运行后：
 
-1. 记下串口监视器中显示的 IP 地址
-2. 在连接到与您的 Wi-Fi HaLow 网关相同网络的任何设备上打开网络浏览器
-3. 在浏览器地址栏中输入 IP 地址
-4. 您现在应该能看到来自 XIAO ESP32S3 Sense 的实时摄像头画面
+1. 记录串口监视器中显示的 IP 地址
+2. 在任何连接到与 Wi-Fi HaLow 网关相同网络的设备上打开 Web 浏览器
+3. 在浏览器地址栏中输入该 IP 地址
+4. 现在你应该可以看到来自 XIAO ESP32S3 Sense 的实时摄像头视频流
 
 示例 URL：
 
@@ -747,20 +759,20 @@ http://192.168.4.1
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/14.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-为获得最佳流媒体体验：
+为了获得最佳的流媒体体验：
 
-- 确保良好的照明条件以获得更好的图像质量
-- 保持 XIAO ESP32S3 Sense 在 Wi-Fi HaLow 网关的良好信号范围内
-- 使用现代网络浏览器以获得最佳兼容性
+- 确保有良好的光照条件，以获得更好的图像质量
+- 保持 XIAO ESP32S3 Sense 处于 Wi-Fi HaLow 网关的良好覆盖范围内
+- 使用现代 Web 浏览器以获得最佳兼容性
 
 :::
 
 :::note
-故障排除：
+故障排查：
 
-- 如果无法访问摄像头画面，请验证您的设备与 Wi-Fi HaLow 网关在同一网络上
-- 如果图像未显示，请检查摄像头模块是否正确连接
-- 如果流媒体卡顿，请尝试靠近 Wi-Fi HaLow 网关
+- 如果无法访问摄像头视频流，请确认你的设备与 Wi-Fi HaLow 网关处于同一网络
+- 如果没有图像显示，请检查摄像头模块是否连接正确
+- 如果视频流延迟较大，请尝试靠近 Wi-Fi HaLow 网关
 
 :::
 
@@ -774,7 +786,7 @@ http://192.168.4.1
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

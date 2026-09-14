@@ -599,7 +599,7 @@ Creamos un grupo de Google para la discusión general de Mesh Bee y temas relaci
 
 - [Hoja de datos JN5168](https://files.seeedstudio.com/wiki/Mesh_Bee/res/JN516X.pdf)
 
-- [Libro de Recetas para v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_Cook_Book.pdf)
+- [Cook Book para v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_Cook_Book.pdf)
 
 - [Manual de Usuario para v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_User_Manual_v0.3.pdf)
 

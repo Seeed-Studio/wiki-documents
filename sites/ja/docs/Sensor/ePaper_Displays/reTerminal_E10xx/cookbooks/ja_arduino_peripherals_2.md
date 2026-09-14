@@ -1,6 +1,6 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino クックブック — PCF8563 RTC の読み書き、ディープスリープによる低消費電力戦略、PDM マイクによるオーディオ録音の SD カード保存（E1001 / E1002 / E1003）、および静電容量式タッチによる描画（E1003 のみ）。
-title: 'Arduino クックブック: RTC、低消費電力、オーディオ & タッチ (reTerminal E シリーズ)'
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino cookbook — PCF8563 RTC の読み書き、ディープスリープによる低消費電力戦略、PDM マイクによるオーディオ録音の SD カード保存（E1001 / E1002 / E1003）、および静電容量式タッチによる描画（E1003 のみ）。
+title: 'Arduino Cookbook: RTC、低消費電力、オーディオ & タッチ (reTerminal E シリーズ)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
 sidebar_position: 3
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino クックブック: RTC、低消費電力、オーディオ & タッチ (reTerminal E シリーズ)
+# Arduino Cookbook: RTC、低消費電力、オーディオ & タッチ (reTerminal E シリーズ)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" style={{width:600, height:'auto'}}/></div>
 
@@ -30,21 +30,21 @@ import TabItem from '@theme/TabItem';
 </div><br />
 :::
 
-:::tip このシリーズの他のクックブック
-- **[Arduino クックブック: 電子ペーパーディスプレイ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino)** — 電子ペーパースクリーンへのテキスト、グラフィック、画像の描画。
-- **[Arduino クックブック: オンボードペリフェラル](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)** — LED、ブザー、ボタン、SHT4x センサ、バッテリーモニタ、microSD カード、および SD カードイメージパイプライン。
+:::tip このシリーズの他の cookbooks
+- **[Arduino Cookbook: 電子ペーパーディスプレイ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino)** — 電子ペーパースクリーンへのテキスト、グラフィック、画像の描画。
+- **[Arduino Cookbook: オンボードペリフェラル](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)** — LED、ブザー、ボタン、SHT4x センサ、バッテリーモニタ、microSD カード、および SD カードイメージパイプライン。
 :::
 
 ## はじめに
 
-これは reTerminal E シリーズ向けペリフェラルクックブックの第 2 弾です。[最初のペリフェラルクックブック](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals) では基本的な I/O ペリフェラル（LED、ブザー、ボタン、SHT4x、バッテリー、SD カード）を扱いましたが、このページではさらに高度な 4 つのトピックを掘り下げます：
+これは reTerminal E シリーズ向けペリフェラル cookbook の第 2 弾です。[最初のペリフェラル cookbook](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals) では基本的な I/O ペリフェラル（LED、ブザー、ボタン、SHT4x、バッテリー、SD カード）を扱いましたが、このページではさらに高度な 4 つのトピックを掘り下げます：
 
 - **リアルタイムクロック (RTC)** — CR1220 コイン電池でバックアップされたオンボードの **PCF8563** RTC チップにより、メインバッテリーを取り外したり完全放電しても時刻を保持します。
 - **低消費電力モード** — ディープスリープ、ライトスリープ、および GPIO ウェイクアップ戦略により、バッテリー寿命を数日から数か月へと延ばします。
 - **PDM マイクロフォン** — オンボードの PDM デジタルマイク（E1001 / E1002 / E1003 のみ。E1004 にはマイクはありません）から音声を取得し、WAV ファイルとして microSD カードに保存します。
 - **タッチスクリーン** — E1003（10.3 インチモデル）に搭載された静電容量式タッチパネルを使用して、電子ペーパーディスプレイ上にドットを描画します。タッチパネルを搭載しているのは E1003 のみです。
 
-このクックブックのすべてのサンプルスケッチは、[OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) リポジトリからのものです。RTC、低消費電力、マイクのスケッチでは**追加ライブラリのインストールは不要**で、すべて ESP32 のビルトイン API を使用します。タッチのスケッチには **Seeed_GFX** ライブラリが必要です。
+この cookbook のすべてのサンプルスケッチは、[OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) リポジトリからのものです。RTC、低消費電力、マイクのスケッチでは**追加ライブラリのインストールは不要**で、すべて ESP32 のビルトイン API を使用します。タッチのスケッチには **Seeed_GFX** ライブラリが必要です。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D" target="_blank">
@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 ### 必要なもの
 
-このクックブックは reTerminal E シリーズに適用されます。手元にあるデバイスを選んでください：
+この cookbook は reTerminal E シリーズに適用されます。手元にあるデバイスを選んでください：
 
 <div class="table-center">
   <table align="center">
@@ -102,13 +102,13 @@ import TabItem from '@theme/TabItem';
 - **Arduino IDE** がインストールされており、**ESP32 ボードパッケージ**（PDM マイク用に 3.0 以上）が導入され、ボードとして **XIAO_ESP32S3** が選択されていること。
 - Tools メニューで **PSRAM** が **OPI PSRAM** に、**Flash** が **8 MB** に設定されていること。
 - 動作する **USB-C データケーブル** があり、正しいシリアルポートが選択されていること。
-- デバイスに基本的なスケッチを書き込めることを確認していること — まだの場合は、[Arduino クックブック: 電子ペーパーディスプレイ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino#環境準備) の環境セットアップを参照してください。
+- デバイスに基本的なスケッチを書き込めることを確認していること — まだの場合は、[Arduino Cookbook: 電子ペーパーディスプレイ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino#環境準備) の環境セットアップを参照してください。
 
-このクックブック内のすべてのスケッチは、**GPIO44 (RX) / GPIO43 (TX)** の `Serial1` を通じて **115200 ボー**でデバッグ情報を出力します。これは Arduino IDE が自動的に開く USB-CDC の `Serial` ではなく、USB-UART ブリッジ側です。Arduino シリアルモニタを開き、対応するポートとボーレートを選択して出力を確認してください。
+この cookbook 内のすべてのスケッチは、**GPIO44 (RX) / GPIO43 (TX)** の `Serial1` を通じて **115200 ボー**でデバッグ情報を出力します。これは Arduino IDE が自動的に開く USB-CDC の `Serial` ではなく、USB-UART ブリッジ側です。Arduino シリアルモニタを開き、対応するポートとボーレートを選択して出力を確認してください。
 
 ### ハードウェア対応状況の概要
 
-このクックブックのすべての機能が 4 つのモデルすべてで利用できるわけではありません。以下の表に、利用可能な機能をまとめます：
+この cookbook のすべての機能が 4 つのモデルすべてで利用できるわけではありません。以下の表に、利用可能な機能をまとめます：
 
 <div class="table-center">
   <table align="center">
@@ -1449,7 +1449,7 @@ void loop()
 
 ### SD カードの準備
 
-microSD カードの挿入およびフォーマット手順については、最初のペリフェラルクックブック内の **[Using the MicroSD Card](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals#Using-the-MicroSD-Card)** セクションを参照してください。
+microSD カードの挿入およびフォーマット手順については、最初のペリフェラル cookbook 内の **[Using the MicroSD Card](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals#Using-the-MicroSD-Card)** セクションを参照してください。
 
 :::note
 reTerminal E シリーズは、**64 GB** までの microSD カードをサポートし、**FAT32** 形式でフォーマットする必要があります。

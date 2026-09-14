@@ -258,7 +258,7 @@ display:
 
 现在你可以把这些实体拖到 Lovelace 仪表盘中，或者——在电子纸上更有趣的方式——使用 `display.lambda` 代码块，通过 [`homeassistant`](https://esphome.io/components/homeassistant.html) 组件将任意 HA 实体直接渲染到屏幕上。
 
-## 接下来去哪儿 —— 菜谱（Cookbooks）
+## 接下来去哪儿 —— Cookbooks
 
 本页有意只停留在样板配置层面。与具体产品相关的 YAML、外设示例以及端到端的配方都在各个产品的 cookbook 中：
 

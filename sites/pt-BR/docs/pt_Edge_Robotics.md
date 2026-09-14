@@ -31,7 +31,7 @@ import '/src/css/robotics-page-style.css';
     <div>
       <span className="eyebrow">Seeed Studio Robotics Wiki</span>
       <h2>Comece com o seu kit de robô</h2>
-      <p>Encontre a trilha de robótica da Seeed Studio certa por produto. Escolha seu kit e siga as etapas desde a configuração até o desenvolvimento avançado.</p>
+      <p>Encontre o caminho de robótica da Seeed Studio certo por produto. Escolha seu kit e siga as etapas da configuração ao desenvolvimento avançado.</p>
     </div>
     <div className="hero-tips">
       <div><strong>Novo dispositivo</strong><span>Desembale, faça a fiação, ligue, instale drivers e teste o movimento</span></div>
@@ -53,7 +53,7 @@ import '/src/css/robotics-page-style.css';
         <span className="section-kicker">Escolha um kit</span>
         <h2>Escolha sua trilha de aprendizado</h2>
       </div>
-      <p>Os cartões ficam recolhidos por padrão. Abra o seu kit para ver a trilha correspondente.</p>
+      <p>Os cards ficam recolhidos por padrão. Abra o seu kit para ver a trilha.</p>
     </div>
     <div className="kit-index-grid">
       <a href="#rebot-rs"><span>🦾</span><strong>B601-RS</strong><small>Trilha do braço robótico RobStride</small></a>
@@ -93,7 +93,7 @@ import '/src/css/robotics-page-style.css';
     <div className="product-meta-grid">
       <div><strong>Recomendado para</strong><span>Usuários iniciantes do reBot Arm</span></div>
       <div><strong>Objetivo de aprendizado</strong><span>Executar teleoperação, preensão visual e ROS2</span></div>
-      <div><strong>Ordem recomendada</strong><span>Quick Start → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
+<div><strong>Ordem recomendada</strong><span>Quick Start → LeRobot → Pinocchio → Visual Grasping → ROS2 → Web Simulator → Isaac Sim → MIT Position Control → Embodied Agent</span></div>
     </div>
     <div className="learning-steps">
       <a className="step-card" href="/pt-br/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Quick Start</b><small>Desembale, faça a fiação, ligue, verifique os drivers e teste o movimento básico.</small></div><em>Obrigatório para iniciantes</em></a>
@@ -104,6 +104,7 @@ import '/src/css/robotics-page-style.css';
       <a className="step-card" href="/pt-br/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator Development</b><small>Aprenda a integração do Web Simulator com ROS2/MuJoCo para controle sincronizado virtual-real.</small></div><em>Desenvolvimento de simulação</em></a>
       <a className="step-card" href="/pt-br/rebot_arm_b601_rs_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim Integration</b><small>Simule o braço no Isaac Sim e sincronize com o robô real.</small></div><em>Simulação</em></a>
       <a className="step-card" href="/pt-br/rebot_arm_b601_rs_mit_control/"><span className="step-index">8</span><div><b>MIT Position Control</b><small>Comece com o controle de posição MIT para o reBot Arm B601-RS.</small></div><em>Controle avançado</em></a>
+      <a className="step-card" href="/pt-br/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>Embodied Agent Architecture Design</b><small>Conecte um VLM ao braço para que comandos em linguagem natural acionem preensão baseada em visão com controle protegido por segurança.</small></div><em>Arquitetura de agente</em></a>
     </div>
   </div>
 </details>
@@ -126,17 +127,19 @@ import '/src/css/robotics-page-style.css';
     <div><strong>Ordem recomendada</strong><span>Quick Start → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
   </div>
 <div className="learning-steps">
-  <a className="step-card" href="/pt-br/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Quick Start</b><small>Verifique a alimentação, CAN, drivers e movimento básico.</small></div><em>Obrigatório para iniciantes</em></a>
+  <a className="step-card" href="/pt-br/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Quick Start</b><small>Verifique alimentação, CAN, drivers e movimento básico.</small></div><em>Obrigatório para iniciantes</em></a>
 
   <a className="step-card" href="/pt-br/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>LeRobot Data Collection</b><small>Registre dados de teleoperação para aprendizado por imitação.</small></div><em>Dados de IA</em></a>
 
   <a className="step-card" href="/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio and Meshcat</b><small>Carregue modelos, visualize movimento e aprenda cinemática.</small></div><em>Noções básicas de controle</em></a>
 
-  <a className="step-card" href="/pt-br/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine o braço e a visão para preensão no mundo real.</small></div><em>Demonstração de aplicação</em></a>
+  <a className="step-card" href="/pt-br/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>Visual Grasping Demo</b><small>Combine o braço e visão para preensão no mundo real.</small></div><em>Demonstração de aplicação</em></a>
 
   <a className="step-card" href="/pt-br/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Use ROS2 com MoveIt, percepção e aplicações de sistema.</small></div><em>Integração de sistema</em></a>
 
   <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator Development</b><small>Aprenda a integração do Web Simulator com ROS2/MuJoCo para controle sincronizado virtual-real.</small></div><em>Desenvolvimento de simulação</em></a>
+
+  <a className="step-card" href="/pt-br/rebot_arm_b601_dm_isaacsim/"><span className="step-index">7</span><div><b>Integração com o Isaac Sim</b><small>Implante o reBot B601-DM no Isaac Sim para simulação, depuração e validação de algoritmos de controle.</small></div><em>Simulação</em></a>
 </div>
 </div>
 </details>
@@ -160,12 +163,12 @@ import '/src/css/robotics-page-style.css';
   </div>
   <div className="learning-steps">
     <a className="step-card" href="/pt-br/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Quick Start</b><small>Instale o hardware, conecte, calibre e execute um teste básico.</small></div><em>Obrigatório para iniciantes</em></a>
-    <a className="step-card" href="/pt-br/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b><small>Verifique o ID do servo, direção, ponto zero e comunicação.</small></div><em>Noções básicas de solução de problemas</em></a>
-    <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">3</span><div><b>SO101 and NVIDIA GR00T</b><small>Ajuste fino modelos VLA e faça o deploy no Jetson.</small></div><em>VLA avançado</em></a>
-    <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>Dual-Arm SO-ARM Training</b><small>Colete dados, treine e execute tarefas de braços duplos.</small></div><em>Tarefas complexas</em></a>
-    <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM com Amazing Hand Dexterous Hand</b><small>Combine SO-ARM101 com Amazing Hand para LeRobot.</small></div><em>Integração de mão hábil</em></a>
+    <a className="step-card" href="/pt-br/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b><small>Verifique ID do servo, direção, ponto zero e comunicação.</small></div><em>Noções básicas de solução de problemas</em></a>
+    <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">3</span><div><b>SO101 e NVIDIA GR00T</b><small>Faça fine-tuning de modelos VLA e faça o deploy no Jetson.</small></div><em>VLA avançado</em></a>
+    <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>Treinamento SO-ARM de dois braços</b><small>Colete dados, treine e execute tarefas com dois braços.</small></div><em>Tarefas complexas</em></a>
+    <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM com Amazing Hand, mão hábil</b><small>Combine o SO-ARM101 com a Amazing Hand para o LeRobot.</small></div><em>Integração de mão hábil</em></a>
     <a className="step-card" href="/pt-br/simulate_soarm101_by_leisaac/"><span className="step-index">6</span><div><b>Simulação LeIsaac</b><small>Prepare-se para Sim2Real com modelos e tarefas simulados.</small></div><em>Noções básicas de simulação</em></a>
-    <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Aprendizado por Reforço Isaac Lab</b><small>Treine políticas em simulação e revise o design de recompensas.</small></div><em>Treinamento avançado</em></a>
+    <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Aprendizado por reforço no Isaac Lab</b><small>Treine políticas em simulação e revise o design de recompensas.</small></div><em>Treinamento avançado</em></a>
     <a className="step-card optional" href="/pt-br/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b><small>Experimente plataformas de terceiros para coleta de dados e treinamento.</small></div><em>Extensão opcional</em></a>
   </div>
 </div>
@@ -184,14 +187,14 @@ import '/src/css/robotics-page-style.css';
 </summary>
 <div className="product-body">
   <div className="product-meta-grid">
-    <div><strong>Recomendado para</strong><span>Demonstrações de planejamento ROS2 e controle com IA</span></div>
+    <div><strong>Recomendado para</strong><span>Planejamento ROS2 e demonstrações de controle com IA</span></div>
     <div><strong>Objetivo de aprendizado</strong><span>Executar controle básico, MoveIt 2 e GR00T</span></div>
-    <div><strong>Ordem recomendada</strong><span>Início Rápido → MoveIt 2 → GR00T</span></div>
+    <div><strong>Ordem recomendada</strong><span>Quick Start → MoveIt 2 → GR00T</span></div>
   </div>
   <div className="learning-steps">
-    <a className="step-card" href="/pt-br/lerobot_starai_arm/"><span className="step-index">1</span><div><b>Início Rápido do Braço Robótico StarAI</b><small>Conecte o hardware, execute o controle básico e teste exemplos.</small></div><em>Obrigatório para iniciantes</em></a>
-    <a className="step-card" href="/pt-br/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>Planejamento de Movimento com MoveIt 2</b><small>Importe modelos e planeje trajetórias com o MoveIt 2.</small></div><em>ROS2 avançado</em></a>
-    <a className="step-card" href="/pt-br/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI e NVIDIA GR00T</b><small>Construa controle de braço robótico com LLMs / VLA.</small></div><em>Controle com IA</em></a>
+    <a className="step-card" href="/pt-br/lerobot_starai_arm/"><span className="step-index">1</span><div><b>Quick Start do Braço Robótico StarAI</b><small>Conecte o hardware, execute o controle básico e teste exemplos.</small></div><em>Obrigatório para iniciantes</em></a>
+    <a className="step-card" href="/pt-br/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>Planejamento de movimento com MoveIt 2</b><small>Importe modelos e planeje trajetórias com o MoveIt 2.</small></div><em>ROS2 avançado</em></a>
+    <a className="step-card" href="/pt-br/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI e NVIDIA GR00T</b><small>Crie controle de braço robótico com LLMs / VLA.</small></div><em>Controle com IA</em></a>
   </div>
 </div>
 </details>
@@ -209,13 +212,13 @@ import '/src/css/robotics-page-style.css';
 </summary>
 <div className="product-body">
   <div className="product-meta-grid">
-    <div><strong>Recomendado para</strong><span>Usuários de chassi móvel de primeira viagem</span></div>
+    <div><strong>Recomendado para</strong><span>Usuários iniciantes de chassi móvel</span></div>
     <div><strong>Objetivo de aprendizado</strong><span>Executar controle de chassi e demonstrações de seguimento de som</span></div>
     <div><strong>Observação</strong><span>Etapas ROS2 removidas; permanece apenas o caminho do produto atual</span></div>
   </div>
   <div className="learning-steps">
-    <a className="step-card" href="/pt-br/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Início Rápido do Chassi Móvel Lekiwi</b><small>Monte, conecte, teste o movimento e verifique a segurança.</small></div><em>Obrigatório para iniciantes</em></a>
-    <a className="step-card" href="/pt-br/sound_follow_robot/"><span className="step-index">2</span><div><b>Demonstração de Seguimento de Som</b><small>Use entrada de som para conduzir uma demonstração móvel interativa.</small></div><em>Demonstração de aplicação</em></a>
+    <a className="step-card" href="/pt-br/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Quick Start do Chassi Móvel Lekiwi</b><small>Monte, conecte, teste o movimento e verifique a segurança.</small></div><em>Obrigatório para iniciantes</em></a>
+    <a className="step-card" href="/pt-br/sound_follow_robot/"><span className="step-index">2</span><div><b>Demonstração de seguimento de som</b><small>Use entrada de som para conduzir uma demonstração móvel interativa.</small></div><em>Demonstração de aplicação</em></a>
   </div>
 </div>
 </details>
@@ -225,20 +228,20 @@ import '/src/css/robotics-page-style.css';
   <div className="product-head">
     <span className="product-icon">🦿</span>
     <div>
-      <h3>Robô Mini Híbrido com Rodas e Pernas StackForce</h3>
-      <span>Para controle híbrido com rodas e pernas, equilíbrio e planejamento de movimento</span>
+      <h3>Robô StackForce Mini com Rodas e Pernas</h3>
+      <span>Para controle com rodas e pernas, equilíbrio e planejamento de movimento</span>
     </div>
   </div>
   <span className="summary-action">Expandir plano de aprendizado</span>
 </summary>
 <div className="product-body">
   <div className="product-meta-grid">
-    <div><strong>Recomendado para</strong><span>Estudantes de robôs móveis e híbridos com rodas e pernas</span></div>
+    <div><strong>Recomendado para</strong><span>Estudantes de robôs móveis e com rodas e pernas</span></div>
     <div><strong>Objetivo de aprendizado</strong><span>Aprender estrutura, lógica de controle e movimento básico</span></div>
-    <div><strong>Ordem recomendada</strong><span>Início Rápido → Princípios de Controle → Depuração de Movimento</span></div>
+    <div><strong>Ordem recomendada</strong><span>Quick Start → Princípios de controle → Depuração de movimento</span></div>
   </div>
   <div className="learning-steps">
-    <a className="step-card" href="/pt-br/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>Início Rápido do StackForce Mini</b><small>Aprenda o hardware, faça a implantação básica e teste o movimento.</small></div><em>Curso de sistema</em></a>
+    <a className="step-card" href="/pt-br/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>Quick Start do StackForce Mini</b><small>Conheça o hardware, faça o deploy do básico e teste o movimento.</small></div><em>Curso de sistema</em></a>
   </div>
 </div>
 </details>
@@ -257,7 +260,7 @@ import '/src/css/robotics-page-style.css';
 <div className="product-body">
   <div className="product-meta-grid">
     <div><strong>Recomendado para</strong><span>Interação com robô de mesa e demonstrações de agentes</span></div>
-    <div><strong>Objetivo de aprendizado</strong><span>Começar com o básico, depois SDK, IA e solução de problemas</span></div>
+    <div><strong>Objetivo de aprendizado</strong><span>Começar pelo básico, depois SDK, IA e solução de problemas</span></div>
     <div><strong>Documentação</strong><span>Organizada do básico à plataforma, SDK, IA e solução de problemas</span></div>
   </div>
 
@@ -269,19 +272,19 @@ import '/src/css/robotics-page-style.css';
             </div>
             <div className="mini-track">
               <h4>② Escolha sua plataforma</h4>
-              <a href="/pt-br/reachymini_platforms_simulation_get_started/">Início Rápido da Simulação</a>
+              <a href="/pt-br/reachymini_platforms_simulation_get_started/">Quick Start de Simulação</a>
               <a href="/pt-br/reachymini_platforms_reachy_mini_get_started/">Guia de Configuração Sem Fio do Reachy Mini</a>
               <a href="/pt-br/reachymini_platforms_reachy_mini_usage/">Usando o Reachy Mini</a>
-              <a href="/pt-br/reachymini_platforms_reachy_mini_hardware/">Folha de Dados de Hardware do Reachy Mini</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_hardware/">Ficha Técnica de Hardware do Reachy Mini</a>
               <a href="/pt-br/reachymini_platforms_reachy_mini_lite_get_started/">Guia de Configuração do Reachy Mini Lite</a>
               <a href="/pt-br/reachymini_platforms_reachy_mini_lite_usage/">Usando o Reachy Mini Lite</a>
-              <a href="/pt-br/reachymini_platforms_reachy_mini_lite_hardware/">Folha de Dados de Hardware do Reachy Mini Lite</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_lite_hardware/">Ficha Técnica de Hardware do Reachy Mini Lite</a>
             </div>
             <div className="mini-track">
               <h4>③ SDK e noções básicas de desenvolvimento</h4>
               <a href="/pt-br/reachymini_sdk_readme/">Reachy Mini SDK</a>
               <a href="/pt-br/reachymini_sdk_installation/">Guia de Instalação</a>
-              <a href="/pt-br/reachymini_sdk_quickstart/">Guia de Início Rápido</a>
+              <a href="/pt-br/reachymini_sdk_quickstart/">Guia de Quick Start</a>
               <a href="/pt-br/reachymini_sdk_python-sdk/">Referência do Python SDK</a>
               <a href="/pt-br/reachymini_sdk_core-concept/">Conceitos Centrais e Arquitetura</a>
               <a href="/pt-br/reachymini_sdk_media-architecture/">Arquitetura de Mídia</a>
@@ -299,7 +302,7 @@ import '/src/css/robotics-page-style.css';
             <div className="mini-track">
               <h4>⑤ Mídia, sistema e operações avançadas</h4>
               <a href="/pt-br/reachymini_platforms_reachy_mini_media_advanced_controls/">Controles Avançados de Mídia Sem Fio</a>
-              <a href="/pt-br/reachymini_platforms_reachy_mini_lite_media_advanced_controls/">Controles Avançados de Mídia do Lite</a>
+              <a href="/pt-br/reachymini_platforms_reachy_mini_lite_media_advanced_controls/">Controles Avançados de Mídia Lite</a>
               <a href="/pt-br/reachymini_platforms_reachy_mini_lite_wizard/">Use o Dynamixel Wizard para Ler Parâmetros do Motor</a>
               <a href="/pt-br/reachymini_platforms_reachy_mini_development_workflow/">Fluxo de Trabalho de Desenvolvimento Sem Fio</a>
               <a href="/pt-br/reachymini_platforms_reachy_mini_install_daemon_from_branch/">Instalar o Daemon a partir de um Branch Específico</a>
@@ -330,7 +333,7 @@ import '/src/css/robotics-page-style.css';
               <a href="/pt-br/reachymini_troubleshooting_motors_diagnosis/">Diagnóstico e Solução de Problemas de Motores</a>
               <a href="/pt-br/reachymini_troubleshooting_change_mic_fpc_cable/">Substituir o Cabo FPC do Microfone</a>
               <a href="/pt-br/reachymini_troubleshooting_spherical_joints_maintenance/">Manutenção da Junta Esférica</a>
-              <a href="/pt-br/reachymini_troubleshooting_roadmap/">Roteiro do Reachy Mini</a>
+              <a href="/pt-br/reachymini_troubleshooting_roadmap/">Roadmap do Reachy Mini</a>
             </div>
             <div className="mini-track">
               <h4>⑧ Referência de API</h4>
@@ -340,8 +343,8 @@ import '/src/css/robotics-page-style.css';
               <a href="/pt-br/reachymini_api_motion/">Motion API</a>
               <a href="/pt-br/reachymini_api_media/">Media API</a>
               <a href="/pt-br/reachymini_api_apps/">Referência da Applications API</a>
-              <a href="/pt-br/reachymini_api_tools/">Referência da Tools API</a>
-              <a href="/pt-br/reachymini_api_utils/">Referência da Utilities API</a>
+              <a href="/pt-br/reachymini_api_tools/">Referência da API de Ferramentas</a>
+              <a href="/pt-br/reachymini_api_utils/">Referência da API de Utilitários</a>
             </div>
           </div>
         </div>
@@ -356,16 +359,16 @@ import '/src/css/robotics-page-style.css';
       <span>Para iniciantes em robôs humanoides, depuração de servos, ensino de movimentos e controle remoto via web</span>
     </div>
   </div>
-  <span className="summary-action">Expandir plano de aprendizagem</span>
+  <span className="summary-action">Expandir plano de aprendizado</span>
 </summary>
 <div className="product-body">
   <div className="product-meta-grid">
-    <div><strong>Recomendado para</strong><span>Usuários iniciantes de robôs humanoides bípedes de mesa que desejam experimentar rapidamente o ensino de movimentos e o controle remoto</span></div>
-    <div><strong>Objetivo de aprendizagem</strong><span>Começar a usar imediatamente, ensinar movimentos com o editor de movimentos na web e exportar movimentos personalizados para o firmware do controlador</span></div>
-    <div><strong>Ordem recomendada</strong><span>Introdução ao Atom-S → Controle Remoto Web → Editor de Movimentos → Desenvolvimento de Movimentos Personalizados</span></div>
+    <div><strong>Recomendado para</strong><span>Usuários iniciantes de humanoides bípedes de mesa que desejam experimentar rapidamente o ensino de movimentos e o controle remoto</span></div>
+    <div><strong>Objetivo de aprendizado</strong><span>Começar a usar imediatamente, ensinar movimentos com o editor de movimentos na web e exportar movimentos personalizados para o firmware do controlador</span></div>
+    <div><strong>Ordem recomendada</strong><span>Atom-S Introdução → Controle Remoto Web → Editor de Movimentos → Desenvolvimento de Movimentos Personalizados</span></div>
   </div>
   <div className="learning-steps">
-    <a className="step-card" href="/pt-br/atom_s/"><span className="step-index">1</span><div><b>Guia de Introdução ao Atom-S</b><small>Ligue, conecte o controlador remoto web e registre sua primeira sequência de movimento de ensino contínuo.</small></div><em>Obrigatório para iniciantes</em></a>
+    <a className="step-card" href="/pt-br/atom_s/"><span className="step-index">1</span><div><b>Guia de Introdução ao Atom-S</b><small>Ligue, conecte o controlador remoto web e grave sua primeira sequência de movimento de ensino contínuo.</small></div><em>Obrigatório para iniciantes</em></a>
     <a className="step-card" href="/pt-br/atom_x/"><span className="step-index">2</span><div><b>Guia de Introdução ao Atom-X</b><small>O Atom-X funciona exatamente como o Atom-S — siga o mesmo fluxo de trabalho para começar rapidamente.</small></div><em>Mesma linha</em></a>
   </div>
 </div>
@@ -383,13 +386,13 @@ import '/src/css/robotics-page-style.css';
       <p>Para depuração de motores, protocolos de comunicação e solução de problemas de juntas.</p>
     </div>
     <div className="resource-grid">
-      <a href="/pt-br/myactuator_series/">Série MyActuator X</a>
-      <a href="/pt-br/damiao_series/">Série Damiao DM43</a>
-      <a href="/pt-br/feetech_servo/">Servo Feetech STS3215</a>
-      <a href="/pt-br/hightorque_control/">Série HighTorque</a>
-      <a href="/pt-br/fashionstar_servo/">Série Fashionstar</a>
-      <a href="/pt-br/stackforce_series/">Série Stackforce</a>
-      <a href="/pt-br/robstride_control/">RobStride Control</a>
+      <a href="/pt-br/myactuator_series/">MyActuator X Série</a>
+      <a href="/pt-br/damiao_series/">Damiao DM43 Série</a>
+      <a href="/pt-br/feetech_servo/">Feetech STS3215 Servo</a>
+      <a href="/pt-br/hightorque_control/">HighTorque Série</a>
+      <a href="/pt-br/fashionstar_servo/">Fashionstar Série</a>
+      <a href="/pt-br/stackforce_series/">Stackforce Série</a>
+      <a href="/pt-br/robstride_control/">RobStride Controle</a>
     </div>
   </section>
 

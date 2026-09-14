@@ -895,6 +895,9 @@ reComputer Industrial R2200 具备来自 CM5 的 2 路原生 HDMI 接口，支�
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.16-1.png" style={{width:200, height:'auto'}}/></div>
 reComputer Industrial R2200 配备由电容供电的 RTC 电路，即使在断电情况下也能保持计时功能。
 
+:::note
+使用 RTC 时，如果设备突然断电，需要等待 RTC 完全放电后再重新接通电源并重启。若未完全放电，设备可能无法满足重启条件，从而无法正常启动。
+:::
 
 ### 看门狗
 

@@ -1,0 +1,1691 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "respeaker_faq_approved_manifest",
+  "lastVerifiedAt": "2026-09-01",
+  "entries": [
+    {
+      "publicFaqId": "xvf3800_usb_not_detected_pi5_linux",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array"
+      ],
+      "primaryDomain": "connectivity",
+      "secondaryDomains": [
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-08-31",
+      "qualityScore": 86,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "usb-not-detected-pi5-linux",
+      "questionEn": "Why is my XVF3800 not detected over USB on Raspberry Pi 5 or Linux?",
+      "directAnswerEn": "First verify the data cable, the XMOS USB-C port, and host enumeration. If the device is running I2S firmware or its normal firmware no longer responds, enter Safe Mode and flash an official USB firmware image through USB DFU.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array connected to Raspberry Pi 5 or another Linux host",
+      "prerequisites": [
+        "A known-good USB data cable connected to the XMOS USB-C port near the 3.5 mm jack",
+        "dfu-util installed on the Linux host",
+        "The complete official firmware repository downloaded or cloned"
+      ],
+      "steps": [
+        "Run `lsusb` and `arecord -l`. If neither command shows the device, try a known-good data cable and a direct host USB port before changing firmware.",
+        "Power the XVF3800 off. Hold the Mute button while reconnecting power. A blinking red LED confirms Safe Mode.",
+        "Run `sudo dfu-util -l`. Safe Mode should expose the DFU Upgrade and Factory partitions.",
+        "Flash an official USB image with `sudo dfu-util -R -e -a 1 -D /path/to/respeaker_xvf3800_usb_dfu_firmware.bin`.",
+        "After the automatic restart, repeat `lsusb` and `arecord -l`, then read `VERSION` with the official host-control tool."
+      ],
+      "successCriteria": [
+        "Linux enumerates the XVF3800 as a USB device and lists it as an ALSA capture device",
+        "The official host-control tool can read the firmware version"
+      ],
+      "notes": [
+        "I2S firmware is intended for an I2S host and does not provide normal USB audio enumeration.",
+        "If Safe Mode is also absent from `dfu-util -l`, continue with cable, power, and host-port isolation; do not assume firmware recovery can fix a device that never enumerates."
+      ],
+      "officialReferences": [
+        {
+          "title": "Getting Started with reSpeaker XVF3800 USB Mic Array",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/"
+        },
+        {
+          "title": "Official XVF3800 DFU guide",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/dfu_guide.md"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "Raspberry Pi 5",
+        "Linux",
+        "USB not detected",
+        "lsusb",
+        "arecord",
+        "Safe Mode",
+        "DFU"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_recover_wrong_firmware",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array"
+      ],
+      "primaryDomain": "firmware_software",
+      "secondaryDomains": [
+        "connectivity"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-08-31",
+      "qualityScore": 92,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "recover-wrong-firmware",
+      "questionEn": "How do I recover an XVF3800 after flashing the wrong firmware?",
+      "directAnswerEn": "Use the factory Safe Mode, then reflash the correct official image through the update method supported by that mode. For recovery back to USB audio, use USB DFU from Safe Mode.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array that no longer boots or enumerates normally after a firmware or saved-configuration change",
+      "prerequisites": [
+        "A known-good USB data cable connected to the XMOS USB-C port near the 3.5 mm jack",
+        "dfu-util installed",
+        "The correct official firmware image for the intended USB or I2S operating mode"
+      ],
+      "steps": [
+        "Disconnect power completely.",
+        "Hold the Mute button and reconnect power. Keep holding until the red LED blinks; this indicates the factory Safe Mode is active.",
+        "Run `dfu-util -l` on Windows or macOS, or `sudo dfu-util -l` on Linux. Confirm that DFU Upgrade and DFU Factory interfaces are present.",
+        "To restore USB operation, flash the selected official USB image with `dfu-util -R -e -a 1 -D /path/to/firmware.bin` (use `sudo` on Linux).",
+        "Let the board restart, then verify USB audio enumeration and read `VERSION` with the official host-control tool."
+      ],
+      "successCriteria": [
+        "The board leaves Safe Mode and enumerates in its intended operating mode",
+        "The reported firmware version matches the image that was flashed"
+      ],
+      "notes": [
+        "USB firmware supports USB DFU; I2S firmware supports I2C DFU; factory Safe Mode supports both.",
+        "Download the complete official repository or clone it. Do not save a GitHub HTML page as a firmware binary."
+      ],
+      "officialReferences": [
+        {
+          "title": "XVF3800 Safe Mode and firmware update guide",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/"
+        },
+        {
+          "title": "Official XVF3800 firmware repository",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "wrong firmware",
+        "bricked",
+        "Safe Mode",
+        "USB DFU",
+        "dfu-util",
+        "recovery"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_48khz_usb_support",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array"
+      ],
+      "primaryDomain": "product_business",
+      "secondaryDomains": [
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-08-31",
+      "qualityScore": 84,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "usb-48-khz-support",
+      "questionEn": "Does the XVF3800 USB 4-Mic Array support 48 kHz over USB?",
+      "directAnswerEn": "Yes. Use the dedicated official `respeaker_xvf3800_usb_dfu_firmware_v2.1.0_48k2ch.bin` image. Its filename identifies the intended 48 kHz, two-channel USB profile; do not infer 48 kHz support from the generic v2.1.0 image.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array used for USB capture on Windows, Linux, or macOS",
+      "prerequisites": [
+        "The complete current official firmware repository, including the exact `_v2.1.0_48k2ch.bin` image",
+        "A known-good USB data connection to the XMOS USB-C port and `dfu-util` installed on the host",
+        "A recording application that can display and select the formats exposed by the active USB device"
+      ],
+      "steps": [
+        "Clone or download the complete official repository and select `xmos_firmwares/usb/respeaker_xvf3800_usb_dfu_firmware_v2.1.0_48k2ch.bin`.",
+        "Flash that image through USB DFU with the official XVF3800 update procedure, then allow the device to restart.",
+        "Inspect the formats reported by the restarted USB audio device. Select 48,000 Hz and two capture channels only if the host exposes that combination.",
+        "Start a short test recording and confirm that capture begins without a format-negotiation error."
+      ],
+      "successCriteria": [
+        "The host reports a 48,000 Hz, two-channel capture mode for the flashed XVF3800 image",
+        "A two-channel recording starts at 48,000 Hz without a format-negotiation error"
+      ],
+      "notes": [
+        "The official USB changelog marks v2.1.0 as current, and the current directory also contains dedicated `v2.1.0_16k6ch` and `v2.1.0_48k2ch` images.",
+        "The repository directory and changelog do not publish a USB Audio Class descriptor dump for these binaries. This FAQ therefore does not claim a USB sample width or any additional sample-rate/channel combinations.",
+        "The XVF3800 Wiki firmware/sample-rate section must be corrected with or before publication of this FAQ because its older all-16-kHz statement conflicts with the current firmware directory."
+      ],
+      "officialReferences": [
+        {
+          "title": "Current official XVF3800 USB firmware directory",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb"
+        },
+        {
+          "title": "Official XVF3800 USB firmware changelog",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/usb/changelog.md"
+        },
+        {
+          "title": "Official commit adding 48 kHz USB support",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/commit/8b0967aef554c2d270e70d428ed4e19f4ab811b8"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "48 kHz",
+        "USB audio",
+        "two channel",
+        "sample rate",
+        "v2.1.0_48k2ch"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_led_effect_5_range",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array"
+      ],
+      "primaryDomain": "firmware_software",
+      "secondaryDomains": [],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-08-31",
+      "qualityScore": 87,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "led-effect-5-out-of-range",
+      "questionEn": "Why does `LED_EFFECT 5` return an out-of-range error on XVF3800?",
+      "directAnswerEn": "Ring mode (`LED_EFFECT = 5`) and `LED_RING_COLOR` require USB firmware v2.0.7 or later plus a current host-control command map. Older firmware or an older tool only recognizes effects 0 through 4.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array using USB firmware and the official Python host-control tool",
+      "prerequisites": [
+        "USB firmware v2.0.7 or later; v2.1.0 is the current changelog version as of verification",
+        "The current `python_control/xvf_host.py` from the official repository"
+      ],
+      "steps": [
+        "Run `python xvf_host.py VERSION` and confirm the USB firmware is v2.0.7 or later.",
+        "If it is older, flash a current official USB image and restart the device.",
+        "Set all 12 ring colors with `python xvf_host.py LED_RING_COLOR --values` followed by exactly 12 color values.",
+        "Enable ring mode with `python xvf_host.py LED_EFFECT --values 5`."
+      ],
+      "successCriteria": [
+        "The tool accepts effect value 5 without an out-of-range error",
+        "All 12 LEDs display the supplied ring colors"
+      ],
+      "notes": [
+        "`LED_RING_COLOR` requires exactly 12 values, one per LED.",
+        "Updating only the script does not add the command to old firmware; the firmware and command map must both support it."
+      ],
+      "officialReferences": [
+        {
+          "title": "XVF3800 USB firmware changelog",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/usb/changelog.md"
+        },
+        {
+          "title": "Official XVF3800 Python host-control tool",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/python_control/xvf_host.py"
+        },
+        {
+          "title": "Official host-control usage guide",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/python_control/readme.md"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "LED_EFFECT",
+        "LED_RING_COLOR",
+        "out of range",
+        "ring mode",
+        "v2.0.7"
+      ]
+    },
+    {
+      "publicFaqId": "lite_esphome_compile_failure",
+      "productKey": "respeaker_lite",
+      "productVariants": [
+        "ReSpeaker Lite with XIAO ESP32S3"
+      ],
+      "primaryDomain": "firmware_software",
+      "secondaryDomains": [],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-08-31",
+      "qualityScore": 86,
+      "wikiSlug": "/respeaker_lite_faq",
+      "wikiAnchor": "esphome-compile-failure",
+      "questionEn": "How do I troubleshoot an ESPHome compile failure for ReSpeaker Lite with XIAO ESP32S3?",
+      "directAnswerEn": "Start from the current configuration in the community-maintained repository linked by the Seeed Wiki and use an ESPHome version that satisfies its current `min_version`. The final `main.cpp.o Error 1` line only reports that a build target failed; it does not identify the root cause.",
+      "appliesTo": "ReSpeaker Lite with XIAO ESP32S3 using the community ESPHome integration linked by the official Seeed Wiki",
+      "prerequisites": [
+        "A backup of your substitutions, Wi-Fi credentials, API keys, and other local secrets",
+        "Access to the complete ESPHome Device Builder or command-line compilation log"
+      ],
+      "steps": [
+        "Open the current upstream `config/respeaker-satellite-dashboard-example.yaml` and the base configuration it imports. Do not start from the long inline YAML snapshot in the Wiki.",
+        "Check `esphome.min_version` in the current upstream base and update ESPHome if necessary. It is `2026.6.0` at the verification date, but upstream may raise it later.",
+        "Reapply only your substitutions and secrets to the current example. Avoid copying old component blocks into the new configuration unless you have verified that they are still required.",
+        "Remove the previous build output with the ESPHome clean-build action or the matching CLI clean command, then compile the current configuration again.",
+        "If compilation still fails, find the first configuration or compiler error above the terminal target-failure line. Save that error, the surrounding log, the ESPHome version, and the upstream configuration revision before requesting help."
+      ],
+      "successCriteria": [
+        "ESPHome accepts the current configuration without a minimum-version or configuration-validation error",
+        "Compilation completes and produces a flashable firmware artifact for the XIAO ESP32S3"
+      ],
+      "notes": [
+        "The linked integration is community-maintained, warns that breaking changes are possible, and may move independently of the inline Wiki snapshot.",
+        "The current upstream `min_version`, not a permanently pinned version in this FAQ, is the authoritative compilation floor.",
+        "A terminal `main.cpp.o Error 1` line alone is insufficient for diagnosis; different earlier errors can end with the same target-failure summary."
+      ],
+      "officialReferences": [
+        {
+          "title": "Seeed Wiki: ReSpeaker Lite Home Assistant guide",
+          "url": "https://wiki.seeedstudio.com/respeaker_lite_ha/"
+        },
+        {
+          "title": "Wiki-linked community ReSpeaker Lite ESPHome integration",
+          "url": "https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration"
+        },
+        {
+          "title": "Current upstream ReSpeaker Lite base configuration",
+          "url": "https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration/blob/main/config/common/respeaker-satellite-base.yaml"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "ESPHome",
+        "compile failure",
+        "main.cpp.o",
+        "Error 1",
+        "min_version",
+        "XIAO ESP32S3"
+      ]
+    },
+    {
+      "publicFaqId": "lite_windows_usb_detection",
+      "productKey": "respeaker_lite",
+      "productVariants": [
+        "ReSpeaker Lite standalone",
+        "ReSpeaker Lite with XIAO ESP32S3"
+      ],
+      "primaryDomain": "connectivity",
+      "secondaryDomains": [
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-08-31",
+      "qualityScore": 85,
+      "wikiSlug": "/respeaker_lite_faq",
+      "wikiAnchor": "windows-usb-audio-detection",
+      "questionEn": "Why is ReSpeaker Lite not appearing as a USB audio device on Windows?",
+      "directAnswerEn": "Connect Windows to the ReSpeaker Lite XMOS USB-C port and make sure the XMOS is running USB firmware. I2S firmware is for communication with XIAO ESP32S3 and is not expected to enumerate as the normal ReSpeaker Lite USB sound device.",
+      "appliesTo": "ReSpeaker Lite standalone or ReSpeaker Lite with XIAO ESP32S3 when USB audio on Windows is the intended mode",
+      "prerequisites": [
+        "A known-good USB data cable connected to the ReSpeaker Lite XMOS USB-C port",
+        "The official USB firmware image when USB audio is required"
+      ],
+      "steps": [
+        "Confirm that the cable is connected to the ReSpeaker Lite XMOS USB-C port, not only to the XIAO ESP32S3 USB port.",
+        "Confirm that the XMOS firmware is the USB variant. If it is the I2S variant, flash the current USB firmware using the official DFU procedure.",
+        "If Device Manager shows ReSpeaker Lite with a warning after flashing USB firmware, uninstall that device, select the option to remove its driver software when offered, and power-cycle the board. Windows should reinstall the USB audio driver.",
+        "Open Windows Sound settings and select ReSpeaker Lite as the input device."
+      ],
+      "successCriteria": [
+        "Windows Device Manager shows ReSpeaker Lite without a warning icon",
+        "Windows Sound settings list ReSpeaker Lite as an audio input and a test recording contains speech"
+      ],
+      "notes": [
+        "This public FAQ is intentionally limited to Windows USB-audio detection. COM-port and sketch-upload failures belong to a separate XIAO programming FAQ.",
+        "A XIAO USB-JTAG or serial entry is not evidence that the XMOS USB-audio interface is active."
+      ],
+      "officialReferences": [
+        {
+          "title": "Getting Started with reSpeaker Lite",
+          "url": "https://wiki.seeedstudio.com/reSpeaker_usb_v3/"
+        },
+        {
+          "title": "ReSpeaker Lite Voice Assistant Kit",
+          "url": "https://wiki.seeedstudio.com/xiao_respeaker/"
+        },
+        {
+          "title": "Official ReSpeaker Lite firmware directory",
+          "url": "https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "Windows",
+        "USB audio",
+        "yellow exclamation",
+        "Device Manager",
+        "USB firmware",
+        "I2S firmware"
+      ]
+    },
+    {
+      "publicFaqId": "flex_xvf_host_no_device_found",
+      "productKey": "flex_xvf3800",
+      "productVariants": [
+        "Flex XVF3800 Linear-4",
+        "Flex XVF3800 Circular-4"
+      ],
+      "primaryDomain": "connectivity",
+      "secondaryDomains": [
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-08-31",
+      "qualityScore": 88,
+      "wikiSlug": "/respeaker_flex_faq",
+      "wikiAnchor": "xvf-host-no-device-found",
+      "questionEn": "Why does the ReSpeaker Flex control script report `No device found`?",
+      "directAnswerEn": "The current official Flex Python script supports Flex USB control. `No device found` means its USB scan returned no device matching vendor ID `0x2886` and any optional PID filter; it does not mean that Flex is unsupported. Check the XMOS USB port, dependencies, firmware mode, and geometry-specific USB image.",
+      "appliesTo": "ReSpeaker Flex XVF3800 Linear-4 and Circular-4 connected to a Windows, Linux, or macOS host for USB control",
+      "prerequisites": [
+        "The current `python_control/xvf_host.py` from the official ReSpeaker Flex repository",
+        "Python 3.6 or later, `pyusb`, and the platform's `libusb` support; the current script also requires `libusb-package` on Windows",
+        "A known-good USB data cable connected to the XMOS USB-C port near the RST button"
+      ],
+      "steps": [
+        "Connect the host to the Flex XMOS USB-C port near the RST button, not to a XIAO USB port, and confirm that the host detects a USB device.",
+        "Install the dependencies documented by the Flex guide. Use `python -m pip install pyusb`; on Windows also install `libusb-package`, and on Linux or macOS ensure the system `libusb` library is available.",
+        "Run `python python_control/xvf_host.py VERSION` from the current Flex repository without forcing an old PID. The current script searches VID `0x2886` across PIDs when `--pid` is omitted.",
+        "If no device is found and the board may be running I2S or incorrect firmware, power it off, hold the Boot button, reconnect power, and confirm both DFU partitions with `dfu-util -l` (use `sudo` on Linux).",
+        "Flash a current Flex USB image with `dfu-util -R -e -a 1 -D /path/to/firmware.bin`. Select a filename beginning `respeaker_flex_usb_c` for Circular-4 or `respeaker_flex_usb_l` for Linear-4, and select the required sample-rate/channel profile from the current official directory.",
+        "After the board restarts, run the `VERSION` command again."
+      ],
+      "successCriteria": [
+        "The script prints `Connected device` with a ReSpeaker VID/PID",
+        "The `VERSION` command returns the Flex firmware version"
+      ],
+      "notes": [
+        "Do not use the obsolete conclusion that only the older XVF3800 USB product supports host control; official Flex documentation and code now provide a Flex-specific USB tool.",
+        "Safe Mode on Flex uses the Boot button. It supports USB DFU recovery when normal USB firmware is absent or unresponsive.",
+        "The current official firmware directory carries geometry-coded v1.0.3 images: `c` denotes Circular-4 and `l` denotes Linear-4. Never flash a geometry-mismatched image."
+      ],
+      "officialReferences": [
+        {
+          "title": "Getting Started with ReSpeaker Flex",
+          "url": "https://wiki.seeedstudio.com/respeaker_flex_introduction/"
+        },
+        {
+          "title": "Current official ReSpeaker Flex Python control script",
+          "url": "https://github.com/respeaker/reSpeaker_Flex/blob/main/python_control/xvf_host.py"
+        },
+        {
+          "title": "Current official ReSpeaker Flex USB firmware directory",
+          "url": "https://github.com/respeaker/reSpeaker_Flex/tree/main/xmos_firmwares/usb"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "ReSpeaker Flex",
+        "No device found",
+        "xvf_host",
+        "USB firmware",
+        "Linear-4",
+        "Circular-4",
+        "Safe Mode"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_external_speaker_required",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array",
+        "XVF3800 USB 4-Mic Array with XIAO ESP32S3"
+      ],
+      "primaryDomain": "hardware",
+      "secondaryDomains": [
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 88,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "external-speaker-required",
+      "questionEn": "Does the XVF3800 have a built-in speaker?",
+      "directAnswerEn": "No. The XVF3800 is a microphone array and audio-processing device; it requires an external output device. Use the 3.5 mm headphone jack for headphones or active speakers, or the onboard JST speaker interface for a compatible amplified speaker.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array, with or without XIAO ESP32S3",
+      "prerequisites": [
+        "An external headphone, active speaker, or compatible speaker for the documented JST output",
+        "A playback source configured for the active USB or I2S operating mode"
+      ],
+      "steps": [
+        "Choose the 3.5 mm headphone output or the onboard JST speaker interface shown in the official hardware overview.",
+        "Connect the external output device before starting playback.",
+        "Play a known audio sample and select the XVF3800 output on the host when USB mode is in use."
+      ],
+      "successCriteria": [
+        "Audio is heard from the connected external output device",
+        "No sound is expected from the microphone-array enclosure by itself"
+      ],
+      "notes": [
+        "The public hardware overview documents a 3.5 mm headphone jack and a JST speaker interface, but no built-in speaker.",
+        "Do not infer a specific connector pinout or third-party speaker model beyond the current official hardware documentation."
+      ],
+      "officialReferences": [
+        {
+          "title": "Getting Started with ReSpeaker XVF3800",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "built-in speaker",
+        "external speaker",
+        "3.5 mm",
+        "JST",
+        "audio output"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_open_casing_safely",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array with enclosure"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "hardware"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 84,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "open-casing-safely",
+      "questionEn": "How do I open the XVF3800 casing without damaging it?",
+      "directAnswerEn": "Power and disconnect the device first, then gently lift along an enclosure edge with a fingernail. Release one of the three locking clips before working around the remaining clips; do not force the cover or use a sharp metal tool.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array supplied with the clip-fit enclosure",
+      "prerequisites": [
+        "The device is fully disconnected from USB, speaker wiring, and all other power sources",
+        "A clean work surface where the board and enclosure will not be scratched"
+      ],
+      "steps": [
+        "Disconnect all cables and place the enclosure on a clean surface.",
+        "Use a fingernail to lift gently along one edge until the first locking clip releases.",
+        "Continue around the edge and release the other two clips without twisting the cover.",
+        "Stop if a clip does not move with gentle pressure; reposition at the clip instead of forcing the enclosure."
+      ],
+      "successCriteria": [
+        "The cover separates with all three clips intact",
+        "The PCB, connectors, and enclosure show no tool or pry damage"
+      ],
+      "notes": [
+        "The official Wiki identifies three locking clips and recommends lifting the edges gently with fingernails.",
+        "Opening the casing is separate from any unsupported PCB modification."
+      ],
+      "officialReferences": [
+        {
+          "title": "XVF3800 casing troubleshooting guidance",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#how-can-i-open-the-casing-without-damaging-it"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "open casing",
+        "enclosure",
+        "locking clips",
+        "JST access"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_mechanical_design_files",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array",
+        "XVF3800 USB 4-Mic Array with XIAO ESP32S3"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "hardware"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 86,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "mechanical-design-files",
+      "questionEn": "Where can I get XVF3800 mechanical files for an enclosure design?",
+      "directAnswerEn": "Use the official Wiki Resources section. It publishes a 2D mechanical drawing, a board-level 3D STEP model, and separate upper and lower enclosure STEP files. These are the public mechanical references; the page does not publish a component BOM or guarantee that every component part number is included.",
+      "appliesTo": "Mechanical integration of the ReSpeaker XVF3800 USB 4-Mic Array and its published enclosure",
+      "prerequisites": [
+        "A PDF viewer for the 2D drawing or STEP-compatible CAD software for the 3D files",
+        "Confirmation of the exact board and enclosure variant being integrated"
+      ],
+      "steps": [
+        "Open the Resources section of the current XVF3800 getting-started page.",
+        "Download the 2D mechanical drawing and the relevant board or enclosure STEP files.",
+        "Import the files into the CAD tool and verify mounting holes, connector clearances, and enclosure halves against the intended product variant.",
+        "Request clarification before release if the design depends on a component part number or tolerance that is absent from the public files."
+      ],
+      "successCriteria": [
+        "The official 2D or STEP file opens in the selected viewer or CAD tool",
+        "The enclosure design is based only on dimensions actually present in the published file"
+      ],
+      "notes": [
+        "The public Resources section is authoritative for the available 2D and 3D files.",
+        "Do not claim unpublished component part numbers, acoustic tolerances, or board-to-cover distance limits."
+      ],
+      "officialReferences": [
+        {
+          "title": "XVF3800 official mechanical resources",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#resources"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "mechanical drawing",
+        "STEP",
+        "3D model",
+        "enclosure",
+        "mounting holes"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_six_channel_silent_inputs",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array"
+      ],
+      "primaryDomain": "audio",
+      "secondaryDomains": [
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 91,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "six-channel-silent-inputs",
+      "questionEn": "Why are some inputs silent with the XVF3800 six-channel USB firmware?",
+      "directAnswerEn": "On Linux, the six capture controls can be muted or set to zero even when the firmware is working. Use the current six-channel USB image, enable all capture switches in ALSA, set nonzero capture levels, and save the mixer state. The current firmware changelog defines USB channels 3 through 6 as independently routable and records the older six-channel profile's raw-microphone mapping.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array running an official six-channel USB firmware profile on Linux",
+      "prerequisites": [
+        "The current official repository and a six-channel USB image selected deliberately",
+        "ALSA utilities including `arecord`, `amixer`, and `alsactl`",
+        "The actual ALSA card number assigned to the XVF3800"
+      ],
+      "steps": [
+        "Run `arecord -l` and record the XVF3800 ALSA card number as `N`.",
+        "Run `amixer -c N cset numid=8 on,on,on,on,on,on` to enable all six capture switches.",
+        "Run `amixer -c N cset numid=10 60,60,60,60,60,60`, adjusting the nonzero level if required.",
+        "Run `sudo alsactl store N`, then make a new six-channel test recording and inspect every channel.",
+        "If silence returns after a USB reset, verify that the flashed image is current; the official changelog records USB reset recovery fixes in v2.0.10 and newer images supersede that release."
+      ],
+      "successCriteria": [
+        "A new six-channel recording contains nonzero samples on every enabled channel that has an active source",
+        "The mixer controls remain enabled after reconnecting or rebooting the Linux host"
+      ],
+      "notes": [
+        "Channel numbering can be shown as 1-based channel numbers or 0-based software indices; state the convention when inspecting a recording.",
+        "Do not use the stale claim that a standard six-channel profile exposes a playback-reference channel: the current official changelog documents raw microphone signals on channels 3 through 6 of the older six-channel profile.",
+        "The FAQ does not prescribe custom `AUDIO_MGR_OP_CH3` through `AUDIO_MGR_OP_CH6` routing values because the public changelog announces the commands but does not publish a complete source-value recipe."
+      ],
+      "officialReferences": [
+        {
+          "title": "XVF3800 six-channel troubleshooting",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#why-are-some-channels-silent-with-the-xvf3800-6-channel-firmware"
+        },
+        {
+          "title": "Current XVF3800 USB firmware changelog",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/usb/changelog.md"
+        },
+        {
+          "title": "Current XVF3800 USB firmware directory",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "six channel",
+        "silent channels",
+        "raw microphones",
+        "ALSA",
+        "amixer",
+        "capture switch"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_i2c_command_reference",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array with XIAO ESP32S3"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 93,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "i2c-command-reference",
+      "questionEn": "Where is the XVF3800 I2C command list, and how do I verify I2C control?",
+      "directAnswerEn": "Use the official XVF3800 I2C command reference. The host is the I2C master, the XVF3800 is the slave at 7-bit address `0x2C`, and reads use a command byte with bit 7 set followed by a response whose first byte is status. Start with the documented `VERSION` read before sending tuning or routing writes.",
+      "appliesTo": "ReSpeaker XVF3800 connected to XIAO ESP32S3 or another supported embedded I2C host",
+      "prerequisites": [
+        "Firmware and wiring for the intended I2S or embedded operating mode",
+        "An I2C master configured for the board's documented SDA and SCL pins",
+        "The current official I2C command reference"
+      ],
+      "steps": [
+        "Configure the host for the XVF3800 7-bit I2C address `0x2C`.",
+        "Use the documented write frame `[resid] [cmd] [write_byte_num] [data...]`; for reads, send `[resid] [cmd | 0x80] [read_len + 1]` before requesting the response.",
+        "Implement the `VERSION` example with resource ID 48, command ID 0, and a three-byte payload.",
+        "Treat response status `0` as success and status `64` as retry; do not parse payload data as valid when the status is not successful.",
+        "After `VERSION` works, copy only the required command's resource ID, command ID, type, value count, and direction from the current command table."
+      ],
+      "successCriteria": [
+        "The I2C transaction returns status 0 and a three-byte firmware version",
+        "The reported version is plausible for the firmware image installed on the XVF3800"
+      ],
+      "notes": [
+        "I2C is the control plane; PCM audio uses I2S in the embedded mode and is not transported as I2C parameter traffic.",
+        "Parameter byte count, type, and value range are command-specific and must come from the current official table."
+      ],
+      "officialReferences": [
+        {
+          "title": "Official XVF3800 I2C command reference",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf_3800_i2c_list/"
+        },
+        {
+          "title": "XVF3800 with XIAO ESP32S3 getting started",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "I2C",
+        "0x2C",
+        "RESID",
+        "CMDID",
+        "VERSION",
+        "status 64"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_linux_speaker_volume_low",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array"
+      ],
+      "primaryDomain": "audio",
+      "secondaryDomains": [
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 89,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "linux-speaker-volume-low",
+      "questionEn": "How do I increase low XVF3800 playback volume on Linux?",
+      "directAnswerEn": "Select the XVF3800 sound card in `alsamixer`, raise its `PCM-1` control to 100%, and save the ALSA state before disconnecting the device. If the output is still too quiet, verify the external output device first and then use the documented PulseAudio control as an optional host-side adjustment.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array used as a playback device on an ALSA-based Linux host",
+      "prerequisites": [
+        "An external headphone, active speaker, or compatible speaker connected to a documented XVF3800 output",
+        "ALSA mixer utilities installed",
+        "The XVF3800 visible as a Linux playback sound card"
+      ],
+      "steps": [
+        "Run `alsamixer`, press F6, and select the XVF3800 sound card.",
+        "Navigate to `PCM-1` and raise it to 100% while playing a known test sample.",
+        "Press Esc, then run `sudo alsactl store` before unplugging the XVF3800.",
+        "If output remains low, verify the connected output device and cable; optionally install `pavucontrol` and inspect the host playback level."
+      ],
+      "successCriteria": [
+        "The known test sample is audible at an appropriate level through the external output device",
+        "The ALSA `PCM-1` level remains set after the host or device is restarted"
+      ],
+      "notes": [
+        "This procedure is for USB playback on Linux; it is not an I2S codec-register tuning procedure.",
+        "Increasing software volume beyond 100% can clip audio; use it only after confirming the normal mixer and hardware path."
+      ],
+      "officialReferences": [
+        {
+          "title": "XVF3800 Linux speaker-volume troubleshooting",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#does-playback-sound-from-speaker-output-not-enough-"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "low volume",
+        "Linux",
+        "ALSA",
+        "alsamixer",
+        "PCM-1",
+        "pavucontrol"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_usb_dfu_without_safe_mode",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array"
+      ],
+      "primaryDomain": "firmware_software",
+      "secondaryDomains": [
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 92,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "usb-dfu-without-safe-mode",
+      "questionEn": "Must I enter Safe Mode before updating XVF3800 USB firmware?",
+      "directAnswerEn": "No, not when the currently running USB firmware exposes the normal DFU Upgrade interface. Run `dfu-util -l`; if it lists the XVF3800 DFU Upgrade target, flash the selected official USB image directly. Use Safe Mode when the device is running I2S firmware, the normal firmware does not respond, or recovery is otherwise required.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array being updated from a responsive USB firmware on Windows, macOS, or Linux",
+      "prerequisites": [
+        "A known-good data cable connected to the XMOS USB-C port near the 3.5 mm jack",
+        "`dfu-util` installed and permitted to access the device",
+        "The complete official repository and the exact USB image selected for the required profile"
+      ],
+      "steps": [
+        "Run `dfu-util -l` (`sudo dfu-util -l` on Linux when required).",
+        "If `reSpeaker DFU Upgrade` appears as alternate setting 1, flash with `dfu-util -R -e -a 1 -D /path/to/official_usb_firmware.bin`.",
+        "Wait for the automatic restart caused by `-R`, then run `dfu-util -l` and the official `VERSION` command to verify the device.",
+        "If the DFU Upgrade interface is absent because I2S firmware is active or normal firmware is unresponsive, stop and follow the published Safe Mode recovery procedure instead."
+      ],
+      "successCriteria": [
+        "The DFU transfer completes without an error and the board restarts",
+        "The device reports the intended firmware version and enumerates in its intended USB profile"
+      ],
+      "notes": [
+        "Safe Mode is a recovery path, not a mandatory pre-step for every responsive USB-firmware update.",
+        "I2S firmware does not expose normal USB DFU; factory Safe Mode supports both USB DFU and I2C DFU.",
+        "Do not use a browser 'Save as' operation on a GitHub file page; clone or download the complete repository."
+      ],
+      "officialReferences": [
+        {
+          "title": "Official XVF3800 DFU guide",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/dfu_guide.md"
+        },
+        {
+          "title": "XVF3800 Safe Mode and firmware update guide",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#safe-mode"
+        },
+        {
+          "title": "Current XVF3800 USB firmware directory",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "Safe Mode",
+        "USB DFU",
+        "dfu-util",
+        "firmware update",
+        "DFU Upgrade"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3800_unique_device_serial",
+      "productKey": "xvf3800_usb_4_mic",
+      "productVariants": [
+        "XVF3800 USB 4-Mic Array"
+      ],
+      "primaryDomain": "product_business",
+      "secondaryDomains": [
+        "connectivity"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 83,
+      "wikiSlug": "/respeaker_xvf3800_faq",
+      "wikiAnchor": "unique-device-serial",
+      "questionEn": "Does the XVF3800 expose a unique device serial number?",
+      "directAnswerEn": "Yes. The current official hardware overview describes a built-in unique device serial number for identification and multi-device management. In USB or DFU enumeration, use the host-reported device serial field rather than the product SKU when associating a physical unit with an application record.",
+      "appliesTo": "ReSpeaker XVF3800 USB 4-Mic Array enumerated by a supported USB host",
+      "prerequisites": [
+        "A supported Windows, macOS, or Linux host",
+        "A data-capable connection to the XMOS USB-C port",
+        "A host enumeration tool such as `dfu-util -l` when the DFU interface is available"
+      ],
+      "steps": [
+        "Connect one XVF3800 to the host through the XMOS USB-C port.",
+        "Run the host's USB enumeration tool; `dfu-util -l` shows a `serial=` field when the DFU interface is visible.",
+        "Store the reported serial as the device identifier, not as a firmware version or SKU.",
+        "For a multi-device deployment, enumerate each unit separately and verify that the application associates the intended physical unit with its reported serial."
+      ],
+      "successCriteria": [
+        "The host reports a nonempty device serial for the connected XVF3800",
+        "The application can distinguish the intended unit using the reported serial rather than USB bus position"
+      ],
+      "notes": [
+        "The official product page calls this a unique device serial number and presents it as a multi-device-management feature.",
+        "This FAQ does not claim Android compatibility or full-duplex behavior; those were separate, unsupported parts of the source question."
+      ],
+      "officialReferences": [
+        {
+          "title": "XVF3800 hardware overview",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#hardware-overview"
+        },
+        {
+          "title": "Official XVF3800 DFU guide",
+          "url": "https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/dfu_guide.md"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "unique serial number",
+        "device identity",
+        "multi-device",
+        "USB serial",
+        "dfu-util"
+      ]
+    },
+    {
+      "publicFaqId": "lite_xiao_upload_bootloader_recovery",
+      "productKey": "respeaker_lite",
+      "productVariants": [
+        "ReSpeaker Lite with XIAO ESP32S3"
+      ],
+      "primaryDomain": "connectivity",
+      "secondaryDomains": [
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 91,
+      "wikiSlug": "/respeaker_lite_faq",
+      "wikiAnchor": "xiao-upload-bootloader-recovery",
+      "questionEn": "How do I recover the XIAO ESP32S3 when its port disappears or a sketch will not upload?",
+      "directAnswerEn": "Connect the computer to the XIAO ESP32S3 USB port, put the XIAO into BootLoader mode, and upload a minimal Blink sketch. This restores the XIAO programming path; it is separate from updating the ReSpeaker Lite XU316 audio firmware through the other USB port with `dfu-util`.",
+      "appliesTo": "ReSpeaker Lite Voice Assistant Kit with XIAO ESP32S3 when the XIAO port is missing or an Arduino sketch compiles but will not upload",
+      "prerequisites": [
+        "A known-good USB data cable connected to the XIAO ESP32S3 USB port",
+        "Arduino IDE with the current ESP32 board package and `XIAO ESP32S3` selected"
+      ],
+      "steps": [
+        "Confirm that the cable is connected to the XIAO ESP32S3 USB port, not the ReSpeaker Lite XMOS/XU316 audio-and-DFU port.",
+        "Press and hold the XIAO `BOOT` button, connect the XIAO USB port to the computer, and then release `BOOT`.",
+        "Select the newly visible XIAO port in Arduino IDE and upload `File > Examples > 01.Basics > Blink`.",
+        "Press Reset once and confirm that the Blink sketch runs. If the port still does not appear, save the complete upload error, operating system, selected board, and selected port before requesting support."
+      ],
+      "successCriteria": [
+        "A programming port appears for the XIAO ESP32S3",
+        "The Blink sketch uploads successfully and runs after reset"
+      ],
+      "notes": [
+        "The carrier-board USR and Mute buttons are not substitutes for the XIAO BOOT button.",
+        "This procedure does not change the ReSpeaker Lite USB/I2S audio firmware."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Lite Voice Assistant Kit",
+          "url": "https://wiki.seeedstudio.com/xiao_respeaker/"
+        },
+        {
+          "title": "XIAO ESP32S3 BootLoader mode and upload recovery",
+          "url": "https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#bootloader-mode"
+        }
+      ],
+      "skus": [
+        "110061601"
+      ],
+      "keywords": [
+        "XIAO ESP32S3",
+        "upload failed",
+        "missing COM port",
+        "BootLoader",
+        "BOOT button",
+        "Arduino IDE"
+      ]
+    },
+    {
+      "publicFaqId": "lite_step_file",
+      "productKey": "respeaker_lite",
+      "productVariants": [
+        "ReSpeaker Lite v1.1 board"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "hardware"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 87,
+      "wikiSlug": "/respeaker_lite_faq",
+      "wikiAnchor": "step-mechanical-file",
+      "questionEn": "Where can I download the ReSpeaker Lite STEP file?",
+      "directAnswerEn": "Download the public `ReSpeakerLitev1.1.step` model from the official ReSpeaker Lite Resources section. It is a board-level v1.1 model, not a complete Voice Assistant Kit, speaker, or enclosure assembly.",
+      "appliesTo": "Mechanical integration of a ReSpeaker Lite board that matches the published v1.1 model",
+      "prerequisites": [
+        "The hardware revision printed on the physical ReSpeaker Lite board",
+        "STEP-compatible CAD software"
+      ],
+      "steps": [
+        "Open the Resources section of the ReSpeaker Lite getting-started page.",
+        "Download `ReSpeakerLitev1.1.step` from the official file link.",
+        "Import the file into the CAD tool and compare mounting holes, board outline, and connector locations with the physical board revision.",
+        "Request clarification before release if the design depends on a kit-level speaker, enclosure, tolerance, or keep-out detail that is absent from the file."
+      ],
+      "successCriteria": [
+        "The STEP model imports successfully",
+        "Its mounting and connector features match the measured v1.1 board used in the design"
+      ],
+      "notes": [
+        "Do not treat the v1.1 board model as an assembly model for the full Voice Assistant Kit or as authoritative for another hardware revision."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Lite Resources",
+          "url": "https://wiki.seeedstudio.com/reSpeaker_usb_v3/#resource"
+        },
+        {
+          "title": "Official ReSpeaker Lite v1.1 STEP file",
+          "url": "https://files.seeedstudio.com/wiki/respeakerv3/ReSpeakerLitev1.1.step"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "STEP",
+        "3D model",
+        "mechanical",
+        "mounting holes",
+        "v1.1"
+      ]
+    },
+    {
+      "publicFaqId": "lite_speaker_output_options",
+      "productKey": "respeaker_lite",
+      "productVariants": [
+        "ReSpeaker Lite standalone",
+        "ReSpeaker Lite with XIAO ESP32S3"
+      ],
+      "primaryDomain": "hardware",
+      "secondaryDomains": [
+        "audio"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 90,
+      "wikiSlug": "/respeaker_lite_faq",
+      "wikiAnchor": "speaker-output-options",
+      "questionEn": "Which audio outputs are available on ReSpeaker Lite?",
+      "directAnswerEn": "ReSpeaker Lite provides a board speaker connector documented for the 5 W amplified-speaker path and a 3.5 mm output for headphones or an active speaker. The current official hardware description also states that inserting a 3.5 mm plug mutes the JST speaker path and switches output to the external device.",
+      "appliesTo": "ReSpeaker Lite standalone and ReSpeaker Lite with XIAO ESP32S3 when playback audio is configured",
+      "prerequisites": [
+        "A playback application or firmware path that sends audio to ReSpeaker Lite",
+        "A headphone, active speaker, or speaker matched to the documented connector path"
+      ],
+      "steps": [
+        "Power the system down before changing the speaker connection.",
+        "Use the 3.5 mm jack for headphones or an active speaker, or use the board speaker connector for the documented amplified-speaker path.",
+        "Power the system and begin playback at a low volume.",
+        "If the JST speaker becomes silent after a 3.5 mm plug is inserted, remove the plug to return to the default JST path."
+      ],
+      "successCriteria": [
+        "Playback is audible from the selected output",
+        "Inserting a 3.5 mm device switches playback away from the JST speaker path as documented"
+      ],
+      "notes": [
+        "The presence of an output connector does not prove that the host application has enabled playback or selected the correct firmware mode.",
+        "This FAQ does not recommend an unverified third-party speaker model or connector pinout."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Lite specification and pinout",
+          "url": "https://wiki.seeedstudio.com/reSpeaker_usb_v3/"
+        },
+        {
+          "title": "Official ReSpeaker Lite hardware repository",
+          "url": "https://github.com/respeaker/ReSpeaker_Lite#the-headphone-jack-detection-circuit"
+        }
+      ],
+      "skus": [
+        "107990273",
+        "110061601"
+      ],
+      "keywords": [
+        "speaker output",
+        "5 W",
+        "JST speaker",
+        "3.5 mm",
+        "headphones",
+        "active speaker"
+      ]
+    },
+    {
+      "publicFaqId": "lite_external_5v_power",
+      "productKey": "respeaker_lite",
+      "productVariants": [
+        "ReSpeaker Lite standalone",
+        "ReSpeaker Lite with XIAO ESP32S3"
+      ],
+      "primaryDomain": "hardware",
+      "secondaryDomains": [
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 86,
+      "wikiSlug": "/respeaker_lite_faq",
+      "wikiAnchor": "external-5v-power",
+      "questionEn": "Can I power ReSpeaker Lite directly from a single-cell lithium battery?",
+      "directAnswerEn": "Do not treat direct single-cell battery input as supported. The published ReSpeaker Lite power contract is 5 V through USB or the external 5 V supply pad. If a battery is required, regulate it to a stable 5 V before connecting the board.",
+      "appliesTo": "ReSpeaker Lite standalone and ReSpeaker Lite with XIAO ESP32S3 powered without a normal USB host",
+      "prerequisites": [
+        "A regulated 5 V supply sized for the board and any connected speaker load",
+        "Verified polarity and a common ground",
+        "The power source disconnected while wiring"
+      ],
+      "steps": [
+        "Configure and measure the regulator output before connecting ReSpeaker Lite; it must be a stable 5 V.",
+        "With power removed, connect regulated 5 V and ground to the documented external-power connection, or use a compliant 5 V USB supply.",
+        "Apply power and confirm that the power indicator turns on.",
+        "Verify the intended interface: USB enumeration for USB firmware or the official I2S test for an embedded I2S setup."
+      ],
+      "successCriteria": [
+        "The input remains at 5 V during startup and the intended load",
+        "The board powers consistently and completes the expected USB or I2S functional check"
+      ],
+      "notes": [
+        "Current public documentation does not publish a lower minimum input voltage, regulator dropout curve, or a contract for powering the board through a 3V3 pin. Do not infer those values from private schematic information."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Lite power specification and hardware overview",
+          "url": "https://wiki.seeedstudio.com/reSpeaker_usb_v3/"
+        }
+      ],
+      "skus": [
+        "107990273",
+        "110061601"
+      ],
+      "keywords": [
+        "5 V power",
+        "external power",
+        "single-cell battery",
+        "lithium battery",
+        "boost converter",
+        "3V3"
+      ]
+    },
+    {
+      "publicFaqId": "lite_i2s_static_noise_sample_rate",
+      "productKey": "respeaker_lite",
+      "productVariants": [
+        "ReSpeaker Lite with XIAO ESP32S3"
+      ],
+      "primaryDomain": "audio",
+      "secondaryDomains": [
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 92,
+      "wikiSlug": "/respeaker_lite_faq",
+      "wikiAnchor": "i2s-static-noise-sample-rate",
+      "questionEn": "Why do the ReSpeaker Lite I2S examples play loud static instead of audio?",
+      "directAnswerEn": "First make the sketch sample rate match the installed I2S firmware. The official recording/playback example is configured for 16,000 Hz, while the official firmware repository also provides images explicitly labeled for 48 kHz. Running the 16 kHz sketch against a 48 kHz image can make the stream unusable or sound like static.",
+      "appliesTo": "ReSpeaker Lite with XIAO ESP32S3 running the official I2S recording/playback or stream-generator examples",
+      "prerequisites": [
+        "The exact filename of the installed ReSpeaker Lite I2S firmware",
+        "The current official example and its `AudioInfo` configuration",
+        "A known-good speaker or headphone connected to a documented output"
+      ],
+      "steps": [
+        "Confirm that the XMOS/XU316 is running I2S firmware, not USB firmware.",
+        "Check the exact firmware filename in the official directory. A filename containing `48k` requires a 48,000 Hz I2S configuration; the standard v1.0.9 I2S image uses the 16,000 Hz example path.",
+        "For a 48 kHz image, change the example to `AudioInfo info(48000, 2, 32)`. For the standard 16 kHz image, retain `AudioInfo info(16000, 2, 32)`.",
+        "Rebuild and upload the sketch through the XIAO ESP32S3 USB port, then repeat the playback or loopback test."
+      ],
+      "successCriteria": [
+        "The configured sample rate matches the profile named by the installed firmware image",
+        "The test produces intelligible loopback audio or a clean generated tone instead of full-scale static"
+      ],
+      "notes": [
+        "Do not pin an old AudioTools library version solely because one case used it; the current public product evidence establishes the sample-rate boundary, not a permanent third-party-library version requirement.",
+        "If matching the rate does not resolve the symptom, run the separate official I2S link test before diagnosing hardware."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Lite recording and playback example",
+          "url": "https://wiki.seeedstudio.com/respeaker_record_and_play/"
+        },
+        {
+          "title": "Current official ReSpeaker Lite firmware profiles",
+          "url": "https://github.com/respeaker/ReSpeaker_Lite#latest-xmos-firmware"
+        }
+      ],
+      "skus": [
+        "110061601"
+      ],
+      "keywords": [
+        "static noise",
+        "I2S",
+        "16 kHz",
+        "48 kHz",
+        "AudioInfo",
+        "record playback"
+      ]
+    },
+    {
+      "publicFaqId": "lite_i2s_link_test",
+      "productKey": "respeaker_lite",
+      "productVariants": [
+        "ReSpeaker Lite with XIAO ESP32S3"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "audio",
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 90,
+      "wikiSlug": "/respeaker_lite_faq",
+      "wikiAnchor": "i2s-link-test",
+      "questionEn": "How do I test the I2S link between ReSpeaker Lite and XIAO ESP32S3?",
+      "directAnswerEn": "Run the official ReSpeaker Lite I2S test with a matching 16 kHz I2S firmware. The sketch writes a test signal, reads microphone-array samples, and prints `I2S RX pass!` when more than 16,000 of 32,000 received samples are neither zero nor `0xFFFF`.",
+      "appliesTo": "ReSpeaker Lite with XIAO ESP32S3 before troubleshooting no microphone audio or I2S playback",
+      "prerequisites": [
+        "Official ReSpeaker Lite 16 kHz I2S firmware installed on the XMOS/XU316",
+        "Arduino IDE configured for XIAO ESP32S3",
+        "A USB data connection to the XIAO ESP32S3 port"
+      ],
+      "steps": [
+        "Open the current official ReSpeaker Lite I2S Test page and copy its sketch without changing the documented I2S pins or 16,000 Hz rate.",
+        "Upload the sketch to the XIAO ESP32S3 and open Serial Monitor at 115200 baud.",
+        "Let the test complete its first read and, if needed, its second read.",
+        "Record the final `I2S RX pass!` or `I2S RX fail!` result before changing ESPHome, application, or hardware settings."
+      ],
+      "successCriteria": [
+        "The sketch initializes I2S and prints `I2S RX pass!`",
+        "The received sample stream is not entirely zero or `0xFFFF`"
+      ],
+      "notes": [
+        "A failed test is evidence that the documented I2S link check failed; by itself it does not prove a defective board or authorize a replacement diagnosis.",
+        "This 16 kHz test must not be used unchanged with a 48 kHz firmware profile."
+      ],
+      "officialReferences": [
+        {
+          "title": "Official ReSpeaker Lite I2S Test",
+          "url": "https://wiki.seeedstudio.com/respeaker_i2s_test/"
+        },
+        {
+          "title": "Official ReSpeaker Lite firmware repository",
+          "url": "https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares"
+        }
+      ],
+      "skus": [
+        "110061601"
+      ],
+      "keywords": [
+        "I2S test",
+        "I2S RX pass",
+        "I2S RX fail",
+        "0xFFFF",
+        "65535",
+        "XIAO ESP32S3"
+      ]
+    },
+    {
+      "publicFaqId": "flex_fpc_cable_spec",
+      "productKey": "flex_xvf3800",
+      "productVariants": [
+        "Flex XVF3800 Linear-4",
+        "Flex XVF3800 Circular-4"
+      ],
+      "primaryDomain": "hardware",
+      "secondaryDomains": [
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 89,
+      "wikiSlug": "/respeaker_flex_faq",
+      "wikiAnchor": "fpc-cable-spec",
+      "questionEn": "What FPC cable is documented for the ReSpeaker Flex microphone array?",
+      "directAnswerEn": "The official Flex guide documents a keyed 24-pin, 0.5 mm-pitch FPC interface and a 20 cm ribbon cable included with the product. Match the contact orientation and end construction as well as pin count and pitch; the public guide does not qualify a generic cable for repeated dynamic flexing.",
+      "appliesTo": "The microphone-array connection between the ReSpeaker Flex core board and either the Linear-4 or Circular-4 array",
+      "prerequisites": [
+        "The supplied cable, or a replacement whose complete mechanical contact orientation is confirmed against both connectors",
+        "Power removed from the Flex core board"
+      ],
+      "steps": [
+        "Open the locking tab on each FPC connector.",
+        "Identify the exposed-contact side and the stiffener side of the cable.",
+        "Insert the cable so its exposed contacts face the metal contacts inside each connector, then close both locking tabs without forcing them.",
+        "Power the board and use the official capture or I2S test to verify the microphone-array connection before installing it in an enclosure."
+      ],
+      "successCriteria": [
+        "The cable seats fully and both locking tabs close without force",
+        "The connected array produces valid capture data in the selected official test"
+      ],
+      "notes": [
+        "The current public page does not specify contact-end thickness, same-side versus opposite-side contacts as a standalone procurement code, or a repeated-flex cycle rating.",
+        "Do not claim that every 24-pin, 0.5 mm-pitch cable is interchangeable or suitable for continuous movement."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Flex FPC specification and installation",
+          "url": "https://wiki.seeedstudio.com/respeaker_flex_introduction/#24-fpc-cable"
+        },
+        {
+          "title": "ReSpeaker Flex I2S link test",
+          "url": "https://wiki.seeedstudio.com/respeaker_flex_xiao_i2s/"
+        }
+      ],
+      "skus": [
+        "100005504",
+        "100099135",
+        "100070894",
+        "100026178"
+      ],
+      "keywords": [
+        "FPC",
+        "24 pin",
+        "0.5 mm pitch",
+        "20 cm",
+        "ribbon cable",
+        "contact orientation"
+      ]
+    },
+    {
+      "publicFaqId": "flex_mechanical_files",
+      "productKey": "flex_xvf3800",
+      "productVariants": [
+        "Flex XVF3800 Linear-4",
+        "Flex XVF3800 Circular-4",
+        "Flex XVF3800 core board"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "hardware"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 91,
+      "wikiSlug": "/respeaker_flex_faq",
+      "wikiAnchor": "mechanical-cad-files",
+      "questionEn": "Where can I download ReSpeaker Flex 2D and 3D mechanical files?",
+      "directAnswerEn": "Use the official Flex Resources section. It publishes DXF and STEP files for the Circular-4 array, Linear-4 array, and core board; select the geometry-specific files for the hardware being integrated.",
+      "appliesTo": "Mechanical integration of a ReSpeaker Flex XVF3800 core board with a Linear-4 or Circular-4 microphone array",
+      "prerequisites": [
+        "The exact microphone geometry used by the design",
+        "DXF- and STEP-compatible CAD software",
+        "Physical hardware for revision and fit checks"
+      ],
+      "steps": [
+        "Open the Resources section of the current Flex getting-started page.",
+        "Download the matching Linear-4 or Circular-4 DXF and STEP files together with the core-board files.",
+        "Import the files into the CAD tool and verify mounting holes, connector positions, and array geometry against the physical units.",
+        "Keep the Circular-4 and Linear-4 models separate; they are different mechanical layouts."
+      ],
+      "successCriteria": [
+        "The selected DXF and STEP files import successfully",
+        "The models match the array geometry and physical mounting and connector features used in the design"
+      ],
+      "notes": [
+        "The public files do not by themselves validate enclosure acoustics, manufacturing tolerances, or a custom 45-degree microphone installation."
+      ],
+      "officialReferences": [
+        {
+          "title": "Official ReSpeaker Flex mechanical resources",
+          "url": "https://wiki.seeedstudio.com/respeaker_flex_introduction/#resources"
+        }
+      ],
+      "skus": [
+        "100005504",
+        "100099135",
+        "100070894",
+        "100026178"
+      ],
+      "keywords": [
+        "Flex STEP",
+        "Flex DXF",
+        "3D model",
+        "2D drawing",
+        "Linear-4",
+        "Circular-4"
+      ]
+    },
+    {
+      "publicFaqId": "flex_i2s_full_duplex_test",
+      "productKey": "flex_xvf3800",
+      "productVariants": [
+        "Flex XVF3800 Linear-4 with XIAO ESP32S3",
+        "Flex XVF3800 Circular-4 with XIAO ESP32S3"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "audio",
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 93,
+      "wikiSlug": "/respeaker_flex_faq",
+      "wikiAnchor": "i2s-full-duplex-test",
+      "questionEn": "How do I verify full-duplex I2S between ReSpeaker Flex and XIAO ESP32S3?",
+      "directAnswerEn": "Run the official Flex I2S test with the geometry-matched 16 kHz I2S firmware. The sketch opens the XIAO I2S peripheral in transmit-and-receive mode, writes a 440 Hz test signal, reads microphone samples, and prints `I2S RX PASS!` when the receive path passes its documented sample-count check.",
+      "appliesTo": "ReSpeaker Flex XVF3800 Linear-4 or Circular-4 with XIAO ESP32S3 using the embedded I2S path",
+      "prerequisites": [
+        "An official 16 kHz I2S image matching the Linear-4 or Circular-4 geometry",
+        "Arduino IDE configured for XIAO ESP32S3",
+        "The dependencies required by the current official Flex I2S test"
+      ],
+      "steps": [
+        "Confirm that the Flex XMOS is running the official 16 kHz I2S image for the attached microphone geometry.",
+        "Open the current ReSpeaker Flex with XIAO ESP32S3 I2S Test page and upload its sketch through the XIAO USB port.",
+        "Open Serial Monitor at 115200 baud and let the first and optional second receive checks finish.",
+        "Confirm that the test reports more than 16,000 valid samples and prints `I2S RX PASS!`.",
+        "For an audible record-store-playback check, run the separate official 16 kHz record-and-playback example after the link test passes."
+      ],
+      "successCriteria": [
+        "The I2S peripheral initializes without an error",
+        "The official test prints `I2S RX PASS!`",
+        "The optional record-and-playback example captures and replays a short audio buffer"
+      ],
+      "notes": [
+        "This test validates the documented digital transmit and receive paths; it does not prove a wake-word threshold, acoustic echo-cancellation performance, or speaker-to-enclosure compatibility.",
+        "Do not run the 16 kHz sketch unchanged against a 48 kHz firmware profile."
+      ],
+      "officialReferences": [
+        {
+          "title": "Official ReSpeaker Flex full-duplex I2S test",
+          "url": "https://wiki.seeedstudio.com/respeaker_flex_xiao_i2s/"
+        },
+        {
+          "title": "ReSpeaker Flex record-and-playback example",
+          "url": "https://wiki.seeedstudio.com/respeaker_flex_xiao_record_playback/"
+        },
+        {
+          "title": "Official ReSpeaker Flex firmware repository",
+          "url": "https://github.com/respeaker/reSpeaker_Flex/tree/main/xmos_firmwares"
+        }
+      ],
+      "skus": [
+        "100070894",
+        "100026178"
+      ],
+      "keywords": [
+        "full duplex",
+        "I2S",
+        "I2S RX PASS",
+        "XIAO ESP32S3",
+        "record playback",
+        "16 kHz"
+      ]
+    },
+    {
+      "publicFaqId": "pi_hat_v2_codec_i2c_address",
+      "productKey": "respeaker_2_mics_pi_hat",
+      "productVariants": [
+        "ReSpeaker 2-Mics Pi HAT V2.0"
+      ],
+      "primaryDomain": "hardware",
+      "secondaryDomains": [
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 91,
+      "wikiSlug": "/respeaker_2_mics_pi_hat_faq",
+      "wikiAnchor": "v2-codec-i2c-address",
+      "questionEn": "What is the codec I2C address on ReSpeaker 2-Mics Pi HAT V2.0?",
+      "directAnswerEn": "ReSpeaker 2-Mics Pi HAT V2.0 uses a TLV320AIC3104 codec at the 7-bit I2C address `0x18`. The official V2.0 device-tree overlay declares `tlv320aic3104@18` with `reg = <0x18>`, and the public V2.0 schematic identifies the same codec.",
+      "appliesTo": "ReSpeaker 2-Mics Pi HAT V2.0 only; V1.x uses different codec hardware",
+      "prerequisites": [
+        "Confirm the board is V2.0 with the official hardware-revision guide",
+        "Use the revision-specific V2.0 driver and device-tree overlay"
+      ],
+      "steps": [
+        "Follow the official V2.0 Raspberry Pi guide to install `respeaker-2mic-v2_0-overlay.dtbo`.",
+        "Check that the V2.0 overlay declares the codec at 7-bit address `0x18`.",
+        "Reboot and use `arecord -l` or `aplay -l` to confirm that the `tlv320aic3x-hifi` sound device binds successfully."
+      ],
+      "successCriteria": [
+        "The V2.0 overlay loads and the TLV320AIC3104-backed sound card appears in the ALSA device list"
+      ],
+      "notes": [
+        "Do not copy this address to ReSpeaker 2-Mics Pi HAT V1.x, which uses different codec hardware.",
+        "The address alone is not a complete or supported ESP32-S3 wiring and codec-initialization guide."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker 2-Mics Pi HAT V2.0 Raspberry Pi guide",
+          "url": "https://wiki.seeedstudio.com/respeaker_2_mics_pi_hat_raspberry_v2/"
+        },
+        {
+          "title": "Official V2.0 Raspberry Pi device-tree overlay",
+          "url": "https://github.com/Seeed-Studio/seeed-linux-dtoverlays/blob/master/overlays/rpi/respeaker-2mic-v2_0-overlay.dts"
+        },
+        {
+          "title": "Official ReSpeaker 2-Mics Pi HAT V2.0 schematic",
+          "url": "https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/202004059_ReSpeaker-2-Mics-Pi-HAT-V2.0_SCH_PDF_241121.pdf"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "Pi HAT V2",
+        "TLV320AIC3104",
+        "I2C",
+        "0x18",
+        "device tree overlay"
+      ]
+    },
+    {
+      "publicFaqId": "clip_official_documentation",
+      "productKey": "respeaker_clip",
+      "productVariants": [
+        "ReSpeaker Clip"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 90,
+      "wikiSlug": "/respeaker_clip_faq",
+      "wikiAnchor": "official-documentation",
+      "questionEn": "Where can I find the current official ReSpeaker Clip documentation?",
+      "directAnswerEn": "Start with the current ReSpeaker Clip Getting Started page. Use the Basic SDK guide for host-side control and recording transfer, and use the Firmware Development guide only when changing device-side firmware. The older `/respeaker_clip_getting_started/` URL is obsolete and should not be bookmarked.",
+      "appliesTo": "ReSpeaker Clip users and developers",
+      "prerequisites": [
+        "Identify whether the task is normal product use, host-side SDK integration, or device-firmware development"
+      ],
+      "steps": [
+        "Open Getting Started for setup, app workflows, specifications, and the current resource list.",
+        "Open the Basic SDK guide to control recording, manage sessions, or transfer files over BLE or Wi-Fi.",
+        "Open the Firmware Development guide only for building, flashing, debugging, or changing device-side behavior.",
+        "If a saved link still fails, replace it with the corresponding current Wiki URL before reporting a documentation outage."
+      ],
+      "successCriteria": [
+        "The selected current guide loads and covers the intended product, host-SDK, or firmware-development layer"
+      ],
+      "notes": [
+        "Some resources on Getting Started are still explicitly marked `Coming soon`; a live guide does not imply that every mechanical or firmware artifact has been published."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Clip Getting Started",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip/"
+        },
+        {
+          "title": "ReSpeaker Clip Basic SDK guide",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip_basic_sdk_guide/"
+        },
+        {
+          "title": "ReSpeaker Clip Firmware Development guide",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip_firmware_development_guide/"
+        }
+      ],
+      "skus": [
+        "100020126"
+      ],
+      "keywords": [
+        "documentation",
+        "getting started",
+        "Basic SDK",
+        "Firmware SDK",
+        "broken link"
+      ]
+    },
+    {
+      "publicFaqId": "clip_live_conversation_transcription",
+      "productKey": "respeaker_clip",
+      "productVariants": [
+        "ReSpeaker Clip"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "firmware_software"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 92,
+      "wikiSlug": "/respeaker_clip_faq",
+      "wikiAnchor": "live-conversation-transcription",
+      "questionEn": "Can ReSpeaker Clip be used to prototype live conversation transcription?",
+      "directAnswerEn": "Yes, as part of a host-and-cloud prototype. The official Live STT example streams microphone audio from RTC-capable Clip firmware over BLE, converts completed speech utterances to text through an external STT provider, and displays the transcript in a browser. This is not documented as standalone on-device transcription.",
+      "appliesTo": "ReSpeaker Clip prototypes that display live speech-to-text on a separate computer or browser",
+      "prerequisites": [
+        "ReSpeaker Clip firmware with RTC live-streaming support",
+        "Python 3.10 or later and a working BLE adapter",
+        "Network access and an API key for the STT provider used by the official example"
+      ],
+      "steps": [
+        "Follow the official Live STT application guide and install its Python requirements.",
+        "Connect to the ReSpeaker Clip over BLE and enter the STT provider key in the application settings.",
+        "Select `Start Streaming`, speak, and wait for each completed utterance to appear in the browser transcript.",
+        "Measure latency and transcription accuracy in the intended acoustic environment before treating the prototype as an accessibility aid."
+      ],
+      "successCriteria": [
+        "The RTC session starts over BLE and spoken utterances appear as live text in the browser",
+        "The tested latency and accuracy are recorded for the intended environment and language"
+      ],
+      "notes": [
+        "Live STT uses BLE for the RTC audio stream; the documented Wi-Fi path is for the record-and-process workflows, not Live STT.",
+        "The public example depends on an external transcription service and has not been presented as a certified medical or assistive device. Review privacy, connectivity, latency, and failure behavior for the real deployment."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Clip Live STT application guide",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip_python_build_app/"
+        },
+        {
+          "title": "ReSpeaker Clip RTC streaming guide",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip_rtc_streaming/"
+        },
+        {
+          "title": "ReSpeaker Clip Getting Started",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip/"
+        }
+      ],
+      "skus": [
+        "100020126"
+      ],
+      "keywords": [
+        "live STT",
+        "conversation transcription",
+        "BLE RTC",
+        "accessibility prototype",
+        "speech to text"
+      ]
+    },
+    {
+      "publicFaqId": "clip_mechanical_drawing_status",
+      "productKey": "respeaker_clip",
+      "productVariants": [
+        "ReSpeaker Clip"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "hardware"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 82,
+      "wikiSlug": "/respeaker_clip_faq",
+      "wikiAnchor": "mechanical-drawing-status",
+      "questionEn": "Where can I get official ReSpeaker Clip dimensions or a mechanical drawing?",
+      "directAnswerEn": "A revision-labeled mechanical drawing is not currently published. The official Getting Started resource table still marks `Mechanical Drawing` as `Coming soon`, and its physical-parameters table does not provide complete enclosure dimensions.",
+      "appliesTo": "ReSpeaker Clip enclosure, fixture, or wearable-accessory design",
+      "prerequisites": [
+        "The exact production hardware revision that the mechanical design must fit"
+      ],
+      "steps": [
+        "Check the Mechanical Drawing row in the current official resource table.",
+        "Do not derive production dimensions from photos, marketing renders, or an unlabeled prototype.",
+        "For immediate design work, measure the exact physical unit and request a revision-labeled official drawing before freezing tooling or clearances."
+      ],
+      "successCriteria": [
+        "The mechanical design is based on either a revision-labeled official drawing or verified measurements of the exact production revision"
+      ],
+      "notes": [
+        "This is a time-sensitive publication-status answer and must be rechecked when the resource table changes.",
+        "The absence of a public drawing does not establish that no internal mechanical file exists."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Clip specifications and resources",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip/"
+        }
+      ],
+      "skus": [
+        "100020126"
+      ],
+      "keywords": [
+        "dimensions",
+        "mechanical drawing",
+        "CAD",
+        "enclosure",
+        "Coming soon"
+      ]
+    },
+    {
+      "publicFaqId": "xvf3000_dsp_tuning_controls",
+      "productKey": "xvf3000",
+      "productVariants": [
+        "ReSpeaker Mic Array v2.0 with XVF3000"
+      ],
+      "primaryDomain": "algorithm_tuning",
+      "secondaryDomains": [
+        "audio",
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-09-01",
+      "qualityScore": 86,
+      "wikiSlug": "/respeaker_xvf3000_faq",
+      "wikiAnchor": "dsp-tuning-controls",
+      "questionEn": "How can I inspect the built-in DSP tuning controls on ReSpeaker Mic Array v2.0?",
+      "directAnswerEn": "Use the official `usb_4_mic_array` repository's `tuning.py` tool. The current v2.0 Wiki documents `python tuning.py -p` to list available parameters and shows parameter reads and writes, but it does not provide a universal preset or guaranteed pickup distance for every noisy room.",
+      "appliesTo": "ReSpeaker Mic Array v2.0 with XVF3000 and the matching official firmware",
+      "prerequisites": [
+        "Confirm the hardware is ReSpeaker Mic Array v2.0 rather than another ReSpeaker revision",
+        "Install the USB control dependency and host driver required by the official guide",
+        "Keep a record of the starting parameter values and use a repeatable audio test"
+      ],
+      "steps": [
+        "Clone the official `respeaker/usb_4_mic_array` repository and enter its directory.",
+        "Run `python tuning.py -p` to print the parameter names, types, ranges, access mode, and descriptions exposed by the active firmware.",
+        "Use the documented `python tuning.py <PARAMETER>` form to read a value, and change only a writable parameter whose public range and meaning are shown.",
+        "Repeat the same speech, distance, noise, and room test after each single change; keep the change only if the captured result improves without introducing a regression."
+      ],
+      "successCriteria": [
+        "The parameter list is returned without a USB-control error",
+        "The selected value reads back and the before/after recordings are compared under the same test conditions"
+      ],
+      "notes": [
+        "The public parameter table is an interface reference, not a validated noisy-room tuning recipe.",
+        "Poor pickup at a particular distance does not by itself prove a hardware defect; microphone placement, background noise, reverberation, firmware, and the host capture path must be controlled first."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker Mic Array v2.0 tuning guide and parameter table",
+          "url": "https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/"
+        },
+        {
+          "title": "Official XVF3000 USB 4-Mic Array tools repository",
+          "url": "https://github.com/respeaker/usb_4_mic_array"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "XVF3000",
+        "tuning.py",
+        "DSP parameters",
+        "noise suppression",
+        "far field"
+      ]
+    }
+  ]
+}

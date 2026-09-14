@@ -1,6 +1,6 @@
 ---
-description: Recetario de ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - demostraciones independientes para sincronización de hora del RTC PCF8563, detección de tarjeta microSD, inicialización del micrófono PDM integrado y un panel combinado de estado de hardware.
-title: 'Recetario ESPHome: RTC, Tarjeta SD y Micrófono (reTerminal E Serie)'
+description: cookbook de ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - demostraciones independientes para sincronización de hora del RTC PCF8563, detección de tarjeta microSD, inicialización del micrófono PDM integrado y un panel combinado de estado de hardware.
+title: 'Cookbook ESPHome: RTC, Tarjeta SD y Micrófono (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
 sidebar_position: 5
@@ -16,12 +16,12 @@ url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_rtc_sd_microp
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Recetario ESPHome: RTC, Tarjeta SD y Micrófono (reTerminal E Serie)
+# Cookbook ESPHome: RTC, Tarjeta SD y Micrófono (reTerminal E Serie)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/251.jpeg" style={{width:1000, height:'auto'}}/></div><br />
 
 :::tip Requisitos previos
-Esta página asume que ya has completado el [recetario de pantalla ESPHome para reTerminal E Serie](/es/reterminal_e10xx_with_esphome) y que tu dispositivo está en línea en Home Assistant. Para botones, zumbador, LED, monitorización de batería, SHT4x, toque capacitivo (E1003) y suspensión profunda, consulta [Recetario ESPHome: Botones, Zumbador, LED, Batería, Toque y Bajo Consumo](/es/reterminal_e10xx_with_esphome_advanced).
+Esta página asume que ya has completado el [cookbook de pantalla ESPHome para reTerminal E Serie](/es/reterminal_e10xx_with_esphome) y que tu dispositivo está en línea en Home Assistant. Para botones, zumbador, LED, monitorización de batería, SHT4x, toque capacitivo (E1003) y suspensión profunda, consulta [Cookbook ESPHome: Botones, Zumbador, LED, Batería, Toque y Bajo Consumo](/es/reterminal_e10xx_with_esphome_advanced).
 :::
 
 :::tip Genera YAML de ESPHome o flashea demos en el navegador
@@ -36,7 +36,7 @@ El mismo Hub también puede flashear firmware de demostración directamente desd
 </div><br />
 :::
 
-Este recetario continúa los ejemplos de ESPHome para reTerminal E Serie con tres bloques de hardware integrados que no se cubren en los recetarios de pantalla e I/O:
+Este cookbook continúa los ejemplos de ESPHome para reTerminal E Serie con tres bloques de hardware integrados que no se cubren en los cookbooks de pantalla e I/O:
 
 - **RTC PCF8563**: lee la hora de hardware desde el RTC integrado y la sincroniza desde Home Assistant.
 - **Ranura para tarjeta microSD**: habilita el raíl de alimentación de la SD e informa si hay una tarjeta insertada.
@@ -50,7 +50,7 @@ Los ejemplos listos para copiar de esta página cubren **reTerminal E1001 / E100
 
 ## Capacidades de hardware
 
-Los siguientes pines son utilizados por las demostraciones de este recetario.
+Los siguientes pines son utilizados por las demostraciones de este cookbook.
 
 <div class="table-center">
   <table align="center">
@@ -926,7 +926,7 @@ La siguiente imagen muestra el resultado esperado en reTerminal E1002. El mismo 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/253.jpeg" style={{width:700, height:'auto'}}/></div>
 
 :::note Cómo usa ESPHome la tarjeta microSD
-En este recetario de ESPHome, la tarjeta microSD se utiliza como una señal de estado del dispositivo. La demostración comprueba si hay una tarjeta insertada, muestra el resultado en la pantalla y expone el mismo estado a Home Assistant.
+En este cookbook de ESPHome, la tarjeta microSD se utiliza como una señal de estado del dispositivo. La demostración comprueba si hay una tarjeta insertada, muestra el resultado en la pantalla y expone el mismo estado a Home Assistant.
 
 Esto se debe a que ESPHome está diseñado principalmente para sensores, interruptores, pantallas y automatización con Home Assistant. Normalmente no se usa como un gestor de archivos local en el dispositivo. Tareas como abrir archivos, crear carpetas, escribir registros o grabar audio WAV directamente en la tarjeta SD se gestionan mejor con Arduino, donde tu firmware controla directamente el sistema de archivos de la tarjeta SD.
 
@@ -935,7 +935,7 @@ En una configuración típica de ESPHome, el estado de la tarjeta SD se puede us
 - activar automatizaciones de Home Assistant cuando se inserta o se retira una tarjeta;
 - mostrar información sobre el estado del hardware junto con el estado del RTC, la batería y el micrófono.
 
-Si tu objetivo es leer y escribir archivos directamente en la tarjeta SD, consulta en su lugar el recetario de tarjetas SD para Arduino.
+Si tu objetivo es leer y escribir archivos directamente en la tarjeta SD, consulta en su lugar el cookbook de tarjetas SD para Arduino.
 :::
 
 ## Comprobación de alimentación del micrófono PDM

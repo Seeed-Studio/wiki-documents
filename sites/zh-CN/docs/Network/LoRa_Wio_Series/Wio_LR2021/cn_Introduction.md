@@ -147,6 +147,8 @@ Wio-LR2021 是一款纯 RF 收发模块，不集成应用处理器。它需要�
 
 - **[ZIP]** [Wio-LR2021 模块 Allegro 库](https://files.seeedstudio.com/wiki/Wio-LR2021/res/allegro-library.zip)
 
+- **[LINK]** [Semtech 的 LoRa USP™ 固件平台](https://github.com/Lora-net/usp)
+
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们将通过多种支持方式，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同偏好和需求。

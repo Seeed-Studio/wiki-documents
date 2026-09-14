@@ -1,6 +1,6 @@
 ---
-description: XIAO ePaper Driver Board (EE0x) ファミリ向け ESPHome クックブック - お好みの ePaper スクリーンを接続した XIAO ESP32-S3 + EE0x ドライバボードを Home Assistant と連携させる方法を解説します。EE04 を動作例として使用しますが、EE02 / EE03 / EE05 も同じワークフローを共有します。
-title: ESPHome クックブック
+description: XIAO ePaper Driver Board (EE0x) ファミリ向け ESPHome cookbook - お好みの ePaper スクリーンを接続した XIAO ESP32-S3 + EE0x ドライバボードを Home Assistant と連携させる方法を解説します。EE04 を動作例として使用しますが、EE02 / EE03 / EE05 も同じワークフローを共有します。
+title: ESPHome Cookbook
 keywords:
   - ePaper ディスプレイ
   - ESPHome
@@ -26,10 +26,10 @@ url: https://wiki.seeedstudio.com/ja/EE04_with_esphome_advanced/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome クックブック: XIAO ePaper ドライバボード (EE0x)
+# ESPHome Cookbook: XIAO ePaper ドライバボード (EE0x)
 
 :::tip まずメインの ESPHome ガイドを読んでください
-このページは **EE0x ドライバボード向け ESPHome クックブック** です。対象は **EE02 / EE03 / EE04 / EE05** となります。4 つのボードはいずれも同じ XIAO ESP32-S3 をベースにし、同じ SPI 接続の ePaper インターフェースを共有しているため、ワークフローは同一です。ボード間で変わるのは YAML の `display:` ブロック内で選択するスクリーンのモデルだけです。
+このページは **EE0x ドライバボード向け ESPHome cookbook** です。対象は **EE02 / EE03 / EE04 / EE05** となります。4 つのボードはいずれも同じ XIAO ESP32-S3 をベースにし、同じ SPI 接続の ePaper インターフェースを共有しているため、ワークフローは同一です。ボード間で変わるのは YAML の `display:` ブロック内で選択するスクリーンのモデルだけです。
 
 **動作例: 7.5 インチ 800×480 モノクロスクリーンを接続した EE04。** `display.model` 行のボード + スクリーンの組み合わせを自分のものに置き換えれば、残りの設定はそのまま適用できます。
 

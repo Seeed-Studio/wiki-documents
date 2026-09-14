@@ -1,6 +1,6 @@
 ---
-description: 本教程面向开发者，介绍 reBot Arm B601-RS 网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
-title: reBot Arm B601-RS Web 仿真器与 ROS 2/MuJoCo 开发者教程
+description: 本教程面向开发者，介绍 ReBot Arm Digital Twin & Control Stack — B601-RS 的网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
+title: ReBot Arm Digital Twin & Control Stack — B601-RS
 keywords:
   - reBot Arm
   - B601-RS
@@ -15,30 +15,32 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_web_simulator_developer_guide
 last_update:
-  date: 2026-08-13
+  date: 2026-08-24
   author: Yang-Ci
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-13'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# reBot Arm B601-RS Web 仿真器与 ROS 2/MuJoCo 开发者教程
+# ReBot Arm Digital Twin & Control Stack — B601-RS
+
+<RebotRsDocNav />
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 </a></div>
-
-<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -55,7 +57,13 @@ import TabItem from '@theme/TabItem';
   <strong>Three.js 可视化 · ROS 2 · SocketCAN · MuJoCo 仿真 · LLM/MCP 控制</strong>
 </p>
 
-reBot Arm B601-RS 工程集成了 Three.js 网页控制台、ROS 2 真机驱动、RS 专用 MuJoCo 动力学场景、视觉检测、轨迹与逆运动学，以及可选的 LLM/MCP 抓取 Agent。本教程介绍如何安装、启动和二次开发整套系统。
+ReBot Arm Digital Twin & Control Stack — B601-RS 工程集成了 Three.js 网页控制台、ROS 2 真机驱动、RS 专用 MuJoCo 动力学场景、视觉检测、轨迹与逆运动学，以及可选的 LLM/MCP 抓取 Agent。本教程介绍如何安装、启动和二次开发整套系统。
+
+<GitHubStarButton
+  owner="Yang-Ci"
+  repo="ReBot_Arm_DigitalTwin_RS"
+  ariaLabel="在 GitHub 上为 ReBot_Arm_DigitalTwin_RS 点亮 Star"
+/>
 
 > **重要安全提示**
 >
@@ -65,7 +73,7 @@ reBot Arm B601-RS 工程集成了 Three.js 网页控制台、ROS 2 真机驱动�
 
 1. **RS 独立机械模型**
 
-   网页和 ROS 2 使用 `00-arm-rs_asm-v3.urdf` 及配套 STL 网格。网页服务器优先读取 ROS 2 工作区中的模型，并保留一份离线后备模型。
+   网页和 ROS 2 使用 `ReBot_Arm_RS.urdf` 及配套 STL 网格。网页服务器优先读取 `rebotarm_ros2_RS` 工作区中的模型，并保留一份离线后备模型。
 
 2. **RobStride + SocketCAN 真机链路**
 
@@ -152,25 +160,40 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 | Python | 3.12（Jazzy）或 3.10（Humble） |
 | Node.js | 18 及以上 |
 | 浏览器 | 当前稳定版 Chrome、Chromium、Edge 或 Firefox |
-| CAN 工具 | `iproute2`、`can-utils` |
 | 真机 CAN | `can0`，1 Mbps |
 | MuJoCo | 由项目 Python 环境安装 |
 
 ## 安装步骤
 
-### 步骤 1：获取工程
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+      #### 步骤 1：获取工程
+
+      <p className="rebot-step-label">第 1 步</p>
 
 ```bash
-git clone https://github.com/Yang-Ci/ReBot_Arm_web_RS.git
-cd ReBot_Arm_web_RS
+git clone https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS.git ~/ReBot_Arm_DigitalTwin_RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ```
 
-下文以项目目录 `~/reBot_Arm_Mujoco-RS` 为例。如果实际目录不同，请替换命令中的路径。
+下文以项目目录 `~/ReBot_Arm_DigitalTwin_RS` 为例。如果实际目录不同，请替换命令中的路径。
 
-### 步骤 2：只读检查环境
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+      #### 步骤 2：只读检查环境
+
+      <p className="rebot-step-label">第 2 步</p>
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./setup.sh --check
 ```
 
@@ -183,14 +206,23 @@ cd ~/reBot_Arm_Mujoco-RS
 - ROS 2 工作区构建结果；
 - 网页 `package.json` 和 `.env`。
 
-### 步骤 3：一键安装和构建
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+      #### 步骤 3：一键安装和构建
+
+      <p className="rebot-step-label">第 3 步</p>
 
 ```bash
 ./setup.sh --yes
 ./rebotarm doctor
 ```
 
-安装脚本会安装缺失的 ROS 2、Node.js、SocketCAN 和构建依赖，创建 `rebotarm_ros2/.venv`，安装 RS 真机、MuJoCo 和 Agent 的 Python 依赖，执行 rosdep，并通过下面的命令构建 ROS 2 工作区：
+安装脚本会安装缺失的 ROS 2、Node.js、SocketCAN 和构建依赖，创建 `rebotarm_ros2_RS/.venv`，安装 RS 真机、MuJoCo 和 Agent 的 Python 依赖，执行 rosdep，并通过下面的命令构建 ROS 2 工作区：
 
 ```bash
 colcon build --symlink-install
@@ -208,11 +240,20 @@ colcon build --symlink-install
 
 ```bash
 source scripts/rs_env.sh
-cd rebotarm_ros2
+cd rebotarm_ros2_RS
 colcon build --symlink-install
 ```
 
-### 步骤 4：配置网页环境变量
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+      #### 步骤 4：配置网页环境变量
+
+      <p className="rebot-step-label">第 4 步</p>
 
 首次安装会从 `.env.example` 创建 `reBotArm_simulator-RS/.env`。关键字段如下：
 
@@ -227,6 +268,10 @@ MOTORBRIDGE_WS_TOKEN=
 
 如果网页与 ROS 2/Agent 不在同一台机器，请将代理地址改为后端机器的 IP。API Key 和 Token 只应存放在环境变量或未提交的本地 `.env` 中。
 
+</div>
+</section>
+</div>
+
 ## 项目启动
 
 <Tabs defaultValue="web" groupId="launch-mode" queryString>
@@ -236,7 +281,7 @@ MOTORBRIDGE_WS_TOKEN=
 只启动 Node.js 网页服务器，不启动 rosbridge 或 ROS 2：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS/reBotArm_simulator-RS
+cd ~/ReBot_Arm_DigitalTwin_RS/reBotArm_simulator-RS
 npm start
 ```
 
@@ -258,14 +303,14 @@ http://localhost:3002
 终端 1 启动 Fake Driver、MuJoCo、相机、检测、MCP Agent 和 rosbridge：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start rs_sim
 ```
 
 终端 2 启动网页：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start web
 ```
 
@@ -308,7 +353,7 @@ ip -details -statistics link show can0
 确认急停可用、工作区无人后，在终端 1 启动真机控制器：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE \
   ./rebotarm start rs
 ```
@@ -371,7 +416,7 @@ export REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE
 ## 项目架构
 
 ```text
-ReBot_Arm_web_RS/
+ReBot_Arm_DigitalTwin_RS/
 ├─ setup.sh                              一键检查、安装与构建
 ├─ rebotarm                              统一启动、状态和停止入口
 ├─ requirements-rs-hardware.txt          RS 真机 Python 依赖
@@ -383,7 +428,7 @@ ReBot_Arm_web_RS/
 │  ├─ start_rs_hardware.sh               RS 真机控制器
 │  ├─ start_rs_dual.sh                   真机/Fake 双命名空间
 │  └─ start_rs_text_agent.sh             Text Agent HTTP 服务
-├─ rebotarm_ros2/
+├─ rebotarm_ros2_RS/
 │  ├─ src/rebotarmcontroller/             真机控制器与 Fake Driver
 │  ├─ src/rebotarm_msgs/                  自定义 msg/srv/action
 │  ├─ src/rebotarm_bringup/               配置、URDF、Mesh 和 launch
@@ -624,7 +669,7 @@ LLM 用于理解自然语言，MCP 层将意图约束为结构化工具调用。
 完整仿真默认启动 MCP Agent。启用自然语言入口时，另开终端：
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 export DASHSCOPE_API_KEY='你的 Key'
 export REBOTARM_LLM_MODEL='qwen-plus'
 ./scripts/start_rs_text_agent.sh
@@ -652,7 +697,7 @@ Dashboard： http://localhost:8082
 真机默认配置位于：
 
 ```text
-rebotarm_ros2/src/rebotarm_bringup/config/rebotarm_hardware.yaml
+rebotarm_ros2_RS/src/rebotarm_bringup/config/rebotarm_hardware.yaml
 ```
 
 当前 RS 关键参数：
@@ -732,14 +777,14 @@ reBotArm_simulator-RS/public/js/ros/rebot-ros-client.js
 ROS 2 主模型：
 
 ```text
-rebotarm_ros2/src/rebotarm_bringup/description/urdf/00-arm-rs_asm-v3.urdf
-rebotarm_ros2/src/rebotarm_bringup/description/meshes_rs/
+rebotarm_ros2_RS/src/rebotarm_bringup/description/urdf/ReBot_Arm_RS.urdf
+rebotarm_ros2_RS/src/rebotarm_bringup/description/meshes_rs/
 ```
 
 网页服务器优先读取上述模型。如果将网页目录单独复制运行，则使用：
 
 ```text
-reBotArm_simulator-RS/description/urdf/00-arm-rs_asm-v3.urdf
+reBotArm_simulator-RS/description/urdf/ReBot_Arm_RS.urdf
 reBotArm_simulator-RS/description/meshes_rs/
 ```
 
@@ -749,7 +794,7 @@ reBotArm_simulator-RS/description/meshes_rs/
 
 | 文件/目录 | 作用 |
 |---|---|
-| `rebotarm_ros2/src/rebotarm_mujoco_rs/models/` | RS MJCF 和 STL |
+| `rebotarm_ros2_RS/src/rebotarm_mujoco_rs/models/` | RS MJCF 和 STL |
 | `rebotarm_mujoco_rs/mujoco_sync.py` | 同步频率、动力学和 PD |
 | `rebotarm_mujoco_rs/scene_camera.py` | 俯视相机 |
 | `rebotarm_mujoco_rs/scene_detector.py` | 颜色检测 |
@@ -761,7 +806,7 @@ reBotArm_simulator-RS/description/meshes_rs/
 MCP Server 位于：
 
 ```text
-rebotarm_ros2/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
+rebotarm_ros2_RS/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
 ```
 
 新增工具时应：
@@ -776,7 +821,7 @@ rebotarm_ros2/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
 
 ```bash
 source scripts/rs_env.sh
-python3 -m pytest rebotarm_ros2/src/rebotarmcontroller/test -q
+python3 -m pytest rebotarm_ros2_RS/src/rebotarmcontroller/test -q
 
 bash -n setup.sh rebotarm scripts/*.sh
 
@@ -908,7 +953,7 @@ RS 网页包含 Service Worker/PWA 支持。先使用 `Ctrl+Shift+R` 强制刷�
 - 确认 Ubuntu、ROS 2 和 Python 版本匹配；
 - 确认 rosdep 已初始化并可更新；
 - 运行 `./setup.sh --check` 查看缺失项；
-- 确认 `rebotarm_ros2/.venv` 中可以导入 `numpy`、`scipy`、`mujoco`、`pinocchio`、`motorbridge` 和 `fastmcp`；
+- 确认 `rebotarm_ros2_RS/.venv` 中可以导入 `numpy`、`scipy`、`mujoco`、`pinocchio`、`motorbridge` 和 `fastmcp`；
 - 删除或重置用户文件前先备份，不要用破坏性命令解决构建问题。
 
 ## 快速命令表

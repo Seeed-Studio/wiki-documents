@@ -1,6 +1,6 @@
 ---
-description: 面向 XIAO 7.5" ePaper Panel 的端到端 ESPHome / Home Assistant 实战手册——刷写固件、集成到 Home Assistant，并使用 YAML 构建仪表盘。
-title: ESPHome 实战手册
+description: 面向 XIAO 7.5" ePaper Panel 的端到端 ESPHome / Home Assistant cookbook——刷写固件、集成到 Home Assistant，并使用 YAML 构建仪表盘。
+title: ESPHome Cookbook
 keywords:
   - ePaper 显示屏
   - ESPHome
@@ -20,10 +20,10 @@ url: https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_esphome/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome 实战手册：XIAO 7.5" ePaper Panel
+# ESPHome Cookbook：XIAO 7.5" ePaper Panel
 
 :::tip 请先阅读主 ESPHome 指南
-本页是**针对 XIAO 7.5" Panel 的 ESPHome 实战手册**。通用的基础内容——选择刷写路径、通用 YAML 模板、连接到 Home Assistant——都在 **[Work with ESPHome](/cn/epaper_work_with_esphome)** 中。如果你刚接触 Seeed ePaper 上的 ESPHome，建议先快速浏览那一页；本页重点讲解基于 XIAO ESP32-C3 的面板特有的内容。
+本页是**针对 XIAO 7.5" Panel 的 ESPHome cookbook**。通用的基础内容——选择刷写路径、通用 YAML 模板、连接到 Home Assistant——都在 **[Work with ESPHome](/cn/epaper_work_with_esphome)** 中。如果你刚接触 Seeed ePaper 上的 ESPHome，建议先快速浏览那一页；本页重点讲解基于 XIAO ESP32-C3 的面板特有的内容。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/201.png" style={{width:900, height:'auto'}}/></div>

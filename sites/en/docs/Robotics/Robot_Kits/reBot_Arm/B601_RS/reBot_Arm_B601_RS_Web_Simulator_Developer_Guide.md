@@ -1,6 +1,6 @@
 ---
-description: This developer guide introduces the reBot Arm B601-RS web console, ROS 2, RobStride/SocketCAN, MuJoCo simulation, visual grasping, and LLM/MCP Agent installation, runtime, and secondary development workflow.
-title: reBot Arm B601-RS Web Simulator and ROS 2/MuJoCo Developer Guide
+description: This developer guide introduces the web console, ROS 2, RobStride/SocketCAN, MuJoCo simulation, visual grasping, and LLM/MCP Agent installation, runtime, and secondary development workflow of the ReBot Arm Digital Twin & Control Stack for B601-RS.
+title: ReBot Arm Digital Twin & Control Stack — B601-RS
 keywords:
   - reBot Arm
   - B601-RS
@@ -15,19 +15,23 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web_rs/rebot_rs_web_simulator_en.png
 slug: /rebot_arm_b601_rs_web_simulator_developer_guide
 last_update:
-  date: 2026-08-13
+  date: 2026-08-24
   author: Yang-Ci
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-13'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# reBot Arm B601-RS Web Simulator and ROS 2/MuJoCo Developer Guide
+# ReBot Arm Digital Twin & Control Stack — B601-RS
+
+<RebotRsDocNav />
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
@@ -37,8 +41,6 @@ import TabItem from '@theme/TabItem';
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
-
-<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -55,7 +57,9 @@ import TabItem from '@theme/TabItem';
   <strong>Three.js visualization · ROS 2 · SocketCAN · MuJoCo simulation · LLM/MCP control</strong>
 </p>
 
-The reBot Arm B601-RS project integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, and an optional LLM/MCP grasping agent. This guide explains how to install, launch, and develop on the full system.
+The ReBot Arm Digital Twin & Control Stack for B601-RS integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, and an optional LLM/MCP grasping agent. This guide explains how to install, launch, and develop on the full system.
+
+<GitHubStarButton owner="Yang-Ci" repo="ReBot_Arm_DigitalTwin_RS" />
 
 > **Important safety note**
 >
@@ -65,7 +69,7 @@ The reBot Arm B601-RS project integrates a Three.js web console, a ROS 2 real-ro
 
 1. **RS-specific arm model**
 
-   The web console and ROS 2 use `00-arm-rs_asm-v3.urdf` and its matching STL meshes. The web server reads the model from the ROS 2 workspace first and keeps an offline fallback copy.
+   The web console and ROS 2 use `ReBot_Arm_RS.urdf` and its matching STL meshes. The web server reads the model from the `rebotarm_ros2_RS` workspace first and keeps an offline fallback copy.
 
 2. **RobStride + SocketCAN real-robot link**
 
@@ -158,19 +162,35 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 
 ## Installation Steps
 
-### Step 1: Get the project
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+      #### Step 1: Get the project
+
+      <p className="rebot-step-label">Step 1</p>
 
 ```bash
-git clone https://github.com/Yang-Ci/ReBot_Arm_web_RS.git
-cd ReBot_Arm_web_RS
+git clone https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS.git ~/ReBot_Arm_DigitalTwin_RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ```
 
-The commands below use `~/reBot_Arm_Mujoco-RS` as the project directory. If your directory is different, replace the paths accordingly.
+The commands below use `~/ReBot_Arm_DigitalTwin_RS` as the project directory. If your directory is different, replace the paths accordingly.
 
-### Step 2: Read-only environment check
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+      #### Step 2: Read-only environment check
+
+      <p className="rebot-step-label">Step 2</p>
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./setup.sh --check
 ```
 
@@ -183,14 +203,23 @@ This command only checks the system and does not modify the environment. Checks 
 - ROS 2 workspace build results;
 - the web `package.json` and `.env`.
 
-### Step 3: One-click install and build
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+      #### Step 3: One-click install and build
+
+      <p className="rebot-step-label">Step 3</p>
 
 ```bash
 ./setup.sh --yes
 ./rebotarm doctor
 ```
 
-The installation script installs missing ROS 2, Node.js, SocketCAN, and build dependencies, creates `rebotarm_ros2/.venv`, installs the Python dependencies for the RS real robot, MuJoCo, and Agent, runs rosdep, and builds the ROS 2 workspace with:
+The installation script installs missing ROS 2, Node.js, SocketCAN, and build dependencies, creates `rebotarm_ros2_RS/.venv`, installs the Python dependencies for the RS real robot, MuJoCo, and Agent, runs rosdep, and builds the ROS 2 workspace with:
 
 ```bash
 colcon build --symlink-install
@@ -208,11 +237,20 @@ After modifying Python packages, this is usually enough:
 
 ```bash
 source scripts/rs_env.sh
-cd rebotarm_ros2
+cd rebotarm_ros2_RS
 colcon build --symlink-install
 ```
 
-### Step 4: Configure web environment variables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+      #### Step 4: Configure web environment variables
+
+      <p className="rebot-step-label">Step 4</p>
 
 On first install, `reBotArm_simulator-RS/.env` is created from `.env.example`. Key fields:
 
@@ -227,6 +265,10 @@ MOTORBRIDGE_WS_TOKEN=
 
 If the web console and ROS 2/Agent are not on the same machine, change the proxy addresses to the backend machine's IP. API keys and tokens should only be stored in environment variables or the uncommitted local `.env`.
 
+</div>
+</section>
+</div>
+
 ## Launching the Project
 
 <Tabs defaultValue="web" groupId="launch-mode" queryString>
@@ -236,7 +278,7 @@ If the web console and ROS 2/Agent are not on the same machine, change the proxy
 Start only the Node.js web server, without rosbridge or ROS 2:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS/reBotArm_simulator-RS
+cd ~/ReBot_Arm_DigitalTwin_RS/reBotArm_simulator-RS
 npm start
 ```
 
@@ -258,14 +300,14 @@ This mode is suitable for developing the 3D model, UI, pose presets, and front-e
 Terminal 1 starts Fake Driver, MuJoCo, camera, detection, MCP Agent, and rosbridge:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start rs_sim
 ```
 
 Terminal 2 starts the web console:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start web
 ```
 
@@ -308,7 +350,7 @@ ip -details -statistics link show can0
 After confirming that the emergency stop works and the workspace is clear, start the real-robot controller in terminal 1:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE \
   ./rebotarm start rs
 ```
@@ -371,7 +413,7 @@ Simulation and real-robot processes running in the foreground should be ended no
 ## Project Architecture
 
 ```text
-ReBot_Arm_web_RS/
+ReBot_Arm_DigitalTwin_RS/
 |-- setup.sh                              One-click check, install, and build
 |-- rebotarm                              Unified start, status, and stop entry
 |-- requirements-rs-hardware.txt          RS real-robot Python dependencies
@@ -383,7 +425,7 @@ ReBot_Arm_web_RS/
 |   |-- start_rs_hardware.sh              RS real-robot controller
 |   |-- start_rs_dual.sh                  Real-robot/Fake dual-namespace startup
 |   `-- start_rs_text_agent.sh            Text Agent HTTP service
-|-- rebotarm_ros2/
+|-- rebotarm_ros2_RS/
 |   |-- src/rebotarmcontroller/           Real-robot controller and Fake Driver
 |   |-- src/rebotarm_msgs/                Custom msg/srv/action
 |   |-- src/rebotarm_bringup/             Config, URDF, meshes, and launch
@@ -624,7 +666,7 @@ The LLM understands natural language, and the MCP layer constrains intention int
 The full simulation starts the MCP Agent by default. To enable the natural-language entry point, open another terminal:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 export DASHSCOPE_API_KEY='your-key'
 export REBOTARM_LLM_MODEL='qwen-plus'
 ./scripts/start_rs_text_agent.sh
@@ -652,7 +694,7 @@ Before enabling motion tools in a real-robot environment, explicitly check the A
 The real-robot default configuration is located at:
 
 ```text
-rebotarm_ros2/src/rebotarm_bringup/config/rebotarm_hardware.yaml
+rebotarm_ros2_RS/src/rebotarm_bringup/config/rebotarm_hardware.yaml
 ```
 
 Current RS key parameters:
@@ -732,14 +774,14 @@ Add Topic, Service, or Action paths in the UI layer and call the client's `subsc
 ROS 2 primary models:
 
 ```text
-rebotarm_ros2/src/rebotarm_bringup/description/urdf/00-arm-rs_asm-v3.urdf
-rebotarm_ros2/src/rebotarm_bringup/description/meshes_rs/
+rebotarm_ros2_RS/src/rebotarm_bringup/description/urdf/ReBot_Arm_RS.urdf
+rebotarm_ros2_RS/src/rebotarm_bringup/description/meshes_rs/
 ```
 
 The web server reads the models above first. If the web directory is copied and run alone, it uses:
 
 ```text
-reBotArm_simulator-RS/description/urdf/00-arm-rs_asm-v3.urdf
+reBotArm_simulator-RS/description/urdf/ReBot_Arm_RS.urdf
 reBotArm_simulator-RS/description/meshes_rs/
 ```
 
@@ -749,7 +791,7 @@ Keep both copies in sync when modifying them and check Linux filename case.
 
 | File/directory | Role |
 |---|---|
-| `rebotarm_ros2/src/rebotarm_mujoco_rs/models/` | RS MJCF and STL |
+| `rebotarm_ros2_RS/src/rebotarm_mujoco_rs/models/` | RS MJCF and STL |
 | `rebotarm_mujoco_rs/mujoco_sync.py` | Sync frequency, dynamics, and PD |
 | `rebotarm_mujoco_rs/scene_camera.py` | Overhead camera |
 | `rebotarm_mujoco_rs/scene_detector.py` | Color detection |
@@ -761,7 +803,7 @@ Keep both copies in sync when modifying them and check Linux filename case.
 The MCP Server is located at:
 
 ```text
-rebotarm_ros2/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
+rebotarm_ros2_RS/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
 ```
 
 When adding a tool:
@@ -776,7 +818,7 @@ When adding a tool:
 
 ```bash
 source scripts/rs_env.sh
-python3 -m pytest rebotarm_ros2/src/rebotarmcontroller/test -q
+python3 -m pytest rebotarm_ros2_RS/src/rebotarmcontroller/test -q
 
 bash -n setup.sh rebotarm scripts/*.sh
 
@@ -908,7 +950,7 @@ The RS web console includes Service Worker/PWA support. First use `Ctrl+Shift+R`
 - Confirm that the Ubuntu, ROS 2, and Python versions match.
 - Confirm that rosdep is initialized and can update.
 - Run `./setup.sh --check` to see the missing items.
-- Confirm that `numpy`, `scipy`, `mujoco`, `pinocchio`, `motorbridge`, and `fastmcp` can be imported in `rebotarm_ros2/.venv`.
+- Confirm that `numpy`, `scipy`, `mujoco`, `pinocchio`, `motorbridge`, and `fastmcp` can be imported in `rebotarm_ros2_RS/.venv`.
 - Back up user files before deleting or resetting them, and do not solve build problems with destructive commands.
 
 ## Quick Command Table

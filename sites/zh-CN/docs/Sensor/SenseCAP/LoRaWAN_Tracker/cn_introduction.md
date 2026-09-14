@@ -9,8 +9,8 @@ slug: /t1000e_for_lorawan_introduction
 sku: 114993591
 sidebar_position: 1
 last_update:
-  date: 2/4/2026
-  author: Janet
+  date: 9/1/2026
+  author: Advent Jiang
 createdAt: '2026-01-09'
 updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/cn/t1000e_for_lorawan_introduction/
@@ -33,7 +33,7 @@ url: https://wiki.seeedstudio.com/cn/t1000e_for_lorawan_introduction/
 T1000-E for LoRaWAN 搭载完全开源的固件。为提升用户体验，我们在出厂设备中预装了演示固件。用户可以先体验演示固件的功能，也可以开发自己的自定义固件。关于自定义开发的详细信息，请参考 [LoRaWAN Open Source Firmware](https://wiki.seeedstudio.com/cn/open_source_lorawan/)。
 
 :::caution note
-在烧录固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本，并且不要将其他 Meshtastic 固件烧录到此追踪器型号上，否则可能导致设备完全损坏。
+在烧录固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本，并且不要将其他 Meshtastic 或 MeshCore 固件烧录到此追踪器型号上，否则可能导致设备完全损坏。
 :::
 
 **T1000 系列版本对比**

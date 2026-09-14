@@ -1,5 +1,5 @@
 ---
-description: Recetario de Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — lectura/escritura del RTC PCF8563, estrategias de bajo consumo con deep-sleep, grabación de audio con micrófono PDM en tarjeta SD (E1001 / E1002 / E1003) y dibujo táctil capacitivo (solo E1003).
+description: cookbook de Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — lectura/escritura del RTC PCF8563, estrategias de bajo consumo con deep-sleep, grabación de audio con micrófono PDM en tarjeta SD (E1001 / E1002 / E1003) y dibujo táctil capacitivo (solo E1003).
 title: 'Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
@@ -30,21 +30,21 @@ Si quieres previsualizar rápidamente los resultados del proyecto o probar el fi
 </div><br />
 :::
 
-:::tip Otros recetarios en esta serie
+:::tip Otros cookbooks en esta serie
 - **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino)** — representación de texto, gráficos e imágenes en la pantalla de tinta electrónica.
 - **[Arduino Cookbook: Onboard Peripherals](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals)** — LED, zumbador, botones, sensor SHT4x, monitor de batería, tarjeta microSD y la canalización de imágenes de la tarjeta SD.
 :::
 
 ## Introducción
 
-Este es el segundo recetario de periféricos para la reTerminal E Serie. Mientras que el [primer recetario de periféricos](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals) cubre los periféricos básicos de E/S (LED, zumbador, botones, SHT4x, batería, tarjeta SD), esta página profundiza en cuatro temas más avanzados:
+Este es el segundo cookbook de periféricos para la reTerminal E Serie. Mientras que el [primer cookbook de periféricos](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals) cubre los periféricos básicos de E/S (LED, zumbador, botones, SHT4x, batería, tarjeta SD), esta página profundiza en cuatro temas más avanzados:
 
 - **Reloj en tiempo real (RTC)** — el chip RTC **PCF8563** integrado, alimentado por una pila tipo moneda CR1220, que mantiene la hora incluso cuando se retira la batería principal.
 - **Modos de bajo consumo** — deep sleep, light sleep y estrategias de activación por GPIO para extender la vida de la batería de días a meses.
 - **Micrófono PDM** — captura de audio mediante el micrófono digital PDM integrado (solo E1001 / E1002 / E1003; el E1004 no tiene micrófono) y guardado de archivos WAV en la tarjeta microSD.
 - **Pantalla táctil** — uso del panel táctil capacitivo integrado en el E1003 (modelo de 10,3") para dibujar puntos en la pantalla de tinta electrónica. Solo el E1003 tiene panel táctil.
 
-Todos los ejemplos de este recetario provienen del repositorio [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D). Los ejemplos de RTC, bajo consumo y micrófono **no requieren instalar bibliotecas adicionales**: todo utiliza las API integradas del ESP32. El ejemplo de táctil requiere la biblioteca **Seeed_GFX**.
+Todos los ejemplos de este cookbook provienen del repositorio [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D). Los ejemplos de RTC, bajo consumo y micrófono **no requieren instalar bibliotecas adicionales**: todo utiliza las API integradas del ESP32. El ejemplo de táctil requiere la biblioteca **Seeed_GFX**.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D" target="_blank">
@@ -54,7 +54,7 @@ Todos los ejemplos de este recetario provienen del repositorio [OSHW-reTerminal-
 
 ### Materiales necesarios
 
-Este recetario se aplica a la reTerminal E Serie. Elige el dispositivo que tengas a mano:
+Este cookbook se aplica a la reTerminal E Serie. Elige el dispositivo que tengas a mano:
 
 <div class="table-center">
   <table align="center">
@@ -104,11 +104,11 @@ Antes de ejecutar cualquiera de los ejemplos siguientes, ya deberías tener:
 - Un **cable de datos USB-C** funcional y el puerto serie correcto seleccionado.
 - Verificado que puedes flashear un sketch básico al dispositivo; consulta la preparación del entorno en [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino#preparación-del-entorno) si aún no lo has hecho.
 
-Todos los sketches de este recetario imprimen información de depuración a través de `Serial1` en los pines **GPIO44 (RX) / GPIO43 (TX)** a **115200 baudios**; este es el puente USB-UART portador, **no** el USB-CDC `Serial` que el Arduino IDE abre automáticamente. Abre el Monitor Serie de Arduino y selecciona el puerto y la velocidad en baudios correspondientes para seguir la salida.
+Todos los sketches de este cookbook imprimen información de depuración a través de `Serial1` en los pines **GPIO44 (RX) / GPIO43 (TX)** a **115200 baudios**; este es el puente USB-UART portador, **no** el USB-CDC `Serial` que el Arduino IDE abre automáticamente. Abre el Monitor Serie de Arduino y selecciona el puerto y la velocidad en baudios correspondientes para seguir la salida.
 
 ### Resumen de compatibilidad de hardware
 
-No todas las funciones de este recetario están disponibles en los cuatro modelos. La tabla siguiente resume lo que puedes usar:
+No todas las funciones de este cookbook están disponibles en los cuatro modelos. La tabla siguiente resume lo que puedes usar:
 
 <div class="table-center">
   <table align="center">
@@ -1449,7 +1449,7 @@ El sketch requiere que descomentes **una** directiva `#define` en la sección US
 
 ### Preparación de la tarjeta SD
 
-Para obtener instrucciones sobre cómo insertar y formatear la tarjeta microSD, consulta la sección **[Using the MicroSD Card](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals#using-the-microsd-card)** en el primer libro de recetas de periféricos.
+Para obtener instrucciones sobre cómo insertar y formatear la tarjeta microSD, consulta la sección **[Using the MicroSD Card](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals#using-the-microsd-card)** en el primer cookbook de periféricos.
 
 :::note
 La reTerminal E Serie es compatible con tarjetas microSD de hasta **64 GB**, formateadas como **FAT32**.

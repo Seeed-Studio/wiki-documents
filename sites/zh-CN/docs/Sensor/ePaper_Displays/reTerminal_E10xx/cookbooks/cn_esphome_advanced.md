@@ -1,6 +1,6 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome 使用示例——按钮、蜂鸣器、板载 LED、电池监测、SHT4x 传感器、电容触摸（E1003）、深度睡眠和多页面仪表盘。
-title: ESPHome 使用示例：按钮、蜂鸣器、LED、电池、触摸与低功耗（reTerminal E 系列）
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome cookbook——按钮、蜂鸣器、板载 LED、电池监测、SHT4x 传感器、电容触摸（E1003）、深度睡眠和多页面仪表盘。
+title: ESPHome Cookbook：按钮、蜂鸣器、LED、电池、触摸与低功耗（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 4
@@ -16,10 +16,10 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome 使用示例：按钮、蜂鸣器、LED、电池、触摸与低功耗（reTerminal E 系列）
+# ESPHome Cookbook：按钮、蜂鸣器、LED、电池、触摸与低功耗（reTerminal E 系列）
 
 :::tip 前置条件
-本页假定你已经完成了 [reTerminal E 系列的 ESPHome 显示使用示例](/cn/reterminal_e10xx_with_esphome)（设备已连接 Wi‑Fi、已与 Home Assistant 集成、首个仪表盘已渲染）。关于平台级 YAML 骨架和 Home Assistant 集成步骤，请参阅 [使用 ESPHome](/cn/epaper_work_with_esphome)。关于 RTC、microSD 卡检测和麦克风配置，请参阅 [ESPHome 使用示例：RTC、SD 卡与麦克风](/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone)。电容触摸（GT911）在本页后文介绍，仅适用于 **reTerminal E1003**。
+本页假定你已经完成了 [reTerminal E 系列的 ESPHome 显示 cookbook](/cn/reterminal_e10xx_with_esphome)（设备已连接 Wi‑Fi、已与 Home Assistant 集成、首个仪表盘已渲染）。关于平台级 YAML 骨架和 Home Assistant 集成步骤，请参阅 [使用 ESPHome](/cn/epaper_work_with_esphome)。关于 RTC、microSD 卡检测和麦克风配置，请参阅 [ESPHome Cookbook：RTC、SD 卡与麦克风](/cn/reterminal_e10xx_with_esphome_rtc_sd_microphone)。电容触摸（GT911）在本页后文介绍，仅适用于 **reTerminal E1003**。
 :::
 
 :::tip 在浏览器中生成 ESPHome YAML 或烧录演示固件
@@ -36,7 +36,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-本文介绍如何在 reTerminal E 系列电子墨水屏设备上，通过 ESPHome 配置板载 I/O 和电源相关功能，并在我们 [ESPHome 显示使用示例](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome) 中讲解的基础概念之上进一步扩展。如果你刚接触 ESPHome 或 reTerminal E 系列，建议先阅读显示指南，再来使用这些硬件示例。
+本文介绍如何在 reTerminal E 系列电子墨水屏设备上，通过 ESPHome 配置板载 I/O 和电源相关功能，并在我们 [ESPHome 显示 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome) 中讲解的基础概念之上进一步扩展。如果你刚接触 ESPHome 或 reTerminal E 系列，建议先阅读显示指南，再来使用这些硬件示例。
 
 ## 硬件能力
 

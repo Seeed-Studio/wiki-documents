@@ -824,7 +824,7 @@ Mesh Beeに関する一般的なディスカッションや開発関連のトピ
 
 * [JN5168データシート](https://files.seeedstudio.com/wiki/Mesh_Bee/res/JN516X.pdf)
 
-* [v1004用クックブック](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_Cook_Book.pdf)
+* [v1004用 Cook Book](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_Cook_Book.pdf)
 
 * [v1004用ユーザーマニュアル](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_User_Manual_v0.3.pdf)
 

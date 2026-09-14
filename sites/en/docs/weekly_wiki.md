@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/17/2026
+  date: 09/07/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-08-19'
+updatedAt: '2026-09-07'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,97 +18,66 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 17th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 7th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [reBot Arm B601-RS Web Simulator and ROS 2/MuJoCo Developer Guide](https://wiki.seeedstudio.com/rebot_arm_b601_rs_web_simulator_developer_guide/)
+### [Wio Tracker L2 Introduction](https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web_rs/rebot_rs_web_simulator_en.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="Wio Tracker L2" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The reBot Arm B601-RS project integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, and an optional LLM/MCP grasping agent. This guide explains how to install, launch, and develop on the full system.
+The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtastic.org/) node featuring LoRa (862–930 MHz), the ESP32S3 for efficient processing, and an L76K GPS module for accurate location tracking. Designed for flexibility, it supports QSPI touch screen, E-Ink displays, TF Card, as well as solar panels and battery power, making it ideal for a wide range of IoT and off-grid applications.
+
+**More Wio Tracker L2 guides updated this week:**
+
+- [Get Started with Wio Tracker L2](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l2/)
+- [MUI Introduction](https://wiki.seeedstudio.com/l2_mui/)
+- [SD Card Usage](https://wiki.seeedstudio.com/l2_sd_card/)
+- [MQTT Gateway](https://wiki.seeedstudio.com/set_up_mqtt_gateway_l2/)
+- [Meshtastic Node Map](https://wiki.seeedstudio.com/meshtastic_node_map_l2/)
+- [Meshtastic Network Monitor](https://wiki.seeedstudio.com/meshtastic_node_monitor_l2/)
 
 </div>
 
-### [reComputer Rugged J401 Hardware and Interface Usage](https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/)
+### [Microduck RL on Jetson](https://wiki.seeedstudio.com/ai_robotics_microduck_rl_on_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki introduces the various hardware and interfaces of reComputer Rugged J40 and explains how to use them to expand your project ideas. Most interfaces on the reComputer Rugged J40 use M12 connectors, providing IP66-rated water and dust resistance as well as excellent vibration resistance. This makes it suitable for long-term deployment in harsh outdoor environments, such as onboard vessels and in port monitoring systems.
+This demo builds a complete robot-learning workflow for **Microduck** on a **Seeed reComputer powered by NVIDIA Jetson Orin NX 16GB**. It covers GPU environment deployment, PPO training with MuJoCo, visualization of local checkpoints, keyboard-controlled inference with official ONNX policies, and the development of new custom motions.
 
 </div>
 
-### [Develop reCamera Pro Applications with AI Coding Agents](https://wiki.seeedstudio.com/recamera_pro_development_cpp_skill/)
+### [Embodied Agent Architecture Design for reBot B601 RS Robotic Arm](https://wiki.seeedstudio.com/wrc_demo_tutorial/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/cpp_skill/recamera_skill.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent3.PNG" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The [reCamera Pro Development Skill](https://github.com/Seeed-Projects/recamera-pro-development-skill) packages reCamera Pro-specific instructions, scripts, technical references, and a native C++ application template for AI coding agents. After installing it, you can describe an application in natural language and let the agent prepare the model-conversion and native-development workflow.
+This tutorial is the **operation guide** for the [wrc_demo](https://github.com/TheMoonAstronaut/wrc) project. Follow the steps in this guide to go from zero cloning to a running demo in **1-2 hours**. wrc_demo is a visual grasping demo for the [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) (RobStride bus), running on Ubuntu 22.04 + Python 3.10 + conda `wrc-demo` environment. The demo receives natural language instructions (e.g. "pick up the red block"), automatically plans the grasp and executes it.
 
 </div>
 
-### [Integrate reSpeaker Clip into Your Service](https://wiki.seeedstudio.com/respeaker_clip_service_integration/)
+### [reSpeaker Clip AI Chat System Architecture](https://wiki.seeedstudio.com/respeaker_clip_ai_chat_system_architecture/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_existing_service_clip_as_new_audio_source_v2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide shows how to add reSpeaker Clip as a managed audio source to an existing Python service. It focuses on the integration boundary: one device adapter, one long-lived connection, a small API surface, and clear state ownership.
+This document introduces the architecture of the reSpeaker Clip AI chat system, including its core components, workflow, tool calling, and memory mechanism.
 
 </div>
 
-### [Simulating reBot-B601-DM with Isaac Sim](https://wiki.seeedstudio.com/rebot_arm_b601_dm_isaacsim/)
+### [Flash the Debian 13 Image to reCamera Pro](https://wiki.seeedstudio.com/recamera_pro_debian/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This is a simulation project for the reBot-B601-DM robot built with NVIDIA Isaac Sim. It uses Isaac Sim's high-fidelity physics engine to accurately reproduce the robot's kinematic behavior and gripper coordination in a virtual environment, providing a clean simulation-only platform for control algorithm development, trajectory planning validation, and communication protocol testing.
-
-</div>
-
-### [Install Ubuntu on SenseCAP M4 via USB](https://wiki.seeedstudio.com/install_ubuntu_on_sensecap_m4/)
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-sensecap-m4-square-45font.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to install Ubuntu 24.04 on the SenseCAP M4 using a USB drive.
-
-</div>
-
-### [Get Started with MeshCore on SenseCAP MeshTracker X1](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/ScreenShot_2026-08-17_144406_980.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide introduces how to use MeshCore on the SenseCAP MeshTracker X1, covering firmware flashing, device connection, LoRa and GPS configuration, messaging, and troubleshooting.
-
-</div>
-
-### [Build a Four-Camera Fisheye Surround View Demo on Jetson](https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
-
-</div>
-
-### [Deploy Monocular Depth Estimation on reCamera (FastDepth, INT8)](https://wiki.seeedstudio.com/recamera_deploy_monocular_depth/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-indoor-office-result.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide walks through converting, quantizing, and deploying a monocular depth estimation model — [FastDepth](https://github.com/dwofk/fast-depth) — to the reCamera's CV181x TPU, and running it on-device. All commands were run and all numbers measured on real hardware.
+reCamera Pro is powered by the RV1126B chip and is available with 2 GB or 4 GB of memory. It ships with Buildroot firmware for a quick start with AI inference. This page provides a Debian 13 image for users who need more flexibility for development and deployment.
 
 </div>
 
@@ -262,5 +231,8 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.7.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260727)
 - [weekly wiki on 2026.8.03rd](/Seeed_Elderly/weekly_wiki/2026/wiki260803)
 - [weekly wiki on 2026.8.10th](/Seeed_Elderly/weekly_wiki/2026/wiki260810)
+- [weekly wiki on 2026.8.17th](/Seeed_Elderly/weekly_wiki/2026/wiki260817)
+- [weekly wiki on 2026.8.24th](/Seeed_Elderly/weekly_wiki/2026/wiki260824)
+- [weekly wiki on 2026.8.31st](/Seeed_Elderly/weekly_wiki/2026/wiki260831)
 
 </details>

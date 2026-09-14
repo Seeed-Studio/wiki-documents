@@ -1,0 +1,105 @@
+---
+description: Seeed Studio NVIDIA Jetson エッジ AI コンピュータ向けの製品選定ガイドです。インタラクティブセレクタ、比較表、シナリオ別推奨、注意事項を含みます。
+title: Jetson 製品選定ガイド
+hide_table_of_contents: false
+keywords:
+  - Edge
+  - reComputer
+  - NVIDIA Jetson
+  - Selection
+  - Comparison
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.webp
+slug: /jetson-product-selection-guide
+last_update:
+  date: 09/01/2026
+  author: lorraine
+createdAt: '2026-09-01'
+updatedAt: '2026-09-01'
+url: https://wiki.seeedstudio.com/ja/jetson-product-selection-guide
+---
+
+import JetsonProductSelector from '@site/src/components/jetson/JetsonProductSelector';
+
+# Jetson 製品選定ガイド
+
+このガイドでは、アプリケーション、性能、インターフェース、予算に基づいて、適切な Seeed Studio NVIDIA Jetson エッジ AI コンピュータを選定するのに役立つ情報を提供します。
+
+:::tip
+すでに必要な Jetson モジュールが決まっている場合は、**[製品概要表](#product-overview)** に進んでください。まだシナリオを検討中の場合は、まず **[インタラクティブセレクタ](#interactive-selector)** をお試しください。
+:::
+
+## インタラクティブセレクタ
+
+<JetsonProductSelector />
+
+## クイック選定マップ
+
+| ユースケース | 推奨シリーズ | モジュール | 主な検討事項 |
+|---|---|---|---|
+| 学習 / プロトタイピング | reComputer Classic | Jetson Nano / Orin Nano | 低コスト、豊富なドキュメント、プラグアンドプレイ |
+| エッジ AI / ビデオ解析 | reComputer Classic / Super | Orin Nano / Orin NX | 性能とコストのバランスが良い |
+| 産業用途 / 24時間365日稼働 | reComputer Industrial / reServer Industrial | Orin Nano / Orin NX / Xavier NX | 広い動作温度範囲、産業用 I/O、耐振動 |
+| ロボティクス / AMR | reComputer Robotics | Orin Nano / Orin NX | 複数 CAN、ロボット向け I/O、オプションの GMSL |
+| 車載 / 屋外 / 過酷環境 | reComputer Rugged | Orin Nano / Orin NX | IP66、自動車用コネクタ、M12 |
+| ハイエンド AGX / 自律制御 | reComputer J501 | AGX Orin 32GB/64GB | 高い演算性能、1G/10G ネットワーク |
+
+## 製品概要
+
+| 製品 | シリーズ | Jetson モジュール | ネットワーク/拡張 | ストレージ | 温度 | IP | 最適な用途 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| reComputer J1010 | reComputer (Classic) J101 | Jetson nano 4GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | - | 0℃ ~ 60℃ | 標準 | - |
+| reComputer J1020 v2 | - | Jetson nano 4GB | 1x RJ45 Gigabit Ethernet | 1x M.2 KEY M PCIe | 0℃ ~ 60℃ | 標準 | - |
+| reComputer J2021 | reComputer (Classic) J202 | Xavier NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10~60 °C | 標準 | ビジョンモデル |
+| reComputer J3010 | reComputer (Classic) J401 | Orin Nano 4GB/8GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10~60 °C | 標準 | エッジ AI、ビデオ解析 |
+| reComputer J4011 | - | Orin NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10~60 °C | 標準 | エッジ AI、ビデオ解析、大規模言語モデル |
+| reComputer J3010B | reComputer (Classic) J401B | Orin Nano 4GB/8GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>LTE<br/>SIM | 1x M.2 KEY M PCIe | -10~60 °C | 標準 | エッジ AI、ビデオ解析、公共分野 |
+| reComputer J4011B | - | Orin NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>LTE<br/>SIM | 1x M.2 KEY M PCIe | -10~60 °C | 標準 | - |
+| reComputer Industrial J2011 | reComputer Industrial J201 | Xavier NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C（0.7m/s 風量時） | IP40 | - |
+| reComputer Industrial J3010 | reComputer Industrial J401 | Orin Nano 4GB/8GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C（0.7m/s 風量時） | IP40 | 産業環境、エッジ AI、ビデオ解析の一般用途 |
+| reComputer Industrial J4011 | - | Orin NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C（0.7m/s 風量時） | IP40 | - |
+| reServer industrial J3010 | reServer Industrial J401 | Orin Nano 4GB/8GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C（0.7m/s 風量時） | IP40 | - |
+| reServer industrial J4011 | - | Orin NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C（0.7m/s 風量時） | IP40 | - |
+| reComputer Mini J3011 | reComputer Mini J401 | Orin Nano 8GB | WiFi/BT | 1x M.2 KEY M PCIe | -10℃~50℃ | 標準 | 協働ロボット（cobot）、AMR、サービスロボット、フライトコントローラ |
+| reComputer Mini J4012 | - | Orin NX 16GB | WiFi/BT | 1x M.2 KEY M PCIe | -10℃~50℃ | 標準 | - |
+| reComputer Mini J3011 with Extension | reComputer Mini J401 with Extension | Orin Nano 8GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10℃~50℃ | 標準 | - |
+| reComputer Mini J4011 with Extension | - | Orin NX 16GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10℃~50℃ | 標準 | - |
+| reComputer Super J3010 | reComputer Super J401 | Orin Nano 4GB/8GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>LTE<br/>SIM | 1x M.2 KEY M PCIe | -20℃~65℃ | 標準 | エッジ AI、ビデオ解析、性能向上、屋内外シナリオ |
+| reComputer Super J4011 | - | Orin NX 8GB/16GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>LTE<br/>SIM | 1x M.2 KEY M PCIe | -20℃~65℃(25W Mode)<br/>-20℃~60℃(MAXN Mode) | 標準 | - |
+| reComputer Robotics J3010 | reComputer Robotics J401 | Orin Nano 4GB/8GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20℃~55℃ | IP40 | ロボットアプリケーション、AMR、協働ロボット（cobot）、四足歩行ロボット、サービスロボット、シャーシロボットなど |
+| reComputer Robotics J4011 | - | Orin NX 8GB/16GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20℃~55℃(25W Mode)<br/>-20℃~50℃(MAXN Mode) | IP40 | - |
+| reComputer Robotics J3010 with GMSL extension board | reComputer Robotics J401 with GMSL extension board | Orin Nano 4GB/8GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20℃~55℃ | IP40 | ロボットアプリケーション、AMR、協働ロボット（cobot）、四足歩行ロボット、サービスロボット、シャーシロボット、... |
+| reComputer Robotics J4011 with GMSL extension board | - | Orin NX 8GB/16GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20℃~55℃(25W Mode)<br/>-20℃~50℃(MAXN Mode) | IP40 | - |
+| reComputer Rugged J3011 | reComputer Rugged J401 | Orin Nano 8GB | 1x M12 X-coded Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60C（0.7m/s 風量時） | IP66 | 船舶搭載、車載（後付け/改造）、港湾 AGV、野外巡検など |
+| reComputer Rugged J4012 | - | Orin NX 16GB | 1x M12 X-coded Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60C（0.7m/s 風量時） | IP66 | - |
+| reComputer Robotics J5011 with GMSL | reComouter Robotics J501 | AGX Orin 32GB | 4x 1G Ethernet<br/><br/>1x 10G Ethernet<br/>WiFi/BT<br/>5G | 2x M.2 Key M slot | -10℃~60℃ | 標準 | ヒューマノイドロボット、シャーシロボット、自動運転など |
+| reComputer Robotics J5012 with GMSL | - | AGX Orin 64GB | 4x 1G Ethernet<br/><br/>1x 10G Ethernet<br/>WiFi/BT<br/>5G | 2x M.2 Key M slot | -10℃~60℃ | 標準 | - |
+
+## シナリオ別推奨
+
+### 1. 学習 & プロトタイピング
+
+- 予算が限られている / 初めての Jetson: **reComputer J1010 / J1020 v2**（Jetson Nano）。
+- Orin クラスの性能が欲しい場合: **reComputer J3010**（Orin Nano）。
+
+### 2. エッジ AI 推論 & ビデオ解析
+
+- 高い演算性能と成熟したエコシステム: **reComputer J4011**（Orin NX）。
+- 必要なインターフェースを備えたコンパクト筐体: **reComputer Super J3010 / J4011**。
+
+### 3. 産業制御 & オートメーション
+
+- 広い動作温度範囲、耐振動、産業用 I/O: **reComputer Industrial J3010 / J4011** または **reServer Industrial J3010 / J4011**。
+- いずれも DIN レール / VESA 取り付けに対応し、RS485、GPIO、PoE を提供します。
+
+### 4. ロボティクス & AMR
+
+- 汎用ロボティクスプラットフォーム: 複数の CAN と XT30 電源を備えた **reComputer Robotics J3010 / J4011**。
+- 複数の GMSL2 カメラ: **reComputer Robotics J3010/4011 with GMSL extension board**。
+
+### 5. 車載、屋外 & 過酷環境
+
+- 防水・防塵かつ自動車用コネクタ: **reComputer Rugged J3011 / J4012**（IP66、M12 コネクタ）。
+
+### 6. ハイエンド自律制御 / 大規模計算 R&D
+
+- AGX Orin 32GB/64GB が必要な場合: **reComputer Robotics J5011/5012 with GMSL**（1G/10G ネットワークと GMSL を搭載）。

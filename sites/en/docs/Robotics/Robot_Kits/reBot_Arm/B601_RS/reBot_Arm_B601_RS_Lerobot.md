@@ -16,18 +16,30 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-17'
-updatedAt: '2026-08-10'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/
 ---
 
+import '/src/css/rebot-wiki-style.css';
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Getting Started with LeRobot-based reBot Arm B601-RS
+
+<RebotRsDocNav />
 
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
 </div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -42,35 +54,12 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
-
-
 [reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) is an open-source robotic arm project launched by Seeed, dedicated to lowering the threshold for learning embodied intelligence. We open-source all structural designs and code without reservation, making robotics technology accessible to everyone.
 
 
 [LeRobot](https://github.com/huggingface/lerobot/tree/main) is committed to providing models, datasets and tools for real-world robotics in PyTorch. Its aim is to reduce the entry barrier of robotics, enabling everyone to contribute and benefit from sharing datasets and pretrained models. LeRobot integrates cutting-edge methodologies validated for real-world application, centering on imitation learning and reinforcement learning. It has furnished a suite of pre-trained models, datasets featuring human-gathered demonstrations, and simulation environments, enabling users to commence without the necessity of robot assembly.
 
-### 📖 Project Introduction
-
-**reBot-DevArm (reBot Arm B601 DM and reBot Arm B601 RS)** is a robotic arm project dedicated to lowering the threshold for learning embodied intelligence. We focus on **"True Open Source"** — not just code, we open-source all of the following without reservation:
-- 🦾 **Open-source robotic arms with two motor versions**: We provide all open-source files for RoboStride and Damiao motor versions of the same appearance.
-- 🛠️ **Hardware blueprints**: Sheet metal and 3D printed part source files.
-- 🔩 **BOM (Bill of Materials)**: Detailed to every screw's specification and purchase link.
-- 💻 **Software and algorithms**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
-
-## Building Your reBot Robotic Arm
-
-- We offer five kit options:
-  - **Robotic Arm Body Motor Kit**: Includes only the motors and wiring harnesses needed for the robotic arm.
-  - **Robotic Arm Body Structural Parts Kit**: Includes only the mechanical structural components.
-  - **Gripper Complete Kit**: Includes motors, wiring harnesses, and structural parts for the gripper.
-  - **Complete Arm Kit**: Includes all components for the robotic arm body and gripper.
-  - **Pre-assembled Robotic Arm**: A fully assembled robotic arm.
-
-The reBot-DevArm and reComputer Jetson AI intelligent robot kit seamlessly combine high-precision robotic arm control with a powerful AI computing platform, providing a comprehensive robot development solution. This kit is based on the Jetson Orin or AGX Orin platform, combined with the reBot-DevArm and LeRobot AI framework, offering users an intelligent robot system applicable to multiple scenarios such as education, research, and industrial automation.
+<GitHubStarButton owner="Seeed-Projects" repo="lerobot" />
 
 This wiki provides debugging tutorials for reBot-DevArm and implements data collection and training within the LeRobot framework.
 
@@ -78,36 +67,29 @@ This wiki provides debugging tutorials for reBot-DevArm and implements data coll
 Seeed Studio tutorials are strictly updated according to official documentation. If you encounter software or environmental issues that cannot be resolved, please check the FAQ at the end of the article first, or contact customer service to join the SeeedStudio LeRobot discussion group. You can also ask questions here: [LeRobot GitHub](https://github.com/huggingface/lerobot) or [Discord Channel](https://discord.gg/8TnwDdjFGU).
 :::
 
-## 🔧 Features of reBot B601-RS Series:
-
-1. **Open-source & Low-cost**
-   reBot Arm is an open-source, low-cost robotic arm solution from Seeed Studio, dedicated to lowering the threshold for learning embodied intelligence.
-
-2. **LeRobot Platform Integration**
-   Designed for integration with the [LeRobot platform](https://github.com/huggingface/lerobot). This platform provides PyTorch models, datasets and tools for imitation learning of real robot tasks (including data collection, simulation, training and deployment).
-
-3. **Abundant Learning Resources**
-   Provides comprehensive open-source learning resources including assembly and calibration guides, testing and data collection tutorials, training and deployment documentation to help users quickly get started and develop robotic applications.
-
-4. **Nvidia Platform Compatible**
-   Supports deployment via the reComputer Mini J4012 Orin NX 16GB platform.
-
 <!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
 ## Initial System Environment
 
-**For Ubuntu x86:**
-  - Ubuntu 22.04
-  - CUDA 12+
-  - Python 3.10
-  - Torch 2.6
+<Tabs>
+<TabItem value="ubuntu-x86" label="Ubuntu x86">
 
-**For Jetson Orin:**
-  - Jetson JetPack 6.0 and 6.1, not support 6.2
-  - Python 3.10
-  - Torch 2.3+
+- Ubuntu 22.04/Ubuntu 24.04
+- NVIDIA GPU with CUDA 12+ (optional, for GPU-accelerated training and inference)
+- Python 3.10
+- Torch 2.6 (CPU builds can run basic workflows; CUDA builds are required for GPU acceleration)
+
+</TabItem>
+<TabItem value="jetson-orin" label="Jetson Orin">
+
+- Jetson JetPack 6.0 and 6.1, 6.2 is not supported
+- Python 3.10
+- Torch 2.3+
+
+</TabItem>
+</Tabs>
 
 ## Install LeRobot
 
@@ -115,9 +97,13 @@ Seeed Studio tutorials are strictly updated according to official documentation.
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
-You need to install pytorch, torchvision and other environments based on your CUDA version.
+LeRobot can be installed and run on CPU-only machines for basic workflows. If you need GPU-accelerated training or inference, confirm that your computer has an NVIDIA GPU, then install PyTorch and Torchvision versions matching your CUDA version.
 
-### 1. Install Miniforge
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      #### 1. Install Miniforge
 
 ```bash
 cd ~
@@ -128,7 +114,13 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 source ~/.bashrc
 ```
 
-### 2. Clone the Lerobot Repository
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      #### 2. Clone the LeRobot Repository
 
 ```bash
 mkdir ~/rebot_lerobot
@@ -136,37 +128,50 @@ cd ~/rebot_lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git
 ```
 
-### 3. Create Conda Environment and Install LeRobot
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      #### 3. Create a Conda Environment and Install LeRobot
 
 :::tip
-For detailed functions of the function packages, please refer to:
+For details about the function packages, refer to:
 - [lerobot-teleoperator-rebot-arm-102](https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102)
 - [lerobot-robot-seeed-b601](https://github.com/Seeed-Projects/lerobot-robot-seeed-b601)
 :::
 
-The lerobot repository already has a pyproject.toml. Create a conda environment and install all dependencies.
+
+The LeRobot repository includes a `pyproject.toml`. Create a Conda environment and install all dependencies.
 
 ```bash
 cd ~/rebot_lerobot
 
-# Create conda environment (Python 3.10)
+# Create the conda environment (Python 3.10)
 conda create -y -n lerobot python=3.10
 
-# Activate environment
+# Activate the environment
 conda activate lerobot
 
-# Install lerobot main project (editable mode)
+# Install the main LeRobot project in editable mode
 pip install -e ./lerobot
 
-# Add dependency packages
+# Add the dependency packages
 pip install lerobot-teleoperator-rebot-arm-102
 pip install lerobot-robot-seeed-b601
 pip install motorbridge
 ```
 
-### 4. Install ffmpeg
+</div>
+</section>
 
-ffmpeg is a video decoding dependency, install via conda:
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      #### 4. Install ffmpeg
+
+ffmpeg is a video decoding dependency. Install it with Conda:
 
 ```bash
 conda install ffmpeg -c conda-forge
@@ -174,44 +179,68 @@ conda install ffmpeg -c conda-forge
 
 :::tip
 **Version Notes**:
-- By default, ffmpeg 7.X will be installed (supports libsvtav1 encoder)
-- If you encounter version compatibility issues, you can specify ffmpeg 7.1.1:
+- By default, ffmpeg 7.X will be installed, which supports the `libsvtav1` encoder.
+- If you encounter version compatibility issues, install ffmpeg 7.1.1:
   ```bash
   conda install ffmpeg=7.1.1 -c conda-forge
   ```
-- You can check if libsvtav1 encoder is supported via `ffmpeg -encoders | grep svtav1`
+- Check whether the `libsvtav1` encoder is supported with `ffmpeg -encoders | grep svtav1`.
 :::
 
-### 5. Special Configuration for Jetson JetPack 6.0+ Devices
+</div>
+</section>
 
-(Skip this step for PC) For Jetson JetPack 6.0+ devices (please ensure you have installed Pytorch-gpu and Torchvision according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) step 5 before executing this step):
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      #### 5. Special Configuration for Jetson JetPack 6.0+ Devices
+
+(Skip this step on a PC.) Before continuing on a Jetson JetPack 6.0+ device, install GPU-enabled PyTorch and Torchvision in step 5 of [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch):
 
 ```bash
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies via conda, for Jetson Jetpack 6.0+ only
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies via conda, for Jetson JetPack 6.0+ only
 conda remove opencv   # Uninstall OpenCV
-pip3 install opencv-python==4.10.0.84  # Install specific OpenCV version using pip3
+pip3 install opencv-python==4.10.0.84  # Install the specified OpenCV version with pip3
 conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
 pip3 install numpy==1.26.0  # This version must be compatible with torchvision
 ```
 
-### 6. Check Pytorch and Torchvision
+</div>
+</section>
 
-:::tip
-If you are using a Jetson device, please install Pytorch and Torchvision according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
-:::
+<section className="rebot-step-item">
+    <span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+      #### 6. Check PyTorch and Torchvision
 
-Since installing the lerobot environment via pip will uninstall the original Pytorch and Torchvision and install the CPU versions, you need to perform a check in Python.
+Installing the LeRobot environment with pip may replace the original PyTorch and Torchvision with CPU builds, so check the result in Python.
 
-```python
+```bash
 python3
-
-import torch
-print(torch.cuda.is_available())#Should output True
 ```
 
-If the output is True, you can type exit() to exit Python and continue with the following steps.
-If the output is False, you need to reinstall Pytorch and Torchvision according to the [official tutorial](https://pytorch.org/index.html).
+```python
+import torch
+print(torch.cuda.is_available())
+exit()
+```
+
+If the output is `False`, the current environment is using the CPU version of PyTorch. This is expected on computers without an NVIDIA GPU, and you can continue with CPU-based basic workflows, although training will be much slower. If your computer has an NVIDIA GPU and you need GPU acceleration, install PyTorch and Torchvision versions matching your CUDA version from the [official PyTorch guide](https://pytorch.org/index.html). In that case, the final check should return `True`.
+
+:::tip
+If you are using a Jetson device, install GPU-enabled PyTorch and Torchvision according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
+
+NVIDIA RTX 50-series GPUs require the PyTorch preview version with CUDA 12.8 or later:
+
+```bash
+pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
+```
+:::
+
+</div>
+</section>
+</div>
 
 ## Calibrate the Robotic Arm
 

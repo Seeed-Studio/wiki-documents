@@ -12,15 +12,16 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 08/13/2026
+  date: 08/28/2026
   author: haochen
 createdAt: '2026-04-24'
-updatedAt: '2026-08-13'
+updatedAt: '2026-08-28'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import J601DemoGrid from '@site/src/components/jetson/J601DemoGrid';
 
 # Getting Started with reComputer Robotics J601
 
@@ -431,6 +432,14 @@ The flash command usually takes 2–10 minutes. The following output indicates a
 :::info
 Complete the **System Configuration** according to your needs after the first boot.
 :::
+
+For detailed interface usage, please refer to [Robotics J601 Hardware Interfaces Usage](/recomputer_jetson_robotics_j601_interfaces_usage).
+
+## What Can You Do with J601?
+
+After you flash JetPack, explore the demo wikis below to see what you can build on reComputer Robotics J601. These cards are generated automatically from published Jetson **Application** and **Other Devices** wikis that mention **J601** or **Jetson Thor**.
+
+<J601DemoGrid />
 
 ## Resources
 

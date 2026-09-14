@@ -1,0 +1,105 @@
+---
+description: Um guia de seleção de produtos para computadores de borda com IA NVIDIA Jetson da Seeed Studio, incluindo um seletor interativo, tabelas de comparação, recomendações por cenário e observações.
+title: Guia de Seleção de Produtos Jetson
+hide_table_of_contents: false
+keywords:
+  - Borda
+  - reComputer
+  - NVIDIA Jetson
+  - Seleção
+  - Comparação
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.webp
+slug: /jetson-product-selection-guide
+last_update:
+  date: 09/01/2026
+  author: lorraine
+createdAt: '2026-09-01'
+updatedAt: '2026-09-01'
+url: https://wiki.seeedstudio.com/pt-br/jetson-product-selection-guide
+---
+
+import JetsonProductSelector from '@site/src/components/jetson/JetsonProductSelector';
+
+# Guia de Seleção de Produtos Jetson
+
+Este guia ajuda você a escolher o computador de borda com IA NVIDIA Jetson da Seeed Studio adequado com base na aplicação, desempenho, interfaces e orçamento.
+
+:::tip
+Se você já sabe qual módulo Jetson precisa, vá para a **[tabela de visão geral dos produtos](#visão-geral-dos-produtos)**. Se você ainda está escolhendo um cenário, experimente primeiro o **[seletor interativo](#seletor-interativo)**.
+:::
+
+## Seletor Interativo
+
+<JetsonProductSelector />
+
+## Mapa Rápido de Seleção
+
+| Caso de Uso | Série Recomendada | Módulo | Principais Considerações |
+|---|---|---|---|
+| Aprendizado / Prototipagem | reComputer Classic | Jetson Nano / Orin Nano | Baixo custo, documentação rica, plug-and-play |
+| Edge AI / Análise de Vídeo | reComputer Classic / Super | Orin Nano / Orin NX | Bom desempenho e custo-benefício |
+| Industrial / Operação 7×24 | reComputer Industrial / reServer Industrial | Orin Nano / Orin NX / Xavier NX | Ampla faixa de temperatura, E/S industrial, antivibração |
+| Robótica / AMR | reComputer Robotics | Orin Nano / Orin NX | Múltiplas portas CAN, E/S para robô, GMSL opcional |
+| Em Veículos / Externo / Ambiente Severo | reComputer Rugged | Orin Nano / Orin NX | IP66, conectores automotivos, M12 |
+| AGX de Alto Desempenho / Autonomia | reComputer J501 | AGX Orin 32GB/64GB | Alto poder de computação, rede 1G/10G |
+
+## Visão Geral dos Produtos
+
+| Produto | Série | Módulo Jetson | Rede/Expansão | Armazenamento | Temp | IP | Melhor Para |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| reComputer J1010 | reComputer (Classic) J101 | Jetson nano 4GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | - | 0℃ ~ 60℃ | Padrão | - |
+| reComputer J1020 v2 | - | Jetson nano 4GB | 1x RJ45 Gigabit Ethernet | 1x M.2 KEY M PCIe | 0℃ ~ 60℃ | Padrão | - |
+| reComputer J2021 | reComputer (Classic) J202 | Xavier NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10~60 °C | Padrão | Modelos de visão |
+| reComputer J3010 | reComputer (Classic) J401 | Orin Nano 4GB/8GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10~60 °C | Padrão | edge AI, análise de vídeo |
+| reComputer J4011 | - | Orin NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10~60 °C | Padrão | edge AI, análise de vídeo, grandes modelos de linguagem |
+| reComputer J3010B | reComputer (Classic) J401B | Orin Nano 4GB/8GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>LTE<br/>SIM | 1x M.2 KEY M PCIe | -10~60 °C | Padrão | edge AI, análise de vídeo, setor público |
+| reComputer J4011B | - | Orin NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>LTE<br/>SIM | 1x M.2 KEY M PCIe | -10~60 °C | Padrão | - |
+| reComputer Industrial J2011 | reComputer Industrial J201 | Xavier NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C com 0,7m/s | IP40 | - |
+| reComputer Industrial J3010 | reComputer Industrial J401 | Orin Nano 4GB/8GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C com 0,7m/s | IP40 | Ambientes industriais, edge AI, análise de vídeo em cenários gerais |
+| reComputer Industrial J4011 | - | Orin NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C com 0,7m/s | IP40 | - |
+| reServer industrial J3010 | reServer Industrial J401 | Orin Nano 4GB/8GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C com 0,7m/s | IP40 | - |
+| reServer industrial J4011 | - | Orin NX 8GB/16GB | 1x RJ45 Gigabit Ethernet<br/>PoE<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60°C com 0,7m/s | IP40 | - |
+| reComputer Mini J3011 | reComputer Mini J401 | Orin Nano 8GB | WiFi/BT | 1x M.2 KEY M PCIe | -10℃~50℃ | Padrão | cobot, AMR, robô de serviço, controle de voo |
+| reComputer Mini J4012 | - | Orin NX 16GB | WiFi/BT | 1x M.2 KEY M PCIe | -10℃~50℃ | Padrão | - |
+| reComputer Mini J3011 with Extension | reComputer Mini J401 with Extension | Orin Nano 8GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10℃~50℃ | Padrão | - |
+| reComputer Mini J4011 with Extension | - | Orin NX 16GB | 1x RJ45 Gigabit Ethernet<br/>WiFi/BT | 1x M.2 KEY M PCIe | -10℃~50℃ | Padrão | - |
+| reComputer Super J3010 | reComputer Super J401 | Orin Nano 4GB/8GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>LTE<br/>SIM | 1x M.2 KEY M PCIe | -20℃~65℃ | Padrão | edge AI, análise de vídeo, desempenho aprimorado, cenários internos e externos |
+| reComputer Super J4011 | - | Orin NX 8GB/16GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>LTE<br/>SIM | 1x M.2 KEY M PCIe | -20℃~65℃(Modo 25W)<br/>-20℃~60℃(Modo MAXN) | Padrão | - |
+| reComputer Robotics J3010 | reComputer Robotics J401 | Orin Nano 4GB/8GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20℃~55℃ | IP40 | Aplicações de robótica, AMR, cobot, cão robô, robô de serviço, robô de base móvel etc. |
+| reComputer Robotics J4011 | - | Orin NX 8GB/16GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20℃~55℃(Modo 25W)<br/>-20℃~50℃(Modo MAXN) | IP40 | - |
+| reComputer Robotics J3010 with GMSL extension board | reComputer Robotics J401 with GMSL extension board | Orin Nano 4GB/8GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20℃~55℃ | IP40 | Aplicações de robótica, AMR, cobot, cão robô, robô de serviço, robô de base móvel, ... |
+| reComputer Robotics J4011 with GMSL extension board | - | Orin NX 8GB/16GB | 2x RJ45 Gigabit Ethernet<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20℃~55℃(Modo 25W)<br/>-20℃~50℃(Modo MAXN) | IP40 | - |
+| reComputer Rugged J3011 | reComputer Rugged J401 | Orin Nano 8GB | 1x M12 X-coded Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60C(com fluxo de ar de 0,7m/s) | IP66 | Embarcações, veículos (pós-venda/modificados), AGV em portos, inspeções em campo etc. |
+| reComputer Rugged J4012 | - | Orin NX 16GB | 1x M12 X-coded Gigabit Ethernet<br/>PoE<br/>WiFi/BT<br/>5G<br/>SIM | 1x M.2 KEY M PCIe | -20 ~ 60C(com fluxo de ar de 0,7m/s) | IP66 | - |
+| reComputer Robotics J5011 with GMSL | reComouter Robotics J501 | AGX Orin 32GB | 4x 1G Ethernet<br/><br/>1x 10G Ethernet<br/>WiFi/BT<br/>5G | 2x M.2 Key M slot | -10℃~60℃ | Padrão | Robôs humanóides, robôs de base móvel, direção autônoma etc. |
+| reComputer Robotics J5012 with GMSL | - | AGX Orin 64GB | 4x 1G Ethernet<br/><br/>1x 10G Ethernet<br/>WiFi/BT<br/>5G | 2x M.2 Key M slot | -10℃~60℃ | Padrão | - |
+
+## Recomendações por Cenário
+
+### 1. Aprendizado & Prototipagem
+
+- Orçamento apertado / primeiro Jetson: **reComputer J1010 / J1020 v2** (Jetson Nano).
+- Quer desempenho Orin: **reComputer J3010** (Orin Nano).
+
+### 2. Inferência de Edge AI & Análise de Vídeo
+
+- Maior poder de computação com ecossistema maduro: **reComputer J4011** (Orin NX).
+- Chassi compacto com interfaces essenciais: **reComputer Super J3010 / J4011**.
+
+### 3. Controle Industrial & Automação
+
+- Ampla faixa de temperatura, antivibração, E/S industrial: **reComputer Industrial J3010 / J4011** ou **reServer Industrial J3010 / J4011**.
+- Ambos suportam montagem em trilho DIN / VESA e oferecem RS485, GPIO, PoE.
+
+### 4. Robótica & AMR
+
+- Plataforma geral de robótica: **reComputer Robotics J3010 / J4011**, com múltiplas portas CAN e alimentação XT30.
+- Múltiplas câmeras GMSL2: **reComputer Robotics J3010/4011 with GMSL extension board**.
+
+### 5. Em Veículos, Externo & Ambientes Severos
+
+- À prova d'água/poeira e conectores automotivos: **reComputer Rugged J3011 / J4012**, IP66, conectores M12.
+
+### 6. Autonomia de Alto Desempenho / P&D de Grande Poder de Cálculo
+
+- Precisa de AGX Orin 32GB/64GB: **reComputer Robotics J5011/5012 with GMSL**, com rede 1G/10G e GMSL.

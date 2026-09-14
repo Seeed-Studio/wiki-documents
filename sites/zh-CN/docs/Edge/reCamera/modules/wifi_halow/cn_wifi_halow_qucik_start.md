@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/cn/wifi_halow_getting_started/
 
 在开始配置之前，请确保已准备好以下硬件：
 * **数据线缆**：一根具备数据传输能力的 USB Type-C 线缆（请勿使用仅具备充电功能的线缆）。
-* **reCamera**：一个拆去底板的reCamera设备。
+* **reCamera**：一个拆去底板的reCamera 2002设备。
 ---
 
 

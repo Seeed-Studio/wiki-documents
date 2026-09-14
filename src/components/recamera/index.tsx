@@ -106,7 +106,7 @@ function HeroSection() {
         </div>
         <div className={styles.heroVisual}>
           <img
-            src="https://github.com/Seeed-Studio/OSHW-reCamera-Series/raw/main/statics/reCamera_landingpage.jpeg"
+            src="https://files.seeedstudio.com/wiki/reCamera/20260825-100540.jpg"
             alt={t('reCamera Product Family')}
             className={styles.heroImage}
             loading="eager"

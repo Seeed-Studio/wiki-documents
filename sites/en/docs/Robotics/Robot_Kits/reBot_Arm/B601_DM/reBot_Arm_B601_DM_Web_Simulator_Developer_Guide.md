@@ -1,6 +1,6 @@
 ---
-description: This developer guide introduces the architecture, runtime, ROS2 bridge, LLM/MCP integration, and secondary development workflow of the reBotArm_simulator-DM web simulator and the ROS2/MuJoCo simulation stack.
-title: reBot Arm B601-DM Web Simulator and ROS2/MuJoCo Developer Guide
+description: This developer guide introduces the architecture, runtime, ROS2 bridge, LLM/MCP integration, and secondary development workflow of the reBotArm_simulator-DM web console and the ROS2/MuJoCo stack in the ReBot Arm Digital Twin & Control Stack for B601-DM.
+title: ReBot Arm Digital Twin & Control Stack — B601-DM
 keywords:
   - reBot Arm
   - B601-DM
@@ -16,30 +16,33 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/
 slug: /rebot_arm_b601_dm_web_simulator_developer_guide
 sku: 100065783, 100095532
 last_update:
-  date: 2026-08-07
+  date: 2026-08-24
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-30'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# reBot Arm B601-DM Web Simulator and ROS2/MuJoCo Developer Guide
+# ReBot Arm Digital Twin & Control Stack — B601-DM
 
-<p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png" alt="reBot Arm B601-DM" />
-</p>
+<RebotDmDocNav />
+
+<div align="center">
+    <img width={800}
+    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
-
-<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -56,7 +59,9 @@ import TabItem from '@theme/TabItem';
   <strong>Three.js visualization · URDF loading · rosbridge bridge · LLM/MCP control</strong>
 </p>
 
-This guide is for developers. It explains how to run and extend the `reBotArm_simulator-DM` web simulator. The simulator is a lightweight Node.js + Three.js web console that reads the URDF and STL meshes from the ROS2 workspace in the same repository, renders the 6-DOF body and gripper of the reBot Arm B601-DM in the browser, and talks to ROS2 over a rosbridge WebSocket. It supports the full development workflow: joint mirroring, control lock, gravity compensation, visual grasping, and LLM text control.
+This guide is for developers. It explains how to run and extend the `reBotArm_simulator-DM` web console in the ReBot Arm Digital Twin & Control Stack for B601-DM. The console is a lightweight Node.js + Three.js front end that reads the URDF and STL meshes from the ROS2 workspace in the same repository, renders the 6-DOF body and gripper of the reBot Arm B601-DM in the browser, and talks to ROS2 over a rosbridge WebSocket. It supports the full development workflow: joint mirroring, control lock, gravity compensation, visual grasping, and LLM text control.
+
+<GitHubStarButton owner="Yang-Ci" repo="ReBot_Arm_DigitalTwin_DM" />
 
 :::note
 This guide uses `Ubuntu 24.04 + ROS2 Jazzy` as the ROS2 backend. The web front-end runs in any modern browser on Windows, macOS, or Linux. ROS2 Humble / Ubuntu 22.04 can follow the same workflow.
@@ -68,7 +73,7 @@ This guide uses `Ubuntu 24.04 + ROS2 Jazzy` as the ROS2 backend. The web front-e
    It does not depend on bundlers such as Webpack/Vite. All front-end assets are plain HTML/CSS/JS served directly by a Node.js static server, which keeps deployment and debugging costs very low.
 
 2. **Direct URDF + STL loading**  
-   `URDFLoader` reads `reBot-DevArm_fixend.urdf` and the arm body STL meshes from `src/rebotarm_bringup/description/` in the same repository's ROS2 workspace, so the body model does not need a second copy in the web directory. The gripper visual meshes are stored separately in `split_meshes/grouped_gripper/` in the web directory, because the URDF ends at `end_link`.
+   `URDFLoader` reads `ReBot_Arm_DM.urdf` and the STL meshes from `src/rebotarm_bringup/description/` in the `reBotArm_ros2_DM` workspace in the same repository, so the body model does not need a second copy in the web directory. This URDF includes the complete gripper definition. During web rendering, the original gripper visuals under `end_link` are hidden and four optimized gripper STL meshes are loaded from `split_meshes/grouped_gripper/`.
 
 3. **Bidirectional rosbridge bridge**  
    `ReBotRosClient` wraps the rosbridge JSON protocol and subscribes to joint state, gripper state, arm status, virtual camera image, and vision detection results, and publishes single-joint commands, gripper commands, and target poses.
@@ -134,7 +139,14 @@ sudo usermod -a -G dialout $USER
 
 ## Installation Steps
 
-### Step 0. Complete the basic arm setup
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">0</span>
+<div className="rebot-step-content">
+
+      #### Step 0. Complete the basic arm setup
+
+      <p className="rebot-step-label">Step 0</p>
 
 Before starting web simulator development, complete the steps in [reBot Arm B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/), including arm assembly, motor ID configuration, zero-point initialization, and basic connectivity checks.
 
@@ -143,7 +155,7 @@ The project repository already contains the ROS2 workspace, URDF, and STL meshes
 :::tip
 `reBotArm_control_py` is the core external dependency, providing real-robot drivers, inverse kinematics, dynamics computation, and gravity compensation. The web simulator does not directly import this SDK, but the `rebotarmcontroller` real-robot node on the ROS2 backend, the MuJoCo torque loop, and the gravity compensation feature all depend on it. If you only run the pure simulation mode with Fake Driver + web, the SDK is not required; once you want to control the real robot or use gravity compensation, it must be installed.
 
-`setup.sh` automatically obtains the SDK from [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) and installs it at `~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main/third_party/reBotArm_control_py/` (locked to a verified commit). If `~/reBotArm_control_py/` already exists, it is recognized automatically and not cloned again.
+`setup.sh` automatically obtains the SDK from [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) and installs it at `~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM/third_party/reBotArm_control_py/` (locked to a verified commit). If `~/reBotArm_control_py/` already exists, it is recognized automatically and not cloned again.
 
 Directory structure after installation:
 
@@ -160,23 +172,30 @@ reBotArm_control_py/
 └─ pyproject.toml
 ```
 
-The SDK's `pyproject.toml` declares `requires-python >=3.10,<3.12`, but this project references it via `sys.path` instead of pip install, so it works fine on Python 3.12. If `pip install -e .` reports a version conflict, skip that step and just make sure the directory is at `reBotArmController_ROS2-main/third_party/reBotArm_control_py/` or `~/reBotArm_control_py/` (the code searches these paths automatically).
+The SDK's `pyproject.toml` declares `requires-python >=3.10,<3.12`, but this project references it via `sys.path` instead of pip install, so it works fine on Python 3.12. If `pip install -e .` reports a version conflict, skip that step and just make sure the directory is at `reBotArm_ros2_DM/third_party/reBotArm_control_py/` or `~/reBotArm_control_py/` (the code searches these paths automatically).
 :::
 
-### Step 1. One-click install
+</div>
+</section>
 
-The official reBot Arm open-source project is available at [Seeed-Projects/reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm). The web simulator, ROS2 workspace, and MuJoCo simulation code used in this guide are hosted in [Yang-Ci/Borot-Arm_Mujoco](https://github.com/Yang-Ci/Borot-Arm_Mujoco). Clone the software repository into `~/reBot_Arm_Mujoco-DM/`:
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+      #### Step 1. One-click install
+
+      <p className="rebot-step-label">Step 1</p>
 
 ```bash
-git clone https://github.com/Yang-Ci/Borot-Arm_Mujoco.git ~/reBot_Arm_Mujoco-DM
-cd ~/reBot_Arm_Mujoco-DM
+git clone https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM.git ~/ReBot_Arm_DigitalTwin_DM
+cd ~/ReBot_Arm_DigitalTwin_DM
 ```
 
 The `setup.sh` in the repository root is idempotent and sets up the entire environment automatically:
 
 - Installs missing apt system packages (ROS 2, Node.js, ros-dev-tools, etc.)
 - Clones the `reBotArm_control_py` SDK to `third_party/` (skipped if it already exists)
-- Creates the Python virtual environment (`reBotArmController_ROS2-main/.venv`, with `--system-site-packages`)
+- Creates the Python virtual environment (`reBotArm_ros2_DM/.venv`, with `--system-site-packages`)
 - Installs the Python dependencies from `requirements.txt`
 - Creates the web `.env` from `.env.example`
 - Runs `rosdep` dependency resolution and `colcon build --symlink-install`
@@ -239,7 +258,16 @@ A `Setup complete` message with an empty `Failed or still missing` section means
 If `setup.sh` does not automatically install ROS 2 (for example, the ROS apt source has not yet been added to the system), the installer automatically downloads the official `ros2-apt-source` package from GitHub, adds the source, and retries. You do not need to configure the apt source manually.
 :::
 
-### Step 2. Configure environment variables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+      #### Step 2. Configure environment variables
+
+      <p className="rebot-step-label">Step 2</p>
 
 `setup.sh` already created `.env` from `.env.example`. To change the port or proxy target, edit `.env`:
 
@@ -252,10 +280,19 @@ REBOTARM_MCP_URL=http://localhost:8081/mcp
 
 If the web page runs on Windows and ROS2 runs in an Ubuntu VM, change `REBOTARM_TEXT_AGENT_URL` and `REBOTARM_MCP_URL` to the actual IP of the Ubuntu VM, for example `http://<Ubuntu IP>:8082`.
 
-### Step 3. Start the web server
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+      #### Step 3. Start the web server
+
+      <p className="rebot-step-label">Step 3</p>
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM
+cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start web
 ```
 
@@ -273,12 +310,16 @@ Open `http://localhost:3001` in a browser and wait for the URDF and STL to finis
 If you only want to run a pure web demo (without starting rosbridge), you can also start it manually from the web directory:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArm_simulator-DM
+cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_simulator-DM
 node server.js
 ```
 
 In this case the page lets you drag joint sliders, use pose presets, and TCP drag, but it will not connect to any ROS node.
 :::
+
+</div>
+</section>
+</div>
 
 ## Launching the Project
 
@@ -293,7 +334,7 @@ The `./rebotarm` command sources the environment internally, so you do not need 
 The lightest way to run: only the web server is started, with no ROS2 connection. Good for pose demonstration, teaching, and UI development:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArm_simulator-DM
+cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_simulator-DM
 node server.js
 ```
 
@@ -310,7 +351,7 @@ Start the Fake Driver, rosbridge, and the web server. The web page mirrors joint
 Terminal 1 — start the Fake Driver:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 source scripts/source_rebotarm_env.sh
 ros2 launch rebotarm_bringup fake_bringup.launch.py
 ```
@@ -318,7 +359,7 @@ ros2 launch rebotarm_bringup fake_bringup.launch.py
 Terminal 2 — start rosbridge + web (one command):
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM
+cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start web
 ```
 
@@ -333,7 +374,7 @@ After the page connects to `ws://localhost:9090`, check "Mirror real joint state
 One command starts the full stack: Fake Driver, MuJoCo physics grasp, task server, virtual camera, color detector, and rosbridge:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM
+cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start sim
 ```
 
@@ -353,7 +394,7 @@ All nodes start in sequence; success if there is no `ERROR`.
 
 </details>
 
-This script is internally equivalent to `reBotArmController_ROS2-main/scripts/start_rebot_mujoco_all.sh`. By default it starts the Fake Driver, robot_state_publisher, MuJoCo physics grasp, task server, overhead RGB camera, color detector, and rosbridge. Then run `./rebotarm start web` in another terminal to start the web page. After the browser connects to ROS, you can use the visual grasping demo.
+This script is internally equivalent to `reBotArm_ros2_DM/scripts/start_rebot_mujoco_all.sh`. By default it starts the Fake Driver, robot_state_publisher, MuJoCo physics grasp, task server, overhead RGB camera, color detector, and rosbridge. Then run `./rebotarm start web` in another terminal to start the web page. After the browser connects to ROS, you can use the visual grasping demo.
 
 
 ![MuJoCo physics simulation](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_mujoco_physics.png)
@@ -369,14 +410,14 @@ ls /dev/ttyACM0
 sudo chmod 666 /dev/ttyACM0
 
 # Start the real-robot driver (auto-sources the environment)
-cd ~/reBot_Arm_Mujoco-DM
+cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start dm
 ```
 
 In another terminal, start rosbridge + web:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM
+cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start web
 ```
 
@@ -391,12 +432,12 @@ When connected to the real-robot controller, web commands drive real hardware. A
 ## Project Architecture
 
 ```text
-reBot_Arm_Mujoco-DM/
+ReBot_Arm_DigitalTwin_DM/
 ├─ setup.sh                         Idempotent one-click install and version check
 ├─ rebotarm                         Unified entry for start, stop, status, and diagnostics
 ├─ requirements.txt                 Python dependency version ranges
 ├─ PROJECT_ARCHITECTURE_ZH.md       Overall architecture, simulation principles, and debouncing notes
-├─ reBotArmController_ROS2-main/    ROS 2 workspace
+├─ reBotArm_ros2_DM/                ROS 2 workspace
 │  ├─ scripts/                      One-click launch scripts and environment loading
 │  ├─ third_party/                  reBotArm_control_py SDK for fresh installs
 │  ├─ .venv/                        Project Python virtual environment (created by setup.sh)
@@ -430,7 +471,7 @@ The `rebotarm` unified entry point is the main way to operate the project:
 All `./rebotarm` commands internally run `source scripts/source_rebotarm_env.sh`, so you do not need to load the environment manually. However, if you run bare `ros2` commands directly (such as manually starting a launch file), you still need to source first:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 source scripts/source_rebotarm_env.sh
 ```
 
@@ -455,15 +496,15 @@ Key path resolution (`server.js`):
 
 ```javascript
 const BRINGUP_DIR = path.resolve(
-  path.join(ROOT, '..', 'reBotArmController_ROS2-main', 'src', 'rebotarm_bringup')
+  path.join(ROOT, '..', 'reBotArm_ros2_DM', 'src', 'rebotarm_bringup')
 );
-const URDF_FILE = path.join(BRINGUP_DIR, 'description', 'urdf', 'reBot-DevArm_fixend.urdf');
+const URDF_FILE = path.join(BRINGUP_DIR, 'description', 'urdf', 'ReBot_Arm_DM.urdf');
 const MESHES_DIR = path.join(BRINGUP_DIR, 'description', 'meshes');
 const GRIPPER_MESHES_DIR = path.join(ROOT, 'split_meshes', 'grouped_gripper');
 ```
 
 :::note
-`server.js` locates the ROS2 workspace through the relative path `../reBotArmController_ROS2-main/...`. If you move the web directory to another location, you need to update these paths accordingly, or keep a model copy of the same version as the ROS2 workspace in the web directory.
+`server.js` locates the ROS2 workspace through the relative path `../reBotArm_ros2_DM/...`. If you move the web directory to another location, you need to update these paths accordingly, or keep a model copy of the same version as the ROS2 workspace in the web directory.
 :::
 
 **rebot-sim.js — 3D scene core**
@@ -622,7 +663,7 @@ Natural-language control is not called directly from the browser to ROS. It is p
 Start the MCP Server in the Ubuntu VM (locked mode by default, read-only):
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 source scripts/source_rebotarm_env.sh
 ros2 launch rebotarm_agent rebotarm_mcp.launch.py
 ```
@@ -636,7 +677,7 @@ ros2 launch rebotarm_agent rebotarm_mcp.launch.py motion_mode:=allow
 Start the text-agent HTTP service (for the web page to call):
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 <details>
@@ -684,7 +725,7 @@ The MCP Dashboard is an independent debugging entry and does not need the web si
 **Terminal 1 — start the MCP Server:**
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 source scripts/source_rebotarm_env.sh
 ros2 launch rebotarm_agent rebotarm_mcp.launch.py motion_mode:=allow
 ```
@@ -692,7 +733,7 @@ ros2 launch rebotarm_agent rebotarm_mcp.launch.py motion_mode:=allow
 **Terminal 2 — start the text-agent (includes the MCP Dashboard):**
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
@@ -816,7 +857,7 @@ The `position` of `/rebotarm/gripper/state` must be in meters (0~0.09), not radi
 When the web page shows "Connection failed", confirm that the text-agent HTTP service is running in the Ubuntu VM:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-DM/reBotArmController_ROS2-main
+cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
@@ -849,13 +890,13 @@ These are third-party libraries under `public/lib/`, loaded by `index.html` thro
 
 - ROS apt source not configured: the installer automatically downloads the `ros2-apt-source` package and adds the source, which requires sudo;
 - Python version mismatch: Jazzy needs 3.12, Humble needs 3.10; a mismatch is listed in `Version/platform mismatches`;
-- SDK clone failed: check network and GitHub reachability, or manually clone to `reBotArmController_ROS2-main/third_party/reBotArm_control_py/` and rerun;
+- SDK clone failed: check network and GitHub reachability, or manually clone to `reBotArm_ros2_DM/third_party/reBotArm_control_py/` and rerun;
 - `colcon build` failed: check whether `rosdep` is initialized (`sudo rosdep init && rosdep update`), then rerun `./setup.sh`.
 
 ## Contact
 
-- Technical Support: [Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm/issues)
-- Project Repository: [Github](https://github.com/Seeed-Projects/reBot-DevArm)
+- Technical Support: [Submit an Issue](https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM/issues)
+- Project Repository: [Github](https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM)
 - Forum: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## References

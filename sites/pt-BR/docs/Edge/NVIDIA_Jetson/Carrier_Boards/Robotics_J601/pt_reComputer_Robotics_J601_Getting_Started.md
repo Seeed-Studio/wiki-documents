@@ -12,15 +12,16 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 08/13/2026
+  date: 08/28/2026
   author: haochen
 createdAt: '2026-04-24'
-updatedAt: '2026-08-14'
+updatedAt: '2026-08-28'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import J601DemoGrid from '@site/src/components/jetson/J601DemoGrid';
 
 # Introdução ao reComputer Robotics J601
 
@@ -28,13 +29,13 @@ import TabItem from '@theme/TabItem';
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg"/>
 </div>
 
-O reComputer J601 é uma placa carrier de borda de IA compacta, porém poderosa, para Jetson AGX Thor, oferecendo até 2070 TFLOPS. Projetada para desenvolvimento e produção, ela possui M.2 Key E/M/B, 4x RJ45 de 10 Gb, 4×USB 3.2, HDMI 2.1, 8×GMSL e vários IOs, garantindo integração perfeita. Pode servir como o cérebro de um humanoide. Com suporte a frameworks de LLM e IA Física como NVIDIA Isaac, Hugging Face, PyTorch e ROS2/1, faz a ponte entre IA e robótica. Com processamento em tempo real otimizado, executa visão computacional, transformers e modelos multimodais, liberando IA avançada para dispositivos de borda.
+O reComputer J601 é uma placa carrier de borda de IA compacta, porém poderosa, para Jetson AGX Thor, oferecendo até 2070 TFLOPS. Projetada para desenvolvimento e produção, ela possui M.2 Key E/M/B, 4x 10Gb RJ45, 4×USB 3.2, HDMI 2.1, 8×GMSL e vários IOs, garantindo integração perfeita. Pode servir como o cérebro de um robô humanoide. Com suporte a frameworks de LLM e IA Física como NVIDIA Isaac, Hugging Face, PyTorch e ROS2/1, faz a ponte entre IA e robótica. Com processamento em tempo real otimizado, executa visão computacional, transformers e modelos multimodais, liberando IA avançada para dispositivos de borda.
 
 ## Recursos
 
 - Suporta módulos **NVIDIA Jetson AGX Thor T5000 e T4000**
 - Até **2070 TFLOPS** de desempenho de IA
-- Até **4x portas RJ45 10GbE**
+- Até **4x portas 10GbE RJ45**
 - **4x portas USB 3.2 Type-A** com até 10Gbps
 - Saída de vídeo **HDMI 2.1**
 - **M.2 Key M** para SSD PCIe Gen 4 NVMe 2280
@@ -42,7 +43,7 @@ O reComputer J601 é uma placa carrier de borda de IA compacta, porém poderosa,
 - **M.2 Key B** para módulos 4G/5G
 - Até **8x câmeras GMSL2** por meio de dois conectores Mini-Fakra e placas de extensão GMSL
 - I/O para robótica incluindo CAN isolado, RS-232/422/485, I2C, I2S, GPI e GPO
-- Entrada DC de **19V a 48V** de ampla faixa por XT30
+- Entrada DC de ampla faixa **19V a 48V** através de XT30
 - Plataforma de software: **JetPack 7.1**
 
 ## Especificações
@@ -158,7 +159,7 @@ Aqui, mostraremos como gravar o JetPack em um SSD NVMe conectado ao reComputer R
 - Pelo menos 220 GB de armazenamento livre no PC host
 
 :::info
-Recomendamos usar um host Ubuntu físico em vez de uma máquina virtual. O Seeed Jetson DevelopTool também oferece suporte ao Windows por meio do WSL2, mas um host Ubuntu nativo proporciona a experiência de gravação mais confiável.
+Recomendamos usar um host físico com Ubuntu em vez de uma máquina virtual. O Seeed Jetson DevelopTool também oferece suporte ao Windows por meio do WSL2, mas um host Ubuntu nativo proporciona a experiência de gravação mais confiável.
 
 <table style={{textAlign: 'center'}}>
   <tbody>
@@ -190,7 +191,7 @@ Selecione abaixo o fluxo de trabalho gráfico do Seeed Jetson DevelopTool ou o f
 
 <TabItem value="software" label="Gravação por software" default>
 
-O Seeed Jetson DevelopTool oferece um fluxo de trabalho gráfico guiado que faz download, verifica, extrai e grava o firmware sem exigir comandos de BSP. Instale a ferramenta seguindo o [guia de instalação do Seeed Jetson DevelopTool](/pt-br/jetson_developtool_installation).
+O Seeed Jetson DevelopTool oferece um fluxo de trabalho gráfico guiado que faz o download, verifica, extrai e grava o firmware sem exigir comandos de BSP. Instale a ferramenta seguindo o [guia de instalação do Seeed Jetson DevelopTool](/pt-br/jetson_developtool_installation).
 
 #### Tutorial em vídeo
 
@@ -208,7 +209,7 @@ O Seeed Jetson DevelopTool oferece um fluxo de trabalho gráfico guiado que faz 
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_07.jpg"/></div>
 
-**Passo 2.** Conecte o PC host à **porta de gravação USB 3.0 Type-C**. Pressione e segure o botão **RECOVERY**, conecte a fonte de alimentação DC de 19V a 48V por meio do XT30 e solte o botão após dois segundos.
+**Passo 2.** Conecte o PC host à **porta de gravação USB 3.0 Type-C**. Pressione e segure o botão **RECOVERY**, conecte a fonte de alimentação DC de 19V a 48V através do XT30 e solte o botão após dois segundos.
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_08.jpg"/></div>
 
@@ -220,7 +221,7 @@ O Seeed Jetson DevelopTool oferece um fluxo de trabalho gráfico guiado que faz 
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_10.jpg"/></div>
 
-**Passo 5.** Clique em **Start Flash** e aguarde até que a interface indique que a gravação foi concluída. Não desconecte a fonte de alimentação nem o cabo USB durante esse processo.
+**Passo 5.** Clique em **Start Flash** e aguarde até que a interface informe que a gravação foi concluída. Não desconecte a fonte de alimentação nem o cabo USB durante esse processo.
 
 :::caution
 A gravação apaga os dados no SSD NVMe de destino. Faça backup dos dados importantes antes de começar.
@@ -294,11 +295,11 @@ Antes de gravar, certifique-se de que a placa esteja em modo Force Recovery.
 
 **Passo 2.** Pressione e segure o botão **RECOVERY**.
 
-**Passo 3.** Conecte a fonte de alimentação (19V a 48V DC através do conector XT30).
+**Passo 3.** Conecte a fonte de alimentação (19 V a 48 V CC através do conector XT30).
 
 **Passo 4.** Solte o botão **RECOVERY** após dois segundos.
 
-**Passo 5.** No PC host, execute `lsusb`. A seguinte entrada confirma que a placa está em Modo de Recuperação Forçada:
+**Passo 5.** No PC host, execute `lsusb`. A seguinte entrada confirma que a placa está em Force Recovery Mode:
 
 - **0955:7026 NVIDIA Corp.**
 
@@ -372,23 +373,23 @@ O arquivo de imagem do JetPack é grande e pode levar cerca de 60 minutos para s
 
 Para verificar o firmware baixado, execute `sha256sum <file>` no host Ubuntu e compare o resultado com o valor SHA256 na tabela.
 
-#### Entrar no Modo de Recuperação Forçada
+#### Entrar em Force Recovery Mode
 
 :::info
-Antes de gravar, certifique-se de que a placa esteja em Modo de Recuperação Forçada.
+Antes de gravar, certifique-se de que a placa esteja em Force Recovery Mode.
 :::
 
-**Passo 1.** Conecte o PC host com Ubuntu à **porta de gravação USB 3.0 Tipo-C** usando um cabo de dados USB Tipo-C.
+**Passo 1.** Conecte o PC host com Ubuntu à **porta de gravação USB 3.0 Type-C** usando um cabo de dados USB Type-C.
 
 <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_03.jpg"/></div>
 
 **Passo 2.** Pressione e segure o botão **RECOVERY**.
 
-**Passo 3.** Conecte a fonte de alimentação (19V a 48V DC através do conector XT30).
+**Passo 3.** Conecte a fonte de alimentação (19 V a 48 V CC através do conector XT30).
 
 **Passo 4.** Solte o botão **RECOVERY** após dois segundos.
 
-**Passo 5.** No PC host, execute `lsusb`. A seguinte entrada confirma que a placa está em Modo de Recuperação Forçada:
+**Passo 5.** No PC host, execute `lsusb`. A seguinte entrada confirma que a placa está em Force Recovery Mode:
 
 - **0955:7226 NVIDIA Corp.**
 
@@ -431,6 +432,14 @@ O comando de gravação geralmente leva de 2 a 10 minutos. A saída a seguir ind
 :::info
 Conclua a **Configuração do Sistema** de acordo com suas necessidades após a primeira inicialização.
 :::
+
+Para uso detalhado das interfaces, consulte [Uso das interfaces de hardware do Robotics J601](/pt-br/recomputer_jetson_robotics_j601_interfaces_usage).
+
+## O que você pode fazer com o J601?
+
+Depois de gravar o JetPack, explore os wikis de demonstração abaixo para ver o que você pode construir no reComputer Robotics J601. Esses cards são gerados automaticamente a partir dos wikis publicados de **Aplicações** Jetson e **Outros dispositivos** que mencionam **J601** ou **Jetson Thor**.
+
+<J601DemoGrid />
 
 ## Recursos
 

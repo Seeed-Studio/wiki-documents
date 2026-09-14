@@ -5,10 +5,10 @@ image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 slug: /xiao_epaper_display_board_overview
 sidebar_position: 1
 last_update:
-  date: 8/13/2026
-  author: Nemo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-12-19'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/xiao_epaper_display_board_overview/
 ---
 
@@ -39,7 +39,7 @@ The **EE02** is a high-performance E-ink screen driver board specifically design
 - **Dedicated for Large Screens**: Specifically optimized to drive 13.3-inch E-ink displays with high stability and clarity.
 - **Wireless Connectivity**: Supports Wi-Fi and Bluetooth 5.0 (LE), enabling remote data updates and cloud integration.
 - **Low Power Consumption**: Designed for energy efficiency, suitable for battery-powered applications.
-- **Easy Integration**: Compatible with SenseCraft HMI for drag-and-drop interface design and remote management.
+- **Easy Integration**: Compatible with SenseCraft Seeedash for drag-and-drop interface design and remote management.
 - **Versatile Interfaces**: Includes Type-C for power/programming and standard connectors for E-ink screens.
 
 ## XIAO ePaper Display Board EE03
@@ -100,7 +100,7 @@ Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin
   </a>
 </div><br />
 
-Powered by **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide range of **24-pin** ePaper displays. It features an extension IO port for connecting additional sensors, a JST 2.0 mm battery connector with hardware power slide switch, built-in charging IC, and comes with one reset and three user buttons (side-mounted). With no-code UI design and deployment via SenseCraft HMI, it is ideal for low-power smart display applications such as digital signage, electronic labels, and portable information boards.
+Powered by **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide range of **24-pin** ePaper displays. It features an extension IO port for connecting additional sensors, a JST 2.0 mm battery connector with hardware power slide switch, built-in charging IC, and comes with one reset and three user buttons (side-mounted). With no-code UI design and deployment via SenseCraft Seeedash, it is ideal for low-power smart display applications such as digital signage, electronic labels, and portable information boards.
 
 ### Feature
 
@@ -108,7 +108,7 @@ Powered by **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide range 
 - **Versatile Display Support:** Compatible with a wide range of 24-pin ePaper displays for various project requirements.
 - **Extension IO Port:** Enables connection of additional sensors, such as temperature and humidity sensors, for enhanced functionality.
 - **BAT Connector with Switch:** Provides simple battery connection and integrates a hardware slide switch, enabling efficient power management and energy savings.
-- **No-Code UI Design & Deployment with SenseCraft HMI:** Design and deploy personalized dashboards effortlessly with SenseCraft HMI, our AI-powered no-code platform. Create your UI through simple drag-and-drop elements, choose from rich templates, or let AI help you. Connect real-time data from web APIs, then deploy to your ePaper display with just a few clicks.
+- **No-Code UI Design & Deployment with SenseCraft Seeedash:** Design and deploy personalized dashboards effortlessly with SenseCraft Seeedash, our AI-powered no-code platform. Create your UI through simple drag-and-drop elements, choose from rich templates, or let AI help you. Connect real-time data from web APIs, then deploy to your ePaper display with just a few clicks.
 
 ## XIAO ePaper Display Board EN04
 

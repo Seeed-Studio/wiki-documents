@@ -1,6 +1,6 @@
 ---
-description: Livro de receitas Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — leitura/gravação do RTC PCF8563, estratégias de baixo consumo com deep sleep, gravação de áudio do microfone PDM no cartão SD (E1001 / E1002 / E1003) e desenho com toque capacitivo (apenas E1003).
-title: 'Livro de Receitas Arduino: RTC, Baixo Consumo, Áudio e Toque (reTerminal E Series)'
+description: cookbook Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — leitura/gravação do RTC PCF8563, estratégias de baixo consumo com deep sleep, gravação de áudio do microfone PDM no cartão SD (E1001 / E1002 / E1003) e desenho com toque capacitivo (apenas E1003).
+title: 'Cookbook Arduino: RTC, Baixo Consumo, Áudio e Toque (reTerminal E Series)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
 sidebar_position: 3
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripheral
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Livro de Receitas Arduino: RTC, Baixo Consumo, Áudio e Toque (reTerminal E Series)
+# Cookbook Arduino: RTC, Baixo Consumo, Áudio e Toque (reTerminal E Series)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" style={{width:600, height:'auto'}}/></div>
 
@@ -30,21 +30,21 @@ Se você quiser visualizar rapidamente os resultados do projeto ou testar o firm
 </div><br />
 :::
 
-:::tip Outros livros de receitas desta série
+:::tip Outros cookbooks desta série
 - **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino)** — renderização de texto, gráficos e imagens na tela de ePaper.
 - **[Arduino Cookbook: Onboard Peripherals](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals)** — LED, buzzer, botões, sensor SHT4x, monitor de bateria, cartão microSD e o pipeline de imagens via cartão SD.
 :::
 
 ## Introdução
 
-Este é o segundo livro de receitas de periféricos para a reTerminal E Series. Enquanto o [primeiro livro de receitas de periféricos](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals) cobre os periféricos básicos de E/S (LED, buzzer, botões, SHT4x, bateria, cartão SD), esta página aprofunda em quatro tópicos mais avançados:
+Este é o segundo cookbook de periféricos para a reTerminal E Series. Enquanto o [primeiro cookbook de periféricos](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals) cobre os periféricos básicos de E/S (LED, buzzer, botões, SHT4x, bateria, cartão SD), esta página aprofunda em quatro tópicos mais avançados:
 
 - **Relógio de Tempo Real (RTC)** — o chip RTC **PCF8563** onboard, alimentado por uma bateria tipo moeda CR1220, que mantém a hora mesmo quando a bateria principal é removida.
 - **Modos de Baixo Consumo** — deep sleep, light sleep e estratégias de despertar por GPIO para estender a vida útil da bateria de dias para meses.
 - **Microfone PDM** — captura de áudio através do microfone digital PDM onboard (apenas E1001 / E1002 / E1003; o E1004 não possui microfone) e salvamento de arquivos WAV no cartão microSD.
 - **Tela sensível ao toque** — uso do painel de toque capacitivo onboard no E1003 (modelo de 10,3") para desenhar pontos na tela de ePaper. Apenas o E1003 possui painel de toque.
 
-Todos os sketches de exemplo deste livro de receitas vêm do repositório [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D). Os sketches de RTC, baixo consumo e microfone **não exigem instalação adicional de bibliotecas** — tudo usa as APIs internas do ESP32. O sketch de toque requer a biblioteca **Seeed_GFX**.
+Todos os sketches de exemplo deste cookbook vêm do repositório [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D). Os sketches de RTC, baixo consumo e microfone **não exigem instalação adicional de bibliotecas** — tudo usa as APIs internas do ESP32. O sketch de toque requer a biblioteca **Seeed_GFX**.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D" target="_blank">
@@ -54,7 +54,7 @@ Todos os sketches de exemplo deste livro de receitas vêm do repositório [OSHW-
 
 ### Materiais Necessários
 
-Este livro de receitas se aplica à reTerminal E Series. Escolha o dispositivo que você tiver em mãos:
+Este cookbook se aplica à reTerminal E Series. Escolha o dispositivo que você tiver em mãos:
 
 <div class="table-center">
   <table align="center">
@@ -104,11 +104,11 @@ Antes de executar qualquer exemplo abaixo, você já deve ter:
 - Um **cabo de dados USB-C** funcional e a porta serial correta selecionada.
 - Verificado que você consegue gravar um sketch básico no dispositivo — veja a preparação do ambiente em [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino#preparação-do-ambiente) se ainda não tiver feito isso.
 
-Todos os sketches deste livro de receitas imprimem informações de depuração através de `Serial1` nos pinos **GPIO44 (RX) / GPIO43 (TX)** a **115200 baud** — esta é a ponte USB-UART de transporte, **não** o `Serial` USB-CDC que a IDE Arduino abre automaticamente. Abra o Monitor Serial da Arduino IDE e selecione a porta e taxa de baud correspondentes para acompanhar.
+Todos os sketches deste cookbook imprimem informações de depuração através de `Serial1` nos pinos **GPIO44 (RX) / GPIO43 (TX)** a **115200 baud** — esta é a ponte USB-UART de transporte, **não** o `Serial` USB-CDC que a IDE Arduino abre automaticamente. Abra o Monitor Serial da Arduino IDE e selecione a porta e taxa de baud correspondentes para acompanhar.
 
 ### Visão Geral da Compatibilidade de Hardware
 
-Nem todos os recursos deste livro de receitas estão disponíveis em todos os quatro modelos. A tabela abaixo resume o que você pode usar:
+Nem todos os recursos deste cookbook estão disponíveis em todos os quatro modelos. A tabela abaixo resume o que você pode usar:
 
 <div class="table-center">
   <table align="center">

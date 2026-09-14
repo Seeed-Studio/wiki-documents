@@ -814,6 +814,7 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Benchmark_Labs_Forecast_Integration_for_Seeed_Weather_Stations',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Firmware_Update',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/es_SenseCAP_S1000_V2_CO2_Calibration',
                   ],
                 },
               ],
@@ -868,6 +869,14 @@ const sidebars = {
             id: 'Sensor/SenseCAP/SenseCAP_Intro/es_SenseCAP_Data_Logger_Intro',
           },
           items: [
+            {
+              type: 'category',
+              label: 'Sensor SenseCAP Combo 5 en 1 con 4G',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP_Combo/es_SenseCAP_Combo_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP_Combo/es_Get_Started_with_SenseCAP_Combo',
+              ],
+            },
             'Sensor/SenseCAP/SenseCAP_Data_Logger/es_SenseCAP-Sensor-Hub-Data-Logger',
             'Sensor/SenseCAP/SenseCAP_Data_Logger/es_Data_Logger',
             {
@@ -995,7 +1004,7 @@ const sidebars = {
         'Sensor/SeeedStudio_XIAO/es_SeeedStudio_XIAO_Series_Projects',
         {
           type: 'category',
-          label: 'XIAO SAMD21',
+          label: 'Serie XIAO SAMD21',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/es_Seeeduino-XIAO',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/es_XIAO-SAMD21-Zephyr-RTOS',
@@ -1052,7 +1061,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'XIAO RP2040',
+          label: 'Serie XIAO RP2040',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/es_XIAO-RP2040',
             {
@@ -1948,6 +1957,7 @@ const sidebars = {
                 id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf3800_with_xiao_intro',
               },
               items: [
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_i2c_list',
                 {
                   type: 'category',
                   label: 'Reproducción y grabación',
@@ -2165,6 +2175,8 @@ const sidebars = {
           items: [
             'Sensor/reSpeaker_clip/es_respeaker_clip_getting_started',
             'Sensor/reSpeaker_clip/es_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/es_respeaker_clip_rtc_streaming',
+            'Sensor/reSpeaker_clip/es_respeaker_clip_service_integration',
             'Sensor/reSpeaker_clip/es_respeaker_clip_sensecraft_voice_sdk',
             {
               type: 'category',
@@ -2189,6 +2201,24 @@ const sidebars = {
                 },
               ],
             },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Preguntas frecuentes',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/es_respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/es_xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/es_flex_xvf3800_faq',
+            'FAQ/respeaker/es_respeaker_lite_faq',
+            'FAQ/respeaker/es_xvf3000_faq',
+            'FAQ/respeaker/es_respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/es_respeaker_clip_faq',
           ],
         },
         {
@@ -2246,6 +2276,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/es_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/es_respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/es_respeaker_clip_chat_architecture',
               ],
             },
           ],
@@ -3820,6 +3851,7 @@ const sidebars = {
           type: 'category',
           label: 'Comenzando',
           items: [
+            'Edge/NVIDIA_Jetson/es_Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',
@@ -4107,7 +4139,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson_AGX_Thor',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_industrial_vision_monitoring_on_industrial',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Streaming_Vision_Agent_on_Jetson',
               ]
@@ -4158,7 +4190,12 @@ const sidebars = {
             {
               type: 'category',
               label: 'IA Encarnada',
+              link: {
+                type: 'doc',
+                id: 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Microduck_RL_on_Jetson',
+              },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Microduck_RL_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Voice_LLM_for_Reachy_Mini',
@@ -4267,6 +4304,7 @@ const sidebars = {
               label: 'Optimización de memoria',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/es_JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/es_JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {
@@ -4604,7 +4642,8 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_isaacsim',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_control_mit'
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_control_mit',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_Agent'
               ]
             }
           ]
@@ -5070,7 +5109,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft HMI',
+      label: 'SenseCraft Seeedash',
       collapsed: true,
       collapsible: true,
       link: {

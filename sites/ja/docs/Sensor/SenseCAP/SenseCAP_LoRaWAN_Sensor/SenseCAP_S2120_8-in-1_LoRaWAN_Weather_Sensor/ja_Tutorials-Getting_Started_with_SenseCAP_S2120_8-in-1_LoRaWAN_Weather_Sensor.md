@@ -93,19 +93,19 @@ url: https://wiki.seeedstudio.com/ja/Getting_Started_with_SenseCAP_S2120_8-in-1_
 バッテリーを初回インストール後、Bluetoothに接続し、周波数を設定してLoRaWANネットワークに参加し、正常に動作させる必要があります。周波数が設定されていない場合、赤色LEDが点灯し続けます。
 :::
 
-## SenseCAP Mate Appへの接続
+## SenseCraft Appへの接続
 
 **ステップ 1:** アプリのダウンロード
 
-ツールとして、SenseCAP Mate AppはLoRaパラメーターの設定、間隔の設定、デバイスのアカウントへのバインド、デバイスの基本情報の確認に使用されます。
+ツールとして、SenseCraft AppはLoRaパラメーターの設定、間隔の設定、デバイスのアカウントへのバインド、デバイスの基本情報の確認に使用されます。
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor.files/Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor2808.png" /></div>
 
 **ステップ 2:** 新しいアカウントの作成
 
-SenseCAP Mateはデバイス設定とリモート管理をサポートします。SenseCAP Portalプラットフォームやその他の機能を使用するには、アカウントを登録してください。
+SenseCraftはデバイス設定とリモート管理をサポートします。SenseCAP Portalプラットフォームやその他の機能を使用するには、アカウントを登録してください。
 
-SenseCAP Mateはオフライン機能をサポートしており、設定センサーのみを使用する場合はアカウントを作成しなくても構いません。**Skip**をクリックしてください。
+SenseCraftはオフライン機能をサポートしており、設定センサーのみを使用する場合はアカウントを作成しなくても構いません。**Skip**をクリックしてください。
 
 サーバーロケーションは**Global**を選択してください。
 
