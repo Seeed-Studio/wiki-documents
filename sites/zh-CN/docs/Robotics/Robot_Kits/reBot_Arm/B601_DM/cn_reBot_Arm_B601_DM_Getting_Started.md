@@ -17,7 +17,7 @@ last_update:
   date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-08-19'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 ---
 
@@ -25,6 +25,7 @@ import '/src/css/rebot-wiki-style.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM 快速入门
 
@@ -57,10 +58,18 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
   reBot Arm 项目已经在 [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) 上开源了，欢迎前往仓库点亮 Star 小星星！仓库中包含完整的 BOM 清单。本文将带领你快速入门 B601-DM，从组装到使用。
 </p>
 
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-DevArm"
+  ariaLabel="在 GitHub 上为 reBot-DevArm 点亮 Star"
+/>
+
 :::tip
 如果你购入的是已组装的成品套件，请直接跳到文章末尾 **第三步** 的教程视频，按照视频教程使用，无需给电机写入ID和校准零位
 
 已验证虚拟机的性能不足以支撑 demo 运行且存在配置问题，建议优先使用 ubuntu 物理机来控制机械臂
+
+推荐安装 **Ubuntu 24.04 LTS**。
 
 推荐B站安装教程：[Ubuntu双系统安装教程](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
