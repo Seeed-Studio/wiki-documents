@@ -17,7 +17,7 @@ last_update:
   date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-08-19'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 ---
 
@@ -25,6 +25,7 @@ import '/src/css/rebot-wiki-style.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM 快速入门
 
@@ -57,10 +58,51 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
   reBot Arm 项目已经在 [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) 上开源了，欢迎前往仓库点亮 Star 小星星！仓库中包含完整的 BOM 清单。本文将带领你快速入门 B601-DM，从组装到使用。
 </p>
 
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-DevArm"
+  ariaLabel="在 GitHub 上为 reBot-DevArm 点亮 Star"
+/>
+
+## 项目简介
+
+**reBot-DevArm (reBot Arm B601 DM 和 reBot Arm B601 RS)** 是一个致力于降低具身智能学习门槛的机械臂项目。我们主打 **"真·开源"** —— 不仅仅是代码，我们无保留地开源了所有的：
+- 🦾 **两个版本电机的开源机械臂**：我们会提供Robostride和Damiao两个版本的同样外观的机械臂所有开源文件。
+- 🛠️ **硬件图纸**：钣金件、3D打印件源文件。
+- 🔩 **BOM 清单**：详细到每一个螺丝的规格和购买链接。
+- 💻 **软件及算法**：Python SDK、ROS1/2、Isaac Sim、Lerobot等
+
+## 搭建属于你的 reBot 机械臂
+
+- 我们提供五种套件方案：
+  - **机械臂本体电机套件**：仅包含机械臂所需的电机与线束。
+  - **机械臂本体结构件套件**：仅包含机械结构零部件。
+  - **夹持器完整套件**：包含夹持器的电机、线束及结构件。
+  - **整机完整套件**：包含机械臂本体与夹持器全套组件。
+  - **成品组装机械臂**：已完成组装的成品机械臂。
+
+reBot-DevArm 和 reComputer Jetson AI 智能机器人套件无缝结合了高精度的机器人手臂控制与强大的 AI 计算平台，提供了全面的机器人开发解决方案。该套件基于 Jetson Orin 或 AGX Orin 平台，结合 reBot-DevArm 和 LeRobot AI 框架，为用户提供适用于教育、科研和工业自动化等多种场景的智能机器人系统。
+
+## reBot B601-DM 系列特点
+
+1. **开源 & 低成本**\
+   reBot Arm 是由 Seeed Studio 提供的开源机器人臂解决方案，致力于降低具身智能学习门槛。
+
+2. **支持 LeRobot 平台集成**\
+   专为与 [LeRobot 平台](https://github.com/huggingface/lerobot) 集成而设计。该平台提供 PyTorch 模型、数据集与工具，面向现实机器人任务的模仿学习（包括数据采集、仿真、训练与部署）。
+
+3. **丰富的学习资源**\
+   提供全面的开源学习资源，包括组装与校准指南、测试与数据采集教程、训练与部署文档，帮助用户快速上手并开发机器人应用。
+
+4. **兼容 Nvidia 平台**\
+   支持通过 reComputer Mini J4012 Orin NX 16GB 平台进行部署。
+
 :::tip
 如果你购入的是已组装的成品套件，请直接跳到文章末尾 **第三步** 的教程视频，按照视频教程使用，无需给电机写入ID和校准零位
 
 已验证虚拟机的性能不足以支撑 demo 运行且存在配置问题，建议优先使用 ubuntu 物理机来控制机械臂
+
+推荐安装 **Ubuntu 24.04 LTS**。
 
 推荐B站安装教程：[Ubuntu双系统安装教程](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
