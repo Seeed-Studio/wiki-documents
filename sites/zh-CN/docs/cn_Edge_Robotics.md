@@ -41,12 +41,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     </div>
   </section>
 
-  <RoboticsPageSearch
-    placeholder="搜索机器人、教程或技术，按 / 快速聚焦"
-    resultLabel="个结果"
-    emptyLabel="没有找到匹配内容"
-    clearLabel="清除搜索"
-  />
+  <RoboticsPageSearch />
 
   <section className="kit-index-panel" aria-label="快速选择机器人套件">
     <div className="section-title-row compact-title">

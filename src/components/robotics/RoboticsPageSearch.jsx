@@ -1,15 +1,56 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react';
+import {useLocation} from '@docusaurus/router';
+
+const I18N = {
+  en: {
+    placeholder: 'Search products, tutorials, and technologies',
+    resultLabel: 'results',
+    emptyLabel: 'No matching content',
+    clearLabel: 'Clear search',
+  },
+  cn: {
+    placeholder: '搜索机器人、教程或技术，按 / 快速聚焦',
+    resultLabel: '个结果',
+    emptyLabel: '没有找到匹配内容',
+    clearLabel: '清除搜索',
+  },
+  ja: {
+    placeholder: '製品、チュートリアル、技術を検索',
+    resultLabel: '件の結果',
+    emptyLabel: '一致するコンテンツがありません',
+    clearLabel: '検索をクリア',
+  },
+  es: {
+    placeholder: 'Buscar productos, tutoriales y tecnologías',
+    resultLabel: 'resultados',
+    emptyLabel: 'No se encontró contenido coincidente',
+    clearLabel: 'Borrar búsqueda',
+  },
+  'pt-br': {
+    placeholder: 'Pesquisar produtos, tutoriais e tecnologias',
+    resultLabel: 'resultados',
+    emptyLabel: 'Nenhum conteúdo correspondente encontrado',
+    clearLabel: 'Limpar pesquisa',
+  },
+};
+
+function getLocaleFromPath(pathname) {
+  if (pathname === '/cn' || pathname.startsWith('/cn/')) return 'cn';
+  if (pathname === '/ja' || pathname.startsWith('/ja/')) return 'ja';
+  if (pathname === '/es' || pathname.startsWith('/es/')) return 'es';
+  if (pathname === '/pt-br' || pathname.startsWith('/pt-br/')) return 'pt-br';
+  return 'en';
+}
 
 function normalize(value) {
   return value.toLocaleLowerCase().replace(/\s+/g, ' ').trim();
 }
 
-export default function RoboticsPageSearch({
-  placeholder = 'Search products, tutorials, and technologies',
-  resultLabel = 'results',
-  emptyLabel = 'No matching content',
-  clearLabel = 'Clear search',
-}) {
+export default function RoboticsPageSearch() {
+  const location = useLocation();
+  const locale = getLocaleFromPath(location.pathname);
+  const {placeholder, resultLabel, emptyLabel, clearLabel} = I18N[locale] || I18N.en;
+
   const rootRef = useRef(null);
   const inputRef = useRef(null);
   const [query, setQuery] = useState('');
