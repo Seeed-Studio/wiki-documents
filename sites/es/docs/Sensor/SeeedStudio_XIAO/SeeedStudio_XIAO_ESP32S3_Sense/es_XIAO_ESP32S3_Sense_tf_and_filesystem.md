@@ -56,22 +56,22 @@ Dado que se utilizará la tarjeta microSD en este tutorial, necesitamos instalar
 
 ### Instalación de la placa de expansión (para Sense)
 
-Instalar la placa de expansión es muy sencillo, solo necesitas alinear el conector de la placa de expansión con el conector B2B de la XIAO ESP32S3, presionarlo con fuerza y escuchar un "clic"; la instalación habrá finalizado.
+Instalar la placa de expansión es muy sencillo, solo necesitas alinear el conector de la placa de expansión con el conector B2B de la XIAO ESP32S3, presionarlo con fuerza y escuchar un "clic", la instalación estará completa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
 ### Preparar la tarjeta microSD
 
-XIAO ESP32S3 Sense admite tarjetas microSD de hasta **32GB**, así que si estás listo para comprar una tarjeta microSD para XIAO, consulta esta especificación. Además, formatea la tarjeta microSD al formato **FAT32** antes de usarla.
+XIAO ESP32S3 Sense admite tarjetas microSD de hasta **32GB**, así que si estás listo para comprar una tarjeta microSD para XIAO, consulta esta especificación. Y formatea la tarjeta microSD al formato **FAT32** antes de usarla.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/67.png" style={{width:250, height:'auto'}}/></div>
 
-Después de formatearla, puedes insertar la tarjeta microSD en la ranura correspondiente. Ten en cuenta la dirección de inserción: el lado con los contactos dorados debe mirar hacia adentro.
+Después de formatearla, puedes insertar la tarjeta microSD en la ranura para tarjetas microSD. Ten en cuenta la dirección de inserción, el lado con los contactos dorados debe mirar hacia adentro.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::tip
-Si la tarjeta microSD no está siendo reconocida por la ESP32S3 pero sí por tu ordenador **y** el error se ve así :
+Si la tarjeta microSD no está siendo reconocida por la ESP32S3 pero sí es reconocida por tu ordenador **y** el error se ve así :
 
 ```shell
 [  7273][E][sd_diskio.cpp:200] sdCommand(): Card Failed! cmd: 0x00
@@ -82,7 +82,7 @@ Card Mount Failed
 
 Realiza los siguientes pasos :
 
-- Usar el formateador de Windows
+- Usar Windows Formatter
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/sdcard1.png" style={{width:500, height:'auto'}}/></div>
 
@@ -92,7 +92,7 @@ Realiza los siguientes pasos :
 
 **Nota :**
 
-- Este proceso llevará significativamente más tiempo que el Formato rápido.
+- Este proceso llevará significativamente más tiempo que el Formato Rápido.
 
 - Estos casos surgen si estás reutilizando una tarjeta microSD que se ha utilizado previamente para otros fines (es decir, cuando se reutiliza una tarjeta microSD que contenía un sistema operativo Linux).
 
@@ -100,7 +100,7 @@ Realiza los siguientes pasos :
 
 ### Diseño del circuito de la ranura de la tarjeta para las placas de expansión
 
-La ranura para tarjeta de la XIAO ESP32S3 Sense ocupa 4 GPIO del ESP32-S3, y los detalles de los pines ocupados se muestran en la tabla siguiente.
+La ranura para tarjetas de la XIAO ESP32S3 Sense ocupa 4 GPIO del ESP32-S3, y los detalles de los pines ocupados se muestran en la siguiente tabla.
 
 <div class="table-center">
     <table align="center">
@@ -109,7 +109,7 @@ La ranura para tarjeta de la XIAO ESP32S3 Sense ocupa 4 GPIO del ESP32-S3, y los
             <th align="center">Ranura para tarjeta microSD</th>
         </tr>
         <tr>
-            <td align="center">GPIO3</td>
+            <td align="center">GPIO21</td>
             <td align="center">CS</td>
         </tr>
         <tr>
@@ -140,7 +140,7 @@ Esto también significa que si eliges usar la función de tarjeta microSD de la 
  </tr>
   <tr>
     <td>Corta a lo largo de la fina línea blanca para desconectar la conexión de la almohadilla de soldadura.</td>
-    <td>Suelda juntas las dos almohadillas de soldadura.</td>
+    <td>Sueldas las dos almohadillas de soldadura juntas.</td>
   </tr>
 </table>
 
@@ -388,7 +388,7 @@ Sube el programa a XIAO ESP32S3 Sense, abre el monitor serie y verás el proceso
 
 Primero, necesitas incluir las siguientes bibliotecas: **FS.h** para manejar archivos, **SD.h** para la interfaz con la tarjeta microSD y **SPI.h** para usar el protocolo de comunicación SPI.
 
-1. En el `setup()`, las siguientes líneas inicializan la tarjeta microSD con `SD.begin(21)`. Aquí, necesitamos pasar un parámetro para `SD.begin()`, que es el pin CS. Y para el diseño de la tarjeta microSD de la placa de expansión, el pin CS está conectado al **GPIO 21**. Si estás usando Round Display for XIAO, entonces el parámetro que se debe pasar debe ser **D2**.
+1. En el `setup()`, las siguientes líneas inicializan la tarjeta microSD con `SD.begin(21)`. Aquí, necesitamos pasar un parámetro para `SD.begin()`, que es el pin CS. Y para el diseño de la tarjeta microSD de la placa de expansión, el pin CS está conectado al **GPIO 21**. Si estás usando Round Display for XIAO, entonces el parámetro que se pasa debe ser **D2**.
 
 2. Las siguientes líneas imprimen el tipo de tarjeta microSD en el monitor serie.
 
@@ -483,11 +483,11 @@ testFileIO(SD, "/test.txt");
 Esta sección se aplica solo a XIAO ESP32S3 Sense.
 :::
 
-Este proyecto muestra cómo registrar datos con marcas de tiempo en una tarjeta TF usando el XIAO ESP32S3 Sense. Como ejemplo, registraremos lecturas de temperatura del Grove - Multichannel Gas Sensor v2 cada 10 minutos. El XIAO ESP32S3 estará en modo de sueño profundo entre cada lectura y solicitará la fecha y la hora usando el Protocolo de Tiempo de Red (NTP).
+Este proyecto muestra cómo registrar datos con marcas de tiempo en una tarjeta TF usando el XIAO ESP32S3 Sense. Como ejemplo, registraremos lecturas de temperatura del Multichannel Gas Sensor cada 10 minutos. El XIAO ESP32S3 estará en modo de sueño profundo entre cada lectura y solicitará la fecha y la hora usando el Protocolo de Tiempo de Red (NTP).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/72.jpg" style={{width:800, height:'auto'}}/></div>
 
-Para completar este proyecto, tendrás que preparar de antemano el siguiente hardware.
+Para completar este proyecto, tendrás que preparar el siguiente hardware de antemano.
 
 <table align="center">
  <tr>
@@ -541,7 +541,7 @@ Para el software, necesitas instalar de antemano las siguientes bibliotecas para
 
 <br />
 
-Aquí está el programa de ejemplo completo. En el programa necesitaremos usar la hora obtenida por red, así que debes cambiar el nombre y la contraseña de tu WiFi en el programa por los tuyos.
+Aquí está el programa de ejemplo completo. En el programa necesitaremos usar la hora obtenida por red, así que debes cambiar el nombre y la contraseña de la red WiFi en el programa por los tuyos.
 
 ```cpp
 #include "FS.h"
@@ -758,7 +758,7 @@ Compila y sube el programa, y abre el monitor del puerto serie. Si el programa s
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/70.png" style={{width:700, height:'auto'}}/></div>
 
-Siempre puedes retirar la tarjeta microSD cuando te resulte conveniente y acceder a los datos del sensor guardados mediante el lector de tarjetas.
+Siempre puedes retirar la tarjeta microSD cuando te sea conveniente y acceder a los datos del sensor guardados mediante el lector de tarjetas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/71.png" style={{width:500, height:'auto'}}/></div>
 
@@ -767,10 +767,10 @@ Para facilitar las pruebas, el efecto se muestra cada minuto para guardar datos;
 :::
 
 :::caution
-Hay que tener en cuenta lo siguiente sobre este proyecto:
+En este proyecto hay que tener en cuenta lo siguiente:
 
 1. El Multichannel Gas Sensor necesita un período de calentamiento antes de que los valores obtenidos sean precisos. Por lo tanto, los primeros conjuntos de datos registrados pueden considerarse descartables si el error es grande.
-2. El monitor serie solo mostrará la información guardada una vez, porque este ejemplo utiliza la función de sueño profundo; es equivalente a un reinicio después de despertarse, es decir, necesitas volver a abrir el puerto serie de Arduino para ver la siguiente información de depuración. Pero ten la seguridad de que, si no hay ningún problema con la tarjeta, los datos del sensor se recopilarán puntualmente en el momento que hayas configurado.
+2. El monitor serie solo mostrará la información guardada una vez, porque este ejemplo utiliza la función de sueño profundo; es equivalente a un reinicio después de despertarse, es decir, necesitas volver a abrir el puerto serie de Arduino para ver la siguiente información de depuración. Pero no te preocupes, si no hay ningún problema con la tarjeta, los datos del sensor se recopilarán puntualmente en el momento que hayas configurado.
 
    :::
 
@@ -778,7 +778,7 @@ Hay que tener en cuenta lo siguiente sobre este proyecto:
 
 En este ejemplo, el XIAO ESP32S3 está en modo de sueño profundo entre cada lectura. En el modo de sueño profundo, todo tu código debe ir en la función `setup()`, porque el XIAO ESP32S3 nunca llega a `loop()`.
 
-Este ejemplo utiliza un factor de conversión de microsegundos a segundos, de modo que puedas configurar el tiempo de sueño en la variable `TIME_TO_SLEEP` en segundos. En este caso, configuramos el XIAO ESP32S3 para que entre en sueño durante 10 minutos (600 segundos). Si quieres que el XIAO ESP32S3 duerma durante un período de tiempo diferente, solo necesitas introducir el número de segundos para el sueño profundo en la variable `TIME_TO_SLEEP`.
+Este ejemplo utiliza un factor de conversión de microsegundos a segundos, de modo que puedas establecer el tiempo de sueño en la variable `TIME_TO_SLEEP` en segundos. En este caso, configuramos el XIAO ESP32S3 para que entre en sueño durante 10 minutos (600 segundos). Si quieres que el XIAO ESP32S3 duerma durante un período de tiempo diferente, solo necesitas introducir el número de segundos para el sueño profundo en la variable `TIME_TO_SLEEP`.
 
 ```c
 // Define deep sleep options
@@ -793,7 +793,7 @@ A continuación, define el pin CS de la tarjeta microSD. En este caso, se establ
 #define SD_CS 21
 ```
 
-Crea una variable llamada `readingID` para almacenar el ID de lectura. Esta es una forma de mantener tus lecturas organizadas. Para guardar el valor de una variable durante el sueño profundo, podemos guardarlo en la memoria RTC. Para guardar datos en la memoria RTC, solo necesitas añadir `RTC_DATA_ATTR` antes de la definición de la variable.
+Crea una variable llamada `readingID` para almacenar el ID de lectura. Esta es una forma de organizar tus lecturas. Para guardar el valor de una variable durante el sueño profundo, podemos guardarlo en la memoria RTC. Para guardar datos en la memoria RTC, solo necesitas añadir `RTC_DATA_ATTR` antes de la definición de la variable.
 
 Crea una variable de tipo String para almacenar los datos que se guardarán en la tarjeta microSD.
 
@@ -843,11 +843,11 @@ Usar SPIFFS con el XIAO ESP32 es especialmente útil para:
 - Guardar archivos HTML y CSS para crear un servidor web
 - Guardar imágenes, figuras e iconos
 
-### Instalación del cargador del sistema de archivos de Arduino ESP32
+### Instalación del cargador de sistema de archivos Arduino ESP32
 
 Puedes crear, guardar y escribir archivos en el sistema de archivos del ESP32 escribiendo tú mismo el código en el Arduino IDE. Esto no es muy útil, porque tendrías que escribir el contenido de tus archivos en el sketch de Arduino.
 
-Afortunadamente, hay un plugin para Arduino IDE que te permite subir archivos directamente al sistema de archivos del ESP32 desde una carpeta de tu ordenador. Esto hace que trabajar con archivos sea realmente fácil y sencillo. Vamos a instalarlo.
+Afortunadamente, hay un plugin para el Arduino IDE que te permite subir archivos directamente al sistema de archivos del ESP32 desde una carpeta en tu ordenador. Esto hace que trabajar con archivos sea realmente fácil y sencillo. Vamos a instalarlo.
 
 :::note
 Nota: en el momento de escribir esta publicación, el plugin ESP32 Filesystem Uploader **no es compatible con Arduino 2.0**.
@@ -881,11 +881,11 @@ Para comprobar si el plugin se instaló correctamente, abre tu Arduino IDE. Sele
 
 **Paso 1.** Ve a la [página de lanzamientos](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/) y haz clic en el archivo [ESP32FS-1.1.zip](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/download/1.1/ESP32FS-1.1.zip) para descargarlo.
 
-**Paso 2.** Descomprime los archivos.
+**Paso 2.** Desempaqueta los archivos.
 
 **Paso 3.** Crea una carpeta llamada **tools** en `/Documents/Arduino/`.
 
-**Paso 4.** Copia la carpeta **ESP32FS** descomprimida en el directorio **tools**. Deberías tener una estructura de carpetas similar.
+**Paso 4.** Copia la carpeta **ESP32FS** desempaquetada en el directorio **tools**. Deberías tener una estructura de carpetas similar.
 
 `~Documents/Arduino/tools/ESP32FS/tool/esp32fs.jar`
 
@@ -923,9 +923,9 @@ Los archivos se subieron correctamente al sistema de archivos del ESP32 cuando v
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/81.png" style={{width:800, height:'auto'}}/></div>
 
-### Probando el Uploader
+### Probando el cargador
 
-Ahora, vamos a comprobar si el archivo se guardó realmente en el sistema de archivos del ESP32. Simplemente sube el siguiente código a tu placa ESP32.
+Ahora, solo vamos a comprobar si el archivo se guardó realmente en el sistema de archivos del ESP32. Simplemente sube el siguiente código a tu placa ESP32.
 
 ```cpp
 #include "SPIFFS.h"
@@ -972,9 +972,9 @@ Cuando usamos placas de desarrollo, muchos de nosotros queremos poder utilizar l
 
 Este tutorial presentará cómo almacenar datos importantes en la memoria flash de la XIAO ESP32 mediante dos métodos de almacenamiento diferentes, como se indica a continuación:
 
-1. La primera guía muestra cómo guardar datos de forma permanente en la memoria flash del ESP32 utilizando la biblioteca Preferences.h. Los datos almacenados en la memoria flash persisten a través de reinicios o fallos de alimentación. Usar la biblioteca Preferences.h es útil para guardar datos como credenciales de red, claves API, valores umbral o incluso el último estado de un GPIO. Aprenderás cómo guardar y leer datos de la memoria flash.
+1. La primera guía muestra cómo guardar datos de forma permanente en la memoria flash del ESP32 utilizando la biblioteca Preferences.h. Los datos almacenados en la memoria flash persisten a través de reinicios o fallos de alimentación. Usar la biblioteca Preferences.h es útil para guardar datos como credenciales de red, claves API, valores umbral o incluso el último estado de un GPIO. Aprenderás cómo guardar y leer datos desde la memoria flash.
 
-2. La segunda guía explica qué es la EEPROM de la XIAO ESP32C3 y para qué es útil. También te mostraremos cómo escribir y leer desde la EEPROM y construiremos un ejemplo de proyecto para poner en práctica los conceptos aprendidos.
+2. La segunda guía explica qué es la EEPROM de la XIAO ESP32C3 y para qué es útil. También te mostraremos cómo escribir y leer desde la EEPROM y construiremos un proyecto de ejemplo para poner en práctica los conceptos aprendidos.
 
 Esta sección ha sido escrita para la XIAO ESP32C3 y es totalmente compatible con la nueva XIAO ESP32S3, por lo que puedes utilizar directamente las rutinas aquí, así que no la repetiremos de nuevo aquí.
 
@@ -984,7 +984,7 @@ Esta sección ha sido escrita para la XIAO ESP32C3 y es totalmente compatible co
 
 ## Citas y referencias
 
-Este artículo se basa en el contenido del sistema de archivos de **[Random Nerd Tutorials](https://randomnerdtutorials.com/)** sobre ESP32 y lo utiliza verificado en la Seeed Studio XIAO ESP32S3 Sense.
+Este artículo se basa en el contenido del sistema de archivos de **[Random Nerd Tutorials](https://randomnerdtutorials.com/)** sobre ESP32 y se ha verificado en la Seeed Studio XIAO ESP32S3 Sense.
 
 ¡Un agradecimiento especial a los autores de **Random Nerd Tutorials** por su arduo trabajo!
 
@@ -994,7 +994,7 @@ A continuación se muestra el enlace de referencia al artículo original; eres b
 - [ESP32 Data Logging Temperature to MicroSD Card](https://randomnerdtutorials.com/esp32-data-logging-temperature-to-microsd-card/)
 - [Install ESP32 Filesystem Uploader in Arduino IDE](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/)
 
-Para obtener más información sobre el uso de la placa de desarrollo ESP32, consulta el sitio web oficial de Random Nerd Tutorials.
+Para obtener más información sobre el uso de la placa de desarrollo ESP32, lee el sitio web oficial de Random Nerd Tutorials.
 
 - [Random Nerd Tutorials](https://randomnerdtutorials.com/)
 

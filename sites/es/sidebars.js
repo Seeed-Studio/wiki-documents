@@ -5109,7 +5109,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft HMI',
+      label: 'SenseCraft Seeedash',
       collapsed: true,
       collapsible: true,
       link: {
