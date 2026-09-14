@@ -19,7 +19,11 @@ updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 ---
 
+import '/src/css/rebot-wiki-style.css';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # reBot Arm B601-DM入门Lerobot
 
@@ -55,25 +59,12 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 [LeRobot](https://github.com/huggingface/lerobot/tree/main) 致力于为真实世界的机器人提供 PyTorch 中的模型、数据集和工具。其目标是降低机器人学的入门门槛，使每个人都能通过共享数据集和预训练模型进行贡献和受益。LeRobot 集成了经过验证的前沿方法，专注于模仿学习和强化学习。它提供了一套预训练模型、包含人类收集的示范数据集和仿真环境，使用户无需进行机器人组装即可开始使用。
 
 
-### 📖 项目简介 (Introduction)
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="lerobot"
+  ariaLabel="在 GitHub 上为 LeRobot 点亮 Star"
+/>
 
-**reBot-DevArm (reBot Arm B601 DM 和reBot Arm B601 RS)** 是一个致力于降低具身智能学习门槛的机械臂项目。我们主打 **"真·开源"** —— 不仅仅是代码，我们无保留地开源了所有的：
-- 🦾 **两个版本电机的开源机械臂**：我们会提供Robostride和Damiao两个版本的同样外观的机械臂所有开源文件。
-- 🛠️ **硬件图纸**：钣金件、3D打印件源文件。
-- 🔩 **BOM 清单**：详细到每一个螺丝的规格和购买链接。
-- 💻 **软件及算法**：Python SDK、ROS1/2、Isaac Sim、Lerobot等
-
-## 搭建属于你的 reBot 机械臂
-
-- 我们提供五种套件方案：
-  - **机械臂本体电机套件**：仅包含机械臂所需的电机与线束。
-  - **机械臂本体结构件套件**：仅包含机械结构零部件。
-  - **夹持器完整套件**：包含夹持器的电机、线束及结构件。
-  - **整机完整套件**：包含机械臂本体与夹持器全套组件。
-  - **成品组装机械臂**：已完成组装的成品机械臂。
-
-
-reBot-DevArm 和 reComputer Jetson AI 智能机器人套件无缝结合了高精度的机器人手臂控制与强大的 AI 计算平台，提供了全面的机器人开发解决方案。该套件基于 Jetson Orin 或 AGX Orin 平台，结合 reBot-DevArm 和 LeRobot AI 框架，为用户提供适用于教育、科研和工业自动化等多种场景的智能机器人系统。
 
 本维基提供了 reBot-DevArm 调试教程，并在 Lerobot 框架内实现数据收集和训练。
 
@@ -81,36 +72,29 @@ reBot-DevArm 和 reComputer Jetson AI 智能机器人套件无缝结合了高精
 Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或环境问题，请先查阅文末FAQ，或者联系客服加入SeeedStudio Lerobot交流群询问，也可以在这里询问：[LeRobot GitHub](https://github.com/huggingface/lerobot) 或 [Discord频道](https://discord.gg/8TnwDdjFGU)。  
 :::
 
-## 🔧 reBot B601-DM 系列特点：
-
-1. **开源 & 低成本**  
-   reBot Arm 是由 Seeed Studio 提供的开源机器人臂解决方案，致力于降低具身智能学习门槛。
-
-2. **支持 LeRobot 平台集成**  
-   专为与 [LeRobot 平台](https://github.com/huggingface/lerobot) 集成而设计。该平台提供 PyTorch 模型、数据集与工具，面向现实机器人任务的模仿学习（包括数据采集、仿真、训练与部署）。
-
-3. **丰富的学习资源**  
-   提供全面的开源学习资源，包括组装与校准指南、测试与数据采集教程、训练与部署文档，帮助用户快速上手并开发机器人应用。
-
-4. **兼容 Nvidia 平台**  
-   支持通过 reComputer Mini J4012 Orin NX 16GB 平台进行部署。
-
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 初始系统环境
-**For Ubuntu X86:**
-  - Ubuntu 22.04
-  - CUDA 12+
-  - Python 3.10
-  - Torch 2.6
 
+<Tabs>
+<TabItem value="ubuntu-x86" label="Ubuntu x86">
 
-**For Jetson Orin:**
-  - Jetson Jetpack 6.0 和 6.1，暂不支持6.2
-  - Python 3.10
-  - Torch 2.3+
+- Ubuntu 22.04/Ubuntu 24.04
+- NVIDIA GPU 与 CUDA 12+（用于 GPU 加速训练/推理，可选）
+- Python 3.10
+- Torch 2.6（CPU 版可运行基础流程，GPU 加速需 CUDA 版）
+
+</TabItem>
+<TabItem value="jetson-orin" label="Jetson Orin">
+
+- Jetson JetPack 6.0 和 6.1，暂不支持 6.2
+- Python 3.10
+- Torch 2.3+
+
+</TabItem>
+</Tabs>
 
 ## 安装LeRobot
 
@@ -118,10 +102,14 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
+LeRobot 的基础环境可以在 CPU 上安装和运行。若需要 GPU 加速训练或推理，请确认电脑配有 NVIDIA GPU，并根据 CUDA 版本安装匹配的 PyTorch 与 Torchvision。
 
 
-### 1. 安装 Miniforge
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      #### 1. 安装 Miniforge
 
 ```bash
 cd ~
@@ -132,7 +120,13 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 source ~/.bashrc
 ```
 
-### 2. 克隆 Lerobot 仓库
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      #### 2. 克隆 LeRobot 仓库
 
 ```bash
 mkdir ~/rebot_lerobot
@@ -140,7 +134,13 @@ cd ~/rebot_lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git
 ```
 
-### 3. 创建 Conda 环境并安装 LeRobot
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      #### 3. 创建 Conda 环境并安装 LeRobot
 
 :::tip
 关于功能包的详细功能，请参考：
@@ -170,7 +170,13 @@ pip install motorbridge
 ```
 
 
-### 4. 安装 ffmpeg
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      #### 4. 安装 ffmpeg
 
 ffmpeg 是视频解码依赖，通过 conda 安装：
 
@@ -188,12 +194,18 @@ conda install ffmpeg -c conda-forge
 - 可通过 `ffmpeg -encoders | grep svtav1` 检查是否支持 libsvtav1 编码器
 :::
 
-### 5. Jetson Jetpack 6.0+ 设备特殊配置
+</div>
+</section>
 
-(电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      #### 5. Jetson JetPack 6.0+ 设备特殊配置
+
+(电脑端可跳过这一步) 对于 Jetson JetPack 6.0+ 设备（请确保在执行此步骤前按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装了 PyTorch GPU 版和 Torchvision）：
 
 ```bash
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson Jetpack 6.0+
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson JetPack 6.0+
 conda remove opencv   # 卸载 OpenCV
 pip3 install opencv-python==4.10.0.84  # 使用 pip3 安装指定版本 OpenCV
 conda install -y -c conda-forge ffmpeg
@@ -201,25 +213,41 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
 ```
 
-### 6. 检查 Pytorch 和 Torchvision
+</div>
+</section>
 
-:::tip
-如果你使用的是 Jetson 设备，请根据 [此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) 安装 Pytorch 和 Torchvision。
-:::
+<section className="rebot-step-item">
+    <span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+      #### 6. 检查 PyTorch 和 Torchvision
 
+由于通过 pip 安装 LeRobot 环境时可能会将原有的 PyTorch 和 Torchvision 替换为 CPU 版本，因此需要在 Python 中进行检查。
 
-
-由于通过 pip 安装 lerobot 环境时会卸载原有的 Pytorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
-
-```python
+```bash
 python3
-
-import torch
-print(torch.cuda.is_available())#输出结果应该为True
 ```
 
-如果输出为 True ，您可以输入 exit()来退出python，继续进行下列步骤  
-如果输出结果为 False，需要根据 [官网教程](https://pytorch.org/index.html) 重新安装 Pytorch 和 Torchvision。  
+```python
+import torch
+print(torch.cuda.is_available())
+exit()
+```
+
+如果输出为 `False`，表示当前环境中的 PyTorch 是 CPU 版本。没有 NVIDIA GPU 的电脑输出 `False` 是正常现象，可以继续用 CPU 运行基础流程，但训练会明显变慢。若电脑配有 NVIDIA GPU 且需要 GPU 加速，请根据 [PyTorch 官方安装指南](https://pytorch.org/index.html) 安装与 CUDA 版本匹配的 PyTorch 和 Torchvision，此时最终检查结果应为 `True`。
+
+:::tip
+如果你使用的是 Jetson 设备，请根据 [此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) 安装 GPU 版 PyTorch 和 Torchvision。
+
+NVIDIA RTX 50 系列显卡需要 CUDA 12.8 及以上版本的 PyTorch 预览版：
+
+```bash
+pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
+```
+:::
+
+</div>
+</section>
+</div>
 
 
 

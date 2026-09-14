@@ -23,6 +23,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/
 
 import '/src/css/rebot-wiki-style.css';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS 的 Pinocchio 与 MeshCat 入门指南
 
@@ -60,6 +61,12 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 </p>
 
 本项目结合了 Pinocchio 的强大计算能力和 MeshCat 的直观可视化，为 reBot Arm B601-RS 提供了一套完整的运动学分析和调试工具。
+
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBotArm_control_py"
+  ariaLabel="在 GitHub 上为 reBotArm_control_py 点亮 Star"
+/>
 
 
 ---
