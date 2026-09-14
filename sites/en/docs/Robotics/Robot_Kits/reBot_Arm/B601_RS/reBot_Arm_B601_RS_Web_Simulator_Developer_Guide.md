@@ -149,7 +149,7 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 ## Environment Requirements
 
 | Item | Recommended requirement |
-|---|---|
+| --- | --- |
 | Backend OS | Ubuntu 24.04 |
 | ROS 2 | Jazzy |
 | Compatible reference environment | Ubuntu 22.04 + ROS 2 Humble (real-robot use requires your own regression testing) |
@@ -392,7 +392,6 @@ This script starts:
 
 It is used to compare interfaces, joint directions, and status. It does not start the full MuJoCo stack, vision, Agent, or web server. Confirm the namespace selected in the web console again before sending commands.
 
-
 </TabItem>
 
 </Tabs>
@@ -400,7 +399,7 @@ It is used to compare interfaces, joint directions, and status. It does not star
 ## Unified Command Line
 
 | Command | Description |
-|---|---|
+| --- | --- |
 | `./rebotarm doctor` | Read-only environment check, equivalent to `./setup.sh --check` |
 | `./rebotarm start web` | Start or reuse rosbridge and start the web server |
 | `./rebotarm start rs_sim` | Start the full RS MuJoCo simulation stack |
@@ -498,7 +497,7 @@ Web console or Agent
 ### Control Target and Namespace
 
 | Mode | Namespace | Web model source |
-|---|---|---|
+| --- | --- | --- |
 | RS real robot | `/rebotarm` | Real-robot `/joint_states` feedback |
 | RS simulation | `/rebotarm_rs` | Uses the actual MuJoCo state first |
 
@@ -558,7 +557,7 @@ The examples below use the real-robot `/rebotarm`. For simulation, replace the p
 ### Status Topics
 
 | Topic | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/joint_states` | `sensor_msgs/msg/JointState` | Unified six-axis and gripper status |
 | `/rebotarm/joints/<name>/state` | `rebotarm_msgs/msg/JointMotorState` | Single-motor position, velocity, torque, and status code |
 | `/rebotarm/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | Raw gripper motor status |
@@ -569,7 +568,7 @@ The examples below use the real-robot `/rebotarm`. For simulation, replace the p
 ### Low-Level Command Topics
 
 | Topic | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/joints/<joint1..joint6>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Default joint command from the web console for the real robot |
 | `/rebotarm/joints/<joint1..joint6>/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Position-velocity command |
 | `/rebotarm/gripper/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | RS gripper MIT command |
@@ -581,7 +580,7 @@ Before publishing low-level commands yourself, check `arm_status.state_machine`.
 ### Services
 
 | Service | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/enable` | `std_srvs/srv/Trigger` | Enable the arm |
 | `/rebotarm/disable` | `std_srvs/srv/Trigger` | Safely disable; homes first when necessary |
 | `/rebotarm/safe_home` | `std_srvs/srv/Trigger` | Safe homing with validation |
@@ -605,7 +604,7 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger '{}'
 ### Actions
 
 | Action | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | Joint trajectory |
 | `/rebotarm/gripper/command` | `control_msgs/action/GripperCommand` | Gripper action |
 | `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | Cartesian pose motion |
@@ -613,7 +612,7 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger '{}'
 ### MuJoCo and Vision Interfaces
 
 | Interface | Type/Use |
-|---|---|
+| --- | --- |
 | `/rebotarm_rs/mujoco/joint_states` | Actual MuJoCo joint states |
 | `/rebotarm_rs/mujoco/object_states` | Scene object states as JSON |
 | `/rebotarm_rs/mujoco/overhead_rgb/image_raw` | Overhead RGB camera |
@@ -716,7 +715,7 @@ gravity_compensation:
 Other default frequencies:
 
 | Layer | Default frequency | Description |
-|---|---:|---|
+| --- | ---: | --- |
 | Web joint target | Up to 60 Hz | Sliders and TCP IK continuously update the target |
 | Real-robot sync feedback query | 20 Hz | Refresh the RobStride measurement cache |
 | ROS real-robot state | 60 Hz | Publish feedback, target, and reference from the cache |
@@ -790,7 +789,7 @@ Keep both copies in sync when modifying them and check Linux filename case.
 ### Modify MuJoCo
 
 | File/directory | Role |
-|---|---|
+| --- | --- |
 | `rebotarm_ros2_RS/src/rebotarm_mujoco_rs/models/` | RS MJCF and STL |
 | `rebotarm_mujoco_rs/mujoco_sync.py` | Sync frequency, dynamics, and PD |
 | `rebotarm_mujoco_rs/scene_camera.py` | Overhead camera |
