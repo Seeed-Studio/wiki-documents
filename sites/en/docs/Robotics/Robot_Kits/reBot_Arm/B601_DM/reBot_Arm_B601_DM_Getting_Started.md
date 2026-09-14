@@ -17,7 +17,7 @@ last_update:
   date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -25,6 +25,7 @@ import '/src/css/rebot-wiki-style.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # Getting Started with reBot Arm B601-DM
 
@@ -57,10 +58,47 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
   The reBot Arm project is open source on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm)—please visit the repository and give it a Star! The repository contains the complete BOM. This guide will help you get started with the B601-DM, from assembly to operation.
 </p>
 
+<GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
+
+## Project Introduction
+
+**reBot-DevArm (reBot Arm B601 DM and reBot Arm B601 RS)** is a robotic arm project dedicated to lowering the threshold for learning embodied intelligence. We focus on **"True Open Source"** — not just code, we open-source all of the following without reservation:
+- 🦾 **Open-source robotic arms with two motor versions**: We provide all open-source files for RoboStride and Damiao motor versions of the same appearance.
+- 🛠️ **Hardware blueprints**: Sheet metal and 3D printed part source files.
+- 🔩 **BOM (Bill of Materials)**: Detailed to every screw's specification and purchase link.
+- 💻 **Software and algorithms**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
+
+## Building Your reBot Robotic Arm
+
+- We offer five kit options:
+  - **Robotic Arm Body Motor Kit**: Includes only the motors and wiring harnesses needed for the robotic arm.
+  - **Robotic Arm Body Structural Parts Kit**: Includes only the mechanical structural components.
+  - **Gripper Complete Kit**: Includes motors, wiring harnesses, and structural parts for the gripper.
+  - **Complete Arm Kit**: Includes all components for the robotic arm body and gripper.
+  - **Pre-assembled Robotic Arm**: A fully assembled robotic arm.
+
+The reBot-DevArm and reComputer Jetson AI intelligent robot kit seamlessly combine high-precision robotic arm control with a powerful AI computing platform, providing a comprehensive robot development solution. This kit is based on the Jetson Orin or AGX Orin platform, combined with the reBot-DevArm and LeRobot AI framework, offering users an intelligent robot system applicable to multiple scenarios such as education, research, and industrial automation.
+
+## Features of reBot B601-DM Series
+
+1. **Open-source & Low-cost**\
+   reBot Arm is an open-source, low-cost robotic arm solution from Seeed Studio, dedicated to lowering the threshold for learning embodied intelligence.
+
+2. **LeRobot Platform Integration**\
+   Designed for integration with the [LeRobot platform](https://github.com/huggingface/lerobot). This platform provides PyTorch models, datasets and tools for imitation learning of real robot tasks (including data collection, simulation, training and deployment).
+
+3. **Abundant Learning Resources**\
+   Provides comprehensive open-source learning resources including assembly and calibration guides, testing and data collection tutorials, training and deployment documentation to help users quickly get started and develop robotic applications.
+
+4. **Nvidia Platform Compatible**\
+   Supports deployment via the reComputer Mini J4012 Orin NX 16GB platform.
+
 :::tip
 If you purchased a pre-assembled kit, please skip directly to the tutorial video in **Step 3** at the end of this article and follow along. There is no need to write motor IDs or calibrate zero positions.
 
 It has been verified that virtual machine performance is insufficient for running demos and there are configuration issues. It is recommended to use an Ubuntu physical machine to control the robotic arm.
+
+We recommend installing **Ubuntu 24.04 LTS**.
 
 Recommended Bilibili installation tutorial: [Ubuntu Dual-Boot Installation Tutorial](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
