@@ -8,7 +8,7 @@ keywords:
   - Display
   - LCD
   - 0.96
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /getting_started_0.96_inch_display_nrf52840
 sku: 100063377
 sidebar_position: 1

@@ -7,7 +7,7 @@ keywords:
   - LCD
   - ESP32-S3
   - nRF52840
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /display_gadgets
 sidebar_label: Overview
 sidebar_position: 0

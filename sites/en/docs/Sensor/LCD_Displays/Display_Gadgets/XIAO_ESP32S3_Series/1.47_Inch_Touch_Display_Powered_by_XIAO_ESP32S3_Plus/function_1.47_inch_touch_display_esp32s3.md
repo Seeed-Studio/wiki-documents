@@ -7,7 +7,7 @@ keywords:
   - IPS Display
   - LCD
   - Function
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_esp32s3.webp
 slug: /function_1.47_inch_touch_display_esp32s3
 sku: 100069905
 sidebar_label: Function

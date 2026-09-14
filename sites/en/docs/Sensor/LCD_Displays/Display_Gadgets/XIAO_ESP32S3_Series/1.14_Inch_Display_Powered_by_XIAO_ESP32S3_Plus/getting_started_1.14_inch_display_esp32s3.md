@@ -7,7 +7,7 @@ keywords:
   - Display
   - LCD
   - 1.14
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_esp32s3.webp
 slug: /getting_started_1.14_inch_display_esp32s3
 sku: 100086099
 sidebar_label: Getting Started
