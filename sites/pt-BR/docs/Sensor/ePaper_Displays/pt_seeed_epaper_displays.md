@@ -220,7 +220,7 @@ Para makers que preferem montar tudo por conta própria, duas opções flexívei
 
 ## Ecossistema de Software em Resumo
 
-Todo produto ePaper da Seeed converge para o mesmo ecossistema de software. Escolha o fluxo de trabalho que corresponde ao seu nível de habilidade — você pode combinar e misturar:</td>
+Todo produto ePaper da Seeed converge para o mesmo ecossistema de software. Escolha o fluxo de trabalho que corresponde ao seu nível de habilidade — você pode combinar e misturar:
 
 <div class="table-center">
   <table align="center">
@@ -289,29 +289,29 @@ Todo produto ePaper da Seeed converge para o mesmo ecossistema de software. Esco
 
 ## Índice de Tutoriais de Aplicação
 
-Cada tutorial abaixo percorre uma plataforma de ponta a ponta:</td>
+Cada tutorial abaixo percorre uma plataforma de ponta a ponta:
 
 ### Frameworks de casa inteligente e dashboards
 
 - [Trabalhar com ESPHome](https://wiki.seeedstudio.com/pt-br/epaper_work_with_esphome) — referência principal: caminhos de gravação, esqueleto YAML genérico, integração com Home Assistant. Cookbooks por produto: [reTerminal E (Básico)](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome), [reTerminal E (Avançado)](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_esphome_advanced), [EE04](https://wiki.seeedstudio.com/pt-br/EE04_with_esphome_advanced), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_esphome), [TRMNL DIY Kit](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_esphome).
-- [Trabalhar com TRMNL](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_trmnl) — implante dashboards E-Ink por meio da plataforma em nuvem TRMNL. Um único artigo agora cobre reTerminal E1001/E1002, o TRMNL DIY Kit e o XIAO 7.5" ePaper Panel — escolha seu hardware nas abas.</td>
+- [Trabalhar com TRMNL](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_trmnl) — implante dashboards E-Ink por meio da plataforma em nuvem TRMNL. Um único artigo agora cobre reTerminal E1001/E1002, o TRMNL DIY Kit e o XIAO 7.5" ePaper Panel — escolha seu hardware nas abas.
 
 ### Ferramentas no-code / de design visual de UI
 
-- [Trabalhar com SenseCraft Seeedash](https://wiki.seeedstudio.com/pt-br/EE04_with_hmi) — plataforma de interface visual no-code da Seeed; abrange reTerminal E Series e placas controladoras EE0x.</td>
+- [Trabalhar com SenseCraft Seeedash](https://wiki.seeedstudio.com/pt-br/EE04_with_hmi) — plataforma de interface visual no-code da Seeed; abrange reTerminal E Series e placas controladoras EE0x.
 - [Trabalhar com SquareLine Vision](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_squareline_vision)
-- [Trabalhar com EEZ Studio](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_eezstudio) — fluxo de trabalho combinado reTerminal E Series + EE04 com LVGL.</td>
+- [Trabalhar com EEZ Studio](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_eezstudio) — fluxo de trabalho combinado reTerminal E Series + EE04 com LVGL.
 - [Trabalhar com Lopaka](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_lopaka)
 
 ### Desenvolvimento baseado em código
 
-- [Trabalhar com Arduino](https://wiki.seeedstudio.com/pt-br/epaper_work_with_arduino) — referência principal: configuração da IDE, biblioteca `Seeed_GFX`, geração de `driver.h`. Cookbooks por produto: reTerminal E Series — [ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino) e [Periféricos Embarcados](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_arduino).</td>
-- [Trabalhar com PlatformIO](https://wiki.seeedstudio.com/pt-br/epaper_work_with_platformio) — referência principal: configuração do VS Code, configuração de `platformio.ini`, configuração de `Seeed_GFX` e seleção de ambiente PlatformIO por produto. Cookbook por produto: [EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/pt-br/ee04_with_platformio).</td>
-- [Trabalhar com Zephyr](https://wiki.seeedstudio.com/pt-br/epaper_work_with_zephyr) — página de entrada para suporte Zephyr RTOS em reTerminal E1001, E1002 e E1003, com links para documentação oficial de placas Zephyr e alvos de placa.</td>
+- [Trabalhar com Arduino](https://wiki.seeedstudio.com/pt-br/epaper_work_with_arduino) — referência principal: configuração da IDE, biblioteca `Seeed_GFX`, geração de `driver.h`. Cookbooks por produto: reTerminal E Series — [ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino) e [Periféricos Embarcados](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_arduino).
+- [Trabalhar com PlatformIO](https://wiki.seeedstudio.com/pt-br/epaper_work_with_platformio) — referência principal: configuração do VS Code, configuração de `platformio.ini`, configuração de `Seeed_GFX` e seleção de ambiente PlatformIO por produto. Cookbook por produto: [EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/pt-br/ee04_with_platformio).
+- [Trabalhar com Zephyr](https://wiki.seeedstudio.com/pt-br/epaper_work_with_zephyr) — página de entrada para suporte Zephyr RTOS em reTerminal E1001, E1002 e E1003, com links para documentação oficial de placas Zephyr e alvos de placa.
 
 ### ESL / OEPL open-source
 
-- [Trabalhar com OpenEPaperLink / OpenDisplay](https://wiki.seeedstudio.com/pt-br/EN04_opendisplay) — um único artigo cobre o kit EN04 BLE e o caminho DIY ePaper Breakout Board + XIAO nRF52840.</td>
+- [Trabalhar com OpenEPaperLink / OpenDisplay](https://wiki.seeedstudio.com/pt-br/EN04_opendisplay) — um único artigo cobre o kit EN04 BLE e o caminho DIY ePaper Breakout Board + XIAO nRF52840.
 
 ## Recursos
 
@@ -322,7 +322,7 @@ Cada tutorial abaixo percorre uma plataforma de ponta a ponta:</td>
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.</td>
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
