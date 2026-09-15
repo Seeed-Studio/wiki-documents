@@ -1,7 +1,7 @@
 ---
-description: Primeros pasos con XIAO 1.14'' IPS Display (nRF52840).
-title: Primeros pasos con XIAO 1.14'' IPS Display (nRF52840)
-sidebar_label: Primeros pasos
+description: Introducción a XIAO 1.14'' IPS Display (nRF52840).
+title: Introducción a XIAO 1.14'' IPS Display (nRF52840)
+sidebar_label: Getting Started
 keywords:
   - XIAO
   - nRF52840
@@ -21,7 +21,7 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/es/getting_started_1.14_inch_display_nrf52840/
 ---
 
-# Primeros pasos con XIAO 1.14'' IPS Display (nRF52840)
+# Introducción a XIAO 1.14'' IPS Display (nRF52840)
 
 <div class="table-center">
   <table align="center">
@@ -37,7 +37,7 @@ url: https://wiki.seeedstudio.com/es/getting_started_1.14_inch_display_nrf52840/
 
 ## Introducción
 
-La pantalla IPS de 1,14'' es una placa de expansión diseñada para la serie XIAO, impulsada por el XIAO nRF52840 Plus. Incorpora una pantalla LCD IPS en color de 135×240, micrófono PDM integrado, IMU de 6 ejes (compatible con LSM6DS3), conector Grove I2C, tres botones de usuario y gestión de alimentación por batería con visualización de porcentaje, todo integrado en un formato compacto.
+La pantalla IPS de 1,14'' es una placa de expansión diseñada para la serie XIAO, impulsada por el XIAO nRF52840 Plus. Incorpora una pantalla LCD IPS en color de 135×240, micrófono PDM integrado, IMU de 6 ejes (compatible con LSM6DS3), conector Grove I2C, tres botones de usuario y gestión de alimentación por batería con visualización de porcentaje, todo integrado en un factor de forma compacto.
 
 Esta combinación la convierte en una plataforma ideal para dispositivos wearables, nodos de sensores compactos, instrumentos portátiles y creación de prototipos de IoT donde el espacio es un recurso crítico.
 
@@ -60,8 +60,8 @@ Esta combinación la convierte en una plataforma ideal para dispositivos wearabl
     <tr><td>Conector Grove I2C</td><td>Sí</td></tr>
     <tr><td>Botones de usuario</td><td>3</td></tr>
     <tr><td>Conector de batería</td><td>Conector JST 2.0 de 2 pines para LiPo de 3,7 V</td></tr>
-    <tr><td>Supervisión de batería</td><td>Compatible con detección del estado de la batería; el voltaje de la batería también se puede monitorizar para estimar el nivel de carga.</td></tr>
-    <tr><td>Interfaces de expansión</td><td>1x conector Grove I2C, 1x pads I2C, 1x pads I2S, 1x pads SWD, 3x pads de botón de usuario</td></tr>
+    <tr><td>Supervisión de batería</td><td>Compatible con detección del estado de la batería; el voltaje de la batería también se puede supervisar para estimar el nivel de carga.</td></tr>
+    <tr><td>Interfaces de expansión</td><td>1x interfaz I2S, 1x interfaz SWD, 3x interfaces de botón de usuario</td></tr>
     <tr><td>Tamaño de la placa</td><td>26 × 48 × 10,6 mm</td></tr>
     <tr><td>Ideal para</td><td>Pantallas de sensores portátiles, dispositivos Grove, controladores físicos</td></tr>
   </table>
@@ -71,7 +71,7 @@ Esta combinación la convierte en una plataforma ideal para dispositivos wearabl
 Esta placa de pantalla está diseñada para el **XIAO nRF52840 Plus**. Si estás utilizando la versión XIAO ESP32-S3 Plus, consulta en su lugar la guía de XIAO 1.14'' IPS Display (ESP32-S3).
 :::
 
-## Descripción del hardware
+## Descripción general del hardware
 
 Antes de empezar, consulta la siguiente imagen para comprender la disposición física de la pantalla IPS de 1,14''.
 
@@ -79,7 +79,7 @@ Antes de empezar, consulta la siguiente imagen para comprender la disposición f
 
 ### Mapa de pines
 
-La pantalla IPS de 1,14'' expone todos los pines del XIAO nRF52840 Plus. La tabla siguiente enumera cada pin, su nombre de red en la placa de pantalla, su función y cómo está conectado a los periféricos integrados.
+La pantalla IPS de 1,14'' expone todos los pines del XIAO nRF52840 Plus. La siguiente tabla enumera cada pin, su nombre de red en la placa de pantalla, su función y cómo está conectado a los periféricos integrados.
 
 <div class="table-center">
   <table align="center">
@@ -90,8 +90,8 @@ La pantalla IPS de 1,14'' expone todos los pines del XIAO nRF52840 Plus. La tabl
     <tr><td>D3</td><td>LCD_DC</td><td>Conmutación datos/comandos de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
     <tr><td>D4</td><td>SDA</td><td>Bus de datos I2C</td><td>Compartición de bus: conectado internamente al IMU; expuesto externamente al conector Grove I2C</td></tr>
     <tr><td>D5</td><td>SCL</td><td>Bus de reloj I2C</td><td>Compartición de bus: conectado internamente al IMU; expuesto externamente al conector Grove I2C</td></tr>
-    <tr><td>D6</td><td>BTN_A</td><td>Botón físico A (izquierda)</td><td>Conectado internamente al microinterruptor frontal izquierdo con resistencia pull‑up externa de 1 KΩ. Expuesto externamente como pad de prueba U1</td></tr>
-    <tr><td>D7</td><td>BTN_B</td><td>Botón físico B (derecha)</td><td>Conectado internamente al microinterruptor frontal derecho con resistencia pull‑up externa de 1 KΩ. Expuesto externamente como pad de prueba U2</td></tr>
+    <tr><td>D6</td><td>BTN_A</td><td>Botón físico A (izquierda)</td><td>Conectado internamente al microinterruptor frontal izquierdo con resistencia pull-up externa de 1 KΩ. Expuesto externamente como pad de prueba U1</td></tr>
+    <tr><td>D7</td><td>BTN_B</td><td>Botón físico B (derecha)</td><td>Conectado internamente al microinterruptor frontal derecho con resistencia pull-up externa de 1 KΩ. Expuesto externamente como pad de prueba U2</td></tr>
     <tr><td>D8</td><td>SCK</td><td>Reloj SPI por hardware</td><td>Conectado internamente al CI controlador LCD</td></tr>
     <tr><td>D9</td><td>NC</td><td>Flotante (reservado)</td><td>Sin conexión física</td></tr>
     <tr><td>D10</td><td>MOSI</td><td>Salida de datos SPI por hardware</td><td>Conectado internamente al CI controlador LCD</td></tr>
@@ -103,7 +103,7 @@ La pantalla IPS de 1,14'' expone todos los pines del XIAO nRF52840 Plus. La tabl
     <tr><td>D16</td><td>NC</td><td>Flotante (reservado)</td><td>Sin conexión física</td></tr>
     <tr><td>D17</td><td>LCD_RST</td><td>Reinicio suave de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
     <tr><td>D18</td><td>LCD_BL</td><td>Control de la retroiluminación de la pantalla</td><td>Conectado internamente al circuito controlador de retroiluminación</td></tr>
-    <tr><td>D19</td><td>BTN_C</td><td>Botón físico C (lateral)</td><td>Conectado internamente al microinterruptor lateral con resistencia pull‑up externa de 1 KΩ. Expuesto externamente como pad de prueba U3</td></tr>
+    <tr><td>D19</td><td>BTN_C</td><td>Botón físico C (lateral)</td><td>Conectado internamente al microinterruptor lateral con resistencia pull-up externa de 1 KΩ. Expuesto externamente como pad de prueba U3</td></tr>
   </table>
 </div>
 
@@ -141,13 +141,13 @@ Luego ve a **Tools > Board > Boards Manager**, busca **Seeed nRF52** e instala l
 
 **Paso 1.** Haz clic en el botón de arriba para descargar `Seeed_GFX2` v1.0.0 como archivo ZIP (anclado a una etiqueta de versión para que el tutorial siga siendo reproducible). Alternativamente, clona el repositorio desde [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2).
 
-**Paso 2.** En el Arduino IDE, ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el ZIP descargado. El IDE lee `library.properties` y lo instala automáticamente en la carpeta `Seeed_GFX2` correcta; no necesitas renombrar la carpeta extraída. (Para instalarlo manualmente en su lugar, descomprime el archivo y renombra la carpeta extraída a `Seeed_GFX2` antes de colocarla en `Documents/Arduino/libraries/`.)
+**Paso 2.** En el Arduino IDE, ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el ZIP descargado. El IDE lee `library.properties` y lo instala automáticamente en la carpeta `Seeed_GFX2` correcta; no necesitas cambiar el nombre de la carpeta extraída. (Para instalarlo manualmente en su lugar, descomprime el archivo y cambia el nombre de la carpeta extraída a `Seeed_GFX2` antes de colocarla en `Documents/Arduino/libraries/`.)
 
 **Paso 3.** Reinicia el Arduino IDE para que se detecte la nueva librería.
 
 :::tip
-- **Seeed_GFX2** es la librería gráfica de Seeed Studio construida sobre una arquitectura en capas `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()`: el template **Board** contiene el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución 135×240, el orden de color (BGR) y la orientación. No se necesita `driver.h` ni configuración manual de pines.
-- En esta placa, el sketch utiliza `Board_XIAO_1inch14_LCD<38, 37>` (RST=38, BL=37) con `Config_Seeed_1inch14_LCD_ST7789`.
+- **Seeed_GFX2** es la librería gráfica de Seeed Studio construida sobre una arquitectura en capas de `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()`: el template **Board** contiene el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución de 135×240, el orden de color (BGR) y la orientación. No se necesita `driver.h` ni configuración manual de pines.
+- En esta placa, el sketch usa `Board_XIAO_1inch14_LCD<38, 37>` (RST=38, BL=37) con `Config_Seeed_1inch14_LCD_ST7789`.
 - La biblioteca **Adafruit TinyUSB** utilizada por el sketch viene incluida en el paquete **Seeed nRF52 Boards**, por lo que no necesita una instalación por separado.
 :::
 
@@ -162,15 +162,15 @@ El sketch de ejemplo está disponible en GitHub:
     </a>
 </div><br />
 
-Navega a `code_GFX2/getting_started_code/xiao_nrf52840_114_hello/` y abre `xiao_nrf52840_114_hello.ino` en el IDE de Arduino. **Descarga la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
+Navega a `code_GFX2/getting_started_code/xiao_nrf52840_114_hello/` y abre `xiao_nrf52840_114_hello.ino` en el Arduino IDE. **Descarga la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
 
 ### Subir el sketch
 
 **Paso 1.** Conecta el XIAO nRF52840 Plus a tu ordenador mediante el puerto USB-C.
 
-**Paso 2.** En el IDE de Arduino, selecciona la placa: **Tools > Board > Seeed nRF52 Boards > Seeed XIAO nRF52840 Plus**.
+**Paso 2.** En Arduino IDE, selecciona la placa: **Tools > Board > Seeed nRF52 Boards > Seeed XIAO nRF52840 Plus**.
 
-**Paso 3.** Selecciona el **Puerto** correcto en **Tools > Port**.
+**Paso 3.** Selecciona el **Port** correcto en **Tools > Port**.
 
 **Paso 4.** Haz clic en el botón **Upload** (→). El sketch se compilará y se subirá a la placa.
 
@@ -193,9 +193,9 @@ La placa de pantalla integra varios periféricos a bordo. La página [Function](
 <div class="table-center">
   <table align="center">
     <tr><th>Periférico</th><th>Demo</th></tr>
-    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_1.14_inch_display_nrf52840#pantalla-display--graphictest) — diez primitivas gráficas con pruebas de rendimiento</td></tr>
+    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_1.14_inch_display_nrf52840#screen-display--graphictest) — diez primitivas gráficas con pruebas de tiempo</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/es/function_1.14_inch_display_nrf52840#imu) — efectos de movimiento de 6 ejes y activación por movimiento</td></tr>
-    <tr><td>Micrófono y altavoz</td><td>[Voice Bar + Flash Recorder](/es/function_1.14_inch_display_nrf52840#micrófono--altavoz) — medidor de nivel PDM en vivo y grabación con reproducción I2S</td></tr>
+    <tr><td>Micrófono y altavoz</td><td>[Voice Bar + Flash Recorder](/es/function_1.14_inch_display_nrf52840#microphone--speaker) — medidor de nivel PDM en vivo y grabación con reproducción I2S</td></tr>
     <tr><td>Grove I2C</td><td>[SHT31 Temperature & Humidity](/es/function_1.14_inch_display_nrf52840#grove-i2c) — lectura de un sensor Grove SHT31</td></tr>
     <tr><td>Botones</td><td>[User Buttons](/es/function_1.14_inch_display_nrf52840#user-buttons) — lectura de pulsaciones y eliminación de rebotes con interrupciones</td></tr>
     <tr><td>Batería</td><td>[Battery Status](/es/function_1.14_inch_display_nrf52840#battery-status) — medición de voltaje y conversión a porcentaje</td></tr>
@@ -206,13 +206,13 @@ La placa de pantalla integra varios periféricos a bordo. La página [Function](
 
 ### ¿Qué pasa si la carga falla o la placa no es detectada?
 
-Haz doble clic en el botón de reinicio del XIAO nRF52840 Plus. El LED USR respirará en rojo y aparecerá una unidad llamada **NRF52BOOT** en tu ordenador. Arrastra el archivo compilado `.uf2` a la unidad **NRF52BOOT**. La placa se programará y se reiniciará automáticamente.
+Haz doble clic en el botón de reinicio del XIAO nRF52840 Plus. El LED USR respirará en rojo y aparecerá en tu ordenador una unidad llamada **NRF52BOOT**. Arrastra el archivo `.uf2` compilado a la unidad **NRF52BOOT**. La placa se programará y se reiniciará automáticamente.
 
 ### [Acerca del firmware de fábrica - DashBoard]
 
-#### ¿Puedo conectar en caliente dispositivos I2C mientras el panel está en ejecución?
+#### ¿Puedo conectar en caliente dispositivos I2C mientras el dashboard se está ejecutando?
 
-No — recomendamos encarecidamente **no conectar en caliente** dispositivos en la interfaz I2C mientras el panel está en ejecución. Apaga siempre la placa antes de conectar o desconectar cualquier cosa en el conector Grove I2C o en las almohadillas de salida SDA/SCL. Conectar en caliente puede bloquear el bus I2C.
+No — recomendamos encarecidamente **no conectar en caliente** dispositivos en la interfaz I2C mientras el dashboard se está ejecutando. Apaga siempre la placa antes de conectar o desconectar cualquier cosa en el conector Grove I2C o en las almohadillas de salida SDA/SCL. Conectar en caliente puede bloquear el bus I2C.
 
 ## Recursos
 

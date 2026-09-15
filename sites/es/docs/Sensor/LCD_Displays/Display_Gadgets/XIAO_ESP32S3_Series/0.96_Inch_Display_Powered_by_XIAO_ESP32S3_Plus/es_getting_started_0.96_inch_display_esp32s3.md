@@ -1,6 +1,6 @@
 ---
-description: Introducción a XIAO 0.96'' IPS Display (ESP32-S3).
-title: Introducción a XIAO 0.96'' IPS Display (ESP32-S3)
+description: Introducción al uso de la pantalla IPS XIAO de 0,96'' (ESP32-S3).
+title: Introducción al uso de la pantalla IPS XIAO de 0,96'' (ESP32-S3)
 keywords:
   - XIAO
   - ESP32-S3
@@ -21,11 +21,11 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/es/getting_started_0.96_inch_display_esp32s3/
 ---
 
-# Introducción a XIAO 0.96'' IPS Display (ESP32-S3)
+# Introducción al uso de la pantalla IPS XIAO de 0,96'' (ESP32-S3)
 
 <div class="table-center">
   <table align="center">
-    <tr><th>XIAO 0.96'' IPS Display (ESP32-S3)</th></tr>
+    <tr><th>Pantalla IPS XIAO de 0,96'' (ESP32-S3)</th></tr>
     <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_hero.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
     <tr><td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/0-96-Inch-Display-Powered-by-XIAO-ESP32-S3-Plus-p-6993.html" target="_blank">
@@ -37,7 +37,7 @@ url: https://wiki.seeedstudio.com/es/getting_started_0.96_inch_display_esp32s3/
 
 ## Introducción
 
-La pantalla IPS de 0,96'' es una placa de expansión compacta impulsada por la XIAO ESP32-S3 Plus. Combina una pantalla LCD a color IPS de 80×160, un micrófono PDM integrado, un IMU de 6 ejes, dos botones de usuario, pads de expansión I2C e I2S y detección de voltaje de batería en un factor de forma diseñado para dispositivos conectados pequeños.
+La pantalla IPS de 0,96'' es una placa de expansión compacta impulsada por la XIAO ESP32-S3 Plus. Combina una pantalla LCD IPS en color de 80×160, un micrófono PDM integrado, un IMU de 6 ejes, dos botones de usuario, pads de expansión I2C e I2S y detección de voltaje de batería en un factor de forma diseñado para dispositivos conectados pequeños.
 
 La ESP32-S3 Plus añade conectividad Wi-Fi y Bluetooth, lo que hace que la placa sea adecuada para wearables compactos, paneles de sensores portátiles, gadgets de llavero y prototipos IoT inalámbricos.
 
@@ -49,7 +49,7 @@ La ESP32-S3 Plus añade conectividad Wi-Fi y Bluetooth, lo que hace que la placa
     <tr><td>Procesador</td><td>ESP32-S3R8, doble núcleo, hasta 240 MHz</td></tr>
     <tr><td>Memoria</td><td>8 MB PSRAM + 16 MB Flash</td></tr>
     <tr><td>Conectividad inalámbrica</td><td>Wi-Fi de 2,4 GHz + BLE 5.0</td></tr>
-    <tr><td>Tipo de pantalla</td><td>0.96" IPS TFT LCD</td></tr>
+    <tr><td>Tipo de pantalla</td><td>LCD TFT IPS de 0,96"</td></tr>
     <tr><td>Resolución</td><td>80 × 160</td></tr>
     <tr><td>Controlador de pantalla</td><td>ST7789</td></tr>
     <tr><td>Interfaz de pantalla</td><td>SPI</td></tr>
@@ -60,8 +60,8 @@ La ESP32-S3 Plus añade conectividad Wi-Fi y Bluetooth, lo que hace que la placa
     <tr><td>Conector Grove I2C</td><td>No</td></tr>
     <tr><td>Botones de usuario</td><td>2</td></tr>
     <tr><td>Conector de batería</td><td>JST de 2 pines, LiPo de 3,7 V</td></tr>
-    <tr><td>Supervisión de batería</td><td>Supervisión del voltaje de la batería mediante D16 ADC; el nivel de batería puede estimarse a partir del voltaje medido. No se admite la detección del estado de carga.</td></tr>
-    <tr><td>Interfaces de expansión</td><td>1x pads I2C, 1x pads I2S</td></tr>
+    <tr><td>Supervisión de batería</td><td>Supervisión del voltaje de la batería mediante el ADC D16; el nivel de batería puede estimarse a partir del voltaje medido. No se admite la detección del estado de la batería.</td></tr>
+    <tr><td>Interfaces de expansión</td><td>1x interfaz I2C, 1x interfaz I2S, 1x interfaz JTAG, 2x interfaces de botón de usuario</td></tr>
     <tr><td>Tamaño de la placa</td><td>18,8 × 43,6 × 10,6 mm</td></tr>
     <tr><td>Ideal para</td><td>Dispositivos IoT diminutos, wearables, pantallas de estado</td></tr>
   </table>
@@ -79,7 +79,7 @@ La versión ESP32-S3 Plus utiliza D16 para medir el voltaje del divisor de bater
 
 Consulta la siguiente vista para identificar los conectores y componentes integrados antes de conectar hardware de expansión.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Mapa de pines
 
@@ -116,13 +116,13 @@ La siguiente tabla enumera los pines de la XIAO ESP32-S3 Plus utilizados por la 
 D4 y D5 se comparten con el IMU integrado. Cualquier dispositivo I2C externo conectado al pad de prueba debe usar una dirección única y ser compatible con lógica de 3,3 V.
 :::
 
-## Introducción
+## Primeros pasos
 
 :::caution
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_handing_tips.png" style={{width:600, height:'auto'}}/></div>
 :::
 
-Esta guía carga un sketch mínimo de **"Hello, XIAO"** en la placa de pantalla: la pantalla enciende su retroiluminación, se llena de negro e imprime **"Hello,"** y **"XIAO"** como dos líneas centradas de texto grande en verde. Es la forma más rápida de confirmar que la pantalla y tu entorno de desarrollo funcionan antes de profundizar en las demos individuales de periféricos.
+Esta guía carga un sketch mínimo de **"Hello, XIAO"** en la placa de pantalla: la pantalla enciende su retroiluminación, se rellena de negro e imprime **"Hello,"** y **"XIAO"** como dos líneas centradas de texto grande en verde. Es la forma más rápida de confirmar que la pantalla y tu entorno de desarrollo funcionan antes de profundizar en las demos de periféricos individuales.
 
 ### Preparación de software
 
@@ -146,12 +146,12 @@ Luego ve a **Tools > Board > Boards Manager**, busca **esp32** e instala la vers
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download Seeed_GFX2</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar Seeed_GFX2</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-**Paso 1.** Haz clic en el botón de arriba para descargar `Seeed_GFX2` v1.0.0 como un archivo ZIP (anclado a una etiqueta de versión para que el tutorial siga siendo reproducible). Alternativamente, clona el repositorio desde [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2).
+**Paso 1.** Haz clic en el botón de arriba para descargar `Seeed_GFX2` v1.0.0 como archivo ZIP (anclado a una etiqueta de versión para que el tutorial siga siendo reproducible). Alternativamente, clona el repositorio desde [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2).
 
 **Paso 2.** En el Arduino IDE, ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el ZIP descargado. El IDE lee `library.properties` y lo instala automáticamente en la carpeta `Seeed_GFX2` correcta; no necesitas renombrar la carpeta extraída. (Para instalarlo manualmente en su lugar, descomprime el archivo y renombra la carpeta extraída a `Seeed_GFX2` antes de colocarla en `Documents/Arduino/libraries/`.)
 
@@ -159,7 +159,7 @@ Luego ve a **Tools > Board > Boards Manager**, busca **esp32** e instala la vers
 
 :::tip
 - **Seeed_GFX2** es la librería gráfica de Seeed Studio construida sobre una arquitectura en capas de `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()` — la plantilla **Board** contiene el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución 80×160, el orden de color (BGR) y la orientación. No se necesita `driver.h` ni configuración manual de pines.
-- En esta placa, el sketch usa `Board_XIAO_0inch96_LCD<13, 12>` (RST=13, BL=12) con `Config_Seeed_0inch96_LCD_ST7789`.
+- En esta placa, el sketch utiliza `Board_XIAO_0inch96_LCD<13, 12>` (RST=13, BL=12) con `Config_Seeed_0inch96_LCD_ST7789`.
 :::
 
 ### Descargar el código
@@ -173,7 +173,7 @@ El sketch de ejemplo está disponible en GitHub:
     </a>
 </div><br />
 
-Navega a `code_GFX2/getting_started_code/xiao_esp32s3_096_hello/` y abre `xiao_esp32s3_096_hello.ino` en Arduino IDE. **Descarga la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
+Navega a `code_GFX2/getting_started_code/xiao_esp32s3_096_hello/` y abre `xiao_esp32s3_096_hello.ino` en el Arduino IDE. **Descarga la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
 
 ### Subir el sketch
 
@@ -200,7 +200,7 @@ La placa de pantalla integra varios periféricos a bordo. La página de [Functio
 <div class="table-center">
   <table align="center">
     <tr><th>Periférico</th><th>Demo</th></tr>
-    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_0.96_inch_display_esp32s3#screen-display--graphictest) — diez primitivas gráficas con pruebas de rendimiento</td></tr>
+    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_0.96_inch_display_esp32s3#screen-display--graphictest) — diez primitivas gráficas con pruebas de tiempo</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/es/function_0.96_inch_display_esp32s3#imu) — efectos de movimiento de 6 ejes y activación por movimiento</td></tr>
     <tr><td>Micrófono y altavoz</td><td>[Flash Recorder](/es/function_0.96_inch_display_esp32s3#microphone--speaker--flash-recorder) — grabar y reproducir audio</td></tr>
     <tr><td>Botones</td><td>[User Buttons](/es/function_0.96_inch_display_esp32s3#user-buttons) — leer pulsaciones y eliminar rebotes con interrupciones</td></tr>
@@ -243,7 +243,7 @@ Es posible que la retroiluminación de la pantalla esté apagada. Pulsa el botó
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">
