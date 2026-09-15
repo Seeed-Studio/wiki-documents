@@ -30,14 +30,14 @@ url: https://wiki.seeedstudio.com/pt-br/display_gadgets/
 <div class="table-center">
   <table align="center">
     <tr>
-      <th><a href="/pt-br/getting_started_1.47_inch_touch_display_esp32s3">XIAO Display IPS 1,47'' (ESP32-S3)</a></th>
-      <th><a href="/pt-br/getting_started_1.14_inch_display_esp32s3">XIAO Display IPS 1,14'' (ESP32-S3)</a></th>
-      <th><a href="/pt-br/getting_started_0.96_inch_display_esp32s3">XIAO Display IPS 0,96'' (ESP32-S3)</a></th>
+      <th><a href="/pt-br/getting_started_1.47_inch_touch_display_esp32s3">XIAO Display IPS de 1,47'' (ESP32-S3)</a></th>
+      <th><a href="/pt-br/getting_started_1.14_inch_display_esp32s3">XIAO Display IPS de 1,14'' (ESP32-S3)</a></th>
+      <th><a href="/pt-br/getting_started_0.96_inch_display_esp32s3">XIAO Display IPS de 0,96'' (ESP32-S3)</a></th>
     </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_collection.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_display_collection.jpg" style={{width:250, height:'auto'}}/></div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_collection.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_collectionNEW.jpg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -68,9 +68,9 @@ url: https://wiki.seeedstudio.com/pt-br/display_gadgets/
 <div class="table-center">
   <table align="center">
     <tr>
-      <th><a href="/pt-br/getting_started_1.47_inch_touch_display_nrf52840">XIAO Display IPS 1,47'' (nRF52840)</a></th>
-      <th><a href="/pt-br/getting_started_1.14_inch_display_nrf52840">XIAO Display IPS 1,14'' (nRF52840)</a></th>
-      <th><a href="/pt-br/getting_started_0.96_inch_display_nrf52840">XIAO Display IPS 0,96'' (nRF52840)</a></th>
+      <th><a href="/pt-br/getting_started_1.47_inch_touch_display_nrf52840">XIAO Display IPS de 1,47'' (nRF52840)</a></th>
+      <th><a href="/pt-br/getting_started_1.14_inch_display_nrf52840">XIAO Display IPS de 1,14'' (nRF52840)</a></th>
+      <th><a href="/pt-br/getting_started_0.96_inch_display_nrf52840">XIAO Display IPS de 0,96'' (nRF52840)</a></th>
     </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_display_collection.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -122,57 +122,57 @@ A série XIAO Display Gadgets é uma família de placas de expansão compactas q
     <tr><td>Controlador Principal</td><td colspan="3">Seeed Studio XIAO ESP32-S3 Plus</td><td colspan="3">Seeed Studio XIAO nRF52840 Plus</td></tr>
     <tr><td>Processador</td><td colspan="3">ESP32-S3R8, dual-core, até 240 MHz</td><td colspan="3">Nordic nRF52840, processador ARM® Cortex®-M4 de 32 bits com FPU, 64 MHz</td></tr>
     <tr><td>Memória</td><td colspan="3">8 MB PSRAM + 16 MB Flash</td><td colspan="3">256 KB RAM + 1 MB de Flash interna + 2 MB de Flash onboard</td></tr>
-    <tr><td>Conectividade sem Fio</td><td colspan="3">Wi-Fi 2,4 GHz + BLE 5.0</td><td colspan="3">BLE 5.4</td></tr>
-    <tr><td>Tipo de Display</td><td>LCD IPS TFT 1,47"</td><td>LCD IPS TFT 1,14"</td><td>LCD IPS TFT 0,96"</td><td>LCD IPS TFT 1,47"</td><td>LCD IPS TFT 1,14"</td><td>LCD IPS TFT 0,96"</td></tr>
+    <tr><td>Conectividade sem fio</td><td colspan="3">Wi-Fi 2,4 GHz + BLE 5.0</td><td colspan="3">BLE 5.4</td></tr>
+    <tr><td>Tipo de Display</td><td>LCD TFT IPS de 1,47"</td><td>LCD TFT IPS de 1,14"</td><td>LCD TFT IPS de 0,96"</td><td>LCD TFT IPS de 1,47"</td><td>LCD TFT IPS de 1,14"</td><td>LCD TFT IPS de 0,96"</td></tr>
     <tr><td>Resolução</td><td>172 × 320</td><td>135 × 240</td><td>80 × 160</td><td>172 × 320</td><td>135 × 240</td><td>80 × 160</td></tr>
     <tr><td>Driver do Display</td><td>JD9853A</td><td>ST7789</td><td>ST7789</td><td>JD9853A</td><td>ST7789</td><td>ST7789</td></tr>
     <tr><td>Interface do Display</td><td colspan="6">SPI</td></tr>
     <tr><td>Entrada por Toque</td><td>Toque capacitivo</td><td>Não</td><td>Não</td><td>Toque capacitivo</td><td>Não</td><td>Não</td></tr>
     <tr><td>IMU de 6 eixos</td><td colspan="6">Sim</td></tr>
-    <tr><td>Microfone Digital PDM</td><td colspan="6">Sim</td></tr>
-    <tr><td>Slot para Cartão MicroSD</td><td>Sim</td><td>Não</td><td>Não</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+    <tr><td>Microfone digital PDM</td><td colspan="6">Sim</td></tr>
+    <tr><td>Slot para cartão MicroSD</td><td>Sim</td><td>Não</td><td>Não</td><td>Sim</td><td>Não</td><td>Não</td></tr>
     <tr><td>Conector Grove I2C</td><td>Não</td><td>Sim</td><td>Não</td><td>Não</td><td>Sim</td><td>Não</td></tr>
-    <tr><td>Botões de Usuário</td><td>2</td><td>3</td><td>2</td><td>2</td><td>3</td><td>2</td></tr>
-    <tr><td>Conector de Bateria</td><td colspan="3">JST de 2 pinos, LiPo 3,7 V</td><td colspan="3">Conector JST 2.0 de 2 pinos para LiPo 3,7 V</td></tr>
-    <tr><td>Monitoramento de Bateria</td><td colspan="3">Monitoramento da tensão da bateria via ADC D16; o nível da bateria pode ser estimado a partir da tensão medida. Detecção de status da bateria não é suportada.</td><td colspan="3">Detecção de status da bateria suportada; a tensão da bateria também pode ser monitorada para estimativa do nível da bateria.</td></tr>
-    <tr><td>Interfaces de Expansão</td><td>1x pads I2C<br />1x pads I2S<br />1x pads SWD<br />2x pads de botão de usuário</td><td>1x Conector Grove I2C<br />1x pads I2C<br />1x pads I2S<br />1x pads SWD<br />3x pads de botão de usuário</td><td>1x pads I2C<br />1x pads I2S</td><td>1x pads I2C<br />1x pads I2S<br />1x pads SWD<br />2x pads de botão de usuário</td><td>1x Conector Grove I2C<br />1x pads I2C<br />1x pads I2S<br />1x pads SWD<br />3x pads de botão de usuário</td><td>1x pads I2C<br />1x pads I2S</td></tr>
-    <tr><td>Tamanho da Placa</td><td>26,4 × 51,4 × 12,6 mm</td><td>26 × 48 × 10,6 mm</td><td>18,8 × 43,6 × 10,6 mm</td><td>26,4 × 51,4 × 12,6 mm</td><td>26 × 48 × 10,6 mm</td><td>18,8 × 43,6 × 10,6 mm</td></tr>
-    <tr><td>Melhor Para</td><td>UI por toque, IHM portátil, mídia local e registro de dados</td><td>Painéis de sensores, projetos Grove, controladores físicos</td><td>Dispositivos IoT minúsculos, wearables, displays de status</td><td>UI por toque, IHM portátil, mídia local e registro de dados</td><td>Displays portáteis de sensores, dispositivos Grove, controladores físicos</td><td>Crachás inteligentes, wearables minúsculos, displays de status BLE</td></tr>
-    <tr><td>Consumo de Energia (Dashboard)</td><td>130,53 mA @ 3,7 V</td><td>160,05 mA @ 3,7 V</td><td>159,76 mA @ 3,7 V</td><td>83,32 mA @ 3,7 V</td><td>39,07 mA @ 3,7 V</td><td>28,69 mA @ 3,7 V</td></tr>
+    <tr><td>Botões de usuário</td><td>2</td><td>3</td><td>2</td><td>2</td><td>3</td><td>2</td></tr>
+    <tr><td>Conector de bateria</td><td colspan="3">JST de 2 pinos, LiPo 3,7 V</td><td colspan="3">Conector JST 2.0 de 2 pinos para LiPo 3,7 V</td></tr>
+    <tr><td>Monitoramento da bateria</td><td colspan="3">Monitoramento da tensão da bateria via ADC D16; o nível da bateria pode ser estimado a partir da tensão medida. Detecção de status da bateria não é suportada.</td><td colspan="3">Detecção de status da bateria suportada; a tensão da bateria também pode ser monitorada para estimativa do nível da bateria.</td></tr>
+    <tr><td>Interfaces de expansão</td><td>1x Interface I2C<br />1x Interface I2S<br />1x Interface JTAG<br />2x Interfaces de botão de usuário</td><td>1x Interface I2S<br />1x Interface JTAG<br />3x Interfaces de botão de usuário</td><td>1x Interface I2C<br />1x Interface I2S<br />1x Interface JTAG<br />2x Interfaces de botão de usuário</td><td>1x Interface I2C<br />1x Interface I2S<br />1x Interface SWD<br />2x Interfaces de botão de usuário</td><td>1x Interface I2S<br />1x Interface SWD<br />3x Interfaces de botão de usuário</td><td>1x Interface I2C<br />1x Interface I2S<br />1x Interface SWD<br />2x Interfaces de botão de usuário</td></tr>
+    <tr><td>Tamanho da placa</td><td>26,4 × 51,4 × 12,6 mm</td><td>26 × 48 × 10,6 mm</td><td>18,8 × 43,6 × 10,6 mm</td><td>26,4 × 51,4 × 12,6 mm</td><td>26 × 48 × 10,6 mm</td><td>18,8 × 43,6 × 10,6 mm</td></tr>
+    <tr><td>Melhor para</td><td>UI por toque, IHM portátil, mídia local e registro de dados</td><td>Painéis de sensores, projetos Grove, controladores físicos</td><td>Dispositivos IoT minúsculos, vestíveis, displays de status</td><td>UI por toque, IHM portátil, mídia local e registro de dados</td><td>Displays portáteis de sensores, dispositivos Grove, controladores físicos</td><td>Crachás inteligentes, vestíveis minúsculos, displays de status BLE</td></tr>
+    <tr><td>Consumo de energia (Dashboard)</td><td>130,53 mA @ 3,7 V</td><td>160,05 mA @ 3,7 V</td><td>159,76 mA @ 3,7 V</td><td>83,32 mA @ 3,7 V</td><td>39,07 mA @ 3,7 V</td><td>28,69 mA @ 3,7 V</td></tr>
   </table>
 </div>
 
 :::note
-O **consumo de energia** é medido com um Nordic Power Profiler Kit II (PPK2) no modo *Source meter*, tensão de alimentação ajustada para 3,7 V, amostrando 100 amostras por segundo durante 60 segundos. Os valores são a média de 60 segundos enquanto o firmware de fábrica do Dashboard está em execução.
+**O consumo de energia** é medido com um Nordic Power Profiler Kit II (PPK2) no modo *Source meter*, tensão de alimentação ajustada para 3,7 V, amostrando 100 amostras por segundo durante 60 segundos. Os valores são a média de 60 segundos enquanto o firmware de fábrica do Dashboard está em execução.
 :::
 
-## Como Escolher
+## Como escolher
 
-Escolha um modelo em duas etapas: primeiro selecione o **controlador**, depois selecione o **tamanho da tela**.
+Escolha um modelo em duas etapas: primeiro escolha o **controlador**, depois escolha o **tamanho da tela**.
 
 ### Etapa 1: Escolha o controlador
 
-Todos os tamanhos de tela estão disponíveis com qualquer um dos controladores, e o hardware do display — tela, toque, MicroSD, botões e sensores integrados — é idêntico entre as duas variantes. A única diferença é o XIAO na placa.
+Cada tamanho de tela está disponível com qualquer um dos controladores, e o hardware de exibição — tela, toque, MicroSD, botões e sensores integrados — é idêntico entre as duas variantes. A única diferença é o XIAO na placa.
 
 <div class="table-center">
   <table align="center">
     <tr><th></th><th>XIAO ESP32-S3 Plus</th><th>XIAO nRF52840 Plus</th></tr>
     <tr><td>Wireless</td><td>Wi-Fi 2,4 GHz + BLE 5.0</td><td>BLE 5.4</td></tr>
-    <tr><td>Memória</td><td>8 MB PSRAM + 16 MB Flash</td><td>256 KB RAM + 1 MB Flash interna + 2 MB Flash integrada</td></tr>
-    <tr><td>Melhor para</td><td>Dispositivos IoT conectados por Wi-Fi e painéis de dados</td><td>Wearables e nós de sensores alimentados por bateria e focados em BLE</td></tr>
+    <tr><td>Memória</td><td>8 MB PSRAM + 16 MB Flash</td><td>256 KB RAM + 1 MB Flash interna + 2 MB Flash onboard</td></tr>
+    <tr><td>Melhor para</td><td>Dispositivos IoT conectados por Wi-Fi e painéis de dados</td><td>Vestíveis e nós de sensores alimentados por bateria com foco em BLE</td></tr>
   </table>
 </div>
 
-- **Escolha o ESP32-S3 Plus** quando você precisar de conectividade Wi-Fi ou mais memória — por exemplo, para enviar dados de sensores para a nuvem, um painel remoto ou um protótipo IoT sem fio.
-- **Escolha o nRF52840 Plus** para um projeto BLE de baixo consumo em que a duração da bateria é importante — por exemplo, crachás inteligentes, displays de status BLE ou sensores vestíveis de longa duração.
+- **Escolha o ESP32-S3 Plus** quando você precisar de conectividade Wi-Fi ou mais memória — por exemplo, para enviar dados de sensores para a nuvem, para um painel remoto ou para um protótipo IoT sem fio.
+- **Escolha o nRF52840 Plus** para um projeto BLE de baixo consumo em que a duração da bateria é importante — por exemplo, crachás inteligentes, telas de status BLE ou sensores vestíveis de longa duração.
 
 ### Etapa 2: Escolha o tamanho da tela
 
 Depois de definir o controlador, escolha o tamanho da tela com base nos recursos de que você precisa:
 
 - **1,47"** — o único tamanho com tela sensível ao toque capacitiva e armazenamento MicroSD. Escolha-o para HMIs controladas por toque, porta-retratos portáteis, gravação de áudio em SD ou registro local de mídia e dados.
-- **1,14"** — uma tela de tamanho médio com três botões de usuário e um conector Grove I2C. Escolha-a para displays de sensores, projetos Grove ou controladores físicos em que você queira um equilíbrio entre compacidade e expansibilidade.
-- **0,96"** — o menor formato. Escolha-o para wearables e projetos com espaço limitado, como crachás inteligentes ou gadgets de chaveiro.
+- **1,14"** — uma tela de tamanho médio com três botões de usuário e um conector Grove I2C. Escolha-o para telas de sensores, projetos Grove ou controladores físicos em que você deseja um equilíbrio entre compacidade e expansibilidade.
+- **0,96"** — o menor formato. Escolha-o para vestíveis e projetos com espaço limitado, como crachás inteligentes ou gadgets de chaveiro.
 
 ## Recursos compartilhados
 

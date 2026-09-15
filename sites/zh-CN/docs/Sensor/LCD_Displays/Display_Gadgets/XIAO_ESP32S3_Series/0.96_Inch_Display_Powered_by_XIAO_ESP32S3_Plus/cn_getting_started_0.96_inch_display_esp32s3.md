@@ -59,11 +59,11 @@ ESP32-S3 Plus 提供了 Wi-Fi 和 Bluetooth 连接，使该板适用于紧凑型
     <tr><td>MicroSD 卡槽</td><td>无</td></tr>
     <tr><td>Grove I2C 接口</td><td>无</td></tr>
     <tr><td>用户按键</td><td>2</td></tr>
-    <tr><td>电池接口</td><td>2 针 JST，3.7 V 锂电池</td></tr>
-    <tr><td>电池监测</td><td>通过 D16 ADC 监测电池分压；可根据测得电压估算电池电量。不支持电池状态检测。</td></tr>
-    <tr><td>扩展接口</td><td>1x I2C 焊盘，1x I2S 焊盘</td></tr>
-    <tr><td>板卡尺寸</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
-    <tr><td>最佳应用</td><td>微型 IoT 设备、可穿戴设备、状态显示</td></tr>
+    <tr><td>电池连接器</td><td>2 针 JST，3.7 V 锂电池</td></tr>
+    <tr><td>电池监测</td><td>通过 D16 ADC 进行电池电压监测；可根据测得电压估算电池电量。不支持电池状态检测。</td></tr>
+    <tr><td>扩展接口</td><td>1x I2C 接口，1x I2S 接口，1x JTAG 接口，2x 用户按键接口</td></tr>
+    <tr><td>板子尺寸</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
+    <tr><td>最佳应用</td><td>微型 IoT 设备、可穿戴设备、状态显示屏</td></tr>
   </table>
 </div>
 
@@ -75,11 +75,11 @@ ESP32-S3 Plus 提供了 Wi-Fi 和 Bluetooth 连接，使该板适用于紧凑型
 ESP32-S3 Plus 版本使用 D16 测量电池分压电压；不提供充电状态指示。
 :::
 
-## 硬件总览
+## 硬件概览
 
-在连接扩展硬件之前，请参考下图来识别各个连接器和板载元件。
+在连接扩展硬件之前，请参考下图来识别连接器和板载元件。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### 引脚映射
 
@@ -113,7 +113,7 @@ ESP32-S3 Plus 版本使用 D16 测量电池分压电压；不提供充电状态�
 
 
 :::caution
-D4 和 D5 与板载 IMU 共用。连接到测试焊盘的任何外部 I2C 设备必须使用唯一地址，并且支持 3.3 V 逻辑电平。
+D4 和 D5 与板载 IMU 共用。连接到测试焊盘的任何外部 I2C 设备必须使用唯一地址，并支持 3.3 V 逻辑电平。
 :::
 
 ## 入门指南
@@ -122,7 +122,7 @@ D4 和 D5 与板载 IMU 共用。连接到测试焊盘的任何外部 I2C 设备
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_handing_tips.png" style={{width:600, height:'auto'}}/></div>
 :::
 
-本指南将向显示板上传一个最小的 **"Hello, XIAO"** 示例：屏幕点亮背光、填充为黑色，并以两行居中的大号绿色文字打印 **"Hello,"** 和 **"XIAO"**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
+本指南会向显示板上传一个最小的 **"Hello, XIAO"** 示例：屏幕点亮背光、填充为黑色，并以两行居中的大号绿色文字打印 **"Hello,"** 和 **"XIAO"**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
 
 ### 软件准备
 
@@ -151,9 +151,9 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
     </a>
 </div><br />
 
-**步骤 1.** 点击上方按钮，将 `Seeed_GFX2` v1.0.0 作为 ZIP 文件下载（固定到发布标签，以保证教程可复现）。或者，从 [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) 克隆仓库。
+**步骤 1.** 点击上方按钮，将 `Seeed_GFX2` v1.0.0 作为 ZIP 文件下载（固定到一个发布标签，以便教程保持可复现）。或者，从 [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) 克隆仓库。
 
-**步骤 2.** 在 Arduino IDE 中，依次点击 **Sketch > Include Library > Add .ZIP Library...**，然后选择下载的 ZIP。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，将解压后的文件夹重命名为 `Seeed_GFX2`，再放入 `Documents/Arduino/libraries/`。）
+**步骤 2.** 在 Arduino IDE 中，依次进入 **Sketch > Include Library > Add .ZIP Library...**，并选择下载的 ZIP。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，并在将其放入 `Documents/Arduino/libraries/` 之前，将解压后的文件夹重命名为 `Seeed_GFX2`。）
 
 **步骤 3.** 重启 Arduino IDE，以便检测到新库。
 
@@ -195,15 +195,15 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 ## 接下来做什么
 
-该显示板集成了多个板载外设。[Function](/cn/function_0.96_inch_display_esp32s3) 页面为每个外设提供了独立的演示：
+该显示板集成了多个板载外设。[Function](/cn/function_0.96_inch_display_esp32s3) 页面为每个外设都提供了一个独立的演示：
 
 <div class="table-center">
   <table align="center">
     <tr><th>外设</th><th>演示</th></tr>
-    <tr><td>屏幕</td><td>[GraphicTest](/cn/function_0.96_inch_display_esp32s3#screen-display--graphictest) — 十种图形基本元素及其耗时基准测试</td></tr>
+    <tr><td>屏幕</td><td>[GraphicTest](/cn/function_0.96_inch_display_esp32s3#screen-display--graphictest) — 十种图形基本元素及其计时基准测试</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/cn/function_0.96_inch_display_esp32s3#imu) — 六轴运动特效和抬手唤醒</td></tr>
-    <tr><td>麦克风与扬声器</td><td>[Flash Recorder](/cn/function_0.96_inch_display_esp32s3#microphone--speaker--flash-recorder) — 录制并回放音频</td></tr>
-    <tr><td>按键</td><td>[User Buttons](/cn/function_0.96_inch_display_esp32s3#user-buttons) — 读取按键并通过中断进行去抖</td></tr>
+    <tr><td>麦克风和扬声器</td><td>[Flash Recorder](/cn/function_0.96_inch_display_esp32s3#microphone--speaker--flash-recorder) — 录制并回放音频</td></tr>
+    <tr><td>按键</td><td>[User Buttons](/cn/function_0.96_inch_display_esp32s3#user-buttons) — 读取按键按下并使用中断进行去抖</td></tr>
     <tr><td>电池</td><td>[Battery Voltage Detection](/cn/function_0.96_inch_display_esp32s3#battery-voltage-detection) — 测量分压电压</td></tr>
   </table>
 </div>
@@ -212,7 +212,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 ### 开发板没有出现在 Tools > Board 菜单中
 
-1. 打开 **File > Preferences** 并添加 ESP32 Boards Manager URL：
+1. 打开 **File > Preferences**，并添加 ESP32 Boards Manager URL：
 
    ```
    https://espressif.github.io/arduino-esp32/package_esp32_index.json
@@ -225,25 +225,25 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 ### 我应该如何拿着这块板子？
 
-请在靠近按键的位置握持电路板，不要触摸 **XIAO** 模块。请用手抓住按键区域来握持电路板。
+请在靠近按键的位置握住电路板，不要触摸 **XIAO** 模块。请用手抓住按键区域来握持电路板。
 
-### [关于出厂固件 - DashBoard]
+### [关于出厂固件-DashBoard]
 
 #### 为什么我插上 USB-C 线后屏幕不亮？
 
-可能是屏幕背光被关闭了。按下 **USR2 (D7)** 按钮切换背光重新打开——显示屏就会正常点亮。
+屏幕背光可能处于关闭状态。按下 **USR2 (D7)** 按钮以切换背光重新打开——显示屏就会正常点亮。
 
 ## 资源
 
-- **🗃️[PCB 设计文件]** [XIAO 0.96'' IPS Display (ESP32-S3) KiCad 工程](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
-- **📄[原理图]** [XIAO 0.96'' IPS Display (ESP32-S3) 原理图](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
+- **🗃️[PCB 设计文件]** [XIAO 0.96'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
+- **📄[原理图]** [XIAO 0.96'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[3D 模型]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
-- **📄[数据手册]** [0.96 Inch Display 数据手册](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
-- **💾[出厂固件]** [XIAO 0.96'' IPS Display (ESP32-S3) 出厂固件](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
+- **📄[数据手册]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
+- **💾[出厂固件]** [XIAO 0.96'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="table-center">
   <div class="button_tech_support_container">

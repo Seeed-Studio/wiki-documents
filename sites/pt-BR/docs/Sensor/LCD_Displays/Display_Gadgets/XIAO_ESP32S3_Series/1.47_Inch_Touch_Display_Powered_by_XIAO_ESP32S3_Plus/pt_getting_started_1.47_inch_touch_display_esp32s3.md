@@ -1,6 +1,6 @@
 ---
-description: Introdução ao XIAO 1,47'' IPS Display (ESP32-S3).
-title: Introdução ao XIAO 1,47'' IPS Display (ESP32-S3)
+description: Introdução ao XIAO 1.47'' IPS Display (ESP32-S3).
+title: Introdução ao XIAO 1.47'' IPS Display (ESP32-S3)
 keywords:
   - XIAO
   - ESP32-S3
@@ -20,12 +20,12 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_1.47_inch_touch_display_esp32s3/
 ---
 
-# Introdução ao XIAO 1,47'' IPS Display (ESP32-S3)
+# Introdução ao XIAO 1.47'' IPS Display (ESP32-S3)
 
 <div class="table-center">
   <table align="center">
     <tr><th>XIAO 1.47'' IPS Display (ESP32-S3)</th></tr>
-    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_hero.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
+    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_heroNEW.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
     <tr><td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/1-47-Inch-Touch-Display-Powered-by-XIAO-ESP32-S3-Plus-p-6996.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
@@ -38,31 +38,31 @@ url: https://wiki.seeedstudio.com/pt-br/getting_started_1.47_inch_touch_display_
 
 O 1.47'' IPS Display é uma placa de expansão projetada para a série XIAO, alimentada pelo XIAO ESP32-S3 Plus. Ele possui um LCD colorido 172×320 com toque capacitivo, microfone PDM onboard, IMU de 6 eixos (LSM6DS3), slot para cartão MicroSD e medição de tensão da bateria — tudo integrado em um formato compacto.
 
-Essa combinação o torna uma plataforma ideal para aplicações HMI portáteis, dashboards de IoT, dispositivos vestíveis e prototipagem interativa. Com o processador dual-core do ESP32-S3, Wi-Fi e Bluetooth, ele estende o dashboard para um hub conectado sem fio.
+Essa combinação o torna uma plataforma ideal para aplicações HMI portáteis, dashboards de IoT, dispositivos vestíveis e prototipagem interativa. Com o processador dual-core do ESP32-S3 e os recursos de Wi-Fi e Bluetooth, ele estende o dashboard para um hub conectado sem fio.
 
 <div class="table-center">
   <table align="center">
     <tr><th>Especificação</th><th>Detalhe</th></tr>
-    <tr><td>Posicionamento do Produto</td><td>Toque e Interação Completa</td></tr>
-    <tr><td>Controlador Principal</td><td>Seeed Studio XIAO ESP32-S3 Plus</td></tr>
+    <tr><td>Posicionamento do produto</td><td>Toque e interação completa</td></tr>
+    <tr><td>Controlador principal</td><td>Seeed Studio XIAO ESP32-S3 Plus</td></tr>
     <tr><td>Processador</td><td>ESP32-S3R8, Dual-Core, até 240 MHz</td></tr>
     <tr><td>Memória</td><td>8 MB PSRAM + 16 MB Flash</td></tr>
-    <tr><td>Conectividade Sem Fio</td><td>Wi-Fi 2,4 GHz + BLE 5.0</td></tr>
-    <tr><td>Tipo de Display</td><td>1.47" IPS TFT LCD</td></tr>
+    <tr><td>Conectividade sem fio</td><td>Wi-Fi 2,4 GHz + BLE 5.0</td></tr>
+    <tr><td>Tipo de display</td><td>LCD TFT IPS de 1,47"</td></tr>
     <tr><td>Resolução</td><td>172 × 320</td></tr>
-    <tr><td>Driver do Display</td><td>JD9853A</td></tr>
-    <tr><td>Interface do Display</td><td>SPI</td></tr>
-    <tr><td>Entrada de Toque</td><td>Toque Capacitivo</td></tr>
-    <tr><td>IMU de 6 Eixos</td><td>Sim</td></tr>
-    <tr><td>Microfone Digital PDM</td><td>Sim</td></tr>
-    <tr><td>Slot para Cartão MicroSD</td><td>Sim</td></tr>
+    <tr><td>Driver do display</td><td>JD9853A</td></tr>
+    <tr><td>Interface do display</td><td>SPI</td></tr>
+    <tr><td>Entrada de toque</td><td>Toque capacitivo</td></tr>
+    <tr><td>IMU de 6 eixos</td><td>Sim</td></tr>
+    <tr><td>Microfone digital PDM</td><td>Sim</td></tr>
+    <tr><td>Slot para cartão MicroSD</td><td>Sim</td></tr>
     <tr><td>Conector Grove I2C</td><td>Não</td></tr>
-    <tr><td>Botões de Usuário</td><td>2</td></tr>
-    <tr><td>Conector de Bateria</td><td>JST de 2 pinos, LiPo 3,7 V</td></tr>
-    <tr><td>Monitoramento da Bateria</td><td>Monitoramento da tensão da bateria via D16 ADC; o nível da bateria pode ser estimado a partir da tensão medida. Detecção de status da bateria não é suportada.</td></tr>
-    <tr><td>Interfaces de Expansão</td><td>1x pads I2C, 1x pads I2S, 1x pads SWD, 2x pads de botão de usuário</td></tr>
-    <tr><td>Tamanho da Placa</td><td>26,4 × 51,4 × 12,6 mm</td></tr>
-    <tr><td>Melhor Uso</td><td>Interface de toque, HMI portátil, mídia local e registro de dados</td></tr>
+    <tr><td>Botões de usuário</td><td>2</td></tr>
+    <tr><td>Conector de bateria</td><td>JST de 2 pinos, LiPo 3,7 V</td></tr>
+    <tr><td>Monitoramento da bateria</td><td>Medição da tensão da bateria via D16 ADC; o nível da bateria pode ser estimado a partir da tensão medida. Detecção de status da bateria não é suportada.</td></tr>
+    <tr><td>Interfaces de expansão</td><td>1x interface I2C, 1x interface I2S, 1x interface JTAG, 2x interfaces de botão de usuário</td></tr>
+    <tr><td>Tamanho da placa</td><td>26,4 × 51,4 × 12,6 mm</td></tr>
+    <tr><td>Melhor uso</td><td>Interface por toque, HMI portátil, mídia local e registro de dados</td></tr>
   </table>
 </div>
 
@@ -70,35 +70,35 @@ Essa combinação o torna uma plataforma ideal para aplicações HMI portáteis,
 O ESP32-S3 Plus usa o D16 para medição de tensão. A demonstração de tensão não exibe a porcentagem da bateria, e nenhum sinal de status de carregamento está conectado a um GPIO do ESP32-S3.
 :::
 
-## Visão Geral do Hardware
+## Visão geral de hardware
 
 Antes de começarmos, consulte a imagem a seguir para entender o layout físico do 1.47'' IPS Display.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
-### Mapa de Pinos
+### Mapa de pinos
 
 O 1.47'' IPS Display expõe todos os pinos do XIAO ESP32-S3 Plus. A tabela abaixo lista cada pino, seu nome de rede na placa de display, sua função e como ele está conectado aos periféricos onboard.
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Pino XIAO</th><th>Nome de Rede</th><th>Descrição da Função</th><th>Notas de Conexão de Hardware</th></tr>
+    <tr><th>Pino XIAO</th><th>Nome de rede</th><th>Descrição da função</th><th>Observações de conexão de hardware</th></tr>
     <tr><td>D0</td><td>PDM_CLK</td><td>MIC_CLK</td><td>Clock do microfone digital PDM</td></tr>
     <tr><td>D1</td><td>MIC_DATA</td><td>Dados do microfone digital PDM</td><td>Conectado internamente ao microfone PDM</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>Sinal de seleção de chip da tela</td><td>Conectado internamente ao CI driver do LCD</td></tr>
     <tr><td>D3</td><td>LCD_DC</td><td>Comutação dados/comando da tela</td><td>Conectado internamente ao CI driver do LCD</td></tr>
     <tr><td>D4</td><td>SDA</td><td>Barramento de dados I2C</td><td>Compartilhamento de barramento: conectado internamente ao IMU e CI de toque; exposto externamente como pads de expansão I2C</td></tr>
     <tr><td>D5</td><td>SCL</td><td>Barramento de clock I2C</td><td>Compartilhamento de barramento: conectado internamente ao IMU e CI de toque; exposto externamente como pads de expansão I2C</td></tr>
-    <tr><td>D6</td><td>SD_CS</td><td>Sinal de seleção de chip do cartão SD</td><td>Conectado internamente ao slot do cartão MicroSD</td></tr>
+    <tr><td>D6</td><td>SD_CS</td><td>Sinal de seleção de chip do cartão SD</td><td>Conectado internamente ao slot de cartão MicroSD</td></tr>
     <tr><td>D7</td><td>TOUCH_INT</td><td>Sinal de interrupção de toque</td><td>Conectado internamente ao CI de toque para despertar assíncrono</td></tr>
-    <tr><td>D8</td><td>SCK</td><td>Clock SPI de hardware</td><td>Conectado internamente ao LCD e ao slot do cartão SD</td></tr>
-    <tr><td>D9</td><td>MISO</td><td>Entrada de dados SPI de hardware</td><td>Conectado internamente ao slot do cartão SD</td></tr>
-    <tr><td>D10</td><td>MOSI</td><td>Saída de dados SPI de hardware</td><td>Conectado internamente ao LCD e ao slot do cartão SD</td></tr>
+    <tr><td>D8</td><td>SCK</td><td>Clock SPI de hardware</td><td>Conectado internamente ao LCD e ao slot de cartão SD</td></tr>
+    <tr><td>D9</td><td>MISO</td><td>Entrada de dados SPI de hardware</td><td>Conectado internamente ao slot de cartão SD</td></tr>
+    <tr><td>D10</td><td>MOSI</td><td>Saída de dados SPI de hardware</td><td>Conectado internamente ao LCD e ao slot de cartão SD</td></tr>
     <tr><td>D11</td><td>I2S_SD</td><td>Linha de dados de áudio</td><td>Corresponde ao mapeamento padrão I2S_SD, exposto ao grupo de pads inferiores</td></tr>
     <tr><td>D12</td><td>I2S_SCK</td><td>Clock de bits de áudio</td><td>Corresponde ao mapeamento padrão I2S_SCK, exposto ao grupo de pads inferiores</td></tr>
     <tr><td>D13</td><td>I2S_WS</td><td>Seleção de palavra de áudio</td><td>Corresponde ao mapeamento padrão I2S_WS, exposto ao grupo de pads inferiores</td></tr>
-    <tr><td>D14</td><td>IMU_INT</td><td>Interrupção de movimento da IMU</td><td>Redefinição de função: usado para despertar por movimento e detecção de toque duplo</td></tr>
-    <tr><td>D15</td><td>BTN_B</td><td>Botão físico 2 (USR2)</td><td>Redefinição de função: botão de usuário 2. Exposto externamente como pad de expansão de botão</td></tr>
+    <tr><td>D14</td><td>IMU_INT</td><td>Interrupção de movimento da IMU</td><td>Reatribuição de função: usado para despertar por movimento e detecção de toque duplo</td></tr>
+    <tr><td>D15</td><td>BTN_B</td><td>Botão físico 2 (USR2)</td><td>Reatribuição de função: botão de usuário 2. Exposto externamente como pad de expansão de botão</td></tr>
     <tr><td>D16</td><td>BAT_ADC</td><td>Detecção de tensão da bateria</td><td>Conectado internamente ao circuito divisor de tensão (316K / 160K). <strong>Não use externamente</strong></td></tr>
     <tr><td>D17</td><td>LCD_RST</td><td>Sinal de reset da tela</td><td>Controle GPIO independente para inicialização confiável</td></tr>
     <tr><td>D18</td><td>LCD_BL</td><td>Controle de retroiluminação da tela</td><td>Suporta ajuste de brilho por PWM de hardware</td></tr>
@@ -107,11 +107,11 @@ O 1.47'' IPS Display expõe todos os pinos do XIAO ESP32-S3 Plus. A tabela abaix
 </div>
 
 
-## Primeiros Passos
+## Primeiros passos
 
-Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga a retroiluminação, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto verde grande. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demos individuais de periféricos.
+Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga a retroiluminação, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto grande em verde. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demos individuais de periféricos.
 
-### Preparação de Software
+### Preparação de software
 
 Você vai precisar das seguintes ferramentas e bibliotecas:
 
@@ -127,9 +127,9 @@ Você vai precisar das seguintes ferramentas e bibliotecas:
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
 ```
 
-Em seguida, vá em **Tools > Board > Boards Manager**, procure por **esp32** e instale a versão **3.3.11**.
+Em seguida, vá em **Tools > Board > Boards Manager**, pesquise por **esp32** e instale a versão **3.3.11**.
 
-- **Seeed_GFX2 (Instalação Manual)** — esta biblioteca não está disponível no Library Manager e deve ser instalada manualmente:
+- **Seeed_GFX2 (instalação manual)** — esta biblioteca não está disponível no Library Manager e deve ser instalada manualmente:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
@@ -162,7 +162,7 @@ O sketch de exemplo está disponível no GitHub:
 
 Navegue até `code_GFX2/getting_started_code/xiao_esp32s3_147_hello/` e abra `xiao_esp32s3_147_hello.ino` na Arduino IDE. **Baixe a pasta completa** em vez de copiar o código-fonte `.ino` da visualização web do GitHub.
 
-### Enviar o sketch
+### Fazer upload do sketch
 
 **Passo 1.** Conecte o XIAO ESP32-S3 Plus ao seu computador pela porta USB-C.
 
@@ -174,7 +174,7 @@ Navegue até `code_GFX2/getting_started_code/xiao_esp32s3_147_hello/` e abra `xi
 
 ### Saída esperada
 
-Após o envio, a tela acende com um fundo preto e mostra duas linhas centralizadas de texto verde grande — **"Hello,"** na primeira linha e **"XIAO"** na segunda. A saudação permanece na tela sem redesenho.
+Após o upload, a tela acende com um fundo preto e mostra duas linhas centralizadas de texto verde grande — **"Hello,"** na primeira linha e **"XIAO"** na segunda. A saudação permanece na tela sem redesenho.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hello.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -182,7 +182,7 @@ Se o display não inicializar, o sketch imprime a mensagem de erro da biblioteca
 
 ## O que vem a seguir
 
-A placa de display reúne vários periféricos integrados. A página [Function](/pt-br/function_1.47_inch_touch_display_esp32s3) fornece uma demonstração independente para cada um:
+A placa de display reúne vários periféricos onboard. A página [Function](/pt-br/function_1.47_inch_touch_display_esp32s3) fornece uma demonstração independente para cada um:
 
 <div class="table-center">
   <table align="center">
@@ -192,8 +192,8 @@ A placa de display reúne vários periféricos integrados. A página [Function](
     <tr><td>Cartão SD</td><td>[BMP Reader](/pt-br/function_1.47_inch_touch_display_esp32s3#cartão-sd--bmp-reader) — exibir um BMP do cartão MicroSD</td></tr>
     <tr><td>Microfone e alto-falante</td><td>[Volume Bar + SD Recorder](/pt-br/function_1.47_inch_touch_display_esp32s3#microfone--alto-falante) — medidor de nível PDM em tempo real e gravação no SD</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/pt-br/function_1.47_inch_touch_display_esp32s3#imu) — efeitos de movimento de 6 eixos e despertar por movimento</td></tr>
-    <tr><td>Botões</td><td>[User Button](/pt-br/function_1.47_inch_touch_display_esp32s3#botão-do-usuário) — ler pressionamentos e fazer debounce com interrupções</td></tr>
-    <tr><td>Bateria</td><td>[Battery Voltage Detection](/pt-br/function_1.47_inch_touch_display_esp32s3#detecção-de-tensão-da-bateria) — medir a tensão do divisor</td></tr>
+    <tr><td>Botões</td><td>[User Button](/pt-br/function_1.47_inch_touch_display_esp32s3#user-button) — ler pressionamentos e fazer debounce com interrupções</td></tr>
+    <tr><td>Bateria</td><td>[Battery Voltage Detection](/pt-br/function_1.47_inch_touch_display_esp32s3#battery-voltage-detection) — medir a tensão do divisor</td></tr>
   </table>
 </div>
 
@@ -201,20 +201,20 @@ A placa de display reúne vários periféricos integrados. A página [Function](
 
 ### A placa não aparece no menu Tools > Board
 
-Certifique-se de ter adicionado o pacote de placas ESP32 à Arduino IDE:
+Certifique-se de que você adicionou o pacote de placas ESP32 à Arduino IDE:
 
 1. Vá em **File > Preferences** e cole a URL abaixo em **Additional Boards Manager URLs**:
    ```
    https://espressif.github.io/arduino-esp32/package_esp32_index.json
    ```
-2. Vá em **Tools > Board > Boards Manager**, procure por **esp32** e instale a versão **3.3.11**.
+2. Vá em **Tools > Board > Boards Manager**, pesquise por **esp32** e instale a versão **3.3.11**.
 3. Após a instalação, **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** deve aparecer no menu.
 
 Se a placa ainda não aparecer, reinicie a Arduino IDE e tente novamente.
 
 ## Recursos
 
-- **🗃️[Arquivos de projeto da PCB]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
+- **🗃️[Arquivos de design de PCB]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 1.47'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 1.47'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
 - **📄[Datasheet]** [1.47 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
@@ -222,7 +222,7 @@ Se a placa ainda não aparecer, reinicie a Arduino IDE e tente novamente.
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">
