@@ -61,7 +61,7 @@ This combination makes it an ideal platform for wearable devices, compact sensor
     <tr><td>User Buttons</td><td>3</td></tr>
     <tr><td>Battery Connector</td><td>2-pin JST, 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery voltage monitoring via D16 ADC; battery level can be estimated from the measured voltage. Battery status detection is not supported.</td></tr>
-    <tr><td>Expansion Interfaces</td><td>1x Grove I2C Connector, 1x I2C pads, 1x I2S pads, 1x SWD pads, 3x user-button pads</td></tr>
+    <tr><td>Expansion Interfaces</td><td>1x I2S Interface, 1x JTAG Interface, 3x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>26 × 48 × 10.6 mm</td></tr>
     <tr><td>Best For</td><td>Sensor dashboards, Grove projects, physical controllers</td></tr>
   </table>

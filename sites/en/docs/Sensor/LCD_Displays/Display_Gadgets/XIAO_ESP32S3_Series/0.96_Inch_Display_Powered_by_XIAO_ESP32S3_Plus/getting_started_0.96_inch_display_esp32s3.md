@@ -61,7 +61,7 @@ The ESP32-S3 Plus adds Wi-Fi and Bluetooth connectivity, making the board suitab
     <tr><td>User Buttons</td><td>2</td></tr>
     <tr><td>Battery Connector</td><td>2-pin JST, 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery voltage monitoring via D16 ADC; battery level can be estimated from the measured voltage. Battery status detection is not supported.</td></tr>
-    <tr><td>Expansion Interfaces</td><td>1x I2C pads, 1x I2S pads</td></tr>
+    <tr><td>Expansion Interfaces</td><td>1x I2C Interface, 1x I2S Interface, 1x JTAG Interface, 2x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
     <tr><td>Best For</td><td>Tiny IoT devices, wearables, status displays</td></tr>
   </table>
