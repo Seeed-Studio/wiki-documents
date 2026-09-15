@@ -69,31 +69,6 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 - 🔩 **BOM (Bill of Materials)**: Detailed to every screw's specification and purchase link.
 - 💻 **Software and algorithms**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
 
-## Building Your reBot Robotic Arm
-
-- We offer five kit options:
-  - **Robotic Arm Body Motor Kit**: Includes only the motors and wiring harnesses needed for the robotic arm.
-  - **Robotic Arm Body Structural Parts Kit**: Includes only the mechanical structural components.
-  - **Gripper Complete Kit**: Includes motors, wiring harnesses, and structural parts for the gripper.
-  - **Complete Arm Kit**: Includes all components for the robotic arm body and gripper.
-  - **Pre-assembled Robotic Arm**: A fully assembled robotic arm.
-
-The reBot-DevArm and reComputer Jetson AI intelligent robot kit seamlessly combine high-precision robotic arm control with a powerful AI computing platform, providing a comprehensive robot development solution. This kit is based on the Jetson Orin or AGX Orin platform, combined with the reBot-DevArm and LeRobot AI framework, offering users an intelligent robot system applicable to multiple scenarios such as education, research, and industrial automation.
-
-## Features of reBot B601-DM Series
-
-1. **Open-source & Low-cost**\
-   reBot Arm is an open-source, low-cost robotic arm solution from Seeed Studio, dedicated to lowering the threshold for learning embodied intelligence.
-
-2. **LeRobot Platform Integration**\
-   Designed for integration with the [LeRobot platform](https://github.com/huggingface/lerobot). This platform provides PyTorch models, datasets and tools for imitation learning of real robot tasks (including data collection, simulation, training and deployment).
-
-3. **Abundant Learning Resources**\
-   Provides comprehensive open-source learning resources including assembly and calibration guides, testing and data collection tutorials, training and deployment documentation to help users quickly get started and develop robotic applications.
-
-4. **Nvidia Platform Compatible**\
-   Supports deployment via the reComputer Mini J4012 Orin NX 16GB platform.
-
 :::tip
 If you purchased a pre-assembled kit, please skip directly to the tutorial video in **Step 3** at the end of this article and follow along. There is no need to write motor IDs or calibrate zero positions.
 

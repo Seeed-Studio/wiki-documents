@@ -1,6 +1,6 @@
 ---
-description: 本教程面向开发者，介绍 ReBot Arm Digital Twin & Control Stack — B601-RS 的网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
-title: ReBot Arm Digital Twin & Control Stack — B601-RS
+description: 本教程面向开发者，介绍 ReBot Arm 数字孪生与控制系统 — B601-RS 的网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
+title: ReBot Arm 数字孪生与控制系统 — B601-RS
 keywords:
   - reBot Arm
   - B601-RS
@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# ReBot Arm Digital Twin & Control Stack — B601-RS
+# ReBot Arm 数字孪生与控制系统 — B601-RS
 
 <RebotRsDocNav />
 
@@ -57,7 +57,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <strong>Three.js 可视化 · ROS 2 · SocketCAN · MuJoCo 仿真 · LLM/MCP 控制</strong>
 </p>
 
-ReBot Arm Digital Twin & Control Stack — B601-RS 工程集成了 Three.js 网页控制台、ROS 2 真机驱动、RS 专用 MuJoCo 动力学场景、视觉检测、轨迹与逆运动学，以及可选的 LLM/MCP 抓取 Agent。本教程介绍如何安装、启动和二次开发整套系统。
+ReBot Arm 数字孪生与控制系统 — B601-RS 工程集成了 Three.js 网页控制台、ROS 2 真机驱动、RS 专用 MuJoCo 动力学场景、视觉检测、轨迹与逆运动学，以及可选的 LLM/MCP 抓取 Agent。本教程介绍如何安装、启动和二次开发整套系统。
 
 <GitHubStarButton
   owner="Yang-Ci"

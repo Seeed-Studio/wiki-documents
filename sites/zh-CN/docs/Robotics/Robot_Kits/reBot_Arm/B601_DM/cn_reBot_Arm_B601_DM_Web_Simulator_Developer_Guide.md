@@ -1,6 +1,6 @@
 ---
-description: 本教程面向开发者，介绍 ReBot Arm Digital Twin & Control Stack — B601-DM 中 reBotArm_simulator-DM 网页控制台与 ROS2/MuJoCo 仿真链路的架构、运行方式、ROS2 桥接、LLM/MCP 接入与二次开发流程。
-title: ReBot Arm Digital Twin & Control Stack — B601-DM
+description: 本教程面向开发者，介绍 ReBot Arm 数字孪生与控制系统 — B601-DM 中 reBotArm_simulator-DM 网页控制台与 ROS2/MuJoCo 仿真链路的架构、运行方式、ROS2 桥接、LLM/MCP 接入与二次开发流程。
+title: ReBot Arm 数字孪生与控制系统 — B601-DM
 keywords:
   - reBot Arm
   - B601-DM
@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# ReBot Arm Digital Twin & Control Stack — B601-DM
+# ReBot Arm 数字孪生与控制系统 — B601-DM
 
 <RebotDmDocNav />
 
@@ -58,7 +58,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <strong>Three.js 可视化 · URDF 加载 · rosbridge 桥接 · LLM/MCP 控制</strong>
 </p>
 
-本教程面向开发者，介绍如何运行和二次开发 ReBot Arm Digital Twin & Control Stack — B601-DM 中的 `reBotArm_simulator-DM` 网页控制台。该控制台是一个基于 Node.js + Three.js 的轻量网页前端，从同仓库的 ROS2 工作空间读取 URDF 与 STL 网格，在浏览器中渲染 reBot Arm B601-DM 的 6 自由度本体与夹爪，并通过 rosbridge WebSocket 与 ROS2 通信，支持关节镜像、控制锁、重力补偿、视觉抓取和 LLM 文本控制等完整开发流程。
+本教程面向开发者，介绍如何运行和二次开发 ReBot Arm 数字孪生与控制系统 — B601-DM 中的 `reBotArm_simulator-DM` 网页控制台。该控制台是一个基于 Node.js + Three.js 的轻量网页前端，从同仓库的 ROS2 工作空间读取 URDF 与 STL 网格，在浏览器中渲染 reBot Arm B601-DM 的 6 自由度本体与夹爪，并通过 rosbridge WebSocket 与 ROS2 通信，支持关节镜像、控制锁、重力补偿、视觉抓取和 LLM 文本控制等完整开发流程。
 
 <GitHubStarButton
   owner="Yang-Ci"

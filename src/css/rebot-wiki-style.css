@@ -278,6 +278,15 @@
   margin: 1.5rem 0 2rem;
 }
 
+/* 后续平台内容由页面顶部的平台标签联动，不重复显示标签栏 */
+.rebot-linked-platform-content[role='tablist'] {
+  display: none;
+}
+
+.rebot-linked-platform-content + .margin-top--md {
+  margin-top: 0 !important;
+}
+
 .rebot-step-item {
   position: relative;
   min-width: 0;
