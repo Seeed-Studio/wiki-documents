@@ -79,7 +79,7 @@ The ESP32-S3 Plus version uses D16 to measure the battery divider voltage; it do
 
 Refer to the following view to identify the connectors and onboard components before connecting expansion hardware.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Pin Map
 

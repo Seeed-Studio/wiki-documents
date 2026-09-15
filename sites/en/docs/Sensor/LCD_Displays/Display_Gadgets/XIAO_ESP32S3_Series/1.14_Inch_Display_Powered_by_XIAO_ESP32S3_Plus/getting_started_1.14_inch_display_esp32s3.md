@@ -79,7 +79,7 @@ The ESP32-S3 Plus uses D16 for voltage measurement. The voltage demo does not di
 
 Before we start, refer to the following image to understand the physical layout of the 1.14'' IPS Display.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Pin Map
 

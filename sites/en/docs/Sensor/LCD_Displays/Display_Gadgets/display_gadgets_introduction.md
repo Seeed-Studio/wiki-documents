@@ -37,7 +37,7 @@ url: https://wiki.seeedstudio.com/display_gadgets/
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_collection.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_display_collection.jpg" style={{width:250, height:'auto'}}/></div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_collection.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_collectionNEW.jpg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
