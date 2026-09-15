@@ -8,10 +8,10 @@ slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 09/02/2026
+  date: 09/03/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-02'
+updatedAt: '2026-09-03'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
@@ -435,13 +435,19 @@ If pip is missing, run `python3 -m ensurepip --upgrade` first.
 
 <TabItem value="linux" label="Linux">
 
+Install `adafruit-nrfutil` with pipx:
+
 ```
-python3 --version
-python3 -m pip install --user adafruit-nrfutil
-adafruit-nrfutil version
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
 ```
 
-If pip is missing, run `python3 -m ensurepip --upgrade` first.
+On Fedora, use `sudo dnf install pipx` instead of apt. Reopen your terminal, then verify:
+
+```
+adafruit-nrfutil version
+```
 
 </TabItem>
 </Tabs>
@@ -582,7 +588,7 @@ When you have completed the above steps, follow [Flash Firmware](https://wiki.se
 
 **Troubleshooting**
 
-- `adafruit-nrfutil` is not recognized after installation: the Python user scripts directory is not on your PATH (`Scripts` on Windows, `bin` under your home directory on macOS/Linux) — add it to PATH, or reinstall without `--user`.
+- `adafruit-nrfutil` is not recognized after installation: add the Python user scripts directory to your PATH (`Scripts` on Windows, `bin` under your home directory on macOS); on Linux, reopen your terminal after `pipx ensurepath`.
 - Port busy / access denied: close serial monitors, web flasher tabs, Arduino IDE, or anything else holding the port.
 - `FileNotFoundError: could not open port ...` after `Touched serial port ...`: the device entered DFU mode on a new port — follow Step 5.
 - Unable to enter DFU mode: see [Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually).
