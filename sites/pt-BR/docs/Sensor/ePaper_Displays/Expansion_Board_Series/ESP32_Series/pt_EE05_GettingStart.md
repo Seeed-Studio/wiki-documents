@@ -6,11 +6,11 @@ image: https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp
 slug: /epaper_ee05
 sidebar_position: 4
 last_update:
-  date: 04/27/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/pt-br/epaper_ee05/
-updatedAt: '2026-04-28'
+updatedAt: '2026-09-10'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -37,7 +37,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Alimentada pelo **XIAO ESP32-S3 Plus**, a placa de display EE05 é compatível com uma ampla variedade de displays ePaper de 24 pinos e permite design e implantação de UI sem código com o SenseCraft HMI. Com IO de extensão e um conector de bateria com chave liga/desliga, é ideal para aplicações de display inteligente de baixo consumo.
+Alimentada pelo **XIAO ESP32-S3 Plus**, a placa de display EE05 é compatível com uma ampla variedade de displays ePaper de 24 pinos e permite o design e a implantação de UI sem código com o SenseCraft Seeedash. Com IO de extensão e um conector de bateria com chave liga/desliga, ela é ideal para aplicações de display inteligente de baixo consumo.
 
 ### Recursos
 
@@ -45,7 +45,7 @@ Alimentada pelo **XIAO ESP32-S3 Plus**, a placa de display EE05 é compatível c
 - **Suporte versátil a displays:** Compatível com uma ampla gama de displays ePaper de 24 pinos para diferentes requisitos de projeto.
 - **Porta de IO de extensão:** Permite a conexão de sensores adicionais, como sensores de temperatura e umidade, para funcionalidade aprimorada.
 - **Conector de bateria com chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
-- **Design e implantação de UI sem código com SenseCraft HMI:** Projete e implemente painéis personalizados com facilidade usando o SenseCraft HMI, nossa nova plataforma sem código com IA. Crie sua UI por meio de simples elementos de arrastar e soltar, escolha entre nossos ricos modelos ou deixe a IA ajudar você. Conecte dados em tempo real a partir de APIs web e, em seguida, implemente seu painel final em um display ePaper com apenas alguns cliques. Do design à configuração de dados até a implantação, tudo acontece de forma contínua em uma única plataforma.
+- **Design e implantação de UI sem código com SenseCraft Seeedash:** Projete e implemente painéis personalizados com facilidade usando o SenseCraft Seeedash, nossa nova plataforma sem código com IA. Crie sua UI por meio de simples elementos de arrastar e soltar, escolha entre nossos ricos modelos ou deixe a IA ajudar você. Conecte dados em tempo real a partir de APIs web e, em seguida, implemente seu painel final em um display ePaper com apenas alguns cliques. Do design à configuração de dados e à implantação, tudo acontece de forma contínua em uma única plataforma.
 
 ### Especificações
 
@@ -58,24 +58,24 @@ Alimentada pelo **XIAO ESP32-S3 Plus**, a placa de display EE05 é compatível c
 | **Fonte de alimentação** | Bateria Li 3,7 V / USB Type-C |
 | Botão | 1x botão de reset (montado na lateral) <br/> 3x botões de usuário (montados na lateral) |
 
-## Visão geral do hardware
+## Visão geral de hardware
 
 ### Displays ePaper compatíveis
 
 A EE05 é compatível com diversos displays ePaper SPI de 24 pinos, incluindo, mas não se limitando a:
 
-- [Display E-paper 1,54" - Matriz de pontos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Display E-Paper 2,13" - Flexível monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [Display E-Paper 2,13" - Quádruplo 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Display E-paper 2,9" - Monocromático 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [Display E-Paper 4,2" - Monocromático 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Display E-Paper 4,26" - Monocromático 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Display E-paper 5,83" - Monocromático 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [Display ePaper monocromático 7,5" com 800x480 pixels](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [Display E-paper de 1,54 polegada - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [Display E-Paper de 2,13 polegadas - Flexível monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [Display E-Paper de 2,13 polegadas - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [Display E-paper de 2,9 polegadas - Monocor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [Display E-Paper de 4,2 polegadas - Monocor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [Display E-Paper de 4,26 polegadas - Monocor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [Display E-paper de 5,83 polegadas - Monocor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [Display ePaper monocromático de 7,5 polegadas com 800x480 pixels](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 
 
 
-## Visão geral do software
+## Visão geral de software
 
 ### Instalar a biblioteca Seeed GFX
 
@@ -113,7 +113,7 @@ Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZI
 
 ## Primeiros passos
 
-Aqui, usamos um display monocromático de 7,5" como exemplo. As etapas são idênticas para outras telas compatíveis; você só precisa selecionar o identificador de tamanho de tela apropriado no driver.
+Aqui, usamos um display monocromático de 7,5 polegadas como exemplo. As etapas são idênticas para outras telas compatíveis; você só precisa selecionar o identificador de tamanho de tela apropriado no driver.
 
 ### Configurar e gravar o programa
 Selecione o exemplo mostrado na figura
@@ -144,13 +144,13 @@ Agora você verá o resultado na sua tela ePaper! A seguir estão os resultados 
 
 ## Solução de problemas
 
-**P1: A tela não exibe nada após o upload do código.**
+**P1: A tela não exibe nada após o envio do código.**
 - **Verifique o cabo FPC**: Certifique-se de que o cabo FPC do ePaper esteja inserido na orientação correta e bem travado no conector.
-- **Verifique a configuração do driver**: Confira novamente o `driver.h` para garantir que o `BOARD_SCREEN_COMBO` correto esteja selecionado para o tamanho específico da sua tela.
+- **Verifique a configuração do driver**: Confira `driver.h` para garantir que o `BOARD_SCREEN_COMBO` correto esteja selecionado para o tamanho específico da sua tela.
 
 **P2: As cores estão invertidas ou o display mostra padrões anormais.**
-- **Selecione o modelo exato**: Diferentes tamanhos de tela ou revisões de CI exigem configurações específicas de driver. Certifique-se de que o número do combo corresponda perfeitamente ao modelo da sua tela.
-- **Verifique a fonte de alimentação**: Para telas maiores (como a de 7,5"), certifique-se de que sua fonte de alimentação possa fornecer corrente suficiente durante a atualização da tela.
+- **Selecione o modelo exato**: Diferentes tamanhos de tela ou revisões de CI exigem configurações específicas de driver. Certifique-se de que o número da combinação corresponda perfeitamente ao modelo da sua tela.
+- **Verifique a fonte de alimentação**: Para telas maiores (como a de 7,5 polegadas), certifique-se de que sua fonte de alimentação possa fornecer corrente suficiente durante a atualização da tela.
 
 **P3: A placa não liga quando conectada a uma bateria.**
 - **Chave de hardware**: Verifique se a chave deslizante de hardware na placa está alternada para a posição ON.
@@ -158,7 +158,7 @@ Agora você verá o resultado na sua tela ePaper! A seguir estão os resultados 
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

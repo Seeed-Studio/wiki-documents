@@ -814,6 +814,7 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Benchmark_Labs_Forecast_Integration_for_Seeed_Weather_Stations',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Firmware_Update',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/es_SenseCAP_S1000_V2_CO2_Calibration',
                   ],
                 },
               ],
@@ -2244,6 +2245,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_rebot_arm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_arm',
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_ros',
+                'Sensor/reSpeaker_clip/es_respeaker_clip_rebot_arm',
               ],
             },
             {
@@ -5108,7 +5110,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft HMI',
+      label: 'SenseCraft Seeedash',
       collapsed: true,
       collapsible: true,
       link: {

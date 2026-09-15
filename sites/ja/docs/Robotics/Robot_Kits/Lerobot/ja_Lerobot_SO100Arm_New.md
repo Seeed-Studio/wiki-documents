@@ -353,9 +353,9 @@ SO101 の公式アップデートに伴い、SO100 は今後サポートされ�
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
-**ステップ 4: ソフトグリッパーを印刷する（オプション）**
+**ステップ 4: ソフトグリッパーとカメラマウントブラケット用インサートを印刷する（オプション）**
 
-ロボットアームで柔らかい物体、壊れやすい物体、または不規則な形状の物体を把持できるようにしたい場合は、デフォルトの剛性グリッパーの代わりにソフトグリッパーを印刷できます。プリントファイルは [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) リポジトリで入手できます。
+ロボットアームで柔らかい物体、壊れやすい物体、または不規則な形状の物体を把持できるようにしたい場合は、デフォルトの剛性グリッパーの代わりにソフトグリッパーを印刷できます。カメラを取り付ける場合は、カメラマウントブラケット用インサートもあわせて印刷できます。プリントファイルは [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) リポジトリで入手できます。
 
 印刷材料の指示:
 

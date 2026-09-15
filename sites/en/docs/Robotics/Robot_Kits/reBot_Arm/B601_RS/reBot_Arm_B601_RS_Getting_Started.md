@@ -18,7 +18,7 @@ last_update:
   date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
 
@@ -27,6 +27,7 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # Getting Started with reBot Arm B601-RS
 
@@ -55,16 +56,55 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
-The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). This guide will take you through the quick start of B601-RS, from assembly to operation.
-The content of this guide is racing towards you at the speed of light — stay tuned.
+<p align="center">
+  The reBot Arm project is open source on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm)—please visit the repository and give it a Star! The repository contains the complete BOM. This guide will help you get started with the B601-RS, from assembly to operation.
+</p>
+
+<GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
+
+## Project Introduction
+
+**reBot-DevArm (reBot Arm B601 DM and reBot Arm B601 RS)** is a robotic arm project dedicated to lowering the threshold for learning embodied intelligence. We focus on **"True Open Source"** — not just code, we open-source all of the following without reservation:
+
+- 🦾 **Open-source robotic arms with two motor versions**: We provide all open-source files for RoboStride and Damiao motor versions of the same appearance.
+- 🛠️ **Hardware blueprints**: Sheet metal and 3D printed part source files.
+- 🔩 **BOM (Bill of Materials)**: Detailed to every screw's specification and purchase link.
+- 💻 **Software and algorithms**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
+
+## Building Your reBot Robotic Arm
+
+- We offer five kit options:
+  - **Robotic Arm Body Motor Kit**: Includes only the motors and wiring harnesses needed for the robotic arm.
+  - **Robotic Arm Body Structural Parts Kit**: Includes only the mechanical structural components.
+  - **Gripper Complete Kit**: Includes motors, wiring harnesses, and structural parts for the gripper.
+  - **Complete Arm Kit**: Includes all components for the robotic arm body and gripper.
+  - **Pre-assembled Robotic Arm**: A fully assembled robotic arm.
+
+The reBot-DevArm and reComputer Jetson AI intelligent robot kit seamlessly combine high-precision robotic arm control with a powerful AI computing platform, providing a comprehensive robot development solution. This kit is based on the Jetson Orin or AGX Orin platform, combined with the reBot-DevArm and LeRobot AI framework, offering users an intelligent robot system applicable to multiple scenarios such as education, research, and industrial automation.
+
+## Features of reBot B601-RS Series:
+
+1. **Open-source & Low-cost**
+   reBot Arm is an open-source, low-cost robotic arm solution from Seeed Studio, dedicated to lowering the threshold for learning embodied intelligence.
+
+2. **LeRobot Platform Integration**
+   Designed for integration with the [LeRobot platform](https://github.com/huggingface/lerobot). This platform provides PyTorch models, datasets and tools for imitation learning of real robot tasks (including data collection, simulation, training and deployment).
+
+3. **Abundant Learning Resources**
+   Provides comprehensive open-source learning resources including assembly and calibration guides, testing and data collection tutorials, training and deployment documentation to help users quickly get started and develop robotic applications.
+
+4. **Nvidia Platform Compatible**
+   Supports deployment via the reComputer Mini J4012 Orin NX 16GB platform.
 
 ## Safety Disclaimer and Risk Notice
 
-<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+<div className="rebot-disclaimer-gallery">
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="reBot Arm safety disclaimer and risk notice in Chinese" />
+  </figure>
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="reBot Arm safety disclaimer and risk notice in English" />
+  </figure>
 </div>
 
 ## About Power Supply
@@ -73,25 +113,45 @@ The content of this guide is racing towards you at the speed of light — stay t
 
 If your household voltage is 220V, set the voltage selector switch on the side of the power supply to 230V. If your household voltage is 110V, switch it to 115V.
 
-| **220V** | **110V** |
-|:---:|:---:|
-| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="300" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="300" /> |
+<div className="rebot-power-gallery">
+  <figure className="rebot-power-gallery-item">
+    <figcaption>220V</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" alt="Power supply voltage selector set to 230V" />
+  </figure>
+  <figure className="rebot-power-gallery-item">
+    <figcaption>110V</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" alt="Power supply voltage selector set to 115V" />
+  </figure>
+  <figure className="rebot-power-gallery-item rebot-power-gallery-item--wide">
+    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" alt="MeanWell power adapter for reBot Arm B601-RS" />
+  </figure>
+</div>
 
+### Assemble the Power Supply
 
-   <div align="center">
-     <img width={800}
-     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100054289-gallery-6.jpg" />
-   </div>
+Alternatively, you can choose our open-source 24V 14.6A MeanWell power supply enclosure for self-assembly. The text instructions and BOM are open-sourced in the [GitHub repository](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_RS) (recommended only for developers with relevant power supply assembly experience).
 
-2. Alternatively, you can choose our open-source 24V 14.6A MeanWell power supply enclosure for self-assembly. The text instructions and BOM are open-sourced in the [GitHub repository](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_RS) (recommended only for developers with relevant power supply assembly experience).
-
-   Assembly reference video:
+Assembly reference video:
 
    <div class="video-container">
      <iframe width="900" height="600" src="https://www.youtube.com/embed/5GitUWT9gx0?si=I_dnd2bSNHbB95BW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
    </div>
 
-## Step 1: Assembly Guide
+## Assembly Guide
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Assemble the reBot Arm</h4>
+      <p className="rebot-step-label">Step 1</p>
+
+<Tabs>
+<TabItem value="unassembled" label="Unassembled Version">
+
+<div class="video-container">
+  <iframe width="900" height="600" src="https://www.youtube.com/embed/Bv60NPO0TRo?list=PLpH_4mf13-A38iXew5DxqswGLjPQ0BflR&amp;index=6" title="reBot Arm B601-RS assembly video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 - Before assembly, please read the following instructions carefully. To ensure a smooth assembly process and a complete hands-on experience, please be patient, stay focused, and always follow these key points:
   1. This kit includes numerous screws and structural parts, some of which look similar. Please carefully verify the screw specifications and part models, and confirm the installation orientation before fastening.
@@ -99,34 +159,33 @@ If your household voltage is 220V, set the voltage selector switch on the side o
   3. For ease of screw installation and removal, the open-source BOM specifies standard screws. However, the screws shipped with the kit have thread-lock applied. You may also use your own preferred tools or an electric screwdriver (highly recommended to have one ready). If using an electric tool, be sure to set the torque to a low-to-medium level (3–6 kgf·cm) to avoid excessive torque that could strip the screws, causing irreversible damage where parts cannot be removed. If there is any sign of stripping, immediately replace the screw or realign and retry. Stripped thread-lock screws cannot be removed with a screw extractor and will scrap the entire part. Therefore, please proceed with caution.
   4. Please prioritize safety during assembly to avoid pinched fingers or crush injuries. Children should complete this project with the accompaniment of a parent or guardian.
 
+</TabItem>
+<TabItem value="assembled" label="Assembled Version">
 
+Connect the robotic arm cables, then use MotorBridge Studio to write the motor parameters and set the zero position.
 
+Refer to the reBot Arm B601-RS unboxing and getting-started video below for this step.
 
-## Step 2: Calibrate the Robotic Arm and Get Started
+Connect Motor 1 and Motor 2 as shown below.
 
-1. Explore our **MotorBridge** platform. This platform is a one-stop comprehensive solution that supports continuous expansion of motor types, covering [Damiao motors](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [Robstride motors](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [Hightorque motors](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [Myactuator motors](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow, and more. It is also compatible with continuously updated robotic arm products like reBot. The platform is user-friendly for beginners and also provides a Python SDK with fully consistent functionality for developers.
+<div align="center">
+  <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="Connect Motor 1 and Motor 2 on the reBot Arm B601-RS" />
+</div>
 
-2. Experience the new features and details of MotorBridge specifically adapted for the reBot robotic arm, including one-click zero-point calibration, parameter writing, drag-and-drop motor control via the UI, and a built-in model visualization interface.
+Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cable, and XT30 2+2 cable as shown below. Connect the other end of the XT30 2+2 cable to Motor 1 and connect the power cable to the 48 V power supply.
 
-3. This tool is fully compatible with **Windows, Ubuntu, and macOS** operating systems.
+<div align="center">
+  <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="Connect the USB-to-CAN module and power cables to the reBot Arm B601-RS" />
+</div>
 
-:::tip
-1. It has been verified that virtual machine performance is insufficient for running demos and there are configuration issues. It is recommended to use an Ubuntu physical machine to control the robotic arm.
+</TabItem>
+</Tabs>
 
-2. (Beta version) Let an agent help you initialize the robotic arm. Copy the following content and send it to the agent:
-
-```text
-Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-Agent-Guide/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
-```
-
-  Note: If you purchased a pre-assembled kit, please tell the agent during the motor ID writing step: "I purchased a pre-assembled kit, please scan motors 1–7 to verify they are all online, do not rewrite the motor IDs."
-
-3. The agent uses CLI commands to complete motor ID writing, while the wiki uses a web UI interaction method. Both approaches work.
-
-:::
+</div>
+</section>
+</div>
 
 You should have completed the preliminary preparation for the robotic arm assembly by following the video. Next, we will introduce the steps for writing motor IDs and calibrating the robotic arm.
-
 
 Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.
 
@@ -134,11 +193,50 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 <iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+## Use MotorBridge to Calibrate the Arm and Complete the First Run
 
+:::tip
 
-### 1. Install Miniforge (Recommended) (Supports Windows\Ubuntu\macOS\Jetson\Raspberry Pi)
+1. Explore our **MotorBridge** platform. This one-stop solution supports an expanding range of motors, including [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [RobStride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [HighTorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [MyActuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow, and continuously updated robotic arms such as reBot. It is beginner-friendly and provides developers with a Python SDK matching the Web UI features.
 
-1. Install Miniforge and create a virtual environment to avoid conflicts with other environment packages that could cause demo failures.
+2. MotorBridge features tailored for reBot include one-click zero calibration, parameter writing, drag-and-drop motor control, and built-in model visualization.
+
+3. MotorBridge supports **Windows, Ubuntu, and macOS**.
+
+:::
+
+:::tip
+
+1. Virtual machines do not provide sufficient performance for reliable demo operation and may introduce configuration issues. Use a physical Ubuntu machine whenever possible.
+
+   We recommend installing **Ubuntu 24.04 LTS**.
+
+   Recommended Bilibili installation tutorial: [Ubuntu Dual-Boot Installation Tutorial](https://www.bilibili.com/video/BV1Cc41127B9/)
+
+2. (Beta) You can ask an agent to initialize the robotic arm. Send it the following prompt:
+
+```text
+Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-Agent-Guide/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
+```
+
+If you purchased a pre-assembled kit, tell the agent during the motor ID step: "I purchased a pre-assembled kit. Scan motors 1–7 and verify that they are online. Do not rewrite the motor IDs."
+
+3. The agent writes motor IDs through CLI commands, while this Wiki uses the Web UI. Both methods work.
+
+:::
+
+### Software Setup and Calibration Workflow
+
+Follow these steps in order to install Miniforge and create an isolated Python environment for reBot development.
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Install Miniforge</h4>
+      <p className="rebot-step-label">Step 1</p>
+
+Download and install Miniforge for your operating system:
 
 <Tabs>
 <TabItem value="Ubuntu" label="Ubuntu\Jetson\Raspberry Pi">
@@ -147,6 +245,21 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
+
+During installation, press <kbd>Enter</kbd> to continue, enter `yes` to accept the terms, and enter `yes` when asked whether to initialize Conda.
+
+Restart the terminal and verify the installation with `conda --version`.
+
+:::tip If `conda` is not found
+Load Miniforge and initialize Bash:
+
+```bash
+source ~/miniforge3/etc/profile.d/conda.sh
+conda init bash
+```
+
+:::
+
 </TabItem>
 <TabItem value="macOS" label="macOS">
 
@@ -155,51 +268,105 @@ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mi
 bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
-</TabItem>
-<TabItem value="windows" label="windows">
+During installation, press <kbd>Enter</kbd> to continue, enter `yes` to accept the terms, and enter `yes` when asked whether to initialize Conda.
 
-Open the Miniforge Release page in your browser, find the latest version of `Miniforge3-Windows-x86_64.exe` and click to download:
+Restart the terminal and verify the installation with `conda --version`.
 
-```text
-https://github.com/conda-forge/miniforge/releases
+:::tip If `conda` is not found
+Load Miniforge and initialize Zsh, the default shell on current macOS versions:
+
+```bash
+source ~/miniforge3/etc/profile.d/conda.sh
+conda init zsh
 ```
+
+:::
+
+</TabItem>
+<TabItem value="windows" label="Windows">
+
+Open the [Miniforge Releases page](https://github.com/conda-forge/miniforge/releases), find the latest `Miniforge3-Windows-x86_64.exe`, and download it.
+
+:::tip Initialize Conda for your terminal
+**Git Bash users:** If `conda` is not found, load Conda first:
+
+```bash
+# Temporary: replace <install_path> with the actual path
+source <install_path>/etc/profile.d/conda.sh
+
+# Permanent: add it to bashrc once
+echo 'source <install_path>/etc/profile.d/conda.sh' >> ~/.bashrc
+source ~/.bashrc
+```
+
+For PowerShell, initialize Conda with:
+
+```bash
+conda init powershell
+```
+
+:::
 
 </TabItem>
 </Tabs>
 
-2. Create a Python 3.12 virtual environment:
+</div>
+</section>
 
-:::tip
-  **Git Bash users**: If the `conda` command is not found, it means Git Bash has not loaded the conda environment. You need to initialize it first:
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Disable Automatic Base Activation (Optional)</h4>
+      <p className="rebot-step-label">Step 2</p>
 
-  ```bash
-  # Temporary (current terminal only), replace <install_path> with the actual path
-  source <install_path>/etc/profile.d/conda.sh
+After Miniforge initializes Conda, each new terminal automatically activates the `(base)` environment. If you prefer to start in the system environment, disable automatic base activation:
 
-  # Permanent (write to bashrc, run once)
-  echo 'source <install_path>/etc/profile.d/conda.sh' >> ~/.bashrc
-  source ~/.bashrc
-  ```
+```bash
+conda config --set auto_activate_base false
+```
 
-  To let PowerShell automatically activate the conda environment:
+**Verify:** Close the current terminal and open a new one. The `(base)` prefix should no longer appear. Activate the reBot environment manually when needed with `conda activate rebot`.
 
-  ```bash
-  conda init powershell
-  ```
+**Restore the default:** Run `conda config --set auto_activate_base true` to enable automatic base activation again.
 
-:::
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>Create the Python Environment</h4>
+      <p className="rebot-step-label">Step 3</p>
+
+Create the Python 3.12 environment:
 
 ```bash
 conda create -y -n rebot python=3.12
 ```
 
-3. Activate the virtual environment. **You need to re-run this activation command every time you open a terminal to use reBot-related features**:
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Activate the Environment</h4>
+      <p className="rebot-step-label">Step 4</p>
+
+Run this command whenever you open a new terminal for reBot:
 
 ```bash
 conda activate rebot
 ```
 
-### 2. Install Motorbridge
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>Install Motorbridge</h4>
+      <p className="rebot-step-label">Step 5</p>
 
 After activating the reBot virtual environment, run the following command to install motorbridge:
 
@@ -207,12 +374,18 @@ After activating the reBot virtual environment, run the following command to ins
 If you experience low frame rates during teleoperation on macOS, it may be caused by an outdated WCH CH34x driver version. For **macOS 10.14 and later**, the system includes a built-in `AppleUSBCHC0M` driver. You can uninstall the old driver and switch to the macOS built-in driver, which should effectively improve frame rates.
 :::
 
-
 ```bash
 pip install motorbridge
 ```
 
-### 3. PCAN-USB
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+      <h4>Configure PCAN-USB</h4>
+      <p className="rebot-step-label">Step 6</p>
 
 Get the PCAN-USB device working on the CAN bus at 1Mbps for robotic arm communication.
 
@@ -230,6 +403,45 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
+:::tip Attention
+If the PCAN device has incorrect firmware after driver installation, expand the section below, download the PCAN firmware, and follow the recovery steps.
+:::
+
+<details>
+<summary>PCAN Firmware Download &amp; Driver Repair Steps - Ubuntu</summary>
+
+Ubuntu users please refer to this guide
+
+1.> 📦 [Click to download USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.Switch USB2CAN to BOOT
+
+3.Please extract the USB2CAN.zip from step 1, and place flash_pcan_ubuntu.sh and pcan_canable_hw.bin (from inside USB2CAN.zip) in the same directory
+
+[Click to download flash_pcan_ubuntu.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
+
+If transferring from another computer (e.g. scp):
+
+```text
+scp flash_pcan_ubuntu.sh pcan_canable_hw.bin seeed@your_Ubuntu_IP:~/Downloads/
+```
+
+Or simply copy it onto a USB flash drive and plug it into the Ubuntu machine — as long as the files end up in ~/Downloads, the current directory, or /tmp, the script will find them automatically.
+
+4.Execute:
+
+```text
+bash flash_pcan_ubuntu.sh
+```
+
+Enter your password; wait for completion
+
+After completion, switch back to "120R"
+
+Re-plug the USB.
+
+</details>
+
 </TabItem>
 
 <TabItem value="Jetson" label="Jetson">
@@ -238,11 +450,13 @@ Download the file: [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/
 
 - Remove brltty
 On Jetson, brltty may occupy the USB serial port used by the leader. Remove it first:
+
 ```bash
 sudo apt remove -y brltty
 ```
 
 - Install Dependencies
+
 ```bash
 sudo apt update
 sudo apt install -y \
@@ -255,47 +469,64 @@ sudo apt install -y \
     ethtool \
     nvidia-l4t-kernel-headers
 ```
+
 Verify that the current kernel headers directory exists:
+
 ```bash
 ls -l /lib/modules/$(uname -r)/build
 ```
 
 - Compile the PEAK SocketCAN Driver
 Download and extract PEAK Linux Driver 9.2.0, then enter the source directory:
+
 ```bash
 tar -xvf peak-linux-driver-9.2.0.tar.gz
 cd ~/peak-linux-driver-9.2.0
 ```
+
 Clean previous build artifacts:
+
 ```bash
 make clean
 ```
+
 Compile in netdev mode:
+
 ```bash
 make netdev
 ```
+
 Netdev mode registers PCAN-USB as a Linux SocketCAN network interface.
 Do **not** use plain `make`. Plain `make` builds chardev mode, while LeRobot and motorbridge-cli rely on SocketCAN interfaces.
 
 - Install and Load the Driver
 Install the driver:
+
 ```bash
 sudo make install
 sudo depmod -a
 ```
+
 Load the pcan kernel module:
+
 ```bash
 sudo modprobe pcan
 ```
+
 Enable automatic loading on boot:
+
 ```bash
 echo pcan | sudo tee /etc/modules-load.d/pcan.conf
 ```
+
 Confirm the driver is loaded:
+
 ```bash
 ip -br link | grep can
 ```
+
 Expected output:
+
 ```
 can0             DOWN           <NOARP,ECHO>
 can1             DOWN           <NOARP,ECHO>
@@ -303,10 +534,13 @@ can1             DOWN           <NOARP,ECHO>
 ```
 
 - Find which PCAN interface corresponds to your robotic arm
+
 ```bash
 for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
 ```
+
 Interfaces listed here are PEAK PCAN-USB devices, e.g.:
+
 ```
 can2
 ```
@@ -315,6 +549,7 @@ can2
 Linux environment variables do not survive reboot, and PCAN interface numbering may change. A more reliable approach is to permanently define a refresh function and run it after opening a terminal.
 
 Append the function to `~/.bashrc`:
+
 ```bash
 grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
 
@@ -326,17 +561,23 @@ pcan_refresh() {
 }
 EOF
 ```
+
 ```bash
 source ~/.bashrc
 ```
+
 Run this after rebooting or re-plugging PCAN-USB:
+
 ```bash
 pcan_refresh
 ```
+
 On success, it outputs:
+
 ```
 PCAN_IF=can1
 ```
+
 Use `$PCAN_IF` in all subsequent commands instead of hardcoding `can1` or `can2`.
 
 ```bash
@@ -350,9 +591,10 @@ sudo ip link set $PCAN_IF up
 ```
 
 </TabItem>
-<TabItem value="macos" label="macos">
+<TabItem value="macos" label="macOS">
 
 If `libPCBUSB.dylib` cannot be loaded, install PCBUSB first:
+
 ```zsh
 curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
   https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
@@ -401,26 +643,59 @@ python3 -c "import ctypes; ctypes.CDLL('PCBUSB'); print('PCBUSB load OK')"
 motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 --timeout-ms 300
 ```
 
+:::tip Attention
+If the PCAN device has incorrect firmware after driver installation, expand the section below, download the PCAN firmware, and follow the recovery steps.
+:::
+
+<details>
+<summary>PCAN Firmware Download &amp; Driver Repair Steps - macOS</summary>
+
+MAC users please refer to this guide
+
+1.> 📦 [Click to download USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
+
+2.Switch USB2CAN to BOOT
+
+3.Please extract the USB2CAN.zip from step 1, and place flash_pcan_mac.sh and pcan_canable_hw.bin (from inside USB2CAN.zip) in the same directory
+
+[Click to download flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
+
+If transferring from another computer (e.g. scp):
+
+```text
+scp flash_pcan_mac.sh pcan_canable_hw.bin seeed@your_MAC_IP:~/Downloads/
+```
+
+Or simply copy it onto a USB flash drive and plug it into the MAC — as long as the files end up in ~/Downloads, the current directory, or /tmp, the script will find them automatically.
+
+4.Execute:
+
+```text
+bash /Users/"your_username"/Downloads/flash_pcan_mac.sh "/Users/"your_username"/Downloads/pcan_canable_hw.bin"
+```
+
+The above command assumes the files are placed in the Mac Downloads path; adjust according to your actual path
+
+Enter your password; wait for completion
+
+After completion, switch back to "120R"
+
+Re-plug the USB.
+
+</details>
+
 </TabItem>
-<TabItem value="windows" label="windows">
+<TabItem value="windows" label="Windows">
 
-Please visit [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/) to install the PCAN-USB driver.
-
-</TabItem>
-
-
-
-</Tabs>
+Download [PEAK-System_Driver-Setup.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/PEAK-System_Driver-Setup.zip) and install the PCAN-USB driver.
 
 :::tip Attention
 If **PCAN-USB** is not detected in Device Manager after installing the driver, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
 
-
-
 <details>
 
-<summary>PCAN firmware download and driver recovery steps</summary>
+<summary>PCAN Firmware Download &amp; Driver Repair Steps - Windows</summary>
 
 If PCAN-USB still does not work after installing the driver and Device Manager does not show the **PCAN-USB** device illustrated below, download the PCAN firmware package and follow these steps to install the DFU driver and reflash the firmware.
 
@@ -479,77 +754,9 @@ Disconnect the USB2CAN module, set the DIP switch to **120R**, and reconnect it 
 
 </details>
 
-<details>
-<summary>PCAN Firmware Download & Driver Repair Steps - Ubuntu</summary>
+</TabItem>
 
-Ubuntu users please refer to this guide
-
-1.> 📦 [Click to download USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
-
-2.Switch USB2CAN to BOOT
-
-3.Please extract the USB2CAN.zip from step 1, and place flash_pcan_ubuntu.sh and pcan_canable_hw.bin (from inside USB2CAN.zip) in the same directory
-
-[Click to download flash_pcan_ubuntu.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_ubuntu.sh)
-
-If transferring from another computer (e.g. scp):
-
-```text
-scp flash_pcan_ubuntu.sh pcan_canable_hw.bin seeed@your_Ubuntu_IP:~/Downloads/
-```
-Or simply copy it onto a USB flash drive and plug it into the Ubuntu machine — as long as the files end up in ~/Downloads, the current directory, or /tmp, the script will find them automatically.
-
-4.Execute:
-
-```text
-bash flash_pcan_ubuntu.sh
-```
-
-Enter your password; wait for completion
-
-After completion, switch back to "120R"
-
-Re-plug the USB.
-
-</details>
-
-<details>
-<summary>PCAN Firmware Download & Driver Repair Steps - MAC</summary>
-
-MAC users please refer to this guide
-
-1.> 📦 [Click to download USB2CAN.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/USB2CAN.zip)
-
-2.Switch USB2CAN to BOOT
-
-3.Please extract the USB2CAN.zip from step 1, and place flash_pcan_mac.sh and pcan_canable_hw.bin (from inside USB2CAN.zip) in the same directory
-
-[Click to download flash_pcan_mac.sh](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/flash_pcan_mac.sh)
-
-If transferring from another computer (e.g. scp):
-
-```text
-scp flash_pcan_mac.sh pcan_canable_hw.bin seeed@your_MAC_IP:~/Downloads/
-```
-
-Or simply copy it onto a USB flash drive and plug it into the MAC — as long as the files end up in ~/Downloads, the current directory, or /tmp, the script will find them automatically.
-
-4.Execute:
-
-```text
-bash /Users/"your_username"/Downloads/flash_pcan_mac.sh "/Users/"your_username"/Downloads/pcan_canable_hw.bin"
-```
-
-The above command assumes the files are placed in the Mac Downloads path; adjust according to your actual path
-
-Enter your password; wait for completion
-
-After completion, switch back to "120R"
-
-Re-plug the USB.
-
-</details>
-
+</Tabs>
 <!-- ### 3. Write Motor IDs
 
 :::tip Pre-assembled kit users, please skip this step
@@ -577,7 +784,14 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 ``` -->
 
 
-### 4. Start MotorBridge-gateway to Write Zero Points and Debug
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">7</span>
+<div className="rebot-step-content">
+      <h4>Write Zero Points and Debug with MotorBridge Gateway</h4>
+      <p className="rebot-step-label">Step 7</p>
 
 #### Before Motor Reset
 
@@ -636,3 +850,7 @@ First select `rebot-arm-robstride` under **Robot Model** in [MotorBridge Studio]
 4. After writing is complete, MotorBridge Studio automatically reads the parameters back. Initialization is successful when the page reports that the post-write readback verification matches.
 
 :::
+
+</div>
+</section>
+</div>
