@@ -71,7 +71,7 @@ Seeed Studio tutorials are strictly updated according to official documentation.
 
 ## Initial System Environment
 
-<Tabs>
+<Tabs groupId="lerobot-platform">
 <TabItem value="ubuntu-x86" label="Ubuntu x86">
 
 - Ubuntu 22.04/Ubuntu 24.04
@@ -168,7 +168,7 @@ pip install motorbridge
 <section className="rebot-step-item">
     <span className="rebot-step-number">4</span>
 <div className="rebot-step-content">
-      #### 4. Install ffmpeg
+      #### 4. Install Video Dependencies
 
 ffmpeg is a video decoding dependency, install via conda:
 
@@ -190,32 +190,38 @@ conda install ffmpeg -c conda-forge
 
 :::
 
+<Tabs groupId="lerobot-platform" className="rebot-linked-platform-content">
+<TabItem value="ubuntu-x86" label="Ubuntu x86">
+
+Ubuntu x86 requires no other video dependency configuration. Continue with step 5.
+
+</TabItem>
+<TabItem value="jetson-orin" label="Jetson Orin">
+
+:::note Jetson JetPack 6.0+ Devices
+
+On a Jetson JetPack 6.0+ device, make sure you have installed GPU-enabled PyTorch and Torchvision by following step 5 of [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) before running the following commands.
+
+```bash
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies via conda, for Jetson JetPack 6.0+ only
+conda remove opencv   # Uninstall OpenCV
+pip3 install opencv-python==4.10.0.84  # Install specific OpenCV version using pip3
+conda uninstall numpy
+pip3 install numpy==1.26.0  # This version must be compatible with torchvision
+```
+
+:::
+
+</TabItem>
+</Tabs>
+
 </div>
 </section>
 
 <section className="rebot-step-item">
     <span className="rebot-step-number">5</span>
 <div className="rebot-step-content">
-      #### 5. Special Configuration for Jetson JetPack 6.0+ Devices
-
-(Skip this step on a PC.) Before continuing on a Jetson JetPack 6.0+ device, install GPU-enabled PyTorch and Torchvision in step 5 of [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch):
-
-```bash
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies via conda, for Jetson JetPack 6.0+ only
-conda remove opencv   # Uninstall OpenCV
-pip3 install opencv-python==4.10.0.84  # Install specific OpenCV version using pip3
-conda install -y -c conda-forge ffmpeg
-conda uninstall numpy
-pip3 install numpy==1.26.0  # This version must be compatible with torchvision
-```
-
-</div>
-</section>
-
-<section className="rebot-step-item">
-    <span className="rebot-step-number">6</span>
-<div className="rebot-step-content">
-      #### 6. Check PyTorch and Torchvision
+      #### 5. Check PyTorch and Torchvision
 
 Installing the LeRobot environment with pip may replace the original PyTorch and Torchvision with CPU builds, so check the result in Python.
 
@@ -261,7 +267,8 @@ sudo chmod 666 /dev/ttyUSB*  # Leader arm
 sudo chmod 666 /dev/ttyACM*  # Follower arm (serial bridge)
 ```
 
-### Calibrate the Follower Arm
+<Tabs>
+<TabItem value="follower-arm" label="Follower Arm">
 
 B601-DM only needs to be calibrated once after assembly. Here is the calibration command. Refer to the figure for the zero position (gripper fully closed).
 
@@ -280,13 +287,10 @@ lerobot-calibrate \
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
   </div>
 
-### Calibrate the Leader Arm
+</TabItem>
+<TabItem value="leader-arm" label="Leader Arm">
 
 The calibration steps are crucial and will directly affect whether the robotic arm runs normally. Please follow the process strictly.
-
-<details>
-
-<summary> rebot 102 leader </summary>
 
 :::tip
 **reBot 102 leader Calibration Notes**:
@@ -325,7 +329,8 @@ lerobot-calibrate \
 
 Keep it still, then press Enter until calibration is complete.
 
-</details>
+</TabItem>
+</Tabs>
 
 :::danger
 During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
@@ -367,8 +372,8 @@ lerobot-teleoperate \
 During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
 :::
 
-<details>
-<summary> If using RealSense D435i/D405 </summary>
+<Tabs>
+<TabItem value="realsense" label="RealSense D435i / D405">
 
 RealSense depth cameras can provide RGB-D perception for LeRobot and are suitable for tasks such as object recognition, point cloud reconstruction, and tabletop manipulation. The recommended models here are **RealSense D405** and **RealSense D435i**.
 
@@ -390,7 +395,12 @@ The RealSense D405 is a short-range stereo depth camera designed for high-precis
 
 The RealSense D435i combines depth sensing, RGB imaging, and an IMU, making it suitable for mid- to close-range applications such as 3D reconstruction, SLAM, and robotic environment perception.
 
-**1. Switch to the Camera Branch**
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+  <div className="rebot-step-content">
+    <h4>Switch to the Camera Branch</h4>
+    <p className="rebot-step-label">Step 1</p>
 
 Current camera support is available on the `DepthCameraSupport` branch:
 
@@ -411,7 +421,13 @@ Expected output:
 DepthCameraSupport
 ```
 
-**2. Install LeRobot in Editable Mode**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+  <div className="rebot-step-content">
+    <h4>Install LeRobot in Editable Mode</h4>
+    <p className="rebot-step-label">Step 2</p>
 
 If you only use RealSense:
 
@@ -419,13 +435,25 @@ If you only use RealSense:
 pip install -e ".[realsense]"
 ```
 
-**3. Grant Permissions**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+  <div className="rebot-step-content">
+    <h4>Grant Permissions</h4>
+    <p className="rebot-step-label">Step 3</p>
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
 ```
 
-**4. Detect Cameras**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+  <div className="rebot-step-content">
+    <h4>Detect Cameras</h4>
+    <p className="rebot-step-label">Step 4</p>
 
 ```bash
 lerobot-find-cameras realsense
@@ -438,7 +466,13 @@ This step will output:
 - USB information
 - Default stream configuration
 
-**5. RealSense Example**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">5</span>
+  <div className="rebot-step-content">
+    <h4>RealSense Example</h4>
+    <p className="rebot-step-label">Step 5</p>
 
 Dual RealSense test:
 
@@ -499,17 +533,25 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-**6. Parameter Notes**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">6</span>
+  <div className="rebot-step-content">
+    <h4>Parameter Notes</h4>
+    <p className="rebot-step-label">Step 6</p>
 
 - `depth_alpha` controls the scaling factor of the depth image and can be adjusted based on the display result and target distance range.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` to improve overall stability.
 - It is recommended to keep the resolution at `640x480` for a better balance of stability and real-time performance.
 
-</details>
+</div>
+</section>
+</div>
 
-<details>
+</TabItem>
 
-<summary> If using Orbbec Gemini2 Depth Camera </summary>
+<TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
 
 <div align="center">
     <img width={800}
@@ -529,7 +571,12 @@ providing synchronized RGB and depth streams with precise depth-to-color alignme
 
 Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
 
-**1. Switch to the Camera Branch**
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+  <div className="rebot-step-content">
+    <h4>Switch to the Camera Branch</h4>
+    <p className="rebot-step-label">Step 1</p>
 
 Current camera support is available on the `DepthCameraSupport` branch:
 
@@ -550,7 +597,13 @@ Expected output:
 DepthCameraSupport
 ```
 
-**2. Install LeRobot in Editable Mode**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+  <div className="rebot-step-content">
+    <h4>Install LeRobot in Editable Mode</h4>
+    <p className="rebot-step-label">Step 2</p>
 
 If you only use Orbbec:
 
@@ -558,13 +611,25 @@ If you only use Orbbec:
 pip install -e ".[orbbec]"
 ```
 
-**3. Grant Permissions**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+  <div className="rebot-step-content">
+    <h4>Grant Permissions</h4>
+    <p className="rebot-step-label">Step 3</p>
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
 ```
 
-**4. Detect Cameras**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+  <div className="rebot-step-content">
+    <h4>Detect Cameras</h4>
+    <p className="rebot-step-label">Step 4</p>
 
 ```bash
 lerobot-find-cameras orbbec
@@ -577,7 +642,13 @@ This step will output:
 - USB information
 - Default stream configuration
 
-**5. Orbbec Example**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">5</span>
+  <div className="rebot-step-content">
+    <h4>Orbbec Example</h4>
+    <p className="rebot-step-label">Step 5</p>
 
 Single Orbbec test:
 
@@ -615,13 +686,25 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-**6. Parameter Notes**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">6</span>
+  <div className="rebot-step-content">
+    <h4>Parameter Notes</h4>
+    <p className="rebot-step-label">Step 6</p>
 
 - `depth_alpha` controls the scaling factor of the depth image. A good starting point is `0.2`, then you can fine-tune it based on the display result.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
 - It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
 
-**7. Common Issues**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">7</span>
+  <div className="rebot-step-content">
+    <h4>Common Issues</h4>
+    <p className="rebot-step-label">Step 7</p>
 
 If you see the following error:
 
@@ -641,11 +724,13 @@ Then confirm the actual `serial` and update `serial_number_or_name` in your comm
 
 - Author: Zhang Jiaquan, Wang Wenzhao - South China Normal University
 
-</details>
+</div>
+</section>
+</div>
 
-<details>
+</TabItem>
 
-<summary> If using a generic camera </summary>
+<TabItem value="generic-camera" label="Generic Camera">
 
 To instantiate a camera, you need a camera identifier. This identifier might change if you reboot your computer or re-plug your camera, a behavior mostly dependant on your operating system.
 
@@ -724,7 +809,8 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-</details>
+</TabItem>
+</Tabs>
 
 ## Dataset Collection
 
@@ -736,9 +822,8 @@ lerobot-teleoperate \
 During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
 :::
 
-<details>
-
-<summary> If you want to save the dataset locally </summary>
+<Tabs>
+<TabItem value="local-dataset" label="Save Locally">
 
 <!-- TODO: reBot local data collection command -->
 ```bash
@@ -762,10 +847,9 @@ lerobot-record \
 
 Among them, `repo_id` can be modified customarily, and `push_to_hub=false`. Finally, the dataset will be saved in the `~/.cache/huggingface/lerobot` directory in the home folder, where the aforementioned `seeed_rebot_b601_dm/test` folder will be created.
 
-</details>
+</TabItem>
 
-<details>
-<summary> If you want to use the Hugging Face Hub features for uploading your dataset </summary>
+<TabItem value="hugging-face-hub" label="Upload to Hugging Face Hub">
 
 - If you want to use the Hugging Face Hub features for uploading your dataset and you haven't previously done it, make sure you've logged in using a write-access token, which can be generated from the [Hugging Face settings](https://huggingface.co/settings/tokens):
 
@@ -808,7 +892,8 @@ You will see a lot of lines appearing like this one:
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
 
-</details>
+</TabItem>
+</Tabs>
 
 **Record Function**
 
@@ -930,8 +1015,8 @@ At this point, the robot should perform the same actions as when you teleoperate
 
 ## Training and Evaluation
 
-<details>
-<summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
+<Tabs>
+<TabItem value="act" label="ACT">
 
 Refer to the official tutorial [ACT](https://huggingface.co/docs/lerobot/act)
 
@@ -1013,10 +1098,9 @@ lerobot-record \
 3. If you encounter `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'` during the evaluation phase, please delete the folder starting with `eval_` first and then run the program again.
 4. When encountering `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, please note that keywords like `front` and `side` in the `--robot.cameras` parameter must be strictly consistent with those used when collecting the dataset.
 
-</details>
+</TabItem>
 
-<details>
-<summary>[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) </summary>
+<TabItem value="smolvla" label="SmolVLA">
 
 Refer to the official tutorial [SmolVLA](https://huggingface.co/docs/lerobot/smolvla).
 
@@ -1100,10 +1184,9 @@ Optional: If you want to "manually teleoperate to adjust" between evaluation epi
 --teleop.id=rebot_arm_102_leader
 ```
 
-</details>
+</TabItem>
 
-<details>
-<summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
+<TabItem value="pi0" label="Pi0">
 
 Refer to the official tutorial [Pi0](https://huggingface.co/docs/lerobot/pi0).
 
@@ -1170,10 +1253,9 @@ lerobot-record \
   --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model
 ```
 
-</details>
+</TabItem>
 
-<details>
-<summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
+<TabItem value="pi05" label="Pi0.5">
 
 Refer to the official tutorial [Pi0.5](https://huggingface.co/docs/lerobot/pi05).
 
@@ -1238,10 +1320,9 @@ lerobot-record \
   --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model
 ```
 
-</details>
+</TabItem>
 
-<details>
-<summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
+<TabItem value="groot-n15" label="GR00T N1.5">
 
 Please refer to the official tutorial [GR00T N1.5](https://huggingface.co/docs/lerobot/groot).
 
@@ -1352,10 +1433,9 @@ lerobot-record \
 
 License: This model follows the Apache 2.0 license (consistent with the original GR00T repository).
 
-</details>
+</TabItem>
 
-<details>
-<summary>(Optional) Efficient Fine-Tuning with PEFT</summary>
+<TabItem value="peft" label="PEFT (Optional)">
 
 PEFT (Parameter-Efficient Fine-Tuning) is a set of "parameter-efficient adaptation" methods and tools for adapting large pretrained models to new tasks **without updating all model parameters**. For LeRobot's pretrained policies (e.g., SmolVLA, π₀, etc.), you can typically train only a small number of "adapter" parameters (e.g., LoRA) to achieve near full fine-tuning results while reducing VRAM usage and training cost.
 
@@ -1430,10 +1510,9 @@ If you want certain modules to be "fully trained" (instead of just injecting LoR
 
 LoRA's learning rate can typically be an order of magnitude larger than full fine-tuning (common experience: ~10x). For example, full fine-tuning commonly uses `1e-4`, while LoRA can start from `1e-3`; if you have learning rate decay (scheduler) enabled, the final learning rate is also commonly set around `1e-4` as a reference.
 
-</details>
+</TabItem>
 
-<details>
-<summary>(Optional) Multi-GPU Training</summary>
+<TabItem value="multi-gpu" label="Multi-GPU (Optional)">
 
 **1. Training Steps**
 
@@ -1586,10 +1665,9 @@ If you are unsure how to adjust, you can also:
 As long as the training process is stable, the results are still usable.
 
 For more advanced configuration and troubleshooting, please refer to the [Accelerate](https://huggingface.co/docs/accelerate/index) documentation. If you want to learn more about training on large numbers of GPUs, check out this excellent guide: [Ultrascale Playbook](https://github.com/huggingface/ultrascale-playbook).
-</details>
+</TabItem>
 
-<details>
-<summary>(Optional) Using Async Inference for Deployment</summary>
+<TabItem value="async-inference" label="Async Inference (Optional)">
 
 Without async inference, LeRobot's control flow can be understood as conventional sequential/synchronous inference: the policy predicts an action chunk, then executes it, then waits for the next prediction. For larger models, this can cause noticeable pauses while the robot waits for new action chunks. The goal of async inference is to let the robot execute the current action chunk while pre-computing the next one, reducing idle time and improving responsiveness. Async inference applies to LeRobot-supported policies that output action chunks, such as ACT, OpenVLA, Pi0, SmolVLA. Since inference and actual control are decoupled, async inference also enables using more powerful machines for robot inference remotely.
 
@@ -1749,7 +1827,8 @@ In async inference, there are two additional parameters not present in synchrono
 
 Async inference needs to balance: the server's action chunk generation speed must be greater than or equal to the client's consumption speed. Otherwise, the action queue will empty and the robot will start stuttering (this can be seen in the queue visualization curve hitting bottom).
 
-</details>
+</TabItem>
+</Tabs>
 
 To resume training from a checkpoint, here is an example command to resume from the `last` checkpoint of the `act_rebot_test` policy:
 
