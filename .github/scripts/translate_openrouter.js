@@ -386,6 +386,8 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 标记后的所有缩进（空格或制表符）
    - URL链接
    - HTML / JSX 标签的结构与属性（不要新增、删除或重排标签；不要修改属性名或属性值）
+   - 标题末尾显式自定义锚点（例如 \`{#mechanical-cad-files}\`）是机器标识：必须逐字符保留，不得翻译、改写或重新生成
+   - FAQ 界面文案中的占位符（例如 \`%count%\`、\`%total%\`、\`%date%\`、\`%skus%\`）必须逐字符保留
 
    **代码相关规则：**
    - 代码块内容（\`\`\`之间的内容）必须完全保持原样

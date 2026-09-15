@@ -368,6 +368,10 @@ module.exports = (async () => {
       ],
       
       path.resolve(__dirname, '../../plugins/image-zoom'),
+      [
+        path.resolve(__dirname, '../../plugins/respeaker-faq-index'),
+        { locale: 'ja' },
+      ],
       'docusaurus-plugin-sass',
       [
         'docusaurus-plugin-copy-page-button',
@@ -765,18 +769,20 @@ module.exports = (async () => {
         },
         contextualSearch: true,
         typesense: {
-          typesenseCollectionName: 'wiki_platform_test_1786699337',
+          typesenseCollectionName: 'wiki_platform_aliases_v1',
           typesenseServerConfig: {
             nodes: [
               {
                 host: 'search.seeedstudio.com',
+                port: 443,
                 protocol: 'https',
               },
             ],
-            apiKey: 'jg8FxERlXCzK7oNzMnQXPJF9tR8fNanz',
+            apiKey: 'Wq4m3wi2ltwebP1v7bYlmkTGBcu31kHe',
           },
           typesenseSearchParameters: {
-            query_by: 'hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
+            query_by: 'product_aliases,resolved_category,hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
+            query_by_weights: '10,6,4,3,2,1',
           },
           transformSearchParameters: (
             /** @type {string} */ inputString,
@@ -787,6 +793,7 @@ module.exports = (async () => {
               return {
                 ...searchParameters,
                 query_by: 'sku_tag',
+                query_by_weights: '1',   
                 query: inputString,
                 // filter_by: 'doc_type_tag:=gettingstarted && !doc_type_tag:=project',
               };

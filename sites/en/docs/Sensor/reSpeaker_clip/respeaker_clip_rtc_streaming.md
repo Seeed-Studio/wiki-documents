@@ -1,5 +1,5 @@
 ---
-description: "Stream live Opus audio from reSpeaker Clip over BLE with the RTC SDK: run the FFT demo, understand session establishment, write a minimal receiver, and decode real-time audio."
+description: 'Stream live Opus audio from reSpeaker Clip over BLE with the RTC SDK: run the FFT demo, understand session establishment, write a minimal receiver, and decode real-time audio.'
 title: Build Real-Time Audio Streaming with reSpeaker Clip RTC SDK
 keywords:
   - reSpeaker clip
@@ -17,7 +17,7 @@ last_update:
   date: 08/24/2026
   author: Ray
 createdAt: '2026-08-24'
-updatedAt: '2026-08-24'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/respeaker_clip_rtc_streaming/
 ---
 

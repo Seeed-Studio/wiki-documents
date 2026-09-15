@@ -15,13 +15,14 @@ last_update:
   date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-08-14'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
 import '/src/css/robotics-page-style.css';
+import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch';
 
-# 🤖 Robotics
+# Robotics
 
 > *"The science of today is the technology of tomorrow." - Edward Teller*
 
@@ -40,12 +41,7 @@ import '/src/css/robotics-page-style.css';
     </div>
   </section>
 
-  <nav className="quick-nav" aria-label="Robotics page quick navigation">
-    <a href="#robot-kits">📦 Robot Kits</a>
-    <a href="#actuators">⚙️ Joint Actuators</a>
-    <a href="#sensors">👁️ Sensors</a>
-    <a href="#software">💻 Software Ecosystem</a>
-  </nav>
+  <RoboticsPageSearch />
 
   <section className="kit-index-panel" aria-label="Quick robot kit selection">
     <div className="section-title-row compact-title">
@@ -56,14 +52,14 @@ import '/src/css/robotics-page-style.css';
       <p>Cards are collapsed by default. Open your kit to view its path.</p>
     </div>
     <div className="kit-index-grid">
-      <a href="#rebot-rs"><span>🦾</span><strong>B601-RS</strong><small>RobStride robotic arm path</small></a>
-      <a href="#rebot-dm"><span>🦾</span><strong>B601-DM</strong><small>Damiao robotic arm path</small></a>
-      <a href="#soarm"><span>🤗</span><strong>SO100 / SO101</strong><small>Low-cost LeRobot path</small></a>
-      <a href="#starai"><span>🦾</span><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
-      <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>Mobile chassis and application demos</small></a>
-      <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>Wheeled-legged robot path</small></a>
-      <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>Desktop interactive robot path</small></a>
-      <a href="#atom"><span>🤖</span><strong>Atom</strong><small>Compact humanoid robot path</small></a>
+      <a href="#rebot-rs"><strong>B601-RS</strong><small>RobStride robotic arm path</small></a>
+      <a href="#rebot-dm"><strong>B601-DM</strong><small>Damiao robotic arm path</small></a>
+      <a href="#soarm"><strong>SO100 / SO101</strong><small>Low-cost LeRobot path</small></a>
+      <a href="#starai"><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
+      <a href="#lekiwi"><strong>Lekiwi</strong><small>Mobile chassis and application demos</small></a>
+      <a href="#stackforce"><strong>StackForce Mini</strong><small>Wheeled-legged robot path</small></a>
+      <a href="#reachy"><strong>Reachy Mini</strong><small>Desktop interactive robot path</small></a>
+      <a href="#atom"><strong>Atom</strong><small>Compact humanoid robot path</small></a>
     </div>
   </section>
 
@@ -71,7 +67,7 @@ import '/src/css/robotics-page-style.css';
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Start Here</span>
-        <h2>📦 Robot Kits</h2>
+        <h2>Robot Kits</h2>
       </div>
       <p>Each path starts with hardware setup, then moves into SDK, ROS, simulation, and AI applications.</p>
     </div>
@@ -81,7 +77,6 @@ import '/src/css/robotics-page-style.css';
 <details id="rebot-rs" className="product-card rebot">
   <summary>
     <div className="product-head">
-      <span className="product-icon">🦾</span>
       <div>
         <h3>reBot B601-RS Robotic Arm</h3>
         <span>For teleoperation, visual grasping, ROS2, and AI data collection</span>
@@ -93,7 +88,7 @@ import '/src/css/robotics-page-style.css';
     <div className="product-meta-grid">
       <div><strong>Recommended for</strong><span>First-time reBot Arm users</span></div>
       <div><strong>Learning goal</strong><span>Run teleoperation, visual grasping, and ROS2</span></div>
-      <div><strong>Recommended order</strong><span>Quick Start → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
+<div><strong>Recommended order</strong><span>Quick Start → LeRobot → Pinocchio → Visual Grasping → ROS2 → Web Simulator → Isaac Sim → MIT Position Control → Embodied Agent</span></div>
     </div>
     <div className="learning-steps">
       <a className="step-card" href="/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Quick Start</b><small>Unbox, wire, power on, check drivers, and test basic motion.</small></div><em>Required for beginners</em></a>
@@ -104,6 +99,7 @@ import '/src/css/robotics-page-style.css';
       <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator Development</b><small>Learn Web Simulator integration with ROS2/MuJoCo for virtual-real synchronized control.</small></div><em>Simulation dev</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim Integration</b><small>Simulate the arm in Isaac Sim and sync with the real robot.</small></div><em>Simulation</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_mit_control/"><span className="step-index">8</span><div><b>MIT Position Control</b><small>Get started with MIT position control for the reBot Arm B601-RS.</small></div><em>Control advanced</em></a>
+      <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>Embodied Agent Architecture Design</b><small>Connect a VLM to the arm so natural-language commands drive vision-based grasping with safety-gated control.</small></div><em>Agent architecture</em></a>
     </div>
   </div>
 </details>
@@ -111,7 +107,6 @@ import '/src/css/robotics-page-style.css';
 <details id="rebot-dm" className="product-card rebot">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🦾</span>
     <div>
       <h3>reBot B601-DM Robotic Arm</h3>
       <span>For Damiao-based control, LeRobot, Pinocchio, and ROS2</span>
@@ -137,6 +132,8 @@ import '/src/css/robotics-page-style.css';
   <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 Integration</b><small>Use ROS2 with MoveIt, perception, and system apps.</small></div><em>System integration</em></a>
 
   <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator Development</b><small>Learn Web Simulator integration with ROS2/MuJoCo for virtual-real synchronized control.</small></div><em>Simulation dev</em></a>
+
+  <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim Integration</b><small>Deploy reBot B601-DM in Isaac Sim for simulation, debugging, and control algorithm validation.</small></div><em>Simulation</em></a>
 </div>
 </div>
 </details>
@@ -144,7 +141,6 @@ import '/src/css/robotics-page-style.css';
 <details id="soarm" className="product-card soarm">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🤗</span>
     <div>
       <h3>SO100 / SO101 Robotic Arm</h3>
       <span>Low-cost path for LeRobot, simulation, RL, and GR00T/VLA</span>
@@ -174,7 +170,6 @@ import '/src/css/robotics-page-style.css';
 <details id="starai" className="product-card starai">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🦾</span>
     <div>
       <h3>StarAI Robotic Arm</h3>
       <span>For basic control, MoveIt 2, ROS2 planning, and GR00T</span>
@@ -199,7 +194,6 @@ import '/src/css/robotics-page-style.css';
 <details id="lekiwi" className="product-card lekiwi">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🚗</span>
     <div>
       <h3>Lekiwi Mobile Chassis</h3>
       <span>For chassis control and sound-following demos</span>
@@ -223,7 +217,6 @@ import '/src/css/robotics-page-style.css';
 <details id="stackforce" className="product-card stackforce">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🦿</span>
     <div>
       <h3>StackForce Mini Wheeled-Legged Robot</h3>
       <span>For wheeled-legged control, balance, and motion planning</span>
@@ -246,7 +239,6 @@ import '/src/css/robotics-page-style.css';
 <details id="reachy" className="product-card reachy">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🤗</span>
     <div>
       <h3>Reachy Mini</h3>
       <span>For desktop HRI, agents, SDK, simulation, and AI</span>
@@ -350,7 +342,6 @@ import '/src/css/robotics-page-style.css';
 <details id="atom" className="product-card atom">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🤖</span>
     <div>
       <h3>Atom Compact Humanoid Robot</h3>
       <span>For humanoid robot beginners, servo debugging, motion teaching, and web remote control</span>
@@ -378,7 +369,7 @@ import '/src/css/robotics-page-style.css';
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Reference</span>
-        <h2>⚙️ Joint Actuators</h2>
+        <h2>Joint Actuators</h2>
       </div>
       <p>For motor debugging, communication protocols, and joint troubleshooting.</p>
     </div>
@@ -397,14 +388,14 @@ import '/src/css/robotics-page-style.css';
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Reference</span>
-        <h2>👁️ Sensors</h2>
+        <h2>Sensors</h2>
       </div>
       <p>For visual grasping, SLAM, voice interaction, and robot state perception.</p>
     </div>
     <div className="resource-columns">
-      <div><h4>📡 LiDAR</h4><a href="/robosense_lidar/">RoboSense</a><a href="/mid360/">Livox MID360</a><a href="/a_loam/">A-LOAM Algorithm</a><a href="/slamtec/">Slamtec Series</a></div>
-      <div><h4>📷 Cameras</h4><a href="/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/orbbec_gemini_335lg/">Gemini 335Lg Depth Camera</a><a href="/orbbec_gemini336">Gemini 336 Depth Camera</a><a href="/sensing_gmsl_cameras">SENSING GMSL2 Camera</a><a href="/ac1">RoboSense AC1</a><a href="/orbbec_depth_camera_on_ros/">Orbbec and ROS</a><a href="/orb_slam3_orbbec_gemini2/">ORB-SLAM3 and Gemini2</a><a href="/csi_camera_on_ros/">CSI Camera on Jetson</a><a href="/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
-      <div><h4>🎤 Voice</h4><a href="/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>🧭 IMU</h4><a href="/hexfellow_y200/">HEXFELLOW Y200</a><a href="/wheeltec_imu/">WHEELTEC IMU</a></div>
+      <div><h4>LiDAR</h4><a href="/robosense_lidar/">RoboSense</a><a href="/mid360/">Livox MID360</a><a href="/a_loam/">A-LOAM Algorithm</a><a href="/slamtec/">Slamtec Series</a></div>
+      <div><h4>Cameras</h4><a href="/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/orbbec_gemini_335lg/">Gemini 335Lg Depth Camera</a><a href="/orbbec_gemini336">Gemini 336 Depth Camera</a><a href="/sensing_gmsl_cameras">SENSING GMSL2 Camera</a><a href="/ac1">RoboSense AC1</a><a href="/orbbec_depth_camera_on_ros/">Orbbec and ROS</a><a href="/orb_slam3_orbbec_gemini2/">ORB-SLAM3 and Gemini2</a><a href="/csi_camera_on_ros/">CSI Camera on Jetson</a><a href="/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
+      <div><h4>Voice</h4><a href="/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>IMU</h4><a href="/hexfellow_y200/">HEXFELLOW Y200</a><a href="/wheeltec_imu/">WHEELTEC IMU</a></div>
     </div>
   </section>
 
@@ -412,7 +403,7 @@ import '/src/css/robotics-page-style.css';
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Reference</span>
-        <h2>💻 Software Ecosystem</h2>
+        <h2>Software Ecosystem</h2>
       </div>
       <p>After setup, move into ROS, Isaac, PX4, or VLA.</p>
     </div>

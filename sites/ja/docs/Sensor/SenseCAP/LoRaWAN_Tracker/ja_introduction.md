@@ -9,8 +9,8 @@ slug: /t1000e_for_lorawan_introduction
 sku: 114993591
 sidebar_position: 1
 last_update:
-  date: 2/4/2026
-  author: Janet
+  date: 9/1/2026
+  author: Advent Jiang
 createdAt: '2026-01-09'
 updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/ja/t1000e_for_lorawan_introduction/
@@ -33,7 +33,7 @@ url: https://wiki.seeedstudio.com/ja/t1000e_for_lorawan_introduction/
 LoRaWAN 向け T1000-E は、完全なオープンソースファームウェアを備えています。ユーザー体験を向上させるため、工場出荷時のデバイスにはデモファームウェアをプリインストールしています。ユーザーはまずデモファームウェアで体験したうえで、独自のカスタムファームウェアを開発することもできます。カスタム開発の詳細については、[LoRaWAN Open Source Firmware](https://wiki.seeedstudio.com/ja/open_source_lorawan/) を参照してください。
 
 :::caution note
-ファームウェアを書き込む前に、お使いのデバイスが `T1000-E for LoRaWAN` バージョンであることを必ず確認し、このトラッカーモデルに他の Meshtastic ファームウェアを書き込まないでください。デバイスが完全に動作不能になる可能性があります。
+ファームウェアを書き込む前に、お使いのデバイスが `T1000-E for LoRaWAN` バージョンであることを必ず確認し、このトラッカーモデルに他の Meshtastic または MeshCore ファームウェアを書き込まないでください。デバイスが完全に動作不能になる可能性があります。
 :::
 
 **T1000 シリーズ バージョン比較**

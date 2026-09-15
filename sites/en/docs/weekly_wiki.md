@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/24/2026
+  date: 09/14/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-08-24'
+updatedAt: '2026-09-14'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,35 +18,61 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 24th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 14th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Build a Four-Camera Fisheye Surround View Demo on Jetson](https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/)
+### XIAO IPS Displays with nRF52840
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif" alt="pir" width={800} height="auto" /></p>
+The XIAO IPS Display series powered by the XIAO nRF52840 Plus comes in multiple screen sizes, each combining a compact display with onboard sensing, interaction, and battery management features for different application needs.
+
+**[XIAO 0.96'' IPS Display (nRF52840)](https://wiki.seeedstudio.com/getting_started_0.96_inch_display_nrf52840/)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW096_nRF52840Plus_display_hardware_hero.jpg" alt="XIAO 0.96 inch IPS Display" width={800} height="auto" /></p>
+
+The 0.96'' model features an **80×160 IPS display**, onboard PDM microphone, 6-axis IMU (LSM6DS3), two user buttons, and battery power management with percentage display, making it well suited for ultra-compact wearables, keychain gadgets, and portable sensor nodes.
+
+**[XIAO 1.14'' IPS Display (nRF52840)](https://wiki.seeedstudio.com/getting_started_1.14_inch_display_nrf52840/)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW114_nRF52840Plus_display_hardware_hero.jpg" alt="XIAO 1.14 inch IPS Display" width={800} height="auto" /></p>
+
+The 1.14'' model features a **135×240 IPS display**, onboard PDM microphone, 6-axis IMU, Grove I2C connector, three user buttons, and battery power management, making it suitable for wearable devices, portable instruments, and IoT prototypes.
+
+**[XIAO 1.47'' IPS Touch Display (nRF52840)](https://wiki.seeedstudio.com/getting_started_1.47_inch_touch_display_nrf52840/)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW147_nRF52840Plus_display_hardware_hero.jpg" alt="XIAO 1.47 inch IPS Touch Display" width={800} height="auto" /></p>
+
+The 1.47'' model features a **172×320 capacitive touch display**, onboard PDM microphone, 6-axis IMU (LSM6DS3), MicroSD card slot, and battery power management, making it suitable for portable HMI applications, IoT dashboards, and interactive prototypes.
+
+### XIAO IPS Displays with ESP32-S3
+
+The XIAO IPS Display series powered by the XIAO ESP32-S3 Plus comes in multiple screen sizes, combining compact color displays with onboard sensing, interaction, battery monitoring, and Wi-Fi and Bluetooth connectivity for a wide range of connected applications.
+
+**[XIAO 0.96'' IPS Display (ESP32-S3)](https://wiki.seeedstudio.com/getting_started_0.96_inch_display_esp32s3/)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_hero.jpg" alt="XIAO 0.96 inch IPS Display ESP32-S3" width={800} height="auto" /></p>
+
+The 0.96'' model features an **80×160 IPS display**, onboard PDM microphone, 6-axis IMU, two user buttons, I2C and I2S expansion pads, and battery voltage sensing, making it well suited for compact wearables, portable sensor dashboards, keychain gadgets, and wireless IoT prototypes.
+
+**[XIAO 1.14'' IPS Display (ESP32-S3)](https://wiki.seeedstudio.com/getting_started_1.14_inch_display_esp32s3/)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_display_hardware_hero.jpg" alt="XIAO 1.14 inch IPS Display ESP32-S3" width={800} height="auto" /></p>
+
+The 1.14'' model features a **135×240 IPS display**, onboard PDM microphone, 6-axis IMU, Grove I2C connector, three user buttons, and battery voltage measurement, making it suitable for wearable devices, sensor dashboards, portable instruments, and connected IoT projects.
+
+**[XIAO 1.47'' IPS Display (ESP32-S3)](https://wiki.seeedstudio.com/getting_started_1.47_inch_touch_display_esp32s3/)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_hero.jpg" alt="XIAO 1.47 inch IPS Display ESP32-S3" width={800} height="auto" /></p>
+
+The 1.47'' model features a **172×320 color display with capacitive touch**, onboard PDM microphone, 6-axis IMU, MicroSD card slot, and battery voltage measurement, making it suitable for portable HMI applications, IoT dashboards, wearable devices, and interactive prototypes.
+
+### [SenseCAP S1000 V2 CO₂ Calibration](https://wiki.seeedstudio.com/sensecap_s1000_v2_co2_calibration/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_S1000_V2_CO2_Calibration.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project shows a **four-camera fisheye surround-view system** on NVIDIA Jetson. Four fisheye cameras around the chassis are calibrated, undistorted, and stitched into a real-time **bird's-eye view (BEV)**.
-
-</div>
-
-### [Get Started with SenseCAP Combo](https://wiki.seeedstudio.com/get_started_with_sensecap_combo/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Combo/combo-intro.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This document introduces how to get started with the SenseCAP Combo 5-in-1 Sensor with 4G, including SIM card and sensor installation, device configuration, SenseCAP Cloud connection, and data monitoring.
-
-</div>
-
-### [Build a reCamera and NVIDIA Jetson VLM Event Gateway](https://wiki.seeedstudio.com/recamera_jetson_vlm_gateway/)
-
-<div style={{ textAlign: "justify" }}>
-
-This document introduces how to build a VLM event gateway using reCamera Basic and NVIDIA Jetson, combining YOLOv8 and Qwen3-VL for scene analysis, event alerts, and real-time video streaming.
+This guide explains how to calibrate the CO₂ sensor on the SenseCAP S1000 V2, covering both ABC automatic baseline correction and target one-point calibration for different deployment environments.
 
 </div>
 
@@ -201,5 +227,8 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.8.03rd](/Seeed_Elderly/weekly_wiki/2026/wiki260803)
 - [weekly wiki on 2026.8.10th](/Seeed_Elderly/weekly_wiki/2026/wiki260810)
 - [weekly wiki on 2026.8.17th](/Seeed_Elderly/weekly_wiki/2026/wiki260817)
+- [weekly wiki on 2026.8.24th](/Seeed_Elderly/weekly_wiki/2026/wiki260824)
+- [weekly wiki on 2026.8.31st](/Seeed_Elderly/weekly_wiki/2026/wiki260831)
+- [weekly wiki on 2026.9.07th](/Seeed_Elderly/weekly_wiki/2026/wiki260907)
 
 </details>

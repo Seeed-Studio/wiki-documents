@@ -1,0 +1,10 @@
+position: 3 # float position is supported
+label: 'guides'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: guides
+link:
+  type: generated-index
+  slug: recamera_guides
+  title: reCamera guides
+  description: You can find all the information about integrating various ecosystems with reCamera here!

@@ -5,10 +5,10 @@ image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png
 slug: /seeed_epaper_displays
 sidebar_position: 1
 last_update:
-  date: 05/18/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-04-28'
-updatedAt: '2026-06-30'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/seeed_epaper_displays/
 ---
 
@@ -24,7 +24,7 @@ Seeed Studio offers an end-to-end ePaper portfolio organized around three produc
 2. **Driver / Expansion Boards** — pair an MCU with universal or large-format ePaper screens to build your own product.
 3. **DIY Kits & Bare Panels** — designed for the maker community, optimized for specific platforms such as TRMNL or XIAO.
 
-All three lines share the **same software ecosystem**: SenseCraft HMI (no-code), Home Assistant / ESPHome, TRMNL, Arduino / ESP-IDF / PlatformIO, Zephyr, plus visual UI tools like SquareLine Vision, EEZ Studio, and Lopaka. Pick a hardware family, and the rest of the toolchain stays the same.
+All three lines share the **same software ecosystem**: SenseCraft Seeedash (no-code), Home Assistant / ESPHome, TRMNL, Arduino / ESP-IDF / PlatformIO, Zephyr, plus visual UI tools like SquareLine Vision, EEZ Studio, and Lopaka. Pick a hardware family, and the rest of the toolchain stays the same.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -42,7 +42,7 @@ If you are not sure where to start, use this decision matrix:
     <tr>
       <td>Power on an ePaper dashboard out of the box, no soldering, no extra wiring</td>
       <td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_main_page" target="_blank" rel="noopener noreferrer"><strong>reTerminal E Series →</strong></a></td>
-      <td>Battery, enclosure, T/H sensor, buzzer, buttons, and Wi-Fi all integrated. Ships with SenseCraft HMI firmware.</td>
+      <td>Battery, enclosure, T/H sensor, buzzer, buttons, and Wi-Fi all integrated. Ships with SenseCraft Seeedash firmware.</td>
     </tr>
     <tr>
       <td>Pair an existing ePaper screen (24-pin, 50-pin, 13.3", 10.3", etc.) with an MCU and battery</td>
@@ -103,7 +103,7 @@ For a side-by-side specification comparison (resolution, refresh time, partial-r
 
 If you already have (or want to source separately) a 24-pin, 50-pin, 10.3", or 13.3" ePaper panel, the driver-board family gives you the carrier electronics — battery management, buttons, charging IC, and the MCU.
 
-### ESP32-S3 driver boards (Wi-Fi / BLE, SenseCraft HMI)
+### ESP32-S3 driver boards (Wi-Fi / BLE, SenseCraft Seeedash)
 
 <div class="table-center">
   <table align="center">
@@ -231,7 +231,7 @@ Every Seeed ePaper product converges into the same software ecosystem. Pick the 
       <th>Compatible with</th>
     </tr>
     <tr>
-      <td><a href="https://wiki.seeedstudio.com/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer"><strong>SenseCraft HMI</strong></a></td>
+      <td><a href="https://wiki.seeedstudio.com/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer"><strong>SenseCraft Seeedash</strong></a></td>
       <td align="center">No-code (cloud)</td>
       <td>AI Generator, Gallery, Canvas, RSS / Web Content, OTA deployment. The default firmware on reTerminal E Series.</td>
       <td>reTerminal E1001 / E1002 / E1003 / E1004 · EE02 · EE03 · EE04 · EE05</td>
@@ -298,7 +298,7 @@ Each tutorial below walks through one platform end-to-end:
 
 ### No-code / visual UI design tools
 
-- [Work with SenseCraft HMI](https://wiki.seeedstudio.com/EE04_with_hmi) — Seeed's no-code visual interface platform; covers reTerminal E Series and EE0x driver boards.
+- [Work with SenseCraft Seeedash](https://wiki.seeedstudio.com/EE04_with_hmi) — Seeed's no-code visual interface platform; covers reTerminal E Series and EE0x driver boards.
 - [Work with SquareLine Vision](https://wiki.seeedstudio.com/reterminal_e10xx_with_squareline_vision)
 - [Work with EEZ Studio](https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio) — combined reTerminal E Series + EE04 LVGL workflow.
 - [Work with Lopaka](https://wiki.seeedstudio.com/reterminal_e10xx_with_lopaka)
@@ -315,7 +315,7 @@ Each tutorial below walks through one platform end-to-end:
 
 ## Resources
 
-- [SenseCraft HMI Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
+- [SenseCraft Seeedash Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [XIAO Series Overview](https://wiki.seeedstudio.com/xiao_topic_page/)
 - [Seeed Studio ePaper Category Store](https://www.seeedstudio.com/catalogsearch/result/?q=epaper)

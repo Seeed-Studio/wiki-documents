@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_ex
 slug: /t1000_e_arduino_examples
 sidebar_position: 4
 last_update:
-  date: 2/4/2026
-  author: Janet
+  date: 9/1/2026
+  author: Advent Jiang
 createdAt: '2025-05-30'
 updatedAt: '2026-02-04'
 url: https://wiki.seeedstudio.com/cn/t1000_e_arduino_examples/
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/cn/t1000_e_arduino_examples/
 
 
 :::caution note
-在刷写固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本，请不要将其他 Meshtastic 固件刷写到此追踪器型号，这可能导致设备完全损坏。
+在刷写固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本，请不要将其他 Meshtastic 或 MeshCore 固件刷写到此追踪器型号，这可能导致设备完全损坏。
 :::
 
 以下 Arduino 示例可供使用：

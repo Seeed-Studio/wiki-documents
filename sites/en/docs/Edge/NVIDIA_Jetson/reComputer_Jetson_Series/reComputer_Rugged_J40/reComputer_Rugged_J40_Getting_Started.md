@@ -6,31 +6,27 @@ keywords:
   - IP66
   - Jetson
   - Getting Started
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg
 slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
-  date: 03/04/2026
+  date: 09/01/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-08-07'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
 # Getting Started with reComputer Rugged J40
 
-:::note
-This product is currently under development. Specifications and availability are subject to change.
-:::
-
 <div align="center">
-  <img width="700" src="https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png"/>
+  <img width="700" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J4012" />
 </div>
 
-The reComputer Rugged J40 is an IP66-rated, fanless edge AI computer powered by NVIDIA Jetson Orin NX/Nano modules. Designed for harsh outdoor environments including marine, vehicle-mounted, and industrial deployments, it delivers up to 100 TOPS of AI performance in a compact, passively cooled enclosure with fully waterproof M12 connectors.
+The reComputer Rugged J4012 is an IP66-rated edge AI computer powered by NVIDIA Jetson Orin NX 16GB. Its sealed M12 connectivity provides USB, Ethernet with PSE, CAN, RS-232/422/485, and DI/DO interfaces, while an M.2 Key B slot supports 5G expansion, making it well suited for AMR, robotics, agriculture, industrial automation, and maritime applications.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/" target="_blank">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now 🖱️</font></span></strong>
   </a>
 </div>
@@ -253,7 +249,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## Resources
 
-- [reComputer Rugged J40 Datasheet](#) *(coming soon)*
+- [reComputer Rugged J401 Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf)
 - [Linux_for_Tegra Source Code](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson Devices Comparison](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 

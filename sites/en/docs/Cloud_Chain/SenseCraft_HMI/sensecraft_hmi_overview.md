@@ -1,22 +1,22 @@
 ---
-description: Introducing SenseCraft HMI, the human-computer interaction page platform built specifically for the reTerminal series.
-title: SenseCraft HMI Overview
+description: Introducing SenseCraft Seeedash, the human-computer interaction page platform built specifically for the reTerminal series.
+title: SenseCraft Seeedash Overview
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft_hmi_overview
 sidebar_position: 1
 last_update:
-  date: 07/21/2025
-  author: Citric
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-07-25'
-updatedAt: '2026-08-04'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/sensecraft_hmi_overview/
 ---
 
-# SenseCraft HMI Overview
+# SenseCraft Seeedash Overview
 
 ## Introduction
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home) is Seeed Studio's powerful cloud-based interface design platform that enables you to create professional visual interfaces for screen-based devices without coding. With an intuitive drag-and-drop editor, pre-built templates, and AI-powered design capabilities, SenseCraft HMI makes it easy to transform your hardware into beautiful information displays, dashboards, digital signage, and control panels.
+[SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home) is Seeed Studio's powerful cloud-based interface design platform that enables you to create professional visual interfaces for screen-based devices without coding. With an intuitive drag-and-drop editor, pre-built templates, and AI-powered design capabilities, SenseCraft Seeedash makes it easy to transform your hardware into beautiful information displays, dashboards, digital signage, and control panels.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/23.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -38,9 +38,9 @@ url: https://wiki.seeedstudio.com/sensecraft_hmi_overview/
 
 ## Getting Started
 
-To begin using SenseCraft HMI:
+To begin using SenseCraft Seeedash:
 
-1. **Access the Platform**: Visit [SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
+1. **Access the Platform**: Visit [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
 
 2. **Create an Account**: Sign up for a free SenseCraft account if you don't already have one
 
@@ -56,7 +56,7 @@ To begin using SenseCraft HMI:
 
 ### [Getting Started](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting-started/)
 
-Learn how to create your SenseCraft HMI account and access the platform.
+Learn how to create your SenseCraft Seeedash account and access the platform.
 
 ### [Firmware Update and Flashing](https://sensecraft-hmi-docs.seeed.cc/en/guides/firmware-update/)
 
@@ -72,11 +72,11 @@ Learn how to use the Firmware Flasher and Image Dithering tools to optimize your
 
 ### [Deploying to Your Device](https://sensecraft-hmi-docs.seeed.cc/en/guides/deploying-to-device/)
 
-Step-by-step guide for deploying your SenseCraft HMI projects to your e-paper display devices.
+Step-by-step guide for deploying your SenseCraft Seeedash projects to your e-paper display devices.
 
 ## Function Documentation
 
-SenseCraft HMI offers several specialized functions, each designed for different display needs:
+SenseCraft Seeedash offers several specialized functions, each designed for different display needs:
 
 ### [AI Generation Function](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)
 
@@ -106,7 +106,7 @@ Complete list of supported devices and hardware requirements.
 
 ### [Video Guide](https://sensecraft-hmi-docs.seeed.cc/en/video-guide/)
 
-Step-by-step video tutorials for SenseCraft HMI platform.
+Step-by-step video tutorials for SenseCraft Seeedash platform.
 
 ### [Pricing](https://sensecraft-hmi-docs.seeed.cc/en/pricing/)
 
@@ -114,11 +114,11 @@ Current pricing information and plans.
 
 ### [Release Notes](https://sensecraft-hmi-docs.seeed.cc/en/release-notes/)
 
-Latest updates and version history of the SenseCraft HMI platform.
+Latest updates and version history of the SenseCraft Seeedash platform.
 
 ## Resources
 
-- [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
+- [SenseCraft Seeedash Platform](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
 - [Compatible Devices - reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## Tech Support & Product Discussion

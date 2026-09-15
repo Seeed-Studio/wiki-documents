@@ -814,6 +814,7 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/cn_Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/cn_Benchmark_Labs_Forecast_Integration_for_Seeed_Weather_Stations',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/cn_Firmware_Update',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/cn_SenseCAP_S1000_V2_CO2_Calibration',
                   ],
                 },
               ],
@@ -2205,6 +2206,24 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: '常见问题',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/cn_respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/cn_xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/cn_flex_xvf3800_faq',
+            'FAQ/respeaker/cn_respeaker_lite_faq',
+            'FAQ/respeaker/cn_xvf3000_faq',
+            'FAQ/respeaker/cn_respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/cn_respeaker_clip_faq',
+          ],
+        },
+        {
+          type: 'category',
           label: '应用',
           collapsed: true,
           collapsible: true,
@@ -2227,6 +2246,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_rebot_arm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_arm',
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_ros',
+                'Sensor/reSpeaker_clip/cn_respeaker_clip_rebot_arm',
               ],
             },
             {
@@ -2258,6 +2278,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/cn_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/cn_respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/cn_respeaker_clip_chat_architecture',
               ],
             },
           ],
@@ -3832,6 +3853,7 @@ const sidebars = {
           type: 'category',
           label: '入门指南',
           items: [
+            'Edge/NVIDIA_Jetson/cn_Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',
@@ -4170,7 +4192,12 @@ const sidebars = {
             {
               type: 'category',
               label: '具身智能',
+              link: {
+                type: 'doc',
+                id: 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Microduck_RL_on_Jetson',
+              },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Microduck_RL_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Voice_LLM_for_Reachy_Mini',
@@ -4278,6 +4305,7 @@ const sidebars = {
               label: '内存优化',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/cn_JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/cn_JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {
@@ -4616,6 +4644,7 @@ const sidebars = {
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_pinocchio',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_isaacsim',
                   'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_control_mit',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Agent'
               ]
             }
           ]
@@ -5067,7 +5096,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft HMI',
+      label: 'SenseCraft Seeedash',
       collapsed: true,
       collapsible: true,
       link: {

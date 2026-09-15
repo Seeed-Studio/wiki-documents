@@ -814,6 +814,7 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Benchmark_Labs_Forecast_Integration_for_Seeed_Weather_Stations',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Firmware_Update',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/es_SenseCAP_S1000_V2_CO2_Calibration',
                   ],
                 },
               ],
@@ -2204,6 +2205,24 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Preguntas frecuentes',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/es_respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/es_xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/es_flex_xvf3800_faq',
+            'FAQ/respeaker/es_respeaker_lite_faq',
+            'FAQ/respeaker/es_xvf3000_faq',
+            'FAQ/respeaker/es_respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/es_respeaker_clip_faq',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Aplicaciones',
           collapsed: true,
           collapsible: true,
@@ -2226,6 +2245,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_rebot_arm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_arm',
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_ros',
+                'Sensor/reSpeaker_clip/es_respeaker_clip_rebot_arm',
               ],
             },
             {
@@ -2257,6 +2277,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/es_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/es_respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/es_respeaker_clip_chat_architecture',
               ],
             },
           ],
@@ -3831,6 +3852,7 @@ const sidebars = {
           type: 'category',
           label: 'Comenzando',
           items: [
+            'Edge/NVIDIA_Jetson/es_Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',
@@ -4169,7 +4191,12 @@ const sidebars = {
             {
               type: 'category',
               label: 'IA Encarnada',
+              link: {
+                type: 'doc',
+                id: 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Microduck_RL_on_Jetson',
+              },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Microduck_RL_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Voice_LLM_for_Reachy_Mini',
@@ -4278,6 +4305,7 @@ const sidebars = {
               label: 'Optimización de memoria',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/es_JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/es_JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {
@@ -4615,7 +4643,8 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_ROS2_Integration',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_isaacsim',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_control_mit'
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_control_mit',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_Agent'
               ]
             }
           ]
@@ -5081,7 +5110,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft HMI',
+      label: 'SenseCraft Seeedash',
       collapsed: true,
       collapsible: true,
       link: {

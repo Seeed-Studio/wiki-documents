@@ -6,16 +6,16 @@ keywords:
   - 驱动板
   - 13.3 英寸
   - ESP32
-  - SenseCraft HMI
+  - SenseCraft Seeedash
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 sidebar_position: 1
 slug: /getting_started_with_ee02
 sku: 100067144
 last_update:
-  date: 8/18/2026
-  author: Nemo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-12-19'
-updatedAt: '2026-08-18'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 ---
 
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 <table align="center">
     <tr>
         <th>XIAO ePaper Display Board EE02</th>
-        <th>13.3" spectra™ 6 电子墨水显示屏</th>
+        <th>13.3" spectra™ 6 E-Ink Display</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-xiao-epaper-display-board-ee02.jpg"/></div>
@@ -46,21 +46,21 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 
 ## 介绍
 
-**XIAO ePaper Display Board EE02** 是一款高性能电子纸屏驱动板，专为 **13.3 英寸 Spectra™ 6 六色**电子纸显示屏设计。其核心采用 **XIAO ESP32-S3 Plus**，支持 Wi-Fi 和蓝牙连接，并且**预装了 SenseCraft HMI 固件**——让你无需编程即可通过 AI 加持的拖拽式 UI 设计工具完成界面设计。它是实时看板、数字标牌、智能家居控制面板等无线显示应用的理想解决方案。
+**XIAO ePaper Display Board EE02** 是一款高性能电子纸屏幕驱动板，专为 **13.3 英寸 Spectra™ 6 六色**电子纸显示屏设计。其核心为 **XIAO ESP32-S3 Plus**，支持 Wi-Fi 和蓝牙连接，并且**预装了 SenseCraft Seeedash 固件**——无需编程即可实现由 AI 驱动的拖拽式 UI 设计。它是实时仪表盘、数字标牌和智能家居控制面板等无线显示应用的理想解决方案。
 
-与其面向小尺寸屏幕的兄弟产品 EE04 类似，EE02 为希望在物联网项目中集成大尺寸电子纸显示屏的开发者提供了流畅的使用体验。它简化了驱动流程，并支持 SenseCraft HMI 平台，方便进行内容管理。
+与其兄弟产品 EE04（为小尺寸屏幕设计）类似，EE02 为希望在物联网项目中集成大尺寸电子纸显示屏的开发者提供了流畅的体验。它简化了驱动流程，并支持 SenseCraft Seeedash 平台，方便进行内容管理。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### 特性
 
 - **内置 XIAO ESP32-S3 Plus：** 连接兼容的电子纸显示屏后即可立即工作。
-- **专为 13.3" Spectra™ 6 电子墨水屏设计：** 针对 13.3" Spectra™ 6 显示屏优化设计，确保快速上手和稳定运行。
-- **带开关的 BAT 接口：** 提供简便的电池连接方式并集成电源开关，实现高效电源管理和节能。
+- **专用 13.3" Spectra™ 6 电子墨水支持：** 专为 13.3" Spectra™ 6 显示屏设计，确保快速上手和稳定运行。
+- **带开关的 BAT 接口：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
 - **用户友好按键：** 配备 1 个复位按键和 3 个用户可编程按键，为项目加速和自定义功能提供灵活性。
-- **预烧录 SenseCraft HMI 固件：** 即插即用，直接搭配 SenseCraft HMI——我们的 AI 加持零代码 UI 设计平台。可从丰富模板中选择，或通过拖拽式 UI 搭建（可选 AI 辅助），仅需几次点击即可将界面部署到电子纸显示屏。
+- **预装 SenseCraft Seeedash 固件：** 即插即用，直接使用 SenseCraft Seeedash——我们的 AI 驱动零代码 UI 设计平台。可从丰富模板中选择，或通过拖拽式 UI 搭建（可选 AI 辅助），仅需几次点击即可将界面部署到电子纸显示屏。
 
-### 规格参数
+### 规格
 
 | 参数 | 描述 |
 | :--- | :--- |
@@ -77,17 +77,17 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 | **开关** | 电池电源开/关 |
 | **按键** | 1x 复位按键 <br/> 3x 用户按键 |
 
-### 应用场景
+### 应用
 
-- **实时数据看板**：用于显示天气、股票、交通或家庭自动化等实时信息。
-- **安全告警**：用于显示安防系统状态和告警信息的低功耗通知屏。
-- **电子相框**：具备柔和刷新效果和超低功耗的电子纸相框。
-- **公共交通到站信息牌**：用于车站和站点的公交/列车到站信息显示。
-- **数字标牌**：餐厅菜单、会议室门牌以及零售价签等。
-- **智能家居**：用于显示天气、日历和家庭自动化状态的信息面板。
+- **实时仪表盘**：用于天气、股票、交通或家庭自动化数据的实时信息显示。
+- **安全警报**：用于显示安防系统状态和警报信息的低功耗通知屏。
+- **电子相框**：具备柔和刷新和超低功耗的电子纸相框。
+- **公共交通到站牌**：用于车站和站点的公交/列车到站信息显示。
+- **数字标牌**：餐厅菜单、会议室门牌和零售价签等。
+- **智能家居**：用于天气、日历和家庭自动化状态的信息面板。
 - **工业 HMI**：用于机械设备和仓储管理的低功耗状态显示。
 - **教育**：电子书阅读器或教室信息公告板。
-- **办公**：桌牌或公告板。
+- **办公**：桌面名牌或公告板。
 
 ## 硬件概览
 
@@ -97,25 +97,25 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 - **FPC 连接器**：用于连接 13.3 英寸电子墨水显示屏。
 - **复位按键**：用于复位开发板。
 - **按键**：分别为“刷新页面”、“切换上一页”和“切换下一页”。
-- **电源开关**：控制电池电源的开/关。
+- **开关**：控制电池电源的开/关。
 - **Boot 按键**：用于进入 bootloader 模式。
 - **LED 指示灯**：闪烁表示未连接电池，绿灯常亮表示电池正在充电。
 - **JST 接口**：2 针 JST 2.0mm 接口，用于连接电池。
 
-## SenseCraft HMI 快速上手
+## 使用 SenseCraft Seeedash 快速上手
 
-本节将引导你将 EE02 连接到 SenseCraft HMI 平台，从而轻松实现无线更新屏幕内容。
+本节将指导你将 EE02 连接到 SenseCraft Seeedash 平台，从而轻松实现无线更新屏幕内容。
 
 ### 前置准备
 
 在开始之前，请确保你已经具备以下条件：
 
-- 一个用于 SenseCraft HMI 平台的 Seeed Studio 账号（如果还没有，请在[此处注册](https://sensecraft.seeed.cc/hmi)）
-- 一张 2.4GHz Wi-Fi 网络（不支持 5GHz）
+- 一个用于 SenseCraft Seeedash 平台的 Seeed Studio 账号（如果还没有，请[点击这里注册](https://sensecraft.seeed.cc/hmi)）
+- 一个 2.4GHz Wi-Fi 网络（不支持 5GHz）
 
 ### 设备安装
 
-**步骤 1. 连接屏幕与开发板**
+**步骤 1. 连接屏幕和开发板**
 小心地将 13.3 英寸电子墨水屏的 FPC 线缆连接到 EE02 驱动板上的连接器，确保锁扣机构已牢固锁紧。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.gif" style={{width:800, height:'auto'}}/></div>
@@ -138,21 +138,21 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
 **步骤 5. 获取配对码**
-网络配置成功后，屏幕会再次刷新并显示一个唯一的 **配对码（Pairing Code）**（或设备 ID）。你将在下一步中用到该配对码。
+网络配置成功后，屏幕会再次刷新并显示一个唯一的 **配对码（Pairing Code）**（或设备 ID）。你将在下一步中用到此代码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.jpg" style={{width:300,height:'auto'}}/></div>
 
 ### 平台绑定与更新
 
-**步骤 6. 在 SenseCraft HMI 上绑定设备**
-前往 [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi/device)。登录你的账号，进入设备管理页面并选择“Add Device”。输入电子墨水屏上显示的配对码，将设备绑定到你的账号。
+**步骤 6. 在 SenseCraft Seeedash 上绑定设备**
+前往 [SenseCraft Seeedash 平台](https://sensecraft.seeed.cc/hmi/device)，登录你的账号。进入设备管理页面并选择“New Device”。输入电子墨水屏上显示的配对码，将设备绑定到你的账号。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
 
 **步骤 7. 创建并推送新界面**
-在 SenseCraft HMI 平台上，使用编辑器创建一个新界面（例如上传一张图片或设计一个数据看板）。
+在 SenseCraft Seeedash 平台上，使用编辑器创建一个新界面（例如上传一张图片或设计一个仪表盘）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -165,11 +165,11 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 
 **步骤 9. 在屏幕上显示**
 
-最后，EE02 会接收数据并刷新 13.3 英寸屏幕，显示你的新内容。
+最后，EE02 将接收数据并刷新 13.3 英寸屏幕，显示你的新内容。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/13.png" style={{width:300, height:'auto'}}/></div>
 
-## Arduino 快速上手
+## 使用 Arduino 快速上手
 
 ### 安装 Seeed GFX2 库
 
@@ -187,7 +187,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_with_ee02/
 </a>
 </div>
 
-下载库文件后，依次进入 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载好的库文件。
+下载库文件后，依次进入 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载的库文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/15.png" style={{width:500, height:'auto'}}/></div>
 
@@ -205,7 +205,7 @@ File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 然后点击 **Upload** 上传代码。
-现在你就可以在电子纸屏幕上看到反馈了！下面是 HelloWorld 示例的运行效果。
+现在你就可以在电子墨水屏上看到反馈了！下面是 HelloWorld 示例的运行效果。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/18.png" style={{width:500, height:'auto'}}/></div>
 
 ## 故障排查
@@ -222,15 +222,15 @@ File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series 
 *   靠近路由器以确保信号强度足够。
 
 **Q3：屏幕显示模糊或有残影。**
-*   如果长时间未刷新屏幕或电源不稳定，可能会出现这种情况。请尝试通过 HMI 平台再次刷新屏幕。
+*   如果长时间未刷新屏幕或电源不稳定，可能会出现这种情况。请尝试通过 Seeedash 平台再次刷新屏幕。
 
 **Q4：运行过程中听到高频声音。**
-*   这是正常现象！电子纸电源电路在刷新时可能会产生间歇性的高频声音，这不会影响性能或产品寿命。
+*   这是正常现象！ePaper 供电电路在刷新时可能会产生间歇性的高频声音，这不会影响性能或产品寿命。
 
-**Q5：无法在 SenseCraft HMI 上绑定设备 / 配对失败。**
+**Q5：无法在 SenseCraft Seeedash 上绑定设备 / 配对失败。**
 *   仔细检查是否正确输入了配对码（区分大小写）。
 *   确保 EE02 已上电并连接到 Wi-Fi（查看屏幕状态）。
-*   在配对设置过程中，确保手机和 EE02 处于同一个 2.4GHz Wi-Fi 网络。
+*   在配网过程中，确保手机和 EE02 处于同一个 2.4GHz Wi-Fi 网络。
 *   如果设备显示为离线，按下 Reset 按钮后重新尝试配对。
 
 ## 资源
@@ -240,7 +240,7 @@ File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series 
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="table-center">
   <div class="button_tech_support_container">

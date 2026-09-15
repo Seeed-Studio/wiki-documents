@@ -13,7 +13,7 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-05-21'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/recomputer_industrial_r22xx_getting_start/
 ---
 
@@ -895,6 +895,9 @@ The reComputer Industrial R2200 features 2x native HDMI interface from CM5, supp
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.16-1.png" style={{width:200, height:'auto'}}/></div>
 The reComputer Industrial R2200 features an RTC circuit that powered by the capacitor, enabling it to maintain timekeeping functionality even in the event of power loss.
 
+:::note
+When using the RTC, if the device suddenly loses power, you need to wait until the RTC is fully discharged before reconnecting power and restarting. If it is not fully discharged, the device may fail to meet the restart condition and may not start up properly.
+:::
 
 ### Watchdog
 

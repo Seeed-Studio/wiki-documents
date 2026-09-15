@@ -32,6 +32,52 @@ const CATEGORY_MAPPING = {
   'Managed_Services': 'managedServicesList'
 };
 
+// J601 / Jetson Thor demo auto-filter
+const J601_LANG_DIRS = {
+  en: [
+    'sites/en/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/en/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ],
+  zh: [
+    'sites/zh-CN/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/zh-CN/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ],
+  ja: [
+    'sites/ja/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/ja/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ],
+  es: [
+    'sites/es/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/es/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ],
+  pt: [
+    'sites/pt-BR/docs/Edge/NVIDIA_Jetson/Application',
+    'sites/pt-BR/docs/Edge/NVIDIA_Jetson/Other_Devices'
+  ]
+};
+
+const J601_KEYWORDS = [
+  'j601',
+  'jetson thor',
+  'agx thor',
+  'robotics j601',
+  'recomputer robotics j601'
+];
+
+const J601_FOLDER_CATEGORY = {
+  Computer_Vision: 'Computer Vision',
+  Generative_AI: 'Generative AI',
+  Robotics: 'Robotics',
+  Developer_Tools: 'Developer Tools',
+  Multimodal_AI: 'Multimodal AI',
+  Physical_AI: 'Physical AI',
+  Managed_Services: 'Managed Services',
+  Other_Devices: 'Other Devices'
+};
+
+const j601DemoData = [];
+
+
 // 存储提取的数据（按分类）
 const data = {
   communityList_cv: [],
@@ -200,11 +246,15 @@ function extractProjectInfo(content, filePath, lang) {
 
   const author = authorMatch ? cleanValue(authorMatch[1]) : 'Seeed Studio';
 
+  const descriptionMatch = frontmatter.match(/^description:\s*(.*)$/m);
+  const description = descriptionMatch ? cleanValue(descriptionMatch[1]) : '';
+
   return {
     mergeKey,
     name,
     img,
     URL,
+    description,
     category: categoryArray,
     lastUpdated,
     author
@@ -235,7 +285,141 @@ function buildSlugFromFilePath(filePath, lang) {
   return `/${fileName}`;
 }
 
-// 生成配置文件
+
+
+function walkMarkdownFiles(dir, callback) {
+  if (!fs.existsSync(dir)) return;
+
+  fs.readdirSync(dir, { withFileTypes: true }).forEach(entry => {
+    const fullPath = path.join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      walkMarkdownFiles(fullPath, callback);
+      return;
+    }
+
+    if (!entry.isFile() || !(entry.name.endsWith('.md') || entry.name.endsWith('.mdx'))) {
+      return;
+    }
+
+    callback(fullPath, fs.readFileSync(fullPath, 'utf8'));
+  });
+}
+
+function extractFrontmatterList(frontmatter, field) {
+  const blockMatch = frontmatter.match(new RegExp(`^${field}:\\s*\\n((?:\\s+-\\s+.+(?:\\n|$))*)`, 'm'));
+  if (blockMatch) {
+    return blockMatch[1];
+  }
+
+  const inlineMatch = frontmatter.match(new RegExp(`^${field}:\\s*\\[(.*?)\\]`, 's'));
+  return inlineMatch ? inlineMatch[1] : '';
+}
+
+function buildJ601SearchText(project, frontmatter, filePath) {
+  return [
+    project.name,
+    project.description,
+    project.mergeKey,
+    extractFrontmatterList(frontmatter, 'keywords'),
+    extractFrontmatterList(frontmatter, 'tags'),
+    path.basename(filePath)
+  ]
+    .join(' ')
+    .toLowerCase();
+}
+
+function matchesJ601Keywords(searchText) {
+  return J601_KEYWORDS.some(keyword => searchText.includes(keyword));
+}
+
+function getJ601FolderCategory(relativePath) {
+  if (relativePath.includes('/Application/')) {
+    const folder = relativePath.split('/Application/')[1].split('/')[0];
+    return J601_FOLDER_CATEGORY[folder] || folder.replace(/_/g, ' ');
+  }
+
+  return J601_FOLDER_CATEGORY.Other_Devices;
+}
+
+function collectJ601MatchedKeys() {
+  const matchedKeys = new Set();
+  const enDirs = J601_LANG_DIRS.en || [];
+
+  enDirs.forEach(baseDir => {
+    walkMarkdownFiles(baseDir, (filePath, content) => {
+      const project = extractProjectInfo(content, filePath, 'en');
+      if (!project) return;
+
+      const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
+      const frontmatter = frontmatterMatch ? frontmatterMatch[1] : '';
+      const searchText = buildJ601SearchText(project, frontmatter, filePath);
+
+      if (matchesJ601Keywords(searchText)) {
+        matchedKeys.add(project.mergeKey);
+      }
+    });
+  });
+
+  return matchedKeys;
+}
+
+function extractJ601DemoList() {
+  const matchedKeys = collectJ601MatchedKeys();
+  const projectMap = new Map();
+
+  Object.entries(J601_LANG_DIRS).forEach(([lang, dirs]) => {
+    dirs.forEach(baseDir => {
+      walkMarkdownFiles(baseDir, (filePath, content) => {
+        const project = extractProjectInfo(content, filePath, lang);
+        if (!project || !matchedKeys.has(project.mergeKey)) return;
+
+        const relativePath = filePath.replace(/\\/g, '/');
+        const folderCategory = getJ601FolderCategory(relativePath);
+        const categoryValue = project.category.length ? project.category : [folderCategory];
+
+        if (!projectMap.has(project.mergeKey)) {
+          projectMap.set(project.mergeKey, {
+            name: {},
+            description: {},
+            img: project.img,
+            URL: {},
+            category: {},
+            lastUpdated: project.lastUpdated,
+            author: project.author
+          });
+        }
+
+        const existing = projectMap.get(project.mergeKey);
+        existing.name[lang] = project.name;
+        existing.description[lang] = project.description || '';
+        existing.URL[lang] = project.URL.replace('https://wiki.seeedstudio.com', '');
+        existing.category[lang] = categoryValue;
+
+        if (!existing.img && project.img) {
+          existing.img = project.img;
+        }
+
+        if (lang === 'en' || !existing.lastUpdated) {
+          existing.lastUpdated = project.lastUpdated;
+        }
+
+        if (lang === 'en' || !existing.author) {
+          existing.author = project.author;
+        }
+      });
+    });
+  });
+
+  j601DemoData.length = 0;
+  j601DemoData.push(
+    ...Array.from(projectMap.values()).sort((a, b) => {
+      return String(b.lastUpdated || '').localeCompare(String(a.lastUpdated || ''));
+    })
+  );
+}
+
+// 生成配置文件// 生成配置文件
 function generateConfig() {
   let output = `// Auto-generated by generate-jetson-config.js
 // DO NOT EDIT MANUALLY - Run "node scripts/generate-jetson-config.js" to regenerate
@@ -254,18 +438,22 @@ function generateConfig() {
     output += '\n]\n\n';
   });
 
+  output += `export const j601DemoList = ${JSON.stringify(j601DemoData, null, 2)}\n\n`;
+
   const outputPath = path.join(__dirname, '../src/components/jetson/config.auto.js');
   fs.writeFileSync(outputPath, output);
   console.log(`Generated config.auto.js at ${outputPath}`);
   console.log(`Total projects extracted: ${Object.values(data).reduce((sum, arr) => sum + arr.length, 0)}`);
+  console.log(`J601 demo projects extracted: ${j601DemoData.length}`);
 }
 
 // 执行提取和生成
 if (require.main === module) {
   console.log('Extracting Jetson project data...');
   extractData();
+  extractJ601DemoList();
   generateConfig();
   console.log('Done!');
 }
 
-module.exports = { extractData, generateConfig };
+module.exports = { extractData, extractJ601DemoList, generateConfig };
