@@ -1,6 +1,6 @@
 ---
 description: XIAO 1.47'' IPS Display (nRF52840) 入门指南。
-title: Getting Started with XIAO 1.47'' IPS Display (nRF52840)
+title: XIAO 1.47'' IPS Display (nRF52840) 入门指南
 sidebar_label: 入门指南
 keywords:
   - XIAO
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_nrf
 <div class="table-center">
   <table align="center">
     <tr><th>XIAO 1.47'' IPS Display (nRF52840)</th></tr>
-    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW147_nRF52840Plus_display_hardware_hero.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
+    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW147_nRF52840Plus_display_hardware_heroNEW.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
     <tr><td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/1-47-Inch-Touch-Display-Powered-by-XIAO-nRF52840-Plus-p-6995.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
@@ -36,7 +36,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_nrf
 
 ## 介绍
 
-1.47'' IPS Display 是一款为 XIAO 系列设计的扩展板，由 XIAO nRF52840 Plus 提供算力。它配备 172×320 彩色 LCD 电容触摸屏、板载 PDM 麦克风、6 轴 IMU（LSM6DS3）、MicroSD 卡槽以及电池电源管理——所有功能都集成在一个紧凑的外形中。
+1.47'' IPS Display 是一款为 XIAO 系列设计的扩展板，由 XIAO nRF52840 Plus 提供算力。它配备 172×320 彩色 LCD 电容触摸屏、板载 PDM 麦克风、6 轴 IMU（LSM6DS3）、MicroSD 卡槽以及电池电源管理——所有这些都集成在一个紧凑的外形尺寸中。
 
 这种组合使其成为便携式 HMI 应用、IoT 仪表盘、可穿戴设备和交互式原型开发的理想平台。
 
@@ -58,9 +58,9 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_nrf
     <tr><td>MicroSD 卡槽</td><td>有</td></tr>
     <tr><td>Grove I2C 接口</td><td>无</td></tr>
     <tr><td>用户按键</td><td>2</td></tr>
-    <tr><td>电池连接器</td><td>适用于 3.7 V 锂电池的 2 针 JST 2.0 接口</td></tr>
-    <tr><td>电池监测</td><td>支持电池状态检测；还可监测电池电压以估算电量。</td></tr>
-    <tr><td>扩展接口</td><td>1x I2C 焊盘、1x I2S 焊盘、1x SWD 焊盘、2x 用户按键焊盘</td></tr>
+    <tr><td>电池接口</td><td>用于 3.7 V 锂电池的 2 针 JST 2.0 接口</td></tr>
+    <tr><td>电池监测</td><td>支持电池状态检测；也可监测电池电压以估算电量。</td></tr>
+    <tr><td>扩展接口</td><td>1x I2C 接口，1x I2S 接口，1x SWD 接口，2x 用户按键接口</td></tr>
     <tr><td>板卡尺寸</td><td>26.4 × 51.4 × 12.6 mm</td></tr>
     <tr><td>最佳应用</td><td>触控 UI、便携式 HMI、本地多媒体与数据记录</td></tr>
   </table>
@@ -72,7 +72,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_nrf
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
 
-### 引脚分布图
+### 引脚映射
 
 1.47'' IPS Display 引出了所有 XIAO nRF52840 Plus 引脚。下表列出了每个引脚、其在显示板上的网络名称、功能说明以及与板载外设的连接方式。
 
@@ -105,7 +105,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_nrf
 
 ## 入门指南
 
-本指南会向显示板上传一个最小的 **“Hello, XIAO”** 示例：屏幕点亮背光、填充为黑色背景，并以两行居中的大号绿色文字打印 **“Hello,”** 和 **“XIAO”**。在深入各个外设示例之前，这是确认屏幕和开发环境是否正常工作的最快方式。
+本指南会向显示板上传一个最小化的 **“Hello, XIAO”** 示例：点亮屏幕背光，将屏幕填充为黑色，并以两行居中的大号绿色文字打印 **“Hello,”** 和 **“XIAO”**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
 
 ### 软件准备
 
@@ -136,7 +136,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 **步骤 1.** 点击上方按钮，将 `Seeed_GFX2` v1.0.0 作为 ZIP 文件下载（固定到某个发布标签，以保证教程可复现）。或者，从 [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) 克隆仓库。
 
-**步骤 2.** 在 Arduino IDE 中，依次点击 **Sketch > Include Library > Add .ZIP Library...**，然后选择下载的 ZIP 文件。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，将解压后的文件夹重命名为 `Seeed_GFX2`，再放入 `Documents/Arduino/libraries/`。）
+**步骤 2.** 在 Arduino IDE 中，依次点击 **Sketch > Include Library > Add .ZIP Library...**，选择下载的 ZIP 文件。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，将解压后的文件夹重命名为 `Seeed_GFX2`，再放入 `Documents/Arduino/libraries/`。）
 
 **步骤 3.** 重启 Arduino IDE，使其检测到新库。
 
@@ -148,7 +148,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ### 下载代码
 
-示例草图可在 GitHub 上获取：
+示例程序可在 GitHub 上获取：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/getting_started_code/xiao_nrf52840_147_hello" target="_blank" rel="noopener noreferrer">
@@ -167,31 +167,31 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 **步骤 3.** 在 **Tools > Port** 下选择正确的 **端口（Port）**。
 
-**步骤 4.** 点击 **Upload** 按钮 (→)。示例程序将被编译并上传到开发板。
+**步骤 4.** 点击 **Upload** 按钮（→）。示例程序将被编译并上传到开发板。
 
 :::note
-如果遇到上传问题，请双击复位按钮进入 bootloader 模式。USR LED 会呈红色呼吸灯效果，电脑上会出现一个名为 **NRF52BOOT** 的磁盘，表示开发板已进入 bootloader 模式。
+如果遇到上传问题，请双击复位按钮进入 bootloader 模式。USR LED 会呈红色呼吸灯效果，并且电脑上会出现一个名为 **NRF52BOOT** 的磁盘，表示开发板已进入 bootloader 模式。
 :::
 
 ### 预期输出
 
-上传完成后，屏幕会点亮为黑色背景，并在中间显示两行大的绿色文字——第一行是 **"Hello,"**，第二行是 **"XIAO"**。该问候语会保持在屏幕上，不会重复重绘。
+上传完成后，屏幕会点亮为黑色背景，并显示两行居中的大号绿色文字——第一行是 **"Hello,"**，第二行是 **"XIAO"**。该问候语会保持在屏幕上，不会重复重绘。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_display_hello.gif" style={{width:500, height:'auto'}}/></div>
 
-如果显示屏初始化失败，示例程序会以 **115200** 波特率在串口监视器中打印库的错误信息。打开 **Tools > Serial Monitor** 并将波特率设置为 115200 以进行查看。
+如果显示屏初始化失败，示例程序会以 **115200** 波特率在串口监视器中打印库的错误信息。请打开 **Tools > Serial Monitor** 并将波特率设置为 115200 以查看。
 
 ## 接下来做什么
 
-该显示板集成了多个板载外设。[Function](/cn/function_1.47_inch_touch_display_nrf52840) 页面为每个外设都提供了一个独立的演示：
+该显示板集成了多个板载外设。[Function](/cn/function_1.47_inch_touch_display_nrf52840) 页面为每个外设都提供了独立的演示：
 
 <div class="table-center">
   <table align="center">
     <tr><th>外设</th><th>演示</th></tr>
-    <tr><td>屏幕</td><td>[GraphicTest](/cn/function_1.47_inch_touch_display_nrf52840#screen-display--graphictest) — 十种图形基本元素及其计时基准测试</td></tr>
+    <tr><td>屏幕</td><td>[GraphicTest](/cn/function_1.47_inch_touch_display_nrf52840#screen-display--graphictest) — 十种图形基本图元及其计时基准测试</td></tr>
     <tr><td>触摸</td><td>[Touch Circle](/cn/function_1.47_inch_touch_display_nrf52840#touch--touch-circle) — 一个跟随你手指移动的圆圈</td></tr>
-    <tr><td>SD 卡</td><td>[Image Reader](/cn/function_1.47_inch_touch_display_nrf52840#sd-card--image-reader) — 从 MicroSD 卡中显示一张 BMP 图片</td></tr>
-    <tr><td>麦克风和扬声器</td><td>[Volume Bar + Record to SD](/cn/function_1.47_inch_touch_display_nrf52840#microphone--speaker) — 实时 PDM 电平指示和录音到 SD 卡</td></tr>
+    <tr><td>SD 卡</td><td>[Image Reader](/cn/function_1.47_inch_touch_display_nrf52840#sd-card--image-reader) — 从 MicroSD 卡显示一张 BMP 图片</td></tr>
+    <tr><td>麦克风和扬声器</td><td>[Volume Bar + Record to SD](/cn/function_1.47_inch_touch_display_nrf52840#microphone--speaker) — 实时 PDM 电平指示条并录音到 SD 卡</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/cn/function_1.47_inch_touch_display_nrf52840#imu) — 六轴运动特效和抬腕唤醒</td></tr>
     <tr><td>按键</td><td>[User Button](/cn/function_1.47_inch_touch_display_nrf52840#user-button) — 读取按键按下并使用中断进行去抖</td></tr>
     <tr><td>电池</td><td>[Battery Status](/cn/function_1.47_inch_touch_display_nrf52840#battery-status) — 测量电压并转换为百分比</td></tr>
@@ -202,7 +202,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ### 如果上传失败或电脑无法识别开发板怎么办？
 
-双击 XIAO nRF52840 Plus 上的复位按钮。USR LED 会呈红色呼吸灯效果，电脑上会出现一个名为 **NRF52BOOT** 的磁盘。将编译生成的 `.uf2` 文件拖拽到 **NRF52BOOT** 磁盘中。开发板会自动完成烧录并自动复位。
+双击 XIAO nRF52840 Plus 上的复位按钮。USR LED 会呈红色呼吸灯效果，并且电脑上会出现一个名为 **NRF52BOOT** 的磁盘。将编译生成的 `.uf2` 文件拖拽到 **NRF52BOOT** 磁盘中。开发板会自动完成烧录并自动复位。
 
 ## 资源
 

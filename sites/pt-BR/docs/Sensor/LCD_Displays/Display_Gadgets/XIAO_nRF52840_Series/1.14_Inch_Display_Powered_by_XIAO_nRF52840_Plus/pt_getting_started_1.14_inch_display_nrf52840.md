@@ -1,7 +1,7 @@
 ---
-description: Introdução ao uso do XIAO 1.14'' IPS Display (nRF52840).
-title: Introdução ao uso do XIAO 1.14'' IPS Display (nRF52840)
-sidebar_label: Getting Started
+description: Introdução ao XIAO 1.14'' IPS Display (nRF52840).
+title: Introdução ao XIAO 1.14'' IPS Display (nRF52840)
+sidebar_label: Introdução
 keywords:
   - XIAO
   - nRF52840
@@ -21,7 +21,7 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_1.14_inch_display_nrf52840/
 ---
 
-# Introdução ao uso do XIAO 1.14'' IPS Display (nRF52840)
+# Introdução ao XIAO 1.14'' IPS Display (nRF52840)
 
 <div class="table-center">
   <table align="center">
@@ -60,8 +60,8 @@ Essa combinação o torna uma plataforma ideal para dispositivos vestíveis, nó
     <tr><td>Conector Grove I2C</td><td>Sim</td></tr>
     <tr><td>Botões de Usuário</td><td>3</td></tr>
     <tr><td>Conector de Bateria</td><td>Conector JST 2.0 de 2 pinos para LiPo de 3,7 V</td></tr>
-    <tr><td>Monitoramento de Bateria</td><td>Suporte à detecção de status da bateria; a tensão da bateria também pode ser monitorada para estimativa do nível de carga.</td></tr>
-    <tr><td>Interfaces de Expansão</td><td>1x Conector Grove I2C, 1x pads I2C, 1x pads I2S, 1x pads SWD, 3x pads de botões de usuário</td></tr>
+    <tr><td>Monitoramento de Bateria</td><td>Suporta detecção de status da bateria; a tensão da bateria também pode ser monitorada para estimativa do nível de carga.</td></tr>
+    <tr><td>Interfaces de Expansão</td><td>1x Interface I2S, 1x Interface SWD, 3x Interfaces de Botão de Usuário</td></tr>
     <tr><td>Tamanho da Placa</td><td>26 × 48 × 10,6 mm</td></tr>
     <tr><td>Melhor Uso</td><td>Displays de sensores portáteis, dispositivos Grove, controladores físicos</td></tr>
   </table>
@@ -71,13 +71,13 @@ Essa combinação o torna uma plataforma ideal para dispositivos vestíveis, nó
 Esta placa de display foi projetada para o **XIAO nRF52840 Plus**. Se você estiver usando a versão XIAO ESP32-S3 Plus, consulte o guia XIAO 1.14'' IPS Display (ESP32-S3).
 :::
 
-## Visão geral de hardware
+## Visão Geral de Hardware
 
 Antes de começarmos, consulte a imagem a seguir para entender o layout físico do 1.14'' IPS Display.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
 
-### Mapa de pinos
+### Mapa de Pinos
 
 O 1.14'' IPS Display expõe todos os pinos do XIAO nRF52840 Plus. A tabela abaixo lista cada pino, seu nome de rede na placa de display, sua função e como ele está conectado aos periféricos onboard.
 
@@ -108,11 +108,11 @@ O 1.14'' IPS Display expõe todos os pinos do XIAO nRF52840 Plus. A tabela abaix
 </div>
 
 
-## Primeiros passos
+## Introdução
 
-Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga a retroiluminação, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto grande em verde. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demos individuais de periféricos.
+Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga a retroiluminação, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto verde em tamanho grande. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demos individuais de periféricos.
 
-### Preparação de software
+### Preparação de Software
 
 Você precisará das seguintes ferramentas e bibliotecas:
 
@@ -141,12 +141,12 @@ Em seguida, vá em **Tools > Board > Boards Manager**, pesquise por **Seeed nRF5
 
 **Passo 1.** Clique no botão acima para baixar `Seeed_GFX2` v1.0.0 como um arquivo ZIP (fixado em uma tag de release para que o tutorial permaneça reprodutível). Como alternativa, clone o repositório em [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2).
 
-**Passo 2.** No Arduino IDE, vá em **Sketch > Include Library > Add .ZIP Library...** e selecione o ZIP baixado. O IDE lê `library.properties` e o instala automaticamente na pasta `Seeed_GFX2` correta — você não precisa renomear a pasta extraída. (Para instalar manualmente em vez disso, descompacte o arquivo e renomeie a pasta extraída para `Seeed_GFX2` antes de colocá-la em `Documents/Arduino/libraries/`.)
+**Passo 2.** No Arduino IDE, vá em **Sketch > Include Library > Add .ZIP Library...** e selecione o ZIP baixado. O IDE lê `library.properties` e o instala automaticamente na pasta correta `Seeed_GFX2` — você não precisa renomear a pasta extraída. (Para instalar manualmente em vez disso, descompacte o arquivo e renomeie a pasta extraída para `Seeed_GFX2` antes de colocá-la em `Documents/Arduino/libraries/`.)
 
 **Passo 3.** Reinicie o Arduino IDE para que a nova biblioteca seja detectada.
 
 :::tip
-- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demo inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** contém o mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 135×240, a ordem de cores (BGR) e a orientação. Nenhum `driver.h` ou configuração manual de pinos é necessária.
+- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demo inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** contém o mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 135×240, a ordem de cores (BGR) e a orientação. Não é necessário `driver.h` nem configuração manual de pinos.
 - Nesta placa, o sketch usa `Board_XIAO_1inch14_LCD<38, 37>` (RST=38, BL=37) com `Config_Seeed_1inch14_LCD_ST7789`.
 - A biblioteca **Adafruit TinyUSB** usada pelo sketch vem incluída no pacote **Seeed nRF52 Boards**, portanto não precisa de instalação separada.
 :::
@@ -164,7 +164,7 @@ O sketch de exemplo está disponível no GitHub:
 
 Navegue até `code_GFX2/getting_started_code/xiao_nrf52840_114_hello/` e abra `xiao_nrf52840_114_hello.ino` na Arduino IDE. **Baixe a pasta completa** em vez de copiar o código-fonte `.ino` da visualização web do GitHub.
 
-### Enviar o sketch
+### Fazer upload do sketch
 
 **Passo 1.** Conecte o XIAO nRF52840 Plus ao seu computador pela porta USB-C.
 
@@ -180,7 +180,7 @@ Se você encontrar problemas de upload, clique duas vezes no botão de reset par
 
 ### Saída esperada
 
-Após o upload, a tela acende com um fundo preto e mostra duas linhas centralizadas de texto verde grande — **"Hello,"** na primeira linha e **"XIAO"** na segunda. A saudação permanece na tela sem redesenho.
+Após o upload, a tela acende com um fundo preto e mostra duas linhas centralizadas de texto grande em verde — **"Hello,"** na primeira linha e **"XIAO"** na segunda. A saudação permanece na tela sem redesenho.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_display_hello.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -195,7 +195,7 @@ A placa de display reúne vários periféricos onboard. A página [Function](/pt
     <tr><th>Periférico</th><th>Demo</th></tr>
     <tr><td>Tela</td><td>[GraphicTest](/pt-br/function_1.14_inch_display_nrf52840#screen-display--graphictest) — dez primitivas gráficas com medições de tempo</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/pt-br/function_1.14_inch_display_nrf52840#imu) — efeitos de movimento de 6 eixos e despertar por movimento</td></tr>
-    <tr><td>Microfone e alto-falante</td><td>[Voice Bar + Flash Recorder](/pt-br/function_1.14_inch_display_nrf52840#microphone--speaker) — medidor de nível PDM em tempo real e gravação com reprodução via I2S</td></tr>
+    <tr><td>Microfone e alto-falante</td><td>[Voice Bar + Flash Recorder](/pt-br/function_1.14_inch_display_nrf52840#microphone--speaker) — medidor de nível PDM em tempo real e gravação com reprodução I2S</td></tr>
     <tr><td>Grove I2C</td><td>[SHT31 Temperature & Humidity](/pt-br/function_1.14_inch_display_nrf52840#grove-i2c) — leitura de um sensor Grove SHT31</td></tr>
     <tr><td>Botões</td><td>[User Buttons](/pt-br/function_1.14_inch_display_nrf52840#user-buttons) — leitura de pressionamentos e eliminação de bouncing com interrupções</td></tr>
     <tr><td>Bateria</td><td>[Battery Status](/pt-br/function_1.14_inch_display_nrf52840#battery-status) — medição de tensão e conversão para porcentagem</td></tr>
@@ -216,7 +216,7 @@ Não — recomendamos fortemente **não conectar ou desconectar a quente** dispo
 
 ## Recursos
 
-- **🗃️[Arquivos de projeto de PCB]** [XIAO 1.14'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
+- **🗃️[Arquivos de projeto da PCB]** [XIAO 1.14'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 1.14'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 1.14'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.14%27%27%20IPS%20Display.step)
 - **📄[Datasheet]** [1.14 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.14%20Inch%20Display%20Datasheet.pdf)

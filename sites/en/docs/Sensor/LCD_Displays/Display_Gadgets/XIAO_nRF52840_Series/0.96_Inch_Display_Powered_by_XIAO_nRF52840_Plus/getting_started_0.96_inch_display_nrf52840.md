@@ -61,7 +61,7 @@ This combination makes it an ideal platform for ultra-compact wearables, keychai
     <tr><td>User Buttons</td><td>2</td></tr>
     <tr><td>Battery Connector</td><td>2-pin JST 2.0 Connector for 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery status detection supported; battery voltage can also be monitored for battery-level estimation.</td></tr>
-    <tr><td>Expansion Interfaces</td><td>1x I2C pads, 1x I2S pads</td></tr>
+    <tr><td>Expansion Interfaces</td><td>1x I2C Interface, 1x I2S Interface, 1x SWD Interface, 2x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
     <tr><td>Best For</td><td>Smart badges, tiny wearables, BLE status displays</td></tr>
   </table>
