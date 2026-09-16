@@ -1,6 +1,6 @@
 ---
-description: Introdução à Série Wio Tracker L2. Inclui recursos, funções, parâmetros e comparação entre modelos da série.
-title: Introdução ao Wio Tracker L2
+description: Wio Tracker L2 シリーズの概要。機能、特長、パラメータおよびシリーズ比較を含みます。
+title: Wio Tracker L2 概要
 keywords:
   - Meshtastic
   - Wio Tracker L2
@@ -12,153 +12,153 @@ last_update:
   date: 3/13/2026
   author: Michelle Huang
 createdAt: '2025-06-17'
-updatedAt: '2026-05-15'
-url: https://wiki.seeedstudio.com/pt-br/meshtastic_wio_tracker_l2_intro/
+updatedAt: '2026-09-07'
+url: https://wiki.seeedstudio.com/ja/meshtastic_wio_tracker_l2_intro/
 ---
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="pir" width={900} height="auto" /></p>
 
-A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altamente extensível, com LoRa (862–930 MHz), ESP32S3 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetado para flexibilidade, ele suporta tela sensível ao toque QSPI, displays E-Ink, cartão TF, bem como painéis solares e alimentação por bateria, tornando-o ideal para uma ampla gama de aplicações de IoT e fora da rede.
+Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードであり、LoRa（862–930 MHz）、効率的な処理を行う ESP32S3、そして高精度な位置情報を提供する L76K GPS モジュールを搭載しています。柔軟性を重視した設計により、QSPI タッチスクリーン、E-Ink ディスプレイ、TF カードに加え、ソーラーパネルおよびバッテリー電源にも対応しており、幅広い IoT およびオフグリッド用途に最適です。
 
-## Recursos
+## 特長
 
-- **Tela sensível ao toque de 3,2'' de alta qualidade**: Com um display de 320×240 de alta nitidez e interfaces MUI e Base UI comutáveis, oferece interação fluida diretamente no dispositivo para mensagens, mapas e controle — sem precisar de um celular.
+- **3.2'' 高品質タッチスクリーン**：320×240 の高精細ディスプレイを採用し、MUI と Base UI を切り替え可能で、メッセージング、マッピング、制御をモバイルフォンなしでスムーズに操作できます。
 
-- **Baseado em ESP32S3, pronto para desenvolvimento**: Alimentado pelo ESP32-S3 dual-core com Wi-Fi e Bluetooth LE, o L2 Pro fornece uma plataforma flexível para personalização de interface, desenvolvimento de recursos e aplicações de código aberto.
+- **ESP32S3 搭載で拡張に最適**：デュアルコア ESP32-S3（Wi-Fi および Bluetooth LE 搭載）を採用した L2 Pro は、UI カスタマイズ、機能拡張、オープンソースアプリケーション開発のための柔軟なプラットフォームを提供します。
 
-- **Mapas offline com posicionamento GNSS**: Faça o pré-download de mapas offline para um cartão MicroSD e visualize sua localização GNSS em tempo real diretamente no dispositivo, mesmo sem cobertura celular ou acesso à internet.
+- **GNSS 位置情報対応オフラインマップ**：オフラインマップを事前に MicroSD カードへダウンロードしておけば、携帯電話回線やインターネット接続がなくても、デバイス上でリアルタイムの GNSS 位置を確認できます。
 
-- **Bateria de longa duração de 3000mAh**: Suporta uso diário prolongado com menor frequência de recarga; opera em condições de -10°C a 55°C.
+- **3000mAh の長時間駆動バッテリー**：充電頻度を抑えつつ、日常的な長時間使用をサポートし、-10°C ～ 55°C の環境で動作します。
 
-- **Fácil de transportar, posicionamento flexível**: Uma antena dobrável melhora a portabilidade, e a interface de montagem de 1/4" permite posicionamento flexível com acessórios compatíveis.
+- **携帯しやすく、柔軟な設置が可能**：折りたたみ式アンテナにより携帯性が向上し、1/4 インチマウントインターフェースにより、対応アクセサリを用いた柔軟な設置が可能です。
 
-## Especificação
+## 仕様
 
 <table>
   <tr>
-    <th colspan="1">**Item**</th>
-    <th colspan="1">**Parâmetro**</th>
+    <th colspan="1">**項目**</th>
+    <th colspan="1">**パラメータ**</th>
   </tr>
   <tr>
-    <td colspan="1">**Processador**</td>
-    <td colspan="1">Wio-S3 (ESP32S3 + Módulo SX1262)</td>
+    <td colspan="1">**プロセッサ**</td>
+    <td colspan="1">Wio-S3 (ESP32S3 + SX1262 Module)</td>
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
-    <td colspan="1">863-928 MHz<br/>Potência máxima de TX: 20dBm@US915,14dBm@EU868</td>
+    <td colspan="1">863-928 MHz<br/>最大送信電力: 20dBm@US915,14dBm@EU868</td>
   </tr>
     <tr>
     <td colspan="1">**GNSS**</td>
     <td colspan="1">L76K (GPS, BeiDou, GLONASS, QZSS)</td>
   </tr>
   <tr>
-    <td colspan="1">**Memória interna**</td>
+    <td colspan="1">**オンチップメモリ**</td>
     <td colspan="1">16MB Flash / 8MB PSRAM</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">**Antena**</td>
+    <td colspan="1" rowspan="3">**アンテナ**</td>
     <td colspan="1">LoRa: </td>
   </tr>
    <tr>
-    <td colspan="1">Wifi/BLE 5.0: antena FPC</td>
+    <td colspan="1">Wifi/BLE 5.0: FPC アンテナ</td>
   </tr>
   <tr>
-    <td colspan="1">GPS: antena cerâmica</td>
+    <td colspan="1">GPS: セラミックアンテナ</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">**Interface**</td>
+    <td colspan="1" rowspan="3">**インターフェース**</td>
     <td colspan="1">Grove *1: </td>
   </tr>
   <tr>
-    <td colspan="1">Slot para cartão MicroSD</td>
+    <td colspan="1">MicroSD カードスロット</td>
   </tr>
   <tr>
-    <td colspan="1">Furo roscado de um quarto de polegada</td>
+    <td colspan="1">1/4 インチねじ穴</td>
   </tr>
    <tr>
-    <td colspan="1">**Interface QSPI**</td>
-    <td colspan="1">Compatível com tela IPS e tela E-INK</td>
+    <td colspan="1">**QSPI インターフェース**</td>
+    <td colspan="1">IPS スクリーン & E-INK スクリーンに対応</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">**Entrada de alimentação**</td>
+    <td colspan="1" rowspan="3">**電源入力**</td>
     <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Solar:JST-PH 2P-2.0mm, 5V ~ 13V</td>
+    <td colspan="1">ソーラー:JST-PH 2P-2.0mm, 5V ~ 13V</td>
   </tr>
   <tr>
-    <td colspan="1">Bateria de íons de lítio (2P-1.25mm): 3,7V</td>
+    <td colspan="1">リチウムイオンバッテリー (2P-1.25mm): 3.7V</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="2">**Tela sensível ao toque IPS**</td>
-    <td colspan="1">Tamanho: 3,2 polegadas</td>
+    <td colspan="1" rowspan="2">**IPS タッチスクリーン**</td>
+    <td colspan="1">サイズ: 3.2 インチ</td>
   </tr>
   <tr>
-    <td colspan="1">Resolução: 240 × 320 pixels</td>
+    <td colspan="1">解像度: 240 × 320 ピクセル</td>
   </tr>
     <tr>
     <td colspan="1">**LED**</td>
-    <td colspan="1">Mesh LED * 1<br/>LED de carregamento * 1</td>
+    <td colspan="1">Mesh LED * 1<br/>充電 LED * 1</td>
   </tr>
   <tr>
-    <td colspan="1">**Botão**</td>
-    <td colspan="1">WAKE-UP * 1<br/>User/Boot * 1<br/>RST * 1<br/>Interruptor de energia * 1</td>
+    <td colspan="1">**ボタン**</td>
+    <td colspan="1">WAKE-UP * 1<br/>User/Boot * 1<br/>RST * 1<br/>電源スイッチ * 1</td>
   </tr>
     <tr>
-    <td colspan="1" rowspan="3">**Áudio**</td>
-    <td colspan="1">Codec I2S: ES8311</td>
+    <td colspan="1" rowspan="3">**オーディオ**</td>
+    <td colspan="1">I2S コーデック: ES8311</td>
   </tr>
   <tr>
-    <td colspan="1">MIC: pino reservado</td>
+    <td colspan="1">マイク</td>
   </tr>
     <tr>
-    <td colspan="1">Alto-falante: 6Ω 0,8W</td>
+    <td colspan="1">スピーカー: 6Ω 0.8W</td>
   </tr>
     <tr>
-    <td colspan="1">**Distância de comunicação**</td>
-    <td colspan="1">Até 5,8 km</td>
+    <td colspan="1">**通信距離**</td>
+    <td colspan="1">最大 5.8 km</td>
   </tr>
     <tr>
-    <td colspan="1">**Dimensão**</td>
-    <td colspan="1"></td>
+    <td colspan="1">**寸法**</td>
+    <td colspan="1">(アンテナ折りたたみ時) 長さ: 87.5 cm, 幅: 69 cm, 高さ: 26.6 cm</td>
   </tr>
   <tr>
-    <td colspan="1">**Peso do dispositivo**</td>
-    <td colspan="1"></td>
+    <td colspan="1">**デバイス重量**</td>
+    <td colspan="1">171.5g</td>
   </tr>
     <tr>
-    <td colspan="1">**Temperatura de operação**</td>
-    <td colspan="1">-10℃ a +55℃</td>
+    <td colspan="1">**動作温度**</td>
+    <td colspan="1">-10℃ ～ +55℃</td>
   </tr>
   <tr>
-    <td colspan="1">**Certificação**</td>
+    <td colspan="1">**認証**</td>
     <td colspan="1">FCC,CE,RoHS,Telec</td>
   </tr>
 </table>
 
-**Bateria**
+**バッテリー**
 
-|Item|Parâmetro|
+|項目|パラメータ|
 | :- | :- |
-|**Capacidade da bateria**|Bateria recarregável de íons de lítio, 3000mAh|
-|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
-|**Protocolo de carregamento**|USB Type-C|
-|**Entrada de alimentação do dispositivo**|5V, 1A|
-|**Tensão de corte totalmente carregada**|4,2V|
-|**Limite de temperatura de carregamento**|0 a +45℃|
+|**バッテリー容量**|充電式リチウムイオンバッテリー, 3000mAh|
+|**バッテリー寿命モニタリング**|バッテリーレベルの定期アップリンク|
+|**充電プロトコル**|USB Type-C|
+|**デバイス電源入力**|5V, 1A|
+|**満充電カットオフ電圧**|4.2V|
+|**充電温度範囲**|0 ～ +45℃|
 
-## Lista de pinos
+## ピン一覧
 
 <table>
   <tr>
-    <th>Componente</th>
-    <th>Pino</th>
-    <th>Nº do pino</th>
-    <th>Protocolo</th>
+    <th>コンポーネント</th>
+    <th>ピン</th>
+    <th>ピン番号</th>
+    <th>プロトコル</th>
   </tr>
   <tr>
-    <td rowspan="9">Display</td>
+    <td rowspan="9">ディスプレイ</td>
     <td>QSPI_CLK</td>
     <td>GPIO42</td>
     <td rowspan="6">QSPI</td>
@@ -356,7 +356,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
     <td>EXP_P12</td>
   </tr>
   <tr>
-    <td>Button</td>
+    <td>ボタン</td>
     <td>WAKEUP_BUTTON</td>
     <td>EXP_P00</td>
     <td>GPIO</td>
@@ -364,13 +364,13 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
 </table>
 
 
-## Visão geral do hardware
+## ハードウェア概要
 
 **Wio Tracker L2 Pro**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2DeviceComponent9.7(1).png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2DeviceComponent29.7(2).png" alt="pir" width={800} height="auto" /></p>
 
-**Diagrama esquemático**
+**回路図**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SchematicDiagram9.7(1).png" alt="pir" width={800} height="auto" /></p>

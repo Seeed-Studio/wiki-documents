@@ -1,6 +1,6 @@
 ---
-description: Introducción a la red Meshtastic®
-title: Introducción a la red Meshtastic®
+description: Introdução à rede Mesh
+title: Introdução à rede Mesh
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,37 +10,37 @@ last_update:
   date: 12/11/2025
   author: Michelle
 createdAt: '2024-06-17'
-updatedAt: '2026-08-07'
-url: https://wiki.seeedstudio.com/es/meshtastic_introduction/
+updatedAt: '2026-08-06'
+url: https://wiki.seeedstudio.com/pt-br/meshtastic_introduction/
 ---
 
-[Meshtastic®](https://meshtastic.org/) es una red mallada descentralizada, fuera de la red y de código abierto, creada para funcionar en dispositivos de bajo consumo y bajo costo. Permite utilizar radios LoRa económicas como una plataforma de comunicación fuera de la red de largo alcance en áreas sin infraestructura de comunicaciones existente o confiable.
+[Meshtastic®](https://meshtastic.org/) é uma rede mesh descentralizada, off‑grid e de código aberto, criada para rodar em dispositivos acessíveis e de baixo consumo de energia. Ela permite usar rádios LoRa de baixo custo como uma plataforma de comunicação off‑grid de longo alcance em áreas sem infraestrutura de comunicação existente ou confiável.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/FrameworkMeshtasticccc.png" alt="pir" width={900} height="auto" /></p>
 
-## Características
+## Recursos
 
-- **Largo alcance** ([récord de 331 km por MartinR7 & alleg](https://meshtastic.org/docs/overview/range-tests/#current-ground-record-331km))
-- **Comunicación descentralizada** - no se requiere un router dedicado
-- **Comunicación cifrada** 
+- **Longo alcance** ([recorde de 331 km por MartinR7 & alleg](https://meshtastic.org/docs/overview/range-tests/#current-ground-record-331km))
+- **Comunicação descentralizada** - não é necessário roteador dedicado
+- **Comunicação criptografada** 
 
-## Cómo funciona
+## Como funciona
 
-Meshtastic utiliza LoRa, un protocolo de radio de largo alcance, que es ampliamente accesible en la mayoría de las regiones sin necesidad de licencias o certificaciones adicionales, a diferencia de las operaciones de radioaficionado (HAM).
+Meshtastic utiliza LoRa, um protocolo de rádio de longo alcance, que é amplamente acessível na maioria das regiões sem necessidade de licenças ou certificações adicionais, ao contrário das operações de rádio amador (HAM).
 
-Además, las radios Meshtastic se pueden emparejar con un solo teléfono, lo que permite que amigos y familiares envíen mensajes directamente a tu radio específica. Es importante tener en cuenta que cada dispositivo es capaz de admitir la conexión de un solo usuario a la vez."
+Além disso, rádios Meshtastic podem ser pareados com um único telefone, permitindo que amigos e familiares enviem mensagens diretamente para o seu rádio específico. É importante observar que cada dispositivo é capaz de suportar a conexão de apenas um usuário por vez."
 
-Haz clic [aquí](https://meshtastic.org/docs/) para obtener más información sobre la red Meshtastic.
+Clique [aqui](https://meshtastic.org/docs/) para saber mais sobre a rede Meshtastic!
 
-## Hardware compatible
+## Hardware compatível
 
-### Kit de desarrollo
+### Kit de desenvolvimento
 
 <table align="center">
 <tbody><tr>
-<th>Kit Xiao ESP32 sin carcasa</th>
-<th>Kit Xiao nRF52840 sin carcasa</th>
-<th>Kit Xiao ESP32 con carcasa</th>
+<th>Kit Xiao ESP32 sem gabinete</th>
+<th>Kit Xiao nRF52840 sem gabinete</th>
+<th>Kit Xiao ESP32 com gabinete</th>
 </tr>
 <tr>
 <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102010611-wio-sx1262-with-xiao-esp32s3.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -50,30 +50,30 @@ Haz clic [aquí](https://meshtastic.org/docs/) para obtener más información so
 <tr>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 </tr>
 </tbody></table>
 
 
-### Placa de desarrollo
+### Placa de desenvolvimento
 
 <table align="center">
 <tbody><tr>
-<th>L1 Lite (sin OLED)</th>
-<th>L1 (con OLED)</th>
-<th>L1 E-Ink (con E-Ink)</th>
+<th>L1 Lite (sem OLED)</th>
+<th>L1 (com OLED)</th>
+<th>L1 E-Ink (com E-Ink)</th>
 </tr>
 <tr>
 <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-114993653-wio-tracker-l1-lite.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -83,17 +83,17 @@ Haz clic [aquí](https://meshtastic.org/docs/) para obtener más información so
 <tr>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-Lite-p-6455.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-E-ink-p-6456.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 </tr>
@@ -115,28 +115,28 @@ Haz clic [aquí](https://meshtastic.org/docs/) para obtener más información so
 <tr>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-meshtracker-x1-meshtastic-gps-tracker-p-6935.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-meshtracker-x1-meshtastic-gps-tracker-p-6935.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 </tr>
 </tbody></table>
 
-### Nodo solar
+### Nó solar
 
 <table align="center">
 <tbody><tr>
-<th>SenseCAP Solar Node sin batería y GNSS</th>
-<th>SenseCAP Solar Node con batería y GNSS</th>
+<th>SenseCAP Solar Node sem bateria e GNSS</th>
+<th>SenseCAP Solar Node com bateria e GNSS</th>
 </tr>
 <tr>
 <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993643-sensecap-solar-node-p1-for-meshtastic-1_1.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -145,55 +145,55 @@ Haz clic [aquí](https://meshtastic.org/docs/) para obtener más información so
 <tr>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank" rel="noopener noreferrer">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 </a>
 </div></td>
 </tr>
 </tbody></table>
 
-## Aplicación
+## Aplicação
 
-### Diseño de carcasa
+### Design de gabinete
 
-[Haz clic aquí](https://wiki.seeedstudio.com/es/xiao_esp32s3_&_wio_sx1262_kit_mqtt/) para leer el tutorial detallado.
+[Clique aqui](https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_&_wio_sx1262_kit_mqtt/) para ler o tutorial detalhado.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki%20images/3d%20Enclosure/6.23dimage1.png" alt="Cargador inalámbrico magnético" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki%20images/3d%20Enclosure/6.23dimage1.png" alt="Magnetic Wireless Charger" width={800} height="auto" /></p>
 
-### Mapa de nodos Meshtastic
+### Mapa de nós Meshtastic
 
-El mapa de nodos Meshtastic es una interfaz en línea que visualiza las ubicaciones de los dispositivos Meshtastic en un mapa. Ayuda a los usuarios a supervisar las posiciones en tiempo real de los dispositivos en una red mallada, proporcionando información sobre la cobertura y la conectividad de la red.
+O Mapa de Nós Meshtastic é uma interface online que visualiza as localizações dos dispositivos Meshtastic em um mapa. Ele ajuda os usuários a monitorar as posições em tempo real dos dispositivos em uma rede mesh, fornecendo uma visão da cobertura e da conectividade da rede.
 
-[Haz clic aquí](https://wiki.seeedstudio.com/es/meshtastic_node_map_t1000_e/) para leer el tutorial detallado.
+[Clique aqui](https://wiki.seeedstudio.com/pt-br/meshtastic_node_map_t1000_e/) para ler o tutorial detalhado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" style={{width:600, height:'auto'}}/></div>
 
-### Monitor de nodos Meshtastic
+### Monitor de nós Meshtastic
 
-El Network Monitor de [Meshtastic](https://meshtastic.org/docs/introduction/) es una herramienta que te permite visualizar, gestionar y supervisar nodos en una red mallada Meshtastic. Proporciona información en tiempo real sobre el estado, el enrutamiento y la comunicación entre dispositivos. El monitor es el analizador Meshtastic que recopila datos a través de un gateway conectado o un servidor MQTT, visualiza la topología de la red y muestra información de los nodos como el estado de la batería, la intensidad de la señal y la ubicación GPS. También puede funcionar como un mapa de nodos Meshtastic.
+O Network Monitor do [Meshtastic](https://meshtastic.org/docs/introduction/) é uma ferramenta que permite visualizar, gerenciar e monitorar nós em uma rede mesh Meshtastic. Ele fornece informações em tempo real sobre o status, o roteamento e a comunicação entre dispositivos. O monitor é o analisador Meshtastic que coleta dados por meio de um gateway conectado ou servidor MQTT, visualiza a topologia da rede e exibe informações dos nós, como status da bateria, intensidade do sinal e localização GPS. Ele também pode funcionar como um mapa de nós Meshtastic.
 
-[Haz clic aquí](https://wiki.seeedstudio.com/es/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor/) para leer el tutorial detallado.
+[Clique aqui](https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor/) para ler o tutorial detalhado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MeshsenseScreenshot.png" style={{width:600, height:'auto'}}/></div>
 
-### Gateway MQTT para Meshtastic
+### Gateway MQTT Meshtastic
 
-Integrar MQTT con Meshtastic amplía la comunicación fuera de la red al conectar redes distantes. Esto permite la mensajería global, proporciona un respaldo cuando las señales de la red mallada son débiles y garantiza una entrega de mensajes más rápida a través de Internet. Es perfecto para zonas remotas y situaciones de emergencia.
+Integrar MQTT com Meshtastic estende a comunicação off‑grid ao fazer a ponte entre redes distantes. Isso possibilita mensagens globais, fornece um backup quando os sinais mesh estão fracos e garante entrega mais rápida de mensagens via internet. Perfeito para áreas remotas e situações de emergência.
 
-[Haz clic aquí](https://wiki.seeedstudio.com/es/xiao_esp32s3_&_wio_sx1262_kit_mqtt/) para leer el tutorial detallado.
+[Clique aqui](https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_&_wio_sx1262_kit_mqtt/) para ler o tutorial detalhado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTFramework.png" style={{width:600, height:'auto'}}/></div>
 
-### Otro firmware de la comunidad
+### Outros firmwares da comunidade
 
-[Haz clic](https://wiki.seeedstudio.com/es/get_started_with_meshcore_solar_node/) aquí para usar más firmware de la comunidad en nuestro hardware.
+[Clique](https://wiki.seeedstudio.com/pt-br/get_started_with_meshcore_solar_node/) aqui para usar mais firmwares da comunidade em nosso hardware.
 
 
-## Soporte técnico y debate sobre el producto
+## Suporte técnico e discussão sobre o produto
 
 <p style={{textAlign: 'center'}}>
   <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
