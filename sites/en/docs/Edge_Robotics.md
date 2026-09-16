@@ -43,6 +43,13 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 
   <RoboticsPageSearch />
 
+  <nav className="quick-nav" aria-label="Robotics page quick navigation">
+    <a href="#robot-kits">📦 Robot Kits</a>
+    <a href="#actuators">⚙️ Joint Actuators</a>
+    <a href="#sensors">👁️ Sensors</a>
+    <a href="#software">💻 Software Ecosystem</a>
+  </nav>
+
   <section className="kit-index-panel" aria-label="Quick robot kit selection">
     <div className="section-title-row compact-title">
       <div>
