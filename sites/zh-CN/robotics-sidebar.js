@@ -25,67 +25,51 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'SO-ARM舵机机械臂',
+          label: 'SO-ARM101',
           // link: {
           //   type: "doc",
           //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
           // },
           items: [
-            //'Robotics/Robot_Kits/Lerobot/En_Hackathon_Thor',
-            'Robotics/Robot_Kits/Lerobot/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
-            'Robotics/Robot_Kits/Lerobot/cn_Lerobot_Starai_Arm',
-            'Robotics/Robot_Kits/Lerobot/cn_Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/cn_Lerobot_SO100Arm_New',
-            'Robotics/Robot_Kits/Lerobot/cn_SOARM101_XIAO_MicroROS_Wireless_Teleoperation',
-            'Robotics/Robot_Kits/Lerobot/cn_Lerobot_SO_ARM101_DAMO',
-            'Robotics/Robot_Kits/Lerobot/cn_SOARM_AMAZINGHAND_TELEOP',
-            'Robotics/Robot_Kits/Lerobot/cn_Lerobot_Dataset_Tool',
             'Robotics/Robot_Kits/Lerobot/cn_Steering_Gear_Debugging_Tool',
+            'Robotics/Robot_Kits/Lerobot/cn_Lerobot_Dataset_Tool',
             'Robotics/Robot_Kits/Lerobot/cn_Complete_Guide_to_Double-Arm_SO-ARM_Training',
-            //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
+            'Robotics/Robot_Kits/Lerobot/cn_SOARM_AMAZINGHAND_TELEOP',
+            'Robotics/Robot_Kits/Lerobot/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
             'Robotics/Robot_Kits/Lerobot/cn_Lerobot_Lekiwi',
+            'Robotics/Robot_Kits/Lerobot/cn_SOARM101_XIAO_MicroROS_Wireless_Teleoperation',
             'Robotics/Robot_Kits/Lerobot/cn_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
+            'Robotics/Robot_Kits/Lerobot/cn_Lerobot_SO_ARM101_DAMO',
           ]
         },
         {
           type: 'category',
-          label: '末端夹爪',
+          label: 'reBot B601-DM',
           items: [
-            'Robotics/Robot_Kits/End_Effectors/cn_DM_Gripper',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'reBot 机械臂',
-          items: [
-            {
-              type: 'category',
-              label: 'B601-DM',
-              items: [
+            
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Getting_Started',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_pinocchio',
                   'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Lerobot',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_pinocchio',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Grasping_Demo',
                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_ROS2_Integration',
                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_isaacsim'
-             ]
-           },
-           {
-             type: 'category',
-             label: 'B601-RS',
-              items: [
-                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Getting_Started',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Lerobot',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Grasping_Demo',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_ROS2_Integration',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_pinocchio',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_isaacsim',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_control_mit',
-                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Agent'
               ]
             },
+        {
+          type: 'category',
+          label: 'reBot B601-RS',
+          items: [
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Getting_Started',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Lerobot',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_pinocchio',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_control_mit',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Grasping_Demo',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_ROS2_Integration',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_isaacsim',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Agent'
             /*{
               type: 'category',
               label: '课程',
@@ -116,6 +100,19 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'StarAI Arm',
+          // link: {
+          //   type: "doc",
+          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+          // },
+          items: [
+            'Robotics/Robot_Kits/Lerobot/cn_Lerobot_Starai_Arm',
+            'Robotics/Robot_Kits/Lerobot/cn_Starai_Arm_ROS2_Moveit',
+          ]
+        },
+
+        {
+          type: 'category',
           label: '灵巧手',
           items: [
             'Robotics/Robot_Kits/Hand/cn_AmazingHand',
@@ -123,14 +120,14 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'StackForce',
+          label: '轮足机器人',
           items: [
             'Robotics/Robot_Kits/StackForce/cn_StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
         {
           type: 'category',
-          label: '人形机器人',
+          label: '小型人形机器人',
           items: [
             {
               type: 'category',
@@ -279,98 +276,98 @@ const sidebars = {
                 },
               ],
             },
-            {
-              type: 'category',
-              label: '仿真',
-              collapsible: false,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/simulation/cn_get_started',
-                  label: '快速入门',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SDK指南',
-              collapsible: false,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_installation',
-                  label: '安装',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_quickstart',
-                  label: '快速入门',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_python-sdk',
-                  label: 'Python SDK',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_integration',
-                  label: 'AI集成',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_core-concept',
-                  label: '核心概念',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_gstreamer-installation',
-                  label: 'GStreamer安装',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: '帮助与故障排除',
-              collapsible: false,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/cn_troubleshooting',
-                  label: '故障排除',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/cn_motors_diagnosis',
-                  label: '电机诊断',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/cn_change_mic_fpc_cable',
-                  label: '更换麦克风FPC线缆',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: '示例',
-              collapsible: false,
-              collapsed: false,
-              items: [
-                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/examples' },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'API参考',
-              collapsible: false,
-              collapsed: false,
-              items: [
-                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/API' },
-              ],
-            },
+            // {
+            //   type: 'category',
+            //   label: '仿真',
+            //   collapsible: false,
+            //   collapsed: false,
+            //   items: [
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/platforms/simulation/cn_get_started',
+            //       label: '快速入门',
+            //     },
+            //   ],
+            // },
+            // {
+            //   type: 'category',
+            //   label: 'SDK指南',
+            //   collapsible: false,
+            //   collapsed: false,
+            //   items: [
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_installation',
+            //       label: '安装',
+            //     },
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_quickstart',
+            //       label: '快速入门',
+            //     },
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_python-sdk',
+            //       label: 'Python SDK',
+            //     },
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_integration',
+            //       label: 'AI集成',
+            //     },
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_core-concept',
+            //       label: '核心概念',
+            //     },
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_gstreamer-installation',
+            //       label: 'GStreamer安装',
+            //     },
+            //   ],
+            // },
+            // {
+            //   type: 'category',
+            //   label: '帮助与故障排除',
+            //   collapsible: false,
+            //   collapsed: false,
+            //   items: [
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/cn_troubleshooting',
+            //       label: '故障排除',
+            //     },
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/cn_motors_diagnosis',
+            //       label: '电机诊断',
+            //     },
+            //     {
+            //       type: 'doc',
+            //       id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/cn_change_mic_fpc_cable',
+            //       label: '更换麦克风FPC线缆',
+            //     },
+            //   ],
+            // },
+            // {
+            //   type: 'category',
+            //   label: '示例',
+            //   collapsible: false,
+            //   collapsed: false,
+            //   items: [
+            //     { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/examples' },
+            //   ],
+            // },
+            // {
+            //   type: 'category',
+            //   label: 'API参考',
+            //   collapsible: false,
+            //   collapsed: false,
+            //   items: [
+            //     { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/API' },
+            //   ],
+            // },
           ],
         },
       ]
