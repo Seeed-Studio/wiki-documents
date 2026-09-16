@@ -1,6 +1,6 @@
 ---
 description: Web USB またはドラッグ＆ドロップで Wio Tracker L1 Pro に MeshCore ファームウェアを書き込む方法と、LoRa リージョン、GPS、メッセージ送信のためのアプリ設定ガイド。
-title: MeshCore を使い始める
+title: MeshCore をはじめよう
 keywords:
   - Meshcore
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -8,10 +8,10 @@ slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 3
 last_update:
-  date: 09/03/2026
+  date: 09/02/2026
   author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-03'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/
 ---
 
@@ -44,7 +44,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。ほかのファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -68,7 +68,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 `Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから `Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
 
-進行バーが最後まで埋まれば、Flash が完了したことを示します。その後、デバイスは自動的に再起動します。
+進行バーが最後まで埋まったら、Flash が完了したことを示します。その後、デバイスは自動的に再起動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
@@ -86,7 +86,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。ほかのファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -96,7 +96,7 @@ UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-RST ボタンを 2 回クリックして DFU モードに手動で入ります。10〜15 秒後に `TRACKER L1` という名前のディスクがポップアップ表示されます。
+RST ボタンをダブルクリックして DFU モードに手動で入ります。10〜15 秒後に `TRACKER L1` という名前のディスクがポップアップ表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
@@ -104,7 +104,7 @@ RST ボタンを 2 回クリックして DFU モードに手動で入ります�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了するとディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
+ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
 
 #### ファームウェアの書き込み
 
@@ -116,7 +116,7 @@ UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/CompanionUF2Download.png" alt="pir" width={800} height="auto" /></p>
 
-RST ボタンを 2 回クリックして DFU モードに手動で入ります。10〜15 秒後に `TRACKER L1` という名前のディスクがポップアップ表示されます。
+RST ボタンをダブルクリックして DFU モードに手動で入ります。10〜15 秒後に `TRACKER L1` という名前のディスクがポップアップ表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
@@ -124,13 +124,13 @@ RST ボタンを 2 回クリックして DFU モードに手動で入ります�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1FlashDragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了するとディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
+ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
 
 ## 設定
 
 ### デバイスの電源を入れる
 
-電源スイッチを上に上げてオンにします。
+電源スイッチを上に持ち上げてオンにします。
 
 :::tip
 ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
@@ -182,7 +182,7 @@ Google Store または Apple Store からダウンロードします。または
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
 
-その後、デバイスを再起動してください。再起動しないと設定は有効になりません。
+その後、デバイスを再起動してください。再起動しないと設定が反映されません。
 
 **リージョン一覧**
 
@@ -192,19 +192,19 @@ Google Store または Apple Store からダウンロードします。または
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868 MHz|869.4 - 869.65|10|27|
 
-これでデバイスの LoRa リージョンが設定されたので、必要に応じて任意の[LoRa パラメータ](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-一般)を引き続き設定できます。
+これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の [LoRa parameter](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general) を続けて設定できます。
 
 ### GPS の設定
 
 GPS を使用したい場合は、有効に設定してください。
 
-APP の `Position Settings` に移動して GPS を有効にできます。または、デバイスの GPS ページに移動し、4 方向ジョイスティックを押して GPS をオンまたはオフにすることもできます。
+APP の `Position Settings` から GPS を有効にできます。または、デバイスの GPS ページに移動し、四方向ジョイスティックを押して GPS をオン／オフできます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/GPSSetting.png" alt="pir" width={500} height="auto" /></p>
 
 ### ブザーの設定
 
-ユーザーボタンを4回押すと、ブザーのオン／オフを制御できます。
+ユーザーボタンを4回押して、ブザーのオン／オフを切り替えます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/User.png" alt="pir" width={500} height="auto" /></p>
 
@@ -220,28 +220,28 @@ Grove センサーには、ファームウェア `1.13` 以降が必要です。
 
 ## メッセージ送信
 
-対応デバイスを2台持っていて、近くに MeshCore ユーザーがあまりいない場合は、両方を BLE Companion ファームウェアに書き換えることで、近くの友人や家族との通信に自分のデバイスを利用できます。
+対応デバイスを 2 台お持ちで、近くに MeshCore ユーザーがあまりいない場合は、両方に BLE Companion ファームウェアを書き込み、近くの友人や家族との通信に自分のデバイスを使用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Frame.png" alt="pir" width={900} height="auto" /></p>
 
 ### アドバタイズ
 
-MeshCore では、自分の名前、位置情報、および公開暗号鍵を手動でブロードキャストできます。これらはなりすまし防止のために署名もされています。アドバタイズボタンをクリックすると、そのデータが LoRa 経由でブロードキャストされます。MeshCore ではこれを Advert と呼びます。アドバタイズには「ゼロホップ」と「フラッド」の2つの方法があります。
+MeshCore では、自分の名前、位置情報、および公開暗号鍵を手動でブロードキャストできます。これらはなりすまし防止のために署名もされています。アドバタイズボタンをクリックすると、そのデータが LoRa 経由でブロードキャストされます。MeshCore ではこれを Advert と呼びます。アドバタイズには「ゼロホップ」と「フラッド」の 2 つの方法があります。
 
-- **ゼロホップ** は、自分のアドバタイズが届く範囲の相手にだけ送信され、それで終了することを意味します。
-- **フラッド** は、一度送信された後、それを受信したすべてのリピーターによって再送信されることを意味します。
+- **ゼロホップ** は、自分のアドバタイズが届く範囲の相手に一度だけ送信され、それで終了することを意味します。
+- **フラッド** は、一度送信された後、それを受信したすべてのリピーターによって繰り返し送信されることを意味します。
 
-アドバタイズはアプリから送信できます。また、デバイスのアドバタイズページから直接送信することもできます。
+アプリ上でアドバタイズを送信できます。また、デバイスのアドバタイズページから直接送信することもできます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Advert.png" alt="pir" width={500} height="auto" /></p>
 
 ### 公開メッセージ
 
-LoRa を設定した後は、プライマリチャンネルでメッセージを送信できます。同じ周波数帯にいる近くの人は全員、そのメッセージを受信します。
+LoRa を設定した後、プライマリチャンネルでメッセージを送信できます。同じ周波数帯にいる近くの人は全員、そのメッセージを受信します。
 
 ### プライベートメッセージ
 
-2台のデバイスは、お互いのアドバタイズを両方とも受信したときにのみ接続を確立します。
+2 台のデバイスは、互いのアドバタイズを両方とも受信したときにのみ接続を確立します。
 
 ## FAQ
 
@@ -262,14 +262,14 @@ LoRa を設定した後は、プライマリチャンネルでメッセージを
 - Wio Tracker L1 シリーズデバイス（L1 / L1 Pro）
 - 動作確認済みの USB データケーブル（充電専用ケーブルは不可）
 - Python 3 と pip がインストールされた Windows / macOS / Linux PC
-- ブートローダーパッケージ：[Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — ZIP は展開せず、そのまま `adafruit-nrfutil` で使用します
+- ブートローダーパッケージ：[Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — ZIP を展開しないでください；`adafruit-nrfutil` は ZIP のまま使用します
 
 **ステップ 2：adafruit-nrfutil をインストール**
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-Python 3 と pip が利用可能か確認します（pip がない場合は、先に `python -m ensurepip --upgrade` を実行してください）：
+Python 3 と pip が利用可能か確認します（pip がない場合は、先に `python -m ensurepip --upgrade` を実行してください）:
 
 ```
 python --version
@@ -278,7 +278,7 @@ python -m pip --version
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/00_python_pip_check.png" alt="Check Python and pip on Windows" width={600} height="auto" /></p>
 
-次にインストールと確認を行います（このガイドでテストしたバージョンは `0.5.3.post16` です）：
+次にインストールして確認します（このガイドでテストしたバージョンは `0.5.3.post16` です）:
 
 ```
 python -m pip install --user adafruit-nrfutil
@@ -303,19 +303,13 @@ pip がない場合は、先に `python3 -m ensurepip --upgrade` を実行して
 
 <TabItem value="linux" label="Linux">
 
-pipx を使って `adafruit-nrfutil` をインストールします：
-
 ```
-sudo apt install pipx
-pipx install adafruit-nrfutil
-pipx ensurepath
-```
-
-Fedora では、apt の代わりに `sudo dnf install pipx` を使用します。ターミナルを開き直してから、次を確認します：
-
-```
+python3 --version
+python3 -m pip install --user adafruit-nrfutil
 adafruit-nrfutil version
 ```
+
+pip がない場合は、先に `python3 -m ensurepip --upgrade` を実行してください。
 
 </TabItem>
 </Tabs>
@@ -362,7 +356,7 @@ ls /dev/ttyACM*
 </TabItem>
 </Tabs>
 
-**ステップ 4：ブートローダーを書き込む**
+**ステップ 4：ブートローダーを書き込み**
 
 ステップ 3 で確認したポートに置き換えます：
 
@@ -394,7 +388,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 </TabItem>
 </Tabs>
 
-**ステップ 5：シリアルポートの変更に対応する**
+**ステップ 5：シリアルポートの変更に対応**
 
 `--touch 1200` はデバイスを DFU モードで再起動させるため、通常シリアルポートが変わり、最初のコマンドは次のようなトレースバックで停止することがあります：
 
@@ -404,7 +398,7 @@ Touched serial port COM43
 FileNotFoundError: could not open port 'COM43'
 ```
 
-これは失敗ではありません — デバイスはすでに新しいポートで DFU モードに入っています。テストした Windows PC では、例えば `COM43` から `COM45` に変わりました：
+これは失敗ではありません — デバイスはすでに新しいポートで DFU モードに入っています。テストした Windows PC の例では、`COM43` から `COM45` に変わりました：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/03_dfu_com_port.png" alt="DFU serial port after re-enumeration in Windows Device Manager" width={600} height="auto" /></p>
 
@@ -436,17 +430,17 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 </TabItem>
 </Tabs>
 
-**ステップ 6：結果を確認する**
+**ステップ 6：結果を確認**
 
-出力の最後が `Device programmed.` で終わっていれば、書き込みは成功です：
+出力の最後に `Device programmed.` と表示されれば、書き込みは成功です：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="adafruit-nrfutil output ending with Device programmed" width={600} height="auto" /></p>
 
-その後、PC 上に UF2 ドライブが表示されます（スクリーンショットはテストした Windows PC のものです）。ボリュームラベルはブートローダービルドによって異なり、テストしたユニットでは `XIAO-BOOT` と表示されましたが、これは合否の基準ではありません。ドライブ名や `INFO_UF2.TXT` の内容で結果を判断しないでください。
+その後、PC 上に UF2 ドライブが表示されます（テストした Windows PC のスクリーンショット）。ボリュームラベルはブートローダービルドによって異なり、テストしたユニットでは `XIAO-BOOT` と表示されましたが、これは合否判定の基準ではありません。ドライブ名や `INFO_UF2.TXT` の内容で結果を判断しないでください：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/05_uf2_drive.png" alt="UF2 drive appears after bootloader flashing" width={600} height="auto" /></p>
 
-**ステップ 7：アプリケーションファームウェアを再インストールする**
+**ステップ 7：アプリケーションファームウェアを再インストール**
 
 :::warning
 ブートローダーを復旧しても、アプリケーションファームウェアは再インストールされません — 再度ファームウェアを書き込むまで、デバイスには動作するファームウェアがありません。
@@ -456,18 +450,18 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 **トラブルシューティング**
 
-- インストール後に `adafruit-nrfutil` が認識されない：Python のユーザースクリプトディレクトリを PATH に追加します（Windows では `Scripts`、macOS ではホームディレクトリ配下の `bin`）。Linux では、`pipx ensurepath` の後にターミナルを開き直してください。
-- ポートがビジー／アクセス拒否：シリアルモニタ、Web フラッシャーのタブ、Arduino IDE など、そのポートを使用しているものをすべて閉じてください。
-- `Touched serial port ...` の後に `FileNotFoundError: could not open port ...` が出る：デバイスが新しいポートで DFU モードに入っています — ステップ 5 に従ってください。
+- インストール後に `adafruit-nrfutil` が認識されない：Python のユーザースクリプトディレクトリ（Windows では `Scripts`、macOS/Linux ではホームディレクトリ配下の `bin`）が PATH に含まれていません — PATH に追加するか、`--user` なしで再インストールしてください。
+- ポートがビジー／アクセス拒否：シリアルモニタ、Web フラッシャーのタブ、Arduino IDE など、そのポートを使用しているものを閉じてください。
+- `Touched serial port ...` の後に `FileNotFoundError: could not open port ...` が表示される：デバイスが新しいポートで DFU モードに入っています — ステップ 5 に従ってください。
 - DFU モードに入れない：[Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/#unable-to-enter-dfu--entering-dfu-mode-manually) を参照してください。
 
 **手動 DFU 復旧**
 
-もし `--touch 1200` でデバイスをDFUモードに入れられない場合（例：ファームウェアがまったく反応しない場合）、手動でDFUモードに入ります：デバイスを接続し、`Reset` をダブルクリックします（黄色のLEDが点灯したままになります）、ステップ3と同様にDFUシリアルポートを探し、そのポートに対して `--touch 1200` なしでステップ5のコマンドを実行します。成功時の表示はステップ6と同じです。
+`--touch 1200` でデバイスをDFUモードに入れられない場合（例：ファームウェアが完全に応答しない場合）、手動でDFUモードに入ります：デバイスを接続し、`Reset` をダブルクリックします（黄色LEDが点灯し続けます）、ステップ3と同様にDFUシリアルポートを探し、そのポートに対して `--touch 1200` なしでステップ5のコマンドを実行します。成功時の表示はステップ6と同じです。
 
 ### DFUモードに入れない場合 & 手動でDFUモードに入る方法
 
-デバイスをPCに接続し、`Reset` ボタンをダブルクリックします — 黄色のLEDが点灯したままになり、PC上にDFUシリアルポートが表示されます。
+デバイスをPCに接続し、`Reset` ボタンをダブルクリックします — 黄色LEDが点灯し続け、PC上にDFUシリアルポートが表示されます。
 
 このモードでブートローダを書き込むには、[`Device Bricked & Bootloader Recovery`](https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/#device-bricked--bootloader-installation) に従いますが、`--touch 1200` は省略します — デバイスはすでにDFUモードになっています。
 
@@ -480,7 +474,7 @@ DFUモードを終了するには、`Reset` ボタンを1回押します。
 #### 説明
 
 - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。
-- シリアルポートログがしばらく動作した後に停止します。
+- シリアルポートログはしばらく動作した後、停止します。
 
  これは、デバイスが次の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因の可能性があります：メッセージ送信プロセスが完了していない、設定中である……
 
@@ -494,7 +488,7 @@ DFUモードを終了するには、`Reset` ボタンを1回押します。
 
 - [Flash Erase](https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/#flash-erase-1) でファームウェアを消去します
 
-- アプリで `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。
+- アプリ上の `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FactoryReset.jpg" alt="pir" width={400} height="auto" /></p>
 
 ### 信号品質
@@ -507,11 +501,11 @@ DFUモードを終了するには、`Reset` ボタンを1回押します。
 
 ### 互換アンテナ
 
-L1 Pro 用のアンテナ交換が必要な場合は、[こちらをクリック](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)して入手してください。
+L1 Pro 用のアンテナ交換が必要な場合は、[click here](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) から入手できます。
 
 ## リソース
 
-- [ブートローダ（Serial DFU パッケージ）](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip)
+- [ブートローダ（シリアルDFUパッケージ）](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip)
 - [(V1) 3Dプリント参照ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
 - [(V2 新しい4方向ジョイスティック) 3Dプリント参照ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [L1 エンクロージャーデザインチャレンジ](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
