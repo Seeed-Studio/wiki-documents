@@ -162,7 +162,7 @@ Make sure the jumper cap is correctly positioned according to your ePaper displa
 
 The board features a JST 2.0mm battery connector with a power switch, allowing you to power the device with a 3.7V lithium battery for portable applications. The built-in charging IC enables battery charging via USB Type-C.
 
-When operating on battery power:
+When the device is powered by battery, the following phenomena are inherent normal behaviors of the SenseCraft Seeedash firmware itself.
 
 - The device will automatically enter low-power mode between refreshes
 - Battery life depends on refresh frequency (typically 3-month on a full charge with default settings)
@@ -229,7 +229,7 @@ Go to the [SenseCraft Seeedash Platform](https://sensecraft.seeed.cc/hmi/device)
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
 
 **Step 7. Create and Push New Interface**     
-Finally the EE04 will receive the data and refresh the 7.5-inch screen with your new content.
+On the SenseCraft Seeedash platform, select the template suitable for the 7.5-inch screen to create a new interface or upload an image.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -241,7 +241,7 @@ Once finished, click the "Apply" button and select your EE04 device.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_6.png" style={{width:800, height:'auto'}}/></div>
 
 **Step 9. Display on the screen**
-Finally the EE04 will receive the data and refresh the 10.3-inch screen with your new content.
+Finally the EE04 will receive the data and refresh the 7.5-inch screen with your new content.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_4.png" style={{width:300, height:'auto'}}/></div>
 
