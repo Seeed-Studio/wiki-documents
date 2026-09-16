@@ -660,26 +660,45 @@ SIM8202G-M2 5G モジュールを使用する場合、モジュールは自動�
 
 - **ステップ 1：** 5G モジュールを起動するために以下を入力します
 
-```sh
-sudo su 
-cd /sys/class/gpio
-echo 309 > export 
-cd gpio309
-echo out > direction
-echo 0 > value
+  <Tabs>
+  <TabItem value="Jetpack 5.1.x" label="Jetpack 5.1.x">
 
-cd..
-echo 341 > export 
-cd PEE.02
-echo out > direction
-echo 1 > value
+    ```sh
+    sudo su 
+    cd /sys/class/gpio
+    echo 309 > export 
+    cd gpio309
+    echo out > direction
+    echo 0 > value
 
-cd..
-echo 330 > export 
-cd PCC.02
-echo out > direction
-echo 0 > value
-```
+    cd..
+    echo 341 > export 
+    cd PEE.02
+    echo out > direction
+    echo 1 > value
+
+    cd..
+    echo 330 > export 
+    cd PCC.02
+    echo out > direction
+    echo 0 > value
+    ```
+
+  </TabItem>
+  <TabItem value="Jetpack 6 / Jetpack 7" label="Jetpack 6 / Jetpack 7">
+
+    ```sh
+    sudo gpioset -m wait 2 9=0
+    sudo gpioset -m wait 1 25=1
+    sudo gpioset -m wait 1 14=0
+    ```
+
+    :::note
+    これらのコマンドは複数のターミナルで実行し、各ターミナルウィンドウを開いたままにしてください。
+    :::
+
+  </TabItem>
+  </Tabs>
 
 上記が実行されると、LED2 が緑色に点灯します
 

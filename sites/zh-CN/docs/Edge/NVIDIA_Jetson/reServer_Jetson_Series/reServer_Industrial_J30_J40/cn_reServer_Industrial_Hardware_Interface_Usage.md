@@ -660,26 +660,45 @@ reServer Industrial 配备了一个 M.2 Key B 接口，支持 4G 和 5G 模块�
 
 - **步骤 1：** 输入以下内容以启动 5G 模块
 
-```sh
-sudo su 
-cd /sys/class/gpio
-echo 309 > export 
-cd gpio309
-echo out > direction
-echo 0 > value
+  <Tabs>
+  <TabItem value="Jetpack 5.1.x" label="Jetpack 5.1.x">
 
-cd..
-echo 341 > export 
-cd PEE.02
-echo out > direction
-echo 1 > value
+    ```sh
+    sudo su 
+    cd /sys/class/gpio
+    echo 309 > export 
+    cd gpio309
+    echo out > direction
+    echo 0 > value
 
-cd..
-echo 330 > export 
-cd PCC.02
-echo out > direction
-echo 0 > value
-```
+    cd..
+    echo 341 > export 
+    cd PEE.02
+    echo out > direction
+    echo 1 > value
+
+    cd..
+    echo 330 > export 
+    cd PCC.02
+    echo out > direction
+    echo 0 > value
+    ```
+
+  </TabItem>
+  <TabItem value="Jetpack 6 / Jetpack 7" label="Jetpack 6 / Jetpack 7">
+
+    ```sh
+    sudo gpioset -m wait 2 9=0
+    sudo gpioset -m wait 1 25=1
+    sudo gpioset -m wait 1 14=0
+    ```
+
+    :::note
+    请打开多个终端来运行这些命令，并确保每个终端窗口保持活动状态。
+    :::
+
+  </TabItem>
+  </Tabs>
 
 执行完上述操作后，LED2 会亮起绿色
 
