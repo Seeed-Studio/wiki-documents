@@ -1,5 +1,5 @@
 ---
-description: Este guia ajudará você a começar a usar o reBot Arm B601-DM, incluindo opções de compra, montagem, calibração e configuração de software.
+description: Este guia ajudará você a começar com o reBot Arm B601-DM, incluindo opções de compra, montagem, calibração e configuração de software.
 title: Início Rápido do reBot Arm B601-DM
 keywords:
   - reBot
@@ -51,27 +51,33 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 </p>
 
 <p align="center">
-  <strong>Braço Robótico 6-DOF · Suporte a Múltiplos Motores · Solução de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
+  <strong>Braço robótico de 6 DOF · Suporte a múltiplos motores · Solução de cinemática · Planejamento de trajetória · Totalmente open source</strong>
 </p>
 
 <p align="center">
-  O projeto reBot Arm é open source no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) — visite o repositório e dê uma Star! O repositório contém a lista completa de materiais (BOM). Este guia ajudará você a começar a usar o B601-DM, desde a montagem até a operação.
+  O projeto reBot Arm é open source no [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) — visite o repositório e deixe uma Star! O repositório contém a lista completa de materiais (BOM). Este guia ajudará você a começar com o B601-DM, da montagem à operação.
 </p>
 
 <GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
 
-:::tip
-Se você comprou um kit pré-montado, pule diretamente para o vídeo tutorial no **Passo 3** no final deste artigo e siga as instruções. Não é necessário gravar IDs dos motores nem calibrar as posições de zero.
+## Introdução ao Projeto
 
-Foi verificado que o desempenho de máquinas virtuais é insuficiente para executar os demos e há problemas de configuração. Recomenda-se usar uma máquina física com Ubuntu para controlar o braço robótico.
+**reBot-DevArm (reBot Arm B601 DM e reBot Arm B601 RS)** é um projeto de braço robótico dedicado a reduzir a barreira para o aprendizado de inteligência incorporada. Nós nos concentramos em **"Verdadeiro Open Source"** — não apenas código, abrimos todo o seguinte sem qualquer reserva:
+
+- 🦾 **Braços robóticos open source com duas versões de motor**: Fornecemos todos os arquivos open source para as versões com motores RoboStride e Damiao com a mesma aparência.
+- 🛠️ **Blueprints de hardware**: Arquivos-fonte das peças em chapa metálica e impressas em 3D.
+- 🔩 **BOM (Bill of Materials)**: Detalhada até a especificação de cada parafuso e link de compra.
+- 💻 **Software e algoritmos**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
+
+:::tip
+Se você comprou um kit pré-montado, pule diretamente para o vídeo tutorial no **Passo 3** no final deste artigo e siga junto. Não é necessário gravar IDs dos motores nem calibrar posições zero.
+
+Já foi verificado que o desempenho de máquinas virtuais é insuficiente para executar os demos e há problemas de configuração. Recomenda-se usar uma máquina física com Ubuntu para controlar o braço robótico.
 
 Recomendamos instalar o **Ubuntu 24.04 LTS**.
 
-Tutorial de instalação recomendado no Bilibili: [Tutorial de Instalação de Dual-Boot do Ubuntu](https://www.bilibili.com/video/BV1Cc41127B9/)
+Tutorial de instalação recomendado no Bilibili: [Tutorial de instalação de dual boot do Ubuntu](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
-
-
-
 
 ## Aviso de Segurança e Notificação de Risco
 
@@ -106,15 +112,13 @@ Tutorial de instalação recomendado no Bilibili: [Tutorial de Instalação de D
 
 ### Montar a Fonte de Alimentação
 
-Como alternativa, você pode escolher nosso gabinete open source para fonte de alimentação MeanWell 24V 14,6A para auto-montagem. As instruções em texto e a BOM são open source no [repositório GitHub](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) (recomendado apenas para desenvolvedores com experiência relevante em montagem de fontes de alimentação).
+Como alternativa, você pode escolher nosso gabinete open source para a fonte de alimentação MeanWell 24V 14,6A para auto-montagem. As instruções em texto e a BOM são open source no [repositório GitHub](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) (recomendado apenas para desenvolvedores com experiência relevante em montagem de fontes de alimentação).
 
 Vídeo de referência para montagem:
 
    <div class="video-container">
      <iframe width="900" height="600" src="https://www.youtube.com/embed/DHFA2UfQzUo?si=GYy-Z38qTUW6KPqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
    </div>
-
-
 
 ## Passo 1: [Guia de Montagem](https://youtu.be/rfTQoFCfnMc)
 
@@ -127,7 +131,7 @@ Antes da Montagem:
   4. Garanta a segurança durante a montagem. Evite beliscões ou ferimentos. Crianças devem estar sob supervisão.
 
   :::tip
-  Lembrete: O D4 * 7 entre o motor 5 e o motor 6 no vídeo de montagem não precisa ser instalado. Isso é um erro no vídeo. Se você comprou a versão DIY do reBot Arm B601-DM, os 7 parafusos D4 * 7 são suficientes para concluir a montagem.
+  Lembrete: O D4 * 7 entre o motor 5 e o motor 6 no vídeo de montagem não precisa ser instalado. É um erro no vídeo. Se você comprou a versão DIY do reBot Arm B601-DM, os 7 parafusos D4 * 7 são suficientes para você concluir a montagem.
   :::
 
 <div class="video-container">
@@ -143,7 +147,7 @@ Vídeo tutorial de fiação:
 ## Passo 2: Redefinir IDs dos Motores
 
 :::tip
-Ao montar o braço robótico, não se esqueça de conectar o chicote de cabos entre o Motor 1 e o Motor 2. A posição exata está destacada na imagem abaixo. Antes de alternar a conexão do cabo de 3 pinos, certifique-se de que o motor atual esteja desativado e a alimentação desligada para evitar hot-plug ou operação incorreta que possa causar parâmetros anormais do motor.
+Ao montar o braço robótico, não se esqueça de conectar o chicote de cabos entre o Motor 1 e o Motor 2. A posição exata está destacada na imagem abaixo. Antes de alternar a conexão do cabo de 3 pinos, certifique-se de que o motor atual esteja desativado e a alimentação desligada para evitar hot-plug ou operação incorreta que possa causar parâmetros anormais no motor.
 
 <div align="center">
     <img width={200}
@@ -151,13 +155,13 @@ Ao montar o braço robótico, não se esqueça de conectar o chicote de cabos en
 </div>
 :::
 
-### AGENTE de IA
+### AGENTE DE IA
 
 :::tip
 Esta seção está em beta. Observe as precauções de segurança durante o uso. Se as sugestões da IA forem diferentes desta documentação, siga este guia e peça ajuda aos nossos engenheiros.
 :::
 
-Deixe um AGENTE de IA ajudar você neste processo. Copie o prompt abaixo para o seu assistente de IA:
+Deixe um AGENTE DE IA ajudar você neste processo. Copie o prompt abaixo para o seu assistente de IA:
 
 ```text
 
@@ -170,9 +174,9 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
   Antes da configuração dos parâmetros do motor, observe as seguintes preparações e regras de segurança:
 
 - Compre 2 grampos de fixação (≥3 polegadas) e uma fonte de alimentação chaveada 24V 15A com saída XT30 (use marca confiável, sem produtos de baixa qualidade).
-- Mantenha distância ≥1 m durante depuração/operação.
+- Mantenha distância ≥1 m durante a depuração/operação.
 - Não faça hot-plug dos motores; desligue a alimentação antes de conectar/desconectar a interface XT30 2+2.
-- Não sobrecarregue/não exceda a velocidade; verifique a fiação e os fixadores antes da partida; evite ambientes úmidos/quentes/empoeirados.
+- Não sobrecarregue/não exceda a velocidade; verifique a fiação e os fixadores antes da inicialização; evite ambientes úmidos/de alta temperatura/empoeirados.
 - Defina parâmetros de programa razoáveis e parada de emergência para evitar perda de controle.
 - **Siga rigorosamente estas regras. O vendedor não é responsável por riscos/responsabilidades decorrentes de operação ilegal ou erros pessoais.**
 
@@ -180,29 +184,28 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 #### Hardware
 
-- [Braço Robótico reBot Arm B601 DM × 1](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
-- [Placa Adaptadora USB-CAN × 1](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
-- [Placa de Separação de Sinal e Energia × 1](https://www.seeedstudio.com/XT30-2-2-Power-Separation-Board-p-6707.html)
-- Grampos de Marcenaria × 2
+- [reBot Arm B601 DM Robotic Arm × 1](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
+- [USB-CAN Adapter Board × 1](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
+- [Signal-Power Separation Board × 1](https://www.seeedstudio.com/XT30-2-2-Power-Separation-Board-p-6707.html)
+- Grampos de marcenaria × 2
 - Cabo USB-C × 1
-- [Fonte de Alimentação 24V 15A (saída XT30) × 1](https://www.seeedstudio.com/AC-DC-Power-Adapter-IEC-60320-C14-XT30-Female-24V-4-5A-1200mm-L190-W92-5-H36mm-p-6764.html)
-- [Cabo de Alimentação-US](https://www.seeedstudio.com/reServer-AC-US-p-5052.html) \  [Cabo de Alimentação-EU](https://www.seeedstudio.com/reServer-AC-EU-p-5051.html)
+- [Fonte de alimentação 24V 15A (saída XT30) × 1](https://www.seeedstudio.com/AC-DC-Power-Adapter-IEC-60320-C14-XT30-Female-24V-4-5A-1200mm-L190-W92-5-H36mm-p-6764.html)
+- [Power Cord-US](https://www.seeedstudio.com/reServer-AC-US-p-5052.html) \  [Power Cord-EU](https://www.seeedstudio.com/reServer-AC-EU-p-5051.html)
 
-#### Requisitos do computador
+#### Requisitos do Computador
 
 - Computador pessoal com dual-boot (Windows + Ubuntu / macOS)
 
 #### Software
 
-- [Link para download do software](https://github.com/dmBots/motor-debugging-tool)
+- [Software Download Link](https://github.com/dmBots/motor-debugging-tool)
 
-
-#### Gravar ID do motor e habilitar teste
+#### Gravar ID do Motor e Habilitar Teste
 
 Defina o CAN ID e o Master ID para cada motor de junta de acordo com os parâmetros na tabela abaixo:
 
-| Número do motor | Modelo do motor | CAN ID | Master ID |
-|:---:|:---:|:---:|:---:|
+| Número do Motor | Modelo do Motor | CAN ID | Master ID |
+| :---: | :---: | :---: | :---: |
 | Motor 1 | J4340P | 0x01 | 0x11 |
 | Motor 2 | J4340P | 0x02 | 0x12 |
 | Motor 3 | J4340P | 0x03 | 0x13 |
@@ -214,7 +217,7 @@ Defina o CAN ID e o Master ID para cada motor de junta de acordo com os parâmet
 :::danger
 A seguir está um exemplo de operação usando o Motor 1. Certifique-se de que o CAN ID e o Master ID de cada motor de junta estejam configurados corretamente de acordo com a tabela acima.
 :::
-1.Abra o software host **DM_Tools**, selecione a porta USB COM correspondente e defina a taxa de baud para `921600`. Após a conexão bem-sucedida, as informações serão exibidas na interface `Serial`.
+1.Abra o software host **DM_Tools**, selecione a porta USB COM correspondente e defina a taxa de baud para `921600`. Após a conexão bem-sucedida, as informações serão impressas na interface `Serial`.
 
 <div align="center">
     <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_damiao_tool_en.png" width="800" />
@@ -222,7 +225,7 @@ A seguir está um exemplo de operação usando o Motor 1. Certifique-se de que o
 
 2.Use o cabo de 3 pinos para conectar o Motor 1 à placa adaptadora USB-CAN.
 
-3.Após a conexão, acesse a interface `Parameter Settings`. Clique em `Read Parameters` para ler os parâmetros atuais e, em seguida, defina o `CAN ID` para `0x01` e o `Master ID` para `0x11`.
+3.Após a conexão, acesse a interface `Parameter Settings`. Clique em `Read Parameters` para obter os parâmetros atuais e, em seguida, defina o `CAN ID` para `0x01` e o `Master ID` para `0x11`.
 
 4.Após a configuração, clique em `Write Parameters` para salvar os parâmetros.
 
@@ -234,7 +237,7 @@ A seguir está um exemplo de operação usando o Motor 1. Certifique-se de que o
 O modo USB na caixa laranja à esquerda representa o método usado ao ler e gravar parâmetros do motor na página de configurações atual.
 :::
 
-5.Navegue até a interface `Debug`. Depois de garantir que o `CAN ID` e o `Master ID` estejam configurados corretamente, clique em `Enable`. O indicador do motor ficará verde fixo, indicando que o motor está habilitado. O teste do Motor 1 está concluído.
+5.Navegue até a interface `Debug`. Depois de garantir que o `CAN ID` e o `Master ID` estejam configurados corretamente, clique em `Enable`. A luz indicadora do motor ficará verde fixa, indicando que o motor está habilitado. O teste do Motor 1 está concluído.
 
 <div align="center">
     <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_damiao_tool_en.png" width="800" />
@@ -244,13 +247,13 @@ O modo USB na caixa laranja à esquerda representa o método usado ao ler e grav
 Após o teste, lembre-se de clicar em `Disable` para sair do estado habilitado.
 :::
 
-**Pontos de conexão do cabo de 3 pinos e efeito de habilitação para cada motor**
+**Pontos de Conexão do Cabo de 3 Pinos e Efeito de Habilitação para Cada Motor**
 
 | Configuração do Motor 1 | Configuração do Motor 2 | Configuração do Motor 3 | Configuração do Motor 4 | Configuração do Motor 5 | Configuração do Motor 6 | Configuração do Motor 7 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_ID_set.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_ID_set.jpg" width="120" /> |
 
-| Motor 1 habilitado | Motor 2 habilitado | Motor 3 habilitado | Motor 4 habilitado | Motor 5 habilitado | Motor 6 habilitado | Motor 7 habilitado |
+| Motor 1 Habilitado | Motor 2 Habilitado | Motor 3 Habilitado | Motor 4 Habilitado | Motor 5 Habilitado | Motor 6 Habilitado | Motor 7 Habilitado |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/1_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/2_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/3_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/4_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/5_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/6_Enable.jpg" width="120" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/7_Enable2.jpg" width="120" /> |
 
@@ -258,16 +261,18 @@ Após o teste, lembre-se de clicar em `Disable` para sair do estado habilitado.
 <iframe width="900" height="600" src="https://www.youtube.com/embed/uXuzs1qmj6A?si=lfgXXlF1awhtnvaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Etapa 3: Use o MotorBridge para calibrar o braço e concluir a primeira execução
+## Etapa 3: Use o MotorBridge para Calibrar o Braço e Concluir a Primeira Execução
 
-Confiamos que você concluiu a montagem do braço robótico, a inicialização do ponto zero, a configuração do ID dos motores e outras etapas de configuração seguindo o vídeo. Agora você está pronto para explorar oficialmente a série de tutoriais e ferramentas que lançamos.
+Confiamos que você concluiu a montagem do braço robótico, a inicialização do ponto zero, a configuração do ID do motor e outras etapas de configuração seguindo o vídeo. Agora você está pronto para explorar oficialmente a série de tutoriais e ferramentas que lançamos.
 
 :::tip
+
 1. Explore nossa plataforma **MotorBridge**, uma solução tudo-em-um que oferece suporte a uma lista crescente de motores, incluindo [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow e outros. Ela também é compatível com braços robóticos continuamente atualizados, como o reBot. Projetada para iniciantes, também oferecemos um SDK em Python que implementa a mesma funcionalidade para desenvolvedores.
 
-2. Experimente novos recursos e detalhes do MotorBridge para o braço robótico reBot, incluindo configuração de ponto zero com um clique, gravação de parâmetros, controle de motor via arrastar-e-soltar na interface gráfica e uma interface integrada de visualização do modelo.
+2. Experimente novos recursos e detalhes do MotorBridge para o braço robótico reBot, incluindo configuração de ponto zero com um clique, gravação de parâmetros, controle de motor via arrastar-e-soltar na interface de usuário e uma interface integrada de visualização de modelo.
 
 3. Esta ferramenta é totalmente compatível com os sistemas operacionais **Windows, Ubuntu e macOS**.
+
 :::
 
 Consulte o vídeo e o tutorial em texto. Antes de controlar o braço robótico, você precisa redefinir o ponto zero novamente.
@@ -276,7 +281,7 @@ Consulte o vídeo e o tutorial em texto. Antes de controlar o braço robótico, 
 <iframe width="900" height="600" src="https://www.youtube.com/embed/SI1PRQYkhdg?si=E0m7uTF4IhCVZYl_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### Fluxo de configuração de software e calibração
+### Fluxo de Trabalho de Configuração de Software e Calibração
 
 Siga estas etapas na ordem para instalar o Miniforge e criar um ambiente Python isolado para o desenvolvimento com o reBot.
 
@@ -308,6 +313,7 @@ Carregue o Miniforge e inicialize o Bash:
 source ~/miniforge3/etc/profile.d/conda.sh
 conda init bash
 ```
+
 :::
 
 </TabItem>
@@ -329,12 +335,13 @@ Carregue o Miniforge e inicialize o Zsh, o shell padrão nas versões atuais do 
 source ~/miniforge3/etc/profile.d/conda.sh
 conda init zsh
 ```
+
 :::
 
 </TabItem>
 <TabItem value="windows" label="Windows">
 
-Abra a [página de lançamentos do Miniforge](https://github.com/conda-forge/miniforge/releases), encontre o `Miniforge3-Windows-x86_64.exe` mais recente e faça o download.
+Abra a [página de Releases do Miniforge](https://github.com/conda-forge/miniforge/releases), encontre o `Miniforge3-Windows-x86_64.exe` mais recente e faça o download.
 
 :::tip Inicialize o Conda para o seu terminal
 **Usuários do Git Bash:** Se `conda` não for encontrado, carregue o Conda primeiro:
@@ -353,6 +360,7 @@ Para o PowerShell, inicialize o Conda com:
 ```bash
 conda init powershell
 ```
+
 :::
 
 </TabItem>
@@ -364,7 +372,7 @@ conda init powershell
 <section className="rebot-step-item">
     <span className="rebot-step-number">2</span>
 <div className="rebot-step-content">
-      <h4>Configuração do ambiente</h4>
+      <h4>Configuração do Ambiente</h4>
       <p className="rebot-step-label">Etapa 2</p>
 
 Crie um ambiente virtual com Python 3.12:
@@ -373,7 +381,7 @@ Crie um ambiente virtual com Python 3.12:
 conda create -y -n rebot python=3.12
 ```
 
-Em seguida, ative seu ambiente virtual; você precisa fazer isso sempre que abrir um shell para usar o reBot:
+Em seguida, ative seu ambiente virtual; você deve fazer isso sempre que abrir um shell para usar o reBot:
 
 ```bash
 conda activate rebot
@@ -391,7 +399,7 @@ conda activate rebot
 :::tip
 
 **Observação para usuários de macOS:**
-Se você estiver enfrentando baixa taxa de quadros durante a teleoperação no macOS, isso pode ser causado por um driver WCH CH34x desatualizado. Para o **macOS 10.14 e versões posteriores**, o sistema inclui um driver `AppleUSBCHC0M` integrado. Você pode desinstalar o driver antigo e mudar para o driver integrado do macOS, o que deve melhorar efetivamente a taxa de quadros.
+Se você tiver taxas de quadros baixas durante a teleoperação no macOS, isso pode ser causado por um driver WCH CH34x desatualizado. Para **macOS 10.14 e posterior**, o sistema inclui um driver `AppleUSBCHC0M` integrado. Você pode desinstalar o driver antigo e alternar para o driver integrado do macOS, o que deve melhorar efetivamente as taxas de quadros.
 
 :::
 
@@ -407,10 +415,10 @@ pip install motorbridge
 <section className="rebot-step-item">
     <span className="rebot-step-number">4</span>
 <div className="rebot-step-content">
-      <h4>Conecte o reBot Arm</h4>
+      <h4>Conectar o reBot Arm</h4>
       <p className="rebot-step-label">Etapa 4</p>
 
-Depois de conectar o braço robótico ao seu computador por meio de um cabo USB e ligar sua fonte de alimentação, você precisa configurar as permissões de acesso 666 para a porta serial. (Sistemas Windows não exigem configuração de permissão; você pode pular esta etapa.)
+Após conectar o braço robótico ao seu computador por meio de um cabo USB e ligar sua fonte de alimentação, você precisa configurar permissões de acesso 666 para a porta serial. (Sistemas Windows não exigem configuração de permissão; você pode pular esta etapa.)
 
 ```bash
 sudo chmod 666 /dev/ttyACM*
@@ -422,10 +430,10 @@ sudo chmod 666 /dev/ttyACM*
 <section className="rebot-step-item">
     <span className="rebot-step-number">5</span>
 <div className="rebot-step-content">
-      <h4>Inicie o MotorBridge</h4>
+      <h4>Iniciar o MotorBridge</h4>
       <p className="rebot-step-label">Etapa 5</p>
 
-Abra o endereço [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) no seu navegador, clique na opção Help, copie o comando correspondente com base no seu sistema operacional e na placa controladora, verifique o endereço IP e o número da porta e, em seguida, pressione Enter no terminal para executá-lo.
+Abra o endereço [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) no seu navegador, clique na opção Help, copie o comando correspondente com base no seu sistema operacional e placa controladora, verifique o endereço IP e o número da porta e, em seguida, pressione Enter no terminal para executá-lo.
 
 Por exemplo, no Windows:
 
@@ -443,10 +451,12 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 </div>
 
 ## FAQ
+
 ### 1. Ruído anormal alto ocorre imediatamente após a partida do motor
-- Esse problema geralmente ocorre quando a calibração de parâmetros é acionada acidentalmente durante a configuração do ID, o que sobrescreve parâmetros predefinidos de fábrica, como a inércia do motor. Use **DM_Tools_v.1.8.0.1.exe (somente Windows)** disponível em:
+
+- Esse problema geralmente ocorre quando a calibração de parâmetros é acionada acidentalmente durante a configuração do ID, o que substitui parâmetros predefinidos de fábrica, como a inércia do motor. Use **DM_Tools_v.1.8.0.1.exe (somente Windows)** disponível em:
 https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
-Exporte os parâmetros completos de um motor intacto do mesmo modelo por meio do software host, importe esses parâmetros para a unidade com defeito, atualize o respectivo CAN ID, salve os parâmetros gravados e, em seguida, prossiga com a calibração do ponto zero.
+Exporte parâmetros completos de um motor intacto do mesmo modelo por meio do software host, importe esses parâmetros para a unidade com falha, atualize o respectivo CAN ID, salve os parâmetros gravados e, em seguida, prossiga com a calibração do ponto zero.
 
 <div align="center">
     <img width={400}
@@ -462,4 +472,5 @@ Exporte os parâmetros completos de um motor intacto do mesmo modelo por meio do
 [DM4340P Default Parameters](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4340P_Default_Parameters.txt)
 
 ### 2. Todos os motores compartilham IDs CAN idênticos
+
 - Ao realizar a calibração do ponto zero por meio do **DM_Tools_v.1.8.0.1.exe (somente Windows)**, evite clicar nos botões Read ou Set ao lado do campo CAN ID. A interface de depuração se comunica pelo barramento CAN; clicar em Set unificará o CAN ID de todos os motores conectados ao CANBUS.

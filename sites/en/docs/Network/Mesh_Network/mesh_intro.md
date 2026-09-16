@@ -1,6 +1,6 @@
 ---
-description: Meshtastic® Network Introduction
-title: Meshtastic® Network Introduction
+description: Mesh Network Introduction
+title: Mesh Network Introduction
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

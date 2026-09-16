@@ -110,7 +110,7 @@ The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtast
     <td colspan="1">I2S Codec: ES8311</td>
   </tr>
   <tr>
-    <td colspan="1">MIC: Pin Reserved</td>
+    <td colspan="1">MIC</td>
   </tr>
     <tr>
     <td colspan="1">Speaker: 6Ω 0.8W</td>
@@ -121,11 +121,11 @@ The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtast
   </tr>
     <tr>
     <td colspan="1">**Dimension**</td>
-    <td colspan="1"></td>
+    <td colspan="1">(Antenna folded) L: 87.5 cm, W: 69 cm, H: 26.6 cm</td>
   </tr>
   <tr>
     <td colspan="1">**Device Weight**</td>
-    <td colspan="1"></td>
+    <td colspan="1">171.5g</td>
   </tr>
     <tr>
     <td colspan="1">**Operation Temperature**</td>

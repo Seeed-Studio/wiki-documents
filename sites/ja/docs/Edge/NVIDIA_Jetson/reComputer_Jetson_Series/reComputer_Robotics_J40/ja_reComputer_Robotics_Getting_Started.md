@@ -147,7 +147,7 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
     </tr>
     <tr>
       <th rowSpan="1">動作温度</th>
-      <td colSpan="2">-20℃～55℃（25W モード）；<br />-20℃～50℃（MAXN モード）；<br />（reComputer Robotics ヒートシンク（ファン付き）使用時）</td>
+      <td colSpan="2">-20℃~60℃（25W モード）；<br />-20℃~55℃（40W モード）；<br />-20℃~50℃（MAXN モード）；<br />（ファン付き reComputer Robotics ヒートシンク使用時）</td>
     </tr>
     <tr>
       <th rowSpan="1">保証</th>

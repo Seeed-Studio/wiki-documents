@@ -1,5 +1,5 @@
 ---
-description: Introdução à Série Wio Tracker L1
+description: Introdução ao Wio Tracker L1 Series
 title: Introdução ao Meshtastic
 keywords:
   - Meshtastic
@@ -8,17 +8,17 @@ slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 09/02/2026
+  date: 09/03/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-02'
+updatedAt: '2026-09-03'
 url: https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::tip
-A Série Wio Tracker L1 compartilha a mesma estrutura de hardware. Embora o vídeo guia seja para o L1 Pro, ele é aplicável a todos os outros produtos da série L1.
+A Wio Tracker L1 Series compartilha a mesma estrutura de hardware. Embora o vídeo tutorial seja para o L1 Pro, ele é aplicável a todos os outros produtos da série L1.
 :::
 
 ## Tutorial em Vídeo
@@ -49,12 +49,12 @@ Por favor, `don't use NRF-OTA` para atualizar o firmware, isso pode fazer com qu
 
 #### Joystick de Quatro Direções
 
-O `latest Alpha firmware` do firmware L1 E-Ink atualmente oferece suporte ao joystick de quatro direções. Se você quiser usar o joystick, por favor [clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/#Parte-2-Gravação-de-Firmware) para atualizar o firmware. 
+O `latest Alpha firmware` do firmware L1 E-Ink atualmente oferece suporte ao joystick de quatro direções. Se você quiser usar o joystick, por favor [clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/#parte-2-gravação-de-firmware) para atualizar o firmware. 
 
 #### Barra de Menu
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
-Apenas o firmware 2.7 oferece suporte à barra de menu. Se você quiser usar a barra de menu, siga o [Flash Firmware Tutorial](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/#Parte-2-Gravação-de-Firmware) para atualizar o firmware.
+Apenas o firmware 2.7 oferece suporte à barra de menu. Se você quiser usar a barra de menu, siga o [Flash Firmware Tutorial](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/#parte-2-gravação-de-firmware) para atualizar o firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### Buzzer
@@ -111,7 +111,7 @@ Para L1 E-Ink, selecione o dispositivo de destino como `Seeed Wio Tracker L1 E-I
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
-Ligue o dispositivo, clique em `Enter DFU Mode`, haverá uma porta serial chamada `Tracker L1`, clique e conecte-a, e deve ser exibido um driver chamado `Tracker L1`.
+Ligue o dispositivo, clique em `Enter DFU Mode`, aparecerá uma porta serial chamada `Tracker L1`, clique e conecte-a, e deverá ser exibida uma unidade chamada `Tracker L1`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -176,16 +176,16 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 
 **Lista de Regiões**
 
-|**Código da Região**|**Descrição**|**Faixa de Frequência (MHz)**|**Ciclo de Trabalho (%)**|**Limite de Potência (dBm)**|
+|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Não definido|N/A|N/A|N/A|
-|US|Estados Unidos|902.0 - 928.0|100|30|
-|EU_868|União Europeia 868MHz|869.4 - 869.65|10|27|
+|UNSET|Unset|N/A|N/A|N/A|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868MHz|869.4 - 869.65|10|27|
 
 Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para uma lista mais abrangente.
 
 :::info
-**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma base contínua de 1 hora. Seu dispositivo irá parar de transmitir se você atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de duty cycle horário de 10%, calculada a cada minuto em uma base contínua de 1 hora. Seu dispositivo irá parar de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
@@ -194,11 +194,11 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
 
 ### Conectar via Website
 
-Se você quiser enviar mensagens de texto e se comunicar com outros nós no website, pode conectar o dispositivo ao [Website Meshtastic](https://client.meshtastic.org/messages/broadcast/0) agora.
+Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo website, pode conectar o dispositivo ao [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) agora.
 
   Passo 1: Abra o Website
 
-[Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir ao website.
+[Click here](https://client.meshtastic.org/messages/broadcast/0) para ir ao website.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   Passo 2: Adicionar o novo dispositivo
@@ -209,12 +209,12 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós no webs
 
     Há duas maneiras de conectar. Você pode escolher o método de sua preferência.
 
- Método 1: Via Bluetooth
+ Method 1: Via Bluetooth
 
     Escolha o método bluetooth. Escolha o ID do dispositivo na janela pop-up.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
- Método 2: Via Serial
+ Method 2: Via Serial
 
     Escolha o método serial. Abra o gerenciador de dispositivos para ver em qual porta o dispositivo está conectado. Escolha essa porta na janela pop-up.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
@@ -229,7 +229,7 @@ Defina o GPS como ativado. Você pode ajustar o intervalo de atualização e o i
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-Para IOS, ative o `Accurate Location`. Caso contrário, o posicionamento pode desviar.
+Para iOS, ative o `Accurate Location`. Caso contrário, o posicionamento pode ficar impreciso.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -237,12 +237,12 @@ Para IOS, ative o `Accurate Location`. Caso contrário, o posicionamento pode de
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/SensorConnection.jpg" alt="pir" width={700} height="auto" /></p>
 
-Você pode adicionar sensor ao dispositivo por meio da interface Grove. Os seguintes sensores foram verificados como compatíveis com a interface Grove no dispositivo.
+Você pode adicionar sensores ao dispositivo por meio da interface Grove. Os seguintes sensores foram verificados como compatíveis com a interface Grove no dispositivo.
 
 <table>
   <tr>
     <th colspan="2">Tipo de sensor</th>
-    <th colspan="1">Modelo de sensor</th>
+    <th colspan="1">Modelo do sensor</th>
   </tr>
   <tr>
     <td rowspan="4">Sensor ambiental</td>
@@ -276,7 +276,7 @@ Você pode adicionar sensor ao dispositivo por meio da interface Grove. Os segui
 
 <TabItem value="ios" label="IOS">
 
-- Ative Telemetry para obter dados do sensor. Se você quiser mostrar os dados do sensor na tela OLED, ative `on screen`
+- Ative Telemetry para obter dados do sensor. Se quiser mostrar os dados do sensor na tela OLED, ative `on screen`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/temp_sensor123.png" alt="pir" width={900} height="auto" /></p>
 
@@ -284,7 +284,7 @@ Você pode adicionar sensor ao dispositivo por meio da interface Grove. Os segui
 
 <TabItem value="Android" label="Android">
 
-- Ative Telemetry para obter dados do sensor. Se você quiser mostrar os dados do sensor na tela OLED, ative `on screen`
+- Ative Telemetry para obter dados do sensor. Se quiser mostrar os dados do sensor na tela OLED, ative `on screen`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryAndroid.png" alt="pir" width={900} height="auto" /></p>
 
@@ -298,12 +298,12 @@ A tela OLED exibirá os dados do sensor se você ativar `on screen`.
 ### Conexão de tela
 
 - Tela E-Ink
-  [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) to get the compatible E-Ink screen.
+  [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) para obter a tela E-Ink compatível.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - Tela OLED
-[Click here](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) to get the compatible OLED screen. The current OLED driver is SSD1306.
+[Click here](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) para obter a tela OLED compatível. O driver OLED atual é o SSD1306.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -315,10 +315,10 @@ O firmware da versão 2.7 agora oferece suporte a teclado virtual! Você pode di
 
 ### Configurar toque
 
-Vá para `Settings` -> `Ringtone Config` e insira a string de toque RTTTL que você deseja usar para notificações externas.
+Vá para `Settings` -> `Ringtone Config` e insira a sequência de toque RTTTL que você deseja usar para notificações externas.
 
 <Tabs>
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="App iOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_ringtone123.png" alt="pir" width={500} height="auto" /></p>
 
@@ -381,27 +381,27 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 **Descrição:**
 
-O dispositivo não está respondendo, nenhum LED, não é possível parear com seu App. Se você achar que o dispositivo está completamente morto após gravar seu próprio firmware, você também pode tentar reinstalar o bootloader.
+O dispositivo não está respondendo, nenhum LED acende e não é possível pareá-lo com o seu App. Se você perceber que o dispositivo está completamente morto após gravar o seu próprio firmware, também pode tentar reinstalar o bootloader.
 
 O bootloader é restaurado pela porta serial USB (Serial DFU) com `adafruit-nrfutil`.
 
 :::danger note
-Durante a gravação, mantenha a conexão do cabo estável e **NÃO** a desconecte — mesmo que o número da porta serial mude.
+Durante a gravação, mantenha a conexão do cabo estável e **NÃO** o desconecte — mesmo que o número da porta serial mude.
 :::
 
 **Passo 1: Preparar**
 
 - Um dispositivo da série Wio Tracker L1 (L1 / L1 Pro)
-- Um cabo de dados USB em bom estado (não apenas para carregamento)
+- Um cabo de dados USB em bom estado (não apenas de carregamento)
 - Um PC com Windows, macOS ou Linux com Python 3 e pip
-- O pacote do bootloader: [Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — não extraia o ZIP; `adafruit-nrfutil` o utiliza como está
+- O pacote do bootloader: [Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — NÃO extraia o ZIP; o `adafruit-nrfutil` o utiliza como está
 
-**Passo 2: Instalar adafruit-nrfutil**
+**Passo 2: Instalar o adafruit-nrfutil**
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-Verifique se Python 3 e pip estão disponíveis (se o pip estiver ausente, execute primeiro `python -m ensurepip --upgrade`):
+Verifique se o Python 3 e o pip estão disponíveis (se o pip estiver ausente, execute primeiro `python -m ensurepip --upgrade`):
 
 ```
 python --version
@@ -435,24 +435,30 @@ Se o pip estiver ausente, execute primeiro `python3 -m ensurepip --upgrade`.
 
 <TabItem value="linux" label="Linux">
 
+Instale o `adafruit-nrfutil` com pipx:
+
 ```
-python3 --version
-python3 -m pip install --user adafruit-nrfutil
-adafruit-nrfutil version
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
 ```
 
-Se o pip estiver ausente, execute primeiro `python3 -m ensurepip --upgrade`.
+No Fedora, use `sudo dnf install pipx` em vez de apt. Reabra o terminal e, em seguida, verifique:
+
+```
+adafruit-nrfutil version
+```
 
 </TabItem>
 </Tabs>
 
 :::note
-Sempre verifique a versão com `adafruit-nrfutil version`. Não use `adafruit-nrfutil --version`.
+Sempre verifique a versão com `adafruit-nrfutil version`. NÃO use `adafruit-nrfutil --version`.
 :::
 
 **Passo 3: Verificar a porta serial**
 
-Anote a porta serial do dispositivo — os exemplos abaixo variam conforme o PC:
+Observe a porta serial do dispositivo — os exemplos abaixo variam conforme o PC:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -499,7 +505,7 @@ Substitua a porta pela que você encontrou no Passo 3:
 adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p COM43 -b 115200 --singlebank --touch 1200
 ```
 
-Se o ZIP não estiver na pasta atual do seu terminal, passe seu caminho completo para `--package`, por exemplo `"C:\path\to\wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip"`.
+Se o ZIP não estiver na pasta atual do seu terminal, passe o caminho completo para `--package`, por exemplo `"C:\path\to\wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip"`.
 
 </TabItem>
 
@@ -566,7 +572,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 O flash foi bem-sucedido quando a saída termina com `Device programmed.`:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="Saída do adafruit-nrfutil terminando com Device programmed" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="saída do adafruit-nrfutil terminando com Device programmed" width={600} height="auto" /></p>
 
 Depois disso, uma unidade UF2 aparece no seu PC (captura de tela do PC com Windows testado). Seu rótulo de volume varia conforme a compilação do bootloader — a unidade testada mostrou `XIAO-BOOT` — e NÃO é um critério de aprovação/reprovação; não julgue o resultado pelo nome da unidade ou por `INFO_UF2.TXT`:
 
@@ -582,8 +588,8 @@ Quando você tiver concluído as etapas acima, siga [Flash Firmware](https://wik
 
 **Solução de problemas**
 
-- `adafruit-nrfutil` não é reconhecido após a instalação: o diretório de scripts de usuário do Python não está no seu PATH (`Scripts` no Windows, `bin` no seu diretório pessoal no macOS/Linux) — adicione-o ao PATH ou reinstale sem `--user`.
-- Porta ocupada / acesso negado: feche monitores seriais, abas do web flasher, Arduino IDE ou qualquer outra coisa que esteja mantendo a porta ocupada.
+- `adafruit-nrfutil` não é reconhecido após a instalação: adicione o diretório de scripts de usuário do Python ao seu PATH (`Scripts` no Windows, `bin` no seu diretório pessoal no macOS); no Linux, reabra o terminal após `pipx ensurepath`.
+- Porta ocupada / acesso negado: feche monitores seriais, abas do web flasher, Arduino IDE ou qualquer outra coisa que esteja usando a porta.
 - `FileNotFoundError: could not open port ...` após `Touched serial port ...`: o dispositivo entrou em modo DFU em uma nova porta — siga a Etapa 5.
 - Não é possível entrar em modo DFU: veja [Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually).
 
@@ -601,11 +607,11 @@ Para gravar o bootloader neste modo, siga [Device Bricked & Bootloader Recovery]
 
 Pressione o botão `Reset` uma vez para sair do modo DFU.
 
-### Incapaz de se comunicar no canal primário
+### Não é possível se comunicar no canal primário
 
-Se o dispositivo não conseguir se comunicar com nós próximos ou enviar mensagens, primeiro verifique se a região LoRa e o modem preset correspondem aos nós ao redor. Você também deve verificar se o **PSK** padrão foi alterado. Um PSK diferente no canal primário impedirá o dispositivo de se comunicar com outros nós nesse canal.
+Se o dispositivo não conseguir se comunicar com nós próximos ou enviar mensagens, primeiro verifique se a região LoRa e o preset do modem correspondem aos nós ao redor. Você também deve verificar se o **PSK** padrão foi alterado. Um PSK diferente no canal primário impedirá o dispositivo de se comunicar com outros nós nesse canal.
 
-A maneira mais fácil de encontrar esse problema é por meio do aplicativo móvel. Abra o app, conecte-se ao dispositivo de destino e navegue até `Settings` -> `Channels`. Selecione o canal primário e verifique o valor do **PSK**. Se for diferente dos nós ao redor, atualize-o para o mesmo PSK e salve as configurações do canal.
+A maneira mais fácil de encontrar esse problema é por meio do aplicativo móvel. Abra o app, conecte-se ao dispositivo de destino e navegue até `Settings` -> `Channels`. Selecione o canal primário e verifique o valor de **PSK**. Se for diferente dos nós ao redor, atualize-o para o mesmo PSK e salve as configurações do canal.
 
 <Tabs>
 <TabItem value="ios" label="App iOS">
@@ -630,21 +636,21 @@ Se você não tiver certeza de quais configurações foram alteradas, restaure o
 #### Descrição
 
 - Após o dispositivo ser ligado, ele desligará ou reiniciará automaticamente depois de um tempo.
-- O log da porta serial executa por um tempo e depois para.
+- O log da porta serial roda por um tempo e depois para.
 
- Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando o dispositivo está nos seguintes estados: sem terminar o processo de transmissão de mensagens, sendo configurado......
+ Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando ele está nos seguintes estados: sem terminar o processo de transmissão de mensagens, sendo configurado......
 
 #### Solução de problemas
 
-[click here](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para ver o vídeo. Você precisa executar um apagamento do flash e então regravar o firmware mais recente.
+[click here](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para ver o vídeo. Você precisa executar um apagamento do flash e então gravar novamente o firmware mais recente.
 
 ### Factory Reset
 
 Se você quiser restaurar as configurações padrão, pode fazer o factory reset. Há dois métodos para você fazer o factory reset.
 
-- [click here](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para ver o vídeo. Você precisa executar um apagamento do flash e então regravar o firmware mais recente.
+- [click here](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para ver o vídeo. Você precisa executar um apagamento do flash e então gravar novamente o firmware mais recente.
 
-- Clique no botão `Factory Reset` no App. O dispositivo irá reiniciar automaticamente com a configuração de fábrica.
+- Clique no botão `Factory Reset` no App. O dispositivo será reiniciado automaticamente com a configuração de fábrica.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### Falha em mensagem direta
@@ -657,17 +663,17 @@ Abra o app e conecte-se ao dispositivo de destino. Vá para **Settings**->**Devi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="Configurações do dispositivo e botão Reset NodeDB no app" width={600} height="auto" /></p>
 
-#### Trocar informações do usuário
+#### Trocar informações de usuário
 
-Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e o "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, pode solicitá-los manualmente a trocar informações no app.
+Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, pode solicitá-los manualmente a trocar informações no app.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada do dispositivo em Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo em Settings" width={300} height="auto" /></p>
 
 #### Regenerar chave privada
 
 Dois nós precisam conhecer sua chave privada um do outro para poder se comunicar entre si. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar a chave privada para ele.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada do dispositivo em Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo em Settings" width={600} height="auto" /></p>
 
 Reinicie o dispositivo com falha para que a configuração tenha efeito.
 
@@ -677,9 +683,9 @@ Após a regeneração da chave, outro dispositivo precisa se reconectar ao nó. 
 
 ### Qualidade do sinal
 
-- **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR abaixo de -10 dB indica desempenho ruim.
+- **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Dispositivo com SNR menor que -10 dB indica desempenho ruim.
 
-- **RSSI** é determinado em conjunto pelo dispositivo e seu ambiente ao redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI abaixo de -115 dBm é considerado como tendo desempenho ruim.
+- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Dispositivo com RSSI menor que -115 dBm é considerado como tendo desempenho ruim.
 
       Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
@@ -690,8 +696,8 @@ Se você precisar de uma antena de reposição para o L1 Pro, [click here](https
 ## Recursos
 
 - [Bootloader (pacote Serial DFU)](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip)
-- [(V1) arquivo de referência para impressão 3D](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
-- [(V2 Novo joystick de quatro direções) arquivo de referência para impressão 3D](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
+- [(V1) Arquivo de referência para impressão 3D](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
+- [(V2 Novo joystick de quatro direções) Arquivo de referência para impressão 3D](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [Desafio de design de case do L1](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [Arquivo de contorno](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [Certificação TELEC](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)

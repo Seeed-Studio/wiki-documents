@@ -1,5 +1,5 @@
 ---
-description: Introdução ao XIAO 0.96'' IPS Display (nRF52840).
+description: Introdução ao XIAO 0,96'' IPS Display (nRF52840).
 title: Introdução ao XIAO 0.96'' IPS Display (nRF52840)
 sidebar_label: Introdução
 keywords:
@@ -44,26 +44,26 @@ Essa combinação o torna uma plataforma ideal para wearables ultracompactos, ga
 <div class="table-center">
   <table align="center">
     <tr><th>Especificação</th><th>Detalhe</th></tr>
-    <tr><td>Posicionamento do Produto</td><td>Ultracompacto</td></tr>
-    <tr><td>Controlador Principal</td><td>Seeed Studio XIAO nRF52840 Plus</td></tr>
+    <tr><td>Posicionamento do produto</td><td>Ultracompacto</td></tr>
+    <tr><td>Controlador principal</td><td>Seeed Studio XIAO nRF52840 Plus</td></tr>
     <tr><td>Processador</td><td>Nordic nRF52840, processador ARM® Cortex®-M4 de 32 bits com FPU, 64 MHz</td></tr>
     <tr><td>Memória</td><td>256 KB RAM + 1 MB Flash interna + 2 MB Flash onboard</td></tr>
-    <tr><td>Conectividade Sem Fio</td><td>BLE 5.4</td></tr>
-    <tr><td>Tipo de Display</td><td>0.96" IPS TFT LCD</td></tr>
+    <tr><td>Conectividade sem fio</td><td>BLE 5.4</td></tr>
+    <tr><td>Tipo de display</td><td>0.96" IPS TFT LCD</td></tr>
     <tr><td>Resolução</td><td>80 × 160</td></tr>
-    <tr><td>Driver do Display</td><td>ST7789</td></tr>
-    <tr><td>Interface do Display</td><td>SPI</td></tr>
-    <tr><td>Entrada por Toque</td><td>Não</td></tr>
-    <tr><td>IMU de 6 Eixos</td><td>Sim</td></tr>
-    <tr><td>Microfone Digital PDM</td><td>Sim</td></tr>
-    <tr><td>Slot para Cartão MicroSD</td><td>Não</td></tr>
+    <tr><td>Driver do display</td><td>ST7789</td></tr>
+    <tr><td>Interface do display</td><td>SPI</td></tr>
+    <tr><td>Entrada por toque</td><td>Não</td></tr>
+    <tr><td>IMU de 6 eixos</td><td>Sim</td></tr>
+    <tr><td>Microfone digital PDM</td><td>Sim</td></tr>
+    <tr><td>Slot para cartão MicroSD</td><td>Não</td></tr>
     <tr><td>Conector Grove I2C</td><td>Não</td></tr>
-    <tr><td>Botões de Usuário</td><td>2</td></tr>
-    <tr><td>Conector de Bateria</td><td>Conector JST 2.0 de 2 pinos para LiPo de 3,7 V</td></tr>
-    <tr><td>Monitoramento de Bateria</td><td>Suporte à detecção de status da bateria; a tensão da bateria também pode ser monitorada para estimativa do nível de carga.</td></tr>
-    <tr><td>Interfaces de Expansão</td><td>1x pads I2C, 1x pads I2S</td></tr>
-    <tr><td>Tamanho da Placa</td><td>18,8 × 43,6 × 10,6 mm</td></tr>
-    <tr><td>Melhor Uso</td><td>Crachás inteligentes, wearables minúsculos, displays de status BLE</td></tr>
+    <tr><td>Botões de usuário</td><td>2</td></tr>
+    <tr><td>Conector de bateria</td><td>Conector JST 2.0 de 2 pinos para LiPo de 3,7 V</td></tr>
+    <tr><td>Monitoramento da bateria</td><td>Suporte à detecção de status da bateria; a tensão da bateria também pode ser monitorada para estimar o nível de carga.</td></tr>
+    <tr><td>Interfaces de expansão</td><td>1x interface I2C, 1x interface I2S, 1x interface SWD, 2x interfaces de botão de usuário</td></tr>
+    <tr><td>Tamanho da placa</td><td>18,8 × 43,6 × 10,6 mm</td></tr>
+    <tr><td>Melhor uso</td><td>Crachás inteligentes, wearables minúsculos, displays de status BLE</td></tr>
   </table>
 </div>
 
@@ -83,7 +83,7 @@ O 0.96'' IPS Display expõe todos os pinos do XIAO nRF52840 Plus. A tabela abaix
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Pino XIAO</th><th>Nome de Rede</th><th>Descrição da Função</th><th>Observações de Conexão de Hardware</th></tr>
+    <tr><th>Pino XIAO</th><th>Nome de rede</th><th>Descrição da função</th><th>Observações de conexão de hardware</th></tr>
     <tr><td>D0</td><td>PDM_CLK</td><td>Clock do microfone digital PDM</td><td>Conectado internamente ao microfone PDM</td></tr>
     <tr><td>D1</td><td>PDM_DATA</td><td>Dados do microfone digital PDM</td><td>Conectado internamente ao microfone PDM</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>Sinal de seleção de chip da tela</td><td>Conectado internamente ao CI driver do LCD</td></tr>
@@ -100,8 +100,8 @@ O 0.96'' IPS Display expõe todos os pinos do XIAO nRF52840 Plus. A tabela abaix
     <tr><td>D13</td><td>I2S_WS</td><td>Seleção de palavra de áudio</td><td>Exposto externamente ao pad de expansão de áudio inferior</td></tr>
     <tr><td>D14</td><td>IMU_INT</td><td>Interrupção de hardware de movimento do IMU</td><td>Conectado internamente ao IMU de 6 eixos (suporta despertar por movimento)</td></tr>
     <tr><td>D15</td><td>NC</td><td>Flutuante (reservado)</td><td>Sem conexão física</td></tr>
-    <tr><td>D16</td><td>NC</td><td>Flutuante (reservado)</td><td>Sem conexão física — a tensão da bateria é medida através do PIN_VBAT interno do módulo, não através de D16</td></tr>
-    <tr><td>D17</td><td>LCD_RST</td><td>Reset suave da tela</td><td>Conectado internamente ao CI driver do LCD</td></tr>
+    <tr><td>D16</td><td>NC</td><td>Flutuante (reservado)</td><td>Sem conexão física — a tensão da bateria é medida através do PIN_VBAT interno do módulo, não através do D16</td></tr>
+    <tr><td>D17</td><td>LCD_RST</td><td>Reset por software da tela</td><td>Conectado internamente ao CI driver do LCD</td></tr>
     <tr><td>D18</td><td>LCD_BL</td><td>Controle do backlight da tela</td><td>Conectado internamente ao circuito driver do backlight</td></tr>
     <tr><td>D19</td><td>NC</td><td>Flutuante (reservado)</td><td>Sem conexão física</td></tr>
   </table>
@@ -114,7 +114,7 @@ O 0.96'' IPS Display expõe todos os pinos do XIAO nRF52840 Plus. A tabela abaix
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_handing_tips.jpg" style={{width:600, height:'auto'}}/></div>
 :::
 
-Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga o backlight, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto grande em verde. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demos individuais de periféricos.
+Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga o backlight, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto verde em tamanho grande. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demos individuais de periféricos.
 
 ### Preparação de software
 
@@ -134,7 +134,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 Em seguida, vá em **Tools > Board > Boards Manager**, pesquise por **Seeed nRF52** e instale a versão **1.1.13**.
 
-- **Seeed_GFX2 (Instalação Manual)** — esta biblioteca não está disponível no Library Manager e deve ser instalada manualmente:
+- **Seeed_GFX2 (instalação manual)** — esta biblioteca não está disponível no Library Manager e deve ser instalada manualmente:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
@@ -150,7 +150,7 @@ Em seguida, vá em **Tools > Board > Boards Manager**, pesquise por **Seeed nRF5
 **Passo 3.** Reinicie o Arduino IDE para que a nova biblioteca seja detectada.
 
 :::tip
-- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demonstração inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** contém o mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 80×160, a ordem de cores (BGR) e a orientação. Nenhum `driver.h` ou configuração manual de pinos é necessário.
+- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demonstração inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** contém o mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 80×160, a ordem de cores (BGR) e a orientação. Não é necessário `driver.h` nem configuração manual de pinos.
 - Nesta placa, o sketch usa `Board_XIAO_0inch96_LCD<38, 37>` (RST=38, BL=37) com `Config_Seeed_0inch96_LCD_ST7789`.
 - A biblioteca **Adafruit TinyUSB** usada pelo sketch vem incluída no pacote **Seeed nRF52 Boards**, portanto não precisa de instalação separada.
 :::
@@ -184,7 +184,7 @@ Se você encontrar problemas de upload, clique duas vezes no botão de reset par
 
 ### Saída esperada
 
-Após o upload, a tela acende com um fundo preto e mostra duas linhas centralizadas de texto verde grande — **"Hello,"** na primeira linha e **"XIAO"** na segunda. A saudação permanece na tela sem redesenho.
+Após o upload, a tela acende com um fundo preto e mostra duas linhas centralizadas de texto grande em verde — **"Hello,"** na primeira linha e **"XIAO"** na segunda. A saudação permanece na tela sem redesenho.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_hello.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -197,9 +197,9 @@ A placa de display inclui vários periféricos integrados. A página [Function](
 <div class="table-center">
   <table align="center">
     <tr><th>Periférico</th><th>Demo</th></tr>
-    <tr><td>Tela</td><td>[GraphicTest](/pt-br/function_0.96_inch_display_nrf52840#tela-display--graphictest) — dez primitivas gráficas com medições de tempo</td></tr>
+    <tr><td>Tela</td><td>[GraphicTest](/pt-br/function_0.96_inch_display_nrf52840#screen-display--graphictest) — dez primitivas gráficas com medições de desempenho</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/pt-br/function_0.96_inch_display_nrf52840#imu) — efeitos de movimento de 6 eixos e despertar por movimento</td></tr>
-    <tr><td>Microfone e alto-falante</td><td>[Flash Recorder](/pt-br/function_0.96_inch_display_nrf52840#microfone--alto-falante--flash-recorder) — gravar e reproduzir áudio</td></tr>
+    <tr><td>Microfone e alto-falante</td><td>[Flash Recorder](/pt-br/function_0.96_inch_display_nrf52840#microphone--speaker--flash-recorder) — gravar e reproduzir áudio</td></tr>
     <tr><td>Botões</td><td>[User Buttons](/pt-br/function_0.96_inch_display_nrf52840#user-buttons) — ler pressionamentos e fazer debounce com interrupções</td></tr>
     <tr><td>Bateria</td><td>[Battery Status](/pt-br/function_0.96_inch_display_nrf52840#battery-status) — medir a tensão e converter em porcentagem</td></tr>
   </table>

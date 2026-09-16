@@ -1,6 +1,6 @@
 ---
-description: Introdução ao XIAO 0.96'' IPS Display (ESP32-S3).
-title: Introdução ao XIAO 0.96'' IPS Display (ESP32-S3)
+description: Introdução ao XIAO 0,96'' IPS Display (ESP32-S3).
+title: Introdução ao XIAO 0,96'' IPS Display (ESP32-S3)
 keywords:
   - XIAO
   - ESP32-S3
@@ -21,7 +21,7 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_0.96_inch_display_esp32s3/
 ---
 
-# Introdução ao XIAO 0.96'' IPS Display (ESP32-S3)
+# Introdução ao XIAO 0,96'' IPS Display (ESP32-S3)
 
 <div class="table-center">
   <table align="center">
@@ -60,8 +60,8 @@ O ESP32-S3 Plus adiciona conectividade Wi-Fi e Bluetooth, tornando a placa adequ
     <tr><td>Conector Grove I2C</td><td>Não</td></tr>
     <tr><td>Botões de Usuário</td><td>2</td></tr>
     <tr><td>Conector de Bateria</td><td>JST de 2 pinos, LiPo 3,7 V</td></tr>
-    <tr><td>Monitoramento de Bateria</td><td>Monitoramento de tensão da bateria via D16 ADC; o nível da bateria pode ser estimado a partir da tensão medida. Detecção de estado de carga não é suportada.</td></tr>
-    <tr><td>Interfaces de Expansão</td><td>1x pads I2C, 1x pads I2S</td></tr>
+    <tr><td>Monitoramento de Bateria</td><td>Monitoramento de tensão da bateria via D16 ADC; o nível da bateria pode ser estimado a partir da tensão medida. Detecção de status de bateria não é suportada.</td></tr>
+    <tr><td>Interfaces de Expansão</td><td>1x Interface I2C, 1x Interface I2S, 1x Interface JTAG, 2x Interfaces de Botão de Usuário</td></tr>
     <tr><td>Tamanho da Placa</td><td>18,8 × 43,6 × 10,6 mm</td></tr>
     <tr><td>Melhor Uso</td><td>Dispositivos IoT minúsculos, wearables, displays de status</td></tr>
   </table>
@@ -72,14 +72,14 @@ Esta placa de display foi projetada para o **XIAO ESP32-S3 Plus**. Se você esti
 :::
 
 :::note
-A versão ESP32-S3 Plus usa D16 para medir a tensão do divisor da bateria; ela não fornece um indicador de estado de carregamento.
+A versão ESP32-S3 Plus usa o D16 para medir a tensão do divisor da bateria; ela não fornece um indicador de estado de carregamento.
 :::
 
 ## Visão Geral de Hardware
 
 Consulte a visão a seguir para identificar os conectores e componentes onboard antes de conectar o hardware de expansão.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Mapa de Pinos
 
@@ -94,8 +94,8 @@ A tabela abaixo lista os pinos do XIAO ESP32-S3 Plus usados pela placa de displa
     <tr><td>D3</td><td>LCD_DC</td><td>Seleção de dados/comando do LCD</td><td>Conectado internamente ao LCD</td></tr>
     <tr><td>D4</td><td>I2C_SDA</td><td>Dados I2C</td><td>Compartilhado pelo IMU onboard e pelo pad de teste I2C traseiro</td></tr>
     <tr><td>D5</td><td>I2C_SCL</td><td>Clock I2C</td><td>Compartilhado pelo IMU onboard e pelo pad de teste I2C traseiro</td></tr>
-    <tr><td>D6</td><td>BTN_USR1</td><td>Botão de usuário 1</td><td>Nível baixo ativo</td></tr>
-    <tr><td>D7</td><td>BTN_USR2</td><td>Botão de usuário 2</td><td>Nível baixo ativo</td></tr>
+    <tr><td>D6</td><td>BTN_USR1</td><td>Botão de usuário 1</td><td>Ativo em nível baixo</td></tr>
+    <tr><td>D7</td><td>BTN_USR2</td><td>Botão de usuário 2</td><td>Ativo em nível baixo</td></tr>
     <tr><td>D8</td><td>LCD_SCK</td><td>Clock SPI de hardware</td><td>Conectado internamente ao LCD</td></tr>
     <tr><td>D9</td><td>NC</td><td>Não conectado</td><td>Sem conexão física</td></tr>
     <tr><td>D10</td><td>LCD_MOSI</td><td>Saída de dados SPI de hardware</td><td>Conectado internamente ao LCD</td></tr>
@@ -122,7 +122,7 @@ D4 e D5 são compartilhados com o IMU onboard. Qualquer dispositivo I2C externo 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_handing_tips.png" style={{width:600, height:'auto'}}/></div>
 :::
 
-Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga o backlight, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto grande em verde. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demos individuais de periféricos.
+Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga o backlight, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto verde grande. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demos individuais de periféricos.
 
 ### Preparação de Software
 
@@ -158,7 +158,7 @@ Em seguida, vá em **Tools > Board > Boards Manager**, pesquise por **esp32** e 
 **Passo 3.** Reinicie o Arduino IDE para que a nova biblioteca seja detectada.
 
 :::tip
-- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demo inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** possui o mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 80×160, a ordem de cores (BGR) e a orientação. Nenhum `driver.h` ou configuração manual de pinos é necessária.
+- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demo inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** contém o mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 80×160, a ordem de cores (BGR) e a orientação. Nenhum `driver.h` ou configuração manual de pinos é necessária.
 - Nesta placa, o sketch usa `Board_XIAO_0inch96_LCD<13, 12>` (RST=13, BL=12) com `Config_Seeed_0inch96_LCD_ST7789`.
 :::
 
@@ -177,11 +177,11 @@ Navegue até `code_GFX2/getting_started_code/xiao_esp32s3_096_hello/` e abra `xi
 
 ### Fazer upload do sketch
 
-**Passo 1.** Conecte o XIAO ESP32-S3 Plus ao seu computador através de USB-C.
+**Passo 1.** Conecte o XIAO ESP32-S3 Plus ao seu computador via USB-C.
 
 **Passo 2.** Selecione **Tools > Board > esp32 > XIAO_ESP32S3_PLUS**.
 
-**Passo 3.** Selecione a **Porta** correta em **Tools > Port**.
+**Passo 3.** Selecione a **Port** correta em **Tools > Port**.
 
 **Passo 4.** Clique em **Upload**. O sketch será compilado e enviado para a placa.
 
@@ -195,7 +195,7 @@ Se o display não inicializar, o sketch imprime a mensagem de erro da biblioteca
 
 ## O que vem a seguir
 
-A placa de display reúne vários periféricos integrados. A página [Function](/pt-br/function_0.96_inch_display_esp32s3) fornece uma demonstração independente para cada um:
+A placa de display reúne vários periféricos onboard. A página [Function](/pt-br/function_0.96_inch_display_esp32s3) fornece uma demonstração independente para cada um:
 
 <div class="table-center">
   <table align="center">
@@ -229,7 +229,7 @@ Segure a placa perto dos botões e não toque no módulo **XIAO**. Em vez disso,
 
 ### [Sobre o firmware de fábrica - DashBoard]
 
-#### Por que minha tela não está brilhante quando conecto o cabo USB-C?
+#### Por que minha tela não fica brilhante quando conecto o cabo USB-C?
 
 A luz de fundo da tela pode estar desligada. Pressione o botão **USR2 (D7)** para alternar a luz de fundo de volta para ligada — o display acenderá normalmente.
 
@@ -243,7 +243,7 @@ A luz de fundo da tela pode estar desligada. Pressione o botão **USR2 (D7)** pa
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">
