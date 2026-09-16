@@ -1,6 +1,6 @@
 ---
-description: XIAO 0.96'' IPS Display (nRF52840) の入門ガイド。
-title: Getting Started with XIAO 0.96'' IPS Display (nRF52840)
+description: XIAO 0.96'' IPS Display (nRF52840) のはじめに。
+title: XIAO 0.96'' IPS Display (nRF52840) のはじめに
 sidebar_label: Getting Started
 keywords:
   - XIAO
@@ -21,7 +21,7 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_nrf52840/
 ---
 
-# XIAO 0.96'' IPS Display (nRF52840) 入門ガイド
+# XIAO 0.96'' IPS Display (nRF52840) のはじめに
 
 <div class="table-center">
   <table align="center">
@@ -37,7 +37,7 @@ url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_nrf52840/
 
 ## はじめに
 
-0.96'' IPS Display は、XIAO nRF52840 Plus を搭載した XIAO シリーズ向けの拡張ボードです。コンパクトな 80×160 IPS カラー LCD、オンボード PDM マイク、6 軸 IMU（LSM6DS3）、2 つのユーザーボタン、バッテリー残量表示付きの電源管理機能を備え、1.14'' IPS Display よりもさらに小型のフォームファクタに収められています。
+0.96'' IPS Display は、XIAO シリーズ向けに設計された拡張ボードで、XIAO nRF52840 Plus によって駆動されます。コンパクトな 80×160 IPS カラー LCD、オンボード PDM マイク、6 軸 IMU（LSM6DS3）、2 つのユーザーボタン、バッテリー残量表示付きの電源管理機能を備え、1.14'' IPS Display よりもさらに小さいフォームファクタに収められています。
 
 この組み合わせにより、超小型ウェアラブル、キーチェーンガジェット、ポータブルセンサーノード、そしてわずかなスペースも無駄にできない IoT プロトタイピングに最適なプラットフォームとなります。
 
@@ -46,7 +46,7 @@ url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_nrf52840/
     <tr><th>仕様</th><th>詳細</th></tr>
     <tr><td>製品ポジショニング</td><td>超コンパクト</td></tr>
     <tr><td>コアコントローラ</td><td>Seeed Studio XIAO nRF52840 Plus</td></tr>
-    <tr><td>プロセッサ</td><td>Nordic nRF52840、ARM® Cortex®-M4 32-bit プロセッサ（FPU 搭載）、64 MHz</td></tr>
+    <tr><td>プロセッサ</td><td>Nordic nRF52840、ARM® Cortex®-M4 32 ビットプロセッサ（FPU 搭載）、64 MHz</td></tr>
     <tr><td>メモリ</td><td>256 KB RAM + 1 MB 内蔵 Flash + 2 MB オンボード Flash</td></tr>
     <tr><td>無線接続</td><td>BLE 5.4</td></tr>
     <tr><td>ディスプレイタイプ</td><td>0.96" IPS TFT LCD</td></tr>
@@ -60,7 +60,7 @@ url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_nrf52840/
     <tr><td>Grove I2C コネクタ</td><td>なし</td></tr>
     <tr><td>ユーザーボタン</td><td>2</td></tr>
     <tr><td>バッテリーコネクタ</td><td>3.7 V LiPo 用 2 ピン JST 2.0 コネクタ</td></tr>
-    <tr><td>バッテリー監視</td><td>バッテリー状態検出に対応。バッテリー電圧を監視してバッテリー残量を推定することも可能。</td></tr>
+    <tr><td>バッテリー監視</td><td>バッテリー状態検出に対応。バッテリー電圧も監視でき、バッテリー残量の推定が可能です。</td></tr>
     <tr><td>拡張インターフェース</td><td>1x I2C インターフェース、1x I2S インターフェース、1x SWD インターフェース、2x ユーザーボタンインターフェース</td></tr>
     <tr><td>基板サイズ</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
     <tr><td>最適な用途</td><td>スマートバッジ、超小型ウェアラブル、BLE ステータスディスプレイ</td></tr>
@@ -73,13 +73,13 @@ url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_nrf52840/
 
 ## ハードウェア概要
 
-始める前に、0.96'' IPS Display の物理的なレイアウトを理解するため、次の画像を参照してください。
+始める前に、以下の画像を参照して 0.96'' IPS Display の物理的なレイアウトを把握してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
 
 ### ピンマップ
 
-0.96'' IPS Display は、XIAO nRF52840 Plus のすべてのピンを引き出しています。下の表は、各ピン、そのディスプレイボード上でのネット名、その機能、およびオンボード周辺機器との接続方法を示しています。
+0.96'' IPS Display は、XIAO nRF52840 Plus のすべてのピンを引き出しています。下の表は、各ピン、そのディスプレイボード上でのネット名、その機能、およびオンボード周辺機器への接続方法を一覧にしたものです。
 
 <div class="table-center">
   <table align="center">
@@ -87,7 +87,7 @@ url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_nrf52840/
     <tr><td>D0</td><td>PDM_CLK</td><td>PDM デジタルマイクのクロック</td><td>内部で PDM マイクに接続</td></tr>
     <tr><td>D1</td><td>PDM_DATA</td><td>PDM デジタルマイクのデータ</td><td>内部で PDM マイクに接続</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>画面のチップセレクト信号</td><td>内部で LCD ドライバ IC に接続</td></tr>
-    <tr><td>D3</td><td>LCD_DC</td><td>画面のデータ／コマンド切り替え</td><td>内部で LCD ドライバ IC に接続</td></tr>
+    <tr><td>D3</td><td>LCD_DC</td><td>画面のデータ/コマンド切り替え</td><td>内部で LCD ドライバ IC に接続</td></tr>
     <tr><td>D4</td><td>SDA</td><td>I2C データバス</td><td>バス共有：内部で IMU に接続；外部には背面の 4 ピンテストパッドに引き出し</td></tr>
     <tr><td>D5</td><td>SCL</td><td>I2C クロックバス</td><td>バス共有：内部で IMU に接続；外部には背面の 4 ピンテストパッドに引き出し</td></tr>
     <tr><td>D6</td><td>BTN_USR1</td><td>ユーザーボタン 1（KEY1）</td><td>内部でマイクロスイッチ 1 に接続；バックライトの明るさを切り替え</td></tr>
@@ -95,9 +95,9 @@ url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_nrf52840/
     <tr><td>D8</td><td>LCD_SCK</td><td>ハードウェア SPI クロック</td><td>内部で LCD ドライバ IC に接続</td></tr>
     <tr><td>D9</td><td>NC</td><td>未接続（予約）</td><td>物理的な接続なし</td></tr>
     <tr><td>D10</td><td>LCD_MOSI</td><td>ハードウェア SPI データ出力</td><td>内部で LCD ドライバ IC に接続</td></tr>
-    <tr><td>D11</td><td>I2S_SD</td><td>オーディオデータ出力</td><td>外部には下部のオーディオ拡張パッドに引き出し</td></tr>
-    <tr><td>D12</td><td>I2S_SCK</td><td>オーディオビットクロック</td><td>外部には下部のオーディオ拡張パッドに引き出し</td></tr>
-    <tr><td>D13</td><td>I2S_WS</td><td>オーディオワードセレクト</td><td>外部には下部のオーディオ拡張パッドに引き出し</td></tr>
+    <tr><td>D11</td><td>I2S_SD</td><td>オーディオデータ出力</td><td>外部には底面のオーディオ拡張パッドに引き出し</td></tr>
+    <tr><td>D12</td><td>I2S_SCK</td><td>オーディオビットクロック</td><td>外部には底面のオーディオ拡張パッドに引き出し</td></tr>
+    <tr><td>D13</td><td>I2S_WS</td><td>オーディオワードセレクト</td><td>外部には底面のオーディオ拡張パッドに引き出し</td></tr>
     <tr><td>D14</td><td>IMU_INT</td><td>IMU のモーションハードウェア割り込み</td><td>内部で 6 軸 IMU に接続（モーションウェイクアップ対応）</td></tr>
     <tr><td>D15</td><td>NC</td><td>未接続（予約）</td><td>物理的な接続なし</td></tr>
     <tr><td>D16</td><td>NC</td><td>未接続（予約）</td><td>物理的な接続なし — バッテリー電圧は D16 ではなく、モジュール内部の PIN_VBAT を通して測定されます</td></tr>
@@ -108,17 +108,17 @@ url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_nrf52840/
 </div>
 
 
-## Getting Started
+## はじめに
 
 :::caution
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_handing_tips.jpg" style={{width:600, height:'auto'}}/></div>
 :::
 
-このガイドでは、ディスプレイボードに最小限の **"Hello, XIAO"** スケッチを書き込みます。画面のバックライトが点灯し、背景が黒で塗りつぶされ、中央に大きな緑色のテキストで **"Hello,"** と **"XIAO"** の 2 行が表示されます。個々の周辺機能デモに進む前に、画面と開発環境が正しく動作していることを最速で確認する方法です。
+このガイドでは、ディスプレイボードに最小限の **"Hello, XIAO"** スケッチを書き込みます。画面のバックライトが点灯し、黒で塗りつぶされ、中央揃えの大きな緑色のテキストで **"Hello,"** と **"XIAO"** の 2 行が表示されます。個々の周辺機能デモに進む前に、画面と開発環境が正しく動作していることを確認する最速の方法です。
 
 ### ソフトウェアの準備
 
-次のツールとライブラリが必要です：
+以下のツールとライブラリが必要です：
 
 - **Arduino IDE**（バージョン 1.8 以降）
 
@@ -145,9 +145,9 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 **Step 1.** 上のボタンをクリックして、`Seeed_GFX2` v1.0.0 を ZIP ファイルとしてダウンロードします（チュートリアルの再現性を保つため、リリースタグに固定されています）。または、[Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) からリポジトリをクローンしてもかまいません。
 
-**Step 2.** Arduino IDE で **Sketch > Include Library > Add .ZIP Library...** に進み、ダウンロードした ZIP を選択します。IDE は `library.properties` を読み取り、正しい `Seeed_GFX2` フォルダに自動的にインストールします — 展開したフォルダ名を変更する必要はありません。（代わりに手動でインストールする場合は、アーカイブを解凍し、展開されたフォルダ名を `Seeed_GFX2` に変更してから `Documents/Arduino/libraries/` に配置します。）
+**Step 2.** Arduino IDE で **Sketch > Include Library > Add .ZIP Library...** に進み、ダウンロードした ZIP を選択します。IDE は `library.properties` を読み取り、正しい `Seeed_GFX2` フォルダに自動的にインストールします — 展開したフォルダ名を変更する必要はありません。（代わりに手動でインストールする場合は、アーカイブを解凍し、展開したフォルダ名を `Seeed_GFX2` に変更してから `Documents/Arduino/libraries/` に配置します。）
 
-**Step 3.** 新しいライブラリが認識されるように、Arduino IDE を再起動します。
+**Step 3.** 新しいライブラリが認識されるように Arduino IDE を再起動します。
 
 :::tip
 - **Seeed_GFX2** は、レイヤー化された `Board` + `Panel Config` アーキテクチャ上に構築された Seeed Studio のグラフィックスライブラリです。各デモは、単一の `display.begin<Board_..., Config_...>()` 呼び出しでディスプレイを初期化します。**Board** テンプレートはピンマップ（CS/DC/SCK/MOSI/RST/BL）を保持し、**Panel Config** は 80×160 の解像度、色順序（BGR）、および向きを組み込みます。`driver.h` や手動でのピン設定は不要です。
@@ -188,11 +188,11 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_hello.gif" style={{width:500, height:'auto'}}/></div>
 
-ディスプレイの初期化に失敗した場合、スケッチはライブラリエラーメッセージをボーレート **115200** のシリアルモニタに出力します。**ツール > シリアルモニタ** を開き、ボーレートを 115200 に設定して内容を確認してください。
+ディスプレイの初期化に失敗した場合、スケッチはライブラリエラーメッセージをボーレート **115200** のシリアルモニタに出力します。**ツール > シリアルモニタ** を開き、ボーレートを 115200 に設定してメッセージを確認してください。
 
 ## 次のステップ
 
-ディスプレイボードには、複数のオンボード周辺機能が搭載されています。[Function](/ja/function_0.96_inch_display_nrf52840) ページでは、それぞれに対応する単体デモを提供しています：
+このディスプレイボードには、複数のオンボード周辺機能が搭載されています。[Function](/ja/function_0.96_inch_display_nrf52840) ページでは、それぞれに対応した単体デモを提供しています：
 
 <div class="table-center">
   <table align="center">
@@ -209,19 +209,20 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ### 書き込みに失敗したり、ボードが認識されない場合は？
 
-XIAO nRF52840 Plus のリセットボタンをダブルクリックします。USR LED が赤くゆっくり点滅し、**NRF52BOOT** という名前のドライブがコンピュータ上に表示されます。コンパイル済みの `.uf2` ファイルを **NRF52BOOT** ドライブにドラッグします。ボードは自動的に書き込みを行い、完了後に自動リセットされます。
+XIAO nRF52840 Plus のリセットボタンをダブルクリックします。USR LED が赤くゆっくり点滅し、コンピュータ上に **NRF52BOOT** という名前のドライブが表示されます。コンパイル済みの `.uf2` ファイルを **NRF52BOOT** ドライブにドラッグします。ボードは自動的に書き込みを行い、リセットされます。
 
 ## リソース
 
-- **🗃️[PCB Design Files]** [XIAO 0.96'' IPS Display (nRF52840) KiCad プロジェクト](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
-- **📄[Schematic]** [XIAO 0.96'' IPS Display (nRF52840) 回路図](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
-- **📦[3D Model]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
-- **📄[Datasheet]** [0.96 インチディスプレイ データシート](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
-- **💾[Factory Firmware]** [XIAO 0.96'' IPS Display (nRF52840) 工場出荷時ファームウェア](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
+- **🗃️[PCB 設計ファイル]** [XIAO 0.96'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
+- **📄[回路図]** [XIAO 0.96'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
+- **📦[3D モデル]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
+- **🖨️[3D プリント筐体]** [XIAO 0.96'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843001-enclosure-for-xiao-096-ips-display-esp32nrf52840/files)
+- **📄[データシート]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
+- **💾[工場出荷時ファームウェア]** [XIAO 0.96'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">

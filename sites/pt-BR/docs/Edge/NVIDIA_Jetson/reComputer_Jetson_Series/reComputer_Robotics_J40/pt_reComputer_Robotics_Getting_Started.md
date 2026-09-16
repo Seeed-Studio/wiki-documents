@@ -147,7 +147,7 @@ A reComputer Robotics J401 é uma placa carrier de borda de IA compacta e de alt
     </tr>
     <tr>
       <th rowSpan="1">Temperatura de Operação</th>
-      <td colSpan="2">-20℃~55℃ (Modo 25W);<br />-20℃~50℃ (Modo MAXN);<br />(com dissipador de calor reComputer Robotics com ventoinha)</td>
+      <td colSpan="2">-20℃~60℃ (modo de 25W);<br />-20℃~55℃ (modo de 40W);<br />-20℃~50℃ (modo MAXN);<br />(com dissipador de calor reComputer Robotics com ventoinha)</td>
     </tr>
     <tr>
       <th rowSpan="1">Garantia</th>

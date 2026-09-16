@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-14 13:56:12 (北京时间)
-// 多语言页面: 2497 个
+// 生成时间: 2026-09-16 11:08:18 (北京时间)
+// 多语言页面: 2499 个
 
 (function() {
   'use strict';
@@ -3894,6 +3894,13 @@
     "ja",
     "pt"
   ],
+  "/reCamera_onvif": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_2002_series_hardware_and_specs": [
     "cn",
     "en",
@@ -4893,13 +4900,6 @@
     "ja",
     "pt"
   ],
-  "/meshtastic_introduction": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/meshcore_node_map_meshtracker_x1": [
     "cn",
     "en",
@@ -4943,6 +4943,13 @@
     "pt"
   ],
   "/meshtracker_x1_intro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_introduction": [
     "cn",
     "en",
     "es",
@@ -12053,6 +12060,13 @@
     "pt"
   ],
   "/respeaker_clip_python_build_app_with_memory": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/control_rebot_arm_using_voice_with_respeaker_clip": [
     "cn",
     "en",
     "es",

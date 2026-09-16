@@ -184,7 +184,7 @@ reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
     </tr>
     <tr>
       <th rowSpan="1">工作温度</th>
-      <td colSpan="2">-20℃~60℃（25W 模式）；<br />-20℃~55℃（MAXN 模式）；<br />（搭配 reComputer Robotics 带风扇散热片）</td>
+      <td colSpan="2">-20℃~60℃（25W 模式）；<br />-20℃~55℃（40W 模式）；<br />-20℃~50℃（MAXN 模式）；<br />（搭配带风扇的 reComputer Robotics 散热器）</td>
     </tr>
     <tr>
       <th rowSpan="1">质保</th>

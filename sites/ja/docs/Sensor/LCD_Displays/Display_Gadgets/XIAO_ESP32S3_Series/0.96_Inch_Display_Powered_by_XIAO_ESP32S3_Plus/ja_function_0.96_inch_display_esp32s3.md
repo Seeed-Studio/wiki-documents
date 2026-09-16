@@ -1,5 +1,5 @@
 ---
-description: XIAO 0.96'' IPS Display (ESP32-S3) の各オンボードペリフェラル向けに、単体で動作する機能別デモをまとめたページです。画面、IMU、PDMマイクおよびI2Sオーディオ（フラッシュレコーダー）、ボタン、バッテリー電圧検出をカバーします。
+description: XIAO 0.96'' IPS Display (ESP32-S3) の各オンボードペリフェラル向けに、単体で動作する機能別デモをまとめたページです。画面、IMU、PDM マイクおよび I2S オーディオ（フラッシュレコーダー）、ボタン、バッテリー電圧検出をカバーします。
 title: オンボードペリフェラルの使い方
 keywords:
   - XIAO
@@ -23,10 +23,10 @@ url: https://wiki.seeedstudio.com/ja/function_0.96_inch_display_esp32s3/
 
 # オンボードペリフェラルの使い方
 
-このページでは、0.96'' IPS Display の各オンボードペリフェラル向けに、単体で動作する機能別デモをまとめています。各セクションはそれぞれ独立しているため、自分のユースケースに合うものだけを選んで読み進めることができます。
+このページでは、0.96'' IPS Display の各オンボードペリフェラル向けに、単体で動作する機能別デモをまとめています。各セクションはそれぞれ独立しているため、自分のユースケースに合うものだけを選んで読めばよく、他を読む必要はありません。
 
 :::tip
-このページのデモGIFは、短く収めるために再生速度を上げています。
+このページのデモ GIF は、短く収めるために再生速度を上げています。
 :::
 
 :::note
@@ -42,27 +42,27 @@ url: https://wiki.seeedstudio.com/ja/function_0.96_inch_display_esp32s3/
     </a>
 </div><br />
 
-**Step 1.** 上のボタンをクリックして、`Seeed_GFX2` v1.0.0 を ZIP ファイルとしてダウンロードします（チュートリアルの再現性を保つため、リリースタグに固定されています）。あるいは、[Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) からリポジトリを clone しても構いません。
+**Step 1.** 上のボタンをクリックして、`Seeed_GFX2` v1.0.0 を ZIP ファイルとしてダウンロードします（チュートリアルの再現性を保つため、リリースタグに固定されています）。あるいは、[Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) からリポジトリをクローンしても構いません。
 
 **Step 2.** Arduino IDE で **Sketch > Include Library > Add .ZIP Library...** を開き、ダウンロードした ZIP を選択します。IDE は `library.properties` を読み取り、正しい `Seeed_GFX2` フォルダに自動的にインストールします — 展開したフォルダ名を変更する必要はありません。（代わりに手動インストールする場合は、アーカイブを解凍し、展開されたフォルダ名を `Seeed_GFX2` に変更してから `Documents/Arduino/libraries/` に配置します。）
 
 **Step 3.** 新しいライブラリを認識させるために Arduino IDE を再起動します。
 
 :::tip
-- **Seeed_GFX2** は、`Board` + `Panel Config` というレイヤー構造の上に構築された Seeed Studio 製のグラフィックスライブラリです。各デモでは、`display.begin<Board_..., Config_...>()` を1回呼び出すだけでディスプレイを初期化します。**Board** テンプレートはピンマップ（CS/DC/SCK/MOSI/RST/BL）を保持し、**Panel Config** は 80×160 の解像度、BGR カラー順序、および回転を組み込んでいます。`driver.h` を追加したり、パネルを手動で構成する必要はありません。
+- **Seeed_GFX2** は、`Board` + `Panel Config` というレイヤー構造の上に構築された Seeed Studio 製のグラフィックスライブラリです。各デモでは、単一の `display.begin<Board_..., Config_...>()` 呼び出しでディスプレイを初期化します。ここで **Board** テンプレートがピンマップ（CS/DC/SCK/MOSI/RST/BL）を保持し、**Panel Config** が 80×160 解像度、BGR カラー順序、回転を組み込みます。`driver.h` をインクルードしたり、パネルを手動で構成したりする必要はありません。
 - このボードでは、デモは `Board_XIAO_0inch96_LCD<13, 12>`（RST=13, BL=12）と `Config_Seeed_0inch96_LCD_ST7789`（80×160, BGR, 回転 2）を使用します。
-- これらのデモでは **IMU** は I2C（`Wire`）経由で直接読み取っており、外部 IMU ライブラリは不要です。**PDM マイク** と **I2S 出力** は ESP-IDF 5 のドライバ（`driver/i2s_pdm.h`、`driver/i2s_std.h`）と `LittleFS` を使用しており、いずれも esp32 ボードパッケージに含まれています。
-- 0.96'' IPS Display には **タッチコントローラ、SDカードスロット、Grove コネクタは搭載されていません**。背面に 4ピンの I2C テストパッドがあるだけなので、タッチ、SD、Grove 用のライブラリは不要です。
+- これらのデモでは **IMU** は I2C（`Wire`）経由で直接読み取っており、外部 IMU ライブラリは不要です。**PDM マイク** と **I2S 出力** は ESP-IDF 5 のドライバ（`driver/i2s_pdm.h`、`driver/i2s_std.h`）および `LittleFS` を使用しており、いずれも esp32 ボードパッケージに含まれています。
+- 0.96'' IPS Display には **タッチコントローラ、SD カードスロット、Grove コネクタは搭載されていません** — 裏面に 4 ピンの I2C テストパッドがあるだけなので、タッチ、SD、Grove 用のライブラリは不要です。
 :::
 
-## デモコードの入手
+## デモコードの入手方法
 
-このページのすべてのデモは、[Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets) リポジトリ内の `code_GFX2/Function/` ディレクトリにあります。各デモは1つの `.ino` スケッチを含むフォルダになっています。GitHub の Web 画面から `.ino` のソースだけをコピーするのではなく、**必ずフォルダ全体をダウンロード**してください。
+このページのすべてのデモは、`code_GFX2/Function/` ディレクトリ以下の [Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets) リポジトリに含まれています。各デモは 1 つの `.ino` スケッチを含むフォルダになっています。GitHub の Web ビューから `.ino` のソースだけをコピーするのではなく、**必ずフォルダごとダウンロード**してください。
 
-**オプション A — リポジトリを ZIP でダウンロード（推奨）：**
+**オプション A — リポジトリを ZIP としてダウンロード（推奨）：**
 
-1. [github.com/Seeed-Projects/Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets) を開き、**Code > Download ZIP** をクリックして、任意の場所にアーカイブを展開します。
-2. `code_GFX2/Function/` に移動し、各デモの **Code location** 行に記載されているフォルダを開きます。例えば、このボード向けの GraphicTest デモは `code_GFX2/Function/096_ESP32/xiao_esp32s3_096_graphictest/` にあります。
+1. [github.com/Seeed-Projects/Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets) を開き、**Code > Download ZIP** をクリックしてから、任意の場所にアーカイブを展開します。
+2. `code_GFX2/Function/` に移動し、各デモの **Code location** 行に記載されているフォルダを開きます。たとえば、このボード向けの GraphicTest デモは `code_GFX2/Function/096_ESP32/xiao_esp32s3_096_graphictest/` にあります。
 3. **`.ino` ファイルをダブルクリック**して Arduino IDE で開きます。
 
 **オプション B — git clone：**
@@ -71,11 +71,11 @@ url: https://wiki.seeedstudio.com/ja/function_0.96_inch_display_esp32s3/
 git clone https://github.com/Seeed-Projects/Display-Gadgets.git
 ```
 
-その後、clone した `code_GFX2/Function/...` フォルダからデモの `.ino` ファイルを開きます。
+その後、クローンした `code_GFX2/Function/...` フォルダからデモの `.ino` ファイルを開きます。
 
 ## 画面表示 — GraphicTest
 
-このデモは、0.96インチ ST7789 IPS パネル（80×160）に対して、カラーバー、線、矩形、円、三角形、角丸矩形、テキスト、ピクセルグラデーションを含むフルグラフィックスベンチマークを実行します。画面の配線が正しいこと、およびすべての描画呼び出しが期待どおりに動作することを確認するために使用できます。
+このデモは、0.96 インチ ST7789 IPS パネル（80×160）に対して、カラーバー、線、矩形、円、三角形、角丸矩形、テキスト、ピクセルグラデーションを含むフルグラフィックスベンチマークを実行します。画面の配線が正しいこと、およびすべての描画呼び出しが期待どおり動作することを確認するために使用できます。
 
 **Code location:** `code_GFX2/Function/096_ESP32/xiao_esp32s3_096_graphictest/`
 
@@ -88,18 +88,18 @@ git clone https://github.com/Seeed-Projects/Display-Gadgets.git
 
 ### 動作の仕組み
 
-このスケッチは **Seeed_GFX2** を介して ST7789 IPS パネルを初期化し、その後 10 種類のグラフィックスプリミティブを順番に実行します。それぞれの実行時間を `micros()` で計測し、結果をシリアルモニタに出力します。
+このスケッチは **Seeed_GFX2** を介して ST7789 IPS パネルを初期化し、その後 10 種類のグラフィックスプリミティブを順番に実行します。それぞれの処理時間を `micros()` で計測し、結果をシリアルモニタに出力します。
 
-ディスプレイは次の1回のテンプレート呼び出しで初期化されます：
+ディスプレイは次の 1 回のテンプレート呼び出しで初期化されます：
 
 ```cpp
 display.begin<Board_XIAO_0inch96_LCD<13, 12>,
               Config_Seeed_0inch96_LCD_ST7789>();
 ```
 
-**Board** テンプレートはピンマップ — CS=D2, DC=D3, SCK=D8, MOSI=D10 — を保持し、その `<RST, BL>` テンプレートパラメータには生の GPIO 番号を指定するため、`<13, 12>` は RST=GPIO13（D17）、BL=GPIO12（D18）を意味します。**Panel Config** は 80×160 の解像度、BGR カラー順序、および回転 2 を組み込んでおり、`driver.h` や手動の `invertDisplay()` 呼び出しは不要です。
+**Board** テンプレートはピンマップを保持しており — CS=D2、DC=D3、SCK=D8、MOSI=D10 — その `<RST, BL>` テンプレートパラメータには生の GPIO 番号を指定するため、`<13, 12>` は RST=GPIO13（D17）、BL=GPIO12（D18）を意味します。**Panel Config** は 80×160 解像度、BGR カラー順序、回転 2 を組み込んでおり、`driver.h` や手動の `invertDisplay()` 呼び出しは不要です。
 
-### デモの実行
+### デモの実行方法
 
 **Step 1.** Arduino IDE で `xiao_esp32s3_096_graphictest.ino` を開きます。
 
@@ -126,7 +126,7 @@ Pixel gradient: 1960.36 ms
 Graphic test finished.
 ```
 
-画面上では、各テストパターンが約1秒間表示され、その後次のパターンに切り替わります。すべてのテストが完了すると、「Done! All tests OK」という画面が表示されます。
+画面上では、各テストパターンが約 1 秒間表示され、その後次のパターンに切り替わります。すべてのテストが完了すると、「Done! All tests OK」と表示された画面が現れます。
 
 ### 期待される結果
 
@@ -138,19 +138,19 @@ Graphic test finished.
 
 ## IMU
 
-0.96'' IPS Display には、オンボードの **LSM6DS3** 6軸 IMU（3軸加速度センサ + 3軸ジャイロ）が搭載されており、I2C で D4/D5 に接続され、アドレスは **0x6A** です。**D14** 上のモーション割り込みラインは、ハードウェアウェイクアップとジェスチャ検出をサポートします。
+0.96'' IPS Display には、オンボードの **LSM6DS3** 6 軸 IMU（3 軸加速度センサ + 3 軸ジャイロスコープ）が搭載されており、I2C で D4/D5 に接続され、アドレスは **0x6A** です。**D14** 上のモーション割り込みラインは、ハードウェアウェイクアップとジェスチャ検出をサポートします。
 
 :::note
 オンボード IMU は **LSM6DS3**（I2C アドレス `0x6A`）です。Electronic Quicksand デモは、防御的なフォールバックとして QMI8658 互換センサを探索します。Raise to Wake デモは、オンボード LSM6DS3 のウェイクアップレジスタを対象としています。
 :::
 
-以下のデモでは、IMU を I2C（`Wire`）経由で直接読み取っており、外部 IMU ライブラリは必要ありません。
+以下のデモでは、IMU を I2C（`Wire`）経由で直接読み取っており、外部 IMU ライブラリは不要です。
 
 <a id="imu-quicksand"></a>
 
 ### デモ 1: Electronic Quicksand
 
-このデモでは、画面をインタラクティブな流体シミュレーションに変えます — 重力に応じて流れ、落ち着く金色の砂粒が、オンボード 6軸 IMU で計測された重力に従って動きます。ボードを傾けると、砂がリアルタイムにその方向へと移動します。
+このデモでは、画面をインタラクティブな流体シミュレーションに変えます — オンボード 6 軸 IMU が計測した重力に従って流れ、落ち着く金色の砂粒です。ボードを傾けると、砂がリアルタイムにその方向へと移動します。
 
 **Code location:** `code_GFX2/Function/096_ESP32/xiao_esp32s3_096_electronic_quicksand/`
 
@@ -163,16 +163,16 @@ Graphic test finished.
 
 ### 動作の仕組み
 
-このシミュレーションでは、80×160 の画面上に **13×26 の占有グリッド** を重ね、その各セルは 6×6 ピクセルになっています。グリッド内には約 **65 個の粒子** が配置されており、それぞれ位置、速度、そして金色のカラ―グラデーションを持ちます。
+このシミュレーションでは、80×160 画面上に **13×26 の占有グリッド** を重ね合わせており、各セルは 6×6 ピクセルです。グリッド内には約 **65 個のパーティクル** が配置されており、それぞれ位置、速度、そしてゴールドのカラ―グラデーションを持ちます。
 
-IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 2 つのアドレスの IMU を順に探索し、まず QMI8658、次に LSM6DS3 を探し、応答した方を使用します。生の加速度値はローパスフィルタで平滑化され、重力ベクトルの算出に使われます。ボードを傾けると、次のように動作します：
+IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 2 つのアドレスで IMU を探索し、まず QMI8658、次に LSM6DS3 を試し、応答した方を使用します。生の加速度値はローパスフィルタで平滑化され、重力ベクトルの算出に使われます。ボードを傾けると：
 
 1. **重力ベクトルの更新** — 加速度センサのデータは指数移動平均で平滑化され、ジッタを抑えます。
-2. **粒子の速度** — 各粒子は重力ベクトルの方向に加速し、減衰と、フロー内での深さに基づく粒子ごとの可動性係数が適用されます。
-3. **セルの占有状態** — フローのより深い位置（重力に対して「底」に近い位置）にある粒子は可動性が低くなり、現実的な詰まり（パッキング）効果を生み出します。
-4. **差分レンダリング** — 粒子が出入りしたセルだけを再描画することで、SPI トラフィックを最小限に抑え、小型パネル上でもスムーズなアニメーションを維持します。
+2. **パーティクルの速度** — 各パーティクルは重力ベクトルの方向に加速し、減衰と、フロー内での深さに基づくパーティクルごとの可動性係数が適用されます。
+3. **セルの占有状態** — フローのより深い位置（重力に対して「底」に近い位置）にあるパーティクルは可動性が低くなり、リアルな詰まり（パッキング）効果を生み出します。
+4. **差分レンダリング** — パーティクルが出入りしたセルだけを再描画することで、SPI トラフィックを最小限に抑え、小型パネルでもスムーズなアニメーションを維持します。
 
-表面付近の粒子は自由に流れ（高い可動性）、より深く埋もれた粒子は密に詰まり（低い可動性）、実際の砂の挙動を模倣します。
+表面付近のパーティクルは自由に流れ（高い可動性）、より深く埋もれたパーティクルはきつく詰まり（低い可動性）、実際の砂の挙動を模倣します。
 
 ### デモの実行
 
@@ -180,7 +180,7 @@ IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 
 
 **Step 2.** ボードとポートを選択し、**Upload** をクリックします。
 
-**Step 3.** 書き込みが完了すると、画面の下部が金色の粒子で満たされます。ボードをさまざまな方向に傾けると、砂が重力に引かれるように流れます。
+**Step 3.** 書き込みが完了すると、画面の下部が金色のパーティクルで満たされます。ボードをさまざまな方向に傾けると、砂が重力に引かれるように流れます。
 
 **Step 4.** **Tools > Serial Monitor**（115200 ボー）を開き、初期化を確認します：
 
@@ -193,13 +193,13 @@ IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_function_quicksand.gif" style={{width:500, height:'auto'}}/></div>
 
-ボードを傾けると、粒子は下側の縁に向かって流れます。ディスプレイを水平に置くと、デモは直前の重力方向を保持します。
+ボードを傾けると、パーティクルは下側の端に向かって流れます。ディスプレイを水平に置くと、デモは直前の重力方向を保持します。
 
 ---
 
-### デモ 2: 持ち上げてスリープ解除
+### デモ 2: Raise to Wake
 
-このデモでは、IMU に内蔵された **ウェイクアップ割り込み**（**D14**）を利用した **画面のスリープ／ウェイクシステム** を実装しています。8 秒間操作がないと画面が自動的にオフ（バックライトオフ）になり、デバイスを持ち上げたり動かしたりすると即座に復帰します。
+このデモは、IMU に内蔵された **ウェイクアップ割り込み** を **D14** で利用する **画面のスリープ／ウェイクシステム** を実装しています。8 秒間操作がないと画面が自動的にオフ（バックライトオフ）になり、デバイスを持ち上げたり動かしたりすると即座に復帰します。
 
 **コードの場所：** `code_GFX2/Function/096_ESP32/xiao_esp32s3_096_wakeup/`
 
@@ -212,14 +212,14 @@ IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 
 
 ### 動作の仕組み
 
-このデモでは、LSM6 互換 IMU の **組み込みウェイクアップイベント検出器** を使用します。これは、加速度センサのデータを内部で監視し、モーションが設定可能なしきい値を超えたときに INT1 ピン（このボードでは D14 に接続）をアサートするハードウェア機能です。これにより、MCU は加速度センサを継続的にポーリングする必要がありません。
+このデモでは、LSM6 互換 IMU の **組み込みウェイクアップイベント検出器** を使用します。これは、加速度センサのデータを内部で監視し、動きが設定可能なしきい値を超えたときに INT1 ピン（このボードでは D14 に接続）をアサートするハードウェア機能です。これにより、MCU は加速度センサを継続的にポーリングする必要がありません。
 
 **IMU 設定（LSM6 互換）：**
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Register</th><th>Value</th><th>Purpose</th></tr>
-    <tr><td><code>CTRL3_C</code></td><td><code>0x44</code></td><td>BDU を有効化 + ブロックリード用のオートインクリメント</td></tr>
+    <tr><th>レジスタ</th><th>値</th><th>目的</th></tr>
+    <tr><td><code>CTRL3_C</code></td><td><code>0x44</code></td><td>BDU とブロックリード用オートインクリメントを有効化</td></tr>
     <tr><td><code>CTRL1_XL</code></td><td><code>0x40</code></td><td>加速度センサ @ 104 Hz、±2g</td></tr>
     <tr><td><code>CTRL2_G</code></td><td><code>0x40</code></td><td>ジャイロスコープ @ 104 Hz</td></tr>
     <tr><td><code>TAP_CFG</code></td><td><code>0x80</code></td><td>組み込み割り込みを有効化</td></tr>
@@ -229,17 +229,17 @@ IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 
   </table>
 </div>
 
-**スリープ／ウェイクのフロー：**
+**スリープ／ウェイクの流れ：**
 
-1. **アクティブ状態** — 画面がオンでバックライトが点灯しています。IMU データとバッテリ電圧（D16）が定期的に更新され、自動スリープまでの残り秒数がカウントダウン表示されます。
-2. **自動スリープ** — 8 秒間動きがないと、スケッチはバックライトをオフにし、「Sleep — Move to wake」というメッセージを表示します。デフォルトでは、このデモは **ディスプレイのみのスリープ** を使用します。つまり、ESP32-S3 は動作を継続し（そのため USB CDC シリアルポートは接続されたまま）、パネルだけをオフにします。D14 の IMU ウェイク割り込みは有効なままなので、モーション検出は継続されます。（スケッチ内で `ENABLE_LIGHT_SLEEP` を `true` に設定すると、GPIO ウェイクアップ付きの実際の ESP32 ライトスリープを使用します。ただし、その間 USB CDC が切断される可能性があります。）
-3. **ウェイクアップ** — ユーザがボードを持ち上げると、IMU がモーションを検出して D14 を HIGH にアサートします。スケッチはバックライトを再点灯し、UI を再描画します — LCD と IMU の再初期化は行いません。
+1. **アクティブ状態** — 画面はオンでバックライトが点灯しています。IMU データとバッテリ電圧（D16）が定期的に更新され、自動スリープまでの残り秒数がカウントダウン表示されます。
+2. **自動スリープ** — 8 秒間動きがないと、スケッチはバックライトをオフにし、「Sleep — Move to wake」というメッセージを表示します。デフォルトでは、このデモは **ディスプレイのみのスリープ** を使用します。つまり ESP32-S3 は動作を継続し（USB CDC シリアルポートは接続されたまま）、パネルだけをオフにします。D14 上の IMU ウェイク割り込みは有効なままなので、動きの検出は継続されます。スケッチ内で `ENABLE_LIGHT_SLEEP` を `true` に設定すると、GPIO ウェイクアップ付きの本物の ESP32 ライトスリープを使用できますが、その間 USB CDC が切断される可能性があります。
+3. **ウェイクアップ** — ユーザーがボードを持ち上げると、IMU が動きを検出して D14 を HIGH にアサートします。スケッチはバックライトを再点灯し、UI を再描画します — LCD と IMU の再初期化は行いません。
 
 **手動テストボタン：**
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Button</th><th>Pin</th><th>Action</th></tr>
+    <tr><th>ボタン</th><th>ピン</th><th>動作</th></tr>
     <tr><td>USR1</td><td>D6</td><td>強制スリープ</td></tr>
     <tr><td>USR2</td><td>D7</td><td>強制ウェイク</td></tr>
   </table>
@@ -249,11 +249,11 @@ IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 
 
 **Step 1.** Arduino IDE で `xiao_esp32s3_096_wakeup.ino` を開き、ボードとポートを選択して **Upload** をクリックします。
 
-**Step 2.** 画面には、電源状態、バッテリ電圧／残量、モーションデータ、割り込み回数、スリープまでのカウントダウンを備えたコンパクトなダッシュボードが表示されます。ボードを静置すると、8 秒後に自動的にスリープに入ります。
+**Step 2.** 画面には、電源状態、バッテリ電圧／残量、モーションデータ、割り込み回数、スリープまでのカウントダウンを表示するコンパクトなダッシュボードが表示されます。ボードを静置すると、8 秒後に自動的にスリープに入ります。
 
 **Step 3.** ボードを持ち上げるか、軽く振ると、画面が即座に復帰します。
 
-**Step 4.** **Tools > Serial Monitor**（115200 ボー）を開き、起動とウェイクの遷移を確認します：
+**Step 4.** **Tools > Serial Monitor**（115200 ボー）を開き、起動とウェイクの遷移を観察します：
 
 ```
 === XIAO ESP32-S3 Plus 0.96 IMU Wake Demo ===
@@ -271,7 +271,7 @@ IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 
 [SLEEP] AUTO_TIMEOUT
 ```
 
-起動後、3 行の `[READY]` メッセージで操作方法が説明されます。USR1 はボードをスリープにし、USR2 は手動でウェイクし、モーションは IMU ウェイクをトリガします。各遷移はログに記録されます。モーションによるウェイクアップでは `[WAKE] IMU_D14 count=N` と表示され（このカウントはそのたびに増加します）、USR1 を押したときは `[SLEEP] USR1`、8 秒間モーションがないことで自動スリープした場合は `[SLEEP] AUTO_TIMEOUT` と表示されます。
+起動後、3 行の `[READY]` メッセージで操作方法が説明されます。USR1 はボードをスリープさせ、USR2 は手動でウェイクし、動きは IMU ウェイクをトリガします。各遷移はログに記録され、モーションによるウェイクアップでは `[WAKE] IMU_D14 count=N`（動くたびにカウントが増加）、USR1 を押したときは `[SLEEP] USR1`、8 秒間動きがない自動スリープ時は `[SLEEP] AUTO_TIMEOUT` と表示されます。
 
 ### 期待される結果
 
@@ -289,7 +289,7 @@ IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Pin</th><th>Signal</th><th>Function</th></tr>
+    <tr><th>ピン</th><th>信号</th><th>機能</th></tr>
     <tr><td>D0</td><td>PDM_CLK</td><td>マイクへの PDM クロック出力</td></tr>
     <tr><td>D1</td><td>PDM_DATA</td><td>マイクからの PDM データ入力</td></tr>
   </table>
@@ -306,7 +306,7 @@ IMU は I2C（D4/D5）経由で読み取られます。スケッチは既知の 
 
 ### ハードウェアセットアップ
 
-再生には外部の **I2S オーディオアンプとスピーカー** が必要です。このデモは、ボードの I2S 出力パッドに接続された **MAX98357A** ブレイクアウト用に作成されています：
+再生には外部の **I2S オーディオアンプとスピーカー** が必要です。このデモは、ボードの I2S 出力パッドに接続された **MAX98357A** ブレイクアウト用に作成されています。
 
 <div class="table-center">
   <table align="center">
@@ -323,32 +323,32 @@ I2S パッド（3V3、GND、D11、D12、D13）は、ディスプレイボード�
 
 ### 動作の仕組み
 
-**録音（USR1）** — オンボードの **PDM（パルス密度変調）デジタルマイク** は、ESP32-S3 の I2S ペリフェラルを PDM RX モードに設定してサンプリングします。ESP-IDF v5（Arduino コア 3.3.11）では、新しいドライバ API（`driver/i2s_pdm.h`）を使用します。マイクは **16 kHz モノラル** で、256 フレームの DMA ディスクリプタ 4 個を使ってキャプチャされます。USR1 を押すと、スケッチは **5 秒間** の音声を RAM バッファにサンプリングし、その後 `LittleFS` を使ってオンボード Flash に WAV ファイル（`/REC_RAW.WAV`）として書き込みます。
+**録音（USR1）** — オンボードの **PDM（パルス密度変調）デジタルマイク** は、ESP32-S3 の I2S ペリフェラルを PDM RX モードに設定してサンプリングします。ESP-IDF v5（Arduino core 3.3.11）では、新しいドライバ API（`driver/i2s_pdm.h`）を使用します。マイクは **16 kHz モノラル** で、256 フレームずつの DMA ディスクリプタ 4 個でキャプチャされます。USR1 を押すと、スケッチは **5 秒間** の音声を RAM バッファにサンプリングし、その後 `LittleFS` を使ってオンボード Flash に WAV ファイル（`/REC_RAW.WAV`）として書き込みます。
 
-PDM マイクの動作開始後、スケッチは録音開始時の立ち上がりノイズを減らすため、ウォームアップデータとして最初の **300 ms** のキャプチャデータを破棄します。
+PDM マイクの動作開始後、スケッチはウォームアップデータとして最初の **300 ms** のキャプチャデータを破棄し、録音開始時の立ち上がりノイズを低減します。
 
-スケッチが **7 秒** 以内にすべてのサンプルを取得できない場合、録音を停止し、録音ループでブロックされたままにならないように、代わりに **"Mic timeout"** を表示します。
+スケッチが **7 秒** 以内にすべてのサンプルを取得できない場合、録音を停止して **"Mic timeout"** を表示し、録音ループでブロックされたままにならないようにします。
 
 :::note
-このボードでは、マイクのチャンネル選択ピンは `R8`（0 Ω 抵抗）によって GND に接続されており、代替の 3V3 ストラップである `R6` は実装されていません。そのためオンボードマイクは **左** の PDM スロットを駆動し、スケッチで `slot_cfg.slot_mask = I2S_PDM_SLOT_LEFT` を設定しているのはこのためです。別のマイク配線にコードを適用する場合は、この点に注意してください。
+このボードでは、マイクのチャンネル選択ピンは `R8`（0 Ω 抵抗）によって GND に接続されており、代替の 3V3 ストラップである `R6` は実装されていません。そのためオンボードマイクは **左** PDM スロットを駆動し、スケッチで `slot_cfg.slot_mask = I2S_PDM_SLOT_LEFT` を設定しているのはこのためです。別のマイク配線にコードを適用する場合は、この点に注意してください。
 :::
 
-**再生（USR2）** — USR2 を押すと、Flash から WAV を読み戻し、I2S ペリフェラルを標準（Philips）ステレオモードで D11/D12/D13 上に設定してストリーミングします（`driver/i2s_std.h`）。モノラルサンプルは両チャンネルに複製され、クリッピングを避けるために `0.75×` のゲインが適用されます。アンプが小型スピーカーを駆動し、録音内容を聞くことができます。
+**再生（USR2）** — USR2 を押すと、Flash から WAV を読み戻し、I2S ペリフェラルを標準（Philips）ステレオモードで D11/D12/D13（`driver/i2s_std.h`）に出力してストリーミングします。モノラルサンプルは両チャンネルに複製され、クリッピングを避けるために `0.75×` のゲインが適用されます。アンプが小型スピーカーを駆動し、録音内容を聞くことができます。
 
 :::note
-ESP-IDF v5 の API（`i2s_new_channel()` / `i2s_channel_read()` / `i2s_channel_write()`）は、このデモの nRF52840 版とは異なり、nRF52840 版では nRF52 の `PDM` ライブラリと `NRF_I2S` ペリフェラルを直接使用しています。nRF52840 用コードを移植する場合は、オーディオのセットアップを完全に置き換える必要があります。
+ESP-IDF v5 の API（`i2s_new_channel()` / `i2s_channel_read()` / `i2s_channel_write()`）は、このデモの nRF52840 版とは異なります。nRF52840 版では nRF52 の `PDM` ライブラリと `NRF_I2S` ペリフェラルを直接使用しています。nRF52840 用コードを移植する場合は、オーディオのセットアップを完全に置き換える必要があります。
 :::
 
 **画面上の状態:**
 
 <div class="table-center">
   <table align="center">
-    <tr><th>State</th><th>Description</th></tr>
-    <tr><td><strong>Ready</strong></td><td>"Recorder" タイトルと "USR1: record" および "USR2: play"（または "No recording"）</td></tr>
-    <tr><td><strong>Recording</strong></td><td>キャプチャ中は "Capturing voice" と "Please speak"（進行状況のライブ表示なし）</td></tr>
-    <tr><td><strong>Error</strong></td><td>キャプチャが 7 秒を超えた場合は "Mic timeout" と "Try again"</td></tr>
-    <tr><td><strong>Saved</strong></td><td>"Done — Saved WAV" の確認を表示し、その後 Ready に戻る</td></tr>
-    <tr><td><strong>Playback</strong></td><td>ストリーミング中は "Playing..."、終了後は "Finished"</td></tr>
+    <tr><th>状態</th><th>説明</th></tr>
+    <tr><td><strong>Ready</strong></td><td>"Recorder" タイトルと "USR1: record" および "USR2: play"（または "No recording"）を表示</td></tr>
+    <tr><td><strong>Recording</strong></td><td>キャプチャ中は "Capturing voice" と "Please speak" を表示（進行状況のライブ表示なし）</td></tr>
+    <tr><td><strong>Error</strong></td><td>キャプチャが 7 秒を超えた場合は "Mic timeout" と "Try again" を表示</td></tr>
+    <tr><td><strong>Saved</strong></td><td>"Done — Saved WAV" と保存完了を表示し、その後 Ready に戻る</td></tr>
+    <tr><td><strong>Playback</strong></td><td>ストリーミング中は "Playing..." を表示し、その後 "Finished" を表示</td></tr>
   </table>
 </div>
 
@@ -365,7 +365,7 @@ ESP-IDF v5 の API（`i2s_new_channel()` / `i2s_channel_read()` / `i2s_channel_w
 **ステップ 5.** 正しい **Port** を選択し、**Upload** をクリックします。
 
 :::caution
-レコーダーは WAV ファイルを `LittleFS` に保存しますが、これは **SPIFFS** パーティションを使用します。ボードのデフォルトのパーティションスキーム（`16M Flash (2MB APP/12.5MB FATFS)`）には SPIFFS パーティションが含まれていないため、`LittleFS.begin()` は `false` を返し、WAV ファイルは書き込めず、画面には "Write failed / Check flash" と表示されます。録音を動作させるには、上記の SPIFFS パーティションスキームを **必ず** 選択してください。
+レコーダーは WAV ファイルを `LittleFS` に保存しますが、これは **SPIFFS** パーティションを使用します。ボードのデフォルトのパーティションスキーム（`16M Flash (2MB APP/12.5MB FATFS)`）には SPIFFS パーティションがないため、`LittleFS.begin()` は `false` を返し、WAV ファイルは書き込めず、画面には "Write failed / Check flash" と表示されます。録音を動作させるには、上記の SPIFFS パーティションスキームを **必ず** 選択してください。
 :::
 
 **ステップ 6.** **USR1（D6）** を押して、オンボードマイクから 5 秒間の音声を録音します。録音中、画面には "Capturing voice" と表示されます。
@@ -373,7 +373,7 @@ ESP-IDF v5 の API（`i2s_new_channel()` / `i2s_channel_read()` / `i2s_channel_w
 **ステップ 7.** **USR2（D7）** を押して、録音をスピーカーから再生します。
 
 :::note
-録音はオンボード Flash（`LittleFS`）に保存されるため、電源を切っても保持されます — 一度録音して、後で再生することができます。再度録音すると、前のファイルは上書きされます。
+録音はオンボード Flash（`LittleFS`）に保存されるため、電源を切っても保持されます。一度録音しておけば、後で再生できます。再度録音すると、前のファイルは上書きされます。
 :::
 
 ### 期待される結果
@@ -390,7 +390,7 @@ USR1 を押すと、画面に "Capturing voice" と表示されます。5 秒後
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Button</th><th>Pin</th><th>Logic</th><th>Silkscreen Label</th></tr>
+    <tr><th>ボタン</th><th>ピン</th><th>ロジック</th><th>シルク印刷ラベル</th></tr>
     <tr><td><strong>USR1</strong></td><td>D6</td><td>アクティブ Low（押下 = LOW）</td><td>USR1</td></tr>
     <tr><td><strong>USR2</strong></td><td>D7</td><td>アクティブ Low（押下 = LOW）</td><td>USR2</td></tr>
   </table>
@@ -468,25 +468,25 @@ void loop() {
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Button</th><th>Pin</th><th>Action</th></tr>
+    <tr><th>ボタン</th><th>ピン</th><th>動作</th></tr>
     <tr><td><strong>USR1</strong></td><td>D6</td><td>画面の明るさを切り替え（100% → 75% → 50% → 25% → 100%）</td></tr>
     <tr><td><strong>USR2</strong></td><td>D7</td><td>画面バックライトの ON/OFF を切り替え</td></tr>
   </table>
 </div>
 
-画面がオフ（USR2 によって切り替え）になっているときに再度 USR2 を押すと、以前の 0 以外のレベルに復帰します。
+画面がオフ（USR2 で切り替え）になっているときに再度 USR2 を押すと、以前の 0 以外のレベルに復帰します。
 
 ---
 
 ## バッテリー電圧検出
 
-このデモでは、オンボードのバッテリー分圧回路を **D16** で読み取り、0.96'' IPS ディスプレイに 2 つの黄色いライブ読み値を表示します：D16 の分圧電圧の生値と、計算されたバッテリー電圧です。電圧値のみを表示し、バッテリー残量（パーセンテージ）の推定や充電状態の報告は行いません。
+このデモでは、オンボードのバッテリー分圧回路を **D16** で読み取り、0.96'' IPS ディスプレイに 2 つの黄色いライブ値として表示します：D16 の分圧電圧の生値と、計算されたバッテリー電圧です。電圧値のみを表示し、バッテリー残量（パーセンテージ）の推定や充電状態の報告は行いません。
 
 **コードの場所：** `code_GFX2/Function/096_ESP32/xiao_esp32s3_096_battery_status/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/096_ESP32/xiao_esp32s3_096_battery_status" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> GitHub で表示</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -495,11 +495,11 @@ void loop() {
 
 **バッテリー回路：**
 
-ESP32-S3 Plus は、**D16** に接続されたオンボードの分圧回路を通して LiPo バッテリー電圧を読み取ります：
+ESP32-S3 Plus は、オンボードの分圧回路を介して **D16** に接続された LiPo バッテリー電圧を読み取ります：
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Signal</th><th>ESP32-S3 Pin</th><th>Function</th></tr>
+    <tr><th>信号</th><th>ESP32-S3 ピン</th><th>機能</th></tr>
     <tr><td><code>BAT_ADC</code></td><td><strong>D16</strong></td><td>分圧されたバッテリー電圧を読み取るアナログ入力。内部的に 316 kΩ / 160 kΩ の分圧回路に接続されています。<strong>このピンを外部用途に使用しないでください。</strong></td></tr>
   </table>
 </div>
@@ -508,34 +508,34 @@ ESP32-S3 Plus は、**D16** に接続されたオンボードの分圧回路を�
 
 **読み取り：**
 
-このスケッチは `Board_XIAO_0inch96_LCD<13, 12>` と `Config_Seeed_0inch96_LCD_ST7789`（80×160、BGR、回転 2）でディスプレイを初期化し、その後 **D16** を 12 ビット分解能・11 dB 減衰で `analogReadMilliVolts()` を使って 700 µs 間隔で 12 回サンプリングします。サンプルを平均して分圧後の生の電圧値を求め、分圧比を掛けてバッテリー電圧（`Calc = D16 × 2.975`）を算出し、両方を中央寄せの黄色い 2 行として描画します。画面は、どちらかの値が意味のある量だけ変化したときのみ更新されます（D16 ≥ 0.02 V または Calc ≥ 0.05 V）。
+このスケッチは `Board_XIAO_0inch96_LCD<13, 12>` と `Config_Seeed_0inch96_LCD_ST7789`（80×160、BGR、回転 2）でディスプレイを初期化し、その後 **D16** を 12 ビット分解能・11 dB 減衰で `analogReadMilliVolts()` を使って 700 µs 間隔で 12 回サンプリングします。サンプルを平均して分圧器の生の電圧を求め、分圧比を掛けてバッテリ電圧を算出します（`Calc = D16 × 2.975`）。そして両方の値を中央寄せの黄色い 2 行として描画します。画面は、どちらかの値が意味のある量だけ変化したときにのみ更新されます（D16 ≥ 0.02 V または Calc ≥ 0.05 V）。
 
 :::note
-充電状態の信号はどの ESP32-S3 GPIO にも接続されていません。このデモは電圧値のみを表示し、バッテリーの有無や充電状態の検出、バッテリー残量の推定は行いません。
+充電状態の信号は ESP32-S3 の GPIO には接続されていません。このデモは電圧値のみを表示し、バッテリの有無や充電状態の検出、バッテリ残量の推定は行いません。
 :::
 
 ### デモの実行
 
-**Step 1.** Arduino IDE で `xiao_esp32s3_096_battery_status.ino` を開きます。
+**ステップ 1.** Arduino IDE で `xiao_esp32s3_096_battery_status.ino` を開きます。
 
-**Step 2.** **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** と正しい **Port** を選択します。
+**ステップ 2.** **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** と正しい **Port** を選択します。
 
-**Step 3.** **Upload** をクリックします。
+**ステップ 3.** **Upload** をクリックします。
 
-**Step 4.** 画面を観察します — 2 本の黄色いラインが表示されます。上が D16 の分圧後の生の電圧、下が計算されたバッテリー電圧です。LiPo バッテリー（または USB-C ケーブル）を接続・取り外しして、値がどのように更新されるか確認してください。
+**ステップ 4.** 画面を観察します — 2 本の黄色い行が表示されます。上段は生の D16 分圧電圧、下段は計算されたバッテリ電圧です。LiPo バッテリ（または USB-C ケーブル）を接続・取り外しして、値がどのように更新されるか確認します。
 
 ### 期待される結果
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_function_battery_status_display.jpg" style={{width:300, height:'auto'}}/><br/><strong>電圧読み取り</strong>（D16 + Calc）</div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_function_battery_status_back.jpg" style={{width:300, height:'auto'}}/><br/><strong>バッテリーコネクタ</strong>（背面）</div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_function_battery_status_display.jpg" style={{width:300, height:'auto'}}/><br/><strong>電圧読み取り値</strong>（D16 + Calc）</div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_function_battery_status_back.jpg" style={{width:300, height:'auto'}}/><br/><strong>バッテリコネクタ</strong>（背面）</div></td>
     </tr>
   </table>
 </div>
 
-画面には、上段に D16 の分圧後の生の電圧、下段に計算されたバッテリー電圧（`Calc`）が表示されます。LiPo バッテリーを接続すると、`Calc` はバッテリー端子電圧のおおよその値になります。USB 電源のみでも値が表示されるため、`Calc` だけではバッテリーが接続されているかどうかを確認することはできません。
+画面には、上段に生の D16 分圧電圧、下段に計算されたバッテリ電圧（`Calc`）が表示されます。LiPo バッテリを接続すると、`Calc` はバッテリ端子電圧のおおよその値になります。USB 電源のみでも読み取り値が表示される場合があるため、`Calc` だけではバッテリが接続されているかどうかを確認することはできません。
 
 このデモは、シリアルモニタにも 1 秒ごとに診断用の 1 行を出力します。例：
 
@@ -550,13 +550,14 @@ D16 1.39V | Calc 4.14V
 - **🗃️[PCB Design Files]** [XIAO 0.96'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[Schematic]** [XIAO 0.96'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[3D Model]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
+- **🖨️[3D Printed Enclosure]** [XIAO 0.96'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843001-enclosure-for-xiao-096-ips-display-esp32nrf52840/files)
 - **📄[Datasheet]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
 - **💾[Factory Firmware]** [XIAO 0.96'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 - **[Demo]** [XIAO Display Board Demo Code](https://github.com/Seeed-Projects/Display-Gadgets) — すべての Function デモは `code_GFX2/Function/096_ESP32/` ディレクトリ内にあります
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">

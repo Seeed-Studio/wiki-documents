@@ -1,7 +1,7 @@
 ---
-description: Primeros pasos con XIAO 1.47'' IPS Display (nRF52840).
-title: Primeros pasos con XIAO 1.47'' IPS Display (nRF52840)
-sidebar_label: Primeros pasos
+description: Introducción a XIAO 1.47'' IPS Display (nRF52840).
+title: Introducción a XIAO 1.47'' IPS Display (nRF52840)
+sidebar_label: Getting Started
 keywords:
   - XIAO
   - nRF52840
@@ -20,7 +20,7 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/es/getting_started_1.47_inch_touch_display_nrf52840/
 ---
 
-# Primeros pasos con XIAO 1.47'' IPS Display (nRF52840)
+# Introducción a XIAO 1.47'' IPS Display (nRF52840)
 
 <div class="table-center">
   <table align="center">
@@ -38,12 +38,12 @@ url: https://wiki.seeedstudio.com/es/getting_started_1.47_inch_touch_display_nrf
 
 La pantalla IPS de 1,47'' es una placa de expansión diseñada para la serie XIAO, impulsada por el XIAO nRF52840 Plus. Incorpora una pantalla LCD en color de 172×320 con panel táctil capacitivo, micrófono PDM integrado, IMU de 6 ejes (LSM6DS3), ranura para tarjeta MicroSD y gestión de alimentación por batería, todo integrado en un formato compacto.
 
-Esta combinación la convierte en una plataforma ideal para aplicaciones HMI portátiles, paneles IoT, dispositivos wearables y prototipado interactivo.
+Esta combinación la convierte en una plataforma ideal para aplicaciones HMI portátiles, paneles de control IoT, dispositivos wearables y prototipado interactivo.
 
 <div class="table-center">
   <table align="center">
     <tr><th>Especificación</th><th>Detalle</th></tr>
-    <tr><td>Posicionamiento del producto</td><td>Táctil e interacción completa</td></tr>
+    <tr><td>Posicionamiento del producto</td><td>Interacción táctil y completa</td></tr>
     <tr><td>Controlador principal</td><td>Seeed Studio XIAO nRF52840 Plus</td></tr>
     <tr><td>Procesador</td><td>Nordic nRF52840, procesador ARM® Cortex®-M4 de 32 bits con FPU, 64 MHz</td></tr>
     <tr><td>Memoria</td><td>256 KB RAM + 1 MB Flash interna + 2 MB Flash integrada</td></tr>
@@ -52,23 +52,23 @@ Esta combinación la convierte en una plataforma ideal para aplicaciones HMI por
     <tr><td>Resolución</td><td>172 × 320</td></tr>
     <tr><td>Controlador de pantalla</td><td>JD9853A</td></tr>
     <tr><td>Interfaz de pantalla</td><td>SPI</td></tr>
-    <tr><td>Entrada táctil</td><td>Táctil capacitiva</td></tr>
+    <tr><td>Entrada táctil</td><td>Panel táctil capacitivo</td></tr>
     <tr><td>IMU de 6 ejes</td><td>Sí</td></tr>
     <tr><td>Micrófono digital PDM</td><td>Sí</td></tr>
     <tr><td>Ranura para tarjeta MicroSD</td><td>Sí</td></tr>
     <tr><td>Conector Grove I2C</td><td>No</td></tr>
     <tr><td>Botones de usuario</td><td>2</td></tr>
     <tr><td>Conector de batería</td><td>Conector JST 2.0 de 2 pines para LiPo de 3,7 V</td></tr>
-    <tr><td>Supervisión de batería</td><td>Compatible con detección del estado de la batería; el voltaje de la batería también se puede monitorizar para estimar el nivel de carga.</td></tr>
+    <tr><td>Supervisión de batería</td><td>Compatible con detección del estado de la batería; también se puede supervisar el voltaje de la batería para estimar el nivel de carga.</td></tr>
     <tr><td>Interfaces de expansión</td><td>1x interfaz I2C, 1x interfaz I2S, 1x interfaz SWD, 2x interfaces de botón de usuario</td></tr>
-    <tr><td>Tamaño de la placa</td><td>26.4 × 51.4 × 12.6 mm</td></tr>
+    <tr><td>Tamaño de la placa</td><td>26,4 × 51,4 × 12,6 mm</td></tr>
     <tr><td>Ideal para</td><td>Interfaz táctil, HMI portátil, medios locales y registro de datos</td></tr>
   </table>
 </div>
 
 ## Descripción del hardware
 
-Antes de empezar, consulta la siguiente imagen para comprender la disposición física de la pantalla IPS de 1,47''.
+Antes de empezar, consulta la siguiente imagen para comprender la distribución física de la pantalla IPS de 1,47''.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -91,13 +91,13 @@ La pantalla IPS de 1,47'' expone todos los pines del XIAO nRF52840 Plus. La sigu
     <tr><td>D9</td><td>MISO</td><td>Entrada de datos SPI por hardware</td><td>Conectado internamente a la ranura para tarjeta SD</td></tr>
     <tr><td>D10</td><td>MOSI</td><td>Salida de datos SPI por hardware</td><td>Conectado internamente a la pantalla LCD y a la ranura para tarjeta SD</td></tr>
     <tr><td>D11</td><td>I2S_SD</td><td>Línea de datos de audio</td><td>Corresponde al mapeo predeterminado de I2S_SD, expuesto al grupo de pads inferiores</td></tr>
-    <tr><td>D12</td><td>I2S_SCK</td><td>Reloj de bit de audio</td><td>Corresponde al mapeo predeterminado de I2S_SCK, expuesto al grupo de pads inferiores</td></tr>
+    <tr><td>D12</td><td>I2S_SCK</td><td>Reloj de bits de audio</td><td>Corresponde al mapeo predeterminado de I2S_SCK, expuesto al grupo de pads inferiores</td></tr>
     <tr><td>D13</td><td>I2S_WS</td><td>Selección de palabra de audio</td><td>Corresponde al mapeo predeterminado de I2S_WS, expuesto al grupo de pads inferiores</td></tr>
-    <tr><td>D14</td><td>IMU_INT</td><td>Interrupción de movimiento del IMU</td><td>Reasignación de función: usado para activación por movimiento</td></tr>
+    <tr><td>D14</td><td>IMU_INT</td><td>Interrupción de movimiento del IMU</td><td>Reasignación de función: se usa para activación por movimiento</td></tr>
     <tr><td>D15</td><td>BTN_B</td><td>Botón físico 2 (USR2)</td><td>Reasignación de función: botón de usuario 2. Expuesto externamente como pad de expansión de botón</td></tr>
     <tr><td>D16</td><td>NC</td><td>Flotante (reservado)</td><td>Sin conexión física</td></tr>
     <tr><td>D17</td><td>LCD_RST</td><td>Señal de reinicio de la pantalla</td><td>Control GPIO independiente para un arranque fiable</td></tr>
-    <tr><td>D18</td><td>LCD_BL</td><td>Control de retroiluminación de la pantalla</td><td>Admite ajuste de brillo PWM por hardware</td></tr>
+    <tr><td>D18</td><td>LCD_BL</td><td>Control de retroiluminación de la pantalla</td><td>Admite ajuste de brillo por PWM por hardware</td></tr>
     <tr><td>D19</td><td>BTN_A</td><td>Botón físico 1 (USR1)</td><td>Botón de usuario 1. Expuesto externamente como pad de expansión de botón</td></tr>
   </table>
 </div>
@@ -141,12 +141,12 @@ Luego ve a **Tools > Board > Boards Manager**, busca **Seeed nRF52** e instala l
 **Paso 3.** Reinicia el Arduino IDE para que se detecte la nueva librería.
 
 :::tip
-- **Seeed_GFX2** es la librería gráfica de Seeed Studio construida sobre una arquitectura en capas de `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()`: la plantilla **Board** contiene el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución 172×320, el orden de color (BGR) y la orientación. No se necesita `driver.h` ni configuración manual de pines.
+- **Seeed_GFX2** es la librería gráfica de Seeed Studio construida sobre una arquitectura en capas de `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()`: la plantilla **Board** posee el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución 172×320, el orden de color (BGR) y la orientación. No se necesita `driver.h` ni configuración manual de pines.
 - En esta placa el sketch usa `Board_XIAO_1inch47_Touch_Display<38, 37>` (RST=38, BL=37) con `Config_Seeed_1inch47_Touch_JD9853A`.
 - La librería **Adafruit TinyUSB** utilizada por el sketch viene incluida en el paquete **Seeed nRF52 Boards**, por lo que no necesita instalación por separado.
 :::
 
-### Descargar el código
+### Descarga el código
 
 El sketch de ejemplo está disponible en GitHub:
 
@@ -157,7 +157,7 @@ El sketch de ejemplo está disponible en GitHub:
     </a>
 </div><br />
 
-Ve a `code_GFX2/getting_started_code/xiao_nrf52840_147_hello/` y abre `xiao_nrf52840_147_hello.ino` en Arduino IDE. **Descarga la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
+Ve a `code_GFX2/getting_started_code/xiao_nrf52840_147_hello/` y abre `xiao_nrf52840_147_hello.ino` en el Arduino IDE. **Descarga la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
 
 ### Cargar el sketch
 
@@ -173,7 +173,7 @@ Ve a `code_GFX2/getting_started_code/xiao_nrf52840_147_hello/` y abre `xiao_nrf5
 Si encuentras problemas al cargar, haz doble clic en el botón de reinicio para entrar en modo bootloader. El LED USR respirará en rojo y aparecerá en tu ordenador una unidad **NRF52BOOT**, indicando que la placa está en modo bootloader.
 :::
 
-### Salida esperada
+### Resultado esperado
 
 Después de cargar, la pantalla se enciende con un fondo negro y muestra dos líneas centradas de texto grande en verde: **"Hello,"** en la primera línea y **"XIAO"** en la segunda. El saludo permanece en pantalla sin volver a dibujarse.
 
@@ -188,33 +188,34 @@ La placa de pantalla integra varios periféricos a bordo. La página de [Functio
 <div class="table-center">
   <table align="center">
     <tr><th>Periférico</th><th>Demo</th></tr>
-    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_1.47_inch_touch_display_nrf52840#screen-display--graphictest) — diez primitivas gráficas con pruebas de rendimiento de tiempo</td></tr>
+    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_1.47_inch_touch_display_nrf52840#screen-display--graphictest) — diez primitivas gráficas con mediciones de tiempo</td></tr>
     <tr><td>Táctil</td><td>[Touch Circle](/es/function_1.47_inch_touch_display_nrf52840#touch--touch-circle) — un círculo que sigue tu dedo</td></tr>
     <tr><td>Tarjeta SD</td><td>[Image Reader](/es/function_1.47_inch_touch_display_nrf52840#sd-card--image-reader) — muestra un BMP desde la tarjeta MicroSD</td></tr>
     <tr><td>Micrófono y altavoz</td><td>[Volume Bar + Record to SD](/es/function_1.47_inch_touch_display_nrf52840#microphone--speaker) — medidor de nivel PDM en vivo y grabación en SD</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/es/function_1.47_inch_touch_display_nrf52840#imu) — efectos de movimiento de 6 ejes y activación por movimiento</td></tr>
-    <tr><td>Botones</td><td>[User Button](/es/function_1.47_inch_touch_display_nrf52840#user-button) — leer pulsaciones y eliminar rebotes con interrupciones</td></tr>
-    <tr><td>Batería</td><td>[Battery Status](/es/function_1.47_inch_touch_display_nrf52840#battery-status) — medir el voltaje y convertirlo en un porcentaje</td></tr>
+    <tr><td>Botones</td><td>[User Button](/es/function_1.47_inch_touch_display_nrf52840#user-button) — lectura de pulsaciones y eliminación de rebotes con interrupciones</td></tr>
+    <tr><td>Batería</td><td>[Battery Status](/es/function_1.47_inch_touch_display_nrf52840#battery-status) — mide el voltaje y lo convierte en un porcentaje</td></tr>
   </table>
 </div>
 
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
 ### ¿Qué pasa si la carga falla o la placa no es detectada?
 
-Haz doble clic en el botón de reinicio de la XIAO nRF52840 Plus. El LED USR respirará en rojo y aparecerá en tu ordenador una unidad llamada **NRF52BOOT**. Arrastra el archivo `.uf2` compilado a la unidad **NRF52BOOT**. La placa se programará y se reiniciará automáticamente.
+Haz doble clic en el botón de reinicio de la XIAO nRF52840 Plus. El LED USR respirará en rojo y aparecerá en tu ordenador una unidad llamada **NRF52BOOT**. Arrastra el archivo compilado `.uf2` a la unidad **NRF52BOOT**. La placa se programará y se reiniciará automáticamente.
 
 ## Recursos
 
-- **🗃️[Archivos de diseño PCB]** [XIAO 1.47'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
+- **🗃️[Archivos de diseño de PCB]** [XIAO 1.47'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 1.47'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 1.47'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
+- **🖨️[Caja impresa en 3D]** [XIAO 1.47'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843008-enclosure-for-xiao-147-ips-touch-display-esp32nrf5)
 - **📄[Hoja de datos]** [1.47 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
 - **💾[Firmware de fábrica]** [XIAO 1.47'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">

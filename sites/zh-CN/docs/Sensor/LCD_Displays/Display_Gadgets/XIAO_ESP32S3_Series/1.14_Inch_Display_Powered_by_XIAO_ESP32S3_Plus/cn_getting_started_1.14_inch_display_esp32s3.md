@@ -37,9 +37,9 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.14_inch_display_esp32s3/
 
 ## 介绍
 
-1.14'' IPS Display 是一款为 XIAO 系列设计的扩展板，由 XIAO ESP32-S3 Plus 提供算力。它配备 135×240 IPS 彩色 LCD、板载 PDM 麦克风、6 轴 IMU、Grove I2C 接口、三个用户按键以及电池电压测量功能——所有这些都集成在一个紧凑的外形尺寸中。
+1.14'' IPS Display 是一款为 XIAO 系列设计的扩展板，由 XIAO ESP32-S3 Plus 提供算力。它配备 135×240 IPS 彩色 LCD、板载 PDM 麦克风、6 轴 IMU、Grove I2C 接口、三个用户按键以及电池电压测量功能——所有这些都集成在一个紧凑的外形中。
 
-这种组合使其成为可穿戴设备、紧凑型传感节点、便携式仪器以及对空间要求极高的 IoT 原型开发的理想平台。借助 ESP32-S3 的双核处理器、Wi-Fi 和 Bluetooth 能力，它可以将显示屏扩展为一个具备无线连接能力的设备。
+这种组合使其成为可穿戴设备、紧凑型传感节点、便携式仪器以及对空间要求严格的 IoT 原型开发的理想平台。借助 ESP32-S3 的双核处理器、Wi-Fi 和 Bluetooth 能力，它让这块显示屏具备了无线连接能力。
 
 <div class="table-center">
   <table align="center">
@@ -72,7 +72,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.14_inch_display_esp32s3/
 :::
 
 :::note
-ESP32-S3 Plus 使用 D16 进行电压测量。电压示例程序不会显示电池百分比，也没有将充电状态信号连接到任何 ESP32-S3 GPIO。
+ESP32-S3 Plus 使用 D16 进行电压测量。电压示例程序不会显示电池百分比，也没有将任何充电状态信号连接到 ESP32-S3 的 GPIO。
 :::
 
 ## 硬件概览
@@ -81,21 +81,21 @@ ESP32-S3 Plus 使用 D16 进行电压测量。电压示例程序不会显示电�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
-### 引脚分布图
+### 引脚映射
 
 1.14'' IPS Display 引出了所有 XIAO ESP32-S3 Plus 引脚。下表列出了每个引脚、其在显示板上的网络名称、功能说明以及与板载外设的连接方式。
 
 <div class="table-center">
   <table align="center">
-    <tr><th>XIAO 引脚</th><th>网络名称</th><th>功能说明</th><th>硬件连接说明</th></tr>
+    <tr><th>XIAO 引脚</th><th>网络名称</th><th>功能描述</th><th>硬件连接说明</th></tr>
     <tr><td>D0</td><td>PDM_CLK</td><td>PDM 数字麦克风时钟</td><td>内部连接到 PDM 麦克风</td></tr>
     <tr><td>D1</td><td>MIC_DATA</td><td>PDM 数字麦克风数据</td><td>内部连接到 PDM 麦克风</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>屏幕片选信号</td><td>内部连接到 LCD 驱动 IC</td></tr>
     <tr><td>D3</td><td>LCD_DC</td><td>屏幕数据/命令切换</td><td>内部连接到 LCD 驱动 IC</td></tr>
     <tr><td>D4</td><td>SDA</td><td>I2C 数据总线</td><td>总线共享：内部连接到 IMU；外部引出到 Grove I2C 接口</td></tr>
     <tr><td>D5</td><td>SCL</td><td>I2C 时钟总线</td><td>总线共享：内部连接到 IMU；外部引出到 Grove I2C 接口</td></tr>
-    <tr><td>D6</td><td>BTN_A</td><td>物理按键 A（左）</td><td>内部连接到前左侧微动开关，并带有外部 1 KΩ 上拉。外部引出为 U1 测试焊盘</td></tr>
-    <tr><td>D7</td><td>BTN_B</td><td>物理按键 B（右）</td><td>内部连接到前右侧微动开关，并带有外部 1 KΩ 上拉。外部引出为 U2 测试焊盘</td></tr>
+    <tr><td>D6</td><td>BTN_A</td><td>物理按键 A（左）</td><td>内部连接到左前侧微动开关，带外部 1 KΩ 上拉。外部引出为 U1 测试焊盘</td></tr>
+    <tr><td>D7</td><td>BTN_B</td><td>物理按键 B（右）</td><td>内部连接到右前侧微动开关，带外部 1 KΩ 上拉。外部引出为 U2 测试焊盘</td></tr>
     <tr><td>D8</td><td>SCK</td><td>硬件 SPI 时钟</td><td>内部连接到 LCD 驱动 IC</td></tr>
     <tr><td>D9</td><td>NC</td><td>悬空（预留）</td><td>无物理连接</td></tr>
     <tr><td>D10</td><td>MOSI</td><td>硬件 SPI 数据输出</td><td>内部连接到 LCD 驱动 IC</td></tr>
@@ -107,14 +107,14 @@ ESP32-S3 Plus 使用 D16 进行电压测量。电压示例程序不会显示电�
     <tr><td>D16</td><td>BAT_ADC</td><td>电池电压检测</td><td>内部连接到分压电路（316K / 160K）。<strong>请勿外接使用</strong></td></tr>
     <tr><td>D17</td><td>LCD_RST</td><td>屏幕软复位</td><td>内部连接到 LCD 驱动 IC</td></tr>
     <tr><td>D18</td><td>LCD_BL</td><td>屏幕背光控制</td><td>内部连接到背光驱动电路</td></tr>
-    <tr><td>D19</td><td>BTN_C</td><td>物理按键 C（侧边）</td><td>内部连接到侧边微动开关，并带有外部 1 KΩ 上拉。外部引出为 U3 测试焊盘</td></tr>
+    <tr><td>D19</td><td>BTN_C</td><td>物理按键 C（侧边）</td><td>内部连接到侧边微动开关，带外部 1 KΩ 上拉。外部引出为 U3 测试焊盘</td></tr>
   </table>
 </div>
 
 
 ## 入门
 
-本指南会向显示板上传一个最小的 **"Hello, XIAO"** 示例：屏幕会点亮背光、填充为黑色背景，并以两行居中的大号绿色文字打印 **"Hello,"** 和 **"XIAO"**。这是在深入各个外设示例之前，最快确认屏幕和你的开发环境是否正常工作的方式。
+本指南会向显示板上传一个最小的 **“Hello, XIAO”** 示例：屏幕点亮背光、填充为黑色背景，并以两行居中的大号绿色文字打印 **“Hello,”** 和 **“XIAO”**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
 
 ### 软件准备
 
@@ -126,7 +126,7 @@ ESP32-S3 Plus 使用 D16 进行电压测量。电压示例程序不会显示电�
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div><br />
 
-- **Espressif 提供的 esp32 开发板包 (3.3.11)** — 将以下 URL 添加到 **File > Preferences > Additional Boards Manager URLs**：
+- **Espressif 提供的 esp32 开发板包 (3.3.11)** — 在 **File > Preferences > Additional Boards Manager URLs** 中添加以下 URL：
 
 ```
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
@@ -134,7 +134,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 然后进入 **Tools > Board > Boards Manager**，搜索 **esp32** 并安装 **3.3.11** 版本。
 
-- **Seeed_GFX2（手动安装）** — 此库在 Library Manager 中不可用，必须手动安装：
+- **Seeed_GFX2（手动安装）** — 此库不在 Library Manager 中，需要手动安装：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
@@ -145,9 +145,9 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 **步骤 1.** 点击上方按钮，将 `Seeed_GFX2` v1.0.0 作为 ZIP 文件下载（固定到某个发布标签，以保证教程可复现）。或者，从 [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) 克隆该仓库。
 
-**步骤 2.** 在 Arduino IDE 中，依次进入 **Sketch > Include Library > Add .ZIP Library...**，然后选择下载的 ZIP 文件。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，将解压后的文件夹重命名为 `Seeed_GFX2`，再放入 `Documents/Arduino/libraries/` 中。）
+**步骤 2.** 在 Arduino IDE 中，依次进入 **Sketch > Include Library > Add .ZIP Library...**，然后选择下载的 ZIP 文件。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，将解压后的文件夹重命名为 `Seeed_GFX2`，再放入 `Documents/Arduino/libraries/`。）
 
-**步骤 3.** 重启 Arduino IDE，以便检测到新安装的库。
+**步骤 3.** 重启 Arduino IDE，使新库被检测到。
 
 :::tip
 - **Seeed_GFX2** 是 Seeed Studio 基于分层 `Board` + `Panel Config` 架构构建的图形库。每个示例都通过一次 `display.begin<Board_..., Config_...>()` 调用来初始化显示屏——**Board** 模板负责引脚映射（CS/DC/SCK/MOSI/RST/BL），而 **Panel Config** 预设了 135×240 分辨率、颜色顺序和方向。无需 `driver.h` 或手动引脚配置。
@@ -165,7 +165,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
     </a>
 </div><br />
 
-进入 `code_GFX2/getting_started_code/xiao_esp32s3_114_hello/` 并在 Arduino IDE 中打开 `xiao_esp32s3_114_hello.ino`。**请下载完整文件夹**，而不是从 GitHub 网页视图中复制 `.ino` 源码。
+进入 `code_GFX2/getting_started_code/xiao_esp32s3_114_hello/`，并在 Arduino IDE 中打开 `xiao_esp32s3_114_hello.ino`。**请下载完整文件夹**，而不是从 GitHub 网页视图中复制 `.ino` 源码。
 
 ### 上传示例程序
 
@@ -177,7 +177,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 **步骤 4.** 点击 **Upload** 按钮（→）。示例程序会被编译并上传到开发板。
 
-### 预期输出
+### 预期效果
 
 上传完成后，屏幕会点亮为黑色背景，并显示两行居中的大号绿色文字——第一行是 **"Hello,"**，第二行是 **"XIAO"**。该问候语会保持在屏幕上，不会重复重绘。
 
@@ -192,8 +192,8 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 <div class="table-center">
   <table align="center">
     <tr><th>外设</th><th>演示</th></tr>
-    <tr><td>屏幕</td><td>[GraphicTest](/cn/function_1.14_inch_display_esp32s3#screen-display--graphictest) — 十种图形基本图元及其计时基准测试</td></tr>
-    <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/cn/function_1.14_inch_display_esp32s3#imu) — 六轴运动特效和抬手唤醒</td></tr>
+    <tr><td>屏幕</td><td>[GraphicTest](/cn/function_1.14_inch_display_esp32s3#screen-display--graphictest) — 十种图形基本图元及其耗时基准测试</td></tr>
+    <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/cn/function_1.14_inch_display_esp32s3#imu) — 六轴运动特效和抬腕唤醒</td></tr>
     <tr><td>麦克风和扬声器</td><td>[Voice Bar + Flash Recorder](/cn/function_1.14_inch_display_esp32s3#microphone--speaker) — 实时 PDM 电平指示和录音</td></tr>
     <tr><td>Grove I2C</td><td>[SHT31 Temperature & Humidity](/cn/function_1.14_inch_display_esp32s3#grove-i2c) — 读取 Grove SHT31 传感器</td></tr>
     <tr><td>按键</td><td>[User Buttons](/cn/function_1.14_inch_display_esp32s3#user-buttons) — 读取按键并使用中断进行去抖</td></tr>
@@ -205,7 +205,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 ### 开发板没有出现在 Tools > Board 菜单中
 
-请确保你已经在 Arduino IDE 中添加了 ESP32 开发板包：
+请确认你已经在 Arduino IDE 中添加了 ESP32 开发板包：
 
 1. 进入 **File > Preferences**，并将下面的 URL 粘贴到 **Additional Boards Manager URLs** 中：
    ```
@@ -229,6 +229,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 - **🗃️[PCB 设计文件]** [XIAO 1.14'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[原理图]** [XIAO 1.14'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[3D 模型]** [XIAO 1.14'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.14%27%27%20IPS%20Display.step)
+- **🖨️[3D 打印外壳]** [XIAO 1.14'' IPS Display Enclosure（作者：gokul）](https://www.printables.com/model/1843003-enclosure-for-xiao-114-ips-display-esp32nrf52840)
 - **📄[数据手册]** [1.14 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.14%20Inch%20Display%20Datasheet.pdf)
 - **💾[出厂固件]** [XIAO 1.14'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 
