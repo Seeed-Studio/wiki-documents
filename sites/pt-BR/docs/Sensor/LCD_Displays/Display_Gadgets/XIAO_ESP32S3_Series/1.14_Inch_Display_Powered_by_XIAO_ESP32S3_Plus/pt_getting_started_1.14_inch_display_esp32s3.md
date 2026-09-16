@@ -39,7 +39,7 @@ url: https://wiki.seeedstudio.com/pt-br/getting_started_1.14_inch_display_esp32s
 
 O 1.14'' IPS Display é uma placa de expansão projetada para a série XIAO, alimentada pelo XIAO ESP32-S3 Plus. Ele possui um LCD colorido IPS de 135×240, microfone PDM onboard, IMU de 6 eixos, conector Grove I2C, três botões de usuário e medição de tensão da bateria — tudo integrado em um formato compacto.
 
-Essa combinação o torna uma plataforma ideal para dispositivos vestíveis, nós de sensores compactos, instrumentos portáteis e prototipagem de IoT em que o espaço é crítico. Com o processador dual-core, Wi-Fi e Bluetooth do ESP32-S3, ele transforma o display em um dispositivo com conectividade sem fio.
+Essa combinação o torna uma plataforma ideal para dispositivos vestíveis, nós de sensores compactos, instrumentos portáteis e prototipagem de IoT em que o espaço é crítico. Com o processador dual-core, Wi-Fi e Bluetooth do ESP32-S3, ele transforma o display em um dispositivo com conexão sem fio.
 
 <div class="table-center">
   <table align="center">
@@ -83,11 +83,11 @@ Antes de começarmos, consulte a imagem a seguir para entender o layout físico 
 
 ### Mapa de Pinos
 
-O 1.14'' IPS Display expõe todos os pinos do XIAO ESP32-S3 Plus. A tabela abaixo lista cada pino, seu nome de rede na placa de display, sua função e como ele está conectado aos periféricos onboard.
+O 1.14'' IPS Display expõe todos os pinos do XIAO ESP32-S3 Plus. A tabela abaixo lista cada pino, seu nome de rede na placa de display, sua função e como ele é conectado aos periféricos onboard.
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Pino XIAO</th><th>Nome de Rede</th><th>Descrição da Função</th><th>Observações de Conexão de Hardware</th></tr>
+    <tr><th>Pino XIAO</th><th>Nome de Rede</th><th>Descrição da Função</th><th>Notas de Conexão de Hardware</th></tr>
     <tr><td>D0</td><td>PDM_CLK</td><td>Clock do microfone digital PDM</td><td>Conectado internamente ao microfone PDM</td></tr>
     <tr><td>D1</td><td>MIC_DATA</td><td>Dados do microfone digital PDM</td><td>Conectado internamente ao microfone PDM</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>Sinal de seleção de chip da tela</td><td>Conectado internamente ao CI driver do LCD</td></tr>
@@ -102,7 +102,7 @@ O 1.14'' IPS Display expõe todos os pinos do XIAO ESP32-S3 Plus. A tabela abaix
     <tr><td>D11</td><td>I2S_SD</td><td>Saída de dados de áudio</td><td>Exposto externamente ao pad de expansão inferior</td></tr>
     <tr><td>D12</td><td>I2S_SCK</td><td>Clock de bits de áudio</td><td>Exposto externamente ao pad de expansão inferior</td></tr>
     <tr><td>D13</td><td>I2S_WS</td><td>Seleção de palavra de áudio</td><td>Exposto externamente ao pad de expansão inferior</td></tr>
-    <tr><td>D14</td><td>IMU_INT</td><td>Interrupção de hardware de movimento do IMU</td><td>Conectado internamente ao IMU de 6 eixos para despertar assíncrono</td></tr>
+    <tr><td>D14</td><td>IMU_INT</td><td>Interrupção de hardware de movimento do IMU</td><td>Conectado internamente ao IMU de 6 eixos para wake-up assíncrono</td></tr>
     <tr><td>D15</td><td>NC</td><td>Reservado (ponto de teste)</td><td>Conectado ao ponto de teste TP15 na PCB, sem periférico funcional</td></tr>
     <tr><td>D16</td><td>BAT_ADC</td><td>Detecção de tensão da bateria</td><td>Conectado internamente ao circuito divisor de tensão (316K / 160K). <strong>Não use externamente</strong></td></tr>
     <tr><td>D17</td><td>LCD_RST</td><td>Reset por software da tela</td><td>Conectado internamente ao CI driver do LCD</td></tr>
@@ -114,7 +114,7 @@ O 1.14'' IPS Display expõe todos os pinos do XIAO ESP32-S3 Plus. A tabela abaix
 
 ## Introdução
 
-Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga a retroiluminação, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto grande em verde. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demos individuais de periféricos.
+Este guia faz o upload de um sketch mínimo **"Hello, XIAO"** para a placa de display: a tela liga a retroiluminação, preenche de preto e imprime **"Hello,"** e **"XIAO"** como duas linhas centralizadas de texto grande em verde. É a maneira mais rápida de confirmar que a tela e o seu ambiente de desenvolvimento estão funcionando antes de mergulhar nas demonstrações individuais de periféricos.
 
 ### Preparação de Software
 
@@ -145,12 +145,12 @@ Em seguida, vá em **Tools > Board > Boards Manager**, pesquise por **esp32** e 
 
 **Passo 1.** Clique no botão acima para baixar `Seeed_GFX2` v1.0.0 como um arquivo ZIP (fixado em uma tag de release para que o tutorial permaneça reprodutível). Como alternativa, clone o repositório em [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2).
 
-**Passo 2.** No Arduino IDE, vá em **Sketch > Include Library > Add .ZIP Library...** e selecione o ZIP baixado. O IDE lê `library.properties` e o instala automaticamente na pasta `Seeed_GFX2` correta — você não precisa renomear a pasta extraída. (Para instalar manualmente, em vez disso, descompacte o arquivo e renomeie a pasta extraída para `Seeed_GFX2` antes de colocá-la em `Documents/Arduino/libraries/`.)
+**Passo 2.** No Arduino IDE, vá em **Sketch > Include Library > Add .ZIP Library...** e selecione o ZIP baixado. O IDE lê `library.properties` e o instala automaticamente na pasta `Seeed_GFX2` correta — você não precisa renomear a pasta extraída. (Para instalar manualmente em vez disso, descompacte o arquivo e renomeie a pasta extraída para `Seeed_GFX2` antes de colocá-la em `Documents/Arduino/libraries/`.)
 
 **Passo 3.** Reinicie o Arduino IDE para que a nova biblioteca seja detectada.
 
 :::tip
-- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demonstração inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** contém o mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 135×240, ordem de cores e orientação. Não é necessário `driver.h` nem configuração manual de pinos.
+- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demonstração inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** define o mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 135×240, a ordem de cores e a orientação. Não é necessário `driver.h` nem configuração manual de pinos.
 - Nesta placa, o sketch usa `Board_XIAO_1inch14_LCD<13, 12>` (RST=13, BL=12) com `Config_Seeed_1inch14_LCD_ST7789`.
 :::
 
@@ -167,7 +167,7 @@ O sketch de exemplo está disponível no GitHub:
 
 Navegue até `code_GFX2/getting_started_code/xiao_esp32s3_114_hello/` e abra `xiao_esp32s3_114_hello.ino` na Arduino IDE. **Baixe a pasta completa** em vez de copiar o código-fonte `.ino` da visualização web do GitHub.
 
-### Fazer upload do sketch
+### Enviar o sketch
 
 **Passo 1.** Conecte o XIAO ESP32-S3 Plus ao seu computador pela porta USB-C.
 
@@ -187,16 +187,16 @@ Se o display não inicializar, o sketch imprime a mensagem de erro da biblioteca
 
 ## O que vem a seguir
 
-A placa de display inclui vários periféricos onboard. A página [Function](/pt-br/function_1.14_inch_display_esp32s3) fornece uma demonstração independente para cada um:
+A placa de display inclui vários periféricos integrados. A página [Function](/pt-br/function_1.14_inch_display_esp32s3) fornece uma demonstração independente para cada um:
 
 <div class="table-center">
   <table align="center">
     <tr><th>Periférico</th><th>Demo</th></tr>
-    <tr><td>Tela</td><td>[GraphicTest](/pt-br/function_1.14_inch_display_esp32s3#screen-display--graphictest) — dez primitivas gráficas com medições de tempo</td></tr>
-    <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/pt-br/function_1.14_inch_display_esp32s3#imu) — efeitos de movimento de 6 eixos e wake-on-motion</td></tr>
-    <tr><td>Microfone e alto-falante</td><td>[Voice Bar + Flash Recorder](/pt-br/function_1.14_inch_display_esp32s3#microphone--speaker) — medidor de nível PDM em tempo real e gravação</td></tr>
+    <tr><td>Tela</td><td>[GraphicTest](/pt-br/function_1.14_inch_display_esp32s3#tela-display--graphictest) — dez primitivas gráficas com medições de tempo</td></tr>
+    <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/pt-br/function_1.14_inch_display_esp32s3#imu) — efeitos de movimento de 6 eixos e despertar por movimento</td></tr>
+    <tr><td>Microfone e alto-falante</td><td>[Voice Bar + Flash Recorder](/pt-br/function_1.14_inch_display_esp32s3#microfone--alto-falante) — medidor de nível PDM em tempo real e gravação</td></tr>
     <tr><td>Grove I2C</td><td>[SHT31 Temperature & Humidity](/pt-br/function_1.14_inch_display_esp32s3#grove-i2c) — leitura de um sensor Grove SHT31</td></tr>
-    <tr><td>Botões</td><td>[User Buttons](/pt-br/function_1.14_inch_display_esp32s3#user-buttons) — leitura de pressionamentos e debounce com interrupções</td></tr>
+    <tr><td>Botões</td><td>[User Buttons](/pt-br/function_1.14_inch_display_esp32s3#user-buttons) — leitura de pressionamentos e eliminação de bouncing com interrupções</td></tr>
     <tr><td>Bateria</td><td>[Battery Voltage Detection](/pt-br/function_1.14_inch_display_esp32s3#battery-voltage-detection) — medição da tensão do divisor</td></tr>
   </table>
 </div>
@@ -205,7 +205,7 @@ A placa de display inclui vários periféricos onboard. A página [Function](/pt
 
 ### A placa não aparece no menu Tools > Board
 
-Certifique-se de ter adicionado o pacote de placas ESP32 à Arduino IDE:
+Certifique-se de que você adicionou o pacote de placas ESP32 à Arduino IDE:
 
 1. Vá em **File > Preferences** e cole a URL abaixo em **Additional Boards Manager URLs**:
    ```
@@ -222,13 +222,14 @@ Se a placa ainda não aparecer, reinicie a Arduino IDE e tente novamente.
 
 Pressione o botão **Reset** no XIAO ESP32-S3 Plus uma vez para reiniciar a placa. Isso limpa o barramento I2C travado e o dashboard volta ao normal.
 
-Recomendamos fortemente **não fazer hot-plug** de dispositivos na interface I2C. Sempre desligue a placa antes de conectar ou desconectar qualquer coisa no conector Grove I2C ou nos pads de breakout SDA/SCL — o hot-plug pode travar o barramento I2C.
+Recomendamos fortemente **não conectar/desconectar com a placa ligada** dispositivos na interface I2C. Sempre desligue a placa antes de conectar ou desconectar qualquer coisa no conector Grove I2C ou nos pads de breakout SDA/SCL — conectar/desconectar com a placa ligada pode travar o barramento I2C.
 
 ## Recursos
 
-- **🗃️[Arquivos de design de PCB]** [XIAO 1.14'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
+- **🗃️[Arquivos de projeto da PCB]** [XIAO 1.14'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 1.14'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 1.14'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.14%27%27%20IPS%20Display.step)
+- **🖨️[Gabinete impresso em 3D]** [XIAO 1.14'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843003-enclosure-for-xiao-114-ips-display-esp32nrf52840)
 - **📄[Datasheet]** [1.14 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.14%20Inch%20Display%20Datasheet.pdf)
 - **💾[Firmware de fábrica]** [XIAO 1.14'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.14%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 

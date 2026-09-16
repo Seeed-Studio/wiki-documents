@@ -48,9 +48,9 @@ Todos os demos desta página exigem **esp32 Boards by Espressif (3.3.11)** confo
 **Passo 3.** Reinicie o Arduino IDE para que a nova biblioteca seja detectada.
 
 :::tip
-- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demo inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** é responsável pelo mapeamento de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução, ordem de cores (BGR) e orientação. Nenhum `driver.h` ou configuração manual de pinos é necessária.
+- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demo inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** contém o mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução, ordem de cores (BGR) e orientação. Nenhum `driver.h` ou configuração manual de pinos é necessária.
 - Nesta placa os demos usam `Board_XIAO_1inch47_Touch_Display<13, 12>` (RST=13, BL=12) com `Config_Seeed_1inch47_Touch_JD9853A` (172×320, BGR, sem inversão).
-- O **controlador de toque** (AXS5106L) é tratado pela camada de toque `Seeed_GFX2` (`Touch_AXS5106L`) — nenhuma biblioteca extra é necessária. A **IMU** é lida via I2C puro (`Wire`) nos sketches.
+- O **controlador de toque** (AXS5106L) é tratado pela camada de toque (`Touch_AXS5106L`) do `Seeed_GFX2` — nenhuma biblioteca extra é necessária. A **IMU** é lida via I2C puro (`Wire`) nos sketches.
 - Os exemplos **SD BMP Reader** e **SD Recorder** usam o **`SD.h`** embutido no pacote de placas ESP32 para acesso ao cartão SD.
 :::
 
@@ -72,22 +72,22 @@ git clone https://github.com/Seeed-Projects/Display-Gadgets.git
 
 Em seguida, abra o arquivo `.ino` do demo a partir da pasta clonada `code_GFX2/Function/...`.
 
-## Display da tela — GraphicTest
+## Exibição na tela — GraphicTest
 
-Este demo executa um benchmark gráfico completo no painel JD9853A de 1,47 polegadas, cobrindo barras de cores, linhas, retângulos, círculos, triângulos, retângulos arredondados, texto e um gradiente de pixels. Use-o para verificar se a tela está ligada corretamente e se todas as chamadas de desenho funcionam como esperado.
+Este demo executa um benchmark gráfico completo no painel JD9853A de 1,47 polegada, cobrindo barras de cores, linhas, retângulos, círculos, triângulos, retângulos arredondados, texto e um gradiente de pixels. Use-o para verificar se a tela está conectada corretamente e se todas as chamadas de desenho funcionam como esperado.
 
 **Code location:** `code_GFX2/Function/147_ESP32/xiao_esp32s3_147_graphictest/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/147_ESP32/xiao_esp32s3_147_graphictest" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Ver no GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 ### Como funciona
 
-O sketch inicializa o painel JD9853A via **Seeed_GFX2** e, em seguida, percorre dez primitivas gráficas em sequência, medindo o tempo de execução de cada uma via `micros()` e imprimindo o resultado no monitor serial.
+O sketch inicializa o painel JD9853A via **Seeed_GFX2** e, em seguida, executa dez primitivas gráficas em sequência, medindo o tempo de execução de cada uma via `micros()` e imprimindo o resultado no monitor serial.
 
 O display é inicializado com uma única chamada de template:
 
@@ -96,13 +96,13 @@ display.begin<Board_XIAO_1inch47_Touch_Display<13, 12>,
               Config_Seeed_1inch47_Touch_JD9853A>();
 ```
 
-O template **Board** é responsável pelo mapeamento de pinos — CS=D2, DC=D3, SCK=D8, MOSI=D10 — e seus parâmetros de template `<RST, BL>` recebem números GPIO puros, então `<13, 12>` define RST=GPIO13 (D17) e BL=GPIO12 (D18). O **Panel Config** incorpora a resolução 172×320, a ordem de cores BGR e nenhuma inversão — nenhum `driver.h` ou escrita manual de MADCTL é necessária.
+O template **Board** contém o mapa de pinos — CS=D2, DC=D3, SCK=D8, MOSI=D10 — e seus parâmetros de template `<RST, BL>` recebem números GPIO puros, então `<13, 12>` define RST=GPIO13 (D17) e BL=GPIO12 (D18). O **Panel Config** incorpora a resolução 172×320, a ordem de cores BGR e nenhuma inversão — nenhum `driver.h` ou escrita manual de MADCTL é necessária.
 
 ### Executando o demo
 
 **Passo 1.** Abra `xiao_esp32s3_147_graphictest.ino` no Arduino IDE.
 
-**Passo 2.** Selecione **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** e a **Porta** correta.
+**Passo 2.** Selecione **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** e a **Port** correta.
 
 **Passo 3.** Clique em **Upload**.
 
@@ -131,26 +131,26 @@ Na tela, você verá cada padrão de teste exibido por cerca de um segundo antes
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_function_graphictest.gif" style={{width:500, height:'auto'}}/></div>
 
-Depois que o sketch percorre todos os padrões, a tela mostra a mensagem "Graphic Test / Finished". Reinicie a placa para executar o teste novamente.
+Depois que o sketch executar todos os padrões, a tela mostrará a mensagem "Graphic Test / Finished". Reinicie a placa para executar o teste novamente.
 
 ---
 
 ## Toque — Touch Circle
 
-Este demo transforma a tela sensível ao toque de 1,47 polegadas em um bloco de desenho interativo. Toque em qualquer lugar da tela e um círculo branco aparecerá na ponta do seu dedo. Os círculos permanecem na tela, acumulando-se conforme você toca. Toque na barra **CLEAR** na parte inferior da tela para apagar todos os círculos e recomeçar.
+Este demo transforma a tela sensível ao toque de 1,47 polegada em um bloco de desenho interativo. Toque em qualquer lugar da tela e um círculo branco aparecerá na ponta do seu dedo. Os círculos permanecem na tela, acumulando-se conforme você toca. Toque na barra **CLEAR** na parte inferior da tela para apagar todos os círculos e recomeçar.
 
 **Code location:** `code_GFX2/Function/147_ESP32/xiao_esp32s3_147_touch_circle/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/147_ESP32/xiao_esp32s3_147_touch_circle" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Ver no GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 ### Como funciona
 
-O demo usa o controlador de toque capacitivo **AXS5106L** (endereço I2C `0x63`) conectado via I2C em D4/D5. O controlador reporta coordenadas absolutas (X, Y) na faixa de pixels do display. O toque é tratado pela **camada Touch** do Seeed_GFX2 (`Touch_AXS5106L`):
+O demo usa o controlador de toque capacitivo **AXS5106L** (endereço I2C `0x63`) conectado via I2C em D4/D5. O controlador reporta coordenadas absolutas (X, Y) na faixa de pixels do display. O toque é tratado pela **camada de toque** (`Touch_AXS5106L`) do Seeed_GFX2:
 
 ```cpp
 Touch_AXS5106L touch(-1, D7, Wire, 172, 320);
@@ -169,17 +169,17 @@ display.getTouch(&x, &y);
   </table>
 </div>
 
-**Desenho acionado por borda.** O sketch usa uma abordagem de detecção de borda: ele só adiciona um círculo na borda de descida de um toque (dedo pressionando), não enquanto o dedo é mantido na tela. Isso proporciona um comportamento nítido e intencional de toque-para-desenhar em vez de pintar continuamente um rastro enquanto você arrasta.
+**Desenho acionado por borda.** O sketch usa uma abordagem de detecção de borda: ele só adiciona um círculo na borda de descida de um toque (dedo pressionando), não enquanto o dedo é mantido na tela. Isso proporciona um comportamento nítido e intencional de toque‑para‑desenhar, em vez de pintar continuamente um rastro enquanto você arrasta.
 
 **Espelhamento do eixo X.** O painel de toque é fisicamente montado em uma orientação diferente do LCD, então a coordenada X bruta precisa ser espelhada. `display.getTouch()` já aplica esse espelhamento internamente e retorna coordenadas de tela, portanto não é necessária nenhuma transformação manual `screenX = 172 - 1 - rawX`.
 
-**Buffer de círculos.** Até 120 círculos são armazenados em um buffer circular. Quando o buffer está cheio, o círculo mais antigo é removido e a tela é redesenhada para manter o display limpo.
+**Buffer de círculos.** Até 120 círculos são armazenados em um buffer circular. Quando o buffer está cheio, o círculo mais antigo é removido e a tela é redesenhada para manter a exibição limpa.
 
 **Zona CLEAR.** Os 36 pixels inferiores da tela são reservados como uma barra CLEAR. Tocar nessa área apaga todos os círculos e reinicia o contador em vez de desenhar um novo círculo.
 
 **Área segura de desenho.** Uma borda cinza escura delimita a área onde os círculos ficam totalmente visíveis.
 
-### Executando a demonstração
+### Executando o Demo
 
 **Passo 1.** Abra `xiao_esp32s3_147_touch_circle.ino` na Arduino IDE.
 
@@ -210,7 +210,7 @@ Touch: (61,293)
 Clear zone tapped — erasing all circles.
 ```
 
-### Resultado esperado
+### Resultado Esperado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_function_touch_circle.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -220,7 +220,7 @@ Cada toque deixa um círculo branco na ponta do seu dedo. A barra de título da 
 
 ## Cartão SD — Leitor de BMP
 
-Esta demonstração lê uma imagem `.bmp` de 24 bits sem compactação de um cartão MicroSD e a exibe na tela. Ela inclui um teste de sondagem SD embutido (gravação/leitura) e imprime diagnósticos completos no monitor serial, tornando-a útil para verificar tanto o acesso ao cartão SD quanto a decodificação BMP. Imagens maiores que 172×320 são recortadas ao centro; imagens menores são centralizadas na tela.
+Este demo lê uma imagem `.bmp` de 24 bits sem compactação de um cartão MicroSD e a exibe na tela. Ele inclui um teste de sondagem SD embutido (gravação/leitura) e imprime diagnósticos completos no monitor serial, tornando‑o útil para verificar tanto o acesso ao cartão SD quanto a decodificação BMP. Imagens maiores que 172×320 são recortadas ao centro; imagens menores são centralizadas na tela.
 
 **Localização do código:** `code_GFX2/Function/147_ESP32/xiao_esp32s3plus_147_sd_bmp_reader_diag_v0_8/`
 
@@ -231,24 +231,24 @@ Esta demonstração lê uma imagem `.bmp` de 24 bits sem compactação de um car
     </a>
 </div><br />
 
-### Como funciona
+### Como Funciona
 
-O LCD e o cartão SD compartilham os mesmos pinos SPI físicos (SCK = D8, MOSI = D10, MISO = D9), mas usam **hosts SPI separados**: o LCD roda no host HSPI do Seeed_GFX2, enquanto o cartão SD roda no host FSPI padrão do ESP32. O chip-select do SD (D6) é mantido em nível HIGH quando ocioso para que o cartão permaneça fora do barramento compartilhado. O sketch **lê o cartão SD primeiro e depois inicializa o LCD** — ele monta o SD, decodifica o BMP em um frame buffer na RAM, chama `SD.end()` e só então inicializa o display. Essa ordem impede que os dois hosts SPI entrem em conflito pelos pinos compartilhados D8/D10.
+O LCD e o cartão SD compartilham os mesmos pinos SPI físicos (SCK = D8, MOSI = D10, MISO = D9), mas usam **hosts SPI separados**: o LCD roda no host HSPI do Seeed_GFX2, enquanto o cartão SD roda no host FSPI padrão do ESP32. O chip‑select do SD (D6) é mantido em nível HIGH quando ocioso para que o cartão permaneça fora do barramento compartilhado. O sketch **lê o cartão SD primeiro e depois inicializa o LCD** — ele monta o SD, decodifica o BMP em um frame buffer na RAM, chama `SD.end()` e só então inicializa o display. Essa ordem impede que os dois hosts SPI disputem os pinos D8/D10 compartilhados.
 
-O sketch monta o cartão SD em várias frequências SPI (4 MHz → 1 MHz → 400 kHz), depois executa uma rápida sondagem de gravação/leitura (`/SDPROBE.TXT`) para confirmar que o sistema de arquivos está acessível antes de decodificar qualquer imagem. Em seguida, ele procura um arquivo BMP na raiz do SD (nomes preferenciais: `/test.bmp`, `/TEST.BMP`, `/image.bmp`, `/IMAGE.BMP`, etc.), decodifica-o linha a linha em um frame buffer RGB565 e desenha o resultado com um cabeçalho "BMP OK" (mostrando o tempo de decodificação) e o caminho do arquivo ao longo da borda inferior da tela.
+O sketch monta o cartão SD em várias frequências SPI (4 MHz → 1 MHz → 400 kHz), depois executa uma rápida sondagem de gravação/leitura (`/SDPROBE.TXT`) para confirmar que o sistema de arquivos está acessível antes de decodificar qualquer imagem. Em seguida, ele procura um arquivo BMP na raiz do SD (nomes preferenciais: `/test.bmp`, `/TEST.BMP`, `/image.bmp`, `/IMAGE.BMP`, etc.), decodifica‑o linha por linha em um frame buffer RGB565 e desenha o resultado com um cabeçalho "BMP OK" (mostrando o tempo de decodificação) e o caminho do arquivo ao longo da borda inferior da tela.
 
 **Formatos BMP suportados:**
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Formato</th><th>Profundidade de bits</th><th>Observações</th></tr>
+    <tr><th>Formato</th><th>Profundidade de Cor</th><th>Observações</th></tr>
     <tr><td>BMP sem compactação (BI_RGB)</td><td>24 bits (16/32 bits também aceitos)</td><td>BGR888 convertido para RGB565 para exibição</td></tr>
   </table>
 </div>
 
 Imagens maiores que 172×320 são recortadas ao centro; imagens menores são centralizadas. Para melhores resultados, use um BMP sem compactação de 24 bits com tamanho exatamente 172×320 pixels chamado `/test.bmp`.
 
-### Executando a demonstração
+### Executando o Demo
 
 **Passo 1.** Formate um cartão MicroSD como **FAT32**.
 
@@ -285,7 +285,7 @@ Os valores exatos (`card=15193 MB`, `file size=117814`, `readMs=7881`, etc.) dep
 
 A tela então mostra a imagem decodificada com um cabeçalho verde "BMP OK" (exibindo o tempo de decodificação em milissegundos) e o caminho do arquivo ao longo da borda inferior.
 
-### Resultado esperado
+### Resultado Esperado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_function_sd_bmp_reader.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -293,11 +293,11 @@ A imagem aparece na tela com um cabeçalho verde "BMP OK" (mostrando o tempo de 
 
 ---
 
-## Microfone e alto-falante
+## Microfone e Alto-falante
 
-### Demonstração 1: Barra de volume
+### Demo 1: Barra de Volume
 
-Esta demonstração transforma o microfone PDM onboard em um grande e responsivo medidor de volume. Uma barra de 10 segmentos preenche o centro da tela — verde em níveis baixos, amarela na faixa intermediária e vermelha quando alto. A porcentagem é exibida acima da barra e muda de cor para corresponder ao nível.
+Este demo transforma o microfone PDM onboard em um grande e responsivo medidor de volume. Uma barra de 10 segmentos preenche o centro da tela — verde em níveis baixos, amarela na faixa média e vermelha quando está alto. A porcentagem é exibida acima da barra e muda de cor para corresponder ao nível.
 
 **Localização do código:** `code_GFX2/Function/147_ESP32/xiao_esp32s3_147_mic_canvas/`
 
@@ -308,9 +308,9 @@ Esta demonstração transforma o microfone PDM onboard em um grande e responsivo
     </a>
 </div><br />
 
-#### Como funciona
+#### Como Funciona
 
-O **microfone digital PDM (Pulse Density Modulation)** onboard é amostrado por meio do periférico I2S do ESP32-S3 configurado no modo PDM RX. No ESP-IDF v5 (núcleo Arduino 3.3.11), isso usa a nova API do driver (`driver/i2s_pdm.h`):
+O **microfone digital PDM (Pulse Density Modulation)** onboard é amostrado por meio do periférico I2S do ESP32-S3 configurado no modo PDM RX. No ESP-IDF v5 (Arduino core 3.3.11), isso usa a nova API do driver (`driver/i2s_pdm.h`):
 
 <div class="table-center">
   <table align="center">
@@ -320,12 +320,12 @@ O **microfone digital PDM (Pulse Density Modulation)** onboard é amostrado por 
   </table>
 </div>
 
-O periférico I2S é configurado em **16 kHz mono** com 4 descritores de DMA de 256 quadros cada. A intensidade de acionamento do PDM CLK é reduzida após a inicialização para minimizar o acoplamento elétrico. As amostras são lidas via `i2s_channel_read()` com um tempo limite de 20 ms no loop principal.
+O periférico I2S é configurado em **16 kHz mono** com 4 descritores de DMA de 256 quadros cada. A intensidade de acionamento do PDM CLK é reduzida após a inicialização para minimizar o acoplamento elétrico. As amostras são lidas via `i2s_channel_read()` com um timeout de 20 ms no loop principal.
 
 **Processamento de sinal:**
 
 1. **Extração de pico** — cada buffer de 256 amostras é varrido em busca do maior valor absoluto (amplitude de pico).
-2. **Normalização** — o pico bruto é mapeado de um piso de 40 para um teto de 16.000, produzindo um valor de volume de 0,0–1,0. Valores abaixo do piso são tratados como silêncio.
+2. **Normalização** — o pico bruto é mapeado de um piso de 40 para um teto de 16.000, produzindo um valor de volume entre 0,0 e 1,0. Valores abaixo do piso são tratados como silêncio.
 3. **Suavização exponencial** — o volume exibido é uma média móvel exponencial do pico bruto (α = 0,20) para evitar tremulação. Quando o silêncio é detectado, o valor exibido decai em ×0,94 por quadro.
 
 **Desenho da barra:**
@@ -345,7 +345,7 @@ A barra usa **renderização diferencial**: apenas os segmentos cujo estado mudo
 
 **Passo 1.** Abra `xiao_esp32s3_147_mic_canvas.ino` na Arduino IDE.
 
-**Passo 2.** Selecione a placa e a porta, depois clique em **Upload**.
+**Passo 2.** Selecione a placa e a porta e clique em **Upload**.
 
 **Passo 3.** Abra **Tools > Serial Monitor** (115200 baud). Você deverá ver:
 
@@ -355,7 +355,7 @@ A barra usa **renderização diferencial**: apenas os segmentos cujo estado mudo
 [MIC] ready — speak or blow into the mic
 ```
 
-**Passo 4.** Fale no microfone PDM (localizado próximo ao canto inferior esquerdo da placa de display) ou assopre nele. A barra se preenche de verde para amarelo para vermelho, e a porcentagem é atualizada acima dela.
+**Passo 4.** Fale no microfone PDM (localizado próximo ao canto inferior esquerdo da placa de display) ou assopre nele. A barra se preenche de verde para amarelo e vermelho, e a porcentagem é atualizada acima dela.
 
 #### Resultado Esperado
 
@@ -365,28 +365,28 @@ A barra responde em tempo real. Em um ambiente silencioso, a barra permanece vaz
 
 ---
 
-### Demo 2: Gravador SD
+### Demo 2: Gravador em SD
 
-Este demo transforma a placa em um gravador de voz simples. Pressione **USR1** para gravar 5 segundos de áudio do microfone PDM onboard, salvá-lo no cartão MicroSD como um arquivo WAV e, em seguida, pressione **USR2** para reproduzir a gravação através de um amplificador I2S **MAX98357A** externo e alto-falante.
+Este demo transforma a placa em um gravador de voz simples. Pressione **USR1** para gravar 5 segundos de áudio do microfone PDM onboard, salve-o no cartão MicroSD como um arquivo WAV e, em seguida, pressione **USR2** para reproduzir a gravação por meio de um amplificador I2S **MAX98357A** externo e alto-falante.
 
 **Localização do código:** `code_GFX2/Function/147_ESP32/xiao_esp32s3_147_sd_record/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/147_ESP32/xiao_esp32s3_147_sd_record" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Ver no GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 :::note
-Este demo usa **Seeed_GFX2** para o display de status na tela, e o **`SD.h` embutido** do pacote de placas esp32 para acesso a arquivos. **Nenhum SdFat** é necessário.
+Este demo usa **Seeed_GFX2** para o display de status na tela e o **`SD.h` integrado** do pacote de placas esp32 para acesso a arquivos. **Nenhum SdFat** é necessário.
 :::
 
 #### Configuração de Hardware
 
 **Cartão MicroSD.** Insira um cartão MicroSD formatado em FAT32 no slot de cartão na placa de display **antes** de gravar o sketch ou ligar. O microfone PDM onboard não precisa de fiação externa.
 
-**Saída de alto-falante.** Conecte um módulo amplificador I2S MAX98357A aos pads de breakout I2S inferiores:
+**Saída para alto-falante.** Conecte um módulo amplificador I2S MAX98357A aos pads de breakout I2S inferiores:
 
 <div class="table-center">
   <table align="center">
@@ -405,11 +405,11 @@ Conecte o alto-falante aos terminais **SPK+** e **SPK-** do MAX98357A.
 
 O demo passa por quatro estágios, usando quatro periféricos diferentes em sequência:
 
-**Microfone PDM (gravação).** O microfone PDM onboard é amostrado através do periférico I2S no modo PDM RX em **D0 (PDM_CLK)** e **D1 (MIC_DATA)** a 16 kHz mono. Os primeiros **300 ms** de dados capturados são descartados como dados de aquecimento para evitar um clique no início da gravação.
+**Microfone PDM (gravação).** O microfone PDM onboard é amostrado por meio do periférico I2S no modo PDM RX em **D0 (PDM_CLK)** e **D1 (MIC_DATA)** a 16 kHz mono. Os primeiros **300 ms** de dados capturados são descartados como dados de aquecimento para evitar um clique no início da gravação.
 
-**Buffer de RAM.** Uma gravação de 5 segundos a 16 kHz, 16 bits mono ocupa **160.000 bytes** (`5 s × 16,000 samples/s × 2 bytes`). As amostras são mantidas em um buffer de RAM antes de serem gravadas no cartão SD.
+**Buffer em RAM.** Uma gravação de 5 segundos a 16 kHz, 16 bits mono ocupa **160.000 bytes** (`5 s × 16,000 samples/s × 2 bytes`). As amostras são mantidas em um buffer de RAM antes de serem gravadas no cartão SD.
 
-**Cartão SD (armazenamento).** A gravação é gravada em `/REC_RAW.WAV` no cartão MicroSD usando o `SD.h` embutido do pacote de placas ESP32. O sketch monta o cartão em várias frequências SPI — tentando **8 MHz → 4 MHz → 1 MHz → 0,4 MHz** — até que uma tenha sucesso. Cada nova gravação sobrescreve o arquivo anterior.
+**Cartão SD (armazenamento).** A gravação é gravada em `/REC_RAW.WAV` no cartão MicroSD usando o `SD.h` integrado do pacote de placas ESP32. O sketch monta o cartão em várias frequências SPI — tentando **8 MHz → 4 MHz → 1 MHz → 0,4 MHz** — até que uma tenha sucesso. Cada nova gravação sobrescreve o arquivo anterior.
 
 :::caution
 Este demo exclui `/REC_RAW.WAV` na inicialização. Copie a gravação para o seu computador antes de reiniciar a placa se quiser mantê-la.
@@ -433,13 +433,13 @@ Essa separação evita conflitos de transação SPI entre as atualizações do L
 
 **Passo 3.** Abra `xiao_esp32s3_147_sd_record.ino` na Arduino IDE.
 
-**Passo 4.** Selecione **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** (com o pacote de placas esp32 **3.3.11**) e a **Port** correta, depois clique em **Upload**.
+**Passo 4.** Selecione **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** (com o pacote de placas esp32 **3.3.11**) e a **Port** correta e clique em **Upload**.
 
 **Passo 5.** Após o upload, a tela mostra **"SD Recorder"**.
 
 **Passo 6.** Pressione **USR1** e fale no microfone PDM onboard por 5 segundos.
 
-**Passo 7.** Aguarde a tela mostrar **"Saved SD WAV"** — a gravação foi gravada no cartão SD.
+**Passo 7.** Aguarde até a tela mostrar **"Saved SD WAV"** — a gravação foi gravada no cartão SD.
 
 **Passo 8.** Pressione **USR2** para reproduzir a gravação pelo alto-falante.
 
@@ -447,7 +447,7 @@ Essa separação evita conflitos de transação SPI entre as atualizações do L
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_function_sd_record_i2s.gif" style={{width:500, height:'auto'}}/></div>
 
-- A tela mostra o progresso da gravação enquanto captura.
+- A tela mostra o progresso da gravação durante a captura.
 - Após o término da gravação, a tela mostra **"Saved SD WAV"**.
 - Um arquivo `/REC_RAW.WAV` é criado no cartão SD.
 - Pressionar **USR2** reproduz pelo alto-falante o áudio que você acabou de gravar.
@@ -456,10 +456,10 @@ Essa separação evita conflitos de transação SPI entre as atualizações do L
 
 ## IMU
 
-O Display IPS de 1,47'' possui uma IMU de 6 eixos onboard (LSM6DS3) conectada via I2C em D4/D5. A linha de interrupção de movimento em **D14** suporta wake-up por hardware e detecção de gestos.
+O Display IPS de 1,47'' possui uma IMU de 6 eixos (LSM6DS3) onboard conectada via I2C em D4/D5. A linha de interrupção de movimento em **D14** oferece suporte a wake-up por hardware e detecção de gestos.
 
 :::note
-A IMU onboard é a **LSM6DS3** (confirmada pelo esquemático da placa, endereço I2C `0x6A`). Os sketches de demo também sondam um sensor compatível com QMI8658 como fallback defensivo, mas o Display IPS de 1,47'' fornecido usa o LSM6DS3.
+A IMU onboard é a **LSM6DS3** (confirmada pelo esquemático da placa, endereço I2C `0x6A`). Os sketches de demonstração também sondam um sensor compatível com QMI8658 como fallback defensivo, mas o Display IPS de 1,47'' fornecido usa o LSM6DS3.
 :::
 
 Ambos os demos abaixo leem a **LSM6DS3** onboard via I2C. Os sketches também sondam um sensor compatível com QMI8658 como fallback defensivo, mas a configuração de levantar-para-acordar é direcionada aos registradores da LSM6DS3.
@@ -474,7 +474,7 @@ Este demo transforma a tela em uma simulação de fluido interativa — partícu
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/147_ESP32/xiao_esp32s3_147_electronic_quicksand" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Ver no GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -483,7 +483,7 @@ Este demo transforma a tela em uma simulação de fluido interativa — partícu
 
 A simulação usa uma **grade de ocupação de 24×45** sobreposta na tela de 172×320, onde cada célula tem 7×7 pixels. Cerca de **180 partículas** são colocadas na grade, cada uma com posição, velocidade e um gradiente de cor dourado.
 
-O IMU é lido via I2C (D4/D5) a cada **8 ms**. O sketch procura por um IMU em ambos os endereços conhecidos — primeiro QMI8658, depois LSM6DS3 — e usa aquele que responder. Os valores brutos de aceleração são filtrados com um filtro passa‑baixa e usados para derivar um vetor de gravidade. Quando você inclina a placa:
+O IMU é lido via I2C (D4/D5) a cada **8 ms**. O sketch procura por um IMU em ambos os endereços conhecidos — primeiro QMI8658, depois LSM6DS3 — e usa aquele que responder. Os valores brutos de aceleração são filtrados com passa‑baixa e usados para derivar um vetor de gravidade. Quando você inclina a placa:
 
 1. **Atualização do vetor de gravidade** — os dados do acelerômetro são suavizados com uma média móvel exponencial para evitar tremores.
 2. **Velocidade das partículas** — cada partícula acelera na direção do vetor de gravidade, com amortecimento e um fator de mobilidade por partícula baseado em sua profundidade no fluxo.
@@ -496,9 +496,9 @@ As partículas próximas à superfície fluem livremente (maior mobilidade); par
 
 **Passo 1.** Abra `xiao_esp32s3_147_electronic_quicksand.ino` na Arduino IDE.
 
-**Passo 2.** Selecione a placa e a porta, depois clique em **Upload**.
+**Passo 2.** Selecione a placa e a porta e clique em **Upload**.
 
-**Passo 3.** Depois de enviado, a tela se enche de partículas douradas na parte inferior. Incline a placa em diferentes direções — a areia flui como se fosse puxada pela gravidade.
+**Passo 3.** Depois do upload, a tela se enche de partículas douradas na parte inferior. Incline a placa em diferentes direções — a areia flui como se fosse puxada pela gravidade.
 
 **Passo 4.** Abra **Tools > Serial Monitor** (115200 baud) para confirmar a inicialização:
 
@@ -511,19 +511,19 @@ As partículas próximas à superfície fluem livremente (maior mobilidade); par
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_function_quicksand.gif" style={{width:500, height:'auto'}}/></div>
 
-As partículas fluem em direção à borda mais baixa conforme você inclina a placa. Quando o display fica plano, o demo mantém a direção de gravidade anterior.
+As partículas fluem em direção à borda mais baixa conforme você inclina a placa. Quando o display fica na horizontal, o demo mantém a direção de gravidade anterior.
 
 ---
 
 ### Demo 2: Levantar para Despertar
 
-Este demo implementa um **sistema de suspensão/despertar da tela** acionado pela interrupção de wake‑up integrada do IMU no **D14**. A tela desliga automaticamente (backlight desligado + sono leve do ESP32) após 8 segundos de inatividade e desperta instantaneamente quando você pega ou move o dispositivo.
+Este demo implementa um **sistema de suspensão/despertar da tela** acionado pela interrupção de wake‑up integrada do IMU no **D14**. A tela desliga automaticamente (backlight desligado + light sleep do ESP32) após 8 segundos de inatividade e desperta instantaneamente quando você pega ou move o dispositivo.
 
-**Localização do código:** `code_GFX2/Function/147_ESP32/xiao_esp32s3_147_wakeup/`
+**Local do código:** `code_GFX2/Function/147_ESP32/xiao_esp32s3_147_wakeup/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/147_ESP32/xiao_esp32s3_147_wakeup" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Ver no GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -541,7 +541,7 @@ O demo de levantar‑para‑despertar configura o **LSM6DS3** onboard para wake�
     <tr><th>Registrador</th><th>Valor</th><th>Finalidade</th></tr>
     <tr><td><code>CTRL1_XL</code></td><td><code>0x40</code></td><td>Acelerômetro @ 104 Hz, ±2g</td></tr>
     <tr><td><code>TAP_CFG</code></td><td><code>0x80</code></td><td>Habilitar interrupções incorporadas</td></tr>
-    <tr><td><code>WAKE_UP_THS</code></td><td><code>0x05</code></td><td>Limiar de wake‑up (sensibilidade média‑baixa)</td></tr>
+    <tr><td><code>WAKE_UP_THS</code></td><td><code>0x05</code></td><td>Limite de wake‑up (sensibilidade média‑baixa)</td></tr>
     <tr><td><code>WAKE_UP_DUR</code></td><td><code>0x00</code></td><td>Sem filtro de duração (wake responsivo)</td></tr>
     <tr><td><code>MD1_CFG</code></td><td><code>0x20</code></td><td>Direcionar wake‑up para INT1</td></tr>
   </table>
@@ -549,9 +549,9 @@ O demo de levantar‑para‑despertar configura o **LSM6DS3** onboard para wake�
 
 **Fluxo de suspensão/despertar:**
 
-1. **Estado ativo** — a tela está ligada, backlight em PWM 160. Os dados do IMU e a tensão da bateria são atualizados a cada 250 ms / 1000 ms respectivamente. Um temporizador regressivo mostra os segundos restantes até a suspensão automática.
-2. **Suspensão automática** — após 8 segundos sem atividade, o sketch desliga o backlight, exibe a mensagem "Sleeping... Pick up device to wake", configura o D14 como fonte de wake‑up via `esp_sleep_enable_gpio_wakeup()` e entra em sono leve do ESP32.
-3. **Wake‑up** — quando o usuário pega a placa, o IMU detecta movimento e aciona o D14 em nível HIGH. O ESP32 acorda do sono leve e redesenha a interface.
+1. **Estado ativo** — a tela está ligada, backlight em PWM 160. Os dados do IMU e a tensão da bateria são atualizados a cada 250 ms / 1000 ms, respectivamente. Um temporizador regressivo mostra os segundos restantes até a suspensão automática.
+2. **Suspensão automática** — após 8 segundos sem atividade, o sketch desliga o backlight, exibe a mensagem "Sleeping... Pick up device to wake", configura o D14 como fonte de wake‑up via `esp_sleep_enable_gpio_wakeup()` e entra em light sleep do ESP32.
+3. **Wake‑up** — quando o usuário pega a placa, o IMU detecta movimento e aciona o D14 em nível HIGH. O ESP32 sai do light sleep e redesenha a interface.
 
 **Botões de teste manual:**
 
@@ -559,7 +559,7 @@ O demo de levantar‑para‑despertar configura o **LSM6DS3** onboard para wake�
   <table align="center">
     <tr><th>Botão</th><th>Pino</th><th>Ação</th></tr>
     <tr><td>USR1</td><td>D19</td><td>Forçar wake</td></tr>
-    <tr><td>USR2</td><td>D15</td><td>Forçar suspensão</td></tr>
+    <tr><td>USR2</td><td>D15</td><td>Forçar sleep</td></tr>
   </table>
 </div>
 
@@ -581,13 +581,13 @@ O demo de levantar‑para‑despertar configura o **LSM6DS3** onboard para wake�
 [WAKE] IMU_D14  count=2
 ```
 
-Cada wake por movimento imprime uma nova linha `[WAKE] IMU_D14  count=N` com um contador incrementado. A transição para suspensão é mostrada apenas na tela — nenhuma linha serial é impressa quando a placa entra em suspensão.
+Cada wake por movimento imprime uma nova linha `[WAKE] IMU_D14  count=N` com o contador incrementado. A transição para suspensão é mostrada apenas na tela — nenhuma linha serial é impressa quando a placa entra em sleep.
 
 ### Resultado Esperado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_function_wakeup.gif" style={{width:500, height:'auto'}}/></div>
 
-A tela exibe dados em tempo real do acelerômetro e giroscópio enquanto está acordada. Após 8 segundos de imobilidade, a tela escurece e o ESP32‑S3 entra em sono leve. Pegue o dispositivo e a tela é restaurada em frações de segundo, com o contador de wake incrementado.
+A tela exibe dados em tempo real do acelerômetro e giroscópio enquanto está acordada. Após 8 segundos de imobilidade, a tela escurece e o ESP32‑S3 entra em light sleep. Pegue o dispositivo e a tela é restaurada em uma fração de segundo, com o contador de wake incrementado.
 
 ---
 
@@ -605,7 +605,7 @@ O Display IPS de 1,47'' possui **dois botões físicos de pressão** conectados 
 
 ### Lendo um Botão
 
-Ambos os botões usam os resistores de pull‑up internos do XIAO. Uma leitura simples por pesquisa (polling) com debounce fica assim:
+Ambos os botões usam os resistores de pull‑up internos do XIAO. Uma leitura simples por polling com debounce fica assim:
 
 ```cpp
 const int BTN_A = D19;
@@ -665,7 +665,7 @@ void loop() {
 }
 ```
 
-### Comportamento Padrão no Dashboard de Fábrica
+### Comportamento Padrão no Painel de Fábrica
 
 No firmware de fábrica pré‑carregado, os botões são mapeados da seguinte forma (você pode sobrescrever isso no seu próprio código):
 
@@ -677,17 +677,17 @@ No firmware de fábrica pré‑carregado, os botões são mapeados da seguinte f
   </table>
 </div>
 
-Os pads de breakout dos botões (rotulados U1 e U2 na placa) espelham D19 e D15 respectivamente, permitindo que você conecte botões externos se desejar.
+Os pads de breakout dos botões (rotulados U1 e U2 na placa) espelham D19 e D15, respectivamente, permitindo que você conecte botões externos se desejar.
 
 ## Detecção de Tensão da Bateria
 
 Este demo lê o divisor de tensão da bateria onboard no **D16** e mostra duas leituras amarelas em tempo real no Display IPS de 1,47'': a tensão bruta do divisor em D16 e a tensão calculada da bateria. Ele exibe apenas leituras de tensão; não estima a porcentagem da bateria nem informa o status de carregamento.
 
-**Localização do código:** `code_GFX2/Function/147_ESP32/xiao_esp32s3_147_battery_status/`
+**Local do código:** `code_GFX2/Function/147_ESP32/xiao_esp32s3_147_battery_status/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/147_ESP32/xiao_esp32s3_147_battery_status" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Ver no GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -709,7 +709,7 @@ O ESP32-S3 Plus lê a tensão da bateria LiPo por meio de um divisor de tensão 
 
 **Leitura:**
 
-O sketch inicializa o display com `Board_XIAO_1inch47_Touch_Display<13, 12>` e `Config_Seeed_1inch47_Touch_JD9853A` (172×320, BGR, sem inversão), depois amostra o **D16** doze vezes (a cada 700 µs) usando `analogReadMilliVolts()` com resolução de 12 bits e atenuação de 11 dB. Ele faz a média das amostras para obter a tensão bruta no divisor, multiplica pela taxa do divisor para obter a tensão da bateria (`Calc = D16 × 2.975`) e desenha ambas como duas linhas amarelas centralizadas. A tela é atualizada apenas quando qualquer um dos valores muda de forma significativa (D16 ≥ 0,02 V ou Calc ≥ 0,05 V).
+O sketch inicializa o display com `Board_XIAO_1inch47_Touch_Display<13, 12>` e `Config_Seeed_1inch47_Touch_JD9853A` (172×320, BGR, sem inversão), depois amostra o **D16** doze vezes (intervalo de 700 µs) usando `analogReadMilliVolts()` com resolução de 12 bits e atenuação de 11 dB. Ele faz a média das amostras para obter a tensão bruta no divisor, multiplica pela taxa do divisor para obter a tensão da bateria (`Calc = D16 × 2.975`) e desenha ambas como duas linhas amarelas centralizadas. A tela é atualizada apenas quando qualquer um dos valores muda de forma significativa (D16 ≥ 0,02 V ou Calc ≥ 0,05 V).
 
 :::note
 Nenhum sinal de status de carregamento está conectado a um GPIO do ESP32-S3. Esta demonstração exibe apenas leituras de tensão; ela não detecta a presença da bateria ou o status de carregamento, nem estima a porcentagem da bateria.
@@ -723,7 +723,7 @@ Nenhum sinal de status de carregamento está conectado a um GPIO do ESP32-S3. Es
 
 **Passo 3.** Clique em **Upload**.
 
-**Passo 4.** Observe a tela — ela mostra duas linhas amarelas: a tensão bruta do divisor em D16 e a tensão calculada da bateria. Conecte ou desconecte uma bateria LiPo (ou o cabo USB-C) para ver os valores sendo atualizados.
+**Passo 4.** Observe a tela — ela mostra duas linhas amarelas: a tensão bruta do divisor em D16 e a tensão da bateria calculada. Conecte ou desconecte uma bateria LiPo (ou o cabo USB-C) para ver os valores sendo atualizados.
 
 ### Resultado Esperado
 
@@ -736,7 +736,7 @@ Nenhum sinal de status de carregamento está conectado a um GPIO do ESP32-S3. Es
   </table>
 </div>
 
-A tela mostra a tensão bruta do divisor em D16 na linha superior e a tensão calculada da bateria (`Calc`) na linha inferior. Com uma bateria LiPo conectada, `Calc` se aproxima da tensão no terminal da bateria. Uma leitura também pode aparecer apenas com alimentação via USB, portanto `Calc` não pode, por si só, confirmar se uma bateria está conectada.
+A tela mostra a tensão bruta do divisor em D16 na linha superior e a tensão da bateria calculada (`Calc`) na linha inferior. Com uma bateria LiPo conectada, `Calc` se aproxima da tensão no terminal da bateria. Uma leitura também pode aparecer apenas com alimentação via USB, portanto `Calc` não pode, por si só, confirmar se uma bateria está conectada.
 
 A demo também imprime uma linha de diagnóstico no Serial Monitor a cada segundo, por exemplo:
 
@@ -748,14 +748,15 @@ D16 1.39V | Calc 4.14V
 
 ## Recursos
 
-- **🗃️[Arquivos de Projeto de PCB]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
+- **🗃️[Arquivos de Projeto da PCB]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 1.47'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 1.47'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
+- **🖨️[Gabinete Impresso em 3D]** [XIAO 1.47'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843008-enclosure-for-xiao-147-ips-touch-display-esp32nrf5)
 - **📄[Datasheet]** [1.47 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
 - **💾[Firmware de Fábrica]** [XIAO 1.47'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
-- **[Demo]** [Código de Demonstração da XIAO Display Board](https://github.com/Seeed-Projects/Display-Gadgets) — todas as demos de Function estão no diretório `code_GFX2/Function/147_ESP32/`
+- **[Demo]** [Código de Demonstração da Placa XIAO Display](https://github.com/Seeed-Projects/Display-Gadgets) — todas as demos de Function estão no diretório `code_GFX2/Function/147_ESP32/`
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
