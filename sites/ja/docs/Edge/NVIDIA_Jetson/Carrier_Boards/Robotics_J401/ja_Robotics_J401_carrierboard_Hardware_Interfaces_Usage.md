@@ -184,7 +184,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
     </tr>
     <tr>
       <th rowSpan="1">動作温度</th>
-      <td colSpan="2">-20℃～60℃（25W モード）；<br />-20℃～55℃（MAXN モード）；<br />（reComputer Robotics ヒートシンク＋ファン使用時）</td>
+      <td colSpan="2">-20℃~60℃（25W モード）；<br />-20℃~55℃（40W モード）；<br />-20℃~50℃（MAXN モード）；<br />（ファン付き reComputer Robotics ヒートシンク使用時）</td>
     </tr>
     <tr>
       <th rowSpan="1">保証</th>
