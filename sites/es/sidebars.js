@@ -2801,7 +2801,7 @@ const sidebars = {
       collapsible: true,
       link: {
         type: "doc",
-        id: 'Network/Mesh_Network/es_meshtastic_intro',
+        id: 'Network/Mesh_Network/es_mesh_intro',
       },
       items: [
         {
