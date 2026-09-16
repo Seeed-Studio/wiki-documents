@@ -171,23 +171,23 @@ The [Fusion lead-time FAQ](https://support.seeed.cc/portal/en/kb/articles/how-lo
 
 ### FAQs
 
-#### Where can I find detailed ordering instructions?
+**Where can I find detailed ordering instructions?**
 
 The [step-by-step PCB ordering guide](https://support.seeed.cc/portal/en/kb/articles/how-to-place-a-fusion-pcb-order) covers PCB file upload, manufacturing options, checkout, and payment. For assembly, see the [PCBA ordering guide](https://support.seeed.cc/portal/en/kb/articles/how-do-i-place-a-seeed-fusion-pcb-assembly-pcba-order).
 
-#### How do I export Gerber files from my design software?
+**How do I export Gerber files from my design software?**
 
 Export the required copper, solder mask, silkscreen, and outline layers, together with the drill file. The [Gerber export guides](https://support.seeed.cc/portal/en/kb/fusion/how-to-generate-pcb-gerber-files) provide instructions for different PCB design tools.
 
-#### Can I request testing for PCBAs I already have?
+**Can I request testing for PCBAs I already have?**
 
 Yes. Use the testing-only option on [Fusion Testing Solutions](https://www.seeedstudio.com/fusion-testing-solutions.html) and submit the required design and test files.
 
-#### My order says Pending / Awaiting Revised File. What should I do?
+**My order says Pending / Awaiting Revised File. What should I do?**
 
 Check your registered email address, including the spam folder, for the issue description. Revise and re-upload the files as instructed so the order can proceed. See the [file revision FAQ](https://support.seeed.cc/portal/en/kb/articles/my-fusion-order-status-is-pending-awaiting-revised-file-what-should-i-do) for details.
 
-#### What if my board needs options that are not listed online?
+**What if my board needs options that are not listed online?**
 
 Submit the design requirements through the [Advanced PCB service](https://www.seeedstudio.com/fusion-advanced-pcb.html) for engineering review and quotation.
 
