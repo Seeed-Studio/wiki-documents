@@ -31,7 +31,9 @@ El ReSpeaker XVF3800 es una solución de procesamiento de voz con múltiples mic
 
 
 :::note
-El firmware que admite este código es `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` y `respeaker_xvf3800_i2s_dfu_firmware_v1.0.7.bin`. Así que asegúrate de flashearlo primero
+El firmware que admite este código es `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` y `application_xvf3800_i2s_master_v1.0.8_48k.bin`. Así que asegúrate de flashearlo primero.
+
+Si estás usando el firmware v1.0.7, cambia `GPO_SERVICER_RESID_DOA` a 19.
 :::
 
 ## Código de Arduino 
@@ -43,7 +45,7 @@ El firmware que admite este código es `respeaker_xvf3800_i2s_master_dfu_firmwar
 
 #define GPO_SERVICER_RESID            20
 #define GPO_SERVICER_RESID_LED_EFFECT 12
-#define GPO_SERVICER_RESID_DOA        19
+#define GPO_SERVICER_RESID_DOA        18
 #define GPO_DOA_READ_NUM_BYTES        4
 
 void setup() {

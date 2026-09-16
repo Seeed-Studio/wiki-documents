@@ -17,7 +17,7 @@ last_update:
   date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -25,6 +25,7 @@ import '/src/css/rebot-wiki-style.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # Getting Started with reBot Arm B601-DM
 
@@ -57,16 +58,26 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
   The reBot Arm project is open source on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm)—please visit the repository and give it a Star! The repository contains the complete BOM. This guide will help you get started with the B601-DM, from assembly to operation.
 </p>
 
+<GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
+
+## Project Introduction
+
+**reBot-DevArm (reBot Arm B601 DM and reBot Arm B601 RS)** is a robotic arm project dedicated to lowering the threshold for learning embodied intelligence. We focus on **"True Open Source"** — not just code, we open-source all of the following without reservation:
+
+- 🦾 **Open-source robotic arms with two motor versions**: We provide all open-source files for RoboStride and Damiao motor versions of the same appearance.
+- 🛠️ **Hardware blueprints**: Sheet metal and 3D printed part source files.
+- 🔩 **BOM (Bill of Materials)**: Detailed to every screw's specification and purchase link.
+- 💻 **Software and algorithms**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
+
 :::tip
 If you purchased a pre-assembled kit, please skip directly to the tutorial video in **Step 3** at the end of this article and follow along. There is no need to write motor IDs or calibrate zero positions.
 
 It has been verified that virtual machine performance is insufficient for running demos and there are configuration issues. It is recommended to use an Ubuntu physical machine to control the robotic arm.
 
+We recommend installing **Ubuntu 24.04 LTS**.
+
 Recommended Bilibili installation tutorial: [Ubuntu Dual-Boot Installation Tutorial](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
-
-
-
 
 ## Safety Disclaimer and Risk Notice
 
@@ -108,8 +119,6 @@ Assembly reference video:
    <div class="video-container">
      <iframe width="900" height="600" src="https://www.youtube.com/embed/DHFA2UfQzUo?si=GYy-Z38qTUW6KPqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
    </div>
-
-
 
 ## Step 1: [Assembly Guide](https://youtu.be/rfTQoFCfnMc)
 
@@ -191,13 +200,12 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 - [Software Download Link](https://github.com/dmBots/motor-debugging-tool)
 
-
 #### Write Motor ID and Test Enable
 
 Set the CAN ID and Master ID for each joint motor according to the parameters in the table below:
 
 | Motor Number | Motor Model | CAN ID | Master ID |
-|:---:|:---:|:---:|:---:|
+| :---: | :---: | :---: | :---: |
 | Motor 1 | J4340P | 0x01 | 0x11 |
 | Motor 2 | J4340P | 0x02 | 0x12 |
 | Motor 3 | J4340P | 0x03 | 0x13 |
@@ -258,11 +266,13 @@ After testing, remember to click `Disable` to exit the enabled state.
 We trust you have completed the robotic arm assembly, zero-point initialization, motor ID configuration, and other setup steps by following the video. You are now ready to officially explore the series of tutorials and tools we have released.
 
 :::tip
+
 1. Explore our **MotorBridge** platform, an all-in-one solution supporting an expanding list of motors including [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow, and more. It is also compatible with continuously updated robotic arms such as reBot. Designed for beginners, we also offer a Python SDK that implements the same functionality for developers.
 
 2. Experience new features and details of MotorBridge for the reBot robotic arm, including one-click zero-point setting, parameter writing, motor control via UI drag-and-drop, and a built-in model visualization interface.
 
 3. This tool is fully compatible with **Windows, Ubuntu, and macOS** operating systems.
+
 :::
 
 Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.
@@ -303,6 +313,7 @@ Load Miniforge and initialize Bash:
 source ~/miniforge3/etc/profile.d/conda.sh
 conda init bash
 ```
+
 :::
 
 </TabItem>
@@ -324,6 +335,7 @@ Load Miniforge and initialize Zsh, the default shell on current macOS versions:
 source ~/miniforge3/etc/profile.d/conda.sh
 conda init zsh
 ```
+
 :::
 
 </TabItem>
@@ -348,6 +360,7 @@ For PowerShell, initialize Conda with:
 ```bash
 conda init powershell
 ```
+
 :::
 
 </TabItem>
@@ -438,7 +451,9 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 </div>
 
 ## FAQ
+
 ### 1. Loud abnormal noise occurs immediately after motor startup
+
 - This issue usually happens when parameter calibration is accidentally triggered during ID configuration, which overwrites factory preset parameters such as motor inertia. Use **DM_Tools_v.1.8.0.1.exe (Windows-only)** available at:
 https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
 Export complete parameters from an intact motor of the same model via the host software, import these parameters into the faulty unit, update its corresponding CAN ID, save the written parameters, then proceed with zero-point calibration.
@@ -457,4 +472,5 @@ Export complete parameters from an intact motor of the same model via the host s
 [DM4340P Default Parameters](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4340P_Default_Parameters.txt)
 
 ### 2. All motors share identical CAN IDs
+
 - When performing zero-point calibration via **DM_Tools_v.1.8.0.1.exe (Windows-only)**, avoid clicking the Read or Set buttons next to the CAN ID field. The debug interface communicates over the CAN bus; clicking Set will unify the CAN ID for every motor connected on the CANBUS.

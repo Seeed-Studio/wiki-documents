@@ -278,6 +278,15 @@
   margin: 1.5rem 0 2rem;
 }
 
+/* 后续平台内容由页面顶部的平台标签联动，不重复显示标签栏 */
+.rebot-linked-platform-content[role='tablist'] {
+  display: none;
+}
+
+.rebot-linked-platform-content + .margin-top--md {
+  margin-top: 0 !important;
+}
+
 .rebot-step-item {
   position: relative;
   min-width: 0;
@@ -338,6 +347,96 @@
 
 .rebot-step-content pre {
   border-radius: 16px;
+}
+
+/* 步骤状态：只强化层级，不改变简洁的纵向布局 */
+.rebot-step-item--optional > .rebot-step-number {
+  border-color: #d97706;
+  color: #b45309;
+  background: #fffbeb;
+}
+
+.rebot-step-item--recommended > .rebot-step-number {
+  border-color: #16a34a;
+  color: #15803d;
+  background: #f0fdf4;
+}
+
+.rebot-step-item--recommended > .rebot-step-content > h4 {
+  color: #15803d;
+}
+
+.rebot-step-item--caution > .rebot-step-number {
+  border-color: #ea580c;
+  color: #c2410c;
+  background: #fff7ed;
+}
+
+.rebot-step-item--simulation > .rebot-step-number {
+  border-color: #2563eb;
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+/* 可选 Demo：安全提示常驻，仅折叠实际运行命令 */
+.rebot-demo-details {
+  margin: 1rem 0 0;
+  padding: 0 1rem 1rem;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 14px;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.rebot-demo-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 -1rem -1rem;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  color: var(--ifm-font-color-base);
+  font-weight: 700;
+  list-style: none;
+}
+
+.rebot-demo-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.rebot-demo-details > summary::before {
+  display: none !important;
+  content: none !important;
+  border: 0 !important;
+}
+
+.rebot-demo-details > summary::after {
+  content: '+';
+  flex: 0 0 auto;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.rebot-demo-details[open] > summary {
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.rebot-demo-details[open] > summary::after {
+  content: '−';
+}
+
+.rebot-demo-details > summary:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: -3px;
+}
+
+[data-theme='dark'] .rebot-step-item--optional > .rebot-step-number,
+[data-theme='dark'] .rebot-step-item--recommended > .rebot-step-number,
+[data-theme='dark'] .rebot-step-item--caution > .rebot-step-number,
+[data-theme='dark'] .rebot-step-item--simulation > .rebot-step-number {
+  background: var(--ifm-background-color);
 }
 
 /* 风险声明图片：不同比例的图片在统一画布中完整展示 */
@@ -639,6 +738,95 @@ html[data-theme='dark'] .doc-nav-hint {
 
 html[data-theme='dark'] .course-path-item.active {
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(20, 184, 166, 0.12));
+}
+
+/* GitHub Star CTA */
+.rebot-github-star-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.15rem 0 1.75rem;
+}
+
+.rebot-github-star {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 2.4rem;
+  max-width: 13rem;
+  padding: 0.55rem 1rem;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: nowrap;
+  background: #050505;
+  border: 1px solid #050505;
+  border-radius: 0.55rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.rebot-github-star:hover {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 0 2px var(--ifm-background-color), 0 0 0 4px #050505;
+  transform: translateY(-1px);
+}
+
+.rebot-github-star:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+.rebot-github-star-label,
+.rebot-github-star-count {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.rebot-github-star svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.rebot-github-star-count svg {
+  color: #9ca3af;
+  transition: color 300ms ease;
+}
+
+.rebot-github-star:hover .rebot-github-star-count svg {
+  color: #fde047;
+}
+
+.rebot-github-star-shine {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  width: 2rem;
+  height: 8rem;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(3rem) rotate(12deg);
+  transition: transform 700ms ease-out;
+}
+
+.rebot-github-star:hover .rebot-github-star-shine {
+  transform: translateX(-10rem) rotate(12deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rebot-github-star,
+  .rebot-github-star-shine,
+  .rebot-github-star-count svg {
+    transition: none;
+  }
 }
 
 /* 响应式 */

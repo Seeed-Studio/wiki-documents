@@ -1,13 +1,13 @@
 ---
-description: XIAO 1.47'' IPS Display (nRF52840) のはじめに。
-title: XIAO 1.47'' IPS Display (nRF52840) のはじめに
+description: XIAO 1.47'' IPS Display (nRF52840) のクイックスタートガイド。
+title: Getting Started with XIAO 1.47'' IPS Display (nRF52840)
 sidebar_label: Getting Started
 keywords:
   - XIAO
   - nRF52840
   - IPS Display
   - LCD
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /getting_started_1.47_inch_touch_display_nrf52840
 sku: 100004242
 sidebar_position: 1
@@ -20,12 +20,12 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/ja/getting_started_1.47_inch_touch_display_nrf52840/
 ---
 
-# XIAO 1.47'' IPS Display (nRF52840) のはじめに
+# XIAO 1.47'' IPS Display (nRF52840) クイックスタート
 
 <div class="table-center">
   <table align="center">
     <tr><th>XIAO 1.47'' IPS Display (nRF52840)</th></tr>
-    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW147_nRF52840Plus_display_hardware_hero.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
+    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW147_nRF52840Plus_display_hardware_heroNEW.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
     <tr><td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/1-47-Inch-Touch-Display-Powered-by-XIAO-nRF52840-Plus-p-6995.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
@@ -36,7 +36,7 @@ url: https://wiki.seeedstudio.com/ja/getting_started_1.47_inch_touch_display_nrf
 
 ## はじめに
 
-1.47'' IPS Display は、XIAO nRF52840 Plus を搭載した XIAO シリーズ向けの拡張ボードです。172×320 のカラー LCD（静電容量式タッチ付き）、オンボード PDM マイク、6 軸 IMU（LSM6DS3）、MicroSD カードスロット、バッテリー電源管理を備え、これらすべてがコンパクトなフォームファクタに統合されています。
+1.47'' IPS Display は、XIAO シリーズ向けに設計された拡張ボードで、XIAO nRF52840 Plus を搭載しています。172×320 のカラー LCD（静電容量式タッチ）、オンボード PDM マイク、6 軸 IMU（LSM6DS3）、MicroSD カードスロット、バッテリー電源管理を備え、これらすべてをコンパクトなフォームファクタに統合しています。
 
 この組み合わせにより、ポータブル HMI アプリケーション、IoT ダッシュボード、ウェアラブルデバイス、インタラクティブなプロトタイピングに最適なプラットフォームとなります。
 
@@ -58,9 +58,9 @@ url: https://wiki.seeedstudio.com/ja/getting_started_1.47_inch_touch_display_nrf
     <tr><td>MicroSD カードスロット</td><td>あり</td></tr>
     <tr><td>Grove I2C コネクタ</td><td>なし</td></tr>
     <tr><td>ユーザーボタン</td><td>2</td></tr>
-    <tr><td>バッテリーコネクタ</td><td>3.7 V LiPo 用 2-pin JST 2.0 コネクタ</td></tr>
-    <tr><td>バッテリーモニタリング</td><td>バッテリー状態検出に対応。バッテリー電圧も監視でき、バッテリー残量の推定に利用可能。</td></tr>
-    <tr><td>拡張インターフェース</td><td>1x I2C パッド、1x I2S パッド、1x SWD パッド、2x ユーザーボタンパッド</td></tr>
+    <tr><td>バッテリーコネクタ</td><td>3.7 V LiPo 用 2 ピン JST 2.0 コネクタ</td></tr>
+    <tr><td>バッテリーモニタリング</td><td>バッテリー状態検出に対応。バッテリー電圧も監視でき、バッテリー残量の推定に利用できます。</td></tr>
+    <tr><td>拡張インターフェース</td><td>1x I2C インターフェース、1x I2S インターフェース、1x SWD インターフェース、2x ユーザーボタンインターフェース</td></tr>
     <tr><td>基板サイズ</td><td>26.4 × 51.4 × 12.6 mm</td></tr>
     <tr><td>最適な用途</td><td>タッチ UI、ポータブル HMI、ローカルメディアおよびデータロギング</td></tr>
   </table>
@@ -68,7 +68,7 @@ url: https://wiki.seeedstudio.com/ja/getting_started_1.47_inch_touch_display_nrf
 
 ## ハードウェア概要
 
-始める前に、1.47'' IPS Display の物理レイアウトを理解するため、次の画像を参照してください。
+始める前に、以下の画像を参照して 1.47'' IPS Display の物理レイアウトを把握してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -78,38 +78,38 @@ url: https://wiki.seeedstudio.com/ja/getting_started_1.47_inch_touch_display_nrf
 
 <div class="table-center">
   <table align="center">
-    <tr><th>XIAO ピン</th><th>ネット名</th><th>機能の説明</th><th>ハードウェア接続メモ</th></tr>
+    <tr><th>XIAO ピン</th><th>ネット名</th><th>機能説明</th><th>ハードウェア接続メモ</th></tr>
     <tr><td>D0</td><td>PDM_CLK</td><td>MIC_CLK</td><td>PDM デジタルマイクのクロック</td></tr>
     <tr><td>D1</td><td>MIC_DATA</td><td>PDM デジタルマイクデータ</td><td>内部で PDM マイクに接続</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>画面チップセレクト信号</td><td>内部で LCD ドライバ IC に接続</td></tr>
     <tr><td>D3</td><td>LCD_DC</td><td>画面データ/コマンド切り替え</td><td>内部で LCD ドライバ IC に接続</td></tr>
-    <tr><td>D4</td><td>SDA</td><td>I2C データバス</td><td>バス共有：内部で IMU とタッチ IC に接続、外部には I2C 拡張パッドとして引き出し</td></tr>
-    <tr><td>D5</td><td>SCL</td><td>I2C クロックバス</td><td>バス共有：内部で IMU とタッチ IC に接続、外部には I2C 拡張パッドとして引き出し</td></tr>
+    <tr><td>D4</td><td>SDA</td><td>I2C データバス</td><td>バス共有：内部で IMU とタッチ IC に接続され、外部には I2C 拡張パッドとして引き出し</td></tr>
+    <tr><td>D5</td><td>SCL</td><td>I2C クロックバス</td><td>バス共有：内部で IMU とタッチ IC に接続され、外部には I2C 拡張パッドとして引き出し</td></tr>
     <tr><td>D6</td><td>SD_CS</td><td>SD カードチップセレクト信号</td><td>内部で MicroSD カードスロットに接続</td></tr>
     <tr><td>D7</td><td>TOUCH_INT</td><td>タッチ割り込み信号</td><td>非同期ウェイクアップ用に内部でタッチ IC に接続</td></tr>
     <tr><td>D8</td><td>SCK</td><td>ハードウェア SPI クロック</td><td>内部で LCD と SD カードスロットに接続</td></tr>
     <tr><td>D9</td><td>MISO</td><td>ハードウェア SPI データ入力</td><td>内部で SD カードスロットに接続</td></tr>
     <tr><td>D10</td><td>MOSI</td><td>ハードウェア SPI データ出力</td><td>内部で LCD と SD カードスロットに接続</td></tr>
-    <tr><td>D11</td><td>I2S_SD</td><td>オーディオデータライン</td><td>I2S_SD のデフォルトマッピングに対応し、ボトムパッドグループに引き出し</td></tr>
-    <tr><td>D12</td><td>I2S_SCK</td><td>オーディオビットクロック</td><td>I2S_SCK のデフォルトマッピングに対応し、ボトムパッドグループに引き出し</td></tr>
-    <tr><td>D13</td><td>I2S_WS</td><td>オーディオワードセレクト</td><td>I2S_WS のデフォルトマッピングに対応し、ボトムパッドグループに引き出し</td></tr>
+    <tr><td>D11</td><td>I2S_SD</td><td>オーディオデータライン</td><td>I2S_SD のデフォルトマッピングに対応し、ボトムパッド群に引き出し</td></tr>
+    <tr><td>D12</td><td>I2S_SCK</td><td>オーディオビットクロック</td><td>I2S_SCK のデフォルトマッピングに対応し、ボトムパッド群に引き出し</td></tr>
+    <tr><td>D13</td><td>I2S_WS</td><td>オーディオワードセレクト</td><td>I2S_WS のデフォルトマッピングに対応し、ボトムパッド群に引き出し</td></tr>
     <tr><td>D14</td><td>IMU_INT</td><td>IMU モーション割り込み</td><td>機能再割り当て：モーションウェイクアップ用</td></tr>
-    <tr><td>D15</td><td>BTN_B</td><td>物理ボタン 2（USR2）</td><td>機能再割り当て：ユーザーボタン 2。外部にはボタン拡張パッドとして引き出し</td></tr>
+    <tr><td>D15</td><td>BTN_B</td><td>物理ボタン 2（USR2）</td><td>機能再割り当て：ユーザーボタン 2。外部にボタン拡張パッドとして引き出し</td></tr>
     <tr><td>D16</td><td>NC</td><td>フローティング（予約）</td><td>物理的な接続なし</td></tr>
     <tr><td>D17</td><td>LCD_RST</td><td>画面リセット信号</td><td>信頼性の高い起動のための独立した GPIO 制御</td></tr>
     <tr><td>D18</td><td>LCD_BL</td><td>画面バックライト制御</td><td>ハードウェア PWM による輝度調整をサポート</td></tr>
-    <tr><td>D19</td><td>BTN_A</td><td>物理ボタン 1（USR1）</td><td>ユーザーボタン 1。外部にはボタン拡張パッドとして引き出し</td></tr>
+    <tr><td>D19</td><td>BTN_A</td><td>物理ボタン 1（USR1）</td><td>ユーザーボタン 1。外部にボタン拡張パッドとして引き出し</td></tr>
   </table>
 </div>
 
 
-## はじめに
+## クイックスタート
 
-このガイドでは、最小限の **"Hello, XIAO"** スケッチをディスプレイボードに書き込みます。画面のバックライトが点灯し、黒で塗りつぶされ、中央揃えの大きな緑色のテキストで 2 行に分けて **"Hello,"** と **"XIAO"** を表示します。個々の周辺機能デモに進む前に、画面と開発環境が正しく動作していることを確認する最速の方法です。
+このガイドでは、最小限の **"Hello, XIAO"** スケッチをディスプレイボードに書き込みます。画面のバックライトが点灯し、黒で塗りつぶされ、中央揃えの大きな緑色のテキストで **"Hello,"** と **"XIAO"** の 2 行が表示されます。個々の周辺機能デモに進む前に、画面と開発環境が正しく動作していることを確認する最速の方法です。
 
 ### ソフトウェアの準備
 
-次のツールとライブラリが必要です：
+以下のツールとライブラリが必要です：
 
 - **Arduino IDE**（バージョン 1.8 以降）
 
@@ -123,7 +123,7 @@ url: https://wiki.seeedstudio.com/ja/getting_started_1.47_inch_touch_display_nrf
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ```
 
-その後、**Tools > Board > Boards Manager** を開き、**Seeed nRF52** を検索して、バージョン **1.1.13** をインストールします。
+その後、**Tools > Board > Boards Manager** を開き、**Seeed nRF52** を検索してバージョン **1.1.13** をインストールします。
 
 - **Seeed_GFX2（手動インストール）** — このライブラリは Library Manager にはないため、手動でインストールする必要があります：
 
@@ -134,15 +134,15 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
     </a>
 </div><br />
 
-**Step 1.** 上のボタンをクリックして、`Seeed_GFX2` v1.0.0 を ZIP ファイルとしてダウンロードします（チュートリアルの再現性を保つため、リリースタグに固定されています）。または、[Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) からリポジトリをクローンしてもかまいません。
+**ステップ 1.** 上のボタンをクリックして、`Seeed_GFX2` v1.0.0 を ZIP ファイルとしてダウンロードします（チュートリアルの再現性を保つため、リリースタグに固定されています）。または、[Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) からリポジトリをクローンしてもかまいません。
 
-**Step 2.** Arduino IDE で **Sketch > Include Library > Add .ZIP Library...** に進み、ダウンロードした ZIP を選択します。IDE は `library.properties` を読み取り、正しい `Seeed_GFX2` フォルダに自動的にインストールします — 展開したフォルダ名を変更する必要はありません。（代わりに手動でインストールする場合は、アーカイブを解凍し、展開されたフォルダ名を `Seeed_GFX2` に変更してから `Documents/Arduino/libraries/` に配置します。）
+**ステップ 2.** Arduino IDE で **Sketch > Include Library > Add .ZIP Library...** を開き、ダウンロードした ZIP を選択します。IDE は `library.properties` を読み取り、正しい `Seeed_GFX2` フォルダに自動的にインストールします — 展開したフォルダ名を変更する必要はありません。（代わりに手動でインストールする場合は、アーカイブを解凍し、展開されたフォルダ名を `Seeed_GFX2` に変更してから `Documents/Arduino/libraries/` に配置します。）
 
-**Step 3.** 新しいライブラリが認識されるように Arduino IDE を再起動します。
+**ステップ 3.** 新しいライブラリが認識されるように Arduino IDE を再起動します。
 
 :::tip
-- **Seeed_GFX2** は、`Board` + `Panel Config` のレイヤードアーキテクチャ上に構築された Seeed Studio のグラフィックスライブラリです。各デモは、単一の `display.begin<Board_..., Config_...>()` 呼び出しでディスプレイを初期化します。**Board** テンプレートはピンマップ（CS/DC/SCK/MOSI/RST/BL）を保持し、**Panel Config** は 172×320 の解像度、色順序（BGR）、向きを組み込みます。`driver.h` や手動のピン設定は不要です。
-- このボードでは、スケッチは `Board_XIAO_1inch47_Touch_Display<38, 37>`（RST=38, BL=37）と `Config_Seeed_1inch47_Touch_JD9853A` を使用します。
+- **Seeed_GFX2** は、`Board` + `Panel Config` というレイヤードアーキテクチャ上に構築された Seeed Studio のグラフィックスライブラリです。各デモは、単一の `display.begin<Board_..., Config_...>()` 呼び出しでディスプレイを初期化します。**Board** テンプレートはピンマップ（CS/DC/SCK/MOSI/RST/BL）を保持し、**Panel Config** は 172×320 の解像度、色順序（BGR）、向きを組み込みます。`driver.h` や手動のピン設定は不要です。
+- このボードでは、スケッチは `Config_Seeed_1inch47_Touch_JD9853A` と組み合わせて `Board_XIAO_1inch47_Touch_Display<38, 37>`（RST=38, BL=37）を使用します。
 - スケッチで使用される **Adafruit TinyUSB** ライブラリは **Seeed nRF52 Boards** パッケージに同梱されているため、別途インストールする必要はありません。
 :::
 
@@ -183,7 +183,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ## 次のステップ
 
-このディスプレイボードには、複数のオンボード周辺機能が搭載されています。[Function](/ja/function_1.47_inch_touch_display_nrf52840) ページでは、それぞれの機能に対して単体のデモを提供しています：
+このディスプレイボードには、複数のオンボード周辺機能が搭載されています。[Function](/ja/function_1.47_inch_touch_display_nrf52840) ページでは、それぞれの機能に対する単体デモを提供しています：
 
 <div class="table-center">
   <table align="center">
@@ -202,7 +202,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ### 書き込みに失敗したり、ボードが認識されない場合は？
 
-XIAO nRF52840 Plus のリセットボタンをダブルクリックします。USR LED が赤くゆっくり点滅し、コンピュータ上に **NRF52BOOT** という名前のドライブが表示されます。コンパイルされた `.uf2` ファイルを **NRF52BOOT** ドライブにドラッグします。ボードは自動的に書き込みを行い、完了後に自動でリセットされます。
+XIAO nRF52840 Plus のリセットボタンをダブルクリックします。USR LED が赤くゆっくり点滅し、**NRF52BOOT** という名前のドライブがコンピュータ上に表示されます。コンパイル済みの `.uf2` ファイルを **NRF52BOOT** ドライブにドラッグします。ボードは自動的に書き込みを行い、完了後に自動リセットされます。
 
 ## リソース
 
@@ -214,7 +214,7 @@ XIAO nRF52840 Plus のリセットボタンをダブルクリックします。U
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">

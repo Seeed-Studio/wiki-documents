@@ -7,7 +7,7 @@ keywords:
   - nRF52840
   - IPS Display
   - LCD
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /getting_started_1.47_inch_touch_display_nrf52840
 sku: 100004242
 sidebar_position: 1
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/getting_started_1.47_inch_touch_display_nrf528
 <div class="table-center">
   <table align="center">
     <tr><th>XIAO 1.47'' IPS Display (nRF52840)</th></tr>
-    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW147_nRF52840Plus_display_hardware_hero.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
+    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW147_nRF52840Plus_display_hardware_heroNEW.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
     <tr><td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/1-47-Inch-Touch-Display-Powered-by-XIAO-nRF52840-Plus-p-6995.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -60,7 +60,7 @@ This combination makes it an ideal platform for portable HMI applications, IoT d
     <tr><td>User Buttons</td><td>2</td></tr>
     <tr><td>Battery Connector</td><td>2-pin JST 2.0 Connector for 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery status detection supported; battery voltage can also be monitored for battery-level estimation.</td></tr>
-    <tr><td>Expansion Interfaces</td><td>1x I2C pads, 1x I2S pads, 1x SWD pads, 2x user-button pads</td></tr>
+    <tr><td>Expansion Interfaces</td><td>1x I2C Interface, 1x I2S Interface, 1x SWD Interface, 2x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>26.4 × 51.4 × 12.6 mm</td></tr>
     <tr><td>Best For</td><td>Touch UI, portable HMI, local media and data logging</td></tr>
   </table>

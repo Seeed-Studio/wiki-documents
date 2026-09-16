@@ -269,7 +269,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 | USER_LED                |                  | GPIO21    |                    | User Light                           |
 | Digital microphone_CLK  |                  | GPIO42    |                    | PDM clock pin for MIC                |
 | Digital microphone_DATA |                  | GPIO41    |                    | PDM data pin for MIC                 |
-| Onboard SD Card__CS     |                  | GPIO3     |                    | SD card chip select pin              |
+| Onboard SD Card__CS     |                  | GPIO21     |                    | SD card chip select pin              |
 | Onboard SD Card_SCK     |                  | GPIO7     |                    | SD card clock pin                    |
 | Onboard SD Card_MISO    |                  | GPIO8     |                    | SD card data input pin               |
 | Onboard SD Card Slot_MOSI|                 | GPIO9     |                    | SD card data output pin              |

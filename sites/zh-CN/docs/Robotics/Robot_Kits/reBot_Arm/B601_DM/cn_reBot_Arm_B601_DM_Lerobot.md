@@ -19,7 +19,11 @@ updatedAt: '2026-07-20'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 ---
 
+import '/src/css/rebot-wiki-style.css';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # reBot Arm B601-DM入门Lerobot
 
@@ -55,25 +59,12 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 [LeRobot](https://github.com/huggingface/lerobot/tree/main) 致力于为真实世界的机器人提供 PyTorch 中的模型、数据集和工具。其目标是降低机器人学的入门门槛，使每个人都能通过共享数据集和预训练模型进行贡献和受益。LeRobot 集成了经过验证的前沿方法，专注于模仿学习和强化学习。它提供了一套预训练模型、包含人类收集的示范数据集和仿真环境，使用户无需进行机器人组装即可开始使用。
 
 
-### 📖 项目简介 (Introduction)
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="lerobot"
+  ariaLabel="在 GitHub 上为 LeRobot 点亮 Star"
+/>
 
-**reBot-DevArm (reBot Arm B601 DM 和reBot Arm B601 RS)** 是一个致力于降低具身智能学习门槛的机械臂项目。我们主打 **"真·开源"** —— 不仅仅是代码，我们无保留地开源了所有的：
-- 🦾 **两个版本电机的开源机械臂**：我们会提供Robostride和Damiao两个版本的同样外观的机械臂所有开源文件。
-- 🛠️ **硬件图纸**：钣金件、3D打印件源文件。
-- 🔩 **BOM 清单**：详细到每一个螺丝的规格和购买链接。
-- 💻 **软件及算法**：Python SDK、ROS1/2、Isaac Sim、Lerobot等
-
-## 搭建属于你的 reBot 机械臂
-
-- 我们提供五种套件方案：
-  - **机械臂本体电机套件**：仅包含机械臂所需的电机与线束。
-  - **机械臂本体结构件套件**：仅包含机械结构零部件。
-  - **夹持器完整套件**：包含夹持器的电机、线束及结构件。
-  - **整机完整套件**：包含机械臂本体与夹持器全套组件。
-  - **成品组装机械臂**：已完成组装的成品机械臂。
-
-
-reBot-DevArm 和 reComputer Jetson AI 智能机器人套件无缝结合了高精度的机器人手臂控制与强大的 AI 计算平台，提供了全面的机器人开发解决方案。该套件基于 Jetson Orin 或 AGX Orin 平台，结合 reBot-DevArm 和 LeRobot AI 框架，为用户提供适用于教育、科研和工业自动化等多种场景的智能机器人系统。
 
 本维基提供了 reBot-DevArm 调试教程，并在 Lerobot 框架内实现数据收集和训练。
 
@@ -81,36 +72,29 @@ reBot-DevArm 和 reComputer Jetson AI 智能机器人套件无缝结合了高精
 Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或环境问题，请先查阅文末FAQ，或者联系客服加入SeeedStudio Lerobot交流群询问，也可以在这里询问：[LeRobot GitHub](https://github.com/huggingface/lerobot) 或 [Discord频道](https://discord.gg/8TnwDdjFGU)。  
 :::
 
-## 🔧 reBot B601-DM 系列特点：
-
-1. **开源 & 低成本**  
-   reBot Arm 是由 Seeed Studio 提供的开源机器人臂解决方案，致力于降低具身智能学习门槛。
-
-2. **支持 LeRobot 平台集成**  
-   专为与 [LeRobot 平台](https://github.com/huggingface/lerobot) 集成而设计。该平台提供 PyTorch 模型、数据集与工具，面向现实机器人任务的模仿学习（包括数据采集、仿真、训练与部署）。
-
-3. **丰富的学习资源**  
-   提供全面的开源学习资源，包括组装与校准指南、测试与数据采集教程、训练与部署文档，帮助用户快速上手并开发机器人应用。
-
-4. **兼容 Nvidia 平台**  
-   支持通过 reComputer Mini J4012 Orin NX 16GB 平台进行部署。
-
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 初始系统环境
-**For Ubuntu X86:**
-  - Ubuntu 22.04
-  - CUDA 12+
-  - Python 3.10
-  - Torch 2.6
 
+<Tabs groupId="lerobot-platform">
+<TabItem value="ubuntu-x86" label="Ubuntu x86">
 
-**For Jetson Orin:**
-  - Jetson Jetpack 6.0 和 6.1，暂不支持6.2
-  - Python 3.10
-  - Torch 2.3+
+- Ubuntu 22.04/Ubuntu 24.04
+- NVIDIA GPU 与 CUDA 12+（用于 GPU 加速训练/推理，可选）
+- Python 3.10
+- Torch 2.6（CPU 版可运行基础流程，GPU 加速需 CUDA 版）
+
+</TabItem>
+<TabItem value="jetson-orin" label="Jetson Orin">
+
+- Jetson JetPack 6.0 和 6.1，暂不支持 6.2
+- Python 3.10
+- Torch 2.3+
+
+</TabItem>
+</Tabs>
 
 ## 安装LeRobot
 
@@ -118,10 +102,14 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
+LeRobot 的基础环境可以在 CPU 上安装和运行。若需要 GPU 加速训练或推理，请确认电脑配有 NVIDIA GPU，并根据 CUDA 版本安装匹配的 PyTorch 与 Torchvision。
 
 
-### 1. 安装 Miniforge
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      #### 1. 安装 Miniforge
 
 ```bash
 cd ~
@@ -132,7 +120,13 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 source ~/.bashrc
 ```
 
-### 2. 克隆 Lerobot 仓库
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      #### 2. 克隆 LeRobot 仓库
 
 ```bash
 mkdir ~/rebot_lerobot
@@ -140,7 +134,13 @@ cd ~/rebot_lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git
 ```
 
-### 3. 创建 Conda 环境并安装 LeRobot
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      #### 3. 创建 Conda 环境并安装 LeRobot
 
 :::tip
 关于功能包的详细功能，请参考：
@@ -170,7 +170,13 @@ pip install motorbridge
 ```
 
 
-### 4. 安装 ffmpeg
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      #### 4. 安装视频依赖
 
 ffmpeg 是视频解码依赖，通过 conda 安装：
 
@@ -188,38 +194,66 @@ conda install ffmpeg -c conda-forge
 - 可通过 `ffmpeg -encoders | grep svtav1` 检查是否支持 libsvtav1 编码器
 :::
 
-### 5. Jetson Jetpack 6.0+ 设备特殊配置
+<Tabs groupId="lerobot-platform" className="rebot-linked-platform-content">
+<TabItem value="ubuntu-x86" label="Ubuntu x86">
 
-(电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
+Ubuntu x86 无需执行其他视频依赖配置，请继续完成步骤 5。
+
+</TabItem>
+<TabItem value="jetson-orin" label="Jetson Orin">
+
+:::note Jetson JetPack 6.0+ 设备
+
+对于 Jetson JetPack 6.0+ 设备，请确保在执行以下命令前，已按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装 PyTorch GPU 版和 Torchvision。
 
 ```bash
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson Jetpack 6.0+
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson JetPack 6.0+
 conda remove opencv   # 卸载 OpenCV
 pip3 install opencv-python==4.10.0.84  # 使用 pip3 安装指定版本 OpenCV
-conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
 pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
 ```
 
-### 6. 检查 Pytorch 和 Torchvision
-
-:::tip
-如果你使用的是 Jetson 设备，请根据 [此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) 安装 Pytorch 和 Torchvision。
 :::
 
+</TabItem>
+</Tabs>
 
+</div>
+</section>
 
-由于通过 pip 安装 lerobot 环境时会卸载原有的 Pytorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      #### 5. 检查 PyTorch 和 Torchvision
 
-```python
+由于通过 pip 安装 LeRobot 环境时可能会将原有的 PyTorch 和 Torchvision 替换为 CPU 版本，因此需要在 Python 中进行检查。
+
+```bash
 python3
-
-import torch
-print(torch.cuda.is_available())#输出结果应该为True
 ```
 
-如果输出为 True ，您可以输入 exit()来退出python，继续进行下列步骤  
-如果输出结果为 False，需要根据 [官网教程](https://pytorch.org/index.html) 重新安装 Pytorch 和 Torchvision。  
+```python
+import torch
+print(torch.cuda.is_available())
+exit()
+```
+
+如果输出为 `False`，表示当前环境中的 PyTorch 是 CPU 版本。没有 NVIDIA GPU 的电脑输出 `False` 是正常现象，可以继续用 CPU 运行基础流程，但训练会明显变慢。若电脑配有 NVIDIA GPU 且需要 GPU 加速，请根据 [PyTorch 官方安装指南](https://pytorch.org/index.html) 安装与 CUDA 版本匹配的 PyTorch 和 Torchvision，此时最终检查结果应为 `True`。
+
+:::tip
+如果你使用的是 Jetson 设备，请根据 [此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) 安装 GPU 版 PyTorch 和 Torchvision。
+
+NVIDIA RTX 50 系列显卡需要 CUDA 12.8 及以上版本的 PyTorch 预览版：
+
+```bash
+pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
+```
+:::
+
+</div>
+</section>
+</div>
 
 
 
@@ -239,7 +273,8 @@ sudo chmod 666 /dev/ttyUSB*  # leader 臂
 sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 ```
 
-### 校准follower臂
+<Tabs>
+<TabItem value="follower-arm" label="Follower 臂">
 B601-DM只需要在组装完成后校准一次，以下是校准指令，参考零位如图（夹爪要完全闭合）。
 
 ```bash
@@ -258,12 +293,10 @@ lerobot-calibrate \
   </div>
 
 
-### 校准leader臂
+</TabItem>
+<TabItem value="leader-arm" label="Leader 臂">
+
 校准的步骤至关重要，会直接影响机械臂是否正常运行，请严格按照流程执行。
-
-<details>
-
-<summary> rebot 102 leader </summary>
 
 :::tip
 **reBot 102 leader 校准说明**：
@@ -301,7 +334,8 @@ lerobot-calibrate \
 ```
 保持静止，然后按下enter，直到提示校准完成。  
 
-</details>
+</TabItem>
+</Tabs>
 
 :::danger
 遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
@@ -341,8 +375,8 @@ lerobot-teleoperate \
 
 ## 添加摄像头
 
-<details>
-<summary> 如果使用 RealSense D435i/D405 </summary>
+<Tabs>
+<TabItem value="realsense" label="RealSense D435i / D405">
 
 RealSense 深度相机可以为 LeRobot 提供 RGB-D 感知能力，适用于目标识别、点云重建以及桌面操作等任务。这里推荐使用的型号是 **RealSense D405** 和 **RealSense D435i**。
 
@@ -364,7 +398,12 @@ RealSense D405 是一款短距离双目深度相机，专为高精度近距离�
 
 RealSense D435i 集成了深度感知、RGB 成像以及 IMU，适用于中近距离应用，例如 3D 重建、SLAM 以及机器人环境感知。
 
-**1. 切换到 Camera 分支**
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+  <div className="rebot-step-content">
+    <h4>切换到 Camera 分支</h4>
+    <p className="rebot-step-label">步骤 1</p>
 
 当前相机支持位于 `DepthCameraSupport` 分支：
 
@@ -385,7 +424,13 @@ git branch --show-current
 DepthCameraSupport
 ```
 
-**2. 安装 RealSense：**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+  <div className="rebot-step-content">
+    <h4>安装 RealSense：</h4>
+    <p className="rebot-step-label">步骤 2</p>
 
 如果只使用 RealSense：
 
@@ -393,14 +438,26 @@ DepthCameraSupport
 pip install -e ".[realsense]"
 ```
 
-**3. 给予权限**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+  <div className="rebot-step-content">
+    <h4>给予权限</h4>
+    <p className="rebot-step-label">步骤 3</p>
 
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
 ```
 
-**4. 检测相机**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+  <div className="rebot-step-content">
+    <h4>检测相机</h4>
+    <p className="rebot-step-label">步骤 4</p>
 
 ```bash
 lerobot-find-cameras realsense
@@ -413,7 +470,13 @@ lerobot-find-cameras realsense
 * USB 信息
 * 默认流配置
 
-**5. RealSense 示例**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">5</span>
+  <div className="rebot-step-content">
+    <h4>RealSense 示例</h4>
+    <p className="rebot-step-label">步骤 5</p>
 
 双 RealSense 测试：
 
@@ -474,17 +537,25 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-**6. 参数说明**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">6</span>
+  <div className="rebot-step-content">
+    <h4>参数说明</h4>
+    <p className="rebot-step-label">步骤 6</p>
 
 * `depth_alpha` 用于控制深度图的缩放比例，可根据显示效果和目标距离范围进行调整。
 * 如果连接三台及以上深度相机，建议将 `fps` 降低至 `15` 以提高整体稳定性。
 * 建议分辨率保持在 `640x480`，以在稳定性和实时性能之间取得平衡。
 
-</details>
+</div>
+</section>
+</div>
 
-<details>
+</TabItem>
 
-<summary> 如果使用 Orbbec Gemini2 深度相机 </summary>
+<TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
 
 <div align="center">
     <img width={800}
@@ -504,9 +575,12 @@ lerobot-teleoperate \
 
 Gemini 336 是 Gemini 330 系列的新成员。它继承了 Gemini 335 强大的深度性能，并在室内反光区域、高动态场景中的暗区以及户外强光环境下进一步提升了深度成像质量。在机器人应用中，可为感知、定位和操作等任务提供更稳定、更高质量的深度数据。
 
-* 🚀 步骤 1：安装 Orbbec SDK 依赖
-
-**1. 切换到 Camera 分支**
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+  <div className="rebot-step-content">
+    <h4>切换到 Camera 分支</h4>
+    <p className="rebot-step-label">步骤 1</p>
 
 当前相机支持位于 `DepthCameraSupport` 分支：
 
@@ -527,21 +601,39 @@ git branch --show-current
 DepthCameraSupport
 ```
 
-**2. 安装Orbbec**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+  <div className="rebot-step-content">
+    <h4>安装Orbbec</h4>
+    <p className="rebot-step-label">步骤 2</p>
 
 
 ```bash
 pip install -e ".[orbbec]"
 ```
 
-**3. 给予权限**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+  <div className="rebot-step-content">
+    <h4>给予权限</h4>
+    <p className="rebot-step-label">步骤 3</p>
 
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
 ```
 
-**4. 检测相机**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+  <div className="rebot-step-content">
+    <h4>检测相机</h4>
+    <p className="rebot-step-label">步骤 4</p>
 
 ```bash
 lerobot-find-cameras orbbec
@@ -554,7 +646,13 @@ lerobot-find-cameras orbbec
 * USB 信息
 * 默认流配置
 
-**5. Orbbec 示例**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">5</span>
+  <div className="rebot-step-content">
+    <h4>Orbbec 示例</h4>
+    <p className="rebot-step-label">步骤 5</p>
 
 单 Orbbec 测试：
 
@@ -592,13 +690,25 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-**6. 参数说明**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">6</span>
+  <div className="rebot-step-content">
+    <h4>参数说明</h4>
+    <p className="rebot-step-label">步骤 6</p>
 
 * `depth_alpha` 控制深度图缩放比例，建议从 `0.2` 开始，根据显示效果微调。
 * 如果连接三台及以上深度相机，建议将 `fps` 降低至 `15` 以获得更好的稳定性。
 * 建议分辨率保持在 `640x480`，以获得更稳定的显示和数据传输。
 
-**6. 常见问题**
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">7</span>
+  <div className="rebot-step-content">
+    <h4>常见问题</h4>
+    <p className="rebot-step-label">步骤 7</p>
 
 如果出现如下错误：
 
@@ -619,12 +729,14 @@ lerobot-find-cameras orbbec
 
 - 作者: 张家铨，王文钊 - 华南师范大学   
 
+</div>
+</section>
+</div>
 
-</details>
 
-<details>
+</TabItem>
 
-<summary> 如果使用普通相机 </summary>
+<TabItem value="generic-camera" label="普通相机">
 
 
 为了实例化摄像头，您需要一个摄像头标识符。这个标识符可能会在您重启电脑或重新插拔摄像头时发生变化，这主要取决于您的操作系统。
@@ -704,7 +816,8 @@ lerobot-teleoperate \
 遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
 :::
 
-</details>
+</TabItem>
+</Tabs>
 
 ## 数据集制作采集
 
@@ -716,9 +829,8 @@ lerobot-teleoperate \
 遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
 :::
 
-<details>
-
-<summary> 如果你想数据集保存在本地 </summary>
+<Tabs>
+<TabItem value="local-dataset" label="保存在本地">
 
 <!-- TODO: reBot 本地数据采集命令 -->
 ```bash
@@ -742,10 +854,9 @@ lerobot-record \
 
 其中`repo_id`可以自定义修改，`push_to_hub=false`，最后数据集会保存在主目录的`~/.cache/huggingface/lerobot`下会创建上述`seeed_rebot_b601_dm/test`文件夹
 
-</details>
+</TabItem>
 
-<details>
-<summary> 如果您想使用 Hugging Face Hub 的功能来上传您的数据集 </summary>
+<TabItem value="hugging-face-hub" label="上传到 Hugging Face Hub">
 
 - 如果您想使用 Hugging Face Hub 的功能来上传您的数据集，并且您之前尚未这样做，请确保您已使用具有写入权限的令牌登录，该令牌可以从 [Hugging Face 设置](https://huggingface.co/settings/tokens) 中生成：
 
@@ -787,7 +898,8 @@ lerobot-record \
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
 
-</details>
+</TabItem>
+</Tabs>
 
 **记录功能**
 
@@ -905,8 +1017,8 @@ lerobot-replay \
 
 ## 训练及评估
 
-<details>
-<summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
+<Tabs>
+<TabItem value="act" label="ACT">
 
 参考官方教程[ACT](https://huggingface.co/docs/lerobot/act)
 
@@ -992,11 +1104,9 @@ lerobot-record \
 4. 当遇到`mean is infinity. You should either initialize with stats as an argument or use a pretrained model`请注意--robot.cameras这个参数中的front和side等关键词必须和采集数据集的时候保持严格一致。
 
 
-</details>
+</TabItem>
 
-
-<details>
-<summary>[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) </summary>
+<TabItem value="smolvla" label="SmolVLA">
 
 参考官方教程 [SmolVLA](https://huggingface.co/docs/lerobot/smolvla)。
 
@@ -1080,11 +1190,9 @@ lerobot-record \
 --teleop.id=rebot_arm_102_leader
 ```
 
-</details>
+</TabItem>
 
-
-<details>
-<summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
+<TabItem value="pi0" label="Pi0">
 
 参考官方教程 [Pi0](https://huggingface.co/docs/lerobot/pi0)。
 
@@ -1151,11 +1259,9 @@ lerobot-record \
   --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model
 ```
 
-</details>
+</TabItem>
 
-
-<details>
-<summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
+<TabItem value="pi05" label="Pi0.5">
 
 参考官方教程 [Pi0.5](https://huggingface.co/docs/lerobot/pi05)。
 
@@ -1220,10 +1326,9 @@ lerobot-record \
   --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model
 ```
 
-</details>
+</TabItem>
 
-<details>
-<summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
+<TabItem value="groot-n15" label="GR00T N1.5">
 
 请参考官方教程 [GR00T N1.5](https://huggingface.co/docs/lerobot/groot)。
 
@@ -1332,10 +1437,9 @@ lerobot-record \
 
 License：该模型遵循 Apache 2.0 许可证（与原始 GR00T 仓库一致）。
 
-</details>
+</TabItem>
 
-<details>
-<summary>（可选）使用 PEFT 进行高效微调</summary>
+<TabItem value="peft" label="PEFT（可选）">
 
 PEFT（Parameter-Efficient Fine-Tuning，参数高效微调）是一套"参数高效适配"方法与工具，用于在**不更新全部模型参数**的前提下，让大型预训练模型更快适配新任务。对于 LeRobot 的预训练策略（例如 SmolVLA、π₀ 等），通常可以只训练少量"适配器"参数（例如 LoRA），在降低显存占用与训练成本的同时获得接近全量微调的效果。
 
@@ -1410,10 +1514,9 @@ lerobot-train \
 
 LoRA 的学习率通常可以比全量微调更大一个量级（常见经验：约 10×）。例如全量微调常用 `1e-4`，LoRA 可以从 `1e-3` 起步；若你启用了学习率衰减（scheduler），最终学习率也常设置在 `1e-4` 附近作为参考。
 
-</details>
+</TabItem>
 
-<details>
-<summary>（可选）在训练时使用多GPU训练</summary>
+<TabItem value="multi-gpu" label="多 GPU（可选）">
 
 **1.训练步骤**
 
@@ -1620,10 +1723,9 @@ accelerate launch --num_processes=2 $(which lerobot-train) \
 只要训练过程稳定，结果依然是可用的。
 
 如需更高级的配置和故障排除，请参见[Accelerate](https://huggingface.co/docs/accelerate/index) 文档。如果你想了解更多如何在大量GPU上训练，可以看看这份超棒的指南：[Ultrascale Playbook](https://github.com/huggingface/ultrascale-playbook)。
-</details>
+</TabItem>
 
-<details>
-<summary> （可选）在部署时使用异步推理 </summary>
+<TabItem value="async-inference" label="异步推理（可选）">
 
 在不启用异步推理时，LeRobot 的控制流程可以理解为常规的顺序式 / 同步式推理：策略先预测一段动作，再执行这段动作，之后再等待下一次预测。对于较大的模型，这会导致机器人在等待新动作块时出现明显停顿。异步推理的目标，就是让机器人一边执行当前动作块，一边提前计算下一块动作，从而减少空等并提升响应性。异步推理适用于 LeRobot 支持的策略；包括 ACT、OpenVLA、Pi0、SmolVLA 这类按 chunk 输出动作的策略。由于推理和实际控制解耦，异步推理也有助于利用具有更强算力的机器来为机器人进行推理。
 
@@ -1783,7 +1885,8 @@ python -m lerobot.async_inference.robot_client \
 
 异步推理需要平衡的是：服务器生成动作块的速度必须大于或等于客户端消费动作块的速度。否则动作队列会清空，机器人开始出现卡顿（这可以在队列可视化曲线中看到触底）。
 
-</details>
+</TabItem>
+</Tabs>
 
 要从某个训练结果权重文件恢复训练，下面是一个从 `act_rebot_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
 ```bash

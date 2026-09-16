@@ -8,7 +8,7 @@ keywords:
   - Display
   - LCD
   - 1.14
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /getting_started_1.14_inch_display_nrf52840
 sku: 100069374
 sidebar_position: 1
@@ -61,7 +61,7 @@ This combination makes it an ideal platform for wearable devices, compact sensor
     <tr><td>User Buttons</td><td>3</td></tr>
     <tr><td>Battery Connector</td><td>2-pin JST 2.0 Connector for 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery status detection supported; battery voltage can also be monitored for battery-level estimation.</td></tr>
-    <tr><td>Expansion Interfaces</td><td>1x Grove I2C Connector, 1x I2C pads, 1x I2S pads, 1x SWD pads, 3x user-button pads</td></tr>
+    <tr><td>Expansion Interfaces</td><td>1x I2S Interface, 1x SWD Interface, 3x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>26 × 48 × 10.6 mm</td></tr>
     <tr><td>Best For</td><td>Portable sensor displays, Grove devices, physical controllers</td></tr>
   </table>

@@ -8,7 +8,7 @@ keywords:
   - IPS Display
   - LCD
   - Function
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /function_1.47_inch_touch_display_nrf52840
 sku: 100004242
 sidebar_position: 2

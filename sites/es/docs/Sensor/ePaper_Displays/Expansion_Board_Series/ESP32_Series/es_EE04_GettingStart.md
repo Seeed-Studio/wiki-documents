@@ -8,10 +8,10 @@ slug: /epaper_ee04
 sidebar_position: 3
 sku: 104990861,100075670,100064541,E25102101
 last_update:
-  date: 09/25/2025
-  author: Jason
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-09-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/es/epaper_ee04/
 ---
 
@@ -39,13 +39,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Impulsada por **XIAO ESP32-S3** Plus, la placa de visualización EE04 es compatible con pantallas ePaper de **24 pines** y **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de encendido, un CI de carga integrado y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos ePaper de bajo consumo, como señalización digital, etiquetas electrónicas y paneles de información portátiles.
+Impulsada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 es compatible tanto con pantallas ePaper de **24 pines** como de **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de encendido, un IC de carga integrado y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos ePaper de bajo consumo, como señalización digital, etiquetas electrónicas y paneles de información portátiles.
 
 ### Características
 
 - **Impulsada por XIAO ESP32-S3 Plus:** Funciona inmediatamente al conectarla a una pantalla ePaper compatible.
-- **Compatibilidad versátil de pantallas:** Compatible con una amplia gama de pantallas ePaper, admitiendo interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
-- **Conector de batería con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
+- **Compatibilidad versátil de pantalla:** Compatible con una amplia gama de pantallas ePaper, admitiendo interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
+- **Conector BAT con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
 - **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para acelerar proyectos y funciones personalizables.
 
 ### Especificaciones
@@ -75,7 +75,7 @@ Impulsada por **XIAO ESP32-S3** Plus, la placa de visualización EE04 es compati
       <td>Encendido/Apagado de alimentación por batería</td>
     </tr>
     <tr>
-      <th>Alimentación</th>
+      <th>Fuente de alimentación</th>
       <td>- Batería de litio de 3,7 V<br />- USB Type-C</td>
     </tr>
     <tr>
@@ -128,10 +128,10 @@ Impulsada por **XIAO ESP32-S3** Plus, la placa de visualización EE04 es compati
             <td>Encendido/Apagado de alimentación por batería</td>
         </tr>
         <tr>
-            <th>Puerto de extensión IO</th>
+            <th>Botón</th>
+            <td>1x Botón de reinicio<br />3x Botón de usuario</td>
             <td>/</td>
-            <td>conexión de otros controladores</td>
-            <td>conexión de sensores adicionales</td>
+            <td>/</td>
         </tr>
         <tr>
             <th>Puerto de extensión IO</th>
@@ -145,7 +145,7 @@ Impulsada por **XIAO ESP32-S3** Plus, la placa de visualización EE04 es compati
 ### Aplicaciones
 
 - **Panel de control para hogar inteligente**: Muestra información en tiempo real como actualizaciones del clima, eventos del calendario y notificaciones de varios dispositivos del hogar inteligente.
-- **Monitorización de energía**: Muestra datos de consumo energético de contadores inteligentes, ayudando a los propietarios a seguir y gestionar su uso de energía de forma más eficiente.
+- **Monitoreo de energía**: Muestra datos de consumo energético de medidores inteligentes, ayudando a los propietarios a seguir y gestionar su uso de energía de forma más eficiente.
 - **Alertas de seguridad**: Muestra alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
 - **Pantalla de termostato inteligente**: Muestra niveles de temperatura y humedad, así como los ajustes de control de tu termostato inteligente.
 - **Marco de fotos digital**: Crea un marco de fotos digital con WiFi que pueda mostrar imágenes desde tu red de hogar inteligente.
@@ -164,15 +164,15 @@ Esta versión XIAO ePaper Display Board(ESP32-S3) - EE04 no es compatible con la
 
 #### Conector de 24 pines
 
-- [Pantalla ePaper de 1,54 pulgadas - Monocroma 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Pantalla ePaper de 2,13 pulgadas - Flexible monocroma 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [Pantalla ePaper de 1,54 pulgadas - Monocromo 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [Pantalla ePaper de 2,13 pulgadas - Flexible monocromo 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [Pantalla ePaper de 2,13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Pantalla ePaper de 2,9 pulgadas - Monocroma 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [Pantalla ePaper de 2,9 pulgadas - Monocromo 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
 - [Pantalla ePaper de 2,9 pulgadas - Cuádruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [Pantalla ePaper de 4,2 pulgadas - Monocroma 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Pantalla ePaper de 4,26 pulgadas - Monocroma 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Pantalla ePaper de 5,83 pulgadas - Monocroma 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [Pantalla ePaper de 7,5 pulgadas - Monocroma 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [Pantalla ePaper de 4,2 pulgadas - Monocromo 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [Pantalla ePaper de 4,26 pulgadas - Monocromo 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [Pantalla ePaper de 5,83 pulgadas - Monocromo 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [Pantalla ePaper de 7,5 pulgadas - Monocromo 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [Pantalla ePaper de 7,5 pulgadas - Tricolor 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
@@ -221,7 +221,7 @@ Desplázate hacia abajo y abre este enlace.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecciona el tipo de tu dispositivo y generará algo de código. Copia ese código y lo usaremos más tarde.
+Selecciona el tipo de dispositivo y se generará algo de código. Copia ese código y lo usaremos más tarde.
 
 :::tip
 Si haces una elección incorrecta, la pantalla no mostrará nada.
@@ -248,7 +248,7 @@ Hay 4 ejemplos básicos, abre un ejemplo básico que te guste:
 
 Aquí usamos una pantalla de 5,83 pulgadas como ejemplo. Los pasos son los mismos para todas las pantallas de 24 pines; la única diferencia es seleccionar el tamaño de pantalla adecuado en el controlador.
 
-Crea un **nuevo archivo "driver.h"** y pega ese código en él. El código debería ser como:
+Crea un **nuevo archivo "driver.h"** y pega ese código en él. El código debería verse así:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/40.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -268,14 +268,14 @@ Después de eso, ve a **Tools** -> **Board** -> **XIAO ESP32S3** y **Tools** -> 
 Al conectar la pantalla ePaper a la XIAO ePaper Display Board, asegúrate de que el cable FPC esté insertado en la dirección correcta.
 
 ⚠️ ¡No inviertas el conector! Insertar el cable al revés puede hacer que el ePaper no muestre nada o incluso dañar la pantalla/placa.
-La imagen de abajo muestra la conexión correcta:
+La imagen siguiente muestra la conexión correcta:
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.jpg" style={{width:500, height:'auto'}}/></div>
 
-### Botones de usuario en la XIAO ePaper Display Board (ESP32-S3) - EE04
+### Botones de usuario en XIAO ePaper Display Board(ESP32-S3) - EE04
 
-La EE04 incorpora tres botones programables por el usuario que se pueden utilizar para varios propósitos de control. Esta sección muestra cómo leer los estados de los botones y responder a las pulsaciones usando Arduino.
+La EE04 incorpora tres botones programables por el usuario que pueden utilizarse para diversos fines de control. Esta sección muestra cómo leer los estados de los botones y responder a las pulsaciones usando Arduino.
 
 En la EE04, los tres botones están conectados a la XIAO ESP32-S3 Plus:
 
@@ -297,7 +297,7 @@ En la EE04, los tres botones están conectados a la XIAO ESP32-S3 Plus:
 </table>
 
 
-Todos los botones son activos en bajo, lo que significa que leen LOW cuando se presionan y HIGH cuando se sueltan.
+Todos los botones son de activo-bajo, lo que significa que leen LOW cuando se presionan y HIGH cuando se sueltan.
 
 Ejemplo básico de lectura de botones
 
@@ -389,7 +389,7 @@ void loop() {
 }
 ```
 
-### Batería de usuario en la XIAO ePaper Display Board (ESP32-S3) - EE04
+### Batería de usuario en XIAO ePaper Display Board(ESP32-S3) - EE04
 
 Cuando funcione con alimentación por batería:
 
@@ -433,17 +433,17 @@ void loop() {
 }
 ```
 
-### Mostrar imágenes personalizadas en la XIAO ePaper Display Board (ESP32-S3) - EE04
+### Mostrar imágenes personalizadas en XIAO ePaper Display Board (ESP32-S3) - EE04
 
 Busca el ejemplo Bitmap en la biblioteca GFX y selecciónalo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image1.png" style={{width:700, height:'auto'}}/></div>
 
-Ten en cuenta que necesitas crear un archivo driver.h dentro del directorio de tu proyecto. [Para más detalles, haz clic para Más información.](#install-seeed-gfx-library).
+Ten en cuenta que necesitas crear un archivo driver.h dentro del directorio de tu proyecto.[Para más detalles, haz clic para obtener más información.](#install-seeed-gfx-library).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image2.png" style={{width:700, height:'auto'}}/></div>
 
-A continuación, navega a la herramienta SenseCraft HMI en https://sensecraft.seeed.cc/hmi/tools/dither y sube la imagen que deseas mostrar.
+A continuación, navega a la herramienta SenseCraft Seeedash en https://sensecraft.seeed.cc/hmi/tools/dither y sube la imagen que deseas mostrar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image3m.png" style={{width:700, height:'auto'}}/></div>
 
@@ -454,7 +454,7 @@ Después de subir la imagen, genera el array en C (datos de la imagen).
 Copia el contenido del array. Ten cuidado de copiar solo los datos hexadecimales y no incluir caracteres irrelevantes.
 
 :::tip 
-Si los colores de tu pantalla aparecen invertidos en comparación con tu diseño original, selecciona la opción Invert Colors en la herramienta HMI antes de generar el código.
+Si los colores de tu pantalla aparecen invertidos en comparación con tu diseño original, selecciona la opción Invert Colors en la herramienta Seeedash antes de generar el código.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image5.png" style={{width:700, height:'auto'}}/></div>
@@ -470,14 +470,14 @@ Por último, carga el programa en tu XIAO ESP32-S3. Ahora deberías ver tu image
 ## Recursos
 
 - **[PDF]** [Esquemático de Seeed Studio XIAO ePaper Display EE04](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_SCH_V1.2.pdf)
-- **[PDF]** [Archivo 3D de Grabcad de Seeed Studio XIAO ePaper Display EE04](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
+- **[PDF]** [Archivo 3D Grabcad de Seeed Studio XIAO ePaper Display EE04](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
 - **[ZIP]** [SCH&PCB de Seeed Studio XIAO ePaper Display EE04](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_V1.2_SCH&PCB.zip)
 
 
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

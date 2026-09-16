@@ -1,9 +1,9 @@
 ---
-description: Use SenseCraft HMI to design and deploy no-code dashboards for compatible Seeed ePaper display devices.
-title: Work with SenseCraft HMI
+description: Use SenseCraft Seeedash to design and deploy no-code dashboards for compatible Seeed ePaper display devices.
+title: Work with SenseCraft Seeedash
 keywords:
   - ePaper display
-  - SenseCraft HMI
+  - SenseCraft Seeedash
   - no-code dashboard
   - reTerminal
   - XIAO ePaper
@@ -11,58 +11,58 @@ image: https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.webp
 slug: /EE04_with_hmi
 sidebar_position: 1
 last_update:
-  date: 06/15/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/EE04_with_hmi/
-updatedAt: '2026-06-16'
+updatedAt: '2026-09-10'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Work with SenseCraft HMI
+# Work with SenseCraft Seeedash
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) is Seeed Studio's no-code interface design platform for ePaper display devices. You can design dashboards, image galleries, calendars, RSS pages, web content pages, and other always-on information screens in a browser, then deploy them to a compatible device over Wi-Fi.
+[SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) is Seeed Studio's no-code interface design platform for ePaper display devices. You can design dashboards, image galleries, calendars, RSS pages, web content pages, and other always-on information screens in a browser, then deploy them to a compatible device over Wi-Fi.
 
-This Wiki is an ePaper Display application guide. It explains the shortest path from a Seeed ePaper device to a working SenseCraft HMI page, and uses one ePaper display board plus one ePaper screen as an example hardware setup.
+This Wiki is an ePaper Display application guide. It explains the shortest path from a Seeed ePaper device to a working SenseCraft Seeedash page, and uses one ePaper display board plus one ePaper screen as an example hardware setup.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Open SenseCraft HMI</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Open SenseCraft Seeedash</font></span></strong>
     </a>
 </div><br />
 
 ## When to Use This Guide
 
-Use this guide when you want to use SenseCraft HMI with a compatible Seeed ePaper product and quickly complete the following workflow:
+Use this guide when you want to use SenseCraft Seeedash with a compatible Seeed ePaper product and quickly complete the following workflow:
 
-1. Confirm or flash the SenseCraft HMI firmware.
+1. Confirm or flash the SenseCraft Seeedash firmware.
 2. Connect the device to Wi-Fi.
-3. Add the device to your SenseCraft HMI workspace.
+3. Add the device to your SenseCraft Seeedash workspace.
 4. Deploy your first page to the ePaper display.
 
-For the full platform manual, including account settings, editor details, templates, data widgets, and release notes, see the [official SenseCraft HMI documentation](https://sensecraft-hmi-docs.seeed.cc/en/overview/).
+For the full platform manual, including account settings, editor details, templates, data widgets, and release notes, see the [official SenseCraft Seeedash documentation](https://sensecraft-hmi-docs.seeed.cc/en/overview/).
 
 ## Before You Start
 
-Prepare the following items before using SenseCraft HMI:
+Prepare the following items before using SenseCraft Seeedash:
 
 - A compatible Seeed ePaper display device.
-- A SenseCraft account. You can create one from the [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) login page.
+- A SenseCraft account. You can create one from the [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) login page.
 - A 2.4 GHz Wi-Fi network.
 - A USB-C data cable if your device needs firmware flashing.
-- A computer running a browser that supports serial-port flashing from the SenseCraft HMI web tool.
+- A computer running a browser that supports serial-port flashing from the SenseCraft Seeedash web tool.
 
 :::tip
-Different ePaper products use different HMI firmware builds. Always select the firmware that matches your exact device and screen size.
+Different ePaper products use different Seeedash firmware builds. Always select the firmware that matches your exact device and screen size.
 :::
 
-## Official SenseCraft HMI Documentation
+## Official SenseCraft Seeedash Documentation
 
-SenseCraft HMI has a dedicated documentation site. Use this Wiki for the ePaper Display quick-start flow, and use the official documentation for complete platform instructions.
+SenseCraft Seeedash has a dedicated documentation site. Use this Wiki for the ePaper Display quick-start flow, and use the official documentation for complete platform instructions.
 
 <div class="table-center">
   <table align="center">
@@ -73,7 +73,7 @@ SenseCraft HMI has a dedicated documentation site. Use this Wiki for the ePaper 
     </tr>
     <tr>
       <td>Overview</td>
-      <td>Understand what SenseCraft HMI is and what it can do.</td>
+      <td>Understand what SenseCraft Seeedash is and what it can do.</td>
       <td><a href="https://sensecraft-hmi-docs.seeed.cc/en/overview/" target="_blank" rel="noopener noreferrer">Open Overview</a></td>
     </tr>
     <tr>
@@ -134,19 +134,19 @@ The steps below use the **XIAO ePaper Display Board (ESP32-S3) - EE04** with the
 </div>
 
 :::note
-This example is not a compatibility list. For the current supported hardware and firmware matrix, always refer to the [SenseCraft HMI Supported Hardware page](https://sensecraft-hmi-docs.seeed.cc/en/supported_hardware/).
+This example is not a compatibility list. For the current supported hardware and firmware matrix, always refer to the [SenseCraft Seeedash Supported Hardware page](https://sensecraft-hmi-docs.seeed.cc/en/supported_hardware/).
 :::
 
-## Step 1: Confirm or Flash HMI Firmware
+## Step 1: Confirm or Flash Seeedash Firmware
 
-The first step is to make sure your ePaper device is running SenseCraft HMI firmware.
+The first step is to make sure your ePaper device is running SenseCraft Seeedash firmware.
 
 <Tabs groupId="hmi-hardware">
 <TabItem value="reterminal" label="reTerminal E Series" default>
 
-The reTerminal E Series is designed to work with SenseCraft HMI out of the box. Power on the device and continue to [Step 2: Connect the Device to Wi-Fi](#step-2-connect-the-device-to-wi-fi).
+The reTerminal E Series is designed to work with SenseCraft Seeedash out of the box. Power on the device and continue to [Step 2: Connect the Device to Wi-Fi](#step-2-connect-the-device-to-wi-fi).
 
-If you previously flashed another firmware, open the [SenseCraft HMI device page](https://sensecraft.seeed.cc/hmi/device), choose your device model, and follow the on-screen firmware instructions.
+If you previously flashed another firmware, open the [SenseCraft Seeedash device page](https://sensecraft.seeed.cc/hmi/device), choose your device model, and follow the on-screen firmware instructions.
 
 :::tip
 Use **Full Flash** only when you want to clear stored Wi-Fi information, pairing data, and existing device content.
@@ -155,9 +155,9 @@ Use **Full Flash** only when you want to clear stored Wi-Fi information, pairing
 </TabItem>
 <TabItem value="display-board" label="ePaper Display Board + Screen">
 
-For a display board plus separate ePaper screen, flash the HMI firmware that matches your board and panel.
+For a display board plus separate ePaper screen, flash the Seeedash firmware that matches your board and panel.
 
-**Step 1.** Sign in to [SenseCraft HMI](https://sensecraft.seeed.cc/hmi), then open **Tools** from the top menu.
+**Step 1.** Sign in to [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi), then open **Tools** from the top menu.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/256.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -188,7 +188,7 @@ If no port appears, press the **RESET** button on the board and try again. Also 
 
 ## Step 2: Connect the Device to Wi-Fi
 
-After the device is running HMI firmware, connect it to your local Wi-Fi network.
+After the device is running Seeedash firmware, connect it to your local Wi-Fi network.
 
 **Step 1.** Connect your phone or computer to the Wi-Fi access point shown on the ePaper screen. This temporary access point does not require a password.
 
@@ -225,9 +225,9 @@ Use a 2.4 GHz Wi-Fi network. Many ESP32-S3-based devices do not connect to 5 GHz
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi13.jpg" style={{width:700, height:'auto'}}/></div>
 
-## Step 3: Add the Device to SenseCraft HMI
+## Step 3: Add the Device to SenseCraft Seeedash
 
-After Wi-Fi setup, add the device to your SenseCraft HMI workspace.
+After Wi-Fi setup, add the device to your SenseCraft Seeedash workspace.
 
 **Step 1.** Open the **Device** page and click **Add Device**.
 
@@ -241,7 +241,7 @@ After Wi-Fi setup, add the device to your SenseCraft HMI workspace.
 
 ## Step 4: Deploy Your First Page
 
-Once the device is paired, you can deploy content from SenseCraft HMI to the ePaper screen.
+Once the device is paired, you can deploy content from SenseCraft Seeedash to the ePaper screen.
 
 The fastest way to start is to use an existing template or one of the built-in creation tools. For the detailed editor flow, follow the [official Getting Started guide](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting_started/).
 
@@ -280,10 +280,10 @@ The fastest way to start is to use an existing template or one of the built-in c
   </table>
 </div>
 
-The example below shows a SenseCraft HMI page deployed to a 7.3" ePaper display.
+The example below shows a SenseCraft Seeedash page deployed to a 7.3" ePaper display.
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi42.png" alt="SenseCraft HMI page on a 7.3 inch ePaper display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi42.png" alt="SenseCraft Seeedash page on a 7.3 inch ePaper display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Example result on a 7.3" ePaper display</em></p>
 </div>
 
@@ -311,7 +311,7 @@ The most common cause is using an unsupported Wi-Fi band or entering the wrong p
 
 The firmware may not match the connected screen, or the screen may not be connected correctly.
 
-- Recheck the device model, screen size, and firmware entry on the SenseCraft HMI Tools page.
+- Recheck the device model, screen size, and firmware entry on the SenseCraft Seeedash Tools page.
 - Power off the board before reconnecting the ePaper flex cable.
 - Confirm that the flex cable direction and connector type match your hardware.
 - Flash the matching firmware again and wait for the ePaper refresh to finish.
@@ -327,11 +327,11 @@ Different ePaper panels have different resolution, color capability, grayscale b
 
 ## Resources
 
-- [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
-- [SenseCraft HMI Official Documentation](https://sensecraft-hmi-docs.seeed.cc/en/overview/)
-- [SenseCraft HMI Supported Hardware](https://sensecraft-hmi-docs.seeed.cc/en/supported_hardware/)
-- [SenseCraft HMI Getting Started](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting_started/)
-- [SenseCraft HMI Release Notes](https://sensecraft-hmi-docs.seeed.cc/en/release_note/)
+- [SenseCraft Seeedash Platform](https://sensecraft.seeed.cc/hmi)
+- [SenseCraft Seeedash Official Documentation](https://sensecraft-hmi-docs.seeed.cc/en/overview/)
+- [SenseCraft Seeedash Supported Hardware](https://sensecraft-hmi-docs.seeed.cc/en/supported_hardware/)
+- [SenseCraft Seeedash Getting Started](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting_started/)
+- [SenseCraft Seeedash Release Notes](https://sensecraft-hmi-docs.seeed.cc/en/release_note/)
 
 ## Tech Support & Product Discussion
 
