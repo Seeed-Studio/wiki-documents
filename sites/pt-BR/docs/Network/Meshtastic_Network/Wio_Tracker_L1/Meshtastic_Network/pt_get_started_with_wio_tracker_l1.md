@@ -515,7 +515,7 @@ Se o ZIP não estiver na pasta atual do seu terminal, passe o caminho completo p
 adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
 ```
 
-</TabItem]
+</TabItem>
 
 <TabItem value="linux" label="Linux">
 
