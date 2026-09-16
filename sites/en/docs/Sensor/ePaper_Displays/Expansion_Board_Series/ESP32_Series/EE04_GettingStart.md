@@ -272,7 +272,7 @@ After downloading the library, go to **Sketch** -> **Include Library** -> **Add 
 ### Configure and burn the program
 
 As shown in the image, navigate to the example through this menu:
-File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → EE04 → 7.5-inch ePaper - Monochrome 800x480 → 7_5_inch_Monochrome_HelloWorld
+File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → XIAO ePaper Display Board - EE04 → 7.5-inch ePaper - Monochrome 800x480 → 7_5_inch_Monochrome_HelloWorld
 
 :::note
 This guide uses the **7.5-inch Monochrome ePaper (800 x 480)** as the example. If you have a different screen, open the example folder that matches your own panel model under `EE04` instead.
