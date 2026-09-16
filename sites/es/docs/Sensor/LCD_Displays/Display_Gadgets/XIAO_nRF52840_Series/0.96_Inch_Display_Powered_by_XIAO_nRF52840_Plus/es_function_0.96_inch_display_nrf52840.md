@@ -1,5 +1,5 @@
 ---
-description: Demos independientes a nivel de función para cada periférico integrado de la XIAO 0.96'' IPS Display (nRF52840). Cubre pantalla, IMU, micrófono PDM, grabación en la Flash interna y reproducción de audio I2S, botones y batería.
+description: Demos independientes a nivel de función para cada periférico integrado de la XIAO 0.96'' IPS Display (nRF52840). Cubre pantalla, IMU, micrófono PDM, grabación en Flash interna y reproducción de audio I2S, botones y batería.
 title: Uso de periféricos integrados
 sidebar_label: Función
 keywords:
@@ -48,27 +48,27 @@ Todos los demos de esta página requieren **Seeed nRF52 Boards (1.1.13)** como s
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar Seeed_GFX2</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download Seeed_GFX2</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **Paso 1.** Haz clic en el botón de arriba para descargar `Seeed_GFX2` v1.0.0 como archivo ZIP (anclado a una etiqueta de versión para que el tutorial siga siendo reproducible). Como alternativa, clona el repositorio desde [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2).
 
-**Paso 2.** En el Arduino IDE, ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el ZIP descargado. El IDE lee `library.properties` y lo instala automáticamente en la carpeta `Seeed_GFX2` correcta; no necesitas renombrar la carpeta extraída. (Para instalar manualmente en su lugar, descomprime el archivo y renombra la carpeta extraída a `Seeed_GFX2` antes de colocarla en `Documents/Arduino/libraries/`).
+**Paso 2.** En el Arduino IDE, ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el ZIP descargado. El IDE lee `library.properties` y lo instala automáticamente en la carpeta `Seeed_GFX2` correcta; no necesitas cambiar el nombre de la carpeta extraída. (Para instalarlo manualmente en su lugar, descomprime el archivo y cambia el nombre de la carpeta extraída a `Seeed_GFX2` antes de colocarla en `Documents/Arduino/libraries/`).
 
 **Paso 3.** Reinicia el Arduino IDE para que se detecte la nueva biblioteca.
 
 :::tip
-- **Seeed_GFX2** es la biblioteca gráfica de Seeed Studio construida sobre una arquitectura en capas `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_XIAO_0inch96_LCD<38, 37>, Config_Seeed_0inch96_LCD_ST7789>()`: el template **Board** posee el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y el **Panel Config** integra la resolución 80×160, el orden de color BGR y la rotación 2. Seeed_GFX2 controla este panel con un SPI por hardware conservador de 10 MHz, lo que evita el problema de margen de señal que requería SPI por software en demos anteriores.
-- La pantalla IPS de 0,96'' **no tiene controlador táctil ni ranura para tarjeta SD**, por lo que no se necesitan bibliotecas de touch ni de SD.
+- **Seeed_GFX2** es la biblioteca gráfica de Seeed Studio construida sobre una arquitectura en capas `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_XIAO_0inch96_LCD<38, 37>, Config_Seeed_0inch96_LCD_ST7789>()`: la plantilla **Board** posee el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución 80×160, el orden de color BGR y la rotación 2. Seeed_GFX2 controla este panel con un SPI por hardware conservador de 10 MHz, lo que evita el problema de margen de señal que requería SPI por software en demos anteriores.
+- La pantalla IPS de 0,96'' **no tiene controlador táctil ni ranura para tarjeta SD**, por lo que no se necesitan bibliotecas de touch ni SD.
 :::
 
 ## Obtener el código de demostración
 
-Cada demo de esta página se encuentra en el repositorio [Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets), en el directorio `code_GFX2/Function/`. Cada demo es una carpeta que contiene un único sketch `.ino`. **Descarga siempre la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
+Cada demo de esta página se encuentra en el repositorio [Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets), dentro del directorio `code_GFX2/Function/`. Cada demo es una carpeta que contiene un único sketch `.ino`. **Descarga siempre la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
 
-**Opción A — Descargar el repositorio como ZIP (recomendado):**
+**Opción A — Descarga el repositorio como ZIP (recomendado):**
 
 1. Abre [github.com/Seeed-Projects/Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets) y haz clic en **Code > Download ZIP**, luego extrae el archivo en cualquier lugar conveniente.
 2. Navega a `code_GFX2/Function/` y abre la carpeta indicada en la línea **Code location** de cada demo. Por ejemplo, el demo GraphicTest para esta placa se encuentra en `code_GFX2/Function/096_nRF52840/xiao_nrf52840_096_graphictest/`.
@@ -84,13 +84,13 @@ Luego abre el archivo `.ino` del demo desde la carpeta clonada `code_GFX2/Functi
 
 ## Pantalla — GraphicTest
 
-Este demo ejecuta un benchmark gráfico completo en el panel IPS ST7789 de 0,96 pulgadas (80×160), que cubre barras de color, líneas, rectángulos, círculos, triángulos, rectángulos redondeados, texto y un degradado de píxeles. Úsalo para verificar que la pantalla está cableada correctamente y que todas las llamadas de dibujo funcionan como se espera.
+Este demo ejecuta un benchmark gráfico completo en el panel IPS ST7789 de 0,96 pulgadas (80×160), que incluye barras de color, líneas, rectángulos, círculos, triángulos, rectángulos redondeados, texto y un degradado de píxeles. Úsalo para verificar que la pantalla está cableada correctamente y que todas las llamadas de dibujo funcionan como se espera.
 
 **Code location:** `code_GFX2/Function/096_nRF52840/xiao_nrf52840_096_graphictest/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/096_nRF52840/xiao_nrf52840_096_graphictest" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Ver en GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -99,14 +99,14 @@ Este demo ejecuta un benchmark gráfico completo en el panel IPS ST7789 de 0,96 
 
 El sketch inicializa el panel IPS ST7789 mediante **Seeed_GFX2**, luego recorre en secuencia diez primitivas gráficas, midiendo el tiempo de ejecución de cada una mediante `micros()` y mostrando el resultado en el monitor serie.
 
-La pantalla se inicializa con una única llamada de template:
+La pantalla se inicializa con una única llamada de plantilla:
 
 ```cpp
 display.begin<Board_XIAO_0inch96_LCD<38, 37>,
               Config_Seeed_0inch96_LCD_ST7789>();
 ```
 
-El template **Board** posee el mapa de pines — CS=D2, DC=D3, SCK=D8, MOSI=D10 — y sus parámetros de template `<RST, BL>` toman números GPIO directos, por lo que `<38, 37>` establece RST=GPIO38 y BL=GPIO37. El **Panel Config** integra la resolución 80×160, el orden de color BGR y la rotación 2; no se necesita ningún `driver.h` ni una llamada manual a `invertDisplay()`. Seeed_GFX2 controla el panel con un SPI por hardware conservador de 10 MHz, evitando el problema de margen de señal que obligaba a usar SPI por software en demos anteriores.
+La plantilla **Board** posee el mapa de pines — CS=D2, DC=D3, SCK=D8, MOSI=D10 — y sus parámetros de plantilla `<RST, BL>` toman números GPIO directos, por lo que `<38, 37>` establece RST=GPIO38 y BL=GPIO37. La **Panel Config** integra la resolución 80×160, el orden de color BGR y la rotación 2; no se necesita `driver.h` ni una llamada manual a `invertDisplay()`. Seeed_GFX2 controla el panel con un SPI por hardware conservador de 10 MHz, evitando el problema de margen de señal que obligaba a usar SPI por software en demos anteriores.
 
 :::note
 **Orden de color (panel BGR).** Este panel de 0,96 pulgadas intercambia físicamente los canales rojo y azul. El demo ajusta los colores en consecuencia (por ejemplo, un rojo a nivel de señal `0xF800` aparece azul en pantalla). Si escribes tu propio código de dibujo, usa los alias de color del demo o ten en cuenta el orden BGR; de lo contrario, los rojos y azules aparecerán intercambiados.
@@ -164,7 +164,7 @@ Este demo convierte la pantalla en una simulación de fluido interactiva: partí
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/096_nRF52840/xiao_nrf52840_096_electronic_quicksand" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Ver en GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -175,12 +175,12 @@ La simulación utiliza una **rejilla de ocupación de 13×26** superpuesta sobre
 
 El IMU se lee vía I2C (D4/D5) usando la librería Seeed Arduino LSM6DS3 en la dirección `0x6A`. Los valores de aceleración en bruto se filtran con un filtro de paso bajo y se usan para derivar un vector de gravedad. Cuando inclinas la placa:
 
-1. **Actualización del vector de gravedad**: los datos del acelerómetro se suavizan con una media móvil exponencial para evitar el parpadeo.
-2. **Velocidad de las partículas**: cada particula acelera en la dirección del vector de gravedad, con amortiguamiento y un factor de movilidad por partícula basado en su profundidad en el flujo.
-3. **Ocupación de celdas**: las partículas más profundas en el flujo (más cerca de la "parte inferior" relativa a la gravedad) tienen movilidad reducida, creando un efecto de empaquetado realista.
-4. **Renderizado diferencial**: solo se redibujan las celdas donde las partículas entraron o salieron, minimizando el tráfico SPI y manteniendo la animación fluida en el pequeño panel.
+1. **Actualización del vector de gravedad** — los datos del acelerómetro se suavizan con un promedio móvil exponencial para evitar el parpadeo.
+2. **Velocidad de las partículas** — cada partícula se acelera en la dirección del vector de gravedad, con amortiguamiento y un factor de movilidad por partícula basado en su profundidad en el flujo.
+3. **Ocupación de celdas** — las partículas más profundas en el flujo (más cerca del "fondo" relativo a la gravedad) tienen movilidad reducida, creando un efecto de empaquetado realista.
+4. **Renderizado diferencial** — solo se redibujan las celdas donde las partículas entraron o salieron, minimizando el tráfico SPI y manteniendo la animación fluida en el panel pequeño.
 
-Las partículas cercanas a la superficie fluyen libremente (mayor movilidad); las partículas enterradas más profundamente se empaquetan firmemente (menor movilidad), imitando cómo se comporta la arena real.
+Las partículas cercanas a la superficie fluyen libremente (mayor movilidad); las partículas enterradas más profundamente se compactan firmemente (menor movilidad), imitando cómo se comporta la arena real.
 
 ### Ejecución de la demo
 
@@ -188,7 +188,7 @@ Las partículas cercanas a la superficie fluyen libremente (mayor movilidad); la
 
 **Paso 2.** Selecciona la placa y el puerto, luego haz clic en **Upload**.
 
-**Paso 3.** Una vez cargado, la pantalla se llena de partículas doradas en la parte inferior. Inclina la placa en diferentes direcciones: la arena fluye como si fuera atraída por la gravedad.
+**Paso 3.** Una vez subido, la pantalla se llena de partículas doradas en la parte inferior. Inclina la placa en diferentes direcciones: la arena fluye como si fuera atraída por la gravedad.
 
 **Paso 4.** Abre **Tools > Serial Monitor** (115200 baudios) para confirmar la inicialización:
 
@@ -208,40 +208,40 @@ Las partículas de arena dorada fluyen suavemente cuando inclinas la placa. Cuan
 
 ### Demo 2: Levantar para activar
 
-Esta demo implementa un **sistema de suspensión/activación de pantalla** impulsado por la interrupción de movimiento integrada del IMU en **D14**. La pantalla se apaga automáticamente (retroiluminación apagada + suspensión del sistema ON del nRF52) tras un periodo de inactividad configurable, y se activa al instante cuando levantas o mueves el dispositivo.
+Esta demo implementa un **sistema de suspensión/activación de pantalla** impulsado por la interrupción de movimiento integrada del IMU en **D14**. La pantalla se apaga automáticamente (retroiluminación apagada + nRF52 en suspensión System ON) tras un periodo de inactividad configurable, y se activa al instante cuando levantas o mueves el dispositivo.
 
 **Ubicación del código:** `code_GFX2/Function/096_nRF52840/xiao_nrf52840_096_wakeup/`
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/096_nRF52840/xiao_nrf52840_096_wakeup" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Ver en GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 ### Cómo funciona
 
-La demo utiliza el **detector de eventos de activación integrado** del LSM6DS3, una función de hardware que monitoriza internamente los datos del acelerómetro y activa el pin INT1 (enrutado a D14 en esta placa) cuando el movimiento supera un umbral configurable. Esto significa que el MCU no necesita sondear continuamente el acelerómetro.
+La demo utiliza el **detector de eventos de activación integrado** del LSM6DS3: una función de hardware que monitoriza internamente los datos del acelerómetro y activa el pin INT1 (conectado a D14 en esta placa) cuando el movimiento supera un umbral configurable. Esto significa que el MCU no necesita sondear continuamente el acelerómetro.
 
 **Configuración del IMU (LSM6DS3):**
 
 <div class="table-center">
   <table align="center">
     <tr><th>Registro</th><th>Valor</th><th>Propósito</th></tr>
-    <tr><td><code>CTRL3_C</code></td><td><code>0x44</code></td><td>Bloqueo de actualización de datos (BDU) + auto-incremento</td></tr>
+    <tr><td><code>CTRL3_C</code></td><td><code>0x44</code></td><td>Actualización de datos bloqueada (BDU) + auto-incremento</td></tr>
     <tr><td><code>CTRL1_XL</code></td><td><code>0x40</code></td><td>Acelerómetro @ 104 Hz, ±2g</td></tr>
     <tr><td><code>TAP_CFG</code></td><td><code>0x80</code></td><td>Habilitar interrupciones integradas</td></tr>
     <tr><td><code>WAKE_UP_THS</code></td><td><code>0x05</code></td><td>Umbral de activación (sensibilidad media-baja)</td></tr>
-    <tr><td><code>WAKE_UP_DUR</code></td><td><code>0x00</code></td><td>Sin filtro de duración (activación rápida)</td></tr>
+    <tr><td><code>WAKE_UP_DUR</code></td><td><code>0x00</code></td><td>Sin filtro de duración (activación sensible)</td></tr>
     <tr><td><code>MD1_CFG</code></td><td><code>0x20</code></td><td>Enrutar activación a INT1</td></tr>
   </table>
 </div>
 
 **Flujo de suspensión/activación:**
 
-1. **Estado activo**: la pantalla está encendida, la retroiluminación al máximo brillo, la interfaz de usuario se actualiza cada 250 ms con datos de IMU en tiempo real.
-2. **Suspensión automática**: después de 8 segundos de inactividad, el sketch apaga la retroiluminación, muestra un mensaje "Sleep — Move to wake" y entra en suspensión System ON del nRF52 (modo de bajo consumo con retención de RAM). La interrupción de activación del IMU en D14 ya se configuró al inicio, por lo que la detección de movimiento permanece activa durante la suspensión.
-3. **Activación**: cuando el usuario levanta la placa, el IMU detecta movimiento y pone D14 en HIGH. El nRF52840 sale de la suspensión System ON, vuelve a encender la retroiluminación y redibuja la interfaz de usuario; el LCD y el IMU mantienen su estado porque la suspensión System ON conserva la RAM.
+1. **Estado activo** — la pantalla está encendida, la retroiluminación al máximo brillo, la interfaz se actualiza cada 250 ms con datos en tiempo real del IMU.
+2. **Suspensión automática** — tras 8 segundos de inactividad, el sketch apaga la retroiluminación, muestra un mensaje "Sleep — Move to wake" y entra en suspensión System ON del nRF52 (modo de bajo consumo con retención de RAM). La interrupción de activación del IMU en D14 ya se configuró al inicio, por lo que la detección de movimiento permanece activa durante la suspensión.
+3. **Activación** — cuando el usuario levanta la placa, el IMU detecta movimiento y pone D14 en HIGH. El nRF52840 sale de la suspensión System ON, vuelve a encender la retroiluminación y redibuja la interfaz: el LCD y el IMU mantienen su estado porque la suspensión System ON conserva la RAM.
 
 **Botones de prueba manual:**
 
@@ -257,9 +257,9 @@ La demo utiliza el **detector de eventos de activación integrado** del LSM6DS3,
 
 **Paso 1.** Abre `xiao_nrf52840_096_wakeup.ino` en Arduino IDE, selecciona la placa y el puerto, y haz clic en **Upload**.
 
-**Paso 2.** La pantalla muestra un panel compacto con el estado de energía, datos de movimiento y una cuenta regresiva. Deja la placa quieta: entrará automáticamente en suspensión después de 8 segundos.
+**Paso 2.** La pantalla muestra un panel compacto con el estado de energía, datos de movimiento y una cuenta regresiva. Deja la placa quieta: entrará automáticamente en suspensión tras 8 segundos.
 
-**Paso 3.** Levanta la placa o agítala suavemente: la pantalla se activa inmediatamente.
+**Paso 3.** Levanta la placa o agítala suavemente: la pantalla se activa de inmediato.
 
 **Paso 4.** Abre **Tools > Serial Monitor** (115200 baudios) para observar el arranque y las transiciones de suspensión/activación:
 
@@ -289,13 +289,13 @@ Los campos `sleptMs`, `sleepLoops` y `wakeSrc` varían dependiendo de cuánto ti
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_function_wakeup.gif" style={{width:500, height:'auto'}}/></div>
 
-La pantalla muestra datos de movimiento en tiempo real mientras está activa. Después de 8 segundos de quietud, la pantalla se oscurece y el nRF52840 entra en suspensión de bajo consumo. Levanta el dispositivo y la pantalla se restaura al instante, con el contador de activaciones incrementado.
+La pantalla muestra datos de movimiento en tiempo real mientras está activa. Tras 8 segundos de quietud, la pantalla se oscurece y el nRF52840 entra en suspensión de bajo consumo. Levanta el dispositivo y la pantalla se restaura al instante, con el contador de activaciones incrementado.
 
 ---
 
 ## Micrófono y altavoz — Grabadora en flash
 
-Esta demo convierte la pantalla IPS de 0,96'' en una pequeña grabadora de voz. Pulsa USR1 para capturar un clip corto desde el micrófono PDM integrado en el sistema de archivos flash interno del nRF52840, luego pulsa USR2 para reproducirlo a través de un amplificador I2S externo.
+Esta demo convierte la pantalla IPS de 0,96'' en una pequeña grabadora de voz. Pulsa USR1 para capturar un clip corto desde el micrófono PDM integrado hacia el sistema de archivos flash interno del nRF52840, luego pulsa USR2 para reproducirlo a través de un amplificador I2S externo.
 
 El micrófono PDM de la pantalla IPS de 0,96'' se conecta a los mismos pines que las otras placas de pantalla XIAO:
 
@@ -311,7 +311,7 @@ El micrófono PDM de la pantalla IPS de 0,96'' se conecta a los mismos pines que
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets/tree/main/code_GFX2/Function/096_nRF52840/xiao_nrf52840_096_flash_record" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Ver en GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -325,14 +325,14 @@ El lado de reproducción necesita un amplificador I2S externo. La demo está esc
     <tr><th>Pin XIAO</th><th>Señal I2S</th><th>MAX98357A</th></tr>
     <tr><td>3V3</td><td>Alimentación</td><td>VIN</td></tr>
     <tr><td>GND</td><td>Tierra</td><td>GND</td></tr>
-    <tr><td>D11</td><td>I2S_SD (data out)</td><td>DIN</td></tr>
-    <tr><td>D12</td><td>I2S_SCK (bit clock)</td><td>BCLK</td></tr>
+    <tr><td>D11</td><td>I2S_SD (salida de datos)</td><td>DIN</td></tr>
+    <tr><td>D12</td><td>I2S_SCK (reloj de bit)</td><td>BCLK</td></tr>
     <tr><td>D13</td><td>I2S_WS (word select)</td><td>LRC</td></tr>
   </table>
 </div>
 
 :::caution
-Desconecta la alimentación USB antes de cablear el amplificador y el altavoz. Conecta el altavoz a los terminales **SPK+** y **SPK-** del MAX98357A — **no** conectes ninguno de los cables del altavoz a GND.
+Desconecta la alimentación por USB antes de cablear el amplificador y el altavoz. Conecta el altavoz a los terminales **SPK+** y **SPK-** del MAX98357A — **no** conectes ninguno de los cables del altavoz a GND.
 :::
 
 :::note
@@ -349,11 +349,11 @@ La pantalla es controlada por **Seeed_GFX2** con `Board_XIAO_0inch96_LCD<38, 37>
 
 1. El sketch inicia el periférico PDM a **16 kHz, un solo canal** y captura muestras en bruto en un búfer de 11200 muestras (≈ 0,7 s, ≈ 22 KB de PCM) a través de una ISR (`onPdmData`).
 2. Una pantalla de progreso muestra el porcentaje de grabación y el tiempo transcurrido en tiempo real.
-3. Cuando el búfer se llena, el sketch antepone una cabecera WAV de 44 bytes y escribe el archivo `/REC_RAW.WAV` en InternalFS.
+3. Cuando el búfer está lleno, el sketch antepone una cabecera WAV de 44 bytes y escribe el archivo `/REC_RAW.WAV` en InternalFS.
 
 **Reproducción (USR2):**
 
-1. El WAV se vuelve a cargar desde InternalFS.
+1. El WAV se carga de nuevo desde InternalFS.
 2. El sketch controla el periférico I2S del nRF52840 en **modo maestro** con una relación de 32× (≈ 16 kHz LRCK), enviando tramas estéreo de 16 bits al MAX98357A con una ganancia de **0,75×** (cada muestra mono se duplica en ambos canales).
 3. Un esquema de doble búfer (ping-pong) mantiene el flujo de audio ininterrumpido hasta que termina el clip.
 
@@ -379,7 +379,7 @@ Las bibliotecas **PDM**, **Adafruit TinyUSB**, **Adafruit LittleFS** e **Interna
 
 **Paso 3.** Haz clic en **Upload**.
 
-**Paso 4.** La pantalla muestra la pantalla de espera del "Recorder". Pulsa **USR1** — una barra de progreso roja "REC" se va llenando mientras graba. Al terminar, guarda el WAV y vuelve a la pantalla de espera.
+**Paso 4.** La pantalla muestra la pantalla de espera de "Recorder". Pulsa **USR1** — una barra de progreso roja "REC" se llena mientras graba. Cuando termina, guarda el WAV y vuelve a la pantalla de espera.
 
 **Paso 5.** Pulsa **USR2** — el clip se reproduce a través del altavoz MAX98357A conectado, mientras la pantalla muestra "Playing...".
 
@@ -387,17 +387,17 @@ Las bibliotecas **PDM**, **Adafruit TinyUSB**, **Adafruit LittleFS** e **Interna
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_function_flash_record.gif" style={{width:500, height:'auto'}}/></div>
 
-Después de pulsar USR1, la barra de progreso roja se llena hasta el 100% y el clip se guarda. Al pulsar USR2, la grabación se reproduce a través del MAX98357A. El archivo WAV se almacena en InternalFS y sigue disponible después de un reinicio o un ciclo de alimentación. Grabar de nuevo con USR1 sobrescribe el archivo anterior.
+Después de pulsar USR1, la barra de progreso roja se llena hasta el 100% y el clip se guarda. Al pulsar USR2 se reproduce la grabación a través del MAX98357A. El archivo WAV se almacena en InternalFS y sigue disponible después de un reinicio o un ciclo de alimentación. Grabar de nuevo con USR1 sobrescribe el archivo anterior.
 
 :::note
-Este tutorial se ha compilado, subido y probado a nivel de hardware con el XIAO nRF52840 Plus, la pantalla IPS de 0,96'', un amplificador MAX98357A y un altavoz externo.
+Este tutorial se ha compilado, subido y probado a nivel de hardware con la XIAO nRF52840 Plus, la pantalla IPS de 0,96'', un amplificador MAX98357A y un altavoz externo.
 :::
 
 ---
 
 ## Botones de usuario
 
-La pantalla IPS de 0,96'' tiene **dos pulsadores físicos** conectados al XIAO nRF52840 Plus:
+La pantalla IPS de 0,96'' tiene **dos pulsadores físicos** conectados a la XIAO nRF52840 Plus:
 
 <div class="table-center">
   <table align="center">
@@ -437,9 +437,9 @@ void loop() {
 }
 ```
 
-### Antirrebote con interrupciones
+### Eliminación de rebotes con interrupciones
 
-Para un manejo de botones con antirrebote y respuesta rápida sin bloquear el bucle principal, puedes usar interrupciones por cambio de pin:
+Para un manejo de botones sensible y sin rebotes, sin bloquear el bucle principal, puedes usar interrupciones por cambio de pin:
 
 ```cpp
 volatile bool btn1Flag = false;
@@ -512,7 +512,7 @@ La pantalla es controlada por **Seeed_GFX2** con `Board_XIAO_0inch96_LCD<38, 37>
 
 **Circuito de batería:**
 
-El nRF52840 Plus usa **tres pines GPIO** para formar un sistema completo de monitorización de batería:
+La nRF52840 Plus usa **tres pines GPIO** para formar un sistema completo de monitorización de batería:
 
 <div class="table-center">
   <table align="center">
@@ -525,7 +525,7 @@ El nRF52840 Plus usa **tres pines GPIO** para formar un sistema completo de moni
 
 **Detección:**
 
-Con USB-C, un voltaje VBAT estático no puede indicar si hay una batería presente — el nodo BAT del cargador puede parecer una celda Li-ion real incluso sin batería conectada. Por ello, la demo primero aprende una **línea base solo USB**, luego confirma la inserción de la batería solo después de un descenso sostenido de VBAT, y confirma la extracción tras una lectura ruidosa/saltada combinada con `~CHG` pasando a HIGH. Esto refleja la lógica de detección del Dashboard de fábrica.
+Con USB-C, un voltaje VBAT estático no puede indicar si hay una batería presente — el nodo BAT del cargador puede parecer una celda Li-ion real incluso sin batería conectada. Así que la demo primero aprende una **línea base solo USB**, luego confirma la inserción de la batería solo después de un desplazamiento sostenido hacia abajo de VBAT, y confirma la extracción tras una lectura ruidosa/saltada combinada con `~CHG` pasando a HIGH. Esto refleja la lógica de detección del Dashboard de fábrica.
 
 **Estados del icono:**
 
@@ -534,11 +534,11 @@ Con USB-C, un voltaje VBAT estático no puede indicar si hay una batería presen
 - **Cargando** — relleno cian con un icono de rayo, etiquetado con el porcentaje y el voltaje.
 
 :::note
-El pin `~CHG` se lee a través de los **registros GPIO en bruto** del nRF52840 (`nrf_gpio_cfg_input()` y `NRF_P0->IN`) en lugar de `digitalRead()`. En la API de Arduino, los números de pin siguen el mapeo del paquete de la placa, donde `digitalRead(17)` en realidad lee **P0.07** (la línea de datos I2C del IMU de 6 ejes) en lugar de P0.17. Las constantes `14` y `17` aquí son **números de pin P0.x en bruto de Nordic** (P0.14 y P0.17), que es exactamente lo que esperan las llamadas a registros.
+El pin `~CHG` se lee a través de los **registros GPIO en bruto** del nRF52840 (`nrf_gpio_cfg_input()` y `NRF_P0->IN`) en lugar de `digitalRead()`. En el API de Arduino, los números de pin siguen el mapeo del paquete de la placa, donde `digitalRead(17)` en realidad lee **P0.07** (la línea de datos I2C del IMU de 6 ejes) en lugar de P0.17. Las constantes `14` y `17` aquí son **números de pin P0.x en bruto de Nordic** (P0.14 y P0.17), que es exactamente lo que esperan las llamadas a registros.
 :::
 
 :::note
-La demostración utiliza la resistencia de lado bajo **499 kΩ** calibrada de fábrica (relación del divisor ≈ 3.004), no el valor nominal de 510 kΩ. El divisor está integrado en el propio módulo XIAO nRF52840 Plus, no en la placa de pantalla. El pin de habilitación P0.14 es **activo en bajo**: ponlo en LOW para habilitar el divisor y luego déjalo en alta impedancia (INPUT) para minimizar el consumo de corriente en reposo cuando la batería no se está midiendo.
+La demostración utiliza la resistencia de lado bajo calibrada de fábrica de **499 kΩ** (relación del divisor ≈ 3.004), no el valor nominal de 510 kΩ. El divisor está integrado en el propio módulo XIAO nRF52840 Plus, no en la placa de pantalla. El pin de habilitación P0.14 es **activo en bajo**: ponlo en LOW para habilitar el divisor y luego déjalo en alta impedancia (INPUT) para minimizar el consumo de corriente en reposo cuando la batería no se está midiendo.
 :::
 
 ### Ejecutar la demostración
@@ -549,7 +549,7 @@ La demostración utiliza la resistencia de lado bajo **499 kΩ** calibrada de f�
 
 **Paso 3.** Haz clic en **Upload**.
 
-**Paso 4.** Observa la pantalla: muestra el icono de batería con el estado actual. Conecta o desconecta una batería LiPo (o el cable USB-C) para ver cómo el icono cambia entre los tres estados.
+**Paso 4.** Observa la pantalla: muestra el icono de la batería con el estado actual. Conecta o desconecta una batería LiPo (o el cable USB-C) para ver cómo el icono cambia entre los tres estados.
 
 ### Resultado esperado
 
@@ -580,13 +580,14 @@ VBAT 3.87V  charging  85  spread=5  usb=ON  base=4.140  baseValid=Y  state=PRESE
 - **🗃️[Archivos de diseño de PCB]** [XIAO 0.96'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 0.96'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
+- **🖨️[Caja impresa en 3D]** [XIAO 0.96'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843001-enclosure-for-xiao-096-ips-display-esp32nrf52840/files)
 - **📄[Hoja de datos]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
 - **💾[Firmware de fábrica]** [XIAO 0.96'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
-- **[Demo]** [Código de demostración de la placa de pantalla XIAO](https://github.com/Seeed-Projects/Display-Gadgets) — todas las demostraciones de Function están en el directorio `code_GFX2/Function/096_nRF52840/`
+- **[Demostración]** [Código de demostración de la placa de pantalla XIAO](https://github.com/Seeed-Projects/Display-Gadgets) — todas las demostraciones de Function están en el directorio `code_GFX2/Function/096_nRF52840/`
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">

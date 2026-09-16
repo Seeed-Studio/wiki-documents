@@ -1,7 +1,7 @@
 ---
-description: Introducción a XIAO 0.96'' IPS Display (nRF52840).
-title: Introducción a XIAO 0.96'' IPS Display (nRF52840)
-sidebar_label: Introducción
+description: Primeros pasos con XIAO 0.96'' IPS Display (nRF52840).
+title: Primeros pasos con XIAO 0.96'' IPS Display (nRF52840)
+sidebar_label: Primeros pasos
 keywords:
   - XIAO
   - nRF52840
@@ -21,7 +21,7 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/es/getting_started_0.96_inch_display_nrf52840/
 ---
 
-# Introducción a XIAO 0.96'' IPS Display (nRF52840)
+# Primeros pasos con XIAO 0.96'' IPS Display (nRF52840)
 
 <div class="table-center">
   <table align="center">
@@ -37,7 +37,7 @@ url: https://wiki.seeedstudio.com/es/getting_started_0.96_inch_display_nrf52840/
 
 ## Introducción
 
-La pantalla IPS de 0.96'' es una placa de expansión diseñada para la serie XIAO, impulsada por el XIAO nRF52840 Plus. Cuenta con una compacta pantalla LCD IPS en color de 80×160, micrófono PDM integrado, IMU de 6 ejes (LSM6DS3), dos botones de usuario y gestión de energía de la batería con visualización de porcentaje, todo ello integrado en un factor de forma incluso más pequeño que el de la pantalla IPS de 1.14''.
+La pantalla IPS de 0,96'' es una placa de expansión diseñada para la serie XIAO, impulsada por el XIAO nRF52840 Plus. Cuenta con una compacta pantalla LCD IPS en color de 80×160, micrófono PDM integrado, IMU de 6 ejes (LSM6DS3), dos botones de usuario y gestión de alimentación por batería con visualización de porcentaje, todo ello integrado en un factor de forma incluso más pequeño que el de la pantalla IPS de 1,14''.
 
 Esta combinación la convierte en una plataforma ideal para wearables ultracompactos, gadgets tipo llavero, nodos de sensores portátiles y creación de prototipos IoT donde cada milímetro de espacio cuenta.
 
@@ -59,10 +59,10 @@ Esta combinación la convierte en una plataforma ideal para wearables ultracompa
     <tr><td>Ranura para tarjeta MicroSD</td><td>No</td></tr>
     <tr><td>Conector Grove I2C</td><td>No</td></tr>
     <tr><td>Botones de usuario</td><td>2</td></tr>
-    <tr><td>Conector de batería</td><td>Conector JST 2.0 de 2 pines para LiPo de 3.7 V</td></tr>
-    <tr><td>Supervisión de batería</td><td>Compatible con detección del estado de la batería; el voltaje de la batería también se puede monitorizar para estimar el nivel de batería.</td></tr>
+    <tr><td>Conector de batería</td><td>Conector JST 2.0 de 2 pines para LiPo de 3,7 V</td></tr>
+    <tr><td>Supervisión de batería</td><td>Compatible con detección del estado de la batería; el voltaje de la batería también se puede supervisar para estimar el nivel de batería.</td></tr>
     <tr><td>Interfaces de expansión</td><td>1x interfaz I2C, 1x interfaz I2S, 1x interfaz SWD, 2x interfaces de botón de usuario</td></tr>
-    <tr><td>Tamaño de la placa</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
+    <tr><td>Tamaño de la placa</td><td>18,8 × 43,6 × 10,6 mm</td></tr>
     <tr><td>Ideal para</td><td>Insignias inteligentes, wearables diminutos, pantallas de estado BLE</td></tr>
   </table>
 </div>
@@ -73,13 +73,13 @@ Esta placa de pantalla está diseñada para el **XIAO nRF52840 Plus**. Si estás
 
 ## Descripción general del hardware
 
-Antes de empezar, consulta la siguiente imagen para comprender la disposición física de la pantalla IPS de 0.96''.
+Antes de empezar, consulta la siguiente imagen para comprender la disposición física de la pantalla IPS de 0,96''.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Mapa de pines
 
-La pantalla IPS de 0.96'' expone todos los pines del XIAO nRF52840 Plus. La siguiente tabla enumera cada pin, su nombre de red en la placa de pantalla, su función y cómo está conectado a los periféricos integrados.
+La pantalla IPS de 0,96'' expone todos los pines del XIAO nRF52840 Plus. La siguiente tabla enumera cada pin, su nombre de red en la placa de pantalla, su función y cómo está conectado a los periféricos integrados.
 
 <div class="table-center">
   <table align="center">
@@ -87,7 +87,7 @@ La pantalla IPS de 0.96'' expone todos los pines del XIAO nRF52840 Plus. La sigu
     <tr><td>D0</td><td>PDM_CLK</td><td>Reloj del micrófono digital PDM</td><td>Conectado internamente al micrófono PDM</td></tr>
     <tr><td>D1</td><td>PDM_DATA</td><td>Datos del micrófono digital PDM</td><td>Conectado internamente al micrófono PDM</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>Señal de selección de chip de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
-    <tr><td>D3</td><td>LCD_DC</td><td>Cambio datos/comandos de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
+    <tr><td>D3</td><td>LCD_DC</td><td>Conmutación datos/comandos de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
     <tr><td>D4</td><td>SDA</td><td>Bus de datos I2C</td><td>Compartición de bus: conectado internamente al IMU; expuesto externamente a la almohadilla de prueba de 4 pines en la parte posterior</td></tr>
     <tr><td>D5</td><td>SCL</td><td>Bus de reloj I2C</td><td>Compartición de bus: conectado internamente al IMU; expuesto externamente a la almohadilla de prueba de 4 pines en la parte posterior</td></tr>
     <tr><td>D6</td><td>BTN_USR1</td><td>Botón de usuario 1 (KEY1)</td><td>Conectado internamente al microinterruptor 1; recorre el brillo de la retroiluminación</td></tr>
@@ -101,20 +101,20 @@ La pantalla IPS de 0.96'' expone todos los pines del XIAO nRF52840 Plus. La sigu
     <tr><td>D14</td><td>IMU_INT</td><td>Interrupción de hardware de movimiento del IMU</td><td>Conectado internamente al IMU de 6 ejes (admite activación por movimiento)</td></tr>
     <tr><td>D15</td><td>NC</td><td>Flotante (reservado)</td><td>Sin conexión física</td></tr>
     <tr><td>D16</td><td>NC</td><td>Flotante (reservado)</td><td>Sin conexión física — el voltaje de la batería se mide a través del PIN_VBAT interno del módulo, no a través de D16</td></tr>
-    <tr><td>D17</td><td>LCD_RST</td><td>Reinicio suave de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
+    <tr><td>D17</td><td>LCD_RST</td><td>Reinicio por software de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
     <tr><td>D18</td><td>LCD_BL</td><td>Control de la retroiluminación de la pantalla</td><td>Conectado internamente al circuito controlador de la retroiluminación</td></tr>
     <tr><td>D19</td><td>NC</td><td>Flotante (reservado)</td><td>Sin conexión física</td></tr>
   </table>
 </div>
 
 
-## Introducción
+## Primeros pasos
 
 :::caution
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_handing_tips.jpg" style={{width:600, height:'auto'}}/></div>
 :::
 
-Esta guía carga un sketch mínimo de **"Hello, XIAO"** en la placa de pantalla: la pantalla enciende su retroiluminación, se rellena de negro e imprime **"Hello,"** y **"XIAO"** como dos líneas centradas de texto grande en verde. Es la forma más rápida de confirmar que la pantalla y tu entorno de desarrollo funcionan antes de profundizar en las demostraciones individuales de periféricos.
+Esta guía carga un sketch mínimo de **"Hello, XIAO"** en la placa de pantalla: la pantalla enciende su retroiluminación, se rellena de negro e imprime **"Hello,"** y **"XIAO"** como dos líneas centradas de texto grande en verde. Es la forma más rápida de confirmar que la pantalla y tu entorno de desarrollo funcionan antes de profundizar en las demos de periféricos individuales.
 
 ### Preparación de software
 
@@ -150,7 +150,7 @@ Luego ve a **Tools > Board > Boards Manager**, busca **Seeed nRF52** e instala l
 **Paso 3.** Reinicia el Arduino IDE para que se detecte la nueva librería.
 
 :::tip
-- **Seeed_GFX2** es la biblioteca gráfica de Seeed Studio construida sobre una arquitectura en capas `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()` — la plantilla **Board** contiene el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución de 80×160, el orden de color (BGR) y la orientación. No se necesita `driver.h` ni configuración manual de pines.
+- **Seeed_GFX2** es la biblioteca gráfica de Seeed Studio construida sobre una arquitectura en capas `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()`: la plantilla **Board** posee el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución de 80×160, el orden de color (BGR) y la orientación. No se necesita `driver.h` ni configuración manual de pines.
 - En esta placa, el sketch usa `Board_XIAO_0inch96_LCD<38, 37>` (RST=38, BL=37) con `Config_Seeed_0inch96_LCD_ST7789`.
 - La biblioteca **Adafruit TinyUSB** utilizada por el sketch viene incluida en el paquete **Seeed nRF52 Boards**, por lo que no necesita una instalación por separado.
 :::
@@ -166,23 +166,23 @@ El sketch de ejemplo está disponible en GitHub:
     </a>
 </div><br />
 
-Ve a `code_GFX2/getting_started_code/xiao_nrf52840_096_hello/` y abre `xiao_nrf52840_096_hello.ino` en el Arduino IDE. **Descarga la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
+Navega a `code_GFX2/getting_started_code/xiao_nrf52840_096_hello/` y abre `xiao_nrf52840_096_hello.ino` en el IDE de Arduino. **Descarga la carpeta completa** en lugar de copiar el código fuente `.ino` desde la vista web de GitHub.
 
 ### Subir el sketch
 
-**Paso 1.** Conecta el XIAO nRF52840 Plus a tu ordenador mediante el puerto USB-C.
+**Paso 1.** Conecta la XIAO nRF52840 Plus a tu ordenador mediante el puerto USB-C.
 
-**Paso 2.** En Arduino IDE, selecciona la placa: **Tools > Board > Seeed nRF52 Boards > Seeed XIAO nRF52840 Plus**.
+**Paso 2.** En el IDE de Arduino, selecciona la placa: **Tools > Board > Seeed nRF52 Boards > Seeed XIAO nRF52840 Plus**.
 
 **Paso 3.** Selecciona el **Port** correcto en **Tools > Port**.
 
 **Paso 4.** Haz clic en el botón **Upload** (→). El sketch se compilará y se subirá a la placa.
 
 :::note
-Si encuentras problemas al subir, haz doble clic en el botón de reset para entrar en modo bootloader. El LED USR respirará en rojo y aparecerá en tu ordenador una unidad **NRF52BOOT**, lo que indica que la placa está en modo bootloader.
+Si encuentras problemas al subir, haz doble clic en el botón de reset para entrar en modo bootloader. El LED USR respirará en rojo y aparecerá en tu ordenador una unidad **NRF52BOOT**, indicando que la placa está en modo bootloader.
 :::
 
-### Resultado esperado
+### Salida esperada
 
 Después de subir, la pantalla se enciende con un fondo negro y muestra dos líneas centradas de texto grande en verde: **"Hello,"** en la primera línea y **"XIAO"** en la segunda. El saludo permanece en pantalla sin volver a dibujarse.
 
@@ -209,13 +209,14 @@ La placa de pantalla integra varios periféricos a bordo. La página [Function](
 
 ### ¿Qué pasa si la carga falla o la placa no es detectada?
 
-Haz doble clic en el botón de reset del XIAO nRF52840 Plus. El LED USR respirará en rojo y aparecerá en tu ordenador una unidad llamada **NRF52BOOT**. Arrastra el archivo compilado `.uf2` a la unidad **NRF52BOOT**. La placa se programará sola y se reiniciará automáticamente.
+Haz doble clic en el botón de reset de la XIAO nRF52840 Plus. El LED USR respirará en rojo y aparecerá en tu ordenador una unidad llamada **NRF52BOOT**. Arrastra el archivo `.uf2` compilado a la unidad **NRF52BOOT**. La placa se programará y se reiniciará automáticamente.
 
 ## Recursos
 
 - **🗃️[Archivos de diseño de PCB]** [XIAO 0.96'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 0.96'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
+- **🖨️[Carcasa impresa en 3D]** [XIAO 0.96'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843001-enclosure-for-xiao-096-ips-display-esp32nrf52840/files)
 - **📄[Hoja de datos]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
 - **💾[Firmware de fábrica]** [XIAO 0.96'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
 

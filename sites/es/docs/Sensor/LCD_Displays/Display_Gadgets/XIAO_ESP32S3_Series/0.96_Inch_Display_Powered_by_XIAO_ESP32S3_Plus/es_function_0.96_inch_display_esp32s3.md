@@ -42,14 +42,14 @@ Todos los demos de esta página requieren **esp32 Boards by Espressif (3.3.11)**
     </a>
 </div><br />
 
-**Paso 1.** Haz clic en el botón de arriba para descargar `Seeed_GFX2` v1.0.0 como archivo ZIP (anclado a una etiqueta de versión para que el tutorial siga siendo reproducible). Alternativamente, clona el repositorio desde [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2).
+**Paso 1.** Haz clic en el botón de arriba para descargar `Seeed_GFX2` v1.0.0 como archivo ZIP (anclado a una etiqueta de versión para que el tutorial siga siendo reproducible). Como alternativa, clona el repositorio desde [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2).
 
-**Paso 2.** En el Arduino IDE, ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el ZIP descargado. El IDE lee `library.properties` y lo instala automáticamente en la carpeta `Seeed_GFX2` correcta; no necesitas renombrar la carpeta extraída. (Para instalarlo manualmente en su lugar, descomprime el archivo y renombra la carpeta extraída a `Seeed_GFX2` antes de colocarla en `Documents/Arduino/libraries/`).
+**Paso 2.** En el IDE de Arduino, ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el ZIP descargado. El IDE lee `library.properties` y lo instala automáticamente en la carpeta `Seeed_GFX2` correcta; no necesitas renombrar la carpeta extraída. (Para instalarlo manualmente en su lugar, descomprime el archivo y renombra la carpeta extraída a `Seeed_GFX2` antes de colocarla en `Documents/Arduino/libraries/`).
 
-**Paso 3.** Reinicia el Arduino IDE para que se detecte la nueva librería.
+**Paso 3.** Reinicia el IDE de Arduino para que se detecte la nueva librería.
 
 :::tip
-- **Seeed_GFX2** es la librería gráfica de Seeed Studio construida sobre una arquitectura en capas de `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()`: el template **Board** contiene el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y el **Panel Config** integra la resolución 80×160, el orden de color BGR y la rotación. No se necesita `driver.h` ni construcción manual del panel.
+- **Seeed_GFX2** es la librería gráfica de Seeed Studio construida sobre una arquitectura en capas `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()`: el template **Board** posee el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y el **Panel Config** integra la resolución 80×160, el orden de color BGR y la rotación. No se necesita `driver.h` ni construcción manual del panel.
 - En esta placa los demos usan `Board_XIAO_0inch96_LCD<13, 12>` (RST=13, BL=12) con `Config_Seeed_0inch96_LCD_ST7789` (80×160, BGR, rotación 2).
 - En estos demos la **IMU** se lee directamente por I2C (`Wire`), por lo que no se necesita ninguna librería IMU externa. El **micrófono PDM** y la **salida I2S** usan los drivers de ESP-IDF 5 (`driver/i2s_pdm.h`, `driver/i2s_std.h`) y `LittleFS`, todos incluidos con el paquete de placas esp32.
 - La pantalla IPS de 0.96'' **no tiene controlador táctil, ni ranura para tarjeta SD, ni conector Grove**: solo dispone de un pad de prueba I2C de 4 pines en la parte trasera, por lo que no se necesitan librerías de táctil, SD ni Grove.
@@ -63,7 +63,7 @@ Cada demo de esta página se encuentra en el repositorio [Display-Gadgets](https
 
 1. Abre [github.com/Seeed-Projects/Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets) y haz clic en **Code > Download ZIP**, luego extrae el archivo en cualquier lugar conveniente.
 2. Navega a `code_GFX2/Function/` y abre la carpeta indicada en la línea **Code location** de cada demo. Por ejemplo, el demo GraphicTest para esta placa se encuentra en `code_GFX2/Function/096_ESP32/xiao_esp32s3_096_graphictest/`.
-3. **Haz doble clic en el archivo `.ino`** para abrirlo en el Arduino IDE.
+3. **Haz doble clic en el archivo `.ino`** para abrirlo en el IDE de Arduino.
 
 **Opción B — git clone:**
 
@@ -97,11 +97,11 @@ display.begin<Board_XIAO_0inch96_LCD<13, 12>,
               Config_Seeed_0inch96_LCD_ST7789>();
 ```
 
-El template **Board** contiene el mapa de pines — CS=D2, DC=D3, SCK=D8, MOSI=D10 — y sus parámetros de template `<RST, BL>` toman números GPIO directos, por lo que `<13, 12>` establece RST=GPIO13 (D17) y BL=GPIO12 (D18). El **Panel Config** integra la resolución 80×160, el orden de color BGR y la rotación 2; no se necesita `driver.h` ni una llamada manual a `invertDisplay()`.
+El template **Board** posee el mapa de pines — CS=D2, DC=D3, SCK=D8, MOSI=D10 — y sus parámetros de template `<RST, BL>` toman números GPIO directos, por lo que `<13, 12>` establece RST=GPIO13 (D17) y BL=GPIO12 (D18). El **Panel Config** integra la resolución 80×160, el orden de color BGR y la rotación 2; no se necesita `driver.h` ni una llamada manual a `invertDisplay()`.
 
 ### Ejecutar el demo
 
-**Paso 1.** Abre `xiao_esp32s3_096_graphictest.ino` en Arduino IDE.
+**Paso 1.** Abre `xiao_esp32s3_096_graphictest.ino` en el IDE de Arduino.
 
 **Paso 2.** Selecciona **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** y el **Port** correcto.
 
@@ -163,14 +163,14 @@ Este demo convierte la pantalla en una simulación de fluido interactiva: partí
 
 ### Cómo funciona
 
-La simulación utiliza una **rejilla de ocupación de 13×26** superpuesta sobre la pantalla de 80×160, donde cada celda es de 6×6 píxeles. Se colocan alrededor de **65 partículas** en la rejilla, cada una con una posición, velocidad y un degradado de color dorado.
+La simulación utiliza una **rejilla de ocupación de 13×26** superpuesta en la pantalla de 80×160, donde cada celda es de 6×6 píxeles. Se colocan alrededor de **65 partículas** en la rejilla, cada una con una posición, velocidad y un degradado de color dorado.
 
 El IMU se lee mediante I2C (D4/D5). El sketch busca un IMU en ambas direcciones conocidas — primero QMI8658 y luego LSM6DS3 — y usa el que responda. Los valores de aceleración en bruto se filtran con un filtro de paso bajo y se usan para derivar un vector de gravedad. Cuando inclinas la placa:
 
 1. **Actualización del vector de gravedad** — los datos del acelerómetro se suavizan con una media móvil exponencial para evitar el parpadeo.
-2. **Velocidad de las partículas** — cada partícula se acelera en la dirección del vector de gravedad, con amortiguación y un factor de movilidad por partícula basado en su profundidad en el flujo.
+2. **Velocidad de las partículas** — cada particula acelera en la dirección del vector de gravedad, con amortiguación y un factor de movilidad por partícula basado en su profundidad en el flujo.
 3. **Ocupación de celdas** — las partículas más profundas en el flujo (más cerca del "fondo" relativo a la gravedad) tienen movilidad reducida, creando un efecto de empaquetado realista.
-4. **Renderizado diferencial** — solo se redibujan las celdas en las que las partículas entraron o salieron, minimizando el tráfico SPI y manteniendo la animación fluida en el panel pequeño.
+4. **Renderizado diferencial** — solo se redibujan las celdas donde las partículas entraron o salieron, minimizando el tráfico SPI y manteniendo la animación fluida en el panel pequeño.
 
 Las partículas cercanas a la superficie fluyen libremente (mayor movilidad); las partículas enterradas más profundamente se empaquetan firmemente (menor movilidad), imitando cómo se comporta la arena real.
 
@@ -180,7 +180,7 @@ Las partículas cercanas a la superficie fluyen libremente (mayor movilidad); la
 
 **Paso 2.** Selecciona la placa y el puerto, luego haz clic en **Upload**.
 
-**Paso 3.** Una vez subido, la pantalla se llena de partículas doradas en la parte inferior. Inclina la placa en diferentes direcciones: la arena fluye como si fuera atraída por la gravedad.
+**Paso 3.** Una vez cargado, la pantalla se llena de partículas doradas en la parte inferior. Inclina la placa en diferentes direcciones: la arena fluye como si fuera atraída por la gravedad.
 
 **Paso 4.** Abre **Tools > Serial Monitor** (115200 baudios) para confirmar la inicialización:
 
@@ -271,7 +271,7 @@ La demo utiliza el **detector de eventos de activación integrado** del IMU comp
 [SLEEP] AUTO_TIMEOUT
 ```
 
-Después del arranque, tres líneas `[READY]` describen los controles: USR1 pone la placa en suspensión, USR2 la activa manualmente y el movimiento dispara una activación del IMU. Cada transición se registra: `[WAKE] IMU_D14 count=N` para activaciones por movimiento (el contador se incrementa cada vez), `[SLEEP] USR1` cuando pulsas USR1 y `[SLEEP] AUTO_TIMEOUT` cuando entra en suspensión automática tras 8 segundos sin movimiento.
+Después del arranque, tres líneas `[READY]` describen los controles: USR1 pone la placa en suspensión, USR2 la activa manualmente y el movimiento dispara una activación del IMU. Cada transición se registra: `[WAKE] IMU_D14 count=N` para activaciones por movimiento (el contador se incrementa cada vez), `[SLEEP] USR1` cuando presionas USR1 y `[SLEEP] AUTO_TIMEOUT` cuando entra en suspensión automática después de 8 segundos sin movimiento.
 
 ### Resultado esperado
 
@@ -283,7 +283,7 @@ La pantalla muestra datos en tiempo real de movimiento y batería mientras está
 
 ## Micrófono y altavoz — Grabadora en Flash
 
-Esta demo convierte la pantalla IPS de 0,96'' en una pequeña grabadora de voz. Pulsa USR1 para capturar un clip de 5 segundos desde el micrófono PDM integrado en la Flash integrada y luego pulsa USR2 para reproducirlo a través de un amplificador I2S externo.
+Esta demo convierte la pantalla IPS de 0,96'' en una pequeña grabadora de voz. Pulsa USR1 para capturar un clip de 5 segundos desde el micrófono PDM integrado en la memoria Flash integrada y luego pulsa USR2 para reproducirlo a través de un amplificador I2S externo.
 
 El micrófono PDM de la pantalla IPS de 0,96'' se conecta a los mismos pines que las otras placas de pantalla XIAO:
 
@@ -323,7 +323,7 @@ Las pads I2S (3V3, GND, D11, D12, D13) están expuestas en el grupo de pads de e
 
 ### Cómo funciona
 
-**Grabación (USR1)**: el **micrófono digital PDM (Pulse Density Modulation)** integrado se muestrea a través del periférico I2S del ESP32-S3 configurado en modo PDM RX. En ESP-IDF v5 (núcleo de Arduino 3.3.11), esto usa la nueva API del driver (`driver/i2s_pdm.h`). El micrófono se captura a **16 kHz mono** con 4 descriptores DMA de 256 frames cada uno. Cuando pulsas USR1, el sketch muestrea **5 segundos** de audio en un búfer de RAM y luego lo escribe en la Flash integrada como un archivo WAV (`/REC_RAW.WAV`) usando `LittleFS`.
+**Grabación (USR1)**: el **micrófono digital PDM (Pulse Density Modulation)** integrado se muestrea a través del periférico I2S del ESP32-S3 configurado en modo PDM RX. En ESP-IDF v5 (núcleo de Arduino 3.3.11), esto utiliza la nueva API del driver (`driver/i2s_pdm.h`). El micrófono se captura a **16 kHz mono** con 4 descriptores DMA de 256 frames cada uno. Cuando pulsas USR1, el sketch muestrea **5 segundos** de audio en un búfer de RAM y luego lo escribe en la Flash integrada como un archivo WAV (`/REC_RAW.WAV`) usando `LittleFS`.
 
 Después de que el micrófono PDM se inicia, el sketch descarta los primeros **300 ms** de datos capturados como datos de calentamiento para reducir el transitorio de arranque al comienzo de la grabación.
 
@@ -336,7 +336,7 @@ En esta placa, el pin de selección de canal del micrófono está conectado a GN
 **Reproducción (USR2)**: al pulsar USR2 se lee el WAV desde la Flash y se transmite a través del periférico I2S en modo estéreo estándar (Philips) en D11/D12/D13 (`driver/i2s_std.h`). Las muestras mono se duplican en ambos canales con una ganancia de `0.75×` aplicada para evitar saturación. El amplificador alimenta un pequeño altavoz para que puedas escuchar la grabación.
 
 :::note
-La API de ESP-IDF v5 (`i2s_new_channel()` / `i2s_channel_read()` / `i2s_channel_write()`) es diferente de la versión de esta demo para nRF52840, que usa la librería `PDM` de nRF52 y el periférico `NRF_I2S` directamente. Si estás portando el código de nRF52840, debes reemplazar por completo la configuración de audio.
+La API de ESP-IDF v5 (`i2s_new_channel()` / `i2s_channel_read()` / `i2s_channel_write()`) es diferente de la versión de este demo para nRF52840, que utiliza la biblioteca `PDM` de nRF52 y el periférico `NRF_I2S` directamente. Si estás portando el código de nRF52840, debes reemplazar por completo la configuración de audio.
 :::
 
 **Estados en pantalla:**
@@ -352,7 +352,7 @@ La API de ESP-IDF v5 (`i2s_new_channel()` / `i2s_channel_read()` / `i2s_channel_
   </table>
 </div>
 
-### Ejecutar la demostración
+### Ejecución de la demostración
 
 **Paso 1.** Conecta un amplificador MAX98357A y un altavoz a las pads I2S como se describe arriba.
 
@@ -365,7 +365,7 @@ La API de ESP-IDF v5 (`i2s_new_channel()` / `i2s_channel_read()` / `i2s_channel_
 **Paso 5.** Selecciona el **Port** correcto y luego haz clic en **Upload**.
 
 :::caution
-La grabadora almacena el archivo WAV en `LittleFS`, que usa la partición **SPIFFS**. El esquema de partición predeterminado de la placa (`16M Flash (2MB APP/12.5MB FATFS)`) no contiene ninguna partición SPIFFS, por lo que `LittleFS.begin()` devuelve `false`, el archivo WAV no se puede escribir y la pantalla muestra "Write failed / Check flash". **Debes** seleccionar el esquema de partición SPIFFS anterior o la grabación no funcionará.
+La grabadora almacena el archivo WAV en `LittleFS`, que utiliza la partición **SPIFFS**. El esquema de partición predeterminado de la placa (`16M Flash (2MB APP/12.5MB FATFS)`) no contiene ninguna partición SPIFFS, por lo que `LittleFS.begin()` devuelve `false`, el archivo WAV no se puede escribir y la pantalla muestra "Write failed / Check flash". **Debes** seleccionar el esquema de partición SPIFFS anterior o la grabación no funcionará.
 :::
 
 **Paso 6.** Pulsa **USR1 (D6)** para grabar 5 segundos de audio desde el micrófono integrado. La pantalla muestra "Capturing voice" mientras graba.
@@ -373,7 +373,7 @@ La grabadora almacena el archivo WAV en `LittleFS`, que usa la partición **SPIF
 **Paso 7.** Pulsa **USR2 (D7)** para reproducir la grabación a través del altavoz.
 
 :::note
-La grabación se almacena en la Flash integrada (`LittleFS`), por lo que sobrevive a un ciclo de alimentación: puedes grabar una vez y reproducirla más tarde. Grabar de nuevo sobrescribe el archivo anterior.
+La grabación se almacena en la Flash integrada (`LittleFS`), por lo que sobrevive a un ciclo de encendido: puedes grabar una vez y reproducirla más tarde. Grabar de nuevo sobrescribe el archivo anterior.
 :::
 
 ### Resultado esperado
@@ -402,7 +402,7 @@ A diferencia de la pantalla IPS de 1,14'', la pantalla IPS de 0,96'' **no tiene 
 
 ### Lectura de botones
 
-Los botones usan las resistencias de pull-up internas del XIAO. Una lectura sencilla se ve así:
+Los botones utilizan las resistencias de pull-up internas del XIAO. Una lectura sencilla se ve así:
 
 ```cpp
 const int USR1 = D6;
@@ -428,7 +428,7 @@ void loop() {
 
 ### Antirrebote con interrupciones
 
-Para un manejo de botones con respuesta rápida y antirrebote, puedes usar interrupciones GPIO con un breve retardo de estabilización:
+Para un manejo de botones con antirrebote y respuesta rápida, puedes usar interrupciones GPIO con un breve retardo de estabilización:
 
 ```cpp
 volatile bool btn1Flag = false;
@@ -508,7 +508,7 @@ El ESP32-S3 Plus lee el voltaje de la batería LiPo a través de un divisor de v
 
 **Lectura:**
 
-El sketch inicializa la pantalla con `Board_XIAO_0inch96_LCD<13, 12>` y `Config_Seeed_0inch96_LCD_ST7789` (80×160, BGR, rotación 2), luego muestrea **D16** doce veces (separadas 700 µs) usando `analogReadMilliVolts()` a resolución de 12 bits con atenuación de 11 dB. Promedia las muestras para obtener el voltaje bruto del divisor, lo multiplica por la relación del divisor para obtener el voltaje de la batería (`Calc = D16 × 2.975`) y dibuja ambos como dos líneas amarillas centradas. La pantalla solo se actualiza cuando cualquiera de los valores cambia de forma significativa (D16 ≥ 0.02 V o Calc ≥ 0.05 V).
+El sketch inicializa la pantalla con `Board_XIAO_0inch96_LCD<13, 12>` y `Config_Seeed_0inch96_LCD_ST7789` (80×160, BGR, rotación 2), luego muestrea **D16** doce veces (separadas 700 µs) usando `analogReadMilliVolts()` a resolución de 12 bits con atenuación de 11 dB. Promedia las muestras para obtener el voltaje bruto del divisor, lo multiplica por la relación del divisor para obtener el voltaje de la batería (`Calc = D16 × 2.975`) y dibuja ambos como dos líneas amarillas centradas. La pantalla solo se actualiza cuando cualquiera de los valores cambia en una cantidad significativa (D16 ≥ 0.02 V o Calc ≥ 0.05 V).
 
 :::note
 Ninguna señal de estado de carga está conectada a un GPIO del ESP32-S3. Esta demostración solo muestra lecturas de voltaje; no detecta la presencia de la batería ni el estado de carga, ni estima el porcentaje de batería.
@@ -535,7 +535,7 @@ Ninguna señal de estado de carga está conectada a un GPIO del ESP32-S3. Esta d
   </table>
 </div>
 
-La pantalla muestra el voltaje bruto del divisor D16 en la línea superior y el voltaje calculado de la batería (`Calc`) en la línea inferior. Con una batería LiPo conectada, `Calc` aproxima el voltaje en los terminales de la batería. También puede aparecer una lectura solo con alimentación por USB, por lo que `Calc` por sí solo no puede confirmar si hay una batería conectada.
+La pantalla muestra el voltaje bruto del divisor D16 en la línea superior y el voltaje calculado de la batería (`Calc`) en la línea inferior. Con una batería LiPo conectada, `Calc` se aproxima al voltaje en los terminales de la batería. También puede aparecer una lectura solo con alimentación por USB, por lo que `Calc` por sí solo no puede confirmar si hay una batería conectada.
 
 La demostración también imprime una línea de diagnóstico en el Monitor Serie cada segundo, por ejemplo:
 
@@ -550,13 +550,14 @@ D16 1.39V | Calc 4.14V
 - **🗃️[Archivos de diseño de PCB]** [XIAO 0.96'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 0.96'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
+- **🖨️[Caja impresa en 3D]** [XIAO 0.96'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843001-enclosure-for-xiao-096-ips-display-esp32nrf52840/files)
 - **📄[Hoja de datos]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
 - **💾[Firmware de fábrica]** [XIAO 0.96'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
-- **[Demo]** [Código de demostración de la placa XIAO Display](https://github.com/Seeed-Projects/Display-Gadgets) — todas las demos de Function están en el directorio `code_GFX2/Function/096_ESP32/`
+- **[Demo]** [Código de demostración de la XIAO Display Board](https://github.com/Seeed-Projects/Display-Gadgets) — todas las demostraciones de Function están en el directorio `code_GFX2/Function/096_ESP32/`
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">

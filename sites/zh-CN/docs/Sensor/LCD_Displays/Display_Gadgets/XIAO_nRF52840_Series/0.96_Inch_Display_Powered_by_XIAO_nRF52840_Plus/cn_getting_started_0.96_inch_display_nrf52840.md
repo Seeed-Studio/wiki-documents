@@ -39,7 +39,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_0.96_inch_display_nrf52840/
 
 0.96'' IPS Display 是一款为 XIAO 系列设计的扩展板，由 XIAO nRF52840 Plus 提供算力。它配备紧凑的 80×160 IPS 彩色 LCD、板载 PDM 麦克风、6 轴 IMU（LSM6DS3）、两个用户按键，以及带电量百分比显示的电池电源管理——所有这些都集成在一个甚至比 1.14'' IPS Display 还要小的外形尺寸中。
 
-这种组合使其成为超紧凑可穿戴设备、钥匙扣小玩具、便携式传感器节点以及对每一毫米空间都极为敏感的 IoT 原型开发的理想平台。
+这种组合使其成为超紧凑可穿戴设备、钥匙扣小工具、便携式传感器节点以及对每一毫米空间都极为敏感的 IoT 原型开发的理想平台。
 
 <div class="table-center">
   <table align="center">
@@ -47,7 +47,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_0.96_inch_display_nrf52840/
     <tr><td>产品定位</td><td>超紧凑</td></tr>
     <tr><td>核心控制器</td><td>Seeed Studio XIAO nRF52840 Plus</td></tr>
     <tr><td>处理器</td><td>Nordic nRF52840，ARM® Cortex®-M4 32 位处理器，带 FPU，64 MHz</td></tr>
-    <tr><td>内存</td><td>256 KB RAM + 1 MB 片上 Flash + 2 MB 板载 Flash</td></tr>
+    <tr><td>内存</td><td>256 KB RAM + 1 MB 内部 Flash + 2 MB 板载 Flash</td></tr>
     <tr><td>无线连接</td><td>BLE 5.4</td></tr>
     <tr><td>显示类型</td><td>0.96" IPS TFT LCD</td></tr>
     <tr><td>分辨率</td><td>80 × 160</td></tr>
@@ -59,7 +59,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_0.96_inch_display_nrf52840/
     <tr><td>MicroSD 卡槽</td><td>无</td></tr>
     <tr><td>Grove I2C 接口</td><td>无</td></tr>
     <tr><td>用户按键</td><td>2</td></tr>
-    <tr><td>电池接口</td><td>适用于 3.7 V 锂电池的 2 针 JST 2.0 接口</td></tr>
+    <tr><td>电池连接器</td><td>适用于 3.7 V 锂电池的 2 针 JST 2.0 连接器</td></tr>
     <tr><td>电池监测</td><td>支持电池状态检测；还可以监测电池电压以估算电量水平。</td></tr>
     <tr><td>扩展接口</td><td>1x I2C 接口，1x I2S 接口，1x SWD 接口，2x 用户按键接口</td></tr>
     <tr><td>板卡尺寸</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
@@ -68,7 +68,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_0.96_inch_display_nrf52840/
 </div>
 
 :::note
-本显示板专为 **XIAO nRF52840 Plus** 设计。如果你使用的是 XIAO ESP32-S3 Plus 版本，请改为参考 XIAO 0.96'' IPS Display（ESP32-S3）指南。
+该显示板专为 **XIAO nRF52840 Plus** 设计。如果你使用的是 XIAO ESP32-S3 Plus 版本，请改为参考 XIAO 0.96'' IPS Display（ESP32-S3）指南。
 :::
 
 ## 硬件概览
@@ -83,7 +83,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_0.96_inch_display_nrf52840/
 
 <div class="table-center">
   <table align="center">
-    <tr><th>XIAO 引脚</th><th>网络名称</th><th>功能说明</th><th>硬件连接说明</th></tr>
+    <tr><th>XIAO 引脚</th><th>网络名称</th><th>功能描述</th><th>硬件连接说明</th></tr>
     <tr><td>D0</td><td>PDM_CLK</td><td>PDM 数字麦克风时钟</td><td>内部连接到 PDM 麦克风</td></tr>
     <tr><td>D1</td><td>PDM_DATA</td><td>PDM 数字麦克风数据</td><td>内部连接到 PDM 麦克风</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>屏幕片选信号</td><td>内部连接到 LCD 驱动 IC</td></tr>
@@ -114,19 +114,19 @@ url: https://wiki.seeedstudio.com/cn/getting_started_0.96_inch_display_nrf52840/
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_handing_tips.jpg" style={{width:600, height:'auto'}}/></div>
 :::
 
-本指南会向显示板上传一个最小化的 **"Hello, XIAO"** 示例：屏幕点亮背光、填充为黑色背景，并以两行居中的大号绿色文字打印 **"Hello,"** 和 **"XIAO"**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
+本指南会向显示板上传一个最小的 **"Hello, XIAO"** 示例：屏幕点亮背光、填充为黑色，并以两行居中的大号绿色文字打印 **"Hello,"** 和 **"XIAO"**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
 
 ### 软件准备
 
 你需要以下工具和库：
 
-- **Arduino IDE**（1.8 或更高版本）
+- **Arduino IDE**（版本 1.8 或更高）
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div><br />
 
-- **Seeed nRF52 Boards（1.1.13）** — 将以下 URL 添加到 **File > Preferences > Additional Boards Manager URLs**：
+- **Seeed nRF52 Boards (1.1.13)** — 将以下 URL 添加到 **File > Preferences > Additional Boards Manager URLs**：
 
 ```
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
@@ -134,25 +134,25 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 然后进入 **Tools > Board > Boards Manager**，搜索 **Seeed nRF52** 并安装 **1.1.13** 版本。
 
-- **Seeed_GFX2（手动安装）** — 此库不在 Library Manager 中，必须手动安装：
+- **Seeed_GFX2（手动安装）** — 此库不在 Library Manager 中，需要手动安装：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download Seeed_GFX2</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 下载 Seeed_GFX2</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-**步骤 1.** 点击上方按钮，将 `Seeed_GFX2` v1.0.0 作为 ZIP 文件下载（固定到某个发布标签，以保证教程可复现）。或者，从 [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) 克隆该仓库。
+**步骤 1.** 点击上方按钮，将 `Seeed_GFX2` v1.0.0 作为 ZIP 文件下载（固定到发布标签，以保证教程可复现）。或者，从 [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) 克隆仓库。
 
-**步骤 2.** 在 Arduino IDE 中，依次进入 **Sketch > Include Library > Add .ZIP Library...**，然后选择下载的 ZIP 文件。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，并在将其放入 `Documents/Arduino/libraries/` 之前，将解压后的文件夹重命名为 `Seeed_GFX2`。）
+**步骤 2.** 在 Arduino IDE 中，依次进入 **Sketch > Include Library > Add .ZIP Library...**，并选择下载的 ZIP 文件。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，并在放入 `Documents/Arduino/libraries/` 之前将解压后的文件夹重命名为 `Seeed_GFX2`。）
 
 **步骤 3.** 重启 Arduino IDE，以便检测到新库。
 
 :::tip
 - **Seeed_GFX2** 是 Seeed Studio 基于分层 `Board` + `Panel Config` 架构构建的图形库。每个示例都通过一次 `display.begin<Board_..., Config_...>()` 调用来初始化显示屏——**Board** 模板负责引脚映射（CS/DC/SCK/MOSI/RST/BL），而 **Panel Config** 预设了 80×160 分辨率、颜色顺序（BGR）和方向。无需 `driver.h` 或手动引脚配置。
 - 在这块板子上，示例程序使用 `Board_XIAO_0inch96_LCD<38, 37>`（RST=38，BL=37）和 `Config_Seeed_0inch96_LCD_ST7789`。
-- 示例程序使用的 **Adafruit TinyUSB** 库已随 **Seeed nRF52 Boards** 软件包一同提供，因此无需单独安装。
+- 示例使用的 **Adafruit TinyUSB** 库已随 **Seeed nRF52 Boards** 软件包一同提供，因此无需单独安装。
 :::
 
 ### 下载代码
@@ -166,7 +166,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
     </a>
 </div><br />
 
-进入 `code_GFX2/getting_started_code/xiao_nrf52840_096_hello/`，并在 Arduino IDE 中打开 `xiao_nrf52840_096_hello.ino`。**请下载完整文件夹**，而不是从 GitHub 网页视图中复制 `.ino` 源码。
+进入 `code_GFX2/getting_started_code/xiao_nrf52840_096_hello/` 并在 Arduino IDE 中打开 `xiao_nrf52840_096_hello.ino`。**请下载完整文件夹**，而不是从 GitHub 网页视图中复制 `.ino` 源码。
 
 ### 上传示例程序
 
@@ -192,22 +192,22 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ## 接下来做什么
 
-这块显示板集成了多个板载外设。[Function](/cn/function_0.96_inch_display_nrf52840) 页面为每个外设都提供了独立的演示示例：
+这块显示板集成了多个板载外设。[Function](/cn/function_0.96_inch_display_nrf52840) 页面为每个外设都提供了独立的演示：
 
 <div class="table-center">
   <table align="center">
-    <tr><th>外设</th><th>示例</th></tr>
-    <tr><td>屏幕</td><td>[GraphicTest](/cn/function_0.96_inch_display_nrf52840#screen-display--graphictest) — 十种图形基本元素及其计时基准测试</td></tr>
+    <tr><th>外设</th><th>演示</th></tr>
+    <tr><td>屏幕</td><td>[GraphicTest](/cn/function_0.96_inch_display_nrf52840#screen-display--graphictest) — 十种图形基本图元及其计时基准测试</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/cn/function_0.96_inch_display_nrf52840#imu) — 六轴运动特效和抬腕唤醒</td></tr>
     <tr><td>麦克风和扬声器</td><td>[Flash Recorder](/cn/function_0.96_inch_display_nrf52840#microphone--speaker--flash-recorder) — 录制并回放音频</td></tr>
-    <tr><td>按键</td><td>[User Buttons](/cn/function_0.96_inch_display_nrf52840#user-buttons) — 读取按键按下并通过中断进行去抖</td></tr>
+    <tr><td>按键</td><td>[User Buttons](/cn/function_0.96_inch_display_nrf52840#user-buttons) — 读取按键按下并使用中断进行去抖</td></tr>
     <tr><td>电池</td><td>[Battery Status](/cn/function_0.96_inch_display_nrf52840#battery-status) — 测量电压并转换为百分比</td></tr>
   </table>
 </div>
 
 ## 常见问题
 
-### 如果上传失败或电脑无法识别开发板怎么办？
+### 如果上传失败或开发板未被识别怎么办？
 
 双击 XIAO nRF52840 Plus 上的复位按钮。USR LED 会呈红色呼吸灯效果，并且电脑上会出现一个名为 **NRF52BOOT** 的磁盘。将编译生成的 `.uf2` 文件拖拽到 **NRF52BOOT** 磁盘中。开发板会自动完成烧录并自动复位。
 
@@ -216,12 +216,13 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 - **🗃️[PCB 设计文件]** [XIAO 0.96'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
 - **📄[原理图]** [XIAO 0.96'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[3D 模型]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
+- **🖨️[3D 打印外壳]** [XIAO 0.96'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843001-enclosure-for-xiao-096-ips-display-esp32nrf52840/files)
 - **📄[数据手册]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
 - **💾[出厂固件]** [XIAO 0.96'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="table-center">
   <div class="button_tech_support_container">
