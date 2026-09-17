@@ -159,7 +159,7 @@ DFM (Design for Manufacturability) は、ベア PCB が製造可能かどうか�
 
 - **PCBA 検査およびテスト:** 目視可能な実装不良に対する AOI、隠れたはんだ接合部向けの X 線検査、電気的チェック用の ICT などに対応しています。機能テストでは、顧客提供のテスト計画に基づき、実装済み基板の意図した機能を確認します。使用される検査およびテスト方法は、基板設計およびテスト要件によって異なります。
 
- [DFA レビューガイド](https://www.seeedstudio.com/blog/2026/08/31/seeed-fusion-pcba-dfa-review-guide-what-engineers-check-before-assembly/) と [PCBA 品質管理ガイド](https://www.seeedstudio.com/blog/2026/08/18/seeed-fusion-pcba-quality-control-flying-probe-aoi-x-ray-ict-and-fct-explained/) を読むか、[Fusion テストサービス](https://www.seeedstudio.com/fusion-testing-solutions.html) をご覧ください。
+[DFA レビューガイド](https://www.seeedstudio.com/blog/2026/08/31/seeed-fusion-pcba-dfa-review-guide-what-engineers-check-before-assembly/) と [PCBA 品質管理ガイド](https://www.seeedstudio.com/blog/2026/08/18/seeed-fusion-pcba-quality-control-flying-probe-aoi-x-ray-ict-and-fct-explained/) を読むか、[Fusion テストサービス](https://www.seeedstudio.com/fusion-testing-solutions.html) をご覧ください。
 
 ### 生産と出荷
 
