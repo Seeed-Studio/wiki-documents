@@ -1,6 +1,6 @@
 ---
 description: This tutorial shows how to use rebot_control with MotorBridge and CAN bus for MIT position control on the reBot Arm B601-RS, including gripper control, temperature protection, and safe return-to-zero.
-title: Getting Started with MIT Position Control on reBot Arm B601-RS
+title: B601-RS Motor SDK
 keywords:
   - reBot
   - B601-RS

@@ -1,6 +1,6 @@
 ---
 description: This tutorial introduces how to use Pinocchio and MeshCat for kinematics analysis and visualization on the reBot Arm B601-RS robotic arm.
-title: Getting Started with Pinocchio and MeshCat for reBot Arm B601-RS
+title: B601-RS with Pinocchio
 keywords:
   - Pinocchio
   - MeshCat

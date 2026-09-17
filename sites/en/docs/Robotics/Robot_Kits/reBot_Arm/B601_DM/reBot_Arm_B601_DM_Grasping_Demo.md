@@ -1,6 +1,6 @@
 ---
 description: This tutorial shows how to build a complete visual grasping demo for the reBot Arm B601 using the YOLO/OBB grasping pipeline.
-title: reBot Arm B601 Visual Grasping Demo
+title: B601-DM Visual Grasp
 keywords:
   - reBot Arm
   - B601

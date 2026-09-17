@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for Damiao series motors.
-title: Damiao Series Motors
+title: Damiao
 keywords:
   - actuator
   - motor

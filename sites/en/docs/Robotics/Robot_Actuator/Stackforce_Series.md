@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for Stackforce series motors.
-title: Stackforce Series Motors
+title: Stackforce
 keywords:
   - actuator
   - motor

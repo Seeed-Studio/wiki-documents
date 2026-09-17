@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for Myactuator series motors.
-title: MyActuator Series Motors
+title: MyActuator
 keywords:
   - actuator
   - motor

@@ -1,6 +1,6 @@
 ---
 description: Build a low-latency wireless ROS 2 teleoperation link for an SO-ARM101 follower using the XIAO ESP32-C3 Bus Servo Adapter and micro-ROS over Wi-Fi UDP.
-title: Wireless SO-ARM101 Teleoperation with XIAO ESP32-C3 and micro-ROS
+title: SO-Arm with XIAO Wireless Teleoperation
 keywords:
   - SO-ARM101
   - XIAO ESP32-C3

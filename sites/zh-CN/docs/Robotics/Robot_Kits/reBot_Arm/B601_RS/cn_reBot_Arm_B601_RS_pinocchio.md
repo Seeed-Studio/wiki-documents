@@ -1,6 +1,6 @@
 ---
 description: 本教程介绍如何在 reBot Arm B601-RS 机械臂上使用 Pinocchio 和 MeshCat 进行运动学分析和可视化。
-title: reBot Arm B601-RS入门Pinocchio与MeshCat
+title: B601-RS 与匹诺曹
 keywords:
   - Pinocchio
   - MeshCat

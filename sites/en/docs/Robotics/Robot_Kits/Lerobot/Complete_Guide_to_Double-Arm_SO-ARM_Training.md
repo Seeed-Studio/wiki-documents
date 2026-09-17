@@ -1,6 +1,6 @@
 ---
 description: Complete guide to double-arm SO-ARM training with LeRobot.
-title: Complete Guide to Double-Arm SO-ARM Training
+title: SO-Arm Dual-Teleopertaion 
 keywords:
   - Lerobot
   - SO-ARM

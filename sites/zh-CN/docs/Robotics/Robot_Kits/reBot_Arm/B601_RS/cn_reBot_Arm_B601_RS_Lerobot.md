@@ -1,6 +1,6 @@
 ---
 description: 本wiki提供 reBot Arm B601-RS 在 Lerobot 框架内实现数据收集和训练的完整流程。
-title: reBot Arm B601-RS入门Lerobot
+title: B601-RS 跑Lerobot
 keywords:
   - Lerobot
   - Huggingface

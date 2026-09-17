@@ -1,6 +1,6 @@
 ---
 description: 本Wiki提供 Lerobot 数据集的工具使用，包括删除剧集，合并数据集等。
-title: Lerobot数据集工具
+title: SO-Arm  数据集工具
 keywords:
   - Lerobot
   - Hugging Face

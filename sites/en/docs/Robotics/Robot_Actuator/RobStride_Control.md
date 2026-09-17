@@ -1,6 +1,6 @@
 ---
 description: This wiki provides RobStride Motor Control Complete Guide
-title: RobStride Motor Control Complete Guide
+title: RobStride
 keywords:
   - actuator
   - motor

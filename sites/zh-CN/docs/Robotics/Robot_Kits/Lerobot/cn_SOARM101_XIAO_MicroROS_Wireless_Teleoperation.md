@@ -1,6 +1,6 @@
 ---
 description: 使用 XIAO ESP32-C3 Bus Servo Adapter 和基于 Wi-Fi UDP 的 micro-ROS，为 SO-ARM101 跟随臂构建一个低延迟的无线 ROS 2 遥操作链路。
-title: 使用 XIAO ESP32-C3 和 micro-ROS 实现 SO-ARM101 无线遥操作
+title: SO-Arm 无线遥操作
 keywords:
   - SO-ARM101
   - XIAO ESP32-C3
