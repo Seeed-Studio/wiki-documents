@@ -5,10 +5,13 @@ image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_
 slug: /ai_robotics_microduck_rl_on_jetson
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/es/ai_robotics_microduck_rl_on_jetson/
+updatedAt: '2026-09-05'
 ---
+
 
 # Microduck RL en Jetson
 
@@ -16,9 +19,9 @@ createdAt: '2026-09-04'
   <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png" alt="Microduck reinforcement learning on Jetson" />
 </div>
 
-Esta demo construye un flujo de trabajo completo de aprendizaje de robots para **Microduck** en un **Seeed reComputer con NVIDIA Jetson Orin NX 16GB**. Cubre el despliegue del entorno con GPU, el entrenamiento PPO con MuJoCo, la visualización de checkpoints locales, la inferencia controlada por teclado con políticas oficiales ONNX y el desarrollo de nuevos movimientos personalizados.
+Esta demostración construye un flujo de trabajo completo de aprendizaje de robots para **Microduck** en un **Seeed reComputer con NVIDIA Jetson Orin NX 16GB**. Cubre el despliegue del entorno con GPU, el entrenamiento PPO con MuJoCo, la visualización de checkpoints locales, la inferencia controlada por teclado con políticas ONNX oficiales y personalizadas, y el desarrollo de nuevos movimientos personalizados.
 
-La plataforma de referencia verificada utiliza **JetPack 7.2**, **Ubuntu 24.04**, **CUDA 13.2**, **Python 3.12** y **MuJoCo 3.10**. Este tutorial se basa en el repositorio [`jjjadand/microduck_rl`](https://github.com/jjjadand/microduck_rl), que contiene el código fuente, el script de despliegue, las políticas oficiales ONNX y los checkpoints entrenados en Jetson utilizados a lo largo de la guía.
+La plataforma de referencia verificada utiliza **JetPack 7.2**, **Ubuntu 24.04**, **CUDA 13.2**, **Python 3.12** y **MuJoCo 3.10**. Este tutorial se basa en el repositorio [`jjjadand/microduck_rl`](https://github.com/jjjadand/microduck_rl), que contiene el código fuente, el script de despliegue, las políticas ONNX oficiales y los checkpoints entrenados en Jetson utilizados a lo largo de la guía.
 
 <div align="center">
   <a href="https://github.com/jjjadand/microduck_rl" target="_blank" rel="noopener noreferrer" style={{display:'inline-block', padding:'14px 30px', margin:'12px 0 26px', borderRadius:'10px', background:'linear-gradient(135deg, #00a86b, #007c55)', color:'#ffffff', fontSize:'19px', fontWeight:'800', textDecoration:'none', boxShadow:'0 10px 28px rgba(0,168,107,0.28)'}}>
@@ -77,14 +80,14 @@ Haz clic en una tarjeta para abrir el capítulo correspondiente. Solo esta pági
   <a href="/es/ai_robotics_microduck_rl_official_policies/" style={{display:'flex', flexDirection:'column', padding:'28px', minHeight:'330px', borderRadius:'16px', border:'3px solid #00a86b', background:'linear-gradient(145deg, #d9fcef, #ffffff)', color:'#172b4d', textDecoration:'none', boxShadow:'0 14px 36px rgba(0,168,107,0.22)', transition:'transform .2s ease, box-shadow .2s ease'}}>
     <div style={{fontSize:'42px', fontWeight:'800', color:'#007c55', marginBottom:'14px'}}>02</div>
     <div style={{fontSize:'24px', lineHeight:'1.35', color:'#172b4d', fontWeight:'900', marginBottom:'14px'}}>Entrenar y ejecutar movimientos oficiales</div>
-    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>Ejecuta una prueba rápida de entrenamiento, visualiza un checkpoint PT, lanza la demo oficial ONNX multipolítica y contrólala desde el teclado.</div>
+    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>Ejecuta una prueba rápida de entrenamiento, visualiza un checkpoint PT, lanza la demostración oficial de múltiples políticas ONNX y contrólala desde el teclado.</div>
     <div style={{marginTop:'auto', paddingTop:'24px'}}><span style={{display:'inline-flex', alignItems:'center', gap:'14px', padding:'11px 12px 11px 18px', borderRadius:'9px', background:'#00875a', color:'#ffffff', fontWeight:'900', letterSpacing:'.3px', boxShadow:'0 7px 18px rgba(0,135,90,.28)'}}>ABRIR CAPÍTULO <span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'30px', height:'30px', borderRadius:'50%', background:'rgba(255,255,255,.22)', fontSize:'22px', lineHeight:'1'}}>➜</span></span></div>
   </a>
 
   <a href="/es/ai_robotics_microduck_rl_custom_motion_training/" style={{display:'flex', flexDirection:'column', padding:'28px', minHeight:'330px', borderRadius:'16px', border:'3px solid #3182ce', background:'linear-gradient(145deg, #dceeff, #ffffff)', color:'#172b4d', textDecoration:'none', boxShadow:'0 14px 36px rgba(49,130,206,0.22)', transition:'transform .2s ease, box-shadow .2s ease'}}>
     <div style={{fontSize:'42px', fontWeight:'800', color:'#2368a2', marginBottom:'14px'}}>03</div>
     <div style={{fontSize:'24px', lineHeight:'1.35', color:'#172b4d', fontWeight:'900', marginBottom:'14px'}}>Crear un movimiento personalizado</div>
-    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>Selecciona una plantilla de tarea, define las fases de movimiento y las recompensas, registra una nueva tarea, pruébala en MuJoCo, entrena y exporta ONNX.</div>
+    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>Selecciona una plantilla de tarea, define las fases de movimiento y las recompensas, registra una nueva tarea, pruébala en MuJoCo, entrena y exporta ONNX. El ejemplo validado es una apertura de piernas adelante-atrás con doble apoyo.</div>
     <div style={{marginTop:'auto', paddingTop:'24px'}}><span style={{display:'inline-flex', alignItems:'center', gap:'14px', padding:'11px 12px 11px 18px', borderRadius:'9px', background:'#2368a2', color:'#ffffff', fontWeight:'900', letterSpacing:'.3px', boxShadow:'0 7px 18px rgba(35,104,162,.28)'}}>ABRIR CAPÍTULO <span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'30px', height:'30px', borderRadius:'50%', background:'rgba(255,255,255,.22)', fontSize:'22px', lineHeight:'1'}}>➜</span></span></div>
   </a>
 </div>
@@ -94,9 +97,10 @@ Haz clic en una tarjeta para abrir el capítulo correspondiente. Solo esta pági
 - Un entorno de entrenamiento de Microduck con CUDA en Jetson Orin NX.
 - Entrenamiento PPO con entornos MuJoCo en paralelo.
 - Visualización de simulación nativa y basada en navegador.
-- Inferencia oficial ONNX para caminar, estar de pie, sentarse/levantarse, recoger del suelo, voltereta, patadas y movimientos con rodillos.
+- Inferencia ONNX oficial para caminar, estar de pie, sentarse/levantarse, recoger del suelo, voltereta, patadas y movimientos con rodillos.
+- Una política entrenada de apertura de piernas adelante-atrás activada con `O`, que sustituye la demostración fallida de equilibrio sobre una pierna.
 - Entrada de comandos por teclado y cambio de comportamiento en vivo.
-- Un flujo de trabajo reutilizable para crear un movimiento personalizado basado en fases, como una reverencia.
+- Un flujo de trabajo reutilizable para crear un movimiento personalizado basado en fases, utilizando la apertura de piernas adelante-atrás como ejemplo validado.
 
 ## Arquitectura de la demo
 
@@ -113,5 +117,5 @@ Jetson Orin NX
 ```
 
 :::tip
-Para la validación más rápida, despliega el entorno, ejecuta la prueba rápida de humo de 64 entornos y cinco iteraciones, y luego inicia la demo oficial de teclado ONNX. Puedes completar el capítulo de movimiento personalizado después.
+Para la validación más rápida, despliega el entorno, ejecuta la prueba rápida de humo de cinco iteraciones en 64 entornos y luego inicia la demo oficial de teclado ONNX. Puedes completar el capítulo de movimiento personalizado después.
 :::
