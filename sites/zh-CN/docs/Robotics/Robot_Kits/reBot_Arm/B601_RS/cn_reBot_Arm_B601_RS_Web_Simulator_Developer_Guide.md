@@ -1,6 +1,6 @@
 ---
-description: 本教程面向开发者，介绍 ReBot Arm 数字孪生与控制系统 — B601-RS 的网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
-title: ReBot Arm 数字孪生与控制系统 — B601-RS
+description: 本教程面向开发者，介绍 reBot Arm B601-RS 数字孪生与控制系统的网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
+title: reBot Arm B601-RS 数字孪生与控制系统
 keywords:
   - reBot Arm
   - B601-RS
@@ -23,13 +23,14 @@ createdAt: '2026-08-13'
 updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# ReBot Arm 数字孪生与控制系统 — B601-RS
+# reBot Arm B601-RS 数字孪生与控制系统
 
 <RebotRsDocNav />
 
@@ -37,10 +38,16 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -57,17 +64,13 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <strong>Three.js 可视化 · ROS 2 · SocketCAN · MuJoCo 仿真 · LLM/MCP 控制</strong>
 </p>
 
-ReBot Arm 数字孪生与控制系统 — B601-RS 工程集成了 Three.js 网页控制台、ROS 2 真机驱动、RS 专用 MuJoCo 动力学场景、视觉检测、轨迹与逆运动学，以及可选的 LLM/MCP 抓取 Agent。本教程介绍如何安装、启动和二次开发整套系统。
+reBot Arm B601-RS 数字孪生与控制系统集成了 Three.js 网页控制台、ROS 2 真机驱动、RS 专用 MuJoCo 动力学场景、视觉检测、轨迹与逆运动学，以及可选的 LLM/MCP 抓取 Agent。本教程介绍如何安装、启动和二次开发整套系统。
 
 <GitHubStarButton
   owner="Yang-Ci"
   repo="ReBot_Arm_DigitalTwin_RS"
   ariaLabel="在 GitHub 上为 ReBot_Arm_DigitalTwin_RS 点亮 Star"
 />
-
-> **重要安全提示**
->
-> 真机启动前必须固定机械臂、清空工作区、确认物理急停可用，并先在仿真中验证动作。第一次真机测试建议将速度限制为 `0.2–0.4 rad/s`，且一次只移动一个关节。
 
 ## 项目特点
 

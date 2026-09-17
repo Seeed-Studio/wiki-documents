@@ -1,6 +1,6 @@
 ---
-description: This developer guide introduces the architecture, runtime, ROS2 bridge, LLM/MCP integration, and secondary development workflow of the reBotArm_simulator-DM web console and the ROS2/MuJoCo stack in the ReBot Arm Digital Twin & Control Stack for B601-DM.
-title: ReBot Arm Digital Twin & Control Stack — B601-DM
+description: This developer guide introduces the architecture, runtime, ROS2 bridge, LLM/MCP integration, and secondary development workflow of the reBotArm_simulator-DM web console and the ROS2/MuJoCo stack in the reBot Arm B601-DM Digital Twin & Control Stack.
+title: reBot Arm B601-DM Digital Twin & Control Stack
 keywords:
   - reBot Arm
   - B601-DM
@@ -24,13 +24,14 @@ createdAt: '2026-07-30'
 updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# ReBot Arm Digital Twin & Control Stack — B601-DM
+# reBot Arm B601-DM Digital Twin & Control Stack
 
 <RebotDmDocNav />
 
@@ -39,10 +40,16 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -59,7 +66,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <strong>Three.js visualization · URDF loading · rosbridge bridge · LLM/MCP control</strong>
 </p>
 
-This guide is for developers. It explains how to run and extend the `reBotArm_simulator-DM` web console in the ReBot Arm Digital Twin & Control Stack for B601-DM. The console is a lightweight Node.js + Three.js front end that reads the URDF and STL meshes from the ROS2 workspace in the same repository, renders the 6-DOF body and gripper of the reBot Arm B601-DM in the browser, and talks to ROS2 over a rosbridge WebSocket. It supports the full development workflow: joint mirroring, control lock, gravity compensation, visual grasping, and LLM text control.
+This guide is for developers. It explains how to run and extend the `reBotArm_simulator-DM` web console in the reBot Arm B601-DM Digital Twin & Control Stack. The console is a lightweight Node.js + Three.js front end that reads the URDF and STL meshes from the ROS2 workspace in the same repository, renders the 6-DOF body and gripper of the reBot Arm B601-DM in the browser, and talks to ROS2 over a rosbridge WebSocket. It supports the full development workflow: joint mirroring, control lock, gravity compensation, visual grasping, and LLM text control.
 
 <GitHubStarButton owner="Yang-Ci" repo="ReBot_Arm_DigitalTwin_DM" />
 
