@@ -1,13 +1,15 @@
 ---
-description: Entrena una tarea oficial de Microduck, visualiza checkpoints PT y ejecuta inferencia ONNX multipolítica controlada por teclado en MuJoCo sobre Jetson.
+description: Entrena tareas oficiales de Microduck, visualiza checkpoints PT y ejecuta inferencia ONNX multipolítica controlada por teclado en MuJoCo sobre Jetson.
 title: Entrenar y ejecutar movimientos oficiales de Microduck
 image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png
 slug: /ai_robotics_microduck_rl_official_policies
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/es/ai_robotics_microduck_rl_official_policies/
+updatedAt: '2026-09-05'
 ---
 
 # Entrenar y ejecutar movimientos oficiales de Microduck
@@ -27,7 +29,7 @@ uv run --no-sync list-envs | grep MicroDuck
 ```
 
 | Movimiento | ID de tarea |
-|---|---|
+| --- | --- |
 | Caminar | `Mjlab-Velocity-Flat-MicroDuck` |
 | Caminar y recuperación de caídas | `Mjlab-VelStand-Flat-MicroDuck` |
 | Levantarse desde el suelo | `Mjlab-StandUp-Flat-MicroDuck` |
@@ -59,7 +61,7 @@ uv run --no-sync train Mjlab-Velocity-Flat-MicroDuck \
   --agent.logger tensorboard
 ```
 
-Aumenta el número de entornos solo cuando la memoria y la temperatura lo permitan. Una secuencia de retroceso práctica es `4096 → 2048 → 1024 → 512`.
+Aumenta el número de entornos solo cuando la memoria y la temperatura lo permitan. Una secuencia de reserva práctica es `4096 → 2048 → 1024 → 512`.
 
 ## Visualizar un checkpoint PT
 
@@ -111,20 +113,22 @@ uv run --no-sync python3 scripts/infer_policy.py \
   --roulade pretrained/pollen-robotics/roulade.onnx \
   --kick-left pretrained/pollen-robotics/ball_kick_left.onnx \
   --kick-right pretrained/pollen-robotics/ball_kick_right.onnx \
+  --front-back-split models/exports/front_back_split/front_back_split_model_999.onnx \
   --new-cmd-obs
 ```
 
 ### Controles de teclado
 
 | Tecla | Comando |
-|---|---|
+| --- | --- |
 | Teclas de flecha | Velocidad hacia delante, hacia atrás y lateral |
 | `A` / `E` | Girar a la izquierda / derecha |
 | `G` | Comportamiento de recogida desde el suelo |
 | `Y` | Transición sentarse / ponerse de pie |
 | `R` | Voltereta hacia delante |
 | `K` / `L` | Patada izquierda / derecha |
-| `Space` | Borrar comando de velocidad |
+| `O` | Apertura frontal-trasera de seis segundos y luego volver a estar de pie o caminando |
+| `Space` | Borrar el comando de velocidad |
 | `Q` | Salir |
 
 ## Resultados de inferencia
@@ -155,7 +159,21 @@ Pulsa `R` para cambiar a la política de voltereta hacia delante.
 
 Pulsa `K` o `L` para activar la política de patada con el pie izquierdo o derecho en la escena del balón.
 
-## PT y ONNX sirven para propósitos diferentes
+### Apertura frontal-trasera
+
+La antigua política de equilibrio sobre una sola pierna ha sido reemplazada por un movimiento
+de doble apoyo más estable. Pulsa `O` para ejecutar la política entrenada: el pie izquierdo se mueve hacia delante, el
+pie derecho se mueve hacia atrás, ambos pies permanecen en el suelo y el robot vuelve a
+la política de estar de pie o caminar después del ciclo de fase de seis segundos.
+
+Los artefactos incluidos son:
+
+```text
+models/checkpoints/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt
+models/exports/front_back_split/front_back_split_model_999.onnx
+```
+
+## PT y ONNX tienen propósitos diferentes
 
 - Los checkpoints `.pt` contienen actor, crítico, optimizador, normalizador y estado de entrenamiento. Úsalos para reanudar el entrenamiento y para la evaluación con `play`.
 - `.onnx` contiene el grafo de inferencia desplegable. Los archivos ONNX oficiales no contienen el estado de entrenamiento PPO y no se pueden convertir de nuevo en un checkpoint reanudable.

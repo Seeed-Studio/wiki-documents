@@ -1,22 +1,25 @@
 ---
 description: 在 Jetson 上构建完整的 Microduck 强化学习工作流，从环境部署和官方策略推理到自定义动作训练。
-title: Microduck RL on Jetson
+title: Microduck 在 Jetson 上的强化学习
 image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png
 slug: /ai_robotics_microduck_rl_on_jetson
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/cn/ai_robotics_microduck_rl_on_jetson/
+updatedAt: '2026-09-05'
 ---
 
-# Jetson 上的 Microduck 强化学习
+
+# Microduck 在 Jetson 上的强化学习
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png" alt="Microduck reinforcement learning on Jetson" />
 </div>
 
-本演示在一台由 NVIDIA Jetson Orin NX 16GB 驱动的 **Seeed reComputer** 上，为 **Microduck** 构建了一套完整的机器人学习工作流。内容涵盖 GPU 环境部署、基于 MuJoCo 的 PPO 训练、本地检查点可视化、使用官方 ONNX 策略的键盘控制推理，以及新自定义动作的开发。
+本演示在一台 **由 NVIDIA Jetson Orin NX 16GB 驱动的 Seeed reComputer** 上，为 **Microduck** 构建了一套完整的机器人学习工作流。内容涵盖 GPU 环境部署、基于 MuJoCo 的 PPO 训练、本地检查点可视化、使用官方与自定义 ONNX 策略的键盘控制推理，以及新自定义动作的开发。
 
 经验证的参考平台使用 **JetPack 7.2**、**Ubuntu 24.04**、**CUDA 13.2**、**Python 3.12** 和 **MuJoCo 3.10**。本教程基于 [`jjjadand/microduck_rl`](https://github.com/jjjadand/microduck_rl) 仓库，该仓库包含本指南中使用的源代码、部署脚本、官方 ONNX 策略以及在 Jetson 上训练得到的检查点。
 
@@ -84,7 +87,7 @@ createdAt: '2026-09-04'
   <a href="/cn/ai_robotics_microduck_rl_custom_motion_training/" style={{display:'flex', flexDirection:'column', padding:'28px', minHeight:'330px', borderRadius:'16px', border:'3px solid #3182ce', background:'linear-gradient(145deg, #dceeff, #ffffff)', color:'#172b4d', textDecoration:'none', boxShadow:'0 14px 36px rgba(49,130,206,0.22)', transition:'transform .2s ease, box-shadow .2s ease'}}>
     <div style={{fontSize:'42px', fontWeight:'800', color:'#2368a2', marginBottom:'14px'}}>03</div>
     <div style={{fontSize:'24px', lineHeight:'1.35', color:'#172b4d', fontWeight:'900', marginBottom:'14px'}}>创建自定义动作</div>
-    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>选择任务模板，定义动作阶段和奖励，注册新任务，在 MuJoCo 中测试、训练，并导出 ONNX。</div>
+    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>选择任务模板，定义动作阶段和奖励，注册新任务，在 MuJoCo 中测试、训练，并导出 ONNX。经验证的示例是双支撑前后劈叉动作。</div>
     <div style={{marginTop:'auto', paddingTop:'24px'}}><span style={{display:'inline-flex', alignItems:'center', gap:'14px', padding:'11px 12px 11px 18px', borderRadius:'9px', background:'#2368a2', color:'#ffffff', fontWeight:'900', letterSpacing:'.3px', boxShadow:'0 7px 18px rgba(35,104,162,.28)'}}>打开章节 <span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'30px', height:'30px', borderRadius:'50%', background:'rgba(255,255,255,.22)', fontSize:'22px', lineHeight:'1'}}>➜</span></span></div>
   </a>
 </div>
@@ -95,8 +98,9 @@ createdAt: '2026-09-04'
 - 使用并行 MuJoCo 环境的 PPO 训练。
 - 原生和基于浏览器的仿真可视化。
 - 针对行走、站立、坐/站、地面拾取、翻滚、踢腿和滚轮动作的官方 ONNX 推理。
+- 一个训练好的前后劈叉策略，通过 `O` 触发，用来替换未成功的一腿平衡演示。
 - 键盘指令输入和实时行为切换。
-- 一套可复用的工作流，用于创建如鞠躬等基于阶段的自定义动作。
+- 一套可复用的工作流，用于创建基于阶段的自定义动作，以前后劈叉为经验证示例。
 
 ## 演示架构
 
@@ -113,5 +117,5 @@ Jetson Orin NX
 ```
 
 :::tip
-为了最快速地完成验证，请先部署环境，运行 64 个环境、5 次迭代的冒烟测试，然后启动官方的 ONNX 键盘演示。你可以在之后再完成自定义动作章节。
+为了最快完成验证，请先部署环境，运行 64 环境、5 次迭代的冒烟测试，然后再启动官方 ONNX 键盘演示。你可以在之后再完成自定义动作章节。
 :::

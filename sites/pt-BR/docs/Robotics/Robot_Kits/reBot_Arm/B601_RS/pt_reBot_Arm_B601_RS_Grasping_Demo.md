@@ -95,7 +95,7 @@ O hardware para este tutorial é fornecido pela [Seeed Studio](https://www.seeed
     </tr>
     <tr>
       <td>Modelo da Câmera</td>
-      <td>Orbbec Gemini 2 / Intel RealSense D435i / D405</td>
+      <td>Orbbec Gemini 2 / RealSense D435i / D405</td>
     </tr>
     <tr>
       <td>Método de Detecção</td>
@@ -271,7 +271,7 @@ Se o seu sistema precisar da cadeia de ferramentas completa RealSense ou de regr
 | pyorbbecsdk | https://github.com/orbbec/pyorbbecsdk |
 | Documentação do pyorbbecsdk | https://orbbec.github.io/pyorbbecsdk/index.html |
 | Wrapper ROS2 | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
-| Intel RealSense SDK | https://github.com/realsenseai/librealsense |
+| RealSense SDK | https://github.com/realsenseai/librealsense |
 
 #### Etapa 5. Configurar o GraspNet (opcional)
 
@@ -657,7 +657,7 @@ Se a saída for `False`, corrija primeiro a instalação do CUDA / PyTorch. Se f
 
 Esta solução usa **ROS2** e **YOLO** no reBot Arm B601-RS para detecção de objetos, preensão e colocação. O sistema inicia o braço, a câmera de profundidade e os nós de preensão em terminais separados.
 
-A câmera de profundidade atualmente oferece suporte à **Orbbec Gemini 2** e à **Intel RealSense D405**. Este fluxo não exige uma placa de calibração para a calibração mão-olho. Devido a tolerâncias de montagem e das peças impressas, cada braço pode apresentar um pequeno deslocamento na preensão.
+A câmera de profundidade atualmente oferece suporte à **Orbbec Gemini 2** e à **RealSense D405**. Este fluxo não exige uma placa de calibração para a calibração mão-olho. Devido a tolerâncias de montagem e das peças impressas, cada braço pode apresentar um pequeno deslocamento na preensão.
 
 ### 2. Instalação do ambiente
 
@@ -990,6 +990,6 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [Documentação do pyorbbecsdk](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
 - [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
-- [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
+- [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Documentação Graspnet(Anygrasp)](https://graspnet.net/)

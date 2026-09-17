@@ -660,26 +660,45 @@ When using the SIM8202G-M2 5G module, the module will not automatically start. S
 
 - **Step 1:** Enter the following to start the 5G module
 
-```sh
-sudo su 
-cd /sys/class/gpio
-echo 309 > export 
-cd gpio309
-echo out > direction
-echo 0 > value
+  <Tabs>
+  <TabItem value="Jetpack 5.1.x" label="Jetpack 5.1.x">
 
-cd..
-echo 341 > export 
-cd PEE.02
-echo out > direction
-echo 1 > value
+    ```sh
+    sudo su 
+    cd /sys/class/gpio
+    echo 309 > export 
+    cd gpio309
+    echo out > direction
+    echo 0 > value
 
-cd..
-echo 330 > export 
-cd PCC.02
-echo out > direction
-echo 0 > value
-```
+    cd..
+    echo 341 > export 
+    cd PEE.02
+    echo out > direction
+    echo 1 > value
+
+    cd..
+    echo 330 > export 
+    cd PCC.02
+    echo out > direction
+    echo 0 > value
+    ```
+
+  </TabItem>
+  <TabItem value="Jetpack 6 / Jetpack 7" label="Jetpack 6 / Jetpack 7">
+
+    ```sh
+    sudo gpioset -m wait 2 9=0
+    sudo gpioset -m wait 1 25=1
+    sudo gpioset -m wait 1 14=0
+    ```
+
+    :::note
+    Open multiple terminals to run these commands, and keep each terminal window active.
+    :::
+
+  </TabItem>
+  </Tabs>
 
 Once the above is executed, LED2 will light up in green
 
