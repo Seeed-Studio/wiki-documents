@@ -4,7 +4,8 @@ title: Deploy ONVIF on reCamera
 keywords:
   - reCamera
   - onvif
-slug: /reCamera_onvif
+image: https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg
+slug: /recamera_onvif
 sku: 102991896, 108990119, 100029708
 sidebar_position: 6
 last_update:
@@ -12,7 +13,7 @@ last_update:
   author: yylin
 createdAt: '2026-09-14'
 updatedAt: '2026-09-14'
-url: https://wiki.seeedstudio.com/reCamera_onvif/
+url: https://wiki.seeedstudio.com/recamera_onvif/
 ---
 
 # Deploy ONVIF on reCamera
