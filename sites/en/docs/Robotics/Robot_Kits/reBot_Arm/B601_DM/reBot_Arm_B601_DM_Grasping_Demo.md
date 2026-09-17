@@ -1,6 +1,6 @@
 ---
 description: This tutorial shows how to build a complete visual grasping demo for the reBot Arm B601 using the YOLO/OBB grasping pipeline.
-title: reBot Arm B601 Visual Grasping Demo
+title: reBot Arm B601-DM Visual Grasping Demo
 keywords:
   - reBot Arm
   - B601
@@ -20,10 +20,11 @@ createdAt: '2026-04-22'
 updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
-# reBot Arm B601 Visual Grasping Demo
+# reBot Arm B601-DM Visual Grasping Demo
 
 <RebotDmDocNav />
 
@@ -32,10 +33,16 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -64,7 +71,7 @@ YOLO is a widely used family of real-time object detection models that can local
 
 ## Project Introduction
 
-**reBot Arm B601 Visual Grasping Demo** is a visual grasping algorithm demonstration project based on the [reBot Arm B601](https://github.com/Seeed-Projects/reBotArm_control_py) robotic arm control library and RGB-D depth camera. The system supports both DM and RS configurations for the B601 arm. It uses the YOLO model for real-time desktop object detection, estimates grasp poses via OBB minimum-area rectangles, performs hand-eye calibration to transform grasp points from the camera frame to the robot base frame, and drives the robotic arm to complete autonomous grasping.
+**reBot Arm B601-DM Visual Grasping Demo** is a visual grasping algorithm demonstration project based on the [reBot Arm B601](https://github.com/Seeed-Projects/reBotArm_control_py) robotic arm control library and RGB-D depth camera. The system supports both DM and RS configurations for the B601 arm. It uses the YOLO model for real-time desktop object detection, estimates grasp poses via OBB minimum-area rectangles, performs hand-eye calibration to transform grasp points from the camera frame to the robot base frame, and drives the robotic arm to complete autonomous grasping.
 
 ### Core Features
 

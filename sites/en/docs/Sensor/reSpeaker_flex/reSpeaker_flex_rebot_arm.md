@@ -1872,7 +1872,7 @@ This ensures that the robot arm does not exceed physical limits, avoiding damage
 | Resource | Link |
 |-----|-----|
 | reBot-DevArm GitHub | https://github.com/Seeed-Projects/reBot-DevArm |
-| ReBot Arm Assembly Guide | See Seeed Studio Official Wiki |
+| reBot Arm Assembly Guide | See Seeed Studio Official Wiki |
 | Pinocchio Kinematics Library | https://github.com/stack-of-tasks/pinocchio |
 
 ### 12.4 API and tool documentation

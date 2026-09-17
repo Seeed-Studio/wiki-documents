@@ -1872,7 +1872,7 @@ np.clip(target_angle, JOINT_LIMITS_MIN, JOINT_LIMITS_MAX)
 | 资源 | 链接 |
 |-----|-----|
 | reBot-DevArm GitHub | https://github.com/Seeed-Projects/reBot-DevArm |
-| ReBot Arm 装配指南 | 见 Seeed Studio 官方 Wiki |
+| reBot Arm 装配指南 | 见 Seeed Studio 官方 Wiki |
 | Pinocchio 运动学库 | https://github.com/stack-of-tasks/pinocchio |
 
 ### 12.4 API 和工具文档
