@@ -37,7 +37,7 @@ Breaking this contract can produce a policy that works in one viewer but cannot 
 ## Select the Closest Template
 
 | Desired motion | Recommended template |
-|---|---|
+| --- | --- |
 | Continuous velocity motion | `microduck_velocity_env_cfg.py` |
 | Recovery from a specific state | `microduck_standup_env_cfg.py` |
 | Two-state command transition | `microduck_sitstand_env_cfg.py` |
@@ -71,7 +71,7 @@ cp src/mjlab_microduck/tasks/mdp.py \
 A simple bow can use a normalized phase from `0.0` to `1.0`:
 
 | Phase | Behavior |
-|---|---|
+| --- | --- |
 | `0.00–0.25` | Descend toward the bow pose |
 | `0.25–0.55` | Hold the bow |
 | `0.55–0.85` | Return to the home pose |
@@ -224,7 +224,7 @@ Mjlab-FrontBackSplit-Flat-MicroDuck
 The task uses a six-second cyclic phase command:
 
 | Normalized phase | Behavior |
-|---|---|
+| --- | --- |
 | `0.00–0.30` | Move from standing into the front-back split |
 | `0.30–0.58` | Hold the split stance with both feet grounded |
 | `0.58–0.78` | Return the legs toward the standing pose |
@@ -279,7 +279,7 @@ graphical terminal and use the value printed by `echo $DISPLAY`.
 The task combines these motion-specific objectives:
 
 | Reward | Purpose |
-|---|---|
+| --- | --- |
 | `split_pose` | Track the interpolated standing-to-split joint pose |
 | `split_pose_l1` | Provide a directional joint error gradient |
 | `feet_grounded` | Keep both feet in contact with the terrain |
@@ -298,7 +298,7 @@ the reward and the pose use the same coordinate convention.
 It is not a filename and is not passed as an argument to the environment factory.
 
 | Item | Location | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | Environment and RL configuration | `src/mjlab_microduck/tasks/microduck_front_back_split_env_cfg.py` | Defines the target pose, phase timing, scene, rewards, and PPO configuration |
 | Phase separation reward | `src/mjlab_microduck/tasks/mdp.py` | Tracks signed sagittal foot separation in the robot base frame |
 | Task registration | `src/mjlab_microduck/tasks/__init__.py` | Binds the task ID to the environment and RL configuration |
@@ -393,6 +393,7 @@ The old `--one-leg-balance` option and one-leg task files are no longer part of
 the current repository. Use `--front-back-split` for this verified motion.
 
 ## Development Checklist
+
 - [ ] The observation layout remains 61D.
 - [ ] The policy output remains 14D.
 - [ ] Passive joints are excluded from actions and servo observations.
