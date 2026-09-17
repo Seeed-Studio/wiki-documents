@@ -5134,6 +5134,23 @@ const sidebars = {
       dirName: 'Solutions',
     },
     // END OF Solution
+    // START OF Fusion
+    {
+      type: 'link',
+      label: 'Fusion',
+      href: 'https://www.seeedstudio.com/fusion.html',
+      className: 'sideboard_calss',
+    },
+    {
+      type: 'category',
+      label: 'PCB & PCBA',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/cn_Service_for_Fusion_PCB',
+      ],
+    },
+    // END OF Fusion
     {
       type: 'doc',
       id: 'Topics/cn_Topic_introduction',

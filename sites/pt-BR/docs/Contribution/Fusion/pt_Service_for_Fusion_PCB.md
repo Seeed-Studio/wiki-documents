@@ -1,141 +1,199 @@
 ---
-description: Serviço para Fusion PCB
-title: Serviço para Fusion PCB
+description: Guia de Serviço Seeed Fusion PCB & PCBA
+title: Guia de Serviço Seeed Fusion PCB & PCBA
 keywords:
   - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Service_for_Fusion_PCB
 last_update:
-  date: 1/13/2023
+  date: 9/16/2026
   author: shuxu hu
 createdAt: '2023-02-17'
-updatedAt: '2026-03-13'
+updatedAt: '2025-09-18'
 url: https://wiki.seeedstudio.com/pt-br/Service_for_Fusion_PCB/
 ---
 
-Por favor, leia esta página antes de usar o [serviço Fusion PCB](https://www.seeedstudio.com/fusion_pcb.html). **O preço será calculado com base nas suas opções**.
+Este guia abrange fabricação de PCB e montagem de PCB, incluindo capacidades, arquivos de produção, pedido, requisitos de projeto, revisão de engenharia, testes e planejamento de entrega.
 
-## Sobre o serviço de PCB
+## Sobre o Fusion PCB & PCBA
 
-Como entusiastas nós mesmos, organizamos a capacidade de fabricação local, fazemos o painel das placas, reduzimos o custo de envio e garantimos a qualidade. Isso será uma fonte para sustentar nosso estúdio junto com outros serviços que fornecemos.
+Seeed Fusion fornece serviços de fabricação de PCB nu e PCBA turnkey, incluindo aquisição de componentes e montagem, desde protótipos e pequenos lotes até produção em volume. Você pode pedir apenas as placas nuas ou adicionar requisitos de montagem e teste ao mesmo projeto na [página de pedido Fusion](https://www.seeedstudio.com/fusion_pcb.html).
 
-### Etapas do pedido Fusion PCB
+### Etapas do Pedido Fusion PCB & PCBA
 
-1. Acesse a página de pedido Fusion PCB: [https://www.seeedstudio.com/fusion_pcb.html](https://www.seeedstudio.com/fusion_pcb.html)
+1. Abra a [página de pedido Fusion PCB/PCBA](https://www.seeedstudio.com/fusion_pcb.html).
 
-2. Envie o arquivo Gerber e selecione os parâmetros.
+2. Envie seu arquivo compactado Gerber e selecione as dimensões da placa, quantidade e opções de fabricação.
 
-3. Finalize a compra e pague o pedido.
+3. Para PCBs nus, revise a cotação e prossiga para o checkout. Para montagem, ative **PCB Assembly**, envie a BOM, insira a quantidade de PCBA e adicione os arquivos relevantes de montagem ou teste.
 
-Se o arquivo e o design atenderem aos requisitos, eles serão processados e enviados em 4–6 dias (excluindo os feriados chineses).
+4. Revise as correspondências de componentes e o detalhamento de preços, depois conclua o checkout e o pagamento.
 
-### Requisito do arquivo Gerber
+Os pedidos de PCB começam em 5 peças, e os pedidos de montagem de PCB começam em 1 peça. A precificação depende das especificações e quantidade de PCB selecionadas, bem como dos requisitos de componentes e montagem para pedidos de PCBA.
 
-**As seguintes camadas são necessárias:**
+### Requisitos de Arquivo Gerber
 
-- Camada superior: pcbname.GTL
-- Camada inferior: pcbname.GBL
-- Máscara de Solda superior: pcbname.GTS
-- Máscara de Solda inferior pcbname.GBS
-- Silk superior: pcbname.GTO
-- Silk inferior pcbname.GBO
-- Furação NC: pcbname.TXT
-- O contorno da placa deve ser incluído em pelo menos uma camada.
+Coloque os arquivos Gerber e de furação em uma pasta e envie um arquivo ZIP ou RAR (máximo de 20 MB). A tabela abaixo mostra nomes de arquivo comuns para as camadas do seu projeto.
 
-- O arquivo Gerber deve estar no formato RS-274x.
+| Arquivo | Exemplo de nome de arquivo |
+| --- | --- |
+| Cobre superior / inferior | pcbname.GTL / pcbname.GBL |
+| Máscara de solda superior / inferior | pcbname.GTS / pcbname.GBS |
+| Serigrafia superior / inferior | pcbname.GTO / pcbname.GBO |
+| Contorno da placa | pcbname.GML ou pcbname.GKO |
+| Arquivo de furação | pcbname.TXT |
+| Camadas internas de cobre | pcbname.GL2, pcbname.GL3, etc. |
 
-### Dicas de projeto de PCB
+Inclua os arquivos internos de cobre correspondentes para placas multicamadas. Use RS-274X para arquivos Gerber e Excellon para arquivos de furação. É necessário um contorno completo da placa, de preferência em uma camada mecânica separada.
 
-DESIGN ÚNICO, SEM PAINELIZAÇÃO
+Antes de fazer o pedido, use o Gerber Viewer na [página de pedido](https://www.seeedstudio.com/fusion_pcb.html) para pré-visualizar seus arquivos exportados. Verifique se o contorno da placa e as camadas correspondem ao projeto pretendido.
 
-**Observação:**
+### Arquivos Adicionais para Pedidos de PCBA
 
-- Seu arquivo Gerber deve incluir apenas um design.
-- Linhas de furação e ranhuras longas não podem ser aceitas
-- Ranhura mínima 1mm*1mm
-- Compatível com DRC conforme arquivo de regras anexado
-- O tamanho da PCB é o menor retângulo que pode acomodar a PCB
+#### Lista de Materiais (BOM)
 
-**Opção de quantidade disponível:** 10pcs, 50pcs, 100pcs e mais.
+Arquivos Gerber e uma BOM são os arquivos básicos usados para iniciar uma cotação de PCBA e a revisão de arquivos. Prepare a BOM usando o modelo Fusion em formato XLS, XLSX ou CSV.
 
-A QUANTIDADE MÍNIMA QUE PODEMOS INICIAR AQUI É 5pcs.
+| Campo | O que incluir |
+| --- | --- |
+| Designator | Designadores de referência de componentes, como R1, R2, C1 |
+| MPN / Seeed SKU | O número de peça completo do fabricante ou o SKU de componente da Seeed |
+| Quantity | Quantidade necessária por PCBA; para projetos painelizados, calcule a quantidade para o painel completo |
+| Part Link | Link opcional da página do produto ou do datasheet |
 
-**Observação:** Se você quiser pedir mais de 10pcs, verifique o preço para diferentes opções e escolha a mais econômica.
+Inclua apenas os componentes que a Fusion deve comprar e montar. Componentes mostrados no PCB mas omitidos da BOM não são comprados nem montados por padrão. Consulte o [guia de preparação de BOM](https://support.seeed.cc/portal/en/kb/articles/how-do-i-prepare-the-bill-of-materials-bom-file-for-seeed-fusion-pcba-orders) para o modelo e regras de formatação.
 
-**Exemplo:**
-Para tamanho de PCB (50mm X 100mm), a opção 4 x 10pcs custa mais do que a opção 1 x 50pcs.
+#### Arquivos de Montagem
 
-### Capacidades do Fusion PCB
+Prepare as informações de montagem abaixo a partir da mesma revisão de projeto que os arquivos Gerber e a BOM.
 
-- Múltiplas camadas: até 16 camadas
+| Arquivo | Principal finalidade |
+| --- | --- |
+| Desenho de montagem | Mostra as posições dos componentes, designadores de referência, polaridade, orientação e requisitos de inserção de furos passantes |
+| Arquivo CPL / Pick-and-Place | Fornece o designador de referência, coordenadas X/Y, rotação e lado de montagem para posicionamento SMT |
+| Arquivos de programação e teste | Necessários quando o pedido inclui gravação de firmware ou testes funcionais; inclua a versão do firmware, etapas de operação, resultados esperados e critérios de aprovação/reprovação |
 
-- Material da PCB: FR-4
+Para um desenho de montagem dupla face, inclua ambos os lados. Montagens apenas com furos passantes não exigem coordenadas de posicionamento SMT. Consulte o [guia de desenho de montagem](https://support.seeed.cc/portal/en/kb/articles/how-do-i-export-pcb-assembly-drawings-fabrication-files-for-seeed-fusion-pcba-orders) e o [guia de arquivo Pick-and-Place](https://support.seeed.cc/portal/en/kb/articles/how-do-i-export-pcb-pick-and-place-xy-files-for-seeed-fusion-pcba-orders).
 
-- Cor disponível:
-  - Máscara de Solda: Verde, Vermelha, Amarela, Azul, Branca, Preta
-  - Silk Screen: Branco, Preto (apenas para Máscara de Solda branca)
+### Dicas de Projeto de PCB
 
-- Fonte: o mínimo é 6 mil de largura de linha e 32 mil de altura, um pouco maior será melhor.
+Painelização agrupa várias placas em um único painel de fabricação. O Fusion PCB suporta painéis contendo cópias repetidas do mesmo projeto ou projetos diferentes.
 
-**Tamanho máximo disponível:** 50mm X 50mm, 50mm X 100mm, 50mm X 150mm, 50mm X 200mm, 100mm X 100mm, 100mm X 150mm, 100mm X 200mm, 150mm X 150mm, 150mm X 200mm, 200mm X 200mm
+- **Contornos e ranhuras da placa:** Inclua contornos completos da placa e marque linhas de V-cut ou ranhuras fresadas na camada de contorno (GKO/GML).
 
-**Observação:** As dimensões da PCB (tanto comprimento quanto largura) devem estar dentro da opção de tamanho de PCB
+- **Layout de V-cut:** As linhas de V-cut devem ser retas e ir de uma borda do painel à outra. Elas não podem parar no meio do painel.
 
-**Exemplo:**
+- **Marcação de serigrafia:** Linhas de serigrafia sozinhas não especificam cortes. Sem instruções de corte na camada de contorno, o painel será fornecido como uma única placa completa.
 
-Design de PCB: 30mm X 60mm   Opção: 50mm X 50mm (Não)   50mm X 100mm (Sim)
+Consulte as [regras de painelização de PCB](https://support.seeed.cc/portal/en/kb/articles/what-are-the-pcb-panelization-rules) para exemplos de layout e requisitos de pedido.
 
-Design de PCB: 101mm X 40mm   Opção: 100mm X 50mm (Não)   150mm X 50mm (Sim)
+Meça as dimensões do PCB usando o menor retângulo que envolva todo o contorno da placa. Para um pedido painelizado, use as dimensões gerais do painel.
 
-Design de PCB: 70mm X 70mm   Opção: 50mm X 150mm (Não)   100mm X 100mm (Sim)
+Após enviar seus arquivos, verifique as dimensões detectadas pela página de pedido em comparação com o seu projeto. Corrija-as manualmente se a medição automática estiver ausente ou imprecisa.
 
-**Espessura de placa disponível:** 0.8mm, 1.0mm, 1.2mm, 1.6mm, 2.0mm
+## Capacidades do Fusion PCB
 
-(Os custos de 0.8mm, 1.0mm, 1.2mm e 1.6mm são os mesmos)
+#### Tipos de Placa e Materiais
 
-**Tolerância de espessura:** (t≥0.8mm) +/- 10%
+Fusion oferece suporte a PCBs rígidos, flexíveis e de base metálica para diferentes requisitos elétricos e mecânicos.
 
-**Tolerância de espessura:** (t&lt;0.8mm) +/- 10%
+| Tipo | Opções e aplicações típicas |
+| --- | --- |
+| FR-4 | Placas rígidas de uso geral; materiais TG130, TG150 e TG170. |
+| PCB de base de alumínio | Placas de base metálica para aplicações como iluminação LED e eletrônica de potência. |
+| PCB flexível | Circuitos flexíveis para layouts compactos e interconexões. |
+| PCB rígido-flexível | Seções rígidas e flexíveis integradas, disponíveis por meio do Advanced PCB. |
+| PCB de alta frequência | Materiais Rogers RO4003C e RO4350B para projetos RF e de alta frequência. |
+| PCB de base de cobre | Placas de base metálica para aplicações de alta potência com necessidades exigentes de dissipação de calor. |
 
-**Espessura da camada de isolamento:** 0.075mm--5.00mm
+Use o [serviço Advanced PCB](https://www.seeedstudio.com/fusion-advanced-pcb.html) para HDI, placas com alta contagem de camadas, rígido-flexível, projetos de alta frequência e outros requisitos especializados. O [guia de materiais de PCB](https://www.seeedstudio.com/blog/2026/08/07/seeed-fusion-what-pcb-base-materials-does-seeed-fusion-offer-and-which-one-should-you-choose/) explica as diferenças entre esses materiais.
 
-**Linha mínima:** 6mil
+#### Especificações Comuns de Fabricação em FR-4
 
-**Espaçamento mínimo:** 6mil
+As especificações abaixo se aplicam a placas FR-4. Elas não são uma especificação combinada para todos os tipos de placa listados acima.
 
-**Espessura do cobre da camada externa:** 1oz (35um)
+| Item | Especificação |
+| --- | --- |
+| Dimensões da placa | 10 × 10 mm a 500 × 500 mm; tolerância dimensional: ±0,2 mm. Painéis com V-cut têm restrições adicionais de tamanho. |
+| Espessuras de placa de 2 camadas | 0,6, 0,8, 1,0, 1,2, 1,6, 2,0, 2,5, 3,0 mm |
+| Espessuras de placa de 4 camadas | 0,8, 1,0, 1,2, 1,6, 2,0, 2,5, 3,0 mm |
+| Tolerância de espessura da placa | ±0,1 mm para placas ≤1,0 mm de espessura; ±10% para placas mais espessas. |
+| Opções de espessura de cobre | 1 oz, 2 oz, 3 oz |
+| Largura mínima de trilha / espaçamento | 1 oz: 4/4 mil; 2 oz: 10/10 mil; 3 oz: 15/15 mil. Veja as condições adicionais abaixo. |
+| Furos mecânicos | Não metalizados: 0,2–6,3 mm; furos metalizados: 0,2–5,8 mm. |
+| Furos semicirculares (castellated) | Diâmetro mínimo: 0,5 mm |
+| Largura de ranhura fresada | Não metalizada: ≥0,8 mm; metalizada: ≥0,65 mm |
+| Distância circuito–borda da placa | ≥0,3 mm |
+| Cores da máscara de solda | Verde, vermelho, amarelo, azul, branco, preto |
+| Barreira de máscara de solda | Com a opção de barreira de 0,1 mm: ≥0,10 mm para verde, ≥0,13 mm para outras cores. Sem essa opção: ≥0,32 mm para verde, ≥0,35 mm para outras cores. |
+| Serigrafia | Preto sobre máscara de solda branca; branco sobre as outras cores listadas acima. Altura mínima de texto: 23 mil; largura mínima de traço: 4 mil. |
+| Acabamentos de superfície | HASL com chumbo, HASL sem chumbo, ENIG, OSP, ouro duro |
 
-**Espessura do cobre da camada interna:** 17um—100um
+Para projetos de bobinas RF, use pelo menos 6/6 mil de largura de trilha e espaçamento e selecione a opção de 4/4 mil. Para placas de 4 camadas, as trilhas das camadas internas devem ter pelo menos 6 mil de largura.
 
-**Furo de furação (mecânico):** 0.3mm—6.35mm
+Consulte a [Especificação Fusion PCB](https://support.seeed.cc/portal/en/kb/articles/fusion-pcb-specification) para pilhas de camadas (stackups) e outros requisitos específicos de processo.
 
-**Furo final (mecânico):** 0.3mm—6.30mm
+### Capacidades do Fusion PCBA
 
-**Tolerância de diâmetro (mecânico):** 0.08mm
+Fusion oferece suporte à aquisição de componentes e montagem em superfície, furo passante e mista para protótipos, pequenos lotes e produção em volume.
 
-**Registro (mecânico):** 0.09mm
+| Item | Capacidade |
+| --- | --- |
+| Métodos de montagem | Montagem em superfície (SMT), furo passante (THT) e montagem mista |
+| Lados de montagem | Face simples e dupla face |
+| Componentes pequenos | Encapsulamentos até 0201 |
+| Dispositivos de passo fino | BGA com passo de 0,4 mm e dispositivos com passo de terminais de 0,4 mm |
+| Aquisição de componentes | Compra com base na BOM enviada |
+| Suporte de engenharia | Revisão DFA gratuita com todo pedido Fusion PCBA |
+| Testes e programação | Testes funcionais, gravação de firmware e dispositivos de teste personalizados |
 
-**Taxa de aspecto:** 8:1
+Consulte o [serviço Fusion PCB Assembly](https://www.seeedstudio.com/pcb-assembly.html) para uma visão geral do serviço.
 
-**Tipo de máscara de solda:** Tinta fotossensível
+### Revisão de Engenharia e Suporte de Qualidade
 
-**Largura mínima da máscara de solda para SMT:** 0.1mm
+DFM (Design for Manufacturability) verifica se um PCB nu pode ser fabricado. DFA (Design for Assembly) verifica se os componentes especificados podem ser montados corretamente.
 
-**Folga mínima da máscara de solda:** 0.1mm
+- **Revisão de fabricação de PCB:** Problemas com largura e espaçamento de trilhas, tamanhos de furos ou aberturas de máscara de solda que possam afetar a fabricação são levantados antes do início da produção.
 
-**Diâmetro do furo preenchido:** 0.25—0.60mm
+- **Revisão DFA gratuita para pedidos de PCBA:** Todo pedido Fusion PCBA inclui uma revisão dos arquivos Gerber, da BOM e das informações de montagem quanto à compatibilidade de footprint, interferência de componentes e problemas de polaridade ou orientação. Isso ajuda a identificar problemas de montagem antes que as peças sejam instaladas na placa.
 
-**Acabamento de superfície:** HASL, HASL (Lead Free) +\$5, ENIG+\$10.
+- **Inspeção e testes de PCBA:** As capacidades incluem AOI para defeitos visíveis de montagem, inspeção por raio X para juntas de solda ocultas e ICT para verificações elétricas. Testes funcionais usam um plano de teste fornecido pelo cliente para verificar as funções pretendidas da placa montada. Os métodos de inspeção e teste utilizados dependem do projeto da placa e dos requisitos de teste.
 
-**E-TEST:** 50% e-test, 100% e-test +\$10
-50% e-test (a PCB testada terá uma marca na borda da PCB).
-100% e-test opcional por mais \$10
+Leia o [guia de revisão DFA](https://www.seeedstudio.com/blog/2026/08/31/seeed-fusion-pcba-dfa-review-guide-what-engineers-check-before-assembly/) e o [guia de controle de qualidade de PCBA](https://www.seeedstudio.com/blog/2026/08/18/seeed-fusion-pcba-quality-control-flying-probe-aoi-x-ray-ict-and-fct-explained/), ou explore os [serviços de teste Fusion](https://www.seeedstudio.com/fusion-testing-solutions.html).
 
-**Regras de projeto Eagle:** [http://support.seeedstudio.com/knowledgebase/articles/447362-fusion-pcb-specification](http://support.seeedstudio.com/knowledgebase/articles/447362-fusion-pcb-specification)
+### Produção e envio
 
-## Suporte Técnico & Discussão de Produtos
+O tempo de produção da PCB depende da complexidade da placa, número de camadas, material, quantidade e processos de fabricação. O campo **Production Time** na [página do pedido](https://www.seeedstudio.com/fusion_pcb.html) mostra a estimativa para a configuração selecionada. Para pedidos de PCBA, a disponibilidade de componentes e os requisitos de montagem também afetam o cronograma.
 
-Obrigado por escolher nossos produtos! Estamos aqui para lhe fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja o mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+O tempo de produção conta a partir da confirmação dos arquivos até a embalagem. A revisão de arquivos e atrasos causados por problemas nos arquivos ficam fora desse período. Em seguida vêm a expedição e o envio; o tempo de trânsito depende do destino e do método de envio selecionado. Ao planejar a entrega, considere cada etapa em vez de tratar o tempo de produção como a data de chegada.
+
+A [FAQ sobre prazo de entrega Fusion](https://support.seeed.cc/portal/en/kb/articles/how-long-do-fusion-orders-take) fornece mais informações sobre as etapas do pedido.
+
+### FAQs
+
+**Onde posso encontrar instruções detalhadas de pedido?**
+
+O [guia passo a passo de pedido de PCB](https://support.seeed.cc/portal/en/kb/articles/how-to-place-a-fusion-pcb-order) abrange o envio dos arquivos de PCB, opções de fabricação, checkout e pagamento. Para montagem, consulte o [guia de pedido de PCBA](https://support.seeed.cc/portal/en/kb/articles/how-do-i-place-a-seeed-fusion-pcb-assembly-pcba-order).
+
+**Como exporto arquivos Gerber do meu software de design?**
+
+Exporte as camadas necessárias de cobre, máscara de solda, serigrafia e contorno, juntamente com o arquivo de furação. Os [guias de exportação Gerber](https://support.seeed.cc/portal/en/kb/fusion/how-to-generate-pcb-gerber-files) fornecem instruções para diferentes ferramentas de design de PCB.
+
+**Posso solicitar testes para PCBAs que eu já tenho?**
+
+Sim. Use a opção somente teste em [Fusion Testing Solutions](https://www.seeedstudio.com/fusion-testing-solutions.html) e envie os arquivos de projeto e de teste necessários.
+
+**Meu pedido está como Pending / Awaiting Revised File. O que devo fazer?**
+
+Verifique o endereço de e-mail cadastrado, incluindo a pasta de spam, para ver a descrição do problema. Revise e envie novamente os arquivos conforme as instruções para que o pedido possa prosseguir. Consulte a [FAQ sobre revisão de arquivos](https://support.seeed.cc/portal/en/kb/articles/my-fusion-order-status-is-pending-awaiting-revised-file-what-should-i-do) para mais detalhes.
+
+**E se minha placa precisar de opções que não estão listadas online?**
+
+Envie os requisitos do projeto por meio do [serviço Advanced PCB](https://www.seeedstudio.com/fusion-advanced-pcb.html) para revisão de engenharia e cotação.
+
+## Suporte técnico e discussão de produtos
+
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div className="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
