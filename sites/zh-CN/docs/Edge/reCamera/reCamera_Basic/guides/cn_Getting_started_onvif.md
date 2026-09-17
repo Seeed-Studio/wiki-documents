@@ -4,7 +4,7 @@ title: reCamera 集成 ONVIF 服务
 keywords:
   - reCamera
   - onvif
-slug: /reCamera_onvif
+slug: /recamera_onvif
 sku: 102991896, 108990119, 100029708
 sidebar_position: 6
 last_update:
@@ -12,7 +12,7 @@ last_update:
   author: yylin
 createdAt: '2026-09-14'
 updatedAt: '2026-09-14'
-url: https://wiki.seeedstudio.com/cn/reCamera_onvif/
+url: https://wiki.seeedstudio.com/cn/recamera_onvif/
 ---
 
 # reCamera 集成 ONVIF 服务
