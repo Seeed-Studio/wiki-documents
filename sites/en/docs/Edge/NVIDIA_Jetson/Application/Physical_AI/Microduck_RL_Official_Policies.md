@@ -1,11 +1,11 @@
 ---
-description: Train an official Microduck task, visualize PT checkpoints, and run keyboard-controlled multi-policy ONNX inference in MuJoCo on Jetson.
+description: Train official Microduck tasks, visualize PT checkpoints, and run keyboard-controlled multi-policy ONNX inference in MuJoCo on Jetson.
 title: Train and Run Official Microduck Motions
 image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png
 slug: /ai_robotics_microduck_rl_official_policies
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/ai_robotics_microduck_rl_official_policies/
@@ -113,6 +113,7 @@ uv run --no-sync python3 scripts/infer_policy.py \
   --roulade pretrained/pollen-robotics/roulade.onnx \
   --kick-left pretrained/pollen-robotics/ball_kick_left.onnx \
   --kick-right pretrained/pollen-robotics/ball_kick_right.onnx \
+  --front-back-split models/exports/front_back_split/front_back_split_model_999.onnx \
   --new-cmd-obs
 ```
 
@@ -126,6 +127,7 @@ uv run --no-sync python3 scripts/infer_policy.py \
 | `Y` | Sit / stand transition |
 | `R` | Forward roll |
 | `K` / `L` | Left / right kick |
+| `O` | Six-second front-back split, then return to standing or walking |
 | `Space` | Clear velocity command |
 | `Q` | Quit |
 
@@ -156,6 +158,20 @@ Press `R` to switch to the forward-roll policy.
 </div>
 
 Press `K` or `L` to trigger the left-foot or right-foot kick policy in the ball scene.
+
+### Front-Back Split
+
+The former one-leg balance policy has been replaced by a more stable double-support
+motion. Press `O` to run the trained policy: the left foot moves forward, the
+right foot moves backward, both feet remain grounded, and the robot returns to
+the standing or walking policy after the six-second phase cycle.
+
+The included artifacts are:
+
+```text
+models/checkpoints/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt
+models/exports/front_back_split/front_back_split_model_999.onnx
+```
 
 ## PT and ONNX Serve Different Purposes
 
