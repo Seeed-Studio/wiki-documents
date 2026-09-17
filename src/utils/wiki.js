@@ -1,6 +1,28 @@
 const docList = [
   [
     {
+      "path": "/recamera_onvif",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg",
+      "title": "Deploy ONVIF on reCamera",
+      "date": "2026-09-14",
+      "title_cn": "reCamera 集成 ONVIF 服务",
+      "title_ja": "reCamera に ONVIF をデプロイする",
+      "title_es": "Desplegar ONVIF en reCamera",
+      "title_pt": "Implantar ONVIF na reCamera"
+    },
+    {
+      "path": "/control_rebot_arm_using_voice_with_respeaker_clip",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png",
+      "title": "Control reBot Arm using voice with reSpeaker Clip",
+      "date": "2026-09-11",
+      "title_cn": "使用 reSpeaker Clip 通过语音控制 reBot Arm",
+      "title_ja": "reSpeaker Clip を使って音声で reBot Arm を制御する",
+      "title_es": "Controlar reBot Arm usando la voz con reSpeaker Clip",
+      "title_pt": "Controlar reBot Arm usando voz com reSpeaker Clip"
+    }
+  ],
+  [
+    {
       "path": "/sensecap_s1000_v2_co2_calibration",
       "image": "https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_S1000_V2_CO2_Calibration.jpg",
       "title": "SenseCAP S1000 V2 CO₂ Calibration",
@@ -15,8 +37,8 @@ const docList = [
       "image": "https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png",
       "title": "Microduck RL on Jetson",
       "date": "2026-09-04",
-      "title_cn": "Jetson 上的 Microduck 强化学习",
-      "title_ja": "Jetson 上の Microduck RL",
+      "title_cn": "Microduck 在 Jetson 上的强化学习",
+      "title_ja": "Jetson 上の Microduck 強化学習",
       "title_es": "Microduck RL en Jetson",
       "title_pt": "Microduck RL no Jetson"
     }
@@ -39,7 +61,7 @@ const docList = [
       "date": "2026-08-31",
       "title_cn": "XIAO Display Gadgets 系列",
       "title_ja": "XIAO Display Gadgets シリーズ",
-      "title_es": "XIAO Display Gadgets Serie",
+      "title_es": "Serie XIAO Display Gadgets",
       "title_pt": "Série XIAO Display Gadgets"
     }
   ],
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "reCamera と NVIDIA Jetson で VLM イベントゲートウェイを構築する",
       "title_es": "Crea una pasarela de eventos VLM con reCamera y NVIDIA Jetson",
       "title_pt": "Criar um Gateway de Eventos VLM com reCamera e NVIDIA Jetson"
-    }
-  ],
-  [
-    {
-      "path": "/getting_started_0.96_inch_display_esp32s3",
-      "image": "https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_esp32s3.webp",
-      "title": "Getting Started with XIAO 0.96'' IPS Display (ESP32-S3)",
-      "date": "2026-08-20",
-      "title_cn": "XIAO 0.96'' IPS Display (ESP32-S3) 入门指南",
-      "title_ja": "XIAO 0.96'' IPS Display (ESP32-S3) のはじめに",
-      "title_es": "Introducción a XIAO 0.96'' IPS Display (ESP32-S3)",
-      "title_pt": "Introdução ao XIAO 0.96'' IPS Display (ESP32-S3)"
-    },
-    {
-      "path": "/jetson_fisheye_surround_view_demo",
-      "image": "https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif",
-      "title": "Build a Four-Camera Fisheye Surround View Demo on Jetson AGX Thor",
-      "date": "2026-08-18",
-      "title_cn": "在 Jetson AGX Thor 上构建四摄像头鱼眼环视演示",
-      "title_ja": "Jetson AGX Thor 上で 4 台の魚眼カメラによるサラウンドビュー デモを構築する",
-      "title_es": "Crea una demo de vista envolvente con ojo de pez y cuatro cámaras en Jetson AGX Thor",
-      "title_pt": "Crie uma Demonstração de Visão Surround com Quatro Câmeras Olho de Peixe no Jetson AGX Thor"
     }
   ]
 ];

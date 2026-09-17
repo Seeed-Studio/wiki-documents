@@ -23,16 +23,6 @@ const ITEMS = [
     },
   },
   {
-    slug: '/rebot_arm_b601_rs_lerobot/',
-    labels: {
-      en: 'LeRobot',
-      cn: 'LeRobot',
-      ja: 'LeRobot',
-      es: 'LeRobot',
-      'pt-br': 'LeRobot',
-    },
-  },
-  {
     slug: '/rebot_arm_b601_rs_pinocchio_meshcat/',
     labels: {
       en: 'Motion Control',
@@ -47,6 +37,43 @@ const ITEMS = [
       ja: ['Pinocchio', 'MeshCat'],
       es: ['Pinocchio', 'MeshCat'],
       'pt-br': ['Pinocchio', 'MeshCat'],
+    },
+  },
+  {
+    slug: '/rebot_arm_b601_rs_web_simulator_developer_guide/',
+    labels: {
+      en: 'Web Sim',
+      cn: 'Web 仿真',
+      ja: 'Web シミュレーション',
+      es: 'Simulación web',
+      'pt-br': 'Simulação web',
+    },
+    hints: {
+      en: ['MuJoCo / ROS2'],
+      cn: ['MuJoCo / ROS2'],
+      ja: ['MuJoCo / ROS2'],
+      es: ['MuJoCo / ROS2'],
+      'pt-br': ['MuJoCo / ROS2'],
+    },
+  },
+  {
+    slug: '/wrc_demo_tutorial/',
+    labels: {
+      en: 'Agent',
+      cn: 'Agent',
+      ja: 'Agent',
+      es: 'Agent',
+      'pt-br': 'Agent',
+    },
+  },
+  {
+    slug: '/rebot_arm_b601_rs_lerobot/',
+    labels: {
+      en: 'LeRobot',
+      cn: 'LeRobot',
+      ja: 'LeRobot',
+      es: 'LeRobot',
+      'pt-br': 'LeRobot',
     },
   },
   {
@@ -74,23 +101,6 @@ const ITEMS = [
       ja: 'ROS2',
       es: 'ROS2',
       'pt-br': 'ROS2',
-    },
-  },
-  {
-    slug: '/rebot_arm_b601_rs_web_simulator_developer_guide/',
-    labels: {
-      en: 'Web Sim',
-      cn: 'Web 仿真',
-      ja: 'Web シミュレーション',
-      es: 'Simulación web',
-      'pt-br': 'Simulação web',
-    },
-    hints: {
-      en: ['MuJoCo / ROS2'],
-      cn: ['MuJoCo / ROS2'],
-      ja: ['MuJoCo / ROS2'],
-      es: ['MuJoCo / ROS2'],
-      'pt-br': ['MuJoCo / ROS2'],
     },
   },
   {

@@ -216,7 +216,7 @@ Then, Open `https://motorbridge.github.io/motorbridge-studio/` in your browser, 
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Getting Started with reBot Arm B601-DM in LeRobot
+                reBot Arm B601-DM in LeRobot
             </h3>
         </div>
     </a>
@@ -340,13 +340,13 @@ Then, Open `https://motorbridge.github.io/motorbridge-studio/` in your browser, 
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
                 src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"
-                alt="Simulating reBotArm through Isaacsim"
+                alt="reBot Arm B601-RS Isaac Sim"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
             />
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Simulating reBotArm through Isaacsim
+                reBot Arm B601-RS Isaac Sim
             </h3>
         </div>
     </a>
