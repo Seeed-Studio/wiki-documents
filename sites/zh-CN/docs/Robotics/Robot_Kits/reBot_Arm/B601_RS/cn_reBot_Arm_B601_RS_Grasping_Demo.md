@@ -93,7 +93,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     </tr>
     <tr>
       <td>相机型号</td>
-      <td>Orbbec Gemini 2 / Intel RealSense D435i / D405</td>
+      <td>Orbbec Gemini 2 / D435i / D405</td>
     </tr>
     <tr>
       <td>检测方式</td>
@@ -272,7 +272,7 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 | pyorbbecsdk         | https://github.com/orbbec/pyorbbecsdk                                |
 | pyorbbecsdk 文档    | https://orbbec.github.io/pyorbbecsdk/index.html                      |
 | ROS2 Wrapper        | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main                |
-| Intel RealSense SDK | https://github.com/realsenseai/librealsense                          |
+| RealSense SDK | https://github.com/realsenseai/librealsense                          |
 
 #### 步骤 5. 配置 GraspNet（可选）
 
@@ -658,7 +658,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 本方案基于 **ROS2** 与 **YOLO**，在 reBot Arm B601-RS 上完成目标检测、抓取与放置。系统通过多终端分别启动机械臂、深度相机和抓取节点。
 
-当前深度相机支持 **Orbbec Gemini 2** 与 **Intel RealSense D405**。本方案不需要标定板做手眼标定；受安装和打印件公差影响，每台机械臂抓取时会有微小误差。
+当前深度相机支持 **Orbbec Gemini 2** 与 **RealSense D405**。本方案不需要标定板做手眼标定；受安装和打印件公差影响，每台机械臂抓取时会有微小误差。
 
 ### 2. 环境安装
 
@@ -993,6 +993,6 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [pyorbbecsdk 文档](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
 - [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
-- [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
+- [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) 文档](https://graspnet.net/)

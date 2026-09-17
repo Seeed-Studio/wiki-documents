@@ -95,7 +95,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     </tr>
     <tr>
       <td>カメラモデル</td>
-      <td>Orbbec Gemini 2 / Intel RealSense D435i / D405</td>
+      <td>Orbbec Gemini 2 / RealSense D435i / D405</td>
     </tr>
     <tr>
       <td>検出方式</td>
@@ -271,7 +271,7 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 | pyorbbecsdk | https://github.com/orbbec/pyorbbecsdk |
 | pyorbbecsdk ドキュメント | https://orbbec.github.io/pyorbbecsdk/index.html |
 | ROS2 ラッパー | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
-| Intel RealSense SDK | https://github.com/realsenseai/librealsense |
+| RealSense SDK | https://github.com/realsenseai/librealsense |
 
 #### ステップ 5. GraspNet を設定する（オプション）
 
@@ -657,7 +657,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 本ソリューションでは、reBot Arm B601-RS 上で **ROS2** と **YOLO** を使用し、物体検出、把持、配置を行います。システムは複数のターミナルでアーム、デプスカメラ、把持ノードをそれぞれ起動します。
 
-現在、デプスカメラは **Orbbec Gemini 2** と **Intel RealSense D405** をサポートしています。このワークフローでは、ハンドアイキャリブレーション用のキャリブレーションボードは不要です。取り付けおよびプリント部品の公差により、アームごとにわずかな把持オフセットが生じる場合があります。
+現在、デプスカメラは **Orbbec Gemini 2** と **RealSense D405** をサポートしています。このワークフローでは、ハンドアイキャリブレーション用のキャリブレーションボードは不要です。取り付けおよびプリント部品の公差により、アームごとにわずかな把持オフセットが生じる場合があります。
 
 ### 2. 環境構築
 
@@ -990,6 +990,6 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [pyorbbecsdk ドキュメント](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
 - [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
-- [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
+- [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) ドキュメント](https://graspnet.net/)
