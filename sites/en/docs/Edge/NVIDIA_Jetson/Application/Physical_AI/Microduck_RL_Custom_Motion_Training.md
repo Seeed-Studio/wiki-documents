@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_
 slug: /ai_robotics_microduck_rl_custom_motion_training
 sku: 114110312, 100006184
 last_update:
-  date: 09/07/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/ai_robotics_microduck_rl_custom_motion_training/
@@ -206,14 +206,17 @@ uv run --no-sync python3 scripts/export.py \
 
 To add keyboard triggering, extend `scripts/infer_policy.py` using the existing sit/stand, ground-pick, roulade, and kick policy-switching patterns. Write to the command slot expected by the new policy and keep the 61-dimensional observation layout unchanged.
 
-## Verified Example: One-Leg Balance
+## Verified Example: Front-Back Split
 
-The following custom task was implemented and smoke-tested on the Jetson reference system. The motion transfers the robot's weight onto its **left foot**, lifts the **right foot**, holds the balance pose, and then returns to the normal two-foot standing pose.
+The validated custom task uses a more feasible double-support motion than the
+previous one-leg balance experiment. The left foot moves forward, the right foot
+moves backward, both feet remain grounded, and the robot returns to its normal
+standing pose.
 
 The registered task ID is:
 
 ```text
-Mjlab-OneLegBalance-Flat-MicroDuck
+Mjlab-FrontBackSplit-Flat-MicroDuck
 ```
 
 ### Motion Timeline
@@ -222,227 +225,174 @@ The task uses a six-second cyclic phase command:
 
 | Normalized phase | Behavior |
 |---|---|
-| `0.00–0.30` | Transfer weight to the left foot and lift the right leg |
-| `0.30–0.58` | Hold the one-leg balance pose |
-| `0.58–0.78` | Lower the right foot and return to standing |
+| `0.00–0.30` | Move from standing into the front-back split |
+| `0.30–0.58` | Hold the split stance with both feet grounded |
+| `0.58–0.78` | Return the legs toward the standing pose |
 | `0.78–1.00` | Stabilize in the two-foot home pose |
 
-These boundaries are defined in `microduck_one_leg_balance_env_cfg.py`:
+The timing constants are defined in
+`src/mjlab_microduck/tasks/microduck_front_back_split_env_cfg.py`:
 
 ```python
-BALANCE_PERIOD = 6.0
-LIFT_END = 0.30
+SPLIT_PERIOD = 6.0
+SPLIT_END = 0.30
 HOLD_END = 0.58
 RETURN_END = 0.78
+TARGET_SAGITTAL_SEPARATION = 0.095
 ```
 
 ### Define the Target Pose
 
-The target is expressed with joint names rather than raw MuJoCo joint indexes. This keeps the intent readable and avoids accidental index shifts when the robot model changes.
+The target is expressed by joint names and was checked with MuJoCo forward
+kinematics. The target keeps the two foot sites level while producing about
+`9.5 cm` of signed front-to-back foot separation:
 
 ```python
-ONE_LEG_POSE = {
-    "left_hip_roll": -0.25,
-    "left_hip_pitch": -0.40,
-    "left_knee": -0.05,
-    "left_ankle": 0.45,
-    "right_hip_roll": -0.10,
-    "right_hip_pitch": 0.95,
-    "right_knee": -1.25,
-    "right_ankle": 0.30,
-    "neck_pitch": 0.30,
-    "head_pitch": 0.30,
-    "head_roll": -0.10,
+FRONT_BACK_SPLIT_POSE = {
+    "left_hip_pitch": -1.1865,
+    "left_knee": -0.1386,
+    "left_ankle": 1.0452,
+    "right_hip_pitch": 0.0603,
+    "right_knee": 0.4927,
+    "right_ankle": 0.4293,
+    "neck_pitch": 0.3491,
+    "head_pitch": 0.3491,
 }
 ```
 
-The left leg remains close to its standing configuration. The right hip and knee fold the swing leg forward, while the small head roll helps communicate the intended support side.
+The interactive pose editor is `scripts/front_back_split_pose_editor.py`.
+It opens a MuJoCo window with gravity disabled and prints the final named pose
+when the window closes:
 
-### Build the Balance Reward
+```bash
+cd ~/microduck-jetson/microduck_rl
+export DISPLAY=:0
+export MUJOCO_GL=glfw
+uv run --no-sync python scripts/front_back_split_pose_editor.py
+```
 
-The example combines five task-specific objectives:
+If the Jetson desktop uses a different display, run the command directly from a
+graphical terminal and use the value printed by `echo $DISPLAY`.
+
+### Build the Split-Motion Reward
+
+The task combines these motion-specific objectives:
 
 | Reward | Purpose |
 |---|---|
-| `one_leg_pose` | Track the interpolated standing-to-balance joint pose |
-| `support_foot_grounded` | Keep the left support foot in contact with the terrain |
-| `swing_foot_airborne` | Prevent the right foot from remaining on the floor during the hold phase |
-| `swing_foot_height` | Track the desired right-foot clearance above the terrain |
-| `com_over_support` | Move the horizontal center of mass over the left support foot |
+| `split_pose` | Track the interpolated standing-to-split joint pose |
+| `split_pose_l1` | Provide a directional joint error gradient |
+| `feet_grounded` | Keep both feet in contact with the terrain |
+| `feet_flat` | Penalize tilted foot sites |
+| `sagittal_separation` | Track the signed front-to-back foot separation |
 
-The task also retains joint-limit, self-collision, angular-velocity, action-rate, actuator, encoder, friction, mass, inertia, and center-of-mass randomization terms inherited from the Microduck training environment.
-
-Two small reusable measurements were added to `src/mjlab_microduck/tasks/mdp.py`:
-
-- `phase_single_foot_airborne_reward()` gates the right-foot airborne reward to the active balance phase.
-- `phase_site_height_track()` interpolates the right-foot height target between standing and lifted states.
-
-The existing `phase_pose_track()`, `phase_pose_track_l1()`, `single_foot_grounded_reward()`, and `com_over_support_foot()` functions are reused directly.
+The task also retains upright, joint-limit, self-collision, angular-velocity,
+action-rate, actuator, encoder, friction, mass, inertia, and center-of-mass
+randomization terms inherited from the Microduck environment. The custom
+`sagittal_separation` term measures both foot sites in the robot base frame, so
+the reward and the pose use the same coordinate convention.
 
 ### Register the Task
 
-`Mjlab-OneLegBalance-Flat-MicroDuck` is the **task ID used by the MJLab task registry**. It is not a file name and it is not passed to `make_microduck_one_leg_balance_env_cfg()` as a function argument. The command-line launcher uses this string to look up the environment, play configuration, RL configuration, and runner registered in `src/mjlab_microduck/tasks/__init__.py`.
-
-The definition and registration path is:
+`Mjlab-FrontBackSplit-Flat-MicroDuck` is the task ID used by the MJLab registry.
+It is not a filename and is not passed as an argument to the environment factory.
 
 | Item | Location | Purpose |
 |---|---|---|
-| Environment configuration | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | Defines the one-leg pose, phase timing, rewards, scene, and `make_microduck_one_leg_balance_env_cfg()` |
-| RL configuration | `src/mjlab_microduck/tasks/microduck_one_leg_balance_env_cfg.py` | Defines `MicroduckOneLegBalanceRlCfg` and the training hyperparameters |
+| Environment and RL configuration | `src/mjlab_microduck/tasks/microduck_front_back_split_env_cfg.py` | Defines the target pose, phase timing, scene, rewards, and PPO configuration |
+| Phase separation reward | `src/mjlab_microduck/tasks/mdp.py` | Tracks signed sagittal foot separation in the robot base frame |
 | Task registration | `src/mjlab_microduck/tasks/__init__.py` | Binds the task ID to the environment and RL configuration |
+| Pose editor | `scripts/front_back_split_pose_editor.py` | Opens and prints the validated MuJoCo target pose |
 | CLI entry point | `uv run --no-sync train <task-id>` | Looks up the registered task and starts training |
 
-The relationship is:
-
-```text
-Mjlab-OneLegBalance-Flat-MicroDuck
-        ↓ task_id lookup
-register_mjlab_task(...)
-        ↓
-make_microduck_one_leg_balance_env_cfg()
-+ MicroduckOneLegBalanceRlCfg
-+ MicroduckOnPolicyRunner
-```
-
-Therefore, this is the complete command used to select the custom task:
+Confirm registration:
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 64 \
-  --agent.logger tensorboard \
-  --agent.max_iterations 5
-```
-
-If `list-envs` does not show the task, check that the new configuration file exists and that both its import and `register_mjlab_task()` call are present in `src/mjlab_microduck/tasks/__init__.py`. The task ID in the command must exactly match the `task_id` string, including capitalization and hyphens.
-
-Add the task configuration import and registration to `src/mjlab_microduck/tasks/__init__.py`:
-
-```python
-from .microduck_one_leg_balance_env_cfg import (
-    make_microduck_one_leg_balance_env_cfg,
-    MicroduckOneLegBalanceRlCfg,
-)
-
-register_mjlab_task(
-    task_id="Mjlab-OneLegBalance-Flat-MicroDuck",
-    env_cfg=make_microduck_one_leg_balance_env_cfg(),
-    play_env_cfg=make_microduck_one_leg_balance_env_cfg(play=True),
-    rl_cfg=MicroduckOneLegBalanceRlCfg,
-    runner_cls=MicroduckOnPolicyRunner,
-)
-```
-
-Confirm that MJLab discovers the new task:
-
-```bash
-cd ~/microduck-jetson/microduck_rl
-uv run --no-sync list-envs | grep OneLegBalance
+uv run --no-sync list-envs | grep FrontBackSplit
 ```
 
 Expected output:
 
 ```text
-Mjlab-OneLegBalance-Flat-MicroDuck
+Mjlab-FrontBackSplit-Flat-MicroDuck
 ```
 
-### Edit and Capture the Pose in MuJoCo
-
-The example includes `scripts/one_leg_pose_editor.py`. It disables gravity and fixes the floating base so that individual joint targets can be adjusted safely before training.
-
-Run it directly from a terminal on the Jetson desktop:
-
-```bash
-cd ~/microduck-jetson/microduck_rl
-uv run --no-sync python scripts/one_leg_pose_editor.py
-```
-
-Expand the **Control** panel on the right side of the MuJoCo window and adjust the joint sliders. Closing the window prints the final named `ONE_LEG_POSE` dictionary to the terminal. The MuJoCo **Save XML** and **Save MJB** buttons save model files; they do not save the Python target-pose dictionary used by this task.
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_one_leg_balance.png" alt="Interactive MuJoCo pose editor showing the Microduck one-leg balance target pose" />
-</div>
-
-If the editor is launched through SSH and should appear on the Jetson's locally connected monitor, export the active desktop session first. The verified Jetson session used `DISPLAY=:1`:
-
-```bash
-cd ~/microduck-jetson/microduck_rl
-
-export DISPLAY=:1
-export XAUTHORITY=/run/user/1000/gdm/Xauthority
-export XDG_RUNTIME_DIR=/run/user/1000
-export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
-
-~/.local/bin/uv run --no-sync python scripts/one_leg_pose_editor.py
-```
-
-:::note
-The display number can change after reboot or when the desktop session changes. From a terminal opened directly on the Jetson desktop, `echo $DISPLAY` shows the active value.
-:::
-
-### Run the Verified Smoke Tests
+### Run Smoke Tests
 
 Start with 64 environments and five iterations:
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
-
 export MUJOCO_GL=egl
-
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+uv run --no-sync train Mjlab-FrontBackSplit-Flat-MicroDuck \
   --env.scene.num-envs 64 \
   --agent.logger tensorboard \
   --agent.max_iterations 5
 ```
 
-The task was also tested with 4096 parallel environments on a 16 GB Jetson:
+For the 16 GB reference Jetson, the validated full run used 2048 environments:
 
 ```bash
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 4096 \
+uv run --no-sync train Mjlab-FrontBackSplit-Flat-MicroDuck \
+  --env.scene.num-envs 2048 \
   --agent.logger tensorboard \
-  --agent.max_iterations 5
+  --agent.max_iterations 1000
 ```
 
-The 4096-environment smoke test completed without an out-of-memory error or NaN termination and reached approximately `4.6k steps/s`. The actor observation remained 61-dimensional and the action output remained 14-dimensional.
+The completed run reached full 600-step episodes, zero falling terminations in
+late training, and near-maximum split-pose, foot-contact, and separation rewards.
+On an 8 GB Jetson Orin NX or Orin Nano, start with `1024` environments and
+increase only after checking memory with `jtop`.
 
-:::tip
-On an 8 GB Jetson Orin NX or Jetson Orin Nano, begin with `--env.scene.num-envs 1024`. Increase it only after checking available memory with `jtop`.
-:::
+### Visualize a PT Checkpoint
 
-### Open the Training Viewer
-
-To visualize one environment while the custom task trains, run the following command from the Jetson desktop:
+Use the completed checkpoint with the Native MuJoCo Viewer:
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
-
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 1 \
-  --agent.logger tensorboard \
-  --agent.max_iterations 1000 \
-  --env.viewer.distance 0.55 \
-  --env.viewer.azimuth 145 \
-  --env.viewer.elevation -12
+export DISPLAY=:0
+export MUJOCO_GL=glfw
+uv run --no-sync play Mjlab-FrontBackSplit-Flat-MicroDuck \
+  --checkpoint-file "$PWD/logs/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt" \
+  --num-envs 1 \
+  --viewer native
 ```
 
-The pose editor shows the intended target immediately. The training viewer initially shows an untrained policy, so stable one-leg behavior appears only after the policy has learned the transfer, lift, hold, and recovery sequence.
+### Export and Run the ONNX Policy
 
-### Start a Full Training Run
-
-For the 16 GB reference system, use the following starting point:
+Export the checkpoint with the project wrapper so the observation normalizer is
+embedded in the ONNX graph:
 
 ```bash
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 4096 \
-  --agent.logger tensorboard \
-  --agent.max_iterations 20000
+uv run --no-sync python3 scripts/export.py \
+  Mjlab-FrontBackSplit-Flat-MicroDuck \
+  --checkpoint-file "$PWD/logs/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt" \
+  --onnx-file "$PWD/models/exports/front_back_split/front_back_split_model_999.onnx" \
+  --num-envs 1
 ```
 
-The smoke tests confirm that the task configuration, reward terms, sensors, CUDA backend, and large parallel environment count work correctly. They do not by themselves prove policy convergence. Evaluate saved checkpoints in MuJoCo and adjust the pose, reward weights, phase timing, or curriculum if the robot lifts its foot without transferring its center of mass, hops, or fails to recover to standing.
+Run it through the keyboard-controlled MuJoCo inference demo:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+export DISPLAY=:0
+export MUJOCO_GL=glfw
+uv run --no-sync python3 scripts/infer_policy.py \
+  --standing pretrained/pollen-robotics/alpha_stand.onnx \
+  --front-back-split models/exports/front_back_split/front_back_split_model_999.onnx \
+  --new-cmd-obs
+```
+
+Press `O` to run one six-second front-back split cycle. The policy receives the
+same cosine/sine phase command used during training, then control automatically
+returns to the standing policy. If a walking policy is also provided, the demo
+returns to walking when a non-zero velocity command is active.
+
+The old `--one-leg-balance` option and one-leg task files are no longer part of
+the current repository. Use `--front-back-split` for this verified motion.
 
 ## Development Checklist
-
 - [ ] The observation layout remains 61D.
 - [ ] The policy output remains 14D.
 - [ ] Passive joints are excluded from actions and servo observations.
