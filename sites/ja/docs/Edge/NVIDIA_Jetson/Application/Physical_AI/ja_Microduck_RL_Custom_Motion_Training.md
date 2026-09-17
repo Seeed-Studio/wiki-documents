@@ -209,9 +209,6 @@ uv run --no-sync python3 scripts/export.py \
 ## 検証済みの例：前後スプリット
 
 検証済みのカスタムタスクは、以前の片脚バランス実験よりも実現しやすい両脚支持モーションを使用します。左足は前方に、右足は後方に動き、両足は接地したままで、ロボットは通常の直立ポーズに戻ります。
-previous one-leg balance experiment. The left foot moves forward, the right foot
-moves backward, both feet remain grounded, and the robot returns to its normal
-standing pose.
 
 登録されたタスク ID は次のとおりです：
 
@@ -245,8 +242,6 @@ TARGET_SAGITTAL_SEPARATION = 0.095
 
 ターゲットは関節名で表現され、MuJoCo の順運動学で確認されています。ターゲットは 2 つの足サイトを水平に保ちながら、前後方向の足の符号付き分離量を約 `9.5 cm` 生じさせます：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```python
 FRONT_BACK_SPLIT_POSE = {
     "left_hip_pitch": -1.1865,
@@ -257,18 +252,20 @@ FRONT_BACK_SPLIT_POSE = {
     "right_ankle": 0.4293,
     "neck_pitch": 0.3491,
     "head_pitch": 0.3491,
-
+}
 ```
-これは重力を無効にした MuJoCo ウィンドウを開き、ウィンドウを閉じたときに最終的な名前付きポーズを出力します：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+インタラクティブな姿勢エディタは `scripts/front_back_split_pose_editor.py` です。
+実行すると、重力を無効にした MuJoCo ウィンドウが開き、ウィンドウを閉じると最終的な名前付き姿勢が出力されます：
+
 ```bash
 cd ~/microduck-jetson/microduck_rl
 export DISPLAY=:0
-
+export MUJOCO_GL=glfw
 uv run --no-sync python scripts/front_back_split_pose_editor.py
+```
+
+Jetson デスクトップで別のディスプレイ環境を使用している場合は、グラフィカル端末からコマンドを直接実行し、`echo $DISPLAY` で出力された値を使用してください。
 
 ### スプリットモーション報酬を構築する
 
@@ -282,15 +279,7 @@ uv run --no-sync python scripts/front_back_split_pose_editor.py
 | `feet_flat` | 傾いた足サイトをペナルティする |
 | `sagittal_separation` | 前後方向の符号付き足分離量を追従する |
 
-このタスクはまた、直立、関節リミット、自己衝突、角速度、
-| `feet_flat` | Penalize tilted foot sites |
-| `sagittal_separation` | Track the signed front-to-back foot separation |
-
-The task also retains upright, joint-limit, self-collision, angular-velocity,
-action-rate、アクチュエータ、エンコーダ、摩擦、質量、慣性モーメント、および重心
-のランダム化項目は Microduck 環境から継承されています。カスタム
-`sagittal_separation` 項目はロボットのベース座標系で両足の位置を測定するため、
-報酬とポーズは同じ座標系の規約を使用します。
+このタスクでは、Microduck 環境から継承された直立、関節制限、自己衝突、角速度、アクション変化率、アクチュエータ、エンコーダ、摩擦、質量、慣性、および重心のランダム化に関する項も維持されています。カスタムの `sagittal_separation` 項は、ロボットのベース座標系で両足の site を測定するため、報酬項と姿勢で同じ座標系の規約が使用されます。
 
 ### タスクを登録する
 
@@ -340,10 +329,8 @@ uv run --no-sync train Mjlab-FrontBackSplit-Flat-MicroDuck \
   --agent.max_iterations 1000
 ```
 
-完了したランでは、600 ステップのエピソードをフルに達成し、後半のトレーニングでは転倒による終了がゼロで、
-スプリットポーズ、足接地、および分離報酬はほぼ最大値に達しました。
-8 GB の Jetson Orin NX または Orin Nano では、`1024` 個の環境から開始し、
-`jtop` でメモリを確認した後にのみ増やしてください。
+完了したランでは、600 ステップのエピソードをフルに達成し、後半のトレーニングでは転倒による終了がゼロで、スプリットポーズ、足接地、および分離報酬はほぼ最大値に達しました。
+8 GB の Jetson Orin NX または Orin Nano では、`1024` 個の環境から開始し、`jtop` でメモリを確認した後にのみ増やしてください。
 
 ### PT チェックポイントを可視化する
 
@@ -361,8 +348,7 @@ uv run --no-sync play Mjlab-FrontBackSplit-Flat-MicroDuck \
 
 ### ONNX ポリシーをエクスポートして実行する
 
-チェックポイントをプロジェクトラッパーでエクスポートし、観測正規化器が
-ONNX グラフに埋め込まれるようにします：
+チェックポイントをプロジェクトラッパーでエクスポートし、観測正規化器が ONNX グラフに埋め込まれるようにします：
 
 ```bash
 uv run --no-sync python3 scripts/export.py \
@@ -384,12 +370,9 @@ uv run --no-sync python3 scripts/infer_policy.py \
   --new-cmd-obs
 ```
 
-`O` を押すと、6 秒間の前後スプリットサイクルを 1 回実行します。ポリシーはトレーニング中に使用されたものと同じ
-コサイン／サインのフェーズコマンドを受け取り、その後、自動的にスタンディングポリシーに制御が戻ります。歩行ポリシーも
-指定されている場合、非ゼロの速度コマンドが有効になるとデモは歩行に戻ります。
+`O` を押すと、6 秒間の前後スプリットサイクルを 1 回実行します。ポリシーはトレーニング中に使用されたものと同じコサイン／サインのフェーズコマンドを受け取り、その後、自動的にスタンディングポリシーに制御が戻ります。歩行ポリシーも指定されている場合、非ゼロの速度コマンドが有効になるとデモは歩行に戻ります。
 
-旧来の `--one-leg-balance` オプションと片脚タスクファイルは、現在のリポジトリには含まれていません。
-この検証済みモーションには `--front-back-split` を使用してください。
+旧来の `--one-leg-balance` オプションと片脚タスクファイルは、現在のリポジトリには含まれていません。この検証済みモーションには `--front-back-split` を使用してください。
 
 ## 開発チェックリスト
 
@@ -407,4 +390,3 @@ uv run --no-sync python3 scripts/infer_policy.py \
 <div align="center">
   <a href="/ja/ai_robotics_microduck_rl_on_jetson/" style={{display:'inline-block', padding:'16px 30px', marginTop:'20px', borderRadius:'10px', background:'linear-gradient(135deg, #172b4d, #0b172d)', color:'#fff', fontSize:'18px', fontWeight:'800', textDecoration:'none', boxShadow:'0 10px 26px rgba(23,43,77,.25)'}}>デモホームに戻る</a>
   </div>
-

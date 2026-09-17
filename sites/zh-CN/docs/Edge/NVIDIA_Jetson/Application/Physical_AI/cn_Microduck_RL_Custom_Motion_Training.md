@@ -209,9 +209,6 @@ uv run --no-sync python3 scripts/export.py \
 ## 已验证示例：前后劈叉
 
 该验证过的自定义任务使用了一种比之前单脚平衡实验更可行的双支撑动作。左脚向前移动，右脚向后移动，两只脚都保持接地，最后机器人回到正常站立姿态。
-previous one-leg balance experiment. The left foot moves forward, the right foot
-moves backward, both feet remain grounded, and the robot returns to its normal
-standing pose.
 
 注册的任务 ID 为：
 
@@ -243,10 +240,8 @@ TARGET_SAGITTAL_SEPARATION = 0.095
 
 ### 定义目标姿态
 
-目标通过关节名称来表达，并使用 MuJoCo 正向运动学进行了检查。该目标在产生约
-`9.5 cm` 的有符号前后脚间距的同时，使两个足端 site 保持水平：
+目标通过关节名称来表达，并使用 MuJoCo 正向运动学进行了检查。该目标在产生约 `9.5 cm` 的有符号前后脚间距的同时，使两个足端 site 保持水平：
 
-__CODE_LINE_PLH__
 ```python
 FRONT_BACK_SPLIT_POSE = {
     "left_hip_pitch": -1.1865,
@@ -258,17 +253,17 @@ FRONT_BACK_SPLIT_POSE = {
     "neck_pitch": 0.3491,
     "head_pitch": 0.3491,
 }
+```
 
 交互式姿态编辑器为 `scripts/front_back_split_pose_editor.py`。
 它会打开一个关闭重力的 MuJoCo 窗口，并在窗口关闭时打印最终的命名姿态：
-when the window closes:
 
-__CODE_LINE_PLH__
 ```bash
 cd ~/microduck-jetson/microduck_rl
 export DISPLAY=:0
 export MUJOCO_GL=glfw
 uv run --no-sync python scripts/front_back_split_pose_editor.py
+```
 
 如果 Jetson 桌面使用了不同的显示器，请直接在图形终端中运行该命令，并使用 `echo $DISPLAY` 打印出的值。
 
@@ -284,13 +279,7 @@ uv run --no-sync python scripts/front_back_split_pose_editor.py
 | `feet_flat` | 惩罚足端 site 倾斜 |
 | `sagittal_separation` | 跟踪有符号的前后脚间距 |
 
-该任务还保留了直立、关节限位、自碰撞、角速度、
-
-The task also retains upright, joint-limit, self-collision, angular-velocity,
-动作速率、执行器、编码器、摩擦、质量、惯量和质心
-随机化项继承自 Microduck 环境。自定义的
-`sagittal_separation` 项在机器人基坐标系中测量双脚位置，因此
-奖励和姿态使用相同的坐标约定。
+该任务还保留了继承自 Microduck 环境的直立、关节限位、自碰撞、角速度、动作变化率、执行器、编码器、摩擦力、质量、惯性以及质心随机化等相关项。自定义的 `sagittal_separation` 项会在机器人基座坐标系中测量两个足部 site，因此奖励项与姿态使用相同的坐标约定。
 
 ### 注册任务
 
@@ -340,10 +329,8 @@ uv run --no-sync train Mjlab-FrontBackSplit-Flat-MicroDuck \
   --agent.max_iterations 1000
 ```
 
-完成的运行达到了完整的 600 步回合，在后期训练中没有因跌倒而终止，
-并且分腿姿态、脚部接触和分离奖励接近最大值。
-在 8 GB 的 Jetson Orin NX 或 Orin Nano 上，从 `1024` 个环境开始，
-并且只在使用 `jtop` 检查内存后再增加。
+完成的运行达到了完整的 600 步回合，在后期训练中没有因跌倒而终止，并且分腿姿态、脚部接触和分离奖励接近最大值。
+在 8 GB 的 Jetson Orin NX 或 Orin Nano 上，从 `1024` 个环境开始，并且只在使用 `jtop` 检查内存后再增加。
 
 ### 可视化一个 PT 检查点
 
@@ -361,8 +348,7 @@ uv run --no-sync play Mjlab-FrontBackSplit-Flat-MicroDuck \
 
 ### 导出并运行 ONNX 策略
 
-使用项目封装器导出检查点，以便观测归一化器
-嵌入到 ONNX 计算图中：
+使用项目封装器导出检查点，以便观测归一化器嵌入到 ONNX 计算图中：
 
 ```bash
 uv run --no-sync python3 scripts/export.py \
@@ -384,12 +370,9 @@ uv run --no-sync python3 scripts/infer_policy.py \
   --new-cmd-obs
 ```
 
-按下 `O` 运行一个 6 秒的前后分腿循环。该策略接收与训练期间相同的
-余弦/正弦相位指令，然后控制会自动返回到站立策略。如果同时提供了行走策略，当非零速度指令激活时，
-演示会返回到行走。
+按下 `O` 运行一个 6 秒的前后分腿循环。该策略接收与训练期间相同的余弦/正弦相位指令，然后控制会自动返回到站立策略。如果同时提供了行走策略，当非零速度指令激活时，演示会返回到行走。
 
-旧的 `--one-leg-balance` 选项和单腿任务文件已不再属于
-当前仓库。请使用 `--front-back-split` 来执行此已验证动作。
+旧的 `--one-leg-balance` 选项和单腿任务文件已不再属于当前仓库。请使用 `--front-back-split` 来执行此已验证动作。
 
 ## 开发检查清单
 
@@ -407,4 +390,3 @@ uv run --no-sync python3 scripts/infer_policy.py \
 <div align="center">
   <a href="/cn/ai_robotics_microduck_rl_on_jetson/" style={{display:'inline-block', padding:'16px 30px', marginTop:'20px', borderRadius:'10px', background:'linear-gradient(135deg, #172b4d, #0b172d)', color:'#fff', fontSize:'18px', fontWeight:'800', textDecoration:'none', boxShadow:'0 10px 26px rgba(23,43,77,.25)'}}>返回演示主页</a>
   </div>
-
