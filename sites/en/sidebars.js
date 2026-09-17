@@ -2933,51 +2933,51 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/flash_opensource_firmware_to_m2_gateway'
           ],
         },
-        {
-          type: 'category',
-          label: 'Helium Gateway',
-          items: [
-            {
-              type: 'category',
-              label: 'SenseCAP M1 Gateway',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_FAQ',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SenseCAP M2 Data Only',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SenseCAP M2 Light Gateway',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Flux Gateway',
-          items: [
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/Install_Ubuntu_on_SenseCAP_M4'
-          ],
-        },
+        // {
+        //   type: 'category',
+        //   label: 'Helium Gateway',
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M1 Gateway',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_FAQ',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting',
+        //       ],
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M2 Data Only',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console',
+        //       ],
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M2 Light Gateway',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ',
+        //       ],
+        //     },
+        //   ],
+        // },
+        // {
+        //   type: 'category',
+        //   label: 'Flux Gateway',
+        //   items: [
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/Install_Ubuntu_on_SenseCAP_M4'
+        //   ],
+        // },
         {
           type: 'category',
           label: 'Outdoor Gateway',
@@ -3015,24 +3015,24 @@ const sidebars = {
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
               ],
             },
-            {
-              type: 'category',
-              label: 'Helium Cloud Services',
-              items: [
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium-Introduction',
-                {
-                  type: 'category',
-                  label: 'Helium Connected & Azure Integrated',
-                  items: [
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Connecting-to-Helium',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Integrate-into-Azure-IoT-Hub',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Configuring-Web-APP-Visualization',
-                  ],
-                },
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Integrate_into_Google_Sheets_via_Helium',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Connect_AWS_via_helium',
-              ],
-            },
+            // {
+            //   type: 'category',
+            //   label: 'Helium Cloud Services',
+            //   items: [
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium-Introduction',
+            //     {
+            //       type: 'category',
+            //       label: 'Helium Connected & Azure Integrated',
+            //       items: [
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Connecting-to-Helium',
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Integrate-into-Azure-IoT-Hub',
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Configuring-Web-APP-Visualization',
+            //       ],
+            //     },
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Integrate_into_Google_Sheets_via_Helium',
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Connect_AWS_via_helium',
+            //   ],
+            // },
             {
               type: 'category',
               label: 'TTN Cloud Services',

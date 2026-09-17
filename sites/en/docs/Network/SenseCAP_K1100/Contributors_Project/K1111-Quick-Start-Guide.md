@@ -14,7 +14,7 @@ url: https://wiki.seeedstudio.com/K1111-Quick-Start-Guide/
 ---
 # Soil moisture monitoring alarm system
 
-In this wiki, we will show you how to unitize the Wio Terminal to link Grove - Wio-E5 and Grove - Soil Moisture Sensor which are in the kit, connecting them with Helium and Azure IoT Central platforms, to build a real-time backyard potting monitor and watering-reminder, for a glimpse of Internet of Things.
+In this wiki, we will show you how to unitize the Wio Terminal to link Grove - Wio-E5 and Grove - Soil Moisture Sensor which are in the kit, connecting them to Azure IoT Central platforms, to build a real-time backyard potting monitor and watering-reminder, for a glimpse of Internet of Things.
 
 ## Upgradable to Industrial Sensors
 
@@ -93,24 +93,14 @@ In this kickstart demo, we are using a soil moisture sensor. Therefore a potting
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit32.png" /></div>
 
-### Helium Registration for Connect
 
-<a href="https://console.helium.com/" target="_blank"><span>Helium</span> </a>is a global, distributed network of Hotspots that create public, long-range wireless coverage for LoRaWAN® enabled IoT devices.
-
-It allows us to send a certain amount of data through LoRa® for free and we will connect it to the Wio Terminal. All the information we need to connect the Wio Terminal are all presented **in the first page** after account registration:
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/125.png" /></div>
-
-:::note
-The device usually takes nearly 20 minutes to be really. It is recommanded to be added at the very beginning.
-:::
 
 ### Azure IoT Registration for Notice
 
 <a href="https://portal.azure.com/" target="_blank"><span>Azure IoT Central</span> </a>
  is a managed service hosted in the cloud that acts as a central message hub for communication between an IoT application and its attached devices.
 
-It can help us to manage LoRa® data and do some actions for one week free at the beginning . We will integrate it with Helium to **monitor data** and set up a auto **potting watering-reminder**.
+
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit30.png" /></div>
 
@@ -130,82 +120,18 @@ The position where the Grove - Wio-E5 is will make a difference to the uploaded 
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit33.jpg" /></div>
 
-### Connect Wio Terminal with Helium
 
-- **Step 1**. Open the <a href="https://console.helium.com/" target="_blank"><span>Helium</span></a>
- page on the PC and clilck "Devices" on the left column. **Add a new device**, then check the information below(example):
-
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit3a.png" /></div>
-
-- **Step 2**. Download the Arduino code below and open it with Arduino.
-
-<div>
-  <p style={{}}><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit/tree/main/sensor/Soil-moisture-send-data" target="_blank" /></p><div align="center"><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit/tree/main/sensor/Soil-moisture-send-data" target="_blank"><img width={300} src="https://files.seeedstudio.com/wiki/seeed_logo/DOWNLOAD.png" /></a></div><p />
-</div>
-
-- **Step 3**. Find the specific code line and fill the Helium connecting information we find into the code line where we should know **we only change the letters and number**.
-
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit4a.png" /></div>
-
-- **Step 4**. Select correct Borad and the Port. We can proceed to upload it by clicking the button in the upper left corner.
-
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit3.png" /></div>
-
-- **Step 5**. Open the "Serial Monitor" on the upper right of Arduino, and we can see that the connection is done and the data has been sent.
-
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit5a.png" /></div>
-
-- **Step 6**. Move back to the Helium website and check the "Devices". At the bottom we can see that indeed some data have been received.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/7.jpg" /></div>
-
-Because of the characteristic of LoRa® communication, the presentation of data is an array of numbers and letters that we may feel confused. Hence, we need to decode it for the true information.
-
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/172.png" /></div>
-
-### Received Data Decoded in Helium
-
-- **Step 1**. Click the "Function" on the left colmon of the page, and add a custom function.
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/184.png" /></div>
-
-- **Step 2**. Copy the code below and add it to the "CUSTOM SCRIPT", then save it.
-
-```cpp
-function Decoder(bytes, port) {
-  var decoded = {};
-  if (port == 8) {
-    decoded.soil = bytes[0]<<8 | bytes[1];
-  }
-  return decoded;
-}
-```
-
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit8.png" /></div>
-
-- **Step 3**. Click "Flows" on the left and drag the "Devices" and "Functions" block into the palette. Link them together as below:
-
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit9.png" /></div>
-
-This helps us to translate our data to be readable.
-
-- **Step 4(optional)**. Move back to "Function" page, and we can <a href="https://wiki.seeedstudio.com/Connecting-to-Helium/#upload-code-send-data-to-helium" target="_blank"><span>get the input hexadecimal data</span></a>
- from the device. Select port as '8' and click the "RUN" button.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/185.png" /></div>
-
-We now can read our data, but the process is a little complicated and not easy to use. How can we do to make the data to be presented continously?
 
 ### Integrate Azure IoT Platform
 
 We can integrate another platform **Azure IoT** to present and manage our data, even do some actions.
 
-- **Step 1**. Open the Helium page first, click "Integrations" on the left colmon of the page, and select "Azure IoT Central".
+- **Step 1**. Open the platform page first, click "Integrations" on the left colmon of the page, and select "Azure IoT Central".
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit15.png" /></div>
 
 - **Step 2**. Create a new application on the <a href="https://apps.azureiotcentral.com/" target="_blank"><span>Azure IoT Central</span></a>
-. And then integrate the Azure IoT Central in the Helium by filling the required information below:
+. And then integrate the Azure IoT Central in the platform by filling the required information below:
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit16.png" /></div>
 
@@ -217,7 +143,7 @@ We can integrate another platform **Azure IoT** to present and manage our data, 
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit18.png" /></div>
 
-- **Step 5**. Select the device and check the "Raw data" information like the figure below shows. The information contains all the data form Helium, including the decoded data:
+- **Step 5**. Select the device and check the "Raw data" information like the figure below shows. The information contains all the data, including the decoded data:
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit19.png" /></div>
 
@@ -225,7 +151,7 @@ We have our continous data displaying, but is it possible to display them in a s
 
 ### Further Function in Azure IoT Central
 
-We can manage all the data from the Helium and choose the ones that we care about to build an auto email alert based on it.
+We can manage all the data from the platform and choose the ones that we care about to build an auto email alert based on it.
 
 - **Step 1**. Click the "Unformated data" on the "Devices" page and create an auto device template.
 
