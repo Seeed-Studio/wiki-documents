@@ -84,8 +84,6 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 已验证虚拟机的性能不足以支撑 demo 运行且存在配置问题，建议优先使用 ubuntu 物理机来控制机械臂
 
 推荐安装 **Ubuntu 24.04 LTS**。
-
-推荐B站安装教程：[Ubuntu双系统安装教程](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
 
 
