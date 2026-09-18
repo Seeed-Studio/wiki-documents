@@ -1,6 +1,6 @@
 ---
-description: Este tutorial mostra como baixar o Isaac Sim e implantar o robô reBotArm em um ambiente de simulação para desenvolvimento e depuração.
-title: Simulando o reBotArm com o Isaac Sim
+description: Este tutorial mostra como baixar o Isaac Sim e implantar o robô reBot Arm B601-RS em um ambiente de simulação para desenvolvimento e depuração.
+title: reBot Arm B601-RS Isaac Sim
 keywords:
   - Isaacsim
   - Braço mecânico
@@ -14,9 +14,10 @@ last_update:
   date: 8/14/2026
   author: LiuJunjie
 createdAt: '2026-07-07'
-updatedAt: '2026-08-17'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_isaacsim/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
@@ -27,10 +28,16 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg" alt="reBot Arm B601-RS Isaac Sim" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Adquira agora</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 ## Introdução
 
@@ -38,7 +45,7 @@ reBot-Isaacsim é um projeto de simulação NVIDIA Isaac Sim projetado especific
 
 ## Requisitos de ambiente
 - Sistema operacional: Ubuntu 22.04 LTS / 24.04 LTS (recomendado) ou Windows 11 (requer WSL2)  
-- GPU: placa de vídeo da série NVIDIA RTX (recomendado RTX 3070 ou superior), VRAM ≥ 8GB  
+- GPU: placa de vídeo NVIDIA série RTX (recomendado RTX 3070 ou superior), VRAM ≥ 8GB  
 - Driver: driver oficial NVIDIA ≥ 535.x, com suporte a CUDA 12.x  
 - Memória: ≥ 32GB de RAM (cenas do Isaac Sim e simulações físicas usam muita memória)  
 - Armazenamento: ≥ 100GB de espaço livre em SSD (para instalação do Isaac Sim, cache e assets USD)
@@ -47,7 +54,7 @@ reBot-Isaacsim é um projeto de simulação NVIDIA Isaac Sim projetado especific
 Os computadores usados neste wiki estão equipados com GPUs NVIDIA RTX 4080 e executam o sistema operacional Ubuntu 22.04 LTS.
 :::
 
-## Instalar o Isaac Sim
+## Instalar Isaacsim
 
 Links e recursos oficiais:
 
@@ -56,7 +63,7 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/quick-install.html
 https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaac-sim-latest-release
 
 
-### 🔧 Método 1: Instalação por binário pré-compilado
+### 🔧 Método 1: Instalação de binário pré-compilado
 
 > 💡 Adequado para a maioria dos usuários, não é necessário compilar, pronto para uso imediato.
 
@@ -90,7 +97,7 @@ Em seguida, execute `source ~/.bashrc` para que tenha efeito.
 ${ISAACSIM_PATH}/isaac-sim.sh
 ```
 
-Na primeira inicialização, os shaders serão armazenados em cache, o que pode levar de 5 a 10 minutos, portanto, aguarde pacientemente até que a interface gráfica apareça.
+O primeiro lançamento fará cache dos shaders, o que pode levar de 5 a 10 minutos, portanto, seja paciente enquanto a interface gráfica é exibida.
 
 ### ⚙️ Método 2: Compilar a partir do código-fonte (recomendado)
 
@@ -105,7 +112,7 @@ sudo apt install cmake build-essential git python3-pip
 
 Certifique-se de que CUDA e cuDNN estejam instalados corretamente e correspondam ao driver da sua GPU.
 
-#### Clonar e compilar
+#### Clonagem e compilação
 
 ```Bash
 git clone https://github.com/NVIDIA-Omniverse/IsaacSim.git
@@ -121,7 +128,7 @@ O processo de compilação pode levar de 30 a 60 minutos, dependendo do seu hard
 _build/linux-x86_64/release/isaac-sim.sh
 ```
 
-Após a compilação a partir do código-fonte, aponte `ISAACSIM_ROOT` para esse diretório de runtime para que `run_isaacsim_receiver.sh` possa encontrar o Isaac Sim:
+Após uma compilação a partir do código-fonte, aponte `ISAACSIM_ROOT` para esse diretório de runtime para que `run_isaacsim_receiver.sh` possa encontrar o Isaac Sim:
 
 ```bash
 export ISAACSIM_ROOT="$PWD/_build/linux-x86_64/release"
@@ -150,14 +157,14 @@ uv sync
 
 ### Alternar a configuração de hardware para RS
 
-O asset do Isaac Sim deste repositório é RS (`usd/RS-rebot-dev-arm`). O `rebotarm.yaml` upstream é DM por padrão. Tanto `RebotArm()` quanto `load_robot_model()` seguem esse arquivo, portanto, compensação de gravidade, leitor de juntas, IK e Traj precisam de RS primeiro; se permanecer em DM, o protocolo do motor não irá corresponder e o Pinocchio carregará o URDF de DM. Isso apenas suja a árvore de trabalho do submódulo — não faça commit:
+O asset Isaac Sim deste repositório é RS (`usd/RS-rebot-dev-arm`). O `rebotarm.yaml` upstream é DM por padrão. Tanto `RebotArm()` quanto `load_robot_model()` seguem esse arquivo, portanto, compensação de gravidade, leitor de juntas, IK e Traj precisam de RS primeiro; se permanecer em DM, o protocolo do motor não irá corresponder e o Pinocchio carregará o URDF DM. Isso apenas suja a árvore de trabalho do submódulo — não faça commit:
 
 ```bash
 cd reBotArm_Isaacsim
 python set_hw_rs.py
 ```
 
-Em caso de sucesso, será impresso `.../config/rebotarm.yaml -> rebotarm_rs.yaml`.
+Em caso de sucesso, ele imprime `.../config/rebotarm.yaml -> rebotarm_rs.yaml`.
 
 ### Visão geral dos componentes funcionais
 
@@ -165,10 +172,10 @@ Este projeto fornece vários senders para atender a diferentes cenários de uso:
 
 | Componente | Descrição |
 |-----------|------------|
-| `gravity_joint_sender` | **Modo de compensação de gravidade + alça (Handle)**: Para braços robóticos modificados (gripper removido, alça acoplada), guiado à mão; a compensação vem do `GravityCompensation` upstream, este repositório apenas espelha os ângulos das juntas no Isaac Sim |
+| `gravity_joint_sender` | **Compensação de gravidade + Modo de manete**: Para braços robóticos modificados (gripper removido, manete acoplada), guiado à mão; a compensação vem do `GravityCompensation` upstream, este repositório apenas espelha os ângulos das juntas para o Isaac Sim |
 | `isaacsim_ik_sender` | **Modo de cinemática inversa (IK)**: Insira a pose do efetuador final, use o solucionador de IK para obter os ângulos das juntas e enviá-los ao Isaac Sim |
 | `isaacsim_traj_sender` | **Modo de planejamento de trajetória (Traj)**: Adiciona planejamento de trajetória no espaço de juntas (perfil de tempo MIN_JERK) sobre o IK para obter controle de movimento suave |
-| `isaacsim_joint_test_sender` | **Modo de teste de juntas**: Envia trajetórias de ângulos de juntas predefinidas sem um robô real para verificar se o receiver do Isaac Sim e a comunicação estão funcionando corretamente |
+| `isaacsim_joint_test_sender` | **Modo de teste de juntas**: Envia trajetórias de ângulo de junta predefinidas sem um robô real para verificar se o receiver do Isaac Sim e a comunicação estão funcionando corretamente |
 | `joint_reader_sender` | **Modo de mapeamento Real-para-Sim**: Apenas leitura dos ângulos das juntas e mapeamento para o Isaac Sim, ideal para uso com outros projetos de controle (por exemplo, sincronizar no Isaac Sim para visualização o robô real executando outras tarefas) |
 
 ### Estrutura de diretórios
@@ -198,7 +205,7 @@ reBot-Isaacsim/
         └── RS-rebot-dev-arm.usda            # Isaac Sim robot asset
 ```
 
-## Inicialização (modo de dois terminais)
+## Inicialização (Modo de dois terminais)
 
 São necessários dois terminais separados. **O Terminal 1 executa o receiver do Isaac Sim**, enquanto **o Terminal 2 executa o sender apropriado, dependendo da funcionalidade desejada**.
 
@@ -288,9 +295,9 @@ speed <scale>               # Adjust trajectory duration scaling
 resync                      # Re-read the current joint state from Isaac Sim
 ```
 
-#### ④ Modo de Manuseio com Compensação de Gravidade (`gravity_joint_sender`)
+#### ④ Modo de Manipulação com Compensação de Gravidade (`gravity_joint_sender`)
 
-Projetado para braços robóticos modificados (garra removida e manete instalada). O robô pode ser guiado manualmente enquanto o Isaac Sim segue o movimento.
+Projetado para braços robóticos modificados (garra removida e alça instalada). O robô pode ser guiado manualmente enquanto o Isaac Sim segue o movimento.
 
 ```bash
 cd reBotArm_Isaacsim
@@ -307,7 +314,7 @@ python set_hw_rs.py
 
 #### ⑤ Modo de Mapeamento Real-para-Sim (`joint_reader_sender`)
 
-Lê apenas os ângulos das juntas e espelha o estado do robô físico no Isaac Sim. Este modo é destinado à visualização enquanto o robô real é controlado por outra aplicação. `RebotArm()` lê o submódulo `rebotarm.yaml`, portanto mude para RS primeiro:
+Lê apenas os ângulos das juntas e espelha o estado do robô físico no Isaac Sim. Este modo é destinado à visualização enquanto o robô real é controlado por outra aplicação. `RebotArm()` lê o submódulo `rebotarm.yaml`, portanto altere para RS primeiro:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -317,9 +324,9 @@ uv run python joint_reader_sender.py
 
 **Comportamento esperado:**
 - `set_hw_rs.py` alterna a configuração do motor para RS (alteração local; não faça commit)
-- Lê apenas os ângulos das juntas (modo de feedback passivo), sem enviar nenhum comando de controle
-- Transmite continuamente os ângulos das juntas via UDP a 60 Hz
-- Visualiza o robô físico no Isaac Sim enquanto ele é controlado por outro projeto
+- Ler apenas os ângulos das juntas (modo de feedback passivo), sem enviar quaisquer comandos de controle
+- Transmitir continuamente os ângulos das juntas via UDP a 60 Hz
+- Visualizar o robô físico no Isaac Sim enquanto ele é controlado por outro projeto
 
 ## Protocolo de Comunicação
 
@@ -352,7 +359,7 @@ O receptor aplica o `gripper_position` recebido diretamente como alvo de posiç�
 | `gravity_joint_sender` | `gripper_q × 0.03` (`GRIPPER_POSITION_SCALE = 0.03`) |
 | `joint_reader_sender` | `gripper_q × 0.007` (`GRIPPER_POSITION_SCALE = 0.007`) |
 | `isaacsim_traj_sender` | `ratio × 0.045` (entrada `gripper <0~1>`, limitada a 0,045 m) |
-| `isaacsim_ik_sender` | `ratio ∈ [0, 1]` bruto enviado em metros, então qualquer ratio ≥ ao limite superior de um dedo abre totalmente esse dedo |
+| `isaacsim_ik_sender` | `ratio ∈ [0, 1]` bruto enviado em metros, então qualquer ratio ≥ o limite superior de um dedo abre totalmente esse dedo |
 
 ## Parâmetros de Configuração
 
@@ -401,7 +408,7 @@ ls usd/RS-rebot-dev-arm/RS-rebot-dev-arm.usda
 
 ### Barramento CAN Não Pronto
 
-Certifique-se de que a interface CAN está ativa e configurada com o bitrate correto:
+Certifique-se de que a interface CAN esteja ativa e configurada com o bitrate correto:
 
 ```bash
 can_restart can0
@@ -426,7 +433,7 @@ ip -details link show can0 | grep bitrate
 | Receptor | Python oficial do Isaac Sim (`python.sh`) | `run_isaacsim_receiver.sh` |
 
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
@@ -439,7 +446,6 @@ Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tip
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 
 
 

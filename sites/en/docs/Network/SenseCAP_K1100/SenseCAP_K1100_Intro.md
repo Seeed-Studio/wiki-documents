@@ -123,25 +123,21 @@ The SenseCAP K1100 prototype kit bridges the gap between initial concept develop
 <div class="table-center">
  <table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg">Helium Cloud Services</th>
       <th class="table-trnobg">TTN Cloud Services</th>
       <th class="table-trnobg">SenseCAP & Node-Red for Cloud Services</th>
   </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/105.png" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/K1100/25.png" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div sawakentyle={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/k1100-nodered/node-red.png" style={{width:300, height:'auto'}}/></div></td>
   </tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
-      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this chapter, we will introduce the Helium console controls that we use to get a first impression of the Helium console.</font></td>
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this chapter, we will introduce the TTN console controls that we use to get a first impression of the TTN console. </font></td>
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. We will do a series of tutorials for SenseCAP & Node-RED.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/K1100-Temp-Humi-Sensor-Grove-LoRa-E5/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/K1100-Vision-AI-Module-Grove-LoRa-E5/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
         </tr>
@@ -228,7 +224,7 @@ In addition to the above basic tutorials for each platform, we have prepared a v
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> We are pleased to share with you the projects that our entrants have produced using this great kit. You can also refer to their projects for even more possibilities!</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, we will show you how to unitize the Wio Terminal to link Grove - Wio-E5 and Grove - Soil Moisture Sensor which are in the kit, connecting them with Helium and Azure IoT Central platforms, to build a real-time backyard potting monitor and watering-reminder, for a glimpse of Internet of Things.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, we will show you how to unitize the Wio Terminal to link Grove - Wio-E5 and Grove - Soil Moisture Sensor which are in the kit, connecting to Azure IoT Central platforms, to build a real-time backyard potting monitor and watering-reminder, for a glimpse of Internet of Things.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">

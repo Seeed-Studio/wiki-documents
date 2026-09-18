@@ -2927,51 +2927,51 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/pt_flash_opensource_firmware_to_m2_gateway'
           ],
         },
-        {
-          type: 'category',
-          label: 'Gateway Helium',
-          items: [
-            {
-              type: 'category',
-              label: 'Gateway SenseCAP M1',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_Local_Console',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_FAQ',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_Troubleshooting',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SenseCAP M2 apenas dados',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/pt_SenseCAP_M2_Data_Only_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/pt_SenseCAP_M2_Data_Only_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/pt_M2_Local_Console',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Gateway SenseCAP M2 Light',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/pt_SenseCAP_M2_Light_Gateway_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/pt_SenseCAP_M2_Light_Gateway_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/pt_SenseCAP_M2_Light_Gateway_FAQ',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Flux Gateway',
-          items: [
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/pt_SenseCAP_M4_Overview',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/pt_SenseCAP_M4_Quick_Start',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/pt_SenseCAP_M4_FAQ',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/pt_Install_Ubuntu_on_SenseCAP_M4',
-          ],
-        },
+        // {
+        //   type: 'category',
+        //   label: 'Gateway Helium',
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: 'Gateway SenseCAP M1',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_Local_Console',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_FAQ',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/pt_SenseCAP_M1_Troubleshooting',
+        //       ],
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M2 apenas dados',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/pt_SenseCAP_M2_Data_Only_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/pt_SenseCAP_M2_Data_Only_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/pt_M2_Local_Console',
+        //       ],
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'Gateway SenseCAP M2 Light',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/pt_SenseCAP_M2_Light_Gateway_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/pt_SenseCAP_M2_Light_Gateway_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/pt_SenseCAP_M2_Light_Gateway_FAQ',
+        //       ],
+        //     },
+        //   ],
+        // },
+        // {
+        //   type: 'category',
+        //   label: 'Flux Gateway',
+        //   items: [
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/pt_SenseCAP_M4_Overview',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/pt_SenseCAP_M4_Quick_Start',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/pt_SenseCAP_M4_FAQ',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/pt_Install_Ubuntu_on_SenseCAP_M4',
+        //   ],
+        // },
         {
           type: 'category',
           label: 'Gateway outdoor',
@@ -3009,24 +3009,24 @@ const sidebars = {
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/pt_K1100-Vision-AI-Module-Grove-LoRa-E5',
               ],
             },
-            {
-              type: 'category',
-              label: 'Serviços em nuvem Helium',
-              items: [
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/pt_Helium-Introduction',
-                {
-                  type: 'category',
-                  label: 'Helium conectado e Azure integrado',
-                  items: [
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/pt_Connecting-to-Helium',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/pt_Integrate-into-Azure-IoT-Hub',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/pt_Configuring-Web-APP-Visualization',
-                  ],
-                },
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/pt_Integrate_into_Google_Sheets_via_Helium',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/pt_Connect_AWS_via_helium',
-              ],
-            },
+            // {
+            //   type: 'category',
+            //   label: 'Serviços em nuvem Helium',
+            //   items: [
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/pt_Helium-Introduction',
+            //     {
+            //       type: 'category',
+            //       label: 'Helium conectado e Azure integrado',
+            //       items: [
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/pt_Connecting-to-Helium',
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/pt_Integrate-into-Azure-IoT-Hub',
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/pt_Configuring-Web-APP-Visualization',
+            //       ],
+            //     },
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/pt_Integrate_into_Google_Sheets_via_Helium',
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/pt_Connect_AWS_via_helium',
+            //   ],
+            // },
             {
               type: 'category',
               label: 'Serviços em nuvem TTN',
@@ -4624,8 +4624,8 @@ const sidebars = {
               label: 'B601-DM',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Getting_Started',
-                'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_pinocchio',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_ROS2_Integration',
@@ -4637,14 +4637,14 @@ const sidebars = {
               label: 'B601-RS',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Getting_Started',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide',
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Agent',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_ROS2_Integration',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_isaacsim',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_control_mit',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Agent'
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_control_mit'
               ]
             }
           ]
