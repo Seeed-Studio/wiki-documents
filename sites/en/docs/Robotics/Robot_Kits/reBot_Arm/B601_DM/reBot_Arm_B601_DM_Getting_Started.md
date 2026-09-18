@@ -81,8 +81,6 @@ If you purchased a pre-assembled kit, please skip directly to the tutorial video
 It has been verified that virtual machine performance is insufficient for running demos and there are configuration issues. It is recommended to use an Ubuntu physical machine to control the robotic arm.
 
 We recommend installing **Ubuntu 24.04 LTS**.
-
-Recommended Bilibili installation tutorial: [Ubuntu Dual-Boot Installation Tutorial](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
 
 ## Safety Disclaimer and Risk Notice

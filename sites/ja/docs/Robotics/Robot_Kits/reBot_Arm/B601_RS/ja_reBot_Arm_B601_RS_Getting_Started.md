@@ -192,8 +192,6 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
    **Ubuntu 24.04 LTS** のインストールを推奨します。
 
-   推奨 Bilibili インストールチュートリアル：[Ubuntu デュアルブートインストールチュートリアル](https://www.bilibili.com/video/BV1Cc41127B9/)
-
 2.（ベータ）エージェントにロボットアームの初期化を依頼することもできます。次のプロンプトを送信してください：
 
 ```text

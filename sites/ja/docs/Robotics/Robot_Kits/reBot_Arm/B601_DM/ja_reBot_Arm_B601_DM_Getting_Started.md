@@ -81,8 +81,6 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 仮想マシンではデモを実行するための性能が不足しており、設定上の問題も確認されています。ロボットアームの制御には Ubuntu の物理マシンを使用することを推奨します。
 
 **Ubuntu 24.04 LTS** のインストールを推奨します。
-
-推奨 Bilibili インストールチュートリアル：[Ubuntu デュアルブートインストールチュートリアル](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
 
 ## 安全免責事項およびリスクに関する注意

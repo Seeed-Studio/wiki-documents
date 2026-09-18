@@ -192,8 +192,6 @@ Consulta el video y el tutorial en texto. Antes de controlar el brazo robótico,
 
    Recomendamos instalar **Ubuntu 24.04 LTS**.
 
-   Tutorial de instalación recomendado en Bilibili: [Tutorial de instalación de arranque dual de Ubuntu](https://www.bilibili.com/video/BV1Cc41127B9/)
-
 2. (Beta) Puedes pedirle a un agente que inicialice el brazo robótico. Envíale la siguiente indicación:
 
 ```text

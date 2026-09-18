@@ -81,8 +81,6 @@ Se você comprou um kit pré-montado, pule diretamente para o vídeo tutorial no
 Foi verificado que o desempenho de máquinas virtuais é insuficiente para executar os demos e há problemas de configuração. Recomenda-se usar uma máquina física com Ubuntu para controlar o braço robótico.
 
 Recomendamos instalar o **Ubuntu 24.04 LTS**.
-
-Tutorial de instalação recomendado no Bilibili: [Tutorial de Instalação de Dual-Boot do Ubuntu](https://www.bilibili.com/video/BV1Cc41127B9/)
 :::
 
 ## Aviso de Segurança e Notificação de Risco
