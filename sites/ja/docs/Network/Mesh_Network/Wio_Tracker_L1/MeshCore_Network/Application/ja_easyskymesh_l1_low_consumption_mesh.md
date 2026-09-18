@@ -1,6 +1,6 @@
 ---
 
-description: このガイドでは、MeshCore をベースにした低消費電力 IoT センサーネットワークを構築するために、EasySkyMesh を Wio Tracker L1 と組み合わせて使用する方法を説明します。
+description: このガイドでは、MeshCore をベースにした低消費電力 IoT センサーネットワークを構築するために、Wio Tracker L1 で EasySkyMesh を使用する方法を説明します。
 title: EasySkyMesh IoT ファームウェア
 keywords:
    - EasySkyMesh
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/ja/easyskymesh_wio_tracker_l1/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[EasySkyMesh](https://github.com/IoTThinks/EasySkyMesh) は、[MeshCore](https://meshcore.io/) をベースにしたコミュニティプロジェクトで、低消費電力ファームウェアの構築に重点を置いています。このファームウェアにより、L1 Pro は MeshCore の通信機能を維持しながら、**18 日間**のバッテリー寿命を実現できます。
+[EasySkyMesh](https://github.com/IoTThinks/EasySkyMesh) は [MeshCore](https://meshcore.io/) をベースにしたコミュニティプロジェクトで、低消費電力ファームウェアの構築に重点を置いています。このファームウェアにより、L1 Pro は MeshCore の通信機能を維持しながら、**18 日間**のバッテリー寿命を実現できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMeshProject.png" style={{width:900, height:'auto'}}/></div>
 
@@ -38,13 +38,72 @@ EasySkyMesh は、**省電力とセンサーデータ収集**のための機能�
 * インフラ監視
 * IoT プロトタイピング
 
-## EasySkyMesh の特長
+## ファームウェアの書き込み
 
-### 省電力
+### ハードウェアの準備
 
-このプロジェクトは、さまざまな MeshCore ボード向けに最適化された PowerSaving ファームウェアリリースを提供します。EasySkyMesh のリリースでは、ESP32 および nRF52 ベースのデバイス向けに省電力機能が導入されており、さらに異なる MeshCore ロール向けの電源管理機能も追加されています。
+ファームウェアを書き込む前に、次のものを準備します：
 
-ファームウェアが対応している場合、MeshCore CLI を通じて PowerSaving を有効にできます：
+* Wio Tracker L1。[Click here](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-for-Meshcore-p-6717.html) から入手できます。
+* USB Type-C ケーブル
+* コンピュータ
+
+USB Type-C ポートを使用して、Wio Tracker L1 をコンピュータに接続します。
+
+### EasySkyMesh ファームウェアのダウンロード
+
+[EasySkyMesh Releases](https://github.com/IoTThinks/EasySkyMesh/releases) ページにアクセスします。お使いのボードをサポートするリリースを選択します。
+
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMeshFirmwareDownload.png" style={{width:600, height:'auto'}}/></div>
+
+
+EasySkyMesh のリリースでは、ハードウェアやアップグレードシナリオの違いに応じて、異なるファームウェアファイルが提供される場合があります。新規インストールの場合、プロジェクトは一般的にクリーンインストール用のファームウェアイメージを提供します。既存のインストールがある場合、既存の設定を保持したいときはアップグレード用ファームウェアを使用してください。
+
+
+### ファームウェアを書き込む
+
+EasySkyMesh プロジェクトでは、サポートされているデバイスに対して MeshCore Web Flasher の使用を推奨しています。
+
+**Step1:** [MeshCore Web Flasher](https://meshcore.io/flasher) を開きます。
+
+**Step2:** **Custom Firmware** を選択します。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/Choose_Custom_Firmware_MeshCore_EasySkyMesh.png" style={{width:600, height:'auto'}}/></div>
+
+**Step3:** EasySkyMesh のファームウェアファイルを選択します。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Choose_zip.png" style={{width:600, height:'auto'}}/></div>
+
+**Step4:** 必要に応じて DFU モードに入ります。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Enter_DFU.png" style={{width:900, height:'auto'}}/></div>
+
+**Step5:** 書き込みを開始します。書き込みプロセスが完了するまで待ちます。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Flash.png" style={{width:900, height:'auto'}}/></div>
+
+**Step6:** デバイスを再起動します。
+
+## 省電力機能
+
+このプロジェクトでは、さまざまな MeshCore ボード向けに最適化された PowerSaving ファームウェアリリースを提供しています。EasySkyMesh のリリースでは、ESP32 および nRF52 ベースのデバイス向けに省電力機能が導入されており、さらに異なる MeshCore ロール向けの電源管理機能も追加されています。
+
+### Companion ファームウェア
+
+すべての PowerSaving 機能はデフォルトで有効になっています。RX PowerSaving は「balanced」に設定されています。
+
+稼働時間は、m（分）、h m（時間 分）、d h（日 時間）で、OLED のバッテリーアイコンの左側に表示されます。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Runtime_Display.png" style={{width:600, height:'auto'}}/></div>
+
+### Repeater & Room Server ファームウェア
+
+PowerSaving はデフォルトではオフになっています。MeshCore CLI を使用して PowerSaving を有効にできます。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Powersaving_On.png" style={{width:900, height:'auto'}}/></div>
+
+PowerSaving を有効にするには、次のようにします：
 
 ```text
 powersaving on
@@ -56,9 +115,11 @@ powersaving on
 powersaving
 ```
 
-### センサー対応
+さらに多くのコマンドを使用するには、[Click here](https://github.com/IoTThinks/EasySkyMesh/wiki/PowerSaving#11-repeaters-and-room-servers) を参照してください。
 
-EasySkyMesh は MeshCore を拡張してセンサー対応を追加し、センサーの測定値を収集して既存の MeshCore ネットワークを通じて送信できるようにします。このプロジェクトでは現在、いくつかの一般的な I2C センサーのサポートが文書化されており、次のものが含まれます：
+## センサーサポート
+
+EasySkyMesh は MeshCore を拡張してセンサーサポートを追加し、センサーの測定値を収集して既存の MeshCore ネットワークを通じて送信できるようにします。現在、このプロジェクトでは、いくつかの一般的な I2C センサーのサポートが文書化されており、次のものが含まれます：
 
 | センサー        | 測定項目                                  | I2C アドレス |
 | ------------- | --------------------------------------- | ----------- |
@@ -76,55 +137,11 @@ EasySkyMesh は MeshCore を拡張してセンサー対応を追加し、セン�
 | MLX90614      | 非接触温度                              | `0x5A`      |
 | VL53L0X       | 距離                                    | `0x29`      |
 
- 一部のファームウェアバージョンでは、BME280、BME680、BMP280 などのセンサーについて I2C アドレスを自動的に選択できます。対応している EasySkyMesh バージョンでは、`sensor` CLI コマンドを使用して I2C および GPS シリアルピンを確認できます：
+ 一部のファームウェアバージョンでは、BME280、BME680、BMP280 などのセンサーに対して I2C アドレスを自動的に選択できます。サポートされている EasySkyMesh バージョンでは、`sensor` CLI コマンドを使用して I2C と GPS シリアルピンを確認できます：
 
 ```text
 sensor
 ```
-
-## はじめに
-
-### ハードウェアの準備
-
-ファームウェアを書き込む前に、次のものを準備します：
-
-* Wio Tracker L1。[こちらをクリック](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-for-Meshcore-p-6717.html)して入手してください。
-* USB Type-C ケーブル
-* コンピュータ
-
-USB Type-C ポートを使用して、Wio Tracker L1 をコンピュータに接続します。
-
-### EasySkyMesh ファームウェアのダウンロード
-
-[EasySkyMesh Releases](https://github.com/IoTThinks/EasySkyMesh/releases) ページにアクセスします。使用しているボードをサポートするリリースを選択します。
-
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMeshFirmwareDownload.png" style={{width:600, height:'auto'}}/></div>
-
-
-
-
-EasySkyMesh のリリースでは、異なるハードウェアやアップグレードシナリオに応じて、複数のファームウェアファイルが提供される場合があります。新規インストールの場合、通常はクリーンインストール用のファームウェアイメージが提供されます。既存のインストールがある場合、既存の設定を保持したいときはアップグレード用ファームウェアを使用してください。
-
-
-### ファームウェアを書き込む
-
-EasySkyMesh プロジェクトでは、対応デバイスに対して MeshCore Web Flasher の使用を推奨しています。
-
-**Step1:** [MeshCore Web Flasher](https://meshcore.io/flasher) を開きます。
-
-**Step2:** **Custom Firmware** を選択します。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/Choose_Custom_Firmware_MeshCore_EasySkyMesh.png" style={{width:600, height:'auto'}}/></div>
-
-**Step3:** EasySkyMesh ファームウェアファイルを選択します。
-
-
-**Step4:** 必要に応じて DFU モードに入ります。
-
-**Step5:** 書き込みを開始します。書き込みプロセスが完了するまで待ちます。
-
-**Step6:** デバイスをリセットします。
 
 
 ## トラブルシューティング
@@ -148,13 +165,13 @@ EasySkyMesh プロジェクトでは、対応デバイスに対して MeshCore W
 6. センサーがサポート対象としてリストされているかどうか。
 
 
-問題が解決しない場合は、[EasySkyMesh GitHub リポジトリ](https://github.com/IoTThinks/EasySkyMesh)で最新のドキュメントと issue を確認してください。
+問題が解決しない場合は、最新のドキュメントと issue を確認するために、[EasySkyMesh GitHub repository](https://github.com/IoTThinks/EasySkyMesh) を参照してください。
 
-## 参考リソース
+## リソース
 
-* [EasySkyMesh GitHub リポジトリ](https://github.com/IoTThinks/EasySkyMesh)
-* [EasySkyMesh ファームウェア書き込み手順](https://github.com/IoTThinks/EasySkyMesh/blob/main/firmware/Instruction-to-flash-firmware.md)
-* [EasySkyMesh センサー追加手順](https://github.com/IoTThinks/EasySkyMesh/blob/main/firmware/Add-sensors-to-repeaters.md)
+* [EasySkyMesh GitHub Repository](https://github.com/IoTThinks/EasySkyMesh)
+* [EasySkyMesh Flashing Instructions](https://github.com/IoTThinks/EasySkyMesh/blob/main/firmware/Instruction-to-flash-firmware.md)
+* [EasySkyMesh Sensor Instructions](https://github.com/IoTThinks/EasySkyMesh/blob/main/firmware/Add-sensors-to-repeaters.md)
 
 ## 技術サポート & 製品ディスカッション
 <p style={{textAlign: 'center'}}>
