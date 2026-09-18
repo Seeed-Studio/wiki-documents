@@ -2928,51 +2928,51 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/cn_flash_opensource_firmware_to_m2_gateway'
           ],
         },
-        {
-          type: 'category',
-          label: 'Helium 网关',
-          items: [
-            {
-              type: 'category',
-              label: 'SenseCAP M1 网关',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Local_Console',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_FAQ',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Troubleshooting',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SenseCAP M2 仅数据网关',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/cn_SenseCAP_M2_Data_Only_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/cn_SenseCAP_M2_Data_Only_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/cn_M2_Local_Console',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SenseCAP M2 轻量网关',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/cn_SenseCAP_M2_Light_Gateway_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/cn_SenseCAP_M2_Light_Gateway_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/cn_SenseCAP_M2_Light_Gateway_FAQ',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Flux 网关',
-          items: [
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_SenseCAP_M4_Overview',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_SenseCAP_M4_Quick_Start',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_SenseCAP_M4_FAQ',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_Install_Ubuntu_on_SenseCAP_M4',
-          ],
-        },
+        // {
+        //   type: 'category',
+        //   label: 'Helium 网关',
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M1 网关',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Local_Console',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_FAQ',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Troubleshooting',
+        //       ],
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M2 仅数据网关',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/cn_SenseCAP_M2_Data_Only_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/cn_SenseCAP_M2_Data_Only_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/cn_M2_Local_Console',
+        //       ],
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M2 轻量网关',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/cn_SenseCAP_M2_Light_Gateway_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/cn_SenseCAP_M2_Light_Gateway_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/cn_SenseCAP_M2_Light_Gateway_FAQ',
+        //       ],
+        //     },
+        //   ],
+        // },
+        // {
+        //   type: 'category',
+        //   label: 'Flux 网关',
+        //   items: [
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_SenseCAP_M4_Overview',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_SenseCAP_M4_Quick_Start',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_SenseCAP_M4_FAQ',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/cn_Install_Ubuntu_on_SenseCAP_M4',
+        //   ],
+        // },
         {
           type: 'category',
           label: '户外网关',
@@ -3010,24 +3010,24 @@ const sidebars = {
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/cn_K1100-Vision-AI-Module-Grove-LoRa-E5',
               ],
             },
-            {
-              type: 'category',
-              label: 'Helium 云服务',
-              items: [
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/cn_Helium-Introduction',
-                {
-                  type: 'category',
-                  label: 'Helium 连接与 Azure 集成',
-                  items: [
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/cn_Connecting-to-Helium',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/cn_Integrate-into-Azure-IoT-Hub',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/cn_Configuring-Web-APP-Visualization',
-                  ],
-                },
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/cn_Integrate_into_Google_Sheets_via_Helium',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/cn_Connect_AWS_via_helium',
-              ],
-            },
+            // {
+            //   type: 'category',
+            //   label: 'Helium 云服务',
+            //   items: [
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/cn_Helium-Introduction',
+            //     {
+            //       type: 'category',
+            //       label: 'Helium 连接与 Azure 集成',
+            //       items: [
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/cn_Connecting-to-Helium',
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/cn_Integrate-into-Azure-IoT-Hub',
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/cn_Configuring-Web-APP-Visualization',
+            //       ],
+            //     },
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/cn_Integrate_into_Google_Sheets_via_Helium',
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/cn_Connect_AWS_via_helium',
+            //   ],
+            // },
             {
               type: 'category',
               label: 'TTN 云服务',
