@@ -192,8 +192,6 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 
    We recommend installing **Ubuntu 24.04 LTS**.
 
-   Recommended Bilibili installation tutorial: [Ubuntu Dual-Boot Installation Tutorial](https://www.bilibili.com/video/BV1Cc41127B9/)
-
 2. (Beta) You can ask an agent to initialize the robotic arm. Send it the following prompt:
 
 ```text
