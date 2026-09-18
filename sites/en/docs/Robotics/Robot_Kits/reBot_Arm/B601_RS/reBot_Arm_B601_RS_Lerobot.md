@@ -82,14 +82,14 @@ Seeed Studio tutorials are strictly updated according to official documentation.
 
 - Ubuntu 22.04/Ubuntu 24.04
 - NVIDIA GPU with CUDA 12+ (optional, for GPU-accelerated training and inference)
-- Python 3.10
+- Python 3.12
 - Torch 2.6 (CPU builds can run basic workflows; CUDA builds are required for GPU acceleration)
 
 </TabItem>
 <TabItem value="jetson-orin" label="Jetson Orin">
 
 - Jetson JetPack 6.0 and 6.1, 6.2 is not supported
-- Python 3.10
+- Python 3.12
 - Torch 2.3+
 
 </TabItem>
@@ -153,8 +153,8 @@ The LeRobot repository includes a `pyproject.toml`. Create a Conda environment a
 ```bash
 cd ~/rebot_lerobot
 
-# Create the conda environment (Python 3.10)
-conda create -y -n lerobot python=3.10
+# Create the conda environment (Python 3.12)
+conda create -y -n lerobot python=3.12
 
 # Activate the environment
 conda activate lerobot
