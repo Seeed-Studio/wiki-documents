@@ -587,7 +587,7 @@ La carcasa IP66, la configuración por Bluetooth, la compatibilidad con la red g
 
 ## Biblioteca de código del curso
 
-Todas las librerías y el código para este curso se pueden encontrar en la siguiente dirección. Antes de que comience el curso, puedes clonar el repositorio en tu propio ordenador para referencia y aprendizaje.</td>
+Todas las librerías y el código para este curso se pueden encontrar en la siguiente dirección. Antes de que comience el curso, puedes clonar el repositorio en tu propio ordenador para referencia y aprendizaje.
 
 <div>
   <p style={{}}><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank" /></p><div align="center"><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank"><img width="500" src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
@@ -601,7 +601,7 @@ Para más detalles, por favor lee el [sitio web oficial de TTN](https://www.thet
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.</td>
+¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
