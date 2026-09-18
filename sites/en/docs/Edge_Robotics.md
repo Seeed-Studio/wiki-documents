@@ -106,7 +106,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
       <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator Development</b><small>Learn Web Simulator integration with ROS2/MuJoCo for virtual-real synchronized control.</small></div><em>Simulation dev</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim Integration</b><small>Simulate the arm in Isaac Sim and sync with the real robot.</small></div><em>Simulation</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_mit_control/"><span className="step-index">8</span><div><b>MIT Position Control</b><small>Get started with MIT position control for the reBot Arm B601-RS.</small></div><em>Control advanced</em></a>
-      <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>Embodied Agent Architecture Design</b><small>Connect a VLM to the arm so natural-language commands drive vision-based grasping with safety-gated control.</small></div><em>Agent architecture</em></a>
+      <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>Embodied Agent Design Framework</b><small>Connect a VLM to the arm so natural-language commands drive vision-based grasping with safety-gated control.</small></div><em>Agent framework</em></a>
     </div>
   </div>
 </details>
