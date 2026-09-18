@@ -23,52 +23,16 @@ reSpeaker is an open-source modular voice interface platform developed by Seeed 
 
 ## Product Series
 
-
-
 ### reSpeaker Flex
 
 The reSpeaker Flex is a modular voice processing system built around the XMOS XVF3800, designed for robots and intelligent interaction devices. It features a split architecture where the processing board and microphone array are separated and connected via a flexible FPC cable, allowing flexible placement within a product enclosure. The system supports two interchangeable 4-microphone array options: a circular array for 360° voice capture and a linear array for directional pickup with noise suppression. Both arrays connect through a standardized 24-pin interface, and the device can operate in USB (UAC 2.0) or I2S mode for different integration needs. An optional XIAO ESP32S3 can be added to enable wireless connectivity and extended control capabilities.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" alt="pir" width={600} height="auto" /></p>
 
-<div className="table-center">
-    <table className="table-nobg">
-        <tbody>
-            <tr className="table-trnobg">
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Linear-4-with-XIAO-ESP32S3-p-6736.html"
-                            style={{ marginRight: '150px' }}
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="4">🖱️ Buy Now</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/respeaker_flex_introduction/"
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="3">📚 Getting Started Page</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div style={{ textAlign: 'center' }}>
+  <a className="get_one_now_item" style={{ marginRight: 'clamp(4px, 15%, 150px)' }} href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Linear-4-with-XIAO-ESP32S3-p-6736.html" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="4">🖱️ Buy Now</font></strong></a>
+  <a className="get_one_now_item" href="https://wiki.seeedstudio.com/respeaker_flex_introduction/" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="3">📚 Getting Started Page</font></strong></a>
 </div>
-
 
 ### reSpeaker XVF3800
 
@@ -76,44 +40,10 @@ The reSpeaker XMOS XVF3800 series is built for makers, developers, and product d
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xvf3800.png" alt="pir" width={600} height="auto" /></p>
 
-<div className="table-center">
-    <table className="table-nobg">
-        <tbody>
-            <tr className="table-trnobg">
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
-                            style={{ marginRight: '150px' }}
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="4">🖱️ Buy Now</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/"
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="3">📚 Getting Started Page</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div style={{ textAlign: 'center' }}>
+  <a className="get_one_now_item" style={{ marginRight: 'clamp(4px, 15%, 150px)' }} href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="4">🖱️ Buy Now</font></strong></a>
+  <a className="get_one_now_item" href="https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="3">📚 Getting Started Page</font></strong></a>
 </div>
-
 
 ### reSpeaker Lite
 
@@ -121,44 +51,10 @@ The reSpeaker Lite series is your gateway to building powerful, high-quality voi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeakerlite.png" alt="pir" width={600} height="auto" /></p>
 
-<div className="table-center">
-    <table className="table-nobg">
-        <tbody>
-            <tr className="table-trnobg">
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html"
-                            style={{ marginRight: '150px' }}
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="4">🖱️ Buy Now</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/reSpeaker_usb_v3/"
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="3">📚 Getting Started Page</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div style={{ textAlign: 'center' }}>
+  <a className="get_one_now_item" style={{ marginRight: 'clamp(4px, 15%, 150px)' }} href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="4">🖱️ Buy Now</font></strong></a>
+  <a className="get_one_now_item" href="https://wiki.seeedstudio.com/reSpeaker_usb_v3/" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="3">📚 Getting Started Page</font></strong></a>
 </div>
-
 
 ### reSpeaker 2-Mics Pi HAT
 
@@ -166,42 +62,9 @@ The reSpeaker 2-Mics Pi HAT V2.0 transforms your Raspberry Pi into a powerful vo
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/hat.png" alt="pir" width={600} height="auto" /></p>
 
-<div className="table-center">
-    <table className="table-nobg">
-        <tbody>
-            <tr className="table-trnobg">
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html"
-                            style={{ marginRight: '150px' }}
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="4">🖱️ Buy Now</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/"
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="3">📚 Getting Started Page</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div style={{ textAlign: 'center' }}>
+  <a className="get_one_now_item" style={{ marginRight: 'clamp(4px, 15%, 150px)' }} href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="4">🖱️ Buy Now</font></strong></a>
+  <a className="get_one_now_item" href="https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="3">📚 Getting Started Page</font></strong></a>
 </div>
 
 ### reSpeaker XVF3000
@@ -210,42 +73,17 @@ The reSpeaker XVF3000 USB Mic Array is a ready-to-use, plug-and-play far-field v
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xvf3000.png" alt="pir" width={600} height="auto" /></p>
 
-<div className="table-center">
-    <table className="table-nobg">
-        <tbody>
-            <tr className="table-trnobg">
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html"
-                            style={{ marginRight: '150px' }}
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="4">🖱️ Buy Now</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#version"
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="3">📚 Getting Started Page</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div style={{ textAlign: 'center' }}>
+  <a className="get_one_now_item" style={{ marginRight: 'clamp(4px, 15%, 150px)' }} href="https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="4">🖱️ Buy Now</font></strong></a>
+  <a className="get_one_now_item" href="https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#version" target="_blank" rel="noopener noreferrer"><strong><font color="#FFFFFF" size="3">📚 Getting Started Page</font></strong></a>
+</div>
+
+---
+
+<p style={{textAlign: 'center'}}>Looking for the complete line-up, including accessories and bundles?</p>
+
+<div className="button-container">
+  <a className="button-style" href="https://www.seeedstudio.com/respeaker-series" target="_blank" rel="noopener noreferrer">🎙️ View All reSpeaker Products</a>
 </div>
 
 ## Core Features
