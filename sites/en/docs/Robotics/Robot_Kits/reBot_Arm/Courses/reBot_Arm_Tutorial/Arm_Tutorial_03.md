@@ -1,6 +1,6 @@
 ---
 description: "Chapter 3 of the Seeed Embodied Intelligence Beginner's Course — the hands-on hardware list required for each stage, including main control units, the reBot Arm, cameras, leader arm, and printable mounts."
-title: Chapter 3 - Hardware Selection for Subsequent Courses
+title: Chapter 3 - Hardware Selection for Courses
 keywords:
   - reBot
   - B601-DM
@@ -21,9 +21,44 @@ updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_3/
 ---
 
-# Chapter 3 [Theory & Practice]: Hardware Selection for Subsequent Courses
+import '/src/css/rebot-wiki-style.css';
+import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
+
+# 
+
+<div className="rebot-page">
+
+<section className="doc-hero">
+  <div>
+    <span className="eyebrow">Stage 1 · Chapter 3 · Theory &amp; Practice</span>
+    <h2>3. Hardware Selection for Subsequent Courses</h2>
+    <p>
+      Chapter 3 of the Seeed Embodied Intelligence Beginner's Course — the hands-on hardware list
+      required for each stage, including main control units, the reBot Arm, cameras, leader arm,
+      and printable mounts.
+    </p>
+    <div className="hero-actions">
+      <a href="#main-control-unit">Main control unit</a>
+      <a href="#stage-2">Hardware by stage</a>
+    </div>
+  </div>
+  <div className="hero-card">
+    <strong>What you will need</strong>
+    <span>A main control device (Ubuntu recommended) for all chapters.</span>
+    <span>The reBot Arm B601 (DM or RS) plus a leader arm for teleoperation stages.</span>
+    <span>Cameras and printable mounts for the vision and imitation-learning stages.</span>
+  </div>
+</section>
+
+<RebotCourseNav />
 
 ## 3.1 Hardware Selection for Subsequent Courses
+
+<section id="hardware-selection" className="section-card">
+  <div className="section-title">
+    <span>Hardware</span>
+    <h2>3.1 Hardware Selection for Subsequent Courses</h2>
+  </div>
 
 This section introduces the hands-on hardware list required for each chapter. Students can purchase according to their own situation.
 
@@ -93,3 +128,7 @@ All chapters require a main control device as your code deployment endpoint. Bel
 | Required Hardware | Link | Quantity | Notes |
 | :--- | :--- | :---: | :--- |
 | reBot Arm B601 DM/RS | [reBot DM Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html)<br/>[reBot RS Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html) | 1 | - Choose one of DM/RS<br/>- To reduce purchase pressure, you can also buy the parts-only version. Seeed also provides very detailed, step-by-step assembly tutorials.<br/>- Because the power supply shipped by Seeed uses fire-resistant materials, the price is somewhat higher. You can also purchase genuine Mean Well (Taiwan) power supplies on your own. |
+
+</section>
+
+</div>

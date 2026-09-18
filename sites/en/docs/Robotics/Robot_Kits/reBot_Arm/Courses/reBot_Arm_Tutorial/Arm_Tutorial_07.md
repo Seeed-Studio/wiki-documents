@@ -22,9 +22,45 @@ updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_7/
 ---
 
-# Chapter 7 [Practice]: MotorBridge Motor Control Library
+import '/src/css/rebot-wiki-style.css';
+import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
+
+# 
+
+<div className="rebot-page">
+
+<section className="doc-hero">
+  <div>
+    <span className="eyebrow">Stage 2 · Chapter 7 · Practice</span>
+    <h2>7. MotorBridge Motor Control Library</h2>
+    <p>
+      Chapter 7 of the Seeed Embodied Intelligence Beginner's Course — MotorBridge, the cross-vendor
+      CAN motor control library, and how to control DM and RS motors via web and Python.
+    </p>
+    <div className="hero-actions">
+      <a href="#install">Installation</a>
+      <a href="#dm-motors">DM motors</a>
+      <a href="#rs-motors">RS motors</a>
+    </div>
+  </div>
+  <div className="hero-card">
+    <strong>In this chapter</strong>
+    <span>7.1 What is MotorBridge?</span>
+    <span>7.2 Installation Environment</span>
+    <span>7.3 MotorBridge Controls DM Motors</span>
+    <span>7.4 MotorBridge Controls RS Motors</span>
+  </div>
+</section>
+
+<RebotCourseNav />
 
 ## 7.1 What is MotorBridge?
+
+<section id="what-is-motorbridge" className="section-card">
+  <div className="section-title">
+    <span>Overview</span>
+    <h2>7.1 What is MotorBridge?</h2>
+  </div>
 
 MotorBridge is a **cross-vendor unified CAN motor control software stack** open-sourced by **Seeed Studio**, oriented toward integrated joint motors for robotic arms/humanoid robots. It uses a high-performance Rust core at the bottom layer, provides a standard C ABI interface, and comes with Python/C++/ROS2 language bindings. One set of APIs can drive mainstream integrated joint motors on the market.
 
@@ -71,7 +107,15 @@ Supports Python, C++ (in development), ROS2 nodes. Developers directly call unif
 | Protocol encapsulation | Requires developers to manually parse CAN messages | Completely shields underlying CAN protocol details |
 | Cross-platform | Inconsistent adaptation | Full platform support for Windows/macOS/Linux |
 
+</section>
+
 ## 7.2 Installation Environment
+
+<section id="install" className="section-card">
+  <div className="section-title">
+    <span>Setup</span>
+    <h2>7.2 Installation Environment</h2>
+  </div>
 
 ### 7.2.1 Install Miniforge
 
@@ -143,7 +187,15 @@ After activating the `rebot_motorbridge` virtual environment, execute the follow
 pip install motorbridge
 ```
 
+</section>
+
 ## 7.3 MotorBridge Controls DM Motors
+
+<section id="dm-motors" className="section-card">
+  <div className="section-title">
+    <span>DM Motors</span>
+    <h2>7.3 MotorBridge Controls DM Motors</h2>
+  </div>
 
 ### Web Control
 
@@ -155,7 +207,9 @@ https://motorbridge.github.io/motorbridge-studio/
 
 2. Click the **Help** option, copy the corresponding command according to your operating system and the driver board used, verify the IP address and port number, then press Enter in the terminal to run.
 
-![MotorBridge Help](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-01.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-01.jpg" alt="MotorBridge Help" />
+</div>
 
 Taking Damiao DM motors as an example:
 
@@ -189,19 +243,27 @@ The port number must be the correct port, and permissions must be granted before
 
 3. After entering the above command, return to the webpage and click **Connect**. After a successful connection, green `Connected` text will appear in the upper right corner.
 
-![Connected](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-02.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-02.jpg" alt="Connected" />
+</div>
 
 4. After selecting the DM motor, click **Scan Damiao**.
 
-![Scan Damiao](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-03.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-03.jpg" alt="Scan Damiao" />
+</div>
 
 5. After a successful scan, the following card appears.
 
-![Scan result card](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-04.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-04.jpg" alt="Scan result card" />
+</div>
 
 6. On the right side are the motor-related parameters. Click the enable button in the lower left corner, and the motor light turns green. At this point, you can control the motor.
 
-![Motor parameters and enable](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-05.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-05.jpg" alt="Motor parameters and enable" />
+</div>
 
 7. Drag the slider or enter the corresponding angle in the small box (unit is rad), then click **Move**, and the motor will rotate to the target angle.
 
@@ -211,7 +273,9 @@ The port number must be the correct port, and permissions must be granted before
 
 For example, if `can_id` is 1, then `master_id` should be `0x11`, that is, 16 + 1 = 17. Then click **Set CAN_ID**.
 
-![Set CAN ID](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-06.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-06.jpg" alt="Set CAN ID" />
+</div>
 
 ### Python Code Control
 
@@ -668,7 +732,15 @@ ctrl.close()
 
 Phenomenon: After successfully setting the zero point, the current state of the motor will be read to confirm whether the zero point setting was successful.
 
+</section>
+
 ## 7.4 MotorBridge Controls RS Motors
+
+<section id="rs-motors" className="section-card">
+  <div className="section-title">
+    <span>RS Motors</span>
+    <h2>7.4 MotorBridge Controls RS Motors</h2>
+  </div>
 
 ### Web Control
 
@@ -693,7 +765,9 @@ https://motorbridge.github.io/motorbridge-studio/
 
 3. Click the **Help** option, copy the corresponding command according to your operating system and the driver board used, verify the IP address and port number, then press Enter in the terminal to run.
 
-![MotorBridge Help](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-07.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-07.jpg" alt="MotorBridge Help" />
+</div>
 
 - **Linux** platform, enter the following command:
 
@@ -715,19 +789,27 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can
 
 4. After entering the above command, return to the webpage and click **Connect**. After a successful connection, green `Connected` text will appear in the upper right corner.
 
-![Connected](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-08.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-08.jpg" alt="Connected" />
+</div>
 
 5. After selecting the RS motor, click **Scan RobStride motor**.
 
-![Scan RobStride](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-09.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-09.jpg" alt="Scan RobStride" />
+</div>
 
 6. After a successful scan, the following card appears.
 
-![Scan result card](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-10.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-10.jpg" alt="Scan result card" />
+</div>
 
 7. On the right side are the motor-related parameters. Click the enable button in the lower left corner, and the motor light turns green. At this point, you can control the motor.
 
-![Motor parameters and enable](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-11.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-11.jpg" alt="Motor parameters and enable" />
+</div>
 
 8. Drag the slider or enter the corresponding angle in the small box (unit is rad), then click **Move**, and the motor will rotate to the target angle.
 
@@ -1132,3 +1214,7 @@ ctrl.close()
 ```
 
 Phenomenon: After successfully setting the zero point, the current state of the motor will be read to confirm whether the zero point setting was successful.
+
+</section>
+
+</div>

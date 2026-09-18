@@ -24,9 +24,51 @@ updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_4/
 ---
 
-# Chapter 4 [Theory]: Fundamentals of Robotic Arms and Joint Actuators
+import '/src/css/rebot-wiki-style.css';
+import 'katex/dist/katex.min.css';
+import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
+
+# 
+
+<div className="rebot-page">
+
+<section className="doc-hero">
+  <div>
+    <span className="eyebrow">Stage 2 · Chapter 4 · Theory</span>
+    <h2>4. Fundamentals of Robotic Arms and Joint Actuators</h2>
+    <p>
+      Chapter 4 of the Seeed Embodied Intelligence Beginner's Course — fundamentals of robotic arms
+      and joint actuators, including safety ranges, structure, reducers, encoders, and DM/RS motor
+      control modes.
+    </p>
+    <div className="hero-actions">
+      <a href="#safety-range">Safety range</a>
+      <a href="#dm-control-modes">Control modes</a>
+    </div>
+  </div>
+  <div className="hero-card">
+    <strong>In this chapter</strong>
+    <span>4.1 Robotic Arm Safety Range and Workspace</span>
+    <span>4.2 Introduction to the Basic Structure of a Robotic Arm</span>
+    <span>4.3 Joint Actuator</span>
+    <span>4.4 Reducer</span>
+    <span>4.5 Encoder</span>
+    <span>4.6 Motor Interface and Wiring</span>
+    <span>4.7 DM Motor Control Modes</span>
+    <span>4.8 Different Modes of RS Motors</span>
+    <span>4.9 Emergency Stop and Abnormal Power-Off Principles</span>
+  </div>
+</section>
+
+<RebotCourseNav />
 
 ## 4.1 Robotic Arm Safety Range and Workspace
+
+<section id="safety-range" className="section-card">
+  <div className="section-title">
+    <span>Safety</span>
+    <h2>4.1 Robotic Arm Safety Range and Workspace</h2>
+  </div>
 
 Understanding the parameters in the table below is the foundation for safely using a robotic arm:
 
@@ -61,9 +103,19 @@ Mechanical limits are physical hard boundaries determined by the mechanical stru
 Even though the joints of the robotic arm all have mechanical limits, you should still pay attention to the motion range of different joints to prevent joint motors from stalling for extended periods due to exceeding the motion range.
 :::
 
+</section>
+
 ## 4.2 Introduction to the Basic Structure of a Robotic Arm
 
-![Basic structure of a robotic arm](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-03.jpg)
+<section id="structure" className="section-card">
+  <div className="section-title">
+    <span>Structure</span>
+    <h2>4.2 Introduction to the Basic Structure of a Robotic Arm</h2>
+  </div>
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-03.jpg" alt="Basic structure of a robotic arm" />
+</div>
 
 | Name | Position | Motion Axis | Function |
 | :--- | :--- | :--- | :--- |
@@ -75,13 +127,31 @@ Even though the joints of the robotic arm all have mechanical limits, you should
 | Wrist | The part containing motors 4, 5, and 6, located between the end gripper and forearm | Rotates about the wrist center axis (X-axis) | Enables the wrist end to rotate about its own central axis |
 | Gripper | The part containing motor 7, mounted on the wrist | Translational opening/closing | Enables the robotic arm to grasp objects |
 
+</section>
+
 ## 4.3 Joint Actuator
+
+<section id="joint-actuator" className="section-card">
+  <div className="section-title">
+    <span>Actuator</span>
+    <h2>4.3 Joint Actuator</h2>
+  </div>
 
 A joint actuator consists of **driver → motor → reducer → bearing/output flange → robot link**, while at the same time **encoder/torque sensor → controller → driver** forms closed-loop control.
 
-![Joint actuator](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-04.jpg)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-04.jpg" alt="Joint actuator" />
+</div>
+
+</section>
 
 ## 4.4 Reducer
+
+<section id="reducer" className="section-card">
+  <div className="section-title">
+    <span>Reducer</span>
+    <h2>4.4 Reducer</h2>
+  </div>
 
 The original torque output by a motor is usually very small, but through gears with a reduction ratio `i`, the output torque is amplified by a factor of `i`.
 
@@ -102,13 +172,15 @@ Therefore, the two solutions produce significant differences in **output torque,
 
 The reducers used in both DM and RS motors are planetary reducers. Therefore, only the principle of planetary reducers is introduced here.
 
-![Planetary reducer](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-05.png)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-05.png" alt="Planetary reducer" />
+</div>
 
 A planetary reducer generally has the ring gear fixed, the sun gear as input, and the planet carrier as output. At this time, the motor's transmission ratio is maximum. Assume the transmission ratio is `i`. The transmission ratio `i` is only related to the number of teeth of the ring gear `Zr` and the number of teeth of the sun gear `Zs`. The expression for the transmission ratio is:
 
-```text
-i = 1 + Zr / Zs
-```
+$$
+i = 1 + \frac{Z_r}{Z_s}
+$$
 
 One rotation of the sun gear pushes the planet gears to rotate on their own axes. But because the ring gear is fixed, the planet gears cannot simply rotate about a fixed axis; instead, they drive the planet carrier to rotate slowly. At this time, the motor rotor rotates `i` times, and the planet carrier rotates approximately 1 time.
 
@@ -135,10 +207,12 @@ The motor itself has a relatively high rotational speed but limited output torqu
 
 Ideally, when the reduction ratio is (N:1):
 
-```text
-ω_out = ω_motor / N
-T_out ≈ T_motor × N × η
-```
+$$
+\begin{aligned}
+\omega_{\text{out}} &= \frac{\omega_{\text{motor}}}{N} \\
+T_{\text{out}} &\approx T_{\text{motor}} \times N \times \eta
+\end{aligned}
+$$
 
 Where:
 
@@ -183,21 +257,21 @@ Its basic structure can be understood as: **High-torque-density motor → Low-re
 
 **Why does QDD require a stronger motor?** This is the key to understanding the difference between the two solutions. Assume both joints ultimately need to output:
 
-```text
-T_out = 40 N·m
-```
+$$
+T_{\text{out}} = 40\ \mathrm{N} \cdot \mathrm{m}
+$$
 
 If a 40:1 reducer is used, then theoretically the motor only needs to provide:
 
-```text
-T_motor ≈ 40 / 40 = 1 N·m
-```
+$$
+T_{\text{motor}} \approx \frac{40}{40} = 1\ \mathrm{N} \cdot \mathrm{m}
+$$
 
 If an 8:1 reducer is used, then it needs:
 
-```text
-T_motor ≈ 40 / 8 = 5 N·m
-```
+$$
+T_{\text{motor}} \approx \frac{40}{8} = 5\ \mathrm{N} \cdot \mathrm{m}
+$$
 
 That is to say: **After the reduction ratio is lowered, the motor must provide more torque itself.** Therefore, the QDD solution places higher demands on the motor, requiring the motor to have:
 
@@ -214,6 +288,23 @@ The greatest value of QDD is not simply "a smaller reduction ratio," but rather:
 ### 4.4.4 Core Differences Between the Two Solutions
 
 The two solutions can be understood as two completely different design philosophies.
+|      **Comparison Item**     |     **DM Planetary Gear Drive**    |                    **RS QDD (Quasi-Direct Drive)**                   |
+| :--------------------------: | :--------------------------------: | :------------------------------------------------------------------: |
+|       **Core Concept**       | Amplifies torque through a gearbox |           Relies on a high-torque-density motor for output           |
+|    **Typical Gear Ratio**    |             10:1, 40:1             |                     Typically around 7.75:1–10:1                     |
+| **Motor Torque Requirement** |           Relatively low           |                                Higher                                |
+|       **Output Torque**      |                High                |             High, but more dependent on the motor itself             |
+|       **Output Speed**       |           Relatively low           |                            Relatively high                           |
+|      **Backdrivability**     |                Lower               |                                Higher                                |
+|   **Mechanical Impedance**   |               Higher               |                                 Lower                                |
+|    **Force Transparency**    |                Lower               |                                Higher                                |
+|     **Compliant Control**    |        Relatively difficult        |                           More advantageous                          |
+|     **Impact Resistance**    |  Depends on the gearbox structure  | Lower gear ratios are generally more favorable for impact resistance |
+|     **Position Holding**     |              Stronger              |                  Relies more on active motor control                 |
+|    **Motor Requirements**    |           Relatively low           |         High torque density and high peak current capability         |
+|    **Typical Advantages**    |  High torque and payload capacity  |         Dynamic response, backdrivability, and force control         |
+|       **Thermal Rise**       |               Slower               |                                Faster                                |
+
 
 The high force transparency, strong backdrivability, and low mechanical impedance brought by QDD's low reduction ratio are its core advantages over high-reduction-ratio transmission solutions; at the same time, a low reduction ratio also means the motor needs to bear greater torque, therefore placing higher demands on the motor's torque density and thermal management.
 
@@ -230,7 +321,15 @@ There is no absolute sense of "which is more advanced" between the two. For a ro
 And for robotic arms oriented toward human-robot interaction, imitation learning, and reinforcement learning, QDD's low mechanical impedance and high backdrivability are particularly attractive, because the dynamic characteristics of the robotic arm are closer to the state of "the motor directly driving the load," which is conducive to high-dynamic motion and force interaction control.
 :::
 
+</section>
+
 ## 4.5 Encoder
+
+<section id="encoder" className="section-card">
+  <div className="section-title">
+    <span>Encoder</span>
+    <h2>4.5 Encoder</h2>
+  </div>
 
 An encoder is used to measure rotation angle. Common types include incremental encoders, multi-turn absolute position encoders, and single-turn absolute position encoders. Both Damiao (DM) motors and Lingzu (RS) motors contain 2 single-turn absolute position magnetic encoders. The encoder resolution is 14 bits for both.
 
@@ -245,7 +344,9 @@ Imagine the magnetic encoder as a smart compass with its own "map."
 - The magnetoresistive chip is the "map sensor." It has 360° direction markings around it, and it can read in real time, like reading a compass, whether the current magnetic field points to 0°, 90°, or 270°.
 :::
 
-![Absolute position magnetic encoder](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-06.png)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-06.png" alt="Absolute position magnetic encoder" />
+</div>
 
 ### Why joint motors use two encoders
 
@@ -261,7 +362,15 @@ If the steering wheel turns 10 times but the wheels only turn 9.8 times, the sys
 
 The motor does not lose position after power-off because the absolute encoder saves the current position. Upon re-powering, it reads the angles on the motor side and output side, then recovers the position through reduction ratio verification.
 
+</section>
+
 ## 4.6 Motor Interface and Wiring
+
+<section id="interfaces" className="section-card">
+  <div className="section-title">
+    <span>Interfaces</span>
+    <h2>4.6 Motor Interface and Wiring</h2>
+  </div>
 
 ### DM Motor Interface and Wiring
 
@@ -276,13 +385,23 @@ The motor does not lose position after power-off because the absolute encoder sa
 | :--- | :--- | :--- |
 | XT30 (2+2) | ![XT30 2+2](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-09.png) | 1. Connect the power supply through the XT30(2+2)-F plug power cable, with a rated voltage of 24V, to power the motor. <br/>2. Connect external control devices through the CAN communication terminal, which can receive CAN control commands and feed back motor status information. <br/>3. The motor contains two power interfaces, either interface (including the CAN communication terminal) can be used independently, or multiple motors can be connected in series for convenient wiring. |
 
+</section>
+
 ## 4.7 DM Motor Control Modes
+
+<section id="dm-control-modes" className="section-card">
+  <div className="section-title">
+    <span>DM Control Modes</span>
+    <h2>4.7 DM Motor Control Modes</h2>
+  </div>
 
 The electronic speed controller converts the received CAN data into control variables for calculation, obtaining a torque value as the current reference for the current loop. The current loop ultimately reaches the given torque current according to its adjustment law.
 
 ### MIT Protocol
 
-![MIT protocol](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-10.jpg)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-10.jpg" alt="MIT protocol" />
+</div>
 
 MIT mode can control the motor through three parameters: **position, velocity, and torque**.
 
@@ -321,7 +440,9 @@ When controlling position, kd cannot be set to 0, otherwise it will cause motor 
 
 ### Position-Velocity Mode
 
-![Position-velocity mode](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-11.jpg)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-11.jpg" alt="Position-velocity mode" />
+</div>
 
 The position cascade mode adopts a three-loop cascade control mode, with the position loop as the outermost loop, its output as the reference for the velocity loop, and the output of the velocity loop as the reference for the inner current loop, used to control the actual current output.
 
@@ -342,7 +463,9 @@ The units of p_des and v_des are rad and rad/s respectively, the data type is fl
 
 ### Velocity Mode
 
-![Velocity mode](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-12.jpg)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-12.jpg" alt="Velocity mode" />
+</div>
 
 The outer loop of velocity mode is the velocity loop, and the output of the velocity loop serves as the reference for the inner current loop.
 
@@ -358,7 +481,9 @@ The unit of v_des is rad/s, and the data type is float. If you need to use the d
 
 ### PVT Mode (Force-Position Hybrid Control)
 
-![PVT mode](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-13.jpg)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-13.jpg" alt="PVT mode" />
+</div>
 
 PVT (force-position hybrid control) mode dynamically controls the magnitude of output torque based on position-velocity mode control. A current command saturation link is added after the output command of the velocity loop, so that the reference of the current loop is limited within a given range.
 
@@ -371,17 +496,27 @@ The final output torque of the motor is mainly determined jointly by the followi
 - **kp_vel**: Directly determines the dynamic acceleration torque.
 - **ki_vel**: Determines the anti-load-disturbance capability during the constant velocity segment.
 
+</section>
+
 ## 4.8 Different Modes of RS Motors
+
+<section id="rs-control-modes" className="section-card">
+  <div className="section-title">
+    <span>RS Control Modes</span>
+    <h2>4.8 Different Modes of RS Motors</h2>
+  </div>
 
 ### Motion Control Mode
 
-![RS motion control mode](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-14.png)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-14.png" alt="RS motion control mode" />
+</div>
 
 The motion control mode of RS is similar to the MIT mode of DM. The control logic of motion control mode is as follows:
 
-```text
-t_ref = Kd * (v_des - v_actual) + Kp * (p_des - p_actual) + t_ff
-```
+$$
+t_{\text{ref}} = K_d\,(v_{\text{des}} - v_{\text{actual}}) + K_p\,(p_{\text{des}} - p_{\text{actual}}) + t_{\text{ff}}
+$$
 
 Finally, t_ref is converted to the desired iq current through an internal formula and output through the current loop.
 
@@ -416,13 +551,17 @@ Motion control mode can achieve different control methods according to different
 
 ### Current Mode
 
-![RS current mode](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-15.png)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-15.png" alt="RS current mode" />
+</div>
 
 This provides the motor's current loop as a control interface to the user. This mode is generally not used. The usage of this interface can refer to the FOC algorithm.
 
 ### Velocity Mode
 
-![RS velocity mode](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-16.png)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-16.png" alt="RS velocity mode" />
+</div>
 
 Velocity mode uses the difference between the set velocity and the current velocity as the input to the PI controller, and the output torque of the PI controller is limited to a range. The torque is converted to the desired iq current through an internal formula and output through the current loop.
 
@@ -435,7 +574,9 @@ The final output torque of the motor is mainly determined jointly by the followi
 
 ### Position-Velocity Mode (CSP)
 
-![RS position-velocity mode CSP](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-17.png)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-17.png" alt="RS position-velocity mode CSP" />
+</div>
 
 Position mode CSP can also be called position-velocity mode. The difference between the set angle and the current angle is used as the input to the position loop, where the position loop is a pure proportional controller. The output of the position loop passes through velocity limiting and then serves as the input to the velocity loop. The velocity loop is a PI controller, and the output torque passes through torque protection limiting and is then converted to the desired iq current, output through the current loop.
 
@@ -451,7 +592,9 @@ The final output torque of the motor is mainly determined jointly by the followi
 
 ### Position-Velocity Mode (PP)
 
-![RS position-velocity mode PP](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-18.png)
+<div className="image-frame">
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4/ch4-18.png" alt="RS position-velocity mode PP" />
+</div>
 
 This mode is also the position-velocity mode interface provided by motorbridge.
 
@@ -475,7 +618,15 @@ The final output torque of the motor is mainly determined jointly by the followi
 - **ki_vel**: Determines the anti-load-disturbance capability during the constant velocity segment.
 - **Torque protection**: Limits the desired output torque.
 
+</section>
+
 ## 4.9 Emergency Stop and Abnormal Power-Off Principles
+
+<section id="emergency-stop" className="section-card">
+  <div className="section-title">
+    <span>Safety</span>
+    <h2>4.9 Emergency Stop and Abnormal Power-Off Principles</h2>
+  </div>
 
 :::danger Emergency stop rules
 1. **Abnormal shaking must be immediately powered off.** High-frequency shaking means the motor is outputting high-frequency forward and reverse torques, and if the power is not immediately cut off, it may lead to motor damage.
@@ -484,3 +635,7 @@ The final output torque of the motor is mainly determined jointly by the followi
 
 3. **Abnormal situations such as sudden falling of the robotic arm must be immediately powered off** to prevent other unexpected situations.
 :::
+
+</section>
+
+</div>

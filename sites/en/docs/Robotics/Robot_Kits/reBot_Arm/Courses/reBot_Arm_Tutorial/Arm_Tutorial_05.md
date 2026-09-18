@@ -22,9 +22,39 @@ updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_5/
 ---
 
-# Chapter 5 [Theory]: CAN Bus and Motor Communication
+import '/src/css/rebot-wiki-style.css';
+import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
-After completing this section, you should be able to understand the following questions:
+# 
+
+<div className="rebot-page">
+
+<section className="doc-hero">
+  <div>
+    <span className="eyebrow">Stage 2 · Chapter 5 · Theory</span>
+    <h2>5. CAN Bus and Motor Communication</h2>
+    <p>
+      Chapter 5 of the Seeed Embodied Intelligence Beginner's Course — CAN bus basics, standard vs
+      extended data frames, the CAN data link layer, and SocketCAN.
+    </p>
+    <div className="hero-actions">
+      <a href="#principles">CAN principles</a>
+      <a href="#protocol">CAN protocol</a>
+      <a href="#socketcan">SocketCAN</a>
+    </div>
+  </div>
+  <div className="hero-card">
+    <strong>In this chapter</strong>
+    <span>5.1 CAN Basic Principles</span>
+    <span>5.2 CAN Protocol</span>
+    <span>5.3 SocketCAN</span>
+  </div>
+</section>
+
+<RebotCourseNav />
+
+<section className="section-card">
+  <p>After completing this section, you should be able to understand the following questions:</p>
 
 - How a piece of data is sent out on the CAN bus;
 - What parts a CAN data frame consists of;
@@ -38,17 +68,35 @@ For practical development, it is not necessary to memorize every bit in a CAN fr
 The most important thing at the beginner stage is to first understand: **ID, DLC, Data**.
 :::
 
+</section>
+
 ## 5.1 CAN Basic Principles
+
+<section id="principles" className="section-card">
+  <div className="section-title">
+    <span>Principles</span>
+    <h2>5.1 CAN Basic Principles</h2>
+  </div>
 
 CAN is the abbreviation for Controller Area Network, and is an ISO international standardized serial communication protocol. The CAN bus network structure has two forms: closed-loop and open-loop.
 
 Generally, the CAN bus network structure used by robotic arms or robots uses a closed-loop CAN bus network, that is, a 120-ohm resistor is connected at each end of the bus, and the two signal lines form a loop. This CAN bus network is defined by the ISO 11898 standard and is a high-speed, short-distance CAN network with a communication rate of 125 kbit/s to 1 Mbit/s. At a communication rate of 1 Mbit/s, the maximum bus length is 40 m.
 
-![CAN bus network](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-5/ch5-01.png)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-5/ch5-01.png" alt="CAN bus network" />
+</div>
 
 The bus consists of two signal lines, CAN_L and CAN_H. CAN transmits differential signals, representing the bus level through the voltage difference between the two signal lines, that is, CAN_H - CAN_L. The one corresponding to logic 1 is called the recessive level, and the one corresponding to logic 0 is called the dominant level. In ISO 11898, the recessive level is near a voltage difference of 0, and the dominant level is mainly near a voltage difference of 2V.
 
+</section>
+
 ## 5.2 CAN Protocol
+
+<section id="protocol" className="section-card">
+  <div className="section-title">
+    <span>Protocol</span>
+    <h2>5.2 CAN Protocol</h2>
+  </div>
 
 | Frame Type | Frame Purpose |
 | :--- | :--- |
@@ -64,19 +112,20 @@ Since DM motors use CAN 2.0 standard data frames and RS motors use CAN 2.0 exten
 
 ### 5.2.1 reBot DM Standard Data Frame (11 bytes total)
 
-| Byte | Field | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bits 3-0 |
-| :---: | :--- | :---: | :---: | :---: | :---: | :---: |
-| 1 | Frame Info | FF | RTR | X | X | DLC |
-| 2 | Frame ID1 | ID10-ID3 | - | - | - | - |
-| 3 | Frame ID2 | ID2-ID0 | - | X | X | X |
-| 4 | Data 1 | DATA1 | - | - | - | - |
-| 5 | Data 2 | DATA2 | - | - | - | - |
-| 6 | Data 3 | DATA3 | - | - | - | - |
-| 7 | Data 4 | DATA4 | - | - | - | - |
-| 8 | Data 5 | DATA5 | - | - | - | - |
-| 9 | Data 6 | DATA6 | - | - | - | - |
-| 10 | Data 7 | DATA7 | - | - | - | - |
-| 11 | Data 8 | DATA8 | - | - | - | - |
+| **Byte** | **Field**         | **Bit Assignment**                                       |
+| -------- | ----------------- | -------------------------------------------------------- |
+| Byte 1   | Frame Information | Bit 7: FF, Bit 6: RTR, Bit 5: X, Bit 4: X, Bits 3–0: DLC |
+| Byte 2   | Frame ID 1        | Bits 7–0: ID10–ID3                                       |
+| Byte 3   | Frame ID 2        | Bits 7–5: ID2–ID0, Bits 4–0: X                           |
+| Byte 4   | Data 1            | DATA1                                                    |
+| Byte 5   | Data 2            | DATA2                                                    |
+| Byte 6   | Data 3            | DATA3                                                    |
+| Byte 7   | Data 4            | DATA4                                                    |
+| Byte 8   | Data 5            | DATA5                                                    |
+| Byte 9   | Data 6            | DATA6                                                    |
+| Byte 10  | Data 7            | DATA7                                                    |
+| Byte 11  | Data 8            | DATA8                                                    |
+
 
 **Frame description part (first 3 bytes):**
 
@@ -93,21 +142,21 @@ It is forbidden for the upper 7 bits to all be recessive (forbidden setting: ID=
 
 ### 5.2.2 reBot RS Extended Data Frame (13 bytes)
 
-| Byte | Field | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bits 2-0 |
-| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| 1 | Frame Info | FF | RTR | X | X | DLC | - |
-| 2 | Frame ID1 | ID28-ID21 | - | - | - | - | - |
-| 3 | Frame ID2 | ID20-ID13 | - | - | - | - | - |
-| 4 | Frame ID3 | ID12-ID5 | - | - | - | - | - |
-| 5 | Frame ID4 | ID4-ID0 | - | - | - | - | X |
-| 6 | Data 1 | DATA1 | - | - | - | - | - |
-| 7 | Data 2 | DATA2 | - | - | - | - | - |
-| 8 | Data 3 | DATA3 | - | - | - | - | - |
-| 9 | Data 4 | DATA4 | - | - | - | - | - |
-| 10 | Data 5 | DATA5 | - | - | - | - | - |
-| 11 | Data 6 | DATA6 | - | - | - | - | - |
-| 12 | Data 7 | DATA7 | - | - | - | - | - |
-| 13 | Data 8 | DATA8 | - | - | - | - | - |
+| **Byte** | **Field**         | **Bit Assignment**                                       |
+| -------- | ----------------- | -------------------------------------------------------- |
+| Byte 1   | Frame Information | Bit 7: FF, Bit 6: RTR, Bit 5: X, Bit 4: X, Bits 3–0: DLC |
+| Byte 2   | Frame ID 1        | Bits 7–0: ID28–ID21                                      |
+| Byte 3   | Frame ID 2        | Bits 7–0: ID20–ID13                                      |
+| Byte 4   | Frame ID 3        | Bits 7–0: ID12–ID5                                       |
+| Byte 5   | Frame ID 4        | Bits 7–3: ID4–ID0, Bits 2–0: X                           |
+| Byte 6   | Data 1            | DATA1                                                    |
+| Byte 7   | Data 2            | DATA2                                                    |
+| Byte 8   | Data 3            | DATA3                                                    |
+| Byte 9   | Data 4            | DATA4                                                    |
+| Byte 10  | Data 5            | DATA5                                                    |
+| Byte 11  | Data 6            | DATA6                                                    |
+| Byte 12  | Data 7            | DATA7                                                    |
+| Byte 13  | Data 8            | DATA8                                                    |
 
 **Frame description part (first 5 bytes):**
 
@@ -142,7 +191,9 @@ The corresponding CAN frame structure can be simplified as:
 
 **SOF → ID → Control field → DLC → Data → CRC → ACK → EOF**
 
-![CAN frame structure](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-5/ch5-02.png)
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-5/ch5-02.png" alt="CAN frame structure" />
+</div>
 
 See the table below for a detailed explanation:
 
@@ -157,10 +208,24 @@ See the table below for a detailed explanation:
 | ACK segment | ACK — tells the sender "I received it." After the sender finishes sending, it releases the bus to recessive level 1. If the receiver receives correctly, it needs to reply with dominant level 0 at this bit. At this time, the sender reads the ACK slot as 0, indicating that ACK was received. The ACK delimiter is when the receiver releases the level, which is recessive. |
 | End of Frame (EOF, **End Of Frame**) | The current CAN data transmission ends. 7 recessive 1s. |
 
-![CAN data link layer](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-5/ch5-03.png)
+<div className="image-frame">
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-5/ch5-03.png" alt="CAN data link layer" />
+</div>
+
+</section>
 
 ## 5.3 SocketCAN
 
+<section id="socketcan" className="section-card">
+  <div className="section-title">
+    <span>Tooling</span>
+    <h2>5.3 SocketCAN</h2>
+  </div>
+
 SocketCAN is a mainstream implementation of the CAN protocol on Linux systems. SocketCAN uses the socket API and Linux network stack technology to implement CAN device drivers as network interfaces, making it easy to use and highly compatible.
 
-Reference documentation for detailed usage: [https://docs.linuxkernel.org.cn/networking/can.html](https://docs.linuxkernel.org.cn/networking/can.html)
+Reference documentation for detailed usage: <a href="https://docs.linuxkernel.org.cn/networking/can.html" target="_blank" rel="noopener noreferrer">https://docs.linuxkernel.org.cn/networking/can.html</a>
+
+</section>
+
+</div>

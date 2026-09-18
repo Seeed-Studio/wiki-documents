@@ -22,56 +22,164 @@ updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_introduction/
 ---
 
-# Seeed Embodied Intelligence Beginner's Course: 8 Stages, 40 Chapters
+import '/src/css/rebot-wiki-style.css';
+import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-This course was written and shared for free by the engineers of the Seeed robotics team. Our goal is to share knowledge and provide a systematic learning path for those who feel lost. You are welcome to invite friends to study together. However, free sharing does not mean piracy, copy-and-paste for profit, or misappropriation of others' work. The copyright belongs to Seeed Studio (Shenzhen) Co., Ltd. We will protect our rights against any unauthorized copyright infringement.
+# 
 
-**Cross-disciplinary robotics learners, new graduate students building technical reserves, job seekers expanding their knowledge, and makers wanting to accelerate their own projects — no need to scavenge materials everywhere!** This permanently free course, carefully crafted by the Seeed Studio AI Robotics team, pairs with the 100% open-source, commercially usable, and reproducible **reBot** robotic arm. Finish this course and you'll be the next expert!
+<div className="rebot-page">
 
-This course is completely free. If you'd like to encourage our efforts, please star our open-source robotic arm on GitHub: [Seeed-Projects/reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm) ⭐, and help more people discover this course!
+<section className="doc-hero">
+  <div>
+    <span className="eyebrow">reBot × Embodied Intelligence</span>
+    <h2>8 Stages, 40 Chapters — free and hands-on</h2>
+    <p>
+      A free, hands-on guide to building and learning with the 100% open-source reBot robotic arm.
+      Stage 1 covers basic concepts, hardware, and equipment preparation.
+    </p>
+    <div className="hero-actions">
+      <a href="#structure">Course structure</a>
+      <a href="#principles">Course design</a>
+      <a href="#community">Community</a>
+    </div>
+  </div>
+  <div className="hero-card">
+    <strong>Course at a glance</strong>
+    <span>Written and shared for free by the Seeed robotics team.</span>
+    <span>Pairs with the 100% open-source, reproducible reBot robotic arm.</span>
+  </div>
+</section>
 
-If you are already an expert, you can directly reference our wiki to start running examples: [Robotics Page](https://wiki.seeedstudio.com/robotics_page/).
+<RebotCourseNav />
 
-Hardware drawings and BOM downloads for the robotic arm can be found on our GitHub: [Seeed-Projects/reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm).
+<GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
 
-This course does not delve deeply into mathematical functions or low-level principles. It uses popular science and examples to help you quickly understand low-level control, traditional algorithms, and VLA algorithms in robotic arm embodied intelligence. Through a combination of theory and practice, you will comprehensively learn cutting-edge knowledge of robotic arms. If you want to go deeper into each field, many excellent platforms and instructors offer more advanced course content. Feel free to pursue targeted advanced study.
+:::tip
+This course was created and shared for free by the Seeed Studio AI Robotics team, to give robotics learners, students, job seekers, and makers a clear and systematic learning path. You are welcome to learn from it and share it with others, but unauthorized copying, commercial redistribution, or misuse of the content is prohibited — the copyright belongs to Seeed Studio (Shenzhen) Co., Ltd.
 
-## Community Groups
+It is built around <strong>reBot</strong>, a 100% open-source, commercially usable and reproducible robotic arm, and combines theory with hands-on practice to cover robotic arm control, traditional robotics algorithms, and modern VLA-based embodied AI. The course is completely free — if you find it useful, please support the project by starring <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm on GitHub</a> ⭐, where the hardware drawings, BOM files, and other open-source resources are also available. Experienced users can go straight to our <a href="https://wiki.seeedstudio.com/robotics_page/" target="_blank" rel="noopener noreferrer">Robotics Wiki</a> for tutorials and examples. The focus is practical understanding rather than deep mathematical derivation, so you can build a solid foundation quickly and prepare for more advanced study.
+:::
 
-**Facebook:**
+<section id="community" className="section-card">
+  <div className="section-title">
+    <span>Community</span>
+    <h2>Community Groups</h2>
+  </div>
 
-![Facebook group QR code](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-01.png)
+<div style={{display: 'flex', gap: '2.5rem', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap'}}>
+  <div className="image-frame" style={{margin: '0.5rem 0'}}>
+    <img width={110} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-01.png" alt="Facebook group QR code" />
+    <p style={{margin: '0.35rem 0 0', fontWeight: 700}}>Facebook</p>
+  </div>
+  <div className="image-frame" style={{margin: '0.5rem 0'}}>
+    <img width={110} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-02.png" alt="Discord reBot group logo" />
+    <p style={{margin: '0.35rem 0 0', fontWeight: 700}}>Discord</p>
+  </div>
+</div>
 
-**Discord:**
+</section>
 
-![Discord reBot group logo](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-02.png)
-
-## Course Design Principles
+<section id="principles" className="section-card">
+  <div className="section-title">
+    <span>Design</span>
+    <h2>Course Design Principles</h2>
+  </div>
 
 This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combining robotic arm theory, robotics learning theory, and real hardware practice. The course outline is as follows:
 
-![Course outline](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-03.png)
+<div className="image-frame" style={{margin: '0.5rem 0'}}>
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-03.png" alt="Course outline" />
+</div>
 
-## Course Structure
+</section>
+
+<section id="structure" className="section-card">
+  <div className="section-title">
+    <span>Structure</span>
+    <h2>Course Structure</h2>
+  </div>
 
 ### Stage 1: Basic Concepts and Equipment Preparation
 
-| Chapter | Title | Type |
-| :---: | :--- | :---: |
-| 1 | [Getting to Know Robots and Embodied Intelligence](/rebot_embodied_ai_course_chapter_1) | Theory |
-| 2 | [Getting to Know reBot Arm Hardware and the Open-Source Project](/rebot_embodied_ai_course_chapter_2) | Theory & Practice |
-| 3 | [Hardware Selection for Subsequent Courses](/rebot_embodied_ai_course_chapter_3) | Theory & Practice |
+<div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_1">
+    <span className="course-index">1</span>
+    <div className="course-path-copy">
+      <strong>Getting to Know Robots and Embodied Intelligence</strong>
+      <span>Chapter 1</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_2">
+    <span className="course-index">2</span>
+    <div className="course-path-copy">
+      <strong>Getting to Know reBot Arm Hardware and the Open-Source Project</strong>
+      <span>Chapter 2</span>
+    </div>
+    <span className="course-tag">Theory &amp; Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_3">
+    <span className="course-index">3</span>
+    <div className="course-path-copy">
+      <strong>Hardware Selection for Subsequent Courses</strong>
+      <span>Chapter 3</span>
+    </div>
+    <span className="course-tag">Theory &amp; Practice</span>
+  </a>
+</div>
 
 ### Stage 2: Robotic Arm Assembly and Basic Control
 
-| Chapter | Title | Type |
-| :---: | :--- | :---: |
-| 4 | [Fundamentals of Robotic Arms and Joint Actuators](/rebot_embodied_ai_course_chapter_4) | Theory |
-| 5 | [CAN Bus and Motor Communication](/rebot_embodied_ai_course_chapter_5) | Theory |
-| 6 | [Assembly, Power Supply, and First Power-On](/rebot_embodied_ai_course_chapter_6) | Practice |
-| 7 | [MotorBridge Motor Control Library](/rebot_embodied_ai_course_chapter_7) | Practice |
-| 8 | [Controlling reBot Arm Using Python SDK](/rebot_embodied_ai_course_chapter_8) | Theory & Practice |
+<div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_4">
+    <span className="course-index">4</span>
+    <div className="course-path-copy">
+      <strong>Fundamentals of Robotic Arms and Joint Actuators</strong>
+      <span>Chapter 4</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_5">
+    <span className="course-index">5</span>
+    <div className="course-path-copy">
+      <strong>CAN Bus and Motor Communication</strong>
+      <span>Chapter 5</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_6">
+    <span className="course-index">6</span>
+    <div className="course-path-copy">
+      <strong>Assembly, Power Supply, and First Power-On</strong>
+      <span>Chapter 6</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_7">
+    <span className="course-index">7</span>
+    <div className="course-path-copy">
+      <strong>MotorBridge Motor Control Library</strong>
+      <span>Chapter 7</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_8">
+    <span className="course-index">8</span>
+    <div className="course-path-copy">
+      <strong>Controlling reBot Arm Using Python SDK</strong>
+      <span>Chapter 8</span>
+    </div>
+    <span className="course-tag">Theory &amp; Practice</span>
+  </a>
+</div>
 
 ### Stage 3–8
 
-> Coming soon — the remaining stages will be added to the wiki progressively.
+:::note
+Coming soon — the remaining stages will be added to the wiki progressively.
+:::
+
+</section>
+
+</div>
