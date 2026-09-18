@@ -1,6 +1,6 @@
 ---
 
-description: 本指南介绍如何将 EasySkyMesh 与 Wio Tracker L1 结合使用，在 MeshCore 的基础上构建低功耗 IoT 传感器网络。
+description: 本指南介绍如何将 EasySkyMesh 与 Wio Tracker L1 搭配使用，在 MeshCore 的基础上构建低功耗 IoT 传感器网络。
 title: EasySkyMesh IoT 固件
 keywords:
    - EasySkyMesh
@@ -38,51 +38,7 @@ EasySkyMesh 增加了**省电和传感器数据采集**功能。传感器数据�
 * 基础设施监测
 * IoT 原型开发
 
-## EasySkyMesh 特性
-
-### 省电功能
-
-该项目提供针对不同 MeshCore 开发板优化的 PowerSaving 固件版本。EasySkyMesh 版本已经为基于 ESP32 和 nRF52 的设备引入了省电特性，并为不同的 MeshCore 角色增加了额外的电源管理功能。
-
-在固件支持的情况下，你可以通过 MeshCore CLI 启用 PowerSaving：
-
-```text
-powersaving on
-```
-
-要检查当前 PowerSaving 状态：
-
-```text
-powersaving
-```
-
-### 传感器支持
-
-EasySkyMesh 扩展了 MeshCore 的传感器支持能力，使得可以通过现有的 MeshCore 网络采集和传输传感器读数。该项目目前记录了对多种常见 I2C 传感器的支持，包括：
-
-| Sensor        | Measurement                             | I2C Address |
-| ------------- | --------------------------------------- | ----------- |
-| AHT10 / AHT20 | Temperature / Humidity                  | `0x38`      |
-| BME280        | Temperature / Humidity / Pressure       | `0x76`      |
-| BME680        | Temperature / Humidity / Pressure / Gas | `0x76`      |
-| BMP280        | Temperature / Pressure                  | `0x76`      |
-| SHTC3         | Temperature / Humidity                  | `0x70`      |
-| SHT4X         | Temperature / Humidity                  | `0x44`      |
-| LPS22HB       | Temperature / Pressure                  | `0x5C`      |
-| INA3221       | Voltage / Current / Power               | `0x42`      |
-| INA219        | Voltage / Current / Power               | `0x40`      |
-| INA260        | Voltage / Current / Power               | `0x41`      |
-| INA226        | Voltage / Current / Power               | `0x44`      |
-| MLX90614      | Non-contact Temperature                 | `0x5A`      |
-| VL53L0X       | Distance                                | `0x29`      |
-
- 某些固件版本可以自动选择 BME280、BME680 和 BMP280 等传感器的 I2C 地址。对于支持的 EasySkyMesh 版本，可以使用 `sensor` CLI 命令检查 I2C 和 GPS 串口引脚：
-
-```text
-sensor
-```
-
-## 入门指南
+## 固件烧录
 
 ### 硬件准备
 
@@ -92,7 +48,7 @@ sensor
 * USB Type-C 线缆
 * 电脑
 
-通过 USB Type-C 接口将 Wio Tracker L1 连接到电脑。
+使用 USB Type-C 接口将 Wio Tracker L1 连接到电脑。
 
 ### 下载 EasySkyMesh 固件
 
@@ -100,8 +56,6 @@ sensor
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMeshFirmwareDownload.png" style={{width:600, height:'auto'}}/></div>
-
-
 
 
 EasySkyMesh 的发布版本可能会针对不同硬件和不同升级场景提供不同的固件文件。对于全新安装，项目通常会提供全新安装的固件镜像。对于已有安装，如果你希望保留现有配置，请使用升级固件。
@@ -119,12 +73,75 @@ EasySkyMesh 项目建议在受支持的设备上使用 MeshCore Web Flasher。
 
 **步骤 3：** 选择 EasySkyMesh 固件文件。
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Choose_zip.png" style={{width:600, height:'auto'}}/></div>
 
 **步骤 4：** 如有需要，进入 DFU 模式。
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Enter_DFU.png" style={{width:900, height:'auto'}}/></div>
+
 **步骤 5：** 开始烧录。等待烧录过程完成。
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Flash.png" style={{width:900, height:'auto'}}/></div>
+
 **步骤 6：** 重启设备。
+
+## 省电功能
+
+该项目提供针对不同 MeshCore 开发板优化的 PowerSaving 固件版本。EasySkyMesh 发布版本已经为基于 ESP32 和 nRF52 的设备引入了省电特性，并为不同 MeshCore 角色增加了额外的电源管理功能。
+
+### Companion 固件
+
+所有 PowerSaving 功能默认启用。RX PowerSaving 被设置为“balanced”。
+
+在 OLED 上，电池图标左侧会显示以 m（分钟）、h m（小时 分钟）和 d h（天 小时）为单位的运行时间。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Runtime_Display.png" style={{width:600, height:'auto'}}/></div>
+
+### 中继 & Room Server 固件
+
+Powersaving 默认关闭。你可以通过 MeshCore CLI 启用 PowerSaving。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Powersaving_On.png" style={{width:900, height:'auto'}}/></div>
+
+启用 powersaving 的方法：
+
+```text
+powersaving on
+```
+
+要检查当前 PowerSaving 状态：
+
+```text
+powersaving
+```
+
+[Click here](https://github.com/IoTThinks/EasySkyMesh/wiki/PowerSaving#11-repeaters-and-room-servers) 使用更多命令。
+
+## 传感器支持
+
+EasySkyMesh 为 MeshCore 扩展了传感器支持，使得可以通过现有的 MeshCore 网络采集和传输传感器读数。该项目目前记录了对多种常见 I2C 传感器的支持，包括：
+
+| 传感器        | 测量项目                               | I2C 地址    |
+| ------------- | --------------------------------------- | ----------- |
+| AHT10 / AHT20 | 温度 / 湿度                            | `0x38`      |
+| BME280        | 温度 / 湿度 / 气压                      | `0x76`      |
+| BME680        | 温度 / 湿度 / 气压 / 气体               | `0x76`      |
+| BMP280        | 温度 / 气压                            | `0x76`      |
+| SHTC3         | 温度 / 湿度                            | `0x70`      |
+| SHT4X         | 温度 / 湿度                            | `0x44`      |
+| LPS22HB       | 温度 / 气压                            | `0x5C`      |
+| INA3221       | 电压 / 电流 / 功率                     | `0x42`      |
+| INA219        | 电压 / 电流 / 功率                     | `0x40`      |
+| INA260        | 电压 / 电流 / 功率                     | `0x41`      |
+| INA226        | 电压 / 电流 / 功率                     | `0x44`      |
+| MLX90614      | 非接触式温度                           | `0x5A`      |
+| VL53L0X       | 距离                                  | `0x29`      |
+
+ 某些固件版本可以自动选择 BME280、BME680 和 BMP280 等传感器的 I2C 地址。对于受支持的 EasySkyMesh 版本，可以使用 `sensor` CLI 命令检查 I2C 和 GPS 串口引脚：
+
+```text
+sensor
+```
 
 
 ## 故障排查
@@ -140,8 +157,8 @@ EasySkyMesh 项目建议在受支持的设备上使用 MeshCore Web Flasher。
 ### 传感器未被检测到
 
 请检查：
-1. VCC 和 GND 接线。
-2. SDA 和 SCL 接线。
+1. VCC 和 GND 连接。
+2. SDA 和 SCL 连接。
 3. 传感器工作电压。
 4. I2C 地址。
 5. EasySkyMesh 固件版本。
@@ -150,11 +167,11 @@ EasySkyMesh 项目建议在受支持的设备上使用 MeshCore Web Flasher。
 
 如果问题仍然存在，请查看 [EasySkyMesh GitHub 仓库](https://github.com/IoTThinks/EasySkyMesh) 以获取最新文档和问题反馈。
 
-## 实用资源
+## 资源
 
 * [EasySkyMesh GitHub 仓库](https://github.com/IoTThinks/EasySkyMesh)
 * [EasySkyMesh 固件烧录说明](https://github.com/IoTThinks/EasySkyMesh/blob/main/firmware/Instruction-to-flash-firmware.md)
-* [EasySkyMesh 传感器接入说明](https://github.com/IoTThinks/EasySkyMesh/blob/main/firmware/Add-sensors-to-repeaters.md)
+* [EasySkyMesh 传感器添加说明](https://github.com/IoTThinks/EasySkyMesh/blob/main/firmware/Add-sensors-to-repeaters.md)
 
 ## 技术支持与产品讨论
 <p style={{textAlign: 'center'}}>
