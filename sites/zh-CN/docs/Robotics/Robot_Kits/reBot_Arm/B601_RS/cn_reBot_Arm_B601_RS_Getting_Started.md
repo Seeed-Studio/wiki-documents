@@ -190,8 +190,6 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
    推荐安装 **Ubuntu 24.04 LTS**。
 
-   推荐B站安装教程：[Ubuntu双系统安装教程](https://www.bilibili.com/video/BV1Cc41127B9/)
-
 2. （Beta）可以让 Agent 帮助你初始化机械臂。复制以下内容发送给 Agent：
 
 ```text

@@ -373,13 +373,12 @@ X1 は製品シリーズへと発展する可能性があり、将来発売さ�
   </a>
 </p>
 
-<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
-    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
-        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
-    </div>
-    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
-        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
-    </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
