@@ -8,10 +8,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /faq_for_SenseCAP_T1000
 sku: 114993073,114993106,114993207,114993208
 last_update:
-  date: 9/14/2026
+  date: 9/19/2026
   author: Janet
 createdAt: '2023-09-21'
-updatedAt: '2026-09-14'
+updatedAt: '2026-09-19'
 url: https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/
 ---
 
@@ -269,4 +269,13 @@ Check the [LNS Configuration](https://wiki.seeedstudio.com/SenseCAP_m2_LNS_confi
 
 ## How to reset the DevNonce on the T1000
 
-If the T1000 cannot join the LoRaWAN network because of a DevNonce issue, please contact the Seeed technical support team. We can provide a dedicated firmware to clear or reset the DevNonce, allowing the device to join the LoRaWAN network normally again.
+A DevNonce issue can occur when the device has made repeated OTAA join attempts.
+
+After long-term repeated join attempts, the DevNonce counter may reach its limit and the device can no longer join normally.
+
+A typical case is: 
+- The device has been used for a long time, but one day it fails to join the network successfully, even though the device frequency plan matches the gateway frequency plan. 
+- When checking the device logs on the server side, repeated DevNonce overflow errors are observed.
+
+If the T1000 cannot join the LoRaWAN network because of a DevNonce issue, please contact the Seeed technical support team(techsupport@seeed.io). We can provide a dedicated firmware to clear or reset the DevNonce, allowing the device to join the LoRaWAN network normally again.
+
