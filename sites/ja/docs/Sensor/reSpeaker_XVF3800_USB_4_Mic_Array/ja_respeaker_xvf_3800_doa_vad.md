@@ -31,7 +31,9 @@ ReSpeaker XVF3800 は、XMOS XVF3800 をベースとしたマルチマイク音�
 
 
 :::note
-このコードをサポートするファームウェアは `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` および `respeaker_xvf3800_i2s_dfu_firmware_v1.0.7.bin` です。そのため、最初に必ずこれらをフラッシュしてください。
+このコードをサポートするファームウェアは `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` と `application_xvf3800_i2s_master_v1.0.8_48k.bin` です。そのため、必ず最初にこれらをフラッシュしてください。
+
+ファームウェア v1.0.7 を使用している場合は、`GPO_SERVICER_RESID_DOA` を 19 に変更してください。
 :::
 
 ## Arduino コード 
@@ -43,7 +45,7 @@ ReSpeaker XVF3800 は、XMOS XVF3800 をベースとしたマルチマイク音�
 
 #define GPO_SERVICER_RESID            20
 #define GPO_SERVICER_RESID_LED_EFFECT 12
-#define GPO_SERVICER_RESID_DOA        19
+#define GPO_SERVICER_RESID_DOA        18
 #define GPO_DOA_READ_NUM_BYTES        4
 
 void setup() {

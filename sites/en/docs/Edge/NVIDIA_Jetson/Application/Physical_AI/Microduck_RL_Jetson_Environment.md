@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_
 slug: /ai_robotics_microduck_rl_jetson_environment
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/ai_robotics_microduck_rl_jetson_environment/

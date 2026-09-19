@@ -61,7 +61,7 @@ The ESP32-S3 Plus adds Wi-Fi and Bluetooth connectivity, making the board suitab
     <tr><td>User Buttons</td><td>2</td></tr>
     <tr><td>Battery Connector</td><td>2-pin JST, 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery voltage monitoring via D16 ADC; battery level can be estimated from the measured voltage. Battery status detection is not supported.</td></tr>
-    <tr><td>Expansion Interfaces</td><td>1x I2C pads, 1x I2S pads</td></tr>
+    <tr><td>Expansion Interfaces</td><td>1x I2C Interface, 1x I2S Interface, 1x JTAG Interface, 2x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
     <tr><td>Best For</td><td>Tiny IoT devices, wearables, status displays</td></tr>
   </table>
@@ -79,7 +79,7 @@ The ESP32-S3 Plus version uses D16 to measure the battery divider voltage; it do
 
 Refer to the following view to identify the connectors and onboard components before connecting expansion hardware.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Pin Map
 
@@ -238,6 +238,7 @@ The screen backlight may be off. Press the **USR2 (D7)** button to toggle the ba
 - **🗃️[PCB Design Files]** [XIAO 0.96'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[Schematic]** [XIAO 0.96'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[3D Model]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
+- **🖨️[3D Printed Enclosure]** [XIAO 0.96'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843001-enclosure-for-xiao-096-ips-display-esp32nrf52840/files)
 - **📄[Datasheet]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
 - **💾[Factory Firmware]** [XIAO 0.96'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 

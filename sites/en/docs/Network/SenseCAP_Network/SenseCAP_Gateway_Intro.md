@@ -28,7 +28,7 @@ In addition to the LoRaWAN sensors, SenseCAP also provides different types of ga
 
 **SenseCAP Gateway** is an industrial-grade, high-performance gateway designed for long-range wireless communication. Developed by Seeed Studio, the SenseCAP Gateway serves as a critical component in the Internet of Things (IoT) ecosystem, enabling robust and reliable connectivity for a wide range of applications.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/helium-sensecap6.png" alt="pir" width={1000} height="auto" /></p>
+
 
 Key features of the SenseCAP Gateway include:
 
@@ -94,81 +94,7 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
-### Helium Gateway
 
-#### SenseCAP M1 Gateway
-
-<div class="all_container">
-    <div class="xiao_topic_page_pic">
-        <img src="https://www.sensecapmx.com/wp-content/uploads/2022/06/sensecapm1.webp" style={{width:900, height:'auto'}}/>
-    </div>
-    <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>SenseCAP M1 is a high-performing, ready-to-use LoRaWAN indoor gateway connected to the Helium LongFi™ Network.It is based on Raspberry Pi 4 and embedded with a WM1302/WM1303 (Semtech SX1302/SX1303) LoRa concentrator. It provides built-in BLE, which helps you set up the device in a few simple steps and supports connecting to the internet via Wi-Fi or Ethernet. </font>
-    </div>
-</div>
-
-<br /><br /><br /><br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-EU868-p-5022.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
-</div>
-
-#### SenseCAP M2 Data Only
-
-<div class="all_container">
-    <div class="xiao_topic_page_pic">
-        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/d/a/data_eu.jpg" style={{width:900, height:'auto'}}/>
-    </div>
-    <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>SenseCAP M2 Data Only is a LoRaWAN Gateway connected to the Helium LongFi Network and able to provide miles of wireless network coverage and data transmission capacity for Long Range/LoRaWAN devices. </font>
-    </div>
-</div>
-
-<br /><br /><br /><br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5339.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
-</div>
-
-#### SenseCAP M2 Light Gateway
-
-<div class="all_container">
-    <div class="xiao_topic_page_pic">
-        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-sensecap-m2-light-hotspot-software-license--first_1_.jpg" style={{width:900, height:'auto'}}/>
-    </div>
-    <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>SenseCAP M2 Light Hotspot is a high-performance Helium LoRaWAN gateway that allows users to join the Helium network at a minimal cost. Flexible SenseCAP Licence plans down to $0.05 per day are provided to enable users to enjoy the benefits of PoC and data transfer with minimal investment and more flexibility. </font>
-    </div>
-</div>
-
-<br /><br /><br /><br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Light-Hotspot-and-Software-License.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
-</div>
-
-### Flux Gateway
-
-#### SenseCAP M4
-
-<div class="all_container">
-    <div class="xiao_topic_page_pic">
-        <img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview.png" style={{width:900, height:'auto'}}/>
-    </div>
-    <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>SenseCAP M4 Square is a device designed to run multiple Web 3.0 Apps. No code seamless set up the CUMULUS FluxNode and Helium light hotspot provides a scalable, decentralized computational network for Flux and miles of wireless network coverage and data transmission capacity for LoRa/LoRaWAN devices. </font>
-    </div>
-</div>
-
-<br /><br /><br /><br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M4-Sqaure-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
-</div>
 
 ### Outdoor Gateway
 
@@ -201,14 +127,6 @@ SenseCAP Mate APP is a powerful APP for data visualization and remote LoRaWAN de
 ### SenseCAP Portal
 
 SenseCAP Portal
-
-### For Hotspots
-
-#### SenseCAP Hotspot App
-
-SenseCAP Hotspot App is an all-in-one App that helps users purchase, deploy, and manage their Web 3.0 devices (Helium, Flux, and more).
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hotspot-app.png" alt="pir" width={1000} height="auto" /></p>
 
 #### SenseCAP Dashbaord
 

@@ -1,6 +1,6 @@
 ---
-description: Esta guía para desarrolladores presenta la consola web de reBot Arm B601-RS, ROS 2, RobStride/SocketCAN, simulación MuJoCo, agarre visual e instalación, ejecución y flujo de trabajo de desarrollo secundario de LLM/MCP Agent.
-title: Guía para desarrolladores del simulador web de reBot Arm B601-RS y ROS 2/MuJoCo
+description: Esta guía para desarrolladores presenta la consola web, ROS 2, RobStride/SocketCAN, la simulación MuJoCo, el agarre visual y la instalación, ejecución y flujo de trabajo de desarrollo secundario del LLM/MCP Agent del reBot Arm B601-RS Digital Twin & Control Stack.
+title: reBot Arm B601-RS Digital Twin & Control Stack
 keywords:
   - reBot Arm
   - B601-RS
@@ -20,15 +20,17 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-13'
-updatedAt: '2026-08-24'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# Guía para desarrolladores del simulador web de reBot Arm B601-RS y ROS 2/MuJoCo
+# reBot Arm B601-RS Digital Twin & Control Stack
 
 <RebotRsDocNav />
 
@@ -36,10 +38,16 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Consigue uno ahora</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -56,11 +64,9 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>Visualización con Three.js · ROS 2 · SocketCAN · Simulación MuJoCo · Control LLM/MCP</strong>
 </p>
 
-El proyecto reBot Arm B601-RS integra una consola web basada en Three.js, un driver ROS 2 para el robot real, una escena dinámica MuJoCo específica para RS, detección visual, trayectoria y cinemática inversa, y un agente de agarre LLM/MCP opcional. Esta guía explica cómo instalar, iniciar y desarrollar sobre todo el sistema.
+El reBot Arm B601-RS Digital Twin & Control Stack integra una consola web basada en Three.js, un driver ROS 2 para el robot real, una escena de dinámica MuJoCo específica para RS, detección visual, trayectoria y cinemática inversa, y un agente de agarre LLM/MCP opcional. Esta guía explica cómo instalar, iniciar y desarrollar sobre todo el sistema.
 
-> **Nota importante de seguridad**
->
-> Antes de poner en marcha el robot real, fija el brazo, despeja el área de trabajo, confirma que el paro de emergencia físico funciona y valida primero las acciones en simulación. Para la primera prueba con el robot real, mantén el límite de velocidad en `0.2-0.4 rad/s` y mueve una articulación cada vez.
+<GitHubStarButton owner="Yang-Ci" repo="ReBot_Arm_DigitalTwin_RS" />
 
 ## Funciones del proyecto
 
@@ -68,13 +74,13 @@ El proyecto reBot Arm B601-RS integra una consola web basada en Three.js, un dri
 
    La consola web y ROS 2 usan `ReBot_Arm_RS.urdf` y sus mallas STL correspondientes. El servidor web lee primero el modelo desde el espacio de trabajo `rebotarm_ros2_RS` y mantiene una copia local de respaldo.
 
-2. **Enlace con robot real mediante RobStride + SocketCAN**
+2. **Enlace con el robot real mediante RobStride + SocketCAN**
 
-   El robot real utiliza la interfaz Linux SocketCAN `can0` a `1 Mbps` por defecto. El controlador se comunica con los motores RobStride a través de `reBotArm_control_py`.
+   El robot real utiliza por defecto la interfaz SocketCAN de Linux `can0` a `1 Mbps`. El controlador se comunica con los motores RobStride a través de `reBotArm_control_py`.
 
 3. **Control en línea MIT a 125 Hz**
 
-   La consola web actualiza los objetivos hasta 60 Hz, mientras que el controlador del robot real genera una referencia en línea limitada por velocidad, aceleración y jerk a 125 Hz y envía comandos MIT `q/dq/kp/kd/tau`. Las actualizaciones de objetivos desde la web no bloquean el bucle de control de los motores.
+   La consola web actualiza los objetivos hasta 60 Hz, mientras que el controlador del robot real genera una referencia en línea limitada por velocidad, aceleración y tirón a 125 Hz y envía comandos MIT `q/dq/kp/kd/tau`. Las actualizaciones de objetivos desde la web no bloquean el bucle de control de los motores.
 
 4. **Aislamiento de espacios de nombres para robot real y simulación**
 
@@ -114,7 +120,7 @@ sudo ip link set can0 up
 ip -details link show can0
 ```
 
-Observa las tramas del bus en modo solo lectura:
+Observa las tramas del bus en modo de solo lectura:
 
 ```bash
 candump can0
@@ -146,7 +152,7 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 ## Requisitos del entorno
 
 | Elemento | Requisito recomendado |
-|---|---|
+| --- | --- |
 | SO de backend | Ubuntu 24.04 |
 | ROS 2 | Jazzy |
 | Entorno de referencia compatible | Ubuntu 22.04 + ROS 2 Humble (el uso con robot real requiere tus propias pruebas de regresión) |
@@ -159,19 +165,35 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 
 ## Pasos de instalación
 
-### Paso 1: Obtener el proyecto
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+      #### Paso 1: Obtener el proyecto
+
+      <p className="rebot-step-label">Paso 1</p>
 
 ```bash
-git clone https://github.com/Yang-Ci/ReBot_Arm_web_RS.git ~/reBot_Arm_Mujoco-RS
-cd ~/reBot_Arm_Mujoco-RS
+git clone https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS.git ~/ReBot_Arm_DigitalTwin_RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ```
 
-Los comandos siguientes usan `~/reBot_Arm_Mujoco-RS` como directorio del proyecto. Si tu directorio es diferente, sustituye las rutas en consecuencia.
+Los comandos siguientes usan `~/ReBot_Arm_DigitalTwin_RS` como directorio del proyecto. Si tu directorio es diferente, sustituye las rutas en consecuencia.
 
-### Paso 2: Comprobación de entorno de solo lectura
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+      #### Paso 2: Comprobación de entorno de solo lectura
+
+      <p className="rebot-step-label">Paso 2</p>
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./setup.sh --check
 ```
 
@@ -184,7 +206,16 @@ Este comando solo comprueba el sistema y no modifica el entorno. Las comprobacio
 - Resultados de compilación del espacio de trabajo ROS 2;
 - El `package.json` web y `.env`.
 
-### Paso 3: Instalación y compilación con un solo clic
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+      #### Paso 3: Instalación y compilación con un clic
+
+      <p className="rebot-step-label">Paso 3</p>
 
 ```bash
 ./setup.sh --yes
@@ -205,7 +236,7 @@ Si las dependencias del sistema ya están completas, solo necesitas preparar y r
 ./scripts/setup_rs_workspace.sh
 ```
 
-Tras modificar paquetes de Python, normalmente esto es suficiente:
+Después de modificar paquetes de Python, normalmente esto es suficiente:
 
 ```bash
 source scripts/rs_env.sh
@@ -213,7 +244,16 @@ cd rebotarm_ros2_RS
 colcon build --symlink-install
 ```
 
-### Paso 4: Configurar variables de entorno web
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+      #### Paso 4: Configurar variables de entorno web
+
+      <p className="rebot-step-label">Paso 4</p>
 
 En la primera instalación, `reBotArm_simulator-RS/.env` se crea a partir de `.env.example`. Campos clave:
 
@@ -228,6 +268,10 @@ MOTORBRIDGE_WS_TOKEN=
 
 Si la consola web y ROS 2/Agent no están en la misma máquina, cambia las direcciones del proxy a la IP de la máquina de backend. Las claves de API y los tokens solo deben almacenarse en variables de entorno o en el `.env` local no versionado.
 
+</div>
+</section>
+</div>
+
 ## Puesta en marcha del proyecto
 
 <Tabs defaultValue="web" groupId="launch-mode" queryString>
@@ -237,7 +281,7 @@ Si la consola web y ROS 2/Agent no están en la misma máquina, cambia las direc
 Inicia solo el servidor web de Node.js, sin rosbridge ni ROS 2:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS/reBotArm_simulator-RS
+cd ~/ReBot_Arm_DigitalTwin_RS/reBotArm_simulator-RS
 npm start
 ```
 
@@ -247,26 +291,26 @@ Abre el navegador en:
 http://localhost:3002
 ```
 
-Este modo es adecuado para desarrollar el modelo 3D, la interfaz de usuario, las poses predefinidas y las funciones de front-end. Sin el backend ROS 2, la consola web no puede controlar el robot real ni la escena completa de MuJoCo.
+Este modo es adecuado para desarrollar el modelo 3D, la interfaz de usuario, las poses preestablecidas y las funciones de front-end. Sin el backend de ROS 2, la consola web no puede controlar el robot real ni la escena completa de MuJoCo.
 
 <!-- Image: rebot_rs_web_simulator_en.png -->
 
-![Interfaz del simulador web de reBot Arm B601-RS](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web_rs/rebot_rs_web_simulator_en.png)
+![Interfaz del simulador web reBot Arm B601-RS](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web_rs/rebot_rs_web_simulator_en.png)
 </TabItem>
 
-<TabItem value="sim" label="Simulación MuJoCo RS completa">
+<TabItem value="sim" label="Simulación completa RS MuJoCo">
 
-La Terminal 1 inicia Fake Driver, MuJoCo, cámara, detección, MCP Agent y rosbridge:
+La terminal 1 inicia Fake Driver, MuJoCo, cámara, detección, MCP Agent y rosbridge:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start rs_sim
 ```
 
-La Terminal 2 inicia la consola web:
+La terminal 2 inicia la consola web:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start web
 ```
 
@@ -288,7 +332,7 @@ REBOTARM_START_AGENT=false ./rebotarm start rs_sim
 ./rebotarm start rs_sim --force
 ```
 
-> El agarre visual debe usar el modo `physics` predeterminado. El modo `kinematic` sincroniza directamente las posiciones de las articulaciones y no se puede usar para evaluar ganancias de control, estabilidad de contacto o fuerza de agarre.
+> El agarre visual debe usar el modo `physics` predeterminado. El modo `kinematic` sincroniza directamente las posiciones de las articulaciones y no puede utilizarse para evaluar ganancias de control, estabilidad de contacto o fuerza de agarre.
 
 <!-- Image: rebot_rs_mujoco_physics.png -->
 
@@ -309,7 +353,7 @@ ip -details -statistics link show can0
 Después de confirmar que el paro de emergencia funciona y que el espacio de trabajo está despejado, inicia el controlador del robot real en la terminal 1:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE \
   ./rebotarm start rs
 ```
@@ -323,13 +367,13 @@ Inicia la consola web y rosbridge en la terminal 2:
 Abre `http://localhost:3002` y selecciona "RS Real Robot (`/rebotarm`)". Para la primera prueba, sigue este orden:
 
 1. Comprueba que la consola web indica conectado, que el estado del brazo es normal y que no hay errores de motor.
-2. Haz clic en enable.
+2. Haz clic en habilitar.
 3. Ajusta la velocidad a `0.2-0.4 rad/s`.
-4. Mueve una articulación una pequeña cantidad cada vez y confirma dirección, límites y realimentación.
-5. Luego prueba arrastre del TCP, trayectorias o compensación de gravedad.
+4. Mueve una articulación una pequeña cantidad cada vez y confirma la dirección, los límites y la retroalimentación.
+5. Luego prueba el arrastre del TCP, trayectorias o compensación de gravedad.
 6. Cuando termines, realiza un homing seguro y deshabilita, luego pulsa `Ctrl+C` en la terminal del controlador.
 
-No uses `Ctrl+Z` para pausar el controlador del robot real y no trates un botón web como un paro de emergencia físico. Si queda una instancia antigua del controlador, el script de arranque del robot real pide a la instancia antigua que salga de forma segura y limpia los recursos residuales confirmados como pertenecientes a ese controlador.
+No uses `Ctrl+Z` para pausar el controlador del robot real y no trates un botón web como un paro de emergencia físico. Si queda una instancia antigua del controlador, el script de inicio del robot real le pide a la instancia antigua que salga de forma segura y limpia los recursos residuales confirmados como pertenecientes a ese controlador.
 
 <!-- Image: rebot_rs_real_robot_web_en.png -->
 
@@ -349,8 +393,7 @@ Este script inicia:
 - el Fake Driver `/rebotarm_rs`;
 - rosbridge `9090`.
 
-Se usa para comparar interfaces, direcciones de articulaciones y estado. No inicia toda la pila de MuJoCo, visión, Agent ni el servidor web. Confirma de nuevo el espacio de nombres seleccionado en la consola web antes de enviar comandos.
-
+Se utiliza para comparar interfaces, direcciones de articulaciones y estado. No inicia la pila completa de MuJoCo, visión, Agent ni el servidor web. Confirma de nuevo el espacio de nombres seleccionado en la consola web antes de enviar comandos.
 
 </TabItem>
 
@@ -359,20 +402,20 @@ Se usa para comparar interfaces, direcciones de articulaciones y estado. No inic
 ## Línea de comandos unificada
 
 | Comando | Descripción |
-|---|---|
+| --- | --- |
 | `./rebotarm doctor` | Comprobación de entorno de solo lectura, equivalente a `./setup.sh --check` |
 | `./rebotarm start web` | Inicia o reutiliza rosbridge e inicia el servidor web |
-| `./rebotarm start rs_sim` | Inicia toda la pila de simulación RS MuJoCo |
+| `./rebotarm start rs_sim` | Inicia la pila completa de simulación RS MuJoCo |
 | `./rebotarm start rs` | Inicia el controlador del robot real RS; se requiere la variable de confirmación de hardware |
 | `./rebotarm status` | Ver procesos registrados, puertos y `can0` |
 | `./rebotarm stop` | Detiene los procesos hijo web/rosbridge registrados por `start web` |
 
-Los procesos de simulación y robot real que se ejecutan en primer plano deben finalizarse normalmente con `Ctrl+C` en sus propias terminales.
+Los procesos de simulación y del robot real que se ejecutan en primer plano deben finalizarse normalmente con `Ctrl+C` en sus propias terminales.
 
 ## Arquitectura del proyecto
 
 ```text
-reBot_Arm_Mujoco-RS/
+ReBot_Arm_DigitalTwin_RS/
 |-- setup.sh                              One-click check, install, and build
 |-- rebotarm                              Unified start, status, and stop entry
 |-- requirements-rs-hardware.txt          RS real-robot Python dependencies
@@ -424,7 +467,7 @@ User drags a joint slider or TCP handle
 
 Un nuevo objetivo web solo actualiza el punto final de la trayectoria en línea. Incluso si el navegador deja temporalmente de enviar el siguiente fotograma, el bucle de control de 125 Hz sigue generando una referencia continua. La profundidad de QoS del comando es 1, por lo que un nuevo objetivo sobrescribe el objetivo antiguo no procesado y evita reproducir una cola de posiciones después de que se detenga el arrastre.
 
-### Realimentación del robot real RS hacia la web
+### Retroalimentación del robot real RS hacia la web
 
 ```text
 RobStride encoder/status
@@ -456,9 +499,9 @@ Web console or Agent
 
 ### Objetivo de control y espacio de nombres
 
-| Modo | Namespace | Origen del modelo web |
-|---|---|---|
-| Robot real RS | `/rebotarm` | Realimentación real del robot `/joint_states` |
+| Modo | Espacio de nombres | Origen del modelo web |
+| --- | --- | --- |
+| Robot real RS | `/rebotarm` | Retroalimentación real del robot `/joint_states` |
 | Simulación RS | `/rebotarm_rs` | Usa primero el estado real de MuJoCo |
 
 Después de cambiar de modo, la consola web recrea el cliente rosbridge y las rutas de interfaz según el espacio de nombres objetivo.
@@ -469,40 +512,40 @@ Después de cambiar de modo, la consola web recrea el cliente rosbridge y las ru
 - El rango de velocidad web es `0.05-1.50 rad/s` con un valor predeterminado de `1.2 rad/s`.
 - J1-J6 usan un amortiguamiento del deslizador de `30 ms` y una zona muerta de entrada de `1 deg` por defecto; la posición final se confirma de forma forzada cuando sueltas el deslizador.
 - J7/la pinza se muestra como anchura de apertura en la web, con un rango de `0-71.5 mm`.
-- La pinza se convierte al rango de motor RS `0-5 rad` al publicar, y la realimentación de ROS se convierte de nuevo a milímetros.
+- La pinza se convierte al rango del motor RS `0-5 rad` al publicar, y la retroalimentación de ROS se convierte de nuevo a milímetros.
 - J7 no pasa por el amortiguamiento en radianes ni la zona muerta de entrada de J1-J6; solo se envía el objetivo más reciente por fotograma de renderizado del navegador.
 
 ### Arrastre del TCP e IK
 
-La consola web usa mínimos cuadrados amortiguados (DLS) para resolver objetivos de TCP. La versión RS adapta el amortiguamiento según el nivel de singularidad y luego envía la solución de articulaciones a través de la misma cadena de control en línea MIT.
+La consola web utiliza mínimos cuadrados amortiguados (DLS) para resolver objetivos de TCP. La versión RS adapta el amortiguamiento según el nivel de singularidad y luego envía la solución de articulaciones a través de la misma cadena de control en línea MIT.
 
-La escena web de Three.js usa eje Y hacia arriba y ROS usa eje Z hacia arriba. La lógica de conversión de coordenadas está en `rebot-sim.js`; al ampliar funciones de pose, reutiliza la conversión existente en lugar de intercambiar directamente los valores de los formularios.
+La escena Three.js web usa eje Y hacia arriba y ROS usa eje Z hacia arriba. La lógica de conversión de coordenadas está en `rebot-sim.js`; al ampliar las funciones de pose, reutiliza la conversión existente en lugar de intercambiar directamente los valores de los formularios.
 
-La entrada de pose usa metros: X es hacia delante, Y es hacia la izquierda y Z es hacia arriba. Si un objetivo es inalcanzable, primero aumenta Z o reduce la distancia horizontal, luego comprueba las restricciones de orientación y los límites de las articulaciones.
+La entrada de pose usa metros: X es hacia adelante, Y es hacia la izquierda y Z es hacia arriba. Si un objetivo es inalcanzable, primero aumenta Z o reduce la distancia horizontal, luego revisa las restricciones de orientación y los límites de las articulaciones.
 
 ### Enseñanza y reproducción de trayectorias
 
-La consola web puede registrar trayectorias de articulaciones y llamar a:
+La consola web puede registrar trayectorias articulares y llamar:
 
 ```text
 /<namespace>/follow_joint_trajectory
 ```
 
-El servidor de acciones del robot real RS usa referencias continuas de posición/velocidad cúbicas de Hermite monótonas y amplía automáticamente los segmentos de trayectoria que son demasiado cortos, manteniendo las velocidades de trayectoria ordinarias del robot real por debajo de aproximadamente `0.60 rad/s`. Los llamadores deben esperar el resultado de la acción o la realimentación del robot real y no deben finalizar la animación de reproducción antes de tiempo según la duración original de la solicitud.
+El servidor de acciones RS del robot real usa referencias continuas de posición/velocidad cúbicas de Hermite monótonas y extiende automáticamente los segmentos de trayectoria que son demasiado cortos, manteniendo las velocidades de trayectoria ordinarias del robot real por debajo de aproximadamente `0.60 rad/s`. Los llamadores deben esperar el resultado de la acción o la retroalimentación del robot real y no deben finalizar la animación de reproducción antes de tiempo según la duración original de la solicitud.
 
-### Enable, homing seguro y disable
+### Habilitar, homing seguro y deshabilitar
 
 - El controlador del robot real debe habilitarse después de cada arranque.
-- `safe_home` vuelve suavemente a cero y valida ángulo y velocidad.
-- Hacer clic en disable desde una pose distinta de cero entra primero en `SAFE_HOMING`.
+- `safe_home` vuelve suavemente a cero y valida el ángulo y la velocidad.
+- Al hacer clic en deshabilitar desde una pose distinta de cero, primero se entra en `SAFE_HOMING`.
 - Si la validación de homing falla, los motores permanecen habilitados y se devuelve un resultado de fallo.
-- `set_zero` reescribe el punto cero del motor y no es un botón de homing normal. Solo llámalo cuando la estructura mecánica esté realmente en la pose calibrada.
+- `set_zero` reescribe el punto cero del motor y no es un botón de homing ordinario. Llámalo solo cuando la estructura mecánica esté realmente en la pose calibrada.
 
 ### Compensación de gravedad
 
-La compensación de gravedad de RS comienza desde la pose medida actualmente y cambia a MIT articulación por articulación, de modo que la pose cero no se confunda con el objetivo. Los inicios repetidos son idempotentes; al detenerse se mantiene la última posición medida.
+La compensación de gravedad RS comienza desde la pose medida actualmente y cambia a MIT articulación por articulación, de modo que la pose cero no se confunda con el objetivo. Los inicios repetidos son idempotentes; al detenerse se mantiene la última posición medida.
 
-Los comandos web de articulación, TCP, trayectoria y pinza se rechazan durante la compensación de gravedad. Servicios relacionados:
+Los comandos web de articulaciones, TCP, trayectoria y pinza se rechazan durante la compensación de gravedad. Servicios relacionados:
 
 ```text
 /<namespace>/gravity_compensation/start
@@ -512,12 +555,12 @@ Los comandos web de articulación, TCP, trayectoria y pinza se rechazan durante 
 
 ## Interfaces ROS 2
 
-Los ejemplos siguientes usan el `/rebotarm` del robot real. Para la simulación, reemplaza el prefijo por `/rebotarm_rs`.
+Los ejemplos siguientes usan el robot real `/rebotarm`. Para simulación, reemplaza el prefijo por `/rebotarm_rs`.
 
 ### Tópicos de estado
 
 | Tópico | Tipo | Descripción |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/joint_states` | `sensor_msgs/msg/JointState` | Estado unificado de seis ejes y pinza |
 | `/rebotarm/joints/<name>/state` | `rebotarm_msgs/msg/JointMotorState` | Posición, velocidad, par y código de estado de un solo motor |
 | `/rebotarm/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | Estado bruto del motor de la pinza |
@@ -528,19 +571,19 @@ Los ejemplos siguientes usan el `/rebotarm` del robot real. Para la simulación,
 ### Tópicos de comandos de bajo nivel
 
 | Tópico | Tipo | Descripción |
-|---|---|---|
-| `/rebotarm/joints/<joint1..joint6>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Comando de articulación predeterminado desde la consola web para el robot real |
+| --- | --- | --- |
+| `/rebotarm/joints/<joint1..joint6>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Comando articular predeterminado desde la consola web para el robot real |
 | `/rebotarm/joints/<joint1..joint6>/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Comando de posición-velocidad |
 | `/rebotarm/gripper/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Comando MIT de la pinza RS |
 | `/rebotarm/gripper/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Comando de posición-velocidad de la pinza |
 | `/rebotarm/mujoco/target_pose` | `geometry_msgs/msg/PoseStamped` | Pose objetivo del TCP |
 
-Antes de publicar tú mismo comandos de bajo nivel, revisa `arm_status.state_machine`. No interrumpas el control durante `GRAVITY_COMP`, `SAFE_HOMING` o la ejecución de trayectorias.
+Antes de publicar comandos de bajo nivel por tu cuenta, revisa `arm_status.state_machine`. No preemptes el control durante `GRAVITY_COMP`, `SAFE_HOMING` o la ejecución de trayectorias.
 
 ### Servicios
 
 | Servicio | Tipo | Descripción |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/enable` | `std_srvs/srv/Trigger` | Habilitar el brazo |
 | `/rebotarm/disable` | `std_srvs/srv/Trigger` | Deshabilitar de forma segura; primero hace homing cuando es necesario |
 | `/rebotarm/safe_home` | `std_srvs/srv/Trigger` | Homing seguro con validación |
@@ -564,16 +607,16 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger '{}'
 ### Acciones
 
 | Acción | Tipo | Descripción |
-|---|---|---|
-| `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | Trayectoria de articulaciones |
+| --- | --- | --- |
+| `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | Trayectoria articular |
 | `/rebotarm/gripper/command` | `control_msgs/action/GripperCommand` | Acción de la pinza |
 | `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | Movimiento de pose cartesiana |
 
-### Interfaces de MuJoCo y visión
+### Interfaces MuJoCo y de visión
 
 | Interfaz | Tipo/Uso |
-|---|---|
-| `/rebotarm_rs/mujoco/joint_states` | Estados reales de articulaciones de MuJoCo |
+| --- | --- |
+| `/rebotarm_rs/mujoco/joint_states` | Estados articulares reales de MuJoCo |
 | `/rebotarm_rs/mujoco/object_states` | Estados de objetos de la escena como JSON |
 | `/rebotarm_rs/mujoco/overhead_rgb/image_raw` | Cámara RGB cenital |
 | `/rebotarm_rs/vision/color_blocks/detections` | Detección de objetos por color en JSON |
@@ -602,8 +645,8 @@ Si la pinza se cierra pero no levanta el objeto:
 
 - confirma que se usa el modo `physics`;
 - comprueba si la cámara y la detección de color están publicando continuamente;
-- revisa el ancho, la orientación y la altura de agarre del objetivo;
-- revisa en los registros la estabilidad de contacto y los resultados de validación de elevación física;
+- comprueba el ancho del objetivo, la orientación y la altura de agarre;
+- revisa en los registros la estabilidad del contacto y los resultados de validación de elevación física;
 - evita iniciar múltiples solicitudes de agarre o IK al mismo tiempo.
 
 ## Control de texto LLM/MCP
@@ -618,14 +661,14 @@ Web rebot-llm.js
   -> ROS 2 service/action/topic
 ```
 
-El LLM entiende el lenguaje natural, y la capa MCP restringe la intención en llamadas de herramientas estructuradas. Sin una configuración de LLM, las herramientas MCP de detección, IK, articulaciones, pinza y agarre aún se pueden llamar directamente.
+El LLM entiende el lenguaje natural y la capa MCP restringe la intención en llamadas de herramientas estructuradas. Sin una configuración de LLM, las herramientas MCP de detección, IK, articulaciones, pinza y agarre aún se pueden llamar directamente.
 
 ### Iniciar el agente de texto
 
-La simulación completa inicia el Agente MCP de forma predeterminada. Para habilitar el punto de entrada en lenguaje natural, abre otra terminal:
+La simulación completa inicia el Agente MCP por defecto. Para habilitar el punto de entrada en lenguaje natural, abre otra terminal:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 export DASHSCOPE_API_KEY='your-key'
 export REBOTARM_LLM_MODEL='qwen-plus'
 ./scripts/start_rs_text_agent.sh
@@ -646,7 +689,7 @@ En la consola web puedes:
 - moverte a una pose especificada;
 - agarrar un objeto de un color especificado.
 
-Antes de habilitar herramientas de movimiento en un entorno de robot real, comprueba explícitamente el permiso de movimiento y el espacio de nombres del Agente. El punto de entrada en lenguaje natural no puede eludir la máquina de estados de seguridad del backend del brazo ni reemplazar la parada de emergencia física.
+Antes de habilitar las herramientas de movimiento en un entorno de robot real, comprueba explícitamente el permiso de movimiento y el espacio de nombres del Agente. El punto de entrada en lenguaje natural no puede eludir la máquina de estados de seguridad del backend del brazo ni reemplazar la parada de emergencia física.
 
 ## Parámetros clave de control
 
@@ -656,7 +699,7 @@ La configuración predeterminada del robot real se encuentra en:
 rebotarm_ros2_RS/src/rebotarm_bringup/config/rebotarm_hardware.yaml
 ```
 
-Parámetros clave actuales de RS:
+Parámetros clave RS actuales:
 
 ```yaml
 rate: 125
@@ -675,11 +718,11 @@ gravity_compensation:
 Otras frecuencias predeterminadas:
 
 | Capa | Frecuencia predeterminada | Descripción |
-|---|---:|---|
-| Objetivo de articulación web | Hasta 60 Hz | Los deslizadores y el IK de TCP actualizan continuamente el objetivo |
-| Consulta de retroalimentación de sincronización del robot real | 20 Hz | Actualizar la caché de medición de RobStride |
+| --- | ---: | --- |
+| Objetivo articular web | Hasta 60 Hz | Los deslizadores y el IK de TCP actualizan continuamente el objetivo |
+| Consulta de retroalimentación de sincronización del robot real | 20 Hz | Actualizar la caché de mediciones de RobStride |
 | Estado ROS del robot real | 60 Hz | Publicar retroalimentación, objetivo y referencia desde la caché |
-| Control MIT de RS | 125 Hz | Suavizado en línea y comandos de motor |
+| Control RS MIT | 125 Hz | Suavizado en línea y comandos a los motores |
 | Fake Driver | 100 Hz | Control y estado de simulación |
 | Sincronización MuJoCo | 250 Hz | Sincronización de dinámica predeterminada |
 | Estado de objetos MuJoCo | 30 Hz | Escena y Agente |
@@ -698,7 +741,7 @@ Si el objetivo es discontinuo, revisa la capa de entrada web; si la referencia e
 
 ## Guía de desarrollo secundario
 
-### Modificar límites de articulación web o poses preestablecidas
+### Modificar límites articulares web o poses preestablecidas
 
 Archivo:
 
@@ -706,9 +749,9 @@ Archivo:
 reBotArm_simulator-RS/public/js/rebot-sim.js
 ```
 
-Las definiciones de articulaciones están en `jointDefs` y los preajustes en `presets`. Al modificar los límites de articulación, verifica conjuntamente el URDF de RS, la configuración del SDK y los límites mecánicos reales; no cambies solo el rango de visualización en la web.
+Las definiciones de articulaciones están en `jointDefs` y los preajustes están en `presets`. Al modificar los límites articulares, verifica conjuntamente el URDF de RS, la configuración del SDK y los límites mecánicos reales; no cambies solo el rango de visualización en la web.
 
-### Modificar la frecuencia, el filtrado y el amortiguamiento de comandos web
+### Modificar la frecuencia de comandos web, el filtrado y el amortiguamiento
 
 Archivo:
 
@@ -716,7 +759,7 @@ Archivo:
 reBotArm_simulator-RS/public/js/ros/rebot-ros-ui.js
 ```
 
-Este archivo gestiona la limitación de comandos web, el filtrado de retroalimentación del robot real, la zona muerta de retroalimentación, la interpolación, la sombra del objetivo, los bloqueos de control y la lógica de visión. No compenses la latencia de animación web aumentando las ganancias MIT del robot real.
+Este archivo gestiona la limitación de frecuencia de comandos web, el filtrado de la retroalimentación del robot real, la zona muerta de la retroalimentación, la interpolación, la sombra del objetivo, los bloqueos de control y la lógica de visión. No compenses la latencia de animación web aumentando las ganancias MIT del robot real.
 
 ### Añadir interfaces ROS personalizadas
 
@@ -726,9 +769,9 @@ El contenedor del cliente se encuentra en:
 reBotArm_simulator-RS/public/js/ros/rebot-ros-client.js
 ```
 
-Añade rutas de Topic, Service o Action en la capa de UI y llama a `subscribe()`, `callService()` o `sendActionGoal()` del cliente. Las interfaces siempre deben generarse a partir del `namespace` actual para evitar enviar comandos de simulación al robot real.
+Añade rutas de Topic, Service o Action en la capa de UI y llama a `subscribe()`, `callService()` o `sendActionGoal()` del cliente. Las interfaces siempre deben generarse desde el `namespace` actual para evitar enviar comandos de simulación al robot real.
 
-### Modificar el URDF o la malla de RS
+### Modificar el URDF o la malla del RS
 
 Modelos principales de ROS 2:
 
@@ -737,7 +780,7 @@ rebotarm_ros2_RS/src/rebotarm_bringup/description/urdf/ReBot_Arm_RS.urdf
 rebotarm_ros2_RS/src/rebotarm_bringup/description/meshes_rs/
 ```
 
-El servidor web lee primero los modelos anteriores. Si el directorio web se copia y ejecuta por separado, usa:
+El servidor web lee primero los modelos anteriores. Si el directorio web se copia y ejecuta de forma independiente, utiliza:
 
 ```text
 reBotArm_simulator-RS/description/urdf/ReBot_Arm_RS.urdf
@@ -749,8 +792,8 @@ Mantén ambas copias sincronizadas al modificarlas y comprueba las mayúsculas y
 ### Modificar MuJoCo
 
 | Archivo/directorio | Función |
-|---|---|
-| `rebotarm_ros2_RS/src/rebotarm_mujoco_rs/models/` | MJCF y STL de RS |
+| --- | --- |
+| `rebotarm_ros2_RS/src/rebotarm_mujoco_rs/models/` | MJCF y STL del RS |
 | `rebotarm_mujoco_rs/mujoco_sync.py` | Frecuencia de sincronización, dinámica y PD |
 | `rebotarm_mujoco_rs/scene_camera.py` | Cámara cenital |
 | `rebotarm_mujoco_rs/scene_detector.py` | Detección de color |
@@ -759,7 +802,7 @@ Mantén ambas copias sincronizadas al modificarlas y comprueba las mayúsculas y
 
 ### Ampliar las herramientas MCP
 
-El servidor MCP se encuentra en:
+El MCP Server se encuentra en:
 
 ```text
 rebotarm_ros2_RS/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
@@ -767,11 +810,11 @@ rebotarm_ros2_RS/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
 
 Al añadir una herramienta:
 
-1. define un esquema de entrada y unidades claros;
+1. define un esquema de entrada claro y sus unidades;
 2. separa las herramientas de solo lectura de las herramientas de movimiento;
-3. valida el espacio de nombres, el estado y el permiso de movimiento en las herramientas de movimiento;
+3. valida el namespace, el estado y el permiso de movimiento en las herramientas de movimiento;
 4. llama al backend mediante ROS 2 Service/Action/Topic en lugar de omitir el controlador directamente;
-5. recompila el espacio de trabajo y prueba las rutas de error, tiempo de espera y cancelación en simulación.
+5. recompila el workspace y prueba las rutas de error, tiempo de espera y cancelación en simulación.
 
 ## Comandos de verificación
 
@@ -798,7 +841,7 @@ ros2 service list | grep rebotarm
 ros2 action list | grep rebotarm
 ```
 
-## Preguntas frecuentes
+## FAQ
 
 ### 1. La página web se queda en la pantalla de carga del modelo
 
@@ -811,9 +854,9 @@ Abre el panel Network de las herramientas de desarrollador del navegador y compr
 
 Causas comunes:
 
-- el URDF o STL de RS no existe;
+- el URDF o STL del RS no existe;
 - el directorio web se movió solo y el modelo de reserva está incompleto;
-- el mapeo de `package://` en el URDF es incorrecto;
+- el mapeo `package://` en el URDF es incorrecto;
 - las mayúsculas y minúsculas del nombre de archivo en Linux no coinciden;
 - el orden de carga de Three.js, STLLoader o URDFLoader es incorrecto.
 
@@ -840,13 +883,13 @@ Comprueba en este orden:
 
 ### 4. El modelo web vibra o la sombra del objetivo persiste
 
-- Confirma que solo existen un controlador y un publicador de estado para el mismo espacio de nombres.
+- Confirma que solo existen un controlador y un publicador de estado para el mismo namespace.
 - Comprueba si `/joint_states` tiene múltiples publicadores.
 - Registra `control_target`, `control_reference` y `joint_states` al mismo tiempo.
-- Comprueba los contadores de errores de CAN y los intervalos de llegada de la retroalimentación.
+- Comprueba los contadores de errores CAN y los intervalos de llegada de la retroalimentación.
 - No ejecutes la reproducción de trayectorias y el arrastre manual continuo al mismo tiempo.
 
-Una sombra de objetivo de larga duración suele significar que la retroalimentación real no ha alcanzado el objetivo; esto no es necesariamente un problema de renderizado web.
+Una sombra de objetivo de larga duración normalmente significa que la retroalimentación real no ha alcanzado el objetivo; esto no es necesariamente un problema de renderizado web.
 
 ### 5. No hay retroalimentación CAN, o BUS-OFF
 
@@ -868,7 +911,7 @@ Detén inmediatamente la prueba con el robot real si el contador de errores sigu
 
 ### 6. El brazo no se apaga inmediatamente después de hacer clic en deshabilitar
 
-Si el brazo no está cerca de la pose cero, el controlador realiza primero un homing seguro y lo valida. Este es el comportamiento esperado. Si el homing falla, el sistema mantiene el brazo habilitado para evitar que caiga desde una pose distinta de cero. Usa la parada de emergencia física en caso de emergencia.
+Si el brazo no está cerca de la pose cero, el controlador realiza primero un homing seguro y lo valida. Este comportamiento es esperado. Si el homing falla, el sistema mantiene el brazo habilitado para evitar que caiga desde una pose distinta de cero. Usa la parada de emergencia física en una emergencia.
 
 ### 7. La compensación de gravedad no se inicia o no puede controlar
 
@@ -888,7 +931,7 @@ ros2 topic echo /rebotarm_rs/vision/color_blocks/detections --once
 ros2 topic echo /rebotarm_rs/mujoco/object_states --once
 ```
 
-Si el botón muestra que hay una tarea en cola, espera a que termine la acción en serie actual y no inicies varias solicitudes de sujeción repetidamente.
+Si el botón muestra que una tarea está en cola, espera a que termine la acción serial actual y no inicies varias solicitudes de sujeción repetidamente.
 
 ### 9. El asistente LLM no se puede conectar
 
@@ -900,9 +943,9 @@ Confirma que el Text Agent está iniciado:
 
 Comprueba `REBOTARM_TEXT_AGENT_URL` y `REBOTARM_MCP_URL` en `reBotArm_simulator-RS/.env`. La consola web comprueba el backend a través de `/api/llm/health`. No escribas claves de API en el código fuente web ni las confirmes en el repositorio.
 
-### 10. La página sigue mostrando una versión antigua después de modificar el front-end
+### 10. La página sigue mostrando una versión antigua después de modificar el front end
 
-La consola web de RS incluye compatibilidad con Service Worker/PWA. Primero usa `Ctrl+Shift+R` para una recarga forzada; si aún no se actualiza, borra los datos del sitio o anula el registro del Service Worker en las herramientas de desarrollador del navegador y luego vuelve a cargar la página.
+La consola web RS incluye compatibilidad con Service Worker/PWA. Primero usa `Ctrl+Shift+R` para una recarga forzada; si aún no se actualiza, borra los datos del sitio o anula el registro del Service Worker en las herramientas de desarrollador del navegador y luego vuelve a cargar la página.
 
 ### 11. `setup.sh` o `colcon build` falla
 

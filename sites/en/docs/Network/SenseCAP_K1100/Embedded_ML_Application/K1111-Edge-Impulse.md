@@ -12,7 +12,7 @@ createdAt: '2023-01-16'
 updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/K1111-Edge-Impulse/
 ---
-# Develop Edge Impulse application to cloud via Helium
+# Develop Edge Impulse application to cloud
 
 ## Upgradable to Industrial Sensors
 
@@ -63,7 +63,6 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
 
 - [Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/)
 - [Edge impluse](https://studio.edgeimpulse.com/)
-- [Helium](https://console.helium.com/)
 - [Wio Terminal Edge Impulse Continuous Motion Recognition with Built-in Accelerometer](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-2/)
 - [Google Sheets](https://docs.google.com/spreadsheets/u/0/)
 - [Google Forms](https://docs.google.com/forms/u/0/)
@@ -73,16 +72,14 @@ Before starting this section, make sure you have known **Wio Terminal** Producti
 For more details, please read
 
 - [**Wio Terminal Get Started**](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/)
-- [**Connecting-to-Helium**](https://wiki.seeedstudio.com/Connecting-to-Helium/)
-- [**Integrate into Google Sheets via Helium**](https://wiki.seeedstudio.com/Integrate_into_Google_Sheets_via_Helium/)
 :::
 This article show a solution for guys wanna use edgeimpulse to generated models and connect with cloud. In our demo , we will use google sheet.  It's the directly and  
 
-## Helium Configuration
+## Configuration
 
 ### Step 1. Create a Integrations with the Google Form support
 
-This step is similar to the steps in the article [**Integrate into Google Sheets via Helium**](https://wiki.seeedstudio.com/Integrate_into_Google_Sheets_via_Helium/)
+This step is similar to the steps in the article [**Integrate into Google Sheets**](https://wiki.seeedstudio.com/Integrate_into_Google_Sheets_via_Helium/)
 
 The things we need to do is name the integration and simply save the configuration.
 
@@ -487,7 +484,7 @@ void loop()
 :::note
 For more details, please see the documentation below.
 
-- [**Connecting-to-Helium**](https://wiki.seeedstudio.com/Connecting-to-Helium/)
+- [**Connection**](https://wiki.seeedstudio.com/Connecting-to-Helium/)
 :::
 Something we might pay more attention to :
 
@@ -520,7 +517,7 @@ Something we might pay more attention to :
 
 - Data send code block:
 
-    With the Lora network available, we can use the function to send the tag to Helium and recover it by Decoder we wrote in the Helium.
+    With the Lora network available, we can use the function to send the tag and recover it by Decoder we wrote.
 
     ```c++
     if (is_exist){

@@ -1,22 +1,25 @@
 ---
 description: Jetson 上で Microduck の強化学習ワークフローを構築します。環境構築と公式ポリシー推論から、カスタムモーションの学習までを網羅します。
-title: Jetson 上の Microduck RL
+title: Jetson 上の Microduck 強化学習
 image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png
 slug: /ai_robotics_microduck_rl_on_jetson
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/ja/ai_robotics_microduck_rl_on_jetson/
+updatedAt: '2026-09-05'
 ---
 
-# Jetson 上の Microduck RL
+
+# Jetson 上の Microduck 強化学習
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png" alt="Jetson 上の Microduck 強化学習" />
 </div>
 
-このデモでは、**NVIDIA Jetson Orin NX 16GB 搭載 Seeed reComputer** 上で **Microduck** 向けのロボット学習ワークフローを一通り構築します。GPU 環境のデプロイ、MuJoCo を用いた PPO 学習、ローカルチェックポイントの可視化、公式 ONNX ポリシーによるキーボード操作推論、新しいカスタムモーションの開発までをカバーします。
+このデモでは、**NVIDIA Jetson Orin NX 16GB 搭載 Seeed reComputer** 上で **Microduck** のロボット学習ワークフローを一通り構築します。GPU 環境の構築、MuJoCo を用いた PPO 学習、ローカルチェックポイントの可視化、公式およびカスタム ONNX ポリシーによるキーボード操作推論、新しいカスタムモーションの開発までをカバーします。
 
 検証済みのリファレンスプラットフォームは、**JetPack 7.2**、**Ubuntu 24.04**、**CUDA 13.2**、**Python 3.12**、**MuJoCo 3.10** を使用しています。本チュートリアルは [`jjjadand/microduck_rl`](https://github.com/jjjadand/microduck_rl) リポジトリをベースとしており、ガイド全体で使用するソースコード、デプロイスクリプト、公式 ONNX ポリシー、Jetson で学習したチェックポイントが含まれています。
 
@@ -64,13 +67,13 @@ createdAt: '2026-09-04'
 
 ## 章を選ぶ
 
-カードをクリックして対応する章を開きます。Physical AI のサイドバーに表示されるのはこのランディングページのみで、3 つの章はここからアクセスする専用ページとして構成されています。
+カードをクリックして対応する章を開きます。Physical AI サイドバーに表示されるのはこのランディングページのみで、3 つの章はここからアクセスする専用ページとして構成されています。
 
 <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(260px, 1fr))', gap:'22px', margin:'30px 0 40px'}}>
   <a href="/ja/ai_robotics_microduck_rl_jetson_environment/" style={{display:'flex', flexDirection:'column', padding:'28px', minHeight:'330px', borderRadius:'16px', border:'3px solid #e3ad00', background:'linear-gradient(145deg, #fff5c2, #ffffff)', color:'#172b4d', textDecoration:'none', boxShadow:'0 14px 36px rgba(227,173,0,0.24)', transition:'transform .2s ease, box-shadow .2s ease'}}>
     <div style={{fontSize:'42px', fontWeight:'800', color:'#9a7200', marginBottom:'14px'}}>01</div>
     <div style={{fontSize:'24px', lineHeight:'1.35', color:'#172b4d', fontWeight:'900', marginBottom:'14px'}}>環境をデプロイする</div>
-    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>JetPack 7.2 を準備し、CUDA 対応の Python 環境をデプロイし、プロジェクトディレクトリ構成を理解し、GPU 学習を検証します。</div>
+    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>JetPack 7.2 を準備し、CUDA 対応の Python 環境を構築し、プロジェクトディレクトリ構成を理解し、GPU 学習を検証します。</div>
     <div style={{marginTop:'auto', paddingTop:'24px'}}><span style={{display:'inline-flex', alignItems:'center', gap:'14px', padding:'11px 12px 11px 18px', borderRadius:'9px', background:'#b88700', color:'#ffffff', fontWeight:'900', letterSpacing:'.3px', boxShadow:'0 7px 18px rgba(154,114,0,.28)'}}>章を開く <span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'30px', height:'30px', borderRadius:'50%', background:'rgba(255,255,255,.22)', fontSize:'22px', lineHeight:'1'}}>➜</span></span></div>
   </a>
 
@@ -84,7 +87,7 @@ createdAt: '2026-09-04'
   <a href="/ja/ai_robotics_microduck_rl_custom_motion_training/" style={{display:'flex', flexDirection:'column', padding:'28px', minHeight:'330px', borderRadius:'16px', border:'3px solid #3182ce', background:'linear-gradient(145deg, #dceeff, #ffffff)', color:'#172b4d', textDecoration:'none', boxShadow:'0 14px 36px rgba(49,130,206,0.22)', transition:'transform .2s ease, box-shadow .2s ease'}}>
     <div style={{fontSize:'42px', fontWeight:'800', color:'#2368a2', marginBottom:'14px'}}>03</div>
     <div style={{fontSize:'24px', lineHeight:'1.35', color:'#172b4d', fontWeight:'900', marginBottom:'14px'}}>カスタムモーションを作成する</div>
-    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>タスクテンプレートを選択し、モーションフェーズと報酬を定義し、新しいタスクを登録し、MuJoCo でテストし、学習して ONNX をエクスポートします。</div>
+    <div style={{lineHeight:'1.7', color:'#344563', fontWeight:'500'}}>タスクテンプレートを選択し、モーションフェーズと報酬を定義し、新しいタスクを登録し、MuJoCo でテストし、学習して ONNX をエクスポートします。検証済みの例は、両脚支持の前後スプリットです。</div>
     <div style={{marginTop:'auto', paddingTop:'24px'}}><span style={{display:'inline-flex', alignItems:'center', gap:'14px', padding:'11px 12px 11px 18px', borderRadius:'9px', background:'#2368a2', color:'#ffffff', fontWeight:'900', letterSpacing:'.3px', boxShadow:'0 7px 18px rgba(35,104,162,.28)'}}>章を開く <span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'30px', height:'30px', borderRadius:'50%', background:'rgba(255,255,255,.22)', fontSize:'22px', lineHeight:'1'}}>➜</span></span></div>
   </a>
 </div>
@@ -94,9 +97,10 @@ createdAt: '2026-09-04'
 - Jetson Orin NX 上の CUDA 対応 Microduck 学習環境。
 - 並列 MuJoCo 環境を用いた PPO 学習。
 - ネイティブおよびブラウザベースのシミュレーション可視化。
-- 歩行、立位、座る/立つ、地面からのピック、ロール、キック、ローラー動作に対する公式 ONNX 推論。
-- キーボードコマンド入力とライブな挙動切り替え。
-- おじぎなどのフェーズベースカスタムモーションを作成するための再利用可能なワークフロー。
+- 歩行、立位、座る/立つ、物の拾い上げ、前転、キック、ローラー動作に対する公式 ONNX 推論。
+- 片脚バランスデモの失敗例を置き換える、`O` でトリガーされる前後スプリットの学習済みポリシー。
+- キーボードコマンド入力とライブでの挙動切り替え。
+- 前後スプリットを検証済み例として用いた、フェーズベースのカスタムモーションを作成するための再利用可能なワークフロー。
 
 ## デモアーキテクチャ
 
@@ -113,5 +117,5 @@ Jetson Orin NX
 ```
 
 :::tip
-最も迅速に検証するには、環境をデプロイし、64 環境・5 イテレーションのスモークテストを実行してから、公式の ONNX キーボードデモを起動してください。カスタムモーションの章はその後で完了できます。
+最速で検証するには、環境をデプロイし、64 環境で 5 イテレーションのスモークテストを実行してから、公式の ONNX キーボードデモを起動してください。カスタムモーションの章はその後で完了できます。
 :::

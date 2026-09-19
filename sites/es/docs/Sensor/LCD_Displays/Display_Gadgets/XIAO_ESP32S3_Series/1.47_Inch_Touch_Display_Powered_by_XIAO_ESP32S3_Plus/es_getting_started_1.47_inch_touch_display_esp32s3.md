@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/es/getting_started_1.47_inch_touch_display_esp
 <div class="table-center">
   <table align="center">
     <tr><th>XIAO 1.47'' IPS Display (ESP32-S3)</th></tr>
-    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_hero.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
+    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_heroNEW.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
     <tr><td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/1-47-Inch-Touch-Display-Powered-by-XIAO-ESP32-S3-Plus-p-6996.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
@@ -36,14 +36,14 @@ url: https://wiki.seeedstudio.com/es/getting_started_1.47_inch_touch_display_esp
 
 ## Introducción
 
-La pantalla IPS de 1,47'' es una placa de expansión diseñada para la serie XIAO, impulsada por el XIAO ESP32-S3 Plus. Incorpora una pantalla LCD en color de 172×320 con panel táctil capacitivo, micrófono PDM integrado, IMU de 6 ejes (LSM6DS3), ranura para tarjeta MicroSD y medición de voltaje de batería, todo integrado en un factor de forma compacto.
+La pantalla IPS de 1,47'' es una placa de expansión diseñada para la serie XIAO, impulsada por el XIAO ESP32-S3 Plus. Incorpora una pantalla LCD en color de 172×320 con panel táctil capacitivo, micrófono PDM integrado, IMU de 6 ejes (LSM6DS3), ranura para tarjeta MicroSD y medición de voltaje de batería, todo integrado en un formato compacto.
 
-Esta combinación la convierte en una plataforma ideal para aplicaciones HMI portátiles, paneles de control IoT, dispositivos wearables y prototipado interactivo. Con el procesador de doble núcleo del ESP32-S3 y sus capacidades de Wi‑Fi y Bluetooth, amplía el panel de control hasta convertirlo en un hub con conexión inalámbrica.
+Esta combinación la convierte en una plataforma ideal para aplicaciones HMI portátiles, paneles de control IoT, dispositivos wearables y prototipado interactivo. Con el procesador de doble núcleo del ESP32-S3 y sus capacidades Wi‑Fi y Bluetooth, amplía el panel de control hasta convertirlo en un hub con conexión inalámbrica.
 
 <div class="table-center">
   <table align="center">
     <tr><th>Especificación</th><th>Detalle</th></tr>
-    <tr><td>Posicionamiento del producto</td><td>Táctil e interacción completa</td></tr>
+    <tr><td>Posicionamiento del producto</td><td>Táctil y totalmente interactivo</td></tr>
     <tr><td>Controlador principal</td><td>Seeed Studio XIAO ESP32-S3 Plus</td></tr>
     <tr><td>Procesador</td><td>ESP32-S3R8, doble núcleo, hasta 240 MHz</td></tr>
     <tr><td>Memoria</td><td>8 MB PSRAM + 16 MB Flash</td></tr>
@@ -52,15 +52,15 @@ Esta combinación la convierte en una plataforma ideal para aplicaciones HMI por
     <tr><td>Resolución</td><td>172 × 320</td></tr>
     <tr><td>Controlador de pantalla</td><td>JD9853A</td></tr>
     <tr><td>Interfaz de pantalla</td><td>SPI</td></tr>
-    <tr><td>Entrada táctil</td><td>Táctil capacitiva</td></tr>
+    <tr><td>Entrada táctil</td><td>Panel táctil capacitivo</td></tr>
     <tr><td>IMU de 6 ejes</td><td>Sí</td></tr>
     <tr><td>Micrófono digital PDM</td><td>Sí</td></tr>
     <tr><td>Ranura para tarjeta MicroSD</td><td>Sí</td></tr>
     <tr><td>Conector Grove I2C</td><td>No</td></tr>
     <tr><td>Botones de usuario</td><td>2</td></tr>
     <tr><td>Conector de batería</td><td>JST de 2 pines, LiPo de 3,7 V</td></tr>
-    <tr><td>Supervisión de batería</td><td>Supervisión del voltaje de la batería mediante el ADC D16; el nivel de batería puede estimarse a partir del voltaje medido. No se admite la detección del estado de la batería.</td></tr>
-    <tr><td>Interfaces de expansión</td><td>1x pads I2C, 1x pads I2S, 1x pads SWD, 2x pads de botón de usuario</td></tr>
+    <tr><td>Supervisión de batería</td><td>Supervisión de voltaje de batería mediante D16 ADC; el nivel de batería puede estimarse a partir del voltaje medido. No se admite la detección del estado de la batería.</td></tr>
+    <tr><td>Interfaces de expansión</td><td>1x interfaz I2C, 1x interfaz I2S, 1x interfaz JTAG, 2x interfaces de botón de usuario</td></tr>
     <tr><td>Tamaño de la placa</td><td>26,4 × 51,4 × 12,6 mm</td></tr>
     <tr><td>Ideal para</td><td>Interfaz táctil, HMI portátil, registro local de medios y datos</td></tr>
   </table>
@@ -74,11 +74,11 @@ El ESP32-S3 Plus utiliza D16 para la medición de voltaje. La demostración de v
 
 Antes de empezar, consulta la siguiente imagen para comprender la disposición física de la pantalla IPS de 1,47''.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Mapa de pines
 
-La pantalla IPS de 1,47'' expone todos los pines del XIAO ESP32-S3 Plus. La tabla siguiente enumera cada pin, su nombre de red en la placa de pantalla, su función y cómo está conectado a los periféricos integrados.
+La pantalla IPS de 1,47'' expone todos los pines del XIAO ESP32-S3 Plus. La siguiente tabla enumera cada pin, su nombre de red en la placa de pantalla, su función y cómo está conectado a los periféricos integrados.
 
 <div class="table-center">
   <table align="center">
@@ -86,14 +86,14 @@ La pantalla IPS de 1,47'' expone todos los pines del XIAO ESP32-S3 Plus. La tabl
     <tr><td>D0</td><td>PDM_CLK</td><td>MIC_CLK</td><td>Reloj del micrófono digital PDM</td></tr>
     <tr><td>D1</td><td>MIC_DATA</td><td>Datos del micrófono digital PDM</td><td>Conectado internamente al micrófono PDM</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>Señal de selección de chip de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
-    <tr><td>D3</td><td>LCD_DC</td><td>Cambio datos/comandos de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
+    <tr><td>D3</td><td>LCD_DC</td><td>Conmutación datos/comandos de la pantalla</td><td>Conectado internamente al CI controlador LCD</td></tr>
     <tr><td>D4</td><td>SDA</td><td>Bus de datos I2C</td><td>Compartición de bus: conectado internamente al IMU y al CI táctil; expuesto externamente como pads de expansión I2C</td></tr>
     <tr><td>D5</td><td>SCL</td><td>Bus de reloj I2C</td><td>Compartición de bus: conectado internamente al IMU y al CI táctil; expuesto externamente como pads de expansión I2C</td></tr>
-    <tr><td>D6</td><td>SD_CS</td><td>Señal de selección de chip de la tarjeta SD</td><td>Conectado internamente a la ranura de tarjeta MicroSD</td></tr>
+    <tr><td>D6</td><td>SD_CS</td><td>Señal de selección de chip de la tarjeta SD</td><td>Conectado internamente a la ranura para tarjeta MicroSD</td></tr>
     <tr><td>D7</td><td>TOUCH_INT</td><td>Señal de interrupción táctil</td><td>Conectado internamente al CI táctil para activación asíncrona</td></tr>
-    <tr><td>D8</td><td>SCK</td><td>Reloj SPI por hardware</td><td>Conectado internamente a la pantalla LCD y a la ranura de tarjeta SD</td></tr>
-    <tr><td>D9</td><td>MISO</td><td>Entrada de datos SPI por hardware</td><td>Conectado internamente a la ranura de tarjeta SD</td></tr>
-    <tr><td>D10</td><td>MOSI</td><td>Salida de datos SPI por hardware</td><td>Conectado internamente a la pantalla LCD y a la ranura de tarjeta SD</td></tr>
+    <tr><td>D8</td><td>SCK</td><td>Reloj SPI por hardware</td><td>Conectado internamente a la pantalla LCD y a la ranura para tarjeta SD</td></tr>
+    <tr><td>D9</td><td>MISO</td><td>Entrada de datos SPI por hardware</td><td>Conectado internamente a la ranura para tarjeta SD</td></tr>
+    <tr><td>D10</td><td>MOSI</td><td>Salida de datos SPI por hardware</td><td>Conectado internamente a la pantalla LCD y a la ranura para tarjeta SD</td></tr>
     <tr><td>D11</td><td>I2S_SD</td><td>Línea de datos de audio</td><td>Corresponde al mapeo predeterminado de I2S_SD, expuesto al grupo de pads inferiores</td></tr>
     <tr><td>D12</td><td>I2S_SCK</td><td>Reloj de bits de audio</td><td>Corresponde al mapeo predeterminado de I2S_SCK, expuesto al grupo de pads inferiores</td></tr>
     <tr><td>D13</td><td>I2S_WS</td><td>Selección de palabra de audio</td><td>Corresponde al mapeo predeterminado de I2S_WS, expuesto al grupo de pads inferiores</td></tr>
@@ -133,14 +133,14 @@ Luego ve a **Tools > Board > Boards Manager**, busca **esp32** e instala la vers
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar Seeed_GFX2</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download Seeed_GFX2</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **Paso 1.** Haz clic en el botón de arriba para descargar `Seeed_GFX2` v1.0.0 como archivo ZIP (anclado a una etiqueta de versión para que el tutorial siga siendo reproducible). Alternativamente, clona el repositorio desde [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2).
 
-**Paso 2.** En el Arduino IDE, ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el ZIP descargado. El IDE lee `library.properties` y lo instala automáticamente en la carpeta `Seeed_GFX2` correcta; no necesitas renombrar la carpeta extraída. (Para instalarlo manualmente en su lugar, descomprime el archivo y renombra la carpeta extraída a `Seeed_GFX2` antes de colocarla en `Documents/Arduino/libraries/`.)
+**Paso 2.** En el Arduino IDE, ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el ZIP descargado. El IDE lee `library.properties` y lo instala automáticamente en la carpeta `Seeed_GFX2` correcta; no necesitas cambiar el nombre de la carpeta extraída. (Para instalarlo manualmente en su lugar, descomprime el archivo y cambia el nombre de la carpeta extraída a `Seeed_GFX2` antes de colocarla en `Documents/Arduino/libraries/`.)
 
 **Paso 3.** Reinicia el Arduino IDE para que se detecte la nueva librería.
 
@@ -164,7 +164,7 @@ Navega a `code_GFX2/getting_started_code/xiao_esp32s3_147_hello/` y abre `xiao_e
 
 ### Subir el sketch
 
-**Paso 1.** Conecta la XIAO ESP32-S3 Plus a tu ordenador mediante el puerto USB-C.
+**Paso 1.** Conecta el XIAO ESP32-S3 Plus a tu ordenador mediante el puerto USB-C.
 
 **Paso 2.** En el IDE de Arduino, selecciona la placa: **Tools > Board > esp32 > XIAO_ESP32S3_PLUS**.
 
@@ -187,7 +187,7 @@ La placa de pantalla integra varios periféricos a bordo. La página de [Functio
 <div class="table-center">
   <table align="center">
     <tr><th>Periférico</th><th>Demo</th></tr>
-    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_1.47_inch_touch_display_esp32s3#screen-display--graphictest) — diez primitivas gráficas con pruebas de tiempo</td></tr>
+    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_1.47_inch_touch_display_esp32s3#screen-display--graphictest) — diez primitivas gráficas con pruebas de rendimiento</td></tr>
     <tr><td>Táctil</td><td>[Touch Circle](/es/function_1.47_inch_touch_display_esp32s3#touch--touch-circle) — toca para dibujar círculos persistentes; toca CLEAR para borrarlos</td></tr>
     <tr><td>Tarjeta SD</td><td>[BMP Reader](/es/function_1.47_inch_touch_display_esp32s3#sd-card--bmp-reader) — muestra un BMP desde la tarjeta MicroSD</td></tr>
     <tr><td>Micrófono y altavoz</td><td>[Volume Bar + SD Recorder](/es/function_1.47_inch_touch_display_esp32s3#microphone--speaker) — medidor de nivel PDM en vivo y grabación en SD</td></tr>
@@ -214,9 +214,10 @@ Si la placa sigue sin aparecer, reinicia el IDE de Arduino e inténtalo de nuevo
 
 ## Recursos
 
-- **🗃️[Archivos de diseño de PCB]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
+- **🗃️[Archivos de diseño PCB]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 1.47'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 1.47'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
+- **🖨️[Caja impresa en 3D]** [XIAO 1.47'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843008-enclosure-for-xiao-147-ips-touch-display-esp32nrf5)
 - **📄[Hoja de datos]** [1.47 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
 - **💾[Firmware de fábrica]** [XIAO 1.47'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 

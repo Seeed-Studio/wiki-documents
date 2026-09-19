@@ -1,6 +1,6 @@
 ---
-description: XIAO 0.96'' IPS Display (ESP32-S3) のはじめに。
-title: XIAO 0.96'' IPS Display (ESP32-S3) のはじめに
+description: XIAO 0.96'' IPS Display (ESP32-S3) の入門ガイド。
+title: XIAO 0.96'' IPS Display (ESP32-S3) の入門ガイド
 keywords:
   - XIAO
   - ESP32-S3
@@ -10,7 +10,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_esp32s3.webp
 slug: /getting_started_0.96_inch_display_esp32s3
 sku: 100037468
-sidebar_label: Getting Started
+sidebar_label: 入門ガイド
 sidebar_position: 1
 type: gettingstarted
 last_update:
@@ -21,7 +21,7 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_esp32s3/
 ---
 
-# XIAO 0.96'' IPS Display (ESP32-S3) のはじめに
+# XIAO 0.96'' IPS Display (ESP32-S3) の入門ガイド
 
 <div class="table-center">
   <table align="center">
@@ -37,14 +37,14 @@ url: https://wiki.seeedstudio.com/ja/getting_started_0.96_inch_display_esp32s3/
 
 ## はじめに
 
-0.96'' IPS Display は、XIAO ESP32-S3 Plus を搭載したコンパクトな拡張ボードです。80×160 の IPS カラー LCD、オンボード PDM マイク、6 軸 IMU、2 つのユーザーボタン、I2C および I2S 拡張パッド、バッテリー電圧検出機能を備え、小型の接続デバイス向けに設計されたフォームファクタにまとめられています。
+0.96'' IPS Display は、XIAO ESP32-S3 Plus を搭載したコンパクトな拡張ボードです。80×160 の IPS カラー LCD、オンボード PDM マイク、6 軸 IMU、2 つのユーザーボタン、I2C および I2S 拡張パッド、バッテリー電圧検出機能を備え、小型の接続デバイス向けに設計されたフォームファクタに収められています。
 
 ESP32-S3 Plus により Wi-Fi と Bluetooth 接続が追加され、このボードはコンパクトなウェアラブル、ポータブルなセンサーダッシュボード、キーチェーンガジェット、ワイヤレス IoT プロトタイプに適しています。
 
 <div class="table-center">
   <table align="center">
     <tr><th>仕様</th><th>詳細</th></tr>
-    <tr><td>製品ポジショニング</td><td>超コンパクト</td></tr>
+    <tr><td>製品ポジショニング</td><td>超小型</td></tr>
     <tr><td>コアコントローラ</td><td>Seeed Studio XIAO ESP32-S3 Plus</td></tr>
     <tr><td>プロセッサ</td><td>ESP32-S3R8、デュアルコア、最大 240 MHz</td></tr>
     <tr><td>メモリ</td><td>8 MB PSRAM + 16 MB Flash</td></tr>
@@ -60,8 +60,8 @@ ESP32-S3 Plus により Wi-Fi と Bluetooth 接続が追加され、このボー
     <tr><td>Grove I2C コネクタ</td><td>なし</td></tr>
     <tr><td>ユーザーボタン</td><td>2</td></tr>
     <tr><td>バッテリーコネクタ</td><td>2 ピン JST、3.7 V LiPo</td></tr>
-    <tr><td>バッテリーモニタリング</td><td>D16 ADC を介したバッテリー電圧モニタリング。測定電圧からバッテリー残量を推定できます。バッテリー状態検出はサポートされていません。</td></tr>
-    <tr><td>拡張インターフェース</td><td>1x I2C パッド、1x I2S パッド</td></tr>
+    <tr><td>バッテリーモニタリング</td><td>D16 ADC を介したバッテリー電圧モニタリング。測定電圧からバッテリー残量を推定できます。充電状態の検出には対応していません。</td></tr>
+    <tr><td>拡張インターフェース</td><td>1x I2C インターフェース、1x I2S インターフェース、1x JTAG インターフェース、2x ユーザーボタンインターフェース</td></tr>
     <tr><td>基板サイズ</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
     <tr><td>最適な用途</td><td>超小型 IoT デバイス、ウェアラブル、ステータスディスプレイ</td></tr>
   </table>
@@ -79,11 +79,11 @@ ESP32-S3 Plus バージョンは、D16 を使用してバッテリー分圧電�
 
 拡張ハードウェアを接続する前に、以下の図を参照してコネクタとオンボードコンポーネントを確認してください。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### ピンマップ
 
-次の表は、ディスプレイボードおよびそのオンボード周辺機能で使用される XIAO ESP32-S3 Plus のピンを示しています。
+次の表は、ディスプレイボードおよびオンボード周辺機器で使用される XIAO ESP32-S3 Plus のピンを示しています。
 
 <div class="table-center">
   <table align="center">
@@ -116,17 +116,17 @@ ESP32-S3 Plus バージョンは、D16 を使用してバッテリー分圧電�
 D4 と D5 はオンボード IMU と共有されています。テストパッドに接続する外部 I2C デバイスは、一意のアドレスを使用し、3.3 V ロジックに対応している必要があります。
 :::
 
-## はじめに
+## 入門ガイド
 
 :::caution
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_handing_tips.png" style={{width:600, height:'auto'}}/></div>
 :::
 
-このガイドでは、最小限の **"Hello, XIAO"** スケッチをディスプレイボードに書き込みます。画面のバックライトが点灯し、黒で塗りつぶされ、その中央に大きな緑色のテキストで **"Hello,"** と **"XIAO"** の 2 行が表示されます。個々の周辺機能デモに進む前に、画面と開発環境が正しく動作していることを確認する最速の方法です。
+このガイドでは、最小限の **"Hello, XIAO"** スケッチをディスプレイボードに書き込みます。画面のバックライトが点灯し、黒で塗りつぶされ、中央揃えの大きな緑色のテキストで 2 行に分けて **"Hello,"** と **"XIAO"** を表示します。個々の周辺機能デモに進む前に、画面と開発環境が正しく動作していることを確認する最速の方法です。
 
 ### ソフトウェアの準備
 
-以下のツールとライブラリが必要です：
+次のツールとライブラリが必要です：
 
 - **Arduino IDE**（バージョン 1.8 以降）
 
@@ -151,15 +151,15 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
     </a>
 </div><br />
 
-**Step 1.** 上のボタンをクリックして、`Seeed_GFX2` v1.0.0 を ZIP ファイルとしてダウンロードします（チュートリアルの再現性を保つため、リリースタグに固定されています）。または、[Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) からリポジトリをクローンします。
+**Step 1.** 上のボタンをクリックして、`Seeed_GFX2` v1.0.0 を ZIP ファイルとしてダウンロードします（チュートリアルの再現性を保つため、リリースタグに固定されています）。または、[Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) からリポジトリをクローンしてもかまいません。
 
-**Step 2.** Arduino IDE で **Sketch > Include Library > Add .ZIP Library...** に進み、ダウンロードした ZIP を選択します。IDE は `library.properties` を読み取り、正しい `Seeed_GFX2` フォルダに自動的にインストールします — 展開したフォルダ名を変更する必要はありません。（代わりに手動でインストールする場合は、アーカイブを解凍し、展開されたフォルダ名を `Seeed_GFX2` に変更してから `Documents/Arduino/libraries/` に配置します。）
+**Step 2.** Arduino IDE で **Sketch > Include Library > Add .ZIP Library...** を開き、ダウンロードした ZIP を選択します。IDE は `library.properties` を読み取り、正しい `Seeed_GFX2` フォルダに自動的にインストールします — 展開したフォルダ名を変更する必要はありません。（代わりに手動でインストールする場合は、アーカイブを解凍し、展開したフォルダ名を `Seeed_GFX2` に変更してから `Documents/Arduino/libraries/` に配置します。）
 
 **Step 3.** 新しいライブラリが認識されるように Arduino IDE を再起動します。
 
 :::tip
 - **Seeed_GFX2** は、レイヤー化された `Board` + `Panel Config` アーキテクチャ上に構築された Seeed Studio のグラフィックスライブラリです。各デモは、単一の `display.begin<Board_..., Config_...>()` 呼び出しでディスプレイを初期化します。**Board** テンプレートはピンマップ（CS/DC/SCK/MOSI/RST/BL）を保持し、**Panel Config** は 80×160 の解像度、色順序（BGR）、向きを組み込みます。`driver.h` や手動のピン設定は不要です。
-- このボードでは、スケッチは `Config_Seeed_0inch96_LCD_ST7789` を使用し、`Board_XIAO_0inch96_LCD<13, 12>`（RST=13, BL=12）を指定します。
+- このボードでは、スケッチは `Config_Seeed_0inch96_LCD_ST7789` を使用し、`Board_XIAO_0inch96_LCD<13, 12>`（RST=13, BL=12）を使います。
 :::
 
 ### コードをダウンロード
@@ -177,13 +177,13 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 ### スケッチを書き込む
 
-**Step 1.** XIAO ESP32-S3 Plus を USB-C ケーブルでコンピュータに接続します。
+**ステップ 1.** XIAO ESP32-S3 Plus を USB-C ケーブルでコンピュータに接続します。
 
-**Step 2.** **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** を選択します。
+**ステップ 2.** **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** を選択します。
 
-**Step 3.** **Tools > Port** から正しい **Port** を選択します。
+**ステップ 3.** **Tools > Port** から正しい **Port** を選択します。
 
-**Step 4.** **Upload** をクリックします。スケッチがコンパイルされ、ボードに書き込まれます。
+**ステップ 4.** **Upload** をクリックします。スケッチがコンパイルされ、ボードに書き込まれます。
 
 ### 期待される出力
 
@@ -191,11 +191,11 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hello.gif" style={{width:500, height:'auto'}}/></div>
 
-ディスプレイの初期化に失敗した場合、スケッチはライブラリエラーメッセージをボーレート **115200** でシリアルモニタに出力します。**Tools > Serial Monitor** を開き、ボーレートを 115200 に設定してメッセージを確認してください。
+ディスプレイの初期化に失敗した場合、スケッチはライブラリエラーメッセージをボーレート **115200** のシリアルモニタに出力します。**Tools > Serial Monitor** を開き、ボーレートを 115200 に設定してメッセージを確認してください。
 
 ## 次のステップ
 
-このディスプレイボードには、複数のオンボード周辺機能が搭載されています。[Function](/ja/function_0.96_inch_display_esp32s3) ページでは、それぞれに対応する単体デモを提供しています：
+このディスプレイボードには、複数のオンボード周辺機能が搭載されています。[Function](/ja/function_0.96_inch_display_esp32s3) ページでは、それぞれに対応した単体デモを提供しています：
 
 <div class="table-center">
   <table align="center">
@@ -203,7 +203,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
     <tr><td>画面</td><td>[GraphicTest](/ja/function_0.96_inch_display_esp32s3#screen-display--graphictest) — 10 種類のグラフィックプリミティブとタイミングベンチマーク</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/ja/function_0.96_inch_display_esp32s3#imu) — 6 軸モーションエフェクトとモーション検知によるウェイクアップ</td></tr>
     <tr><td>マイク & スピーカー</td><td>[Flash Recorder](/ja/function_0.96_inch_display_esp32s3#microphone--speaker--flash-recorder) — 音声の録音と再生</td></tr>
-    <tr><td>ボタン</td><td>[User Buttons](/ja/function_0.96_inch_display_esp32s3#user-buttons) — 割り込みを用いたボタン押下の読み取りとデバウンス</td></tr>
+    <tr><td>ボタン</td><td>[User Buttons](/ja/function_0.96_inch_display_esp32s3#user-buttons) — 割り込みを使ったボタン押下の読み取りとデバウンス</td></tr>
     <tr><td>バッテリー</td><td>[Battery Voltage Detection](/ja/function_0.96_inch_display_esp32s3#battery-voltage-detection) — 分圧電圧の測定</td></tr>
   </table>
 </div>
@@ -218,32 +218,33 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
    https://espressif.github.io/arduino-esp32/package_esp32_index.json
    ```
 
-2. **Tools > Board > Boards Manager** を開き、**esp32** を検索して、バージョン **3.3.11** をインストールします。
+2. **Tools > Board > Boards Manager** を開き、**esp32** を検索してバージョン **3.3.11** をインストールします。
 3. **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** を選択します。
 
 それでもボードの項目が表示されない場合は、Arduino IDE を再起動してください。
 
 ### ボードはどのように持てばよいですか？
 
-ボタン付近を持ち、**XIAO** モジュールには触れないでください。ボタンエリアをつかむようにしてください。
+ボタン付近を持ち、**XIAO** モジュールには触れないでください。代わりにボタンエリアをつかんで保持してください。
 
-### [出荷時ファームウェア - DashBoard について]
+### [工場出荷時ファームウェア - DashBoard について]
 
 #### USB-C ケーブルを挿しても画面が明るくなりません。なぜですか？
 
-画面のバックライトがオフになっている可能性があります。**USR2 (D7)** ボタンを押してバックライトを再度オンに切り替えると、ディスプレイが通常どおり点灯します。
+画面のバックライトがオフになっている可能性があります。**USR2 (D7)** ボタンを押してバックライトを再度オンに切り替えると、ディスプレイが正常に点灯します。
 
 ## リソース
 
 - **🗃️[PCB Design Files]** [XIAO 0.96'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[Schematic]** [XIAO 0.96'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[3D Model]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
+- **🖨️[3D Printed Enclosure]** [XIAO 0.96'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843001-enclosure-for-xiao-096-ips-display-esp32nrf52840/files)
 - **📄[Datasheet]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
 - **💾[Factory Firmware]** [XIAO 0.96'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">

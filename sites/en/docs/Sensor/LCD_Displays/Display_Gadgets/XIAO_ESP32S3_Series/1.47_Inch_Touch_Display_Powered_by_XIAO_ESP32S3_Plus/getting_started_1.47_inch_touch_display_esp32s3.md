@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/getting_started_1.47_inch_touch_display_esp32s
 <div class="table-center">
   <table align="center">
     <tr><th>XIAO 1.47'' IPS Display (ESP32-S3)</th></tr>
-    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_hero.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
+    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_heroNEW.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
     <tr><td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/1-47-Inch-Touch-Display-Powered-by-XIAO-ESP32-S3-Plus-p-6996.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -60,7 +60,7 @@ This combination makes it an ideal platform for portable HMI applications, IoT d
     <tr><td>User Buttons</td><td>2</td></tr>
     <tr><td>Battery Connector</td><td>2-pin JST, 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery voltage monitoring via D16 ADC; battery level can be estimated from the measured voltage. Battery status detection is not supported.</td></tr>
-    <tr><td>Expansion Interfaces</td><td>1x I2C pads, 1x I2S pads, 1x SWD pads, 2x user-button pads</td></tr>
+    <tr><td>Expansion Interfaces</td><td>1x I2C Interface, 1x I2S Interface, 1x JTAG Interface, 2x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>26.4 × 51.4 × 12.6 mm</td></tr>
     <tr><td>Best For</td><td>Touch UI, portable HMI, local media & data logging</td></tr>
   </table>
@@ -74,7 +74,7 @@ The ESP32-S3 Plus uses D16 for voltage measurement. The voltage demo does not di
 
 Before we start, refer to the following image to understand the physical layout of the 1.47'' IPS Display.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Pin Map
 
@@ -217,6 +217,7 @@ If the board still doesn't show up, restart Arduino IDE and try again.
 - **🗃️[PCB Design Files]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[Schematic]** [XIAO 1.47'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[3D Model]** [XIAO 1.47'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
+- **🖨️[3D Printed Enclosure]** [XIAO 1.47'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843008-enclosure-for-xiao-147-ips-touch-display-esp32nrf5)
 - **📄[Datasheet]** [1.47 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
 - **💾[Factory Firmware]** [XIAO 1.47'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 

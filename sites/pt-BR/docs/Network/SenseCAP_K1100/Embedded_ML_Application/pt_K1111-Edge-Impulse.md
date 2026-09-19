@@ -9,21 +9,21 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-16'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/pt-br/K1111-Edge-Impulse/
 ---
-# Desenvolver aplicação Edge Impulse para a nuvem via Helium
+# Desenvolver aplicação Edge Impulse para a nuvem
 
-## Atualizável para Sensores Industriais
+## Atualizável para sensores industriais
 
 Com o [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) SenseCAP e o [registrador de dados S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html), você pode facilmente transformar o Grove em um sensor LoRaWAN®. A Seeed não apenas ajuda você na prototipagem, mas também oferece a possibilidade de expandir seu projeto com a série SenseCAP de robustos [sensores industriais](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
-O invólucro IP66, a configuração via Bluetooth, a compatibilidade com a rede global LoRaWAN®, bateria interna de 19 Ah e o forte suporte do APP fazem do [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) a melhor escolha para aplicações industriais. A série inclui sensores para umidade do solo, temperatura e umidade do ar, intensidade de luz, CO2, EC e uma estação meteorológica 8 em 1. Experimente o mais recente SenseCAP S210x para o seu próximo projeto industrial de sucesso.
+O invólucro IP66, a configuração via Bluetooth, a compatibilidade com a rede global LoRaWAN®, a bateria integrada de 19 Ah e o forte suporte do APP fazem do [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) a melhor escolha para aplicações industriais. A linha inclui sensores para umidade do solo, temperatura e umidade do ar, intensidade de luz, CO2, EC e uma estação meteorológica 8 em 1. Experimente o mais recente SenseCAP S210x em seu próximo projeto industrial de sucesso.
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
   <tbody>
     <tr>
-      <td colSpan={4} bgcolor="#0e3c49" align="center"><font color="white" size={4}><strong>Sensor Industrial SenseCAP</strong></font></td>
+      <td colSpan={4} bgcolor="#0e3c49" align="center"><font color="white" size={4}><strong>Sensor industrial SenseCAP</strong></font></td>
     </tr>
     <tr>
       <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2100.png" /></a></div>
@@ -36,10 +36,10 @@ O invólucro IP66, a configuração via Bluetooth, a compatibilidade com a rede 
       </td>
     </tr>
     <tr>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><strong>S2100 <br /> Data Logger</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 <br /> Temp &amp; Umidade do Ar</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><strong>S2100 <br /> Registrador de dados</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 <br /> Temperatura e umidade do ar</strong></a></td>
       <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank"><strong>S2102 <br /> Luz</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><strong>S2103 <br /> Temp &amp; Umidade do Ar &amp; CO2</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><strong>S2103 <br /> Temperatura e umidade do ar &amp; CO2</strong></a></td>
     </tr>
     <tr>
       <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2104.png" /></a></div>
@@ -52,10 +52,10 @@ O invólucro IP66, a configuração via Bluetooth, a compatibilidade com a rede 
       </td>
     </tr>
     <tr>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><strong>S2104 <br /> Umidade &amp; Temp do Solo</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><strong>S2105 <br /> Umidade &amp; Temp do Solo &amp; EC</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><strong>S2104 <br /> Umidade e temperatura do solo</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><strong>S2105 <br /> Umidade e temperatura do solo &amp; EC</strong></a></td>
       <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong>S2110 <br /> Controlador LoRaWAN®</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><strong>S2120 <br /> Estação Meteorológica 8 em 1</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><strong>S2120 <br /> Estação meteorológica 8 em 1</strong></a></td>
     </tr>
   </tbody></table>
 
@@ -63,26 +63,23 @@ O invólucro IP66, a configuração via Bluetooth, a compatibilidade com a rede 
 
 - [Wio Terminal](https://wiki.seeedstudio.com/pt-br/Wio-Terminal-Getting-Started/)
 - [Edge impluse](https://studio.edgeimpulse.com/)
-- [Helium](https://console.helium.com/)
 - [Wio Terminal Edge Impulse Continuous Motion Recognition with Built-in Accelerometer](https://wiki.seeedstudio.com/pt-br/Wio-Terminal-TinyML-EI-2/)
 - [Google Sheets](https://docs.google.com/spreadsheets/u/0/)
 - [Google Forms](https://docs.google.com/forms/u/0/)
 
 :::note
-Antes de iniciar esta seção, certifique-se de que você conhece o produto **Wio Terminal**
+Antes de iniciar esta seção, certifique-se de que você já conhece o produto **Wio Terminal**
 Para mais detalhes, leia
 
 - [**Wio Terminal Get Started**](https://wiki.seeedstudio.com/pt-br/Wio-Terminal-Getting-Started/)
-- [**Connecting-to-Helium**](https://wiki.seeedstudio.com/pt-br/Connecting-to-Helium/)
-- [**Integrate into Google Sheets via Helium**](https://wiki.seeedstudio.com/pt-br/Integrate_into_Google_Sheets_via_Helium/)
 :::
-Este artigo mostra uma solução para quem deseja usar edgeimpulse para gerar modelos e conectar com a nuvem. Em nossa demonstração, usaremos o Google Sheets. É a maneira direta e  
+Este artigo mostra uma solução para quem deseja usar o edgeimpulse para gerar modelos e conectar com a nuvem. Em nossa demonstração, usaremos o Google Sheets. É a forma direta e  
 
-## Configuração do Helium
+## Configuração
 
-### Passo 1. Criar uma Integração com suporte ao Google Form
+### Etapa 1. Criar uma integração com suporte ao Google Form
 
-Esta etapa é semelhante às etapas do artigo [**Integrate into Google Sheets via Helium**](https://wiki.seeedstudio.com/pt-br/Integrate_into_Google_Sheets_via_Helium/)
+Esta etapa é semelhante às etapas do artigo [**Integrate into Google Sheets**](https://wiki.seeedstudio.com/pt-br/Integrate_into_Google_Sheets_via_Helium/)
 
 O que precisamos fazer é nomear a integração e simplesmente salvar a configuração.
 
@@ -99,13 +96,13 @@ Conectando ao Google Form
 - Vincular com o ID do Google Form
   <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Form_3.png" /></div>
 
-### Passo 2. Criar uma Function com os recursos de api do Google Form e Decoder
+### Etapa 2. Criar uma Function com o suporte à API do Google Form e recursos de Decoder
 
 Certifique-se de que o Google Form está conectado com a Function, preenchida com o ID que obtivemos nas etapas acima.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Func.png" /></div>
 
-Precisamos criar uma Function com o suporte Decoder para nossa transferência de fluxo de dados, assim.
+Precisamos criar uma Function com suporte a Decoder para nossa transferência de fluxo de dados, assim:
 
 ```Javascript
 function Decoder(bytes, port) {
@@ -150,7 +147,7 @@ function Serialize(payload) {
 // DO NOT REMOVE: Google Form Function\
 ```
 
-### Passo 3 . Configurar os Flows
+### Etapa 3. Configurar os Flows
 
 Garantir a conexão
 
@@ -163,15 +160,15 @@ Para mais detalhes, leia:
 [Wio Terminal Edge Impulse Continuous Motion Recognition with Built-in Accelerometer](https://wiki.seeedstudio.com/pt-br/Wio-Terminal-TinyML-EI-2/)
 :::
 
-## Configuração do Ardiuno (Wio Terminal)
+## Configuração do Arduino (Wio Terminal)
 
 :::note
-Como os sensores e ambientes são diferentes, a gravação direta de modelos treinados em diferentes placas de suporte nem sempre é ideal. Modelos confiáveis precisam ser treinados pelos próprios usuários, portanto, apenas o código de teste é fornecido para uma experiência rápida.
+Como os sensores e ambientes são diferentes, gravar diretamente modelos treinados em diferentes placas de suporte nem sempre é o ideal. Modelos confiáveis precisam ser treinados pelos próprios usuários, portanto, apenas código de teste é fornecido para uma experiência rápida.
 :::
 
 ### Tenha uma experiência
 
-Depois que geramos a biblioteca a partir do Edge Impulse, precisamos modificar o código para envio de dados via Lora no Wio Terminal. Se você apenas quiser ter uma experiência, simplesmente copie o código abaixo e grave-o no seu Wio Terminal via Arduino IDE.
+Depois de gerarmos a biblioteca a partir do Edge Impulse, precisamos modificar o código para envio de dados via Lora no Wio Terminal. Se você só quiser ter uma experiência, simplesmente copie o código abaixo e grave-o no seu Wio Terminal via Arduino IDE.
 
 Grave o código de teste abaixo.
 
@@ -487,7 +484,7 @@ void loop()
 :::note
 Para mais detalhes, consulte a documentação abaixo.
 
-- [**Connecting-to-Helium**](https://wiki.seeedstudio.com/pt-br/Connecting-to-Helium/)
+- [**Connection**](https://wiki.seeedstudio.com/pt-br/Connecting-to-Helium/)
 :::
 Algo a que talvez devamos prestar mais atenção:
 
@@ -520,7 +517,7 @@ Algo a que talvez devamos prestar mais atenção:
 
 - Bloco de código de envio de dados:
 
-    Com a rede LoRa disponível, podemos usar a função para enviar a tag para a Helium e recuperá-la pelo Decoder que escrevemos na Helium.
+    Com a rede Lora disponível, podemos usar a função para enviar a tag e recuperá-la pelo Decoder que escrevemos.
 
     ```c++
     if (is_exist){
@@ -558,9 +555,9 @@ Algo a que talvez devamos prestar mais atenção:
     }
     ```
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
