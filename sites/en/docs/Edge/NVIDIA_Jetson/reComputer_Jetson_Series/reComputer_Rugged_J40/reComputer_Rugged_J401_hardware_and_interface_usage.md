@@ -11,10 +11,10 @@ image: https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png
 slug: /ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage
 sku: 100046979,100002634
 last_update:
-  date: 08/14/2026
+  date: 09/18/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-14'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/
 ---
 
@@ -24,7 +24,104 @@ This wiki introduces the various hardware and interfaces of reComputer Rugged J4
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="Image" width={800} height="auto" /></p>
 
-# Hardware Interface Overview
+## Hardware Overview
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
+  <p>Side View 1</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
+  <p>Side View 2</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
+  <p>Bottom View</p>
+</div>
+
+## Carrier Board Specifications
+
+<table>
+  <thead>
+    <tr>
+      <th colSpan={2}>Item</th>
+      <th>Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={8}>I/O</td>
+      <td>Ethernet</td>
+      <td>1× M12 GbE + 4× M12 GbE PSE (IEEE 802.3af, 15 W, 10/100/1000 Mbps)</td>
+    </tr>
+    <tr>
+      <td>USB</td>
+      <td>4× USB 3.2 Type-A (waterproof connectors) + 1× USB 3.0 Type-C (device / flashing) + 1× USB 2.0 Type-C (debug)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>1× HDMI 2.1 (waterproof cap)</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>2× CAN-FD (isolated) via M12 A-code</td>
+    </tr>
+    <tr>
+      <td>Serial</td>
+      <td>1× RS-232/422/485 via M12 A-code</td>
+    </tr>
+    <tr>
+      <td>DI/DO</td>
+      <td>2× DI + 2× DO via M12 A-code</td>
+    </tr>
+    <tr>
+      <td>SIM</td>
+      <td>1× Nano-SIM card slot</td>
+    </tr>
+    <tr>
+      <td>Antenna</td>
+      <td>4× SMA waterproof antenna connectors</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>M.2 Key M</td>
+      <td>1× M.2 Key M for NVMe 2280 SSD (128 GB SSD included)</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Expansion</td>
+      <td>M.2 Key E</td>
+      <td>1× M.2 Key E for M.2 2230 Wi-Fi module (Wi-Fi 6 module included)</td>
+    </tr>
+    <tr>
+      <td>M.2 Key B</td>
+      <td>1× M.2 Key B for 5G module</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>Onboard</td>
+      <td>SPI / I2C</td>
+      <td>1× SPI, 1× I2C (internal pin header)</td>
+    </tr>
+    <tr>
+      <td>RTC</td>
+      <td>RTC socket, 2-pin connector</td>
+    </tr>
+    <tr>
+      <td>LED</td>
+      <td>1× PWR LED (green), 1× SSD LED (green)</td>
+    </tr>
+    <tr>
+      <td>Button</td>
+      <td>1× Recovery button, 1× RST button</td>
+    </tr>
+    <tr>
+      <td>Power</td>
+      <td>Input</td>
+      <td>M12 A-code DC 19–48 V</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Power
 
@@ -197,6 +294,38 @@ This command provides comprehensive details about the 5G module, including its m
 The reComputer Rugged J401 provides 1x standard Gigabit Ethernet (10/100/1000M) RJ45 port (J35) and 4x Gigabit PSE (Power Sourcing Equipment) RJ45 ports (J36–J39). The standard Gigabit port is used for general network connectivity. The PSE ports support IEEE 802.3af/at standards, enabling power delivery over Ethernet to connected devices such as IP cameras and wireless access points, with a maximum output of 15.4W per port (802.3af). This makes it ideal for industrial, AMR, and outdoor edge computing applications, eliminating the need for separate power cabling. All Gigabit ports are derived from the PCIe controller within the Jetson Orin module and support 10/100/1000M auto-negotiation.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/16.jpg" alt="Image" width={800} height="auto" /></p>
+
+The Linux network device names map to the physical Ethernet ports as shown below. When viewing the Ethernet connectors from the same direction as the image, the mapping from left to right is `eth4`, `eth2`, `eth1`, `eth0`, and `eth3`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/jetson/rugged-ethernet-Interface.png" alt="Mapping between Linux Ethernet device names and physical ports on reComputer Rugged J401" width={900} height="auto" /></p>
+
+| Physical port position | Linux device name |
+| :--- | :--- |
+| First from the left | `eth4` |
+| Second from the left | `eth2` |
+| Center | `eth1` |
+| Second from the right | `eth0` |
+| First from the right | `eth3` |
+
+Use `ethtool` to check the negotiated bandwidth and physical link status of each Ethernet port. Install it first if the command is not available:
+
+```bash
+sudo apt update
+sudo apt install -y ethtool
+```
+
+Run the following command to display the speed, duplex mode, auto-negotiation status, and link state for all five physical Ethernet interfaces:
+
+```bash
+for interface in eth0 eth1 eth2 eth3 eth4; do
+  echo "=== ${interface} ==="
+  sudo ethtool "${interface}" | grep -E 'Speed:|Duplex:|Auto-negotiation:|Link detected:'
+done
+```
+
+:::note
+`Speed` shows the negotiated link bandwidth, such as `1000Mb/s`; `Duplex` should normally report `Full`; and `Link detected: yes` confirms that the corresponding physical port has an active connection. A disconnected port may report `Speed: Unknown!` and `Link detected: no`.
+:::
 
 ## USB
 

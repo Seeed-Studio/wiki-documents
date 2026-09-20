@@ -10,7 +10,7 @@ image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee
 slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
-  date: 09/01/2026
+  date: 09/18/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
 updatedAt: '2026-09-07'
@@ -181,9 +181,20 @@ The reComputer Rugged J4012 is an IP66-rated edge AI computer powered by NVIDIA 
 
 ## Hardware Overview
 
-:::note
-Hardware overview images will be added once the product is finalized.
-:::
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
+  <p>Side View 1</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
+  <p>Side View 2</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
+  <p>Bottom View</p>
+</div>
 
 **LED Indicators:**
 

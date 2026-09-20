@@ -10,10 +10,10 @@ image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee
 slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
-  date: 09/01/2026
+  date: 09/18/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-09-01'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
@@ -181,9 +181,20 @@ O reComputer Rugged J4012 é um computador de borda de IA com classificação IP
 
 ## Visão geral do hardware
 
-:::note
-As imagens de visão geral do hardware serão adicionadas assim que o produto for finalizado.
-:::
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
+  <p>Vista lateral 1</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
+  <p>Vista lateral 2</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
+  <p>Vista inferior</p>
+</div>
 
 **Indicadores LED:**
 
