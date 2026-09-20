@@ -16,7 +16,9 @@ createdAt: '2026-02-28'
 updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/
 ---
-  
+
+# Get Started with MeshCore on SenseCAP MeshTracker X1
+
 ## Firmware Flashing
 
 
