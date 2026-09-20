@@ -1,6 +1,6 @@
 ---
 description: Get Started with SenseCAP MeshTracker X1 for Meshcore. Guiding for device installation, firmware flashing and device connection.
-title: Get Started with MeshCore on SenseCAP MeshTracker X1
+title: Get Started with MeshCore
 keywords:
   - Tracker
   - Meshtastic
@@ -16,7 +16,9 @@ createdAt: '2026-02-28'
 updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/
 ---
-  
+
+# Get Started with MeshCore on SenseCAP MeshTracker X1
+
 ## Firmware Flashing
 
 
