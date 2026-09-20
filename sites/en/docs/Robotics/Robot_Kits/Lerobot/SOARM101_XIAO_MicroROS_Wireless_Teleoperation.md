@@ -1,6 +1,6 @@
 ---
-description: Build a low-latency wireless ROS 2 teleoperation link for an SO-ARM101 follower using the XIAO ESP32-C3 Bus Servo Adapter and micro-ROS over Wi-Fi UDP.
-title: Wireless SO-ARM101 Teleoperation with XIAO ESP32-C3 and micro-ROS
+description: Build a low-latency wired-or-wireless ROS 2 teleoperation link for an SO-ARM101 leader and wireless follower using XIAO ESP32-C3 Bus Servo Adapters and micro-ROS over Wi-Fi UDP.
+title: Wired and Wireless SO-ARM101 Teleoperation with XIAO ESP32-C3 and micro-ROS
 keywords:
   - SO-ARM101
   - XIAO ESP32-C3
@@ -12,14 +12,14 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /soarm101_xiao_microros_wireless_teleoperation
 last_update:
-  date: 07/24/2026
+  date: 09/20/2026
   author: linao681
 createdAt: '2026-07-24'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-20'
 url: https://wiki.seeedstudio.com/soarm101_xiao_microros_wireless_teleoperation/
 ---
 
-# Wireless SO-ARM101 Teleoperation with XIAO ESP32-C3 and micro-ROS
+# Wired and Wireless SO-ARM101 Teleoperation with XIAO ESP32-C3 and micro-ROS
 
 :::note Community Contribution
 This tutorial is a community contribution by [@linao681](https://github.com/linao681). Thanks for sharing this project with the Seeed Studio community!
@@ -27,7 +27,12 @@ This tutorial is a community contribution by [@linao681](https://github.com/lina
 
 ## Introduction
 
-This tutorial shows how to control an SO-ARM101 follower wirelessly from an SO-ARM101 leader. The leader is connected to an Ubuntu computer through a standard USB bus-servo driver board. The follower uses the Seeed Studio XIAO ESP32-C3 Bus Servo Adapter and communicates with ROS 2 through micro-ROS over Wi-Fi UDP.
+This tutorial documents two supported ways to control an SO-ARM101 follower from an SO-ARM101 leader:
+
+1. **Wired leader + wireless follower:** the leader uses a standard USB bus-servo driver board.
+2. **Wireless leader + wireless follower:** each arm uses a Seeed Studio XIAO ESP32-C3 Bus Servo Adapter.
+
+In both modes, the follower communicates with ROS 2 through micro-ROS over Wi-Fi UDP. The wireless leader XIAO reads the six leader actuator positions and publishes read-only state; it never writes position commands to the leader arm.
 
 The implementation provides:
 
@@ -36,6 +41,9 @@ The implementation provides:
 - LeRobot leader-to-follower joint mapping;
 - a startup handshake that prevents an unexpected position jump;
 - calibration, joint-limit, command-step, and bus-health checks;
+- sequence checks, feedback watchdogs, safe hold-last-command behavior, and session recovery;
+- runtime Agent discovery from the computer's current Wi-Fi address, so a hotspot address change does not require reflashing;
+- a wired leader fallback for diagnosis and operation when the wireless leader is unavailable;
 - automatic preflight checks and one-command teleoperation startup.
 
 The complete source code is available in the [soarm101-drone-teleop repository](https://github.com/linao681/soarm101-drone-teleop).
@@ -50,11 +58,9 @@ This project was developed as a ground-tested prototype for a future drone-mount
 
 ```text
 SO-ARM101 leader
-  │  Feetech UART bus
-  ▼
-USB bus-servo driver
-  │  USB
-  ▼
+  ├─ wireless: leader XIAO ── Wi-Fi / micro-ROS ──┐
+  └─ wired: USB bus-servo driver ────────────────┤
+                                                  ▼
 Ubuntu 22.04 PC
   ├─ LeRobot reads the leader
   ├─ ROS 2 Humble bridge publishes /joint_command
@@ -62,7 +68,7 @@ Ubuntu 22.04 PC
               │
               │  2.4 GHz Wi-Fi LAN
               ▼
-XIAO ESP32-C3 Bus Servo Adapter
+follower XIAO ESP32-C3 Bus Servo Adapter
   ├─ micro-ROS publishes /joint_states
   └─ 1 Mbps UART Sync Read/Write
               │
@@ -76,8 +82,9 @@ The PC and XIAO must be connected to the same local network. A phone hotspot or 
 
 - 1 × SO-ARM101 leader
 - 1 × SO-ARM101 follower
-- 1 × standard USB bus-servo driver board for the leader
-- 1 × Seeed Studio XIAO ESP32-C3 Bus Servo Adapter for the follower
+- 1 × standard USB bus-servo driver board for leader calibration and wired fallback
+- 1 × XIAO ESP32-C3 Bus Servo Adapter for the follower
+- 1 × additional XIAO ESP32-C3 Bus Servo Adapter for wireless leader mode
 - 2 × correctly rated arm power supplies
 - 1 × Ubuntu 22.04 computer
 - 1 × 2.4 GHz Wi-Fi network
@@ -126,12 +133,14 @@ The important project paths are:
 
 ```text
 firmware/xiao_soarm/          PlatformIO firmware for the wireless follower
+firmware/xiao_soarm_leader/   PlatformIO firmware for the wireless leader
 tools/wireless_teleoperate.py ROS 2 and LeRobot teleoperation bridge
+tools/soarm_agent_discovery.py Agent discovery service for both XIAOs
 start_soarm_demo.sh           network, Agent, arm, and topic preflight checks
 cali/                         leader and follower calibration files
 ```
 
-The repository includes a prebuilt `libmicroros.a` for the ESP32-C3 RISC-V architecture, so a normal user does not need to cross-compile micro-ROS.
+The repository includes separate PlatformIO firmware projects for the wireless follower and wireless leader. The projects include the required ESP32-C3 micro-ROS libraries, so a normal user does not need to cross-compile micro-ROS.
 
 ## Step 2: Calibrate Both Arms
 
@@ -170,7 +179,7 @@ Calibration values are specific to one physical arm. Do not control another foll
 
 ### Copy the follower calibration into the firmware
 
-The XIAO validates the servo EEPROM before enabling torque. Open:
+The follower XIAO validates the servo EEPROM before enabling torque. Open:
 
 ```text
 firmware/xiao_soarm/src/servo_bus.cpp
@@ -215,20 +224,22 @@ for key in ("homing_offset", "range_min", "range_max"):
 PY
 ```
 
-## Step 3: Configure Wi-Fi
+## Step 3: Configure Wi-Fi and Agent discovery
 
-Connect the Ubuntu computer to the Wi-Fi network that will be used by the XIAO. Find the computer's IPv4 address:
+Connect the Ubuntu computer and both XIAOs to the same 2.4 GHz Wi-Fi network. The XIAO firmware stores only the SSID and password. The computer's current Agent address is announced at runtime by the launcher and discovery service; do not hard-code the computer IP into a public firmware file.
 
 ```bash
 ip -4 address
 ```
 
-Enter the firmware directory and create the private configuration file:
+Enter the follower firmware directory and create the private configuration file:
 
 ```bash
 cd firmware/xiao_soarm
 cp src/wifi_config.example.h src/wifi_config.h
 ```
+
+For wireless leader mode, repeat the same step under `firmware/xiao_soarm_leader`.
 
 Edit `src/wifi_config.h`:
 
@@ -237,10 +248,11 @@ Edit `src/wifi_config.h`:
 
 const char* WIFI_SSID = "YOUR_2G4_WIFI_SSID";
 const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
-const char* AGENT_IP = "YOUR_UBUNTU_PC_IP";
 ```
 
-`wifi_config.h` is ignored by Git and must never be committed to a public repository.
+For the leader firmware, use the corresponding `#define WIFI_SSID` and `#define WIFI_PASS` placeholders in `firmware/xiao_soarm_leader/src/wifi_config.example.h`.
+
+`wifi_config.h` is ignored by Git and must never be committed to a public repository. The current launcher uses Agent discovery to announce the computer's current Wi-Fi address, so a hotspot IP change normally does not require reflashing either XIAO.
 
 :::tip
 
@@ -248,15 +260,28 @@ The ESP32-C3 uses 2.4 GHz Wi-Fi. If a phone hotspot supports both bands, select 
 
 :::
 
-## Step 4: Build and Flash the XIAO
+## Step 4: Build and Flash the XIAOs
 
-Connect the XIAO to the computer through USB, then run:
+Connect one XIAO to the computer through USB at a time. Run the native tests and the ESP32-C3 build before uploading:
 
 ```bash
-python3 -m platformio run
-python3 -m platformio run --target upload
-python3 -m platformio device monitor --baud 115200
+(cd firmware/xiao_soarm && \
+  pio test -e native && \
+  pio run -e seeed_xiao_esp32c3)
+(cd firmware/xiao_soarm_leader && \
+  pio test -e native && \
+  pio run -e seeed_xiao_esp32c3)
 ```
+
+After the tests and builds pass, upload the selected firmware:
+
+```bash
+cd firmware/xiao_soarm
+pio run -e seeed_xiao_esp32c3 --target upload
+pio device monitor -b 115200
+```
+
+For wireless leader mode, run the upload and monitor commands from `firmware/xiao_soarm_leader` instead.
 
 Power the follower arm with its external supply. A successful startup contains messages similar to:
 
@@ -269,18 +294,18 @@ Waiting for micro-ROS Agent...
 
 `0x3f` means all six servo IDs responded. If the calibration does not match, the firmware still reports state but rejects motion commands.
 
-After flashing, the USB cable is required only for serial monitoring when the XIAO is powered correctly by the adapter. Keep the follower's external servo power connected.
+After flashing, the USB cable is required only for serial monitoring. Keep the corresponding arm's external servo power connected. The leader firmware disables torque and publishes position/state only; the follower firmware is the component that executes position commands.
 
-## Step 5: Start the micro-ROS Agent
+## Step 5: Start the micro-ROS Agent and preflight
 
-On the Ubuntu computer, open a new terminal:
+From the project root, the launcher can start the Agent and discovery service:
 
 ```bash
 source /opt/ros/humble/setup.bash
-snap run micro-ros-agent udp4 --port 8888
+./start_soarm_demo.sh --leader wireless --check
 ```
 
-When the XIAO discovers the Agent, its serial monitor should report:
+The launcher starts the Agent and discovery service, then checks the required ROS 2 topics. When the XIAOs discover the Agent, their serial monitors should report:
 
 ```text
 micro-ROS ready
@@ -303,9 +328,9 @@ ros2 topic hz /joint_states
 
 Do not send arbitrary joint values before completing the current-pose startup handshake.
 
-## Step 6: Run Wireless Leader-Follower Teleoperation
+## Step 6: Run Wired or Dual-Wireless Teleoperation
 
-Connect the leader to the computer through its normal USB bus-servo driver and power it with the correct external supply.
+Choose one of the two leader inputs. For wired mode, connect the leader to the computer through its normal USB bus-servo driver. For wireless mode, power the leader with its external supply and leave its XIAO connected to the configured Wi-Fi network.
 
 Find its stable serial path:
 
@@ -317,21 +342,19 @@ From the project root, export the local configuration:
 
 ```bash
 export SOARM_WIFI_SSID="YOUR_2G4_WIFI_SSID"
-export SOARM_AGENT_IP="YOUR_UBUNTU_PC_IP"
-export SOARM_LEADER_PORT="/dev/serial/by-id/YOUR_LEADER_ADAPTER"
 export SOARM_PYTHON="$(command -v python)"
 ```
 
 First run the non-moving preflight check:
 
 ```bash
-./start_soarm_demo.sh --check
+./start_soarm_demo.sh --leader wireless --check
 ```
 
 It verifies:
 
 - the Wi-Fi SSID and Agent IP;
-- the leader USB adapter;
+- the selected leader input (`wireless` checks `/leader/raw_state` and `/leader/status`; `wired` checks the USB adapter when starting);
 - the leader and follower calibration files;
 - the micro-ROS Agent;
 - live follower feedback on `/joint_states`;
@@ -340,10 +363,13 @@ It verifies:
 If all checks pass, start teleoperation:
 
 ```bash
-./start_soarm_demo.sh
+./start_soarm_demo.sh --leader wireless
+
+# Wired leader fallback:
+./start_soarm_demo.sh --leader wired
 ```
 
-The bridge reads the initial follower pose and repeatedly publishes the same pose before enabling torque. It then uses relative mapping, so the follower starts where it is and follows changes made to the leader. Press `Ctrl+C` to stop.
+The bridge reads the initial follower pose and repeatedly publishes the same pose before enabling torque. It then uses relative mapping, so the follower starts where it is and follows changes made to the selected leader. If the wireless session recovers, the bridge blends toward the leader's current pose before resuming normal commands. Press `Ctrl+C` to stop; the follower holds its last commanded position.
 
 :::warning
 
@@ -370,7 +396,7 @@ These software checks supplement but do not replace a physical emergency stop.
 ### The XIAO stays at `Waiting for micro-ROS Agent`
 
 - Confirm that the computer and XIAO are on the same LAN.
-- Verify that `AGENT_IP` is the computer's current Wi-Fi IPv4 address.
+- Confirm that the launcher reports the current Wi-Fi IPv4 address and starts Agent discovery.
 - Confirm that the Agent is using UDP port `8888`.
 - Check whether the hotspot enables client isolation.
 - If a firewall is active, allow UDP port `8888`.
@@ -396,19 +422,28 @@ The servo EEPROM does not match the values compiled into `servo_bus.cpp`. Reconn
 - watch the RSSI value in the serial diagnostic output;
 - compare the result with the servos powered off to identify possible power or electromagnetic interference.
 
+### The wireless leader is not ready
+
+- confirm that the leader XIAO publishes both `/leader/raw_state` and `/leader/status`;
+- confirm that all six leader servos respond and torque is disabled;
+- confirm that `cali/leader_recal.json` matches the physical leader;
+- use `./start_soarm_demo.sh --leader wired` as a temporary fallback.
+
 ### A joint direction or range is incorrect
 
 Recalibrate both arms and confirm the joint order in both JSON files. Also verify that the follower arrays in `servo_bus.cpp` came from the same physical follower currently connected to the XIAO.
 
-## Tested Result
+## Validation scope
 
-In the reference setup:
+The project has been exercised in the reference setup with:
 
 - all six follower servos were detected (`servo_mask=0x3f`);
 - `/joint_states` was published at approximately 20 Hz;
 - the leader bridge published commands at 30 Hz;
 - all six joints followed together over a phone hotspot;
 - the XIAO continued operating without its USB data cable after flashing and external arm power was connected.
+
+The dual-wireless path and the wired fallback are both supported by the current launcher. A ten-minute wireless endurance run is not claimed by this guide; perform that test separately if you need a long-duration reliability result.
 
 ## References
 
