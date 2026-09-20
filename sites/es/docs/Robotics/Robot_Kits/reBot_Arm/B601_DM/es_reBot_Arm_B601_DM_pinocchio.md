@@ -1,6 +1,6 @@
 ---
 description: Este tutorial presenta cómo usar Pinocchio y MeshCat para análisis cinemático y visualización en el brazo robótico reBot Arm B601-DM.
-title: reBot Arm B601-DM Pinocchio y MeshCat
+title: reBot Arm B601-DM Pinocchio & MeshCat
 keywords:
   - Pinocchio
   - MeshCat
@@ -24,7 +24,7 @@ import '/src/css/rebot-wiki-style.css';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# reBot Arm B601-DM Pinocchio y MeshCat
+# reBot Arm B601-DM Pinocchio & MeshCat
 
 <RebotDmDocNav />
 
@@ -46,10 +46,10 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <p align="center">
     <a href="./LICENSE">
-        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Licencia: MIT" />
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Versión de Python" />
-    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Plataforma" />
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
     <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>
 
@@ -78,7 +78,7 @@ Este proyecto combina las potentes capacidades de cálculo de Pinocchio con la v
 ## Características del proyecto
 
 1. **Análisis cinemático completo**
-   Soporta cálculos de cinemática directa (FK) y cinemática inversa (IK), capaz de resolver en tiempo real la pose del efector final del brazo robótico.
+   Soporta cálculos de Cinemática Directa (FK) y Cinemática Inversa (IK), capaz de resolver en tiempo real la pose del efector final del brazo robótico.
 
 2. **Visualización 3D en tiempo real**
    Muestra en tiempo real el estado del brazo robótico y las trayectorias de movimiento mediante MeshCat en el navegador, sin necesidad de software adicional.
@@ -86,7 +86,7 @@ Este proyecto combina las potentes capacidades de cálculo de Pinocchio con la v
 3. **Planificación y seguimiento de trayectorias**
    Implementa planificación de trayectorias geodésicas en SE(3), soportando control de seguimiento CLIK (Cinemática Inversa en Bucle Cerrado).
 
-4. **Control con compensación de gravedad**
+4. **Control de compensación de gravedad**
    Calcula el par de gravedad de las articulaciones basado en el modelo dinámico de Pinocchio, logrando el efecto de “flotación” del brazo robótico.
 
 5. **Código abierto y extensible**
@@ -145,16 +145,16 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
 | Cable USB-C | 1 | ✅ |
 | Pinza | 1 | ✅ |
 
-## Requisitos del entorno
+## Requisitos de entorno
 
-:::caution Prerrequisito — Completa primero la guía de inicio rápido del brazo
+:::caution Prerrequisito — Completa primero la guía rápida del brazo
 Antes de continuar con este tutorial, **debes** completar de principio a fin el documento **[reBot Arm B601-DM Quick Start](/es/rebot_b601_dm_getting_started)**, incluyendo:
 
 - Desempaquetado del hardware, cableado y lista de verificación de encendido
 - Permisos del dispositivo serie / CAN (`sudo chmod 666 /dev/ttyACM0` o `/dev/can0`)
 - Calibración a cero de todas las articulaciones (`2_zero_and_read.py`) y verificación de que el brazo puede ser comandado en modo MIT / POS_VEL
 
-Este tutorial asume que el brazo ya responde en el bus, que las articulaciones están puestas a cero y que el operador está familiarizado con los límites de seguridad relevantes. Saltarse la guía de inicio rápido puede llevar a motores mal configurados, articulaciones bloqueadas o caídas del brazo.
+Este tutorial asume que el brazo ya responde en el bus, que las articulaciones están puestas a cero y que el operador está familiarizado con los límites de seguridad relevantes. Saltarse la guía rápida puede llevar a motores mal configurados, articulaciones bloqueadas o caídas del brazo.
 :::
 
 | Elemento | Requisito |
@@ -184,7 +184,7 @@ Después de la instalación, ejecuta el siguiente comando para verificar que `uv
 uv --version
 ```
 
-Si la instalación fue correcta, deberías ver una salida similar a la siguiente (la versión y la plataforma pueden ser diferentes):
+Si la instalación fue correcta, deberías ver una salida similar a la siguiente (la versión y la plataforma pueden diferir):
 
 ```text
 uv 0.11.31 (x86_64-unknown-linux-gnu)
@@ -213,23 +213,23 @@ uv sync
 </section>
 </div>
 
-## Ajuste de parámetros del controlador MIT / POS_VEL {#ajuste-de-parámetros-del-controlador-MIT-/-POS_VEL}
+## Ajuste de parámetros del controlador MIT / POS_VEL {#tune-controller-params}
 
 Esta sección explica **cómo modificar** los parámetros del controlador para cada articulación del brazo bajo **modo MIT** y **modo POS_VEL**, y cómo hacer que los cambios surtan efecto.
 
 :::tip Esta sección solo cubre “dónde / cómo cambiar”, no “qué valor usar”
-Parámetros adecuados solo se pueden obtener mediante **ajuste sobre el hardware**. Esta sección solo cubre: dónde residen los parámetros, qué controla cada campo y cómo hacer efectivos los cambios y verificarlos. Para estrategias de ajuste específicas (por ejemplo, prueba y error, Ziegler‑Nichols), consulta referencias generales de control de motores.
+Parámetros adecuados solo se pueden obtener mediante **ajuste sobre el hardware**. Esta sección solo cubre: dónde residen los parámetros, qué controla cada campo y cómo hacer efectivos los cambios y verificarlos. Para estrategias específicas de ajuste (por ejemplo, prueba y error, Ziegler‑Nichols), consulta referencias generales de control de motores.
 :::
 
 ### Ubicación del archivo de configuración
 
-| Versión de hardware | Archivo de configuración del motor | Entrada de cambio |
+| Versión de hardware | Archivo de configuración del motor | Entrada de conmutación |
 | --- | --- | --- |
 | **reBot Arm B601-DM** (este documento) | `config/rebotarm_dm.yaml` | Establece `hardware_yaml: "rebotarm_dm.yaml"` en `config/rebotarm.yaml` |
 | **reBot Arm B601-RS** | `config/rebotarm_rs.yaml` | Establece `hardware_yaml: "rebotarm_rs.yaml"` en `config/rebotarm.yaml` |
 
 :::caution No edites `rebotarm.yaml` directamente
-Ese archivo solo contiene una única línea `hardware_yaml: ...`; todos los parámetros del motor se encuentran en `rebotarm_dm.yaml` / `rebotarm_rs.yaml`.
+Ese archivo solo contiene una única línea `hardware_yaml: ...`; todos los parámetros de los motores se encuentran en `rebotarm_dm.yaml` / `rebotarm_rs.yaml`.
 :::
 
 ### Estructura del archivo de configuración
@@ -279,11 +279,11 @@ Cómo localizar:
 | `vlim` | Límite de velocidad, restringe la velocidad máxima de movimiento. |
 
 :::warning Las definiciones de campos difieren entre proveedores
-Los motores Damiao (DM) y Robostride (RS) usan unidades de protocolo diferentes, por lo que **el mismo nombre de campo no es comparable entre proveedores**. Modificar `vel_kp` de RS y modificar `vel_kp` de DM significan cosas distintas. Interpreta cada YAML según su propio orden de campos, no compares valores entre archivos de configuración.
+Los motores Damiao (DM) y Robostride (RS) usan unidades diferentes a nivel de protocolo, por lo que **el mismo nombre de campo no es comparable entre proveedores**. Modificar `vel_kp` de RS y modificar `vel_kp` de DM significan cosas distintas. Interpreta cada YAML según su propio orden de campos, no compares valores entre archivos de configuración.
 :::
 
 :::caution Limita el alcance de las pruebas antes de ajustar
-Cambios grandes de `kp` / `kd` en varias articulaciones pueden causar oscilación inmediata, sobrecorriente o colisiones con topes mecánicos si la dirección o el signo de alguna articulación es incorrecto. Antes de ajustar, despeja el espacio de trabajo del brazo y planea probar **una articulación y un modo a la vez, en pequeños pasos**.
+Cambios grandes de `kp` / `kd` en varias articulaciones pueden causar oscilación inmediata, sobrecorriente o colisiones con topes mecánicos si cualquier dirección o signo de articulación es incorrecto. Antes de ajustar, despeja el espacio de trabajo del brazo y planea probar **una articulación y un modo a la vez, en pasos pequeños**.
 :::
 
 ### Procedimiento de edición
@@ -298,8 +298,8 @@ Cambios grandes de `kp` / `kd` en varias articulaciones pueden causar oscilació
 
    - Solo cambia la articulación que necesites ajustar (por ejemplo, `joint1`); deja sin tocar las articulaciones no relacionadas;
    - Dentro de una articulación, solo cambia el modo que necesites ajustar (MIT o POS_VEL); no modifiques los campos del otro modo sin motivo.
-3. **Conserva la indentación YAML**: 2 espacios por nivel, claves separadas de los valores por `:`. Una indentación incorrecta hace que falle el análisis de `yaml.safe_load`, y todos los parámetros volverán a los valores predeterminados.
-4. **Reinicia el script después de guardar**. El YAML se lee una vez al inicio del script; **las ediciones en tiempo de ejecución no surten efecto de inmediato**.
+3. **Conserva la indentación YAML**: 2 espacios por nivel, claves separadas de valores por `:`. Una indentación incorrecta hace que falle el análisis de `yaml.safe_load`, y todos los parámetros volverán a los valores predeterminados.
+4. **Reinicia el script después de guardar**. El YAML se lee una vez al iniciar el script; **las ediciones en tiempo de ejecución no surten efecto de inmediato**.
 5. **Verificación de una sola articulación**: usa un script como `3_mit_control.py` (MIT) / `4_pos_vel_control.py` (POS_VEL) para verificar el cambio con un **pequeño movimiento de una sola articulación** antes de hacer una prueba con todo el brazo.
 
 ### Verificar que el cambio surtió efecto
@@ -346,25 +346,25 @@ uv run python example/0x01damiao_test.py
 
 | Command | Description |
 | ------ | ------ |
-| `enable` / `disable` | Habilitar/Deshabilitar motor |
-| `set_zero` | Establecer posición cero |
-| `state` | Ver estado |
-| `ping` | Hacer ping al motor para obtener respuesta |
-| `clear_error` | Borrar errores del motor |
-| `mode <mit/posvel/vel>` | Cambiar modo de control |
-| `mit <pos> [vel] [kp] [kd]` | Comando en modo MIT |
-| `posvel <pos> [vlim]` | Comando en modo POS_VEL |
-| `vel <velocity>` | Modo de velocidad pura |
-| `read_param <id> [type]` | Leer parámetros del motor |
-| `write_param <id> <value> [type]` | Escribir parámetros del motor |
-| `loop` | Entrar en modo de control en bucle |
-| `q` / `quit` | Salir |
+| `enable` / `disable` | Enable/Disable motor |
+| `set_zero` | Set zero position |
+| `state` | View status |
+| `ping` | Ping motor to get response |
+| `clear_error` | Clear motor errors |
+| `mode <mit/posvel/vel>` | Switch control mode |
+| `mit <pos> [vel] [kp] [kd]` | MIT mode command |
+| `posvel <pos> [vlim]` | POS_VEL mode command |
+| `vel <velocity>` | Pure velocity mode command |
+| `read_param <id> [type]` | Read motor parameters |
+| `write_param <id> <value> [type]` | Write motor parameters |
+| `loop` | Enter loop control mode |
+| `q` / `quit` | Quit |
 
 ---
 
 **Calibración de cero y monitorización de ángulo (`2_zero_and_read.py`)**
 
-Establece automáticamente los ceros de todas las articulaciones y muestra los ángulos de las articulaciones en tiempo real.
+Establece automáticamente el cero de todas las articulaciones y muestra los ángulos articulares en tiempo real.
 
 **Cómo ejecutar**:
 
@@ -386,19 +386,19 @@ uv run python example/2_zero_and_read.py
 <p className="rebot-step-label">Demo 3 · 3_mit_control.py</p>
 
 :::warning Opcional — MIT es el modo alternativo en DM
-Para el **reBot Arm B601-DM**, POS_VEL (Posición‑Velocidad) es en general el modo de control de articulaciones más adecuado; el protocolo del motor Damiao admite de forma nativa el control híbrido posición‑velocidad con limitación de velocidad integrada. El modo MIT suele requerir un ajuste más cuidadoso de `kp` / `kd`.
+Para el **reBot Arm B601-DM**, POS_VEL (Position‑Velocity) suele ser el modo de control de articulaciones más adecuado; el protocolo del motor Damiao admite de forma nativa el control híbrido posición‑velocidad con limitación de velocidad integrada. El modo MIT normalmente requiere un ajuste más cuidadoso de `kp` / `kd`.
 
-Este ejemplo no es necesario para completar el tutorial. A menos que necesites específicamente depurar el modo MIT, **omite este ejemplo** y usa el ejemplo POS_VEL de abajo. Si tu objetivo es un movimiento suave del efector final a lo largo de una trayectoria planificada, ve directamente a [Control de trayectoria suave con IK (`8_arm_traj_control.py`)](#demo8-traj-control).
+Este ejemplo no es necesario para completar el tutorial. A menos que necesites específicamente depurar el modo MIT, **omite este ejemplo** y usa el ejemplo POS_VEL de abajo. Si tu objetivo es un movimiento suave del efector final a lo largo de una trayectoria planificada, ve directamente a [Control IK de trayectoria suave (`8_arm_traj_control.py`)](#demo8-traj-control).
 :::
 
 Introduce ángulos objetivo para todas las articulaciones para completar el control del motor en modo de control MIT, que se usa normalmente para control de fuerza, control de impedancia o escenarios que requieren alta respuesta dinámica.
 
 :::danger Antes de ejecutar — Este ejemplo no tiene planificación de trayectoria suave
-Este ejemplo envía ángulos objetivo de articulación directamente a los motores, **sin planificación de trayectoria ni de velocidad**. Un cambio grande del objetivo puede causar un movimiento repentino a alta velocidad y activar la protección por sobrecorriente.
+Este ejemplo envía ángulos articulares objetivo directamente a los motores, **sin planificación de trayectoria ni de velocidad**. Un cambio grande del objetivo puede causar un movimiento repentino a alta velocidad y activar la protección por sobrecorriente.
 
-- Ejecútalo solo cuando necesites verificar el control de articulaciones MIT de bajo nivel. Comienza moviendo una articulación solo 5–10 grados y luego aumenta el cambio gradualmente después de confirmar la respuesta y la dirección;
-- Si necesitas una trayectoria suave completa, omite este ejemplo y ve a [Control de trayectoria suave con IK (`8_arm_traj_control.py`)](#demo8-traj-control);
-- Limpia el espacio de trabajo del brazo antes de ejecutar y asegúrate de poder cortar la alimentación de inmediato.
+- Ejecútalo solo cuando necesites verificar el control de articulaciones MIT de bajo nivel. Empieza moviendo una articulación solo 5–10 grados y luego aumenta el cambio gradualmente después de confirmar la respuesta y la dirección;
+- Si necesitas una trayectoria suave completa, omite este ejemplo y ve a [Control IK de trayectoria suave (`8_arm_traj_control.py`)](#demo8-traj-control);
+- Despeja el espacio de trabajo del brazo antes de ejecutar y asegúrate de poder cortar la alimentación de inmediato.
 :::
 
 <details className="rebot-demo-details">
@@ -422,17 +422,17 @@ uv run python example/3_mit_control.py
 <section className="rebot-step-item rebot-step-item--optional">
 <span className="rebot-step-number">4</span>
 <div className="rebot-step-content">
-<h4>Modo de control Posición‑Velocidad</h4>
+<h4>Modo de control posición‑velocidad</h4>
 <p className="rebot-step-label">Demo 4 · 4_pos_vel_control.py</p>
 
-Introduce ángulos objetivo para todas las articulaciones para controlar los motores en modo híbrido POS_VEL (Posición‑Velocidad). La limitación de velocidad integrada de Damiao puede reducir el impacto de los cambios de objetivo, pero este ejemplo en sí no proporciona una planificación completa de trayectoria suave.
+Introduce ángulos objetivo para todas las articulaciones para controlar los motores en modo híbrido POS_VEL (Position‑Velocity). La limitación de velocidad integrada de Damiao puede reducir el impacto de los cambios de objetivo, pero este ejemplo en sí no proporciona una planificación completa de trayectoria suave.
 
 :::danger Opcional — La limitación de velocidad no es una planificación de trayectoria completa
-Aunque POS_VEL es el modo de control de articulaciones recomendado para DM, este ejemplo aún actualiza directamente los objetivos de posición de las articulaciones y no planifica la trayectoria intermedia. Un cambio grande del objetivo aún puede causar movimiento repentino, colisión o sobrecorriente.
+Aunque POS_VEL es el modo de control de articulaciones recomendado para DM, este ejemplo sigue actualizando directamente los objetivos de posición articular y no planifica la trayectoria intermedia. Un cambio grande del objetivo aún puede causar movimiento repentino, colisión o sobrecorriente.
 
-- Este ejemplo no es necesario para completar el tutorial. Si solo necesitas un movimiento suave del efector final, **omite este ejemplo** y ve directamente a [Control de trayectoria suave con IK (`8_arm_traj_control.py`)](#demo8-traj-control);
-- Al verificar el control de articulaciones POS_VEL, comienza moviendo una articulación solo 5–10 grados y luego aumenta gradualmente el cambio de objetivo;
-- Limpia el espacio de trabajo del brazo antes de ejecutar y asegúrate de poder cortar la alimentación de inmediato.
+- Este ejemplo no es necesario para completar el tutorial. Si solo necesitas un movimiento suave del efector final, **omite este ejemplo** y ve directamente a [Control IK de trayectoria suave (`8_arm_traj_control.py`)](#demo8-traj-control);
+- Al verificar el control articular POS_VEL, empieza moviendo una articulación solo 5–10 grados y luego aumenta gradualmente el cambio de objetivo;
+- Despeja el espacio de trabajo del brazo antes de ejecutar y asegúrate de poder cortar la alimentación de inmediato.
 :::
 
 <details className="rebot-demo-details">
@@ -465,9 +465,9 @@ uv run python example/4_pos_vel_control.py
 <h4>Pruebas de cinemática directa</h4>
 <p className="rebot-step-label">Demo 5 · 5_fk_test.py</p>
 
-Calcular la pose del efector final en función de los ángulos de las articulaciones.
+Calcular la pose del efector final a partir de los ángulos articulares.
 
-**Entrada**: 6 ángulos de articulación (grados)
+**Entrada**: 6 ángulos articulares (grados)
 
 **Salida**:
 
@@ -507,12 +507,12 @@ uv run python example/5_fk_test.py
 <h4>Pruebas de cinemática inversa</h4>
 <p className="rebot-step-label">Demo 6 · 6_ik_test.py</p>
 
-Resolver los ángulos de las articulaciones en función de la pose deseada del efector final.
+Resolver los ángulos articulares a partir de la pose deseada del efector final.
 
 **Formato de entrada**:
 
 - Solo posición: `<x> <y> <z>` (metros)
-- Posición + Orientación: `<x> <y> <z> <roll> <pitch> <yaw>` (grados)
+- Posición + orientación: `<x> <y> <z> <roll> <pitch> <yaw>` (grados)
 
 **Ejemplo**:
 
@@ -574,7 +574,7 @@ Utiliza cinemática inversa (IK) en modo MIT para especificar las coordenadas 3D
 - Introduce `end_state`: Ver las coordenadas actuales reales del efector final (m) y los ángulos de Euler (rad) en el espacio.
 
 :::danger Opcional — Este ejemplo no tiene planificación de trayectoria suave
-Este ejemplo envía la solución de IK directamente como objetivo de articulaciones, sin **planificación de trayectoria ni de velocidad**. Un gran cambio en la pose objetivo puede causar un movimiento repentino a alta velocidad y activar la protección por sobrecorriente.
+Este ejemplo envía la solución de IK directamente como objetivo de articulaciones, **sin planificación de trayectoria ni de velocidad**. Un gran cambio en la pose objetivo puede causar un movimiento repentino a alta velocidad y activar la protección por sobrecorriente.
 
 - Este ejemplo no es necesario para completar el tutorial. En la mayoría de los casos, **omite este ejemplo** y utiliza la siguiente sección, [Control IK con trayectoria suave (`8_arm_traj_control.py`)](#demo8-control-de-trayectoria), que incluye planificación de aceleración/desaceleración de mínimo tirón;
 - Ejecútalo solo cuando necesites comparar o depurar el control IK sin planificación de trayectoria. Mantén el primer objetivo dentro de 5–10 cm de la posición actual del efector final;
@@ -609,7 +609,7 @@ uv run python example/7_arm_ik_control.py
 <h4 id="demo8-traj-control">Control de cinemática inversa con trayectoria suave</h4>
 <p className="rebot-step-label">Demo 8 · 8_arm_traj_control.py</p>
 
-Utiliza cinemática inversa (IK) en modo MIT para planificar automáticamente una trayectoria de movimiento con aceleración/desaceleración uniforme o suave dentro del tiempo objetivo, evitando vibraciones severas en las articulaciones.
+Utiliza cinemática inversa (IK) en modo MIT para planificar automáticamente una trayectoria de movimiento con aceleración/desaceleración uniforme o suave dentro del tiempo objetivo, evitando fuertes vibraciones en las articulaciones.
 
 **Formato de entrada**:
 
@@ -637,7 +637,7 @@ uv run python example/8_arm_traj_control.py
 ```
 
 :::tip ¿Qué pasa si observo desviación de la pose?
-Si notas que la **pose leída del efector final** difiere de la **pose objetivo ordenada**, y la **pose en sí es alcanzable** (no está fuera del área de trabajo, ni en una singularidad), el problema probablemente esté en los parámetros de tu controlador MIT / POS_VEL. En ese caso, consulta la sección anterior [Ajuste de parámetros del controlador MIT / POS_VEL](#ajustar-parámetros-del-controlador) y ajusta manualmente `kp` / `kd`, etc. usando el enfoque de "una sola articulación, modo por modo, pasos pequeños"; una vez ajustado, vuelve a este ejemplo para verificar.
+Si notas que la **pose leída del efector final** difiere de la **pose objetivo ordenada**, y la **pose en sí es alcanzable** (no está fuera del espacio de trabajo, ni en una singularidad), es probable que el problema esté en los parámetros de tu controlador MIT / POS_VEL. En ese caso, consulta la sección anterior [Ajuste de parámetros del controlador MIT / POS_VEL](#ajustar-parámetros-del-controlador) y ajusta manualmente `kp` / `kd`, etc. usando el enfoque de "una sola articulación, modo por modo, pasos pequeños"; una vez ajustado, vuelve a este ejemplo para verificar.
 :::
 
 </div>
@@ -672,9 +672,9 @@ kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 - Se puede mover manualmente a cualquier posición
 
 :::caution La salida normal realiza un retorno seguro a casa
-Cuando detienes el script normalmente con `Ctrl+C`, primero detiene el control de compensación de gravedad y mantiene la pose actual con ganancias rígidas y alimentación anticipada de gravedad. Luego devuelve el brazo a cero mediante una trayectoria de mínimo tirón; solo después de que el retorno a casa se complete, se desconecta y desactiva los motores.
+Cuando detienes el script normalmente con `Ctrl+C`, primero detiene el control de compensación de gravedad y mantiene la pose actual con ganancias rígidas y alimentación adelantada de gravedad. Luego devuelve el brazo a cero mediante una trayectoria de mínimo tirón; solo después de que el retorno a casa se complete se desconecta y desactiva los motores.
 
-El retorno automático a casa depende de la ejecución normal del programa, la comunicación y la alimentación. Mantén a las personas y los obstáculos fuera del área de trabajo del brazo y prepárate para sostener el brazo durante el retorno. Un fallo de comunicación, una pérdida inesperada de alimentación o una terminación forzada pueden impedir que la secuencia de protección se complete; corta la alimentación inmediatamente si se produce un movimiento anómalo.
+El retorno automático a casa depende de la ejecución normal del programa, la comunicación y la alimentación. Mantén a las personas y los obstáculos fuera del espacio de trabajo del brazo y prepárate para sostener el brazo durante el retorno. Un fallo de comunicación, una pérdida inesperada de alimentación o una terminación forzada pueden impedir que la secuencia de protección se complete; corta la alimentación inmediatamente si se produce un movimiento anómalo.
 :::
 
 **Cómo ejecutar**:
@@ -696,7 +696,7 @@ tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually 
 # This compensation is generally only used for joints 2 and 3
 ```
 
-Por ejemplo, `tau_g[2] *= 1.2` significa aumentar el par de compensación de gravedad de la articulación 2 en un 20%. Se recomienda ajustar elemento por elemento en función del efecto de flotación real para evitar realizar cambios excesivamente grandes de una sola vez.
+Por ejemplo, `tau_g[2] *= 1.2` significa aumentar el par de compensación de gravedad de la articulación 2 en un 20%. Se recomienda ajustar elemento por elemento según el efecto de flotación real para evitar realizar cambios excesivamente grandes de una sola vez.
 :::
 
 </div>
@@ -733,9 +733,9 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
 - Más estable que la versión básica, adecuada para escenarios que requieren mantenimiento de la pose
 
 :::caution La salida normal realiza un retorno seguro a casa
-Cuando detienes el script normalmente con `Ctrl+C`, primero detiene el control de compensación de gravedad y mantiene la pose actual con ganancias rígidas y alimentación anticipada de gravedad. Luego devuelve el brazo a cero mediante una trayectoria de mínimo tirón; solo después de que el retorno a casa se complete, se desconecta y desactiva los motores.
+Cuando detienes el script normalmente con `Ctrl+C`, primero detiene el control de compensación de gravedad y mantiene la pose actual con ganancias rígidas y alimentación adelantada de gravedad. Luego devuelve el brazo a cero mediante una trayectoria de mínimo tirón; solo después de que el retorno a casa se complete se desconecta y desactiva los motores.
 
-El retorno automático a casa depende de la ejecución normal del programa, la comunicación y la alimentación. Mantén a las personas y los obstáculos fuera del área de trabajo del brazo y prepárate para sostener el brazo durante el retorno. Un fallo de comunicación, una pérdida inesperada de alimentación o una terminación forzada pueden impedir que la secuencia de protección se complete; corta la alimentación inmediatamente si se produce un movimiento anómalo.
+El retorno automático a casa depende de la ejecución normal del programa, la comunicación y la alimentación. Mantén a las personas y los obstáculos fuera del espacio de trabajo del brazo y prepárate para sostener el brazo durante el retorno. Un fallo de comunicación, una pérdida inesperada de alimentación o una terminación forzada pueden impedir que la secuencia de protección se complete; corta la alimentación inmediatamente si se produce un movimiento anómalo.
 :::
 
 **Cómo ejecutar**:
@@ -759,7 +759,7 @@ tau_g[x] *= y  # x is the joint motor id, y is the compensation factor, usually 
 # This compensation is generally only used for joints 2 and 3
 ```
 
-Por ejemplo, `tau_g[2] *= 1.2` significa aumentar el par de compensación de gravedad de la articulación 2 en un 20%. Se recomienda ajustar elemento por elemento en función del efecto de flotación real para evitar realizar cambios excesivamente grandes de una sola vez.
+Por ejemplo, `tau_g[2] *= 1.2` significa aumentar el par de compensación de gravedad de la articulación 2 en un 20%. Se recomienda ajustar elemento por elemento según el efecto de flotación real para evitar realizar cambios excesivamente grandes de una sola vez.
 :::
 
 **Configuración de prueba de seguridad**:
@@ -782,12 +782,16 @@ ENABLED_JOINTS = ["joint1"]  # Enable only joint1
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/meshcat_DM.png" alt="Simulación MeshCat del reBot Arm B601-DM" />
 </div>
 
+:::tip Dirección del visor web MeshCat
+Después de iniciar una simulación, la terminal imprime la URL de acceso real. El valor por defecto es `http://127.0.0.1:7000/static/`; si el puerto está ocupado, MeshCat intenta automáticamente el siguiente puerto, así que utiliza la URL impresa en la terminal.
+:::
+
 <div className="rebot-step-flow">
 <section className="rebot-step-item rebot-step-item--simulation">
 <span className="rebot-step-number">S1</span>
 <div className="rebot-step-content">
 <h4>Simulación de cinemática directa</h4>
-<p className="rebot-step-label">Demo de simulación 1 · sim/fk_sim.py</p>
+<p className="rebot-step-label">Demostración de simulación 1 · sim/fk_sim.py</p>
 
 Simulación interactiva de cinemática directa, visualiza la pose del brazo robótico introduciendo ángulos articulares en MeshCat.
 
@@ -804,7 +808,7 @@ uv run python example/sim/fk_sim.py
 - Ejemplo: `45 -30 15 -60 90 -180`
 - `q`/`quit`/`exit`: Salir
 
-**Funciones**:
+**Características**:
 
 - Visualización en tiempo real de la posición y orientación del efector final
 - Admite entrada continua para probar diferentes poses
@@ -819,7 +823,7 @@ uv run python example/sim/fk_sim.py
 <h4>Simulación de cinemática inversa</h4>
 <p className="rebot-step-label">Demostración de simulación 2 · sim/ik_sim.py</p>
 
-Simulación interactiva de cinemática inversa, resuelve automáticamente los ángulos articulares a partir de la pose objetivo y los visualiza.
+Simulación interactiva de cinemática inversa, resuelve automáticamente los ángulos articulares a partir de la pose objetivo y la visualiza.
 
 **Cómo ejecutar**:
 
@@ -839,7 +843,7 @@ uv run python example/sim/ik_sim.py
 > 0.25 0.0 0.25 0 0 0        # Position+Orientation
 ```
 
-**Funciones**:
+**Características**:
 
 - Juicio automático de la convergencia de la IK
 - Muestra el número de iteraciones y el error
@@ -854,7 +858,7 @@ uv run python example/sim/ik_sim.py
 <h4>Simulación de planificación de trayectoria</h4>
 <p className="rebot-step-label">Demostración de simulación 3 · sim/traj_sim.py</p>
 
-Simulación de planificación de trayectoria basada en geodésicas SE(3), incluyendo seguimiento CLIK y reproducción de animación en MeshCat.
+Simulación de planificación de trayectoria basada en geodésicas en SE(3), incluyendo seguimiento CLIK y reproducción de animaciones en MeshCat.
 
 **Cómo ejecutar**:
 
@@ -868,7 +872,7 @@ uv run python example/sim/traj_sim.py
 - Pulsa Enter para usar la configuración predeterminada
 - `q`: Salir
 
-**Funciones**:
+**Características**:
 
 - Planificar desde la posición actual hasta la posición objetivo
 - Usar un perfil de trayectoria de mínimo tirón (minimum jerk)
@@ -885,14 +889,14 @@ uv run python example/sim/traj_sim.py
 <h4>Herramienta de visualización</h4>
 <p className="rebot-step-label">Demostración de simulación 4 · sim/visualizer.py</p>
 
-[LINE_96>Wrapper del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.
+[LINE_101>Wrapper del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.
 
-**Funciones principales**:
+**Características principales**:
 
 - Cargar el modelo URDF y mostrar el robot
 - Dibujar trayectorias polilínea 3D (referencia/real)
-- Mostrar la pose objetivo de IK (ejes tricolores + esfera)
-- Soporta reproducción de animación de trayectorias articulares
+- Mostrar la pose objetivo de la IK (ejes tricolores + esfera)
+- Soporta la reproducción de animaciones de trayectorias articulares
 
 **Ejemplo de uso**:
 
