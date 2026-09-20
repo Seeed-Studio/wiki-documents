@@ -135,6 +135,7 @@ If `docker ps` returns `permission denied`, add your user to the `docker` group 
 ```bash
 sudo usermod -aG docker $USER
 ```
+
 :::
 
 ## 1. Clone TensorRT-Model-Connect
