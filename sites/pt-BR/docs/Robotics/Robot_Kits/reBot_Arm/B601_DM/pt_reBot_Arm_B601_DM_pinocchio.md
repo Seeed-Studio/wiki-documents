@@ -46,15 +46,15 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <p align="center">
     <a href="./LICENSE">
-        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Licença: MIT" />
     </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Versão do Python" />
+    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Plataforma" />
     <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>
 
 <p align="center">
-  <strong>Braço robótico 6-DOF · Suporte a múltiplos motores · Solucionador de cinemática · Planejamento de trajetória · Totalmente open source</strong>
+  <strong>Braço robótico de 6 DOF · Suporte a múltiplos motores · Solucionador de cinemática · Planejamento de trajetória · Totalmente open source</strong>
 </p>
 
 :::tip
@@ -84,7 +84,7 @@ Este projeto combina o poderoso poder de computação do Pinocchio com a visuali
    Exibe em tempo real o estado do braço robótico e as trajetórias de movimento por meio do MeshCat no navegador, sem necessidade de software adicional.
 
 3. **Planejamento e rastreamento de trajetória**
-   Implementa planejamento de trajetória geodésica em SE(3), com suporte a controle de rastreamento CLIK (Closed-Loop Inverse Kinematics).
+   Implementa planejamento de trajetória geodésica em SE(3), com suporte a controle de rastreamento CLIK (Cinemática Inversa em Malha Fechada).
 
 4. **Controle com compensação de gravidade**
    Calcula o torque de gravidade das juntas com base no modelo dinâmico do Pinocchio, alcançando o efeito de “flutuação” do braço robótico.
@@ -122,7 +122,7 @@ O hardware para este tutorial é fornecido pela [Seeed Studio](https://www.seeed
     </tr>
     <tr>
       <td>Tensão de operação</td>
-      <td>24V DC</td>
+      <td>24V CC</td>
     </tr>
     <tr>
       <td>Método de controle</td>
@@ -147,14 +147,14 @@ O hardware para este tutorial é fornecido pela [Seeed Studio](https://www.seeed
 
 ## Requisitos de ambiente
 
-:::caution Pré-requisito — Conclua primeiro o início rápido do braço
+:::caution Pré-requisito — Conclua primeiro o Guia de início rápido do braço
 Antes de prosseguir com este tutorial, você **deve** concluir o documento **[reBot Arm B601-DM Quick Start](/pt-br/rebot_b601_dm_getting_started)** de ponta a ponta, incluindo:
 
-- Desembalagem do hardware, fiação e checklist de energização
+- Desembalagem do hardware, cabeamento e checklist de energização
 - Permissão do dispositivo Serial / CAN (`sudo chmod 666 /dev/ttyACM0` ou `/dev/can0`)
 - Calibração de zero de todas as juntas (`2_zero_and_read.py`) e verificação de que o braço pode ser comandado nos modos MIT / POS_VEL
 
-Este tutorial assume que o braço já responde no barramento, que as juntas estão zeradas e que o operador está familiarizado com os limites de segurança relevantes. Pular o início rápido pode levar a motores mal configurados, juntas travadas ou quedas do braço.
+Este tutorial assume que o braço já responde no barramento, que as juntas estão zeradas e que o operador está familiarizado com os limites de segurança relevantes. Pular o Guia de início rápido pode levar a motores mal configurados, juntas travadas ou quedas do braço.
 :::
 
 | Item | Requisito |
@@ -178,7 +178,7 @@ Este tutorial assume que o braço já responde no barramento, que as juntas est�
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Após a instalação, execute o seguinte comando para verificar se `uv` está disponível:
+Após a instalação, execute o seguinte comando para verificar se o `uv` está disponível:
 
 ```bash
 uv --version
@@ -218,7 +218,7 @@ uv sync
 Esta seção explica **como modificar** os parâmetros do controlador para cada junta do braço nos modos **MIT** e **POS_VEL**, e como fazer com que as alterações entrem em vigor.
 
 :::tip Esta seção aborda apenas “onde / como alterar”, não “que valor usar”
-Parâmetros adequados só podem ser obtidos por meio de **ajuste em hardware real**. Esta seção aborda apenas: onde os parâmetros estão, o que cada campo controla e como fazer com que as alterações sejam efetivas e verificá-las. Para estratégias específicas de ajuste (por exemplo, tentativa e erro, Ziegler‑Nichols), consulte referências gerais de controle de motores.
+Parâmetros adequados só podem ser obtidos por meio de **ajuste direto no hardware**. Esta seção aborda apenas: onde os parâmetros estão, o que cada campo controla e como fazer com que as alterações sejam efetivas e verificá-las. Para estratégias específicas de ajuste (por exemplo, tentativa e erro, Ziegler‑Nichols), consulte referências gerais de controle de motores.
 :::
 
 ### Localização do arquivo de configuração
@@ -259,7 +259,7 @@ Como localizar:
 
 - **Pelo nome da junta**: para modificar uma junta, encontre o bloco `- name: jointX`;
 - **Pelo modo**: dentro dessa junta, `MIT:` contém os parâmetros do modo MIT, `POS_VEL:` contém os parâmetros do modo POS_VEL;
-- **O modo atual determina qual conjunto é enviado**: o script alterna modos via `mode mit` / `mode posvel`; o motor na prática recebe os parâmetros sob o sub-bloco correspondente.
+- **O modo atual determina qual conjunto é enviado**: o script alterna modos via `mode mit` / `mode posvel`; o motor realmente recebe os parâmetros sob o sub-bloco correspondente.
 
 ### Significado dos campos no modo MIT
 
@@ -278,7 +278,7 @@ Como localizar:
 | `pos_ki` | Ganho integral do loop de posição (presente apenas em algumas configurações do fabricante). |
 | `vlim` | Limite de velocidade, restringe a velocidade máxima de movimento. |
 
-:::warning As definições de campos variam entre fabricantes
+:::warning As definições de campos diferem entre fabricantes
 Os motores Damiao (DM) e Robostride (RS) usam unidades diferentes na camada de protocolo, portanto **o mesmo nome de campo não é comparável entre fabricantes**. Modificar o `vel_kp` de um RS e modificar o `vel_kp` de um DM significam coisas diferentes. Interprete cada YAML de acordo com sua própria ordem de campos, não compare valores entre arquivos de configuração.
 :::
 
@@ -288,7 +288,7 @@ Grandes alterações de `kp` / `kd` em várias juntas podem causar oscilação i
 
 ### Procedimento de edição
 
-1. **Pare qualquer script em execução**. O motor está habilitado quando você edita o YAML, as alterações não entram em vigor imediatamente e é fácil provocar comportamentos inconsistentes.
+1. **Pare qualquer script em execução**. O motor está habilitado quando você edita o YAML, as alterações não entram em vigor imediatamente e é fácil disparar comportamentos inconsistentes.
 2. **Edite o arquivo YAML correspondente**:
 
    ```bash
@@ -296,11 +296,11 @@ Grandes alterações de `kp` / `kd` em várias juntas podem causar oscilação i
    vim config/rebotarm_dm.yaml
    ```
 
-   - Altere apenas a junta que você precisa ajustar (por exemplo, `joint1`); deixe as juntas não relacionadas inalteradas;
+   - Altere apenas a junta que você precisa ajustar (por exemplo, `joint1`); deixe as juntas não relacionadas como estão;
    - Dentro de uma junta, altere apenas o modo que você precisa ajustar (MIT ou POS_VEL); não modifique os campos do outro modo sem motivo.
 3. **Preserve a indentação YAML**: 2 espaços por nível, chaves separadas dos valores por `:`. Indentação incorreta faz o `yaml.safe_load` falhar na análise e todos os parâmetros voltarão para os padrões.
 4. **Reinicie o script após salvar**. O YAML é lido uma vez na inicialização do script; **edições em tempo de execução não entram em vigor imediatamente**.
-5. **Verificação de uma única junta**: use um script como `3_mit_control.py` (MIT) / `4_pos_vel_control.py` (POS_VEL) para verificar a alteração com um **pequeno movimento de uma única junta** antes de fazer um teste com o braço completo.
+5. **Verificação de junta única**: use um script como `3_mit_control.py` (MIT) / `4_pos_vel_control.py` (POS_VEL) para verificar a alteração com um **pequeno movimento de junta única** antes de fazer um teste com o braço completo.
 
 ### Verificando se a alteração entrou em vigor
 
@@ -334,7 +334,7 @@ sudo chmod 666 /dev/can0
 
 **Console de Controle de Motor Único (`0x01damiao_test.py`)**
 
-Teste direto de um único motor usando o SDK do motorbridge.
+Teste direto de motor único usando o SDK do motorbridge.
 
 **Como executar**:
 
@@ -354,7 +354,7 @@ uv run python example/0x01damiao_test.py
 | `mode <mit/posvel/vel>` | Alternar modo de controle |
 | `mit <pos> [vel] [kp] [kd]` | Comando em modo MIT |
 | `posvel <pos> [vlim]` | Comando em modo POS_VEL |
-| `vel <velocity>` | Modo de velocidade pura |
+| `vel <velocity>` | Comando em modo de velocidade pura |
 | `read_param <id> [type]` | Ler parâmetros do motor |
 | `write_param <id> <value> [type]` | Gravar parâmetros do motor |
 | `loop` | Entrar no modo de controle em loop |
@@ -364,7 +364,7 @@ uv run python example/0x01damiao_test.py
 
 **Calibração de Zero e Monitoramento de Ângulo (`2_zero_and_read.py`)**
 
-Define automaticamente o zero de todas as juntas e exibe os ângulos das juntas em tempo real.
+Define automaticamente todos os zeros das juntas e exibe os ângulos das juntas em tempo real.
 
 **Como executar**:
 
@@ -386,23 +386,23 @@ uv run python example/2_zero_and_read.py
 <p className="rebot-step-label">Demo 3 · 3_mit_control.py</p>
 
 :::warning Opcional — MIT é o modo alternativo no DM
-Para o **reBot Arm B601-DM**, POS_VEL (Posição‑Velocidade) é geralmente o modo de controle de junta mais apropriado; o protocolo do motor Damiao oferece suporte nativo ao controle híbrido de posição‑velocidade com limitação de velocidade integrada. O modo MIT geralmente requer um ajuste mais cuidadoso de `kp` / `kd`.
+Para o **reBot Arm B601-DM**, POS_VEL (Posição‑Velocidade) é geralmente o modo de controle de junta mais apropriado; o protocolo do motor Damiao oferece suporte nativo ao controle híbrido posição‑velocidade com limitação de velocidade integrada. O modo MIT geralmente requer um ajuste mais cuidadoso de `kp` / `kd`.
 
-Este exemplo não é obrigatório para concluir o tutorial. A menos que você precise especificamente depurar o modo MIT, **pule este exemplo** e use o exemplo POS_VEL abaixo. Se o seu objetivo é um movimento suave do efetuador final ao longo de uma trajetória planejada, vá diretamente para [Controle de IK com Trajetória Suave (`8_arm_traj_control.py`)](#demo8-traj-control).
+Este exemplo não é obrigatório para concluir o tutorial. A menos que você precise especificamente depurar o modo MIT, **pule este exemplo** e use o exemplo POS_VEL abaixo. Se o seu objetivo é um movimento suave do efetuador final ao longo de um caminho planejado, vá diretamente para [Controle de IK com Trajetória Suave (`8_arm_traj_control.py`)](#demo8-controle-de-trajetória).
 :::
 
 Insira ângulos alvo para todas as juntas para completar o controle do motor no modo de controle MIT, normalmente usado para controle de força, controle de impedância ou cenários que exigem alta resposta dinâmica.
 
 :::danger Antes de executar — Este exemplo não possui planejamento de trajetória suave
-Este exemplo envia ângulos de junta alvo diretamente para os motores, **sem planejamento de trajetória ou velocidade**. Uma grande mudança de alvo pode causar movimento repentino em alta velocidade e acionar a proteção contra sobrecorrente.
+Este exemplo envia ângulos de junta alvo diretamente para os motores, sem **planejamento de caminho ou velocidade**. Uma grande mudança de alvo pode causar movimento repentino em alta velocidade e acionar a proteção contra sobrecorrente.
 
 - Execute-o apenas quando precisar verificar o controle de junta MIT de baixo nível. Comece movendo uma junta em apenas 5–10 graus e, em seguida, aumente a mudança gradualmente após confirmar a resposta e a direção;
-- Se você precisar de uma trajetória suave completa, pule este exemplo e vá para [Controle de IK com Trajetória Suave (`8_arm_traj_control.py`)](#demo8-traj-control);
+- Se você precisar de uma trajetória suave completa, pule este exemplo e vá para [Controle de IK com Trajetória Suave (`8_arm_traj_control.py`)](#demo8-controle-de-trajetória);
 - Limpe a área de trabalho do braço antes de executar e certifique-se de que você pode cortar a alimentação imediatamente.
 :::
 
 <details className="rebot-demo-details">
-<summary>Expandir instruções de execução (Opcional)</summary>
+<summary>Expandir instruções de execução (opcional)</summary>
 
 **Como executar**:
 
@@ -425,18 +425,18 @@ uv run python example/3_mit_control.py
 <h4>Modo de Controle Posição-Velocidade</h4>
 <p className="rebot-step-label">Demo 4 · 4_pos_vel_control.py</p>
 
-Insira ângulos alvo para todas as juntas para controlar os motores no modo híbrido POS_VEL (Posição‑Velocidade). A limitação de velocidade integrada da Damiao pode reduzir o impacto das mudanças de alvo, mas este exemplo em si não fornece um planejamento completo de trajetória suave.
+Insira ângulos alvo para todas as juntas para controlar os motores no modo híbrido POS_VEL (Posição‑Velocidade). A limitação de velocidade integrada do Damiao pode reduzir o impacto das mudanças de alvo, mas este exemplo em si não fornece um planejamento completo de trajetória suave.
 
 :::danger Opcional — Limitação de velocidade não é planejamento completo de trajetória
 Embora POS_VEL seja o modo de controle de junta recomendado para DM, este exemplo ainda atualiza diretamente os alvos de posição das juntas e não planeja o caminho intermediário. Uma grande mudança de alvo ainda pode causar movimento repentino, colisão ou sobrecorrente.
 
-- Este exemplo não é obrigatório para concluir o tutorial. Se você só precisa de movimento suave do efetuador final, **pule este exemplo** e vá diretamente para [Controle de IK com Trajetória Suave (`8_arm_traj_control.py`)](#demo8-traj-control);
+- Este exemplo não é obrigatório para concluir o tutorial. Se você só precisa de movimento suave do efetuador final, **pule este exemplo** e vá diretamente para [Controle de IK com Trajetória Suave (`8_arm_traj_control.py`)](#demo8-controle-de-trajetória);
 - Ao verificar o controle de junta POS_VEL, comece movendo uma junta em apenas 5–10 graus e, em seguida, aumente gradualmente a mudança de alvo;
 - Limpe a área de trabalho do braço antes de executar e certifique-se de que você pode cortar a alimentação imediatamente.
 :::
 
 <details className="rebot-demo-details">
-<summary>Expandir instruções de execução (Opcional)</summary>
+<summary>Expandir instruções de execução (opcional)</summary>
 
 **Como executar**:
 
@@ -507,7 +507,7 @@ uv run python example/5_fk_test.py
 <h4>Teste de Cinemática Inversa</h4>
 <p className="rebot-step-label">Demo 6 · 6_ik_test.py</p>
 
-Resolver os ângulos das juntas com base na pose desejada do efetuador final.
+Resolver ângulos das juntas com base na pose desejada do efetuador final.
 
 **Formato de entrada**:
 
@@ -576,7 +576,7 @@ Use cinemática inversa (IK) no modo MIT para especificar as coordenadas 3D (X, 
 :::danger Opcional — Este exemplo não possui planejamento de trajetória suave
 Este exemplo envia a solução de IK diretamente como alvo das juntas, **sem planejamento de trajetória ou velocidade**. Uma grande mudança na pose alvo pode causar um movimento repentino em alta velocidade e acionar a proteção contra sobrecorrente.
 
-- Este exemplo não é necessário para concluir o tutorial. Na maioria dos casos, **ignore este exemplo** e use a próxima seção, [Controle de IK com trajetória suave (`8_arm_traj_control.py`)](#demo8-controle-de-trajetória), que inclui planejamento de aceleração/desaceleração com mínimo tranco;
+- Este exemplo não é necessário para concluir o tutorial. Na maioria dos casos, **ignore este exemplo** e use a próxima seção, [Controle de IK com trajetória suave (`8_arm_traj_control.py`)](#demo8-traj-control), que inclui planejamento de aceleração/desaceleração com mínimo tranco;
 - Execute-o apenas quando precisar comparar ou depurar o controle de IK sem planejamento de trajetória. Mantenha o primeiro alvo dentro de 5–10 cm da posição atual do efetuador final;
 - Antes de executar, confirme que a pose alvo é alcançável, limpe a área de trabalho de pessoas e obstáculos e certifique-se de que você pode cortar a alimentação imediatamente.
 :::
@@ -637,7 +637,7 @@ uv run python example/8_arm_traj_control.py
 ```
 
 :::tip E se eu observar desvio de pose?
-Se você notar que a **pose lida do efetuador final** difere da **pose alvo comandada**, e a **pose em si é alcançável** (não está fora da área de trabalho, nem em uma singularidade), o problema provavelmente está nos parâmetros do seu controlador MIT / POS_VEL. Nesse caso, consulte a seção anterior [Ajuste dos parâmetros do controlador MIT / POS_VEL](#ajustar-parâmetros-do-controlador) e ajuste manualmente `kp` / `kd` etc. usando a abordagem de "uma junta por vez, modo por modo, pequenos passos"; depois de ajustar, retorne a este exemplo para verificar.
+Se você notar que a **pose lida do efetuador final** difere da **pose alvo comandada**, e a **pose em si é alcançável** (não está fora da área de trabalho, nem em uma singularidade), o problema provavelmente está nos parâmetros do seu controlador MIT / POS_VEL. Nesse caso, consulte a seção anterior [Ajuste dos parâmetros do controlador MIT / POS_VEL](#ajuste-dos-parâmetros-do-controlador) e ajuste manualmente `kp` / `kd` etc. usando a abordagem de "uma junta por vez, modo por modo, pequenos passos"; depois de ajustar, retorne a este exemplo para verificar.
 :::
 
 </div>
@@ -668,13 +668,13 @@ kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 **Comportamento esperado**:
 
 - O braço pode "flutuar" em qualquer pose
-- Não cairá devido ao próprio peso quando solto
+- Não cai devido ao próprio peso quando solto
 - Pode ser movido manualmente para qualquer posição
 
 :::caution Saída normal realiza um retorno seguro à posição inicial
 Quando você interrompe o script normalmente com `Ctrl+C`, ele primeiro para o controle de compensação de gravidade e mantém a pose atual com ganhos rígidos e alimentação antecipada de gravidade. Em seguida, retorna o braço para zero por meio de uma trajetória de mínimo tranco; somente após a conclusão do retorno à origem ele desconecta e desabilita os motores.
 
-O retorno automático à origem depende da execução normal do programa, da comunicação e da alimentação. Mantenha pessoas e obstáculos fora da área de trabalho do braço e esteja pronto para sustentar o braço durante o retorno. Uma falha de comunicação, perda inesperada de energia ou término forçado pode impedir a conclusão da sequência de proteção; corte a alimentação imediatamente se ocorrer movimento anormal.
+O retorno automático à posição inicial depende da execução normal do programa, da comunicação e da alimentação. Mantenha pessoas e obstáculos fora da área de trabalho do braço e esteja pronto para sustentar o braço durante o retorno. Uma falha de comunicação, perda inesperada de energia ou término forçado pode impedir a conclusão da sequência de proteção; corte a alimentação imediatamente se ocorrer movimento anormal.
 :::
 
 **Como executar**:
@@ -721,21 +721,21 @@ kp = 8.0,  kd = 1.0           — Enhanced stiffness/damping
 **Lógica de trava**:
 
 - Quando a velocidade linear do efetuador `||v_ee|| < 0.04 m/s` e a velocidade angular `||w_ee|| < 0.08 rad/s`:
-  - O ângulo de junta alvo `q_target` permanece travado
+  - O ângulo alvo da junta `q_target` permanece travado
   - O braço robótico trava na posição atual
 - Quando a velocidade do efetuador excede o limite:
-  - `q_target` é atualizado para o ângulo de junta atual
+  - `q_target` é atualizado para o ângulo atual da junta
   - Permite empurrar manualmente para mudar a posição
 
 **Comportamento esperado**:
 
-- O braço robótico trava na posição atual, exigindo força para mudar o ângulo alvo
+- O braço robótico trava na posição atual, exigindo força para alterar o ângulo alvo
 - Mais estável que a versão básica, adequada para cenários que exigem manutenção de pose
 
 :::caution Saída normal realiza um retorno seguro à posição inicial
 Quando você interrompe o script normalmente com `Ctrl+C`, ele primeiro para o controle de compensação de gravidade e mantém a pose atual com ganhos rígidos e alimentação antecipada de gravidade. Em seguida, retorna o braço para zero por meio de uma trajetória de mínimo tranco; somente após a conclusão do retorno à origem ele desconecta e desabilita os motores.
 
-O retorno automático à origem depende da execução normal do programa, da comunicação e da alimentação. Mantenha pessoas e obstáculos fora da área de trabalho do braço e esteja pronto para sustentar o braço durante o retorno. Uma falha de comunicação, perda inesperada de energia ou término forçado pode impedir a conclusão da sequência de proteção; corte a alimentação imediatamente se ocorrer movimento anormal.
+O retorno automático à posição inicial depende da execução normal do programa, da comunicação e da alimentação. Mantenha pessoas e obstáculos fora da área de trabalho do braço e esteja pronto para sustentar o braço durante o retorno. Uma falha de comunicação, perda inesperada de energia ou término forçado pode impedir a conclusão da sequência de proteção; corte a alimentação imediatamente se ocorrer movimento anormal.
 :::
 
 **Como executar**:
@@ -763,7 +763,7 @@ Por exemplo, `tau_g[2] *= 1.2` significa aumentar o torque de compensação de g
 :::
 
 **Configuração de teste de segurança**:
-Você pode modificar a lista `ENABLED_JOINTS` no início do script para habilitar apenas juntas específicas para testes de segurança:
+Você pode modificar a lista `ENABLED_JOINTS` no início do script para habilitar apenas as juntas especificadas para teste de segurança:
 
 ```python
 ENABLED_JOINTS = ["joint1"]  # Enable only joint1
@@ -782,14 +782,18 @@ ENABLED_JOINTS = ["joint1"]  # Enable only joint1
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/meshcat_DM.png" alt="Simulação MeshCat do reBot Arm B601-DM" />
 </div>
 
+:::tip Endereço do visualizador web MeshCat
+Após iniciar uma simulação, o terminal imprime a URL de acesso real. O padrão é `http://127.0.0.1:7000/static/`; se a porta estiver ocupada, o MeshCat tenta automaticamente a próxima porta, então use a URL impressa no terminal.
+:::
+
 <div className="rebot-step-flow">
 <section className="rebot-step-item rebot-step-item--simulation">
 <span className="rebot-step-number">S1</span>
 <div className="rebot-step-content">
-<h4>Simulação de cinemática direta</h4>
-<p className="rebot-step-label">Demo de simulação 1 · sim/fk_sim.py</p>
+<h4>Simulação de Cinemática Direta</h4>
+<p className="rebot-step-label">Demonstração de Simulação 1 · sim/fk_sim.py</p>
 
-Simulação interativa de cinemática direta, visualize a pose do braço robótico inserindo ângulos das juntas no MeshCat.
+Simulação interativa de cinemática direta, visualize a pose do braço robótico inserindo os ângulos das juntas no MeshCat.
 
 **Como executar**:
 
@@ -819,7 +823,7 @@ uv run python example/sim/fk_sim.py
 <h4>Simulação de Cinemática Inversa</h4>
 <p className="rebot-step-label">Demonstração de Simulação 2 · sim/ik_sim.py</p>
 
-Simulação interativa de cinemática inversa, resolve automaticamente os ângulos das juntas a partir da pose alvo e visualiza o resultado.
+Simulação interativa de cinemática inversa, resolve automaticamente os ângulos das juntas a partir da pose alvo e a visualiza.
 
 **Como executar**:
 
@@ -854,7 +858,7 @@ uv run python example/sim/ik_sim.py
 <h4>Simulação de Planejamento de Trajetória</h4>
 <p className="rebot-step-label">Demonstração de Simulação 3 · sim/traj_sim.py</p>
 
-Simulação de planejamento de trajetória baseada em geodésicas em SE(3), incluindo rastreamento CLIK e reprodução de animação no MeshCat.
+Simulação de planejamento de trajetória baseada em geodésica SE(3), incluindo rastreamento CLIK e reprodução de animação no MeshCat.
 
 **Como executar**:
 
@@ -874,7 +878,7 @@ uv run python example/sim/traj_sim.py
 - Usa perfil de trajetória de mínimo tranco (minimum jerk)
 - Exibição em tempo real das estatísticas da trajetória
 - Reprodução completa da animação da trajetória no MeshCat
-- Exibe caminho de referência (cinza) e caminho real (verde)
+- Exibe o caminho de referência (cinza) e o caminho real (verde)
 
 </div>
 </section>
@@ -885,13 +889,13 @@ uv run python example/sim/traj_sim.py
 <h4>Ferramenta de Visualização</h4>
 <p className="rebot-step-label">Demonstração de Simulação 4 · sim/visualizer.py</p>
 
-[LINE_96>Wrapper de visualização MeshCat, fornecendo uma interface unificada de exibição do robô.
+[LINE_101>Wrapper de visualizador MeshCat, fornecendo uma interface unificada de exibição do robô.
 
 **Principais recursos**:
 
-- Carrega modelo URDF e exibe o robô
-- Desenha caminhos polilinha 3D (referência/real)
-- Exibe pose alvo da IK (eixos tricolores + esfera)
+- Carrega o modelo URDF e exibe o robô
+- Desenha caminhos de polilinha 3D (referência/real)
+- Exibe a pose alvo da IK (eixos tricolores + esfera)
 - Suporta reprodução de animação de trajetória de juntas
 
 **Exemplo de uso**:
@@ -939,5 +943,5 @@ viz.draw_path(points, "path_name", color)  # Draw path
 ---
 
 <div align="center">
-  <strong>Se este projeto ajudar você, por favor nos dê uma Star!</strong>
+  <strong>Se este projeto for útil para você, por favor nos dê uma Star!</strong>
 </div>
