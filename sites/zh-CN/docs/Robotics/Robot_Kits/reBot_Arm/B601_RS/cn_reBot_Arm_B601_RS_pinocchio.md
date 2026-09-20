@@ -690,6 +690,10 @@ ENABLED_JOINTS = ["joint1"]  # 仅使能 joint1
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/meshcat_RS.png" alt="reBot Arm B601-RS 的 MeshCat 仿真界面" />
 </div>
 
+:::tip MeshCat 网页地址
+运行仿真后，终端会打印实际访问地址。默认地址为 `http://127.0.0.1:7000/static/`；如果端口被占用，MeshCat 会自动尝试下一个端口，请以终端打印的地址为准。
+:::
+
 <div className="rebot-step-flow">
 <section className="rebot-step-item rebot-step-item--simulation">
 <span className="rebot-step-number">S1</span>
