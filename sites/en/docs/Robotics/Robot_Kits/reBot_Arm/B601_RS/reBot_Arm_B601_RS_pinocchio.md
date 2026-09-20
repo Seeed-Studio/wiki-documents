@@ -784,6 +784,10 @@ ENABLED_JOINTS = ["joint1"]  # Enable only joint1
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/meshcat_RS.png" alt="MeshCat simulation of the reBot Arm B601-RS" />
 </div>
 
+:::tip MeshCat web viewer address
+After starting a simulation, the terminal prints the actual access URL. The default is `http://127.0.0.1:7000/static/`; if the port is occupied, MeshCat automatically tries the next port, so use the URL printed in the terminal.
+:::
+
 <div className="rebot-step-flow">
 <section className="rebot-step-item rebot-step-item--simulation">
 <span className="rebot-step-number">S1</span>

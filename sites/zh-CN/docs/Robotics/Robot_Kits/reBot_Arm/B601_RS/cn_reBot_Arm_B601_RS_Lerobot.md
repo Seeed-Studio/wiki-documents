@@ -88,14 +88,14 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 
 - Ubuntu 22.04/Ubuntu 24.04
 - NVIDIA GPU 与 CUDA 12+（用于 GPU 加速训练/推理，可选）
-- Python 3.10
+- Python 3.12
 - Torch 2.6（CPU 版可运行基础流程，GPU 加速需 CUDA 版）
 
 </TabItem>
 <TabItem value="jetson-orin" label="Jetson Orin">
 
 - Jetson JetPack 6.0 和 6.1，暂不支持 6.2
-- Python 3.10
+- Python 3.12
 - Torch 2.3+
 
 </TabItem>
@@ -159,8 +159,8 @@ lerobot 仓库已有 pyproject.toml，创建 conda 环境并安装所有依赖�
 ```bash
 cd ~/rebot_lerobot
 
-# 创建 conda 环境（Python 3.10）
-conda create -y -n lerobot python=3.10
+# 创建 conda 环境（Python 3.12）
+conda create -y -n lerobot python=3.12
 
 # 激活环境
 conda activate lerobot
