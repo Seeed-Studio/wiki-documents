@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_rugged_j401_hardw
 
 # Uso de Hardware e Interfaces do reComputer Rugged J401
 
-Este wiki apresenta os diversos hardwares e interfaces do reComputer Rugged J40 e explica como usá-los para expandir suas ideias de projeto. A maioria das interfaces no reComputer Rugged J40 utiliza conectores M12, oferecendo resistência à água e poeira com classificação IP66, bem como excelente resistência a vibrações. Isso o torna adequado para implantação de longo prazo em ambientes externos severos, como embarcações e sistemas de monitoramento de portos.
+Este wiki apresenta os diversos hardwares e interfaces do reComputer Rugged J40 e explica como usá-los para expandir suas ideias de projeto. A maioria das interfaces no reComputer Rugged J40 utiliza conectores M12, oferecendo resistência à água e poeira com classificação IP66, bem como excelente resistência a vibrações. Isso o torna adequado para implantação de longo prazo em ambientes externos severos, como embarcações e sistemas de monitoramento em portos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="Image" width={800} height="auto" /></p>
 
@@ -30,11 +30,11 @@ Este wiki apresenta os diversos hardwares e interfaces do reComputer Rugged J40 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/2.jpg" alt="Image" width={800} height="auto" /></p>
 
-O reComputer Rugged J401 está equipado com uma interface de alimentação M12 A-code DC 19–48V, compatível com uma ampla faixa de tensão de entrada, tornando-o adequado para diversos ambientes de fornecimento de energia. A definição da interface é mostrada na tabela abaixo.
+O reComputer Rugged J401 está equipado com uma interface de alimentação M12 A-code DC 19–48 V, compatível com uma ampla faixa de tensão de entrada, tornando-o adequado para diversos ambientes de fornecimento de energia. A definição da interface é mostrada na tabela abaixo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/3.png" alt="Image" width={400} height="auto" /></p>
 
-|Pino|Uso|Tipo|Cor do fio|
+|Pin|Uso|Tipo|Cor do fio|
 |---|---|---|---|
 |1|Entrada de alimentação DC|Energia|Marrom|
 |2|||Branco|
@@ -51,7 +51,7 @@ Remova os dois parafusos que fixam a tampa lateral à prova d'água e abra-a par
 
 O reComputer Rugged J401 possui uma interface M.2 Key E, por meio da qual você pode expandir os recursos de Bluetooth e Wi-Fi do dispositivo. Recomendamos o uso da placa de rede sem fio Intel Dual Band RTL8822CE.
 
-M.2 Key M é uma interface projetada para unidades de estado sólido (SSDs) de alta velocidade, oferecendo velocidades de transferência de dados ultrarrápidas, ideal para aplicações de alto desempenho.
+M.2 Key M é uma interface projetada para unidades de estado sólido (SSDs) de alta velocidade, oferecendo taxas de transferência de dados ultrarrápidas, ideal para aplicações de alto desempenho.
 
 A localização da interface é mostrada na figura abaixo.
 
@@ -77,11 +77,11 @@ sudo dd if=/dev/zero of=tempfile bs=1M count=1024 conv=fdatasync
 
 Execute o comando `sudo rm tempfile` para excluir os arquivos de cache após a conclusão do teste.
 
-Após instalar o módulo Wi-Fi e ligar o dispositivo, podemos configurar as configurações de Wi-Fi e Bluetooth do dispositivo.
+Após instalar o módulo Wi-Fi e ligar o dispositivo, podemos configurar as definições de Wi-Fi e Bluetooth do dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/7.gif" alt="Image" width={800} height="auto" /></p>
 
-Claro, também podemos verificar o status de operação do dispositivo usando os seguintes comandos.
+Claro, também podemos verificar o status de funcionamento do dispositivo usando os seguintes comandos.
 
 ```Bash
 ifconfig
@@ -117,13 +117,13 @@ Este comando exibe uma lista de todos os dispositivos USB conectados ao sistema,
 
 **Passo 2.** Confirmar Carregamento do Driver
 
-É essencial garantir que o driver option, necessário para o módulo 5G, esteja carregado. Podemos usar o comando lsmod para verificar.
+É essencial garantir que o driver `option`, necessário para o módulo 5G, esteja carregado. Podemos usar o comando lsmod para verificar.
 
 ```Bash
 lsmod | grep option 
 ```
 
-Se o driver option for carregado com sucesso, informações relevantes sobre o driver serão exibidas na saída.
+Se o driver `option` for carregado com sucesso, informações relevantes sobre o driver serão exibidas na saída.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/12.png" alt="Image" width={800} height="auto" /></p>
 
@@ -172,7 +172,7 @@ Este comando ativa a conexão GSM e, se for bem-sucedido, uma mensagem de confir
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/14.png" alt="Image" width={800} height="auto" /></p>
 
-**Passo 7.** Re-verificar a Identificação do Módulo
+**Passo 7.** Reverificar a Identificação do Módulo
 
 Execute novamente o comando mmcli -L para garantir que o módulo continue sendo reconhecido após a configuração do APN.
 
@@ -194,13 +194,13 @@ Este comando fornece detalhes abrangentes sobre o módulo 5G, incluindo seu fabr
 
 ## Ethernet
 
-O reComputer Rugged J401 oferece 1x porta Ethernet Gigabit padrão (10/100/1000M) RJ45 (J35) e 4x portas Gigabit PSE (Power Sourcing Equipment) RJ45 (J36–J39). A porta Gigabit padrão é usada para conectividade geral de rede. As portas PSE suportam os padrões IEEE 802.3af/at, permitindo fornecimento de energia via Ethernet para dispositivos conectados, como câmeras IP e pontos de acesso sem fio, com saída máxima de 15,4 W por porta (802.3af). Isso o torna ideal para aplicações industriais, AMR e de computação de borda externa, eliminando a necessidade de cabeamento de energia separado. Todas as portas Gigabit são derivadas do controlador PCIe dentro do módulo Jetson Orin e suportam auto-negociação 10/100/1000M.
+O reComputer Rugged J401 oferece 1x porta RJ45 Ethernet Gigabit padrão (10/100/1000M) (J35) e 4x portas RJ45 Gigabit PSE (Power Sourcing Equipment) (J36–J39). A porta Gigabit padrão é usada para conectividade geral de rede. As portas PSE suportam os padrões IEEE 802.3af/at, permitindo fornecimento de energia via Ethernet para dispositivos conectados, como câmeras IP e pontos de acesso sem fio, com saída máxima de 15,4 W por porta (802.3af). Isso o torna ideal para aplicações industriais, AMR e de computação de borda externa, eliminando a necessidade de cabeamento de energia separado. Todas as portas Gigabit são derivadas do controlador PCIe dentro do módulo Jetson Orin e suportam auto-negociação 10/100/1000M.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/16.jpg" alt="Image" width={800} height="auto" /></p>
 
 ## USB
 
-O reComputer Rugged J401 oferece 4x portas USB 3.2 Type-A (por meio de um hub interno USB 3.1 Gen1, suportando taxas de dados de até 5 Gbps para conexão de periféricos de alta velocidade, dispositivos de armazenamento ou câmeras) e 1x porta USB 2.0 Type-C de depuração (que funciona como um console serial para acessar logs do sistema, depurar problemas de boot e realizar atualizações de firmware).
+O reComputer Rugged J401 oferece 4x portas USB 3.2 Tipo A (por meio de um hub interno USB 3.1 Gen1, suportando taxas de dados de até 5 Gbps para conexão de periféricos de alta velocidade, dispositivos de armazenamento ou câmeras) e 1x porta USB 2.0 Tipo C de depuração (que funciona como um console serial para acessar logs do sistema, depurar problemas de boot e realizar atualizações de firmware).
 
 ### Teste de Velocidade USB-A
 
@@ -265,7 +265,7 @@ sudo chmod +x test_usb.sh
 
 ### Porta USB 2.0 Type-C
 
-Usando esta porta serial, por meio do cabo de dados USB-C, você pode monitorar as informações de depuração de entrada e saída no lado do PC.
+Usando esta porta serial, por meio do cabo de dados USB-C, você pode monitorar no PC as informações de depuração de entrada e saída.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/18.jpg" alt="Image" width={400} height="auto" /></p>
 
@@ -290,7 +290,7 @@ Faça login com nome de usuário e senha.
 
 ## RTC
 
-O reComputer Rugged J401 inclui um RTC de hardware com bateria de backup para manter a hora com precisão. 
+O reComputer Rugged J401 inclui um RTC de hardware com bateria de backup para manter a hora com precisão. Ele é compatível com baterias tipo moeda CR1220 e CR1225. 
 
 ### Conexão de hardware
 
@@ -314,15 +314,113 @@ Se você não tiver se conectado à internet via Ethernet, pode definir a data/h
 cat /sys/devices/platform/bpmp/bpmp:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
 ```
 
-**Passo 5.** Desconecte a conexão de rede e reinicie o dispositivo. Você verá que o horário do sistema perdeu a alimentação, mas ainda funciona normalmente.
+**Passo 5.** Desconecte a conexão de rede e reinicie o dispositivo. Você verá que, mesmo sem alimentação, o horário do sistema continua funcionando normalmente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/23.png" alt="Image" width={800} height="auto" /></p>
 
 ## CAN
 
-> Testes e uma introdução serão adicionados assim que a documentação estiver concluída.
-> 
-> 
+O módulo NVIDIA Jetson Orin Nano/NX fornece apenas um controlador CAN nativo ([Controller Area Network (CAN) — NVIDIA Jetson Linux Developer Guide](https://docs.nvidia.com/jetson/archives/r36.4/DeveloperGuide/HR/ControllerAreaNetworkCan.html)). Para obter uma segunda interface CAN, é necessário um controlador CAN externo, como o MCP2518FDT-E. Para ativar a segunda porta CAN, carregue o driver com `sudo modprobe mttcan`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-1.jpg" alt="Image" width={800} height="auto" /></p>
+
+### Instruções de uso
+
+#### Teste USB-CAN
+
+Use um adaptador USB-CAN para verificar a comunicação CAN conforme descrito a seguir.
+
+:::note
+Adaptadores USB-CAN geralmente incluem um resistor de terminação embutido.
+
+- Quando `CAN0_120R_EN_3V3=1`, o resistor de terminação de 120 Ω onboard do CAN0 é desconectado.
+- Quando `CAN0_120R_EN_3V3=0`, o resistor de terminação de 120 Ω onboard do CAN0 é conectado.
+
+A mesma lógica se aplica ao pino de controle de terminação do CAN1.
+:::
+
+##### Carregar o driver e configurar a interface
+
+```Bash
+# Load the driver to bring up the second CAN port
+sudo modprobe mttcan
+sudo ip link set can0 type can bitrate 125000
+sudo ip link set can0 up
+
+# Disconnect the onboard 120 Ω termination resistors
+# because the USB-CAN adapter already provides termination
+sudo gpioset -m wait gpiochip2 2=1 3=1
+```
+
+##### Monitorar e enviar dados
+
+```Bash
+# Monitor data
+candump can0 &
+candump can1 &
+
+# Send data
+cansend can0 123#abcdabcd
+```
+
+Recepção e transmissão em CAN0:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-2.png" alt="Image" width={800} height="auto" /></p>
+
+Transmissão em CAN1:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-3.png" alt="Image" width={800} height="auto" /></p>
+
+#### Teste de loopback CAN
+
+Você também pode conectar CAN0 e CAN1 juntos para um teste de loopback em nível de placa. Curto-circuite fisicamente os dois barramentos CAN (`CAN0_H` com `CAN1_H`, e `CAN0_L` com `CAN1_L`), ative os resistores de terminação de 120 Ω onboard em ambos os lados e, em seguida, verifique a comunicação bidirecional entre as duas interfaces.
+
+Abra três terminais e execute os seguintes comandos.
+
+**Janela 1: configurar e testar CAN0**
+
+```Bash
+sudo modprobe mttcan
+sudo ip link set can0 down
+sudo ip link set can0 type can bitrate 250000
+sudo ip link set can0 up
+
+# Send frames from can0
+cangen can0
+
+# Receive frames on can0
+candump can0
+```
+
+**Janela 2: configurar e testar CAN1**
+
+```Bash
+sudo modprobe mttcan
+sudo ip link set can1 down
+sudo ip link set can1 type can bitrate 250000
+sudo ip link set can1 up
+
+# Send frames from can1
+cangen can1
+
+# Receive frames on can1
+candump can1
+```
+
+**Janela 3: ativar resistores de terminação e verificar contadores de link**
+
+```Bash
+# Enable the onboard 120 Ω termination resistors on both CAN ports
+gpioset -m wait gpiochip2 2=0 3=0
+
+# Check low-level TX/RX counters
+ip -d -s link show can0
+ip -d -s link show can1
+```
+
+Se a fiação e a terminação estiverem corretas, os quadros gerados em uma interface devem ser recebidos na outra interface, e os contadores de TX/RX devem aumentar de forma correspondente.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-4.png" alt="Image" width={800} height="auto" /></p>
 
 ## DI/DO
 
@@ -364,11 +462,11 @@ sudo gpioset --mode=wait 0 106=0
 sudo gpioset --mode=wait 0 43=0
 ```
 
-DO antes de puxar para alto:
+DO antes de puxar para nível alto:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/26.png" alt="Image" width={800} height="auto" /></p>
 
-DO depois de puxar para alto:
+DO após puxar para nível alto:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/27.png" alt="Image" width={800} height="auto" /></p>
 
@@ -390,7 +488,7 @@ gpioget gpiochip0 144
 
 ## UART
 
-O reComputer Rugged J401 está equipado com uma interface UART independente (UART1) que suporta os modos de comunicação RS232, RS422 e RS485, com transmissão de sinal estável e ampla compatibilidade com dispositivos periféricos.
+O reComputer Rugged J401 está equipado com uma interface UART independente (UART1) que suporta os modos de comunicação RS232, RS422 e RS485, oferecendo transmissão de sinal estável e ampla compatibilidade com dispositivos periféricos.
 
 ### Conexão de hardware
 
@@ -402,7 +500,7 @@ Observação: Quando a chave é pressionada para baixo (ON), o bit é 0; quando 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/29.png" alt="Image" width={500} height="auto" /></p>
 
-|Mode_0|Mode_1|Mode_2|Mode|Status|
+|Mode_0|Mode_1|Mode_2|Modo|Status|
 |---|---|---|---|---|
 |0|0|0|RS-422 Full Duplex|1T/1R RS-422|
 |0|0|1|RS-232 Puro|3T/5R RS-232|
@@ -411,7 +509,7 @@ Observação: Quando a chave é pressionada para baixo (ON), o bit é 0; quando 
 |1|0|0|RS-422 Full Duplex|RS-422 com resistor de terminação|
 |1|0|1|RS-232|1T/1R RS-232 coexiste com aplicação RS485 sem necessidade de chave de barramento (para uso especial)|
 |1|1|0|RS-485|1T/1R RS-485 com resistor de terminação, TX ENABLE Ativo em nível baixo|
-|1|1|1|Desligado|Todos os pinos de E/S estão em alta impedância|
+|1|1|1|Desligado|Todos os pinos de E/S em alta impedância|
 
 
 
@@ -423,13 +521,13 @@ Observação: Quando a chave é pressionada para baixo (ON), o bit é 0; quando 
 
 ### Instruções de uso
 
-Use fios Dupont para conectar os pinos centrais do canal SPI de destino (tomando /dev/spidev0.0 como exemplo): conecte o pino MOSI ao pino MISO correspondente (realizando transmissão/recepção de dados em loopback).
+Use fios Dupont para conectar os pinos principais do canal SPI de destino (tomando /dev/spidev0.0 como exemplo): conecte o pino MOSI ao seu pino MISO (realizando transmissão/recepção de dados em loopback).
 
 O diagrama de fiação é o seguinte:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/31.jpg" alt="Image" width={500} height="auto" /></p>
 
-**Passo 1: Carregar o módulo de kernel SPI (pré-requisito)**
+**Etapa 1: Carregar o módulo de kernel SPI (pré-requisito)**
 
 Antes de operar a interface SPI, certifique-se de que o módulo de kernel `spidev` esteja carregado (o sistema padrão pode pré-carregá-lo, mas é recomendável verificar manualmente):
 
@@ -439,9 +537,9 @@ sudo modprobe spidev
 
 Se o comando for executado sem mensagens de erro, significa que o módulo foi carregado com sucesso; se o módulo já estiver carregado, o comando não retornará nenhuma informação, o que é um fenômeno normal.
 
-**Passo 2: Ver os nós de dispositivo SPI**
+**Etapa 2: Ver os nós de dispositivo SPI**
 
-Digite o seguinte comando no terminal para ver o nome do dispositivo mapeado pela interface SPI do reComputer Rugged J401:
+Digite o seguinte comando no terminal para visualizar o nome do dispositivo mapeado pela interface SPI do reComputer Rugged J401:
 
 ```Bash
 ls /dev/spidev*
@@ -449,7 +547,7 @@ ls /dev/spidev*
 
 Se nenhum nó de dispositivo for exibido, significa que o módulo `spidev` não foi carregado com sucesso. Execute novamente `sudo modprobe spidev` e verifique o log do sistema para solução de problemas.
 
-**Passo 3: Obter e compilar o código de teste SPI**
+**Etapa 3: Obter e compilar o código de teste SPI**
 
 Obtenha o código de teste `spidev-test` do GitHub e compile-o:
 
@@ -459,7 +557,7 @@ cd spidev-test
 gcc spidev_test.c -o spidev_test
 ```
 
-**Passo 4: Executar o programa de teste SPI**
+**Etapa 4: Executar o programa de teste SPI**
 
 Digite o seguinte comando no terminal para executar o programa de teste SPI (tomando `/dev/spidev2.0` como exemplo):
 
@@ -467,7 +565,7 @@ Digite o seguinte comando no terminal para executar o programa de teste SPI (tom
 sudo ./spidev_test -v -D /dev/spidev0.0 -s 100000 -p "Hello SPI"
 ```
 
-**Passo 5: Verificar o resultado do teste**
+**Etapa 5: Verificar o resultado do teste**
 
 Após executar o comando de teste, você pode observar no terminal o status de transmissão e recepção de dados da interface SPI0.0. A saída principal é a seguinte:
 
@@ -479,7 +577,7 @@ Após executar o comando de teste, você pode observar no terminal o status de t
 
 ## **I2C**
 
-O Rugged J401 fornece uma interface I2C por meio do conector J8 2x10 pinos, permitindo a fácil conexão de sensores e periféricos para expansão do sistema.
+O Rugged J401 fornece uma interface I2C por meio do conector J8 2x10 pinos, permitindo a conexão fácil de sensores e periféricos para expansão do sistema.
 
 ### **Conexão de hardware**
 
@@ -499,20 +597,20 @@ Conecte seu dispositivo I2C à interface I2C na placa carrier:
 
 ### **Instruções de uso**
 
-**Passo 1.** Instale as ferramentas de teste I2C:
+**Etapa 1.** Instale as ferramentas de teste I2C:
 
 ```Bash
 sudo apt update
 sudo apt-get install i2c-tools
 ```
 
-**Passo 2.** Veja os mapeamentos do barramento I2C:
+**Etapa 2.** Visualize os mapeamentos do barramento I2C:
 
 ```Bash
 i2cdetect -l
 ```
 
-**Passo 3.** Procure dispositivos no barramento I2C:
+**Etapa 3.** Faça a varredura de dispositivos no barramento I2C:
 
 ```Bash
 sudo i2cdetect -y -r 1
@@ -530,7 +628,7 @@ sudo i2cdetect -y -r 1
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
