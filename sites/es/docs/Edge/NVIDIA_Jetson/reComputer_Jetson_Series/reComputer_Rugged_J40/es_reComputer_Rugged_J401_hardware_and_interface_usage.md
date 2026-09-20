@@ -11,10 +11,10 @@ image: https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png
 slug: /ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage
 sku: 100046979,100002634
 last_update:
-  date: 08/14/2026
+  date: 09/18/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-14'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/es/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/
 ---
 
@@ -24,7 +24,104 @@ Este wiki presenta los distintos componentes de hardware e interfaces de reCompu
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="Image" width={800} height="auto" /></p>
 
-# Descripción general de las interfaces de hardware
+## Descripción general del hardware
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
+  <p>Vista lateral 1</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
+  <p>Vista lateral 2</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
+  <p>Vista inferior</p>
+</div>
+
+## Especificaciones de la placa carrier
+
+<table>
+  <thead>
+    <tr>
+      <th colSpan={2}>Elemento</th>
+      <th>Especificación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={8}>I/O</td>
+      <td>Ethernet</td>
+      <td>1× M12 GbE + 4× M12 GbE PSE (IEEE 802.3af, 15 W, 10/100/1000 Mbps)</td>
+    </tr>
+    <tr>
+      <td>USB</td>
+      <td>4× USB 3.2 Tipo A (conectores impermeables) + 1× USB 3.0 Tipo C (dispositivo / flasheo) + 1× USB 2.0 Tipo C (depuración)</td>
+    </tr>
+    <tr>
+      <td>Pantalla</td>
+      <td>1× HDMI 2.1 (tapa impermeable)</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>2× CAN-FD (aislado) mediante M12 con código A</td>
+    </tr>
+    <tr>
+      <td>Serie</td>
+      <td>1× RS-232/422/485 mediante M12 con código A</td>
+    </tr>
+    <tr>
+      <td>DI/DO</td>
+      <td>2× DI + 2× DO mediante M12 con código A</td>
+    </tr>
+    <tr>
+      <td>SIM</td>
+      <td>1× ranura para tarjeta Nano-SIM</td>
+    </tr>
+    <tr>
+      <td>Antena</td>
+      <td>4× conectores de antena SMA impermeables</td>
+    </tr>
+    <tr>
+      <td>Almacenamiento</td>
+      <td>M.2 Key M</td>
+      <td>1× M.2 Key M para SSD NVMe 2280 (SSD de 128 GB incluido)</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Expansión</td>
+      <td>M.2 Key E</td>
+      <td>1× M.2 Key E para módulo Wi-Fi M.2 2230 (módulo Wi-Fi 6 incluido)</td>
+    </tr>
+    <tr>
+      <td>M.2 Key B</td>
+      <td>1× M.2 Key B para módulo 5G</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>A bordo</td>
+      <td>SPI / I2C</td>
+      <td>1× SPI, 1× I2C (cabecera de pines interna)</td>
+    </tr>
+    <tr>
+      <td>RTC</td>
+      <td>Zócalo RTC, conector de 2 pines</td>
+    </tr>
+    <tr>
+      <td>LED</td>
+      <td>1× LED PWR (verde), 1× LED SSD (verde)</td>
+    </tr>
+    <tr>
+      <td>Botón</td>
+      <td>1× botón Recovery, 1× botón RST</td>
+    </tr>
+    <tr>
+      <td>Alimentación</td>
+      <td>Entrada</td>
+      <td>M12 con código A, 19–48 V CC</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Alimentación
 

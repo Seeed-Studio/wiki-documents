@@ -11,10 +11,10 @@ image: https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png
 slug: /ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage
 sku: 100046979,100002634
 last_update:
-  date: 08/14/2026
+  date: 09/18/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-14'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/
 ---
 
@@ -24,7 +24,104 @@ url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j401_hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="Image" width={800} height="auto" /></p>
 
-# 硬件接口概览
+## 硬件总览
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
+  <p>侧视图 1</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
+  <p>侧视图 2</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
+  <p>底视图</p>
+</div>
+
+## 载板规格
+
+<table>
+  <thead>
+    <tr>
+      <th colSpan={2}>项目</th>
+      <th>规格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={8}>I/O</td>
+      <td>以太网</td>
+      <td>1× M12 GbE + 4× M12 GbE PSE（IEEE 802.3af，15 W，10/100/1000 Mbps）</td>
+    </tr>
+    <tr>
+      <td>USB</td>
+      <td>4× USB 3.2 Type-A（防水连接器）+ 1× USB 3.0 Type-C（设备 / 烧录）+ 1× USB 2.0 Type-C（调试）</td>
+    </tr>
+    <tr>
+      <td>显示</td>
+      <td>1× HDMI 2.1（防水盖）</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>2× CAN-FD（隔离），通过 M12 A-code</td>
+    </tr>
+    <tr>
+      <td>串口</td>
+      <td>1× RS-232/422/485，通过 M12 A-code</td>
+    </tr>
+    <tr>
+      <td>DI/DO</td>
+      <td>2× DI + 2× DO，通过 M12 A-code</td>
+    </tr>
+    <tr>
+      <td>SIM</td>
+      <td>1× Nano-SIM 卡槽</td>
+    </tr>
+    <tr>
+      <td>天线</td>
+      <td>4× SMA 防水天线连接器</td>
+    </tr>
+    <tr>
+      <td>存储</td>
+      <td>M.2 Key M</td>
+      <td>1× M.2 Key M，用于 NVMe 2280 SSD（内置 128 GB SSD）</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>扩展</td>
+      <td>M.2 Key E</td>
+      <td>1× M.2 Key E，用于 M.2 2230 Wi-Fi 模组（内置 Wi-Fi 6 模组）</td>
+    </tr>
+    <tr>
+      <td>M.2 Key B</td>
+      <td>1× M.2 Key B，用于 5G 模组</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>板载</td>
+      <td>SPI / I2C</td>
+      <td>1× SPI、1× I2C（盒内排针）</td>
+    </tr>
+    <tr>
+      <td>RTC</td>
+      <td>RTC 插座，2-pin 连接器</td>
+    </tr>
+    <tr>
+      <td>LED</td>
+      <td>1× PWR LED（绿色）、1× SSD LED（绿色）</td>
+    </tr>
+    <tr>
+      <td>按键</td>
+      <td>1× Recovery 按键、1× RST 按键</td>
+    </tr>
+    <tr>
+      <td>电源</td>
+      <td>输入</td>
+      <td>M12 A-code 直流 19–48 V</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 电源
 

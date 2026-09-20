@@ -11,10 +11,10 @@ image: https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png
 slug: /ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage
 sku: 100046979,100002634
 last_update:
-  date: 08/14/2026
+  date: 09/18/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-14'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/
 ---
 
@@ -24,7 +24,104 @@ url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_rugged_j401_hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="Image" width={800} height="auto" /></p>
 
-# ハードウェアインターフェース概要
+## ハードウェア概要
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
+  <p>側面図 1</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
+  <p>側面図 2</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
+  <p>底面図</p>
+</div>
+
+## キャリアボード仕様
+
+<table>
+  <thead>
+    <tr>
+      <th colSpan={2}>項目</th>
+      <th>仕様</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={8}>I/O</td>
+      <td>Ethernet</td>
+      <td>1× M12 GbE + 4× M12 GbE PSE（IEEE 802.3af、15 W、10/100/1000 Mbps）</td>
+    </tr>
+    <tr>
+      <td>USB</td>
+      <td>4× USB 3.2 Type-A（防水コネクタ）+ 1× USB 3.0 Type-C（デバイス / フラッシュ）+ 1× USB 2.0 Type-C（デバッグ）</td>
+    </tr>
+    <tr>
+      <td>ディスプレイ</td>
+      <td>1× HDMI 2.1（防水キャップ付き）</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>2× CAN-FD（アイソレート）M12 A コード経由</td>
+    </tr>
+    <tr>
+      <td>シリアル</td>
+      <td>1× RS-232/422/485 M12 A コード経由</td>
+    </tr>
+    <tr>
+      <td>DI/DO</td>
+      <td>2× DI + 2× DO M12 A コード経由</td>
+    </tr>
+    <tr>
+      <td>SIM</td>
+      <td>1× Nano-SIM カードスロット</td>
+    </tr>
+    <tr>
+      <td>アンテナ</td>
+      <td>4× SMA 防水アンテナコネクタ</td>
+    </tr>
+    <tr>
+      <td>ストレージ</td>
+      <td>M.2 Key M</td>
+      <td>1× M.2 Key M、NVMe 2280 SSD 用（128 GB SSD 付属）</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>拡張</td>
+      <td>M.2 Key E</td>
+      <td>1× M.2 Key E、M.2 2230 Wi-Fi モジュール用（Wi-Fi 6 モジュール付属）</td>
+    </tr>
+    <tr>
+      <td>M.2 Key B</td>
+      <td>1× M.2 Key B、5G モジュール用</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>オンボード</td>
+      <td>SPI / I2C</td>
+      <td>1× SPI、1× I2C（筐体内ピンヘッダ）</td>
+    </tr>
+    <tr>
+      <td>RTC</td>
+      <td>RTC ソケット、2 ピンコネクタ</td>
+    </tr>
+    <tr>
+      <td>LED</td>
+      <td>1× PWR LED（緑）、1× SSD LED（緑）</td>
+    </tr>
+    <tr>
+      <td>ボタン</td>
+      <td>1× Recovery ボタン、1× RST ボタン</td>
+    </tr>
+    <tr>
+      <td>電源</td>
+      <td>入力</td>
+      <td>M12 A コード DC 19–48 V</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 電源
 
