@@ -11,10 +11,10 @@ image: https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png
 slug: /ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage
 sku: 100046979,100002634
 last_update:
-  date: 08/14/2026
+  date: 09/18/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-14'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/
 ---
 
@@ -24,7 +24,104 @@ This wiki introduces the various hardware and interfaces of reComputer Rugged J4
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="Image" width={800} height="auto" /></p>
 
-# Hardware Interface Overview
+## Hardware Overview
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
+  <p>Side View 1</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
+  <p>Side View 2</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
+  <p>Bottom View</p>
+</div>
+
+## Carrier Board Specifications
+
+<table>
+  <thead>
+    <tr>
+      <th colSpan={2}>Item</th>
+      <th>Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={8}>I/O</td>
+      <td>Ethernet</td>
+      <td>1× M12 GbE + 4× M12 GbE PSE (IEEE 802.3af, 15 W, 10/100/1000 Mbps)</td>
+    </tr>
+    <tr>
+      <td>USB</td>
+      <td>4× USB 3.2 Type-A (waterproof connectors) + 1× USB 3.0 Type-C (device / flashing) + 1× USB 2.0 Type-C (debug)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>1× HDMI 2.1 (waterproof cap)</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>2× CAN-FD (isolated) via M12 A-code</td>
+    </tr>
+    <tr>
+      <td>Serial</td>
+      <td>1× RS-232/422/485 via M12 A-code</td>
+    </tr>
+    <tr>
+      <td>DI/DO</td>
+      <td>2× DI + 2× DO via M12 A-code</td>
+    </tr>
+    <tr>
+      <td>SIM</td>
+      <td>1× Nano-SIM card slot</td>
+    </tr>
+    <tr>
+      <td>Antenna</td>
+      <td>4× SMA waterproof antenna connectors</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>M.2 Key M</td>
+      <td>1× M.2 Key M for NVMe 2280 SSD (128 GB SSD included)</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Expansion</td>
+      <td>M.2 Key E</td>
+      <td>1× M.2 Key E for M.2 2230 Wi-Fi module (Wi-Fi 6 module included)</td>
+    </tr>
+    <tr>
+      <td>M.2 Key B</td>
+      <td>1× M.2 Key B for 5G module</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>Onboard</td>
+      <td>SPI / I2C</td>
+      <td>1× SPI, 1× I2C (internal pin header)</td>
+    </tr>
+    <tr>
+      <td>RTC</td>
+      <td>RTC socket, 2-pin connector</td>
+    </tr>
+    <tr>
+      <td>LED</td>
+      <td>1× PWR LED (green), 1× SSD LED (green)</td>
+    </tr>
+    <tr>
+      <td>Button</td>
+      <td>1× Recovery button, 1× RST button</td>
+    </tr>
+    <tr>
+      <td>Power</td>
+      <td>Input</td>
+      <td>M12 A-code DC 19–48 V</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Power
 
@@ -198,6 +295,38 @@ The reComputer Rugged J401 provides 1x standard Gigabit Ethernet (10/100/1000M) 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/16.jpg" alt="Image" width={800} height="auto" /></p>
 
+The Linux network device names map to the physical Ethernet ports as shown below. When viewing the Ethernet connectors from the same direction as the image, the mapping from left to right is `eth4`, `eth2`, `eth1`, `eth0`, and `eth3`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/jetson/rugged-ethernet-Interface.png" alt="Mapping between Linux Ethernet device names and physical ports on reComputer Rugged J401" width={900} height="auto" /></p>
+
+| Physical port position | Linux device name |
+| :--- | :--- |
+| First from the left | `eth4` |
+| Second from the left | `eth2` |
+| Center | `eth1` |
+| Second from the right | `eth0` |
+| First from the right | `eth3` |
+
+Use `ethtool` to check the negotiated bandwidth and physical link status of each Ethernet port. Install it first if the command is not available:
+
+```bash
+sudo apt update
+sudo apt install -y ethtool
+```
+
+Run the following command to display the speed, duplex mode, auto-negotiation status, and link state for all five physical Ethernet interfaces:
+
+```bash
+for interface in eth0 eth1 eth2 eth3 eth4; do
+  echo "=== ${interface} ==="
+  sudo ethtool "${interface}" | grep -E 'Speed:|Duplex:|Auto-negotiation:|Link detected:'
+done
+```
+
+:::note
+`Speed` shows the negotiated link bandwidth, such as `1000Mb/s`; `Duplex` should normally report `Full`; and `Link detected: yes` confirms that the corresponding physical port has an active connection. A disconnected port may report `Speed: Unknown!` and `Link detected: no`.
+:::
+
 ## USB
 
 The reComputer Rugged J401 provides 4x USB 3.2 Type-A ports (via an internal USB 3.1 Gen1 hub, supporting up to 5Gbps data rates for connecting high-speed peripherals, storage devices, or cameras) and 1x USB 2.0 Type-C debug port (which functions as a serial console for accessing system logs, debugging boot issues, and performing firmware updates).
@@ -290,7 +419,7 @@ Log in with username and password.
 
 ## RTC
 
-The reComputer Rugged J401 includes a hardware RTC with battery backup for accurate timekeeping. 
+The reComputer Rugged J401 includes a hardware RTC with battery backup for accurate timekeeping. It supports CR1220 and CR1225 coin-cell batteries. 
 
 ### Hardware Connection
 
@@ -320,9 +449,107 @@ cat /sys/devices/platform/bpmp/bpmp:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/tim
 
 ## CAN
 
-> Testing and an introduction will be added once the documentation is complete.
-> 
-> 
+The NVIDIA Jetson Orin Nano/NX module provides only one native CAN controller ([Controller Area Network (CAN) — NVIDIA Jetson Linux Developer Guide](https://docs.nvidia.com/jetson/archives/r36.4/DeveloperGuide/HR/ControllerAreaNetworkCan.html)). To obtain a second CAN interface, an external CAN controller such as the MCP2518FDT-E is required. To bring up the second CAN port, load the driver with `sudo modprobe mttcan`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-1.jpg" alt="Image" width={800} height="auto" /></p>
+
+### Usage Instruction
+
+#### USB-CAN Test
+
+Use a USB-CAN adapter to verify CAN communication as follows.
+
+:::note
+USB-CAN adapters usually include a built-in termination resistor.
+
+- When `CAN0_120R_EN_3V3=1`, the onboard 120 Ω termination resistor of CAN0 is disconnected.
+- When `CAN0_120R_EN_3V3=0`, the onboard 120 Ω termination resistor of CAN0 is connected.
+
+The same logic applies to the CAN1 termination control pin.
+:::
+
+##### Load the Driver and Configure the Interface
+
+```Bash
+# Load the driver to bring up the second CAN port
+sudo modprobe mttcan
+sudo ip link set can0 type can bitrate 125000
+sudo ip link set can0 up
+
+# Disconnect the onboard 120 Ω termination resistors
+# because the USB-CAN adapter already provides termination
+sudo gpioset -m wait gpiochip2 2=1 3=1
+```
+
+##### Monitor and Send Data
+
+```Bash
+# Monitor data
+candump can0 &
+candump can1 &
+
+# Send data
+cansend can0 123#abcdabcd
+```
+
+CAN0 Receive and Transmit:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-2.png" alt="Image" width={800} height="auto" /></p>
+
+CAN1 Transmit:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-3.png" alt="Image" width={800} height="auto" /></p>
+
+#### CAN Loopback Test
+
+You can also connect CAN0 and CAN1 together for a board-level loopback test. Physically short the two CAN buses (`CAN0_H` to `CAN1_H`, and `CAN0_L` to `CAN1_L`), enable the onboard 120 Ω termination resistors on both sides, and then verify bidirectional communication between the two interfaces.
+
+Open three terminals and run the following commands.
+
+**Window 1: configure and test CAN0**
+
+```Bash
+sudo modprobe mttcan
+sudo ip link set can0 down
+sudo ip link set can0 type can bitrate 250000
+sudo ip link set can0 up
+
+# Send frames from can0
+cangen can0
+
+# Receive frames on can0
+candump can0
+```
+
+**Window 2: configure and test CAN1**
+
+```Bash
+sudo modprobe mttcan
+sudo ip link set can1 down
+sudo ip link set can1 type can bitrate 250000
+sudo ip link set can1 up
+
+# Send frames from can1
+cangen can1
+
+# Receive frames on can1
+candump can1
+```
+
+**Window 3: enable termination resistors and check link counters**
+
+```Bash
+# Enable the onboard 120 Ω termination resistors on both CAN ports
+gpioset -m wait gpiochip2 2=0 3=0
+
+# Check low-level TX/RX counters
+ip -d -s link show can0
+ip -d -s link show can1
+```
+
+If the wiring and termination are correct, frames generated on one interface should be received on the other interface, and the TX/RX counters should increase accordingly.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-4.png" alt="Image" width={800} height="auto" /></p>
 
 ## DI/DO
 

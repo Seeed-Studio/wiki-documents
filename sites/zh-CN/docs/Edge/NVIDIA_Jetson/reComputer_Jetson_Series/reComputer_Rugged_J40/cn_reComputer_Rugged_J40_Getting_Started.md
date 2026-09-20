@@ -10,10 +10,10 @@ image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee
 slug: /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
-  date: 09/01/2026
+  date: 09/18/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-09-01'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
@@ -181,9 +181,20 @@ reComputer Rugged J4012 是一款基于 NVIDIA Jetson Orin NX 16GB 的 IP66 级�
 
 ## 硬件概览
 
-:::note
-硬件概览图片将在产品定型后补充。
-:::
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
+  <p>侧视图 1</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
+  <p>侧视图 2</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
+  <p>底视图</p>
+</div>
 
 **LED 指示灯：**
 

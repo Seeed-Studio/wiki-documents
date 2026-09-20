@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-18 09:44:26 (北京时间)
-// 多语言页面: 2462 个
+// 生成时间: 2026-09-20 16:45:35 (北京时间)
+// 多语言页面: 2454 个
 
 (function() {
   'use strict';
@@ -221,104 +221,6 @@
     "pt"
   ],
   "/sensecraft-app/tutorials/event-management": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/blockchain-dashboard/dashboard-basics": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/blockchain-dashboard/dashboard-registration": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/blockchain-dashboard/hotspot-registration": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/app-settings": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/deeplink_helium_wallet": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/download-app": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/faq": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/forget-wifi-profile": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-management": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-onboarding": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/remote-reboot": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/update_antenna": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/update_hotspot_location": [
     "cn",
     "en",
     "es",
@@ -843,6 +745,13 @@
     "pt"
   ],
   "/deploy_tensorrt_edge_llm_on_jetpack6.2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_deploy_tensorrt_model_connect_on_jetson": [
     "cn",
     "en",
     "es",
@@ -4907,6 +4816,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_ai_image_transmission_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_source_code_pratical_tutorial_meshtracker_x1": [
     "cn",
     "en",
@@ -5019,6 +4935,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_ai_image_transmission_t1000e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_source_code_pratical_tutorial_t1000_e": [
     "cn",
     "en",
@@ -5082,7 +5005,21 @@
     "ja",
     "pt"
   ],
+  "/easyskymesh_wio_tracker_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_node_map_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_ai_image_transmission_l1": [
     "cn",
     "en",
     "es",
@@ -5139,6 +5076,13 @@
     "pt"
   ],
   "/meshtastic_wio_tracker_l2_intro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_ai_image_transmission_l2": [
     "cn",
     "en",
     "es",

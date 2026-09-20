@@ -1,30 +1,127 @@
 ---
 description: reComputer Rugged J401 的硬件和接口使用
-title: reComputer Rugged J401 硬件与接口使用
+title: reComputer Rugged J401 硬件和接口使用
 keywords:
   - reComputer Rugged
   - reComputer Rugged J401
   - IP66
   - Jetson
-  - 硬件接口
+  - hardware interface
 image: https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png
 slug: /ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage
 sku: 100046979,100002634
 last_update:
-  date: 08/14/2026
+  date: 09/18/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-14'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/
 ---
 
-# reComputer Rugged J401 硬件与接口使用
+# reComputer Rugged J401 硬件和接口使用
 
 本 wiki 介绍 reComputer Rugged J40 的各类硬件和接口，并说明如何使用它们来扩展你的项目创意。reComputer Rugged J40 上的大多数接口采用 M12 连接器，具备 IP66 级防水防尘能力以及出色的抗震性能。这使其非常适合在恶劣的户外环境中长期部署，例如船载系统和港口监控系统。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="Image" width={800} height="auto" /></p>
 
-# 硬件接口概览
+## 硬件总览
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
+  <p>侧视图 1</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
+  <p>侧视图 2</p>
+</div>
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
+  <p>底视图</p>
+</div>
+
+## 载板规格
+
+<table>
+  <thead>
+    <tr>
+      <th colSpan={2}>项目</th>
+      <th>规格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={8}>I/O</td>
+      <td>以太网</td>
+      <td>1× M12 GbE + 4× M12 GbE PSE（IEEE 802.3af，15 W，10/100/1000 Mbps）</td>
+    </tr>
+    <tr>
+      <td>USB</td>
+      <td>4× USB 3.2 Type-A（防水连接器）+ 1× USB 3.0 Type-C（设备 / 烧录）+ 1× USB 2.0 Type-C（调试）</td>
+    </tr>
+    <tr>
+      <td>显示</td>
+      <td>1× HDMI 2.1（防水盖）</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>2× CAN-FD（隔离），通过 M12 A-code</td>
+    </tr>
+    <tr>
+      <td>串口</td>
+      <td>1× RS-232/422/485，通过 M12 A-code</td>
+    </tr>
+    <tr>
+      <td>DI/DO</td>
+      <td>2× DI + 2× DO，通过 M12 A-code</td>
+    </tr>
+    <tr>
+      <td>SIM</td>
+      <td>1× Nano-SIM 卡槽</td>
+    </tr>
+    <tr>
+      <td>天线</td>
+      <td>4× SMA 防水天线连接器</td>
+    </tr>
+    <tr>
+      <td>存储</td>
+      <td>M.2 Key M</td>
+      <td>1× M.2 Key M，用于 NVMe 2280 SSD（内置 128 GB SSD）</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>扩展</td>
+      <td>M.2 Key E</td>
+      <td>1× M.2 Key E，用于 M.2 2230 Wi-Fi 模组（内置 Wi-Fi 6 模组）</td>
+    </tr>
+    <tr>
+      <td>M.2 Key B</td>
+      <td>1× M.2 Key B，用于 5G 模组</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>板载</td>
+      <td>SPI / I2C</td>
+      <td>1× SPI、1× I2C（盒内排针）</td>
+    </tr>
+    <tr>
+      <td>RTC</td>
+      <td>RTC 插座，2-pin 连接器</td>
+    </tr>
+    <tr>
+      <td>LED</td>
+      <td>1× PWR LED（绿色）、1× SSD LED（绿色）</td>
+    </tr>
+    <tr>
+      <td>按键</td>
+      <td>1× Recovery 按键、1× RST 按键</td>
+    </tr>
+    <tr>
+      <td>电源</td>
+      <td>输入</td>
+      <td>M12 A-code 直流 19–48 V</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 电源
 
@@ -47,9 +144,9 @@ reComputer Rugged J401 配备了一个 M12 A-code 直流 19-48V 电源接口，�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/4.jpg" alt="Image" width={800} height="auto" /></p>
 
-## 用于 SSD 的 M.2 Key M 和用于 Wi-Fi 与蓝牙的 M.2 Key E
+## 用于 SSD 的 M.2 Key M 和用于 Wi-Fi 与 Bluetooth 的 M.2 Key E
 
-reComputer Rugged J401 提供一个 M.2 Key E 接口，通过该接口你可以扩展设备的蓝牙和 Wi-Fi 功能。我们推荐使用 Intel Dual Band RTL8822CE 无线网卡。
+reComputer Rugged J401 提供一个 M.2 Key E 接口，你可以通过它扩展设备的 Bluetooth 和 Wi-Fi 功能。我们推荐使用 Intel Dual Band RTL8822CE 无线网卡。
 
 M.2 Key M 是为高速固态硬盘（SSD）设计的接口，提供超高速数据传输速率，非常适合高性能应用。
 
@@ -77,7 +174,7 @@ sudo dd if=/dev/zero of=tempfile bs=1M count=1024 conv=fdatasync
 
 测试完成后，请运行 `sudo rm tempfile` 命令删除缓存文件。
 
-安装好 Wi-Fi 模块并为设备上电后，我们就可以配置设备的 Wi-Fi 和蓝牙设置。
+安装好 Wi-Fi 模块并为设备上电后，我们就可以配置设备的 Wi-Fi 和 Bluetooth 设置。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/7.gif" alt="Image" width={800} height="auto" /></p>
 
@@ -117,7 +214,7 @@ lsusb
 
 **步骤 2.** 确认驱动加载情况
 
-必须确保 5G 模块所需的 option 驱动已被加载。我们可以使用 lsmod 命令进行检查。
+必须确保 5G 模块所需的 option 驱动已加载。我们可以使用 lsmod 命令进行检查。
 
 ```Bash
 lsmod | grep option 
@@ -129,7 +226,7 @@ lsmod | grep option
 
 **步骤 3.** 配置 ModemManager
 
-ModemManager 是一个用于管理调制解调器设备的工具，需要安装并重启。
+ModemManager 是一个用于管理调制解调器设备的工具，需要对其进行安装并重启。
 
 ```Bash
 sudo apt install modemmanager 
@@ -158,7 +255,7 @@ APN（接入点名称，Access Point Name）对于移动设备连接网络至关
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
 ```
 
-该命令会新增一个 GSM（全球移动通信系统，Global System for Mobile Communications）类型的连接，将 APN 指定为 "CMNET"，并使用自动 IPv4 配置。
+该命令会添加一个新的 GSM（全球移动通信系统，Global System for Mobile Communications）类型连接，将 APN 指定为 "CMNET"，并使用自动 IPv4 配置。
 
 **步骤 6.** 激活连接
 
@@ -188,19 +285,19 @@ mmcli -L
 mmcli -m 0 
 ```
 
-该命令会提供有关 5G 模块的全面信息，包括其制造商、型号、支持和当前使用的网络技术、设备状态以及已连接的网络运营商。
+该命令会提供有关 5G 模块的详细信息，包括其制造商、型号、支持和当前使用的网络技术、设备状态以及已连接的网络运营商。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/15.png" alt="Image" width={800} height="auto" /></p>
 
 ## 以太网
 
-reComputer Rugged J401 提供 1 个标准千兆以太网（10/100/1000M）RJ45 接口（J35）和 4 个千兆 PSE（供电设备，Power Sourcing Equipment）RJ45 接口（J36–J39）。标准千兆接口用于常规网络连接。PSE 接口支持 IEEE 802.3af/at 标准，可通过以太网为连接的设备（如 IP 摄像头和无线接入点）供电，单口最大输出功率为 15.4W（802.3af）。这使其非常适合工业、AMR 和户外边缘计算应用，无需单独铺设电源线。所有千兆接口均源自 Jetson Orin 模块内部的 PCIe 控制器，并支持 10/100/1000M 自适应协商。
+reComputer Rugged J401 提供 1 个标准千兆以太网（10/100/1000M）RJ45 接口（J35）和 4 个千兆 PSE（供电设备，Power Sourcing Equipment）RJ45 接口（J36–J39）。标准千兆接口用于常规网络连接。PSE 接口支持 IEEE 802.3af/at 标准，可通过以太网为连接的设备（如 IP 摄像头和无线接入点）供电，每个端口的最大输出功率为 15.4W（802.3af）。这使其非常适合工业、AMR 和户外边缘计算应用，无需单独铺设电源线。所有千兆接口均来自 Jetson Orin 模块内部的 PCIe 控制器，并支持 10/100/1000M 自适应协商。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/16.jpg" alt="Image" width={800} height="auto" /></p>
 
 ## USB
 
-reComputer Rugged J401 提供 4 个 USB 3.2 Type-A 接口（通过内部 USB 3.1 Gen1 集线器实现，支持最高 5Gbps 数据速率，可连接高速外设、存储设备或摄像头）以及 1 个 USB 2.0 Type-C 调试接口（作为串口控制台，用于访问系统日志、调试启动问题以及执行固件更新）。
+reComputer Rugged J401 提供 4 个 USB 3.2 Type-A 接口（通过内部 USB 3.1 Gen1 集线器实现，支持最高 5Gbps 数据速率，可用于连接高速外设、存储设备或摄像头）以及 1 个 USB 2.0 Type-C 调试接口（作为串行控制台，用于访问系统日志、调试启动问题以及执行固件更新）。
 
 ### USB-A 速度测试
 
@@ -265,7 +362,7 @@ sudo chmod +x test_usb.sh
 
 ### USB 2.0 Type-C 接口
 
-通过此串口，使用 USB-C 数据线，你可以在 PC 端监控输入和输出的调试信息。
+通过此串口，使用 USB-C 数据线，可以在 PC 端监控输入和输出的调试信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/18.jpg" alt="Image" width={400} height="auto" /></p>
 
@@ -290,7 +387,7 @@ python -m serial.tools.miniterm COM8 115200
 
 ## RTC
 
-reComputer Rugged J401 集成了带电池备份的硬件 RTC，用于精确计时。
+reComputer Rugged J401 集成了带电池备份的硬件 RTC，用于精确计时。它支持 CR1220 和 CR1225 纽扣电池。
 
 ### 硬件连接
 
@@ -302,11 +399,11 @@ reComputer Rugged J401 集成了带电池备份的硬件 RTC，用于精确计�
 
 **步骤 2.** 打开 reComputer Rugged J401。
 
-**步骤 3.** 在 Ubuntu 桌面上，点击右上角的下拉菜单，进入 `Settings > Date & Time`，通过以太网线连接网络并选择 **Automatic Date & Time**，以自动获取日期/时间。
+**步骤 3.** 在 Ubuntu 桌面上，点击右上角的下拉菜单，进入 `Settings > Date & Time`，通过以太网线连接网络，并选择 **Automatic Date & Time** 以自动获取日期/时间。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/22.png" alt="Image" width={800} height="auto" /></p>
 
-如果你尚未通过以太网连接到互联网，可以在此手动设置日期/时间。
+如果尚未通过以太网连接到互联网，可以在此手动设置日期/时间。
 
 **步骤 4.** 打开终端窗口，执行以下命令检查硬件时钟时间：
 
@@ -314,19 +411,117 @@ reComputer Rugged J401 集成了带电池备份的硬件 RTC，用于精确计�
 cat /sys/devices/platform/bpmp/bpmp:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
 ```
 
-**步骤 5.** 断开网络连接并重启设备。你会发现系统时间虽然断电，但仍能正常工作。
+**步骤 5.** 断开网络连接并重启设备。你会发现系统时间在断电后仍能正常工作。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/23.png" alt="Image" width={800} height="auto" /></p>
 
 ## CAN
 
-> 测试和介绍将在文档完成后补充。
-> 
-> 
+NVIDIA Jetson Orin Nano/NX 模块仅提供一个原生 CAN 控制器（[Controller Area Network (CAN) — NVIDIA Jetson Linux Developer Guide](https://docs.nvidia.com/jetson/archives/r36.4/DeveloperGuide/HR/ControllerAreaNetworkCan.html)）。若要获得第二个 CAN 接口，需要使用外部 CAN 控制器，例如 MCP2518FDT-E。要启用第二个 CAN 端口，请使用 `sudo modprobe mttcan` 加载驱动。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-1.jpg" alt="Image" width={800} height="auto" /></p>
+
+### 使用说明
+
+#### USB-CAN 测试
+
+使用 USB-CAN 适配器按如下方式验证 CAN 通信。
+
+:::note
+USB-CAN 适配器通常内置终端电阻。
+
+- 当 `CAN0_120R_EN_3V3=1` 时，CAN0 板载 120 Ω 终端电阻断开。
+- 当 `CAN0_120R_EN_3V3=0` 时，CAN0 板载 120 Ω 终端电阻接通。
+
+CAN1 终端控制引脚采用相同逻辑。
+:::
+
+##### 加载驱动并配置接口
+
+```Bash
+# Load the driver to bring up the second CAN port
+sudo modprobe mttcan
+sudo ip link set can0 type can bitrate 125000
+sudo ip link set can0 up
+
+# Disconnect the onboard 120 Ω termination resistors
+# because the USB-CAN adapter already provides termination
+sudo gpioset -m wait gpiochip2 2=1 3=1
+```
+
+##### 监控与发送数据
+
+```Bash
+# Monitor data
+candump can0 &
+candump can1 &
+
+# Send data
+cansend can0 123#abcdabcd
+```
+
+CAN0 接收与发送：
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-2.png" alt="Image" width={800} height="auto" /></p>
+
+CAN1 发送：
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-3.png" alt="Image" width={800} height="auto" /></p>
+
+#### CAN 回环测试
+
+你也可以将 CAN0 和 CAN1 连接在一起进行板级回环测试。将两路 CAN 总线物理短接（`CAN0_H` 接 `CAN1_H`，`CAN0_L` 接 `CAN1_L`），在两端启用板载 120 Ω 终端电阻，然后验证两个接口之间的双向通信。
+
+打开三个终端并运行以下命令。
+
+**窗口 1：配置并测试 CAN0**
+
+```Bash
+sudo modprobe mttcan
+sudo ip link set can0 down
+sudo ip link set can0 type can bitrate 250000
+sudo ip link set can0 up
+
+# Send frames from can0
+cangen can0
+
+# Receive frames on can0
+candump can0
+```
+
+**窗口 2：配置并测试 CAN1**
+
+```Bash
+sudo modprobe mttcan
+sudo ip link set can1 down
+sudo ip link set can1 type can bitrate 250000
+sudo ip link set can1 up
+
+# Send frames from can1
+cangen can1
+
+# Receive frames on can1
+candump can1
+```
+
+**窗口 3：启用终端电阻并检查链路计数器**
+
+```Bash
+# Enable the onboard 120 Ω termination resistors on both CAN ports
+gpioset -m wait gpiochip2 2=0 3=0
+
+# Check low-level TX/RX counters
+ip -d -s link show can0
+ip -d -s link show can1
+```
+
+如果接线和终端设置正确，在一个接口上产生的帧应能在另一个接口上接收，并且 TX/RX 计数器会相应增加。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-4.png" alt="Image" width={800} height="auto" /></p>
 
 ## DI/DO
 
-reComputer Rugged J401 的 DI/DO 接口集成在 J47 2x10P 连接器上，与 CAN 接口共用该接口。它们支持 2 路数字输入和 2 路数字输出，具有信号传输稳定和工业级电压适配能力，适用于连接数字传感器、继电器等外设设备。
+reComputer Rugged J401 的 DI/DO 接口集成在 J47 2x10P 连接器上，与 CAN 接口共用。它们支持 2 路数字输入和 2 路数字输出，具备稳定的信号传输和工业级电压适配能力，适合连接数字传感器、继电器等外设设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/24.png" alt="Image" width={500} height="auto" /></p>
 
@@ -336,7 +531,7 @@ M12 接口上对应的 DI/DO 引脚如下图所示。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/25.png" alt="Image" width={500} height="auto" /></p>
 
-数字输入（DI）/ 数字输出（DO）通道
+数字输入（DI）/数字输出（DO）通道
 
 ### 使用说明
 
@@ -390,7 +585,7 @@ gpioget gpiochip0 144
 
 ## UART
 
-reComputer Rugged J401 配备了独立的 UART 接口（UART1），支持 RS232、RS422 和 RS485 通信模式，具有信号传输稳定、与外设设备兼容性强等特点。
+reComputer Rugged J401 配备了独立的 UART 接口（UART1），支持 RS232、RS422 和 RS485 通信模式，具备稳定的信号传输能力，并与多种外设设备具有良好的兼容性。
 
 ### 硬件连接
 
@@ -398,18 +593,18 @@ UART 接口通道
 
 通过拨动 SW3 开关在 RS232、RS485 和 RS422 模式之间切换。
 
-注意：当开关按下（ON）时，该位为 0；未按下时，该位为 1。
+注意：当开关按下（ON）时，该位为 0；未按下时，该位为 1
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/29.png" alt="Image" width={500} height="auto" /></p>
 
-|Mode_0|Mode_1|Mode_2|Mode|Status|
+|Mode_0|Mode_1|Mode_2|模式|状态|
 |---|---|---|---|---|
 |0|0|0|RS-422 全双工|1T/1R RS-422|
 |0|0|1|纯 RS-232|3T/5R RS-232|
 |0|1|0|RS-485 半双工|1T/1R RS-485，TX ENABLE <br />低电平有效|
 |0|1|1|RS-485 半双工|1T/1R RS-485，TX ENABLE 高电平有效|
 |1|0|0|RS-422 全双工|带终端电阻的 RS-422|
-|1|0|1|RS-232|1T/1R RS-232 与 RS485 应用共存，无需总线开关（用于特殊用途）|
+|1|0|1|RS-232|1T/1R RS-232 可与 RS485 应用共存，无需总线开关（用于特殊用途）|
 |1|1|0|RS-485|带终端电阻的 1T/1R RS-485，TX ENABLE 低电平有效|
 |1|1|1|关闭|所有 I/O 引脚为高阻态|
 
@@ -429,7 +624,7 @@ UART 接口通道
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/31.jpg" alt="Image" width={500} height="auto" /></p>
 
-**步骤 1：加载 SPI 内核模块（前提条件）**
+**步骤 1：加载 SPI 内核模块（前置条件）**
 
 在操作 SPI 接口之前，确保已加载 `spidev` 内核模块（默认系统可能已预加载，但建议手动确认）：
 
@@ -437,17 +632,17 @@ UART 接口通道
 sudo modprobe spidev
 ```
 
-如果命令执行后没有错误提示，则表示模块加载成功；如果模块已经加载，该命令不会返回任何信息，这是正常现象。
+如果命令执行后没有错误提示，表示模块加载成功；如果模块已经加载，该命令不会返回任何信息，这是正常现象。
 
 **步骤 2：查看 SPI 设备节点**
 
-在终端中输入以下命令，查看 reComputer Rugged J401 的 SPI 接口映射出的设备名称：
+在终端中输入以下命令，查看 reComputer Rugged J401 的 SPI 接口所映射的设备名称：
 
 ```Bash
 ls /dev/spidev*
 ```
 
-如果未显示任何设备节点，说明 `spidev` 模块未成功加载。请重新运行 `sudo modprobe spidev` 并检查系统日志进行排查。
+如果没有显示设备节点，说明 `spidev` 模块未成功加载。请重新运行 `sudo modprobe spidev` 并检查系统日志进行排查。
 
 **步骤 3：获取并编译 SPI 测试代码**
 
@@ -469,7 +664,7 @@ sudo ./spidev_test -v -D /dev/spidev0.0 -s 100000 -p "Hello SPI"
 
 **步骤 5：验证测试结果**
 
-运行测试命令后，你可以在终端中观察 SPI0.0 接口的数据收发情况。核心输出如下：
+运行测试命令后，可以在终端中观察 SPI0.0 接口的数据收发情况。核心输出如下：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/32.png" alt="Image" width={800} height="auto" /></p>
 
@@ -524,13 +719,13 @@ sudo i2cdetect -y -r 1
 
 ## 资源
 
-- [reComputer Rugged J40 规格书](#) *(即将推出)*
+- [reComputer Rugged J40 Datasheet](#) *(即将推出)*
 - [Linux_for_Tegra 源代码](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson 设备对比](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺畅。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
