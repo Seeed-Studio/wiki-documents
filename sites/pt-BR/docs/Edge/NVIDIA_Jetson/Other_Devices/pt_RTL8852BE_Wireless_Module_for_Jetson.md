@@ -14,7 +14,7 @@ last_update:
   date: 4/14/2026
   author: Zibo
 createdAt: '2026-04-14'
-updatedAt: '2026-06-23'
+updatedAt: '2026-06-17'
 sku: 100042928
 url: https://wiki.seeedstudio.com/pt-br/rtl8852be_wireless_module_for_jetson/
 ---
@@ -67,7 +67,7 @@ O RTL8852BE é um módulo sem fio M.2 Wi-Fi 6 (802.11ax) baseado no chipset Real
     </tr>
     <tr>
       <td>Antena</td>
-      <td>Conecta às antenas externas por meio de conector MHF4</td>
+      <td>Conecta-se às antenas externas por meio de conector MHF4</td>
     </tr>
     <tr>
       <td>Dimensão</td>
@@ -92,7 +92,7 @@ O RTL8852BE é um módulo sem fio M.2 Wi-Fi 6 (802.11ax) baseado no chipset Real
     </table>
 </div>
 
-## Dispositivos Suportados
+## Dispositivos Compatíveis
 
 Toda a linha reComputer
 
@@ -170,7 +170,7 @@ O nome da interface pode variar dependendo da versão do JetPack:
 - JetPack 5: normalmente `wlan0`
 - JetPack 6: pode aparecer como `wlP1p1s0`
 
-Ajuste o nome da interface nos comandos abaixo de acordo. Use o seguinte comando para descobrir:
+Ajuste o nome da interface nos comandos abaixo conforme necessário. Use o seguinte comando para descobrir:
 ```bash
 ifconfig
 ```
@@ -190,14 +190,14 @@ sudo iw dev wlan0 scan | grep -E "SSID|freq"
 
 Substitua `wlan0` pelo nome real da sua interface, se for diferente.
 
-### Conectar a uma Rede WiFi
+### Conectar-se a uma Rede WiFi
 
 ```bash
 sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.PNG"/>
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
 </div>
 
 ### Verificar Conexão WiFi 6
