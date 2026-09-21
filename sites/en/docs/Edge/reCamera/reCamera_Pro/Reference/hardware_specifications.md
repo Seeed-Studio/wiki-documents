@@ -10,7 +10,7 @@ slug: /recamera_pro_hardware_specifications
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 09/23/2026
+  date: 09/21/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
 updatedAt: '2026-07-23'

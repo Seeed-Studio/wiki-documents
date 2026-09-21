@@ -10,7 +10,7 @@ slug: /recamera_pro_api_common_conventions
 sku: 10003420
 sidebar_position: 3
 last_update:
-  date: 09/23/2026
+  date: 09/21/2026
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
