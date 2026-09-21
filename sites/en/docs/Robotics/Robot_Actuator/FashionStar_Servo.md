@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for FashionStar Servo motors.
-title: FashionStar Servo Motor
+title: FashionStar
 keywords:
   - actuator
   - motor

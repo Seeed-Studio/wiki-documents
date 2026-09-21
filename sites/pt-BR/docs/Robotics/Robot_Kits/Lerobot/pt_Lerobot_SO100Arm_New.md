@@ -8,6 +8,8 @@ keywords:
   - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
+aliases:
+  - /so-arm101
 sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 3/11/2026
@@ -353,9 +355,9 @@ Todas as peças para o líder ou seguidor já estão contidas em um único arqui
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
-**Passo 4: Imprima o Soft Gripper (Opcional)**
+**Passo 4: Imprima o Soft Gripper e o inserto do suporte da câmera (Opcional)**
 
-Se você quiser que o braço robótico seja capaz de agarrar objetos macios, frágeis ou de formato irregular, você pode imprimir um soft gripper para substituir o gripper rígido padrão. Os arquivos de impressão estão disponíveis no repositório [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git).
+Se você quiser que o braço robótico seja capaz de agarrar objetos macios, frágeis ou de formato irregular, você pode imprimir um soft gripper para substituir o gripper rígido padrão. Se precisar instalar uma câmera, também pode imprimir o inserto do suporte da câmera. Os arquivos de impressão estão disponíveis no repositório [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git).
 
 Instruções sobre material de impressão:
 

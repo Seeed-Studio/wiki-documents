@@ -8,7 +8,7 @@ keywords:
   - Display
   - LCD
   - 0.96
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /getting_started_0.96_inch_display_nrf52840
 sku: 100063377
 sidebar_position: 1
@@ -61,7 +61,7 @@ This combination makes it an ideal platform for ultra-compact wearables, keychai
     <tr><td>User Buttons</td><td>2</td></tr>
     <tr><td>Battery Connector</td><td>2-pin JST 2.0 Connector for 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery status detection supported; battery voltage can also be monitored for battery-level estimation.</td></tr>
-    <tr><td>Expansion Interfaces</td><td>1x I2C pads, 1x I2S pads</td></tr>
+    <tr><td>Expansion Interfaces</td><td>1x I2C Interface, 1x I2S Interface, 1x SWD Interface, 2x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>18.8 × 43.6 × 10.6 mm</td></tr>
     <tr><td>Best For</td><td>Smart badges, tiny wearables, BLE status displays</td></tr>
   </table>
@@ -109,6 +109,10 @@ The 0.96'' IPS Display breaks out all XIAO nRF52840 Plus pins. The table below l
 
 
 ## Getting Started
+
+:::caution
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_nRF52840Plus_display_handing_tips.jpg" style={{width:600, height:'auto'}}/></div>
+:::
 
 This guide uploads a minimal **"Hello, XIAO"** sketch to the display board: the screen turns on its backlight, fills black, and prints **"Hello,"** and **"XIAO"** as two centered lines of large green text. It is the fastest way to confirm the screen and your development environment are working before diving into the individual peripheral demos.
 
@@ -212,6 +216,7 @@ Double-click the reset button on the XIAO nRF52840 Plus. The USR LED will breath
 - **🗃️[PCB Design Files]** [XIAO 0.96'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
 - **📄[Schematic]** [XIAO 0.96'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[3D Model]** [XIAO 0.96'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%200.96%27%27%20IPS%20Display.step)
+- **🖨️[3D Printed Enclosure]** [XIAO 0.96'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843001-enclosure-for-xiao-096-ips-display-esp32nrf52840/files)
 - **📄[Datasheet]** [0.96 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/0.96%20Inch%20Display%20Datasheet.pdf)
 - **💾[Factory Firmware]** [XIAO 0.96'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%200.96%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
 

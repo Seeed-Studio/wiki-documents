@@ -90,9 +90,6 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
       <li><a href="https://wiki.seeedstudio.com/Wio-Terminal-Azure-IOT/" target="_blank">Connect the Wio Terminal to Microsoft Azure IoT Hub (WiFi)</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/Integrate-into-Azure-IoT-Hub/" target="_blank">Integrate into Azure IoT Hub (Helium)</a></li>
-    </ul>
-    <ul>
       <li><a href="https://wiki.seeedstudio.com/Develop-in-Microsoft-Azure-IoT-Central/" target="_blank">Develop in Microsoft Azure IoT Central</a></li>
     </ul>
     <ul>
@@ -155,7 +152,7 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
     </ul>
   </div>
   <h3>
-    <span className="headline" id="Arduino Programming">Sensor &amp; Helium/TTN Arduino Programme</span>
+    <span className="headline" id="Arduino Programming">Sensor &amp; TTN Arduino Programme</span>
   </h3>
   <div className="item">
     <ul>
@@ -175,29 +172,6 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
     </ul>
     <ul>
       <li><a href="https://wiki.seeedstudio.com/K1100-Vision-AI-Module-Grove-LoRa-E5/" target="_blank">Grove Vision AI Module</a></li>
-    </ul>
-  </div>
-  <h3>
-    <span className="headline" id="Helium">Helium</span>
-  </h3>
-  <div className="item">
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/Helium-Introduction/" target="_blank">Helium Introduction</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/Connecting-to-Helium/" target="_blank">Connect to Helium</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/Integrate_into_Google_Sheets_via_Helium/" target="_blank">Integrate into Google Sheets via Helium</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/Connect_AWS_via_helium/" target="_blank">Connect AWS IOT Core via Helium (Helium)</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/Integrate-into-Azure-IoT-Hub/" target="_blank">Integrate into Azure IoT Hub</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/Configuring-Web-APP-Visualization/" target="_blank">Configure Web APP Visualization</a></li>
     </ul>
   </div>
   <h3>
@@ -239,12 +213,6 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
   </h3>
   <div className="item">
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/Connect_AWS_via_helium/" target="_blank">Connect AWS IOT Core via Helium (Helium)</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/Integrate-into-Azure-IoT-Hub/" target="_blank">Integrate into Azure IoT Hub (Helium)</a></li>
-    </ul>
-    <ul>
       <li><a href="https://wiki.seeedstudio.com/Connect-Wio-Terminal-to-Google-Cloud/" target="_blank">Connect Wio Terminal to Google Cloud IoT Core (WiFi)</a></li>
     </ul>
     <ul>
@@ -266,9 +234,6 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
   <div className="item">
     <ul>
       <li><a href="https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/" target="_blank">Wio Terminal Edge Impulse Getting Started (built-in sensor)</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/K1111-Edge-Impulse/" target="_blank">Develop Edge Impulse application to cloud via Helium (built-in sensor)</a></li>
     </ul>
     <ul>
       <li><a href="https://wiki.seeedstudio.com/Train-Deploy-AI-Model/" target="_blank">Train and Deploy Your Own AI Model Into Grove - Vision AI</a></li>
@@ -401,12 +366,12 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
         <tr> <td colspan="3">————————————————————————————————————————————————————</td>  </tr>
         <tr>
             <th>Connect the Wio Terminal to Microsoft Azure IoT Hub (WiFi)</th>
-            <th>Integrate into Azure IoT Hub (Helium)</th>
+            <th>Integrate into Azure IoT Hub </th>
             <td rowspan="11"><div align="center"><img width="300" src="https://files.seeedstudio.com/wiki/K1100/hub.png" /></div></td>
         </tr>
         <tr>
             <td align="left">In this chapter, we will describe how to send data from the Wio Terminal to Azure IoT Hub via the WiFi function that comes with the Wio Terminal.</td>
-            <td align="left">This chapter describes the use of Azure IoT Hub in the Helium console.</td>
+            <td align="left">This chapter describes the use of Azure IoT Hub in the console.</td>
         </tr>
         <tr>
             <th><a href="https://wiki.seeedstudio.com/Integrate-into-Azure-IoT-Hub">Jump to chapter &gt;</a></th>
@@ -460,9 +425,9 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
             <th>Soil Moisture Sensor</th>
         </tr>
         <tr>
-            <td>This section describes how to use the Wio Terminal Light Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the Helium/TTN.</td>
-            <td>This section describes how to use the Wio Terminal IMU Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the Helium/TTN.</td>
-            <td>This section describes how to use the Grove Soil Moisture Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the Helium/TTN.</td>
+            <td>This section describes how to use the Wio Terminal Light Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the TTN.</td>
+            <td>This section describes how to use the Wio Terminal IMU Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the TTN.</td>
+            <td>This section describes how to use the Grove Soil Moisture Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the TTN.</td>
         </tr>
         <tr>
             <th><a href="https://wiki.seeedstudio.com/K1100-Light-Sensor-Grove-LoRa-E5/">Jump to chapter &gt;</a></th>
@@ -483,9 +448,9 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
             <th>Grove Vision AI Module</th>
         </tr>
         <tr>
-            <td>This section describes how to use the Grove VOC and eCO2 Gas Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the Helium/TTN.</td>
-            <td>This section describes how to use the Wio Terminal Light Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the Helium/TTN.</td>
-            <td>This section describes how to use the Wio Terminal Light Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the Helium/TTN.</td>
+            <td>This section describes how to use the Grove VOC and eCO2 Gas Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the TTN.</td>
+            <td>This section describes how to use the Wio Terminal Light Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the TTN.</td>
+            <td>This section describes how to use the Wio Terminal Light Sensor to acquire data and connect to the LoRa® network via the Grove - Wio-E5 in preparation for connecting to the TTN.</td>
         </tr>
         <tr>
             <th><a href="https://wiki.seeedstudio.com/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5/">Jump to chapter &gt;</a></th>
@@ -496,63 +461,7 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
 
 <br />
 
-### Helium Section
 
-<table>
-    <tbody>
-        <tr>
-            <td colspan="2">To send the sensor values to the cloud platform, the choice of network is a necessary part. We offer two platforms with the widest coverage in LoRa® for you to choose from today. Here is Helium Section.</td>
-            <td rowspan="2">
-                <div align="center"><img width="550" src="https://files.seeedstudio.com/wiki/K1100_overview/3.png" /></div>
-            </td>
-        </tr>
-        <tr>
-            <th>Helium Introduction</th>
-            <th>Connecting to Helium</th>
-        </tr>
-        <tr>
-            <td>In this chapter, we will introduce the Helium console controls that we use to get a first impression of the Helium console.</td>
-            <td>This section describes how to configure Helium so that sensor data can be successfully uploaded to and displayed in Helium.</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <th><a href="https://wiki.seeedstudio.com/Helium-Introduction">Jump to chapter &gt;</a></th>
-            <th><a href="https://wiki.seeedstudio.com/Connecting-to-Helium">Jump to chapter &gt;</a></th>
-            <td> </td>
-        </tr>
-        <tr> <td colspan="3">————————————————————————————————————————————</td>  </tr>
-        <tr>
-            <th>Helium integrate into Azure IoT Hub</th>
-            <th>Helium integrate into Google Sheets</th>
-            <td> </td>
-        </tr>
-        <tr>
-            <td align="left">This section describes how to configure Microsoft Azure and integrate with Helium to upload data to the Microsoft Azure platform.</td>
-            <td align="left">This section introduces the use of Google Forms in Helium integration. and using Google Forms to store sensor data.</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <th><a href="https://wiki.seeedstudio.com/Integrate-into-Azure-IoT-Hub">Jump to chapter &gt;</a></th>
-            <th><a href="https://wiki.seeedstudio.com/Integrate_into_Google_Sheets_via_Helium/">Jump to chapter &gt;</a></th>
-            <td> </td>
-        </tr>
-        <tr> <td colspan="3">————————————————————————————————————————————</td>  </tr>
-        <tr>
-            <th>Helium integrate into AWS IOT Core</th>
-            <td colspan="2"> </td>
-        </tr>
-        <tr>
-            <td align="left">This section describes how to configure and use the AWS integration in Helium.</td>
-            <td colspan="2"> </td>
-        </tr>
-        <tr>
-            <th><a href="https://wiki.seeedstudio.com/Connect_AWS_via_helium/">Jump to chapter &gt;</a></th>
-            <td colspan="2"> </td>
-        </tr>
-        <tr>
-            <td colspan="3"><div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/113.png" /></div></td>
-        </tr>
-</tbody></table>
 
 ### The Things Network Section
 
@@ -636,7 +545,7 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
       </td>
     </tr>
     <tr>
-      <td><strong>Develop Edge Impulse application to cloud via Helium</strong></td>
+      <td><strong>Develop Edge Impulse application to cloud</strong></td>
       <td><strong>Train and Deploy Your Own AI Model Into Grove - Vision AI</strong></td>
     </tr>
     <tr>
@@ -666,7 +575,7 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
 <table align="center">
   <tbody><tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit33.jpg" alt="pir" width="1100" height="auto" /></p></td>
-      <td align="left"><strong>Soil moisture monitoring alarm system</strong><br /><br />In this section, we will show you how to unitize the Wio Terminal to link Grove - Wio-E5 and Grove - Soil Moisture Sensor, connecting them with Helium and Azure IoT Central, to build a real-time backyard potting monitor and watering-reminder.<br /><br /><a href="https://wiki.seeedstudio.com/soil-alarm-system/">Jump to chapter &gt;</a></td>
+      <td align="left"><strong>Soil moisture monitoring alarm system</strong><br /><br />In this section, we will show you how to unitize the Wio Terminal to link Grove - Wio-E5 and Grove - Soil Moisture Sensor, connecting to Azure IoT Central, to build a real-time backyard potting monitor and watering-reminder.<br /><br /><a href="https://wiki.seeedstudio.com/soil-alarm-system/">Jump to chapter &gt;</a></td>
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/K1100_overview/000000.png" alt="pir" width="1100" height="auto" /></p></td>
@@ -684,9 +593,7 @@ All libraries and code for this course can be found at the following address Bef
   <p style={{}}><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank" /></p><div align="center"><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank"><img width="500" src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
 </div>
 
-## Helium LoRaWAN®
 
-For more details, please read [Helium LoRaWAN®: Public Infrastructure with Private Network Servers](https://blog.helium.com/helium-lorawan-public-infrastructure-with-ultimate-privacy-9132560e4ae6).
 
 ## The Things Network LoRaWAN®
 

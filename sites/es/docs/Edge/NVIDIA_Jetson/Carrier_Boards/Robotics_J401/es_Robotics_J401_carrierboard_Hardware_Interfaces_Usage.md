@@ -184,7 +184,7 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
     </tr>
     <tr>
       <th rowSpan="1">Temperatura de funcionamiento</th>
-      <td colSpan="2">-20℃~60℃ (Modo 25W);<br />-20℃~55℃ (Modo MAXN);<br />(con disipador de calor reComputer Robotics con ventilador)</td>
+      <td colSpan="2">-20℃~60℃ (modo de 25W);<br />-20℃~55℃ (modo de 40W);<br />-20℃~50℃ (modo MAXN);<br />(con disipador de calor reComputer Robotics con ventilador)</td>
     </tr>
     <tr>
       <th rowSpan="1">Garantía</th>

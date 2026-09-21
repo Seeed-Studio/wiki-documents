@@ -1,6 +1,6 @@
 ---
 description: 本教程展示了如何下载Isaacsim，并将reBot-B601-DM机器人部署在仿真环境中，进行开发和调试。
-title: 通过 Isaacsim 仿真 reBot-B601-DM
+title: B601-DM 跑Isaac Sim
 keywords:
   - Isaacsim
   - 机械臂
@@ -18,6 +18,7 @@ createdAt: '2026-08-17'
 updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_isaacsim/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
@@ -28,10 +29,16 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1042412233386&skuId=6065255360559" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1042412233386&skuId=6065255360559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 ## 简介
 
@@ -362,6 +369,5 @@ kill <PID>
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 
 

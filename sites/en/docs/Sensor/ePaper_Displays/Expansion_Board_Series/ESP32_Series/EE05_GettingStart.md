@@ -6,11 +6,11 @@ image: https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp
 slug: /epaper_ee05
 sidebar_position: 4
 last_update:
-  date: 04/27/2026
-  author: dimo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/epaper_ee05/
-updatedAt: '2026-04-28'
+updatedAt: '2026-09-10'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -37,7 +37,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introduction
 
-Powered by the **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide range of 24-pin ePaper displays and enables no-code UI design and deployment with SenseCraft HMI. With extension IO and a battery connector power switch, it is ideal for low-power smart display applications.
+Powered by the **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide range of 24-pin ePaper displays and enables no-code UI design and deployment with SenseCraft Seeedash. With extension IO and a battery connector power switch, it is ideal for low-power smart display applications.
 
 ### Features
 
@@ -45,7 +45,7 @@ Powered by the **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide ra
 - **Versatile Display Support:** Compatible with a wide range of 24-pin ePaper displays for various project requirements.
 - **Extension IO Port:** Enables connection of additional sensors, such as temperature and humidity sensors, for enhanced functionality.
 - **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
-- **No-Code UI Design & Deployment with SenseCraft HMI:** Design and deploy personalized dashboards effortlessly with SenseCraft HMI, our new AI-powered no-code platform. Create your UI through simple drag-and-drop elements, choose from our rich templates, or let AI help you. Connect real-time data from web APIs, then deploy your finished dashboard to ePaper display with just a few clicks. From design to data configuration to deployment, everything happens seamlessly on one single platform.
+- **No-Code UI Design & Deployment with SenseCraft Seeedash:** Design and deploy personalized dashboards effortlessly with SenseCraft Seeedash, our new AI-powered no-code platform. Create your UI through simple drag-and-drop elements, choose from our rich templates, or let AI help you. Connect real-time data from web APIs, then deploy your finished dashboard to ePaper display with just a few clicks. From design to data configuration to deployment, everything happens seamlessly on one single platform.
 
 ### Specifications
 

@@ -3,19 +3,19 @@ description: Primeros pasos con la placa controladora EE03 de tinta electrónica
 title: Primeros pasos con EE03
 keywords:
   - E-ink
-  - Driver Board
+  - Placa controladora
   - 10.3 inch
   - ESP32
-  - SenseCraft HMI
+  - SenseCraft Seeedash
 image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.webp
 slug: /getting_started_with_ee03
 sidebar_position: 2
 sku: 100080566
 last_update:
-  date: 9/2/2026
-  author: Nemo
+  date: 09/10/2026
+  author: Luki
 createdAt: '2026-03-02'
-updatedAt: '2026-09-02'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/es/getting_started_with_ee03/
 ---
 
@@ -57,11 +57,11 @@ Impulsada por **XIAO ESP32-S3 Plus**, la placa controladora de ePaper EE03 es co
 ### Características
 
 - **XIAO ESP32-S3 Plus integrado:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible.
-- **Compatibilidad dedicada con pantalla ePaper monocroma de 10,3":** Diseñada específicamente para pantallas ePaper de 10,3" con refresco de alta velocidad, lo que garantiza una configuración rápida y un funcionamiento estable.
-- **Refresco de alta velocidad habilitado:** El control de temporización T-CON integrado garantiza un accionamiento de alta velocidad preciso, mientras que el SHT40 integrado proporciona medición de temperatura en tiempo real para la compensación de la forma de onda.
+- **Compatibilidad dedicada con pantalla ePaper monocroma de 10,3":** Diseñada específicamente para la pantalla ePaper de 10,3" de refresco de alta velocidad, lo que garantiza una configuración rápida y un funcionamiento estable.
+- **Refresco de alta velocidad habilitado:** El control de temporización T-CON integrado garantiza un accionamiento de alta velocidad preciso, mientras que el SHT40 a bordo proporciona medición de temperatura en tiempo real para la compensación de la forma de onda.
 - **Conector BAT con interruptor:** Ofrece una conexión sencilla de la batería e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro de consumo.
-- **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, lo que proporciona flexibilidad para acelerar proyectos y funciones personalizables.
-- **Firmware SenseCraft HMI precargado:** Simplemente conéctalo y empieza a usarlo de inmediato con SenseCraft HMI, nuestra plataforma de diseño de interfaces sin código impulsada por IA. Elige entre plantillas variadas o crea interfaces mediante arrastrar y soltar (con asistencia opcional de IA) y despliega en la pantalla ePaper con solo unos clics.
+- **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, proporcionando flexibilidad para acelerar el desarrollo del proyecto y funciones personalizables.
+- **Firmware SenseCraft Seeedash pregrabado:** Solo tienes que conectarla y empezar a usarla de inmediato con SenseCraft Seeedash, nuestra plataforma de diseño de interfaces sin código impulsada por IA. Elige entre plantillas variadas o crea interfaces arrastrando y soltando (con asistencia opcional de IA) y despliega en la pantalla ePaper con solo unos clics.
 
 ### Especificaciones
 
@@ -76,10 +76,10 @@ Impulsada por **XIAO ESP32-S3 Plus**, la placa controladora de ePaper EE03 es co
 
 ### Aplicaciones
 
-- **Lectores de libros electrónicos digitales:** Ofrecen una experiencia de lectura monocroma similar al papel con 16 niveles de escala de grises y un refresco rápido para cambios de página más fluidos y actualizaciones más receptivas.
+- **Lectores de libros electrónicos digitales:** Ofrecen una experiencia de lectura monocroma similar al papel con escala de grises de 16 niveles y refresco rápido para cambios de página más fluidos y actualizaciones más receptivas.
 - **Panel de control en tiempo real:** Muestra información en vivo como actualizaciones meteorológicas, calendarios, notificaciones clave y widgets de datos como consumo de energía, estado de sensores o KPIs.
 - **Alertas de seguridad:** Muestra alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
-- **Panel de llegadas de transporte público:** Muestra de un vistazo horarios de llegada en tiempo real de autobuses/trenes, estado de rutas y avisos de servicio para el desplazamiento diario.
+- **Panel de llegadas de transporte público:** Muestra en un vistazo horarios de llegada en tiempo real de autobuses/trenes, estado de rutas y avisos de servicio para el desplazamiento diario.
 
 ## Descripción general del hardware
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/2.png" style={{width:800, height:'auto'}}/></div>
@@ -93,9 +93,9 @@ Impulsada por **XIAO ESP32-S3 Plus**, la placa controladora de ePaper EE03 es co
 - **LED indicadores**: Indicadores de estado para alimentación y carga.
 - **Conector JST**: Conector JST de 2 pines y 2,0 mm para conectar la batería.
 
-## Primeros pasos con SenseCraft HMI
+## Primeros pasos con SenseCraft Seeedash
 
-Esta sección te guiará para conectar tu EE03 a la plataforma SenseCraft HMI, lo que te permitirá actualizar fácilmente el contenido de la pantalla de forma inalámbrica.
+Esta sección te guiará para conectar tu EE03 a la plataforma SenseCraft Seeedash, lo que te permitirá actualizar fácilmente el contenido de la pantalla de forma inalámbrica.
 
 ### Instalación del equipo
 
@@ -110,32 +110,32 @@ Conecta la placa EE03 a una fuente de alimentación (ordenador o adaptador USB) 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_7.jpg" style={{width:300,height:'auto'}}/></div>
 
 **Paso 3. Entrar en el modo de configuración de red**
-Después de la imagen de bienvenida, la pantalla se actualizará automáticamente para mostrar la interfaz de configuración de red. Esto indica que el dispositivo está listo para conectarse a Wi-Fi.
+Después de la imagen de bienvenida, la pantalla se actualizará automáticamente para mostrar la interfaz de configuración de red. Esto indica que el dispositivo está listo para conectarse a la red Wi‑Fi.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_3.png" style={{width:300,height:'auto'}}/></div>
 
 
 ### Configuración de red
 
-**Paso 4. Configurar Wi-Fi mediante el teléfono móvil**
-Utiliza tu teléfono móvil para escanear el código QR que se muestra en la pantalla. Sigue las indicaciones en tu teléfono para introducir el SSID y la contraseña de tu red Wi-Fi local y conectar el EE03 a Internet.
+**Paso 4. Configurar Wi‑Fi mediante el teléfono móvil**
+Utiliza tu teléfono móvil para escanear el código QR que se muestra en la pantalla. Sigue las indicaciones en tu teléfono para introducir el SSID y la contraseña de tu red Wi‑Fi local y conectar el EE03 a Internet.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
 **Paso 5. Obtener el código de emparejamiento**
-Una vez que la configuración de red se haya realizado correctamente, la pantalla se actualizará de nuevo y mostrará un **código de emparejamiento** único. Necesitarás este código para el siguiente paso.
+Una vez que la configuración de red se haya completado correctamente, la pantalla se actualizará de nuevo y mostrará un **código de emparejamiento** único. Necesitarás este código para el siguiente paso.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_2.png" style={{width:300,height:'auto'}}/></div>
 
 ### Vinculación con la plataforma y actualización
 
-**Paso 6. Vincular el dispositivo en SenseCraft HMI**
-Ve a la [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "New Device". Introduce el código de emparejamiento que se muestra en tu pantalla de tinta electrónica.
+**Paso 6. Vincular el dispositivo en SenseCraft Seeedash**
+Ve a la [plataforma SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "New Device". Introduce el código de emparejamiento que se muestra en tu pantalla de tinta electrónica.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
 
 **Paso 7. Crear y enviar una nueva interfaz**     
-En la plataforma SenseCraft HMI, selecciona la plantilla adecuada para la pantalla de 10,3 pulgadas para crear una nueva interfaz o subir una imagen.
+En la plataforma SenseCraft Seeedash, selecciona la plantilla adecuada para la pantalla de 10,3 pulgadas para crear una nueva interfaz o subir una imagen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -189,7 +189,7 @@ Ten en cuenta que PSRAM debe estar habilitado.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 Luego haz clic en **Upload** para cargar el código.
-Ahora verás la respuesta en tu pantalla de epaper. A continuación se muestra el resultado del ejemplo HelloWorld.
+Ahora verás la respuesta en la pantalla de tu epaper. A continuación se muestra el resultado del ejemplo HelloWorld.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/7.png" style={{width:500, height:'auto'}}/></div>
 
@@ -203,18 +203,18 @@ Ahora verás la respuesta en tu pantalla de epaper. A continuación se muestra e
 *   Para usuarios de Arduino: asegúrate de que PSRAM está habilitado en **Tools** → **PSRAM** → **OPI PSRAM**.
 
 **P2: La configuración de Wi-Fi falla.**
-*   Asegúrate de que tu red Wi-Fi es de 2,4 GHz.
+*   Asegúrate de que tu red Wi-Fi es de 2.4GHz.
 *   Comprueba si la contraseña de Wi-Fi se introdujo correctamente.
 
 **P3: La pantalla se ve borrosa o tiene efecto fantasma.**
-*   Esto puede ocurrir si la pantalla no se ha actualizado durante mucho tiempo o si la fuente de alimentación es inestable. Intenta actualizar la pantalla de nuevo a través de la plataforma HMI.
+*   Esto puede ocurrir si la pantalla no se ha actualizado durante mucho tiempo o si la fuente de alimentación es inestable. Intenta actualizar la pantalla de nuevo a través de la plataforma Seeedash.
 
 **P4: La pantalla emite un zumbido de alta frecuencia durante la actualización.**
-*   Esto es normal en las pantallas ePaper. El circuito de accionamiento de alto voltaje produce un sonido audible durante el ciclo de actualización, especialmente en pantallas más grandes. No indica un fallo de hardware y se detendrá una vez que la actualización se haya completado.
+*   Esto es normal en las pantallas ePaper. El circuito de accionamiento de alto voltaje produce un sonido audible durante el ciclo de actualización, especialmente en pantallas más grandes. No indica un fallo de hardware y se detendrá una vez que la actualización se complete.
 
-**P5: El enlace del dispositivo SenseCraft HMI falla.**
+**P5: El enlace del dispositivo SenseCraft Seeedash falla.**
 *   Verifica que el Pair Code se haya introducido correctamente (distingue mayúsculas y minúsculas).
-*   Asegúrate de que tu teléfono y el dispositivo estén en la misma red Wi-Fi de 2,4 GHz durante el enlace del dispositivo.
+*   Asegúrate de que tu teléfono y el dispositivo estén en la misma red Wi-Fi de 2.4GHz durante el enlace del dispositivo.
 *   Si el dispositivo aparece como desconectado, pulsa el botón Reset e intenta enlazar el dispositivo de nuevo.
 
 ## Recursos

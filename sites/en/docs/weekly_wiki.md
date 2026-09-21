@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/07/2026
+  date: 09/21/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-09-07'
+updatedAt: '2026-09-21'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,66 +18,71 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 7th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 21st, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Wio Tracker L2 Introduction](https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/)
+### [Control reBot Arm using voice with reSpeaker Clip](https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_clip/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="Wio Tracker L2" width={800} height="auto" /></p>
+<div class="video-container">
+  <iframe width="800" height="400" src="https://www.youtube.com/embed/OdBwXYKzoio" title="ReSpeaker Lite with XIAO ESP32S3 Home Assistant" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtastic.org/) node featuring LoRa (862–930 MHz), the ESP32S3 for efficient processing, and an L76K GPS module for accurate location tracking. Designed for flexibility, it supports QSPI touch screen, E-Ink displays, TF Card, as well as solar panels and battery power, making it ideal for a wide range of IoT and off-grid applications.
-
-**More Wio Tracker L2 guides updated this week:**
-
-- [Get Started with Wio Tracker L2](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l2/)
-- [MUI Introduction](https://wiki.seeedstudio.com/l2_mui/)
-- [SD Card Usage](https://wiki.seeedstudio.com/l2_sd_card/)
-- [MQTT Gateway](https://wiki.seeedstudio.com/set_up_mqtt_gateway_l2/)
-- [Meshtastic Node Map](https://wiki.seeedstudio.com/meshtastic_node_map_l2/)
-- [Meshtastic Network Monitor](https://wiki.seeedstudio.com/meshtastic_node_monitor_l2/)
+This wiki explains how to control the reBot Arm B601-DM using natural voice commands with reSpeaker Clip. It covers real-time audio streaming, voice activity detection, speech-to-text, and LLM-based intent recognition. You will also learn how to set up the project and run voice-controlled actions on either a simulated or real robotic arm.
 
 </div>
 
-### [Microduck RL on Jetson](https://wiki.seeedstudio.com/ai_robotics_microduck_rl_on_jetson/)
+### [reComputer Rugged J401 for Industrial Vision](http://localhost:3000/ai_robotics_recomputer_rugged_j401_cv_demo)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This demo builds a complete robot-learning workflow for **Microduck** on a **Seeed reComputer powered by NVIDIA Jetson Orin NX 16GB**. It covers GPU environment deployment, PPO training with MuJoCo, visualization of local checkpoints, keyboard-controlled inference with official ONNX policies, and the development of new custom motions.
+This wiki introduces several ways computer vision can be used on industrial forklifts. The example uses reComputer Rugged J401 as the edge controller. Its IP66 enclosure, M12 connectors, vibration resistance, four PoE ports, and Jetson Orin NX allow it to sit close to the cameras and run the vision workloads locally.
 
 </div>
 
-### [Embodied Agent Architecture Design for reBot B601 RS Robotic Arm](https://wiki.seeedstudio.com/wrc_demo_tutorial/)
+### [Deploy TensorRT-Model-Connect on Jetson AGX Orin](https://wiki.seeedstudio.com/ai_robotics_deploy_tensorrt_model_connect_on_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent3.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/TRTMC/trtmc_wiki_cover.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This tutorial is the **operation guide** for the [wrc_demo](https://github.com/TheMoonAstronaut/wrc) project. Follow the steps in this guide to go from zero cloning to a running demo in **1-2 hours**. wrc_demo is a visual grasping demo for the [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) (RobStride bus), running on Ubuntu 22.04 + Python 3.10 + conda `wrc-demo` environment. The demo receives natural language instructions (e.g. "pick up the red block"), automatically plans the grasp and executes it.
+This wiki shows how to run [NVIDIA TensorRT-Model-Connect](https://github.com/NVIDIA/TensorRT-Model-Connect) (TRTMC) on a Seeed reComputer powered by **Jetson AGX Orin**. After the native runtime is built, the path is short: start from a Hugging Face checkpoint, produce a TensorRT `.bundle` on the device, and run text generation. There is no separate x86 host and no ONNX export step.
 
 </div>
 
-### [reSpeaker Clip AI Chat System Architecture](https://wiki.seeedstudio.com/respeaker_clip_ai_chat_system_architecture/)
+### [Deploy ONVIF on reCamera](https://wiki.seeedstudio.com/recamera_onvif/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/guides/image-13.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces the architecture of the reSpeaker Clip AI chat system, including its core components, workflow, tool calling, and memory mechanism.
+This wiki explains how to deploy ONVIF on reCamera for local network discovery and video streaming. It covers deploying the ONVIF service with SenseCraft Solution and verifying the RTSP video stream. You will also learn how to connect reCamera to ONVIF-compatible clients such as Home Assistant, Frigate, NVRs, and VMS platforms.
 
 </div>
 
-### [Flash the Debian 13 Image to reCamera Pro](https://wiki.seeedstudio.com/recamera_pro_debian/)
+### [AI Image Transmission over MeshCore with MeshTracker X1](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_x1/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png" alt="MeshCore Open Image Transmission" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-reCamera Pro is powered by the RV1126B chip and is available with 2 GB or 4 GB of memory. It ships with Buildroot firmware for a quick start with AI inference. This page provides a Debian 13 image for users who need more flexibility for development and deployment.
+This wiki explains how to transmit images over a MeshCore network using MeshTracker X1 and MeshCore Open. It uses AI-based ultra-low bitrate image compression to reduce images to compact data that can be transmitted over low-bandwidth LoRa mesh networks and reconstructed on the receiving device. This makes visual information sharing possible for outdoor exploration, emergency response, remote monitoring, and other off-grid scenarios.
+
+The same Image Transmission feature is also available for [SenseCAP Card Tracker T1000-E](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_t1000e/), [Wio Tracker L1](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_l1/), and [Wio Tracker L2](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_l2/).
+
+</div>
+
+### [EasySkyMesh IoT Firmware for Wio Tracker L1](https://wiki.seeedstudio.com/easyskymesh_wio_tracker_l1/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_MeshCore_Device_Low_Power_Consumption_L1_Pro.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki explains how to install and use EasySkyMesh IoT firmware on the Wio Tracker L1. It covers firmware flashing, power-saving features, and configuration for different MeshCore roles. You will also learn how to connect supported I2C sensors for low-power monitoring and IoT applications.
 
 </div>
 
@@ -234,5 +239,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.8.17th](/Seeed_Elderly/weekly_wiki/2026/wiki260817)
 - [weekly wiki on 2026.8.24th](/Seeed_Elderly/weekly_wiki/2026/wiki260824)
 - [weekly wiki on 2026.8.31st](/Seeed_Elderly/weekly_wiki/2026/wiki260831)
+- [weekly wiki on 2026.9.07th](/Seeed_Elderly/weekly_wiki/2026/wiki260907)
+- [weekly wiki on 2026.9.14th](/Seeed_Elderly/weekly_wiki/2026/wiki260914)
 
 </details>

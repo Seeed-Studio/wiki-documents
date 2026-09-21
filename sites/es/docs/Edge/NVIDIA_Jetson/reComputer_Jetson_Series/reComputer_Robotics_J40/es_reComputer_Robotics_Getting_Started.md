@@ -147,7 +147,7 @@ La reComputer Robotics J401 es una placa portadora de IA de borde compacta y de 
     </tr>
     <tr>
       <th rowSpan="1">Temperatura de funcionamiento</th>
-      <td colSpan="2">-20℃~55℃ (Modo 25W);<br />-20℃~50℃ (Modo MAXN);<br />(con disipador de calor reComputer Robotics con ventilador)</td>
+      <td colSpan="2">-20℃~60℃ (modo de 25W);<br />-20℃~55℃ (modo de 40W);<br />-20℃~50℃ (modo MAXN);<br />(con disipador de calor reComputer Robotics con ventilador)</td>
     </tr>
     <tr>
       <th rowSpan="1">Garantía</th>

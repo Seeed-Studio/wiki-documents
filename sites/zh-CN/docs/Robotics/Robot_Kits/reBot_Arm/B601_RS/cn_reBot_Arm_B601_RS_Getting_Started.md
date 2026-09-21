@@ -1,6 +1,6 @@
 ---
 description: 本指南将帮助您快速上手 reBot Arm B601-RS 机械臂，包括购买选项、组装、校准和软件配置。
-title: reBot Arm B601-RS 快速入门
+title: B601-RS 快速入门
 keywords:
   - reBot
   - B601-DM
@@ -18,7 +18,7 @@ last_update:
   date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-08-17'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -26,6 +26,7 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS 快速入门
 
@@ -36,10 +37,16 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -54,18 +61,34 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
+<p align="center">
+  reBot Arm 项目已经在 [GitHub](https://github.com/Seeed-Projects/reBot-DevArm) 上开源了，欢迎前往仓库点亮 Star 小星星！仓库中包含完整的 BOM 清单。本文将带领你快速入门 B601-RS，从组装到使用。
+</p>
+
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-DevArm"
+  ariaLabel="在 GitHub 上为 reBot-DevArm 点亮 Star"
+/>
+
+## 项目简介
+
+**reBot-DevArm (reBot Arm B601 DM 和 reBot Arm B601 RS)** 是一个致力于降低具身智能学习门槛的机械臂项目。我们主打 **"真·开源"** —— 不仅仅是代码，我们无保留地开源了所有的：
+- 🦾 **两个版本电机的开源机械臂**：我们会提供Robostride和Damiao两个版本的同样外观的机械臂所有开源文件。
+- 🛠️ **硬件图纸**：钣金件、3D打印件源文件。
+- 🔩 **BOM 清单**：详细到每一个螺丝的规格和购买链接。
+- 💻 **软件及算法**：Python SDK、ROS1/2、Isaac Sim、Lerobot等
 
 ## 风险告知及免责声明
 
-<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+<div className="rebot-disclaimer-gallery">
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="reBot Arm 中文风险告知及免责声明" />
+  </figure>
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="reBot Arm 英文风险告知及免责声明" />
+  </figure>
 </div>
-
-reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-RS，从组装到使用。
-
 
 ## 关于电源
 
@@ -164,6 +187,8 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 
 :::tip
 1. 已验证虚拟机的性能不足以支撑 Demo 运行且存在配置问题，建议优先使用 Ubuntu 物理机控制机械臂。
+
+   推荐安装 **Ubuntu 24.04 LTS**。
 
 2. （Beta）可以让 Agent 帮助你初始化机械臂。复制以下内容发送给 Agent：
 
@@ -605,7 +630,7 @@ scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
 </TabItem>
 <TabItem value="windows" label="Windows">
 
-请访问 [pcan-usb](https://www.peak-system.com/products/hardware/external-pc-interfaces/pcan-usb/)，安装pcan-usb驱动。
+下载 [PEAK-System_Driver-Setup.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/PEAK-System_Driver-Setup.zip)，并安装 PCAN-USB 驱动。
 
 
 :::tip 注意！！！

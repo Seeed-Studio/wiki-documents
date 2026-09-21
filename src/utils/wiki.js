@@ -1,15 +1,93 @@
 const docList = [
   [
     {
+      "path": "/ai_robotics_recomputer_rugged_j401_cv_demo",
+      "image": "https://files.seeedstudio.com/wiki/rugged/rugged_banner.png",
+      "title": "reComputer Rugged J401 for Industrial Vision",
+      "date": "2026-09-20",
+      "title_cn": "面向工业视觉的 reComputer Rugged J401",
+      "title_ja": "産業用ビジョン向け reComputer Rugged J401",
+      "title_es": "reComputer Rugged J401 para Visión Industrial",
+      "title_pt": "reComputer Rugged J401 para Visão Industrial"
+    },
+    {
+      "path": "/ai_robotics_deploy_tensorrt_model_connect_on_jetson",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100003716-gallery_img_1_1.jpg",
+      "title": "Deploy TensorRT-Model-Connect on Jetson AGX Orin",
+      "date": "09/20/2026",
+      "title_cn": "在 Jetson AGX Orin 上部署 TensorRT-Model-Connect",
+      "title_ja": "Jetson AGX Orin 上で TensorRT-Model-Connect をデプロイする",
+      "title_es": "Implementar TensorRT-Model-Connect en Jetson AGX Orin",
+      "title_pt": "Implantar TensorRT-Model-Connect no Jetson AGX Orin"
+    }
+  ],
+  [
+    {
+      "path": "/meshcore_ai_image_transmission_x1",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png",
+      "title": "AI Image Transmission over MeshCore with MeshTracker X1",
+      "date": "2026-09-19T00:00:00.000Z",
+      "title_cn": "适用于 MeshTracker X1 的 MeshCore AI 图像传输",
+      "title_ja": "MeshTracker X1 向け MeshCore AI 画像伝送",
+      "title_es": "Transmisión de Imágenes con IA sobre MeshCore con MeshTracker X1",
+      "title_pt": "Transmissão de Imagem com IA via MeshCore com MeshTracker X1"
+    },
+    {
+      "path": "/easyskymesh_wio_tracker_l1",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_MeshCore_Device_Low_Power_Consumption_L1_Pro.png",
+      "title": "EasySkyMesh IoT Firmware for Wio Tracker L1",
+      "date": "2026-09-17T00:00:00.000Z",
+      "title_cn": "适用于 Wio Tracker L1 的 EasySkyMesh IoT 固件",
+      "title_ja": "Wio Tracker L1 向け EasySkyMesh IoT ファームウェア",
+      "title_es": "Firmware IoT EasySkyMesh para Wio Tracker L1",
+      "title_pt": "Firmware IoT EasySkyMesh para Wio Tracker L1"
+    }
+  ],
+  [
+    {
+      "path": "/recamera_onvif",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg",
+      "title": "Deploy ONVIF on reCamera",
+      "date": "2026-09-14",
+      "title_cn": "reCamera 集成 ONVIF 服务",
+      "title_ja": "reCamera に ONVIF をデプロイする",
+      "title_es": "Desplegar ONVIF en reCamera",
+      "title_pt": "Implantar ONVIF na reCamera"
+    },
+    {
+      "path": "/control_rebot_arm_using_voice_with_respeaker_clip",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png",
+      "title": "Control reBot Arm using voice with reSpeaker Clip",
+      "date": "2026-09-11",
+      "title_cn": "使用 reSpeaker Clip 通过语音控制 reBot Arm",
+      "title_ja": "reSpeaker Clip を使って音声で reBot Arm を制御する",
+      "title_es": "Controlar reBot Arm usando la voz con reSpeaker Clip",
+      "title_pt": "Controlar reBot Arm usando voz com reSpeaker Clip"
+    }
+  ],
+  [
+    {
+      "path": "/sensecap_s1000_v2_co2_calibration",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_S1000_V2_CO2_Calibration.jpg",
+      "title": "SenseCAP S1000 V2 CO₂ Calibration",
+      "date": "2026-09-09",
+      "title_cn": "SenseCAP S1000 V2 CO₂ 标定",
+      "title_ja": "SenseCAP S1000 V2 CO₂ キャリブレーション",
+      "title_es": "Calibración de CO₂ del SenseCAP S1000 V2",
+      "title_pt": "Calibração de CO₂ do SenseCAP S1000 V2"
+    },
+    {
       "path": "/ai_robotics_microduck_rl_on_jetson",
       "image": "https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png",
       "title": "Microduck RL on Jetson",
       "date": "2026-09-04",
-      "title_cn": "Jetson 上的 Microduck 强化学习",
-      "title_ja": "Jetson 上の Microduck RL",
+      "title_cn": "Microduck 在 Jetson 上的强化学习",
+      "title_ja": "Jetson 上の Microduck 強化学習",
       "title_es": "Microduck RL en Jetson",
       "title_pt": "Microduck RL no Jetson"
-    },
+    }
+  ],
+  [
     {
       "path": "/respeaker_clip_ai_chat_system_architecture",
       "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/app_python/clip-chat-tools.png",
@@ -18,7 +96,17 @@ const docList = [
       "title_cn": "reSpeaker Clip AI 聊天系统架构",
       "title_ja": "reSpeaker Clip AI チャットシステムアーキテクチャ",
       "title_es": "Arquitectura del sistema de chat con IA de reSpeaker Clip",
-      "title_pt": "Arquitetura do Sistema de Chat reSpeaker Clip AI"
+      "title_pt": "Arquitetura do Sistema de Chat com IA do reSpeaker Clip"
+    },
+    {
+      "path": "/display_gadgets",
+      "image": "https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp",
+      "title": "XIAO Display Gadgets Series",
+      "date": "2026-08-31",
+      "title_cn": "XIAO Display Gadgets 系列",
+      "title_ja": "XIAO Display Gadgets シリーズ",
+      "title_es": "Serie XIAO Display Gadgets",
+      "title_pt": "Série XIAO Display Gadgets"
     }
   ],
   [
@@ -41,94 +129,6 @@ const docList = [
       "title_ja": "reCamera Pro でビジュアルウェイク & オフライン音声認識システムを構築する",
       "title_es": "Crea un sistema de activación visual y reconocimiento de voz sin conexión con reCamera Pro",
       "title_pt": "Crie um sistema de despertar visual e reconhecimento de fala offline com reCamera Pro"
-    }
-  ],
-  [
-    {
-      "path": "/respeaker_clip_rtc_streaming",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg",
-      "title": "Build Real-Time Audio Streaming with reSpeaker Clip RTC SDK",
-      "date": "2026-08-24",
-      "title_cn": "使用 reSpeaker Clip RTC SDK 构建实时音频流",
-      "title_ja": "reSpeaker Clip RTC SDK でリアルタイムオーディオストリーミングを構築する",
-      "title_es": "Crea transmisión de audio en tiempo real con reSpeaker Clip RTC SDK",
-      "title_pt": "Construa Streaming de Áudio em Tempo Real com o reSpeaker Clip RTC SDK"
-    },
-    {
-      "path": "/sensecap_combo_introduction",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Combo/SenseCAP_Combo_5in1_4G.webp",
-      "title": "SenseCAP Combo 5-in-1 Sensor with 4G Introduction",
-      "date": "2026-08-23",
-      "title_cn": "SenseCAP Combo 5 合 1 传感器（带 4G）简介",
-      "title_ja": "SenseCAP Combo 5-in-1 Sensor with 4G 概要",
-      "title_es": "Introducción al sensor SenseCAP Combo 5 en 1 con 4G",
-      "title_pt": "Introdução ao Sensor SenseCAP Combo 5-em-1 com 4G"
-    }
-  ],
-  [
-    {
-      "path": "/respeaker_xvf_3800_i2c_list",
-      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp",
-      "title": "Using I2C Commands to Control reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3",
-      "date": "2026-08-21",
-      "title_cn": "使用 I2C 命令通过 XIAO ESP32S3 控制 reSpeaker XVF3800 USB Mic Array",
-      "title_ja": "I2C コマンドを使用して XIAO ESP32S3 で reSpeaker XVF3800 USB Mic Array を制御する",
-      "title_es": "Uso de comandos I2C para controlar la reSpeaker XVF3800 USB Mic Array con XIAO ESP32S3",
-      "title_pt": "Usando comandos I2C para controlar o reSpeaker XVF3800 USB Mic Array com XIAO ESP32S3"
-    },
-    {
-      "path": "/recamera_jetson_vlm_gateway",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
-      "title": "Build a reCamera and NVIDIA Jetson VLM Event Gateway",
-      "date": "2026-08-20",
-      "title_cn": "构建 reCamera 与 NVIDIA Jetson VLM 事件网关",
-      "title_ja": "reCamera と NVIDIA Jetson で VLM イベントゲートウェイを構築する",
-      "title_es": "Crea una pasarela de eventos VLM con reCamera y NVIDIA Jetson",
-      "title_pt": "Criar um Gateway de Eventos VLM com reCamera e NVIDIA Jetson"
-    }
-  ],
-  [
-    {
-      "path": "/jetson_fisheye_surround_view_demo",
-      "image": "https://files.seeedstudio.com/wiki/Thor/jetson_fisheye_surround_view_demo_01.gif",
-      "title": "Build a Four-Camera Fisheye Surround View Demo on Jetson AGX Thor",
-      "date": "2026-08-18",
-      "title_cn": "在 Jetson AGX Thor 上构建四摄像头鱼眼环视演示",
-      "title_ja": "Jetson AGX Thor 上で 4 台の魚眼カメラによるサラウンドビュー デモを構築する",
-      "title_es": "Crea una demo de vista envolvente con ojo de pez y cuatro cámaras en Jetson AGX Thor",
-      "title_pt": "Crie uma Demonstração de Visão Surround com Quatro Câmeras Olho de Peixe no Jetson AGX Thor"
-    },
-    {
-      "path": "/recamera_deploy_monocular_depth",
-      "image": "https://files.seeedstudio.com/wiki/solution/recamera/recamera-fastdepth-indoor-office-result.png",
-      "title": "Deploy Monocular Depth Estimation on reCamera (FastDepth, INT8)",
-      "date": "2026-08-18",
-      "title_cn": "在 reCamera 上部署单目深度估计（FastDepth，INT8）",
-      "title_ja": "reCamera で単眼深度推定をデプロイする (FastDepth, INT8)",
-      "title_es": "Desplegar Estimación de Profundidad Monocular en reCamera (FastDepth, INT8)",
-      "title_pt": "Implantar Estimação de Profundidade Monocular na reCamera (FastDepth, INT8)"
-    }
-  ],
-  [
-    {
-      "path": "/install_ubuntu_on_sensecap_m4",
-      "image": "https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview.png",
-      "title": "Install Ubuntu on SenseCAP M4 via USB",
-      "date": "2026-08-18",
-      "title_cn": "通过 USB 在 SenseCAP M4 上安装 Ubuntu",
-      "title_ja": "USB 経由で SenseCAP M4 に Ubuntu をインストールする",
-      "title_es": "Instalar Ubuntu en SenseCAP M4 vía USB",
-      "title_pt": "Instalar o Ubuntu no SenseCAP M4 via USB"
-    },
-    {
-      "path": "/rebot_arm_b601_dm_isaacsim",
-      "image": "https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png",
-      "title": "Simulating reBot-B601-DM with Isaac Sim",
-      "date": "2026-08-17T00:00:00.000Z",
-      "title_cn": "通过 Isaacsim 仿真 reBot-B601-DM",
-      "title_ja": "Isaac Sim を使用した reBot-B601-DM のシミュレーション",
-      "title_es": "Simulación de reBot-B601-DM con Isaac Sim",
-      "title_pt": "Simulando o reBot-B601-DM com Isaac Sim"
     }
   ]
 ];

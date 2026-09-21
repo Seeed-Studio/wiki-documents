@@ -1,6 +1,6 @@
 ---
 description: This wiki introduces how to get started with NVIDIA Jetson Thor and provides example workflows for deploying AI and robotics projects on Thor. Detailed step-by-step instructions and reference documentation are also provided.
-title: Fine-tune Isaac GR00T N1.5 for LeRobot SO-101 Arm and Deploy on Jetson Thor
+title: SO-Arm with Isaac Groot N1.5
 keywords:
   - Thor
   - Robotics

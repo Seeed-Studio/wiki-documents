@@ -1,5 +1,5 @@
 ---
-description: 针对 XIAO 1.14'' IPS Display（nRF52840）上每个板载外设的独立函数级演示。涵盖屏幕、IMU、PDM 麦克风、内部 Flash 录音和 I2S 音频回放、按键、电池以及 Grove I2C。
+description: 针对 XIAO 1.14'' IPS Display（nRF52840）上每个板载外设的独立函数级演示。涵盖屏幕、IMU、PDM 麦克风、内部 Flash 录音与 I2S 音频回放、按键、电池以及 Grove I2C。
 title: 板载外设使用
 sidebar_label: 功能
 keywords:
@@ -11,7 +11,7 @@ keywords:
   - 1.14
   - I2S
   - Audio
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /function_1.14_inch_display_nrf52840
 sku: 100069374
 sidebar_position: 2
@@ -25,17 +25,17 @@ url: https://wiki.seeedstudio.com/cn/function_1.14_inch_display_nrf52840/
 
 # 板载外设使用
 
-本页收集了 1.14'' IPS Display 上每个板载外设的独立函数级演示。每一节都是自包含的——你可以直接选择与你的使用场景匹配的那一节，而无需阅读其他内容。
+本页汇总了 1.14'' IPS Display 上每个板载外设的独立函数级演示。每个小节都是自包含的——你可以直接选择符合自己使用场景的部分，而无需阅读其他内容。
 
 :::tip
-本页中的演示 GIF 为了缩短时长都进行了加速播放。
+本页中的演示 GIF 为了缩短时长都经过了加速处理。
 :::
 
 :::note
-本页中的所有演示都需要已按 [入门指南](/cn/getting_started_1.14_inch_display_nrf52840) 中说明安装好的 **Seeed nRF52 Boards (1.1.13)**，以及按下文说明手动安装的 **Seeed_GFX2** 库。
+本页所有演示都需要已按 [入门指南](/cn/getting_started_1.14_inch_display_nrf52840) 中说明安装好的 **Seeed nRF52 Boards (1.1.13)**，以及按下文说明手动安装的 **Seeed_GFX2** 库。
 :::
 
-- **库管理器（Library Manager）** — 进入 **Sketch > Include Library > Manage Libraries...**，搜索并安装：
+- **Library Manager** — 进入 **Sketch > Include Library > Manage Libraries...**，搜索并安装：
 
 <div class="table-center">
   <table align="center">
@@ -44,7 +44,7 @@ url: https://wiki.seeedstudio.com/cn/function_1.14_inch_display_nrf52840/
   </table>
 </div>
 
-- **Seeed_GFX2（手动安装）** — 此库在库管理器中不可用，必须手动安装：
+- **Seeed_GFX2（手动安装）** — 此库在 Library Manager 中不可用，必须手动安装：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
@@ -55,31 +55,31 @@ url: https://wiki.seeedstudio.com/cn/function_1.14_inch_display_nrf52840/
 
 **步骤 1.** 点击上方按钮，将 `Seeed_GFX2` v1.0.0 作为 ZIP 文件下载（固定到一个发布标签，以保证教程可复现）。或者，从 [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) 克隆仓库。
 
-**步骤 2.** 在 Arduino IDE 中，进入 **Sketch > Include Library > Add .ZIP Library...**，选择下载好的 ZIP。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果改为手动安装，请先解压压缩包，并在将其放入 `Documents/Arduino/libraries/` 之前，将解压后的文件夹重命名为 `Seeed_GFX2`。）
+**步骤 2.** 在 Arduino IDE 中，进入 **Sketch > Include Library > Add .ZIP Library...**，选择下载的 ZIP。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果改为手动安装，请先解压压缩包，将解压后的文件夹重命名为 `Seeed_GFX2`，再放入 `Documents/Arduino/libraries/` 中。）
 
 **步骤 3.** 重启 Arduino IDE，使其检测到新库。
 
 :::tip
 - **Seeed_GFX2** 是 Seeed Studio 基于分层 `Board` + `Panel Config` 架构构建的图形库。每个演示都通过一次 `display.begin<Board_..., Config_...>()` 调用来初始化显示屏——**Board** 模板负责引脚映射（CS/DC/SCK/MOSI/RST/BL），而 **Panel Config** 预设了 135×240 分辨率、颜色顺序和反色设置。无需 `driver.h` 或手动引脚配置。
-- 在这块板子上，演示使用 `Board_XIAO_1inch14_LCD<38, 37>`（RST=38，BL=37）配合 `Config_Seeed_1inch14_LCD_ST7789`（135×240）。部分演示会定义一个草图本地的 `Config_XIAO_1inch14_LCD_ST7789_BGR` 覆盖配置，以使用 BGR 颜色顺序。
+- 在本板上，演示使用 `Board_XIAO_1inch14_LCD<38, 37>`（RST=38，BL=37）配合 `Config_Seeed_1inch14_LCD_ST7789`（135×240）。少数演示会定义一个草图本地的 `Config_XIAO_1inch14_LCD_ST7789_BGR` 覆盖配置，以使用 BGR 颜色顺序。
 - **IMU** 演示使用上文安装的 **Seeed Arduino LSM6DS3** 库。
 - 1.14'' IPS Display **没有触摸控制器，也没有 SD 卡槽**，因此不需要任何触摸或 SD 相关库。
 :::
 
 :::note
-**Flash Recorder** 教程使用的 **PDM**、**Adafruit TinyUSB**、**Adafruit LittleFS** 和 **InternalFileSystem** 库已经与 **Seeed nRF52 Boards 1.1.13** 一同打包——不要再从库管理器单独安装其它版本。
+**Flash Recorder** 教程使用的 **PDM**、**Adafruit TinyUSB**、**Adafruit LittleFS** 和 **InternalFileSystem** 库已经与 **Seeed nRF52 Boards 1.1.13** 一同打包——不要再从 Library Manager 单独安装其它版本。
 
 录音会存储在 nRF52840 的 **内部 Flash 文件系统** 中。该显示屏没有 SD 卡槽，本教程也不使用 SdFat。
 :::
 
 ## 获取演示代码
 
-本页中的每个演示都位于 [Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets) 仓库的 `code_GFX2/Function/` 目录下。每个演示都是一个包含单个 `.ino` 草图的文件夹。**务必下载完整文件夹**，而不是从 GitHub 网页视图中复制 `.ino` 源码。
+本页的每个演示都位于 [Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets) 仓库的 `code_GFX2/Function/` 目录下。每个演示是一个包含单个 `.ino` 草图的文件夹。**务必下载完整文件夹**，而不是从 GitHub 网页视图中复制 `.ino` 源码。
 
 **方案 A — 将仓库下载为 ZIP（推荐）：**
 
 1. 打开 [github.com/Seeed-Projects/Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets)，点击 **Code > Download ZIP**，然后在任意方便的位置解压压缩包。
-2. 进入 `code_GFX2/Function/`，打开每个演示 **Code location** 行中所示的文件夹。例如，本板子的 GraphicTest 演示位于 `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_graphictest/`。
+2. 进入 `code_GFX2/Function/`，打开每个演示 **Code location** 行中给出的文件夹。例如，本板的 GraphicTest 演示位于 `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_graphictest/`。
 3. **双击 `.ino` 文件**，在 Arduino IDE 中将其打开。
 
 **方案 B — 使用 git clone：**
@@ -88,11 +88,11 @@ url: https://wiki.seeedstudio.com/cn/function_1.14_inch_display_nrf52840/
 git clone https://github.com/Seeed-Projects/Display-Gadgets.git
 ```
 
-然后从克隆得到的 `code_GFX2/Function/...` 文件夹中打开该演示的 `.ino` 文件。
+然后从克隆得到的 `code_GFX2/Function/...` 文件夹中打开对应演示的 `.ino` 文件。
 
 ## 屏幕显示 — GraphicTest
 
-此演示会在 1.14 英寸 ST7789 IPS 面板（135×240）上运行完整的图形基准测试，涵盖色条、线段、矩形、圆形、三角形、圆角矩形、文本以及像素渐变。可用它来验证屏幕连线是否正确，以及所有绘图调用是否按预期工作。
+此演示会在 1.14 英寸 ST7789 IPS 面板（135×240）上运行完整的图形基准测试，涵盖色条、直线、矩形、圆形、三角形、圆角矩形、文本以及像素渐变。可用来验证屏幕连线是否正确，以及所有绘图调用是否按预期工作。
 
 **代码位置：** `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_graphictest/`
 
@@ -105,7 +105,7 @@ git clone https://github.com/Seeed-Projects/Display-Gadgets.git
 
 ### 工作原理
 
-该草图通过 **Seeed_GFX2** 初始化 ST7789 IPS 面板，然后依次运行十种图形基本图元，并通过 `micros()` 测量每一种的执行时间，将结果打印到串口监视器。
+该草图通过 **Seeed_GFX2** 初始化 ST7789 IPS 面板，然后依次运行十种图形基本图元，并通过 `micros()` 测量每种图元的执行时间，将结果打印到串口监视器。
 
 显示屏通过一次模板调用完成初始化：
 
@@ -114,7 +114,7 @@ display.begin<Board_XIAO_1inch14_LCD<38, 37>,
               Config_Seeed_1inch14_LCD_ST7789>();
 ```
 
-**Board** 模板负责引脚映射——CS=D2、DC=D3、SCK=D8、MOSI=D10——其 `<RST, BL>` 模板参数使用裸 GPIO 编号，因此 `<38, 37>` 表示 RST=GPIO38、BL=GPIO37。**Panel Config** 预设了 135×240 分辨率、颜色顺序以及反色设置（`invert = true`），因此无需 `driver.h` 或手动调用 `invertDisplay()`。
+**Board** 模板负责引脚映射——CS=D2、DC=D3、SCK=D8、MOSI=D10——其 `<RST, BL>` 模板参数直接使用裸 GPIO 编号，因此 `<38, 37>` 即设置 RST=GPIO38、BL=GPIO37。**Panel Config** 预设了 135×240 分辨率、颜色顺序以及反色设置（`invert = true`），因此无需 `driver.h` 或手动调用 `invertDisplay()`。
 
 ### 运行演示
 
@@ -124,7 +124,7 @@ display.begin<Board_XIAO_1inch14_LCD<38, 37>,
 
 **步骤 3.** 点击 **Upload**。
 
-**步骤 4.** 打开 **Tools > Serial Monitor**（115200 波特率）。你应当能看到每个测试的计时输出：
+**步骤 4.** 打开 **Tools > Serial Monitor**（115200 波特率）。你应能看到每个测试的计时输出：
 
 ```
 LCD width: 135
@@ -142,21 +142,21 @@ Pixel gradient: 4774.42 ms
 Graphic test finished.
 ```
 
-在屏幕上，你会看到每个测试图案显示约一秒钟，然后开始下一个。当所有测试完成后，会出现一个 “Finished” 结束画面。
+在屏幕上，你会看到每个测试图案显示约一秒钟，然后切换到下一个。当所有测试完成后，会出现一个 “Finished” 结束画面。
 
 ### 预期结果
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_graphictest.gif" style={{width:500, height:'auto'}}/></div>
 
-当草图运行完所有图案后，屏幕会显示 “Finished” 提示信息。重置开发板即可再次运行测试。
+当草图运行完所有图案后，屏幕会显示 “Finished” 提示。重置开发板即可再次运行测试。
 
 ---
 
 ## IMU
 
-1.14'' IPS Display 搭载了一个通过 D4/D5 I2C 连接的板载 6 轴 IMU（LSM6DS3）。**D14** 上的运动中断引脚支持硬件唤醒和手势检测。
+1.14'' IPS Display 集成了一颗通过 D4/D5 上的 I2C 连接的板载 6 轴 IMU（LSM6DS3）。**D14** 上的运动中断引脚支持硬件唤醒和手势检测。
 
-下方两个演示都使用 I2C 地址为 **0x6A** 的 LSM6DS3。
+下方两个演示都将 LSM6DS3 配置在 I2C 地址 **0x6A**。
 
 <a id="imu-quicksand"></a>
 
@@ -175,13 +175,13 @@ Graphic test finished.
 
 ### 工作原理
 
-该仿真在 135×240 屏幕上叠加了一个 **22×40 占用网格**，其中每个单元为 6×6 像素。在网格中放置大约 **150 个粒子**，每个粒子具有位置、速度以及金色渐变颜色。
+该仿真在 135×240 屏幕上叠加了一个 **22×40 占用网格**，其中每个单元为 6×6 像素。大约有 **150 个粒子** 被放置在网格中，每个粒子具有位置、速度以及金色渐变颜色。
 
 IMU 通过 I2C（D4/D5）使用 Seeed Arduino LSM6DS3 库在地址 `0x6A` 处进行读取。原始加速度值经过低通滤波，用于推导重力向量。当你倾斜开发板时：
 
-1. **重力向量更新** — 使用指数移动平均对加速度计数据进行平滑处理，以避免抖动。
+1. **重力向量更新** — 加速度计数据通过指数移动平均进行平滑，以避免抖动。
 2. **粒子速度** — 每个粒子沿重力向量方向加速，并带有阻尼以及基于其在流体中深度的每粒子流动性系数。
-3. **单元占用** — 在流体中更深（相对于重力更接近“底部”）的粒子流动性降低，从而产生逼真的堆积效果。
+3. **单元占用** — 在流体中更深处的粒子（相对于重力更接近“底部”）流动性降低，从而产生逼真的堆积效果。
 4. **差分渲染** — 只重绘粒子移入或移出的单元，最大限度减少 SPI 传输并保持动画流畅。
 
 靠近表面的粒子自由流动（流动性更高）；埋得更深的粒子紧密堆积（流动性更低）——模拟真实沙子的行为。
@@ -211,7 +211,7 @@ imu.begin=0
 
 ### 演示 2：抬起唤醒
 
-该演示实现了一个由 IMU 内置运动中断（引脚 **D14**）驱动的**屏幕休眠/唤醒系统**。屏幕会在可配置的空闲时间后自动关闭（背光关闭 + nRF52 System ON 休眠），当你拿起或移动设备时会立即唤醒。
+该演示实现了一个由 IMU 内置运动中断（引出到 **D14**）驱动的 **屏幕休眠/唤醒系统**。屏幕会在可配置的空闲时间后自动关闭（背光关闭 + nRF52 System ON 休眠），当你拿起或移动设备时会立即唤醒。
 
 **代码位置：** `code_GFX2/Function/114_nRF52840/xiao_nrf52840_114_wakeup/`
 
@@ -224,7 +224,7 @@ imu.begin=0
 
 ### 工作原理
 
-该演示使用 LSM6DS3 的**嵌入式唤醒事件检测器**——这是一项硬件特性，可在内部监测加速度计数据，当运动超过可配置阈值时拉高 INT1 引脚（在本板上连接到 D14）。这意味着 MCU 不需要持续轮询加速度计。
+该演示使用 LSM6DS3 的 **嵌入式唤醒事件检测器**——这是一项硬件特性，可在内部监测加速度计数据，并在运动超过可配置阈值时拉高 INT1 引脚（在本板上连接到 D14）。这意味着 MCU 不需要持续轮询加速度计。
 
 **IMU 配置（LSM6DS3）：**
 
@@ -242,8 +242,8 @@ imu.begin=0
 **休眠/唤醒流程：**
 
 1. **活动状态** — 屏幕点亮，背光全亮，UI 每 250 ms 刷新一次实时 IMU 数据。倒计时计时器显示距离自动休眠剩余的秒数。
-2. **自动休眠** — 在空闲超时后，示例程序会关闭背光，显示“Sleeping... Pick up device to wake”消息，并进入 nRF52 System ON 休眠（带 RAM 保留的低功耗模式）。IMU 在 D14 上的唤醒中断已在启动时配置，因此在休眠期间运动检测仍然有效。
-3. **唤醒** — 当用户拿起开发板时，IMU 检测到运动并将 D14 拉高。nRF52840 退出 System ON 休眠，恢复背光并重绘 UI。LCD 和 IMU **不会**被重新初始化——System ON 休眠会保留 RAM 和外设配置，因此二者都会保持启动时应用的设置。
+2. **自动休眠** — 在空闲超时后，示例程序会关闭背光，显示 “Sleeping... Pick up device to wake” 提示信息，并进入 nRF52 System ON 休眠（带 RAM 保留的低功耗模式）。IMU 在 D14 上的唤醒中断已在启动时配置好，因此在休眠期间运动检测仍然有效。
+3. **唤醒** — 当用户拿起开发板时，IMU 检测到运动并将 D14 拉高。nRF52840 退出 System ON 休眠，恢复背光并重绘 UI。LCD 和 IMU **不会**被重新初始化——System ON 休眠会保留 RAM 和外设配置，因此二者保持启动时应用的设置。
 
 **手动测试按键：**
 
@@ -280,7 +280,7 @@ LCD: 135x240
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_nRF52840Plus_function_wakeup.gif" style={{width:500, height:'auto'}}/></div>
 
-在唤醒状态下，屏幕会显示实时运动数据。在静止一段空闲时间后，屏幕变暗，nRF52840 进入低功耗休眠。拿起设备后，屏幕会立即恢复，并且唤醒计数器会递增。
+在唤醒状态下，屏幕显示实时运动数据。在静止一段空闲时间后，屏幕变暗，nRF52840 进入低功耗休眠。拿起设备后，屏幕会立即恢复，并且唤醒计数器会递增。
 
 ---
 
@@ -318,7 +318,7 @@ LCD: 135x240
 <div class="table-center">
   <table align="center">
     <tr><th>区域</th><th>位置</th><th>描述</th></tr>
-    <tr><td><strong>波形</strong></td><td>顶部（y=30–95）</td><td>27 柱均衡器可视化。对原始采样进行降采样，并围绕中心基线绘制为对称柱状图。波形颜色由与音量条和百分比标签相同的平滑音量驱动——绿色（&lt;50%）、黄色（50–90%）、红色（&gt;90%）。</td></tr>
+    <tr><td><strong>波形</strong></td><td>顶部（y=30–95）</td><td>27 段均衡器可视化。原始采样被降采样并绘制为围绕中心基线对称的条形。波形颜色由与音量条和百分比标签相同的平滑音量驱动——绿色（&lt;50%）、黄色（50–90%）、红色（&gt;90%）。</td></tr>
     <tr><td><strong>百分比</strong></td><td>中部</td><td>大型数字音量百分比（0–100%），颜色编码为绿色（&lt;50%）、黄色（50–90%）、红色（&gt;90%）。</td></tr>
     <tr><td><strong>音量条</strong></td><td>底部（y=130–225）</td><td>10 段条（绿色/黄色/红色渐变）。使用来自 PDM 峰值的平滑音量进行更新。</td></tr>
   </table>
@@ -329,7 +329,7 @@ LCD: 135x240
 1. **PDM ISR** — `onPDMdata()` 以约 62 Hz（16000 / 256）触发。它读取原始采样，计算峰值幅度，并下采样为 27 个桶用于波形可视化。
 2. **归一化** — 峰值低于 10 被视为静音。高于 1500 的值饱和为 100%。中间范围通过线性映射生成 0.0–1.0 的音量级别。
 3. **指数平滑** — 为避免抖动，显示的音量使用 20% 混合因子（`SMOOTH = 0.20`）进行平滑。在静音期间，音量以每帧 6% 的速率衰减。
-4. **差分渲染** — 只有在数值变化时才重绘音量条和百分比标签，从而将 SPI 流量降到最低。
+4. **差分渲染** — 只有在数值变化时才重绘音量条和百分比标签，从而将 SPI 传输量降到最低。
 
 #### 运行演示
 
@@ -355,11 +355,11 @@ LCD: 135x240
 
 ### 演示 2：带 I2S 回放的 Flash 录音机
 
-此演示将板载 PDM 麦克风采集的一小段音频录制到 nRF52840 的**内部 Flash 文件系统**中，然后通过外部 I2S 功放和扬声器回放：
+此演示将来自板载 PDM 麦克风的短音频片段录制到 nRF52840 的**内部 Flash 文件系统**中，然后通过外部 I2S 功放和扬声器回放：
 
 - **USR1** 从板载 PDM 麦克风录音。
 - 录音为 **16 kHz、16 位、单声道**。
-- 每段录音约 **0.7 秒**——11,200 个采样（22,400 字节 PCM）。
+- 每段录音约为 **0.7 秒**——11,200 个采样（22,400 字节 PCM）。
 - 录音以 **`/REC_RAW.WAV`** 的形式保存在内部 Flash 文件系统中。
 - **USR2** 通过外部 **MAX98357A** 和扬声器回放录音。
 - 此演示已在 XIAO nRF52840 Plus 上使用 **Seeed nRF52 Boards 1.1.13** 编译、烧录并通过硬件验证。
@@ -375,7 +375,7 @@ LCD: 135x240
 
 #### 硬件连接
 
-回放需要一个外部**I2S 音频功放和扬声器**。本演示针对连接到开发板 I2S 输出焊盘的 **MAX98357A** 模块编写：
+回放需要外部 **I2S 音频功放和扬声器**。该演示针对连接到开发板 I2S 输出焊盘的 **MAX98357A** 模块编写：
 
 <div class="table-center">
   <table align="center">
@@ -391,7 +391,7 @@ LCD: 135x240
 将扬声器连接到 MAX98357A 的 **SPK+** 和 **SPK-** 端子。**不要**将任一扬声器线连接到 GND——MAX98357A 是桥接负载（BTL）功放，因此两个扬声器端子都必须连接到 SPK 输出。
 
 :::caution
-在连接功放和扬声器之前，请先断开 USB 供电。
+在连接功放和扬声器前，请先断开 USB 供电。
 :::
 
 #### 工作原理
@@ -417,7 +417,7 @@ LCD: 135x240
 **步骤 5.** 按下 **USR1**，并立刻对着板载麦克风说话，大约 **0.7 秒**。
 
 :::tip
-录音在你按下 **USR1** 的那一刻就开始——不要等红色进度条出现。0.7 秒的时间窗口是从按下 **USR1** 的那一刻开始计时的，因此请立即开始说话，否则会错过录音开头。
+录音在你按下 **USR1** 的瞬间就开始——不要等红色进度条出现。0.7 秒的时间窗口是从按下 **USR1** 的那一刻开始计时的，因此请立即说话，否则会错过录音开头。
 :::
 
 **步骤 6.** 等待屏幕显示 **Saved WAV**。
@@ -469,7 +469,7 @@ D4/D5 在 Grove 接口和板载 IMU 之间共享。IMU 的地址为 `0x6A`。连
 
 #### 硬件连接
 
-将 **Grove SHT31** 温湿度传感器插入 Grove I2C 接口。传感器使用 3.3V 供电，并在 I2C 地址 `0x44` 上通信：
+将一个 **Grove SHT31** 温湿度传感器插入 Grove I2C 接口。传感器使用 3.3V 供电，并在 I2C 地址 `0x44` 上通信：
 
 <div class="table-center">
   <table align="center">
@@ -490,7 +490,7 @@ D4/D5 在 Grove 接口和板载 IMU 之间共享。IMU 的地址为 `0x6A`。连
 3. **CRC 校验** — 每个 16 位数值都会与其 CRC 字节进行校验；若不匹配，则报告为错误（接线问题或模块损坏/噪声过大）。
 4. **转换** — 将原始数值转换为温度（`-45 + 175 × raw / 65535` °C）和相对湿度（`100 × raw / 65535` %）。
 
-显示屏使用 `Board_XIAO_1inch14_LCD<38, 37>` 和草稿本地的 `Config_XIAO_1inch14_LCD_ST7789_BGR`（135×240，BGR 颜色顺序，反相）进行初始化，以确保颜色正确显示。屏幕会显示 “SHT31 OK” 以及实时温度和湿度；如果读取失败，则显示 “SHT31 ERROR” 和错误代码。
+显示屏使用 `Board_XIAO_1inch14_LCD<38, 37>` 和草图本地的 `Config_XIAO_1inch14_LCD_ST7789_BGR`（135×240，BGR 颜色顺序，反相）进行初始化，以确保颜色正确显示。屏幕会显示 “SHT31 OK” 以及实时温度和湿度；如果读取失败，则显示 “SHT31 ERROR” 和错误代码。
 
 #### 运行示例
 
@@ -612,9 +612,9 @@ void loop() {
 }
 ```
 
-### 工厂 Dashboard 中的默认行为
+### 出厂 Dashboard 中的默认行为
 
-在预烧录的工厂固件中，按键映射如下（你可以在自己的代码中覆盖这些行为）：
+在预烧录的出厂固件中，按键映射如下（你可以在自己的代码中覆盖这些行为）：
 
 <div class="table-center">
   <table align="center">
@@ -625,13 +625,13 @@ void loop() {
   </table>
 </div>
 
-按键引出焊盘（在板上标记为 U1、U2 和 U3）分别与 D6、D7 和 D19 相连，使你可以在需要时连接外部按键。
+按键的引出焊盘（在板上标记为 U1、U2 和 U3）分别与 D6、D7 和 D19 相连，如果需要，你可以连接外部按键。
 
 ---
 
 ## 电池状态
 
-本示例会在 1.14'' IPS 显示屏上显示电池状态——带有电量等级和充电状态的电池图标。它会检测是否实际连接了 LiPo 电池，并显示三种状态之一：**USB PWR**（无电池）、**percentage**（仅电池）或 **charging**（USB + 电池）。
+此示例会在 1.14'' IPS 显示屏上显示电池状态——带有电量等级和充电状态的电池图标。它会检测是否实际连接了 LiPo 电池，并显示三种状态之一：**USB PWR**（无电池）、**percentage**（仅电池）或 **charging**（USB + 电池）。
 
 1.14'' IPS 显示屏内置了一个电池电压测量电路，并连接到 XIAO nRF52840 Plus。
 
@@ -652,12 +652,12 @@ void loop() {
 
 **电池电路：**
 
-nRF52840 Plus 使用 **三个 GPIO 引脚** 组成一个完整的电池监测系统：
+nRF52840 Plus 使用 **三个 GPIO 引脚** 组成一个完整的电池监控系统：
 
 <div class="table-center">
   <table align="center">
     <tr><th>Signal</th><th>nRF52840 Pin</th><th>Function</th></tr>
-    <tr><td><code>READ_BAT</code></td><td><strong>P0.14</strong></td><td>电池分压器使能。低电平有效——设为 LOW 以使能分压器，然后释放为 HIGH（高阻态）以节省功耗。</td></tr>
+    <tr><td><code>READ_BAT</code></td><td><strong>P0.14</strong></td><td>电池分压器使能。低电平有效——拉低为 LOW 以使能分压器，然后释放为 HIGH（高阻态）以节省功耗。</td></tr>
     <tr><td><code>VBAT_ADC</code></td><td><strong>PIN_VBAT</strong> (AIN7 / P0.31)</td><td>模拟输入，用于读取分压后的电池电压。</td></tr>
     <tr><td><code>CHG</code></td><td><strong>P0.17</strong></td><td>充电状态指示。低电平有效——当连接充电器且电池正在充电时读取为 LOW。</td></tr>
   </table>
@@ -665,20 +665,20 @@ nRF52840 Plus 使用 **三个 GPIO 引脚** 组成一个完整的电池监测系
 
 **检测：**
 
-在 USB-C 供电下，仅通过静态 VBAT 电压无法判断电池是否存在——即使没有连接电池，充电器的 BAT 节点看起来也像一个真实的锂电池。因此示例程序首先学习一个 **仅 USB 的基线值**，然后只有在 VBAT 持续向下偏移后才确认电池插入，并在出现噪声/跳变读数且 `~CHG` 变为 HIGH 时确认电池移除。这与工厂 Dashboard 的检测逻辑一致。
+在 USB-C 供电下，静态 VBAT 电压无法判断电池是否存在——即使没有连接电池，充电器的 BAT 节点看起来也像一个真实的锂离子电池。因此示例程序首先学习一个 **仅 USB 的基线值**，然后只有在 VBAT 持续向下偏移后才确认电池插入，并在出现噪声/跳变读数且 `~CHG` 变为 HIGH 时确认电池移除。这与出厂 Dashboard 的检测逻辑一致。
 
 **图标状态：**
 
-- **无电池** —— 灰色轮廓电池图标带红色叉号，标注为 **USB PWR**。
-- **电池存在** —— 白色轮廓电池图标，内部填充颜色（根据百分比为绿色 / 黄色 / 红色），标注 **百分比** 和 **电压**。
-- **充电中** —— 青色填充并带有闪电图标，标注百分比和电压。
+- **无电池** —— 灰色轮廓电池图标带红色叉号，标签为 **USB PWR**。
+- **有电池** —— 白色轮廓电池图标，内部填充颜色（根据百分比为绿色 / 黄色 / 红色），标签为 **percentage** 和 **voltage**。
+- **充电中** —— 青色填充并带有闪电图标，标签为百分比和电压。
 
 :::note
 `~CHG` 引脚是通过 nRF52840 的 **原始 GPIO 寄存器**（`nrf_gpio_cfg_input()` 和 `NRF_P0->IN`）读取的，而不是通过 `digitalRead()`。在 Arduino API 中，引脚编号遵循开发板包的映射，其中 `digitalRead(17)` 实际读取的是 **P0.07**（6D IMU 的 I2C 数据线），而不是 P0.17。这里的常量 `14` 和 `17` 是 **Nordic 原始 P0.x 引脚编号**（P0.14 和 P0.17），这正是寄存器调用所期望的编号。
 :::
 
 :::note
-该示例使用工厂校准的 **499 kΩ** 低端电阻（分压比约为 3.004），而不是标称的 510 kΩ。分压器集成在 XIAO nRF52840 Plus 模组本身，而不是显示板上。P0.14 使能引脚为 **低电平有效**：将其驱动为 LOW 以使能分压器，然后释放为高阻态（INPUT），以在不测量电池时将静态电流消耗降到最低。
+该示例使用出厂校准的 **499 kΩ** 低端电阻（分压比约为 3.004），而不是标称的 510 kΩ。分压器集成在 XIAO nRF52840 Plus 模组本身，而不是显示板上。P0.14 使能引脚为 **低电平有效**：将其拉低为 LOW 以使能分压器，然后释放为高阻态（INPUT），以在不测量电池时将静态电流消耗降到最低。
 :::
 
 ### 运行示例
@@ -706,7 +706,7 @@ nRF52840 Plus 使用 **三个 GPIO 引脚** 组成一个完整的电池监测系
   </table>
 </div>
 
-在没有电池的情况下，屏幕会显示一个带红色叉号的灰色电池图标，并标有 **USB PWR** 标签。插入 LiPo 电池后，图标会切换为彩色填充，并显示百分比和电压。当电池存在时插入 USB-C，填充会变为青色并带有闪电符号，表示正在充电。
+如果没有电池，屏幕会显示一个带红色叉号的灰色电池图标，并标有 **USB PWR** 标签。插入一块 LiPo 电池后，图标会切换为彩色填充，并显示百分比和电压。当电池存在时插入 USB-C，填充会变为青色并带有闪电符号，表示正在充电。
 
 该演示还会每 500 ms 向串口监视器打印一行诊断信息，例如：
 
@@ -720,13 +720,14 @@ VBAT 3.87V  charging  85  spread=5  usb=ON  base=4.140  baseValid=Y  state=PRESE
 - **🗃️[PCB 设计文件]** [XIAO 1.14'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
 - **📄[原理图]** [XIAO 1.14'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[3D 模型]** [XIAO 1.14'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.14%27%27%20IPS%20Display.step)
+- **🖨️[3D 打印外壳]** [XIAO 1.14'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843003-enclosure-for-xiao-114-ips-display-esp32nrf52840)
 - **📄[数据手册]** [1.14 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.14%20Inch%20Display%20Datasheet.pdf)
 - **💾[出厂固件]** [XIAO 1.14'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
 - **[演示]** [XIAO Display Board Demo Code](https://github.com/Seeed-Projects/Display-Gadgets) — 所有功能演示都在 `code_GFX2/Function/114_nRF52840/` 目录中
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="table-center">
   <div class="button_tech_support_container">

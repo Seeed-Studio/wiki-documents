@@ -1,6 +1,6 @@
 ---
 description: 本教程介绍如何基于 reBot Arm B601-RS 搭建 ROS2 控制工作空间，完成 SocketCAN 连接、机械臂控制、RViz 可视化和 MoveIt 2 集成。
-title: reBot Arm B601-RS ROS2 集成
+title: B601-RS ROS2 集成
 keywords:
   - reBot Arm
   - B601-RS
@@ -22,10 +22,11 @@ createdAt: '2026-06-10'
 updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
-# reBot Arm B601-RS ROS2 集成教程
+# reBot Arm B601-RS ROS2 集成
 
 <RebotRsDocNav />
 
@@ -34,10 +35,16 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">

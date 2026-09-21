@@ -1,13 +1,15 @@
 ---
-description: 训练一个官方 Microduck 任务，可视化 PT 检查点，并在 Jetson 上的 MuJoCo 中运行键盘控制的多策略 ONNX 推理。
+description: 训练官方 Microduck 任务、可视化 PT 检查点，并在 Jetson 上的 MuJoCo 中运行键盘控制的多策略 ONNX 推理。
 title: 训练并运行官方 Microduck 动作
 image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png
 slug: /ai_robotics_microduck_rl_official_policies
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/cn/ai_robotics_microduck_rl_official_policies/
+updatedAt: '2026-09-05'
 ---
 
 # 训练并运行官方 Microduck 动作
@@ -27,7 +29,7 @@ uv run --no-sync list-envs | grep MicroDuck
 ```
 
 | 动作 | 任务 ID |
-|---|---|
+| --- | --- |
 | 行走 | `Mjlab-Velocity-Flat-MicroDuck` |
 | 行走与跌倒恢复 | `Mjlab-VelStand-Flat-MicroDuck` |
 | 从地面站起 | `Mjlab-StandUp-Flat-MicroDuck` |
@@ -39,7 +41,7 @@ uv run --no-sync list-envs | grep MicroDuck
 
 ## 训练行走策略
 
-在每次长时间训练前，先运行五次迭代的冒烟测试：
+在每次长时间运行前，先进行五次迭代的冒烟测试：
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
@@ -59,7 +61,7 @@ uv run --no-sync train Mjlab-Velocity-Flat-MicroDuck \
   --agent.logger tensorboard
 ```
 
-仅在内存和温度允许时再增加环境数量。一个实用的回退序列是 `4096 → 2048 → 1024 → 512`。
+仅在内存和散热允许时再增加环境数量。一个实用的回退序列是 `4096 → 2048 → 1024 → 512`。
 
 ## 可视化 PT 检查点
 
@@ -82,7 +84,7 @@ uv run --no-sync play Mjlab-Velocity-Flat-MicroDuck \
 
 在同一网络中的电脑上打开 `http://<JETSON_IP>:8080`。
 
-### 在 Jetson 桌面上本地查看
+### 在 Jetson 桌面上的原生查看器
 
 ```bash
 export DISPLAY=:0
@@ -111,20 +113,22 @@ uv run --no-sync python3 scripts/infer_policy.py \
   --roulade pretrained/pollen-robotics/roulade.onnx \
   --kick-left pretrained/pollen-robotics/ball_kick_left.onnx \
   --kick-right pretrained/pollen-robotics/ball_kick_right.onnx \
+  --front-back-split models/exports/front_back_split/front_back_split_model_999.onnx \
   --new-cmd-obs
 ```
 
 ### 键盘控制
 
 | 按键 | 命令 |
-|---|---|
+| --- | --- |
 | 方向键 | 前进、后退和横向速度 |
 | `A` / `E` | 左转 / 右转 |
 | `G` | 地面拾取行为 |
 | `Y` | 坐下 / 站起切换 |
 | `R` | 前滚翻 |
 | `K` / `L` | 左 / 右脚踢球 |
-| `Space` | 清除速度命令 |
+| `O` | 六秒前后劈叉，然后回到站立或行走 |
+| `Space` | 清除速度指令 |
 | `Q` | 退出 |
 
 ## 推理结果
@@ -137,7 +141,7 @@ uv run --no-sync python3 scripts/infer_policy.py \
   <img width="900" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/walking-loop.gif" alt="Microduck walking policy inference loop in MuJoCo" />
 </div>
 
-行走策略会持续跟踪键盘的速度和转向命令。
+行走策略会持续跟踪键盘的速度和转向指令。
 
 ### 滚动
 
@@ -153,12 +157,26 @@ uv run --no-sync python3 scripts/infer_policy.py \
   <img width="900" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/kick.gif" alt="Microduck keyboard-triggered ball-kick policy inference in MuJoCo" />
 </div>
 
-在球场景中按下 `K` 或 `L` 以触发左脚或右脚踢球策略。
+在球场景中按下 `K` 或 `L`，触发左脚或右脚踢球策略。
+
+### 前后劈叉
+
+之前的单腿平衡策略已被更稳定的双支撑
+动作所取代。按下 `O` 运行训练好的策略：左脚向前移动，
+右脚向后移动，双脚始终保持接触地面，六秒相位周期结束后，
+机器人会回到站立或行走策略。
+
+包含的工件包括：
+
+```text
+models/checkpoints/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt
+models/exports/front_back_split/front_back_split_model_999.onnx
+```
 
 ## PT 和 ONNX 的用途不同
 
 - `.pt` 检查点包含 actor、critic、优化器、归一化器以及训练状态。使用它们来恢复训练和进行 `play` 评估。
-- `.onnx` 包含可部署的推理计算图。官方 ONNX 文件不包含 PPO 训练状态，且无法转换回可恢复的检查点。
+- `.onnx` 包含可部署的推理计算图。官方 ONNX 文件不包含 PPO 训练状态，无法转换回可恢复的检查点。
 - `models/checkpoints/` 下的 PT 文件是随本演示提供的 Jetson 行走训练结果；它们不是 Pollen Robotics 官方发布的 PT 文件。
 
 ## 导出你自己的 ONNX

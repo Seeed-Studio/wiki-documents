@@ -1,6 +1,6 @@
 ---
 description: 本教程介绍如何在 reBot Arm B601-DM 机械臂上使用 Pinocchio 和 MeshCat 进行运动学分析和可视化。
-title: reBot Arm B601-DM入门Pinocchio与MeshCat
+title: B601-DM 与匹诺曹
 keywords:
   - Pinocchio
   - MeshCat
@@ -16,13 +16,15 @@ last_update:
 translation:
   skip: [[zh-CN]]
 createdAt: '2026-03-24'
-updatedAt: '2026-08-11'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
+import '/src/css/rebot-wiki-style.css';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# reBot Arm B601-DM 的 Pinocchio 与 MeshCat 入门指南
+# reBot Arm B601-DM Pinocchio 与 MeshCat 入门
 
 <RebotDmDocNav />
 
@@ -31,10 +33,16 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1042412233386&skuId=6065255360559" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1042412233386&skuId=6065255360559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -55,9 +63,21 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 :::
 
 
-[Pinocchio](https://github.com/stack-of-tasks/pinocchio) 是一个用于机器人动力学分析和优化的开源库。它提供了高效的正向/逆向运动学、动力学计算和轨迹规划功能。[MeshCat](https://github.com/rdeits/meshcat) 是一个基于 Web 的 3D 可视化工具，可以实时显示机器人状态和运动轨迹。
+<div align="center">
+  <a href="https://github.com/stack-of-tasks/pinocchio">Pinocchio</a> 是一个用于机器人动力学分析和优化的开源库。它提供了高效的正向/逆向运动学、动力学计算和轨迹规划功能。
+</div>
+
+<div align="center">
+  <a href="https://github.com/rdeits/meshcat">MeshCat</a> 是一个基于 Web 的 3D 可视化工具，可以实时显示机器人状态和运动轨迹。
+</div>
 
 本项目结合了 Pinocchio 的强大计算能力和 MeshCat 的直观可视化，为 reBot Arm B601-DM 提供了一套完整的运动学分析和调试工具。
+
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBotArm_control_py"
+  ariaLabel="在 GitHub 上为 reBotArm_control_py 点亮 Star"
+/>
 
 ---
 
@@ -147,20 +167,44 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 | 项目 | 要求 |
 |------|------|
 | **Python** | 3.10+ |
-| **操作系统** | Ubuntu 22.04+ |
+| **操作系统** | Ubuntu（推荐 Ubuntu 24.04 LTS） |
 | **通信接口** | USB2CAN 串口桥 或 CAN 接口 |
 
 ---
 
 ## 安装步骤
 
-### 步骤 1. 安装 uv（如未安装）
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4>安装 uv（如未安装）</h4>
+<p className="rebot-step-label">第 1 步</p>
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### 步骤 2. 同步环境（安装所有依赖）
+安装完成后，运行以下命令确认 `uv` 可用：
+
+```bash
+uv --version
+```
+
+成功时会看到类似输出（版本号和平台可能不同）：
+
+```text
+uv 0.11.31 (x86_64-unknown-linux-gnu)
+```
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4>同步环境（安装所有依赖）</h4>
+<p className="rebot-step-label">第 2 步</p>
 
 ```bash
 git clone https://github.com/Seeed-Projects/reBotArm_control_py.git
@@ -172,6 +216,9 @@ uv sync
 `uv sync` 会自动创建虚拟环境（如不存在）并根据 `pyproject.toml` 和 `uv.lock` 安装所有依赖。
 :::
 
+</div>
+</section>
+</div>
 
 ## 调节 MIT / POS_VEL 控制器参数 {#tune-controller-params}
 
@@ -242,6 +289,10 @@ joints:
 Damiao（DM）与 Robostride（RS）电机的协议层单位不同，**同一字段名下的「大小」没有跨厂商可比性**。修改 RS 的 `vel_kp` 与修改 DM 的 `vel_kp` 含义不同，请按各自 yaml 内的字段顺序理解，不要跨配置文件做数值类比。
 :::
 
+:::caution 调参前先限制测试范围
+多关节同时大幅改动 `kp` / `kd` 后，若某关节方向或极性填错，整臂可能瞬间出现抖动、过流甚至撞限位。开始调参前，请先清空机械臂工作范围，并计划好**逐关节、逐模式、小步迭代**的测试顺序。
+:::
+
 ### 修改流程
 
 1. **关闭所有运行中的脚本**。电机处于使能状态时改 YAML 不会立即生效，且容易出现不一致行为。
@@ -264,10 +315,6 @@ Damiao（DM）与 Robostride（RS）电机的协议层单位不同，**同一字
   uv run python -c "import yaml; print(yaml.safe_load(open('config/rebotarm_dm.yaml'))['joints'][0])"
   ```
 - **快速回滚**：直接 `git checkout config/rebotarm_dm.yaml` 即可恢复仓库默认参数。
-
-:::caution 不要一次跨多关节大幅调整
-多关节同时大幅改动 `kp` / `kd` 后，若某关节方向或极性填错，整臂可能瞬间出现抖动、过流甚至撞限位。请**逐关节、逐模式、小步迭代**。
-:::
 
 ---
 
@@ -329,16 +376,31 @@ uv run python example/2_zero_and_read.py
 ---
 </details>
 
-<details>
-<summary>MIT 控制模式（reBot DM 上的备选方案，按需查看 — 推荐使用 POS_VEL 模式）</summary>
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--optional">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4>MIT 控制模式（reBot DM 上的备选方案，按需查看 — 推荐使用 POS_VEL 模式）</h4>
+<p className="rebot-step-label">Demo 3 · 3_mit_control.py</p>
 
-:::warning 适用性提示
-对于 **reBot Arm B601-DM** 而言，**POS_VEL（位置‑速度）模式是推荐的控制模式** — Damiao 电机协议原生支持位置‑速度混合控制并自带速度限制，开箱即可获得最平滑的效果。MIT 模式**是备选方案**，通常需要更细致地调参 `kp` / `kd` 才能有较好表现。因此 MIT 模式在 DM 硬件上**不是默认推荐**，但出于部分用户确有此需求，**保留该 demo 供按需参考与调参**。如果无特殊场景，建议优先使用下方的 POS_VEL 模式示例。
+:::warning 可跳过：MIT 是 DM 的备选控制模式
+对于 **reBot Arm B601-DM**，POS_VEL（位置‑速度）通常是更合适的关节控制模式；Damiao 电机协议原生支持位置‑速度混合控制并自带速度限制。MIT 模式通常需要更细致地调节 `kp` / `kd`。
+
+本示例不是完成教程的必做步骤；没有明确的 MIT 调试需求时，建议**不要运行本示例**，改用下方的 POS_VEL 示例。若目标是让末端沿规划轨迹平滑运动，可直接前往 [平滑轨迹的逆运动学控制 (`8_arm_traj_control.py`)](#demo8-traj-control)。
 :::
 
-**MIT 控制模式 (`3_mit_control.py`)**
-
 输入所有关节的目标角度，将MIT控制模式下完成各电机的控制，通常用于力控、阻抗控制或需要高动态响应的场景。
+
+:::danger 运行前注意：本示例没有平滑轨迹规划
+本示例会将目标关节角直接下发给电机，**没有路径规划或速度规划**。较大的目标变化可能使机械臂突然高速运动，并触发过流保护。
+
+- 仅在需要验证底层 MIT 关节控制时运行，并先让单个关节小幅移动 5～10 度，确认响应和方向后再逐步调整；
+- 需要完整平滑轨迹时，请跳过本示例，前往 [平滑轨迹的逆运动学控制 (`8_arm_traj_control.py`)](#demo8-traj-control)；
+- 运行前清空机械臂工作范围，并确保随时可以断电。
+:::
+
+<details className="rebot-demo-details">
+<summary>展开运行方式（可选）</summary>
 
 **运行方式**：
 ```bash
@@ -348,20 +410,30 @@ uv run python example/3_mit_control.py
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # 退出系统
 ```
-:::danger
-本示例**没有路径规划与速度规划**，输入的目标关节角度过大会让电机以很快的速度运动，甚至**直接触发电机过流保护**。建议：
 
-- 先输入**小角度**验证效果（例如单个关节只动 5~10 度），确认电机响应与方向无误后再逐步放大；
-- 本节**没有内置的平滑轨迹版本**，若需要在多次目标之间平稳过渡，请谨慎控制目标与到位节奏，或参考后续的 [平滑轨迹的逆运动学控制 (8_arm_traj_control.py)](#demo8-traj-control) 把最小 jerk / 加减速规划的思路移植进自己的脚本；
-- 运行时人或其他设备务必远离机械臂工作半径。
-:::
-
----
 </details>
 
-### 位置-速度控制模式 (`4_pos_vel_control.py`)
+</div>
+</section>
 
-输入所有关节的目标角度，将在POS_VEL（位置-速度）混合控制模式下完成各电机的控制，在到达指定角度时运动得更加平稳、可控，减少震动。
+<section className="rebot-step-item rebot-step-item--optional">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4>位置-速度控制模式</h4>
+<p className="rebot-step-label">Demo 4 · 4_pos_vel_control.py</p>
+
+输入所有关节的目标角度，以 POS_VEL（位置-速度）混合控制模式控制各电机。Damiao 电机的速度限制可以降低目标切换时的冲击，但本示例本身不提供完整的平滑轨迹规划。
+
+:::danger 可跳过：速度限制不等于完整轨迹规划
+虽然 POS_VEL 是 DM 的推荐关节控制模式，但本示例仍会直接更新关节目标位置，不会规划中间路径。较大的目标变化仍可能造成突然运动、碰撞或过流。
+
+- 本示例不是完成教程的必做步骤；如果只需要末端平滑运动，建议**不要运行本示例**，直接前往 [平滑轨迹的逆运动学控制 (`8_arm_traj_control.py`)](#demo8-traj-control)；
+- 需要验证 POS_VEL 关节控制时，请先让单个关节小幅移动 5～10 度，再逐步增加目标变化；
+- 运行前清空机械臂工作范围，并确保随时可以断电。
+:::
+
+<details className="rebot-demo-details">
+<summary>展开运行方式（可选）</summary>
 
 **运行方式**：
 ```bash
@@ -371,19 +443,23 @@ uv run python example/4_pos_vel_control.py
   pos (deg): ['+29.99', '+0.00', '-45.00', '+0.00', '+0.00', '+0.00']
 > q # 退出系统
 ```
-:::danger
-本示例**没有路径规划与速度规划**，输入的目标关节角度过大会让电机以很快的速度运动，甚至**直接触发电机过流保护**。建议：
 
-- 先输入**小角度**验证效果（例如单个关节只动 5~10 度），确认电机响应与方向无误后再逐步放大；
-- 本节**没有内置的平滑轨迹版本**，若需要在多次目标之间平稳过渡，请谨慎控制目标与到位节奏，或参考后续的 [平滑轨迹的逆运动学控制 (8_arm_traj_control.py)](#demo8-traj-control) 把最小 jerk / 加减速规划的思路移植进自己的脚本；
-- 运行时人或其他设备务必远离机械臂工作半径。
-:::
+</details>
+
+</div>
+</section>
+</div>
 
 ---
 
 ## 运动学测试
 
-### 正运动学测试 (`5_fk_test.py`)
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4>正运动学测试</h4>
+<p className="rebot-step-label">Demo 5 · 5_fk_test.py</p>
 
 根据关节角度计算末端位姿。
 
@@ -416,9 +492,14 @@ uv run python example/5_fk_test.py
     偏航/yaw   = +0.0000
 ```
 
----
+</div>
+</section>
 
-### 逆运动学测试 (`6_ik_test.py`)
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4>逆运动学测试</h4>
+<p className="rebot-step-label">Demo 6 · 6_ik_test.py</p>
 
 根据期望末端位姿求解关节角度。
 
@@ -465,7 +546,15 @@ uv run python example/6_ik_test.py
     joint5     =  -0.0003 deg  (-0.0000 rad)
     joint6     =  +0.0057 deg  (+0.0001 rad)
 ```
-### MIT 模式下的逆运动学控制 (`7_arm_ik_control.py`)
+
+</div>
+</section>
+
+<section className="rebot-step-item rebot-step-item--optional">
+<span className="rebot-step-number">7</span>
+<div className="rebot-step-content">
+<h4>MIT 模式下的逆运动学控制</h4>
+<p className="rebot-step-label">Demo 7 · 7_arm_ik_control.py</p>
 
 在 MIT 模式下使用逆运动学（IK）指定机械臂末端想去的三维坐标（X, Y, Z）和姿态（欧拉角）
 
@@ -474,6 +563,17 @@ uv run python example/6_ik_test.py
 - 位置 + 姿态：`<x> <y> <z> <roll> <pitch> <yaw>`（度）
 - 输入 `state` ：查看当前各个关节的实际弧度值。
 - 输入 `end_state` ：查看当前 末端在空间中的实际坐标 (m) 和欧拉角 (rad)。
+
+:::danger 可跳过：本示例没有平滑轨迹规划
+本示例会将 IK 解算结果直接作为关节目标，**没有路径规划或速度规划**。目标位姿变化较大时，机械臂可能突然高速运动，并触发过流保护。
+
+- 本示例不是完成教程的必做步骤；通常建议**不要运行本示例**，直接使用下一节带最小 jerk / 加减速规划的 [平滑轨迹逆运动学控制 (`8_arm_traj_control.py`)](#demo8-traj-control)；
+- 仅当需要对比或调试无轨迹规划的 IK 控制时再运行，第一次目标应限制在当前位置附近 5～10 cm；
+- 运行前确认目标位姿可达、工作范围内无人或障碍物，并确保随时可以断电。
+:::
+
+<details className="rebot-demo-details">
+<summary>展开运行方式（可选）</summary>
 
 **运行方式**：
 ```bash
@@ -487,15 +587,17 @@ uv run python example/7_arm_ik_control.py
 
 > ctrl + c # 回到零点并退出系统
 ```
-:::danger
-本示例**没有路径规划与速度规划**，输入的目标角度过大会直接让电机以很快的速度运动，甚至**直接触发电机过流保护**。建议：
 
-- 先输入**小角度**验证效果（例如让末端在当前位置附近只动 5~10 cm），确认姿态与方向无误后再逐步放大；
-- 如需在两次目标之间平滑过渡，请直接跳到下一节的 [平滑轨迹的逆运动学控制 (8_arm_traj_control.py)](#demo8-traj-control) 使用带最小 jerk / 加减速规划的版本；
-- 运行时人或其他设备务必远离机械臂工作半径。
-:::
+</details>
 
-### 平滑轨迹的逆运动学控制 (`8_arm_traj_control.py`) {#demo8-traj-control}
+</div>
+</section>
+
+<section className="rebot-step-item rebot-step-item--recommended">
+<span className="rebot-step-number">8</span>
+<div className="rebot-step-content">
+<h4 id="demo8-traj-control">平滑轨迹的逆运动学控制</h4>
+<p className="rebot-step-label">Demo 8 · 8_arm_traj_control.py</p>
 
 在 MIT 模式下使用逆运动学（IK），在目标时间内自动规划出一条匀速或带平滑加减速的运动轨迹，避免了关节剧烈抖动。
 
@@ -526,11 +628,20 @@ uv run python example/8_arm_traj_control.py
 如果运行本示例时发现**读取到的末端位姿**与**下发的目标位姿**存在偏差，且**该位姿本身是可达的**（不在工作空间外、不是奇异位姿），那么问题很可能出在 MIT / POS_VEL 控制器的参数上。此时请参考前面的 [调节 MIT / POS_VEL 控制器参数](#tune-controller-params) 章节，按"单关节、逐模式、小步迭代"的方式手动整定 `kp` / `kd` 等参数；整定完成后再回到本示例验证。
 :::
 
+</div>
+</section>
+</div>
+
 ---
 
 ## 重力补偿测试
 
-### 重力补偿控制 — 基础版 (`9_gravity_compensation.py`)
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--caution">
+<span className="rebot-step-number">9</span>
+<div className="rebot-step-content">
+<h4>重力补偿控制 — 基础版</h4>
+<p className="rebot-step-label">Demo 9 · 9_gravity_compensation.py</p>
 
 使用 Pinocchio 动力学模型补偿关节重力。
 
@@ -546,6 +657,12 @@ kp = 2,  kd = 1     — 所有关节统一刚度/阻尼
 - 松开后不会因自重坠落
 - 可以手动掰动到任意位置
 
+:::caution 正常退出会自动安全归零
+正常按 `Ctrl+C` 停止时，程序会先停止重力补偿控制，以刚性增益和重力前馈保持当前位置，然后通过最小 jerk 轨迹自动回到零位；归零完成后，程序才会断开连接并失能电机。
+
+自动归零依赖程序、通信和供电正常。归零过程中请确保机械臂工作范围内无人或障碍物，并随时准备扶稳机械臂；若发生通信异常、意外断电或强制终止，保护流程可能无法完成，出现异常运动时请立即断电。
+:::
+
 **运行方式**：
 ```bash
 uv run python example/9_gravity_compensation.py
@@ -554,10 +671,6 @@ uv run python example/9_gravity_compensation.py
 **输出**：
 - 实时显示各关节期望力矩（N·m）
 - 按 `Ctrl+C` 停止并断开连接
-
-:::caution 退出重力补偿前务必归位
-停止脚本（`Ctrl+C`）时，程序会**直接失能所有电机**，机械臂**不会自动回到零点**。请在退出前用手扶住机械臂或先将其移动到安全/归零姿态，避免关节突然下落造成碰撞或损伤。
-:::
 
 :::tip 单独调节各关节补偿力度
 如果某些关节因结构摩擦或装配差异导致补偿不足/过补偿，可以在代码中对 `tau_g` 数组的对应元素进行额外缩放：
@@ -570,8 +683,14 @@ tau_g[x] *= y  # x 为关节电机 id，y 为补偿力度系数，一般从 1 �
 例如 `tau_g[2] *= 1.2` 表示将第 2 个关节的重力补偿力矩增大 20%。建议根据实际漂浮效果逐项微调，避免一次性改动过大。
 :::
 
+</div>
+</section>
 
-### 重力补偿控制 — 末端速度锁止版 (`10_gravity_compensation_lock.py`)
+<section className="rebot-step-item rebot-step-item--caution">
+<span className="rebot-step-number">10</span>
+<div className="rebot-step-content">
+<h4>重力补偿控制 — 末端速度锁止版</h4>
+<p className="rebot-step-label">Demo 10 · 10_gravity_compensation_lock.py</p>
 
 在基础重力补偿的基础上，加入末端执行器速度检测与关节角度锁定机制。
 
@@ -594,6 +713,12 @@ kp = 8.0,  kd = 1.0           — 增强刚度/阻尼
 - 机械臂锁止在当前位置，用力推才能改变目标角度
 - 比基础版更稳定，适合需要保持姿态的场景
 
+:::caution 正常退出会自动安全归零
+正常按 `Ctrl+C` 停止时，程序会先停止重力补偿控制，以刚性增益和重力前馈保持当前位置，然后通过最小 jerk 轨迹自动回到零位；归零完成后，程序才会断开连接并失能电机。
+
+自动归零依赖程序、通信和供电正常。归零过程中请确保机械臂工作范围内无人或障碍物，并随时准备扶稳机械臂；若发生通信异常、意外断电或强制终止，保护流程可能无法完成，出现异常运动时请立即断电。
+:::
+
 **运行方式**：
 ```bash
 uv run python example/10_gravity_compensation_lock.py
@@ -604,10 +729,6 @@ uv run python example/10_gravity_compensation_lock.py
 - 末端线速度、角速度
 - 各关节重力补偿力矩（N·m）
 - 按 `Ctrl+C` 停止并断开连接
-
-:::caution 退出重力补偿前务必归位
-停止脚本（`Ctrl+C`）时，程序会**直接失能所有电机**，机械臂**不会自动回到零点**。请在退出前用手扶住机械臂或先将其移动到安全/归零姿态，避免关节突然下落造成碰撞或损伤。
-:::
 
 :::tip 单独调节各关节补偿力度
 如果某些关节因结构摩擦或装配差异导致补偿不足/过补偿，可以在代码中对 `tau_g` 数组的对应元素进行额外缩放：
@@ -626,17 +747,29 @@ tau_g[x] *= y  # x 为关节电机 id，y 为补偿力度系数，一般从 1 �
 ENABLED_JOINTS = ["joint1"]  # 仅使能 joint1
 ```
 
+</div>
+</section>
+</div>
+
 ---
 
-### 仿真环境
+## 仿真环境
 
 <div align="center">
     <img width={800} 
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/traj_sim_geodesic.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/meshcat_DM.png" alt="reBot Arm B601-DM 的 MeshCat 仿真界面" />
 </div>
 
+:::tip MeshCat 网页地址
+运行仿真后，终端会打印实际访问地址。默认地址为 `http://127.0.0.1:7000/static/`；如果端口被占用，MeshCat 会自动尝试下一个端口，请以终端打印的地址为准。
+:::
 
-#### 正运动学仿真 (`sim/fk_sim.py`)
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S1</span>
+<div className="rebot-step-content">
+<h4>正运动学仿真</h4>
+<p className="rebot-step-label">仿真 Demo 1 · sim/fk_sim.py</p>
 
 交互式正运动学仿真，通过输入关节角度在 MeshCat 中可视化机械臂位姿。
 
@@ -656,9 +789,14 @@ uv run python example/sim/fk_sim.py
 - 支持连续输入测试不同位姿
 - 输出格式化的位姿信息
 
----
+</div>
+</section>
 
-#### 逆运动学仿真 (`sim/ik_sim.py`)
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S2</span>
+<div className="rebot-step-content">
+<h4>逆运动学仿真</h4>
+<p className="rebot-step-label">仿真 Demo 2 · sim/ik_sim.py</p>
 
 交互式逆运动学仿真，输入目标位姿自动求解关节角度并可视化。
 
@@ -682,9 +820,14 @@ uv run python example/sim/ik_sim.py
 - 显示迭代次数和误差
 - 实时更新机器人位姿
 
----
+</div>
+</section>
 
-#### 轨迹规划仿真 (`sim/traj_sim.py`)
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S3</span>
+<div className="rebot-step-content">
+<h4>轨迹规划仿真</h4>
+<p className="rebot-step-label">仿真 Demo 3 · sim/traj_sim.py</p>
 
 基于 SE(3) 测地线的轨迹规划仿真，包含 CLIK 跟踪和 MeshCat 动画回放。
 
@@ -705,9 +848,14 @@ uv run python example/sim/traj_sim.py
 - MeshCat 中回放完整轨迹动画
 - 显示参考路径（灰色）和实际路径（绿色）
 
----
+</div>
+</section>
 
-#### 可视化工具 (`sim/visualizer.py`)
+<section className="rebot-step-item rebot-step-item--simulation">
+<span className="rebot-step-number">S4</span>
+<div className="rebot-step-content">
+<h4>可视化工具</h4>
+<p className="rebot-step-label">仿真 Demo 4 · sim/visualizer.py</p>
 
 MeshCat 可视化器封装，提供统一的机器人显示接口。
 
@@ -724,6 +872,10 @@ viz = Visualizer()
 viz.update(q)  # 更新机器人位姿
 viz.draw_path(points, "path_name", color)  # 绘制路径
 ```
+
+</div>
+</section>
+</div>
 
 ---
 

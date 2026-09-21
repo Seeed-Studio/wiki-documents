@@ -1,6 +1,6 @@
 ---
 description: This wiki provides HighTorque Motor Control Complete Guide
-title: HighTorque Motor Control Complete Guide
+title: HighTorque Motor SDK
 keywords:
   - actuator
   - motor

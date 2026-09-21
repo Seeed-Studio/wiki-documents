@@ -8,10 +8,10 @@ slug: /epaper_ee04
 sidebar_position: 3
 sku: 104990861,100075670,100064541,E25102101
 last_update:
-  date: 09/25/2025
-  author: Jason
+  date: 09/16/2026
+  author: Nemo
 createdAt: '2025-09-25'
-updatedAt: '2026-04-27'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/epaper_ee04/
 ---
 
@@ -47,100 +47,30 @@ Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin
 - **Versatile Display Support:** Compatible with a wide range of ePaper screens, supporting both 24-Pin and 50-Pin interfaces with easy switching via jumper caps.
 - **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
 - **User-Friendly Buttons:** Includes 1 reset button and 3 user-programmable buttons, offering flexibility for project acceleration and customizable functions.
+- **Low Power Design**: Suitable for battery-powered ePaper applications with typically 3-month on a full charge under default settings.
 
 ### Specification
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Processor</th>
-      <td>XIAO ESP32-S3 Plus</td>
-    </tr>
-    <tr>
-      <th>ePaper Connector</th>
-      <td>FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm</td>
-    </tr>
-    <tr>
-      <th>Battery Connector</th>
-      <td>JST 2.0mm</td>
-    </tr>
-    <tr>
-      <th>Switch</th>
-      <td>Battery Power ON/OFF</td>
-    </tr>
-    <tr>
-      <th>Power Supply</th>
-      <td>- 3.7V Li-Battery<br />- USB Type-C</td>
-    </tr>
-    <tr>
-      <th>Button</th>
-      <td>- 1x Reset button<br />- 3x User button</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+|-----------|-------------|
+| Processor | XIAO ESP32-S3 Plus |
+| ePaper Connector | FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm |
+| Battery Connector | JST 2.0mm |
+| Switch | Battery Power ON/OFF |
+| Power Supply | - 3.7V Li-Battery<br />- USB Type-C |
+| Button | - 1x Reset button<br />- 3x User button |
 
 ### ePaper Board Selection Guide
 
-<table>
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>ePaper Display Board EE04</th>
-<th><a href="https://wiki.seeedstudio.com/XIAO-eInk-Expansion-Board/">ePaper Breakout</a></th>
-<th><a href="https://wiki.seeedstudio.com/xiao_eink_expansion_board_v2/">ePaper Driver Board</a></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>Processor</th>
-            <td>XIAO ESP32-S3 Plus</td>
-            <td>XIAO Series</td>
-            <td>XIAO Series</td>
-        </tr>
-        <tr>
-            <th>Compatible ePaper Displays</th>
-            <td>24 Pin ePaper<br />50 Pin ePaper</td>
-            <td>24 Pin ePaper</td>
-            <td>24 Pin ePaper</td>
-        </tr>
-        <tr>
-            <th>ePaper Connector</th>
-            <td>FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm</td>
-            <td>FPC 24 Pin 0.5mm</td>
-            <td>FPC 24 Pin 0.5mm</td>
-        </tr>
-        <tr>
-            <th>Battery Connector</th>
-            <td>JST 2.0mm</td>
-            <td>/</td>
-            <td>JST 2.0mm</td>
-        </tr>
-        <tr>
-            <th>Switch</th>
-            <td>Battery Power ON/OFF</td>
-            <td>/</td>
-            <td>Battery Power ON/OFF</td>
-        </tr>
-        <tr>
-            <th>Button</th>
-            <td>1x Reset button<br />3x User button</td>
-            <td>/</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <th>Extension IO Port</th>
-            <td>/</td>
-            <td>connection of others controller</td>
-            <td>connection of additional sensors</td>
-        </tr>
-    </tbody>
-</table>
+| Product | ePaper Display Board EE04 | [ePaper Breakout](https://wiki.seeedstudio.com/XIAO-eInk-Expansion-Board/) | [ePaper Driver Board](https://wiki.seeedstudio.com/xiao_eink_expansion_board_v2/) |
+|---------|---------------------------|---------------|-----------------|
+| Processor | XIAO ESP32-S3 Plus | XIAO Series | XIAO Series |
+| Compatible ePaper Displays | 24 Pin ePaper<br />50 Pin ePaper | 24 Pin ePaper | 24 Pin ePaper |
+| ePaper Connector | FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm | FPC 24 Pin 0.5mm | FPC 24 Pin 0.5mm |
+| Battery Connector | JST 2.0mm | / | JST 2.0mm |
+| Switch | Battery Power ON/OFF | / | Battery Power ON/OFF |
+| Button | 1x Reset button<br />3x User button | / | / |
+| Extension IO Port | / | connection of others controller | connection of additional sensors |
 
 ### Application
 
@@ -165,9 +95,10 @@ This version XIAO ePaper Display Board(ESP32-S3) - EE04 does not support NFC fun
 #### 24-Pin Connector
 
 - [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [2.13-inch ePaper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [2.13-inch ePaper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.13-inch ePaper - Monochrome 122x250](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)
+- [2.13-inch ePaper - Quadruple 122x250](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9-inch ePaper - Monochrome 296x128](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9-inch ePaper - Flexible Monochrome 296x128](https://www.seeedstudio.com/2-9-Flexible-Monochrome-ePaper-Display-with-296x128-Pixels-p-5780.html)
 - [2.9-inch ePaper - Quadruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
 - [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
 - [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
@@ -199,113 +130,175 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 
 :::
 
-## Software Overview
+### Buttons
 
-### Install Seeed GFX Library
+The EE04 is equipped with 1 reset button and 3 user-programmable buttons, providing flexibility for user interaction and project customization.
 
-:::tip
-This library has same function as TFT library and no compatible with it. If you have installed TFT library or other similary display libraries, please uninstall it first.
+| Button | GPIO | Function |
+|--------|------|----------|
+| KEY0 | GPIO2_D1/A1 | User button (Programmable) |
+| KEY1 | GPIO3_D2/A2 | User button (Programmable) |
+| KEY2 | GPIO5_D4/A4 | User button (Programmable) |
+| RESET | - | Reset button |
+
+:::note
+The user buttons are programmable and can be configured for various functions such as page switching, mode selection, or triggering specific actions in your ePaper project.
 :::
 
-Download and install the Seeed GFX library from GitHub.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/39.jpg" style={{width:700, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
+### Jumper Cap Selection
+
+The EE04 supports both 24-pin and 50-pin ePaper displays. Use the jumper cap to select the correct pin configuration for your display:
+
+- **24-pin mode**: Place the jumper cap on the 24-pin side
+- **50-pin mode**: Place the jumper cap on the 50-pin side
+
+:::caution
+Make sure the jumper cap is correctly positioned according to your ePaper display pin count. Incorrect jumper cap placement may cause display issues or damage the screen.
+:::
+
+### Battery Connector
+
+The board features a JST 2.0mm battery connector with a power switch, allowing you to power the device with a 3.7V lithium battery for portable applications. The built-in charging IC enables battery charging via USB Type-C.
+
+When the device is powered by battery, the following phenomena are inherent normal behaviors of the SenseCraft Seeedash firmware itself.
+
+- The device will automatically enter low-power mode between refreshes
+- Battery life depends on refresh frequency (typically 3-month on a full charge with default settings)
+- The device will display a low battery icon in the top-right corner when the battery level is below 20%
+
+## Getting Started with SenseCraft Seeedash 
+
+This section will guide you through connecting your EE04 to the SenseCraft Seeedash platform, allowing you to easily update the screen content wirelessly.
+
+:::note
+**Which screen does this guide use?** Unlike single-panel boards, the EE04 supports multiple ePaper panels (see the **Supported ePaper** section above). This guide uses the **7.5-inch Monochrome ePaper (800 x 480)** as the example throughout — all screenshots below are taken with this panel. If you have a different screen, simply select your own panel model when flashing the firmware in Step 2; the remaining steps are exactly the same.
+:::
+
+:::caution
+**No welcome screen on first power-up? That is normal.** Because the EE04 supports multiple ePaper panels, the factory firmware is not pre-flashed for any specific screen. When you connect a screen and power on a brand-new board, the display will most likely stay blank — this does **not** mean the board or screen is broken. You need to flash the SenseCraft Seeedash firmware matching your screen model first (Step 2 below); the welcome and Network Configuration interfaces will appear after flashing.
+:::
+### Equipment Installation
+
+**Step 1. Connect the Screen and Board**
+Carefully connect the FPC cable of your ePaper screen to the connector on the EE04 driver board. Ensure the locking mechanism is secure.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/Connect.gif" style={{width:800, height:'auto'}}/></div>
+
+**Step 2. Flash the HMI Firmware for Your Screen**
+
+Keep the EE04 board connected to your computer with a USB Type-C **data** cable (the same cable is used for power and flashing), then:
+
+1. Visit the [SenseCraft Seeedash platform](https://sensecraft.seeed.cc/hmi) and sign in to your account.
+2. Open **Tools** → **Firmware Flasher** from the left menu.
+3. In the device list, select **XIAO EE04 DIY Kit**.
+4. Select the firmware entry that matches the screen model connected to your board. **In this guide we use the 7.5" Monochrome Display 800 x 480** — pick your own panel here if it is different.
+5. Click **Flash**, choose the serial port of your board in the pop-up window, and wait for the flashing to complete.
+
+:::tip
+If no serial port appears, press the **RESET** button on the board and try again. Also make sure your USB-C cable supports data transfer, not charging only.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_7.png" style={{width:800,height:'auto'}}/></div>
+
+**Step 3. Enter Network Configuration Mode**
+Once the firmware flashing is complete, the board reboots automatically. The screen first shows the welcome image, then refreshes to the Network Configuration interface. This indicates the device is ready to connect to Wi-Fi.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_1.png" style={{width:300,height:'auto'}}/></div>
+
+
+### Network Configuration
+
+**Step 4. Configure Wi-Fi via Mobile Phone**
+Use your mobile phone to scan the QR code displayed on the screen. Follow the prompts on your phone to enter your local Wi-Fi SSID and password to connect the EE04 to the internet.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
+
+**Step 5. Obtain Pair Code**
+Once the network configuration is successful, the screen will refresh again and display a unique **Pair Code**. You will need this code for the next step.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_2.png" style={{width:300,height:'auto'}}/></div>
+
+### Platform Binding & Update
+
+**Step 6. Bind Device on SenseCraft Seeedash**
+Go to the [SenseCraft Seeedash Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "New Device". Enter the Pair Code displayed on your E-ink screen.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
+
+**Step 7. Create and Push New Interface**     
+On the SenseCraft Seeedash platform, select the template suitable for the 7.5-inch screen to create a new interface or upload an image.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_5.png" style={{width:500, height:'auto'}}/></div>
+
+**Step 8. Apply your images**
+Once finished, click the "Apply" button and select your EE04 device.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_6.png" style={{width:800, height:'auto'}}/></div>
+
+**Step 9. Display on the screen**
+Finally the EE04 will receive the data and refresh the 7.5-inch screen with your new content.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_4.png" style={{width:300, height:'auto'}}/></div>
+
+
+## Getting Started with Arduino
+
+### Install Seeed GFX2 Library
+
+:::tip
+This library has the same function as the TFT library and is **not** compatible with it. If you have installed the TFT library or other similar display libraries, please uninstall them first.
+:::
+
+Download and install the Seeed GFX2 library from GitHub.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/14.png" style={{width:800, height:'auto'}}/></div>
 
 <div align="center">
-<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
+<a href="https://github.com/Seeed-Studio/Seeed_GFX2" target="_blank">
 <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
 </a>
 </div>
 
-Scroll down and open this link.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
-
-Select your device type and it will generate some code. Copy those code and we will use them later.
-
-:::tip
-If you make the wrong choice, the screen will display nothing.
-
-So please make sure your devices or components type.
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/38.png" style={{width:800, height:'auto'}}/></div>
-
 After downloading the library, go to **Sketch** -> **Include Library** -> **Add .ZIP Library** and select the downloaded library.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/15.png" style={{width:500, height:'auto'}}/></div>
 
-There are 4 basic examples, open a basic example you like:
 
-1. Bitmap: Display a bitmap image.
-2. Clock: Display a clock.
-3. Clock_digital: Display a digital clock.
-4. Shape: Display different sizes of words and shape randomly.
+### Configure and burn the program
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
+As shown in the image, navigate to the example through this menu:
+File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → XIAO ePaper Display Board - EE04 → 7.5-inch ePaper - Monochrome 800x480 → 7_5_inch_Monochrome_HelloWorld
 
-## Getting Start
-
-Here, we use a 5.83-inch display as an example. The steps are the same for all 24-pin screens; the only difference is selecting the appropriate screen size in the driver.
-
-Create a **new "driver.h" file** and paste those code into it. The code should be like:
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/40.png" style={{width:1000, height:'auto'}}/></div>
-
-```cpp
-#define BOARD_SCREEN_COMBO 503 // 5.86 inch monochrome ePaper Screen （UC8179）
-#define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
-```
-
-After that, go to **Tools** -> **Board** -> **XIAO ESP32S3** and **Tools** -> **Port** -> **Select the port your board is connected to**. Then click **Upload** to upload the code.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.png" style={{width:1000, height:'auto'}}/></div>
-
-Now you will see the feedback in your epaper screen! Following are the results of Helloworld examples.
-
-:::tip
-⚠️ Note: ePaper Cable Orientation
-When connecting the ePaper display to the XIAO ePaper Display Board, make sure the FPC cable is inserted in the correct direction.
-
-⚠️ Do not reverse the connector! Inserting the cable upside down may cause the ePaper to fail to display or even damage the screen/board.
-The image below shows the correct connection:
+:::note
+This guide uses the **7.5-inch Monochrome ePaper (800 x 480)** as the example. If you have a different screen, open the example folder that matches your own panel model under `EE04` instead.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.jpg" style={{width:500, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/GFX2_EE04_demo_1.png" style={{width:800, height:'auto'}}/></div>
+
+After that, go to **Tools** -> **Board** -> **XIAO ESP32S3 Plus** and **Tools** -> **Port** -> **Select the port your board is connected to**. 
+
+Note that PSRAM must be enabled.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
+
+Then click **Upload** to upload the code.
+Now you will see the feedback in your epaper screen! Following is the result of the HelloWorld example.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/GFX2_EE04_demo.png" style={{width:500, height:'auto'}}/></div>
+
+## Software Overview
 
 ### User Buttons on XIAO ePaper Display Board(ESP32-S3) - EE04
 
-The EE04 features three user-programmable buttons that can be used for various control purposes. This section demonstrates how to read button states and respond to button presses using Arduino.
-
-On the EE04, the three buttons are connected to the XIAO ESP32-S3 Plus:
-
-<table>
-  <thead>
-    <tr>
-      <th>KEY1</th>
-      <th>KEY2</th>
-      <th>KEY3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>GPIO2_D1/A1</th>
-      <th>GPIO3_D2/A2</th>
-      <th>GPIO5_D4/A4</th>
-    </tr>
-  </tbody>
-</table>
-
-
+This section demonstrates how to read button states and respond to button presses using Arduino.
 All buttons are active-low, meaning they read LOW when pressed and HIGH when released.
-
 Basic Button Reading Example
-
 This example demonstrates how to detect button presses and print messages to the serial monitor.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/39.jpg" style={{width:700, height:'auto'}}/></div>
-
-<br></br>
 
 ```cpp
 // reTerminal E Series - Button Test
@@ -432,40 +425,6 @@ void loop() {
   delay(10);
 }
 ```
-
-### Displaying Custom Images on XIAO ePaper Display Board (ESP32-S3) - EE04
-
-Find the Bitmap example in the GFX library and select it.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image1.png" style={{width:700, height:'auto'}}/></div>
-
-Please note that you need to create a driver.h file within your project directory.[For details, click to learn more.](#install-seeed-gfx-library).
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image2.png" style={{width:700, height:'auto'}}/></div>
-
-Next, navigate to the SenseCraft HMI Tool at https://sensecraft.seeed.cc/hmi/tools/dither and upload the image you wish to display.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image3m.png" style={{width:700, height:'auto'}}/></div>
-
-After uploading the image, generate the C array (image data).
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image4.png" style={{width:700, height:'auto'}}/></div>
-
-Copy the array content. Be careful to only copy the hex data and not include any irrelevant characters.
-
-:::tip 
-If the colors on your display appear inverted compared to your original design, select the Invert Colors option in the HMI tool before generating the code.
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image5.png" style={{width:700, height:'auto'}}/></div>
-
-Overwrite the existing array in the image.c or image.h file within your Arduino sketch.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image6.png" style={{width:700, height:'auto'}}/></div>
-
-Finally, upload the program to your XIAO ESP32-S3. You should now see your custom image displayed on the ePaper screen.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image7.png" style={{width:700, height:'auto'}}/></div>
 
 ## Resources
 

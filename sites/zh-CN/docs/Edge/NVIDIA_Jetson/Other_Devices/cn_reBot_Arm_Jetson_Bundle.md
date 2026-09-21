@@ -340,13 +340,13 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
                 src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg"
-                alt="通过 Isaacsim 仿真 reBotArm"
+                alt="reBot Arm B601-RS Isaac Sim 仿真"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
             />
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                通过 Isaacsim 仿真 reBotArm
+                reBot Arm B601-RS Isaac Sim 仿真
             </h3>
         </div>
     </a>
