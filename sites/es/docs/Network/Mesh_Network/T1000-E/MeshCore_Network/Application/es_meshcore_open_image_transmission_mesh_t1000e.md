@@ -1,15 +1,15 @@
 ---
 description: Esta guía explica cómo enviar imágenes reconstruidas por IA a través de MeshCore utilizando compresión de imágenes de tasa de bits ultra baja basada en Card Tracker T1000-E.
-title: Transmisión de imágenes
+title: Transmisión de Imágenes
 keywords:
   - MeshCore
   - MeshCore Open
   - Card Tracker T1000-E
-  - Transmisión de imágenes
-  - Compresión de imágenes con IA
-  - Malla LoRa
+  - Transmisión de Imágenes
+  - Compresión de Imágenes con IA
+  - LoRa Mesh
   - AEIC-SE
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_t1000e.png
 slug: /meshcore_ai_image_transmission_t1000e
 sku: 114993369,114993649
 sidebar_position: 1
@@ -28,11 +28,11 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}>
 
-<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>
+<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_t1000e.png" style={{width:900, height:'auto'}}/>
 
 </div>
 
-[MeshCore](https://meshcore.io/) está diseñado para comunicación de malla LoRa de bajo ancho de banda. La transmisión de imágenes tradicional es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes de tasa de bits ultra baja** sobre MeshCore combinando:
+[MeshCore](https://meshcore.io/) está diseñado para comunicación LoRa mesh de bajo ancho de banda. La transmisión de imágenes tradicional es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes de tasa de bits ultra baja** sobre MeshCore combinando:
 
 - App MeshCore Open
 - Compresión de imágenes basada en IA
@@ -68,12 +68,12 @@ AI Decoder
 Reconstructed Image
 ```
 
-## Comenzar con MeshCore Open
+## Primeros pasos con MeshCore Open
 
 ### Configuración inicial
 
-1. Instala la app MeshCore Open. [Haz clic aquí](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar la versión de la APP que admite transmisión de imágenes.
-2. Conecta tu nodo MeshCore a la APP. [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/) para leer la guía de conexión del T1000-E.
+1. Instala la App MeshCore Open. [Haz clic aquí](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar la versión de la APP que admite transmisión de imágenes.
+2. Conecta tu nodo MeshCore a la APP. [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/) para leer la guía de conexión de T1000-E.
 3. Configura tu región LoRa y los ajustes de red.
 4. Asegúrate de que otro nodo MeshCore esté disponible como receptor.
 
@@ -95,7 +95,7 @@ Elige una imagen de tu teléfono.
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshOpen_PhotoSelection.png" style={{width:300, height:'auto'}}/>
 </div>
 
-La APP procesará automáticamente la imagen antes de la transmisión. Los datos de la imagen comprimida se transmitirán a través de la red MeshCore. El tiempo de transmisión depende del número de saltos de malla, la configuración de radio, el tráfico de red y la calidad de la señal. Los datos transmitidos contienen solo la representación comprimida, no la imagen original.
+La APP procesará automáticamente la imagen antes de la transmisión. Los datos de la imagen comprimida se transmitirán a través de la red MeshCore. El tiempo de transmisión depende del número de saltos en la malla, la configuración de radio, el tráfico de red y la calidad de la señal. Los datos transmitidos contienen solo la representación comprimida, no la imagen original.
 
 Cuando el nodo receptor recibe los datos comprimidos, el decodificador realiza entonces la reconstrucción de la imagen. La imagen reconstruida aparecerá en la interfaz de chat.
 <div style={{textAlign:'center'}}>
@@ -104,7 +104,7 @@ Cuando el nodo receptor recibe los datos comprimidos, el decodificador realiza e
 
 ## Comprender las imágenes reconstruidas por IA
 
-La imagen de salida no es una copia perfecta píxel a píxel de la imagen original. El decodificador puede generar detalles adicionales que no fueron transmitidos. Por lo tanto, esta función es adecuada para conocimiento de la escena, comunicación al aire libre, monitoreo remoto y uso compartido de información visual. No es adecuada para recopilación de pruebas, verificación de identidad, análisis científico de imágenes ni aplicaciones que requieran una reproducción exacta de la imagen.
+La imagen de salida no es una copia perfecta píxel a píxel de la imagen original. El decodificador puede generar detalles adicionales que no fueron transmitidos. Por lo tanto, esta función es adecuada para conocimiento de la escena, comunicación al aire libre, monitoreo remoto y compartición de información visual. No es adecuada para recolección de evidencia, verificación de identidad, análisis científico de imágenes ni aplicaciones que requieran reproducción exacta de la imagen.
 
 ## Recursos
 
