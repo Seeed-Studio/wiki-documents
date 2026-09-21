@@ -31,9 +31,9 @@ First, we are going to connect the Seeed Studio XIAO RP2040  Series to the compu
 - Type-C cable x1
 - PC x1
 
-### Connect XIAO RP2040 Seriers to the PC
+### Connect XIAO RP2040 Series to the PC
 
-- **Step 1**. Press and hold the **BOOT** button and then connect the Seeed Studio XIAO RP2040 Series to the PC through the Type-C cable. If it works well, there is an **RPI-RP2** desk shown on the PC.
+- **Step 1**. Press and hold the **BOOT** button and then connect the Seeed Studio XIAO RP2040 Series to the PC through the Type-C cable. If it works well, there is an **RPI-RP2** disk shown on the PC.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
