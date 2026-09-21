@@ -25,6 +25,8 @@ url: https://wiki.seeedstudio.com/pt-br/easyskymesh_wio_tracker_l1/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# Firmware IoT EasySkyMesh para Wio Tracker L1
+
 [EasySkyMesh](https://github.com/IoTThinks/EasySkyMesh) é um projeto da comunidade baseado em [MeshCore](https://meshcore.io/) que se concentra na construção de firmware de baixo consumo de energia. Este firmware permite que o L1 Pro atinja uma vida útil de bateria de **18 dias** enquanto mantém a função de comunicação MeshCore.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMeshProject.png" style={{width:900, height:'auto'}}/></div>
