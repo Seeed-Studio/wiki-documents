@@ -1,15 +1,15 @@
 ---
-description: 本指南介绍如何使用超低比特率图像压缩，通过 MeshCore 发送由 AI 重建的图像。
+description: 本指南介绍如何使用超低码率图像压缩，通过 MeshCore 发送由 AI 重建的图像。
 title: 图像传输
 keywords:
   - MeshCore
   - MeshCore Open
   - MeshTracker X1
-  - Image Transmission
-  - AI Image Compression
+  - 图像传输
+  - AI 图像压缩
   - LoRa Mesh
   - AEIC-SE
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png
 slug: /meshcore_ai_image_transmission_x1
 sku: 100087698
 sidebar_position: 1
@@ -24,15 +24,15 @@ url: https://wiki.seeedstudio.com/cn/meshcore_ai_image_transmission_x1/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 适用于 MeshTracker X1 的 MeshCore AI 图像传输
+# 使用 MeshTracker X1 在 MeshCore 上进行 AI 图像传输
 
 <div style={{textAlign:'center'}}>
 
-<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>
+<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png" style={{width:900, height:'auto'}}/>
 
 </div>
 
-[MeshCore](https://meshcore.io/) 专为低带宽 LoRa Mesh 通信而设计。传统图像传输较为困难，因为普通照片通常需要数百 KB 或更多数据。[MeshCore Open](https://meshcoreopen.org/) 通过结合以下内容，在 MeshCore 上实现了**超低比特率图像传输**：
+[MeshCore](https://meshcore.io/) 专为低带宽 LoRa Mesh 通信而设计。传统图像传输较为困难，因为普通照片通常需要数百 KB 甚至更多的数据。[MeshCore Open](https://meshcoreopen.org/) 通过结合以下内容，在 MeshCore 上实现了**超低码率图像传输**：
 
 - MeshCore Open App
 - 基于 AI 的图像压缩
@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
 
 - **户外探索者**：徒步者、攀登者和探险队可以共享道路状况、发送远程景观图像，并在文字不足以表达时提供视觉信息。
 - **应急与灾害响应团队**：团队可以共享现场情况，通过图像提供快速的视觉更新并提升团队态势感知。
-- **离网通信爱好者**：适用于希望探索 AI 驱动边缘通信的 MeshCore 和业余无线电用户。
+- **离网通信爱好者**：适合希望探索 AI 驱动边缘通信的 MeshCore 和业余无线电用户。
 
 
 ## 图像传输在 MeshCore 中如何工作
@@ -68,7 +68,7 @@ AI Decoder
 Reconstructed Image
 ```
 
-## MeshCore Open 入门指南
+## 开始使用 MeshCore Open
 
 ### 初始设置
 
@@ -109,4 +109,4 @@ APP 会在传输前自动处理图像。压缩后的图像数据将通过 MeshCo
 ## 资源
 
 - [MeshCore Open 文档](https://meshcoreopen.org/docs/getting-started/)
-- [AEIC-SE 超低比特率图像编解码器](https://huggingface.co/zjs81/aeic-se-onnx)
+- [AEIC-SE 超低码率图像编解码器](https://huggingface.co/zjs81/aeic-se-onnx)

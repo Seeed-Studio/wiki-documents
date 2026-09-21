@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg
 slug: /meshcore_node_map_l1
 sku: 114993648,114993649,114993653,114993654
-sidebar_position: 2
+sidebar_position: 4
 last_update:
   date: 3/19/2026
   author: Michelle Huang
@@ -26,11 +26,11 @@ El Mapa de Nodos puede proporcionar visibilidad en tiempo real de la red [MeshCo
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreMAPFirst.png" style={{width:900, height:'auto'}}/></div>
 
-El Mapa de Nodos MeshCore depende de que los nodos informen periódicamente su posición geográfica a la red. Es particularmente útil para:
+El Mapa de Nodos MeshCore depende de que los nodos informen periódicamente su posición geográfica a la red. Es especialmente útil para:
 
 - **Descubrir repetidores cercanos**: Identificar repetidores disponibles para ampliar la conectividad
 - **Supervisar tu propia red**: Rastrear el estado y la ubicación de los nodos
-- **Depuración y optimización**: Optimizar la ubicación de repetidores y gateways
+- **Depuración y optimización**: Optimizar la colocación de repetidores y gateways
 
 
 ## Tutorial sobre el Mapa Oficial de MeshCore
@@ -67,7 +67,7 @@ Puedes ver el nombre del dispositivo, el rol y la información de configuración
 
 Para usuarios avanzados, es posible crear un frontend de Mapa de Nodos personalizado. Se recomienda utilizar el siguiente flujo de trabajo: 
 
-[Nodo MeshCore normal] → [Nodos Mesh configurados con MQTT] → [Backend API / Base de datos] → [Interfaz de mapa de frontend]
+[Nodo MeshCore normal] → [Nodos Mesh configurados con MQTT] → [Backend API / Base de datos] → [Interfaz de mapa frontend]
 
 ## Soporte técnico y debate sobre el producto
 

@@ -367,13 +367,15 @@ For Windows users, press the "Win" key and "R" key, then enter "cmd" in the pop-
 
 For Mac users, press the "Command" key and "Space" key to open Spotlight. Then enter "terminal" and press "Return". This opens the command line.
 
+For Linux users, open a terminal and use the **Linux** tab below to install the tool with pipx.
+
 **Prerequisites**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
 
-Check in your command line whether Python and pip are installed successfully.
+Check in your command line whether Python and pip are installed successfully. On Linux, use `python3` instead of `python` for these checks.
 
 ```
 python --version
@@ -388,7 +390,7 @@ Then "Python xxx" and "pip xxx" should appear. If they do not, please try instal
 <Tabs>
 <TabItem value="pypi" label="Installing from PyPI">
 
-This is the recommended method for installing the latest version:
+For Windows and macOS, install the latest version with the following command. Linux users should use the **Linux** tab.
 
 ```
 pip3 install --user adafruit-nrfutil
@@ -458,6 +460,27 @@ You will find the executable in `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit
 Copy or move it elsewhere for your convenience, such as a directory in your `%PATH%`.
 
 </TabItem>
+
+<TabItem value="linux" label="Linux">
+
+On Ubuntu/Debian, install `adafruit-nrfutil` with pipx. It isolates the tool from the system Python environment and avoids the `externally-managed-environment` error:
+
+```bash
+sudo apt update
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
+```
+
+On Fedora, use `sudo dnf install pipx` instead of apt. Reopen your terminal, then verify:
+
+```bash
+adafruit-nrfutil version
+```
+
+Use `adafruit-nrfutil version`, not `adafruit-nrfutil --version`. If the command is not found, check that `pipx ensurepath` completed and reopen your terminal.
+
+</TabItem>
 </Tabs>
 
 **Step2: Check your port number**
@@ -470,9 +493,35 @@ For Windows users, for example:
 For Mac users, for example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
+**For Linux users:**
+
+Connect the Solar Node P1 / P1-Pro with a USB data cable. Compare the following output before and after connecting it to identify its serial port:
+
+```bash
+ls /dev/ttyACM*
+```
+
+The device usually appears as `/dev/ttyACM0`; if nothing is listed, also try `ls /dev/ttyUSB*`. To enter DFU mode manually, double-press the device's `RST` button, then check the port again. Use the current DFU port for flashing.
+
+Check the port permissions, replacing `/dev/ttyACM0` with your actual port:
+
+```bash
+ls -l /dev/ttyACM0
+```
+
+On Ubuntu/Debian, serial ports usually belong to the `dialout` group. If you get `Permission denied` and the port belongs to `dialout`, add your user to that group:
+
+```bash
+sudo usermod -aG dialout "$USER"
+```
+
+Log out and log back in for the change to take effect. On other distributions, use the serial-access group shown by `ls -l` and follow your distribution's instructions.
+
 **Step3: Flash the bootloader**
 
 In the terminal or command prompt, navigate to the directory where you downloaded the bootloader zip package and execute the following command, replacing the port with the correct one for your device:
+
+Keep `xiao_nrf52840_ble_bootloader.zip` as a ZIP file; do not extract it. Close any serial monitor or browser flasher connected to the device. If the device is already in DFU mode after double-pressing `RST`, omit `--touch 1200` and use its current DFU port.
 
 - **For Windows**:
 
@@ -483,18 +532,50 @@ Please change COMXX to your COM port number. For example, if your device is on C
 
 `adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
 
- Some devices will change their port number after you enter this command. If the installation fails, check the port number again.
+If the serial port changes after this command, follow Step 4 below.
 
 
-- **For others**:
+- **For macOS**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
 ```
 
+- **For Linux**:
+
+If you entered DFU mode manually in Step 2, run this command without `--touch 1200`. Replace `/dev/ttyACM0` with your current DFU port:
+
+```bash
+adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/ttyACM0 -b 115200 --singlebank
+```
+
+If the device is still running application firmware and has a serial port, you can append `--touch 1200` to request DFU mode. If it does not respond, double-press `RST`, identify the DFU port again, and use the command without `--touch 1200`.
+
+**Step4: Handle a serial port change**
+
+`--touch 1200` requests DFU mode by opening and closing the serial port at 1200 baud. The operating system may then assign a different port. If the output shows `Touched serial port` followed by a port-not-found error, check whether a new DFU port has appeared. This error alone does not confirm a successful flash or mean the device is damaged.
+
+Keep the USB cable connected. On Linux, run `ls /dev/ttyACM*` again (or `ls /dev/ttyUSB*` if applicable). On Windows, refresh Device Manager; on macOS, check `ls /dev/cu.*`. Retry using the new DFU port and **omit `--touch 1200`**. For example, if the new Linux port is `/dev/ttyACM1`:
+
+```bash
+adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/ttyACM1 -b 115200 --singlebank
+```
+
+Use your actual port name. If the port cannot be opened, check its permissions as described in Step 2 and make sure no other application is using it. If no DFU port appears, double-press `RST` and check again before retrying.
+
+**Step5: Confirm the result and reinstall the application firmware**
+
+Wait for the transfer to finish and the tool to print:
+
+```text
+Device programmed.
+```
+
+This message confirms that the bootloader transfer completed successfully. Keep the cable connected during the transfer. A port change or the appearance of a USB drive alone is not confirmation of a successful flash.
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-When you have completed the above steps, follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-firmware) to flash the application firmware.
+Flashing the bootloader does not reinstall the Meshtastic application firmware. After the successful transfer, follow [Flash Firmware](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-firmware) to install it before using the device.
 
 ### Unable to Communicate on the Primary Channel
 
