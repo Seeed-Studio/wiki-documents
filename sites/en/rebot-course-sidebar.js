@@ -66,6 +66,51 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'Stage 3: Imitation Learning and LeRobot',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_09',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_10',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_11',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_12',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_13',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_14',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_15',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_16',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_17',
+        },
+      ],
+    },
   ],
 
 };

@@ -108,3 +108,100 @@ Rename each local file below to the **New name** and upload it under the corresp
 | `test 18.jpg` | `ch7-11.jpg` | 7.4 RS web control — motor params / enable |
 
 > Chapter 8 has no images.
+
+---
+
+# Stage 3: Imitation Learning and LeRobot
+
+> ⚠️ **Note:** several original filenames (e.g. `image 3.png`, `image 5.png`, `image.png`) are **reused across different stages** in the source document — the same name can appear in Stage 1/2 and Stage 3. When uploading, match each image by its **section/context** (the "Where used" column), not by filename alone — you may need to duplicate a source file under two different new names.
+
+## Chapter 9 → `chapter-9/`
+
+| Original local filename | New name (under `chapter-9/`) | Where used |
+| :--- | :--- | :--- |
+| `image 19.png` | `ch9-01.png` | 9.1 dilemma of traditional programmatic control |
+| `image 27.png` | `ch9-02.png` | 9.2 rule-based vs. learning-based control |
+| `image 4.png` | `ch9-03.png` | 9.3 imitation learning |
+| `image 33.png` | `ch9-04.png` | 9.3 behavioral cloning |
+| `image 5.png` | `ch9-05.png` | 9.4 observation, state, and action |
+| `image 28.png` | `ch9-06.png` | 9.5 single-step action vs. action chunk |
+| `image.png` | `ch9-07.png` | 9.6 data distribution |
+| `image 25.png` | `ch9-08.png` | 9.7 training, inference, and evaluation |
+| `image 22.png` | `ch9-09.png` | 9.8 advantages and limitations of imitation learning |
+
+## Chapter 10 → `chapter-10/`
+
+| Original local filename | New name (under `chapter-10/`) | Where used |
+| :--- | :--- | :--- |
+| `image 7.png` | `ch10-01.png` | 10.1 why we need LeRobot (reinventing the wheel) |
+| `image 2.png` | `ch10-02.png` | 10.2 leader arm and follower arm |
+| `image 29.png` | `ch10-03.png` | 10.3 plugin architecture |
+| `image 20.png` | `ch10-04.png` | 10.4 data flow overview |
+
+## Chapter 11 → `chapter-11/`
+
+| Original local filename | New name (under `chapter-11/`) | Where used |
+| :--- | :--- | :--- |
+| `image 3.png` | `ch11-01.png` | 11.3 follower zero position |
+| `image 9.png` | `ch11-02.png` | 11.4 leader arm serial port (brltty) |
+| `image 23.png` | `ch11-03.png` | 11.5 joint mapping |
+| `image 6.png` | `ch11-04.png` | 11.6 teleoperation safety guidelines |
+| `image 24.png` | `ch11-05.png` | 11.8 latency sources |
+
+## Chapter 12 → `chapter-12/`
+
+| Original local filename | New name (under `chapter-12/`) | Where used |
+| :--- | :--- | :--- |
+| `image 10.png` | `ch12-01.png` | 12.3 timestamps and data synchronization |
+| `image 21.png` | `ch12-02.png` | 12.10 scene design (test tube rack) |
+| `image 30.png` | `ch12-03.png` | 12.10 test tube placement points |
+| `DJI_20260915100725_0311_D.JPG` | `ch12-04.jpg` | 12.10 initial position |
+| `DJI_20260915100751_0312_D.JPG` | `ch12-05.jpg` | 12.10 move above the test tube |
+| `DJI_20260915100802_0313_D.JPG` | `ch12-06.jpg` | 12.10 open the gripper |
+| `DJI_20260915100817_0315_D.JPG` | `ch12-07.jpg` | 12.10 grasp the object |
+| `DJI_20260915100839_0316_D.JPG` | `ch12-08.jpg` | 12.10 move above the rack |
+| `DJI_20260915100846_0317_D.JPG` | `ch12-09.jpg` | 12.10 place the object |
+| `DJI_20260915100856_0318_D.JPG` | `ch12-10.jpg` | 12.10 return to home |
+
+## Chapter 13 → `chapter-13/`
+
+| Original local filename | New name (under `chapter-13/`) | Where used |
+| :--- | :--- | :--- |
+| `image 35.png` | `ch13-01.png` | 13.2 overhead and wrist cameras |
+| `截图 2026-09-15 11-26-54.png` | `ch13-02.png` | 13.4 camera feed from inside the collection box |
+| `image 11.png` | `ch13-03.png` | 13.5 create LeRobot dataset |
+
+## Chapter 14 → `chapter-14/`
+
+| Original local filename | New name (under `chapter-14/`) | Where used |
+| :--- | :--- | :--- |
+| `image 31.png` | `ch14-01.png` | 14.2 four quality standards |
+
+## Chapter 15 → `chapter-15/`
+
+| Original local filename | New name (under `chapter-15/`) | Where used |
+| :--- | :--- | :--- |
+| `image 34.png` | `ch15-01.png` | 15.1 ACT |
+| `image 15.png` | `ch15-02.png` | 15.2 ACT input and output |
+| `image 37.png` | `ch15-03.png` | 15.3 ACT internal structure |
+| `image 12.png` | `ch15-04.png` | 15.4 what is a Transformer |
+| `image 1.png` | `ch15-05.png` | 15.5 attention in ACT |
+| `image 8.png` | `ch15-06.png` | 15.7 action chunk vs. action horizon |
+| `image 13.png` | `ch15-07.png` | 15.8 ACT's two lines of defense |
+| `image 36.png` | `ch15-08.png` | 15.10 ACT's capability boundaries |
+
+## Chapter 16 → `chapter-16/`
+
+| Original local filename | New name (under `chapter-16/`) | Where used |
+| :--- | :--- | :--- |
+| `image 16.png` | `ch16-01.png` | 16.1 training steps |
+| `image 14.png` | `ch16-02.png` | 16.4 loss curve |
+| `image 17.png` | `ch16-03.png` | 16.4 GPU utilization |
+
+## Chapter 17 → `chapter-17/`
+
+| Original local filename | New name (under `chapter-17/`) | Where used |
+| :--- | :--- | :--- |
+| `image 32.png` | `ch17-01.png` | 17.1 inference data flow |
+| `image 18.png` | `ch17-02.png` | 17.2 preprocessing and de-normalization |
+| `image 26.png` | `ch17-03.png` | 17.9 data iteration |

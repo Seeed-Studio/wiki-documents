@@ -174,7 +174,84 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
   </a>
 </div>
 
-### Stage 3–8
+### Stage 3: Imitation Learning and LeRobot
+
+<div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_9">
+    <span className="course-index">9</span>
+    <div className="course-path-copy">
+      <strong>Foundations of Robot Learning and Imitation Learning</strong>
+      <span>Chapter 9</span>
+    </div>
+    <span className="course-tag">Theory &amp; Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_10">
+    <span className="course-index">10</span>
+    <div className="course-path-copy">
+      <strong>LeRobot and reBot Arm System Architecture</strong>
+      <span>Chapter 10</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_11">
+    <span className="course-index">11</span>
+    <div className="course-path-copy">
+      <strong>Leader and Follower Calibration and Teleoperation</strong>
+      <span>Chapter 11</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_12">
+    <span className="course-index">12</span>
+    <div className="course-path-copy">
+      <strong>Robot Datasets and Task Design</strong>
+      <span>Chapter 12</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_13">
+    <span className="course-index">13</span>
+    <div className="course-path-copy">
+      <strong>Camera Configuration and LeRobot Data Collection</strong>
+      <span>Chapter 13</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_14">
+    <span className="course-index">14</span>
+    <div className="course-path-copy">
+      <strong>Dataset Structure and Quality Inspection</strong>
+      <span>Chapter 14</span>
+    </div>
+    <span className="course-tag">Theory &amp; Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_15">
+    <span className="course-index">15</span>
+    <div className="course-path-copy">
+      <strong>ACT Model and Action Chunking</strong>
+      <span>Chapter 15</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_16">
+    <span className="course-index">16</span>
+    <div className="course-path-copy">
+      <strong>Training Your First ACT Policy</strong>
+      <span>Chapter 16</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_17">
+    <span className="course-index">17</span>
+    <div className="course-path-copy">
+      <strong>Real-Robot Inference, Evaluation, and Data Iteration</strong>
+      <span>Chapter 17</span>
+    </div>
+    <span className="course-tag">Theory &amp; Practice</span>
+  </a>
+</div>
+
+### Stage 4–8
 
 :::note
 Coming soon — the remaining stages will be added to the wiki progressively.
