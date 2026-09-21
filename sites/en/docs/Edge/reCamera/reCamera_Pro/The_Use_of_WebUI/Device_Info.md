@@ -4,7 +4,8 @@ title: Device Info
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_device_info
+slug: /recamera_pro_device_info_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -12,8 +13,19 @@ last_update:
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/recamera_pro_device_info/
+url: https://wiki.seeedstudio.com/recamera_pro_device_info_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Deploy/network_time_access.md (https://wiki.seeedstudio.com/recamera_pro_device_info/), which now serves the original slug /recamera_pro_device_info. This file is kept for history as a draft (slug /recamera_pro_device_info_legacy) and is excluded from production builds. Do not link here. -->
+
+## Content Migration Index (Legacy Page)
+
+| Original section | New home |
+| --- | --- |
+| Basic Information, Time Settings, Network Settings | [Network, Time and Access](https://wiki.seeedstudio.com/recamera_pro_device_info/) (this slug) |
+| Network Settings (Wi-Fi details) | [Wi-Fi and Web UI Access](https://wiki.seeedstudio.com/recamera_pro_wifi_access/) |
+| Connection Settings (SSH/HTTP/baud) | [Terminal, SSH and Debug UART](https://wiki.seeedstudio.com/recamera_pro_terminal/) |
+| System Settings (firmware update, restart, reset) | [Firmware Update and Recovery](https://wiki.seeedstudio.com/recamera_pro_firmware_update/) |
+| Export/Import Configuration | [Backup and Restore](https://wiki.seeedstudio.com/recamera_pro_backup_restore/) |
 
 In this interface, you can view the various hardware and software version information of recamera pro, as well as adjust the corresponding system settings.
 ## Basic Information

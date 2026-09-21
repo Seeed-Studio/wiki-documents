@@ -12,15 +12,17 @@ keywords:
   - ALSA
   - aplay
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO-IMU-Detect.gif
-slug: /recamera_pro_imu_tilt_shake_detection
+slug: /recamera_pro_imu_tilt_shake_detection_legacy
+draft: true
 sidebar_position: 1
 last_update:
   date: 2026-06-11
   author: Sizhao zhou
 createdAt: '2026-06-11'
 updatedAt: '2026-07-23'
-url: https://wiki.seeedstudio.com/recamera_pro_imu_tilt_shake_detection/
+url: https://wiki.seeedstudio.com/recamera_pro_imu_tilt_shake_detection_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/tilt_shake_detection.md (https://wiki.seeedstudio.com/recamera_pro_imu_tilt_shake_detection/), which now serves the original slug /recamera_pro_imu_tilt_shake_detection. This file is kept for history as a draft (slug /recamera_pro_imu_tilt_shake_detection_legacy) and is excluded from production builds. Do not link here. -->
 
 # Using reCamera Pro's Onboard IMU for Tilt and Shake Detection
 
