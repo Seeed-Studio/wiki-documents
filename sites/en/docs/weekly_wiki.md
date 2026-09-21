@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/14/2026
+  date: 09/21/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-09-14'
+updatedAt: '2026-09-21'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,61 +18,71 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 14th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 21st, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### XIAO IPS Displays with nRF52840
+### [Control reBot Arm using voice with reSpeaker Clip](https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_clip/)
 
-The XIAO IPS Display series powered by the XIAO nRF52840 Plus comes in multiple screen sizes, each combining a compact display with onboard sensing, interaction, and battery management features for different application needs.
-
-**[XIAO 0.96'' IPS Display (nRF52840)](https://wiki.seeedstudio.com/getting_started_0.96_inch_display_nrf52840/)**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW096_nRF52840Plus_display_hardware_hero.jpg" alt="XIAO 0.96 inch IPS Display" width={800} height="auto" /></p>
-
-The 0.96'' model features an **80×160 IPS display**, onboard PDM microphone, 6-axis IMU (LSM6DS3), two user buttons, and battery power management with percentage display, making it well suited for ultra-compact wearables, keychain gadgets, and portable sensor nodes.
-
-**[XIAO 1.14'' IPS Display (nRF52840)](https://wiki.seeedstudio.com/getting_started_1.14_inch_display_nrf52840/)**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW114_nRF52840Plus_display_hardware_hero.jpg" alt="XIAO 1.14 inch IPS Display" width={800} height="auto" /></p>
-
-The 1.14'' model features a **135×240 IPS display**, onboard PDM microphone, 6-axis IMU, Grove I2C connector, three user buttons, and battery power management, making it suitable for wearable devices, portable instruments, and IoT prototypes.
-
-**[XIAO 1.47'' IPS Touch Display (nRF52840)](https://wiki.seeedstudio.com/getting_started_1.47_inch_touch_display_nrf52840/)**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/NEW147_nRF52840Plus_display_hardware_hero.jpg" alt="XIAO 1.47 inch IPS Touch Display" width={800} height="auto" /></p>
-
-The 1.47'' model features a **172×320 capacitive touch display**, onboard PDM microphone, 6-axis IMU (LSM6DS3), MicroSD card slot, and battery power management, making it suitable for portable HMI applications, IoT dashboards, and interactive prototypes.
-
-### XIAO IPS Displays with ESP32-S3
-
-The XIAO IPS Display series powered by the XIAO ESP32-S3 Plus comes in multiple screen sizes, combining compact color displays with onboard sensing, interaction, battery monitoring, and Wi-Fi and Bluetooth connectivity for a wide range of connected applications.
-
-**[XIAO 0.96'' IPS Display (ESP32-S3)](https://wiki.seeedstudio.com/getting_started_0.96_inch_display_esp32s3/)**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/096_ESP32S3Plus_display_hardware_hero.jpg" alt="XIAO 0.96 inch IPS Display ESP32-S3" width={800} height="auto" /></p>
-
-The 0.96'' model features an **80×160 IPS display**, onboard PDM microphone, 6-axis IMU, two user buttons, I2C and I2S expansion pads, and battery voltage sensing, making it well suited for compact wearables, portable sensor dashboards, keychain gadgets, and wireless IoT prototypes.
-
-**[XIAO 1.14'' IPS Display (ESP32-S3)](https://wiki.seeedstudio.com/getting_started_1.14_inch_display_esp32s3/)**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/114_ESP32S3Plus_display_hardware_hero.jpg" alt="XIAO 1.14 inch IPS Display ESP32-S3" width={800} height="auto" /></p>
-
-The 1.14'' model features a **135×240 IPS display**, onboard PDM microphone, 6-axis IMU, Grove I2C connector, three user buttons, and battery voltage measurement, making it suitable for wearable devices, sensor dashboards, portable instruments, and connected IoT projects.
-
-**[XIAO 1.47'' IPS Display (ESP32-S3)](https://wiki.seeedstudio.com/getting_started_1.47_inch_touch_display_esp32s3/)**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_hero.jpg" alt="XIAO 1.47 inch IPS Display ESP32-S3" width={800} height="auto" /></p>
-
-The 1.47'' model features a **172×320 color display with capacitive touch**, onboard PDM microphone, 6-axis IMU, MicroSD card slot, and battery voltage measurement, making it suitable for portable HMI applications, IoT dashboards, wearable devices, and interactive prototypes.
-
-### [SenseCAP S1000 V2 CO₂ Calibration](https://wiki.seeedstudio.com/sensecap_s1000_v2_co2_calibration/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_S1000_V2_CO2_Calibration.jpg" alt="pir" width={800} height="auto" /></p>
+<div class="video-container">
+  <iframe width="800" height="400" src="https://www.youtube.com/embed/OdBwXYKzoio" title="ReSpeaker Lite with XIAO ESP32S3 Home Assistant" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to calibrate the CO₂ sensor on the SenseCAP S1000 V2, covering both ABC automatic baseline correction and target one-point calibration for different deployment environments.
+This wiki explains how to control the reBot Arm B601-DM using natural voice commands with reSpeaker Clip. It covers real-time audio streaming, voice activity detection, speech-to-text, and LLM-based intent recognition. You will also learn how to set up the project and run voice-controlled actions on either a simulated or real robotic arm.
+
+</div>
+
+### [reComputer Rugged J401 for Industrial Vision](http://localhost:3000/ai_robotics_recomputer_rugged_j401_cv_demo)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki introduces several ways computer vision can be used on industrial forklifts. The example uses reComputer Rugged J401 as the edge controller. Its IP66 enclosure, M12 connectors, vibration resistance, four PoE ports, and Jetson Orin NX allow it to sit close to the cameras and run the vision workloads locally.
+
+</div>
+
+### [Deploy TensorRT-Model-Connect on Jetson AGX Orin](https://wiki.seeedstudio.com/ai_robotics_deploy_tensorrt_model_connect_on_jetson/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/TRTMC/trtmc_wiki_cover.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki shows how to run [NVIDIA TensorRT-Model-Connect](https://github.com/NVIDIA/TensorRT-Model-Connect) (TRTMC) on a Seeed reComputer powered by **Jetson AGX Orin**. After the native runtime is built, the path is short: start from a Hugging Face checkpoint, produce a TensorRT `.bundle` on the device, and run text generation. There is no separate x86 host and no ONNX export step.
+
+</div>
+
+### [Deploy ONVIF on reCamera](https://wiki.seeedstudio.com/recamera_onvif/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/guides/image-13.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki explains how to deploy ONVIF on reCamera for local network discovery and video streaming. It covers deploying the ONVIF service with SenseCraft Solution and verifying the RTSP video stream. You will also learn how to connect reCamera to ONVIF-compatible clients such as Home Assistant, Frigate, NVRs, and VMS platforms.
+
+</div>
+
+### [AI Image Transmission over MeshCore with MeshTracker X1](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_x1/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png" alt="MeshCore Open Image Transmission" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki explains how to transmit images over a MeshCore network using MeshTracker X1 and MeshCore Open. It uses AI-based ultra-low bitrate image compression to reduce images to compact data that can be transmitted over low-bandwidth LoRa mesh networks and reconstructed on the receiving device. This makes visual information sharing possible for outdoor exploration, emergency response, remote monitoring, and other off-grid scenarios.
+
+The same Image Transmission feature is also available for [SenseCAP Card Tracker T1000-E](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_t1000e/), [Wio Tracker L1](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_l1/), and [Wio Tracker L2](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_l2/).
+
+</div>
+
+### [EasySkyMesh IoT Firmware for Wio Tracker L1](https://wiki.seeedstudio.com/easyskymesh_wio_tracker_l1/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_MeshCore_Device_Low_Power_Consumption_L1_Pro.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki explains how to install and use EasySkyMesh IoT firmware on the Wio Tracker L1. It covers firmware flashing, power-saving features, and configuration for different MeshCore roles. You will also learn how to connect supported I2C sensors for low-power monitoring and IoT applications.
 
 </div>
 
@@ -230,5 +240,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.8.24th](/Seeed_Elderly/weekly_wiki/2026/wiki260824)
 - [weekly wiki on 2026.8.31st](/Seeed_Elderly/weekly_wiki/2026/wiki260831)
 - [weekly wiki on 2026.9.07th](/Seeed_Elderly/weekly_wiki/2026/wiki260907)
+- [weekly wiki on 2026.9.14th](/Seeed_Elderly/weekly_wiki/2026/wiki260914)
 
 </details>

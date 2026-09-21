@@ -29,7 +29,7 @@ uv run --no-sync list-envs | grep MicroDuck
 ```
 
 | Motion | Task ID |
-|---|---|
+| --- | --- |
 | Walking | `Mjlab-Velocity-Flat-MicroDuck` |
 | Walking and fall recovery | `Mjlab-VelStand-Flat-MicroDuck` |
 | Stand up from the floor | `Mjlab-StandUp-Flat-MicroDuck` |
@@ -120,7 +120,7 @@ uv run --no-sync python3 scripts/infer_policy.py \
 ### Keyboard Controls
 
 | Key | Command |
-|---|---|
+| --- | --- |
 | Arrow keys | Forward, backward, and lateral velocity |
 | `A` / `E` | Turn left / right |
 | `G` | Ground-pick behavior |

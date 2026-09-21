@@ -1,6 +1,6 @@
 ---
-description: Este tutorial mostra como baixar o Isaac Sim e implantar o robô reBot-B601-DM em um ambiente de simulação para desenvolvimento e depuração.
-title: Simulando o reBot-B601-DM com Isaac Sim
+description: Este tutorial mostra como baixar o Isaac Sim e implantar o robô reBot Arm B601-DM em um ambiente de simulação para desenvolvimento e depuração.
+title: reBot Arm B601-DM Isaac Sim
 keywords:
   - Isaacsim
   - braço robótico
@@ -16,9 +16,10 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-77'
-updatedAt: '2026-08-19'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_isaacsim/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
@@ -29,14 +30,20 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Adquira agora</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 ## Introdução
 
-Este é um projeto de simulação para o robô reBot-B601-DM construído com o NVIDIA Isaac Sim. Ele utiliza o mecanismo de física de alta fidelidade do Isaac Sim para reproduzir com precisão o comportamento cinemático do robô e a coordenação da garra em um ambiente virtual, fornecendo uma plataforma limpa, apenas de simulação, para desenvolvimento de algoritmos de controle, validação de planejamento de trajetória e teste de protocolos de comunicação.
+Este é um projeto de simulação para o robô reBot-B601-DM construído com o NVIDIA Isaac Sim. Ele usa o mecanismo de física de alta fidelidade do Isaac Sim para reproduzir com precisão o comportamento cinemático do robô e a coordenação da garra em um ambiente virtual, fornecendo uma plataforma limpa apenas de simulação para desenvolvimento de algoritmos de controle, validação de planejamento de trajetória e teste de protocolos de comunicação.
 
 <div align="center">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png" alt="reBot Arm B601-DM Isaac Sim" />
@@ -44,7 +51,7 @@ Este é um projeto de simulação para o robô reBot-B601-DM construído com o N
 
 ## Requisitos de sistema
 - Sistema operacional: Ubuntu 22.04 LTS / 24.04 LTS (recomendado) ou Windows 11 (requer WSL2)
-- GPU: placa de vídeo NVIDIA série RTX (recomendado RTX 3070 ou mais recente), VRAM ≥ 8GB
+- GPU: placa de vídeo da série NVIDIA RTX (recomendado RTX 3070 ou mais recente), VRAM ≥ 8GB
 - Driver: driver oficial NVIDIA ≥ 535.x, com suporte a CUDA 12.x
 - Memória: ≥ 32GB de RAM (o carregamento de cenas do Isaac Sim e a simulação física consomem muita memória)
 - Armazenamento: ≥ 100GB de espaço livre em SSD (para instalação do Isaac Sim, cache e assets USD)
@@ -63,7 +70,7 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaa
 
 ### Baixar o pacote Standalone do Isaac Sim
 
-> 💡 Adequado para a maioria dos usuários; não requer compilação e funciona imediatamente.
+> 💡 Adequado para a maioria dos usuários; não requer compilação e funciona imediatamente após a instalação.
 
 #### Download e extração
 
@@ -150,7 +157,7 @@ reBot-Isaacsim/
 
 ## Inicialização (modo de dois terminais)
 
-São necessários dois terminais separados. **O Terminal 1 é o receptor do Isaac Sim**, e **o Terminal 2 executa o sender com base no modo selecionado**.
+São necessários dois terminais separados. **O Terminal 1 é o receptor do Isaac Sim**, e **o Terminal 2 executa o remetente com base no modo selecionado**.
 
 ### Terminal 1 — Iniciar o receptor do Isaac Sim (usado por todos os modos)
 Execute o script do receptor com o Python do Isaac Sim.
@@ -171,14 +178,14 @@ ${ISAACSIM_PYTHON_EXE}  gravity_joint_sender.py
 ```
 
 **Saída esperada:**
-- Iniciar a interface gráfica (GUI) do Isaac Sim
+- Iniciar a interface gráfica do Isaac Sim
 - Carregar o chão e os assets USD do robô
 - Escutar em UDP `DEFAULT_SIM_HOST:5005`
-- Aguardar a conexão do sender
+- Aguardar a conexão do remetente
 
-### Terminal 2 — Iniciar o sender apropriado para o modo selecionado
+### Terminal 2 — Iniciar o remetente apropriado para o modo selecionado
 
-**Ordem de inicialização: primeiro o receptor, depois o sender.**
+**Ordem de inicialização: primeiro o receptor, depois o remetente.**
 
 :::tip
 
@@ -207,7 +214,7 @@ cd reBotArm_Isaacsim
 uv run python isaacsim_joint_test_sender.py
 ```
 
-O sender interpola lentamente entre várias poses de junta predefinidas e as envia em loop sem exigir uma conexão CAN.
+O remetente interpola lentamente entre várias poses de junta predefinidas e as envia em loop sem exigir uma conexão CAN.
 
 #### ② Modo de cinemática inversa (`isaacsim_ik_sender`)
 
@@ -255,13 +262,13 @@ cd reBotArm_Isaacsim
 ```
 
 **Comportamento esperado:**
-- Conectar ao robô real e habilitar MIT + compensação de alimentação de gravidade (gravity feedforward)
+- Conectar ao robô real e habilitar MIT + compensação de alimentação antecipada de gravidade
 - O robô pode ser movido livremente à mão
 - Os ângulos das juntas são enviados continuamente via UDP a 60 Hz
 
 #### ⑤ Modo de mapeamento Real-para-Sim (`joint_reader_sender`)
 
-Lê apenas os ângulos das juntas e os mapeia para o Isaac Sim. Isso é adequado quando o robô real está executando outras tarefas e você deseja visualizar o mesmo movimento no Isaac Sim. Execute diretamente com `uv run` no diretório `reBotArm_Isaacsim/`:
+Lê apenas os ângulos das juntas e os mapeia para o Isaac Sim. Este modo é adequado quando o robô real está executando outras tarefas e você deseja visualizar o mesmo movimento no Isaac Sim. Execute diretamente com `uv run` no diretório `reBotArm_Isaacsim/`:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -273,11 +280,11 @@ uv run python joint_reader_sender.py
 - Os ângulos das juntas são enviados continuamente via UDP a 60 Hz
 - Quando o robô real é controlado por outro projeto, o movimento pode ser visualizado no Isaac Sim ao mesmo tempo
 
-## Protocolo de comunicação
+## Protocolo de Comunicação
 
-UDP JSON na porta `DEFAULT_SIM_HOST:5005`.
+UDP JSON pela porta `DEFAULT_SIM_HOST:5005`.
 
-**Payload enviado pelo sender por frame:**
+**Payload enviado pelo remetente por frame:**
 
 ```json
 {
@@ -346,9 +353,9 @@ kill <PID>
 | Remetente (modo de teste) | Ambiente uv `reBotArm_control_py` | `isaacsim_joint_test_sender.py` |
 | Receptor | Python oficial do Isaac Sim (`python.sh`) | `isaacsim_joint_receiver.py` |
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Fornecemos vários canais de suporte para ajudar a garantir uma experiência tranquila com nossos produtos. Oferecemos diversos métodos de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Fornecemos múltiplos canais de suporte para ajudar a garantir uma experiência tranquila com nossos produtos. Oferecemos vários métodos de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
@@ -359,4 +366,3 @@ Obrigado por escolher nossos produtos! Fornecemos vários canais de suporte para
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

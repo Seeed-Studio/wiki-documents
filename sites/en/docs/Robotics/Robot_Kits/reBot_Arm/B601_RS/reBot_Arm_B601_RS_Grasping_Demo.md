@@ -20,6 +20,7 @@ createdAt: '2026-06-15'
 updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
@@ -32,10 +33,16 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -95,7 +102,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
     </tr>
     <tr>
       <td>Camera Model</td>
-      <td>Orbbec Gemini 2 / Intel RealSense D435i / D405</td>
+      <td>Orbbec Gemini 2 / RealSense D435i / D405</td>
     </tr>
     <tr>
       <td>Detection Method</td>
@@ -271,7 +278,7 @@ If your system needs the full RealSense toolchain or udev rules, install `librea
 | pyorbbecsdk | https://github.com/orbbec/pyorbbecsdk |
 | pyorbbecsdk Documentation | https://orbbec.github.io/pyorbbecsdk/index.html |
 | ROS2 Wrapper | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
-| Intel RealSense SDK | https://github.com/realsenseai/librealsense |
+| RealSense SDK | https://github.com/realsenseai/librealsense |
 
 #### Step 5. Configure GraspNet (optional)
 
@@ -657,7 +664,7 @@ If the output is `False`, fix the CUDA / PyTorch installation first. If it is `T
 
 This solution uses **ROS2** and **YOLO** on the reBot Arm B601-RS for object detection, grasping, and placing. The system starts the arm, depth camera, and grasp nodes in separate terminals.
 
-The depth camera currently supports **Orbbec Gemini 2** and **Intel RealSense D405**. This workflow does not require a calibration board for hand-eye calibration. Because of mounting and printed-part tolerances, each arm may show a small grasping offset.
+The depth camera currently supports **Orbbec Gemini 2** and **RealSense D405**. This workflow does not require a calibration board for hand-eye calibration. Because of mounting and printed-part tolerances, each arm may show a small grasping offset.
 
 ### 2. Environment Setup
 
@@ -990,6 +997,6 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [pyorbbecsdk Documentation](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
 - [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
-- [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
+- [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) Docs](https://graspnet.net/)

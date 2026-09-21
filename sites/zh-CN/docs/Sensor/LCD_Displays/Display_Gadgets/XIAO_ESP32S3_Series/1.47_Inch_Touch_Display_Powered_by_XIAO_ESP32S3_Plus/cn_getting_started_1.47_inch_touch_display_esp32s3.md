@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_esp
 <div class="table-center">
   <table align="center">
     <tr><th>XIAO 1.47'' IPS Display (ESP32-S3)</th></tr>
-    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_hero.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
+    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_heroNEW.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
     <tr><td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/1-47-Inch-Touch-Display-Powered-by-XIAO-ESP32-S3-Plus-p-6996.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
@@ -38,7 +38,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_esp
 
 1.47'' IPS Display 是一款为 XIAO 系列设计的扩展板，由 XIAO ESP32-S3 Plus 提供算力。它配备 172×320 彩色 LCD 电容触摸屏、板载 PDM 麦克风、6 轴 IMU（LSM6DS3）、MicroSD 卡槽以及电池电压测量功能——所有这些都集成在一个紧凑的外形中。
 
-这种组合使其成为便携式 HMI 应用、IoT 仪表盘、可穿戴设备和交互式原型开发的理想平台。借助 ESP32-S3 的双核处理器、Wi-Fi 和 Bluetooth 能力，它可以将仪表盘扩展为一个无线连接的中枢。
+这种组合使其成为便携式 HMI 应用、IoT 仪表盘、可穿戴设备和交互式原型开发的理想平台。借助 ESP32-S3 的双核处理器、Wi-Fi 和 Bluetooth 能力，它可以将仪表盘扩展为一个无线连接的枢纽。
 
 <div class="table-center">
   <table align="center">
@@ -58,23 +58,23 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_esp
     <tr><td>MicroSD 卡槽</td><td>有</td></tr>
     <tr><td>Grove I2C 接口</td><td>无</td></tr>
     <tr><td>用户按键</td><td>2</td></tr>
-    <tr><td>电池接口</td><td>2 针 JST，3.7 V 锂电池</td></tr>
+    <tr><td>电池连接器</td><td>2 针 JST，3.7 V 锂电池</td></tr>
     <tr><td>电池监测</td><td>通过 D16 ADC 进行电池电压监测；可根据测得电压估算电池电量。不支持电池状态检测。</td></tr>
-    <tr><td>扩展接口</td><td>1x I2C 焊盘、1x I2S 焊盘、1x SWD 焊盘、2x 用户按键焊盘</td></tr>
+    <tr><td>扩展接口</td><td>1x I2C 接口，1x I2S 接口，1x JTAG 接口，2x 用户按键接口</td></tr>
     <tr><td>板卡尺寸</td><td>26.4 × 51.4 × 12.6 mm</td></tr>
     <tr><td>最佳应用</td><td>触控 UI、便携式 HMI、本地多媒体与数据记录</td></tr>
   </table>
 </div>
 
 :::note
-ESP32-S3 Plus 使用 D16 进行电压测量。电压示例程序不会显示电池百分比，也没有将充电状态信号连接到任何 ESP32-S3 GPIO。
+ESP32-S3 Plus 使用 D16 进行电压测量。电压示例不会显示电池百分比，也没有将充电状态信号连接到任何 ESP32-S3 GPIO。
 :::
 
 ## 硬件概览
 
 在开始之前，请参考下图来了解 1.47'' IPS Display 的物理布局。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### 引脚分布图
 
@@ -109,7 +109,7 @@ ESP32-S3 Plus 使用 D16 进行电压测量。电压示例程序不会显示电�
 
 ## 入门
 
-本指南会向显示板上传一个最小的 **"Hello, XIAO"** 示例：屏幕点亮背光、填充为黑色背景，并以两行居中的大号绿色文字打印 **"Hello,"** 和 **"XIAO"**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
+本指南会向显示板上传一个最小的 **“Hello, XIAO”** 示例：屏幕点亮背光、填充为黑色背景，并以两行居中的大号绿色文字打印 **“Hello,”** 和 **“XIAO”**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
 
 ### 软件准备
 
@@ -140,13 +140,13 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 **步骤 1.** 点击上方按钮，将 `Seeed_GFX2` v1.0.0 作为 ZIP 文件下载（固定到某个发布标签，以保证教程可复现）。或者，从 [Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) 克隆仓库。
 
-**步骤 2.** 在 Arduino IDE 中，依次点击 **Sketch > Include Library > Add .ZIP Library...**，然后选择下载的 ZIP 文件。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，将解压后的文件夹重命名为 `Seeed_GFX2`，再放入 `Documents/Arduino/libraries/`。）
+**步骤 2.** 在 Arduino IDE 中，依次点击 **Sketch > Include Library > Add .ZIP Library...**，然后选择下载的 ZIP 文件。IDE 会读取 `library.properties` 并自动将其安装到正确的 `Seeed_GFX2` 文件夹中——你无需重命名解压后的文件夹。（如果要改为手动安装，请先解压压缩包，将解压后的文件夹重命名为 `Seeed_GFX2`，再放入 `Documents/Arduino/libraries/` 中。）
 
-**步骤 3.** 重启 Arduino IDE，使其检测到新安装的库。
+**步骤 3.** 重启 Arduino IDE，使新库被检测到。
 
 :::tip
-- **Seeed_GFX2** 是 Seeed Studio 基于分层 `Board` + `Panel Config` 架构构建的图形库。每个示例都通过一次 `display.begin<Board_..., Config_...>()` 调用来初始化显示屏——**Board** 模板负责引脚映射（CS/DC/SCK/MOSI/RST/BL），而 **Panel Config** 预设了 172×320 分辨率、颜色顺序（BGR）和方向。无需 `driver.h` 或手动引脚配置。
-- 在这块板子上，示例程序使用 `Board_XIAO_1inch47_Touch_Display<13, 12>`（RST=13，BL=12）和 `Config_Seeed_1inch47_Touch_JD9853A`。
+- **Seeed_GFX2** 是 Seeed Studio 基于分层 `Board` + `Panel Config` 架构构建的图形库。每个示例只需一次 `display.begin<Board_..., Config_...>()` 调用即可初始化显示屏——**Board** 模板负责引脚映射（CS/DC/SCK/MOSI/RST/BL），而 **Panel Config** 预设了 172×320 分辨率、颜色顺序（BGR）和方向。无需 `driver.h` 或手动引脚配置。
+- 在这块板子上，示例程序使用 `Board_XIAO_1inch47_Touch_Display<13, 12>`（RST=13，BL=12）以及 `Config_Seeed_1inch47_Touch_JD9853A`。
 :::
 
 ### 下载代码
@@ -160,7 +160,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
     </a>
 </div><br />
 
-进入 `code_GFX2/getting_started_code/xiao_esp32s3_147_hello/` 并在 Arduino IDE 中打开 `xiao_esp32s3_147_hello.ino`。**请下载完整文件夹**，而不是从 GitHub 网页视图中复制 `.ino` 源码。
+进入 `code_GFX2/getting_started_code/xiao_esp32s3_147_hello/`，并在 Arduino IDE 中打开 `xiao_esp32s3_147_hello.ino`。**请下载完整文件夹**，而不是从 GitHub 网页视图中复制 `.ino` 源码。
 
 ### 上传示例程序
 
@@ -168,31 +168,31 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 **步骤 2.** 在 Arduino IDE 中选择开发板：**Tools > Board > esp32 > XIAO_ESP32S3_PLUS**。
 
-**步骤 3.** 在 **Tools > Port** 下选择正确的 **Port**。
+**步骤 3.** 在 **Tools > Port** 中选择正确的 **端口（Port）**。
 
-**步骤 4.** 点击 **Upload** 按钮（→）。示例程序将被编译并上传到开发板。
+**步骤 4.** 点击 **Upload** 按钮（→）。示例程序会被编译并上传到开发板。
 
-### 预期输出
+### 预期效果
 
-上传完成后，屏幕会点亮为黑色背景，并显示两行居中的大号绿色文字——第一行是 **"Hello,"**，第二行是 **"XIAO"**。问候语会保持在屏幕上而不会重复重绘。
+上传完成后，屏幕会点亮为黑色背景，并在中央显示两行大的绿色文字——第一行是 **"Hello,"**，第二行是 **"XIAO"**。问候语会保持在屏幕上，不会重复重绘。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hello.gif" style={{width:500, height:'auto'}}/></div>
 
-如果显示屏初始化失败，示例程序会以 **115200** 波特率在串口监视器中打印库的错误信息。打开 **Tools > Serial Monitor** 并将波特率设置为 115200 以查看。
+如果显示屏初始化失败，示例程序会以 **115200** 波特率在串口监视器中打印库的错误信息。打开 **Tools > Serial Monitor**，并将波特率设置为 115200 以查看。
 
 ## 接下来做什么
 
-这块显示板集成了多个板载外设。[Function](/cn/function_1.47_inch_touch_display_esp32s3) 页面为每个外设都提供了独立的演示：
+这块显示板集成了多个板载外设。[Function](/cn/function_1.47_inch_touch_display_esp32s3) 页面为每个外设都提供了独立的演示程序：
 
 <div class="table-center">
   <table align="center">
-    <tr><th>外设</th><th>演示</th></tr>
+    <tr><th>外设</th><th>演示程序</th></tr>
     <tr><td>屏幕</td><td>[GraphicTest](/cn/function_1.47_inch_touch_display_esp32s3#screen-display--graphictest) — 十种图形基本元素及其耗时基准测试</td></tr>
-    <tr><td>触摸</td><td>[Touch Circle](/cn/function_1.47_inch_touch_display_esp32s3#touch--touch-circle) — 点击绘制持久圆圈；点击 CLEAR 将其清除</td></tr>
+    <tr><td>触摸</td><td>[Touch Circle](/cn/function_1.47_inch_touch_display_esp32s3#touch--touch-circle) — 轻触绘制持久圆圈；点击 CLEAR 清除它们</td></tr>
     <tr><td>SD 卡</td><td>[BMP Reader](/cn/function_1.47_inch_touch_display_esp32s3#sd-card--bmp-reader) — 从 MicroSD 卡显示一张 BMP 图片</td></tr>
-    <tr><td>麦克风和扬声器</td><td>[Volume Bar + SD Recorder](/cn/function_1.47_inch_touch_display_esp32s3#microphone--speaker) — 实时 PDM 电平指示和录音到 SD</td></tr>
-    <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/cn/function_1.47_inch_touch_display_esp32s3#imu) — 6 轴运动特效和抬手唤醒</td></tr>
-    <tr><td>按键</td><td>[User Button](/cn/function_1.47_inch_touch_display_esp32s3#user-button) — 读取按键并使用中断进行去抖</td></tr>
+    <tr><td>麦克风和扬声器</td><td>[Volume Bar + SD Recorder](/cn/function_1.47_inch_touch_display_esp32s3#microphone--speaker) — 实时 PDM 电平条和录音到 SD 卡</td></tr>
+    <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/cn/function_1.47_inch_touch_display_esp32s3#imu) — 六轴运动特效和抬手唤醒</td></tr>
+    <tr><td>按键</td><td>[User Button](/cn/function_1.47_inch_touch_display_esp32s3#user-button) — 读取按键并通过中断进行去抖</td></tr>
     <tr><td>电池</td><td>[Battery Voltage Detection](/cn/function_1.47_inch_touch_display_esp32s3#battery-voltage-detection) — 测量分压电压</td></tr>
   </table>
 </div>
@@ -201,7 +201,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 ### 开发板没有出现在 Tools > Board 菜单中
 
-请确保你已经在 Arduino IDE 中添加了 ESP32 开发板包：
+请确认你已经在 Arduino IDE 中添加了 ESP32 开发板包：
 
 1. 进入 **File > Preferences**，并将下面的 URL 粘贴到 **Additional Boards Manager URLs** 中：
    ```
@@ -210,19 +210,20 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 2. 进入 **Tools > Board > Boards Manager**，搜索 **esp32**，并安装 **3.3.11** 版本。
 3. 安装完成后，菜单中应出现 **Tools > Board > esp32 > XIAO_ESP32S3_PLUS**。
 
-如果开发板仍未显示，请重启 Arduino IDE 后重试。
+如果开发板仍未显示，请重启 Arduino IDE 后再试一次。
 
 ## 资源
 
 - **🗃️[PCB 设计文件]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
 - **📄[原理图]** [XIAO 1.47'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
 - **📦[3D 模型]** [XIAO 1.47'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
+- **🖨️[3D 打印外壳]** [XIAO 1.47'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843008-enclosure-for-xiao-147-ips-touch-display-esp32nrf5)
 - **📄[数据手册]** [1.47 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
 - **💾[出厂固件]** [XIAO 1.47'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="table-center">
   <div class="button_tech_support_container">

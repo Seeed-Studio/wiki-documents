@@ -1,6 +1,6 @@
 ---
-description: XIAO 1.47'' IPS Display (ESP32-S3) の入門ガイド。
-title: XIAO 1.47'' IPS Display (ESP32-S3) の入門ガイド
+description: XIAO 1.47'' IPS Display (ESP32-S3) のはじめに。
+title: XIAO 1.47'' IPS Display (ESP32-S3) のはじめに
 keywords:
   - XIAO
   - ESP32-S3
@@ -20,12 +20,12 @@ updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/ja/getting_started_1.47_inch_touch_display_esp32s3/
 ---
 
-# XIAO 1.47'' IPS Display (ESP32-S3) の入門ガイド
+# XIAO 1.47'' IPS Display (ESP32-S3) のはじめに
 
 <div class="table-center">
   <table align="center">
     <tr><th>XIAO 1.47'' IPS Display (ESP32-S3)</th></tr>
-    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_hero.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
+    <tr><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_heroNEW.jpg" style={{width:600, height:'auto'}}/></div></td></tr>
     <tr><td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/1-47-Inch-Touch-Display-Powered-by-XIAO-ESP32-S3-Plus-p-6996.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
@@ -36,7 +36,7 @@ url: https://wiki.seeedstudio.com/ja/getting_started_1.47_inch_touch_display_esp
 
 ## はじめに
 
-1.47'' IPS Display は、XIAO ESP32-S3 Plus を搭載した XIAO シリーズ向けの拡張ボードです。172×320 のカラー LCD（静電容量式タッチ対応）、オンボード PDM マイク、6 軸 IMU（LSM6DS3）、MicroSD カードスロット、バッテリー電圧測定機能を備え、これらすべてがコンパクトなフォームファクタに統合されています。
+1.47'' IPS Display は、XIAO ESP32-S3 Plus を搭載した XIAO シリーズ向けに設計された拡張ボードです。172×320 のカラー LCD（静電容量式タッチ対応）、オンボード PDM マイク、6 軸 IMU（LSM6DS3）、MicroSD カードスロット、バッテリー電圧測定機能を備え、これらすべてがコンパクトなフォームファクタに統合されています。
 
 この組み合わせにより、ポータブル HMI アプリケーション、IoT ダッシュボード、ウェアラブルデバイス、インタラクティブなプロトタイピングに最適なプラットフォームとなります。ESP32-S3 のデュアルコアプロセッサ、Wi-Fi、Bluetooth 機能により、ダッシュボードをワイヤレス接続されたハブへと拡張できます。
 
@@ -59,8 +59,8 @@ url: https://wiki.seeedstudio.com/ja/getting_started_1.47_inch_touch_display_esp
     <tr><td>Grove I2C コネクタ</td><td>なし</td></tr>
     <tr><td>ユーザーボタン</td><td>2</td></tr>
     <tr><td>バッテリーコネクタ</td><td>2 ピン JST、3.7 V LiPo</td></tr>
-    <tr><td>バッテリーモニタリング</td><td>D16 ADC によるバッテリー電圧モニタリング。測定された電圧からバッテリー残量を推定できます。バッテリー状態検出には対応していません。</td></tr>
-    <tr><td>拡張インターフェース</td><td>1x I2C パッド、1x I2S パッド、1x SWD パッド、2x ユーザーボタンパッド</td></tr>
+    <tr><td>バッテリーモニタリング</td><td>D16 ADC によるバッテリー電圧監視。測定された電圧からバッテリー残量を推定できます。バッテリー状態検出には対応していません。</td></tr>
+    <tr><td>拡張インターフェース</td><td>1x I2C インターフェース、1x I2S インターフェース、1x JTAG インターフェース、2x ユーザーボタンインターフェース</td></tr>
     <tr><td>基板サイズ</td><td>26.4 × 51.4 × 12.6 mm</td></tr>
     <tr><td>最適な用途</td><td>タッチ UI、ポータブル HMI、ローカルメディア & データロギング</td></tr>
   </table>
@@ -72,37 +72,37 @@ ESP32-S3 Plus は電圧測定に D16 を使用します。電圧デモはバッ�
 
 ## ハードウェア概要
 
-始める前に、1.47'' IPS Display の物理的なレイアウトを理解するため、次の画像を参照してください。
+始める前に、1.47'' IPS Display の物理レイアウトを理解するため、次の画像を参照してください。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hardware_overviewNEW.png" style={{width:1000, height:'auto'}}/></div>
 
 ### ピンマップ
 
-1.47'' IPS Display は、XIAO ESP32-S3 Plus のすべてのピンを引き出しています。下の表は、各ピン、そのディスプレイボード上でのネット名、その機能、およびオンボード周辺機器への接続方法を一覧にしています。
+1.47'' IPS Display は、XIAO ESP32-S3 Plus のすべてのピンを引き出しています。下の表は、各ピン、そのディスプレイボード上でのネット名、その機能、およびオンボード周辺機器への接続方法を示しています。
 
 <div class="table-center">
   <table align="center">
-    <tr><th>XIAO ピン</th><th>ネット名</th><th>機能の説明</th><th>ハードウェア接続メモ</th></tr>
+    <tr><th>XIAO ピン</th><th>ネット名</th><th>機能説明</th><th>ハードウェア接続メモ</th></tr>
     <tr><td>D0</td><td>PDM_CLK</td><td>MIC_CLK</td><td>PDM デジタルマイクのクロック</td></tr>
     <tr><td>D1</td><td>MIC_DATA</td><td>PDM デジタルマイクのデータ</td><td>内部で PDM マイクに接続</td></tr>
     <tr><td>D2</td><td>LCD_CS</td><td>画面チップセレクト信号</td><td>内部で LCD ドライバ IC に接続</td></tr>
     <tr><td>D3</td><td>LCD_DC</td><td>画面データ/コマンド切り替え</td><td>内部で LCD ドライバ IC に接続</td></tr>
-    <tr><td>D4</td><td>SDA</td><td>I2C データバス</td><td>バス共有：内部で IMU とタッチ IC に接続され、外部には I2C 拡張パッドとして引き出し</td></tr>
-    <tr><td>D5</td><td>SCL</td><td>I2C クロックバス</td><td>バス共有：内部で IMU とタッチ IC に接続され、外部には I2C 拡張パッドとして引き出し</td></tr>
+    <tr><td>D4</td><td>SDA</td><td>I2C データバス</td><td>バス共有：内部で IMU とタッチ IC に接続、外部には I2C 拡張パッドとして引き出し</td></tr>
+    <tr><td>D5</td><td>SCL</td><td>I2C クロックバス</td><td>バス共有：内部で IMU とタッチ IC に接続、外部には I2C 拡張パッドとして引き出し</td></tr>
     <tr><td>D6</td><td>SD_CS</td><td>SD カードチップセレクト信号</td><td>内部で MicroSD カードスロットに接続</td></tr>
     <tr><td>D7</td><td>TOUCH_INT</td><td>タッチ割り込み信号</td><td>非同期ウェイクアップ用に内部でタッチ IC に接続</td></tr>
     <tr><td>D8</td><td>SCK</td><td>ハードウェア SPI クロック</td><td>内部で LCD と SD カードスロットに接続</td></tr>
     <tr><td>D9</td><td>MISO</td><td>ハードウェア SPI データ入力</td><td>内部で SD カードスロットに接続</td></tr>
     <tr><td>D10</td><td>MOSI</td><td>ハードウェア SPI データ出力</td><td>内部で LCD と SD カードスロットに接続</td></tr>
-    <tr><td>D11</td><td>I2S_SD</td><td>オーディオデータライン</td><td>I2S_SD のデフォルトマッピングに対応し、ボトムパッドグループに引き出し</td></tr>
-    <tr><td>D12</td><td>I2S_SCK</td><td>オーディオビットクロック</td><td>I2S_SCK のデフォルトマッピングに対応し、ボトムパッドグループに引き出し</td></tr>
-    <tr><td>D13</td><td>I2S_WS</td><td>オーディオワードセレクト</td><td>I2S_WS のデフォルトマッピングに対応し、ボトムパッドグループに引き出し</td></tr>
+    <tr><td>D11</td><td>I2S_SD</td><td>オーディオデータライン</td><td>デフォルトの I2S_SD マッピングに対応し、底面パッドグループに引き出し</td></tr>
+    <tr><td>D12</td><td>I2S_SCK</td><td>オーディオビットクロック</td><td>デフォルトの I2S_SCK マッピングに対応し、底面パッドグループに引き出し</td></tr>
+    <tr><td>D13</td><td>I2S_WS</td><td>オーディオワードセレクト</td><td>デフォルトの I2S_WS マッピングに対応し、底面パッドグループに引き出し</td></tr>
     <tr><td>D14</td><td>IMU_INT</td><td>IMU モーション割り込み</td><td>機能再割り当て：モーションウェイクアップおよびダブルタップ検出に使用</td></tr>
-    <tr><td>D15</td><td>BTN_B</td><td>物理ボタン 2（USR2）</td><td>機能再割り当て：ユーザーボタン 2。外部にボタン拡張パッドとして引き出し</td></tr>
+    <tr><td>D15</td><td>BTN_B</td><td>物理ボタン 2 (USR2)</td><td>機能再割り当て：ユーザーボタン 2。外部にボタン拡張パッドとして引き出し</td></tr>
     <tr><td>D16</td><td>BAT_ADC</td><td>バッテリー電圧検出</td><td>内部で分圧回路（316K / 160K）に接続。<strong>外部では使用しないでください</strong></td></tr>
     <tr><td>D17</td><td>LCD_RST</td><td>画面リセット信号</td><td>信頼性の高い起動のための独立した GPIO 制御</td></tr>
     <tr><td>D18</td><td>LCD_BL</td><td>画面バックライト制御</td><td>ハードウェア PWM による輝度調整をサポート</td></tr>
-    <tr><td>D19</td><td>BTN_A</td><td>物理ボタン 1（USR1）</td><td>ユーザーボタン 1。外部にボタン拡張パッドとして引き出し</td></tr>
+    <tr><td>D19</td><td>BTN_A</td><td>物理ボタン 1 (USR1)</td><td>ユーザーボタン 1。外部にボタン拡張パッドとして引き出し</td></tr>
   </table>
 </div>
 
@@ -113,7 +113,7 @@ ESP32-S3 Plus は電圧測定に D16 を使用します。電圧デモはバッ�
 
 ### ソフトウェアの準備
 
-以下のツールとライブラリが必要です：
+次のツールとライブラリが必要です：
 
 - **Arduino IDE**（バージョン 1.8 以降）
 
@@ -138,14 +138,14 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
     </a>
 </div><br />
 
-**Step 1.** 上のボタンをクリックして、`Seeed_GFX2` v1.0.0 を ZIP ファイルとしてダウンロードします（チュートリアルの再現性を保つため、リリースタグに固定されています）。あるいは、[Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) からリポジトリをクローンしても構いません。
+**Step 1.** 上のボタンをクリックして、`Seeed_GFX2` v1.0.0 を ZIP ファイルとしてダウンロードします（チュートリアルの再現性を保つため、リリースタグに固定されています）。または、[Seeed-Studio/Seeed_GFX2](https://github.com/Seeed-Studio/Seeed_GFX2) からリポジトリをクローンしてもかまいません。
 
-**Step 2.** Arduino IDE で **Sketch > Include Library > Add .ZIP Library...** に進み、ダウンロードした ZIP を選択します。IDE は `library.properties` を読み取り、正しい `Seeed_GFX2` フォルダに自動的にインストールします — 展開したフォルダ名を変更する必要はありません。（代わりに手動でインストールする場合は、アーカイブを解凍し、展開されたフォルダ名を `Seeed_GFX2` に変更してから `Documents/Arduino/libraries/` に配置します。）
+**Step 2.** Arduino IDE で **Sketch > Include Library > Add .ZIP Library...** を開き、ダウンロードした ZIP を選択します。IDE は `library.properties` を読み取り、正しい `Seeed_GFX2` フォルダに自動的にインストールします — 展開したフォルダ名を変更する必要はありません。（代わりに手動でインストールする場合は、アーカイブを解凍し、展開したフォルダ名を `Seeed_GFX2` に変更してから `Documents/Arduino/libraries/` に配置します。）
 
 **Step 3.** 新しいライブラリが認識されるように Arduino IDE を再起動します。
 
 :::tip
-- **Seeed_GFX2** は、レイヤー化された `Board` + `Panel Config` アーキテクチャ上に構築された Seeed Studio のグラフィックスライブラリです。各デモは、単一の `display.begin<Board_..., Config_...>()` 呼び出しでディスプレイを初期化します。**Board** テンプレートはピンマップ（CS/DC/SCK/MOSI/RST/BL）を保持し、**Panel Config** は 172×320 の解像度、色順序（BGR）、および向きを組み込みます。`driver.h` や手動でのピン設定は不要です。
+- **Seeed_GFX2** は、`Board` + `Panel Config` というレイヤー構造のアーキテクチャに基づいて Seeed Studio が構築したグラフィックスライブラリです。各デモは `display.begin<Board_..., Config_...>()` を 1 回呼び出してディスプレイを初期化します。**Board** テンプレートはピンマップ（CS/DC/SCK/MOSI/RST/BL）を保持し、**Panel Config** は 172×320 の解像度、色順序（BGR）、および向きを組み込みます。`driver.h` や手動でのピン設定は不要です。
 - このボードでは、スケッチは `Board_XIAO_1inch47_Touch_Display<13, 12>`（RST=13, BL=12）と `Config_Seeed_1inch47_Touch_JD9853A` を使用します。
 :::
 
@@ -182,7 +182,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 ## 次のステップ
 
-このディスプレイボードには、複数のオンボード周辺機能が搭載されています。[Function](/ja/function_1.47_inch_touch_display_esp32s3) ページでは、それぞれに対応した単体デモを提供しています：
+このディスプレイボードには、複数のオンボード周辺機能が搭載されています。[Function](/ja/function_1.47_inch_touch_display_esp32s3) ページでは、それぞれに対応する単体デモを提供しています：
 
 <div class="table-center">
   <table align="center">
@@ -193,13 +193,13 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
     <tr><td>マイク & スピーカー</td><td>[Volume Bar + SD Recorder](/ja/function_1.47_inch_touch_display_esp32s3#microphone--speaker) — ライブ PDM レベルメーターと SD への録音</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/ja/function_1.47_inch_touch_display_esp32s3#imu) — 6 軸モーションエフェクトとモーション検知でのウェイクアップ</td></tr>
     <tr><td>ボタン</td><td>[User Button](/ja/function_1.47_inch_touch_display_esp32s3#user-button) — 押下を読み取り、割り込みでデバウンス</td></tr>
-    <tr><td>バッテリ</td><td>[Battery Voltage Detection](/ja/function_1.47_inch_touch_display_esp32s3#battery-voltage-detection) — 分圧電圧を測定</td></tr>
+    <tr><td>バッテリー</td><td>[Battery Voltage Detection](/ja/function_1.47_inch_touch_display_esp32s3#battery-voltage-detection) — 分圧電圧を測定</td></tr>
   </table>
 </div>
 
 ## FAQ
 
-### Tools > Board メニューにボードが表示されません
+### ボードが Tools > Board メニューに表示されない
 
 Arduino IDE に ESP32 ボードパッケージが追加されていることを確認してください：
 
@@ -207,22 +207,23 @@ Arduino IDE に ESP32 ボードパッケージが追加されていることを�
    ```
    https://espressif.github.io/arduino-esp32/package_esp32_index.json
    ```
-2. **Tools > Board > Boards Manager** を開き、**esp32** を検索して、バージョン **3.3.11** をインストールします。
+2. **Tools > Board > Boards Manager** を開き、**esp32** を検索してバージョン **3.3.11** をインストールします。
 3. インストール後、メニューに **Tools > Board > esp32 > XIAO_ESP32S3_PLUS** が表示されるはずです。
 
 それでもボードが表示されない場合は、Arduino IDE を再起動してから再度お試しください。
 
 ## リソース
 
-- **🗃️[PCB Design Files]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
-- **📄[Schematic]** [XIAO 1.47'' IPS Display (ESP32-S3) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
-- **📦[3D Model]** [XIAO 1.47'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
-- **📄[Datasheet]** [1.47 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
-- **💾[Factory Firmware]** [XIAO 1.47'' IPS Display (ESP32-S3) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
+- **🗃️[PCB Design Files]** [XIAO 1.47'' IPS Display (ESP32-S3) KiCad プロジェクト](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20KiCad%20Project.zip)
+- **📄[Schematic]** [XIAO 1.47'' IPS Display (ESP32-S3) 回路図](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Schematic.pdf)
+- **📦[3D Model]** [XIAO 1.47'' IPS Display (STEP) 3D モデル](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
+- **🖨️[3D Printed Enclosure]** [XIAO 1.47'' IPS Display エンクロージャ（gokul 作）](https://www.printables.com/model/1843008-enclosure-for-xiao-147-ips-touch-display-esp32nrf5)
+- **📄[Datasheet]** [1.47 インチディスプレイ データシート](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
+- **💾[Factory Firmware]** [XIAO 1.47'' IPS Display (ESP32-S3) 工場出荷時ファームウェア](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28ESP32-S3%29%20Factory%20Firmware.zip)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">

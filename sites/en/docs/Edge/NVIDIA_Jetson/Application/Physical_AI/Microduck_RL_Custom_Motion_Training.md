@@ -37,7 +37,7 @@ Breaking this contract can produce a policy that works in one viewer but cannot 
 ## Select the Closest Template
 
 | Desired motion | Recommended template |
-|---|---|
+| --- | --- |
 | Continuous velocity motion | `microduck_velocity_env_cfg.py` |
 | Recovery from a specific state | `microduck_standup_env_cfg.py` |
 | Two-state command transition | `microduck_sitstand_env_cfg.py` |
@@ -71,7 +71,7 @@ cp src/mjlab_microduck/tasks/mdp.py \
 A simple bow can use a normalized phase from `0.0` to `1.0`:
 
 | Phase | Behavior |
-|---|---|
+| --- | --- |
 | `0.00–0.25` | Descend toward the bow pose |
 | `0.25–0.55` | Hold the bow |
 | `0.55–0.85` | Return to the home pose |
@@ -208,10 +208,7 @@ To add keyboard triggering, extend `scripts/infer_policy.py` using the existing 
 
 ## Verified Example: Front-Back Split
 
-The validated custom task uses a more feasible double-support motion than the
-previous one-leg balance experiment. The left foot moves forward, the right foot
-moves backward, both feet remain grounded, and the robot returns to its normal
-standing pose.
+The validated custom task uses a more feasible double-support motion than the previous one-leg balance experiment. The left foot moves forward, the right foot moves backward, both feet remain grounded, and the robot returns to its normal standing pose.
 
 The registered task ID is:
 
@@ -224,7 +221,7 @@ Mjlab-FrontBackSplit-Flat-MicroDuck
 The task uses a six-second cyclic phase command:
 
 | Normalized phase | Behavior |
-|---|---|
+| --- | --- |
 | `0.00–0.30` | Move from standing into the front-back split |
 | `0.30–0.58` | Hold the split stance with both feet grounded |
 | `0.58–0.78` | Return the legs toward the standing pose |
@@ -243,9 +240,7 @@ TARGET_SAGITTAL_SEPARATION = 0.095
 
 ### Define the Target Pose
 
-The target is expressed by joint names and was checked with MuJoCo forward
-kinematics. The target keeps the two foot sites level while producing about
-`9.5 cm` of signed front-to-back foot separation:
+The target is expressed by joint names and was checked with MuJoCo forward kinematics. The target keeps the two foot sites level while producing about `9.5 cm` of signed front-to-back foot separation:
 
 ```python
 FRONT_BACK_SPLIT_POSE = {
@@ -261,8 +256,7 @@ FRONT_BACK_SPLIT_POSE = {
 ```
 
 The interactive pose editor is `scripts/front_back_split_pose_editor.py`.
-It opens a MuJoCo window with gravity disabled and prints the final named pose
-when the window closes:
+It opens a MuJoCo window with gravity disabled and prints the final named pose when the window closes:
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
@@ -271,26 +265,21 @@ export MUJOCO_GL=glfw
 uv run --no-sync python scripts/front_back_split_pose_editor.py
 ```
 
-If the Jetson desktop uses a different display, run the command directly from a
-graphical terminal and use the value printed by `echo $DISPLAY`.
+If the Jetson desktop uses a different display, run the command directly from a graphical terminal and use the value printed by `echo $DISPLAY`.
 
 ### Build the Split-Motion Reward
 
 The task combines these motion-specific objectives:
 
 | Reward | Purpose |
-|---|---|
+| --- | --- |
 | `split_pose` | Track the interpolated standing-to-split joint pose |
 | `split_pose_l1` | Provide a directional joint error gradient |
 | `feet_grounded` | Keep both feet in contact with the terrain |
 | `feet_flat` | Penalize tilted foot sites |
 | `sagittal_separation` | Track the signed front-to-back foot separation |
 
-The task also retains upright, joint-limit, self-collision, angular-velocity,
-action-rate, actuator, encoder, friction, mass, inertia, and center-of-mass
-randomization terms inherited from the Microduck environment. The custom
-`sagittal_separation` term measures both foot sites in the robot base frame, so
-the reward and the pose use the same coordinate convention.
+The task also retains upright, joint-limit, self-collision, angular-velocity, action-rate, actuator, encoder, friction, mass, inertia, and center-of-mass randomization terms inherited from the Microduck environment. The custom `sagittal_separation` term measures both foot sites in the robot base frame, so the reward and the pose use the same coordinate convention.
 
 ### Register the Task
 
@@ -298,7 +287,7 @@ the reward and the pose use the same coordinate convention.
 It is not a filename and is not passed as an argument to the environment factory.
 
 | Item | Location | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | Environment and RL configuration | `src/mjlab_microduck/tasks/microduck_front_back_split_env_cfg.py` | Defines the target pose, phase timing, scene, rewards, and PPO configuration |
 | Phase separation reward | `src/mjlab_microduck/tasks/mdp.py` | Tracks signed sagittal foot separation in the robot base frame |
 | Task registration | `src/mjlab_microduck/tasks/__init__.py` | Binds the task ID to the environment and RL configuration |
@@ -340,10 +329,8 @@ uv run --no-sync train Mjlab-FrontBackSplit-Flat-MicroDuck \
   --agent.max_iterations 1000
 ```
 
-The completed run reached full 600-step episodes, zero falling terminations in
-late training, and near-maximum split-pose, foot-contact, and separation rewards.
-On an 8 GB Jetson Orin NX or Orin Nano, start with `1024` environments and
-increase only after checking memory with `jtop`.
+The completed run reached full 600-step episodes, zero falling terminations in late training, and near-maximum split-pose, foot-contact, and separation rewards.
+On an 8 GB Jetson Orin NX or Orin Nano, start with `1024` environments and increase only after checking memory with `jtop`.
 
 ### Visualize a PT Checkpoint
 
@@ -361,8 +348,7 @@ uv run --no-sync play Mjlab-FrontBackSplit-Flat-MicroDuck \
 
 ### Export and Run the ONNX Policy
 
-Export the checkpoint with the project wrapper so the observation normalizer is
-embedded in the ONNX graph:
+Export the checkpoint with the project wrapper so the observation normalizer is embedded in the ONNX graph:
 
 ```bash
 uv run --no-sync python3 scripts/export.py \
@@ -384,15 +370,12 @@ uv run --no-sync python3 scripts/infer_policy.py \
   --new-cmd-obs
 ```
 
-Press `O` to run one six-second front-back split cycle. The policy receives the
-same cosine/sine phase command used during training, then control automatically
-returns to the standing policy. If a walking policy is also provided, the demo
-returns to walking when a non-zero velocity command is active.
+Press `O` to run one six-second front-back split cycle. The policy receives the same cosine/sine phase command used during training, then control automatically returns to the standing policy. If a walking policy is also provided, the demo returns to walking when a non-zero velocity command is active.
 
-The old `--one-leg-balance` option and one-leg task files are no longer part of
-the current repository. Use `--front-back-split` for this verified motion.
+The old `--one-leg-balance` option and one-leg task files are no longer part of the current repository. Use `--front-back-split` for this verified motion.
 
 ## Development Checklist
+
 - [ ] The observation layout remains 61D.
 - [ ] The policy output remains 14D.
 - [ ] Passive joints are excluded from actions and servo observations.
