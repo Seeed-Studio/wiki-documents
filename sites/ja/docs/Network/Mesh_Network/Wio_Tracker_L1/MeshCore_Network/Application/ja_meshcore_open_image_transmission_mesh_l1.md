@@ -24,6 +24,8 @@ url: https://wiki.seeedstudio.com/ja/meshcore_ai_image_transmission_l1/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# Wio Tracker L1 向け MeshCore AI 画像伝送
+
 <div style={{textAlign:'center'}}>
 
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>

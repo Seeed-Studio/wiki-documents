@@ -24,6 +24,8 @@ url: https://wiki.seeedstudio.com/pt-br/meshcore_ai_image_transmission_x1/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# Transmissão de Imagem com IA via MeshCore com MeshTracker X1
+
 <div style={{textAlign:'center'}}>
 
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>

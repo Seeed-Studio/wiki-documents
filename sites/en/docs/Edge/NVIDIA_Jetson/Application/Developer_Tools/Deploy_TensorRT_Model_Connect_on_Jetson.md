@@ -11,7 +11,7 @@ keywords:
   - JetPack 7.2
   - reComputer Classic J501
   - Edge AI
-image: https://files.seeedstudio.com/wiki/TRTMC/trtmc_wiki_cover.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100003716-gallery_img_1_1.jpg
 slug: /ai_robotics_deploy_tensorrt_model_connect_on_jetson
 sku: 100003716,100006184
 last_update:
