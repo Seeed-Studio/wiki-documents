@@ -6,7 +6,7 @@ keywords:
   - reComputer Rugged J401
   - IP66
   - Jetson
-  - hardware interface
+  - 硬件接口
 image: https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png
 slug: /ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage
 sku: 100046979,100002634
@@ -58,7 +58,7 @@ url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j401_hardware
     </tr>
     <tr>
       <td>USB</td>
-      <td>4× USB 3.2 Type-A（防水连接器）+ 1× USB 3.0 Type-C（设备 / 烧录）+ 1× USB 2.0 Type-C（调试）</td>
+      <td>4× USB 3.2 Type-A（防水连接器）+ 1× USB 3.0 Type-C（设备 / 刷机）+ 1× USB 2.0 Type-C（调试）</td>
     </tr>
     <tr>
       <td>显示</td>
@@ -66,15 +66,15 @@ url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j401_hardware
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2× CAN-FD（隔离），通过 M12 A-code</td>
+      <td>2× CAN-FD（隔离）通过 M12 A-code</td>
     </tr>
     <tr>
       <td>串口</td>
-      <td>1× RS-232/422/485，通过 M12 A-code</td>
+      <td>1× RS-232/422/485 通过 M12 A-code</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>2× DI + 2× DO，通过 M12 A-code</td>
+      <td>2× DI + 2× DO 通过 M12 A-code</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -92,33 +92,33 @@ url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j401_hardware
     <tr>
       <td rowSpan={2}>扩展</td>
       <td>M.2 Key E</td>
-      <td>1× M.2 Key E，用于 M.2 2230 Wi-Fi 模组（内置 Wi-Fi 6 模组）</td>
+      <td>1× M.2 Key E，用于 M.2 2230 Wi-Fi 模块（内置 Wi-Fi 6 模块）</td>
     </tr>
     <tr>
       <td>M.2 Key B</td>
-      <td>1× M.2 Key B，用于 5G 模组</td>
+      <td>1× M.2 Key B，用于 5G 模块</td>
     </tr>
     <tr>
       <td rowSpan={4}>板载</td>
       <td>SPI / I2C</td>
-      <td>1× SPI、1× I2C（盒内排针）</td>
+      <td>1× SPI，1× I2C（内部排针）</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td>RTC 插座，2-pin 连接器</td>
+      <td>RTC 插座，2 针连接器</td>
     </tr>
     <tr>
       <td>LED</td>
-      <td>1× PWR LED（绿色）、1× SSD LED（绿色）</td>
+      <td>1× PWR LED（绿色），1× SSD LED（绿色）</td>
     </tr>
     <tr>
       <td>按键</td>
-      <td>1× Recovery 按键、1× RST 按键</td>
+      <td>1× Recovery 按键，1× RST 按键</td>
     </tr>
     <tr>
       <td>电源</td>
       <td>输入</td>
-      <td>M12 A-code 直流 19–48 V</td>
+      <td>M12 A-code DC 19–48 V</td>
     </tr>
   </tbody>
 </table>
@@ -127,26 +127,26 @@ url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j401_hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/2.jpg" alt="Image" width={800} height="auto" /></p>
 
-reComputer Rugged J401 配备了一个 M12 A-code 直流 19-48V 电源接口，兼容宽电压输入范围，适用于多种供电环境。接口定义如下表所示。
+reComputer Rugged J401 配备了 M12 A-code DC 19-48V 电源接口，兼容宽电压输入范围，适用于多种供电环境。接口定义如下表所示。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/3.png" alt="Image" width={400} height="auto" /></p>
 
 |Pin|用途|类型|线缆颜色|
 |---|---|---|---|
-|1|直流电源输入|电源|棕色|
+|1|DC 电源输入|电源|棕色|
 |2|||白色|
-|3|接地|接地|蓝色|
+|3|地|地|蓝色|
 |4|||黑色|
 
 ## 显示
 
-卸下固定防水侧盖的两颗螺丝并打开侧盖，即可访问 HDMI 2.1 接口，从而获得高质量的显示输出。
+卸下固定防水侧盖的两颗螺丝并打开侧盖，即可访问 HDMI 2.1 接口，提供高质量的显示输出。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/4.jpg" alt="Image" width={800} height="auto" /></p>
 
-## 用于 SSD 的 M.2 Key M 和用于 Wi-Fi 与 Bluetooth 的 M.2 Key E
+## 用于 SSD 的 M.2 Key M 和用于 Wi-Fi 与蓝牙的 M.2 Key E
 
-reComputer Rugged J401 提供一个 M.2 Key E 接口，你可以通过它扩展设备的 Bluetooth 和 Wi-Fi 功能。我们推荐使用 Intel Dual Band RTL8822CE 无线网卡。
+reComputer Rugged J401 配备了 M.2 Key E 接口，可通过该接口扩展设备的蓝牙和 Wi-Fi 功能。我们推荐使用 Intel Dual Band RTL8822CE 无线网卡。
 
 M.2 Key M 是为高速固态硬盘（SSD）设计的接口，提供超高速数据传输速率，非常适合高性能应用。
 
@@ -156,9 +156,9 @@ M.2 Key M 是为高速固态硬盘（SSD）设计的接口，提供超高速数�
 
 ### **使用说明**
 
-如果你想拆下随设备附带的 SSD 并安装新的 SSD，需要确保你的 SSD 满足以下两个条件：
+如果你想拆下内置 SSD 并安装新的 SSD，需要确保你的 SSD 满足以下两个条件：
 
-- 支持 **M.2 Key M slot with x4 PCIe Gen3** 接口。
+- 支持 **M.2 Key M 插槽，x4 PCIe Gen3** 接口。
 
 - 符合 **2242** 尺寸规格。
 
@@ -174,11 +174,11 @@ sudo dd if=/dev/zero of=tempfile bs=1M count=1024 conv=fdatasync
 
 测试完成后，请运行 `sudo rm tempfile` 命令删除缓存文件。
 
-安装好 Wi-Fi 模块并为设备上电后，我们就可以配置设备的 Wi-Fi 和 Bluetooth 设置。
+安装好 Wi-Fi 模块并为设备上电后，我们就可以配置设备的 Wi-Fi 和蓝牙设置。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/7.gif" alt="Image" width={800} height="auto" /></p>
 
-当然，我们也可以通过以下命令检查设备的运行状态。
+当然，我们也可以通过以下命令查看设备的运行状态。
 
 ```Bash
 ifconfig
@@ -212,7 +212,7 @@ lsusb
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/11.png" alt="Image" width={800} height="auto" /></p>
 
-**步骤 2.** 确认驱动加载情况
+**步骤 2.** 确认驱动加载
 
 必须确保 5G 模块所需的 option 驱动已加载。我们可以使用 lsmod 命令进行检查。
 
@@ -226,7 +226,7 @@ lsmod | grep option
 
 **步骤 3.** 配置 ModemManager
 
-ModemManager 是一个用于管理调制解调器设备的工具，需要对其进行安装并重启。
+ModemManager 是用于管理调制解调器设备的工具，需要安装并重启。
 
 ```Bash
 sudo apt install modemmanager 
@@ -235,7 +235,7 @@ sudo systemctl restart ModemManager
 
 apt install 命令用于安装 ModemManager 软件包，而 systemctl restart 用于重启 ModemManager 服务，以确保新设置生效。
 
-**步骤 4.** 验证模块识别情况
+**步骤 4.** 验证模块识别
 
 我们可以使用 mmcli -L 命令检查 ModemManager 是否能够正确识别 5G 模块。
 
@@ -249,13 +249,13 @@ mmcli -L
 
 **步骤 5.** 设置 APN
 
-APN（接入点名称，Access Point Name）对于移动设备连接网络至关重要。我们将使用 nmcli 命令创建一个承载配置文件。以中国移动为例，可以通过以下命令创建配置文件：
+APN（接入点名称）对于移动设备连接网络至关重要。我们将使用 nmcli 命令创建承载配置文件。以中国移动为例，可以通过以下命令创建配置文件：
 
 ```Bash
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
 ```
 
-该命令会添加一个新的 GSM（全球移动通信系统，Global System for Mobile Communications）类型连接，将 APN 指定为 "CMNET"，并使用自动 IPv4 配置。
+该命令会添加一个新的 GSM（全球移动通信系统）类型连接，将 APN 指定为“CMNET”，并使用自动 IPv4 配置。
 
 **步骤 6.** 激活连接
 
@@ -269,9 +269,9 @@ sudo nmcli con up "gsm"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/14.png" alt="Image" width={800} height="auto" /></p>
 
-**步骤 7.** 再次验证模块识别情况
+**步骤 7.** 再次验证模块识别
 
-再次运行 mmcli -L 命令，以确保在配置 APN 之后模块仍然被识别。
+再次运行 mmcli -L 命令，确保在配置 APN 之后模块仍然被识别。
 
 ```Bash
 mmcli -L 
@@ -279,7 +279,7 @@ mmcli -L
 
 **步骤 8.** 检查模块状态
 
-最后，我们可以使用 mmcli -m 0 命令查看模块的详细信息，例如 IP 分配、运营商以及网络连接状态。
+最后，我们可以使用 mmcli -m 0 命令查看模块的详细信息，例如 IP 分配、运营商和网络连接状态。
 
 ```Bash
 mmcli -m 0 
@@ -291,13 +291,205 @@ mmcli -m 0
 
 ## 以太网
 
-reComputer Rugged J401 提供 1 个标准千兆以太网（10/100/1000M）RJ45 接口（J35）和 4 个千兆 PSE（供电设备，Power Sourcing Equipment）RJ45 接口（J36–J39）。标准千兆接口用于常规网络连接。PSE 接口支持 IEEE 802.3af/at 标准，可通过以太网为连接的设备（如 IP 摄像头和无线接入点）供电，每个端口的最大输出功率为 15.4W（802.3af）。这使其非常适合工业、AMR 和户外边缘计算应用，无需单独铺设电源线。所有千兆接口均来自 Jetson Orin 模块内部的 PCIe 控制器，并支持 10/100/1000M 自适应协商。
+reComputer Rugged J401 提供 1 个标准千兆以太网（10/100/1000M）RJ45 接口（J35）和 4 个千兆 PSE（供电设备）RJ45 接口（J36–J39）。标准千兆接口用于常规网络连接。PSE 接口支持 IEEE 802.3af/at 标准，可通过以太网为连接的设备（如 IP 摄像机和无线接入点）供电，每个端口的最大输出功率为 15.4W（802.3af）。这使其非常适合工业、AMR 和户外边缘计算应用，无需单独铺设电源线。所有千兆端口均来自 Jetson Orin 模块内部的 PCIe 控制器，并支持 10/100/1000M 自适应协商。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/16.jpg" alt="Image" width={800} height="auto" /></p>
 
+Linux 网络设备名称与物理以太网端口的对应关系如下所示。当从与图片相同的方向查看以太网连接器时，从左到右的映射依次为 `eth4`、`eth2`、`eth1`、`eth0` 和 `eth3`。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/jetson/rugged-ethernet-Interface.png" alt="Mapping between Linux Ethernet device names and physical ports on reComputer Rugged J401" width={900} height="auto" /></p>
+
+| 物理端口位置 | Linux 设备名称 |
+| :--- | :--- |
+| 从左数第一个 | `eth4` |
+| 从左数第二个 | `eth2` |
+| 中间 | `eth1` |
+| 从右数第二个 | `eth0` |
+| 从右数第一个 | `eth3` |
+
+使用 `ethtool` 检查每个以太网端口协商得到的带宽和物理链路状态。如果该命令不可用，请先安装：
+
+```bash
+sudo apt update
+sudo apt install -y ethtool
+```
+
+运行以下命令，以显示所有五个物理以太网接口的速率、双工模式、自协商状态和链路状态：
+
+```bash
+for interface in eth0 eth1 eth2 eth3 eth4; do
+  echo "=== ${interface} ==="
+  sudo ethtool "${interface}" | grep -E 'Speed:|Duplex:|Auto-negotiation:|Link detected:'
+done
+```
+
+:::note
+`Speed` 显示协商得到的链路带宽，例如 `1000Mb/s`；`Duplex` 通常应显示为 `Full`；而 `Link detected: yes` 则确认对应的物理端口已有活动连接。断开的端口可能会显示 `Speed: Unknown!` 和 `Link detected: no`。
+:::
+
+## 使用说明
+
+### 硬件连接
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connect.png" alt="" />
+</div>
+
+### 启用 PoE 输出
+
+四个 PSE 端口（J36–J39）由板载 PSE 控制器供电，该控制器**默认处于禁用状态**。在原始系统中没有任何东西会将其打开，因此插在 J36–J39 上的相机在 PSE 供电使能线被拉高 **并保持为高电平** 之前都不会上电。
+
+| 信号 | GPIO | 方向 | 含义 |
+| --- | --- | --- | --- |
+| `PSE_PWR_EN` | `gpiochip2` line 15 | output | 拉高以打开 PSE 输出 |
+| `PSE_PG` | `gpiochip2` line 0 | input | `1` = PSE 电源正常 |
+| `PSE_INTB` | `gpiochip2` line 1 | input | `0` = 无故障 |
+
+如果缺少 GPIO 工具，请先安装，然后启用输出并保持：
+
+```bash
+sudo apt-get install -y gpiod     # only if gpioset/gpioget are not already present
+
+# Set PSE_PWR_EN high and keep it high.
+# -m signal  : maintain the level until the process receives SIGINT/SIGTERM
+# setsid + & : detach it from the terminal so the hold survives the SSH session
+sudo setsid gpioset -m signal 2 15=1 >/dev/null 2>&1 &
+
+# Confirm the hold is alive
+ps aux | grep "[g]pioset -m signal 2 15=1"
+
+# Confirm the controller reports power good -> expected output: "1 0"
+sudo gpioget gpiochip2 0 1
+```
+
+**预期输出：**
+
+```text
+1 0
+```
+
+`1 0` 表示 `PSE_PG=1`（电源正常）且 `PSE_INTB=0`（无故障）。如果 `PSE_PG` 一直为 `0`，说明没有供电：请检查线缆以及相机自身的功耗需求（802.3af 每个端口允许 15.4 W）。如果 `PSE_INTB` 读数为 `1`，则说明控制器锁存了一个故障——请移除负载、断电重启后再检查。
+
+**重要提示：**电平只会在 `gpioset` 进程存活期间被驱动。通过字符设备请求的 GPIO 线在最后一个持有它的进程退出时会恢复为默认状态——`gpioset --help` 明确说明了这一点——因此仅运行该命令并让其返回并**不能**让 PSE 保持开启。重启之后，或者如果该进程被杀死，相机就会失去电源，链路也会断开。
+
+#### 在重启后保持 PSE 处于开启状态（可选）
+
+将同样的保持操作封装到一个 systemd 单元中，这样它会在每次启动时应用，并在退出时自动重启：
+
+```bash
+sudo tee /etc/systemd/system/poe-pse-hold.service >/dev/null <<'EOF'
+[Unit]
+Description=Hold PoE PSE power enable (PSE_PWR_EN gpio2/15)
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/gpioset -m signal 2 15=1
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now poe-pse-hold
+systemctl status poe-pse-hold --no-pager
+```
+
+`Type=simple` 加上 `Restart=on-failure` 使其成为一个*保持*而不是一次性命令：systemd 会保持该进程——从而保持 GPIO 电平——处于存活状态。
+
+### 启动两路 PoE 相机
+
+在启用 PSE 输出后，可以在无需外部 PoE 供电器的情况下为两台相机供电并访问它们。手动将它们启动需要三个步骤。
+
+**步骤 1.** 找到实际连接了相机的端口。五个千兆端口枚举为 `eth0`–`eth4`；请读取 carrier 标志，而不是假定哪个索引对应哪个连接器：
+
+```bash
+for i in eth0 eth1 eth2 eth3 eth4; do
+  echo "$i carrier=$(cat /sys/class/net/$i/carrier 2>/dev/null) speed=$(cat /sys/class/net/$i/speed 2>/dev/null)"
+done
+```
+
+**步骤 2.** 让相机完成启动（在 PSE 上电后 30–60 秒），然后将 Jetson 的端口配置到与每台相机相同的子网中：
+
+```bash
+sleep 45
+
+sudo ip link set eth1 up
+sudo ip addr add 192.168.10.100/24 dev eth1     # camera A is 192.168.10.20
+sudo ip link set eth2 up
+sudo ip addr add 192.168.20.100/24 dev eth2       # camera B is 192.168.20.10
+```
+
+**步骤 3.** 验证链路和两台相机：
+
+```bash
+ping -c2 -W1 192.168.10.20
+ping -c2 -W1 192.168.20.10
+ip -br addr show eth1
+ip -br addr show eth2
+```
+
+**预期输出：**两次 ping 都显示 `0% packet loss`，并且每个端口都显示为 `UP`，且带有你分配的地址：
+
+```text
+eth1             UP             192.168.10.100/24
+eth2             UP             192.168.20.100/24
+```
+
+注意：
+
+- 每台相机会保留其配置的地址。如果你不知道该地址，请先将端口配置到相机应在的子网中，然后通过 ping 扫描来查找它。
+- 当 `PSE_PG=1` 时某个端口仍保持 `carrier=0`，意味着相机没有取电，或者防水连接器没有完全插紧。
+- 上述地址是来自一个两相机设置的示例；请使用你自己相机所在的子网。`ip addr add` 在重启后不会持久生效——如果需要在重启后仍然有效，请使用 NetworkManager 或 `systemd-networkd` 来配置端口。
+
+```bash
+# find an unknown camera on a port (example subnet)
+for ip in $(seq 2 254); do ping -c1 -W1 192.168.10.$ip >/dev/null 2>&1 && echo "192.168.10.$ip is up"; done
+```
+
+### 双相机实时预览
+
+可以同时显示两路 RTSP 流，每路在各自的 GStreamer 窗口中。对第一个窗口使用 GPU/EGL 路径，对第二个窗口使用 X11/Xv 路径：在该平台上同时运行两个基于 EGL 的 sink 可能会导致 EGL 显示崩溃。
+
+```bash
+# Window A - GPU/EGL path
+nohup env DISPLAY=:0 XAUTHORITY=/home/seeed/.Xauthority gst-launch-1.0 \
+  rtspsrc location="rtsp://<user>:<password>@192.168.10.20:554/" protocols=tcp latency=200 ! \
+  rtph265depay ! h265parse ! nvv4l2decoder ! \
+  nvvidconv ! "video/x-raw(memory:NVMM),width=1152,height=648" ! \
+  nvegltransform ! nveglglessink sync=false > /tmp/camA_disp.log 2>&1 &
+
+# Window B - X11/Xv path
+nohup env DISPLAY=:0 XAUTHORITY=/home/seeed/.Xauthority gst-launch-1.0 \
+  rtspsrc location="rtsp://<user>:<password>@192.168.20.10:554/" protocols=tcp latency=200 ! \
+  rtph265depay ! h265parse ! nvv4l2decoder ! \
+  nvvidconv ! "video/x-raw,width=1280,height=720" ! \
+  xvimagesink sync=false > /tmp/camB_disp.log 2>&1 &
+```
+
+- 将 `<user>:<password>` 替换为你自己相机的凭据，并将 IP 地址替换为你在上面验证过的地址。
+- 当通过 SSH 启动这些命令时，需要 `DISPLAY=:0` 和 `XAUTHORITY=/home/seeed/.Xauthority`；如果你的桌面用户不是 `seeed`，请相应调整路径。从 JetPack 桌面会话中的终端运行这些命令则不需要这两项。
+- 使用 `protocols=tcp` 是因为在工业网络中，基于 UDP 的 RTSP 通常会被阻塞或存在丢包，而 `latency=200` 则为该流提供 200 ms 的抖动缓冲。
+- 此处测试的相机以 **H.265** 推流。请检查你自己的相机，如果是 H.264，则将 depayloader/解析器这对元素替换为对应的 H.264 版本。
+- 首帧会在几秒后出现（RTSP 握手、解码器预热以及相机的关键帧间隔）。如果某个窗口一直是黑屏，请查看 `/tmp/camA_disp.log` 或 `/tmp/camB_disp.log`。
+- 使用 `pkill -f "gst-launch-1.0.*rtspsrc"` 停止预览，或者如果两路流都在同一个 shell 中启动，则可以使用 `kill %1 %2`。
+
+读取某路流的编码格式：
+
+```bash
+timeout 20 gst-launch-1.0 -v rtspsrc location="rtsp://<user>:<password>@192.168.10.20:554/" \
+  protocols=tcp latency=200 ! fakesink 2>&1 | grep -o "encoding-name=(string)H26[45]" | head -1
+```
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_poe.png" alt="" />
+</div>
+
+对于 H.264 相机，请使用 `rtph264depay ! h264parse` 来替代 `rtph265depay ! h265parse`；其余管线保持不变。
+
 ## USB
 
-reComputer Rugged J401 提供 4 个 USB 3.2 Type-A 接口（通过内部 USB 3.1 Gen1 集线器实现，支持最高 5Gbps 数据速率，可用于连接高速外设、存储设备或摄像头）以及 1 个 USB 2.0 Type-C 调试接口（作为串行控制台，用于访问系统日志、调试启动问题以及执行固件更新）。
+reComputer Rugged J401 提供 4 个 USB 3.2 Type-A 端口（通过内部 USB 3.1 Gen1 集线器，实现最高 5Gbps 数据速率，可连接高速外设、存储设备或相机）以及 1 个 USB 2.0 Type-C 调试端口（作为串行控制台，用于访问系统日志、调试启动问题和执行固件更新）。
 
 ### USB-A 速度测试
 
@@ -345,9 +537,9 @@ rm -f "$TEST_FILE"
 EOF
 ```
 
-按 Esc 退出插入模式，然后输入 `:w` 并回车保存脚本，之后退出进程。
+按 Esc 退出插入模式，然后输入 `:w` 并按 Enter 保存脚本，再退出进程。
 
-使脚本具有可执行权限并进行测试：
+使脚本可执行并进行测试：
 
 ```Bash
 sudo chmod +x test_usb.sh
@@ -362,13 +554,13 @@ sudo chmod +x test_usb.sh
 
 ### USB 2.0 Type-C 接口
 
-通过此串口，使用 USB-C 数据线，可以在 PC 端监控输入和输出的调试信息。
+通过该串口，使用 USB-C 数据线，可以在 PC 端监控输入和输出的调试信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/18.jpg" alt="Image" width={400} height="auto" /></p>
 
 在 Windows 上安装 Silicon Labs CP210x Universal Windows VCP Driver。
 
-在设备管理器中，找到并确认分配给串行设备的 COM 端口
+在设备管理器中找到并确认分配给串行设备的 COM 端口
 
 （截图中为 COM8）。
 
@@ -399,7 +591,7 @@ reComputer Rugged J401 集成了带电池备份的硬件 RTC，用于精确计�
 
 **步骤 2.** 打开 reComputer Rugged J401。
 
-**步骤 3.** 在 Ubuntu 桌面上，点击右上角的下拉菜单，进入 `Settings > Date & Time`，通过以太网线连接网络，并选择 **Automatic Date & Time** 以自动获取日期/时间。
+**步骤 3.** 在 Ubuntu 桌面上，点击右上角的下拉菜单，导航到 `Settings > Date & Time`，通过以太网线连接网络，并选择 **Automatic Date & Time** 以自动获取日期/时间。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/22.png" alt="Image" width={800} height="auto" /></p>
 
@@ -411,7 +603,7 @@ reComputer Rugged J401 集成了带电池备份的硬件 RTC，用于精确计�
 cat /sys/devices/platform/bpmp/bpmp:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
 ```
 
-**步骤 5.** 断开网络连接并重启设备。你会发现系统时间在断电后仍能正常工作。
+**步骤 5.** 断开网络连接并重启设备。你会发现系统时间虽然断电，但仍能正常工作。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/23.png" alt="Image" width={800} height="auto" /></p>
 
@@ -449,7 +641,7 @@ sudo ip link set can0 up
 sudo gpioset -m wait gpiochip2 2=1 3=1
 ```
 
-##### 监控与发送数据
+##### 监控和发送数据
 
 ```Bash
 # Monitor data
@@ -470,7 +662,7 @@ CAN1 发送：
 
 #### CAN 回环测试
 
-你也可以将 CAN0 和 CAN1 连接在一起进行板级回环测试。将两路 CAN 总线物理短接（`CAN0_H` 接 `CAN1_H`，`CAN0_L` 接 `CAN1_L`），在两端启用板载 120 Ω 终端电阻，然后验证两个接口之间的双向通信。
+你也可以将 CAN0 和 CAN1 连接在一起进行板级回环测试。将两个 CAN 总线物理短接（`CAN0_H` 接 `CAN1_H`，`CAN0_L` 接 `CAN1_L`），在两端启用板载 120 Ω 终端电阻，然后验证两个接口之间的双向通信。
 
 打开三个终端并运行以下命令。
 
@@ -521,7 +713,7 @@ ip -d -s link show can1
 
 ## DI/DO
 
-reComputer Rugged J401 的 DI/DO 接口集成在 J47 2x10P 连接器上，与 CAN 接口共用。它们支持 2 路数字输入和 2 路数字输出，具备稳定的信号传输和工业级电压适配能力，适合连接数字传感器、继电器等外设设备。
+reComputer Rugged J401 的 DI/DO 接口集成在 J47 2x10P 连接器上，与 CAN 接口共用该接口。它们支持 2 路数字输入和 2 路数字输出，具有稳定的信号传输和工业级电压适配能力，适合连接数字传感器、继电器等外设设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/24.png" alt="Image" width={500} height="auto" /></p>
 
@@ -585,7 +777,7 @@ gpioget gpiochip0 144
 
 ## UART
 
-reComputer Rugged J401 配备了独立的 UART 接口（UART1），支持 RS232、RS422 和 RS485 通信模式，具备稳定的信号传输能力，并与多种外设设备具有良好的兼容性。
+reComputer Rugged J401 配备了独立的 UART 接口（UART1），支持 RS232、RS422 和 RS485 通信模式，具有稳定的信号传输能力，并与多种外设设备具有良好的兼容性。
 
 ### 硬件连接
 
@@ -604,7 +796,7 @@ UART 接口通道
 |0|1|0|RS-485 半双工|1T/1R RS-485，TX ENABLE <br />低电平有效|
 |0|1|1|RS-485 半双工|1T/1R RS-485，TX ENABLE 高电平有效|
 |1|0|0|RS-422 全双工|带终端电阻的 RS-422|
-|1|0|1|RS-232|1T/1R RS-232 可与 RS485 应用共存，无需总线开关（用于特殊用途）|
+|1|0|1|RS-232|1T/1R RS-232 与 RS485 应用共存，无需总线开关（用于特殊用途）|
 |1|1|0|RS-485|带终端电阻的 1T/1R RS-485，TX ENABLE 低电平有效|
 |1|1|1|关闭|所有 I/O 引脚为高阻态|
 
@@ -624,7 +816,7 @@ UART 接口通道
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/31.jpg" alt="Image" width={500} height="auto" /></p>
 
-**步骤 1：加载 SPI 内核模块（前置条件）**
+**步骤 1：加载 SPI 内核模块（前提条件）**
 
 在操作 SPI 接口之前，确保已加载 `spidev` 内核模块（默认系统可能已预加载，但建议手动确认）：
 
@@ -632,11 +824,11 @@ UART 接口通道
 sudo modprobe spidev
 ```
 
-如果命令执行后没有错误提示，表示模块加载成功；如果模块已经加载，该命令不会返回任何信息，这是正常现象。
+如果命令执行没有错误提示，则表示模块加载成功；如果模块已经加载，命令不会返回任何信息，这是正常现象。
 
 **步骤 2：查看 SPI 设备节点**
 
-在终端中输入以下命令，查看 reComputer Rugged J401 的 SPI 接口所映射的设备名称：
+在终端输入以下命令，查看 reComputer Rugged J401 的 SPI 接口所映射的设备名称：
 
 ```Bash
 ls /dev/spidev*
@@ -656,7 +848,7 @@ gcc spidev_test.c -o spidev_test
 
 **步骤 4：运行 SPI 测试程序**
 
-在终端中输入以下命令运行 SPI 测试程序（以 `/dev/spidev2.0` 为例）：
+在终端输入以下命令运行 SPI 测试程序（以 `/dev/spidev2.0` 为例）：
 
 ```Bash
 sudo ./spidev_test -v -D /dev/spidev0.0 -s 100000 -p "Hello SPI"
@@ -668,7 +860,7 @@ sudo ./spidev_test -v -D /dev/spidev0.0 -s 100000 -p "Hello SPI"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/32.png" alt="Image" width={800} height="auto" /></p>
 
-> 关键判断标准：TX（发送）数据与 RX（接收）数据一致，表明 SPI 回环测试成功，SPI 接口功能正常。
+> 关键判断标准：TX（发送）数据与 RX（接收）数据一致，表示 SPI 回环测试成功，SPI 接口功能正常。
 > 
 > 
 
@@ -719,9 +911,14 @@ sudo i2cdetect -y -r 1
 
 ## 资源
 
-- [reComputer Rugged J40 Datasheet](#) *(即将推出)*
+- [reComputer Rugged J40 规格书](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf) 
+- [载板原理图](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf)
+- [PSE 板原理图](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf)
+- [3D 文件](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp)
 - [Linux_for_Tegra 源代码](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson 设备对比](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+
+
 
 ## 技术支持与产品讨论
 

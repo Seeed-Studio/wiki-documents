@@ -4,7 +4,11 @@ const docList = [
       "path": "/ai_robotics_recomputer_rugged_j401_cv_demo",
       "image": "https://files.seeedstudio.com/wiki/rugged/rugged_banner.png",
       "title": "reComputer Rugged J401 for Industrial Vision",
-      "date": "2026-09-20"
+      "date": "2026-09-20",
+      "title_cn": "面向工业视觉的 reComputer Rugged J401",
+      "title_ja": "産業用ビジョン向け reComputer Rugged J401",
+      "title_es": "reComputer Rugged J401 para Visión Industrial",
+      "title_pt": "reComputer Rugged J401 para Visão Industrial"
     },
     {
       "path": "/ai_robotics_deploy_tensorrt_model_connect_on_jetson",
