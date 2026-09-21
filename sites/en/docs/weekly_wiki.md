@@ -34,6 +34,16 @@ This wiki explains how to control the reBot Arm B601-DM using natural voice comm
 
 </div>
 
+### [reComputer Rugged J401 for Industrial Vision](http://localhost:3000/ai_robotics_recomputer_rugged_j401_cv_demo)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki introduces several ways computer vision can be used on industrial forklifts. The example uses reComputer Rugged J401 as the edge controller. Its IP66 enclosure, M12 connectors, vibration resistance, four PoE ports, and Jetson Orin NX allow it to sit close to the cameras and run the vision workloads locally.
+
+</div>
+
 ### [Deploy TensorRT-Model-Connect on Jetson AGX Orin](https://wiki.seeedstudio.com/ai_robotics_deploy_tensorrt_model_connect_on_jetson/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/TRTMC/trtmc_wiki_cover.png" alt="pir" width={800} height="auto" /></p>
