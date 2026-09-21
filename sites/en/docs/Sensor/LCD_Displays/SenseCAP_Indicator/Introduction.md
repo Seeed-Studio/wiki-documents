@@ -8,7 +8,7 @@ slug: /Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator
 sku: 114993068,114993071,114993069,114993070
 sidebar_position: 1
 last_update:
-  date: 10/13/2025
+  date: 09/20/2026
   author: Twelve
 createdAt: '2023-05-17'
 updatedAt: '2026-01-07'
@@ -102,6 +102,7 @@ The embedded Semtech SX1262 LoRa® module enables you to build the LoRa® applic
 
 - [**PDF**]: [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)
 - [**PDF**]: [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
+- [ Exterior overall 3D model STP file](https://files.seeedstudio.com/wiki/SenseCAP_Indicator/Indicator_3D.stp )
 
 ## Tech Support
 
