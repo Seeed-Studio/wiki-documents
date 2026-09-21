@@ -9,7 +9,7 @@ keywords:
   - AI Image Compression
   - LoRa Mesh
   - AEIC-SE
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_L2_Pro.png
 slug: /meshcore_ai_image_transmission_l2
 sku: 100029766
 sidebar_position: 1
@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}>
 
-<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>
+<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_L2_Pro.png" style={{width:900, height:'auto'}}/>
 
 </div>
 
