@@ -736,6 +736,8 @@ Phenomenon: After successfully setting the zero point, the current state of the 
 
 ## 7.4 MotorBridge Controls RS Motors
 
+If your system does not yet have the PCAN driver installed, please refer to this page: [PCAN driver installed](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/#software-setup-and-calibration-workflow)
+
 <section id="rs-motors" className="section-card">
   <div className="section-title">
     <span>RS Motors</span>

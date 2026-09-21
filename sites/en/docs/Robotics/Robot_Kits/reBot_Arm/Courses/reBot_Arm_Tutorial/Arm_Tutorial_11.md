@@ -69,7 +69,10 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
   </div>
 
 - **reBot DM**
+<iframe width="600" height="400" src="https://www.youtube.com/embed/llSa6qn3yrY?si=D3ZUoBbih8_qtcFD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 - **reBot RS**
+<iframe width="600" height="400" src="https://www.youtube.com/embed/llSa6qn3yrY?si=Ejc4Q97tFzURuh1u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 </section>
 
@@ -190,6 +193,8 @@ lerobot-calibrate \
 
 **For RS Follower calibration:**
 
+If your system does not yet have the PCAN driver installed, please refer to this page: [PCAN driver installed](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/#software-setup-and-calibration-workflow)
+
 ```bash
 sudo ip link set can0 down 2>/dev/null
 sudo ip link set can0 type can bitrate 1000000
@@ -220,7 +225,7 @@ can2  # Could also be can0, can1, or other CAN number
 The port number used in all subsequent follower commands must match the output here.
 
 :::warning
-If your Jetson doesn't have the PCAN driver installed, communication will be persistently abnormal.
+If your Jetson doesn't have the [PCAN driver installed](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/#software-setup-and-calibration-workflow), communication will be persistently abnormal.
 :::
 
 </section>

@@ -152,6 +152,13 @@ In one control cycle, what data flows, in what format, through which path? One c
 
 Understanding the hardware and data flow, when you look at the four workflows in later chapters of this stage, you'll find they **use the same plugins and same configuration; only the LeRobot tools called differ**:
 
+| Workflow | LeRobot Tool |
+|---|---|
+| Teleoperation | `lerobot-teleoperate` |
+| Data Collection | `lerobot-record` |
+| Training | `lerobot-train` |
+| Inference & Deployment | `lerobot-record` (with a policy) or an inference script |
+
 - **Teleoperation and data collection use the same hardware chain** — the only difference is whether data is recorded.
 - **Inference deployment and data collection are structural mirror images:** during collection, actions come from the Leader (human); during inference, actions come from the model (checkpoint). Everything else (camera reading, State feedback, CAN commands, safety limits) is identical. This is the benefit of a plugin architecture — changing the decision-maker doesn't require changing the system.
 - **Teleoperation and inference deployment:** both have all hardware active and control the arm online; the difference is "who makes decisions" — in teleoperation, the decision-maker is the human; in inference, it's the model.
@@ -165,6 +172,15 @@ Understanding the hardware and data flow, when you look at the four workflows in
     <span>Config</span>
     <h2>10.6 DM vs. RS Configuration Differences</h2>
   </div>
+
+|  **Comparison Item**  |                    **B601-DM**                   |                **B601-RS**               |
+| :-------------------: | :----------------------------------------------: | :--------------------------------------: |
+|     PC Connection     |           Damiao USB2CAN Serial Bridge           |   SocketCAN-compatible USB-CAN Adapter   |
+|      Device Name      |          `/dev/ttyACM*` (Serial Bridge)          |   `can0` (SocketCAN Network Interface)   |
+|     `--robot.type`    |             `seeed_b601_dm_follower`             |         `seeed_b601_rs_follower`         |
+|     `--robot.port`    | `/dev/ttyACM0` (depending on actual enumeration) | `can0` (depending on actual enumeration) |
+| `--robot.can_adapter` |                     `damiao`                     |                `socketcan`               |
+
 
 One sentence summarizing the relationship between the two versions: **same skeleton, two sets of "hearts and nerves."** The mechanical structure, joint naming, and upper-level software workflows are identical; all differences are in the motors and CAN communication chain — which is also the most commonly misconfigured parameter in all LeRobot commands.
 
