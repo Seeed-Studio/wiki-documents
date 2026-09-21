@@ -158,6 +158,13 @@ This is the most critical section of the chapter. High-quality demonstration dat
     <h2>12.6 Success and Failure Criteria</h2>
   </div>
 
+  | **Unqualified Standard (Ambiguous)**              | **Qualified Standard (Measurable)**                                                                                  |
+| :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------- |
+| "As long as the object is roughly grasped."       | "The gripper is fully closed and grasps the center of the block."                                                    |
+| "As long as the block is placed inside the box."  | "The block is placed near the center of the box rather than randomly near the edge."                                 |
+| "Just pick up the block and put it into the box." | "The entire motion should be smooth, and the duration of each recorded episode should remain reasonably consistent." |
+
+
 For failed segments during recording, the principle is simple: **re-record this Episode.** Don't hold onto failed data hoping "maybe the model will learn from it" — the model will indeed learn, including from the failures.
 
 "Task complete" must be an **objectively determinable** state, not "looks about right." Good success criteria look like this:
