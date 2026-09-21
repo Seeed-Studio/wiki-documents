@@ -1,6 +1,6 @@
 ---
 description: 'wrc_demo Operation Guide: Complete steps for the reBot Arm B601-RS visual grasping demo — environment setup, model download, LLM switching, hand-eye calibration, demo running, troubleshooting.'
-title: reBot Arm B601-RS Embodied Agent Design Framework
+title: B601-RS with Agent Claw
 keywords:
   - wrc_demo
   - reBot Arm B601-RS

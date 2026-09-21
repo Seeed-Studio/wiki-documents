@@ -1,6 +1,6 @@
 ---
 description: Lerobot 中 SO-ARM 的舵机调试工具。
-title: Lerobot 中 SO-ARM 的舵机调试工具
+title: SO-Arm 舵机调试工具
 keywords:
   - Lerobot
   - SO-ARM

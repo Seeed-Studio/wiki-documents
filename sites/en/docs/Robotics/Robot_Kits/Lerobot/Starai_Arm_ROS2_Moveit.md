@@ -1,6 +1,6 @@
 ---
 description: This wiki provides the Starai Arm Manipulator - ROS2 MoveIt Guide.
-title: Starai Arm in ROS2 MoveIt
+title: Starai Arm with ROS2 MoveIt
 keywords:
   - Moveit
   - ROS2

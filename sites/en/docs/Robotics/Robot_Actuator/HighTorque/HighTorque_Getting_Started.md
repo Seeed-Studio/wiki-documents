@@ -1,6 +1,6 @@
 ---
 description: HighTorque Motors Getting Started
-title: HighTorque Motors Getting Started
+title: HighTorque Software
 keywords:
   - actuator
   - motor

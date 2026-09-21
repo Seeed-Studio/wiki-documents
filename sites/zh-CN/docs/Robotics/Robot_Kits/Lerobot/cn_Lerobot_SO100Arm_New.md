@@ -1,6 +1,6 @@
 ---
 description: 本 Wiki 提供 SO-ARM100 / SO-ARM101 的组装、调试、数据采集和训练教程。
-title: 基于 LeRobot 的 SO-ARM100 / SO-ARM101 机械臂入门教程
+title: SO-Arm 和 Lerobot
 keywords:
   - LeRobot
   - Hugging Face
