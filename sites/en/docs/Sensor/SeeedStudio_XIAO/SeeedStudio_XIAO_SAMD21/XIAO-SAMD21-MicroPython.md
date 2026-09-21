@@ -35,7 +35,13 @@ First, we are going to connect the Seeed Studio XIAO SAMD21 to the computer and 
 
 #### For XIAO SAMD21
 
-- **Step 1**. Press and hold the **BOOT** button and then connect the Seeed Studio XIAO SAMD21 Series to the PC through the Type-C cable. If it works well, there is an **Arduino** disk shown on the PC.
+:::tip
+
+- [**Bootloader Mode For XIAO SMAD21 Series**](https://wiki.seeedstudio.com/Seeeduino-XIAO/#enter-bootloader-mode)
+
+:::
+
+- **Step 1**. Connect the Seeed Studio XIAO SAMD21 to your computer via a Type‑C cable, then double‑tap the BOOT button to enter BOOT mode.. If it works well, there is an **Arduino** disk shown on the PC.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
