@@ -9,8 +9,8 @@ image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_
 slug: /recamera_pro
 sku: 10003420
 last_update:
-  date: 09/23/2026
-  author: MOSS
+  date: 09/21/2026
+  author: Seeed Studio
 url: https://wiki.seeedstudio.com/recamera_pro/
 ---
 
