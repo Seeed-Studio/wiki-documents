@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg
 slug: /meshcore_node_map_l1
 sku: 114993648,114993649,114993653,114993654
-sidebar_position: 2
+sidebar_position: 4
 last_update:
   date: 3/19/2026
   author: Michelle Huang
@@ -51,11 +51,11 @@ Primeiro faça login no repeater. A senha de administrador padrão de um repeate
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AAdmin.png" alt="pir" width={900} height="auto" /></p>
 
-Ative o GPS e obtenha a localização (alguns firmwares de repeater não suportam a atualização da localização em tempo real, você pode precisar escolher sua localização manualmente).
+Ative o GPS e obtenha a localização (alguns firmwares de repeater não suportam a atualização da localização em tempo real, você pode precisar escolher manualmente sua localização).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreGPSSnciny.png" alt="pir" width={900} height="auto" /></p>
 
-### Pesquise seu nó
+### Pesquisar seu nó
 
 Após a configuração, aguarde alguns minutos e então você poderá ver seus nós no mapa.
 
@@ -63,7 +63,7 @@ Após a configuração, aguarde alguns minutos e então você poderá ver seus n
 
 Você pode ver o nome do dispositivo, função e informações de configuração. Assim, usando este mapa, você pode facilmente descobrir onde estão aqueles nós ativos.
 
-## (Avançado) Construindo seu próprio frontend de Mapa de Nós
+## (Avançado) Criando seu próprio frontend de Mapa de Nós
 
 Para usuários avançados, é possível criar um frontend de Mapa de Nós personalizado. Recomenda-se usar o seguinte fluxo de trabalho: 
 
