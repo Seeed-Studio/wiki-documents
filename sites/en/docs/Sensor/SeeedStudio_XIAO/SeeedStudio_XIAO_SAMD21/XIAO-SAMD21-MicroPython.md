@@ -37,17 +37,17 @@ First, we are going to connect the Seeed Studio XIAO SAMD21 to the computer and 
 
 :::tip
 
-- [**Bootloader Mode For XIAO SMAD21 Series**](https://wiki.seeedstudio.com/Seeeduino-XIAO/#enter-bootloader-mode)
+- [**Bootloader Mode For XIAO SAMD21 Series**](https://wiki.seeedstudio.com/Seeeduino-XIAO/#enter-bootloader-mode)
 
 :::
 
-- **Step 1**. Connect the Seeed Studio XIAO SAMD21 to your computer via a Type‑C cable, then double‑tap the BOOT button to enter BOOT mode.. If it works well, there is an **Arduino** disk shown on the PC.
+- **Step 1**. Connect the Seeed Studio XIAO SAMD21 to your computer via a Type‑C cable, then double‑tap the Reset button to enter BOOT mode. If it works well, there is an **Arduino** disk shown on the PC.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
 - **Step 2**. Flash the firmware
 
-Just go to the official and download the latest firmware
+Just go to the MicroPython official and download the latest firmware
 
     - [XIAO SAMD21 Series MicroPython Firmware](https://micropython.org/download/SEEED_XIAO_SAMD21/)
 
