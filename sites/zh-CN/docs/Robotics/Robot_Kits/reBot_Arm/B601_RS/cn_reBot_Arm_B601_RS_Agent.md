@@ -23,7 +23,7 @@ updatedAt: '2026-08-28'
 url: https://wiki.seeedstudio.com/cn/wrc_demo_tutorial/
 ---
 
-# reBot B601 RS 机械臂的具身 Agent 架构设计
+# reBot Arm B601-RS 具身 Agent 设计框架
 
 <p align="center">
   <a href="./LICENSE">
@@ -627,7 +627,7 @@ demo运行效果视频
     width="900" 
     height="600" 
     src="https://player.bilibili.com/player.html?bvid=BV1aWtz6MEKf&page=1&autoplay=0"
-    title="从 VLM 推理到实时控制：reBot B601 RS 机械臂的具身 Agent 架构设计" 
+    title="从 VLM 推理到实时控制：reBot Arm B601-RS 具身 Agent 设计框架"
     frameborder="0" 
     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     referrerpolicy="strict-origin-when-cross-origin" 

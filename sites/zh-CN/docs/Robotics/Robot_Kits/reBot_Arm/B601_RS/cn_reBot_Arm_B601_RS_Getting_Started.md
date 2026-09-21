@@ -37,10 +37,16 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -183,8 +189,6 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 1. 已验证虚拟机的性能不足以支撑 Demo 运行且存在配置问题，建议优先使用 Ubuntu 物理机控制机械臂。
 
    推荐安装 **Ubuntu 24.04 LTS**。
-
-   推荐B站安装教程：[Ubuntu双系统安装教程](https://www.bilibili.com/video/BV1Cc41127B9/)
 
 2. （Beta）可以让 Agent 帮助你初始化机械臂。复制以下内容发送给 Agent：
 

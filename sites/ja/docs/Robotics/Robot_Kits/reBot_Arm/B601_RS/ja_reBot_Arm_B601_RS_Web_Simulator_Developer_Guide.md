@@ -1,6 +1,6 @@
 ---
-description: この開発者ガイドでは、B601-RS 向け ReBot Arm Digital Twin & Control Stack の Web コンソール、ROS 2、RobStride/SocketCAN、MuJoCo シミュレーション、ビジュアル把持、および LLM/MCP エージェントのインストール、実行、二次開発ワークフローについて説明します。
-title: ReBot Arm Digital Twin & Control Stack — B601-RS
+description: この開発者ガイドでは、reBot Arm B601-RS Digital Twin & Control Stack の Web コンソール、ROS 2、RobStride/SocketCAN、MuJoCo シミュレーション、ビジュアルグラスピング、および LLM/MCP エージェントのインストール、実行、二次開発ワークフローを紹介します。
+title: reBot Arm B601-RS Digital Twin & Control Stack
 keywords:
   - reBot Arm
   - B601-RS
@@ -23,13 +23,14 @@ createdAt: '2026-08-13'
 updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# ReBot Arm Digital Twin & Control Stack — B601-RS
+# reBot Arm B601-RS Digital Twin & Control Stack
 
 <RebotRsDocNav />
 
@@ -37,10 +38,16 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>今すぐ入手</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -57,56 +64,52 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <strong>Three.js 可視化 · ROS 2 · SocketCAN · MuJoCo シミュレーション · LLM/MCP 制御</strong>
 </p>
 
-B601-RS 向け ReBot Arm Digital Twin & Control Stack は、Three.js Web コンソール、ROS 2 実機ドライバ、RS 専用 MuJoCo ダイナミクスシーン、ビジョン検出、軌道生成と逆運動学、オプションの LLM/MCP 把持エージェントを統合しています。本ガイドでは、フルシステムのインストール、起動、および開発方法を説明します。
+reBot Arm B601-RS Digital Twin & Control Stack は、Three.js Web コンソール、ROS 2 実機ドライバ、RS 専用 MuJoCo ダイナミクスシーン、ビジョン検出、軌道生成と逆運動学、そしてオプションの LLM/MCP グラスピングエージェントを統合しています。本ガイドでは、フルシステムのインストール、起動、および開発方法を説明します。
 
 <GitHubStarButton owner="Yang-Ci" repo="ReBot_Arm_DigitalTwin_RS" />
 
-> **重要な安全上の注意**
->
-> 実機ロボットを起動する前に、アームを固定し、作業空間を片付け、物理的な非常停止が動作することを確認し、まずシミュレーションで動作を検証してください。最初の実機テストでは、速度制限を `0.2-0.4 rad/s` に保ち、1 度に 1 関節だけを動かしてください。
-
-## プロジェクトの特徴
+## プロジェクトの特長
 
 1. **RS 専用アームモデル**
 
    Web コンソールと ROS 2 は `ReBot_Arm_RS.urdf` と、それに対応する STL メッシュを使用します。Web サーバーはまず `rebotarm_ros2_RS` ワークスペースからモデルを読み込み、オフライン用のバックアップコピーも保持します。
 
-2. **RobStride + SocketCAN による実機リンク**
+2. **RobStride + SocketCAN 実機リンク**
 
-   実機ロボットは、デフォルトで `1 Mbps` の Linux SocketCAN インターフェース `can0` を使用します。コントローラは `reBotArm_control_py` を通じて RobStride モータと通信します。
+   実機はデフォルトで Linux SocketCAN インターフェース `can0` を `1 Mbps` で使用します。コントローラは `reBotArm_control_py` を通じて RobStride モータと通信します。
 
 3. **MIT 125 Hz オンライン制御**
 
-   Web コンソールは最大 60 Hz で目標値を更新し、実機コントローラは 125 Hz で速度・加速度・ジャークで制限されたオンライン参照軌道を生成し、MIT の `q/dq/kp/kd/tau` コマンドを送信します。Web の目標更新はモータ制御ループをブロックしません。
+   Web コンソールは最大 60 Hz でターゲットを更新し、実機コントローラは速度・加速度・ジャークで制限されたオンライン参照軌道を 125 Hz で生成し、MIT の `q/dq/kp/kd/tau` コマンドを送信します。Web のターゲット更新はモータ制御ループをブロックしません。
 
 4. **実機とシミュレーションの名前空間分離**
 
-   実機ロボットはデフォルトで `/rebotarm`、シミュレーションは `/rebotarm_rs` を使用します。同じ Web コンソールから制御対象を切り替えることができ、実機と Fake Driver を同時に動かしてインターフェースを比較できます。
+   実機はデフォルトで `/rebotarm`、シミュレーションは `/rebotarm_rs` を使用します。同じ Web コンソールから制御対象を切り替えることができ、実機と Fake Driver を同時に起動してインターフェースを比較できます。
 
 5. **RS 専用 MuJoCo シーン**
 
-   MuJoCo は `physics` モードと `kinematic` モードをサポートします。デフォルトの `physics` モードには、重力、接触、テーブルトップ上の物体、オーバーヘッドカメラ、色検出、物理的な把持検証が含まれます。
+   MuJoCo は `physics` モードと `kinematic` モードをサポートします。デフォルトの `physics` モードには、重力、接触、テーブルトップ上の物体、オーバーヘッドカメラ、色検出、および物理的な把持検証が含まれます。
 
 6. **フィードバック駆動の Web アニメーション**
 
-   実機モードでは、不透明モデルが実際のフィードバックを、半透明モデルが制御目標を表します。Web コンソールは、ローカルアニメーションを実機アームの姿勢と誤認しないように、rosbridge の計測値に対して適応ローパスフィルタ、フィードバックのデッドゾーン、表示補間を適用します。
+   実機モードでは、ソリッドモデルが実際のフィードバックを、半透明モデルが制御ターゲットを表します。Web コンソールはローカルアニメーションを実機姿勢と誤認しないよう、rosbridge の計測値に対して適応ローパスフィルタ、フィードバックのデッドゾーン、表示補間を適用します。
 
-7. **安全状態マシン**
+7. **安全ステートマシン**
 
-   システムは軌道、重力補償、安全な原点復帰、連続 Web コマンドを仲裁します。ゼロ以外の姿勢から無効化する場合は、まず安全な原点復帰を実行して検証します。検証に失敗した場合、アームが突然落下するのを防ぐため、アームは有効なままに保たれます。
+   システムは軌道、重力補償、安全な原点復帰、および連続 Web コマンドを仲裁します。ゼロ以外の姿勢から無効化する場合は、まず安全な原点復帰を実行して検証します。検証に失敗した場合、アームが突然落下しないよう、アームは有効状態を維持します。
 
-8. **ビジュアル把持と LLM/MCP エージェント**
+8. **ビジュアルグラスピングと LLM/MCP エージェント**
 
-   シミュレーションシーンには、オーバーヘッド検出、IK、把持、持ち上げ検証、配置に対応した赤・青・黄のオブジェクトが用意されています。MCP ツールは単独でも、大規模言語モデルと接続して自然言語から構造化されたロボット操作を呼び出すこともできます。
+   シミュレーションシーンには、オーバーヘッド検出、IK、把持、リフト検証、配置に対応した赤・青・黄のオブジェクトが用意されています。MCP ツールは単独でも、大規模言語モデルと接続して自然言語から構造化されたロボット操作を呼び出すこともできます。
 
 ## 配線とネットワークに関する注意
 
-### RS 実機ロボットの CAN 配線
+### RS 実機 CAN 配線
 
-1. アームを固定し、その可動範囲を空にします。
+1. アームをしっかり固定し、可動範囲を確保します。
 2. RobStride モータの CAN バス、電源、および USB-CAN アダプタを接続します。
 3. CAN_H、CAN_L、GND が正しく配線されていることを確認し、ハードウェア要件に従って終端抵抗を設定します。
-4. 通電後、対象の CAN アダプタが Ubuntu 上に認識されていることを確認します。
+4. 通電後、目的の CAN アダプタが Ubuntu 上に認識されていることを確認します。
 
 `can0` を設定します：
 
@@ -123,13 +126,13 @@ ip -details link show can0
 candump can0
 ```
 
-連続した CAN フレームが表示される場合、そのインターフェースはデータを受信しています。`candump` を終了するには `Ctrl+C` を押します。
+連続した CAN フレームが表示されれば、そのインターフェースがデータを受信していることを意味します。`candump` を終了するには `Ctrl+C` を押します。
 
 > インターフェースが `BUS-OFF` 状態になった場合は、まず電源、グラウンド、ボーレート、終端抵抗、モータ ID、CAN 配線を確認してください。コントローラを何度も再起動してハードウェアの不具合を隠さないでください。
 
 ### Web と ROS 2 のネットワーク
 
-Web コンソールは rosbridge WebSocket を介して ROS 2 と通信し、デフォルトでポート `9090` を使用します：
+Web コンソールは、デフォルトでポート `9090` を使用する rosbridge WebSocket を介して ROS 2 と通信します：
 
 ```text
 Web console: http://<Ubuntu-IP>:3002
@@ -138,9 +141,9 @@ MCP Server:  http://<Ubuntu-IP>:8081/mcp
 Text Agent:  http://<Ubuntu-IP>:8082
 ```
 
-Web コンソールと ROS 2 が同じマシン上で動作している場合は、`localhost` を使用できます。LAN 上の別のコンピュータからアクセスする場合、ブラウザを開いているコンピュータ自身の `localhost` を入力せず、ROS 2 サービスを実行している Ubuntu ホストの IP を使用してください。
+Web コンソールと ROS 2 が同じマシンで動作している場合は、`localhost` を使用できます。LAN 上の別のコンピュータからアクセスする場合、ブラウザ側コンピュータ自身の `localhost` を入力せず、ROS 2 サービスを実行している Ubuntu ホストの IP を使用してください。
 
-プロジェクトの起動スクリプトは、ROS 2 のディスカバリ範囲をデフォルトで `LOCALHOST` に設定し、Wi-Fi ローミングや IP 変更によって同一マシン上のノードが別々の DDS ネットワークに分断されないようにします。これは、他のデバイスから HTTP/WebSocket ポートへアクセスすることには影響しません。別のコンピュータを ROS グラフに直接参加させるには、該当するターミナルで同じ値を設定します：
+プロジェクトの起動スクリプトは、ROS 2 のディスカバリ範囲をデフォルトで `LOCALHOST` に設定しているため、Wi-Fi ローミングや IP 変更が発生しても、同一マシン上のノードが別々の DDS ネットワークに分断されることはありません。これは、他のデバイスからの HTTP/WebSocket ポートへのアクセスには影響しません。別のコンピュータを ROS グラフに直接参加させるには、関連するターミナルでも同じ値を設定します：
 
 ```bash
 export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
@@ -148,16 +151,16 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 
 ## 動作環境要件
 
-| Item | 推奨要件 |
+| 項目 | 推奨要件 |
 | --- | --- |
-| Backend OS | Ubuntu 24.04 |
+| バックエンド OS | Ubuntu 24.04 |
 | ROS 2 | Jazzy |
-| 互換性のある参照環境 | Ubuntu 22.04 + ROS 2 Humble（実機での使用には独自のリグレッションテストが必要） |
+| 互換性のある参照環境 | Ubuntu 22.04 + ROS 2 Humble（実機利用には独自のリグレッションテストが必要） |
 | Python | 3.12（Jazzy）または 3.10（Humble） |
 | Node.js | 18 以上 |
-| Browser | 最新の安定版 Chrome、Chromium、Edge、または Firefox |
-| CAN tools | `iproute2`、`can-utils` |
-| Real-robot CAN | `can0`、1 Mbps |
+| ブラウザ | 最新の安定版 Chrome、Chromium、Edge、または Firefox |
+| CAN ツール | `iproute2`、`can-utils` |
+| 実機 CAN | `can0`、1 Mbps |
 | MuJoCo | プロジェクトの Python 環境によってインストール |
 
 ## インストール手順
@@ -167,7 +170,7 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
     <span className="rebot-step-number">1</span>
 <div className="rebot-step-content">
 
-      #### Step 1: プロジェクトを取得する
+      #### ステップ 1: プロジェクトを取得する
 
       <p className="rebot-step-label">Step 1</p>
 
@@ -185,7 +188,7 @@ cd ~/ReBot_Arm_DigitalTwin_RS
     <span className="rebot-step-number">2</span>
 <div className="rebot-step-content">
 
-      #### Step 2: 読み取り専用の環境チェック
+      #### ステップ 2: 読み取り専用の環境チェック
 
       <p className="rebot-step-label">Step 2</p>
 
@@ -197,7 +200,7 @@ cd ~/ReBot_Arm_DigitalTwin_RS
 このコマンドはシステムをチェックするだけで、環境を変更しません。チェック内容は次のとおりです：
 
 - Ubuntu、Python、Node.js のバージョン
-- ROS 2、rosbridge、MoveIt、ビルドツール
+- ROS 2、rosbridge、MoveIt、およびビルドツール
 - SocketCAN ツールと `can0`
 - Python 仮想環境と主要モジュール
 - ROS 2 ワークスペースのビルド結果
@@ -210,7 +213,7 @@ cd ~/ReBot_Arm_DigitalTwin_RS
     <span className="rebot-step-number">3</span>
 <div className="rebot-step-content">
 
-      #### Step 3: ワンクリックでのインストールとビルド
+      #### ステップ 3: ワンクリックでのインストールとビルド
 
       <p className="rebot-step-label">Step 3</p>
 
@@ -219,7 +222,7 @@ cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm doctor
 ```
 
-インストールスクリプトは、不足している ROS 2、Node.js、SocketCAN、ビルド依存関係をインストールし、`rebotarm_ros2_RS/.venv` を作成して RS 実機、MuJoCo、Agent 用の Python 依存関係をインストールし、rosdep を実行し、次のコマンドで ROS 2 ワークスペースをビルドします：
+インストールスクリプトは、不足している ROS 2、Node.js、SocketCAN、およびビルド依存関係をインストールし、`rebotarm_ros2_RS/.venv` を作成して RS 実機、MuJoCo、Agent 用の Python 依存関係をインストールし、rosdep を実行し、次のコマンドで ROS 2 ワークスペースをビルドします：
 
 ```bash
 colcon build --symlink-install
@@ -248,7 +251,7 @@ colcon build --symlink-install
     <span className="rebot-step-number">4</span>
 <div className="rebot-step-content">
 
-      #### Step 4: Web の環境変数を設定する
+      #### ステップ 4: Web 環境変数を設定する
 
       <p className="rebot-step-label">Step 4</p>
 
@@ -275,7 +278,7 @@ Web コンソールと ROS 2/Agent が同じマシン上にない場合は、プ
 
 <TabItem value="web" label="純粋な Web デモ">
 
-rosbridge や ROS 2 を起動せず、Node.js Web サーバーのみを起動します：
+rosbridge や ROS 2 を使わずに、Node.js Web サーバーだけを起動します：
 
 ```bash
 cd ~/ReBot_Arm_DigitalTwin_RS/reBotArm_simulator-RS
@@ -295,7 +298,7 @@ http://localhost:3002
 ![reBot Arm B601-RS web simulator interface](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web_rs/rebot_rs_web_simulator_en.png)
 </TabItem>
 
-<TabItem value="sim" label="完全な RS MuJoCo シミュレーション">
+<TabItem value="sim" label="フル RS MuJoCo シミュレーション">
 
 ターミナル 1 で Fake Driver、MuJoCo、カメラ、検出、MCP Agent、および rosbridge を起動します：
 
@@ -390,7 +393,7 @@ export REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE
 - Fake Driver `/rebotarm_rs`;
 - rosbridge `9090`。
 
-これはインターフェース、関節方向、ステータスを比較するために使用します。完全な MuJoCo スタック、ビジョン、Agent、Web サーバーは起動しません。コマンドを送信する前に、Web コンソールで選択されているネームスペースを再度確認してください。
+これはインターフェース、関節方向、ステータスを比較するために使用します。完全な MuJoCo スタック、ビジョン、Agent、Web サーバーは起動しません。コマンドを送信する前に、Web コンソールで選択されている namespace を再度確認してください。
 
 </TabItem>
 
@@ -398,11 +401,11 @@ export REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE
 
 ## 統一コマンドライン
 
-| コマンド | 説明 |
+| Command | 説明 |
 | --- | --- |
 | `./rebotarm doctor` | 読み取り専用の環境チェック。`./setup.sh --check` と同等 |
 | `./rebotarm start web` | rosbridge を起動または再利用し、Web サーバーを起動 |
-| `./rebotarm start rs_sim` | 完全な RS MuJoCo シミュレーションスタックを起動 |
+| `./rebotarm start rs_sim` | フル RS MuJoCo シミュレーションスタックを起動 |
 | `./rebotarm start rs` | RS 実機ロボットコントローラを起動。ハードウェア確認用の変数が必要 |
 | `./rebotarm status` | 登録済みプロセス、ポート、および `can0` を表示 |
 | `./rebotarm stop` | `start web` によって登録された web/rosbridge 子プロセスを停止 |
@@ -462,7 +465,7 @@ User drags a joint slider or TCP handle
   -> RobStride motors
 ```
 
-新しい Web ターゲットは、オンライン軌道の終端点のみを更新します。ブラウザが一時的に次のフレームの送信を停止しても、125 Hz の制御ループは連続した参照値の生成を継続します。コマンドの QoS 深度は 1 であるため、新しいターゲットは未処理の古いターゲットを上書きし、ドラッギング停止後に位置のバックログが再生されることを防ぎます。
+新しい Web ターゲットは、オンライン軌道の終端点だけを更新します。ブラウザが一時的に次のフレームの送信を止めた場合でも、125 Hz の制御ループは連続した参照値の生成を継続します。コマンドの QoS 深度は 1 なので、新しいターゲットは未処理の古いターゲットを上書きし、ドラッギング停止後に位置のバックログが再生されることを防ぎます。
 
 ### RS 実機ロボットから Web へのフィードバック
 
@@ -478,7 +481,7 @@ RobStride encoder/status
   -> Three.js solid feedback model
 ```
 
-半透明モデルは制御ターゲットを表します。関節およびグリッパの誤差が十分に小さくなると、ターゲットの影は自動的に消えます。表示フィルタリングは Web 上の見た目にのみ影響し、モーターに送信されるターゲットは変更しません。
+半透明モデルは制御ターゲットを表します。関節およびグリッパの誤差が十分に小さくなると、ターゲットの影は自動的に消えます。表示フィルタリングは Web 上の見た目だけに影響し、モーターに送信されるターゲットは変更しません。
 
 ### MuJoCo シミュレーションチェーン
 
@@ -494,31 +497,31 @@ Web console or Agent
 
 ## Web 制御に関する注意事項
 
-### 制御ターゲットとネームスペース
+### 制御ターゲットと namespace
 
-| モード | ネームスペース | Web モデルソース |
+| モード | Namespace | Web モデルソース |
 | --- | --- | --- |
 | RS 実機ロボット | `/rebotarm` | 実機ロボットの `/joint_states` フィードバック |
 | RS シミュレーション | `/rebotarm_rs` | 実際の MuJoCo 状態を優先して使用 |
 
-モードを切り替えると、Web コンソールはターゲットネームスペースに応じて rosbridge クライアントとインターフェースパスを再作成します。
+モードを切り替えると、Web コンソールはターゲット namespace に応じて rosbridge クライアントとインターフェースパスを再作成します。
 
 ### 関節とグリッパ
 
-- J1〜J6 はラジアン単位で制御され、RS URDF と一貫したリミットを持ちます。
+- J1〜J6 はラジアン単位で制御され、RS URDF と同じリミットを持ちます。
 - Web 上の速度範囲は `0.05-1.50 rad/s` で、デフォルトは `1.2 rad/s` です。
 - J1〜J6 はデフォルトで `30 ms` のスライダ減衰と `1 deg` の入力デッドゾーンを使用し、スライダを離したときに最終位置が強制的に確定されます。
 - J7/グリッパは Web 上では開口幅として表示され、範囲は `0-71.5 mm` です。
-- グリッパはパブリッシュ時に RS モーター範囲 `0-5 rad` に変換され、ROS フィードバックはミリメートルに戻されます。
-- J7 は J1〜J6 のラジアン減衰や入力デッドゾーンを通らず、ブラウザのレンダリングフレームごとに最新のターゲットのみが送信されます。
+- グリッパは publish 時に RS モーター範囲 `0-5 rad` に変換され、ROS フィードバックはミリメートルに戻されます。
+- J7 は J1〜J6 のラジアン減衰や入力デッドゾーンを通らず、ブラウザのレンダリングフレームごとに最新のターゲットだけが送信されます。
 
 ### TCP ドラッギングと IK
 
-Web コンソールは、TCP ターゲットの解法にダンピング付き最小二乗法（DLS）を使用します。RS バージョンでは特異点レベルに応じてダンピングを調整し、その後同じ MIT オンライン制御チェーンを通じて関節解を送信します。
+Web コンソールは、TCP ターゲットの解法に DLS（damped least squares）を使用します。RS バージョンでは特異点の度合いに応じて減衰を調整し、その後、同じ MIT オンライン制御チェーンを通じて関節解を送信します。
 
 Web の Three.js シーンは Y-up、ROS は Z-up を使用します。座標変換ロジックは `rebot-sim.js` にあります。姿勢機能を拡張する際は、フォーム値を直接入れ替えるのではなく、既存の変換処理を再利用してください。
 
-姿勢入力はメートル単位を使用します：X は前方、Y は左方向、Z は上方向です。ターゲットに到達できない場合は、まず Z を大きくするか水平方向の距離を短くし、その後で姿勢制約と関節リミットを確認してください。
+姿勢入力はメートル単位を使用します：X は前方、Y は左方向、Z は上方向です。ターゲットに到達できない場合は、まず Z を増やすか水平方向の距離を短くし、その後で姿勢制約と関節リミットを確認してください。
 
 ### ティーチングと軌道再生
 
@@ -528,19 +531,19 @@ Web コンソールは関節軌道を記録し、呼び出すことができま�
 /<namespace>/follow_joint_trajectory
 ```
 
-RS 実機アクションサーバーは、連続な単調三次エルミート位置／速度リファレンスを使用し、短すぎる軌道セグメントを自動的に延長して、通常の実機軌道速度を約 `0.60 rad/s` 未満に保ちます。呼び出し側はアクション結果または実機フィードバックを待つ必要があり、元のリクエストの継続時間に基づいて再生アニメーションを早期終了してはいけません。
+RS 実機アクションサーバーは、連続な単調三次エルミート位置／速度リファレンスを使用し、短すぎる軌道セグメントを自動的に延長して、通常の実機軌道速度をおよそ `0.60 rad/s` 未満に保ちます。呼び出し側はアクション結果または実機フィードバックを待つ必要があり、元のリクエストの所要時間に基づいて再生アニメーションを早期終了させてはいけません。
 
 ### 有効化、安全ホーミング、無効化
 
 - 実機コントローラは、起動のたびに有効化する必要があります。
-- `safe_home` はゼロへ滑らかに戻り、角度と速度を検証します。
+- `safe_home` は滑らかにゼロへ戻り、角度と速度を検証します。
 - ゼロ以外の姿勢から無効化をクリックすると、まず `SAFE_HOMING` に入ります。
-- ホーミング検証に失敗した場合、モーターは有効のままで、失敗結果が返されます。
-- `set_zero` はモーターのゼロ点を書き換えるもので、通常のホーミングボタンではありません。機構が実際にキャリブレーション済み姿勢にあるときだけ呼び出してください。
+- ホーミング検証が失敗した場合、モーターは有効のままで、失敗結果が返されます。
+- `set_zero` はモーターのゼロ点を書き換えるもので、通常のホーミングボタンではありません。機構が実際にキャリブレーション済み姿勢にあるときにのみ呼び出してください。
 
 ### 重力補償
 
-RS の重力補償は現在計測されている姿勢から開始し、MIT を関節ごとに切り替えるため、ゼロ姿勢がターゲットと誤認されることはありません。繰り返し開始しても結果は同じであり、停止すると最後に計測した位置を保持します。
+RS の重力補償は現在計測されている姿勢から開始し、MIT 制御を関節ごとに切り替えるため、ゼロ姿勢がターゲットと誤認されることはありません。繰り返し開始しても結果は同じであり、停止すると最後に計測した位置が保持されます。
 
 重力補償中は、Web の関節、TCP、軌道、およびグリッパーコマンドは拒否されます。関連サービス：
 
@@ -609,14 +612,14 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger '{}'
 | `/rebotarm/gripper/command` | `control_msgs/action/GripperCommand` | グリッパーアクション |
 | `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | デカルト姿勢モーション |
 
-### MuJoCo とビジョンインターフェース
+### MuJoCo およびビジョンインターフェース
 
 | インターフェース | 型／用途 |
 | --- | --- |
 | `/rebotarm_rs/mujoco/joint_states` | 実際の MuJoCo 関節状態 |
 | `/rebotarm_rs/mujoco/object_states` | シーンオブジェクト状態（JSON） |
 | `/rebotarm_rs/mujoco/overhead_rgb/image_raw` | オーバーヘッド RGB カメラ |
-| `/rebotarm_rs/vision/color_blocks/detections` | カラー物体検出 JSON |
+| `/rebotarm_rs/vision/color_blocks/detections` | カラーオブジェクト検出 JSON |
 | `/rebotarm_rs/mujoco/reset` | シミュレーションをリセット |
 | `/rebotarm_rs/mujoco/record/start` | 記録を開始 |
 | `/rebotarm_rs/mujoco/record/stop` | 記録を停止 |
@@ -625,9 +628,9 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger '{}'
 
 ## ビジュアルグラスピング
 
-フルシミュレーションには、デフォルトで赤い立方体、青い直方体、黄色い円柱が含まれます。Web コンソールではターゲットカラーを選択するか自動選択し、その後アライメント、プレグラスプ、下降、把持、持ち上げ、配置を実行できます。
+フルシミュレーションには、デフォルトで赤い立方体、青い直方体、黄色い円柱が含まれます。Web コンソールではターゲットカラーを選択するか自動選択し、その後アライメント、プレグラスプ、下降、閉じる、持ち上げ、配置を実行できます。
 
-把持の成功は軌道完了だけでは決まりません。システムは MuJoCo オブジェクトが実際に持ち上がったかどうかも確認し、グリッパーが空のまま閉じた場合や、物体を持ち上げずに軌道だけが完了した場合の誤った成功報告を防ぎます。
+グラスプ成功は軌道完了だけでは決まりません。システムは MuJoCo オブジェクトが実際に持ち上げられたかどうかも確認し、グリッパーが空のまま閉じた場合や、オブジェクトをつかまずに軌道だけ完了した場合の誤った成功報告を防ぎます。
 
 ビジュアルグラスピングのトラブルシューティング：
 
@@ -638,11 +641,11 @@ ros2 topic echo /rebotarm_rs/mujoco/object_states --once
 ros2 service list | grep rebotarm_rs
 ```
 
-グリッパーが閉じても物体を持ち上げない場合：
+グリッパーが閉じてもオブジェクトを持ち上げない場合：
 
 - `physics` モードが使用されていることを確認する；
 - カメラとカラー検出が連続的に publish されているか確認する；
-- ターゲットの幅、向き、把持高さを確認する；
+- ターゲットの幅、向き、および把持高さを確認する；
 - ログ内の接触安定性と物理的な持ち上げ検証結果を確認する；
 - 複数のグラスプまたは IK リクエストを同時に開始しない。
 
@@ -658,11 +661,11 @@ Web rebot-llm.js
   -> ROS 2 service/action/topic
 ```
 
-LLM は自然言語を理解し、MCP レイヤーが意図を制約して構造化されたツール呼び出しに変換します。LLM 設定がなくても、MCP の検出、IK、関節、グリッパー、およびグラスピングツールは直接呼び出すことができます。
+LLM は自然言語を理解し、MCP レイヤーが意図を制約して構造化されたツール呼び出しに変換します。LLM 設定がなくても、MCP の検出、IK、関節、グリッパー、およびグラスプツールは直接呼び出すことができます。
 
 ### テキストエージェントの起動
 
-フルシミュレーションでは、デフォルトで MCP Agent が起動します。自然言語エントリポイントを有効にするには、別のターミナルを開きます：
+フルシミュレーションでは、デフォルトで MCP Agent が起動します。自然言語エントリポイントを有効にするには、別のターミナルを開いてください：
 
 ```bash
 cd ~/ReBot_Arm_DigitalTwin_RS
@@ -678,15 +681,15 @@ MCP Server: http://127.0.0.1:8081/mcp
 Dashboard:  http://localhost:8082
 ```
 
-Web コンソール上で次のことができます：
+Web コンソールでは次のことができます：
 
 - アームと ROS のステータスを問い合わせる；
 - グリッパーを開閉する；
 - ターゲット姿勢が到達可能か確認する；
 - 指定した姿勢へ移動する；
-- 指定した色の物体を把持する。
+- 指定した色のオブジェクトを把持する。
 
-実機環境でモーションツールを有効にする前に、必ず Agent のモーション権限とネームスペースを明示的に確認してください。自然言語エントリポイントは、アームバックエンドの安全ステートマシンをバイパスしたり、物理的な非常停止を代替したりすることはできません。
+実機環境でモーションツールを有効にする前に、Agent のモーション権限とネームスペースを明示的に確認してください。自然言語エントリポイントは、アームバックエンドの安全ステートマシンをバイパスしたり、物理的な非常停止を代替したりすることはできません。
 
 ## 主要制御パラメータ
 
@@ -719,7 +722,7 @@ gravity_compensation:
 | Web 関節ターゲット | 最大 60 Hz | スライダーと TCP IK がターゲットを連続更新 |
 | 実機同期フィードバッククエリ | 20 Hz | RobStride 計測キャッシュを更新 |
 | ROS 実機状態 | 60 Hz | キャッシュからフィードバック、ターゲット、リファレンスを publish |
-| RS MIT 制御 | 125 Hz | オンライン平滑化とモーターコマンド |
+| RS MIT 制御 | 125 Hz | オンラインスムージングとモーターコマンド |
 | Fake Driver | 100 Hz | シミュレーション制御と状態 |
 | MuJoCo 同期 | 250 Hz | デフォルトのダイナミクス同期 |
 | MuJoCo オブジェクト状態 | 30 Hz | シーンと Agent |
@@ -734,7 +737,7 @@ gravity_compensation:
 /rebotarm/joint_states
 ```
 
-ターゲットが不連続な場合は Web 入力レイヤーを確認し、リファレンスが不連続な場合はオンライン軌道を確認し、リファレンスが連続だがフィードバックがオーバーシュートする場合は MIT ゲイン、負荷、摩擦、電流、温度上昇を確認してください。Web アニメーションだけがジッタリングする場合に限り、フィードバックフィルタリングと rosbridge の到着間隔を確認してください。
+ターゲットが不連続な場合は Web 入力レイヤーを確認し、リファレンスが不連続な場合はオンライン軌道を確認し、リファレンスが連続だがフィードバックがオーバーシュートする場合は MIT ゲイン、負荷、摩擦、電流、温度上昇を確認してください。Web アニメーションだけがジッタする場合に限り、フィードバックフィルタリングと rosbridge の到着間隔を確認してください。
 
 ## 二次開発ガイド
 
@@ -756,17 +759,17 @@ reBotArm_simulator-RS/public/js/rebot-sim.js
 reBotArm_simulator-RS/public/js/ros/rebot-ros-ui.js
 ```
 
-このファイルは、Web コマンドのスロットリング、実機ロボットのフィードバックフィルタリング、フィードバックのデッドゾーン、補間、ターゲットシャドウ、制御ロック、およびビジョンロジックを扱います。Web アニメーションのレイテンシを補償するために、実機ロボットの MIT ゲインを上げないでください。
+このファイルは、Web コマンドのスロットリング、実機フィードバックのフィルタリング、フィードバックのデッドゾーン、補間、ターゲットシャドウ、制御ロック、およびビジョンロジックを扱います。Web アニメーションのレイテンシを補償するために、実機の MIT ゲインを上げないでください。
 
 ### カスタム ROS インターフェースを追加する
 
-クライアントラッパーの場所：
+クライアントラッパーは次の場所にあります：
 
 ```text
 reBotArm_simulator-RS/public/js/ros/rebot-ros-client.js
 ```
 
-UI レイヤーに Topic、Service、または Action のパスを追加し、クライアントの `subscribe()`、`callService()`、または `sendActionGoal()` を呼び出します。インターフェースは常に現在の `namespace` から生成し、シミュレーションコマンドを実機ロボットに送信してしまうことを避けてください。
+UI レイヤーに Topic、Service、または Action のパスを追加し、クライアントの `subscribe()`、`callService()`、または `sendActionGoal()` を呼び出します。インターフェースは常に現在の `namespace` から生成し、シミュレーションコマンドを実機に送信してしまうことを避けてください。
 
 ### RS URDF またはメッシュを変更する
 
@@ -791,15 +794,15 @@ reBotArm_simulator-RS/description/meshes_rs/
 | ファイル/ディレクトリ | 役割 |
 | --- | --- |
 | `rebotarm_ros2_RS/src/rebotarm_mujoco_rs/models/` | RS MJCF および STL |
-| `rebotarm_mujoco_rs/mujoco_sync.py` | 同期周波数、ダイナミクス、PD |
+| `rebotarm_mujoco_rs/mujoco_sync.py` | 同期周波数、ダイナミクス、および PD |
 | `rebotarm_mujoco_rs/scene_camera.py` | 俯瞰カメラ |
 | `rebotarm_mujoco_rs/scene_detector.py` | 色検出 |
-| `rebotarm_mujoco_rs/task_server.py` | タスク、記録、リプレイ |
+| `rebotarm_mujoco_rs/task_server.py` | タスク、記録、および再生 |
 | `rebotarm_mujoco_rs/launch/mujoco_rs.launch.py` | 起動パラメータ |
 
 ### MCP ツールを拡張する
 
-MCP Server の場所：
+MCP Server は次の場所にあります：
 
 ```text
 rebotarm_ros2_RS/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
@@ -809,9 +812,9 @@ rebotarm_ros2_RS/src/rebotarm_agent/rebotarm_agent/rebotarm_mcp_server.py
 
 1. 明確な入力スキーマと単位を定義する；
 2. 読み取り専用ツールとモーションツールを分離する；
-3. モーションツールでは namespace、状態、モーション許可を検証する；
+3. モーションツールでは namespace、状態、およびモーション許可を検証する；
 4. コントローラを直接バイパスするのではなく、ROS 2 Service/Action/Topic を通じてバックエンドを呼び出す；
-5. ワークスペースを再ビルドし、シミュレーションでエラー、タイムアウト、キャンセル経路をテストする。
+5. ワークスペースを再ビルドし、シミュレーションでエラー、タイムアウト、およびキャンセル経路をテストする。
 
 ## 検証コマンド
 
@@ -855,7 +858,7 @@ ros2 action list | grep rebotarm
 - Web ディレクトリだけを移動しており、フォールバックモデルが不完全；
 - URDF 内の `package://` マッピングが正しくない；
 - Linux のファイル名の大文字小文字が一致していない；
-- Three.js、STLLoader、URDFLoader の読み込み順が誤っている。
+- Three.js、STLLoader、または URDFLoader の読み込み順序が誤っている。
 
 ### 2. ROS が「disconnected」と表示される
 
@@ -867,26 +870,26 @@ ros2 node list
 
 rosbridge が `0.0.0.0:9090` で待ち受けていること、および WebSocket アドレスが `ws://` で始まっていることを確認します。リモートブラウザでは、ブラウザを開いているコンピュータの `localhost` ではなく、Ubuntu の IP を入力してください。
 
-### 3. Web コンソールは接続しているが、スライダで実機ロボットを制御できない
+### 3. Web コンソールは接続しているが、スライダで実機を制御できない
 
 次の順に確認します：
 
-1. Web コンソールが RS 実機ロボットの `/rebotarm` 上にある。
+1. Web コンソールが RS 実機の `/rebotarm` 上にある。
 2. ROS WebSocket が接続されている。
 3. Web 制御ロックが有効になっている。
 4. アームが有効化されている。
-5. `arm_status` が `GRAVITY_COMP`、`TRAJ_RUNNING`、`SAFE_HOMING` になっていない。
-6. 実機ロボットコントローラに CAN またはモータエラーがない。
+5. `arm_status` が `GRAVITY_COMP`、`TRAJ_RUNNING`、または `SAFE_HOMING` になっていない。
+6. 実機コントローラに CAN またはモータエラーがない。
 
 ### 4. Web モデルがジッタする、またはターゲットシャドウが残り続ける
 
-- 同じ namespace に対して、コントローラと state publisher が 1 つずつのみ存在することを確認する。
+- 同じ namespace に対して、コントローラと state publisher がそれぞれ 1 つだけ存在することを確認する。
 - `/joint_states` に複数の publisher がいないか確認する。
-- `control_target`、`control_reference`、`joint_states` を同時に記録する。
+- `control_target`、`control_reference`、および `joint_states` を同時に記録する。
 - CAN エラーカウンタとフィードバック到着間隔を確認する。
 - 軌道再生と手動の連続ドラッグを同時に実行しない。
 
-長時間残るターゲットシャドウは、多くの場合、実際のフィードバックがターゲットに到達していないことを意味し、必ずしも Web レンダリングの問題とは限りません。
+長時間残るターゲットシャドウは、実際のフィードバックがターゲットに到達していないことを意味する場合が多く、必ずしも Web レンダリングの問題とは限りません。
 
 ### 5. CAN フィードバックがない、または BUS-OFF
 
@@ -904,11 +907,11 @@ candump can0
 - モータ ID と SDK 設定；
 - USB-CAN ドライバとインターフェース名。
 
-エラーカウンタが増え続ける場合は、実機ロボットのテストを直ちに停止してください。
+エラーカウンタが増え続ける場合は、直ちに実機テストを停止してください。
 
 ### 6. disable をクリックしてもアームの電源がすぐに切れない
 
-アームがゼロ姿勢付近にない場合、コントローラはまず安全なホーミングを実行し、その結果を検証します。これは想定された動作です。ホーミングが失敗した場合、システムは非ゼロ姿勢からの落下を防ぐためにアームを有効なままに保ちます。緊急時には物理的な非常停止ボタンを使用してください。
+アームがゼロ姿勢付近にない場合、コントローラはまず安全なホーミングを実行し、その結果を検証します。これは想定された動作です。ホーミングが失敗した場合、非ゼロ姿勢からの落下を防ぐため、システムはアームを有効なままに保ちます。緊急時には物理的な非常停止ボタンを使用してください。
 
 ### 7. 重力補償が開始できない、または制御できない
 
@@ -942,17 +945,17 @@ Text Agent が起動していることを確認します：
 
 ### 10. フロントエンドを変更してもページに古いバージョンが表示される
 
-RS Web コンソールには Service Worker/PWA サポートが含まれています。まず `Ctrl+Shift+R` でハードリフレッシュを行います。それでも更新されない場合は、サイトデータを消去するか、ブラウザの開発者ツールで Service Worker の登録を解除してから、ページを再読み込みしてください。
+RS Web コンソールには Service Worker/PWA のサポートが含まれています。まず `Ctrl+Shift+R` でハードリフレッシュを行います。それでも更新されない場合は、サイトデータを消去するか、ブラウザの開発者ツールで Service Worker の登録を解除してから、ページを再読み込みしてください。
 
 ### 11. `setup.sh` または `colcon build` が失敗する
 
-- Ubuntu、ROS 2、Python のバージョンが一致していることを確認する。
+- Ubuntu、ROS 2、および Python のバージョンが一致していることを確認する。
 - rosdep が初期化され、更新できることを確認する。
 - `./setup.sh --check` を実行して不足している項目を確認する。
-- `rebotarm_ros2_RS/.venv` で `numpy`、`scipy`、`mujoco`、`pinocchio`、`motorbridge`、`fastmcp` をインポートできることを確認する。
+- `numpy`、`scipy`、`mujoco`、`pinocchio`、`motorbridge`、および `fastmcp` が `rebotarm_ros2_RS/.venv` でインポートできることを確認する。
 - ユーザーファイルを削除またはリセットする前にバックアップを取り、破壊的なコマンドでビルド問題を解決しないこと。
 
-## クイックコマンド一覧
+## クイックコマンド表
 
 ```bash
 # Check and install
@@ -978,7 +981,7 @@ REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE ./rebotarm start rs
 ./rebotarm stop
 ```
 
-## 参考資料
+## 参考文献
 
 - ROS 2 Jazzy ドキュメント: https://docs.ros.org/en/jazzy/
 - rosbridge_suite: https://github.com/RobotWebTools/rosbridge_suite

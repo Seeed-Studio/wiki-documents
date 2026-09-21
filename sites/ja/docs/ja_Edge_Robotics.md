@@ -32,11 +32,11 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     <div>
       <span className="eyebrow">Seeed Studio Robotics Wiki</span>
       <h2>ロボットキットから始めよう</h2>
-      <p>製品ごとに、適切な Seeed Studio ロボティクスの学習パスを見つけましょう。キットを選び、セットアップから高度な開発までの手順に従ってください。</p>
+      <p>製品ごとに、最適な Seeed Studio ロボティクスの学習パスを見つけましょう。キットを選び、セットアップから高度な開発まで順番に進めてください。</p>
     </div>
     <div className="hero-tips">
       <div><strong>新しいデバイス</strong><span>開封、配線、電源投入、ドライバのインストール、動作テスト</span></div>
-      <div><strong>アプリケーション構築</strong><span>SDK、LeRobot、ROS2、ビジョン、モバイル制御を使用</span></div>
+      <div><strong>アプリケーション構築</strong><span>SDK、LeRobot、ROS2、ビジョン、モバイル制御を活用</span></div>
       <div><strong>AI ロボティクス</strong><span>シミュレーション、データ収集、GR00T、VLA、RL を探求</span></div>
     </div>
   </section>
@@ -56,7 +56,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
         <span className="section-kicker">キットを選ぶ</span>
         <h2>自分に合った学習パスを選択</h2>
       </div>
-      <p>カードはデフォルトで折りたたまれています。自分のキットを開いて、そのパスを確認してください。</p>
+      <p>カードはデフォルトで折りたたまれています。お持ちのキットを開いて、そのパスを確認してください。</p>
     </div>
     <div className="kit-index-grid">
       <a href="#rebot-rs"><strong>B601-RS</strong><small>RobStride ロボットアーム学習パス</small></a>
@@ -73,10 +73,10 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
   <section id="robot-kits" className="section-block">
     <div className="section-title-row">
       <div>
-        <span className="section-kicker">ここから始める</span>
+        <span className="section-kicker">ここからスタート</span>
         <h2>ロボットキット</h2>
       </div>
-      <p>各パスはハードウェアセットアップから始まり、その後 SDK、ROS、シミュレーション、AI アプリケーションへと進みます。</p>
+      <p>各パスはハードウェアのセットアップから始まり、その後 SDK、ROS、シミュレーション、AI アプリケーションへと進みます。</p>
     </div>
 
     <div className="product-stack">
@@ -100,13 +100,13 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     <div className="learning-steps">
       <a className="step-card" href="/ja/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Quick Start</b><small>開封、配線、電源投入、ドライバ確認、基本動作テストを行います。</small></div><em>初心者必須</em></a>
       <a className="step-card" href="/ja/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot 遠隔操作とデータ収集</b><small>模倣学習とエンボディド AI のために遠隔操作データを収集します。</small></div><em>データ収集</em></a>
-      <a className="step-card" href="/ja/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio による運動学可視化</b><small>アームモデル、関節、フレーム、運動学を探索します。</small></div><em>高度な制御</em></a>
+      <a className="step-card" href="/ja/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio による運動学の可視化</b><small>アームモデル、関節、フレーム、運動学を探索します。</small></div><em>高度な制御</em></a>
       <a className="step-card" href="/ja/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">4</span><div><b>ビジュアルグラスピングデモ</b><small>ビジョンと把持姿勢生成を用いて実物体をピックします。</small></div><em>アプリケーションデモ</em></a>
       <a className="step-card" href="/ja/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 連携</b><small>アームを ROS2 に接続し、認識、プランニング、シミュレーションを行います。</small></div><em>システム統合</em></a>
       <a className="step-card" href="/ja/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator 開発</b><small>ROS2/MuJoCo と連携した Web Simulator による実機・仮想同期制御を学びます。</small></div><em>シミュレーション開発</em></a>
-      <a className="step-card" href="/ja/rebot_arm_b601_rs_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim 連携</b><small>Isaac Sim 上でアームをシミュレートし、実機ロボットと同期します。</small></div><em>シミュレーション</em></a>
+      <a className="step-card" href="/ja/rebot_arm_b601_rs_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim 連携</b><small>Isaac Sim 上でアームをシミュレーションし、実機ロボットと同期します。</small></div><em>シミュレーション</em></a>
       <a className="step-card" href="/ja/rebot_arm_b601_rs_mit_control/"><span className="step-index">8</span><div><b>MIT 位置制御</b><small>reBot Arm B601-RS 向け MIT 位置制御の入門を行います。</small></div><em>高度な制御</em></a>
-      <a className="step-card" href="/ja/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>エンボディドエージェントアーキテクチャ設計</b><small>VLM をアームに接続し、自然言語コマンドでビジョンベースのグラスピングを安全ゲート付き制御で実行できるようにします。</small></div><em>エージェントアーキテクチャ</em></a>
+      <a className="step-card" href="/ja/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>エンボディドエージェント設計フレームワーク</b><small>VLM をアームに接続し、自然言語コマンドで安全ゲート付き制御によるビジョンベースのグラスピングを実現します。</small></div><em>エージェントフレームワーク</em></a>
     </div>
   </div>
 </details>
@@ -134,13 +134,13 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 
   <a className="step-card" href="/ja/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio と Meshcat</b><small>モデルを読み込み、動作を可視化し、運動学を学びます。</small></div><em>制御の基礎</em></a>
 
-  <a className="step-card" href="/ja/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>ビジュアルグラスピングデモ</b><small>アームとビジョンを組み合わせて、実環境での把持を行います。</small></div><em>アプリケーションデモ</em></a>
+  <a className="step-card" href="/ja/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">4</span><div><b>ビジュアルグラスピングデモ</b><small>アームとビジョンを組み合わせて実環境でのグラスピングを行います。</small></div><em>アプリケーションデモ</em></a>
 
-  <a className="step-card" href="/ja/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 連携</b><small>ROS2 を MoveIt、認識、システムアプリとともに使用します。</small></div><em>システム統合</em></a>
+  <a className="step-card" href="/ja/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 連携</b><small>ROS2 を MoveIt、認識、システムアプリとともに利用します。</small></div><em>システム統合</em></a>
 
   <a className="step-card" href="/ja/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web Simulator 開発</b><small>ROS2/MuJoCo と連携した Web Simulator による実機・仮想同期制御を学びます。</small></div><em>シミュレーション開発</em></a>
 
-  <a className="step-card" href="/ja/rebot_arm_b601_dm_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim 連携</b><small>reBot B601-DM を Isaac Sim 上に展開し、シミュレーション、デバッグ、制御アルゴリズム検証を行います。</small></div><em>シミュレーション</em></a>
+  <a className="step-card" href="/ja/rebot_arm_b601_dm_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim 連携</b><small>Isaac Sim 上で reBot B601-DM を展開し、シミュレーション、デバッグ、制御アルゴリズム検証を行います。</small></div><em>シミュレーション</em></a>
 </div>
 </div>
 </details>
@@ -162,11 +162,11 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     <div><strong>推奨順序</strong><span>Getting Started → Servo Debugging → Simulation → Isaac Lab → GR00T → Dual Arms</span></div>
   </div>
   <div className="learning-steps">
-    <a className="step-card" href="/ja/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 クイックスタート</b><small>ハードウェアを取り付け、接続し、キャリブレーションを行い、基本テストを実行します。</small></div><em>初心者必須</em></a>
-    <a className="step-card" href="/ja/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>サーボデバッグツール</b><small>サーボ ID、方向、ゼロ点、通信を確認します。</small></div><em>トラブルシューティングの基礎</em></a>
+    <a className="step-card" href="/ja/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Quick Start</b><small>ハードウェアを取り付け、接続し、キャリブレーションを行い、基本テストを実行します。</small></div><em>初心者必須</em></a>
+    <a className="step-card" href="/ja/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b><small>サーボ ID、方向、ゼロ点、通信を確認します。</small></div><em>トラブルシューティングの基礎</em></a>
     <a className="step-card" href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">3</span><div><b>SO101 と NVIDIA GR00T</b><small>VLA モデルをファインチューニングし、Jetson にデプロイします。</small></div><em>上級 VLA</em></a>
-    <a className="step-card" href="/ja/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>デュアルアーム SO-ARM トレーニング</b><small>データを収集し、学習して、デュアルアームタスクを実行します。</small></div><em>複雑なタスク</em></a>
-    <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM と Amazing Hand デクスタラスハンド</b><small>SO-ARM101 と Amazing Hand を組み合わせて LeRobot を使用します。</small></div><em>デクスタラスハンド統合</em></a>
+    <a className="step-card" href="/ja/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>デュアルアーム SO-ARM トレーニング</b><small>データを収集し、学習して、両腕タスクを実行します。</small></div><em>複雑なタスク</em></a>
+    <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM と Amazing Hand デクスタラスハンド</b><small>SO-ARM101 と Amazing Hand を組み合わせて LeRobot を使用します。</small></div><em>巧緻ハンド統合</em></a>
     <a className="step-card" href="/ja/simulate_soarm101_by_leisaac/"><span className="step-index">6</span><div><b>LeIsaac シミュレーション</b><small>シミュレーションモデルとタスクで Sim2Real に備えます。</small></div><em>シミュレーション基礎</em></a>
     <a className="step-card" href="/ja/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Isaac Lab 強化学習</b><small>シミュレーションでポリシーを学習し、報酬設計を確認します。</small></div><em>高度なトレーニング</em></a>
     <a className="step-card optional" href="/ja/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b><small>サードパーティのデータ収集および学習プラットフォームを試します。</small></div><em>オプション拡張</em></a>
@@ -179,7 +179,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
   <div className="product-head">
     <div>
       <h3>StarAI ロボットアーム</h3>
-      <span>基本制御、MoveIt 2、ROS2 プランニング、および GR00T 用</span>
+      <span>基本制御、MoveIt 2、ROS2 プランニング、GR00T 用</span>
     </div>
   </div>
   <span className="summary-action">学習プランを展開</span>
@@ -187,12 +187,12 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 <div className="product-body">
   <div className="product-meta-grid">
     <div><strong>推奨対象</strong><span>ROS2 プランニングと AI 制御デモ</span></div>
-    <div><strong>学習目標</strong><span>基本制御、MoveIt 2、および GR00T を実行する</span></div>
+    <div><strong>学習目標</strong><span>基本制御、MoveIt 2、GR00T を実行する</span></div>
     <div><strong>推奨順序</strong><span>クイックスタート → MoveIt 2 → GR00T</span></div>
   </div>
   <div className="learning-steps">
-    <a className="step-card" href="/ja/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI ロボットアーム クイックスタート</b><small>ハードウェアを接続し、基本制御を実行し、サンプルをテストします。</small></div><em>初心者必須</em></a>
-    <a className="step-card" href="/ja/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 モーションプランニング</b><small>MoveIt 2 でモデルをインポートし、経路をプランニングします。</small></div><em>上級 ROS2</em></a>
+    <a className="step-card" href="/ja/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI ロボットアーム クイックスタート</b><small>ハードウェアを接続し、基本制御を実行して、サンプルをテストします。</small></div><em>初心者必須</em></a>
+    <a className="step-card" href="/ja/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 モーションプランニング</b><small>MoveIt 2 でモデルをインポートし、経路を計画します。</small></div><em>上級 ROS2</em></a>
     <a className="step-card" href="/ja/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI と NVIDIA GR00T</b><small>LLM / VLA を用いてロボットアーム制御を構築します。</small></div><em>AI 制御</em></a>
   </div>
 </div>
@@ -210,13 +210,13 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 </summary>
 <div className="product-body">
   <div className="product-meta-grid">
-    <div><strong>推奨対象</strong><span>モバイルシャーシを初めて使用するユーザー</span></div>
+    <div><strong>推奨対象</strong><span>モバイルシャーシを初めて使うユーザー</span></div>
     <div><strong>学習目標</strong><span>シャーシ制御とサウンドフォローデモを実行する</span></div>
     <div><strong>注意</strong><span>ROS2 のステップは削除され、現在の製品パスのみが残っています</span></div>
   </div>
   <div className="learning-steps">
-    <a className="step-card" href="/ja/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Lekiwi モバイルシャーシ クイックスタート</b><small>組み立て、接続、動作テスト、安全性の確認を行います。</small></div><em>初心者必須</em></a>
-    <a className="step-card" href="/ja/sound_follow_robot/"><span className="step-index">2</span><div><b>サウンドフォローデモ</b><small>音声入力を使用してインタラクティブなモバイルデモを動かします。</small></div><em>アプリケーションデモ</em></a>
+    <a className="step-card" href="/ja/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Lekiwi モバイルシャーシ クイックスタート</b><small>組み立て、接続、動作テスト、安全確認を行います。</small></div><em>初心者必須</em></a>
+    <a className="step-card" href="/ja/sound_follow_robot/"><span className="step-index">2</span><div><b>サウンドフォローデモ</b><small>音声入力を使ってインタラクティブなモバイルデモを動かします。</small></div><em>アプリケーションデモ</em></a>
   </div>
 </div>
 </details>
@@ -226,7 +226,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
   <div className="product-head">
     <div>
       <h3>StackForce Mini 車輪脚ロボット</h3>
-      <span>車輪脚制御、バランス、およびモーションプランニング用</span>
+      <span>車輪脚制御、バランス、モーションプランニング用</span>
     </div>
   </div>
   <span className="summary-action">学習プランを展開</span>
@@ -234,7 +234,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 <div className="product-body">
   <div className="product-meta-grid">
     <div><strong>推奨対象</strong><span>モバイルおよび車輪脚ロボットの学習者</span></div>
-    <div><strong>学習目標</strong><span>構造、制御ロジック、および基本動作を学ぶ</span></div>
+    <div><strong>学習目標</strong><span>構造、制御ロジック、基本動作を学ぶ</span></div>
     <div><strong>推奨順序</strong><span>クイックスタート → 制御原理 → モーションデバッグ</span></div>
   </div>
   <div className="learning-steps">
@@ -248,7 +248,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
   <div className="product-head">
     <div>
       <h3>Reachy Mini</h3>
-      <span>デスクトップ HRI、エージェント、SDK、シミュレーション、および AI 用</span>
+      <span>デスクトップ HRI、エージェント、SDK、シミュレーション、AI 用</span>
     </div>
   </div>
   <span className="summary-action">学習プランを展開</span>
@@ -269,7 +269,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
             <div className="mini-track">
               <h4>② プラットフォームを選ぶ</h4>
               <a href="/ja/reachymini_platforms_simulation_get_started/">シミュレーション クイックスタート</a>
-              <a href="/ja/reachymini_platforms_reachy_mini_get_started/">Reachy Mini ワイヤレスセットアップガイド</a>
+              <a href="/ja/reachymini_platforms_reachy_mini_get_started/">Reachy Mini 無線セットアップガイド</a>
               <a href="/ja/reachymini_platforms_reachy_mini_usage/">Reachy Mini の使用方法</a>
               <a href="/ja/reachymini_platforms_reachy_mini_hardware/">Reachy Mini ハードウェアデータシート</a>
               <a href="/ja/reachymini_platforms_reachy_mini_lite_get_started/">Reachy Mini Lite セットアップガイド</a>
@@ -296,29 +296,29 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
               <a href="/ja/reachymini_agents/">AI エージェント開発ガイド</a>
             </div>
             <div className="mini-track">
-              <h4>⑤ メディア、システム、および高度な操作</h4>
-              <a href="/ja/reachymini_platforms_reachy_mini_media_advanced_controls/">ワイヤレス高度メディアコントロール</a>
-              <a href="/ja/reachymini_platforms_reachy_mini_lite_media_advanced_controls/">Lite 高度メディアコントロール</a>
-              <a href="/ja/reachymini_platforms_reachy_mini_lite_wizard/">Dynamixel Wizard を使用してモーターパラメータを読み取る</a>
-              <a href="/ja/reachymini_platforms_reachy_mini_development_workflow/">ワイヤレス開発ワークフロー</a>
-              <a href="/ja/reachymini_platforms_reachy_mini_install_daemon_from_branch/">特定のブランチから Daemon をインストール</a>
-              <a href="/ja/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/">Raspberry Pi OS イメージを書き換える</a>
-              <a href="/ja/reachymini_platforms_reachy_mini_reset/">Bluetooth 経由でリセット</a>
+              <h4>⑤ メディア、システム、上級操作</h4>
+              <a href="/ja/reachymini_platforms_reachy_mini_media_advanced_controls/">無線上級メディアコントロール</a>
+              <a href="/ja/reachymini_platforms_reachy_mini_lite_media_advanced_controls/">Lite 上級メディアコントロール</a>
+              <a href="/ja/reachymini_platforms_reachy_mini_lite_wizard/">Dynamixel Wizard でモーターパラメータを読む</a>
+              <a href="/ja/reachymini_platforms_reachy_mini_development_workflow/">無線開発ワークフロー</a>
+              <a href="/ja/reachymini_platforms_reachy_mini_install_daemon_from_branch/">特定ブランチから Daemon をインストール</a>
+              <a href="/ja/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/">Raspberry Pi OS イメージを再フラッシュ</a>
+              <a href="/ja/reachymini_platforms_reachy_mini_reset/">Bluetooth でリセット</a>
             </div>
             <div className="mini-track">
-              <h4>⑥ チュートリアル例</h4>
+              <h4>⑥ サンプルチュートリアル</h4>
               <a href="/ja/reachymini_examples_minimal_demo/">最小限デモ</a>
               <a href="/ja/reachymini_examples_goto_interpolation_playground/">Goto 補間プレイグラウンド</a>
               <a href="/ja/reachymini_examples_look_at/">画像を見る</a>
               <a href="/ja/reachymini_examples_mini_head_position_gui/">ヘッド位置 GUI</a>
               <a href="/ja/reachymini_examples_joy_controller/">ジョイスティックコントローラ</a>
-              <a href="/ja/reachymini_examples_imu/">IMU 例</a>
+              <a href="/ja/reachymini_examples_imu/">IMU サンプル</a>
               <a href="/ja/reachymini_examples_custom_media_manager/">カスタムメディアマネージャ</a>
               <a href="/ja/reachymini_examples_reachy_compliant_demo/">コンプライアントモードデモ</a>
-              <a href="/ja/reachymini_examples_recorded_moves/">記録された動作</a>
+              <a href="/ja/reachymini_examples_recorded_moves/">記録された動き</a>
               <a href="/ja/reachymini_examples_rerun_viewer/">Rerun ビューア</a>
               <a href="/ja/reachymini_examples_sequence/">シーケンスデモ</a>
-              <a href="/ja/reachymini_examples_sound_doa/">音源到来方向</a>
+              <a href="/ja/reachymini_examples_sound_doa/">音の到来方向</a>
               <a href="/ja/reachymini_examples_sound_play/">サウンド再生</a>
               <a href="/ja/reachymini_examples_sound_record/">サウンド録音</a>
               <a href="/ja/reachymini_examples_take_picture/">写真を撮る</a>
@@ -326,7 +326,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
             <div className="mini-track">
               <h4>⑦ トラブルシューティングとメンテナンス</h4>
               <a href="/ja/reachymini_troubleshooting/">トラブルシューティングと FAQ</a>
-              <a href="/ja/reachymini_troubleshooting_motors_diagnosis/">モーター診断とトラブルシューティング</a>
+              <a href="/ja/reachymini_troubleshooting_motors_diagnosis/">モータ診断とトラブルシューティング</a>
               <a href="/ja/reachymini_troubleshooting_change_mic_fpc_cable/">マイク FPC ケーブルの交換</a>
               <a href="/ja/reachymini_troubleshooting_spherical_joints_maintenance/">球体ジョイントのメンテナンス</a>
               <a href="/ja/reachymini_troubleshooting_roadmap/">Reachy Mini ロードマップ</a>
@@ -351,19 +351,19 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
   <div className="product-head">
     <div>
       <h3>Atom コンパクトヒューマノイドロボット</h3>
-      <span>ヒューマノイドロボットの初心者向け、サーボのデバッグ、モーションティーチング、Web リモートコントロール用</span>
+      <span>ヒューマノイドロボットの初心者向け、サーボのデバッグ、モーションティーチング、および Web リモートコントロール用</span>
     </div>
   </div>
   <span className="summary-action">学習プランを展開</span>
 </summary>
 <div className="product-body">
   <div className="product-meta-grid">
-    <div><strong>おすすめ対象</strong><span>モーションティーチングとリモートコントロールを素早く体験したい、初めてのデスクトップ二足歩行ヒューマノイドユーザー</span></div>
+    <div><strong>推奨対象</strong><span>モーションティーチングとリモートコントロールを素早く体験したい、初めてのデスクトップ二足歩行ヒューマノイドユーザー</span></div>
     <div><strong>学習目標</strong><span>開封してすぐに始められ、Web モーションエディタでモーションをティーチングし、カスタムモーションをコントローラーファームウェアにエクスポートする</span></div>
     <div><strong>推奨順序</strong><span>Atom-S 入門 → Web リモート → モーションエディタ → カスタムモーション開発</span></div>
   </div>
   <div className="learning-steps">
-    <a className="step-card" href="/ja/atom_s/"><span className="step-index">1</span><div><b>Atom-S 入門ガイド</b><small>電源を入れ、Web リモートコントローラーに接続し、最初の連続ティーチングモーションシーケンスを記録します。</small></div><em>初心者必須</em></a>
+    <a className="step-card" href="/ja/atom_s/"><span className="step-index">1</span><div><b>Atom-S 入門ガイド</b><small>電源を入れ、Web リモートコントローラーに接続し、最初の連続ティーチングモーションシーケンスを記録します。</small></div><em>初心者に必須</em></a>
     <a className="step-card" href="/ja/atom_x/"><span className="step-index">2</span><div><b>Atom-X 入門ガイド</b><small>Atom-X は Atom-S とまったく同じように動作します — 同じワークフローに従って素早く始められます。</small></div><em>同シリーズ</em></a>
   </div>
 </div>
@@ -378,7 +378,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
         <span className="section-kicker">リファレンス</span>
         <h2>関節アクチュエータ</h2>
       </div>
-      <p>モータのデバッグ、通信プロトコル、関節のトラブルシューティング用。</p>
+      <p>モータのデバッグ、通信プロトコル、および関節のトラブルシューティング用。</p>
     </div>
     <div className="resource-grid">
       <a href="/ja/myactuator_series/">MyActuator X シリーズ</a>
@@ -397,7 +397,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
         <span className="section-kicker">リファレンス</span>
         <h2>センサー</h2>
       </div>
-      <p>ビジュアルグラスピング、SLAM、音声インタラクション、ロボット状態の認識用。</p>
+      <p>ビジュアルグラスピング、SLAM、音声インタラクション、およびロボット状態の認識用。</p>
     </div>
     <div className="resource-columns">
       <div><h4>LiDAR</h4><a href="/ja/robosense_lidar/">RoboSense</a><a href="/ja/mid360/">Livox MID360</a><a href="/ja/a_loam/">A-LOAM アルゴリズム</a><a href="/ja/slamtec/">Slamtec シリーズ</a></div>
@@ -416,7 +416,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     </div>
     <div className="resource-columns">
       <div><h4>ROS エコシステム</h4><a href="/ja/installing_ros1/">ROS 1 インストール</a><a href="/ja/install_ros2_humble/">ROS 2 インストール</a><a href="/ja/install_isaacros/">Isaac ROS インストール</a><a href="/ja/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/ja/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
-      <div><h4>NVIDIA Isaac</h4><a href="/ja/install_isaaclab/">Isaac Lab インストール</a><a href="/ja/training_soarm101_policy_with_isaacLab/">SO アーム強化学習</a><a href="/ja/simulate_soarm101_by_leisaac/">IsaacSim を用いた SO100 ロボットアーム</a></div>
+      <div><h4>NVIDIA Isaac</h4><a href="/ja/install_isaaclab/">Isaac Lab インストール</a><a href="/ja/training_soarm101_policy_with_isaacLab/">SO Arm 強化学習</a><a href="/ja/simulate_soarm101_by_leisaac/">IsaacSim を用いた SO100 ロボットアーム</a></div>
       <div><h4>PX4 / VLA</h4><a href="/ja/control_px4_with_recomputer_jetson/">PX4 と Jetson</a><a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/">PX4 オブジェクトトラッキング</a><a href="/ja/control_robotic_arm_via_gr00t/">StarAI と NVIDIA GR00T</a></div>
     </div>
   </section>

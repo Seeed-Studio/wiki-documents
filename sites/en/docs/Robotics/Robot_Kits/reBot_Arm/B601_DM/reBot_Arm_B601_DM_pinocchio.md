@@ -24,7 +24,7 @@ import '/src/css/rebot-wiki-style.css';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# Getting Started with Pinocchio and MeshCat for reBot Arm B601-DM
+# reBot Arm B601-DM Pinocchio & MeshCat
 
 <RebotDmDocNav />
 
@@ -33,10 +33,16 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -775,6 +781,10 @@ ENABLED_JOINTS = ["joint1"]  # Enable only joint1
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/meshcat_DM.png" alt="MeshCat simulation of the reBot Arm B601-DM" />
 </div>
+
+:::tip MeshCat web viewer address
+After starting a simulation, the terminal prints the actual access URL. The default is `http://127.0.0.1:7000/static/`; if the port is occupied, MeshCat automatically tries the next port, so use the URL printed in the terminal.
+:::
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item rebot-step-item--simulation">

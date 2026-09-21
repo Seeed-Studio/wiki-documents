@@ -40,6 +40,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/Lerobot_Lekiwi',
             'Robotics/Robot_Kits/Lerobot/SOARM101_XIAO_MicroROS_Wireless_Teleoperation',
             'Robotics/Robot_Kits/Lerobot/Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
+            'Robotics/Robot_Kits/Lerobot/Lerobot_SO_ARM101_DAMO',
           ]
         },
 
@@ -389,6 +390,7 @@ const sidebars = {
           type: 'category',
           label: 'HighTorque',
           items: [
+            'Robotics/Robot_Actuator/HighTorque/HighTorque',
             'Robotics/Robot_Actuator/HighTorque/HighTorque_Getting_Started',
             'Robotics/Robot_Actuator/HighTorque/HighTorque_Control',
           ]

@@ -1,6 +1,6 @@
 ---
 description: Comienza con SenseCAP MeshTracker X1 para Meshcore. Guía para la instalación del dispositivo, flasheo de firmware y conexión del dispositivo.
-title: Comienza con MeshCore en SenseCAP MeshTracker X1
+title: Comienza con MeshCore
 keywords:
   - Rastreador
   - Meshtastic
@@ -17,11 +17,13 @@ updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/
 ---
 
+# Comienza con MeshCore en SenseCAP MeshTracker X1
+
 ## Flasheo de firmware
 
 
 <Tabs>
-<TabItem value="111" label="A través de Web Flasher">
+<TabItem value="111" label="Via Web Flasher">
 
 Conecta tu dispositivo al ordenador con un cable USB. 
 
@@ -29,7 +31,7 @@ Conecta tu dispositivo al ordenador con un cable USB.
 Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo puede dañarse.
 :::
 
-Ve a [Meshcore Web Flasher](https://meshcore.io/flasher). 
+Ve al [Meshcore Web Flasher](https://meshcore.io/flasher). 
 
 Elige `Seeed Studio SenseCAP MeshTracker X1` en el grupo `Community Firmware`.
 
@@ -41,7 +43,7 @@ Elige `Companion Bluetooth`. Los dispositivos flasheados con el firmware Compani
 
 **Paso 1 Borrado de Flash**
 
-Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "nRF xxx" o "TinyUSB" serial. Luego haz clic en `Erase Flash` y elige el puerto serie.
+Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "nRF xxx" o serie "TinyUSB". Luego haz clic en `Erase Flash` y elige el puerto serie.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Selection.png" alt="pir" width={800} height="auto" /></p>
 
@@ -53,7 +55,7 @@ Si ves "Flashing erase firmware:100%", el dispositivo se ha borrado correctament
 
 **Paso 2 Flashear firmware**
 
-Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "nRF xxx" o "TinyUSB" serial. Luego haz clic en `Flash` y elige el puerto serie.
+Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "nRF xxx" o serie "TinyUSB". Luego haz clic en `Flash` y elige el puerto serie.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Selection.png" alt="pir" width={800} height="auto" /></p>
 
@@ -65,14 +67,14 @@ Cuando la barra de progreso esté completamente llena, indica que el flasheo se 
 
 </TabItem>
 
-<TabItem value="222" label="Arrastrar y soltar">
+<TabItem value="222" label="Drag and Drop">
 Conecta tu dispositivo al ordenador con un cable USB.
 
 :::warning
 Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo puede dañarse.
 :::
 
-Ve a [Meshcore Web Flasher](https://meshcore.io/flasher). 
+Ve al [Meshcore Web Flasher](https://meshcore.io/flasher). 
 
 Elige `Seeed Studio SenseCAP MeshTracker X1` en el grupo `Community Firmware`.
 
@@ -88,10 +90,10 @@ Descarga el archivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/EraseFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-Intenta entrar en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el dispositivo al ordenador mediante el cable USB, mantén pulsado el botón hasta que se encienda un LED blanco ⚪️.
+Intenta entrar en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conéctalo **rápidamente** al ordenador mediante el cable USB, mantén pulsado el botón hasta que se encienda un LED blanco ⚪️.
 
 :::warning
-Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
+Para entrar correctamente en modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
@@ -100,7 +102,7 @@ Verás que aparece un disco llamado `X1` después de 10~15 s.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Driver.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que aparece.
+Arrastra el archivo UF2 descargado al disco que ha aparecido.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/EraseDragDisk.png" alt="pir" width={800} height="auto" /></p>
 
@@ -116,10 +118,10 @@ Descarga el archivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Firmwareuf2.png" alt="pir" width={500} height="auto" /></p>
 
-Intenta entrar en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el dispositivo al ordenador mediante el cable USB, mantén pulsado el botón hasta que se encienda un LED blanco ⚪️.
+Intenta entrar en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conéctalo **rápidamente** al ordenador mediante el cable USB, mantén pulsado el botón hasta que se encienda un LED blanco ⚪️.
 
 :::warning
-Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
+Para entrar correctamente en modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
@@ -128,7 +130,7 @@ Verás que aparece un disco llamado `X1` después de 10~15 s.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Driver.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que aparece.
+Arrastra el archivo UF2 descargado al disco que ha aparecido.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/UF2FirmwareDrag.png" alt="pir" width={800} height="auto" /></p>
 
@@ -166,11 +168,11 @@ Haz clic en `Connect` y elige el dispositivo de destino. El ID de dispositivo pr
 Introduce el código PIN predeterminado `123456` y luego haz clic en `Pair` para conectar el dispositivo.
 
 :::tip
-Si la conexión falla, abre la lista de Bluetooth de tu teléfono y `forget` o `Unpair` el dispositivo. Luego intenta reconectar de nuevo.
+Si la conexión falla, abre la lista de Bluetooth de tu teléfono y `forget` o `Unpair` el dispositivo. Luego intenta conectarte de nuevo.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Unpair.jpg" alt="pir" width={300} height="auto" /></p>
 :::
 
-### Configurar el LoRa
+### Configurar LoRa
 
 Para empezar a comunicarte a través de la malla, debes configurar tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe establecerse de acuerdo con tu ubicación regional.
 
@@ -192,7 +194,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 
 ## Configuración avanzada
 
-### Conectar a través de la interfaz web (BLE)
+### Conectar mediante la interfaz web（BLE）
 
 1. Abre la [MeshCore Web App](https://app.meshcore.nz/) y haz clic en el icono **Settings**.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue1.png" alt="pir" width={800} height="auto" /></p>
@@ -217,23 +219,23 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 
 Si quieres usar GPS, por favor actívalo.
 
-Puedes ir a la APP `Position Settings` para activar el GPS. 
+Puedes ir a la APP `Position Settings` para activar el GPS.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/GPSConfig.png" alt="pir" width={300} height="auto" /></p>
 
 
 ## Transmisión de mensajes
 
-Si tienes dos dispositivos compatibles y no hay muchos usuarios de MeshCore cerca de ti, flashea ambos con el firmware BLE Companion para que puedas usar tus dispositivos para comunicarte con tus amigos y familiares cercanos.
+Si tienes dos dispositivos compatibles, y no hay muchos usuarios de MeshCore cerca de ti, flashea ambos con el firmware BLE Companion para que puedas usar tus dispositivos para comunicarte con tus amigos y familiares cercanos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/MeshCoreFramework.png" alt="pir" width={800} height="auto" /></p>
 
 ### Anuncio
 
-MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, se difunden esos datos por LoRa. MeshCore llama a esto un Anuncio. Hay dos formas de anunciar, "zero hop" y "flood".
+MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, difunde esos datos por LoRa. MeshCore llama a eso un Anuncio. Hay dos formas de anunciar, "zero hop" y "flood".
 
 - **Zero hop** significa que tu anuncio se difunde a cualquiera que pueda oírlo, y eso es todo.
-- **Flooded** significa que se difunde y luego se repite por todos los repetidores que lo escuchan.
+- **Flooded** significa que se difunde y luego se repite por todos los repetidores que lo oyen.
 
 Puedes enviar anuncios en la APP. También puedes enviar anuncios directamente en la página de anuncios del dispositivo.
 
@@ -241,7 +243,7 @@ Puedes enviar anuncios en la APP. También puedes enviar anuncios directamente e
 
 ### Mensaje público
 
-Después de configurar LoRa, puedes enviar mensajes en el canal principal. Todas las personas cercanas en la misma banda de frecuencia lo escucharán.
+Después de configurar LoRa, puedes enviar mensajes en el canal principal. Todas las personas cercanas en la misma banda de frecuencia lo oirán.
 
 
 ### Mensaje privado
@@ -251,14 +253,14 @@ Los dos dispositivos solo establecen una conexión cuando ambos han recibido el 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Preguntas frecuentes (FAQ)
+## Preguntas frecuentes
 
 
 ### Cómo comprobar el ID del dispositivo
 
 Los `últimos cuatro dígitos` de la dirección MAC son el ID del dispositivo
 
-Por ejemplo, el ID del dispositivo del dispositivo de abajo sería `A0D4`
+Por ejemplo, el ID del dispositivo de este dispositivo sería `A0D4`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/MACAd.png" alt="pir" width={800} height="auto" /></p>
 
@@ -270,7 +272,7 @@ Por ejemplo, el ID del dispositivo del dispositivo de abajo sería `A0D4`
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260818150011.gif" alt="pir" width={300} height="auto" /></p>
 
  :::note
-  Mantén pulsado el botón, luego conecta el cable de carga y sigue manteniéndolo pulsado durante más de 3 s para forzar que el dispositivo entre en modo DFU.
+  Presiona y mantén pulsado el botón, luego conecta el cable de carga y mantenlo pulsado durante más de 3 s para forzar que el dispositivo entre en modo DFU.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
@@ -282,21 +284,21 @@ Por ejemplo, el ID del dispositivo del dispositivo de abajo sería `A0D4`
 
 ### El dispositivo nunca se enciende
 
-- Usa un cable USB que sepas que funciona para `charge the device` de forma continua durante 1–2 horas para asegurarte de que la batería tenga suficiente energía para despertar el sistema.
+- Usa un cable USB que sepas que funciona para `cargar el dispositivo` de forma continua durante 1–2 horas para asegurarte de que la batería tenga suficiente energía para despertar el sistema.
 
-- Si el dispositivo aún no responde después de la carga, `perform a hard reset` de la siguiente manera: Desconecta el cable USB. Mantén pulsado el botón y luego conecta el cable USB mientras mantienes pulsado el botón. Manténlo durante aproximadamente 3 segundos y luego suéltalo. Esto fuerza un reinicio del sistema.
+- Si el dispositivo aún no responde después de cargarlo, `realiza un reinicio forzado` de la siguiente manera: Desconecta el cable USB. Presiona y mantén pulsado el botón, luego conecta el cable USB mientras mantienes pulsado el botón. Manténlo durante aproximadamente 3 segundos y luego suéltalo. Esto fuerza un reinicio del sistema.
 
- - Si aún no hay suerte, conecta un cable USB a un ordenador. Mantén pulsado el botón del dispositivo y luego conecta el dispositivo al ordenador, comprueba si aparece o no un disco en tu PC. Si es así, vuelve a instalar el bootloader.
+ - Si aún no hay suerte, conecta un cable USB a un ordenador. Mantén pulsado el botón del dispositivo, luego conecta el dispositivo al ordenador y comprueba si aparece o no un disco en tu PC. Si es así, vuelve a instalar el bootloader
 
 ### El dispositivo se queda atascado en un bucle de arranque
 
 **Descripción:**
 
-El dispositivo se reiniciará repetidamente y el puerto serie se conectará y desconectará repetidamente.
+El dispositivo se reiniciará repetidamente, y el puerto serie se conectará y desconectará repetidamente.
 
 **Solución:**
 
-- Paso 1: Intenta entrar manualmente en modo DFU: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces
+- Paso 1: Intenta entrar en modo DFU manualmente: presiona y mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
@@ -313,7 +315,7 @@ Para entrar correctamente en modo DFU, necesitas realizar esta operación rápid
 ### Instalación del bootloader
 
 
-- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
+- [Descarga del bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
 
 :::danger note
 Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de flasheo.
@@ -321,9 +323,9 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 **Paso 1: Instalación de Adafruit-nrfutil**
 
-Para usuarios de Windows, presiona la tecla "Win" y la tecla "r", luego introduce "cmd" en la ventana emergente y haz clic en "Enter". Esto puede abrir la línea de comandos. 
+Para usuarios de Windows, presiona la tecla "Win" y la tecla "r", luego introduce "cmd" en la ventana emergente y pulsa "Enter". Esto puede abrir la línea de comandos.
 
-Para usuarios de MAC, presiona la tecla "Command" y la tecla "Space", para que puedas abrir Spotlight. Luego introduce "termial" y haz clic en "Return". Esto puede abrir la línea de comandos. 
+Para usuarios de MAC, presiona la tecla "Command" y la tecla "Space", de modo que puedas abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto puede abrir la línea de comandos.
 
 **Requisitos previos**
 
@@ -358,7 +360,7 @@ Esta es la ubicación de instalación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuarios de Windows, es posible que tengas que añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se muestra a continuación:
+Para usuarios de Windows, puede que necesites añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se indica a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -398,7 +400,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Cuando hayas completado los pasos anteriores, puedes seguir este [step](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#flash-firmware) para flashear el firmware de la aplicación.
+Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#firmware-flashing) para flashear el firmware de la aplicación.
 
 
 **2) El dispositivo no puede entrar en modo DFU, pero se puede detectar el puerto serie**.
@@ -408,11 +410,11 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [step](https://
 - Ajusta la velocidad en baudios a `1200`.
 
 - Conecta el dispositivo.
-   La luz parpadeará brevemente cuando lo conectes. Sigue intentándolo hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU, luego [flash bootloader](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#bootloader-installation) -> [erase flash](https://wiki.seeedstudio.sensecap_meshtracker_x1_meshcore/#firmware-flashing) -> [flash the firmware](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#firmware-flashing).
+   La luz parpadeará brevemente cuando lo conectes. Sigue intentándolo hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU, luego [flashea el bootloader](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#bootloader-installation) -> [borra la flash](https://wiki.seeedstudio.sensecap_meshtracker_x1_meshcore/#firmware-flashing) -> [flashea el firmware](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#firmware-flashing).
 
 **3) El dispositivo no puede entrar en modo DFU y no se muestra ningún puerto serie**
 
-- Mantén pulsado el botón del dispositivo, luego conecta el cable de carga y suelta el botón inmediatamente. Después de que aparezca un disco en tu PC, es posible que veas el puerto serie.
+- mantén pulsado el botón del dispositivo, luego conecta el cable de carga y suelta el botón inmediatamente. Después de que aparezca un disco en tu PC, podrás ver el puerto serie.
 
 - Si aún no hay suerte, desconecta el cable de carga y deja el dispositivo unos días hasta que la batería se agote por completo, luego conecta el cable de carga e intenta emparejarlo de nuevo.
 
@@ -422,14 +424,14 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [step](https://
 
 - **Descripción del fenómeno**
 
- - Después de encender el dispositivo, se apagará o se reiniciará automáticamente después de un rato. 
- - El registro del puerto serie funciona durante un tiempo y luego se detiene.
+ - Después de que el dispositivo se enciende, se apagará o se reiniciará automáticamente al cabo de un rato.
+ - El registro del puerto serie funciona durante un rato y luego se detiene.
 
- Esto posiblemente se deba a reiniciar o apagar el dispositivo manualmente y a la fuerza cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto posiblemente se deba a reiniciar o apagar el dispositivo manualmente y a la fuerza cuando el dispositivo está en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
 - **Solución de problemas**
 
- [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#firmware-flashing) para realizar un borrado por flasheo. 
+ [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#firmware-flashing) para realizar un borrado por flasheo.
 
 
 ### Calidad de la señal
@@ -453,13 +455,12 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [step](https://
   </a>
 </p>
 
-<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
-    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
-        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
-    </div>
-    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
-        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
-    </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

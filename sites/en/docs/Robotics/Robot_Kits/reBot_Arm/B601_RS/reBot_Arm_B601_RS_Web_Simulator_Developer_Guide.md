@@ -23,13 +23,14 @@ createdAt: '2026-08-13'
 updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# ReBot Arm Digital Twin & Control Stack — B601-RS
+# reBot Arm B601-RS Digital Twin & Control Stack
 
 <RebotRsDocNav />
 
@@ -37,10 +38,16 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -57,13 +64,9 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <strong>Three.js visualization · ROS 2 · SocketCAN · MuJoCo simulation · LLM/MCP control</strong>
 </p>
 
-The ReBot Arm Digital Twin & Control Stack for B601-RS integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, and an optional LLM/MCP grasping agent. This guide explains how to install, launch, and develop on the full system.
+The reBot Arm B601-RS Digital Twin & Control Stack integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, and an optional LLM/MCP grasping agent. This guide explains how to install, launch, and develop on the full system.
 
 <GitHubStarButton owner="Yang-Ci" repo="ReBot_Arm_DigitalTwin_RS" />
-
-> **Important safety note**
->
-> Before starting the real robot, secure the arm, clear the workspace, confirm that the physical emergency stop works, and validate actions in simulation first. For the first real-robot test, keep the speed limit at `0.2-0.4 rad/s` and move one joint at a time.
 
 ## Project Features
 

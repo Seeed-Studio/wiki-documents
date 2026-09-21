@@ -23,13 +23,14 @@ createdAt: '2026-07-30'
 updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# ReBot Arm 数字孪生与控制系统 — B601-DM
+# reBot Arm B601-DM 数字孪生与控制系统
 
 <RebotDmDocNav />
 
@@ -38,10 +39,16 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1042412233386&skuId=6065255360559" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1042412233386&skuId=6065255360559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -58,7 +65,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <strong>Three.js 可视化 · URDF 加载 · rosbridge 桥接 · LLM/MCP 控制</strong>
 </p>
 
-本教程面向开发者，介绍如何运行和二次开发 ReBot Arm 数字孪生与控制系统 — B601-DM 中的 `reBotArm_simulator-DM` 网页控制台。该控制台是一个基于 Node.js + Three.js 的轻量网页前端，从同仓库的 ROS2 工作空间读取 URDF 与 STL 网格，在浏览器中渲染 reBot Arm B601-DM 的 6 自由度本体与夹爪，并通过 rosbridge WebSocket 与 ROS2 通信，支持关节镜像、控制锁、重力补偿、视觉抓取和 LLM 文本控制等完整开发流程。
+本教程面向开发者，介绍如何运行和二次开发 reBot Arm B601-DM 数字孪生与控制系统中的 `reBotArm_simulator-DM` 网页控制台。该控制台是一个基于 Node.js + Three.js 的轻量网页前端，从同仓库的 ROS2 工作空间读取 URDF 与 STL 网格，在浏览器中渲染 reBot Arm B601-DM 的 6 自由度本体与夹爪，并通过 rosbridge WebSocket 与 ROS2 通信，支持关节镜像、控制锁、重力补偿、视觉抓取和 LLM 文本控制等完整开发流程。
 
 <GitHubStarButton
   owner="Yang-Ci"

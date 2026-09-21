@@ -1,6 +1,6 @@
 ---
 description: Get Started with SenseCAP MeshTracker X1 for Meshcore. Guiding for device installation, firmware flashing and device connection.
-title: Get Started with MeshCore on SenseCAP MeshTracker X1
+title: Get Started with MeshCore
 keywords:
   - Tracker
   - Meshtastic
@@ -16,7 +16,9 @@ createdAt: '2026-02-28'
 updatedAt: '2026-08-18'
 url: https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/
 ---
-  
+
+# Get Started with MeshCore on SenseCAP MeshTracker X1
+
 ## Firmware Flashing
 
 
@@ -453,13 +455,12 @@ When you have completed the above steps, then you can follow this [step](https:/
   </a>
 </p>
 
-<div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
-    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-        <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
-        <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
-    </div>
-    <div className="button_tech_support_container" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-        <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
-        <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
-    </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

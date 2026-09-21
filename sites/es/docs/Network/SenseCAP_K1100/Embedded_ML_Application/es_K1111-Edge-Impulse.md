@@ -1,6 +1,6 @@
 ---
-description: Sensores Integrados con Edge Impulse
-title: Sensores Integrados con Edge Impulse
+description: Sensores integrados con Edge Impulse
+title: Sensores integrados con Edge Impulse
 keywords:
   - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,21 +9,21 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2025-09-03'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/es/K1111-Edge-Impulse/
 ---
-# Desarrollar aplicación Edge Impulse a la nube vía Helium
+# Desarrollar aplicación de Edge Impulse hacia la nube
 
-## Actualizable a Sensores Industriales
+## Actualizable a sensores industriales
 
-Con el [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) de SenseCAP y el [registrador de datos S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html), puedes convertir fácilmente el Grove en un sensor LoRaWAN®. Seeed no solo te ayuda con el prototipado, sino que también te ofrece la posibilidad de expandir tu proyecto con la serie SenseCAP de [sensores industriales](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP) robustos.
+Con el [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) y el [registrador de datos S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) de SenseCAP, puedes convertir fácilmente el Grove en un sensor LoRaWAN®. Seeed no solo te ayuda con la creación de prototipos, sino que también te ofrece la posibilidad de ampliar tu proyecto con la serie SenseCAP de robustos [sensores industriales](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
-La carcasa IP66, configuración Bluetooth, compatibilidad con la red global LoRaWAN®, batería integrada de 19 Ah, y el potente soporte de la APP hacen del [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) la mejor opción para aplicaciones industriales. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC, y una estación meteorológica 8 en 1. Prueba el último SenseCAP S210x para tu próximo proyecto industrial exitoso.
+La carcasa IP66, la configuración por Bluetooth, la compatibilidad con la red global LoRaWAN®, la batería integrada de 19 Ah y el potente soporte desde la APP hacen que el [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) sea la mejor opción para aplicaciones industriales. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC y una estación meteorológica 8 en 1. Prueba el último SenseCAP S210x para tu próximo proyecto industrial exitoso.
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
   <tbody>
     <tr>
-      <td colSpan={4} bgcolor="#0e3c49" align="center"><font color="white" size={4}><strong>Sensor Industrial SenseCAP</strong></font></td>
+      <td colSpan={4} bgcolor="#0e3c49" align="center"><font color="white" size={4}><strong>Sensor industrial SenseCAP</strong></font></td>
     </tr>
     <tr>
       <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2100.png" /></a></div>
@@ -36,10 +36,10 @@ La carcasa IP66, configuración Bluetooth, compatibilidad con la red global LoRa
       </td>
     </tr>
     <tr>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><strong>S2100 <br /> Registrador de Datos</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 <br /> Temp. y Humedad del Aire</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><strong>S2100 <br /> Registrador de datos</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 <br /> Temperatura y humedad del aire</strong></a></td>
       <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank"><strong>S2102 <br /> Luz</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><strong>S2103 <br /> Temp. y Humedad del Aire y CO2</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><strong>S2103 <br /> Temperatura y humedad del aire y CO2</strong></a></td>
     </tr>
     <tr>
       <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2104.png" /></a></div>
@@ -52,43 +52,40 @@ La carcasa IP66, configuración Bluetooth, compatibilidad con la red global LoRa
       </td>
     </tr>
     <tr>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><strong>S2104 <br /> Humedad y Temp. del Suelo</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><strong>S2105 <br /> Humedad y Temp. del Suelo y EC</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><strong>S2104 <br /> Humedad y temperatura del suelo</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><strong>S2105 <br /> Humedad y temperatura del suelo y EC</strong></a></td>
       <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong>S2110 <br /> Controlador LoRaWAN®</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><strong>S2120 <br /> Estación Meteorológica 8 en 1</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><strong>S2120 <br /> Estación meteorológica 8 en 1</strong></a></td>
     </tr>
   </tbody></table>
 
-## Herramientas que Utilizamos
+## Herramientas que usamos
 
 - [Wio Terminal](https://wiki.seeedstudio.com/es/Wio-Terminal-Getting-Started/)
 - [Edge impluse](https://studio.edgeimpulse.com/)
-- [Helium](https://console.helium.com/)
 - [Wio Terminal Edge Impulse Continuous Motion Recognition with Built-in Accelerometer](https://wiki.seeedstudio.com/es/Wio-Terminal-TinyML-EI-2/)
 - [Google Sheets](https://docs.google.com/spreadsheets/u/0/)
 - [Google Forms](https://docs.google.com/forms/u/0/)
 
 :::note
-Antes de comenzar esta sección, asegúrate de conocer la producción de **Wio Terminal**
-Para más detalles, por favor lee
+Antes de comenzar esta sección, asegúrate de conocer el producto **Wio Terminal**
+Para más detalles, lee
 
 - [**Wio Terminal Get Started**](https://wiki.seeedstudio.com/es/Wio-Terminal-Getting-Started/)
-- [**Connecting-to-Helium**](https://wiki.seeedstudio.com/es/Connecting-to-Helium/)
-- [**Integrate into Google Sheets via Helium**](https://wiki.seeedstudio.com/es/Integrate_into_Google_Sheets_via_Helium/)
 :::
-Este artículo muestra una solución para personas que quieren usar edgeimpulse para generar modelos y conectar con la nube. En nuestra demostración, usaremos google sheet. Es la forma directa y
+Este artículo muestra una solución para quienes quieren usar edgeimpulse para generar modelos y conectarlos con la nube. En nuestra demostración, usaremos Google Sheets. Es la forma directa y  
 
-## Configuración de Helium
+## Configuración
 
-### Paso 1. Crear una Integración con soporte para Google Form
+### Paso 1. Crear una integración con el soporte de Google Form
 
-Este paso es similar a los pasos en el artículo [**Integrate into Google Sheets via Helium**](https://wiki.seeedstudio.com/es/Integrate_into_Google_Sheets_via_Helium/)
+Este paso es similar a los pasos del artículo [**Integrate into Google Sheets**](https://wiki.seeedstudio.com/es/Integrate_into_Google_Sheets_via_Helium/)
 
-Lo que necesitamos hacer es nombrar la integración y simplemente guardar la configuración.
+Lo que tenemos que hacer es nombrar la integración y simplemente guardar la configuración.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/intergration.png" /></div>
 
-Conectando a Google Form
+Conectando con Google Form
 
 - Crear
   <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Form_1.png" /></div>
@@ -96,33 +93,33 @@ Conectando a Google Form
 - Conectar con Google Sheets
    <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Form_2.png" /></div>
 
-- Enlazar con el ID de Google Form
+- Vincular con el ID de Google Form
   <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Form_3.png" /></div>
 
-### Paso 2. Crear una Función con la api de Google Form y características de Decodificador
+### Paso 2. Crear una Function con el API de Google Form y funciones de Decoder
 
-Asegúrate de que Google Form esté conectado con la Función, completado con el ID que obtuvimos de los pasos anteriores.
+Asegúrate de que Google Form esté conectado con la Function, rellenada con el ID que obtuvimos de los pasos anteriores.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Func.png" /></div>
 
-Necesitamos crear una Función con soporte de Decodificador para nuestro flujo de transferencia de datos, así.
+Necesitamos crear una Function con el soporte de Decoder para nuestra transferencia de flujo de datos, como esta.
 
 ```Javascript
 function Decoder(bytes, port) {
 
     var decoded = {};
- 
+
     function transformers(bytes) {
         if (bytes[0] == 255 || bytes[0] == 0) {
             value = bytes[2] * 256 + bytes[3];
         }
         return value;
     }
- 
+
     if (port == 8) {
         decoded.class = transformers(bytes.slice(0, 4));
     }
-  
+
   var decodedPayload = {
     "class": decoded.class 
   };
@@ -150,30 +147,30 @@ function Serialize(payload) {
 // DO NOT REMOVE: Google Form Function\
 ```
 
-### Paso 3. Configurar los Flujos
+### Paso 3. Configurar los Flows
 
-Asegurar la conexión
+Garantizar la conexión
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Flows.png" /></div>
 
 ## Configuración de Edge Impulse
 
 :::note
-Para más detalles, por favor lee:
-[Reconocimiento de Movimiento Continuo con Wio Terminal Edge Impulse usando el Acelerómetro Integrado](https://wiki.seeedstudio.com/es/Wio-Terminal-TinyML-EI-2/)
+Para más detalles, lee:
+[Wio Terminal Edge Impulse Continuous Motion Recognition with Built-in Accelerometer](https://wiki.seeedstudio.com/es/Wio-Terminal-TinyML-EI-2/)
 :::
 
-## Configuración de Arduino (Wio Terminal)
+## Configuración de Ardiuno (Wio Terminal)
 
 :::note
-Debido a que los sensores y entornos son diferentes, la grabación directa de modelos entrenados en diferentes placas portadoras no siempre es ideal. Los modelos confiables necesitan ser entrenados por los propios usuarios, por lo que solo se proporciona código de prueba para una experiencia rápida.
+Debido a que los sensores y los entornos son diferentes, la grabación directa de modelos entrenados en diferentes placas portadoras no siempre es ideal. Los modelos fiables deben ser entrenados por los propios usuarios, por lo que solo se proporciona código de prueba para una experiencia rápida.
 :::
 
 ### Tener una experiencia
 
-Después de que generamos la biblioteca desde Edge Impulse. Necesitamos modificar el código para el envío de datos vía LoRa en Wio Terminal. Si solo quieres tener una experiencia, simplemente copia el código de abajo y grábalo en tu Wio Terminal vía Arduino IDE.
+Después de generar la biblioteca desde Edge Impulse, necesitamos modificar el código para el envío de datos vía Lora en Wio Terminal. Si solo quieres tener una experiencia, simplemente copia el código de abajo y flashea tu Wio Terminal mediante Arduino IDE.
 
-Graba el código de prueba de abajo.
+Flashea el código de prueba de abajo.
 
 ```cpp
 #include <AIot_Example_inferencing.h>
@@ -189,7 +186,7 @@ TFT_eSPI tft;
 SoftwareSerial mySerial(A0, A1); // RX, TX
 
 SensirionI2CSht4x sht4x;
- 
+
 static char recv_buf[512];
 static bool is_exist = false;
 static bool is_join = false;
@@ -208,12 +205,12 @@ static int at_send_check_response(char *p_ack, int timeout_ms, char *p_cmd, ...)
     va_end(args);
     delay(200);
     startMillis = millis();
- 
+
     if (p_ack == NULL)
     {
         return 0;
     }
- 
+
     do
     {
         while (mySerial.available() > 0)
@@ -223,16 +220,16 @@ static int at_send_check_response(char *p_ack, int timeout_ms, char *p_cmd, ...)
             Serial.print((char)ch);
             delay(2);
         }
- 
+
         if (strstr(recv_buf, p_ack) != NULL)
         {
             return 1;
         }
- 
+
     } while (millis() - startMillis < timeout_ms);
     return 0;
 }
- 
+
 static void recv_prase(char *p_msg)
 {
     if (p_msg == NULL)
@@ -243,19 +240,19 @@ static void recv_prase(char *p_msg)
     int data = 0;
     int rssi = 0;
     int snr = 0;
- 
+
     p_start = strstr(p_msg, "RX");
     if (p_start && (1 == sscanf(p_start, "RX: \"%d\"\r\n", &data)))
     {
         Serial.println(data);
     }
- 
+
     p_start = strstr(p_msg, "RSSI");
     if (p_start && (1 == sscanf(p_start, "RSSI %d,", &rssi)))
     {
         Serial.println(rssi);
     }
- 
+
     p_start = strstr(p_msg, "SNR");
     if (p_start && (1 == sscanf(p_start, "SNR %d", &snr)))
     {
@@ -284,9 +281,9 @@ void setup()
     tft.begin();
     tft.setRotation(3);
     tft.fillScreen(TFT_WHITE);
- 
+
     lis.begin(Wire1);
- 
+
     if (!lis.available()) {
     Serial.println("Failed to initialize IMU!");
     while (1);
@@ -323,9 +320,9 @@ void setup()
         Serial.print("Serial Number: ");
         Serial.println(serialNumber);
     }
-    
+
     Serial.print("E5 LORAWAN TEST\r\n");
- 
+
     if (at_send_check_response("+AT: OK", 100, "AT\r\n"))
     {
         is_exist = true;
@@ -419,7 +416,7 @@ void loop()
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
     ei_printf("    anomaly score: %.3f\n", result.anomaly);
 #endif
-    
+
    int classification_flag = 0;
 
    if (result.classification[1].value > 0.7) {
@@ -430,7 +427,7 @@ void loop()
     tft.fillScreen(TFT_WHITE);
     classification_flag = 1;
    }
- 
+
    if (result.classification[2].value > 0.7) {
     tft.fillScreen(TFT_RED);
     tft.setFreeFont(&FreeSansBoldOblique12pt7b);
@@ -440,7 +437,7 @@ void loop()
     classification_flag = 2;
    }
 
-    
+
     if (is_exist){
         int ret = 0;
         if (is_join){
@@ -485,17 +482,17 @@ void loop()
 ### Hazlo tú mismo para más funciones
 
 :::note
-Para más detalles, consulta la documentación a continuación.
+Para más detalles, consulta la documentación de abajo.
 
-- [**Connecting-to-Helium**](https://wiki.seeedstudio.com/es/Connecting-to-Helium/)
+- [**Connection**](https://wiki.seeedstudio.com/es/Connecting-to-Helium/)
 :::
 Algo a lo que podríamos prestar más atención:
 
 - Almacenar resultados de clasificación:
 
-    Podemos establecer un umbral para cambiar nuestras banderas cuando una cierta condición esté presente, y diferentes categorías reciben diferentes etiquetas.
+    Podemos establecer un umbral para cambiar nuestras banderas cuando esté presente cierta condición, y a diferentes categorías se les asignan diferentes etiquetas.
 
-    Podemos comentar la función tft para velocidad.
+    Podemos comentar la función tft para mayor velocidad.
 
     ```c++
     int classification_flag = 0;
@@ -520,7 +517,7 @@ Algo a lo que podríamos prestar más atención:
 
 - Bloque de código de envío de datos:
 
-    Con la red Lora disponible, podemos usar la función para enviar la etiqueta a Helium y recuperarla mediante el Decodificador que escribimos en Helium.
+    Con la red Lora disponible, podemos usar la función para enviar la etiqueta y recuperarla mediante el Decoder que escribimos.
 
     ```c++
     if (is_exist){
@@ -558,9 +555,9 @@ Algo a lo que podríamos prestar más atención:
     }
     ```
 
-## Soporte Técnico y Discusión del Producto
+## Soporte técnico y debate sobre productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

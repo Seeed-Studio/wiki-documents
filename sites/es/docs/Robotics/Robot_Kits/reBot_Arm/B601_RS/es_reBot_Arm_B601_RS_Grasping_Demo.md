@@ -1,6 +1,6 @@
 ---
-description: Este tutorial cubre dos implementaciones de agarre visual para el reBot Arm B601-RS, incluyendo un pipeline YOLO/OBB y un flujo de agarre basado en ROS2.
-title: Demo de agarre visual con reBot Arm B601-RS
+description: Este tutorial cubre dos implementaciones de agarre visual para el reBot Arm B601-RS, incluyendo un flujo de trabajo con YOLO/OBB y otro de agarre basado en ROS2.
+title: Demostración de agarre visual con reBot Arm B601-RS
 keywords:
   - reBot Arm
   - B601-RS
@@ -20,10 +20,11 @@ createdAt: '2026-06-15'
 updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_grasping_demo/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
-# Demo de agarre visual con reBot Arm B601-RS
+# Demostración de agarre visual con reBot Arm B601-RS
 
 <RebotRsDocNav />
 
@@ -32,10 +33,16 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Consigue uno ahora</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -48,26 +55,26 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 </p>
 
 <p align="center">
-  <strong>Percepción de profundidad · Detección de objetos · Calibración mano-ojo · Agarre autónomo · Completamente de código abierto</strong>
+  <strong>Percepción de profundidad · Detección de objetos · Calibración mano-ojo · Agarre autónomo · Totalmente de código abierto</strong>
 </p>
 
-Esta página cubre dos demos de agarre visual con implementaciones diferentes:
+Esta página cubre dos demostraciones de agarre visual con diferentes implementaciones:
 
-- **Método 1 de agarre visual**: Un pipeline de YOLO + RGB-D + SDK de Python que cubre la configuración del entorno, la integración de la cámara, la calibración mano-ojo y la depuración del agarre.
-- **Método 2 de agarre visual**: Un flujo de trabajo ROS2 + YOLOE que inicia el brazo, la cámara Gemini 2 / D405 y los nodos de agarre en varios terminales para recoger y colocar objetos.
+- **Método de agarre visual 1**: Un flujo de trabajo YOLO + RGB-D + Python SDK que cubre la configuración del entorno, integración de la cámara, calibración mano-ojo y depuración del agarre.
+- **Método de agarre visual 2**: Un flujo de trabajo ROS2 + YOLOE que inicia el brazo, la cámara Gemini 2 / D405 y los nodos de agarre en múltiples terminales para recoger y colocar objetos.
 
 <p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="Demo de agarre visual con reBot Arm B601-RS" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="Demostración de agarre visual con reBot Arm B601-RS" />
 </p>
 
-## Método 1 de agarre visual
+## Método de agarre visual 1
 
 ### 1. Características del proyecto
 
 1. **Estimación directa de la pose de agarre a partir de YOLO + OBB**
-   El pipeline utiliza directamente las cajas de detección o los rectángulos de área mínima OBB y toma el eje corto como la dirección de apertura de la pinza, evitando el procesamiento complejo de nubes de puntos 3D.
-2. **Estimación de pose de agarre 6D con GraspNet-Baseline (opcional)**
-   El proyecto también es compatible con GraspNet-Baseline (`graspnet/graspnet-baseline`) para la estimación de la pose de agarre 6D a partir de nubes de puntos RGB-D, utilizando las cajas delimitadoras de YOLO para seleccionar candidatos objetivo para experimentos de agarre más complejos.
+   El flujo de trabajo utiliza directamente las cajas de detección o los rectángulos de área mínima OBB y toma el eje corto como la dirección de apertura de la pinza, evitando el procesamiento complejo de nubes de puntos 3D.
+2. **Estimación de la pose de agarre 6D con GraspNet-Baseline (opcional)**
+   El proyecto también es compatible con GraspNet-Baseline (`graspnet/graspnet-baseline`) para la estimación de la pose de agarre 6D a partir de nubes de puntos RGB-D, usando las cajas delimitadoras de YOLO para seleccionar candidatos objetivo para experimentos de agarre más complejos.
 3. **Integración del controlador del brazo robótico y la pinza**
    El script principal de agarre se basa en el brazo robótico y el controlador de pose final de `reBotArm_control_py`, con un asistente de agarre ligero para la apertura de la pinza, el agarre controlado por fuerza y la lectura de la pose TCP.
 4. **Código abierto y extensible**
@@ -128,7 +135,7 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
 | Pinza | 1 | ✅ |
 | Puente serie USB2CAN | 1 | ✅ |
 | Adaptador de corriente (48V) | 1 | ✅ |
-| Cable USB-C / comunicación | 1 | ✅ |
+| Cable USB-C / de comunicación | 1 | ✅ |
 | Cámara de profundidad RGB-D | 1 | ✅ |
 | Conector de cámara / soporte de montaje | 1 | ✅ |
 
@@ -136,7 +143,7 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
 
 1. Conecta la cámara de profundidad al host mediante USB 3.0.
 2. Conecta el adaptador USB2CAN al bus CAN del brazo.
-3. Asegúrate de que la fuente de alimentación de 48V, la cámara y el brazo robótico estén todos conectados de forma segura.
+3. Asegúrate de que la fuente de alimentación de 48V, la cámara y el brazo robótico estén conectados de forma segura.
 4. Establece los permisos:
 
 ```bash
@@ -155,9 +162,9 @@ sudo chmod 666 /dev/ttyUSB0
 
 #### Paso 0. Completa primero la preparación básica del brazo robótico
 
-Antes de comenzar este tutorial, termina el contenido de [Guía rápida de inicio de reBot Arm B601-RS](https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/), incluyendo el montaje del brazo robótico, la inicialización del punto cero, la configuración de los ID de los motores y las comprobaciones básicas de conectividad.
+Antes de comenzar este tutorial, termina el contenido de [reBot Arm B601-RS Quick Start](https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/), incluyendo el montaje del brazo robótico, la inicialización del punto cero, la configuración de los ID de los motores y las comprobaciones básicas de conectividad.
 
-#### Paso 1. Clona el repositorio
+#### Paso 1. Clonar el repositorio
 
 Da preferencia al repositorio oficial Seeed-Projects:
 
@@ -166,7 +173,7 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-#### Paso 2. Crea y configura el entorno conda
+#### Paso 2. Crear y configurar el entorno conda
 
 ```bash
 conda env create -f environment.yml -n rebotarm
@@ -175,7 +182,7 @@ conda activate rebotarm
 
 Si quieres usar un nombre de entorno diferente, reemplaza `rebotarm` en el comando por tu propio nombre.
 
-#### Paso 3. Instala el SDK del brazo robótico
+#### Paso 3. Instalar el SDK del brazo robótico
 
 ```bash
 git clone https://github.com/Seeed-Projects/reBotArm_control_py.git sdk/reBotArm_control_py
@@ -199,13 +206,13 @@ hardware_yaml: rebotarm_rs.yaml
 
 Los programas de agarre visual leen esta configuración del SDK y seleccionan automáticamente el modo de control del brazo y los parámetros de la pinza correspondientes.
 
-#### Paso 4. Instala el SDK de la cámara de profundidad
+#### Paso 4. Instalar el SDK de la cámara de profundidad
 
 Este proyecto es compatible con cámaras de profundidad RGB-D como Orbbec Gemini 2 y RealSense D435i / D405. Instala el SDK que coincida con tu cámara; si tu entorno ya puede importar el controlador de la cámara, puedes omitir este paso.
 
 **Orbbec Gemini 2**
 
-La cámara de profundidad Orbbec Gemini 2 depende de `pyorbbecsdk`, el wrapper de Python para Orbbec SDK v2. Primero se recomienda instalar el paquete de Python precompilado:
+La cámara de profundidad Orbbec Gemini 2 depende de `pyorbbecsdk`, el contenedor de Python para Orbbec SDK v2. Primero intenta instalar el paquete de Python precompilado:
 
 **Opción 1: Instalar desde pip (recomendado)**
 
@@ -231,7 +238,7 @@ Los usuarios de China continental pueden usar:
 git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 ```
 
-Al instalar desde el código fuente, asegúrate de que la extensión nativa se haya compilado primero con CMake para que `install/lib` contenga `pyorbbecsdk*.so` y las bibliotecas compartidas de Orbbec antes de ejecutar `pip install -e .`.
+Al instalar desde el código fuente, asegúrate de que la extensión nativa se haya compilado primero con CMake, de modo que `install/lib` contenga `pyorbbecsdk*.so` y las bibliotecas compartidas de Orbbec antes de ejecutar `pip install -e .`.
 
 Si todos los métodos de instalación anteriores fallan, consulta la documentación oficial de Orbbec a continuación.
 
@@ -258,7 +265,7 @@ pip install pyrealsense2
 python -c "import pyrealsense2; print('pyrealsense2 OK')"
 ```
 
-Si tu sistema necesita toda la cadena de herramientas de RealSense o las reglas udev, instala `librealsense2` siguiendo la documentación oficial del SDK de RealSense.
+Si tu sistema necesita la cadena de herramientas completa de RealSense o las reglas udev, instala `librealsense2` siguiendo la documentación oficial del SDK de RealSense.
 
 **Resumen de recursos del SDK**
 
@@ -267,30 +274,30 @@ Si tu sistema necesita toda la cadena de herramientas de RealSense o las reglas 
 | Página de producto de Gemini 2 | https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51 |
 | Recursos de desarrollo | https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1 |
 | Orbbec SDK v2 | https://github.com/orbbec/OrbbecSDK_v2 |
-| Documentación del SDK v2 API | https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/ |
+| Documentación de la API del SDK v2 | https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/ |
 | pyorbbecsdk | https://github.com/orbbec/pyorbbecsdk |
 | Documentación de pyorbbecsdk | https://orbbec.github.io/pyorbbecsdk/index.html |
 | Wrapper ROS2 | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
 | RealSense SDK | https://github.com/realsenseai/librealsense |
 
-#### Paso 5. Configura GraspNet (opcional)
+#### Paso 5. Configurar GraspNet (opcional)
 
 No necesitas GraspNet para `scripts/main.py` o `scripts/ordinary_grasp_pipeline.py`. Configúralo solo cuando quieras ejecutar `scripts/graspnet_camera_demo.py` o `scripts/grasp.py`, que requieren GraspNet, PyTorch con CUDA habilitado, los operadores CUDA de PointNet2/knn y un checkpoint preentrenado.
 
-Las extensiones `pointnet2` / `knn` de GraspNet requieren un compilador CUDA. Antes de empezar, asegúrate de que el entorno activo pueda encontrar `nvcc` y comprueba que la versión de CUDA reportada por `nvcc` coincida con la versión de CUDA usada para compilar PyTorch:
+Las extensiones `pointnet2` / `knn` de GraspNet requieren un compilador CUDA. Antes de empezar, asegúrate de que el entorno activo pueda encontrar `nvcc` y comprueba que la versión de CUDA que informa `nvcc` coincida con la versión de CUDA usada para compilar PyTorch:
 
 ```bash
 nvcc --version
 python -c "import torch; print(torch.__version__, torch.version.cuda)"
 ```
 
-Si falta `nvcc`, o si la versión de CUDA reportada por `nvcc` no coincide con `torch.version.cuda`, instala un compilador CUDA que coincida con la versión CUDA actual de PyTorch. Por ejemplo, si PyTorch indica `13.0`:
+Si falta `nvcc`, o si la versión de CUDA que informa `nvcc` no coincide con `torch.version.cuda`, instala un compilador CUDA que coincida con la versión CUDA actual de PyTorch. Por ejemplo, si PyTorch informa `13.0`:
 
 ```bash
 conda install -c nvidia cuda-nvcc=13.0
 ```
 
-También puedes instalar una compilación de PyTorch que coincida con tu versión actual de `nvcc`. Las dos versiones deben coincidir; de lo contrario, la compilación de `pointnet2` / `knn` fallará con `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`.
+También puedes instalar en su lugar una compilación de PyTorch que coincida con tu versión actual de `nvcc`. Las dos versiones deben coincidir, de lo contrario la compilación de `pointnet2` / `knn` fallará con `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`.
 
 ```bash
 cd sdk
@@ -334,15 +341,15 @@ Si la compilación falla con `fatal error: cusparse.h: No such file or directory
 Además, las dependencias antiguas de la API de GraspNet pueden seguir usando el nombre de paquete obsoleto `sklearn`. El comando `sed` lo reemplaza por el nombre de paquete actualmente recomendado `scikit-learn` para evitar `The 'sklearn' PyPI package is deprecated` durante la instalación. A menos que también actualices las dependencias antiguas de la API de GraspNet, mantén su restricción `numpy==1.23.4` porque `transforms3d==0.3.1` sigue usando alias antiguos de NumPy como `np.float`.
 :::
 
-**Configurar el modelo preentrenado**
+**Configurar modelo preentrenado**
 
-Descarga los pesos oficiales preentrenados de GraspNet desde el repositorio oficial graspnet-baseline [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A), luego coloca `checkpoint-rs.tar` en:
+Descarga los pesos preentrenados oficiales de GraspNet desde el repositorio oficial graspnet-baseline [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A), luego coloca `checkpoint-rs.tar` en:
 
 ```bash
 sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
 ```
 
-Después verifica en `config/default.yaml`:
+Luego verifica en `config/default.yaml`:
 
 ```yaml
 graspnet:
@@ -422,7 +429,7 @@ python scripts/collect_handeye_eih.py --manual
 En el modo manual, el brazo entra en modo de compensación de gravedad. Mueve el efector final a un ángulo de visión adecuado, pulsa `Enter` para capturar y pulsa `c` o `q` para finalizar y calcular el resultado.
 
 :::tip
-Si después de la calibración descubres que la precisión de agarre del brazo robótico no puede cumplir tus requisitos, puedes establecer los parámetros `X` (adelante-atrás), `Y` (izquierda-derecha), `Z` (arriba-abajo) en `config/default.yaml` bajo `calibration.hand_eye_compensation_m` para proporcionar compensación posicional.
+Si después de la calibración descubres que la precisión de agarre del brazo robótico no puede satisfacer tus requisitos, puedes establecer los parámetros `X` (adelante-atrás), `Y` (izquierda-derecha), `Z` (arriba-abajo) en `config/default.yaml` bajo `calibration.hand_eye_compensation_m` para proporcionar compensación de posición.
 :::
 
 El resultado de la calibración se guarda en:
@@ -431,7 +438,7 @@ El resultado de la calibración se guarda en:
 config/calibration/<camera_type>/hand_eye.npz
 ```
 
-Se recomienda un recuento de muestras de al menos 5, siendo 15 o más lo recomendado.
+Se recomienda un recuento de muestras de al menos 5 muestras, siendo 15 o más lo recomendado.
 
 ### 8. Ejecución y depuración
 
@@ -456,9 +463,9 @@ yolo:
 
 Este paso es útil para confirmar:
 
-- Que la cámara se abre correctamente
-- Que el modelo YOLO se carga correctamente
-- Que la detección de objetos con YOLO funciona como se espera
+- La cámara se abre correctamente
+- El modelo YOLO se carga correctamente
+- La detección de objetos con YOLO funciona como se espera
 
 #### 2. Verificar solo la estimación de agarre
 
@@ -478,11 +485,11 @@ grasp_pipeline:
     min_base_z_m: 0.00
 ```
 
-Este script no se conecta al brazo robótico. Solo se usa para verificar:
+Este script no se conecta al brazo robótico. Solo se utiliza para verificar:
 
 - Si el OBB o el rectángulo de área mínima es razonable
 - Si el punto de agarre se encuentra cerca del área central del objetivo
-- Si la dirección del eje corto coincide con la dirección esperada de apertura de la pinza
+- Si la dirección del eje corto coincide con la dirección esperada de apertura de la garra
 
 Controles clave:
 
@@ -507,8 +514,8 @@ Se recomienda verificar primero la pose y el espacio de trabajo alcanzable con `
 Flujo principal del programa:
 
 1. Inicializar la cámara RGB-D y confirmar que el flujo de imágenes está disponible.
-2. Habilitar el brazo robótico y la pinza.
-3. Mover a la pose de preparado. Si quieres cambiar la pose inicial de preparado, modifica `config/default.yaml`:
+2. Habilitar el brazo robótico y la garra.
+3. Mover a la pose de listo. Si quieres cambiar la pose inicial de listo, modifica `config/default.yaml`:
 
 ```yaml
 robot:
@@ -537,7 +544,7 @@ Función: Agarrar el plátano y colocarlo en la caja.
 
 Flujo completado:
 
-1. Inicialización de cámara y brazo, mover a la posición de preparado
+1. Inicialización de cámara y brazo, mover a la posición de listo
 2. Vista previa de cámara en tiempo real + detección de objetos YOLO y segmentación de instancias
 3. Pulsar `G` para congelar el fotograma, calcular la pose objetivo del brazo mediante la transformación mano-ojo
 4. El brazo se mueve para agarrar el plátano y levantarlo
@@ -550,7 +557,7 @@ Flujo completado:
 python scripts/graspnet_camera_demo.py
 ```
 
-Este script ejecuta la estimación de pose de agarre 6D de GraspNet solo con la cámara RGB-D, sin conectar al brazo robótico. Mantiene una vista previa en vivo de la cámara, usa las cajas delimitadoras de YOLO para seleccionar el área objetivo y filtra los candidatos de escena completa de GraspNet factibles mediante el bbox objetivo.
+Este script ejecuta la estimación de pose de agarre 6D de GraspNet solo con la cámara RGB-D, sin conectar al brazo robótico. Mantiene una vista previa en vivo de la cámara, usa los cuadros delimitadores de YOLO para seleccionar el área objetivo y filtra los candidatos de escena completa de GraspNet factibles mediante el bbox objetivo.
 
 Controles clave:
 
@@ -568,11 +575,11 @@ python scripts/grasp.py --dry-run
 python scripts/grasp.py --target-class "light blue coffee cup"
 ```
 
-Este script conecta la estimación de GraspNet con el flujo de ejecución del brazo robótico. YOLO selecciona el objetivo, GraspNet produce una pose de agarre 6D, la calibración mano-ojo la transforma al marco base del robot y el script comprueba la alcanzabilidad por IK antes de ejecutar la secuencia de movimientos de pre-agarre, agarre y retirada.
+Este script conecta la estimación de GraspNet con el flujo de ejecución del brazo robótico. YOLO selecciona el objetivo, GraspNet produce una pose de agarre 6D, la calibración mano-ojo la transforma al marco base del robot y el script comprueba la alcanzabilidad IK antes de ejecutar la secuencia de movimiento de pre-agarre, agarre y retirada.
 
-Ejecutar `python scripts/grasp.py` inicia el flujo completo de agarre robótico con GraspNet y controla realmente el brazo robótico. `--dry-run` solo imprime la pose objetivo y el resultado del filtrado de candidatos sin ejecutar el movimiento de agarre. `--target-class "light blue coffee cup"` especifica la clase objetivo de YOLO y solo filtra y agarra candidatos de GraspNet para esa clase.
+Ejecutar `python scripts/grasp.py` inicia el flujo completo de agarre robótico de GraspNet y controla realmente el brazo robótico. `--dry-run` solo imprime la pose objetivo y el resultado del filtrado de candidatos sin ejecutar el movimiento de agarre. `--target-class "light blue coffee cup"` especifica la clase objetivo de YOLO y solo filtra y agarra candidatos de GraspNet para esa clase.
 
-### 9. FAQ
+### 9. Preguntas frecuentes (FAQ)
 
 <h4>1. <code>ModuleNotFoundError: No module named 'motorbridge'</code></h4>
 
@@ -584,7 +591,7 @@ conda env update -n rebotarm -f environment.yml
 cd sdk/reBotArm_control_py && pip install -e .
 ```
 
-<h4>2. Al pulsar <code>G</code> no se ejecuta el agarre</h4>
+<h4>2. Al presionar <code>G</code> no se ejecuta el agarre</h4>
 
 Causas comunes:
 
@@ -603,12 +610,12 @@ python scripts/main.py --dry-run
 Puedes intentar ajustar:
 
 - `grasp_pipeline.grasp.depth_quantile`
-- La altura de instalación de la cámara con respecto al espacio de trabajo
-- Las propiedades reflectantes de la superficie del objetivo
+- La altura de instalación de la cámara con respecto al área de trabajo
+- Las propiedades reflectantes de la superficie objetivo
 
 <h4>4. GraspNet informa que <code>pointnet2_utils</code> no se puede importar desde <code>pointnet2</code></h4>
 
-Esto normalmente significa que la extensión local de CUDA en `sdk/graspnet-baseline/pointnet2` no se compiló en el entorno conda activo, o que Python está resolviendo un paquete `pointnet2` diferente. Asegúrate de que el entorno del proyecto esté activo y luego vuelve a compilar tanto `pointnet2` como `knn` en ese mismo entorno:
+Esto normalmente significa que la extensión local de CUDA en `sdk/graspnet-baseline/pointnet2` no se compiló en el entorno conda activo, o que Python está resolviendo un paquete `pointnet2` diferente. Asegúrate de que el entorno del proyecto esté activo y luego recompila tanto `pointnet2` como `knn` en ese mismo entorno:
 
 ```bash
 conda activate rebotarm
@@ -625,9 +632,9 @@ Verifica:
 python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
 ```
 
-<h4>5. Problemas de compatibilidad de arquitectura CUDA en GPUs más recientes al ejecutar GraspNet</h4>
+<h4>5. Problemas de compatibilidad de arquitectura CUDA en GPUs más nuevas al ejecutar GraspNet</h4>
 
-Si ves `no kernel image is available for execution on the device`, o PyTorch informa que la capacidad CUDA de la GPU actual no es compatible, es probable que la rueda de PyTorch instalada no incluya kernels CUDA para esa arquitectura de GPU. Instala una compilación de PyTorch que admita tu arquitectura actual de CUDA/GPU y luego vuelve a compilar las extensiones locales de CUDA de GraspNet.
+Si ves `no kernel image is available for execution on the device`, o PyTorch informa que la capacidad CUDA de la GPU actual no es compatible, es probable que la rueda de PyTorch instalada no incluya kernels CUDA para esa arquitectura de GPU. Instala una compilación de PyTorch que admita tu arquitectura CUDA/GPU actual y luego recompila las extensiones locales de CUDA de GraspNet.
 
 ```bash
 python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0))"
@@ -649,30 +656,30 @@ Los operadores de muestreo en `pointnet2` solo admiten tensores CUDA. Confirma q
 python -c "import torch; print(torch.cuda.is_available())"
 ```
 
-Si la salida es `False`, corrige primero la instalación de CUDA / PyTorch. Si es `True` pero el error persiste, vuelve a compilar `pointnet2` y `knn`.
+Si la salida es `False`, corrige primero la instalación de CUDA / PyTorch. Si es `True` pero el error persiste, recompila `pointnet2` y `knn`.
 
-## Método 2 de agarre visual
+## Método de agarre visual 2
 
-### 1. Presentación del proyecto
+### 1. Descripción general del proyecto
 
-Esta solución usa **ROS2** y **YOLO** en el reBot Arm B601-RS para la detección de objetos, el agarre y la colocación. El sistema inicia el brazo, la cámara de profundidad y los nodos de agarre en terminales separados.
+Esta solución utiliza **ROS2** y **YOLO** en el reBot Arm B601-RS para la detección, el agarre y la colocación de objetos. El sistema inicia el brazo, la cámara de profundidad y los nodos de agarre en terminales separadas.
 
-La cámara de profundidad actualmente es compatible con **Orbbec Gemini 2** e **RealSense D405**. Este flujo de trabajo no requiere una placa de calibración para la calibración mano-ojo. Debido a las tolerancias de montaje y de las piezas impresas, cada brazo puede presentar un pequeño desfase de agarre.
+La cámara de profundidad actualmente es compatible con **Orbbec Gemini 2** y **RealSense D405**. Este flujo de trabajo no requiere un tablero de calibración para la calibración mano-ojo. Debido a las tolerancias de montaje y de las piezas impresas, cada brazo puede mostrar un pequeño desplazamiento en el agarre.
 
-### 2. Instalación del entorno
+### 2. Configuración del entorno
 
-#### Paso 1. Instala el espacio de trabajo ROS2 del brazo robótico
+#### Paso 1. Instalar el espacio de trabajo ROS2 del brazo robótico
 
-Primero completa la instalación y la compilación del espacio de trabajo `rebotarm_ros2` siguiendo [Integración ROS2 de reBot Arm B601-RS](https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_ros2_integration/).
+Primero completa la instalación y compilación del espacio de trabajo `rebotarm_ros2` siguiendo [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_ros2_integration/).
 
-#### Paso 2. Instala la cámara
+#### Paso 2. Instalar la cámara
 
-Elige una de las dos cámaras e inicia la instalación expandiendo la sección correspondiente.
+Elige una de las configuraciones de cámara siguientes y despliega la sección correspondiente.
 
 <details className="content-details">
-<summary>Haz clic para expandir la instalación de Gemini 2</summary>
+<summary>Haz clic para desplegar la configuración de Gemini 2</summary>
 
-Clona el SDK ROS2 de Orbbec en el espacio de trabajo y cambia a la rama `v2-main`:
+Clona el SDK de Orbbec ROS2 en el espacio de trabajo y cambia a la rama `v2-main`:
 
 ```bash
 cd ~/rebotarm_ros2/src
@@ -688,7 +695,7 @@ cd ~/rebotarm_ros2
 colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
-Instala las reglas udev:
+Instala las reglas de udev:
 
 ```bash
 cd ~/rebotarm_ros2/src/OrbbecSDK_ROS2/orbbec_camera/scripts
@@ -699,7 +706,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 </details>
 
 <details className="content-details">
-<summary>Haz clic para expandir la instalación de D405</summary>
+<summary>Haz clic para desplegar la configuración de D405</summary>
 
 1. Clona el SDK de RealSense y cambia a `v2.58.1`:
 
@@ -710,7 +717,7 @@ cd librealsense
 git checkout v2.58.1
 ```
 
-2. Instala las reglas udev:
+2. Instala las reglas de udev:
 
 ```bash
 sudo apt install -y v4l-utils
@@ -721,7 +728,7 @@ cd ~/librealsense
 3. Compila e instala el SDK:
 
 :::tip
-Si hay un proxy activo, desactívalo antes de volver a configurar:
+Si hay un proxy habilitado, desactívalo antes de volver a configurar:
 
 ```bash
 unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
@@ -737,7 +744,7 @@ sudo make install
 sudo ldconfig
 ```
 
-4. Compila el paquete ROS2 de RealSense:
+4. Compila el paquete RealSense ROS2:
 
 ```bash
 cd ~/rebotarm_ros2/src
@@ -748,7 +755,7 @@ colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
 
 </details>
 
-#### Paso 3. Importa el paquete de agarre visual
+#### Paso 3. Importar el paquete de agarre visual
 
 ```bash
 cd ~/rebotarm_ros2/src/
@@ -757,11 +764,11 @@ cd ~/rebotarm_ros2
 colcon build --symlink-install
 ```
 
-#### Paso 4. Instala el entorno YOLO / YOLOE
+#### Paso 4. Instalar el entorno de YOLO / YOLOE
 
-`grasp_yolo` llama a Ultralytics YOLOE desde Python. Usa un entorno conda independiente y no uses el `/usr/bin/python3` del sistema.
+`grasp_yolo` llama a Ultralytics YOLOE desde Python. Usa un entorno conda dedicado y no uses el `/usr/bin/python3` del sistema.
 
-**Crea el entorno**
+**Crear el entorno**
 
 ```bash
 conda create -n yolo python=3.10
@@ -774,7 +781,7 @@ pip install "numpy==1.26.4" transforms3d
 pip install git+https://github.com/ultralytics/CLIP.git
 ```
 
-Si tienes una GPU NVIDIA, primero confirma que CUDA está disponible. Si la salida es `False`, instala una versión compatible de CUDA / PyTorch. También puedes continuar con CPU, aunque la tasa de fotogramas de detección será menor:
+Si tienes una GPU NVIDIA, primero confirma que CUDA está disponible. Si la salida es `False`, instala una compilación de CUDA / PyTorch compatible. También puedes continuar en CPU, pero la tasa de fotogramas de detección será menor:
 
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
@@ -786,7 +793,7 @@ Verifica YOLOE:
 python -c "from ultralytics import YOLOE; print('YOLOE OK')"
 ```
 
-**Descarga los pesos en `~/rebot_visual_model`**
+**Descargar pesos en `~/rebot_visual_model`**
 
 ```bash
 mkdir -p ~/rebot_visual_model && cd ~/rebot_visual_model
@@ -798,7 +805,7 @@ wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobilecli
 wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
 ```
 
-#### Paso 5. Compila el espacio de trabajo
+#### Paso 5. Compilar el espacio de trabajo
 
 ```bash
 cd ~/rebotarm_ros2
@@ -807,16 +814,16 @@ colcon build --symlink-install
 source ~/rebotarm_ros2/install/setup.bash
 ```
 
-El entorno de agarre visual ya está listo. En cada terminal nuevo, ejecuta source de lo siguiente antes de las órdenes de agarre visual:
+El entorno de agarre visual ya está listo. En cada nueva terminal, ejecuta el siguiente comando antes de lanzar órdenes de agarre visual:
 
 ```bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 ```
 
-### 3. Ejecuta el proyecto
+### 3. Ejecutar el proyecto
 
-Antes de empezar, confirma que el brazo está encendido, que la interfaz CAN es `can0` y que Gemini 2 o D405 está conectada por USB. Luego levanta CAN:
+Antes de comenzar, confirma que el brazo está encendido, que la interfaz CAN es `can0`, y que Gemini 2 o D405 están conectadas por USB. Luego levanta CAN:
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -824,12 +831,12 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-Arranca cada parte en un terminal distinto para ver con claridad la lógica de agarre. Gemini 2 y D405 usan órdenes de arranque distintas; elige las de tu cámara. Si quieres un arranque en un clic, puedes escribir tu propio script.
+Inicia la pila en terminales separadas para que la lógica de agarre sea más fácil de seguir. Gemini 2 y D405 usan diferentes comandos de lanzamiento; elige los correspondientes a tu cámara. Si quieres un lanzamiento con un solo clic, puedes escribir tu propio script de inicio.
 
-#### Terminal A — Arranca el brazo + RViz
+#### Terminal A — Iniciar el brazo + RViz
 
 <details className="content-details">
-<summary>Haz clic para expandir Gemini 2</summary>
+<summary>Haz clic para desplegar Gemini 2</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -841,7 +848,7 @@ ros2 launch rebot_visual_grasp bringup_with_camera.launch.py model:=rs channel:=
 </details>
 
 <details className="content-details">
-<summary>Haz clic para expandir D405</summary>
+<summary>Haz clic para desplegar D405</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -852,10 +859,10 @@ ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=ca
 
 </details>
 
-#### Terminal B — Arranca la cámara
+#### Terminal B — Iniciar la cámara
 
 <details className="content-details">
-<summary>Haz clic para expandir Gemini 2</summary>
+<summary>Haz clic para desplegar Gemini 2</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -866,7 +873,7 @@ ros2 launch orbbec_camera gemini2.launch.py
 </details>
 
 <details className="content-details">
-<summary>Haz clic para expandir D405</summary>
+<summary>Haz clic para desplegar D405</summary>
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -880,14 +887,14 @@ ros2 launch realsense2_camera rs_launch.py \
 
 </details>
 
-#### Terminal C — Ir a la pose de observación + detección YOLO
+#### Terminal C — Mover a la pose de observación + detección con YOLO
 
-Primero ejecuta `conda activate yolo`. Si el nombre del entorno no es `yolo`, cámbialo por el de tu entorno conda.
+Activa primero tu entorno conda con `conda activate yolo`. Si el nombre del entorno no es `yolo`, sustitúyelo por el nombre real de tu entorno conda.
 
 <details className="content-details">
-<summary>Haz clic para expandir Gemini 2</summary>
+<summary>Haz clic para desplegar Gemini 2</summary>
 
-Cambia la ruta de Python al entorno YOLO que hayas creado.
+Cambia la ruta de Python al entorno YOLO que creaste.
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -908,9 +915,9 @@ source ~/rebotarm_ros2/install/setup.bash
 </details>
 
 <details className="content-details">
-<summary>Haz clic para expandir D405</summary>
+<summary>Haz clic para desplegar D405</summary>
 
-Cambia la ruta de Python al entorno YOLO que hayas creado.
+Cambia la ruta de Python al entorno YOLO que creaste.
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -936,16 +943,16 @@ source ~/rebotarm_ros2/install/setup.bash
 
 | Parámetro | Descripción |
 |-----------|-------------|
-| `yolo_device:=gpu` | Usa la GPU; cámbialo a `cpu` si no hay GPU dedicada. También puedes usar `yolo_device:=0` para la GPU 0 |
-| `target_class` | Nombre de clase de texto YOLOE del objeto a agarrar; cámbialo según el objeto real. Admite las clases predeterminadas de YOLO |
-| `place_class` | Nombre de clase de texto YOLOE del objetivo de colocación; cámbialo según el objeto real. Admite las clases predeterminadas de YOLO |
-| `grasp_x_offset_m` | Desplazamiento adelante/atrás en `base_link`; un valor negativo tira hacia atrás |
-| `grasp_z_offset_m` | Ajuste fino de la altura de agarre. El valor predeterminado es para la pinza flexible, más larga que la pinza estándar |
-| `place_z_offset_m` | Elevación extra al colocar, para controlar a qué altura se suelta el objeto |
+| `yolo_device:=gpu` | Usar la GPU; establece `cpu` si no tienes una GPU dedicada. También puedes usar `yolo_device:=0` para la GPU 0 |
+| `target_class` | Nombre de clase de texto YOLOE del objeto a agarrar; cámbialo para que coincida con el objeto real. Admite las clases YOLO predeterminadas |
+| `place_class` | Nombre de clase de texto YOLOE del objetivo de colocación; cámbialo para que coincida con el objeto real. Admite las clases YOLO predeterminadas |
+| `grasp_x_offset_m` | Desplazamiento hacia adelante/atrás en `base_link`; un valor negativo tira la pose hacia atrás |
+| `grasp_z_offset_m` | Ajuste fino de la altura de agarre. El valor predeterminado es para el gripper flexible, que es más largo que el gripper estándar |
+| `place_z_offset_m` | Elevación extra usada al colocar, para controlar a qué altura se suelta el objeto por encima del punto de colocación |
 
-#### Terminal D — Agarre y colocación en un clic
+#### Terminal D — Agarre y colocación con un clic
 
-El retardo de disparo predeterminado es de 3 segundos.
+El retardo de activación predeterminado es de 3 segundos.
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -954,15 +961,15 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py
 ```
 
-Para cambiar el retardo, añade un parámetro. Por ejemplo, disparar a los 5 segundos:
+Para cambiar el retardo, añade un parámetro. Por ejemplo, activar después de 5 segundos:
 
 ```bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 ```
 
-#### Terminal E — Volver a home (opcional)
+#### Terminal E — Volver a la posición inicial (opcional)
 
-En la versión nueva de `rebotarm`, pulsar `Ctrl + C` en el terminal hace que el brazo vuelva a home automáticamente. Para hacerlo a mano:
+En la versión más reciente de `rebotarm`, al pulsar `Ctrl + C` en la terminal el brazo vuelve automáticamente a la posición inicial. Para llevarlo a home manualmente:
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -972,24 +979,24 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 
 ## Contacto
 
-- Soporte técnico: [Enviar un Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
+- Soporte técnico: [Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
 - Página del proyecto: [GitHub](https://github.com/Seeed-Projects/reBot-DevArm-Grasp)
 - Foro: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ## Referencias
 
-- [Guía rápida de inicio de reBot Arm B601-RS](https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/)
+- [reBot Arm B601-RS Inicio Rápido](https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/)
 - [Integración ROS2 de reBot Arm B601-RS](https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_ros2_integration/)
 - [rebot_visual_grasp](https://github.com/xiehuangbao888/rebot_visual_grasp)
 - [OrbbecSDK_ROS2](https://github.com/xiehuangbao888/OrbbecSDK_ROS2)
 - [Página de producto Orbbec Gemini 2](https://www.orbbec.com/products/stereo-vision-camera/gemini-2/)
 - [Recursos de desarrollo de Orbbec](https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
-- [Guía de API de Orbbec SDK v2](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/)
+- [Guía de la API de Orbbec SDK v2](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/)
 - [Repositorio pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
 - [Documentación de pyorbbecsdk](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
 - [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
 - [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
-- [Documentación de Graspnet(Anygrasp)](https://graspnet.net/)
+- [Documentación de Graspnet (Anygrasp)](https://graspnet.net/)
