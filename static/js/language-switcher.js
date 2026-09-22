@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-21 11:21:32 (北京时间)
-// 多语言页面: 2455 个
+// 生成时间: 2026-09-22 17:48:09 (北京时间)
+// 多语言页面: 2475 个
 
 (function() {
   'use strict';
@@ -738,6 +738,13 @@
     "pt"
   ],
   "/DeciAI-Getting-Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/deploy_preempt_rt_kernel_with_prebuilt_deb_package_on_recomputer_jetson": [
     "cn",
     "en",
     "es",
@@ -6055,6 +6062,12 @@
     "ja",
     "pt"
   ],
+  "/reachymini_development_cases_sway_screen": [
+    "cn",
+    "en",
+    "ja",
+    "pt"
+  ],
   "/reachymini_development_cases_gripper_voice_control": [
     "cn",
     "en",
@@ -6498,6 +6511,114 @@
   ],
   "/rebot_arm_b601_rs_web_simulator_developer_guide": [
     "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_1": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_2": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_3": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_4": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_5": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_6": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_7": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_8": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_9": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_10": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_11": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_12": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_13": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_14": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_15": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_16": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_17": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_introduction": [
     "en",
     "es",
     "ja",
