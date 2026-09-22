@@ -104,7 +104,7 @@ const sidebars = {
         
         {
           type: 'category',
-          label: 'ハンド',
+          label: 'AmazingHand',
           items: [
             'Robotics/Robot_Kits/Hand/ja_AmazingHand',
           ]
@@ -118,7 +118,7 @@ const sidebars = {
             {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/ja_intro',
-              label: 'Introduction',
+              label: '概要',
             },
             {
               type: 'doc',
@@ -155,49 +155,49 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Reachy Mini (Wireless)',
+              label: 'Reachy Mini（ワイヤレス）',
               collapsible: false,
               collapsed: false,
               items: [
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_get_started',
-                  label: 'Getting Started',
+                  label: 'はじめに',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_usage',
-                  label: 'Usage',
+                  label: '使用方法',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_hardware',
-                  label: 'Hardware',
+                  label: 'ハードウェア',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_media_advanced_controls',
-                  label: 'Media Advanced Controls',
+                  label: 'メディアの高度な操作',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_reset',
-                  label: 'Reset',
+                  label: 'リセット',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_install_daemon_from_branch',
-                  label: 'Install Daemon from Branch',
+                  label: 'ブランチからデーモンをインストール',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_development_workflow',
-                  label: 'Development Workflow',
+                  label: '開発ワークフロー',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_reflash_the_rpi_ISO',
-                  label: 'Reflash the ISO',
+                  label: 'ISOを再書き込み',
                 },
               ],
             },
@@ -210,27 +210,27 @@ const sidebars = {
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_get_started',
-                  label: 'Getting Started',
+                  label: 'はじめに',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_usage',
-                  label: 'Usage',
+                  label: '使用方法',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_hardware',
-                  label: 'Hardware',
+                  label: 'ハードウェア',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_media_advanced_controls',
-                  label: 'Media Advanced Controls',
+                  label: 'メディアの高度な操作',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_wizard',
-                  label: 'Wizard',
+                  label: 'ウィザード',
                 },
               ],
             },
@@ -388,7 +388,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: '高トルク',
+          label: 'HighTorque',
           items: [
             'Robotics/Robot_Actuator/HighTorque/ja_HighTorque',
             'Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Getting_Started',

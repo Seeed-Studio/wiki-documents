@@ -104,7 +104,7 @@ const sidebars = {
         
         {
           type: 'category',
-          label: 'Mão',
+          label: 'AmazingHand',
           items: [
             'Robotics/Robot_Kits/Hand/pt_AmazingHand',
           ]

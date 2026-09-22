@@ -104,7 +104,7 @@ const sidebars = {
         
         {
           type: 'category',
-          label: 'Mano',
+          label: 'AmazingHand',
           items: [
             'Robotics/Robot_Kits/Hand/es_AmazingHand',
           ]
@@ -118,7 +118,7 @@ const sidebars = {
             {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/es_intro',
-              label: 'Introduction',
+              label: 'Introducción',
             },
             {
               type: 'doc',
@@ -155,19 +155,19 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Reachy Mini (Wireless)',
+              label: 'Reachy Mini (inalámbrico)',
               collapsible: false,
               collapsed: false,
               items: [
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_get_started',
-                  label: 'Getting Started',
+                  label: 'Primeros pasos',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_usage',
-                  label: 'Usage',
+                  label: 'Uso',
                 },
                 {
                   type: 'doc',
@@ -177,27 +177,27 @@ const sidebars = {
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_media_advanced_controls',
-                  label: 'Media Advanced Controls',
+                  label: 'Controles avanzados de medios',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_reset',
-                  label: 'Reset',
+                  label: 'Restablecer',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_install_daemon_from_branch',
-                  label: 'Install Daemon from Branch',
+                  label: 'Instalar daemon desde una rama',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_development_workflow',
-                  label: 'Development Workflow',
+                  label: 'Flujo de trabajo de desarrollo',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_reflash_the_rpi_ISO',
-                  label: 'Reflash the ISO',
+                  label: 'Volver a grabar la ISO',
                 },
               ],
             },
@@ -210,12 +210,12 @@ const sidebars = {
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/es_get_started',
-                  label: 'Getting Started',
+                  label: 'Primeros pasos',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/es_usage',
-                  label: 'Usage',
+                  label: 'Uso',
                 },
                 {
                   type: 'doc',
@@ -225,12 +225,12 @@ const sidebars = {
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/es_media_advanced_controls',
-                  label: 'Media Advanced Controls',
+                  label: 'Controles avanzados de medios',
                 },
                 {
                   type: 'doc',
                   id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/es_wizard',
-                  label: 'Wizard',
+                  label: 'Asistente',
                 },
               ],
             },
@@ -388,7 +388,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Alto par',
+          label: 'HighTorque',
           items: [
             'Robotics/Robot_Actuator/HighTorque/es_HighTorque',
             'Robotics/Robot_Actuator/HighTorque/es_HighTorque_Getting_Started',
