@@ -1,6 +1,6 @@
 ---
 description: 本教程介绍如何使用 rebot_control 通过 MotorBridge 与 CAN 总线，对 reBot Arm B601-RS 进行 MIT 位置控制，含夹爪、温度保护与安全回零。
-title: reBot Arm B601-RS MIT 位置控制
+title: B601-RS 电机SDK
 keywords:
   - reBot
   - B601-RS

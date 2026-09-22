@@ -1,6 +1,6 @@
 ---
-description: このwikiは、StarAI ロボットアームのデバッグチュートリアルを提供し、Lerobotフレームワーク内でのデータ収集とトレーニングを実現します。
-title: LeRobotでのStarAI Arm
+description: このWikiでは、StarAI Robot Armのデバッグチュートリアルを提供し、Lerobotフレームワーク内でのデータ収集とトレーニングを実現します。
+title: StarAI Arm と LeRobot
 keywords:
   - Lerobot
   - Huggingface
@@ -14,7 +14,7 @@ last_update:
   author: LiShanghang
 translation:
   skip: [zh-CN]
-createdAt: '2025-09-12'
+createdAt: '2025-07-25'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/lerobot_starai_arm/
 ---

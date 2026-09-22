@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、reBot Arm B601-RS 向けに、YOLO/OBB パイプラインと ROS2 ベースの把持ワークフローを含む 2 つのビジュアルグラスピング実装を扱います。
-title: reBot Arm B601-RS ビジュアルグラスピングデモ
+description: このチュートリアルでは、reBot Arm B601-RS 向けに、YOLO/OBB パイプラインと ROS2 ベースの把持ワークフローを含む 2 つのビジュアル把持実装を扱います。
+title: B601-RS のビジュアル把持
 keywords:
   - reBot Arm
   - B601-RS

@@ -1,6 +1,6 @@
 ---
 description: 本教程介绍 reBot Arm B601-RS 的两种不同逻辑视觉夹取实现，包含 YOLO/OBB 抓取管线与另一种视觉抓取方案。
-title: reBot Arm B601-RS 视觉夹取 Demo
+title: B601-RS 视觉夹取
 keywords:
   - reBot Arm
   - B601-RS

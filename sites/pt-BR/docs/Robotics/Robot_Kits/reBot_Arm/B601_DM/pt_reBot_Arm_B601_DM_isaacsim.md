@@ -1,6 +1,6 @@
 ---
-description: Este tutorial mostra como baixar o Isaac Sim e implantar o robô reBot Arm B601-DM em um ambiente de simulação para desenvolvimento e depuração.
-title: reBot Arm B601-DM Isaac Sim
+description: Este tutorial mostra como baixar o Isaac Sim e implantar o robô reBot-B601-DM em um ambiente de simulação para desenvolvimento e depuração.
+title: B601-DM com Isaac Sim
 keywords:
   - Isaacsim
   - braço robótico

@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece um Guia Completo de Controle de Motor HighTorque
-title: Guia Completo de Controle de Motor HighTorque
+description: Este wiki fornece um guia completo de controle do motor HighTorque
+title: SDK do Motor HighTorque
 keywords:
   - actuator
   - motor
@@ -12,7 +12,7 @@ last_update:
   date: 11/19/2025
   author: Tienjuiwong
 createdAt: '2025-11-19'
-updatedAt: '2026-08-03'
+updatedAt: '2026-08-02'
 url: https://wiki.seeedstudio.com/pt-br/hightorque_control/
 ---
 

@@ -1,6 +1,6 @@
 ---
 description: 本wiki提供 reBot Arm B601-DM 在 Lerobot 框架内实现数据收集和训练的完整流程。
-title: reBot Arm B601-DM LeRobot 入门
+title: B601-DM Lerobot 入门
 keywords:
   - Lerobot
   - Huggingface

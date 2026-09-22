@@ -1,6 +1,6 @@
 ---
 description: 本维基提供华馨京 StarAI 机械臂的调试教程，并在 Lerobot 框架内实现数据收集和训练。
-title: StarAI 机械臂Lerobot入门教程
+title: StarAI Lerobot教程
 keywords:
   - Lerobot
   - Huggingface

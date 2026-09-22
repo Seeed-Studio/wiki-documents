@@ -1,6 +1,6 @@
 ---
 description: This wiki provides the assembly and debugging tutorial for the Lekiwi and realizes data collection and training within the Lerobot framework.
-title: Lekiwi in Lerobot
+title: SO-Arm with Lekiwi
 keywords:
   - Lerobot
   - Huggingface

@@ -1,6 +1,6 @@
 ---
-description: XIAO ESP32-C3 Bus Servo Adapter と micro-ROS を用いて、SO-ARM101 リーダーとワイヤレスフォロワー間に低遅延の有線／無線 ROS 2 テレオペレーションリンクを構築します。
-title: XIAO ESP32-C3 と micro-ROS を用いた SO-ARM101 の有線／無線テレオペレーション
+description: XIAO ESP32-C3 Bus Servo Adapter と micro-ROS を用い、Wi-Fi UDP 経由で SO-ARM101 フォロワー向けの低遅延ワイヤレス ROS 2 テレオペレーションリンクを構築します。
+title: SO-Arm と XIAO によるワイヤレステレオペレーション
 keywords:
   - SO-ARM101
   - XIAO ESP32-C3
