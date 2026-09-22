@@ -4262,6 +4262,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Deploy_TensorRT_Model_Connect_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Jetson_SPI_Getting_Start',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Flash_PREEMPT_RT_Kernel_on_reComputer_Jetson_JetPack_6_2_1',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Deploy_PREEMPT_RT_Kernel_with_Prebuilt_DEB_Package_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Rapid_Prototyping_on_Jetson_with_NVIDIA_Skills',
               ]
             },
