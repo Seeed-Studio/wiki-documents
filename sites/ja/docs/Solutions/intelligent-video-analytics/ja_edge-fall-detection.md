@@ -22,7 +22,7 @@ last_update:
   date: 09/01/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-01'
-updatedAt: '2026-09-01'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-fall-detection/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -619,4 +619,3 @@ broker は Orin と Hailo パッケージではアラームホスト上、reCame
 - **RealBiomFall** — 外部汎化試験に使ったテストサブセットで、34 クリップ、すべて転倒のため、再現率とレイテンシだけを報告します。
 - どちらのデータセットも `edgefallkit` リポジトリには配布されていません。評価を再現するには自分で取得してください。
 - カメラ設置図はこのソリューションのために社内で作成しました。
-</content>

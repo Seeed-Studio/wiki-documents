@@ -22,7 +22,7 @@ last_update:
   date: 09/01/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-01'
-updatedAt: '2026-09-01'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/solutions/edge-fall-detection/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -619,4 +619,3 @@ Treat every deployment as a commissioning exercise until you have watched a real
 - **RealBiomFall** — The testing subset used for the external generalization test, 34 clips, all falls, so only recall and latency are reported.
 - Neither dataset is distributed with the `edgefallkit` repo — obtain them yourself to reproduce the evaluation.
 - The camera-placement diagram is drawn in-house for this solution.
-</content>
