@@ -1,0 +1,10 @@
+position: 2
+label: '音響・音声AI'
+collapsible: true
+collapsed: true
+className: _ai-sound
+link:
+  type: generated-index
+  slug: acoustic-audio-ai
+  title: 音響・音声AI
+  description: 音声の収集・文字起こし・音声対話のソリューション。

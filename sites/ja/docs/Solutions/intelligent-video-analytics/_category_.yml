@@ -1,0 +1,10 @@
+position: 1
+label: 'ビジョン・映像AI'
+collapsible: true
+collapsed: true
+className: _ai-perception
+link:
+  type: generated-index
+  slug: intelligent-video-analytics
+  title: ビジョン・映像AI
+  description: エッジデバイスでの映像・画像解析ソリューション。

@@ -1,10 +1,10 @@
-position: 7
-label: 'Indoor-Outdoor Positioning'
+position: 5
+label: 'Indoor Positioning & Tracking'
 collapsible: true
 collapsed: true
 className: _indoor-outdoor-positioning
 # link:
 #   type: generated-index
 #   slug: indoor-outdoor-positioning
-#   title: Indoor-Outdoor Positioning
+#   title: Indoor Positioning & Tracking
 #   description: Positioning and tracking solutions across indoor and outdoor environments.
