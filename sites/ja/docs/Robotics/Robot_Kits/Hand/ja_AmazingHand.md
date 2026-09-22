@@ -1,6 +1,6 @@
 ---
-description: 低コスト、オープンソース、8自由度、3Dプリント可能なロボットハンド「AmazingHand」を構築・制御する。
-title: AmazingHand
+description: 低コストでオープンソース、8自由度で3Dプリント可能なロボットハンド「AmazingHand」を構築し、制御します。
+title: AmazingHand クイックスタート
 keywords:
   - Lerobot
   - Huggingface

@@ -1,11 +1,11 @@
 ---
-description: Este wiki fornece uma estrutura de implementação abrangente para equipar o Kit de Robô Lekiwi com capacidades de seguir som usando ReSpeaker Mic Array v2.0 e reComputer Jetson Mini, cobrindo integração de hardware, configuração de ambiente e adaptação de software, ao mesmo tempo em que demonstra funcionalidade de rastreamento de fonte de áudio em tempo real.
-title: Lekiwi com Seguimento de Som
+description: Este wiki fornece uma estrutura de implementação abrangente para equipar o Lekiwi Robot Kit com capacidades de seguir som usando ReSpeaker Mic Array v2.0 e reComputer Jetson Mini, cobrindo integração de hardware, configuração de ambiente e adaptação de software, enquanto demonstra a funcionalidade de rastreamento de fonte de áudio em tempo real.
+title: SO-Arm com Respeaker
 keywords:
   - Lerobot
   - Huggingface
-  - Carro
-  - Robótica
+  - Car
+  - Robotics
   - reSpeaker
   - Lekiwi
   - reComputer
@@ -15,7 +15,7 @@ last_update:
   date: 6/24/2025
   author: Youjiang
 createdAt: '2025-06-24'
-updatedAt: '2026-03-20'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/pt-br/sound_follow_robot/
 ---
 

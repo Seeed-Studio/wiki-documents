@@ -1,6 +1,6 @@
 ---
-description: Esta guía para desarrolladores presenta la arquitectura, el runtime, el puente ROS2, la integración LLM/MCP y el flujo de trabajo de desarrollo secundario de la consola web reBotArm_simulator-DM y la pila ROS2/MuJoCo en el reBot Arm B601-DM Digital Twin & Control Stack.
-title: reBot Arm B601-DM Digital Twin & Control Stack
+description: Esta guía para desarrolladores presenta la arquitectura, el runtime, el puente ROS2, la integración LLM/MCP y el flujo de trabajo de desarrollo secundario de la consola web reBotArm_simulator-DM y del stack ROS2/MuJoCo en el ReBot Arm Digital Twin & Control Stack para B601-DM.
+title: B601-DM con Controlador Web
 keywords:
   - reBot Arm
   - B601-DM

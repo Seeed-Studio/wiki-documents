@@ -1,6 +1,6 @@
 ---
 description: Este wiki cubre las utilidades del conjunto de datos de LeRobot, incluyendo eliminar episodios, fusionar conjuntos de datos y más.
-title: Herramienta de Conjunto de Datos de LeRobot
+title: Herramienta de Conjunto de Datos SO-Arm
 keywords:
   - Lerobot
   - Hugging Face

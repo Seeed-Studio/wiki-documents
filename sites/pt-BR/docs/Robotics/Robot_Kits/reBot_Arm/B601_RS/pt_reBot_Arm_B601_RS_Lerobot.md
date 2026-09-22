@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece um guia completo para o reBot Arm B601-RS para implementar coleta de dados e treinamento dentro do framework LeRobot.
-title: reBot Arm B601-RS no LeRobot
+description: Este wiki fornece um guia completo para o reBot Arm B601-RS implementar coleta de dados e treinamento dentro do framework LeRobot.
+title: B601-RS com LeRobot
 keywords:
   - Lerobot
   - Huggingface

@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece o tutorial de montagem e depuração do Lekiwi e realiza a coleta de dados e o treinamento dentro do framework Lerobot.
-title: Lekiwi no Lerobot
+description: Este wiki fornece o tutorial de montagem e depuração para o Lekiwi e realiza a coleta de dados e o treinamento dentro do framework Lerobot.
+title: SO-Arm com Lekiwi
 keywords:
   - Lerobot
   - Huggingface
@@ -15,7 +15,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-05-28'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/lerobot_lekiwi/
 ---
 

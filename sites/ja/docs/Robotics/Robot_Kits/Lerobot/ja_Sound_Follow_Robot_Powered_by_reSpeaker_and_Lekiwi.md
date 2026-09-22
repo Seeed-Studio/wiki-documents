@@ -1,6 +1,6 @@
 ---
-description: このwikiは、ReSpeaker Mic Array v2.0とreComputer Jetson Miniを使用してLekiwi Robot Kitに音追従機能を装備するための包括的な実装フレームワークを提供し、ハードウェア統合、環境設定、ソフトウェア適応をカバーしながら、リアルタイム音源追跡機能を実演します。
-title: Lekiwi 音追従機能付き
+description: このWikiでは、ReSpeaker Mic Array v2.0 と reComputer Jetson Mini を用いて Lekiwi Robot Kit にサウンドフォロー機能を実装するための包括的なフレームワークを提供します。ハードウェア統合、環境構築、ソフトウェア適応を網羅し、リアルタイムの音源追跡機能を実演します。
+title: Respeaker 搭載 SO-Arm
 keywords:
   - Lerobot
   - Huggingface
