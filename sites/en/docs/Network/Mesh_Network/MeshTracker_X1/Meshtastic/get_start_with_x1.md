@@ -662,7 +662,7 @@ Each node will periodically send its own node information, enabling other nodes 
 
 #### Regenerate Private Key
 
-Two nodes need to know their private key with each other in order to be able to communicate with each other. If one node keeps failing in private message transmission, try regenerating the private key for it.
+Each node keeps its private key to itself and never shares it. To communicate privately, two nodes exchange their public keys with each other over the mesh. If one node keeps failing in private message transmission, try regenerating the private key for it — this rotates its key pair, so other nodes need to re-sync with its new public key.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
