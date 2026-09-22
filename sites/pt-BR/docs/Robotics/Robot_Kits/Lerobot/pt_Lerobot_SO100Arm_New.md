@@ -1,11 +1,11 @@
 ---
-description: Este wiki fornece um fluxo de trabalho completo do LeRobot para SO-ARM100 / SO-ARM101, incluindo montagem, calibração, teleoperação, câmeras, gravação de dataset, treinamento, avaliação e dicas de implantação.
-title: Introdução ao SO-ARM10x no LeRobot
+description: Este wiki fornece um fluxo de trabalho completo do LeRobot para SO-ARM100 / SO-ARM101, incluindo montagem, calibração, teleoperação, câmeras, gravação de conjunto de dados, treinamento, avaliação e dicas de implantação.
+title: Tutorial LeRobot para SO-Arm
 keywords:
   - Lerobot
   - Huggingface
   - Arm
-  - Robotics
+  - Robótica
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 aliases:

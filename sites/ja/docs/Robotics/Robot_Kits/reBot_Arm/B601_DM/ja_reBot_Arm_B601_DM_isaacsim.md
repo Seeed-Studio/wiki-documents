@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグ用にシミュレーション環境へ reBot Arm B601-DM ロボットを展開する方法を説明します。
-title: reBot Arm B601-DM Isaac Sim
+description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグのためにシミュレーション環境で reBot-B601-DM ロボットを展開する方法を説明します。
+title: B601-DM と Isaac Sim
 keywords:
   - Isaacsim
   - ロボットアーム

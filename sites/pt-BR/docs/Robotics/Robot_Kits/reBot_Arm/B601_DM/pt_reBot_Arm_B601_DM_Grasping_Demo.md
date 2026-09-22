@@ -1,13 +1,13 @@
 ---
 description: Este tutorial mostra como construir uma demonstração completa de preensão visual para o reBot Arm B601 usando o pipeline de preensão YOLO/OBB.
-title: Demo de Preensão Visual reBot Arm B601-DM
+title: B601-DM Preensão Visual
 keywords:
   - reBot Arm
   - B601
   - Preensão
   - Gemini 2
   - YOLO
-  - Calibração mão-olho
+  - Calibração Mão-Olho
   - Robô
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187

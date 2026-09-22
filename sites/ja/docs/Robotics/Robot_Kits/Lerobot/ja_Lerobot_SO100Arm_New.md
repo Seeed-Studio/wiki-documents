@@ -1,6 +1,6 @@
 ---
-description: このWikiでは、SO-ARM100 / SO-ARM101 向けに、組み立て、キャリブレーション、テレオペレーション、カメラ、データセット記録、学習、評価、およびデプロイのヒントまで含めた、完全な LeRobot ワークフローを提供します。
-title: LeRobot による SO-ARM10x 入門
+description: このWikiでは、SO-ARM100 / SO-ARM101向けのLeRobotワークフローを、組み立て、キャリブレーション、遠隔操作、カメラ、データセット記録、学習、評価、およびデプロイのヒントまで含めて一通り解説します。
+title: SO-Arm LeRobot チュートリアル
 keywords:
   - Lerobot
   - Huggingface
