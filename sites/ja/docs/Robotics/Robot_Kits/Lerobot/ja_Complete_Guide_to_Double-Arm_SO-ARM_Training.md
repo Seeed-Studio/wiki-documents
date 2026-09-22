@@ -1,6 +1,6 @@
 ---
 description: LeRobot を使用した両腕 SO-ARM トレーニングの完全ガイド。
-title: 両腕 SO-ARM トレーニング完全ガイド
+title: SO-Arm デュアルテレオペレーション 
 keywords:
   - Lerobot
   - SO-ARM

@@ -1,6 +1,6 @@
 ---
-description: この開発者ガイドでは、reBot Arm B601-RS Digital Twin & Control Stack の Web コンソール、ROS 2、RobStride/SocketCAN、MuJoCo シミュレーション、ビジュアルグラスピング、および LLM/MCP エージェントのインストール、実行、二次開発ワークフローを紹介します。
-title: reBot Arm B601-RS Digital Twin & Control Stack
+description: この開発者ガイドでは、B601-RS 向け ReBot Arm Digital Twin & Control Stack の Web コンソール、ROS 2、RobStride/SocketCAN、MuJoCo シミュレーション、ビジュアルグラスピング、および LLM/MCP エージェントのインストール、実行環境、二次開発ワークフローについて紹介します。
+title: Web コントローラ付き B601-RS
 keywords:
   - reBot Arm
   - B601-RS

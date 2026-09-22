@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona un marco de implementación integral para equipar el Kit de Robot Lekiwi con capacidades de seguimiento de sonido utilizando ReSpeaker Mic Array v2.0 y reComputer Jetson Mini, cubriendo la integración de hardware, configuración del entorno y adaptación de software mientras demuestra la funcionalidad de seguimiento de fuente de audio en tiempo real.
-title: Lekiwi con Seguimiento de Sonido
+description: Este wiki proporciona un marco de implementación completo para dotar al Lekiwi Robot Kit de capacidades de seguimiento de sonido utilizando ReSpeaker Mic Array v2.0 y reComputer Jetson Mini, abarcando la integración de hardware, la configuración del entorno y la adaptación de software, al tiempo que demuestra la funcionalidad de seguimiento de fuentes de audio en tiempo real.
+title: SO-Arm con Respeaker
 keywords:
   - Lerobot
   - Huggingface

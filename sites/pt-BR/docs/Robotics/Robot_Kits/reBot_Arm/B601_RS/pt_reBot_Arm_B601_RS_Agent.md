@@ -1,11 +1,11 @@
 ---
-description: 'Guia de Operação do wrc_demo: etapas completas para o demo de preensão visual do reBot Arm B601-RS — preparação do ambiente, download de modelo, troca de LLM, calibração mão-olho, execução do demo, solução de problemas.'
-title: Framework de Design de Agente Incorporado do reBot Arm B601-RS
+description: 'Guia de Operação do wrc_demo: etapas completas para o demo de preensão visual do reBot Arm B601-RS — configuração do ambiente, download do modelo, troca de LLM, calibração mão-olho, execução do demo e solução de problemas.'
+title: B601-RS com Agent Claw
 keywords:
   - wrc_demo
   - reBot Arm B601-RS
   - preensão visual
-  - modelo de visão e linguagem
+  - modelo de linguagem de visão
   - Qwen3-VL
   - YOLOE
   - calibração mão-olho

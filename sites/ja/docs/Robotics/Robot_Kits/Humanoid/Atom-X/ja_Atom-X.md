@@ -1,6 +1,6 @@
 ---
 description: Atom-X の使用を開始する。
-title: Atom-X 入門ガイド
+title: Atom-X クイックスタート
 keywords:
   - ヒューマノイド
   - ロボティクス

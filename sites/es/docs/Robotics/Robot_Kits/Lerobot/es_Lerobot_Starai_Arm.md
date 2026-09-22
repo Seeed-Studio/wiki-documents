@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona el tutorial de depuración para el Brazo Robótico StarAI y realiza la recolección de datos y entrenamiento dentro del framework Lerobot.
-title: Brazo StarAI en LeRobot
+description: Este wiki proporciona el tutorial de depuración para el brazo robótico StarAI y permite la recopilación de datos y el entrenamiento dentro del framework Lerobot.
+title: Brazo StarAI con LeRobot
 keywords:
   - Lerobot
   - Huggingface
@@ -14,7 +14,7 @@ last_update:
   author: LiShanghang
 translation:
   skip: [zh-CN]
-createdAt: '2025-09-03'
+createdAt: '2025-07-25'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/lerobot_starai_arm/
 ---

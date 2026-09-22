@@ -1,12 +1,12 @@
 ---
-description: このWikiでは、LeRobotフレームワーク内でのデータ収集と学習を実装するための、reBot Arm B601-RS 向けの完全なガイドを提供します。
-title: LeRobot における reBot Arm B601-RS
+description: この Wiki では、LeRobot フレームワーク内でデータ収集とトレーニングを実装するための reBot Arm B601-RS の完全なガイドを提供します。
+title: B601-RS と LeRobot
 keywords:
   - Lerobot
   - Huggingface
-  - Robotic Arm
+  - ロボットアーム
   - rebot arm
-  - Robot
+  - ロボット
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_lerobot
 sku: 100065783, 100095532, 100063143, 100045679, 100040187

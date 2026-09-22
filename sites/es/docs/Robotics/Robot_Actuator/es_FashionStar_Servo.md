@@ -1,12 +1,12 @@
 ---
-description: Este wiki proporciona un tutorial para los motores servo FashionStar.
-title: Motor Servo FashionStar
+description: Este wiki proporciona un tutorial para los servomotores FashionStar.
+title: FashionStar
 keywords:
-  - actuator
+  - actuador
   - motor
-  - arm
-  - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp
+  - brazo
+  - robótica
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar_servo_all_homepage.webp
 slug: /fashionstar_servo
 last_update:
   date: 11/24/2025

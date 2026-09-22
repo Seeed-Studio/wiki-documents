@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece tutoriais para motores da série Stackforce.
-title: Motores Stackforce Série
+description: Este wiki fornece um tutorial para motores da série Stackforce.
+title: Stackforce
 keywords:
   - actuator
   - motor
@@ -13,7 +13,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-11-26'
-updatedAt: '2026-03-19'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/stackforce_series/
 ---
 

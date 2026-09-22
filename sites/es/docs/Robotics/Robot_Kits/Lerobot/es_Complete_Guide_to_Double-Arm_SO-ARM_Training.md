@@ -1,12 +1,12 @@
 ---
-description: Guía completa para el entrenamiento de SO-ARM de doble brazo con LeRobot.
-title: Guía Completa para el Entrenamiento de SO-ARM de Doble Brazo
+description: Guía completa para el entrenamiento de doble brazo SO-ARM con LeRobot.
+title: SO-Arm Teleoperación Dual 
 keywords:
   - Lerobot
   - SO-ARM
-  - Doble brazo
-  - Robótica
-  - Entrenamiento
+  - Double Arm
+  - Robotics
+  - Training
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/double_soarm/Arm_kit.webp
 slug: /lerobot_double_arm_so_arm_training
 sku: 114993666,114993667

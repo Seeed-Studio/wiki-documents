@@ -1,6 +1,6 @@
 ---
-description: Crie um link de teleoperação ROS 2 com fio ou sem fio e baixa latência para um SO-ARM101 líder e um seguidor sem fio usando XIAO ESP32-C3 Bus Servo Adapters e micro-ROS via Wi-Fi UDP.
-title: Teleoperação com fio e sem fio do SO-ARM101 com XIAO ESP32-C3 e micro-ROS
+description: Crie um link de teleoperação ROS 2 sem fio e de baixa latência para um seguidor SO-ARM101 usando o XIAO ESP32-C3 Bus Servo Adapter e micro-ROS via Wi-Fi UDP.
+title: SO-Arm com Teleoperação Sem Fio XIAO
 keywords:
   - SO-ARM101
   - XIAO ESP32-C3

@@ -1,13 +1,13 @@
 ---
-description: Guía de Desarrollo Profesional del Robot Bípedo con Ruedas Gigante StackForce, incluyendo características avanzadas, tutoriales de desarrollo en profundidad, documentación de API y casos de aplicación práctica
-title: Robot Bípedo con Ruedas Gigante StackForce
+description: Guía de desarrollo profesional del robot gigante bípedo con ruedas StackForce, que incluye funciones avanzadas, tutoriales de desarrollo en profundidad, documentación de la API y casos de aplicación práctica
+title: Inicio rápido del robot gigante con ruedas
 keywords:
   - StackForce
-  - Robot con Patas y Ruedas
-  - Desarrollo Profesional
-  - Robótica Avanzada
-  - Inteligencia Artificial
-  - Navegación Autónoma
+  - Robot con patas y ruedas
+  - Desarrollo profesional
+  - Robótica avanzada
+  - Inteligencia artificial
+  - Navegación autónoma
 slug: /stackforce_giant_bipedal_wheeled_robot
 last_update:
   date: 12/12/2025
