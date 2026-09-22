@@ -1,0 +1,10 @@
+position: 6
+label: 'Comunicación fuera de la red'
+collapsible: true
+collapsed: true
+className: _hazard-response
+link:
+  type: generated-index
+  slug: off-grid-mesh-communication
+  title: Comunicación fuera de la red
+  description: Comunicación fuera de la red y en malla para lugares sin cobertura.

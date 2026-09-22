@@ -1,0 +1,10 @@
+position: 3
+label: 'Automação residencial e predial'
+collapsible: true
+collapsed: true
+className: _device-integration-control
+# link:
+#   type: generated-index
+#   slug: home-building-automation
+#   title: Automação residencial e predial
+#   description: Automação residencial e predial, energia e integração de protocolos.
