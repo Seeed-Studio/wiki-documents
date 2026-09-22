@@ -25,8 +25,8 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 </div>
 
 reComputer Super シリーズは reComputer Classic を強化し、AI 性能を最大 1.7 倍、157 TOPS まで引き上げます。Jetson Orin Nano（11410311, 11410312）および Jetson Orin NX（11410313, 11410314）を搭載したモデルを備えています。
-開発と量産の両方を想定して設計されており、M.2 Key E/M、デュアル RJ45 Ethernet、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI、CAN など豊富なインターフェースを備えています。Jetpack 6.2 と Linux OS BSP をプリインストールしているため、すぐに市場投入が可能です。
-また、NVIDIA、Hugging Face、ONNX、PyTorch、ROS2/1 など、幅広い LLM および Physical AI フレームワークをエッジでシームレスにサポートし、これらのマルチモーダル機能をロボティクスアプリケーションと統合することで、Physical AI 開発をさらに充実させます。
+開発と量産の両方を想定して設計されており、M.2 Key E/M、デュアル RJ45 Ethernet、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI、CAN など豊富なインターフェースを備えています。Jetpack 6.2 と Linux OS BSP をプリインストールしており、すぐに市場投入が可能です。
+また、NVIDIA、Hugging Face、ONNX、PyTorch、ROS2/1 など、幅広い LLM および Physical AI フレームワークをエッジでシームレスにサポートし、これらのマルチモーダル機能をロボティクスアプリケーションと統合することで、Physical AI 開発をさらに加速します。
 
 :::note
 カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
@@ -41,7 +41,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 
 ### 🚀 ​**パフォーマンス向上**  
 
-- reComputer Classic 比で ​**1.7 倍の AI 性能向上**、​**157 TOPS** を実現  
+- reComputer Classic と比べて ​**1.7 倍の AI 性能向上**、​**157 TOPS** を実現  
 - ​**Jetson Orin Nano**（モデル: 11410311, 11410312）および ​**Jetson Orin NX**（モデル: 11410313, 11410314）を搭載  
 
 ### 🔌 ​**豊富な接続性とインターフェース**  
@@ -49,9 +49,9 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 - 拡張性のための ​**M.2 Key E/M** + ​**Mini-PCIe**  
 - 高速ネットワーキング向け ​**デュアル RJ45 Ethernet** ポート  
 - ​**4x USB 3.2**、​**HDMI 2.1**、​**4x CSI**（Camera Serial Interface）  
-- 産業用/ロボティクス用途向けの ​**CAN バス** をサポート  
+- 産業用／ロボティクス用途向けの ​**CAN バス** をサポート  
 
-### 🛠️ ​**開発と量産にすぐ使える設計**  
+### 🛠️ ​**開発・量産にすぐ使える設計**  
 
 - ​**Jetpack 6.2** と ​**Linux OS BSP** をプリインストールし、開封後すぐにデプロイ可能  
 - 次のフレームワークとシームレスにエッジ AI を統合：  
@@ -71,17 +71,17 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 
 #### 1. ​**電源アダプタ**  
 
-- ​**Jetson Orin Nano**: 12V 5A（5525 バレルジャック）  
-- ​**Jetson Orin NX**: 19V 4.74A（5525 バレルジャック）  
+- ​**Jetson Orin Nano**：12V 5A（5525 バレルジャック）  
+- ​**Jetson Orin NX**：19V 4.74A（5525 バレルジャック）  
 - 常に ​**純正アダプタ** を使用し、電源要件を満たしてください。  
 
 #### 2. ​**AC 電源コード**  
 
-- ​**地域仕様** のクローバーリーフ型電源コードを使用してください。  
+- ​**地域仕様** のクローバーリーフ型コードを使用してください。  
 
 #### 3. ​**アクセサリ**  
 
-- 最適な性能と互換性のために、（カメラ、ワイヤレスモジュールなど）​**公式に推奨されている** アクセサリのみを使用してください。
+- 最適な性能と互換性のために、（カメラ、ワイヤレスモジュールなど）​**公式推奨アクセサリ** のみを使用してください。
 
 :::
 
@@ -184,7 +184,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     <tr>
       <td rowSpan={11}>I/O</td>
       <td >USB</td>
-      <td colSpan={3}>4x USB 3.2 Type-A（5Gbps）；<br />1x USB 2.0 Type-C（デバイスモード/デバッグ）；</td>
+      <td colSpan={3}>4x USB 3.2 Type-A（5Gbps）；<br />1x USB 2.0 Type-C（デバイスモード／デバッグ）；</td>
     </tr>
     <tr>
       <td>Camera</td>
@@ -240,11 +240,11 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     </tr>
     <tr>
       <td>Installation</td>
-      <td colSpan={4}>デスク、壁掛け</td>
+      <td colSpan={4}>デスク設置、壁掛け</td>
     </tr>
     <tr>
       <td>Operating Temperature</td>
-      <td colSpan={4}>-10℃~60℃</td>
+      <td colSpan={4}>-10℃～60℃</td>
     </tr>
     <tr>
       <td>Warranty</td>
@@ -258,7 +258,54 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 </table>
 </div>
 
-## JetPack OS をフラッシュする
+## インタラクティブ 3D エクスプローラー
+
+インタラクティブな 3D ビューアで reComputer Super シリーズを探索できます。デバイスを回転させ、ハードウェアインターフェースを確認し、分解図を表示し、対応モジュールについてさらに学ぶことができます。
+
+<div
+  style={{
+    width: '100%',
+    height: 'clamp(620px, 70vw, 760px)',
+    overflow: 'hidden',
+    border: '1px solid #4a525b',
+    borderRadius: '12px',
+    margin: '24px 0',
+    background: '#0b1015'
+  }}
+>
+  <iframe
+    src="https://youjiang.cloud/?embed=1#viewer"
+    title="reComputer Super Series Interactive 3D Explorer"
+    loading="lazy"
+    allow="fullscreen"
+    allowFullScreen
+    scrolling="no"
+    style={{
+      width: '100%',
+      height: '100%',
+      border: 0,
+      display: 'block'
+    }}
+  />
+</div>
+
+<div align="center">
+  <a
+    href="https://youjiang.cloud/#viewer"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    3D エクスプローラーを新しいウィンドウで開く ↗
+  </a>
+</div>
+
+## ハードウェアインターフェースの使用方法
+
+:::info
+各ハードウェアインターフェースの詳細な仕様と手順については、[ハードウェアインターフェース使用ガイド](https://wiki.seeedstudio.com/ja/recomputer_jetson_super_hardware_interfaces_usage/)を参照してください。
+:::
+
+## JetPack OS のフラッシュ
 
 ### 対応モジュール
 
@@ -267,7 +314,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 - [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
 - [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
-### 事前準備
+### 前提条件
 
 - Ubuntu ホスト PC
 - reComputer Super
@@ -281,8 +328,8 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
+        <td  rowspan="2"> JetPack バージョン </td>
+        <td class="dbon" colspan="4"> Ubuntu バージョン（ホストコンピュータ） </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -313,7 +360,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 
 ### Jetpack イメージの準備
 
-ここでは、使用している Jetson モジュールに対応したシステムイメージを Ubuntu PC にダウンロードする必要があります。
+ここでは、使用している Jetson モジュールに対応したシステムイメージを Ubuntu PC にダウンロードする必要があります：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -373,19 +420,19 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
 </div>
 
 :::danger
-JetPack イメージファイルはサイズが大きく、ダウンロードに約 60 分かかる場合があります。ダウンロードが完了するまでお待ちください。
+JetPack イメージファイルは大容量のため、ダウンロードに約 60 分かかる場合があります。ダウンロードが完了するまでお待ちください。
 :::
 
 :::info
 ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全で破損していないことが確認できます。
+Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全で破損していないことが確認できます。
 :::
 
-### 強制リカバリーモードに入る
+### Force Recovery モードに入る
 
 :::info
-インストール手順に進む前に、ボードが強制リカバリーモードになっていることを確認する必要があります。
+インストール手順に進む前に、ボードが Force Recovery モードになっていることを確認する必要があります。
 :::
 
 <details>
@@ -402,7 +449,7 @@ Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <
 
 **Step 3.** USB Type-C データ転送ケーブルで Super を Ubuntu ホスト PC に接続します。
 
-**Step 4.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
+**Step 4.** Linux ホスト PC でターミナルウィンドウを開き、`lsusb` コマンドを入力します。使用している Jetson SoM に応じて、返された内容に以下のいずれかの出力が含まれていれば、ボードは Force Recovery モードになっています。
 
 - Orin NX 16GB の場合: **0955:7323 NVidia Corp**
 - Orin NX 8GB の場合: **0955:7423 NVidia Corp**
@@ -417,7 +464,7 @@ Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <
 
 </details>
 
-### Jetson へフラッシュする
+### Jetson へのフラッシュ
 
 **Step 1:** ダウンロードしたイメージファイルを解凍します：
 
@@ -428,7 +475,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For JetPack 7.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
 ```
 
-**Step 2:** 次のコマンドを実行して、JetPack システムを NVMe SSD にフラッシュします：
+**Step 2:** JetPack システムを NVMe SSD にフラッシュするため、次のコマンドを実行します：
 
 ```bash
 cd mfi_xxxx
@@ -436,7 +483,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-フラッシュ処理が正常に完了すると、次のような出力が表示されます
+フラッシュ処理が成功すると、次のような出力が表示されます
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
@@ -444,14 +491,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドの実行には 2〜10 分かかる場合があります。
 :::
 
-**Step 3:** HDMI ケーブルでモニターを接続し、reComputer Super システムの初期設定を完了します：
+**Step 3:** HDMI ケーブルでモニタを接続し、reComputer Super システムの初期設定を完了します：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-ニーズに応じて **System Configuration** を完了してください。
+ご自身のニーズに応じて **System Configuration** を完了してください。
 :::
 
 ## ハードウェアインターフェースの使用
@@ -479,7 +526,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
