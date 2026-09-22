@@ -310,7 +310,7 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td> AGX Orin 64GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCiNRM83_Q1Qq2lodZbxxz7AQb046lJeZh4aTUo20T6ks4">Download</a></td>
-      <td>B858312B9DC9EA5D43A104F478C0ABDC</td>
+      <td>46167c63566fa07d9882be338becd44<br />7021c8fc0a73da18d0291c414cf5c6f4a</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>

@@ -1,6 +1,6 @@
 ---
-description: Esta guía para desarrolladores presenta la consola web, ROS 2, RobStride/SocketCAN, la simulación MuJoCo, el agarre visual y la instalación, ejecución y flujo de trabajo de desarrollo secundario del LLM/MCP Agent del reBot Arm B601-RS Digital Twin & Control Stack.
-title: reBot Arm B601-RS Digital Twin & Control Stack
+description: Esta guía para desarrolladores presenta la consola web, ROS 2, RobStride/SocketCAN, simulación MuJoCo, agarre visual e instalación de Agente LLM/MCP, tiempo de ejecución y flujo de trabajo de desarrollo secundario del ReBot Arm Digital Twin & Control Stack para B601-RS.
+title: B601-RS con Controlador Web
 keywords:
   - reBot Arm
   - B601-RS

@@ -1,6 +1,6 @@
 ---
-description: 本教程展示了如何下载 Isaac Sim，并将 reBot Arm B601-RS 机器人部署在仿真环境中，进行开发和调试。
-title: reBot Arm B601-RS Isaac Sim 仿真
+description: 本教程展示了如何下载Isaacsim，并将reBotArm机器人部署在仿真环境中，进行开发和调试。
+title: B601-RS 跑Isaac Sim
 keywords:
   - Isaacsim
   - 机械臂

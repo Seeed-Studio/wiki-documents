@@ -1,6 +1,6 @@
 ---
 description: Este tutorial mostra como configurar o workspace de controle ROS2 para o reBot Arm B601-RS, incluindo conexão SocketCAN, controle do braço, visualização no RViz e integração com o MoveIt 2.
-title: Integração ROS2 do reBot Arm B601-RS
+title: B601-RS com ROS2
 keywords:
   - reBot Arm
   - B601-RS

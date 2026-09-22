@@ -1,11 +1,11 @@
 ---
-description: このガイドでは、reBot Arm B601-DM の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む入門方法を説明します。
-title: reBot Arm B601-DM クイックスタート
+description: このガイドでは、reBot Arm B601-DM の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む、入門手順を説明します。
+title: B601-DM クイックスタート
 keywords:
   - reBot
   - B601-DM
-  - ロボットアーム
-  - ロボット
+  - Robotic Arm
+  - Robot
   - Lerobot
   - Pinocchio
   - 6 DOF

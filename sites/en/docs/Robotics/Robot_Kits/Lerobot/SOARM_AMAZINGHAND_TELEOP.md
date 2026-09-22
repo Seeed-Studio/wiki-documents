@@ -1,6 +1,6 @@
 ---
 description: This document explains how to combine the SO-ARM101 follower arm with the AmazingHand dexterous hand and perform teleoperation using LeRobot.
-title: Complete Training Guide for SO-ARM with AmazingHand
+title: SO-Arm with AmazingHand
 keywords:
   - Lerobot
   - SO-ARM

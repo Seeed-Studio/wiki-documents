@@ -1,5 +1,5 @@
 ---
-description: 搭配 MicroPython 的 Seeed Studio XIAO SAMD21
+description: 搭载 MicroPython 的 Seeed Studio XIAO SAMD21
 title: MicroPython
 keywords:
   - xiao
@@ -17,17 +17,17 @@ url: https://wiki.seeedstudio.com/cn/XIAO-SAMD21-MicroPython/
 
 ## **MicroPython 简介**
 
-[MicroPython](https://github.com/micropython/micropython/wiki) 是一个带有部分原生代码编译特性的 Python 解释器。它为嵌入式处理器和受限系统实现了 Python 3.5 功能的一个子集。它与 CPython 不同，你可以在[这里](https://github.com/micropython/micropython/wiki/Differences)阅读更多差异说明。
+[MicroPython](https://github.com/micropython/micropython/wiki) 是一个带有部分原生代码编译功能的 Python 解释器。它为嵌入式处理器和受限系统实现了 Python 3.5 功能的一个子集。它与 CPython 不同，你可以在[这里](https://github.com/micropython/micropython/wiki/Differences)阅读更多差异说明。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
-## 入门
+## 入门指南
 
 首先，我们将 Seeed Studio XIAO SAMD21 连接到电脑，并从 MicroPython 上传一段简单代码，以检查开发板是否工作正常。
 
 ### 硬件准备
 
-- [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) x1
+- [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) 或 [Seeed Studio XIAO SAMD21 Plus](https://www.seeedstudio.com/Seeed-Studio-XIAO-SAMD21-Plus-p-6933.html) x1
 - Type-C 线 x1
 - 电脑 x1
 
@@ -35,24 +35,36 @@ url: https://wiki.seeedstudio.com/cn/XIAO-SAMD21-MicroPython/
 
 #### 适用于 XIAO SAMD21
 
-- **步骤 1**. 按住 **BOOT** 按钮不放，然后通过 Type-C 线将 Seeed Studio XIAO SAMD21 连接到电脑。如果一切正常，电脑上会出现一个名为 **Arduino** 的磁盘。
+:::tip
+
+- [**XIAO SAMD21 系列的 Bootloader 模式**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#enter-bootloader-mode)
+
+:::
+
+- **步骤 1**. 通过 Type‑C 线将 Seeed Studio XIAO SAMD21 连接到电脑，然后双击 Reset 按钮进入 BOOT 模式。如果一切正常，电脑上会出现一个名为 **Arduino** 的磁盘。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
 - **步骤 2**. 烧录固件
 
-只需前往官方的 [XIAO SAMD21 MicroPython Firmware](https://micropython.org/download/SEEED_XIAO_SAMD21/) 页面并下载最新固件即可。
+只需前往 MicroPython 官方网站并下载最新固件
 
-你也可以[自行编译固件](https://wiki.seeedstudio.com/cn/Compiling_MicroPython_for_embedded_devices/)，以确保安全性并支持最新特性，但这不是必需的。
+    - [XIAO SAMD21 系列 MicroPython 固件](https://micropython.org/download/SEEED_XIAO_SAMD21/)
+
+
+你也可以[编译你自己的固件](https://wiki.seeedstudio.com/cn/Compiling_MicroPython_for_embedded_devices/)，以确保安全性并支持最新特性，但这不是必须的。
 <br/>
+
 #### 适用于 XIAO SAMD21 Plus
 
 - **步骤 1**. 使用 Type‑C 线将 XIAO SAMD21 Plus 连接到电脑，然后连续按下 Reset 按钮两次。如果一切正常，电脑上会出现一个 **Arduino** 磁盘。
 
 <div align="center"><img width="300" src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
-- **步骤 2**. 点击下方链接下载固件，然后将 `.uf2` 文件拖放到 **Arduino** 磁盘中，即可完成固件烧录。
-[XIAO SAMD21 Plus MicroPython Firmware](https://files.seeedstudio.com/wiki/XIAO_SAMD/img/xiao-samd21-plus-micropython.zip)
+- **步骤 2**. 点击下方链接下载固件，然后将 `.uf2` 文件拖放到 **Arduino** 磁盘中完成固件烧录。
+
+    - [XIAO SAMD21 系列 MicroPython 固件](https://micropython.org/download/SEEED_XIAO_SAMD21/)
+
 
 ### 软件准备
 
@@ -66,7 +78,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-SAMD21-MicroPython/
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
-- **步骤 4**. 选择 **Interpreter** 选项卡，将设备设置为 **MicroPython(generic)**，端口设置为 **Board CDC @ Port**
+- **步骤 4**. 选择 **Interpreter** 选项卡，将设备选择为 **MicroPython(generic)**，端口选择为 **Board CDC @ Port**
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/mpy_1.png" /></div>
 
@@ -74,28 +86,28 @@ url: https://wiki.seeedstudio.com/cn/XIAO-SAMD21-MicroPython/
 
 ### SEEED XIAO SAMD21 系列引脚分配表
 
-| MicroPython 引脚名 | XIAO SAMD21 GPIO (ID) | XIAO SAMD21 Plus GPIO (ID) | IRQ<br />SAMD21 / Plus | ADC | 功能 |
+| MicroPython 引脚名 | XIAO SAMD21 GPIO (ID) | XIAO SAMD21 Plus GPIO (ID) | IRQ SAMD21 / Plus | ADC | 功能 |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| D0 / A0 / A0_D0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO、ADC、DAC |
-| D1 / A1 / A1_D1 | PA04 (4) | PA04 (4) | 4 / 4 | 4 | GPIO、ADC |
-| D2 / A2 / A2_D2 | PA10 (10) | PA10 (10) | 10 / 10 | 18 | GPIO、ADC |
-| D3 / A3 / A3_D3 | PA11 (11) | PA11 (11) | 11 / 11 | 19 | GPIO、ADC |
-| D4 / A4 / A4_D4 / SDA | PA08 (8) | PA08 (8) | NMI / NMI | 16 | GPIO、ADC、I2C SDA |
-| D5 / A5 / A5_D5 / SCL | PA09 (9) | PA09 (9) | 9 / 9 | 17 | GPIO、ADC、I2C SCL |
-| D6 / A6 / A6_D6 / TX | PB08 (40) | PB08 (40) | 8 / 8 | 2 | GPIO、ADC、UART TX |
-| D7 / A7 / A7_D7 / RX | PB09 (41) | PB09 (41) | 9 / 9 | 3 | GPIO、ADC、UART RX |
-| D8 / A8 / A8_D8 / SCK | PA07 (7) | PA07 (7) | 7 / 7 | 7 | GPIO、ADC、SPI SCK |
-| D9 / A9 / A9_D9 / MISO | PA05 (5) | PA05 (5) | 5 / 5 | 5 | GPIO、ADC、SPI MISO |
-| D10 / A10 / A10_D10 / MOSI | PA06 (6) | PA06 (6) | 6 / 6 | 6 | GPIO、ADC、SPI MOSI |
-| D11 / TX_LED | PA19 (19) | — | 3 / — | — | 原始板载 TX LED |
-| D12 / RX_LED | PA18 (18) | PA28 (28) | 2 / 8 | — | 原始 RX LED；Plus 扩展 GPIO |
-| D13 / USER_LED / SCL1 | PA17 (17) | PA17 (17) | 1 / 1 | — | 原始用户 LED；Plus I2C1 SCL |
+| D0 / A0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO, ADC, DAC |
+| D1 / A1 | PA04 (4) | PA04 (4) | 4 / 4 | 4 | GPIO, ADC |
+| D2 / A2 | PA10 (10) | PA10 (10) | 10 / 10 | 18 | GPIO, ADC |
+| D3 / A3 | PA11 (11) | PA11 (11) | 11 / 11 | 19 | GPIO, ADC |
+| D4 / A4 / SDA | PA08 (8) | PA08 (8) | NMI / NMI | 16 | GPIO, ADC, I2C SDA |
+| D5 / A5 / SCL | PA09 (9) | PA09 (9) | 9 / 9 | 17 | GPIO, ADC, I2C SCL |
+| D6 / A6 / TX | PB08 (40) | PB08 (40) | 8 / 8 | 2 | GPIO, ADC, UART TX |
+| D7 / A7 / RX | PB09 (41) | PB09 (41) | 9 / 9 | 3 | GPIO, ADC, UART RX |
+| D8 / A8 / SCK | PA07 (7) | PA07 (7) | 7 / 7 | 7 | GPIO, ADC, SPI SCK |
+| D9 / A9 / MISO | PA05 (5) | PA05 (5) | 5 / 5 | 5 | GPIO, ADC, SPI MISO |
+| D10 / A10 / MOSI | PA06 (6) | PA06 (6) | 6 / 6 | 6 | GPIO, ADC, SPI MOSI |
+| USER_LED / D13 / SCL1 | PA17 (17) | PA17 (17) | 1 / 1 | — | 原始用户 LED；Plus D13 和 I2C1 SCL |
+| RX_LED / D27 | PA18 (18) | PA18 (18) | 2 / 2 | — | 原始 RX LED；Plus D27 |
+| TX_LED / D19 / I2S_SD | PA19 (19) | PA19 (19) | 3 / 3 | — | 原始 TX LED；Plus D19 和 I2S 数据 |
+| D12 | — | PA28 (28) | — / 8 | — | Plus 扩展 GPIO |
 | D14 / SDA1 | — | PA16 (16) | — / 0 | — | Plus I2C1 SDA |
 | D15 | — | PA15 (15) | — / 15 | — | Plus 扩展 GPIO |
 | D16 | — | PA14 (14) | — / 14 | — | Plus 扩展 GPIO |
 | D17 | — | PA13 (13) | — / 13 | — | Plus 扩展 GPIO |
 | D18 | — | PA12 (12) | — / 12 | — | Plus 扩展 GPIO |
-| D19 / I2S_SD | — | PA19 (19) | — / 3 | — | Plus GPIO 和 I2S 数据 |
 | D20 / I2S_SCK | — | PA20 (20) | — / 4 | — | Plus GPIO 和 I2S 时钟 |
 | D21 / I2S_WS | — | PA21 (21) | — / 5 | — | Plus GPIO 和 I2S 字选择 |
 | D22 | — | PB10 (42) | — / 10 | — | Plus 扩展 GPIO |
@@ -103,9 +115,10 @@ url: https://wiki.seeedstudio.com/cn/XIAO-SAMD21-MicroPython/
 | D24 | — | PB23 (55) | — / 7 | — | Plus 扩展 GPIO |
 | D25 | — | PA23 (23) | — / 7 | — | Plus 扩展 GPIO |
 | D26 | — | PA22 (22) | — / 6 | — | Plus 扩展 GPIO |
-| D27 | — | PA18 (18) | — / 2 | — | Plus 扩展 GPIO |
-| RGB_LED | — | PA27 (27) | — / 15 | — | 可寻址 RGB LED 数据 |
-| BUTTON | — | PB22 (54) | — / 6 | — | Plus 用户按键 |
+| RGB_LED | — | PA27 (27) | — / 15 | — | Plus 可寻址 RGB LED (WS2812) |
+| BUTTON | — | PB22 (54) | — / 6 | — | Plus 用户按键（低电平有效） |
+| USB_DM | PA24 (24) | PA24 (24) | 12 / 12 | — | USB D−（原生 USB，非 GPIO） |
+| USB_DP | PA25 (25) | PA25 (25) | 13 / 13 | — | USB D+（原生 USB，非 GPIO） |
 | SWCLK | PA30 (30) | PA30 (30) | 10 / 10 | — | SWD 时钟 |
 | SWDIO | PA31 (31) | PA31 (31) | 11 / 11 | — | SWD 数据 |
 
@@ -115,7 +128,7 @@ GPIO (ID) 中括号内的数字指的是 MicroPython SAMD 引脚 ID，而不是 
 
 ### 上传你的代码
 
-点击 “Run current script” 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存到哪里。选择 **This Computer** 或 **MicroPython device** 都可以。
+点击 "Run current script" 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存到哪里。选择 **This Computer** 或 **MicroPython device** 都可以。
 
 如果你想离线运行程序，应将程序保存到 XIAO SAMD21 上。
 
@@ -129,9 +142,11 @@ GPIO (ID) 中括号内的数字指的是 MicroPython SAMD 引脚 ID，而不是 
 
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-将以下代码复制到 Thonny 中。
+    将以下代码复制到 Thonny 中。
 
-我们可以看到蓝色的 RX_LED 被点亮，并以每秒一次的频率闪烁。
+1. 对于 XIAO SAMD21，RX_LED 为 PA18
+
+    我们可以看到蓝色的 RX_LED 被点亮，并以每秒一次的频率闪烁
 
 ```python
 from machine import Pin, Timer
@@ -152,7 +167,58 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3.gif" /></div>
 
-### 使用 GPIO 控制继电器
+2. 对于 XIAO SAMD21 Plus，RX_LED 和 TX_LED 已被移除。改用一个 WS2812 LED，其数据引脚连接到 PA27。
+<br/>
+```py
+from machine import Pin, Timer
+import machine
+import time
+
+led = Pin(27, Pin.OUT)
+
+Counter = 0
+
+
+def ws2812_write(r, g, b):
+    data = bytearray([g, r, b])
+
+    machine.bitstream(
+        led,
+        0,
+        (400, 850, 800, 450),
+        data
+    )
+
+    time.sleep_us(80)
+
+
+def fun(tim):
+    global Counter
+
+    Counter += 1
+    print(Counter)
+
+    if Counter % 2 == 1:
+        ws2812_write(0, 0, 255)
+    else:
+        ws2812_write(0, 0, 0)
+
+
+# Initial state: OFF
+ws2812_write(0, 0, 0)
+
+# 500 ms periodic timer
+tim = Timer(-1)
+tim.init(
+    period=500,
+    mode=Timer.PERIODIC,
+    callback=fun
+)
+```
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3_1.gif" /></div>
+
+### GPIO 控制继电器
 
 我们需要准备：
 
@@ -187,7 +253,7 @@ tim.init(period=200, mode=Timer.PERIODIC, callback=fun)
     Your browser does not support the video tag.
   </video></div>
 
-### 基于人体检测的自动控制
+### 自动控制的人体检测
 
 我们需要准备：
 
@@ -224,7 +290,7 @@ tim.init(period=50, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><video width={600} height={240} controls>
     <source src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/5.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
+    您的浏览器不支持 video 标签。
   </video></div>
 
 ### I2C 支持
@@ -248,7 +314,7 @@ print(i2c.readfrom(0x51, 4))
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/8.png" /></div>
 
-熟悉 micropython 能让你做到更多，我们也期待为你创造更多价值。也欢迎随时与我们分享你的项目！
+熟悉 micropython 能让你做到更多，我们期待为你创造更多价值。也欢迎随时与我们分享你的项目！
 
 ### DAC 支持
 

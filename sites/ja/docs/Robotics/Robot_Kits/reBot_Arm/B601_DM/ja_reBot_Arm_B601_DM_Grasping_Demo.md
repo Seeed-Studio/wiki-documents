@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、YOLO/OBB 把持パイプラインを使用して、reBot Arm B601 向けの完全なビジュアル把持デモを構築する方法を説明します。
-title: reBot Arm B601-DM ビジュアル把持デモ
+description: このチュートリアルでは、YOLO/OBB 把持パイプラインを使用して reBot Arm B601 向けの完全なビジュアル把持デモを構築する方法を説明します。
+title: B601-DM ビジュアル把持
 keywords:
   - reBot Arm
   - B601

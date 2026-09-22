@@ -1,6 +1,6 @@
 ---
 description: This wiki provides assembly and startup tutorials for the StackForce Mini Wheeled Legged Robot , as well as learning materials and links required for its development.
-title: StackForce Mini Wheeled Legged Robot
+title: Mini Wheeled Legged Quick Start
 keywords:
   - StackForce
   - Robotics

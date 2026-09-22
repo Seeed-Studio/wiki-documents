@@ -1,6 +1,6 @@
 ---
-description: 本教程面向开发者，介绍 reBot Arm B601-RS 数字孪生与控制系统的网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
-title: reBot Arm B601-RS 数字孪生与控制系统
+description: 本教程面向开发者，介绍 ReBot Arm 数字孪生与控制系统 — B601-RS 的网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
+title: B601-RS Web控制器
 keywords:
   - reBot Arm
   - B601-RS

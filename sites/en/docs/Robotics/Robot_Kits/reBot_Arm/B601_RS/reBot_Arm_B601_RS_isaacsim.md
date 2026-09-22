@@ -1,6 +1,6 @@
 ---
-description: This tutorial shows how to download Isaac Sim and deploy the reBot Arm B601-RS robot in a simulation environment for development and debugging.
-title: reBot Arm B601-RS Isaac Sim
+description: This tutorial shows how to download Isaacsim and deploy the reBotArm robot in a simulation environment for development and debugging.
+title: B601-RS with Isaacsim
 keywords:
   - Isaacsim
   - Mechanical arm

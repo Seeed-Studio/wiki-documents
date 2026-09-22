@@ -1,11 +1,11 @@
 ---
-description: Este tutorial mostra como baixar o Isaac Sim e implantar o robô reBot Arm B601-RS em um ambiente de simulação para desenvolvimento e depuração.
-title: reBot Arm B601-RS Isaac Sim
+description: Este tutorial mostra como baixar o Isaacsim e implantar o robô reBotArm em um ambiente de simulação para desenvolvimento e depuração.
+title: B601-RS com Isaacsim
 keywords:
   - Isaacsim
   - Braço mecânico
   - Robô
-  - Operação por controle remoto
+  - Operação de controle remoto
   - Cinemática
   - Robostride
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg

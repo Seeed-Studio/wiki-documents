@@ -1,6 +1,6 @@
 ---
 description: This wiki provides a complete LeRobot workflow for SO-ARM100 / SO-ARM101, including assembly, calibration, teleoperation, cameras, dataset recording, training, evaluation, and deployment tips.
-title: Getting Started with SO-ARM10x in LeRobot
+title: SO-Arm LeRobot Tutorial
 keywords:
   - Lerobot
   - Huggingface

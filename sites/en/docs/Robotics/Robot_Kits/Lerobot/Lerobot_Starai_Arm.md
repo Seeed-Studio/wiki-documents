@@ -1,6 +1,6 @@
 ---
 description: This wiki provides the debugging tutorial for the StarAI Robot Arm and realizes data collection and training within the Lerobot framework.
-title: StarAI Arm in LeRobot
+title: StarAI Arm with LeRobot
 keywords:
   - Lerobot
   - Huggingface

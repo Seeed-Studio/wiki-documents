@@ -1,6 +1,6 @@
 ---
 description: Getting started with Atom-S.
-title: Getting started with Atom-S
+title: Atom-S Quick Start
 keywords:
   - Humanoid
   - Robotics
