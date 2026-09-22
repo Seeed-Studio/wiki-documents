@@ -1,6 +1,6 @@
 ---
 description: Primeros pasos con Atom-X.
-title: Primeros pasos con Atom-X
+title: Guía rápida de Atom-X
 keywords:
   - Humanoid
   - Robotics

@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona una guía completa para que reBot Arm B601-DM implemente la recopilación de datos y el entrenamiento dentro del framework LeRobot.
-title: reBot Arm B601-DM en LeRobot
+description: Este wiki proporciona una guía completa para que el reBot Arm B601-DM implemente la recopilación de datos y el entrenamiento dentro del framework LeRobot.
+title: B601-DM con LeRobot
 keywords:
   - Lerobot
   - Huggingface

@@ -1,13 +1,13 @@
 ---
 description: Este tutorial muestra cómo construir una demo completa de agarre visual para el reBot Arm B601 utilizando el flujo de trabajo de agarre YOLO/OBB.
-title: Demo de agarre visual reBot Arm B601-DM
+title: B601-DM Agarre Visual
 keywords:
   - reBot Arm
   - B601
   - Agarre
   - Gemini 2
   - YOLO
-  - Calibración mano-ojo
+  - Calibración Mano-Ojo
   - Robot
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187

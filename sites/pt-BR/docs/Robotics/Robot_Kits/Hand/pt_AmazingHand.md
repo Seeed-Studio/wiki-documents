@@ -1,6 +1,6 @@
 ---
-description: Construa e controle a AmazingHand, uma mão robótica de baixo custo, código aberto, 8-DOF e imprimível em 3D.
-title: AmazingHand
+description: Construa e controle a AmazingHand, uma mão robótica de baixo custo, open-source, com 8 DOF e imprimível em 3D.
+title: Início Rápido da AmazingHand
 keywords:
   - Lerobot
   - Huggingface
@@ -17,7 +17,7 @@ last_update:
   date: 9/10/2025
   author: TienjuiWong
 createdAt: '2025-09-10'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/hand_amazinghand/
 ---
 

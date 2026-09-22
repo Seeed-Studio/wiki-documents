@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、reBot Arm B601-DM 向けに ROS2 control ワークスペースをセットアップする方法を説明します。アーム制御、RViz 可視化、MoveIt2 連携を含みます。
-title: reBot Arm B601-DM ROS2 連携
+description: このチュートリアルでは、アーム制御、RViz による可視化、MoveIt2 との統合を含む、reBot Arm B601-DM 用の ROS2 制御ワークスペースのセットアップ方法を説明します。
+title: B601-DM と ROS2
 keywords:
   - reBot Arm
   - B601-DM
@@ -8,8 +8,8 @@ keywords:
   - Humble
   - Jazzy
   - RViz
-  - Robot Arm
-  - Robotics
+  - ロボットアーム
+  - ロボティクス
 slug: /rebot_arm_b601_dm_ros2_integration
 sku: 100065783, 100095532
 last_update:
