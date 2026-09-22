@@ -9,15 +9,24 @@ keywords:
   - Sound Trigger
   - Custom Training
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_acoustic_lab_usage
+slug: /recamera_pro_acoustic_lab_usage_legacy
+draft: true
 sidebar_position: 1
 last_update:
   date: 2026-07-13
   author: sizhaozhou
 createdAt: '2026-07-13'
 updatedAt: '2026-07-30'
-url: https://wiki.seeedstudio.com/recamera_pro_acoustic_lab_usage/
+url: https://wiki.seeedstudio.com/recamera_pro_acoustic_lab_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/train_sound_model.md (https://wiki.seeedstudio.com/recamera_pro_acoustic_lab_usage/), which now serves the original slug /recamera_pro_acoustic_lab_usage. This file is kept for history as a draft (slug /recamera_pro_acoustic_lab_usage_legacy) and is excluded from production builds. Do not link here. -->
+
+## Content Migration Index (Legacy Page)
+
+| Original section | New home |
+| --- | --- |
+| Introduction, Accessing the Feature, Feature Overview, Local Training, SenseCraft Training, Troubleshooting | [Train a Sound Model](https://wiki.seeedstudio.com/recamera_pro_acoustic_lab_usage/) (this slug) |
+| Deploying the Model (sound-triggered recording) | [Sound-Triggered Capture](https://wiki.seeedstudio.com/recamera_pro_sound_trigger/) |
 
 ## Introduction
 

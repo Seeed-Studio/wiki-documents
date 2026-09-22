@@ -4,7 +4,8 @@ title: Live Preview
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_live_preview
+slug: /recamera_pro_live_preview_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -12,8 +13,16 @@ last_update:
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/recamera_pro_live_preview/
+url: https://wiki.seeedstudio.com/recamera_pro_live_preview_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/preview_capture_record.md (https://wiki.seeedstudio.com/recamera_pro_live_preview/), which now serves the original slug /recamera_pro_live_preview. This file is kept for history as a draft (slug /recamera_pro_live_preview_legacy) and is excluded from production builds. Do not link here. -->
+
+## Content Migration Index (Legacy Page)
+
+| Original section | New home |
+| --- | --- |
+| Web UI Introduction | [First AI Detection](https://wiki.seeedstudio.com/recamera_pro_getting_started/), [reCamera Pro home](https://wiki.seeedstudio.com/recamera_pro/) |
+| Main Functions | [Preview, Capture and Manual Recording](https://wiki.seeedstudio.com/recamera_pro_live_preview/) (this slug) |
 
 ## Web UI Introduction
 reCamera Pro has a built-in Web UI management interface, eliminating the need for users to install additional client software. As long as the computer is on the same local area network as reCamera Pro, you can directly access the camera's IP address through a browser to enter the device management page. Access is as follows:
