@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
-Quando o dispositivo estiver nos estados abaixo, não o reinicie nem o desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
+Quando o dispositivo estiver nos estados abaixo, não o reinicie ou desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
 
 1. Não tiver concluído o processo de transmissão de mensagem
 2. Estiver sendo configurado
@@ -62,7 +62,7 @@ Baixe o App `Meshtastic`:
 
 ### Ligar o dispositivo
 
-Pressione uma vez para ligar o dispositivo, haverá uma melodia ascendente e o LED permanecerá aceso por cerca de 1s.
+Pressione uma vez para ligar o dispositivo; haverá uma melodia ascendente e o LED permanecerá aceso por cerca de 1s.
 
 :::tip
 Se o dispositivo não responder quando você pressionar o botão, carregue-o primeiro. Não use carregador de carga rápida.
@@ -128,7 +128,7 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para uma lista mais abrangente.
 
 :::info
-**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto com base em uma janela contínua de 1 hora. Seu dispositivo parará de transmitir se você atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma base contínua de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
@@ -137,7 +137,7 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
 
 ### Conectar via site
 
-Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo site, pode conectar o dispositivo ao [Site do Meshtastic](https://client.meshtastic.org/messages/broadcast/0) agora.
+Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo site, pode conectar o dispositivo ao [site do Meshtastic](https://client.meshtastic.org/messages/broadcast/0) agora.
 
   Etapa 1: Abra o site
 
@@ -154,7 +154,7 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo si
 
  Método 1: Via Bluetooth
 
-    Escolha o método Bluetooth. Escolha o ID do dispositivo na janela pop-up.
+    Escolha o método bluetooth. Escolha o ID do dispositivo na janela pop-up.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
  Método 2: Via Serial
@@ -171,7 +171,7 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo si
 |Sensor|Descrição|
 |-|-|
 |Temperature|✅|
-|Light|Atualmente não é compatível com o App|
+|Light|Não suportado pelo App atualmente|
 |Accelerometer|Em breve|
 
 **Configuração do sensor de temperatura**
@@ -222,12 +222,12 @@ Navegue até `Settings` -> `External Notification` -> Ative `GPIO` -> Defina `Ou
 Consulte [External Notification Config](https://meshtastic.org/docs/configuration/module/external-notification/) para mais detalhes.
 
 :::tip
-Depois que você atualizar a configuração do dispositivo, ele será reiniciado, o que pode levar algum tempo.
+Depois de atualizar a configuração do dispositivo, ele será reiniciado, o que pode levar algum tempo.
 :::
 
 ### Configurar toque
 
-Navegue até `Settings` -> `Ringtone Config`, depois insira a string de toque RTTTL que você deseja usar para notificações externas.
+Navegue até `Settings` -> `Ringtone Config` e, em seguida, insira a string de toque RTTTL que você deseja usar para notificações externas.
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -317,7 +317,7 @@ Vá em `Settings` -> `Firmware Updates` e verifique a versão atual do firmware.
 NÃO GRAVE OUTRO FIRMWARE QUE NÃO SEJA O FIRMWARE T1000-E, ISSO PODE FAZER O DISPOSITIVO TRAVAR.
 :::
 
-O firmware a seguir deixará seu dispositivo inutilizável:
+Os seguintes firmwares irão inutilizar seu dispositivo:
 
 - nrf52_promicro_diy_tcxo<br/>
 - nrf52_promicro_diy_xtal<br/>
@@ -334,7 +334,7 @@ O firmware a seguir deixará seu dispositivo inutilizável:
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Flash%20Firmware.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 :::caution note
-Antes de gravar o firmware, certifique-se de que você comprou o `T1000-E for Meshtastic`. Não grave o firmware em outro modelo de tracker que não ofereça suporte ao Meshtastic. Por favor, `não use NRF-OTA` para atualizar o firmware, isso pode fazer com que o dispositivo pare de funcionar completamente.
+Antes de gravar o firmware, certifique-se de que você comprou o `T1000-E for Meshtastic`. Não grave o firmware em outro modelo de rastreador que não ofereça suporte ao Meshtastic. Por favor, `não use NRF-OTA` para atualizar o firmware, isso pode fazer com que o dispositivo pare de funcionar completamente.
 :::
 #### Etapa 1: Entrar no modo DFU
 
@@ -347,7 +347,7 @@ Conecte o dispositivo ao seu PC, selecione o dispositivo como `Seeed Card Tracke
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-2.png" alt="pir" width={800} height="auto" /></p>
 
-Clique em `Enter DFU Mode`, aparecerá uma porta serial chamada `T1000-E xxx`, clique nela para conectar; o LED verde ficará aceso continuamente e deverá aparecer uma unidade chamada `T1000-E`.
+Clique em `Enter DFU Mode`, aparecerá uma porta serial chamada `T1000-E xxx`, clique nela e conecte; o LED verde ficará aceso continuamente e deverá aparecer uma unidade chamada `T1000-E`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-serial.png" alt="pir" width={800} height="auto" /></p>
 
@@ -364,7 +364,7 @@ Conecte o cabo USB ao seu PC, mantenha o botão do dispositivo pressionado e ent
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={800} height="auto" /></p>
 
-#### Etapa 2: Apagar Flash
+#### Etapa 2: Apagar a memória Flash
 
 :::caution note
 Antes de gravar o firmware, grave primeiro o firmware de apagamento!
@@ -378,9 +378,9 @@ Baixe o firmware de apagamento e copie-o para a unidade.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase-uf2.png" alt="pir" width={800} height="auto" /></p>
 
-Esse processo pode levar algum tempo; aguarde a unidade desaparecer e então abra um monitor serial para concluir o processo de apagamento.
+Esse processo pode levar algum tempo; aguarde até que a unidade desapareça e então abra um monitor serial para concluir o processo de apagamento.
 
-#### Etapa 3: Gravar firmware
+#### Etapa 3: Gravar o firmware
 
 Selecione o firmware mais recente e baixe o arquivo `UF2`.
 
@@ -394,7 +394,7 @@ Copie o arquivo UF2 para a unidade DFU. O firmware deverá ser gravado após o a
 
  Visite o [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
- Clique em `Open Serial Monitor`, conecte o dispositivo ao seu PC, verifique o log serial, palavra-chave `using nodenum`.
+ Clique em `Open Serial Monitor`, conecte o dispositivo ao seu PC e verifique o log serial, com a palavra-chave `using nodenum`.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -412,7 +412,7 @@ Copie o arquivo UF2 para a unidade DFU. O firmware deverá ser gravado após o a
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={600} height="auto" /></p>
 
-- Use um cabo USB em bom estado para `carregar o dispositivo` continuamente por 1–2 horas para garantir que a bateria tenha energia suficiente para acordar o sistema.
+- Use um cabo USB em bom estado para `carregar o dispositivo` continuamente por 1–2 horas, garantindo que a bateria tenha energia suficiente para acordar o sistema.
 
 :::note
 Baterias de lítio se auto descarregam lentamente mesmo quando desligadas. Um dispositivo armazenado sem uso por muito tempo pode, portanto, ficar profundamente descarregado e não ligar ou ficar reiniciando durante a inicialização. Isso é comum em dispositivos com bateria de lítio, não é um defeito do T1000-E.
@@ -420,11 +420,11 @@ Baterias de lítio se auto descarregam lentamente mesmo quando desligadas. Um di
 
 - Se o dispositivo ficou armazenado sem uso por muito tempo e não consegue iniciar, carregue-o continuamente por até 24 horas e tente novamente. A carga de 24 horas é apenas para recuperar uma bateria profundamente descarregada, não para carregamento normal.
 
-- Se ele ainda continuar reiniciando durante a inicialização, desconecte o cabo e deixe o dispositivo sem uso por cerca de 7 dias, depois carregue-o novamente e tente ligá-lo.
+- Se ele ainda continuar reiniciando durante a inicialização, desconecte o cabo e deixe o dispositivo sem uso por cerca de 7 dias; depois, carregue-o novamente e tente ligá-lo.
 
-- Para evitar descarga profunda, não armazene o dispositivo com a bateria vazia ou muito baixa por muito tempo; recarregue-o quando cair abaixo de 20% e periodicamente durante o armazenamento prolongado.
+- Para evitar descarga profunda, não armazene o dispositivo com a bateria vazia ou muito baixa por longos períodos; recarregue-o quando cair abaixo de 20% e periodicamente durante o armazenamento prolongado.
 
-- Se o dispositivo ainda não responder após o carregamento, `execute um hard reset` da seguinte forma: desconecte o cabo USB. Pressione e segure o botão e, em seguida, conecte o cabo USB mantendo o botão pressionado. Segure por aproximadamente 3 segundos e depois solte. Isso força uma reinicialização do sistema.
+- Se o dispositivo ainda não responder após o carregamento, `execute um hard reset` da seguinte forma: Desconecte o cabo USB. Pressione e segure o botão e, em seguida, conecte o cabo USB mantendo o botão pressionado. Segure por aproximadamente 3 segundos e depois solte. Isso força uma reinicialização do sistema.
 
 - Se ainda assim não funcionar, tente `reinstalar o bootloader`. Conecte um cabo USB a um computador. Mantenha o botão do dispositivo pressionado e então conecte o dispositivo ao computador; verifique se um disco aparece no seu PC. Se aparecer, [reinstale o bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#device-never-turns-on).
 
@@ -440,7 +440,7 @@ O dispositivo reinicia repetidamente e a porta serial conecta e desconecta repet
 Se o dispositivo ficou sem uso por muito tempo, uma bateria profundamente descarregada também pode causar reinicializações repetidas durante a inicialização. Tente as etapas de recuperação da bateria em [Device never turns on](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#device-never-turns-on) antes da recuperação de firmware abaixo.
 :::
 
-- Etapa 1: Tente entrar manualmente no modo DFU: pressione e segure o botão do dispositivo e então conecte o cabo de carregamento **rapidamente** duas vezes; o LED verde ficará aceso continuamente.
+- Etapa 1: Tente entrar manualmente no modo DFU: pressione e segure o botão do dispositivo e então conecte o cabo de carregamento **rapidamente** duas vezes; o LED verde ficará continuamente aceso.
 
 :::note
 Para entrar no modo DFU com sucesso, você precisa realizar essa operação rapidamente. Talvez seja necessário tentar várias vezes.
@@ -452,11 +452,11 @@ Para entrar no modo DFU com sucesso, você precisa realizar essa operação rapi
 
 - Etapa 3: [Flash Firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-3-flash-firmware).
 
-### Dispositivo brickado
+### Dispositivo inutilizado (bricked)
 
 #### Descrição
 
-O dispositivo não responde, nenhum LED, não é possível parear com o seu app.
+O dispositivo não responde, não há LED e não é possível pareá-lo com o seu app.
 
 **1) O dispositivo ainda consegue entrar no modo DFU, então tente gravar o bootloader**.
 
@@ -474,9 +474,9 @@ Ao gravar o bootloader, certifique-se de que a conexão do cabo esteja estável 
 
 **Etapa 1: Instalação do Adafruit-nrfutil**
 
-Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e pressione "Enter". Isso abrirá a linha de comando.
+Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e clique em "Enter". Isso abrirá a linha de comando.
 
-Para usuários macOS, pressione a tecla "Command" e a tecla "Space" para abrir o Spotlight. Em seguida, digite "termial" e pressione "Return". Isso abrirá a linha de comando.
+Para usuários de MAC, pressione a tecla "Command" e a tecla "Space" para abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando.
 
 Para usuários Linux, abra um terminal. No Ubuntu, você pode pressionar **Ctrl + Alt + T**. Use a aba **Linux (Ubuntu/Debian)** abaixo para instalar os pré-requisitos e a ferramenta em um ambiente virtual.
 
@@ -495,7 +495,7 @@ python --version
 python -m pip --version
 ```
 
-Então “Python xxx” e “pip xxx” devem aparecer. Se não aparecerem, tente instalar o Python novamente.
+Então, "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
 
 <Tabs>
 <TabItem value="pypi" label="Instalando a partir do PyPI">
@@ -524,14 +524,14 @@ Para usuários de Windows, talvez seja necessário adicionar o caminho manualmen
 
 <TabItem value="sou" label="Installing from Source">
 
-Use este método se você tiver problemas ao instalar com o PyPi ou quiser modificar a ferramenta. Primeiro faça o clone deste repositório e entre na pasta dele.
+Use este método se você tiver problemas para instalar com o PyPi ou quiser modificar a ferramenta. Primeiro faça o clone deste repositório e entre na pasta dele.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, já que a instalação do Python 3.x no Windows ainda usa o nome python.exe
+Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, já que a instalação do python 3.x no Windows ainda usa o nome python.exe
 
 Para instalar no espaço do usuário no seu diretório pessoal:
 
@@ -595,7 +595,7 @@ Para outras distribuições Linux, instale Python 3, pip e suporte a ambiente vi
 </TabItem>
 </Tabs>
 
-**Passo 2: Verifique o número da sua porta**
+**Etapa 2: Verifique o número da sua porta**
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
@@ -615,7 +615,7 @@ Coloque o T1000-E em modo DFU usando o procedimento de botão e cabo descrito ac
 python -m serial.tools.list_ports -v
 ```
 
-Use a porta que aparecer, normalmente `/dev/ttyACM0`. Se várias portas forem listadas, compare os resultados com o T1000-E desconectado e conectado. O número pode mudar quando o dispositivo entra no modo DFU, então verifique novamente antes de fazer o flash.
+Use a porta que aparecer, normalmente `/dev/ttyACM0`. Se várias portas forem listadas, compare os resultados com o T1000-E desconectado e conectado. O número pode mudar quando o dispositivo entra em modo DFU, portanto verifique novamente antes de fazer o flash.
 
 Verifique as permissões da porta, substituindo `/dev/ttyACM0` pela sua porta real:
 
@@ -631,11 +631,11 @@ sudo usermod -aG dialout "$USER"
 
 Saia e entre novamente para que a alteração de grupo tenha efeito, depois reabra o terminal e ative o ambiente virtual novamente. Em outras distribuições, use o grupo de acesso serial mostrado por `ls -l` e siga as instruções da sua distribuição.
 
-**Passo 3: Faça o flash do bootloader**
+**Etapa 3: Fazer o flash do bootloader**
 
 No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo a porta correta do seu dispositivo:
 
-`--touch 1200` abre e fecha a porta serial a 1200 baud para solicitar o modo DFU antes do upload. Se o dispositivo já estiver em modo DFU com o LED verde aceso, omita `--touch 1200` e use sua porta serial DFU atual.
+`--touch 1200` abre e fecha a porta serial a 1200 baud para solicitar o modo DFU antes do upload. Se o dispositivo já estiver em modo DFU com o LED verde aceso continuamente, omita `--touch 1200` e use sua porta serial DFU atual.
 
 - **Para Windows**:
 
@@ -643,11 +643,11 @@ No terminal ou prompt de comando, navegue até o diretório onde você baixou o 
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-Altere COMXX para o número da sua porta COM. Por exemplo, se o seu dispositivo estiver em com6, altere o comando para:
+Altere COMXX para o número da sua porta COM. Por exemplo, se o seu dispositivo estiver na com6, altere o comando para:
 
 `adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
-Se a porta serial mudar após este comando, siga o Passo 4 abaixo.
+Se a porta serial mudar após este comando, siga a Etapa 4 abaixo.
 
 - **Para macOS**:
 
@@ -657,15 +657,15 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 - **Para Linux**:
 
-Mantenha o pacote de bootloader baixado como um arquivo `.zip`; não o extraia. No terminal com o ambiente virtual ativo, navegue até a pasta que contém o pacote. Feche qualquer monitor serial ou ferramenta de flash via navegador conectada ao dispositivo. Como o Passo 2 coloca o dispositivo em modo DFU manualmente, execute o comando sem `--touch 1200`:
+Mantenha o pacote de bootloader baixado como um arquivo `.zip`; não o extraia. No terminal com o ambiente virtual ativo, navegue até a pasta que contém o pacote. Feche qualquer monitor serial ou ferramenta de flash via navegador conectada ao dispositivo. Como a Etapa 2 coloca o dispositivo em modo DFU manualmente, execute o comando sem `--touch 1200`:
 
 ```bash
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/ttyACM0 -b 115200 --singlebank
 ```
 
-Substitua `/dev/ttyACM0` pela porta identificada no Passo 2. Se o dispositivo ainda estiver executando o firmware de aplicação e tiver uma porta serial, você pode adicionar `--touch 1200` para solicitar o modo DFU. Se ele não responder, mantenha o botão do dispositivo pressionado e, em seguida, conecte rapidamente o cabo de carregamento duas vezes, como mostrado acima. Quando o LED verde permanecer aceso, identifique novamente a porta DFU e use o comando sem `--touch 1200`.
+Substitua `/dev/ttyACM0` pela porta identificada na Etapa 2. Se o dispositivo ainda estiver executando o firmware da aplicação e tiver uma porta serial, você pode adicionar `--touch 1200` para solicitar o modo DFU. Se ele não responder, mantenha o botão do dispositivo pressionado e então conecte o cabo de carregamento **rapidamente** duas vezes, como mostrado acima. Quando o LED verde permanecer aceso, identifique novamente a porta DFU e use o comando sem `--touch 1200`.
 
-**Passo 4: Lidar com uma mudança de porta serial**
+**Etapa 4: Lidar com uma mudança de porta serial**
 
 Quando `--touch 1200` coloca o dispositivo em modo DFU, o sistema operacional pode atribuir uma porta serial diferente. Se o comando informar `Touched serial port` seguido de um erro de porta não encontrada, verifique se apareceu uma nova porta DFU. Esse erro por si só não significa que o bootloader foi gravado com sucesso ou que o dispositivo foi danificado.
 
@@ -675,15 +675,15 @@ Mantenha o cabo USB conectado. No Linux, execute novamente o seguinte comando no
 python -m serial.tools.list_ports -v
 ```
 
-No Windows, atualize o Gerenciador de Dispositivos; no macOS, verifique `ls /dev/cu.*`. Tente novamente usando a porta recém-identificada e **omita `--touch 1200`**, porque o dispositivo já está em modo DFU. Por exemplo, se a nova porta Linux for `/dev/ttyACM1`:
+No Windows, atualize o Gerenciador de Dispositivos; no macOS, verifique com `ls /dev/cu.*`. Tente novamente usando a porta recém-identificada e **omita `--touch 1200`**, porque o dispositivo já está em modo DFU. Por exemplo, se a nova porta Linux for `/dev/ttyACM1`:
 
 ```bash
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/ttyACM1 -b 115200 --singlebank
 ```
 
-Use o nome real da sua porta. Se a porta ainda não puder ser aberta, verifique suas permissões conforme descrito no Passo 2 e certifique-se de que nenhum monitor serial ou ferramenta de flash via navegador esteja usando-a.
+Use o nome real da sua porta. Se a porta ainda não puder ser aberta, verifique suas permissões conforme descrito na Etapa 2 e certifique-se de que nenhum monitor serial ou ferramenta de flash via navegador esteja usando-a.
 
-**Passo 5: Confirme o resultado e reinstale o firmware de aplicação**
+**Etapa 5: Confirme o resultado e reinstale o firmware da aplicação**
 
 Aguarde a ferramenta terminar e exibir:
 
@@ -695,7 +695,7 @@ Esta mensagem confirma que a transferência do bootloader foi concluída com suc
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Gravar o bootloader não reinstala o firmware de aplicação Meshtastic. Após a transferência bem-sucedida, siga [Flash Firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-3-flash-firmware) para instalá-lo antes de usar o dispositivo.
+Fazer o flash do bootloader não reinstala o firmware da aplicação Meshtastic. Após a transferência bem-sucedida, siga [Flash Firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-3-flash-firmware) para instalá-lo antes de usar o dispositivo.
 
 **2) O dispositivo não consegue entrar em modo DFU, mas a porta serial pode ser detectada**.
 
@@ -718,13 +718,13 @@ Gravar o bootloader não reinstala o firmware de aplicação Meshtastic. Após a
 
 **4) Se nenhuma das etapas acima funcionar, entre em contato com o suporte técnico: support@sensecapmx.com**
 
-### Falha ao gravar o firmware
+### Falha ao fazer o flash do firmware
 
 - **Nenhum dado recebido na porta serial**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- Verifique se o dispositivo está no modo DFU; a luz verde ficará acesa continuamente quando o dispositivo estiver em modo DFU.
+ Verifique se o dispositivo está no modo DFU; a luz verde ficará acesa continuamente quando o dispositivo estiver no modo DFU.
 
 - **Não é possível abrir a porta serial**
 
@@ -763,7 +763,7 @@ Se você não tiver certeza de quais configurações foram alteradas, restaure o
 - Após ligar o dispositivo, ele desligará ou reiniciará automaticamente depois de um tempo.
 - O log da porta serial é executado por um tempo e depois para.
 
- Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando o dispositivo estiver nos seguintes estados: sem concluir o processo de transmissão de mensagens, em configuração......
+ Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando ele estiver nos seguintes estados: sem concluir o processo de transmissão de mensagens, em configuração......
 
 #### Solução de problemas
 
@@ -771,7 +771,7 @@ Se você não tiver certeza de quais configurações foram alteradas, restaure o
 
 ### Factory Reset
 
-Se você quiser restaurar as configurações padrão, pode fazer o factory reset. Há dois métodos para você fazer o factory reset.
+Se você quiser restaurar as configurações padrão, pode fazer o factory reset. Há dois métodos para fazer o factory reset.
 
 - [Clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-2-flash-erase) para apagar o dispositivo com flash erase. Em seguida, regrave o firmware mais recente.
 
@@ -780,27 +780,27 @@ Se você quiser restaurar as configurações padrão, pode fazer o factory reset
 
 ### Falha na comunicação de mensagens
 
-#### NodeDB Reset
+#### Reset do NodeDB
 
-NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ser porque o seu nodedB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
+NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ocorrer porque o seu nodedB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
 
 Abra o app e conecte-se ao dispositivo de destino. Vá para **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="Configurações do dispositivo e botão Reset NodeDB no app" width={600} height="auto" /></p>
 
-#### Trocar informações de usuário
+#### Trocar informações do usuário
 
 Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e o "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, pode solicitá-los manualmente a trocar informações no app.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo em Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada do dispositivo em Settings" width={300} height="auto" /></p>
 
 #### Regenerar chave privada
 
-Dois nós precisam conhecer a chave privada um do outro para poder se comunicar entre si. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar a chave privada para ele.
+Cada nó possui um par de chaves pública/privada. Para trocar uma mensagem privada criptografada, o remetente a criptografa com a chave pública do destinatário, e somente a chave privada desse destinatário pode descriptografá-la. Dois nós podem, portanto, se comunicar de forma privada assim que conhecerem a chave pública um do outro. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar sua chave privada. Após a regeneração, exclua esse nó das listas de nós dos outros dispositivos para que eles possam se reconectar e obter sua nova chave pública.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo em Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada do dispositivo em Settings" width={600} height="auto" /></p>
 
-Reinicie o dispositivo com falha para que a configuração tenha efeito. Após a regeneração da chave, outro dispositivo precisa se reconectar ao nó. Portanto, é melhor excluir o nó da lista de nós do outro dispositivo.
+Reinicie o dispositivo com falha para que a configuração entre em vigor. Após a regeneração da chave, outro dispositivo precisa se reconectar ao nó. Portanto, é melhor excluir o nó da lista de nós de outros dispositivos.
 
 :::note
 Para mais informações sobre a comunicação com outro chip LoRa, consulte: [link](https://meshtastic.org/docs/hardware/devices/seeed-studio/sensecap/card-tracker/)
@@ -809,9 +809,9 @@ Para mais informações sobre a comunicação com outro chip LoRa, consulte: [li
 
 ### Qualidade do sinal
 
-- **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR menor que -10 dB indica desempenho ruim.
+- **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica desempenho ruim.
 
-- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI menor que -115 dBm é considerado como tendo desempenho ruim.
+- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo desempenho ruim.
 
       Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 

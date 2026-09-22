@@ -1,6 +1,6 @@
 ---
-description: Meshtastic 用 SenseCAP MeshTracker X1 の使用を開始します。このチュートリアルでは、デバイスのセットアップガイドと FAQ ガイドを紹介します
-title: Meshtastic を使い始める
+description: Meshtastic 用 SenseCAP MeshTracker X1 の使用を開始します。このチュートリアルでは、本デバイスのセットアップガイドと FAQ ガイドを紹介します
+title: Meshtastic を始める
 keywords:
   - トラッカー
   - Meshtastic
@@ -18,8 +18,8 @@ url: https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
-デバイスが以下の状態にあるときは、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。
-1. メッセージ送信プロセスが完了していない
+以下の状態のときは、デバイスを手動で再起動したり電源を切ったりしないでください。そうしないと、デバイスが故障する可能性があります。
+1. メッセージ送信処理が完了していない
 2. 設定中
 :::
 
@@ -29,7 +29,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ### デバイスの電源を入れる
 
-ボタンを 1 回押してデバイスの電源を入れます。上昇するメロディーが鳴り、緑色 🟢 の LED が約 1 秒間点灯します。
+ボタンを 1 回押してデバイスの電源を入れます。上昇するメロディーが鳴り、緑色 🟢 LED が約 1 秒間点灯します。
 
 :::tip
 ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
@@ -37,7 +37,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ### デバイスの電源を切る
 
-ボタンを 5 秒以上押し続けます。ブザーから 3 回ビープ音が鳴った後、デバイスの電源が切れます。
+ボタンを 5 秒以上押し続けます。ブザーが 3 回鳴ったあと、デバイスの電源が切れます。
 
 ### アプリ経由で接続する
 
@@ -78,7 +78,7 @@ import TabItem from '@theme/TabItem';
 
 ### LoRa を設定する
 
-メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、お住まいの地域に合わせて設定する必要があります。
+メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯を制御し、お住まいの地域に合わせて設定する必要があります。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -104,7 +104,7 @@ import TabItem from '@theme/TabItem';
 より包括的な一覧については、[LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、ローリング 1 時間ベースで毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
 デバイスで LoRa リージョンを設定したら、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
@@ -114,7 +114,7 @@ import TabItem from '@theme/TabItem';
 <table>
   <tr>
     <th colspan="2">ライトの状態</th>
-    <th colspan="1">デバイスの状態</th>
+    <th colspan="1">デバイスステータス</th>
   </tr>
   <tr>
     <td rowspan="4">🟢green</td>
@@ -200,7 +200,7 @@ Web フラッシャー経由で DFU に入ります。これが何度も失敗�
 
 <TabItem value="method2" label="Manually Enter">
 
-DFU モードに手動で入ることを試してください：デバイスのボタンを押し続けたまま、**素早く** USB ケーブルでデバイスをコンピュータに接続し、白色 ⚪️ LED が点灯するまでボタンを押し続けます。
+DFU モードに手動で入ることを試します：デバイスのボタンを押し続け、そのまま **素早く** USB ケーブルでデバイスをコンピュータに接続し、白色 ⚪️ LED が点灯するまでボタンを押し続けます。
 
 :::warning
 DFU モードに正常に入るには、この操作を素早く行う必要があります。複数回試す必要があるかもしれません。
@@ -211,14 +211,14 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 </TabItem>
 </Tabs>
 
-X1 が DFU モードの場合、白色 ⚪️ LED は点灯状態になります。また、コンピュータ上に `X1` という名前のドライブが表示されるはずです。
+X1 が DFU モードの場合、白色 ⚪️ LED は点灯状態になります。また、コンピュータ上には `X1` という名前のドライブが表示されるはずです。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1DriveMAC.png" alt="pir" width={300} height="auto" /></p>
 
 #### ステップ 2: フラッシュ消去
 
 ファームウェアを書き込む前に、必ず先に消去してください！
 
-`trash` シンボルをクリックします。
+`trash` のアイコンをクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/EraseX11.png" alt="pir" width={800} height="auto" /></p>
 
@@ -226,7 +226,7 @@ X1 が DFU モードの場合、白色 ⚪️ LED は点灯状態になります
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/FlashFirmwareX11.png" alt="pir" width={800} height="auto" /></p>
 
-このプロセスには時間がかかる場合があります。ドライブが消えるまで待ちます。
+この処理には時間がかかる場合があります。ドライブが消えるまで待ちます。
 
 #### ステップ 3: ファームウェアを書き込む
 
@@ -234,7 +234,7 @@ X1 が DFU モードの場合、白色 ⚪️ LED は点灯状態になります
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/FlashClick.png" alt="pir" width={800} height="auto" /></p>
 
-UF2 ファイルを DFU ドライブにコピーします。ファイルのコピー完了後、デバイスが再起動し、ファームウェアが書き込まれます。
+UF2 ファイルを DFU ドライブにコピーします。ファイルのコピー完了後、デバイスが再起動するとファームウェアが書き込まれます。
 
 ## 上級チュートリアル
 
@@ -259,7 +259,7 @@ Web サイト上でテキストメッセージを送信し、他のノードと�
 
   ステップ 2: 新しいデバイスを追加する 
 
-    "+ New Connection" をクリックします。 
+    「+ New Connection」をクリックします。 
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
@@ -283,7 +283,7 @@ Web サイト上でテキストメッセージを送信し、他のノードと�
 </TabItem>
 </Tabs>
 
-  デバイスがリストに表示されます。クリックして接続します。接続に成功すると、Web サイト上でデバイスステータスを直接確認できます。
+  デバイスが一覧に表示されます。クリックして接続します。接続に成功すると、Web サイト上でデバイスステータスを直接確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Websitestatus.png" alt="pir" width={300} height="auto" /></p>
 
@@ -291,7 +291,7 @@ Web サイト上でテキストメッセージを送信し、他のノードと�
 
 |センサー|説明|
 |-|-|
-|気圧|✅|
+|圧力|✅|
 |6 軸センサー（今後のバージョン）|✅|
 |3 軸センサー（今後のバージョン）|✅|
 
@@ -324,7 +324,7 @@ Web サイト上でテキストメッセージを送信し、他のノードと�
 詳細については [External Notification Config](https://meshtastic.org/docs/configuration/module/external-notification/) を確認してください。
 
 :::tip
-デバイス構成を更新すると、デバイスは再起動します。これには少し時間がかかる場合があります。
+デバイス構成を更新した後、デバイスは再起動します。これには少し時間がかかる場合があります。
 :::
 
 ### 着信音の設定
@@ -391,7 +391,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### ブザーの設定
 
-ブザーはデフォルトで有効になっています。ブザーを無効にしたい場合は、次のスクリーンショットのように `Alert Message buzzer`、`Alert bell buzzer`、`Use PWM buzzer` を設定してください。
+ブザーはデフォルトで有効になっています。ブザーを無効にしたい場合は、`Alert Message buzzer`、`Alert bell buzzer`、`Use PWM buzzer` を次のスクリーンショットのように設定してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/buzzer.png" alt="pir" width={200} height="auto" /></p>
 
@@ -407,7 +407,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/ExternalNotificationIOS.png" alt="pir" width={300} height="auto" /></p>
 
-`buzzer off + vibra off` に設定できます。
+`buzzer off + vibra off` に設定できます。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/IONotificationOff.png" alt="pir" width={600} height="auto" /></p>
 
@@ -445,7 +445,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 <TabItem value="23" label="デバイス背面を確認">
 MAC アドレスの `最後の 4 桁` がデバイス ID です。
 
-例えば、以下のデバイスのデバイス ID は `A0D4` になります。
+例えば、以下のデバイスのデバイス ID は `A0D4` となります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/MACAd.png" alt="pir" width={800} height="auto" /></p>
 
@@ -468,25 +468,25 @@ MAC アドレスの `最後の 4 桁` がデバイス ID です。
 
 ボタンを押し続けたまま、充電ケーブルを接続します。
 
-### 温度測定の精度
+### 温度測定精度
 
 温度データは独立した温度センサーからではなく、気圧センサーから読み取られます。デバイスは動作中に発熱するため、測定された温度は実際の温度より高くなります。
 
 ### 消費電力
 
-[Power Consumption Table](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK) を使用して消費電力を計算できます。このデバイスには高電圧バッテリーが搭載されています。バッテリー残量が少なくなると、放電プロセスが加速します。このデバイスには高電圧バッテリーが搭載されており、バッテリー残量が少ないと放電プロセスが加速します。そのため、バッテリー残量が少ないときにデバイスの電力消費が非常に速くなることに気付くでしょう。
+[Power Consumption Table](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK) を使用して消費電力を計算できます。このデバイスには高電圧バッテリーが搭載されています。バッテリー残量が少なくなると放電プロセスが加速します。このデバイスには高電圧バッテリーが搭載されており、バッテリー残量が少ないと放電プロセスが加速します。そのため、バッテリー残量が少ないときにデバイスの電力消費が非常に速くなることに気付くでしょう。
 
 ## トラブルシューティング
 
 ### デバイスの電源が入らない
 
-- LED インジケーターとブザーが動作していない場合、デバイスの電源が切れているように見えることがあります。上記の手順を実行する前に、`以下のパラメータを確認` することをお勧めします。
+- LED インジケーターとブザーが動作していない場合、デバイスの電源が切れているように見えることがあります。上記の手順を実行する前に、`以下のパラメータを確認する` ことをお勧めします：
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={600} height="auto" /></p>
 
-- 動作確認済みの USB ケーブルを使用して、システムが起動できるだけの電力がバッテリーに蓄えられるように、1〜2 時間連続して `デバイスを充電` してください。
+- 動作が確認されている USB ケーブルを使用して、`デバイスを充電` し続けて 1〜2 時間放置し、システムを起動するのに十分なバッテリー電力があることを確認します。
 
-- 充電後もデバイスが反応しない場合は、次のようにして `ハードリセットを実行` します。USB ケーブルを抜きます。ボタンを押し続けたまま USB ケーブルを接続し、その直後にボタンを離します。
+- 充電後もデバイスが反応しない場合は、次の手順で `ハードリセットを実行` します：USB ケーブルを抜きます。ボタンを押し続けたまま USB ケーブルを接続し、その直後にボタンを離します。 
 
  - それでも改善しない場合は、USB ケーブルをコンピュータに接続します。デバイスのボタンを押し続けたまま、デバイスをコンピュータに接続し、その後ボタンを離して、PC にディスクが表示されるかどうかを確認します。表示される場合は、ブートローダーを再インストールしてください。
 
@@ -508,24 +508,24 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 白色 LED が点灯し続けている場合、デバイスは DFU モードになっています。
 
-- ステップ 2： [Erase Flash](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#ステップ-2-flash-消去)
+- ステップ 2：[Erase Flash](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#ステップ-2-フラッシュ-消去)
 
-- ステップ 3： [Flash Firmware](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#ステップ-3-firmware-書き込み)
+- ステップ 3：[Flash Firmware](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#ステップ-3-ファームウェア-書き込み)
 
 ### ブートローダーのインストール
 
 
-- [ブートローダーのダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
+- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で **絶対に** 取り外さないでください。
+ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込みプロセス中に切断しないようにしてください。
 :::
 
 **ステップ 1：Adafruit-nrfutil のインストール**
 
-Windows ユーザーは、「Win」キーと「r」キーを押し、表示されたウィンドウに「cmd」と入力して「Enter」を押します。これでコマンドラインを開くことができます。
+Windows ユーザーは、「Win」キーと「r」キーを押し、ポップアップウィンドウに「cmd」と入力して「Enter」を押します。これでコマンドラインを開くことができます。 
 
-MAC ユーザーは、「Command」キーと「Space」キーを押して Spotlight を開き、「termial」と入力して「Return」を押します。これでコマンドラインを開くことができます。
+MAC ユーザーは、「Command」キーと「Space」キーを押して Spotlight を開きます。その後「termial」と入力し、「Return」を押します。これでコマンドラインを開くことができます。 
 
 **前提条件**
 
@@ -578,7 +578,7 @@ Windows ユーザーの場合、例えば次のようになります：
 
 **ステップ 3: ブートローダーを書き込む**
 
-ターミナルまたはコマンドプロンプトで、ブートローダーの zip パッケージをダウンロードしたディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに対応する正しいポートに置き換えてください。
+ターミナルまたはコマンドプロンプトで、ダウンロードしたブートローダー zip パッケージがあるディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに対応する正しいポートに置き換えてください：
 
 - **Windows の場合**:
 
@@ -611,7 +611,7 @@ adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.
 - ボーレートを `1200` に設定します。
 
 - デバイスを接続します。
-   接続するときに、LED が一瞬点滅します。LED が点灯したままになるまでこれを繰り返してください。LED が点灯したままになれば、デバイスが DFU モードに戻れることを意味します。その後、[ブートローダーの書き込み](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#bootloader-installation) -> [フラッシュの消去](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#step-2-flash-erase) -> [ファームウェアの書き込み](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#step-3-flash-firmware) を行います。
+   接続するときに、LED が一瞬点滅します。LED が点灯したままになるまでこれを繰り返してください。点灯したままになれば、デバイスが DFU モードに戻れることを意味します。その後、[ブートローダーの書き込み](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#bootloader-installation) -> [フラッシュの消去](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#step-2-flash-erase) -> [ファームウェアの書き込み](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#step-3-flash-firmware) を行ってください。
 
 **3) デバイスが DFU モードに入れず、シリアルポートも表示されない場合**
 
@@ -626,25 +626,25 @@ adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.
 - **現象の説明**
 
  - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。 
- - シリアルポートログがしばらく動作した後に停止します。
+ - シリアルポートのログがしばらく動作した後に停止します。
 
- これは、メッセージ送信プロセスが完了していない、設定中であるなどの状態で、手動で強制的にデバイスを再起動または電源オフしたことが原因の可能性があります。
+ これは、メッセージ送信プロセスが完了していない、設定中であるなどの状態で、手動で強制的に再起動または電源オフしたことが原因の可能性があります。
 
 - **トラブルシューティング**
 
  [ここをクリック](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#step-2-flash-erase)してフラッシュ消去を実行してください。 
 
- ### 工場出荷時設定へのリセット
+ ### 工場出荷時リセット
 デフォルト設定に戻したい場合は、工場出荷時リセットを行うことができます。工場出荷時リセットを行う方法は 2 つあります。
 
 - [ここをクリック](https://wiki.seeedstudio.com/ja/x1_get_started_for_meshtastic/#step-2-flash-erase)してデバイスをフラッシュ消去し、その後最新のファームウェアを書き込みます。
 
-- アプリで `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。 
+- アプリで `Factory Reset` ボタンをクリックします。デバイスは自動的に工場出荷時の設定で再起動します。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### ダイレクトメッセージの失敗
 
-#### NodeDB のリセット
+#### NodeDB リセット
 
 NodeDB は、現在の Mesh ネットワークで検出されたノードに関する情報を保存するローカルデータベースです。特定のノードと通信できない状況に遭遇した場合、そのノードに対して NodeDB に古い情報が保存されている可能性があります。更新する必要があります。
 
@@ -656,13 +656,13 @@ NodeDB は、現在の Mesh ネットワークで検出されたノードに関�
 
 #### ユーザー情報の交換
 
-各ノードは定期的に自分自身のノード情報を送信し、Mesh 内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、お互いのノード情報を交換する必要があります。リスト上の別のノードとプライベートメッセージの送受信ができない場合は、アプリ内で手動で情報交換を促すことができます。
+各ノードは、自身のノード情報を定期的に送信し、メッシュ内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、お互いのノード情報を交換する必要があります。リスト上の別のノードとプライベートメッセージの送受信ができない場合は、アプリ内で手動で情報交換を促すことができます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 秘密鍵の再生成
 
-2 つのノードが互いに通信できるようにするには、お互いの秘密鍵を知っている必要があります。あるノードがプライベートメッセージ送信に失敗し続ける場合は、そのノードの秘密鍵を再生成してみてください。
+各ノードは自分の秘密鍵を保持し、それを共有することはありません。プライベートに通信するために、2 つのノードはメッシュ上で互いに公開鍵を交換します。あるノードがプライベートメッセージの送信に失敗し続ける場合は、そのノードの秘密鍵を再生成してみてください。これにより鍵ペアがローテーションされるため、他のノードは新しい公開鍵と再同期する必要があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
@@ -676,9 +676,9 @@ NodeDB は、現在の Mesh ネットワークで検出されたノードに関�
 
   - **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
 
-  - **RSSI** はデバイスとその周囲の環境によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。 
+  - **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは、性能が低いと見なされます。 
 
-      最良の信号状態を得るために、干渉が最小限で、開けていて遮蔽物のない場所でデバイスを使用してください。
+      最良の信号状態を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
 
 
 ## 技術サポート & 製品ディスカッション
