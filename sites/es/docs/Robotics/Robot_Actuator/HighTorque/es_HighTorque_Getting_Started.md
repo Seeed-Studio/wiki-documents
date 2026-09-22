@@ -1,18 +1,18 @@
 ---
-description: Introducción a Motores de Alto Torque
-title: Introducción a Motores de Alto Torque
+description: Introducción a HighTorque Motors
+title: Software de HighTorque
 keywords:
-  - actuator
+  - actuador
   - motor
-  - arm
-  - robotics
+  - brazo
+  - robótica
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /hightorque_getting_started
 last_update:
   date: 12/04/2025
   author: Tienjuiwong
 createdAt: '2025-12-04'
-updatedAt: '2025-12-05'
+updatedAt: '2025-12-04'
 url: https://wiki.seeedstudio.com/es/hightorque_getting_started/
 ---
 

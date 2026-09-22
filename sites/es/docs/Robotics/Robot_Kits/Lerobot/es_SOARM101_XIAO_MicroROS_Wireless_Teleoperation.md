@@ -1,6 +1,6 @@
 ---
-description: Crea un enlace de teleoperación ROS 2 por cable o inalámbrico de baja latencia para un SO-ARM101 líder y un seguidor inalámbrico usando XIAO ESP32-C3 Bus Servo Adapters y micro-ROS sobre Wi-Fi UDP.
-title: Teleoperación SO-ARM101 por cable e inalámbrica con XIAO ESP32-C3 y micro-ROS
+description: Crea un enlace de teleoperación inalámbrico ROS 2 de baja latencia para un seguidor SO-ARM101 utilizando el adaptador de bus de servos XIAO ESP32-C3 y micro-ROS sobre Wi‑Fi UDP.
+title: SO-Arm con teleoperación inalámbrica XIAO
 keywords:
   - SO-ARM101
   - XIAO ESP32-C3

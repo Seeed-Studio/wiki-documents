@@ -1,9 +1,9 @@
 ---
 description: Primeros pasos con Atom-S.
-title: Primeros pasos con Atom-S
+title: Guía rápida de Atom-S
 keywords:
-  - Humanoide
-  - Robótica
+  - Humanoid
+  - Robotics
   - Atom S
   - XIAO ESP32-S3
   - Servo

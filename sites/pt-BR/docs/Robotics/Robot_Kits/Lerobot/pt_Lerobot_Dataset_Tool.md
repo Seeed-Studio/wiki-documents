@@ -1,6 +1,6 @@
 ---
-description: Este wiki abrange utilitários de conjunto de dados do LeRobot, incluindo exclusão de episódios, mesclagem de conjuntos de dados e muito mais.
-title: Ferramenta de Dataset do LeRobot
+description: Este wiki abrange utilitários do conjunto de dados LeRobot, incluindo exclusão de episódios, mesclagem de conjuntos de dados e mais.
+title: Ferramenta de Dataset SO-Arm
 keywords:
   - Lerobot
   - Hugging Face
@@ -15,7 +15,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-03-02'
-updatedAt: '2026-03-16'
+updatedAt: '2026-03-02'
 url: https://wiki.seeedstudio.com/pt-br/lerobot_dataset_tool/
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona la Guía de Starai Arm Manipulator - ROS2 MoveIt.
-title: Starai Arm en ROS2 MoveIt
+description: Este wiki proporciona la guía de Starai Arm Manipulator - ROS2 MoveIt.
+title: Starai Arm con ROS2 MoveIt
 keywords:
   - Moveit
   - ROS2
@@ -12,7 +12,7 @@ last_update:
   date: 8/1/2025
   author: LiShanghang
 createdAt: '2025-07-31'
-updatedAt: '2026-01-05'
+updatedAt: '2026-01-03'
 url: https://wiki.seeedstudio.com/es/starai_arm_ros_moveit/
 ---
 

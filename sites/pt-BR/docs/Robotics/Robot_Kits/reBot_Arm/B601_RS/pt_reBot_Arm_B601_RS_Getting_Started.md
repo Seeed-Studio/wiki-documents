@@ -1,6 +1,6 @@
 ---
-description: Este guia ajudará você a começar com o reBot Arm B601-RS, incluindo opções de compra, montagem, calibração e configuração de software.
-title: Início Rápido do reBot Arm B601-RS
+description: Este guia ajudará você a começar a usar o reBot Arm B601-RS, incluindo opções de compra, montagem, calibração e configuração de software.
+title: B601-RS Início Rápido
 keywords:
   - reBot
   - B601-DM

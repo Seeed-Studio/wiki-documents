@@ -1,6 +1,6 @@
 ---
-description: このwikiは、Lekiwiの組み立てとデバッグのチュートリアルを提供し、Lerobotフレームワーク内でのデータ収集とトレーニングを実現します。
-title: LerobotでのLekiwi
+description: このWikiでは、Lekiwiの組み立てとデバッグのチュートリアルを提供し、Lerobotフレームワーク内でのデータ収集とトレーニングを実現します。
+title: Lekiwi を用いた SO-Arm
 keywords:
   - Lerobot
   - Huggingface
@@ -10,11 +10,11 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiw
 slug: /lerobot_lekiwi
 sku: 114090065,E2025090401
 last_update:
-  date: 8/8/2025
-  author: LiShanghang
+  date: 11/12/2025
+  author: Li shanghang
 translation:
   skip: [zh-CN]
-createdAt: '2025-05-30'
+createdAt: '2025-05-28'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/lerobot_lekiwi/
 ---

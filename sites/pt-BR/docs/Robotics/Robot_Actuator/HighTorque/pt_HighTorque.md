@@ -1,6 +1,6 @@
 ---
-description: Este documento apresentará como começar rapidamente a usar os motores da linha HighTorque.
-title: Motor da Linha HighTorque
+description: Este documento apresentará como começar rapidamente a usar os motores da série HighTorque.
+title: HighTorque SDK
 keywords:
   - Módulo de Junta
   - Motor
@@ -13,7 +13,7 @@ last_update:
   date: 06/24/2025
   author: ZhuYaoHui
 createdAt: '2025-06-24'
-updatedAt: '2026-03-16'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/hightorque_series/
 ---
 

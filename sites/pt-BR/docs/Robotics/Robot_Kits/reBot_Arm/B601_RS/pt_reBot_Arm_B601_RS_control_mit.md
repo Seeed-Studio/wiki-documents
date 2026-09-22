@@ -1,6 +1,6 @@
 ---
-description: Este tutorial mostra como usar o rebot_control com MotorBridge e barramento CAN para controle de posição MIT no reBot Arm B601-RS, incluindo controle do gripper, proteção de temperatura e retorno seguro para zero.
-title: Controle de Posição MIT do reBot Arm B601-RS
+description: Este tutorial mostra como usar o rebot_control com MotorBridge e barramento CAN para controle de posição MIT no reBot Arm B601-RS, incluindo controle da garra, proteção de temperatura e retorno seguro para zero.
+title: SDK de Motor B601-RS
 keywords:
   - reBot
   - B601-RS
@@ -9,7 +9,7 @@ keywords:
   - RobStride
   - CAN
   - braço robótico
-  - gripper
+  - garra
   - proteção de temperatura
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_mit_control
