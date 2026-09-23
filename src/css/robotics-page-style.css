@@ -14,6 +14,7 @@
   --rp-accent: #2563eb;
   --rp-accent-soft: rgba(37, 99, 235, 0.10);
   --rp-accent-border: rgba(37, 99, 235, 0.24);
+  --rp-anchor-offset: 12rem;
   width: 100%;
   color: var(--rp-text);
 }
@@ -87,7 +88,7 @@
   top: calc(var(--ifm-navbar-height, 60px) + 0.75rem);
   z-index: 3;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.75rem;
   padding: 0.75rem;
   margin: 1rem 0 2rem;
@@ -116,7 +117,7 @@
   transform: translateY(-2px);
 }
 
-.section-block { margin: 2.6rem 0; scroll-margin-top: 6rem; }
+.section-block { margin: 2.6rem 0; scroll-margin-top: var(--rp-anchor-offset); }
 .section-title-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.25rem; margin-bottom: 1.25rem; }
 .section-title-row h2 { margin: 0.15rem 0 0; font-size: 1.7rem; letter-spacing: -0.02em; }
 .section-title-row p { margin: 0; max-width: 580px; color: var(--rp-text-muted); line-height: 1.68; }
@@ -341,6 +342,7 @@ html[data-theme='dark'] .note-box { color: #fde68a; background: rgba(146, 64, 14
 html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgba(100, 116, 139, 0.20); }
 
 @media (max-width: 900px) {
+  .robotics-page { --rp-anchor-offset: 6.5rem; }
   .hero-panel, .product-meta-grid, .resource-columns { grid-template-columns: 1fr; }
   .section-title-row { display: block; }
   .section-title-row p { margin-top: 0.5rem; }
@@ -369,7 +371,7 @@ html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgb
   border-radius: 24px;
   background: linear-gradient(135deg, var(--rp-card-bg), var(--rp-card-bg-soft));
   box-shadow: var(--rp-shadow-sm);
-  scroll-margin-top: 6rem;
+  scroll-margin-top: var(--rp-anchor-offset);
 }
 .compact-title { margin-bottom: 1rem; }
 .kit-index-grid {
@@ -400,7 +402,7 @@ html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgb
 }
 .kit-index-grid strong { grid-area: title; color: var(--rp-text); }
 .kit-index-grid small { grid-area: desc; color: var(--rp-text-muted); line-height: 1.35; }
-.product-card { scroll-margin-top: 6rem; }
+.product-card { scroll-margin-top: var(--rp-anchor-offset); }
 .product-card[open] .summary-action { font-size: 0; }
 .product-card[open] .summary-action::after { content: "Collapse learning plan"; font-size: 0.76rem; }
 html[lang="zh-CN"] .product-card .summary-action { min-width: 6.3rem; }
