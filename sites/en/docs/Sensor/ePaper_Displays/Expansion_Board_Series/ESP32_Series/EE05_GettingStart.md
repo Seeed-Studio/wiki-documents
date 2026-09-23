@@ -105,7 +105,7 @@ The board is equipped with a JST 2.0mm battery connector and a hardware power sl
 The following phenomena are inherent normal behaviors of the SenseCraft Seeedash firmware itself:
 
 - Low power consumption design optimized for ePaper display applications
-- Approximately 3 months of battery life on a full charge (with typical usage)
+- Battery life depends on refresh frequency (typically 3-months on a full charge with default settings)
 - Low battery indicator icon appears on screen when battery level drops below 20%
 :::
 
@@ -145,7 +145,7 @@ Before you can use SenseCraft Seeedash, you need to flash the firmware for your 
 
 1. Open the [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) website in your browser.
 2. Click **Tools** in the left sidebar, then select **Firmware Flasher**.
-3. In the **Device** dropdown, select **XIAO EE05 DIY Kit**, then choose your screen model from the list (e.g., "7.5" Monochrome Display 800*480").
+3. In the **Device** dropdown, select **XIAO EE05 DIY Kit**, then choose your screen model from the list (e.g., "7.5  Monochrome Display 800*480").
 4. Click the **Flash** button, select the serial port for your EE05 board, and start the firmware‑flashing process.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/EE05_HMI_6.png" style={{width:800,height:'auto'}}/></div>
@@ -164,7 +164,7 @@ After the firmware flashing is complete, the board will automatically restart. Y
 
 **Step 4. Connect to Wi-Fi**
 
-Use your mobile phone to scan the QR code displayed on the screen. Follow the prompts on your phone to enter your local Wi-Fi SSID and password to connect the EE04 to the internet.
+Use your mobile phone to scan the QR code displayed on the screen. Follow the prompts on your phone to enter your local Wi-Fi SSID and password to connect the EE05 to the internet.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
@@ -312,13 +312,6 @@ void loop() {
 
 - **Press RESET**: Try pressing the RESET button on the board while the flasher is searching for the device.
 - **Check USB Cable**: Ensure you are using a USB cable that supports data transfer (not just charging).
-- **Install Drivers**: If you're on Windows, you may need to install the [CP210x USB to UART driver](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
-
-**Q5: The device fails to bind to SenseCraft Seeedash.**
-
-- **Check Wi-Fi Connection**: Ensure the device is connected to the same Wi-Fi network as your computer.
-- **Restart the Device**: Press the RESET button and try the binding process again.
-- **Check Network Settings**: Make sure your Wi-Fi network doesn't have AP isolation enabled, which prevents devices from communicating with each other.
 
 ## Tech Support & Product Discussion
 
