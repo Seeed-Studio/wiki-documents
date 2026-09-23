@@ -105,7 +105,7 @@ The board is equipped with a JST 2.0mm battery connector and a hardware power sl
 The following phenomena are inherent normal behaviors of the SenseCraft Seeedash firmware itself:
 
 - Low power consumption design optimized for ePaper display applications
-- Battery life depends on refresh frequency (typically 3-months on a full charge with default settings)
+- Battery life depends on refresh frequency (typically 3 months on a full charge with default settings)
 - Low battery indicator icon appears on screen when battery level drops below 20%
 :::
 
@@ -145,7 +145,7 @@ Before you can use SenseCraft Seeedash, you need to flash the firmware for your 
 
 1. Open the [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) website in your browser.
 2. Click **Tools** in the left sidebar, then select **Firmware Flasher**.
-3. In the **Device** dropdown, select **XIAO EE05 DIY Kit**, then choose your screen model from the list (e.g., "7.5  Monochrome Display 800*480").
+3. In the **Device** dropdown, select **XIAO EE05 DIY Kit**, then choose your screen model from the list (e.g., "7.5 inch Monochrome ePaper Display with 800*480").
 4. Click the **Flash** button, select the serial port for your EE05 board, and start the firmware‑flashing process.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/EE05_HMI_6.png" style={{width:800,height:'auto'}}/></div>
