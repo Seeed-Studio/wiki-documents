@@ -12,15 +12,17 @@ keywords:
   - ALSA
   - aplay
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO-IMU-Detect.gif
-slug: /recamera_pro_imu_tilt_shake_detection
+slug: /recamera_pro_imu_tilt_shake_detection_legacy
+draft: true
 sidebar_position: 1
 last_update:
   date: 2026-06-11
   author: Sizhao zhou
 createdAt: '2026-06-11'
 updatedAt: '2026-07-23'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection_legacy/
 ---
+<!-- 旧版页面（reCamera Pro wiki 第二阶段重构）：本页面已被 Develop/tilt_shake_detection.md（https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/）取代，后者现在使用原始 slug /recamera_pro_imu_tilt_shake_detection。此文件作为草稿（slug /recamera_pro_imu_tilt_shake_detection_legacy）保留以供历史记录，并被排除在正式构建之外。请不要链接到此处。 -->
 
 # 使用 reCamera Pro 板载 IMU 实现倾斜与晃动检测
 
@@ -28,7 +30,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/
 
 ## 介绍
 
-本文介绍如何使用 reCamera Pro 板载的六轴惯性测量单元（IMU）——ICM-42670-P 陀螺仪——来实现设备的倾斜与晃动检测。当设备发生倾斜或晃动时，系统会通过板载扬声器播放相应的语音警告。通过本教程，你将学习如何通过 Linux IIO 驱动读取原始陀螺仪数据，如何使用 ALSA 音频驱动播放警告音，并最终整合出一个完整的检测与告警程序。
+本文介绍如何使用 reCamera Pro 板载的六轴惯性测量单元（IMU）——ICM-42670-P 陀螺仪——来实现设备倾斜与晃动检测。当设备发生倾斜或晃动时，系统会通过板载扬声器播放相应的语音警告。通过本教程，你将学习如何通过 Linux IIO 驱动读取原始陀螺仪数据，如何使用 ALSA 音频驱动播放警告音，并最终集成一个完整的检测与告警程序。
 
 ## 硬件准备
 - 一台 reCamera Pro
@@ -44,7 +46,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/
  <tr>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-Pro-2GB.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Buy Now 🖱️</font></span></strong>
    </a>
   </div></td>
  </tr>
@@ -59,13 +61,13 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_tilt_shake_detection/
 
 ### 晃动检测
 
-当任一轴向的角速度数据绝对值超过预设阈值时，即判定为晃动。
+当任一轴的角速度数据绝对值超过预设阈值时，即判定为晃动。
 
 ### 倾斜检测
 
-当任一轴向的角速度数据绝对值超过预设阈值时，即判定为倾斜。
+当任一轴的角速度数据绝对值超过预设阈值时，即判定为倾斜。
 
-## 板载陀螺仪数据采集
+## 板载陀螺仪数据获取
 
 reCamera Pro 的 Linux 环境使用 IIO（Industrial I/O）驱动，通过 sysfs 接口暴露传感器数据和配置，供用户空间应用访问。传感器数据路径为：
 
@@ -113,11 +115,11 @@ ffmpeg -i test.mp3 test.wav
 
 ## 基础实现代码
 
-在了解了如何读取原始陀螺仪数据以及播放音频之后，我们开始编写代码来实现完整功能。
+现在我们已经了解了如何读取原始陀螺仪数据以及如何播放音频，接下来编写代码实现完整功能。
 
 ### 陀螺仪数据采集
 
-下面是一个最小函数示例，用于演示如何采集 X 轴陀螺仪数据。你可以在此基础上扩展以获取其他轴的数据。
+下面是一个最小函数示例，演示如何采集 X 轴陀螺仪数据。你可以在此基础上扩展以获取其他轴的数据。
 
 ```python
 #!/usr/bin/env python3
@@ -137,7 +139,7 @@ print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 
 ### 音频播放
 
-当设备触发倾斜或晃动时，需要播放相应的语音警告。下面的代码演示了如何使用 Python 播放音频：
+当设备触发倾斜或晃动时，需要播放相应的语音警告。下面的代码演示如何使用 Python 播放音频：
 
 ```python
 #!/usr/bin/env python3
@@ -200,7 +202,7 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_common_conventions
+slug: /recamera_pro_api_common_conventions_legacy
+draft: true
 sku: 10003420
 sidebar_position: 4
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/es/recamera_pro_api_common_conventions/
+url: https://wiki.seeedstudio.com/es/recamera_pro_api_common_conventions_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/common_conventions.md (https://wiki.seeedstudio.com/es/recamera_pro_api_common_conventions/), which now serves the original slug /recamera_pro_api_common_conventions. This file is kept for history as a draft (slug /recamera_pro_api_common_conventions_legacy) and is excluded from production builds. Do not link here. -->
 
 # Convenciones Comunes
 
@@ -58,7 +60,7 @@ Cuando una solicitud falla, el dispositivo devuelve:
 
 ## Nomenclatura de Campos
 
-Los nombres de campos JSON usan camelCase. La primera letra indica el tipo de datos:
+Los nombres de campos JSON usan camelCase. La primera letra indica el tipo de dato:
 
 | Prefijo | Tipo | Ejemplo |
 |---|---|---|

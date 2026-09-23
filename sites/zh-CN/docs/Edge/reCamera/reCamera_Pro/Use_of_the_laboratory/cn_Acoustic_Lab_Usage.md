@@ -9,19 +9,28 @@ keywords:
   - Sound Trigger
   - Custom Training
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_acoustic_lab_usage
+slug: /recamera_pro_acoustic_lab_usage_legacy
+draft: true
 sidebar_position: 1
 last_update:
   date: 2026-07-13
   author: sizhaozhou
 createdAt: '2026-07-13'
-updatedAt: '2026-08-04'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_acoustic_lab_usage/
+updatedAt: '2026-07-30'
+url: https://wiki.seeedstudio.com/cn/recamera_pro_acoustic_lab_usage_legacy/
 ---
+<!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：本页面已被 Build_Your_App/train_sound_model.md（https://wiki.seeedstudio.com/cn/recamera_pro_acoustic_lab_usage/）取代，该文件现在使用原始 slug /recamera_pro_acoustic_lab_usage。此文件作为草稿（slug /recamera_pro_acoustic_lab_usage_legacy）保留以供历史记录，并从正式构建中排除。请不要链接到此处。 -->
+
+## 内容迁移索引（旧版页面）
+
+| 原章节 | 新位置 |
+| --- | --- |
+| 介绍、功能入口、功能概览、本地训练、SenseCraft 训练、故障排查 | [训练声音模型](https://wiki.seeedstudio.com/cn/recamera_pro_acoustic_lab_usage/)（此 slug） |
+| 模型部署（声音触发录制） | [声音触发捕获](https://wiki.seeedstudio.com/cn/recamera_pro_sound_trigger/) |
 
 ## 介绍
 
-reCamera Pro 内置了一个本地声音训练平台，称为 Acoustic Lab。通过该平台，用户可以在无需连接互联网的情况下，采集环境声音样本、训练自定义声音模型，并将其部署为声音触发事件。本文将详细介绍 Acoustic Lab 中各个功能模块，涵盖从音频采集、模型训练到部署和使用的完整工作流程。
+reCamera Pro 内置了一个本地声音训练平台 Acoustic Lab。通过该平台，用户可以在无需连接互联网的情况下采集环境声音样本、训练自定义声音模型，并将其部署为声音触发事件。本文将详细介绍 Acoustic Lab 中的各个功能模块，涵盖从音频采集、模型训练到部署和使用的完整工作流程。
 
 ## 功能入口
 
@@ -40,7 +49,7 @@ Acoustic Lab 主界面包括以下核心区域：
 3. **麦克风配置**：选择麦克风输入源和通道数量。
 4. **音频采样频率**：较低的频率可提供更快的采集响应，但会占用更多系统资源。
 5. **置信度排行榜显示精度**：自定义排行榜中数值显示的精度。
-6. **状态信息**：第一个参数表示算法运行时间，第二个参数表示当前工作空间中的声音模型数量。
+6. **状态信息**：第一个参数表示算法运行时间，第二个参数表示当前工作区中的声音模型数量。
 
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_AcousticsLab_Introuce.png" /></div>
 
@@ -52,9 +61,9 @@ Acoustic Lab 主界面包括以下核心区域：
 
 #### 1. 音频采集
 
-1. 在 Acoustic Lab 中，点击 **Workspace** 按钮进入工作空间。
-2. 点击 **New workspace** 按钮，为新工作空间命名，然后点击 **Create** 按钮。
-3. 在 **Dataset** 区域，首先采集一段环境背景噪声样本（建议时长：20 秒）。点击 **Background Noise** 按钮，然后点击 **Record** 开始采集。其旁边的下拉菜单可选择麦克风输入源，默认是设备音频。
+1. 在 Acoustic Lab 中，点击 **Workspace** 按钮进入工作区。
+2. 点击 **New workspace** 按钮，为新工作区命名，然后点击 **Create** 按钮。
+3. 在 **Dataset** 区域，首先采集一段环境背景噪声样本（建议时长：20 秒）。点击 **Background Noise** 按钮，然后点击 **Record** 开始采集。旁边的下拉菜单可选择麦克风输入源，默认是设备音频。
 
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Background_Noise_Start.png" /></div>
 
@@ -66,7 +75,7 @@ Acoustic Lab 主界面包括以下核心区域：
 
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Background_Noise_Slice.png" /></div>
 
-5. 点击右上角的 **Add category** 按钮添加一个声音类别并命名（例如你想要训练的声音名称）。
+5. 点击右上角的 **Add category** 按钮添加声音类别并命名（例如你想要训练的声音名称）。
 6. 点击 **Record** 按钮开始录制声音样本（建议时长：10 秒），后续步骤与步骤 4 相同。
 
 <div align="left"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Voice_Slice.png" /></div>
@@ -91,7 +100,7 @@ Acoustic Lab 主界面包括以下核心区域：
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Acoustic_Lab_Usage/reCamera-PRO_Voice_SenseCraft_Source.png" /></div>
 
 :::warning
-目前 SenseCraft 平台尚不支持设备音频输入，这可能会影响模型识别精度。详情请参考：[问题：SenseCraft 声音分类模型部署到设备后精度下降或出现误识别](#sensecraft-sound-model-accuracy)。
+目前 SenseCraft 平台尚不支持设备音频输入，这可能会影响模型识别精度。详情请参考：[SenseCraft 模型部署后精度下降或出现误识别](#sensecraft-声音-模型-精度)。
 :::
 
 #### 2. 采集背景噪声
@@ -128,11 +137,11 @@ Acoustic Lab 主界面包括以下核心区域：
 
 ### 问题：在部署列表中找不到已训练的模型
 
-- 确认训练过程已完成，并且在工作空间中生成了模型文件。
-- 检查当前工作空间是否与训练时使用的工作空间一致。
+- 确认训练过程已完成，并且在工作区中生成了模型文件。
+- 检查当前工作区是否与训练时使用的工作区一致。
 - 尝试刷新 Acoustic Lab 页面或重新进入。
 
-### 问题：声音触发不灵敏或误触发
+### 问题：声音触发不灵敏或频繁误触发
 
 - 检查背景噪声样本是否充足，建议重新采集超过 20 秒的环境背景噪声。
 - 在超参数中调整置信度阈值。
@@ -142,14 +151,14 @@ Acoustic Lab 主界面包括以下核心区域：
 
 由于 SenseCraft 训练时使用的声音采集设备与实际模型推理时使用的设备不同，音频特征存在一定差异。可以参考以下方法优化部署后模型的精度：
 
-- 在 SenseCraft 部署时，勾选包含数据集并将其一同部署到设备。
-- 在设备上打开对应的工作空间，并根据实际检测结果，将少量（超过 5 秒）的设备麦克风采集数据切片添加到数据集中： 
-***A.*** 对非目标声音的误识别：使用设备麦克风在背景噪声类别中录制该声音并添加切片； 
-***B.*** 对目标声音的误识别：使用设备麦克风在目标类别中录制该声音并添加切片。
+- 在 SenseCraft 上部署时，勾选包含数据集并将其一并部署到设备。
+- 在设备上打开对应的工作区，并根据实际检测结果，将少量（超过 5 秒）的设备麦克风采集数据切片加入数据集： 
+***A.*** 对非目标声音出现误识别：使用设备麦克风录制该声音到背景噪声类别并添加切片； 
+***B.*** 对目标声音出现漏识别：使用设备麦克风录制该声音到目标类别并添加切片。
 
-- 在设备上点击训练按钮重新训练模型。训练完成后，切换到该模型再次查看识别效果，如仍未达到预期，可重复以上步骤。
+- 在设备上点击训练按钮重新训练模型，训练完成后切换到该模型再次查看识别效果。如果仍未达到预期，可重复以上步骤。
 
-我们会持续优化，并将在未来在 SenseCraft 上支持使用设备麦克风进行声音采集，敬请期待。
+我们将持续优化，未来会在 SenseCraft 上支持使用设备麦克风进行声音采集，敬请期待。
 
 ## 资源
 
@@ -158,7 +167,7 @@ Acoustic Lab 主界面包括以下核心区域：
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们致力于提供多层次的支持，确保您在使用产品的过程中体验顺畅。我们提供多种交流渠道，以满足不同用户的偏好和需求。
+感谢您选择我们的产品！我们致力于提供多层次的支持，以确保您在使用我们产品时拥有顺畅的体验。我们提供多种沟通渠道，以满足不同用户的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
