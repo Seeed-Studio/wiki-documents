@@ -4,7 +4,8 @@ title: Ai Inference
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_ai_inference
+slug: /recamera_pro_ai_inference_legacy
+draft: true
 sku: 10003420
 sidebar_position: 5
 last_update:
@@ -12,8 +13,20 @@ last_update:
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/recamera_pro_ai_inference/
+url: https://wiki.seeedstudio.com/recamera_pro_ai_inference_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/configure_detection.md (https://wiki.seeedstudio.com/recamera_pro_ai_inference/), which now serves the original slug /recamera_pro_ai_inference. This file is kept for history as a draft (slug /recamera_pro_ai_inference_legacy) and is excluded from production builds. Do not link here. -->
+
+## Content Migration Index (Legacy Page)
+
+| Original section | New home |
+| --- | --- |
+| Feature Overview, Model Configuration, Inference Configuration, Real-time Monitoring | [Configure Detection](https://wiki.seeedstudio.com/recamera_pro_ai_inference/) (this slug) |
+| Model Management, Upload Model | [Upload and Configure an RKNN Model](https://wiki.seeedstudio.com/recamera_pro_rknn_upload/) |
+| SenseCraft Model Conversion | [SenseCraft ONNX-to-RKNN](https://wiki.seeedstudio.com/recamera_pro_sensecraft/) |
+| Inference Output Configuration | [HTTP/UART Results](https://wiki.seeedstudio.com/recamera_pro_http_uart/), [MQTT](https://wiki.seeedstudio.com/recamera_pro_mqtt/) |
+| Model format/compatibility summary | [Model Compatibility and Output Formats](https://wiki.seeedstudio.com/recamera_pro_model_compatibility/) |
+| Web UI field reference | [Web UI Reference](https://wiki.seeedstudio.com/recamera_pro_webui_reference/) |
 
 reCamera Pro provides a built-in AI inference management page, allowing users to directly manage models, upload models, convert models, configure inference parameters, view real-time inference status, and configure inference result output within the Web UI. This page is suitable for scenarios such as object detection, industrial recognition, security monitoring, event triggering, and edge AI application development.
 
