@@ -251,7 +251,52 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
   </a>
 </div>
 
-### Stage 4–8
+### Stage 4: VLA and Isaac GR00T
+
+<div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_18">
+    <span className="course-index">18</span>
+    <div className="course-path-copy">
+      <strong>Multimodal Learning and VLA Basics</strong>
+      <span>Chapter 18</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_19">
+    <span className="course-index">19</span>
+    <div className="course-path-copy">
+      <strong>Robot Embodiment and GR00T System Architecture</strong>
+      <span>Chapter 19</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_20">
+    <span className="course-index">20</span>
+    <div className="course-path-copy">
+      <strong>Preparing the reBot VLA Dataset</strong>
+      <span>Chapter 20</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_21">
+    <span className="course-index">21</span>
+    <div className="course-path-copy">
+      <strong>Fine-tuning the reBot Arm with Isaac GR00T</strong>
+      <span>Chapter 21</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_embodied_ai_course_chapter_22">
+    <span className="course-index">22</span>
+    <div className="course-path-copy">
+      <strong>GR00T Inference and Real-Robot Deployment</strong>
+      <span>Chapter 22</span>
+    </div>
+    <span className="course-tag">Theory &amp; Practice</span>
+  </a>
+</div>
+
+### Stage 5–8
 
 :::note
 Coming soon — the remaining stages will be added to the wiki progressively.

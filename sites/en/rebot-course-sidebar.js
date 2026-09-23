@@ -111,6 +111,35 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'Stage 4: VLA and Isaac GR00T',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_18',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_19',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_20',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_21',
+        },
+        {
+          type: 'doc',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_22',
+        },
+      ],
+    },
   ],
 
 };
