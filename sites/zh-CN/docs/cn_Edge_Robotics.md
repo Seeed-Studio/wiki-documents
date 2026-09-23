@@ -45,6 +45,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 
   <nav className="quick-nav" aria-label="机器人页面快捷导航">
     <a href="#robot-kits">📦 机器人套件</a>
+    <a href="#rebot-hardware-inventory">🧰 reBot 资源</a>
     <a href="#actuators">⚙️ 关节执行器</a>
     <a href="#sensors">👁️ 传感器</a>
     <a href="#software">💻 软件生态</a>
@@ -369,6 +370,50 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 </div>
 </details>
 
+    </div>
+  </section>
+
+  <section id="rebot-hardware-inventory" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Reference</span>
+        <h2>reBot 资源</h2>
+      </div>
+      <p>先覆盖 B601-RS 与 B601-DM。硬件目录包含 3D 打印件、CNC 金属件、采购件、BOM、电源组装步骤和整机组 STEP；描述文件用于 URDF / Mesh 建模与仿真。相机支架为两款机械臂通用。</p>
+    </div>
+    <div className="resource-columns">
+      <div>
+        <h4>B601-RS</h4>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">硬件资料合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">机械臂描述文件</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">数字孪生 / Web 仿真器</a>
+      </div>
+      <div>
+        <h4>B601-DM</h4>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">硬件资料合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">机械臂描述文件</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">数字孪生 / Web 仿真器</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">真机性能测试</a>
+      </div>
+      <div>
+        <h4>相机支架（B601-RS / B601-DM 通用）</h4>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/D435_Gemini2_Mount.step" target="_blank" rel="noopener noreferrer">Orbbec Gemini 2 相机支架</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/D405_305_Mount.step" target="_blank" rel="noopener noreferrer">Intel D405 / Gemini 305 相机支架</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/D455f_Mount.step" target="_blank" rel="noopener noreferrer">Intel RealSense D455f 相机支架</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/UVC32_mount.step" target="_blank" rel="noopener noreferrer">32×32 UVC 相机支架</a>
+        <a href="https://github.com/xiehuangbao888/Camera-Mount" target="_blank" rel="noopener noreferrer">全局俯视相机支架合集</a>
+      </div>
+      <div>
+        <h4>共用资源</h4>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
+        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
+        <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">LeRobot robot adapter</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot teleoperator adapter</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
+        <a href="https://github.com/yuyoujiang/rebot-arm-dli-isaacsim/blob/main/assets/workspace/box.usdz" target="_blank" rel="noopener noreferrer">数采作环境资源</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">视觉抓取 Demo</a>
+      </div>
     </div>
   </section>
 

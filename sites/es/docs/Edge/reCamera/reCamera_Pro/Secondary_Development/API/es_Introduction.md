@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_introduction
+slug: /recamera_pro_api_introduction_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -14,12 +15,13 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/es/recamera_pro_api_introduction/
+url: https://wiki.seeedstudio.com/es/recamera_pro_api_introduction_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/introduction.md (https://wiki.seeedstudio.com/es/recamera_pro_api_introduction/), which now serves the original slug /recamera_pro_api_introduction. This file is kept for history as a draft (slug /recamera_pro_api_introduction_legacy) and is excluded from production builds. Do not link here. -->
 
 # Introducción
 
-reCamera RV1126B proporciona un conjunto de API web basadas en HTTP que te permiten obtener información del dispositivo, configurar parámetros del sistema, gestionar redes, controlar audio y vídeo, ejecutar inferencia de IA, gestionar archivos y realizar actualizaciones de firmware.
+reCamera RV1126B proporciona un conjunto de Web APIs basadas en HTTP que te permiten obtener información del dispositivo, configurar parámetros del sistema, gestionar redes, controlar audio y vídeo, ejecutar inferencia de IA, gestionar archivos y realizar actualizaciones de firmware.
 
 ## Información básica
 
@@ -33,7 +35,7 @@ reCamera RV1126B proporciona un conjunto de API web basadas en HTTP que te permi
 
 ## Estructura de la URL
 
-Todos los endpoints de la API CGI siguen esta estructura:
+Todos los endpoints CGI de la API siguen esta estructura:
 
 ```text
 http://<DEVICE_IP>/cgi-bin/entry.cgi/<api_category>/<resource>/<sub_resource>
@@ -45,7 +47,7 @@ Por ejemplo, para obtener información del dispositivo:
 http://192.168.42.1/cgi-bin/entry.cgi/system/device-info
 ```
 
-Algunos endpoints no pasan por la ruta base CGI y se accede a ellos directamente, como las API de puerto serie y de archivos:
+Algunos endpoints no pasan por la ruta base CGI y se accede a ellos directamente, como las APIs de puerto serie y de archivos:
 
 ```text
 http://<DEVICE_IP>/api/v1/device/serial-port
@@ -61,7 +63,7 @@ http://<DEVICE_IP>/api/v1/file?path=/mnt/sdcard/test.mp4
 | Convenciones comunes | Formato de respuesta, nomenclatura de campos, códigos de error |
 | Referencia de la API | Descripciones detalladas de endpoints organizadas por función |
 | Códigos de error | Referencia de códigos de error |
-| Preguntas frecuentes | Preguntas frecuentes |
+| FAQ | Preguntas frecuentes |
 
 
 ## Soporte técnico y debate sobre el producto

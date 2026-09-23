@@ -110,7 +110,7 @@ The tested host configuration is:
 - ROS 2 Humble
 - LeRobot with Feetech support
 - micro-ROS Agent
-- Python 3.10
+- Python 3.12
 - PlatformIO
 
 Install the micro-ROS Agent and PlatformIO if they are not already available:

@@ -110,7 +110,7 @@ PC 和 XIAO 必须连接到同一个本地网络。演示时可以使用手机�
 - ROS 2 Humble
 - 支持 Feetech 的 LeRobot
 - micro-ROS Agent
-- Python 3.10
+- Python 3.12
 - PlatformIO
 
 如果尚未安装 micro-ROS Agent 和 PlatformIO，请先安装：
