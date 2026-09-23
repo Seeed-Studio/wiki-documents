@@ -12,10 +12,10 @@ slug: /getting_started_with_ee03
 sidebar_position: 2
 sku: 100080566
 last_update:
-  date: 09/10/2026
-  author: Luki
+  date: 09/22/2026
+  author: Nemo
 createdAt: '2026-03-02'
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/getting_started_with_ee03/
 ---
 
@@ -223,7 +223,7 @@ Now you will see the feedback in your epaper screen! Following is the result of 
 
 ## Tech Support & Product Discussion
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible.
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="table-center">
   <div class="button_tech_support_container">
