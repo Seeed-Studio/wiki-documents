@@ -154,13 +154,13 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 
 - Ubuntu 22.04  
 - CUDA 12+  
-- Python 3.10  
+- Python 3.12
 - Torch 2.6+  
 
 **For Jetson Orin:**
 
 - Jetson JetPack 6.0 and 6.1, not support 6.1
-- Python 3.10  
+- Python 3.12
 - Torch 2.3+
 
 ## Table of Contents
@@ -254,7 +254,7 @@ conda init --all
 2. Create and activate a fresh conda environment for lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
+conda create -y -n lerobot python=3.12 && conda activate lerobot
 ```
 
 3. Clone Lerobot:

@@ -2,11 +2,12 @@
 description: API が返すエラーコードを紹介します。
 title: エラーコード
 keywords:
-  - Edge AI
+  - エッジ AI
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_error_codes
+slug: /recamera_pro_api_error_codes_legacy
+draft: true
 sku: 10003420
 sidebar_position: 5
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_api_error_codes/
+url: https://wiki.seeedstudio.com/ja/recamera_pro_api_error_codes_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/error_codes.md (https://wiki.seeedstudio.com/ja/recamera_pro_api_error_codes/), which now serves the original slug /recamera_pro_api_error_codes. This file is kept for history as a draft (slug /recamera_pro_api_error_codes_legacy) and is excluded from production builds. Do not link here. -->
 
 # エラーコード
 
@@ -23,7 +25,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_api_error_codes/
 
 エラーコードは機能モジュールごとに区分されています：
 
-| Prefix | モジュール |
+| プレフィックス | モジュール |
 |---|---|
 | `100xx` | デバイス & システム |
 | `200xx` | ライブビュー |
@@ -33,7 +35,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_api_error_codes/
 
 ## デバイス & システム (100xx)
 
-| Code | 説明 |
+| コード | 説明 |
 |---:|---|
 | `10001` | パスワードが弱すぎます |
 | `10002` | Token の有効期限が切れています |
@@ -43,13 +45,13 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_api_error_codes/
 
 ## HTTP ステータスコード
 
-| HTTP Status | 説明 |
+| HTTP ステータス | 説明 |
 |---:|---|
 | `200` | リクエスト成功 |
 | `401` | 未認証、または Token が無効です |
 | `404` | エンドポイントが見つかりません |
 | `405` | 許可されていないメソッドです |
-| `500` | サーバー内部エラー |
+| `500` | サーバ内部エラー |
 
 ## 認証エラー
 
@@ -66,7 +68,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_api_error_codes/
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

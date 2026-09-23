@@ -33,14 +33,9 @@ This is a **supervisory setpoint recommender**, not a safety-certified control s
 
 ## What this solution does
 
-A central HVAC plant in an office, a mall or a factory usually runs to a fixed schedule: the same setpoint
-whether the floor is full or empty. This solution puts a gateway beside the plant that reads the HVAC
-controller and an energy meter into **one point model**, learns a setpoint recommendation from that
-building's own historical data, and writes it back to the controller; a write counts as applied only after the
-value has been read back from the field and matches what was sent.
+A central HVAC plant in an office, a mall or a factory usually runs to a fixed schedule: the same setpoint whether the floor is full or empty. This solution puts a gateway beside the plant that reads the HVAC controller and an energy meter into **one point model**, learns a setpoint recommendation from that building's own historical data, and writes it back to the controller; a write counts as applied only after the value has been read back from the field and matches what was sent.
 
-It is used on central plant: chillers, air handlers, and the controllers in front of them. It is not for
-split-unit air conditioners, and it is not on the safety loop.
+It is used on central plant: chillers, air handlers, and the controllers in front of them. It is not for split-unit air conditioners, and it is not on the safety loop.
 
 - Selection and deployment: [reference design page](https://www.seeed.cc/solutions/reference-designs/smart_hvac_control)
 - Source repository: not published. `github.com/Seeed-Solution/Solution_HVAC_SmartControl` is not publicly accessible.
@@ -88,12 +83,7 @@ split-unit air conditioners, and it is not on the safety loop.
 
 ### What the console shows
 
-The running console renders the point table with per-point quality, the access page with each source and
-its registered point count, and a command-receipt ledger. The ledger is where the write path is visible:
-each row carries the requested value, the effective value, the actor, the protocol acknowledgement and —
-after the settle delay — the readback result. A write whose register was changed out of band reads
-`mismatched, compensated` with the value that was found, and the compensation command issued by
-`plugin:prediction:rollback` appears as the next row.
+The running console renders the point table with per-point quality, the access page with each source and its registered point count, and a command-receipt ledger. The ledger is where the write path is visible: each row carries the requested value, the effective value, the actor, the protocol acknowledgement and — after the settle delay — the readback result. A write whose register was changed out of band reads `mismatched, compensated` with the value that was found, and the compensation command issued by `plugin:prediction:rollback` appears as the next row.
 
 The access page lists every source with its registered point count; this is the first place wiring shows up as working:
 
@@ -125,44 +115,30 @@ The captures above are connected to the package's own protocol simulators, not t
 
 Three things: a controller you already have, a meter, and one Docker host.
 
-**① The HVAC controller** — whatever is already in front of the plant, as long as it speaks OPC UA, Modbus
-TCP/RTU or BACnet/IP. For a dry run with no plant attached, the package ships an OPC UA simulator on port
-4841.
+**① The HVAC controller** — whatever is already in front of the plant, as long as it speaks OPC UA, Modbus TCP/RTU or BACnet/IP. For a dry run with no plant attached, the package ships an OPC UA simulator on port 4841.
 
-**② The energy meter** — an Eastron SDM630 on the Modbus V2 register map, over Modbus TCP, a Modbus TCP
-gateway, or RS-485. Ten read-only points: three-phase voltage and current, total active power (kW), total
-power factor, frequency, imported active energy (kWh).
+**② The energy meter** — an Eastron SDM630 on the Modbus V2 register map, over Modbus TCP, a Modbus TCP gateway, or RS-485. Ten read-only points: three-phase voltage and current, total active power (kW), total power factor, frequency, imported active energy (kWh).
 
-**③ The gateway host** — the only device you need to choose. The service is a Docker workload on x86-64 or
-arm64, so a Linux machine already on the plant network is a supported target.
+**③ The gateway host** — the only device you need to choose. The service is a Docker workload on x86-64 or arm64, so a Linux machine already on the plant network is a supported target.
 
 | | Gateway | Storage | When to choose it |
 |---|---|---:|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991374.jpg" alt="reComputer R1124-10" width="110" /> | [reComputer R1124-10](https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html)<br/>4 GB RAM, RS-485 / RS-232 / DI / DO on board | 16 GB eMMC | The history lives on a server; the gateway keeps a short local window |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html)<br/>same board, larger eMMC | 32 GB eMMC | Months of operating history stay on the gateway; the training set can be re-imported locally |
 
-The R1100 series carries RS-485 on board, so a meter on RS-485 needs no USB adapter. The **service itself
-needs about 1 GB of disk**; storage decides how much history you can look back on locally without a server.
+The R1100 series carries RS-485 on board, so a meter on RS-485 needs no USB adapter. The **service itself needs about 1 GB of disk**; storage decides how much history you can look back on locally without a server.
 
-Other prerequisites: Docker Engine 20.10 or newer, host ports 8280 and 4841 free, and at least one week of
-historical operation as CSV or Excel with timestamp, setpoint, measured temperature and power consumption
-columns.
+Other prerequisites: Docker Engine 20.10 or newer, host ports 8280 and 4841 free, and at least one week of historical operation as CSV or Excel with timestamp, setpoint, measured temperature and power consumption columns.
 
 ## How to deploy on site
 
 ### 1. Install the hardware: wiring
 
 :::tip[Check the meter's byte and word order first]
-The built-in SDM630 template defaults to big-endian bytes and words, taken from the vendor's published
-default. Read a register with a known physical value and
-compare against the meter's own display. Voltage and frequency that are close but wrong, or imported energy
-that jumps backwards, usually mean a word-order setting error; check word order before wiring.
+The built-in SDM630 template defaults to big-endian bytes and words, taken from the vendor's published default. Read a register with a known physical value and compare against the meter's own display. Voltage and frequency that are close but wrong, or imported energy that jumps backwards, usually mean a word-order setting error; check word order before wiring.
 :::
 
-Put the gateway on the same network as the controller and the meter (or its Modbus TCP gateway). For
-Modbus RTU, match the baud rate, parity and unit id to what the meter is configured for ; a mismatch shows
-only as a timeout, with no error message. Use the **serial-device deployment profile**: the standard
-Docker profile attaches no host serial device, so there is no `/dev/ttyUSB0` inside the container.
+Put the gateway on the same network as the controller and the meter (or its Modbus TCP gateway). For Modbus RTU, match the baud rate, parity and unit id to what the meter is configured for ; a mismatch shows only as a timeout, with no error message. Use the **serial-device deployment profile**: the standard Docker profile attaches no host serial device, so there is no `/dev/ttyUSB0` inside the container.
 
 ### 2. Software: three steps
 
@@ -176,18 +152,14 @@ The per-step form fields and application packages are on the reference design pa
 
 Outline:
 
-1. **Deploy the service** — Docker deployment, either on the machine running the deployment tool or over
-   SSH to a device on the plant network. The form carries the meter transport, the OPC UA endpoint, the
-   safety limits, the control mode and the alarm thresholds.
-2. **Open the console** — create the first administrator and confirm both sources are online with their
-   expected point counts. The access wizard asks for address and poll interval per protocol:
+1. **Deploy the service** — Docker deployment, either on the machine running the deployment tool or over SSH to a device on the plant network. The form carries the meter transport, the OPC UA endpoint, the safety limits, the control mode and the alarm thresholds.
+2. **Open the console** — create the first administrator and confirm both sources are online with their expected point counts. The access wizard asks for address and poll interval per protocol:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/access-wizard-step1-en-7a3d57a8.png" alt="Access wizard step one: choose the protocol, fill in the address and poll interval"/>
 </div>
 
-3. **Commission** — register the meter, run predictions in observe mode, inject faults on purpose, and only
-   then enable writes. Before a batch goes out, confirm on the selection page exactly which points it covers:
+3. **Commission** — register the meter, run predictions in observe mode, inject faults on purpose, and only then enable writes. Before a batch goes out, confirm on the selection page exactly which points it covers:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/batch-select-en-9bd95ba4.png" alt="Batch dispatch selection: the points covered by this batch and their current values"/>
@@ -196,31 +168,21 @@ Outline:
 <!-- TODO image: gateway installed in the plant room next to the unit — needs a field shoot -->
 <!-- TODO image: a physical meter and controller as wired (every capture here is behind a protocol simulator) — needs a field shoot -->
 
-**Leave Control Mode at `observe` and leave Safety Baseline Approved By blank.** While the approver is
-blank the baseline shows as unapproved; entering a name means that engineer signs off the safety limits.
+**Leave Control Mode at `observe` and leave Safety Baseline Approved By blank.** While the approver is blank the baseline shows as unapproved; entering a name means that engineer signs off the safety limits.
 
-The estimate to a running console with points reading is about **60 minutes**. Commissioning takes longer,
-because it includes a full occupancy cycle of observe-mode predictions reviewed by whoever operates the
-plant.
+The estimate to a running console with points reading is about **60 minutes**. Commissioning takes longer, because it includes a full occupancy cycle of observe-mode predictions reviewed by whoever operates the plant.
 
 :::caution[What the published image covers]
-The published `missionpack-knn:v1.6.5` **does not** carry the SDM630 template, the rollback coordinator or
-the alarm envelope. On v1.6.5 the observe-mode substeps still apply; the meter, rollback and alarm substeps
-cannot be completed.
+The published `missionpack-knn:v1.6.5` **does not** carry the SDM630 template, the rollback coordinator or the alarm envelope. On v1.6.5 the observe-mode substeps still apply; the meter, rollback and alarm substeps cannot be completed.
 :::
 
 ## Available interfaces
 
-Everything the deployment exposes sits behind one HTTP port on the gateway host. Nothing leaves the plant
-network unless northbound publishing is turned on.
+Everything the deployment exposes sits behind one HTTP port on the gateway host. Nothing leaves the plant network unless northbound publishing is turned on.
 
-- **Operators** — the browser console on `8280`: point table with per-point quality, meter registration,
-  prediction runs, command receipts, alarm banner.
-- **Monitoring** — `GET /system/runtime-metrics`. With northbound publishing enabled it carries
-  `northbound.spool.queued` and `northbound.spool.dropped`; `queued` back to 0 with `dropped` unchanged is
-  the check the commissioning step asks for.
-- **Your own system** — the same console API surface behind `8280`, plus the health endpoint the deployment
-  waits on at startup.
+- **Operators** — the browser console on `8280`: point table with per-point quality, meter registration, prediction runs, command receipts, alarm banner.
+- **Monitoring** — `GET /system/runtime-metrics`. With northbound publishing enabled it carries `northbound.spool.queued` and `northbound.spool.dropped`; `queued` back to 0 with `dropped` unchanged is the check the commissioning step asks for.
+- **Your own system** — the same console API surface behind `8280`, plus the health endpoint the deployment waits on at startup.
 
 ### Full endpoint list
 
@@ -231,13 +193,9 @@ network unless northbound publishing is turned on.
 | `8280` `/api/v1/health` | Health check; startup allows 30 s | No |
 | `4841` | Built-in OPC UA simulator, for a dry run | No |
 
-**On a command receipt, read the readback column**: `protocol_acknowledged` only means the controller
-accepted the frame. The readback column (`matched`, or `mismatched, compensated` with the value found) is
-what the field actually holds. A compensation issued by the rollback coordinator appears as its own receipt
-immediately after the write it undid, so the audit trail reads in order without joining two tables.
+**On a command receipt, read the readback column**: `protocol_acknowledged` only means the controller accepted the frame. The readback column (`matched`, or `mismatched, compensated` with the value found) is what the field actually holds. A compensation issued by the rollback coordinator appears as its own receipt immediately after the write it undid, so the audit trail reads in order without joining two tables.
 
-Container logs rotate at 10 MB with four backups (`docker logs missionpack_knn`). Export the command audit
-trail, the rollback journal and the alarm history before they age away.
+Container logs rotate at 10 MB with four backups (`docker logs missionpack_knn`). Export the command audit trail, the rollback journal and the alarm history before they age away.
 
 ### Southbound protocol scope
 
@@ -298,14 +256,7 @@ The prediction model is KNN, trained on the building's own operating history (CS
 
 ## Data and asset sources
 
-- **SDM630 register map** — Eastron's published Modbus protocol document (Modbus V2 register map, IEEE-754
-  float32 input registers). Addresses follow that document; the big-endian byte and word order is the
-  vendor default.
-- **Historical operation data** — supplied by the deploying site. Nothing is distributed with the package,
-  and no public dataset is used or required.
-- **Console captures** — original screen captures of the packaged software running against the
-  package's own protocol simulators. The simulator configuration, capture host and checksums are
-  recorded in the package's `gallery/ATTRIBUTION.md`. No third-party asset, brand mark or stock image is
-  included.
-- **Architecture diagram** — drawn from a structured architecture IR; original
-  work, no third-party art.
+- **SDM630 register map** — Eastron's published Modbus protocol document (Modbus V2 register map, IEEE-754 float32 input registers). Addresses follow that document; the big-endian byte and word order is the vendor default.
+- **Historical operation data** — supplied by the deploying site. Nothing is distributed with the package, and no public dataset is used or required.
+- **Console captures** — original screen captures of the packaged software running against the package's own protocol simulators. The simulator configuration, capture host and checksums are recorded in the package's `gallery/ATTRIBUTION.md`. No third-party asset, brand mark or stock image is included.
+- **Architecture diagram** — drawn from a structured architecture IR; original work, no third-party art.

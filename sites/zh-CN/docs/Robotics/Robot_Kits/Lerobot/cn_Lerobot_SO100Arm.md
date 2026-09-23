@@ -152,13 +152,13 @@ Seeed Studio **仅对硬件质量负责**。教程严格按官方文档更新，
 For Ubuntu X86:
   - Ubuntu 22.04
   - CUDA 12+
-  - Python 3.10
+  - Python 3.12
   - Troch 2.6
 
 
 For Jetson Orin:
   - Jetson Jetpack 6.0 和 6.1，暂不支持6.2
-  - Python 3.10
+  - Python 3.12
   - Torch 2.3+
 
 
@@ -248,7 +248,7 @@ conda init --all
 2. 创建并激活一个新的 conda 环境用于 lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
+conda create -y -n lerobot python=3.12 && conda activate lerobot
 ```
 
 3. 克隆 Lerobot 仓库：

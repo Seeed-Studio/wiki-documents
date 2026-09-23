@@ -30,16 +30,9 @@ Not a certified security product and not a life-safety system. The reference fac
 
 ## What this solution does
 
-A camera at a door nobody is standing behind recognises a face, requires a passive
-liveness check to pass, checks the person against the current face library, the schedule
-and the blocklist, and — only if all of that holds — pulses a relay that switches a lock
-running on its own 12/24 V supply. Every decision, allowed and denied alike, is published
-on MQTT and appended to a hash-chained audit log the console can verify.
+A camera at a door nobody is standing behind recognises a face, requires a passive liveness check to pass, checks the person against the current face library, the schedule and the blocklist, and — only if all of that holds — pulses a relay that switches a lock running on its own 12/24 V supply. Every decision, allowed and denied alike, is published on MQTT and appended to a hash-chained audit log the console can verify.
 
-It fits an unmanned or partially staffed shop's staff entrance, stock room or back door;
-a shared office where the roster changes weekly and enrolment has to be self-service; an
-equipment room where the record of who went through matters more than throughput; and a
-site that already has RTSP cameras at the door and does not want to replace them.
+It fits an unmanned or partially staffed shop's staff entrance, stock room or back door; a shared office where the roster changes weekly and enrolment has to be self-service; an equipment room where the record of who went through matters more than throughput; and a site that already has RTSP cameras at the door and does not want to replace them.
 
 - Selection and deployment: [reference design page](https://www.seeed.cc/solutions/reference-designs/unmanned_store_access)
 - Upstream repository: not published; the code is in an internal repository.
@@ -101,10 +94,7 @@ Recognition on a reCamera Pro: the face box carries the matched person id and th
 
 Three device roles at the door, plus one cloud or on-prem host.
 
-**① The camera at the door.** Either the device's own sensor (reCamera Pro or standard
-reCamera) or an existing RTSP camera feeding a separate host. Mount it at roughly face height, framed so one face fills a usable part of the frame
-at the distance people actually stop. Backlit doorways and glass reflections are common
-causes of failed recognition.
+**① The camera at the door.** Either the device's own sensor (reCamera Pro or standard reCamera) or an existing RTSP camera feeding a separate host. Mount it at roughly face height, framed so one face fills a usable part of the frame at the distance people actually stop. Backlit doorways and glass reflections are common causes of failed recognition.
 
 **② The thing that recognises and decides.**
 
@@ -115,17 +105,9 @@ causes of failed recognition.
 | reComputer Industrial J20 | In containers, against an existing RTSP stream | Containers over SSH |
 | reComputer J30 / J40 / R2000 | In containers, against an existing RTSP stream | Containers over SSH |
 
-**③ The relay.** The lock must sit behind a relay or dry contact, on its own 12/24 V
-supply, separate from the compute board's. A lock draws 300 mA to 1 A; a GPIO pin and an
-opto-isolated digital output carry milliamps. Four settings — `active_high`, `pulse_ms`,
-`relay_contact` and `fail_mode` — are configured per installation and have no defaults: a
-fail-safe magnetic lock wired through the normally-open contact stands open permanently,
-and nothing shows it until the door is tested.
+**③ The relay.** The lock must sit behind a relay or dry contact, on its own 12/24 V supply, separate from the compute board's. A lock draws 300 mA to 1 A; a GPIO pin and an opto-isolated digital output carry milliamps. Four settings — `active_high`, `pulse_ms`, `relay_contact` and `fail_mode` — are configured per installation and have no defaults: a fail-safe magnetic lock wired through the normally-open contact stands open permanently, and nothing shows it until the door is tested.
 
-**④ The cloud or on-prem host.** Any amd64 or arm64 Linux box with Docker; no GPU. It runs
-the face library service, the management console and the MQTT broker. It must be reachable
-from every door device, and its clock must be right: devices with no RTC take their time
-correction from its HTTP `Date` header.
+**④ The cloud or on-prem host.** Any amd64 or arm64 Linux box with Docker; no GPU. It runs the face library service, the management console and the MQTT broker. It must be reachable from every door device, and its clock must be right: devices with no RTC take their time correction from its HTTP `Date` header.
 
 ## How to deploy on site
 
@@ -133,20 +115,9 @@ Two parts, and the order matters.
 
 ### One: wire the door — LED, then relay, then lock
 
-Confirm polarity and pulse width on an LED. Confirm the contact clicks on the relay. Only
-then put a lock on it. A fail-safe magnetic lock goes through COM and NC; a fail-secure
-strike through COM and NO. Getting this backwards leaves the door open permanently, so
-`relay_contact` has no default value.
+Confirm polarity and pulse width on an LED. Confirm the contact clicks on the relay. Only then put a lock on it. A fail-safe magnetic lock goes through COM and NC; a fail-secure strike through COM and NO. Getting this backwards leaves the door open permanently, so `relay_contact` has no default value.
 
-**Check that the GPIO pin is free.** One surveyed reCamera Pro had `gpio131` already
-exported and driven by another application. The actuator refuses to start on a pin whose
-current state disagrees with the configured idle state, and will not take a pin over
-unless told to explicitly. On the reCamera 2002 HQ PoE baseboard the 6-pin header carries
-three IO lines — D1 = sysfs 490 (the only one not multiplexed), CLK = 487, SMD = 488 — but
-the header's level polarity and available drive current are not in the vendor documentation,
-so do not wire a lock there before a meter and an LED have confirmed them.
-On the J20 the design spec puts DO1–DO4 at sysfs 463/464/465/462; whether the target image
-exposes them that way or through `Jetson.GPIO` has not been confirmed on hardware.
+**Check that the GPIO pin is free.** One surveyed reCamera Pro had `gpio131` already exported and driven by another application. The actuator refuses to start on a pin whose current state disagrees with the configured idle state, and will not take a pin over unless told to explicitly. On the reCamera 2002 HQ PoE baseboard the 6-pin header carries three IO lines — D1 = sysfs 490 (the only one not multiplexed), CLK = 487, SMD = 488 — but the header's level polarity and available drive current are not in the vendor documentation, so do not wire a lock there before a meter and an LED have confirmed them. On the J20 the design spec puts DO1–DO4 at sysfs 463/464/465/462; whether the target image exposes them that way or through `Jetson.GPIO` has not been confirmed on hardware.
 
 ### Two: bring up the cloud side, then the device side
 
@@ -158,14 +129,9 @@ Full per-preset steps are on the reference design page, where answering a few qu
     </a>
 </div><br />
 
-The cloud side is the face library service, the console and a broker, from the compose
-files in `assets/cloud/`. The console refuses to start with no token configured.
-**A shared token over plain HTTP is not authentication**; terminate TLS on a reverse proxy in front of it. The bundled broker
-configuration is anonymous plaintext and is for testing only; production needs TLS,
-per-device identities and topic ACLs, none of which is in the bundled configuration.
+The cloud side is the face library service, the console and a broker, from the compose files in `assets/cloud/`. The console refuses to start with no token configured. **A shared token over plain HTTP is not authentication**; terminate TLS on a reverse proxy in front of it. The bundled broker configuration is anonymous plaintext and is for testing only; production needs TLS, per-device identities and topic ACLs, none of which is in the bundled configuration.
 
-The device side differs per preset: containers over SSH on the reComputer presets, a
-copy of a daemon on both reCameras.
+The device side differs per preset: containers over SSH on the reComputer presets, a copy of a daemon on both reCameras.
 
 Once the cloud side is up, check on the console's device page that the door device is online, heartbeating, and on the expected face library version:
 
@@ -197,9 +163,7 @@ Before a lock goes on, confirm on the PoE baseboard that the GPIO line can actua
 
 <!-- TODO image: the door itself (camera, relay and lock as installed) — needs a field shoot -->
 
-A plaintext `http://` library URL is permitted on a LAN, but only with an HMAC-SHA256
-signature over the manifest; without a key the device refuses to start. The signature
-protects against tampering on the wire; any leaked device key can be used to forge a library.
+A plaintext `http://` library URL is permitted on a LAN, but only with an HMAC-SHA256 signature over the manifest; without a key the device refuses to start. The signature protects against tampering on the wire; any leaked device key can be used to forge a library.
 
 ## Which interfaces it exposes
 
@@ -239,29 +203,19 @@ The console's three token roles: viewer reads, operator issues `unlock` / `hold_
 }
 ```
 
-Three fields to watch when integrating. **`facedb_version` is `null` before the first
-successful sync**, meaning the device has no library yet (not the same as version 0); the
-denial reason is reported separately as `no_facedb`. **`threshold` is the value in force
-for that decision**, so a threshold change shows up in the event stream. **`clock.valid`** says whether the corrected
-timestamp can be trusted; devices never set their system clock, they only carry an offset. A `null` liveness result means the check did not run; it is treated as a failure and reported as `liveness_unknown`.
+Three fields to watch when integrating. **`facedb_version` is `null` before the first successful sync**, meaning the device has no library yet (not the same as version 0); the denial reason is reported separately as `no_facedb`. **`threshold` is the value in force for that decision**, so a threshold change shows up in the event stream. **`clock.valid`** says whether the corrected timestamp can be trusted; devices never set their system clock, they only carry an offset. A `null` liveness result means the check did not run; it is treated as a failure and reported as `liveness_unknown`.
 
 ### The command gate
 
-A command must carry an exact field set, a UUIDv4 `command_id`, an RFC3339 `issued_at`
-with a timezone, and a TTL within bounds, and it is checked against a per-identity replay
-table. A redelivered command **does not open the door a second time**; the device returns the
-original receipt for the caller to reconcile against. An expired one
-comes back as `TTL_EXPIRED`. An anonymous identity is refused.
+A command must carry an exact field set, a UUIDv4 `command_id`, an RFC3339 `issued_at` with a timezone, and a TTL within bounds, and it is checked against a per-identity replay table. A redelivered command **does not open the door a second time**; the device returns the original receipt for the caller to reconcile against. An expired one comes back as `TTL_EXPIRED`. An anonymous identity is refused.
 
-The `set` topic and the command topic are never retained. A retained unlock replays on
-every reconnect, so the door would open by itself after a power cut.
+The `set` topic and the command topic are never retained. A retained unlock replays on every reconnect, so the door would open by itself after a power cut.
 
 ### Face library distribution
 
 The device polls `current`, compares versions, and fetches files only when the version changed, with chunking and resume over standard `Range`. Every file is SHA-256 checked and the manifest signature verified before an atomic switch; a failure at any step leaves the old version in place. Removing a person produces a new version without them plus a deletion barrier, and any later rollback to a version that still contains them is refused by name.
 
-Every version's manifest carries five licence fields — `license_id`, `use_scope`, `redistributable`,
-`source_revision`, `sha256` — so the licence terms travel with the artefact.
+Every version's manifest carries five licence fields — `license_id`, `use_scope`, `redistributable`, `source_revision`, `sha256` — so the licence terms travel with the artefact.
 
 ## Performance and measured data
 
@@ -274,9 +228,7 @@ The time from a new library version being published to the device running on it.
 | Standard reCamera (SG2002 / CV181x riscv64, firmware 0.2.2) | **p50 491.6 ms, p95 507.8 ms** (n=20) | USB-RNDIS, 2 people, 16.5 KB library. `op:reload` round trip p50 100.0 ms (n=25) |
 | reCamera Pro (RV1126B, Buildroot 2023.02.6) | 62.2 ms (v1), 45.4 ms (v2); up-to-date no-op round 6.2 ms | Ethernet, 1–2 people, under 20 KB library |
 
-**Scaling with library size.** Two scale points on the standard reCamera, one run each:
-402 people / 2.86 MB in 9 801.7 ms, and 1502 people / 10.66 MB in 22 278.7 ms. Activation
-time grows with library size; use these two figures to plan the first sync of a large library.
+**Scaling with library size.** Two scale points on the standard reCamera, one run each: 402 people / 2.86 MB in 9 801.7 ms, and 1502 people / 10.66 MB in 22 278.7 ms. Activation time grows with library size; use these two figures to plan the first sync of a large library.
 
 Reproduce: in the upstream repository `unmanned-store-access`, `evaluation/runs/2026-09-06-recamera-std-p3-r2/results.md` and `evaluation/runs/2026-09-07-recamera-pro-p1/results.md`.
 
@@ -344,15 +296,9 @@ Parameters that change deployment behaviour:
 
 ## Data and asset sources
 
-**Licensing.** The code in the solution package and in the upstream repository is Apache-2.0. **The model weights
-are not.** Face detection and embedding use InsightFace's `buffalo_l`; InsightFace's own
-statement is that the code is MIT with no limitation on commercial use, but that the
-training data — and models trained with that data — are available for non-commercial
-research purposes only. `buffalo_l` is such a model: `license_id: non-commercial`,
-`use_scope: non-commercial`, `redistributable: false`. The solution package does not include the weights, and a commercial deployment must replace the face backbone with a commercially licensed one.
+**Licensing.** The code in the solution package and in the upstream repository is Apache-2.0. **The model weights are not.** Face detection and embedding use InsightFace's `buffalo_l`; InsightFace's own statement is that the code is MIT with no limitation on commercial use, but that the training data — and models trained with that data — are available for non-commercial research purposes only. `buffalo_l` is such a model: `license_id: non-commercial`, `use_scope: non-commercial`, `redistributable: false`. The solution package does not include the weights, and a commercial deployment must replace the face backbone with a commercially licensed one.
 
-The passive liveness model, MiniVision's Silent-Face-Anti-Spoofing, is Apache-2.0:
-`use_scope: commercial`, redistributable, used unmodified.
+The passive liveness model, MiniVision's Silent-Face-Anti-Spoofing, is Apache-2.0: `use_scope: commercial`, redistributable, used unmodified.
 
 - Licence terms: `gallery/ATTRIBUTION.md` in the solution package, and the licensing section of the package description.
 - Registration model-space gap: upstream `docs/user-guide.md` §5.1.

@@ -100,13 +100,13 @@ Seeed Studio is only responsible for the quality of the hardware itself. The tut
 
 - Ubuntu 22.04  
 - CUDA 12+  
-- Python 3.10  
+- Python 3.12
 - Torch 2.6  
 
 **For Jetson Orin:**
 
 - Jetson JetPack 6.0+
-- Python 3.10  
+- Python 3.12
 - Torch 2.6  
 
 **For Raspberry Pi:**
@@ -160,7 +160,7 @@ Copy paste in your shell: `source ~/.bashrc` or for Mac: `source ~/.bash_profile
 ### 3. Create and activate a fresh conda environment for lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 ```
 
 Then activate your conda environment (do this each time you open a shell to use lerobot!):
@@ -208,7 +208,7 @@ Copy paste in your shell: `source ~/.bashrc` or for Mac: `source ~/.bash_profile
 ### 3. Create and activate a fresh conda environment for lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 ```
 
 Then activate your conda environment (do this each time you open a shell to use lerobot!):
