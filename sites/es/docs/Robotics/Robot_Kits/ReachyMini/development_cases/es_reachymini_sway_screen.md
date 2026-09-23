@@ -1,5 +1,5 @@
 ---
-description: Usa el sensor IMU de la pantalla táctil XIAO ESP32-S3 Plus para controlar el robot Reachy Mini inclinando la pantalla: balanceo del cuerpo, rotación de la cabeza y asentimiento.
+description: Usa el sensor IMU de la pantalla táctil XIAO ESP32-S3 Plus para controlar el robot Reachy Mini inclinando la pantalla - balanceo del cuerpo, rotación de la cabeza y asentimiento.
 title: Reachy Mini × Control de Movimiento con Pantalla XIAO
 slug: /reachymini_development_cases_sway_screen
 image: https://files.seeedstudio.com/wiki/reachymini/reachymini_sway_screen_demo.gif
