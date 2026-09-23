@@ -4,7 +4,8 @@ title: Record Settings
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_record_settings
+slug: /recamera_pro_record_settings_legacy
+draft: true
 sku: 10003420
 sidebar_position: 4
 last_update:
@@ -12,8 +13,18 @@ last_update:
   author: yylin
 createdAt: '2026-07-09'
 updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/recamera_pro_record_settings/
+url: https://wiki.seeedstudio.com/recamera_pro_record_settings_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/configure_event_recording.md (https://wiki.seeedstudio.com/recamera_pro_record_settings/), which now serves the original slug /recamera_pro_record_settings. This file is kept for history as a draft (slug /recamera_pro_record_settings_legacy) and is excluded from production builds. Do not link here. -->
+
+## Content Migration Index (Legacy Page)
+
+| Original section | New home |
+| --- | --- |
+| Recording Configuration (AI Inference Trigger, Scheduled, Loop) | [Configure Event Recording](https://wiki.seeedstudio.com/recamera_pro_record_settings/) (this slug) |
+| Recording Configuration (Sound Event Trigger) | [Sound-Triggered Capture](https://wiki.seeedstudio.com/recamera_pro_sound_trigger/) |
+| Recording Configuration (GPIO / Serial / HTTPS Trigger) | [External Trigger over UART](https://wiki.seeedstudio.com/recamera_pro_uart_usage/) |
+| Storage Management, File Preview | [Find Recordings and Storage](https://wiki.seeedstudio.com/recamera_pro_storage/) |
 
 reCamera Pro has built-in rule-triggered video recording. Users can customize rules to set the time for video recording and capturing.
 

@@ -1,0 +1,5 @@
+position: 6 # float position is supported
+label: '6. Reference'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category collapsed by default
+className: recamera_pro_reference
