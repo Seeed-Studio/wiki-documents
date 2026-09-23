@@ -1,6 +1,6 @@
 ---
 title: reCamera Pro GPIO 引脚使用指南
-description: 本文介绍如何在 reCamera Pro 上通过 sysfs 接口导出、配置和使用 GPIO 引脚，并提供了引脚编号计算公式与 Python 代码参考。
+description: 本文介绍如何通过 sysfs 接口在 reCamera Pro 上导出、配置和使用 GPIO 引脚，并提供引脚编号计算公式和 Python 代码参考。
 keywords:
   - reCamera
   - reCamera Pro
@@ -8,48 +8,50 @@ keywords:
   - sysfs
   - Linux
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_gpio_guide
+slug: /recamera_pro_gpio_guide_legacy
+draft: true
 sku: 10003420
 sidebar_position: 5
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
-createdAt: "2026-08-25"
-updatedAt: "2026-08-25"
-url: https://wiki.seeedstudio.com/cn/recamera_pro_gpio_guide/
+createdAt: '2026-08-25'
+updatedAt: '2026-08-26'
+url: https://wiki.seeedstudio.com/cn/recamera_pro_gpio_guide_legacy/
 ---
+<!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：此页面已被 Develop/gpio_pins.md（https://wiki.seeedstudio.com/cn/recamera_pro_gpio_guide/）取代，该文件现在使用原始 slug /recamera_pro_gpio_guide。此文件作为草稿（slug /recamera_pro_gpio_guide_legacy）保留以供历史记录，并从正式构建中排除。请不要链接到此处。 -->
 
 # reCamera Pro GPIO 引脚使用指南
 
-## 简介
+## 介绍
 
-本文介绍如何在 reCamera Pro 上使用 GPIO 引脚。您将学习如何根据引脚编号计算公式确定目标 GPIO，通过 sysfs 接口导出并配置引脚方向与电平，以及使用 Python 脚本控制 GPIO 输出或读取输入电平。
+本文介绍如何在 reCamera Pro 上使用 GPIO 引脚。你将学习如何使用引脚编号计算公式确定目标 GPIO 引脚，通过 sysfs 接口导出并配置引脚方向和电平，以及使用 Python 脚本控制 GPIO 输出或读取输入电平。
 
 :::note
-在reCamera Pro 上，引出的普通GPIO就只有两个，而且输出的电压是12v~21v之间(与DC-IN输入相关)的，并不适用于绝大多数设备，但是我们可以将扩展接口上面的UART或者CAN引脚复用成普通的GPIO，这部分GPIO输出电压是标准的3.3V。
+在 reCamera Pro 上，仅有两个对外暴露的通用 GPIO，它们的输出电压范围为 12V 到 21V（取决于 DC-IN 输入），不适用于大多数设备。不过，你可以将扩展接口上的 UART 或 CAN 引脚重新配置为通用 GPIO，这些引脚输出标准的 3.3V 电平。
 :::
 
-## 查找 GPIO 引脚
+## 定位 GPIO 引脚
 
-首先，请参考下图找到您需要使用的 GPIO 引脚位置：
+首先，请参考下图找到你需要的 GPIO 引脚位置：
 
-![扩展接口图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Expansion_CON.jpg)
-![CAN引脚图](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/recamera_pro_can_gpio.jpg)
+![扩展接口示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-PRO_Expansion_CON.jpg)
+![CAN 引脚示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/recamera_pro_can_gpio.jpg)
 
 ## 引脚编号计算公式
 
-GPIO 引脚编号的计算公式如下：
+GPIO 引脚编号通过以下公式计算：
 
 ```
-GPIO bank × 32 + bank内偏移
+GPIO bank × 32 + offset within bank
 ```
 
-其中，bank 内偏移的计算方式为：`组内序号 × 8 + 引脚序号`。
+在 bank 内的偏移量计算方式为：`组号 × 8 + 组内引脚号`。
 
 例如，对于 **GPIO5_A2**：
 
-- bank 编号为 5
-- 组内偏移为 `0 × 8 + 2 = 2`
+- Bank 编号为 5
+- 在 bank 内的偏移量为 `0 × 8 + 2 = 2`
 
 因此，引脚编号为：
 
@@ -57,24 +59,24 @@ GPIO bank × 32 + bank内偏移
 5 × 32 + 2 = 162
 ```
 
-bank 字母与数字的对应关系如下：
+bank 字母到数字的映射关系如下：
 
 | 字母 | 数字 |
-| --- | --- |
-| A | 0 |
-| B | 1 |
-| C | 2 |
-| D | 3 |
-| ... | ... |
+| ------ | ------ |
+| A      | 0      |
+| B      | 1      |
+| C      | 2      |
+| D      | 3      |
+| ...    | ...    |
 
 ## 导出 GPIO 引脚
 
-首先，您需要进入设备的终端界面。可以通过以下两种方式：
+首先，你需要访问设备的终端。可以通过以下任一方式实现：
 
-1. 通过 SSH 连接设备
-2. 通过 WebUI 上的终端功能
+1. 通过 SSH 连接到设备
+2. 使用 WebUI 中的终端功能
 
-### 进入 GPIO sysfs 接口
+### 进入 GPIO sysfs 接口目录
 
 ```bash
 cd /sys/class/gpio
@@ -110,13 +112,13 @@ echo 1 > value
 
 ## Python 代码参考
 
-以下 Python 脚本演示了如何控制 GPIO 引脚输出高低电平：
+下面的 Python 脚本演示了如何控制 GPIO 引脚输出高低电平：
 
 ```python
 import os
 import time
 
-GPIO = 162  # 刚才计算的 GPIO 引脚号
+GPIO = 162  # The GPIO pin number calculated earlier
 
 GPIO_PATH = f"/sys/class/gpio/gpio{GPIO}"
 
@@ -124,23 +126,23 @@ def write_file(path, value):
     with open(path, "w") as f:
         f.write(str(value))
 
-# 1. 导出 GPIO
+# 1. Export the GPIO
 if not os.path.exists(GPIO_PATH):
     write_file("/sys/class/gpio/export", GPIO)
-    time.sleep(0.1)  # 等待导出完成
+    time.sleep(0.1)  # Wait for export to complete
 
-# 2. 设置为输出模式（输入模式则为 'in'）
+# 2. Set to output mode (use 'in' for input mode)
 write_file(f"{GPIO_PATH}/direction", "out")
 
-# 3. 拉高电平
+# 3. Set high level
 write_file(f"{GPIO_PATH}/value", 1)
 time.sleep(1)
 
-# 4. 拉低电平
+# 4. Set low level
 write_file(f"{GPIO_PATH}/value", 0)
 time.sleep(1)
 
-# 如果需要读取引脚电平，可以使用以下代码：
+# To read the pin level, you can use the following code:
 # with open(f"/sys/class/gpio/gpio{GPIO}/value", "r") as f:
 #     value = f.read().strip()
 #     print(value)
@@ -152,7 +154,7 @@ time.sleep(1)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持选项，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

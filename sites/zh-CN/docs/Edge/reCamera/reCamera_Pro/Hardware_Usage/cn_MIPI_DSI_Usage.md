@@ -6,27 +6,29 @@ keywords:
   - reCamera Pro
   - MIPI-DSI Screen
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_mipi_dsi_screen_usage
+slug: /recamera_pro_mipi_dsi_screen_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_mipi_dsi_screen_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/cn/recamera_pro_mipi_dsi_screen_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/mipi_dsi_display.md (https://wiki.seeedstudio.com/cn/recamera_pro_mipi_dsi_screen_usage/), which now serves the original slug /recamera_pro_mipi_dsi_screen_usage. This file is kept for history as a draft (slug /recamera_pro_mipi_dsi_screen_usage_legacy) and is excluded from production builds. Do not link here. -->
 
 # 在 reCamera Pro 上使用 MIPI DSI 接口
 
-设备背面配有一个 MIPI DSI 接口，用于连接 MIPI 屏幕。
+设备背面有一个 MIPI DSI 接口，用于连接 MIPI 屏幕。
 
 ## 连接 MIPI 屏幕
 
 打开底板的后盖，找到如下图所示的 ***22PIN MIPI DSI*** 接口。
 
 :::note
-在插入 MIPI 屏幕之前，请务必先关闭设备电源！！！
+在插入 MIPI 屏幕前，请务必先关闭设备电源！！！
 :::
 
 ![BASE_BOARD_PIN](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)

@@ -1,5 +1,5 @@
 ---
-description: Convierte modelos ONNX al formato RKNN para reCamera Pro y crea un modelo cuantizado INT8 con un conjunto de datos de calibración representativo.
+description: Convierte modelos ONNX al formato RKNN para reCamera Pro y crea un modelo cuantizado en INT8 con un conjunto de datos de calibración representativo.
 title: Convertir y Cuantizar Modelos
 keywords:
   - reCamera
@@ -9,29 +9,31 @@ keywords:
   - RV1126B
   - model quantization
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_rknn_model_conversion
+slug: /recamera_pro_rknn_model_conversion_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 08/28/2026
+  date: 09/03/2026
   author: yylin
 createdAt: '2026-08-28'
-updatedAt: '2026-08-28'
-url: https://wiki.seeedstudio.com/es/recamera_pro_rknn_model_conversion/
+updatedAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/es/recamera_pro_rknn_model_conversion_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Use_Your_Own_Model/rknn_toolkit2_conversion.md (https://wiki.seeedstudio.com/es/recamera_pro_rknn_model_conversion/), which now serves the original slug /recamera_pro_rknn_model_conversion. This file is kept for history as a draft (slug /recamera_pro_rknn_model_conversion_legacy) and is excluded from production builds. Do not link here. -->
 
 # Convertir y Cuantizar Modelos para reCamera Pro con RKNN-Toolkit2
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/Model_Conversion/20260903-190057.png" alt="Workflow of converting and quantizing ONNX models to RKNN format for reCamera Pro" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/Model_Conversion/20260903-190057.png" alt="Flujo de trabajo para convertir y cuantizar modelos ONNX al formato RKNN para reCamera Pro" /></div>
 
 ## Introducción
 
 reCamera Pro utiliza el Rockchip RV1126B. Para ejecutar un modelo de red neuronal personalizado en su NPU, exporta el modelo a ONNX y compílalo a un modelo RKNN para **RV1126B** en un PC Linux x86_64 o en un entorno WSL.
 
-Esta guía crea un modelo base FP16 y un modelo cuantizado INT8. La conversión se realiza en el PC host; solo se necesita una reCamera Pro conectada para la validación final y el despliegue.
+Esta guía crea un modelo base FP16 y un modelo cuantizado en INT8. La conversión se realiza en el PC host; solo se necesita una reCamera Pro conectada para la validación final y el despliegue.
 
 :::note Antes de comenzar
-Esta guía utiliza **RKNN-Toolkit2 2.3.2**, Python 3.10 y `target_platform='rv1126b'`. Mantén la versión del Toolkit alineada con el RKNN Runtime suministrado por el firmware de reCamera Pro. No utilices instrucciones destinadas a un producto reCamera diferente o a otro SoC de Rockchip.
+Esta guía utiliza **RKNN-Toolkit2 2.3.2**, Python 3.10 y `target_platform='rv1126b'`. Mantén la versión del Toolkit alineada con el RKNN Runtime suministrado por el firmware de reCamera Pro. No utilices instrucciones destinadas a un producto reCamera o SoC Rockchip diferente.
 :::
 
 ---
@@ -53,7 +55,7 @@ La versión de Python se puede cambiar. RKNN-Toolkit2 actualmente admite Python 
 Antes de la conversión, registra el origen y la licencia del modelo, el comando de exportación, el checksum, el layout de entrada, el orden de color, la política de cambio de tamaño, la normalización y el posprocesamiento. Este es el contrato del modelo que tu aplicación de reCamera Pro debe reproducir.
 
 :::tip Flujo de trabajo recomendado
-Genera siempre primero el modelo FP16. Es la referencia para comprobar el grafo y el preprocesamiento antes de investigar la precisión o el rendimiento de INT8.
+Genera siempre primero el modelo FP16. Es la referencia para comprobar el grafo y el preprocesamiento antes de investigar la precisión o el rendimiento en INT8.
 :::
 
 ---
@@ -176,11 +178,11 @@ yolo export model=runs/detect/train/weights/best.pt format=rknn name=rv1126b img
 ```
 
 :::caution Se requieren datos de calibración para INT8
-`data` debe apuntar a un YAML de conjunto de datos YOLO válido cuyas rutas de imagen sean accesibles desde el host. Utiliza imágenes representativas del escenario de despliegue de reCamera Pro y conserva imágenes separadas reservadas para la evaluación de precisión. Ultralytics no convierte una exportación exitosa en una garantía de precisión de la tarea o rendimiento del dispositivo.
+`data` debe apuntar a un YAML de conjunto de datos YOLO válido cuyas rutas de imagen sean accesibles desde el host. Utiliza imágenes representativas del escenario de despliegue de reCamera Pro y conserva imágenes separadas reservadas para la evaluación de precisión. Ultralytics no convierte una exportación correcta en una garantía de precisión de la tarea o rendimiento del dispositivo.
 :::
 
 :::tip Exportación directa frente al flujo de trabajo manual
-Utiliza esta ruta para una exportación rápida de Ultralytics YOLO. Utiliza el flujo de trabajo ONNX que aparece a continuación cuando tu modelo no es un modelo de Ultralytics, cuando necesitas control explícito sobre los ajustes de Toolkit2 o cuando necesitas diagnosticar el grafo ONNX exportado.
+Utiliza esta ruta para una exportación rápida de Ultralytics YOLO. Utiliza el flujo de trabajo ONNX que aparece a continuación cuando tu modelo no es un modelo Ultralytics, cuando necesitas control explícito sobre los ajustes de Toolkit2 o cuando necesitas diagnosticar el grafo ONNX exportado.
 :::
 
 ---
@@ -228,15 +230,15 @@ python convert_onnx_to_rknn.py
 sha256sum model-fp16-rv1126b.rknn
 ```
 
-Si el toolkit informa de un operador no compatible, una entrada dinámica o un grafo no válido, corrige o vuelve a exportar el modelo ONNX. No elimines operadores solo para completar la compilación.
+Si el toolkit informa de un operador no compatible, entrada dinámica o grafo no válido, corrige o vuelve a exportar el modelo ONNX. No elimines operadores solo para que la compilación se complete.
 
 ---
 
 ## 6. Preparar un Conjunto de Datos de Calibración INT8
 
-Las imágenes de calibración INT8 deben parecerse a las entradas de despliegue. Como punto de partida práctico, utiliza unas 100--500 imágenes y cubre la iluminación esperada, fondos, tamaños de objetos, puntos de vista, desenfoque por movimiento, ruido de la cámara y casos de fallo importantes. Mantén las imágenes de calibración separadas de las imágenes de evaluación de precisión. Si el conjunto de calibración es demasiado pequeño, el modelo INT8 puede producir resultados que difieran del modelo ONNX original.
+Las imágenes de calibración INT8 deben parecerse a las entradas de despliegue. Como punto de partida práctico, utiliza unas 100--500 imágenes y cubre la iluminación esperada, fondos, tamaños de objeto, puntos de vista, desenfoque por movimiento, ruido de la cámara y casos de fallo importantes. Mantén las imágenes de calibración separadas de las imágenes de evaluación de precisión. Si el conjunto de calibración es demasiado pequeño, el modelo INT8 puede producir resultados que difieran del modelo ONNX original.
 
-La lista tiene una ruta de imagen por línea; las entradas PNG, JPEG, BMP y NPY se utilizan habitualmente.
+La lista tiene una ruta de imagen por línea; las entradas PNG, JPEG, BMP y NPY se usan habitualmente.
 
 ```bash
 find calibration/images -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) \
@@ -247,14 +249,14 @@ head -n 3 calibration/dataset.txt
 ```
 
 :::caution Mantén el preprocesamiento coherente
-Los datos de calibración deben utilizar el mismo orden de canales, la misma política de cambio de tamaño y la misma convención numérica de entrada que la inferencia. Imágenes no representativas, errores RGB/BGR o un preprocesamiento no coincidente pueden causar una gran caída de precisión en INT8.
+Los datos de calibración deben usar el mismo orden de canales, la misma política de cambio de tamaño y la misma convención de entrada numérica que la inferencia. Imágenes no representativas, errores RGB/BGR o un preprocesamiento no coincidente pueden causar una gran caída de precisión en INT8.
 :::
 
 ---
 
-## 7. Construir el Modelo RKNN INT8
+## 7. Compilar el modelo RKNN INT8
 
-Copia el script FP16 a `convert_onnx_to_rknn_int8.py`, luego sustituye el nombre del modelo y el bloque de compilación por:
+Copia el script FP16 a `convert_onnx_to_rknn_int8.py`, luego reemplaza el nombre del modelo y el bloque de compilación con:
 
 ```python
 RKNN_MODEL = 'model-int8-rv1126b.rknn'
@@ -278,30 +280,30 @@ La configuración INT8 predeterminada suele ser una buena primera prueba. Solo e
 
 ## 8. Validar antes del despliegue
 
-Un `build()` y `export_rknn()` satisfactorios confirman que RKNN-Toolkit2 compiló el grafo para RV1126B. **No** demuestran por sí solos la precisión de la tarea, el postprocesamiento correcto ni la latencia en el dispositivo.
+Una ejecución correcta de `build()` y `export_rknn()` confirma que RKNN-Toolkit2 compiló el grafo para RV1126B. Esto **no** demuestra por sí mismo la precisión de la tarea, el postprocesamiento correcto ni la latencia en el dispositivo.
 
-1. Ejecuta el modelo ONNX original y la configuración RKNN FP16 en muestras reservadas; compara los resultados de la tarea decodificados, no solo los tensores en bruto.
-2. Compara los resultados FP16 e INT8 en esas mismas muestras e investiga cualquier regresión inaceptable.
-3. En reCamera Pro, carga el `.rknn` exportado con el Runtime de RKNN que coincida con el firmware. Consulta los atributos de los tensores y verifica el tipo de entrada, el diseño, el tamaño, el preprocesamiento y el postprocesamiento.
+1. Ejecuta el modelo ONNX original y la configuración RKNN FP16 sobre muestras reservadas; compara los resultados de la tarea decodificados, no solo los tensores en bruto.
+2. Compara los resultados FP16 e INT8 sobre esas mismas muestras e investiga cualquier regresión inaceptable.
+3. En reCamera Pro, carga el `.rknn` exportado con el RKNN Runtime que coincida con el firmware. Consulta los atributos de los tensores y verifica tipo de entrada, disposición, tamaño, preprocesamiento y postprocesamiento.
 4. Mide la latencia tras el calentamiento y el comportamiento sostenido en el dispositivo.
 
-:::note La validación en el host tiene límites
+:::note La validación en host tiene límites
 El simulador RKNN del host y la NPU RV1126B son entornos de ejecución diferentes. La comparación en el host verifica la conversión y el preprocesamiento; la aceptación final requiere probar el `.rknn` exportado en reCamera Pro.
 :::
 
 ---
 
-## 9. Solución de problemas
+## 9. Resolución de problemas
 
 | Síntoma | Verificar primero |
 | --- | --- |
-| `load_onnx()` falla | Valida ONNX, el opset del exportador, el nombre de entrada, la forma estática y los archivos de datos externos. |
+| `load_onnx()` falla | Valida el ONNX, el opset del exportador, el nombre de entrada, la forma estática y los archivos de datos externos. |
 | Operador no compatible | Vuelve a exportar o usa una operación compatible semánticamente equivalente. |
 | La compilación INT8 falla | Verifica todas las rutas del conjunto de datos, el número de entradas, el dtype/forma y la legibilidad de las imágenes. |
-| La precisión INT8 es deficiente | Comprueba RGB/BGR, la política de cambio de tamaño, mean/std, la cobertura de calibración y el postprocesamiento. |
+| La precisión INT8 es deficiente | Revisa RGB/BGR, la política de cambio de tamaño, mean/std, la cobertura de calibración y el postprocesamiento. |
 | Funciona en el host pero falla en el dispositivo | Confirma `rv1126b`, el checksum del modelo, la alineación Toolkit/Runtime 2.3.2 y los atributos de los tensores. |
 | La inferencia en el dispositivo es lenta | Mide después del calentamiento; revisa el preprocesamiento y el postprocesamiento, así como la ejecución en la NPU. |
 
 ## 10. Próximos pasos
 
-Conserva la fuente ONNX, el script de conversión, el checksum de la lista de calibración, el checksum del `.rknn` y el contrato de preprocesamiento/postprocesamiento junto con el modelo exportado. A continuación, integra el modelo con la API de C de RKNN Runtime de reCamera Pro y pruébalo en el dispositivo.
+Conserva la fuente ONNX, el script de conversión, el checksum de la lista de calibración, el checksum del `.rknn` y el contrato de preprocesamiento/postprocesamiento junto con el modelo exportado. A continuación, integra el modelo con la API C de RKNN Runtime de reCamera Pro y pruébalo en el dispositivo.

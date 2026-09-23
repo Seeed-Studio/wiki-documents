@@ -6,21 +6,23 @@ keywords:
   - reCamera Pro
   - Speaker
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_speaker_usage
+slug: /recamera_pro_speaker_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 3
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_speaker_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/ja/recamera_pro_speaker_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/play_audio_volume.md (https://wiki.seeedstudio.com/ja/recamera_pro_speaker_usage/), which now serves the original slug /recamera_pro_speaker_usage. This file is kept for history as a draft (slug /recamera_pro_speaker_usage_legacy) and is excluded from production builds. Do not link here. -->
 
 # reCamera Pro スピーカーの使用方法
 
-- スピーカーは 8Ω / 1W のモデルで、オンボードの NS4150B クラス D オーディオパワーアンプによって駆動されます。
-- デバイスはスピーカー出力インターフェースを提供します。ユーザーはパワーアンプを個別に設定する必要はなく、Linux ALSA ツールを使用してオーディオ再生チャネルを直接設定できます。
+- スピーカーは 8Ω / 1W モデルで、オンボードの NS4150B クラス D オーディオパワーアンプによって駆動されます。
+- デバイスにはスピーカー出力インターフェースが用意されています。ユーザーはパワーアンプを個別に設定する必要はなく、Linux ALSA ツールを使用してオーディオ再生チャネルを直接設定できます。
 
 ## オーディオデバイスの確認
 
@@ -83,7 +85,7 @@ amixer set 'DAC Digital' 50%
 aplay /sdcard/audio.wav3
 ```
 
-オーディオファイルが MP3 形式の場合は、まず以下のコマンドで WAV 形式に変換し、その後上記の方法で再生してください：
+オーディオファイルが MP3 形式の場合は、まず以下のコマンドを使用して WAV 形式に変換し、その後上記の方法で再生してください：
 
 ```bash
 ffmpeg -i test.mp3 test.wav

@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_quick_start
+slug: /recamera_pro_api_quick_start_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -14,18 +15,19 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_api_quick_start/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_api_quick_start_legacy/
 ---
+<!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：本页面已被 Build_Your_App/first_api_call.md（https://wiki.seeedstudio.com/cn/recamera_pro_api_quick_start/）取代，该页面现在使用原始 slug /recamera_pro_api_quick_start。此文件作为草稿（slug /recamera_pro_api_quick_start_legacy）保留以供历史记录，并从正式构建中排除。请不要链接到此处。 -->
 
 # 快速入门
 
-本页将引导你从零开始完成登录并调用你的第一个 API。
+本页将指导你从零开始完成登录并调用你的第一个 API。
 
-## 前置条件
+## 前提条件
 
 * 设备已上电并连接到你的网络
-* 你已知道设备的 IP 地址（本指南以 `192.168.7.200` 为示例）
-* 你已知道登录用户名和密码（默认用户名为 `admin`）
+* 你知道设备的 IP 地址（本指南以 `192.168.7.200` 为示例）
+* 你知道登录用户名和密码（默认用户名为 `admin`）
 
 ## 步骤 1：验证设备可访问性
 
@@ -39,7 +41,7 @@ https://192.168.7.200
 
 ## 步骤 2：登录以获取 Token
 
-登录接口不需要认证。向设备发送登录请求：
+登录端点不需要认证。向设备发送登录请求：
 
 ```text
 POST https://192.168.7.200/cgi-bin/entry.cgi/system/login
@@ -56,7 +58,7 @@ Content-Type: application/json
 ```
 
 :::note
-登录密码以明文传输。如果启用了 HTTPS，密码在传输过程中会由 TLS 进行保护。
+登录密码以明文传输。如果启用了 HTTPS，密码在传输过程中会由 TLS 保护。
 :::
 
 成功后，响应为：
@@ -120,7 +122,7 @@ Token 默认有效期为 24 小时（`Max-Age=86400`）。过期后需要重新�
 
 * 参见 [Authentication](https://wiki.seeedstudio.com/cn/recamera_pro_api_authentication) 获取完整的登录与修改密码参考
 * 参见 [Common Conventions](https://wiki.seeedstudio.com/cn/recamera_pro_api_common_conventions) 了解响应格式和字段命名规则
-* 参见 [API Reference](https://wiki.seeedstudio.com/cn/recamera_pro_api_reference) 按功能查看各接口说明
+* 参见 [API Reference](https://wiki.seeedstudio.com/cn/recamera_pro_api_reference) 查看按功能组织的端点说明
 
 ## 技术支持与产品讨论
 
