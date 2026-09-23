@@ -30,16 +30,9 @@ Não é um produto de segurança certificado nem um sistema de segurança de vid
 
 ## O que esta solução faz
 
-Uma câmera em uma porta atrás da qual não há ninguém reconhece um rosto, exige que uma verificação de
-prova de vida passiva seja aprovada, verifica a pessoa em relação à biblioteca facial atual, ao cronograma
-e à lista de bloqueio e — somente se tudo isso for atendido — aciona um pulso em um relé que comuta uma fechadura
-alimentada por sua própria fonte de 12/24 V. Cada decisão, permitida e negada, é publicada
-em MQTT e anexada a um log de auditoria encadeado por hash que o console pode verificar.
+Uma câmera em uma porta atrás da qual não há ninguém reconhece um rosto, exige que uma verificação de prova de vida passiva seja aprovada, verifica a pessoa em relação à biblioteca facial atual, ao cronograma e à lista de bloqueio e — somente se tudo isso for atendido — aciona um pulso em um relé que comuta uma fechadura alimentada por sua própria fonte de 12/24 V. Cada decisão, permitida e negada, é publicada em MQTT e anexada a um log de auditoria encadeado por hash que o console pode verificar.
 
-Ela se encaixa na entrada de funcionários, no estoque ou na porta dos fundos de uma loja não tripulada ou parcialmente atendida;
-em um escritório compartilhado onde a escala muda semanalmente e o cadastro precisa ser autoatendido; em uma
-sala de equipamentos onde o registro de quem passou importa mais do que a vazão; e em um
-local que já tenha câmeras RTSP na porta e não queira substituí-las.
+Ela se encaixa na entrada de funcionários, no estoque ou na porta dos fundos de uma loja não tripulada ou parcialmente atendida; em um escritório compartilhado onde a escala muda semanalmente e o cadastro precisa ser autoatendido; em uma sala de equipamentos onde o registro de quem passou importa mais do que a vazão; e em um local que já tenha câmeras RTSP na porta e não queira substituí-las.
 
 - Seleção e implantação: [página do projeto de referência](https://www.seeed.cc/solutions/reference-designs/unmanned_store_access)
 - Repositório upstream: não publicado; o código está em um repositório interno.
@@ -101,10 +94,7 @@ Reconhecimento em uma reCamera Pro: a caixa do rosto carrega o ID da pessoa corr
 
 Três funções de dispositivo na porta, mais um host em nuvem ou on-prem.
 
-**① A câmera na porta.** Pode ser o próprio sensor do dispositivo (reCamera Pro ou reCamera
-padrão) ou uma câmera RTSP existente alimentando um host separado. Monte-a aproximadamente na altura do rosto, enquadrada de forma que um rosto preencha uma parte utilizável do quadro
-na distância em que as pessoas realmente param. Portas contra a luz e reflexos em vidro são causas
-comuns de falha de reconhecimento.
+**① A câmera na porta.** Pode ser o próprio sensor do dispositivo (reCamera Pro ou reCamera padrão) ou uma câmera RTSP existente alimentando um host separado. Monte-a aproximadamente na altura do rosto, enquadrada de forma que um rosto preencha uma parte utilizável do quadro na distância em que as pessoas realmente param. Portas contra a luz e reflexos em vidro são causas comuns de falha de reconhecimento.
 
 **② O elemento que reconhece e decide.**
 
@@ -115,17 +105,9 @@ comuns de falha de reconhecimento.
 | reComputer Industrial J20 | Em containers, a partir de um stream RTSP existente | Containers via SSH |
 | reComputer J30 / J40 / R2000 | Em containers, a partir de um stream RTSP existente | Containers via SSH |
 
-**③ O relé.** A fechadura deve ficar atrás de um relé ou contato seco, em sua própria fonte de
-12/24 V, separada da placa de computação. Uma fechadura consome de 300 mA a 1 A; um pino GPIO e uma
-saída digital opto-isolada conduzem miliamperes. Quatro configurações — `active_high`, `pulse_ms`,
-`relay_contact` e `fail_mode` — são definidas por instalação e não têm valores padrão: uma
-fechadura magnética fail-safe ligada através do contato normalmente aberto fica permanentemente aberta,
-e nada mostra isso até que a porta seja testada.
+**③ O relé.** A fechadura deve ficar atrás de um relé ou contato seco, em sua própria fonte de 12/24 V, separada da placa de computação. Uma fechadura consome de 300 mA a 1 A; um pino GPIO e uma saída digital opto-isolada conduzem miliamperes. Quatro configurações — `active_high`, `pulse_ms`, `relay_contact` e `fail_mode` — são definidas por instalação e não têm valores padrão: uma fechadura magnética fail-safe ligada através do contato normalmente aberto fica permanentemente aberta, e nada mostra isso até que a porta seja testada.
 
-**④ O host em nuvem ou on-prem.** Qualquer máquina Linux amd64 ou arm64 com Docker; sem GPU. Ela executa
-o serviço de biblioteca facial, o console de gerenciamento e o broker MQTT. Ela deve ser alcançável
-por todos os dispositivos de porta, e seu relógio deve estar correto: dispositivos sem RTC obtêm a correção de horário
-do cabeçalho HTTP `Date`.
+**④ O host em nuvem ou on-prem.** Qualquer máquina Linux amd64 ou arm64 com Docker; sem GPU. Ela executa o serviço de biblioteca facial, o console de gerenciamento e o broker MQTT. Ela deve ser alcançável por todos os dispositivos de porta, e seu relógio deve estar correto: dispositivos sem RTC obtêm a correção de horário do cabeçalho HTTP `Date`.
 
 ## Como implantar no local
 
@@ -133,20 +115,9 @@ Duas partes, e a ordem importa.
 
 ### Um: faça a fiação da porta — LED, depois relé, depois fechadura
 
-Confirme polaridade e largura de pulso em um LED. Confirme que o contato aciona no relé. Só
-então coloque uma fechadura nele. Uma fechadura magnética fail-safe passa por COM e NC; uma
-fechadura fail-secure passa por COM e NO. Inverter isso deixa a porta permanentemente aberta, por isso
-`relay_contact` não tem valor padrão.
+Confirme polaridade e largura de pulso em um LED. Confirme que o contato aciona no relé. Só então coloque uma fechadura nele. Uma fechadura magnética fail-safe passa por COM e NC; uma fechadura fail-secure passa por COM e NO. Inverter isso deixa a porta permanentemente aberta, por isso `relay_contact` não tem valor padrão.
 
-**Verifique se o pino GPIO está livre.** Uma reCamera Pro pesquisada tinha o `gpio131` já
-exportado e acionado por outro aplicativo. O atuador se recusa a iniciar em um pino cujo
-estado atual discorde do estado inativo configurado e não assumirá o controle de um pino
-a menos que seja instruído explicitamente. Na baseboard reCamera 2002 HQ PoE, o conector de 6 pinos carrega
-três linhas de IO — D1 = sysfs 490 (a única que não é multiplexada), CLK = 487, SMD = 488 — mas
-a polaridade de nível do conector e a corrente de acionamento disponível não estão na documentação do fornecedor,
-portanto não conecte uma fechadura ali antes que um multímetro e um LED as tenham confirmado.
-No J20, a especificação de projeto coloca DO1–DO4 em sysfs 463/464/465/462; se a imagem de destino
-os expõe dessa forma ou via `Jetson.GPIO` ainda não foi confirmado em hardware.
+**Verifique se o pino GPIO está livre.** Uma reCamera Pro pesquisada tinha o `gpio131` já exportado e acionado por outro aplicativo. O atuador se recusa a iniciar em um pino cujo estado atual discorde do estado inativo configurado e não assumirá o controle de um pino a menos que seja instruído explicitamente. Na baseboard reCamera 2002 HQ PoE, o conector de 6 pinos carrega três linhas de IO — D1 = sysfs 490 (a única que não é multiplexada), CLK = 487, SMD = 488 — mas a polaridade de nível do conector e a corrente de acionamento disponível não estão na documentação do fornecedor, portanto não conecte uma fechadura ali antes que um multímetro e um LED as tenham confirmado. No J20, a especificação de projeto coloca DO1–DO4 em sysfs 463/464/465/462; se a imagem de destino os expõe dessa forma ou via `Jetson.GPIO` ainda não foi confirmado em hardware.
 
 ### Dois: suba primeiro o lado em nuvem, depois o lado do dispositivo
 
@@ -158,14 +129,9 @@ Etapas completas por predefinição estão na página do projeto de referência,
     </a>
 </div><br />
 
-O lado em nuvem é o serviço de biblioteca facial, o console e um broker, a partir dos arquivos
-compose em `assets/cloud/`. O console se recusa a iniciar sem um token configurado.
-**Um token compartilhado sobre HTTP simples não é autenticação**; termine o TLS em um proxy reverso à sua frente. A configuração do broker
-incluída é texto simples anônimo e serve apenas para testes; produção precisa de TLS,
-identidades por dispositivo e ACLs de tópico, nada disso está na configuração incluída.
+O lado em nuvem é o serviço de biblioteca facial, o console e um broker, a partir dos arquivos compose em `assets/cloud/`. O console se recusa a iniciar sem um token configurado. **Um token compartilhado sobre HTTP simples não é autenticação**; termine o TLS em um proxy reverso à sua frente. A configuração do broker incluída é texto simples anônimo e serve apenas para testes; produção precisa de TLS, identidades por dispositivo e ACLs de tópico, nada disso está na configuração incluída.
 
-O lado do dispositivo difere por predefinição: containers via SSH nos presets reComputer e
-uma cópia de um daemon em ambas as reCameras.
+O lado do dispositivo difere por predefinição: containers via SSH nos presets reComputer e uma cópia de um daemon em ambas as reCameras.
 
 Quando o lado em nuvem estiver ativo, verifique na página de dispositivos do console se o dispositivo da porta está online, enviando pulsos de vida e na versão esperada da biblioteca de rostos:
 
@@ -195,11 +161,9 @@ Antes de instalar uma fechadura, confirme na placa base PoE que a linha GPIO pod
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/gpio-relay-check-ad22020d.png" alt="Leitura de nível na mesma linha (sysfs 490) após uma decisão de permissão"/>
 </div>
 
-<!-- TODO image: the door itself (camera, relay and lock as installed) — needs a field shoot -->
+<!-- TODO imagem: a própria porta (câmera, relé e fechadura conforme instalados) — precisa de sessão de fotos em campo -->
 
-Uma URL de biblioteca em texto simples `http://` é permitida em uma LAN, mas somente com uma assinatura
-HMAC-SHA256 sobre o manifesto; sem uma chave o dispositivo se recusa a iniciar. A assinatura
-protege contra adulteração em trânsito; qualquer chave de dispositivo vazada pode ser usada para forjar uma biblioteca.
+Uma URL de biblioteca em texto simples `http://` é permitida em uma LAN, mas somente com uma assinatura HMAC-SHA256 sobre o manifesto; sem uma chave o dispositivo se recusa a iniciar. A assinatura protege contra adulteração em trânsito; qualquer chave de dispositivo vazada pode ser usada para forjar uma biblioteca.
 
 ## Quais interfaces ele expõe
 
@@ -208,10 +172,10 @@ A interface é composta por cinco tópicos MQTT e duas superfícies HTTP.
 | Tópico / endpoint | Payload | Retido |
 |---|---|---|
 | `access/v1/events` (MQTT 8883, QoS 1) | Um JSON por decisão — veja abaixo | Não |
-| `access/v1/status/{device_id}` | Pulso de vida a cada 30 segundos: integridade do atuador, versão da biblioteca e tag do modelo, se o liveness está carregado | Apenas last will |
+| `access/v1/status/{device_id}` | Pulso de vida a cada 30 segundos: integridade do atuador, versão da biblioteca e tag do modelo, se o liveness está carregado | Apenas o último testamento |
 | `access/v1/commands/{door_id}` | `unlock`, `hold_open`, `lock` | **Nunca** |
 | `access/v1/receipts/{command_id}` | O estado final de um comando | Não |
-| `access/v1/relay/{relay_id}/set` and `/state` | Somente presets de relé via MQTT; `state` relata o contato físico e não reflete se a porta está aberta | `set` não, `state` sim |
+| `access/v1/relay/{relay_id}/set` e `/state` | Somente presets de relé via MQTT; `state` relata o contato físico e não reflete se a porta está aberta | `set` não, `state` sim |
 | `GET /v1/facedb/current`, `GET /v1/facedb/{version}` (HTTP 8080) | Toda a superfície de distribuição da biblioteca. `Range` para downloads em partes e retomáveis | — |
 | `/api/events`, `/api/devices`, `/api/persons`, `/api/audit/verify` (HTTP 8088) | API do console atrás do portão de token de três papéis. Nenhuma leitura anônima | — |
 
@@ -239,28 +203,19 @@ Os três papéis de token do console: viewer lê, operator emite `unlock` / `hol
 }
 ```
 
-Três campos para observar ao integrar. **`facedb_version` é `null` antes da primeira
-sincronização bem-sucedida**, o que significa que o dispositivo ainda não tem biblioteca (não é o mesmo que versão 0); o
-motivo da negação é relatado separadamente como `no_facedb`. **`threshold` é o valor em vigor
-para aquela decisão**, então uma mudança de limiar aparece no fluxo de eventos. **`clock.valid`** indica se o carimbo de data e hora corrigido pode ser confiável; os dispositivos nunca ajustam seu relógio de sistema, eles apenas carregam um deslocamento. Um resultado de liveness `null` significa que a verificação não foi executada; ele é tratado como falha e relatado como `liveness_unknown`.
+Três campos para observar ao integrar. **`facedb_version` é `null` antes da primeira sincronização bem-sucedida**, o que significa que o dispositivo ainda não tem biblioteca (não é o mesmo que versão 0); o motivo da negação é relatado separadamente como `no_facedb`. **`threshold` é o valor em vigor para aquela decisão**, então uma mudança de limiar aparece no fluxo de eventos. **`clock.valid`** indica se o carimbo de data e hora corrigido pode ser confiável; os dispositivos nunca ajustam seu relógio de sistema, eles apenas carregam um deslocamento. Um resultado de liveness `null` significa que a verificação não foi executada; ele é tratado como falha e relatado como `liveness_unknown`.
 
 ### O portão de comandos
 
-Um comando deve carregar um conjunto de campos exato, um UUIDv4 `command_id`, um `issued_at`
-RFC3339 com fuso horário e um TTL dentro dos limites, e é verificado contra uma tabela de
-replay por identidade. Um comando reenviado **não abre a porta uma segunda vez**; o dispositivo retorna o
-recibo original para o chamador conciliar. Um comando expirado
-retorna como `TTL_EXPIRED`. Uma identidade anônima é recusada.
+Um comando deve carregar um conjunto de campos exato, um UUIDv4 `command_id`, um `issued_at` RFC3339 com fuso horário e um TTL dentro dos limites, e é verificado contra uma tabela de replay por identidade. Um comando reenviado **não abre a porta uma segunda vez**; o dispositivo retorna o recibo original para o chamador conciliar. Um comando expirado retorna como `TTL_EXPIRED`. Uma identidade anônima é recusada.
 
-Os tópicos `set` e de comando nunca são retidos. Um unlock retido é reproduzido a cada
-reconexão, então a porta se abriria sozinha após uma queda de energia.
+Os tópicos `set` e de comando nunca são retidos. Um unlock retido é reproduzido a cada reconexão, então a porta se abriria sozinha após uma queda de energia.
 
 ### Distribuição da biblioteca de rostos
 
 O dispositivo consulta `current`, compara versões e busca arquivos somente quando a versão mudou, com fragmentação e retomada via `Range` padrão. Cada arquivo é verificado com SHA-256 e a assinatura do manifesto é verificada antes de uma troca atômica; uma falha em qualquer etapa mantém a versão antiga. Remover uma pessoa produz uma nova versão sem ela mais uma barreira de exclusão, e qualquer rollback posterior para uma versão que ainda a contenha é recusado pelo nome.
 
-O manifesto de cada versão carrega cinco campos de licença — `license_id`, `use_scope`, `redistributable`,
-`source_revision`, `sha256` — para que os termos de licença viajem com o artefato.
+O manifesto de cada versão carrega cinco campos de licença — `license_id`, `use_scope`, `redistributable`, `source_revision`, `sha256` — para que os termos de licença viajem com o artefato.
 
 ## Desempenho e dados medidos
 
@@ -273,9 +228,7 @@ O tempo desde a publicação de uma nova versão da biblioteca até o dispositiv
 | reCamera padrão (SG2002 / CV181x riscv64, firmware 0.2.2) | **p50 491,6 ms, p95 507,8 ms** (n=20) | USB-RNDIS, 2 pessoas, biblioteca de 16,5 KB. Viagem de ida e volta `op:reload` p50 100,0 ms (n=25) |
 | reCamera Pro (RV1126B, Buildroot 2023.02.6) | 62,2 ms (v1), 45,4 ms (v2); rodada no-op atualizada 6,2 ms | Ethernet, 1–2 pessoas, biblioteca abaixo de 20 KB |
 
-**Escalonamento com o tamanho da biblioteca.** Dois pontos de escala na reCamera padrão, uma execução cada:
-402 pessoas / 2,86 MB em 9 801,7 ms, e 1502 pessoas / 10,66 MB em 22 278,7 ms. O tempo de ativação
-cresce com o tamanho da biblioteca; use essas duas medidas para planejar a primeira sincronização de uma biblioteca grande.
+**Escalonamento com o tamanho da biblioteca.** Dois pontos de escala na reCamera padrão, uma execução cada: 402 pessoas / 2,86 MB em 9 801,7 ms, e 1502 pessoas / 10,66 MB em 22 278,7 ms. O tempo de ativação cresce com o tamanho da biblioteca; use essas duas medidas para planejar a primeira sincronização de uma biblioteca grande.
 
 Reprodução: no repositório upstream `unmanned-store-access`, `evaluation/runs/2026-09-06-recamera-std-p3-r2/results.md` e `evaluation/runs/2026-09-07-recamera-pro-p1/results.md`.
 
@@ -322,7 +275,6 @@ Reprodução (leitura de retorno GPIO): `evaluation/runs/2026-09-07-recamera-pro
 | reCamera Pro | O próprio modelo de reconhecimento do dispositivo, `rv1126b:scrfd500m+mbf512@fp16` |
 | reCamera padrão | Um processo nativo no dispositivo faz detecção, embedding, liveness e correspondência |
 | Presets reComputer | Um serviço de reconhecimento em um contêiner; engines TensorRT são construídos no equipamento na primeira inicialização |
-| reComputer presets | A recognition service in a container; TensorRT engines are built on the box at first start |
 
 A verificação de vivacidade é aplicada: se o serviço de reconhecimento não informar que a vivacidade foi carregada, o adaptador se recusa a executar.
 
@@ -344,15 +296,9 @@ Parâmetros que alteram o comportamento de implantação:
 
 ## Fontes de dados e recursos
 
-**Licenciamento.** O código no pacote da solução e no repositório upstream é Apache-2.0. **Os pesos do modelo
-não são.** A detecção de faces e o embedding usam o `buffalo_l` do InsightFace; a própria
-declaração do InsightFace é que o código é MIT sem limitação de uso comercial, mas que os
-dados de treinamento — e os modelos treinados com esses dados — estão disponíveis apenas para fins de pesquisa
-não comercial. `buffalo_l` é um desses modelos: `license_id: non-commercial`,
-`use_scope: non-commercial`, `redistributable: false`. O pacote da solução não inclui os pesos, e uma implantação comercial deve substituir o backbone de face por um com licença comercial.
+**Licenciamento.** O código no pacote da solução e no repositório upstream é Apache-2.0. **Os pesos do modelo não são.** A detecção de faces e o embedding usam o `buffalo_l` do InsightFace; a própria declaração do InsightFace é que o código é MIT sem limitação de uso comercial, mas que os dados de treinamento — e os modelos treinados com esses dados — estão disponíveis apenas para fins de pesquisa não comercial. `buffalo_l` é um desses modelos: `license_id: non-commercial`, `use_scope: non-commercial`, `redistributable: false`. O pacote da solução não inclui os pesos, e uma implantação comercial deve substituir o backbone de face por um com licença comercial.
 
-O modelo de vivacidade passiva, Silent-Face-Anti-Spoofing da MiniVision, é Apache-2.0:
-`use_scope: commercial`, redistribuível, usado sem modificações.
+O modelo de vivacidade passiva, Silent-Face-Anti-Spoofing da MiniVision, é Apache-2.0: `use_scope: commercial`, redistribuível, usado sem modificações.
 
 - Termos de licença: `gallery/ATTRIBUTION.md` no pacote da solução, e a seção de licenciamento da descrição do pacote.
 - Lacuna de espaço de modelo de registro: upstream `docs/user-guide.md` §5.1.

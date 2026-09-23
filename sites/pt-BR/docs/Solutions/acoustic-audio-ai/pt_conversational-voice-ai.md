@@ -80,7 +80,7 @@ Feito para lugares onde uma pessoa fala com uma máquina com as mãos ocupadas: 
     </ul>
 </div>
 
-<!-- TODO image: microphone array and speaker as installed on a service desk or kiosk — needs a field shoot -->
+<!-- TODO imagem: array de microfones e alto-falante instalados em um balcão de atendimento ou quiosque — precisa de sessão de fotos em campo -->
 
 ## De que hardware você precisa
 
@@ -138,7 +138,7 @@ O app SenseCraft Solution implanta no host via SSH (ou localmente, se você esti
 3. **Preencha o endpoint e a persona**: URL base, chave e ID do modelo para o preset em nuvem (padrões: o endpoint Qwen da região de Pequim com `qwen3.5-flash`), além do prompt de sistema. Você pode alternar de **Always listening** para **Wake word required** e digitar qualquer frase curta em chinês ou inglês; o detector de vocabulário aberto sherpa-onnx na imagem a compila localmente na inicialização.
 4. **Verifique no dashboard**: o dashboard web na porta 18000 mostra ouvindo / pensando / falando / interrompido.
 
-<!-- TODO image: the four dashboard states and a screen recording of one interruption — needs capture on a deployed device -->
+<!-- TODO imagem: os quatro estados do dashboard e uma gravação de tela de uma interrupção — precisa de captura em um dispositivo implantado -->
 
 Aceitação: três turnos na sala real, com volume real de alto-falante, interrompendo 0,5–1 s após cada resposta começar. Verifique se a resposta antiga para imediatamente e se o enunciado de interrupção não é perdido.
 
@@ -159,7 +159,7 @@ Todos os serviços usam rede em modo host, então `<host>` é o próprio endere�
 | Endpoint | Qual implantação | O que transporta |
 |---|---|---|
 | `ws://<host>:8621/v2v/stream` | todo preset | A sessão duplex: PCM de entrada, transcrição e PCM de TTS de saída, além do abort que uma interrupção dispara |
-| `POST http://<host>:8621/asr` | todo preset | Transcrição offline de arquivo inteiro, sem VAD e sem streaming. Os números de acurácia offline em "Performance and measured data" são medidos aqui |
+| `POST http://<host>:8621/asr` | todo preset | Transcrição offline de arquivo inteiro, sem VAD e sem streaming. Os números de acurácia offline em "Desempenho e dados medidos" são medidos aqui |
 | `POST http://<host>:8621/tts` | todo preset | Síntese; o cabeçalho de resposta `x-rtf` carrega o fator de tempo real |
 | `GET http://<host>:8621/health` | todo preset | Prontidão; usado como healthcheck do Compose |
 | `http://<host>:18000` | todo preset | Dashboard web: estado do turno e a transcrição de cada turno |
@@ -169,7 +169,7 @@ Todos os serviços usam rede em modo host, então `<host>` é o próprio endere�
 
 Ambas as rotas locais expõem a mesma interface que a rota em nuvem, então a troca altera apenas `LLM_BASE_URL`. A menos que aponte para fora, não há broker nem componente em nuvem no caminho de dados.
 
-## Performance and measured data {#measured-detail}
+## Desempenho e dados medidos {#measured-detail}
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Solution/openvoicestream" target="_blank" rel="noopener noreferrer">

@@ -158,7 +158,7 @@ Reserve cerca de 90 minutos por preset para as quatro etapas, mais o tempo de bu
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/event-json-198d89fa.png" alt="O conjunto completo de campos de um evento de reconhecimento: slot, SKU correspondente, similaridade e coordenadas por caixa"/>
 </div>
 
-<!-- TODO image: shelf and camera as installed on site — needs a field shoot -->
+<!-- TODO imagem: prateleira e câmera conforme instaladas no local — precisa de sessão de fotos em campo -->
 
 ## Quais interfaces estão disponíveis
 

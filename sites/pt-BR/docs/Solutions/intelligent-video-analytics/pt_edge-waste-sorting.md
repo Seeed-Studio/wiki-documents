@@ -43,7 +43,7 @@ Um acionamento (um botão, uma chamada HTTP ou movimento no quadro) faz o dispos
 Os bytes de imagem nunca saem do dispositivo; o payload carrega apenas um caminho ou um URI de object store.
 
 - Código-fonte de empacotamento e guia de implantação: [sensecraft-solutions / solutions/edge_waste_sorting](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_waste_sorting)
-- Escolhendo uma configuração e implantando: [página de reference design](https://www.seeed.cc/solutions/reference-designs/edge_waste_sorting)
+- Escolhendo uma configuração e implantando: [página de design de referência](https://www.seeed.cc/solutions/reference-designs/edge_waste_sorting)
 
 <div class="info-section">
     <ul class="info-list">
@@ -100,8 +100,8 @@ Os resultados de classificação vão direto para o MQTT. Abaixo estão eventos 
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_waste_sorting/mqtt-events-terminal-b19bfb30.png" alt="Eventos de classificação consecutivos em waste/recamera-cvi/results, cada um carregando o resultado de oito classes, o mapeamento em quatro vias e o tempo de inferência"/>
 </div>
 
-<!-- TODO image: the drop point as installed (camera mounted above the bin) — needs a field shoot -->
-<!-- TODO image: the local panel on 8080, MJPEG preview and top-3 list — needs a screenshot from a deployed device -->
+<!-- TODO imagem: o ponto de descarte conforme instalado (câmera montada acima da lixeira) — precisa de sessão de fotos em campo -->
+<!-- TODO imagem: o painel local na porta 8080, pré-visualização MJPEG e lista top-3 — precisa de uma captura de um dispositivo implantado -->
 
 ## De que hardware você precisa
 
@@ -137,7 +137,7 @@ Não há detector nesta cadeia. Dois itens em um quadro produzem uma resposta, e
 
 ### Dois: instale o software
 
-As etapas por dispositivo estão na página de reference design, onde escolher uma configuração para o seu local também fornece o pacote de aplicação correspondente para download.
+As etapas por dispositivo estão na página de design de referência, onde escolher uma configuração para o seu local também fornece o pacote de aplicação correspondente para download.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/edge_waste_sorting" target="_blank">
@@ -287,11 +287,11 @@ Reproduzir: `evaluation/runs/2026-09-05-w1-cpu`
 
 ### Próximas etapas
 
-- Adicionar o material da série reComputer R2000 (R2035-12, Hailo-8) e os resultados em quatro vias em todas as 7417 imagens de validação, e a latência de disparo até resposta e o tempo de construção do mecanismo na série reComputer J40 (J4012), em "Performance and measured data".
+- Adicionar o material da série reComputer R2000 (R2035-12, Hailo-8) e os resultados em quatro vias em todas as 7417 imagens de validação, e a latência de disparo até resposta e o tempo de construção do mecanismo na série reComputer J40 (J4012), em "Desempenho e dados medidos".
 
 ## Fontes de dados e recursos
 
-- **TrashNet** — [github.com/garythung/trashnet](https://github.com/garythung/trashnet), **MIT License, Copyright (c) 2017 Gary Thung**. Baseado em duas fontes de primeira parte: o arquivo `LICENSE` do repositório no commit `6fa2b87` e o campo `license` do cartão de dataset oficial no HuggingFace. A licença MIT exige que o aviso de direitos autorais e de licença seja mantido e não possui cláusula de compartilhamento pela mesma licença.
+- **TrashNet** — [github.com/garythung/trashnet](https://github.com/garythung/trashnet), **Licença MIT, Copyright (c) 2017 Gary Thung**. Baseado em duas fontes de primeira parte: o arquivo `LICENSE` do repositório no commit `6fa2b87` e o campo `license` do cartão de dataset oficial no HuggingFace. A licença MIT exige que o aviso de direitos autorais e de licença seja mantido e não possui cláusula de compartilhamento pela mesma licença.
 - **Garbage Classification 3 — Material Identification (Roboflow Universe)** — **CC BY 4.0**, declarado textualmente no arquivo `README.dataset.txt` incluído com a exportação. O caminho do projeto no Roboflow Universe é `material-identification/garbage-classification-3`.
 - **SigLIP 2** — [google/siglip2-base-patch16-224](https://huggingface.co/google/siglip2-base-patch16-224), revisão `75de2d55…`, Apache-2.0. Usado apenas pela trilha opcional de vocabulário aberto.
 - **Pesos iniciais MobileNetV3-Small ImageNet** (torchvision) — BSD-3-Clause.

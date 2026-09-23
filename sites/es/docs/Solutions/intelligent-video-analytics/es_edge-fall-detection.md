@@ -1,5 +1,5 @@
 ---
-description: Creación de un sistema local de alerta de caídas para cuidado de personas mayores, residencias asistidas y atención domiciliaria: qué dispositivos necesitas, cómo desplegarlo, qué interfaces expone y datos medidos en siete dispositivos
+description: Creación de un sistema local de alerta de caídas para cuidado de personas mayores, residencias asistidas y atención domiciliaria - qué dispositivos necesitas, cómo desplegarlo, qué interfaces expone y datos medidos en siete dispositivos
 title: 'Detección de caídas con IA en el dispositivo: creación, despliegue y resultados medidos'
 keywords:
   - sistema de detección de caídas
@@ -228,7 +228,7 @@ El flujo general:
   <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/recamera-pro-firmware-update-a9539b3d.gif" alt="Gestión de dispositivos → Embedded → reCamera Pro, expandido para rellenar dirección y puerto ADB"/>
 </div>
 
-4. **Comprueba la vista previa para confirmar el encuadre** — Una vez instalada, la app muestra un feed en vivo con un esqueleto y el estado superpuestos sobre la persona. Confirma que la cámara realmente ve lo que necesita antes de cablear las notificaciones. La captura de pantalla de abajo es la página de vista previa de reCamera Pro. **Las etiquetas de estado provienen de una reproducción, no de una ejecución medida**; las cifras medidas están en "Performance and measured data".
+4. **Comprueba la vista previa para confirmar el encuadre** — Una vez instalada, la app muestra un feed en vivo con un esqueleto y el estado superpuestos sobre la persona. Confirma que la cámara realmente ve lo que necesita antes de cablear las notificaciones. La captura de pantalla de abajo es la página de vista previa de reCamera Pro. **Las etiquetas de estado provienen de una reproducción, no de una ejecución medida**; las cifras medidas están en "Rendimiento y datos medidos".
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/live-fall-demo-f4ef5180.gif" alt="La transición de estado de normal a caído, mostrada en la vista previa del App Center de reCamera Pro"/>
@@ -282,7 +282,7 @@ El estado del detector y del servicio en el propio host está en la consola del 
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/device-console-en-76e94f0c.jpg" alt="Consola del dispositivo en el host de alarmas: estado de ejecución del detector y del servicio de alarmas"/>
 </div>
 
-<!-- TODO image: on-site installation photo (camera mounted in a room) — needs a field shoot -->
+<!-- TODO imagen: foto de la instalación en el sitio (cámara montada en una habitación) — necesita una sesión de fotos en campo -->
 
 El tiempo estimado es de **45 minutos**, con dificultad **intermedia**. El paquete de Orin es el más largo porque el primer despliegue construye un motor TensorRT en el dispositivo.
 
@@ -301,7 +301,7 @@ El dispositivo publica eventos en el broker MQTT que se ejecuta en él mismo (pu
 | Tópico / puerto | Payload | Retenido |
 |---|---|---|
 | `<device>/fall-detection/results` (multi-stream: `.../results/{stream_id}`) | Un JSON por frame: `state`, `fall_detected`, `fall_event`, `event_id`, `person_count`, `fallen_count`, más `track_id` / `state` / `bbox` para cada entrada en `persons[]` | No |
-| `<device>/fall-detection/status` | `online` / `offline`, publicado mediante el last will de MQTT | Sí |
+| `<device>/fall-detection/status` | `online` / `offline`, publicado mediante el último testamento de MQTT | Sí |
 | `homeassistant/` | Configuración de auto-descubrimiento: sensor de caídas, estado, id de evento, presencia | Sí |
 | RTSP 8554 `/live0` (reCamera) | Vídeo en vivo para vista previa y NVR | — |
 
@@ -460,7 +460,7 @@ Parámetros que cambian el comportamiento del despliegue (valor distribuido por 
 Panel de alarmas:
 
 - `statemachine.evidence_sec` (5.0) / `statemachine.confirm_window_sec` (60.0): la ventana de evidencia y la ventana del operador; juntas fijan la mayor parte del tiempo desde la alarma hasta la notificación.
-- `statemachine.confirm_timeout_action` (treat as real and notify): lo que ocurre cuando nadie responde dentro de la ventana del operador.
+- `statemachine.confirm_timeout_action` (tratar como real y notificar): lo que ocurre cuando nadie responde dentro de la ventana del operador.
 - `publish_empty_frames` (true en el paquete Orin): el detector Jetson publica fotogramas vacíos cuando no hay nadie en escena; sin ellos el timeout de `no_person` no recibe entrada. Vuelve a activarlo si sustituyes la configuración de detector distribuida por la propia del dispositivo; el runtime de Hailo no tiene tal interruptor y no lo necesita.
 
 ### Datos medidos del panel de alarmas {#alarm-path-measured}

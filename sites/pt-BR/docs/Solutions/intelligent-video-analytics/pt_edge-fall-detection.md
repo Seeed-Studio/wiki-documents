@@ -210,7 +210,7 @@ Fixe a montagem, a 2–3 m da pessoa, de lado ou em um ângulo, com ombros e qua
 
 ### Passo 2: instalar o software — quatro etapas {#step-2-install-the-software}
 
-Instruções passo a passo para cada dispositivo estão na página do reference design — escolha ali uma configuração para o seu local e baixe o pacote de aplicativo correspondente.
+Instruções passo a passo para cada dispositivo estão na página do design de referência — escolha ali uma configuração para o seu local e baixe o pacote de aplicativo correspondente.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/fall_detection" target="_blank">
@@ -220,7 +220,7 @@ Instruções passo a passo para cada dispositivo estão na página do reference 
 
 O fluxo geral:
 
-1. **Escolha uma configuração** — Responda a três perguntas na página do reference design (se você já tem uma câmera, a que distância da zona de queda, quantos streams), e ela retorna uma combinação de dispositivos correspondente.
+1. **Escolha uma configuração** — Responda a três perguntas na página do design de referência (se você já tem uma câmera, a que distância da zona de queda, quantos streams), e ela retorna uma combinação de dispositivos correspondente.
 2. **Instale o pacote do aplicativo** — Baixe o pacote para esse dispositivo e instale-o. O modelo, o runtime e os limiares de decisão são enviados congelados no pacote — as mesmas configurações avaliadas nos dados medidos abaixo — portanto não há treinamento nem ajuste a fazer.
 3. **Preencha duas configurações** — o endereço da fonte de vídeo (ignore isso com reCamera) e um nome de dispositivo. O nome do dispositivo é o primeiro segmento do tópico da mensagem; nomeie por cômodo ou leito para que vários dispositivos no mesmo receptor nunca se sobrescrevam. A captura de tela abaixo é a página de gerenciamento de dispositivos na plataforma de implantação: escolha "Embedded" e depois preencha o IP do dispositivo e a porta ADB.
 
@@ -228,7 +228,7 @@ O fluxo geral:
   <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/recamera-pro-firmware-update-a9539b3d.gif" alt="Gerenciamento de dispositivo → Embedded → reCamera Pro, expandido para preencher endereço e porta ADB"/>
 </div>
 
-4. **Verifique o preview para confirmar o enquadramento** — Depois de instalado, o aplicativo mostra um feed ao vivo com um esqueleto e o estado sobrepostos à pessoa. Confirme que a câmera realmente vê o que precisa antes de configurar as notificações. A captura de tela abaixo é a página de preview da reCamera Pro. **Os rótulos de status vêm de um replay, não de uma execução medida**; os números medidos estão em "Performance and measured data".
+4. **Verifique o preview para confirmar o enquadramento** — Depois de instalado, o aplicativo mostra um feed ao vivo com um esqueleto e o estado sobrepostos à pessoa. Confirme que a câmera realmente vê o que precisa antes de configurar as notificações. A captura de tela abaixo é a página de preview da reCamera Pro. **Os rótulos de status vêm de um replay, não de uma execução medida**; os números medidos estão em "Desempenho e dados medidos".
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/live-fall-demo-f4ef5180.gif" alt="A transição de estado de normal para caído, mostrada no preview do reCamera Pro App Center"/>
@@ -255,7 +255,7 @@ Dois pontos ao desenhar zonas, ou o local produzirá alarmes extras:
 
 #### 2. Software: quatro etapas
 
-As etapas por dispositivo estão na mesma página de reference design acima, onde você pode escolher uma configuração e baixar o pacote de aplicativo correspondente.
+As etapas por dispositivo estão na mesma página de design de referência acima, onde você pode escolher uma configuração e baixar o pacote de aplicativo correspondente.
 
 1. **Escolha uma configuração** — o configurador pergunta o que há na parede e onde o host ficará, e retorna um dos três pacotes.
 2. **Instale o pacote** — os pacotes Orin e Hailo implantam o detector e o serviço de alarme juntos. O pacote reCamera não instala nada para detecção; o serviço de alarme é iniciado manualmente em um gateway fornecido por você.
@@ -282,7 +282,7 @@ O estado do detector e do serviço no próprio host está no console do disposit
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/device-console-en-76e94f0c.jpg" alt="Console do dispositivo no host de alarme: estado de execução do detector e do serviço de alarme"/>
 </div>
 
-<!-- TODO image: on-site installation photo (camera mounted in a room) — needs a field shoot -->
+<!-- TODO imagem: foto da instalação no local (câmera montada em um quarto) — precisa de sessão de fotos em campo -->
 
 O tempo estimado é de **45 minutos**, classificado como **intermediário**. O pacote Orin é o mais demorado porque a primeira implantação gera um mecanismo TensorRT no dispositivo.
 
@@ -301,7 +301,7 @@ O dispositivo publica eventos para o broker MQTT em execução nele mesmo (porta
 | Tópico / porta | Payload | Retido |
 |---|---|---|
 | `<device>/fall-detection/results` (multi-stream: `.../results/{stream_id}`) | Um JSON por frame: `state`, `fall_detected`, `fall_event`, `event_id`, `person_count`, `fallen_count`, além de `track_id` / `state` / `bbox` para cada entrada em `persons[]` | Não |
-| `<device>/fall-detection/status` | `online` / `offline`, publicado via o last will do MQTT | Sim |
+| `<device>/fall-detection/status` | `online` / `offline`, publicado via o último testamento do MQTT | Sim |
 | `homeassistant/` | Config de descoberta automática — sensor de queda, estado, id do evento, presença | Sim |
 | RTSP 8554 `/live0` (reCamera) | Vídeo ao vivo para pré-visualização e NVR | — |
 
@@ -368,9 +368,9 @@ Sete dispositivos, quatro aceleradores. "End-to-end" significa que todo o caminh
 | reComputer J30 | GPU Orin Nano | YOLO11s-Pose FP16 | ✅ | ✅ FP16 / INT8 |
 | reComputer J40 | GPU Orin NX | YOLO11m-Pose FP16 | ✅ | ✅ FP16 / INT8 |
 
-A latência por quadro por dispositivo, o throughput multi-stream e as condições de teste estão em [detailed performance results](#性能实测详表) abaixo.
+A latência por quadro por dispositivo, o throughput multi-stream e as condições de teste estão em [resultados de desempenho detalhados](#性能实测详表) abaixo.
 
-### Detailed performance results {#性能实测详表}
+### Resultados de desempenho detalhados {#性能实测详表}
 
 #### Latência por quadro e throughput
 
@@ -460,7 +460,7 @@ Parâmetros que alteram o comportamento da implantação (padrão enviado entre 
 Painel de alarme:
 
 - `statemachine.evidence_sec` (5.0) / `statemachine.confirm_window_sec` (60.0) — a janela de evidência e a janela do operador; juntas definem a maior parte do tempo do alarme até a notificação.
-- `statemachine.confirm_timeout_action` (treat as real and notify) — o que acontece quando ninguém responde dentro da janela do operador.
+- `statemachine.confirm_timeout_action` (tratar como real e notificar) — o que acontece quando ninguém responde dentro da janela do operador.
 - `publish_empty_frames` (true no pacote Orin) — o detector Jetson publica quadros vazios quando ninguém está em cena; sem eles o timeout de `no_person` não recebe entrada. Defina novamente se você substituir a configuração de detector enviada pela própria do dispositivo; o runtime Hailo não tem tal chave e não precisa.
 
 ### Dados medidos do painel de alarme {#alarm-path-measured}

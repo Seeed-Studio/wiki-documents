@@ -1,5 +1,5 @@
 ---
-description: Clasificación de residuos en el dispositivo en el punto de entrega: un disparo, una imagen, ocho clases de material y la categoría china de eliminación en cuatro vías por MQTT, con una devolución de llamada GPIO para una compuerta. Hardware, esquema de despliegue, contratos de salida y todos los límites medidos.
+description: Clasificación de residuos en el dispositivo en el punto de entrega - un disparo, una imagen, ocho clases de material y la categoría china de eliminación en cuatro vías por MQTT, con una devolución de llamada GPIO para una compuerta. Hardware, esquema de despliegue, contratos de salida y todos los límites medidos.
 title: 'Clasificación de Residuos en el Borde: Clases de Material, la Categoría China en Cuatro Vías y MQTT'
 keywords:
   - clasificación de residuos
@@ -100,8 +100,8 @@ Los resultados de clasificación van directamente a MQTT. A continuación se mue
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_waste_sorting/mqtt-events-terminal-b19bfb30.png" alt="Eventos de clasificación consecutivos en waste/recamera-cvi/results, cada uno con el resultado de ocho clases, la asignación en cuatro vías y el tiempo de inferencia"/>
 </div>
 
-<!-- TODO image: the drop point as installed (camera mounted above the bin) — needs a field shoot -->
-<!-- TODO image: the local panel on 8080, MJPEG preview and top-3 list — needs a screenshot from a deployed device -->
+<!-- TODO imagen: el punto de vertido tal como está instalado (cámara montada sobre el contenedor) — necesita una sesión de fotos en campo -->
+<!-- TODO imagen: el panel local en el puerto 8080, vista previa MJPEG y lista top-3 — necesita una captura de un dispositivo desplegado -->
 
 ## Qué hardware necesitas
 
@@ -287,7 +287,7 @@ Reproducir: `evaluation/runs/2026-09-05-w1-cpu`
 
 ### Próximos pasos
 
-- Añadir el material de la serie reComputer R2000 (R2035-12, Hailo-8) y los resultados en cuatro vías en todas las 7417 imágenes de validación, y la latencia de disparo a respuesta y el tiempo de construcción del motor en la serie reComputer J40 (J4012), a "Performance and measured data".
+- Añadir el material de la serie reComputer R2000 (R2035-12, Hailo-8) y los resultados en cuatro vías en todas las 7417 imágenes de validación, y la latencia de disparo a respuesta y el tiempo de construcción del motor en la serie reComputer J40 (J4012), a "Rendimiento y datos medidos".
 
 ## Fuentes de datos y recursos
 

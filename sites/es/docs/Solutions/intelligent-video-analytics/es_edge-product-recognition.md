@@ -1,5 +1,5 @@
 ---
-description: Reconocimiento de productos de supermercado en el edge: un detector de una sola clase, una galería de embeddings que registra un nuevo SKU a partir de fotografías en lugar de una ejecución de entrenamiento, qué hardware necesita, cómo se despliega, los datos medidos por placa y detalles de implementación para ingenieros
+description: Reconocimiento de productos de supermercado en el edge - un detector de una sola clase, una galería de embeddings que registra un nuevo SKU a partir de fotografías en lugar de una ejecución de entrenamiento, qué hardware necesita, cómo se despliega, los datos medidos por placa y detalles de implementación para ingenieros
 title: 'Reconocimiento de productos en el edge: construcción, despliegue y resultados medidos'
 keywords:
   - reconocimiento de productos en el edge
@@ -158,7 +158,7 @@ Calcula unos 90 minutos por preset para los cuatro pasos, más el tiempo de cons
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/event-json-198d89fa.png" alt="El conjunto completo de campos de un evento de reconocimiento: hueco, SKU coincidente, similitud y coordenadas por caja"/>
 </div>
 
-<!-- TODO image: shelf and camera as installed on site — needs a field shoot -->
+<!-- TODO imagen: estantería y cámara tal como están instaladas en el sitio — necesita una sesión de fotos en campo -->
 
 ## Qué interfaces están disponibles
 

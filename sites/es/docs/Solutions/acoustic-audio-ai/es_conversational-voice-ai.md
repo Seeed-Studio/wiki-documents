@@ -1,5 +1,5 @@
 ---
-description: Crear un terminal de voz interrumpible en un dispositivo perimetral: qué placas y micrófono necesitas, qué interfaces expone, la matriz de compatibilidad idioma × dispositivo y los resultados medidos de ASR/TTS en RK3576
+description: Crear un terminal de voz interrumpible en un dispositivo perimetral - qué placas y micrófono necesitas, qué interfaces expone, la matriz de compatibilidad idioma × dispositivo y los resultados medidos de ASR/TTS en RK3576
 title: 'IA de voz conversacional interrumpible en el Edge: creación, despliegue y resultados medidos'
 keywords:
   - IA de voz conversacional
@@ -80,7 +80,7 @@ Diseñada para lugares donde una persona habla con una máquina mientras tiene l
     </ul>
 </div>
 
-<!-- TODO image: microphone array and speaker as installed on a service desk or kiosk — needs a field shoot -->
+<!-- TODO imagen: matriz de micrófonos y altavoz instalados en un mostrador de servicio o quiosco — necesita una sesión de fotos en campo -->
 
 ## Qué hardware necesitas
 
@@ -138,7 +138,7 @@ La app SenseCraft Solution despliega en el host a través de SSH (o localmente, 
 3. **Rellena el endpoint y la persona**: URL base, clave e ID de modelo para el preset en la nube (valores predeterminados: el endpoint Qwen de la región de Pekín con `qwen3.5-flash`), más el prompt del sistema. Puedes cambiar de **Always listening** a **Wake word required** y escribir cualquier frase corta en chino o en inglés; el detector de vocabulario abierto sherpa-onnx de la imagen la compila localmente al inicio.
 4. **Verifica en el panel**: el panel web en el puerto 18000 muestra escuchando / pensando / hablando / interrumpido.
 
-<!-- TODO image: the four dashboard states and a screen recording of one interruption — needs capture on a deployed device -->
+<!-- TODO imagen: los cuatro estados del panel y una grabación de pantalla de una interrupción — necesita captura en un dispositivo desplegado -->
 
 Criterio de aceptación: tres turnos en la sala real con volumen real de altavoz, interrumpiendo 0,5–1 s después de que empiece cada respuesta. Comprueba que la respuesta anterior se detiene inmediatamente y que el enunciado de interrupción no se pierde.
 
@@ -159,7 +159,7 @@ Todos los servicios usan red en modo host, así que `<host>` es la propia direcc
 | Endpoint | Qué despliegue | Qué transporta |
 |---|---|---|
 | `ws://<host>:8621/v2v/stream` | todos los presets | La sesión dúplex: PCM de entrada, transcripción y PCM de TTS de salida, más el aborto que dispara una interrupción |
-| `POST http://<host>:8621/asr` | todos los presets | Transcripción completa de archivo sin conexión, sin VAD y sin streaming. Las cifras de precisión sin conexión bajo "Performance and measured data" se miden aquí |
+| `POST http://<host>:8621/asr` | todos los presets | Transcripción completa de archivo sin conexión, sin VAD y sin streaming. Las cifras de precisión sin conexión bajo "Rendimiento y datos medidos" se miden aquí |
 | `POST http://<host>:8621/tts` | todos los presets | Síntesis; la cabecera de respuesta `x-rtf` transporta el factor de tiempo real |
 | `GET http://<host>:8621/health` | todos los presets | Disponibilidad; se usa como healthcheck de Compose |
 | `http://<host>:18000` | todos los presets | Panel web: estado del turno y transcripción de cada turno |
@@ -169,7 +169,7 @@ Todos los servicios usan red en modo host, así que `<host>` es la propia direcc
 
 Ambas rutas locales exponen la misma interfaz que la ruta en la nube, así que al cambiar solo se modifica `LLM_BASE_URL`. A menos que apunte hacia fuera, no hay broker ni componente en la nube en la ruta de datos.
 
-## Performance and measured data {#measured-detail}
+## Rendimiento y datos medidos {#measured-detail}
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Solution/openvoicestream" target="_blank" rel="noopener noreferrer">
