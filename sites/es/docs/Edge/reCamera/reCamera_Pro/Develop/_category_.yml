@@ -1,0 +1,5 @@
+position: 4 # float position is supported
+label: '4. Desarrolla tu propia aplicación'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category collapsed by default
+className: recamera_pro_develop

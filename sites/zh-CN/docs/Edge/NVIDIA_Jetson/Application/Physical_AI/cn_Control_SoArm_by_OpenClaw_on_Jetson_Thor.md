@@ -139,7 +139,7 @@ source ~/.bashrc
 创建 LeRobot 环境：
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install 'lerobot[feetech]'
 pip uninstall torch torchvision

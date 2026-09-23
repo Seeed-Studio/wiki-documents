@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_device-and-system
+slug: /recamera_pro_api_device-and-system_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/es/recamera_pro_api_device-and-system/
+url: https://wiki.seeedstudio.com/es/recamera_pro_api_device-and-system_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/device_system.md (https://wiki.seeedstudio.com/es/recamera_pro_api_device-and-system/), which now serves the original slug /recamera_pro_api_device-and-system. This file is kept for history as a draft (slug /recamera_pro_api_device-and-system_legacy) and is excluded from production builds. Do not link here. -->
 
 # Dispositivo y sistema
 
@@ -27,7 +29,7 @@ url: https://wiki.seeedstudio.com/es/recamera_pro_api_device-and-system/
 | GET | `/system/resource-info` | Obtener uso de CPU, NPU, memoria y almacenamiento |
 | GET | `/system/time` | Obtener hora del sistema, zona horaria y configuración de NTP |
 | PUT | `/system/time` | Establecer la hora del sistema |
-| GET | `/system/battery` | Obtener estado de la batería |
+| GET | `/system/battery` | Obtener el estado de la batería |
 | GET | `/system/check` | Comprobar si es el primer inicio de sesión |
 | GET | `/system/ssh` | Consultar el estado de ejecución de SSH |
 | POST | `/system/ssh` | Iniciar o detener SSH |
@@ -62,7 +64,7 @@ Respuesta:
 | `sSensorModel` | Modelo de la placa de sensor |
 | `sBasePlateModel` | Modelo de la placa base |
 
-## Obtener estado de los recursos del sistema
+## Obtener estado de recursos del sistema
 
 ```text
 GET /system/resource-info
@@ -308,7 +310,7 @@ Respuesta:
 | Campo | Descripción |
 |---|---|
 | `size` | Tamaño del archivo de configuración |
-| `url` | Ruta de descarga; anteponer la IP del dispositivo para obtener una URL completa |
+| `url` | Ruta de descarga; anteponer la IP del dispositivo para una URL completa |
 
 URL de descarga:
 

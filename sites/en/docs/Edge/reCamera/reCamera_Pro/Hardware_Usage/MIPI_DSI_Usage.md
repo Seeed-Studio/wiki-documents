@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - MIPI-DSI Screen
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_mipi_dsi_screen_usage
+slug: /recamera_pro_mipi_dsi_screen_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-06-01'
 updatedAt: '2026-07-14'
-url: https://wiki.seeedstudio.com/recamera_pro_mipi_dsi_screen_usage/
+url: https://wiki.seeedstudio.com/recamera_pro_mipi_dsi_screen_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/mipi_dsi_display.md (https://wiki.seeedstudio.com/recamera_pro_mipi_dsi_screen_usage/), which now serves the original slug /recamera_pro_mipi_dsi_screen_usage. This file is kept for history as a draft (slug /recamera_pro_mipi_dsi_screen_usage_legacy) and is excluded from production builds. Do not link here. -->
 
 # Using the MIPI DSI Interface on reCamera Pro
 
