@@ -1,0 +1,10 @@
+position: 6
+label: '离网与自组网通信'
+collapsible: true
+collapsed: true
+className: _hazard-response
+link:
+  type: generated-index
+  slug: off-grid-mesh-communication
+  title: 离网与自组网通信
+  description: 无公网覆盖场景的离网与自组网通信方案。
