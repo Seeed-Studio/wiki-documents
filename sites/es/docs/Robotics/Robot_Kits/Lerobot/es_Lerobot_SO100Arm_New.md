@@ -2271,7 +2271,7 @@ $(which lerobot-train) \\
 --job_name=act_multi_gpu \\
 
 --wandb.enable=true`}
-</CodeBlock]
+</CodeBlock>
 
 Flags clave de `accelerate`:
 

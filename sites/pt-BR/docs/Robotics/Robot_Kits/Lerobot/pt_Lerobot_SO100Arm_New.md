@@ -992,7 +992,7 @@ Observe que o id associado a um robô é usado para armazenar o arquivo de calib
     --teleop.type=so101_leader \\
     --teleop.port=/dev/ttyACM1 \\
     --teleop.id=my_awesome_leader_arm`}
-</CodeBlock]
+</CodeBlock>
 
 O comando de teleoperação irá automaticamente:
 
