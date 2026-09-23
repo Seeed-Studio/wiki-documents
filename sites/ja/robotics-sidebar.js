@@ -151,6 +151,11 @@ const sidebars = {
                   id: 'Robotics/Robot_Kits/ReachyMini/development_cases/ja_reachymini_voice_control_soarm',
                   label: 'SO-ARM用Reachy Mini音声制御',
                 },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/ja_reachymini_sway_screen',
+                  label: 'Control de movimiento de la pantalla de Reachy Mini',
+                },
               ],
             },
             {
