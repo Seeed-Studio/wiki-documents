@@ -1,5 +1,5 @@
 ---
-description: Todas las descargas oficiales de reCamera Pro en un solo lugar: imágenes de firmware, herramientas de flasheo, controladores, toolkits de conversión y recursos de desarrollo.
+description: Todas las descargas oficiales de reCamera Pro en un solo lugar - imágenes de firmware, herramientas de flasheo, controladores, toolkits de conversión y recursos de desarrollo.
 title: Descargas y notas de la versión
 keywords:
   - reCamera

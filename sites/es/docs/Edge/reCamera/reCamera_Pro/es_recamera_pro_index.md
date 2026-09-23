@@ -1,5 +1,5 @@
 ---
-description: Empieza aquí: encuentra la guía adecuada para lo que quieres hacer con reCamera Pro.
+description: Empieza aquí - encuentra la guía adecuada para lo que quieres hacer con reCamera Pro.
 title: reCamera Pro
 keywords:
   - reCamera

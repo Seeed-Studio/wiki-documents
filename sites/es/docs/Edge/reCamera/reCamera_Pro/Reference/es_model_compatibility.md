@@ -1,5 +1,5 @@
 ---
-description: Qué formatos de modelo, frameworks, algoritmos y campos de salida admite reCamera Pro: un resumen de compatibilidad para desplegar tus propios modelos.
+description: Qué formatos de modelo, frameworks, algoritmos y campos de salida admite reCamera Pro - un resumen de compatibilidad para desplegar tus propios modelos.
 title: Compatibilidad de modelos y formatos de salida
 keywords:
   - reCamera

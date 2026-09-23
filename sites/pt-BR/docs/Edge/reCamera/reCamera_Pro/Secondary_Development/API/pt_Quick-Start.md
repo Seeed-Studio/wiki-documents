@@ -1,5 +1,5 @@
 ﻿---
-description: Esta página é um guia de início rápido. São necessários apenas três passos para colocá-lo em funcionamento: fazer login, obter o Token e chamar a primeira API. Basta seguir as instruções e você estará pronto para usar.
+description: Esta página é um guia de início rápido. São necessários apenas três passos para colocá-lo em funcionamento - fazer login, obter o Token e chamar a primeira API. Basta seguir as instruções e você estará pronto para usar.
 title: Início Rápido
 keywords:
   - Edge AI

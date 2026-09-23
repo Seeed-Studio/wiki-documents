@@ -1,5 +1,5 @@
 ---
-description: Tu primera tarea de extremo a extremo con reCamera Pro: configura una regla de grabación activada por IA, deja que un objetivo detectado inicie una grabación automáticamente y luego encuentra y reproduce el archivo de video.
+description: Tu primera tarea de extremo a extremo con reCamera Pro - configura una regla de grabación activada por IA, deja que un objetivo detectado inicie una grabación automáticamente y luego encuentra y reproduce el archivo de video.
 title: 'Primera tarea: detectar y grabar'
 keywords:
   - reCamera

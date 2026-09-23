@@ -1,5 +1,5 @@
 ---
-description: Configura cómo se comporta reCamera Pro en tu red durante el funcionamiento diario: hora del sistema, acceso SSH/HTTP, velocidad en baudios del puerto serie y la contraseña de administrador.
+description: Configura cómo se comporta reCamera Pro en tu red durante el funcionamiento diario - hora del sistema, acceso SSH/HTTP, velocidad en baudios del puerto serie y la contraseña de administrador.
 title: Red, hora y control de acceso
 keywords:
   - reCamera

@@ -1,5 +1,5 @@
 ---
-description: Enciende reCamera Pro, inicia sesión en la interfaz web, comienza la vista previa en vivo y confirma tu primer resultado de detección de IA: el camino más rápido desde el desempaquetado hasta una cámara de IA en funcionamiento.
+description: Enciende reCamera Pro, inicia sesión en la interfaz web, comienza la vista previa en vivo y confirma tu primer resultado de detección de IA - el camino más rápido desde el desempaquetado hasta una cámara de IA en funcionamiento.
 title: 'Inicio rápido: ve tu primera detección de IA'
 keywords:
   - reCamera

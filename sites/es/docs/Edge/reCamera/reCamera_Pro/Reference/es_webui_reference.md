@@ -1,5 +1,5 @@
 ---
-description: Un índice a nivel de campo de la Web UI integrada de reCamera Pro: cada página, sus ajustes clave y dónde encontrar la guía completa.
+description: Un índice a nivel de campo de la Web UI integrada de reCamera Pro - cada página, sus ajustes clave y dónde encontrar la guía completa.
 title: Referencia de la Web UI
 keywords:
   - reCamera

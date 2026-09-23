@@ -1,5 +1,5 @@
 ---
-description: Elige cómo desplegar un modelo de IA personalizado en reCamera Pro: sube un modelo RKNN preentrenado, convierte ONNX mediante SenseCraft o usa RKNN-Toolkit2 localmente.
+description: Elige cómo desplegar un modelo de IA personalizado en reCamera Pro - sube un modelo RKNN preentrenado, convierte ONNX mediante SenseCraft o usa RKNN-Toolkit2 localmente.
 title: Elige una ruta de despliegue de modelo
 keywords:
   - reCamera

@@ -1,5 +1,5 @@
 ---
-description: Una lista de verificación previa al despliegue para reCamera Pro: verifica la alimentación, la red, la hora, el almacenamiento, el modelo de IA y el comportamiento de reinicio antes de que el dispositivo salga al campo.
+description: Una lista de verificación previa al despliegue para reCamera Pro - verifica la alimentación, la red, la hora, el almacenamiento, el modelo de IA y el comportamiento de reinicio antes de que el dispositivo salga al campo.
 title: Lista de verificación previa al despliegue
 keywords:
   - reCamera

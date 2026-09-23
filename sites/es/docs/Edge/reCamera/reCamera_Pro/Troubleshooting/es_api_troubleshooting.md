@@ -1,5 +1,5 @@
 ---
-description: Diagnostica y corrige fallos comunes del Web API de reCamera Pro: errores de inicio de sesión, caducidad de tokens, cambios de red, certificados HTTPS y problemas de rutas de API.
+description: Diagnostica y corrige fallos comunes del Web API de reCamera Pro - errores de inicio de sesión, caducidad de tokens, cambios de red, certificados HTTPS y problemas de rutas de API.
 title: Solucionar problemas de llamadas API
 keywords:
   - Edge AI

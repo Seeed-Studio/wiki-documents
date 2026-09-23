@@ -1,5 +1,5 @@
 ---
-description: Verifica que un modelo personalizado se ejecute correctamente en reCamera Pro: comprueba el estado de inferencia, los FPS, la salida de detección y el uso de recursos.
+description: Verifica que un modelo personalizado se ejecute correctamente en reCamera Pro - comprueba el estado de inferencia, los FPS, la salida de detección y el uso de recursos.
 title: Validar el rendimiento del modelo
 keywords:
   - reCamera

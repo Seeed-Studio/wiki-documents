@@ -1,5 +1,5 @@
 ---
-description: Exporta la configuración de reCamera Pro a un archivo e impórtala en otro dispositivo: qué contiene la copia de seguridad, cómo restaurarla y cómo verificarla.
+description: Exporta la configuración de reCamera Pro a un archivo e impórtala en otro dispositivo - qué contiene la copia de seguridad, cómo restaurarla y cómo verificarla.
 title: Copia de seguridad y restauración de la configuración
 keywords:
   - reCamera

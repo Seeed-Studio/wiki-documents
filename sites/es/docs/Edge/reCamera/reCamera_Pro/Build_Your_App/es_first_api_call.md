@@ -1,5 +1,5 @@
 ﻿---
-description: Inicio rápido en tres pasos para realizar tu primera llamada a la API de reCamera Pro: iniciar sesión, obtener un token y hacer una llamada a la API.
+description: Inicio rápido en tres pasos para realizar tu primera llamada a la API de reCamera Pro - iniciar sesión, obtener un token y hacer una llamada a la API.
 title: "Tu primera llamada a la API"
 keywords:
   - reCamera
