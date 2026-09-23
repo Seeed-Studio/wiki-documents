@@ -22,48 +22,48 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-product-recognition/
 generated_from: sensecraft-solutions@cbbfa60
 ---
 
 :::caution[最初にお読みください]
-これは完成品ではなく、進行中の参考設計です。コンソール（登録、gallery versioning、管理 UI、broker）は実装済みで、検出器は 2 つのボードへ変換し測定済みです。**検出、embedding、gallery lookup、MQTT 公開を 1 サービスに結合するデバイス側プロセスは、上流にまだ存在しません。** そのため本ページにはエンドツーエンドの計数精度、棚スロット精度、soak 実行結果がありません。`verified: [hardware]` を持つプリセットもありません。認証済みの小売計量器ではなく、法的拘束力のある数量や価格を主張するものでもありません。
+パッケージ版（cbbfa60）の上流では、検出、埋め込み、gallery 検索、MQTT 送信を 1 つのデバイス側サービスにまとめる処理がまだなく、エンドツーエンドの計数精度、棚スロット精度、連続稼働のデータはありません。認識結果は法定計量ではなく、価格計算や法的な数量の根拠には使えません。
 :::
 
 ## このソリューションでできること
 
-カメラでレジベルトまたは棚面を監視します。フレーム内の各商品をボックス化、crop、512 次元ベクトル化し、登録済み SKU の gallery で検索します。レジでは結果が basket（SKU と数量のリスト）となり、track id で集約してカメラを通過する 1 商品を 1 回だけ数えます。棚では slot state（ok、empty、wrong SKU、unknown）となり、planogram 位置ごとに集約します。1 フレームにつき 1 MQTT メッセージですべてを送信します。
+カメラでレジのベルトまたは棚の正面を撮影します。フレーム内の各商品を枠で囲んで切り出し、512 次元ベクトルに変換して、登録済み SKU の gallery で検索します。レジ側ではバスケット（SKU→数量。track id で集計し、カメラの前を通った商品は 1 回だけ数えます）、棚側ではスロット状態（ok、empty、wrong_sku、unknown。planogram の位置ごとに集計）を出力します。結果はフレームごとに 1 件の MQTT メッセージで送ります。
 
-店舗が商品を追加したときの動作が特徴です。**再学習はありません。** 新 SKU を 3～8 回撮影し、画像をコンソールへ送ると、gallery に新しい immutable version が追加されます。検出器は個別商品を学習しません。single-class で「ここに商品がある」とだけ判定し、embedder も更新しません。
+店舗で新商品を追加しても再学習は不要です。新しい SKU を 3～8 枚撮影してコンソールに送ると、gallery に新しい不変バージョンが作られます。検出器は単一クラスで「ここに商品がある」とだけ答えるため個々の商品を学習せず、埋め込みモデルも更新しません。
 
 - 選択と導入：[参考設計ページ](https://www.seeed.co.jp/solutions/reference-designs/edge_retail_recognition)
-- 上流リポジトリ：未公開。パッケージに `intro.links.github` はなく、作成時点のコードは内部リポジトリにあります。
+- 上流リポジトリ：未公開です。パッケージに `intro.links.github` はなく、パッケージ作成時点でコードは社内リポジトリにあります。
 
 <div class="info-section">
     <ul class="info-list">
         <li class="info-item">
             <div class="info-content">
-                <h3>新 SKU に必要なのは学習実行ではなく 3～8 枚の写真</h3>
-                <p>登録によって新しい immutable gallery version が作られます。登録画像を 1 枚から 8 枚に増やすと top-1 精度が 28 ポイント上がります（付録参照）。</p>
+                <h3>SKU の追加は写真 3～8 枚、再学習なし</h3>
+                <p>登録すると gallery の新しい不変バージョンが作られます。登録画像を 1 枚から 8 枚に増やすと top-1 が 28 ポイント上がります（性能と実測データを参照）。</p>
             </div>
         </li>
         <li class="info-item">
             <div class="info-content">
-                <h3>検出器は NPU へ正常に変換できます</h3>
-                <p>RK3588 の RKNN fp16 は 56.7 ms p50 で CPU 基準と 99.85% のボックスが一致し、Hailo-8 INT8 HEF は 9.04 ms p50、94.77% の一致率です。</p>
+                <h3>検出は NPU で実行</h3>
+                <p>RK3588 の RKNN fp16 は CPU 参照とのボックス一致率 99.85%、p50 56.7 ms。Hailo-8 の INT8 HEF は p50 9.04 ms、一致率 94.77% です。</p>
             </div>
         </li>
         <li class="info-item">
             <div class="info-content">
-                <h3>Embedding は crop あたり約 92 ms の CPU コスト</h3>
-                <p>reComputer R2000 シリーズ、4 スレッド、動的量子化 INT8 DINOv2-small で測定。同じ fp32 モデルとの差は 0.65 pp 以内です。</p>
+                <h3>自社のカメラと店舗システムをそのまま接続</h3>
+                <p>任意の RTSP / USB カメラを使えます。POS は MQTT から SKU→数量を読み、補充システムは欠品と誤配置のスロットを読みます。HTTP API でイベント照会と gallery 管理ができます。</p>
             </div>
         </li>
         <li class="info-item">
             <div class="info-content">
-                <h3>サイト外へ出るデータはありません</h3>
-                <p>カメラ、認識ホスト、コンソールホストはすべてローカルで、broker はコンソールスタック内で動作します。同梱 broker は匿名 plaintext のため、ベンチ外へ出す前にアカウントと TLS を追加してください。</p>
+                <h3>データは現場の外に出ません</h3>
+                <p>カメラ、認識ホスト、コンソールホストはすべてローカルにあり、broker もコンソールのコンテナで動きます。同梱の broker は匿名・平文のため、本番前にアカウントと TLS を設定してください。</p>
             </div>
         </li>
     </ul>
@@ -71,11 +71,11 @@ generated_from: sensecraft-solutions@cbbfa60
 
 ### コンソールの画面
 
-上流パッケージには管理 UI のスクリーンショットが 4 枚あります。イベント一覧、ボックスごとのイベント詳細、product gallery、レジ／棚ボードです。**4 枚すべて上流の `web_demo` tool が合成 fixture に対して生成したものです。** 含まれる SKU、similarity score、イベントは試験データであり、現場結果ではありません。インターフェースの形を示すだけで、認識品質を示しません。
+上流パッケージには管理 UI のスクリーンショットが 4 枚あります：イベント一覧、イベントのボックス別詳細、商品 gallery、レジ・棚ボードです。4 枚とも上流の `web_demo` ツールで合成フィクスチャから生成したもので、SKU、類似度、イベントはテストデータです。画面構成だけを示しています。
 
 ### 3 つの棚状態
 
-2026-09-07 に RK3588 と Hailo-8 搭載 reComputer R2000 シリーズで 1 回ずつ、棚判定を実行しました。各 slot は correct、empty、wrong SKU の 3 状態のいずれかになります。
+棚判定は reComputer RK3588 シリーズと reComputer R2000 シリーズ + Hailo-8 で実測しています。ボードは各スロットに 3 つの状態のいずれかを表示します：正しく陳列、欠品、誤配置。
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/shelf-ok-9b435de4.png" alt="すべての slot が gallery と一致し correct と表示された棚ボード"/>
@@ -89,55 +89,55 @@ generated_from: sensecraft-solutions@cbbfa60
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/shelf-wrong-sku-27b3ca7e.png" alt="slot に属さない商品。実際に一致した SKU とともに wrong SKU と表示"/>
 </div>
 
-3 つの状態の推移：
+3 つの状態が順に切り替わる様子：
 
 <div align="center">
   <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/shelf-states-c62596bb.gif" alt="同じ棚が correct、empty、wrong-SKU 状態を順に遷移"/>
 </div>
 
-レジチェーンは slot state ではなく、人ごと・商品ごとの track を生成します：
+レジ側のチェーンは商品ごとの軌跡を出力します：
 
 <div align="center">
   <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/checkout-tracks-9c544983.gif" alt="レジ画面の商品 track と商品ごとの認識"/>
 </div>
 
-これらのフレームは `edge-retail-recognition/evaluation/runs/2026-09-07-runtime-*` の 2 つのハードウェア実行から得ています。商品はプロジェクト用に購入した実物で、データセット画像ではありません。
+これらの画面は `edge-retail-recognition/evaluation/runs/2026-09-07-runtime-*` の 2 回の実機実行によるもので、商品はプロジェクトで購入した実物です。データセット由来の画像ではありません。
 
 ## 必要な機器
 
-各サイトに必要なのは、カメラ、認識ホスト、コンソールホスト、モデルごとの変換に一度使う x86_64 マシンの 4 つです。
+各拠点に必要なのは、カメラ、認識ホスト、コンソールホスト、x86_64 の変換用マシン（モデルごとに 1 回使用）の 4 つです。
 
-**① カメラ** — レジベルト上または棚に向けた任意の RTSP／USB カメラ。カメラ上では何も実行しません。重要なのは artifact にコンパイルされたフレームサイズで、レジは 640²、棚は 1280² です。
+**① カメラ** — レジの上方または棚の正面に設置する任意の RTSP / USB カメラで、カメラ上では何も動かしません。入力サイズは成果物にコンパイルされます：レジは 640²、棚は 1280² です。
 
-**② 認識ホスト** — プリセットが分かれ、実測値の基準となる機器です：
+**② 認識ホスト** — 3 つのプリセットの違いはここです：
 
-| | ホスト | このハードウェアでの実測 | 選択する場面 |
+| | ホスト | このハードウェアで測定した内容 | 選択する場面 |
 |---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" alt="reComputer R2000 series 8GB" width="110" /> | [reComputer R2000 series 8GB](https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html) + [Raspberry Pi AI HAT+ (Hailo-8, 26 TOPS)](https://www.seeedstudio.com/Raspberry-Pi-Al-HAT-26-TOPS-p-6243.html)<br/>検出器は NPU、embedder は 4 つの A76 コア | 両段階：検出 9.04 ms、crop あたり embedding 91.95 ms | 実際に使用するボード上で両段階の実測値が必要な場合 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>検出器は Rockchip NPU、embedder は CPU | 検出器のみ、RK3588（reComputer RK3588 series reComputer RK3588 series）：56.7 ms でボックス一致 99.85% | すでに Rockchip ボードを運用している場合。RK3576 は同じ toolchain ですが実測値はありません |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>TensorRT path | Nothing | You already run Jetson and accept that the backend has to be written first |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8、26 TOPS）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>検出器は NPU、埋め込みは 4 つの A76 コア | 両段階：検出 9.04 ms、crop あたりの埋め込み 91.95 ms | 検出と埋め込みの両方に実測データが必要な場合 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>検出器は Rockchip NPU、埋め込みは CPU | 検出器のみ、reComputer RK3588 シリーズで測定：ボックス一致 99.85%、56.7 ms | すでに Rockchip ボードを運用している場合。RK3576 は同じツールチェーンです |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>TensorRT 経路 | レジのリプレイ | すでに Jetson を運用している場合 |
 
-遅延値は各行に記載したハードウェア上の段階ごとの値です。デバイス上で 2 段階を連続実行するプロセスがまだないため、本設計にはスループットやストリーム数の値はありません。
+遅延はいずれもその行のハードウェアで測定した単一段階の値です。
 
-**③ コンソールホスト** — Docker を備え GPU のない amd64 または arm64 Linux マシンで、すべての認識デバイスから到達できるもの。登録／query サービス、管理 UI、MQTT broker の 3 コンテナを実行します。**どちらの container image も registry へ push していません。** 上流リポジトリからこのホスト上でビルドし、image が npm を実行しないため先に SPA をビルドします（`npm --prefix web/ui ci && npm --prefix web/ui run build`）。
+**③ コンソールホスト** — Docker が動く自社の amd64 または arm64 Linux マシンで、GPU は不要です。すべての認識デバイスからアクセスできる必要があります。登録・照会サービス、管理 UI、MQTT broker の 3 つのコンテナを動かします。**2 つのコンテナイメージはこのホスト上で上流リポジトリからビルドします。** レジストリからは取得しません。
 
-**④ 変換用 x86_64 マシン** — rknn-toolkit2 と Hailo Dataflow Compiler は対象ボード上で動作しません。導入ごとではなくモデルごとに一度必要です。
+**④ x86_64 の変換用マシン** — rknn-toolkit2 も Hailo Dataflow Compiler もターゲットボード上では動きません。変換はモデルごとに 1 回だけで、導入のたびに行う必要はありません。
 
 ## 現場での導入方法
 
-2 つの部分があります。各フレームで必要な crop 数を決める物理設置と、プリセットごとに 4 ステップのソフトウェアです。
+先に成果物とカメラ位置を決め、その後ソフトウェアを導入します。ソフトウェアはプリセットごとに 4 ステップです。
 
-### 1. 取り付け
+### 1. 取り付け：成果物を決めてからカメラ位置を決める
 
-:::tip[取り付け前に artifact を選ぶ]
-入力サイズは artifact にコンパイルされ、実行時には変更できません。640² artifact に棚画像を入力すると遠い商品を見失います。1280² にすると SKU-110K test の small-object mAP50-95 は 17.49 から 26.88 に上がります。まずレジか棚かを決め、その後商品が適切にフレームを占めるよう取り付けてください。
+:::tip[入力サイズは変換時に決まります]
+入力サイズは成果物にコンパイルされ、実行時には変更できません。640² の成果物で棚を見ると奥の商品を取りこぼします。1280² にすると SKU-110K test の小物体 mAP50-95 が 17.49 から 26.88 に上がります。レジか棚かを先に決め、商品が画面内で適切な割合を占める位置にカメラを取り付けてください。
 :::
 
-2 つ目の制約は光学ではなく算術です。Embedding は 1 ボックスにつき CPU を 1 回通ります。reComputer R2000 シリーズで実測 91.95 ms/crop の場合、5 商品の basket は約 0.5 秒、実測密度 157.6 ボックスの棚フレームは約 14 秒です。**棚への導入には frame skipping または slot レベルの sampling が必要で、これは tuning parameter ではなく設計判断です。**
+埋め込みはボックスごとに CPU 推論を 1 回行います。reComputer R2000 シリーズで実測した crop あたり 91.95 ms で計算すると、5 商品のバスケットで約 0.5 秒、棚のフレームは実測密度 157.6 ボックスで約 14 秒かかります。**棚の導入ではフレームを間引くか、スロット単位でサンプリングしてください。**
 
 ### 2. ソフトウェア、4 ステップ
 
-デバイスごとの手順は参考設計ページにあります。概要では、すべてのプリセットが同じ 4 つを実行します：
+デバイスごとの手順は参考設計ページにあります。ここでは流れだけを示します。3 つのプリセットとも同じ 4 ステップです：
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.co.jp/solutions/reference-designs/edge_retail_recognition" target="_blank">
@@ -145,14 +145,14 @@ generated_from: sensecraft-solutions@cbbfa60
     </a>
 </div><br />
 
-1. **コンソールスタックを起動します。** コンソールホスト上で登録サービス、UI、broker を起動し、導入時に role token table を書き込みます。既定 token や匿名 read はなく、空の table ではサービスは起動しません。
-2. **embedding model を配置します。** DINOv2 ONNX をコンソールが mount する場所へ置き、`RETAIL_EMBEDDER` を placeholder から切り替えます。上流の既定値は `fake` で、画像 byte を hash して vector にします。`GET /api/health` には報告されないため、「登録は成功するが lookup がすべて誤 SKU」という症状だけが現れます。
-3. **SKU を登録します。** 各 SKU 3～8 枚、最低でも 2 つの照明条件で前面、背面、側面を撮影します。3 枚未満は拒否され、同じ sku_id は `replace=true` でない限り 409 を返します。
-4. **ボード上で検出器を変換・確認します。** x86_64 ホストで変換し、artifact をコピーして CPU 基準との parity check を実行します。**現時点では各プリセットはここで止まります。** その後に起動するデバイス側サービスはありません。
+1. **コンソールを起動する** — 登録サービス、UI、broker はコンソールホストで動き、導入時にロール別の token 表を書き込みます。既定の token も匿名の読み取りもなく、表が空ならサービスは起動を拒否します。
+2. **埋め込みモデルを配置する** — DINOv2 の ONNX をコンソールがマウントする場所に置き、`RETAIL_EMBEDDER` をプレースホルダー実装から切り替えます。上流の既定値は `fake` で、画像のバイト列をハッシュしてベクトルにします。`GET /api/health` はこれを報告しないため、登録は正常でも検索のたびに誤った SKU が返ることが唯一の症状です。
+3. **SKU を登録する** — 1 SKU あたり 3～8 枚、少なくとも正面、背面、側面を 2 種類の照明で撮影します。3 枚未満は拒否され、同じ sku_id は `replace=true` を明示しない限り 409 を返します。
+4. **ボード上で検出器を変換・確認する** — x86_64 ホストで変換し、成果物をボードにコピーして、CPU 参照との一貫性確認を行います。
 
-ステップ 1～4 はプリセットごとに約 90 分、これにコンソールホストでの container build が加わります。
+4 ステップにはプリセットごとに約 90 分を見込み、これにコンソールホストでのコンテナビルド時間が加わります。
 
-**このステップの成功確認。** 1 回の認識で event stream に slot、matched SKU、similarity、ボックスごとの座標を含む完全なレコードが残ります。embedding model が実際に接続されているかを確認してください。`fake` 実装では similarity 分布が明らかに不自然です。
+**埋め込みモデルがつながっていることを確認する。** 1 回の認識でイベントストリームに完全な記録が残ります：スロット、一致した SKU、類似度、ボックスごとの座標です。`fake` 実装では類似度の分布が明らかに異常になります。
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/event-json-198d89fa.png" alt="1 認識イベントの全フィールド：slot、matched SKU、similarity、ボックスごとの座標"/>
@@ -160,121 +160,108 @@ generated_from: sensecraft-solutions@cbbfa60
 
 <!-- TODO 画像：現場に設置した棚とカメラ — 現場撮影が必要 -->
 
-## 自社システムへの接続方法
+## 利用できるインターフェース
 
-すべての出力はコンソールホストから提供されます。MQTT は 1883、HTTP は 8089 と 8080 の 2 面で、すべてローカルネットワーク上にあり、broker 以外は同じ token gate の背後です。
+出力はすべてコンソールホストにあります：1883 の MQTT と、8089 と 8080 の 2 つの HTTP インターフェースで、いずれもローカルネットワーク内です。broker 以外は同じ token 確認を通ります。
 
-- **レジまたは POS** は `retail/v1/events` を購読し、`summary.items`（フレームの SKU と数量の map）を読み取ります。ボックス配列を解析する必要はありません。
-- **補充または棚監査システム** は同じメッセージの `summary.empty_slots` と `summary.wrong_slots` を読み取ります。
-- **判定理由を説明する必要があるシステム**は `detections[]` 配列を読み取ります。ボックスごとの `track_id`、正規化 `bbox`、`sku_id`、`similarity`、`top2_margin`、`ocr` block、`fallback` flag が含まれます。
+- **レジ / POS** は `retail/v1/events` を購読して `summary.items` を読みます。フレームの SKU→数量のマップで、ボックスごとの配列を解析する必要はありません。
+- **補充・棚監査システム** は同じメッセージから `summary.empty_slots` と `summary.wrong_slots` を読みます。
+- **判定の根拠をたどる必要があるシステム** は `detections[]` を読みます。各ボックスに `track_id`、正規化された `bbox`、`sku_id`、`similarity`、`top2_margin`、`ocr` ブロック、`fallback` フラグが入っています。
 
 ### topic と payload の全体
 
-| インターフェース / ポート | Payload | 備考 |
+| インターフェース / ポート | 内容 | 備考 |
 |---|---|---|
-| MQTT `retail/v1/events`、1883 | `event_id`、`scene`、`timestamp`、`gallery.{version,sha256}`、`detections[]`、`summary.{items,empty_slots,wrong_slots}`、`models.{detector_sha256,embedder_sha256}` | フレームごとに 1 メッセージ。ボックスごとには送らない |
-| HTTP `/v1/gallery/skus`、8089 | sku_id、display name、aliases、licence field、3～8 画像を含む `POST` → 新しい immutable version | 重複 sku_id は `replace=true` 以外では 409 |
-| HTTP `/v1/gallery`、`/v1/gallery/{version}`、`/v1/gallery/current/download`、`/v1/gallery/rollback/{version}`、8089 | version 一覧、version ごとの manifest、SHA256SUMS を含む tar.gz、切替前に対象 SHA を再検証する rollback | rollback は新 version を作らない |
-| HTTP `/api/events`、`/api/events/{id}`、`/api/summary`、8080 | scene、SKU、device、時刻で絞り込むイベント一覧、ボックス詳細、ボード summary | 同じ token gate の背後にある read API |
+| MQTT `retail/v1/events`、1883 | `event_id`、`scene`、`timestamp`、`gallery.{version,sha256}`、`detections[]`、`summary.{items,empty_slots,wrong_slots}`、`models.{detector_sha256,embedder_sha256}` | フレームごとに 1 件。ボックスごとには送らない |
+| HTTP `/v1/gallery/skus`、8089 | sku_id、表示名、別名、ライセンス項目、画像 3～8 枚を `POST` → 新しい不変バージョンを作成 | 同じ sku_id は `replace=true` がなければ 409 |
+| HTTP `/v1/gallery`、`/v1/gallery/{version}`、`/v1/gallery/current/download`、`/v1/gallery/rollback/{version}`、8089 | バージョン一覧、バージョンごとの manifest、SHA256SUMS 付き tar.gz、切り替え前に対象の SHA を再検証するロールバック | ロールバックで新しいバージョンは作られない |
+| HTTP `/api/events`、`/api/events/{id}`、`/api/summary`、8080 | シーン / SKU / デバイス / 時間で絞り込むイベント一覧、ボックスごとの詳細、ボード集計 | 読み取り専用 API、同じ token 確認 |
 
-**最も誤読しやすいフィールドは `similarity` です。** 同じメッセージの `gallery.version`、`gallery.sha256`、model hash と一緒でなければ解釈できません。異なる embedder が生成した vector は比較できず、混在時の症状は「何も認識されない」です。そのためすべてのメッセージに 4 つすべてを含めます。
+**`similarity` は、同じメッセージの `gallery.version`、`gallery.sha256`、モデルハッシュと合わせて読んでください。** 異なる埋め込みモデルのベクトルは比較できず、混在すると何も認識できなくなります。そのため各メッセージにこの 4 項目を含めています。
 
-認証は `Bearer <token>` で、権限は viewer < operator < admin です。一方、同梱構成の broker は匿名 plaintext であり、1883 に到達できる誰でも偽の認識イベントを公開できます。
+認証は `Bearer <token>` で、ロールは viewer < operator < admin です。同梱の broker は匿名・平文の設定のため、ポート 1883 にアクセスできる人は誰でも偽の認識イベントを送れます。
 
-## エンジニア向け：実装の詳細
+## 性能と実測データ
 
-### 2 つのモデルと分離する理由
+### 検出、デバイス実測
 
-classifier なら新商品ごとに再学習が必要です。本設計では商品 identity を学習するものがないよう問題を分離します：
+| デバイス | 成果物 | p50 / p95 | CPU 参照値とのボックス一致率 |
+|---|---|---:|---:|
+| reComputer R2000 シリーズ + Hailo-8 | INT8 HEF、640² | 9.04 / 9.10 ms | 94.77%（200 枚）、94.68%（300 枚） |
+| reComputer RK3588 シリーズ | RKNN fp16、640² | 56.7 / 89.5 ms | 99.85% |
+| reComputer RK3588 シリーズ | RKNN INT8、640² | 26.0 / 33.2 ms | 98.35% |
 
-| 段階 | モデル | 出力 | SKU 追加時に変わるか |
-|---|---|---|---|
-| 検出 | YOLOX-Tiny、single class、640² または 1280² | ボックス、クラスなし | いいえ |
-| Embedding | EC 商品画像で ArcFace fine-tune した DINOv2 — base（348 MB fp32）または small（23.5 MB INT8） | crop ごとの 512-d vector | いいえ |
-| Identity | versioned gallery に対する FAISS cosine lookup | SKU + similarity + top-2 margin | **はい — 新しい immutable gallery version** |
-| Aggregation | track id（レジ）または planogram slot（棚） | basket、または ok / empty / wrong_sku / unknown | いいえ |
+条件：一致率は IoU ≥ 0.5 で CPU 参照値と比較しています。Hailo の単一ストリームのスループットは 110.4 fps です（`hailortcli benchmark` で 110.64 fps、純粋なハードウェア時間 8.21 ms。差の 0.8 ms は Python vstream の往復です）。**reComputer R2000 シリーズでのエンドツーエンド（letterbox、出力の結合、デコード、NMS を含む）は p50 18.74 ms / p95 24.25 ms** です。約 160 ボックスに対する純粋な numpy のクラス別 NMS が推論そのものより時間がかかります。
 
-### ランタイム対応表
+再現：`evaluation/runs/2026-09-06-det-hef/`、`evaluation/runs/2026-09-06-det-rk3588-radxa/`
 
-| ホスト | 検出器 | Embedder | 配備 |
-|---|---|---|---|
-| RK3588 / RK3576 | NPU 上の `.rknn` fp16 または INT8 | CPU 上の onnxruntime、RKNN 変換はなし | x86_64 host で rknn-toolkit2 2.3.2 により変換、onnx は 1.16.1 に固定、setuptools は 81 未満。toolkit version はボードの `librknnrt.so` と一致必須 |
-| reComputer R2000 シリーズ + Hailo-8 | NPU 上の INT8 `.hef` | CPU 上の動的量子化 INT8 DINOv2-small | x86_64 host の Hailo Dataflow Compiler でコンパイルし、Pi へコピー |
-| Jetson Orin | 未実装 | 未実装 | 上流の `platforms/` にあるのは console、hailo、rknn のみ。README の Jetson 項目は donor project から引き継いだもので、コピーされていないファイルを指す |
+### 埋め込み、デバイス実測
 
-rknn-toolkit2 と `librknnrt.so` のバージョン不一致は、**常に明示的な失敗になるとは限りません。** ロードできても誤った数値を出すことがあります。CPU 基準との parity check はまさにこのためにあり、省略できません。
-
-### gallery version プロトコル
-
-gallery は唯一の mutable state で、新しい version を発行することでのみ変更されます：
-
-| プロパティ | 動作 |
-|---|---|
-| Version directory | Immutable：vector、SKU table、FAISS index、manifest、SHA256SUMS |
-| Manifest | vector を生成した embedding model と preprocessing を記録 |
-| Switch | atomic、single-writer lock |
-| Rollback | 切替前に対象 version の SHA を再検証し、新 version は発行しない |
-| Download | `current/download` が SHA256SUMS 入り tar.gz を提供 |
-
-**これはコンソール側だけ実装済みで、デバイス側は未実装です。** version を取得し、checksum を検証し、atomic に切り替える runtime はまだ存在しません。そのため新規登録 SKU は現在デバイスへ届きません。
-
-### 仕様化済みで未実装のもの
-
-- **OCR reranking。** `top2_margin` field と `ocr` block は message schema にありますが、top-1 と top-2 の similarity が近い場合に使う reranking は未実装です。
-- **VLM fallback。** 同じ理由で `fallback` block は schema にあります。
-- **デバイス側 pipeline**（全 platform）。
-- **TensorRT backend**（Jetson preset）。
-
-## 付録：実測データ
-
-数値を確認しない場合はこの節を読み飛ばせます。以下はすべて記載したハードウェアで測定しており、類似ボードから補間した値はありません。上流 evaluation tree のすべての boundary file が `reproduced_by: null` を持ちます。
-
-### 検出、ハードウェア上
-
-| ホスト | Artifact | p50 / p95 | CPU 基準とのボックス一致率 | 出典 |
-|---|---|---:|---:|---|
-| reComputer R2000 シリーズ + Hailo-8 | INT8 HEF、640² | 9.04 / 9.10 ms | 94.77%（200 images）、94.68%（300 images） | `evaluation/runs/2026-09-06-det-hef/` |
-| RK3588（reComputer RK3588 series reComputer RK3588 series） | RKNN fp16、640² | 56.7 / 89.5 ms | 99.85% | `evaluation/runs/2026-09-06-det-rk3588-radxa/` |
-| RK3588（reComputer RK3588 series reComputer RK3588 series） | RKNN INT8、640² | 26.0 / 33.2 ms | 98.35% | 同じ実行 |
-
-一致率は CPU 基準に対する IoU ≥ 0.5 です。Hailo の single-stream スループットは 110.4 fps で、`hailortcli benchmark` による 110.64 fps、純粋な hardware time 8.21 ms と独立クロスチェックしました。追加の 0.8 ms は Python vstream の往復です。**Pi 上のエンドツーエンド（letterbox、出力組み立て、decode、NMS を含む）は p50 18.74 ms / p95 24.25 ms**です。約 160 ボックスに対する pure-numpy のクラス別 NMS が推論より長くかかります。実行中に thermal throttling は観測されませんでした。Hailo die 温度と電力はこの platform で読み取れず、推定せず unavailable と記録しています。
-
-### Embedding、ハードウェア上
-
-| variant | crop あたり p50 / p95 | fp32 との retrieval cost |
+| バリアント | クロップあたり p50 / p95 | fp32 に対する検索コスト |
 |---|---:|---|
-| DINOv2-small、dynamically quantised INT8、4 threads | 91.95 / 105.98 ms | 測定した 7 構成すべてで 0.65 pp 以内 |
-| DINOv2-small、fp32、4 threads | 180.75 / 233.41 ms | baseline |
-| DINOv2-small、static QDQ INT8（activations も quantised） | — | **3.78〜9.96 points 低下、使用不可** |
+| DINOv2-small、動的量子化 INT8、4 スレッド | 91.95 / 105.98 ms | 実測した 7 段階すべてで 0.65pp 以内 |
+| DINOv2-small、fp32、4 スレッド | 180.75 / 233.41 ms | 基準 |
 
-reComputer R2000 シリーズ CPU で測定。`evaluation/runs/2026-09-06-embed-small/` §8。ここでは weight-only quantisation のコストはほぼありませんが、activation の量子化は異なります。
+条件：reComputer R2000 シリーズの CPU。重みだけを量子化すると検索精度はほとんど落ちず、活性化も量子化すると大きく落ちます。
 
-### Retrieval と検出精度、デバイス外
+再現：`evaluation/runs/2026-09-06-embed-small/` §8
+
+### 検索と検出の精度（デバイス外）
 
 | 構成 | 結果 | データセット |
 |---|---:|---|
-| DINOv2-base、SKU ごとに登録画像 8 枚 | 84.67% top-1 / 96.66% top-5 | Grocery Store Dataset、81 classes、fp32 |
-| DINOv2-small、SKU ごとに登録画像 8 枚 | 79.11% top-1 | 同上 |
-| DINOv2-small、SKU ごとに登録画像 1 枚 | 51.11% top-1 | 同上 |
-| DINOv2-base、SKU ごとに画像 8 枚、held-out SKU | 78.92% top-1 | Products-10K held-out split、さらに多い classes |
-| Detector、640² preset | 52.84 mAP50-95、88.26 mAP50 | SKU-110K test |
-| Detector、1280² preset | 56.32 mAP50-95 | SKU-110K test |
+| DINOv2-base、SKU あたり登録画像 8 枚 | top-1 84.67% / top-5 96.66% | Grocery Store Dataset、81 クラス、fp32 |
+| DINOv2-small、SKU あたり登録画像 8 枚 | top-1 79.11% | 同上 |
+| DINOv2-small、SKU あたり登録画像 1 枚 | top-1 51.11% | 同上 |
+| DINOv2-base、SKU あたり 8 枚、保留 SKU | top-1 78.92% | Products-10K の保留セット、クラス数ははるかに多い |
+| 検出器、640² | mAP50-95 52.84、mAP50 88.26 | SKU-110K test |
+| 検出器、1280² | mAP50-95 56.32 | SKU-110K test |
 
-両検出器の境界値はプロジェクト独自の failure tier にあり、その閾値は 60 mAP50-95 です。この 60 は本プロジェクトが全 metric に一律で適用する汎用値であり、SKU-110K に合わせて設定されたものではありません。SKU-110K の公開成績は 58.0（DenseDet、Cascade R-CNN + ResNeXt-101）から 58.7（arXiv 2007.11946）です。640² の mAP50 は 88.26 で、ボックスは見つかるものの、タイトには配置されていません。small-object mAP50-95 は 640² の 17.49 から 1280² の 26.88 へ上がるため、棚 preset は別 artifact になっています。
+SKU-110K の公開成績は mAP50-95 58.0（DenseDet、Cascade R-CNN + ResNeXt-101）から 58.7（arXiv 2007.11946）です。640² では mAP50 が 88.26、mAP50-95 が 52.84 で、ボックスは見つかりますが位置精度が足りません。検索に最も影響するのは登録視点の数です。同じモデル、同じデータセットで、SKU あたり 1 枚では 51.11%、8 枚では 79.11% です。
 
-本ページで最大の変数は SKU ごとの登録 view 数です。同じモデルとデータセットで、画像 1 枚では 51.11%、8 枚では 79.11% です。
+再現：`evaluation/runs/`（埋め込み評価：`evaluation/eval_embedder.py`）
+
+### ランタイムと主要パラメータ
+
+| デバイス | 検出器 | 埋め込み器 | モデルをデバイスに届ける方法 |
+|---|---|---|---|
+| reComputer RK3588 / RK3576 シリーズ | NPU 上の `.rknn`、fp16 または INT8 | CPU 上の onnxruntime、RKNN 変換なし | x86_64 ホストで rknn-toolkit2 2.3.2 により変換します。toolkit のバージョンはボード上の `librknnrt.so` と一致させる必要があります |
+| reComputer R2000 シリーズ + Hailo-8 | NPU 上の INT8 `.hef` | CPU 上で動的量子化 INT8 の DINOv2-small | x86_64 ホストで Hailo Dataflow Compiler によりコンパイルし、ボードにコピーします |
+| reComputer J40 シリーズ（Jetson Orin） | TensorRT fp16（GPU） | TensorRT fp16（GPU） | 検出・埋め込み・検索・通知までの一連のリプレイを J4012 と J3011 で実行済みです |
+
+検出器は単一クラスの YOLOX-Tiny（640² または 1280²）です。埋め込み器は EC サイトの商品画像で ArcFace により微調整した DINOv2 で、base（348 MB fp32）または small（23.5 MB INT8）、クロップごとに 512 次元ベクトルを出力します。SKU の識別はバージョン管理された gallery の FAISS コサイン検索だけが持ちます。
+
+- 入力サイズ：レジは **640²**、棚は **1280²**。成果物にコンパイルされ、実行時には変更できません
+- 登録画像：SKU あたり **3–8 枚**。3 枚未満は拒否されます
+- `RETAIL_EMBEDDER`：上流のデフォルトは `fake`（画像のバイト列をハッシュしてベクトルにする）です。配備時に DINOv2 ONNX へ切り替えてください
+
+### 既知の劣化
+
+- 埋め込みはボックスごとに 1 回の CPU 推論です。クロップあたり 91.95 ms では、5 点のかごで約 0.5 秒、棚の 1 フレーム（157.6 ボックス）で約 14 秒かかるため、棚の配備ではフレームを間引くか棚スロット単位でサンプリングしてください。
+- 静的 QDQ INT8（活性化も量子化）は検索精度が 3.78–9.96 ポイント下がり、使用できません。
+- rknn-toolkit2 と `librknnrt.so` のバージョンが一致しないと、正常に読み込まれたまま誤った値を返すことがあります。変換のたびに CPU 参照値との一致を確認してください。
+- 640² の成果物で棚を見ると奥の商品を見逃します。SKU-110K の小物体 mAP50-95 は 640² で 17.49、1280² で 26.88 です。
+- 異なる 2 つの埋め込み器のベクトルは比較できず、混在させると何も認識されなくなります。
+- デバイス側で gallery のバージョンを取得し、検証し、アトミックに切り替えるランタイムは未実装で、新しく登録した SKU はデバイスに自動配信されません。
+- OCR による再ランキングと VLM フォールバックは未実装です。メッセージには `top2_margin`、`ocr`、`fallback` ブロックがありますが、コードは未実装です。
+
+### 次のステップ
+
+- reComputer J40 シリーズ（J4012 / J3011）の TensorRT バックエンドでの検出、埋め込み、レジのリプレイの実測を「性能と実測データ」とランタイム表に追加します。
+- 受け入れ指標として、レジの計数精度と棚スロット精度を測定します。
+- デバイス側で gallery のバージョンを取得し、検証し、アトミックに切り替えるランタイムを実装し、新しく登録した SKU がデバイスに自動配信されるようにします。
 
 ## データと素材の出典
 
-**モデル重みもデータセット画像も、このパッケージには同梱していません。** 以下の制約はデータセットで学習したものすべてに及ぶため、商用導入はライセンス確認だけでなく再学習の作業になります。
+**パッケージにはモデルの重みもデータセットの画像も含まれていません。** 以下の制限はこれらのデータで学習したモデルにも引き継がれるため、商用導入には商用利用可能なデータで検出器と埋め込みモデルを再学習する必要があります。
 
-| 素材 | ライセンス / 範囲 | 備考 |
+| 素材 | ライセンス / 利用範囲 | 備考 |
 |---|---|---|
-| 検出器重み（[SKU-110K](https://github.com/eg4000/SKU110K_CVPR19) で学習） | Trax licence：academic と non-commercial。clause (iii) は derivative works を禁止 | `use_scope: academic-only`、`redistributable: false` |
-| Embedder 重み（JD Products-10K で fine-tune） | 非商用の研究・教育 | `use_scope: non-commercial`、`redistributable: false` |
-| `facebook/dinov2-base`、`facebook/dinov2-small` backbone | Apache-2.0 | 制限は backbone ではなく学習データに由来 |
-| [Grocery Store Dataset](https://github.com/marcusklasson/GroceryStoreDataset) | MIT | Retrieval 評価のみ。この集合で唯一商用利用可能なデータセット |
-| RPC、Unitail-OCR、GroZi-120 | CC BY-NC-SA 4.0 / academic only / データセット所有者への確認が必要 | 上流 evaluation plan に登場。非商用範囲 |
-| プロジェクトコード | Apache-2.0 | |
+| 検出器の重み（[SKU-110K](https://github.com/eg4000/SKU110K_CVPR19) で学習） | Trax ライセンス：学術・非商用。第 (iii) 項で派生物を禁止 | `use_scope: academic-only`、`redistributable: false` |
+| 埋め込みモデルの重み（JD Products-10K で fine-tune） | 非商用の研究・教育 | `use_scope: non-commercial`、`redistributable: false` |
+| `facebook/dinov2-base`、`facebook/dinov2-small` のバックボーン | Apache-2.0 | バックボーンは商用利用可能で、制限は学習データに由来 |
+| [Grocery Store Dataset](https://github.com/marcusklasson/GroceryStoreDataset) | MIT | 検索評価のみ。この中で唯一商用利用可能なデータセット |
+| RPC、Unitail-OCR、GroZi-120 | CC BY-NC-SA 4.0 / 学術のみ / ライセンスはデータセット提供元に要確認 | 上流の評価計画に含まれる。非商用の範囲 |
+| プロジェクト自身のコード | Apache-2.0 | |
 
-artifact ごとのフィールド（`license_id`、`use_scope`、`redistributable`、`source_revision`、`sha256`）は上流 model cards にあり、概要はパッケージの `gallery/ATTRIBUTION.md` にあります。参考設計ページのアーキテクチャ図はパッケージのデバイスカタログから描いた独自素材です。
+成果物ごとの項目（`license_id`、`use_scope`、`redistributable`、`source_revision`、`sha256`）は上流の model card にあり、概要はパッケージの `gallery/ATTRIBUTION.md` にあります。参考設計ページのアーキテクチャ図は、パッケージのデバイス一覧から自作したものです。
