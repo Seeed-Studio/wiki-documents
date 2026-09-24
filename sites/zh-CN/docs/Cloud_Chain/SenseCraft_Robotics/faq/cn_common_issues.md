@@ -5,7 +5,7 @@ keywords:
   - SenseCraft Robotics
   - FAQ
   - troubleshooting
-image: /sensecraft-robotics/faq/calibration-joint-error.webp
+image: https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/calibration-joint-error.webp
 slug: /sensecraft_robotics_common_issues
 last_update:
   date: 09/24/2026
@@ -119,7 +119,7 @@ last_update:
 3. 检查“绑定串口”步骤，确认主臂 Leader 与从臂 Follower 的串口没有绑定反。
 4. 检查主臂接线、菊花链连接和 USB 连接是否正常。
 
-![机械臂关节异常报错示例](/sensecraft-robotics/faq/calibration-joint-error.webp)
+![机械臂关节异常报错示例](https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/calibration-joint-error.webp)
 
 ### 校准时报串口未连接或写入失败怎么办？
 
@@ -127,7 +127,7 @@ last_update:
 
 处理时先停止校准，再重新检查主臂和从臂供电、USB 线、串口绑定和设备型号。确认连接恢复后，重新点击“扫描串口”并再次校准。
 
-![串口写入失败报错示例](/sensecraft-robotics/faq/calibration-serial-write-failed.webp)
+![串口写入失败报错示例](https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/calibration-serial-write-failed.webp)
 
 ### 主臂校准完成后，从臂校准报错怎么办？
 
@@ -135,7 +135,7 @@ last_update:
 
 建议检查从臂电源是否上电、电压是否符合标准，并确认从臂接线、舵机链路、CAN 或串口连接正常。必要时重新绑定从臂端口后再开始校准。
 
-![从臂校准报错示例](/sensecraft-robotics/faq/follower-calibration-error.webp)
+![从臂校准报错示例](https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/follower-calibration-error.webp)
 
 ### SoArm 自动校准需要注意什么？
 
@@ -155,7 +155,7 @@ SoArm 自动校准前，需要确认机械臂周围有足够空间，避免自�
 4. 检查主臂接线是否正常。
 5. 重新校准后再进行小幅、缓慢的遥操作验证。
 
-![遥操作验证失败示例](/sensecraft-robotics/faq/teleoperation-validation-failed.webp)
+![遥操作验证失败示例](https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/teleoperation-validation-failed.webp)
 
 ## 摄像头与采集性能
 

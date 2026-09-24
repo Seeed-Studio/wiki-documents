@@ -5,7 +5,7 @@ keywords:
   - SenseCraft Robotics
   - robotics
   - robot arm
-image: /sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-zh.webp
+image: https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-zh.webp
 slug: /sensecraft_robotics
 last_update:
   date: 09/24/2026
@@ -15,7 +15,7 @@ last_update:
 ## 1. 软件介绍
 
 SenseCraft™ Robotics 是面向真实机械臂任务的训练与运行平台，提供从设备接入、标定、数据采集到模型训练和验证的一体化流程，帮助教育、科研与机器人应用更快完成从示范数据到物理动作的验证。
-![SenseCraft Robotics 官方网站](/sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-zh.webp)
+![SenseCraft Robotics 官方网站](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-zh.webp)
 
 ### 1.1 软件概览
 
@@ -47,7 +47,7 @@ SenseCraft™ Robotics 是面向真实机械臂任务的训练与运行平台，
 
 ### 2.1 支持的机械臂
 
-![三款机械臂选择建议](/sensecraft-robotics/guide-assets/overview/device-selection-guide-zh.webp)
+![三款机械臂选择建议](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/device-selection-guide-zh.webp)
 
 可根据使用目标选择设备：入门学习和基础开发选择入门款；需要更强性能和二次开发能力时选择进阶款；对定位精度和动作稳定性要求较高的项目选择高精度应用款。
 
@@ -72,7 +72,7 @@ SenseCraft™ Robotics 是面向真实机械臂任务的训练与运行平台，
 ## 3. 软件下载安装
 
 
-![软件下载](/sensecraft-robotics/guide-assets/overview/software-overview-zh.webp)
+![软件下载](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/software-overview-zh.webp)
 
 ### 3.1 下载软件
 
@@ -85,7 +85,7 @@ SenseCraft™ Robotics 是面向真实机械臂任务的训练与运行平台，
 ### 3.3 注册账号
 
 在用户中心选择“注册”或“创建账号”，按页面提示完成邮箱验证和密码设置。注册完成后，返回 SenseCraft Robotics 客户端。
-![注册账号](/sensecraft-robotics/guide-assets/overview/sign-up-zh.webp)
+![注册账号](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/sign-up-zh.webp)
 
 ### 3.4 登录软件
 
@@ -95,7 +95,7 @@ SenseCraft Robotics 客户端通过系统浏览器打开 SenseCraft 用户中心
 2. 系统浏览器会打开 SenseCraft 用户中心；使用注册邮箱和密码登录，并按提示完成账号验证或授权。
 3. 登录完成后进入“项目”页面，可创建新项目或打开已有项目。
 
-    ![登录页](/sensecraft-robotics/guide-assets/overview/login-overview-zh.webp)
+    ![登录页](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/login-overview-zh.webp)
 
 ## 4. 软件整体介绍
 
@@ -104,7 +104,7 @@ SenseCraft Robotics 客户端通过系统浏览器打开 SenseCraft 用户中心
 ### 4.1 首页
 
 首页用于查看平台入口、项目状态和常用功能。首次使用时，可从首页进入项目或查看帮助信息。
- ![首页概述](/sensecraft-robotics/guide-assets/overview/overview-zh.webp)
+ ![首页概述](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/overview-zh.webp)
 
 <span id="projects"></span>
 
@@ -119,7 +119,7 @@ SenseCraft Robotics 客户端通过系统浏览器打开 SenseCraft 用户中心
 5. 检查数据集并上传或训练模型。
 6. 选择模型进行运行验证。
 
-   ![项目设置](/sensecraft-robotics/guide-assets/overview/project-settings-zh.webp)
+   ![项目设置](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/project-settings-zh.webp)
 
 <span id="settings"></span>
 
@@ -133,7 +133,7 @@ SenseCraft Robotics 客户端通过系统浏览器打开 SenseCraft 用户中心
     *   **服务连接**：管理与第三方 AI 平台（如 Hugging Face）的授权接入。
     *   **版本管理**：查看当前软件版本号并检查更新，支持快捷执行**检查更新**、**下载更新**或**重启并更新**等操作。遇到验证问题时，也可通过提示快捷前往官网下载。
 
-   ![设置](/sensecraft-robotics/guide-assets/overview/settings-zh.webp)
+   ![设置](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/settings-zh.webp)
 
 <span id="credits"></span>
 

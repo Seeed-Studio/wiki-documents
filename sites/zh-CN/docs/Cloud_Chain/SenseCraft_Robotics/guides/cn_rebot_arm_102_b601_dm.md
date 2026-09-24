@@ -5,7 +5,7 @@ keywords:
   - SenseCraft Robotics
   - reBot Arm 102
   - B601 DM
-image: /sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp
+image: https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp
 slug: /sensecraft_robotics_rebot_arm_102_b601_dm
 last_update:
   date: 09/24/2026
@@ -15,7 +15,7 @@ last_update:
 本教程使用 reBot Arm 102（主臂）和 B601 DM（从臂）配合 SenseCraft Robotics，介绍从项目创建、设备设置、数据采集到模型训练和运行的完整流程。
 文中使用“将物品从 A 点夹取并放置到 B 点”作为示例任务，仅用于说明操作方法。实际使用时，用户可以根据需求设计应用场景，例如物体分拣、搬运、装箱、按键或插拔等。
 
-![DM 机械臂夹取与搬运任务示例](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp)
+![DM 机械臂夹取与搬运任务示例](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp)
 
 
 > **版本提示**
@@ -37,7 +37,7 @@ last_update:
 ## 1. 准备工作
 
 ### 1.1 硬件
-![硬件清单](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-1-hardware-list-dm-en.webp)
+![硬件清单](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-1-hardware-list-dm-en.webp)
 
 > 机械臂需完成组装、固定、上电和 USB 连接。未完成组装时，请参考[第一步:组装机械臂](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/#%E7%AC%AC%E4%B8%80%E6%AD%A5%E7%BB%84%E8%A3%85%E6%9C%BA%E6%A2%B0%E8%87%82)。
 
@@ -104,7 +104,7 @@ last_update:
 - 准备尺寸适中、便于夹取的物体，例如红色积木或柔软物品。
 - 确保 A 点、B 点、机械臂和物体均位于摄像头视野内，且不被遮挡。
 - 清理机械臂活动范围，移除人员、杂物、线缆和易碎物；调整主臂位置，避免其靠近从臂或出现在从臂摄像头画面中。
-![任务场景与安全示例](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-3-scene-and-safety-dm-en.webp)
+![任务场景与安全示例](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-3-scene-and-safety-dm-en.webp)
 
 
 <span id="connect-arms"></span>
@@ -134,12 +134,12 @@ last_update:
   1. 将 **12V 2A 电源适配器**连接到机械臂的电源接口。
   2. 将适配器接入插板，完成上电。
 
-![固定和连接 reBot Arm 102（主臂）](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+![固定和连接 reBot Arm 102（主臂）](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
 
 ---
 
 ### 2.2 固定和连接 B601 DM（从臂）
-![连接 B601 DM 线束](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp)
+![连接 B601 DM 线束](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp)
 
 #### 步骤 3：固定 B601 DM
 使用 G 型夹将 B601 DM 固定在稳定、平整的桌面上。固定后，轻轻左右转动机械臂，确认底座不会移动。
@@ -158,7 +158,7 @@ last_update:
   2. 将信号/电源分离板连接至 **24V 电源适配器**。
   3. 将电源适配器接入插座。确认机械臂固定、线束正确且周围无障碍后，再打开电源。
 
-![连接 B601 DM（从臂）](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
+![连接 B601 DM（从臂）](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
 
 
 
@@ -173,7 +173,7 @@ last_update:
 | 新建项目 | 点击“新建项目” → 填写项目名称和描述 → 点击“创建并开始” |
 | 打开已有项目 | 在项目列表中选择项目 → 打开项目 |
 
-![新建项目窗口](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-create-project-dm-zh.webp)
+![新建项目窗口](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-create-project-dm-zh.webp)
 
 
 ### 3.1 项目概览
@@ -182,7 +182,7 @@ last_update:
 
 如果页面显示“待配置”或“未连接”，点击“去设备设置”开始配置机械臂。
 
-![项目概览](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-1-device-selection-dm-zh.webp)
+![项目概览](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-1-device-selection-dm-zh.webp)
 
 
 
@@ -196,7 +196,7 @@ last_update:
 
 在“设备配对”步骤选择 **reBot Arm 102 + B601 DM**，点击“下一步”进入串口绑定。
 
-![选择 reBot Arm 102 + B601 DM](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-1-device-pairing-dm-zh.webp)
+![选择 reBot Arm 102 + B601 DM](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-1-device-pairing-dm-zh.webp)
 
 
 #### 3.2.2 绑定主臂和从臂 USB 串口
@@ -206,7 +206,7 @@ last_update:
 3. **绑定从臂**：连接从臂（B601 DM），再次点击“重新扫描”，将新出现的串口绑定到从臂。
 4. 确认主臂和从臂均显示为“已连接”后，点击“下一步”。
 
-![绑定主臂与从臂串口](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-2-serial-binding-dm-zh.webp)
+![绑定主臂与从臂串口](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-2-serial-binding-dm-zh.webp)
 
 > **串口绑定与排查：**
 > - 每次扫描后只绑定新出现的串口，不要仅根据 COM 编号判断设备。
@@ -219,7 +219,7 @@ last_update:
 2. 点击“开始校准”，按照页面提示依次完成主臂零位、从臂零位和校准完成。
 3. 如果机械臂姿态不一致或校准异常，点击“重新校准”，不要继续后续操作。
 
-![机械臂校准验证](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-3-calibration-dm-en.webp)
+![机械臂校准验证](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-3-calibration-dm-en.webp)
 
 > 校准完成前，不要进行遥操作或数据采集。
 
@@ -233,7 +233,7 @@ last_update:
    - **正常**：点击“确认遥控正常”；
    - **异常**：点击“异常，返回重新校准”。
 
-![遥操作验证](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-4-teleoperation-dm-en.webp)
+![遥操作验证](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-4-teleoperation-dm-en.webp)
 
 > **重力补偿（可选）**
 > 机械臂有一定重量，手动调整从臂时可能比较费力。开启重力补偿后，系统会抵消部分重量，使从臂更容易移动。调整完成后，请关闭重力补偿，再进行遥操作验证。
@@ -245,8 +245,8 @@ last_update:
 摄像头用于记录机械臂执行任务时的视觉信息。根据摄像头的安装位置，常用的布局方式有以下两种：
 | 布局方式 | 安装与用途 | 适用场景 | 示意图 |
 |:---|:---|:---|:---|
-| 夹爪视角<br /> | <small><strong>俯视摄像头</strong>：安装在工作台前上方，覆盖工作区域。<br /><br /><strong>夹爪摄像头</strong>：安装在夹爪附近，观察抓取细节。</small> | <small>观察夹爪和物体接触过程的精细操作。</small> | ![夹爪视角布局](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-eye-in-hand-dm-en.webp)<br /><small>*备注：摄像头 3D 支架可自行设计。</small> |
-| 侧视辅助<br /> | <small><strong>俯视摄像头</strong>：安装在工作台前上方，覆盖工作区域。<br /><br /><strong>侧视摄像头</strong>：安装在工作台侧前方，观察机械臂高度和夹爪动作。</small> | <small>抓取、搬运和放置等任务。</small> | ![侧视辅助布局](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-eye-to-hand-dm-en.webp) |
+| 夹爪视角<br /> | <small><strong>俯视摄像头</strong>：安装在工作台前上方，覆盖工作区域。<br /><br /><strong>夹爪摄像头</strong>：安装在夹爪附近，观察抓取细节。</small> | <small>观察夹爪和物体接触过程的精细操作。</small> | ![夹爪视角布局](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-eye-in-hand-dm-en.webp)<br /><small>*备注：摄像头 3D 支架可自行设计。</small> |
+| 侧视辅助<br /> | <small><strong>俯视摄像头</strong>：安装在工作台前上方，覆盖工作区域。<br /><br /><strong>侧视摄像头</strong>：安装在工作台侧前方，观察机械臂高度和夹爪动作。</small> | <small>抓取、搬运和放置等任务。</small> | ![侧视辅助布局](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-eye-to-hand-dm-en.webp) |
 
 本教程采用<strong>侧视辅助布局</strong>。完成摄像头安装和摆放后：
 
@@ -254,7 +254,7 @@ last_update:
 2. 在“俯视摄像头”和“侧视摄像头”区域分别选择对应的视频流。
 3. 检查两个预览画面，确认机械臂、物体和目标位置清晰可见。确认无误后，点击“下一步”。
 
-![绑定俯视与侧视摄像头](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-camera-binding-dm-zh.webp)
+![绑定俯视与侧视摄像头](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-camera-binding-dm-zh.webp)
 
 > 如需确认摄像头与安装位置是否对应，可点击“查看相机布局”。如果画面黑屏或异常，重新扫描、重启摄像头或更换 USB 端口。
 
@@ -271,7 +271,7 @@ last_update:
 | 回放动作 | 点击“回放” | 检查动作是否完整、连续，<br />确认运动方向和夹爪开合是否正常 |
 > 首次录制动作前，请先在“设备设置”中完成设备连接和遥操作验证，并点击“确认遥控正常”。 如果回放结果异常，请删除该动作并重新录制。
 
-![动作列表与回放操作](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-3-action-replay-dm-zh.webp)
+![动作列表与回放操作](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-3-action-replay-dm-zh.webp)
 
 
 <span id="dataset"></span>
@@ -296,7 +296,7 @@ last_update:
 | 每段时长 | `20`～`30` 秒 | 覆盖完整动作过程 |
 | 休息时长 | `5` 秒 | 用于机械臂复位和场景调整 |
 
-![配置数据采集任务](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-1-dataset-config-dm-zh.webp)
+![配置数据采集任务](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-1-dataset-config-dm-zh.webp)
 
 #### 3.4.2 录制任务片段
 
@@ -307,7 +307,7 @@ last_update:
 3. 任务完成后，可等待剩余时间结束，或点击→（或空格）提前结束当前片段。
 4. 在休息时间内将物体放回 A 点，确认机械臂准备好；休息时间结束后，开始录制下一段任务。
 
-![录制任务片段](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-2-recording-episode-dm-zh.webp)
+![录制任务片段](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-2-recording-episode-dm-zh.webp)
 
 > **重要提醒⚠️**
 >
@@ -329,7 +329,7 @@ last_update:
 | 删除异常片段 | 点击“批量删除回合”，选择异常片段并确认；再点击“生成删除副本” | 修改新数据集名称后确认，原始数据集不会被覆盖 |
 | 合并数据集 | 点击“合并”，选择数据集并填写新数据集名称 | 建议合并任务描述、设备组合和摄像头配置一致的数据集 |
 
-![数据集检查与清理](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-3-dataset-cleanup-dm-zh.webp)
+![数据集检查与清理](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-3-dataset-cleanup-dm-zh.webp)
 
 
 <span id="training"></span>
@@ -363,7 +363,7 @@ last_update:
 
 确认设置无误后，点击“**开始训练**”按钮。训练开始后，可在“当前训练任务”列表中实时查看训练进度和历史任务。
 
-![训练配置界面](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-5-training-dm-zh.webp)
+![训练配置界面](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-5-training-dm-zh.webp)
 
 <span id="model"></span>
 
@@ -371,7 +371,7 @@ last_update:
 
 “模型”用于查看训练结果，并选择后续运行的模型。使用前请确认模型训练已完成，且对应的任务和设备组合与当前项目一致。
 
-![模型列表](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-6-model-dm-zh.webp)
+![模型列表](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-6-model-dm-zh.webp)
 
 <span id="run"></span>
 
@@ -398,4 +398,4 @@ last_update:
 - 运行期间：请勿断开或拆卸机械臂，并观察机械臂动作是否正常。
 - 运行效果不理想：请返回“数据集”页面删除异常片段，补充有效数据后重新训练。
 
-![模型运行界面](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-7-run-dm-zh.webp)
+![模型运行界面](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-7-run-dm-zh.webp)

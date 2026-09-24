@@ -5,7 +5,7 @@ keywords:
   - SenseCraft Robotics
   - SO-ARM101
   - robot arm
-image: /sensecraft-robotics/guide-assets/soarm/00-task-overview-soarm-en.webp
+image: https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/00-task-overview-soarm-en.webp
 slug: /sensecraft_robotics_so_arm101
 last_update:
   date: 09/24/2026
@@ -16,7 +16,7 @@ This tutorial uses an SO-ARM101 Leader arm and an SO-ARM101 Follower arm with Se
 
 The example task is to pick up an object at Point A and place it at Point B. It is provided only to explain the procedure. Users can design other application scenarios, such as sorting, handling, boxing, button pressing, or plugging and unplugging.
 
-![SO-ARM101 pick-and-place task example](/sensecraft-robotics/guide-assets/soarm/00-task-overview-soarm-en.webp)
+![SO-ARM101 pick-and-place task example](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/00-task-overview-soarm-en.webp)
 
 > **Version note**
 > Interface names, button locations, and training backends may change with SenseCraft Robotics versions. Serial ports such as COM21, COM35, COM3, and COM6, as well as dataset names, are examples from a video. Always use the devices detected by the current computer.
@@ -40,7 +40,7 @@ This tutorial follows the order of hardware setup and software operation:
 
 ### 1.1 Hardware
 
-![SO-ARM101 Pro hardware list](/sensecraft-robotics/guide-assets/soarm/01-1-hardware-list-soarm-en.webp)
+![SO-ARM101 Pro hardware list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/01-1-hardware-list-soarm-en.webp)
 
 The following list is based on the official **Part List** supplied with the SO-ARM101 kit.
 
@@ -88,7 +88,7 @@ For detailed instructions, refer to [Software download and account setup](/sense
 - Make sure Point A, Point B, both arms, and the object are visible in the camera views and are not obstructed.
 - Clear the arm workspace of people, clutter, cables, and fragile objects. Keep the Leader away from the Follower and out of the Follower camera view.
 
-![Task scene and safety example](/sensecraft-robotics/guide-assets/soarm/01-3-scene-and-safety-soarm-en.webp)
+![Task scene and safety example](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/01-3-scene-and-safety-soarm-en.webp)
 
 ---
 
@@ -108,7 +108,7 @@ For detailed instructions, refer to [Software download and account setup](/sense
 3. Keep a safe distance between the arms and leave the full range of motion clear for every joint.
 4. With the power disconnected, move each joint slowly by hand to confirm smooth movement without collisions, binding, or contact with mechanical limits.
 
-![Install the arm bodies](/sensecraft-robotics/guide-assets/soarm/02-1-install-arm-body-soarm-en.webp)
+![Install the arm bodies](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/02-1-install-arm-body-soarm-en.webp)
 
 ### 2.2 Install the control boards and connect USB-C
 
@@ -126,7 +126,7 @@ The data connections are:
 
 Use one USB-C cable to connect each control board to the computer. For easier serial-port identification, connect the arm ends first and connect the computer ends one at a time during the serial-port binding step in Section 3.2.2.
 
-![Install the control boards](/sensecraft-robotics/guide-assets/soarm/02-2-install-controller-board-soarm-en.webp)
+![Install the control boards](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/02-2-install-controller-board-soarm-en.webp)
 
 ### 2.3 Install the power interfaces and power on
 
@@ -143,7 +143,7 @@ Use one USB-C cable to connect each control board to the computer. For easier se
 2. Observe the control-board indicators. If an indicator is off, flashes abnormally, becomes hot, or produces an odor, disconnect power immediately and inspect the system.
 3. USB-C is used for data communication only. Power and USB-C must both be connected during device scanning, calibration, and teleoperation.
 
-![Install the power interfaces](/sensecraft-robotics/guide-assets/soarm/02-3-install-power-interface-soarm-en.webp)
+![Install the power interfaces](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/02-3-install-power-interface-soarm-en.webp)
 
 
 <span id="project"></span>
@@ -157,7 +157,7 @@ After signing in, open the **Projects** page. Create a project for first-time us
 | Create a project | Click **New Project** → enter the project name and description → click **Create and Start** |
 | Open an existing project | Select a project from the project list → open it |
 
-![Create a project](/sensecraft-robotics/guide-assets/soarm/03-create-project-soarm-en.webp)
+![Create a project](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-create-project-soarm-en.webp)
 
 ### 3.1 Project overview
 
@@ -165,7 +165,7 @@ The **Project Overview** shows the current status of the arms, device setup, dat
 
 If the page shows **To be configured** or **Not connected**, click **Go to Device Setup** to configure the arms.
 
-![Project overview](/sensecraft-robotics/guide-assets/soarm/03-1-project-overview-soarm-en.webp)
+![Project overview](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-1-project-overview-soarm-en.webp)
 
 <span id="device-setup"></span>
 
@@ -177,7 +177,7 @@ Device Setup is used for device selection, serial-port binding, arm calibration,
 
 In the **Device Pairing** step, select **SO-ARM101 + SO-ARM101**, then click **Next** to bind the serial ports.
 
-![Select SO-ARM101 + SO-ARM101](/sensecraft-robotics/guide-assets/soarm/03-2-1-device-pairing-soarm-en.webp)
+![Select SO-ARM101 + SO-ARM101](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-1-device-pairing-soarm-en.webp)
 
 #### 3.2.2 Bind the USB serial ports
 
@@ -186,7 +186,7 @@ In the **Device Pairing** step, select **SO-ARM101 + SO-ARM101**, then click **N
 3. **Bind the Follower:** Connect the Follower SO-ARM101, click **Rescan** again, and bind the newly appearing port to the Follower.
 4. Confirm that both arms show **Connected**, then click **Next**.
 
-![Bind the Leader and Follower serial ports](/sensecraft-robotics/guide-assets/soarm/03-2-2-serial-binding-soarm-en.webp)
+![Bind the Leader and Follower serial ports](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-2-serial-binding-soarm-en.webp)
 
 > **Serial-port troubleshooting:**
 > - After each scan, bind only the newly appearing port. Do not identify devices solely by their COM numbers.
@@ -210,7 +210,7 @@ Automatic Calibration automatically identifies the joint travel range. It is sui
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![ calibration selection](/sensecraft-robotics/guide-assets/soarm/03-2-3-calibration0-soarm-en.webp)
+![ calibration selection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-3-calibration0-soarm-en.webp)
 
 
 <figcaption>Calibration mode selection</figcaption>
@@ -219,7 +219,7 @@ Automatic Calibration automatically identifies the joint travel range. It is sui
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![Manual calibration](/sensecraft-robotics/guide-assets/soarm/03-2-3-automatic-calibration-soarm-en.webp)
+![Manual calibration](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-3-automatic-calibration-soarm-en.webp)
 
 
 <figcaption>Manual calibration</figcaption>
@@ -241,7 +241,7 @@ If a joint does not have a reliable physical stop, or if you need to confirm the
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![Manual calibration](/sensecraft-robotics/guide-assets/soarm/03-2-3-manual-calibration-soarm-en.webp)
+![Manual calibration](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-3-manual-calibration-soarm-en.webp)
 
 
 <figcaption>Manual calibration</figcaption>
@@ -250,7 +250,7 @@ If a joint does not have a reliable physical stop, or if you need to confirm the
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![Manual calibration](/sensecraft-robotics/guide-assets/soarm/03-2-3-calibration2-soarm-en.webp)
+![Manual calibration](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-3-calibration2-soarm-en.webp)
 
 
 <figcaption>Manual calibration</figcaption>
@@ -270,7 +270,7 @@ Teleoperation verification confirms that the Follower correctly follows the Lead
    - **Normal:** click **Confirm Teleoperation Normal**.
    - **Abnormal:** click **Abnormal, Return to Recalibrate**.
 
-![Teleoperation verification](/sensecraft-robotics/guide-assets/soarm/03-2-4-teleoperation-soarm-en.webp)
+![Teleoperation verification](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-4-teleoperation-soarm-en.webp)
 
 > **Gravity compensation (optional)**
 > The arms have some weight, so manually adjusting the Follower may require effort. Gravity compensation offsets part of the weight and makes adjustment easier. Turn it off after adjustment and before teleoperation verification. Gravity compensation is for adjusting the Follower; it does not control the Follower to follow the Leader.
@@ -281,8 +281,8 @@ Two cameras and two views are required for data collection and model training. D
 
 | Layout | Installation and purpose | Suitable scenarios | Illustration |
 |:---|:---|:---|:---|
-| Gripper view | **Top-view camera:** mounted above the front of the workbench to cover the work area.<br /><br />**Gripper camera:** mounted near the gripper to observe grasping details. | Fine operations that require observing contact between the gripper and the object. | ![Gripper-view layout](/sensecraft-robotics/guide-assets/soarm/03-2-5-eye-in-hand-soarm-en.webp)<br /><small>*Note: You may design your own 3D camera mount.*</small> |
-| Side-view assistance | **Top-view camera:** mounted above the front of the workbench to cover the work area.<br /><br />**Side-view camera:** mounted at the front side of the workbench to observe arm height and gripper motion. | Tasks such as grasping, handling, and placing. | ![Side-view assistance layout](/sensecraft-robotics/guide-assets/soarm/03-2-5-eye-to-hand-soarm-en.webp) |
+| Gripper view | **Top-view camera:** mounted above the front of the workbench to cover the work area.<br /><br />**Gripper camera:** mounted near the gripper to observe grasping details. | Fine operations that require observing contact between the gripper and the object. | ![Gripper-view layout](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-5-eye-in-hand-soarm-en.webp)<br /><small>*Note: You may design your own 3D camera mount.*</small> |
+| Side-view assistance | **Top-view camera:** mounted above the front of the workbench to cover the work area.<br /><br />**Side-view camera:** mounted at the front side of the workbench to observe arm height and gripper motion. | Tasks such as grasping, handling, and placing. | ![Side-view assistance layout](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-5-eye-to-hand-soarm-en.webp) |
 
 This tutorial uses the **side-view assistance layout**. Connect both cameras, install and position them, and then:
 
@@ -290,7 +290,7 @@ This tutorial uses the **side-view assistance layout**. Connect both cameras, in
 2. Select the corresponding video streams in the **Front Camera** and **Side Camera** areas.
 3. Check both previews to confirm that the arms, object, and target position are clearly visible. Click **Next** after confirming.
 
-![Bind the front and side cameras](/sensecraft-robotics/guide-assets/soarm/03-2-5-camera-binding-soarm-en.webp)
+![Bind the front and side cameras](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-2-5-camera-binding-soarm-en.webp)
 
 > To confirm that each camera matches its mounting position, click **View Camera Layout**. If a preview is black or abnormal, rescan, restart the camera, or change the USB port.
 
@@ -307,7 +307,7 @@ This tutorial uses the **side-view assistance layout**. Connect both cameras, in
 
 > Before recording an action for the first time, complete device setup and teleoperation verification, then click **Confirm Teleoperation Normal**. If replay is abnormal, delete the action and record it again.
 
-![Action list and replay](/sensecraft-robotics/guide-assets/soarm/03-3-action-replay-soarm-en.webp)
+![Action list and replay](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-3-action-replay-soarm-en.webp)
 
 <span id="dataset"></span>
 
@@ -331,7 +331,7 @@ Open **Dataset** → **Collect Data** and enter the task information. If dataset
 | Duration per episode | `20`–`30` seconds | Cover the complete action |
 | Rest duration | `5` seconds | Reset the arms and the scene |
 
-![Configure a data-collection task](/sensecraft-robotics/guide-assets/soarm/03-4-1-dataset-config-soarm-en.webp)
+![Configure a data-collection task](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-4-1-dataset-config-soarm-en.webp)
 
 #### 3.4.2 Record task episodes
 
@@ -342,7 +342,7 @@ Each episode should record the complete process of grasping the object at Point 
 3. After the task is complete, wait for the remaining time or click ➡ (or press Space) to end the episode early.
 4. During the rest period, return the object to Point A and prepare the arm for the next episode.
 
-![Record task episodes](/sensecraft-robotics/guide-assets/soarm/03-4-2-recording-episode-soarm-en.webp)
+![Record task episodes](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-4-2-recording-episode-soarm-en.webp)
 
 > **Important**
 > - Secure the cameras before collection. The arms, gripper, object, and Points A and B must remain visible in both views.
@@ -366,7 +366,7 @@ After collection, inspect abnormal episodes, delete invalid data, and merge comp
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![Inspect dataset](/sensecraft-robotics/guide-assets/soarm/03-4-3-dataset-check-soarm-en.webp)
+![Inspect dataset](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-4-3-dataset-check-soarm-en.webp)
 
 
 <figcaption>Inspect dataset</figcaption>
@@ -375,7 +375,7 @@ After collection, inspect abnormal episodes, delete invalid data, and merge comp
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![Delete abnormal episodes](/sensecraft-robotics/guide-assets/soarm/03-4-3-dataset-delete-soarm-en.webp)
+![Delete abnormal episodes](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-4-3-dataset-delete-soarm-en.webp)
 
 
 <figcaption>Delete abnormal episodes</figcaption>
@@ -384,7 +384,7 @@ After collection, inspect abnormal episodes, delete invalid data, and merge comp
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![Merge datasets](/sensecraft-robotics/guide-assets/soarm/03-4-3-dataset-merge-soarm-en.webp)
+![Merge datasets](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-4-3-dataset-merge-soarm-en.webp)
 
 
 <figcaption>Merge datasets</figcaption>
@@ -421,7 +421,7 @@ Training generates an action model from the teaching data. SenseCraft Robotics r
 
 Click **Start Training** after confirming the settings. View progress and history in **Current Training Tasks**.
 
-![Training configuration](/sensecraft-robotics/guide-assets/soarm/03-5-training-soarm-en.webp)
+![Training configuration](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-5-training-soarm-en.webp)
 
 <span id="model"></span>
 
@@ -429,7 +429,7 @@ Click **Start Training** after confirming the settings. View progress and histor
 
 **Model** is used to view training results and select a model for operation. Confirm that training is complete and that the task and device combination match the current project.
 
-![Model list](/sensecraft-robotics/guide-assets/soarm/03-6-model-soarm-en.webp)
+![Model list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-6-model-soarm-en.webp)
 
 <span id="run"></span>
 
@@ -456,5 +456,5 @@ Click **Start Training** after confirming the settings. View progress and histor
 - Before operation, confirm that the arms are connected correctly and that the workspace is safe.
 - During operation, do not disconnect or disassemble the arms. Observe their movements.
 - If the result is unsatisfactory, return to **Dataset**, delete abnormal episodes, add valid data, and train again.
-![Model operation interface](/sensecraft-robotics/guide-assets/soarm/03-7-inference-soarm-en.webp)
-![Model operation interface](/sensecraft-robotics/guide-assets/soarm/03-7-run-soarm-en.webp)
+![Model operation interface](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-7-inference-soarm-en.webp)
+![Model operation interface](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/03-7-run-soarm-en.webp)

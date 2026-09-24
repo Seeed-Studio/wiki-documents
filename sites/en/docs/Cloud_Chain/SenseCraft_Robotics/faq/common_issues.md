@@ -5,7 +5,7 @@ keywords:
   - SenseCraft Robotics
   - FAQ
   - troubleshooting
-image: /sensecraft-robotics/faq/calibration-joint-error.webp
+image: https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/calibration-joint-error.webp
 slug: /sensecraft_robotics_common_issues
 last_update:
   date: 09/24/2026
@@ -119,7 +119,7 @@ Check in this order:
 3. Check the "Bind Serial Port" step and confirm that the leader and follower serial ports are not reversed.
 4. Check the leader arm wiring, daisy-chain connection, and USB connection.
 
-![Robotic arm joint abnormality error example](/sensecraft-robotics/faq/calibration-joint-error.webp)
+![Robotic arm joint abnormality error example](https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/calibration-joint-error.webp)
 
 ### What should I do if calibration reports that the serial port is disconnected or write failed?
 
@@ -127,7 +127,7 @@ If an error such as "dm-serial write failed" or serial write failure appears dur
 
 Stop calibration first, then check the leader and follower power supplies, USB cable, serial port bindings, and device model. After the connection is restored, click "Scan Serial Ports" again and recalibrate.
 
-![Serial write failure error example](/sensecraft-robotics/faq/calibration-serial-write-failed.webp)
+![Serial write failure error example](https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/calibration-serial-write-failed.webp)
 
 ### What should I do if the follower arm reports an error after leader arm calibration is complete?
 
@@ -135,7 +135,7 @@ If leader arm calibration is complete but an error appears when switching to fol
 
 Check whether the follower arm is powered on, whether the voltage meets the standard, and whether the follower wiring, servo chain, CAN, or serial connection is normal. If needed, bind the follower port again before starting calibration.
 
-![Follower arm calibration error example](/sensecraft-robotics/faq/follower-calibration-error.webp)
+![Follower arm calibration error example](https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/follower-calibration-error.webp)
 
 ### What should I pay attention to for SoArm automatic calibration?
 
@@ -155,7 +155,7 @@ Check in this order:
 4. Check whether the leader arm wiring is normal.
 5. Calibrate again, then perform teleoperation validation with small and slow movements.
 
-![Teleoperation validation failure example](/sensecraft-robotics/faq/teleoperation-validation-failed.webp)
+![Teleoperation validation failure example](https://files.seeedstudio.com/wiki/sensecraft-robotics/faq/teleoperation-validation-failed.webp)
 
 ## Camera and Collection Performance
 

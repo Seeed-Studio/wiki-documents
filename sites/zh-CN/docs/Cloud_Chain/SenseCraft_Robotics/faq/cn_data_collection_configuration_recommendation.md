@@ -5,7 +5,7 @@ keywords:
   - SenseCraft Robotics
   - data collection
   - robot training
-image: /sensecraft-robotics/guide-assets/overview/device-selection-guide-zh.webp
+image: https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/device-selection-guide-zh.webp
 slug: /sensecraft_robotics_data_collection_configuration
 last_update:
   date: 09/24/2026

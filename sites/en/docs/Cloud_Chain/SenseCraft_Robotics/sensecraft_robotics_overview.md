@@ -5,7 +5,7 @@ keywords:
   - SenseCraft Robotics
   - robotics
   - robot arm
-image: /sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-en.webp
+image: https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-en.webp
 slug: /sensecraft_robotics
 last_update:
   date: 09/24/2026
@@ -16,7 +16,7 @@ last_update:
 
 SenseCraft™ Robotics is a training and runtime platform for real-world robotic arm tasks. It provides an integrated workflow covering device connection, calibration, data collection, model training, and validation, helping users in education, research, and robotics applications move more quickly from demonstration data to physical actions.
 
-![SenseCraft Robotics official website](/sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-en.webp)
+![SenseCraft Robotics official website](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-en.webp)
 
 ### 1.1 Software Overview
 
@@ -49,7 +49,7 @@ Official entrance: [SenseCraft Robotics](https://sensecraft.seeed.cc/en?utm_sour
 
 ### 2.1 Supported Robotic Arms
 
-![Three robotic arm selection recommendations](/sensecraft-robotics/guide-assets/overview/device-model-selection.webp)
+![Three robotic arm selection recommendations](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/device-model-selection.webp)
 
 Choose a device according to your goals: select an entry-level model for introductory learning and basic development; choose an advanced model when stronger performance and secondary development capabilities are required; select a high-precision application model when positioning accuracy and motion stability are important.
 
@@ -72,7 +72,7 @@ Choose a device according to your goals: select an entry-level model for introdu
 
 ## 3. Software Download and Installation
 
-![Software download](/sensecraft-robotics/guide-assets/overview/software-overview-en.webp)
+![Software download](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/software-overview-en.webp)
 
 ### 3.1 Download the Software
 
@@ -86,7 +86,7 @@ Run the installer and follow the installation wizard. After installation, launch
 
 In the user center, select **Sign up** or **Create account**, then follow the on-screen instructions to verify your email address and set a password. After registration, return to the SenseCraft Robotics client.
 
-![Account registration](/sensecraft-robotics/guide-assets/overview/sign-up-en.webp)
+![Account registration](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/sign-up-en.webp)
 
 ### 3.4 Log In to the Software
 
@@ -106,7 +106,7 @@ The SenseCraft Robotics client opens the SenseCraft user center in your system b
 
 The Home page provides access to the platform, project status, and commonly used features. When using the platform for the first time, you can enter a project or view help information from the Home page.
 
-![Home page overview](/sensecraft-robotics/guide-assets/overview/overview-en.webp)
+![Home page overview](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/overview-en.webp)
 
 <span id="projects"></span>
 
@@ -121,7 +121,7 @@ A project is a unified workspace for managing devices, tasks, datasets, and mode
 5. Check the dataset and upload it or use it for training.
 6. Select a model for runtime verification.
 
-![Project settings](/sensecraft-robotics/guide-assets/overview/project-settings-en.webp)
+![Project settings](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/project-settings-en.webp)
 
 <span id="settings"></span>
 
@@ -135,7 +135,7 @@ Click **Settings** in the top navigation bar to open the Settings page. It mainl
   - **Service Connections**: Manage authorized connections to third-party AI platforms such as Hugging Face.
   - **Version Management**: View the current software version and check for updates. You can **Check for updates**, **Download update**, or **Restart and update**. If verification problems occur, use the prompt to visit the official download page.
 
-![Settings](/sensecraft-robotics/guide-assets/overview/software-settings-en.webp)
+![Settings](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/software-settings-en.webp)
 
 <span id="credits"></span>
 

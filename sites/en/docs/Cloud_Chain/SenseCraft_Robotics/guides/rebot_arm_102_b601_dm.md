@@ -5,7 +5,7 @@ keywords:
   - SenseCraft Robotics
   - reBot Arm 102
   - B601 DM
-image: /sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp
+image: https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp
 slug: /sensecraft_robotics_rebot_arm_102_b601_dm
 last_update:
   date: 09/24/2026
@@ -15,7 +15,7 @@ last_update:
 This tutorial uses the reBot Arm 102 (leader arm) and B601 DM (follower arm) with SenseCraft Robotics to present the complete workflow, from project creation and device setup to data collection, model training, and operation.
 The example task in this guide is to pick up an object at Point A and place it at Point B. It is provided for illustration only; users can design application scenarios according to their needs, such as sorting, handling, boxing, button pressing, or plugging and unplugging.
 
-![DM arm pick-and-place task example](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp)
+![DM arm pick-and-place task example](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp)
 
 > **Version note**
 > Interface names, button locations, and training backends may change with SenseCraft Robotics versions. Serial port numbers (such as COM21, COM35, COM3, and COM6) and dataset names in this guide are examples from a video. Always use the devices detected by your current computer.
@@ -38,7 +38,7 @@ This tutorial is organized in the order of hardware setup and software operation
 
 ### 1.1 Hardware
 
-![Hardware list](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-1-hardware-list-dm-en.webp)
+![Hardware list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-1-hardware-list-dm-en.webp)
 
 > The arms must be assembled, mounted, powered, and connected to USB. If assembly is not complete, refer to [Step 1: Assemble the Arm](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/#%E7%AC%AC%E4%B8%80%E6%AD%A5%E7%BB%84%E8%A3%85%E6%9C%BA%E6%A2%B0%E8%87%82).
 
@@ -107,7 +107,7 @@ For detailed instructions, refer to [Software Download and Account Setup](/sense
 - Make sure Point A, Point B, both arms, and the object are within the camera views and are not obstructed.
 - Clear the arm workspace of people, clutter, cables, and fragile objects. Adjust the leader arm so that it does not approach the follower arm or appear in the follower camera view.
 
-![Scene and safety example](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-3-scene-and-safety-dm-en.webp)
+![Scene and safety example](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-3-scene-and-safety-dm-en.webp)
 
 
 <span id="connect-arms"></span>
@@ -129,7 +129,7 @@ Use woodworking clamps to secure the reBot Arm 102 to a flat tabletop. Gently pu
 
 #### Step 2: Connect the Cables
 
-![Mounting and connecting the reBot Arm 102 (leader arm)](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+![Mounting and connecting the reBot Arm 102 (leader arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
 
 
 The connections consist of two paths:
@@ -144,7 +144,7 @@ The connections consist of two paths:
 
 ### 2.2 Mount and Connect the B601 DM (Follower Arm)
 
-![B601 DM cable connection](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp)
+![B601 DM cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp)
 
 #### Step 3: Mount the B601 DM
 
@@ -165,7 +165,7 @@ Make sure the power is disconnected before starting. The connections consist of 
   2. Connect the signal/power separation board to the **24 V power adapter**.
   3. Connect the power adapter to the outlet. After confirming that the arm is secured, the cables are correct, and the surrounding area is clear, turn on the power.
 
-![Connecting the B601 DM (follower arm)](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
+![Connecting the B601 DM (follower arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
 
 
 
@@ -180,7 +180,7 @@ After signing in, open the **Projects** page. Create a new project for first-tim
 | Create a project | Click **New Project** → enter the project name and description → click **Create and Start** |
 | Open an existing project | Select a project from the project list → open the project |
 
-![New project window](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-create-project-dm-en.webp)
+![New project window](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-create-project-dm-en.webp)
 
 
 ### 3.1 Project Overview
@@ -189,7 +189,7 @@ After signing in, open the **Projects** page. Create a new project for first-tim
 
 If the page shows **Pending configuration** or **Not connected**, click **Go to Device Setup** to configure the arms.
 
-![Project overview](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-1-device-selection-dm-en.webp)
+![Project overview](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-1-device-selection-dm-en.webp)
 
 
 
@@ -203,7 +203,7 @@ Device Setup is used for device selection, serial-port binding, arm calibration,
 
 In the **Device Pairing** step, select **reBot Arm 102 + B601 DM**, then click **Next** to bind the serial ports.
 
-![Select reBot Arm 102 + B601 DM](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-1-device-pairing-dm-en.webp)
+![Select reBot Arm 102 + B601 DM](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-1-device-pairing-dm-en.webp)
 
 
 #### 3.2.2 Bind the USB Serial Ports for the Leader and Follower Arms
@@ -213,7 +213,7 @@ In the **Device Pairing** step, select **reBot Arm 102 + B601 DM**, then click *
 3. **Bind the follower arm**: Connect the B601 DM (follower arm), click **Rescan** again, and bind the newly detected serial port to the follower arm.
 4. Confirm that both arms show **Connected**, then click **Next**.
 
-![Bind the serial ports for the leader and follower arms](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-2-serial-binding-dm-en.webp)
+![Bind the serial ports for the leader and follower arms](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-2-serial-binding-dm-en.webp)
 
 > **Serial-port binding and troubleshooting:**
 > - After each scan, bind only the newly detected serial port. Do not identify a device only by its COM number.
@@ -226,7 +226,7 @@ In the **Device Pairing** step, select **reBot Arm 102 + B601 DM**, then click *
 2. Click **Start Calibration**, then follow the on-screen instructions to complete leader-arm zeroing, follower-arm zeroing, and calibration completion.
 3. If the arm poses are inconsistent or calibration fails, click **Recalibrate** and do not continue to the next steps.
 
-![Arm calibration verification](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-3-calibration-dm-en.webp)
+![Arm calibration verification](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-3-calibration-dm-en.webp)
 
 > Do not perform teleoperation or data collection before calibration is complete.
 
@@ -240,7 +240,7 @@ Teleoperation verification confirms that the follower arm correctly follows the 
    - **Normal**: Click **Confirm Teleoperation Normal**.
    - **Abnormal**: Click **Abnormal, Return to Recalibrate**.
 
-![Teleoperation verification](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-4-teleoperation-dm-en.webp)
+![Teleoperation verification](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-4-teleoperation-dm-en.webp)
 
 > **Gravity compensation (optional)**
 > The arm has some weight, so manually adjusting the follower arm may require effort. When gravity compensation is enabled, the system offsets part of the weight and makes the follower arm easier to move. After adjustment, turn gravity compensation off before performing teleoperation verification.
@@ -253,8 +253,8 @@ Cameras record visual information while the arm performs a task. The following a
 
 | Layout | Installation and purpose | Suitable scenarios | Illustration |
 |:---|:---|:---|:---|
-| Gripper view<br /> | <small><strong>Top-view camera</strong>: Install it above the front of the worktable to cover the work area.<br /><br /><strong>Gripper camera</strong>: Install it near the gripper to observe grasping details.</small> | <small>Fine operations that require observing contact between the gripper and the object.</small> | ![Gripper-view layout](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-eye-in-hand-dm-en.webp)<br /><small>*Note: You may design the 3D camera mount yourself.</small> |
-| Side-view assistance<br /> | <small><strong>Top-view camera</strong>: Install it above the front of the worktable to cover the work area.<br /><br /><strong>Side-view camera</strong>: Install it at the front side of the worktable to observe the arm height and gripper motion.</small> | <small>Pick-and-place, handling, and placement tasks.</small> | ![Side-view assistance layout](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-eye-to-hand-dm-en.webp) |
+| Gripper view<br /> | <small><strong>Top-view camera</strong>: Install it above the front of the worktable to cover the work area.<br /><br /><strong>Gripper camera</strong>: Install it near the gripper to observe grasping details.</small> | <small>Fine operations that require observing contact between the gripper and the object.</small> | ![Gripper-view layout](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-eye-in-hand-dm-en.webp)<br /><small>*Note: You may design the 3D camera mount yourself.</small> |
+| Side-view assistance<br /> | <small><strong>Top-view camera</strong>: Install it above the front of the worktable to cover the work area.<br /><br /><strong>Side-view camera</strong>: Install it at the front side of the worktable to observe the arm height and gripper motion.</small> | <small>Pick-and-place, handling, and placement tasks.</small> | ![Side-view assistance layout](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-eye-to-hand-dm-en.webp) |
 
 This tutorial uses the **side-view assistance** layout. After installing and positioning the cameras:
 
@@ -262,7 +262,7 @@ This tutorial uses the **side-view assistance** layout. After installing and pos
 2. Select the corresponding video streams in the **Top-view camera** and **Side-view camera** sections.
 3. Check both preview windows to confirm that the arms, object, and target positions are clearly visible. Click **Next** after confirming the setup.
 
-![Bind the top-view and side-view cameras](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-camera-binding-dm-en.webp)
+![Bind the top-view and side-view cameras](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-2-5-camera-binding-dm-en.webp)
 
 > To confirm that each camera matches its installation position, click **View Camera Layout**. If a preview is black or abnormal, rescan, restart the camera, or use another USB port.
 
@@ -280,7 +280,7 @@ This tutorial uses the **side-view assistance** layout. After installing and pos
 
 > Before recording an action for the first time, complete device connection and teleoperation verification in **Device Setup**, and click **Confirm Teleoperation Normal**. If replay is abnormal, delete the action and record it again.
 
-![Action list and replay operations](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-3-action-replay-dm-en.webp)
+![Action list and replay operations](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-3-action-replay-dm-en.webp)
 
 
 <span id="dataset"></span>
@@ -305,7 +305,7 @@ Open **Dataset** → **Collect Data** at the top of the page and enter the task 
 | Episode duration | `20`–`30` seconds | Cover the complete action sequence |
 | Rest duration | `5` seconds | Allow time to reset the arm and adjust the scene |
 
-![Configure a data collection task](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-1-dataset-config-dm-en.webp)
+![Configure a data collection task](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-1-dataset-config-dm-en.webp)
 
 #### 3.4.2 Record Task Episodes
 
@@ -316,7 +316,7 @@ Recording task episodes is the core of the training data. Each episode should co
 3. After completing the task, wait for the remaining time to finish, or click the arrow (or press the space bar) to end the current episode early.
 4. During the rest period, return the object to Point A and confirm that the arm is ready. Start the next episode when the rest period ends.
 
-![Record task episodes](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-2-recording-episode-dm-en.webp)
+![Record task episodes](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-2-recording-episode-dm-en.webp)
 
 > **Important ⚠️**
 >
@@ -343,7 +343,7 @@ After collection, inspect abnormal episodes, delete invalid data, and merge mult
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![Inspect dataset](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-3-dataset-check-dm-en.webp)
+![Inspect dataset](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-3-dataset-check-dm-en.webp)
 
 
 <figcaption>Inspect dataset</figcaption>
@@ -352,7 +352,7 @@ After collection, inspect abnormal episodes, delete invalid data, and merge mult
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![Delete abnormal episodes](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-3-dataset-delete-dm-en.webp)
+![Delete abnormal episodes](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-3-dataset-delete-dm-en.webp)
 
 
 <figcaption>Delete abnormal episodes</figcaption>
@@ -361,7 +361,7 @@ After collection, inspect abnormal episodes, delete invalid data, and merge mult
 <figure style={{ flex: '0 0 100%', scrollSnapAlign: 'start', margin: 0, textAlign: 'center' }}>
 
 
-![Merge datasets](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-3-dataset-merge-dm-en.webp)
+![Merge datasets](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-4-3-dataset-merge-dm-en.webp)
 
 
 <figcaption>Merge datasets</figcaption>
@@ -401,7 +401,7 @@ Use the following table to configure the training parameters:
 
 After confirming the settings, click **Start Training**. Once training begins, you can view the progress and historical tasks in the **Current Training Tasks** list.
 
-![Training configuration](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-5-training-dm-en.webp)
+![Training configuration](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-5-training-dm-en.webp)
 
 <span id="model"></span>
 
@@ -409,7 +409,7 @@ After confirming the settings, click **Start Training**. Once training begins, y
 
 **Model** is used to view training results and select the model for subsequent operation. Before using a model, confirm that training is complete and that its task and device combination match the current project.
 
-![Model list](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-6-model-dm-en.webp)
+![Model list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-6-model-dm-en.webp)
 
 <span id="run"></span>
 
@@ -439,4 +439,4 @@ After confirming the settings, click **Start Training**. Once training begins, y
 - During operation: Do not disconnect or disassemble the arms, and observe whether their movements are normal.
 - If the result is unsatisfactory: Return to **Dataset**, delete abnormal episodes, add valid data, and train again.
 
-![Model operation interface](/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-7-run-dm-en.webp)
+![Model operation interface](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/03-7-run-dm-en.webp)
