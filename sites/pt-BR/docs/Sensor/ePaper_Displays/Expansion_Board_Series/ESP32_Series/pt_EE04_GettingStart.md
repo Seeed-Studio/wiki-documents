@@ -1,6 +1,6 @@
 ---
-description: Introdução ao uso da XIAO ePaper Display Board(ESP32-S3) - EE04
-title: Introdução ao uso da EE04
+description: Introdução à XIAO ePaper Display Board(ESP32-S3) - EE04
+title: Introdução à EE04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
@@ -19,7 +19,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Introdução ao uso da XIAO ePaper Display Board - EE04
+# Introdução à XIAO ePaper Display Board - EE04
 
 <div class="table-center">
 <table align="center">
@@ -39,15 +39,17 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Alimentada pelo **XIAO ESP32-S3** Plus, a placa de exibição EE04 é compatível com displays ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e quadros de informação portáteis.
+Alimentada pelo **XIAO ESP32-S3** Plus, a placa de display EE04 é compatível com displays ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e quadros de informação portáteis.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### Características
 
 - **Alimentada por XIAO ESP32-S3 Plus:** Funciona imediatamente quando conectada a um display ePaper compatível.
-- **Suporte versátil a displays:** Compatível com uma ampla gama de telas ePaper, suportando interfaces de 24 pinos e 50 pinos, com comutação fácil por meio de jumpers.
-- **Conector BAT com chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
+- **Suporte versátil a displays:** Compatível com uma ampla variedade de telas ePaper, suportando interfaces de 24 pinos e 50 pinos, com troca fácil por meio de jumpers.
+- **Conector BAT com chave:** Oferece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
 - **Botões fáceis de usar:** Inclui 1 botão de reset e 3 botões programáveis pelo usuário, oferecendo flexibilidade para acelerar projetos e funções personalizáveis.
-- **Design de baixo consumo**: Adequado para aplicações ePaper alimentadas por bateria, com duração típica de 3 meses com uma carga completa nas configurações padrão.
+- **Design de baixo consumo**: Adequado para aplicações ePaper alimentadas por bateria, com duração típica de 3 meses com carga completa nas configurações padrão.
 
 ### Especificações
 
@@ -70,14 +72,14 @@ Alimentada pelo **XIAO ESP32-S3** Plus, a placa de exibição EE04 é compatíve
 | Conector de bateria | JST 2,0mm | / | JST 2,0mm |
 | Chave | Alimentação da bateria ON/OFF | / | Alimentação da bateria ON/OFF |
 | Botão | 1x botão de reset<br />3x botões de usuário | / | / |
-| Porta de extensão de IO | / | conexão de outros controladores | conexão de sensores adicionais |
+| Porta de E/S de extensão | / | conexão de outros controladores | conexão de sensores adicionais |
 
 ### Aplicações
 
 - **Dashboard de casa inteligente**: Exiba informações em tempo real, como atualizações de clima, eventos de calendário e notificações de vários dispositivos de casa inteligente.
 - **Monitoramento de energia**: Mostre dados de consumo de energia de medidores inteligentes, ajudando moradores a acompanhar e gerenciar o uso de energia com mais eficiência.
 - **Alertas de segurança**: Exiba alertas e notificações sobre eventos de segurança, como detecção de movimento ou ativação de sensores de porta/janela.
-- **Display de termostato inteligente**: Mostre níveis de temperatura e umidade, bem como configurações de controle do seu termostato inteligente.
+- **Display de termostato inteligente**: Mostre níveis de temperatura e umidade, bem como configurações de controle para o seu termostato inteligente.
 - **Porta-retratos digital**: Crie um porta-retratos digital com WiFi que possa exibir imagens da sua rede de casa inteligente.
 
 ## Visão geral de hardware
@@ -113,7 +115,7 @@ Ao usar a XIAO ePaper Display Board, certifique-se de configurar o jumper de aco
 
 - Para displays ePaper de 24 pinos → ajuste o jumper para 24 pinos
 
-⚠️ Usar a configuração de jumper incorreta pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar o dispositivo.
+⚠️ Usar a configuração de jumper incorreta pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
 
 :::
 
@@ -126,13 +128,13 @@ Ao usar a XIAO ePaper Display Board, certifique-se de configurar o jumper de aco
 Ao usar a XIAO ePaper Display Board, certifique-se de configurar o jumper de acordo com o tipo de display ePaper:
 - Para displays ePaper de 50 pinos → ajuste o jumper para 50 pinos
 
-⚠️ Usar a configuração de jumper incorreta pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar o dispositivo.
+⚠️ Usar a configuração de jumper incorreta pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
 
 :::
 
 ### Botões
 
-A EE04 está equipada com 1 botão de reset e 3 botões programáveis pelo usuário, proporcionando flexibilidade para interação do usuário e personalização de projetos.
+A EE04 está equipada com 1 botão de reset e 3 botões programáveis pelo usuário, oferecendo flexibilidade para interação do usuário e personalização de projetos.
 
 | Botão | GPIO | Função |
 |--------|------|----------|
@@ -149,7 +151,7 @@ Os botões de usuário são programáveis e podem ser configurados para várias 
 
 ### Seleção do jumper
 
-A EE04 é compatível com displays ePaper de 24 pinos e 50 pinos. Use o jumper para selecionar a configuração correta de pinos para o seu display:
+A EE04 é compatível com displays ePaper de 24 pinos e 50 pinos. Use o jumper para selecionar a configuração de pinos correta para o seu display:
 
 - **Modo de 24 pinos**: Coloque o jumper no lado de 24 pinos
 - **Modo de 50 pinos**: Coloque o jumper no lado de 50 pinos
@@ -165,10 +167,10 @@ A placa possui um conector de bateria JST 2,0mm com chave de alimentação, perm
 Quando o dispositivo é alimentado por bateria, os seguintes fenômenos são comportamentos normais inerentes ao próprio firmware SenseCraft Seeedash.
 
 - O dispositivo entrará automaticamente em modo de baixo consumo entre as atualizações
-- A vida útil da bateria depende da frequência de atualização (tipicamente 3 meses com uma carga completa nas configurações padrão)
+- A vida útil da bateria depende da frequência de atualização (tipicamente 3 meses com carga completa nas configurações padrão)
 - O dispositivo exibirá um ícone de bateria fraca no canto superior direito quando o nível da bateria estiver abaixo de 20%
 
-## Introdução ao uso do SenseCraft Seeedash 
+## Introdução ao SenseCraft Seeedash 
 
 Esta seção irá guiá-lo na conexão da sua EE04 à plataforma SenseCraft Seeedash, permitindo atualizar facilmente o conteúdo da tela sem fio.
 
@@ -186,9 +188,9 @@ Conecte cuidadosamente o cabo FPC da sua tela ePaper ao conector na placa contro
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/Connect.gif" style={{width:800, height:'auto'}}/></div>
 
-**Passo 2. Grave o firmware HMI para a sua tela**
+**Etapa 2. Grave o firmware HMI para a sua tela**
 
-Mantenha a placa EE04 conectada ao seu computador com um cabo USB Type-C de **dados** (o mesmo cabo é usado para alimentação e gravação), então:
+Mantenha a placa EE04 conectada ao seu computador com um cabo USB Type-C de **dados** (o mesmo cabo é usado para alimentação e gravação) e então:
 
 1. Acesse a [plataforma SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi) e faça login na sua conta.
 2. Abra **Tools** → **Firmware Flasher** no menu à esquerda.
@@ -202,7 +204,7 @@ Se nenhuma porta serial aparecer, pressione o botão **RESET** na placa e tente 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_7.png" style={{width:800,height:'auto'}}/></div>
 
-**Passo 3. Entre no modo de configuração de rede**
+**Etapa 3. Entre no modo de configuração de rede**
 Quando a gravação do firmware for concluída, a placa será reiniciada automaticamente. A tela primeiro mostra a imagem de boas-vindas e depois atualiza para a interface de Configuração de Rede. Isso indica que o dispositivo está pronto para se conectar ao Wi-Fi.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_1.png" style={{width:300,height:'auto'}}/></div>
@@ -210,37 +212,37 @@ Quando a gravação do firmware for concluída, a placa será reiniciada automat
 
 ### Configuração de rede
 
-**Passo 4. Configure o Wi-Fi pelo celular**
+**Etapa 4. Configure o Wi-Fi pelo celular**
 Use o seu celular para escanear o código QR exibido na tela. Siga as instruções no telefone para inserir o SSID e a senha do seu Wi-Fi local para conectar o EE04 à internet.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
-**Passo 5. Obtenha o código de pareamento**
-Quando a configuração de rede for bem-sucedida, a tela será atualizada novamente e exibirá um **Pair Code** exclusivo. Você precisará desse código para o próximo passo.
+**Etapa 5. Obtenha o código de pareamento**
+Quando a configuração de rede for concluída com sucesso, a tela será atualizada novamente e exibirá um **código de pareamento** exclusivo. Você precisará desse código na próxima etapa.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_2.png" style={{width:300,height:'auto'}}/></div>
 
-### Vinculação à plataforma e atualização
+### Vinculação e atualização na plataforma
 
-**Passo 6. Vincule o dispositivo no SenseCraft Seeedash**
-Vá para a [plataforma SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/device). Faça login na sua conta. Navegue até a seção de gerenciamento de dispositivos e selecione "New Device". Insira o Pair Code exibido na sua tela E-ink.
+**Etapa 6. Vincule o dispositivo no SenseCraft Seeedash**
+Acesse a [plataforma SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/device). Faça login na sua conta. Vá para a seção de gerenciamento de dispositivos e selecione "New Device". Insira o código de pareamento exibido na sua tela E-ink.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
 
-**Passo 7. Crie e envie uma nova interface**     
+**Etapa 7. Crie e envie uma nova interface**     
 Na plataforma SenseCraft Seeedash, selecione o template adequado para a tela de 7,5 polegadas para criar uma nova interface ou enviar uma imagem.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_5.png" style={{width:500, height:'auto'}}/></div>
 
-**Passo 8. Aplique suas imagens**
+**Etapa 8. Aplique suas imagens**
 Quando terminar, clique no botão "Apply" e selecione o seu dispositivo EE04.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_6.png" style={{width:800, height:'auto'}}/></div>
 
-**Passo 9. Exiba na tela**
+**Etapa 9. Exiba na tela**
 Por fim, o EE04 receberá os dados e atualizará a tela de 7,5 polegadas com o seu novo conteúdo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_4.png" style={{width:300, height:'auto'}}/></div>
@@ -271,11 +273,11 @@ Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZI
 
 ### Configure e grave o programa
 
-Como mostrado na imagem, navegue até o exemplo por meio deste menu:
+Conforme mostrado na imagem, navegue até o exemplo por meio deste menu:
 File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → XIAO ePaper Display Board - EE04 → 7.5-inch ePaper - Monochrome 800x480 → 7_5_inch_Monochrome_HelloWorld
 
 :::note
-Este guia usa o **7.5-inch Monochrome ePaper (800 x 480)** como exemplo. Se você tiver uma tela diferente, em vez disso abra a pasta de exemplo que corresponde ao modelo do seu próprio painel em `EE04`.
+Este guia usa o **ePaper monocromático de 7,5 polegadas (800 x 480)** como exemplo. Se você tiver uma tela diferente, em vez disso abra a pasta de exemplo que corresponde ao modelo do seu próprio painel em `EE04`.
 :::
 
 
@@ -287,9 +289,9 @@ Observe que o PSRAM deve estar habilitado.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 Em seguida, clique em **Upload** para enviar o código.
-Agora você verá o resultado na sua tela de epaper! A seguir está o resultado do exemplo HelloWorld.
+Agora você verá o resultado na sua tela de ePaper! A seguir está o resultado do exemplo HelloWorld.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/GFX2_EE04_demo.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/GFX2_EE04_demo.png" style={{width:300, height:'auto'}}/></div>
 
 ## Visão geral do software
 
@@ -388,7 +390,7 @@ Ao operar com alimentação por bateria:
 
 - O dispositivo entrará automaticamente em modo de baixo consumo entre as atualizações
 
-- A vida útil da bateria depende da frequência de atualização (tipicamente 3 meses com carga completa nas configurações padrão)
+- A vida útil da bateria depende da frequência de atualização (tipicamente 3 meses com carga completa usando as configurações padrão)
 
 - O dispositivo exibirá um ícone de bateria fraca no canto superior direito quando o nível da bateria estiver abaixo de 20%
 
@@ -436,7 +438,7 @@ void loop() {
 
 ## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
