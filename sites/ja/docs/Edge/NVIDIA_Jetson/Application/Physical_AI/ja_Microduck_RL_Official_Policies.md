@@ -1,13 +1,15 @@
 ---
-description: 公式 Microduck タスクを学習し、PT チェックポイントを可視化し、Jetson 上の MuJoCo でキーボード操作によるマルチポリシー ONNX 推論を実行します。
+description: 公式 Microduck タスクの学習、PT チェックポイントの可視化、Jetson 上の MuJoCo でキーボード操作によるマルチポリシー ONNX 推論を実行します。
 title: 公式 Microduck モーションの学習と実行
 image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png
 slug: /ai_robotics_microduck_rl_official_policies
 sku: 114110312, 100006184
 last_update:
-  date: 09/05/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/ja/ai_robotics_microduck_rl_official_policies/
+updatedAt: '2026-09-05'
 ---
 
 # 公式 Microduck モーションの学習と実行
@@ -27,19 +29,19 @@ uv run --no-sync list-envs | grep MicroDuck
 ```
 
 | モーション | タスク ID |
-|---|---|
+| --- | --- |
 | 歩行 | `Mjlab-Velocity-Flat-MicroDuck` |
 | 歩行と転倒復帰 | `Mjlab-VelStand-Flat-MicroDuck` |
 | 床からの立ち上がり | `Mjlab-StandUp-Flat-MicroDuck` |
 | 着座と起立 | `Mjlab-SitStand-Flat-MicroDuck` |
 | 地面からのピック | `Mjlab-GroundPick-Flat-MicroDuck` |
-| 前転 | `Mjlab-Roulade-Flat-MicroDuck` |
+| 前方回転 | `Mjlab-Roulade-Flat-MicroDuck` |
 | ボールキック | `Mjlab-BallKick-Flat-MicroDuck` |
 | ローラー移動 | `Mjlab-Velocity-Flat-MicroDuck-Rollers` |
 
 ## 歩行ポリシーを学習する
 
-長時間の実行の前には、まず 5 イテレーションのスモークテストから始めてください：
+長時間の実行の前に、まず 5 イテレーションのスモークテストから始めてください：
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
@@ -51,7 +53,7 @@ uv run --no-sync train Mjlab-Velocity-Flat-MicroDuck \
   --agent.max_iterations 5
 ```
 
-より長時間の実行を行う場合：
+より長時間の実行の場合：
 
 ```bash
 uv run --no-sync train Mjlab-Velocity-Flat-MicroDuck \
@@ -59,7 +61,7 @@ uv run --no-sync train Mjlab-Velocity-Flat-MicroDuck \
   --agent.logger tensorboard
 ```
 
-メモリと熱設計に余裕がある場合にのみ、環境数を増やしてください。実用的なフォールバックの順序は `4096 → 2048 → 1024 → 512` です。
+メモリと熱設計に余裕がある場合にのみ、環境数を増やしてください。実用的なフォールバックシーケンスは `4096 → 2048 → 1024 → 512` です。
 
 ## PT チェックポイントを可視化する
 
@@ -111,19 +113,21 @@ uv run --no-sync python3 scripts/infer_policy.py \
   --roulade pretrained/pollen-robotics/roulade.onnx \
   --kick-left pretrained/pollen-robotics/ball_kick_left.onnx \
   --kick-right pretrained/pollen-robotics/ball_kick_right.onnx \
+  --front-back-split models/exports/front_back_split/front_back_split_model_999.onnx \
   --new-cmd-obs
 ```
 
 ### キーボード操作
 
 | キー | コマンド |
-|---|---|
-| 矢印キー | 前進・後退・横方向の速度 |
-| `A` / `E` | 左旋回 / 右旋回 |
+| --- | --- |
+| 矢印キー | 前進、後退、横方向の速度 |
+| `A` / `E` | 左右への旋回 |
 | `G` | 地面からのピック動作 |
 | `Y` | 着座 / 起立の切り替え |
-| `R` | 前転 |
+| `R` | 前方回転 |
 | `K` / `L` | 左 / 右キック |
+| `O` | 6 秒間の前後スプリット、その後立位または歩行に復帰 |
 | `Space` | 速度コマンドのクリア |
 | `Q` | 終了 |
 
@@ -134,7 +138,7 @@ uv run --no-sync python3 scripts/infer_policy.py \
 ### 歩行
 
 <div align="center">
-  <img width="900" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/walking-loop.gif" alt="MuJoCo における Microduck 歩行ポリシー推論ループ" />
+  <img width="900" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/walking-loop.gif" alt="Microduck walking policy inference loop in MuJoCo" />
 </div>
 
 歩行ポリシーは、キーボードからの速度および旋回コマンドを継続的に追従します。
@@ -142,23 +146,37 @@ uv run --no-sync python3 scripts/infer_policy.py \
 ### ローリング
 
 <div align="center">
-  <img width="900" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/rolling.gif" alt="MuJoCo における Microduck ローリングポリシー推論" />
+  <img width="900" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/rolling.gif" alt="Microduck rolling policy inference in MuJoCo" />
 </div>
 
-前転ポリシーに切り替えるには `R` を押します。
+`R` を押すと、前方回転ポリシーに切り替わります。
 
 ### ボールキック
 
 <div align="center">
-  <img width="900" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/kick.gif" alt="MuJoCo における Microduck のキーボードトリガー式ボールキックポリシー推論" />
+  <img width="900" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/kick.gif" alt="Microduck keyboard-triggered ball-kick policy inference in MuJoCo" />
 </div>
 
 ボールシーンで `K` または `L` を押すと、左足または右足のキックポリシーがトリガーされます。
 
+### 前後スプリット
+
+以前の片脚バランスポリシーは、より安定した両脚支持モーションに置き換えられました。
+`O` を押して学習済みポリシーを実行すると、左足が前方へ、
+右足が後方へ動き、両足は地面に接地したまま、6 秒間のフェーズサイクル後に
+ロボットは立位または歩行ポリシーへ戻ります。
+
+含まれているアーティファクトは次のとおりです：
+
+```text
+models/checkpoints/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt
+models/exports/front_back_split/front_back_split_model_999.onnx
+```
+
 ## PT と ONNX は用途が異なります
 
 - `.pt` チェックポイントには、アクター、クリティック、オプティマイザ、正規化器、および学習状態が含まれます。これらは学習の再開や `play` 評価に使用します。
-- `.onnx` にはデプロイ可能な推論グラフが含まれます。公式 ONNX ファイルには PPO 学習状態は含まれておらず、再開可能なチェックポイントへ戻すことはできません。
+- `.onnx` には、デプロイ可能な推論グラフが含まれます。公式 ONNX ファイルには PPO 学習状態は含まれておらず、再開可能なチェックポイントへ戻すことはできません。
 - `models/checkpoints/` 配下の PT ファイルは、このデモに同梱されている Jetson 上での歩行学習結果であり、Pollen Robotics による公式 PT リリースではありません。
 
 ## 自分の ONNX をエクスポートする
@@ -170,7 +188,7 @@ uv run --no-sync python3 scripts/export.py \
   --onnx-file walking_custom.onnx
 ```
 
-必ず `scripts/export.py` を使用してください。プロジェクトのエクスポータは観測正規化器を ONNX グラフに焼き込んでおり、これは正しいランタイム動作に必須です。
+必ず `scripts/export.py` を使用してください。プロジェクトのエクスポータは観測正規化器を ONNX グラフに焼き込みますが、これはランタイムで正しく動作させるために必要です。
 
 ## 次のステップ
 

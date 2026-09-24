@@ -1,6 +1,6 @@
 ---
 description: This wiki provides a comprehensive implementation framework for equipping the Lekiwi Robot Kit with sound-following capabilities using ReSpeaker Mic Array v2.0 and reComputer Jetson Mini, covering hardware integration, environment configuration, and software adaptation while demonstrating real-time audio source tracking functionality.
-title: Lekiwi with Sound Follow
+title: SO-Arm with Respeaker
 keywords:
   - Lerobot
   - Huggingface
@@ -113,7 +113,7 @@ source ~/.bashrc
 **Step2.** Create conda environment for lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 git clone https://github.com/huggingface/lerobot.git ~/lerobot
 conda install ffmpeg -c conda-forge

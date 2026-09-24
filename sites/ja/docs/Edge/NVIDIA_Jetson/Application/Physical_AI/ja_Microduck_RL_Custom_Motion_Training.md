@@ -1,18 +1,20 @@
 ---
-description: テンプレートを選択し、フェーズと報酬を定義し、タスクを登録して学習し、ONNX をエクスポートすることで、カスタム Microduck モーションタスクを作成します。
+description: テンプレートを選択し、フェーズと報酬を定義し、タスクを登録して学習し、ONNX をエクスポートすることで、カスタム Microduck モーションを作成します。
 title: カスタム Microduck モーションを作成する
 image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_cover.png
 slug: /ai_robotics_microduck_rl_custom_motion_training
 sku: 114110312, 100006184
 last_update:
-  date: 09/07/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/ja/ai_robotics_microduck_rl_custom_motion_training/
+updatedAt: '2026-09-07'
 ---
 
 # カスタム Microduck モーションを作成する
 
-この章では、新しいモーションを構築するためのプロジェクトワークフローを紹介します。例としてフェーズベースの **おじぎ（Bow）** 動作を使用しますが、同じ手順はうなずき、しゃがみ、ストレッチ、リカバリスキル、その他のロボットモーションにも適用できます。
+この章では、新しいモーションを構築するためのプロジェクトワークフローを紹介します。例としてフェーズベースの**おじぎ（Bow）**動作を使用しますが、同じ手順はうなずき、しゃがみ、ストレッチ、リカバリスキル、その他のロボットモーションにも適用できます。
 
 <div style={{display:'flex', gap:'12px', flexWrap:'wrap', margin:'18px 0 30px'}}>
   <a href="/ja/ai_robotics_microduck_rl_on_jetson/" style={{display:'inline-flex', alignItems:'center', gap:'10px', padding:'9px 16px 9px 10px', borderRadius:'9px', background:'#172b4d', color:'#fff', fontWeight:'700', textDecoration:'none'}}><span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'28px', height:'28px', borderRadius:'50%', background:'rgba(255,255,255,.2)', fontSize:'21px', lineHeight:'1'}}>←</span> デモホーム</a>
@@ -28,14 +30,14 @@ createdAt: '2026-09-04'
 - 未使用のコマンドスロットも存在し続け、ゼロ埋めされます。
 - 受動ホイールおよびバックラッシュ関節は `passive_*` という命名規則を使用し、駆動関節として選択してはいけません。
 - 関節 ID はハードコードせず、プロジェクトのヘルパーによって解決する必要があります。
-- ONNX のエクスポートは、観測正規化器が含まれるように必ず `scripts/export.py` を経由しなければなりません。
+- ONNX エクスポートは、観測正規化器が含まれるように必ず `scripts/export.py` を経由しなければなりません。
 
-このコントラクトを破ると、ある Viewer では動作しても、正しく切り替えやデプロイができないポリシーが生成される可能性があります。
+このコントラクトを破ると、あるビューアでは動作しても、正しく切り替えやデプロイができないポリシーが生成される可能性があります。
 
 ## 最も近いテンプレートを選ぶ
 
-| 望ましいモーション | 推奨テンプレート |
-|---|---|
+| 望むモーション | 推奨テンプレート |
+| --- | --- |
 | 連続速度モーション | `microduck_velocity_env_cfg.py` |
 | 特定状態からのリカバリ | `microduck_standup_env_cfg.py` |
 | 2 状態コマンド遷移 | `microduck_sitstand_env_cfg.py` |
@@ -43,7 +45,7 @@ createdAt: '2026-09-04'
 | 高速ダイナミックマヌーバ | `microduck_roulade_env_cfg.py` |
 | ローラーモーション | `microduck_velocity_rollers_env_cfg.py` |
 
-おじぎの場合、ground-pick タスクはすでにフェーズコマンド、下降、ホールド、上昇、ポーズトラッキング、リカバリを実装しているため、有用な出発点になります。
+おじぎの場合、ground-pick タスクはすでにフェーズコマンド、下降、ホールド、上昇、ポーズトラッキング、リカバリを実装しているため、有用な出発点となります。
 
 ## テンプレートをコピーする
 
@@ -54,7 +56,7 @@ cp src/mjlab_microduck/tasks/microduck_ground_pick_env_cfg.py \
   src/mjlab_microduck/tasks/microduck_bow_env_cfg.py
 ```
 
-編集を始める前に、タスクレジストリと共有 MDP 関数をバックアップします：
+編集を行う前に、タスクレジストリと共有 MDP 関数をバックアップします：
 
 ```bash
 cp src/mjlab_microduck/tasks/__init__.py \
@@ -69,7 +71,7 @@ cp src/mjlab_microduck/tasks/mdp.py \
 シンプルなおじぎでは、`0.0` から `1.0` までの正規化フェーズを使用できます：
 
 | フェーズ | 挙動 |
-|---|---|
+| --- | --- |
 | `0.00–0.25` | おじぎのポーズに向かって下降する |
 | `0.25–0.55` | おじぎを保持する |
 | `0.55–0.85` | ホームポーズに戻る |
@@ -98,18 +100,18 @@ BOW_POSE = {
 
 ## 報酬を構築する
 
-有用なカスタムモーション報酬は、通常次の要素を組み合わせます：
+有用なカスタムモーション用の報酬は、通常次の要素を組み合わせます：
 
 - フェーズ条件付きのターゲットポーズトラッキング。
 - おじぎ中に頭を下げるなどのタスク結果に基づく報酬。
-- シーケンス終盤の直立およびリカバリ報酬。
-- 足接地および横方向安定性の項。
-- 関節リミット、衝突、アクションレート、衝撃に対するペナルティ。
+- シーケンス終盤での直立およびリカバリ報酬。
+- 足接地および左右方向の安定性項。
+- 関節リミット、衝突、アクションレート、インパクトのペナルティ。
 
 可能な限り、テンプレートの報酬と `src/mjlab_microduck/tasks/mdp.py` にある共有関数を再利用してください。望む計測が既に存在しない場合にのみ、新しい関数を追加します。
 
 :::warning
-重みを割り当てる前に符号規約を確認してください。すでに負のペナルティを返す関数は、プロジェクトの規約と一致する場合にのみ正の重みを使用するのが通常です。近くのタスク設定を確認し、TensorBoard で重み付けされた指標を確認してください。
+重みを割り当てる前に符号規約を確認してください。すでに負のペナルティを返す関数は、プロジェクトの規約と一致する場合にのみ正の重みを使用するのが通常です。近くのタスク設定を確認し、TensorBoard で重み付けされたメトリクスを確認してください。
 :::
 
 ## 新しいタスクを登録する
@@ -125,7 +127,7 @@ register_mjlab_task(
 )
 ```
 
-新しいモジュールで実装した呼び出し可能名を正確に使用し、現在のレジストリシグネチャを踏襲してください。
+新しいモジュールで実装した呼び出し可能オブジェクト名を正確に使用し、現在のレジストリシグネチャを踏襲してください。
 
 登録を確認します：
 
@@ -133,9 +135,9 @@ register_mjlab_task(
 uv run --no-sync list-envs | grep Mjlab-Bow
 ```
 
-## 学習前に検査する
+## 学習前に確認する
 
-ランダムポリシーを起動して、モデル、リセット状態、センサー、コマンドマネージャ、終了条件設定を確認します：
+ランダムポリシーを起動して、モデル、リセット状態、センサー、コマンドマネージャ、終端設定を確認します：
 
 ```bash
 export DISPLAY=:0
@@ -147,7 +149,7 @@ uv run --no-sync play Mjlab-Bow-Flat-MicroDuck \
   --viewer native
 ```
 
-不正な接触、スポーン時のめり込み、関節方向の誤り、即時終了、NaN 値、不可能なターゲットポーズがないか確認してください。
+不正な接触、スポーン時のめり込み、関節方向の誤り、即時終端、NaN 値、不可能なターゲットポーズがないか確認します。
 
 ## スモークテストを実行する
 
@@ -168,7 +170,7 @@ uv run --no-sync train Mjlab-Bow-Flat-MicroDuck \
 
 1. **モーション探索**：容易なスポーン状態、広いポーズ報酬、最小限の外乱。
 2. **モーション完遂**：ホールドとリカバリ項を強化し、結果ベースの報酬を追加する。
-3. **ロバスト性**：スポーン多様性、摩擦ランダム化、外力、バックラッシュバリアントを増やす。
+3. **ロバスト性**：スポーン多様性、摩擦のランダム化、外力プッシュ、バックラッシュのバリアントを増やす。
 
 長時間実行の例：
 
@@ -179,7 +181,7 @@ uv run --no-sync train Mjlab-Bow-Flat-MicroDuck \
   --agent.max_iterations 2000
 ```
 
-合計報酬だけでなく、メインのタスク報酬を見るようにしてください。ポリシーが正則化指標を改善しても、意図したモーションを一度も完了しない場合があります。
+合計報酬だけでなく、メインのタスク報酬を注視してください。ポリシーが意図したモーションを一度も完了させないまま、正則化メトリクスだけを改善してしまうことがあります。
 
 ## 可視化とエクスポート
 
@@ -193,7 +195,7 @@ uv run --no-sync play Mjlab-Bow-Flat-MicroDuck \
   --viewer native
 ```
 
-承認されたチェックポイントをエクスポートします：
+承認したチェックポイントをエクスポートします：
 
 ```bash
 uv run --no-sync python3 scripts/export.py \
@@ -202,16 +204,16 @@ uv run --no-sync python3 scripts/export.py \
   --onnx-file bow.onnx
 ```
 
-キーボードトリガーを追加するには、既存の sit/stand、ground-pick、roulade、kick のポリシースイッチングパターンを用いて `scripts/infer_policy.py` を拡張します。新しいポリシーが期待するコマンドスロットに書き込み、61 次元の観測レイアウトは変更しないでください。
+キーボードトリガーを追加するには、既存の sit/stand、ground-pick、roulade、kick のポリシースイッチングパターンを用いて `scripts/infer_policy.py` を拡張します。新しいポリシーが期待するコマンドスロットに書き込み、61 次元の観測レイアウトは変更せずに維持してください。
 
-## 検証済み例：片脚バランス
+## 検証済みの例：前後スプリット
 
-次のカスタムタスクは、Jetson リファレンスシステム上で実装され、スモークテストが行われました。このモーションでは、ロボットの重心を**左足**に移し、**右足**を持ち上げ、バランスポーズを保持してから、通常の両足立ちポーズに戻します。
+検証済みのカスタムタスクは、以前の片脚バランス実験よりも実現しやすい両脚支持モーションを使用します。左足は前方に、右足は後方に動き、両足は接地したままで、ロボットは通常の直立ポーズに戻ります。
 
 登録されたタスク ID は次のとおりです：
 
 ```text
-Mjlab-OneLegBalance-Flat-MicroDuck
+Mjlab-FrontBackSplit-Flat-MicroDuck
 ```
 
 ### モーションタイムライン
@@ -219,204 +221,172 @@ Mjlab-OneLegBalance-Flat-MicroDuck
 このタスクは 6 秒周期のフェーズコマンドを使用します：
 
 | 正規化フェーズ | 挙動 |
-|---|---|
-| `0.00–0.30` | 左足に荷重を移し、右脚を持ち上げる |
-| `0.30–0.58` | 片脚バランスポーズを保持する |
-| `0.58–0.78` | 右足を下ろし、直立姿勢に戻る |
-| `0.78–1.00` | 両足ホームポーズで安定させる |
+| --- | --- |
+| `0.00–0.30` | 直立から前後スプリットへ移行する |
+| `0.30–0.58` | 両足を接地したままスプリット姿勢を保持する |
+| `0.58–0.78` | 直立ポーズに向けて脚を戻す |
+| `0.78–1.00` | 両足支持のホームポーズで安定させる |
 
-これらの境界は `microduck_one_leg_balance_env_cfg.py` で定義されています：
+タイミング定数は
+`src/mjlab_microduck/tasks/microduck_front_back_split_env_cfg.py` に定義されています：
 
 ```python
-BALANCE_PERIOD = 6.0
-LIFT_END = 0.30
+SPLIT_PERIOD = 6.0
+SPLIT_END = 0.30
 HOLD_END = 0.58
 RETURN_END = 0.78
+TARGET_SAGITTAL_SEPARATION = 0.095
 ```
 
 ### ターゲットポーズを定義する
 
-ターゲットは、生の MuJoCo 関節インデックスではなく関節名で表現されます。これにより意図が読みやすくなり、ロボットモデルが変更されたときにインデックスが誤ってずれることを防げます。
+ターゲットは関節名で表現され、MuJoCo の順運動学で確認されています。ターゲットは 2 つの足サイトを水平に保ちながら、前後方向の足の符号付き分離量を約 `9.5 cm` 生じさせます：
 
 ```python
-ONE_LEG_POSE = {
-    "left_hip_roll": -0.25,
-    "left_hip_pitch": -0.40,
-    "left_knee": -0.05,
-    "left_ankle": 0.45,
-    "right_hip_roll": -0.10,
-    "right_hip_pitch": 0.95,
-    "right_knee": -1.25,
-    "right_ankle": 0.30,
-    "neck_pitch": 0.30,
-    "head_pitch": 0.30,
-    "head_roll": -0.10,
+FRONT_BACK_SPLIT_POSE = {
+    "left_hip_pitch": -1.1865,
+    "left_knee": -0.1386,
+    "left_ankle": 1.0452,
+    "right_hip_pitch": 0.0603,
+    "right_knee": 0.4927,
+    "right_ankle": 0.4293,
+    "neck_pitch": 0.3491,
+    "head_pitch": 0.3491,
 }
 ```
 
-左脚は立位構成に近い状態を維持します。右股関節と右膝は遊脚を前方に折りたたみ、わずかな頭のロールによって、どちらの脚が支持側かを伝えやすくします。
-
-### バランス報酬を構築する
-
-この例では、5 つのタスク固有の目的を組み合わせています：
-
-| 報酬 | 目的 |
-|---|---|
-| `one_leg_pose` | 立位からバランスへの補間関節ポーズを追従する |
-| `support_foot_grounded` | 左支持脚を地形と接触させ続ける |
-| `swing_foot_airborne` | ホールドフェーズ中に右足が床に残らないようにする |
-| `swing_foot_height` | 地形上の所望の右足クリアランスを追従する |
-| `com_over_support` | 水平な重心を左支持脚の上に移動させる |
-
-このタスクはまた、Microduck 学習環境から継承した関節リミット、自己衝突、角速度、アクションレート、アクチュエータ、エンコーダ、摩擦、質量、慣性、重心ランダム化の項も保持しています。
-
-`src/mjlab_microduck/tasks/mdp.py` には、小さな再利用可能な計測が 2 つ追加されました：
-
-- `phase_single_foot_airborne_reward()` は、右足の空中報酬をアクティブなバランスフェーズに制限します。
-- `phase_site_height_track()` は、右足の高さターゲットを立位状態と持ち上げた状態の間で補間します。
-
-既存の `phase_pose_track()`, `phase_pose_track_l1()`, `single_foot_grounded_reward()`, `com_over_support_foot()` 関数はそのまま再利用します。
-
-### タスクを登録する
-
-タスク設定の import と登録を `src/mjlab_microduck/tasks/__init__.py` に追加します：
-
-```python
-from .microduck_one_leg_balance_env_cfg import (
-    make_microduck_one_leg_balance_env_cfg,
-    MicroduckOneLegBalanceRlCfg,
-)
-
-register_mjlab_task(
-    task_id="Mjlab-OneLegBalance-Flat-MicroDuck",
-    env_cfg=make_microduck_one_leg_balance_env_cfg(),
-    play_env_cfg=make_microduck_one_leg_balance_env_cfg(play=True),
-    rl_cfg=MicroduckOneLegBalanceRlCfg,
-    runner_cls=MicroduckOnPolicyRunner,
-)
-```
-
-MJLab が新しいタスクを検出することを確認します：
+インタラクティブな姿勢エディタは `scripts/front_back_split_pose_editor.py` です。
+実行すると、重力を無効にした MuJoCo ウィンドウが開き、ウィンドウを閉じると最終的な名前付き姿勢が出力されます：
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
-uv run --no-sync list-envs | grep OneLegBalance
+export DISPLAY=:0
+export MUJOCO_GL=glfw
+uv run --no-sync python scripts/front_back_split_pose_editor.py
+```
+
+Jetson デスクトップで別のディスプレイ環境を使用している場合は、グラフィカル端末からコマンドを直接実行し、`echo $DISPLAY` で出力された値を使用してください。
+
+### スプリットモーション報酬を構築する
+
+このタスクは、次のモーション固有の目的を組み合わせています：
+
+| 報酬 | 目的 |
+| --- | --- |
+| `split_pose` | 直立からスプリットへの補間関節ポーズを追従する |
+| `split_pose_l1` | 方向性のある関節誤差勾配を与える |
+| `feet_grounded` | 両足を地形と接触させ続ける |
+| `feet_flat` | 傾いた足サイトをペナルティする |
+| `sagittal_separation` | 前後方向の符号付き足分離量を追従する |
+
+このタスクでは、Microduck 環境から継承された直立、関節制限、自己衝突、角速度、アクション変化率、アクチュエータ、エンコーダ、摩擦、質量、慣性、および重心のランダム化に関する項も維持されています。カスタムの `sagittal_separation` 項は、ロボットのベース座標系で両足の site を測定するため、報酬項と姿勢で同じ座標系の規約が使用されます。
+
+### タスクを登録する
+
+`Mjlab-FrontBackSplit-Flat-MicroDuck` は MJLab レジストリで使用されるタスク ID です。
+これはファイル名ではなく、環境ファクトリへの引数として渡されません。
+
+| 項目 | 位置 | 目的 |
+| --- | --- | --- |
+| 環境と RL の設定 | `src/mjlab_microduck/tasks/microduck_front_back_split_env_cfg.py` | 目標ポーズ、フェーズタイミング、シーン、報酬、および PPO 設定を定義します |
+| フェーズ分離報酬 | `src/mjlab_microduck/tasks/mdp.py` | ロボットのベース座標系における符号付き矢状面足分離を追跡します |
+| タスク登録 | `src/mjlab_microduck/tasks/__init__.py` | タスク ID を環境および RL 設定にバインドします |
+| ポーズエディタ | `scripts/front_back_split_pose_editor.py` | 検証済み MuJoCo 目標ポーズを開き、表示します |
+| CLI エントリポイント | `uv run --no-sync train <task-id>` | 登録済みタスクを検索し、トレーニングを開始します |
+
+登録を確認します：
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+uv run --no-sync list-envs | grep FrontBackSplit
 ```
 
 期待される出力：
 
 ```text
-Mjlab-OneLegBalance-Flat-MicroDuck
+Mjlab-FrontBackSplit-Flat-MicroDuck
 ```
 
-### MuJoCo でポーズを編集してキャプチャする
+### スモークテストを実行する
 
-この例には `scripts/one_leg_pose_editor.py` が含まれています。これは重力を無効にし、フローティングベースを固定することで、学習前に各関節ターゲットを安全に調整できるようにします。
-
-Jetson デスクトップ上のターミナルから直接実行します：
+64 個の環境と 5 イテレーションから始めます：
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
-uv run --no-sync python scripts/one_leg_pose_editor.py
-```
-
-MuJoCo ウィンドウ右側の **Control** パネルを展開し、ジョイントスライダーを調整します。ウィンドウを閉じると、最終的な名前付き `ONE_LEG_POSE` 辞書がターミナルに出力されます。MuJoCo の **Save XML** と **Save MJB** ボタンはモデルファイルを保存しますが、このタスクで使用される Python のターゲットポーズ辞書は保存しません。
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_one_leg_balance.png" alt="Interactive MuJoCo pose editor showing the Microduck one-leg balance target pose" />
-</div>
-
-エディタを SSH 経由で起動し、Jetson にローカル接続されたモニタに表示させたい場合は、まずアクティブなデスクトップセッションを export します。検証済みの Jetson セッションでは `DISPLAY=:1` を使用しました：
-
-```bash
-cd ~/microduck-jetson/microduck_rl
-
-export DISPLAY=:1
-export XAUTHORITY=/run/user/1000/gdm/Xauthority
-export XDG_RUNTIME_DIR=/run/user/1000
-export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
-
-~/.local/bin/uv run --no-sync python scripts/one_leg_pose_editor.py
-```
-
-:::note
-ディスプレイ番号は、再起動後やデスクトップセッションが変わったときに変更されることがあります。Jetson デスクトップ上で直接開いたターミナルから `echo $DISPLAY` を実行すると、アクティブな値が表示されます。
-:::
-
-### 検証済みスモークテストを実行する
-
-まずは 64 環境と 5 イテレーションから始めます：
-
-```bash
-cd ~/microduck-jetson/microduck_rl
-
 export MUJOCO_GL=egl
-
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+uv run --no-sync train Mjlab-FrontBackSplit-Flat-MicroDuck \
   --env.scene.num-envs 64 \
   --agent.logger tensorboard \
   --agent.max_iterations 5
 ```
 
-このタスクは、16 GB Jetson 上で 4096 並列環境でもテストされました：
+16 GB リファレンス Jetson の検証済みフルランでは、2048 個の環境を使用しました：
 
 ```bash
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 4096 \
+uv run --no-sync train Mjlab-FrontBackSplit-Flat-MicroDuck \
+  --env.scene.num-envs 2048 \
   --agent.logger tensorboard \
-  --agent.max_iterations 5
+  --agent.max_iterations 1000
 ```
 
-4096 環境のスモークテストは、メモリエラーや NaN による終了なしに完了し、およそ `4.6k steps/s` に到達しました。アクターの観測は 61 次元のままで、アクション出力も 14 次元のままでした。
+完了したランでは、600 ステップのエピソードをフルに達成し、後半のトレーニングでは転倒による終了がゼロで、スプリットポーズ、足接地、および分離報酬はほぼ最大値に達しました。
+8 GB の Jetson Orin NX または Orin Nano では、`1024` 個の環境から開始し、`jtop` でメモリを確認した後にのみ増やしてください。
 
-:::tip
-8 GB の Jetson Orin NX または Jetson Orin Nano では、まず `--env.scene.num-envs 1024` から始めてください。`jtop` で利用可能メモリを確認した後にのみ増やしてください。
-:::
+### PT チェックポイントを可視化する
 
-### トレーニングビューアを開く
-
-カスタムタスクの学習中に 1 つの環境を可視化するには、Jetson デスクトップから次のコマンドを実行します：
+完了したチェックポイントを Native MuJoCo Viewer で使用します：
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
-
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 1 \
-  --agent.logger tensorboard \
-  --agent.max_iterations 1000 \
-  --env.viewer.distance 0.55 \
-  --env.viewer.azimuth 145 \
-  --env.viewer.elevation -12
+export DISPLAY=:0
+export MUJOCO_GL=glfw
+uv run --no-sync play Mjlab-FrontBackSplit-Flat-MicroDuck \
+  --checkpoint-file "$PWD/logs/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt" \
+  --num-envs 1 \
+  --viewer native
 ```
 
-ポーズエディタは、意図したターゲットをすぐに表示します。トレーニングビューアは最初は未学習のポリシーを表示するため、片足で安定した挙動が現れるのは、ポリシーが移動、リフト、ホールド、リカバリのシーケンスを学習した後になります。
+### ONNX ポリシーをエクスポートして実行する
 
-### 本格的なトレーニングを開始する
-
-16 GB リファレンスシステムでは、次の設定から始めてください：
+チェックポイントをプロジェクトラッパーでエクスポートし、観測正規化器が ONNX グラフに埋め込まれるようにします：
 
 ```bash
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 4096 \
-  --agent.logger tensorboard \
-  --agent.max_iterations 20000
+uv run --no-sync python3 scripts/export.py \
+  Mjlab-FrontBackSplit-Flat-MicroDuck \
+  --checkpoint-file "$PWD/logs/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt" \
+  --onnx-file "$PWD/models/exports/front_back_split/front_back_split_model_999.onnx" \
+  --num-envs 1
 ```
 
-スモークテストにより、タスク設定、報酬項、センサー、CUDA バックエンド、および多数の並列環境数が正しく動作することが確認されます。ただし、それ自体ではポリシーの収束を証明するものではありません。保存されたチェックポイントを MuJoCo で評価し、ロボットが重心を移動せずに足を持ち上げる、ホップする、あるいは立位への復帰に失敗する場合は、ポーズ、報酬重み、フェーズタイミング、またはカリキュラムを調整してください。
+キーボード操作の MuJoCo 推論デモで実行します：
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+export DISPLAY=:0
+export MUJOCO_GL=glfw
+uv run --no-sync python3 scripts/infer_policy.py \
+  --standing pretrained/pollen-robotics/alpha_stand.onnx \
+  --front-back-split models/exports/front_back_split/front_back_split_model_999.onnx \
+  --new-cmd-obs
+```
+
+`O` を押すと、6 秒間の前後スプリットサイクルを 1 回実行します。ポリシーはトレーニング中に使用されたものと同じコサイン／サインのフェーズコマンドを受け取り、その後、自動的にスタンディングポリシーに制御が戻ります。歩行ポリシーも指定されている場合、非ゼロの速度コマンドが有効になるとデモは歩行に戻ります。
+
+旧来の `--one-leg-balance` オプションと片脚タスクファイルは、現在のリポジトリには含まれていません。この検証済みモーションには `--front-back-split` を使用してください。
 
 ## 開発チェックリスト
 
 - [ ] 観測レイアウトは 61 次元のままである。
 - [ ] ポリシー出力は 14 次元のままである。
 - [ ] 受動関節はアクションおよびサーボ観測から除外されている。
-- [ ] BAM 起動イベントとドメインランダム化は、必要な箇所で有効なままである。
+- [ ] BAM 起動イベントとドメインランダム化は、必要な箇所で有効のままである。
 - [ ] タスクが `list-envs` に表示される。
-- [ ] ランダムポリシービューアでの検査が成功する。
+- [ ] ランダムポリシー Viewer による検査が成功する。
 - [ ] 64 環境のスモークテストが成功する。
-- [ ] 主要なタスク指標が TensorBoard 上で改善している。
-- [ ] 最終的な PT チェックポイントが MuJoCo で正しく動作する。
-- [ ] ONNX がプロジェクトスクリプトでエクスポートされ、ロボット展開前にリハーサルされている。
+- [ ] 主要タスク指標が TensorBoard 上で改善している。
+- [ ] 最終 PT チェックポイントが MuJoCo 上で正しく動作する。
+- [ ] ONNX はプロジェクトスクリプトでエクスポートされ、ロボット展開前にリハーサルされている。
 
 <div align="center">
   <a href="/ja/ai_robotics_microduck_rl_on_jetson/" style={{display:'inline-block', padding:'16px 30px', marginTop:'20px', borderRadius:'10px', background:'linear-gradient(135deg, #172b4d, #0b172d)', color:'#fff', fontSize:'18px', fontWeight:'800', textDecoration:'none', boxShadow:'0 10px 26px rgba(23,43,77,.25)'}}>デモホームに戻る</a>
-</div>
+  </div>

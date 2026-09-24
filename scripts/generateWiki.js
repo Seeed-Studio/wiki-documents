@@ -30,6 +30,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Custom_Motion_Training.md'), //9.7
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Jetson_Environment.md'), //9.7
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Official_Policies.md'), //9.7
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'T1000-E', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_t1000e.md'), //9.19
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L1', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l1.md'), //9.19
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L2', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l2.md'), //9.19
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

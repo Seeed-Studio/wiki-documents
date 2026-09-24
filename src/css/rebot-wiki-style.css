@@ -271,6 +271,241 @@
   font-size: 0.86rem;
 }
 
+/* 简洁的纵向操作步骤 */
+.rebot-step-flow {
+  --rebot-step-line: var(--ifm-color-emphasis-400);
+  --rebot-step-muted: var(--ifm-color-emphasis-700);
+  margin: 1.5rem 0 2rem;
+}
+
+/* 后续平台内容由页面顶部的平台标签联动，不重复显示标签栏 */
+.rebot-linked-platform-content[role='tablist'] {
+  display: none;
+}
+
+.rebot-linked-platform-content + .margin-top--md {
+  margin-top: 0 !important;
+}
+
+.rebot-step-item {
+  position: relative;
+  min-width: 0;
+  padding: 0 0 2.75rem 4rem;
+}
+
+.rebot-step-item:last-child {
+  padding-bottom: 0.25rem;
+}
+
+.rebot-step-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 2.75rem;
+  bottom: 0.55rem;
+  left: 1.14rem;
+  border-left: 2px dotted var(--rebot-step-line);
+}
+
+.rebot-step-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: inline-flex;
+  width: 2.35rem;
+  height: 2.35rem;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--ifm-font-color-base);
+  border-radius: 999px;
+  color: var(--ifm-font-color-base);
+  background: var(--ifm-background-color);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.rebot-step-content {
+  min-width: 0;
+}
+
+.rebot-step-content > h4 {
+  margin: 0 0 0.35rem;
+  font-size: 1.28rem;
+  line-height: 1.5;
+}
+
+.rebot-step-label {
+  margin: 0 0 1.6rem;
+  color: var(--rebot-step-muted);
+  font-style: italic;
+}
+
+.rebot-step-content .tabs-container {
+  margin: 1.1rem 0 1.35rem;
+}
+
+.rebot-step-content pre {
+  border-radius: 16px;
+}
+
+/* 步骤状态：只强化层级，不改变简洁的纵向布局 */
+.rebot-step-item--optional > .rebot-step-number {
+  border-color: #d97706;
+  color: #b45309;
+  background: #fffbeb;
+}
+
+.rebot-step-item--recommended > .rebot-step-number {
+  border-color: #16a34a;
+  color: #15803d;
+  background: #f0fdf4;
+}
+
+.rebot-step-item--recommended > .rebot-step-content > h4 {
+  color: #15803d;
+}
+
+.rebot-step-item--caution > .rebot-step-number {
+  border-color: #ea580c;
+  color: #c2410c;
+  background: #fff7ed;
+}
+
+.rebot-step-item--simulation > .rebot-step-number {
+  border-color: #2563eb;
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+/* 可选 Demo：安全提示常驻，仅折叠实际运行命令 */
+.rebot-demo-details {
+  margin: 1rem 0 0;
+  padding: 0 1rem 1rem;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 14px;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.rebot-demo-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 -1rem -1rem;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  color: var(--ifm-font-color-base);
+  font-weight: 700;
+  list-style: none;
+}
+
+.rebot-demo-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.rebot-demo-details > summary::before {
+  display: none !important;
+  content: none !important;
+  border: 0 !important;
+}
+
+.rebot-demo-details > summary::after {
+  content: '+';
+  flex: 0 0 auto;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.rebot-demo-details[open] > summary {
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.rebot-demo-details[open] > summary::after {
+  content: '−';
+}
+
+.rebot-demo-details > summary:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: -3px;
+}
+
+[data-theme='dark'] .rebot-step-item--optional > .rebot-step-number,
+[data-theme='dark'] .rebot-step-item--recommended > .rebot-step-number,
+[data-theme='dark'] .rebot-step-item--caution > .rebot-step-number,
+[data-theme='dark'] .rebot-step-item--simulation > .rebot-step-number {
+  background: var(--ifm-background-color);
+}
+
+/* 风险声明图片：不同比例的图片在统一画布中完整展示 */
+.rebot-disclaimer-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 1.5rem auto 2rem;
+}
+
+.rebot-disclaimer-gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  padding: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 14px;
+  background: var(--ifm-background-surface-color, var(--ifm-background-color));
+}
+
+.rebot-disclaimer-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 电源图片：上方双列，下方通栏并保持左右边缘对齐 */
+.rebot-power-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 1.5rem auto 2rem;
+}
+
+.rebot-power-gallery-item {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 14px;
+  background: var(--ifm-background-surface-color, var(--ifm-background-color));
+}
+
+.rebot-power-gallery-item figcaption {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  font-weight: 700;
+  text-align: center;
+}
+
+.rebot-power-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rebot-power-gallery-item--wide {
+  grid-column: 1 / -1;
+}
+
 /* details 卡片 */
 .content-details {
   margin: 0.9rem 0;
@@ -505,6 +740,281 @@ html[data-theme='dark'] .course-path-item.active {
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(20, 184, 166, 0.12));
 }
 
+/* GitHub Star CTA */
+.rebot-github-star-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.15rem 0 1.75rem;
+}
+
+.rebot-github-star {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 2.4rem;
+  max-width: 13rem;
+  padding: 0.55rem 1rem;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: nowrap;
+  background: #050505;
+  border: 1px solid #050505;
+  border-radius: 0.55rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.rebot-github-star:hover {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 0 2px var(--ifm-background-color), 0 0 0 4px #050505;
+  transform: translateY(-1px);
+}
+
+.rebot-github-star:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+.rebot-github-star-label,
+.rebot-github-star-count {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.rebot-github-star svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.rebot-github-star-count svg {
+  color: #9ca3af;
+  transition: color 300ms ease;
+}
+
+.rebot-github-star:hover .rebot-github-star-count svg {
+  color: #fde047;
+}
+
+.rebot-github-star-shine {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  width: 2rem;
+  height: 8rem;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(3rem) rotate(12deg);
+  transition: transform 700ms ease-out;
+}
+
+.rebot-github-star:hover .rebot-github-star-shine {
+  transform: translateX(-10rem) rotate(12deg);
+}
+
+/* Purchase CTA */
+@property --rebot-buy-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+
+.rebot-buy-button-group {
+  --rebot-buy-angle: 0deg;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 1.1rem auto 1.35rem;
+  animation: rebotBuyBorderSpin 4s linear infinite;
+}
+
+.rebot-buy-button-glow {
+  position: absolute;
+  inset: -18px 5%;
+  z-index: -1;
+  pointer-events: none;
+  background: conic-gradient(
+    from var(--rebot-buy-angle),
+    transparent 0 3%,
+    #7668ce 10%,
+    transparent 38% 50%,
+    #d85bbd 61%,
+    transparent 87% 100%
+  );
+  border-radius: 999px;
+  opacity: 0.24;
+  filter: blur(30px);
+  transition: opacity 220ms ease, transform 700ms ease;
+}
+
+.rebot-buy-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3.05rem;
+  padding: 0.72rem 1.55rem;
+  color: #1f2937;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none !important;
+  white-space: nowrap;
+  background:
+    linear-gradient(180deg, #ffffff, #f5f3ff) padding-box,
+    conic-gradient(
+      from var(--rebot-buy-angle),
+      #e5e7eb,
+      #7668ce 8%,
+      #e5e7eb 20%,
+      #f3f4f6 48%,
+      #d85bbd 61%,
+      #e5e7eb 74%,
+      #9f96dc 88%,
+      #e5e7eb
+    ) border-box;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(118, 104, 206, 0.14);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.rebot-buy-button-group:hover .rebot-buy-button {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(159, 150, 220, 0.2),
+    0 12px 34px rgba(118, 104, 206, 0.18),
+    0 8px 28px rgba(216, 91, 189, 0.13);
+}
+
+.rebot-buy-button-group:hover .rebot-buy-button-glow {
+  opacity: 0.44;
+  transform: scaleX(1.04);
+}
+
+.rebot-buy-button-group:active .rebot-buy-button {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 6px 18px rgba(118, 104, 206, 0.16);
+}
+
+.rebot-buy-button-group:active .rebot-buy-button-arrow-head {
+  transform: translateX(5px);
+}
+
+.rebot-buy-button:focus-visible {
+  outline: 2px solid #4c3f84;
+  outline-offset: 3px;
+}
+
+.rebot-buy-button-arrow {
+  width: 1rem;
+  height: 1rem;
+  overflow: visible;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.rebot-buy-button-arrow-line {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.rebot-buy-button-arrow-head {
+  transition: transform 200ms ease;
+}
+
+.rebot-buy-button-group:hover .rebot-buy-button-arrow-line {
+  opacity: 1;
+}
+
+.rebot-buy-button-group:hover .rebot-buy-button-arrow-head {
+  transform: translateX(3px);
+}
+
+@keyframes rebotBuyBorderSpin {
+  to { --rebot-buy-angle: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rebot-github-star,
+  .rebot-github-star-shine,
+  .rebot-github-star-count svg {
+    transition: none;
+  }
+
+  .rebot-buy-button-group,
+  .rebot-buy-button,
+  .rebot-buy-button-glow,
+  .rebot-buy-button-arrow-line,
+  .rebot-buy-button-arrow-head {
+    animation: none;
+    transition: none;
+  }
+
+  .rebot-buy-button-group:hover .rebot-buy-button {
+    transform: none;
+  }
+
+  .rebot-buy-button-group:active .rebot-buy-button,
+  .rebot-buy-button-group:active .rebot-buy-button-arrow-head {
+    transform: none;
+  }
+}
+
+html[data-theme='dark'] .rebot-buy-button {
+  color: #f8fafc;
+  background:
+    linear-gradient(180deg, #161329, #08080a) padding-box,
+    conic-gradient(
+      from var(--rebot-buy-angle),
+      #1c191c,
+      #402fb5 8%,
+      #1c191c 20%,
+      #1c191c 48%,
+      #cf30aa 61%,
+      #1c191c 74%,
+      #a099d8 88%,
+      #1c191c
+    ) border-box;
+}
+
+html[data-theme='dark'] .rebot-buy-button-glow {
+  background: conic-gradient(
+    from var(--rebot-buy-angle),
+    #000 0 3%,
+    #402fb5 10%,
+    #000 38% 50%,
+    #cf30aa 61%,
+    #000 87% 100%
+  );
+  opacity: 0.34;
+  filter: blur(28px);
+}
+
+html[data-theme='dark'] .rebot-buy-button-group:hover .rebot-buy-button {
+  box-shadow:
+    0 0 0 1px rgba(223, 162, 218, 0.22),
+    0 12px 34px rgba(64, 47, 181, 0.24),
+    0 8px 28px rgba(207, 48, 170, 0.18);
+}
+
+html[data-theme='dark'] .rebot-buy-button-group:hover .rebot-buy-button-glow {
+  opacity: 0.58;
+}
+
 /* 响应式 */
 @media (max-width: 900px) {
   .doc-hero {
@@ -540,5 +1050,34 @@ html[data-theme='dark'] .course-path-item.active {
 
   .safety-alert {
     grid-template-columns: 1fr;
+  }
+
+  .rebot-step-item {
+    padding-left: 3.25rem;
+  }
+
+  .rebot-step-number {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.88rem;
+  }
+
+  .rebot-step-item:not(:last-child)::after {
+    top: 2.4rem;
+    left: 0.96rem;
+  }
+
+  .rebot-disclaimer-gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .rebot-power-gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .rebot-power-gallery-item--wide {
+    grid-column: auto;
   }
 }

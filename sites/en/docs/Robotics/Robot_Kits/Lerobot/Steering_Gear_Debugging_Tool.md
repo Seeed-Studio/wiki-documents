@@ -1,6 +1,6 @@
 ---
 description: Steering Gear Debugging Tool for SO-ARM in Lerobot.
-title: Steering Gear Debugging Tool for SO-ARM in Lerobot
+title: SO-Arm Debugging Tool
 keywords:
   - Lerobot
   - SO-ARM

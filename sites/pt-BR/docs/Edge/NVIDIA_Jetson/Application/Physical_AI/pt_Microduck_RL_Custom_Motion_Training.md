@@ -5,9 +5,11 @@ image: https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_jetson_rl_
 slug: /ai_robotics_microduck_rl_custom_motion_training
 sku: 114110312, 100006184
 last_update:
-  date: 09/07/2026
+  date: 09/11/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/pt-br/ai_robotics_microduck_rl_custom_motion_training/
+updatedAt: '2026-09-07'
 ---
 
 # Criar um Movimento Personalizado do Microduck
@@ -16,7 +18,7 @@ Este capítulo apresenta o fluxo de trabalho do projeto para construir um novo m
 
 <div style={{display:'flex', gap:'12px', flexWrap:'wrap', margin:'18px 0 30px'}}>
   <a href="/pt-br/ai_robotics_microduck_rl_on_jetson/" style={{display:'inline-flex', alignItems:'center', gap:'10px', padding:'9px 16px 9px 10px', borderRadius:'9px', background:'#172b4d', color:'#fff', fontWeight:'700', textDecoration:'none'}}><span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'28px', height:'28px', borderRadius:'50%', background:'rgba(255,255,255,.2)', fontSize:'21px', lineHeight:'1'}}>←</span> Demo Home</a>
-  <a href="/pt-br/ai_robotics_microduck_rl_official_policies/" style={{display:'inline-flex', alignItems:'center', gap:'10px', padding:'9px 16px 9px 10px', borderRadius:'9px', background:'#00a86b', color:'#fff', fontWeight:'700', textDecoration:'none'}}><span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'28px', height:'28px', borderRadius:'50%', background:'rgba(255,255,255,.22)', fontSize:'21px', lineHeight:'1'}}>←</span> Official Motions</a>
+  <a href="/pt-br/ai_robotics_microduck_rl_official_policies/" style={{display:'inline-flex', AlignItems:'center', gap:'10px', padding:'9px 16px 9px 10px', borderRadius:'9px', background:'#00a86b', color:'#fff', fontWeight:'700', textDecoration:'none'}}><span style={{display:'inline-flex', alignItems:'center', justifyContent:'center', width:'28px', height:'28px', borderRadius:'50%', background:'rgba(255,255,255,.22)', fontSize:'21px', lineHeight:'1'}}>←</span> Movimentos Oficiais</a>
 </div>
 
 ## Entender o Contrato da Policy
@@ -26,17 +28,17 @@ Todas as policies intercambiáveis do Microduck compartilham a mesma interface:
 - **Observação do ator de 61 dimensões**: 48 valores de propriocepção mais o bloco de comando de 13 dimensões `[twist(3), head_pose(4), body_pose(6)]`.
 - **Saída de ação de 14 dimensões** para as juntas de servo ativas.
 - Slots de comando não utilizados continuam presentes e são preenchidos com zeros.
-- As juntas passivas das rodas e de folga usam a convenção de nomenclatura `passive_*` e não devem ser selecionadas como juntas atuadas.
+- As juntas passivas de roda e folga usam a convenção de nomenclatura `passive_*` e não devem ser selecionadas como juntas atuadas.
 - Os IDs das juntas devem ser resolvidos pelos helpers do projeto em vez de codificados diretamente.
-- A exportação para ONNX deve passar por `scripts/export.py` para que o normalizador de observação seja incluído.
+- A exportação ONNX deve passar por `scripts/export.py` para que o normalizador de observação seja incluído.
 
-Quebrar esse contrato pode produzir uma policy que funciona em um visualizador, mas não pode ser trocada ou implantada corretamente.
+Quebrar esse contrato pode produzir uma policy que funciona em um viewer, mas não pode ser trocada ou implantada corretamente.
 
 ## Selecionar o Template Mais Próximo
 
 | Movimento desejado | Template recomendado |
-|---|---|
-| Movimento de velocidade contínua | `microduck_velocity_env_cfg.py` |
+| --- | --- |
+| Movimento contínuo de velocidade | `microduck_velocity_env_cfg.py` |
 | Recuperação a partir de um estado específico | `microduck_standup_env_cfg.py` |
 | Transição de comando de dois estados | `microduck_sitstand_env_cfg.py` |
 | Movimento lento baseado em fases | `microduck_ground_pick_env_cfg.py` |
@@ -69,7 +71,7 @@ cp src/mjlab_microduck/tasks/mdp.py \
 Uma reverência simples pode usar uma fase normalizada de `0.0` a `1.0`:
 
 | Fase | Comportamento |
-|---|---|
+| --- | --- |
 | `0.00–0.25` | Descer em direção à pose de reverência |
 | `0.25–0.55` | Manter a reverência |
 | `0.55–0.85` | Retornar à pose inicial |
@@ -114,7 +116,7 @@ Verifique a convenção de sinal antes de atribuir um peso. Uma função que já
 
 ## Registrar a Nova Tarefa
 
-Importe a nova configuração em `src/mjlab_microduck/tasks/__init__.py` e registre um novo ID seguindo as entradas existentes:
+Importe a nova configuração em `src/mjlab_microduck/tasks/__init__.py`, depois registre um novo ID seguindo as entradas existentes:
 
 ```python
 register_mjlab_task(
@@ -179,7 +181,7 @@ uv run --no-sync train Mjlab-Bow-Flat-MicroDuck \
   --agent.max_iterations 2000
 ```
 
-Observe a recompensa principal da tarefa em vez de apenas a recompensa total. Uma policy pode melhorar métricas de regularização sem nunca completar o movimento pretendido.
+Observe a recompensa principal da tarefa em vez de apenas a recompensa total. Uma policy pode melhorar métricas de regularização e ainda assim nunca completar o movimento pretendido.
 
 ## Visualizar e Exportar
 
@@ -204,14 +206,17 @@ uv run --no-sync python3 scripts/export.py \
 
 Para adicionar disparo por teclado, estenda `scripts/infer_policy.py` usando os padrões existentes de troca de policy de sentar/levantar, ground-pick, roulade e chute. Escreva no slot de comando esperado pela nova policy e mantenha o layout de observação de 61 dimensões inalterado.
 
-## Exemplo Verificado: Equilíbrio em Uma Perna
+## Exemplo Verificado: Abertura Frontal-Traseira
 
-A seguinte tarefa personalizada foi implementada e passou no smoke test no sistema de referência Jetson. O movimento transfere o peso do robô para o **pé esquerdo**, levanta o **pé direito**, mantém a pose de equilíbrio em uma perna e depois retorna à pose normal de pé com dois pés.
+A tarefa personalizada validada usa um movimento de duplo apoio mais viável do que o
+experimento anterior de equilíbrio em uma perna. O pé esquerdo se move para frente, o pé direito
+se move para trás, ambos os pés permanecem no chão e o robô retorna à sua
+pose normal em pé.
 
 O ID de tarefa registrado é:
 
 ```text
-Mjlab-OneLegBalance-Flat-MicroDuck
+Mjlab-FrontBackSplit-Flat-MicroDuck
 ```
 
 ### Linha do Tempo do Movimento
@@ -219,204 +224,187 @@ Mjlab-OneLegBalance-Flat-MicroDuck
 A tarefa usa um comando de fase cíclica de seis segundos:
 
 | Fase normalizada | Comportamento |
-|---|---|
-| `0.00–0.30` | Transferir o peso para o pé esquerdo e levantar a perna direita |
-| `0.30–0.58` | Manter a pose de equilíbrio em uma perna |
-| `0.58–0.78` | Abaixar o pé direito e retornar à posição em pé |
+| --- | --- |
+| `0.00–0.30` | Sair da posição em pé para a abertura frontal-traseira |
+| `0.30–0.58` | Manter a postura de abertura com ambos os pés no chão |
+| `0.58–0.78` | Retornar as pernas em direção à pose em pé |
 | `0.78–1.00` | Estabilizar na pose inicial com dois pés |
 
-Esses limites são definidos em `microduck_one_leg_balance_env_cfg.py`:
+As constantes de tempo são definidas em
+`src/mjlab_microduck/tasks/microduck_front_back_split_env_cfg.py`:
 
 ```python
-BALANCE_PERIOD = 6.0
-LIFT_END = 0.30
+SPLIT_PERIOD = 6.0
+SPLIT_END = 0.30
 HOLD_END = 0.58
 RETURN_END = 0.78
+TARGET_SAGITTAL_SEPARATION = 0.095
 ```
 
 ### Definir a Pose Alvo
 
-O alvo é expresso com nomes de juntas em vez de índices brutos de juntas do MuJoCo. Isso mantém a intenção legível e evita mudanças acidentais de índice quando o modelo do robô muda.
+O alvo é expresso por nomes de juntas e foi verificado com cinemática
+direta do MuJoCo. O alvo mantém os dois sites dos pés nivelados enquanto produz cerca de
+`9.5 cm` de separação assinada frente-trás entre os pés:
 
 ```python
-ONE_LEG_POSE = {
-    "left_hip_roll": -0.25,
-    "left_hip_pitch": -0.40,
-    "left_knee": -0.05,
-    "left_ankle": 0.45,
-    "right_hip_roll": -0.10,
-    "right_hip_pitch": 0.95,
-    "right_knee": -1.25,
-    "right_ankle": 0.30,
-    "neck_pitch": 0.30,
-    "head_pitch": 0.30,
-    "head_roll": -0.10,
+FRONT_BACK_SPLIT_POSE = {
+    "left_hip_pitch": -1.1865,
+    "left_knee": -0.1386,
+    "left_ankle": 1.0452,
+    "right_hip_pitch": 0.0603,
+    "right_knee": 0.4927,
+    "right_ankle": 0.4293,
+    "neck_pitch": 0.3491,
+    "head_pitch": 0.3491,
 }
 ```
 
-A perna esquerda permanece próxima de sua configuração em pé. O quadril e o joelho direitos dobram a perna de balanço para a frente, enquanto a pequena inclinação da cabeça ajuda a comunicar o lado de suporte pretendido.
-
-### Construir a Recompensa de Equilíbrio
-
-O exemplo combina cinco objetivos específicos da tarefa:
-
-| Recompensa | Finalidade |
-|---|---|
-| `one_leg_pose` | Rastrear a pose de junta interpolada de em pé para equilíbrio |
-| `support_foot_grounded` | Manter o pé esquerdo de suporte em contato com o terreno |
-| `swing_foot_airborne` | Impedir que o pé direito permaneça no chão durante a fase de manutenção |
-| `swing_foot_height` | Rastrear a folga desejada do pé direito acima do terreno |
-| `com_over_support` | Mover o centro de massa horizontal sobre o pé esquerdo de suporte |
-
-A tarefa também mantém termos de limite de junta, autocontato, velocidade angular, taxa de ação, atuador, encoder, atrito, massa, inércia e randomização do centro de massa herdados do ambiente de treinamento do Microduck.
-
-Duas pequenas medições reutilizáveis foram adicionadas a `src/mjlab_microduck/tasks/mdp.py`:
-
-- `phase_single_foot_airborne_reward()` limita a recompensa de pé direito no ar à fase de equilíbrio ativa.
-- `phase_site_height_track()` interpola a altura alvo do pé direito entre os estados em pé e levantado.
-
-As funções existentes `phase_pose_track()`, `phase_pose_track_l1()`, `single_foot_grounded_reward()`, e `com_over_support_foot()` são reutilizadas diretamente.
-
-### Registrar a Tarefa
-
-Adicione a importação e o registro da configuração da tarefa em `src/mjlab_microduck/tasks/__init__.py`:
-
-```python
-from .microduck_one_leg_balance_env_cfg import (
-    make_microduck_one_leg_balance_env_cfg,
-    MicroduckOneLegBalanceRlCfg,
-)
-
-register_mjlab_task(
-    task_id="Mjlab-OneLegBalance-Flat-MicroDuck",
-    env_cfg=make_microduck_one_leg_balance_env_cfg(),
-    play_env_cfg=make_microduck_one_leg_balance_env_cfg(play=True),
-    rl_cfg=MicroduckOneLegBalanceRlCfg,
-    runner_cls=MicroduckOnPolicyRunner,
-)
-```
-
-Confirme que o MJLab detecta a nova tarefa:
+O editor de pose interativo é `scripts/front_back_split_pose_editor.py`.
+Ele abre uma janela MuJoCo com a gravidade desativada e imprime a pose nomeada final
+quando a janela é fechada:
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
-uv run --no-sync list-envs | grep OneLegBalance
+export DISPLAY=:0
+export MUJOCO_GL=glfw
+uv run --no-sync python scripts/front_back_split_pose_editor.py
+```
+
+Se a área de trabalho do Jetson usar um display diferente, execute o comando diretamente a partir de um
+terminal gráfico e use o valor impresso por `echo $DISPLAY`.
+
+### Construir a Recompensa de Movimento de Abertura
+
+A tarefa combina estes objetivos específicos de movimento:
+
+| Recompensa | Objetivo |
+| --- | --- |
+| `split_pose` | Rastrear a pose de junta interpolada de em pé para abertura |
+| `split_pose_l1` | Fornecer um gradiente direcional de erro de junta |
+| `feet_grounded` | Manter ambos os pés em contato com o terreno |
+| `feet_flat` | Penalizar sites de pés inclinados |
+| `sagittal_separation` | Rastrear a separação assinada frente-trás entre os pés |
+
+A tarefa também mantém termos de ficar em pé, limite de junta, autocolisão, velocidade angular,
+taxa de ação, atuador, codificador, atrito, massa, inércia e centro de massa
+termos de randomização herdados do ambiente Microduck. O termo personalizado
+`sagittal_separation` mede ambos os pés no referencial da base do robô, então
+a recompensa e a pose usam a mesma convenção de coordenadas.
+
+### Registrar a Tarefa
+
+`Mjlab-FrontBackSplit-Flat-MicroDuck` é o ID de tarefa usado pelo registro do MJLab.
+Ele não é um nome de arquivo e não é passado como argumento para a fábrica de ambientes.
+
+| Item | Localização | Finalidade |
+| --- | --- | --- |
+| Configuração de ambiente e RL | `src/mjlab_microduck/tasks/microduck_front_back_split_env_cfg.py` | Define a pose alvo, o tempo de fase, a cena, as recompensas e a configuração de PPO |
+| Recompensa de separação de fase | `src/mjlab_microduck/tasks/mdp.py` | Acompanha a separação sagital assinada dos pés no referencial da base do robô |
+| Registro da tarefa | `src/mjlab_microduck/tasks/__init__.py` | Vincula o ID da tarefa ao ambiente e à configuração de RL |
+| Editor de pose | `scripts/front_back_split_pose_editor.py` | Abre e imprime a pose alvo MuJoCo validada |
+| Ponto de entrada da CLI | `uv run --no-sync train <task-id>` | Procura a tarefa registrada e inicia o treinamento |
+
+Confirme o registro:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+uv run --no-sync list-envs | grep FrontBackSplit
 ```
 
 Saída esperada:
 
 ```text
-Mjlab-OneLegBalance-Flat-MicroDuck
+Mjlab-FrontBackSplit-Flat-MicroDuck
 ```
 
-### Editar e Capturar a Pose no MuJoCo
-
-O exemplo inclui `scripts/one_leg_pose_editor.py`. Ele desativa a gravidade e fixa a base flutuante para que alvos de juntas individuais possam ser ajustados com segurança antes do treinamento.
-
-Execute-o diretamente a partir de um terminal na área de trabalho do Jetson:
-
-```bash
-cd ~/microduck-jetson/microduck_rl
-uv run --no-sync python scripts/one_leg_pose_editor.py
-```
-
-Expanda o painel **Control** no lado direito da janela do MuJoCo e ajuste os controles deslizantes das juntas. Fechar a janela imprime o dicionário nomeado final `ONE_LEG_POSE` no terminal. Os botões **Save XML** e **Save MJB** do MuJoCo salvam arquivos de modelo; eles não salvam o dicionário de pose-alvo em Python usado por esta tarefa.
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/micro_duck-jetson/microduck_one_leg_balance.png" alt="Interactive MuJoCo pose editor showing the Microduck one-leg balance target pose" />
-</div>
-
-Se o editor for iniciado via SSH e deva aparecer no monitor conectado localmente ao Jetson, exporte primeiro a sessão de desktop ativa. A sessão do Jetson verificada usou `DISPLAY=:1`:
-
-```bash
-cd ~/microduck-jetson/microduck_rl
-
-export DISPLAY=:1
-export XAUTHORITY=/run/user/1000/gdm/Xauthority
-export XDG_RUNTIME_DIR=/run/user/1000
-export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
-
-~/.local/bin/uv run --no-sync python scripts/one_leg_pose_editor.py
-```
-
-:::note
-O número de display pode mudar após reinicialização ou quando a sessão de desktop muda. A partir de um terminal aberto diretamente na área de trabalho do Jetson, `echo $DISPLAY` mostra o valor ativo.
-:::
-
-### Executar os Smoke Tests Verificados
+### Executar Smoke Tests
 
 Comece com 64 ambientes e cinco iterações:
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
-
 export MUJOCO_GL=egl
-
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
+uv run --no-sync train Mjlab-FrontBackSplit-Flat-MicroDuck \
   --env.scene.num-envs 64 \
   --agent.logger tensorboard \
   --agent.max_iterations 5
 ```
 
-A tarefa também foi testada com 4096 ambientes paralelos em um Jetson de 16 GB:
+Para o Jetson de referência com 16 GB, a execução completa validada usou 2048 ambientes:
 
 ```bash
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 4096 \
+uv run --no-sync train Mjlab-FrontBackSplit-Flat-MicroDuck \
+  --env.scene.num-envs 2048 \
   --agent.logger tensorboard \
-  --agent.max_iterations 5
+  --agent.max_iterations 1000
 ```
 
-O smoke test com 4096 ambientes foi concluído sem erro de falta de memória ou término por NaN e atingiu aproximadamente `4.6k steps/s`. A observação do ator permaneceu 61-dimensional e a saída de ação permaneceu 14-dimensional.
+A execução concluída atingiu episódios completos de 600 passos, zero terminações por queda
+no final do treinamento e recompensas de pose dividida, contato do pé e separação próximas do máximo.
+Em um Jetson Orin NX ou Orin Nano de 8 GB, comece com `1024` ambientes e
+aumente apenas depois de verificar a memória com `jtop`.
 
-:::tip
-Em um Jetson Orin NX de 8 GB ou Jetson Orin Nano, comece com `--env.scene.num-envs 1024`. Aumente-o somente depois de verificar a memória disponível com `jtop`.
-:::
+### Visualizar um Checkpoint PT
 
-### Abrir o Visualizador de Treinamento
-
-Para visualizar um ambiente enquanto a tarefa personalizada treina, execute o seguinte comando a partir da área de trabalho do Jetson:
+Use o checkpoint concluído com o Visualizador Nativo do MuJoCo:
 
 ```bash
 cd ~/microduck-jetson/microduck_rl
-
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 1 \
-  --agent.logger tensorboard \
-  --agent.max_iterations 1000 \
-  --env.viewer.distance 0.55 \
-  --env.viewer.azimuth 145 \
-  --env.viewer.elevation -12
+export DISPLAY=:0
+export MUJOCO_GL=glfw
+uv run --no-sync play Mjlab-FrontBackSplit-Flat-MicroDuck \
+  --checkpoint-file "$PWD/logs/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt" \
+  --num-envs 1 \
+  --viewer native
 ```
 
-O editor de pose mostra o alvo pretendido imediatamente. O visualizador de treinamento inicialmente mostra uma política não treinada, então o comportamento estável em uma perna só aparece apenas depois que a política aprende a sequência de transferência, elevação, manutenção e recuperação.
+### Exportar e Executar a Política ONNX
 
-### Iniciar uma Execução Completa de Treinamento
-
-Para o sistema de referência de 16 GB, use o seguinte ponto de partida:
+Exporte o checkpoint com o wrapper do projeto para que o normalizador de observação seja
+embutido no grafo ONNX:
 
 ```bash
-uv run --no-sync train Mjlab-OneLegBalance-Flat-MicroDuck \
-  --env.scene.num-envs 4096 \
-  --agent.logger tensorboard \
-  --agent.max_iterations 20000
+uv run --no-sync python3 scripts/export.py \
+  Mjlab-FrontBackSplit-Flat-MicroDuck \
+  --checkpoint-file "$PWD/logs/rsl_rl/front_back_split/2026-09-09_18-04-10_front_back_split_left_forward/model_999.pt" \
+  --onnx-file "$PWD/models/exports/front_back_split/front_back_split_model_999.onnx" \
+  --num-envs 1
 ```
 
-Os smoke tests confirmam que a configuração da tarefa, termos de recompensa, sensores, backend CUDA e grande contagem de ambientes paralelos funcionam corretamente. Eles, por si só, não provam a convergência da política. Avalie checkpoints salvos no MuJoCo e ajuste a pose, pesos de recompensa, temporização de fase ou currículo se o robô levantar o pé sem transferir seu centro de massa, pular ou falhar em retornar à posição em pé.
+Execute-a no demo de inferência MuJoCo controlado por teclado:
+
+```bash
+cd ~/microduck-jetson/microduck_rl
+export DISPLAY=:0
+export MUJOCO_GL=glfw
+uv run --no-sync python3 scripts/infer_policy.py \
+  --standing pretrained/pollen-robotics/alpha_stand.onnx \
+  --front-back-split models/exports/front_back_split/front_back_split_model_999.onnx \
+  --new-cmd-obs
+```
+
+Pressione `O` para executar um ciclo de seis segundos de abertura frontal-traseira.
+A política recebe o mesmo comando de fase cosseno/seno usado durante o treinamento, então o controle
+retorna automaticamente para a política de ficar em pé. Se uma política de caminhada também for fornecida, o demo
+retorna à caminhada quando um comando de velocidade diferente de zero estiver ativo.
+
+A antiga opção `--one-leg-balance` e os arquivos de tarefa de uma perna não fazem mais parte do
+repositório atual. Use `--front-back-split` para este movimento verificado.
 
 ## Checklist de Desenvolvimento
 
 - [ ] O layout de observação permanece 61D.
 - [ ] A saída da política permanece 14D.
-- [ ] As juntas passivas são excluídas das ações e observações de servo.
-- [ ] O evento de inicialização do BAM e a randomização de domínio permanecem ativos onde necessário.
+- [ ] As juntas passivas são excluídas das ações e das observações dos servos.
+- [ ] O evento de inicialização BAM e a randomização de domínio permanecem ativos onde necessário.
 - [ ] A tarefa aparece em `list-envs`.
-- [ ] A inspeção com o Random-policy Viewer é bem-sucedida.
+- [ ] A inspeção pelo Viewer com política aleatória é bem-sucedida.
 - [ ] O smoke test com 64 ambientes é bem-sucedido.
 - [ ] As principais métricas da tarefa melhoram no TensorBoard.
 - [ ] O checkpoint PT final se comporta corretamente no MuJoCo.
 - [ ] O ONNX é exportado com o script do projeto e ensaiado antes da implantação no robô.
 
 <div align="center">
-  <a href="/pt-br/ai_robotics_microduck_rl_on_jetson/" style={{display:'inline-block', padding:'16px 30px', marginTop:'20px', borderRadius:'10px', background:'linear-gradient(135deg, #172b4d, #0b172d)', color:'#fff', fontSize:'18px', fontWeight:'800', textDecoration:'none', boxShadow:'0 10px 26px rgba(23,43,77,.25)'}}>Return to Demo Home</a>
+  <a href="/pt-br/ai_robotics_microduck_rl_on_jetson/" style={{display:'inline-block', padding:'16px 30px', marginTop:'20px', borderRadius:'10px', background:'linear-gradient(135deg, #172b4d, #0b172d)', color:'#fff', fontSize:'18px', fontWeight:'800', textDecoration:'none', boxShadow:'0 10px 26px rgba(23,43,77,.25)'}}>Voltar para a Home da Demo</a>
 </div>

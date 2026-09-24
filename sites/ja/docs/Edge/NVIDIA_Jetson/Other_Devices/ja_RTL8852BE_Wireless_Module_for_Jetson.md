@@ -1,20 +1,20 @@
 ---
-description: このWikiでは、Wi-Fi 6およびBluetoothに対応したM.2無線モジュールであり、NVIDIA Jetsonデバイスと互換性のあるRTL8852BE無線モジュールの機能と仕様を紹介します。この記事では、その技術仕様、JetPack 5およびJetPack 6向けのドライバインストール方法、無線ネットワークおよびBluetoothの設定方法について詳しく説明します。
-title: Jetson向けRTL8852BE無線モジュール
+description: この Wiki では、Wi-Fi 6 および Bluetooth に対応し、NVIDIA Jetson デバイスと互換性のある RTL8852BE 無線モジュールの機能と仕様を紹介します。この記事では、その技術仕様、JetPack 5 および JetPack 6 向けのドライバインストール方法、無線ネットワークおよび Bluetooth の設定方法について詳しく説明します。
+title: Jetson 向け RTL8852BE 無線モジュール
 keywords:
-  - エッジ
+  - Edge
   - reComputer
   - Wifi
   - Wifi 6
   - Bluetooth
-  - 無線
+  - Wireless
   - RTL8852BE
 slug: /rtl8852be_wireless_module_for_jetson
 last_update:
   date: 4/14/2026
   author: Zibo
 createdAt: '2026-04-14'
-updatedAt: '2026-06-23'
+updatedAt: '2026-06-17'
 sku: 100042928
 url: https://wiki.seeedstudio.com/ja/rtl8852be_wireless_module_for_jetson/
 ---
@@ -34,16 +34,16 @@ url: https://wiki.seeedstudio.com/ja/rtl8852be_wireless_module_for_jetson/
 
 
 
-RTL8852BEはRealtekチップセットをベースとしたWi-Fi 6（802.11ax）対応のM.2無線モジュールです。WLAN用のPCIeインターフェースとBluetooth用のUSBインターフェースを統合しており、従来世代のWi-Fi 5モジュールと比べて大幅に高いスループットと低レイテンシを実現します。[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) のような、高性能な無線接続を必要とする組み込み機器に最適です。
+RTL8852BE は、Realtek チップセットをベースとした Wi-Fi 6 (802.11ax) 対応の M.2 無線モジュールです。WLAN 用の PCIe インターフェースと Bluetooth 用の USB インターフェースを統合しており、従来世代の Wi-Fi 5 モジュールと比べて大幅に高いスループットと低レイテンシを実現します。高性能な無線接続を必要とする [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) のような組み込み機器に最適です。
 
 ## 特長
 
 - 2.4 GHz / 5 GHz デュアルバンド対応
-- IEEE 802.11 a/b/g/n/ax（Wi-Fi 6）
-- 5 GHz帯で最大1200 MbpsのPHYレート
-- フォームファクタ：M.2 2230、AキーまたはEキー
+- IEEE 802.11 a/b/g/n/ax (Wi-Fi 6)
+- 5 GHz 帯で最大 1200 Mbps の PHY レート
+- フォームファクタ：M.2 2230、A キーまたは E キー
 - 電源：DC 3.3V
-- Linux（JetPack 5 / JetPack 6）、Windows 10/11対応
+- Linux (JetPack 5 / JetPack 6)、Windows 10/11 対応
 
 ## 仕様
 
@@ -54,24 +54,24 @@ RTL8852BEはRealtekチップセットをベースとしたWi-Fi 6（802.11ax）�
       <td>**RTL8852BE**</td>
     </tr>
     <tr>
-      <td>WLAN規格</td>
+      <td>WLAN 規格</td>
       <td>IEEE 802.11 a/b/g/n/ax (Wi-Fi 6)</td>
     </tr>
     <tr>
-      <td>BT仕様</td>
+      <td>BT 規格</td>
       <td>Bluetooth 5.2</td>
     </tr>
     <tr>
       <td>ホストインターフェース</td>
-      <td>WLAN用PCIe 2.1/2.0 & Bluetooth用USB 2.0</td>
+      <td>WLAN 用 PCIe 2.1/2.0 & Bluetooth 用 USB 2.0</td>
     </tr>
     <tr>
       <td>アンテナ</td>
-      <td>MHF4コネクタを介して外部アンテナに接続</td>
+      <td>MHF4 コネクタを介して外部アンテナに接続</td>
     </tr>
     <tr>
       <td>寸法</td>
-      <td>M.2 2230（22 x 30 x 2.15 mm）</td>
+      <td>M.2 2230 (22 x 30 x 2.15 mm)</td>
     </tr>
     <tr>
       <td>電源</td>
@@ -79,7 +79,7 @@ RTL8852BEはRealtekチップセットをベースとしたWi-Fi 6（802.11ax）�
     </tr>
     <tr>
       <td>最大無線速度</td>
-      <td>最大1200 Mbps</td>
+      <td>最大 1200 Mbps</td>
     </tr>
     <tr>
       <td>動作温度</td>
@@ -94,13 +94,13 @@ RTL8852BEはRealtekチップセットをベースとしたWi-Fi 6（802.11ax）�
 
 ## 対応デバイス
 
-All reComputer Seri
+すべての reComputer シリーズ
 
-- すべてのreComputerシリーズ
+- すべての reComputer シリーズ
 
 ## ドライバのインストール
 
-RTL8852BEモジュールは、JetsonによってPCIeデバイスとして検出される場合がありますが、ドライバが自動的にロードされないことがあります。JetPackのバージョンに応じて、ドライバを手動でインストールする必要があります。
+RTL8852BE モジュールは、Jetson によって PCIe デバイスとして検出される場合がありますが、ドライバが自動的にロードされないことがあります。JetPack のバージョンに応じて、ドライバを手動でインストールする必要があります。
 
 ```bash
 lspci | grep -i network
@@ -113,7 +113,7 @@ lspci | grep -i network
 
 ### JetPack 5.x
 
-JetPack 5の場合は、[lwfinger/rtw8852be](https://github.com/lwfinger/rtw8852be) ドライバを使用します：
+JetPack 5 の場合は、[lwfinger/rtw8852be](https://github.com/lwfinger/rtw8852be) ドライバを使用します：
 
 ```bash
 git clone https://github.com/lwfinger/rtw8852be.git
@@ -133,7 +133,7 @@ sudo modprobe 8852be
 
 ### JetPack 6.x
 
-JetPack 6の場合は、[rtw89](https://github.com/a5a5aa555oo/rtw89) ドライバを使用します：
+JetPack 6 の場合は、[rtw89](https://github.com/a5a5aa555oo/rtw89) ドライバを使用します：
 
 ```bash
 git clone https://github.com/a5a5aa555oo/rtw89
@@ -165,7 +165,7 @@ sudo modprobe rtw89_8852be
 </div>
 ## 無線モジュールの確認
 :::info
-インターフェース名は、JetPackのバージョンによって異なる場合があります：
+インターフェース名は JetPack のバージョンによって異なる場合があります：
 
 - JetPack 5：通常は `wlan0`
 - JetPack 6：`wlP1p1s0` として表示される場合があります
@@ -182,7 +182,7 @@ ifconfig
 
 ## 無線ネットワークの設定
 
-### 近くのWiFiネットワークをスキャンする
+### 近くの WiFi ネットワークをスキャンする
 
 ```bash
 sudo iw dev wlan0 scan | grep -E "SSID|freq"
@@ -190,17 +190,17 @@ sudo iw dev wlan0 scan | grep -E "SSID|freq"
 
 異なる場合は、`wlan0` を実際のインターフェース名に置き換えてください。
 
-### WiFiネットワークに接続する
+### WiFi ネットワークに接続する
 
 ```bash
 sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.PNG"/>
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
 </div>
 
-### WiFi 6接続を確認する
+### WiFi 6 接続を確認する
 
 現在のリンク状態を確認します：
 
@@ -211,15 +211,15 @@ iw dev wlan0 link
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/veryfiy_wifi6.PNG"/>
 </div>
 
-出力には、次のような情報が表示されます：
+出力には次のような情報が表示されます：
 
-- **freq**：動作周波数（例：5180 MHzは5 GHz帯に相当）
-- **HE-MCS**：Wi-Fi 6の変調および符号化方式（例：MCS 9は最高の符号化効率を表します）
+- **freq**：動作周波数（例：5180 MHz は 5 GHz 帯に相当）
+- **HE-MCS**：Wi-Fi 6 の変調および符号化方式（例：MCS 9 は最高の符号化効率を表します）
 - **TX/RX rate**：現在の送信および受信速度
 
-## Bluetoothの設定
+## Bluetooth の設定
 
-RTL8852BEモジュールのBluetooth機能は、`bluetoothctl` を使用して設定できます：
+RTL8852BE モジュールの Bluetooth 機能は、`bluetoothctl` を使用して設定できます：
 
 ```bash
 bluetoothctl
@@ -227,9 +227,9 @@ bluetoothctl
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/bluetooth.png"/>
 </div>
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

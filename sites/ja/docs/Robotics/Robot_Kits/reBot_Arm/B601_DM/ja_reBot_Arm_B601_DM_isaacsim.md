@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグ用にシミュレーション環境で reBot-B601-DM ロボットを展開する方法を説明します。
-title: Isaac Sim を使用した reBot-B601-DM のシミュレーション
+description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグのためにシミュレーション環境で reBot-B601-DM ロボットを展開する方法を説明します。
+title: B601-DM と Isaac Sim
 keywords:
   - Isaacsim
   - ロボットアーム
@@ -16,9 +16,10 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-77'
-updatedAt: '2026-08-19'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_isaacsim/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
@@ -29,33 +30,39 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>今すぐ入手</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 ## はじめに
 
-これは、NVIDIA Isaac Sim を用いて構築された reBot-B601-DM ロボット用のシミュレーションプロジェクトです。Isaac Sim の高精度な物理エンジンを利用して、仮想環境内でロボットの運動学的挙動とグリッパ協調動作を正確に再現し、制御アルゴリズム開発、軌道計画の検証、および通信プロトコルのテストのための、純粋なシミュレーションプラットフォームを提供します。
+これは、NVIDIA Isaac Sim を用いて構築された reBot-B601-DM ロボット用のシミュレーションプロジェクトです。Isaac Sim の高精度な物理エンジンを利用して、仮想環境内でロボットの運動学的挙動とグリッパ協調動作を正確に再現し、制御アルゴリズム開発、軌道計画の検証、および通信プロトコルのテストのための、シミュレーション専用のクリーンなプラットフォームを提供します。
 
 <div align="center">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm_isaacsim.png" alt="reBot Arm B601-DM Isaac Sim" />
 </div>
 
 ## システム要件
-- オペレーティングシステム：Ubuntu 22.04 LTS / 24.04 LTS（推奨）または Windows 11（WSL2 が必要）
-- GPU：NVIDIA RTX シリーズグラフィックスカード（RTX 3070 以降を推奨）、VRAM 8GB 以上
-- ドライバ：NVIDIA 公式ドライバ 535.x 以上、CUDA 12.x をサポート
-- メモリ：32GB 以上の RAM（Isaac Sim のシーン読み込みと物理シミュレーションは多くのメモリを消費します）
-- ストレージ：100GB 以上の SSD 空き容量（Isaac Sim のインストール、キャッシュ、USD アセット用）
+- オペレーティングシステム: Ubuntu 22.04 LTS / 24.04 LTS（推奨）または Windows 11（WSL2 が必要）
+- GPU: NVIDIA RTX シリーズグラフィックスカード（RTX 3070 以降を推奨）、VRAM 8GB 以上
+- ドライバ: NVIDIA 公式ドライバ 535.x 以上、CUDA 12.x をサポート
+- メモリ: 32GB 以上の RAM（Isaac Sim のシーン読み込みと物理シミュレーションは多くのメモリを消費します）
+- ストレージ: 100GB 以上の SSD 空き容量（Isaac Sim のインストール、キャッシュ、USD アセット用）
 
 :::info
-この Wiki では、PC がロボットに接続され、サーバー側で Isaac Sim シミュレーションを実行します。サーバーには NVIDIA RTX 4090 GPU が搭載され、Ubuntu 22.04 LTS を実行しています。
+この Wiki では、PC はロボットに接続され、サーバー側で Isaac Sim シミュレーションを実行します。サーバーには NVIDIA RTX 4090 GPU が搭載され、Ubuntu 22.04 LTS を実行しています。
 :::
 
 ## Isaac Sim のインストール
 
-公式リンクとリソース：
+公式リンクとリソース:
 
 https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/quick-install.html
 
@@ -79,7 +86,7 @@ cd ~/isaacsim
 
 #### 環境変数の設定
 
-`~/.bashrc` または `~/.zshrc` に次を追加します：
+次の内容を `~/.bashrc` または `~/.zshrc` に追加します:
 
 ```Bash
 export ISAACSIM_PATH="${HOME}/isaacsim"
@@ -100,7 +107,7 @@ ${ISAACSIM_PATH}/isaac-sim.sh
 git clone https://github.com/hopcan/reBot-Isaacsim.git
 ```
 
-`reBotArm_control_py` 用の uv 環境をセットアップします：
+`reBotArm_control_py` 用の uv 環境をセットアップします:
 
 ```bash
 cd third_party/reBotArm_control_py
@@ -109,15 +116,15 @@ uv sync
 
 ### 機能コンポーネントの概要
 
-このプロジェクトは、さまざまな利用シナリオをサポートする複数の sender モジュールを提供します：
+本プロジェクトは、さまざまな利用シーンをサポートする複数の sender モジュールを提供します:
 
 | コンポーネント | 説明 |
 |------|------|
-| `gravity_joint_sender` | **重力補償ハンドルモード**：改造済みロボット（グリッパを取り外し、ハンドルを装着）向け。重力補償により、手で関節を動かし、その関節角度を Isaac Sim にリアルタイム同期します |
-| `isaacsim_ik_sender` | **逆運動学（IK）モード**：エンドエフェクタの姿勢を入力し、IK ソルバで関節角度を求めて Isaac Sim に送信します |
-| `isaacsim_traj_sender` | **軌道計画（Traj）モード**：IK を拡張し、関節空間での軌道計画（MIN_JERK タイミングプロファイル）によりスムーズなモーション制御を実現します |
-| `isaacsim_joint_test_sender` | **関節テストモード**：実機ロボットは不要で、あらかじめ設定された関節角度軌道を送信し、Isaac Sim の receiver と通信リンクを検証します |
-| `joint_reader_sender` | **実機からシミュレーションへのマッピングモード**：関節角度のみを読み取り、それを Isaac Sim にマッピングします。他の制御プロジェクトと併用するのに適しており（たとえば、実機ロボットが別のタスクを実行している間、その関節状態を Isaac Sim に同期して可視化できます）、 |
+| `gravity_joint_sender` | **重力補償ハンドルモード**: 改造済みロボット（グリッパを取り外し、ハンドルを装着）向け。重力補償により手で関節を動かし、その関節角度を Isaac Sim にリアルタイム同期します |
+| `isaacsim_ik_sender` | **逆運動学（IK）モード**: エンドエフェクタの姿勢（位置・姿勢）を入力し、IK ソルバで関節角度を求めて Isaac Sim に送信します |
+| `isaacsim_traj_sender` | **軌道計画（Traj）モード**: IK を拡張し、関節空間での軌道計画（MIN_JERK タイミングプロファイル）を追加して、スムーズなモーション制御を実現します |
+| `isaacsim_joint_test_sender` | **関節テストモード**: 実機ロボットは不要で、あらかじめ設定された関節角度軌道を送信し、Isaac Sim の receiver と通信リンクを検証します |
+| `joint_reader_sender` | **実機からシミュレーションへのマッピングモード**: 関節角度のみを読み取り、それを Isaac Sim にマッピングします。他の制御プロジェクトと併用するのに適しており（例: 実機ロボットが別タスクを実行中でも、その関節状態を Isaac Sim に同期して可視化できます）、 |
 
 ### ディレクトリ構成
 
@@ -170,7 +177,7 @@ cd reBotArm_Isaacsim
 ${ISAACSIM_PYTHON_EXE}  gravity_joint_sender.py 
 ```
 
-**期待される出力：**
+**期待される出力:**
 - Isaac Sim の GUI が起動する
 - 地面とロボットの USD アセットが読み込まれる
 - UDP `DEFAULT_SIM_HOST:5005` で待ち受ける
@@ -178,11 +185,11 @@ ${ISAACSIM_PYTHON_EXE}  gravity_joint_sender.py
 
 ### ターミナル 2 — 選択したモードに応じた Sender の起動
 
-**起動順序：先に receiver、次に sender。**
+**起動順序: 先に receiver、次に sender。**
 
 :::tip
 
-一部の機能では実機ロボットへの接続が必要です。USB2CAN アダプタを使用する場合は、以下の手順が必要です。
+一部の機能は実機ロボットとの接続が必要です。USB2CAN アダプタを使用する場合は、以下の手順が必要です。
 
 ```bash
 # Check the USB2CAN serial port to confirm it is detected
@@ -191,7 +198,7 @@ ls ttyACM*
 # Grant port permissions
 sudo chmod 666 /dev/ttyACM*
 ```
-デバイスに応じて `DEFAULT_SIM_HOST` を設定します。
+お使いのデバイスに合わせて `DEFAULT_SIM_HOST` を設定してください。
 
 `DEFAULT_SIM_HOST` は Isaac Sim 環境を実行しているホストの IP アドレスです。
 
@@ -200,7 +207,7 @@ sudo chmod 666 /dev/ttyACM*
 
 #### ① 関節テストモード（`isaacsim_joint_test_sender`）
 
-実機ハードウェアは不要です。あらかじめ設定された軌道をループ送信して、通信および Isaac Sim receiver を検証します：
+実機ハードウェアは不要です。あらかじめ設定された軌道をループ送信して、通信および Isaac Sim receiver を検証します:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -211,14 +218,14 @@ sender は複数のプリセット関節姿勢間をゆっくり補間し、CAN 
 
 #### ② 逆運動学モード（`isaacsim_ik_sender`）
 
-エンドエフェクタの姿勢（位置／姿勢）を入力し、IK を解いて Isaac Sim 内のシミュレートされたロボットを駆動します。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します：
+エンドエフェクタの姿勢（位置/姿勢）を入力し、IK を解いて Isaac Sim 内のシミュレーションロボットを駆動します。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します:
 
 ```bash
 cd reBotArm_Isaacsim
 uv run python isaacsim_ik_sender.py
 ```
 
-**入力形式（1 行につき 1 コマンド）：**
+**入力形式（1 行につき 1 コマンド）:**
 ```
 x y z                       # position (meters), orientation remains unchanged
 x y z r p y                 # position + orientation (meters/degrees)
@@ -228,14 +235,14 @@ gripper <0~1>                # update the gripper independently
 
 #### ③ 軌道計画モード（`isaacsim_traj_sender`）
 
-これは IK を基盤とし、関節空間での軌道計画（MIN_JERK）を追加してスムーズな動作を実現します。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します：
+これは IK を基盤とし、関節空間での軌道計画（MIN_JERK）を追加してスムーズな動作を実現します。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します:
 
 ```bash
 cd reBotArm_Isaacsim
 uv run python isaacsim_traj_sender.py
 ```
 
-**入力形式（1 行につき 1 コマンド）：**
+**入力形式（1 行につき 1 コマンド）:**
 ```
 x y z                       # position (meters)
 x y z r p y                 # position + orientation (meters/degrees)
@@ -247,37 +254,37 @@ resync                       # re-read the current joint angles from the simulat
 
 #### ④ 重力補償ハンドルモード（`gravity_joint_sender`）
 
-改造済みロボット（グリッパを取り外し、ハンドルを装着）に適しており、手動での動作によって Isaac Sim 上のロボットを制御できます：
+グリッパを取り外してハンドルを装着した改造ロボットに適しており、手動での動作によって Isaac Sim 上のロボットを制御できます:
 
 ```bash
 cd reBotArm_Isaacsim
 ./run_sender.sh
 ```
 
-**期待される動作：**
+**期待される動作:**
 - 実機ロボットに接続し、MIT + 重力フィードフォワード補償を有効化する
 - ロボットを手で自由に動かすことができる
-- 関節角度が UDP 経由で 60 Hz で連続送信される
+- 関節角度が UDP で 60 Hz で継続的に送信される
 
 #### ⑤ 実機からシミュレーションへのマッピングモード（`joint_reader_sender`）
 
-関節角度のみを読み取り、それを Isaac Sim にマッピングします。実機ロボットが他のタスクを実行している際に、その動作を Isaac Sim 上で同時に可視化したい場合に適しています。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します：
+関節角度のみを読み取り、それを Isaac Sim にマッピングします。実機ロボットが他のタスクを実行している際に、その同じ動きを Isaac Sim 上で可視化したい場合に適しています。`reBotArm_Isaacsim/` ディレクトリで `uv run` を使って直接実行します:
 
 ```bash
 cd reBotArm_Isaacsim
 uv run python joint_reader_sender.py
 ```
 
-**期待される動作：**
+**期待される動作:**
 - 関節角度のみを読み取る（パッシブフィードバックモード）だけで、制御コマンドは一切送信しない
-- 関節角度が UDP 経由で 60 Hz で連続送信される
-- 実機ロボットが別プロジェクトによって制御されている場合でも、その動作を Isaac Sim 上で同時に可視化できる
+- 関節角度は 60 Hz で UDP 経由で連続的に送信されます
+- 実機ロボットが別のプロジェクトによって制御されている場合でも、その動きを Isaac Sim 上で同時に可視化できます
 
 ## 通信プロトコル
 
 UDP JSON（ポート `DEFAULT_SIM_HOST:5005`）を使用します。
 
-**sender がフレームごとに送信するペイロード：**
+**送信側がフレームごとに送信するペイロード：**
 
 ```json
 {
@@ -293,7 +300,7 @@ UDP JSON（ポート `DEFAULT_SIM_HOST:5005`）を使用します。
 | `sequence` | int | インクリメントされるシーケンス番号 |
 | `timestamp` | float | Unix タイムスタンプ（秒） |
 | `joint_positions` | float[6] | 最初の 6 関節角度（rad） |
-| `gripper_position` | float | 送信側で `GRIPPER_POSITION_SCALE` を用いて変換されたグリッパ位置（m） |
+| `gripper_position` | float | グリッパ位置（m）。送信側で `GRIPPER_POSITION_SCALE` を用いて変換 |
 
 ## 設定パラメータ
 
@@ -333,10 +340,10 @@ kill <PID>
 
 ### 関節角度が同期していない
 
-- 送信側と受信側が同じポート（両方とも 5005）を使用していることを確認する
-- 送信側のログに `[send]` が継続的に表示されているか確認する
-- 受信側のログに `[recv]` が継続的に表示されているか確認する
-- ハードウェアの問題を切り分けるために `isaacsim_joint_test_sender.py` を試す
+- 送信側と受信側が同じポート（どちらも 5005）を使用していることを確認します
+- 送信側のログに `[send]` が継続的に表示されているか確認します
+- 受信側のログに `[recv]` が継続的に表示されているか確認します
+- ハードウェアの問題を切り分けるために `isaacsim_joint_test_sender.py` を試します
 
 ### コンポーネントと Python 環境
 
@@ -348,7 +355,7 @@ kill <PID>
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をスムーズにご利用いただくため、複数のサポートチャネルをご用意しています。さまざまなご希望やニーズに対応できるよう、複数のコミュニケーション手段を提供しています。
+弊社製品をお選びいただきありがとうございます。製品をスムーズにご利用いただくため、複数のサポートチャネルをご用意しています。お好みやニーズに合わせて、さまざまな連絡手段をご利用いただけます。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
@@ -359,4 +366,3 @@ kill <PID>
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

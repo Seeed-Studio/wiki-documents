@@ -1,14 +1,14 @@
 ---
-description: "Guia de Operação do wrc_demo: etapas completas para a demonstração de preensão visual do reBot Arm B601-RS — preparação do ambiente, download de modelo, troca de LLM, calibração mão‑olho, execução da demo, solução de problemas."
-title: Design de Arquitetura de Agente Incorporado para o Braço Robótico reBot B601 RS
+description: 'Guia de Operação do wrc_demo: etapas completas para o demo de preensão visual do reBot Arm B601-RS — configuração do ambiente, download do modelo, troca de LLM, calibração mão-olho, execução do demo e solução de problemas.'
+title: B601-RS com Agent Claw
 keywords:
   - wrc_demo
   - reBot Arm B601-RS
-  - visual grasping
-  - vision language model
+  - preensão visual
+  - modelo de linguagem de visão
   - Qwen3-VL
   - YOLOE
-  - hand-eye calibration
+  - calibração mão-olho
   - conda
   - tutorial
 slug: /wrc_demo_tutorial
@@ -16,14 +16,13 @@ last_update:
   date: 2026-08-28
   author: Seeed Studio
 translation:
-  skip:
-    - [zh-CN]
+  skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-08-28'
-url: https://wiki.seeedstudio.com/cn/wrc_demo_tutorial/
+updatedAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/pt-br/wrc_demo_tutorial/
 ---
 
-# Design de Arquitetura de Agente Incorporado para o Braço Robótico reBot B601 RS
+# Framework de Design de Agente Incorporado do reBot Arm B601-RS
 
 <p align="center">
   <a href="./LICENSE">
@@ -36,12 +35,12 @@ url: https://wiki.seeedstudio.com/cn/wrc_demo_tutorial/
 </p>
 
 <p align="center">
-  <strong>Configuração do ambiente → Download de modelo → Troca de LLM → Calibração mão‑olho → Execução da demo → Solução de problemas</strong>
+  <strong>Configuração do ambiente → Download de modelo → Troca de LLM → Calibração mão-olho → Execução do demo → Solução de problemas</strong>
 </p>
 
-Este tutorial é o **guia de operação** para o projeto [wrc_demo](https://github.com/TheMoonAstronaut/wrc). Siga as etapas deste guia para ir do clone inicial até uma demo em execução em **1–2 horas**.
+Este tutorial é o **guia de operação** para o projeto [wrc_demo](https://github.com/TheMoonAstronaut/wrc). Siga as etapas deste guia para ir do clone inicial até um demo em execução em **1–2 horas**.
 
-wrc_demo é uma demonstração de preensão visual para o [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) (barramento RobStride), executando em Ubuntu 22.04 + Python 3.10 + ambiente conda `wrc-demo`. A demo recebe instruções em linguagem natural (por exemplo, "pegue o bloco vermelho"), planeja automaticamente a preensão e a executa.
+wrc_demo é um demo de preensão visual para o [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) (barramento RobStride), rodando em Ubuntu 22.04 + Python 3.10 + ambiente conda `wrc-demo`. O demo recebe instruções em linguagem natural (por exemplo, "pegue o bloco vermelho"), planeja automaticamente a preensão e a executa.
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent3.PNG" alt="Demonstração de preensão visual do wrc_demo no reBot Arm" />
@@ -64,8 +63,8 @@ wrc_demo é uma demonstração de preensão visual para o [reBot Arm B601-RS](ht
 
 ## 1. Objetivos do Projeto e Público-Alvo
 
-- **Objetivos do Projeto**: Conectar um Vision Language Model (VLM) ao reBot Arm B601-RS, de modo que instruções em linguagem natural sejam automaticamente convertidas em ações de preensão — o VLM seleciona objetos, o Pinocchio resolve a cinemática inversa (IK), `SafetyHarness` realiza verificação fail‑closed em cada waypoint de 50 Hz.
-- **Público-Alvo**: Desenvolvedores com GPU NVIDIA + Ubuntu 22.04 + noções básicas de Python 3.10, que queiram executar a demo / modificar o detector / adicionar habilidades.
+- **Objetivos do Projeto**: Conectar um Modelo de Visão e Linguagem (VLM) ao reBot Arm B601-RS, de modo que instruções em linguagem natural sejam automaticamente convertidas em ações de preensão — o VLM seleciona objetos, o Pinocchio resolve a cinemática inversa (IK), `SafetyHarness` realiza verificação fail-closed em cada waypoint de 50 Hz.
+- **Público-Alvo**: Desenvolvedores com GPU NVIDIA + Ubuntu 22.04 + conhecimentos básicos de Python 3.10, que queiram rodar o demo / modificar o detector / adicionar habilidades.
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent2.PNG" alt="Demonstração de preensão visual do wrc_demo no reBot Arm" />
@@ -77,26 +76,26 @@ wrc_demo é uma demonstração de preensão visual para o [reBot Arm B601-RS](ht
 
 ### 2.1 Funcionalidades do Projeto
 
-1. **Modelo de Linguagem de Visão como Motor, Tomada de Decisão em Três Níveis**  
-   Qwen3-VL-2B-Instruct-AWQ-4bit é usado como cérebro padrão de planejamento de tarefas, podendo ser executado nativamente em dispositivos com 8 GB de VRAM. A análise de comandos segue o caminho de três níveis rápido‑lento **Reflex → Hábito → LLM** — instruções comuns (por exemplo, "pegue o bloco vermelho") passam diretamente pela sintaxe de template Reflex sem chamar o LLM; apenas novas tarefas envolverão o VLM.
+1. **Modelo de Visão e Linguagem como Motor, Tomada de Decisão em Três Níveis**  
+   Qwen3-VL-2B-Instruct-AWQ-4bit é usado como cérebro padrão de planejamento de tarefas, podendo rodar nativamente em dispositivos com 8 GB de VRAM. A análise de comandos segue o caminho rápido-lento de três níveis **Reflex → Hábito → LLM** — instruções comuns (por exemplo, "pegue o bloco vermelho") passam diretamente pela sintaxe de template Reflex sem chamar o LLM; apenas novas tarefas envolverão o VLM.
 
-2. **Calibração Mão‑Olho + Planejamento de Preensão 6‑DoF (fail‑closed)**  
-   Script de calibração mão‑olho embutido (tabuleiro ArUco + Pinocchio FK + otimização conjunta SE(3) via LM), com suporte para layout de câmera superior (ETH). Cada ponto da trajetória em streaming é verificado por `SafetyHarness` — se qualquer verificação falhar, o braço robótico para imediatamente no meio do movimento.
+2. **Calibração Mão-Olho + Planejamento de Preensão em 6 DoF (fail-closed)**  
+   Script de calibração mão-olho embutido (tabuleiro ArUco + Pinocchio FK + otimização conjunta SE(3) via LM), com suporte ao layout de câmera superior (ETH). Cada ponto de trajetória em streaming é verificado por `SafetyHarness` — se qualquer verificação falhar, o braço robótico para imediatamente no meio do movimento.
 
 3. **6 TOOL_SPECS + 5 Gateways MCP**  
-   A camada superior expõe 6 ferramentas com segurança controlada: `pick_and_place` / `grasp_object` / `place_at/on` / `move_t` / `teach_record/replay` + `task_done`; o gateway MCP expõe adicionalmente 5 ferramentas: `camera_snapshot` / `world_state` / `live_view_url` / `emergency_stop` / `reset_stop`. Não é necessário nenhum trabalho de adaptação de protocolo para adicionar novas habilidades.
+   A camada superior expõe 6 ferramentas com segurança: `pick_and_place` / `grasp_object` / `place_at/on` / `move_t` / `teach_record/replay` + `task_done`; o gateway MCP expõe adicionalmente 5 ferramentas: `camera_snapshot` / `world_state` / `live_view_url` / `emergency_stop` / `reset_stop`. Não é necessário nenhum trabalho de adaptação de protocolo para adicionar novas habilidades.
 
 4. **Rastreamento Completo + Memória Episódica**  
-   Cada chamada de habilidade é gravada em um trace multimodal estilo ASPIRE (`trace.jsonl` + quadros‑chave JPEG antes e depois), com uma janela de eventos de 15 segundos + crença de persistência de objetos, de modo que o "copo visto há 10 segundos" ainda possa ser manipulado após oclusão.
+   Cada chamada de habilidade é gravada em um trace multimodal estilo ASPIRE (`trace.jsonl` + quadros-chave JPEG antes e depois), com uma janela de eventos de 15 segundos + crença de persistência de objetos, de modo que o "copo visto há 10 segundos" ainda possa ser manipulado após a oclusão.
 
-5. **Experiência de Desenvolvimento Mock‑First**  
-   Mock full‑stack (`--camera mock --arm mock --llm mock`) permite executar o pipeline completo de decisão sem qualquer hardware. Testes em mock e hardware real executam **o mesmo código de segurança**.
+5. **Experiência de Desenvolvimento Mock-First**  
+   Mock full-stack (`--camera mock --arm mock --llm mock`) permite executar o pipeline completo de decisão sem qualquer hardware. Testes mock e hardware real rodam **o mesmo código de segurança**.
 
 ### 2.2 Especificações
 
 | Categoria | Parâmetro | Especificação |
 |------|------|------|
-| **Hardware** | Braço Robótico | reBot Arm B601-RS (barramento RobStride, 6 DOF + garra) |
+| **Hardware** | Braço Robótico | reBot Arm B601-RS (barramento RobStride, 6-DOF + garra) |
 | | Câmera | Orbbec Gemini 2 / Intel RealSense D435i / D405 |
 | | Comunicação | Barramento CAN via USB2CAN; câmera USB 3.0 |
 | | Host de Controle | PC com Ubuntu 22.04+ / DGX Spark |
@@ -118,7 +117,7 @@ wrc_demo é uma demonstração de preensão visual para o [reBot Arm B601-RS](ht
 | | Habilidades de Movimento do Braço | 18 literais de string em `_MOTION_SKILLS` |
 | | Conjunto de Ferramentas MCP | `TOOL_SPECS - _EXCLUDED_TOOLS + _EXTRA_TOOLS` = 6 - 1 + 5 = 10 |
 | **Segurança** | Verificação de Trajetória | Cada waypoint em streaming de 50 Hz passa por `SafetyHarness.approve()` |
-| | Modo de Falha | fail‑closed (qualquer violação → abortar no meio do movimento) |
+| | Modo de Falha | fail-closed (qualquer violação → abortar no meio do movimento) |
 | | Reserva de Junta | IK `limit_margin=0.025` > harness `joint_margin=0.02` (invariante) |
 
 ### 2.3 Lista de Materiais (BOM)
@@ -126,17 +125,17 @@ wrc_demo é uma demonstração de preensão visual para o [reBot Arm B601-RS](ht
 | Componente | Quantidade | Incluído |
 |------|------|----------|
 | Braço Robótico reBot Arm B601-RS | 1 | ✅ |
-| Garra (pré‑instalada) | 1 | ✅ |
+| Garra (pré-instalada) | 1 | ✅ |
 | Ponte Serial USB2CAN | 1 | ✅ |
 | Fonte de Alimentação 48V | 1 | ✅ |
-| Cabo USB‑C / Comunicação | 1 | ✅ |
-| Câmera de Profundidade RGB‑D (Orbbec Gemini 2 recomendada) | 1 | ✅ |
+| Cabo USB-C / Comunicação | 1 | ✅ |
+| Câmera de Profundidade RGB-D (Orbbec Gemini 2 recomendada) | 1 | ✅ |
 | Conector / Suporte de Montagem da Câmera | 1 | ✅ |
 | Host de Controle com Ubuntu 22.04+ (GPU NVIDIA ≥ 8 GB) | 1 | ❌ Fornecido pelo usuário |
 
 #### Instruções de Fiação
 
-1. **Braço Robótico**: alimentação 48V → braço robótico; USB2CAN → porta USB do host (no primeiro uso é necessário `sudo ip link set can0 up type can bitrate 1000000`)
+1. **Braço Robótico**: fonte de 48V → braço robótico; USB2CAN → porta USB do host (no primeiro uso é necessário `sudo ip link set can0 up type can bitrate 1000000`)
 2. **Câmera**: Orbbec USB 3.0 → porta USB 3.0 do host
 3. **Configuração de Permissões**:
 
@@ -192,9 +191,9 @@ sudo ip link set can0 up
 
 ## 3. Configuração do Ambiente
 
-### 3.0 Caminho Mínimo: Executar Mock em 5 Minutos
+### 3.0 Caminho Mínimo: Rodar o Mock em 5 Minutos
 
-Se você só quer executar o mock para verificar a instalação (sem ler outros conteúdos), três comandos são suficientes:
+Se você só quer rodar o mock para verificar a instalação (sem ler o restante do conteúdo), três comandos são suficientes:
 
 ```bash
 git clone https://github.com/TheMoonAstronaut/wrc.git
@@ -298,7 +297,7 @@ PYTHONNOUSERSITE=1 pip install pyorbbecsdk2
 Você deve adicionar `PYTHONNOUSERSITE=1`, caso contrário o pip instalará o pacote em `~/.local/lib/python3.10/site-packages/` (site-packages em nível de usuário), e o ambiente conda continuará vazio.
 :::
 
-**Método 2: Instalar a partir do código-fonte no GitHub** (quando houver problemas de rede ou você quiser a versão mais recente)
+**Método 2: Instalar a partir do código-fonte do GitHub** (quando houver problemas de rede ou se você quiser a versão mais recente)
 
 ```bash
 sudo apt-get install -y cmake build-essential libusb-1.0-0-dev
@@ -314,7 +313,7 @@ cd -
 ```
 
 :::tip
-**Usuários na China continental** podem usar o espelho gitee para acelerar: `git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git`
+**Usuários na China continental** podem usar o espelho do gitee para acelerar: `git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git`
 :::
 
 #### RealSense D435i / D405
@@ -327,7 +326,7 @@ O SDK RealSense (`pyrealsense2`) geralmente precisa ser compilado a partir do c�
 
 ### 4.1 Instalar o Codificador de Texto MobileCLIP2
 
-A Apple publicou pesos de PyTorch no HuggingFace `apple/MobileCLIP2-B`, e a detecção por prompt de texto do YOLOE requer a versão `.ts`.
+A Apple lançou pesos de PyTorch no HuggingFace `apple/MobileCLIP2-B`, e a detecção de prompt de texto do YOLOE requer a versão `.ts`.
 
 ```bash
 conda activate wrc-demo
@@ -335,7 +334,7 @@ conda activate wrc-demo
 # Download MobileCLIP2 .pt
 PYTHONNOUSERSITE=1 python scripts/setup_models.py --fetch
 ```
-Converter formato trace `.pt → .ts` (manual) **
+Converter o formato trace `.pt → .ts` (manual) **
 
 ```bash
 PYTHONNOUSERSITE=1 pip install "open_clip_torch>=2.30"
@@ -371,11 +370,11 @@ ln -sf models/mobileclip2_b.ts mobileclip2_b.ts     # Project root symlink
 ```
 
 
-### 4.2 Baixar Pesos Locais do LLM Qwen3-VL
+### 4.2 Baixar Pesos Locais de LLM Qwen3-VL
 
 Se você planeja usar API em nuvem, pode pular esta etapa:
 
-Este tutorial usa por padrão llm.profile=local_qwen3_vl correspondente à versão quantizada AWQ-4bit (roda com 8 GB de VRAM).
+Este tutorial define por padrão llm.profile=local_qwen3_vl correspondente à versão quantizada AWQ-4bit (roda com 8GB de VRAM).
 ```bash
 hf download cyankiwi/Qwen3-VL-2B-Instruct-AWQ-4bit \
   --local-dir models/qwen3-vl-2b-awq-4bit
@@ -394,13 +393,13 @@ cd models/qwen3-vl-2b-awq-4bit && git lfs pull
 
 | Recurso | Tamanho | Necessidade | Método de Aquisição |
 |------|------|--------|----------|
-| `qwen3-vl-2b-awq-4bit/` | ~2.| 4 GB | Necessário para implantação local de LLM (8 GB de VRAM) | Obtido automaticamente via `hf download cyankiwi/Qwen3-VL-2B-Instruct-AWQ-4bit` ou `scripts/start_cosmos3_server.sh --bg` |
+| `qwen3-vl-2b-awq-4bit/` | ~2.| 4 GB | Necessário para implantação local de LLM (8 GB VRAM) | Obtido automaticamente via `hf download cyankiwi/Qwen3-VL-2B-Instruct-AWQ-4bit` ou `scripts/start_cosmos3_server.sh --bg` |
 | `yoloe-26s-seg.pt` | ~31 MB | **Detecção de vocabulário aberto (recomendado para 2026-09+)** | Extraído via `cp` após clonar Seeed-Projects/reBot-DevArm-Grasp; usa o `mobileclip2_b.ts` existente, não requer `blt.ts` |
 | `yoloe-26l-seg.pt` | ~75 MB | Opcional (maior precisão, ~2x mais lento) | Igual ao acima; também usa `mobileclip2_b.ts` |
 | `yoloe-11s-seg.pt` | ~28 MB | **Não recomendado** — requer `mobileclip_blt.ts` (572 MB, ~1,5 h de download no primeiro uso) | Use apenas quando pesos de modelo legados forem necessários; para voltar, modifique o campo `model:` em `configs/demo.yaml` |
 | `mobileclip2_b.pt` | ~571 MB | Fonte de codificação de texto YOLOE 26s/l (versão PyTorch bruta) | Obtido automaticamente de `apple/MobileCLIP2-B` via `python scripts/setup_models.py --fetch` |
-| `mobileclip2_b.ts` | ~253 MB | Codificação de texto YOLOE 26s/l (efetivamente carregada em tempo de execução) | Traçado manualmente (veja §4.1); após o download **deve ser colocado em `models/` ou no CWD** — veja §4.1.1 |
-| `mobileclip_blt.ts` | ~572 MB | Codificação de texto YOLOE 11s (**não recomendado**, fonte é difícil de baixar) | Traçado manualmente, fonte `apple/MobileCLIP-B-LT`; necessário apenas ao usar o modelo 11s |
+| `mobileclip2_b.ts` | ~253 MB | Codificação de texto YOLOE 26s/l (efetivamente carregada em tempo de execução) | Rastreado manualmente (veja §4.1); após o download **deve ser colocado em `models/` ou no CWD** — veja §4.1.1 |
+| `mobileclip_blt.ts` | ~572 MB | Codificação de texto YOLOE 11s (**não recomendado**, fonte é difícil de baixar) | Rastreado manualmente, fonte `apple/MobileCLIP-B-LT`; necessário apenas ao usar o modelo 11s |
 | `pyrealsense2` | Artefato compilado | Apenas para usuários de RealSense | Compile conforme a documentação oficial da Intel |
 ---
 
@@ -411,9 +410,9 @@ O objetivo da calibração é permitir que o demo conheça a transformação ent
 ### 5.1 Preparação
 
 #### 1. Imprimir o Tabuleiro ArUco
-Imprima um tabuleiro de xadrez do dicionário ArUco 4x4, ID = 0, comprimento de lado = 0,10 m (10 cm). Fonte recomendada: [`~/wrc/aruco100x100.pdf`](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/aruco100x100.pdf)
+Imprima um tabuleiro de xadrez do dicionário ArUco 4x4, ID = 0, comprimento do lado = 0,10 m (10 cm). Fonte recomendada: [`~/wrc/aruco100x100.pdf`](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/aruco100x100.pdf)
 
-Após a impressão, **meça com precisão** o comprimento do lado (impressoras podem escalar a imagem), use o valor medido como o parâmetro `--marker-size`.
+Após a impressão, **meça com precisão** o comprimento do lado (impressoras podem redimensionar a imagem), use o valor medido como o parâmetro `--marker-size`.
 
 #### 2. Conexão da Câmera + barramento CAN
 ```bash
@@ -468,8 +467,8 @@ Saída:
 - `data/calibration/hand_eye_top.json` — Matriz de referência dessensibilizada (**não usar**, serial=REDACTED)
 - `data/calibration/hand_eye_top.local.json` — **Seu resultado real de calibração do dispositivo**
 
-### 5.3 Verificar RMSE da Calibração
-Não recalibre, verifique diretamente com pontos conhecidos do sistema de coordenadas da base:
+### 5.3 Verificar o RMSE da Calibração
+Não recalibre, apenas verifique diretamente com pontos conhecidos do sistema de coordenadas da base:
 
 ```bash
 wrc-calib-top --verify \
@@ -503,7 +502,7 @@ bash scripts/start_cosmos3_server.sh --status
 ```
 vLLM 0.6+ oferece suporte à inferência multimodal para Qwen3-VL. A versão quantizada AWQ-4bit pode rodar a ~30 tokens/s em 8 GB de VRAM.
 
-### 6.3 Opção B: API em nuvem (sem GPU)
+### 6.3 Opção B: API em nuvem (sem necessidade de GPU)
 **Configuração em duas camadas** — arquivo de perfil YAML + chave em variável de ambiente:
 
 #### a. Arquivo de perfil YAML (`configs/llm/*.yaml`)
@@ -515,7 +514,7 @@ vLLM 0.6+ oferece suporte à inferência multimodal para Qwen3-VL. A versão qua
 | `local_qwen3_vl.yaml` | vLLM local (padrão) | Nenhuma chave necessária |
 | `mock.yaml` | mock roteirizado | Para testes |
 
-#### b. Selecionar qual perfil usar (`configs/demo.yaml`)
+#### b. Selecione qual perfil usar (`configs/demo.yaml`)
 ```yaml
 llm:
   profile: local_qwen3_vl    # ← Modify this line (mock / anthropic / openai / minimax / local_qwen3_vl)
@@ -595,9 +594,9 @@ Os dois scripts de teste acima são usados apenas para verificar se o link do mo
 
 ---
 
-## 7. Execução da demonstração
+## 7. Execução do demo
 
-### 7.1 Iniciar demo
+### 7.1 Iniciar o demo
 
 ```bash
 # Start the project
@@ -651,13 +650,13 @@ summary: Robot waved hello three times as requested.
 ```
 
 :::tip
-Esta demonstração possui uma área de trabalho segura predefinida para o braço robótico. Se a resolução de IK falhar durante operações de agarrar e posicionar em uma área grande, você precisa ajustar a posição fixa da câmera e recalibrar (uma posição estável da câmera fica aproximadamente a 36 cm * 36 cm da base do braço robótico).
+Este demo possui uma área de trabalho segura predefinida para o braço robótico. Se a resolução de IK falhar durante operações de agarrar e posicionar em uma área grande, você precisa ajustar a posição fixa da câmera e recalibrar (uma posição estável da câmera fica aproximadamente a 36cm * 36cm da base do braço robótico).
 :::
 
 ### 7.2 Tarefas executáveis
 Existem dois caminhos para controle por diálogo de texto, `path: llm & path: reflex`
 
-`reflex` refere-se a texto pré-carregado (modo mock), que garante que as operações correspondentes sejam executadas sem LLM em execução, usando texto fixo pré-escrito para controlar o rebot para concluir diferentes tarefas.
+`reflex` refere-se a texto pré-carregado (modo mock), que garante que as operações correspondentes sejam executadas sem o LLM rodando, usando texto fixo pré-escrito para controlar o rebot para concluir diferentes tarefas.
 
 Comandos de reflexo estáveis são os seguintes:
 ```
@@ -688,7 +687,7 @@ skill_close_gripper	     # Close gripper
 ## 8. Configuração personalizada
 
 ### 8.1 Adicionar novo perfil de LLM
-O backend de LLM do wrc-demo é **plugável**. Se você precisar adicionar um novo perfil de LLM, um arquivo `configs/llm/<name>.yaml` é um perfil.
+O backend de LLM do wrc-demo é **modular**. Se você precisar adicionar um novo perfil de LLM, um arquivo `configs/llm/<name>.yaml` é um perfil.
 
 Modifique uma linha `profile: <name>` em `demo.yaml` para alternar.
 
@@ -749,7 +748,7 @@ python -m wrc_demo.apps.demo --llm kimi --task "list the objects" --no-view --no
 
 (4) Verifique se o stdout imprime "[wrc-demo] llm=kimi". Uma mensagem de resposta do LLM conta como sucesso (cena vazia também é OK).
 
-### 8.2 Modificar precisão de agarrar
+### 8.2 Modificar a precisão de agarrar
 Edite o bloco `grasp.*` em `configs/demo.yaml`:
 ```yaml
 grasp:
@@ -882,11 +881,11 @@ from .detector import Detector
 
 class MyDetector:
     def __init__(self, model_path: str, **kwargs):
-        # Carregar modelo
+        # Load model
         ...
 
     def detect(self, frame) -> list[Detection]:
-        # Retornar lista de objetos Detection
+        # Return list of Detection objects
         ...
 ```
 
@@ -903,7 +902,7 @@ if dcfg.type == "my_detector":
 from .selector import Grasp
 
 def plan_my_grasps(fix, cloud, cfg) -> list[Grasp]:
-    # Retornar lista de objetos Grasp
+    # Return list of Grasp objects
     ...
 ```
 
@@ -917,9 +916,9 @@ Add a layer in `SkillRuntime._plan_grasps()` (stacked by default on top of the c
 ### 10.1 Three-tier decision making (Reflex → Habit → LLM)
 `wrc_demo` splits decision making into a **three-tier fast/slow path system**, similar to human fast/slow thinking:
 ```
-N câmeras ──CameraStream (uma thread cada, slot de último frame, descarta antigos)
+N câmeras ──CameraStream (uma thread cada, slot de último quadro, descarta obsoletos)
    │
-   ├── WorldWatcher (thread, ~3 Hz): detector + marca de cor HSV
+   ├── WorldWatcher (thread, ~3 Hz): detector + tag de cor HSV
    │     └─> BeliefStore (thread-safe): rótulo+cor+3D+atualidade
    └── StreamServer (dashboard MJPEG): grade de câmeras + narração + tabela de objetos
 
@@ -927,7 +926,7 @@ comando de chat ("pick and place pink object")
    ├─ nível 1 REFLEX    Sintaxe de template → chamadas de skill                          (~µs)
    ├─ nível 2 HABIT     Memória de experiência (cosseno BoW-hash ≥ 0.9)              (~ms)
    └─ nível 3 LLM       Loop de orquestração bruto (2-15 s/turno)
-        Todos os níveis usam o mesmo SkillRuntime com proteção de segurança
+        Todos os níveis usam o mesmo SkillRuntime com segurança em camadas
 ```
 
 **Key mechanisms**:
@@ -947,7 +946,7 @@ src/wrc_demo/
 ├── calibration/        # Calibração mão-olho (ArUco + Pinocchio FK + LM)
 ├── memory/             # episódica + crença + resultado de preensão
 ├── control/            # Pinocchio FK/IK + mock + lazy + RS real + SafeArm
-├── safety/             # verificação de waypoint com falha segura
+├── safety/             # verificação de ponto de passagem com falha segura
 ├── grasping/           # planejamento de preensão em 3 camadas
 ├── agent/              # orquestrador + reflexo + advisor + clientes LLM + trace
 ├── skills/              # SkillRuntime + TOOL_SPECS + lógica de negócio (teach, master_arm, etc.)
@@ -1006,7 +1005,7 @@ t=0.0s  usuário  ──→  build_runtime()
                    ├─ EpisodicMemory / BeliefStore / TraceLogger
                    └─ SkillRuntime(...)
 
-t=0.5s  thread WorldWatcher inicia (passagem do detector a 3 Hz → crenças)
+t=0.5s  thread WorldWatcher inicia (passagem do detector 3 Hz → crenças)
 
 t=1.0s  usuário --task "pick up red block"
         AgentOrchestrator.run_task()
@@ -1015,12 +1014,12 @@ t=1.0s  usuário --task "pick up red block"
 
 t=1.1s  SkillRuntime.execute("pick_and_place")
         ├─ tracer.start()
-        ├─ belief.find("red block")  ── aguardar prazo de 5s
+        ├─ belief.find("red block")  ── aguardar prazo 5s
         ├─ _plan_grasps() ── camera + graspgenx + obb ── reclassificar
         ├─ select_grasps() ── IK ── pré-avaliação do arnês
-        ├─ safe_arm.move_joints() ── cada waypoint de 50Hz ── SafetyHarness.approve
+        ├─ safe_arm.move_joints() ── cada waypoint 50Hz ── SafetyHarness.approve
         ├─ garra fecha em duas etapas ── detecção de estol
-        ├─ levantar + posicionar + voltar para home
+        ├─ levantar + posicionar + home
         └─ tracer.finish()  ── trace.jsonl + quadros-chave + narração
 
 t=N.5s  report.success ── print "✓ done — arm parked at home"

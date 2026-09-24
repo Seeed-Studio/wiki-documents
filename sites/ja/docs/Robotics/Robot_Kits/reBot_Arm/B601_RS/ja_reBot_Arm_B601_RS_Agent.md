@@ -1,6 +1,6 @@
 ---
-description: "wrc_demo 操作ガイド：reBot Arm B601-RS のビジュアル把持デモのための完全な手順 — 環境構築、モデルダウンロード、LLM 切り替え、ハンドアイキャリブレーション、デモ実行、トラブルシューティング。"
-title: reBot B601 RS ロボットアームのエンボディドエージェントアーキテクチャ設計
+description: 'wrc_demo 操作ガイド：reBot Arm B601-RS のビジュアル把持デモのための完全な手順 — 環境構築、モデルのダウンロード、LLM の切り替え、ハンドアイキャリブレーション、デモの実行、トラブルシューティング。'
+title: B601-RS と Agent Claw
 keywords:
   - wrc_demo
   - reBot Arm B601-RS
@@ -16,14 +16,13 @@ last_update:
   date: 2026-08-28
   author: Seeed Studio
 translation:
-  skip:
-    - [zh-CN]
+  skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-08-28'
-url: https://wiki.seeedstudio.com/cn/wrc_demo_tutorial/
+updatedAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/ja/wrc_demo_tutorial/
 ---
 
-# reBot B601 RS ロボットアームのエンボディドエージェントアーキテクチャ設計
+# reBot Arm B601-RS エンボディドエージェント設計フレームワーク
 
 <p align="center">
   <a href="./LICENSE">
@@ -39,7 +38,7 @@ url: https://wiki.seeedstudio.com/cn/wrc_demo_tutorial/
   <strong>環境構築 → モデルダウンロード → LLM 切り替え → ハンドアイキャリブレーション → デモ実行 → トラブルシューティング</strong>
 </p>
 
-このチュートリアルは、[wrc_demo](https://github.com/TheMoonAstronaut/wrc) プロジェクトの**操作ガイド**です。本ガイドの手順に従うことで、ゼロからのクローン作成からデモの実行までを **1〜2 時間** で完了できます。
+このチュートリアルは、[wrc_demo](https://github.com/TheMoonAstronaut/wrc) プロジェクトの**操作ガイド**です。本ガイドの手順に従うことで、ゼロからのクローン取得からデモの実行までを **1〜2 時間** で完了できます。
 
 wrc_demo は [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)（RobStride バス）向けのビジュアル把持デモで、Ubuntu 22.04 + Python 3.10 + conda `wrc-demo` 環境上で動作します。デモは自然言語の指示（例：「赤いブロックをつかんで」）を受け取り、自動的に把持計画を立てて実行します。
 
@@ -64,8 +63,8 @@ wrc_demo は [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_g
 
 ## 1. プロジェクトの目的と対象読者
 
-- **プロジェクトの目的**：Vision Language Model（VLM）を reBot Arm B601-RS に接続し、自然言語の指示を自動的に把持動作へ変換します — VLM が物体を選択し、Pinocchio が逆運動学（IK）を解き、`SafetyHarness` が 50 Hz の各ウェイポイントに対してフェイルクローズド検証を行います。
-- **対象読者**：NVIDIA GPU + Ubuntu 22.04 + Python 3.10 の基礎知識を持ち、デモの実行 / 検出器の改造 / スキル追加を行いたい開発者。
+- **プロジェクトの目的**：Vision Language Model（VLM）を reBot Arm B601-RS に接続し、自然言語の指示を自動的に把持アクションへ変換できるようにします — VLM が物体を選択し、Pinocchio が逆運動学（IK）を解き、`SafetyHarness` が 50 Hz の各ウェイポイントごとにフェイルクローズド検証を実行します。
+- **対象読者**：NVIDIA GPU + Ubuntu 22.04 + Python 3.10 の基礎知識を持ち、デモを実行したい／検出器を改造したい／スキルを追加したい開発者。
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent2.PNG" alt="reBot Arm 上での wrc_demo のビジュアル把持デモ" />
@@ -78,16 +77,16 @@ wrc_demo は [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_g
 ### 2.1 プロジェクトの特徴
 
 1. **ビジョン言語モデル駆動の 3 段階意思決定**  
-   Qwen3-VL-2B-Instruct-AWQ-4bit をデフォルトのタスクプランニング用ブレインとして使用し、VRAM 8 GB のデバイス上でネイティブに動作可能です。コマンド解析は **Reflex → Habit → LLM** の 3 段階の高速・低速パスに従います — 「赤いブロックをつかんで」のような一般的な指示は LLM を呼び出さずに Reflex テンプレート構文を直接通過し、新しいタスクのみが VLM を利用します。
+   Qwen3-VL-2B-Instruct-AWQ-4bit をデフォルトのタスクプランニング用ブレインとして使用しており、VRAM 8 GB のデバイス上でネイティブに動作できます。コマンド解析は **Reflex → Habit → LLM** の 3 段階の高速・低速パスに従います — 「赤いブロックをつかんで」のような一般的な指示は、LLM を呼び出さずに Reflex テンプレート構文を直接通過し、新しいタスクのみが VLM を利用します。
 
 2. **ハンドアイキャリブレーション + 6 自由度把持計画（フェイルクローズド）**  
    ハンドアイキャリブレーションスクリプト（ArUco チェッカーボード + Pinocchio FK + 関節 SE(3) LM 最適化）を内蔵し、トップ（ETH）カメラレイアウトをサポートします。ストリーミング軌道の各ポイントは `SafetyHarness` によって検証され、いずれかの検証に失敗した場合、ロボットアームは動作途中で即座に停止します。
 
 3. **6 個の TOOL_SPECS + 5 個の MCP ゲートウェイ**  
-   最上位レイヤーは 6 つの安全ゲート付きツールを公開します：`pick_and_place` / `grasp_object` / `place_at/on` / `move_t` / `teach_record/replay` + `task_done`。さらに MCP ゲートウェイは 5 つのツール：`camera_snapshot` / `world_state` / `live_view_url` / `emergency_stop` / `reset_stop` を公開します。新しいスキルを追加する際にプロトコル変換作業は一切不要です。
+   最上位レイヤーは 6 個のセーフティゲート付きツールを公開します：`pick_and_place` / `grasp_object` / `place_at/on` / `move_t` / `teach_record/replay` + `task_done`。さらに MCP ゲートウェイは 5 個のツールを公開します：`camera_snapshot` / `world_state` / `live_view_url` / `emergency_stop` / `reset_stop`。新しいスキルを追加する際にプロトコル変換作業は一切不要です。
 
 4. **完全なトレース + エピソード記憶**  
-   各スキル呼び出しは、ASPIRE スタイルのマルチモーダルトレース（`trace.jsonl` + 前後のキーフレーム JPEG）に書き込まれ、15 秒のイベントウィンドウ + オブジェクト永続性の信念を持つため、「10 秒前に見えたカップ」は遮蔽後でも操作可能です。
+   各スキル呼び出しは、ASPIRE スタイルのマルチモーダルトレース（`trace.jsonl` + 前後のキーフレーム JPEG）として書き出され、15 秒のイベントウィンドウ + オブジェクト永続性の信念を持つため、「10 秒前に見えたカップ」を遮蔽後でも操作できます。
 
 5. **モック優先の開発体験**  
    フルスタックモック（`--camera mock --arm mock --llm mock`）により、ハードウェアなしで完全な意思決定パイプラインを実行できます。モックテストと実機は**同じセキュリティコード**を実行します。
@@ -114,7 +113,7 @@ wrc_demo は [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_g
 | | RobStride ドライバ | motorbridge（SocketCAN）+ ベンダー提供 SDK |
 | | 把持バックエンド | camera-camera / GraspGen-X（ZMQ）/ 解析的 OBB（3 層） |
 | | Python | 3.10 |
-| **スキルシステム** | TOOL_SPECS 合計 | 6（`task_done` 終端 1 つ + 実スキル 5 つを含む） |
+| **スキルシステム** | TOOL_SPECS 合計 | 6（`task_done` 終端 1 個 + 実スキル 5 個を含む） |
 | | アームモーションスキル | `_MOTION_SKILLS` 内の 18 個の文字列リテラル |
 | | MCP ツールセット | `TOOL_SPECS - _EXCLUDED_TOOLS + _EXTRA_TOOLS` = 6 - 1 + 5 = 10 |
 | **安全性** | 軌道チェック | 50 Hz ストリーミングの各ウェイポイントが `SafetyHarness.approve()` を通過 |
@@ -138,7 +137,7 @@ wrc_demo は [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_g
 
 1. **ロボットアーム**：48V 電源 → ロボットアーム；USB2CAN → ホストの USB ポート（初回使用時は `sudo ip link set can0 up type can bitrate 1000000` が必要）
 2. **カメラ**：Orbbec USB 3.0 → ホストの USB 3.0 ポート
-3. **権限設定**：
+3. **パーミッション設定**：
 
 ```bash
 # One-time read/write permission for USB devices
@@ -168,7 +167,7 @@ sudo ip link set can0 up
 | 項目 | 要件 |
 |------|------|
 | CPU | x86_64（aarch64 はテスト対象外） |
-| メモリ | 16 GB 以上（モックは 8 GB から、ローカル LLM 用には 16 GB 推奨） |
+| メモリ | 16 GB 以上（モックは 8 GB から、ローカル LLM には 16 GB 推奨） |
 | ディスク | 10 GB 以上（モデル重み + conda 環境 + トレース蓄積） |
 | GPU（ローカル LLM 推論用） | NVIDIA RTX 5070 / 4090 / H100 |
 
@@ -194,7 +193,7 @@ sudo ip link set can0 up
 
 ### 3.0 最短ルート：5 分でモックを実行
 
-インストールを確認するためにモックだけを実行したい場合（他の内容を読まない場合）、3 つのコマンドだけで十分です：
+インストールを確認するためにモックだけを実行したい場合（他の内容を読まない場合）、次の 3 コマンドだけで十分です：
 
 ```bash
 git clone https://github.com/TheMoonAstronaut/wrc.git
@@ -208,24 +207,24 @@ pytest tests/test_extrinsics_loader.py \
 ```
 
 :::tip
-環境名は `wrc-demo` に固定されています。名前をカスタマイズする必要がある場合（例：チームの命名規則）、`environment.yml` の `name:` フィールドを変更し、それに応じて後続のコマンドを置き換えてください。
+環境名は `wrc-demo` に固定されています。名前をカスタマイズする必要がある場合（例：チームの命名規約）、`environment.yml` の `name:` フィールドを変更し、それに応じて後続のコマンドを置き換えてください。
 :::
 
 :::tip
-`pyorbbecsdk2` は environment.yml には含まれていません ** — その依存チェーン `pyorbbecsdk2 → open3d==0.18.0 → dash → plotly → ipywidgets → ...` により、pip が `resolution-too-deep` を頻繁に発生させるためです。Orbbec SDK は別途インストールしてください。
+`pyorbbecsdk2` は environment.yml には含まれていません ** — その依存チェーン `pyorbbecsdk2 → open3d==0.18.0 → dash → plotly → ipywidgets → ...` により、pip が `resolution-too-deep` を頻繁に起こすためです。Orbbec SDK は別途インストールしてください。
 :::
 :::tip
- `torch` も environment.yml には含まれていません ** — ultralytics は torch をオプションとしてマークしていますが、`import ultralytics` によって `import torch` がトリガーされます。
+ `torch` も environment.yml には含まれていません ** — ultralytics は torch をオプション扱いにしていますが、`import ultralytics` によって `import torch` が呼び出されます。
 :::
 
 ### 3.1 前提条件
 
-- [reBot Arm B601-RS クイックスタート](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) を完了していること（ロボットアームの組み立て、ゼロ点初期化、モーター ID 設定）— **実機のみ必須**
+- [reBot Arm B601-RS クイックスタート](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) を完了していること（ロボットアームの組み立て、ゼロ点初期化、モーター ID 設定）— **実機ハードウェアでのみ必須**
 - NVIDIA GPU + CUDA ドライバがインストールされていること（**ローカル LLM 推論にのみ必須**）
 - [miniforge3](https://conda-forge.org/miniforge/) などの conda ツールがインストールされていること
 - Ubuntu 22.04+ / Debian 12+ / WSL2
 
-### 3.2 システム依存関係（実機で必須）
+### 3.2 システム依存関係（実機ハードウェアで必須）
 
 ```bash
 sudo apt update
@@ -272,16 +271,16 @@ PyTorch は nvidia パッケージを site-packages/nvidia/lib/ に配置しま�
 bash scripts/install_nvidia_libs_hook.sh
 ```
 
-フックが有効かどうかを確認します（新しいシェルでも動作することを確認）
+フックが有効かどうかを確認します（新しいシェルで動作することを確認）
 ```bash
 source /home/seeed/miniforge3/envs/wrc-demo/etc/conda/activate.d/nvidia_libs.sh
 python -c "import torch; print('torch:', torch.__version__, 'cuda:', torch.cuda.is_available())"
 # Expected: torch: 2.13.0+cu130 cuda: True
 ```
 
-### 3.4 Depth カメラ SDK のインストール
+### 3.4 Depth Camera SDK のインストール
 
-このプロジェクトは Orbbec Gemini 2、RealSense D435i / D405 などの RGB-D Depth カメラをサポートしています。
+このプロジェクトは Orbbec Gemini 2、RealSense D435i / D405 などの RGB-D デプスカメラをサポートしています。
 
 #### Orbbec Gemini 2
 
@@ -298,7 +297,7 @@ PYTHONNOUSERSITE=1 pip install pyorbbecsdk2
 必ず `PYTHONNOUSERSITE=1` を追加してください。そうしないと、pip はパッケージを `~/.local/lib/python3.10/site-packages/`（ユーザーレベルの site-packages）にインストールし、conda 環境側は空のままになります。
 :::
 
-**方法 2: GitHub のソースコードからインストール**（ネットワークに問題がある場合、または最新バージョンを使用したい場合）
+**方法 2: GitHub のソースコードからインストール**（ネットワークの問題がある場合、または最新バージョンを使用したい場合）
 
 ```bash
 sudo apt-get install -y cmake build-essential libusb-1.0-0-dev
@@ -350,7 +349,7 @@ class Wrap(torch.nn.Module):
 torch.jit.trace(Wrap(full.text).eval(), torch.zeros(2, 77, dtype=torch.long), strict=False).save("models/mobileclip2_b.ts")
 PY
 ```
-手動での検証
+手動検証
 
 ```bash
 PYTHONNOUSERSITE=1 python -c "import torch; m=torch.jit.load('models/mobileclip2_b.ts'); o=m(torch.zeros(2,77,dtype=torch.long)); print(o.shape, o.norm(dim=-1).tolist())"
@@ -375,14 +374,14 @@ ln -sf models/mobileclip2_b.ts mobileclip2_b.ts     # Project root symlink
 
 クラウド API を使用する予定の場合は、このステップをスキップできます：
 
-このチュートリアルでは、llm.profile=local_qwen3_vl が AWQ-4bit 量子化版（8GB VRAM で動作）に対応していることを前提としています。
+このチュートリアルでは、llm.profile=local_qwen3_vl をデフォルトとし、AWQ-4bit 量子化版（8GB VRAM で動作）に対応します。
 ```bash
 hf download cyankiwi/Qwen3-VL-2B-Instruct-AWQ-4bit \
   --local-dir models/qwen3-vl-2b-awq-4bit
 # → https://huggingface.co/cyankiwi/Qwen3-VL-2B-Instruct-AWQ-4bit
 ```
 :::tip
-hf download でネットワークに問題がある場合は、github リポジトリからダウンロードすることもできます。
+hf download でネットワークの問題がある場合は、github リポジトリからダウンロードすることもできます。
 ```bash
 git clone https://huggingface.co/cyankiwi/Qwen3-VL-2B-Instruct-AWQ-4bit models/qwen3-vl-2b-awq-4bit
 # If it gets stuck for too long, just press ctrl + c to stop
@@ -394,12 +393,12 @@ cd models/qwen3-vl-2b-awq-4bit && git lfs pull
 
 | アセット | サイズ | 必要性 | 取得方法 |
 |------|------|--------|----------|
-| `qwen3-vl-2b-awq-4bit/` | 約 2.| 4 GB | ローカル LLM デプロイに必須（8 GB VRAM） | `hf download cyankiwi/Qwen3-VL-2B-Instruct-AWQ-4bit` または `scripts/start_cosmos3_server.sh --bg` によって自動取得 |
-| `yoloe-26s-seg.pt` | 約 31 MB | **オープンボキャブラリ検出（2026-09 以降推奨）** | Seeed-Projects/reBot-DevArm-Grasp をクローン後、`cp` で抽出；既存の `mobileclip2_b.ts` を使用し、`blt.ts` は不要 |
-| `yoloe-26l-seg.pt` | 約 75 MB | 任意（高精度だが約 2 倍遅い） | 上記と同様；`mobileclip2_b.ts` も使用 |
+| `qwen3-vl-2b-awq-4bit/` | 約 2.| 4 GB | ローカル LLM デプロイ（8 GB VRAM）に必須 | `hf download cyankiwi/Qwen3-VL-2B-Instruct-AWQ-4bit` または `scripts/start_cosmos3_server.sh --bg` によって自動取得 |
+| `yoloe-26s-seg.pt` | 約 31 MB | **オープンボキャブラリ検出（2026-09 以降推奨）** | Seeed-Projects/reBot-DevArm-Grasp をクローン後に `cp` で抽出；既存の `mobileclip2_b.ts` を使用し、`blt.ts` は不要 |
+| `yoloe-26l-seg.pt` | 約 75 MB | 任意（高精度、約 2 倍遅い） | 上記と同様；`mobileclip2_b.ts` も使用 |
 | `yoloe-11s-seg.pt` | 約 28 MB | **非推奨** — `mobileclip_blt.ts`（572 MB、初回起動時のダウンロードに約 1.5 時間）が必要 | レガシーモデルの重みが必要な場合のみ使用；元に戻すには `configs/demo.yaml` の `model:` フィールドを変更 |
 | `mobileclip2_b.pt` | 約 571 MB | YOLOE 26s/l テキストエンコーディングのソース（生の PyTorch 版） | `python scripts/setup_models.py --fetch` により `apple/MobileCLIP2-B` から自動取得 |
-| `mobileclip2_b.ts` | 約 253 MB | YOLOE 26s/l テキストエンコーディング（実際に実行時に読み込まれる） | 手動で trace（§4.1 参照）；ダウンロード後 **必ず `models/` または CWD に配置する必要あり** — §4.1.1 参照 |
+| `mobileclip2_b.ts` | 約 253 MB | YOLOE 26s/l テキストエンコーディング（実行時に実際に読み込まれるもの） | 手動で trace（§4.1 参照）；ダウンロード後 **必ず `models/` または CWD に配置する必要あり** — §4.1.1 参照 |
 | `mobileclip_blt.ts` | 約 572 MB | YOLOE 11s テキストエンコーディング（**非推奨**、ソースのダウンロードが困難） | 手動で trace、ソースは `apple/MobileCLIP-B-LT`；11s モデル使用時のみ必要 |
 | `pyrealsense2` | コンパイル済み成果物 | RealSense ユーザーのみ | Intel 公式ドキュメントに従ってコンパイル |
 ---
@@ -413,7 +412,7 @@ cd models/qwen3-vl-2b-awq-4bit && git lfs pull
 #### 1. ArUco チェッカーボードの印刷
 ArUco 4x4 辞書からチェッカーボードを印刷し、ID = 0、1 辺の長さ = 0.10 m（10 cm）とします。推奨ソース：[`~/wrc/aruco100x100.pdf`](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/aruco100x100.pdf)
 
-印刷後、**辺の長さを正確に測定**してください（プリンタが画像を拡大縮小している可能性があります）。測定した値を `--marker-size` パラメータとして使用します。
+印刷後、**辺の長さを正確に測定**します（プリンタが画像を拡大縮小する可能性があります）。測定した値を `--marker-size` パラメータとして使用してください。
 
 #### 2. カメラ接続 + CAN バス
 ```bash
@@ -437,10 +436,10 @@ wrc-calib-top --bind top --serial `xxxx`
 ```
 
 ### 5.2 上部カメラ ETH キャリブレーション
-**ETH = Eye-To-Hand**：カメラはロボットアームの外側の固定位置に取り付けられます。図のようにキャリブレーションボードを配置します。
+**ETH = Eye-To-Hand**：カメラはロボットアームの外部の固定位置に取り付けられます。図のようにキャリブレーションボードを配置します。
 
 <p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent4.PNG" alt="reBot Arm 上での wrc_demo のビジュアル把持デモ" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent4.PNG" alt="reBot Arm 上の wrc_demo によるビジュアル把持デモ" />
 </p>
 
 ```bash
@@ -453,10 +452,10 @@ wrc-calib-top --marker-size 0.10 --manual --n 30 \
   --out data/calibration/hand_eye_top.local.json
 ```
 
-`hand_eye_top.local.json` ファイルは **.gitignore によって自動的に無視され**（リポジトリを汚しません）、実機のキャリブレーション結果です。
+`hand_eye_top.local.json` ファイルは **.gitignore によって自動的に無視され**（リポジトリを汚染しません）、実機のキャリブレーション結果です。
 
 :::tip
-このデモでは、ロボットアームの安全な作業領域があらかじめ定義されています。広い範囲での把持・配置動作中に IK ソルバが失敗する場合は、カメラの固定位置を調整して再キャリブレーションする必要があります（安定したカメラ位置はロボットアームのベースから約 36cm × 36cm 離れた位置です）。
+このデモでは、ロボットアームの安全な作業領域があらかじめ定義されています。広い範囲での把持・配置動作中に IK ソルバが失敗する場合は、カメラの固定位置を調整して再キャリブレーションする必要があります（安定したカメラ位置はロボットアームベースから約 36cm × 36cm 離れた位置です）。
 :::
 
 #### キャリブレーション原理
@@ -466,7 +465,7 @@ wrc-calib-top --marker-size 0.10 --manual --n 30 \
 
 出力：
 - `data/calibration/hand_eye_top.json` — マスキング済み参照行列（**使用しないでください**、serial=REDACTED）
-- `data/calibration/hand_eye_top.local.json` — **あなたの実機のキャリブレーション結果**
+- `data/calibration/hand_eye_top.local.json` — **あなたの実機キャリブレーション結果**
 
 ### 5.3 キャリブレーション RMSE の検証
 再キャリブレーションは行わず、既知のベース座標系上の点で直接検証します：
@@ -482,7 +481,7 @@ wrc-calib-top --verify \
 
 ## 6. LLM 設定
 
-### 6.1 意思決定ツリー
+### 6.1 決定木
 ```
 What is your VRAM size?
 ├─ ≥ 8 GB  → Option A: Local model (local_qwen3_vl)
@@ -501,10 +500,10 @@ sleep 60                                    # Wait for vLLM to load the model (~
 bash scripts/start_cosmos3_server.sh --status
 # Expected: [status] vllm running, PID <xxx>
 ```
-vLLM 0.6 以降は Qwen3-VL のマルチモーダル推論をサポートしています。AWQ 4bit 量子化版は 8 GB VRAM 上で約 30 tokens/s で動作します。
+vLLM 0.6 以降は Qwen3-VL のマルチモーダル推論をサポートしています。AWQ 4bit 量子化版は 8 GB VRAM で約 30 tokens/s で動作します。
 
 ### 6.3 オプション B: クラウド API（GPU 不要）
-**2 層構成** — YAML プロファイルファイル + 環境変数キー：
+**二層構成** — YAML プロファイルファイル + 環境変数キー:
 
 #### a. YAML プロファイルファイル (`configs/llm/*.yaml`)
 | File | 目的 | 主要フィールド |
@@ -520,10 +519,10 @@ vLLM 0.6 以降は Qwen3-VL のマルチモーダル推論をサポートして�
 llm:
   profile: local_qwen3_vl    # ← Modify this line (mock / anthropic / openai / minimax / local_qwen3_vl)
 ```
-CLI による一時的な切り替え：`wrc-demo --llm anthropic --task "..."`
+CLI から一時的に切り替え: `wrc-demo --llm anthropic --task "..."`
 
 #### c. API キー（環境変数）
-| profile | どの環境変数を読むか |
+| profile | 参照される環境変数 |
 |---------|-----------------------|
 | `anthropic` | `ANTHROPIC_API_KEY` |
 | `openai` | `OPENAI_API_KEY`（`OPENAI_BASE_URL` でエンドポイントを変更） |
@@ -549,7 +548,7 @@ export MINIMAX_API_KEY=PUT_KEY_HERE
 echo "ANTHROPIC_API_KEY prefix: ${ANTHROPIC_API_KEY:0:10}..."
 echo "MINIMAX_API_KEY prefix: ${MINIMAX_API_KEY:0:10}..."
 ```
-クラウドの `API_KEY` を `export` で設定した場合、その有効範囲は現在のターミナルのみです。`key` を `~/.bashrc` に永続化したい場合（export は現在のシェルにしか効かず、新しいシェルでは再設定が必要）：
+クラウド `API_KEY` を `export` で設定した場合、その有効範囲は現在のターミナルのみです。`key` を `~/.bashrc` に永続化したい場合（export は現在のシェルにのみ有効で、新しいシェルでは再設定が必要）:
 ```bash
 # Replace PUT_KEY_HERE with your real key (one full line)
 echo 'export ANTHROPIC_API_KEY=PUT_KEY_HERE' >> ~/.bashrc
@@ -562,7 +561,7 @@ source ~/.bashrc
 echo "ANTHROPIC_API_KEY prefix: ${ANTHROPIC_API_KEY:0:10}..."
 ```
 
-**別案として、YAML に直接キーを書き込むこともできます（非推奨）：**
+**別案として、YAML にキーを直接書き込むこともできます（非推奨）:**
 ```yaml
 # configs/llm/minimax.yaml has two writing methods:
 
@@ -604,7 +603,7 @@ wrc-demo --llm local_qwen3_vl --task "go to home" --no-view --no-serve
 bash /home/seeed/wrc/scripts/start_all.sh --repl --real
 ```
 
-正常に実行された後のターミナル出力例：
+正常に実行された後のターミナル出力例:
 ```
 # Output example:
 (wrc-demo) seeed@seeed-KUANGSHI-Series:~/wrc$ bash /home/seeed/wrc/scripts/start_all.sh --repl --real
@@ -629,9 +628,9 @@ Type a task (empty line to quit).
 task> 
 ```
 
-ウェブページを開き、ターミナルに出力された `[wrc-demo] LIVESTREAM dashboard: http:xxxx` のリンクをクリックすると、対話を通じてロボットアームを制御できます。
+ブラウザでページを開き、ターミナルに出力された `[wrc-demo] LIVESTREAM dashboard: http:xxxx` リンクをクリックすると、対話を通じてロボットアームを制御できます。
 
-対話コマンド送信後のターミナル出力例：
+対話コマンド送信後のターミナル出力例:
 ```
 === task report ===
 task:    go to home
@@ -651,15 +650,15 @@ summary: Robot waved hello three times as requested.
 ```
 
 :::tip
-このデモでは、ロボットアームに対してあらかじめ安全な作業領域が定義されています。広い範囲での把持・配置動作中に IK ソルバが失敗する場合は、カメラの固定位置を調整して再キャリブレーションする必要があります（安定したカメラ位置はロボットアームのベースから約 36cm × 36cm 離れた位置です）。
+このデモでは、ロボットアームのために事前定義された安全な作業領域が設定されています。広い範囲での把持および配置動作中に IK ソルバが失敗する場合は、カメラの固定位置を調整して再キャリブレーションを行う必要があります（安定したカメラ位置はロボットアームのベースから約 36cm × 36cm 離れた位置です）。
 :::
 
 ### 7.2 実行可能なタスク
 テキスト対話制御には 2 つのパスがあり、`path: llm & path: reflex` です。
 
-`reflex` は事前に読み込まれたテキスト（モックモード）を指し、LLM を動作させずに、あらかじめ用意された固定テキストを使って rebot を制御し、さまざまなタスクを完了させることを保証します。
+`reflex` は事前に読み込まれたテキスト（モックモード）を指し、LLM を動作させずに、あらかじめ用意された固定テキストを使用してロボットにさまざまなタスクを実行させることを保証します。
 
-安定した reflex コマンドは次のとおりです：
+安定した reflex コマンドは次のとおりです:
 ```
 pick up X and put in Y  # Complete pick+place
 
@@ -672,7 +671,7 @@ go home                 # Return to origin
 
 `llm` は、実際に接続されたクラウドモデルまたはローカルにデプロイされたモデルによる解析を指し、言語テキストをより柔軟に理解し、対応するスキルを呼び出すことができます。
 
-スキルと対応する機能は次のとおりです：
+スキルと対応する機能は次のとおりです:
 ```
 skill_get_observation	 # Take photo + recognize
 skill_localize_object	 # Single object localization
@@ -688,11 +687,11 @@ skill_close_gripper	     # Close gripper
 ## 8. カスタム設定
 
 ### 8.1 新しい LLM プロファイルの追加
-wrc-demo の LLM バックエンドは**プラガブル**です。新しい LLM プロファイルを追加する必要がある場合、`configs/llm/<name>.yaml` という 1 つのファイルが 1 つのプロファイルに対応します。
+wrc-demo の LLM バックエンドは**プラガブル**です。新しい LLM プロファイルを追加する必要がある場合、`configs/llm/<name>.yaml` という 1 つのファイルが 1 つのプロファイルになります。
 
-`demo.yaml` 内の 1 行 `profile: <name>` を変更することで切り替えます。
+切り替えるには、`demo.yaml` 内の 1 行 `profile: <name>` を変更します。
 
-**現在ビルトインされている 5 つのプロファイル**：
+**現在組み込みの 5 つのプロファイル**:
 | profile | 目的 | 必要な環境変数 |
 |---|---|---|
 | `local_qwen3_vl` | **デフォルト**、ローカル Qwen3-VL-2B-AWQ-4bit（vLLM 8080） | 不要 |
@@ -701,11 +700,11 @@ wrc-demo の LLM バックエンドは**プラガブル**です。新しい LLM 
 | `openai` | OpenAI / OpenAI 互換プロトコル | `OPENAI_API_KEY` |
 | `minimax` | MiniMax クラウド（環境変数に移行済み） | `MINIMAX_API_KEY` |
 
-新しいプロファイルを追加する必要がある場合は、以下の手順に従ってください：
+新しいプロファイルを追加する必要がある場合は、以下の手順に従ってください:
 
 #### ステップ 1: yaml をテンプレートとしてコピー
-(1) DeepSeek / Moonshot Kimi / DashScope Qwen / Zhipu / SiliconFlow など、ほとんどの国内 LLM は OpenAI Chat Completions プロトコルに従っています。
-openai.yaml からコピーします：
+(1) 多くの国内 LLM（DeepSeek / Moonshot Kimi / DashScope Qwen / Zhipu / SiliconFlow）は、すべて OpenAI Chat Completions プロトコルに従っています。
+openai.yaml からコピーします:
 ```bash
 cp configs/llm/openai.yaml configs/llm/kimi.yaml
 ```
@@ -713,7 +712,7 @@ cp configs/llm/openai.yaml configs/llm/kimi.yaml
 (2) Anthropic プロトコルの場合は、anthropic.yaml からコピーします。
 
 #### ステップ 2: yaml 内の 4 つのフィールドを修正
-configs/llm/kimi.yaml を開き、4 つのフィールドだけを修正します：
+configs/llm/kimi.yaml を開き、4 つのフィールドだけを修正します:
 ```
 type: openai                # Protocol type (see "How to choose type" below)
 model: moonshot-v1-8k       # Model name (check vendor documentation)
@@ -726,7 +725,7 @@ timeout_s: 30               # Can be adjusted to 60 for slow networks
 ```
 
 #### ステップ 3: demo.yaml でプロファイルを切り替え
-`configs/demo.yaml` を開き、llm: ブロックを見つけて、1 行だけ修正します：
+`configs/demo.yaml` を開き、llm: ブロックを見つけて、1 行だけ変更します:
 ```
 llm:
   profile: kimi    # ← Change to new profile name (remove .yaml suffix)
@@ -737,7 +736,7 @@ llm:
 ```
 export MOONSHOT_API_KEY=sk-...
 ```
-(2) 環境変数が有効になっているか検証
+(2) 環境変数が有効になっているか確認
 ```
 echo "${MOONSHOT_API_KEY:0:8}"
 ```
@@ -747,10 +746,10 @@ conda activate wrc-demo
 python -m wrc_demo.apps.demo --llm kimi --task "list the objects" --no-view --no-serve
 ```
 
-(4) 標準出力に「[wrc-demo] llm=kimi」と表示されるか確認します。LLM からのレスポンスメッセージがあれば成功です（空のシーンでも問題ありません）。
+(4) 標準出力に「[wrc-demo] llm=kimi」と表示されるか確認します。LLM からの応答メッセージがあれば成功です（空のシーンでも問題ありません）。
 
 ### 8.2 把持精度の変更
-`configs/demo.yaml` 内の `grasp.*` ブロックを編集します：
+`configs/demo.yaml` 内の `grasp.*` ブロックを編集します:
 ```yaml
 grasp:
   backend: obb                          # obb (default fallback) / graspgenx (learning-based)
@@ -765,11 +764,11 @@ grasp:
   approach_pitch_rad: 1.2             # Angle between approach direction and +z (~69°)
 ```
 
-より保守的（より高精度で遅い）にするには → `n_samples` を増やします（vLLM の思考時間が長くなります）；より攻撃的（より高速）にするには → 減らします。
+より保守的（より高精度で遅い）にする → `n_samples` を増やす（vLLM の思考時間が長くなる）；より攻撃的（高速）にする → 減らす。
 
 ハンドアイ補正（`hand_eye_compensation_m`）、`configs/cameras/orbbec_overhead.yaml` の `extrinsics` を編集します。
 
-把持姿勢はカメラ座標系からベース座標系へ `T_cam2base` を介して変換されます — このステップでのずれは、そのまま把持の着地点に伝播します。このリンク上のずれの微調整は、`hand_eye_compensation_m` の値を調整することで行えます。
+把持姿勢はカメラ座標からベース座標系へ `T_cam2base` を介して変換されます — このステップでのずれは把持の着地点に直接伝播します。このリンク上のずれの微調整は、`hand_eye_compensation_m` の値を調整することで行えます。
 ```yaml
 # configs/cameras/orbbec_overhead.yaml
 extrinsics:
@@ -792,7 +791,7 @@ detector:
   conf: 0.20                           # 信頼度しきい値（低いほど検出数は増えるが、誤検出も増える）
 
 detect_classes: ["banana", "cracker box", "soup can", "cube", "box", "pen", "toy"]
-# ↑ このリストは、オープンボキャブラリーモードで YOLOE にどのラベルを探すかを指示します
+# ↑ このリストは、オープンボキャブラリモードで YOLOE にどのラベルを探すかを指示します
 ```
 
 ### 8.4 Modify safety thresholds
@@ -805,11 +804,11 @@ safety:
     min: [0.10, -0.30, -0.01]
     max: [0.50, 0.30, 0.55]
   table_z: 0.0                        # テーブル高さ（ベース座標系）
-  table_clearance: 0.02              # TCP テーブルクリアランス
+  table_clearance: 0.02              # TCP のテーブルクリアランス
   max_joint_vel: 1.2                  # rad/s（各ウェイポイントで適用）
   joint_margin: 0.02                  # rad（URDF 制限内のマージン）
-  watchdog_s: 5.0                     # 認識の有効期限による停止時間
-  keep_out: []                        # 非進入（E-stop）AABB のリスト
+  watchdog_s: 5.0                     # 認識結果の有効期限による停止時間
+  keep_out: []                        # 非侵入（E-stop）AABB のリスト
 ```
 
 ---
@@ -832,7 +831,7 @@ class SkillRuntime:
         """1 行の説明。戻り値: {...}"""
         if not foo:
             raise SkillError("foo must be non-empty")
-        # ... ロジックを記述（self.arm（SafeArm）を必ず使用し、self.arm.raw に直接アクセスしないこと） ...
+        # ... ロジックをここに記述（self.arm（SafeArm）を必ず使用し、self.arm.raw に直接アクセスしないこと） ...
         return {"ok": True, "result": "..."}
 ```
 
@@ -920,8 +919,8 @@ Add a layer in `SkillRuntime._plan_grasps()` (stacked by default on top of the c
 N 台のカメラ ──CameraStream（各スレッド、最新フレームスロット、古いフレームは破棄）
    │
    ├── WorldWatcher（スレッド、約 3 Hz）：detector + HSV カラータグ
-   │     └─> BeliefStore（スレッドセーフ）：ラベル＋色＋3D＋鮮度
-   └── StreamServer（MJPEG ダッシュボード）：カメラグリッド＋ナレーション＋オブジェクトテーブル
+   │     └─> BeliefStore（スレッドセーフ）：ラベル + 色 + 3D + 鮮度
+   └── StreamServer（MJPEG ダッシュボード）：カメラグリッド + ナレーション + オブジェクトテーブル
 
 チャットコマンド（"pick and place pink object"）
    ├─ 第 1 層 REFLEX    テンプレート構文 → スキル呼び出し                          （約 µs）
@@ -945,12 +944,12 @@ src/wrc_demo/
 │
 ├── perception/         # 4 種類のカメラバックエンド + YOLOE detector + 深度アラインメント
 ├── calibration/        # ハンドアイキャリブレーション（ArUco + Pinocchio FK + LM）
-├── memory/             # エピソード記憶 + belief + 把持結果
-├── control/            # Pinocchio FK/IK + mock + lazy + 実 RS + SafeArm
+├── memory/             # エピソード記憶 + 信念 + 把持結果
+├── control/            # Pinocchio FK/IK + モック + lazy + 実機 RS + SafeArm
 ├── safety/             # フェイルクローズドなウェイポイント検証
 ├── grasping/           # 3 層の把持計画
-├── agent/              # オーケストレータ + reflex + advisor + LLM クライアント + trace
-├── skills/              # SkillRuntime + TOOL_SPECS + ビジネスロジック（teach, master_arm など）
+├── agent/              # オーケストレータ + reflex + advisor + LLM クライアント + トレース
+├── skills/              # SkillRuntime + TOOL_SPECS + ビジネスロジック（teach、master_arm など）
 └── apps/                # demo / record / viewer / stream_server / mcp_server
 ```
 
@@ -967,7 +966,7 @@ src/wrc_demo/
 ### 10.4 Module dependency graph
 ```
             ┌──────────────────────────────────────────────────────────────┐
-            │                apps/  (エントリポイント)                     │
+            │                apps/  (エントリーポイント)                  │
             │   demo.py (build_runtime)   mcp_server.py   dashboard_runner │
             └────────────┬──────────────────────┬────────────────┬─────────┘
                          │                      │                │
@@ -983,17 +982,17 @@ src/wrc_demo/
         ┌─────────────────────────────────────────────────────────────────┐
         │              memory/  +  grasping/  +  control/                 │
         │   BeliefStore   GraspMemory   camera_grasp + obb_grasp + graspgenx│
-        │   EpisodicMem   (3-layer)        Kinematics + MockArm + SafeArm  │
+        │   EpisodicMem   (3層)        Kinematics + MockArm + SafeArm     │
         └────────────────────────────┬────────────────────────────────────┘
                                      │
                                      ▼
         ┌─────────────────────────────────────────────────────────────────┐
-        │                       safety/  (フェイルクローズ)               │
+        │                       safety/  (フェイルクローズ)              │
         │   SafetyHarness.approve(waypoint)  vet_pose()  非常停止ラッチ │
         └─────────────────────────────────────────────────────────────────┘
                                      │
                                      ▼
-              ベンダー提供 SDK + pyorbbecsdk + ultralytics + pin + motorbridge
+              ベンダー提供SDK + pyorbbecsdk + ultralytics + pin + motorbridge
 ```
 
 ### 10.5 Trace sequence diagram (one `pick_and_place` call)
@@ -1006,20 +1005,20 @@ t=0.0s  ユーザー  ──→  build_runtime()
                    ├─ EpisodicMemory / BeliefStore / TraceLogger
                    └─ SkillRuntime(...)
 
-t=0.5s  WorldWatcher スレッド開始 (3 Hz detector pass → 信念)
+t=0.5s  WorldWatcher スレッド開始 (3 Hz detector pass → beliefs)
 
 t=1.0s  ユーザー --task "pick up red block"
         AgentOrchestrator.run_task()
-        ├─ tier1 REFLEX: 正規表現マッチ ──→ pick_and_place ヒット？  ──→ 実行
+        ├─ tier1 REFLEX: 正規表現マッチ ──→ pick_and_place ヒット?  ──→ 実行
         └─ (フォールバック) tier2 HABIT ──→ tier3 LLM ──→ tool_calls
 
 t=1.1s  SkillRuntime.execute("pick_and_place")
         ├─ tracer.start()
-        ├─ belief.find("red block")  ── 締切 5s まで待機
-        ├─ _plan_grasps() ── カメラ + graspgenx + obb ── 再ランク
+        ├─ belief.find("red block")  ── 締め切り5秒まで待機
+        ├─ _plan_grasps() ── カメラ + graspgenx + obb ── 再ランク付け
         ├─ select_grasps() ── IK ── ハーネス事前審査
-        ├─ safe_arm.move_joints() ── 各 50Hz ウェイポイント ── SafetyHarness.approve
-        ├─ グリッパー 2 段階クローズ ── ストール検出
+        ├─ safe_arm.move_joints() ── 各50Hzウェイポイント ── SafetyHarness.approve
+        ├─ グリッパー2段階クローズ ── ストール検出
         ├─ リフト + 配置 + ホーム
         └─ tracer.finish()  ── trace.jsonl + キーフレーム + ナレーション
 

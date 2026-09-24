@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - Edge AI
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_hardware_specifications
+slug: /recamera_pro_hardware_specifications_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-06-01'
 updatedAt: '2026-07-23'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_hardware_specifications/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_hardware_specifications_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/hardware_specifications.md (https://wiki.seeedstudio.com/cn/recamera_pro_hardware_specifications/), which now serves the original slug /recamera_pro_hardware_specifications. This file is kept for history as a draft (slug /recamera_pro_hardware_specifications_legacy) and is excluded from production builds. Do not link here. -->
 
 # 硬件规格
 | 参数 | 规格 |
@@ -49,7 +51,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_hardware_specifications/
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-07 14:05:38 (北京时间)
-// 多语言页面: 2482 个
+// 生成时间: 2026-09-22 17:48:09 (北京时间)
+// 多语言页面: 2475 个
 
 (function() {
   'use strict';
@@ -221,104 +221,6 @@
     "pt"
   ],
   "/sensecraft-app/tutorials/event-management": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/blockchain-dashboard/dashboard-basics": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/blockchain-dashboard/dashboard-registration": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/blockchain-dashboard/hotspot-registration": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/app-settings": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/deeplink_helium_wallet": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/download-app": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/faq": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/forget-wifi-profile": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-management": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-onboarding": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/remote-reboot": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/update_antenna": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecraft-blockchain/sensecraft-hotspot-app/update_hotspot_location": [
     "cn",
     "en",
     "es",
@@ -842,7 +744,21 @@
     "ja",
     "pt"
   ],
+  "/deploy_preempt_rt_kernel_with_prebuilt_deb_package_on_recomputer_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/deploy_tensorrt_edge_llm_on_jetpack6.2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_deploy_tensorrt_model_connect_on_jetson": [
     "cn",
     "en",
     "es",
@@ -2103,6 +2019,13 @@
     "pt"
   ],
   "/recomputer_robotics_j50_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_recomputer_rugged_j401_cv_demo": [
     "cn",
     "en",
     "es",
@@ -3894,6 +3817,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_onvif": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_2002_series_hardware_and_specs": [
     "cn",
     "en",
@@ -4893,14 +4823,28 @@
     "ja",
     "pt"
   ],
-  "/meshtastic_introduction": [
+  "/meshcore_node_map_meshtracker_x1": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/meshcore_node_map_meshtracker_x1": [
+  "/meshcore_ai_image_transmission_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_meshtracker_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_meshtracker_x1_meshcore": [
     "cn",
     "en",
     "es",
@@ -4921,13 +4865,6 @@
     "ja",
     "pt"
   ],
-  "/meshcore_source_code_pratical_tutorial_meshtracker_x1": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/x1_get_started_for_meshtastic": [
     "cn",
     "en",
@@ -4935,14 +4872,14 @@
     "ja",
     "pt"
   ],
-  "/sensecap_meshtracker_x1_meshcore": [
+  "/meshtracker_x1_intro": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/meshtracker_x1_intro": [
+  "/meshtastic_introduction": [
     "cn",
     "en",
     "es",
@@ -4963,14 +4900,21 @@
     "ja",
     "pt"
   ],
-  "/meshtastic_node_map_solar_node": [
+  "/meshcore_source_code_pratical_tutorial_solar_node": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/meshcore_source_code_pratical_tutorial_solar_node": [
+  "/get_started_with_meshcore_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_solar_node": [
     "cn",
     "en",
     "es",
@@ -4991,13 +4935,6 @@
     "ja",
     "pt"
   ],
-  "/get_started_with_meshcore_solar_node": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/meshtastic_solar_node": [
     "cn",
     "en",
@@ -5012,14 +4949,7 @@
     "ja",
     "pt"
   ],
-  "/meshtastic_node_map_t1000_e": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/meshtastic_source_code_practical_tutorial_t1000_e": [
+  "/meshcore_ai_image_transmission_t1000e": [
     "cn",
     "en",
     "es",
@@ -5034,6 +4964,20 @@
     "pt"
   ],
   "/sensecap_t1000_e_meshcore": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_t1000_e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_source_code_practical_tutorial_t1000_e": [
     "cn",
     "en",
     "es",
@@ -5068,7 +5012,14 @@
     "ja",
     "pt"
   ],
-  "/wio_tracker_l1_3d_enclosure": [
+  "/wio_tracker_l1_3d_enclosure_meshcore": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/easyskymesh_wio_tracker_l1": [
     "cn",
     "en",
     "es",
@@ -5076,6 +5027,34 @@
     "pt"
   ],
   "/meshcore_node_map_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_ai_image_transmission_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_started_with_other_mesh_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_tracker_l1_3d_enclosure": [
     "cn",
     "en",
     "es",
@@ -5096,13 +5075,6 @@
     "ja",
     "pt"
   ],
-  "/meshcore_source_code_pratical_tutorial_l1": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/get_started_with_meshtastic_wio_tracker_l1": [
     "cn",
     "en",
@@ -5110,14 +5082,21 @@
     "ja",
     "pt"
   ],
-  "/get_started_with_other_mesh_firmware": [
+  "/wio_tracker_l1_node": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/wio_tracker_l1_node": [
+  "/meshtastic_wio_tracker_l2_intro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_ai_image_transmission_l2": [
     "cn",
     "en",
     "es",
@@ -5160,13 +5139,6 @@
     "pt"
   ],
   "/get_started_with_meshtastic_wio_tracker_l2": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/meshtastic_wio_tracker_l2_intro": [
     "cn",
     "en",
     "es",
@@ -5481,48 +5453,6 @@
     "ja",
     "pt"
   ],
-  "/Connect_AWS_via_helium": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Helium-Introduction": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Configuring-Web-APP-Visualization": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Connecting-to-Helium": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Integrate-into-Azure-IoT-Hub": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Integrate_into_Google_Sheets_via_Helium": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/K1100_sensecap_node-red": [
     "cn",
     "en",
@@ -5754,111 +5684,6 @@
     "ja",
     "pt"
   ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_FAQ": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_Overview": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_Quick_Start": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/SenseCAP_M1_FAQ": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/SenseCAP_M1_Local_Console": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/SenseCAP_M1_Overview": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/SenseCAP_M1_Quick_Start": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/Troubleshooting": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Data_Only/FAQ": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Data_Only/M2_Local_Console": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Data_Only/Overview": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Data_Only/Quick_Start": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Light/FAQ": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Light/Overview": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Light/Quick_Start": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/Network/SenseCAP_Network/SenseCAP_Gateway_Intro": [
     "cn",
     "en",
@@ -5867,90 +5692,6 @@
     "pt"
   ],
   "/Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_FAQ": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_FAQ": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start": [
     "cn",
     "en",
     "es",
@@ -6028,34 +5769,6 @@
     "pt"
   ],
   "/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/install_ubuntu_on_sensecap_m4": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start": [
     "cn",
     "en",
     "es",
@@ -6346,6 +6059,12 @@
     "cn",
     "en",
     "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_development_cases_sway_screen": [
+    "cn",
+    "en",
     "ja",
     "pt"
   ],
@@ -6792,6 +6511,114 @@
   ],
   "/rebot_arm_b601_rs_web_simulator_developer_guide": [
     "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_1": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_2": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_3": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_4": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_5": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_6": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_7": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_8": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_9": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_10": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_11": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_12": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_13": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_14": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_15": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_16": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_17": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_introduction": [
     "en",
     "es",
     "ja",
@@ -11331,6 +11158,97 @@
     "ja",
     "pt"
   ],
+  "/display_gadgets": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_0.96_inch_display_esp32s3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_0.96_inch_display_esp32s3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_1.14_inch_display_esp32s3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_1.14_inch_display_esp32s3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_1.47_inch_touch_display_esp32s3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_1.47_inch_touch_display_esp32s3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_0.96_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_0.96_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_1.14_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_1.14_inch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/function_1.47_inch_touch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_1.47_inch_touch_display_nrf52840": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/1-47inch_lcd_spi_display": [
     "cn",
     "en",
@@ -11955,6 +11873,13 @@
     "pt"
   ],
   "/respeaker_clip_python_build_app_with_memory": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/control_rebot_arm_using_voice_with_respeaker_clip": [
     "cn",
     "en",
     "es",
@@ -14384,6 +14309,13 @@
     "pt"
   ],
   "/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_s1000_v2_co2_calibration": [
     "cn",
     "en",
     "es",

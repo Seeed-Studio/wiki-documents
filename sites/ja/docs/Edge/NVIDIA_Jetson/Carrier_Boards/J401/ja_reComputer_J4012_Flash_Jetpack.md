@@ -928,7 +928,7 @@ reComputer J401 キャリアボードの冷却能力ではこのモードをサ�
       <td>
         <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOmjI0fvPXRKZq51PiF7vaAekVzzuOQVqNLI_81mT1PqM" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
-      <td>bbaae572ddcfb745a9ce519ade817bf238a9cd9be8c0177bbef6ada353f89878</td>
+      <td>88007934755180fd97fb2c389e16b6bf43a8dd208b34897562b65468486df318</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>

@@ -15,13 +15,14 @@ last_update:
   date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-08-14'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/robotics_page/
 ---
 
 import '/src/css/robotics-page-style.css';
+import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch';
 
-# 🤖 机器人
+# 机器人
 
 > *"今天的科学就是明天的技术。" - Edward Teller*
 
@@ -40,8 +41,11 @@ import '/src/css/robotics-page-style.css';
     </div>
   </section>
 
-  <nav className="quick-nav" aria-label="Robotics page quick navigation">
+  <RoboticsPageSearch />
+
+  <nav className="quick-nav" aria-label="机器人页面快捷导航">
     <a href="#robot-kits">📦 机器人套件</a>
+    <a href="#rebot-hardware-inventory">🧰 reBot 资源</a>
     <a href="#actuators">⚙️ 关节执行器</a>
     <a href="#sensors">👁️ 传感器</a>
     <a href="#software">💻 软件生态</a>
@@ -56,14 +60,14 @@ import '/src/css/robotics-page-style.css';
       <p>所有产品卡片默认折叠，选择你手上的套件后，再展开对应学习计划。</p>
     </div>
     <div className="kit-index-grid">
-      <a href="#rebot-rs"><span>🦾</span><strong>B601-RS</strong><small>RobStride 机械臂路线</small></a>
-      <a href="#rebot-dm"><span>🦾</span><strong>B601-DM</strong><small>Damiao 机械臂路线</small></a>
-      <a href="#soarm"><span>🤗</span><strong>SO100 / SO101</strong><small>低成本 LeRobot 路线</small></a>
-      <a href="#starai"><span>🦾</span><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
-      <a href="#lekiwi"><span>🚗</span><strong>Lekiwi</strong><small>移动底盘与应用 Demo</small></a>
-      <a href="#stackforce"><span>🦿</span><strong>StackForce Mini</strong><small>轮足机器人路线</small></a>
-      <a href="#reachy"><span>🤗</span><strong>Reachy Mini</strong><small>桌面交互机器人路线</small></a>
-      <a href="#atom"><span>🤖</span><strong>Atom</strong><small>小型人形机器人路线</small></a>
+      <a href="#rebot-rs"><strong>B601-RS</strong><small>RobStride 机械臂路线</small></a>
+      <a href="#rebot-dm"><strong>B601-DM</strong><small>Damiao 机械臂路线</small></a>
+      <a href="#soarm"><strong>SO100 / SO101</strong><small>低成本 LeRobot 路线</small></a>
+      <a href="#starai"><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
+      <a href="#lekiwi"><strong>Lekiwi</strong><small>移动底盘与应用 Demo</small></a>
+      <a href="#stackforce"><strong>StackForce Mini</strong><small>轮足机器人路线</small></a>
+      <a href="#reachy"><strong>Reachy Mini</strong><small>桌面交互机器人路线</small></a>
+      <a href="#atom"><strong>Atom</strong><small>小型人形机器人路线</small></a>
     </div>
   </section>
 
@@ -71,7 +75,7 @@ import '/src/css/robotics-page-style.css';
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Start Here</span>
-        <h2>📦 机器人套件</h2>
+        <h2>机器人套件</h2>
       </div>
       <p>每个套件都按照“先跑通硬件，再进入软件生态，最后做 AI / ROS / 仿真应用”的方式组织。建议先展开自己的产品卡片，再按 Step 顺序学习。</p>
     </div>
@@ -81,7 +85,6 @@ import '/src/css/robotics-page-style.css';
 <details id="rebot-rs" className="product-card rebot">
   <summary>
     <div className="product-head">
-      <span className="product-icon">🦾</span>
       <div>
         <h3>reBot B601-RS 机械臂</h3>
         <span>适合机械臂入门、遥操作、视觉夹取、ROS2 集成和 AI 数据采集</span>
@@ -104,7 +107,7 @@ import '/src/css/robotics-page-style.css';
       <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web 仿真器开发</b><small>学习 Web 仿真器与 ROS2/MuJoCo 的集成开发，实现虚拟与现实同步控制。</small></div><em>仿真开发</em></a>
       <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim 集成</b><small>将机械臂接入Isaac Sim进行仿真，并且实现虚拟与现实同步。</small></div><em>仿真</em></a>
       <a className="step-card" href="/cn/rebot_arm_b601_rs_mit_control/"><span className="step-index">8</span><div><b>MIT 位置控制</b><small>学习 reBot Arm B601-RS 的 MIT 位置控制入门，掌握基础控制算法。</small></div><em>控制进阶</em></a>
-      <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>具身 Agent 架构设计</b><small>把视觉语言模型接入机械臂，让自然语言指令驱动基于视觉的安全抓取与控制。</small></div><em>Agent 架构</em></a>
+      <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>具身 Agent 设计框架</b><small>把视觉语言模型接入机械臂，让自然语言指令驱动基于视觉的安全抓取与控制。</small></div><em>Agent 框架</em></a>
     </div>
   </div>
 </details>
@@ -112,7 +115,6 @@ import '/src/css/robotics-page-style.css';
 <details id="rebot-dm" className="product-card rebot">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🦾</span>
     <div>
       <h3>reBot B601-DM 机械臂</h3>
       <span>适合 Damiao 电机版本用户学习机械臂控制、LeRobot、Pinocchio 和 ROS2</span>
@@ -138,6 +140,8 @@ import '/src/css/robotics-page-style.css';
   <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 集成</b><small>把机械臂接入 ROS2，方便与 MoveIt、感知节点和系统级应用组合。</small></div><em>系统集成</em></a>
 
   <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Web 仿真器开发</b><small>学习 Web 仿真器与 ROS2/MuJoCo 的集成开发，实现虚拟与现实同步控制。</small></div><em>仿真开发</em></a>
+
+  <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim 集成</b><small>将 reBot B601-DM 部署到 Isaac Sim 仿真环境中，进行开发、调试与控制算法验证。</small></div><em>仿真</em></a>
 </div>
 </div>
 </details>
@@ -145,7 +149,6 @@ import '/src/css/robotics-page-style.css';
 <details id="soarm" className="product-card soarm">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🤗</span>
     <div>
       <h3>SO100 / SO101 机械臂</h3>
       <span>适合低成本机械臂入门、LeRobot、仿真、强化学习和 GR00T/VLA 实验</span>
@@ -175,7 +178,6 @@ import '/src/css/robotics-page-style.css';
 <details id="starai" className="product-card starai">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🦾</span>
     <div>
       <h3>StarAI 机械臂</h3>
       <span>适合学习机械臂基础控制、MoveIt 2、ROS2 规划和 GR00T 应用</span>
@@ -200,7 +202,6 @@ import '/src/css/robotics-page-style.css';
 <details id="lekiwi" className="product-card lekiwi">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🚗</span>
     <div>
       <h3>Lekiwi 移动底盘</h3>
       <span>适合移动机器人入门、底盘控制和声音跟随应用</span>
@@ -224,7 +225,6 @@ import '/src/css/robotics-page-style.css';
 <details id="stackforce" className="product-card stackforce">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🦿</span>
     <div>
       <h3>StackForce Mini 轮足机器人</h3>
       <span>适合学习轮足结构、平衡控制、运动规划和控制算法</span>
@@ -247,7 +247,6 @@ import '/src/css/robotics-page-style.css';
 <details id="reachy" className="product-card reachy">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🤗</span>
     <div>
       <h3>Reachy Mini</h3>
       <span>适合桌面机器人、人机交互、Agent、Python SDK、仿真和 AI 集成学习</span>
@@ -351,7 +350,6 @@ import '/src/css/robotics-page-style.css';
 <details id="atom" className="product-card atom">
 <summary>
   <div className="product-head">
-    <span className="product-icon">🤖</span>
     <div>
       <h3>Atom 小型人形机器人</h3>
       <span>适合人形机器人入门、舵机调试、动作示教和网页遥控</span>
@@ -375,11 +373,55 @@ import '/src/css/robotics-page-style.css';
     </div>
   </section>
 
+  <section id="rebot-hardware-inventory" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Reference</span>
+        <h2>reBot 资源</h2>
+      </div>
+      <p>先覆盖 B601-RS 与 B601-DM。硬件目录包含 3D 打印件、CNC 金属件、采购件、BOM、电源组装步骤和整机组 STEP；描述文件用于 URDF / Mesh 建模与仿真。相机支架为两款机械臂通用。</p>
+    </div>
+    <div className="resource-columns">
+      <div>
+        <h4>B601-RS</h4>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">硬件资料合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">机械臂描述文件</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">数字孪生 / Web 仿真器</a>
+      </div>
+      <div>
+        <h4>B601-DM</h4>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">硬件资料合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">机械臂描述文件</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">数字孪生 / Web 仿真器</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">真机性能测试</a>
+      </div>
+      <div>
+        <h4>相机支架（B601-RS / B601-DM 通用）</h4>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/D435_Gemini2_Mount.step" target="_blank" rel="noopener noreferrer">Orbbec Gemini 2 相机支架</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/D405_305_Mount.step" target="_blank" rel="noopener noreferrer">Intel D405 / Gemini 305 相机支架</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/D455f_Mount.step" target="_blank" rel="noopener noreferrer">Intel RealSense D455f 相机支架</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/UVC32_mount.step" target="_blank" rel="noopener noreferrer">32×32 UVC 相机支架</a>
+        <a href="https://github.com/xiehuangbao888/Camera-Mount" target="_blank" rel="noopener noreferrer">全局俯视相机支架合集</a>
+      </div>
+      <div>
+        <h4>共用资源</h4>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
+        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
+        <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">LeRobot robot adapter</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot teleoperator adapter</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
+        <a href="https://github.com/yuyoujiang/rebot-arm-dli-isaacsim/blob/main/assets/workspace/box.usdz" target="_blank" rel="noopener noreferrer">数采作环境资源</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">视觉抓取 Demo</a>
+      </div>
+    </div>
+  </section>
+
   <section id="actuators" className="section-block compact-section">
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Reference</span>
-        <h2>⚙️ 关节执行器</h2>
+        <h2>关节执行器</h2>
       </div>
       <p>当你需要单独调试电机、理解通信协议或排查关节问题时，再查看这些资料。</p>
     </div>
@@ -398,14 +440,14 @@ import '/src/css/robotics-page-style.css';
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Reference</span>
-        <h2>👁️ 传感器</h2>
+        <h2>传感器</h2>
       </div>
       <p>用于视觉夹取、SLAM、语音交互和机器人状态感知。</p>
     </div>
     <div className="resource-columns">
-      <div><h4>📡 LiDAR</h4><a href="/cn/robosense_lidar/">RoboSense</a><a href="/cn/mid360/">Livox MID360</a><a href="/cn/a_loam/">A-LOAM 算法</a><a href="/cn/slamtec/">Slamtec 系列</a></div>
-      <div><h4>📷 相机</h4><a href="/cn/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/cn/orbbec_gemini_335lg/">Gemini 335Lg 深度相机</a><a href="/cn/orbbec_gemini336">Gemini 336 深度相机</a><a href="/cn/sensing_gmsl_cameras">SENSING GMSL2 相机</a><a href="/cn/ac1">RoboSense AC1</a><a href="/cn/orbbec_depth_camera_on_ros/">Orbbec 与 ROS</a><a href="/cn/orb_slam3_orbbec_gemini2/">ORB-SLAM3 与 Gemini2</a><a href="/cn/csi_camera_on_ros/">Jetson 上的 CSI 相机</a><a href="/cn/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
-      <div><h4>🎤 语音</h4><a href="/cn/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/cn/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>🧭 IMU</h4><a href="/cn/hexfellow_y200/">HEXFELLOW Y200</a><a href="/cn/wheeltec_imu/">WHEELTEC IMU</a></div>
+      <div><h4>LiDAR</h4><a href="/cn/robosense_lidar/">RoboSense</a><a href="/cn/mid360/">Livox MID360</a><a href="/cn/a_loam/">A-LOAM 算法</a><a href="/cn/slamtec/">Slamtec 系列</a></div>
+      <div><h4>相机</h4><a href="/cn/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/cn/orbbec_gemini_335lg/">Gemini 335Lg 深度相机</a><a href="/cn/orbbec_gemini336">Gemini 336 深度相机</a><a href="/cn/sensing_gmsl_cameras">SENSING GMSL2 相机</a><a href="/cn/ac1">RoboSense AC1</a><a href="/cn/orbbec_depth_camera_on_ros/">Orbbec 与 ROS</a><a href="/cn/orb_slam3_orbbec_gemini2/">ORB-SLAM3 与 Gemini2</a><a href="/cn/csi_camera_on_ros/">Jetson 上的 CSI 相机</a><a href="/cn/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
+      <div><h4>语音</h4><a href="/cn/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/cn/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>IMU</h4><a href="/cn/hexfellow_y200/">HEXFELLOW Y200</a><a href="/cn/wheeltec_imu/">WHEELTEC IMU</a></div>
     </div>
   </section>
 
@@ -413,7 +455,7 @@ import '/src/css/robotics-page-style.css';
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Reference</span>
-        <h2>💻 软件生态</h2>
+        <h2>软件生态</h2>
       </div>
       <p>机器人套件跑通后，可以根据项目目标进入 ROS、Isaac、PX4 或 VLA 方向。</p>
     </div>

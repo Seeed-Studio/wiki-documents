@@ -1,6 +1,6 @@
 ---
-description: Introdução ao uso do Atom-X.
-title: Introdução ao uso do Atom-X
+description: Introdução ao Atom-X.
+title: Início Rápido do Atom-X
 keywords:
   - Humanoid
   - Robotics

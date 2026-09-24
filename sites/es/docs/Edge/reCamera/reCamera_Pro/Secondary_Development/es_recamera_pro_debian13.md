@@ -6,32 +6,34 @@ keywords:
   - reCamera Pro
   - RV1126B
   - Debian 13
-slug: /recamera_pro_debian
+slug: /recamera_pro_debian_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 09/07/2026
+  date: 09/08/2026
   author: yylin
 createdAt: '2026-08-04'
-updatedAt: '2026-08-04'
-url: https://wiki.seeedstudio.com/es/recamera_pro_debian/
+updatedAt: '2026-09-07'
+url: https://wiki.seeedstudio.com/es/recamera_pro_debian_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/experimental_debian13.md (https://wiki.seeedstudio.com/es/recamera_pro_debian/), which now serves the original slug /recamera_pro_debian. This file is kept for history as a draft (slug /recamera_pro_debian_legacy) and is excluded from production builds. Do not link here. -->
 
 ## Introducción
 
-reCamera Pro está impulsada por el chip RV1126B y está disponible con 2 GB o 4 GB de memoria. Se entrega con firmware Buildroot para un inicio rápido con inferencia de IA. Esta página proporciona una imagen de Debian 13 para usuarios que necesitan más flexibilidad para desarrollo y despliegue.
+reCamera Pro funciona con el chip RV1126B y está disponible con 2 GB o 4 GB de memoria. Se entrega con firmware Buildroot para un inicio rápido con inferencia de IA. Esta página proporciona una imagen de Debian 13 para usuarios que necesitan más flexibilidad para el desarrollo y el despliegue.
 
 Después de flashear la imagen de Debian 13, puedes compilar tus propias aplicaciones con CMake, instalar las dependencias necesarias con `apt` y ejecutar contenedores Docker. La imagen es compatible con los controladores de fábrica de Seeed y no requiere cambios en el device tree. La cámara, el micrófono, el altavoz y el Wi‑Fi funcionan como se espera; Bluetooth no es compatible.
 
 :::warning
-Este firmware es actualmente experimental. Seeed no lo mantiene por el momento; se proporciona como una opción adicional de desarrollo.
+Este firmware es actualmente experimental. Seeed no lo mantiene en este momento; se proporciona como una opción de desarrollo adicional.
 :::
 
 ## Descargas
 
 ### Descargar la imagen
 
-[Descarga la imagen de Debian 13 desde Google Drive](https://drive.google.com/file/d/1qLlbsgUB88qC2xBn4-_Decl8XBZgr7EI/view?usp=drive_link).
+[Download the Debian 13 image](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz).
 
 ### Descargar la herramienta de flasheo y el controlador
 
@@ -65,7 +67,7 @@ La siguiente pantalla indica que el controlador se instaló correctamente.
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-3.png" /></div>
 
 3. Extrae `recamera_pro_debian13_img.tar.gz`.
-4. En SocToolKit, haz clic derecho y selecciona el último elemento en el menú contextual.
+4. En SocToolKit, haz clic con el botón derecho y selecciona el último elemento en el menú contextual.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-5.png" /></div>
 
@@ -84,9 +86,9 @@ La siguiente pantalla indica que el controlador se instaló correctamente.
 ### Poner reCamera Pro en modo Loader
 
 1. Conecta el puerto USB 3.0 de reCamera Pro a tu ordenador con Windows usando un cable USB y luego alimenta el dispositivo a través de su puerto de CC.
-2. Localiza los orificios de los pines `BOOT` y `RESET` en el lateral del dispositivo.
-3. Mantén presionado `BOOT` y luego pulsa brevemente `RESET` para reiniciar el dispositivo.
-4. Sigue manteniendo presionado `BOOT` durante aproximadamente 5 segundos después de pulsar `RESET` y luego suéltalo. El dispositivo entra en modo Loader.
+2. Localiza los orificios `BOOT` y `RESET` en el lateral del dispositivo.
+3. Mantén pulsado `BOOT` y luego pulsa brevemente `RESET` para reiniciar el dispositivo.
+4. Sigue manteniendo pulsado `BOOT` durante aproximadamente 5 segundos después de pulsar `RESET` y luego suéltalo. El dispositivo entra en modo Loader.
 
 SocToolKit ahora debería indicar que el dispositivo ha sido detectado.
 
@@ -98,13 +100,94 @@ Después de que SocToolKit detecte el dispositivo y cargue el firmware, seleccio
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-12.png" /></div>
 
-Haz clic en **Download** para comenzar a flashear el firmware.
+Haz clic en **Download** para iniciar el flasheo del firmware.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-13.png" /></div>
 
 Cuando el flasheo se complete, la interfaz debería verse como la siguiente:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-14.png" /></div>
+
+### Flashear en Linux
+
+También puedes flashear el firmware en reCamera Pro desde Linux usando `upgrade_tool` de Rockchip. Esta sección utiliza Ubuntu 24.04 como ejemplo.
+
+:::caution
+El flasheo sobrescribe los datos del sistema en el dispositivo. Haz una copia de seguridad de los datos importantes y asegúrate de que el dispositivo esté en modo Loader antes de continuar.
+:::
+
+#### Preparar el entorno
+
+Clona el repositorio de herramientas de Rockchip y verifica que contenga `upgrade_tool`:
+
+```bash
+cd ~
+
+git clone https://github.com/rockchip-linux/rkbin.git
+
+cd ~/rkbin/tools
+
+ls -lh upgrade_tool
+```
+
+Luego clona `Linux_Upgrade_Tool` y haz que `upgrade_tool` sea ejecutable:
+
+```bash
+cd ~
+
+git clone https://github.com/vicharak-in/Linux_Upgrade_Tool.git
+
+cd Linux_Upgrade_Tool
+
+chmod +x upgrade_tool
+
+sudo ./upgrade_tool -v
+```
+
+Confirma que tu host Ubuntu está conectado a reCamera Pro y que el dispositivo está en modo Loader:
+
+```bash
+sudo ./upgrade_tool LD
+```
+
+La salida esperada es similar a:
+
+```bash
+List of rockusb connected(1)
+DevNo=1 Vid=0x2207,Pid=0x110f,LocationID=18     Mode=Loader     SerialNo=f28999835716f3be
+```
+
+Esto confirma que el dispositivo está conectado y en modo Loader.
+
+#### Flashear el firmware
+
+Asegúrate de que todos los archivos de imagen se hayan descargado y extraído. Luego usa `upgrade_tool` para escribir cada partición en el dispositivo. Sustituye las rutas de imagen de ejemplo que aparecen a continuación por la ruta real a tus archivos de firmware extraídos:
+
+```bash
+# 1. env
+sudo ./upgrade_tool WL 0x00000000 "/home/seeed/recaemra_pro/debian_img/env.img"
+
+# 2. idblock
+sudo ./upgrade_tool WL 0x00000040 "/home/seeed/recaemra_pro/debian_img/idblock.img"
+
+# 3. uboot
+sudo ./upgrade_tool WL 0x00000800 "/home/seeed/recaemra_pro/debian_img/uboot.img"
+
+# 4. misc
+sudo ./upgrade_tool WL 0x00002800 "/home/seeed/recaemra_pro/debian_img/misc.img"
+
+# 5. recovery
+sudo ./upgrade_tool WL 0x00002880 "/home/seeed/recaemra_pro/debian_img/recovery.img"
+
+# 6. boot
+sudo ./upgrade_tool WL 0x00007880 "/home/seeed/recaemra_pro/debian_img/boot.img"
+
+# 7. Debian rootfs
+sudo ./upgrade_tool WL 0x0000d080 "/home/seeed/recaemra_pro/debian_img/rootfs.img"
+
+# reboot
+sudo ./upgrade_tool RD
+```
 
 ## Acerca del nuevo firmware
 
@@ -131,7 +214,7 @@ export no_proxy="localhost,127.0.0.1,::1,192.168.0.0/16"
 
 ## Configurar la hora
 
-En el primer arranque, la hora del sistema puede estar establecida en 1970, lo que provoca que falle la validación de certificados SSL. Dado que el sistema no tiene configurada la sincronización automática de hora mediante systemd, establece manualmente la hora correcta antes de actualizar el índice de paquetes:
+En el primer arranque, la hora del sistema puede estar establecida en 1970, lo que provoca que falle la validación de certificados SSL. Dado que el sistema no tiene configurada la sincronización automática de hora mediante systemd, establece la hora correcta manualmente antes de actualizar el índice de paquetes:
 
 ```bash
 date -s "2026-09-02 15:20:00"
@@ -162,7 +245,7 @@ Normalmente verás una salida similar a la siguiente:
             horizontal_blanking 0x009e0902 (int)    : min=4294965822 max=4294965822 step=1 default=4294965822 value=-1474 flags=read-only
 ```
 
-De forma predeterminada, tanto el volteo horizontal como el vertical pueden estar habilitados. Ajusta el comando de acuerdo con el nodo de dispositivo mostrado en la salida anterior; este ejemplo utiliza `/dev/v4l-subdev2`:
+De forma predeterminada, es posible que tanto el volteo horizontal como el vertical estén habilitados. Ajusta el comando de acuerdo con el nodo de dispositivo mostrado en la salida anterior; este ejemplo utiliza `/dev/v4l-subdev2`:
 
 ```bash
 v4l2-ctl -d /dev/v4l-subdev2 \
@@ -185,7 +268,7 @@ vertical_flip: 0
 
 ## Probar la cámara
 
-Utiliza V4L2 para capturar un fotograma crudo NV12 y luego usa FFmpeg para convertirlo a JPEG:
+Usa V4L2 para capturar un fotograma crudo NV12 y luego usa FFmpeg para convertirlo a JPEG:
 
 ```bash
 v4l2-ctl -d /dev/video12 \
@@ -204,7 +287,7 @@ ffmpeg \
   -y /tmp/camera.jpg
 ```
 
-Cuando el comando termine, visualiza la imagen JPEG procesada por el ISP y con la orientación correcta en `/tmp/camera.jpg`.
+Cuando el comando termine, visualiza la imagen JPEG procesada por el ISP y correctamente orientada en `/tmp/camera.jpg`.
 
 ## Configurar el micrófono y el altavoz
 
@@ -214,7 +297,7 @@ Instala las dependencias necesarias:
 apt install ffmpeg alsa-utils
 ```
 
-Consulta los dispositivos de grabación y reproducción disponibles:
+Visualiza los dispositivos de grabación y reproducción disponibles:
 
 ```bash
 arecord -l
@@ -261,7 +344,7 @@ cat >/etc/docker/daemon.json <<'EOF'
 EOF
 ```
 
-Detén Docker y elimina los archivos de runtime sobrantes:
+Detén Docker y elimina los archivos de tiempo de ejecución restantes:
 
 ```bash
 service docker stop 2>/dev/null || true

@@ -1,42 +1,44 @@
 ---
-description: このWikiでは、MIPIスクリーンをデバイスに接続する方法について簡単に紹介します。
+description: この Wiki では、MIPI スクリーンをデバイスに接続する方法について簡単に紹介します。
 title: MIPI-DSI スクリーンの使用
 keywords:
   - reCamera
   - reCamera Pro
   - MIPI-DSI Screen
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_mipi_dsi_screen_usage
+slug: /recamera_pro_mipi_dsi_screen_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_mipi_dsi_screen_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/ja/recamera_pro_mipi_dsi_screen_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/mipi_dsi_display.md (https://wiki.seeedstudio.com/ja/recamera_pro_mipi_dsi_screen_usage/), which now serves the original slug /recamera_pro_mipi_dsi_screen_usage. This file is kept for history as a draft (slug /recamera_pro_mipi_dsi_screen_usage_legacy) and is excluded from production builds. Do not link here. -->
 
 # reCamera Pro での MIPI DSI インターフェースの使用
 
-デバイス背面には、MIPIスクリーンを接続するための MIPI DSI インターフェースがあります。
+デバイス背面には、MIPI スクリーンを接続するための MIPI DSI インターフェースがあります。
 
 ## MIPI スクリーンを接続する
 
 ベースボードの背面カバーを開け、下図のように ***22PIN MIPI DSI*** インターフェースを見つけます。
 
 :::note
-MIPIスクリーンを接続する前に、必ずデバイスの電源を切ってください!!!
+MIPI スクリーンを接続する前に、必ずデバイスの電源を切ってください!!!
 :::
 
 ![BASE_BOARD_PIN](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
 
-MIPIスクリーンケーブルのTCON側を確認し、下図のように内側へ差し込みます：
+MIPI スクリーンケーブルの TCON 側を確認し、下図のように内側へ差し込みます：
 ![CONNECT_MIPI_SCREEN](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/MIPI-DSI-ton-duan.jpg)
 
 ## 電源を入れる
 
-MIPIスクリーンを接続した後、デバイスの電源を入れると、MIPIスクリーンにカメラのリアルタイム映像が表示されます。
+MIPI スクリーンを接続した後、デバイスの電源を入れると、リアルタイムのカメラ映像が MIPI スクリーンに表示されます。
 ![SHOW_GIF](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/MIPI_DSI_SHOW_CAMERA.gif)
 
 :::note
@@ -78,7 +80,7 @@ MIPIスクリーンを接続した後、デバイスの電源を入れると、M
           >
             <strong>
               <span style={{ color: "#FFFFFF", fontSize: "16px" }}>
-                今すぐ入手 🖱️
+                今すぐ購入 🖱️
               </span>
             </strong>
           </a>
@@ -90,7 +92,7 @@ MIPIスクリーンを接続した後、デバイスの電源を入れると、M
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

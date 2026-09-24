@@ -1,6 +1,6 @@
 ---
 description: This wiki provides the debugging tutorial for the StarAI Robot Arm and realizes data collection and training within the Lerobot framework.
-title: StarAI Arm in LeRobot
+title: StarAI Arm with LeRobot
 keywords:
   - Lerobot
   - Huggingface
@@ -92,13 +92,13 @@ For more information about servo motors, please visit the following link.
 
 - Ubuntu 22.04  
 - CUDA 12+  
-- Python 3.10  
+- Python 3.12
 - Torch 2.6  
 
 **For Jetson Orin:**
 
 - Jetson JetPack 6.0+  
-- Python 3.10  
+- Python 3.12
 - Torch 2.6  
 
 ## Installation and Debugging
@@ -132,7 +132,7 @@ conda init --all
 2. Create and activate a fresh conda environment for lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
+conda create -y -n lerobot python=3.12 && conda activate lerobot
 ```
 
 3. Clone Lerobot:

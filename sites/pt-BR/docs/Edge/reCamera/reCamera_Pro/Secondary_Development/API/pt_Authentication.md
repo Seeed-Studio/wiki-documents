@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_authentication
+slug: /recamera_pro_api_authentication_legacy
+draft: true
 sku: 10003420
 sidebar_position: 3
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_authentication/
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_authentication_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/authentication.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_api_authentication/), which now serves the original slug /recamera_pro_api_authentication. This file is kept for history as a draft (slug /recamera_pro_api_authentication_legacy) and is excluded from production builds. Do not link here. -->
 
 # Autenticação
 
@@ -28,7 +30,7 @@ A reCamera usa autenticação por Token JWT. Após um login bem-sucedido, o disp
 | GET | `/system/key` | Obter chave pública RSA (para alteração de senha) | Não |
 | POST | `/system/login` | Fazer login e obter um Token | Não |
 | GET | `/system/check` | Verificar se é o primeiro login | Não |
-| PUT | `/system/password` | Alterar senha de administrador | Sim |
+| PUT | `/system/password` | Alterar a senha de administrador | Sim |
 
 ## Login
 
@@ -50,7 +52,7 @@ Corpo da requisição:
 
 | Campo | Descrição |
 |---|---|
-| `sUserName` | Nome de usuário de login, padrão é `admin` |
+| `sUserName` | Nome de usuário de login, o padrão é `admin` |
 | `sPassword` | Senha de login, transmitida em texto simples |
 
 ### Resposta
@@ -105,7 +107,7 @@ Se o Token estiver ausente ou expirado, o dispositivo retorna:
 
 ### Bloqueio de login
 
-O dispositivo aplica um limite de tentativas malsucedidas baseado em IP. Após repetidas senhas incorretas, `iLoginAttempts` é incrementado. Quando o limite é atingido, o dispositivo retorna `iStatus=-3` com um valor `sWaittime`. Você deve aguardar o fim do bloqueio antes de tentar novamente.
+O dispositivo aplica um limite de tentativas malsucedidas por IP. Após repetidas senhas incorretas, `iLoginAttempts` é incrementado. Quando o limite é atingido, o dispositivo retorna `iStatus=-3` com um valor de `sWaittime`. Você deve aguardar o fim do bloqueio antes de tentar novamente.
 
 ## Verificar primeiro login
 
@@ -125,7 +127,7 @@ Resposta:
 
 ## Alterar senha
 
-Alterar a senha requer obter primeiro uma chave pública RSA, depois criptografar as senhas antiga e nova antes de enviar.
+Alterar a senha requer obter primeiro uma chave pública RSA, depois criptografar as senhas antiga e nova antes de enviá-las.
 
 ### Obter chave pública
 
@@ -145,7 +147,7 @@ Resposta:
 |---|---|
 | `sPublicKey` | Chave pública RSA, usada para criptografia de senha durante a alteração de senha |
 
-### Criptografia de senha
+### Criptografia da senha
 
 Calcule o hash SHA256 da senha como uma string hexadecimal, depois criptografe-o com a chave pública usando preenchimento RSA PKCS1v15 e, por fim, codifique o resultado em Base64.
 

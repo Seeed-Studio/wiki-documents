@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_quick_start
+slug: /recamera_pro_api_quick_start_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/recamera_pro_api_quick_start/
+url: https://wiki.seeedstudio.com/recamera_pro_api_quick_start_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/first_api_call.md (https://wiki.seeedstudio.com/recamera_pro_api_quick_start/), which now serves the original slug /recamera_pro_api_quick_start. This file is kept for history as a draft (slug /recamera_pro_api_quick_start_legacy) and is excluded from production builds. Do not link here. -->
 
 # Quick Start
 

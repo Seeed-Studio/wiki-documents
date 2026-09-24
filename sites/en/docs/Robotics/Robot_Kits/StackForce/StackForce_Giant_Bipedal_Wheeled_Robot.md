@@ -1,6 +1,6 @@
 ---
 description: StackForce Giant Bipedal Wheeled Robot Professional Development Guide, including advanced features, in-depth development tutorials, API documentation, and practical application cases
-title: StackForce Giant Bipedal Wheeled Robot
+title: Giant Wheeled Robot Quick Start
 keywords:
   - StackForce
   - Wheel-legged Robot

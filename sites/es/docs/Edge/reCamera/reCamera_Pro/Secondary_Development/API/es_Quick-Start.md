@@ -1,12 +1,13 @@
 ﻿---
-description: Esta página es una guía de inicio rápido. Solo se necesitan tres pasos para que funcione - iniciar sesión, obtener el Token y llamar a la primera API. Solo tienes que seguir las instrucciones y todo estará en marcha.
+description: Esta página es una guía de inicio rápido. Solo se necesitan tres pasos para ponerlo en funcionamiento - iniciar sesión, obtener el Token y llamar a la primera API. Solo tienes que seguir las instrucciones y estarás listo y funcionando.
 title: Inicio rápido
 keywords:
   - Edge AI
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_quick_start
+slug: /recamera_pro_api_quick_start_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/es/recamera_pro_api_quick_start/
+url: https://wiki.seeedstudio.com/es/recamera_pro_api_quick_start_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/first_api_call.md (https://wiki.seeedstudio.com/es/recamera_pro_api_quick_start/), which now serves the original slug /recamera_pro_api_quick_start. This file is kept for history as a draft (slug /recamera_pro_api_quick_start_legacy) and is excluded from production builds. Do not link here. -->
 
 # Inicio rápido
 
@@ -24,7 +26,7 @@ Esta página te guía desde cero hasta completar un inicio de sesión y llamar a
 ## Requisitos previos
 
 * El dispositivo está encendido y conectado a tu red
-* Conoces la dirección IP del dispositivo (en esta guía se usa `192.168.7.200` como ejemplo)
+* Conoces la dirección IP del dispositivo (esta guía usa `192.168.7.200` como ejemplo)
 * Conoces el nombre de usuario y la contraseña de inicio de sesión (el nombre de usuario predeterminado es `admin`)
 
 ## Paso 1: Verificar la accesibilidad del dispositivo
@@ -81,7 +83,7 @@ Las cabeceras de la respuesta también contendrán:
 Set-Cookie: token=<JWT_TOKEN>; Max-Age=86400; Path=/
 ```
 
-Este `token` es la credencial de autenticación para todas las solicitudes posteriores a la API.
+Este `token` es la credencial de autenticación para todas las solicitudes de API posteriores.
 
 ## Paso 3: Llamar a una API con el Token
 
@@ -112,7 +114,7 @@ Si la solicitud no lleva un Token o el Token ha caducado, el dispositivo devuelv
 }
 ```
 
-## Duración de vida del Token
+## Tiempo de vida del Token
 
 El Token es válido durante 24 horas de forma predeterminada (`Max-Age=86400`). Después de que caduque, inicia sesión de nuevo para obtener un nuevo Token.
 

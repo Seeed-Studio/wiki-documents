@@ -1,22 +1,22 @@
 ---
-description: Apresentando o SenseCraft HMI, a plataforma de páginas de interação humano-computador criada especificamente para a série reTerminal.
-title: Visão geral do SenseCraft HMI
+description: Apresentando o SenseCraft Seeedash, a plataforma de páginas de interação humano-computador criada especificamente para a série reTerminal.
+title: Visão geral do SenseCraft Seeedash
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft_hmi_overview
 sidebar_position: 1
 last_update:
-  date: 07/21/2025
-  author: Citric
+  date: 09/10/2026
+  author: Luki
 createdAt: '2025-07-25'
-updatedAt: '2026-08-04'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft_hmi_overview/
 ---
 
-# Visão geral do SenseCraft HMI
+# Visão geral do SenseCraft Seeedash
 
 ## Introdução
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home) é a poderosa plataforma de design de interfaces em nuvem da Seeed Studio que permite criar interfaces visuais profissionais para dispositivos com tela sem necessidade de programação. Com um editor intuitivo de arrastar e soltar, modelos pré-construídos e recursos de design com IA, o SenseCraft HMI facilita transformar seu hardware em belos painéis de informação, dashboards, sinalização digital e painéis de controle.
+[SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home) é a poderosa plataforma de design de interfaces em nuvem da Seeed Studio que permite criar interfaces visuais profissionais para dispositivos com tela sem necessidade de programação. Com um editor intuitivo de arrastar e soltar, modelos pré-construídos e recursos de design com IA, o SenseCraft Seeedash facilita transformar seu hardware em belos painéis de informação, dashboards, sinalização digital e painéis de controle.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/23.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -34,15 +34,15 @@ url: https://wiki.seeedstudio.com/pt-br/sensecraft_hmi_overview/
 
 - **Implantação com um clique**: Envie os designs diretamente para dispositivos conectados
 
-- **Integração com sensores do dispositivo**: Exiba automaticamente temperatura, umidade e dados de bateria do seu dispositivo
+- **Integração com sensores do dispositivo**: Exiba automaticamente dados de temperatura, umidade e bateria do seu dispositivo
 
 ## Primeiros passos
 
-Para começar a usar o SenseCraft HMI:
+Para começar a usar o SenseCraft Seeedash:
 
-1. **Acesse a plataforma**: Visite [SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
+1. **Acesse a plataforma**: Visite [SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
 
-2. **Crie uma conta**: Cadastre-se para obter uma conta gratuita do SenseCraft se ainda não tiver uma
+2. **Crie uma conta**: Cadastre-se para obter uma conta gratuita do SenseCraft se você ainda não tiver uma
 
 3. **Conecte seu dispositivo**: Siga as instruções na tela para parear seu dispositivo compatível
 
@@ -56,7 +56,7 @@ Para começar a usar o SenseCraft HMI:
 
 ### [Primeiros passos](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting-started/)
 
-Aprenda como criar sua conta SenseCraft HMI e acessar a plataforma.
+Aprenda como criar sua conta SenseCraft Seeedash e acessar a plataforma.
 
 ### [Atualização e gravação de firmware](https://sensecraft-hmi-docs.seeed.cc/en/guides/firmware-update/)
 
@@ -68,15 +68,15 @@ Guia abrangente para entender e usar as barras de ferramentas principais, barra 
 
 ### [Ferramentas avançadas](https://sensecraft-hmi-docs.seeed.cc/en/guides/advanced-tools/)
 
-Aprenda a usar as ferramentas Firmware Flasher e Image Dithering para otimizar seu dispositivo e conteúdo.
+Aprenda como usar as ferramentas Firmware Flasher e Image Dithering para otimizar seu dispositivo e conteúdo.
 
 ### [Implantando no seu dispositivo](https://sensecraft-hmi-docs.seeed.cc/en/guides/deploying-to-device/)
 
-Guia passo a passo para implantar seus projetos SenseCraft HMI em seus dispositivos de display de papel eletrônico.
+Guia passo a passo para implantar seus projetos SenseCraft Seeedash em seus dispositivos de display de papel eletrônico.
 
 ## Documentação das funções
 
-O SenseCraft HMI oferece várias funções especializadas, cada uma projetada para diferentes necessidades de exibição:
+O SenseCraft Seeedash oferece várias funções especializadas, cada uma projetada para diferentes necessidades de exibição:
 
 ### [Função de geração com IA](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)
 
@@ -96,7 +96,7 @@ Exiba conteúdo atualizado automaticamente de portais de notícias, blogs e outr
 
 ### [Função Web](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)
 
-Mostre conteúdo da web diretamente no seu dispositivo, ideal para dashboards, documentação ou sistemas de monitoramento.
+Mostre conteúdo da web diretamente no seu dispositivo, perfeito para dashboards, documentação ou sistemas de monitoramento.
 
 ## Recursos adicionais
 
@@ -106,22 +106,22 @@ Lista completa de dispositivos compatíveis e requisitos de hardware.
 
 ### [Guia em vídeo](https://sensecraft-hmi-docs.seeed.cc/en/video-guide/)
 
-Tutoriais em vídeo passo a passo para a plataforma SenseCraft HMI.
+Tutoriais em vídeo passo a passo para a plataforma SenseCraft Seeedash.
 
 ### [Preços](https://sensecraft-hmi-docs.seeed.cc/en/pricing/)
 
-Informações e planos de preços atuais.
+Informações atuais de preços e planos.
 
 ### [Notas de versão](https://sensecraft-hmi-docs.seeed.cc/en/release-notes/)
 
-Atualizações mais recentes e histórico de versões da plataforma SenseCraft HMI.
+Atualizações mais recentes e histórico de versões da plataforma SenseCraft Seeedash.
 
 ## Recursos
 
-- [Plataforma SenseCraft HMI](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
-- [Dispositivos compatíveis - reTerminal E Série de produtos](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_main_page/)
+- [Plataforma SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_home)
+- [Dispositivos compatíveis - reTerminal E Série](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_main_page/)
 
-## Suporte técnico e discussão sobre produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

@@ -1,6 +1,6 @@
 ---
 description: Getting started with Atom-X.
-title: Getting started with Atom-X
+title: Atom-X Quick Start
 keywords:
   - Humanoid
   - Robotics

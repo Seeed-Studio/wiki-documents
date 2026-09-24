@@ -1,5 +1,5 @@
 ---
-description: O ReSpeaker XVF3800 USB 4-Mic Array é uma matriz de microfones circular profissional com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade em modo duplo.
+description: O ReSpeaker XVF3800 USB 4-Mic Array é um array de microfones circular profissional com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade em modo duplo.
 title: reSpeaker XVF3800 USB Mic Array com XIAO ESP32S3 DoA e VAD
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_xiao_doa_vad/
 
 ## Introdução 
 
-O ReSpeaker XVF3800 é uma solução de processamento de voz com múltiplos microfones baseada no XMOS XVF3800, projetada para aplicações embarcadas que exigem inteligência de áudio em tempo real. O XVF3800 calcula internamente a Detecção de Atividade de Voz (VAD) e a Direção de Chegada (DoA) para indicar quando a fala está presente e de que direção ela se origina. Esses resultados de inferência podem ser acessados diretamente por um MCU host via I2C usando comandos baseados em recursos, possibilitando recursos como ativação por voz, localização de fonte sonora e feedback sensível à direção sem processar áudio bruto no host.
+O ReSpeaker XVF3800 é uma solução de processamento de voz com múltiplos microfones baseada no XMOS XVF3800, projetada para aplicações embarcadas que exigem inteligência de áudio em tempo real. O XVF3800 calcula internamente a Detecção de Atividade de Voz (VAD) e a Direção de Chegada (DoA) para indicar quando a fala está presente e de que direção ela se origina. Esses resultados de inferência podem ser acessados diretamente por um MCU host via I2C usando comandos baseados em recursos, possibilitando recursos como ativação por voz, localização da fonte sonora e feedback sensível à direção sem processar o áudio bruto no host.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
@@ -31,7 +31,9 @@ O ReSpeaker XVF3800 é uma solução de processamento de voz com múltiplos micr
 
 
 :::note
-O firmware que oferece suporte para este código é `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` e `respeaker_xvf3800_i2s_dfu_firmware_v1.0.7.bin`. Portanto, certifique-se de gravá-lo primeiro
+O firmware que oferece suporte para este código é `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` e `application_xvf3800_i2s_master_v1.0.8_48k.bin`. Portanto, certifique-se de gravá-lo primeiro.
+
+Se você estiver usando o firmware v1.0.7, altere `GPO_SERVICER_RESID_DOA` para 19.
 :::
 
 ## Código Arduino 
@@ -43,7 +45,7 @@ O firmware que oferece suporte para este código é `respeaker_xvf3800_i2s_maste
 
 #define GPO_SERVICER_RESID            20
 #define GPO_SERVICER_RESID_LED_EFFECT 12
-#define GPO_SERVICER_RESID_DOA        19
+#define GPO_SERVICER_RESID_DOA        18
 #define GPO_DOA_READ_NUM_BYTES        4
 
 void setup() {

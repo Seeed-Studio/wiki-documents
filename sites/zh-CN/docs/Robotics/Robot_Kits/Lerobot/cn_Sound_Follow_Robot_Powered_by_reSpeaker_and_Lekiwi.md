@@ -1,6 +1,6 @@
 ---
 description: 本wiki提供了一个全面的实现框架，用于为Lekiwi机器人套件配备声音追踪功能，使用ReSpeaker Mic Array v2.0和reComputer Jetson Mini。内容涵盖硬件集成、环境配置和软件适配，并演示实时音频源追踪功能。
-title: Lekiwi声音追踪
+title: Lekiwi 和Lerobot
 keywords:
   - Lerobot
   - Huggingface
@@ -111,7 +111,7 @@ source ~/.bashrc
 ```
 **步骤2.** 为lerobot创建conda环境
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 git clone https://github.com/huggingface/lerobot.git ~/lerobot
 conda install ffmpeg -c conda-forge

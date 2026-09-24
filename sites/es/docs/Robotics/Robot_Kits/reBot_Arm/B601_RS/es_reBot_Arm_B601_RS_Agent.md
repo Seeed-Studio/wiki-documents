@@ -1,14 +1,14 @@
 ---
-description: "Guía de operación de wrc_demo: pasos completos para la demo de agarre visual del reBot Arm B601-RS — configuración del entorno, descarga de modelos, cambio de LLM, calibración mano-ojo, ejecución de la demo y resolución de problemas."
-title: Diseño de arquitectura de agente encarnado para el brazo robótico reBot B601 RS
+description: 'Guía de operación de wrc_demo: pasos completos para la demostración de agarre visual del reBot Arm B601-RS — configuración del entorno, descarga del modelo, cambio de LLM, calibración mano-ojo, ejecución de la demo y resolución de problemas.'
+title: B601-RS con Agent Claw
 keywords:
   - wrc_demo
   - reBot Arm B601-RS
-  - visual grasping
-  - vision language model
+  - agarre visual
+  - modelo de visión y lenguaje
   - Qwen3-VL
   - YOLOE
-  - hand-eye calibration
+  - calibración mano-ojo
   - conda
   - tutorial
 slug: /wrc_demo_tutorial
@@ -16,14 +16,13 @@ last_update:
   date: 2026-08-28
   author: Seeed Studio
 translation:
-  skip:
-    - [zh-CN]
+  skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-08-28'
-url: https://wiki.seeedstudio.com/cn/wrc_demo_tutorial/
+updatedAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/es/wrc_demo_tutorial/
 ---
 
-# Diseño de arquitectura de agente encarnado para el brazo robótico reBot B601 RS
+# Marco de Diseño de Agente Incorporado para reBot Arm B601-RS
 
 <p align="center">
   <a href="./LICENSE">
@@ -47,7 +46,7 @@ wrc_demo es una demo de agarre visual para el [reBot Arm B601-RS](https://wiki.s
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent3.PNG" alt="Demostración de agarre visual de wrc_demo en reBot Arm" />
 </p>
 
-## 0. Chuleta rápida
+## 0. Hoja de referencia rápida
 
 ### Requisitos del sistema
 
@@ -55,7 +54,7 @@ wrc_demo es una demo de agarre visual para el [reBot Arm B601-RS](https://wiki.s
 |------|------|
 | Sistema operativo | Ubuntu 22.04+ / Debian 12+ / WSL2 |
 | Python | 3.10 (dentro del entorno conda) |
-| Memoria | ≥ 16 GB (mock comienza en 8 GB) |
+| Memoria | ≥ 16 GB (el mock funciona desde 8 GB) |
 | Disco | ≥ 10 GB |
 | GPU (Opcional) | NVIDIA RTX 5070 / 4090 / H100, etc. |
 | VRAM | ≥ 8 GB |
@@ -64,7 +63,7 @@ wrc_demo es una demo de agarre visual para el [reBot Arm B601-RS](https://wiki.s
 
 ## 1. Objetivos del proyecto y público objetivo
 
-- **Objetivos del proyecto**: Conectar un Vision Language Model (VLM) al reBot Arm B601-RS, de modo que las instrucciones en lenguaje natural se conviertan automáticamente en acciones de agarre — el VLM selecciona objetos, Pinocchio resuelve la cinemática inversa (IK), `SafetyHarness` realiza una verificación fail-closed en cada waypoint a 50 Hz.
+- **Objetivos del proyecto**: Conectar un Vision Language Model (VLM) al reBot Arm B601-RS, de modo que las instrucciones en lenguaje natural se conviertan automáticamente en acciones de agarre — el VLM selecciona objetos, Pinocchio resuelve la cinemática inversa (IK), `SafetyHarness` realiza una verificación de cierre por fallo en cada waypoint a 50 Hz.
 - **Público objetivo**: Desarrolladores con GPU NVIDIA + Ubuntu 22.04 + conocimientos básicos de Python 3.10, que quieran ejecutar la demo / modificar el detector / añadir habilidades.
 
 <p align="center">
@@ -80,16 +79,16 @@ wrc_demo es una demo de agarre visual para el [reBot Arm B601-RS](https://wiki.s
 1. **Impulsado por Vision Language Model, toma de decisiones en tres niveles**  
    Qwen3-VL-2B-Instruct-AWQ-4bit se utiliza como cerebro de planificación de tareas por defecto, que puede ejecutarse de forma nativa en dispositivos con 8 GB de VRAM. El análisis de comandos sigue la ruta de vía rápida-lenta de tres niveles **Reflex → Hábito → LLM** — las instrucciones comunes (por ejemplo, "recoge el bloque rojo") pasan directamente por la sintaxis de plantilla Reflex sin llamar al LLM; solo las tareas nuevas implicarán al VLM.
 
-2. **Calibración mano-ojo + planificación de agarre 6-DoF (fail-closed)**  
-   Script de calibración mano-ojo incorporado (tablero de ajedrez ArUco + Pinocchio FK + optimización conjunta SE(3) LM), compatible con disposición de cámara superior (ETH). Cada punto de la trayectoria en streaming es verificado por `SafetyHarness` — si alguna verificación falla, el brazo robótico se detiene inmediatamente a mitad del movimiento.
+2. **Calibración mano-ojo + planificación de agarre 6-DoF (cierre por fallo)**  
+   Script de calibración mano-ojo incorporado (tablero de ajedrez ArUco + Pinocchio FK + optimización conjunta SE(3) LM), compatible con disposición de cámara superior (ETH). Cada punto de trayectoria en streaming es verificado por `SafetyHarness` — si alguna verificación falla, el brazo robótico se detiene inmediatamente a mitad del movimiento.
 
 3. **6 TOOL_SPECS + 5 puertas de enlace MCP**  
-   La capa superior expone 6 herramientas con compuerta de seguridad: `pick_and_place` / `grasp_object` / `place_at/on` / `move_t` / `teach_record/replay` + `task_done`; la puerta de enlace MCP expone adicionalmente 5 herramientas: `camera_snapshot` / `world_state` / `live_view_url` / `emergency_stop` / `reset_stop`. No se requiere trabajo de adaptación de protocolo para añadir nuevas habilidades.
+   La capa superior expone 6 herramientas con seguridad integrada: `pick_and_place` / `grasp_object` / `place_at/on` / `move_t` / `teach_record/replay` + `task_done`; la puerta de enlace MCP expone adicionalmente 5 herramientas: `camera_snapshot` / `world_state` / `live_view_url` / `emergency_stop` / `reset_stop`. No se requiere ningún trabajo de adaptación de protocolo para añadir nuevas habilidades.
 
 4. **Trazabilidad completa + memoria episódica**  
    Cada llamada de habilidad se escribe en un rastro multimodal estilo ASPIRE (`trace.jsonl` + fotograma clave JPEG antes y después), con una ventana de eventos de 15 segundos + creencia de persistencia de objetos, de modo que la "taza vista hace 10 segundos" aún pueda manipularse después de la oclusión.
 
-5. **Experiencia de desarrollo mock-first**  
+5. **Experiencia de desarrollo Mock-First**  
    El mock de pila completa (`--camera mock --arm mock --llm mock`) te permite ejecutar la canalización de decisión completa sin ningún hardware. Las pruebas mock y el hardware real ejecutan **el mismo código de seguridad**.
 
 ### 2.2 Especificaciones
@@ -105,20 +104,20 @@ wrc_demo es una demo de agarre visual para el [reBot Arm B601-RS](https://wiki.s
 | | Requisito de VRAM | ≥ 8 GB (aproximadamente 30 tokens/s) |
 | | Tamaño de pesos | ~2.4 GB |
 | **LLM en la nube** | Anthropic | Claude (visión + herramientas; variable de entorno `ANTHROPIC_API_KEY`) |
-| | Compatible con OpenAI | Cualquier endpoint compatible con OpenAI (variable de entorno `OPENAI_API_KEY`) |
-| | MiniMax | `api.minimax.com` (variable de entorno `MINIMAX_API_KEY`; solo texto) |
+| | Compatible con OpenAI | Cualquier endpoint compatible con OpenAI (`OPENAI_API_KEY` env) |
+| | MiniMax | `api.minimax.com` (`MINIMAX_API_KEY` env; solo texto) |
 | **Detector** | Por defecto | YOLOE-11s-seg (detección de vocabulario abierto + segmentación de instancias) |
 | | Opcional | YOLOE-26l-seg (más preciso pero 2× más lento) |
-| | Codificación de texto | MobileCLIP2-B torchscript (Apple `apple/MobileCLIP2-B` → genera el trace tú mismo) |
+| | Codificación de texto | MobileCLIP2-B torchscript (Apple `apple/MobileCLIP2-B` → genera el trace por tu cuenta) |
 | **Pila de software** | Cinemática | Pinocchio 3.x (FK/IK, DLS + reinicio aleatorio) |
 | | Controlador RobStride | motorbridge (SocketCAN) + SDK incluido |
 | | Backend de agarre | camera-camera / GraspGen-X (ZMQ) / OBB analítico (tres capas) |
 | | Python | 3.10 |
-| **Sistema de habilidades** | TOOL_SPECS totales | 6 (incluyendo 1 terminador `task_done` + 5 habilidades reales) |
+| **Sistema de habilidades** | Total TOOL_SPECS | 6 (incluyendo 1 terminador `task_done` + 5 habilidades reales) |
 | | Habilidades de movimiento del brazo | 18 literales de cadena en `_MOTION_SKILLS` |
 | | Conjunto de herramientas MCP | `TOOL_SPECS - _EXCLUDED_TOOLS + _EXTRA_TOOLS` = 6 - 1 + 5 = 10 |
 | **Seguridad** | Comprobación de trayectoria | Cada waypoint en streaming a 50 Hz pasa por `SafetyHarness.approve()` |
-| | Modo de fallo | fail-closed (cualquier violación → abortar a mitad del movimiento) |
+| | Modo de fallo | cierre por fallo (cualquier violación → abortar a mitad del movimiento) |
 | | Reserva de articulaciones | IK `limit_margin=0.025` > harness `joint_margin=0.02` (invariante) |
 
 ### 2.3 Lista de materiales (BOM)
@@ -131,7 +130,7 @@ wrc_demo es una demo de agarre visual para el [reBot Arm B601-RS](https://wiki.s
 | Adaptador de corriente de 48V | 1 | ✅ |
 | Cable USB-C / de comunicación | 1 | ✅ |
 | Cámara de profundidad RGB-D (se recomienda Orbbec Gemini 2) | 1 | ✅ |
-| Conector de cámara / soporte de montaje | 1 | ✅ |
+| Conector de cámara / Soporte de montaje | 1 | ✅ |
 | Host de control con Ubuntu 22.04+ (GPU NVIDIA ≥ 8 GB) | 1 | ❌ Aportado por el usuario |
 
 #### Instrucciones de cableado
@@ -168,7 +167,7 @@ sudo ip link set can0 up
 | Elemento | Requisito |
 |------|------|
 | CPU | x86_64 (aarch64 no cubierto por las pruebas) |
-| Memoria | ≥ 16 GB (mock comienza en 8 GB, se recomiendan 16 GB para LLM local) |
+| Memoria | ≥ 16 GB (el mock funciona desde 8 GB, se recomiendan 16 GB para LLM local) |
 | Disco | ≥ 10 GB (pesos de modelos + entorno conda + acumulación de trazas) |
 | GPU (para inferencia LLM local) | NVIDIA RTX 5070 / 4090 / H100 |
 
@@ -192,7 +191,7 @@ sudo ip link set can0 up
 
 ## 3. Configuración del entorno
 
-### 3.0 Ruta mínima: ejecutar mock en 5 minutos
+### 3.0 Ruta mínima: ejecutar el mock en 5 minutos
 
 Si solo quieres ejecutar el mock para verificar la instalación (sin leer otros contenidos), bastan tres comandos:
 
@@ -222,7 +221,7 @@ El nombre del entorno está fijado como `wrc-demo`. Si necesitas personalizar el
 
 - Haber completado el [Inicio rápido de reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) (montaje del brazo robótico, inicialización del punto cero, configuración de ID de motor) — **solo requerido para hardware real**
 - GPU NVIDIA + controlador CUDA instalado (**solo requerido para inferencia LLM local**) 
-- [miniforge3](https://conda-forge.org/miniforge/) u otra herramienta conda instalada
+- [miniforge3](https://conda-forge.org/miniforge/) u otra herramienta conda similar instalada
 - Ubuntu 22.04+ / Debian 12+ / WSL2
 
 ### 3.2 Dependencias del sistema (requeridas para hardware real)
@@ -233,10 +232,10 @@ sudo apt install -y libusb-1.0-0-dev ffmpeg git can-utils
 ```
 
 - `libusb-1.0-0-dev`: cámara de profundidad Orbbec
-- `ffmpeg`: flujo RGB UVC4K / RealSense
-- `can-utils`: activación de SocketCAN (brazo robótico)
+- `ffmpeg`: flujo RGB de UVC4K / RealSense
+- `can-utils`: puesta en marcha de SocketCAN (brazo robótico)
 
-### 3.3 Post-instalación: instala PyTorch por separado (versión CUDA)
+### 3.3 post-install: Instalar PyTorch por separado (versión CUDA)
 
  **Directorio de trabajo**: A partir de esta sección, se asume que todos los comandos se ejecutan en el directorio raíz del repositorio `wrc`. Si abres una nueva shell, primero ejecuta `cd wrc`.
 
@@ -285,7 +284,7 @@ Este proyecto es compatible con Orbbec Gemini 2, RealSense D435i / D405 y otras 
 
 #### Orbbec Gemini 2
 
-Orbbec Gemini 2 depende de pyorbbecsdk (versión Python de Orbbec SDK v2). Se recomienda **el Método 1**:
+Orbbec Gemini 2 depende de pyorbbecsdk (versión Python de Orbbec SDK v2). Se recomienda el **Método 1**:
 
 **Método 1: Instalar vía pip (recomendado)**
 
@@ -327,7 +326,7 @@ El SDK de RealSense (`pyrealsense2`) normalmente necesita compilarse desde el c�
 
 ### 4.1 Instalar el codificador de texto MobileCLIP2
 
-Apple publicó pesos de PyTorch en HuggingFace `apple/MobileCLIP2-B`, y la detección de texto prompt de YOLOE requiere la versión `.ts`.
+Apple publicó pesos de PyTorch en HuggingFace `apple/MobileCLIP2-B`, y la detección de texto de YOLOE requiere la versión `.ts`.
 
 ```bash
 conda activate wrc-demo
@@ -359,7 +358,7 @@ PYTHONNOUSERSITE=1 python -c "import torch; m=torch.jit.load('models/mobileclip2
 
 #### 4.1.1 Sobre la ruta de búsqueda del codificador de texto YOLOE
 
-ultralytics carga `mobileclip*.ts` **solo buscando en el directorio de trabajo actual (CWD), no lo busca en `models/`**.
+ultralytics carga `mobileclip*.ts` **solo busca en el directorio de trabajo actual (CWD), no lo busca en `models/`**.
 
 Si ejecutas `python -m wrc_demo.apps.demo ...` directamente, si el CWD no está bajo `models/`, mostrará "Download failure for ... mobileclip_*.ts".
 
@@ -395,9 +394,9 @@ cd models/qwen3-vl-2b-awq-4bit && git lfs pull
 | Recurso | Tamaño | Necesidad | Método de adquisición |
 |------|------|--------|----------|
 | `qwen3-vl-2b-awq-4bit/` | ~2.| 4 GB | Requerido para despliegue local de LLM (8 GB VRAM) | Se descarga automáticamente vía `hf download cyankiwi/Qwen3-VL-2B-Instruct-AWQ-4bit` o `scripts/start_cosmos3_server.sh --bg` |
-| `yoloe-26s-seg.pt` | ~31 MB | **Detección de vocabulario abierto (recomendado para 2026-09+)** | Extraer vía `cp` después de clonar Seeed-Projects/reBot-DevArm-Grasp; usa el `mobileclip2_b.ts` existente, no requiere `blt.ts` |
+| `yoloe-26s-seg.pt` | ~31 MB | **Detección de vocabulario abierto (recomendado para 2026-09+)** | Extraer vía `cp` después de clonar Seeed-Projects/reBot-DevArm-Grasp; usa el `mobileclip2_b.ts` existente, no se requiere `blt.ts` |
 | `yoloe-26l-seg.pt` | ~75 MB | Opcional (mayor precisión, ~2x más lento) | Igual que arriba; también usa `mobileclip2_b.ts` |
-| `yoloe-11s-seg.pt` | ~28 MB | **No recomendado** — requiere `mobileclip_blt.ts` (572 MB, ~1.5h de descarga en el primer arranque) | Usar solo cuando se requieran pesos de modelo heredados; para volver a cambiar, modifica el campo `model:` en `configs/demo.yaml` |
+| `yoloe-11s-seg.pt` | ~28 MB | **No recomendado** — requiere `mobileclip_blt.ts` (572 MB, ~1.5h de descarga en el primer inicio) | Usar solo cuando se requieran pesos de modelo heredados; para volver a cambiar, modifica el campo `model:` en `configs/demo.yaml` |
 | `mobileclip2_b.pt` | ~571 MB | Fuente de codificación de texto YOLOE 26s/l (versión PyTorch sin procesar) | Se descarga automáticamente desde `apple/MobileCLIP2-B` vía `python scripts/setup_models.py --fetch` |
 | `mobileclip2_b.ts` | ~253 MB | Codificación de texto YOLOE 26s/l (realmente cargada en tiempo de ejecución) | Trazado manualmente (ver §4.1); después de la descarga **debe colocarse en `models/` o CWD** — ver §4.1.1 |
 | `mobileclip_blt.ts` | ~572 MB | Codificación de texto YOLOE 11s (**no recomendado**, la fuente es difícil de descargar) | Trazado manualmente, fuente `apple/MobileCLIP-B-LT`; solo requerido al usar el modelo 11s |
@@ -527,7 +526,7 @@ Cambio temporal vía CLI: `wrc-demo --llm anthropic --task "..."`
 |---------|-----------------------|
 | `anthropic` | `ANTHROPIC_API_KEY` |
 | `openai` | `OPENAI_API_KEY` (modifica el endpoint mediante `OPENAI_BASE_URL`) |
-| `minimax` | `MINIMAX_API_KEY` (leída desde el campo `env_key:` en YAML) |
+| `minimax` | `MINIMAX_API_KEY` (se lee del campo `env_key:` en YAML) |
 | `local_qwen3_vl` | No requerida |
 
 #### Ejecutar
@@ -590,21 +589,21 @@ wrc-demo --llm local_qwen3_vl --task "go to home" --no-view --no-serve
 ```
 
 :::tip
-Los dos scripts de prueba anteriores solo se utilizan para comprobar si el enlace del modelo está conectado y no controlarán realmente el brazo robótico.
+Los dos scripts de prueba anteriores solo se utilizan para comprobar si el enlace con el modelo está conectado, y no controlarán realmente el brazo robótico.
 :::
 
 ---
 
 ## 7. Ejecución de la demo
 
-### 7.1 Iniciar demo
+### 7.1 Iniciar la demo
 
 ```bash
 # Start the project
 bash /home/seeed/wrc/scripts/start_all.sh --repl --real
 ```
 
-Ejemplo de salida de la terminal tras una ejecución correcta:
+Salida de ejemplo en la terminal después de una ejecución correcta:
 ```
 # Output example:
 (wrc-demo) seeed@seeed-KUANGSHI-Series:~/wrc$ bash /home/seeed/wrc/scripts/start_all.sh --repl --real
@@ -631,7 +630,7 @@ task>
 
 Abre la página web, haz clic en el enlace `[wrc-demo] LIVESTREAM dashboard: http:xxxx` que se muestra en la terminal, y podrás controlar el brazo robótico mediante diálogo.
 
-Ejemplo de salida de la terminal después de enviar un comando de diálogo:
+Salida de ejemplo en la terminal después de enviar un comando de diálogo:
 ```
 === task report ===
 task:    go to home
@@ -659,7 +658,7 @@ Hay dos rutas para el control por diálogo de texto, `path: llm & path: reflex`
 
 `reflex` se refiere a texto precargado (modo mock), que garantiza que se realicen las operaciones correspondientes sin que se ejecute el LLM, utilizando texto fijo preescrito para controlar el robot y completar diferentes tareas.
 
-Los comandos estables de reflex son los siguientes:
+Los comandos de reflex estables son los siguientes:
 ```
 pick up X and put in Y  # Complete pick+place
 
@@ -670,7 +669,7 @@ look around             # List objects recognized by the camera
 go home                 # Return to origin
 ```
 
-`llm` se refiere al análisis por un modelo real conectado en la nube o un modelo desplegado localmente, que puede entender el texto en lenguaje de forma más flexible y llamar a las habilidades correspondientes.
+`llm` se refiere al análisis realizado por un modelo real conectado en la nube o un modelo desplegado localmente, que puede entender el texto en lenguaje de forma más flexible y llamar a las habilidades correspondientes.
 
 Las habilidades y sus funciones correspondientes son las siguientes:
 ```
@@ -687,7 +686,7 @@ skill_close_gripper	     # Close gripper
 
 ## 8. Configuración personalizada
 
-### 8.1 Añadir nuevo perfil de LLM
+### 8.1 Añadir un nuevo perfil de LLM
 El backend de LLM de wrc-demo es **enchufable**. Si necesitas añadir un nuevo perfil de LLM, un archivo `configs/llm/<name>.yaml` es un perfil.
 
 Modifica una línea `profile: <name>` en `demo.yaml` para cambiar.
@@ -732,8 +731,8 @@ llm:
   profile: kimi    # ← Change to new profile name (remove .yaml suffix)
 ```
 
-#### Paso 4: Configurar variable de entorno + verificar
-(1) Exportación temporal (válida para la shell actual)
+#### Paso 4: Establecer variable de entorno + verificar
+(1) Export temporal (válido para la shell actual)
 ```
 export MOONSHOT_API_KEY=sk-...
 ```
@@ -769,7 +768,7 @@ Más conservador (más preciso, más lento) → aumenta `n_samples` (más tiempo
 
 Compensación mano-ojo (`hand_eye_compensation_m`), edita `extrinsics` en `configs/cameras/orbbec_overhead.yaml`.
 
-La pose de agarre se convierte de coordenadas de cámara al sistema de coordenadas base mediante `T_cam2base`; las desviaciones en este paso se transmitirán directamente al punto de aterrizaje del agarre. El ajuste fino de la desviación en este eslabón se puede hacer ajustando el valor de `hand_eye_compensation_m`.
+La pose de agarre se convierte de coordenadas de cámara al sistema de coordenadas base mediante `T_cam2base`; las desviaciones en este paso se transmitirán directamente al punto de aterrizaje del agarre. El ajuste fino de la desviación en este enlace se puede hacer ajustando el valor de `hand_eye_compensation_m`.
 ```yaml
 # configs/cameras/orbbec_overhead.yaml
 extrinsics:
@@ -792,7 +791,7 @@ detector:
   conf: 0.20                           # Umbral de confianza (más bajo = más detecciones, pero más falsos positivos)
 
 detect_classes: ["banana", "cracker box", "soup can", "cube", "box", "pen", "toy"]
-# ↑ Esta lista le indica a YOLOE qué etiquetas buscar en modo de vocabulario abierto
+# ↑ Esta lista le dice a YOLOE qué etiquetas buscar en modo de vocabulario abierto
 ```
 
 ### 8.4 Modify safety thresholds
@@ -924,8 +923,8 @@ N cámaras ──CameraStream (un hilo cada una, ranura de último fotograma, de
    └── StreamServer (panel MJPEG): cuadrícula de cámaras + narración + tabla de objetos
 
 comando de chat ("pick and place pink object")
-   ├─ nivel 1 REFLEX    Sintaxis de plantilla → llamadas a skills                 (~µs)
-   ├─ nivel 2 HABIT     Memoria de experiencia (BoW con hash, coseno ≥ 0.9)      (~ms)
+   ├─ nivel 1 REFLEX    Sintaxis de plantilla → llamadas a skills                          (~µs)
+   ├─ nivel 2 HABIT     Memoria de experiencia (BoW con hash coseno ≥ 0.9)              (~ms)
    └─ nivel 3 LLM       Bucle de orquestador en bruto (2-15 s/turno)
         Todos los niveles usan el mismo SkillRuntime con compuerta de seguridad
 ```
@@ -945,10 +944,10 @@ src/wrc_demo/
 │
 ├── perception/         # 4 backends de cámara + detector YOLOE + alineación de profundidad
 ├── calibration/        # Calibración mano-ojo (ArUco + Pinocchio FK + LM)
-├── memory/             # episódica + creencias + resultado de agarres
+├── memory/             # episódica + creencias + resultado de agarre
 ├── control/            # Pinocchio FK/IK + mock + lazy + RS real + SafeArm
 ├── safety/             # verificación de puntos intermedios con fallo seguro
-├── grasping/           # planificación de agarre en 3 capas
+├── grasping/           # planificación de agarre de 3 capas
 ├── agent/              # orquestador + reflejo + asesor + clientes LLM + traza
 ├── skills/              # SkillRuntime + TOOL_SPECS + lógica de negocio (teach, master_arm, etc.)
 └── apps/                # demo / record / viewer / stream_server / mcp_server
@@ -1010,12 +1009,12 @@ t=0.5s  hilo WorldWatcher inicia (pasada del detector a 3 Hz → creencias)
 
 t=1.0s  usuario --task "pick up red block"
         AgentOrchestrator.run_task()
-        ├─ nivel1 REFLEX: coincidencia regex ──→ pick_and_place acierto?  ──→ ejecutar
+        ├─ nivel1 REFLEX: coincidencia regex ──→ acierto pick_and_place?  ──→ ejecutar
         └─ (respaldo) nivel2 HABIT ──→ nivel3 LLM ──→ tool_calls
 
 t=1.1s  SkillRuntime.execute("pick_and_place")
         ├─ tracer.start()
-        ├─ belief.find("red block")  ── esperar límite 5s
+        ├─ belief.find("red block")  ── esperar plazo 5s
         ├─ _plan_grasps() ── cámara + graspgenx + obb ── reordenar
         ├─ select_grasps() ── IK ── arnés preevaluación
         ├─ safe_arm.move_joints() ── cada waypoint 50Hz ── SafetyHarness.approve

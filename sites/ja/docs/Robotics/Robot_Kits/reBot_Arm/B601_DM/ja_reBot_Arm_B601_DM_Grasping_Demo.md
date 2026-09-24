@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、YOLO/OBB 把持パイプラインを使用して、reBot Arm B601 向けの完全なビジュアル把持デモを構築する方法を説明します。
-title: reBot Arm B601 ビジュアル把持デモ
+description: このチュートリアルでは、YOLO/OBB 把持パイプラインを使用して reBot Arm B601 向けの完全なビジュアル把持デモを構築する方法を説明します。
+title: B601-DM ビジュアル把持
 keywords:
   - reBot Arm
   - B601
@@ -17,13 +17,14 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-08-11'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_grasping_demo/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
-# reBot Arm B601 ビジュアル把持デモ
+# reBot Arm B601-DM ビジュアル把持デモ
 
 <RebotDmDocNav />
 
@@ -32,10 +33,16 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>今すぐ入手</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -51,7 +58,7 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
   <strong>奥行き認識 · 物体検出 · ハンドアイキャリブレーション · 自律把持 · 完全オープンソース</strong>
 </p>
 
-YOLO は、単一のフォワードパスでターゲットの位置特定と分類を行う、広く利用されているリアルタイム物体検出モデルファミリーです。本チュートリアルでは、YOLO、RGB-D 深度カメラ、および reBot Arm B601-DM を使用して、環境構築、カメラ統合、ハンドアイキャリブレーション、把持検証を含む、デスクトップ向けのビジュアル把持デモを構築します。
+YOLO は、単一のフォワードパスでターゲットの位置特定と分類を行う、広く利用されているリアルタイム物体検出モデルファミリーです。本チュートリアルでは、YOLO、RGB-D 深度カメラ、および reBot Arm B601-DM を使用して、環境構築、カメラ統合、ハンドアイキャリブレーション、把持検証までを含む、デスクトップ向けのビジュアル把持デモを構築します。
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/demo.gif" alt="reBot Arm B601-DM visual grasping demo" />
@@ -64,21 +71,21 @@ YOLO は、単一のフォワードパスでターゲットの位置特定と分
 
 ## プロジェクト概要
 
-**reBot Arm B601 ビジュアル把持デモ** は、[reBot Arm B601](https://github.com/Seeed-Projects/reBotArm_control_py) ロボットアーム制御ライブラリと RGB-D 深度カメラに基づくビジュアル把持アルゴリズムのデモプロジェクトです。本システムは B601 アームの DM / RS 構成の両方をサポートします。YOLO モデルを用いてデスクトップ上の物体をリアルタイムに検出し、OBB 最小外接矩形から把持姿勢を推定し、ハンドアイキャリブレーションによって把持点をカメラ座標系からロボットベース座標系へ変換し、ロボットアームを駆動して自律把持を完了させます。
+**reBot Arm B601-DM ビジュアル把持デモ** は、[reBot Arm B601](https://github.com/Seeed-Projects/reBotArm_control_py) ロボットアーム制御ライブラリと RGB-D 深度カメラに基づくビジュアル把持アルゴリズムのデモプロジェクトです。本システムは B601 アームの DM および RS 構成の両方をサポートします。YOLO モデルを用いてデスクトップ上の物体をリアルタイムに検出し、OBB 最小外接矩形から把持姿勢を推定し、ハンドアイキャリブレーションによって把持点をカメラ座標系からロボットベース座標系へ変換し、ロボットアームを駆動して自律把持を完了させます。
 
 ### コア機能
 
 - 📷 **奥行き認識** — Orbbec Gemini 2 や Intel RealSense D435i / D405 などの RGB-D 深度カメラをサポート
-- 🔍 **物体検出** — YOLO ベースの認識とオープンボキャブラリのカスタムクラス対応
-- 📐 **姿勢推定** — OBB 最小外接矩形の短軸をグリッパの向きに使用し、深度分位値で把持高さを推定
+- 🔍 **物体検出** — オープンボキャブラリのカスタムクラスに対応した YOLO ベースの認識
+- 📐 **姿勢推定** — OBB 最小外接矩形の短軸をグリッパの向きに使用し、深度の分位値で把持高さを推定
 - 🔄 **座標変換** — TSAI ハンドアイキャリブレーション（Eye-in-Hand）により、カメラ座標系の把持点をロボットベース座標系へ変換
-- 🦾 **動作実行** — reBotArm_control_py の IK + 軌道コントローラと、内蔵グリッパ力制御ステートマシン
+- 🦾 **動作実行** — グリッパの力制御ステートマシンを内蔵した reBotArm_control_py の IK + 軌道コントローラ
 
 ---
 
 ## ハードウェア構成
 
-| コンポーネント | モデル / 要件 |
+| コンポーネント | 型番 / 要件 |
 |------|------------|
 | ロボットアーム | reBot Arm B601（DM / RS 構成） |
 | 深度カメラ | Orbbec Gemini 2、Intel RealSense D435i / D405 |
@@ -90,7 +97,7 @@ YOLO は、単一のフォワードパスでターゲットの位置特定と分
 1. 深度カメラを USB 3.0 でホストに接続します。
 2. USB2CAN アダプタをアームの CAN バスに接続します。
 3. 24V 電源、カメラ、ロボットアームがすべて確実に接続されていることを確認します。
-4. 権限を設定します：
+4. パーミッションを設定します：
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*   # Depth camera USB permissions
@@ -131,7 +138,7 @@ pip install -e .
 cd ../..
 ```
 
-もし `pip install -e .` が `Multiple top-level packages discovered in a flat-layout` を報告する場合は、`reBotArm_control_py` の `pyproject.toml` に明示的なパッケージ検出設定を追加し、その後で `pip install -e .` を再実行してください：
+もし `pip install -e .` 実行時に `Multiple top-level packages discovered in a flat-layout` と表示された場合は、`reBotArm_control_py` の `pyproject.toml` に明示的なパッケージ検出設定を追加し、その後もう一度 `pip install -e .` を実行してください：
 
 ```toml
 [build-system]
@@ -175,7 +182,7 @@ pip install -e .
 git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 ```
 
-ソースからインストールする場合は、まず CMake でネイティブ拡張をビルドし、`install/lib` に `pyorbbecsdk*.so` と Orbbec 共有ライブラリが含まれていることを確認してから、`pip install -e .` を実行してください。
+ソースからインストールする場合は、まず CMake でネイティブ拡張をビルドし、`install/lib` に `pyorbbecsdk*.so` と Orbbec の共有ライブラリが含まれていることを確認してから、`pip install -e .` を実行してください。
 
 注意：上記のすべてのインストール方法がうまくいかない場合は、以下の公式 Orbbec ドキュメントを参照してインストールしてください。
 
@@ -211,7 +218,7 @@ pip install pyrealsense2
 python -c "import pyrealsense2; print('pyrealsense2 OK')"
 ```
 
-システムに完全な RealSense ツールキットや udev ルールが必要な場合は、RealSense SDK 公式ドキュメントを参照して `librealsense2` をインストールしてください。
+システム側で完全な RealSense ツールキットや udev ルールが必要な場合は、RealSense SDK の公式ドキュメントを参照して `librealsense2` をインストールしてください。
 
 
 **SDK リソースまとめ**
@@ -229,22 +236,22 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 
 ### Step 5. GraspNet を設定する（任意）
 
-物体の把持姿勢推定をより高精度に行うために、本プロジェクトでは [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) を適用し、ロボットアームの把持性能を向上させています。
+物体に対してより高精度な把持姿勢推定を実現するために、本プロジェクトでは [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) を適用し、ロボットアームの把持性能を向上させています。
 
-GraspNet の `pointnet2` / `knn` 拡張は CUDA コンパイラを必要とします。開始前に、現在の環境で `nvcc` が利用可能であること、および `nvcc` が報告する CUDA バージョンが PyTorch のビルドに使用された CUDA バージョンと一致していることを確認してください：
+GraspNet の `pointnet2` / `knn` 拡張は CUDA コンパイラを必要とします。開始する前に、現在の環境で `nvcc` が利用可能であること、および `nvcc` が報告する CUDA バージョンが PyTorch のビルドに使用された CUDA バージョンと一致していることを確認してください：
 
 ```bash
 nvcc --version
 python -c "import torch; print(torch.__version__, torch.version.cuda)"
 ```
 
-もし `nvcc` が存在しない場合、または `nvcc` が報告する CUDA バージョンが `torch.version.cuda` と一致しない場合は、現在の PyTorch CUDA バージョンに一致する CUDA コンパイラをインストールしてください。例えば、PyTorch が `13.0` を示している場合：
+もし `nvcc` が存在しない、または `nvcc` が報告する CUDA バージョンが `torch.version.cuda` と一致しない場合は、現在の PyTorch CUDA バージョンに一致する CUDA コンパイラをインストールしてください。たとえば、PyTorch が `13.0` と表示している場合：
 
 ```bash
 conda install -c nvidia cuda-nvcc=13.0
 ```
 
-代わりに、現在の `nvcc` バージョンに一致する PyTorch ビルドをインストールすることもできます。2 つのバージョンは一致している必要があり、一致しない場合は `pointnet2` / `knn` のビルドが `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` というエラーで失敗します。
+代わりに、現在の `nvcc` バージョンに一致する PyTorch ビルドをインストールすることもできます。2 つのバージョンは一致している必要があり、一致しない場合は `pointnet2` / `knn` のビルド時に `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` というエラーで失敗します。
 
 ```bash
 cd sdk
@@ -277,7 +284,7 @@ cd ../../..
 ```
 
 :::tip
-注意：公式の graspnet-baseline リポジトリのドキュメントにそのまま従って `python setup.py install` を使用すると、CUDA / PyTorch 関連のエラーが発生する場合があります。現在の conda 環境にすでにインストールされている PyTorch と CUDA の構成に対して拡張をビルドするために、`pip install . --no-build-isolation` を使用することを推奨します。
+注意：公式の graspnet-baseline リポジトリのドキュメントにそのまま従って `python setup.py install` を使用すると、CUDA / PyTorch 関連のエラーが発生する場合があります。現在の conda 環境にすでにインストールされている PyTorch と CUDA の構成に対して拡張モジュールをビルドするため、`pip install . --no-build-isolation` を使用することを推奨します。
 :::
 
 :::tip
@@ -285,12 +292,12 @@ cd ../../..
 :::
 
 :::tip
-さらに、古い GraspNet API 依存関係では、非推奨となった `sklearn` パッケージ名が依然として使用されている場合があります。上記の `sed` コマンドは、インストール時のパッケージ名の問題を避けるために、これを `scikit-learn` に置き換えます。GraspNet API の依存スタックも同時にアップグレードしない限り、`transforms3d==0.3.1` が依然として `np.float` などの NumPy エイリアスを使用しているため、`numpy==1.23.4` の制約は維持してください。
+さらに、古い GraspNet API 依存関係では、非推奨となった `sklearn` パッケージ名が依然として使用されている場合があります。上記の `sed` コマンドは、インストール時のパッケージ名の問題を避けるために、これを `scikit-learn` に置き換えます。GraspNet API の依存スタックも同時にアップグレードしない限り、`transforms3d==0.3.1` が依然として `np.float` などの NumPy エイリアスを使用しているため、その `numpy==1.23.4` 制約は維持してください。
 :::
 
 **学習済みモデルの設定**
 
-公式リポジトリ graspnet-baseline から公式 GraspNet 学習済み重みを [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view)、[Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A) からダウンロードし、ダウンロードした `checkpoint-rs.tar` を次の場所に配置します：
+graspnet-baseline 公式リポジトリから公式 GraspNet 学習済み重みを [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view)、[Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A) からダウンロードし、ダウンロードした `checkpoint-rs.tar` を次の場所に配置します：
 
 ```bash
 sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
@@ -345,11 +352,11 @@ rebot_grasp/
 
 ## 実行とデバッグ
 
-### 0. アームのバージョンと SDK 設定の確認
+### 0. アームバージョンと SDK 設定の確認
 
 ロボットアームに接続するスクリプトを実行する前に、アームのバージョン、電源、および SDK 設定が一致していることを確認してください：
 
-- まず基本的なアームの準備を完了してください：[B601-DM クイックスタート](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/) または [B601-RS クイックスタート](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)。
+- まずアームの基本的な準備を完了してください：[B601-DM クイックスタート](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/) または [B601-RS クイックスタート](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)。
 - `sdk/reBotArm_control_py/config/rebotarm.yaml` で、対応するハードウェア構成を選択します：
 
 ```yaml
@@ -364,7 +371,7 @@ hardware_yaml: rebotarm_rs.yaml
 
 - B601-DM は 24V DC 電源、B601-RS は 48V DC 電源を使用します。電源アダプタと配線がアームのバージョンに合っていることを確認してください。
 - B601-DM を使用する場合、SDK 設定内のシリアルブリッジデバイスパスが実際のデバイスと一致していることを確認してください。
-- B601-RS を使用する場合、キャリブレーションや把持スクリプトを実行する前に CAN インターフェースを起動します：
+- B601-RS を使用する場合、キャリブレーションや把持スクリプトを実行する前に CAN インターフェースを起動してください：
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -379,7 +386,7 @@ ip -details link show can0
 python scripts/collect_handeye_eih.py
 ```
 
-自動モードでは、アームが 50 個のプリセット姿勢を自動で走査し、ArUco が安定して検出されたときに自動でサンプリングします。正常終了または途中で中断された場合でも、スクリプトはキャリブレーション結果の計算と保存を試みます；少なくとも 5 サンプルが必要で、より安定した結果のためには 15 サンプル以上を推奨します。
+自動モードでは、アームが 50 個のプリセット姿勢を自動で走査し、ArUco が安定して検出されたタイミングで自動的にサンプリングします。正常終了または途中で中断された場合でも、スクリプトはキャリブレーション結果の計算と保存を試みます；少なくとも 5 サンプルが必要で、より安定した結果のためには 15 サンプル以上を推奨します。
 
 アームを手動で動かして収集したい場合は、次を使用します：
 
@@ -390,7 +397,7 @@ python scripts/collect_handeye_eih.py --manual
 手動モードでは、アームは重力補償モードに入ります。エンドエフェクタを適切な視点に押し動かしてから `Enter` を押してキャプチャし、`c` または `q` を押して終了および計算を行います。
 
 :::tip
-キャリブレーション後にロボットアームの把持精度が要件を満たさないと感じる場合は、`config/default.yaml` の `calibration.hand_eye_compensation_m` 内の `X`（前後）、`Y`（左右）、`Z`（上下）パラメータを設定して、位置補正を行うことができます。
+キャリブレーション後にロボットアームの把持精度が要求を満たさないと感じる場合は、`config/default.yaml` の `calibration.hand_eye_compensation_m` 配下にある `X`（前後）、`Y`（左右）、`Z`（上下）パラメータを設定して、位置補正を行うことができます。
 :::
 
 ### 2. `scripts/main.py` — メイン把持プログラム
@@ -409,7 +416,7 @@ python scripts/collect_handeye_eih.py --manual
 機能：バナナを把持して箱の中に配置する
 
 完了するフロー：
-1. カメラとアームの初期化、レディポジションへ移動
+1. カメラとアームの初期化、レディポジションへの移動
 2. リアルタイムカメラプレビュー + YOLO 物体検出およびインスタンスセグメンテーション
 3. `G` を押してフレームを固定し、ハンドアイ変換を通じてアームの目標姿勢を計算
 4. アームがバナナを把持して持ち上げる
@@ -431,7 +438,7 @@ python scripts/graspnet_camera_demo.py
 
 ### 6. `scripts/grasp.py` — GraspNet ロボットアーム把持プログラム
 
-`graspnet_camera_demo.py` をベースに、GraspNet の推定結果をロボットアームの実行フローに接続します：YOLO がターゲットを選択し、GraspNet が 6D 把持姿勢を出力し、ハンドアイキャリブレーションでロボットベース座標系へ変換し、その後 IK の到達可能性をチェックして、プレグラスプ、把持、退避動作を実行します。デバッグのため、まず `--dry-run` を使用して、目標姿勢と候補フィルタリング結果のみを出力することを推奨します。
+`graspnet_camera_demo.py` をベースに、GraspNet の推定結果をロボットアームの実行フローに接続します：YOLO がターゲットを選択し、GraspNet が 6D 把持姿勢を出力し、ハンドアイキャリブレーションでロボットベース座標系へ変換し、その後 IK 到達可能性をチェックして、プレグラスプ、把持、退避動作を実行します。デバッグのため、まず `--dry-run` を使用してターゲット姿勢と候補フィルタリング結果のみを出力することを推奨します。
 
 ```bash
 python scripts/grasp.py --dry-run
@@ -440,7 +447,7 @@ python scripts/grasp.py --target-class "light blue coffee cup"
 
 ### 7. `scripts/object_detection.py` — 基本検出デモ
 
-純粋な YOLO 検出デモであり、検出ボックスと信頼度スコアをリアルタイム表示するだけで、把持ロジックはありません。
+純粋な YOLO 検出デモであり、検出ボックスと信頼度スコアをリアルタイム表示するだけで、把持ロジックは含みません。
 
 ---
 
@@ -452,8 +459,8 @@ python scripts/grasp.py --target-class "light blue coffee cup"
 | :--- | :--- | :--- |
 | `camera.type` | `realsense_d435i`<br/>`realsense_d405`<br/>`orbbec_gemini2` | **カメラタイプ**：現在のシステムに接続されているカメラハードウェアを指定します。 |
 | `camera.serial` | `string` / `null` | **デバイスシリアル番号**：デバイスの SN 番号を指定します。`null` に設定すると、システムが検出した最初の利用可能なデバイスを使用します。 |
-| `calibration.aruco.marker_length_m` | `float` | **ArUco マーカーサイズ**：ハンドアイキャリブレーションに使用する ArUco キャリブレーションマーカーの実際の一辺の長さで、単位は **メートル (m)** です。 |
-| `calibration.hand_eye_compensation_m` | `array` | **ハンドアイキャリブレーション並進補正**：ハンドアイキャリブレーション完了後に **ロボットベース座標系** で実行される XYZ の手動並進補正（形式 `[X, Y, Z]`）、単位は **メートル (m)** です。3 つすべての値が `0.0` の場合、補正行列は単位行列になります。 |
+| `calibration.aruco.marker_length_m` | `float` | **ArUco マーカーサイズ**：ハンドアイキャリブレーションに使用する ArUco キャリブレーションマーカーの実際の物理的な一辺の長さ（単位：**メートル (m)**）。 |
+| `calibration.hand_eye_compensation_m` | `array` | **ハンドアイキャリブレーション平行移動補正**：ハンドアイキャリブレーション完了後に、**ロボットベース座標系** で実行される XYZ の手動平行移動補正（形式 `[X, Y, Z]`）、単位は **メートル (m)**。3 つすべての値が `0.0` の場合、補正行列は単位行列になります。 |
 
 ---
 
@@ -470,17 +477,17 @@ python scripts/grasp.py --target-class "light blue coffee cup"
 
 | パラメータ | 型 / オプション | 意味と説明 |
 | :--- | :--- | :--- |
-| `robot.repo_root` | `string` / `null` | **リポジトリルートディレクトリ**：`reBotArm_control_py` リポジトリへのパスです。`null` の場合、内部の相対パス `sdk/reBotArm_control_py` がデフォルトとして使用されます。 |
+| `robot.repo_root` | `string` / `null` | **リポジトリルートディレクトリ**：`reBotArm_control_py` リポジトリへのパス。`null` の場合、内部の相対パス `sdk/reBotArm_control_py` がデフォルトとして使用されます。 |
 | `robot.ready_pose` | `array` | **レディポーズ**：システム起動時にアームが移動するレディポジションです。各把持タスク完了後も、アームは自動的にこの位置へ戻ります。 |
-| `robot.gripper.dm`<br/>`robot.gripper.rs` | struct オブジェクト | **グリッパハードウェアパラメータ**：SDK 内の現在の実際のハードウェア構成に基づき、システムがこれら 2 つのパラメータグループのうち一方を自動的に選択して適用します。 |
+| `robot.gripper.dm`<br/>`robot.gripper.rs` | struct オブジェクト | **グリッパハードウェアパラメータ**：SDK 内の現在の実際のハードウェア構成に基づき、システムはこれら 2 つのパラメータグループのうち一方を自動的に選択して適用します。 |
 
 #### グリッパー内部コアパラメータの説明
 
 `robot.gripper.dm` または `robot.gripper.rs` 内のサブパラメータについて：
 
-* **`angle_open`**, **`close_torque`**, **`default_force`**: それぞれ開く角度、閉じるトルク、デフォルト制御力に対応します。すべて**正の数**を記入する必要があります。
-* **`counterclockwise`**: ブール値。クローズ時に使用するモーターの回転方向（反時計回りかどうか）を示します。このロジックに基づき、コードは開く角度と閉じるトルクの符号を自動的に導出します。
-* **`tau_max`**: トルクの上限。
+* **`angle_open`**、**`close_torque`**、**`default_force`**：それぞれ開く角度、閉じるトルク、デフォルトの制御力に対応します。すべて**正の数**を記入する必要があります。
+* **`counterclockwise`**：ブール値。クローズ時に使用するモーターの回転方向（反時計回りかどうか）を示します。このロジックに基づき、コードは開く角度と閉じるトルクの符号を自動的に導出します。
+* **`tau_max`**：トルクの上限。
 
 :::tip
 注意：その他の高度なグリッパー制御動作パラメータについては、`drivers/robot/grasp_driver.py` ファイルを参照し、そこで定義してください。
@@ -488,16 +495,16 @@ python scripts/grasp.py --target-class "light blue coffee cup"
 
 ---
 
-#### 4. 把持パイプラインと GraspNet 設定（`grasp_pipeline` & `graspnet`）
+#### 4. 把持パイプラインと GraspNet の設定（`grasp_pipeline` & `graspnet`）
 
 | パラメータ | 型 | 意味と説明 |
 | :--- | :--- | :--- |
-| `grasp_pipeline.infer_every_live` | `int` | **推論フレーム間隔**：リアルタイム映像プレビュー中、N フレームごとに物体検出を実行し、CPU/GPU のリアルタイム計算負荷を効果的に削減します。 |
+| `grasp_pipeline.infer_every_live` | `int` | **推論フレーム間隔**：リアルタイム動画プレビュー中、N フレームごとに物体検出を実行し、CPU/GPU のリアルタイム計算負荷を効果的に軽減します。 |
 | `grasp_pipeline.grasp.depth_quantile` | `float` | **深度分位数**：短軸把持パイプラインで使用される深度計算の分位数です。値を大きくすると、通常はより深い把持点になります。 |
-| `grasp_pipeline.grasp.pregrasp_offset_m` | `float` | **プレグラスプ位置オフセット**：最終的な目標把持位置に対して、エンドエフェクタの進行方向に沿って後退する距離で、単位は**メートル (m)** です。 |
-| `grasp_pipeline.grasp.insertion_depth_m` | `float` | **挿入深さ**：GraspNet が把持を実行する際に、進行方向に沿って追加で押し込む／挿入する深さで、単位は**メートル (m)** です。 |
-| `grasp_pipeline.grasp.min_base_z_m` | `float` | **最小把持高さ制限**：**ロボットベース座標系**における許容される最小把持 Z 軸高さで、単位は**メートル (m)** です（低レベルの衝突防止セーフティ境界として使用）。 |
-| `graspnet` | struct config | **GraspNet ランタイムパラメータ**：この設定項目配下のすべてのサブパラメータは、`scripts/graspnet_camera_demo.py` および `scripts/grasp.py` 実行時に読み込まれます。 |
+| `grasp_pipeline.grasp.pregrasp_offset_m` | `float` | **プレグラスプ位置オフセット**：最終的な目標把持位置に対して、エンドエフェクタの送り方向にどれだけ後退するかを表す距離で、**メートル (m)** 単位です。 |
+| `grasp_pipeline.grasp.insertion_depth_m` | `float` | **挿入深さ**：GraspNet が把持を実行する際に、送り方向に追加で押し込む／挿入する深さで、**メートル (m)** 単位です。 |
+| `grasp_pipeline.grasp.min_base_z_m` | `float` | **最小把持高さ制限**：**ロボットベース座標系**における許容される最小把持 Z 軸高さで、**メートル (m)** 単位です（低レベルの衝突防止セーフティ境界として使用）。 |
+| `graspnet` | struct config | **GraspNet 実行時パラメータ**：この設定項目配下のすべてのサブパラメータは、`scripts/graspnet_camera_demo.py` および `scripts/grasp.py` を実行する際に読み込まれます。 |
 
 ### モデル選択ライブラリ
 
@@ -510,9 +517,9 @@ YOLO モデルは `rebot_grasp/models/` ディレクトリから読み込まれ�
 | `yoloe-26l-seg.pt` | オープンボキャブラリ + セグメンテーション、現在のデフォルト |
 | `yoloe-26s-seg.pt` | より軽量で高速 |
 | `yolov8n-seg.pt` | クローズドカテゴリのセグメンテーション、小型モデル |
-| `yolov8s-seg.pt` | クローズドカテゴリのセグメンテーション、高精度 |
+| `yolov8s-seg.pt` | クローズドカテゴリのセグメンテーション、より高精度 |
 
-モデル名に `world` / `yoloe` が含まれ、かつ `yolo.use_world=true` の場合、プログラムは `model.set_classes(custom_classes)` を呼び出して、`yolo.custom_classes` をオープンボキャブラリクラスとして注入します。通常の `yolov8*-seg.pt` モデルは、このオープンボキャブラリクラス群を無視します。
+モデル名に `world` / `yoloe` が含まれ、かつ `yolo.use_world=true` の場合、プログラムは `model.set_classes(custom_classes)` を呼び出して、`yolo.custom_classes` をオープンボキャブラリクラスとして注入します。通常の `yolov8*-seg.pt` モデルは、このオープンボキャブラリクラスの設定を無視します。
 
 ---
 
@@ -552,7 +559,7 @@ python scripts/main.py --dry-run
 
 ### 4. GraspNet が `pointnet2` から `pointnet2_utils` をインポートできないと報告する
 
-これは通常、`sdk/graspnet-baseline/pointnet2` 配下のローカル CUDA 拡張が現在の conda 環境で正しくビルドおよびインストールされていないか、Python が誤った `pointnet2` パッケージを解決していることが原因です。プロジェクト環境がアクティブであることを確認し、同じ環境で `pointnet2` と `knn` の両方を再ビルド・再インストールすることを推奨します：
+これは通常、`sdk/graspnet-baseline/pointnet2` 配下のローカル CUDA 拡張が現在の conda 環境で正しくビルド・インストールされていないか、Python が誤った `pointnet2` パッケージを解決していることが原因です。プロジェクト環境がアクティブであることを確認し、同じ環境で `pointnet2` と `knn` の両方を再ビルド・インストールすることを推奨します：
 
 ```bash
 conda activate rebotarm
@@ -583,7 +590,7 @@ cd ../knn
 pip install . --no-build-isolation
 ```
 
-ビルドアーキテクチャを手動で指定する必要がある場合は、再ビルド前に `TORCH_CUDA_ARCH_LIST` を設定し、具体的な値は現在のグラフィックスカードアーキテクチャと PyTorch/CUDA バージョンに応じて確認してください。
+ビルドアーキテクチャを手動で指定する必要がある場合は、再ビルドの前に `TORCH_CUDA_ARCH_LIST` を設定し、具体的な値は現在のグラフィックスカードアーキテクチャと PyTorch/CUDA バージョンに応じて確認してください。
 
 ### 6. GraspNet 推論時に `RuntimeError: CPU not supported` が報告される
 
@@ -600,7 +607,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 ## 📄 参考文献
 
 - [reBotArm_control_py](https://github.com/Seeed-Projects/reBotArm_control_py) — ロボットアーム制御ライブラリ
-- [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm) — reBot ロボットアームのオープンソースプロジェクト
+- [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm) — reBot ロボットアームオープンソースプロジェクト
 - [Orbbec Gemini 2 Product Page](https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
 - [pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
@@ -612,7 +619,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## ☎ お問い合わせ
 
-- **技術サポート**: [Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
+- **技術サポート**： [Issue を送信](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
 
 ---
 

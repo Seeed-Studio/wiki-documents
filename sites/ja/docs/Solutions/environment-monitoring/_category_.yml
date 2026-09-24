@@ -1,0 +1,10 @@
+position: 4
+label: '環境モニタリング'
+collapsible: true
+collapsed: true
+className: _environmental-monitoring
+# link:
+#   type: generated-index
+#   slug: ja/environment-monitoring
+#   title: 環境モニタリング
+#   description: 空気・水質・土壌・周辺環境のセンシングと分析。

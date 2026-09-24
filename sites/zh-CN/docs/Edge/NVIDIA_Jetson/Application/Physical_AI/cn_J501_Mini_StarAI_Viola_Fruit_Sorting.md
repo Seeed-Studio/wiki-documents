@@ -101,7 +101,7 @@ url: https://wiki.seeedstudio.com/cn/j501_mini_starai_viola_fruit_sorting/
 ### 前提条件
 
 - Ubuntu 22.04（在配备 JetPack 6.2.1 的 J501 Mini 上）
-- Python 3.10
+- Python 3.12
 - CUDA 12+
 - PyTorch 2.6+（GPU 版本）
 
@@ -118,7 +118,7 @@ source ~/.bashrc
 
 ```bash
 # Create conda environment
-conda create -y -n lerobot python=3.10 && conda activate lerobot
+conda create -y -n lerobot python=3.12 && conda activate lerobot
 
 # Clone LeRobot repository
 git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot

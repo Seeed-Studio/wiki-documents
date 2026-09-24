@@ -1,6 +1,6 @@
 ---
 description: This wiki provides a complete LeRobot workflow for SO-ARM100 / SO-ARM101, including assembly, calibration, teleoperation, cameras, dataset recording, training, evaluation, and deployment tips.
-title: Getting Started with SO-ARM10x in LeRobot
+title: SO-Arm LeRobot Tutorial
 keywords:
   - Lerobot
   - Huggingface
@@ -8,6 +8,8 @@ keywords:
   - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
+aliases:
+  - /so-arm101
 sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 3/11/2026
@@ -353,9 +355,9 @@ All the parts for the leader or follower are for easy 3D printing already contai
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
-**Step 4: Print the Soft Gripper (Optional)**
+**Step 4: Print the Soft Gripper and Camera Mount Bracket Insert (Optional)**
 
-If you want the robotic arm to be able to grasp soft, fragile, or irregularly shaped objects, you can print a soft gripper to replace the default rigid gripper. The print files are available in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
+If you want the robotic arm to be able to grasp soft, fragile, or irregularly shaped objects, you can print a soft gripper to replace the default rigid gripper. You can also print the camera mount bracket insert if you need to mount a camera. The print files are available in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
 
 Printing material instructions:
 
@@ -379,13 +381,13 @@ Printing material instructions:
 
 - Ubuntu 22.04  
 - CUDA 12+  
-- Python 3.10  
+- Python 3.12
 - Torch 2.6+  
 
 **For Jetson Orin:**
 
 - Jetson JetPack 6.0 and 6.1, JetPack 6.2 is not supported yet
-- Python 3.10  
+- Python 3.12
 - Torch 2.3+
 
 </section>
@@ -418,7 +420,7 @@ source ~/.bashrc`}
 2. Create and activate a fresh conda environment for lerobot
 
 <CodeBlock language="bash">
-{`conda create -y -n lerobot python=3.10 && conda activate lerobot`}
+{`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
 3. Clone Lerobot:
@@ -502,7 +504,7 @@ conda init --all`}
 2. Create and activate a fresh conda environment for lerobot
 
 <CodeBlock language="bash">
-{`conda create -y -n lerobot python=3.10 && conda activate lerobot`}
+{`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
 3. Clone Lerobot:

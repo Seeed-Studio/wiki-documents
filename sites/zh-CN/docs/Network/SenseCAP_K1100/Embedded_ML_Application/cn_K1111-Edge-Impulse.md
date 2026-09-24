@@ -6,19 +6,19 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1111-Edge-Impulse
 last_update:
-  date: 2023/1/13
+  date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2025-08-07'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/cn/K1111-Edge-Impulse/
 ---
-# 通过 Helium 开发 Edge Impulse 应用到云端
+# 开发 Edge Impulse 应用到云端
 
-## 可升级为工业传感器
+## 可升级为工业级传感器
 
-通过 SenseCAP [S2110 控制器](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) 和 [S2100 数据记录仪](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)，您可以轻松将 Grove 转换为 LoRaWAN® 传感器。Seeed 不仅帮助您进行原型开发，还为您提供使用 SenseCAP 系列坚固的[工业传感器](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP)扩展项目的可能性。
+借助 SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) 和 [S2100 data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)，你可以轻松将 Grove 打造成 LoRaWAN® 传感器。Seeed 不仅帮助你完成原型开发，还为你提供使用 SenseCAP 系列坚固[工业传感器](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP)扩展项目的可能性。
 
-IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 Ah 电池以及来自 APP 的强大支持，使得 [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) 成为工业应用的最佳选择。该系列包括土壤湿度、空气温湿度、光强、二氧化碳、电导率以及一体化 8 合 1 气象站传感器。尝试最新的 SenseCAP S210x，为您的下一个工业项目取得成功。
+IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 Ah 电池以及来自 APP 的强大支持，使得 [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) 成为工业应用的最佳选择。该系列包括用于土壤湿度、空气温度和湿度、光照强度、CO2、EC 的传感器，以及一款 8 合 1 气象站。尝试最新的 SenseCAP S210x，为你的下一个工业项目保驾护航。
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
   <tbody>
@@ -37,9 +37,9 @@ IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 
     </tr>
     <tr>
       <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><strong>S2100 <br /> 数据记录仪</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 <br /> 空气温湿度</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank"><strong>S2102 <br /> 光强</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><strong>S2103 <br /> 空气温湿度 &amp; CO2</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 <br /> 空气温度和湿度</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank"><strong>S2102 <br /> 光照</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><strong>S2103 <br /> 空气温度、湿度和 CO2</strong></a></td>
     </tr>
     <tr>
       <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2104.png" /></a></div>
@@ -52,8 +52,8 @@ IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 
       </td>
     </tr>
     <tr>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><strong>S2104 <br /> 土壤湿度 &amp; 温度</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><strong>S2105 <br /> 土壤湿度 &amp; 温度 &amp; 电导率</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><strong>S2104 <br /> 土壤湿度和温度</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><strong>S2105 <br /> 土壤湿度、温度和 EC</strong></a></td>
       <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong>S2110 <br /> LoRaWAN® 控制器</strong></a></td>
       <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><strong>S2120 <br /> 8 合 1 气象站</strong></a></td>
     </tr>
@@ -62,34 +62,30 @@ IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 
 ## 我们使用的工具
 
 - [Wio Terminal](https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/)
-- [Edge Impulse](https://studio.edgeimpulse.com/)
-- [Helium](https://console.helium.com/)
-- [Wio Terminal Edge Impulse 使用内置加速度计进行连续运动识别](https://wiki.seeedstudio.com/cn/Wio-Terminal-TinyML-EI-2/)
+- [Edge impluse](https://studio.edgeimpulse.com/)
+- [Wio Terminal Edge Impulse 使用内置加速度计进行连续动作识别](https://wiki.seeedstudio.com/cn/Wio-Terminal-TinyML-EI-2/)
 - [Google Sheets](https://docs.google.com/spreadsheets/u/0/)
 - [Google Forms](https://docs.google.com/forms/u/0/)
 
 :::note
-在开始本节之前，请确保您已经了解 **Wio Terminal** 产品。
-更多详情，请阅读：
+在开始本节之前，请确保你已经了解 **Wio Terminal** 产品
+更多详情，请阅读
 
-- [**Wio Terminal 入门指南**](https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/)
-- [**连接到 Helium**](https://wiki.seeedstudio.com/cn/Connecting-to-Helium/)
-- [**通过 Helium 集成到 Google Sheets**](https://wiki.seeedstudio.com/cn/Integrate_into_Google_Sheets_via_Helium/)
+- [**Wio Terminal 入门**](https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/)
 :::
+本文展示了一个解决方案，适用于想要使用 edgeimpulse 生成模型并连接到云端的用户。在我们的演示中，我们将使用 Google Sheet。这是最直接且  
 
-本文展示了一种解决方案，适用于希望使用 Edge Impulse 生成模型并连接到云端的用户。在我们的演示中，我们将使用 Google Sheets。这是直接且简单的方式。
+## 配置
 
-## Helium 配置
+### 步骤 1. 创建一个支持 Google Form 的 Integrations
 
-### 第一步：创建支持 Google Form 的集成
+此步骤与文章 [**Integrate into Google Sheets**](https://wiki.seeedstudio.com/cn/Integrate_into_Google_Sheets_via_Helium/) 中的步骤类似。
 
-此步骤与文章 [**通过 Helium 集成到 Google Sheets**](https://wiki.seeedstudio.com/cn/Integrate_into_Google_Sheets_via_Helium/) 中的步骤类似。
-
-我们需要做的只是命名集成并简单地保存配置。
+我们需要做的事情是为该集成命名，并简单地保存配置。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/intergration.png" /></div>
 
-连接到 Google Form：
+连接到 Google Form
 
 - 创建
   <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Form_1.png" /></div>
@@ -97,33 +93,33 @@ IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 
 - 连接到 Google Sheets
    <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Form_2.png" /></div>
 
-- 链接到 Google Form ID
+- 关联 Google Form ID
   <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Form_3.png" /></div>
 
-### 第二步：使用 Google Form API 和解码器功能创建函数
+### 步骤 2. 使用 Google Form API 和 Decoder 功能创建一个 Fuction
 
-确保 Google Form 已连接到函数，并填写我们从上述步骤中获得的 ID。
+确保 Google Form 已连接到 Fuction，并填写了我们在上述步骤中获得的 ID。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Func.png" /></div>
 
-我们需要创建一个支持解码器的数据流传输函数，如下所示：
+我们需要创建一个带有 Decoder 支持的 Fuction，用于我们的数据流传输，如下所示。
 
 ```Javascript
 function Decoder(bytes, port) {
 
     var decoded = {};
- 
+
     function transformers(bytes) {
         if (bytes[0] == 255 || bytes[0] == 0) {
             value = bytes[2] * 256 + bytes[3];
         }
         return value;
     }
- 
+
     if (port == 8) {
         decoded.class = transformers(bytes.slice(0, 4));
     }
-  
+
   var decodedPayload = {
     "class": decoded.class 
   };
@@ -151,9 +147,9 @@ function Serialize(payload) {
 // DO NOT REMOVE: Google Form Function\
 ```
 
-### 第三步：配置数据流
+### 步骤 3. 配置 Flows
 
-确保连接正常。
+确保连接
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal_Edge_Impulse_with_Helium/Flows.png" /></div>
 
@@ -161,20 +157,20 @@ function Serialize(payload) {
 
 :::note
 更多详情，请阅读：
-[Wio Terminal Edge Impulse 使用内置加速度计进行连续运动识别](https://wiki.seeedstudio.com/cn/Wio-Terminal-TinyML-EI-2/)
+[Wio Terminal Edge Impulse 使用内置加速度计进行连续动作识别](https://wiki.seeedstudio.com/cn/Wio-Terminal-TinyML-EI-2/)
 :::
 
-## Arduino (Wio Terminal) 配置
+## Ardiuno（Wio Terminal）配置
 
 :::note
-由于传感器和环境的不同，在不同载板上直接烧录训练好的模型并不总是理想的。可靠的模型需要用户自行训练，因此这里只提供测试代码以便快速体验。
+由于传感器和环境不同，直接烧录在不同载板上训练的模型并不总是理想的。可靠的模型需要用户自己训练，因此这里只提供测试代码以便快速体验。
 :::
 
-### 快速体验
+### 体验一下
 
-在我们从 Edge Impulse 生成库之后，需要修改代码以通过 Wio Terminal 上的 LoRa 发送数据。如果您只是想快速体验，只需复制以下代码并通过 Arduino IDE 将其烧录到您的 Wio Terminal 上。
+在我们从 Edge Impulse 生成库之后，需要修改代码，以便在 Wio Terminal 上通过 Lora 发送数据。如果你只是想先体验一下，只需复制下面的代码，并通过 Arduino IDE 将其烧录到你的 Wio Terminal 上。
 
-烧录以下测试代码。
+烧录下面的测试代码。
 
 ```cpp
 #include <AIot_Example_inferencing.h>
@@ -190,7 +186,7 @@ TFT_eSPI tft;
 SoftwareSerial mySerial(A0, A1); // RX, TX
 
 SensirionI2CSht4x sht4x;
- 
+
 static char recv_buf[512];
 static bool is_exist = false;
 static bool is_join = false;
@@ -209,12 +205,12 @@ static int at_send_check_response(char *p_ack, int timeout_ms, char *p_cmd, ...)
     va_end(args);
     delay(200);
     startMillis = millis();
- 
+
     if (p_ack == NULL)
     {
         return 0;
     }
- 
+
     do
     {
         while (mySerial.available() > 0)
@@ -224,16 +220,16 @@ static int at_send_check_response(char *p_ack, int timeout_ms, char *p_cmd, ...)
             Serial.print((char)ch);
             delay(2);
         }
- 
+
         if (strstr(recv_buf, p_ack) != NULL)
         {
             return 1;
         }
- 
+
     } while (millis() - startMillis < timeout_ms);
     return 0;
 }
- 
+
 static void recv_prase(char *p_msg)
 {
     if (p_msg == NULL)
@@ -244,63 +240,63 @@ static void recv_prase(char *p_msg)
     int data = 0;
     int rssi = 0;
     int snr = 0;
- 
+
     p_start = strstr(p_msg, "RX");
     if (p_start && (1 == sscanf(p_start, "RX: \"%d\"\r\n", &data)))
     {
         Serial.println(data);
     }
- 
+
     p_start = strstr(p_msg, "RSSI");
     if (p_start && (1 == sscanf(p_start, "RSSI %d,", &rssi)))
     {
         Serial.println(rssi);
     }
- 
+
     p_start = strstr(p_msg, "SNR");
     if (p_start && (1 == sscanf(p_start, "SNR %d", &snr)))
     {
         Serial.println(snr);
     }
 }
-////// 发送消息块结束
+////// Send message block end
 
 
-/* 常量定义 -------------------------------------------------------- */
+/* Constant defines -------------------------------------------------------- */
 #define CONVERT_G_TO_MS2    9.80665f
-#define MAX_ACCEPTED_RANGE  2.0f        // 从 2022 年 3 月开始，模型生成时设置范围为 +-2，但此示例使用 Arduino 库，范围设置为 +-4g。如果您使用的是较旧的模型，请忽略此值并使用 4.0f
+#define MAX_ACCEPTED_RANGE  2.0f        // starting 03/2022, models are generated setting range to +-2, but this example use Arudino library which set range to +-4g. If you are using an older model, ignore this value and use 4.0f instead
 
-/* 私有变量 ------------------------------------------------------- */
-static bool debug_nn = false; // 设置为 true 以查看例如从原始信号生成的特征
+/* Private variables ------------------------------------------------------- */
+static bool debug_nn = false; // Set this to true to see e.g. features generated from the raw signal
 
 /**
-* @brief      Arduino setup 函数
+* @brief      Arduino setup function
 */
 void setup()
 {
-    // 在此处放置初始化代码，仅运行一次：
+    // put your setup code here, to run once:
     Serial.begin(115200);
-    Serial.println("Edge Impulse 推理演示");
+    Serial.println("Edge Impulse Inferencing Demo");
 
     tft.begin();
     tft.setRotation(3);
     tft.fillScreen(TFT_WHITE);
- 
+
     lis.begin(Wire1);
- 
+
     if (!lis.available()) {
-    Serial.println("初始化 IMU 失败！");
+    Serial.println("Failed to initialize IMU!");
     while (1);
     }
     else {
-        ei_printf("IMU 初始化成功\r\n");
+        ei_printf("IMU initialized\r\n");
     }
-    lis.setOutputDataRate(LIS3DHTR_DATARATE_100HZ); // 设置输出数据速率为 25Hz，可设置到 5kHz 
-    lis.setFullScaleRange(LIS3DHTR_RANGE_16G); // 设置量程为 2g，可选择 2, 4, 8, 16g
+    lis.setOutputDataRate(LIS3DHTR_DATARATE_100HZ); // Setting output data rage to 25Hz, can be set up tp 5kHz 
+    lis.setFullScaleRange(LIS3DHTR_RANGE_16G); // Setting scale range to 2g, select from 2,4,8,16g
 
 
     if (EI_CLASSIFIER_RAW_SAMPLES_PER_FRAME != 3) {
-        ei_printf("错误：EI_CLASSIFIER_RAW_SAMPLES_PER_FRAME 应等于 3（即 3 个传感器轴）\n");
+        ei_printf("ERR: EI_CLASSIFIER_RAW_SAMPLES_PER_FRAME should be equal to 3 (the 3 sensor axes)\n");
         return;
     }
 
@@ -317,16 +313,16 @@ void setup()
     error = sht4x.serialNumber(serialNumber);
     delay(5000);
     if (error) {
-        Serial.print("尝试执行 serialNumber() 时出错：");
+        Serial.print("Error trying to execute serialNumber(): ");
         errorToString(error, errorMessage, 256);
         Serial.println(errorMessage);
     } else {
-        Serial.print("序列号：");
+        Serial.print("Serial Number: ");
         Serial.println(serialNumber);
     }
-    
-    Serial.print("E5 LORAWAN 测试\r\n");
- 
+
+    Serial.print("E5 LORAWAN TEST\r\n");
+
     if (at_send_check_response("+AT: OK", 100, "AT\r\n"))
     {
         is_exist = true;
@@ -344,38 +340,38 @@ void setup()
     else
     {
         is_exist = false;
-        Serial.print("未找到 E5 模块。\r\n");
+        Serial.print("No E5 module found.\r\n");
     }
 }
 
 /**
- * @brief 返回数字的符号
+ * @brief Return the sign of the number
  * 
  * @param number 
- * @return int 如果为正（或 0）返回 1，如果为负返回 -1
+ * @return int 1 if positive (or 0) -1 if negative
  */
 float ei_get_sign(float number) {
     return (number >= 0.0) ? 1.0 : -1.0;
 }
 
 /**
-* @brief      获取数据并运行推理
+* @brief      Get data and run inferencing
 *
-* @param[in]  debug  如果为 true 则获取调试信息
+* @param[in]  debug  Get debug info if true
 */
 void loop()
 {
-    ei_printf("\n2 秒后开始推理...\n");
+    ei_printf("\nStarting inferencing in 2 seconds...\n");
 
     delay(2000);
 
-    ei_printf("采样中...\n");
+    ei_printf("Sampling...\n");
 
-    // 在此处为我们将从 IMU 读取的值分配一个缓冲区
+    // Allocate a buffer here for the values we'll read from the IMU
     float buffer[EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE] = { 0 };
 
     for (size_t ix = 0; ix < EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE; ix += 3) {
-        // 确定下一个 tick（然后稍后休眠）
+        // Determine the next tick (and then sleep later)
         uint64_t next_tick = micros() + (EI_CLASSIFIER_INTERVAL_MS * 1000);
         lis.getAcceleration(&buffer[ix], &buffer[ix + 1], &buffer[ix + 2]);
 
@@ -392,35 +388,35 @@ void loop()
         delayMicroseconds(next_tick - micros());
     }
 
-    // 将原始缓冲区转换为信号以进行分类
+    // Turn the raw buffer in a signal which we can the classify
     signal_t signal;
     int err = numpy::signal_from_buffer(buffer, EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE, &signal);
     if (err != 0) {
-        ei_printf("从缓冲区创建信号失败 (%d)\n", err);
+        ei_printf("Failed to create signal from buffer (%d)\n", err);
         return;
     }
 
-    // 运行分类器
+    // Run the classifier
     ei_impulse_result_t result = { 0 };
 
     err = run_classifier(&signal, &result, debug_nn);
     if (err != EI_IMPULSE_OK) {
-        ei_printf("错误：运行分类器失败 (%d)\n", err);
+        ei_printf("ERR: Failed to run classifier (%d)\n", err);
         return;
     }
 
-    // 打印预测结果
-    ei_printf("预测结果 ");
-    ei_printf("(DSP: %d ms., 分类: %d ms., 异常: %d ms.)",
+    // print the predictions
+    ei_printf("Predictions ");
+    ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
         result.timing.dsp, result.timing.classification, result.timing.anomaly);
     ei_printf(": \n");
     for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
         ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
     }
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
-    ei_printf("    异常分数: %.3f\n", result.anomaly);
+    ei_printf("    anomaly score: %.3f\n", result.anomaly);
 #endif
-    
+
    int classification_flag = 0;
 
    if (result.classification[1].value > 0.7) {
@@ -431,7 +427,7 @@ void loop()
     tft.fillScreen(TFT_WHITE);
     classification_flag = 1;
    }
- 
+
    if (result.classification[2].value > 0.7) {
     tft.fillScreen(TFT_RED);
     tft.setFreeFont(&FreeSansBoldOblique12pt7b);
@@ -441,7 +437,7 @@ void loop()
     classification_flag = 2;
    }
 
-    
+
     if (is_exist){
         int ret = 0;
         if (is_join){
@@ -451,7 +447,7 @@ void loop()
             }
             else{
                 Serial.println("");
-                Serial.print("加入失败！\r\n\r\n");
+                Serial.print("JOIN failed!\r\n\r\n");
                 delay(5000);
             }
         }
@@ -466,7 +462,7 @@ void loop()
               recv_prase(recv_buf);
             }
             else{
-              Serial.print("发送失败！\r\n\r\n");
+              Serial.print("Send failed!\r\n\r\n");
             }
             delay(5000);
         }
@@ -479,24 +475,24 @@ void loop()
 }
 
 #if !defined(EI_CLASSIFIER_SENSOR) || EI_CLASSIFIER_SENSOR != EI_CLASSIFIER_SENSOR_ACCELEROMETER
-#error "当前传感器的模型无效"
+#error "Invalid model for current sensor"
 #endif
 ```
 
-### DIY 实现更多功能
+### 自己动手实现更多功能
 
 :::note
-有关更多详细信息，请参阅以下文档。
+更多详细信息，请参阅下面的文档。
 
-- [**Connecting-to-Helium**](https://wiki.seeedstudio.com/cn/Connecting-to-Helium/)
+- [**Connection**](https://wiki.seeedstudio.com/cn/Connecting-to-Helium/)
 :::
-我们可能需要更多关注以下内容：
+有些内容我们可能需要更加注意：
 
 - 存储分类结果：
 
-    我们可以设置一个阈值，当满足某个条件时更改标志，并为不同类别分配不同的标签。
+    我们可以设置一个阈值，当满足某个条件时改变标志位，并为不同类别分配不同的标签。
 
-    我们可以注释掉 tft 函数以提高速度。
+    为了提高速度，我们可以注释掉 tft 函数。
 
     ```c++
     int classification_flag = 0;
@@ -521,7 +517,7 @@ void loop()
 
 - 数据发送代码块：
 
-    在 LoRa 网络可用的情况下，我们可以使用函数将标签发送到 Helium，并通过我们在 Helium 中编写的解码器进行恢复。
+    在 Lora 网络可用的情况下，我们可以使用该函数发送标签，并通过我们编写的 Decoder 将其解析出来。
 
     ```c++
     if (is_exist){
@@ -539,10 +535,10 @@ void loop()
         }
         else{
             char cmd[128];
-            sprintf(cmd, "AT+CMSGHEX=\"%08X %08X\"\r\n", classification_flag); // 将 classification_flag 更改为想要传输的数据
+            sprintf(cmd, "AT+CMSGHEX=\"%08X %08X\"\r\n", classification_flag); // Change classification_flag to data wanna transfer
             ret = at_send_check_response("Done", 10000, cmd);
             if (ret){
-              Serial.print("classification_flag:");
+              Serial.print("classification_flag:");s
               Serial.print(classification_flag);
               Serial.print("\t");
               recv_prase(recv_buf);
@@ -561,7 +557,7 @@ void loop()
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们致力于为您提供各种支持，确保您使用我们的产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

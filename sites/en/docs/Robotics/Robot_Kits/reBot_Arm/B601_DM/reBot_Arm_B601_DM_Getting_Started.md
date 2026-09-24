@@ -1,6 +1,6 @@
 ---
 description: This guide will help you get started with the reBot Arm B601-DM, including purchasing options, assembly, calibration, and software configuration.
-title: reBot Arm B601-DM Quick Start
+title: B601-DM Quick Start
 keywords:
   - reBot
   - B601-DM
@@ -17,13 +17,17 @@ last_update:
   date: 2026-07-28
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
+import '/src/css/rebot-wiki-style.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# Getting Started with reBot Arm B601-DM
+# reBot Arm B601-DM Quick Start
 
 <RebotDmDocNav />
 
@@ -32,10 +36,16 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
     src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -50,63 +60,69 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
-The content of this guide is racing towards you at the speed of light — stay tuned!
+<p align="center">
+  The reBot Arm project is open source on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm)—please visit the repository and give it a Star! The repository contains the complete BOM. This guide will help you get started with the B601-DM, from assembly to operation.
+</p>
 
-The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). This guide will take you through the quick start of B601-DM, from assembly to operation.
+<GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
+
+## Project Introduction
+
+**reBot-DevArm (reBot Arm B601 DM and reBot Arm B601 RS)** is a robotic arm project dedicated to lowering the threshold for learning embodied intelligence. We focus on **"True Open Source"** — not just code, we open-source all of the following without reservation:
+
+- 🦾 **Open-source robotic arms with two motor versions**: We provide all open-source files for RoboStride and Damiao motor versions of the same appearance.
+- 🛠️ **Hardware blueprints**: Sheet metal and 3D printed part source files.
+- 🔩 **BOM (Bill of Materials)**: Detailed to every screw's specification and purchase link.
+- 💻 **Software and algorithms**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
 
 :::tip
 If you purchased a pre-assembled kit, please skip directly to the tutorial video in **Step 3** at the end of this article and follow along. There is no need to write motor IDs or calibrate zero positions.
 
 It has been verified that virtual machine performance is insufficient for running demos and there are configuration issues. It is recommended to use an Ubuntu physical machine to control the robotic arm.
+
+We recommend installing **Ubuntu 24.04 LTS**.
 :::
-
-## Purchasing Options
-
-The reBot Arm B601-DM is available in multiple configurations to meet different user needs.
-
-### Options Comparison
-
-| Configuration | Body | Gripper | Motors | Structure | Purchase Link |
-|:---|:---:|:---:|:---:|:---:|:---|
-| **Complete Kit** | ✅ | ✅ | ✅ | ✅ | [Coming Soon](https://www.seeedstudio.com/) |
-| **Gripper Only** | ❌ | ✅ | ❌ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
-| **Body Only (Structure)** | ✅ | ❌ | ❌ | ✅ | [Coming Soon](https://www.seeedstudio.com/) |
-| **Body Only (Motors)** | ✅ | ❌ | ✅ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
-
 
 ## Safety Disclaimer and Risk Notice
 
-<div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "16px" }}>
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" />
-    <img style={{ width: "calc(50% - 8px)", maxWidth: "420px", height: "auto" }}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" />
+<div className="rebot-disclaimer-gallery">
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="reBot Arm safety disclaimer and risk notice in Chinese" />
+  </figure>
+  <figure className="rebot-disclaimer-gallery-item">
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="reBot Arm safety disclaimer and risk notice in English" />
+  </figure>
 </div>
 
 ## About Power Supply
 
 1. The robotic arm is not shipped with a power supply / does not include a power supply by default. You can connect a battery yourself, or purchase our open-source [24V 14.6A MeanWell Power Supply](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html) or [Amazon](https://www.amazon.com/MEAN-WELL-LRS-350-24-350-4W-Switchable/dp/B013ETVO12/ref=sr_1_1?crid=36B2HIB8MM2IT&dib=eyJ2IjoiMSJ9.vpZwmjb4m5KMNcsg2Kb7wr8DDWa-ryUqO5fConlxqlsGoTVB5HN2uBBnRNZI0kcACiaR5DKFiYWvIHLEUN3luZqJAzogeQkeT-fol0m835-oBBWSud1ixkGayrl5nRsF5KMgfvkwAIW949dTTpU2CWdNMrf8g43_vKWaytfX9SHeMJ1hmhS6Kab6fBgER6CgB47K_eEmoJj3KhrjJMtn980osDG-bCLniBcRAHThmXsVRVdpGPsmckGLLyaXrIGRG9plhKI-F7H8hfqW7vzGbwIV_bF8cFtRjdRm5Shtb0o.ekLYD0hsc1Uzji4qKl0Q0USpDTr92JEMQobBXl9lYD0&dib_tag=se&keywords=LRS-350-24&qid=1780021690&s=industrial&sprefix=lrs-350-24%2Cindustrial%2C696&sr=1-1&th=1), Please do not purchase power supplies from unbranded manufacturers or unsafe channels. Any risks or consequences arising therefrom shall be borne by the individual.
 
-If your household voltage is 220V, set the voltage selector switch on the side of the power supply to 230V. If your household voltage is 110V, switch it to 115V.
+2. If your household voltage is 220V, set the voltage selector switch on the side of the power supply to 230V. If your household voltage is 110V, switch it to 115V.
 
-| **220V** | **110V** |
-|:---:|:---:|
-| <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" width="300" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" width="300" /> |
+<div className="rebot-power-gallery">
+  <figure className="rebot-power-gallery-item">
+    <figcaption>220V</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/230V.jpg" alt="Power supply voltage selector set to 230V" />
+  </figure>
+  <figure className="rebot-power-gallery-item">
+    <figcaption>110V</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/115V.jpg" alt="Power supply voltage selector set to 115V" />
+  </figure>
+  <figure className="rebot-power-gallery-item rebot-power-gallery-item--wide">
+    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" alt="MeanWell power adapter for reBot Arm B601-DM" />
+  </figure>
+</div>
 
-   <div align="center">
-     <img width={800}
-     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100029903-gallery-6_1.jpg" />
-   </div>
+### Assemble the Power Supply
 
-2. Alternatively, you can choose our open-source 24V 14.6A MeanWell power supply enclosure for self-assembly. The text instructions and BOM are open-sourced in the [GitHub repository](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) (recommended only for developers with relevant power supply assembly experience).
+Alternatively, you can choose our open-source 24V 14.6A MeanWell power supply enclosure for self-assembly. The text instructions and BOM are open-sourced in the [GitHub repository](https://github.com/LAN-GER/reBot-DevArm/tree/main/hardware/reBot_B601_DM) (recommended only for developers with relevant power supply assembly experience).
 
-   Assembly reference video:
+Assembly reference video:
 
    <div class="video-container">
      <iframe width="900" height="600" src="https://www.youtube.com/embed/DHFA2UfQzUo?si=GYy-Z38qTUW6KPqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
    </div>
-
-
 
 ## Step 1: [Assembly Guide](https://youtu.be/rfTQoFCfnMc)
 
@@ -188,20 +204,19 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 - [Software Download Link](https://github.com/dmBots/motor-debugging-tool)
 
-
 #### Write Motor ID and Test Enable
 
 Set the CAN ID and Master ID for each joint motor according to the parameters in the table below:
 
-| Motor Number | CAN ID | Master ID |
-|:---:|:---:|:---:|
-| Motor 1 | 0x01 | 0x11 |
-| Motor 2 | 0x02 | 0x12 |
-| Motor 3 | 0x03 | 0x13 |
-| Motor 4 | 0x04 | 0x14 |
-| Motor 5 | 0x05 | 0x15 |
-| Motor 6 | 0x06 | 0x16 |
-| Motor 7 | 0x07 | 0x17 |
+| Motor Number | Motor Model | CAN ID | Master ID |
+| :---: | :---: | :---: | :---: |
+| Motor 1 | J4340P | 0x01 | 0x11 |
+| Motor 2 | J4340P | 0x02 | 0x12 |
+| Motor 3 | J4340P | 0x03 | 0x13 |
+| Motor 4 | J4310 | 0x04 | 0x14 |
+| Motor 5 | J4310 | 0x05 | 0x15 |
+| Motor 6 | J4310 | 0x06 | 0x16 |
+| Motor 7 | J4310 | 0x07 | 0x17 |
 
 :::danger
 The following is an operation example using Motor 1. Please ensure that the CAN ID and Master ID for each joint motor are set correctly according to the table above.
@@ -250,10 +265,19 @@ After testing, remember to click `Disable` to exit the enabled state.
 <iframe width="900" height="600" src="https://www.youtube.com/embed/uXuzs1qmj6A?si=lfgXXlF1awhtnvaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Step 3: Calibration reBot Arm and Getting Started
+## Step 3: Use MotorBridge to Calibrate the Arm and Complete the First Run
 
 We trust you have completed the robotic arm assembly, zero-point initialization, motor ID configuration, and other setup steps by following the video. You are now ready to officially explore the series of tutorials and tools we have released.
 
+:::tip
+
+1. Explore our **MotorBridge** platform, an all-in-one solution supporting an expanding list of motors including [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow, and more. It is also compatible with continuously updated robotic arms such as reBot. Designed for beginners, we also offer a Python SDK that implements the same functionality for developers.
+
+2. Experience new features and details of MotorBridge for the reBot robotic arm, including one-click zero-point setting, parameter writing, motor control via UI drag-and-drop, and a built-in model visualization interface.
+
+3. This tool is fully compatible with **Windows, Ubuntu, and macOS** operating systems.
+
+:::
 
 Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.
 
@@ -261,38 +285,99 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 <iframe width="900" height="600" src="https://www.youtube.com/embed/SI1PRQYkhdg?si=E0m7uTF4IhCVZYl_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-1. Explore our **MotorBridge** platform, an all-in-one solution supporting an expanding list of motors including [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow, and more. It is also compatible with continuously updated robotic arms such as reBot. Designed for beginners, we also offer a Python SDK that implements the same functionality for developers.
+### Software Setup and Calibration Workflow
 
-2. Experience new features and details of MotorBridge for the reBot robotic arm, including one-click zero-point setting, parameter writing, motor control via UI drag-and-drop, and a built-in model visualization interface.
+Follow these steps in order to install Miniforge and create an isolated Python environment for reBot development.
 
-3. This tool is fully compatible with **Windows, Ubuntu, and Mac** operating systems.
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Install Miniforge</h4>
+      <p className="rebot-step-label">Step 1</p>
 
-### Step 1: Install Miniforge (on Windows\Ubuntu\macOS\Jetson\Pi)
+Download and install Miniforge for your operating system:
 
-Install Miniforge and create a virtual environment to avoid interference from other environment packages.
-
-Ubuntu\Jetson\Pi:
+<Tabs>
+<TabItem value="Ubuntu" label="Ubuntu\Jetson\Raspberry Pi">
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-or macOS:
+During installation, press <kbd>Enter</kbd> to continue, enter `yes` to accept the terms, and enter `yes` when asked whether to initialize Conda.
+
+Restart the terminal and verify the installation with `conda --version`.
+
+:::tip If `conda` is not found
+Load Miniforge and initialize Bash:
+
+```bash
+source ~/miniforge3/etc/profile.d/conda.sh
+conda init bash
+```
+
+:::
+
+</TabItem>
+<TabItem value="macOS" label="macOS">
+
 ```bash
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
 bash Miniforge3-MacOSX-$(uname -m).sh
 ```
 
-or Windows:
+During installation, press <kbd>Enter</kbd> to continue, enter `yes` to accept the terms, and enter `yes` when asked whether to initialize Conda.
 
-Open the Miniforge Release page in your browser, find the latest `Miniforge3-Windows-x86_64.exe` and download it:
+Restart the terminal and verify the installation with `conda --version`.
 
-```text
-https://github.com/conda-forge/miniforge/releases
+:::tip If `conda` is not found
+Load Miniforge and initialize Zsh, the default shell on current macOS versions:
+
+```bash
+source ~/miniforge3/etc/profile.d/conda.sh
+conda init zsh
 ```
 
-### Step 2: Environment Setup
+:::
+
+</TabItem>
+<TabItem value="windows" label="Windows">
+
+Open the [Miniforge Releases page](https://github.com/conda-forge/miniforge/releases), find the latest `Miniforge3-Windows-x86_64.exe`, and download it.
+
+:::tip Initialize Conda for your terminal
+**Git Bash users:** If `conda` is not found, load Conda first:
+
+```bash
+# Temporary: replace <install_path> with the actual path
+source <install_path>/etc/profile.d/conda.sh
+
+# Permanent: add it to bashrc once
+echo 'source <install_path>/etc/profile.d/conda.sh' >> ~/.bashrc
+source ~/.bashrc
+```
+
+For PowerShell, initialize Conda with:
+
+```bash
+conda init powershell
+```
+
+:::
+
+</TabItem>
+</Tabs>
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Environment Setup</h4>
+      <p className="rebot-step-label">Step 2</p>
 
 Create a virtual environment with Python 3.12:
 
@@ -306,7 +391,14 @@ Then activate your virtual environment, you have to do this each time you open a
 conda activate rebot
 ```
 
-### Step3: Install motorbridge
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>Install Motorbridge</h4>
+      <p className="rebot-step-label">Step 3</p>
 
 :::tip
 
@@ -321,16 +413,31 @@ After activating the reBot virtual environment, run the following command to ins
 pip install motorbridge
 ```
 
-###  Step4: Connect the rebot
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Connect the reBot Arm</h4>
+      <p className="rebot-step-label">Step 4</p>
+
 After connecting the robotic arm to your computer through USB cable and turning on its power supply, you need to configure 666 access permissions for the serial port.(Windows systems do not require permission configuration; you may skip this step.)
 
 ```bash
 sudo chmod 666 /dev/ttyACM*
 ```
 
-### Step5: Open the motorbridge
+</div>
+</section>
 
-Open `https://motorbridge.github.io/motorbridge-studio/` in your browser, then click the help,Copy the command suitable for your system and driver board, check the IP and port, then press Enter in the terminal.
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>Start MotorBridge</h4>
+      <p className="rebot-step-label">Step 5</p>
+
+Open the address [motorbridge-studio](https://motorbridge.github.io/motorbridge-studio/) in your browser, click the Help option, copy the corresponding command based on your operating system and driver board, verify the IP address and port number, then press Enter in the terminal to run it.
 
 For example on Windows:
 
@@ -343,8 +450,14 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/motorbridge_help.png" />
   </div>
 
+</div>
+</section>
+</div>
+
 ## FAQ
+
 ### 1. Loud abnormal noise occurs immediately after motor startup
+
 - This issue usually happens when parameter calibration is accidentally triggered during ID configuration, which overwrites factory preset parameters such as motor inertia. Use **DM_Tools_v.1.8.0.1.exe (Windows-only)** available at:
 https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
 Export complete parameters from an intact motor of the same model via the host software, import these parameters into the faulty unit, update its corresponding CAN ID, save the written parameters, then proceed with zero-point calibration.
@@ -363,4 +476,5 @@ Export complete parameters from an intact motor of the same model via the host s
 [DM4340P Default Parameters](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4340P_Default_Parameters.txt)
 
 ### 2. All motors share identical CAN IDs
+
 - When performing zero-point calibration via **DM_Tools_v.1.8.0.1.exe (Windows-only)**, avoid clicking the Read or Set buttons next to the CAN ID field. The debug interface communicates over the CAN bus; clicking Set will unify the CAN ID for every motor connected on the CANBUS.

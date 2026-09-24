@@ -1,27 +1,29 @@
 ---
-description: Grave a imagem Debian 13 na reCamera Pro
+description: Gravar a imagem Debian 13 na reCamera Pro
 title: Gravar a imagem Debian 13 na reCamera Pro
 keywords:
   - reCamera
   - reCamera Pro
   - RV1126B
   - Debian 13
-slug: /recamera_pro_debian
+slug: /recamera_pro_debian_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 09/07/2026
+  date: 09/08/2026
   author: yylin
 createdAt: '2026-08-04'
-updatedAt: '2026-08-04'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_debian/
+updatedAt: '2026-09-07'
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_debian_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/experimental_debian13.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_debian/), which now serves the original slug /recamera_pro_debian. This file is kept for history as a draft (slug /recamera_pro_debian_legacy) and is excluded from production builds. Do not link here. -->
 
 ## Introdução
 
 A reCamera Pro é alimentada pelo chip RV1126B e está disponível com 2 GB ou 4 GB de memória. Ela vem com firmware Buildroot para um início rápido com inferência de IA. Esta página fornece uma imagem Debian 13 para usuários que precisam de mais flexibilidade para desenvolvimento e implantação.
 
-Após gravar a imagem Debian 13, você pode compilar seus próprios aplicativos com CMake, instalar as dependências necessárias com `apt` e executar contêineres Docker. A imagem é compatível com os drivers de fábrica da Seeed e não requer alterações na device tree. A câmera, o microfone, o alto-falante e o Wi-Fi funcionam conforme o esperado; Bluetooth não é suportado.
+Após gravar a imagem Debian 13, você pode compilar seus próprios aplicativos com CMake, instalar as dependências necessárias com `apt` e executar contêineres Docker. A imagem é compatível com os drivers de fábrica da Seeed e não requer alterações na device tree. A câmera, o microfone, o alto-falante e o Wi-Fi funcionam como esperado; Bluetooth não é suportado.
 
 :::warning
 Este firmware é atualmente experimental. A Seeed não o mantém neste momento; ele é fornecido como uma opção adicional de desenvolvimento.
@@ -31,7 +33,7 @@ Este firmware é atualmente experimental. A Seeed não o mantém neste momento; 
 
 ### Baixar a imagem
 
-[Baixe a imagem Debian 13 do Google Drive](https://drive.google.com/file/d/1qLlbsgUB88qC2xBn4-_Decl8XBZgr7EI/view?usp=drive_link).
+[Baixe a imagem Debian 13](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz).
 
 ### Baixar a ferramenta de gravação e o driver
 
@@ -77,16 +79,16 @@ A tela a seguir indica que o driver foi instalado com sucesso.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-7.png" /></div>
 
-7. Selecione a entrada `rootfs` e clique na reticência (`...`) à sua direita. Substitua seu arquivo de imagem por `rootfs_debian_clean.img` do diretório de firmware extraído.
+7. Selecione a entrada `rootfs` e clique na elipse (`...`) à sua direita. Substitua seu arquivo de imagem por `rootfs_debian_clean.img` do diretório de firmware extraído.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-11.png" /></div>
 
 ### Colocar a reCamera Pro em modo Loader
 
-1. Conecte a porta USB 3.0 da reCamera Pro ao seu computador Windows usando um cabo USB e, em seguida, alimente o dispositivo pela porta DC.
+1. Conecte a porta USB 3.0 da reCamera Pro ao seu computador com Windows usando um cabo USB e, em seguida, alimente o dispositivo pela porta DC.
 2. Localize os orifícios dos pinos `BOOT` e `RESET` na lateral do dispositivo.
 3. Pressione e segure `BOOT`, depois pressione rapidamente `RESET` para reiniciar o dispositivo.
-4. Continue segurando `BOOT` por aproximadamente 5 segundos após pressionar `RESET` e depois solte. O dispositivo entra no modo Loader.
+4. Continue segurando `BOOT` por aproximadamente 5 segundos após pressionar `RESET` e então solte. O dispositivo entra no modo Loader.
 
 O SocToolKit agora deve indicar que o dispositivo foi detectado.
 
@@ -102,13 +104,94 @@ Clique em **Download** para iniciar a gravação do firmware.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-13.png" /></div>
 
-Quando a gravação for concluída, a interface deve se parecer com a seguinte:
+Quando a gravação for concluída, a interface deverá se parecer com a seguinte:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-14.png" /></div>
 
+### Gravar no Linux
+
+Você também pode gravar o firmware na reCamera Pro a partir do Linux usando o `upgrade_tool` da Rockchip. Esta seção usa o Ubuntu 24.04 como exemplo.
+
+:::caution
+A gravação sobrescreve os dados do sistema no dispositivo. Faça backup dos dados importantes e certifique-se de que o dispositivo esteja em modo Loader antes de continuar.
+:::
+
+#### Preparar o ambiente
+
+Clone o repositório de ferramentas da Rockchip e verifique se ele contém `upgrade_tool`:
+
+```bash
+cd ~
+
+git clone https://github.com/rockchip-linux/rkbin.git
+
+cd ~/rkbin/tools
+
+ls -lh upgrade_tool
+```
+
+Em seguida, clone `Linux_Upgrade_Tool` e torne `upgrade_tool` executável:
+
+```bash
+cd ~
+
+git clone https://github.com/vicharak-in/Linux_Upgrade_Tool.git
+
+cd Linux_Upgrade_Tool
+
+chmod +x upgrade_tool
+
+sudo ./upgrade_tool -v
+```
+
+Confirme que o seu host Ubuntu está conectado à reCamera Pro e que o dispositivo está em modo Loader:
+
+```bash
+sudo ./upgrade_tool LD
+```
+
+A saída esperada é semelhante a:
+
+```bash
+List of rockusb connected(1)
+DevNo=1 Vid=0x2207,Pid=0x110f,LocationID=18     Mode=Loader     SerialNo=f28999835716f3be
+```
+
+Isso confirma que o dispositivo está conectado e em modo Loader.
+
+#### Gravar o firmware
+
+Certifique-se de que todos os arquivos de imagem tenham sido baixados e extraídos. Em seguida, use `upgrade_tool` para gravar cada partição no dispositivo. Substitua os caminhos de imagem de exemplo abaixo pelo caminho real para seus arquivos de firmware extraídos:
+
+```bash
+# 1. env
+sudo ./upgrade_tool WL 0x00000000 "/home/seeed/recaemra_pro/debian_img/env.img"
+
+# 2. idblock
+sudo ./upgrade_tool WL 0x00000040 "/home/seeed/recaemra_pro/debian_img/idblock.img"
+
+# 3. uboot
+sudo ./upgrade_tool WL 0x00000800 "/home/seeed/recaemra_pro/debian_img/uboot.img"
+
+# 4. misc
+sudo ./upgrade_tool WL 0x00002800 "/home/seeed/recaemra_pro/debian_img/misc.img"
+
+# 5. recovery
+sudo ./upgrade_tool WL 0x00002880 "/home/seeed/recaemra_pro/debian_img/recovery.img"
+
+# 6. boot
+sudo ./upgrade_tool WL 0x00007880 "/home/seeed/recaemra_pro/debian_img/boot.img"
+
+# 7. Debian rootfs
+sudo ./upgrade_tool WL 0x0000d080 "/home/seeed/recaemra_pro/debian_img/rootfs.img"
+
+# reboot
+sudo ./upgrade_tool RD
+```
+
 ## Sobre o novo firmware
 
-Após a gravação, conecte o dispositivo à sua rede usando um cabo Ethernet. Esta imagem não oferece suporte ao adaptador de rede virtual USB-C original. Você pode encontrar o endereço IP do dispositivo no seu roteador ou na interface de gerenciamento de Wi-Fi. O SSH está habilitado na imagem, portanto você pode fazer login diretamente via SSH. Se uma conexão de rede não estiver disponível, use o console serial UART com baud rate de `1500000`.
+Após a gravação, conecte o dispositivo à sua rede usando um cabo Ethernet. Esta imagem não oferece suporte ao adaptador de rede virtual USB-C original. Você pode encontrar o endereço IP do dispositivo no seu roteador ou na interface de gerenciamento de Wi-Fi. O SSH está habilitado na imagem, portanto você pode fazer login diretamente via SSH. Se uma conexão de rede não estiver disponível, use o console serial UART com taxa de baud de `1500000`.
 
 O sistema fornece apenas o usuário `root`, com a senha padrão `123123`. Altere a senha imediatamente após o primeiro login:
 
@@ -131,7 +214,7 @@ export no_proxy="localhost,127.0.0.1,::1,192.168.0.0/16"
 
 ## Configurar a hora
 
-Na primeira inicialização, a hora do sistema pode estar definida para 1970, o que faz com que a validação de certificados SSL falhe. Como o sistema não possui sincronização automática de horário configurada via systemd, defina manualmente a hora correta antes de atualizar o índice de pacotes:
+Na primeira inicialização, a hora do sistema pode estar definida para 1970, o que faz com que a validação de certificados SSL falhe. Como o sistema não tem sincronização automática de horário configurada via systemd, defina manualmente a hora correta antes de atualizar o índice de pacotes:
 
 ```bash
 date -s "2026-09-02 15:20:00"
@@ -152,7 +235,7 @@ for dev in /dev/v4l-subdev*; do
 done
 ```
 
-Normalmente, você verá uma saída semelhante à seguinte:
+Você normalmente verá uma saída semelhante à seguinte:
 
 ```bash
 ========== /dev/v4l-subdev2 ==========
@@ -204,7 +287,7 @@ ffmpeg \
   -y /tmp/camera.jpg
 ```
 
-Quando o comando terminar, visualize a imagem JPEG, processada pelo ISP e com orientação correta, em `/tmp/camera.jpg`.
+Quando o comando terminar, visualize a imagem JPEG processada pelo ISP e corretamente orientada em `/tmp/camera.jpg`.
 
 ## Configurar o microfone e o alto-falante
 
@@ -248,7 +331,7 @@ Docker version 26.1.5+dfsg1, build 411e817
 
 ### Configurar o Docker
 
-Crie o arquivo de configuração do daemon do Docker para definir o diretório de dados e desabilitar a rede padrão:
+Crie o arquivo de configuração do daemon do Docker para definir o diretório de dados e desativar a rede padrão:
 
 ```bash
 cat >/etc/docker/daemon.json <<'EOF'
@@ -344,7 +427,7 @@ gst-launch-1.0 -e \
 
 Quando o comando terminar, visualize a imagem processada pelo ISP em `/tmp/camera.jpg`.
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes níveis de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_device-and-system
+slug: /recamera_pro_api_device-and-system_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/recamera_pro_api_device-and-system/
+url: https://wiki.seeedstudio.com/recamera_pro_api_device-and-system_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/device_system.md (https://wiki.seeedstudio.com/recamera_pro_api_device-and-system/), which now serves the original slug /recamera_pro_api_device-and-system. This file is kept for history as a draft (slug /recamera_pro_api_device-and-system_legacy) and is excluded from production builds. Do not link here. -->
 
 # Device & System
 
