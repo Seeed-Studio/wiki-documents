@@ -1,5 +1,5 @@
 ---
-description: "Chapter 16 of the Seeed Embodied Intelligence Beginner's Course — train your first ACT policy: batch size, learning rate and steps, checkpoint management, starting training, monitoring loss and GPU status, and resuming interrupted training."
+description: 'Chapter 16 of the Seeed Embodied Intelligence Beginner''s Course — train your first ACT policy: batch size, learning rate and steps, checkpoint management, starting training, monitoring loss and GPU status, and resuming interrupted training.'
 title: Chapter 16 - Training Your First ACT Policy
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-19
   author: LiuJunjie
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_16/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 9/16/2026
   author: shuxu hu
 createdAt: '2023-02-17'
-updatedAt: '2025-09-18'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/Service_for_Fusion_PCB/
 ---
 

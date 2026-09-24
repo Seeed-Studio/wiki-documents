@@ -14,7 +14,7 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recamera_pro_hardware_specifications_legacy/
 ---
 <!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/hardware_specifications.md (https://wiki.seeedstudio.com/recamera_pro_hardware_specifications/), which now serves the original slug /recamera_pro_hardware_specifications. This file is kept for history as a draft (slug /recamera_pro_hardware_specifications_legacy) and is excluded from production builds. Do not link here. -->

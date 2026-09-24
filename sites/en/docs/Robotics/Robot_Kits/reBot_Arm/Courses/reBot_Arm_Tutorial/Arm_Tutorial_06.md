@@ -1,5 +1,5 @@
 ---
-description: "Chapter 6 of the Seeed Embodied Intelligence Beginner's Course — assemble the reBot Arm, assemble the power supply, wire the arm, and power it on for the first time."
+description: Chapter 6 of the Seeed Embodied Intelligence Beginner's Course — assemble the reBot Arm, assemble the power supply, wire the arm, and power it on for the first time.
 title: Chapter 6 - Assembly, Power Supply, and First Power-On
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-17
   author: LiuJunjie
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_6/
 ---
 

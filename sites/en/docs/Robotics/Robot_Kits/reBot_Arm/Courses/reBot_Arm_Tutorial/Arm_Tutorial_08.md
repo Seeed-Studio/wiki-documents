@@ -1,5 +1,5 @@
 ---
-description: "Chapter 8 of the Seeed Embodied Intelligence Beginner's Course — control the reBot Arm with the Python SDK: parameters, context manager connection, motion, zero point, and joint state."
+description: 'Chapter 8 of the Seeed Embodied Intelligence Beginner''s Course — control the reBot Arm with the Python SDK: parameters, context manager connection, motion, zero point, and joint state.'
 title: Chapter 8 - Controlling reBot Arm Using Python SDK
 keywords:
   - reBot
@@ -16,7 +16,7 @@ last_update:
   date: 2026-09-17
   author: LiuJunjie
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_8/
 ---
 

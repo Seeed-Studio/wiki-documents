@@ -1,5 +1,5 @@
 ---
-description: "Chapter 9 of the Seeed Embodied Intelligence Beginner's Course — foundations of robot learning and imitation learning: why the arm needs learning, rule-based vs learning-based control, observation/state/action, action chunks, data distribution, and the three phases of training, inference, and evaluation."
+description: 'Chapter 9 of the Seeed Embodied Intelligence Beginner''s Course — foundations of robot learning and imitation learning: why the arm needs learning, rule-based vs learning-based control, observation/state/action, action chunks, data distribution, and the three phases of training, inference, and evaluation.'
 title: Chapter 9 - Foundations of Robot Learning and Imitation Learning
 keywords:
   - reBot
@@ -16,7 +16,7 @@ last_update:
   date: 2026-09-19
   author: LiuJunjie
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_9/
 ---
 

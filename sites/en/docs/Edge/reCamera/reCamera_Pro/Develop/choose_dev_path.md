@@ -17,6 +17,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_dev_path/
+createdAt: '2026-09-21'
+updatedAt: '2026-09-21'
 ---
 
 # Choose a Development Path

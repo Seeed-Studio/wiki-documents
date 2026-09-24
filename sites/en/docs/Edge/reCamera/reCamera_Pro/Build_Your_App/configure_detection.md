@@ -1,6 +1,6 @@
 ---
 description: Choose which AI model to run, configure detection classes, set confidence and IOU thresholds, control inference frequency, and monitor real-time output on reCamera Pro.
-title: "Configure Detection: Classes, Thresholds and Frequency"
+title: 'Configure Detection: Classes, Thresholds and Frequency'
 keywords:
   - reCamera
   - reCamera Pro
@@ -16,6 +16,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_ai_inference/
+createdAt: '2026-09-21'
+updatedAt: '2026-09-21'
 ---
 
 # Configure Detection: Classes, Thresholds and Frequency

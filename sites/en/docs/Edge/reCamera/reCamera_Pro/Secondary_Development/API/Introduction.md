@@ -14,7 +14,7 @@ last_update:
   date: 07/15/2026
   author: Sizhao zhou
 createdAt: '2026-07-15'
-updatedAt: '2026-07-15'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recamera_pro_api_introduction_legacy/
 ---
 <!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/introduction.md (https://wiki.seeedstudio.com/recamera_pro_api_introduction/), which now serves the original slug /recamera_pro_api_introduction. This file is kept for history as a draft (slug /recamera_pro_api_introduction_legacy) and is excluded from production builds. Do not link here. -->

@@ -1,5 +1,5 @@
 ---
-description: "Chapter 11 of the Seeed Embodied Intelligence Beginner's Course — environment setup, follower and leader arm calibration, joint mapping, teleoperation safety, starting master-slave teleoperation, control frequency and latency, and hands-on practice."
+description: Chapter 11 of the Seeed Embodied Intelligence Beginner's Course — environment setup, follower and leader arm calibration, joint mapping, teleoperation safety, starting master-slave teleoperation, control frequency and latency, and hands-on practice.
 title: Chapter 11 - Leader and Follower Calibration and Teleoperation
 keywords:
   - reBot
@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-19
   author: LiuJunjie
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_11/
 ---
 

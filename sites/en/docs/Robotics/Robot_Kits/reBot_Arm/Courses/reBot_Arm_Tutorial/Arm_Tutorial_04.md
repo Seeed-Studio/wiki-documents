@@ -1,5 +1,5 @@
 ---
-description: "Chapter 4 of the Seeed Embodied Intelligence Beginner's Course — fundamentals of robotic arms and joint actuators, including safety ranges, structure, reducers, encoders, and DM/RS motor control modes."
+description: Chapter 4 of the Seeed Embodied Intelligence Beginner's Course — fundamentals of robotic arms and joint actuators, including safety ranges, structure, reducers, encoders, and DM/RS motor control modes.
 title: Chapter 4 - Fundamentals of Robotic Arms and Joint Actuators
 keywords:
   - reBot
@@ -20,7 +20,7 @@ last_update:
   date: 2026-09-17
   author: LiuJunjie
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_4/
 ---
 
