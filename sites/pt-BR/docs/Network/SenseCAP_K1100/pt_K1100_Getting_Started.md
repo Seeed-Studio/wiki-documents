@@ -8,18 +8,18 @@ last_update:
   date: 11/30/2022
   author: Citric
 createdAt: '2022-11-29'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/K1100-Getting-Started/
 ---
 
 
-# SenseCAP - Visão Geral do Sensor Prototype Kit
+# SenseCAP - Visão geral do Sensor Prototype Kit
 
-Na era digital em que IoT e big data estão se tornando mais predominantes, a coleta massiva de dados por meio de sensores é necessária para viabilizar a transformação digital. Nesse contexto, o SenseCAP K1100 vem com todos os sensores e dispositivos essenciais, incluindo um Wio Terminal, um AI Vision Sensor e um módulo habilitado para LoRa® – que juntos permitem que usuários de todas as origens e níveis criem sensores DIY para coleta de dados e solução de desafios do mundo real.
+Na era digital em que IoT e big data estão se tornando mais predominantes, é necessária uma coleta massiva de dados por meio de sensores para facilitar a transformação digital. Nesse contexto, o SenseCAP K1100 vem com todos os sensores e dispositivos essenciais, incluindo um Wio Terminal, um AI Vision Sensor e um módulo com LoRa® - que juntos permitem que usuários de todos os perfis e níveis criem sensores DIY para coleta de dados e solução de desafios do mundo real.
 
 <div align="center"><img width="1000" src="https://files.seeedstudio.com/wiki/K1100/banner.png" /></div>
 
-**SenseCAP - The Sensor Prototype Kit with LoRa® and AI** permite que você digitalize rapidamente o mundo usando LoRaWAN® e resolva desafios do mundo real. Com este kit plug-and-play, qualquer pessoa pode adicionar IA aos seus dispositivos de borda e desbloquear o potencial do AIoT.
+**SenseCAP - The Sensor Prototype Kit with LoRa® and AI** permite que você digitalize rapidamente o mundo usando LoRaWAN® e resolva desafios do mundo real. Com este kit plug-and-play, qualquer pessoa pode adicionar IA aos seus dispositivos de borda e liberar o potencial do AIoT.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html" target="_blank">
@@ -27,16 +27,16 @@ Na era digital em que IoT e big data estão se tornando mais predominantes, a co
     </a>
 </div>
 
-## Atualizável para Sensores Industriais
+## Atualizável para sensores industriais
 
-Com o [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) e o [data logger S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) da SenseCAP, você pode facilmente transformar o Grove em um sensor LoRaWAN®. A Seeed não apenas ajuda você na prototipagem, mas também oferece a possibilidade de expandir seu projeto com a série SenseCAP de robustos [sensores industriais](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
+Com o [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) e o [registrador de dados S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) do SenseCAP, você pode facilmente transformar o Grove em um sensor LoRaWAN®. A Seeed não apenas ajuda você na prototipagem, mas também oferece a possibilidade de expandir seu projeto com a linha SenseCAP de robustos [sensores industriais](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
-A carcaça com classificação IP66, configuração por Bluetooth, compatibilidade com a rede global LoRaWAN®, bateria interna de 19 Ah e o forte suporte do APP fazem do [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) a melhor escolha para aplicações industriais. A série inclui sensores para umidade do solo, temperatura e umidade do ar, intensidade de luz, CO2, EC e uma estação meteorológica 8-em-1. Experimente o mais recente SenseCAP S210x em seu próximo projeto industrial de sucesso.
+O invólucro IP66, a configuração via Bluetooth, a compatibilidade com a rede global LoRaWAN®, a bateria interna de 19 Ah e o poderoso suporte do APP fazem do [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) a melhor escolha para aplicações industriais. A linha inclui sensores para umidade do solo, temperatura e umidade do ar, intensidade de luz, CO2, EC e uma estação meteorológica 8 em 1. Experimente o mais recente SenseCAP S210x em seu próximo projeto industrial de sucesso.
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
   <tbody>
     <tr>
-      <td colspan="4" bgcolor="#0e3c49" align="center"><font color="white" size="4"><strong>Sensor Industrial SenseCAP</strong></font></td>
+      <td colspan="4" bgcolor="#0e3c49" align="center"><font color="white" size="4"><strong>Sensor industrial SenseCAP</strong></font></td>
         </tr>
     <tr>
       <td bgcolor="#0e3c49"><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><img width="50%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2100.png" /></a></div></td>
@@ -46,9 +46,9 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
     </tr>
     <tr>
       <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><strong>S2100 <br /> Data Logger</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 <br /> Air Temp & Humidity</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank"><strong>S2102 <br /> Light</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><strong>S2103 <br /> Air Temp & Humidity & CO2</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 <br /> Temperatura e umidade do ar</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank"><strong>S2102 <br /> Luz</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><strong>S2103 <br /> Temperatura e umidade do ar & CO2</strong></a></td>
     </tr>
     <tr>
       <td bgcolor="#0e3c49"><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><img width="50%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2104.png" /></a></div></td>
@@ -57,10 +57,10 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
       <td bgcolor="#0e3c49"><div align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><img width="50%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2120.png" /></a></div></td>
     </tr>
     <tr>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><strong>S2104 <br /> Soil Moisture & Temp</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><strong>S2105 <br /> Soil Moisture & Temp & EC</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong>S2110 <br /> LoRaWAN® Controller</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><strong>S2120 <br /> 8-in-1 Weather Station</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><strong>S2104 <br /> Umidade e temperatura do solo</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><strong>S2105 <br /> Umidade e temperatura do solo & EC</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong>S2110 <br /> Controlador LoRaWAN®</strong></a></td>
+      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><strong>S2120 <br /> Estação meteorológica 8 em 1</strong></a></td>
     </tr>
   </tbody>
 </table>
@@ -69,11 +69,11 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
 
 <div className="category">
   <h3>
-    <span className="headline" id="Quick Start">Início Rápido</span>
+    <span className="headline" id="Quick Start">Quick Start</span>
   </h3>
   <div className="item">
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/K1100-quickstart/" target="_blank">Início Rápido com SenseCAP - K1100</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/K1100-quickstart/" target="_blank">Quick Start com SenseCAP - K1100</a></li>
     </ul>
   </div>
   <h3>
@@ -90,19 +90,16 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
       <li><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-Azure-IOT/" target="_blank">Conectar o Wio Terminal ao Microsoft Azure IoT Hub (WiFi)</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Integrate-into-Azure-IoT-Hub/" target="_blank">Integrar ao Azure IoT Hub (Helium)</a></li>
-    </ul>
-    <ul>
       <li><a href="https://wiki.seeedstudio.com/pt-br/Develop-in-Microsoft-Azure-IoT-Central/" target="_blank">Desenvolver no Microsoft Azure IoT Central</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Configuring-Web-APP-Visualization/" target="_blank">Configurar Visualização no Web APP</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/Configuring-Web-APP-Visualization/" target="_blank">Configurar visualização em Web APP</a></li>
     </ul>
     <ul>
       <li><a href="https://wiki.seeedstudio.com/pt-br/K1100_Azure_to_PowerBI/" target="_blank">Visualização de dados do Microsoft Azure IoT com Power BI</a></li>
     </ul>
     <ul>
-      <li><a href="https://github.com/microsoft/IoT-For-Beginners" target="_blank">Curso Microsoft IoT Hub para Iniciantes</a></li>
+      <li><a href="https://github.com/microsoft/IoT-For-Beginners" target="_blank">Curso Microsoft IoT Hub for Beginners</a></li>
     </ul>
   </div>
   <h3>
@@ -110,10 +107,10 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
   </h3>
   <div className="item">
     <ul>
-      <li><a href="https://sensecap-docs.seeed.cc/introduction.html" target="_blank">Centro de Documentação SenseCAP</a></li>
+      <li><a href="https://sensecap-docs.seeed.cc/introduction.html" target="_blank">Centro de documentação SenseCAP</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/K1100_sensecap_node-red/" target="_blank">Console SenseCAP com Node-RED Início Rápido</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/K1100_sensecap_node-red/" target="_blank">SenseCAP Console com Node-RED Quick Start</a></li>
     </ul>
     <ul>
       <li><a href="https://wiki.seeedstudio.com/pt-br/K1100_SenseCAP_to_Azure_IoT_Central/" target="_blank">Conectar SenseCAP ao Azure IoT Central via Node-RED</a></li>
@@ -132,11 +129,11 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
     </ul>
   </div>
   <h3>
-    <span className="headline" id="Arduino Programming">Wiki de Sensores</span>
+    <span className="headline" id="Arduino Programming">Sensors Wiki</span>
   </h3>
   <div className="item">
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-Light/" target="_blank">Sensor de Luz do Wio Terminal</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-Light/" target="_blank">Sensor de luz do Wio Terminal</a></li>
     </ul>
     <ul>
       <li><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-IMU-Overview/" target="_blank">Sensor IMU do Wio Terminal</a></li>
@@ -155,14 +152,14 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
     </ul>
   </div>
   <h3>
-    <span className="headline" id="Arduino Programming">Sensor &amp; Helium/TTN Programa em Arduino</span>
+    <span className="headline" id="Arduino Programming">Programa Arduino para Sensor &amp; TTN</span>
   </h3>
   <div className="item">
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/K1100-Light-Sensor-Grove-LoRa-E5/" target="_blank">Sensor de Luz do Wio Terminal</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/K1100-Light-Sensor-Grove-LoRa-E5/" target="_blank">Sensor de Luz Wio Terminal</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/K1100-IMU-Sensor-Grove-LoRa-E5/" target="_blank">Sensor IMU do Wio Terminal</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/K1100-IMU-Sensor-Grove-LoRa-E5/" target="_blank">Sensor IMU Wio Terminal</a></li>
     </ul>
     <ul>
       <li><a href="https://wiki.seeedstudio.com/pt-br/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5/" target="_blank">Sensor de Umidade do Solo Grove</a></li>
@@ -175,29 +172,6 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
     </ul>
     <ul>
       <li><a href="https://wiki.seeedstudio.com/pt-br/K1100-Vision-AI-Module-Grove-LoRa-E5/" target="_blank">Módulo Grove Vision AI</a></li>
-    </ul>
-  </div>
-  <h3>
-    <span className="headline" id="Helium">Helium</span>
-  </h3>
-  <div className="item">
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Helium-Introduction/" target="_blank">Introdução ao Helium</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Connecting-to-Helium/" target="_blank">Conectar ao Helium</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Integrate_into_Google_Sheets_via_Helium/" target="_blank">Integrar ao Google Sheets via Helium</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Connect_AWS_via_helium/" target="_blank">Conectar ao AWS IoT Core via Helium (Helium)</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Integrate-into-Azure-IoT-Hub/" target="_blank">Integrar ao Azure IoT Hub</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Configuring-Web-APP-Visualization/" target="_blank">Configurar Visualização em Aplicativo Web</a></li>
     </ul>
   </div>
   <h3>
@@ -216,13 +190,13 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
   </h3>
   <div className="item">
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Getting_started_with_Ubidots/" target="_blank">Começar rapidamente com Ubidots</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/Getting_started_with_Ubidots/" target="_blank">Início Rápido com Ubidots</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Quick-Start-to-using-Blynk/" target="_blank">Início rápido usando Blynk</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/Quick-Start-to-using-Blynk/" target="_blank">Início Rápido com o Uso do Blynk</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-Advanced-WiFi/" target="_blank">Uso avançado de Wi-Fi</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-Advanced-WiFi/" target="_blank">Uso Avançado de Wi-Fi</a></li>
     </ul>
     <ul>
       <li><a href="https://wiki.seeedstudio.com/pt-br/Connect-Wio-Terminal-to-Google-Cloud/" target="_blank">Conectar o Wio Terminal ao Google Cloud IoT Core</a></li>
@@ -239,12 +213,6 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
   </h3>
   <div className="item">
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Connect_AWS_via_helium/" target="_blank">Conectar ao AWS IoT Core via Helium (Helium)</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Integrate-into-Azure-IoT-Hub/" target="_blank">Integrar ao Azure IoT Hub (Helium)</a></li>
-    </ul>
-    <ul>
       <li><a href="https://wiki.seeedstudio.com/pt-br/Connect-Wio-Terminal-to-Google-Cloud/" target="_blank">Conectar o Wio Terminal ao Google Cloud IoT Core (WiFi)</a></li>
     </ul>
     <ul>
@@ -254,10 +222,10 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
       <li><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-Azure-IOT/" target="_blank">Conectar o Wio Terminal ao Microsoft Azure IoT Hub (WiFi)</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Getting_started_with_Ubidots/" target="_blank">Começar rapidamente com Ubidots (WiFi)</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/Getting_started_with_Ubidots/" target="_blank">Início Rápido com Ubidots (WiFi)</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Quick-Start-to-using-Blynk/" target="_blank">Início rápido usando Blynk (WiFi)</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/Quick-Start-to-using-Blynk/" target="_blank">Início Rápido com o Uso do Blynk (WiFi)</a></li>
     </ul>
   </div>
   <h3>
@@ -265,13 +233,10 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
   </h3>
   <div className="item">
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-TinyML-EI-1/" target="_blank">Wio Terminal Edge Impulse - Primeiros Passos (sensor embutido)</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-TinyML-EI-1/" target="_blank">Introdução ao Wio Terminal Edge Impulse (sensor integrado)</a></li>
     </ul>
     <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/K1111-Edge-Impulse/" target="_blank">Desenvolver aplicação Edge Impulse para a nuvem via Helium (sensor embutido)</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://wiki.seeedstudio.com/pt-br/Train-Deploy-AI-Model/" target="_blank">Treinar e implantar seu próprio modelo de IA no Grove - Vision AI</a></li>
+      <li><a href="https://wiki.seeedstudio.com/pt-br/Train-Deploy-AI-Model/" target="_blank">Treine e Faça o Deploy do Seu Próprio Modelo de IA no Grove - Vision AI</a></li>
     </ul>
   </div>
   <h3>
@@ -322,12 +287,12 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
         </tr>
         <tr> <td colspan={3}>—————————————————————————————————————————————</td>  </tr>
         <tr>
-            <th>SenseCAP Console com Node-RED - Início Rápido</th>
+            <th>Início Rápido do SenseCAP Console com Node-RED</th>
             <th>Conectar SenseCAP ao Azure IoT Central via Node-RED</th>
         </tr>
         <tr>
-            <td>Este tutorial, o primeiro de uma série, o guiará pela instalação e uso do Node-RED e pela chamada da API de backend do SenseCAP para conectar ao Node-RED.</td>
-            <td>O conteúdo deste capítulo continuará usando o Node-RED apresentado anteriormente e facilitará o gerenciamento do kit K1100 no Microsoft Azure IoT Central por meio do uso do Node-RED.</td>
+            <td>Este tutorial, o primeiro de uma série, irá guiá-lo na instalação e uso do Node-RED e na chamada da API de backend do SenseCAP para conectar ao Node-RED.</td>
+            <td>O conteúdo deste capítulo continuará a usar o Node-RED apresentado anteriormente e facilitará o gerenciamento do kit K1100 no Microsoft Azure IoT Central por meio do uso do Node-RED.</td>
         </tr>
         <tr>
             <th><a href="https://wiki.seeedstudio.com/pt-br/K1100_sensecap_node-red/">Ir para o capítulo &gt;</a></th>
@@ -339,7 +304,7 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
             <th>Conectando SenseCAP ao InfluxDB via Node-RED</th>
         </tr>
         <tr>
-            <td>Neste tutorial, vamos guiá-lo sobre como importar dados de sensores do SenseCAP para o Power BI para um processamento de dados mais aprofundado usando Node-RED.</td>
+            <td>Neste tutorial, vamos guiá-lo sobre como importar dados de sensores do SenseCAP para o Power BI para um processamento de dados mais aprofundado usando o Node-RED.</td>
             <td>O conteúdo deste capítulo continuará a usar o Node-RED apresentado anteriormente e facilitará o gerenciamento do kit K1100 no InfluxDB por meio do uso do Node-RED.</td>
         </tr>
         <tr>
@@ -352,7 +317,7 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
             <th>Conectando SenseCAP ao Datacake via Node-RED</th>
         </tr>
         <tr>
-            <td>Esta seção utilizará o kit SenseCAP K1100, bem como o console SenseCAP e o Node-RED, para concluir a tarefa de acionar um envio de mensagem do Twilio sob determinadas condições.</td>
+            <td>Esta seção usará o kit SenseCAP K1100, bem como o console SenseCAP e o Node-RED, para concluir a tarefa de acionar um envio de mensagem Twilio sob certas condições.</td>
             <td>O conteúdo deste capítulo continuará a usar o Node-RED apresentado anteriormente e facilitará o gerenciamento do kit K1100 no Datacake por meio do uso do Node-RED.</td>
         </tr>
         <tr>
@@ -381,7 +346,7 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
             <td rowspan="8"><div align="center"><img width="600" src="https://files.seeedstudio.com/wiki/K1100/central.png" /></div></td>
         </tr>
         <tr>
-            <td>Neste capítulo, descreveremos como encaminhar dados armazenados no SenseCAP para o Azure IoT Central usando o Node RED.</td>
+            <td>Neste capítulo, descreveremos como encaminhar os dados armazenados no SenseCAP para o Azure IoT Central usando Node RED.</td>
             <td>Neste capítulo, descreveremos como enviar dados do Wio Terminal para o Azure IoT Central por meio da função WiFi que vem com o Wio Terminal.</td>
         </tr>
         <tr>
@@ -401,12 +366,12 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
         <tr> <td colspan="3">————————————————————————————————————————————————————</td>  </tr>
         <tr>
             <th>Conectar o Wio Terminal ao Microsoft Azure IoT Hub (WiFi)</th>
-            <th>Integrar ao Azure IoT Hub (Helium)</th>
+            <th>Integrar ao Azure IoT Hub </th>
             <td rowspan="11"><div align="center"><img width="300" src="https://files.seeedstudio.com/wiki/K1100/hub.png" /></div></td>
         </tr>
         <tr>
             <td align="left">Neste capítulo, descreveremos como enviar dados do Wio Terminal para o Azure IoT Hub por meio da função WiFi que vem com o Wio Terminal.</td>
-            <td align="left">Este capítulo descreve o uso do Azure IoT Hub no console Helium.</td>
+            <td align="left">Este capítulo descreve o uso do Azure IoT Hub no console.</td>
         </tr>
         <tr>
             <th><a href="https://wiki.seeedstudio.com/pt-br/Integrate-into-Azure-IoT-Hub">Ir para o capítulo &gt;</a></th>
@@ -417,18 +382,18 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
             <th>Curso Microsoft IoT Hub para Iniciantes</th>
         </tr>
         <tr>
-            <td align="left">O curso aborda a jornada dos alimentos do campo à mesa. Isso inclui agricultura, logística, manufatura, varejo e consumidor — todas áreas industriais populares para dispositivos de IoT.</td>
+            <td align="left">O curso abrange a jornada dos alimentos do campo à mesa. Isso inclui agricultura, logística, manufatura, varejo e consumidor - todas áreas populares da indústria para dispositivos IoT.</td>
         </tr>
         <tr>
             <th><a href="https://github.com/microsoft/IoT-For-Beginners">Ir para o capítulo &gt;</a></th>
         </tr>
         <tr> <td> </td> </tr>
         <tr>
-            <th>Visualização de Dados do Microsoft Azure IoT com Power BI</th>
-            <th>Configurar Visualização em Web APP</th>
+            <th>Visualização de dados do Microsoft Azure IoT com Power BI</th>
+            <th>Configurar visualização em Web APP</th>
         </tr>
         <tr>
-            <td align="left">Neste tutorial, você configura seu aplicativo IoT Central e depois usa o Power BI para armazenar, gerenciar e visualizar os insights derivados da telemetria.</td>
+            <td align="left">Neste tutorial, você configura seu aplicativo IoT Central e, em seguida, usa o Power BI para armazenar, gerenciar e visualizar os insights derivados da telemetria.</td>
             <td align="left">Esta seção descreve como visualizar as informações de dados recebidas pelo Microsoft Azure usando a integração gratuita de Web APP.</td>
         </tr>
         <tr>
@@ -439,12 +404,12 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
 
 <br />
 
-### Seção de Sensores com Programação Arduino
+### Seção de Programação de Sensores com Arduino
 
 <table>
     <tbody>
         <tr>
-            <td colspan="3">Se você é um engenheiro interessado em hardware/software ou está na indústria há anos, pode iniciar sua jornada de descoberta com nossa seção de <strong>Arduino</strong>. Você não precisa se preocupar com o conteúdo na nuvem. Os tutoriais de fácil compreensão permitirão que você conclua vários projetos de IoT com um custo mínimo de tempo.</td>
+            <td colspan="3">Se você é um engenheiro interessado em hardware/software ou já está no setor há anos, pode iniciar sua jornada de descoberta com nossa seção de <strong>Arduino</strong>. Você não precisa se preocupar com o conteúdo na nuvem. Os tutoriais fáceis de entender permitirão que você conclua vários projetos de IoT com custo mínimo de tempo.</td>
         </tr>
         <tr>
             <td bgcolor="#93dfef"><div align="center"><img width="150" src="https://files.seeedstudio.com/wiki/K1100_overview/light.png" /></div>
@@ -455,14 +420,14 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
             </td>
         </tr>
         <tr>
-            <th>Sensor de Luz Wio Terminal</th>
-            <th>Sensor IMU Wio Terminal</th>
+            <th>Sensor de Luz do Wio Terminal</th>
+            <th>Sensor IMU do Wio Terminal</th>
             <th>Sensor de Umidade do Solo</th>
         </tr>
         <tr>
-            <td>Esta seção descreve como usar o Sensor de Luz Wio Terminal para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao Helium/TTN.</td>
-            <td>Esta seção descreve como usar o Sensor IMU Wio Terminal para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao Helium/TTN.</td>
-            <td>Esta seção descreve como usar o Sensor de Umidade do Solo Grove para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao Helium/TTN.</td>
+            <td>Esta seção descreve como usar o Sensor de Luz do Wio Terminal para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao TTN.</td>
+            <td>Esta seção descreve como usar o Sensor IMU do Wio Terminal para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao TTN.</td>
+            <td>Esta seção descreve como usar o Sensor de Umidade do Solo Grove para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao TTN.</td>
         </tr>
         <tr>
             <th><a href="https://wiki.seeedstudio.com/pt-br/K1100-Light-Sensor-Grove-LoRa-E5/">Ir para o capítulo &gt;</a></th>
@@ -483,9 +448,9 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
             <th>Módulo Grove Vision AI</th>
         </tr>
         <tr>
-            <td>Esta seção descreve como usar o Grove Sensor de Gás VOC e eCO2 para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao Helium/TTN.</td>
-            <td>Esta seção descreve como usar o Sensor de Luz Wio Terminal para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao Helium/TTN.</td>
-            <td>Esta seção descreve como usar o Sensor de Luz Wio Terminal para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao Helium/TTN.</td>
+            <td>Esta seção descreve como usar o Grove Sensor de Gás VOC e eCO2 para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao TTN.</td>
+            <td>Esta seção descreve como usar o Sensor de Luz do Wio Terminal para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao TTN.</td>
+            <td>Esta seção descreve como usar o Sensor de Luz do Wio Terminal para adquirir dados e conectar-se à rede LoRa® por meio do Grove - Wio-E5 em preparação para a conexão ao TTN.</td>
         </tr>
         <tr>
             <th><a href="https://wiki.seeedstudio.com/pt-br/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5/">Ir para o capítulo &gt;</a></th>
@@ -496,70 +461,14 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
 
 <br />
 
-### Seção Helium
 
-<table>
-    <tbody>
-        <tr>
-            <td colspan="2">Para enviar os valores dos sensores para a plataforma em nuvem, a escolha da rede é uma parte necessária. Oferecemos hoje duas plataformas com a mais ampla cobertura em LoRa® para você escolher. Aqui está a Seção Helium.</td>
-            <td rowspan="2">
-                <div align="center"><img width="550" src="https://files.seeedstudio.com/wiki/K1100_overview/3.png" /></div>
-            </td>
-        </tr>
-        <tr>
-            <th>Introdução ao Helium</th>
-            <th>Conectando ao Helium</th>
-        </tr>
-        <tr>
-            <td>Neste capítulo, iremos apresentar os controles do console Helium que usamos para obter uma primeira impressão do console Helium.</td>
-            <td>Esta seção descreve como configurar o Helium para que os dados dos sensores possam ser carregados e exibidos com sucesso no Helium.</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <th><a href="https://wiki.seeedstudio.com/pt-br/Helium-Introduction">Ir para o capítulo &gt;</a></th>
-            <th><a href="https://wiki.seeedstudio.com/pt-br/Connecting-to-Helium">Ir para o capítulo &gt;</a></th>
-            <td> </td>
-        </tr>
-        <tr> <td colspan="3">————————————————————————————————————————————</td>  </tr>
-        <tr>
-            <th>Integração do Helium ao Azure IoT Hub</th>
-            <th>Integração do Helium ao Google Sheets</th>
-            <td> </td>
-        </tr>
-        <tr>
-            <td align="left">Esta seção descreve como configurar o Microsoft Azure e integrá-lo ao Helium para enviar dados para a plataforma Microsoft Azure.</td>
-            <td align="left">Esta seção apresenta o uso do Google Forms na integração com o Helium e o uso do Google Forms para armazenar dados de sensores.</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <th><a href="https://wiki.seeedstudio.com/pt-br/Integrate-into-Azure-IoT-Hub">Ir para o capítulo &gt;</a></th>
-            <th><a href="https://wiki.seeedstudio.com/pt-br/Integrate_into_Google_Sheets_via_Helium/">Ir para o capítulo &gt;</a></th>
-            <td> </td>
-        </tr>
-        <tr> <td colspan="3">————————————————————————————————————————————</td>  </tr>
-        <tr>
-            <th>Integração do Helium ao AWS IoT Core</th>
-            <td colspan="2"> </td>
-        </tr>
-        <tr>
-            <td align="left">Esta seção descreve como configurar e usar a integração AWS no Helium.</td>
-            <td colspan="2"> </td>
-        </tr>
-        <tr>
-            <th><a href="https://wiki.seeedstudio.com/pt-br/Connect_AWS_via_helium/">Ir para o capítulo &gt;</a></th>
-            <td colspan="2"> </td>
-        </tr>
-        <tr>
-            <td colspan="3"><div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/113.png" /></div></td>
-        </tr>
-</tbody></table>
 
 ### Seção The Things Network
 
 <table>
     <tbody>
         <tr>
-            <td colspan="2">Para enviar os valores dos sensores para a plataforma em nuvem, a escolha da rede é uma parte necessária. Oferecemos hoje duas plataformas com a mais ampla cobertura em LoRa® para você escolher. Aqui está a Seção The Things Network. (Doravante referida como TTN)</td>
+            <td colspan="2">Para enviar os valores dos sensores para a plataforma em nuvem, a escolha da rede é uma parte necessária. Oferecemos hoje duas plataformas com a maior cobertura em LoRa® para você escolher. Aqui está a Seção The Things Network. (Doravante referida como TTN)</td>
             <td>
                 <div align="center"><img width="450" src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-TTN/TTN.png" /></div>
             </td>
@@ -570,8 +479,8 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
             <td> </td>
         </tr>
         <tr>
-            <td>Neste capítulo, iremos apresentar os controles do console TTN que usamos para obter uma primeira impressão do console TTN.</td>
-            <td>Esta seção descreve como configurar o TTN para que os dados dos sensores possam ser carregados e exibidos com sucesso no TTN.</td>
+            <td>Neste capítulo, apresentaremos os controles do console TTN que usamos para obter uma primeira impressão do console TTN.</td>
+            <td>Esta seção descreve como configurar o TTN para que os dados do sensor possam ser carregados e exibidos com sucesso no TTN.</td>
             <td> </td>
         </tr>
         <tr>
@@ -584,7 +493,7 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
         </tr>
 </tbody></table>
 
-### Seção Wio Terminal WiFi
+### Seção WiFi do Wio Terminal
 
 <table>
     <tbody>
@@ -592,14 +501,14 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
             <td colspan="3">Se você estiver em um ambiente onde LoRaWAN® não está disponível, também pode optar por usar a função WiFi do Wio Terminal para concluir a comunicação ponto a ponto.</td>
         </tr>
         <tr>
-            <td><strong>Uso Avançado de WiFi</strong></td>
-            <td><strong>Conectar o Wio Terminal ao Microsoft Azure IoT Central</strong></td>
+            <td><strong>Uso avançado de WiFi</strong></td>
+            <td><strong>Conectar Wio Terminal ao Microsoft Azure IoT Central</strong></td>
             <td><strong>Início Rápido com Ubidots</strong></td>
         </tr>
         <tr>
-            <td align="left">Esta seção apresenta alguns dos usos avançados da biblioteca de Wi-Fi, como as bibliotecas HTTPClient, DNSServer e WebServer. Com essas bibliotecas implementadas, você pode desenvolver seus projetos de IoT com APIs simples.</td>
-            <td align="left">Nesta seção, iremos guiá-lo pelo processo de conectar o Wio Terminal ao Microsoft Azure IoT Central e enviar dados de telemetria dos sensores/ hardware integrados no Wio Terminal, como o acelerômetro de 3 eixos, sensor de luz e 3 botões para o Microsoft Azure IoT Central.</td>
-            <td align="left">Neste capítulo, descreveremos como experimentar o processo de envio de dados para o Ubidots e exibi-los graficamente por meio de sua própria rede WiFi.</td>
+            <td align="left">Esta seção apresenta alguns dos usos avançados de biblioteca do Wi-Fi, como as bibliotecas HTTPClient, DNSServer e WebServer. Com essas bibliotecas implementadas, você poderá desenvolver seus projetos de IoT com APIs simples.</td>
+            <td align="left">Nesta seção, vamos guiá-lo pelo processo de conexão do Wio Terminal ao Microsoft Azure IoT Central e de envio de dados de telemetria dos sensores/ hardware integrados no Wio Terminal, como o acelerômetro de 3 eixos, sensor de luz e 3 botões, para o Microsoft Azure IoT Central.</td>
+            <td align="left">Neste capítulo, vamos descrever como experimentar o processo de envio de dados para o Ubidots e exibi-los graficamente por meio da sua própria rede WiFi.</td>
         </tr>
         <tr>
             <th><a href="https://wiki.seeedstudio.com/pt-br/Wio-Terminal-Advanced-WiFi/">Ir para o capítulo &gt;</a></th>
@@ -608,13 +517,13 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
         </tr>
         <tr> <td> </td> </tr>
         <tr>
-            <td><strong>Início Rápido com Blynk</strong></td>
+            <td><strong>Início rápido com Blynk</strong></td>
             <td><strong>Conectar o Wio Terminal ao Google Cloud IoT Core</strong></td>
             <td> </td>
         </tr>
         <tr>
-            <td align="left">Neste capítulo, descreveremos como experimentar o processo de envio de dados para o Blynk e exibi-los graficamente por meio de sua própria rede WiFi.</td>
-            <td align="left">Nesta seção, iremos guiá-lo pelo processo de conectar o Wio Terminal ao Google Cloud IoT Core e enviar dados de telemetria do Wio Terminal para o Google Cloud IoT Core.</td>
+            <td align="left">Neste capítulo, vamos descrever como experimentar o processo de envio de dados para o Blynk e exibi-los graficamente por meio da sua própria rede WiFi.</td>
+            <td align="left">Nesta seção, vamos guiá-lo pelo processo de conexão do Wio Terminal ao Google Cloud IoT Core e de envio de dados de telemetria do Wio Terminal para o Google Cloud IoT Core.</td>
             <td> </td>
         </tr>
         <tr>
@@ -630,18 +539,18 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
 
 <table>
     <tbody><tr>
-        <td colspan="2">Claro, se você estiver interessado em TinyML e quiser implementar alguns projetos e conteúdos de aprendizado de máquina, pode consultar a seção TinyML.</td>
+        <td colspan="2">Claro, se você estiver interessado em TinyML e quiser implementar alguns projetos e conteúdos de aprendizado de máquina, você pode consultar a seção TinyML.</td>
       <td>
         <div align="center"><img width="900" src="https://files.seeedstudio.com/wiki/K1100_overview/tinyml.png" /></div>
       </td>
     </tr>
     <tr>
-      <td><strong>Desenvolver aplicação Edge Impulse para a nuvem via Helium</strong></td>
-      <td><strong>Treine e Implemente Seu Próprio Modelo de IA no Grove - Vision AI</strong></td>
+      <td><strong>Desenvolver aplicação Edge Impulse para a nuvem</strong></td>
+      <td><strong>Treine e faça o deploy do seu próprio modelo de IA no Grove - Vision AI</strong></td>
     </tr>
     <tr>
       <td align="left">Combine os sensores integrados do Wio Terminal com o Edge Impulse, uma plataforma de aprendizado de máquina poderosa e fácil de usar, para treinar projetos simples de reconhecimento de sensores.</td>
-      <td align="left">Neste wiki, vamos ensinar como treinar seu próprio modelo de IA para sua aplicação específica e depois implantá-lo facilmente no SenseCAP A1101 - LoRaWAN Vision AI Sensor e no Grove - Vision AI Module.</td>
+      <td align="left">Neste wiki, vamos ensinar você a treinar seu próprio modelo de IA para a sua aplicação específica e, em seguida, fazer o deploy dele facilmente no SenseCAP A1101 - LoRaWAN Vision AI Sensor e no Grove - Vision AI Module.</td>
     </tr>
     <tr>
       <td><a href="https://wiki.seeedstudio.com/pt-br/K1111-Edge-Impulse/">Ir para o capítulo &gt;</a></td>
@@ -666,7 +575,7 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
 <table align="center">
   <tbody><tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit33.jpg" alt="pir" width="1100" height="auto" /></p></td>
-      <td align="left"><strong>Sistema de alarme de monitoramento de umidade do solo</strong><br /><br />Nesta seção, mostraremos como utilizar o Wio Terminal para conectar o Grove - Wio-E5 e o Grove - Soil Moisture Sensor, conectando-os ao Helium e ao Azure IoT Central, para construir um monitor de vasos de quintal em tempo real e lembrete de rega.<br /><br /><a href="https://wiki.seeedstudio.com/pt-br/soil-alarm-system/">Ir para o capítulo &gt;</a></td>
+      <td align="left"><strong>Sistema de alarme de monitoramento de umidade do solo</strong><br /><br />Nesta seção, vamos mostrar como utilizar o Wio Terminal para conectar o Grove - Wio-E5 e o Grove - Soil Moisture Sensor, conectando ao Azure IoT Central, para construir um monitor de vasos de quintal em tempo real e lembrete de rega.<br /><br /><a href="https://wiki.seeedstudio.com/pt-br/soil-alarm-system/">Ir para o capítulo &gt;</a></td>
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/K1100_overview/000000.png" alt="pir" width="1100" height="auto" /></p></td>
@@ -674,27 +583,25 @@ A carcaça com classificação IP66, configuração por Bluetooth, compatibilida
     </tr>
   </tbody></table>
 
-Esperamos que você aproveite sua jornada de aprendizagem em IoT!
+Esperamos que você aproveite sua jornada de aprendizado em IoT!
 
 ## Biblioteca de Código do Curso
 
-Todas as bibliotecas e códigos para este curso podem ser encontrados no endereço a seguir. Antes do início do curso, você pode clonar o repositório para o seu próprio computador para referência e aprendizagem.
+Todas as bibliotecas e códigos para este curso podem ser encontrados no seguinte endereço. Antes do início do curso, você pode clonar o repositório para o seu próprio computador para referência e aprendizado.
 
 <div>
   <p style={{}}><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank" /></p><div align="center"><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank"><img width="500" src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
 </div>
 
-## Helium LoRaWAN®
 
-Para mais detalhes, leia por favor [Helium LoRaWAN®: Public Infrastructure with Private Network Servers](https://blog.helium.com/helium-lorawan-public-infrastructure-with-ultimate-privacy-9132560e4ae6).
 
 ## The Things Network LoRaWAN®
 
-Para mais detalhes, leia por favor o [site oficial do TTN](https://www.thethingsnetwork.org/docs/).
+Para mais detalhes, leia o [site oficial do TTN](https://www.thethingsnetwork.org/docs/).
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para lhe oferecer diferentes formas de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos diversos canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

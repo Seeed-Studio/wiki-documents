@@ -184,7 +184,7 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
     </tr>
     <tr>
       <th rowSpan="1">Operating Temperature</th>
-      <td colSpan="2">-20℃~60℃ (25W Mode);<br />-20℃~55℃ (MAXN Mode);<br />(with reComputer Robotics heat sink with fan)</td>
+      <td colSpan="2">-20℃~60℃ (25W Mode);<br />-20℃~55℃ (40W Mode);<br />-20℃~50℃ (MAXN Mode);<br />(with reComputer Robotics heat sink with fan)</td>
     </tr>
     <tr>
       <th rowSpan="1">Warranty</th>

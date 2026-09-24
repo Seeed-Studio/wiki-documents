@@ -1,6 +1,6 @@
 ---
 description: このチュートリアルでは、XIAO ESP32S3 上で microSD カードとファイルシステムを使用する方法について説明します。
-title: Sense バージョン向け MicroSD カード
+title: Sense バージョン向け microSD カード
 keywords:
   - xiao esp32s3
   - esp32s3
@@ -50,7 +50,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem/
   </table>
 </div>
 
-## 入門ガイド
+## はじめに
 
 このチュートリアルでは microSD カードを使用するため、事前に Sense 拡張ボードを取り付け、microSD カードを準備しておく必要があります。
 
@@ -66,7 +66,7 @@ XIAO ESP32S3 Sense は最大 **32GB** までの microSD カードをサポート
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/67.png" style={{width:250, height:'auto'}}/></div>
 
-フォーマット後、microSD カードを microSD カードスロットに挿入できます。挿入方向に注意し、金色の端子（ゴールドフィンガー）が内側を向くようにしてください。
+フォーマット後、microSD カードを microSD カードスロットに挿入できます。挿入方向に注意し、金色の端子側が内側を向くようにしてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -92,9 +92,9 @@ Card Mount Failed
 
 **注意：**
 
-- この処理にはクイックフォーマットよりもかなり長い時間がかかります。
+- この処理には、クイックフォーマットよりもかなり長い時間がかかります。
 
-- これらのケースは、以前に別の用途で使用されていた microSD カードを再利用する場合に発生します（例：Linux OS が入っていた microSD カードを再利用する場合など）。
+- これらのケースは、以前に別の用途（例：Linux OS が入っていた microSD カードを再利用する場合）で使用されていた microSD カードを再利用しているときに発生します。
 
 :::
 
@@ -109,7 +109,7 @@ XIAO ESP32S3 Sense のカードスロットは ESP32-S3 の 4 本の GPIO を使
             <th align="center">microSD カードスロット</th>
         </tr>
         <tr>
-            <td align="center">GPIO3</td>
+            <td align="center">GPIO21</td>
             <td align="center">CS</td>
         </tr>
         <tr>
@@ -131,7 +131,7 @@ XIAO ESP32S3 Sense のカードスロットは ESP32-S3 の 4 本の GPIO を使
 
 <table align="center">
  <tr>
-     <th>拡張ボードの SPI ピンを使用したい場合 / SD カードを無効にしたい場合</th>
+     <th>SPI ピンを使用したい場合 / 拡張ボードの SD カードを無効にしたい場合</th>
      <th>拡張ボード上の SD カードを有効にしたい場合 / SPI ピンを無効にしたい場合</th>
  </tr>
  <tr>
@@ -388,9 +388,9 @@ void loop(){
 
 まず、次のライブラリをインクルードする必要があります。ファイルを扱うための **FS.h**、microSD カードとインターフェースするための **SD.h**、そして SPI 通信プロトコルを使用するための **SPI.h** です。
 
-1. `setup()` 内では、次の行で `SD.begin(21)` を使って microSD カードを初期化します。ここでは `SD.begin()` に CS ピンであるパラメータを渡す必要があります。拡張ボードの microSD カード設計では、CS ピンは **GPIO 21** に接続されています。Round Display for XIAO を使用している場合は、渡すパラメータは **D2** にする必要があります。
+1. `setup()` 内で、次の行は `SD.begin(21)` によって microSD カードを初期化します。ここでは `SD.begin()` に CS ピンであるパラメータを渡す必要があります。拡張ボードの microSD カード設計では、CS ピンは **GPIO 21** に接続されています。Round Display for XIAO を使用している場合は、渡すパラメータは **D2** にする必要があります。
 
-2. 次の行では、シリアルモニタに microSD カードの種類を出力します。
+2. 次の行は、シリアルモニタに microSD カードの種類を出力します。
 
 ```c
 uint8_t cardType = SD.cardType();
@@ -412,7 +412,7 @@ if(cardType == CARD_MMC){
 }
 ```
 
-3. `cardSize()` メソッドを呼び出すことで、microSD カードの容量を取得できます。
+3. `cardSize()` メソッドを呼び出すことで、microSD カードのサイズを取得できます。
 
 ```c
 uint64_t cardSize = SD.cardSize() / (1024 * 1024);
@@ -421,7 +421,7 @@ Serial.printf("SD Card Size: %lluMB\n", cardSize);
 
 **このサンプルでは、microSD カード上のファイルを扱うための複数の関数を提供しています。**
 
-4. `listDir()` 関数は SD カード上のディレクトリを一覧表示します。この関数は引数として、ファイルシステム（SD）、メインディレクトリ名、およびディレクトリ内をどの階層までたどるかを受け取ります。
+4. `listDir()` 関数は SD カード上のディレクトリを一覧表示します。この関数は引数として、ファイルシステム（SD）、メインディレクトリ名、およびディレクトリ内にどの階層まで入るかを受け取ります。
 
    この関数を呼び出す例を次に示します。`/` は microSD カードのルートディレクトリに対応します。
 
@@ -441,7 +441,7 @@ createDir(SD, "/mydir");
 removeDir(SD, "/mydir");
 ```
 
-7. `readFile()` 関数はファイルの内容を読み取り、その内容をシリアルモニタに出力します。前述の関数と同様に、引数として `SD` ファイルシステムとファイルパスを渡します。例えば、次の行は `hello.txt` ファイルの内容を読み取ります。
+7. `readFile()` 関数はファイルの内容を読み取り、その内容をシリアルモニタに出力します。前の関数と同様に、引数として `SD` ファイルシステムとファイルパスを渡します。例えば、次の行は `hello.txt` ファイルの内容を読み取ります。
 
 ```c
 readFile(SD, "/hello.txt")
@@ -453,7 +453,7 @@ readFile(SD, "/hello.txt")
 writeFile(SD, "/hello.txt", "Hello ");
 ```
 
-9. 同様に、`appendFile()` 関数を使用して、既存の内容を上書きせずにファイルに内容を追記できます。次の行は `hello.txt` ファイルにメッセージ `World!\n` を追記します。`\n` は、次にファイルに何かを書き込むときに、新しい行に書き込まれることを意味します。
+9. 同様に、`appendFile()` 関数を使用して、（既存の内容を上書きせずに）ファイルに内容を追記できます。次の行は `hello.txt` ファイルにメッセージ `World!\n` を追記します。`\n` は、次にファイルに何かを書き込むとき、それが新しい行に書き込まれることを意味します。
 
 ```c
 appendFile(SD, "/hello.txt", "World!\n");
@@ -477,13 +477,13 @@ deleteFile(SD, "/foo.txt");
 testFileIO(SD, "/test.txt");
 ```
 
-## ガスデータロギングに基づく MicroSD カードアプリケーション
+## ガスデータロギングに基づく microSD カードアプリケーション
 
 :::caution
 このセクションは XIAO ESP32S3 Sense のみに適用されます。
 :::
 
-このプロジェクトでは、XIAO ESP32S3 Sense を使用して、タイムスタンプ付きデータを TF カードに記録する方法を示します。例として、Multichannel Gas Sensor からの温度測定値を 10 分ごとに記録します。XIAO ESP32S3 は各測定の間はディープスリープモードになり、ネットワークタイムプロトコル（NTP）を使用して日付と時刻を取得します。
+このプロジェクトでは、XIAO ESP32S3 Sense を使用して、タイムスタンプ付きデータを TF カードに記録する方法を示します。例として、Multichannel Gas Sensor からの温度測定値を 10 分ごとに記録します。XIAO ESP32S3 は各測定の間はディープスリープモードになり、Network Time Protocol（NTP）を使用して日付と時刻を取得します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/72.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -541,7 +541,7 @@ testFileIO(SD, "/test.txt");
 
 <br />
 
-以下が完成したサンプルプログラムです。プログラムではネットワークを利用した時刻合わせを行う必要があるため、プログラム内の WiFi 名とパスワードをあなたのものに変更してください。
+ここに完全なサンプルプログラムを示します。プログラムではネットワークを使用して時刻を取得する必要があるため、プログラム内の WiFi 名とパスワードをあなたのものに変更する必要があります。
 
 ```cpp
 #include "FS.h"
@@ -763,14 +763,14 @@ void appendFile(fs::FS &fs, const char * path, const char * message) {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/71.png" style={{width:500, height:'auto'}}/></div>
 
 :::note
-テストを容易にするため、ここでは 1 分ごとにデータを保存する効果を示していますが、実際に提供しているサンプルコードでは 10 分ごとに 1 回データを保存します。
+テストを容易にするため、ここでは 1 分ごとにデータを保存する効果を示していますが、実際に提供されているサンプルコードでは 10 分ごとに 1 回データを保存します。
 :::
 
 :::caution
 このプロジェクトについては、次の点に注意してください。
 
-1. Multichannel Gas Sensor は、取得した値が正確になるまでウォームアップの時間が必要です。そのため、最初に記録された数セットのデータは、誤差が大きい場合は破棄してよいと考えられます。
-2. このサンプルではディープスリープ機能を使用しているため、シリアルモニタは保存情報を 1 回だけ出力します。これは、ウェイクアップ後にリセットされたのと同等であり、次のデバッグ情報を見るには Arduino のシリアルポートを再度開く必要があるということです。ただし、カードに問題がなければ、センサーデータは設定した時刻どおりに収集されるので安心してください。
+1. Multichannel Gas Sensor は、取得される値が正確になるまでウォームアップの時間が必要です。そのため、最初に記録された数セットのデータは、誤差が大きい場合は破棄してよいと考えられます。
+2. このサンプルではディープスリープ機能を使用しているため、シリアルモニタは保存情報を 1 回だけ出力します。これは、ウェイクアップ後にリセットされたのと同等であり、次のデバッグ情報を見るには Arduino のシリアルポートを再度開く必要があるということです。ただし、カードに問題がなければ、設定した時刻どおりにセンサーデータが収集されるので安心してください。
 
    :::
 
@@ -778,7 +778,7 @@ void appendFile(fs::FS &fs, const char * path, const char * message) {
 
 この例では、XIAO ESP32S3 は各読み取りの間にディープスリープモードになります。ディープスリープモードでは、すべてのコードを `setup()` 関数内に記述する必要があります。これは、XIAO ESP32S3 が `loop()` に到達することはないためです。
 
-この例では、マイクロ秒から秒への変換係数を使用しているため、`TIME_TO_SLEEP` 変数でスリープ時間を秒単位で設定できます。この場合、XIAO ESP32S3 を 10 分（600 秒）スリープするように設定しています。XIAO ESP32S3 を別の時間だけスリープさせたい場合は、ディープスリープさせたい秒数を `TIME_TO_SLEEP` 変数に入力するだけです。
+この例では、マイクロ秒から秒への変換係数を使用しているため、`TIME_TO_SLEEP` 変数でスリープ時間を秒単位で設定できます。この場合、XIAO ESP32S3 を 10 分（600 秒）スリープするように設定しています。XIAO ESP32S3 を別の時間だけスリープさせたい場合は、`TIME_TO_SLEEP` 変数にディープスリープさせたい秒数を入力するだけです。
 
 ```c
 // Define deep sleep options
@@ -787,13 +787,13 @@ uint64_t uS_TO_S_FACTOR = 1000000; // Conversion factor for micro seconds to sec
 uint64_t TIME_TO_SLEEP = 600;
 ```
 
-次に、microSD カードの CS ピンを定義します。この例では **GPIO 21** に設定されています。
+次に、microSD カードの CS ピンを定義します。この場合は **GPIO 21** に設定されています。
 
 ```c
 #define SD_CS 21
 ```
 
-読み取り ID を保持するために `readingID` という変数を作成します。これは、読み取り値を整理するための方法です。ディープスリープ中に変数の値を保存するには、RTC メモリに保存できます。RTC メモリにデータを保存するには、変数定義の前に `RTC_DATA_ATTR` を追加するだけです。
+`readingID` という変数を作成して、読み取り ID を保持します。これは、読み取り値を整理するための方法です。ディープスリープ中に変数の値を保持するには、RTC メモリに保存できます。RTC メモリにデータを保存するには、変数定義の前に `RTC_DATA_ATTR` を追加するだけです。
 
 microSD カードに保存するデータを保持するための String 変数を作成します。
 
@@ -806,7 +806,7 @@ NTPClient timeClient(ntpUDP);
 
 次に、`Setup()` 関数内で NTP クライアントを初期化し、NTP サーバーから日付と時刻を取得します。タイムゾーンに合わせて時刻を調整するには、`setTimeOffset(<time>)` メソッドを使用できます。
 
-すべての初期化が完了したら、測定値とタイムスタンプを取得し、それらをすべて microSD カードに記録できます。
+すべての初期化が完了したら、測定値とタイムスタンプを取得し、それらを microSD カードに記録できます。
 
 コードをより理解しやすくするために、次の関数を作成しました。
 
@@ -821,9 +821,9 @@ esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
 esp_deep_sleep_start();
 ```
 
-これら 2 つの関数を組み合わせて使用することをお勧めします。ウェイクアップ時間を設定したら、XIAO ができるだけ早くディープスリープモードに入れるようにしてください。
+これら 2 つの関数を組み合わせて使用することをお勧めします。ウェイクアップ時間を設定したら、できるだけ早く XIAO がディープスリープモードに入るようにしてください。
 
-## シリアルペリフェラルインターフェースフラッシュファイルシステム（SPIFFS）
+## シリアルペリフェラルインタフェースフラッシュファイルシステム（SPIFFS）
 
 :::caution
 このセクションは XIAO ESP32C3、XIAO ESP32S3、または XIAO ESP32S3 Sense に適用されますが、このセクションは Arduino IDE 2.X をサポートしていません。
@@ -833,7 +833,7 @@ ESP32 には Serial Peripheral Interface Flash File System（SPIFFS）が含ま�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/73.jpg" style={{width:1000, height:'auto'}}/></div>
 
-SPIFFS を使用すると、コンピュータの通常のファイルシステムと同様にフラッシュメモリへアクセスできますが、より単純で制限があります。ファイルの読み取り、書き込み、クローズ、削除が可能です。この記事執筆時点では、SPIFFS はディレクトリをサポートしていないため、すべてがフラットな構造で保存されます。
+SPIFFS を使用すると、コンピュータの通常のファイルシステムと同様にフラッシュメモリへアクセスできますが、より単純で制限があります。ファイルの読み取り、書き込み、クローズ、削除が可能です。この記事の執筆時点では、SPIFFS はディレクトリをサポートしていないため、すべてがフラットな構造で保存されます。
 
 XIAO ESP32 で SPIFFS を使用すると、特に次のような用途に便利です。
 
@@ -845,33 +845,33 @@ XIAO ESP32 で SPIFFS を使用すると、特に次のような用途に便利�
 
 ### Arduino ESP32 Filesystem Uploader のインストール
 
-Arduino IDE 上で自分でコードを書けば、ESP32 のファイルシステムにファイルを作成・保存・書き込みできます。しかしこの方法はあまり実用的ではありません。というのも、ファイルの内容を Arduino スケッチ内にすべて入力しなければならないからです。
+Arduino IDE 上で自分でコードを書けば、ESP32 のファイルシステムにファイルを作成、保存、書き込みできます。しかしその場合、ファイルの内容を Arduino スケッチ内に入力しなければならず、あまり実用的ではありません。
 
 幸いなことに、Arduino IDE 用のプラグインがあり、コンピュータ上のフォルダから ESP32 のファイルシステムにファイルを直接アップロードできます。これにより、ファイルを扱う作業が非常に簡単になります。では、インストールしてみましょう。
 
 :::note
-注：この記事執筆時点では、ESP32 Filesystem Uploader プラグインは **Arduino 2.0 ではサポートされていません**。
+注：この記事の執筆時点では、ESP32 Filesystem Uploader プラグインは **Arduino 2.0 ではサポートされていません**。
 :::
 
 #### Windows
 
-**ステップ 1.** [releases ページ](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/) にアクセスし、[ESP32FS-1.1.zip](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/download/1.1/ESP32FS-1.1.zip) ファイルをクリックしてダウンロードします。
+**Step 1.** [releases page](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/) にアクセスし、[ESP32FS-1.1.zip](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/download/1.1/ESP32FS-1.1.zip) ファイルをクリックしてダウンロードします。
 
-**ステップ 2.** Sketchbook の場所を確認します。Arduino IDE で **File > Preferences** に進み、Sketchbook の場所を確認します。私の場合は次のパスです：`C:\Users\mengd\Documents\Arduino`。
+**Step 2.** Sketchbook の場所を確認します。Arduino IDE で **File > Preferences** に進み、Sketchbook の場所を確認します。ここでは、次のパスにあります：`C:\Users\mengd\Documents\Arduino`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/73.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 3.** Sketchbook の場所に移動し、**tools** フォルダを作成します。
+**Step 3.** Sketchbook の場所に移動し、**tools** フォルダを作成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/74.png" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 4.** ダウンロードした _.zip_ フォルダを解凍します。開いて、ESP32FS フォルダを前のステップで作成した tools フォルダにコピーします。次のようなフォルダ構成になっているはずです。
+**Step 4.** ダウンロードした _.zip_ フォルダを解凍します。それを開き、ESP32FS フォルダを前のステップで作成した tools フォルダにコピーします。次のようなフォルダ構成になっているはずです。
 
 `<Sketchbook-location>/tools/ESP32FS/tool/esp32fs.jar`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/75.png" style={{width:500, height:'auto'}}/></div>
 
-**ステップ 5.** 最後に、Arduino IDE を再起動します。
+**Step 5.** 最後に、Arduino IDE を再起動します。
 
 プラグインが正しくインストールされたか確認するには、Arduino IDE を開きます。**XIAO ESP32S3** または **XIAO ESP32C3** を選択し、**Tools** に進んで **ESP32 Sketch Data Upload** オプションがあるか確認します。
 
@@ -879,19 +879,19 @@ Arduino IDE 上で自分でコードを書けば、ESP32 のファイルシス�
 
 #### MacOS
 
-**ステップ 1.** [releases ページ](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/) にアクセスし、[ESP32FS-1.1.zip](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/download/1.1/ESP32FS-1.1.zip) ファイルをクリックしてダウンロードします。
+**Step 1.** [releases page](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/) にアクセスし、[ESP32FS-1.1.zip](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/download/1.1/ESP32FS-1.1.zip) ファイルをクリックしてダウンロードします。
 
-**ステップ 2.** ファイルを展開します。
+**Step 2.** ファイルを展開します。
 
-**ステップ 3.** `/Documents/Arduino/` に **tools** というフォルダを作成します。
+**Step 3.** `/Documents/Arduino/` に **tools** というフォルダを作成します。
 
-**ステップ 4.** 展開した **ESP32FS** フォルダを **tools** ディレクトリにコピーします。次のようなフォルダ構成になっているはずです。
+**Step 4.** 展開した **ESP32FS** フォルダを **tools** ディレクトリにコピーします。次のようなフォルダ構成になっているはずです。
 
 `~Documents/Arduino/tools/ESP32FS/tool/esp32fs.jar`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/77.png" style={{width:500, height:'auto'}}/></div>
 
-**ステップ 5.** 最後に、Arduino IDE を再起動します。
+**Step 5.** 最後に、Arduino IDE を再起動します。
 
 プラグインが正しくインストールされたか確認するには、Arduino IDE を開きます。**XIAO ESP32S3** または **XIAO ESP32C3** を選択し、**Tools** に進んで **ESP32 Sketch Data Upload** オプションがあるか確認します。
 
@@ -901,19 +901,19 @@ Arduino IDE 上で自分でコードを書けば、ESP32 のファイルシス�
 
 ESP32 のファイルシステムにファイルをアップロードするには、次の手順に従ってください。
 
-**ステップ 6.** Arduino スケッチを作成して保存します。デモ用として、空のスケッチを保存してもかまいません。
+**Step 6.** Arduino スケッチを作成して保存します。デモ用として、空のスケッチを保存してもかまいません。
 
-**ステップ 7.** 次に、スケッチフォルダを開きます。**Sketch > Show Sketch Folder** に進みます。スケッチが保存されているフォルダが開くはずです。
+**Step 7.** 次に、スケッチフォルダを開きます。**Sketch > Show Sketch Folder** に進みます。スケッチが保存されているフォルダが開くはずです。
 
-**ステップ 8.** そのフォルダ内に **data** という新しいフォルダを作成します。
+**Step 8.** そのフォルダ内に **data** という新しいフォルダを作成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/79.png" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 9.** data フォルダ内に、ESP32 のファイルシステムに保存したいファイルを配置します。例として、**test_example** という名前で、いくつかのテキストを含む _.txt_ ファイルを作成します。
+**Step 9.** data フォルダ内に、ESP32 のファイルシステムに保存したいファイルを配置します。例として、**test_example** という名前で、いくつかのテキストを含む _.txt_ ファイルを作成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/80.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 10.** その後、ファイルをアップロードするには、Arduino IDE で **Tools > ESP32 Sketch Data Upload** に進むだけです。
+**Step 10.** その後、ファイルをアップロードするには、Arduino IDE で **Tools > ESP32 Sketch Data Upload** に進むだけです。
 
 :::caution
 アップローダーは、ファイルシステムにすでに保存されているものをすべて上書きします。
@@ -925,7 +925,7 @@ ESP32 のファイルシステムにファイルをアップロードするに�
 
 ### アップローダーのテスト
 
-では、そのファイルが実際に ESP32 のファイルシステムに保存されたかどうかを確認してみましょう。次のコードを ESP32 ボードに書き込むだけです。
+では、ファイルが実際に ESP32 のファイルシステムに保存されたかどうかを確認してみましょう。次のコードを ESP32 ボードに書き込むだけです。
 
 ```cpp
 #include "SPIFFS.h"
@@ -958,7 +958,7 @@ void loop() {
 }
 ```
 
-アップロード後、ボーレートを 115200 に設定してシリアルモニタを開きます。シリアルモニタ上に _.txt_ ファイルの内容が表示されるはずです。
+アップロード後、ボーレート 115200 でシリアルモニタを開きます。シリアルモニタ上に _.txt_ ファイルの内容が表示されるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/82.png" style={{width:800, height:'auto'}}/></div>
 
@@ -968,11 +968,11 @@ void loop() {
 このセクションは、XIAO ESP32C3、XIAO ESP32S3、または XIAO ESP32S3 Sense に適用されます。
 :::
 
-開発ボードを使用する際、多くの人はチップ上のフラッシュメモリを使って重要なデータを保存したいと考えるでしょう。そのためには、開発ボードに異常が発生した場合でもデータが失われないことを保証するストレージ方式が必要です。
+開発ボードを使用する際、多くの人はチップ上のフラッシュメモリを使って重要なデータを保存したいと考えるでしょう。そのためには、開発ボードに異常が発生した場合でもデータが失われないことを保証する保存方法が必要です。
 
-このチュートリアルでは、XIAO ESP32 のフラッシュメモリに重要なデータを保存する 2 つの異なるストレージ方法について紹介します。
+このチュートリアルでは、XIAO ESP32 のフラッシュメモリに重要なデータを保存する 2 つの異なる方法について紹介します。
 
-1. 最初のガイドでは、Preferences.h ライブラリを使用して ESP32 のフラッシュメモリにデータを永続的に保存する方法を示します。フラッシュメモリに保持されたデータは、リセットや電源断後も保持されます。Preferences.h ライブラリを使用すると、ネットワーク認証情報、API キー、しきい値、さらには GPIO の最後の状態などのデータを保存するのに便利です。フラッシュメモリへのデータの保存と読み出し方法を学びます。
+1. 最初のガイドでは、Preferences.h ライブラリを使用して ESP32 のフラッシュメモリにデータを永続的に保存する方法を説明します。フラッシュメモリに保持されたデータは、リセットや電源断をまたいで保持されます。Preferences.h ライブラリを使用すると、ネットワーク認証情報、API キー、しきい値、さらには GPIO の最後の状態などのデータを保存するのに便利です。フラッシュメモリへのデータの保存と読み出し方法を学びます。
 
 2. 2 つ目のガイドでは、XIAO ESP32C3 の EEPROM とは何か、そしてそれが何に役立つのかを説明します。また、EEPROM への書き込みと読み出し方法を紹介し、学んだ概念を実践に移すためのプロジェクト例を構築します。
 
@@ -988,7 +988,7 @@ void loop() {
 
 **Random Nerd Tutorials** の著者の皆様の多大なご尽力に心より感謝いたします。
 
-以下は元記事への参照リンクです。ESP32 のファイルシステムについてさらに詳しく知りたい方は、ぜひ以下の元記事リンクをご覧ください。
+以下は元記事への参考リンクです。ESP32 のファイルシステムについてさらに詳しく知りたい方は、ぜひ以下の元記事リンクをご覧ください。
 
 - [ESP32: Guide for MicroSD Card Module using Arduino IDE](https://randomnerdtutorials.com/esp32-microsd-card-arduino/)
 - [ESP32 Data Logging Temperature to MicroSD Card](https://randomnerdtutorials.com/esp32-data-logging-temperature-to-microsd-card/)
@@ -1000,7 +1000,7 @@ ESP32 開発ボードの使用に関する詳細情報については、Random N
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

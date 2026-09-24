@@ -2,3 +2,6 @@ position: 4
 label: 'XIAO Display Gadgets'
 collapsible: true
 collapsed: true
+link:
+  type: doc
+  id: display_gadgets_introduction

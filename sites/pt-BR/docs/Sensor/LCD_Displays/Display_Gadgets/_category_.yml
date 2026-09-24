@@ -2,3 +2,6 @@ position: 4
 label: 'Gadgets de Display XIAO'
 collapsible: true
 collapsed: true
+link:
+  type: doc
+  id: pt_display_gadgets_introduction

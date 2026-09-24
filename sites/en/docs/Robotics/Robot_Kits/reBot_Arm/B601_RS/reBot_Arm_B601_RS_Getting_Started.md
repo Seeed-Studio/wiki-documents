@@ -18,7 +18,7 @@ last_update:
   date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
 
@@ -27,8 +27,9 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# Getting Started with reBot Arm B601-RS
+# reBot Arm B601-RS Quick Start
 
 <RebotRsDocNav />
 
@@ -37,10 +38,16 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -58,6 +65,17 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 <p align="center">
   The reBot Arm project is open source on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm)—please visit the repository and give it a Star! The repository contains the complete BOM. This guide will help you get started with the B601-RS, from assembly to operation.
 </p>
+
+<GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
+
+## Project Introduction
+
+**reBot-DevArm (reBot Arm B601 DM and reBot Arm B601 RS)** is a robotic arm project dedicated to lowering the threshold for learning embodied intelligence. We focus on **"True Open Source"** — not just code, we open-source all of the following without reservation:
+
+- 🦾 **Open-source robotic arms with two motor versions**: We provide all open-source files for RoboStride and Damiao motor versions of the same appearance.
+- 🛠️ **Hardware blueprints**: Sheet metal and 3D printed part source files.
+- 🔩 **BOM (Bill of Materials)**: Detailed to every screw's specification and purchase link.
+- 💻 **Software and algorithms**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
 
 ## Safety Disclaimer and Risk Notice
 
@@ -150,7 +168,6 @@ Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cabl
 
 You should have completed the preliminary preparation for the robotic arm assembly by following the video. Next, we will introduce the steps for writing motor IDs and calibrating the robotic arm.
 
-
 Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.
 
 <div class="video-container">
@@ -160,17 +177,20 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 ## Use MotorBridge to Calibrate the Arm and Complete the First Run
 
 :::tip
+
 1. Explore our **MotorBridge** platform. This one-stop solution supports an expanding range of motors, including [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [RobStride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [HighTorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [MyActuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow, and continuously updated robotic arms such as reBot. It is beginner-friendly and provides developers with a Python SDK matching the Web UI features.
 
 2. MotorBridge features tailored for reBot include one-click zero calibration, parameter writing, drag-and-drop motor control, and built-in model visualization.
 
 3. MotorBridge supports **Windows, Ubuntu, and macOS**.
+
 :::
 
 :::tip
+
 1. Virtual machines do not provide sufficient performance for reliable demo operation and may introduce configuration issues. Use a physical Ubuntu machine whenever possible.
 
-   Recommended Bilibili installation tutorial: [Ubuntu Dual-Boot Installation Tutorial](https://www.bilibili.com/video/BV1Cc41127B9/)
+   We recommend installing **Ubuntu 24.04 LTS**.
 
 2. (Beta) You can ask an agent to initialize the robotic arm. Send it the following prompt:
 
@@ -181,6 +201,7 @@ Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-A
 If you purchased a pre-assembled kit, tell the agent during the motor ID step: "I purchased a pre-assembled kit. Scan motors 1–7 and verify that they are online. Do not rewrite the motor IDs."
 
 3. The agent writes motor IDs through CLI commands, while this Wiki uses the Web UI. Both methods work.
+
 :::
 
 ### Software Setup and Calibration Workflow
@@ -215,6 +236,7 @@ Load Miniforge and initialize Bash:
 source ~/miniforge3/etc/profile.d/conda.sh
 conda init bash
 ```
+
 :::
 
 </TabItem>
@@ -236,6 +258,7 @@ Load Miniforge and initialize Zsh, the default shell on current macOS versions:
 source ~/miniforge3/etc/profile.d/conda.sh
 conda init zsh
 ```
+
 :::
 
 </TabItem>
@@ -260,6 +283,7 @@ For PowerShell, initialize Conda with:
 ```bash
 conda init powershell
 ```
+
 :::
 
 </TabItem>
@@ -329,7 +353,6 @@ After activating the reBot virtual environment, run the following command to ins
 If you experience low frame rates during teleoperation on macOS, it may be caused by an outdated WCH CH34x driver version. For **macOS 10.14 and later**, the system includes a built-in `AppleUSBCHC0M` driver. You can uninstall the old driver and switch to the macOS built-in driver, which should effectively improve frame rates.
 :::
 
-
 ```bash
 pip install motorbridge
 ```
@@ -359,7 +382,6 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-
 :::tip Attention
 If the PCAN device has incorrect firmware after driver installation, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
@@ -382,6 +404,7 @@ If transferring from another computer (e.g. scp):
 ```text
 scp flash_pcan_ubuntu.sh pcan_canable_hw.bin seeed@your_Ubuntu_IP:~/Downloads/
 ```
+
 Or simply copy it onto a USB flash drive and plug it into the Ubuntu machine — as long as the files end up in ~/Downloads, the current directory, or /tmp, the script will find them automatically.
 
 4.Execute:
@@ -406,11 +429,13 @@ Download the file: [peak-linux-driver-9.2.0.tar.gz](https://www.peak-system.com/
 
 - Remove brltty
 On Jetson, brltty may occupy the USB serial port used by the leader. Remove it first:
+
 ```bash
 sudo apt remove -y brltty
 ```
 
 - Install Dependencies
+
 ```bash
 sudo apt update
 sudo apt install -y \
@@ -423,47 +448,64 @@ sudo apt install -y \
     ethtool \
     nvidia-l4t-kernel-headers
 ```
+
 Verify that the current kernel headers directory exists:
+
 ```bash
 ls -l /lib/modules/$(uname -r)/build
 ```
 
 - Compile the PEAK SocketCAN Driver
 Download and extract PEAK Linux Driver 9.2.0, then enter the source directory:
+
 ```bash
 tar -xvf peak-linux-driver-9.2.0.tar.gz
 cd ~/peak-linux-driver-9.2.0
 ```
+
 Clean previous build artifacts:
+
 ```bash
 make clean
 ```
+
 Compile in netdev mode:
+
 ```bash
 make netdev
 ```
+
 Netdev mode registers PCAN-USB as a Linux SocketCAN network interface.
 Do **not** use plain `make`. Plain `make` builds chardev mode, while LeRobot and motorbridge-cli rely on SocketCAN interfaces.
 
 - Install and Load the Driver
 Install the driver:
+
 ```bash
 sudo make install
 sudo depmod -a
 ```
+
 Load the pcan kernel module:
+
 ```bash
 sudo modprobe pcan
 ```
+
 Enable automatic loading on boot:
+
 ```bash
 echo pcan | sudo tee /etc/modules-load.d/pcan.conf
 ```
+
 Confirm the driver is loaded:
+
 ```bash
 ip -br link | grep can
 ```
+
 Expected output:
+
 ```
 can0             DOWN           <NOARP,ECHO>
 can1             DOWN           <NOARP,ECHO>
@@ -471,10 +513,13 @@ can1             DOWN           <NOARP,ECHO>
 ```
 
 - Find which PCAN interface corresponds to your robotic arm
+
 ```bash
 for i in /sys/class/net/can*; do [ "$(basename "$(readlink -f "$i/device/driver" 2>/dev/null)")" = "pcan" ] && basename "$i"; done
 ```
+
 Interfaces listed here are PEAK PCAN-USB devices, e.g.:
+
 ```
 can2
 ```
@@ -483,6 +528,7 @@ can2
 Linux environment variables do not survive reboot, and PCAN interface numbering may change. A more reliable approach is to permanently define a refresh function and run it after opening a terminal.
 
 Append the function to `~/.bashrc`:
+
 ```bash
 grep -q '^pcan_refresh()' ~/.bashrc || cat >> ~/.bashrc <<'EOF'
 
@@ -494,17 +540,23 @@ pcan_refresh() {
 }
 EOF
 ```
+
 ```bash
 source ~/.bashrc
 ```
+
 Run this after rebooting or re-plugging PCAN-USB:
+
 ```bash
 pcan_refresh
 ```
+
 On success, it outputs:
+
 ```
 PCAN_IF=can1
 ```
+
 Use `$PCAN_IF` in all subsequent commands instead of hardcoding `can1` or `can2`.
 
 ```bash
@@ -521,6 +573,7 @@ sudo ip link set $PCAN_IF up
 <TabItem value="macos" label="macOS">
 
 If `libPCBUSB.dylib` cannot be loaded, install PCBUSB first:
+
 ```zsh
 curl -L -o macOS_Library_for_PCANUSB_v0.13.tar.gz \
   https://raw.githubusercontent.com/tianrking/motorbridge/main/third_party/pcan/macos/macOS_Library_for_PCANUSB_v0.13.tar.gz
@@ -569,7 +622,6 @@ python3 -c "import ctypes; ctypes.CDLL('PCBUSB'); print('PCBUSB load OK')"
 motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 --timeout-ms 300
 ```
 
-
 :::tip Attention
 If the PCAN device has incorrect firmware after driver installation, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
@@ -615,7 +667,6 @@ Re-plug the USB.
 <TabItem value="windows" label="Windows">
 
 Download [PEAK-System_Driver-Setup.zip](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/pcan_firmware/PEAK-System_Driver-Setup.zip) and install the PCAN-USB driver.
-
 
 :::tip Attention
 If **PCAN-USB** is not detected in Device Manager after installing the driver, expand the section below, download the PCAN firmware, and follow the recovery steps.
@@ -683,8 +734,6 @@ Disconnect the USB2CAN module, set the DIP switch to **120R**, and reconnect it 
 </details>
 
 </TabItem>
-
-
 
 </Tabs>
 <!-- ### 3. Write Motor IDs

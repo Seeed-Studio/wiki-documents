@@ -8,7 +8,7 @@ keywords:
   - Display
   - LCD
   - 1.14
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /getting_started_1.14_inch_display_nrf52840
 sku: 100069374
 sidebar_position: 1
@@ -61,7 +61,7 @@ This combination makes it an ideal platform for wearable devices, compact sensor
     <tr><td>User Buttons</td><td>3</td></tr>
     <tr><td>Battery Connector</td><td>2-pin JST 2.0 Connector for 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery status detection supported; battery voltage can also be monitored for battery-level estimation.</td></tr>
-    <tr><td>Expansion Interfaces</td><td>1x Grove I2C Connector, 1x I2C pads, 1x I2S pads, 1x SWD pads, 3x user-button pads</td></tr>
+    <tr><td>Expansion Interfaces</td><td>1x I2S Interface, 1x SWD Interface, 3x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>26 × 48 × 10.6 mm</td></tr>
     <tr><td>Best For</td><td>Portable sensor displays, Grove devices, physical controllers</td></tr>
   </table>
@@ -219,6 +219,7 @@ No — we strongly recommend **against hot-plugging** devices on the I2C interfa
 - **🗃️[PCB Design Files]** [XIAO 1.14'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
 - **📄[Schematic]** [XIAO 1.14'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[3D Model]** [XIAO 1.14'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.14%27%27%20IPS%20Display.step)
+- **🖨️[3D Printed Enclosure]** [XIAO 1.14'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843003-enclosure-for-xiao-114-ips-display-esp32nrf52840)
 - **📄[Datasheet]** [1.14 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.14%20Inch%20Display%20Datasheet.pdf)
 - **💾[Factory Firmware]** [XIAO 1.14'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.14%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
 

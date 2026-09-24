@@ -1,6 +1,6 @@
 ---
-description: This developer guide introduces the reBot Arm B601-RS web console, ROS 2, RobStride/SocketCAN, MuJoCo simulation, visual grasping, and LLM/MCP Agent installation, runtime, and secondary development workflow.
-title: reBot Arm B601-RS Web Simulator and ROS 2/MuJoCo Developer Guide
+description: This developer guide introduces the web console, ROS 2, RobStride/SocketCAN, MuJoCo simulation, visual grasping, and LLM/MCP Agent installation, runtime, and secondary development workflow of the reBot Arm B601-RS Digital Twin & Control Stack.
+title: reBot Arm B601-RS Digital Twin & Control Stack
 keywords:
   - reBot Arm
   - B601-RS
@@ -23,12 +23,14 @@ createdAt: '2026-08-13'
 updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
+import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# reBot Arm B601-RS Web Simulator and ROS 2/MuJoCo Developer Guide
+# reBot Arm B601-RS Digital Twin & Control Stack
 
 <RebotRsDocNav />
 
@@ -36,10 +38,16 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -56,11 +64,9 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>Three.js visualization · ROS 2 · SocketCAN · MuJoCo simulation · LLM/MCP control</strong>
 </p>
 
-The reBot Arm B601-RS project integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, and an optional LLM/MCP grasping agent. This guide explains how to install, launch, and develop on the full system.
+The reBot Arm B601-RS Digital Twin & Control Stack integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, and an optional LLM/MCP grasping agent. This guide explains how to install, launch, and develop on the full system.
 
-> **Important safety note**
->
-> Before starting the real robot, secure the arm, clear the workspace, confirm that the physical emergency stop works, and validate actions in simulation first. For the first real-robot test, keep the speed limit at `0.2-0.4 rad/s` and move one joint at a time.
+<GitHubStarButton owner="Yang-Ci" repo="ReBot_Arm_DigitalTwin_RS" />
 
 ## Project Features
 
@@ -146,7 +152,7 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 ## Environment Requirements
 
 | Item | Recommended requirement |
-|---|---|
+| --- | --- |
 | Backend OS | Ubuntu 24.04 |
 | ROS 2 | Jazzy |
 | Compatible reference environment | Ubuntu 22.04 + ROS 2 Humble (real-robot use requires your own regression testing) |
@@ -159,19 +165,35 @@ export REBOTARM_ROS_DISCOVERY_RANGE=SUBNET
 
 ## Installation Steps
 
-### Step 1: Get the project
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+      #### Step 1: Get the project
+
+      <p className="rebot-step-label">Step 1</p>
 
 ```bash
-git clone https://github.com/Yang-Ci/ReBot_Arm_web_RS.git ~/reBot_Arm_Mujoco-RS
-cd ~/reBot_Arm_Mujoco-RS
+git clone https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS.git ~/ReBot_Arm_DigitalTwin_RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ```
 
-The commands below use `~/reBot_Arm_Mujoco-RS` as the project directory. If your directory is different, replace the paths accordingly.
+The commands below use `~/ReBot_Arm_DigitalTwin_RS` as the project directory. If your directory is different, replace the paths accordingly.
 
-### Step 2: Read-only environment check
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+      #### Step 2: Read-only environment check
+
+      <p className="rebot-step-label">Step 2</p>
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./setup.sh --check
 ```
 
@@ -184,7 +206,16 @@ This command only checks the system and does not modify the environment. Checks 
 - ROS 2 workspace build results;
 - the web `package.json` and `.env`.
 
-### Step 3: One-click install and build
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+      #### Step 3: One-click install and build
+
+      <p className="rebot-step-label">Step 3</p>
 
 ```bash
 ./setup.sh --yes
@@ -213,7 +244,16 @@ cd rebotarm_ros2_RS
 colcon build --symlink-install
 ```
 
-### Step 4: Configure web environment variables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+      #### Step 4: Configure web environment variables
+
+      <p className="rebot-step-label">Step 4</p>
 
 On first install, `reBotArm_simulator-RS/.env` is created from `.env.example`. Key fields:
 
@@ -228,6 +268,10 @@ MOTORBRIDGE_WS_TOKEN=
 
 If the web console and ROS 2/Agent are not on the same machine, change the proxy addresses to the backend machine's IP. API keys and tokens should only be stored in environment variables or the uncommitted local `.env`.
 
+</div>
+</section>
+</div>
+
 ## Launching the Project
 
 <Tabs defaultValue="web" groupId="launch-mode" queryString>
@@ -237,7 +281,7 @@ If the web console and ROS 2/Agent are not on the same machine, change the proxy
 Start only the Node.js web server, without rosbridge or ROS 2:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS/reBotArm_simulator-RS
+cd ~/ReBot_Arm_DigitalTwin_RS/reBotArm_simulator-RS
 npm start
 ```
 
@@ -259,14 +303,14 @@ This mode is suitable for developing the 3D model, UI, pose presets, and front-e
 Terminal 1 starts Fake Driver, MuJoCo, camera, detection, MCP Agent, and rosbridge:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start rs_sim
 ```
 
 Terminal 2 starts the web console:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start web
 ```
 
@@ -309,7 +353,7 @@ ip -details -statistics link show can0
 After confirming that the emergency stop works and the workspace is clear, start the real-robot controller in terminal 1:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE \
   ./rebotarm start rs
 ```
@@ -351,7 +395,6 @@ This script starts:
 
 It is used to compare interfaces, joint directions, and status. It does not start the full MuJoCo stack, vision, Agent, or web server. Confirm the namespace selected in the web console again before sending commands.
 
-
 </TabItem>
 
 </Tabs>
@@ -359,7 +402,7 @@ It is used to compare interfaces, joint directions, and status. It does not star
 ## Unified Command Line
 
 | Command | Description |
-|---|---|
+| --- | --- |
 | `./rebotarm doctor` | Read-only environment check, equivalent to `./setup.sh --check` |
 | `./rebotarm start web` | Start or reuse rosbridge and start the web server |
 | `./rebotarm start rs_sim` | Start the full RS MuJoCo simulation stack |
@@ -372,7 +415,7 @@ Simulation and real-robot processes running in the foreground should be ended no
 ## Project Architecture
 
 ```text
-reBot_Arm_Mujoco-RS/
+ReBot_Arm_DigitalTwin_RS/
 |-- setup.sh                              One-click check, install, and build
 |-- rebotarm                              Unified start, status, and stop entry
 |-- requirements-rs-hardware.txt          RS real-robot Python dependencies
@@ -457,7 +500,7 @@ Web console or Agent
 ### Control Target and Namespace
 
 | Mode | Namespace | Web model source |
-|---|---|---|
+| --- | --- | --- |
 | RS real robot | `/rebotarm` | Real-robot `/joint_states` feedback |
 | RS simulation | `/rebotarm_rs` | Uses the actual MuJoCo state first |
 
@@ -517,7 +560,7 @@ The examples below use the real-robot `/rebotarm`. For simulation, replace the p
 ### Status Topics
 
 | Topic | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/joint_states` | `sensor_msgs/msg/JointState` | Unified six-axis and gripper status |
 | `/rebotarm/joints/<name>/state` | `rebotarm_msgs/msg/JointMotorState` | Single-motor position, velocity, torque, and status code |
 | `/rebotarm/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | Raw gripper motor status |
@@ -528,7 +571,7 @@ The examples below use the real-robot `/rebotarm`. For simulation, replace the p
 ### Low-Level Command Topics
 
 | Topic | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/joints/<joint1..joint6>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Default joint command from the web console for the real robot |
 | `/rebotarm/joints/<joint1..joint6>/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Position-velocity command |
 | `/rebotarm/gripper/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | RS gripper MIT command |
@@ -540,7 +583,7 @@ Before publishing low-level commands yourself, check `arm_status.state_machine`.
 ### Services
 
 | Service | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/enable` | `std_srvs/srv/Trigger` | Enable the arm |
 | `/rebotarm/disable` | `std_srvs/srv/Trigger` | Safely disable; homes first when necessary |
 | `/rebotarm/safe_home` | `std_srvs/srv/Trigger` | Safe homing with validation |
@@ -564,7 +607,7 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger '{}'
 ### Actions
 
 | Action | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | Joint trajectory |
 | `/rebotarm/gripper/command` | `control_msgs/action/GripperCommand` | Gripper action |
 | `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | Cartesian pose motion |
@@ -572,7 +615,7 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger '{}'
 ### MuJoCo and Vision Interfaces
 
 | Interface | Type/Use |
-|---|---|
+| --- | --- |
 | `/rebotarm_rs/mujoco/joint_states` | Actual MuJoCo joint states |
 | `/rebotarm_rs/mujoco/object_states` | Scene object states as JSON |
 | `/rebotarm_rs/mujoco/overhead_rgb/image_raw` | Overhead RGB camera |
@@ -625,7 +668,7 @@ The LLM understands natural language, and the MCP layer constrains intention int
 The full simulation starts the MCP Agent by default. To enable the natural-language entry point, open another terminal:
 
 ```bash
-cd ~/reBot_Arm_Mujoco-RS
+cd ~/ReBot_Arm_DigitalTwin_RS
 export DASHSCOPE_API_KEY='your-key'
 export REBOTARM_LLM_MODEL='qwen-plus'
 ./scripts/start_rs_text_agent.sh
@@ -675,7 +718,7 @@ gravity_compensation:
 Other default frequencies:
 
 | Layer | Default frequency | Description |
-|---|---:|---|
+| --- | ---: | --- |
 | Web joint target | Up to 60 Hz | Sliders and TCP IK continuously update the target |
 | Real-robot sync feedback query | 20 Hz | Refresh the RobStride measurement cache |
 | ROS real-robot state | 60 Hz | Publish feedback, target, and reference from the cache |
@@ -749,7 +792,7 @@ Keep both copies in sync when modifying them and check Linux filename case.
 ### Modify MuJoCo
 
 | File/directory | Role |
-|---|---|
+| --- | --- |
 | `rebotarm_ros2_RS/src/rebotarm_mujoco_rs/models/` | RS MJCF and STL |
 | `rebotarm_mujoco_rs/mujoco_sync.py` | Sync frequency, dynamics, and PD |
 | `rebotarm_mujoco_rs/scene_camera.py` | Overhead camera |

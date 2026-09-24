@@ -542,8 +542,7 @@ A: Because the data is read every five minutes and then sent out within three mi
 
 > Q2: Why can't I connect to LoRaWAN®?
 
-A: If you always can't connect to LoRaWAN®, please make sure that there is a strong enough signal and stable Helium network coverage within the surrounding environment. We recommend that you have a Helium gateway of your own to experience the full process. The Grove - Wio-E5 is only a prototype, so its antenna strength is not comparable to that of a large LoRa® device.
-Moreover, this may also be related to the instability of the Helium network, which has been partially unresponsive since July 2022, and for which we can only wait for the official fix of Helium.
+A: If you always can't connect to LoRaWAN®, please make sure that there is a strong enough signal and stable LoRaWAN network coverage within the surrounding environment. We recommend that you have a LoRaWAN gateway of your own to experience the full process. The Grove - Wio-E5 is only a prototype, so its antenna strength is not comparable to that of a large LoRa® device.
 
 > Q3: Why is it that sometimes some sensor data in a set of content does not appear on SenseCAP?
 
@@ -577,7 +576,7 @@ Please use the **EUI** and **Code** information marked on the back of the Grove 
 
 **Please take good care of the three codes, any loss caused by the loss of the codes will be the responsibility of the user.**
 
-> Q7: Is it possible to use SenseCAP's DevEUI, AppEUI and AppKey on other platforms? For example Helium or TTN?
+> Q7: Is it possible to use SenseCAP's DevEUI, AppEUI and AppKey on other platforms? For example TTN?
 
 A: The answer to this is no. SenseCAP's triple code cannot be used to bind to other platforms, otherwise there is a high risk of data anomalies on different platforms.
 

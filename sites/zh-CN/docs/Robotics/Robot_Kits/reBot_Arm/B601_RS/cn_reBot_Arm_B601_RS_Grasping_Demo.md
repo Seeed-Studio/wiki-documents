@@ -19,6 +19,7 @@ createdAt: '2026-06-15'
 updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/
 ---
+import '/src/css/rebot-wiki-style.css';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 # reBot Arm B601-RS 视觉夹取 Demo
@@ -30,10 +31,16 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
     <a href="./LICENSE">
@@ -93,7 +100,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
     </tr>
     <tr>
       <td>相机型号</td>
-      <td>Orbbec Gemini 2 / Intel RealSense D435i / D405</td>
+      <td>Orbbec Gemini 2 / D435i / D405</td>
     </tr>
     <tr>
       <td>检测方式</td>
@@ -272,7 +279,7 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 | pyorbbecsdk         | https://github.com/orbbec/pyorbbecsdk                                |
 | pyorbbecsdk 文档    | https://orbbec.github.io/pyorbbecsdk/index.html                      |
 | ROS2 Wrapper        | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main                |
-| Intel RealSense SDK | https://github.com/realsenseai/librealsense                          |
+| RealSense SDK | https://github.com/realsenseai/librealsense                          |
 
 #### 步骤 5. 配置 GraspNet（可选）
 
@@ -658,7 +665,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 本方案基于 **ROS2** 与 **YOLO**，在 reBot Arm B601-RS 上完成目标检测、抓取与放置。系统通过多终端分别启动机械臂、深度相机和抓取节点。
 
-当前深度相机支持 **Orbbec Gemini 2** 与 **Intel RealSense D405**。本方案不需要标定板做手眼标定；受安装和打印件公差影响，每台机械臂抓取时会有微小误差。
+当前深度相机支持 **Orbbec Gemini 2** 与 **RealSense D405**。本方案不需要标定板做手眼标定；受安装和打印件公差影响，每台机械臂抓取时会有微小误差。
 
 ### 2. 环境安装
 
@@ -993,6 +1000,6 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [pyorbbecsdk 文档](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
 - [realsense-ros](https://github.com/xiehuangbao888/realsense-ros)
-- [Intel RealSense SDK](https://github.com/realsenseai/librealsense)
+- [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) 文档](https://graspnet.net/)

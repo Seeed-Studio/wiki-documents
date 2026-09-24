@@ -1,14 +1,14 @@
 ---
 description: Demos autônomos em nível de função para cada periférico onboard do XIAO 1,47'' IPS Display (nRF52840). Cobre tela, toque, cartão SD, microfone, IMU, botões e detecção de tensão da bateria.
-title: Uso dos periféricos onboard
-sidebar_label: Função
+title: Uso dos Periféricos Onboard
+sidebar_label: Function
 keywords:
   - XIAO
   - nRF52840
   - IPS Display
   - LCD
   - Function
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_nrf52840.webp
 slug: /function_1.47_inch_touch_display_nrf52840
 sku: 100004242
 sidebar_position: 2
@@ -20,7 +20,7 @@ updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/pt-br/function_1.47_inch_touch_display_nrf52840/
 ---
 
-# Uso dos periféricos onboard
+# Uso dos Periféricos Onboard
 
 Esta página reúne demos autônomos em nível de função para cada periférico onboard do display IPS de 1,47''. Cada seção é independente — você pode escolher a que corresponde ao seu caso de uso sem precisar ler as demais.
 
@@ -45,7 +45,7 @@ Todos os demos desta página exigem **Seeed nRF52 Boards (1.1.13)** conforme des
 **SdFat** vem incluída no pacote de placas **Seeed nRF52 Boards (1.1.13)**, portanto os demos **SD Image Reader** e **Record to SD** não precisam de instalação separada do SdFat. Não instale SdFat pelo Library Manager, pois isso pode sobrescrever a versão incluída e causar conflitos de biblioteca ou de API.
 :::
 
-- **Seeed_GFX2 (instalação manual)** — esta biblioteca não está disponível no Library Manager e deve ser instalada manualmente:
+- **Seeed_GFX2 (Instalação Manual)** — esta biblioteca não está disponível no Library Manager e deve ser instalada manualmente:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
@@ -61,12 +61,12 @@ Todos os demos desta página exigem **Seeed nRF52 Boards (1.1.13)** conforme des
 **Passo 3.** Reinicie o Arduino IDE para que a nova biblioteca seja detectada.
 
 :::tip
-- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demo inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** é responsável pelo mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 172×320, a ordem de cores (BGR) e a orientação. Não é necessário `driver.h` nem configuração manual de pinos.
-- Nesta placa, os demos usam `Board_XIAO_1inch47_Touch_Display<38, 37>` (RST=38, BL=37) com `Config_Seeed_1inch47_Touch_JD9853A` (172×320, BGR, sem inversão).
+- **Seeed_GFX2** é a biblioteca gráfica da Seeed Studio construída sobre uma arquitetura em camadas `Board` + `Panel Config`. Cada demo inicializa o display com uma única chamada `display.begin<Board_..., Config_...>()` — o template **Board** é responsável pelo mapa de pinos (CS/DC/SCK/MOSI/RST/BL), e o **Panel Config** incorpora a resolução 172×320, a ordem de cores (BGR) e a orientação. Nenhum `driver.h` ou configuração manual de pinos é necessária.
+- Nesta placa os demos usam `Board_XIAO_1inch47_Touch_Display<38, 37>` (RST=38, BL=37) com `Config_Seeed_1inch47_Touch_JD9853A` (172×320, BGR, sem inversão).
 - O **controlador de toque** (AXS5106L) é tratado pela camada Touch do `Seeed_GFX2` (`Touch_AXS5106L`) — nenhuma biblioteca extra é necessária. Os demos de **IMU** usam a biblioteca **Seeed Arduino LSM6DS3** (instalada acima).
 :::
 
-## Obtendo o código de demonstração
+## Obtendo o Código de Demonstração
 
 Cada demo desta página está no repositório [Display-Gadgets](https://github.com/Seeed-Projects/Display-Gadgets), dentro do diretório `code_GFX2/Function/`. Cada demo é uma pasta contendo um único sketch `.ino`. **Sempre baixe a pasta completa** em vez de copiar o código-fonte `.ino` da visualização web do GitHub.
 
@@ -84,9 +84,9 @@ git clone https://github.com/Seeed-Projects/Display-Gadgets.git
 
 Em seguida, abra o arquivo `.ino` do demo a partir da pasta clonada `code_GFX2/Function/...`.
 
-## Tela — GraphicTest
+## Exibição na Tela — GraphicTest
 
-Este demo executa um benchmark gráfico completo no painel JD9853A de 1,47 polegada, cobrindo barras de cores, linhas, retângulos, círculos, triângulos, retângulos arredondados, texto e um gradiente de pixels. Use-o para verificar se a tela está ligada corretamente e se todas as chamadas de desenho funcionam como esperado.
+Este demo executa um benchmark gráfico completo no painel JD9853A de 1,47 polegadas, cobrindo barras de cores, linhas, retângulos, círculos, triângulos, retângulos arredondados, texto e um gradiente de pixels. Use-o para verificar se a tela está conectada corretamente e se todas as chamadas de desenho funcionam como esperado.
 
 **Code location:** `code_GFX2/Function/147_nRF52840/xiao_nrf52840_147_graphictest/`
 
@@ -97,7 +97,7 @@ Este demo executa um benchmark gráfico completo no painel JD9853A de 1,47 poleg
     </a>
 </div><br />
 
-### Como funciona
+### Como Funciona
 
 O sketch inicializa o painel JD9853A via **Seeed_GFX2** e, em seguida, executa em sequência dez primitivas gráficas, medindo o tempo de execução de cada uma via `micros()` e imprimindo o resultado no monitor serial.
 
@@ -108,9 +108,9 @@ display.begin<Board_XIAO_1inch47_Touch_Display<38, 37>,
               Config_Seeed_1inch47_Touch_JD9853A>();
 ```
 
-O template **Board** é responsável pelo mapa de pinos — CS=D2, DC=D3, SCK=D8, MOSI=D10 — e seus parâmetros de template `<RST, BL>` recebem números GPIO puros, então `<38, 37>` define RST=GPIO38 e BL=GPIO37. O **Panel Config** incorpora a resolução 172×320, a ordem de cores BGR e nenhuma inversão — não é necessário `driver.h` nem escrita manual de MADCTL.
+O template **Board** é responsável pelo mapa de pinos — CS=D2, DC=D3, SCK=D8, MOSI=D10 — e seus parâmetros de template `<RST, BL>` recebem números GPIO puros, então `<38, 37>` define RST=GPIO38 e BL=GPIO37. O **Panel Config** incorpora a resolução 172×320, a ordem de cores BGR e nenhuma inversão — nenhum `driver.h` ou escrita manual de MADCTL é necessária.
 
-### Executando o demo
+### Executando o Demo
 
 **Passo 1.** Abra `xiao_nrf52840_147_graphictest.ino` no Arduino IDE.
 
@@ -138,17 +138,17 @@ Graphic test finished.
 
 Na tela, você verá cada padrão de teste exibido por cerca de um segundo antes que o próximo comece. Quando todos os testes terminarem, aparecerá uma tela "Finished" com uma borda azul de retângulo arredondado.
 
-### Resultado esperado
+### Resultado Esperado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_function_graphictest.gif" style={{width:500, height:'auto'}}/></div>
 
-Depois que o sketch executa todos os padrões, a tela mostra a mensagem "Graphic Test / Finished". Reinicie a placa para executar o teste novamente.
+Depois que o sketch executar todos os padrões, a tela mostrará a mensagem "Graphic Test / Finished". Reinicie a placa para executar o teste novamente.
 
 ---
 
 ## Toque — Touch Circle
 
-Este demo transforma a tela sensível ao toque de 1,47 polegada em um bloco de desenho interativo. Toque em qualquer lugar da tela e um círculo branco aparecerá na ponta do seu dedo. Os círculos permanecem na tela, acumulando-se conforme você toca. Toque na barra **CLEAR** na parte inferior da tela para apagar todos os círculos e recomeçar.
+Este demo transforma a tela sensível ao toque de 1,47 polegadas em um bloco de desenho interativo. Toque em qualquer lugar da tela e um círculo branco aparecerá na ponta do seu dedo. Os círculos permanecem na tela, acumulando-se conforme você toca. Toque na barra **CLEAR** na parte inferior da tela para apagar todos os círculos e recomeçar.
 
 **Code location:** `code_GFX2/Function/147_nRF52840/xiao_nrf52840_147_touch_circle/`
 
@@ -180,7 +180,7 @@ display.getTouch(&x, &y);
   </table>
 </div>
 
-**Desenho acionado por borda.** O sketch usa uma abordagem de detecção de borda: ele só adiciona um círculo na borda de descida de um toque (dedo pressionado), não enquanto o dedo é mantido na tela. Isso proporciona um comportamento nítido e intencional de toque-para-desenhar em vez de pintar continuamente um rastro enquanto você arrasta.
+**Desenho acionado por borda.** O sketch usa uma abordagem de detecção de borda: ele só adiciona um círculo na borda de descida de um toque (dedo pressionando), não enquanto o dedo é mantido na tela. Isso proporciona um comportamento nítido e intencional de toque-para-desenhar em vez de pintar continuamente um rastro enquanto você arrasta.
 
 **Espelhamento do eixo X.** O painel de toque é fisicamente montado em uma orientação diferente do LCD, então a coordenada X bruta precisa ser espelhada. `display.getTouch()` já aplica esse espelhamento internamente e retorna coordenadas de tela, portanto não é necessária nenhuma transformação manual `screenX = 172 - 1 - rawX`.
 
@@ -205,7 +205,7 @@ Tap screen to draw white circles.
 Tap CLEAR bar at bottom to erase.
 ```
 
-**Passo 4.** Toque na tela — cada toque imprime as coordenadas de tela mapeadas:
+**Passo 4.** Toque na tela — cada toque imprime as coordenadas mapeadas da tela:
 
 ```
 Touch: screen=(144,124)
@@ -221,13 +221,13 @@ Toque na barra CLEAR na parte inferior para apagar todos os círculos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_function_touch_circle.gif" style={{width:500, height:'auto'}}/></div>
 
-Cada toque deixa um círculo branco na ponta do seu dedo. A barra de título da tela mostra a contagem em execução. Toque na barra CLEAR e a tela é redefinida para em branco com a borda e a barra de título redesenhadas.
+Cada toque deixa um círculo branco na ponta do seu dedo. A barra de título da tela mostra a contagem em execução. Toque na barra CLEAR e a tela é redefinida para em branco, com a borda e a barra de título redesenhadas.
 
 ---
 
 ## Cartão SD — Leitor de Imagens
 
-Esta demonstração lê arquivos de imagem `.bmp` de um cartão MicroSD e os exibe na tela. Ela oferece suporte a imagens BMP descompactadas de 24 bits e faz um recorte central para ajustá-las ao display de 172×320.
+Esta demonstração lê arquivos de imagem `.bmp` de um cartão MicroSD e os exibe na tela. Ela oferece suporte a imagens BMP descompactadas de 24 bits e faz um corte central para ajustá-las ao display de 172×320.
 
 **Localização do código:** `code_GFX2/Function/147_nRF52840/xiao_nrf52840_147_sd_image_reader/`
 
@@ -240,20 +240,20 @@ Esta demonstração lê arquivos de imagem `.bmp` de um cartão MicroSD e os exi
 
 ### Como Funciona
 
-O LCD e o cartão SD compartilham o mesmo barramento SPI de hardware (SCK = D8, MOSI = D10, MISO = D9). Para evitar contenção no barramento, o sketch desativa o chip-select do cartão SD (D6) antes de qualquer operação no LCD e o reativa antes do acesso ao SD. O cartão SD é controlado pela SdFat no modo `SHARED_SPI` na instância padrão `SPI`, enquanto o LCD roda no host SPI do Seeed_GFX2 — ambos compartilham os mesmos pinos físicos D8/D9/D10.
+O LCD e o cartão SD compartilham o mesmo barramento SPI de hardware (SCK = D8, MOSI = D10, MISO = D9). Para evitar contenção no barramento, o sketch desativa o chip-select do cartão SD (D6) antes de qualquer operação no LCD e o reativa antes do acesso ao SD. O cartão SD é controlado pelo SdFat no modo `SHARED_SPI` na instância padrão `SPI`, enquanto o LCD roda no host SPI do Seeed_GFX2 — ambos compartilham os mesmos pinos físicos D8/D9/D10.
 
-O sketch varre o diretório raiz do cartão SD em busca de arquivos `.bmp` (até 24) e depois os exibe em loop com um intervalo de 2 segundos entre as imagens.
+O sketch faz uma varredura no diretório raiz do cartão SD em busca de arquivos `.bmp` (até 24) e depois os exibe em loop com um intervalo de 2 segundos entre as imagens.
 
 **Formatos BMP suportados:**
 
 <div class="table-center">
   <table align="center">
     <tr><th>Formato</th><th>Profundidade de bits</th><th>Observações</th></tr>
-    <tr><td>BMP descompactado</td><td>24 bits</td><td>BGR888 convertido para RGB565 para exibição</td></tr>
+    <tr><td>BMP sem compactação</td><td>24 bits</td><td>BGR888 convertido para RGB565 para exibição</td></tr>
   </table>
 </div>
 
-Imagens maiores que 172×320 são recortadas centralmente.
+Imagens maiores que 172×320 são cortadas ao centro.
 
 ### Executando a Demonstração
 
@@ -284,7 +284,7 @@ A tela exibe cada imagem por 2 segundos e depois avança para a próxima em um l
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_function_sd_reader.gif" style={{width:500, height:'auto'}}/></div>
 
-Se nenhum arquivo BMP for encontrado, a tela mostra "No BMP found". Se uma imagem falhar na decodificação, a tela mostra brevemente o caminho do arquivo com "BMP decode failed" e passa para o próximo arquivo.
+Se nenhum arquivo BMP for encontrado, a tela exibirá "No BMP found". Se uma imagem falhar na decodificação, a tela exibirá brevemente o caminho do arquivo com "BMP decode failed" e passará para o próximo arquivo.
 
 ---
 
@@ -315,15 +315,15 @@ Esta demonstração transforma o microfone PDM onboard em um grande e responsivo
 
 #### Como Funciona
 
-O **microfone digital PDM (Pulse Density Modulation)** onboard está conectado ao periférico PDM do nRF52840 via **D0 (PDM_CLK)** e **D1 (MIC_DATA)**, conforme mostrado na tabela de pinos acima.
+O **microfone digital PDM (Pulse Density Modulation)** onboard está conectado ao periférico PDM do nRF52840 por meio de **D0 (PDM_CLK)** e **D1 (MIC_DATA)**, conforme mostrado na tabela de pinos acima.
 
-A **biblioteca PDM** da Arduino lida com a conversão de baixo nível de PDM para PCM em hardware. O sketch configura o periférico PDM em **16 kHz mono** com ganho de **30** e registra uma função de retorno de chamada acionada por interrupção (`onPDMdata`) que é disparada sempre que um buffer de 256 amostras fica pronto.
+A **biblioteca PDM** da Arduino lida com a conversão de baixo nível de PDM para PCM em hardware. O sketch configura o periférico PDM em **16 kHz mono** com ganho de **30** e registra uma função de retorno de chamada acionada por interrupção (`onPDMdata`) que é chamada sempre que um buffer de 256 amostras fica pronto.
 
 **Processamento de sinal:**
 
 1. **Extração de pico** — cada callback varre o buffer de 256 amostras em busca do maior valor absoluto (amplitude de pico).
 2. **Normalização** — o pico bruto é mapeado de um piso de 40 para um teto de 16.000, produzindo um valor de volume de 0,0–1,0. Valores abaixo do piso são tratados como silêncio.
-3. **Suavização exponencial** — o volume exibido é uma média móvel exponencial do pico bruto (α = 0,20) para evitar tremores. Quando o silêncio é detectado, o valor exibido decai em ×0,94 por quadro.
+3. **Suavização exponencial** — o volume exibido é uma média móvel exponencial do pico bruto (α = 0,20) para evitar tremulação. Quando o silêncio é detectado, o valor exibido decai em ×0,94 por quadro.
 
 **Desenho da barra:**
 
@@ -342,7 +342,7 @@ A barra usa **renderização diferencial**: apenas os segmentos cujo estado mudo
 
 **Passo 1.** Abra `xiao_nrf52840_147_mic_canvas.ino` na Arduino IDE.
 
-**Passo 2.** Selecione a placa e a porta e clique em **Upload**.
+**Passo 2.** Selecione a placa e a porta e, em seguida, clique em **Upload**.
 
 **Passo 3.** Abra **Tools > Serial Monitor** (115200 baud). Você deverá ver:
 
@@ -360,7 +360,7 @@ A barra responde em tempo real. Em um ambiente silencioso, a barra permanece vaz
 
 ---
 
-### Demo 2: Gravar no SD
+### Demo 2: Gravar em SD
 
 Esta demonstração grava **5 segundos** de áudio do microfone PDM onboard na RAM, salva em um cartão MicroSD como um arquivo WAV e depois o reproduz por meio de um amplificador I2S externo. Pressione um botão para gravar e outro para reproduzir.
 
@@ -368,7 +368,7 @@ Esta demonstração grava **5 segundos** de áudio do microfone PDM onboard na R
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Ver no GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -477,7 +477,7 @@ Pressione USR1 e a tela mostra uma barra de progresso de gravação. Após 5 seg
 
 ## IMU
 
-### Demo 1: Areia movediça eletrônica
+### Demo 1: Areia Movediça Eletrônica
 
 Esta demonstração transforma a tela em uma simulação de fluido interativa — partículas de areia dourada que fluem e se acomodam de acordo com a gravidade, conforme medido pela IMU de 6 eixos LSM6DS3 onboard. Incline a placa e a areia muda de direção em tempo real.
 
@@ -485,31 +485,31 @@ Esta demonstração transforma a tela em uma simulação de fluido interativa �
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/Display-Gadgets" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Ver no GitHub</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong>
     <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 ### Como funciona
 
-A simulação usa uma **grade de ocupação 24×45** sobreposta na tela 172×320, em que cada célula tem 7×7 pixels. Cerca de **180 partículas** são colocadas na grade, cada uma com posição, velocidade e um gradiente de cor dourado.
+A simulação usa uma **grade de ocupação 24×45** sobreposta na tela de 172×320, onde cada célula tem 7×7 pixels. Cerca de **180 partículas** são colocadas na grade, cada uma com posição, velocidade e um gradiente de cor dourado.
 
-O acelerômetro LSM6DS3 é lido via I2C (D4/D5) a cada **8 ms**. Os valores brutos de aceleração são filtrados por passa-baixa e usados para derivar um vetor de gravidade. Quando você inclina a placa:
+O acelerômetro LSM6DS3 é lido via I2C (D4/D5) a cada **8 ms**. Os valores brutos de aceleração são filtrados em passa-baixa e usados para derivar um vetor de gravidade. Quando você inclina a placa:
 
-1. **O vetor de gravidade é atualizado** — os dados do acelerômetro são suavizados com uma média móvel exponencial para evitar tremores.
+1. **Vetor de gravidade é atualizado** — os dados do acelerômetro são suavizados com uma média móvel exponencial para evitar tremores.
 2. **Velocidade das partículas** — cada partícula acelera na direção do vetor de gravidade, com amortecimento e um fator de mobilidade por partícula baseado em sua profundidade no fluxo.
 3. **Ocupação das células** — partículas mais profundas no fluxo (mais próximas do "fundo" em relação à gravidade) têm mobilidade reduzida, criando um efeito de empacotamento realista.
 4. **Renderização diferencial** — apenas as células em que partículas entraram ou saíram são redesenhadas, minimizando o tráfego SPI e mantendo a animação suave.
 
 As partículas próximas à superfície fluem livremente (maior mobilidade); as partículas enterradas mais profundamente ficam mais compactadas (menor mobilidade) — imitando como a areia real se comporta.
 
-### Executando a demonstração
+### Executando o Demo
 
 **Passo 1.** Abra `xiao_nrf52840_147_electronic_quicksand.ino` na Arduino IDE.
 
-**Passo 2.** Selecione a placa e a porta e, em seguida, clique em **Upload**.
+**Passo 2.** Selecione a placa e a porta e clique em **Upload**.
 
-**Passo 3.** Depois de enviado, a tela é preenchida com partículas douradas na parte inferior. Incline a placa em diferentes direções — a areia flui como se fosse puxada pela gravidade.
+**Passo 3.** Depois do upload, a tela é preenchida com partículas douradas na parte inferior. Incline a placa em diferentes direções — a areia flui como se fosse puxada pela gravidade.
 
 **Passo 4.** Abra **Tools > Serial Monitor** (115200 baud) para confirmar a inicialização:
 
@@ -518,17 +518,17 @@ As partículas próximas à superfície fluem livremente (maior mobilidade); as 
 imu.begin=0
 ```
 
-### Resultado esperado
+### Resultado Esperado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_function_quicksand.gif" style={{width:500, height:'auto'}}/></div>
 
-As partículas de areia douradas fluem suavemente à medida que você inclina a placa. Quando mantida na horizontal, a areia se acomoda na parte inferior da tela. Gire a placa em 90 graus e a areia flui para o novo "fundo" em menos de um segundo.
+As partículas de areia douradas fluem suavemente conforme você inclina a placa. Quando mantida na horizontal, a areia se acomoda na parte inferior da tela. Gire a placa em 90 graus e a areia flui para o novo "fundo" em menos de um segundo.
 
 ---
 
-### Demo 2: Levantar para despertar
+### Demo 2: Levantar para Despertar
 
-Esta demonstração implementa um **sistema de suspensão/ativação da tela** acionado pela interrupção de wake-up integrada do IMU LSM6DS3 no **D14**. A tela desliga automaticamente (luz de fundo desligada + CPU entra em System ON sleep) após 8 segundos de inatividade e desperta instantaneamente quando você pega ou move o dispositivo.
+Este demo implementa um **sistema de suspensão/despertar da tela** acionado pela interrupção de wake-up integrada do IMU LSM6DS3 no **D14**. A tela desliga automaticamente (backlight desligado + CPU entra em System ON sleep) após 8 segundos de inatividade e desperta instantaneamente quando você pega ou move o dispositivo.
 
 **Localização do código:** `code_GFX2/Function/147_nRF52840/xiao_nrf52840_147_wakeup/`
 
@@ -539,31 +539,31 @@ Esta demonstração implementa um **sistema de suspensão/ativação da tela** a
     </a>
 </div><br />
 
-### Como funciona
+### Como Funciona
 
-A demonstração usa o **detector de evento de wake-up incorporado** do LSM6DS3 — um recurso de hardware que monitora internamente os dados do acelerômetro e aciona o pino INT1 (conectado ao D14 nesta placa) quando o movimento excede um limite configurável. Isso significa que o MCU não precisa consultar o acelerômetro continuamente.
+O demo usa o **detector de evento de wake-up incorporado** do LSM6DS3 — um recurso de hardware que monitora internamente os dados do acelerômetro e aciona o pino INT1 (conectado ao D14 nesta placa) quando o movimento excede um limite configurável. Isso significa que o MCU não precisa consultar o acelerômetro continuamente.
 
 **Configuração do IMU:**
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Registrador</th><th>Valor</th><th>Finalidade</th></tr>
+    <tr><th>Registrador</th><th>Valor</th><th>Função</th></tr>
     <tr><td><code>CTRL1_XL</code></td><td><code>0x40</code></td><td>Acelerômetro @ 104 Hz, ±2g</td></tr>
     <tr><td><code>CTRL3_C</code></td><td><code>0x44</code></td><td>Atualização de dados em bloco + auto-incremento</td></tr>
-    <tr><td><code>TAP_CFG</code></td><td><code>0x80</code></td><td>Habilitar interrupções incorporadas</td></tr>
-    <tr><td><code>WAKE_UP_THS</code></td><td><code>0x05</code></td><td>Limite de wake-up (sensibilidade médio-baixa)</td></tr>
+    <tr><td><code>TAP_CFG</code></td><td><code>0x80</code></td><td>Habilitar interrupções integradas</td></tr>
+    <tr><td><code>WAKE_UP_THS</code></td><td><code>0x05</code></td><td>Limiar de wake-up (sensibilidade médio-baixa)</td></tr>
     <tr><td><code>WAKE_UP_DUR</code></td><td><code>0x00</code></td><td>Sem filtro de duração (wake responsivo)</td></tr>
     <tr><td><code>MD1_CFG</code></td><td><code>0x20</code></td><td>Direcionar wake-up para INT1</td></tr>
   </table>
 </div>
 
-**Fluxo de suspensão/ativação:**
+**Fluxo de suspensão/despertar:**
 
-1. **Estado ativo** — a tela está ligada, luz de fundo em PWM 120. Os dados do IMU e o status da bateria são atualizados a cada 250 ms / 1000 ms, respectivamente. Um temporizador regressivo mostra os segundos restantes até a suspensão automática.
-2. **Suspensão automática** — após 8 segundos sem atividade, o sketch desliga a luz de fundo, exibe a mensagem "Sleeping... Pick up device to wake" e entra em **System ON sleep** do nRF52840 via WFE (Wait For Event).
-3. **Wake-up** — quando o usuário pega a placa, o LSM6DS3 detecta o movimento e coloca o D14 em nível HIGH. A interrupção de GPIO é disparada, a CPU acorda do WFE, a luz de fundo é ligada e a interface é totalmente redesenhada.
+1. **Estado ativo** — tela ligada, backlight em PWM 120. Dados do IMU e status da bateria são atualizados a cada 250 ms / 1000 ms, respectivamente. Um temporizador regressivo mostra os segundos restantes até a suspensão automática.
+2. **Suspensão automática** — após 8 segundos sem atividade, o sketch desliga o backlight, desenha a mensagem "Sleeping... Pick up device to wake" e entra em **System ON sleep** do nRF52840 via WFE (Wait For Event).
+3. **Wake-up** — quando o usuário pega a placa, o LSM6DS3 detecta o movimento e coloca D14 em nível HIGH. A interrupção de GPIO é disparada, a CPU acorda do WFE, o backlight liga e a interface é totalmente redesenhada.
 
-Em System ON sleep, toda a RAM e os estados dos periféricos são preservados — o wake-up é quase instantâneo (menos de 1 ms entre a interrupção e a luz de fundo acesa).
+Em System ON sleep, toda a RAM e os estados dos periféricos são preservados — o wake-up é praticamente instantâneo (menos de 1 ms entre a interrupção e o backlight aceso).
 
 **Botões de teste manual:**
 
@@ -575,7 +575,7 @@ Em System ON sleep, toda a RAM e os estados dos periféricos são preservados �
   </table>
 </div>
 
-### Executando a demonstração
+### Executando o Demo
 
 **Passo 1.** Abra `xiao_nrf52840_147_wakeup.ino` na Arduino IDE, selecione a placa e a porta e clique em **Upload**.
 
@@ -583,7 +583,7 @@ Em System ON sleep, toda a RAM e os estados dos periféricos são preservados �
 
 **Passo 3.** Pegue a placa ou agite-a levemente — a tela desperta imediatamente.
 
-**Passo 4.** Abra **Tools > Serial Monitor** (115200 baud) para observar as transições de suspensão/ativação:
+**Passo 4.** Abra **Tools > Serial Monitor** (115200 baud) para observar as transições de suspensão/wake:
 
 ```
 [SLEEP] screen backlight off, waiting for IMU D14 wake
@@ -595,27 +595,27 @@ Em System ON sleep, toda a RAM e os estados dos periféricos são preservados �
 [WAKE] reason=IMU_D14 wakeCount=2 sleptMs=60110 sleepLoops=29705
 ```
 
-### Resultado esperado
+### Resultado Esperado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_nRF52840Plus_function_wakeup.gif" style={{width:500, height:'auto'}}/></div>
 
-A tela exibe dados em tempo real do acelerômetro e do giroscópio enquanto está ativa. Após 8 segundos de imobilidade, a tela escurece e o nRF52840 entra em modo de suspensão de baixo consumo. Pegue o dispositivo e a tela é restaurada em uma fração de segundo, com o contador de wake incrementado.
+A tela exibe dados em tempo real do acelerômetro e giroscópio enquanto está acordada. Após 8 segundos de imobilidade, a tela escurece e o nRF52840 entra em modo de suspensão de baixo consumo. Pegue o dispositivo e a tela é restaurada em uma fração de segundo, com o contador de wake incrementado.
 
 ---
 
-## Botão de usuário
+## Botão de Usuário
 
 O Display IPS de 1,47'' possui **dois botões físicos de pressão** conectados ao XIAO nRF52840 Plus:
 
 <div class="table-center">
   <table align="center">
-    <tr><th>Botão</th><th>Pino</th><th>Lógica</th><th>Rótulo na serigrafia</th></tr>
+    <tr><th>Botão</th><th>Pino</th><th>Lógica</th><th>Rótulo na Serigrafia</th></tr>
     <tr><td><strong>BTN_A</strong></td><td>D19</td><td>Ativo em nível baixo (pressionado = LOW)</td><td>USR1</td></tr>
     <tr><td><strong>BTN_B</strong></td><td>D15</td><td>Ativo em nível baixo (pressionado = LOW)</td><td>USR2</td></tr>
   </table>
 </div>
 
-### Lendo um botão
+### Lendo um Botão
 
 Ambos os botões usam os resistores de pull-up internos do XIAO. Uma leitura simples e não bloqueante se parece com isto:
 
@@ -641,9 +641,9 @@ void loop() {
 }
 ```
 
-### Eliminação de bouncing com interrupções
+### Debounce com Interrupções
 
-Para um tratamento de botões responsivo, com eliminação de bouncing e sem bloquear o loop principal, você pode usar interrupções por mudança de pino:
+Para um tratamento de botões responsivo, com debounce e sem bloquear o loop principal, você pode usar interrupções por mudança de pino:
 
 ```cpp
 volatile bool btnAFlag = false;
@@ -677,7 +677,7 @@ void loop() {
 }
 ```
 
-### Comportamento padrão no painel de fábrica
+### Comportamento Padrão no Painel de Fábrica
 
 No firmware de fábrica pré-carregado, os botões são mapeados da seguinte forma (você pode sobrescrever isso no seu próprio código):
 
@@ -689,15 +689,15 @@ No firmware de fábrica pré-carregado, os botões são mapeados da seguinte for
   </table>
 </div>
 
-Os pads de breakout dos botões (rotulados como U1 e U2 na placa) espelham D19 e D15, respectivamente, permitindo que você conecte botões externos, se desejar.
+Os pads de breakout dos botões (rotulados como U1 e U2 na placa) espelham D19 e D15, respectivamente, permitindo que você conecte botões externos se desejar.
 
 ---
 
-## Status da bateria
+## Status da Bateria
 
-Esta demonstração mostra o status da bateria — um ícone de bateria com nível de carga e estado de carregamento — no Display IPS de 1,47''. Ela detecta se uma bateria LiPo está fisicamente conectada e mostra um de três estados: **USB PWR** (sem bateria), **porcentagem** (apenas bateria) ou **carregando** (USB + bateria).
+Este demo mostra o status da bateria — um ícone de bateria com nível de carga e estado de carregamento — no Display IPS de 1,47''. Ele detecta se uma bateria LiPo está fisicamente conectada e mostra um de três estados: **USB PWR** (sem bateria), **percentual** (apenas bateria) ou **carregando** (USB + bateria).
 
-O Display IPS de 1,47'' inclui um circuito de medição de tensão de bateria integrado. O nRF52840 Plus lê a tensão da bateria LiPo por meio de um divisor de tensão e pode exibir a capacidade restante como uma porcentagem.
+O Display IPS de 1,47'' inclui um circuito de medição de tensão de bateria integrado. O nRF52840 Plus lê a tensão da bateria LiPo através de um divisor de tensão e pode exibir a capacidade restante como uma porcentagem.
 
 **Localização do código:** `code_GFX2/Function/147_nRF52840/xiao_nrf52840_147_battery_status/`
 
@@ -708,11 +708,11 @@ O Display IPS de 1,47'' inclui um circuito de medição de tensão de bateria in
     </a>
 </div><br />
 
-### Como funciona
+### Como Funciona
 
 **Display:**
 
-A tela é controlada por **Seeed_GFX2** com `Board_XIAO_1inch47_Touch_Display<38, 37>` e `Config_Seeed_1inch47_Touch_JD9853A` (172×320, BGR, rotação 2) via SPI de hardware de 10 MHz.
+A tela é controlada pela **Seeed_GFX2** com `Board_XIAO_1inch47_Touch_Display<38, 37>` e `Config_Seeed_1inch47_Touch_JD9853A` (172×320, BGR, rotação 2) via SPI de hardware de 10 MHz.
 
 **Circuito da bateria:**
 
@@ -733,7 +733,7 @@ Sob USB-C, uma tensão VBAT estática não consegue indicar se há uma bateria p
 
 **Estados do ícone:**
 
-- **Sem bateria** — ícone de bateria em cinza com um X vermelho, rotulado como **USB PWR**.
+- **Sem bateria** — ícone de bateria com contorno cinza e um X vermelho, rotulado como **USB PWR**.
 - **Bateria presente** — ícone de bateria com contorno branco e preenchimento colorido (verde / amarelo / vermelho por porcentagem), rotulado com a **porcentagem** e a **tensão**.
 - **Carregando** — preenchimento ciano com um ícone de raio, rotulado com a porcentagem e a tensão.
 
@@ -755,7 +755,7 @@ O demo usa o resistor de lado baixo **499 kΩ** calibrado de fábrica (taxa do d
 
 **Passo 4.** Observe a tela — ela mostra o ícone da bateria com o estado atual. Conecte ou desconecte uma bateria LiPo (ou o cabo USB-C) para ver o ícone alternar entre os três estados.
 
-### Resultado esperado
+### Resultado Esperado
 
 <div class="table-center">
   <table align="center">
@@ -781,16 +781,17 @@ VBAT 3.87V  charging  85  spread=5  usb=ON  base=4.140  baseValid=Y  state=PRESE
 
 ## Recursos
 
-- **🗃️[Arquivos de projeto da PCB]** [XIAO 1.47'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
+- **🗃️[Arquivos de Projeto de PCB]** [XIAO 1.47'' IPS Display (nRF52840) KiCad Project](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/kicad/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20KiCad%20Project.zip)
 - **📄[Esquemático]** [XIAO 1.47'' IPS Display (nRF52840) Schematic](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/schematic/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20Schematic.pdf)
 - **📦[Modelo 3D]** [XIAO 1.47'' IPS Display (STEP)](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/3d-model/XIAO%201.47%27%27%20IPS%20Display.step)
+- **🖨️[Gabinete Impresso em 3D]** [XIAO 1.47'' IPS Display Enclosure (by gokul)](https://www.printables.com/model/1843008-enclosure-for-xiao-147-ips-touch-display-esp32nrf5)
 - **📄[Datasheet]** [1.47 Inch Display Datasheet](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/datasheet/1.47%20Inch%20Display%20Datasheet.pdf)
-- **💾[Firmware de fábrica]** [XIAO 1.47'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
-- **[Demo]** [Código de demonstração da XIAO Display Board](https://github.com/Seeed-Projects/Display-Gadgets) — todas as demos de Function estão no diretório `code_GFX2/Function/147_nRF52840/`
+- **💾[Firmware de Fábrica]** [XIAO 1.47'' IPS Display (nRF52840) Factory Firmware](https://files.seeedstudio.com/wiki/Display_Gadgets/resources/firmware/XIAO%201.47%27%27%20IPS%20Display%20%28nRF52840%29%20Factory%20Firmware.uf2)
+- **[Demo]** [Código de Demo da Placa de Display XIAO](https://github.com/Seeed-Projects/Display-Gadgets) — todos os demos de Function estão no diretório `code_GFX2/Function/147_nRF52840/`
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">
