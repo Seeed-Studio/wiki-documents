@@ -1,6 +1,6 @@
 ---
 description: 本主题介绍 Seeed Studio 的机器人产品文档与学习路径。
-title: 机器人
+title: AI Robotics Wiki
 keywords:
   - robotics
   - nvidia
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 import '/src/css/robotics-page-style.css';
 import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch';
 
-# 机器人
+# AI Robotics Wiki
 
 > *"今天的科学就是明天的技术。" - Edward Teller*
 
@@ -32,12 +32,6 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     <div>
       <span className="eyebrow">Seeed Studio Robotics Wiki</span>
       <h2>不知道从哪篇文档开始？先选择你手上的机器人套件</h2>
-      <p>这里按照 Seeed Studio 不同机器人产品整理了推荐学习路径。无论你是第一次拿到机器人，还是准备做遥操作、ROS2、仿真、AI 训练或真实部署，都可以先找到对应产品，再按照 Step 1、Step 2、Step 3 的顺序完成上手和进阶开发。</p>
-    </div>
-    <div className="hero-tips">
-      <div><strong>刚拿到设备</strong><span>先完成开箱、接线、供电、驱动和基础运动测试</span></div>
-      <div><strong>准备开发应用</strong><span>继续学习 SDK、LeRobot、ROS2、视觉夹取或移动控制</span></div>
-      <div><strong>想做 AI 机器人</strong><span>进入仿真、数据采集、GR00T、VLA 和强化学习方向</span></div>
     </div>
   </section>
 
@@ -45,59 +39,21 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 
   <nav className="quick-nav" aria-label="机器人页面快捷导航">
     <a href="#robot-kits">📦 机器人套件</a>
-    <a href="#rebot-hardware-inventory">🧰 reBot 资源</a>
+    <a href="#rebot-hardware-inventory">🧰 rebot开源资料一览</a>
     <a href="#actuators">⚙️ 关节执行器</a>
     <a href="#sensors">👁️ 传感器</a>
     <a href="#software">💻 软件生态</a>
   </nav>
 
-  <section className="kit-index-panel" aria-label="快速选择机器人套件">
-    <div className="section-title-row compact-title">
-      <div>
-        <span className="section-kicker">Choose a Kit</span>
-        <h2>快速选择你的学习路径</h2>
-      </div>
-      <p>所有产品卡片默认折叠，选择你手上的套件后，再展开对应学习计划。</p>
-    </div>
-    <div className="kit-index-grid">
-      <a href="#rebot-rs"><strong>B601-RS</strong><small>RobStride 机械臂路线</small></a>
-      <a href="#rebot-dm"><strong>B601-DM</strong><small>Damiao 机械臂路线</small></a>
-      <a href="#soarm"><strong>SO100 / SO101</strong><small>低成本 LeRobot 路线</small></a>
-      <a href="#starai"><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
-      <a href="#lekiwi"><strong>Lekiwi</strong><small>移动底盘与应用 Demo</small></a>
-      <a href="#stackforce"><strong>StackForce Mini</strong><small>轮足机器人路线</small></a>
-      <a href="#reachy"><strong>Reachy Mini</strong><small>桌面交互机器人路线</small></a>
-      <a href="#atom"><strong>Atom</strong><small>小型人形机器人路线</small></a>
-    </div>
-  </section>
 
   <section id="robot-kits" className="section-block">
-    <div className="section-title-row">
-      <div>
-        <span className="section-kicker">Start Here</span>
-        <h2>机器人套件</h2>
-      </div>
-      <p>每个套件都按照“先跑通硬件，再进入软件生态，最后做 AI / ROS / 仿真应用”的方式组织。建议先展开自己的产品卡片，再按 Step 顺序学习。</p>
-    </div>
-
     <div className="product-stack">
 
-<details id="rebot-rs" className="product-card rebot">
-  <summary>
-    <div className="product-head">
-      <div>
-        <h3>reBot B601-RS 机械臂</h3>
-        <span>适合机械臂入门、遥操作、视觉夹取、ROS2 集成和 AI 数据采集</span>
-      </div>
-    </div>
-    <span className="summary-action">展开学习计划</span>
-  </summary>
+<article id="rebot-rs" className="product-card rebot product-card--cover">
+  <div className="product-head">
+    <h3>reBot B601-RS 机械臂</h3>
+  </div>
   <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>推荐人群</strong><span>第一次使用 reBot Arm、想快速完成真实机械臂控制的用户</span></div>
-      <div><strong>学习目标</strong><span>从硬件上电到完成 LeRobot 遥操作、视觉夹取和 ROS2 集成</span></div>
-<div><strong>建议顺序</strong><span>快速开始 → LeRobot → Pinocchio → 视觉夹取 → ROS2 → Web 仿真器 → Isaac Sim → MIT 位置控制 → 具身 Agent</span></div>
-    </div>
     <div className="learning-steps">
       <a className="step-card" href="/cn/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>快速开始</b><small>先完成开箱、接线、供电、驱动检查和基础运动测试，确认机械臂能正常工作。</small></div><em>新手必做</em></a>
       <a className="step-card" href="/cn/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot 遥操作与数据采集</b><small>学习如何通过主从臂或遥操作采集数据，为模仿学习和具身智能任务做准备。</small></div><em>数据采集</em></a>
@@ -110,25 +66,15 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
       <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>具身 Agent 设计框架</b><small>把视觉语言模型接入机械臂，让自然语言指令驱动基于视觉的安全抓取与控制。</small></div><em>Agent 框架</em></a>
     </div>
   </div>
-</details>
+</article>
 
-<details id="rebot-dm" className="product-card rebot">
-<summary>
+
+<article id="rebot-dm" className="product-card rebot product-card--cover">
   <div className="product-head">
-    <div>
-      <h3>reBot B601-DM 机械臂</h3>
-      <span>适合 Damiao 电机版本用户学习机械臂控制、LeRobot、Pinocchio 和 ROS2</span>
-    </div>
+    <h3>reBot B601-DM 机械臂</h3>
   </div>
-  <span className="summary-action">展开学习计划</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>推荐人群</strong><span>使用 B601-DM 版本机械臂，想做机械臂控制和 AI 数据采集的用户</span></div>
-    <div><strong>学习目标</strong><span>完成基础驱动、运动学建模、LeRobot 数据采集和视觉夹取 Demo</span></div>
-    <div><strong>建议顺序</strong><span>快速开始 → LeRobot → Pinocchio → 视觉夹取 → ROS2</span></div>
-  </div>
-<div className="learning-steps">
+  <div className="product-body">
+    <div className="learning-steps">
   <a className="step-card" href="/cn/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>快速开始</b><small>先检查电源、CAN 通信、驱动环境和基础运动，确认机械臂硬件状态正常。</small></div><em>新手必做</em></a>
 
   <a className="step-card" href="/cn/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>LeRobot 数据采集</b><small>使用 LeRobot 完成遥操作、数据记录和后续模仿学习数据准备。</small></div><em>AI 数据</em></a>
@@ -143,26 +89,16 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 
   <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim 集成</b><small>将 reBot B601-DM 部署到 Isaac Sim 仿真环境中，进行开发、调试与控制算法验证。</small></div><em>仿真</em></a>
 </div>
-</div>
-</details>
+  </div>
+</article>
 
-<details id="soarm" className="product-card soarm">
-<summary>
+
+<article id="soarm" className="product-card soarm product-card--cover">
   <div className="product-head">
-    <div>
-      <h3>SO100 / SO101 机械臂</h3>
-      <span>适合低成本机械臂入门、LeRobot、仿真、强化学习和 GR00T/VLA 实验</span>
-    </div>
+    <h3>SO100 / SO101 机械臂</h3>
   </div>
-  <span className="summary-action">展开学习计划</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>推荐人群</strong><span>想从低成本机械臂开始学习 LeRobot 和具身智能的用户</span></div>
-    <div><strong>学习目标</strong><span>从舵机调试到仿真、强化学习、GR00T 和双臂训练</span></div>
-    <div><strong>建议顺序</strong><span>上手 → 舵机调试 → 仿真 → Isaac Lab → GR00T → 双臂</span></div>
-  </div>
-  <div className="learning-steps">
+  <div className="product-body">
+    <div className="learning-steps">
     <a className="step-card" href="/cn/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 快速开始</b><small>完成硬件安装、基础连接、校准和最小可运行测试。</small></div><em>新手必做</em></a>
     <a className="step-card" href="/cn/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>舵机调试工具</b><small>学习如何检查舵机 ID、方向、零点和通信状态，避免后续训练时出现硬件问题。</small></div><em>排障基础</em></a>
     <a className="step-card" href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">3</span><div><b>SO101 与 NVIDIA GR00T</b><small>进入 VLA / 具身智能模型微调与 Jetson 部署流程。</small></div><em>VLA 进阶</em></a>
@@ -172,96 +108,16 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     <a className="step-card" href="/cn/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Isaac Lab 强化学习</b><small>学习如何在仿真环境中训练策略，理解强化学习的任务、奖励和部署流程。</small></div><em>高级训练</em></a>
     <a className="step-card optional" href="/cn/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b><small>可选扩展，适合想尝试第三方数据采集和训练平台的用户。</small></div><em>可选扩展</em></a>
   </div>
-</div>
-</details>
+  </div>
+</article>
 
-<details id="starai" className="product-card starai">
-<summary>
+
+<article id="reachy" className="product-card reachy product-card--cover">
   <div className="product-head">
-    <div>
-      <h3>StarAI 机械臂</h3>
-      <span>适合学习机械臂基础控制、MoveIt 2、ROS2 规划和 GR00T 应用</span>
-    </div>
+    <h3>Reachy Mini</h3>
   </div>
-  <span className="summary-action">展开学习计划</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>推荐人群</strong><span>想学习 ROS2 机械臂规划和 AI 控制 Demo 的用户</span></div>
-    <div><strong>学习目标</strong><span>完成基础控制、MoveIt 2 规划，并进一步尝试 GR00T 控制</span></div>
-    <div><strong>建议顺序</strong><span>快速开始 → MoveIt 2 → GR00T</span></div>
-  </div>
-  <div className="learning-steps">
-    <a className="step-card" href="/cn/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI 机械臂快速开始</b><small>完成硬件连接、基础控制和最小示例运行。</small></div><em>新手必做</em></a>
-    <a className="step-card" href="/cn/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 运动规划</b><small>学习模型导入、规划场景、路径规划和 ROS2 机械臂开发流程。</small></div><em>ROS2 进阶</em></a>
-    <a className="step-card" href="/cn/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI 与 NVIDIA GR00T</b><small>进入基于大模型 / VLA 的机械臂控制应用。</small></div><em>AI 控制</em></a>
-  </div>
-</div>
-</details>
-
-<details id="lekiwi" className="product-card lekiwi">
-<summary>
-  <div className="product-head">
-    <div>
-      <h3>Lekiwi 移动底盘</h3>
-      <span>适合移动机器人入门、底盘控制和声音跟随应用</span>
-    </div>
-  </div>
-  <span className="summary-action">展开学习计划</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>推荐人群</strong><span>第一次接触移动底盘，想先让机器人运动起来的用户</span></div>
-    <div><strong>学习目标</strong><span>完成底盘基础控制，并尝试声音跟随等应用 Demo</span></div>
-    <div><strong>说明</strong><span>已按要求移除 Lekiwi 的 ROS2 学习步骤，只保留当前产品相关入门与应用路线</span></div>
-  </div>
-  <div className="learning-steps">
-    <a className="step-card" href="/cn/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Lekiwi 移动底盘快速开始</b><small>先完成底盘组装、连接、基础运动控制和安全测试。</small></div><em>新手必做</em></a>
-    <a className="step-card" href="/cn/sound_follow_robot/"><span className="step-index">2</span><div><b>声音跟随 Demo</b><small>结合声音输入和底盘运动控制，完成一个直观的交互式移动机器人应用。</small></div><em>应用 Demo</em></a>
-  </div>
-</div>
-</details>
-
-<details id="stackforce" className="product-card stackforce">
-<summary>
-  <div className="product-head">
-    <div>
-      <h3>StackForce Mini 轮足机器人</h3>
-      <span>适合学习轮足结构、平衡控制、运动规划和控制算法</span>
-    </div>
-  </div>
-  <span className="summary-action">展开学习计划</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>推荐人群</strong><span>对移动机器人、轮足机器人和平衡控制感兴趣的用户</span></div>
-    <div><strong>学习目标</strong><span>理解轮足机器人硬件结构、控制逻辑和基础运动能力</span></div>
-    <div><strong>建议顺序</strong><span>快速开始 → 控制原理 → 运动调试</span></div>
-  </div>
-  <div className="learning-steps">
-    <a className="step-card" href="/cn/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>StackForce Mini 快速开始</b><small>完成硬件认识、基础部署、运动控制和轮足机器人的基础实验。</small></div><em>系统课程</em></a>
-  </div>
-</div>
-</details>
-
-<details id="reachy" className="product-card reachy">
-<summary>
-  <div className="product-head">
-    <div>
-      <h3>Reachy Mini</h3>
-      <span>适合桌面机器人、人机交互、Agent、Python SDK、仿真和 AI 集成学习</span>
-    </div>
-  </div>
-  <span className="summary-action">展开学习计划</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>推荐人群</strong><span>想快速体验桌面机器人交互、语音对话、动作控制和 Agent 应用的用户</span></div>
-    <div><strong>学习目标</strong><span>先完成基础使用，再根据硬件版本选择无线版或 Lite，之后学习 SDK、AI 集成和故障排除</span></div>
-    <div><strong>文档特点</strong><span>Reachy Mini 文档较多，已按“通用入门 → 平台使用 → SDK 开发 → AI 应用 → 排障参考”重新整理</span></div>
-  </div>
-
-<div className="reachy-path-grid">
+  <div className="product-body">
+    <div className="reachy-path-grid">
             <div className="mini-track">
               <h4>① 先认识产品</h4>
               <a href="/cn/reachymini_intro/">Reachy Mini 产品简介</a>
@@ -344,31 +200,61 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
               <a href="/cn/reachymini_api_utils/">工具 API 参考</a>
             </div>
           </div>
-        </div>
-      </details>
+  </div>
+</article>
 
-<details id="atom" className="product-card atom">
-<summary>
+
+<article id="lekiwi" className="product-card lekiwi product-card--cover">
   <div className="product-head">
-    <div>
-      <h3>Atom 小型人形机器人</h3>
-      <span>适合人形机器人入门、舵机调试、动作示教和网页遥控</span>
-    </div>
+    <h3>Lekiwi 移动底盘</h3>
   </div>
-  <span className="summary-action">展开学习计划</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>推荐人群</strong><span>第一次接触桌面级双足人形机器人，想快速体验动作示教和遥控的用户</span></div>
-    <div><strong>学习目标</strong><span>完成开箱上手、网页动作编辑器示教，并将自定义动作导出到主控固件</span></div>
-    <div><strong>建议顺序</strong><span>Atom-S 入门 → 网页遥控 → 动作编辑器 → 自定义动作开发</span></div>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/cn/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Lekiwi 移动底盘快速开始</b><small>先完成底盘组装、连接、基础运动控制和安全测试。</small></div><em>新手必做</em></a>
+    <a className="step-card" href="/cn/sound_follow_robot/"><span className="step-index">2</span><div><b>声音跟随 Demo</b><small>结合声音输入和底盘运动控制，完成一个直观的交互式移动机器人应用。</small></div><em>应用 Demo</em></a>
   </div>
-  <div className="learning-steps">
+  </div>
+</article>
+
+
+<article id="stackforce" className="product-card stackforce product-card--cover">
+  <div className="product-head">
+    <h3>StackForce Mini 轮足机器人</h3>
+  </div>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/cn/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>StackForce Mini 快速开始</b><small>完成硬件认识、基础部署、运动控制和轮足机器人的基础实验。</small></div><em>系统课程</em></a>
+  </div>
+  </div>
+</article>
+
+
+<article id="starai" className="product-card starai">
+  <div className="product-head">
+    <h3>StarAI 机械臂</h3>
+  </div>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/cn/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI 机械臂快速开始</b><small>完成硬件连接、基础控制和最小示例运行。</small></div><em>新手必做</em></a>
+    <a className="step-card" href="/cn/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 运动规划</b><small>学习模型导入、规划场景、路径规划和 ROS2 机械臂开发流程。</small></div><em>ROS2 进阶</em></a>
+    <a className="step-card" href="/cn/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI 与 NVIDIA GR00T</b><small>进入基于大模型 / VLA 的机械臂控制应用。</small></div><em>AI 控制</em></a>
+  </div>
+  </div>
+</article>
+
+
+<article id="atom" className="product-card atom">
+  <div className="product-head">
+    <h3>Atom 小型人形机器人</h3>
+  </div>
+  <div className="product-body">
+    <div className="learning-steps">
     <a className="step-card" href="/cn/atom_s/"><span className="step-index">1</span><div><b>Atom-S 入门指南</b><small>完成开箱供电、网页遥控器连接和第一个连续动作示教序列。</small></div><em>新手必做</em></a>
     <a className="step-card" href="/cn/atom_x/"><span className="step-index">2</span><div><b>Atom-X 入门指南</b><small>Atom-X 的操作与 Atom-S 完全相同，参考同一套流程快速上手。</small></div><em>同系列</em></a>
   </div>
-</div>
-</details>
+  </div>
+</article>
+
 
     </div>
   </section>
@@ -377,7 +263,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Reference</span>
-        <h2>reBot 资源</h2>
+        <h2>rebot开源资料一览</h2>
       </div>
       <p>先覆盖 B601-RS 与 B601-DM。硬件目录包含 3D 打印件、CNC 金属件、采购件、BOM、电源组装步骤和整机组 STEP；描述文件用于 URDF / Mesh 建模与仿真。相机支架为两款机械臂通用。</p>
     </div>

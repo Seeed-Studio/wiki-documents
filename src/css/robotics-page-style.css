@@ -16,7 +16,50 @@
   --rp-accent-border: rgba(37, 99, 235, 0.24);
   --rp-anchor-offset: 12rem;
   width: 100%;
+  max-width: none;
   color: var(--rp-text);
+}
+
+/* Match homepage .com_module width: max-width 1440px + padding 0 6% */
+main:has(.robotics-page),
+html.robotics-landing-page main {
+  flex: 1 1 auto !important;
+  max-width: 100% !important;
+}
+
+main:has(.robotics-page) > .container,
+html.robotics-landing-page main .container {
+  --ifm-container-width: 1440px;
+  --ifm-container-width-xl: 1440px;
+  max-width: 1440px !important;
+  width: 100% !important;
+  padding-left: 6% !important;
+  padding-right: 6% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+main:has(.robotics-page) .row,
+html.robotics-landing-page main .row {
+  margin: 0 !important;
+}
+
+main:has(.robotics-page) .col,
+main:has(.robotics-page) [class*='docItemCol'],
+html.robotics-landing-page main .col,
+html.robotics-landing-page main [class*='docItemCol'] {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 960px) {
+  main:has(.robotics-page) > .container,
+  html.robotics-landing-page main .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 .robotics-page * { box-sizing: border-box; }
@@ -26,9 +69,7 @@
 .hero-panel {
   position: relative;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
-  gap: 1.5rem;
+  display: block;
   padding: 2.1rem;
   border-radius: 28px;
   background:
@@ -69,8 +110,7 @@
   background: var(--rp-accent);
   box-shadow: 0 0 0 4px var(--rp-accent-soft);
 }
-.hero-panel h2 { margin: 0 0 0.75rem; font-size: clamp(1.55rem, 3vw, 2.35rem); line-height: 1.16; letter-spacing: -0.03em; }
-.hero-panel p { margin: 0; color: var(--rp-text-muted); line-height: 1.78; max-width: 780px; }
+.hero-panel h2 { margin: 0; font-size: clamp(1.55rem, 3vw, 2.35rem); line-height: 1.16; letter-spacing: -0.03em; }
 .hero-tips { display: grid; gap: 0.75rem; position: relative; z-index: 1; }
 .hero-tips div {
   background: rgba(255, 255, 255, 0.76);
@@ -135,16 +175,7 @@
   overflow: hidden;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
-.product-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
-  background: linear-gradient(180deg, var(--rp-accent), color-mix(in srgb, var(--rp-accent) 52%, #14b8a6));
-  opacity: 0.88;
-}
 .product-card:hover { border-color: var(--rp-accent-border); box-shadow: var(--rp-shadow-md); }
-.product-card[open] { border-color: var(--rp-accent-border); }
 .product-card.rebot { --rp-accent: #2563eb; --rp-accent-soft: rgba(37, 99, 235, 0.10); --rp-accent-border: rgba(37, 99, 235, 0.28); }
 .product-card.soarm { --rp-accent: #f97316; --rp-accent-soft: rgba(249, 115, 22, 0.12); --rp-accent-border: rgba(249, 115, 22, 0.30); }
 .product-card.starai { --rp-accent: #7c3aed; --rp-accent-soft: rgba(124, 58, 237, 0.12); --rp-accent-border: rgba(124, 58, 237, 0.30); }
@@ -152,131 +183,146 @@
 .product-card.stackforce { --rp-accent: #ca8a04; --rp-accent-soft: rgba(202, 138, 4, 0.13); --rp-accent-border: rgba(202, 138, 4, 0.30); }
 .product-card.reachy { --rp-accent: #0d9488; --rp-accent-soft: rgba(13, 148, 136, 0.12); --rp-accent-border: rgba(13, 148, 136, 0.30); }
 .product-card.atom { --rp-accent: #16a34a; --rp-accent-soft: rgba(22, 163, 74, 0.12); --rp-accent-border: rgba(22, 163, 74, 0.30); }
-.product-card summary {
-  list-style: none;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 10.5rem 2.75rem;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-  padding: 1.18rem 1.28rem 1.18rem 1.45rem;
+.product-head {
+  min-width: 0;
+  padding: 1.18rem 1.28rem 1rem 1.45rem;
   background: linear-gradient(90deg, var(--rp-accent-soft), transparent 46%);
 }
-.product-card > summary::marker {
-  content: "";
-  font-size: 0;
-}
-.product-card > summary::-webkit-details-marker { display: none; }
-.product-card > summary::before {
-  content: none !important;
-  display: none !important;
-  border: 0 !important;
-}
-.product-card summary::after {
-  content: "⌄";
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 999px;
-  color: var(--rp-accent);
-  background: var(--rp-accent-soft);
-  justify-self: end;
-  font-size: 1.15rem;
-  font-weight: 900;
-  transition: transform 0.2s ease;
-}
-.product-card[open] summary::after { transform: rotate(180deg); }
-.product-head { min-width: 0; }
 .product-head h3 { margin: 0 0 0.25rem; font-size: 1.18rem; letter-spacing: -0.01em; }
 .product-head span { color: var(--rp-text-muted); font-size: 0.92rem; line-height: 1.48; }
-.summary-action {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: stretch;
-  gap: 0.48rem;
-  min-width: 0;
-  min-height: 2.25rem;
-  padding: 0.42rem 0.82rem;
-  overflow: hidden;
-  color: color-mix(in srgb, var(--rp-accent) 78%, var(--rp-text));
-  font-size: 0.76rem;
-  font-weight: 850;
-  letter-spacing: 0.015em;
-  text-align: center;
-  white-space: nowrap;
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--rp-accent) 14%, var(--rp-card-bg)),
-    color-mix(in srgb, var(--rp-accent) 7%, var(--rp-card-bg))
-  );
-  border: 1px solid color-mix(in srgb, var(--rp-accent) 42%, transparent);
-  border-radius: 999px;
-  box-shadow:
-    inset 0 1px 0 color-mix(in srgb, #ffffff 48%, transparent),
-    0 8px 20px color-mix(in srgb, var(--rp-accent) 13%, transparent);
-  transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-.summary-action::before {
-  content: "";
-  width: 0.42rem;
-  height: 0.42rem;
-  flex: 0 0 auto;
-  border-radius: 999px;
-  background: currentColor;
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--rp-accent) 12%, transparent);
-}
-.product-card summary:hover .summary-action {
-  border-color: color-mix(in srgb, var(--rp-accent) 58%, transparent);
-  box-shadow:
-    inset 0 1px 0 color-mix(in srgb, #ffffff 58%, transparent),
-    0 10px 24px color-mix(in srgb, var(--rp-accent) 20%, transparent);
-  transform: translateY(-1px);
-}
-.product-card[open] .summary-action {
-  color: #047857;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.16), rgba(16, 185, 129, 0.08));
-  border-color: rgba(16, 185, 129, 0.32);
-}
-.product-card[open] .summary-action::before {
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
-}
-.product-body { border-top: 1px solid var(--rp-border); padding: 1.25rem; background: linear-gradient(180deg, var(--rp-card-bg), var(--rp-card-bg-soft)); }
 
-.product-meta-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin-bottom: 1rem; }
-.product-meta-grid div { padding: 0.95rem; border-radius: 16px; background: color-mix(in srgb, var(--rp-card-bg) 82%, var(--rp-accent-soft)); border: 1px solid var(--rp-border); }
-.product-meta-grid strong { display: block; margin-bottom: 0.35rem; color: var(--rp-text); }
-.product-meta-grid span { color: var(--rp-text-muted); font-size: 0.88rem; line-height: 1.58; }
-.learning-steps { display: grid; gap: 0.75rem; }
+/* Cover cards: hero title on getting-started title image */
+.product-card--cover .product-head {
+  min-height: clamp(10.5rem, 18vw, 13.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.45rem;
+  padding: clamp(1.25rem, 2.5vw, 1.85rem);
+  color: #fff;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(8, 15, 30, 0.90) 0%,
+      rgba(8, 15, 30, 0.58) 40%,
+      rgba(8, 15, 30, 0.16) 70%,
+      rgba(8, 15, 30, 0.06) 100%
+    ),
+    var(--rp-cover) right center / cover no-repeat;
+}
+.product-card--cover .product-head h3 {
+  margin: 0;
+  max-width: min(22rem, 72%);
+  color: #fff;
+  font-size: clamp(1.45rem, 2.6vw, 2.05rem);
+  font-weight: 850;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+#rebot-rs {
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png');
+}
+#rebot-rs .product-head h3 {
+  max-width: none;
+  white-space: nowrap;
+}
+#rebot-dm {
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png');
+}
+#rebot-dm .product-head h3 {
+  max-width: none;
+  white-space: nowrap;
+}
+#soarm {
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp');
+}
+#soarm .product-head h3 {
+  max-width: none;
+  white-space: nowrap;
+}
+#lekiwi {
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.png');
+}
+#stackforce {
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp');
+}
+#stackforce .product-head h3 {
+  max-width: none;
+  white-space: nowrap;
+}
+#reachy {
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp');
+}
+
+@media (max-width: 560px) {
+  .product-card--cover .product-head {
+    min-height: 8.75rem;
+    padding: 1.1rem 1.15rem;
+  }
+  .product-card--cover .product-head h3 {
+    max-width: 85%;
+    font-size: clamp(1.28rem, 6vw, 1.55rem);
+  }
+}
+.product-body { border-top: 1px solid var(--rp-border); padding: 1.1rem 1.2rem 1.25rem; background: linear-gradient(180deg, var(--rp-card-bg), var(--rp-card-bg-soft)); }
+
+.kit-jump-nav { margin: 0 0 1.35rem; }
+.learning-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
 .step-card {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 0.96rem;
-  border-radius: 17px;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "index title"
+    "index desc"
+    "index tag";
+  align-items: start;
+  gap: 0.2rem 0.75rem;
+  min-height: 100%;
+  padding: 0.95rem;
+  border-radius: 16px;
   background: var(--rp-card-bg);
   border: 1px solid var(--rp-border);
   text-decoration: none !important;
   color: inherit;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
-.step-card:hover { transform: translateX(4px); border-color: var(--rp-accent-border); box-shadow: var(--rp-shadow-accent); background: var(--rp-card-bg-hover); }
-.step-index { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--rp-accent); color: #fff; font-weight: 900; box-shadow: 0 8px 18px var(--rp-accent-soft); }
-.step-card b { display: block; margin-bottom: 0.25rem; color: var(--rp-text); }
-.step-card small { display: block; color: var(--rp-text-muted); line-height: 1.58; font-size: 0.86rem; }
-.step-card em {
+.step-card:hover { transform: translateY(-2px); border-color: var(--rp-accent-border); box-shadow: var(--rp-shadow-accent); background: var(--rp-card-bg-hover); }
+.step-index {
+  grid-area: index;
+  width: 32px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
-  justify-self: end;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--rp-accent);
+  color: #fff;
+  font-weight: 900;
+  box-shadow: 0 8px 18px var(--rp-accent-soft);
+}
+.step-card > div { grid-area: title / title / desc / desc; display: contents; }
+.step-card b { grid-area: title; color: var(--rp-text); font-size: 0.95rem; line-height: 1.35; }
+.step-card small { grid-area: desc; color: var(--rp-text-muted); line-height: 1.45; font-size: 0.82rem; }
+.step-card em {
+  grid-area: tag;
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
   gap: 0.35rem;
-  min-height: 1.75rem;
-  padding: 0.32rem 0.65rem;
+  margin-top: 0.35rem;
+  min-height: 1.55rem;
+  padding: 0.28rem 0.58rem;
   color: color-mix(in srgb, var(--rp-accent) 78%, var(--rp-text));
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-style: normal;
   font-weight: 850;
   white-space: nowrap;
@@ -341,39 +387,50 @@ html[data-theme='dark'] .robotics-page .quick-nav { background: rgba(17, 19, 23,
 html[data-theme='dark'] .note-box { color: #fde68a; background: rgba(146, 64, 14, 0.18); border-color: rgba(253, 230, 138, 0.24); }
 html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgba(100, 116, 139, 0.20); }
 
+@media (min-width: 1200px) {
+  .learning-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #rebot-hardware-inventory .resource-columns { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
 @media (max-width: 900px) {
   .robotics-page { --rp-anchor-offset: 6.5rem; }
-  .hero-panel, .product-meta-grid, .resource-columns { grid-template-columns: 1fr; }
+  .hero-panel, .resource-columns { grid-template-columns: 1fr; }
   .section-title-row { display: block; }
   .section-title-row p { margin-top: 0.5rem; }
   .robotics-page .quick-nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .step-card { grid-template-columns: auto minmax(0, 1fr); }
-  .step-card em { grid-column: 2; justify-self: start; }
+  .learning-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
-  .hero-panel { padding: 1.25rem; border-radius: 20px; }
-  .robotics-page .quick-nav { grid-template-columns: 1fr; }
-  .product-card summary { grid-template-columns: minmax(0, 1fr) 2.75rem; align-items: flex-start; padding-right: 0.9rem; }
-  .summary-action { display: none; }
-  .product-card summary::after { margin-top: 0.45rem; }
-  .product-body { padding: 1rem; }
+  .robotics-page { --rp-anchor-offset: 5.75rem; }
+  .hero-panel { gap: 1rem; padding: 1.1rem; border-radius: 20px; }
+  .hero-panel h2 { font-size: clamp(1.45rem, 7vw, 1.85rem); }
+  .robotics-page .quick-nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.4rem;
+    padding: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+  }
+  .robotics-page .quick-nav::-webkit-scrollbar { display: none; }
+  .robotics-page .quick-nav a {
+    flex: 0 0 auto;
+    padding: 0.65rem 0.85rem;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+  .learning-steps { grid-template-columns: 1fr; }
+  .product-head { padding: 1rem 1rem 0.85rem 1.15rem; }
+  .product-body { padding: 0.9rem; }
+  .section-block { margin: 2rem 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .robotics-page *, .robotics-page *::before, .robotics-page *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
 
 
-/* Optimized collapsed-card learning path refinements */
-.kit-index-panel {
-  margin: 1.4rem 0 2.2rem;
-  padding: 1.25rem;
-  border: 1px solid var(--rp-border);
-  border-radius: 24px;
-  background: linear-gradient(135deg, var(--rp-card-bg), var(--rp-card-bg-soft));
-  box-shadow: var(--rp-shadow-sm);
-  scroll-margin-top: var(--rp-anchor-offset);
-}
-.compact-title { margin-bottom: 1rem; }
+/* Flat expanded kit button entrance */
 .kit-index-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -403,32 +460,21 @@ html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgb
 .kit-index-grid strong { grid-area: title; color: var(--rp-text); }
 .kit-index-grid small { grid-area: desc; color: var(--rp-text-muted); line-height: 1.35; }
 .product-card { scroll-margin-top: var(--rp-anchor-offset); }
-.product-card[open] .summary-action { font-size: 0; }
-.product-card[open] .summary-action::after { content: "Collapse learning plan"; font-size: 0.76rem; }
-html[lang="zh-CN"] .product-card .summary-action { min-width: 6.3rem; }
-html[lang="zh-CN"] .product-card[open] .summary-action::after { content: "收起学习计划"; }
-html[lang="ja-JP"] .product-card[open] .summary-action::after { content: "学習プランを閉じる"; }
-html[lang="pt-BR"] .product-card[open] .summary-action::after { content: "Recolher plano de aprendizado"; }
-html[lang="es-ES"] .product-card[open] .summary-action::after { content: "Contraer plan de aprendizaje"; }
-.product-card:not([open]) summary { background: linear-gradient(90deg, var(--rp-card-bg), var(--rp-card-bg-soft)); }
-.product-card:not([open]) .product-head span { color: var(--rp-text-muted); }
-.product-body { animation: rpFadeIn 0.18s ease-out; }
-@keyframes rpFadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.product-meta-grid div, .mini-track, .resource-columns div, .kit-index-panel {
+.mini-track, .resource-columns div {
   backdrop-filter: blur(6px);
-}
-html[data-theme='dark'] .kit-index-panel {
-  background: linear-gradient(135deg, var(--rp-card-bg), var(--rp-card-bg-soft));
 }
 html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
 @media (max-width: 900px) {
   .kit-index-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
-  .kit-index-panel { padding: 1rem; border-radius: 20px; }
+  .kit-index-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.55rem; }
+  .kit-index-grid a { padding: 0.72rem; border-radius: 13px; }
+  .kit-index-grid strong { font-size: 0.9rem; }
+  .kit-index-grid small { font-size: 0.75rem; }
+}
+
+@media (max-width: 360px) {
   .kit-index-grid { grid-template-columns: 1fr; }
 }
 
@@ -442,8 +488,8 @@ html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
 .robotics-page .robotics-search {
   position: relative;
   z-index: 4;
-  width: min(100%, 680px);
-  margin: 1.35rem auto 1.1rem;
+  width: 100%;
+  margin: 1.35rem 0 1.1rem;
 }
 
 .robotics-page .robotics-search-shell {
