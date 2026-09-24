@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/ja/Cloud/
   <div className="container">
     <h1 className="hero__title">最適な SenseCraft 製品を見つける</h1>
     <div className="hero__subtitle">
-      作成、接続、可視化、運用したい内容から始めましょう。本ガイドでは、それぞれの目的に対応する適切な SenseCraft 製品、プラットフォーム、ダウンロード、ユーザーガイドを対応付けています。
+      作成、接続、可視化、運用したい内容から始めましょう。本ガイドでは、それぞれの目的に対応する適切な SenseCraft 製品、プラットフォーム、ダウンロード、ユーザーガイドをマッピングします。
     </div>
     <div className="margin-top--md">
       <a className="button button--secondary button--lg margin-right--sm margin-bottom--sm" href="#choose-by-goal">
@@ -41,22 +41,22 @@ url: https://wiki.seeedstudio.com/ja/Cloud/
   </div>
 </div>
 
-SenseCraft は、AI とハードウェアアプリケーションの構築、ロボットのトレーニング、IoT デバイスの接続、ヒューマンマシンインターフェースの作成、展開済みエッジシステムの運用のためのソフトウェアを統合したスイートです。製品同士は関連していますが、それぞれがワークフローの異なる段階を担います。
+SenseCraft は、AI およびハードウェアアプリケーションの構築、ロボットのトレーニング、IoT デバイスの接続、ヒューマンマシンインターフェースの作成、デプロイ済みエッジシステムの運用のためのソフトウェアを統合したスイートです。製品同士は関連していますが、それぞれがワークフローの異なる段階を担っています。
 
 ## 目的から選ぶ
 
 
-| やりたいこと | 最初に使うもの |
+| あなたの目的 | 最初のステップ |
 | --- | --- |
-| エッジ AI アプリケーションを作成・学習・デプロイする | [SenseCraft AI](#sensecraft-ai) |
+| エッジAIアプリケーションを作成、トレーニング、デプロイする | [SenseCraft AI](#sensecraft-ai) |
 | アイデアを実行可能なハードウェアコードに変換する | [CodeCraft](#codecraft) |
 | reComputer ハードウェア上で最適化された AI モデルとツールを実行する | [reComputer AI Lab](#recomputer-ai-lab) |
-| デモを収集し、ロボットアームの挙動を学習・検証する | [SenseCraft Robotics](#sensecraft-robotics) |
-| IoT デバイスを接続し、センサーデータを収集または閲覧する | [SenseCraft Data Platform](#sensecraft-data-platform) |
+| デモを収集し、ロボットアームの挙動をトレーニングおよび検証する | [SenseCraft Robotics](#sensecraft-robotics) |
+| IoT デバイスを接続し、センサーデータを収集または表示する | [SenseCraft Data Platform](#sensecraft-data-platform) |
 | 対応デバイスを設定し、スマートフォンから監視する | [SenseCraft App](#sensecraft-app) |
 | reTerminal 向けのダッシュボードや表示体験を作成する | [SenseCraft Seeedash](#sensecraft-hmi) |
-| 分散エッジデバイスを運用し、アプリケーションを展開する | [SenseCraft Device Management Platform](#sensecraft-device-management-platform) |
-| 分散型ネットワーク向けに SenseCAP ゲートウェイを展開または管理する | [SenseCAP MX / Hotspot](#sensecap-mx-hotspot) |
+| 分散エッジデバイスを運用し、アプリケーションをロールアウトする | [SenseCraft Device Management Platform](#sensecraft-device-management-platform) |
+| 分散型ネットワーク向けに SenseCAP ゲートウェイをデプロイまたは管理する | [SenseCAP MX / Hotspot](#sensecap-mx-hotspot) |
 
 ## AI とハードウェアアプリケーションを作成する
 
@@ -76,14 +76,14 @@ SenseCraft は、AI とハードウェアアプリケーションの構築、ロ
         <h3 id="sensecraft-ai">SenseCraft AI</h3>
         <div className="margin-bottom--sm"><strong>AI アプリケーションを作成、共有、探索、デプロイします。</strong></div>
         <div className="margin-bottom--sm">
-          モデルライブラリ、ノーコード学習、アプリケーションコミュニティを活用して、AI のアイデアから対応エッジデバイス上での推論まで進めることができます。SenseCraft AI には SBC デバイス向けの 400 以上のモデルが含まれており、コミュニティアプリケーションからワンクリックでデプロイできます。
+          モデルライブラリ、ノーコードトレーニング、アプリケーションコミュニティを活用して、AI のアイデアから対応エッジデバイス上での推論まで進めることができます。SenseCraft AI には SBC デバイス向けの 400 を超えるモデルが含まれており、コミュニティアプリケーションからワンクリックでデプロイをサポートします。
         </div>
         <div className="margin-bottom--sm">
           <a href="https://sensecraft.seeed.cc/ai/model?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_model_library" target="_blank" rel="noopener noreferrer">モデルライブラリ</a>
           {' · '}
-          <a href="https://sensecraft.seeed.cc/ai/training?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_training" target="_blank" rel="noopener noreferrer">モデルを学習する</a>
+          <a href="https://sensecraft.seeed.cc/ai/training?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_training" target="_blank" rel="noopener noreferrer">モデルをトレーニング</a>
           {' · '}
-          <a href="https://sensecraft.seeed.cc/ai/application?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_app_square" target="_blank" rel="noopener noreferrer">アプリケーションを探索する</a>
+          <a href="https://sensecraft.seeed.cc/ai/application?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_app_square" target="_blank" rel="noopener noreferrer">アプリケーションを探索</a>
         </div>
       </div>
       <div className="card__footer">
@@ -106,9 +106,9 @@ SenseCraft は、AI とハードウェアアプリケーションの構築、ロ
       <div className="card__body">
         <div className="badge badge--success margin-bottom--sm">Create</div>
         <h3 id="codecraft">CodeCraft</h3>
-        <div className="margin-bottom--sm"><strong>アイデアを数分で形にする、ハードウェア特化型の AI コーディングアシスタント。</strong></div>
+        <div className="margin-bottom--sm"><strong>アイデアを数分で形にする、ハードウェアに特化した AI コーディングアシスタント。</strong></div>
         <div className="margin-bottom--sm">
-          作りたいハードウェアプロジェクトを説明し、そのコードを生成してクラウドでコンパイルし、ブラウザから書き込みます。CodeCraft は、Wio Terminal、XIAO、Grove、Arduino プロジェクト、ブラウザベースの WebSerial による、実践的なプロトタイピングと学習ワークフローをサポートします。
+          作りたいハードウェアプロジェクトを説明し、そのコードを生成してクラウドでコンパイルし、ブラウザから書き込みます。CodeCraft は、Wio Terminal、XIAO、Grove、Arduino プロジェクト、およびブラウザベースの WebSerial を用いた実践的なプロトタイピングと学習ワークフローをサポートします。
         </div>
         <div className="margin-bottom--sm">
           <a href="https://codecraft.seeed.cc/workspace?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=codecraft_workspace" target="_blank" rel="noopener noreferrer">ワークスペースを開く</a>
@@ -138,7 +138,7 @@ SenseCraft は、AI とハードウェアアプリケーションの構築、ロ
         <h3 id="recomputer-ai-lab">reComputer AI Lab</h3>
         <div className="margin-bottom--sm"><strong>reComputer ハードウェア向けに最適化されたエッジ AI モデル、ツール、チュートリアル。</strong></div>
         <div className="margin-bottom--sm">
-          最適化された 100 以上のコンピュータビジョン、LLM、VLM モデルを閲覧し、NVIDIA Jetson、Rockchip、Raspberry Pi ベースの reComputer デバイス上で実行できます。モデルにはベンチマークとすぐに実行できるデプロイコマンドが含まれており、同じ開発者リソースセンター内に変換ツール、チュートリアル、コミュニティプロジェクトも用意されています。
+          100 を超える最適化済みコンピュータビジョン、LLM、VLM モデルを閲覧し、NVIDIA Jetson、Rockchip、Raspberry Pi ベースの reComputer デバイス上で実行できます。モデルにはベンチマークとすぐに実行可能なデプロイコマンドが含まれており、同じ開発者リソースセンター内に変換ツール、チュートリアル、コミュニティプロジェクトも用意されています。
         </div>
         <div className="margin-bottom--sm">
           <a href="https://sensecraft.seeed.cc/ai-lab/models?lang=en&utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=ai_lab_models" target="_blank" rel="noopener noreferrer">モデルを閲覧</a>
@@ -166,14 +166,15 @@ SenseCraft は、AI とハードウェアアプリケーションの構築、ロ
       <div className="card__body">
         <div className="badge badge--info margin-bottom--sm">Develop</div>
         <h3 id="sensecraft-robotics">SenseCraft Robotics</h3>
-        <div className="margin-bottom--sm"><strong>すぐに使えるロボットアーム学習プラットフォーム。</strong></div>
+        <div className="margin-bottom--sm"><strong>すぐに使えるロボットアームトレーニングプラットフォーム。</strong></div>
         <div className="margin-bottom--sm">
           キャリブレーション、デモ用データ収集、クラウドトレーニング、検証までを一つにつながったワークフローで実行できます。教育機関や研究室、ロボティクス R&amp;D における概念実証、そしてハイエンドなローカルトレーニングマシンを必要としない初期統合検証向けに設計されています。
         </div>
       </div>
       <div className="card__footer">
         <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/en/robotics?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_home" target="_blank" rel="noopener noreferrer">ロボティクスを探索</a>
-        <a className="button button--outline button--secondary margin-bottom--sm" href="https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_download" target="_blank" rel="noopener noreferrer">アプリをダウンロード</a>
+        <a className="button button--outline button--secondary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_download" target="_blank" rel="noopener noreferrer">アプリをダウンロード</a>
+        <a className="button button--outline button--secondary margin-bottom--sm" href="/ja/sensecraft_robotics/">ユーザーガイドを読む</a>
       </div>
     </div>
   </div>
@@ -195,7 +196,7 @@ SenseCraft は、AI とハードウェアアプリケーションの構築、ロ
         <h3 id="sensecraft-data-platform">SenseCraft Data Platform</h3>
         <div className="margin-bottom--sm"><strong>IoT デバイスとデータの管理プラットフォーム。</strong></div>
         <div className="margin-bottom--sm">
-          対応ゲートウェイとセンサーをペアリングし、データを収集し、1 つのクラウドプラットフォームからデバイスのステータスとテレメトリを確認できます。SenseCAP デバイスおよび LoRaWAN、MQTT、Wi-Fi、気象・環境センシングを用いた一般的な IoT ワークフローのデータハブとして機能します。
+          対応ゲートウェイとセンサーをペアリングし、データを収集し、1 つのクラウドプラットフォームからデバイスの状態とテレメトリを確認できます。SenseCAP デバイスおよび LoRaWAN、MQTT、Wi-Fi、気象・環境センシングを用いた一般的な IoT ワークフローのデータハブとして機能します。
         </div>
       </div>
       <div className="card__footer">
@@ -245,7 +246,7 @@ SenseCraft は、AI とハードウェアアプリケーションの構築、ロ
         <h3 id="sensecraft-hmi">SenseCraft Seeedash</h3>
         <div className="margin-bottom--sm"><strong>reTerminal 向けのダッシュボードデザインを作成または探索。</strong></div>
         <div className="margin-bottom--sm">
-          ダッシュボードテンプレートから開始するか、キャンバス上で独自のディスプレイをデザインし、その結果を対応する reTerminal デバイスに管理・プッシュします。SenseCraft Seeedash は、情報表示、制御インターフェース、データリッチなデバイス体験を目的としています。
+          ダッシュボードテンプレートから開始するか、キャンバス上で独自の表示をデザインし、その結果を対応する reTerminal デバイスに管理・プッシュします。SenseCraft Seeedash は情報表示、制御インターフェース、データリッチなデバイス体験を目的としています。
         </div>
         <div className="margin-bottom--sm">
           <a href="https://sensecraft.seeed.cc/hmi/workspace/page?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_hmi_canvas" target="_blank" rel="noopener noreferrer">キャンバス上でデザイン</a>
@@ -287,7 +288,7 @@ SenseCraft は、AI とハードウェアアプリケーションの構築、ロ
   </div>
 </div>
 
-## SenseCAP MX および Hotspot 製品
+## SenseCAP MX と Hotspot 製品
 
 <div className="row">
   <div className="col col--12 margin-bottom--lg">
@@ -309,7 +310,7 @@ SenseCraft は、AI とハードウェアアプリケーションの構築、ロ
             <h3 id="sensecap-mx-hotspot">SenseCAP MX / ホットスポット</h3>
             <div className="margin-bottom--sm"><strong>Helium、Flux、Mysterium、Weather XM ネットワーク向けのゲートウェイおよび管理ツール。</strong></div>
             <div className="margin-bottom--sm">
-              対応する分散型ネットワークワークフロー向けに、SenseCAP MX ゲートウェイ製品、ドキュメント、サービスステータスを確認できます。対応する SenseCAP ゲートウェイおよびホットスポットデバイスの展開と管理には、専用の SenseCAP Hotspot App を使用してください。一般的な SenseCraft App と混同しないでください。
+              SenseCAP MX ゲートウェイ製品、ドキュメント、およびサポートされている分散型ネットワークワークフロー向けのサービスステータスを確認できます。専用の SenseCAP Hotspot App を使用して、対応する SenseCAP ゲートウェイおよびホットスポットデバイスを展開・管理します。一般的な SenseCraft App と混同しないでください。
             </div>
           </div>
           <div className="card__footer">
@@ -325,9 +326,9 @@ SenseCraft は、AI とハードウェアアプリケーションの構築、ロ
 
 :::info 製品の境界
 
-- **reComputer AI Lab** は、reComputer に特化したモデル、ツール、チュートリアル、プロジェクトリソースセンターの現在の正式名称です。
-- **SenseCraft Device Management Platform** は、展開済みエッジデバイスとアプリケーションを管理するためのオペレーションレイヤーです。まず具体的なアプリケーションまたはソリューションから始め、その後デバイス管理を使用して大規模に運用します。
-- **SenseCraft App** と **SenseCAP Hotspot App** は異なるモバイル製品です。対応する IoT デバイスとデータワークフローには SenseCraft App を使用し、対応するゲートウェイおよびホットスポットのワークフローには SenseCAP Hotspot App を使用してください。
+- **reComputer AI Lab** は、reComputer に特化したモデル、ツール、チュートリアル、およびプロジェクトリソースセンターの現在の正式名称です。
+- **SenseCraft Device Management Platform** は、展開済みエッジデバイスとアプリケーションを管理するためのオペレーションレイヤーです。具体的なアプリケーションまたはソリューションから始め、その後デバイス管理を使用して大規模に運用します。
+- **SenseCraft App** と **SenseCAP Hotspot App** は異なるモバイル製品です。SenseCraft App は対応する IoT デバイスとデータワークフローに、SenseCAP Hotspot App は対応するゲートウェイおよびホットスポットのワークフローに使用します。
 
 :::
 
