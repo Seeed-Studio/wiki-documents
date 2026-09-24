@@ -11,7 +11,7 @@ last_update:
   date: 09/16/2026
   author: Nemo
 createdAt: '2025-09-25'
-updatedAt: '2026-09-16'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/epaper_ee04/
 ---
 

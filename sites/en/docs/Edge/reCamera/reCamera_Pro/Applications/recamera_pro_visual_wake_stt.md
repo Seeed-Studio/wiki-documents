@@ -16,7 +16,7 @@ last_update:
   date: 2026-08-24
   author: yylin
 createdAt: '2026-08-24'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-21'
 sidebar_position: 1
 url: https://wiki.seeedstudio.com/recamera_pro_visual_wake_stt_legacy/
 ---

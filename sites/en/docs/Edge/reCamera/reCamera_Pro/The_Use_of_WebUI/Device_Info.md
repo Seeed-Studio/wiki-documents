@@ -12,7 +12,7 @@ last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-09'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recamera_pro_device_info_legacy/
 ---
 <!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Deploy/network_time_access.md (https://wiki.seeedstudio.com/recamera_pro_device_info/), which now serves the original slug /recamera_pro_device_info. This file is kept for history as a draft (slug /recamera_pro_device_info_legacy) and is excluded from production builds. Do not link here. -->

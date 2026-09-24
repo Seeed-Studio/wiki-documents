@@ -9,7 +9,7 @@ last_update:
   author: Dayu
 createdAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/ai_robotics_microduck_rl_jetson_environment/
-updatedAt: '2026-09-05'
+updatedAt: '2026-09-11'
 ---
 
 # Deploy the Microduck RL Environment on Jetson

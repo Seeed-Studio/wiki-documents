@@ -13,7 +13,7 @@ last_update:
   date: 09/21/2026
   author: Sizhao zhou
 createdAt: '2026-07-15'
-updatedAt: '2026-07-15'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recamera_pro_api_device-and-system/
 ---
 

@@ -15,6 +15,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_gpio_guide/
+createdAt: '2026-08-26'
+updatedAt: '2026-09-21'
 ---
 
 # reCamera Pro GPIO Pin Usage Guide

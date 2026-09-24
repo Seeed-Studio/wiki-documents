@@ -1,6 +1,6 @@
 ---
 description: Watch the live feed in your browser, take photos, start and stop manual recordings, and switch between the main stream and sub-stream on reCamera Pro.
-title: "Preview, Capture and Manual Recording"
+title: Preview, Capture and Manual Recording
 keywords:
   - reCamera
   - reCamera Pro
@@ -17,6 +17,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_live_preview/
+createdAt: '2026-09-21'
+updatedAt: '2026-09-21'
 ---
 
 # Preview, Capture and Manual Recording

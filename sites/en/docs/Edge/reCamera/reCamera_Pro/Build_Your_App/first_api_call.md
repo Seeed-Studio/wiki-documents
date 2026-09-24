@@ -1,6 +1,6 @@
 ﻿---
 description: Three-step quick start to calling your first reCamera Pro API — log in, obtain a token, and make an API call.
-title: "Your First API Call"
+title: Your First API Call
 keywords:
   - reCamera
   - reCamera Pro
@@ -14,6 +14,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_api_quick_start/
+createdAt: '2026-07-15'
+updatedAt: '2026-09-21'
 ---
 
 # Quick Start
