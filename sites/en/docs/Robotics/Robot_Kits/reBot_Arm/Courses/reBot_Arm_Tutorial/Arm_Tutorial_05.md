@@ -1,5 +1,5 @@
 ---
-description: "Chapter 5 of the Seeed Embodied Intelligence Beginner's Course — CAN bus basics, standard vs extended data frames, the CAN data link layer, and SocketCAN."
+description: Chapter 5 of the Seeed Embodied Intelligence Beginner's Course — CAN bus basics, standard vs extended data frames, the CAN data link layer, and SocketCAN.
 title: Chapter 5 - CAN Bus and Motor Communication
 keywords:
   - reBot
@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-17
   author: LiuJunjie
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_5/
 ---
 

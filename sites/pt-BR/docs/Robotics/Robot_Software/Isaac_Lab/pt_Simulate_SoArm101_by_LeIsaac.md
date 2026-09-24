@@ -10,20 +10,20 @@ last_update:
   date: 8/1/2025
   author: Youjiang
 createdAt: '2025-08-01'
-updatedAt: '2026-03-16'
+updatedAt: '2025-09-12'
 url: https://wiki.seeedstudio.com/pt-br/simulate_soarm101_by_leisaac/
 ---
 
-# Introdução ao Lightwheel LeIsaac — Fluxo de trabalho open‑source combinando Hugging Face LeRobot x GR00T N1.5 x Isaac Sim
+# Introdução ao Lightwheel LeIsaac — Fluxo de trabalho open-source combinando Hugging Face LeRobot x GR00T N1.5 x Isaac Sim
 
 ## Interduction
 
-Este wiki seguirá o documento do leisaac e mostrará como teleoperar o braço robótico SoArm101 no IsaacLab usando o leisaac. Além disso, demonstraremos a implantação do modelo NVIDIA Isaac GR00T N1.5 ajustado finamente no ambiente de simulação do Isaac Lab, usando dados coletados no próprio Isaac Lab. Os principais projetos utilizados neste wiki são:
+Este wiki seguirá a documentação do leisaac e mostrará como teleoperar o braço robótico SoArm101 no IsaacLab usando o leisaac. Além disso, demonstraremos a implantação do modelo Nvidia Isaac GR00T N1.5 ajustado finamente dentro do ambiente de simulação do Isaac Lab, usando dados coletados no próprio Isaac Lab. Os principais projetos utilizados neste wiki são:
 
-- [LeIsaac](https://github.com/LightwheelAI/leisaac) fornece funcionalidade de teleoperação no IsaacLab usando o SO101Leader (LeRobot), incluindo coleta de dados, conversão de dados e treinamento de políticas subsequente.
-- [NVIDIA Isaac™ Lab](https://developer.nvidia.com/isaac/lab) é um framework unificado open‑source para aprendizado de robôs, projetado para ajudar a treinar políticas de robôs.
-- [SO-ARM101](https://github.com/TheRobotStudio/SO-ARM100) é um kit de braço robótico 3D‑imprimível, de baixo custo e open‑source. Projetado para funcionar perfeitamente com a biblioteca open‑source LeRobot.
-- [NVIDIA Isaac GR00T N1.5](https://github.com/NVIDIA/Isaac-GR00T) é um modelo fundamental aberto para raciocínio e habilidades generalizadas de robôs humanoides.
+- [LeIsaac](https://github.com/LightwheelAI/leisaac) fornece funcionalidade de teleoperação no IsaacLab usando o SO101Leader (LeRobot), incluindo coleta de dados, conversão de dados e treinamento posterior de políticas.
+- [NVIDIA Isaac™ Lab](https://developer.nvidia.com/isaac/lab) é um framework unificado e open-source para aprendizado de robôs, projetado para ajudar a treinar políticas de robôs.
+- [SO-ARM101](https://github.com/TheRobotStudio/SO-ARM100) é um kit de braço robótico de baixo custo, open-source e imprimível em 3D. Projetado para funcionar perfeitamente com a biblioteca open-source LeRobot.
+- [NVIDIA Isaac GR00T N1.5](https://github.com/NVIDIA/Isaac-GR00T) é um modelo base open-source para raciocínio e habilidades generalizadas de robôs humanóides.
 
 ## Requierment
 
@@ -64,7 +64,7 @@ git checkout v2.1.0
 ```
 
 :::note
-Se o seu computador não tiver o conda instalado, consulte [este guia](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) para instalação.
+Se o seu computador não tiver o conda instalado, consulte [este guia](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) para a instalação.
 :::
 
 :::info
@@ -73,7 +73,7 @@ Se você estiver usando uma GPU da série 50, recomendamos usar o isaacsim5.0 e 
 
 ## Instalar o LeIsaac
 
-Clone o repositório LeIsaac e instale‑o como dependência.
+Clone o repositório LeIsaac e instale-o como dependência.
 
 ```bash
 cd ..
@@ -84,12 +84,12 @@ pip install pynput pyserial deepdiff feetech-servo-sdk
 ```
 
 :::note
-Certifique‑se de realizar a instalação dentro do ambiente virtual conda `leisaac`.
+Certifique-se de realizar a instalação dentro do ambiente virtual conda `leisaac`.
 :::
 
 ## Preparação de Assets
 
-O LeIsaac fornece um asset USD de exemplo — uma cena de cozinha. Podemos baixar a cena relacionada [aqui](https://github.com/LightwheelAI/leisaac/releases/tag/v0.1.0) e extraí‑la no diretório de assets. A estrutura do diretório deve ser assim:
+LeIsaac fornece um asset USD de exemplo — uma cena de cozinha. Podemos baixar a cena relacionada [aqui](https://github.com/LightwheelAI/leisaac/releases/tag/v0.1.0) e extraí-la no diretório de assets. A estrutura do diretório deve ser semelhante a esta:
 
 ```txt
 <assets>
@@ -108,7 +108,7 @@ O LeIsaac fornece um asset USD de exemplo — uma cena de cozinha. Podemos baixa
 
 ## Coletar Dataset
 
-Conecte o leader SO-ARM101 a um computador com Ubuntu via cabo USB e, em seguida, use comandos para conceder permissões de porta serial.
+Conecte o líder SO-ARM101 a um computador com Ubuntu via cabo USB e, em seguida, use comandos para conceder permissões à porta serial.
 
 ```bash
 ls /dev/ttyACM*
@@ -140,13 +140,13 @@ python scripts/environments/teleoperation/teleop_se3_agent.py \
 <iframe width="800" height="400" src="https://www.youtube.com/embed/XY3LEXGP8hI" title="Simulate SoArm101 by LeIsaac (1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-Depois de entrar na janela do IsaacLab, pressione a tecla `b` no teclado para iniciar a teleoperação. Em seguida, você pode usar o `teleop_device` especificado para controlar o robô na simulação. Se você precisar redefinir o ambiente após concluir sua operação, basta pressionar a tecla `r` ou `n`. `r` significa redefinir o ambiente e marcar a tarefa como falha, enquanto `n` significa redefinir o ambiente e marcar a tarefa como bem‑sucedida.
+Após entrar na janela do IsaacLab, pressione a tecla `b` no teclado para iniciar a teleoperação. Você poderá então usar o teleop_device especificado para controlar o robô na simulação. Se precisar redefinir o ambiente após concluir sua operação, basta pressionar a tecla `r` ou `n`. `r` significa redefinir o ambiente e marcar a tarefa como falha, enquanto `n` significa redefinir o ambiente e marcar a tarefa como bem-sucedida.
 
 <div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/XkgBY4aa8AE" title="Teleoperate SoArm101 by LeIsaac" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Replay do Dataset
+## Reprodução do Dataset
 
 Após a teleoperação, você pode reproduzir o dataset coletado no ambiente de simulação usando o seguinte script:
 
@@ -166,15 +166,15 @@ python scripts/environments/teleoperation/replay.py \
 
 ## Conversão de Dados
 
-Os dados de teleoperação coletados são armazenados em formato HDF5 no diretório especificado. Se for usar esses dados para treinar um modelo proxy, o dataset deve ser convertido para um formato compatível com o LeRobot usando os scripts de conversão do LeIsaac.
+Os dados de teleoperação coletados são armazenados em formato HDF5 no diretório especificado. Se for usar esses dados para treinar um modelo proxy, o dataset deve ser convertido para o formato compatível com LeRobot usando os scripts de conversão do LeIsaac.
 
-Este script deve ser executado dentro do ambiente virtual do LeRobot. Crie um novo ambiente LeRobot seguindo as etapas deste [wiki](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#Instalar-o-LeRobot).
+Este script deve ser executado dentro do ambiente virtual do LeRobot. Crie um novo ambiente LeRobot seguindo as etapas deste [wiki](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#instalar-lerobot).
 
 ```bash
 cd ..
 git clone https://github.com/huggingface/lerobot.git
 cd lerobot
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install -e .
 ```
@@ -192,12 +192,12 @@ python scripts/convert/isaaclab2lerobot.py
 </div>
 
 :::note
-Se você tiver modificado o caminho de armazenamento do dataset durante a coleta de dados, será necessário atualizar o caminho correspondente no script de conversão antes da execução.
+Se você modificou o caminho de armazenamento do dataset durante a coleta de dados, deverá atualizar o caminho correspondente no script de conversão antes da execução.
 :::
 
 Após a conclusão da execução do programa, o dataset convertido poderá ser encontrado em: `~/.cache/huggingface/lerobot/`.
 
-Também podemos inspecionar os dados convertidos usando o kit de ferramentas integrado de visualização de datasets do LeRobot.
+Também podemos inspecionar os dados convertidos usando a ferramenta integrada de visualização de datasets do LeRobot.
 
 ```bash
 cd ../lerobot
@@ -210,7 +210,7 @@ python -m lerobot.scripts.visualize_dataset --repo-id EverNorif/so101_test_orang
 
 ## Treinamento de Política
 
-Neste wiki, faremos o ajuste fino do NVIDIA Isaac GR00T N1.5. Vamos começar configurando o ambiente virtual Isaac-GR00T:
+Neste wiki, faremos o fine-tuning do NVIDIA Isaac GR00T N1.5. Vamos começar configurando o ambiente virtual Isaac-GR00T:
 
 ```bash
 cd ..
@@ -224,7 +224,7 @@ pip install --no-build-isolation flash-attn==2.7.1.post4
 ```
 
 :::info
-A instalação do flash-attn envolve compilação de pacotes, o que pode ser extremamente lento. Recomenda‑se [baixar](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.1.post4) a versão pré‑compilada do pacote correspondente ao seu ambiente de sistema e instalá‑la localmente usando o comando: pip install ./package_name.
+A instalação do flash-attn envolve compilação de pacotes, o que pode ser extremamente lento. Recomenda-se [baixar](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.1.post4) a versão pré-compilada do pacote correspondente ao ambiente do seu sistema e instalá-la localmente usando o comando: pip install ./package_name.
 :::
 
 Execute o seguinte comando no terminal para iniciar o treinamento:
@@ -249,11 +249,11 @@ python scripts/gr00t_finetune.py \
 
 ## Inferência de Política
 
-Neste estágio, podemos implantar nosso modelo NVIDIA Isaac GR00T N1.5 ajustado finamente para controlar o braço robótico SO-ARM101 no Isaac Lab.
+Nesta etapa, podemos implantar nosso modelo NVIDIA Isaac GR00T N1.5 ajustado finamente para controlar o braço robótico SO-ARM101 no Isaac Lab.
 A arquitetura de implantação do Isaac-GR00T adota um design desacoplado entre o endpoint de inferência e o endpoint de controle:
 
-- Endpoint de Inferência (Servidor): dedicado exclusivamente à execução de tarefas de inferência de modelo.
-- Endpoint de Controle (Cliente): responsável por adquirir os estados do braço robótico e orquestrar o controle de movimento.
+- Endpoint de Inferência (Servidor): Dedicado exclusivamente à execução de tarefas de inferência de modelo.
+- Endpoint de Controle (Cliente): Responsável por adquirir os estados do braço robótico e orquestrar o controle de movimento.
 
 **Servidor**
 Abra uma nova janela de terminal e execute:
@@ -295,9 +295,9 @@ Se você encontrar erros relacionados ao ZMQ, execute `pip install pyzmq` para r
 <iframe width="900" height="450" src="https://www.youtube.com/embed/GRzFK7o3lOQ" title="Simulate SoArm101 by LeIsaac (3)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-O modelo final treinado não conseguiu controlar o braço robótico SOArm101 para pegar a laranja. Isso aconteceu porque coletei apenas três conjuntos de dados durante o experimento. Se mais dados pudessem ser coletados, a precisão do modelo seria significativamente melhorada!
+O modelo final treinado não conseguiu controlar o braço robótico SOArm101 para pegar a laranja. Isso aconteceu porque eu coletei apenas três conjuntos de dados durante o experimento. Se mais dados pudessem ser coletados, a precisão do modelo seria significativamente melhorada!
 
-## Suporte Técnico & Discussão de Produtos
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

@@ -39,13 +39,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 介绍
 
-由 **XIAO ESP32-S3** Plus 提供算力，显示板 EE04 同时支持 **24-pin** 和 **50-pin** ePaper 显示屏。它配备带电源开关的 JST 2.0 mm 电池连接器、内置充电 IC，并带有一个复位按键和三个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息板。
+由 **XIAO ESP32-S3** Plus 提供算力，显示板 EE04 支持 **24-pin** 和 **50-pin** 两种 ePaper 显示屏。其配备带电源开关的 JST 2.0 mm 电池接口、板载充电 IC，并集成 1 个复位按键和 3 个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息看板。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### 特性
 
-- **由 XIAO ESP32-S3 Plus 驱动：** 连接兼容的 ePaper 显示屏即可立即工作。
+- **由 XIAO ESP32-S3 Plus 驱动：** 连接兼容的 ePaper 显示屏后即可立即工作。
 - **多样化显示支持：** 兼容多种 ePaper 屏幕，通过跳线帽轻松切换，支持 24-Pin 和 50-Pin 接口。
-- **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
+- **带开关的电池接口：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
 - **用户友好按键：** 包含 1 个复位按键和 3 个用户可编程按键，为项目加速和自定义功能提供灵活性。
 - **低功耗设计**：适用于电池供电的 ePaper 应用，在默认设置下满电通常可使用 3 个月。
 
@@ -54,8 +56,8 @@ import Steppers from '@site/src/components/utils/Stepper';
 | 参数 | 描述 |
 |-----------|-------------|
 | 处理器 | XIAO ESP32-S3 Plus |
-| ePaper 连接器 | FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm |
-| 电池连接器 | JST 2.0mm |
+| ePaper 接口 | FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm |
+| 电池接口 | JST 2.0mm |
 | 开关 | 电池电源 ON/OFF |
 | 电源供给 | - 3.7V 锂电池<br />- USB Type-C |
 | 按键 | - 1x 复位按键<br />- 3x 用户按键 |
@@ -66,21 +68,21 @@ import Steppers from '@site/src/components/utils/Stepper';
 |---------|---------------------------|---------------|-----------------|
 | 处理器 | XIAO ESP32-S3 Plus | XIAO 系列 | XIAO 系列 |
 | 兼容 ePaper 显示屏 | 24 Pin ePaper<br />50 Pin ePaper | 24 Pin ePaper | 24 Pin ePaper |
-| ePaper 连接器 | FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm | FPC 24 Pin 0.5mm | FPC 24 Pin 0.5mm |
-| 电池连接器 | JST 2.0mm | / | JST 2.0mm |
+| ePaper 接口 | FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm | FPC 24 Pin 0.5mm | FPC 24 Pin 0.5mm |
+| 电池接口 | JST 2.0mm | / | JST 2.0mm |
 | 开关 | 电池电源 ON/OFF | / | 电池电源 ON/OFF |
 | 按键 | 1x 复位按键<br />3x 用户按键 | / | / |
 | 扩展 IO 端口 | / | 连接其他控制器 | 连接额外传感器 |
 
 ### 应用
 
-- **智能家居仪表盘**：显示天气更新、日历事件以及来自各种智能家居设备的通知等实时信息。
+- **智能家居仪表盘**：显示天气更新、日历事件以及来自各类智能家居设备的通知等实时信息。
 - **能耗监测**：显示来自智能电表的能耗数据，帮助用户更高效地跟踪和管理能源使用。
-- **安防告警**：显示关于安防事件的告警和通知，例如运动检测或门/窗传感器触发。
+- **安防告警**：显示安防事件的告警和通知，例如运动检测或门/窗传感器触发。
 - **智能恒温器显示**：显示温度和湿度水平，以及智能恒温器的控制设置。
-- **数字相框**：创建一个支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
+- **数字相框**：打造一款支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
 
-## 硬件总览
+## 硬件概览
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
@@ -92,7 +94,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ### 支持的 ePaper
 
-#### 24-Pin 连接器
+#### 24-Pin 接口
 
 - [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 - [2.13-inch ePaper - Monochrome 122x250](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)
@@ -109,7 +111,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-使用 XIAO ePaper Display Board 时，请务必根据 ePaper 显示屏类型设置跳线：
+使用 XIAO ePaper Display Board 时，请务必根据 ePaper 显示屏类型正确设置跳线：
 
 - 对于 24 Pin ePaper 显示屏 → 将跳线设置为 24 Pin
 
@@ -117,13 +119,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 :::
 
-#### 50-Pin 连接器
+#### 50-Pin 接口
 
 - [7.3-inch Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
-使用 XIAO ePaper Display Board 时，请务必根据 ePaper 显示屏类型设置跳线：
+使用 XIAO ePaper Display Board 时，请务必根据 ePaper 显示屏类型正确设置跳线：
 - 对于 50 Pin ePaper 显示屏 → 将跳线设置为 50 Pin
 
 ⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。上电前请务必再次确认跳线位置。
@@ -149,20 +151,20 @@ EE04 配备 1 个复位按键和 3 个用户可编程按键，为用户交互和
 
 ### 跳线帽选择
 
-EE04 同时支持 24-pin 和 50-pin ePaper 显示屏。请使用跳线帽为你的显示屏选择正确的引脚配置：
+EE04 支持 24-pin 和 50-pin 两种 ePaper 显示屏。请使用跳线帽为你的屏幕选择正确的引脚配置：
 
 - **24-pin 模式**：将跳线帽插在 24-pin 一侧
 - **50-pin 模式**：将跳线帽插在 50-pin 一侧
 
 :::caution
-请确保跳线帽根据 ePaper 显示屏的引脚数量正确放置。错误的跳线帽位置可能导致显示问题或损坏屏幕。
+请确保跳线帽根据 ePaper 显示屏的引脚数量正确放置。错误的跳线帽位置可能导致显示问题，甚至损坏屏幕。
 :::
 
-### 电池连接器
+### 电池接口
 
-该板载有一个带电源开关的 JST 2.0mm 电池连接器，可使用 3.7V 锂电池为设备供电，适用于便携式应用。内置充电 IC 支持通过 USB Type-C 为电池充电。
+该板载有一个带电源开关的 JST 2.0mm 电池接口，可使用 3.7V 锂电池为设备供电，适用于便携式应用。板载充电 IC 支持通过 USB Type-C 为电池充电。
 
-当设备由电池供电时，以下现象是 SenseCraft Seeedash 固件本身固有的正常行为。
+当设备由电池供电时，下列现象是 SenseCraft Seeedash 固件本身固有的正常行为。
 
 - 设备会在两次刷新之间自动进入低功耗模式
 - 电池寿命取决于刷新频率（在默认设置下，满电通常可使用 3 个月）
@@ -170,30 +172,30 @@ EE04 同时支持 24-pin 和 50-pin ePaper 显示屏。请使用跳线帽为你�
 
 ## SenseCraft Seeedash 入门
 
-本节将指导你将 EE04 连接到 SenseCraft Seeedash 平台，从而轻松实现无线更新屏幕内容。
+本节将引导你将 EE04 连接到 SenseCraft Seeedash 平台，从而轻松实现无线更新屏幕内容。
 
 :::note
-**本指南使用的是哪块屏幕？** 与单一面板的板卡不同，EE04 支持多种 ePaper 面板（参见上文 **支持的 ePaper** 部分）。本指南全程以 **7.5 英寸黑白 ePaper（800 x 480）** 为示例——下文所有截图均来自该面板。如果你使用的是其他屏幕，只需在步骤 2 烧录固件时选择自己的面板型号；其余步骤完全相同。
+**本指南使用的是哪块屏幕？** 与单一面板的板卡不同，EE04 支持多种 ePaper 面板（参见上文 **支持的 ePaper** 部分）。本指南全程以 **7.5-inch Monochrome ePaper (800 x 480)** 为示例——下文所有截图均基于该面板。如果你使用的是其他屏幕，只需在步骤 2 烧录固件时选择自己的面板型号；其余步骤完全相同。
 :::
 
 :::caution
-**首次上电没有欢迎界面？这是正常现象。** 由于 EE04 支持多种 ePaper 面板，出厂固件不会预先为任何特定屏幕烧录。当你连接屏幕并为全新板卡上电时，显示屏很可能保持空白——这并**不**意味着板卡或屏幕损坏。你需要先烧录与屏幕型号匹配的 SenseCraft Seeedash 固件（见下方步骤 2）；烧录完成后将出现欢迎界面和网络配置界面。
+**首次上电没有欢迎界面？这是正常现象。** 由于 EE04 支持多种 ePaper 面板，出厂固件不会预先为任何特定屏幕烧录。当你连接屏幕并为全新板卡上电时，显示屏很可能保持空白——这并**不**意味着板卡或屏幕损坏。你需要先烧录与屏幕型号匹配的 SenseCraft Seeedash 固件（见下方步骤 2）；烧录完成后，欢迎界面和网络配置界面才会出现。
 :::
 ### 设备安装
 
-**步骤 1. 连接屏幕与板卡**
-小心地将 ePaper 屏幕的 FPC 线缆连接到 EE04 驱动板上的连接器，确保锁扣机构已牢固锁紧。
+**步骤 1. 连接屏幕与主板**
+小心地将 ePaper 屏幕的 FPC 线缆连接到 EE04 驱动板上的连接器，并确保锁扣机构已牢固锁紧。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/Connect.gif" style={{width:800, height:'auto'}}/></div>
 
 **步骤 2. 为你的屏幕烧录 HMI 固件**
 
-保持 EE04 板通过 USB Type-C **数据**线连接到电脑（同一根线同时用于供电和烧录），然后：
+保持 EE04 板通过 USB Type-C **数据** 线连接到电脑（同一根线同时用于供电和烧录），然后：
 
 1. 访问 [SenseCraft Seeedash 平台](https://sensecraft.seeed.cc/hmi) 并登录你的账号。
 2. 在左侧菜单中打开 **Tools** → **Firmware Flasher**。
 3. 在设备列表中选择 **XIAO EE04 DIY Kit**。
-4. 选择与你的板子所连接屏幕型号相匹配的固件条目。**本教程使用 7.5" 单色显示屏 800 x 480** —— 如果你的面板不同，请在此选择你自己的面板。
+4. 选择与你板子上连接的屏幕型号相匹配的固件条目。**本教程中我们使用 7.5" 单色显示屏 800 x 480** — 如果你的屏幕不同，请在此选择你自己的面板。
 5. 点击 **Flash**，在弹出的窗口中选择你的开发板串口，等待烧录完成。
 
 :::tip
@@ -203,7 +205,7 @@ EE04 同时支持 24-pin 和 50-pin ePaper 显示屏。请使用跳线帽为你�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_7.png" style={{width:800,height:'auto'}}/></div>
 
 **步骤 3. 进入网络配置模式**
-固件烧录完成后，开发板会自动重启。屏幕会先显示欢迎图片，然后刷新到网络配置界面。这表明设备已准备好连接 Wi-Fi。
+固件烧录完成后，开发板会自动重启。屏幕会先显示欢迎界面，然后刷新到网络配置界面。这表明设备已准备好连接 Wi-Fi。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_1.png" style={{width:300,height:'auto'}}/></div>
 
@@ -211,18 +213,18 @@ EE04 同时支持 24-pin 和 50-pin ePaper 显示屏。请使用跳线帽为你�
 ### 网络配置
 
 **步骤 4. 通过手机配置 Wi-Fi**
-使用你的手机扫描屏幕上显示的二维码。根据手机上的提示输入本地 Wi-Fi 的 SSID 和密码，将 EE04 连接到互联网。
+使用手机扫描屏幕上显示的二维码。根据手机上的提示输入本地 Wi-Fi 的 SSID 和密码，将 EE04 连接到互联网。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
 **步骤 5. 获取配对码**
-网络配置成功后，屏幕会再次刷新并显示一个唯一的 **Pair Code（配对码）**。你将在下一步中用到这个配对码。
+网络配置成功后，屏幕会再次刷新并显示一个唯一的 **Pair Code（配对码）**。下一步你将需要使用此配对码。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_2.png" style={{width:300,height:'auto'}}/></div>
 
 ### 平台绑定与更新
 
 **步骤 6. 在 SenseCraft Seeedash 上绑定设备**
-前往 [SenseCraft Seeedash 平台](https://sensecraft.seeed.cc/hmi/device)。登录你的账号。进入设备管理部分并选择 "New Device"。输入你的电子墨水屏上显示的配对码（Pair Code）。
+前往 [SenseCraft Seeedash 平台](https://sensecraft.seeed.cc/hmi/device)。登录你的账号。进入设备管理页面并选择 "New Device"。输入你的电子墨水屏上显示的配对码（Pair Code）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
@@ -241,7 +243,7 @@ EE04 同时支持 24-pin 和 50-pin ePaper 显示屏。请使用跳线帽为你�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_6.png" style={{width:800, height:'auto'}}/></div>
 
 **步骤 9. 在屏幕上显示**
-最后，EE04 会接收数据并刷新 7.5 英寸屏幕，显示你的新内容。
+最后，EE04 会接收数据并将你的新内容刷新到 7.5 英寸屏幕上。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI_4.png" style={{width:300, height:'auto'}}/></div>
 
@@ -271,7 +273,7 @@ EE04 同时支持 24-pin 和 50-pin ePaper 显示屏。请使用跳线帽为你�
 
 ### 配置并烧录程序
 
-如图所示，通过以下菜单路径找到示例：
+如图所示，通过以下菜单路径找到示例程序：
 File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → XIAO ePaper Display Board - EE04 → 7.5-inch ePaper - Monochrome 800x480 → 7_5_inch_Monochrome_HelloWorld
 
 :::note
@@ -281,15 +283,15 @@ File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/GFX2_EE04_demo_1.png" style={{width:800, height:'auto'}}/></div>
 
-之后，依次进入 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **Select the port your board is connected to**。 
+之后，依次进入 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。 
 
-注意必须启用 PSRAM。
+请注意必须启用 PSRAM。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 然后点击 **Upload** 上传代码。
-现在你就可以在电子墨水屏上看到反馈了！下面是 HelloWorld 示例的运行效果。
+现在你就可以在电子墨水屏上看到反馈了！下面是 HelloWorld 示例的显示效果。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/GFX2_EE04_demo.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/GFX2_EE04_demo.png" style={{width:300, height:'auto'}}/></div>
 
 ## 软件概览
 
@@ -382,7 +384,7 @@ void loop() {
 }
 ```
 
-### XIAO ePaper Display Board(ESP32-S3) - EE04 上的电池使用
+### XIAO ePaper Display Board(ESP32-S3) - EE04 上的用户电池
 
 当使用电池供电时：
 
@@ -393,7 +395,7 @@ void loop() {
 - 当电池电量低于 20% 时，设备会在右上角显示低电量图标
 
 :::tip
-如果你想自己编写代码读取电池电压，在调用 analogRead() 函数前增加 10ms 延时会更精确。
+如果你想自己编写代码来读取电池电压，在调用 analogRead() 函数前增加 10ms 延时会更加精确。
 :::
 
 
@@ -436,7 +438,7 @@ void loop() {
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -17,6 +17,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_visual_wake_stt/
+createdAt: '2026-08-24'
+updatedAt: '2026-09-21'
 ---
 
 # Build a Visual Wake and Offline Speech Recognition System with reCamera Pro

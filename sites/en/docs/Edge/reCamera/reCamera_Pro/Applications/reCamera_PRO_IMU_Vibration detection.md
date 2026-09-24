@@ -19,7 +19,7 @@ last_update:
   date: 2026-06-11
   author: Sizhao zhou
 createdAt: '2026-06-11'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recamera_pro_imu_tilt_shake_detection_legacy/
 ---
 <!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/tilt_shake_detection.md (https://wiki.seeedstudio.com/recamera_pro_imu_tilt_shake_detection/), which now serves the original slug /recamera_pro_imu_tilt_shake_detection. This file is kept for history as a draft (slug /recamera_pro_imu_tilt_shake_detection_legacy) and is excluded from production builds. Do not link here. -->

@@ -16,7 +16,7 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-08-25'
-updatedAt: '2026-08-26'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recamera_pro_gpio_guide_legacy/
 ---
 <!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/gpio_pins.md (https://wiki.seeedstudio.com/recamera_pro_gpio_guide/), which now serves the original slug /recamera_pro_gpio_guide. This file is kept for history as a draft (slug /recamera_pro_gpio_guide_legacy) and is excluded from production builds. Do not link here. -->

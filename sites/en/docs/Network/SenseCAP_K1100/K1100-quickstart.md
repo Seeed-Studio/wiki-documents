@@ -10,7 +10,7 @@ last_update:
   date: 1/12/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-01-07'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/K1100-quickstart/
 ---
 

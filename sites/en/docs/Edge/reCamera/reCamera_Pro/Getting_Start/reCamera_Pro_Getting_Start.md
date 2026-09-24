@@ -15,7 +15,7 @@ last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-08-17'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recamera_pro_getting_started_legacy/
 ---
 <!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Getting_Started/first_ai_detection.md (https://wiki.seeedstudio.com/recamera_pro_getting_started/), which now serves the original slug /recamera_pro_getting_started. This file is kept for history as a draft (slug /recamera_pro_getting_started_legacy) and is excluded from production builds. Do not link here. -->

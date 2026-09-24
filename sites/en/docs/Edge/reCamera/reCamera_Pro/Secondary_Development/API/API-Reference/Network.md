@@ -14,8 +14,8 @@ last_update:
   date: 07/15/2026
   author: Sizhao zhou
 createdAt: '2026-07-15'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/recamera_pro_api_network/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_api_network_legacy/
 ---
 <!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/network.md (https://wiki.seeedstudio.com/recamera_pro_api_network/), which now serves the original slug /recamera_pro_api_network. This file is kept for history as a draft (slug /recamera_pro_api_network_legacy) and is excluded from production builds. Do not link here. -->
 

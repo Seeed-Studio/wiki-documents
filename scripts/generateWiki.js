@@ -20,6 +20,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
   path.join(docsDirectory, 'FAQ', 'respeaker'), // 9.2 排除 respeaker FAQ目录
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro'), // 9.21 排除 reCamera_Pro 目录
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'Courses', 'reBot_Arm_Tutorial'), // 9.17 排除 reBot_Arm_Tutorial 目录
 
   // 排除指定文档
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot.md'), //8.17

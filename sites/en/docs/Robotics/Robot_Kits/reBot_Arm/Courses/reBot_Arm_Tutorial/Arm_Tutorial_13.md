@@ -1,5 +1,5 @@
 ---
-description: "Chapter 13 of the Seeed Embodied Intelligence Beginner's Course — camera configuration and LeRobot data collection: single vs dual camera setup, finding camera device names, image/action synchronization, creating a dataset, recording and re-recording, visualization, and supplementing or deleting data."
+description: 'Chapter 13 of the Seeed Embodied Intelligence Beginner''s Course — camera configuration and LeRobot data collection: single vs dual camera setup, finding camera device names, image/action synchronization, creating a dataset, recording and re-recording, visualization, and supplementing or deleting data.'
 title: Chapter 13 - Camera Configuration and LeRobot Data Collection
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-19
   author: LiuJunjie
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_13/
 ---
 

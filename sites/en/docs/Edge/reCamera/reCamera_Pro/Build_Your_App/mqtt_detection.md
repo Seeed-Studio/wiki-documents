@@ -15,6 +15,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_mqtt/
+createdAt: '2026-09-21'
+updatedAt: '2026-09-21'
 ---
 
 # Send Detection Results over MQTT

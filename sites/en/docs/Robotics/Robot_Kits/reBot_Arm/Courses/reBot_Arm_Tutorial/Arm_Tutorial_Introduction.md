@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course — a free, hands-on guide to building and learning with the 100% open-source reBot robotic arm. Stage 1 covers basic concepts, hardware, and equipment preparation."
+description: Seeed Embodied Intelligence Beginner's Course — a free, hands-on guide to building and learning with the 100% open-source reBot robotic arm. Stage 1 covers basic concepts, hardware, and equipment preparation.
 title: Seeed Embodied Intelligence Beginner's Course
 keywords:
   - reBot
@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-17
   author: LiuJunjie
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_introduction/
 ---
 

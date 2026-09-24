@@ -13,6 +13,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_mipi_dsi_screen_usage/
+createdAt: '2026-07-09'
+updatedAt: '2026-09-21'
 ---
 
 # Using the MIPI DSI Interface on reCamera Pro

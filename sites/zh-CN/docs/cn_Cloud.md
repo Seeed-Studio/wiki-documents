@@ -173,7 +173,8 @@ SenseCraft 汇集了用于构建 AI 与硬件应用、训练机器人、连接�
       </div>
       <div className="card__footer">
         <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/en/robotics?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_home" target="_blank" rel="noopener noreferrer">探索机器人</a>
-        <a className="button button--outline button--secondary margin-bottom--sm" href="https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_download" target="_blank" rel="noopener noreferrer">下载应用</a>
+        <a className="button button--outline button--secondary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_download" target="_blank" rel="noopener noreferrer">下载应用</a>
+        <a className="button button--outline button--secondary margin-bottom--sm" href="/cn/sensecraft_robotics/">阅读用户指南</a>
       </div>
     </div>
   </div>

@@ -7,9 +7,9 @@ sku: 100060965 | 100046482
 last_update:
   date: 03/09/2026
   author: youjiang
-createdAt: '2026-03-16'
+createdAt: '2026-03-09'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/
-updatedAt: '2026-03-16'
+updatedAt: '2026-03-13'
 ---
 
 # Controlar SO-Arm com OpenClaw no Jetson Thor
@@ -30,7 +30,7 @@ Este wiki explica como combinar OpenClaw e LeRobot no Jetson Thor para controlar
 </div>
 
 :::note
-Neste guia, o OpenClaw lida com o planejamento do agente e a orquestração de tarefas, enquanto a execução de movimento do SO-Arm é tratada pelo LeRobot.
+Neste guia, o OpenClaw cuida do planejamento do agente e da orquestração de tarefas, enquanto a execução de movimento do SO-Arm é tratada pelo LeRobot.
 :::
 
 ## Sumário
@@ -72,14 +72,14 @@ Neste guia, o OpenClaw lida com o planejamento do agente e a orquestração de t
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM-101-Assembled-Kit-Pro-p-6691.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
@@ -139,7 +139,7 @@ source ~/.bashrc
 Crie o ambiente LeRobot:
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install 'lerobot[feetech]'
 pip uninstall torch torchvision
@@ -331,7 +331,7 @@ Opcional: você também pode usar diretamente o script fornecido pelo Ollama par
 Instale a skill de controle do SO-Arm:
 
 - Baixe a [soarm-control Skill](https://clawhub.ai/yuyoujiang/soarm-control)
-- Extraia-a para `~/.openclaw/workspace/skills`
+- Extraia para `~/.openclaw/workspace/skills`
 
 Prepare o arquivo de descrição do robô:
 
@@ -404,9 +404,9 @@ cd ~/.openclaw/workspace/skills/soarm-control
 bash scripts/start_server.sh &
 ```
 
-### Executar Tarefa Básica de Movimento
+### Executar Tarefa de Movimento Básico
 
-No OpenClaw WebUI, insira instruções de controle do robô. O OpenClaw irá analisar seu prompt e chamar a skill `soarm-control` instalada para mover o braço até a posição alvo.
+Na OpenClaw WebUI, insira instruções de controle do robô. O OpenClaw irá analisar seu prompt e chamar a skill `soarm-control` instalada para mover o braço até a posição alvo.
 
 <div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/T_uh1N8Fxe4" title="Control SoArm Pick Up by OpenClaw on Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
