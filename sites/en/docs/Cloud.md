@@ -173,7 +173,8 @@ SenseCraft brings together software for building AI and hardware applications, t
       </div>
       <div className="card__footer">
         <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/en/robotics?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_home" target="_blank" rel="noopener noreferrer">Explore Robotics</a>
-        <a className="button button--outline button--secondary margin-bottom--sm" href="https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_download" target="_blank" rel="noopener noreferrer">Download the app</a>
+        <a className="button button--outline button--secondary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_download" target="_blank" rel="noopener noreferrer">Download the app</a>
+        <a className="button button--outline button--secondary margin-bottom--sm" href="/sensecraft_robotics/">Read User Guide</a>
       </div>
     </div>
   </div>
