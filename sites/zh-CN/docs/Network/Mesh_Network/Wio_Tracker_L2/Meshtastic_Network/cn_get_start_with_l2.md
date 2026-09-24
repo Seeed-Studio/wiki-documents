@@ -33,11 +33,11 @@ import TabItem from '@theme/TabItem';
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
-将目标设备选择为 `Seeed Wio Tracker L2`，并选择最新固件，然后点击 `Flash`。
+将目标设备选择为 `Seeed Wio Tracker L2` 并选择最新固件，然后点击 `Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
-打开设备电源，点击 `Enter DFU Mode`，会出现一个名为 `Tracker L2` 的串口，点击并连接它。
+打开设备电源，点击 `Enter DFU Mode`，会出现名为 `Tracker L2` 的串口，点击并连接它。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/StartFlash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -84,7 +84,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="3" label="MUI">
 
-进入 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth icon`。
+进入 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth` 图标。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
@@ -151,7 +151,7 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
+更多区域信息请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
 **EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
@@ -195,7 +195,7 @@ import TabItem from '@theme/TabItem';
 
 </Tabs>
 
-现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
+现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足你的需求。
 
 ### 地图使用
 
@@ -205,7 +205,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置信息。可以在设备上通过 `long pressing the position icon` 直接配置。 
+你需要启用 GPS 才能获取位置信息。可以在设备上通过 `long pressing the position icon` 直接进行配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -231,7 +231,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置信息。可以在设备上通过 `long pressing the position icon` 直接配置。 
+你需要启用 GPS 才能获取位置信息。可以在设备上通过 `long pressing the position icon` 直接进行配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -243,7 +243,7 @@ import TabItem from '@theme/TabItem';
 
 :::tip
 
-连接的 Wifi 需要为 2.4G。设备无法使用 5G Wifi。
+连接的 Wifi 必须为 2.4G。设备无法使用 5G Wifi。
 
 :::
 
@@ -271,15 +271,15 @@ import TabItem from '@theme/TabItem';
 
 ## 高级用法
 
-### 通过网站连接
+### 通过网页连接
 
-如果你想在网站中发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+如果你想在网页上发送消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
 
   **步骤 1**：切换到 BaseUI
 
-  **步骤 2**：打开网站
+  **步骤 2**：打开网页
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) 进入网站。
+[Click here](https://client.meshtastic.org/messages/broadcast/0) 进入网页。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   **步骤 3**：添加新设备
@@ -288,7 +288,7 @@ import TabItem from '@theme/TabItem';
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    选择串口方式。打开设备管理器查看设备连接到哪个端口。在弹出的窗口中选择该端口。
+    选择串口方式。打开设备管理器查看设备连接到哪个端口。在弹出窗口中选择该端口。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     你的设备会显示在列表中。点击进行连接。如果连接成功，你可以直接在网页上看到设备状态。
@@ -310,7 +310,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SensorConnection.png" alt="pir" width={500} height="auto" /></p>
 
-你可以通过 Grove 接口为设备添加传感器。以下传感器已验证与设备上的 Grove 接口兼容。
+你可以通过 Grove 接口为设备添加传感器。以下传感器已经验证与设备上的 Grove 接口兼容。
 
 <table>
   <tr>
@@ -327,16 +327,16 @@ import TabItem from '@theme/TabItem';
     <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html) 、PCT2075</td>
   </tr>
   <tr>
-    <td>温度 & 湿度</td>
+    <td>温度和湿度</td>
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
   </tr>
   <tr>
-    <td>温度 & 湿度 & 气压</td>
+    <td>温度、湿度和气压</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
   </tr>
   <tr>
     <td rowspan="2">其他</td>
-    <td>心率 & 血氧（SpO₂）</td>
+    <td>心率和血氧饱和度 SpO₂</td>
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
@@ -386,15 +386,15 @@ import TabItem from '@theme/TabItem';
 
 | 交互方式 | 效果 |
 |---|---|
-| 点击消息图标 | 跳转到消息页面 |
+| 点击消息图标| 跳转到消息页面 |
 | 点击节点图标 | 跳转到节点页面 |
-| 点击时钟图标 | 实时时间/运行时间切换 |
-| 长按 LoRa 图标| LoRa 发送 关闭/开启|
+| 点击时钟图标| 实时时间/运行时间切换 |
+| 长按 LoRa 图标| LoRa 发射 关闭/开启|
 | 长按通知图标| 通知 启用/禁用|
 | 点击通知图标| 声音/横幅/声音与横幅 切换|
-| 长按 GPS 图标| GPS 开启/关闭|
-| 长按 WiFi 图标| WiFi 开启/关闭|
-| 长按 MQTT 图标| MQTT 开启/关闭|
+| Llong press GPS icon| GPS 开/关|
+| 长按 WiFi 图标| WiFi 开/关|
+| 长按 MQTT 图标| MQTT 开/关|
 | 点击二维码图标| 显示设备二维码 |
 
 </TabItem>
@@ -402,19 +402,19 @@ import TabItem from '@theme/TabItem';
 <TabItem value="16" label="节点页面">
 | 交互方式 | 效果 |
 |---|---|
-| 点击某个节点| 显示详细信息|
-| 长按某个节点| 进入私聊|
-| 查看某个节点位置| 在地图中显示该节点位置|
+| 点击一个节点| 显示详细信息|
+| 长按一个节点| 进入私聊|
+| 查看一个节点位置| 在地图中显示该节点位置|
 
 </TabItem>
 
 <TabItem value="17" label="频道页面">
-长按某个频道以禁用/启用通知。选择并点击某个频道进入聊天窗口。
+长按某个频道以禁用/启用通知。选择并点击一个频道进入聊天窗口。
 
 </TabItem>
 
 <TabItem value="18" label="消息页面">
-长按某个聊天以删除它。选择并点击某个聊天进入聊天窗口。
+长按某个聊天以删除它。选择并点击一个聊天进入聊天窗口。
 
 </TabItem>
 
@@ -436,18 +436,18 @@ import TabItem from '@theme/TabItem';
 | 主题| 在深色和浅色背景之间切换主题 |
 | 屏幕校准 | 校准屏幕|
 | 语言| 切换显示语言|
-| 恢复出厂设置 | 配置恢复为默认值 |
+| 恢复出厂设置 | 将配置恢复为默认值 |
 | NodeDB 重置 | 清除节点数据 |
 | 清除聊天记录 | 清除聊天记录 |
 | 重启（绿色图标） | 设备重启 |
-| 关机（红色图标） | 设备断电关机 |
+| 关机（红色图标） | 设备关机 |
 
 </TabItem>
 
 <TabItem value="20" label="工具">
 | 交互方式 | 效果 |
 |---|---|
-| Mesh 检测器| 显示检测到的活动节点 |
+| Mesh 探测器| 显示检测到的活动节点 |
 | 信号扫描器| 显示所选节点的 RSSI 和 SNR |
 | 路由跟踪| 显示所选节点的路由路径 |
 | 统计 | 显示数据包解码信息 |
@@ -484,9 +484,9 @@ import TabItem from '@theme/TabItem';
 <TabItem value="24" label="位置">
 | 交互方式 | 效果 |
 |---|---|
-| 选择 "GPS Toggle" | GPS 开启/关闭|
+| 选择 "GPS Toggle" | GPS 开/关|
 | 选择 "GPS Format" | 切换 GPS 格式|
-| 选择 "Compass Headings" | 在动态、固定和冻结指向 “N” 之间切换 |
+| 选择 "Compass Headings" | 在动态、固定和冻结 “N” 指向之间切换 |
 | 选择 "Compass Calibrate" | 启动 30 秒的指南针校准流程 |
 </TabItem>
 
@@ -517,7 +517,7 @@ import TabItem from '@theme/TabItem';
 
 ### 设备无法通过 BLE 与手机配对
 
-- 使用 MUI 时，请先切换到 Bluetooth 配对模式，再与手机配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth 图标`。
+- 使用 MUI 时，请先切换到 Bluetooth Pairing 模式，再与手机配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth 图标`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
@@ -527,11 +527,11 @@ import TabItem from '@theme/TabItem';
 
 ### 设备无法连接我的 Wifi
 
-- 请确保你连接的是 `2.4g Wifi`。设备无法与 5G Wifi 配对。通常手机热点可以在手机设置中调整为 2.4g，因此你可以先测试手机热点。
+- 请确保你连接的是 `2.4g Wifi`。该设备无法与 5G Wifi 配对。通常手机热点可以在手机设置中调整为 2.4g，因此你可以先测试手机热点。
 
-- 在设置 Wifi 名称和 Wifi 密码后，请启用 Wifi。
+- 在设置好 Wifi 名称和 Wifi 密码后，请启用 Wifi。
 
-当 Wifi IP 为空且 Wifi 图标为灰色时，表示 Wifi 已禁用。当显示 Wifi IP 且 Wifi 图标为白色时，表示 Wifi 已启用。 
+当 wifi ip 为空且 wifi 图标为灰色时，表示 Wifi 已禁用。显示 wifi ip 且 wifi 图标为白色时，表示 Wifi 已启用。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -539,7 +539,7 @@ import TabItem from '@theme/TabItem';
 
 **现象描述**
 
-- 设备开机后，过一会儿会自动关机或重启。
+- 设备开机后，过一段时间会自动关机或重启。
 - 串口日志运行一段时间后停止。
 
  这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中等……
@@ -566,7 +566,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="9" label="在手机上配置">
 
-在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
+在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 </TabItem>
@@ -577,7 +577,7 @@ import TabItem from '@theme/TabItem';
 
 #### NodeDB 重置
 
-NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 nodedB 中存储了该节点的过时信息。你需要对其进行更新。
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 nodedB 中存储了该节点的过时信息，你需要对其进行更新。
 
 <Tabs>
 
@@ -605,20 +605,20 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 #### 交换用户信息
 
-每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换各自的节点信息，才能相互通信。如果你无法与列表中的另一个节点发送或接收私信，可以在 App 中手动提示它们交换信息。
+每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换各自的节点信息，才能相互通信。如果你无法与列表中的某个节点发送或接收私信，可以在 App 中手动提示它们交换信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 重新生成私钥
 
-两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信传输中持续失败，请尝试为其重新生成私钥。
+每个节点都拥有一对公钥/私钥。要交换加密的私信，发送方会使用接收方的公钥对消息进行加密，而只有该接收方的私钥才能对其解密。因此，一旦两个节点互相知道对方的公钥，就可以进行私密通信。如果某个节点在私信传输中总是失败，请尝试重新生成它的私钥。重新生成后，从其他设备的节点列表中删除该节点，以便它们重新连接并获取该节点的新公钥。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
 重启故障设备以使配置生效。
 
 :::note
-在重新生成密钥后，其他设备需要重新连接该节点。因此，最好在其他设备的节点列表中删除该节点。
+密钥重新生成后，其他设备需要重新与该节点连接。因此，最好在其他设备的节点列表中删除该节点。
 :::
 
 ### 信号质量
@@ -627,7 +627,7 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
 
 
 <JetsonLeadQuote
