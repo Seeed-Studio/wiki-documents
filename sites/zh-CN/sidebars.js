@@ -4681,17 +4681,17 @@ const sidebars = {
           items: [
             {
               type: 'doc',
-              id: 'Cloud_Chain/SenseCraft_Robotics/guides/cn_so_arm101',
+              id: 'Cloud_Chain/SenseCraft_Robotics/guides/cn_sensecraft_robotics_so_arm101',
               label: 'SO-ARM101',
             },
             {
               type: 'doc',
-              id: 'Cloud_Chain/SenseCraft_Robotics/guides/cn_rebot_arm_102_b601_dm',
+              id: 'Cloud_Chain/SenseCraft_Robotics/guides/cn_sensecraft_robotics_rebot_arm_102_b601_dm',
               label: 'reBot Arm 102 + B601 DM',
             },
             {
               type: 'doc',
-              id: 'Cloud_Chain/SenseCraft_Robotics/guides/cn_rebot_arm_102_b601_rs',
+              id: 'Cloud_Chain/SenseCraft_Robotics/guides/cn_sensecraft_robotics_rebot_arm_102_b601_rs',
               label: 'reBot Arm 102 + B601 RS',
             },
           ],
@@ -4703,12 +4703,12 @@ const sidebars = {
           items: [
             {
               type: 'doc',
-              id: 'Cloud_Chain/SenseCraft_Robotics/faq/cn_common_issues',
+              id: 'Cloud_Chain/SenseCraft_Robotics/faq/cn_sensecraft_robotics_common_issues',
               label: '常见问题',
             },
             {
               type: 'doc',
-              id: 'Cloud_Chain/SenseCraft_Robotics/faq/cn_data_collection_configuration_recommendation',
+              id: 'Cloud_Chain/SenseCraft_Robotics/faq/cn_sensecraft_robotics_data_collection_configuration_recommendation',
               label: '数据采集配置推荐',
             },
           ],
