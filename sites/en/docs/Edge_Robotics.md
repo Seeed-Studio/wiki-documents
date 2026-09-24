@@ -1,6 +1,6 @@
 ---
 description: Seeed Studio robotics docs and learning paths.
-title: Robotics
+title: AI Robotics Wiki
 keywords:
   - robotics
   - nvidia
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
 import '/src/css/robotics-page-style.css';
 import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch';
 
-# Robotics
+# AI Robotics Wiki
 
 > *"The science of today is the technology of tomorrow." - Edward Teller*
 
@@ -31,13 +31,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
   <section className="hero-panel">
     <div>
       <span className="eyebrow">Seeed Studio Robotics Wiki</span>
-      <h2>Start with your robot kit</h2>
-      <p>Find the right Seeed Studio robotics path by product. Pick your kit, then follow the steps from setup to advanced development.</p>
-    </div>
-    <div className="hero-tips">
-      <div><strong>New device</strong><span>Unbox, wire, power on, install drivers, and test motion</span></div>
-      <div><strong>Build applications</strong><span>Use SDKs, LeRobot, ROS2, vision, or mobile control</span></div>
-      <div><strong>AI robotics</strong><span>Explore simulation, data collection, GR00T, VLA, and RL</span></div>
+      <h2>Not sure where to start? Pick the robot kit you have</h2>
     </div>
   </section>
 
@@ -45,59 +39,21 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 
   <nav className="quick-nav" aria-label="Robotics page quick navigation">
     <a href="#robot-kits">📦 Robot Kits</a>
-    <a href="#rebot-hardware-inventory">🧰 reBot Resources</a>
+    <a href="#rebot-hardware-inventory">🧰 rebot Open-Source Resources</a>
     <a href="#actuators">⚙️ Joint Actuators</a>
     <a href="#sensors">👁️ Sensors</a>
     <a href="#software">💻 Software Ecosystem</a>
   </nav>
 
-  <section className="kit-index-panel" aria-label="Quick robot kit selection">
-    <div className="section-title-row compact-title">
-      <div>
-        <span className="section-kicker">Choose a Kit</span>
-        <h2>Choose your learning path</h2>
-      </div>
-      <p>Cards are collapsed by default. Open your kit to view its path.</p>
-    </div>
-    <div className="kit-index-grid">
-      <a href="#rebot-rs"><strong>B601-RS</strong><small>RobStride robotic arm path</small></a>
-      <a href="#rebot-dm"><strong>B601-DM</strong><small>Damiao robotic arm path</small></a>
-      <a href="#soarm"><strong>SO100 / SO101</strong><small>Low-cost LeRobot path</small></a>
-      <a href="#starai"><strong>StarAI</strong><small>ROS2 / MoveIt / GR00T</small></a>
-      <a href="#lekiwi"><strong>Lekiwi</strong><small>Mobile chassis and application demos</small></a>
-      <a href="#stackforce"><strong>StackForce Mini</strong><small>Wheeled-legged robot path</small></a>
-      <a href="#reachy"><strong>Reachy Mini</strong><small>Desktop interactive robot path</small></a>
-      <a href="#atom"><strong>Atom</strong><small>Compact humanoid robot path</small></a>
-    </div>
-  </section>
 
   <section id="robot-kits" className="section-block">
-    <div className="section-title-row">
-      <div>
-        <span className="section-kicker">Start Here</span>
-        <h2>Robot Kits</h2>
-      </div>
-      <p>Each path starts with hardware setup, then moves into SDK, ROS, simulation, and AI applications.</p>
-    </div>
-
     <div className="product-stack">
 
-<details id="rebot-rs" className="product-card rebot">
-  <summary>
-    <div className="product-head">
-      <div>
-        <h3>reBot B601-RS Robotic Arm</h3>
-        <span>For teleoperation, visual grasping, ROS2, and AI data collection</span>
-      </div>
-    </div>
-    <span className="summary-action">Expand learning plan</span>
-  </summary>
+<article id="rebot-rs" className="product-card rebot product-card--cover">
+  <div className="product-head">
+    <h3>reBot B601-RS Robotic Arm</h3>
+  </div>
   <div className="product-body">
-    <div className="product-meta-grid">
-      <div><strong>Recommended for</strong><span>First-time reBot Arm users</span></div>
-      <div><strong>Learning goal</strong><span>Run teleoperation, visual grasping, and ROS2</span></div>
-<div><strong>Recommended order</strong><span>Quick Start → LeRobot → Pinocchio → Visual Grasping → ROS2 → Web Simulator → Isaac Sim → MIT Position Control → Embodied Agent</span></div>
-    </div>
     <div className="learning-steps">
       <a className="step-card" href="/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Quick Start</b><small>Unbox, wire, power on, check drivers, and test basic motion.</small></div><em>Required for beginners</em></a>
       <a className="step-card" href="/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot Teleoperation and Data Collection</b><small>Collect teleoperation data for imitation learning and embodied AI.</small></div><em>Data collection</em></a>
@@ -110,25 +66,15 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
       <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">9</span><div><b>Embodied Agent Design Framework</b><small>Connect a VLM to the arm so natural-language commands drive vision-based grasping with safety-gated control.</small></div><em>Agent framework</em></a>
     </div>
   </div>
-</details>
+</article>
 
-<details id="rebot-dm" className="product-card rebot">
-<summary>
+
+<article id="rebot-dm" className="product-card rebot product-card--cover">
   <div className="product-head">
-    <div>
-      <h3>reBot B601-DM Robotic Arm</h3>
-      <span>For Damiao-based control, LeRobot, Pinocchio, and ROS2</span>
-    </div>
+    <h3>reBot B601-DM Robotic Arm</h3>
   </div>
-  <span className="summary-action">Expand learning plan</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>Recommended for</strong><span>B601-DM users and AI data collection</span></div>
-    <div><strong>Learning goal</strong><span>Set up drivers, kinematics, LeRobot, and grasping</span></div>
-    <div><strong>Recommended order</strong><span>Quick Start → LeRobot → Pinocchio → Visual Grasping → ROS2</span></div>
-  </div>
-<div className="learning-steps">
+  <div className="product-body">
+    <div className="learning-steps">
   <a className="step-card" href="/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Quick Start</b><small>Check power, CAN, drivers, and basic motion.</small></div><em>Required for beginners</em></a>
 
   <a className="step-card" href="/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>LeRobot Data Collection</b><small>Record teleoperation data for imitation learning.</small></div><em>AI data</em></a>
@@ -143,26 +89,16 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
 
   <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">7</span><div><b>Isaac Sim Integration</b><small>Deploy reBot B601-DM in Isaac Sim for simulation, debugging, and control algorithm validation.</small></div><em>Simulation</em></a>
 </div>
-</div>
-</details>
+  </div>
+</article>
 
-<details id="soarm" className="product-card soarm">
-<summary>
+
+<article id="soarm" className="product-card soarm product-card--cover">
   <div className="product-head">
-    <div>
-      <h3>SO100 / SO101 Robotic Arm</h3>
-      <span>Low-cost path for LeRobot, simulation, RL, and GR00T/VLA</span>
-    </div>
+    <h3>SO100 / SO101 Robotic Arm</h3>
   </div>
-  <span className="summary-action">Expand learning plan</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>Recommended for</strong><span>Low-cost LeRobot and embodied AI learners</span></div>
-    <div><strong>Learning goal</strong><span>Learn servos, simulation, RL, GR00T, and dual arms</span></div>
-    <div><strong>Recommended order</strong><span>Getting Started → Servo Debugging → Simulation → Isaac Lab → GR00T → Dual Arms</span></div>
-  </div>
-  <div className="learning-steps">
+  <div className="product-body">
+    <div className="learning-steps">
     <a className="step-card" href="/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Quick Start</b><small>Install hardware, connect, calibrate, and run a basic test.</small></div><em>Required for beginners</em></a>
     <a className="step-card" href="/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b><small>Check servo ID, direction, zero point, and communication.</small></div><em>Troubleshooting basics</em></a>
     <a className="step-card" href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">3</span><div><b>SO101 and NVIDIA GR00T</b><small>Fine-tune VLA models and deploy on Jetson.</small></div><em>Advanced VLA</em></a>
@@ -172,96 +108,16 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     <a className="step-card" href="/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Isaac Lab Reinforcement Learning</b><small>Train policies in simulation and review reward design.</small></div><em>Advanced training</em></a>
     <a className="step-card optional" href="/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b><small>Try third-party data collection and training platforms.</small></div><em>Optional extension</em></a>
   </div>
-</div>
-</details>
+  </div>
+</article>
 
-<details id="starai" className="product-card starai">
-<summary>
+
+<article id="reachy" className="product-card reachy product-card--cover">
   <div className="product-head">
-    <div>
-      <h3>StarAI Robotic Arm</h3>
-      <span>For basic control, MoveIt 2, ROS2 planning, and GR00T</span>
-    </div>
+    <h3>Reachy Mini</h3>
   </div>
-  <span className="summary-action">Expand learning plan</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>Recommended for</strong><span>ROS2 planning and AI control demos</span></div>
-    <div><strong>Learning goal</strong><span>Run basic control, MoveIt 2, and GR00T</span></div>
-    <div><strong>Recommended order</strong><span>Quick Start → MoveIt 2 → GR00T</span></div>
-  </div>
-  <div className="learning-steps">
-    <a className="step-card" href="/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI Robotic Arm Quick Start</b><small>Connect hardware, run basic control, and test examples.</small></div><em>Required for beginners</em></a>
-    <a className="step-card" href="/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 Motion Planning</b><small>Import models and plan paths with MoveIt 2.</small></div><em>Advanced ROS2</em></a>
-    <a className="step-card" href="/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI and NVIDIA GR00T</b><small>Build robotic arm control with LLMs / VLA.</small></div><em>AI control</em></a>
-  </div>
-</div>
-</details>
-
-<details id="lekiwi" className="product-card lekiwi">
-<summary>
-  <div className="product-head">
-    <div>
-      <h3>Lekiwi Mobile Chassis</h3>
-      <span>For chassis control and sound-following demos</span>
-    </div>
-  </div>
-  <span className="summary-action">Expand learning plan</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>Recommended for</strong><span>First-time mobile chassis users</span></div>
-    <div><strong>Learning goal</strong><span>Run chassis control and sound-following demos</span></div>
-    <div><strong>Note</strong><span>ROS2 steps removed; only the current product path remains</span></div>
-  </div>
-  <div className="learning-steps">
-    <a className="step-card" href="/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Lekiwi Mobile Chassis Quick Start</b><small>Assemble, connect, test motion, and check safety.</small></div><em>Required for beginners</em></a>
-    <a className="step-card" href="/sound_follow_robot/"><span className="step-index">2</span><div><b>Sound-Following Demo</b><small>Use sound input to drive an interactive mobile demo.</small></div><em>Application demo</em></a>
-  </div>
-</div>
-</details>
-
-<details id="stackforce" className="product-card stackforce">
-<summary>
-  <div className="product-head">
-    <div>
-      <h3>StackForce Mini Wheeled-Legged Robot</h3>
-      <span>For wheeled-legged control, balance, and motion planning</span>
-    </div>
-  </div>
-  <span className="summary-action">Expand learning plan</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>Recommended for</strong><span>Mobile and wheeled-legged robot learners</span></div>
-    <div><strong>Learning goal</strong><span>Learn structure, control logic, and basic motion</span></div>
-    <div><strong>Recommended order</strong><span>Quick Start → Control Principles → Motion Debugging</span></div>
-  </div>
-  <div className="learning-steps">
-    <a className="step-card" href="/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>StackForce Mini Quick Start</b><small>Learn the hardware, deploy basics, and test motion.</small></div><em>System course</em></a>
-  </div>
-</div>
-</details>
-
-<details id="reachy" className="product-card reachy">
-<summary>
-  <div className="product-head">
-    <div>
-      <h3>Reachy Mini</h3>
-      <span>For desktop HRI, agents, SDK, simulation, and AI</span>
-    </div>
-  </div>
-  <span className="summary-action">Expand learning plan</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>Recommended for</strong><span>Desktop robot interaction and agent demos</span></div>
-    <div><strong>Learning goal</strong><span>Start with basics, then SDK, AI, and troubleshooting</span></div>
-    <div><strong>Documentation</strong><span>Organized from basics to platform, SDK, AI, and troubleshooting</span></div>
-  </div>
-
-<div className="reachy-path-grid">
+  <div className="product-body">
+    <div className="reachy-path-grid">
             <div className="mini-track">
               <h4>① Get to know the product first</h4>
               <a href="/reachymini_intro/">Reachy Mini Product Introduction</a>
@@ -344,31 +200,61 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
               <a href="/reachymini_api_utils/">Utilities API Reference</a>
             </div>
           </div>
-        </div>
-      </details>
+  </div>
+</article>
 
-<details id="atom" className="product-card atom">
-<summary>
+
+<article id="lekiwi" className="product-card lekiwi product-card--cover">
   <div className="product-head">
-    <div>
-      <h3>Atom Compact Humanoid Robot</h3>
-      <span>For humanoid robot beginners, servo debugging, motion teaching, and web remote control</span>
-    </div>
+    <h3>Lekiwi Mobile Chassis</h3>
   </div>
-  <span className="summary-action">Expand learning plan</span>
-</summary>
-<div className="product-body">
-  <div className="product-meta-grid">
-    <div><strong>Recommended for</strong><span>First-time desktop bipedal humanoid users who want to quickly experience motion teaching and remote control</span></div>
-    <div><strong>Learning goal</strong><span>Get started out of the box, teach motions with the web motion editor, and export custom motions to the controller firmware</span></div>
-    <div><strong>Recommended order</strong><span>Atom-S Getting Started → Web Remote → Motion Editor → Custom Motion Development</span></div>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Lekiwi Mobile Chassis Quick Start</b><small>Assemble, connect, test motion, and check safety.</small></div><em>Required for beginners</em></a>
+    <a className="step-card" href="/sound_follow_robot/"><span className="step-index">2</span><div><b>Sound-Following Demo</b><small>Use sound input to drive an interactive mobile demo.</small></div><em>Application demo</em></a>
   </div>
-  <div className="learning-steps">
+  </div>
+</article>
+
+
+<article id="stackforce" className="product-card stackforce product-card--cover">
+  <div className="product-head">
+    <h3>StackForce Mini Wheeled-Legged Robot</h3>
+  </div>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>StackForce Mini Quick Start</b><small>Learn the hardware, deploy basics, and test motion.</small></div><em>System course</em></a>
+  </div>
+  </div>
+</article>
+
+
+<article id="starai" className="product-card starai">
+  <div className="product-head">
+    <h3>StarAI Robotic Arm</h3>
+  </div>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI Robotic Arm Quick Start</b><small>Connect hardware, run basic control, and test examples.</small></div><em>Required for beginners</em></a>
+    <a className="step-card" href="/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 Motion Planning</b><small>Import models and plan paths with MoveIt 2.</small></div><em>Advanced ROS2</em></a>
+    <a className="step-card" href="/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI and NVIDIA GR00T</b><small>Build robotic arm control with LLMs / VLA.</small></div><em>AI control</em></a>
+  </div>
+  </div>
+</article>
+
+
+<article id="atom" className="product-card atom">
+  <div className="product-head">
+    <h3>Atom Compact Humanoid Robot</h3>
+  </div>
+  <div className="product-body">
+    <div className="learning-steps">
     <a className="step-card" href="/atom_s/"><span className="step-index">1</span><div><b>Atom-S Getting Started Guide</b><small>Power on, connect the web remote controller, and record your first continuous teaching motion sequence.</small></div><em>Required for beginners</em></a>
     <a className="step-card" href="/atom_x/"><span className="step-index">2</span><div><b>Atom-X Getting Started Guide</b><small>Atom-X operates exactly like Atom-S — follow the same workflow to get started quickly.</small></div><em>Same series</em></a>
   </div>
-</div>
-</details>
+  </div>
+</article>
+
 
     </div>
   </section>
@@ -377,7 +263,7 @@ import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch
     <div className="section-title-row">
       <div>
         <span className="section-kicker">Reference</span>
-        <h2>reBot Resources</h2>
+        <h2>rebot Open-Source Resources</h2>
       </div>
       <p>Start with the B601-RS and B601-DM. Each hardware directory contains 3D-printed parts, CNC metal parts, purchased parts, the BOM, power-supply assembly steps, and the full STEP assembly. The description packages provide URDF / Mesh models for simulation. The camera mounts are shared by both arms.</p>
     </div>
