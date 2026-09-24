@@ -14,6 +14,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_debian/
+createdAt: '2026-09-04'
+updatedAt: '2026-09-21'
 ---
 
 ## Introduction

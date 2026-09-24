@@ -16,7 +16,7 @@ last_update:
   date: 09/07/2026
   author: FaiyuetCik
 createdAt: '2026-08-11'
-updatedAt: '2026-09-07'
+updatedAt: '2026-09-08'
 url: https://wiki.seeedstudio.com/getting_started_1.47_inch_touch_display_esp32s3/
 ---
 

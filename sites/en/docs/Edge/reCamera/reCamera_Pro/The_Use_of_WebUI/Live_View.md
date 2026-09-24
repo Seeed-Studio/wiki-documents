@@ -12,7 +12,7 @@ last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-09'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recamera_pro_live_view_legacy/
 ---
 <!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page was split across the new task guides; its content moved primarily to Build_Your_App/preview_capture_record.md (https://wiki.seeedstudio.com/recamera_pro_live_preview/). The old URL /recamera_pro_live_view/ is redirected to /recamera_pro_live_preview/ via an aliases entry in that page's frontmatter. This file is kept for history as a draft (slug /recamera_pro_live_view_legacy) and is excluded from production builds. Do not link here. -->

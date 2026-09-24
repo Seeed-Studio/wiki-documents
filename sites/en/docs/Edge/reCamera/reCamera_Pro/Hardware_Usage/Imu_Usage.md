@@ -14,7 +14,7 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-14'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recamera_pro_imu_usage_legacy/
 ---
 <!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/imu_data.md (https://wiki.seeedstudio.com/recamera_pro_imu_usage/), which now serves the original slug /recamera_pro_imu_usage. This file is kept for history as a draft (slug /recamera_pro_imu_usage_legacy) and is excluded from production builds. Do not link here. -->

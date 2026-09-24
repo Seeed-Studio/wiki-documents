@@ -14,7 +14,7 @@ last_update:
   date: 08/06/2025
   author: Zibo
 createdAt: '2025-08-06'
-updatedAt: '2026-06-24'
+updatedAt: '2026-09-15'
 url: https://wiki.seeedstudio.com/recomputer_robotics_j401_getting_started/
 ---
 <div style={{ textAlign: "justify" }}>

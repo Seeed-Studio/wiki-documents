@@ -1,6 +1,6 @@
 ---
 description: Integrate reCamera Pro with Home Assistant to send a message and camera snapshot when a specific sound is detected, using MQTT.
-title: "Home Assistant: Sound-Triggered Photo Alert"
+title: 'Home Assistant: Sound-Triggered Photo Alert'
 keywords:
   - reCamera
   - reCamera Pro
@@ -16,6 +16,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_ha_sound_alert/
+createdAt: '2026-07-28'
+updatedAt: '2026-09-21'
 ---
 
 # reCamera Pro and Home Assistant Integration: Sound-Triggered Photo Alert

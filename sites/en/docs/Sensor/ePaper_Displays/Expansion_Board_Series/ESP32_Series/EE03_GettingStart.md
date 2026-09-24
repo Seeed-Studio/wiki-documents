@@ -15,7 +15,7 @@ last_update:
   date: 09/22/2026
   author: Nemo
 createdAt: '2026-03-02'
-updatedAt: '2026-09-22'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/getting_started_with_ee03/
 ---
 

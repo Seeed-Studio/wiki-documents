@@ -1,5 +1,5 @@
 ---
-description: "Chapter 14 of the Seeed Embodied Intelligence Beginner's Course — dataset structure and quality inspection: what is actually stored on disk, the four quality standards, playback and image inspection, and what to do when problems are found."
+description: 'Chapter 14 of the Seeed Embodied Intelligence Beginner''s Course — dataset structure and quality inspection: what is actually stored on disk, the four quality standards, playback and image inspection, and what to do when problems are found.'
 title: Chapter 14 - Dataset Structure and Quality Inspection
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-19
   author: LiuJunjie
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_14/
 ---
 

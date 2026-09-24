@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-07-27'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/rebot_arm_jetson_bundle/
 ---
 

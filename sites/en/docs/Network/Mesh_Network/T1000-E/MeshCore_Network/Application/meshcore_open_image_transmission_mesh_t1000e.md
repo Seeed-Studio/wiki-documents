@@ -16,8 +16,8 @@ sidebar_position: 1
 last_update:
   date: 9/19/2026
   author: Michelle Huang
-createdAt: 2026-09-19
-updatedAt: '2026-09-19'
+createdAt: 2026-09-19T00:00:00.000Z
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/meshcore_ai_image_transmission_t1000e/
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: "Chapter 10 of the Seeed Embodied Intelligence Beginner's Course — what LeRobot is, leader/follower arm division of labor, the Robot and Teleoperator plugin architecture, the camera/CAN/arm data flow, and DM vs RS configuration differences."
+description: Chapter 10 of the Seeed Embodied Intelligence Beginner's Course — what LeRobot is, leader/follower arm division of labor, the Robot and Teleoperator plugin architecture, the camera/CAN/arm data flow, and DM vs RS configuration differences.
 title: Chapter 10 - LeRobot and reBot Arm System Architecture
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-19
   author: LiuJunjie
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_10/
 ---
 
