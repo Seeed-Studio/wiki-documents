@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Python-3.12+-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
     <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>
@@ -89,14 +89,14 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 
 - Ubuntu 22.04/Ubuntu 24.04
 - NVIDIA GPU 与 CUDA 12+（用于 GPU 加速训练/推理，可选）
-- Python 3.10
+- Python 3.12
 - Torch 2.6（CPU 版可运行基础流程，GPU 加速需 CUDA 版）
 
 </TabItem>
 <TabItem value="jetson-orin" label="Jetson Orin">
 
 - Jetson JetPack 6.0 和 6.1，暂不支持 6.2
-- Python 3.10
+- Python 3.12
 - Torch 2.3+
 
 </TabItem>

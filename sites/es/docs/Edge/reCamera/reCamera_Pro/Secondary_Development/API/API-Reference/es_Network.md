@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_network
+slug: /recamera_pro_api_network_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -16,6 +17,7 @@ createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/es/recamera_pro_api_network/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/network.md (https://wiki.seeedstudio.com/es/recamera_pro_api_network/), which now serves the original slug /recamera_pro_api_network. This file is kept for history as a draft (slug /recamera_pro_api_network_legacy) and is excluded from production builds. Do not link here. -->
 
 # Red
 
@@ -32,7 +34,7 @@ url: https://wiki.seeedstudio.com/es/recamera_pro_api_network/
 | POST | `/network/wifi-status?power=on/off` | Conmutar la alimentación de Wi‑Fi |
 | GET | `/network/wifi-list` | Escanear redes Wi‑Fi cercanas |
 | POST | `/network/wifi` | Conectarse a Wi‑Fi |
-| DELETE | `/network/wifi` | Desconectar o olvidar una red Wi‑Fi |
+| DELETE | `/network/wifi` | Desconectar u olvidar una red Wi‑Fi |
 | GET | `/web/setting` | Consultar la configuración de la API HTTP |
 | POST | `/web/setting` | Establecer la configuración de la API HTTP |
 | GET | `/ftp/setting` | Consultar la configuración del servicio FTP |

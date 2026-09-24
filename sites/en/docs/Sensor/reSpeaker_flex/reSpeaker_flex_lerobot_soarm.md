@@ -170,7 +170,7 @@ conda init --all
 ### Create the Conda Environment
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 ```
 

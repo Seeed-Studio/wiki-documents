@@ -1,34 +1,36 @@
 ---
-title: 傾きと振動の検出
-description: この記事では、reCamera Pro のオンボードジャイロスコープ ICM-42670-P を使用して角速度データを収集し、デバイスの傾きと振動の検出を実装し、トリガー時にスピーカーから音声警告を再生する方法を説明します。
+title: 傾きおよび振動検知
+description: この記事では、reCamera Pro 搭載のジャイロスコープ ICM-42670-P を使用して角速度データを取得し、デバイスの傾きおよび振動検知を実装し、トリガー時にスピーカーから音声警告を再生する方法を説明します。
 keywords:
   - reCamera
   - reCamera Pro
   - IMU
-  - ジャイロスコープ
+  - Gyroscope
   - ICM-42670-P
-  - 傾き検出
-  - 振動検出
+  - Tilt Detection
+  - Shake Detection
   - ALSA
   - aplay
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO-IMU-Detect.gif
-slug: /recamera_pro_imu_tilt_shake_detection
+slug: /recamera_pro_imu_tilt_shake_detection_legacy
+draft: true
 sidebar_position: 1
 last_update:
   date: 2026-06-11
   author: Sizhao zhou
 createdAt: '2026-06-11'
 updatedAt: '2026-07-23'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_imu_tilt_shake_detection/
+url: https://wiki.seeedstudio.com/ja/recamera_pro_imu_tilt_shake_detection_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/tilt_shake_detection.md (https://wiki.seeedstudio.com/ja/recamera_pro_imu_tilt_shake_detection/), which now serves the original slug /recamera_pro_imu_tilt_shake_detection. This file is kept for history as a draft (slug /recamera_pro_imu_tilt_shake_detection_legacy) and is excluded from production builds. Do not link here. -->
 
-# reCamera Pro のオンボード IMU を用いた傾き・振動検出
+# reCamera Pro 搭載 IMU を用いた傾き・振動検知
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO-IMU-Detect.gif" /></div>
 
 ## はじめに
 
-この記事では、reCamera Pro に搭載されている 6 軸慣性計測ユニット（IMU）である ICM-42670-P ジャイロスコープを使用して、デバイスの傾きおよび振動検出を実装する方法を説明します。デバイスが傾いたり振動したりすると、システムはオンボードスピーカーから対応する音声警告を再生します。本チュートリアルを通じて、Linux IIO ドライバを介して生のジャイロスコープデータを読み取る方法、ALSA オーディオドライバを使用して警告音を再生する方法、そして最終的に完全な検出および警告プログラムを統合する方法を学びます。
+この記事では、reCamera Pro 搭載の 6 軸慣性計測ユニット（IMU）である ICM-42670-P ジャイロスコープを使用して、デバイスの傾きおよび振動検知を実装する方法を説明します。デバイスが傾いたり振動したりすると、システムはオンボードスピーカーから対応する音声警告を再生します。本チュートリアルを通じて、Linux IIO ドライバを介して生のジャイロスコープデータを読み取る方法、ALSA オーディオドライバを使用して警告音を再生する方法、そして最終的に完全な検知および警告プログラムを統合する方法を学びます。
 
 ## ハードウェアの準備
 - reCamera Pro 1 台
@@ -55,13 +57,13 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_imu_tilt_shake_detection/
 
 ## 実装原理
 
-オンボードジャイロスコープ（ICM-42670-P）から生の角速度データを取得し、その値に基づいてデバイスが傾いたか、あるいは振動したかを判定します。現在の実装では単純なしきい値判定を使用しており、実際の要件に応じて後から最適化することができます。
+オンボードジャイロスコープ（ICM-42670-P）から生の角速度データを取得し、そのデータに基づいてデバイスが傾いたか、あるいは振動したかを判定します。現在の実装では単純なしきい値ベースの判定を使用しており、実際の要件に応じて後から最適化することができます。
 
-### 振動検出
+### 振動検知
 
 いずれかの軸の角速度データの絶対値があらかじめ設定したしきい値を超えた場合、それを振動と判定します。
 
-### 傾き検出
+### 傾き検知
 
 いずれかの軸の角速度データの絶対値があらかじめ設定したしきい値を超えた場合、それを傾きと判定します。
 
@@ -89,7 +91,7 @@ cat /sys/bus/iio/devices/iio:device1/in_anglvel_x_raw
 
 ## オンボードスピーカーの使用
 
-reCamera Pro のオンボードスピーカーは、標準的な Linux ALSA ドライバを介して制御されます。次のコマンドで現在のサウンドカードデバイスを確認できます：
+reCamera Pro のオンボードスピーカーは、標準的な Linux ALSA ドライバ経由で制御されます。現在のサウンドカードデバイスは、次のコマンドで確認できます：
 
 ```bash
 aplay -l
@@ -104,7 +106,7 @@ aplay test.wav
 ```
 
 :::note
-`aplay` は ALSA の PCM プレーヤーです。PCM/WAV 形式のデータのみを再生でき、MP3 をデコードすることはできません。次のコマンドを使用して MP3 を WAV 形式に変換できます：
+`aplay` は ALSA の PCM プレーヤーです。PCM/WAV 形式のデータのみを再生でき、MP3 をデコードすることはできません。MP3 を WAV 形式に変換するには、次のコマンドを使用できます：
 
 ```bash
 ffmpeg -i test.mp3 test.wav
@@ -117,7 +119,7 @@ ffmpeg -i test.mp3 test.wav
 
 ### ジャイロスコープデータの取得
 
-以下は、X 軸ジャイロスコープデータを収集する方法を示す最小限の関数例です。この関数を拡張して、他の軸のデータも取得できます。
+以下は、X 軸ジャイロスコープデータを取得する最小限の関数例です。この関数を拡張して、他の軸のデータも取得できるようにできます。
 
 ```python
 #!/usr/bin/env python3
@@ -154,8 +156,8 @@ subprocess.run([
 
 ### 最終実装コード
 
-- デバイスが振動した場合、**「警告：デバイスを振らないでください」**という音声を再生します。
-- デバイスが傾いた場合、**「警告：機器が転倒しました。事故を防ぐため、直ちに機器の状態を確認してください」**という音声を再生します。
+- デバイスが振動した場合、**「警告：デバイスを振らないでください」** と再生します。
+- デバイスが傾いた場合、**「警告：機器が転倒しました。事故を防ぐため、直ちに機器の状態を確認してください」** と再生します。
 
 関連コードは [reCamera_PRO_IMU_Detect](https://drive.google.com/drive/folders/1-3RTc0urrzMJVWGHqnLKwSMuZavLV9O0?usp=drive_link) からダウンロードできます。
 
@@ -178,7 +180,7 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 ```
 
 :::note
-1. プログラムは初回実行時にキャリブレーションを行います。`main.py` を実行する前に、デバイスが安定して設置されていることを確認してください。再キャリブレーションが必要な場合（デフォルトのキャリブレーション時間は 3 秒）、次を実行します：
+1. プログラムは初回実行時にキャリブレーション処理を行います。`main.py` を実行する前に、デバイスが安定して設置されていることを確認してください。再キャリブレーションが必要な場合（デフォルトのキャリブレーション時間は 3 秒）、次を実行します：
 
 ```bash
 ./main.py --force-calib
@@ -193,7 +195,7 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 
 ## トラブルシューティング
 
-- **ジャイロスコープデータを読み取れない**：`/sys/bus/iio/devices/iio:device1` パスが存在し、`in_anglvel_x_raw` ファイルが読み取り可能であることを確認してください。パスが存在しない場合、IIO ドライバがロードされていない可能性があります。カーネルモジュールを確認してください。
+- **ジャイロスコープデータを読み取れない**：パス `/sys/bus/iio/devices/iio:device1` が存在し、`in_anglvel_x_raw` ファイルが読み取り可能であることを確認してください。パスが存在しない場合、IIO ドライバがロードされていない可能性があります。カーネルモジュールを確認してください。
 - **音声再生に失敗する**：音声ファイルが WAV 形式であり、`aplay` コマンドが使用可能であることを確認してください。スピーカーから音が出ない場合は、ALSA のボリューム設定を確認してください。
 - **キャリブレーションに失敗する**：キャリブレーション中はデバイスが静止し水平になっていることを確認してください。キャリブレーション時間が不十分な場合は、`--force-calib` を使用して再キャリブレーションを行ってください。
 

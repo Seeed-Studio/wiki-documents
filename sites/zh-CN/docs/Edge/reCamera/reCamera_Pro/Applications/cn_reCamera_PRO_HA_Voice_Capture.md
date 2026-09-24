@@ -8,15 +8,17 @@ keywords:
   - 声音检测
   - 边缘 AI
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif
-slug: /recamera_pro_ha_sound_alert
+slug: /recamera_pro_ha_sound_alert_legacy
+draft: true
 sidebar_position: 2
 last_update:
   date: 2026-07-27
   author: Sizhao zhou
 createdAt: '2026-07-27'
 updatedAt: '2026-07-28'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_ha_sound_alert/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_ha_sound_alert_legacy/
 ---
+<!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：此页面已被 Build_Your_App/home_assistant_alerts.md（https://wiki.seeedstudio.com/cn/recamera_pro_ha_sound_alert/）取代，后者现在使用原始 slug /recamera_pro_ha_sound_alert。此文件作为草稿（slug /recamera_pro_ha_sound_alert_legacy）保留以供历史记录，并从正式构建中排除。请不要链接到此处。 -->
 
 # reCamera Pro 与 Home Assistant 集成：声音触发拍照告警
 
@@ -42,7 +44,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_ha_sound_alert/
  <tr>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-Pro-2GB.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Buy Now 🖱️</font></span></strong>
    </a>
   </div></td>
  </tr>
@@ -54,7 +56,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_ha_sound_alert/
 
 ### 方法一：自动安装脚本（推荐）
 
-下载并运行 [install.py 脚本](https://drive.google.com/file/d/1nFBHJNkOUPqcAAUCYw43IhGhDWIYNhUX/view?usp=drive_link)，输入 HA 配置目录，即可自动完成整个安装过程。
+下载并运行 [install.py 脚本](https://drive.google.com/file/d/1nFBHJNkOUPqcAAUCYw43IhGhDWIYNhUX/view?usp=drive_link)，并输入 HA 配置目录，即可自动完成整个安装过程。
 
 ```bash
 # Download install.py (includes all files, no additional downloads needed)
@@ -68,10 +70,10 @@ python3 install.py /home/zsz/HA/config
 1. 将集成代码复制到 `custom_components/recamera_chat/`
 2. 将前端文件复制到 `www/recamera_chat/`
 3. 将 `recamera_chat` 和 `panel_custom` 配置追加到 `configuration.yaml`（会自动备份原文件）
-4. 校验所有文件是否就位
+4. 验证所有文件是否就位
 
 :::tip
-该脚本兼容 Linux / Windows / macOS，适用于包括 Docker、HA OS 和 venv 在内的所有部署方式。
+该脚本兼容 Linux / Windows / macOS，并适用于包括 Docker、HA OS 和 venv 在内的所有部署方式。
 :::
 
 安装完成后，跳转到[步骤 4：重启 Home Assistant](#step-4-restart-home-assistant)。
@@ -80,7 +82,7 @@ python3 install.py /home/zsz/HA/config
 
 #### 步骤 1：下载部署包
 
-下载 [recamera_chat.zip](https://drive.google.com/file/d/1UgukqGPetQhh_klJBN13dTUfxcCZCAMY/view?usp=drive_link) 部署包并解压，解压后的目录结构如下：
+下载 [recamera_chat.zip](https://drive.google.com/file/d/1UgukqGPetQhh_klJBN13dTUfxcCZCAMY/view?usp=drive_link) 部署包并解压。解压后的目录结构如下：
 
 ```
 recamera_chat/
@@ -99,7 +101,7 @@ recamera_chat/
 
 #### 步骤 2：将文件复制到 HA 配置目录
 
-将 `custom_components` 和 `www` 文件夹复制到 Home Assistant 配置目录下。
+将 `custom_components` 和 `www` 文件夹复制到 Home Assistant 配置目录中。
 
 :::note
 HA 配置目录的位置取决于你的安装方式：
@@ -109,7 +111,7 @@ HA 配置目录的位置取决于你的安装方式：
 :::
 
 :::danger
-`www/` 和 `custom_components/` 是**同级目录**，必须都直接放在配置根目录下。不要将 `www/` 放在 `custom_components/` 里面，否则侧边栏不会显示。
+`www/` 和 `custom_components/` 是**同级目录**，必须都直接放在配置根目录下。不要将 `www/` 放在 `custom_components/` 内部，否则侧边栏不会显示。
 :::
 
 **Docker 部署示例：**
@@ -181,13 +183,13 @@ panel_custom:
 
 #### 步骤 5：验证部署
 
-1. 重启完成后，HA 侧边栏中应出现带摄像头图标的 **reCamera** 选项卡。
-2. 点击后可看到聊天界面，右上角状态应为 **Connected**。
+1. 重启完成后，HA 侧边栏中应出现带有摄像头图标的 **reCamera** 选项卡。
+2. 点击它可以看到聊天界面，右上角状态应为 **Connected**。
 3. 在输入框中输入文本并按 Enter 或点击 **Send** 按钮。
 4. 订阅 `recamera/chat/to_camera` 的 reCamera 端应能收到消息。
 
 :::warning
-如果重启后侧边栏中仍未出现 reCamera 选项卡，请按以下顺序排查：
+如果重启后侧边栏中没有出现 reCamera 选项卡，请按以下顺序排查：
 1. 检查 `www/recamera_chat/panel.js` 是否位于配置根目录下的 `www/` 目录中（而不是 `custom_components/www/` 下）
 2. 检查 `configuration.yaml` 中是否包含 `panel_custom` 配置块
 3. 检查 `panel.js` 中的 `?v=13` 版本号是否与 `configuration.yaml` 中 `module_url` 的版本号一致
@@ -222,7 +224,7 @@ MQTT_MESSAGE = "Someone is calling for help!!"  # Message to send when triggered
 - **MQTT_PORT**：MQTT Broker 端口，填写 1883
 - **TARGET_SOUND**：要检测的声音名称，填写 `"help"`
 - **CONFIDENCE_THRESHOLD**：触发阈值，单位：百分比，填写 `94.0`。只有当置信度超过该值时才会发送消息和图像。
-- **MQTT_MESSAGE**：触发时要发送的消息，可以填写你希望在 HA 面板上显示的内容。
+- **MQTT_MESSAGE**：触发时要发送的消息，你可以填写希望在 HA 面板上显示的内容。
 
 ### 将代码上传到 reCamera Pro 并执行
 
@@ -249,22 +251,22 @@ python3 ./voice_capture.py
 
 | 问题 | 可能原因 | 解决方案 |
 | --- | --- | --- |
-| HA 侧边栏中没有 reCamera 选项卡 | 文件路径错误或配置未生效 | 检查 `www/recamera_chat/panel.js` 路径和 `configuration.yaml` 配置 |
-| 面板显示 "Disconnected" | MQTT 连接失败 | 检查 MQTT Broker 地址和端口是否正确 |
-| 声音检测无响应 | 麦克风未连接或权限不足 | 确认 USB 麦克风已连接，在 reCamera Pro 上检查音频设备 |
+| HA 侧边栏没有 reCamera 选项卡 | 文件路径错误或配置未生效 | 检查 `www/recamera_chat/panel.js` 路径和 `configuration.yaml` 配置 |
+| 面板显示 "Disconnected" | MQTT 连接失败 | 检查 MQTT broker 地址和端口是否正确 |
+| 声音检测无响应 | 麦克风未连接或权限不足 | 确认 USB 麦克风已连接，检查 reCamera Pro 上的音频设备 |
 | 图像未显示 | 摄像头资源被占用 | 确认已执行 `pkill -x rkipc` 以释放摄像头 |
 
 ## 资源
 
 - [reCamera Pro 产品页面](https://www.seeedstudio.com/reCamera-Pro-2GB.html)
 - [Home Assistant 官方文档](https://www.home-assistant.io/)
-- [reCamera 聊天部署包](https://drive.google.com/file/d/1UgukqGPetQhh_klJBN13dTUfxcCZCAMY/view?usp=drive_link)
+- [reCamera Chat 部署包](https://drive.google.com/file/d/1UgukqGPetQhh_klJBN13dTUfxcCZCAMY/view?usp=drive_link)
 - [reCamera 声音检测程序](https://drive.google.com/file/d/1hQZNFvYzIFAPasy6_DWrxtMavjDmzrV_/view?usp=drive_link)
 - [自动安装脚本](https://drive.google.com/file/d/1nFBHJNkOUPqcAAUCYw43IhGhDWIYNhUX/view?usp=drive_link)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供不同层级的支持，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供不同层级的支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

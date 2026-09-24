@@ -53,7 +53,7 @@ Files added by this fork:
 3. A `lerobot` conda environment with feetech support has been created:
 
    ```bash
-   conda create -n lerobot python=3.10
+   conda create -n lerobot python=3.12
    conda activate lerobot
    pip install lerobot[feetech]
    ```

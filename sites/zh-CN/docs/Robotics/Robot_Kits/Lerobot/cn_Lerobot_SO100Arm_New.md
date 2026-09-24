@@ -389,7 +389,7 @@ SO-ARM10x 可以与 reComputer Jetson AI 智能机器人套件组合使用，将
     <ul>
       <li>Ubuntu 22.04</li>
       <li>CUDA 12+</li>
-      <li>Python 3.10</li>
+      <li>Python 3.12</li>
       <li>Torch 2.6</li>
     </ul>
   </div>
@@ -397,7 +397,7 @@ SO-ARM10x 可以与 reComputer Jetson AI 智能机器人套件组合使用，将
     <h3>For Jetson Orin</h3>
     <ul>
       <li>Jetson JetPack 6.0 和 6.1，暂不支持 6.2</li>
-      <li>Python 3.10</li>
+      <li>Python 3.12</li>
       <li>Torch 2.3+</li>
     </ul>
   </div>
@@ -441,7 +441,7 @@ source ~/.bashrc`}
 2. 创建并激活一个新的 conda 环境用于 lerobot
 
 <CodeBlock language="bash">
-{`conda create -y -n lerobot python=3.10 && conda activate lerobot`}
+{`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
 3. 克隆 LeRobot 仓库：
@@ -523,7 +523,7 @@ conda init --all`}
 2. 创建并激活一个新的 conda 环境用于 lerobot
 
 <CodeBlock language="bash">
-{`conda create -y -n lerobot python=3.10 && conda activate lerobot`}
+{`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
 3. 克隆 LeRobot 仓库：

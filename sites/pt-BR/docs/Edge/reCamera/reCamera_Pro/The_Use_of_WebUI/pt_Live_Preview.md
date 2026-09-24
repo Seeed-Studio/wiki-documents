@@ -4,16 +4,25 @@ title: Pré-visualização ao vivo
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_live_preview
+slug: /recamera_pro_live_preview_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-10'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_live_preview/
+updatedAt: '2026-07-09'
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_live_preview_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/preview_capture_record.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_live_preview/), which now serves the original slug /recamera_pro_live_preview. This file is kept for history as a draft (slug /recamera_pro_live_preview_legacy) and is excluded from production builds. Do not link here. -->
+
+## Índice de Migração de Conteúdo (Página Legada)
+
+| Seção original | Novo local |
+| --- | --- |
+| Introdução à Web UI | [Primeira Detecção de IA](https://wiki.seeedstudio.com/pt-br/recamera_pro_getting_started/), [página inicial da reCamera Pro](https://wiki.seeedstudio.com/pt-br/recamera_pro/) |
+| Funções principais | [Pré-visualização, Captura e Gravação Manual](https://wiki.seeedstudio.com/pt-br/recamera_pro_live_preview/) (este slug) |
 
 ## Introdução à Web UI
 A reCamera Pro possui uma interface de gerenciamento Web UI integrada, eliminando a necessidade de os usuários instalarem software cliente adicional. Desde que o computador esteja na mesma rede local que a reCamera Pro, você pode acessar diretamente o endereço IP da câmera por meio de um navegador para entrar na página de gerenciamento do dispositivo. O acesso é o seguinte:
@@ -21,10 +30,10 @@ A reCamera Pro possui uma interface de gerenciamento Web UI integrada, eliminand
 http://<reCamera_IP>
 ```
 
-Após entrar na Web UI, você precisará inserir uma senha no primeiro login. A senha inicial (senha antiga) é `recamera`. Insira a nova senha conforme necessário.
+Após entrar na Web UI, você precisará inserir uma senha no primeiro login. A senha inicial (senha antiga) é `recamera`. Insira sua nova senha conforme necessário.
 <img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/img_v3_0213c_17e852c5-c73f-4a05-8ede-e02e2c7be6dg.png" />
 Faça login usando a nova senha definida. O nome de usuário é `admin`.
-<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_a6gnjmMqnt.png" />Após fazer login com a nova senha, os usuários podem realizar pré-visualização em tempo real, tirar fotos, gravar vídeos, alternar fluxos, visualizar informações do dispositivo, definir parâmetros de imagem e configurar definições relacionadas à inferência de IA, facilitando a depuração rápida do dispositivo e a verificação de funções.
+<img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_a6gnjmMqnt.png" />Após fazer login com a nova senha, os usuários podem realizar pré-visualização em tempo real, tirar fotos, gravar vídeos, alternar fluxos, visualizar informações do dispositivo, definir parâmetros de imagem e configurar definições relacionadas à inferência de IA, facilitando a depuração rápida do dispositivo e a verificação de funcionalidades.
 <img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/2026-07-08 181849.png" />
 ## Funções principais
 ### Pré-visualização em tempo real
@@ -43,9 +52,9 @@ Após iniciar a gravação, o botão "Start Recording" mudará para "End Recordi
 ### Alternância de fluxo
 Suporta alternância entre o fluxo principal e o subfluxo. Os usuários podem selecionar o fluxo apropriado com base na largura de banda da rede, nos requisitos de qualidade de imagem ou nos cenários de pré-visualização.
 
-Por meio da Web UI integrada, a reCamera Pro pode ser acessada e configurada sem software adicional, sendo adequada para implantação rápida, verificação de funções e desenvolvimento de aplicações de câmera de IA de borda.
+Por meio da Web UI integrada, a reCamera Pro pode ser acessada e configurada sem software adicional, sendo adequada para implantação rápida, verificação de funcionalidades e desenvolvimento de aplicações de câmera de IA de borda.
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
