@@ -1,6 +1,6 @@
 ---
-description: Meshtastic & LoRa 用 SenseCAP Solar Node のはじめ方
-title: Meshtastic を始める
+description: Meshtastic & LoRa 向け SenseCAP Solar Node のはじめ方
+title: Meshtastic をはじめる
 keywords:
   - Meshtastic
   - Solar
@@ -12,7 +12,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-05-13'
-updatedAt: '2026-08-06'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/
 ---
 
@@ -23,13 +23,13 @@ url: https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/
 :::
 ## はじめに
 
-本格的な展開の前に、まずノードのテストと設定を行ってください。
+本格的な設置の前に、まずノードのテストと設定を行ってください。
 
 ### ファームウェアを書き込む
 
 :::caution note
 ファームウェアの更新に `NRF-OTA` を使用しないでください。デバイスが完全に反応しなくなる可能性があります。
-ファームウェアを書き込む前に、必ずフラッシュ消去の手順を先に実行してください！
+ファームウェアを書き込む前に、必ず最初にフラッシュ消去の手順を実行してください！
 :::
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。ターゲットデバイスとして `Seeed SenseCAP Solar Node` を選択します。
@@ -89,7 +89,7 @@ P1-Pro バージョンにはバッテリーと GPS モジュールが内蔵さ�
 
 ### デバイスの電源を入れる
 
-初回使用前に、USB ケーブルを接続してデバイスをアクティベートする必要があります。青い Mesh ランプが点滅すれば、下の動画のようにデバイスの電源が正常に入っています。
+初回使用前に、USB ケーブルを接続してデバイスをアクティベートする必要があります。青い Mesh ランプが点滅すれば、以下の動画のようにデバイスの電源が正常に入っています。
 
 <div class="table-center">
 <iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -106,7 +106,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="iOS アプリ">
+<TabItem value="ios" label="iOS App">
 
 - Bluetooth パネルでターゲットデバイスを選択します。
 
@@ -118,7 +118,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android アプリ">
+<TabItem value="android" label="Android App">
 
 - `+` をクリックし、ターゲットデバイスを選択します。
 
@@ -156,7 +156,7 @@ Web クライアントでテキストメッセージを送信し、他のノー�
 
  方法 2: シリアル経由
 
-    シリアル方法を選択します。デバイスマネージャーを開き、デバイスがどのポートに接続されているかを確認し、ポップアップウィンドウでそのポートを選択します。
+    シリアル方法を選択します。デバイスマネージャーを開き、デバイスがどのポートに接続されているかを確認します。ポップアップウィンドウでそのポートを選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     デバイスがリストに表示されます。クリックして接続します。接続に成功すると、Web サイト上でデバイスのステータスを直接確認できます。
@@ -168,13 +168,13 @@ Web クライアントでテキストメッセージを送信し、他のノー�
 メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、お住まいの地域に合わせて設定する必要があります。
 
 <Tabs>
-<TabItem value="ios" label="iOS アプリ">
+<TabItem value="ios" label="iOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/configure_LoRa123.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android アプリ">
+<TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -182,7 +182,7 @@ Web クライアントでテキストメッセージを送信し、他のノー�
 
 **リージョン一覧**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**Region Code**|**説明**|**周波数帯域 (MHz)**|**デューティサイクル (%)**|**出力制限 (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未設定|N/A|N/A|N/A|
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
@@ -191,14 +191,14 @@ Web クライアントでテキストメッセージを送信し、他のノー�
 より包括的な一覧については、[LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があります。これは 1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスで LoRa リージョンを設定したら、必要に応じて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
+デバイスで LoRa リージョンを設定したら、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
 
 ### GPS を設定する
 
-GPS を有効にしてください。より最新の位置情報を取得するために、更新間隔とブロードキャスト間隔を調整できます。
+GPS を有効にしてください。更新間隔とブロードキャスト間隔を調整して、より最新の位置情報を取得できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
@@ -280,7 +280,7 @@ iOS の場合は、`Accurate Location` をオンにしてください。そう�
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### Solar Node にセンサーを追加する（オプション）
+### Solar Node にセンサーを追加（オプション）
 
 - この動画に従ってセンサーを取り付けることができます。
 
@@ -288,7 +288,7 @@ iOS の場合は、`Accurate Location` をオンにしてください。そう�
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-- 以下のセンサーは、本機の Grove インターフェースとの互換性が検証されています。
+- 以下のセンサーは、デバイス上の Grove インターフェースとの互換性が検証されています。
 
 <table>
   <tr>
@@ -323,11 +323,11 @@ iOS の場合は、`Accurate Location` をオンにしてください。そう�
   </tr>
 </table>
 
-### アンテナをアップグレードする（オプション）
+### アンテナのアップグレード（オプション）
 
 - この動画を見ながら、アンテナをグラスファイバー製のものに交換できます。
 
-より高い利得のアンテナが必要な場合は、[860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) アンテナと [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) アンテナをお勧めします。
+より高い利得のアンテナが必要な場合は、[860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) アンテナと [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) アンテナをおすすめします。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -351,21 +351,21 @@ iOS の場合は、`Accurate Location` をオンにしてください。そう�
 
 デバイスが反応せず、LED も点灯せず、アプリとペアリングできません。
 
-**1）デバイスがまだ DFU モードに入れる場合は、ブートローダーの書き込みを試してください。**
+**1) デバイスがまだ DFU モードに入れる場合は、ブートローダーの書き込みを試してください。**
 
-#### ブートローダーを書き込む
+#### ブートローダーの書き込み
 
 - [ブートローダーのダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み中に**絶対に**取り外さないでください。
+ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み中に**絶対に**切断しないでください。
 :::
 
 **ステップ 1：Adafruit-nrfutil のインストール**
 
-Windows ユーザーは、「Win」キーと「R」キーを押し、ポップアップウィンドウに「cmd」と入力して「Enter」を押します。これでコマンドラインが開きます。
+Windows ユーザーは、"Win" キーと "R" キーを押し、ポップアップウィンドウに "cmd" と入力して "Enter" を押します。これでコマンドラインが開きます。
 
-Mac ユーザーは、「Command」キーと「Space」キーを押して Spotlight を開きます。その後「terminal」と入力して「Return」を押します。これでコマンドラインが開きます。
+Mac ユーザーは、"Command" キーと "Space" キーを押して Spotlight を開きます。その後 "terminal" と入力して "Return" を押します。これでコマンドラインが開きます。
 
 Linux ユーザーは、ターミナルを開き、下の **Linux** タブを使用して pipx でツールをインストールしてください。
 
@@ -375,7 +375,7 @@ Linux ユーザーは、ターミナルを開き、下の **Linux** タブを使
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
 
-コマンドラインで Python と pip が正しくインストールされているか確認します。Linux では、これらの確認には `python` の代わりに `python3` を使用してください。
+コマンドラインで Python と pip が正しくインストールされているか確認します。Linux では、これらの確認には `python` ではなく `python3` を使用してください。
 
 ```
 python --version
@@ -407,7 +407,7 @@ python -m pip show adafruit-nrfutil
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Windows ユーザーは、パスを手動で追加する必要がある場合があります。前の手順で表示されたインストール場所をコピーし、次のように追加します：
+Windows ユーザーは、パスを手動で追加する必要がある場合があります。前のステップで表示されたインストール場所をコピーし、次のように追加します：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -416,7 +416,7 @@ Windows ユーザーは、パスを手動で追加する必要がある場合が
 
 <TabItem value="sou" label="ソースからインストール">
 
-PyPI からのインストールで問題がある場合や、ツールを変更したい場合はこの方法を使用します。まず、このリポジトリをクローンし、そのフォルダに移動します。
+PyPI でのインストールに問題がある場合や、ツールを変更したい場合はこの方法を使用します。まず、このリポジトリをクローンし、そのフォルダに移動します。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -457,7 +457,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
 実行ファイルは `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil`（Windows の場合は `.exe` 付き）にあります。
-利便性のために、`%PATH%` に含まれるディレクトリなど、別の場所にコピーまたは移動してください。
+利便性のために、`%PATH%` 内のディレクトリなど、別の場所にコピーまたは移動してください。
 
 </TabItem>
 
@@ -478,7 +478,7 @@ Fedora では、apt の代わりに `sudo dnf install pipx` を使用します�
 adafruit-nrfutil version
 ```
 
-`adafruit-nrfutil --version` ではなく、`adafruit-nrfutil version` を使用してください。コマンドが見つからない場合は、`pipx ensurepath` が完了しているか確認し、ターミナルを再起動してください。
+`adafruit-nrfutil --version` ではなく `adafruit-nrfutil version` を使用してください。コマンドが見つからない場合は、`pipx ensurepath` が完了しているか確認し、ターミナルを再起動してください。
 
 </TabItem>
 </Tabs>
@@ -493,7 +493,7 @@ Windows ユーザーの場合の例：
 Mac ユーザーの場合の例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Linux ユーザーの場合：**
+**Linux ユーザー向け：**
 
 Solar Node P1 / P1-Pro を USB データケーブルで接続します。接続前後の次の出力を比較して、シリアルポートを特定します：
 
@@ -521,7 +521,7 @@ sudo usermod -aG dialout "$USER"
 
 ターミナルまたはコマンドプロンプトで、ダウンロードしたブートローダー zip パッケージがあるディレクトリに移動し、次のコマンドを実行します。ポートはデバイスに合った正しいものに置き換えてください：
 
-`xiao_nrf52840_ble_bootloader.zip` は ZIP ファイルのままにし、展開しないでください。デバイスに接続されているシリアルモニタやブラウザフラッシャーはすべて閉じてください。`RST` を 2 回押した後ですでに DFU モードになっている場合は、`--touch 1200` を省略し、現在の DFU ポートを使用します。
+`xiao_nrf52840_ble_bootloader.zip` は ZIP ファイルのままにして、展開しないでください。デバイスに接続されているシリアルモニタやブラウザフラッシャーはすべて閉じてください。`RST` を 2 回押した後にデバイスがすでに DFU モードになっている場合は、`--touch 1200` を省略し、現在の DFU ポートを使用します。
 
 - **Windows の場合**:
 
@@ -532,7 +532,7 @@ COMXX を実際の COM ポート番号に変更してください。例えば、
 
 `adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
 
-このコマンドの後にシリアルポートが変わった場合は、以下の Step 4 に従ってください。
+このコマンドの後にシリアルポートが変化した場合は、以下の Step 4 に従ってください。
 
 
 - **macOS の場合**:
@@ -543,7 +543,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 - **Linux の場合**:
 
-Step 2 で DFU モードに手動で入った場合は、`--touch 1200` なしでこのコマンドを実行します。`/dev/ttyACM0` は現在の DFU ポートに置き換えてください：
+Step 2 で DFU モードに手動で入った場合は、`--touch 1200` を付けずにこのコマンドを実行してください。`/dev/ttyACM0` は現在の DFU ポートに置き換えてください：
 
 ```bash
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/ttyACM0 -b 115200 --singlebank
@@ -553,15 +553,15 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 **Step4: シリアルポートの変更に対処する**
 
-`--touch 1200` は、シリアルポートを 1200 ボーで開閉することで DFU モードを要求します。その後、OS が別のポートを割り当てる場合があります。出力に `Touched serial port` と表示された後にポートが見つからないというエラーが出た場合は、新しい DFU ポートが現れていないか確認してください。このエラーだけでは、書き込みが成功したことも、デバイスが破損したことも意味しません。
+`--touch 1200` は、シリアルポートを 1200 ボーで開閉することで DFU モードを要求します。その後、OS が別のポートを割り当てる場合があります。出力に `Touched serial port` と表示された後にポートが見つからないというエラーが出た場合は、新しい DFU ポートが現れていないか確認してください。このエラーだけでは、書き込みが成功したことの確認にも、デバイスが破損したことの証拠にもなりません。
 
-USB ケーブルは接続したままにしてください。Linux では再度 `ls /dev/ttyACM*`（または必要に応じて `ls /dev/ttyUSB*`）を実行します。Windows ではデバイスマネージャーを更新し、macOS では `ls /dev/cu.*` を確認します。新しい DFU ポートを使って再試行し、**`--touch 1200` は付けないでください**。例えば、新しい Linux のポートが `/dev/ttyACM1` の場合：
+USB ケーブルは接続したままにしてください。Linux では再度 `ls /dev/ttyACM*`（または必要に応じて `ls /dev/ttyUSB*`）を実行します。Windows ではデバイスマネージャーを更新し、macOS では `ls /dev/cu.*` を確認します。新しい DFU ポートを使って再試行し、その際は **`--touch 1200` を省略** してください。例えば、新しい Linux のポートが `/dev/ttyACM1` の場合：
 
 ```bash
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/ttyACM1 -b 115200 --singlebank
 ```
 
-実際のポート名を使用してください。ポートを開けない場合は、Step 2 で説明したようにパーミッションを確認し、他のアプリケーションが使用していないことを確認してください。DFU ポートが現れない場合は、`RST` を 2 回押し、再度確認してからやり直してください。
+実際のポート名を使用してください。ポートを開けない場合は、Step 2 で説明したようにパーミッションを確認し、他のアプリケーションが使用していないことを確認してください。DFU ポートが現れない場合は、`RST` を 2 回押してから再度確認し、その後で再試行してください。
 
 **Step5: 結果を確認し、アプリケーションファームウェアを再インストールする**
 
@@ -579,12 +579,12 @@ Device programmed.
 
 ### プライマリチャンネルで通信できない
 
-デバイスが近くのノードと通信できない、またはメッセージを送信できない場合は、まず LoRa リージョンとモデムプリセットが周囲のノードと一致しているか確認してください。また、デフォルトの **PSK** が変更されていないかも確認する必要があります。プライマリチャンネルで PSK が異なると、そのチャンネル上の他のノードと通信できなくなります。
+デバイスが近くのノードと通信できない、またはメッセージを送信できない場合は、まず LoRa リージョンとモデムプリセットが周囲のノードと一致しているか確認してください。デフォルトの **PSK** が変更されていないかも確認する必要があります。プライマリチャンネルで PSK が異なると、そのチャンネル上の他のノードと通信できなくなります。
 
 この問題を見つける最も簡単な方法はモバイルアプリを使うことです。アプリを開き、対象デバイスに接続してから、`Settings` -> `Channels` に移動します。プライマリチャンネルを選択し、**PSK** の値を確認します。周囲のノードと異なる場合は、同じ PSK に更新してチャンネル設定を保存してください。
 
 <Tabs>
-<TabItem value="ios" label="IOS アプリ">
+<TabItem value="ios" label="iOS アプリ">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problems_ios.png" alt="iOS アプリでプライマリチャンネルの PSK を確認する" width={500} height="auto" /></p>
 
@@ -599,7 +599,7 @@ Device programmed.
 
 **解決方法**
 
-どの設定が変更されたか分からない場合は、[Factory Reset](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#factory-reset) ガイドに従ってデバイスをデフォルト設定に戻してください。PSK だけが変更された場合は、`AQ==` に戻してください。
+どの設定が変更されたか分からない場合は、[Factory Reset](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#factory-reset) ガイドに従ってデバイスをデフォルト設定に戻してください。PSK だけが変更されている場合は、`AQ==` に戻してください。
 
  ### デバイスが自動的に電源オフになる
 
@@ -608,16 +608,16 @@ Device programmed.
  - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動する。
  - シリアルポートログがしばらく動作した後に停止する。
 
- これは、メッセージ送信プロセスが完了していない、または設定中の状態で、デバイスを手動で強制的に再起動または電源オフしたことが原因である可能性があります。
+ これは、メッセージ送信プロセスが完了していない、または設定中の状態で、手動で強制的にデバイスを再起動または電源オフしたことが原因である可能性があります。
 
  #### トラブルシューティング
 
 [Click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-erase) をクリックしてフラッシュ消去を実行し、その後最新のファームウェアを書き込みます。
 
 
-### Factory Reset
+### 工場出荷時設定へのリセット
 
-デフォルト設定に戻したい場合は、Factory Reset を実行できます。Factory Reset を行う方法は 2 つあります。
+デフォルト設定に戻したい場合は、ファクトリーリセットを実行できます。ファクトリーリセットを行う方法は 2 つあります。
 
 - [Click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-erase) をクリックしてフラッシュ消去を実行し、その後最新のファームウェアを書き込みます。
 
@@ -636,7 +636,7 @@ NodeDB には次のような詳細が保存されます：
 - **ユーザー名**
 - **位置情報**
 - **信号情報 (SNR)**
-- **最終検出時刻**
+- **最後に確認された時刻**
 
 アプリを開いて対象デバイスに接続します。**Settings**->**Device**->**Device Config**->**Reset NodeDB** に進みます。
 
@@ -644,17 +644,17 @@ NodeDB には次のような詳細が保存されます：
 
 #### ユーザー情報の交換
 
-各ノードは定期的に自分自身のノード情報を送信し、他のノードがメッシュ内でそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、お互いのノード情報を交換する必要があります。リスト上の別のノードとプライベートメッセージを送受信できない場合は、アプリ内で手動で情報交換を促すことができます。
+各ノードは定期的に自分自身のノード情報を送信し、メッシュ内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、お互いのノード情報を交換する必要があります。リスト上の別のノードとプライベートメッセージの送受信ができない場合は、アプリ内で手動で情報交換を促すことができます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Settings 内のデバイス項目" width={300} height="auto" /></p>
 
 #### 秘密鍵の再生成
 
-2 つのノードが互いに通信できるようにするには、お互いの秘密鍵を知っている必要があります。あるノードがプライベートメッセージ送信に失敗し続ける場合は、そのノードの秘密鍵を再生成してみてください。
+各ノードは公開鍵/秘密鍵ペアを持っています。暗号化されたプライベートメッセージをやり取りする際、送信者は受信者の公開鍵でメッセージを暗号化し、その受信者の秘密鍵だけが復号できます。したがって、2 つのノードは互いの公開鍵を知っていればプライベートに通信できます。あるノードがプライベートメッセージの送信に失敗し続ける場合は、そのノードの秘密鍵を再生成してみてください。再生成後は、他のデバイスのノードリストからそのノードを削除し、再接続して新しい公開鍵を取得できるようにします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Settings 内のデバイス項目" width={600} height="auto" /></p>
 
-不具合のあるデバイスを再起動して、設定を有効にします。
+不具合のあるデバイスを再起動して、設定を有効にしてください。
 
 :::note
 鍵を再生成した後は、他のデバイスがそのノードに再接続する必要があります。そのため、他のデバイスのノードリストからそのノードを削除しておくことをお勧めします。
@@ -680,18 +680,18 @@ NodeDB には次のような詳細が保存されます：
 |給電されているが起動していない状態|56.195 μA|
 |給電され起動している状態|611 μA|
 
-**例：**
+**例:**
 
 |バッテリー容量 |バッテリー寿命|
 |---|---|
 |3350|136.8|
 |12000|490.2|
 
-- **動作モード時の消費電力**
+- **アクティブモード時の消費電力**
 
 |モード|電流|
 |---|---|
-|静止電流|10.65 mA|
+|静的電流|10.65 mA|
 |EU868 送信電流|157.74 mA|
 |US915 送信電流|205.22 mA|
 |GPS 動作電流|50 mA|
@@ -699,11 +699,11 @@ NodeDB には次のような詳細が保存されます：
 
 ### 信号品質
 
-- **SNR** は通信リンクの品質を表します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低下していることを示します。
+- **SNR** は通信リンクの品質を表します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
 
-- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm より高い値で動作します。RSSI が -115 dBm 未満のデバイスは、性能が低いと見なされます。
+- **RSSI** はデバイスとその周囲の環境によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。
 
-      最良の信号性能を得るために、干渉が最小限で、開けていて遮蔽物のない場所でデバイスを使用してください。
+      最良の信号性能を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
 
 ### 充電電流
 
@@ -712,7 +712,7 @@ NodeDB には次のような詳細が保存されます：
 Xiao nRF-52840 Plus の最大充電電流は 200 mA です。CN3165 充電管理チップは 0.99 A をサポートします。したがって、最大充電電流は 1 A です。
 
 ## リソース
-- [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [ソーラーノードのバッテリー寿命計算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 
 ## 技術サポート & 製品ディスカッション
 
