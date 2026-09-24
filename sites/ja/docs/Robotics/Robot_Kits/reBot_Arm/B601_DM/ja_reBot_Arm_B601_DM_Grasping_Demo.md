@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、YOLO/OBB 把持パイプラインを使用して、reBot Arm B601 向けの完全なビジュアル把持デモを構築する方法を説明します。
-title: reBot Arm B601-DM ビジュアル把持デモ
+description: このチュートリアルでは、YOLO/OBB 把持パイプラインを使用して reBot Arm B601 向けの完全なビジュアル把持デモを構築する方法を説明します。
+title: B601-DM ビジュアル把持
 keywords:
   - reBot Arm
   - B601
@@ -30,7 +30,7 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

@@ -6,39 +6,41 @@ keywords:
   - reCamera Pro
   - RV1126B
   - Debian 13
-slug: /recamera_pro_debian
+slug: /recamera_pro_debian_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 09/07/2026
+  date: 09/08/2026
   author: yylin
 createdAt: '2026-08-04'
 updatedAt: '2026-09-07'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_debian/
+url: https://wiki.seeedstudio.com/ja/recamera_pro_debian_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/experimental_debian13.md (https://wiki.seeedstudio.com/ja/recamera_pro_debian/), which now serves the original slug /recamera_pro_debian. This file is kept for history as a draft (slug /recamera_pro_debian_legacy) and is excluded from production builds. Do not link here. -->
 
 ## はじめに
 
-reCamera Pro は RV1126B チップを搭載し、メモリは 2 GB または 4 GB の構成が用意されています。AI 推論をすぐに始められるよう、出荷時には Buildroot ファームウェアがプリインストールされています。本ページでは、開発やデプロイをより柔軟に行いたいユーザー向けに Debian 13 イメージを提供します。
+reCamera Pro は RV1126B チップを搭載し、2 GB または 4 GB メモリ構成で提供されます。AI 推論をすぐに始められるよう、Buildroot ファームウェアがプリインストールされています。本ページでは、開発やデプロイをより柔軟に行いたいユーザー向けに Debian 13 イメージを提供します。
 
-Debian 13 イメージを書き込んだ後は、CMake を使って独自アプリケーションをコンパイルし、`apt` で必要な依存関係をインストールし、Docker コンテナを実行できます。このイメージは Seeed の工場出荷時ドライバと互換性があり、デバイスツリーの変更は不要です。カメラ、マイク、スピーカー、Wi-Fi は期待どおり動作しますが、Bluetooth には対応していません。
+Debian 13 イメージを書き込んだ後は、CMake を使って独自アプリケーションをコンパイルしたり、`apt` で必要な依存関係をインストールしたり、Docker コンテナを実行したりできます。このイメージは Seeed の工場出荷時ドライバと互換性があり、デバイスツリーの変更は不要です。カメラ、マイク、スピーカー、Wi-Fi は期待どおり動作しますが、Bluetooth には対応していません。
 
 :::warning
-このファームウェアは現在実験的なものです。現時点で Seeed による保守は行われておらず、追加の開発オプションとして提供されています。
+このファームウェアは現在実験的なものです。Seeed は現時点でこれを保守しておらず、追加の開発オプションとして提供しています。
 :::
 
 ## ダウンロード
 
 ### イメージをダウンロード
 
-[Debian 13 イメージをダウンロード](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz)。
+[Debian 13 イメージをダウンロード](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz)します。
 
 ### 書き込みツールとドライバをダウンロード
 
-このガイドでは、Windows 上で SocToolKit を使用してイメージを書き込みます。以下のファイルをダウンロードしてください：
+このガイドでは、Windows 上で SocToolKit を使用してイメージを書き込みます。以下のファイルをダウンロードしてください。
 
-- [Driver (DriverAssistant_v5.12.zip)](https://drive.google.com/file/d/1_Efm8nJlQivU2F7BgVokVPfGUl12fI6E/view?usp=drive_link)
-- [Flashing tool (SocToolKit-window.zip)](https://drive.google.com/file/d/1wFMHF_KSmbTPvuaAefqutDP-DPQ_NONp/view?usp=drive_link)
+- [ドライバ (DriverAssistant_v5.12.zip)](https://drive.google.com/file/d/1_Efm8nJlQivU2F7BgVokVPfGUl12fI6E/view?usp=drive_link)
+- [書き込みツール (SocToolKit-window.zip)](https://drive.google.com/file/d/1wFMHF_KSmbTPvuaAefqutDP-DPQ_NONp/view?usp=drive_link)
 
 ## 書き込みの準備
 
@@ -84,11 +86,11 @@ Debian 13 イメージを書き込んだ後は、CMake を使って独自アプ�
 ### reCamera Pro をローダーモードにする
 
 1. reCamera Pro の USB 3.0 ポートと Windows コンピュータを USB ケーブルで接続し、DC ポートから電源を供給します。
-2. デバイス側面にある `BOOT` と `RESET` のピンホールを探します。
+2. デバイス側面の `BOOT` と `RESET` のピンホールを探します。
 3. `BOOT` を押し続けたまま、`RESET` を短く押してデバイスを再起動します。
 4. `RESET` を押した後も約 5 秒間 `BOOT` を押し続け、その後離します。デバイスはローダーモードに入ります。
 
-SocToolKit 上で、デバイスが検出されたことが表示されるはずです。
+SocToolKit にデバイスが検出されたことが表示されるはずです。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-8.png" /></div>
 
@@ -108,7 +110,7 @@ SocToolKit がデバイスを検出し、ファームウェアを読み込んだ
 
 ### Linux で書き込む
 
-Linux から Rockchip の `upgrade_tool` を使用して、reCamera Pro にファームウェアを書き込むこともできます。このセクションでは Ubuntu 24.04 を例に説明します。
+Rockchip の `upgrade_tool` を使用して、Linux から reCamera Pro にファームウェアを書き込むこともできます。このセクションでは Ubuntu 24.04 を例に説明します。
 
 :::caution
 書き込みを行うと、デバイス上のシステムデータは上書きされます。重要なデータはバックアップを取り、続行する前にデバイスがローダーモードになっていることを確認してください。
@@ -116,7 +118,7 @@ Linux から Rockchip の `upgrade_tool` を使用して、reCamera Pro にフ�
 
 #### 環境を準備する
 
-Rockchip tools リポジトリをクローンし、`upgrade_tool` が含まれていることを確認します：
+Rockchip tools リポジトリをクローンし、`upgrade_tool` が含まれていることを確認します。
 
 ```bash
 cd ~
@@ -128,7 +130,7 @@ cd ~/rkbin/tools
 ls -lh upgrade_tool
 ```
 
-次に `Linux_Upgrade_Tool` をクローンし、`upgrade_tool` を実行可能にします：
+次に `Linux_Upgrade_Tool` をクローンし、`upgrade_tool` を実行可能にします。
 
 ```bash
 cd ~
@@ -142,7 +144,7 @@ chmod +x upgrade_tool
 sudo ./upgrade_tool -v
 ```
 
-Ubuntu ホストが reCamera Pro に接続されており、デバイスがローダーモードになっていることを確認します：
+Ubuntu ホストが reCamera Pro に接続されており、デバイスがローダーモードになっていることを確認します。
 
 ```bash
 sudo ./upgrade_tool LD
@@ -189,9 +191,9 @@ sudo ./upgrade_tool RD
 
 ## 新しいファームウェアについて
 
-書き込み後、Ethernet ケーブルを使用してデバイスをネットワークに接続します。このイメージは、元の USB-C 仮想ネットワークアダプタをサポートしていません。デバイスの IP アドレスは、ルーターまたは Wi-Fi 管理画面で確認できます。このイメージでは SSH が有効になっているため、SSH で直接ログインできます。ネットワーク接続が利用できない場合は、ボーレート `1500000` の UART シリアルコンソールを使用してください。
+書き込み後、デバイスを Ethernet ケーブルでネットワークに接続します。このイメージは、元の USB-C 仮想ネットワークアダプタをサポートしていません。デバイスの IP アドレスは、ルーターまたは Wi-Fi 管理インターフェースで確認できます。このイメージでは SSH が有効になっているため、SSH で直接ログインできます。ネットワーク接続が利用できない場合は、ボーレート `1500000` の UART シリアルコンソールを使用してください。
 
-システムには `root` ユーザーのみが用意されており、デフォルトパスワードは `123123` です。初回ログイン後すぐにパスワードを変更してください。
+システムには `root` ユーザーのみが用意されており、デフォルトパスワードは `123123` です。初回ログイン後、すぐにパスワードを変更してください。
 
 ```bash
 passwd
@@ -201,7 +203,7 @@ passwd
 
 ## 一時的に HTTP プロキシを設定する
 
-ネットワークへのアクセスに HTTP プロキシが必要な場合（たとえば `apt` を使用する際など）は、以下の環境変数を一時的に設定します。プロキシを使用しない場合は、この手順をスキップしてください。サンプルのアドレスとポートは、使用しているプロキシサーバーのものに置き換えてください。
+ネットワークへのアクセスに HTTP プロキシが必要な場合（たとえば `apt` を使用する際など）、以下の環境変数を一時的に設定します。プロキシを使用しない場合は、この手順をスキップしてください。サンプルのアドレスとポートは、使用しているプロキシサーバーのものに置き換えてください。
 
 ```bash
 export http_proxy="http://192.168.4.78:7890"
@@ -212,7 +214,7 @@ export no_proxy="localhost,127.0.0.1,::1,192.168.0.0/16"
 
 ## 時刻を設定する
 
-初回起動時、システム時刻が 1970 年に設定されている場合があり、その場合は SSL 証明書の検証に失敗します。このシステムでは systemd による自動時刻同期が設定されていないため、パッケージインデックスを更新する前に正しい時刻を手動で設定してください。
+初回起動時、システム時刻が 1970 年に設定されている場合があり、その場合は SSL 証明書の検証に失敗します。このシステムには systemd による自動時刻同期が設定されていないため、パッケージインデックスを更新する前に正しい時刻を手動で設定してください。
 
 ```bash
 date -s "2026-09-02 15:20:00"
@@ -222,7 +224,7 @@ apt update
 
 ### カメラの向きを設定する
 
-まず、反転制御をサポートするセンサーノードを探します。
+まず、フリップ制御をサポートするセンサーノードを探します。
 
 ```bash
 for dev in /dev/v4l-subdev*; do
@@ -243,7 +245,7 @@ done
             horizontal_blanking 0x009e0902 (int)    : min=4294965822 max=4294965822 step=1 default=4294965822 value=-1474 flags=read-only
 ```
 
-デフォルトでは、水平方向と垂直方向の両方の反転が有効になっている場合があります。前の出力に表示されたデバイスノードに合わせてコマンドを調整してください。この例では `/dev/v4l-subdev2` を使用しています。
+デフォルトでは、水平方向と垂直方向の両方のフリップが有効になっている場合があります。前の出力に表示されたデバイスノードに合わせてコマンドを調整してください。この例では `/dev/v4l-subdev2` を使用しています。
 
 ```bash
 v4l2-ctl -d /dev/v4l-subdev2 \
@@ -257,7 +259,7 @@ v4l2-ctl -d /dev/v4l-subdev2 \
   --get-ctrl=horizontal_flip,vertical_flip
 ```
 
-期待される出力：
+期待される出力は次のとおりです。
 
 ```bash
 horizontal_flip: 0
@@ -266,7 +268,7 @@ vertical_flip: 0
 
 ## カメラをテストする
 
-V4L2 を使用して NV12 の生フレームを 1 枚キャプチャし、FFmpeg で JPEG に変換します。
+V4L2 を使用して NV12 の生フレームを 1 枚キャプチャし、FFmpeg を使用して JPEG に変換します。
 
 ```bash
 v4l2-ctl -d /dev/video12 \
@@ -285,7 +287,7 @@ ffmpeg \
   -y /tmp/camera.jpg
 ```
 
-コマンドの実行が完了したら、`/tmp/camera.jpg` に保存された、ISP 処理済みで向きが正しい JPEG 画像を確認します。
+コマンドの実行が完了したら、ISP 処理され正しい向きに補正された JPEG 画像を `/tmp/camera.jpg` で確認します。
 
 ## マイクとスピーカーを設定する
 
@@ -295,7 +297,7 @@ ffmpeg \
 apt install ffmpeg alsa-utils
 ```
 
-利用可能な録音デバイスと再生デバイスを表示します：
+利用可能な録音デバイスと再生デバイスを確認します：
 
 ```bash
 arecord -l
@@ -319,7 +321,7 @@ docker --version
 dockerd --version
 ```
 
-期待される出力は次のようになります：
+想定される出力は次のようになります：
 
 ```bash
 /usr/bin/docker
@@ -423,7 +425,7 @@ gst-launch-1.0 -e \
   ! filesink location=/tmp/camera.jpg
 ```
 
-コマンドの実行が完了したら、`/tmp/camera.jpg` にある ISP 処理済み画像を表示します。
+コマンドの実行が完了したら、ISP 処理された画像を `/tmp/camera.jpg` で確認します。
 
 ## 技術サポートと製品ディスカッション
 

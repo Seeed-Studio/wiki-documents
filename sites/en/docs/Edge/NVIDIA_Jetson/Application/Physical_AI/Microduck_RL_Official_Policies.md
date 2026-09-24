@@ -9,7 +9,7 @@ last_update:
   author: Dayu
 createdAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/ai_robotics_microduck_rl_official_policies/
-updatedAt: '2026-09-05'
+updatedAt: '2026-09-17'
 ---
 
 # Train and Run Official Microduck Motions

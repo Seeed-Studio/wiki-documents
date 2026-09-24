@@ -1,6 +1,6 @@
 ---
 description: This wiki provides a complete guide for reBot Arm B601-RS to implement data collection and training within the LeRobot framework.
-title: reBot Arm B601-RS in LeRobot
+title: B601-RS with LeRobot
 keywords:
   - Lerobot
   - Huggingface
@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-17'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/
 ---
 
@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Python-3.12+-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
     <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>

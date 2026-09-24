@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for Damiao series motors.
-title: Damiao Series Motors
+title: Damiao
 keywords:
   - actuator
   - motor
@@ -13,7 +13,7 @@ last_update:
   date: 06/1/2025
   author: ZhuYaoHui
 createdAt: '2025-06-01'
-updatedAt: '2026-06-01'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/damiao_series/
 ---
 

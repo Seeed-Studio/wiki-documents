@@ -9,24 +9,26 @@ keywords:
   - AI Image Compression
   - LoRa Mesh
   - AEIC-SE
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_L2_Pro.png
 slug: /meshcore_ai_image_transmission_l2
 sku: 100029766
 sidebar_position: 1
 last_update:
   date: 9/19/2026
   author: Michelle Huang
-createdAt: 2026-09-19
-updatedAt: '2026-09-19'
+createdAt: 2026-09-19T00:00:00.000Z
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/meshcore_ai_image_transmission_l2/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# AI Image Transmission over MeshCore with Wio Tracker L2
+
 <div style={{textAlign:'center'}}>
 
-<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>
+<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_L2_Pro.png" style={{width:900, height:'auto'}}/>
 
 </div>
 

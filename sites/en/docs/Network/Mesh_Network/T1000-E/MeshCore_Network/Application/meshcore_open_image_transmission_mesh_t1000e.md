@@ -9,24 +9,26 @@ keywords:
   - AI Image Compression
   - LoRa Mesh
   - AEIC-SE
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_t1000e.png
 slug: /meshcore_ai_image_transmission_t1000e
 sku: 114993369,114993649
 sidebar_position: 1
 last_update:
   date: 9/19/2026
   author: Michelle Huang
-createdAt: 2026-09-19
-updatedAt: '2026-09-19'
+createdAt: 2026-09-19T00:00:00.000Z
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/meshcore_ai_image_transmission_t1000e/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# AI Image Transmission over MeshCore with SenseCAP Card Tracker T1000-E
+
 <div style={{textAlign:'center'}}>
 
-<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>
+<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_t1000e.png" style={{width:900, height:'auto'}}/>
 
 </div>
 

@@ -11,7 +11,7 @@ last_update:
   date: 09/01/2026
   author: Advent Jiang
 createdAt: '2024-07-24'
-updatedAt: '2026-09-01'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -478,12 +478,14 @@ For window user, press "Win" key and "r" key, then enter "cmd" in the pop-oyt wi
 
 For MAC user, press "Command" key and "Space" key, so that you can open Spotlight. Then enter "termial", click "Return". This can open the command line.
 
+For Linux users, open a terminal. On Ubuntu, you can press **Ctrl + Alt + T**. Use the **Linux (Ubuntu/Debian)** tab below to install the prerequisites and the tool in a virtual environment.
+
 **Prerequisites**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-Check in your command line that whether or not the python and pip are installed successfully.
+Check in your command line that whether or not the python and pip are installed successfully. On Linux, use `python3` instead of `python` for these checks.
 
 ```
 python --version
@@ -498,7 +500,7 @@ Then "Python xxx" and "pip xxx" should appear. If it does not, please try instal
 <Tabs>
 <TabItem value="pypi" label="Installing from PyPI">
 
-This is recommended method, to install latest version:
+For Windows and macOS, install the latest version with the following command. Linux users should use the **Linux (Ubuntu/Debian)** tab.
 
 ```
 pip3 install --user adafruit-nrfutil
@@ -566,6 +568,31 @@ You will find the .exe in `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfut
 Copy or move it elsewhere for your convenience, such as directory in your %PATH%.
 
 </TabItem>
+
+<TabItem value="linux" label="Linux (Ubuntu/Debian)">
+
+Install Python and virtual environment support:
+
+```bash
+sudo apt update
+sudo apt install python3 python3-pip python3-venv
+```
+
+Create a virtual environment and install `adafruit-nrfutil` inside it. This avoids the `externally-managed-environment` error on recent Linux distributions.
+
+```bash
+python3 -m venv ~/.venvs/adafruit-nrfutil
+source ~/.venvs/adafruit-nrfutil/bin/activate
+python -m pip install --upgrade pip
+python -m pip install adafruit-nrfutil
+adafruit-nrfutil --help
+```
+
+If the help text appears, the tool is ready. Keep this terminal open for the following steps. If you open a new terminal, activate the environment again with `source ~/.venvs/adafruit-nrfutil/bin/activate`.
+
+For other Linux distributions, install Python 3, pip, and virtual environment support with your distribution's package manager, then use the same virtual environment commands above.
+
+</TabItem>
 </Tabs>
 
 **Step2: Check your port number**
@@ -580,9 +607,35 @@ For Mac user, for example:
 For Window user, for example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
+**For Linux users:**
+
+Put the T1000-E into DFU mode using the button and cable procedure above. The green LED should stay on. Run the following command before and after connecting the device to identify its serial port:
+
+```bash
+python -m serial.tools.list_ports -v
+```
+
+Use the newly appearing port, typically `/dev/ttyACM0`. If several ports are listed, compare the results with the T1000-E disconnected and connected. The number may change when the device enters DFU mode, so check again before flashing.
+
+Check the port permissions, replacing `/dev/ttyACM0` with your actual port:
+
+```bash
+ls -l /dev/ttyACM0
+```
+
+On Ubuntu/Debian, serial ports are usually owned by the `dialout` group. If you get a `Permission denied` error and the port belongs to `dialout`, add your user to that group:
+
+```bash
+sudo usermod -aG dialout "$USER"
+```
+
+Log out and log back in for the group change to take effect, then reopen the terminal and activate the virtual environment again. On other distributions, use the serial-access group shown by `ls -l` and follow your distribution's instructions.
+
 **Step3: Flash the bootloader**
 
 In the terminal or command prompt, navigate to the directory where you downloaded the bootloader zip package and execute the following command, replacing the correct port for your device:
+
+`--touch 1200` opens and closes the serial port at 1200 baud to request DFU mode before uploading. If the device is already in DFU mode with the green LED solid, omit `--touch 1200` and use its current DFU serial port.
 
 - **For Windows**:
 
@@ -594,17 +647,55 @@ Please change COMXX to your com number. For example, if your device is on com6, 
 
 `adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- Some of the device will change their port number after you enter this command. So if the installation fail, check the port number again.
+If the serial port changes after this command, follow Step 4 below.
 
-- **For others**:
+- **For macOS**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
 ```
 
+- **For Linux**:
+
+Keep the downloaded bootloader package as a `.zip` file; do not extract it. In the terminal with the virtual environment active, navigate to the folder containing the package. Close any serial monitor or browser flasher connected to the device. Since Step 2 puts the device into DFU mode manually, run the command without `--touch 1200`:
+
+```bash
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/ttyACM0 -b 115200 --singlebank
+```
+
+Replace `/dev/ttyACM0` with the port identified in Step 2. If the device is still running application firmware and has a serial port, you can append `--touch 1200` to request DFU mode. If it does not respond, press and hold the device button, then **quickly** connect the charging cable twice as shown above. Once the green LED stays on, identify the DFU port again and use the command without `--touch 1200`.
+
+**Step4: Handle a serial port change**
+
+When `--touch 1200` switches the device into DFU mode, the operating system may assign a different serial port. If the command reports `Touched serial port` followed by a port-not-found error, check whether a new DFU port has appeared. This error alone does not mean that the bootloader was flashed successfully or that the device is damaged.
+
+Keep the USB cable connected. On Linux, run the following command again in the active virtual environment:
+
+```bash
+python -m serial.tools.list_ports -v
+```
+
+On Windows, refresh Device Manager; on macOS, check `ls /dev/cu.*`. Retry using the newly identified port and **omit `--touch 1200`**, because the device is already in DFU mode. For example, if the new Linux port is `/dev/ttyACM1`:
+
+```bash
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/ttyACM1 -b 115200 --singlebank
+```
+
+Use your actual port name. If the port still cannot be opened, check its permissions as described in Step 2 and make sure no serial monitor or browser flasher is using it.
+
+**Step5: Confirm the result and reinstall the application firmware**
+
+Wait for the tool to finish and print:
+
+```text
+Device programmed.
+```
+
+This message confirms that the bootloader transfer completed successfully. Do not disconnect the cable during the transfer. A port change or the appearance of a USB drive alone is not confirmation of a successful flash.
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-application-firmware) to flash the application firmware.
+Flashing the bootloader does not reinstall the Meshtastic application firmware. After the successful transfer, follow [Flash Firmware](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-3-flash-firmware) to install it before using the device.
 
 **2) Device can not enter DFU mode, but the serial port can be detected**.
 
@@ -705,7 +796,7 @@ Each node will periodically send its own node information, enabling other nodes 
 
 #### Regenerate Private Key
 
-Two nodes need to know their private key with each other in order to be able to communicate with each oher. If one node keeps failing in private message transmission, try regenerate the private key for it.
+Each node owns a public/private key pair. To exchange an encrypted private message, the sender encrypts it with the recipient's public key, and only that recipient's private key can decrypt it. Two nodes can therefore communicate privately once they know each other's public key. If one node keeps failing in private-message transmission, try regenerating its private key. After regeneration, delete that node from the other devices' node lists so they can reconnect and obtain its new public key.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 

@@ -1,15 +1,15 @@
 ---
-description: このガイドでは、reBot Arm B601-DM の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む入門方法を説明します。
-title: reBot Arm B601-DM クイックスタート
+description: このガイドでは、reBot Arm B601-DM の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む、入門手順を説明します。
+title: B601-DM クイックスタート
 keywords:
   - reBot
   - B601-DM
-  - ロボットアーム
-  - ロボット
+  - Robotic Arm
+  - Robot
   - Lerobot
   - Pinocchio
   - 6 DOF
-image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 slug: /rebot_b601_dm_getting_started
 translation:
   skip: [zh-CN]
@@ -33,7 +33,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" />
 </div>
 
 <div className="rebot-buy-button-group">

@@ -1,6 +1,6 @@
 ---
 description: This wiki provides a complete guide for reBot Arm B601-DM to implement data collection and training within the LeRobot framework.
-title: reBot Arm B601-DM in LeRobot
+title: B601-DM with LeRobot
 keywords:
   - Lerobot
   - Huggingface
@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-09'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 ---
 
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Python-3.12+-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
     <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>
@@ -82,14 +82,14 @@ Seeed Studio tutorials are strictly updated according to official documentation.
 
 - Ubuntu 22.04/Ubuntu 24.04
 - NVIDIA GPU with CUDA 12+ (optional, for GPU-accelerated training and inference)
-- Python 3.10
+- Python 3.12
 - Torch 2.6 (CPU builds can run basic workflows; CUDA builds are required for GPU acceleration)
 
 </TabItem>
 <TabItem value="jetson-orin" label="Jetson Orin">
 
 - Jetson JetPack 6.0 and 6.1, 6.2 is not supported
-- Python 3.10
+- Python 3.12
 - Torch 2.3+
 
 </TabItem>

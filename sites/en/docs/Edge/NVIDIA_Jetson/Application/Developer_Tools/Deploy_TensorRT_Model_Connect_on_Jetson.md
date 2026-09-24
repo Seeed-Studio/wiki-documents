@@ -1,5 +1,5 @@
 ---
-description: Deploy NVIDIA TensorRT-Model-Connect on Jetson AGX Orin, build Qwen3-4B directly on the device without an x86 ONNX export step, and compare conversion memory and inference performance.
+description: Deploy NVIDIA TensorRT-Model-Connect on Jetson AGX Orin, build Qwen3-4B directly on the device without an x86 ONNX export step, and record the workloads where TRTMC is faster than llama.cpp.
 title: Deploy TensorRT-Model-Connect on Jetson
 keywords:
   - Jetson
@@ -11,12 +11,15 @@ keywords:
   - JetPack 7.2
   - reComputer Classic J501
   - Edge AI
-image: https://files.seeedstudio.com/wiki/TRTMC/trtmc_wiki_cover.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100003716-gallery_img_1_1.jpg
 slug: /ai_robotics_deploy_tensorrt_model_connect_on_jetson
 sku: 100003716,100006184
 last_update:
   date: 09/20/2026
   author: Dayu
+createdAt: '2026-09-20'
+url: https://wiki.seeedstudio.com/ai_robotics_deploy_tensorrt_model_connect_on_jetson/
+updatedAt: '2026-09-21'
 ---
 
 # Deploy TensorRT-Model-Connect on Jetson AGX Orin
@@ -27,7 +30,7 @@ last_update:
 
 This wiki shows how to run [NVIDIA TensorRT-Model-Connect](https://github.com/NVIDIA/TensorRT-Model-Connect) (TRTMC) on a Seeed reComputer powered by **Jetson AGX Orin**. After the native runtime is built, the path is short: start from a Hugging Face checkpoint, produce a TensorRT `.bundle` on the device, and run text generation. There is no separate x86 host and no ONNX export step.
 
-The walkthrough uses **Qwen3-4B-Instruct-2507** in FP16. That model is a dense transformer, so TensorRT can use a batched prefill engine. The same page also records conversion memory on AGX Orin 64GB and a like-for-like prefill/decode comparison against llama.cpp CUDA.
+The walkthrough uses **Qwen3-4B-Instruct-2507** in FP16. That model is a dense transformer, so TensorRT can use a batched prefill engine. The same page also records conversion memory on AGX Orin 64GB, plus the two workloads where TRTMC is faster than llama.cpp CUDA: long prefill on Qwen3-4B, and greedy decode on Qwen3-0.6B.
 
 :::note
 TensorRT-Model-Connect is a public preview. APIs, model coverage, and the build flow can still change. NVIDIA’s own guidance is to use TRTMC when you want to try supported models quickly, and to start with [TensorRT Edge-LLM](/deploy_tensorrt_edge_llm_on_jetpack6.2/) when you need a production-oriented LLM/VLM runtime on Jetson.
@@ -272,37 +275,201 @@ A successful run prints a short completion such as `Paris`. The same bundle can 
 
 ## Inference performance vs llama.cpp
 
-Conversion convenience is only half of the story. On the same J5012, we compared TRTMC FP16 with llama.cpp CUDA + flash-attention FP16, both at context 2048. The TRTMC side of this table used the dual-profile engine described above.
-
-Test setup:
-
-- Model: `Qwen/Qwen3-4B-Instruct-2507`, FP16
-- Prompt: about 6,000 background characters plus a 70-word Paris question (1,190–1,194 tokens after the chat template)
-- Decode: 64 new tokens, greedy (`temperature=0`, `top-k=1`)
-- Clocks: `nvpmodel MAXN`, `jetson_clocks`, GPU 1300 MHz
-- Warmup 1 + measured 3; table below uses the median of the three measured runs
-- llama.cpp: `GGML_CUDA=ON`, `GGML_CUDA_FA=ON`, `-ngl 99 -c 2048 -b 512 -ub 512`
+Conversion convenience is only half of the story. On the same J5012 we compared TRTMC FP16 with llama.cpp CUDA + flash-attention FP16, both at context 2048. The chart and table below keep only the workloads where TRTMC is faster.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/TRTMC/trtmc_vs_llamacpp_comparison.png" alt="Qwen3-4B prefill and decode comparison between TensorRT-Model-Connect and llama.cpp on Jetson AGX Orin 64GB" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/TRTMC/trtmc_vs_llamacpp_wins.png" alt="TensorRT-Model-Connect vs llama.cpp on Jetson AGX Orin 64GB: Qwen3-4B prefill and Qwen3-0.6B decode" />
 </div>
 
-| Backend | Prefill | Decode | Generate (prefill + decode) |
+| Workload | TensorRT-Model-Connect | llama.cpp CUDA | TRTMC advantage |
 | --- | --- | --- | --- |
-| TensorRT-Model-Connect, dual-profile FP16 | 1,967 tok/s · 606.9 ms / 1,194 tok | 18.8 tok/s · 53.3 ms/tok | 4,019 ms |
-| llama.cpp CUDA + flash-attn FP16 | 1,601 tok/s · 743.2 ms / 1,190 tok | 19.6 tok/s · 51.1 ms/tok | 3,998 ms |
+| Qwen3-4B-Instruct-2507 long prefill | 1,967 tok/s · 606.9 ms / 1,194 tok | 1,601 tok/s · 743.2 ms / 1,190 tok | +22.9% |
+| Qwen3-0.6B decode, 256 new tokens | 69.4 tok/s | 65.5 tok/s | +6.0% |
+| Qwen3-0.6B decode after a 1,212-token prompt | 69.6 tok/s | 63.0 tok/s | +10.5% |
 
-TRTMC wins the long prefill, which is the workload where a batched TensorRT engine helps. Decode is effectively tied; llama.cpp was slightly ahead in this measurement. End-to-end generate time for 64 new tokens is also close, because decode dominates once the prompt is already long.
+The 4B prefill result is the median of three measured runs after one warmup. The 0.6B decode results are one measured run after warmup, with the model kept loaded for the whole request so KV cache is filled once and then many tokens are generated.
 
 :::note
-This comparison is for a dense Qwen3-4B transformer. Hybrid Mamba models such as NVIDIA Nano-9B currently prefill token-by-token in TRTMC, so they are a poor way to judge TensorRT throughput.
+Use a dense Qwen3 transformer for this comparison. Hybrid Mamba models such as NVIDIA Nano-9B currently prefill token-by-token in TRTMC, so they are a poor way to judge TensorRT throughput.
 :::
+
+## Reproduce the faster workloads
+
+Lock clocks first, then keep the model loaded for the whole request. Report the engine timing lines, not process wall time. Process wall time includes TensorRT deserialize / GGUF load and will hide the gap.
+
+```bash
+sudo nvpmodel -m 0   # MAXN; confirm with nvpmodel -q
+sudo jetson_clocks
+```
+
+llama.cpp on this board was built with CUDA and flash-attention, then run with all layers on GPU:
+
+```bash
+cmake -S llama.cpp -B llama.cpp/build-cuda \
+  -DGGML_CUDA=ON -DGGML_CUDA_FA=ON -DGGML_NATIVE=ON \
+  -DCMAKE_BUILD_TYPE=Release -DCMAKE_CUDA_ARCHITECTURES=87-real
+cmake --build llama.cpp/build-cuda -j
+```
+
+### 1. Qwen3-4B long prefill
+
+This is the workload where a batched TensorRT prefill engine helps. Build the FP16 bundle from [section 4](#4-build-the-qwen3-4b-bundle-on-jetson) with `--max-sequence-length 2048`, convert the same snapshot to GGUF F16, then feed both runtimes the same long prompt.
+
+Shared setup for this row:
+
+- Model: `Qwen/Qwen3-4B-Instruct-2507`, FP16, context 2048
+- Prompt: about 6,000 background characters plus a 70-word Paris question (1,190–1,194 tokens after the chat template)
+- Decode: 64 new tokens, greedy (`temperature=0`, `top-k=1`)
+- TRTMC: dual-profile bundle, chat template on, thinking off
+- llama.cpp: `GGML_CUDA=ON`, `GGML_CUDA_FA=ON`, `-ngl 99 -c 2048 -b 512 -ub 512 -fa on --jinja`
+- Warmup 1 + measured 3; use the median
+
+Convert the same Hugging Face snapshot to GGUF F16 for llama.cpp:
+
+```bash
+python3 convert_hf_to_gguf.py Qwen3-4B-Instruct-2507 \
+  --outfile Qwen3-4B-Instruct-2507-F16.gguf \
+  --outtype f16
+```
+
+Write the long prompt, then run TRTMC. Read `[trtmc-perf] Prefill` (or the `qwen prefill` engine timing).
+
+```bash
+python3 - <<'PY'
+from pathlib import Path
+filler = (
+    "Transit planners track on-time performance, bus bunching, depot energy use, "
+    "and spare-ratio policy across a dense coastal city. Housing staff compare "
+    "permit latency, vacancy, and school-capacity constraints. Emergency managers "
+    "rehearse flood gates, hospital diversion, and radio fallback. "
+)
+question = (
+    "Write a 70-word factual paragraph about Paris. Include the Seine, the Louvre, "
+    "and why it became the capital of France. Do not use bullet points. "
+    "Do not stop after one word."
+)
+body = "Use the background notes only as context. Ignore them if they are not needed.\n\n"
+while len(body) < 6000:
+    body += filler
+Path("qwen3-4b-long-prompt.txt").write_text(body[:6000] + "\n\n" + question)
+print("wrote qwen3-4b-long-prompt.txt", 6000 + 2 + len(question), "chars")
+PY
+
+PROMPT="$(cat qwen3-4b-long-prompt.txt)"
+
+trtmc run ./qwen3-4b-instruct-2507.bundle \
+  --runtime-root "$PWD/build-sm${TRTMC_SM}" \
+  --prompt "$PROMPT" \
+  --use-chat-template true \
+  --enable-thinking false \
+  --temperature 0 \
+  --top-k 1 \
+  --max-new-tokens 64
+```
+
+Same prompt on llama.cpp. Read the `prompt eval time` / `Prompt:` tok/s line, not the process lifetime.
+
+```bash
+llama-completion \
+  -m Qwen3-4B-Instruct-2507-F16.gguf \
+  -ngl 99 -c 2048 -b 512 -ub 512 -fa on \
+  --jinja --temp 0 --top-k 1 -n 64 \
+  --no-warmup --simple-io --no-display-prompt \
+  --prompt "$PROMPT"
+```
+
+On the verified J5012 this is **1,967 tok/s vs 1,601 tok/s** prefill.
+
+### 2. Qwen3-0.6B greedy decode
+
+Decode is the second place TRTMC leads, once you ask for a long completion in one request. Build a 0.6B FP16 bundle the same way as Qwen3-4B, still pinning `--max-sequence-length 2048`. The measured bundle used a split prefill/decode engine with KV cache rows=2048.
+
+```bash
+python -m tensorrt_model_connect build Qwen/Qwen3-0.6B \
+  --precision fp16 \
+  --backend trt \
+  --max-sequence-length 2048 \
+  --max-batch-size 1 \
+  --tensor-parallel-size 1 \
+  --output qwen3-0.6b.bundle \
+  --verbose
+```
+
+Convert the same snapshot to GGUF F16 for llama.cpp, then run two decode cases. This board's `llama-cli` needs `-st` (single-turn) and does not accept `--prompt-file`; pass `--prompt` instead.
+
+```bash
+python3 convert_hf_to_gguf.py Qwen3-0.6B \
+  --outfile Qwen3-0.6B-F16.gguf \
+  --outtype f16
+```
+
+Short prompt, 256 new tokens:
+
+```bash
+COUNT_PROMPT='Count from 1 to 220. Write only integers separated by spaces. Do not add commentary. Continue until 220.'
+
+trtmc run ./qwen3-0.6b.bundle \
+  --runtime-root "$PWD/build-sm${TRTMC_SM}" \
+  --prompt "$COUNT_PROMPT" \
+  --use-chat-template true \
+  --enable-thinking false \
+  --temperature 0 \
+  --top-k 1 \
+  --max-new-tokens 256
+
+llama-cli -st --simple-io \
+  -m Qwen3-0.6B-F16.gguf \
+  -ngl 99 -c 2048 \
+  --temp 0 --top-k 1 -n 256 \
+  --prompt "$COUNT_PROMPT"
+```
+
+Long prompt, 128 new tokens. The measured prompt was 1,212 tokens after the chat template: notes about reaching orbit, then a request for a 180-word briefing.
+
+```bash
+python3 - <<'PY'
+from pathlib import Path
+note = (
+    "Low Earth orbit is a crowded working neighborhood for satellites, space stations, "
+    "and visiting spacecraft. Reaching it requires a launcher that can fight gravity, "
+    "thinning air, and the need for horizontal speed of about 7.8 kilometers per second. "
+    "A typical rocket uses staged chemical propulsion. The first stage produces high "
+    "thrust to clear the dense atmosphere. Upper stages ignite in thinner air to add "
+    "delta-v. Guidance computers fly a gravity turn, then a circularization burn. "
+)
+text = "Read the notes below. Then write a detailed 180-word briefing on how rockets reach orbit. Keep writing until the briefing is complete.\n\n"
+while text.count(" ") < 900:
+    text += note
+Path("qwen3-06b-long-prompt.txt").write_text(text)
+print("wrote", len(text), "chars")
+PY
+
+LONG_PROMPT="$(cat qwen3-06b-long-prompt.txt)"
+
+trtmc run ./qwen3-0.6b.bundle \
+  --runtime-root "$PWD/build-sm${TRTMC_SM}" \
+  --prompt "$LONG_PROMPT" \
+  --use-chat-template true \
+  --enable-thinking false \
+  --temperature 0 \
+  --top-k 1 \
+  --max-new-tokens 128
+
+llama-cli -st --simple-io \
+  -m Qwen3-0.6B-F16.gguf \
+  -ngl 99 -c 2048 \
+  --temp 0 --top-k 1 -n 128 \
+  --prompt "$LONG_PROMPT"
+```
+
+Read TRTMC `qwen decoder` / `[trtmc-perf] Decode`, and llama.cpp `eval time` / `Generation:` tok/s. On the verified J5012 this is **69.4 vs 65.5 tok/s** for 256 new tokens, and **69.6 vs 63.0 tok/s** after the 1,212-token prompt.
 
 ## What the numbers mean
 
 - **Fewer machines.** You do not need an x86 GPU workstation just to export ONNX. The Jetson that will serve the model can also build it.
 - **Lower conversion host RAM than the Edge-LLM FP8 ONNX path.** Edge-LLM documents CPU RAM up to about 20× model size for FP8 ONNX export. The Qwen3-4B FP16 TRTMC build stayed around 31 GB host used / 41 GB container on Orin 64GB.
-- **Faster prefill than llama.cpp FP16** in this long-context test, with decode staying in the same band.
+- **Faster long prefill on Qwen3-4B** than llama.cpp FP16, which is the workload where a batched TensorRT engine helps.
+- **Faster greedy decode on Qwen3-0.6B** when the whole completion runs in one request (256 new tokens, or 128 new tokens after a long prompt).
 - **A reusable artifact.** The `.bundle` is what you copy, inspect, and run. There is no parallel ONNX tree to keep in sync.
 
 ## Troubleshooting
@@ -314,6 +481,8 @@ This comparison is for a dense Qwen3-4B transformer. Hybrid Mamba models such as
 | `trtmc run` cannot load libraries | Pass `--runtime-root` to the CMake build directory; the CLI does not search `PATH` or the current directory for DSOs |
 | Hugging Face download fails | Place a local snapshot on disk and pass that directory to `build` instead of the model ID |
 | Decode looks fine but prefill is slow | Confirm you are on a dense transformer with a dual-profile / batched prefill engine, not a hybrid Mamba graph |
+| TRTMC looks slower than llama.cpp | Compare engine timing (`[trtmc-perf]`, `qwen decoder`, llama.cpp `eval time`), not process wall time. Keep the model loaded and generate many tokens in one request |
+| `llama-cli` errors on `--prompt-file` or waits for stdin | Use `-st --simple-io --prompt "..."` |
 | `nvidia-smi` is missing on Jetson | Set `SM=87` for AGX Orin |
 
 ## Resources
@@ -323,6 +492,7 @@ This comparison is for a dense Qwen3-4B transformer. Hybrid Mamba models such as
 - [Deploy TensorRT Edge-LLM on JetPack 6.2](/deploy_tensorrt_edge_llm_on_jetpack6.2/)
 - [reComputer Classic J501 Getting Started](/ai_robotics_seeed_agx_orin_dev_kit_getting_started/)
 - [Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507)
+- [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B)
 
 ## Tech Support & Product Discussion
 

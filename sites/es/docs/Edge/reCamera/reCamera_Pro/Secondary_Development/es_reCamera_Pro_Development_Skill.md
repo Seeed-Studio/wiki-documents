@@ -1,5 +1,5 @@
 ---
-title: Desarrolla aplicaciones reCamera Pro con agentes de programación con IA
+title: Desarrollar aplicaciones para reCamera Pro con agentes de programación con IA
 description: Instala y usa la habilidad de desarrollo de reCamera Pro para convertir modelos ONNX, compilar aplicaciones nativas RKNN y desarrollar flujos de trabajo de cámara, audio, GStreamer y RTSP mediante conversaciones en lenguaje natural.
 keywords:
   - reCamera
@@ -10,23 +10,25 @@ keywords:
   - RV1126B
   - Edge AI
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/cpp_skill/recamera_skill.png
-slug: /recamera_pro_development_cpp_skill
+slug: /recamera_pro_development_cpp_skill_legacy
+draft: true
 sidebar_position: 3
 last_update:
   date: 2026-08-14
   author: yylin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-18'
-url: https://wiki.seeedstudio.com/es/recamera_pro_development_cpp_skill/
+updatedAt: '2026-08-17'
+url: https://wiki.seeedstudio.com/es/recamera_pro_development_cpp_skill_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/ai_coding_agents.md (https://wiki.seeedstudio.com/es/recamera_pro_development_cpp_skill/), which now serves the original slug /recamera_pro_development_cpp_skill. This file is kept for history as a draft (slug /recamera_pro_development_cpp_skill_legacy) and is excluded from production builds. Do not link here. -->
 
-# Desarrolla aplicaciones reCamera Pro con agentes de programación con IA
+# Desarrollar aplicaciones para reCamera Pro con agentes de programación con IA
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/cpp_skill/recamera_skill.png" alt="Flujo de trabajo de la habilidad de desarrollo de reCamera Pro" /></div>
 
 ## Introducción
 
-La [habilidad de desarrollo de reCamera Pro](https://github.com/Seeed-Projects/recamera-pro-development-skill) empaqueta instrucciones específicas de reCamera Pro, scripts, referencias técnicas y una plantilla de aplicación nativa en C++ para agentes de programación con IA. Después de instalarla, puedes describir una aplicación en lenguaje natural y dejar que el agente prepare el flujo de trabajo de conversión de modelos y desarrollo nativo.
+La [reCamera Pro Development Skill](https://github.com/Seeed-Projects/recamera-pro-development-skill) empaqueta instrucciones específicas de reCamera Pro, scripts, referencias técnicas y una plantilla de aplicación nativa en C++ para agentes de programación con IA. Después de instalarla, puedes describir una aplicación en lenguaje natural y dejar que el agente prepare el flujo de trabajo de conversión de modelos y desarrollo nativo.
 
 Por ejemplo, puedes pedirle al agente que:
 
@@ -37,7 +39,7 @@ Por ejemplo, puedes pedirle al agente que:
 - Desarrolle una canalización de inferencia RTSP
 - Inspeccione el host, el compilador cruzado, el sysroot, las bibliotecas de destino y los archivos ELF generados
 
-El repositorio proporciona ediciones para OpenAI Codex, Claude Code, GitHub Copilot, Cursor y Gemini CLI. Cada edición usa el mismo conocimiento de desarrollo de reCamera Pro con instrucciones de instalación e invocación específicas del agente.
+El repositorio proporciona ediciones para OpenAI Codex, Claude Code, GitHub Copilot, Cursor y Gemini CLI. Cada edición utiliza el mismo conocimiento de desarrollo de reCamera Pro con instrucciones de instalación e invocación específicas del agente.
 
 :::note
 Esta habilidad está diseñada específicamente para **reCamera Pro con el SoC RV1126B y Linux aarch64**. No está pensada para la plataforma reCamera SG2002/riscv64.
@@ -80,7 +82,7 @@ La habilidad utiliza el siguiente contrato de destino al desarrollar aplicacione
 | RKNN Toolkit | RKNN-Toolkit2 2.3.2 |
 | RKNN Runtime | 2.3.2 |
 | Framework de cámara | GStreamer |
-| Lenguaje de la aplicación nativa | C/C++ |
+| Lenguaje de aplicación nativa | C/C++ |
 
 ## Instalar la habilidad
 
@@ -88,7 +90,7 @@ La habilidad utiliza el siguiente contrato de destino al desarrollar aplicacione
 
 Clona la rama que coincida con el agente que utilizas:
 
-| Agente de programación con IA | Rama | Directorio de habilidades a nivel de usuario |
+| Agente de programación con IA | Rama | Directorio de habilidad a nivel de usuario |
 | --- | --- | --- |
 | OpenAI Codex | `main` | `~/.agents/skills/recamera-rknn-dev` |
 | Claude Code | `claude-code` | `~/.claude/skills/recamera-rknn-dev` |
@@ -128,14 +130,14 @@ Conserva el repositorio clonado. Para actualizar la habilidad más adelante, ext
 
 ## Usar la habilidad
 
-Puedes mencionar explícitamente la habilidad en tu prompt:
+Puedes nombrar explícitamente la habilidad en tu prompt:
 
 ```text
 Use the reCamera Pro development skill to check whether my computer is ready
 to cross-compile native applications for reCamera Pro.
 ```
 
-Después de instalar la habilidad, también puedes describir la tarea de forma natural. El agente cargará la guía relevante de conversión de modelos, compilación cruzada, cámara, audio o streaming.
+Después de que la habilidad esté instalada, también puedes describir la tarea de forma natural. El agente cargará la guía relevante de conversión de modelos, compilación cruzada, cámara, audio o streaming.
 
 ### Convertir un modelo ONNX
 
@@ -151,7 +153,7 @@ El agente comprueba el contrato de entrada y salida del modelo, configura RKNN-T
 No adivines el preprocesamiento, el orden de color, la normalización ni la semántica de salida de un modelo. Proporciona la fuente original del modelo e imágenes de calibración representativas cuando solicites cuantización INT8.
 :::
 
-### Compilar una aplicación nativa de cámara
+### Compilar una aplicación de cámara nativa
 
 ```text
 Use the reCamera Pro development skill to create a C++ application that
@@ -186,7 +188,7 @@ compatibility with the board sysroot.
 El agente sigue este flujo de trabajo general:
 
 1. Inspeccionar el host Linux o WSL, la instalación de Conda, el compilador cruzado, el sysroot y los archivos locales de RKNN Runtime.
-2. Inspeccionar el contrato del modelo ONNX y registrar su origen, licencia, disposición de entrada, normalización, orden de color y semántica de salida.
+2. Inspeccionar el contrato del modelo ONNX y registrar su origen, licencia, diseño de entrada, normalización, orden de color y semántica de salida.
 3. Convertir el modelo con RKNN-Toolkit2 2.3.2 para `rv1126b`; usar datos de calibración representativos para INT8.
 4. Comparar la salida RKNN con el modelo ONNX de origen antes de integrarlo en una aplicación.
 5. Crear o adaptar la aplicación nativa C/C++ y compilarla de forma cruzada contra un sysroot compatible con reCamera Pro.
@@ -195,7 +197,7 @@ El agente sigue este flujo de trabajo general:
 
 De forma predeterminada, la habilidad compila e inspecciona artefactos localmente. La transferencia de archivos y la ejecución en la reCamera Pro solo se realizan cuando tú lo solicitas y autorizas explícitamente.
 
-De forma predeterminada, después de que el agente genere una salida, necesitas subirla manualmente al dispositivo para ejecutarla. El agente proporcionará el comando de ejecución correspondiente, y la salida suele ser un archivo binario ejecutable y un archivo de modelo rknn.
+De forma predeterminada, después de que el agente genere una salida, necesitas subirla manualmente al dispositivo para ejecutarla. El agente proporcionará el comando de ejecución correspondiente, y la salida suele ser un archivo ejecutable binario y un archivo de modelo rknn.
 
 ## Notas importantes
 
@@ -203,7 +205,7 @@ De forma predeterminada, después de que el agente genere una salida, necesitas 
 - No enlaces bibliotecas x86_64 desde el ordenador de desarrollo en una aplicación de destino aarch64.
 - No alimentes bytes de cámara NV12 directamente a un modelo RGB o BGR. La canalización o la aplicación deben realizar el preprocesamiento exacto que requiere el modelo.
 - Una conversión de modelo satisfactoria no garantiza una inferencia correcta. Compara las salidas numéricas y el preprocesamiento con el framework de origen.
-- La aplicación se enlaza contra un RKNN Runtime compatible con la placa y utiliza el tiempo de ejecución existente del dispositivo; no debe sustituir el RKNN Runtime instalado en la reCamera Pro.
+- La aplicación se enlaza contra un RKNN Runtime compatible con la placa y utiliza el runtime existente del dispositivo; no debe reemplazar el RKNN Runtime instalado en la reCamera Pro.
 
 ## Solución de problemas
 
@@ -211,7 +213,7 @@ De forma predeterminada, después de que el agente genere una salida, necesitas 
 | --- | --- | --- |
 | La habilidad no aparece en la lista | El agente no ha recargado su directorio de habilidades a nivel de usuario | Reinicia el agente y verifica que la habilidad se haya instalado en el directorio mostrado arriba |
 | Se selecciona la plataforma incorrecta | Se mezclaron instrucciones para reCamera SG2002/riscv64 en la tarea | Indica que el destino es reCamera Pro, RV1126B y aarch64 |
-| La conversión RKNN falla | La versión del toolkit, la compatibilidad de operadores ONNX o el contrato de entrada del modelo son incompatibles | Pídele al agente que inspeccione primero el modelo ONNX y use RKNN-Toolkit2 2.3.2 |
+| La conversión RKNN falla | La versión del toolkit, el soporte de operadores ONNX o el contrato de entrada del modelo son incompatibles | Pídele al agente que inspeccione primero el modelo ONNX y use RKNN-Toolkit2 2.3.2 |
 | La precisión INT8 es deficiente | Faltan imágenes de calibración o no son representativas | Crea un conjunto de datos representativo y lista una ruta de imagen por línea |
 | El ejecutable es x86-64 | Se utilizó el compilador del host en lugar del compilador cruzado aarch64 | Vuelve a compilar con un compilador compatible con el destino y el sysroot de reCamera Pro |
 | El binario no puede cargar una biblioteca | El sysroot, el ABI o la ruta de búsqueda de tiempo de ejecución no coinciden con la placa | Pídele al agente que inspeccione las dependencias ELF y compare cada biblioteca de destino con el dispositivo |
@@ -219,11 +221,11 @@ De forma predeterminada, después de que el agente genere una salida, necesitas 
 
 ## Recursos
 
-- [Repositorio de la habilidad de desarrollo de reCamera Pro](https://github.com/Seeed-Projects/recamera-pro-development-skill)
+- [Repositorio de habilidades de desarrollo de reCamera Pro](https://github.com/Seeed-Projects/recamera-pro-development-skill)
 - [Página de producto de reCamera Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)
 - [Wiki de reCamera Pro](https://wiki.seeedstudio.com/es/recamera_pro_getting_started/)
 
-## Soporte técnico y debate sobre productos
+## Soporte técnico y debate sobre el producto
 
 Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos niveles de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 

@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_quick_start
+slug: /recamera_pro_api_quick_start_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -14,12 +15,13 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_api_quick_start/
+url: https://wiki.seeedstudio.com/ja/recamera_pro_api_quick_start_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/first_api_call.md (https://wiki.seeedstudio.com/ja/recamera_pro_api_quick_start/), which now serves the original slug /recamera_pro_api_quick_start. This file is kept for history as a draft (slug /recamera_pro_api_quick_start_legacy) and is excluded from production builds. Do not link here. -->
 
 # クイックスタート
 
-このページでは、ゼロの状態からログインを完了し、最初の API を呼び出すところまでを案内します。
+このページでは、ゼロの状態からログインを完了し、最初の API を呼び出すまでの手順を案内します。
 
 ## 前提条件
 
@@ -75,7 +77,7 @@ Content-Type: application/json
 | `iAuth` | `1` = ログイン成功、`0` = ログイン失敗、`2` = パスワード変更が必要 |
 | `sWaittime` | ロックされている場合の待機時間（秒） |
 
-レスポンスヘッダーには次の情報も含まれます：
+レスポンスヘッダーにも次の情報が含まれます：
 
 ```text
 Set-Cookie: token=<JWT_TOKEN>; Max-Age=86400; Path=/
@@ -103,7 +105,7 @@ Cookie: token=<JWT_TOKEN>
 }
 ```
 
-リクエストに Token が含まれていない、または Token の有効期限が切れている場合、デバイスは次のように返します：
+リクエストに Token が含まれていない場合、または Token の有効期限が切れている場合、デバイスは次のレスポンスを返します：
 
 ```json
 {
@@ -122,9 +124,9 @@ Token のデフォルトの有効期間は 24 時間です（`Max-Age=86400`）�
 * レスポンス形式やフィールド命名規則については、[Common Conventions](https://wiki.seeedstudio.com/ja/recamera_pro_api_common_conventions) を参照してください
 * 機能別に整理されたエンドポイントの説明については、[API Reference](https://wiki.seeedstudio.com/ja/recamera_pro_api_reference) を参照してください
 
-## 技術サポートと製品ディスカッション
+## テクニカルサポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

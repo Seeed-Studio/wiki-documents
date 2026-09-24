@@ -1,0 +1,10 @@
+position: 4
+label: 'Monitoramento ambiental'
+collapsible: true
+collapsed: true
+className: _environmental-monitoring
+# link:
+#   type: generated-index
+#   slug: environment-monitoring
+#   title: Monitoramento ambiental
+#   description: Sensoriamento e análise de ar, água, solo e condições ambientais.

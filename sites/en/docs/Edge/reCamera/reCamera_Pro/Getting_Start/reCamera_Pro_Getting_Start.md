@@ -7,16 +7,30 @@ keywords:
   - Edge AI
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_getting_started
+slug: /recamera_pro_getting_started_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-08-17'
-url: https://wiki.seeedstudio.com/recamera_pro_getting_started/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_getting_started_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Getting_Started/first_ai_detection.md (https://wiki.seeedstudio.com/recamera_pro_getting_started/), which now serves the original slug /recamera_pro_getting_started. This file is kept for history as a draft (slug /recamera_pro_getting_started_legacy) and is excluded from production builds. Do not link here. -->
+
+## Content Migration Index (Legacy Page)
+
+This page was split in the reCamera Pro wiki restructure (phase 2). Where each section moved:
+
+| Original section | New home |
+| --- | --- |
+| Introduction, §1 Hardware Connection, §2 Web UI Login | [First AI Detection](https://wiki.seeedstudio.com/recamera_pro_getting_started/) (this slug) |
+| §3 Wi-Fi Configuration | [Wi-Fi and Web UI Access](https://wiki.seeedstudio.com/recamera_pro_wifi_access/) |
+| §4 Resetting the Device | [Firmware Update and Recovery](https://wiki.seeedstudio.com/recamera_pro_firmware_update/) |
+| §5 FAQ & Troubleshooting | [Troubleshooting](https://wiki.seeedstudio.com/recamera_pro_faqs/) |
+| Overview summary | [reCamera Pro home](https://wiki.seeedstudio.com/recamera_pro/) |
 
 # reCamera Pro Quick Start Guide
 

@@ -11,7 +11,7 @@ last_update:
   date: 05/19/2026
   author: Kasun Thushara
 createdAt: '2026-05-19'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/es/respeaker_flex_soarm/
 ---
 
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_soarm/
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/lerobot_flex.png" alt="pir" width={800} height="auto" /></p>
 
 
-El controlador de voz LeRobot SO-ARM te permite controlar un brazo robótico SO-ARM100 usando comandos de voz naturales impulsados por IA. El sistema combina detección de palabra de activación, Groq Whisper de voz a texto, comprensión del lenguaje con LLaMA 3 y síntesis de voz con Orpheus para crear una experiencia robótica totalmente interactiva y manos libres. Construido sobre el [framework LeRobot](https://github.com/huggingface/lerobot?utm_source=chatgpt.com), se ejecuta en sistemas Ubuntu x86 y dispositivos NVIDIA Jetson usando una matriz de micrófonos USB ReSpeaker para la entrada de voz. Los usuarios pueden crear poses personalizadas del brazo, gestos y disparadores conversacionales para construir interacciones robóticas inteligentes para investigación, educación y desarrollo en robótica.
+El controlador de voz LeRobot SO-ARM te permite controlar un brazo robótico SO-ARM100 usando comandos de voz naturales impulsados por IA. El sistema combina detección de palabra de activación, conversión de voz a texto Groq Whisper, comprensión del lenguaje con LLaMA 3 y conversión de texto a voz Orpheus para crear una experiencia robótica totalmente interactiva y manos libres. Construido sobre el [framework LeRobot](https://github.com/huggingface/lerobot?utm_source=chatgpt.com), se ejecuta en sistemas Ubuntu x86 y dispositivos NVIDIA Jetson usando una matriz de micrófonos USB ReSpeaker para la entrada de voz. Los usuarios pueden crear poses personalizadas del brazo, gestos y disparadores conversacionales para construir interacciones robóticas inteligentes para investigación, educación y desarrollo en robótica.
 
 
 ## Hardware necesario
@@ -170,7 +170,7 @@ conda init --all
 ### Crear el entorno Conda
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 ```
 
@@ -190,12 +190,12 @@ pip install -e ".[feetech]"
 ### Configurar los ID de los motores
 
 Cada servo necesita un ID único asignado antes del montaje. Sigue la guía oficial:
-[Configure the Motors](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#configurar-los-motores)
+[Configurar los motores](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#configurar-los-motores)
 
-### Montar los brazos
+### Ensamblar los brazos
 
-Sigue el tutorial de montaje para el SO-ARM100:
-[Assembly Guide](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#montaje)
+Sigue el tutorial de ensamblaje para el SO-ARM100:
+[Guía de ensamblaje](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#ensamblaje)
 
 ### Encontrar los puertos USB
 
@@ -205,12 +205,12 @@ Conecta cada brazo y ejecuta esta utilidad para identificar qué puerto pertenec
 lerobot-find-port
 ```
 
-Ejecuta esto una vez por brazo (conecta uno a la vez). Anota las rutas de los puertos — normalmente `/dev/ttyACM0` y `/dev/ttyACM1`.
+Ejecuta esto una vez por brazo (conecta uno a la vez). Anota las rutas de los puertos; normalmente `/dev/ttyACM0` y `/dev/ttyACM1`.
 
 ### Calibrar ambos brazos
 
-La calibración asigna los valores brutos de los motores a posiciones normalizadas. Sigue la guía tanto para el brazo líder como para el seguidor:
-[Calibration Guide](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrar)
+La calibración asigna valores brutos del motor a posiciones normalizadas. Sigue la guía tanto para el brazo líder como para el seguidor:
+[Guía de calibración](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrar)
 
 El archivo de calibración se guardará automáticamente en:
 ```
@@ -311,7 +311,7 @@ Abre `robot_arm.py` y busca el diccionario `ACTION_MAP`. Añade tu pose:
 }),
 ```
 
-Para gestos animados (como un saludo), usa una lista de poses — cada paso se ejecuta con `ARM_GESTURE_DELAY` entre ellos:
+Para gestos animados (como un saludo), usa una lista de poses: cada paso se ejecuta con `ARM_GESTURE_DELAY` entre ellos:
 
 ```python
 "wave_hi": [
@@ -321,7 +321,7 @@ Para gestos animados (como un saludo), usa una lista de poses — cada paso se e
 ],
 ```
 
-### Paso 3 — Actualizar el mensaje de sistema del LLM en `llm.py`
+### Paso 3 — Actualizar el prompt de sistema del LLM en `llm.py`
 
 Añade tu nueva acción a la lista de acciones válidas y a las reglas de activación para que el LLM la conozca:
 
@@ -418,7 +418,7 @@ examples/voice_arm/
 ## Solución de problemas
 
 **PyAudio no se instala**
-Instala primero la biblioteca de sistema PortAudio:
+Instala primero la biblioteca del sistema PortAudio:
 ```bash
 sudo apt-get install -y portaudio19-dev
 ```

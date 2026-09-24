@@ -9,16 +9,18 @@ keywords:
   - RV1126B
   - model quantization
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_rknn_model_conversion
+slug: /recamera_pro_rknn_model_conversion_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
   date: 09/03/2026
   author: yylin
 createdAt: '2026-08-28'
-updatedAt: '2026-09-04'
-url: https://wiki.seeedstudio.com/recamera_pro_rknn_model_conversion/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_rknn_model_conversion_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Use_Your_Own_Model/rknn_toolkit2_conversion.md (https://wiki.seeedstudio.com/recamera_pro_rknn_model_conversion/), which now serves the original slug /recamera_pro_rknn_model_conversion. This file is kept for history as a draft (slug /recamera_pro_rknn_model_conversion_legacy) and is excluded from production builds. Do not link here. -->
 
 # Convert and Quantize Models for reCamera Pro with RKNN-Toolkit2
 

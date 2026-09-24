@@ -1,6 +1,6 @@
 ---
 description: 本wiki提供 reBot Arm B601-DM 在 Lerobot 框架内实现数据收集和训练的完整流程。
-title: reBot Arm B601-DM LeRobot 入门
+title: B601-DM Lerobot 入门
 keywords:
   - Lerobot
   - Huggingface
@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Python-3.12+-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
     <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>
@@ -89,14 +89,14 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 
 - Ubuntu 22.04/Ubuntu 24.04
 - NVIDIA GPU 与 CUDA 12+（用于 GPU 加速训练/推理，可选）
-- Python 3.10
+- Python 3.12
 - Torch 2.6（CPU 版可运行基础流程，GPU 加速需 CUDA 版）
 
 </TabItem>
 <TabItem value="jetson-orin" label="Jetson Orin">
 
 - Jetson JetPack 6.0 和 6.1，暂不支持 6.2
-- Python 3.10
+- Python 3.12
 - Torch 2.3+
 
 </TabItem>

@@ -10,7 +10,7 @@ last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-06-24'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/
 ---
 
@@ -928,7 +928,7 @@ The cooling capacity of the reComputer J401 carrier board is insufficient to sup
       <td>
         <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOmjI0fvPXRKZq51PiF7vaAekVzzuOQVqNLI_81mT1PqM" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
-      <td>bbaae572ddcfb745a9ce519ade817bf238a9cd9be8c0177bbef6ada353f89878</td>
+      <td>88007934755180fd97fb2c389e16b6bf43a8dd208b34897562b65468486df318</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>

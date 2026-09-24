@@ -12,15 +12,17 @@ keywords:
   - ALSA
   - aplay
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO-IMU-Detect.gif
-slug: /recamera_pro_imu_tilt_shake_detection
+slug: /recamera_pro_imu_tilt_shake_detection_legacy
+draft: true
 sidebar_position: 1
 last_update:
   date: 2026-06-11
   author: Sizhao zhou
 createdAt: '2026-06-11'
 updatedAt: '2026-07-23'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_tilt_shake_detection/
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_tilt_shake_detection_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/tilt_shake_detection.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_tilt_shake_detection/), which now serves the original slug /recamera_pro_imu_tilt_shake_detection. This file is kept for history as a draft (slug /recamera_pro_imu_tilt_shake_detection_legacy) and is excluded from production builds. Do not link here. -->
 
 # Usando a IMU Integrada da reCamera Pro para Detecção de Inclinação e Agitação
 
@@ -111,7 +113,7 @@ ffmpeg -i test.mp3 test.wav
 ```
 :::
 
-## Código de Implementação Básica
+## Código de Implementação Básico
 
 Agora que entendemos como ler dados brutos do giroscópio e reproduzir áudio, vamos escrever o código para implementar toda a funcionalidade.
 
@@ -152,7 +154,7 @@ subprocess.run([
 ])
 ```
 
-### Código Final de Implementação
+### Código de Implementação Final
 
 - Quando o dispositivo é agitado, ele reproduz **"Aviso: Não agite o dispositivo"**.
 - Quando o dispositivo é inclinado, ele reproduz **"Aviso: O equipamento tombou. Verifique imediatamente o estado do equipamento para evitar qualquer acidente"**.
@@ -184,7 +186,7 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 ./main.py --force-calib
 ```
 
-2. Ver ajuda de uso do código:
+2. Ver a ajuda de uso do código:
 
 ```bash
 ./main.py --help
@@ -193,12 +195,12 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 
 ## Solução de Problemas
 
-- **Não é possível ler dados do giroscópio**: Verifique se o caminho `/sys/bus/iio/devices/iio:device1` existe e se o arquivo `in_anglvel_x_raw` é legível. Se o caminho não existir, o driver IIO pode não estar carregado; verifique os módulos do kernel.
+- **Não é possível ler os dados do giroscópio**: Verifique se o caminho `/sys/bus/iio/devices/iio:device1` existe e se o arquivo `in_anglvel_x_raw` é legível. Se o caminho não existir, o driver IIO pode não estar carregado; verifique os módulos do kernel.
 - **Falha na reprodução de áudio**: Confirme se o arquivo de áudio está em formato WAV e se o comando `aplay` está disponível. Se o alto-falante estiver sem som, verifique as configurações de volume do ALSA.
 - **Falha na calibração**: Certifique-se de que o dispositivo esteja parado e nivelado durante a calibração. Se o tempo de calibração for insuficiente, use `--force-calib` para recalibrar.
 
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

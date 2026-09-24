@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-20 16:45:35 (北京时间)
-// 多语言页面: 2454 个
+// 生成时间: 2026-09-24 10:31:35 (北京时间)
+// 多语言页面: 2533 个
 
 (function() {
   'use strict';
@@ -738,6 +738,13 @@
     "pt"
   ],
   "/DeciAI-Getting-Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/deploy_preempt_rt_kernel_with_prebuilt_deb_package_on_recomputer_jetson": [
     "cn",
     "en",
     "es",
@@ -2012,6 +2019,13 @@
     "pt"
   ],
   "/recomputer_robotics_j50_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_recomputer_rugged_j401_cv_demo": [
     "cn",
     "en",
     "es",
@@ -3901,6 +3915,62 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_ha_sound_alert_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_imu_tilt_shake_detection_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_visual_wake_stt_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_ai_inference": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_record_settings": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_uart_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_storage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_quick_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_ha_sound_alert": [
     "cn",
     "en",
@@ -3908,35 +3978,112 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_imu_tilt_shake_detection": [
+  "/recamera_pro_http_uart": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_visual_wake_stt": [
+  "/recamera_pro_image_quality": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_faqs": [
+  "/recamera_pro_mqtt": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_hardware_specifications": [
+  "/recamera_pro_osd_masks": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_getting_started": [
+  "/recamera_pro_live_preview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_rtsp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_sound_trigger": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_acoustic_lab_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_backup_restore": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_firmware_update": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_device_info": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_deploy_checklist": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_development_cpp_skill": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_media_dev": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_dev_path": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_debian": [
     "cn",
     "en",
     "es",
@@ -3971,21 +4118,112 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_uart_usage": [
+  "/recamera_pro_sdk_setup": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_api_device-and-system": [
+  "/recamera_pro_terminal": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_api_network": [
+  "/recamera_pro_imu_tilt_shake_detection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_visual_wake_stt": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_faqs_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_hardware_specifications_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_getting_started_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_first_recording": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_wifi_access": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_gpio_guide_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_imu_usage_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_mipi_dsi_screen_usage_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_speaker_usage_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_uart_usage_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro": [
     "cn",
     "en",
     "es",
@@ -4006,14 +4244,14 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_api_error_codes": [
+  "/recamera_pro_api_device-and-system": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_api_faq": [
+  "/recamera_pro_api_error_codes": [
     "cn",
     "en",
     "es",
@@ -4027,21 +4265,189 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_api_quick_start": [
+  "/recamera_pro_api_network": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_debian": [
+  "/recamera_pro_downloads": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_development_cpp_skill": [
+  "/recamera_pro_hardware_specifications": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_model_compatibility": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_webui_reference": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_device-and-system_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_network_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_authentication_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_common_conventions_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_error_codes_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_faq_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_introduction_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_quick_start_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_debian_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_development_cpp_skill_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_rknn_model_conversion_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_ai_inference_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_device_info_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_preview_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_live_view_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_record_settings_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_terminal_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_api_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_collect_logs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_faqs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_acoustic_lab_usage_legacy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_model_path": [
     "cn",
     "en",
     "es",
@@ -4055,47 +4461,21 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_ai_inference": [
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_device_info": [
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_live_preview": [
+  "/recamera_pro_sensecraft": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_live_view": [
+  "/recamera_pro_rknn_upload": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recamera_pro_record_settings": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_terminal": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_acoustic_lab_usage": [
+  "/recamera_pro_model_validate": [
     "cn",
     "en",
     "es",
@@ -6048,6 +6428,13 @@
     "ja",
     "pt"
   ],
+  "/reachymini_development_cases_sway_screen": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/reachymini_development_cases_gripper_voice_control": [
     "cn",
     "en",
@@ -6491,6 +6878,114 @@
   ],
   "/rebot_arm_b601_rs_web_simulator_developer_guide": [
     "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_1": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_2": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_3": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_4": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_5": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_6": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_7": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_8": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_9": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_10": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_11": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_12": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_13": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_14": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_15": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_16": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_chapter_17": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_embodied_ai_course_introduction": [
     "en",
     "es",
     "ja",
@@ -15684,42 +16179,14 @@
     "ja",
     "pt"
   ],
+  "/solutions/conversational-voice-ai": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/solutions/hello_watcher_llms": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/solutions/smart-retail-voice-ai-solution-1": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/crowd-flow-monitoring": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/solutions/frigate-on-jetson-nodered-gun-alerts": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/solutions/jetson-crowd-tracking": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ha_dify_watcher_llms": [
     "cn",
     "en",
     "es",
@@ -15740,7 +16207,84 @@
     "ja",
     "pt"
   ],
+  "/solutions/smart-retail-voice-ai-solution-1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ha_dify_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/hvac-setpoint-control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/non_invasive_ct_energy_consumption": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/indoor-positioning-bluetooth-lorawan-tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/crowd-flow-monitoring": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/edge-fall-detection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/edge-product-recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/edge-waste-sorting": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/frigate-on-jetson-nodered-gun-alerts": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/jetson-crowd-tracking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/unmanned-store-face-access": [
     "cn",
     "en",
     "es",
@@ -15755,13 +16299,6 @@
     "pt"
   ],
   "/mission_pack_intro_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/solutions/indoor-positioning-bluetooth-lorawan-tracker": [
     "cn",
     "en",
     "es",

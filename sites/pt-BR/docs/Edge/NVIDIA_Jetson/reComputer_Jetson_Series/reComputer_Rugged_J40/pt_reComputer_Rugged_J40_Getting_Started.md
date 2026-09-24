@@ -13,7 +13,7 @@ last_update:
   date: 09/18/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-09-18'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
@@ -23,7 +23,7 @@ url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_rugged_j40_gettin
   <img width="700" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J4012" />
 </div>
 
-O reComputer Rugged J4012 é um computador de borda de IA com classificação IP66, equipado com NVIDIA Jetson Orin NX 16GB. Sua conectividade M12 selada oferece interfaces USB, Ethernet com PSE, CAN, RS-232/422/485 e DI/DO, enquanto um slot M.2 Key B suporta expansão 5G, tornando-o ideal para AMR, robótica, agricultura, automação industrial e aplicações marítimas.
+O reComputer Rugged J4012 é um computador de borda de IA com classificação IP66, alimentado pelo NVIDIA Jetson Orin NX 16GB. Sua conectividade M12 selada fornece interfaces USB, Ethernet com PSE, CAN, RS-232/422/485 e DI/DO, enquanto um slot M.2 Key B oferece suporte à expansão 5G, tornando-o ideal para aplicações em AMR, robótica, agricultura, automação industrial e marítima.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank">
@@ -34,7 +34,7 @@ O reComputer Rugged J4012 é um computador de borda de IA com classificação IP
 ## Recursos
 
 - **À prova d'água IP66**: Gabinete totalmente selado com conectores M12 à prova d'água para todas as interfaces externas
-- **Resfriamento passivo sem ventoinha**: Operação silenciosa de -20°C a +60°C com fluxo de ar de 0,7 m/s
+- **Resfriamento passivo sem ventoinha**: Operação silenciosa entre -20°C e +60°C com fluxo de ar de 0,7 m/s
 - **Robusto e resistente a vibrações**: 3 Grms @ 5–500 Hz, 1 hr/eixo — adequado para uso veicular e marítimo
 - **I/O industrial rico**: CAN-FD (isolado), RS-232/422/485, DI/DO, todos via conectores M12 A-code
 - **Rede flexível**: 4× PoE GbE + 1× GbE (M12), M.2 Key E (Wi-Fi/BT), M.2 Key B (5G/GPS)
@@ -200,17 +200,17 @@ O reComputer Rugged J4012 é um computador de borda de IA com classificação IP
 
 | LED | Cor | Status | Descrição |
 |-----|-------|--------|-------------|
-| PWR | Verde | On | Dispositivo está ligado |
-| PWR | Verde | Off | Dispositivo está desligado |
+| PWR | Verde | On | Dispositivo está energizado |
+| PWR | Verde | Off | Dispositivo não está energizado |
 | ACT | Verde | Flashing | Atividade de acesso ao SSD |
 
 ## Gravar o JetPack
 
 :::note
-As instruções de gravação serão adicionadas assim que o BSP estiver disponível. O processo de gravação segue o mesmo procedimento de outros dispositivos da linha reComputer J40.
+As instruções de gravação serão adicionadas assim que o BSP estiver disponível. O processo de gravação segue o mesmo procedimento de outros dispositivos da série reComputer J40.
 :::
 
-Consulte a página [Flash BSP with Jetpack to Selected Jetson](/pt-br/flash/jetpack_to_selected_product) para o guia de gravação mais recente.
+Consulte a página [Flash BSP with Jetpack to Selected Jetson](/pt-br/flash/jetpack_to_selected_product) para obter o guia de gravação mais recente.
 
 ### Pré-requisitos
 
@@ -260,9 +260,12 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## Recursos
 
-- [reComputer Rugged J401 Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf)
-- [Linux_for_Tegra Source Code](https://github.com/Seeed-Studio/Linux_for_Tegra)
-- [NVIDIA Jetson Devices Comparison](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+- [Folha de dados do reComputer Rugged J40](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf) 
+- [Esquemático da placa carrier](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf)
+- [Esquemático da placa PSE](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf)
+- [Arquivo 3D](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp)
+- [Código-fonte do Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
+- [Comparação de dispositivos NVIDIA Jetson](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 
 ## Suporte técnico e discussão sobre o produto
 

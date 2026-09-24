@@ -18,15 +18,27 @@ import { judgeHomePath } from '../../../utils/jsUtils';
 import TopNav from '../../../components/topNav';
 import Head from '@docusaurus/Head';
 import CopyPageButton from 'docusaurus-plugin-copy-page-button/react';
+import prepareTablesForCopyPage from '../../../utils/prepareTablesForCopyPage';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 
 const CopyPageButtonAny = CopyPageButton as React.ComponentType<any>;
 
 function StableCopyPageButton() {
   const [options, setOptions] = React.useState<Record<string, any> | null>(null);
+  const isBrowser = useIsBrowser();
 
   useEffect(() => {
+    // Tabs remount after hydration. Prepare their final DOM before mounting the
+    // plugin, which captures page content only once in its own mount effect.
+    if (!isBrowser) {
+      return;
+    }
+    const article = document.querySelector<HTMLElement>('main article');
+    if (article) {
+      prepareTablesForCopyPage(article);
+    }
     setOptions((window as any).__COPY_PAGE_BUTTON_OPTIONS__ || {});
-  }, []);
+  }, [isBrowser]);
 
   if (!options) {
     return null;
@@ -98,7 +110,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
                 {docTOC.mobile}
 
                 <div className={styles.mobileCopyPageButton}>
-                  <StableCopyPageButton />
+                  <StableCopyPageButton key={location.pathname} />
                 </div>
               </>
             )}
@@ -114,7 +126,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
       {docTOC.desktop && (
         <div className="col col--3">
           <div className={styles.copyPageButtonWrapper}>
-            <StableCopyPageButton />
+            <StableCopyPageButton key={location.pathname} />
           </div>
 
           {docTOC.desktop}

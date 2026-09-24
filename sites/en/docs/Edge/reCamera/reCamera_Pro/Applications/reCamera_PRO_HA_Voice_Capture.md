@@ -8,15 +8,17 @@ keywords:
   - Sound Detection
   - Edge AI
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif
-slug: /recamera_pro_ha_sound_alert
+slug: /recamera_pro_ha_sound_alert_legacy
+draft: true
 sidebar_position: 2
 last_update:
   date: 2026-07-27
   author: Sizhao zhou
 createdAt: '2026-07-27'
-updatedAt: '2026-07-28'
-url: https://wiki.seeedstudio.com/recamera_pro_ha_sound_alert/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_ha_sound_alert_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/home_assistant_alerts.md (https://wiki.seeedstudio.com/recamera_pro_ha_sound_alert/), which now serves the original slug /recamera_pro_ha_sound_alert. This file is kept for history as a draft (slug /recamera_pro_ha_sound_alert_legacy) and is excluded from production builds. Do not link here. -->
 
 # reCamera Pro and Home Assistant Integration: Sound-Triggered Photo Alert
 

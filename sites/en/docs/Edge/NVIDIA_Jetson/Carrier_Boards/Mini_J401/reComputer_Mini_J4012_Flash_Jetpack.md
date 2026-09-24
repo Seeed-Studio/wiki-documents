@@ -9,7 +9,7 @@ last_update:
   date: 07/16/2026
   author: Dayu
 createdAt: '2023-02-16'
-updatedAt: '2026-07-17'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/recomputer_mini_j401_getting_started/
 ---
 
@@ -340,12 +340,12 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td rowSpan={4}>6.2</td>
       <td>Orin Nx 16GB</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA1HJJC33ktQoyK0gIsXfzVAa06xCduuthEw-e8AYjbbok?e=8vE7Hi" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <td>TBD</td>
+      <td>39bd4065af9a05c4e9f002f2f6f60e69<br />d931856edb418dab94cd13dde7c08c44</td>
     </tr>
     <tr>
       <td>Orin Nx 8GB</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAihCaTOk9jRrUmBzigqObkAQne5XwZ8j29Naz7KFMSRtE?e=i9qso0" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <td>TBD</td>
+      <td>8cdd76faa3f2bda0b1ceb44770d671fc<br />83f9aafab7e10ea6783052e62cadb637</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>

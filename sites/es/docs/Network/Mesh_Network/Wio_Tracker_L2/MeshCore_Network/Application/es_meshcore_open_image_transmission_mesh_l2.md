@@ -7,9 +7,9 @@ keywords:
   - Wio Tracker L2
   - Transmisión de Imágenes
   - Compresión de Imágenes con IA
-  - Malla LoRa
+  - LoRa Mesh
   - AEIC-SE
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_L2_Pro.png
 slug: /meshcore_ai_image_transmission_l2
 sku: 100029766
 sidebar_position: 1
@@ -24,23 +24,25 @@ url: https://wiki.seeedstudio.com/es/meshcore_ai_image_transmission_l2/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# Transmisión de Imágenes con IA sobre MeshCore con Wio Tracker L2
+
 <div style={{textAlign:'center'}}>
 
-<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>
+<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_L2_Pro.png" style={{width:900, height:'auto'}}/>
 
 </div>
 
-[MeshCore](https://meshcore.io/) está diseñado para comunicación de malla LoRa de bajo ancho de banda. La transmisión de imágenes tradicional es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes de tasa de bits ultra baja** sobre MeshCore combinando:
+[MeshCore](https://meshcore.io/) está diseñado para comunicación LoRa mesh de bajo ancho de banda. La transmisión de imágenes tradicional es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes con tasa de bits ultra baja** sobre MeshCore combinando:
 
 - App MeshCore Open
 - Compresión de imágenes basada en IA
 - Paquetes `GRP_DATA` de MeshCore
 
 
-Esta función de transmisión de imágenes es adecuada para usuarios que necesitan compartir información visual en lugares sin Internet confiable ni redes celulares.
+Esta función de transmisión de imágenes es adecuada para usuarios que necesitan compartir información visual en lugares sin Internet confiable o redes celulares.
 
-- **Exploradores al aire libre**: Senderistas, escaladores y equipos de expedición pueden compartir condiciones de los senderos, enviar imágenes de paisajes remotos y proporcionar información visual cuando el texto no es suficiente.
-- **Equipos de respuesta a emergencias y desastres**: El equipo puede compartir condiciones de campo, proporcionar actualizaciones visuales rápidas y mejorar la conciencia del equipo mediante imágenes.
+- **Exploradores al aire libre**: Senderistas, escaladores y equipos de expedición pueden compartir el estado de los senderos, enviar imágenes de paisajes remotos y proporcionar información visual cuando el texto no es suficiente.
+- **Equipos de respuesta a emergencias y desastres**: El equipo puede compartir las condiciones en el terreno, proporcionar actualizaciones visuales rápidas y mejorar la conciencia del equipo mediante imágenes.
 - **Entusiastas de la comunicación fuera de la red**: Adecuado para usuarios de MeshCore y radioaficionados que desean explorar la comunicación en el borde impulsada por IA.
 
 
@@ -87,13 +89,13 @@ Habilita la transmisión de imágenes y descarga los archivos del modelo de ML e
 
 ### Transmisión de imágenes
 
-Elige una imagen de tu teléfono. 
+Elige una imagen desde tu teléfono. 
 
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshOpen_PhotoSelection.png" style={{width:300, height:'auto'}}/>
 </div>
 
-La APP procesará automáticamente la imagen antes de la transmisión. Los datos de la imagen comprimida se transmitirán a través de la red MeshCore. El tiempo de transmisión depende del número de saltos de malla, la configuración de radio, el tráfico de red y la calidad de la señal. Los datos transmitidos contienen solo la representación comprimida, no la imagen original.
+La APP procesará automáticamente la imagen antes de la transmisión. Los datos de la imagen comprimida se transmitirán a través de la red MeshCore. El tiempo de transmisión depende del número de saltos en la malla, la configuración de radio, el tráfico de red y la calidad de la señal. Los datos transmitidos contienen solo la representación comprimida, no la imagen original.
 
 Cuando el nodo receptor recibe los datos comprimidos, el decodificador realiza entonces la reconstrucción de la imagen. La imagen reconstruida aparecerá en la interfaz de chat.
 <div style={{textAlign:'center'}}>
@@ -102,7 +104,7 @@ Cuando el nodo receptor recibe los datos comprimidos, el decodificador realiza e
 
 ## Comprender las imágenes reconstruidas por IA
 
-La imagen de salida no es una copia de píxeles perfecta de la imagen original. El decodificador puede generar detalles adicionales que no fueron transmitidos. Por lo tanto, esta función es adecuada para conocimiento de la escena, comunicación al aire libre, monitoreo remoto y uso compartido de información visual. No es adecuada para recopilación de pruebas, verificación de identidad, análisis científico de imágenes ni aplicaciones que requieran reproducción exacta de la imagen.
+La imagen de salida no es una copia perfecta píxel a píxel de la imagen original. El decodificador puede generar detalles adicionales que no fueron transmitidos. Por lo tanto, esta función es adecuada para conocimiento de la escena, comunicación al aire libre, monitoreo remoto y uso compartido de información visual. No es adecuada para recopilación de pruebas, verificación de identidad, análisis científico de imágenes ni aplicaciones que requieran reproducción exacta de la imagen.
 
 ## Recursos
 

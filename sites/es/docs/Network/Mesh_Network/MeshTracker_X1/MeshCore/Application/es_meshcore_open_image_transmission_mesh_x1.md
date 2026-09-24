@@ -9,7 +9,7 @@ keywords:
   - Compresión de Imágenes con IA
   - LoRa Mesh
   - AEIC-SE
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png
 slug: /meshcore_ai_image_transmission_x1
 sku: 100087698
 sidebar_position: 1
@@ -24,13 +24,15 @@ url: https://wiki.seeedstudio.com/es/meshcore_ai_image_transmission_x1/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# Transmisión de Imágenes con IA sobre MeshCore con MeshTracker X1
+
 <div style={{textAlign:'center'}}>
 
-<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>
+<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png" style={{width:900, height:'auto'}}/>
 
 </div>
 
-[MeshCore](https://meshcore.io/) está diseñado para comunicación de malla LoRa de bajo ancho de banda. La transmisión de imágenes tradicional es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes con tasa de bits ultra baja** sobre MeshCore combinando:
+[MeshCore](https://meshcore.io/) está diseñado para comunicación LoRa mesh de bajo ancho de banda. La transmisión de imágenes tradicional es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes de tasa de bits ultra baja** sobre MeshCore combinando:
 
 - App MeshCore Open
 - Compresión de imágenes basada en IA
@@ -70,7 +72,7 @@ Reconstructed Image
 
 ### Configuración inicial
 
-1. Instala la app MeshCore Open. [Haz clic aquí](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar la versión de la APP que admite transmisión de imágenes.
+1. Instala la App MeshCore Open. [Haz clic aquí](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar la versión de la APP que soporta transmisión de imágenes.
 2. Conecta tu nodo MeshCore a la APP. [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#app-connection) para leer la guía de conexión de MeshTracker X1.
 3. Configura tu región LoRa y los ajustes de red.
 4. Asegúrate de que otro nodo MeshCore esté disponible como receptor.
@@ -87,13 +89,13 @@ Habilita la transmisión de imágenes y descarga los archivos del modelo de ML e
 
 ### Transmisión de imágenes
 
-Elige una imagen de tu teléfono. 
+Elige una imagen desde tu teléfono. 
 
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshOpen_PhotoSelection.png" style={{width:300, height:'auto'}}/>
 </div>
 
-La APP procesará automáticamente la imagen antes de la transmisión. Los datos de la imagen comprimida se transmitirán a través de la red MeshCore. El tiempo de transmisión depende del número de saltos de malla, la configuración de radio, el tráfico de red y la calidad de la señal. Los datos transmitidos contienen solo la representación comprimida, no la imagen original.
+La APP procesará automáticamente la imagen antes de la transmisión. Los datos de la imagen comprimida se transmitirán a través de la red MeshCore. El tiempo de transmisión depende del número de saltos en la malla, la configuración de radio, el tráfico de red y la calidad de la señal. Los datos transmitidos contienen solo la representación comprimida, no la imagen original.
 
 Cuando el nodo receptor recibe los datos comprimidos, el decodificador realiza entonces la reconstrucción de la imagen. La imagen reconstruida aparecerá en la interfaz de chat.
 <div style={{textAlign:'center'}}>

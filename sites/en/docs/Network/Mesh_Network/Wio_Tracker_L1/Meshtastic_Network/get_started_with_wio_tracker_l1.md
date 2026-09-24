@@ -11,7 +11,7 @@ last_update:
   date: 09/03/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-03'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
@@ -435,9 +435,10 @@ If pip is missing, run `python3 -m ensurepip --upgrade` first.
 
 <TabItem value="linux" label="Linux">
 
-Install `adafruit-nrfutil` with pipx:
+On Ubuntu/Debian, install `adafruit-nrfutil` with pipx. It isolates the tool from the system Python environment and avoids the `externally-managed-environment` error:
 
-```
+```bash
+sudo apt update
 sudo apt install pipx
 pipx install adafruit-nrfutil
 pipx ensurepath
@@ -489,7 +490,21 @@ The device appears as `/dev/cu.usbmodemXXXX`.
 ls /dev/ttyACM*
 ```
 
-The device usually appears as `/dev/ttyACM0`; if nothing is listed, also try `ls /dev/ttyUSB*`.
+The device usually appears as `/dev/ttyACM0`; if nothing is listed, also try `ls /dev/ttyUSB*`. Compare the results before and after connecting the device to identify its port. Check again after entering DFU mode, because the port number may change.
+
+Check the port permissions, replacing `/dev/ttyACM0` with your actual port:
+
+```bash
+ls -l /dev/ttyACM0
+```
+
+On Ubuntu/Debian, serial ports usually belong to the `dialout` group. If you get `Permission denied` and the port belongs to `dialout`, add your user to that group:
+
+```bash
+sudo usermod -aG dialout "$USER"
+```
+
+Log out and log back in for the change to take effect. On other distributions, use the serial-access group shown by `ls -l` and follow your distribution's instructions.
 
 </TabItem>
 </Tabs>
@@ -497,6 +512,8 @@ The device usually appears as `/dev/ttyACM0`; if nothing is listed, also try `ls
 **Step 4: Flash the bootloader**
 
 Replace the port with the one you found in Step 3:
+
+Close any serial monitor or browser flasher connected to the device. If you have already entered DFU mode by double-pressing `Reset`, use the current DFU port and omit `--touch 1200` from the commands below.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -528,7 +545,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 **Step 5: Handle the serial port change**
 
-`--touch 1200` restarts the device into DFU mode, so the serial port usually changes and the first command may stop with a traceback like this:
+`--touch 1200` requests DFU mode by opening and closing the serial port at 1200 baud. The operating system may then assign a different port, and the first command may stop with a traceback like this:
 
 ```
 Touched serial port COM43
@@ -536,7 +553,7 @@ Touched serial port COM43
 FileNotFoundError: could not open port 'COM43'
 ```
 
-This is NOT a failure — the device already entered DFU mode on a NEW port. On the tested Windows PC, for example, it changed from `COM43` to `COM45`:
+Check whether a new DFU port has appeared before retrying. This error alone does not confirm that the device entered DFU mode or that the bootloader was flashed successfully. On the tested Windows PC, the port changed from `COM43` to `COM45`:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/03_dfu_com_port.png" alt="DFU serial port after re-enumeration in Windows Device Manager" width={600} height="auto" /></p>
 
@@ -561,8 +578,10 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 <TabItem value="linux" label="Linux">
 
+For example, if the new DFU port is `/dev/ttyACM1`, use the following command. Replace it with your actual port:
+
 ```
-adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/ttyACM0 -b 115200 --singlebank
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/ttyACM1 -b 115200 --singlebank
 ```
 
 </TabItem>
@@ -589,8 +608,8 @@ When you have completed the above steps, follow [Flash Firmware](https://wiki.se
 **Troubleshooting**
 
 - `adafruit-nrfutil` is not recognized after installation: add the Python user scripts directory to your PATH (`Scripts` on Windows, `bin` under your home directory on macOS); on Linux, reopen your terminal after `pipx ensurepath`.
-- Port busy / access denied: close serial monitors, web flasher tabs, Arduino IDE, or anything else holding the port.
-- `FileNotFoundError: could not open port ...` after `Touched serial port ...`: the device entered DFU mode on a new port — follow Step 5.
+- Port busy / access denied: close serial monitors, web flasher tabs, Arduino IDE, or anything else holding the port. On Linux, also check the serial port permissions and group membership as described in Step 3.
+- `FileNotFoundError: could not open port ...` after `Touched serial port ...`: check whether a new DFU port appeared and follow Step 5. If no DFU port appears, try the manual DFU recovery below.
 - Unable to enter DFU mode: see [Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually).
 
 **Manual DFU recovery**
@@ -671,7 +690,7 @@ Each node will periodically send its own node information, enabling other nodes 
 
 #### Regenerate Private Key
 
-Two nodes need to know their private key with each other in order to be able to communicate with each oher. If one node keeps failing in private message transmission, try regenerate the private key for it.
+Each node owns a public/private key pair. To exchange an encrypted private message, the sender encrypts it with the recipient's public key, and only that recipient's private key can decrypt it. Two nodes can therefore communicate privately once they know each other's public key. If one node keeps failing in private-message transmission, try regenerating its private key. After regeneration, delete that node from the other devices' node lists so they can reconnect and obtain its new public key.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 

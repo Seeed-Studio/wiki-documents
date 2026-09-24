@@ -14,7 +14,7 @@ last_update:
   date: 4/14/2026
   author: Zibo
 createdAt: '2026-04-14'
-updatedAt: '2026-06-17'
+updatedAt: '2026-09-21'
 sku: 100042928
 url: https://wiki.seeedstudio.com/rtl8852be_wireless_module_for_jetson/
 ---
@@ -197,7 +197,7 @@ sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.PNG"/>
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
 </div>
 
 ### Verify WiFi 6 Connection

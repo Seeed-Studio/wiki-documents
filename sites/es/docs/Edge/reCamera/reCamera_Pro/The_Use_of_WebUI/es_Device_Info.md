@@ -4,16 +4,28 @@ title: Información del dispositivo
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_device_info
+slug: /recamera_pro_device_info_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-10'
-url: https://wiki.seeedstudio.com/es/recamera_pro_device_info/
+updatedAt: '2026-07-09'
+url: https://wiki.seeedstudio.com/es/recamera_pro_device_info_legacy/
 ---
+<!-- PÁGINA LEGADA (reCamera Pro wiki restructure, phase 2): this page has been superseded by Deploy/network_time_access.md (https://wiki.seeedstudio.com/es/recamera_pro_device_info/), which now serves the original slug /recamera_pro_device_info. This file is kept for history as a draft (slug /recamera_pro_device_info_legacy) and is excluded from production builds. Do not link here. -->
+
+## Índice de migración de contenido (Página legada)
+
+| Sección original | Nuevo destino |
+| --- | --- |
+| Información básica, Configuración de hora, Configuración de red | [Red, hora y acceso](https://wiki.seeedstudio.com/es/recamera_pro_device_info/) (este slug) |
+| Configuración de red (detalles de Wi‑Fi) | [Acceso Wi‑Fi y Web UI](https://wiki.seeedstudio.com/es/recamera_pro_wifi_access/) |
+| Configuración de conexión (SSH/HTTP/baudios) | [Terminal, SSH y UART de depuración](https://wiki.seeedstudio.com/es/recamera_pro_terminal/) |
+| Configuración del sistema (actualización de firmware, reinicio, restablecimiento) | [Actualización y recuperación de firmware](https://wiki.seeedstudio.com/es/recamera_pro_firmware_update/) |
+| Exportar/Importar configuración | [Copia de seguridad y restauración](https://wiki.seeedstudio.com/es/recamera_pro_backup_restore/) |
 
 En esta interfaz, puedes ver la diversa información de versión de hardware y software de recamera pro, así como ajustar la configuración correspondiente del sistema.
 ## Información básica
@@ -27,7 +39,7 @@ Esta interfaz te permite configurar la hora del sistema en recamera pro.
 ## Configuración de red
 recamera pro está equipado con un módulo WiFi, y puedes configurar el estado de la red en esta interfaz.
 <img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_GJspvgAFdl.png" />
-Después de conectarte a la red, puedes hacer clic en el signo de exclamación a la derecha de la red conectada para obtener información de red del dispositivo más detallada.
+Después de conectarte a la red, puedes hacer clic en el signo de exclamación a la derecha de la red conectada para obtener información más detallada sobre la red del dispositivo.
 <img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_vq4u1biblp.png" />
 
 ## Configuración de conexión
@@ -35,7 +47,7 @@ En esta interfaz, puedes configurar cómo conectarte a recamera pro, y puedes aj
 <img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_ZH9JMcsCen.png" />
 
 ## Configuración del sistema
-En esta interfaz, puedes comprobar la versión de firmware del dispositivo, elegir si actualizar a un nuevo firmware, y reiniciar el sistema, cambiar la contraseña o restaurar la configuración de fábrica.
+En esta interfaz, puedes comprobar la versión de firmware del dispositivo, elegir si actualizar a un nuevo firmware, y reiniciar el sistema, cambiar la contraseña o restaurar los valores de fábrica.
 ### Exportar e importar configuración
 Cuando selecciones "Export Configuration", el navegador descargará automáticamente un archivo que contiene varios ajustes actuales, lo que facilita importarlos rápidamente en otros dispositivos recamera pro más adelante.
 <img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_eBayhpwddh.png" />
@@ -44,7 +56,7 @@ Para importar la configuración, debes seleccionar un archivo tar para importar,
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

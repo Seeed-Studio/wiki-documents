@@ -1,6 +1,6 @@
 ---
 description: Wio Tracker L1 シリーズの使用を開始する
-title: Meshtastic を使い始める
+title: Meshtastic を始める
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -25,7 +25,7 @@ Wio Tracker L1 シリーズは同じハードウェアフレームワークを�
 
 ### パート 1 開封
 
-L1、L1 Lite、L1 E-Ink モデルを初めて使用する場合は、USB 電源に接続した後、電源スイッチを上に持ち上げて電源を入れてください。
+L1、L1 Lite または L1 E-Ink モデルを初めて使用する場合は、USB 電源に接続した後、電源スイッチを上に持ち上げて電源を入れてください。
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -59,12 +59,12 @@ L1 E-Ink ファームウェアの `latest Alpha firmware` は現在、4 方向�
 
 #### ブザー
 
-ブザーをオンまたはオフにしたい場合は、まずファームウェアをバージョン `2.7` に `update the firmware` してください。メニューバーがあるのは 2.7 バージョンのファームウェアのみだからです。
+ブザーをオンまたはオフにしたい場合は、まずファームウェアをバージョン `2.7` に `update the firmware` してください。2.7 バージョンのファームウェアのみがメニューバーを備えているためです。
 
 - ブザーをオンにする
-Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action -> Disable
+Setting (歯車の形をしたアイコン) -> Notification -> Buzzer Action -> Disable
 - ブザーをオフにする
-Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action -> All enabled
+Setting (歯車の形をしたアイコン) -> Notification -> Buzzer Action -> All enabled
 
 <div class="table-center">
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -76,7 +76,7 @@ Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action 
 <iframe width="700" height="395" src="https://www.youtube.com/embed/OFtUwN3z0tI?si=9zr3j-hLuoj0-CXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### パート 5 各種ステータス
+### パート 5 さまざまな状態
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/eZa8kfUD2e4?si=3Fe_30obcercIXXO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -88,7 +88,7 @@ Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action 
 デバイスが以下の状態にあるときは、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。
 
 1. メッセージ送信プロセスが完了していない
-2. 設定中
+2. 設定中である
 :::
 
 ### ファームウェアを書き込む
@@ -99,7 +99,7 @@ Setting（歯車の形をしたアイコン） -> Notification -> Buzzer Action 
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。
 
-L1、L1 Lite、L1 Pro の場合は、ターゲットデバイスとして `Seeed Wio Tracker L1` を選択し、最新のファームウェアを選んでから `Flash` をクリックします。
+L1、L1 Lite および L1 Pro の場合は、ターゲットデバイスとして `Seeed Wio Tracker L1` を選択し、最新のファームウェアを選んでから `Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
@@ -111,11 +111,11 @@ L1 E-Ink の場合は、ターゲットデバイスとして `Seeed Wio Tracker 
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
-デバイスの電源を入れ、`Enter DFU Mode` をクリックします。`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続します。`Tracker L1` という名前のドライブが表示されるはずです。
+デバイスの電源を入れ、`Enter DFU Mode` をクリックします。`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続すると、`Tracker L1` という名前のドライブが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2 ファイルを DFU ドライブにドラッグします。ファイルのコピーが完了し、デバイスが再起動すると、ファームウェアの書き込みが完了します。
+UF2 ファイルを DFU ドライブにドラッグします。ファイルのコピー完了とデバイスの再起動後に、ファームウェアが書き込まれます。
 
 ### デバイスの電源を入れる
 
@@ -138,7 +138,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/device_select123.jpeg" alt="pir" width={300} height="auto" /></p>
 
-- ディスプレイに表示されているコードを入力し、`OK` をクリックしてデバイスに接続します。
+- ディスプレイに表示されるコードを入力し、`OK` をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/pairing_code123.png" alt="pir" width={600} height="auto" /></p>
 
@@ -159,7 +159,7 @@ import TabItem from '@theme/TabItem';
 
 ### LoRa を設定する
 
-メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、自分がいる地域に合わせて設定する必要があります。
+メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、自分の地域に合わせて設定する必要があります。
 
 <Tabs>
 <TabItem value="ios" label="IOS アプリ">
@@ -176,7 +176,7 @@ import TabItem from '@theme/TabItem';
 
 **リージョン一覧**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**リージョンコード**|**説明**|**周波数範囲 (MHz)**|**デューティサイクル (%)**|**出力制限 (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未設定|N/A|N/A|N/A|
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
@@ -188,9 +188,9 @@ import TabItem from '@theme/TabItem';
 **EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-これでデバイス上の LoRa リージョンを設定できたので、自分の用途に合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
+デバイスで LoRa リージョンを設定したので、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
 
-## 詳細設定
+## 高度な設定
 
 ### Web サイト経由で接続する
 
@@ -211,12 +211,12 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 
  方法 1: Bluetooth 経由
 
-    bluetooth 方法を選択します。ポップアップウィンドウでデバイス ID を選択します。
+    Bluetooth 方法を選択します。ポップアップウィンドウでデバイス ID を選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
  方法 2: シリアル経由
 
-    serial 方法を選択します。デバイスマネージャーを開き、デバイスがどのポートに接続されているかを確認します。ポップアップウィンドウでそのポートを選択します。
+    シリアル方法を選択します。デバイスマネージャーを開き、デバイスがどのポートに接続されているかを確認します。ポップアップウィンドウでそのポートを選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     デバイスがリストに表示されます。クリックして接続します。接続に成功すると、ウェブサイト上でデバイスのステータスを直接確認できます。
@@ -310,7 +310,7 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 ### バーチャルキーボード
 
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
-バージョン 2.7 のファームウェアではバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力して、他のデバイスと通信できます。[Flash Firmware Tutorial](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) に従ってファームウェアを更新してください。
+バージョン 2.7 のファームウェアではバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力して、他のデバイスと通信できます。ファームウェアを更新するには、[Flash Firmware Tutorial](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) に従ってください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ### 着信音の設定
@@ -389,19 +389,19 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 書き込み中はケーブル接続を安定させ、シリアルポート番号が変わったとしても **絶対に** 取り外さないでください。
 :::
 
-**ステップ 1：準備**
+**ステップ 1: 準備**
 
-- Wio Tracker L1 シリーズデバイス（L1 / L1 Pro）
-- 正常に動作する USB データケーブル（充電専用ケーブルではないもの）
+- Wio Tracker L1 シリーズ デバイス（L1 / L1 Pro）
+- 動作確認済みの USB データケーブル（充電専用ケーブルは不可）
 - Python 3 と pip がインストールされた Windows、macOS または Linux PC
 - ブートローダーパッケージ：[Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — ZIP を展開しないでください。`adafruit-nrfutil` は ZIP のまま使用します
 
-**ステップ 2：adafruit-nrfutil をインストール**
+**ステップ 2: adafruit-nrfutil をインストール**
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-Python 3 と pip が利用可能か確認します（pip がない場合は、まず `python -m ensurepip --upgrade` を実行してください）：
+Python 3 と pip が利用可能か確認します（pip がない場合は、先に `python -m ensurepip --upgrade` を実行してください）:
 
 ```
 python --version
@@ -410,7 +410,7 @@ python -m pip --version
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/00_python_pip_check.png" alt="Check Python and pip on Windows" width={600} height="auto" /></p>
 
-次にインストールして確認します（このガイドでテストされたバージョンは `0.5.3.post16` です）：
+次にインストールして確認します（このガイドでテストしたバージョンは `0.5.3.post16` です）:
 
 ```
 python -m pip install --user adafruit-nrfutil
@@ -429,21 +429,22 @@ python3 -m pip install --user adafruit-nrfutil
 adafruit-nrfutil version
 ```
 
-pip がない場合は、まず `python3 -m ensurepip --upgrade` を実行してください。
+pip がない場合は、先に `python3 -m ensurepip --upgrade` を実行してください。
 
 </TabItem>
 
 <TabItem value="linux" label="Linux">
 
-pipx を使って `adafruit-nrfutil` をインストールします：
+Ubuntu/Debian では、pipx を使って `adafruit-nrfutil` をインストールします。これにより、ツールがシステムの Python 環境から分離され、`externally-managed-environment` エラーを回避できます。
 
-```
+```bash
+sudo apt update
 sudo apt install pipx
 pipx install adafruit-nrfutil
 pipx ensurepath
 ```
 
-Fedora の場合は、apt の代わりに `sudo dnf install pipx` を使用します。ターミナルを再起動してから、次を確認します：
+Fedora では、apt の代わりに `sudo dnf install pipx` を使用します。ターミナルを再起動してから、次を確認します。
 
 ```
 adafruit-nrfutil version
@@ -456,9 +457,9 @@ adafruit-nrfutil version
 常に `adafruit-nrfutil version` でバージョンを確認してください。`adafruit-nrfutil --version` は使用しないでください。
 :::
 
-**ステップ 3：シリアルポートを確認**
+**ステップ 3: シリアルポートを確認**
 
-デバイスのシリアルポートを確認します — 以下の例は PC によって異なります：
+デバイスのシリアルポートを確認します — 以下の例は PC によって異なります。
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -489,14 +490,30 @@ ls /dev/cu.*
 ls /dev/ttyACM*
 ```
 
-デバイスは通常 `/dev/ttyACM0` として表示されます。何も表示されない場合は、`ls /dev/ttyUSB*` も試してください。
+デバイスは通常 `/dev/ttyACM0` として表示されます。何も表示されない場合は、`ls /dev/ttyUSB*` も試してください。デバイス接続の前後で結果を比較し、ポートを特定します。DFU モードに入った後はポート番号が変わる可能性があるため、再度確認してください。
+
+実際のポート名で `/dev/ttyACM0` を置き換えて、ポートのパーミッションを確認します。
+
+```bash
+ls -l /dev/ttyACM0
+```
+
+Ubuntu/Debian では、シリアルポートは通常 `dialout` グループに属します。`Permission denied` が表示され、ポートが `dialout` に属している場合は、次のようにしてユーザーをそのグループに追加します。
+
+```bash
+sudo usermod -aG dialout "$USER"
+```
+
+変更を有効にするには、一度ログアウトしてから再度ログインしてください。その他のディストリビューションでは、`ls -l` に表示されるシリアルアクセス用グループを使用し、そのディストリビューションの手順に従ってください。
 
 </TabItem>
 </Tabs>
 
-**ステップ 4：ブートローダーを書き込む**
+**ステップ 4: ブートローダーを書き込む**
 
-ステップ 3 で確認したポートに置き換えます：
+ステップ 3 で見つけたポートに置き換えてください：
+
+デバイスに接続されているシリアルモニタやブラウザフラッシャをすべて閉じてください。すでに `Reset` をダブルクリックして DFU モードに入っている場合は、現在の DFU ポートを使用し、以下のコマンドから `--touch 1200` を省略します。
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -505,7 +522,7 @@ ls /dev/ttyACM*
 adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p COM43 -b 115200 --singlebank --touch 1200
 ```
 
-ZIP がターミナルのカレントフォルダーにない場合は、`--package` に ZIP のフルパスを指定します。例：`"C:\path\to\wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip"`。
+ZIP がターミナルのカレントフォルダにない場合は、そのフルパスを `--package` に渡します。例：`"C:\path\to\wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip"`。
 
 </TabItem>
 
@@ -528,7 +545,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 **ステップ 5: シリアルポートの変更に対応する**
 
-`--touch 1200` はデバイスを DFU モードで再起動するため、通常はシリアルポートが変わり、最初のコマンドは次のようなトレースバックを出して停止することがあります：
+`--touch 1200` は、シリアルポートを 1200 ボーで開閉することで DFU モードを要求します。その後、オペレーティングシステムが別のポートを割り当てる場合があり、最初のコマンドが次のようなトレースバックで停止することがあります：
 
 ```
 Touched serial port COM43
@@ -536,11 +553,11 @@ Touched serial port COM43
 FileNotFoundError: could not open port 'COM43'
 ```
 
-これは失敗ではありません — デバイスはすでに新しいポートで DFU モードに入っています。例えばテストした Windows PC では、`COM43` から `COM45` に変わりました：
+再試行する前に、新しい DFU ポートが現れていないか確認してください。このエラーだけでは、デバイスが DFU モードに入ったことやブートローダーが正常に書き込まれたことは確認できません。テストした Windows PC では、ポートは `COM43` から `COM45` に変わりました：
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/03_dfu_com_port.png" alt="Windows デバイスマネージャーで再列挙後の DFU シリアルポート" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/03_dfu_com_port.png" alt="Windows のデバイスマネージャーで再列挙後の DFU シリアルポート" width={600} height="auto" /></p>
 
-**USB ケーブルは接続したままにしてください。** 新しいポートを探し（**デバイス マネージャー → ポート (COM と LPT)** を更新するか、`ls /dev/cu.*` / `ls /dev/ttyACM*` を再実行します）、その後、新しいポートに対して `--touch 1200` なしで再度フラッシュします：
+**USB ケーブルは接続したままにしてください。** 新しいポートを探し（**デバイス マネージャー → ポート (COM と LPT)** を更新するか、`ls /dev/cu.*` / `ls /dev/ttyACM*` を再実行します）、その後、新しいポートで `--touch 1200` なしで再度フラッシュします：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -561,8 +578,10 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 <TabItem value="linux" label="Linux">
 
+たとえば、新しい DFU ポートが `/dev/ttyACM1` の場合は、次のコマンドを使用します。実際のポートに置き換えてください：
+
 ```
-adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/ttyACM0 -b 115200 --singlebank
+adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/ttyACM1 -b 115200 --singlebank
 ```
 
 </TabItem>
@@ -570,40 +589,40 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 **ステップ 6: 結果を確認する**
 
-出力の末尾が `Device programmed.` となっていれば、フラッシュは成功です：
+出力の末尾が `Device programmed.` で終わっていれば、書き込みは成功しています：
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="末尾が Device programmed となっている adafruit-nrfutil の出力" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="末尾が Device programmed で終わる adafruit-nrfutil の出力" width={600} height="auto" /></p>
 
-その後、PC 上に UF2 ドライブが表示されます（テストした Windows PC のスクリーンショット）。ボリュームラベルはブートローダービルドによって異なります — テスト機では `XIAO-BOOT` と表示されました — が、これは合否の基準ではありません。ドライブ名や `INFO_UF2.TXT` で結果を判断しないでください：
+その後、PC 上に UF2 ドライブが表示されます（テストした Windows PC のスクリーンショット）。ボリュームラベルはブートローダービルドによって異なります — テストしたユニットでは `XIAO-BOOT` と表示されました — が、これは合否判定の基準ではありません。ドライブ名や `INFO_UF2.TXT` で結果を判断しないでください：
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/05_uf2_drive.png" alt="ブートローダーのフラッシュ後に表示される UF2 ドライブ" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/05_uf2_drive.png" alt="ブートローダー書き込み後に表示される UF2 ドライブ" width={600} height="auto" /></p>
 
 **ステップ 7: アプリケーションファームウェアを再インストールする**
 
 :::warning
-ブートローダーを復元してもアプリケーションファームウェアは再インストールされません — 再度フラッシュするまで、デバイスには動作するファームウェアがありません。
+ブートローダーを復元しても、アプリケーションファームウェアは再インストールされません — 再度ファームウェアを書き込むまで、デバイスには動作するファームウェアがありません。
 :::
 
-上記の手順を完了したら、[Flash Firmware](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) に従ってアプリケーションファームウェアをフラッシュしてください。
+上記の手順を完了したら、[Flash Firmware](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) に従ってアプリケーションファームウェアを書き込んでください。
 
 **トラブルシューティング**
 
-- インストール後に `adafruit-nrfutil` が認識されない：Python のユーザースクリプトディレクトリを PATH に追加します（Windows では `Scripts`、macOS ではホームディレクトリ配下の `bin`）。Linux では `pipx ensurepath` の後にターミナルを開き直してください。
-- ポートがビジー / アクセス拒否：シリアルモニタ、Web フラッシャーのタブ、Arduino IDE など、そのポートを使用しているものを閉じてください。
-- `Touched serial port ...` の後に `FileNotFoundError: could not open port ...` が出る：デバイスが新しいポートで DFU モードに入っています — ステップ 5 に従ってください。
+- インストール後に `adafruit-nrfutil` が認識されない：Python のユーザースクリプトディレクトリを PATH に追加します（Windows では `Scripts`、macOS ではホームディレクトリ配下の `bin`）。Linux では、`pipx ensurepath` の後にターミナルを再度開きます。
+- ポートがビジー / アクセス拒否：シリアルモニタ、Web フラッシャのタブ、Arduino IDE、その他ポートを占有しているものを閉じてください。Linux では、ステップ 3 で説明したようにシリアルポートのパーミッションとグループメンバーシップも確認します。
+- `Touched serial port ...` の後に `FileNotFoundError: could not open port ...`：新しい DFU ポートが現れていないか確認し、ステップ 5 に従ってください。DFU ポートが現れない場合は、以下の手動 DFU 復旧を試してください。
 - DFU モードに入れない：[Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually) を参照してください。
 
 **手動 DFU 復旧**
 
-ファームウェアが完全に応答しないなどの理由で `--touch 1200` でデバイスを DFU モードにできない場合は、手動で入ります：デバイスを接続し、`Reset` をダブルクリックします（黄色の LED が点灯し続けます）。ステップ 3 と同様に DFU シリアルポートを探し、そのポートに対して `--touch 1200` なしでステップ 5 のコマンドを実行します。成功時の見え方はステップ 6 と同じです。
+`--touch 1200` でデバイスを DFU モードにできない場合（例：ファームウェアが完全に応答しない）、手動で DFU モードに入ります。デバイスを接続し、`Reset` をダブルクリックします（黄色の LED が点灯し続けます）。ステップ 3 と同様に DFU シリアルポートを見つけ、そのポートで `--touch 1200` なしのステップ 5 のコマンドを実行します。成功時の見た目はステップ 6 と同じです。
 
-### DFU に入れない場合 & 手動で DFU モードに入る方法
+### DFU に入れない & 手動で DFU モードに入る
 
 デバイスを PC に接続し、`Reset` ボタンをダブルクリックします — 黄色の LED が点灯し続け、PC 上に DFU シリアルポートが現れます。
 
-このモードでブートローダーをフラッシュするには、[Device Bricked & Bootloader Recovery](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#device-bricked--bootloader-installation) に従いますが、`--touch 1200` は省略します — デバイスはすでに DFU モードに入っています。
+このモードでブートローダーを書き込むには、[Device Bricked & Bootloader Recovery](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#device-bricked--bootloader-installation) に従いますが、`--touch 1200` は省略します — デバイスはすでに DFU モードにあります。
 
-### DFU モードの終了
+### DFU モードを終了する
 
 DFU モードを終了するには、`Reset` ボタンを 1 回押します。
 
@@ -614,46 +633,46 @@ DFU モードを終了するには、`Reset` ボタンを 1 回押します。
 この問題を見つける最も簡単な方法はモバイルアプリを使うことです。アプリを開き、対象デバイスに接続してから、`Settings` -> `Channels` に移動します。プライマリチャンネルを選択し、**PSK** の値を確認します。周囲のノードと異なる場合は、同じ PSK に更新してチャンネル設定を保存してください。
 
 <Tabs>
-<TabItem value="ios" label="iOS アプリ">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problems_ios.png" alt="iOS アプリでプライマリチャンネルの PSK を確認する" width={500} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android アプリ">
+<TabItem value="android" label="Android App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problem_and.png" alt="Android アプリでプライマリチャンネルの PSK を確認する" width={900} height="auto" /></p>
 
 </TabItem>
 </Tabs>
 
-**解決策**
+**解決方法**
 
-どの設定が変更されたか分からない場合は、[Factory Reset](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#factory-reset) ガイドに従ってデバイスをデフォルト設定に復元してください。PSK だけが変更されている場合は、`AQ==` に戻してください。
+どの設定が変更されたか分からない場合は、[Factory Reset](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#factory-reset) ガイドに従ってデバイスをデフォルト設定に復元してください。PSK だけが変更された場合は、`AQ==` に戻してください。
 
 ### デバイスが自動的に電源オフになる
 
 #### 説明
 
 - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。
-- シリアルポートログがしばらく動作した後に停止します。
+- シリアルポートログはしばらく動作した後、停止します。
 
- これは、メッセージ送信プロセスが完了していない、設定中であるなど、デバイスが次の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因の可能性があります。
+ これは、デバイスが次の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因の可能性があります：メッセージ送信プロセスが完了していない、設定中である など……
 
 #### トラブルシュート
 
-ビデオを見るには [click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) をクリックしてください。フラッシュの消去を実行し、その後最新のファームウェアを再フラッシュする必要があります。
+ビデオを見るには[click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) をクリックしてください。フラッシュの消去を実行し、その後最新のファームウェアを書き込み直す必要があります。
 
-### Factory Reset
+### 工場出荷時リセット
 
-デフォルト設定に戻したい場合は、ファクトリーリセットを行うことができます。ファクトリーリセットを行う方法は 2 つあります。
+デフォルト設定に戻したい場合は、工場出荷時リセットを行うことができます。工場出荷時リセットを行う方法は 2 つあります。
 
-- ビデオを見るには [click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) をクリックしてください。フラッシュの消去を実行し、その後最新のファームウェアを再フラッシュする必要があります。
+- ビデオを見るには[click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) をクリックしてください。フラッシュの消去を実行し、その後最新のファームウェアを書き込み直す必要があります。
 
 - アプリで `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### ダイレクトメッセージが失敗する
+### ダイレクトメッセージの失敗
 
 #### NodeDB のリセット
 
@@ -665,37 +684,37 @@ NodeDB は、現在の Mesh ネットワークで検出されたノードに関�
 
 #### ユーザー情報の交換
 
-各ノードは自分自身のノード情報を定期的に送信し、Mesh 内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、お互いのノード情報を交換する必要があります。リスト上の別のノードとプライベートメッセージを送受信できない場合は、アプリで手動で情報交換を促すことができます。
+各ノードは定期的に自分自身のノード情報を送信し、メッシュ内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、お互いのノード情報を交換する必要があります。リスト上の別のノードとプライベートメッセージを送受信できない場合は、アプリで手動で情報交換を促すことができます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Settings 内のデバイス項目" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="設定内のデバイス項目" width={300} height="auto" /></p>
 
 #### 秘密鍵の再生成
 
 2 つのノードが互いに通信できるようにするには、お互いの秘密鍵を知っている必要があります。あるノードがプライベートメッセージの送信に失敗し続ける場合は、そのノードの秘密鍵を再生成してみてください。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Settings 内のデバイス項目" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
 不具合のあるデバイスを再起動して、設定を有効にします。
 
 :::note
-鍵を再生成した後は、他のデバイスがそのノードに再接続する必要があります。そのため、他のデバイスのノードリストからそのノードを削除しておくとよいでしょう。
+キーを再生成した後は、他のデバイスはノードへの再接続が必要になります。そのため、他のデバイスのノード一覧から該当ノードを削除しておくことをおすすめします。
 :::
 
 ### 信号品質
 
-- **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB より上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
+- **SNR** は通信リンクの品質を表します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
 
-- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm より上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。
+- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。
 
-      最良の信号状態を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
+      最良の信号状態を得るために、干渉が少なく、開けていて障害物のない場所でデバイスを使用してください。
 
 ### 対応アンテナ
 
-L1 Pro 用の交換用アンテナが必要な場合は、[click here](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) から入手できます。
+L1 Pro 用のアンテナ交換が必要な場合は、[click here](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) から入手できます。
 
 ## リソース
 
-- [ブートローダー (シリアル DFU パッケージ)](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip)
+- [ブートローダー（Serial DFU パッケージ）](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip)
 - [(V1) 3D プリント参照ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
 - [(V2 新しい 4 方向ジョイスティック) 3D プリント参照ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [L1 エンクロージャーデザインチャレンジ](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
@@ -703,7 +722,7 @@ L1 Pro 用の交換用アンテナが必要な場合は、[click here](https://w
 - [TELEC 認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
 - [FCC 認証](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [CE 認証](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
-- [消費電力テストとバッテリー寿命計算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [消費電力テストおよびバッテリー寿命計算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 
 
 ## 技術サポート & 製品ディスカッション

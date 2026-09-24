@@ -1,33 +1,33 @@
 ---
-
 description: This guide explains how to use EasySkyMesh with Wio Tracker L1 to build low-power IoT sensor networks based on MeshCore.
-title: EasySkyMesh IoT Firmware
+title: Power Saving
 keywords:
-   - EasySkyMesh
-   - MeshCore
-   - Wio Tracker L1
-   - LoRa Mesh
-   - MeshCore Sensor
-   - PowerSaving
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_MeshCore_Device_Low_Power_Consumption_L1_Pro.png
+  - EasySkyMesh
+  - MeshCore
+  - Wio Tracker L1
+  - LoRa Mesh
+  - MeshCore Sensor
+  - PowerSaving
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_L1-pHONE.png
 slug: /easyskymesh_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
-sidebar_position: 3
+sidebar_position: 1
 last_update:
-   date: 9/17/2026
-   author: Michelle Huang
-createdAt: 2026-09-17
-updatedAt: '2026-09-17'
+  date: 9/17/2026
+  author: Michelle Huang
+createdAt: 2026-09-17T00:00:00.000Z
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/easyskymesh_wio_tracker_l1/
-
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# EasySkyMesh IoT Firmware for Wio Tracker L1
+
 [EasySkyMesh](https://github.com/IoTThinks/EasySkyMesh) is a community project based on [MeshCore](https://meshcore.io/) that focuses on building low-power firmware. This firmware enables the L1 Pro to achieve a **18-day** battery life while maintaining the MeshCore communication function.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMeshProject.png" style={{width:900, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_L1-pHONE.png" style={{width:600, height:'auto'}}/></div>
 
 EasySkyMesh adds features for **power saving and sensor data collection**. Sensor data can be collected by MeshCore nodes and transmitted through an existing MeshCore network. It is particularly useful for:
 

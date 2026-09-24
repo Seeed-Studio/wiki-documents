@@ -1,6 +1,6 @@
 ---
-description: This developer guide introduces the architecture, runtime, ROS2 bridge, LLM/MCP integration, and secondary development workflow of the reBotArm_simulator-DM web console and the ROS2/MuJoCo stack in the reBot Arm B601-DM Digital Twin & Control Stack.
-title: reBot Arm B601-DM Digital Twin & Control Stack
+description: This developer guide introduces the architecture, runtime, ROS2 bridge, LLM/MCP integration, and secondary development workflow of the reBotArm_simulator-DM web console and the ROS2/MuJoCo stack in the ReBot Arm Digital Twin & Control Stack for B601-DM.
+title: B601-DM with Web Controler
 keywords:
   - reBot Arm
   - B601-DM
@@ -21,7 +21,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-30'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -37,7 +37,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

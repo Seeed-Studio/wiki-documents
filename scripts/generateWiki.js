@@ -20,6 +20,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
   path.join(docsDirectory, 'FAQ', 'respeaker'), // 9.2 排除 respeaker FAQ目录
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro'), // 9.21 排除 reCamera_Pro 目录
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'Courses', 'reBot_Arm_Tutorial'), // 9.17 排除 reBot_Arm_Tutorial 目录
 
   // 排除指定文档
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot.md'), //8.17
@@ -30,6 +32,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Custom_Motion_Training.md'), //9.7
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Jetson_Environment.md'), //9.7
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Official_Policies.md'), //9.7
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'T1000-E', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_t1000e.md'), //9.19
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L1', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l1.md'), //9.19
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L2', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l2.md'), //9.19
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

@@ -1,6 +1,6 @@
 ---
-description: Construye y controla la AmazingHand, una mano robótica de código abierto, de bajo costo, 8-DOF e imprimible en 3D.
-title: AmazingHand
+description: Construye y controla la AmazingHand, una mano robótica de bajo costo, de código abierto, con 8 GDL e imprimible en 3D.
+title: Inicio rápido de AmazingHand
 keywords:
   - Lerobot
   - Huggingface

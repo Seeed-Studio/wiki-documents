@@ -14,7 +14,7 @@ last_update:
   date: 5/22/2026
   author: wuxinrui
 createdAt: '2026-05-22'
-updatedAt: '2026-08-11'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_flex/
 ---
 

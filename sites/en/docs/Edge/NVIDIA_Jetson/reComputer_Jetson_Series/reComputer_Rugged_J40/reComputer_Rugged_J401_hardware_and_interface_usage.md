@@ -14,7 +14,7 @@ last_update:
   date: 09/18/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-09-18'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/
 ---
 
@@ -326,6 +326,166 @@ done
 :::note
 `Speed` shows the negotiated link bandwidth, such as `1000Mb/s`; `Duplex` should normally report `Full`; and `Link detected: yes` confirms that the corresponding physical port has an active connection. A disconnected port may report `Speed: Unknown!` and `Link detected: no`.
 :::
+
+## Usage Instruction
+
+### Hardware Connection
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connect.png" alt="" />
+</div>
+
+### Enabling the PoE Output
+
+The four PSE ports (J36–J39) are fed by an on-board PSE controller that is **disabled by default**. Nothing on a stock system switches it on, so a camera plugged into J36–J39 stays unpowered until the PSE power-enable line is driven high **and kept high**.
+
+| Signal | GPIO | Direction | Meaning |
+| --- | --- | --- | --- |
+| `PSE_PWR_EN` | `gpiochip2` line 15 | output | drive high to switch the PSE output on |
+| `PSE_PG` | `gpiochip2` line 0 | input | `1` = PSE power good |
+| `PSE_INTB` | `gpiochip2` line 1 | input | `0` = no fault |
+
+Install the GPIO tools if they are missing, then enable the output and keep it held:
+
+```bash
+sudo apt-get install -y gpiod     # only if gpioset/gpioget are not already present
+
+# Set PSE_PWR_EN high and keep it high.
+# -m signal  : maintain the level until the process receives SIGINT/SIGTERM
+# setsid + & : detach it from the terminal so the hold survives the SSH session
+sudo setsid gpioset -m signal 2 15=1 >/dev/null 2>&1 &
+
+# Confirm the hold is alive
+ps aux | grep "[g]pioset -m signal 2 15=1"
+
+# Confirm the controller reports power good -> expected output: "1 0"
+sudo gpioget gpiochip2 0 1
+```
+
+**Expected Output:**
+
+```text
+1 0
+```
+
+`1 0` means `PSE_PG=1` (power good) and `PSE_INTB=0` (no fault). If `PSE_PG` stays `0`, no power is being delivered: check the cable and the camera's own power requirement (802.3af allows 15.4 W per port). If `PSE_INTB` reads `1`, the controller has latched a fault — remove the load, power-cycle, and check again.
+
+**Important:** the level is only driven while the `gpioset` process is alive. A GPIO line requested through the character device reverts to its default state when the last process holding it exits — `gpioset --help` states this explicitly — so running the command and letting it return does **not** keep the PSE on. After a reboot, or if the process is killed, the cameras lose power and the link goes down.
+
+#### Keeping the PSE On Across Reboots (Optional)
+
+Wrap the same hold in a systemd unit so it is applied at every boot and restarted automatically if it ever exits:
+
+```bash
+sudo tee /etc/systemd/system/poe-pse-hold.service >/dev/null <<'EOF'
+[Unit]
+Description=Hold PoE PSE power enable (PSE_PWR_EN gpio2/15)
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/gpioset -m signal 2 15=1
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now poe-pse-hold
+systemctl status poe-pse-hold --no-pager
+```
+
+`Type=simple` plus `Restart=on-failure` is what makes this a *hold* rather than a one-shot command: systemd keeps the process — and therefore the GPIO level — alive.
+
+### Bringing Up Two PoE Cameras
+
+With the PSE output enabled, two cameras can be powered and reached without any external PoE injector. Bringing them up by hand takes three steps.
+
+**Step 1.** Find the ports that actually carry a camera. The five Gigabit ports enumerate as `eth0`–`eth4`; read the carrier flag instead of assuming which index belongs to which connector:
+
+```bash
+for i in eth0 eth1 eth2 eth3 eth4; do
+  echo "$i carrier=$(cat /sys/class/net/$i/carrier 2>/dev/null) speed=$(cat /sys/class/net/$i/speed 2>/dev/null)"
+done
+```
+
+**Step 2.** Let the cameras finish booting (30–60 s after PSE power comes up), then put the Jetson's port into the same subnet as each camera:
+
+```bash
+sleep 45
+
+sudo ip link set eth1 up
+sudo ip addr add 192.168.10.100/24 dev eth1     # camera A is 192.168.10.20
+sudo ip link set eth2 up
+sudo ip addr add 192.168.20.100/24 dev eth2       # camera B is 192.168.20.10
+```
+
+**Step 3.** Verify the links and the two cameras:
+
+```bash
+ping -c2 -W1 192.168.10.20
+ping -c2 -W1 192.168.20.10
+ip -br addr show eth1
+ip -br addr show eth2
+```
+
+**Expected Output:** both pings report `0% packet loss`, and each port shows `UP` with the address you assigned:
+
+```text
+eth1             UP             192.168.10.100/24
+eth2             UP             192.168.20.100/24
+```
+
+Notes:
+
+- Each camera keeps the address it was configured with. If you do not know it, put the port into the subnet the camera should be on and look for it with a ping sweep.
+- A port that stays at `carrier=0` while `PSE_PG=1` means the camera is not drawing power, or the waterproof connector is not fully seated.
+- The addresses above are examples taken from a two-camera setup; use the subnets of your own cameras. `ip addr add` is not persistent across reboots — configure the port with NetworkManager or `systemd-networkd` if it has to survive a restart.
+
+```bash
+# find an unknown camera on a port (example subnet)
+for ip in $(seq 2 254); do ping -c1 -W1 192.168.10.$ip >/dev/null 2>&1 && echo "192.168.10.$ip is up"; done
+```
+
+### Dual-Camera Live Preview
+
+Both RTSP streams can be displayed at once, each in its own GStreamer window. Use the GPU/EGL path for the first window and the X11/Xv path for the second: two EGL-based sinks running at the same time can crash the EGL display on this platform.
+
+```bash
+# Window A - GPU/EGL path
+nohup env DISPLAY=:0 XAUTHORITY=/home/seeed/.Xauthority gst-launch-1.0 \
+  rtspsrc location="rtsp://<user>:<password>@192.168.10.20:554/" protocols=tcp latency=200 ! \
+  rtph265depay ! h265parse ! nvv4l2decoder ! \
+  nvvidconv ! "video/x-raw(memory:NVMM),width=1152,height=648" ! \
+  nvegltransform ! nveglglessink sync=false > /tmp/camA_disp.log 2>&1 &
+
+# Window B - X11/Xv path
+nohup env DISPLAY=:0 XAUTHORITY=/home/seeed/.Xauthority gst-launch-1.0 \
+  rtspsrc location="rtsp://<user>:<password>@192.168.20.10:554/" protocols=tcp latency=200 ! \
+  rtph265depay ! h265parse ! nvv4l2decoder ! \
+  nvvidconv ! "video/x-raw,width=1280,height=720" ! \
+  xvimagesink sync=false > /tmp/camB_disp.log 2>&1 &
+```
+
+- Replace `<user>:<password>` with the credentials of your own camera, and the IP addresses with the ones you verified above.
+- `DISPLAY=:0` and `XAUTHORITY=/home/seeed/.Xauthority` are needed when the commands are launched over SSH; adjust the path if your desktop user is not `seeed`. Running them from a terminal inside the JetPack desktop session needs neither.
+- `protocols=tcp` is used because RTSP over UDP is often blocked or lossy on industrial networks, and `latency=200` gives the stream a 200 ms jitter buffer.
+- The cameras tested here stream **H.265**. Check your own camera and swap the depayloader/parser pair if it is H.264.
+- The first frames appear after a few seconds (RTSP handshake, decoder warm-up and the camera's keyframe interval). If a window stays black, read `/tmp/camA_disp.log` or `/tmp/camB_disp.log`.
+- Stop the preview with `pkill -f "gst-launch-1.0.*rtspsrc"`, or `kill %1 %2` if both were started from the same shell.
+
+To read the codec of a stream:
+
+```bash
+timeout 20 gst-launch-1.0 -v rtspsrc location="rtsp://<user>:<password>@192.168.10.20:554/" \
+  protocols=tcp latency=200 ! fakesink 2>&1 | grep -o "encoding-name=(string)H26[45]" | head -1
+```
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_poe.png" alt="" />
+</div>
+
+For an H.264 camera use `rtph264depay ! h264parse` instead of `rtph265depay ! h265parse`; the rest of the pipeline is unchanged.
 
 ## USB
 
@@ -751,9 +911,14 @@ sudo i2cdetect -y -r 1
 
 ## Resources
 
-- [reComputer Rugged J40 Datasheet](#) *(coming soon)*
+- [reComputer Rugged J40 Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf) 
+- [Carrier Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf)
+- [PSE Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf)
+- [3D File](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp)
 - [Linux_for_Tegra Source Code](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson Devices Comparison](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+
+
 
 ## Tech Support & Product Discussion
 

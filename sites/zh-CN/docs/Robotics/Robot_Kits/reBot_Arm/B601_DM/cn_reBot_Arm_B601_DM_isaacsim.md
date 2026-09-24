@@ -1,6 +1,6 @@
 ---
-description: 本教程展示了如何下载 Isaac Sim，并将 reBot Arm B601-DM 机器人部署在仿真环境中，进行开发和调试。
-title: reBot Arm B601-DM Isaac Sim 仿真
+description: 本教程展示了如何下载Isaacsim，并将reBot-B601-DM机器人部署在仿真环境中，进行开发和调试。
+title: B601-DM 跑Isaac Sim
 keywords:
   - Isaacsim
   - 机械臂
@@ -26,7 +26,7 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -369,5 +369,4 @@ kill <PID>
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 

@@ -1,6 +1,6 @@
 ---
 description: 本wiki提供 reBot Arm B601-RS 在 Lerobot 框架内实现数据收集和训练的完整流程。
-title: reBot Arm B601-RS LeRobot 入门
+title: B601-RS 跑Lerobot
 keywords:
   - Lerobot
   - Huggingface
@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Python-3.12+-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
     <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
 </p>

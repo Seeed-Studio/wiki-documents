@@ -5,16 +5,25 @@ keywords:
   - reCamera Pro
   - FAQ
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_faqs
+slug: /recamera_pro_faqs_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
   date: 2026-08-05
   author: Sizhaozhou
 createdAt: '2026-08-05'
-updatedAt: '2026-08-05'
-url: https://wiki.seeedstudio.com/recamera_pro_faqs/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_faqs_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Troubleshooting/troubleshooting.md (https://wiki.seeedstudio.com/recamera_pro_faqs/), which now serves the original slug /recamera_pro_faqs. This file is kept for history as a draft (slug /recamera_pro_faqs_legacy) and is excluded from production builds. Do not link here. -->
+
+## Content Migration Index (Legacy Page)
+
+| Original section | New home |
+| --- | --- |
+| Q1 Wi-Fi connection errors / no video preview | [Troubleshooting](https://wiki.seeedstudio.com/recamera_pro_faqs/) (this slug) |
+| Q2 FP16 model upload freezes Web UI | [Troubleshooting](https://wiki.seeedstudio.com/recamera_pro_faqs/), [Validate Your Model](https://wiki.seeedstudio.com/recamera_pro_model_validate/) |
 
 # reCamera Pro FAQ
 

@@ -1,0 +1,10 @@
+position: 2
+label: 'IA acústica y de audio'
+collapsible: true
+collapsed: true
+className: _ai-sound
+link:
+  type: generated-index
+  slug: acoustic-audio-ai
+  title: IA acústica y de audio
+  description: Soluciones de captura de audio, voz e interacción por voz.

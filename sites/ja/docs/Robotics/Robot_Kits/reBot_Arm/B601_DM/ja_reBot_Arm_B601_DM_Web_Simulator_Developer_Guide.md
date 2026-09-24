@@ -1,6 +1,6 @@
 ---
-description: この開発者向けガイドでは、reBot Arm B601-DM Digital Twin & Control Stack における reBotArm_simulator-DM Web コンソールおよび ROS2/MuJoCo スタックのアーキテクチャ、ランタイム、ROS2 ブリッジ、LLM/MCP 連携、二次開発ワークフローについて説明します。
-title: reBot Arm B601-DM Digital Twin & Control Stack
+description: この開発者向けガイドでは、B601-DM 用 ReBot Arm Digital Twin & Control Stack における reBotArm_simulator-DM Web コンソールおよび ROS2/MuJoCo スタックのアーキテクチャ、ランタイム、ROS2 ブリッジ、LLM/MCP 連携、二次開発ワークフローについて紹介します。
+title: B601-DM Web コントローラー
 keywords:
   - reBot Arm
   - B601-DM
@@ -37,7 +37,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

@@ -6,16 +6,18 @@ keywords:
   - reCamera Pro
   - Speaker
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_speaker_usage
+slug: /recamera_pro_speaker_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 3
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/es/recamera_pro_speaker_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/es/recamera_pro_speaker_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/play_audio_volume.md (https://wiki.seeedstudio.com/es/recamera_pro_speaker_usage/), which now serves the original slug /recamera_pro_speaker_usage. This file is kept for history as a draft (slug /recamera_pro_speaker_usage_legacy) and is excluded from production builds. Do not link here. -->
 
 # Uso del altavoz de reCamera Pro
 
@@ -24,7 +26,7 @@ url: https://wiki.seeedstudio.com/es/recamera_pro_speaker_usage/
 
 ## Consultar dispositivos de audio
 
-Primero confirme que el sistema ha reconocido el dispositivo de audio:
+Primero confirma que el sistema ha reconocido el dispositivo de audio:
 
 ``` bash
 aplay -l
@@ -71,19 +73,19 @@ amixer set 'DAC Digital' 50%
 :::note
 
 - Establecer el volumen por encima del 80% provocará ruidos de chasquidos.
-- Ajuste el volumen según las condiciones reales para evitar sobrecarga.
+- Ajusta el volumen según las condiciones reales para evitar sobrecarga.
 
 :::
 
 ## Reproducir audio
 
-Primero copie el archivo de audio que necesita reproducir al dispositivo. Suponga que la ruta del archivo de audio es `/sdcard/audio.wav3`, use el siguiente comando para reproducir audio:
+Primero copia el archivo de audio que necesitas reproducir al dispositivo. Suponiendo que la ruta del archivo de audio es `/sdcard/audio.wav3`, utiliza el siguiente comando para reproducir audio:
 
 ``` bash
 aplay /sdcard/audio.wav3
 ```
 
-Si su archivo de audio está en formato MP3, conviértalo primero a formato WAV usando el siguiente comando y luego reprodúzcalo como se describió anteriormente:
+Si tu archivo de audio está en formato MP3, conviértelo primero a formato WAV usando el siguiente comando y luego reprodúcelo como se describió anteriormente:
 
 ```bash
 ffmpeg -i test.mp3 test.wav
@@ -91,7 +93,7 @@ ffmpeg -i test.mp3 test.wav
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerle diversos tipos de soporte y garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diversos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

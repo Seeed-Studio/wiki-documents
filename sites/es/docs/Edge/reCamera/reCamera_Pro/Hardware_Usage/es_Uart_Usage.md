@@ -6,46 +6,56 @@ keywords:
   - reCamera Pro
   - UART
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_uart_usage
+slug: /recamera_pro_uart_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 4
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/es/recamera_pro_uart_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/es/recamera_pro_uart_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/external_trigger.md (https://wiki.seeedstudio.com/es/recamera_pro_uart_usage/), which now serves the original slug /recamera_pro_uart_usage. This file is kept for history as a draft (slug /recamera_pro_uart_usage_legacy) and is excluded from production builds. Do not link here. -->
+
+## Índice de migración de contenido (Página heredada)
+
+| Sección original | Nuevo destino |
+| --- | --- |
+| Connecting the DEBUG UART | [Terminal, SSH and Debug UART](https://wiki.seeedstudio.com/es/recamera_pro_terminal/) |
+| Serial Port Trigger | [External Trigger over UART](https://wiki.seeedstudio.com/es/recamera_pro_uart_usage/) (este slug) |
+| Receiving AI Inference Results | [Send Detection Results over HTTP/UART](https://wiki.seeedstudio.com/es/recamera_pro_http_uart/) |
 
 # Uso de la interfaz UART en reCamera Pro
 
 Hay dos puertos serie en el dispositivo: uno es el DEBUG UART dedicado a la depuración, y el otro es la interfaz UART utilizada para el disparo desde la interfaz web.
-![Hardware Base Board Interface Diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
-![Expansion Port Schematic](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/EXT_GPIO.jpg)
+![Diagrama de la interfaz de la placa base de hardware](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
+![Esquema del puerto de expansión](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/EXT_GPIO.jpg)
 
 ## Conexión del DEBUG UART
 
 La velocidad en baudios del puerto serie de depuración es 1500000, y la especificación de la interfaz de hardware es MX1.25. La secuencia de pines se muestra a continuación.
 ![DEBUG_UART_PIN](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/DEBUG_UART_PIN.jpg)
 
-1. Primero, prepara un convertidor USB a serie. Conecta el TX del convertidor al pin RX del dispositivo y conecta el RX del convertidor al pin TX del dispositivo. Recuerda conectar también GND.
+1. Primero, prepara un convertidor USB-a-serie. Conecta el TX del convertidor al pin RX del dispositivo y conecta el RX del convertidor al pin TX del dispositivo. Recuerda conectar también GND.
 2. Enciende el dispositivo y podrás ver la información de depuración del dispositivo en el convertidor.
 ![DEBUG_UART_SHOW](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/DEBUG_UART_SHOW.png)
 
 ## Uso de la UART en la interfaz de expansión
 
-Esta interfaz UART se utiliza como la interfaz UART para el disparo desde la interfaz web. Se puede usar para recibir datos de inferencia de IA y también para enviar comandos para activar eventos.
+Esta interfaz UART se utiliza como la interfaz UART para el disparo desde la interfaz web. Puede usarse para recibir datos de inferencia de IA y también para enviar comandos para activar eventos.
 
 ### Disparo por puerto serie
 
 1. Primero, prepara un cable MX1.25 de 10 pines y conéctalo a la interfaz de expansión.
 
-2. Luego, de acuerdo con la secuencia de pines en el diagrama de expansión anterior, conéctalo a tu herramienta USB a TTL. Conecta el TX del convertidor al pin RX del dispositivo y conecta el RX del convertidor al pin TX del dispositivo. Recuerda conectar también GND.
+2. Luego, de acuerdo con la secuencia de pines en el diagrama de expansión anterior, conéctalo a tu herramienta USB-a-TTL. Conecta el TX del convertidor al pin RX del dispositivo y conecta el RX del convertidor al pin TX del dispositivo. Recuerda conectar también GND.
 
 3. En ***Device Info*** -> ***Connection Settings***, puedes configurar la velocidad en baudios del puerto serie.
 ![DEBUG_UART_CONFIG](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/UART_CONNECT_CONFIG.png)
 
-4. En ***Recording Settings*** -> ***Recording Configuration*** -> ***Serial Port Trigger***, haz clic en Configure para configurar el comando de disparo.
+4. En ***Recording Settings*** -> ***Recording Configuration*** -> ***Serial Port Trigger***, haz clic en Configure para establecer el comando de disparo.
 ![DEBUG_UART_COMMAND_CONFIG](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/UART_TRIGGER_CONFIG.png)
 
 5. Abre la herramienta de puerto serie, selecciona el dispositivo de puerto serie correspondiente y envía el comando de disparo.

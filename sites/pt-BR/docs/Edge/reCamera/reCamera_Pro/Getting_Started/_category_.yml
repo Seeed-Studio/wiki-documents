@@ -1,0 +1,5 @@
+position: 1 # float position is supported
+label: '1. Introdução'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category collapsed by default
+className: recamera_pro_getting_started
