@@ -1,5 +1,5 @@
 ---
-description: Chapter 6 of the Seeed Embodied Intelligence Beginner's Course — assemble the reBot Arm, assemble the power supply, wire the arm, and power it on for the first time.
+description: Chapter 6 of the Seeed Physical AI Beginner's Course — assemble the reBot Arm, assemble the power supply, wire the arm, and power it on for the first time.
 title: Chapter 6 - Assembly, Power Supply, and First Power-On
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Wiring
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_6
+slug: /rebot_physical_ai_course_chapter_6
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-18'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_6/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_6/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 2 · Chapter 6 · Practice</span>
     <h2>6. Assembly, Power Supply, and First Power-On</h2>
     <p>
-      Chapter 6 of the Seeed Embodied Intelligence Beginner's Course — assemble the reBot Arm,
+      Chapter 6 of the Seeed Physical AI Beginner's Course — assemble the reBot Arm,
       assemble the power supply, wire the arm, and power it on for the first time.
     </p>
     <div className="hero-actions">
@@ -42,17 +41,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#power">Power-on</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>6.1 Robotic Arm Assembly</span>
-    <span>6.2 Power Supply Assembly</span>
-    <span>6.3 Robotic Arm Wiring</span>
-    <span>6.4 Robotic Arm Power Supply Requirements</span>
-    <span>6.5 Robotic Arm Power-On</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 6.1 Robotic Arm Assembly
 
@@ -62,8 +51,17 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <h2>6.1 Robotic Arm Assembly</h2>
   </div>
 
-- [reBot DM Robotic Arm Assembly](https://www.youtube.com/watch?v=rfTQoFCfnMc&list=PLpH_4mf13-A0UsztzM_yWQUsxXbYMVydM&index=15)
-- [reBot RS Robotic Arm Assembly](https://www.youtube.com/watch?v=Bv60NPO0TRo&list=PLpH_4mf13-A38iXew5DxqswGLjPQ0BflR&index=6)
+**reBot DM Robotic Arm Assembly**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/rfTQoFCfnMc" title="reBot DM Robotic Arm Assembly" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+**reBot RS Robotic Arm Assembly**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/Bv60NPO0TRo" title="reBot RS Robotic Arm Assembly" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 </section>
 
@@ -75,8 +73,17 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <h2>6.2 Power Supply Assembly</h2>
   </div>
 
-- [reBot DM Power Supply Assembly](https://www.youtube.com/watch?v=DHFA2UfQzUo&list=PLpH_4mf13-A0UsztzM_yWQUsxXbYMVydM&index=3)
-- [reBot RS Power Supply Assembly](https://www.youtube.com/watch?v=5GitUWT9gx0)
+**reBot DM Power Supply Assembly**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/DHFA2UfQzUo" title="reBot DM Power Supply Assembly" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+**reBot RS Power Supply Assembly**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/5GitUWT9gx0" title="reBot RS Power Supply Assembly" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 </section>
 
@@ -90,7 +97,9 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 ### reBot DM Wiring
 
-Video: [reBot DM Robotic Arm Wiring](https://www.youtube.com/watch?v=vVxCOfu5ZCE)
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/vVxCOfu5ZCE" title="reBot DM Robotic Arm Wiring" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -168,7 +177,9 @@ Motor 1 and motor 2 must be connected to each other.
 
 ### reBot RS Wiring
 
-Video: [reBot RS Robotic Arm Wiring](https://www.youtube.com/watch?v=llSa6qn3yrY&list=PLpH_4mf13-A38iXew5DxqswGLjPQ0BflR&index=8)
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/llSa6qn3yrY" title="reBot RS Robotic Arm Wiring" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">

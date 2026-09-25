@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 15 del Curso para Principiantes en Inteligencia Corporizada de Seeed: el modelo ACT y el action chunking: entrada y salida de ACT, la estructura ResNet y Transformer, intuición sobre la atención, CVAE, action chunk vs action horizon, defensas contra la acumulación de errores y los límites de capacidad de ACT."
+description: "Capítulo 15 del Curso para Principiantes en IA Física de Seeed: el modelo ACT y el action chunking: entrada y salida de ACT, la estructura ResNet y Transformer, intuición sobre la atención, CVAE, action chunk vs action horizon, defensas contra la acumulación de errores y los límites de capacidad de ACT."
 title: Capítulo 15 - Modelo ACT y Action Chunking
 keywords:
   - reBot
@@ -10,16 +10,16 @@ keywords:
   - Imitation Learning
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_15
+slug: /rebot_physical_ai_course_chapter_15
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_15/
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_15/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -34,7 +34,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 3 · Capítulo 15 · Teoría</span>
     <h2>15. Modelo ACT y Action Chunking</h2>
     <p>
-      Capítulo 15 del Curso para Principiantes en Inteligencia Corporizada de Seeed: entrada y salida de ACT,
+      Capítulo 15 del Curso para Principiantes en IA Física de Seeed: entrada y salida de ACT,
       la estructura ResNet y Transformer, intuición sobre la atención, CVAE, action chunk vs action horizon,
       defensas contra la acumulación de errores y los límites de capacidad de ACT.
     </p>

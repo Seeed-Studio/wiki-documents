@@ -6,7 +6,7 @@ import '/src/css/rebot-wiki-style.css';
 
 const ITEMS = [
   {
-    slug: '/rebot_embodied_ai_course_introduction/',
+    slug: '/rebot_physical_ai_course_introduction/',
     labels: {
       en: 'Introduction',
       ja: 'コース紹介',
@@ -21,7 +21,7 @@ const ITEMS = [
     },
   },
   {
-    slug: '/rebot_embodied_ai_course_chapter_1/',
+    slug: '/rebot_physical_ai_course_chapter_1/',
     labels: {
       en: 'Robots & AI',
       ja: 'ロボットとAI',
@@ -36,7 +36,7 @@ const ITEMS = [
     },
   },
   {
-    slug: '/rebot_embodied_ai_course_chapter_2/',
+    slug: '/rebot_physical_ai_course_chapter_2/',
     labels: {
       en: 'Hardware',
       ja: 'ハードウェア',
@@ -51,7 +51,7 @@ const ITEMS = [
     },
   },
   {
-    slug: '/rebot_embodied_ai_course_chapter_3/',
+    slug: '/rebot_physical_ai_course_chapter_3/',
     labels: {
       en: 'Hardware Picks',
       ja: 'ハードウェア選定',
@@ -66,7 +66,7 @@ const ITEMS = [
     },
   },
   {
-    slug: '/rebot_embodied_ai_course_chapter_4/',
+    slug: '/rebot_physical_ai_course_chapter_4/',
     labels: {
       en: 'Actuators',
       ja: 'アクチュエーター',
@@ -81,7 +81,7 @@ const ITEMS = [
     },
   },
   {
-    slug: '/rebot_embodied_ai_course_chapter_5/',
+    slug: '/rebot_physical_ai_course_chapter_5/',
     labels: {
       en: 'CAN Bus',
       ja: 'CANバス',
@@ -96,7 +96,7 @@ const ITEMS = [
     },
   },
   {
-    slug: '/rebot_embodied_ai_course_chapter_6/',
+    slug: '/rebot_physical_ai_course_chapter_6/',
     labels: {
       en: 'Assembly',
       ja: '組み立て',
@@ -111,7 +111,7 @@ const ITEMS = [
     },
   },
   {
-    slug: '/rebot_embodied_ai_course_chapter_7/',
+    slug: '/rebot_physical_ai_course_chapter_7/',
     labels: {
       en: 'MotorBridge',
       ja: 'MotorBridge',
@@ -126,7 +126,7 @@ const ITEMS = [
     },
   },
   {
-    slug: '/rebot_embodied_ai_course_chapter_8/',
+    slug: '/rebot_physical_ai_course_chapter_8/',
     labels: {
       en: 'Python SDK',
       ja: 'Python SDK',

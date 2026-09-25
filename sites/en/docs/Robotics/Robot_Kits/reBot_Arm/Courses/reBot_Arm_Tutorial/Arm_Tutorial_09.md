@@ -1,5 +1,5 @@
 ---
-description: 'Chapter 9 of the Seeed Embodied Intelligence Beginner''s Course — foundations of robot learning and imitation learning: why the arm needs learning, rule-based vs learning-based control, observation/state/action, action chunks, data distribution, and the three phases of training, inference, and evaluation.'
+description: 'Chapter 9 of the Seeed Physical AI Beginner''s Course — foundations of robot learning and imitation learning: why the arm needs learning, rule-based vs learning-based control, observation/state/action, action chunks, data distribution, and the three phases of training, inference, and evaluation.'
 title: Chapter 9 - Foundations of Robot Learning and Imitation Learning
 keywords:
   - reBot
@@ -8,20 +8,19 @@ keywords:
   - Robot Learning
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_9
+slug: /rebot_physical_ai_course_chapter_9
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_9/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_9/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -32,7 +31,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 9 · Theory & Practice</span>
     <h2>9. Foundations of Robot Learning and Imitation Learning</h2>
     <p>
-      Chapter 9 of the Seeed Embodied Intelligence Beginner's Course — why the arm needs learning,
+      Chapter 9 of the Seeed Physical AI Beginner's Course — why the arm needs learning,
       rule-based vs learning-based control, observation/state/action, action chunks, data
       distribution, and the three phases of training, inference, and evaluation.
     </p>
@@ -42,20 +41,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#pipeline">Pipeline</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>9.1 Why Do Robot Arms Need Learning?</span>
-    <span>9.2 Rule-Based Control vs. Learning-Based Control</span>
-    <span>9.3 Imitation Learning and Behavioral Cloning</span>
-    <span>9.4 Observation, State, and Action</span>
-    <span>9.5 Single-Step Actions vs. Action Chunks</span>
-    <span>9.6 Data Distribution and Model Generalization</span>
-    <span>9.7 Training, Inference, and Evaluation</span>
-    <span>9.8 Advantages and Limitations of Imitation Learning</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 9.1 Why Do Robot Arms Need Learning?
 

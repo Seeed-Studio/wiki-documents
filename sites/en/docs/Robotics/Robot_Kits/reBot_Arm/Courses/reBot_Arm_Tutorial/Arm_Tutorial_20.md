@@ -1,5 +1,5 @@
 ---
-description: "Chapter 20 of the Seeed Embodied Intelligence Beginner's Course — preparing the reBot VLA dataset: prerequisites, checking the LeRobot dataset, adding language task descriptions, configuring state/action/camera keys, creating meta/modality.json, setting the embodiment tag, verifying joint order and dimensions, and multi-task organization."
+description: "Chapter 20 of the Seeed Physical AI Beginner's Course — preparing the reBot VLA dataset: prerequisites, checking the LeRobot dataset, adding language task descriptions, configuring state/action/camera keys, creating meta/modality.json, setting the embodiment tag, verifying joint order and dimensions, and multi-task organization."
 title: Chapter 20 - Preparing the reBot VLA Dataset
 keywords:
   - reBot
@@ -10,20 +10,19 @@ keywords:
   - modality
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_20
+slug: /rebot_physical_ai_course_chapter_20
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-24
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-24'
 updatedAt: '2026-09-24'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_20/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_20/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -34,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 4 · Chapter 20 · Practice</span>
     <h2>20. Preparing the reBot VLA Dataset</h2>
     <p>
-      Chapter 20 of the Seeed Embodied Intelligence Beginner's Course — prerequisites, checking the
+      Chapter 20 of the Seeed Physical AI Beginner's Course — prerequisites, checking the
       LeRobot dataset, adding language task descriptions, configuring state/action/camera keys,
       creating meta/modality.json, setting the embodiment tag, verifying joint order and dimensions,
       and multi-task organization.
@@ -45,23 +44,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#quality">Checklist</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>20.1 Prerequisites</span>
-    <span>20.2 Checking the LeRobot Dataset</span>
-    <span>20.3 Adding Language Task Descriptions</span>
-    <span>20.4 Configuring State Keys and Action Keys</span>
-    <span>20.5 Configuring Camera Keys</span>
-    <span>20.6 Creating meta/modality.json</span>
-    <span>20.7 Setting the Embodiment Tag</span>
-    <span>20.8 Checking Joint Order and Data Dimensions</span>
-    <span>20.9 Multi-task Dataset Organization</span>
-    <span>20.10 Data Quality Checklist</span>
-    <span>20.11 Chapter Summary</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 <section className="section-card">
   <p>GR00T uses the <strong>LeRobotDataset v2/v3 format</strong> on LeRobot, and additionally requires <code>meta/modality.json</code> to describe the semantic split of state, action, video, and annotation. This chapter assumes you have already collected ACT data on the reBot Arm via <code>lerobot-record</code>; next we will upgrade it to VLA training data.</p>

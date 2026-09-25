@@ -1,5 +1,5 @@
 ---
-description: "Chapter 22 of the Seeed Embodied Intelligence Beginner's Course — GR00T inference and real-robot deployment: the end-to-end loop, decoupling inference and control, single-machine vs distributed, camera/state/language inputs, action chunk output, latency, action buffering and RTC, safety limits, evaluation, and the stage project."
+description: "Chapter 22 of the Seeed Physical AI Beginner's Course — GR00T inference and real-robot deployment: the end-to-end loop, decoupling inference and control, single-machine vs distributed, camera/state/language inputs, action chunk output, latency, action buffering and RTC, safety limits, evaluation, and the stage project."
 title: Chapter 22 - GR00T Inference and Real-Robot Deployment
 keywords:
   - reBot
@@ -10,20 +10,19 @@ keywords:
   - RTC
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_22
+slug: /rebot_physical_ai_course_chapter_22
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-24
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-24'
 updatedAt: '2026-09-24'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_22/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_22/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -34,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 4 · Chapter 22 · Theory &amp; Practice</span>
     <h2>22. GR00T Inference and Real-Robot Deployment</h2>
     <p>
-      Chapter 22 of the Seeed Embodied Intelligence Beginner's Course — the end-to-end loop,
+      Chapter 22 of the Seeed Physical AI Beginner's Course — the end-to-end loop,
       decoupling inference and control, single-machine vs distributed, camera/state/language inputs,
       action chunk output, latency, action buffering and RTC, safety limits, evaluation, and the
       stage project.
@@ -45,23 +44,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#project">Stage project</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>22.1 What Does the End-to-End Loop Look Like?</span>
-    <span>22.2 Decoupling the Inference Side and Control Side</span>
-    <span>22.3 Single-Machine vs. Distributed Deployment</span>
-    <span>22.4 Camera, State, and Language Inputs</span>
-    <span>22.5 Action Chunk Output</span>
-    <span>22.6 Network and Inference Latency</span>
-    <span>22.7 Action Buffering and Asynchronous Inference</span>
-    <span>22.8 Real-Robot Safety Limits</span>
-    <span>22.9 VLA Task Evaluation</span>
-    <span>22.10 Stage Project: Place the Test Tube into the Left Rack</span>
-    <span>22.11 Chapter Summary</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 <section className="section-card">
   <p>Chapter 21 covered fine-tuning and the basic real-robot commands; this chapter zooms in on <strong>inference deployment</strong>: how the inference side and control side are decoupled, how to choose between single-machine and distributed, how inputs/outputs are aligned, and latency, async buffering, safety limits, and task evaluation. Finally, the stage project "place the test tube into the left rack" runs through the entire pipeline.</p>

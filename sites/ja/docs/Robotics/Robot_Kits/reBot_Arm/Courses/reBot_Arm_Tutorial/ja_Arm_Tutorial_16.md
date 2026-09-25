@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course の第16章 — 最初の ACT ポリシーを学習する：バッチサイズ、学習率とステップ数、チェックポイント管理、学習の開始、loss と GPU 状態のモニタリング、中断した学習の再開。"
+description: "Seeed Physical AI Beginner's Course の第16章 — 最初の ACT ポリシーを学習する：バッチサイズ、学習率とステップ数、チェックポイント管理、学習の開始、loss と GPU 状態のモニタリング、中断した学習の再開。"
 title: 第16章 - 最初の ACT ポリシーを学習する
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Policy
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_16
+slug: /rebot_physical_ai_course_chapter_16
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_16/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_16/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 3 · 第16章 · 実践</span>
     <h2>16. 最初の ACT ポリシーを学習する</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course の第16章 — バッチサイズ、学習率とステップ数、
+      Seeed Physical AI Beginner's Course の第16章 — バッチサイズ、学習率とステップ数、
       チェックポイント管理、学習の開始、loss と GPU 状態のモニタリング、中断した学習の再開について説明します。
       
     </p>

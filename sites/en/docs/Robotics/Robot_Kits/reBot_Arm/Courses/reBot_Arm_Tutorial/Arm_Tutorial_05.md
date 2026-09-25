@@ -1,5 +1,5 @@
 ---
-description: Chapter 5 of the Seeed Embodied Intelligence Beginner's Course — CAN bus basics, standard vs extended data frames, the CAN data link layer, and SocketCAN.
+description: Chapter 5 of the Seeed Physical AI Beginner's Course — CAN bus basics, standard vs extended data frames, the CAN data link layer, and SocketCAN.
 title: Chapter 5 - CAN Bus and Motor Communication
 keywords:
   - reBot
@@ -10,20 +10,19 @@ keywords:
   - RS Motor
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_5
+slug: /rebot_physical_ai_course_chapter_5
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-18'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_5/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_5/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -34,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 2 · Chapter 5 · Theory</span>
     <h2>5. CAN Bus and Motor Communication</h2>
     <p>
-      Chapter 5 of the Seeed Embodied Intelligence Beginner's Course — CAN bus basics, standard vs
+      Chapter 5 of the Seeed Physical AI Beginner's Course — CAN bus basics, standard vs
       extended data frames, the CAN data link layer, and SocketCAN.
     </p>
     <div className="hero-actions">
@@ -43,15 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#socketcan">SocketCAN</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>5.1 CAN Basic Principles</span>
-    <span>5.2 CAN Protocol</span>
-    <span>5.3 SocketCAN</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 <section className="section-card">
   <p>After completing this section, you should be able to understand the following questions:</p>

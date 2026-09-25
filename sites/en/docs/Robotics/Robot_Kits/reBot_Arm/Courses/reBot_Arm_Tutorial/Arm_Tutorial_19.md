@@ -1,5 +1,5 @@
 ---
-description: "Chapter 19 of the Seeed Embodied Intelligence Beginner's Course — robot embodiment and the GR00T system architecture: what an embodiment is, joints/state/action definitions, camera and language modalities, the observation and action windows, foundation model fine-tuning, the LeRobot stack, and the reBot Arm's position in GR00T."
+description: "Chapter 19 of the Seeed Physical AI Beginner's Course — robot embodiment and the GR00T system architecture: what an embodiment is, joints/state/action definitions, camera and language modalities, the observation and action windows, foundation model fine-tuning, the LeRobot stack, and the reBot Arm's position in GR00T."
 title: Chapter 19 - Robot Embodiment and GR00T System Architecture
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - VLA
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_19
+slug: /rebot_physical_ai_course_chapter_19
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-24
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-24'
 updatedAt: '2026-09-24'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_19/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_19/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 4 · Chapter 19 · Theory</span>
     <h2>19. Robot Embodiment and GR00T System Architecture</h2>
     <p>
-      Chapter 19 of the Seeed Embodied Intelligence Beginner's Course — what an embodiment is,
+      Chapter 19 of the Seeed Physical AI Beginner's Course — what an embodiment is,
       joints/state/action definitions, camera and language modalities, the observation and action
       windows, foundation model fine-tuning, the LeRobot stack, and the reBot Arm's position in
       GR00T.
@@ -44,22 +43,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#rebot-position">reBot in GR00T</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>19.1 What Is a Robot Embodiment?</span>
-    <span>19.2 Robot Joints, State, and Action Definitions</span>
-    <span>19.3 Camera Modality</span>
-    <span>19.4 Language Modality</span>
-    <span>19.5 Observation Window and Action Window</span>
-    <span>19.6 Foundation Model and Fine-Tuning</span>
-    <span>19.7 GR00T System Architecture (LeRobot Stack)</span>
-    <span>19.8 GR00T Inference Server and Robot Control Client</span>
-    <span>19.9 The reBot Arm's Position in GR00T</span>
-    <span>19.10 Chapter Summary</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 <section className="section-card">
   <p>GR00T is a <strong>cross-embodiment</strong> foundation model: it is pretrained on multiple robot datasets, and distinguishes different hardware through <strong>Embodiment Tags</strong> and <strong>Modality configuration</strong>. This chapter explains where the reBot Arm sits in the LeRobot + GR00T stack and how the components collaborate at inference time.</p>

@@ -1,5 +1,5 @@
 ---
-description: Chapter 4 of the Seeed Embodied Intelligence Beginner's Course — fundamentals of robotic arms and joint actuators, including safety ranges, structure, reducers, encoders, and DM/RS motor control modes.
+description: Chapter 4 of the Seeed Physical AI Beginner's Course — fundamentals of robotic arms and joint actuators, including safety ranges, structure, reducers, encoders, and DM/RS motor control modes.
 title: Chapter 4 - Fundamentals of Robotic Arms and Joint Actuators
 keywords:
   - reBot
@@ -12,21 +12,20 @@ keywords:
   - Control Mode
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_4
+slug: /rebot_physical_ai_course_chapter_4
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-18'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_4/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_4/
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -37,7 +36,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 2 · Chapter 4 · Theory</span>
     <h2>4. Fundamentals of Robotic Arms and Joint Actuators</h2>
     <p>
-      Chapter 4 of the Seeed Embodied Intelligence Beginner's Course — fundamentals of robotic arms
+      Chapter 4 of the Seeed Physical AI Beginner's Course — fundamentals of robotic arms
       and joint actuators, including safety ranges, structure, reducers, encoders, and DM/RS motor
       control modes.
     </p>
@@ -46,21 +45,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#dm-control-modes">Control modes</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>4.1 Robotic Arm Safety Range and Workspace</span>
-    <span>4.2 Introduction to the Basic Structure of a Robotic Arm</span>
-    <span>4.3 Joint Actuator</span>
-    <span>4.4 Reducer</span>
-    <span>4.5 Encoder</span>
-    <span>4.6 Motor Interface and Wiring</span>
-    <span>4.7 DM Motor Control Modes</span>
-    <span>4.8 Different Modes of RS Motors</span>
-    <span>4.9 Emergency Stop and Abnormal Power-Off Principles</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 4.1 Robotic Arm Safety Range and Workspace
 

@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course 第12章 — ロボットのデータセットとタスク設計：Episode とは何か、1 レコードに何が入っているか、タイムスタンプと同期、開始／終了条件、一貫性 vs 多様性、データ量 vs データ品質、そしてデータ作成の具体例。"
+description: "Seeed Physical AI Beginner's Course 第12章 — ロボットのデータセットとタスク設計：Episode とは何か、1 レコードに何が入っているか、タイムスタンプと同期、開始／終了条件、一貫性 vs 多様性、データ量 vs データ品質、そしてデータ作成の具体例。"
 title: 第12章 - ロボットのデータセットとタスク設計
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Data Collection
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_12
+slug: /rebot_physical_ai_course_chapter_12
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_12/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_12/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 3 · 第12章 · 理論</span>
     <h2>12. ロボットのデータセットとタスク設計</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course 第12章 — Episode とは何か、1 つのデータレコードに何が
+      Seeed Physical AI Beginner's Course 第12章 — Episode とは何か、1 つのデータレコードに何が
       入っているか、タイムスタンプと同期、開始／終了条件、一貫性 vs 多様性、データ量 vs データ品質、
       そしてデータ作成の具体例について学びます。
     </p>

@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 10 del Curso para Principiantes en Inteligencia Incorporada de Seeed: qué es LeRobot, división del trabajo entre brazo líder/seguidor, la arquitectura de plugins Robot y Teleoperator, el flujo de datos de cámara/CAN/brazo y las diferencias de configuración entre DM y RS."
+description: "Capítulo 10 del Curso para Principiantes en IA Física de Seeed: qué es LeRobot, división del trabajo entre brazo líder/seguidor, la arquitectura de plugins Robot y Teleoperator, el flujo de datos de cámara/CAN/brazo y las diferencias de configuración entre DM y RS."
 title: Capítulo 10 - Arquitectura del Sistema LeRobot y Brazo reBot
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Follower Arm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_10
+slug: /rebot_physical_ai_course_chapter_10
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_10/
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_10/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 3 · Capítulo 10 · Teoría</span>
     <h2>10. LeRobot y la Arquitectura del Sistema de Brazo reBot</h2>
     <p>
-      Capítulo 10 del Curso para Principiantes en Inteligencia Incorporada de Seeed: qué es LeRobot,
+      Capítulo 10 del Curso para Principiantes en IA Física de Seeed: qué es LeRobot,
       la división del trabajo entre brazo líder/seguidor, la arquitectura de plugins Robot y Teleoperator,
       el flujo de datos de cámara/CAN/brazo y las diferencias de configuración entre DM y RS.
     </p>

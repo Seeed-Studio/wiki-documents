@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence 初級コース第11章 — 環境構築、フォロワーアームとリーダーアームのキャリブレーション、関節マッピング、遠隔操作の安全性、マスタースレーブ遠隔操作の開始、制御周波数とレイテンシ、ハンズオン演習。"
+description: "Seeed Physical AI 初級コース第11章 — 環境構築、フォロワーアームとリーダーアームのキャリブレーション、関節マッピング、遠隔操作の安全性、マスタースレーブ遠隔操作の開始、制御周波数とレイテンシ、ハンズオン演習。"
 title: 第11章 - リーダーとフォロワーのキャリブレーションと遠隔操作
 keywords:
   - reBot
@@ -10,16 +10,16 @@ keywords:
   - Follower Arm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_11
+slug: /rebot_physical_ai_course_chapter_11
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_11/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_11/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -34,7 +34,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 3 · 第11章 · 実践</span>
     <h2>11. リーダーとフォロワーのキャリブレーションと遠隔操作</h2>
     <p>
-      Seeed Embodied Intelligence 初級コース第11章 — 環境構築、フォロワーアームとリーダーアームのキャリブレーション、
+      Seeed Physical AI 初級コース第11章 — 環境構築、フォロワーアームとリーダーアームのキャリブレーション、
       関節マッピング、遠隔操作の安全性、マスタースレーブ遠隔操作の開始、制御周波数とレイテンシ、
       そしてハンズオン演習を行います。
     </p>

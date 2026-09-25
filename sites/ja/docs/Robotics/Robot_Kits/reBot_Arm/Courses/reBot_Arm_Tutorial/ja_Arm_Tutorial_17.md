@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course の第17章 — 実機推論・評価・データ反復：推論データフロー、前処理と逆正規化、推論の開始、アクションチャンクの実行、安全性、成功率評価、汎化テスト、失敗分析、および失敗駆動のデータ収集。"
+description: "Seeed Physical AI Beginner's Course の第17章 — 実機推論・評価・データ反復：推論データフロー、前処理と逆正規化、推論の開始、アクションチャンクの実行、安全性、成功率評価、汎化テスト、失敗分析、および失敗駆動のデータ収集。"
 title: 第17章 - 実機推論・評価・データ反復
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - データ反復
   - コース
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_17
+slug: /rebot_physical_ai_course_chapter_17
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_17/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_17/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 3 · 第17章 · 理論と実践</span>
     <h2>17. 実機推論・評価・データ反復</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course の第17章 — 推論データフロー、
+      Seeed Physical AI Beginner's Course の第17章 — 推論データフロー、
       前処理と逆正規化、推論の開始、アクションチャンクの実行、安全性、
       成功率評価、汎化テスト、失敗分析、および失敗駆動のデータ
       収集について解説します。

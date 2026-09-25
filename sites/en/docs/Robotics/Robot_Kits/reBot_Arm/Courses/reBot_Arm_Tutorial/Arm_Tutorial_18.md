@@ -1,5 +1,5 @@
 ---
-description: "Chapter 18 of the Seeed Embodied Intelligence Beginner's Course — multimodal learning and VLA basics: vision/language/action, VLM vs VLA, ACT vs VLA, language-conditioned tasks, single-task vs multi-task vs generalization, continuous actions vs action tokens, and VLA capabilities and limitations."
+description: "Chapter 18 of the Seeed Physical AI Beginner's Course — multimodal learning and VLA basics: vision/language/action, VLM vs VLA, ACT vs VLA, language-conditioned tasks, single-task vs multi-task vs generalization, continuous actions vs action tokens, and VLA capabilities and limitations."
 title: Chapter 18 - Multimodal Learning and VLA Basics
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Multimodal
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_18
+slug: /rebot_physical_ai_course_chapter_18
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-24
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-24'
 updatedAt: '2026-09-24'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_18/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_18/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 4 · Chapter 18 · Theory</span>
     <h2>18. Multimodal Learning and VLA Basics</h2>
     <p>
-      Chapter 18 of the Seeed Embodied Intelligence Beginner's Course — vision/language/action,
+      Chapter 18 of the Seeed Physical AI Beginner's Course — vision/language/action,
       VLM vs VLA, ACT vs VLA, language-conditioned tasks, single-task vs multi-task vs
       generalization, continuous actions vs action tokens, and VLA capabilities and limitations.
     </p>
@@ -43,21 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#capabilities">Capabilities</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>18.1 Multimodal Models</span>
-    <span>18.2 Vision, Language, and Action</span>
-    <span>18.3 Difference Between VLM and VLA</span>
-    <span>18.4 Difference Between ACT and VLA</span>
-    <span>18.5 Language-Conditioned Robot Tasks</span>
-    <span>18.6 Single-Task, Multi-Task, and Generalization</span>
-    <span>18.7 Continuous Actions and Action Tokens</span>
-    <span>18.8 Capabilities and Limitations of VLA</span>
-    <span>18.9 Chapter Summary</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 <section className="section-card">
   <p>In the previous chapters, you have used policies such as <strong>ACT (Action Chunking with Transformers)</strong> on the reBot Arm to complete imitation learning that "looks at an image and outputs joint actions." Such methods are usually trained for a <strong>single task</strong>: the model only learns the single behavior of "putting the red cube into the box," and switching tasks requires recollecting data and retraining.</p>

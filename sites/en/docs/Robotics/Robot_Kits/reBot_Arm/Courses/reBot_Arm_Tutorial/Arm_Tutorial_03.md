@@ -1,5 +1,5 @@
 ---
-description: Chapter 3 of the Seeed Embodied Intelligence Beginner's Course — the hands-on hardware list required for each stage, including main control units, the reBot Arm, cameras, leader arm, and printable mounts.
+description: Chapter 3 of the Seeed Physical AI Beginner's Course — the hands-on hardware list required for each stage, including main control units, the reBot Arm, cameras, leader arm, and printable mounts.
 title: Chapter 3 - Hardware Selection for Courses
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Hardware
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_3
+slug: /rebot_physical_ai_course_chapter_3
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-18'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_3/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_3/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 1 · Chapter 3 · Theory &amp; Practice</span>
     <h2>3. Hardware Selection for Subsequent Courses</h2>
     <p>
-      Chapter 3 of the Seeed Embodied Intelligence Beginner's Course — the hands-on hardware list
+      Chapter 3 of the Seeed Physical AI Beginner's Course — the hands-on hardware list
       required for each stage, including main control units, the reBot Arm, cameras, leader arm,
       and printable mounts.
     </p>
@@ -49,8 +48,6 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span>Cameras and printable mounts for the vision and imitation-learning stages.</span>
   </div>
 </section>
-
-<RebotCourseNav />
 
 ## 3.1 Hardware Selection for Subsequent Courses
 

@@ -1,5 +1,5 @@
 ---
-description: 'Chapter 15 of the Seeed Embodied Intelligence Beginner''s Course — the ACT model and action chunking: ACT input and output, the ResNet and Transformer structure, attention intuition, CVAE, action chunk vs action horizon, error accumulation defenses, and ACT''s capability boundaries.'
+description: 'Chapter 15 of the Seeed Physical AI Beginner''s Course — the ACT model and action chunking: ACT input and output, the ResNet and Transformer structure, attention intuition, CVAE, action chunk vs action horizon, error accumulation defenses, and ACT''s capability boundaries.'
 title: Chapter 15 - ACT Model and Action Chunking
 keywords:
   - reBot
@@ -10,20 +10,19 @@ keywords:
   - Imitation Learning
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_15
+slug: /rebot_physical_ai_course_chapter_15
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_15/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_15/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -34,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 15 · Theory</span>
     <h2>15. ACT Model and Action Chunking</h2>
     <p>
-      Chapter 15 of the Seeed Embodied Intelligence Beginner's Course — ACT input and output, the
+      Chapter 15 of the Seeed Physical AI Beginner's Course — ACT input and output, the
       ResNet and Transformer structure, attention intuition, CVAE, action chunk vs action horizon,
       error accumulation defenses, and ACT's capability boundaries.
     </p>
@@ -44,22 +43,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#chunk-horizon">Chunk vs horizon</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>15.1 From Behavioral Cloning to ACT</span>
-    <span>15.2 ACT Input and Output</span>
-    <span>15.3 ACT Internal Structure</span>
-    <span>15.4 What Is a Transformer</span>
-    <span>15.5 How Transformer Is Used in ACT</span>
-    <span>15.6 What Is CVAE</span>
-    <span>15.7 Action Chunk vs. Action Horizon</span>
-    <span>15.8 Action Continuity and Error Accumulation</span>
-    <span>15.9 What Tasks Is ACT Suited For?</span>
-    <span>15.10 ACT's Capability Boundaries</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 15.1 From Behavioral Cloning to ACT
 

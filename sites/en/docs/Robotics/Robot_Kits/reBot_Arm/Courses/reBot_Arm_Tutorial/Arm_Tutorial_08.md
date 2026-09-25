@@ -1,5 +1,5 @@
 ---
-description: 'Chapter 8 of the Seeed Embodied Intelligence Beginner''s Course — control the reBot Arm with the Python SDK: parameters, context manager connection, motion, zero point, and joint state.'
+description: 'Chapter 8 of the Seeed Physical AI Beginner''s Course — control the reBot Arm with the Python SDK: parameters, context manager connection, motion, zero point, and joint state.'
 title: Chapter 8 - Controlling reBot Arm Using Python SDK
 keywords:
   - reBot
@@ -8,20 +8,19 @@ keywords:
   - reBotArm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_8
+slug: /rebot_physical_ai_course_chapter_8
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-18'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_8/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_8/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -32,7 +31,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 2 · Chapter 8 · Theory &amp; Practice</span>
     <h2>8. Controlling reBot Arm Using Python SDK</h2>
     <p>
-      Chapter 8 of the Seeed Embodied Intelligence Beginner's Course — control the reBot Arm with
+      Chapter 8 of the Seeed Physical AI Beginner's Course — control the reBot Arm with
       the Python SDK: parameters, context manager connection, motion, zero point, and joint state.
     </p>
     <div className="hero-actions">
@@ -41,17 +40,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#motion">Motion</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>8.1 Modify Parameters and Switch Modes</span>
-    <span>8.2 Connect/Disconnect the Robotic Arm (Using Context Manager)</span>
-    <span>8.3 Control Robotic Arm Motion</span>
-    <span>8.4 Set Zero Point for the Robotic Arm</span>
-    <span>8.5 Update Robotic Arm Joint State</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 <section className="section-card">
   <p>1. If the environment is not installed, refer to section 7.2 for the installation environment.</p>

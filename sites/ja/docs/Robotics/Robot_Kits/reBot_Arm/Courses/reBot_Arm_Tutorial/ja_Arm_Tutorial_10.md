@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course の第10章 — LeRobot とは何か、リーダー／フォロワーアームの役割分担、Robot と Teleoperator のプラグインアーキテクチャ、カメラ／CAN／アームのデータフロー、および DM と RS の設定差分について。"
+description: "Seeed Physical AI Beginner's Course の第10章 — LeRobot とは何か、リーダー／フォロワーアームの役割分担、Robot と Teleoperator のプラグインアーキテクチャ、カメラ／CAN／アームのデータフロー、および DM と RS の設定差分について。"
 title: 第10章 - LeRobot と reBot アームのシステムアーキテクチャ
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Follower Arm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_10
+slug: /rebot_physical_ai_course_chapter_10
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_10/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_10/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 3 · 第10章 · 理論</span>
     <h2>10. LeRobot と reBot アームのシステムアーキテクチャ</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course の第10章では、LeRobot とは何か、
+      Seeed Physical AI Beginner's Course の第10章では、LeRobot とは何か、
       リーダー／フォロワーアームの役割分担、Robot と Teleoperator のプラグインアーキテクチャ、
       カメラ／CAN／アームのデータフロー、そして DM と RS の設定の違いについて学びます。
     </p>

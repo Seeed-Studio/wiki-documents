@@ -1,5 +1,5 @@
 ---
-description: "Chapter 21 of the Seeed Embodied Intelligence Beginner's Course — fine-tuning the reBot Arm with Isaac GR00T: environment setup, downloading the foundation model, dataset path, single-GPU and multi-GPU fine-tuning, monitoring VRAM and loss, saving checkpoints, real-robot inference, troubleshooting, and training tips."
+description: "Chapter 21 of the Seeed Physical AI Beginner's Course — fine-tuning the reBot Arm with Isaac GR00T: environment setup, downloading the foundation model, dataset path, single-GPU and multi-GPU fine-tuning, monitoring VRAM and loss, saving checkpoints, real-robot inference, troubleshooting, and training tips."
 title: Chapter 21 - Fine-tuning the reBot Arm with Isaac GR00T
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - VLA
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_21
+slug: /rebot_physical_ai_course_chapter_21
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-24
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-24'
 updatedAt: '2026-09-24'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_21/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_21/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 4 · Chapter 21 · Practice</span>
     <h2>21. Fine-tuning the reBot Arm with Isaac GR00T</h2>
     <p>
-      Chapter 21 of the Seeed Embodied Intelligence Beginner's Course — environment setup,
+      Chapter 21 of the Seeed Physical AI Beginner's Course — environment setup,
       downloading the foundation model, dataset path, single-GPU and multi-GPU fine-tuning,
       monitoring VRAM and loss, saving checkpoints, real-robot inference, troubleshooting, and
       training tips.
@@ -44,23 +43,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#inference">Inference</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>21.1 Environment Setup</span>
-    <span>21.2 Downloading the Foundation Model</span>
-    <span>21.3 Configuring the Dataset Path</span>
-    <span>21.4 Starting Single-GPU Fine-tuning</span>
-    <span>21.5 Starting Multi-GPU Fine-tuning</span>
-    <span>21.6 Monitoring VRAM, Loss, and Training Logs</span>
-    <span>21.7 Saving Checkpoints</span>
-    <span>21.8 Real-robot Inference and Evaluation</span>
-    <span>21.9 Troubleshooting FAQ</span>
-    <span>21.10 Training Improvement Suggestions</span>
-    <span>21.11 Chapter Summary</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 <section className="section-card">
   <p>This chapter is based on <strong>LeRobot + GR00T N1.7</strong> (<code>nvidia/GR00T-N1.7-3B</code>). Please ensure the dataset from Chapter 20 is ready.</p>

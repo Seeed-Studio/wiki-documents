@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course 第13章 — カメラ設定と LeRobot データ収集：単眼／二眼カメラ構成、カメラデバイス名の確認、画像とアクションの同期、データセット作成、録画と再録画、可視化、データの追加・削除。"
+description: "Seeed Physical AI Beginner's Course 第13章 — カメラ設定と LeRobot データ収集：単眼／二眼カメラ構成、カメラデバイス名の確認、画像とアクションの同期、データセット作成、録画と再録画、可視化、データの追加・削除。"
 title: 第13章 - カメラ設定と LeRobot データ収集
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Dataset
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_13
+slug: /rebot_physical_ai_course_chapter_13
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_13/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_13/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 3 · 第13章 · 実践</span>
     <h2>13. カメラ設定と LeRobot データ収集</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course 第13章 — 単眼／二眼カメラ構成、
+      Seeed Physical AI Beginner's Course 第13章 — 単眼／二眼カメラ構成、
       カメラデバイス名の確認、画像とアクションの同期、データセット作成、録画と
       再録画、可視化、データの追加・削除について説明します。
     </p>

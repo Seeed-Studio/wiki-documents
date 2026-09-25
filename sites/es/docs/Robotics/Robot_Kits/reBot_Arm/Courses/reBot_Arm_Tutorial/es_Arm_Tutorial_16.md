@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 16 del Curso para Principiantes en Inteligencia Incorporada de Seeed: entrena tu primera política ACT: tamaño de lote, tasa de aprendizaje y pasos, gestión de checkpoints, inicio del entrenamiento, monitorización de la pérdida y del estado de la GPU, y reanudación de entrenamientos interrumpidos."
+description: "Capítulo 16 del Curso para Principiantes en IA Física de Seeed: entrena tu primera política ACT: tamaño de lote, tasa de aprendizaje y pasos, gestión de checkpoints, inicio del entrenamiento, monitorización de la pérdida y del estado de la GPU, y reanudación de entrenamientos interrumpidos."
 title: Capítulo 16 - Entrenar tu primera política ACT
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Policy
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_16
+slug: /rebot_physical_ai_course_chapter_16
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_16/
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_16/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 3 · Capítulo 16 · Práctica</span>
     <h2>16. Entrenar tu primera política ACT</h2>
     <p>
-      Capítulo 16 del Curso para Principiantes en Inteligencia Incorporada de Seeed: tamaño de lote, tasa de aprendizaje y
+      Capítulo 16 del Curso para Principiantes en IA Física de Seeed: tamaño de lote, tasa de aprendizaje y
       pasos, gestión de checkpoints, inicio del entrenamiento, monitorización de la pérdida y del estado de la GPU, y reanudación
       de entrenamientos interrumpidos.
     </p>
