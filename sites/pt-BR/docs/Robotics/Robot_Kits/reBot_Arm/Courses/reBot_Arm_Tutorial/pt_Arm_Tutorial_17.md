@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 17 do Curso para Iniciantes em Inteligência Incorporada da Seeed — inferência em robô real, avaliação e iteração de dados: fluxo de dados de inferência, pré-processamento e desnormalização, início da inferência, execução de blocos de ação, segurança, avaliação da taxa de sucesso, teste de generalização, análise de falhas e coleta de dados guiada por falhas."
+description: "Capítulo 17 do Curso para Iniciantes em IA Física da Seeed — inferência em robô real, avaliação e iteração de dados: fluxo de dados de inferência, pré-processamento e desnormalização, início da inferência, execução de blocos de ação, segurança, avaliação da taxa de sucesso, teste de generalização, análise de falhas e coleta de dados guiada por falhas."
 title: Capítulo 17 - Inferência em Robô Real, Avaliação e Iteração de Dados
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Data Iteration
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_17
+slug: /rebot_physical_ai_course_chapter_17
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_17/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_17/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 3 · Capítulo 17 · Teoria e Prática</span>
     <h2>17. Inferência em Robô Real, Avaliação e Iteração de Dados</h2>
     <p>
-      Capítulo 17 do Curso para Iniciantes em Inteligência Incorporada da Seeed — fluxo de dados de inferência,
+      Capítulo 17 do Curso para Iniciantes em IA Física da Seeed — fluxo de dados de inferência,
       pré-processamento e desnormalização, início da inferência, execução de blocos de ação, segurança,
       avaliação da taxa de sucesso, teste de generalização, análise de falhas e coleta de dados guiada por falhas.
       collection.

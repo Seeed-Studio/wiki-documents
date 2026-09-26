@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 13 do Curso para Iniciantes em Inteligência Incorporada da Seeed — configuração de câmera e coleta de dados com LeRobot: configuração com câmera única vs dupla, encontrando nomes de dispositivos de câmera, sincronização de imagem/ação, criação de dataset, gravação e regravação, visualização e complementação ou exclusão de dados."
+description: "Capítulo 13 do Curso para Iniciantes em IA Física da Seeed — configuração de câmera e coleta de dados com LeRobot: configuração com câmera única vs dupla, encontrando nomes de dispositivos de câmera, sincronização de imagem/ação, criação de dataset, gravação e regravação, visualização e complementação ou exclusão de dados."
 title: Capítulo 13 - Configuração de Câmera e Coleta de Dados com LeRobot
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Dataset
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_13
+slug: /rebot_physical_ai_course_chapter_13
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_13/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_13/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 3 · Capítulo 13 · Prática</span>
     <h2>13. Configuração de Câmera e Coleta de Dados com LeRobot</h2>
     <p>
-      Capítulo 13 do Curso para Iniciantes em Inteligência Incorporada da Seeed — configuração com câmera única vs dupla,
+      Capítulo 13 do Curso para Iniciantes em IA Física da Seeed — configuração com câmera única vs dupla,
       encontrando nomes de dispositivos de câmera, sincronização de imagem/ação, criação de um dataset, gravação e
       regravação, visualização e complementação ou exclusão de dados.
     </p>

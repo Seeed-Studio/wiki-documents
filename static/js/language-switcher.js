@@ -6883,109 +6883,109 @@
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_1": [
+  "/rebot_physical_ai_course_chapter_1": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_2": [
+  "/rebot_physical_ai_course_chapter_2": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_3": [
+  "/rebot_physical_ai_course_chapter_3": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_4": [
+  "/rebot_physical_ai_course_chapter_4": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_5": [
+  "/rebot_physical_ai_course_chapter_5": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_6": [
+  "/rebot_physical_ai_course_chapter_6": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_7": [
+  "/rebot_physical_ai_course_chapter_7": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_8": [
+  "/rebot_physical_ai_course_chapter_8": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_9": [
+  "/rebot_physical_ai_course_chapter_9": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_10": [
+  "/rebot_physical_ai_course_chapter_10": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_11": [
+  "/rebot_physical_ai_course_chapter_11": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_12": [
+  "/rebot_physical_ai_course_chapter_12": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_13": [
+  "/rebot_physical_ai_course_chapter_13": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_14": [
+  "/rebot_physical_ai_course_chapter_14": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_15": [
+  "/rebot_physical_ai_course_chapter_15": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_16": [
+  "/rebot_physical_ai_course_chapter_16": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_chapter_17": [
+  "/rebot_physical_ai_course_chapter_17": [
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_embodied_ai_course_introduction": [
+  "/rebot_physical_ai_course_introduction": [
     "en",
     "es",
     "ja",

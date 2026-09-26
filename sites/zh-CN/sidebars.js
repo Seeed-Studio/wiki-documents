@@ -1,6 +1,7 @@
 // @ts-check
 
 const roboticsSidebars = require('./robotics-sidebar');
+const rebotRsDmSidebars = require('./rebot-course-sidebar');
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
@@ -5511,6 +5512,7 @@ const sidebars = {
   ],
 
   ...roboticsSidebars,
+  ...rebotRsDmSidebars,
 
 };
 

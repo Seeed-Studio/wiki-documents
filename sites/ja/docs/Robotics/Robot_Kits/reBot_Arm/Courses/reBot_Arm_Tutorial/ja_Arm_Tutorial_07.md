@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course 第7章 — ベンダー横断 CAN モーター制御ライブラリ MotorBridge と、Web および Python からの DM / RS モーター制御方法。"
+description: "Seeed Physical AI Beginner's Course 第7章 — ベンダー横断 CAN モーター制御ライブラリ MotorBridge と、Web および Python からの DM / RS モーター制御方法。"
 title: 第7章 - MotorBridge モーター制御ライブラリ
 keywords:
   - reBot
@@ -10,16 +10,16 @@ keywords:
   - Python
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_7
+slug: /rebot_physical_ai_course_chapter_7
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_7/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_7/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -34,7 +34,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 2 · 第7章 · 実践</span>
     <h2>7. MotorBridge モーター制御ライブラリ</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course 第7章 — ベンダー横断
+      Seeed Physical AI Beginner's Course 第7章 — ベンダー横断
       CAN モーター制御ライブラリ MotorBridge と、Web および Python から DM / RS モーターを制御する方法について説明します。
     </p>
     <div className="hero-actions">

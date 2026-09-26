@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course の第4章 — ロボットアームおよび関節アクチュエータの基礎。安全範囲、構造、減速機、エンコーダ、DM/RS モーターの制御モードを含む内容です。"
+description: "Seeed Physical AI Beginner's Course の第4章 — ロボットアームおよび関節アクチュエータの基礎。安全範囲、構造、減速機、エンコーダ、DM/RS モーターの制御モードを含む内容です。"
 title: 第4章 - ロボットアームと関節アクチュエータの基礎
 keywords:
   - reBot
@@ -12,16 +12,16 @@ keywords:
   - Control Mode
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_4
+slug: /rebot_physical_ai_course_chapter_4
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_4/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_4/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -37,7 +37,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 2 · 第4章 · 理論</span>
     <h2>4. ロボットアームと関節アクチュエータの基礎</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course の第4章では、ロボットアームおよび関節アクチュエータの基礎として、
+      Seeed Physical AI Beginner's Course の第4章では、ロボットアームおよび関節アクチュエータの基礎として、
       安全範囲や構造、減速機、エンコーダ、DM/RS モーターの制御モードについて解説します。
       。
     </p>

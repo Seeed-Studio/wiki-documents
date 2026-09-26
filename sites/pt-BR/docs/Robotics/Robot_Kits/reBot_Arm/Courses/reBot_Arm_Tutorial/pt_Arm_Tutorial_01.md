@@ -1,26 +1,26 @@
 ---
-description: "Capítulo 1 do Curso para Iniciantes em Inteligência Incorporada da Seeed — entenda o que são robôs e braços robóticos, graus de liberdade e a diferença entre controle tradicional, aprendizado por imitação e VLA."
-title: Capítulo 1 - Robôs e Inteligência Incorporada
+description: "Capítulo 1 do Curso para Iniciantes em IA Física da Seeed — entenda o que são robôs e braços robóticos, graus de liberdade e a diferença entre controle tradicional, aprendizado por imitação e VLA."
+title: Capítulo 1 - Robôs e IA Física
 keywords:
   - reBot
   - Robotic Arm
   - Robot
-  - Embodied Intelligence
+  - IA Física
   - DOF
   - Imitation Learning
   - VLA
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_1
+slug: /rebot_physical_ai_course_chapter_1
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_1/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_1/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,9 +33,9 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 <section className="doc-hero">
   <div>
     <span className="eyebrow">Estágio 1 · Capítulo 1 · Teoria</span>
-    <h2>1. Conhecendo Robôs e Inteligência Incorporada</h2>
+    <h2>1. Conhecendo Robôs e IA Física</h2>
     <p>
-      Capítulo 1 do Curso para Iniciantes em Inteligência Incorporada da Seeed — entenda o que são robôs e
+      Capítulo 1 do Curso para Iniciantes em IA Física da Seeed — entenda o que são robôs e
       braços robóticos, graus de liberdade e a diferença entre controle tradicional, aprendizado por imitação
       e VLA.
     </p>

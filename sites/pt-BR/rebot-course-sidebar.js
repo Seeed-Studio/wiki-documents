@@ -113,6 +113,104 @@ const sidebars = {
     },
   ],
 
+  RebotRsSidebar: [
+    {
+      type: 'ref',
+      id: 'pt_Edge_Robotics',
+      label: '<-Voltar para Robótica',
+      className: 'sideboard_calss',
+    },
+    {
+      type: 'category',
+      label: 'Início rápido e SDK',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Getting_Started',
+        'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Lerobot',
+        'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_pinocchio',
+        'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_control_mit',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Aplicações',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Grasping_Demo',
+        'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_ROS2_Integration',
+        'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_isaacsim',
+        'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide',
+        'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Agent',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Curso',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        {
+          type: 'ref',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/pt_Arm_Tutorial_Introduction',
+          label: 'Curso para iniciantes',
+        },
+      ],
+    },
+  ],
+
+  RebotDmSidebar: [
+    {
+      type: 'ref',
+      id: 'pt_Edge_Robotics',
+      label: '<-Voltar para Robótica',
+      className: 'sideboard_calss',
+    },
+    {
+      type: 'category',
+      label: 'Início rápido e SDK',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Getting_Started',
+        'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Lerobot',
+        'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_pinocchio',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Aplicações',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Grasping_Demo',
+        'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_ROS2_Integration',
+        'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_isaacsim',
+        'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Curso',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        {
+          type: 'ref',
+          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/pt_Arm_Tutorial_Introduction',
+          label: 'Curso para iniciantes',
+        },
+      ],
+    },
+  ],
+
 };
 
 module.exports = sidebars;
