@@ -264,8 +264,8 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td rowSpan={2}>7.2</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBraqxVv-rUQKkcwG2EXybtAUKJgIvgi77ze4eig_Hj3Ns">Download</a></td>
-      <td>1cd0d7004f426a524a55761bf01dd22280829b9834cbd11d4094b29865f46fe9</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDvZETxkTZ9S7gWHBtq-xIHAW3KLxF5kc0g6JQVpx1LBCg">Download</a></td>
+      <td>F95E91C3BFB00D50EB999383F85949B4</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
