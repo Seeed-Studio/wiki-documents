@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 12 del Curso para Principiantes en Inteligencia Incorporada de Seeed — conjuntos de datos de robots y diseño de tareas: qué es un Episodio, qué hay en un registro de datos, marcas de tiempo y sincronización, condiciones de inicio/fin, consistencia vs diversidad, cantidad de datos vs calidad y un ejemplo práctico de creación de datos."
+description: "Capítulo 12 del Curso para Principiantes en IA Física de Seeed — conjuntos de datos de robots y diseño de tareas: qué es un Episodio, qué hay en un registro de datos, marcas de tiempo y sincronización, condiciones de inicio/fin, consistencia vs diversidad, cantidad de datos vs calidad y un ejemplo práctico de creación de datos."
 title: Capítulo 12 - Conjuntos de Datos de Robots y Diseño de Tareas
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Data Collection
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_12
+slug: /rebot_physical_ai_course_chapter_12
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_12/
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_12/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 3 · Capítulo 12 · Teoría</span>
     <h2>12. Conjuntos de Datos de Robots y Diseño de Tareas</h2>
     <p>
-      Capítulo 12 del Curso para Principiantes en Inteligencia Incorporada de Seeed: qué es un Episodio, qué hay
+      Capítulo 12 del Curso para Principiantes en IA Física de Seeed: qué es un Episodio, qué hay
       en un registro de datos, marcas de tiempo y sincronización, condiciones de inicio/fin, consistencia vs
       diversidad, cantidad de datos vs calidad y un ejemplo práctico de creación de datos.
     </p>

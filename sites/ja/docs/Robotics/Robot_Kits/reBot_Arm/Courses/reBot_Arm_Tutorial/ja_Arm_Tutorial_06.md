@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course の第 6 章 — reBot Arm の組み立て、電源の組み立て、アームの配線、そして初回の電源投入を行います。"
+description: "Seeed Physical AI Beginner's Course の第 6 章 — reBot Arm の組み立て、電源の組み立て、アームの配線、そして初回の電源投入を行います。"
 title: 第 6 章 - 組み立て、電源、および初回の電源投入
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - 配線
   - コース
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_6
+slug: /rebot_physical_ai_course_chapter_6
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_6/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_6/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 2 · 第 6 章 · 実践</span>
     <h2>6. 組み立て、電源、および初回の電源投入</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course の第 6 章では、
+      Seeed Physical AI Beginner's Course の第 6 章では、
       reBot Arm の組み立て、電源の組み立て、アームの配線、そして初めての電源投入を行います。
     </p>
     <div className="hero-actions">

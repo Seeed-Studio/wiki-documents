@@ -14,13 +14,13 @@
   --rp-accent: #2563eb;
   --rp-accent-soft: rgba(37, 99, 235, 0.10);
   --rp-accent-border: rgba(37, 99, 235, 0.24);
-  --rp-anchor-offset: 12rem;
+  --rp-anchor-offset: 7rem;
   width: 100%;
   max-width: none;
   color: var(--rp-text);
 }
 
-/* Match homepage .com_module width: max-width 1440px + padding 0 6% */
+/* Match homepage/other-department width: max-width 1440px + padding 0 6% (scoped to the robotics landing page via html.robotics-landing-page and main:has(.robotics-page)) */
 main:has(.robotics-page),
 html.robotics-landing-page main {
   flex: 1 1 auto !important;
@@ -91,6 +91,110 @@ html.robotics-landing-page main [class*='docItemCol'] {
   background: rgba(37, 99, 235, 0.08);
   pointer-events: none;
 }
+/* Quick links row (What's New / GitHub) */
+.robotics-quicklinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin: 1.5rem 0 0.25rem;
+}
+.robotics-quicklinks > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.68rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 780;
+  font-size: 0.92rem;
+  text-decoration: none !important;
+  color: var(--rp-text);
+  background: var(--rp-card-bg);
+  border: 1px solid var(--rp-border);
+  box-shadow: var(--rp-shadow-sm);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+.robotics-quicklinks > a:hover {
+  color: var(--rp-accent);
+  border-color: var(--rp-accent-border);
+  background: var(--rp-card-bg-hover);
+  box-shadow: var(--rp-shadow-accent);
+  transform: translateY(-2px);
+}
+
+/* GitHub star CTA (mirrors rebot-wiki-style.css so it also works on the robotics page) */
+.rebot-github-star-wrap {
+  display: flex;
+  justify-content: center;
+}
+.robotics-quicklinks .rebot-github-star-wrap { margin: 0; }
+.rebot-github-star {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 2.4rem;
+  max-width: 13rem;
+  padding: 0.55rem 1rem;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: nowrap;
+  background: #050505;
+  border: 1px solid #050505;
+  border-radius: 0.55rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+.rebot-github-star:hover {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 0 2px var(--ifm-background-color), 0 0 0 4px #050505;
+  transform: translateY(-1px);
+}
+.rebot-github-star:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+.rebot-github-star-label,
+.rebot-github-star-count {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.rebot-github-star svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+.rebot-github-star-count svg {
+  color: #9ca3af;
+  transition: color 300ms ease;
+}
+.rebot-github-star:hover .rebot-github-star-count svg {
+  color: #fde047;
+}
+.rebot-github-star-shine {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  width: 2rem;
+  height: 8rem;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(3rem) rotate(12deg);
+  transition: transform 700ms ease-out;
+}
+.rebot-github-star:hover .rebot-github-star-shine {
+  transform: translateX(-10rem) rotate(12deg);
+}
+
 .eyebrow, .section-kicker {
   display: inline-flex;
   align-items: center;
@@ -124,11 +228,9 @@ html.robotics-landing-page main [class*='docItemCol'] {
 .hero-tips span { color: var(--rp-text-muted); font-size: 0.92rem; line-height: 1.5; }
 
 .robotics-page .quick-nav {
-  position: sticky;
-  top: calc(var(--ifm-navbar-height, 60px) + 0.75rem);
-  z-index: 3;
+  position: static;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 0.75rem;
   padding: 0.75rem;
   margin: 1rem 0 2rem;
@@ -162,7 +264,12 @@ html.robotics-landing-page main [class*='docItemCol'] {
 .section-title-row h2 { margin: 0.15rem 0 0; font-size: 1.7rem; letter-spacing: -0.02em; }
 .section-title-row p { margin: 0; max-width: 580px; color: var(--rp-text-muted); line-height: 1.68; }
 
-.product-stack { display: grid; gap: 1rem; }
+.product-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
 .product-card {
   --rp-accent: #2563eb;
   --rp-accent-soft: rgba(37, 99, 235, 0.10);
@@ -190,10 +297,11 @@ html.robotics-landing-page main [class*='docItemCol'] {
 }
 .product-head h3 { margin: 0 0 0.25rem; font-size: 1.18rem; letter-spacing: -0.01em; }
 .product-head span { color: var(--rp-text-muted); font-size: 0.92rem; line-height: 1.48; }
+.product-card--cover .product-head span { color: rgba(255, 255, 255, 0.92); }
 
 /* Cover cards: hero title on getting-started title image */
 .product-card--cover .product-head {
-  min-height: clamp(10.5rem, 18vw, 13.5rem);
+  min-height: clamp(18.7rem, 32vw, 24rem);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -209,7 +317,7 @@ html.robotics-landing-page main [class*='docItemCol'] {
       rgba(8, 15, 30, 0.16) 70%,
       rgba(8, 15, 30, 0.06) 100%
     ),
-    var(--rp-cover) right center / cover no-repeat;
+    var(--rp-cover) center / 100% no-repeat;
 }
 .product-card--cover .product-head h3 {
   margin: 0;
@@ -257,6 +365,12 @@ html.robotics-landing-page main [class*='docItemCol'] {
 }
 #reachy {
   --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp');
+}
+#starai {
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.png');
+}
+#atom {
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-x/atom_x_overview.webp');
 }
 
 @media (max-width: 560px) {
@@ -346,6 +460,65 @@ html.robotics-landing-page main [class*='docItemCol'] {
 .step-card.optional .step-index { background: #64748b; }
 .step-card.optional em { color: #475569; background: #e2e8f0; border-color: rgba(100, 116, 139, 0.28); }
 
+/* Grouped learning lists inside reBot product cards */
+.learning-group + .learning-group { margin-top: 1.15rem; }
+.learning-group > h4 {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--rp-accent);
+  background: var(--rp-accent-soft);
+  border-left: 3px solid var(--rp-accent);
+  border-radius: 3px;
+  padding: 0.3rem 0.6rem;
+}
+
+/* Compact open-source resource links inside product cards */
+.rebot-resource-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.5rem;
+}
+.rebot-resource-list a {
+  display: block;
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  text-decoration: none !important;
+  color: var(--rp-text);
+  background: var(--rp-card-bg);
+  border: 1px solid var(--rp-border);
+  transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+.rebot-resource-list a:hover {
+  color: var(--rp-accent);
+  border-color: var(--rp-accent-border);
+  background: var(--rp-accent-soft);
+}
+
+/* Collapsible product cards: the header acts as the toggle */
+.product-card > summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+.product-card > summary::-webkit-details-marker { display: none; }
+.product-card > summary::after {
+  content: '▾';
+  position: absolute;
+  right: 1.1rem;
+  top: 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--rp-text-muted);
+  transition: transform 0.2s ease;
+}
+.product-card--cover > summary::after { color: #fff; }
+.product-card[open] > summary::after { transform: rotate(180deg); }
+
 .reachy-path-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 0.9rem; align-items: start; }
 .mini-track { background: var(--rp-card-bg); border: 1px solid var(--rp-border); border-radius: 18px; padding: 1rem; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.035); }
 .mini-track h4 { margin: 0 0 0.75rem; color: var(--rp-text); font-size: 0.98rem; }
@@ -399,6 +572,7 @@ html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgb
   .section-title-row p { margin-top: 0.5rem; }
   .robotics-page .quick-nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .learning-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-stack { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .robotics-page { --rp-anchor-offset: 5.75rem; }

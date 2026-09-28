@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 8 del Curso para Principiantes de Inteligencia Incorporada de Seeed — controla el reBot Arm con el SDK de Python: parámetros, conexión con administrador de contexto, movimiento, punto cero y estado de las articulaciones."
+description: "Capítulo 8 del Curso para Principiantes de IA Física de Seeed — controla el reBot Arm con el SDK de Python: parámetros, conexión con administrador de contexto, movimiento, punto cero y estado de las articulaciones."
 title: Capítulo 8 - Control del reBot Arm usando el SDK de Python
 keywords:
   - reBot
@@ -8,16 +8,16 @@ keywords:
   - reBotArm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_8
+slug: /rebot_physical_ai_course_chapter_8
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_8/
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_8/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -32,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 2 · Capítulo 8 · Teoría y práctica</span>
     <h2>8. Control del reBot Arm usando el SDK de Python</h2>
     <p>
-      Capítulo 8 del Curso para Principiantes de Inteligencia Incorporada de Seeed — controla el reBot Arm con
+      Capítulo 8 del Curso para Principiantes de IA Física de Seeed — controla el reBot Arm con
       el SDK de Python: parámetros, conexión con administrador de contexto, movimiento, punto cero y estado de las articulaciones.
     </p>
     <div className="hero-actions">

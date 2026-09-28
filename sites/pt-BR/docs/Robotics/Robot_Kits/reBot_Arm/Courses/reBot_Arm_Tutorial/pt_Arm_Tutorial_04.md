@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 4 do Curso para Iniciantes em Inteligência Incorporada da Seeed — fundamentos de braços robóticos e atuadores de junta, incluindo faixas de segurança, estrutura, redutores, encoders e modos de controle de motores DM/RS."
+description: "Capítulo 4 do Curso para Iniciantes em IA Física da Seeed — fundamentos de braços robóticos e atuadores de junta, incluindo faixas de segurança, estrutura, redutores, encoders e modos de controle de motores DM/RS."
 title: Capítulo 4 - Fundamentos de Braços Robóticos e Atuadores de Junta
 keywords:
   - reBot
@@ -12,16 +12,16 @@ keywords:
   - Control Mode
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_4
+slug: /rebot_physical_ai_course_chapter_4
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_4/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_4/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -37,7 +37,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 2 · Capítulo 4 · Teoria</span>
     <h2>4. Fundamentos de Braços Robóticos e Atuadores de Junta</h2>
     <p>
-      Capítulo 4 do Curso para Iniciantes em Inteligência Incorporada da Seeed — fundamentos de braços robóticos
+      Capítulo 4 do Curso para Iniciantes em IA Física da Seeed — fundamentos de braços robóticos
       e atuadores de junta, incluindo faixas de segurança, estrutura, redutores, encoders e modos de controle
       de motores DM/RS.
     </p>
