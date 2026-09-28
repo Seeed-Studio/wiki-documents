@@ -305,7 +305,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     </div>
     <div className="resource-columns">
       <div><h4>ROS Ecosystem</h4><a href="/installing_ros1/">ROS 1 Installation</a><a href="/install_ros2_humble/">ROS 2 Installation</a><a href="/install_isaacros/">Isaac ROS Installation</a><a href="/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
-      <div><h4>NVIDIA Isaac</h4><a href="/install_isaaclab/">Isaac Lab Installation</a><a href="/training_soarm101_policy_with_isaacLab/">SO Arm Reinforcement Learning</a><a href="/simulate_soarm101_by_leisaac/">SO100 Robotic Arm with IsaacSim</a></div>
+      <div><h4>NVIDIA Isaac</h4><a href="/install_isaaclab/">Isaac Lab Installation</a><a href="/training_soarm101_policy_with_isaacLab/">SO Arm Reinforcement Learning</a><a href="/simulate_soarm101_by_leisaac/">SO100 Robotic Arm with Isaac Sim</a></div>
       <div><h4>PX4 / VLA</h4><a href="/control_px4_with_recomputer_jetson/">PX4 and Jetson</a><a href="/object_tracking_with_reComputer_jetson_and_pX4/">PX4 Object Tracking</a><a href="/control_robotic_arm_via_gr00t/">StarAI and NVIDIA GR00T</a></div>
     </div>
   </section>

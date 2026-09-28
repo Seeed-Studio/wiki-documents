@@ -397,7 +397,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <div className="resource-columns">
       <div><h4>Ecosistema ROS</h4><a href="/es/installing_ros1/">Instalación de ROS 1</a><a href="/es/install_ros2_humble/">Instalación de ROS 2</a><a href="/es/install_isaacros/">Instalación de Isaac ROS</a><a href="/es/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/es/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
-      <div><h4>NVIDIA Isaac</h4><a href="/es/install_isaaclab/">Instalación de Isaac Lab</a><a href="/es/training_soarm101_policy_with_isaacLab/">Aprendizaje por refuerzo del brazo SO</a><a href="/es/simulate_soarm101_by_leisaac/">Brazo robótico SO100 con IsaacSim</a></div>
+      <div><h4>NVIDIA Isaac</h4><a href="/es/install_isaaclab/">Instalación de Isaac Lab</a><a href="/es/training_soarm101_policy_with_isaacLab/">Aprendizaje por refuerzo del brazo SO</a><a href="/es/simulate_soarm101_by_leisaac/">Brazo robótico SO100 con Isaac Sim</a></div>
       <div><h4>PX4 / VLA</h4><a href="/es/control_px4_with_recomputer_jetson/">PX4 y Jetson</a><a href="/es/object_tracking_with_reComputer_jetson_and_pX4/">Seguimiento de objetos con PX4</a><a href="/es/control_robotic_arm_via_gr00t/">StarAI y NVIDIA GR00T</a></div>
     </div>
   </section>
