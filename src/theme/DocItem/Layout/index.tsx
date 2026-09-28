@@ -84,9 +84,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
   const isRoboticsDoc = Boolean(
     (metadata as { source?: string }).source?.startsWith('@site/docs/Robotics/'),
   );
-  const isRoboticsLandingPage =
-    normalizedPath === '/robotics_page' ||
-    normalizedPath === '/cn/robotics_page';
+  const isRoboticsLandingPage = normalizedPath.endsWith('/robotics_page');
 
   useEffect(() => {
     judgeHomePath();
@@ -136,9 +134,9 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
             )}
 
             <DocItemContent>{children}</DocItemContent>
-            <DocItemFooter />
+            {!isRoboticsLandingPage && <DocItemFooter />}
           </article>
-          <DocItemPaginator />
+          {!isRoboticsLandingPage && <DocItemPaginator />}
         </div>
         {!hideComment && <Comment />}
       </div>
