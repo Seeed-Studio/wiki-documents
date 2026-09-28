@@ -32,9 +32,7 @@ import '/src/css/rebot-wiki-style.css';
     <span className="eyebrow">Stage 3 · Chapter 14 · Theory & Practice</span>
     <h2>14. Dataset Structure and Quality Inspection</h2>
     <p>
-      Chapter 14 of the Seeed Physical AI Beginner's Course — what is actually stored on
-      disk, the four quality standards, playback and image inspection, and what to do when problems
-      are found.
+      Chapter 14 of the Seeed Physical AI Beginner's Course — what is actually stored on disk, the four quality standards, playback and image inspection, and what to do when problems are found.
     </p>
     <div className="hero-actions">
       <a href="#structure">Structure</a>

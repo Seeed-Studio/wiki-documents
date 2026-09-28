@@ -33,9 +33,7 @@ import '/src/css/rebot-wiki-style.css';
     <span className="eyebrow">Stage 3 · Chapter 11 · Practice</span>
     <h2>11. Leader and Follower Calibration and Teleoperation</h2>
     <p>
-      Chapter 11 of the Seeed Physical AI Beginner's Course — environment setup, follower
-      and leader arm calibration, joint mapping, teleoperation safety, starting master-slave
-      teleoperation, control frequency and latency, and hands-on practice.
+      Chapter 11 of the Seeed Physical AI Beginner's Course — environment setup, follower and leader arm calibration, joint mapping, teleoperation safety, starting master-slave teleoperation, control frequency and latency, and hands-on practice.
     </p>
     <div className="hero-actions">
       <a href="#environment">Environment</a>

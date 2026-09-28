@@ -1,6 +1,6 @@
 ---
-description: "Curso para principiantes de IA Física de Seeed — una guía gratuita y práctica para construir y aprender con el brazo robótico reBot 100% de código abierto. La Etapa 1 cubre conceptos básicos, hardware y preparación del equipo."
-title: Curso para principiantes de IA Física de Seeed
+description: Curso de iniciación a la IA Física de Seeed - una guía gratuita y práctica para construir y aprender con el brazo robótico reBot 100% de código abierto. La Etapa 1 cubre conceptos básicos, hardware y preparación del equipo.
+title: Curso de iniciación a la IA Física de Seeed
 keywords:
   - reBot
   - B601-DM
@@ -18,12 +18,11 @@ last_update:
   date: 2026-09-17
   author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_introduction/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # 
@@ -33,7 +32,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <section className="doc-hero">
   <div>
     <span className="eyebrow">reBot × IA Física</span>
-    <h2>8 Etapas, 40 Capítulos — gratuito y práctico</h2>
+    <h2>8 etapas, 40 capítulos — gratuito y práctico</h2>
     <p>
       Una guía gratuita y práctica para construir y aprender con el brazo robótico reBot 100% de código abierto.
       La Etapa 1 cubre conceptos básicos, hardware y preparación del equipo.
@@ -51,14 +50,12 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   </div>
 </section>
 
-<RebotCourseNav />
-
 <GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
 
 :::tip
-Este curso fue creado y compartido de forma gratuita por el equipo de Robótica de IA de Seeed Studio, para ofrecer a estudiantes de robótica, alumnos, buscadores de empleo y makers una ruta de aprendizaje clara y sistemática. Eres bienvenido a aprender de él y compartirlo con otros, pero se prohíbe la copia no autorizada, la redistribución comercial o el uso indebido del contenido: los derechos de autor pertenecen a Seeed Studio (Shenzhen) Co., Ltd.
+Este curso fue creado y compartido de forma gratuita por el equipo de IA Robótica de Seeed Studio, para ofrecer a estudiantes de robótica, alumnos, buscadores de empleo y makers una ruta de aprendizaje clara y sistemática. Puedes aprender con él y compartirlo con otras personas, pero se prohíbe la copia no autorizada, la redistribución comercial o el uso indebido del contenido: los derechos de autor pertenecen a Seeed Studio (Shenzhen) Co., Ltd.
 
-Está construido en torno a <strong>reBot</strong>, un brazo robótico 100% de código abierto, reproducible y de uso comercial, y combina teoría con práctica para cubrir el control de brazos robóticos, algoritmos de robótica tradicionales y la moderna IA incorporada basada en VLA. El curso es completamente gratuito; si te resulta útil, apoya el proyecto dando una estrella a <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm en GitHub</a> ⭐, donde también están disponibles los planos de hardware, archivos BOM y otros recursos de código abierto. Los usuarios con experiencia pueden ir directamente a nuestro <a href="https://wiki.seeedstudio.com/es/robotics_page/" target="_blank" rel="noopener noreferrer">Wiki de Robótica</a> para tutoriales y ejemplos. El enfoque está en la comprensión práctica más que en la derivación matemática profunda, para que puedas construir una base sólida rápidamente y prepararte para estudios más avanzados.
+Está construido en torno a <strong>reBot</strong>, un brazo robótico 100% de código abierto, reproducible y apto para uso comercial, y combina teoría con práctica para cubrir el control de brazos robóticos, algoritmos de robótica tradicionales y la IA encarnada moderna basada en VLA. El curso es completamente gratuito; si te resulta útil, apoya el proyecto dando una estrella a <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm en GitHub</a> ⭐, donde también encontrarás los planos de hardware, archivos BOM y otros recursos de código abierto. Los usuarios con experiencia pueden ir directamente a nuestra <a href="https://wiki.seeedstudio.com/es/robotics_page/" target="_blank" rel="noopener noreferrer">Wiki de Robótica</a> para ver tutoriales y ejemplos. El enfoque está en la comprensión práctica más que en la derivación matemática profunda, para que puedas construir una base sólida rápidamente y prepararte para estudios más avanzados.
 :::
 
 <section id="community" className="section-card">
@@ -69,11 +66,11 @@ Está construido en torno a <strong>reBot</strong>, un brazo robótico 100% de c
 
 <div style={{display: 'flex', gap: '2.5rem', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap'}}>
   <div className="image-frame" style={{margin: '0.5rem 0'}}>
-    <img width={110} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-01.png" alt="Facebook group QR code" />
+    <img width={110} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-01.png" alt="Código QR del grupo de Facebook" />
     <p style={{margin: '0.35rem 0 0', fontWeight: 700}}>Facebook</p>
   </div>
   <div className="image-frame" style={{margin: '0.5rem 0'}}>
-    <img width={110} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-02.png" alt="Discord reBot group logo" />
+    <img width={110} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-02.png" alt="Logotipo del grupo de reBot en Discord" />
     <p style={{margin: '0.35rem 0 0', fontWeight: 700}}>Discord</p>
   </div>
 </div>
@@ -86,10 +83,10 @@ Está construido en torno a <strong>reBot</strong>, un brazo robótico 100% de c
     <h2>Principios de diseño del curso</h2>
   </div>
 
-Este curso utiliza el reBot Arm B601-DM y B601-RS como plataformas prácticas, combinando teoría de brazos robóticos, teoría del aprendizaje en robótica y práctica con hardware real. El esquema del curso es el siguiente:
+Este curso utiliza los reBot Arm B601-DM y B601-RS como plataformas prácticas, combinando teoría de brazos robóticos, teoría del aprendizaje en robótica y práctica con hardware real. El esquema del curso es el siguiente:
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-03.png" alt="Course outline" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-03.png" alt="Esquema del curso" />
 </div>
 
 </section>
@@ -114,7 +111,7 @@ Este curso utiliza el reBot Arm B601-DM y B601-RS como plataformas prácticas, c
   <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_2">
     <span className="course-index">2</span>
     <div className="course-path-copy">
-      <strong>Conociendo el hardware del reBot Arm y el proyecto de código abierto</strong>
+      <strong>Conociendo el hardware del brazo reBot y el proyecto de código abierto</strong>
       <span>Capítulo 2</span>
     </div>
     <span className="course-tag">Teoría y práctica</span>
@@ -129,13 +126,13 @@ Este curso utiliza el reBot Arm B601-DM y B601-RS como plataformas prácticas, c
   </a>
 </div>
 
-### Etapa 2: Ensamblaje del brazo robótico y control básico
+### Etapa 2: Montaje del brazo robótico y control básico
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
   <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_4">
     <span className="course-index">4</span>
     <div className="course-path-copy">
-      <strong>Fundamentos de brazos robóticos y actuadores de articulaciones</strong>
+      <strong>Fundamentos de los brazos robóticos y actuadores de articulaciones</strong>
       <span>Capítulo 4</span>
     </div>
     <span className="course-tag">Teoría</span>
@@ -151,7 +148,7 @@ Este curso utiliza el reBot Arm B601-DM y B601-RS como plataformas prácticas, c
   <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_6">
     <span className="course-index">6</span>
     <div className="course-path-copy">
-      <strong>Ensamblaje, fuente de alimentación y primer encendido</strong>
+      <strong>Montaje, alimentación y primer encendido</strong>
       <span>Capítulo 6</span>
     </div>
     <span className="course-tag">Práctica</span>
@@ -167,7 +164,7 @@ Este curso utiliza el reBot Arm B601-DM y B601-RS como plataformas prácticas, c
   <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_8">
     <span className="course-index">8</span>
     <div className="course-path-copy">
-      <strong>Controlar el reBot Arm usando el SDK de Python</strong>
+      <strong>Control del brazo reBot usando el SDK de Python</strong>
       <span>Capítulo 8</span>
     </div>
     <span className="course-tag">Teoría y práctica</span>
@@ -188,7 +185,7 @@ Este curso utiliza el reBot Arm B601-DM y B601-RS como plataformas prácticas, c
   <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_10">
     <span className="course-index">10</span>
     <div className="course-path-copy">
-      <strong>Arquitectura del sistema LeRobot y reBot Arm</strong>
+      <strong>Arquitectura del sistema LeRobot y brazo reBot</strong>
       <span>Capítulo 10</span>
     </div>
     <span className="course-tag">Teoría</span>
@@ -236,7 +233,7 @@ Este curso utiliza el reBot Arm B601-DM y B601-RS como plataformas prácticas, c
   <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_16">
     <span className="course-index">16</span>
     <div className="course-path-copy">
-      <strong>Entrenar tu primera política ACT</strong>
+      <strong>Entrenando tu primera política ACT</strong>
       <span>Capítulo 16</span>
     </div>
     <span className="course-tag">Práctica</span>
@@ -251,10 +248,55 @@ Este curso utiliza el reBot Arm B601-DM y B601-RS como plataformas prácticas, c
   </a>
 </div>
 
-### Etapa 4–8
+### Etapa 4: VLA e Isaac GR00T
+
+<div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_18">
+    <span className="course-index">18</span>
+    <div className="course-path-copy">
+      <strong>Aprendizaje multimodal y fundamentos de VLA</strong>
+      <span>Capítulo 18</span>
+    </div>
+    <span className="course-tag">Teoría</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_19">
+    <span className="course-index">19</span>
+    <div className="course-path-copy">
+      <strong>Incorporación robótica y arquitectura del sistema GR00T</strong>
+      <span>Capítulo 19</span>
+    </div>
+    <span className="course-tag">Teoría</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_20">
+    <span className="course-index">20</span>
+    <div className="course-path-copy">
+      <strong>Preparación del conjunto de datos reBot VLA</strong>
+      <span>Capítulo 20</span>
+    </div>
+    <span className="course-tag">Práctica</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_21">
+    <span className="course-index">21</span>
+    <div className="course-path-copy">
+      <strong>Ajuste fino del brazo reBot con Isaac GR00T</strong>
+      <span>Capítulo 21</span>
+    </div>
+    <span className="course-tag">Práctica</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_22">
+    <span className="course-index">22</span>
+    <div className="course-path-copy">
+      <strong>Inferencia con GR00T y despliegue en robot real</strong>
+      <span>Capítulo 22</span>
+    </div>
+    <span className="course-tag">Teoría y práctica</span>
+  </a>
+</div>
+
+### Etapas 5–8
 
 :::note
-Próximamente: las etapas restantes se añadirán progresivamente al wiki.
+Próximamente: las etapas restantes se irán añadiendo progresivamente al wiki.
 :::
 
 </section>
