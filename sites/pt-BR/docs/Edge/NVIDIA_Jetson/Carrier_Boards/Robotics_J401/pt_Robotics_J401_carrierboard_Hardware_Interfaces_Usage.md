@@ -15,7 +15,7 @@ last_update:
   date: 06/10/2025
   author: Zibo
 createdAt: '2025-04-29'
-updatedAt: '2026-06-24'
+updatedAt: '2026-09-15'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_robotics_j401_getting_started/
 ---
 
@@ -60,26 +60,26 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
 - Parafuso (CM2*3.0) para M.2 Key E x1
 - Pino espaçador (M2*2.0) para M.2 Key B x1
 - Parafuso (CM3*4.0) para M.2 Key B x1
-- Manual do usuário x 1
+- Manual do Usuário x 1
 
 :::note
 1.Por favor, projete uma solução robusta de dissipação de calor de acordo com o Guia de Projeto Térmico, quando em alimentação de alta tensão e temperatura de operação.
-2.Por favor, instale o dissipador de calor no módulo para obter melhor desempenho.
+2.Por favor, instale o dissipador de calor no módulo para melhor desempenho.
 3.Durante a operação com entrada de alta tensão e alta carga, não toque no dissipador de calor para evitar queimaduras.
-4.Recomendação de adaptador de energia para validação: use o adaptador de energia recomendado no site oficial da Seeed.
+4.Recomendação de Adaptador de Energia para Validação: use o adaptador de energia recomendado no site oficial da Seeed.
 
-- Adaptador de energia 19V/4.74A com conector barril 5525
+- Adaptador de Energia 19V/4.74A com conector 5525 Barrel Jack
 - Certifique-se de que os requisitos máximos de consumo de energia sejam atendidos.
-2.Compatibilidade do cabo de alimentação AC
-- Compre cabos de alimentação AC tipo trevo específicos para a região, de acordo com sua localização.
-3.Compatibilidade de acessórios
+2.Compatibilidade do Cabo de Alimentação AC
+- Compre cabos de alimentação AC tipo trevo específicos para a sua região, de acordo com sua localização.
+3.Compatibilidade de Acessórios
 - Use apenas acessórios oficialmente recomendados (por exemplo, módulos sem fio, câmeras, periféricos) para desempenho e compatibilidade ideais.
 
 :::
 
 ## Especificação
 
-### Especificações da placa carrier
+### Especificações da Placa Carrier
 
 <table border="1" cellPadding="8" cellSpacing="0">
   <thead>
@@ -93,7 +93,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     <tr>
       <th rowSpan="1">Armazenamento</th>
       <td>M.2 KEY M PCIe</td>
-      <td>1x M.2 KEY M PCIe (M.2 NVMe 2280 SSD 128G incluído)</td>
+      <td>1x M.2 KEY M PCIe (inclui SSD M.2 NVMe 2280 de 128G)</td>
     </tr>
     <tr>
       <th rowSpan="3">Rede</th>
@@ -119,7 +119,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2x CAN0 (XT30(2+2));<br />3x CAN1 (conector GH 4 pinos 1.25)</td>
+      <td>2x CAN0 (XT30(2+2));<br />3x CAN1 (conector GH 1.25 de 4 pinos)</td>
     </tr>
     <tr>
       <td>Display</td>
@@ -127,18 +127,18 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x UART conector GH 4 pinos 1.25</td>
+      <td>1x UART conector GH 1.25 de 4 pinos</td>
     </tr>
     <tr>
       <td>I2C</td>
-      <td>2x I2C conector GH 4 pinos 1.25</td>
+      <td>2x I2C conector GH 1.25 de 4 pinos</td>
     </tr>
     <tr>
       <td>Ventoinha</td>
-      <td>1x conector de ventoinha 4 pinos (PWM 5V);<br />1x conector de ventoinha 4 pinos (PWM 12V)</td>
+      <td>1x conector de ventoinha de 4 pinos (5V PWM);<br />1x conector de ventoinha de 4 pinos (12V PWM)</td>
     </tr>
     <tr>
-      <td>Porta de expansão</td>
+      <td>Porta de Extensão</td>
       <td>1x conector de expansão de câmera (para placa GMSL2)</td>
     </tr>
     <tr>
@@ -147,10 +147,10 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     </tr>
     <tr>
       <td>LED</td>
-      <td>3x LED (PWR, ACT e LED de usuário)</td>
+      <td>3x LED (PWR, ACT e LED de Usuário)</td>
     </tr>
     <tr>
-      <td>Botão de pino</td>
+      <td>Botão de Pinhole</td>
       <td>1x PWR;<br />1x RESET</td>
     </tr>
     <tr>
@@ -158,12 +158,12 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
       <td>1x REC</td>
     </tr>
     <tr>
-      <td>Furo para antena</td>
-      <td>5x furo para antena</td>
+      <td>Furo para Antena</td>
+      <td>5x furos para antena</td>
     </tr>
     <tr>
       <th rowSpan="1">Alimentação</th>
-      <td colSpan="2">19-54V XT30(2+2) (cabo XT30 para conector DC 5525 incluído)</td>
+      <td colSpan="2">19-54V XT30(2+2) (inclui cabo XT30 para conector DC 5525)</td>
     </tr>
     <tr>
       <th rowSpan="1">Versão do Jetpack</th>
@@ -180,11 +180,11 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     </tr>
     <tr>
       <td>Instalação</td>
-      <td>Mesa, montagem em parede</td>
+      <td>Mesa, Montagem na parede</td>
     </tr>
     <tr>
-      <th rowSpan="1">Temperatura de operação</th>
-      <td colSpan="2">-20℃~60℃ (modo de 25W);<br />-20℃~55℃ (modo de 40W);<br />-20℃~50℃ (modo MAXN);<br />(com dissipador de calor reComputer Robotics com ventoinha)</td>
+      <th rowSpan="1">Temperatura de Operação</th>
+      <td colSpan="2">-20℃~60℃ (Modo 25W);<br />-20℃~55℃ (Modo 40W);<br />-20℃~50℃ (Modo MAXN);<br />(com dissipador de calor reComputer Robotics com ventoinha)</td>
     </tr>
     <tr>
       <th rowSpan="1">Garantia</th>
@@ -199,7 +199,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
 
 ## Gravar o sistema JetPack OS
 
-### Módulo compatível
+### Módulo Suportado
 
 - [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
 - [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
@@ -209,7 +209,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
 ### Pré-requisitos
 
 - PC host com Ubuntu
-- Placa carrier Robotics J401
+- Placa Carrier Robotics J401
 - Módulo NVIDIA® Jetson Orin™ Nano/NX
 - Ventoinha ativa para módulo Nano/NX
 - SSD interno NVMe M.2 2280
@@ -249,11 +249,11 @@ Consulte a tabela abaixo para preparar a máquina host.
   </tbody>
 </table>
 
-<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
+<p><strong>Nota:</strong> Para o JetPack 7.2, o Ubuntu 24.04 é suportado apenas para gravação e instalação de componentes no dispositivo de destino. Use Ubuntu 20.04 ou 22.04 se você precisar de componentes de desenvolvimento no host.</p>
 
 :::
 
-### Preparar a imagem do Jetpack
+### Preparar a Imagem do Jetpack
 
 Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspondente ao módulo Jetson que estamos usando:
 
@@ -264,7 +264,7 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
       <th>Versão do Jetpack</th>
       <th>Módulo Jetson</th>
       <th> GMSL </th>
-      <th>Link para download1</th>
+      <th>Link para Download1</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -316,7 +316,7 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDqVVHOlgc7T6b5LbNYFImdAaUr2OlKT1IkQKk2P89lCW8">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAdqGsOC33XuaA6i60KX2k6s">Download</a></td>
       <td>6d9086d692a0f40fad02c75df1ff56ae<br />d9b368320bb2bfe3a777692513529697</td>
     </tr>
   </tbody>
@@ -330,7 +330,7 @@ O arquivo de imagem do JetPack é grande e pode levar cerca de 60 minutos para s
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 ### Entrar no modo Force Recovery
@@ -351,7 +351,7 @@ Antes de prosseguirmos para as etapas de instalação, precisamos garantir que a
 
 **Passo 2.** Ligue a placa carrier conectando o cabo de alimentação.
 
-**Passo 3.** Conecte a placa ao PC host Ubuntu com um cabo USB Type-C de transmissão de dados.
+**Passo 3.** Conecte a placa ao PC host Ubuntu com um cabo de transmissão de dados USB Type-C.
 
 **Passo 4.** No PC host Linux, abra uma janela do Terminal e insira o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
 
@@ -391,7 +391,7 @@ Você verá a seguinte saída se o processo de gravação for bem-sucedido
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-O comando de gravação pode levar de 2 a 10 minutos.
+O comando de gravação pode levar de 2 a 10 minutos para ser concluído.
 :::
 
 **Passo 3:** Conecte o Robotics J401 a um monitor usando o adaptador PD para HDMI para conectar a um monitor que suporte entrada HDMI, ou conecte diretamente a um monitor que suporte entrada PD usando o cabo PD, e conclua a configuração inicial:
@@ -524,15 +524,15 @@ sudo nmcli con up "gsm"
 
 Este comando ativa a conexão GSM e, se for bem-sucedido, uma mensagem de confirmação será exibida.
 
-**Passo 7.** Reverificar identificação do módulo
-Execute novamente o comando mmcli -L para garantir que o módulo continue sendo reconhecido após configurar o APN.
+**Passo 7.** Verificar novamente a identificação do módulo
+Execute o comando mmcli -L novamente para garantir que o módulo continue sendo reconhecido após configurar o APN.
 
 ```bash
 mmcli -L 
 ```
 
-**Passo 8.** Verificar status do módulo
-Por fim, podemos usar o comando mmcli -m 0 para ver informações detalhadas sobre o módulo, como alocação de IP, operadora e status da conexão de rede.
+**Passo 8.** Verificar o status do módulo
+Por fim, podemos usar o comando mmcli -m 0 para visualizar informações detalhadas sobre o módulo, como alocação de IP, operadora e status da conexão de rede.
 
 ```bash
 mmcli -m 0 
@@ -586,7 +586,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 ```
 
 :::info
-`<server_ip>` é o endereço IP do servidor iperf3. O cliente se conectará a esse servidor para realizar um teste de largura de banda.
+`<server_ip>` é o endereço IP do servidor iperf3. O cliente irá se conectar a esse servidor para realizar um teste de largura de banda.
 `<bind_ip>` vincula o endereço IP local especificado como a origem do tráfego de teste.
 :::
 
@@ -645,7 +645,7 @@ Execute o script para testar o LED RGB.
 
 ## USB
 
-A placa carrier Robotics j401 está equipada com uma variedade de portas USB, incluindo 6 portas USB 3.2 Type-A (5Gbps), uma porta USB 3.0 Type-C com DP 1.4 (modo Host) e uma porta USB 2.0 Type-C para modo dispositivo/depuração, oferecendo opções versáteis de conectividade.
+A placa carrier Robotics j401 está equipada com uma variedade de portas USB, incluindo 6 portas USB 3.2 Type-A (5Gbps), uma porta USB 3.0 Type-C com DP 1.4 (modo Host) e uma porta USB 2.0 Type-C para modo dispositivo/depuração, oferecendo opções de conectividade versáteis.
 
 ### Teste de velocidade USB
 
@@ -676,15 +676,15 @@ Execute o script com o nome do seu dispositivo USB como argumento.
 
 ### Porta USB 2.0 Type-C
 
-Usando esta porta serial, por meio do cabo de dados USB C, você pode monitorar as informações de depuração de entrada e saída no PC.
+Usando esta porta serial, por meio do cabo de dados USB C, você pode monitorar no PC as informações de depuração de entrada e saída.
 
-**Passo 1.** Coloque a chave na posição de modo de depuração.
+**Passo 1.** Mude a chave para o modo de depuração.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug.jpg"/>
 </div>
 
-**Passo 2.** Conecte o PC por meio de um cabo de dados USB e baixe o [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) no seu PC.
+**Passo 2.** Conecte o PC por meio de um cabo de dados USB e faça o download do [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) no seu PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
@@ -773,7 +773,7 @@ echo "000000" | sudo -S chmod 777 /sys/devices/platform/pwm-fan/hwmon/hwmon1/pwm
 echo $1 > /sys/devices/platform/pwm-fan/hwmon/hwmon1/pwm1
 ```
 
-> Nota: Para o Jetson Nano 4G, o caminho da ventoinha é `/sys/devices/platform/pwm-fan/hwmon/hwmon0/pwm1`.
+> Observação: para o Jetson Nano 4G, o caminho da ventoinha é `/sys/devices/platform/pwm-fan/hwmon/hwmon0/pwm1`.
 
 Além disso, podemos definir manualmente a velocidade da ventoinha usando a ferramenta jtop.
 
@@ -798,7 +798,7 @@ No [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_r
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_datasheet.png"/>
 </div>
 
-Aqui demonstraremos como realizar comunicação de dados usando a interface CAN1, utilizando o [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html).
+Aqui iremos demonstrar como realizar comunicação de dados usando a interface CAN1, utilizando o [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html).
 
 ### Conexão de hardware
 
@@ -812,7 +812,7 @@ De acordo com o método de conexão mostrado na figura abaixo, conecte o CANL, C
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c1.png"/>
 </div>
 
-No nosso caso, de acordo com o adaptador que usamos, baixamos e instalamos o software que pode ser encontrado [aqui](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program).
+No nosso caso, de acordo com o adaptador que usamos, fizemos o download e instalamos o software que pode ser encontrado [aqui](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program).
 
 **Passo 1.** Configure a interface CAN1:
 
@@ -823,8 +823,8 @@ sudo ip link set can1 type can bitrate 500000
 sudo ip link set can1 up
 ```
 
-**Passo 2.** Configure o software de recebimento de dados no PC.
-Configure as definições de comunicação conforme mostrado na figura a seguir.
+**Passo 2.** Configure o software de recepção de dados no PC.
+Por favor, configure as definições de comunicação conforme mostrado na figura a seguir.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can_software.png"/>
 </div>
@@ -878,7 +878,7 @@ Pode-se ver que o terminal Jetson recebeu os dados enviados pelo PC.
 
 ### Modo CAN FD
 
-Aqui, uso o CAN0 para conectar ao CAN1 para demonstrar como vários dispositivos Jetson podem se comunicar via interface CAN.
+Aqui, eu uso o CAN0 para conectar ao CAN1 para demonstrar como vários dispositivos Jetson podem se comunicar via interface CAN.
 
 ### Conexão de Hardware
 
@@ -886,7 +886,7 @@ Aqui, uso o CAN0 para conectar ao CAN1 para demonstrar como vários dispositivos
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can0_can1_c.jpg"/>
 </div>
 
-**Passo 1.** Remova a tampa inferior e coloque ambos os resistores de terminação de 120Ω na posição ​ON.
+**Passo 1.** Remova a tampa inferior e coloque ambos os resistores de terminação de 120Ω na posição ON.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/on.jpg"/>
@@ -914,7 +914,7 @@ sudo gpioset --mode=wait 2 4=0 &
 
 ```
 
-**Passo 3.** Abra um novo terminal para escutar o CAN1 e, via CAN0, enviar dados para o CAN1:
+**Passo 3.** Abra um novo terminal para escutar o CAN1 e, via CAN0, envie dados para o CAN1:
 
 ```bash
 #open a new terminal and run
@@ -928,7 +928,7 @@ cansend can0 123##011112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEF
 
 - `123` é o ID
 - `##` indica quadro CAN FD
-- O seguinte são 64 bytes de dados (um total de 128 caracteres hexadecimais)
+- A seguir estão 64 bytes de dados (um total de 128 caracteres hexadecimais)
 
 :::
 
@@ -1098,7 +1098,7 @@ sudo i2cdetect -y -r 1
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_detect.png"/>
 </div>
 
-Podemos ver que o dispositivo conectado ao IIC0 está definido para o endereço 0x08.
+Podemos ver que o dispositivo conectado ao IIC0 está configurado para o endereço 0x08.
 
 ## Porta de Extensão
 
@@ -1144,7 +1144,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 Existem três arquivos de overlay no total, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4 e Orbbec Gemini 335Lg. Estes correspondem, respectivamente, à câmera 3G do SG3S, à câmera 6G do SG2 e SG8S e à câmera da Orbbec. Como mostrado na Figura 3, configure o arquivo io de acordo com o modelo da sua câmera.
 :::
 
-**Passo 2.** Instale as ferramentas de configuração da interface de vídeo.
+**passo 2.** Instale as ferramentas de configuração da interface de vídeo.
 
 ```bash
 sudo apt update
@@ -1172,9 +1172,9 @@ Ao abrir o fluxo de dados, você pode visualizar o vídeo da câmera.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
 </div>
 
-### Usar as câmeras da linha SGxxx
+### Usar as câmeras da Série SGxxx
 
-**Passo 1.** Defina o modo de sincronização de quadros (não é habilitado por padrão!). 
+**passo 1.** Defina o modo de sincronização de quadros (não é habilitado por padrão!).
 
 :::info
 Aqui demonstramos como configurar câmeras de diferentes modelos e resoluções.

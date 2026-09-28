@@ -1,5 +1,5 @@
 ---
-description: 本文档全面介绍了 Jetson Mini J501 载板的硬件特性和接口使用方法。该载板专为边缘 AI 和机器人场景设计，内容涵盖详细规格、支持的模块、刷机步骤，以及 M.2、以太网、USB、CAN、UART、DI/DO、I2S 和 GMSL2 摄像头扩展等接口的实用使用指南。
+description: 本维基提供 Jetson Mini J501 载板的硬件特性与接口使用的全面介绍。该载板专为边缘 AI 和机器人场景设计，涵盖详细规格、支持的模组、安装配置说明，以及 M.2、以太网、USB、CAN、UART、DI/DO、I2S 和 GMSL2 摄像头扩展等接口的实用使用指南。
 title: Mini J501 刷写 JetPack 与接口使用
 tags:
   - Mini J501 载板
@@ -15,14 +15,14 @@ last_update:
   date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-08-17'
+updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/cn/recomputer_j501_mini_getting_started/
 ---
 # Mini J501 载板硬件与快速上手
 
-Mini J501 是一款面向 NVIDIA Jetson AGX Orin 模块（32GB/64GB）的紧凑型高性能边缘 AI 载板。在 MAXN 模式下可提供高达 275 TOPS 的 AI 性能，并具备丰富的连接选项，包括双千兆以太网接口、用于 5G 和 Wi-Fi/Bluetooth 模块的 M.2 插槽、2 个 USB 3.2 接口、CAN、可选扩展的 GMSL2、I2C 和 UART 等。板载预装 JetPack 6.2.1 和 Linux BSP，可支持边缘 AI 应用的快速部署。
+Mini J501 是一款面向 NVIDIA Jetson AGX Orin 模组（32GB/64GB）的紧凑型高性能边缘 AI 载板。在 MAXN 模式下可提供高达 275 TOPS 的 AI 性能，并提供丰富的连接选项，包括双千兆以太网接口、用于 5G 和 Wi-Fi/Bluetooth 模组的 M.2 插槽、2 个 USB 3.2 接口、CAN、可选扩展的 GMSL2、I2C 和 UART。预装 JetPack 6.2.1 和 Linux BSP，可支持边缘 AI 应用的快速部署。
 
-Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，可将模型驱动的决策与机器人实体控制相结合，包括运动规划、传感器融合和多摄像头感知等。
+Mini J501 也可用于机器人场景。通过支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，它可以将模型驱动的决策与机器人实体控制相结合，包括运动规划、传感器融合和多摄像头感知。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg"/>
@@ -51,26 +51,26 @@ Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Fac
 - XT30 转 DC 线缆 x 1
 - USB 线缆，Type A 转 Type C x 1
 - 扩展板散热片 x 1
-- 支柱 (M3*30) x 5
+- 支柱（M3*30）x 5
 - M3 六角螺母 x 5
-- Jetson 模块和 M.2 Key M 固定螺丝 (CM2.5*L.4) x3
-- M.2 Key E 固定螺丝 (CM2*3.0) x1
-- M.2 Key B 支柱 (M2*2.0) x1
-- M.2 Key B 固定螺丝 (CM3*4.0) x1
+- Jetson 模组和 M.2 Key M 用螺丝（CM2.5*L.4）x3
+- M.2 Key E 用螺丝（CM2*3.0）x1
+- M.2 Key B 用支柱（M2*2.0）x1
+- M.2 Key B 用螺丝（CM3*4.0）x1
 - 用户手册 x 1
 
 :::note
 1.在高电压供电和高工作温度下，请根据《热设计指南》设计可靠的散热方案。
-2.请为模块安装散热片以获得更佳性能。
+2.请为模组安装散热片以获得更佳性能。
 3.在高电压输入和高负载运行过程中，请勿触摸散热片，以防烫伤。
-4.验证阶段电源适配器推荐：请使用 Seeed 官方网站推荐的电源适配器。
+4.验证阶段电源适配器推荐，请使用 Seeed 官方网站推荐的电源适配器。
 
 - 19V/4.74A 5525 圆孔电源适配器
 - 确保满足最大功耗需求。
 2.AC 电源线兼容性
 - 请根据所在地区购买对应规格的三叶草 AC 电源线。
 3.配件兼容性
-- 请仅使用官方推荐的配件（如无线模块、摄像头、外设），以获得最佳性能和兼容性。
+- 仅使用官方推荐的配件（如无线模组、摄像头、外设），以获得最佳性能和兼容性。
 
 :::
 
@@ -95,7 +95,7 @@ Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Fac
     <tr>
       <th rowSpan="2">网络</th>
       <td>M.2 KEY E</td>
-      <td>1x M.2 Key E，用于 WiFi/Bluetooth 模块</td>
+      <td>1x M.2 Key E，用于 WiFi/Bluetooth 模组</td>
     </tr>
     <tr>
       <td>以太网</td>
@@ -139,12 +139,12 @@ Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Fac
       <td>1x 4 Pin 风扇接口（12V PWM）</td>
     </tr>
     <tr>
-      <td>扩展接口</td>
+      <td>扩展口</td>
       <td>2x 摄像头扩展排针（用于 GMSL2 板）</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC 2-Pin；</td>
+      <td>1x RTC 2-pin；</td>
     </tr>
     <tr>
       <td>LED</td>
@@ -156,7 +156,7 @@ Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Fac
     </tr>
     <tr>
       <th rowSpan="1">电源</th>
-      <td colSpan="2">19-48V XT30（附带 XT30 转 5525 DC 插头线缆）</td>
+      <td colSpan="2">19-48V XT30（附带 XT30 转 5525 DC 插孔线缆）</td>
     </tr>
     <tr>
       <th rowSpan="1">Jetpack 版本</th>
@@ -192,30 +192,30 @@ Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Fac
 
 ## 📦 刷写 JetPack OS
 
-### 支持的模块
+### 支持的模组
 
 - [NVIDIA® Jetson AGX Orin™ Module 64GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-64GB-p-5957.html)
 - [NVIDIA® Jetson AGX Orin™ Module 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5956.html)
 
 ### 前置准备
 
-- Ubuntu 主机电脑
+- Ubuntu 主机 PC
 - Mini J501 载板
-- NVIDIA® Jetson AGX Orin 模块
-- Nano/NX 模块主动散热风扇
+- NVIDIA® Jetson AGX Orin 模组
+- Nano/NX 模组主动散热风扇
 - NVMe M.2 2280 内置 SSD
-- USB Type-C 数据传输线
+- USB Type-C 数据传输线缆
 
 :::info
 
 我们建议使用物理 Ubuntu 主机设备，而不是虚拟机。
-请参考下表准备主机环境。
+请参考下表准备主机设备。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack 版本 </td>
-        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑） </td>
+        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑）</td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -246,14 +246,14 @@ Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Fac
 
 ### 准备 Jetpack 镜像
 
-在这里，我们需要根据所使用的 Jetson 模块，在 Ubuntu 主机上下载对应的系统镜像：
+在这里，我们需要根据所使用的 Jetson 模组，将对应的系统镜像下载到 Ubuntu 主机上：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
       <th>Jetpack 版本</th>
-      <th>Jetson 模块</th>
+      <th>Jetson 模组</th>
       <th> GMSL </th>
       <th>下载链接 1</th>
       <th>SHA256</th>
@@ -297,10 +297,10 @@ JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请耐�
 :::info
 要验证下载固件的完整性，可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 获取下载文件的 SHA256 哈希值。如果结果与本文档中提供的 SHA256 值一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 获取下载文件的 SHA256 哈希值。如果结果与本维基中提供的 SHA256 值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
-⚙️ **SEEED Jetson 载板的所有 `.dts` 文件及其他源代码可从此处下载：** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
+⚙️ **SEEED Jetson 载板的所有 `.dts` 文件和其他源代码可从此处下载：** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
 
 
 ### 进入强制恢复模式
@@ -313,7 +313,7 @@ JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请耐�
 
 <summary> 分步操作 </summary>
 
-**步骤 1.** 按住 **REC** 按键不放。
+**步骤 1.** 按住 **REC** 按键。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
@@ -321,13 +321,13 @@ JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请耐�
 
 **步骤 2.** 连接电源线为载板供电，然后松开 **REC** 按钮。
 
-**步骤 3.** 使用 USB Type-C 数据传输线将载板连接到 Ubuntu 主机电脑。
+**步骤 3.** 使用 USB Type-C 数据传输线将载板连接到 Ubuntu 主机 PC。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png" />
 </div>
 
-**步骤 4.** 在 Linux 主机电脑上打开终端窗口并输入命令 `lsusb`。如果根据你所使用的 Jetson SoM，在返回内容中出现以下输出之一，则说明载板已进入强制恢复模式。
+**步骤 4.** 在 Linux 主机 PC 上打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据你所使用的 Jetson SoM 出现以下任一输出，则说明载板已进入强制恢复模式。
 
 - 对于 AGX Orin 32GB：**0955:7223 NVidia Corp**
 - 对于 AGX Orin 64GB：**0955:7023 NVidia Corp**
@@ -351,7 +351,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For JetPack 6.2.1 example: sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
 ```
 
-**步骤 2：** 执行以下命令，将 jetpack 系统刷写到 NVMe SSD：
+**步骤 2：** 执行以下命令将 jetpack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
@@ -445,7 +445,7 @@ sudo chmod +x test_nvme.sh
 
 ## M.2 Key E
 
-M.2 Key E 接口是一个标准的 M.2 连接器，主要用于连接无线模块，例如 Wi-Fi 和蓝牙，以扩展无线通信能力。
+M.2 Key E 接口是标准的 M.2 连接器，主要用于连接无线模块，例如 Wi-Fi 和 Bluetooth，以扩展无线通信能力。
 
 ### 硬件连接
 
@@ -465,7 +465,7 @@ iperf3 -c 192.168.6.191
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/wifi_speed.png"/>
 </div>
 
-蓝牙功能可通过 M.2 Key E 插槽实现。
+Bluetooth 功能可通过 M.2 Key E 插槽实现。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/bluetooth.png"/>
@@ -496,7 +496,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 ## LED
 
-Mini J501 上有两个可控的 LED。下面演示如何将 LED 控制为**绿色**、**红色**或**蓝色**。
+Mini J501 上有两个可控的 LED。下面演示如何将 LED 控制为 **绿色**、**红色** 或 **蓝色**。
 
 <!-- <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/led.jpg"/>
@@ -553,7 +553,7 @@ sudo dd if=/dev/$1 of=/dev/null bs=1000M count=2
 EOF
 ```
 
-使脚本可执行并进行测试： 
+使脚本具有可执行权限并进行测试： 
 
 ```bash
 sudo chmod +x test_usb
@@ -582,7 +582,7 @@ sudo apt install screen
 screen /dev/ttyUSB0 115200
 ```
 
-然后你就可以通过另一台 Linux 主机上的串口控制 Jetson 的终端，如下图所示：
+然后你就可以通过另一台 Linux 主机上的串口控制 Jetson 的终端，如下所示：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/login-usb.png"/>
@@ -643,9 +643,9 @@ echo $1 > /sys/devices/platform/pwm-fan/hwmon/hwmon1/pwm1
 
 ## CAN
 
-CAN（控制器局域网，Controller Area Network）是一种可靠的车载总线标准，使微控制器和设备无需主机电脑即可相互通信。  
+CAN（控制器局域网，Controller Area Network）是一种可靠的车载总线标准，使微控制器和设备无需主机计算机即可相互通信。
 
-Mini J501 提供了两个集成在 JST 4 针（GH1.25）中的 CAN 接口。此外，这两个 CAN 接口均**支持 CAN-FD**，CAN0 和 CAN1 如下所示：
+Mini J501 提供了两个集成在 JST 4-pin（GH1.25）中的 CAN 接口。此外，这两个 CAN 接口**支持 CAN-FD**，CAN0 和 CAN1 如下所示：
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can-real.png"/>
@@ -670,13 +670,13 @@ Mini J501 提供了两个集成在 JST 4 针（GH1.25）中的 CAN 接口。此�
 </div>
 
 ### CAN 通信
-本节将连接 Jetson 上的 CAN0 和 CAN1，演示如何在 `Classic CAN mode` 和 `CAN-FD mode` 下实现 CAN0 与 CAN1 之间的数据收发。
+本节将连接 Jetson 上的 CAN0 和 CAN1，演示如何在 `Classic CAN mode` 和 `CAN-FD mode` 下在 CAN0 与 CAN1 之间进行数据收发。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/CAN-connect.png"/>
 </div>
 
-CAN0 和 CAN1 的终端电阻可以通过两个引脚进行控制：PAA.04（位于 gpiochip1 的 line4）和 PAA.07（位于 gpiochip1 的 line7）。  
+CAN0 和 CAN1 的终端电阻可以通过两个引脚进行控制：PAA.04 位于 gpiochip1 的 line4，PAA.07 位于 gpiochip1 的 line7。  
 
 终端电阻控制遵循以下规则：  
 ```
@@ -713,7 +713,7 @@ sudo gpioset --mode=wait gpiochip1 7=1
 
 #### Classic CAN 模式
 
-创建 `test_can.sh`，用于测试 **CAN0** 与 **CAN1** 在标准模式下的数据收发：
+创建 `test_can.sh`，用于在标准模式下测试 **CAN0** 与 **CAN1** 之间的数据收发：
 
 ```bash
 touch test_can.sh
@@ -759,7 +759,7 @@ candump can0
 
 </details>
 
-**CAN0** 与 **CAN1** 之间的数据收发将被完成：
+**CAN0** 与 **CAN1** 之间的数据收发将完成：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can_normal.jpg"/>
@@ -777,7 +777,7 @@ candump can0
 
 <!-- Here we will demonstrate to you how to conduct data communication using the CAN1 interface, by utilizing the [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html). -->
 
-创建 `test_canfd.sh`，用于测试 CAN0 与 CAN1 在 CAN-FD 模式下的数据收发：
+创建 `test_canfd.sh`，用于在 CAN-FD 模式下测试 CAN0 与 CAN1 之间的数据收发：
 
 ```bash
 touch test_canfd.sh
@@ -831,7 +831,7 @@ cangen can1 -f
 
 </details>
 
-CAN0 与 CAN1 之间的数据收发将被完成：
+CAN0 与 CAN1 之间的数据收发将完成：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can-fd.jpg"/>
@@ -923,10 +923,10 @@ sudo gpioset --mode=wait 0 113=1  #set output of GPO 4 to low voltag
 ## UART
 
 Mini J501 为 UART 串口通信提供了一个标准的 6 针 JST 接口。
-UART 和 GPO 使用相同的 JST 接口。该接口默认为 GPO 功能。**如果你需要切换为 UART 功能，必须指向新的设备树并重启设备，变更才会生效。**
+UART 和 GPO 使用相同的 JST 接口。该接口默认具有 GPO 功能。**如果你需要切换为 UART 功能，必须指向新的设备树并重启设备，变更才会生效。**
 
 
-对于 **UART** 通信，请按照以下接线方式进行。这里以 USB 转 TTL 工具为例。
+对于 **UART** 通信，请按照以下接线方式进行。这里我们以 USB 转 TTL 工具为例。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/uart-real.png"/>
@@ -998,7 +998,7 @@ sudo minicom -D /dev/ttyTHS1
 
 ## RS485
 
-RS485 接口提供了一个稳健且抗噪的差分通信通道，常用于工业环境。它支持长距离、多点串行通信，非常适合连接传感器、电机控制器、PLC 以及其他工业设备。
+RS485 接口提供了一个稳健且抗噪的差分通信通道，常用于工业环境。它支持长距离、多点串行通信，非常适合连接传感器、电机控制器、PLC 以及其他工业设备。 
 
 ### 硬件连接
 
@@ -1269,7 +1269,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 </div>
 
 :::note
-一共有三个 overlay 文件，分别是 Seeed GMSL 1X4 3G、Seeed GMSL 1X4 6G、Seeed GMSL 1X4 和 Orbbec Gemini 335Lg。它们分别对应 SG3S 的 3G 摄像头、SG2 和 SG8S 的 6G 摄像头以及 Orbbec 的摄像头。如图 3 所示，请根据你摄像头的型号配置 io 文件。
+一共有三个 overlay 文件，分别是 Seeed GMSL 1X4 3G、Seeed GMSL 1X4 6G、Seeed GMSL 1X4 和 Orbbec Gemini 335Lg。它们分别对应 SG3S 的 3G 摄像头、SG2 和 SG8S 的 6G 摄像头以及 Orbbec 的摄像头。如图 3 所示，请根据你的摄像头型号配置 io 文件。
 :::
 
 **step 2.** 安装视频接口配置工具。
@@ -1295,7 +1295,7 @@ The first time you turn it on, you might need to update the firmware.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/update.png"/>
 </div>
 
-打开数据流后，您可以查看来自摄像头的视频。
+打开数据流后，你可以查看来自摄像头的视频。
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
 </div> -->
@@ -1347,7 +1347,7 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 ```
 
 :::note
-`--set-fmt-video` 后面跟随的分辨率是根据所连接的摄像头来选择的。`sensor_mode` 也会相应选择。目前有三个 `sensor_mode` 选项，每个对应一种不同的分辨率。
+`--set-fmt-video` 后面跟的是分辨率，该分辨率是根据所连接的摄像头来选择的。sensor_mode 也会相应选择。目前有三个 sensor_mode 选项，每个选项对应一种不同的分辨率。
 
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
@@ -1393,7 +1393,7 @@ Mini J501 配备了一个 HDMI 接口，用于高分辨率显示输出。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

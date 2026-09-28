@@ -1,5 +1,5 @@
 ---
-description: reComputer Robotics J401 是一款为高级机器人应用设计的高性能边缘 AI 载板。它支持在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano 和 Orin NX 模块，提供高达 157 TOPS 的 AI 算力。该载板提供丰富的连接选项，包括双千兆以太网、多路 USB 3.2 接口、CAN、用于 5G/Wi-Fi/BT 模块的 M.2 插槽，以及可选的 GMSL2 摄像头支持。预装 JetPack 6，确保机器人开发的无缝部署。其坚固设计支持宽温工作范围，并配备预装的带风扇散热片。设置过程包括使用兼容的 Ubuntu 主机电脑将 JetPack OS 刷写到 NVMe SSD 上，然后进行硬件配置和接口使用。文档为开发者提供了详细的硬件规格、机械图纸和技术资源，以及用于故障排查和讨论的社区与技术支持渠道。
+description: reComputer Robotics J401 是一款为高级机器人应用设计的高性能边缘 AI 载板。它支持在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano 和 Orin NX 模块，提供高达 157 TOPS 的 AI 算力。该板卡提供丰富的连接选项，包括双千兆以太网、多路 USB 3.2 接口、CAN、用于 5G/Wi-Fi/BT 模块的 M.2 插槽，以及可选的 GMSL2 摄像头支持。预装 JetPack 6，可确保机器人开发的无缝部署。其坚固设计支持宽温工作范围，并配备预装的带风扇散热片。搭建流程包括使用兼容的 Ubuntu 主机 PC 将 JetPack OS 刷写到 NVMe SSD 上，然后进行硬件配置和接口使用。文档为开发者提供了详细的硬件规格、机械图纸和技术资源，并提供社区与技术支持渠道以便排障和交流。
 title: reComputer Robotics 入门指南
 tags:
   - J401-Robotics 载板
@@ -14,11 +14,11 @@ last_update:
   date: 08/06/2025
   author: Zibo
 createdAt: '2025-08-06'
-updatedAt: '2026-06-24'
+updatedAt: '2026-09-15'
 url: https://wiki.seeedstudio.com/cn/recomputer_robotics_j401_getting_started/
 ---
 <div style={{ textAlign: "justify" }}>
-reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专为高级机器人应用设计。它兼容在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano/Orin NX 模块，可提供高达 157 TOPS 的 AI 性能。板载丰富的连接选项——包括双千兆以太网接口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 接口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——可作为强大的机器人“大脑”，用于处理来自各类传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保无缝部署。​
+reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专为高级机器人应用设计。它兼容在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano/Orin NX 模块，可提供高达 157 TOPS 的 AI 性能。板载丰富的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 接口、CAN、GMSL2（通过可选扩展板）、I2C 和 UART——可作为强大的机器人“大脑”，用于处理来自各类传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保系统可无缝部署。​
 </div>
 
 <div align="center">
@@ -40,7 +40,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
 - **应用与优势**：非常适合自主机器人的快速开发，借助开箱即用的接口和优化的 AI 框架，加速产品上市时间。
 - **宽工作范围**：在 25W 模式下可在 -20°C 至 60°C 范围内可靠运行，在 40W 模式下可在 -20°C 至 50°C 范围内可靠运行。
 
-## 规格
+## 规格参数
 
 ### 载板规格
 
@@ -74,7 +74,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     <tr>
       <th rowSpan="13">I/O</th>
       <td>USB</td>
-      <td>6x USB 3.2 Type-A（5Gbps）；<br />1x USB 3.0 Type-C（Host/DP 1.4）；<br />1x USB 2.0 Type-C（设备模式/调试）</td>
+      <td>6x USB 3.2 Type-A（5Gbps）；<br />1x USB 3.0 Type-C（Host/DP 1.4）；<br />1x USB 2.0 Type-C（Device 模式/调试）</td>
     </tr>
     <tr>
       <td>摄像头</td>
@@ -98,7 +98,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     </tr>
     <tr>
       <td>风扇</td>
-      <td>1x 4-Pin 风扇连接器（5V PWM）；<br />1x 4-Pin 风扇连接器（12V PWM）</td>
+      <td>1x 4-Pin 风扇接口（5V PWM）；<br />1x 4-Pin 风扇接口（12V PWM）</td>
     </tr>
     <tr>
       <td>扩展端口</td>
@@ -126,7 +126,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     </tr>
     <tr>
       <th rowSpan="1">电源</th>
-      <td colSpan="2">19-54V XT30(2+2)（附带 XT30 转 5525 直流插孔线缆）</td>
+      <td colSpan="2">19-54V XT30(2+2)（附带 XT30 转 5525 直流插头线缆）</td>
     </tr>
     <tr>
       <th rowSpan="1">Jetpack 版本</th>
@@ -147,7 +147,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     </tr>
     <tr>
       <th rowSpan="1">工作温度</th>
-      <td colSpan="2">-20℃~60℃（25W 模式）；<br />-20℃~55℃（40W 模式）；<br />-20℃~50℃（MAXN 模式）；<br />（搭配带风扇的 reComputer Robotics 散热器）</td>
+      <td colSpan="2">-20℃~60℃（25W 模式）；<br />-20℃~55℃（40W 模式）；<br />-20℃~50℃（MAXN 模式）；<br />（搭配 reComputer Robotics 散热片和风扇）</td>
     </tr>
     <tr>
       <th rowSpan="1">质保</th>
@@ -155,7 +155,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     </tr>
     <tr>
       <th rowSpan="1">认证</th>
-      <td>RoHS、REACH、CE、FCC、UKCA、KC</td>
+      <td>RoHS, REACH, CE, FCC, UKCA, KC</td>
     </tr>
   </tbody>
 </table>
@@ -185,7 +185,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
 
 ### 前置准备
 
-- Ubuntu 主机电脑
+- Ubuntu 主机 PC
 - reComputer Robotics
 - NVIDIA® Jetson Orin™ Nano/NX 模块
 - USB Type-C 数据传输线
@@ -199,7 +199,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack 版本 </td>
-        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑）</td>
+        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑） </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -224,13 +224,13 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
   </tbody>
 </table>
 
-<p><strong>Note:</strong> 对于 JetPack 7.2，Ubuntu 24.04 仅支持刷机和目标端组件安装。如果需要主机端开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
+<p><strong>注意：</strong>对于 JetPack 7.2，Ubuntu 24.04 仅支持用于刷机和目标端组件安装。如果需要主机端开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
 
 :::
 
 ### 准备 Jetpack 镜像
 
-在这里，我们需要根据所使用的 Jetson 模块，在 Ubuntu 主机电脑上下载对应的系统镜像：
+在这里，我们需要根据所使用的 Jetson 模块，在 Ubuntu PC 上下载对应的系统镜像：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -291,8 +291,8 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDqVVHOlgc7T6b5LbNYFImdAaUr2OlKT1IkQKk2P89lCW8">下载</a></td>
-      <td>6d9086d692a0f40fad02c75df1ff56ae<br />d9b368320bb2bfe3a777692513529697</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAU2JC-fRK_GfqDy8ureIs1o?e=hYSAit">Download</a></td>
+      <td>f09b3465e7de1032f625ae0f816a2f3c<br />fa2a470ee5fdd215840375529a8771db</td>
     </tr>
   </tbody>
 </table>
@@ -305,7 +305,7 @@ JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等�
 :::info
 为了验证已下载固件的完整性，您可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取已下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与本 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
 :::
 
 ### 进入强制恢复模式
@@ -326,9 +326,9 @@ JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等�
 
 **步骤 2.** 连接电源线，为载板上电。
 
-**步骤 3.** 使用 USB Type-C 数据线将开发板连接到 Ubuntu 主机电脑。
+**步骤 3.** 使用 USB Type-C 数据传输线将开发板连接到 Ubuntu 主机电脑。
 
-**步骤 4.** 在 Linux 主机电脑上，打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据您使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
+**步骤 4.** 在 Linux 主机电脑上打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据您使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
 - 对于 Orin NX 8GB：**0955:7423 NVidia Corp**
@@ -398,7 +398,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

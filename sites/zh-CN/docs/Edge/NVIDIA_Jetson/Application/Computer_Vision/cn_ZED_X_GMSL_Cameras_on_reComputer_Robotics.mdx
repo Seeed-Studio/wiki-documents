@@ -1,0 +1,659 @@
+---
+description: 在 Seeed Studio reComputer Robotics 平台上连接、启用并验证 Stereolabs ZED X 系列 GMSL2 相机。
+title: 在 reComputer Robotics 上使用 ZED X 系列 GMSL 相机
+keywords:
+  - ZED X
+  - GMSL2
+  - Stereolabs
+  - reComputer Robotics
+  - reComputer Robotics J50 Mini
+  - reComputer Robotics J50
+  - reComputer Robotics J40
+  - Robotics J601
+  - depth camera
+  - Jetson
+image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
+slug: /zed_x_gmsl_cameras_on_recomputer_robotics
+last_update:
+  date: 09/27/2026
+  author: Dayu
+createdAt: '2026-09-27'
+updatedAt: '2026-09-27'
+url: https://wiki.seeedstudio.com/cn/zed_x_gmsl_cameras_on_recomputer_robotics/
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<style>{`
+  .zed-hero {
+    position: relative;
+    overflow: hidden;
+    margin: 1.25rem 0 2rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid rgba(141, 194, 31, 0.38);
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(141, 194, 31, 0.25), transparent 34%),
+      radial-gradient(circle at 12% 100%, rgba(0, 153, 168, 0.16), transparent 38%),
+      var(--ifm-card-background-color);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  }
+  .zed-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.8rem;
+    color: #78a918;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .zed-hero h1 {
+    max-width: 850px;
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.35rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+  .zed-hero-copy {
+    max-width: 760px;
+    margin: 1rem 0 0;
+    font-size: 1.08rem;
+    line-height: 1.75;
+    opacity: 0.88;
+  }
+  .zed-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.35rem;
+  }
+  .zed-pill {
+    padding: 0.46rem 0.78rem;
+    border: 1px solid rgba(141, 194, 31, 0.42);
+    border-radius: 999px;
+    background: rgba(141, 194, 31, 0.09);
+    font-size: 0.88rem;
+    font-weight: 650;
+  }
+  .zed-product-card {
+    display: grid;
+    grid-template-columns: minmax(250px, 42%) 1fr;
+    gap: clamp(1.2rem, 3vw, 2.4rem);
+    align-items: center;
+    min-height: 340px;
+    margin-top: 0.8rem;
+    padding: clamp(1rem, 3vw, 1.8rem);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 20px;
+    background: linear-gradient(145deg, var(--ifm-card-background-color), var(--ifm-background-surface-color));
+  }
+  .zed-product-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    padding: 1rem;
+    border-radius: 16px;
+    background: #fff;
+  }
+  .zed-product-visual img {
+    width: 100%;
+    max-height: 270px;
+    object-fit: contain;
+  }
+  .zed-product-copy h3 {
+    margin: 0.55rem 0 0.7rem;
+    font-size: clamp(1.45rem, 3vw, 2.05rem);
+  }
+  .zed-product-description {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+  .zed-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.34rem 0.62rem;
+    border-radius: 999px;
+    background: rgba(141, 194, 31, 0.14);
+    color: #689715;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+  }
+  .zed-status-soon {
+    background: rgba(14, 165, 233, 0.12);
+    color: #0284c7;
+  }
+  .zed-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+  .zed-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+    background: #8dc21f;
+    color: #132000 !important;
+    font-weight: 750;
+    text-decoration: none !important;
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+  }
+  .zed-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(141, 194, 31, 0.24);
+  }
+  .zed-button-secondary {
+    border: 1px solid var(--ifm-color-emphasis-400);
+    background: transparent;
+    color: var(--ifm-font-color-base) !important;
+  }
+  .zed-flow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin: 1.2rem 0 1.8rem;
+  }
+  .zed-flow-step {
+    padding: 1rem;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 14px;
+    background: var(--ifm-card-background-color);
+  }
+  .zed-flow-step strong {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #78a918;
+  }
+  .zed-coming-soon {
+    margin-top: 0.8rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px dashed rgba(14, 165, 233, 0.55);
+    border-radius: 18px;
+    background: rgba(14, 165, 233, 0.06);
+    text-align: center;
+  }
+  .zed-coming-soon h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.65rem;
+  }
+  .zed-demo {
+    overflow: hidden;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 18px;
+    background: #090d11;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.16);
+  }
+  .zed-demo img {
+    display: block;
+    width: 100%;
+  }
+  .zed-demo-caption {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  @media (max-width: 800px) {
+    .zed-product-card { grid-template-columns: 1fr; }
+    .zed-product-visual { min-height: 220px; }
+    .zed-flow { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .zed-flow { grid-template-columns: 1fr; }
+    .zed-actions { flex-direction: column; }
+  }
+`}</style>
+
+<div className="zed-hero">
+  <span className="zed-eyebrow">Seeed Studio × Stereolabs</span>
+  <h1>ZED X 深度视觉，为 reComputer Robotics 而生</h1>
+  <div className="zed-hero-copy">
+    为紧凑型机器人、自动化机器和物理 AI 系统带来稳健、远距离的 GMSL2 双目视觉。Seeed Studio 的 reComputer Robotics 平台在适合部署的硬件中集成了 NVIDIA Jetson 计算、面向机器人应用的 I/O，以及可扩展的 GMSL 连接能力。
+  </div>
+  <div className="zed-pill-row">
+    <span className="zed-pill">Jetson Orin &amp; Thor</span>
+    <span className="zed-pill">最多 8 路 GMSL2 相机</span>
+    <span className="zed-pill">JetPack 6.2 &amp; 7.2</span>
+    <span className="zed-pill">在 ZED Studio 中预览深度</span>
+  </div>
+</div>
+
+本指南说明如何在 Seeed Studio 机器人硬件上使用 **Stereolabs ZED X 系列 GMSL2 相机**。目前已有四个平台适配 ZED X 相机系列。完整的操作流程目前已提供给 **reComputer Robotics J50 Mini**；其他设备的专用操作流程将很快补充。
+
+## 选择你的平台
+
+在下方选择一个平台。本页的两个选项卡组是同步的，因此你的选择会延续到对应的设备指南中。
+
+<Tabs groupId="zed-robotics-platform">
+  <TabItem value="j50-mini" label="J50 Mini" default>
+
+    <div className="zed-product-card">
+      <div className="zed-product-visual">
+        <img src="https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png" alt="reComputer Robotics J50 Mini"/>
+      </div>
+      <div className="zed-product-copy">
+        <span className="zed-status">● 指南已提供</span>
+        <h3>reComputer Robotics J50 Mini</h3>
+        <div className="zed-product-description">一款紧凑型 AGX Orin 机器人计算机，具备可扩展至最多八路相机的 GMSL2 扩展架构，非常适合人形机器人、AMR 以及空间受限的多相机系统。</div>
+        <div className="zed-actions">
+          <a className="zed-button" href="#device-specific-setup">打开设置 ↓</a>
+          <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Mini-J5012-with-GMSL-Extension-p-6878.html" target="_blank" rel="noopener noreferrer">查看产品 ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </TabItem>
+  <TabItem value="j50" label="J50">
+
+    <div className="zed-product-card">
+      <div className="zed-product-visual">
+        <img src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" alt="reComputer Robotics J50"/>
+      </div>
+      <div className="zed-product-copy">
+        <span className="zed-status zed-status-soon">● 指南即将推出</span>
+        <h3>reComputer Robotics J50</h3>
+        <div className="zed-product-description">一款面向高负载机器人任务的高 I/O AGX Orin 平台，集成 10GbE、多路 CAN 接口、灵活存储，以及最多八路 GMSL2 相机扩展能力。</div>
+        <div className="zed-actions">
+          <a className="zed-button" href="#device-specific-setup">查看状态 ↓</a>
+          <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank" rel="noopener noreferrer">查看产品 ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </TabItem>
+  <TabItem value="j40" label="J40">
+
+    <div className="zed-product-card">
+      <div className="zed-product-visual">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics J40"/>
+      </div>
+      <div className="zed-product-copy">
+        <span className="zed-status zed-status-soon">● 指南即将推出</span>
+        <h3>reComputer Robotics J40</h3>
+        <div className="zed-product-description">一款均衡的 Orin Nano/NX 机器人计算机，具备丰富的传感器 I/O，以及可选的四路 GMSL2 相机扩展，适用于自主机器人和实时边缘感知。</div>
+        <div className="zed-actions">
+          <a className="zed-button" href="#device-specific-setup">查看状态 ↓</a>
+          <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank" rel="noopener noreferrer">查看产品 ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </TabItem>
+  <TabItem value="j601" label="J601">
+
+    <div className="zed-product-card">
+      <div className="zed-product-visual">
+        <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg" alt="Robotics J601 carrier board"/>
+      </div>
+      <div className="zed-product-copy">
+        <span className="zed-status zed-status-soon">● 指南即将推出</span>
+        <h3>Robotics J601 载板</h3>
+        <div className="zed-product-description">一款为下一代物理 AI 设计的 Jetson AGX Thor 载板，具备高带宽网络、机器人 I/O，以及最多支持八路 GMSL2 摄像头的扩展能力。</div>
+        <div className="zed-actions">
+          <a className="zed-button" href="#device-specific-setup">查看状态 ↓</a>
+          <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html" target="_blank" rel="noopener noreferrer">查看产品 ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </TabItem>
+</Tabs>
+
+## 设备专用设置
+
+<div className="zed-flow">
+  <div className="zed-flow-step"><strong>01 · 连接</strong>关闭电源并连接 ZED X GMSL 摄像头。</div>
+  <div className="zed-flow-step"><strong>02 · 启用</strong>烧录最新 BSP 或安装匹配的 DEB。</div>
+  <div className="zed-flow-step"><strong>03 · 安装</strong>安装与您的 L4T 版本匹配的 ZED SDK。</div>
+  <div className="zed-flow-step"><strong>04 · 验证</strong>启动 ZED Studio 并检查深度数据流。</div>
+</div>
+
+<Tabs groupId="zed-robotics-platform">
+  <TabItem value="j50-mini" label="J50 Mini" default>
+
+### reComputer Robotics J50 Mini
+
+#### 所需准备
+
+- 搭载 GMSL 扩展板的 reComputer Robotics J50 Mini
+- 一台受支持的 ZED X 系列 GMSL2 摄像头
+- 一根兼容的 GMSL2 Fakra/Mini-Fakra 线缆或线束
+- JetPack 6.2.x 或 JetPack 7.2
+- 用于 ZED Studio 的互联网连接、显示器、键盘和鼠标
+
+:::info
+本指南涵盖 Seeed 平台驱动和 ZED SDK 的设置。摄像头型号支持情况可能取决于已安装的 ZED SDK 版本。请使用与您的 JetPack/L4T 版本兼容的最新 ZED SDK。
+:::
+
+#### 1. 连接摄像头
+
+1. 将 reComputer 完全关机。
+2. 断开直流电源输入。
+3. 使用兼容的线缆或线束，将 ZED X 摄像头连接到一个 GMSL2 接口。确保连接器完全插入并锁定。
+4. 重新接通电源并启动设备。
+
+:::warning
+请勿热插拔 GMSL 摄像头。连接或断开摄像头或 GMSL 线束前务必先断电。
+:::
+
+#### 2. 启用 ZED X GMSL 支持
+
+从以下路径中选择 **一种**。为获得干净的部署，推荐烧录最新 BSP；如果希望保留现有系统，安装 DEB 会更快。
+
+<Tabs groupId="j50-mini-zed-driver-method">
+  <TabItem value="latest-bsp" label="选项 1 · 烧录最新 BSP" default>
+
+检查设备上已安装的 BSP 构建信息：
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+查找 `DATE` 字段。如果 BSP 的构建日期为 **2026 年 9 月 24 日或之后**，则已包含 ZED X GMSL 支持，可以继续进行 ZED SDK 安装。
+
+如果构建较旧，请按照以下步骤烧录日期为 **2026 年 9 月 24 日** 的最新 **JetPack 7.2 / L4T 39.2.0** 镜像。两个模组版本使用不同的镜像，请选择与 J50 Mini 中已安装 Jetson 模组相匹配的选项卡。
+
+:::warning
+烧录会重写目标存储。在开始之前，请备份应用数据、配置文件和凭据。
+:::
+
+##### 准备主机并下载镜像
+
+准备一台物理 Ubuntu 20.04、22.04 或 24.04 主机电脑、一根 USB Type-C 数据线，以及已安装 NVMe SSD 的 J50 Mini。将与您的模组匹配的镜像直接下载到 Ubuntu 主机：
+
+<Tabs groupId="j50-mini-flash-module">
+  <TabItem value="agx-orin-64gb" label="AGX Orin 64GB" default>
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDvZETxkTZ9S7gWHBtq-xIHAboN_nYGeVXoep4xtANP7mI?e=94fjJU" target="_blank" rel="noopener noreferrer">下载 64GB BSP ↗</a>
+</div>
+
+文件名：
+
+```text
+mfi_recomputer-mini-agx-orin-64g-j501-7.2.0-39.2.0-2026-09-24.tar.gz
+```
+
+  </TabItem>
+  <TabItem value="agx-orin-32gb" label="AGX Orin 32GB">
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB8Kv094I4nSL8OdUsLOfWgAbt1VH9e5t2uGzurR7q9iRg?e=N8WRnM" target="_blank" rel="noopener noreferrer">下载 32GB BSP ↗</a>
+</div>
+
+文件名：
+
+```text
+mfi_recomputer-mini-agx-orin-32g-j501-7.2.0-39.2.0-2026-09-24.tar.gz
+```
+
+  </TabItem>
+</Tabs>
+
+:::tip
+如果希望保留现有的 JetPack 6.2.x 安装，请使用 **选项 2 · 安装 DEB**，而不是烧录此 JetPack 7.2 镜像。
+:::
+
+##### 进入强制恢复模式
+
+1. 关闭 J50 Mini 并断开其电源。
+2. 按住 **REC** 按钮。
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" alt="reComputer Robotics J50 Mini 上的 REC 按钮" />
+</div>
+
+3. 接通电源线，然后松开 **REC** 按钮。
+4. 使用 USB Type-C 数据线，通过下图所示的烧录接口将 J50 Mini 连接到 Ubuntu 主机。
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png" alt="reComputer Robotics J50 Mini 上的 USB Type-C 烧录接口" />
+</div>
+
+5. 在 Ubuntu 主机上验证恢复模式：
+
+```bash
+lsusb
+```
+
+输出中应包含您的模组对应的 USB ID：
+
+| Jetson 模组 | 预期输出 |
+| --- | --- |
+| AGX Orin 64GB | `0955:7023 NVidia Corp.` |
+| AGX Orin 32GB | `0955:7223 NVidia Corp.` |
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png" alt="使用 lsusb 检测到处于强制恢复模式的 Jetson 设备" />
+</div>
+
+##### 解压并烧录镜像
+
+运行与您所选模组对应的命令。如果浏览器将文件保存到了其他位置，请将 `~/Downloads` 替换为实际的下载目录。
+
+<Tabs groupId="j50-mini-flash-module">
+  <TabItem value="agx-orin-64gb" label="AGX Orin 64GB" default>
+
+```bash
+cd ~/Downloads
+sudo tar xpf mfi_recomputer-mini-agx-orin-64g-j501-7.2.0-39.2.0-2026-09-24.tar.gz
+cd mfi_recomputer-mini-agx-orin-64g-j501-7.2.0-39.2.0-2026-09-24
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+  </TabItem>
+  <TabItem value="agx-orin-32gb" label="AGX Orin 32GB">
+
+```bash
+cd ~/Downloads
+sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-7.2.0-39.2.0-2026-09-24.tar.gz
+cd mfi_recomputer-mini-agx-orin-32g-j501-7.2.0-39.2.0-2026-09-24
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+  </TabItem>
+</Tabs>
+
+烧录过程通常需要几分钟。出现以下信息表示烧录成功完成：
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png" alt="Jetson 烧录成功完成" />
+</div>
+
+烧录完成后，断开 USB 线，给 J50 Mini 断电再上电，并完成 Ubuntu 的初始设置。此 BSP 已包含 ZED X GMSL 支持，因此可直接继续执行 **3. 安装 ZED SDK**。
+
+  </TabItem>
+  <TabItem value="deb-package" label="选项 2 · 安装 DEB">
+
+首先，确认已安装的 Jetson Linux 版本：
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+仅使用与报告的 L4T 版本匹配的软件包。不要同时安装两个软件包。
+
+<Tabs groupId="j50-mini-zed-jetpack">
+  <TabItem value="jp62" label="JetPack 6.2.x" default>
+
+对于 **JetPack 6.2.1 / L4T 36.4.4**，下载以下软件包：
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDirqpSbx-mS5LVEQikAnUFAZzzHlhqz6ugZQFBLAhoT9I?e=lmyCH1" target="_blank" rel="noopener noreferrer">下载 JetPack 6.2 DEB ↗</a>
+</div>
+
+使用 APT 安装，然后重启：
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.6-L4T36.4.4-SDK-VERIFIED_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+  <TabItem value="jp72" label="JetPack 7.2">
+
+对于 **JetPack 7.2 / L4T 39.2.0**，下载以下软件包：
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBTbeDwHYOJRpGKDN_UZCByAeEe3sS0MIPTbrSiodHMhlg?e=EE5Uza" target="_blank" rel="noopener noreferrer">下载 JetPack 7.2 DEB ↗</a>
+</div>
+
+使用 APT 安装，然后重启：
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.7-L4T39.2.0_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+</Tabs>
+
+重启后，确认软件包已安装：
+
+```bash
+dpkg -l | grep stereolabs-zedx
+```
+
+  </TabItem>
+</Tabs>
+
+#### 3. 安装 ZED SDK
+
+前往 [Stereolabs ZED SDK 下载页面](https://www.stereolabs.com/developers/release/)，选择与 `cat /etc/nv_tegra_release` 输出版本相匹配的 NVIDIA Jetson 安装程序：
+
+| 已安装系统 | 在 ZED SDK 页面中选择 |
+| --- | --- |
+| JetPack 6.2.x / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
+| JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
+
+安装 `zstd`，将下载的安装程序设为可执行并运行。请将下面的占位符替换为实际下载的文件名。
+
+```bash
+sudo apt update
+sudo apt install -y zstd
+cd ~/Downloads
+chmod +x ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+./ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+```
+
+按照安装程序提示操作，并保持勾选 ZED 工具。安装完成后重启：
+
+```bash
+sudo reboot
+```
+
+:::tip
+ZED SDK 安装程序名称中的 L4T 版本必须与 reComputer 上的 L4T 版本一致。不匹配的 SDK 或摄像头 DEB 可能会导致摄像头无法被检测到。
+:::
+
+#### 4. 使用 ZED Studio 验证
+
+从终端启动 ZED Studio：
+
+```bash
+ZED_Studio
+```
+
+您也可以直接从 SDK 安装目录启动它：
+
+```bash
+/usr/local/zed/tools/ZED_Studio
+```
+
+ZED Studio 应该会检测到已连接的相机。打开实时预览并启用 **Depth**，以确认图像流和深度管线都在正常工作。
+
+<Tabs groupId="zed-studio-result">
+  <TabItem value="jp72-result" label="JetPack 7.2" default>
+
+    <div className="zed-demo">
+      <img src="https://files.seeedstudio.com/wiki/zed-gmsl/zed-jp72.gif" alt="ZED Studio showing a ZED X GMSL camera and depth view on JetPack 7.2"/>
+      <p className="zed-demo-caption">ZED X GMSL 相机在 JetPack 7.2 上的预览和深度可视化</p>
+    </div>
+
+  </TabItem>
+  <TabItem value="jp62-result" label="JetPack 6.2">
+
+    <div className="zed-demo">
+      <img src="https://files.seeedstudio.com/wiki/zed-gmsl/zed-jp62.gif" alt="ZED Studio showing a ZED X GMSL camera and depth view on JetPack 6.2"/>
+      <p className="zed-demo-caption">ZED X GMSL 相机在 JetPack 6.2 上的预览和深度可视化</p>
+    </div>
+
+  </TabItem>
+</Tabs>
+
+:::success 预期结果
+相机会出现在 ZED Studio 中，实时图像稳定，深度视图实时更新。现在，你的 reComputer Robotics J50 Mini 已准备好用于 ZED SDK 应用、ROS 集成、录制以及后续感知工作负载。
+:::
+
+  </TabItem>
+  <TabItem value="j50" label="J50">
+
+    <div className="zed-coming-soon">
+      <span className="zed-status zed-status-soon">ZED X GMSL 支持已适配</span>
+      <h3>reComputer Robotics J50 指南即将推出</h3>
+      <p>平台集成已就绪。针对具体设备的连接方式、驱动安装和验证步骤将发布在此处。</p>
+      <a className="zed-button zed-button-secondary" href="/cn/ai_robotics_recomputer_j501_robotics_getting_started">探索 J50 平台</a>
+    </div>
+
+  </TabItem>
+  <TabItem value="j40" label="J40">
+
+    <div className="zed-coming-soon">
+      <span className="zed-status zed-status-soon">ZED X GMSL 支持已适配</span>
+      <h3>reComputer Robotics J40 指南即将推出</h3>
+      <p>平台集成已就绪。针对具体设备的连接方式、驱动安装和验证步骤将发布在此处。</p>
+      <a className="zed-button zed-button-secondary" href="/cn/recomputer_robotics_j401_getting_started">探索 J40 平台</a>
+    </div>
+
+  </TabItem>
+  <TabItem value="j601" label="J601">
+
+    <div className="zed-coming-soon">
+      <span className="zed-status zed-status-soon">ZED X GMSL 支持已适配</span>
+      <h3>Robotics J601 指南即将推出</h3>
+      <p>载板集成已就绪。针对具体设备的连接方式、驱动安装和验证步骤将发布在此处。</p>
+      <a className="zed-button zed-button-secondary" href="/cn/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started">探索 J601 载板</a>
+    </div>
+
+  </TabItem>
+</Tabs>
+
+## 故障排查
+
+- **未检测到相机：** 请确认 DEB、BSP 和 ZED SDK 都与已安装的 L4T 版本匹配。然后断电并重新插拔相机线缆。
+- **APT 报告软件包不匹配：** 不要强制安装。请下载 `cat /etc/nv_tegra_release` 显示的 L4T 版本对应的软件包。
+- **ZED Studio 无法打开：** 请确认图形桌面已运行，并从终端启动 `/usr/local/zed/tools/ZED_Studio` 以查看错误输出。
+- **有图像但没有深度：** 请确认你安装的是包含工具在内的完整 ZED SDK，并且所选相机型号受该 SDK 版本支持。
+- **视频断断续续：** 关机后检查 Fakra/Mini-Fakra 线缆、锁紧位置以及是否在支持的线缆长度范围内，然后再进行测试。
+
+## 资源
+
+- [Robotics J501 Mini 载板硬件与快速上手](/cn/recomputer_j501_mini_getting_started)
+- [Stereolabs ZED SDK 下载](https://www.stereolabs.com/developers/release/)
+- [Stereolabs ZED SDK 文档](https://docs.stereolabs.com/docs/development/zed-sdk)
+- [Stereolabs ZED Studio 文档](https://www.stereolabs.com/docs/development/zed-tools/zed-studio)
+
+## 技术支持与产品讨论
+
+感谢你选择 Seeed Studio 的产品！如果在集成 ZED X 相机时遇到问题，请在请求支持时附上你的 reComputer 型号、`cat /etc/nv_tegra_release` 的完整输出、已安装 DEB 的文件名以及 ZED SDK 版本。
+
+<div class="button_tech_support_container">
+  <a href="https://forum.seeedstudio.com/" target="_blank" rel="noopener noreferrer">
+    <button class="button_tech_support">Technical Support &amp; Product Discussion</button>
+  </a>
+</div>

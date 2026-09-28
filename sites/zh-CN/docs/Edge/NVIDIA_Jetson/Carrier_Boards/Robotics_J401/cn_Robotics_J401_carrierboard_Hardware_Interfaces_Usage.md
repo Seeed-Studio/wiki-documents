@@ -1,5 +1,5 @@
 ---
-description: 本维基提供了 reComputer Jetson Robotics J401 载板的硬件特性和接口使用的全面介绍。内容涵盖详细规格、支持的模块、安装设置步骤，以及 M.2、以太网、USB、CAN、UART、I2C 和 GMSL2 摄像头扩展等各类接口的实用使用指南，帮助用户快速在 J401 平台上开展机器人开发。
+description: 本维基提供了 reComputer Jetson Robotics J401 载板硬件特性和接口使用的全面介绍。内容涵盖详细规格、支持的模块、安装设置步骤，以及 M.2、以太网、USB、CAN、UART、I2C 和 GMSL2 摄像头扩展等各类接口的实用使用指南，帮助用户快速在 J401 平台上开展机器人开发。
 title: 接口使用
 tags:
   - J401-Robotics 载板
@@ -15,7 +15,7 @@ last_update:
   date: 06/10/2025
   author: Zibo
 createdAt: '2025-04-29'
-updatedAt: '2026-06-24'
+updatedAt: '2026-09-15'
 url: https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/
 ---
 
@@ -23,9 +23,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Robotics J401 载板硬件与快速上手
 
-reComputer Robotics J401 是一款为高级机器人应用设计的紧凑型高性能边缘 AI 载板。它兼容在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano/Orin NX 模块，可提供高达 157 TOPS 的 AI 性能。该载板配备丰富的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 接口、CAN、GMSL2（通过可选扩展板）、I2C 和 UART——可作为强大的机器人“大脑”，处理来自各类传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保部署过程顺畅无缝。​
+reComputer Robotics J401 是一款为高级机器人应用设计的紧凑型高性能边缘 AI 载板。它兼容 Super/MAXN 模式下的 NVIDIA Jetson Orin Nano/Orin NX 模块，可提供高达 157 TOPS 的 AI 性能。板载丰富的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 端口、CAN、GMSL2（通过可选扩展板）、I2C 和 UART——使其成为能够处理来自多种传感器复杂数据的强大机器人“大脑”。预装 JetPack 6 和 Linux BSP，确保系统可无缝部署。​
 
-reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，将大语言模型驱动的决策能力与机器人实体控制（如运动规划和传感器融合）连接起来。它非常适合用于自主机器人快速开发，通过开箱即用的接口和优化的 AI 框架，加速产品上市进程。
+reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，将大语言模型驱动的决策与机器人实体控制（如运动规划和传感器融合）连接起来。它非常适合自主机器人快速开发，通过开箱即用的接口和优化的 AI 框架，加速产品上市进程。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics-carrier-board.png"/>
@@ -71,7 +71,7 @@ reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
 - 19V/4.74A 5525 圆孔电源适配器
 - 确保满足最大功耗需求。
 2.AC 电源线兼容性
-- 请根据所在地区购买对应规格的 AC 三叶草电源线。
+- 请根据所在地区购买对应规格的三叶草 AC 电源线。
 3.配件兼容性
 - 仅使用官方推荐的配件（如无线模块、摄像头、外设），以获得最佳性能和兼容性。
 
@@ -143,7 +143,7 @@ reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC 2-pin；<br />1x RTC 插座</td>
+      <td>1x RTC 2-pin；<br />1x RTC 座</td>
     </tr>
     <tr>
       <td>LED</td>
@@ -184,7 +184,7 @@ reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
     </tr>
     <tr>
       <th rowSpan="1">工作温度</th>
-      <td colSpan="2">-20℃~60℃（25W 模式）；<br />-20℃~55℃（40W 模式）；<br />-20℃~50℃（MAXN 模式）；<br />（搭配带风扇的 reComputer Robotics 散热器）</td>
+      <td colSpan="2">-20℃~60℃（25W 模式）；<br />-20℃~55℃（40W 模式）；<br />-20℃~50℃（MAXN 模式）；<br />（需搭配带风扇的 reComputer Robotics 散热片）</td>
     </tr>
     <tr>
       <th rowSpan="1">质保</th>
@@ -192,7 +192,7 @@ reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
     </tr>
     <tr>
       <th rowSpan="1">认证</th>
-      <td>RoHS、REACH、CE、FCC、UKCA、KC</td>
+      <td>RoHS, REACH, CE, FCC, UKCA, KC</td>
     </tr>
   </tbody>
 </table>
@@ -224,7 +224,7 @@ reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack 版本 </td>
-        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑） </td>
+        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑）</td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -316,7 +316,7 @@ reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDqVVHOlgc7T6b5LbNYFImdAaUr2OlKT1IkQKk2P89lCW8">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAdqGsOC33XuaA6i60KX2k6s">下载</a></td>
       <td>6d9086d692a0f40fad02c75df1ff56ae<br />d9b368320bb2bfe3a777692513529697</td>
     </tr>
   </tbody>
@@ -330,7 +330,7 @@ JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等�
 :::info
 要验证已下载固件的完整性，可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 ### 进入强制恢复模式
@@ -353,7 +353,7 @@ JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等�
 
 **步骤 3.** 使用 USB Type-C 数据线将开发板连接到 Ubuntu 主机电脑。
 
-**步骤 4.** 在 Linux 主机电脑上打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据你使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
+**步骤 4.** 在 Linux 主机电脑上打开终端窗口，输入命令 `lsusb`。如果返回的内容中根据你使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
 - 对于 Orin NX 8GB：**0955:7423 NVidia Corp**
@@ -378,7 +378,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-robo-orin-nano-8g-j401-gmsl-6.2-36.4.3-2026-02-06.tar.gz
 ```
 
-**步骤 2：** 执行以下命令将 JetPack 系统刷写到 NVMe SSD：
+**步骤 2：** 执行以下命令，将 JetPack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
@@ -394,7 +394,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 刷写命令可能需要运行 2-10 分钟。
 :::
 
-**步骤 3：** 将 Robotics J401 连接到显示器，使用 PD 转 HDMI 转接器连接到支持 HDMI 输入的显示器，或者使用 PD 线直接连接到支持 PD 输入的显示器，并完成初始配置设置：
+**步骤 3：** 使用 PD 转 HDMI 转接器将 Robotics J401 连接到支持 HDMI 输入的显示器，或者使用 PD 线直接连接到支持 PD 输入的显示器，并完成初始配置设置：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -404,7 +404,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 请根据你的需求完成 **System Configuration**。
 :::
 
-## 接口使用
+## 接口使用说明
 
 下面将介绍 Robotics J401 开发板的各个接口以及如何使用它们。
 
@@ -462,13 +462,13 @@ M.2 Key B 插槽用于 5G 模组扩展，为机器人和边缘 AI 场景提供�
 lsusb 
 ```
 
-该命令会显示系统中连接的所有 USB 设备列表，以及它们的厂商（ID）、类型和其他信息。例如，输出中可能会显示来自 Quectel Wireless Solutions Co., Ltd. 的 EM12-G 设备，表明 5G 模组已存在。
+该命令会显示系统中连接的所有 USB 设备列表，以及它们的厂商（ID）、类型和其他信息。例如，输出中可能会显示来自 Quectel Wireless Solutions Co., Ltd. 的 EM12-G 设备，表示 5G 模组已存在。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb.png"/>
 </div>
 
-**步骤 2.** 确认驱动加载
+**步骤 2.** 确认驱动加载情况
 必须确保 5G 模组所需的 option 驱动已加载。我们可以使用 lsmod 命令进行检查。
 
 ```bash
@@ -491,7 +491,7 @@ sudo systemctl restart ModemManager
 
 apt install 命令用于安装 ModemManager 软件包，而 systemctl restart 用于重启 ModemManager 服务，以确保新设置生效。
 
-**步骤 4.** 验证模组识别
+**步骤 4.** 验证模组识别情况
 我们可以使用 mmcli -L 命令检查 ModemManager 是否能够正确识别 5G 模组。
 
 ```bash
@@ -524,7 +524,7 @@ sudo nmcli con up "gsm"
 
 该命令会激活 GSM 连接，如果成功，将显示确认信息。
 
-**步骤 7.** 再次验证模组识别
+**步骤 7.** 再次验证模组识别情况
 再次运行 mmcli -L 命令，以确保在配置 APN 之后模组仍然被识别。
 
 ```bash
@@ -532,7 +532,7 @@ mmcli -L
 ```
 
 **步骤 8.** 检查模组状态
-最后，我们可以使用 mmcli -m 0 命令查看模组的详细信息，例如 IP 分配、运营商和网络连接状态。
+最后，我们可以使用 mmcli -m 0 命令查看模组的详细信息，例如 IP 分配、运营商以及网络连接状态。
 
 ```bash
 mmcli -m 0 
@@ -696,13 +696,13 @@ sudo chmod +x test_usb
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
-**步骤 4.** 在 Windows PC 上打开设备管理器，并检查分配给 reComputer Super 的 COM 端口号。它应显示在“Ports (COM & LPT)”下，名称为“Silicon Labs CP210x USB to UART Bridge (COMX)”，其中 X 为 COM 端口号。
+**步骤 4.** 在 Windows PC 上打开设备管理器，检查分配给 reComputer Super 的 COM 端口号。它应显示在“Ports (COM & LPT)”下，名称为“Silicon Labs CP210x USB to UART Bridge (COMX)”，其中 X 为 COM 端口号。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
 </div>
 
-**步骤 5.** 打开串口工具（这里以 MobaXterm 工具为例），创建一个新会话。
+**步骤 5.** 打开串口工具（此处以 MobaXterm 工具为例），创建一个新会话。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
@@ -714,7 +714,7 @@ sudo chmod +x test_usb
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
 </div>
 
-**步骤 7.** 选择对应的串口，将波特率设置为 115200 并点击 "OK"。
+**步骤 7.** 选择对应的串口，将波特率设置为 115200 并点击“OK”。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png"/>
@@ -745,7 +745,7 @@ reComputer Jetson Robotics J401 配备了两种类型的风扇连接器，以满
 
 - 1x 4 针风扇连接器（5V PWM）：专为低电压、低功耗静音风扇设计，该连接器支持 PWM 转速控制，可根据系统温度智能调节风扇转速，从而提高能效并降低噪音。
 
-- 1x 4 针风扇连接器（12V PWM）：兼容标准 12V PWM 风扇，同样支持精确转速控制，非常适合高性能散热需求。
+- 1x 4 针风扇连接器（12V PWM）：兼容标准 12V PWM 风扇，同样支持精确的转速控制，非常适合高性能散热需求。
 
 ### 硬件连接
 
@@ -777,9 +777,9 @@ echo $1 > /sys/devices/platform/pwm-fan/hwmon/hwmon1/pwm1
 
 此外，我们还可以使用 jtop 工具手动设置风扇转速。
 
-## 针孔按键
+## 针孔按钮
 
-Robotics J401 载板配备了一个针孔按键用于用户交互，包括电源（PWR）按键和复位（RESET）按键。这些按键分别用于设备的开/关机和系统重启。
+Robotics J401 载板配备了一个针孔按钮用于用户交互，包括电源（PWR）按钮和复位（RESET）按钮。这些按钮分别用于设备的开/关机和系统重启。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pinhole_button.jpg"/>
@@ -798,7 +798,7 @@ Robotics J401 在 XT30（2+2）电源连接器中集成了一个 CAN0 接口，�
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_datasheet.png"/>
 </div>
 
-这里我们将向你演示如何使用 CAN1 接口进行数据通信，所使用的工具为 [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)。
+这里我们将向你演示如何使用 CAN1 接口进行数据通信，所用工具为 [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)。
 
 ### 硬件连接
 
@@ -812,7 +812,7 @@ Robotics J401 在 XT30（2+2）电源连接器中集成了一个 CAN0 接口，�
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c1.png"/>
 </div>
 
-在我们的示例中，根据所使用的适配器，我们已经下载并安装了软件，该软件可以在[这里](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)找到。
+在我们的示例中，根据所使用的适配器，我们已经下载并安装了相应软件，可在[这里](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)找到。
 
 **步骤 1.** 配置 CAN1 接口：
 
@@ -832,7 +832,7 @@ sudo ip link set can1 up
 
 **步骤 3.** 配置 GPIO。
 
-由于 Robotics J401 的 CAN 收发器具有空闲模式，需要通过 GPIO 唤醒。请在 Jetson 终端上执行以下命令：
+由于 Robotics J401 的 CAN 收发器具有空闲模式，需要通过 GPIO 唤醒。请在 Jetson 终端执行以下命令：
 
 ```bash
 # Install the toolkit (skip if already installed)
@@ -926,7 +926,7 @@ cansend can0 123##011112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEF
 
 :::info
 
-- `123` 为 ID
+- `123` 是 ID
 - `##` 表示 CAN FD 帧
 - 后面是 64 字节数据（共 128 个十六进制字符）
 
@@ -938,11 +938,11 @@ cansend can0 123##011112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEF
 
 ## UART
 
-Robotics J401 提供一个标准的 4 针 JST 接口用于 UART 串口通信。
+Robotics J401 提供了一个标准的 4 针 JST 接口用于 UART 串口通信。
 
 ### 硬件连接
 
-对于 UART 通信，请按照以下接线方式连接。这里我们以 USB 转 TTL 工具为例。
+对于 UART 通信，请按照以下接线方式进行连接。这里我们以 USB 转 TTL 工具为例。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_c.jpg"/>
@@ -950,13 +950,13 @@ Robotics J401 提供一个标准的 4 针 JST 接口用于 UART 串口通信。
 
 ### 使用说明
 
-**步骤 1.** 在 Jetson 设备上打开终端并运行以下命令以启用 UART 接口：
+**步骤 1.** 在 Jetson 设备上打开终端，运行以下命令以启用 UART 接口：
 
 ```bash
 gpioset --mode=time --sec=100 2 5=0
 ```
 
-**步骤 2.** 将 USB 转 TTL 工具连接到 Robotics J401 的 UART 端口和 PC。
+**步骤 2.** 将 USB 转 TTL 工具连接到 Robotics J401 的 UART 接口和 PC。
 
 **步骤 3.** 在 PC 端打开串口工具（这里以 xcom 工具为例），并将波特率设置为 115200。
 
@@ -997,8 +997,8 @@ python3 uart_test.py
 
 ## I2C
 
-Robotics J401 通过标准 JST 4 针接口提供两个 I2C 接口（IIC0 和 IIC1）。
-便于连接传感器和外设以扩展系统功能。
+Robotics J401 通过标准 4 针 JST 接口提供了两个 I2C 接口（IIC0 和 IIC1）。
+可方便地连接传感器和外设以扩展系统功能。
 
 ### 硬件连接
 
@@ -1098,7 +1098,7 @@ sudo i2cdetect -y -r 1
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_detect.png"/>
 </div>
 
-可以看到，连接到 IIC0 的设备被设置为地址 0x08。
+我们可以看到，连接到 IIC0 的设备被设置为地址 0x08。
 
 ## 扩展端口
 
@@ -1191,13 +1191,13 @@ v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0 -d /dev/vide
 :::note
 `trig_mode = 1` 启用帧同步，而 `trig_mode = 0` 禁用帧同步。默认设置为禁用帧同步。
 
-`--set-fmt-video` 后面跟随的分辨率是根据所连接摄像头选择的。目前有三个 sensor_mode 选项，每个选项对应一种不同的分辨率。
+`--set-fmt-video` 后面跟的是分辨率，该分辨率根据所连接的摄像头进行选择。目前有三个 sensor_mode 选项，每个选项对应一种不同的分辨率。
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
 - sensor_mode=2 -------> YUYV8_1X16/3840x2160
 :::
 
-**步骤 2.** 启动相机。
+**step 2.** 启动相机。
 
 ```bash
 gst-launch-1.0 \
@@ -1242,7 +1242,7 @@ reComputer Jetson Robotics J401 配备了一个 DP1.4（包含在 Type-C Host �
 - [reComputer Robotics J401 载板原理图](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
 - [reComputer Robotics J401 载板数据手册](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
 - [reComputer Robotics 3D 文件](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
-- [reComputer Robotics PCBA 机械文档](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
+- [机械文档 - reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
 - [Seeed NVIDIA Jetson 产品目录](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
 - [Nvidia Jetson 对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Nvidia Jetson 成功案例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
@@ -1257,7 +1257,7 @@ reComputer Jetson Robotics J401 配备了一个 DP1.4（包含在 Type-C Host �
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

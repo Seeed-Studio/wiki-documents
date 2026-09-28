@@ -3,7 +3,7 @@ description: Introducción para reComputer Super
 title: Introducción a reComputer Super
 keywords:
   - reComputer Super
-  - reComputer Super Getting Started
+  - Introducción a reComputer Super
   - Super
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /recomputer_jetson_super_getting_started
@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/es/recomputer_jetson_super_getting_started/
 ---
 
@@ -34,12 +34,12 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong></a>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personaliza ahora ➜</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personalizar ahora ➜</font></span></strong></a>
 </div>
 
 ## Características clave  
 
-### 🚀 ​**Aumento de rendimiento**  
+### 🚀 ​**Impulso de rendimiento**  
 
 - ​**Aumento de rendimiento de IA de 1,7x** respecto a reComputer Classic, ofreciendo ​**157 TOPS**  
 - Impulsado por ​**Jetson Orin Nano** (Modelos: 11410311, 11410312) y ​**Jetson Orin NX** (Modelos: 11410313, 11410314)  
@@ -49,7 +49,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 - ​**M.2 Key E/M** + ​**Mini-PCIe** para ampliación  
 - ​**Doble Ethernet RJ45** para redes de alta velocidad  
 - ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Camera Serial Interface)  
-- Compatibilidad con ​**bus CAN** para aplicaciones industriales/robótica  
+- Compatibilidad con ​**bus CAN** para aplicaciones industriales/robóticas  
 
 ### 🛠️ ​**Lista para desarrollo y producción**  
 
@@ -57,7 +57,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 - Integración fluida de IA en el edge con frameworks:  
   - ​**NVIDIA**, ​**Hugging Face**, ​**ONNX**, ​**PyTorch**  
   - ​**ROS2/1** para aplicaciones de robótica  
-- Compatible con desarrollo de ​**IA multimodal** y ​**Physical AI**  
+- Compatible con el desarrollo de ​**IA multimodal** y ​**Physical AI**  
 
 ### 🤖 ​**Optimizada para Edge AI y robótica**  
 
@@ -77,7 +77,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 #### 2. ​**Cable de alimentación de CA**  
 
-- Utiliza cables de trébol ​**específicos de la región**.  
+- Utiliza cables tipo trébol ​**específicos de la región**.  
 
 #### 3. ​**Accesorios**  
 
@@ -91,7 +91,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-      <th colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Módulo de sistema Jetson Orin Super</th>
+      <th colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Jetson Orin Super System on Module</th>
     </tr>
     <tr>
       <th>Especificaciones</th>
@@ -132,10 +132,10 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>Memoria</td>
-      <td>4GB LPDDR5 de 64 bits<br />34 GB/s</td>
-      <td>8GB LPDDR5 de 128 bits<br />68 GB/s</td>
-      <td>8GB LPDDR5 de 128 bits 102.4GB/s</td>
-      <td>16GB LPDDR5 de 128 bits 102.4GB/s</td>
+      <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
+      <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
+      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
     </tr>
     <tr>
       <td>Acelerador DL</td>
@@ -184,7 +184,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     <tr>
       <td rowSpan={11}>E/S</td>
       <td >USB</td>
-      <td colSpan={3}>4x USB 3.2 Type-A (5Gbps); <br />1x USB 2.0 Type-C (modo dispositivo/depuración);</td>
+      <td colSpan={3}>4x USB 3.2 Type-A (5Gbps); <br />1x USB 2.0 Type-C (Modo dispositivo/Depuración);</td>
     </tr>
     <tr>
       <td>Cámara</td>
@@ -192,7 +192,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={3}>1 x CAN (conector de 4 pines)</td>
+      <td colSpan={3}>1 x CAN(Conector de 4 pines)</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -212,7 +212,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>LED</td>
-      <td colSpan={3}>2x LED (PWR y ACT)</td>
+      <td colSpan={3}>2x LED(PWR y ACT)</td>
     </tr>
     <tr>
       <td>Botón de orificio</td>
@@ -228,7 +228,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>Alimentación</td>
-      <td colSpan={4}>Jack de CC cilíndrico 5525 de 12-19V </td>
+      <td colSpan={4}>Conector de corriente DC tipo barril 5525 de 12-19V </td>
     </tr>
     <tr>
       <td>Versión de Jetpack</td>
@@ -252,7 +252,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>Certificación</td>
-      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, prueba de vibración (GB/T 2423)</td>
+      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, Prueba de vibración(GB/T 2423)</td>
     </tr>
   </tbody>
 </table>
@@ -354,7 +354,7 @@ Consulta la siguiente tabla para preparar la máquina host.
   </tbody>
 </table>
 
-<p><strong>Note:</strong> Para JetPack 7.2, Ubuntu 24.04 solo es compatible para el flasheo y la instalación de componentes en el lado de destino. Utiliza Ubuntu 20.04 o 22.04 si necesitas componentes de desarrollo en el host.</p>
+<p><strong>Nota:</strong> Para JetPack 7.2, Ubuntu 24.04 solo es compatible para el flasheo y la instalación de componentes en el lado del dispositivo. Utiliza Ubuntu 20.04 o 22.04 si necesitas componentes de desarrollo en el host.</p>
 
 :::
 
@@ -368,7 +368,7 @@ Aquí necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu corre
     <tr>
       <th>Versión de JetPack</th>
       <th>Módulo Jetson</th>
-      <th>Enlace de descarga 1</th>
+      <th>Enlace de descarga1</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -391,8 +391,8 @@ Aquí necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu corre
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">Download</a></td>
-      <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAdqGsOC33XuaA6i60KX2k6s">Download</a></td>
+      <td>93130562F8C5EA02857C01BCB49B7626</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.2</td>
@@ -426,7 +426,7 @@ Los archivos de imagen de JetPack son grandes y la descarga puede tardar alreded
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, se confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, se confirma que el firmware que descargaste está completo e intacto.
 :::
 
 ### Entrar en modo Force Recovery
@@ -491,20 +491,20 @@ Verás la siguiente salida si el proceso de flasheo se realiza correctamente
 El comando de flasheo puede ejecutarse durante 2-10 minutos.
 :::
 
-**Paso 3:** Conecta el monitor usando un cable HDMI y completa la configuración de inicialización del sistema de reComputer Super:
+**Paso 3:** Conecta el monitor usando un cable HDMI y completa la configuración de inicialización del sistema reComputer Super:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-Completa la **System Configuration** según tus necesidades.
+Completa la **Configuración del sistema** según tus necesidades.
 :::
 
 ## Uso de las interfaces de hardware
 
 :::info
-Si quieres obtener más información sobre las especificaciones detalladas y el uso de las interfaces de hardware, consulta [este wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_super_hardware_interfaces_usage/).
+Si quieres obtener más información sobre las especificaciones detalladas y el uso de las interfaces de hardware, consulta [esta wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_super_hardware_interfaces_usage/).
 :::
 
 ## Recursos
