@@ -1,6 +1,6 @@
 ---
-description: Elige el producto SenseCraft adecuado para IA en el borde, programación de hardware, robótica, datos de IoT, paneles HMI, operaciones de dispositivos y flujos de trabajo con SenseCAP MX o Hotspot.
-title: Productos SenseCraft y guías de usuario
+description: Elige el producto SenseCraft adecuado para IA en el borde, programación de hardware, robótica, datos de IoT, paneles HMI, operaciones de dispositivos y flujos de trabajo SenseCAP MX o Hotspot.
+title: Productos SenseCraft y Guías de Usuario
 hide_title: true
 keywords:
   - SenseCraft
@@ -98,7 +98,7 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       <div className="card__image" style={{ background: 'var(--ifm-color-emphasis-100)' }}>
         <img
           src="https://sensecraft.seeed.cc/assets/codecraft.png"
-          alt="Proyectos de hardware con CodeCraft construidos con Wio Terminal, XIAO y Grove"
+          alt="Proyectos de hardware CodeCraft creados con Wio Terminal, XIAO y Grove"
           loading="lazy"
           style={{ width: '100%', height: '220px', objectFit: 'contain', display: 'block', padding: '1rem' }}
         />
@@ -128,7 +128,7 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       <div className="card__image" style={{ background: 'var(--ifm-color-emphasis-100)' }}>
         <img
           src="https://files.seeedstudio.com/Edge_box/reComputer_Lab.webp"
-          alt="Gráfico de modelo de IA en el borde y recursos para desarrolladores de reComputer AI Lab"
+          alt="Gráfico de modelo de IA perimetral y recursos para desarrolladores de reComputer AI Lab"
           loading="lazy"
           style={{ width: '100%', height: '220px', objectFit: 'contain', display: 'block', padding: '1rem' }}
         />
@@ -136,9 +136,9 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       <div className="card__body">
         <div className="badge badge--info margin-bottom--sm">Desarrollar</div>
         <h3 id="recomputer-ai-lab">reComputer AI Lab</h3>
-        <div className="margin-bottom--sm"><strong>Modelos, herramientas y tutoriales de IA en el borde optimizados para hardware reComputer.</strong></div>
+        <div className="margin-bottom--sm"><strong>Modelos, herramientas y tutoriales de IA perimetral optimizados para hardware reComputer.</strong></div>
         <div className="margin-bottom--sm">
-          Explora más de 100 modelos optimizados de visión por computador, LLM y VLM, y ejecútalos en dispositivos reComputer basados en NVIDIA Jetson, Rockchip o Raspberry Pi. Los modelos incluyen benchmarks y comandos de despliegue listos para ejecutar, con herramientas de conversión, tutoriales y proyectos de la comunidad en el mismo centro de recursos para desarrolladores.
+          Explora más de 100 modelos optimizados de visión por computadora, LLM y VLM, y ejecútalos en dispositivos reComputer basados en NVIDIA Jetson, Rockchip o Raspberry Pi. Los modelos incluyen benchmarks y comandos de despliegue listos para ejecutar, con herramientas de conversión, tutoriales y proyectos de la comunidad en el mismo centro de recursos para desarrolladores.
         </div>
         <div className="margin-bottom--sm">
           <a href="https://sensecraft.seeed.cc/ai-lab/models?lang=en&utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=ai_lab_models" target="_blank" rel="noopener noreferrer">Explorar modelos</a>
@@ -158,7 +158,7 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       <div className="card__image" style={{ background: 'var(--ifm-color-emphasis-100)' }}>
         <img
           src="https://sensecraft.seeed.cc/assets/rearm-landing/media/adv-overview.svg"
-          alt="Ilustración de SenseCraft Robotics con un brazo robótico, una cinta transportadora y un operador"
+          alt="Ilustración de SenseCraft Robotics de un brazo robótico, una cinta transportadora y un operador"
           loading="lazy"
           style={{ width: '100%', height: '220px', objectFit: 'contain', display: 'block', padding: '0.75rem' }}
         />
@@ -173,7 +173,8 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       </div>
       <div className="card__footer">
         <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/en/robotics?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_home" target="_blank" rel="noopener noreferrer">Explorar robótica</a>
-        <a className="button button--outline button--secondary margin-bottom--sm" href="https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_download" target="_blank" rel="noopener noreferrer">Descargar la app</a>
+        <a className="button button--outline button--secondary margin-right--sm margin-bottom--sm" href="https://sensecraft.seeed.cc/en/download?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_robotics_download" target="_blank" rel="noopener noreferrer">Descargar la app</a>
+        <a className="button button--outline button--secondary margin-bottom--sm" href="/es/sensecraft_robotics/">Leer la guía de usuario</a>
       </div>
     </div>
   </div>
@@ -185,22 +186,22 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
   <div className="col col--6 margin-bottom--lg">
     <div className="card card--full-height">
       <div className="card__image" style={{ height: '220px', display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '0.5rem', alignItems: 'center', padding: '1rem', background: 'var(--ifm-color-emphasis-100)' }}>
-        <img src="https://sensecraft.seeed.cc/assets/new_home/illustrations/iot-2.svg" alt="Gateway y antena SenseCAP" loading="lazy" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain' }} />
-        <img src="https://sensecraft.seeed.cc/assets/new_home/illustrations/iot-3.svg" alt="Sensor de campo inalámbrico SenseCAP" loading="lazy" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain' }} />
-        <img src="https://sensecraft.seeed.cc/assets/new_home/illustrations/iot-6.svg" alt="Estación meteorológica SenseCAP" loading="lazy" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain' }} />
-        <img src="https://sensecraft.seeed.cc/assets/new_home/illustrations/iot-group.svg" alt="Sensor ambiental todo en uno SenseCAP" loading="lazy" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain' }} />
+        <img src="https://sensecraft.seeed.cc/assets/new_home/illustrations/iot-2.svg" alt="SenseCAP gateway and antenna" loading="lazy" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain' }} />
+        <img src="https://sensecraft.seeed.cc/assets/new_home/illustrations/iot-3.svg" alt="SenseCAP wireless field sensor" loading="lazy" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain' }} />
+        <img src="https://sensecraft.seeed.cc/assets/new_home/illustrations/iot-6.svg" alt="SenseCAP weather station" loading="lazy" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain' }} />
+        <img src="https://sensecraft.seeed.cc/assets/new_home/illustrations/iot-group.svg" alt="SenseCAP all-in-one environmental sensor" loading="lazy" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain' }} />
       </div>
       <div className="card__body">
         <div className="badge badge--primary margin-bottom--sm">Conectar</div>
         <h3 id="sensecraft-data-platform">SenseCraft Data Platform</h3>
         <div className="margin-bottom--sm"><strong>Una plataforma de gestión de dispositivos y datos IoT.</strong></div>
         <div className="margin-bottom--sm">
-          Empareja gateways y sensores compatibles, recopila datos e inspecciona el estado y la telemetría de los dispositivos desde una única plataforma en la nube. Sirve como el centro de datos para dispositivos SenseCAP y flujos de trabajo IoT comunes que usan LoRaWAN, MQTT, Wi‑Fi, meteorología y sensores ambientales.
+          Empareja gateways y sensores compatibles, recopila datos e inspecciona el estado y la telemetría de los dispositivos desde una única plataforma en la nube. Sirve como el hub de datos para dispositivos SenseCAP y flujos de trabajo IoT comunes que usan LoRaWAN, MQTT, Wi‑Fi, meteorología y sensores ambientales.
         </div>
       </div>
       <div className="card__footer">
         <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://sensecap.seeed.cc/portal/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_portal" target="_blank" rel="noopener noreferrer">Abrir Data Platform</a>
-        <a className="button button--outline button--secondary margin-bottom--sm" href="/es/cloud/sensecraft-data/sensecraft-data-platform/overview/">Leer la guía rápida</a>
+        <a className="button button--outline button--secondary margin-bottom--sm" href="/es/cloud/sensecraft-data/sensecraft-data-platform/overview/">Leer la guía de inicio rápido</a>
       </div>
     </div>
   </div>
@@ -210,7 +211,7 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       <div className="card__image" style={{ height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--ifm-color-emphasis-100)' }}>
         <img
           src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e5/56/bb/e556bba0-f994-8931-b3ce-f00ed16d2cad/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg"
-          alt="Icono de la app móvil SenseCraft"
+          alt="SenseCraft mobile app icon"
           loading="lazy"
           style={{ width: '132px', height: '132px', borderRadius: '28px', boxShadow: 'var(--ifm-global-shadow-md)' }}
         />
@@ -220,7 +221,7 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
         <h3 id="sensecraft-app">SenseCraft App</h3>
         <div className="margin-bottom--sm"><strong>Un hub móvil para la gestión de dispositivos IoT y la configuración de IA en iOS y Android.</strong></div>
         <div className="margin-bottom--sm">
-          Usa la app para añadir dispositivos compatibles, supervisar sus datos y estado, cambiar los ajustes disponibles, revisar eventos y realizar la configuración o actualizaciones Bluetooth compatibles. Usa esta app para flujos de trabajo generales de dispositivos y datos SenseCAP; es independiente de la SenseCAP Hotspot App.
+          Usa la app para añadir dispositivos compatibles, supervisar sus datos y estado, cambiar los ajustes disponibles, revisar eventos y realizar configuraciones o actualizaciones Bluetooth compatibles. Usa esta app para flujos de trabajo generales de dispositivos y datos SenseCAP; es independiente de la SenseCAP Hotspot App.
         </div>
       </div>
       <div className="card__footer">
@@ -235,7 +236,7 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       <div className="card__image">
         <img
           src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/23.png"
-          alt="Sitio web SenseCraft Seeedash que muestra paneles y escenarios de visualización"
+          alt="SenseCraft Seeedash website showing dashboard and display scenarios"
           loading="lazy"
           style={{ width: '100%', height: '220px', objectFit: 'cover', objectPosition: 'top center', display: 'block' }}
         />
@@ -263,7 +264,7 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       <div className="card__image" style={{ background: 'var(--ifm-color-emphasis-100)' }}>
         <img
           src="https://sensecraft.seeed.cc/assets/new_home/illustrations/fleet-scene.svg"
-          alt="Un grupo gestionado de dispositivos de borde que representa las operaciones de dispositivos SenseCraft"
+          alt="A managed group of edge devices representing SenseCraft device operations"
           loading="lazy"
           style={{ width: '100%', height: '220px', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
         />
@@ -271,9 +272,9 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       <div className="card__body">
         <div className="badge badge--warning margin-bottom--sm">Operar</div>
         <h3 id="sensecraft-device-management-platform">SenseCraft Device Management Platform</h3>
-        <div className="margin-bottom--sm"><strong>Gestiona dispositivos de borde distribuidos y despliega aplicaciones, modelos y actualizaciones desde un único plano de control.</strong></div>
+        <div className="margin-bottom--sm"><strong>Gestiona dispositivos perimetrales distribuidos y despliega aplicaciones, modelos y actualizaciones desde un único plano de control.</strong></div>
         <div className="margin-bottom--sm">
-          Usa la plataforma después del despliegue para supervisar los nodos de borde compatibles, aplicar políticas de tiempo de ejecución coherentes y gestionar el ciclo de vida de las aplicaciones en múltiples dispositivos. Es compatible con hardware de borde principal, incluidos NVIDIA Jetson, Rockchip, Raspberry Pi y PCs de borde x86.
+          Usa la plataforma después del despliegue para supervisar los nodos perimetrales compatibles, aplicar políticas de ejecución coherentes y gestionar el ciclo de vida de las aplicaciones en múltiples dispositivos. Es compatible con hardware perimetral de uso generalizado, incluidos NVIDIA Jetson, Rockchip, Raspberry Pi y PCs perimetrales x86.
         </div>
         <div className="margin-bottom--sm">
           <a href="https://seeed-fleet.com/apps?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_apps" target="_blank" rel="noopener noreferrer">Explorar apps disponibles</a>
@@ -281,7 +282,7 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
       </div>
       <div className="card__footer">
         <a className="button button--primary margin-right--sm margin-bottom--sm" href="https://seeed-fleet.com?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_home" target="_blank" rel="noopener noreferrer">Abrir Device Management</a>
-        <a className="button button--outline button--secondary margin-bottom--sm" href="https://seeed-fleet.com/docs?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_quick_start" target="_blank" rel="noopener noreferrer">Leer la guía rápida</a>
+        <a className="button button--outline button--secondary margin-bottom--sm" href="https://seeed-fleet.com/docs?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_fleet_quick_start" target="_blank" rel="noopener noreferrer">Leer la guía de inicio rápido</a>
       </div>
     </div>
   </div>
@@ -297,7 +298,7 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
           <div className="card__image" style={{ minHeight: '260px', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--ifm-color-emphasis-100)' }}>
             <img
               src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/08/e7/7b08e7ab-70d4-186f-61b6-294c7ba96ae0/SenseCAP-AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg"
-              alt="Icono de la app móvil SenseCAP Hotspot"
+              alt="SenseCAP Hotspot mobile app icon"
               loading="lazy"
               style={{ width: '144px', height: '144px', borderRadius: '30px', boxShadow: 'var(--ifm-global-shadow-md)' }}
             />
@@ -307,9 +308,9 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
           <div className="card__body">
             <div className="badge badge--secondary margin-bottom--sm">DePIN</div>
             <h3 id="sensecap-mx-hotspot">SenseCAP MX / Hotspot</h3>
-            <div className="margin-bottom--sm"><strong>Puertas de enlace y herramientas de gestión para las redes Helium, Flux, Mysterium y Weather XM.</strong></div>
+            <div className="margin-bottom--sm"><strong>Gateways and management tools for Helium, Flux, Mysterium, and Weather XM networks.</strong></div>
             <div className="margin-bottom--sm">
-              Explora los productos de gateway SenseCAP MX, la documentación y el estado del servicio para los flujos de trabajo de redes descentralizadas compatibles. Utiliza la aplicación SenseCAP Hotspot App por separado para desplegar y gestionar las puertas de enlace SenseCAP compatibles y los dispositivos hotspot; no la confundas con la aplicación general SenseCraft App.
+              Explora los productos gateway SenseCAP MX, la documentación y el estado del servicio para flujos de trabajo de redes descentralizadas compatibles. Usa la aplicación SenseCAP Hotspot App por separado para implementar y gestionar los gateways SenseCAP compatibles y los dispositivos hotspot; no la confundas con la aplicación general SenseCraft App.
             </div>
           </div>
           <div className="card__footer">
@@ -323,11 +324,11 @@ SenseCraft reúne software para crear aplicaciones de IA y hardware, entrenar ro
   </div>
 </div>
 
-:::info Límites de producto
+:::info Límites del producto
 
-- **reComputer AI Lab** es el nombre oficial actual del centro de modelos, herramientas, tutoriales y recursos de proyectos centrados en reComputer.
-- **SenseCraft Device Management Platform** es la capa de operaciones para gestionar dispositivos edge y aplicaciones desplegadas; comienza con una aplicación o solución concreta y luego utiliza la gestión de dispositivos para operarla a escala.
-- **SenseCraft App** y **SenseCAP Hotspot App** son productos móviles diferentes. Utiliza SenseCraft App para los dispositivos IoT compatibles y flujos de trabajo de datos, y SenseCAP Hotspot App para los flujos de trabajo de gateway y hotspot compatibles.
+- **reComputer AI Lab** es el nombre oficial actual de los modelos, herramientas, tutoriales y centro de recursos de proyectos enfocados en reComputer.
+- **SenseCraft Device Management Platform** es la capa de operaciones para gestionar dispositivos edge y aplicaciones desplegadas; comienza con una aplicación o solución concreta y luego usa la gestión de dispositivos para operarla a escala.
+- **SenseCraft App** y **SenseCAP Hotspot App** son productos móviles diferentes. Usa SenseCraft App para los dispositivos IoT compatibles y flujos de trabajo de datos, y SenseCAP Hotspot App para los flujos de trabajo de gateways y hotspots compatibles.
 
 :::
 
