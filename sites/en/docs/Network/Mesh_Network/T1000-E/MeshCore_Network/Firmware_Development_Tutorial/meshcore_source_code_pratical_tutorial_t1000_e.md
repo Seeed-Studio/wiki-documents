@@ -43,11 +43,11 @@ After installation, an ant-shaped icon usually appears in the left toolbar.
 
 Open a folder you want your project in. Open the folder in terminal. [Click here](https://github.com/meshcore-dev/MeshCore) to git clone the project.
 
-Open VSCode, then click platform IO icon, choose `select a folder`. Choose the folder you cloned the project with.
+Open VSCode, then click the PlatformIO icon, choose `select a folder`. Choose the folder you cloned the project with.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png)
 
-PlatformIO will automatically install the necessary dependencies. After the installation succeed, you can see `Project has been successfully updated`
+PlatformIO will automatically install the necessary dependencies. After the installation succeeds, you can see `Project has been successfully updated`
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/SucessfullyUpdate.png" style={{width:800, height:'auto'}}/></div>
@@ -55,25 +55,25 @@ PlatformIO will automatically install the necessary dependencies. After the inst
 
 ## Firmware Development
 
-### Development Torial
+### Development Tutorial
 
-Find the environment for your target board. Take T1000-E Bluetooth Copanion as example:
+Find the environment for your target board. Take T1000-E Bluetooth Companion as example:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000EBoard.jpg" style={{width:800, height:'auto'}}/></div>
 
 
-Tnen PtformmlIO will prepare the required dependencies for the board.
+Then PlatformIO will prepare the required dependencies for the board.
 
 Change your code. It is recommended to change the `variant.h` file for your board.
 
-After copleting the coding, run the following command to copiling the code and change to uf2 file.
+After completing the coding, run the following command to compile the code and convert it to a UF2 file.
 
 ``` bash
 pio run -e t1000e_companion_radio_ble
 pio run -e t1000e_companion_radio_ble -t create_uf2
 ```
 
-Press and hold the device button, then quickly connect the charging cable twice, the green LED will be solid on. Drag the uf2 file into the pop-out disk. The uf2 file should be found in `.pio\build\t1000e_companion_radio_ble`
+Press and hold the device button, then quickly connect the charging cable twice, the green LED will be solid on. Drag the UF2 file into the pop-out disk. The UF2 file should be found in `.pio\build\t1000e_companion_radio_ble`
 
 ### Example
 
@@ -81,7 +81,7 @@ Press and hold the device button, then quickly connect the charging cable twice,
 
 This example shows how to control the user light to be on constantly. Copy the following code to `/examples/companion_radio/ui-new/ui-orig/UITask.cpp`
 
-``` python
+``` cpp
 void UITask::userLedHandler() {
 #ifdef PIN_STATUS_LED
 #ifdef T1000_E
@@ -97,11 +97,11 @@ void UITask::userLedHandler() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000ELight.jpg" style={{width:900, height:'auto'}}/></div>
 
 
-Copiling it and flash the uf2 file to your T1000-E.
+Compile it and flash the UF2 file to your T1000-E.
 
-## (Advanced) Pr Submitting
+## (Advanced) PR Submitting
 
-Thanks for considering contributing to MeshCore project! How Can you Contribute?
+Thanks for considering contributing to MeshCore project! How Can You Contribute?
 **1. Reporting Bugs**
 
 - Use the Issues tracker
@@ -137,7 +137,7 @@ Thanks for considering contributing to MeshCore project! How Can you Contribute?
 - If you change public API, update README.md and library.properties
 - New features should include an example sketch in examples/
 ### Coding Style
-PLease follow the existing C++ style (per the .clang-format)
+Please follow the existing C++ style (per the .clang-format)
 
 - 2 spaces indentation (no tabs)
 - camelCase for functions and variables
