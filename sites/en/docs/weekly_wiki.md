@@ -22,67 +22,85 @@ Today is September 28th, and a brand new week has begun! Check out what Seeed St
 
 ## Latest Wiki Launched
 
-### [Control reBot Arm using voice with reSpeaker Clip](https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_clip/)
+### [Seeed Physical AI Beginner's Course](https://wiki.seeedstudio.com/rebot_physical_ai_course_introduction/)
 
-<div class="video-container">
-  <iframe width="800" height="400" src="https://www.youtube.com/embed/OdBwXYKzoio" title="ReSpeaker Lite with XIAO ESP32S3 Home Assistant" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-03.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to control the reBot Arm B601-DM using natural voice commands with reSpeaker Clip. It covers real-time audio streaming, voice activity detection, speech-to-text, and LLM-based intent recognition. You will also learn how to set up the project and run voice-controlled actions on either a simulated or real robotic arm.
+This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combining robotic arm theory, robotics learning theory, and real hardware practice.
 
 </div>
 
-### [reComputer Rugged J401 for Industrial Vision](http://localhost:3000/ai_robotics_recomputer_rugged_j401_cv_demo)
+### [SenseCraft Robotics Software Overview](https://wiki.seeedstudio.com/sensecraft_robotics/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-en.webp" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki introduces several ways computer vision can be used on industrial forklifts. The example uses reComputer Rugged J401 as the edge controller. Its IP66 enclosure, M12 connectors, vibration resistance, four PoE ports, and Jetson Orin NX allow it to sit close to the cameras and run the vision workloads locally.
+SenseCraft™ Robotics is a training and runtime platform for real-world robotic arm tasks. It provides an integrated workflow covering device connection, calibration, data collection, model training, and validation, helping users in education, research, and robotics applications move more quickly from demonstration data to physical actions.
 
 </div>
 
-### [Deploy TensorRT-Model-Connect on Jetson AGX Orin](https://wiki.seeedstudio.com/ai_robotics_deploy_tensorrt_model_connect_on_jetson/)
+### [Deploy a PREEMPT_RT Real-Time Kernel with a Prebuilt DEB Package on Seeed reComputer Jetson Devices](https://wiki.seeedstudio.com/deploy_preempt_rt_kernel_with_prebuilt_deb_package_on_recomputer_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/TRTMC/trtmc_wiki_cover.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/zzd/gpio_square_wave_realtime_kernel.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki shows how to run [NVIDIA TensorRT-Model-Connect](https://github.com/NVIDIA/TensorRT-Model-Connect) (TRTMC) on a Seeed reComputer powered by **Jetson AGX Orin**. After the native runtime is built, the path is short: start from a Hugging Face checkpoint, produce a TensorRT `.bundle` on the device, and run text generation. There is no separate x86 host and no ONNX export step.
+A real-time kernel, also known as a PREEMPT_RT kernel, is a Linux kernel variant with enhanced real-time scheduling capabilities. It reduces scheduling latency and improves task execution determinism, which is critical for workloads such as motor control, sensor data acquisition, and industrial bus communication (CAN, EtherCAT) in robotics, industrial automation, and edge computing scenarios.
+
+If you prefer to build the PREEMPT_RT kernel from source, please refer to [this wiki](https://wiki.seeedstudio.com/flash_preempt_rt_kernel_on_recomputer_jetson_jetpack_6_2_1/). This guide takes a much simpler path: a single prebuilt DEB package installs the real-time kernel in about one minute, keeps the original standard kernel untouched as a fallback, and lets you switch between the two kernels at any time.
 
 </div>
 
-### [Deploy ONVIF on reCamera](https://wiki.seeedstudio.com/recamera_onvif/)
+### [Reachy Mini × XIAO Screen Motion Control](https://wiki.seeedstudio.com/reachymini_development_cases_sway_screen/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/guides/image-13.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reachymini/reachymini_sway_screen_demo.gif" alt="pir" width={400} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to deploy ONVIF on reCamera for local network discovery and video streaming. It covers deploying the ONVIF service with SenseCraft Solution and verifying the RTSP video stream. You will also learn how to connect reCamera to ONVIF-compatible clients such as Home Assistant, Frigate, NVRs, and VMS platforms.
+Combine the **Reachy Mini** robot with the **XIAO ESP32-S3 Plus touch display** — using the built-in IMU sensor (LSM6DS3), tilting the screen controls the robot's body sway, head yaw, and head pitch.
 
 </div>
 
-### [AI Image Transmission over MeshCore with MeshTracker X1](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_x1/)
+### [Interruptible Conversational Voice AI on the Edge: Build, Deploy, and Measured Results](https://wiki.seeedstudio.com/solutions/conversational-voice-ai/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png" alt="MeshCore Open Image Transmission" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-respeaker-xvf3800-4-mic-array.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to transmit images over a MeshCore network using MeshTracker X1 and MeshCore Open. It uses AI-based ultra-low bitrate image compression to reduce images to compact data that can be transmitted over low-bandwidth LoRa mesh networks and reconstructed on the receiving device. This makes visual information sharing possible for outdoor exploration, emergency response, remote monitoring, and other off-grid scenarios.
-
-The same Image Transmission feature is also available for [SenseCAP Card Tracker T1000-E](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_t1000e/), [Wio Tracker L1](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_l1/), and [Wio Tracker L2](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_l2/).
+This document introduces an interruptible conversational Voice AI solution for edge devices. It covers the required hardware, local speech processing, acoustic echo cancellation, and integration with OpenAI-compatible backends. It also explains deployment, configuration, and supported interfaces for real-world applications.
 
 </div>
 
-### [EasySkyMesh IoT Firmware for Wio Tracker L1](https://wiki.seeedstudio.com/easyskymesh_wio_tracker_l1/)
+### [On-Device AI Fall Detection: Build, Deploy, and Measured Results](https://wiki.seeedstudio.com/solutions/edge-fall-detection/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_MeshCore_Device_Low_Power_Consumption_L1_Pro.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/panel-dashboard-en-97ba47b3.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to install and use EasySkyMesh IoT firmware on the Wio Tracker L1. It covers firmware flashing, power-saving features, and configuration for different MeshCore roles. You will also learn how to connect supported I2C sensors for low-power monitoring and IoT applications.
+This document introduces an on-device AI fall detection solution for fixed-room environments. It covers supported hardware, local detection, RTSP camera integration, and MQTT-based alert delivery. It also explains deployment, alarm handling, and measured performance across different edge platforms.
+
+</div>
+
+### [Edge Product Recognition: Build, Deploy, and Measured Results](https://wiki.seeedstudio.com/solutions/edge-product-recognition/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/shelf-states-c62596bb.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document introduces an edge AI product recognition solution for checkout and shelf monitoring. It covers supported hardware, SKU registration without retraining, local product detection and recognition, and MQTT-based integration. It also explains on-site deployment and measured performance across different edge platforms.
+
+</div>
+
+### [Use ZED X-Series GMSL Cameras with reComputer Robotics](https://wiki.seeedstudio.com/zed_x_gmsl_cameras_on_recomputer_robotics/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/zed-gmsl/zed-jp72.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide explains how to use **Stereolabs ZED X-series GMSL2 cameras** with Seeed Studio robotics hardware. Four platforms have been adapted for the ZED X camera family. The complete walkthrough is currently available for **reComputer Robotics J50 Mini**; the other device-specific walkthroughs will be added soon.
 
 </div>
 

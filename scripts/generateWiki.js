@@ -35,6 +35,10 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'Mesh_Network', 'T1000-E', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_t1000e.md'), //9.19
   path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L1', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l1.md'), //9.19
   path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L2', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l2.md'), //9.19
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Generative_AI', 'Jetson_LLM_Deployment_Guide.md'), //9.25
+  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'faq', 'sensecraft_robotics_common_issues.md'), //9.24
+  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'faq', 'sensecraft_robotics_data_collection_configuration_recommendation.md'), //9.24
+  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'sensecraft_robotics_overview.md'), //9.24
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
