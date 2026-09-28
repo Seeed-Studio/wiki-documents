@@ -810,7 +810,7 @@ De acuerdo con el método de conexión que se muestra en la figura siguiente, co
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c1.png"/>
-</div]
+</div>
 
 En nuestro caso, de acuerdo con el adaptador que utilizamos, hemos descargado e instalado el software que se puede encontrar [aquí](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program).
 
