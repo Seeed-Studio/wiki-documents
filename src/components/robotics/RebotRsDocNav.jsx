@@ -126,11 +126,11 @@ const ITEMS = [
 ];
 
 const ARIA_LABELS = {
-  en: 'reBot Arm B601-RS docs navigation',
-  cn: 'reBot Arm B601-RS 文档导航',
-  ja: 'reBot Arm B601-RS ドキュメントナビゲーション',
-  es: 'Navegación de documentación de reBot Arm B601-RS',
-  'pt-br': 'Navegação da documentação do reBot Arm B601-RS',
+  en: 'reBot-RS docs navigation',
+  cn: 'reBot-RS 文档导航',
+  ja: 'reBot-RS ドキュメントナビゲーション',
+  es: 'Navegación de documentación de reBot-RS',
+  'pt-br': 'Navegação da documentação do reBot-RS',
 };
 
 export default function RebotRsDocNav() {

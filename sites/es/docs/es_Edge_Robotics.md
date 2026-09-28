@@ -49,26 +49,26 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <details id="rebot-rs" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>Brazo Robótico reBot B601-RS</h3>
+    <h3>Brazo Robótico reBot-RS</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
       <h4>Inicio rápido y SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/es/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Inicio rápido de B601-RS</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>B601-RS con LeRobot</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>B601-RS con Pinocchio</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>SDK de motor B601-RS</b></div></a>
+        <a className="step-card" href="/es/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Inicio rápido de reBot-RS</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS con LeRobot</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS con Pinocchio</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>SDK de motor reBot-RS</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Aplicaciones</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/es/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>B601-RS con agarre visual</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>B601-RS con ROS2</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>B601-RS con Isaac Sim</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>B601-RS con Controlador Web</b></div></a>
-        <a className="step-card" href="/es/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>B601-RS con Agent Claw</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS con agarre visual</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS con ROS2</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS con Isaac Sim</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS con Controlador Web</b></div></a>
+        <a className="step-card" href="/es/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS con Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -80,9 +80,9 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     <div className="learning-group">
       <h4>Recursos de código abierto</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">Colección de hardware B601-RS</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">Paquete de descripción B601-RS (URDF / Mesh)</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">Gemelo digital B601-RS / simulador web</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">Colección de hardware reBot-RS</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">Paquete de descripción reBot-RS (URDF / Mesh)</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">Gemelo digital reBot-RS / simulador web</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">Repositorio principal reBot-DevArm</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">SDK de Python</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">Controlador ROS2</a>
@@ -99,24 +99,24 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <details id="rebot-dm" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>Brazo Robótico reBot B601-DM</h3>
+    <h3>Brazo Robótico reBot-DM</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
       <h4>Inicio rápido y SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/es/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Inicio rápido de B601-DM</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>B601-DM con LeRobot</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>B601-DM con Pinocchio</b></div></a>
+        <a className="step-card" href="/es/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Inicio rápido de reBot-DM</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM con LeRobot</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM con Pinocchio</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Aplicaciones</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/es/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>Agarre visual B601-DM</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>B601-DM con ROS2</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>B601-DM con Isaac Sim</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>B601-DM con controlador web</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>Agarre visual reBot-DM</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM con ROS2</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM con Isaac Sim</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM con controlador web</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -128,10 +128,10 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     <div className="learning-group">
       <h4>Recursos de código abierto</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">Colección de hardware B601-DM</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">Paquete de descripción B601-DM (URDF / Mesh)</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">Pruebas de rendimiento en máquina real B601-DM</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">Gemelo digital B601-DM / simulador web</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">Colección de hardware reBot-DM</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">Paquete de descripción reBot-DM (URDF / Mesh)</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">Pruebas de rendimiento en máquina real reBot-DM</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">Gemelo digital reBot-DM / simulador web</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">Repositorio principal reBot-DevArm</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">SDK de Python</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">Controlador ROS2</a>

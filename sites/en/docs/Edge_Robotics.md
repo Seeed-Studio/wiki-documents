@@ -50,26 +50,26 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="rebot-rs" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>reBot B601-RS Robotic Arm</h3>
+    <h3>reBot-RS Robotic Arm</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
       <h4>Quick Start &amp; SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>B601-RS Quick Start</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>B601-RS with LeRobot</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>B601-RS with Pinocchio</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>B601-RS Motor SDK</b></div></a>
+        <a className="step-card" href="/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>reBot-RS Quick Start</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS with LeRobot</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS with Pinocchio</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>reBot-RS Motor SDK</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Applications</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>B601-RS with Visual Grasping</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>B601-RS with ROS2</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>B601-RS with Isaac Sim</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>B601-RS with Web Controler</b></div></a>
-        <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>B601-RS with Agent Claw</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS with Visual Grasping</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS with ROS2</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS with Isaac Sim</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS with Web Controler</b></div></a>
+        <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS with Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -81,9 +81,9 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Open-Source Resources</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">B601-RS hardware collection</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">B601-RS description package (URDF / Mesh)</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">B601-RS digital twin / Web simulator</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">reBot-RS hardware collection</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">reBot-RS description package (URDF / Mesh)</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS digital twin / Web simulator</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm main repository</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 controller</a>
@@ -100,24 +100,24 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="rebot-dm" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>reBot B601-DM Robotic Arm</h3>
+    <h3>reBot-DM Robotic Arm</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
       <h4>Quick Start &amp; SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>B601-DM Quick Start</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>B601-DM with LeRobot</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>B601-DM with Pinocchio</b></div></a>
+        <a className="step-card" href="/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>reBot-DM Quick Start</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM with LeRobot</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM with Pinocchio</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Applications</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>B601-DM Visual Grasp</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>B601-DM with ROS2</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>B601-DM with Isaac Sim</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>B601-DM with Web Controler</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM Visual Grasp</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM with ROS2</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM with Isaac Sim</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM with Web Controler</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -129,10 +129,10 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Open-Source Resources</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">B601-DM hardware collection</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">B601-DM description package (URDF / Mesh)</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">B601-DM real-machine performance testing</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">B601-DM digital twin / Web simulator</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">reBot-DM hardware collection</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">reBot-DM description package (URDF / Mesh)</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">reBot-DM real-machine performance testing</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">reBot-DM digital twin / Web simulator</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm main repository</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 controller</a>
