@@ -67,7 +67,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>B601-RS with Visual Grasping</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>B601-RS with ROS2</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>B601-RS with Isaacsim</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>B601-RS with Isaac Sim</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>B601-RS with Web Controler</b></div></a>
         <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>B601-RS with Agent Claw</b></div></a>
       </div>

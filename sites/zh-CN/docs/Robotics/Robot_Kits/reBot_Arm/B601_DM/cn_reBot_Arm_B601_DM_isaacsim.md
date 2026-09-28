@@ -1,8 +1,8 @@
 ---
-description: 本教程展示了如何下载Isaacsim，并将reBot-B601-DM机器人部署在仿真环境中，进行开发和调试。
+description: 本教程展示了如何下载 Isaac Sim，并将reBot-B601-DM机器人部署在仿真环境中，进行开发和调试。
 title: B601-DM 跑Isaac Sim
 keywords:
-  - Isaacsim
+  - Isaac Sim
   - 机械臂
   - 机器人
   - 遥控操作
@@ -56,10 +56,10 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 - 存储：≥ 100GB SSD 可用空间（用于 Isaac Sim 安装、缓存及 USD 资产）
 
 :::info
-本wiki中是电脑连接机械臂，服务器端运行 isaacsim 仿真。服务器配备了 NVIDIA RTX 4090 GPU，运行 Ubuntu 22.04 LTS 操作系统。
+本wiki中是电脑连接机械臂，服务器端运行 Isaac Sim 仿真。服务器配备了 NVIDIA RTX 4090 GPU，运行 Ubuntu 22.04 LTS 操作系统。
 :::
 
-## 安装Isaacsim
+## 安装 Isaac Sim
 
 官方链接和资源：
 
@@ -161,12 +161,12 @@ reBot-Isaacsim/
 需要两个独立终端。**终端 1 是 Isaac Sim 接收端**，**终端 2 根据不同功能选择对应的发送端**。
 
 ### 终端 1 — 启动 Isaac Sim 接收端（所有模式共用）
-用 isaacsim 的 python 运行接收端代码
+用 Isaac Sim 的 Python 运行接收端代码
 
 :::tip
 根据自己的设备修改 DEFAULT_SIM_HOST 和 DEFAULT_REBOT_ARM_HOST的值。
 
-DEFAULT_SIM_HOST 是运行 isaacsim 仿真环境的主机ip。
+DEFAULT_SIM_HOST 是运行 Isaac Sim 仿真环境的主机 IP。
 
 DEFAULT_REBOT_ARM_HOST 是连接机械臂的主机ip。
 
@@ -201,7 +201,7 @@ sudo chmod 666 /dev/ttyACM*
 ```
 根据自己的设备修改 DEFAULT_SIM_HOST 的值。
 
-DEFAULT_SIM_HOST 是运行 isaacsim 仿真环境的主机ip。
+DEFAULT_SIM_HOST 是运行 Isaac Sim 仿真环境的主机 IP。
 
 如果两端都用的是本机,请将 DEFAULT_SIM_HOST 修改成 "127.0.0.1"
 :::
@@ -369,4 +369,3 @@ kill <PID>
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

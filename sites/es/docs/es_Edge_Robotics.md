@@ -111,7 +111,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
       <div className="learning-steps">
         <a className="step-card" href="/es/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>B601-RS con agarre visual</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>B601-RS con ROS2</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>B601-RS con Isaacsim</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>B601-RS con Isaac Sim</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>B601-RS con Controlador Web</b></div></a>
         <a className="step-card" href="/es/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>B601-RS con Agent Claw</b></div></a>
       </div>
