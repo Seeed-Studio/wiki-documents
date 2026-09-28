@@ -11,21 +11,21 @@ last_update:
   date: 09/03/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-03'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::tip
-Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L1 Pro 的，但同样适用于 L1 系列中的所有其他产品。
+Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L1 Pro 的，但它同样适用于 L1 系列中的所有其他产品。
 :::
 
 ## 视频教程
 
 ### 第 1 部分 开箱
 
-首次使用 L1、L1 Lite 或 L1 E-Ink 型号时，在连接 USB 电源后，将电源开关向上拨动即可开机。
+首次使用 L1、L1 Lite 或 L1 E-Ink 型号时，在连接 USB 电源后，将电源开关向上拨动以开机。
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -34,7 +34,7 @@ Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L
 ### 第 2 部分 固件烧录
 
 :::caution note
-请`不要使用 NRF-OTA`来更新固件，这可能会导致设备完全损坏。
+请 `don't use NRF-OTA` 来更新固件，否则可能导致设备完全损坏。
 :::
 
 <div class="video-container">
@@ -49,22 +49,22 @@ Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L
 
 #### 四向摇杆
 
-L1 E-Ink 固件的`最新 Alpha 固件`目前支持四向摇杆。如果你想使用摇杆，请[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)升级固件。
+L1 E-Ink 固件的 `latest Alpha firmware` 目前支持四向摇杆。如果你想使用摇杆，请[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)升级固件。
 
 #### 菜单栏
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
-只有 2.7 固件支持菜单栏。如果你想使用菜单栏，请按照[固件烧录教程](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)更新固件。
+只有 2.7 固件支持菜单栏。如果你想使用菜单栏，请按照 [Flash Firmware Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 来更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### 蜂鸣器
 
-如果你想打开或关闭蜂鸣器，请先将`固件更新`到`2.7`版本。因为只有 2.7 版本固件才有菜单栏。
+如果你想打开或关闭蜂鸣器，请先将 `update the firmware` 到 `2.7` 版本。因为只有 2.7 版本固件才有菜单栏。
 
 - 打开蜂鸣器
-Setting（齿轮形图标）-> Notification -> Buzzer Action -> Disable
+Setting（齿轮形状图标）-> Notification -> Buzzer Action -> Disable
 - 关闭蜂鸣器
-Setting（齿轮形图标）-> Notification -> Buzzer Action -> All enabled
+Setting（齿轮形状图标）-> Notification -> Buzzer Action -> All enabled
 
 <div class="table-center">
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -85,7 +85,7 @@ Setting（齿轮形图标）-> Notification -> Buzzer Action -> All enabled
 ## 开始使用
 
 :::danger note
-当设备处于以下状态时，请不要手动重启或关闭电源。否则设备可能会损坏。
+当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
 
 1. 尚未完成消息传输过程
 2. 正在配置中
@@ -94,7 +94,7 @@ Setting（齿轮形图标）-> Notification -> Buzzer Action -> All enabled
 ### 烧录固件
 
 :::caution note
-请`不要使用 NRF-OTA`来更新固件，这可能会导致设备完全损坏。
+请 `don't use NRF-OTA` 来更新固件，否则可能导致设备完全损坏。
 :::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
@@ -111,18 +111,18 @@ Setting（齿轮形图标）-> Notification -> Buzzer Action -> All enabled
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
-打开设备，点击 `Enter DFU Mode`，会出现一个名为 `Tracker L1` 的串口，点击并连接它，此时应会显示一个名为 `Tracker L1` 的驱动器。
+打开设备，点击 `Enter DFU Mode`，会出现一个名为 `Tracker L1` 的串口，点击并连接它，此时应显示一个名为 `Tracker L1` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
 将 UF2 文件拖入 DFU 驱动器。文件下载完成并且设备重启后，固件就会被烧录。
 
-### 启动设备
+### 打开设备电源
 
-连接 USB 线以激活设备。将电源开关向上拨动即可开机。
+连接 USB 线以激活设备。将电源开关向上拨动以开机。
 
 :::tip
-如果按下按键设备没有响应，请先为其充电。不要使用快充充电器。
+如果按下按键时设备没有响应，请先为其充电。不要使用快充充电器。
 :::
 
 ### 通过 App 连接
@@ -185,7 +185,7 @@ import TabItem from '@theme/TabItem';
 更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
 :::
 
 现在你已经在设备上设置了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
@@ -194,11 +194,11 @@ import TabItem from '@theme/TabItem';
 
 ### 通过网站连接
 
-如果你想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic 网站](https://client.meshtastic.org/messages/broadcast/0)。
+如果你想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
 
   步骤 1：打开网站
 
-[点击这里](https://client.meshtastic.org/messages/broadcast/0)进入网站。
+[点击这里](https://client.meshtastic.org/messages/broadcast/0) 进入网站。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   步骤 2：添加新设备
@@ -211,12 +211,12 @@ import TabItem from '@theme/TabItem';
 
  方法 1：通过蓝牙
 
-    选择蓝牙方式。在弹出的窗口中选择设备 ID。
+    选择蓝牙方式。在弹出窗口中选择设备 ID。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
  方法 2：通过串口
 
-    选择串口方式。打开设备管理器查看设备连接到哪个端口。在弹出的窗口中选择该端口。
+    选择串口方式。打开设备管理器查看设备连接到哪个端口。在弹出窗口中选择该端口。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     你的设备会显示在列表中。点击进行连接。如果连接成功，你可以直接在网页上看到设备状态。
@@ -237,7 +237,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/SensorConnection.jpg" alt="pir" width={700} height="auto" /></p>
 
-你可以通过 Grove 接口为设备添加传感器。以下传感器已验证与设备上的 Grove 接口兼容。
+你可以通过 Grove 接口将传感器添加到设备上。以下传感器已验证与设备上的 Grove 接口兼容。
 
 <table>
   <tr>
@@ -297,8 +297,8 @@ import TabItem from '@theme/TabItem';
 
 ### 屏幕连接
 
-- 电子墨水屏
-  [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
+- E-Ink 屏幕
+  [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的 E-Ink 屏幕。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -310,7 +310,7 @@ import TabItem from '@theme/TabItem';
 ### 虚拟键盘
 
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
-2.7 版本固件现在已经支持虚拟键盘！你可以在设备上直接输入消息，与其他设备进行通信。请按照 [Flash Firmware Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 更新固件。
+2.7 版本固件现在已经支持虚拟键盘！你可以直接在设备上输入消息，与其他设备进行通信。请按照 [Flash Firmware Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ### 配置铃声
@@ -338,7 +338,7 @@ import TabItem from '@theme/TabItem';
 ```
 </TabItem>
 
-<TabItem value="14" label="超级马里奥主题曲（短版）">
+<TabItem value="14" label="超级马里奥主题（短版）">
 
 ```plain
 24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
@@ -359,7 +359,7 @@ import TabItem from '@theme/TabItem';
 ```
 </TabItem>
 
-<TabItem value="17" label="马里奥强化">
+<TabItem value="17" label="马里奥能量提升">
 
 ```plain
 powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
@@ -386,7 +386,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 Bootloader 通过 USB 串口（Serial DFU）使用 `adafruit-nrfutil` 进行恢复。
 
 :::danger note
-在烧录过程中，请保持线缆连接稳定，并且**不要**断开连接——即使串口号发生变化也不要断开。
+在烧录过程中，请保持线缆连接稳定，并且 **不要** 断开连接——即使串口号发生变化也不要断开。
 :::
 
 **步骤 1：准备工作**
@@ -394,7 +394,7 @@ Bootloader 通过 USB 串口（Serial DFU）使用 `adafruit-nrfutil` 进行恢�
 - 一台 Wio Tracker L1 系列设备（L1 / L1 Pro）
 - 一根已知良好的 USB 数据线（不是仅充电线）
 - 一台安装了 Python 3 和 pip 的 Windows、macOS 或 Linux 电脑
-- Bootloader 压缩包：[Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) —— 不要解压 ZIP；`adafruit-nrfutil` 会直接使用该文件
+- Bootloader 压缩包：[Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — 不要解压 ZIP；`adafruit-nrfutil` 会直接使用该文件
 
 **步骤 2：安装 adafruit-nrfutil**
 
@@ -410,7 +410,7 @@ python -m pip --version
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/00_python_pip_check.png" alt="Check Python and pip on Windows" width={600} height="auto" /></p>
 
-然后进行安装并验证（本指南测试使用的版本为 `0.5.3.post16`）：
+然后安装并进行验证（本指南测试使用的版本为 `0.5.3.post16`）：
 
 ```
 python -m pip install --user adafruit-nrfutil
@@ -498,7 +498,7 @@ ls /dev/ttyACM*
 ls -l /dev/ttyACM0
 ```
 
-在 Ubuntu/Debian 上，串口通常属于 `dialout` 用户组。如果你收到 `Permission denied` 且端口属于 `dialout`，请将你的用户添加到该用户组：
+在 Ubuntu/Debian 上，串口通常属于 `dialout` 用户组。如果你遇到 `Permission denied`，并且端口属于 `dialout`，请将你的用户添加到该用户组：
 
 ```bash
 sudo usermod -aG dialout "$USER"
@@ -591,26 +591,26 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 当输出以 `Device programmed.` 结尾时，说明烧录成功：
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="以 Device programmed 结尾的 adafruit-nrfutil 输出" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="adafruit-nrfutil 输出以 Device programmed 结尾" width={600} height="auto" /></p>
 
-之后，你的电脑上会出现一个 UF2 驱动器（截图来自测试用的 Windows 电脑）。它的卷标会随 Bootloader 构建版本而变化——测试设备显示为 `XIAO-BOOT`——并不是通过/失败的判定标准；不要根据驱动器名称或 `INFO_UF2.TXT` 来判断结果：
+之后，你的电脑上会出现一个 UF2 磁盘（截图来自测试用的 Windows 电脑）。它的卷标会随 Bootloader 构建版本而变化——测试设备显示为 `XIAO-BOOT`——这并不是通过/失败的判定标准；不要根据磁盘名称或 `INFO_UF2.TXT` 来判断结果：
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/05_uf2_drive.png" alt="Bootloader 烧录后出现的 UF2 驱动器" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/05_uf2_drive.png" alt="Bootloader 烧录后出现的 UF2 磁盘" width={600} height="auto" /></p>
 
 **步骤 7：重新安装应用固件**
 
 :::warning
-恢复 Bootloader 并不会重新安装应用固件——在你再次烧录应用固件之前，设备仍然没有可正常工作的固件。
+恢复 Bootloader 并不会重新安装应用固件——在你再次烧录应用固件之前，设备仍然没有可正常运行的固件。
 :::
 
 完成上述步骤后，按照 [Flash Firmware](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 指南来烧录应用固件。
 
 **故障排查**
 
-- 安装后无法识别 `adafruit-nrfutil`：将 Python 用户脚本目录添加到 PATH 中（Windows 为 `Scripts`，macOS 为用户主目录下的 `bin`）；在 Linux 上，执行 `pipx ensurepath` 后重新打开终端。
-- 端口忙 / 访问被拒绝：关闭串口监视器、网页烧录标签页、Arduino IDE 或任何占用该端口的程序。在 Linux 上，还需按步骤 3 中的说明检查串口权限和用户组。
+- 安装后无法识别 `adafruit-nrfutil`：将 Python 用户脚本目录添加到 PATH 中（Windows 为 `Scripts`，macOS 为用户主目录下的 `bin`）；在 Linux 上，请在执行 `pipx ensurepath` 后重新打开终端。
+- 端口忙 / 访问被拒绝：关闭串口监视器、网页烧录标签页、Arduino IDE 或其他占用端口的程序。在 Linux 上，还需按步骤 3 中的说明检查串口权限和用户组。
 - 在 `Touched serial port ...` 之后出现 `FileNotFoundError: could not open port ...`：检查是否出现了新的 DFU 端口，并按照步骤 5 操作。如果没有出现 DFU 端口，请尝试下面的手动 DFU 恢复。
-- 无法进入 DFU 模式：参见 [Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)。
+- 无法进入 DFU 模式：请参阅 [Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)。
 
 **手动 DFU 恢复**
 
@@ -618,7 +618,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 ### 无法进入 DFU & 手动进入 DFU 模式
 
-将设备连接到电脑并双击 `Reset` 按钮——黄色 LED 将保持常亮，并且电脑上会出现一个 DFU 串口。
+将设备连接到电脑并双击 `Reset` 按钮——黄色 LED 将保持常亮，你的电脑上会出现一个 DFU 串口。
 
 要在此模式下烧录 Bootloader，请按照 [Device Bricked & Bootloader Recovery](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#device-bricked--bootloader-installation) 操作，但跳过 `--touch 1200`——设备已经处于 DFU 模式。
 
@@ -628,9 +628,9 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 ### 无法在主信道上通信
 
-如果设备无法与附近节点通信或发送消息，首先检查 LoRa 区域和调制解调器预设是否与周围节点一致。你还应检查默认 **PSK** 是否被更改。主信道上的 PSK 不同会导致设备无法与该信道上的其他节点通信。
+如果设备无法与附近节点通信或发送消息，首先检查 LoRa 区域和调制解调器预设是否与周围节点一致。你还应检查默认 **PSK** 是否被更改。主信道上的 PSK 不一致会导致设备无法与该信道上的其他节点通信。
 
-最简单的排查方式是通过手机 App。打开 App，连接到目标设备，然后进入 `Settings` -> `Channels`。选择主信道并检查 **PSK** 值。如果与周围节点不同，将其更新为相同的 PSK 并保存信道设置。
+最简单的排查方式是通过手机 App。打开 App，连接到目标设备，然后进入 `Settings` -> `Channels`。选择主信道并检查 **PSK** 值。如果与周围节点不同，请将其更新为相同的 PSK，并保存信道设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -648,7 +648,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 **解决方案**
 
-如果你不确定修改了哪些设置，请按照 [Factory Reset](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#factory-reset) 指南将设备恢复到默认设置。如果只更改了 PSK，请将其改回 `AQ==`。
+如果你不确定修改了哪些设置，请按照 [Factory Reset](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#factory-reset) 指南将设备恢复为默认设置。如果只更改了 PSK，请将其改回 `AQ==`。
 
 ### 设备自动关机
 
@@ -657,17 +657,17 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 - 设备开机后，过一段时间会自动关机或重启。
 - 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中......
+ 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中……
 
 #### 故障排查
 
-[click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
+[click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 Flash 擦除，然后重新烧录最新固件。
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方式进行恢复出厂设置。
+如果你想恢复为默认设置，可以进行出厂重置。你可以通过两种方式进行出厂重置。
 
-- [click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
+- [click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 Flash 擦除，然后重新烧录最新固件。
 
 - 在 App 中点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
@@ -676,9 +676,9 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 #### NodeDB 重置
 
-NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中保存了该节点的过期信息，你需要更新它。
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中保存了该节点的过时信息，你需要对其进行更新。
 
-打开 App 并连接到目标设备。进入 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
+打开 App 并连接到目标设备。依次进入 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/sending_failed123.png" alt="App 中的设备设置和 Reset NodeDB 按钮" width={600} height="auto" /></p>
 
@@ -690,7 +690,7 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 #### 重新生成私钥
 
-两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信发送中持续失败，请尝试为它重新生成私钥。
+每个节点都拥有一对公钥/私钥。要交换加密的私信，发送方会使用接收方的公钥对消息进行加密，只有该接收方的私钥才能解密。因此，一旦两个节点互相知道对方的公钥，就可以进行私密通信。如果某个节点在私信发送中持续失败，请尝试重新生成它的私钥。重新生成后，从其他设备的节点列表中删除该节点，以便它们重新连接并获取该节点的新公钥。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
