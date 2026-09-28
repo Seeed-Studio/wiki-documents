@@ -28,7 +28,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 # AI Robotics Wiki
 
 <div className="robotics-page">
-  <RoboticsQuote />
+  <RoboticsQuote locale="cn" />
 
   <section className="hero-panel">
     <div>

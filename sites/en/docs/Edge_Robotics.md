@@ -23,12 +23,12 @@ import '/src/css/robotics-page-style.css';
 import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 import RotatingProductShowcase from '@site/src/components/robotics/RotatingProductShowcase';
+import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 # AI Robotics Wiki
 
-> *"The science of today is the technology of tomorrow." - Edward Teller*
-
 <div className="robotics-page">
+  <RoboticsQuote locale="en" />
 
   <section className="hero-panel">
     <div>
