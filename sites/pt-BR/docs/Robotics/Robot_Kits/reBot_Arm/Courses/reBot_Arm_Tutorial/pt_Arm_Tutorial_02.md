@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 2 do Curso para Iniciantes em IA Física da Seeed — conheça o projeto open-source reBot Arm, a diferença entre as versões DM e RS e seu hardware e software de código aberto."
+description: Capítulo 2 do Curso para Iniciantes em IA Física da Seeed — conheça o projeto open-source reBot Arm, a diferença entre as versões DM e RS e seu hardware e software open-source.
 title: Capítulo 2 - Hardware e o Projeto Open-Source
 keywords:
   - reBot
@@ -17,12 +17,11 @@ last_update:
   date: 2026-09-17
   author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_2/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -35,30 +34,21 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <p>
       Capítulo 2 do Curso para Iniciantes em IA Física da Seeed — conheça o reBot Arm,
       o projeto open-source, a diferença entre as versões DM e RS e seu hardware e software
-      de código aberto.
+      open-source.
     </p>
     <div className="hero-actions">
       <a href="#what-is-rebot-arm">O que é o reBot Arm</a>
       <a href="#open-source">Open source</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>Neste capítulo</strong>
-    <span>2.1 O que é o reBot Arm</span>
-    <span>2.2 Por que projetar duas versões: DM e RS</span>
-    <span>2.3 Comparação de parâmetros entre reBot Arm DM e reBot Arm RS</span>
-    <span>2.4 Hardware Open-Source e Software Open-Source</span>
-  </div>
 </section>
 
-<RebotCourseNav />
-
-## 2.1 O que é o reBot Arm
+## 2.1 O Que é o reBot Arm
 
 <section id="what-is-rebot-arm" className="section-card">
   <div className="section-title">
     <span>Visão geral</span>
-    <h2>2.1 O que é o reBot Arm</h2>
+    <h2>2.1 O Que é o reBot Arm</h2>
   </div>
 
 <div className="image-frame">
@@ -84,12 +74,12 @@ Seu principal objetivo é permitir que os usuários aprendam e validem algoritmo
 
 </section>
 
-## 2.2 Por que projetar duas versões: DM e RS
+## 2.2 Por Que Projetar Duas Versões: DM e RS
 
 <section id="two-versions" className="section-card">
   <div className="section-title">
     <span>Versões de hardware</span>
-    <h2>2.2 Por que projetar duas versões: DM e RS</h2>
+    <h2>2.2 Por Que Projetar Duas Versões: DM e RS</h2>
   </div>
 
 O reBot Arm B601 oferece duas versões:
@@ -105,12 +95,12 @@ Ambas as versões usam uma estrutura mecânica semelhante e um sistema de softwa
 
 </section>
 
-## 2.3 Comparação de parâmetros entre reBot Arm DM e reBot Arm RS
+## 2.3 Comparação de Parâmetros Entre reBot Arm DM e reBot Arm RS
 
 <section id="parameter-comparison" className="section-card">
   <div className="section-title">
     <span>Comparação</span>
-    <h2>2.3 Comparação de parâmetros entre reBot Arm DM e reBot Arm RS</h2>
+    <h2>2.3 Comparação de Parâmetros Entre reBot Arm DM e reBot Arm RS</h2>
   </div>
 
 | Produto                | reBot Arm DM                                                                     | reBot Arm RS                                                                     |
@@ -122,8 +112,8 @@ Ambas as versões usam uma estrutura mecânica semelhante e um sistema de softwa
 | **Maximum Payload**    | **2.5 kg**                                                                       | **5 kg**                                                                         |
 | **Repeatability**      | **0.2 mm**                                                                       | **0.1 mm**                                                                       |
 | **Reach**              | 767 mm                                                                           | 754.7 mm                                                                         |
-| **Communication**      | Barramento CAN via adaptador USB-CAN                                            | Barramento CAN via adaptador USB-CAN                                            |
-| **Power Supply**       | 24V DC, 15A                                                                      | 48V DC, 12.5A                                                                    |
+| **Communication**      | Barramento CAN via Adaptador USB-CAN                                            | Barramento CAN via Adaptador USB-CAN                                            |
+| **Power Supply**       | 24V CC, 15A                                                                      | 48V CC, 12.5A                                                                    |
 | **Actuator Type**      | [Damiao DM Planetary Gear Joint Actuators](https://www.seeedstudio.com/DM4340P-Actuator-p-6663.html)    | [RoboStride Quasi-Direct-Drive Joint Actuators](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  |
 
 
@@ -139,7 +129,7 @@ Ambas as versões usam uma estrutura mecânica semelhante e um sistema de softwa
 
 Tanto o hardware quanto os materiais de software do reBot Arm são abertos ao público.
 
-Repositório no GitHub: <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">https://github.com/Seeed-Projects/reBot-DevArm/</a>
+Repositório GitHub: <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">https://github.com/Seeed-Projects/reBot-DevArm/</a>
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-2/ch2-03.png" alt="Open-source hardware and software" />
