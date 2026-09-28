@@ -70,7 +70,7 @@ function useDocTOC() {
 
 export default function DocItemLayout({ children }: Props): JSX.Element {
   const docTOC = useDocTOC();
-  const { frontMatter } = useDoc();
+  const { frontMatter, metadata } = useDoc();
 
   // 使用类型断言解决 TypeScript 错误
   const {
@@ -81,6 +81,9 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
 
   const location = useLocation();
   const normalizedPath = location.pathname.replace(/\/+$/, '');
+  const isRoboticsDoc = Boolean(
+    (metadata as { source?: string }).source?.startsWith('@site/docs/Robotics/'),
+  );
   const isRoboticsLandingPage =
     normalizedPath === '/robotics_page' ||
     normalizedPath === '/cn/robotics_page';
@@ -118,7 +121,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
       >
         <DocVersionBanner />
         <div className={styles.docItemContainer}>
-          <article>
+          <article className={clsx(isRoboticsDoc && 'robotics-doc')}>
             <DocBreadcrumbs />
             <DocVersionBadge />
 

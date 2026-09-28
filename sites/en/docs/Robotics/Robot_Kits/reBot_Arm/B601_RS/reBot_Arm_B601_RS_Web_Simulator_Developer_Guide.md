@@ -35,7 +35,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <RebotRsDocNav />
 
 <p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
 
 <div className="rebot-buy-button-group">

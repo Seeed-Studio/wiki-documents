@@ -22,16 +22,16 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 import '/src/css/robotics-page-style.css';
 import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import RotatingProductShowcase from '@site/src/components/robotics/RotatingProductShowcase';
+import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 # AI Robotics Wiki
 
-> *"今天的科学就是明天的技术。" - Edward Teller*
-
 <div className="robotics-page">
+  <RoboticsQuote />
 
   <section className="hero-panel">
     <div>
-      <span className="eyebrow">Seeed Studio Robotics Wiki</span>
       <h2>不知道从哪篇文档开始？先选择你手上的机器人套件</h2>
     </div>
   </section>
@@ -45,7 +45,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   </div>
 
   <section id="robot-kits" className="section-block">
-    <div className="product-stack">
+    <RotatingProductShowcase locale="cn">
 
 <details id="rebot-rs" className="product-card rebot product-card--cover">
   <summary className="product-head">
@@ -55,7 +55,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     <div className="learning-group">
       <h4>快速上手与 SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/cn/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>快速开始</b></div></a>
+        <a className="step-card" href="/cn/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>B601-RS 快速入门</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>B601-RS 与 LeRobot</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>B601-RS 与 Pinocchio</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>B601-RS 电机 SDK</b></div></a>
@@ -99,7 +99,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     <div className="learning-group">
       <h4>快速上手与 SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/cn/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>快速开始</b></div></a>
+        <a className="step-card" href="/cn/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>B601-DM 快速入门</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>B601-DM 与 LeRobot</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>B601-DM 与 Pinocchio</b></div></a>
       </div>
@@ -235,7 +235,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 </details>
 
 
-    </div>
+    </RotatingProductShowcase>
   </section>
 
   <section id="actuators" className="section-block compact-section">

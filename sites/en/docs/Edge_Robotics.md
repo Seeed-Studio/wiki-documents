@@ -22,6 +22,7 @@ url: https://wiki.seeedstudio.com/robotics_page/
 import '/src/css/robotics-page-style.css';
 import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import RotatingProductShowcase from '@site/src/components/robotics/RotatingProductShowcase';
 
 # AI Robotics Wiki
 
@@ -45,7 +46,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   </div>
 
   <section id="robot-kits" className="section-block">
-    <div className="product-stack">
+    <RotatingProductShowcase locale="en">
 
 <details id="rebot-rs" className="product-card rebot product-card--cover">
   <summary className="product-head">
@@ -247,7 +248,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 </details>
 
 
-    </div>
+    </RotatingProductShowcase>
   </section>
 
   <section id="actuators" className="section-block compact-section">

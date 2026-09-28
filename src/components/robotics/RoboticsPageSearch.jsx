@@ -46,6 +46,54 @@ function normalize(value) {
   return value.toLocaleLowerCase().replace(/\s+/g, ' ').trim();
 }
 
+function scoreSearchResult(item, query) {
+  const title = item.title;
+  const description = item.description;
+  const href = item.href;
+  let score = 0;
+
+  if (title === query) score += 120;
+  else if (title.startsWith(query)) score += 90;
+  else if (title.includes(query)) score += 70;
+
+  if (description.includes(query)) score += 25;
+  if (href.includes(query)) score += 20;
+  if (/(getting_started|get_started|quick_start|inicio_rapido)/i.test(href)) score += 45;
+
+  return score;
+}
+
+function SearchMiniRobots() {
+  return (
+    <div className="robotics-search-play" aria-hidden="true">
+      <span className="robotics-search-mini-float robotics-search-mini-float--rs">
+        <img
+          className="robotics-search-mini robotics-search-mini--rs"
+          src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+          alt=""
+          width={5507}
+          height={4035}
+          loading="eager"
+          decoding="async"
+          draggable={false}
+        />
+      </span>
+      <span className="robotics-search-mini-float robotics-search-mini-float--reachy">
+        <img
+          className="robotics-search-mini robotics-search-mini--reachy"
+          src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp"
+          alt=""
+          width={1375}
+          height={1031}
+          loading="eager"
+          decoding="async"
+          draggable={false}
+        />
+      </span>
+    </div>
+  );
+}
+
 export default function RoboticsPageSearch() {
   const location = useLocation();
   const locale = getLocaleFromPath(location.pathname);
@@ -79,10 +127,13 @@ export default function RoboticsPageSearch() {
 
       const description =
         link.querySelector('small')?.textContent?.trim() ||
+        link.closest('details')?.querySelector('.product-head h3')?.textContent?.trim() ||
         link.closest('.section-block')?.querySelector('.section-title-row h2')?.textContent?.trim() ||
         '';
 
-      return [{href, title, description, searchable: normalize(`${title} ${description}`)}];
+      const searchable = normalize(`${title} ${description} ${href}`);
+
+      return [{href, title, description, searchable}];
     });
 
     setItems(nextItems);
@@ -104,12 +155,28 @@ export default function RoboticsPageSearch() {
   const results = useMemo(() => {
     const normalizedQuery = normalize(query);
     if (!normalizedQuery) return [];
-    return items.filter((item) => item.searchable.includes(normalizedQuery)).slice(0, 12);
+    return items
+      .filter((item) => item.searchable.includes(normalizedQuery))
+      .map((item, index) => ({
+        item,
+        index,
+        score: scoreSearchResult(item, normalizedQuery),
+      }))
+      .sort((a, b) => b.score - a.score || a.index - b.index)
+      .map((result) => result.item)
+      .slice(0, 12);
   }, [items, query]);
 
   useEffect(() => {
     setActiveIndex(results.length ? 0 : -1);
   }, [query, results.length]);
+
+  useEffect(() => {
+    if (activeIndex < 0) return;
+    document
+      .getElementById(`robotics-search-result-${activeIndex}`)
+      ?.scrollIntoView({block: 'nearest'});
+  }, [activeIndex, results.length]);
 
   const openResult = (result) => {
     if (result.href.startsWith('#')) {
@@ -144,7 +211,8 @@ export default function RoboticsPageSearch() {
   const listboxId = 'robotics-page-search-results';
 
   return (
-    <div className="robotics-search" ref={rootRef}>
+    <div className={`robotics-search${query ? ' is-open' : ''}`} ref={rootRef}>
+      <SearchMiniRobots />
       <div className="robotics-search-shell">
         <span className="robotics-search-glow" aria-hidden="true" />
         <span className="robotics-search-icon" aria-hidden="true">
