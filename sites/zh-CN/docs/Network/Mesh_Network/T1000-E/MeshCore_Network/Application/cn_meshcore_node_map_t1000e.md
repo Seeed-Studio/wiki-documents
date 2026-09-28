@@ -14,7 +14,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: 2026-04-3
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/cn/meshcore_node_map_t1000e/
 ---
 import Tabs from '@theme/Tabs';
@@ -30,7 +30,7 @@ MeshCore 节点地图依赖节点定期向网络上报其地理位置。它特�
 
 - **发现附近的中继器**：识别可用中继器以扩展连接范围
 - **监控自己的网络**：跟踪节点状态和位置
-- **调试和优化**：优化中继器和网关的放置位置
+- **调试与优化**：优化中继器和网关的放置位置
 
 
 ## MeshCore 官方地图教程
@@ -39,7 +39,7 @@ MeshCore 节点地图依赖节点定期向网络上报其地理位置。它特�
 
 ### Companion 配置
 
-要让 companion 节点出现在 MeshCore 节点地图上，设备必须正确配置以上报其位置。按如下步骤配置：
+要让 companion 节点出现在 MeshCore 节点地图上，设备必须正确配置以上报其位置。按如下方式配置：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreMap.png" style={{width:1000, height:'auto'}}/></div>
 
