@@ -25,7 +25,7 @@ Connect your device with a USB cable to the computer.
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
+Go to the [MeshCore Web Flasher](https://meshcore.io/flasher). 
 
 Choose `Seeed Studio SenseCAP T1000-E` in the `Community Firmware` group.
 
@@ -67,9 +67,9 @@ Connect your device with a USB cable to the computer.
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
+Go to the [MeshCore Web Flasher](https://meshcore.io/flasher). 
 
-Choose `Seeed Studio Wio Tracker T1000-E` in the `Community Firmware` group.
+Choose `Seeed Studio SenseCAP T1000-E` in the `Community Firmware` group.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
@@ -127,17 +127,17 @@ Drag the downloaded UF2 file to the pop-out disk.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-The disk will disappear after the firmware is successfully flashed. At this point there is no firmware in the device, so the device will automatically reboot.
+The disk will disappear after the firmware is successfully flashed. The device will automatically reboot.
 
 ## Configuration
 
 ### Power on the device
 
-Press the button to turn it on. The LED will be on and there is a descending melody melody.
+Press the button to turn it on. The LED will be on and there is a descending melody.
 
 ### Power off the device
 
-Press the button for 3s to turn it off. The LED will be off and there is a dec melody.
+Press the button for 3s to turn it off. The LED will be off and there is a descending melody.
 
 :::tip
 If the device doesn't respond when you press the button, please charge it first. Do not use the fast-charging charger.
@@ -145,7 +145,7 @@ If the device doesn't respond when you press the button, please charge it first.
 
 ### Get APP
 
-Download from the Google Store or Apple Store. Or [click here](https://meshcore.io/#download) to get the Meshcore APP.
+Download from the Google Store or Apple Store. Or [click here](https://meshcore.io/#download) to get the MeshCore APP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 

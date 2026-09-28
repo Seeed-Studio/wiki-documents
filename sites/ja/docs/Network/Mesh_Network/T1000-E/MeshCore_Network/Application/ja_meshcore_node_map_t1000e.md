@@ -14,7 +14,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: 2026-04-3
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/ja/meshcore_node_map_t1000e/
 ---
 import Tabs from '@theme/Tabs';
@@ -26,9 +26,9 @@ Node Map は、ノードの位置をプロットすることで [MeshCore](https
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreMAPFirst.png" style={{width:900, height:'auto'}}/></div>
 
-MeshCore Node Map は、ノードが定期的に地理的位置をネットワークに報告することに依存しています。特に次の用途に有用です：
+MeshCore Node Map は、ノードが定期的に自分の地理的位置をネットワークに報告することに依存しています。特に次の用途に有用です：
 
-- **近くのリピーターの発見**：利用可能なリピーターを特定して接続性を拡張する
+- **近くのリピーターの発見**：利用可能なリピーターを特定して接続範囲を拡張する
 - **自分のネットワークの監視**：ノードのステータスと位置を追跡する
 - **デバッグと最適化**：リピーターやゲートウェイの配置を最適化する
 
@@ -65,9 +65,9 @@ GPS を有効にして位置情報を取得します（一部のリピーター�
 
 ## （上級者向け）独自の Node Map フロントエンドを構築する
 
-上級ユーザー向けに、カスタム Node Map フロントエンドを構築することも可能です。次のワークフローを使用することを推奨します： 
+上級ユーザー向けに、カスタムの Node Map フロントエンドを構築することも可能です。次のワークフローを使用することを推奨します： 
 
-[Normal MeshCore Node] → [Mesh Nodes set with MQTT] → [Backend API / Database] → [Frontend Map UI]
+[通常の MeshCore ノード] → [MQTT を設定した Mesh ノード] → [バックエンド API / データベース] → [フロントエンドのマップ UI]
 
 ## 技術サポート & 製品ディスカッション
 

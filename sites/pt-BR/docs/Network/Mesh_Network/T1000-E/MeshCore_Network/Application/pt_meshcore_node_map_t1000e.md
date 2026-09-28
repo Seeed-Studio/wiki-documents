@@ -14,7 +14,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: 2026-04-3
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/pt-br/meshcore_node_map_t1000e/
 ---
 import Tabs from '@theme/Tabs';
@@ -39,19 +39,19 @@ O Mapa de Nós MeshCore mais popular é o `MeshCore Node Map` oficial. [Clique a
 
 ### Configuração do Companion
 
-Para que um nó companion apareça no Mapa de Nós MeshCore, o dispositivo deve ser configurado corretamente para relatar sua localização. Configure da seguinte forma:
+Para que um nó companion apareça no Mapa de Nós MeshCore, o dispositivo deve estar devidamente configurado para relatar sua localização. Configure da seguinte forma:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreMap.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Configuração de Repeater ou Room Server
 
-Para que um repeater ou room server apareça no Mapa de Nós MeshCore, o dispositivo deve ser configurado corretamente para relatar sua localização. 
+Para que um repeater ou room server apareça no Mapa de Nós MeshCore, o dispositivo deve estar devidamente configurado para relatar sua localização. 
 
 Primeiro faça login no repeater. A senha de administrador padrão de um repeater é `password`. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AAdmin.png" alt="pir" width={900} height="auto" /></p>
 
-Ative o GPS e obtenha a localização (alguns firmwares de repeater não suportam a atualização da localização em tempo real, você pode precisar escolher manualmente sua localização).
+Ative o GPS e obtenha a localização (alguns firmwares de repeater não suportam a atualização da localização em tempo real, você pode precisar escolher sua localização manualmente).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreGPSSnciny.png" alt="pir" width={900} height="auto" /></p>
 

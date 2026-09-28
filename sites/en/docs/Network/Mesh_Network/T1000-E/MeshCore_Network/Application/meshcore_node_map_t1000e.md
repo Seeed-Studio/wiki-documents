@@ -35,11 +35,11 @@ MeshCore Node Map relies on nodes periodically reporting their geographic positi
 
 ## Tutorial on MeshCore Official Map
 
-The most popular MeshCore Node Map is the officual `MeshCore Node Map`. [Click here](https://map.meshcore.io/) to enter the website.
+The most popular MeshCore Node Map is the official `MeshCore Node Map`. [Click here](https://map.meshcore.io/) to enter the website.
 
 ### Companion Configuration
 
-To let a companion node appear on the MeshCore Node Map, a device must be properly configured to report its location. Configure as followed:
+To let a companion node appear on the MeshCore Node Map, a device must be properly configured to report its location. Configure as follows:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreMap.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -51,21 +51,21 @@ First log in to the repeater. The default admin password to a repeater is `passw
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AAdmin.png" alt="pir" width={900} height="auto" /></p>
 
-Enable the GPS and get the location (some repeater firmware do not support updating the real-time location, you may need to manually choose your location).
+Enable the GPS and get the location (some repeater firmware does not support updating the real-time location, you may need to manually choose your location).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreGPSSnciny.png" alt="pir" width={900} height="auto" /></p>
 
 ### Search for your node
 
-After the configuration, wait for a few mins, then you can see your nodes on the map.
+After the configuration, wait for a few minutes, then you can see your nodes on the map.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg" style={{width:1000, height:'auto'}}/></div>
 
-You can see device name, role and configuration information. So by using this map, you can easily figure out where are those alive nodes.
+You can see device name, role and configuration information. So by using this map, you can easily figure out where those alive nodes are.
 
 ## (Advanced) Building Your Own Node Map Frontend
 
-For advanced users, it is possible to build a custom Node Map frontend. It is recommended to use the following workfolow: 
+For advanced users, it is possible to build a custom Node Map frontend. It is recommended to use the following workflow: 
 
 [Normal MeshCore Node] → [Mesh Nodes set with MQTT] → [Backend API / Database] → [Frontend Map UI]
 

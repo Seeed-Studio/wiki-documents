@@ -11,7 +11,7 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/
 ---
 
@@ -25,7 +25,7 @@ Conecta tu dispositivo al ordenador con un cable USB.
 Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo puede dañarse.
 :::
 
-Ve a [Meshcore Web Flasher](https://meshcore.io/flasher). 
+Ve a [MeshCore Web Flasher](https://meshcore.io/flasher). 
 
 Elige `Seeed Studio SenseCAP T1000-E` en el grupo `Community Firmware`.
 
@@ -67,9 +67,9 @@ Conecta tu dispositivo al ordenador con un cable USB.
 Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo puede dañarse.
 :::
 
-Ve a [Meshcore Web Flasher](https://meshcore.io/flasher). 
+Ve a [MeshCore Web Flasher](https://meshcore.io/flasher). 
 
-Elige `Seeed Studio Wio Tracker T1000-E` en el grupo `Community Firmware`.
+Elige `Seeed Studio SenseCAP T1000-E` en el grupo `Community Firmware`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
@@ -83,7 +83,7 @@ Descarga el archivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-Entra en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta el cable de carga **rápidamente** dos veces, el LED verde se quedará encendido fijo.
+Entra en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces, el LED verde se quedará encendido fijo.
 
 :::warning
 Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
@@ -95,7 +95,7 @@ Verás que aparece un disco llamado `T1000-E` después de 10~15 s.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/T1000-EDriver.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que ha aparecido.
+Arrastra el archivo UF2 descargado al disco que aparece.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/EraseDrag.png" alt="pir" width={800} height="auto" /></p>
 
@@ -111,7 +111,7 @@ Descarga el archivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareUF2.png" alt="pir" width={800} height="auto" /></p>
 
-Intenta entrar en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta el cable de carga **rápidamente** dos veces, el LED verde se quedará encendido fijo.
+Intenta entrar en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces, el LED verde se quedará encendido fijo.
 
 :::warning
 Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
@@ -123,11 +123,11 @@ Verás que aparece un disco llamado `T1000-E` después de 10~15 s.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/T1000-EDriver.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que ha aparecido.
+Arrastra el archivo UF2 descargado al disco que aparece.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto ya hay firmware en el dispositivo, por lo que el dispositivo se reiniciará automáticamente.
+El disco desaparecerá después de que el firmware se haya flasheado correctamente. El dispositivo se reiniciará automáticamente.
 
 ## Configuración
 
@@ -145,7 +145,7 @@ Si el dispositivo no responde cuando pulsas el botón, por favor cárgalo primer
 
 ### Obtener la APP
 
-Descárgala desde Google Store o Apple Store. O [haz clic aquí](https://meshcore.io/#download) para obtener la APP Meshcore.
+Descárgala desde Google Store o Apple Store. O [haz clic aquí](https://meshcore.io/#download) para obtener la APP MeshCore.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
@@ -164,7 +164,7 @@ Si la conexión falla, abre la lista de Bluetooth de tu teléfono y `forget` o `
 
 ### Conectar mediante la interfaz web（BLE）
 
-1. Abre la [MeshCore Web App](https://app.meshcore.nz/) y haz clic en el icono **Settings**.
+1. Abre [MeshCore Web App](https://app.meshcore.nz/) y haz clic en el icono **Settings**.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue1.png" alt="pir" width={600} height="auto" /></p>
 
 2. Selecciona la pestaña **BLE** y luego haz clic en **Scan Now**.
@@ -185,12 +185,12 @@ Si la conexión falla, abre la lista de Bluetooth de tu teléfono y `forget` o `
 
 ### Configurar LoRa
 
-Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencia utiliza tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
 
-Luego reinicia el dispositivo, de lo contrario la configuración no tendrá efecto.
+Luego reinicia el dispositivo, de lo contrario la configuración no surtirá efecto.
 
 **Lista de regiones**
 
@@ -202,7 +202,7 @@ Luego reinicia el dispositivo, de lo contrario la configuración no tendrá efec
 
 Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [parámetro LoRa](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general) para adaptarlo a tus necesidades.
 
-### Configurar el GPS
+### Configurar GPS
 
 Si quieres usar GPS, por favor actívalo. 
 
@@ -215,7 +215,7 @@ Puedes ir a `Position Settings` en la APP para activar el GPS.
 |Acción del botón|Descripción|
 |--|--|
 |Pulsar durante 3 s|Encender/apagar|
-|Doble clic|anunciar difusión|
+|Doble clic|Difundir anuncio|
 |Triple clic|Interruptor del zumbador|
 |Cuádruple clic|Interruptor del GPS|
 
@@ -227,10 +227,10 @@ Si tienes dos dispositivos compatibles y no hay muchos usuarios de MeshCore cerc
 
 ### Anuncio
 
-MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, difunde esos datos por LoRa. MeshCore llama a eso un Anuncio. Hay dos formas de anunciar, "salto cero" y "inundación".
+MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, se difunden esos datos por LoRa. MeshCore llama a esto un Anuncio. Hay dos formas de anunciar, "zero hop" y "flood".
 
-- **Salto cero** significa que tu anuncio se difunde a cualquiera que pueda oírlo, y eso es todo.
-- **Inundado** significa que se difunde y luego se repite por todos los repetidores que lo oyen.
+- **Zero hop** significa que tu anuncio se difunde a cualquiera que pueda oírlo, y eso es todo.
+- **Flooded** significa que se difunde y luego se repite por todos los repetidores que lo oyen.
 
 Puedes enviar anuncios en la APP. También puedes enviar anuncios directamente en la página de anuncios del dispositivo.
 
@@ -252,7 +252,7 @@ import TabItem from '@theme/TabItem';
 
 ### Cómo reiniciar el dispositivo
 
- Presiona y mantén pulsado el botón y luego conecta el cable de carga.
+ Mantén presionado el botón y luego conecta el cable de carga.
 
 ## Solución de problemas
 
@@ -262,7 +262,7 @@ import TabItem from '@theme/TabItem';
 
 - Cambia el cable de carga
 
- - Si aún no hay suerte, mantén pulsado el botón del dispositivo y luego conecta el cable de carga, mira si aparece o no un disco en tu PC. Si es así, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-the-bootloader) para volver a instalar el bootloader.
+ - Si aún no hay suerte, mantén presionado el botón del dispositivo y luego conecta el cable de carga, mira si aparece un disco en tu PC. Si es así, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-the-bootloader) para reinstalar el bootloader.
 
 ### El dispositivo se queda atascado en un bucle de arranque
 
@@ -272,7 +272,7 @@ El dispositivo se reiniciará repetidamente y el puerto serie se conectará y de
 
 **Solución:**
 
-- Paso 1: Intenta entrar en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces, el LED verde se quedará encendido fijo.
+- Paso 1: Intenta entrar en modo DFU manualmente: mantén presionado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces, el LED verde se quedará encendido fijo.
 
 :::note
 Para entrar correctamente en el modo DFU, debes realizar esta operación rápidamente. Es posible que necesites intentarlo varias veces.
@@ -355,7 +355,7 @@ Para usuarios de Windows, es posible que necesites añadir la ruta manualmente. 
 
 <TabItem value="sou" label="Instalación desde el código fuente">
 
-Usa este método si tienes problemas para instalar con PyPi o quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
+Usa este método si tienes problemas instalando con PyPi o quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -413,14 +413,14 @@ Para usuarios de Mac, por ejemplo:
 
 **Paso 3: Flashear el bootloader**
 
-En la terminal o símbolo del sistema, navega hasta el directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
+En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
 
 - **Para Windows**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
-Cambia COMXX por tu número de puerto COM. Por ejemplo, si tu dispositivo está en el com6, cambia el comando a:
+Por favor cambia COMXX por tu número de puerto COM. Por ejemplo, si tu dispositivo está en el com6, cambia el comando a:
 
 `adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
@@ -443,11 +443,11 @@ Cuando hayas completado los pasos anteriores, entonces [haz clic aquí](https://
 - Ajusta la velocidad en baudios a `1200`.
 
 - Conecta el dispositivo.
-   La luz parpadeará brevemente cuando lo conectes. Sigue intentándolo hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU, luego flashea el [bootloader](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Borrar la flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-erase) -> [flashear el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-firmware)
+   La luz parpadeará brevemente cuando lo conectes. Sigue intentando esto hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU, luego flashea el [bootloader](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Borrar flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-erase) -> [flashear el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-firmware)
 
 **3) El dispositivo no puede entrar en modo DFU y no se muestra ningún puerto serie**
 
-- Mantén pulsado el botón del dispositivo y luego conecta el cable de carga. Después de que aparezca un disco en tu PC, es posible que veas el puerto serie.
+- Mantén presionado el botón del dispositivo y luego conecta el cable de carga. Después de que aparezca un disco en tu PC, es posible que veas el puerto serie.
 
 - Si aún no hay suerte, desconecta el cable de carga y deja el dispositivo unos días hasta que la batería se agote por completo, luego conecta el cable de carga e intenta emparejarlo de nuevo.
 
@@ -459,7 +459,7 @@ Cuando hayas completado los pasos anteriores, entonces [haz clic aquí](https://
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- Comprueba si el dispositivo está en modo DFU, la luz verde permanecerá encendida cuando el dispositivo esté en modo DFU.
+ Comprueba si el dispositivo está en modo DFU, la luz verde estará fija cuando el dispositivo esté en modo DFU.
 
 - **No se puede abrir el puerto serie**
 
@@ -471,19 +471,19 @@ Cuando hayas completado los pasos anteriores, entonces [haz clic aquí](https://
 
  #### Descripción
 
- - Después de encender el dispositivo, se apagará o reiniciará automáticamente después de un tiempo. 
+ - Después de encender el dispositivo, se apagará o se reiniciará automáticamente después de un rato. 
  - El registro del puerto serie se ejecutó durante un tiempo y luego se detuvo.
 
- Esto posiblemente sea causado por reiniciar o apagar el dispositivo de forma manual y forzada cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto posiblemente se deba a reiniciar o apagar el dispositivo de forma manual y forzada cuando el dispositivo se encuentra en los siguientes estados: sin haber finalizado el proceso de transmisión de mensajes, estando en configuración......
 
  #### Solución de problemas
 
 Realiza un [flash-erase](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-erase). 
 
  ### Restablecimiento de fábrica
-Si deseas restaurar la configuración predeterminada, puedes realizar el restablecimiento de fábrica. Hay dos métodos para que realices el restablecimiento de fábrica.
+Si deseas restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para realizar el restablecimiento de fábrica.
 
-- [Flash erase](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-erase) del dispositivo. Luego vuelve a flashear el firmware más reciente.
+- Realiza un [Flash erase](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-erase) en el dispositivo. Luego vuelve a flashear el firmware más reciente.
 
 - Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará automáticamente con la configuración de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Reset.png" alt="pir" width={400} height="auto" /></p>
@@ -503,7 +503,7 @@ Si deseas restaurar la configuración predeterminada, puedes realizar el restabl
 ## Recursos
 
 - [Hoja de datos del rastreador SenseCAP T1000](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
-- [T1000-E for Meshtastic Consumption Test and Battery Life Calculation](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000-E%20for%20Meshtastic%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [T1000-E para prueba de consumo de Meshtastic y cálculo de vida útil de la batería](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000-E%20for%20Meshtastic%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
 ## Soporte técnico y debate sobre el producto

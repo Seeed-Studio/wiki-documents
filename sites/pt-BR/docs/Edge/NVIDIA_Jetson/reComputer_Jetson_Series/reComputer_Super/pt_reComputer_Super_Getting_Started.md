@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_super_getting_started/
 ---
 
@@ -63,7 +63,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 
 - Combina capacidades de ​**LLM (Large Language Model)** com ​**IA Física** na borda  
 - Ideal para robótica, automação industrial e inferência de IA em tempo real  
-- Acelera a ​**entrada no mercado** com uma pilha de software pré-configurada  
+- Acelera a ​**entrada no mercado** com pilha de software pré-configurada  
 
 :::tip
 
@@ -179,7 +179,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Ethernet</td>
-      <td colSpan={3}>2x RJ45 Gigabit Ethernet</td>
+      <td colSpan={3}>2x Ethernet Gigabit RJ45</td>
     </tr>
     <tr>
       <td rowSpan={11}>E/S</td>
@@ -188,11 +188,11 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Câmera</td>
-      <td colSpan={3}>4x mipi CSI (2 pistas, 15 pinos)</td>
+      <td colSpan={3}>4x mipi CSI(2-lane 15-Pin)</td>
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={3}>1 x CAN (conector de 4 pinos)</td>
+      <td colSpan={3}>1 x CAN(Conector de 4 pinos)</td>
     </tr>
     <tr>
       <td>Display</td>
@@ -200,19 +200,19 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Ventoinha</td>
-      <td colSpan={3}>1x conector de ventoinha de 4 pinos (5V PWM); <br />1x conector de ventoinha de 4 pinos (12V PWM);</td>
+      <td colSpan={3}>1x conector de ventoinha de 4 pinos (PWM 5V); <br />1x conector de ventoinha de 4 pinos (PWM 12V);</td>
     </tr>
     <tr>
-      <td>Porta de expansão</td>
-      <td colSpan={3}>1x cabeçalho de expansão de 40 pinos;<br />1x cabeçalho de controle e UART de 12 pinos;</td>
+      <td>Porta de extensão</td>
+      <td colSpan={3}>1x cabeçalho de extensão de 40 pinos;<br />1x cabeçalho de controle e UART de 12 pinos;</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={3}>1x RTC de 2 pinos;<br />1x soquete RTC</td>
+      <td colSpan={3}>1x RTC 2 pinos;<br />1x soquete RTC</td>
     </tr>
     <tr>
       <td>LED</td>
-      <td colSpan={3}>2x LED (PWR e ACT)</td>
+      <td colSpan={3}>2x LED(PWR e ACT)</td>
     </tr>
     <tr>
       <td>Botão pinhole</td>
@@ -224,7 +224,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Furo para antena</td>
-      <td colSpan={3}>4x furos para antena</td>
+      <td colSpan={3}>4x furo para antena</td>
     </tr>
     <tr>
       <td>Alimentação</td>
@@ -252,7 +252,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Certificação</td>
-      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, Teste de vibração (GB/T 2423)</td>
+      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, Teste de vibração(GB/T 2423)</td>
     </tr>
   </tbody>
 </table>
@@ -275,7 +275,7 @@ Explore a linha reComputer Super em um visualizador 3D interativo. Gire o dispos
 >
   <iframe
     src="https://youjiang.cloud/?embed=1#viewer"
-    title="Explorador 3D interativo da linha reComputer Super"
+    title="reComputer Super Series Interactive 3D Explorer"
     loading="lazy"
     allow="fullscreen"
     allowFullScreen
@@ -305,7 +305,7 @@ Explore a linha reComputer Super em um visualizador 3D interativo. Gire o dispos
 Para especificações detalhadas e instruções de cada interface de hardware, consulte [o guia de uso das interfaces de hardware](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_super_hardware_interfaces_usage/).
 :::
 
-## Gravar o sistema JetPack OS
+## Gravar o sistema JetPack
 
 ### Módulo compatível
 
@@ -391,8 +391,8 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">Download</a></td>
-      <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAdqGsOC33XuaA6i60KX2k6s">Download</a></td>
+      <td>93130562F8C5EA02857C01BCB49B7626</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.2</td>
@@ -475,7 +475,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For JetPack 7.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
 ```
 
-**Passo 2:** Execute o seguinte comando para gravar o sistema Jetpack no SSD NVMe:
+**Passo 2:** Execute o seguinte comando para gravar o sistema JetPack no SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -488,7 +488,7 @@ Você verá a seguinte saída se o processo de gravação for bem-sucedido
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-O comando de gravação pode levar de 2 a 10 minutos.
+O comando de gravação pode ser executado por 2 a 10 minutos.
 :::
 
 **Passo 3:** Conecte o monitor usando um cabo HDMI e conclua a configuração de inicialização do sistema do reComputer Super:
@@ -512,9 +512,9 @@ Se você quiser saber mais sobre as especificações detalhadas e o uso das inte
 - [reComputer Super Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
 - [Esquemático](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
 - [Arquivo 3D](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
-- [Documento mecânico - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
-- [Documento mecânico - reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
-- [Casos de sucesso Seeed Nvidia Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Documento Mecânico - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
+- [Documento Mecânico - reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
+- [Casos de Sucesso Seeed Nvidia Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson One Pager](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
@@ -524,7 +524,7 @@ Se você quiser saber mais sobre as especificações detalhadas e o uso das inte
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
