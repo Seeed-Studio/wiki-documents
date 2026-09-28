@@ -1,6 +1,6 @@
 ---
 description: 双臂 SO-ARM 训练完整指南。
-title: 双臂 SO-ARM 训练完整指南
+title: SO-Arm 双臂玩法
 keywords:
   - Lerobot
   - SO-ARM

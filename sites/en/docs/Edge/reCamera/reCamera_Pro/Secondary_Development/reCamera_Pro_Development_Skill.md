@@ -10,15 +10,17 @@ keywords:
   - RV1126B
   - Edge AI
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/cpp_skill/recamera_skill.png
-slug: /recamera_pro_development_cpp_skill
+slug: /recamera_pro_development_cpp_skill_legacy
+draft: true
 sidebar_position: 3
 last_update:
   date: 2026-08-14
   author: yylin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-17'
-url: https://wiki.seeedstudio.com/recamera_pro_development_cpp_skill/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_development_cpp_skill_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/ai_coding_agents.md (https://wiki.seeedstudio.com/recamera_pro_development_cpp_skill/), which now serves the original slug /recamera_pro_development_cpp_skill. This file is kept for history as a draft (slug /recamera_pro_development_cpp_skill_legacy) and is excluded from production builds. Do not link here. -->
 
 # Develop reCamera Pro Applications with AI Coding Agents
 

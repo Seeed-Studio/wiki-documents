@@ -1,14 +1,14 @@
 ---
-description: 'Guía de operación de wrc_demo: pasos completos para la demo de agarre visual del reBot Arm B601-RS — configuración del entorno, descarga de modelos, cambio de LLM, calibración mano-ojo, ejecución de la demo y resolución de problemas.'
-title: Marco de Diseño de Agente Incorporado para reBot Arm B601-RS
+description: 'Guía de operación de wrc_demo: pasos completos para la demostración de agarre visual del reBot Arm B601-RS — configuración del entorno, descarga del modelo, cambio de LLM, calibración mano-ojo, ejecución de la demo y resolución de problemas.'
+title: B601-RS con Agent Claw
 keywords:
   - wrc_demo
   - reBot Arm B601-RS
-  - visual grasping
-  - vision language model
+  - agarre visual
+  - modelo de visión y lenguaje
   - Qwen3-VL
   - YOLOE
-  - hand-eye calibration
+  - calibración mano-ojo
   - conda
   - tutorial
 slug: /wrc_demo_tutorial

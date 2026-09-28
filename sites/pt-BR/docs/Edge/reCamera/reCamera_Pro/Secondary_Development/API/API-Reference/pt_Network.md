@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_network
+slug: /recamera_pro_api_network_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -16,6 +17,7 @@ createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_network/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/network.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_api_network/), which now serves the original slug /recamera_pro_api_network. This file is kept for history as a draft (slug /recamera_pro_api_network_legacy) and is excluded from production builds. Do not link here. -->
 
 # Rede
 
@@ -27,12 +29,12 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_network/
 | PUT | `/network/lan` | Definir configuração de rede cabeada |
 | GET | `/network/wlan` | Obter configuração IPv4 sem fio |
 | PUT | `/network/wlan` | Definir configuração IPv4 sem fio |
-| GET | `/network/wifi` | Obter informações da conexão Wi-Fi atual |
-| GET | `/network/wifi-status` | Consultar status de energia do Wi-Fi |
-| POST | `/network/wifi-status?power=on/off` | Alternar energia do Wi-Fi |
-| GET | `/network/wifi-list` | Verificar redes Wi-Fi próximas |
-| POST | `/network/wifi` | Conectar ao Wi-Fi |
-| DELETE | `/network/wifi` | Desconectar ou esquecer Wi-Fi |
+| GET | `/network/wifi` | Obter informações da conexão Wi‑Fi atual |
+| GET | `/network/wifi-status` | Consultar status de energia do Wi‑Fi |
+| POST | `/network/wifi-status?power=on/off` | Alternar energia do Wi‑Fi |
+| GET | `/network/wifi-list` | Verificar redes Wi‑Fi próximas |
+| POST | `/network/wifi` | Conectar ao Wi‑Fi |
+| DELETE | `/network/wifi` | Desconectar ou esquecer Wi‑Fi |
 | GET | `/web/setting` | Consultar configurações da API HTTP |
 | POST | `/web/setting` | Definir configurações da API HTTP |
 | GET | `/ftp/setting` | Consultar configurações do serviço FTP |
@@ -114,7 +116,7 @@ Resposta:
 }
 ```
 
-## Informações atuais do Wi-Fi
+## Informações atuais do Wi‑Fi
 
 ```text
 GET /network/wifi
@@ -122,9 +124,9 @@ GET /network/wifi
 
 A estrutura da resposta é a mesma da configuração de LAN/WLAN.
 
-## Energia do Wi-Fi
+## Energia do Wi‑Fi
 
-### Consultar status de energia do Wi-Fi
+### Consultar status de energia do Wi‑Fi
 
 ```text
 GET /network/wifi-status
@@ -142,11 +144,11 @@ Resposta:
 
 | Campo | Descrição |
 |---|---|
-| `iPower` | Estado de energia do Wi-Fi, `1` ligado, `0` desligado |
+| `iPower` | Estado de energia do Wi‑Fi, `1` ligado, `0` desligado |
 | `id` | ID da interface |
 | `sType` | Tipo de interface |
 
-### Alternar energia do Wi-Fi
+### Alternar energia do Wi‑Fi
 
 ```text
 POST /network/wifi-status?power=on
@@ -155,11 +157,11 @@ POST /network/wifi-status?power=off
 
 | Parâmetro | Valor | Descrição |
 |---|---|---|
-| `power` | `on`, `off` | Ligar ou desligar o Wi-Fi |
+| `power` | `on`, `off` | Ligar ou desligar o Wi‑Fi |
 
-## Verificar e conectar Wi-Fi
+## Verificar e conectar ao Wi‑Fi
 
-### Verificar lista de Wi-Fi
+### Verificar lista de Wi‑Fi
 
 ```text
 GET /network/wifi-list
@@ -183,15 +185,15 @@ Resposta:
 
 | Campo | Descrição |
 |---|---|
-| `sBssid` | BSSID do Wi-Fi, usado como identificador exclusivo para conexão |
-| `sSsid` | Nome da rede Wi-Fi |
+| `sBssid` | BSSID do Wi‑Fi, usado como identificador exclusivo para conexão |
+| `sSsid` | Nome da rede Wi‑Fi |
 | `iFrequency` | Canal de frequência |
 | `iRssi` | Força do sinal |
 | `sFlags` | Tipo de segurança |
 | `sConnected` | Se está conectado no momento |
 | `sReserved` | Se a senha está salva |
 
-### Conectar ao Wi-Fi
+### Conectar ao Wi‑Fi
 
 ```text
 POST /network/wifi
@@ -208,8 +210,8 @@ Corpo da requisição:
 
 | Campo | Descrição |
 |---|---|
-| `sSsid` | Identificador exclusivo do Wi-Fi; use o valor de `sBssid` de `/network/wifi-list` |
-| `sPassword` | Senha do Wi-Fi |
+| `sSsid` | Identificador exclusivo do Wi‑Fi; use o valor `sBssid` de `/network/wifi-list` |
+| `sPassword` | Senha do Wi‑Fi |
 
 Resposta:
 
@@ -220,7 +222,7 @@ Resposta:
 }
 ```
 
-### Desconectar ou esquecer Wi-Fi
+### Desconectar ou esquecer Wi‑Fi
 
 ```text
 DELETE /network/wifi?disconnect=<ssid>
@@ -229,8 +231,8 @@ DELETE /network/wifi?Ignore=<ssid>
 
 | Parâmetro | Descrição |
 |---|---|
-| `disconnect` | Desconectar do Wi-Fi especificado |
-| `Ignore` | Esquecer o Wi-Fi especificado |
+| `disconnect` | Desconectar do Wi‑Fi especificado |
+| `Ignore` | Esquecer o Wi‑Fi especificado |
 
 Resposta:
 

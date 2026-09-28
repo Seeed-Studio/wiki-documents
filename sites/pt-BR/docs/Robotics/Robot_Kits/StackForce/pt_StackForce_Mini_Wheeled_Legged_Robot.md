@@ -1,9 +1,9 @@
 ---
-description: Este wiki fornece tutoriais de montagem e inicialização para o StackForce Mini Wheeled Legged Robot, bem como materiais de aprendizado e links necessários para seu desenvolvimento.
-title: StackForce Mini Wheeled Legged Robot
+description: Este wiki fornece tutoriais de montagem e inicialização para o StackForce Mini Wheeled Legged Robot, bem como materiais de aprendizado e links necessários para o seu desenvolvimento.
+title: Guia Rápido do Mini Wheeled Legged
 keywords:
   - StackForce
-  - Robótica
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
 slug: /stackforce_mini_wheeled_legged_robot
 last_update:
@@ -12,7 +12,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-12-10'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-17'
 url: https://wiki.seeedstudio.com/pt-br/stackforce_mini_wheeled_legged_robot/
 ---
 

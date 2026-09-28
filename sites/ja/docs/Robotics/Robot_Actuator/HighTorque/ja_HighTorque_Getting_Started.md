@@ -1,18 +1,18 @@
 ---
-description: HighTorque Motors 入門ガイド
-title: HighTorque Motors 入門ガイド
+description: HighTorque モーター入門ガイド
+title: HighTorque ソフトウェア
 keywords:
-  - actuator
-  - motor
-  - arm
-  - robotics
+  - アクチュエータ
+  - モーター
+  - アーム
+  - ロボティクス
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /hightorque_getting_started
 last_update:
   date: 12/04/2025
   author: Tienjuiwong
 createdAt: '2025-12-04'
-updatedAt: '2025-12-05'
+updatedAt: '2025-12-04'
 url: https://wiki.seeedstudio.com/ja/hightorque_getting_started/
 ---
 

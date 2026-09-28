@@ -1,11 +1,11 @@
 ---
 description: Este wiki proporciona un tutorial para los motores de la serie Myactuator.
-title: Motores de la Serie MyActuator
+title: MyActuator
 keywords:
-  - actuator
+  - actuador
   - motor
-  - arm
-  - robotics
+  - brazo
+  - robótica
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/all.webp
 slug: /myactuator_series
 sku: 114090068,114090069

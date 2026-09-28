@@ -238,7 +238,7 @@ jobs:
       github.event.issue.pull_request &&
       startsWith(github.event.comment.body, '/translate')
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 360
     concurrency:
       group: pr-translation-run-${{ github.event.issue.number }}
       cancel-in-progress: false
@@ -391,7 +391,9 @@ jobs:
           npm install openai --no-save --legacy-peer-deps
 
       - name: Run translation
+        id: translation
         if: steps.check-permissions.outputs.has_permission == 'true'
+        continue-on-error: true
         env:
           TRANSLATION_API_KEY: ${{ secrets.TRANSLATION_API_KEY }}
           TARGET_LANGUAGES: ${{ steps.parse.outputs.languages }}
@@ -400,15 +402,38 @@ jobs:
           echo "🚀 开始翻译任务..."
           echo "目标语言: $TARGET_LANGUAGES"
           echo "基础SHA: $BASE_SHA"
+
+          translation_exit=0
+
           if [ -z "$TRANSLATION_API_KEY" ]; then
             echo "❌ 缺少 TRANSLATION_API_KEY"
-            exit 1
+            translation_exit=1
+          else
+            node _trusted/.github/scripts/translate.js || translation_exit=$?
           fi
-          node _trusted/.github/scripts/translate.js
 
-      # ⭐ 将译文推送到 base 仓库独立分支，并创建/更新翻译 PR
+          {
+            git diff --no-renames --name-only -- \
+              sites/zh-CN/docs sites/ja/docs sites/es/docs sites/pt-BR/docs
+            git ls-files --others --exclude-standard -- \
+              sites/zh-CN/docs sites/ja/docs sites/es/docs sites/pt-BR/docs
+          } | sort -u > /tmp/translation-changed-files.txt
+
+          if [ -s /tmp/translation-changed-files.txt ]; then
+            echo "had_changes=true" >> "$GITHUB_OUTPUT"
+            echo "📦 本次已生成/修改的译文文件："
+            cat /tmp/translation-changed-files.txt
+          else
+            echo "had_changes=false" >> "$GITHUB_OUTPUT"
+            echo "ℹ️ 本次没有生成可保存的译文文件"
+          fi
+
+          echo "exit_code=$translation_exit" >> "$GITHUB_OUTPUT"
+          exit "$translation_exit"
+
+      # ⭐ 将本次已经成功生成的译文推送到 base 仓库独立分支，并创建/更新翻译 PR
       - name: Prepare translation branch in base repo
-        if: steps.check-permissions.outputs.has_permission == 'true'
+        if: steps.check-permissions.outputs.has_permission == 'true' && steps.translation.outputs.had_changes == 'true'
         id: prep-branch
         env:
           TRANSLATION_PAT: ${{ secrets.TRANSLATION_PAT }}
@@ -421,7 +446,7 @@ jobs:
           echo "🔧 准备在 base 仓库创建/更新翻译分支..."
 
           BRANCH="auto-translate/pr-${PR_NUMBER}"
-          echo "BRANCH=$BRANCH" >> $GITHUB_OUTPUT
+          echo "BRANCH=$BRANCH" >> "$GITHUB_OUTPUT"
 
           WORKDIR=$(mktemp -d)
           echo "WORKDIR=$WORKDIR"
@@ -436,27 +461,54 @@ jobs:
           git config --global init.defaultBranch main
           git clone --depth=1 "$REMOTE_URL" "$WORKDIR/repo"
           cd "$WORKDIR/repo"
-          git fetch --depth=1 origin "$BASE_REF"
-          git checkout "$BASE_REF"
 
-          # ✅ 镜像四种语言站点的 docs（含删除）
-          rsync -a --delete --safe-links --copy-dirlinks \
-            --include='sites/' \
-            --include='sites/zh-CN/' --include='sites/zh-CN/docs/***' \
-            --include='sites/ja/'    --include='sites/ja/docs/***' \
-            --include='sites/es/'    --include='sites/es/docs/***' \
-            --include='sites/pt-BR/' --include='sites/pt-BR/docs/***' \
-            --exclude='*' \
-            "$GITHUB_WORKSPACE/" .
+          git fetch --depth=1 origin \
+            "$BASE_REF:refs/remotes/origin/$BASE_REF"
+
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            echo "♻️ 复用已有翻译分支: $BRANCH"
+            git fetch --depth=50 origin \
+              "$BRANCH:refs/remotes/origin/$BRANCH"
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+          else
+            echo "🌱 新建翻译分支: $BRANCH"
+            git checkout -B "$BRANCH" "origin/$BASE_REF"
+          fi
+
+          while IFS= read -r relpath; do
+            [ -z "$relpath" ] && continue
+
+            case "$relpath" in
+              sites/zh-CN/docs/*|sites/ja/docs/*|sites/es/docs/*|sites/pt-BR/docs/*)
+                ;;
+              *)
+                echo "⚠️ 忽略非目标语言路径: $relpath"
+                continue
+                ;;
+            esac
+
+            src="$GITHUB_WORKSPACE/$relpath"
+
+            if [ -e "$src" ]; then
+              mkdir -p "$(dirname "$relpath")"
+              cp -a "$src" "$relpath"
+              echo "  更新: $relpath"
+            else
+              rm -f "$relpath"
+              echo "  删除: $relpath"
+            fi
+          done < /tmp/translation-changed-files.txt
 
           git config user.email "action@github.com"
           git config user.name "GitHub Action Bot"
 
-          git add sites/zh-CN/docs sites/ja/docs sites/es/docs sites/pt-BR/docs 2>/dev/null || true
+          git add -A -- \
+            sites/zh-CN/docs sites/ja/docs sites/es/docs sites/pt-BR/docs \
+            2>/dev/null || true
 
           if git diff --cached --quiet; then
-            echo "ℹ️ 镜像后无变化"
-            echo "HAS_CHANGES=false" >> $GITHUB_ENV
+            echo "ℹ️ 应用本次译文后无变化"
+            echo "HAS_CHANGES=false" >> "$GITHUB_ENV"
           else
             git commit \
               -m "🌍 自动翻译文档 for #${PR_NUMBER}" \
@@ -465,7 +517,7 @@ jobs:
               -m "Source PR: #${PR_NUMBER}" \
               -m "[TRANSLATION_COMMIT]: true"
             git push origin HEAD:"$BRANCH"
-            echo "HAS_CHANGES=true" >> $GITHUB_ENV
+            echo "HAS_CHANGES=true" >> "$GITHUB_ENV"
           fi
 
       - name: Create or update translation PR
@@ -536,7 +588,9 @@ jobs:
             const { owner, repo } = context.repo;
             const issue_number = context.payload.issue.number;
             const commentId = '${{ steps.start-comment.outputs.result }}';
-            const success = '${{ job.status }}' === 'success';
+            const translationSuccess = '${{ steps.translation.outcome }}' === 'success';
+            const pipelineHealthy = '${{ job.status }}' === 'success';
+            const success = translationSuccess && pipelineHealthy;
             const languages = '${{ steps.parse.outputs.languages }}';
             const hasChanges = process.env.HAS_CHANGES === 'true';
             const prNum = '${{ steps.create-pr.outputs.pr-number }}' || 'N/A';
@@ -546,6 +600,7 @@ jobs:
             let status, icon;
             if (success && hasChanges) { status='翻译完成'; icon='✅'; }
             else if (success && !hasChanges) { status='无需翻译'; icon='ℹ️'; }
+            else if (!translationSuccess && hasChanges) { status='部分翻译完成'; icon='⚠️'; }
             else { status='翻译失败'; icon='❌'; }
 
             let comment = `## ${icon} ${status}\n\n`;
@@ -553,12 +608,19 @@ jobs:
             comment += `**完成时间:** ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}\n`;
             comment += `**触发者:** @${{ github.event.comment.user.login }}\n`;
             comment += `**翻译分支:** \`${branch}\`\n`;
-            if (success && hasChanges && prNum !== 'N/A') {
+            if (hasChanges && prNum !== 'N/A') {
               comment += `**翻译 PR:** #${prNum}\n`;
               comment += `**翻译前SHA:** \`${beforeSha}\`\n\n`;
+            }
+
+            if (success && hasChanges) {
               comment += `### 🎉 翻译成功！\n\n译文已提交到独立 PR（见上），可独立审核与合并。\n`;
             } else if (success && !hasChanges) {
               comment += `### 🔍 没有检测到需要翻译的内容\n\n可能原因：目标语言已最新，或无有效文档变更。\n`;
+            } else if (!translationSuccess && hasChanges) {
+              comment += `### ⚠️ 部分翻译失败，但成功结果已保存\n\n`;
+              comment += `已经成功生成的译文已提交到上面的翻译 PR，不会因为单个文件失败而丢失。\n\n`;
+              comment += `请查看 [工作流日志](https://github.com/${owner}/${repo}/actions/runs/${{ github.run_id }}) 定位失败文件。\n`;
             } else {
               comment += `### 💔 翻译失败\n\n请查看 [工作流日志](https://github.com/${owner}/${repo}/actions/runs/${{ github.run_id }})。\n`;
             }
@@ -573,10 +635,20 @@ jobs:
         id: check-completion
         if: always() && steps.check-permissions.outputs.has_permission == 'true'
         run: |
-          if [ "${{ job.status }}" = "success" ] && [ "$HAS_CHANGES" = "true" ]; then
-            echo "completed=true" >> $GITHUB_OUTPUT
-            echo "has_changes=true" >> $GITHUB_OUTPUT
+          if [ "${{ steps.translation.outcome }}" = "success" ] &&              [ "${{ job.status }}" = "success" ] &&              [ "$HAS_CHANGES" = "true" ]; then
+            echo "completed=true" >> "$GITHUB_OUTPUT"
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
           else
-            echo "completed=false" >> $GITHUB_OUTPUT
-            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "completed=false" >> "$GITHUB_OUTPUT"
+            if [ "$HAS_CHANGES" = "true" ]; then
+              echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            fi
           fi
+
+      - name: Mark job failed if translation had errors
+        if: always() && steps.check-permissions.outputs.has_permission == 'true' && steps.translation.outcome == 'failure'
+        run: |
+          echo "❌ 翻译过程中存在失败文件；已先保存其它成功结果，现在将 Job 标记为失败。"
+          exit 1

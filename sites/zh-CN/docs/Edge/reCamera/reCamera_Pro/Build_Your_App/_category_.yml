@@ -1,0 +1,5 @@
+position: 2 # float position is supported
+label: '2. 构建你的应用'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category collapsed by default
+className: recamera_pro_build_your_app

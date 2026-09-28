@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/recomputer_jetson_super_getting_started/
 ---
 
@@ -257,6 +257,53 @@ Available customization options: logo branding, packaging, and firmware flashing
   </tbody>
 </table>
 </div>
+
+## Interactive 3D Explorer
+
+Explore the reComputer Super Series in an interactive 3D viewer. Rotate the device, inspect hardware interfaces, view the exploded assembly, and learn more about supported modules.
+
+<div
+  style={{
+    width: '100%',
+    height: 'clamp(620px, 70vw, 760px)',
+    overflow: 'hidden',
+    border: '1px solid #4a525b',
+    borderRadius: '12px',
+    margin: '24px 0',
+    background: '#0b1015'
+  }}
+>
+  <iframe
+    src="https://youjiang.cloud/?embed=1#viewer"
+    title="reComputer Super Series Interactive 3D Explorer"
+    loading="lazy"
+    allow="fullscreen"
+    allowFullScreen
+    scrolling="no"
+    style={{
+      width: '100%',
+      height: '100%',
+      border: 0,
+      display: 'block'
+    }}
+  />
+</div>
+
+<div align="center">
+  <a
+    href="https://youjiang.cloud/#viewer"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Open the 3D Explorer in a new window ↗
+  </a>
+</div>
+
+## Hardware Interfaces Usage
+
+:::info
+For detailed specifications and instructions for each hardware interface, please refer to [the hardware interfaces usage guide](https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/).
+:::
 
 ## Flash JetPack OS
 

@@ -1,6 +1,6 @@
 ---
-description: Este tutorial muestra cómo descargar Isaac Sim y desplegar el robot reBot Arm B601-DM en un entorno de simulación para desarrollo y depuración.
-title: reBot Arm B601-DM Isaac Sim
+description: Este tutorial muestra cómo descargar Isaac Sim y desplegar el robot reBot-B601-DM en un entorno de simulación para desarrollo y depuración.
+title: B601-DM con Isaac Sim
 keywords:
   - Isaacsim
   - brazo robótico
@@ -8,7 +8,7 @@ keywords:
   - operación remota
   - cinemática
   - Damiao
-image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 slug: /rebot_arm_b601_dm_isaacsim
 last_update:
   date: 2026-08-17
@@ -27,7 +27,7 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_faq
+slug: /recamera_pro_api_faq_legacy
+draft: true
 sku: 10003420
 sidebar_position: 6
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_api_faq/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_api_faq_legacy/
 ---
+<!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：此页面已被 Troubleshooting/api_troubleshooting.md（https://wiki.seeedstudio.com/cn/recamera_pro_api_faq/）取代，该页面现在使用原始 slug /recamera_pro_api_faq。此文件作为草稿（slug /recamera_pro_api_faq_legacy）保留以供历史记录，并从正式构建中排除。请不要链接到此处。 -->
 
 # 常见问题
 
@@ -27,13 +29,13 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_api_faq/
 
 ### 登录返回 iStatus=-3，我该怎么办？
 
-多次登录失败触发了基于 IP 的锁定。请等待 `sWaittime` 秒，待锁定解除后再重试。
+多次登录失败触发了基于 IP 的锁定。请等待 `sWaittime` 秒，待锁定过期后再重试。
 
 ### 登录成功但后续 API 返回 401，我该怎么办？
 
 Token 缺失或已过期。请确保请求头中包含 `Cookie: token=<JWT_TOKEN>`，并确认 Token 未超过 24 小时的有效期。如果已过期，请重新登录。
 
-### Token 的有效期是多长？
+### Token 的有效期是多长时间？
 
 Token 默认有效期为 24 小时（`Max-Age=86400`）。过期后需要重新登录以获取新的 Token。
 
@@ -41,7 +43,7 @@ Token 默认有效期为 24 小时（`Max-Age=86400`）。过期后需要重新�
 
 ### 修改网络设置后设备无法访问，我该怎么办？
 
-修改 IP 地址、网关或 Wi-Fi 参数可能会导致设备地址发生变化。请通过新地址访问设备，或通过直连网络恢复访问。
+修改 IP 地址、网关或 Wi-Fi 参数可能会导致设备地址发生变化。请通过新地址访问设备，或通过直连网络连接进行恢复。
 
 ### /network/wlan 和 /network/wifi 有什么区别？
 
@@ -55,7 +57,7 @@ Token 默认有效期为 24 小时（`Max-Age=86400`）。过期后需要重新�
 
 ### 通过 HTTPS 访问时浏览器提示证书不受信任，我该怎么办？
 
-设备使用的是自签名证书。对于本地测试，可以忽略警告继续访问。对于生产环境部署，请安装受信任的证书。
+设备使用的是自签名证书。对于本地测试，可以忽略警告继续访问。对于生产部署，请安装受信任的证书。
 
 ### 启用 HTTPS 后无法通过 HTTP 访问设备，我该怎么办？
 
@@ -73,7 +75,7 @@ Token 默认有效期为 24 小时（`Max-Age=86400`）。过期后需要重新�
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

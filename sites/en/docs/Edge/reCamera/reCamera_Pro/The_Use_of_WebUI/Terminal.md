@@ -4,16 +4,18 @@ title: Terminal
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_terminal
+slug: /recamera_pro_terminal_legacy
+draft: true
 sku: 10003420
 sidebar_position: 6
 last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/recamera_pro_terminal/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_terminal_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/terminal_ssh_debug_uart.md (https://wiki.seeedstudio.com/recamera_pro_terminal/), which now serves the original slug /recamera_pro_terminal. This file is kept for history as a draft (slug /recamera_pro_terminal_legacy) and is excluded from production builds. Do not link here. -->
 
 ## System Log
 

@@ -1,13 +1,13 @@
 ---
-description: このチュートリアルでは、reBot Arm B601-RS ロボットアーム上での運動学解析と可視化に Pinocchio と MeshCat を使用する方法を紹介します。
-title: reBot Arm B601-RS Pinocchio & MeshCat
+description: このチュートリアルでは、ロボットアーム reBot Arm B601-RS 上で、運動学解析と可視化のために Pinocchio と MeshCat を使用する方法を紹介します。
+title: Pinocchio を用いた B601-RS
 keywords:
   - Pinocchio
   - MeshCat
-  - Robotic Arm
-  - Robot
+  - ロボットアーム
+  - ロボット
   - LeRobot
-  - Kinematics
+  - 運動学
   - Robostride
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_arm_b601_rs_pinocchio_meshcat

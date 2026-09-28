@@ -1,11 +1,11 @@
 ---
 description: このWikiでは、Damiaoシリーズモーターのチュートリアルを提供します。
-title: Damiao シリーズモーター
+title: Damiao
 keywords:
   - アクチュエータ
   - モーター
   - アーム
-  - ロボティクス
+  - ロボット工学
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /damiao_series
 sku: 100094243,100007512
@@ -13,7 +13,7 @@ last_update:
   date: 06/1/2025
   author: ZhuYaoHui
 createdAt: '2025-06-01'
-updatedAt: '2026-06-02'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/ja/damiao_series/
 ---
 

@@ -1,9 +1,9 @@
 ---
-description: Guia de Desenvolvimento Profissional do Robô Gigante Bípede sobre Rodas StackForce, incluindo recursos avançados, tutoriais de desenvolvimento aprofundados, documentação de API e casos de aplicação prática
-title: StackForce Giant Bipedal Wheeled Robot
+description: Guia de desenvolvimento profissional do robô gigante bípede sobre rodas StackForce, incluindo recursos avançados, tutoriais de desenvolvimento aprofundados, documentação de API e casos de aplicação prática
+title: Início Rápido do Robô Gigante sobre Rodas
 keywords:
   - StackForce
-  - Robô sobre Rodas e Pernas
+  - Robô com rodas e pernas
   - Desenvolvimento Profissional
   - Robótica Avançada
   - Inteligência Artificial
@@ -15,7 +15,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-12-12'
-updatedAt: '2026-03-16'
+updatedAt: '2025-12-12'
 url: https://wiki.seeedstudio.com/pt-br/stackforce_giant_bipedal_wheeled_robot/
 ---
 

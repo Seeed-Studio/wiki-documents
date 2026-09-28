@@ -1,6 +1,6 @@
 ---
 description: This guide will help you get started with the reBot Arm B601-RS, including purchasing options, assembly, calibration, and software configuration.
-title: reBot Arm B601-RS Quick Start
+title: B601-RS Quick Start
 keywords:
   - reBot
   - B601-DM
@@ -18,7 +18,7 @@ last_update:
   date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
 

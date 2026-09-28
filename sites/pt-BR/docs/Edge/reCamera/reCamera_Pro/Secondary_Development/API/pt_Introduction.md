@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_introduction
+slug: /recamera_pro_api_introduction_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -14,12 +15,13 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_introduction/
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_introduction_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/introduction.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_api_introduction/), which now serves the original slug /recamera_pro_api_introduction. This file is kept for history as a draft (slug /recamera_pro_api_introduction_legacy) and is excluded from production builds. Do not link here. -->
 
 # Introdução
 
-A reCamera RV1126B fornece um conjunto de Web APIs baseadas em HTTP que permitem obter informações do dispositivo, configurar parâmetros do sistema, gerenciar redes, controlar áudio e vídeo, executar inferência de IA, gerenciar arquivos e realizar atualizações de firmware.
+reCamera RV1126B fornece um conjunto de Web APIs baseadas em HTTP que permitem obter informações do dispositivo, configurar parâmetros do sistema, gerenciar redes, controlar áudio e vídeo, executar inferência de IA, gerenciar arquivos e realizar atualizações de firmware.
 
 ## Informações básicas
 
@@ -33,7 +35,7 @@ A reCamera RV1126B fornece um conjunto de Web APIs baseadas em HTTP que permitem
 
 ## Estrutura da URL
 
-Todos os endpoints CGI da API seguem esta estrutura:
+Todos os endpoints da API CGI seguem esta estrutura:
 
 ```text
 http://<DEVICE_IP>/cgi-bin/entry.cgi/<api_category>/<resource>/<sub_resource>
@@ -56,7 +58,7 @@ http://<DEVICE_IP>/api/v1/file?path=/mnt/sdcard/test.mp4
 
 | Documento | Conteúdo |
 |---|---|
-| Início rápido | Fazer login e chamar sua primeira API do zero |
+| Início rápido | Faça login e chame sua primeira API do zero |
 | Autenticação | Fluxo de login, uso de Token e alteração de senha |
 | Convenções comuns | Formato de resposta, nomenclatura de campos, códigos de erro |
 | Referência da API | Descrições detalhadas dos endpoints organizadas por função |

@@ -1,6 +1,6 @@
 ---
-description: 'wrc_demo 操作ガイド：reBot Arm B601-RS のビジュアル把持デモのための完全な手順 — 環境構築、モデルダウンロード、LLM 切り替え、ハンドアイキャリブレーション、デモ実行、トラブルシューティング。'
-title: reBot Arm B601-RS エンボディドエージェント設計フレームワーク
+description: 'wrc_demo 操作ガイド：reBot Arm B601-RS のビジュアル把持デモのための完全な手順 — 環境構築、モデルのダウンロード、LLM の切り替え、ハンドアイキャリブレーション、デモの実行、トラブルシューティング。'
+title: B601-RS と Agent Claw
 keywords:
   - wrc_demo
   - reBot Arm B601-RS

@@ -1,12 +1,12 @@
 ---
 description: Atom-S の使用を開始する。
-title: Atom-S 入門ガイド
+title: Atom-S クイックスタート
 keywords:
-  - ヒューマノイド
-  - ロボティクス
+  - Humanoid
+  - Robotics
   - Atom S
   - XIAO ESP32-S3
-  - サーボ
+  - Servo
 image: https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-s/product_photo.webp
 slug: /atom_s
 last_update:

@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_device-and-system
+slug: /recamera_pro_api_device-and-system_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -14,14 +15,15 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_api_device-and-system/
+url: https://wiki.seeedstudio.com/ja/recamera_pro_api_device-and-system_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/device_system.md (https://wiki.seeedstudio.com/ja/recamera_pro_api_device-and-system/), which now serves the original slug /recamera_pro_api_device-and-system. This file is kept for history as a draft (slug /recamera_pro_api_device-and-system_legacy) and is excluded from production builds. Do not link here. -->
 
 # デバイス & システム
 
 ## エンドポイント概要
 
-| Method | Path | 目的 |
+| メソッド | パス | 目的 |
 |---|---|---|
 | GET | `/system/device-info` | デバイスのシリアル番号、ファームウェアバージョン、センサーボードおよびベースボードのモデルを取得 |
 | GET | `/system/resource-info` | CPU、NPU、メモリ、ストレージの使用状況を取得 |
@@ -29,9 +31,9 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_api_device-and-system/
 | PUT | `/system/time` | システム時刻を設定 |
 | GET | `/system/battery` | バッテリー状態を取得 |
 | GET | `/system/check` | 初回ログインかどうかを確認 |
-| GET | `/system/ssh` | SSH の動作状態を照会 |
+| GET | `/system/ssh` | SSH の稼働状態を照会 |
 | POST | `/system/ssh` | SSH を開始または停止 |
-| GET | `/system/secure` | HTTPS 状態を照会 |
+| GET | `/system/secure` | HTTPS の状態を照会 |
 | POST | `/system/secure` | HTTPS を有効化または無効化 |
 | GET | `/config/export` | デバイス設定をエクスポート |
 | POST | `/config/upload` | デバイス設定をインポート |
@@ -55,7 +57,7 @@ GET /system/device-info
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `sSerialNumber` | デバイスのシリアル番号 |
 | `sFirmwareVersion` | ファームウェアバージョン |
@@ -87,15 +89,15 @@ GET /system/resource-info
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `iCpuUsage` | CPU 使用率（パーセンテージ） |
 | `iNpuUsage` | NPU 使用率（パーセンテージ） |
 | `sMem.iMemTotal` | メモリ総量 |
-| `sMem.iMemUsed` | 使用中メモリ量 |
+| `sMem.iMemUsed` | 使用中メモリ |
 | `sMem.iMemUsage` | メモリ使用率（パーセンテージ） |
 | `sStorage.iStorageTotal` | ストレージ総容量 |
-| `sStorage.iStorageUsed` | 使用中ストレージ容量 |
+| `sStorage.iStorageUsed` | 使用中ストレージ |
 | `sStorage.iStorageUsage` | ストレージ使用率（パーセンテージ） |
 
 ## システム時刻
@@ -122,7 +124,7 @@ GET /system/time
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `sMethod` | 時刻ソース。`ntp` または `manual` |
 | `dNtpConfig.sAddress` | NTP サーバーアドレス |
@@ -130,7 +132,7 @@ GET /system/time
 | `dNtpConfig.status` | NTP ステータス。`0` は成功を意味します |
 | `iTimestamp` | 秒単位の Unix タイムスタンプ |
 | `sTimezone` | タイムゾーンの都市名 |
-| `sTz` | タイムゾーン（例：`UTC+8`） |
+| `sTz` | タイムゾーン（例: `UTC+8`） |
 
 ### システム時刻の設定
 
@@ -190,7 +192,7 @@ GET /system/battery
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `isAttached` | バッテリーが接続されているかどうか |
 | `displaySteps` | 現在のバッテリーレベルのステップ数 |
@@ -211,11 +213,11 @@ GET /system/check
 }
 ```
 
-`bFirst=true` は、デバイスが初回ログインフロー中であり、デフォルトパスワードを変更する必要があることを示します。
+`bFirst=true` は、デバイスが初回ログインフローにあり、デフォルトパスワードを変更する必要があることを示します。
 
 ## SSH
 
-### SSH 状態の照会
+### SSH ステータスの照会
 
 ```text
 GET /system/ssh
@@ -243,13 +245,13 @@ POST /system/ssh
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `bRunning` | SSH を開始する場合は `true`、停止する場合は `false` |
 
 ## HTTPS
 
-### HTTPS 状態の照会
+### HTTPS ステータスの照会
 
 ```text
 GET /system/secure
@@ -305,7 +307,7 @@ GET /config/export
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `size` | 設定ファイルサイズ |
 | `url` | ダウンロードパス。完全な URL にするにはデバイス IP を前に付加します |
@@ -383,12 +385,12 @@ POST /system/factory-reset
 }
 ```
 
-工場出荷時設定へのリセットを行うと、デバイスのすべての設定が消去されます。実行する前に必ずバックアップを取得してください。
+工場出荷時設定へのリセットは、すべてのデバイス設定を消去します。実行する前に必ずバックアップを取得してください。
 
 
 ## テクニカルサポートと製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。お客様が当社製品をスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

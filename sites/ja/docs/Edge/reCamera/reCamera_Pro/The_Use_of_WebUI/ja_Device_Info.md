@@ -4,20 +4,32 @@ title: デバイス情報
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_device_info
+slug: /recamera_pro_device_info_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-10'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_device_info/
+updatedAt: '2026-07-09'
+url: https://wiki.seeedstudio.com/ja/recamera_pro_device_info_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Deploy/network_time_access.md (https://wiki.seeedstudio.com/ja/recamera_pro_device_info/), which now serves the original slug /recamera_pro_device_info. This file is kept for history as a draft (slug /recamera_pro_device_info_legacy) and is excluded from production builds. Do not link here. -->
 
-このインターフェースでは、reCamera pro の各種ハードウェアおよびソフトウェアのバージョン情報を確認し、対応するシステム設定を調整できます。
+## コンテンツ移行インデックス（レガシーページ）
+
+| 元のセクション | 新しい場所 |
+| --- | --- |
+| Basic Information, Time Settings, Network Settings | [Network, Time and Access](https://wiki.seeedstudio.com/ja/recamera_pro_device_info/) (このスラッグ) |
+| Network Settings (Wi-Fi details) | [Wi-Fi and Web UI Access](https://wiki.seeedstudio.com/ja/recamera_pro_wifi_access/) |
+| Connection Settings (SSH/HTTP/baud) | [Terminal, SSH and Debug UART](https://wiki.seeedstudio.com/ja/recamera_pro_terminal/) |
+| System Settings (firmware update, restart, reset) | [Firmware Update and Recovery](https://wiki.seeedstudio.com/ja/recamera_pro_firmware_update/) |
+| Export/Import Configuration | [Backup and Restore](https://wiki.seeedstudio.com/ja/recamera_pro_backup_restore/) |
+
+このインターフェースでは、reCamera pro のさまざまなハードウェアおよびソフトウェアのバージョン情報を確認し、対応するシステム設定を調整できます。
 ## 基本情報
-このインターフェースでは、デバイスの基本的なハードウェアおよびソフトウェア情報に加え、システムリソースの使用状況を確認できます。
+このインターフェースでは、デバイスの基本的なハードウェアおよびソフトウェア情報と、システムリソースの使用状況を確認できます。
 <img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_aWZqM1cZvA.png" />
 
 ## 時刻設定
@@ -39,7 +51,7 @@ reCamera pro には WiFi モジュールが搭載されており、このイン�
 ### 設定のエクスポートとインポート
 "Export Configuration" を選択すると、ブラウザが現在の各種設定を含むファイルを自動的にダウンロードし、後で他の reCamera pro デバイスに素早くインポートするのに便利です。
 <img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_eBayhpwddh.png" />
-設定をインポートするには、エクスポートされた設定ファイルと同じ拡張子を持つ tar ファイルを選択してインポートする必要があります。インポート後は自動的に読み込まれます。再起動が完了するまで待つと、インポートされた設定情報が反映されます。
+設定をインポートするには、エクスポートした設定ファイルと同じ拡張子を持つ tar ファイルを選択する必要があります。インポート後、自動的に読み込まれます。再起動が完了するまで待つと、インポートされた設定情報が反映されます。
 <img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/web_ui_wiki/msedge_4h4p6raYPF.png" />
 
 ## 技術サポートと製品ディスカッション

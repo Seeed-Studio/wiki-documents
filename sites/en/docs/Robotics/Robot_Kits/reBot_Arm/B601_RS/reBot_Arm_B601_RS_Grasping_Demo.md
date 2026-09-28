@@ -1,6 +1,6 @@
 ---
 description: This tutorial covers two visual grasping implementations for the reBot Arm B601-RS, including a YOLO/OBB pipeline and a ROS2-based grasping workflow.
-title: reBot Arm B601-RS Visual Grasping Demo
+title: B601-RS with Visual Grasping
 keywords:
   - reBot Arm
   - B601-RS
@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';

@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece o Guia Completo de Controle de Motor RobStride
-title: Guia Completo de Controle de Motor RobStride
+description: Este wiki fornece o Guia Completo de Controle do Motor RobStride
+title: RobStride
 keywords:
   - atuador
   - motor
@@ -14,7 +14,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-11-19'
-updatedAt: '2026-06-12'
+updatedAt: '2026-06-08'
 url: https://wiki.seeedstudio.com/pt-br/robstride_control/
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Crea un sistema de activación visual y reconocimiento de voz sin conexión con reCamera Pro
-description: Aprende a desplegar en reCamera Pro un sistema de reconocimiento de voz bilingüe en streaming, activado por la mirada y totalmente en el dispositivo, con vistas de estado en terminal, web y RTSP.
+description: Aprende a desplegar en reCamera Pro un sistema de reconocimiento de voz bilingüe en streaming, activado por la mirada y ejecutado en el propio dispositivo, con vistas de estado en terminal, web y RTSP.
 keywords:
   - reCamera Pro
   - RV1126B
@@ -9,16 +9,18 @@ keywords:
   - speech recognition
   - Zipformer
   - edge AI
-image: https://raw.githubusercontent.com/yyling0101-a11y/recamera_pro_face_stt/main/images/gpt_images.png
-slug: /recamera_pro_visual_wake_stt
+image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/gpt_images.png
+slug: /recamera_pro_visual_wake_stt_legacy
+draft: true
 last_update:
   date: 2026-08-24
   author: yylin
 createdAt: '2026-08-24'
-updatedAt: '2026-08-24'
+updatedAt: '2026-08-27'
 sidebar_position: 1
-url: https://wiki.seeedstudio.com/es/recamera_pro_visual_wake_stt/
+url: https://wiki.seeedstudio.com/es/recamera_pro_visual_wake_stt_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/visual_wake_speech.md (https://wiki.seeedstudio.com/es/recamera_pro_visual_wake_stt/), which now serves the original slug /recamera_pro_visual_wake_stt. This file is kept for history as a draft (slug /recamera_pro_visual_wake_stt_legacy) and is excluded from production builds. Do not link here. -->
 
 # Crea un sistema de activación visual y reconocimiento de voz sin conexión con reCamera Pro
 
@@ -28,7 +30,7 @@ url: https://wiki.seeedstudio.com/es/recamera_pro_visual_wake_stt/
 
 Este proyecto implementa un flujo de interacción natural y totalmente en el dispositivo para reCamera Pro (RV1126B). La cámara detecta un rostro y estima la pose de la cabeza. Solo después de que una persona haya mirado a la cámara de forma continua, la aplicación abre el micrófono y comienza el reconocimiento de voz en streaming. Luego entra en un breve periodo de enfriamiento para evitar activaciones repetidas.
 
-Es adecuado para asistentes de voz, quioscos de exposición y puntos de entrada de voz en el borde con prioridad a la privacidad. La visión, la evaluación de la pose, las características de voz y la inferencia Zipformer se ejecutan localmente. El panel web no requiere ningún servicio en la nube, proceso de Node.js, CDN ni fuente externa.
+Es adecuado para asistentes de voz, quioscos de exposición y puntos de entrada de voz en el borde con prioridad a la privacidad. La visión, la evaluación de la pose, las características de voz y la inferencia Zipformer se ejecutan localmente. El panel web no requiere servicio en la nube, proceso de Node.js, CDN ni fuentes externas.
 
 El código fuente y las futuras versiones están disponibles en el [repositorio de GitHub recamera_pro_face_stt](https://github.com/yyling0101-a11y/recamera_pro_face_stt). El repositorio contendrá el proyecto completo después de que se envíe este directorio.
 
@@ -58,9 +60,9 @@ Los estados predeterminados son `IDLE`, `FACE_DETECTED`, `ATTENTION_PENDING`, `L
 La entrada de audio predeterminada es `ai_asr`: 16 kHz, S16_LE, cuatro canales, canal 0 seleccionado. Esto evita competir con el proceso del proveedor que posee `hw:0,0`.
 :::
 
-## Obtener el proyecto
+## Obtén el proyecto
 
-Después de que se publique el proyecto, clónalo en el host de desarrollo:
+Después de que el proyecto se publique, clónalo en el host de desarrollo:
 
 ```bash
 git clone https://github.com/yyling0101-a11y/recamera_pro_face_stt.git
@@ -69,11 +71,11 @@ cd recamera_pro_face_stt
 
 El repositorio contiene modelos de visión, modelos Zipformer, el panel web y el script de compilación cruzada. No mezcles versiones arbitrarias de RKNN Runtime: este proyecto usa **RKNN 2.3.2** y tiene como destino `rv1126b`.
 
-## Compilar y desplegar
+## Compila y despliega
 
-### 1. Configurar el SDK de reCamera Pro
+### 1. Configura el SDK de reCamera Pro
 
-El script de compilación busca el SDK en `/home/yylin/recamera_pro/recamera-pro-sdk` de forma predeterminada. Define esta variable cuando el tuyo esté en otro lugar:
+El script de compilación busca el SDK en `/home/yylin/recamera_pro/recamera-pro-sdk` de forma predeterminada. Establece esta variable cuando el tuyo esté en otro lugar:
 
 ```bash
 export RECAMERA_PRO_SDK=/absolute/path/to/recamera-pro-sdk
@@ -101,7 +103,7 @@ deploy/
 └── web/dashboard.html
 ```
 
-### 3. Copiar el paquete de despliegue al dispositivo
+### 3. Copia el paquete de despliegue al dispositivo
 
 Copia el **contenido** del directorio de despliegue en un único directorio de reCamera Pro. Para un dispositivo en `192.168.42.1`:
 
@@ -116,7 +118,7 @@ chmod +x visual_wake_app
 Mantén los directorios `models/` y `web/` en las rutas relativas mostradas. La aplicación usa esas rutas relativas predeterminadas para cargar sus recursos.
 :::
 
-## Ejecutar la aplicación
+## Ejecuta la aplicación
 
 Ejecuta la aplicación desde su directorio de despliegue:
 
@@ -139,7 +141,7 @@ Usa el siguiente comando para ver todas las opciones que admite el ejecutable en
 ./visual_wake_app --help
 ```
 
-Las opciones se pueden combinar. Por ejemplo, este comando solo verifica el flujo de procesamiento visual y desactiva los servicios de red:
+Las opciones se pueden combinar. Por ejemplo, este comando solo verifica el flujo visual y desactiva los servicios de red:
 
 ```bash
 ./visual_wake_app --no-stt --no-rtsp --no-web --debug
@@ -154,7 +156,7 @@ Las opciones se pueden combinar. Por ejemplo, este comando solo verifica el fluj
 | `--camera DEVICE` | `/dev/video13` | Dispositivo de cámara leído por GStreamer. |
 | `--width N` | `1920` | Ancho de captura de cámara solicitado. |
 | `--height N` | `1080` | Altura de captura de cámara solicitada. |
-| `--fps N` | `30` | Velocidad de fotogramas de cámara solicitada; la velocidad de procesamiento depende del tiempo de inferencia. |
+| `--fps N` | `30` | Frecuencia de fotogramas de cámara solicitada; la frecuencia de procesamiento depende del tiempo de inferencia. |
 | `--attention-dropout-ms N` | `250` | Periodo de gracia, en milisegundos, para una breve pose no válida después de que comience la atención. Establece `0` para desactivarlo. |
 | `--no-stt` | STT habilitado | No iniciar el reconocimiento de voz; probar solo la máquina de estados de activación visual. |
 
@@ -172,7 +174,7 @@ Las opciones se pueden combinar. Por ejemplo, este comando solo verifica el fluj
 | `--stt-chunk-ms N` | `160` | Duración de cada fragmento de audio pasado a STT, en milisegundos. |
 | `--speech-rms-threshold F` | `0.006` | Umbral RMS que detecta el inicio del habla; auméntalo en salas más ruidosas. |
 | `--stt-min-speech-ms N` | `160` | Duración mínima de habla aceptada en una sesión de reconocimiento, en milisegundos. |
-| `--stt-end-silence-ms N` | `2500` | Duración de silencio que finaliza el reconocimiento después de que comience el habla, en milisegundos. |
+| `--stt-end-silence-ms N` | `2500` | Duración de silencio que finaliza el reconocimiento después de que comienza el habla, en milisegundos. |
 | `--stt-start-timeout-ms N` | `4000` | Tiempo de espera si el habla no comienza después de la activación visual, en milisegundos. |
 | `--stt-max-ms N` | `30000` | Duración máxima de una sesión de escucha/reconocimiento, en milisegundos. |
 
@@ -180,17 +182,17 @@ Las opciones se pueden combinar. Por ejemplo, este comando solo verifica el fluj
 
 | Opción | Predeterminado | Descripción |
 | --- | --- | --- |
-| `--no-rtsp` | RTSP habilitado | Desactivar el flujo RTSP anotado con cajas de rostro, puntos de referencia y pose. |
+| `--no-rtsp` | RTSP habilitado | Desactivar el flujo RTSP anotado con cuadros de rostro, puntos de referencia y pose. |
 | `--rtsp-port PORT` | `8554` | Puerto del servidor RTSP. |
 | `--rtsp-mount PATH` | `/visual-wake` | Ruta de montaje RTSP; por ejemplo, `/demo` da `rtsp://DEVICE_IP:8554/demo`. |
 | `--rtsp-width N` | `960` | Ancho de salida RTSP. |
 | `--rtsp-height N` | `540` | Altura de salida RTSP. |
-| `--rtsp-fps N` | `15` | Velocidad de fotogramas de salida RTSP declarada; la velocidad real depende del rendimiento de inferencia. |
+| `--rtsp-fps N` | `15` | Frecuencia de fotogramas de salida RTSP declarada; la frecuencia real depende del rendimiento de inferencia. |
 | `--no-web` | Servicio web habilitado | Desactivar el panel HTTP y WebSocket. |
 | `--web-port PORT` | `8080` | Puerto para el panel web y el endpoint de estado. |
 | `--web-page PATH` | `web/dashboard.html` | Ruta a una página de panel personalizada. |
-| `--dashboard` | Off | Mostrar un panel en la terminal interactiva local. No se puede combinar con `--debug`. |
-| `--debug` | Off | Imprimir registros de inicio, por fotograma de pose, nivel de audio, RTSP, contrato de tensores y rendimiento de STT. No se puede combinar con `--dashboard`. |
+| `--dashboard` | Desactivado | Mostrar un panel en la terminal interactiva local. No se puede combinar con `--debug`. |
+| `--debug` | Desactivado | Imprimir registros de inicio, por fotograma de pose, nivel de audio, RTSP, contracción de tensores y rendimiento de STT. No se puede combinar con `--dashboard`. |
 
 ## Dos formas de monitorizar el sistema
 
@@ -238,14 +240,14 @@ En el ordenador host, usa:
 ffplay -rtsp_transport tcp rtsp://192.168.42.1:8554/visual-wake
 ```
 
-La superposición muestra cajas de rostro, los 98 puntos de referencia, yaw/pitch sin procesar, `facing=YES/NO` y el estado actual. El verde significa que la pose está dentro de los umbrales de entrada, el naranja significa que es válida pero está fuera de los umbrales, y el rojo significa que la pose no es válida.
+La superposición muestra los recuadros de la cara, los 98 puntos de referencia, el yaw/pitch en bruto, `facing=YES/NO` y el estado actual. El verde significa que la pose está dentro de los umbrales de entrada, el naranja significa que es válida pero está fuera de los umbrales, y el rojo significa que la pose no es válida.
 
-## Ajuste fino
+## Ajuste
 
 La colocación de la cámara, las características de la lente y el ruido de la sala afectan a la experiencia. Ajusta en este orden:
 
-1. Usa `--debug` para observar yaw/pitch mientras miras a la cámara y luego ajusta los umbrales de entrada.
-2. Ajusta `--attention-dropout-ms` para oclusiones breves; usa `0` para desactivar el periodo de gracia.
+1. Usa `--debug` para observar el yaw/pitch mientras miras a la cámara y luego ajusta los umbrales de entrada.
+2. Ajusta `--attention-dropout-ms` para oclusiones breves; usa `0` para desactivar el período de gracia.
 3. Observa el RMS de audio en el entorno objetivo y ajusta `--speech-rms-threshold`.
 4. Usa `--stt-end-silence-ms`, `--stt-start-timeout-ms` y `--stt-max-ms` para equilibrar la capacidad de respuesta frente a comandos más largos.
 
@@ -256,10 +258,10 @@ El controlador utiliza suavizado EMA e histéresis de entrada/salida. Una sola p
 | Problema | Causa probable | Solución |
 | --- | --- | --- |
 | La compilación no puede encontrar OpenCV o RKNN | Falta el entorno del SDK o el runtime es incompatible | Verifica `RECAMERA_PRO_SDK`, carga el `env.sh` del SDK y usa RKNN 2.3.2. |
-| No se pueden encontrar los archivos del modelo | No se conservó la estructura de despliegue | Confirma que `models/` y `web/dashboard.html` existan en el directorio de ejecución. |
-| El despertar visual nunca se activa | Cámara incorrecta, umbrales estrictos o cara pequeña | Usa `--debug` y la superposición RTSP para comprobar `/dev/video13`, los puntos de referencia y el cabeceo/giro. |
+| No se pueden encontrar los archivos de modelo | No se conservó la estructura de despliegue | Confirma que `models/` y `web/dashboard.html` existen en el directorio de ejecución. |
+| El despertar visual nunca se activa | Cámara incorrecta, umbrales estrictos o cara pequeña | Usa `--debug` y la superposición RTSP para comprobar `/dev/video13`, los puntos de referencia y el yaw/pitch. |
 | STT informa un error de audio | `ai_asr` no está disponible o su formato es diferente | En el dispositivo, prueba `arecord -D ai_asr -f S16_LE -r 16000 -c 4 -d 5 /tmp/test.wav`. |
-| La página web no está disponible | El puerto es inaccesible o el servicio web fue deshabilitado | No uses `--no-web`; prueba `http://DEVICE_IP:8080/health`. |
+| La página web no está disponible | El puerto es inaccesible o el servicio web se desactivó | No uses `--no-web`; prueba `http://DEVICE_IP:8080/health`. |
 | No se puede reproducir RTSP | Problema de red, puerto o plugin de GStreamer | Usa reproducción TCP y verifica los elementos de GStreamer de firmware requeridos. |
 
 ## Soporte técnico y debate sobre el producto

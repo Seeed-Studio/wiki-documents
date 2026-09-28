@@ -1,6 +1,6 @@
 ---
-description: このWikiでは、エピソードの削除、データセットのマージなどを含むLeRobotデータセットユーティリティについて説明します。
-title: Lerobot データセットツール
+description: この Wiki では、エピソードの削除、データセットのマージなどを含む LeRobot データセットユーティリティについて説明します。
+title: SO-Arm データセットツール
 keywords:
   - Lerobot
   - Hugging Face

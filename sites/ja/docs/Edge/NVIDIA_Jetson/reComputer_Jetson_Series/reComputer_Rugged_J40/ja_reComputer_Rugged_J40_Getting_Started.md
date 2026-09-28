@@ -13,7 +13,7 @@ last_update:
   date: 09/18/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-09-18'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
@@ -34,12 +34,12 @@ reComputer Rugged J4012 は、NVIDIA Jetson Orin NX 16GB を搭載した IP66 �
 ## 特長
 
 - **IP66 防水**：すべての外部インターフェースに M12 防水コネクタを採用した完全密閉エンクロージャ
-- **ファンレスパッシブ冷却**：0.7 m/s の気流下で -20°C ～ +60°C の範囲で静音動作
+- **ファンレスパッシブ冷却**：0.7 m/s の気流条件で -20°C ～ +60°C の範囲で静音動作
 - **堅牢・耐振動**：3 Grms @ 5–500 Hz、1 時間/軸 — 車載および船舶用途に適合
 - **豊富な産業用 I/O**：CAN-FD（アイソレート）、RS-232/422/485、DI/DO、すべて M12 A コードコネクタ経由
 - **柔軟なネットワーキング**：4× PoE GbE + 1× GbE（M12）、M.2 Key E（Wi-Fi/BT）、M.2 Key B（5G/GPS）
 - **広い電圧入力範囲**：M12 B/A コードコネクタ経由で 19–48 V DC
-- **各種認証**：CE、FCC、RoHS、REACH
+- **認証**：CE、FCC、RoHS、REACH
 
 ## 仕様
 
@@ -99,7 +99,7 @@ reComputer Rugged J4012 は、NVIDIA Jetson Orin NX 16GB を搭載した IP66 �
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={2}>4× USB 3.2 Type-A（M12 防水）+ 1× USB 2.0/3.0 Type-C（書き込み用、防水キャップ付き）+ 1× USB Type-C（デバッグ）</td>
+      <td colSpan={2}>4× USB 3.2 Type-A（M12 防水）+ 1× USB 2.0/3.0 Type-C（書き込み用、防水キャップ付き）+ 1× USB Type-C（デバッグ用）</td>
     </tr>
     <tr>
       <td>ディスプレイ</td>
@@ -202,7 +202,7 @@ reComputer Rugged J4012 は、NVIDIA Jetson Orin NX 16GB を搭載した IP66 �
 |-----|-------|--------|-------------|
 | PWR | 緑 | On | デバイスに電源が供給されています |
 | PWR | 緑 | Off | デバイスに電源が供給されていません |
-| ACT | 緑 | Flashing | SSD アクセス動作 |
+| ACT | 緑 | Flashing | SSD アクセス動作中 |
 
 ## JetPack の書き込み
 
@@ -212,7 +212,7 @@ BSP が利用可能になり次第、書き込み手順を追加します。書�
 
 最新の書き込みガイドについては、[Flash BSP with Jetpack to Selected Jetson](/ja/flash/jetpack_to_selected_product) ページを参照してください。
 
-### 事前準備
+### 前提条件
 
 - reComputer Rugged J40
 - 電源（19–48 V DC）
@@ -260,7 +260,10 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## リソース
 
-- [reComputer Rugged J401 データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf)
+- [reComputer Rugged J40 データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf) 
+- [キャリアボード回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf)
+- [PSE ボード回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf)
+- [3D ファイル](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp)
 - [Linux_for_Tegra ソースコード](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson デバイス比較](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 

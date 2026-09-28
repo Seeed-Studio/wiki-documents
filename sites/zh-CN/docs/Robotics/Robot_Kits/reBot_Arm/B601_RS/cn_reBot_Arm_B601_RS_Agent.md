@@ -1,6 +1,6 @@
 ---
 description: wrc_demo 操作指南：reBot Arm B601-RS 视觉夹取 demo 的完整步骤——环境配置、模型下载、LLM 切换、手眼标定、demo 运行、故障排查。
-title: reBot Arm B601-RS 具身 Agent 设计框架
+title: B601-RS Agent Claw
 keywords:
   - wrc_demo
   - reBot Arm B601-RS

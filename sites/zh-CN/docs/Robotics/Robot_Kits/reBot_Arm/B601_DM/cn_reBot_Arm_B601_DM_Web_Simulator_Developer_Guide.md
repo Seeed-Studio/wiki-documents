@@ -1,6 +1,6 @@
 ---
-description: 本教程面向开发者，介绍 reBot Arm B601-DM 数字孪生与控制系统中 reBotArm_simulator-DM 网页控制台与 ROS2/MuJoCo 仿真链路的架构、运行方式、ROS2 桥接、LLM/MCP 接入与二次开发流程。
-title: reBot Arm B601-DM 数字孪生与控制系统
+description: 本教程面向开发者，介绍 ReBot Arm 数字孪生与控制系统 — B601-DM 中 reBotArm_simulator-DM 网页控制台与 ROS2/MuJoCo 仿真链路的架构、运行方式、ROS2 桥接、LLM/MCP 接入与二次开发流程。
+title: B601-DM Web控制器
 keywords:
   - reBot Arm
   - B601-DM
@@ -36,7 +36,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

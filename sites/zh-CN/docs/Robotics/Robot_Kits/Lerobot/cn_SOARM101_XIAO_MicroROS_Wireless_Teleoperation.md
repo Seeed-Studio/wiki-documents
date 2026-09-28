@@ -1,6 +1,6 @@
 ---
-description: 使用两块 XIAO ESP32-C3 Bus Servo Adapter 和基于 Wi-Fi UDP 的 micro-ROS，为 SO-ARM101 主从臂构建有线回退与双无线兼容的低延迟 ROS 2 遥操作链路。
-title: 使用 XIAO ESP32-C3 和 micro-ROS 实现 SO-ARM101 有线与无线遥操作
+description: 使用 XIAO ESP32-C3 Bus Servo Adapter 和基于 Wi-Fi UDP 的 micro-ROS，为 SO-ARM101 跟随臂构建一个低延迟的无线 ROS 2 遥操作链路。
+title: SO-Arm 无线遥操作
 keywords:
   - SO-ARM101
   - XIAO ESP32-C3
@@ -110,7 +110,7 @@ PC 和 XIAO 必须连接到同一个本地网络。演示时可以使用手机�
 - ROS 2 Humble
 - 支持 Feetech 的 LeRobot
 - micro-ROS Agent
-- Python 3.10
+- Python 3.12
 - PlatformIO
 
 如果尚未安装 micro-ROS Agent 和 PlatformIO，请先安装：

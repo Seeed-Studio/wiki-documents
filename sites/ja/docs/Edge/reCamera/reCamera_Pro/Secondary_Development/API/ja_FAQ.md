@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_faq
+slug: /recamera_pro_api_faq_legacy
+draft: true
 sku: 10003420
 sidebar_position: 6
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_api_faq/
+url: https://wiki.seeedstudio.com/ja/recamera_pro_api_faq_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Troubleshooting/api_troubleshooting.md (https://wiki.seeedstudio.com/ja/recamera_pro_api_faq/), which now serves the original slug /recamera_pro_api_faq. This file is kept for history as a draft (slug /recamera_pro_api_faq_legacy) and is excluded from production builds. Do not link here. -->
 
 # FAQ
 
@@ -45,7 +47,7 @@ IP アドレス、ゲートウェイ、または Wi-Fi パラメータを変更�
 
 ### /network/wlan と /network/wifi の違いは何ですか？
 
-`/network/wlan` は無線 IPv4 設定（アドレス、ゲートウェイ、マスク、DNS）のためのものです。`/network/wifi` は現在の Wi-Fi 接続情報の取得、接続、および切断のためのものです。
+`/network/wlan` は無線 IPv4 設定（アドレス、ゲートウェイ、マスク、DNS）用です。`/network/wifi` は現在の Wi-Fi 接続情報の取得、接続、および切断用です。
 
 ### Wi-Fi に接続する際、sSsid には何を指定すればよいですか？
 
@@ -55,17 +57,17 @@ IP アドレス、ゲートウェイ、または Wi-Fi パラメータを変更�
 
 ### HTTPS でアクセスすると、ブラウザが信頼されていない証明書だと警告します。どうすればよいですか？
 
-デバイスは自己署名証明書を使用しています。ローカルでのテスト用途であれば、警告を無視して続行して構いません。本番環境で運用する場合は、信頼された証明書をインストールしてください。
+デバイスは自己署名証明書を使用しています。ローカルでのテストであれば、警告を無視して続行して構いません。本番環境での運用では、信頼された証明書をインストールしてください。
 
 ### HTTPS を有効にした後、HTTP でデバイスにアクセスできません。どうすればよいですか？
 
-HTTPS を有効にした後は、以降すべてのアクセスで `https://<DEVICE_IP>` を使用してください。
+HTTPS を有効にした後は、以降のアクセスにはすべて `https://<DEVICE_IP>` を使用してください。
 
 ## API パス
 
 ### 一部のパスは /api/v1/ で始まり、他は /cgi-bin/ で始まるのはなぜですか？
 
-ほとんどのエンドポイントは、CGI ベースパス `/cgi-bin/entry.cgi` を必要とします。シリアルポートおよびファイル関連のエンドポイントは、CGI レイヤーをバイパスする直接パスであり、`/api/v1/...` でアクセスします。
+ほとんどのエンドポイントは CGI ベースパス `/cgi-bin/entry.cgi` を必要とします。シリアルポートおよびファイル関連のエンドポイントは CGI レイヤーをバイパスする直接パスであり、`/api/v1/...` でアクセスします。
 
 ### エンドポイントが 404 を返すのはなぜですか？
 

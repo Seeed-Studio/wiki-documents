@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、SocketCAN 接続、アーム制御、RViz 可視化、MoveIt 2 連携を含む reBot Arm B601-RS 用 ROS2 control ワークスペースのセットアップ方法を説明します。
-title: reBot Arm B601-RS ROS2 連携
+description: このチュートリアルでは、SocketCAN 接続、アーム制御、RViz による可視化、MoveIt 2 との統合を含む、reBot Arm B601-RS 用の ROS2 control ワークスペースのセットアップ方法を説明します。
+title: B601-RS と ROS2
 keywords:
   - reBot Arm
   - B601-RS
@@ -10,8 +10,8 @@ keywords:
   - SocketCAN
   - RViz
   - MoveIt 2
-  - Robot Arm
-  - Robotics
+  - ロボットアーム
+  - ロボティクス
 slug: /rebot_arm_b601_rs_ros2_integration
 last_update:
   date: 2026-06-10

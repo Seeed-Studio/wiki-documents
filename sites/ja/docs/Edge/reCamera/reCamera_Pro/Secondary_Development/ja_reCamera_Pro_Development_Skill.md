@@ -10,15 +10,17 @@ keywords:
   - RV1126B
   - Edge AI
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/cpp_skill/recamera_skill.png
-slug: /recamera_pro_development_cpp_skill
+slug: /recamera_pro_development_cpp_skill_legacy
+draft: true
 sidebar_position: 3
 last_update:
   date: 2026-08-14
   author: yylin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-18'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_development_cpp_skill/
+updatedAt: '2026-08-17'
+url: https://wiki.seeedstudio.com/ja/recamera_pro_development_cpp_skill_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/ai_coding_agents.md (https://wiki.seeedstudio.com/ja/recamera_pro_development_cpp_skill/), which now serves the original slug /recamera_pro_development_cpp_skill. This file is kept for history as a draft (slug /recamera_pro_development_cpp_skill_legacy) and is excluded from production builds. Do not link here. -->
 
 # AI コーディングエージェントで reCamera Pro アプリケーションを開発する
 
@@ -26,7 +28,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_development_cpp_skill/
 
 ## はじめに
 
-[reCamera Pro Development Skill](https://github.com/Seeed-Projects/recamera-pro-development-skill) は、reCamera Pro 固有の手順、スクリプト、技術リファレンス、およびネイティブ C++ アプリケーションテンプレートを AI コーディングエージェント向けにパッケージ化したものです。これをインストールすると、アプリケーションを自然言語で記述し、エージェントにモデル変換とネイティブ開発ワークフローの準備を任せることができます。
+[reCamera Pro Development Skill](https://github.com/Seeed-Projects/recamera-pro-development-skill) は、reCamera Pro 固有の手順、スクリプト、技術リファレンス、および AI コーディングエージェント向けのネイティブ C++ アプリケーションテンプレートをパッケージ化したものです。これをインストールすると、アプリケーションを自然言語で説明するだけで、エージェントがモデル変換とネイティブ開発ワークフローを準備してくれます。
 
 例えば、エージェントに次のようなことを依頼できます：
 
@@ -35,17 +37,17 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_development_cpp_skill/
 - GStreamer でカメラフレームをキャプチャする
 - マイク入力のキャプチャやスピーカー再生を追加する
 - RTSP 推論パイプラインを開発する
-- ホスト、クロスコンパイラ、sysroot、ターゲットライブラリ、および生成された ELF ファイルを検査する
+- ホスト、クロスコンパイラ、sysroot、ターゲットライブラリ、生成された ELF ファイルを調査する
 
 このリポジトリは、OpenAI Codex、Claude Code、GitHub Copilot、Cursor、Gemini CLI 向けのエディションを提供します。各エディションは同じ reCamera Pro 開発ナレッジを使用しつつ、エージェント固有のインストール方法と呼び出し手順を備えています。
 
 :::note
-このスキルは、**RV1126B SoC と aarch64 Linux を搭載した reCamera Pro 専用**です。SG2002/riscv64 reCamera プラットフォームを対象としたものではありません。
+このスキルは **RV1126B SoC と aarch64 Linux を搭載した reCamera Pro 専用**です。SG2002/riscv64 reCamera プラットフォーム向けではありません。
 :::
 
 ## ハードウェアの準備
 
-- reCamera Pro 1 台
+- reCamera Pro 本体 1 台
 - モデル変換とクロスコンパイル用の Linux コンピュータ、または WSL を備えた Windows コンピュータ
 - リポジトリおよび必要な開発用依存関係をダウンロードするためのネットワーク接続
 
@@ -98,14 +100,14 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_development_cpp_skill/
 
 ### 方法 1: エージェントにインストールさせる
 
-エージェントが Git リポジトリからスキルをインストールする機能をサポートしている場合、次のリクエストを送信します：
+エージェントが Git リポジトリからスキルをインストールする機能をサポートしている場合は、次のリクエストを送信します：
 
 ```text
 Install the reCamera Pro development skill from:
 https://github.com/Seeed-Projects/recamera-pro-development-skill.git
 ```
 
-使用しているエージェント名に言及し、それに対応するブランチとインストールディレクトリが選択されるようにします。
+使用しているエージェント名に言及して、対応するブランチとインストールディレクトリが選択されるようにします。
 
 ### 方法 2: 手動でインストールする
 
@@ -126,7 +128,7 @@ cd recamera-pro-development-skill
 クローンしたリポジトリは保持しておいてください。後でスキルを更新するには、同じエージェントブランチから最新の変更を取得し、そのブランチの README とインストール手順に従います。
 :::
 
-## スキルを使用する
+## スキルを使う
 
 プロンプト内でスキル名を明示的に指定できます：
 
@@ -135,7 +137,7 @@ Use the reCamera Pro development skill to check whether my computer is ready
 to cross-compile native applications for reCamera Pro.
 ```
 
-スキルがインストールされた後は、タスクを自然な言葉で記述することもできます。エージェントは、関連するモデル変換、クロスコンパイル、カメラ、オーディオ、ストリーミングに関するガイダンスを読み込みます。
+スキルをインストールした後は、タスクを自然な言葉で説明することもできます。エージェントは、関連するモデル変換、クロスコンパイル、カメラ、オーディオ、ストリーミングに関するガイダンスを読み込みます。
 
 ### ONNX モデルを変換する
 
@@ -145,10 +147,10 @@ to an RKNN model for RV1126B. Use representative images in calibration/images
 for INT8 calibration and compare the RKNN output with the ONNX output.
 ```
 
-エージェントはモデルの入力および出力契約を確認し、`rv1126b` 向けに RKNN-Toolkit2 2.3.2 を構成し、生成されたモデルとともに前処理および変換メタデータを保持します。
+エージェントはモデルの入出力契約を確認し、`rv1126b` 向けに RKNN-Toolkit2 2.3.2 を設定し、生成されたモデルとともに前処理および変換メタデータを保持します。
 
 :::warning
-モデルの前処理、色順序、正規化、出力セマンティクスを推測しないでください。INT8 量子化を要求する場合は、元のモデルソースと代表的なキャリブレーション画像を提供してください。
+モデルの前処理、色順序、正規化、出力の意味を推測しないでください。INT8 量子化を要求する場合は、元のモデルソースと代表的なキャリブレーション画像を提供してください。
 :::
 
 ### ネイティブカメラアプリケーションをビルドする
@@ -185,13 +187,13 @@ compatibility with the board sysroot.
 
 エージェントは次の一般的なワークフローに従います：
 
-1. Linux または WSL ホスト、Conda インストール、クロスコンパイラ、sysroot、およびローカルの RKNN Runtime ファイルを検査する。
-2. ONNX モデルの契約を検査し、そのソース、ライセンス、入力レイアウト、正規化、色順序、および出力セマンティクスを記録する。
+1. Linux または WSL ホスト、Conda インストール、クロスコンパイラ、sysroot、およびローカルの RKNN Runtime ファイルを調査する。
+2. ONNX モデルの契約を調査し、そのソース、ライセンス、入力レイアウト、正規化、色順序、出力の意味を記録する。
 3. `rv1126b` 向けに RKNN-Toolkit2 2.3.2 を使用してモデルを変換する。INT8 の場合は代表的なキャリブレーションデータを使用する。
 4. アプリケーションに統合する前に、RKNN 出力を元の ONNX モデルと比較する。
 5. ネイティブ C/C++ アプリケーションを作成または調整し、reCamera Pro 互換の sysroot に対してクロスコンパイルする。
-6. 生成された実行ファイルが aarch64 であり、その RKNN、GStreamer、libc、C++ ABI、およびランタイムパスがデバイスと互換であることを確認する。
-7. 実行ファイル、RKNN モデル、実行コマンド、およびデプロイ用の想定入力/出力契約を準備する。
+6. 生成された実行ファイルが aarch64 であり、その RKNN、GStreamer、libc、C++ ABI、およびランタイムパスがデバイスと互換性があることを確認する。
+7. デプロイ用に、実行ファイル、RKNN モデル、実行コマンド、および想定される入出力契約を準備する。
 
 デフォルトでは、このスキルは成果物をローカルでビルドおよび検査します。reCamera Pro 上でのファイル転送と実行は、あなたが明示的に要求し、許可した場合にのみ行われます。
 
@@ -207,14 +209,14 @@ compatibility with the board sysroot.
 
 ## トラブルシューティング
 
-| 問題 | 想定される原因 | 解決策 |
+| 問題 | 考えられる原因 | 解決策 |
 | --- | --- | --- |
-| スキルが一覧に表示されない | エージェントがユーザーレベルのスキルディレクトリを再読み込みしていない | エージェントを再起動し、上記のディレクトリにスキルがインストールされていることを確認する |
+| スキルが一覧に表示されない | エージェントがユーザーレベルのスキルディレクトリを再読み込みしていない | エージェントを再起動し、上記に示したディレクトリにスキルがインストールされていることを確認する |
 | 誤ったプラットフォームが選択される | SG2002/riscv64 reCamera 向けの手順がタスクに混在している | ターゲットが reCamera Pro、RV1126B、aarch64 であることを明示する |
-| RKNN 変換が失敗する | Toolkit バージョン、ONNX オペレータサポート、またはモデル入力契約が非互換 | まずエージェントに ONNX モデルを検査させ、RKNN-Toolkit2 2.3.2 を使用する |
+| RKNN 変換が失敗する | Toolkit バージョン、ONNX オペレータサポート、またはモデル入力契約が非互換 | まずエージェントに ONNX モデルを調査させ、RKNN-Toolkit2 2.3.2 を使用する |
 | INT8 精度が低い | キャリブレーション画像がない、または代表的でない | 代表的なデータセットを作成し、1 行につき 1 つの画像パスを列挙する |
-| 実行ファイルが x86-64 である | aarch64 クロスコンパイラではなくホストコンパイラが使用された | ターゲット互換のコンパイラと reCamera Pro sysroot を使用して再ビルドする |
-| バイナリがライブラリを読み込めない | sysroot、ABI、またはランタイム検索パスがボードと一致していない | エージェントに ELF 依存関係を検査させ、各ターゲットライブラリをデバイスと比較する |
+| 実行ファイルが x86-64 になっている | aarch64 クロスコンパイラではなくホストコンパイラが使用された | ターゲット互換のコンパイラと reCamera Pro sysroot を使用して再ビルドする |
+| バイナリがライブラリを読み込めない | sysroot、ABI、またはランタイム検索パスがボードと一致していない | エージェントに ELF 依存関係を調査させ、各ターゲットライブラリをデバイスと比較する |
 | カメラフレームの色や推論結果がおかしい | NV12 から RGB/BGR への変換や正規化がモデルと一致していない | モデル契約を再確認し、前処理を明示的にする |
 
 ## リソース
@@ -225,7 +227,7 @@ compatibility with the board sysroot.
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなレベルのサポートを提供しています。お客様それぞれの好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなレベルのサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

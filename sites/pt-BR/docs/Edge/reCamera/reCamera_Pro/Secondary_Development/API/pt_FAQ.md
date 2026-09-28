@@ -1,12 +1,13 @@
 ﻿---
-description: Introdução aos possíveis problemas que podem surgir ao usar a API.
+description: Introdução a possíveis problemas que podem surgir ao usar a API.
 title: FAQ
 keywords:
   - Edge AI
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_faq
+slug: /recamera_pro_api_faq_legacy
+draft: true
 sku: 10003420
 sidebar_position: 6
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_faq/
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_faq_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Troubleshooting/api_troubleshooting.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_api_faq/), which now serves the original slug /recamera_pro_api_faq. This file is kept for history as a draft (slug /recamera_pro_api_faq_legacy) and is excluded from production builds. Do not link here. -->
 
 # FAQ
 
@@ -31,7 +33,7 @@ Várias tentativas de login com falha acionaram um bloqueio baseado em IP. Aguar
 
 ### O login é bem-sucedido, mas as APIs subsequentes retornam 401, o que devo fazer?
 
-O Token está ausente ou expirado. Certifique-se de que o cabeçalho da requisição inclua `Cookie: token=<JWT_TOKEN>` e que o Token não tenha excedido seu tempo de vida de 24 horas. Se estiver expirado, faça login novamente.
+O Token está ausente ou expirado. Certifique-se de que o cabeçalho da requisição inclua `Cookie: token=<JWT_TOKEN>` e de que o Token não tenha excedido seu tempo de vida de 24 horas. Se estiver expirado, faça login novamente.
 
 ### Por quanto tempo o Token é válido?
 
@@ -65,7 +67,7 @@ Após habilitar HTTPS, use `https://<DEVICE_IP>` para todos os acessos subsequen
 
 ### Por que alguns caminhos começam com /api/v1/ e outros com /cgi-bin/?
 
-A maioria dos endpoints exige o caminho base CGI `/cgi-bin/entry.cgi`. Os endpoints de porta serial e de arquivos são caminhos diretos que ignoram a camada CGI e são acessados em `/api/v1/...`.
+A maioria dos endpoints requer o caminho base CGI `/cgi-bin/entry.cgi`. Endpoints de porta serial e de arquivos são caminhos diretos que ignoram a camada CGI e são acessados em `/api/v1/...`.
 
 ### Por que um endpoint retorna 404?
 
@@ -73,7 +75,7 @@ A versão atual do firmware pode não implementar esse endpoint ou o caminho pod
 
 ## Suporte Técnico e Discussão sobre o Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

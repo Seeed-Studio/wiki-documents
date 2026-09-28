@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_device-and-system
+slug: /recamera_pro_api_device-and-system_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_device-and-system/
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_device-and-system_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/device_system.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_api_device-and-system/), which now serves the original slug /recamera_pro_api_device-and-system. This file is kept for history as a draft (slug /recamera_pro_api_device-and-system_legacy) and is excluded from production builds. Do not link here. -->
 
 # Dispositivo & Sistema
 
@@ -32,7 +34,7 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_device-and-system/
 | GET | `/system/ssh` | Consultar status de execução do SSH |
 | POST | `/system/ssh` | Iniciar ou parar o SSH |
 | GET | `/system/secure` | Consultar status do HTTPS |
-| POST | `/system/secure` | Ativar ou desativar o HTTPS |
+| POST | `/system/secure` | Ativar ou desativar HTTPS |
 | GET | `/config/export` | Exportar configuração do dispositivo |
 | POST | `/config/upload` | Importar configuração do dispositivo |
 | POST | `/system/reboot` | Reiniciar o dispositivo |
@@ -62,7 +64,7 @@ Resposta:
 | `sSensorModel` | Modelo da placa de sensor |
 | `sBasePlateModel` | Modelo da placa base |
 
-## Obter status dos recursos do sistema
+## Obter status de recursos do sistema
 
 ```text
 GET /system/resource-info
@@ -124,7 +126,7 @@ Resposta:
 
 | Campo | Descrição |
 |---|---|
-| `sMethod` | Fonte de tempo, `ntp` ou `manual` |
+| `sMethod` | Fonte de hora, `ntp` ou `manual` |
 | `dNtpConfig.sAddress` | Endereço do servidor NTP |
 | `dNtpConfig.sPort` | Porta NTP |
 | `dNtpConfig.status` | Status do NTP, `0` significa sucesso |
@@ -138,7 +140,7 @@ Resposta:
 PUT /system/time
 ```
 
-Corpo da requisição no modo NTP:
+Corpo da requisição em modo NTP:
 
 ```json
 {
@@ -152,7 +154,7 @@ Corpo da requisição no modo NTP:
 }
 ```
 
-Corpo da requisição no modo manual:
+Corpo da requisição em modo manual:
 
 ```json
 {
@@ -286,7 +288,7 @@ Resposta:
 }
 ```
 
-Após ativar o HTTPS, use `https://<DEVICE_IP>` para acessos posteriores.
+Após ativar o HTTPS, use `https://<DEVICE_IP>` para acessos subsequentes.
 
 ## Gerenciamento de configuração
 

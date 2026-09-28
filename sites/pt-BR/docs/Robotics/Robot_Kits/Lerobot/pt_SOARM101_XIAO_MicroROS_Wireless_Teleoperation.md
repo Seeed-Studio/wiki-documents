@@ -1,6 +1,6 @@
 ---
-description: Crie um link de teleoperação ROS 2 com fio ou sem fio e baixa latência para um SO-ARM101 líder e um seguidor sem fio usando XIAO ESP32-C3 Bus Servo Adapters e micro-ROS via Wi-Fi UDP.
-title: Teleoperação com fio e sem fio do SO-ARM101 com XIAO ESP32-C3 e micro-ROS
+description: Crie um link de teleoperação ROS 2 sem fio e de baixa latência para um seguidor SO-ARM101 usando o XIAO ESP32-C3 Bus Servo Adapter e micro-ROS via Wi-Fi UDP.
+title: SO-Arm com Teleoperação Sem Fio com XIAO
 keywords:
   - SO-ARM101
   - XIAO ESP32-C3
@@ -19,7 +19,7 @@ updatedAt: '2026-09-20'
 url: https://wiki.seeedstudio.com/pt-br/soarm101_xiao_microros_wireless_teleoperation/
 ---
 
-# Teleoperação com fio e sem fio do SO-ARM101 com XIAO ESP32-C3 e micro-ROS
+# Teleoperação com e sem fio do SO-ARM101 com XIAO ESP32-C3 e micro-ROS
 
 :::note Community Contribution
 Este tutorial é uma contribuição da comunidade por [@linao681](https://github.com/linao681). Obrigado por compartilhar este projeto com a comunidade Seeed Studio!
@@ -27,9 +27,9 @@ Este tutorial é uma contribuição da comunidade por [@linao681](https://github
 
 ## Introdução
 
-Este tutorial documenta duas maneiras suportadas de controlar um SO-ARM101 seguidor a partir de um SO-ARM101 líder:
+Este tutorial documenta duas formas suportadas de controlar um seguidor SO-ARM101 a partir de um líder SO-ARM101:
 
-1. **Líder com fio + seguidor sem fio:** o líder usa uma placa padrão de driver de servos de barramento USB.
+1. **Líder com fio + seguidor sem fio:** o líder usa uma placa padrão de controle de servos de barramento USB.
 2. **Líder sem fio + seguidor sem fio:** cada braço usa um Seeed Studio XIAO ESP32-C3 Bus Servo Adapter.
 
 Em ambos os modos, o seguidor se comunica com o ROS 2 por meio de micro-ROS via Wi-Fi UDP. O XIAO do líder sem fio lê as seis posições dos atuadores do líder e publica o estado somente leitura; ele nunca escreve comandos de posição para o braço líder.
@@ -43,7 +43,7 @@ A implementação fornece:
 - verificações de calibração, limites de junta, passo de comando e integridade do barramento;
 - verificações de sequência, watchdogs de feedback, comportamento seguro de manter o último comando e recuperação de sessão;
 - descoberta dinâmica do Agent em tempo de execução a partir do endereço Wi-Fi atual do computador, de modo que uma mudança de endereço do hotspot não exija regravação do firmware;
-- fallback de líder com fio para diagnóstico e operação quando o líder sem fio não estiver disponível;
+- fallback com líder com fio para diagnóstico e operação quando o líder sem fio não estiver disponível;
 - verificações automáticas de pré-voo e inicialização da teleoperação com um único comando.
 
 O código-fonte completo está disponível no [repositório soarm101-drone-teleop](https://github.com/linao681/soarm101-drone-teleop).
@@ -76,13 +76,13 @@ follower XIAO ESP32-C3 Bus Servo Adapter
 SO-ARM101 follower, 6 × STS3215
 ```
 
-O PC e o XIAO devem estar conectados à mesma rede local. Um hotspot de celular ou um ponto de acesso dedicado de 2,4 GHz pode ser usado para uma demonstração.
+O PC e o XIAO devem estar conectados à mesma rede local. Um hotspot de celular ou um ponto de acesso dedicado de 2,4 GHz podem ser usados para demonstração.
 
 ## Hardware
 
 - 1 × SO-ARM101 líder
 - 1 × SO-ARM101 seguidor
-- 1 × placa padrão de driver de servos de barramento USB para calibração do líder e fallback com fio
+- 1 × placa padrão de controle de servos de barramento USB para calibração do líder e fallback com fio
 - 1 × XIAO ESP32-C3 Bus Servo Adapter para o seguidor
 - 1 × XIAO ESP32-C3 Bus Servo Adapter adicional para o modo de líder sem fio
 - 2 × fontes de alimentação para o braço com especificação correta
@@ -97,7 +97,7 @@ Este firmware de referência foi testado com o seguidor SO-ARM101 padrão de 5 V
 - Desconecte a alimentação dos servos antes de trocar qualquer cabo de servo.
 - Use a tensão especificada para a sua versão exata do SO-ARM101. Não conecte uma fonte de 12 V a um braço de 5 V.
 - A porta USB não fornece energia suficiente para os servos.
-- Faça o primeiro teste em uma bancada estável com um desligamento de energia de emergência claramente acessível.
+- Faça o primeiro teste em uma bancada estável com um desligamento de energia de emergência acessível.
 - Se estiver testando perto de um drone, remova as hélices.
 
 :::
@@ -110,7 +110,7 @@ A configuração de host testada é:
 - ROS 2 Humble
 - LeRobot com suporte a Feetech
 - micro-ROS Agent
-- Python 3.10
+- Python 3.12
 - PlatformIO
 
 Instale o micro-ROS Agent e o PlatformIO se eles ainda não estiverem disponíveis:
@@ -144,7 +144,7 @@ O repositório inclui projetos de firmware PlatformIO separados para o seguidor 
 
 ## Etapa 2: Calibrar Ambos os Braços
 
-Calibre primeiro o seguidor com um driver de servos de barramento USB padrão. Substitua `/dev/ttyACM0` pela porta correta:
+Calibre primeiro o seguidor com uma placa padrão de controle de servos de barramento USB. Substitua `/dev/ttyACM0` pela porta correta:
 
 ```bash
 python -m lerobot.scripts.lerobot_calibrate \
@@ -273,7 +273,7 @@ Conecte um XIAO por vez ao computador via USB. Execute os testes nativos e a com
   pio run -e seeed_xiao_esp32c3)
 ```
 
-Depois que os testes e as compilações forem concluídos com sucesso, envie o firmware selecionado:
+Depois que os testes e builds forem aprovados, envie o firmware selecionado:
 
 ```bash
 cd firmware/xiao_soarm
@@ -281,7 +281,7 @@ pio run -e seeed_xiao_esp32c3 --target upload
 pio device monitor -b 115200
 ```
 
-Para o modo de líder sem fio, execute os comandos de upload e monitoramento em `firmware/xiao_soarm_leader`.
+Para o modo de líder sem fio, execute os comandos de upload e monitoramento a partir de `firmware/xiao_soarm_leader`.
 
 Alimente o braço seguidor com sua fonte externa. Uma inicialização bem-sucedida contém mensagens semelhantes a:
 
@@ -292,9 +292,9 @@ IP: 192.168.x.x  RSSI: -xx
 Waiting for micro-ROS Agent...
 ```
 
-`0x3f` significa que todos os seis IDs de servos responderam. Se a calibração não corresponder, o firmware ainda reporta o estado, mas rejeita comandos de movimento.
+`0x3f` significa que todos os seis IDs de servo responderam. Se a calibração não corresponder, o firmware ainda relata o estado, mas rejeita comandos de movimento.
 
-Após a gravação, o cabo USB é necessário apenas para monitoramento serial. Mantenha conectada a alimentação externa de servos do braço correspondente. O firmware do líder desabilita o torque e publica apenas posição/estado; o firmware do seguidor é o componente que executa comandos de posição.
+Após a gravação, o cabo USB é necessário apenas para monitoramento serial. Mantenha conectada a alimentação externa dos servos do braço correspondente. O firmware do líder desabilita o torque e publica apenas posição/estado; o firmware do seguidor é o componente que executa comandos de posição.
 
 ## Etapa 5: Iniciar o micro-ROS Agent e o pré-voo
 
@@ -305,7 +305,7 @@ source /opt/ros/humble/setup.bash
 ./start_soarm_demo.sh --leader wireless --check
 ```
 
-O launcher inicia o Agent e o serviço de descoberta e, em seguida, verifica os tópicos ROS 2 necessários. Quando os XIAOs descobrirem o Agent, seus monitores seriais devem reportar:
+O launcher inicia o Agent e o serviço de descoberta e, em seguida, verifica os tópicos ROS 2 necessários. Quando os XIAOs descobrirem o Agent, seus monitores seriais devem relatar:
 
 ```text
 micro-ROS ready
@@ -326,11 +326,11 @@ ros2 topic echo /joint_states --once
 ros2 topic hz /joint_states
 ```
 
-Não envie valores arbitrários de juntas antes de concluir o handshake de inicialização da pose atual.
+Não envie valores arbitrários de juntas antes de concluir o handshake de inicialização na pose atual.
 
 ## Etapa 6: Execute a teleoperação com fio ou dupla sem fio
 
-Escolha uma das duas entradas de líder. Para o modo com fio, conecte o líder ao computador através do seu driver de servo de barramento USB normal. Para o modo sem fio, alimente o líder com sua fonte externa e deixe o XIAO conectado à rede Wi-Fi configurada.
+Escolha uma das duas entradas de líder. Para o modo com fio, conecte o líder ao computador por meio de seu driver de servo de barramento USB normal. Para o modo sem fio, alimente o líder com sua fonte externa e deixe o XIAO conectado à rede Wi-Fi configurada.
 
 Encontre seu caminho serial estável:
 
@@ -345,7 +345,7 @@ export SOARM_WIFI_SSID="YOUR_2G4_WIFI_SSID"
 export SOARM_PYTHON="$(command -v python)"
 ```
 
-Primeiro execute a verificação de pré-voo sem movimento:
+Primeiro execute a verificação prévia sem movimento:
 
 ```bash
 ./start_soarm_demo.sh --leader wireless --check
@@ -369,7 +369,7 @@ Se todas as verificações forem aprovadas, inicie a teleoperação:
 ./start_soarm_demo.sh --leader wired
 ```
 
-A ponte lê a pose inicial do seguidor e publica repetidamente a mesma pose antes de habilitar o torque. Em seguida, ela usa mapeamento relativo, de modo que o seguidor começa de onde está e segue as mudanças feitas no líder selecionado. Se a sessão sem fio se recuperar, a ponte faz uma transição gradual em direção à pose atual do líder antes de retomar os comandos normais. Pressione `Ctrl+C` para parar; o seguidor mantém sua última posição comandada.
+A ponte lê a pose inicial do seguidor e publica repetidamente a mesma pose antes de habilitar o torque. Em seguida, ela usa mapeamento relativo, de modo que o seguidor começa onde está e segue as mudanças feitas no líder selecionado. Se a sessão sem fio se recuperar, a ponte faz a transição gradual em direção à pose atual do líder antes de retomar os comandos normais. Pressione `Ctrl+C` para parar; o seguidor mantém sua última posição comandada.
 
 :::warning
 
@@ -383,9 +383,9 @@ A implementação de referência inclui várias verificações destinadas a torn
 
 1. **Verificação de identidade dos servos:** todos os seis IDs e números de modelo devem corresponder.
 2. **Verificação de calibração da EEPROM:** offsets de homing e limites devem corresponder à calibração do seguidor compilada no firmware.
-3. **Handshake da pose atual:** o primeiro comando deve estar dentro de `0.05 rad` da pose medida.
+3. **Handshake de pose atual:** o primeiro comando deve estar dentro de `0.05 rad` da pose medida.
 4. **Limites suaves das juntas:** todo comando deve permanecer dentro da faixa calibrada.
-5. **Limite de passo por comando:** após armar, um alvo não pode mudar mais do que `0.25 rad` em um único comando.
+5. **Limite de passo por comando:** após armar, um alvo não pode mudar mais do que `0.25 rad` em um comando.
 6. **Watchdog de feedback:** a ponte no PC para de publicar se o feedback do seguidor for mais antigo que `0.5 s`.
 7. **Recuperação de Wi-Fi:** o XIAO reinicia de forma limpa se o Wi-Fi não conseguir se recuperar em 10 segundos.
 
@@ -408,11 +408,11 @@ Um ou mais servos não responderam:
 - desconecte a alimentação e inspecione os cabos de barramento de três fios;
 - verifique se cada servo tem um ID exclusivo de 1 a 6;
 - verifique a tensão e a corrente nominal da fonte de alimentação;
-- mantenha o barramento dos servos na taxa de baud configurada de 1 Mbps.
+- mantenha o barramento de servos na taxa de baud configurada de 1 Mbps.
 
 ### O firmware relata `calib:0`
 
-A EEPROM do servo não corresponde aos valores compilados em `servo_bus.cpp`. Reconecte o seguidor através da placa controladora USB, recalibre-o, atualize os três arrays de firmware e faça o flash do XIAO novamente.
+A EEPROM do servo não corresponde aos valores compilados em `servo_bus.cpp`. Reconecte o seguidor por meio da placa driver USB, recalibre-o, atualize os três arrays de firmware e faça o flash do XIAO novamente.
 
 ### O Wi-Fi desconecta durante o movimento
 
@@ -440,14 +440,14 @@ O projeto foi exercitado na configuração de referência com:
 - todos os seis servos do seguidor foram detectados (`servo_mask=0x3f`);
 - `/joint_states` foi publicado a aproximadamente 20 Hz;
 - a ponte do líder publicou comandos a 30 Hz;
-- todas as seis juntas seguiram juntas através de um hotspot de telefone;
+- todas as seis juntas seguiram juntas por meio de um hotspot de telefone;
 - o XIAO continuou operando sem seu cabo de dados USB após o flash e a conexão da alimentação externa do braço.
 
-O caminho duplo sem fio e o fallback com fio são ambos suportados pelo launcher atual. Um teste de resistência de referência sem fio foi concluído em 2026-09-20 e durou 783 segundos (cerca de 13 minutos). A execução registrou zero timeouts de comando, zero rejeições de comando e zero recuperações do líder; o feedback teve média de 19,87 Hz, a latência de confirmação de comando foi de 66,0 ms em P50, e o RSSI mínimo observado foi de -65 dBm. Esses números descrevem uma execução de referência, não uma garantia para todos os ambientes Wi-Fi.
+O caminho duplo sem fio e o fallback com fio são ambos suportados pelo launcher atual. Um teste de resistência sem fio de referência foi concluído em 2026-09-20 e durou 783 segundos (cerca de 13 minutos). A execução registrou zero timeouts de comando, zero rejeições de comando e zero recuperações do líder; o feedback teve média de 19,87 Hz, a latência de confirmação de comando foi de 66,0 ms em P50, e o RSSI mínimo observado foi de -65 dBm. Esses números descrevem uma execução de referência, não uma garantia para todos os ambientes Wi-Fi.
 
 ## Referências
 
-- [Project source code](https://github.com/linao681/soarm101-drone-teleop)
+- [Código-fonte do projeto](https://github.com/linao681/soarm101-drone-teleop)
 - [Getting Started with SO-ARM100 and SO-ARM101 in LeRobot](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/)
 - [Getting Started with the XIAO Bus Servo Adapter](https://wiki.seeedstudio.com/pt-br/xiao_bus_servo_adapter/)
 - [micro-ROS](https://micro.ros.org/)

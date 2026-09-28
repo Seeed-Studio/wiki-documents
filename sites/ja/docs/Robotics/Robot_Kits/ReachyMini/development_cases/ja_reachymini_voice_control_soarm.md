@@ -1,5 +1,5 @@
 ---
-description: Reachy Mini 会話アプリを使い、公式ソースコードを一切変更せずに、外部ツール機構を利用して音声コマンドで SO-ARM グリッパーの開閉を制御します。
+description: Reachy Mini 会話アプリを使い、公式ソースコードを変更せずに、外部ツール機構を利用して音声コマンドで SO-ARM グリッパーの開閉を制御します。
 title: SO-ARM 向け Reachy Mini 音声制御
 slug: /reachymini_development_cases_gripper_voice_control
 image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/ja/reachymini_development_cases_gripper_voice_
 ---
 # SO-ARM 向け Reachy Mini 音声制御
 
-このケースでは、Reachy Mini 会話アプリを使用して、SO-ARM フォロワーアームのグリッパーを音声コマンドで開閉します。これは、**公式ソースコードを変更することなく**、アプリに組み込まれている外部ツール機構を利用して実現します。
+このケースでは、Reachy Mini 会話アプリを使用して、SO-ARM フォロワーアームのグリッパーを音声コマンドで開閉します。これは、アプリに組み込まれている外部ツール機構を利用することで、**公式ソースコードを変更することなく**実現します。
 
 <div align="center">
   <img width={800}
@@ -42,26 +42,26 @@ Voice command
 
 | File                                                 | Purpose                                            |
 | ---------------------------------------------------- | -------------------------------------------------- |
-| `soarm_gripper.py`                                   | グリッパードライバースクリプト（lerobot ベース）   |
-| `external_content/external_tools/gripper_control.py` | LLM に公開される外部ツール                         |
-| `.gitignore`                                         | ツールファイルをコミットできるように ignore を解除 |
+| `soarm_gripper.py`                                   | グリッパードライバースクリプト（lerobot ベース）           |
+| `external_content/external_tools/gripper_control.py` | LLM に公開される外部ツール                   |
+| `.gitignore`                                         | ツールファイルをコミットできるように ignore を解除する設定 |
 
 ## 前提条件
 
-1. Reachy Mini が接続されており（`/dev/ttyACM0`）、デーモンが動作していること。
-2. SO-ARM フォロワーアームが接続されていること。本ガイドでは `/dev/ttyACM1` として認識されることを前提としています。`ls /dev/ttyACM*` で確認し、異なる場合は `soarm_gripper.py` 内の `PORT` を更新してください。
+1. Reachy Mini が接続され（`/dev/ttyACM0`）、デーモンが動作していること。
+2. SO-ARM フォロワーアームが接続されていること。このガイドでは `/dev/ttyACM1` として認識されることを前提としています。`ls /dev/ttyACM*` で確認し、異なる場合は `soarm_gripper.py` 内の `PORT` を更新してください。
 3. feetech サポート付きの `lerobot` conda 環境が作成されていること：
 
    ```bash
-   conda create -n lerobot python=3.10
+   conda create -n lerobot python=3.12
    conda activate lerobot
    pip install lerobot[feetech]
    ```
-4. 一度 lerobot でアームのキャリブレーションを行っていること（これにより `~/.cache/huggingface/lerobot/calibration/robots/so_follower/` 配下にキャリブレーションファイルが生成されます）。スクリプトでは `ARM_ID = "my_awesome_follower_arm"` を使用しており、これはあなたのキャリブレーションファイル名と一致している必要があります。
+4. lerobot で一度アームのキャリブレーションを行っていること（これにより `~/.cache/huggingface/lerobot/calibration/robots/so_follower/` 配下にキャリブレーションファイルが生成されます）。スクリプトでは `ARM_ID = "my_awesome_follower_arm"` を使用しており、これはあなたのキャリブレーションファイル名と一致している必要があります。
 
-## reachy_mini_conversation_app のインストール
+## reachy_mini_conversation_app をインストール
 
-> 注意：このアプリをインストールする前に、まず [Reachy Mini SDK](https://github.com/pollen-robotics/reachy_mini/) をインストールしておく必要があります。
+> 注意：このアプリをインストールする前に、まず [Reachy Mini SDK](https://github.com/pollen-robotics/reachy_mini/) をインストールする必要があります。
 
 フォークリポジトリをクローンします：
 
@@ -92,7 +92,7 @@ uv sync
 ```
 
 :::caution
-このアプリをある conda 環境にインストールし、`lerobot` が別の conda 環境に存在する場合（前提条件参照）、`.env` 内の `LEROBOT_PYTHON` を lerobot 環境の python パス（例：`/home/ubuntu/miniconda3/envs/lerobot/bin/python`）に設定してください。reachy_mini 環境と混在させないでください。
+このアプリをある conda 環境にインストールし、`lerobot` が別の conda 環境に存在する場合（前提条件を参照）、`.env` 内の `LEROBOT_PYTHON` を lerobot 環境の python パス（例：`/home/ubuntu/miniconda3/envs/lerobot/bin/python`）に設定してください。reachy_mini 環境と混在させないでください。
 :::
 
 ## グリッパー音声制御の設定
@@ -112,7 +112,7 @@ LEROBOT_PYTHON=/path/to/lerobot/env/bin/python
 
 ## 実行
 
-**`.env` と相対パスのツールディレクトリを正しく解決するため、必ずリポジトリルートからアプリを起動してください：**
+`.env` と相対パスのツールディレクトリを正しく解決するために、**必ずリポジトリルートからアプリを起動してください**：
 
 ```bash
 cd reachy_mini_conversation_app
@@ -140,7 +140,7 @@ reachy-mini-conversation-app
 
 ### 1. モーション自体を変更する → `soarm_gripper.py`（リポジトリルート）
 
-これは実際にアームを駆動するスクリプトです。現在はグリッパーアクションのみを送信します：
+これは実際にアームを駆動するスクリプトです。現在はグリッパーのアクションのみを送信します：
 
 ```python
 robot.send_action({"gripper.pos": target})
@@ -160,15 +160,15 @@ robot.send_action({
 
 このファイルでよく調整するパラメータ：
 
-- `OPEN_POS` / `CLOSE_POS` — グリッパーの移動量（正規化 0–100、デフォルトは 60 / 20）。
+- `OPEN_POS` / `CLOSE_POS` — グリッパーの移動量（正規化 0–100、デフォルト 60 / 20）。
 - `PORT` — フォロワーアームのシリアルデバイス。
 - `ARM_ID` — キャリブレーションプロファイル名。
 
 ### 2. LLM に新しいアクションを呼び出させる → `external_content/external_tools/gripper_control.py`
 
-これは LLM に公開される外部ツールであり、LLM が「利用可能であると認識している」アクションを決定します。アクションを追加する際は、次を同期して更新してください：
+これは LLM に公開される外部ツールであり、LLM が「利用可能だと知っている」アクションを決定します。アクションを追加する際は、次を同期して更新してください：
 
-- `description` — ツールの説明。どのようなユーザー発話で呼び出すべきか（いつ呼び出すか）を LLM に伝えます。
+- `description` — ツールの説明。どのようなユーザー発話で呼び出すべきか（どの発話がトリガーになるか）を LLM に伝えます。
 - `parameters_schema` — 新しいアクション名（例：`"wave"`）を `action` の `enum` に追加します。
 - `__call__()` — 新しい `action` をサブプロセスコマンド `cmd = [LEROBOT_PYTHON, GRIPPER_SCRIPT, action]` に渡します。
 
@@ -176,12 +176,12 @@ robot.send_action({
 
 ## トラブルシューティング
 
-**バックエンドが起動しない：`Unknown scheme for proxy URL 'socks://...'`**
+**バックエンドが起動に失敗する：`Unknown scheme for proxy URL 'socks://...'`**
 
-このアプリは httpx を使用しており、`ALL_PROXY` における `socks://` スキームを受け付けません（認識するのは `http(s)://`、`socks5://`、`socks5h://` のみです）。シェル（例：clash）が `ALL_PROXY=socks://...` を設定している場合は、起動時にこれを解除してください。`HTTPS_PROXY=http://...` を維持しておけば十分です：
+このアプリは httpx を使用しており、`ALL_PROXY` における `socks://` スキームを受け付けません（認識するのは `http(s)://`、`socks5://`、`socks5h://` のみです）。シェル（例：clash）が `ALL_PROXY=socks://...` を設定している場合は、起動時にこれを解除してください。`HTTPS_PROXY=http://...` を残しておくだけで十分です：
 
 ```bash
 env -u ALL_PROXY -u all_proxy reachy-mini-conversation-app
 ```
 
-あるいはプロキシ変数を `socks5://127.0.0.1:port/` に変更します（httpx はこの形式を受け付けます。これは `socksio` を必要としますが、すでに環境にインストールされています）。
+または、プロキシ変数を `socks5://127.0.0.1:port/` に変更します（httpx はこの形式を受け付けます。これは `socksio` を必要としますが、すでに環境にインストールされています）。

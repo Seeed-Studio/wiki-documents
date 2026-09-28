@@ -1,5 +1,5 @@
 ---
-description: Controla la apertura/cierre de la pinza del SO-ARM con comandos de voz a través de la app de conversación de Reachy Mini, sin modificar el código fuente oficial, utilizando el mecanismo de herramientas externas.
+description: Controla la apertura/cierre de la pinza SO-ARM con comandos de voz a través de la app de conversación de Reachy Mini, sin modificar el código fuente oficial, usando el mecanismo de herramientas externas.
 title: Control por voz de Reachy Mini para SO-ARM
 slug: /reachymini_development_cases_gripper_voice_control
 image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/es/reachymini_development_cases_gripper_voice_
 ---
 # Control por voz de Reachy Mini para SO-ARM
 
-Este caso utiliza la app de conversación de Reachy Mini para abrir y cerrar la pinza del brazo seguidor SO-ARM con comandos de voz — **sin modificar el código fuente oficial**, usando el mecanismo de herramientas externas integrado en la app.
+Este caso utiliza la app de conversación de Reachy Mini para abrir y cerrar la pinza del brazo seguidor SO-ARM con comandos de voz — **sin modificar el código fuente oficial**, usando el mecanismo integrado de herramientas externas de la app.
 
 <div align="center">
   <img width={800}
@@ -42,9 +42,9 @@ Archivos añadidos por este fork:
 
 | File                                                 | Purpose                                            |
 | ---------------------------------------------------- | -------------------------------------------------- |
-| `soarm_gripper.py`                                   | Gripper driver script (based on lerobot)           |
-| `external_content/external_tools/gripper_control.py` | External tool exposed to the LLM                   |
-| `.gitignore`                                         | Un-ignores the tool files so they can be committed |
+| `soarm_gripper.py`                                   | Script del controlador de la pinza (basado en lerobot) |
+| `external_content/external_tools/gripper_control.py` | Herramienta externa expuesta al LLM                |
+| `.gitignore`                                         | Deja de ignorar los archivos de la herramienta para que puedan confirmarse |
 
 ## Requisitos previos
 
@@ -53,7 +53,7 @@ Archivos añadidos por este fork:
 3. Se ha creado un entorno conda de `lerobot` con soporte para feetech:
 
    ```bash
-   conda create -n lerobot python=3.10
+   conda create -n lerobot python=3.12
    conda activate lerobot
    pip install lerobot[feetech]
    ```
@@ -126,7 +126,7 @@ reachy-mini-conversation-app
 
 ## Pruebas manuales
 
-Sin iniciar la app de conversación, verifica primero que el hardware y la calibración funcionan:
+Sin iniciar la app de conversación, verifica primero que el hardware y la calibración funcionen:
 
 ```bash
 /home/ubuntu/miniconda3/envs/lerobot/bin/python soarm_gripper.py open
@@ -146,7 +146,7 @@ Este es el script que realmente controla el brazo. Actualmente solo envía accio
 robot.send_action({"gripper.pos": target})
 ```
 
-Las claves de articulación disponibles para el seguidor SO-ARM son `shoulder_pan.pos`, `shoulder_lift.pos`, `elbow_flex.pos`, `wrist_flex.pos`, `wrist_roll.pos` y `gripper.pos` (normalizado 0–100). Para controlar otras partes, añade las articulaciones correspondientes al diccionario pasado a `send_action()`, por ejemplo:
+Las claves de articulación disponibles para el seguidor SO-ARM son `shoulder_pan.pos`, `shoulder_lift.pos`, `elbow_flex.pos`, `wrist_flex.pos`, `wrist_roll.pos` y `gripper.pos` (normalizadas 0–100). Para controlar otras partes, añade las articulaciones correspondientes al diccionario pasado a `send_action()`, por ejemplo:
 
 ```python
 robot.send_action({
@@ -172,7 +172,7 @@ Esta es la herramienta externa expuesta al LLM — determina qué acciones "sabe
 - `parameters_schema` — añade el nuevo nombre de acción (por ejemplo `"wave"`) al `enum` de `action`.
 - `__call__()` — pasa la nueva `action` al comando del subproceso `cmd = [LEROBOT_PYTHON, GRIPPER_SCRIPT, action]`.
 
-Si quieres controlar un dispositivo completamente diferente, también puedes **crear un nuevo archivo de herramienta** en ese directorio (por ejemplo `arm_control.py`), heredando igualmente de `reachy_mini_conversation_app.tools.core_tools.Tool`; con `AUTOLOAD_EXTERNAL_TOOLS=1`, todos los archivos de herramientas válidos en el directorio se cargan automáticamente. Ten en cuenta que cada clase de herramienta debe tener un `Tool.name` único.
+Si quieres controlar un dispositivo completamente diferente, también puedes **crear un nuevo archivo de herramienta** en ese directorio (por ejemplo `arm_control.py`), heredando igualmente de `reachy_mini_conversation_app.tools.core_tools.Tool`; con `AUTOLOAD_EXTERNAL_TOOLS=1`, todos los archivos de herramientas válidos del directorio se cargan automáticamente. Ten en cuenta que cada clase de herramienta debe tener un `Tool.name` único.
 
 ## Solución de problemas
 

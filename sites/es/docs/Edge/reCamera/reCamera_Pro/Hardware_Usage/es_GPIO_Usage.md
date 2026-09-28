@@ -8,25 +8,27 @@ keywords:
   - sysfs
   - Linux
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_gpio_guide
+slug: /recamera_pro_gpio_guide_legacy
+draft: true
 sku: 10003420
 sidebar_position: 5
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
-createdAt: "2026-08-25"
-updatedAt: "2026-08-25"
-url: https://wiki.seeedstudio.com/es/recamera_pro_gpio_guide/
+createdAt: '2026-08-25'
+updatedAt: '2026-08-26'
+url: https://wiki.seeedstudio.com/es/recamera_pro_gpio_guide_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/gpio_pins.md (https://wiki.seeedstudio.com/es/recamera_pro_gpio_guide/), which now serves the original slug /recamera_pro_gpio_guide. This file is kept for history as a draft (slug /recamera_pro_gpio_guide_legacy) and is excluded from production builds. Do not link here. -->
 
 # Guía de uso de pines GPIO de reCamera Pro
 
 ## Introducción
 
-Este artículo describe cómo usar los pines GPIO en la reCamera Pro. Aprenderás cómo determinar el pin GPIO objetivo usando la fórmula de cálculo del número de pin, exportar y configurar la dirección y el nivel del pin a través de la interfaz sysfs, y usar scripts de Python para controlar salidas GPIO o leer niveles de entrada.
+Este artículo describe cómo usar los pines GPIO en la reCamera Pro. Aprenderás cómo determinar el pin GPIO de destino utilizando la fórmula de cálculo del número de pin, exportar y configurar la dirección y el nivel del pin a través de la interfaz sysfs, y usar scripts de Python para controlar las salidas GPIO o leer los niveles de entrada.
 
 :::note
-En la reCamera Pro, solo hay dos GPIO de propósito general expuestos, y su tensión de salida va de 12 V a 21 V (dependiendo de la entrada DC-IN), lo cual no es adecuado para la mayoría de los dispositivos. Sin embargo, puedes reconfigurar los pines UART o CAN de la interfaz de expansión como GPIO de propósito general. Estos pines entregan un nivel estándar de 3,3 V.
+En la reCamera Pro, solo hay dos GPIO de propósito general expuestos, y su voltaje de salida va de 12 V a 21 V (dependiendo de la entrada DC-IN), lo cual no es adecuado para la mayoría de los dispositivos. Sin embargo, puedes reconfigurar los pines UART o CAN de la interfaz de expansión como GPIO de propósito general. Estos pines entregan un nivel estándar de 3,3 V.
 :::
 
 ## Localización de pines GPIO
@@ -69,7 +71,7 @@ La correspondencia entre letras de banco y números es la siguiente:
 
 ## Exportar un pin GPIO
 
-Primero, necesitas acceder al terminal del dispositivo. Puedes hacerlo de cualquiera de las siguientes maneras:
+Primero, necesitas acceder a la terminal del dispositivo. Puedes hacerlo de cualquiera de las siguientes maneras:
 
 1. Conectarte al dispositivo mediante SSH
 2. Usar la función de terminal en la WebUI

@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece tutoriais para servomotores FashionStar.
-title: Servo Motor FashionStar
+description: Este wiki fornece um tutorial para motores de servo FashionStar.
+title: FashionStar
 keywords:
   - atuador
   - motor
@@ -12,7 +12,7 @@ last_update:
   date: 11/24/2025
   author: Li Shanghang
 createdAt: '2025-06-23'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-19'
 url: https://wiki.seeedstudio.com/pt-br/fashionstar_servo/
 ---
 

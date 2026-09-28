@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg
 slug: /meshcore_node_map_l1
 sku: 114993648,114993649,114993653,114993654
-sidebar_position: 2
+sidebar_position: 4
 last_update:
   date: 3/19/2026
   author: Michelle Huang
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/cn/meshcore_node_map_l1/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## 为什么使用 MeshCore 节点地图
+## 为什么要使用 MeshCore 节点地图
 
 节点地图可以通过绘制节点位置，为 [MeshCore](https://meshcore.io/#hardware) 网络提供实时可视化，使用户能够了解网络拓扑和节点分布。 
 
@@ -30,7 +30,7 @@ MeshCore 节点地图依赖节点定期向网络上报其地理位置。它特�
 
 - **发现附近的中继器**：识别可用中继器以扩展连接范围
 - **监控自己的网络**：跟踪节点状态和位置
-- **调试和优化**：优化中继器和网关的放置位置
+- **调试和优化**：优化中继器和网关的部署位置
 
 
 ## MeshCore 官方地图教程
@@ -61,13 +61,13 @@ MeshCore 节点地图依赖节点定期向网络上报其地理位置。它特�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg" style={{width:1000, height:'auto'}}/></div>
 
-你可以看到设备名称、角色和配置信息。因此，通过使用这张地图，你可以轻松找出那些在线节点的位置。
+你可以看到设备名称、角色和配置信息。通过使用这张地图，你可以轻松找出那些在线节点所在的位置。
 
 ## （进阶）构建你自己的节点地图前端
 
 对于高级用户，可以构建自定义的节点地图前端。推荐使用以下工作流程： 
 
-[普通 MeshCore 节点] → [设置了 MQTT 的 Mesh 节点] → [后端 API / 数据库] → [前端地图界面]
+[普通 MeshCore 节点] → [配置了 MQTT 的 Mesh 节点] → [后端 API / 数据库] → [前端地图界面]
 
 ## 技术支持与产品讨论
 

@@ -1,6 +1,6 @@
 ---
 description: 本指南将帮助您快速上手 reBot Arm B601-DM 机械臂，包括组装、校准和软件配置。
-title: reBot Arm B601-DM 快速入门
+title: B601-DM 快速入门
 keywords:
   - reBot
   - B601-DM
@@ -9,7 +9,7 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 自由度
-image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 slug: /rebot_b601_dm_getting_started
 translation:
   skip: [zh-CN]
@@ -33,7 +33,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" />
 </div>
 
 <div className="rebot-buy-button-group">

@@ -1,6 +1,6 @@
 ---
 description: This document will introduce how to quickly get started with the HighTorque series motors.
-title: HighTorque Series Motor
+title: HighTorque SDK
 keywords:
   - Joint Module
   - Motor
@@ -13,7 +13,7 @@ last_update:
   date: 06/24/2025
   author: ZhuYaoHui
 createdAt: '2025-06-24'
-updatedAt: '2026-01-07'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/hightorque_series/
 ---
 

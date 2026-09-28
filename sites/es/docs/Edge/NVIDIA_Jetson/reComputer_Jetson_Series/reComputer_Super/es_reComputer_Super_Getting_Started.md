@@ -3,7 +3,7 @@ description: Introducción para reComputer Super
 title: Introducción a reComputer Super
 keywords:
   - reComputer Super
-  - reComputer Super Introducción
+  - reComputer Super Getting Started
   - Super
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /recomputer_jetson_super_getting_started
@@ -24,7 +24,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
 </div>
 
-La Serie reComputer Super potencia la reComputer Classic, ofreciendo hasta un aumento de 1,7x hasta 157 TOPS en rendimiento de IA. Incluye modelos con Jetson Orin Nano (11410311, 11410312) y Jetson Orin NX (11410313, 11410314).
+La reComputer Super Serie potencia la reComputer Classic, ofreciendo hasta un aumento de 1,7x hasta 157 TOPS en rendimiento de IA. Incluye modelos con Jetson Orin Nano (11410311, 11410312) y Jetson Orin NX (11410313, 11410314).
 Diseñada tanto para desarrollo como para producción, viene con una amplia gama de interfaces, incluyendo M.2 Key E/M, doble Ethernet RJ45, Mini-PCIe, 4xUSB 3.2, HDMI 2.1, 4xCSI y CAN. Con Jetpack 6.2 y Linux OS BSP preinstalados, permite una entrada inmediata al mercado.
 También es compatible con una amplia gama de frameworks de LLM y Physical AI, como NVIDIA, Hugging Face, ONNX, PyTorch y ROS2/1 en el edge de forma fluida, incluso combinando estas capacidades multimodales con aplicaciones de robótica para enriquecer el desarrollo de Physical AI.
 
@@ -39,19 +39,19 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 ## Características clave  
 
-### 🚀 ​**Impulso de rendimiento**  
+### 🚀 ​**Aumento de rendimiento**  
 
-- ​**Aumento de rendimiento de IA de 1,7x** sobre reComputer Classic, ofreciendo ​**157 TOPS**  
+- ​**Aumento de rendimiento de IA de 1,7x** respecto a reComputer Classic, ofreciendo ​**157 TOPS**  
 - Impulsado por ​**Jetson Orin Nano** (Modelos: 11410311, 11410312) y ​**Jetson Orin NX** (Modelos: 11410313, 11410314)  
 
 ### 🔌 ​**Conectividad e interfaces ricas**  
 
 - ​**M.2 Key E/M** + ​**Mini-PCIe** para ampliación  
 - ​**Doble Ethernet RJ45** para redes de alta velocidad  
-- ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Interfaz Serie de Cámara)  
-- Compatibilidad con ​**bus CAN** para aplicaciones industriales/robóticas  
+- ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Camera Serial Interface)  
+- Compatibilidad con ​**bus CAN** para aplicaciones industriales/robótica  
 
-### 🛠️ ​**Listo para desarrollo y producción**  
+### 🛠️ ​**Lista para desarrollo y producción**  
 
 - ​**Jetpack 6.2** y ​**Linux OS BSP** preinstalados para despliegue inmediato  
 - Integración fluida de IA en el edge con frameworks:  
@@ -59,7 +59,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
   - ​**ROS2/1** para aplicaciones de robótica  
 - Compatible con desarrollo de ​**IA multimodal** y ​**Physical AI**  
 
-### 🤖 ​**Optimizado para Edge AI y robótica**  
+### 🤖 ​**Optimizada para Edge AI y robótica**  
 
 - Combina las capacidades de ​**LLM (Large Language Model)** con ​**Physical AI** en el edge  
 - Ideal para robótica, automatización industrial e inferencia de IA en tiempo real  
@@ -77,7 +77,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 #### 2. ​**Cable de alimentación de CA**  
 
-- Utiliza cables tipo trébol ​**específicos de la región**.  
+- Utiliza cables de trébol ​**específicos de la región**.  
 
 #### 3. ​**Accesorios**  
 
@@ -121,21 +121,21 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan={2}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos y 64 bits<br />1,5MB L2 + 4MB L3</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos y 64 bits 1,5MB L2 + 4MB L3</td>
+      <td colSpan={2}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos y 64 bits<br />1.5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos y 64 bits 1.5MB L2 + 4MB L3</td>
       <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos y 64 bits 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Frecuencia máxima de CPU</td>
-      <td colSpan={2}>1,7 GHz (MAXN_SUPER)</td>
+      <td colSpan={2}>1.7 GHz (MAXN_SUPER)</td>
       <td colSpan={2}>2 GHz</td>
     </tr>
     <tr>
       <td>Memoria</td>
-      <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
-      <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
-      <td>8GB 128-bit LPDDR5 102,4GB/s</td>
-      <td>16GB 128-bit LPDDR5 102,4GB/s</td>
+      <td>4GB LPDDR5 de 64 bits<br />34 GB/s</td>
+      <td>8GB LPDDR5 de 128 bits<br />68 GB/s</td>
+      <td>8GB LPDDR5 de 128 bits 102.4GB/s</td>
+      <td>16GB LPDDR5 de 128 bits 102.4GB/s</td>
     </tr>
     <tr>
       <td>Acelerador DL</td>
@@ -159,10 +159,10 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>Mecánico</td>
-      <td colSpan={5}>69,6mm x 45mm<br />Conector SO-DIMM de 260 pines</td>
+      <td colSpan={5}>69.6mm x 45mm<br />Conector SO-DIMM de 260 pines</td>
     </tr>
     <tr>
-      <th colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Placa portadora</th>
+      <th colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Placa carrier</th>
     </tr>
     <tr>
       <td>Almacenamiento</td>
@@ -184,7 +184,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     <tr>
       <td rowSpan={11}>E/S</td>
       <td >USB</td>
-      <td colSpan={3}>4x USB 3.2 Tipo-A (5Gbps); <br />1x USB 2.0 Tipo-C (Modo dispositivo/Depuración);</td>
+      <td colSpan={3}>4x USB 3.2 Type-A (5Gbps); <br />1x USB 2.0 Type-C (modo dispositivo/depuración);</td>
     </tr>
     <tr>
       <td>Cámara</td>
@@ -192,7 +192,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={3}>1 x CAN(Conector de 4 pines)</td>
+      <td colSpan={3}>1 x CAN (conector de 4 pines)</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -212,7 +212,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>LED</td>
-      <td colSpan={3}>2x LED(PWR y ACT)</td>
+      <td colSpan={3}>2x LED (PWR y ACT)</td>
     </tr>
     <tr>
       <td>Botón de orificio</td>
@@ -252,13 +252,60 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>Certificación</td>
-      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, Prueba de vibración(GB/T 2423)</td>
+      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, prueba de vibración (GB/T 2423)</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-## Flashear JetPack OS
+## Explorador 3D interactivo
+
+Explora la reComputer Super Serie en un visor 3D interactivo. Gira el dispositivo, inspecciona las interfaces de hardware, visualiza el ensamblaje explotado y obtén más información sobre los módulos compatibles.
+
+<div
+  style={{
+    width: '100%',
+    height: 'clamp(620px, 70vw, 760px)',
+    overflow: 'hidden',
+    border: '1px solid #4a525b',
+    borderRadius: '12px',
+    margin: '24px 0',
+    background: '#0b1015'
+  }}
+>
+  <iframe
+    src="https://youjiang.cloud/?embed=1#viewer"
+    title="Explorador 3D interactivo de la reComputer Super Serie"
+    loading="lazy"
+    allow="fullscreen"
+    allowFullScreen
+    scrolling="no"
+    style={{
+      width: '100%',
+      height: '100%',
+      border: 0,
+      display: 'block'
+    }}
+  />
+</div>
+
+<div align="center">
+  <a
+    href="https://youjiang.cloud/#viewer"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Abrir el Explorador 3D en una nueva ventana ↗
+  </a>
+</div>
+
+## Uso de las interfaces de hardware
+
+:::info
+Para especificaciones detalladas e instrucciones de cada interfaz de hardware, consulta [la guía de uso de interfaces de hardware](https://wiki.seeedstudio.com/es/recomputer_jetson_super_hardware_interfaces_usage/).
+:::
+
+## Flashear el sistema operativo JetPack
 
 ### Módulo compatible
 
@@ -271,7 +318,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 - PC host con Ubuntu
 - reComputer Super
-- Cable de transmisión de datos USB Tipo-C
+- Cable de transmisión de datos USB Type-C
 
 :::info
 
@@ -307,21 +354,21 @@ Consulta la siguiente tabla para preparar la máquina host.
   </tbody>
 </table>
 
-<p><strong>Nota:</strong> Para JetPack 7.2, Ubuntu 24.04 solo es compatible para flasheo e instalación de componentes en el lado de destino. Utiliza Ubuntu 20.04 o 22.04 si necesitas componentes de desarrollo en el host.</p>
+<p><strong>Note:</strong> Para JetPack 7.2, Ubuntu 24.04 solo es compatible para el flasheo y la instalación de componentes en el lado de destino. Utiliza Ubuntu 20.04 o 22.04 si necesitas componentes de desarrollo en el host.</p>
 
 :::
 
-### Preparar la imagen de Jetpack
+### Preparar la imagen de JetPack
 
-Aquí, necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu correspondiente al módulo Jetson que estamos utilizando:
+Aquí necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu correspondiente al módulo Jetson que estamos utilizando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Versión de Jetpack</th>
+      <th>Versión de JetPack</th>
       <th>Módulo Jetson</th>
-      <th>Enlace de descarga1</th>
+      <th>Enlace de descarga 1</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -329,43 +376,43 @@ Aquí, necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu corr
     <tr>
       <td rowSpan={4}>7.2</td>
       <td> Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm">Download</a></td>
       <td>0978be490c5ff7c1648317240e8f00d7<br />6b2d025ed30a945249eaa69112a047c8</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ">Download</a></td>
       <td>22a21d0ee9abdceb812e06ac399d8ca<br />5f14a3880fdf989c876223e72b21f4de6</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1">Download</a></td>
       <td>7613332f8eeb315a0d9d51744a8f0a9<br />e8e11e92e091d2a06ad609235a54f7c72</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">Download</a></td>
       <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">Download</a></td>
       <td>7a1f2085f50d77e5d86d3f01ccdc1255<br />c90a7c7d22a6ab7e4c4e3263e3148670</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca">Download</a></td>
       <td>d26cbf4e16b9d5879e4b737754f65bb0<br />ea485b98760a1aa0657e07054efd8877</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw">Download</a></td>
       <td>55a559dc6736650d45c2d787265c7e2c<br />36cd2d7f233ae58b00364aec7d82455c</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm">Download</a></td>
       <td>51f816d57dedd6e2305acd0ae8e0ffdc<br />19aec7319e351b7a70489f7eab8d69c6</td>
     </tr>
   </tbody>
@@ -373,19 +420,19 @@ Aquí, necesitamos descargar la imagen del sistema en nuestro PC con Ubuntu corr
 </div>
 
 :::danger
-Los archivos de imagen de JetPack son grandes y pueden tardar alrededor de 60 minutos en descargarse. Por favor, espera pacientemente a que la descarga se complete.
+Los archivos de imagen de JetPack son grandes y la descarga puede tardar alrededor de 60 minutos. Por favor, espera pacientemente a que la descarga se complete.
 :::
 
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, se confirma que el firmware que descargaste está completo e intacto.
 :::
 
-### Entrar en modo de recuperación forzada
+### Entrar en modo Force Recovery
 
 :::info
-Antes de poder continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo de recuperación forzada.
+Antes de poder continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo force recovery.
 :::
 
 <details>
@@ -398,11 +445,11 @@ Antes de poder continuar con los pasos de instalación, debemos asegurarnos de q
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/flash.jpg"/>  
 </div>
 
-**Paso 2.** Enciende la reComputer Super conectando el cable de alimentación.
+**Paso 2.** Enciende el reComputer Super conectando el cable de alimentación.
 
-**Paso 3.** Conecta la Super al PC host con Ubuntu con un cable de transmisión de datos USB Tipo C.
+**Paso 3.** Conecta el Super al PC host con Ubuntu con un cable de transmisión de datos USB Type-C.
 
-**Paso 4.** En el PC host con Linux, abre una ventana de Terminal e introduce el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo de recuperación forzada.
+**Paso 4.** En el PC host con Linux, abre una ventana de Terminal e introduce el comando `lsusb`. Si el contenido devuelto incluye una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo force recovery.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
@@ -444,20 +491,20 @@ Verás la siguiente salida si el proceso de flasheo se realiza correctamente
 El comando de flasheo puede ejecutarse durante 2-10 minutos.
 :::
 
-**Paso 3:** Conecta el monitor usando un cable HDMI y completa la configuración de inicialización del sistema de la reComputer Super:
+**Paso 3:** Conecta el monitor usando un cable HDMI y completa la configuración de inicialización del sistema de reComputer Super:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-Por favor, completa la **Configuración del sistema** según tus necesidades.
+Completa la **System Configuration** según tus necesidades.
 :::
 
-## Uso de interfaces de hardware
+## Uso de las interfaces de hardware
 
 :::info
-Si quieres obtener más información sobre las especificaciones detalladas y el uso de las interfaces de hardware, consulta [esta wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_super_hardware_interfaces_usage/).
+Si quieres obtener más información sobre las especificaciones detalladas y el uso de las interfaces de hardware, consulta [este wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_super_hardware_interfaces_usage/).
 :::
 
 ## Recursos

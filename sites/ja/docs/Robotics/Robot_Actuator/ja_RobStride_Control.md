@@ -1,6 +1,6 @@
 ---
-description: この Wiki は RobStride モーター制御コンプリートガイドを提供します
-title: RobStride モーター制御コンプリートガイド
+description: このWikiでは、RobStrideモーター制御の完全ガイドを提供します
+title: RobStride
 keywords:
   - アクチュエータ
   - モーター
@@ -14,7 +14,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-11-19'
-updatedAt: '2026-06-12'
+updatedAt: '2026-06-08'
 url: https://wiki.seeedstudio.com/ja/robstride_control/
 ---
 

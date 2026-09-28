@@ -1,12 +1,13 @@
 ﻿---
 description: 介绍 Network 的基础 API。
-title: 网络
+title: Network
 keywords:
   - Edge AI
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_network
+slug: /recamera_pro_api_network_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -16,21 +17,22 @@ createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/cn/recamera_pro_api_network/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/network.md (https://wiki.seeedstudio.com/cn/recamera_pro_api_network/), which now serves the original slug /recamera_pro_api_network. This file is kept for history as a draft (slug /recamera_pro_api_network_legacy) and is excluded from production builds. Do not link here. -->
 
-# 网络
+# Network
 
-## 端点概览
+## Endpoint 概览
 
-| Method | Path | Purpose |
+| Method | Path | 用途 |
 |---|---|---|
 | GET | `/network/lan` | 获取有线网络配置 |
 | PUT | `/network/lan` | 设置有线网络配置 |
 | GET | `/network/wlan` | 获取无线 IPv4 配置 |
 | PUT | `/network/wlan` | 设置无线 IPv4 配置 |
 | GET | `/network/wifi` | 获取当前 Wi-Fi 连接信息 |
-| GET | `/network/wifi-status` | 查询 Wi-Fi 电源状态 |
-| POST | `/network/wifi-status?power=on/off` | 切换 Wi-Fi 电源 |
-| GET | `/network/wifi-list` | 扫描附近的 Wi-Fi 网络 |
+| GET | `/network/wifi-status` | 查询 Wi-Fi 供电状态 |
+| POST | `/network/wifi-status?power=on/off` | 切换 Wi-Fi 供电 |
+| GET | `/network/wifi-list` | 扫描附近 Wi-Fi 网络 |
 | POST | `/network/wifi` | 连接到 Wi-Fi |
 | DELETE | `/network/wifi` | 断开或忽略 Wi-Fi |
 | GET | `/web/setting` | 查询 HTTP API 设置 |
@@ -68,7 +70,7 @@ GET /network/wlan
 }
 ```
 
-| Field | Description |
+| Field | 描述 |
 |---|---|
 | `dIpv4.sV4Address` | IPv4 地址 |
 | `dIpv4.sV4Gateway` | IPv4 网关 |
@@ -122,9 +124,9 @@ GET /network/wifi
 
 响应结构与 LAN/WLAN 配置相同。
 
-## Wi-Fi 电源
+## Wi-Fi 供电
 
-### 查询 Wi-Fi 电源状态
+### 查询 Wi-Fi 供电状态
 
 ```text
 GET /network/wifi-status
@@ -140,20 +142,20 @@ GET /network/wifi-status
 }
 ```
 
-| Field | Description |
+| Field | 描述 |
 |---|---|
-| `iPower` | Wi-Fi 电源状态，`1` 开，`0` 关 |
+| `iPower` | Wi-Fi 供电状态，`1` 开，`0` 关 |
 | `id` | 接口 ID |
 | `sType` | 接口类型 |
 
-### 切换 Wi-Fi 电源
+### 切换 Wi-Fi 供电
 
 ```text
 POST /network/wifi-status?power=on
 POST /network/wifi-status?power=off
 ```
 
-| Parameter | Value | Description |
+| 参数 | 取值 | 描述 |
 |---|---|---|
 | `power` | `on`, `off` | 打开或关闭 Wi-Fi |
 
@@ -181,7 +183,7 @@ GET /network/wifi-list
 ]
 ```
 
-| Field | Description |
+| Field | 描述 |
 |---|---|
 | `sBssid` | Wi-Fi BSSID，用作连接的唯一标识符 |
 | `sSsid` | Wi-Fi 网络名称 |
@@ -206,7 +208,7 @@ POST /network/wifi
 }
 ```
 
-| Field | Description |
+| Field | 描述 |
 |---|---|
 | `sSsid` | Wi-Fi 唯一标识符；使用 `/network/wifi-list` 中的 `sBssid` 值 |
 | `sPassword` | Wi-Fi 密码 |
@@ -227,7 +229,7 @@ DELETE /network/wifi?disconnect=<ssid>
 DELETE /network/wifi?Ignore=<ssid>
 ```
 
-| Parameter | Description |
+| 参数 | 描述 |
 |---|---|
 | `disconnect` | 从指定 Wi-Fi 断开连接 |
 | `Ignore` | 忘记指定 Wi-Fi |
@@ -242,7 +244,7 @@ DELETE /network/wifi?Ignore=<ssid>
 }
 ```
 
-| `status` | Description |
+| `status` | 描述 |
 |---:|---|
 | `0` | 成功 |
 | `-1` | 超时 |
@@ -265,7 +267,7 @@ GET /web/setting
 }
 ```
 
-| Field | Description |
+| Field | 描述 |
 |---|---|
 | `sEnable` | 是否启用 HTTP API |
 | `sApiKey` | API 密钥 |
@@ -304,7 +306,7 @@ GET /ftp/setting
 }
 ```
 
-| Field | Description |
+| Field | 描述 |
 |---|---|
 | `sEnable` | 是否启用 FTP 服务 |
 | `sFtpPort` | FTP 端口 |
@@ -336,21 +338,21 @@ GET /network/muticast
 ```
 
 :::note
-此端点已在设备 API 表中列出。如果当前固件不支持，它可能会返回 404 或 API Not Found 响应。
+此端点已列在设备 API 表中。如果当前固件不支持，它可能会返回 404 或 API Not Found 响应。
 :::
 
 错误码：
 
-| Code | Description |
+| Code | 描述 |
 |---:|---|
-| `10001` | FTP 密码强度太弱 |
+| `10001` | FTP 密码太弱 |
 | `10004` | FTP 端口超出范围 |
 | `10005` | FTP 端口已被占用 |
 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -14,7 +14,7 @@ last_update:
   date: 09/18/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-09-18'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/
 ---
 

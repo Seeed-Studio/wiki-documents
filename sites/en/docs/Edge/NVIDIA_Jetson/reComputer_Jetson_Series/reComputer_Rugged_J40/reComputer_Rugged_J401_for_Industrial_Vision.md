@@ -17,7 +17,7 @@ last_update:
   date: 09/20/2026
   author: Zibo
 createdAt: '2026-09-20'
-updatedAt: '2026-09-20'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j401_cv_demo/
 ---
 

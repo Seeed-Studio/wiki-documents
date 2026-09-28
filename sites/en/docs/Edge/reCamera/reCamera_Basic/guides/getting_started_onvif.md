@@ -12,7 +12,7 @@ last_update:
   date: 9/14/2026
   author: yylin
 createdAt: '2026-09-14'
-updatedAt: '2026-09-14'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/recamera_onvif/
 ---
 

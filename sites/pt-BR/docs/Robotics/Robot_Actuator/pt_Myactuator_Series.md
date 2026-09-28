@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece tutoriais para motores da série Myactuator.
-title: MyActuator Series Motors
+description: Este wiki fornece tutoriais para os motores da série Myactuator.
+title: MyActuator
 keywords:
   - atuador
   - motor
@@ -13,7 +13,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaoHui
 createdAt: '2023-08-20'
-updatedAt: '2026-03-16'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/myactuator_series/
 ---
 

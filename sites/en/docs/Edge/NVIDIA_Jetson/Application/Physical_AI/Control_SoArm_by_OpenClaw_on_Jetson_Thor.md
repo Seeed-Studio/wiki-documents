@@ -9,7 +9,7 @@ last_update:
   author: youjiang
 createdAt: '2026-03-09'
 url: https://wiki.seeedstudio.com/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/
-updatedAt: '2026-03-13'
+updatedAt: '2026-09-23'
 ---
 
 # Control SO-Arm by OpenClaw on Jetson Thor
@@ -139,7 +139,7 @@ source ~/.bashrc
 Create LeRobot environment:
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install 'lerobot[feetech]'
 pip uninstall torch torchvision

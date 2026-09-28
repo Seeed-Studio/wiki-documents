@@ -1,6 +1,6 @@
 ---
-description: Guia completo para treinamento de SO-ARM de dois braços com LeRobot.
-title: Guia Completo para Treinamento de SO-ARM de Dois Braços
+description: Guia completo para treinamento de SO-ARM de dois braços com o LeRobot.
+title: SO-Arm Teleoperação Dupla 
 keywords:
   - Lerobot
   - SO-ARM

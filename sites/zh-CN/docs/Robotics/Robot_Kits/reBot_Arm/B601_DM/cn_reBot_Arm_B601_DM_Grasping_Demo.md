@@ -1,6 +1,6 @@
 ---
 description: 本教程介绍如何基于 reBot Arm B601-DM、RGB-D 深度相机与 YOLO/OBB 抓取管线搭建一个完整的视觉夹取 Demo。
-title: reBot Arm B601-DM 视觉夹取 Demo
+title: B601-DM 视觉夹取
 keywords:
   - reBot Arm
   - B601-DM
@@ -30,7 +30,7 @@ import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

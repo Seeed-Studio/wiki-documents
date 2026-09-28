@@ -1,6 +1,6 @@
 ---
 description: このドキュメントでは、SO-ARM101 フォロワーアームと AmazingHand 多指ハンドを組み合わせ、LeRobot を用いてテレオペレーションを行う方法を説明します。
-title: SO-ARM と AmazingHand のための完全トレーニングガイド
+title: SO-Arm と AmazingHand
 keywords:
   - Lerobot
   - SO-ARM

@@ -1,6 +1,6 @@
 ---
-description: このガイドでは、reBot Arm B601-RS の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む入門手順を説明します。
-title: reBot Arm B601-RS クイックスタート
+description: このガイドでは、reBot Arm B601-RS の購入オプション、組み立て、キャリブレーション、ソフトウェア設定を含む、使用開始までの手順を説明します。
+title: B601-RS クイックスタート
 keywords:
   - reBot
   - B601-DM

@@ -1,9 +1,9 @@
 ---
-description: Seeed Studio XIAO RP2040 搭配 MicroPython
+description: 使用 MicroPython 的 Seeed Studio XIAO RP2040
 title: MicroPython
 keywords:
   - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao-rp2040-45font_1.webp
 slug: /XIAO-RP2040-with-MicroPython
 last_update:
   date: 1/11/2023
@@ -13,7 +13,7 @@ updatedAt: '2026-08-06'
 url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-MicroPython/
 ---
 
-# Seeed Studio XIAO RP2040 搭配 MicroPython
+# 使用 MicroPython 的 Seeed Studio XIAO RP2040
 
 ## MicroPython 简介
 
@@ -21,15 +21,27 @@ url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-MicroPython/
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
-## 入门
+## 入门指南
 
-首先，我们将 Seeed Studio XIAO RP2040 连接到电脑，并从 MicroPython 上传一段简单代码，以检查开发板是否工作正常。
+首先，我们将把 Seeed Studio XIAO RP2040 系列连接到电脑，并从 MicroPython 上传一个简单的代码，以检查开发板是否工作正常。
 
 ### 硬件准备
 
-- [Seeed Studio XIAO RP2040](https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html) x1
+- [Seeed Studio XIAO RP2040](https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html) 或 [Seeed Studio XIAO RP2040 Plus](https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-Plus-p-6932.html) x1
 - Type-C 线 x1
 - 电脑 x1
+
+### 将 XIAO RP2040 系列连接到电脑
+
+- **步骤 1**. 按住 **BOOT** 按钮不放，然后通过 Type-C 线将 Seeed Studio XIAO RP2040 系列连接到电脑。如果一切正常，电脑上会显示一个名为 **RPI-RP2** 的磁盘。
+
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
+
+- **步骤 2**. 烧录固件
+
+    只需前往官网下载最新固件，然后将 `.uf2` 文件拖放到 **RPI-RP2** 磁盘中即可完成固件烧录。
+
+    - [XIAO RP2040 系列 MicroPython 固件](https://micropython.org/download/SEEED_XIAO_RP2040/)
 
 ### 软件准备
 
@@ -43,72 +55,15 @@ url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-MicroPython/
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
-- **步骤 4**. 选择 **Interpreter** 界面，将设备选择为 **MicroPython(Raspberry Pi Pico)**，端口选择为 **Try to detect port automatically**
+- **步骤 4**. 选择 **Interpreter** 选项卡，将设备设置为 **MicroPython(generic)**，端口设置为 **Board CDC @ Port**
 
-<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_9.png" /></div>
+<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/mpy_1.png" /></div>
 
-### 将 Seeed Studio XIAO RP2040 连接到电脑
-
-- **步骤 1**. 按住 **BOOT** 按钮，然后通过 Type-C 线将 Seeed Studio XIAO RP2040 连接到电脑。如果一切正常，电脑上会出现名为 "RPI-RP2" 的磁盘。
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
-
-- **步骤 2**. 点击 **Install or update MicroPython**。
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/installandupdate.png" /></div>
-
-随后它会自动搜索设备，并在 Target Volume 中显示出来。在下面 Micropython 的版本选择中，我们保持默认即可。
-
-<div align="center"><img width={750} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython_1.png" /></div>
-
-点击 Install 按钮，当安装状态显示 Done 时关闭此页面。固件烧录完成后，界面上会显示如下信息。
-
-<div align="center"><img width={750} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython_2.png" /></div>
-
-- **步骤 3**. 将以下代码复制到 Thonny 中。
-
-```cpp
-from machine import Pin, Timer
-
-led = Pin(25, Pin.OUT)
-Counter = 0
-Fun_Num = 0
-
-def fun(tim):
-    global Counter
-    Counter = Counter + 1
-    print(Counter)
-    led.value(Counter%2)
-
-tim = Timer(-1)
-tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
-```
-
-- **步骤 4**. 点击 **Run current script** 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存到哪里。**This Computer** 和 **Raspberry Pi Pico** 都可以。
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
-
-如果一切正常，你会看到 LED 灯以一秒一次的频率亮灭。同时，递增的数字输出也会显示在 Shell 中。
-
-<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_13.png" /></div>
-
-连接完成，现在我们可以继续进行其他项目。
-
-### 连接 Seeed XIAO Studio XIAO RP2040 Plus
-
-**步骤 1.** 烧录固件。下载 [XIAO RP2040 Plus Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/xiao_rp2040_plus_micropython.zip)。解压 ZIP 包后，按住 XIAO RP2040 Plus 上的 BOOT 按钮并将其连接到电脑。会弹出一个名为 **RPI-RP2** 的驱动器。将 **firmware.uf2** 文件复制到该驱动器中。
-
-<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/mpy_1.png" /></div><br/>
-
-**步骤 2.** 打开 Thonny IDE → Tools → Options，并按图示进行选择。
-
-<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/mpy_2.png" /></div>
-
-**步骤 3.** 版本信息会显示在 Shell 中。
+**步骤 5.** 版本信息会显示在 Shell 中。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/mpy_2_1.png" /></div><br/>
 
-**步骤 4.** 进入 Files -> New，粘贴下面的代码并运行脚本。
+**步骤 6.** 依次点击 Files -> New，粘贴下面的代码，然后运行脚本。
 
 ```py
 from machine import Pin, Timer
@@ -127,16 +82,51 @@ tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 ```
 
-- LED 将以 1 秒的间隔闪烁。
+- 板载 LED 将以 1 秒为间隔闪烁。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/mpy_1.jpg" /></div><br/>
 
 :::tip
 
-- [Additional Resources](#Additional-Resources) 部分包含适用于 XIAO RP2040 Plus 的 MicroPython 固件和相关示例。你可以按照 XIAO RP2040 教程使用这些示例，但请务必替换并修改相应的引脚。
-- 如需查看 XIAO RP2040 系列之间的差异，请参考 [XIAO RP2040 Series Pin Overview](https://wiki.seeedstudio.com/cn/XIAO-RP2040/#硬件概述)
+- [附加资源](#附加资源)部分包含适用于 XIAO RP2040 Plus 的 MicroPython 固件和相关示例。你可以按照 XIAO RP2040 教程来使用这些示例，但请务必替换并修改相应的引脚。
+- 如需查看 XIAO RP2040 系列之间的差异，请参考 [XIAO RP2040 系列引脚概览](https://wiki.seeedstudio.com/cn/XIAO-RP2040/#硬件概览)
 
 :::
+
+## XIAO RP2040 系列引脚
+
+| MicroPython 引脚名称 | XIAO RP2040 GPIO | XIAO RP2040 Plus GPIO | ADC | 功能 |
+| :--- | :---: | :---: | :---: | :--- |
+| D0 / A0 | GPIO26 | GPIO26 | 0 | GPIO，ADC0 |
+| D1 / A1 | GPIO27 | GPIO27 | 1 | GPIO，ADC1 |
+| D2 / A2 | GPIO28 | GPIO28 | 2 | GPIO，ADC2 |
+| D3 / A3 | GPIO29 | GPIO29 | 3 | GPIO，ADC3 |
+| D4 / SDA | GPIO6 | GPIO6 | — | GPIO，I2C SDA |
+| D5 / SCL | GPIO7 | GPIO7 | — | GPIO，I2C SCL |
+| D6 / TX | GPIO0 | GPIO0 | — | GPIO，UART TX |
+| D7 / RX | GPIO1 | GPIO1 | — | GPIO，UART RX |
+| D8 / SCK | GPIO2 | GPIO2 | — | GPIO，SPI SCK |
+| D9 / MISO | GPIO4 | GPIO4 | — | GPIO，SPI MISO |
+| D10 / MOSI | GPIO3 | GPIO3 | — | GPIO，SPI MOSI |
+| NEOPIXEL | GPIO12 | GPIO12 | — | WS2812 NeoPixel 数据 |
+| NEOPIXEL_POWER / NEO_PWR / RGB_EN | GPIO11 | GPIO11 | — | NeoPixel 供电使能（Plus 上为 RGB_EN） |
+| LED_G / D23 | GPIO16 | GPIO16 | — | RGB 绿灯；Plus D23 |
+| LED_R / D24 | GPIO17 | GPIO17 | — | RGB 红灯；Plus D24 |
+| LED_B / LED | GPIO25 | GPIO25 | — | RGB 蓝灯 / 用户 LED |
+| D12 | — | GPIO18 | — | Plus 扩展 GPIO |
+| D13 / SCL1 | — | GPIO21 | — | Plus I2C1 SCL |
+| D14 / SDA1 | — | GPIO20 | — | Plus I2C1 SDA |
+| D15 | — | GPIO19 | — | Plus 扩展 GPIO |
+| D16 | — | GPIO22 | — | Plus 扩展 GPIO |
+| D17 | — | GPIO23 | — | Plus 扩展 GPIO |
+| D19 | — | GPIO5 | — | Plus 扩展 GPIO |
+| D20 | — | GPIO13 | — | Plus 扩展 GPIO |
+| D21 | — | GPIO14 | — | Plus 扩展 GPIO |
+| D22 | — | GPIO15 | — | Plus 扩展 GPIO |
+| D25 | — | GPIO10 | — | Plus 扩展 GPIO |
+| D26 | — | GPIO9 | — | Plus 扩展 GPIO |
+| D27 | — | GPIO8 | — | Plus 扩展 GPIO |
+| BAT_EN | — | GPIO24 | — | Plus 电池供电使能 |
 
 ## 点亮 Seeed Studio XIAO RP2040 上的 RGB LED
 
@@ -152,7 +142,7 @@ Seeed Studio XIAO RP2040 上配备了一个 RGB LED，我们将通过 MicroPytho
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk5.png" /></div>
 
-确保保存的文件名为 **ws2812.py**，否则将无法工作。
+确保保存的文件名为 **ws2812.py**，否则将无法正常工作。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk6.png" /></div>
 
@@ -184,11 +174,11 @@ while True:
         utime.sleep(0.2)
 ```
 
-- **步骤 4**. 点击 "Run current script" 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存到哪里。**This Computer** 和 **Raspberry Pi Pico** 都可以。
+- **步骤 4**. 点击 “Run current script” 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存在哪里，选择 **This Computer** 或 **Raspberry Pi Pico** 都可以。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-如果一切正常，你会看到 RGB LED 变换并闪烁灯光。同时，文本 "Beautiful Color" 的输出也会显示在 Shell 中。
+如果一切正常，你会看到 RGB LED 变换并闪烁灯光。同时，文本 “Beautiful Color” 的输出也会显示在 Shell 中。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_14.png" /></div>
 
@@ -210,7 +200,7 @@ while True:
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk5.png" /></div>
 
-确保保存的文件名为 "ssd1306.py"，否则将无法工作。
+确保保存的文件名为 "ssd1306.py"，否则将无法正常工作。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk8.png" /></div>
 
@@ -231,11 +221,11 @@ while True:
     #sleep(0.5)
 ```
 
-- **步骤 4**. 点击 "Run current script" 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存到哪里。**This Computer** 和 **Raspberry Pi Pico** 都可以。
+- **步骤 4**. 点击 “Run current script” 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存在哪里，选择 **This Computer** 或 **Raspberry Pi Pico** 都可以。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-如果一切正常，你会看到屏幕上显示文本 "Hello,World!"。
+如果一切正常，你会看到屏幕上显示文本 “Hello,World!”。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_16.png" /></div>
 
@@ -255,7 +245,7 @@ while True:
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供了多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

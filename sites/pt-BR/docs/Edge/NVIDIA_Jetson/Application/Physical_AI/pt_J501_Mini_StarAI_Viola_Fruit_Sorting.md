@@ -16,7 +16,7 @@ last_update:
   date: 2026-2-2
   author: Dayu
 createdAt: '2026-02-02'
-updatedAt: '2026-03-20'
+updatedAt: '2026-02-10'
 url: https://wiki.seeedstudio.com/pt-br/j501_mini_starai_viola_fruit_sorting/
 ---
 
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/pt-br/j501_mini_starai_viola_fruit_sorting/
 
 ## 🚀 Introdução
 
-Este wiki demonstra como usar o **J501 Mini (Jetson AGX Orin)** com o **braço robótico StarAI Viola** para realizar tarefas de classificação de frutas usando o **framework LeRobot**. O projeto demonstra um fluxo de trabalho de ponta a ponta, desde a coleta de dados até a implantação, permitindo que o robô agarre e organize frutas de forma inteligente.
+Este wiki demonstra como usar o **J501 Mini (Jetson AGX Orin)** com o **braço robótico StarAI Viola** para realizar tarefas de classificação de frutas usando o **framework LeRobot**. O projeto apresenta um fluxo de trabalho de ponta a ponta, desde a coleta de dados até a implantação, permitindo que o robô agarre e organize frutas de forma inteligente.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png"/>
@@ -76,11 +76,11 @@ Este wiki é baseado no JetPack 6.2.1 e usa o módulo Jetson AGX Orin.
 ### Componentes Necessários
 
 - **J501 Mini** com módulo Jetson AGX Orin
-- Braço seguidor **StarAI Viola** (6+1 DoF)
-- Braço líder **StarAI Violin** (6+1 DoF) para teleoperação
+- **StarAI Viola** braço seguidor (6+1 DoF)
+- **StarAI Violin** braço líder (6+1 DoF) para teleoperação
 - **2x câmeras USB** (640x480 @ 30fps recomendado)
   - Uma câmera montada no punho
-  - Uma câmera de visualização em terceira pessoa
+  - Uma câmera de visão em terceira pessoa
 - **Placas de depuração UC-01** (x2, incluídas com os braços)
 - **Fonte de alimentação de 12V** para os braços robóticos
 - **Cabos USB** para comunicação com os braços
@@ -91,8 +91,8 @@ Este wiki é baseado no JetPack 6.2.1 e usa o módulo Jetson AGX Orin.
 | Componente | Especificação |
 |-----------|--------------|
 | **J501 Mini** | Jetson AGX Orin, JetPack 6.2.1 |
-| **Viola Follower** | 6+1 DoF, 470mm de alcance, 300g de carga útil |
-| **Violin Leader** | 6+1 DoF, 470mm de alcance, teleoperação |
+| **Viola Follower** | 6+1 DoF, alcance de 470mm, carga útil de 300g |
+| **Violin Leader** | 6+1 DoF, alcance de 470mm, teleoperação |
 | **Câmeras** | USB, 640x480 @ 30fps, formato MJPG |
 | **Alimentação** | 12V 10A para cada braço |
 
@@ -101,7 +101,7 @@ Este wiki é baseado no JetPack 6.2.1 e usa o módulo Jetson AGX Orin.
 ### Pré-requisitos
 
 - Ubuntu 22.04 (no J501 Mini com JetPack 6.2.1)
-- Python 3.10
+- Python 3.12
 - CUDA 12+
 - PyTorch 2.6+ (versão GPU)
 
@@ -118,7 +118,7 @@ source ~/.bashrc
 
 ```bash
 # Create conda environment
-conda create -y -n lerobot python=3.10 && conda activate lerobot
+conda create -y -n lerobot python=3.12 && conda activate lerobot
 
 # Clone LeRobot repository
 git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
@@ -130,7 +130,7 @@ conda install ffmpeg -c conda-forge
 
 ### Instalar PyTorch e Torchvision para Jetson
 
-Para dispositivos Jetson, você precisa instalar a versão GPU do PyTorch e Torchvision antes de instalar o LeRobot. Siga [este tutorial de instalação do PyTorch para Jetson](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) para instalar PyTorch-gpu e Torchvision.
+Para dispositivos Jetson, você precisa instalar a versão GPU do PyTorch e do Torchvision antes de instalar o LeRobot. Siga [este tutorial de instalação do PyTorch para Jetson](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) para instalar PyTorch-gpu e Torchvision.
 
 ### Instalar LeRobot e Dependências
 
@@ -151,7 +151,7 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
-### Instalar Dependências do Motor StarAI
+### Instalar Dependências dos Motores StarAI
 
 ```bash
 pip install lerobot_teleoperator_bimanual_leader
@@ -160,14 +160,14 @@ pip install lerobot_robot_bimanual_follower
 
 ### Verificar PyTorch e Torchvision
 
-Como instalar o ambiente LeRobot via pip irá desinstalar o PyTorch e o Torchvision originais e instalar as versões para CPU, você precisa fazer uma verificação em Python:
+Como instalar o ambiente LeRobot via pip desinstalará o PyTorch e o Torchvision originais e instalará as versões para CPU, você precisa fazer uma verificação em Python:
 
 ```python
 import torch
 print(torch.cuda.is_available())  # Should print True
 ```
 
-Se o resultado impresso for `False`, você precisa reinstalar PyTorch e Torchvision de acordo com [este tutorial para Jetson](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
+Se o resultado impresso for `False`, você precisa reinstalar o PyTorch e o Torchvision de acordo com [este tutorial para Jetson](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
 
 ```bash
 # Remove brltty if it causes USB port conflicts
@@ -203,7 +203,7 @@ Antes da calibração, mova ambos os braços para suas posições iniciais:
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_init.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_init.png) |
 
-### Calibrar o Braço Líder
+### Calibrar Braço Líder
 
 ```bash
 lerobot-calibrate \
@@ -212,9 +212,9 @@ lerobot-calibrate \
     --teleop.id=my_violin_leader
 ```
 
-Mova manualmente cada junta até suas posições máxima e mínima. Pressione Enter para salvar após calibrar todas as juntas.
+Mova manualmente cada junta para suas posições máxima e mínima. Pressione Enter para salvar após calibrar todas as juntas.
 
-### Calibrar o Braço Seguidor
+### Calibrar Braço Seguidor
 
 ```bash
 lerobot-calibrate \
@@ -242,7 +242,7 @@ Camera #1: /dev/video4 (front camera)
 ```
 
 Monte as câmeras:
-- **Câmera de punho**: Prenda ao gripper para visão em close-up
+- **Câmera de punho**: Prenda ao gripper para visão em close
 - **Câmera frontal**: Posicione na mesa para visão em terceira pessoa
 
 ## 🎮 Teste de Teleoperação
@@ -262,7 +262,7 @@ lerobot-teleoperate \
 ```
 
 :::warning
-Para o treinamento do modelo ACT, os nomes das câmeras devem ser `wrist` e `front`. Usar nomes diferentes exigirá modificar o código-fonte.
+Para o treinamento do modelo ACT, os nomes das câmeras devem ser `wrist` e `front`. Usar nomes diferentes exigirá a modificação do código-fonte.
 :::
 
 ## 📊 Coleta de Dados para Classificação de Frutas
@@ -356,13 +356,13 @@ lerobot-train \
 
 ### Parâmetros de Treinamento
 
-| Parâmetro | Descrição |
+| Parameter | Description |
 |-----------|-------------|
 | `--policy.type` | Tipo de modelo (act) |
 | `--steps` | Total de passos de treinamento (100.000) |
 | `--batch_size` | Tamanho do batch de treinamento (8) |
 | `--eval_freq` | Frequência de avaliação (a cada 5000 passos) |
-| `--wandb.enable` | Ativar registro no Weights & Biases |
+| `--wandb.enable` | Habilitar logging do Weights & Biases |
 
 ### Tempo de Treinamento
 
@@ -371,7 +371,7 @@ No J501 Mini (AGX Orin):
 - 100 episódios: ~16-20 horas
 
 :::tip
-Você pode ativar `--wandb.enable=true` para monitorar o progresso do treinamento com o Weights & Biases. Certifique-se de executar `wandb login` primeiro.
+Você pode habilitar `--wandb.enable=true` para monitorar o progresso do treinamento com Weights & Biases. Certifique-se de executar `wandb login` primeiro.
 :::
 
 ### Retomar o Treinamento
@@ -406,14 +406,14 @@ lerobot-record \
 
 ### Operação Autônoma
 
-Uma vez treinado, o robô pode classificar frutas de forma autônoma. O vídeo abaixo demonstra o fluxo completo de trabalho de classificação de frutas usando a política ACT treinada no J501 Mini com o braço StarAI Viola:
+Depois de treinado, o robô pode classificar frutas de forma autônoma. O vídeo abaixo demonstra o fluxo completo de trabalho de classificação de frutas usando a política ACT treinada no J501 Mini com o braço StarAI Viola:
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/Tk6jazbZZy0" title="Fruit Sorting Demo with J501 Mini and StarAI Viola" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 **Destaques da Demo:**
-- O robô identifica e pega diferentes frutas de forma autônoma
+- O robô identifica e agarra diferentes frutas de forma autônoma
 - Movimentos suaves e precisos aprendidos a partir de demonstrações de teleoperação
 - Classifica as frutas com sucesso em recipientes designados
 - Demonstra a eficácia da política ACT treinada no J501 Mini
@@ -422,7 +422,7 @@ Para executar a classificação autônoma de frutas:
 
 1. Coloque as frutas na área de trabalho
 2. Execute o comando de avaliação mostrado acima
-3. O robô executará o comportamento aprendido para pegar e classificar as frutas
+3. O robô executará o comportamento aprendido para agarrar e classificar as frutas
 
 ## 🎯 Dicas para Melhor Desempenho
 
@@ -436,10 +436,10 @@ Para executar a classificação autônoma de frutas:
 2. **Qualidade Acima de Quantidade**
    - Colete demonstrações suaves e deliberadas
    - Evite movimentos bruscos
-   - Garanta pegadas bem-sucedidas nos dados de treinamento
+   - Garanta agarres bem-sucedidos nos dados de treinamento
 
 3. **Posicionamento da Câmera**
-   - Mantenha ângulos de câmera consistentes
+   - Mantenha os ângulos da câmera consistentes
    - Garanta boa visibilidade das frutas e do gripper
    - Evite movimento da câmera durante a gravação
 
@@ -448,7 +448,7 @@ Para executar a classificação autônoma de frutas:
 1. **Tamanho do Conjunto de Dados**
    - Comece com 50 episódios
    - Adicione mais dados se o desempenho for insuficiente
-   - 100-200 episódios são normalmente suficientes para tarefas simples
+   - 100-200 episódios geralmente são suficientes para tarefas simples
 
 2. **Ajuste de Hiperparâmetros**
    - Ajuste o tamanho do batch com base na memória da GPU
@@ -478,11 +478,11 @@ sudo chmod 777 /dev/ttyUSB*
 ```
 
 **Câmera Não Funciona**
-- Não conecte câmeras através de hub USB
+- Não conecte câmeras por meio de hub USB
 - Use conexão USB direta
 - Verifique o índice da câmera com `lerobot-find-cameras opencv`
 
-**Treinamento Sem Memória Suficiente**
+**Treinamento Sem Memória (Out of Memory)**
 - Reduza o tamanho do batch: `--batch_size=4`
 - Reduza a resolução da imagem
 - Feche outros aplicativos
@@ -496,7 +496,7 @@ sudo chmod 777 /dev/ttyUSB*
 ## 📚 Referências
 
 - 🔗 [Documentação do LeRobot](https://github.com/huggingface/lerobot)
-- 🔗 [Wiki do Braço StarAI](https://wiki.seeedstudio.com/pt-br/lerobot_starai_arm/)
+- 🔗 [StarAI Arm Wiki](https://wiki.seeedstudio.com/pt-br/lerobot_starai_arm/)
 - 🔗 [Documentação do J501 Mini](https://wiki.seeedstudio.com/pt-br/recomputer_j501_mini_getting_started/)
 - 🔗 [Artigo do ACT](https://tonyzhaozh.github.io/aloha/)
 - 🔗 [JetPack SDK](https://developer.nvidia.com/embedded/jetpack)

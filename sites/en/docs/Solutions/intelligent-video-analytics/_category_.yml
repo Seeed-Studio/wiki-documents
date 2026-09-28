@@ -1,0 +1,10 @@
+position: 1
+label: 'Vision & Video AI'
+collapsible: true
+collapsed: true
+className: _ai-perception
+link:
+  type: generated-index
+  slug: intelligent-video-analytics
+  title: Vision & Video AI
+  description: Vision and video analytics solutions on edge devices.

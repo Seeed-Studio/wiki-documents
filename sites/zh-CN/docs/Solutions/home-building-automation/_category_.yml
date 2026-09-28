@@ -1,0 +1,10 @@
+position: 3
+label: '家居与建筑自动化'
+collapsible: true
+collapsed: true
+className: _device-integration-control
+# link:
+#   type: generated-index
+#   slug: cn/home-building-automation
+#   title: 家居与建筑自动化
+#   description: 家居与楼宇自动化、能耗与协议集成方案。

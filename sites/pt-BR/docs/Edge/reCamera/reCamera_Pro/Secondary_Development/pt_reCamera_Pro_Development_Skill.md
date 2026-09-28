@@ -4,21 +4,23 @@ description: Instale e use a reCamera Pro Development Skill para converter model
 keywords:
   - reCamera
   - reCamera Pro
-  - agente de codificação em IA
+  - AI coding agent
   - Agent Skills
   - RKNN
   - RV1126B
   - Edge AI
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/cpp_skill/recamera_skill.png
-slug: /recamera_pro_development_cpp_skill
+slug: /recamera_pro_development_cpp_skill_legacy
+draft: true
 sidebar_position: 3
 last_update:
   date: 2026-08-14
   author: yylin
 createdAt: '2026-08-14'
-updatedAt: '2026-08-18'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_development_cpp_skill/
+updatedAt: '2026-08-17'
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_development_cpp_skill_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/ai_coding_agents.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_development_cpp_skill/), which now serves the original slug /recamera_pro_development_cpp_skill. This file is kept for history as a draft (slug /recamera_pro_development_cpp_skill_legacy) and is excluded from production builds. Do not link here. -->
 
 # Desenvolva aplicações reCamera Pro com agentes de codificação em IA
 
@@ -30,14 +32,14 @@ A [reCamera Pro Development Skill](https://github.com/Seeed-Projects/recamera-pr
 
 Por exemplo, você pode pedir ao agente para:
 
-- Converter um modelo ONNX para RKNN para o NPU RV1126B
+- Converter um modelo ONNX para RKNN para a NPU RV1126B
 - Criar ou modificar uma aplicação nativa C/C++ com RKNN Runtime
 - Capturar frames de câmera com GStreamer
 - Adicionar captura de microfone ou reprodução em alto-falante
 - Desenvolver um pipeline de inferência RTSP
 - Inspecionar o host, o compilador cruzado, o sysroot, as bibliotecas de destino e os arquivos ELF gerados
 
-O repositório fornece edições para OpenAI Codex, Claude Code, GitHub Copilot, Cursor e Gemini CLI. Cada edição usa o mesmo conhecimento de desenvolvimento da reCamera Pro, com instruções de instalação e invocação específicas para cada agente.
+O repositório fornece edições para OpenAI Codex, Claude Code, GitHub Copilot, Cursor e Gemini CLI. Cada edição usa o mesmo conhecimento de desenvolvimento da reCamera Pro com instruções de instalação e invocação específicas do agente.
 
 :::note
 Esta skill é projetada especificamente para **reCamera Pro com o SoC RV1126B e Linux aarch64**. Ela não se destina à plataforma reCamera SG2002/riscv64.
@@ -76,13 +78,13 @@ A skill usa o seguinte contrato de destino ao desenvolver aplicações nativas d
 | Dispositivo | Seeed reCamera Pro |
 | SoC | Rockchip RV1126B |
 | Arquitetura de destino | Linux aarch64 |
-| Formato de modelo | ONNX como entrada, RKNN como saída |
+| Formato de modelo | Entrada ONNX, saída RKNN |
 | RKNN Toolkit | RKNN-Toolkit2 2.3.2 |
 | RKNN Runtime | 2.3.2 |
 | Framework de câmera | GStreamer |
 | Linguagem da aplicação nativa | C/C++ |
 
-## Instalar a Skill
+## Instalar a skill
 
 ### Selecione seu agente de codificação em IA
 
@@ -96,9 +98,9 @@ Clone o branch que corresponde ao agente que você usa:
 | Cursor | `cursor` | `~/.cursor/skills/recamera-rknn-dev` |
 | Gemini CLI | `gemini-cli` | `~/.gemini/skills/recamera-rknn-dev` |
 
-### Método 1: Peça ao agente para instalá-la
+### Método 1: peça ao agente para instalá-la
 
-Se o seu agente suportar instalar skills a partir de um repositório Git, envie a seguinte solicitação:
+Se o seu agente suportar instalar skills a partir de um repositório Git, envie a ele a seguinte solicitação:
 
 ```text
 Install the reCamera Pro development skill from:
@@ -107,9 +109,9 @@ https://github.com/Seeed-Projects/recamera-pro-development-skill.git
 
 Mencione o agente que você usa para que ele selecione o branch e o diretório de instalação correspondentes.
 
-### Método 2: Instalar manualmente
+### Método 2: instalar manualmente
 
-O exemplo a seguir instala a edição para OpenAI Codex:
+O exemplo a seguir instala a edição OpenAI Codex:
 
 ```bash
 git clone --branch main --single-branch \
@@ -126,9 +128,9 @@ Reinicie o agente após a instalação se a skill não aparecer na sessão atual
 Mantenha o repositório clonado. Para atualizar a skill depois, faça pull das alterações mais recentes do mesmo branch do agente e siga o README e as instruções de instalação desse branch.
 :::
 
-## Usar a Skill
+## Usar a skill
 
-Você pode mencionar explicitamente a skill no seu prompt:
+Você pode nomear explicitamente a skill no seu prompt:
 
 ```text
 Use the reCamera Pro development skill to check whether my computer is ready
@@ -186,7 +188,7 @@ compatibility with the board sysroot.
 O agente segue este fluxo de trabalho geral:
 
 1. Inspecionar o host Linux ou WSL, a instalação do Conda, o compilador cruzado, o sysroot e os arquivos locais do RKNN Runtime.
-2. Inspecionar o contrato do modelo ONNX e registrar sua origem, licença, layout de entrada, normalização, ordem de cores e semântica de saída.
+2. Inspecionar o contrato do modelo ONNX e registrar sua fonte, licença, layout de entrada, normalização, ordem de cores e semântica de saída.
 3. Converter o modelo com RKNN-Toolkit2 2.3.2 para `rv1126b`; usar dados de calibração representativos para INT8.
 4. Comparar a saída RKNN com o modelo ONNX de origem antes de integrá-lo em uma aplicação.
 5. Criar ou adaptar a aplicação nativa em C/C++ e compilá-la cruzadamente contra um sysroot compatível com a reCamera Pro.
@@ -211,17 +213,17 @@ Por padrão, depois que o agente gera uma saída, você precisa enviá-la manual
 | --- | --- | --- |
 | A skill não está listada | O agente não recarregou seu diretório de skills em nível de usuário | Reinicie o agente e verifique se a skill foi instalada no diretório mostrado acima |
 | A plataforma errada foi selecionada | Instruções para a reCamera SG2002/riscv64 foram misturadas na tarefa | Informe que o alvo é reCamera Pro, RV1126B e aarch64 |
-| A conversão RKNN falha | A versão do Toolkit, o suporte a operadores ONNX ou o contrato de entrada do modelo é incompatível | Peça ao agente para inspecionar primeiro o modelo ONNX e usar o RKNN-Toolkit2 2.3.2 |
+| A conversão RKNN falha | A versão do Toolkit, o suporte a operadores ONNX ou o contrato de entrada do modelo é incompatível | Peça ao agente para inspecionar primeiro o modelo ONNX e usar RKNN-Toolkit2 2.3.2 |
 | A precisão em INT8 é ruim | As imagens de calibração estão ausentes ou não são representativas | Crie um conjunto de dados representativo e liste um caminho de imagem por linha |
-| O executável é x86-64 | O compilador do host foi usado em vez do compilador cruzado aarch64 | Reconstrua com um compilador compatível com o alvo e o sysroot da reCamera Pro |
+| O executável é x86-64 | O compilador do host foi usado em vez do compilador cruzado aarch64 | Recompile com um compilador compatível com o alvo e o sysroot da reCamera Pro |
 | O binário não consegue carregar uma biblioteca | O sysroot, o ABI ou o caminho de busca do runtime não corresponde à placa | Peça ao agente para inspecionar as dependências ELF e comparar cada biblioteca de destino com o dispositivo |
 | Os frames da câmera têm cores incorretas ou resultados de inferência errados | A conversão NV12-para-RGB/BGR ou a normalização não correspondem ao modelo | Verifique novamente o contrato do modelo e torne o pré-processamento explícito |
 
 ## Recursos
 
-- [Repositório da reCamera Pro Development Skill](https://github.com/Seeed-Projects/recamera-pro-development-skill)
-- [Página do produto reCamera Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)
-- [Wiki da reCamera Pro](https://wiki.seeedstudio.com/pt-br/recamera_pro_getting_started/)
+- [reCamera Pro Development Skill repository](https://github.com/Seeed-Projects/recamera-pro-development-skill)
+- [reCamera Pro product page](https://www.seeedstudio.com/reCamera-Pro-2GB.html)
+- [reCamera Pro Wiki](https://wiki.seeedstudio.com/pt-br/recamera_pro_getting_started/)
 
 ## Suporte Técnico e Discussão de Produtos
 

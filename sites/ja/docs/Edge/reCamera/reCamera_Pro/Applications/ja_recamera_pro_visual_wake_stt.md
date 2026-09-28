@@ -1,5 +1,5 @@
 ---
-title: reCamera Pro でビジュアルウェイク & オフライン音声認識システムを構築する
+title: reCamera Pro でビジュアルウェイクとオフライン音声認識システムを構築する
 description: reCamera Pro 上で、視線トリガー式のオンデバイス二言語ストリーミング音声認識システムを、ターミナル・Web・RTSP ステータスビュー付きでデプロイする方法を学びます。
 keywords:
   - reCamera Pro
@@ -9,30 +9,32 @@ keywords:
   - speech recognition
   - Zipformer
   - edge AI
-image: https://raw.githubusercontent.com/yyling0101-a11y/recamera_pro_face_stt/main/images/gpt_images.png
-slug: /recamera_pro_visual_wake_stt
+image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/gpt_images.png
+slug: /recamera_pro_visual_wake_stt_legacy
+draft: true
 last_update:
   date: 2026-08-24
   author: yylin
 createdAt: '2026-08-24'
-updatedAt: '2026-08-24'
+updatedAt: '2026-08-27'
 sidebar_position: 1
-url: https://wiki.seeedstudio.com/ja/recamera_pro_visual_wake_stt/
+url: https://wiki.seeedstudio.com/ja/recamera_pro_visual_wake_stt_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/visual_wake_speech.md (https://wiki.seeedstudio.com/ja/recamera_pro_visual_wake_stt/), which now serves the original slug /recamera_pro_visual_wake_stt. This file is kept for history as a draft (slug /recamera_pro_visual_wake_stt_legacy) and is excluded from production builds. Do not link here. -->
 
-# reCamera Pro でビジュアルウェイク & オフライン音声認識システムを構築する
+# reCamera Pro でビジュアルウェイクとオフライン音声認識システムを構築する
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/gpt_images.png" /></div>
 
 ## はじめに
 
-このプロジェクトでは、reCamera Pro（RV1126B）向けに、自然で完全オンデバイスなインタラクションフローを実装します。カメラが顔を検出し、頭部姿勢を推定します。人が一定時間カメラを見続けた場合にのみ、アプリケーションがマイクを開き、ストリーミング音声認識を開始します。その後、連続トリガーを防ぐために短いクールダウン期間に入ります。
+このプロジェクトは、reCamera Pro（RV1126B）向けに、自然で完全オンデバイスなインタラクションフローを実装します。カメラが顔を検出し、頭部姿勢を推定します。人がカメラを継続的に見つめた場合にのみ、アプリケーションはマイクを開き、ストリーミング音声認識を開始します。その後、連続トリガーを防ぐために短いクールダウン期間に入ります。
 
-これは、音声アシスタント、展示用キオスク、プライバシー重視のエッジ音声エントリポイントに適しています。ビジョン、姿勢評価、音声特徴量、および Zipformer 推論はローカルで実行されます。Web ダッシュボードはクラウドサービス、Node.js プロセス、CDN、外部フォントを一切必要としません。
+これは、音声アシスタント、展示用キオスク、プライバシー重視のエッジ音声入力ポイントに適しています。ビジョン、姿勢評価、音声特徴量抽出、および Zipformer 推論はローカルで実行されます。Web ダッシュボードはクラウドサービス、Node.js プロセス、CDN、外部フォントを一切必要としません。
 
 ソースコードと今後のリリースは、[recamera_pro_face_stt GitHub リポジトリ](https://github.com/yyling0101-a11y/recamera_pro_face_stt)で入手できます。このディレクトリがプッシュされた後、リポジトリにはプロジェクト全体が含まれます。
 
-## 特長とパイプライン
+## 機能とパイプライン
 
 ```text
 GStreamer camera
@@ -44,7 +46,7 @@ GStreamer camera
   -> bilingual streaming Zipformer STT (RKNN)
 ```
 
-デフォルトの状態は `IDLE`、`FACE_DETECTED`、`ATTENTION_PENDING`、`LISTENING`、`COOLDOWN` です。絶対ヨー角が 18° 以下、絶対ピッチ角が 13° 以下のときに視線が有効とみなされます。その姿勢を 700 ms 維持すると `LISTENING` がトリガーされます。音声キャプチャはリスニング状態のときのみ開始されるため、アプリケーションは常時録音しません。
+デフォルトの状態は `IDLE`、`FACE_DETECTED`、`ATTENTION_PENDING`、`LISTENING`、`COOLDOWN` です。絶対ヨー角が 18° 以下、絶対ピッチ角が 13° 以下のときに視線が有効と見なされます。その姿勢を 700 ms 維持すると `LISTENING` がトリガーされます。音声キャプチャはリスニング状態でのみ開始されるため、アプリケーションは常時録音しません。
 
 ## ハードウェア要件
 
@@ -55,7 +57,7 @@ GStreamer camera
 - ファームウェアが提供する `ai_asr` PCM オーディオデバイス
 
 :::note
-デフォルトの音声入力は `ai_asr`（16 kHz、S16_LE、4 チャンネル、チャンネル 0 を選択）です。これにより、`hw:0,0` を所有するベンダープロセスとの競合を避けられます。
+デフォルトの音声入力は `ai_asr` です：16 kHz、S16_LE、4 チャンネルで、チャンネル 0 を選択します。これにより、`hw:0,0` を所有するベンダープロセスとの競合を避けられます。
 :::
 
 ## プロジェクトを取得する
@@ -124,7 +126,7 @@ chmod +x visual_wake_app
 ./visual_wake_app
 ```
 
-通常動作中、実行可能なイベントはターミナルに表示されます：
+通常の動作中、重要なイベントはターミナルに表示されます：
 
 ```text
 VISUAL_WAKE track=1
@@ -155,8 +157,8 @@ STT_RESULT 打开灯
 | `--width N` | `1920` | 要求するカメラキャプチャ幅。 |
 | `--height N` | `1080` | 要求するカメラキャプチャ高さ。 |
 | `--fps N` | `30` | 要求するカメラフレームレート。処理レートは推論時間に依存します。 |
-| `--attention-dropout-ms N` | `250` | アテンション開始後の短時間の無効姿勢に対する猶予期間（ミリ秒）。`0` を設定すると無効化されます。 |
-| `--no-stt` | STT 有効 | 音声認識を開始しません。ビジュアルウェイク状態マシンのみをテストします。 |
+| `--attention-dropout-ms N` | `250` | アテンション開始後の一時的な無効姿勢に対する猶予時間（ミリ秒）。無効にするには `0` を設定します。 |
+| `--no-stt` | STT 有効 | 音声認識を開始しません。ビジュアルウェイクのステートマシンのみをテストします。 |
 
 #### 音声認識とエンドポイント検出
 
@@ -168,7 +170,7 @@ STT_RESULT 打开灯
 | `--stt-vocab FILE` | `models/stt/vocab.txt` | 語彙ファイルのパス。選択したモデルセットと一致している必要があります。 |
 | `--audio-device NAME` | `ai_asr` | ALSA/`arecord` のオーディオデバイス名。 |
 | `--audio-channels N` | `4` | 入力 PCM の総チャンネル数。 |
-| `--audio-channel N` | `0` | 使用するチャンネル。`-1` を設定すると全チャンネルを平均します。 |
+| `--audio-channel N` | `0` | 使用するチャンネル。すべてのチャンネルを平均するには `-1` を設定します。 |
 | `--stt-chunk-ms N` | `160` | STT に渡す各音声チャンクの長さ（ミリ秒）。 |
 | `--speech-rms-threshold F` | `0.006` | 音声開始を検出する RMS しきい値。騒がしい部屋では値を上げてください。 |
 | `--stt-min-speech-ms N` | `160` | 1 回の認識セッションで受け付ける最小音声長（ミリ秒）。 |
@@ -180,11 +182,11 @@ STT_RESULT 打开灯
 
 | オプション | デフォルト | 説明 |
 | --- | --- | --- |
-| `--no-rtsp` | RTSP 有効 | 顔ボックス、ランドマーク、姿勢付きの注釈 RTSP ストリームを無効にします。 |
+| `--no-rtsp` | RTSP 有効 | 顔ボックス、ランドマーク、姿勢を重畳した RTSP ストリームを無効にします。 |
 | `--rtsp-port PORT` | `8554` | RTSP サーバーポート。 |
 | `--rtsp-mount PATH` | `/visual-wake` | RTSP マウントパス。たとえば `/demo` の場合、`rtsp://DEVICE_IP:8554/demo` になります。 |
-| `--rtsp-width N` | `960` | RTSP 出力幅。 |
-| `--rtsp-height N` | `540` | RTSP 出力高さ。 |
+| `--rtsp-width N` | `960` | RTSP 出力の幅。 |
+| `--rtsp-height N` | `540` | RTSP 出力の高さ。 |
 | `--rtsp-fps N` | `15` | 宣言上の RTSP 出力フレームレート。実際のレートは推論スループットに依存します。 |
 | `--no-web` | Web サービス有効 | HTTP および WebSocket ダッシュボードを無効にします。 |
 | `--web-port PORT` | `8080` | Web ダッシュボードとヘルスエンドポイントのポート。 |
@@ -202,7 +204,7 @@ STT_RESULT 打开灯
 ./visual_wake_app --dashboard
 ```
 
-ターミナルは少なくとも 80×18 文字が必要です。左ペインには STT ステータス、途中結果テキスト、最終結果が表示され、右ペインには顔数、カメラ正対ステータス、姿勢角度、RTSP クライアントステータス、ビジョンレイテンシが表示されます。`Ctrl-C` を押すと通常のターミナルに戻ります。`--dashboard` は `--debug` と同時には使用できません。
+ターミナルは少なくとも 80×18 文字である必要があります。左ペインには STT ステータス、途中結果テキスト、最終結果が表示され、右ペインには顔数、カメラ注視状態、姿勢角度、RTSP クライアントステータス、ビジョンレイテンシが表示されます。`Ctrl-C` を押すと通常のターミナルに戻ります。`--dashboard` は `--debug` と同時には使用できません。
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/dashboard.png" /></div>
 
@@ -220,11 +222,11 @@ USB 仮想ネットワーク接続の場合の例：
 http://192.168.42.1:8080/
 ```
 
-ページは自動的に `ws://DEVICE_IP:8080/ws` に接続し、中断後も再接続します。途中結果と最終結果のトランスクリプト、ビジュアル状態、顔数、ヨー／ピッチ／ロール、RTSP ステータス、レイテンシチャートを表示します。ヘルスエンドポイントは `http://DEVICE_IP:8080/health` です。別のポートを使うには `--web-port 8081` を、カスタムページを使うには `--web-page PATH` を指定します。
+ページは自動的に `ws://DEVICE_IP:8080/ws` に接続し、中断後も再接続します。途中結果と最終結果のトランスクリプト、ビジュアル状態、顔数、ヨー／ピッチ／ロール、RTSP ステータス、レイテンシチャートを表示します。ヘルスエンドポイントは `http://DEVICE_IP:8080/health` です。別のポートを使用するには `--web-port 8081`、カスタムページを使用するには `--web-page PATH` を指定します。
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/recamera_pro_visual_wake_stt/web.png" /></div>
 
-## 注釈付きビデオストリームを表示する
+## アノテーション付きビデオストリームを表示する
 
 アプリケーションはデフォルトで RTSP サーバーを起動します：
 
@@ -238,28 +240,28 @@ rtsp://DEVICE_IP:8554/visual-wake
 ffplay -rtsp_transport tcp rtsp://192.168.42.1:8554/visual-wake
 ```
 
-オーバーレイには、顔ボックス、98 個すべてのランドマーク、生のヨー／ピッチ、`facing=YES/NO`、現在の状態が表示されます。緑は姿勢がエントリしきい値内であること、オレンジは有効だがしきい値外であること、赤は姿勢が無効であることを示します。
+オーバーレイには、顔のボックス、98 個すべてのランドマーク、生のヨー／ピッチ、`facing=YES/NO`、および現在の状態が表示されます。緑はポーズがエントリしきい値の範囲内であること、オレンジは有効だがしきい値の範囲外であること、赤はポーズが無効であることを意味します。
 
-## チューニング
+## 調整
 
 カメラの設置位置、レンズ特性、室内ノイズは体験に影響します。次の順序で調整してください：
 
-1. カメラに正対しながら `--debug` を使ってヨー／ピッチを観察し、エントリしきい値を調整します。
+1. `--debug` を使用してカメラの正面を向いたときのヨー／ピッチを観察し、エントリしきい値を調整します。
 2. 一時的な遮蔽に対して `--attention-dropout-ms` を調整します。猶予期間を無効にするには `0` を使用します。
-3. 対象環境で音声 RMS を観察し、`--speech-rms-threshold` を調整します。
-4. `--stt-end-silence-ms`、`--stt-start-timeout-ms`、`--stt-max-ms` を使用して、応答性と長いコマンドとのバランスを取ります。
+3. 対象環境でオーディオ RMS を観察し、`--speech-rms-threshold` を調整します。
+4. `--stt-end-silence-ms`、`--stt-start-timeout-ms`、`--stt-max-ms` を使用して、応答性と長いコマンドの両立を図ります。
 
-コントローラはEMAスムージングと入退場ヒステリシスを使用します。単一の無効なポーズではリスニングは決してトリガーされず、アクティブなアテンションタイマーも即座にはクリアされませんが、フェイストラッキングが失われると状態は即座にリセットされます。
+コントローラは EMA 平滑化と入退場ヒステリシスを使用します。単一の無効なポーズではリスニングは決してトリガーされず、アクティブなアテンションタイマーも即座にはクリアされませんが、顔トラッキングの喪失は状態を即座にリセットします。
 
 ## トラブルシューティング
 
 | 問題 | 想定される原因 | 解決策 |
 | --- | --- | --- |
-| ビルドで OpenCV または RKNN が見つからない | SDK 環境が不足しているか、ランタイムが非互換 | `RECAMERA_PRO_SDK` を確認し、SDK の `env.sh` を読み込み、RKNN 2.3.2 を使用します。 |
-| モデルファイルが見つからない | デプロイ時のレイアウトが保持されていない | 実行ディレクトリに `models/` と `web/dashboard.html` が存在することを確認します。 |
-| ビジュアルウェイクがまったくトリガーされない | カメラの誤り、しきい値が厳しすぎる、小さすぎる顔 | `--debug` と RTSP オーバーレイを使用して、`/dev/video13`、ランドマーク、およびヨー／ピッチを確認します。 |
+| ビルドが OpenCV または RKNN を見つけられない | SDK 環境が不足しているか、ランタイムが非互換 | `RECAMERA_PRO_SDK` を確認し、SDK の `env.sh` を読み込み、RKNN 2.3.2 を使用します。 |
+| モデルファイルが見つからない | デプロイメントレイアウトが保持されていない | 実行ディレクトリに `models/` と `web/dashboard.html` が存在することを確認します。 |
+| ビジュアルウェイクがまったくトリガーされない | カメラの誤り、しきい値が厳しすぎる、小さい顔 | `--debug` と RTSP オーバーレイを使用して、`/dev/video13`、ランドマーク、ヨー／ピッチを確認します。 |
 | STT がオーディオエラーを報告する | `ai_asr` が利用できない、またはそのフォーマットが異なる | デバイス上で `arecord -D ai_asr -f S16_LE -r 16000 -c 4 -d 5 /tmp/test.wav` をテストします。 |
-| Web ページにアクセスできない | ポートに到達できない、または Web 配信が無効化されている | `--no-web` を使用せず、`http://DEVICE_IP:8080/health` をテストします。 |
+| Web ページにアクセスできない | ポートに到達できない、または Web 配信が無効化されている | `--no-web` を使用しないでください。`http://DEVICE_IP:8080/health` をテストします。 |
 | RTSP を再生できない | ネットワーク、ポート、または GStreamer プラグインの問題 | TCP 再生を使用し、必要なファームウェアの GStreamer 要素を確認します。 |
 
 ## 技術サポートと製品ディスカッション

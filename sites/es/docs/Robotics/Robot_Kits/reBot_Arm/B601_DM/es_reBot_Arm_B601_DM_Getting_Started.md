@@ -1,6 +1,6 @@
 ---
 description: Esta guía te ayudará a comenzar con el reBot Arm B601-DM, incluyendo opciones de compra, montaje, calibración y configuración de software.
-title: Inicio rápido de reBot Arm B601-DM
+title: Inicio rápido de B601-DM
 keywords:
   - reBot
   - B601-DM
@@ -9,7 +9,7 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 DOF
-image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 slug: /rebot_b601_dm_getting_started
 translation:
   skip: [zh-CN]
@@ -33,7 +33,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" />
 </div>
 
 <div className="rebot-buy-button-group">

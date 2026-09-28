@@ -13,7 +13,7 @@ last_update:
   date: 09/18/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-09-18'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
@@ -23,7 +23,7 @@ url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_rugged_j40_getting_s
   <img width="700" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J4012" />
 </div>
 
-reComputer Rugged J4012 是一款基于 NVIDIA Jetson Orin NX 16GB 的 IP66 级边缘 AI 计算机。其全密封 M12 接口提供 USB、带 PSE 的以太网、CAN、RS-232/422/485 和 DI/DO 接口，同时配备 M.2 Key B 插槽以支持 5G 扩展，非常适合用于 AMR、机器人、农业、工业自动化以及海事等应用场景。
+reComputer Rugged J4012 是一款基于 NVIDIA Jetson Orin NX 16GB 的 IP66 级边缘 AI 计算机。其全密封 M12 接口提供 USB、带 PSE 的以太网、CAN、RS-232/422/485 以及 DI/DO 接口，同时配备支持 5G 扩展的 M.2 Key B 插槽，非常适合用于 AMR、机器人、农业、工业自动化以及海事等应用场景。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank">
@@ -35,8 +35,8 @@ reComputer Rugged J4012 是一款基于 NVIDIA Jetson Orin NX 16GB 的 IP66 级�
 
 - **IP66 防水**：全密封外壳，所有外部接口均采用 M12 防水连接器
 - **无风扇被动散热**：在 -20°C 至 +60°C、0.7 m/s 气流条件下静音运行
-- **坚固耐用且抗振动**：3 Grms @ 5–500 Hz，1 小时/轴——适用于车辆和海事应用
-- **丰富的工业 I/O**：CAN-FD（隔离）、RS-232/422/485、DI/DO，全部通过 M12 A-code 连接器提供
+- **坚固耐用且抗振动**：3 Grms @ 5–500 Hz，1 小时/轴——适用于车辆和海事环境
+- **丰富的工业 I/O**：CAN-FD（隔离）、RS-232/422/485、DI/DO，全部通过 M12 A-code 连接器
 - **灵活的网络连接**：4× PoE GbE + 1× GbE（M12），M.2 Key E（Wi-Fi/BT），M.2 Key B（5G/GPS）
 - **宽电压输入**：通过 M12 B/A-code 连接器提供 19–48 V DC 输入
 - **认证**：CE、FCC、RoHS、REACH
@@ -107,15 +107,15 @@ reComputer Rugged J4012 是一款基于 NVIDIA Jetson Orin NX 16GB 的 IP66 级�
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={2}>2× CAN-FD（隔离，120 Ω），通过 M12 A-code 8 针接口</td>
+      <td colSpan={2}>2× CAN-FD（隔离，120 Ω），通过 M12 A-code 8 针</td>
     </tr>
     <tr>
       <td>串口</td>
-      <td colSpan={2}>1× RS-232/422/485，通过 M12 A-code 8 针接口</td>
+      <td colSpan={2}>1× RS-232/422/485，通过 M12 A-code 8 针</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td colSpan={2}>2× DI + 2× DO，通过 M12 12 针 / 8 针接口</td>
+      <td colSpan={2}>2× DI + 2× DO，通过 M12 12 针 / 8 针</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -128,11 +128,11 @@ reComputer Rugged J4012 是一款基于 NVIDIA Jetson Orin NX 16GB 的 IP66 级�
     <tr>
       <td rowSpan={2}>扩展</td>
       <td>M.2 Key E</td>
-      <td colSpan={2}>Wi-Fi / Bluetooth 模组（可选）</td>
+      <td colSpan={2}>Wi-Fi / Bluetooth 模块（可选）</td>
     </tr>
     <tr>
       <td>M.2 Key B</td>
-      <td colSpan={2}>5G / GPS 模组（可选）</td>
+      <td colSpan={2}>5G / GPS 模块（可选）</td>
     </tr>
     <tr>
       <td rowSpan={2}>电源</td>
@@ -207,7 +207,7 @@ reComputer Rugged J4012 是一款基于 NVIDIA Jetson Orin NX 16GB 的 IP66 级�
 ## 烧录 JetPack
 
 :::note
-烧录说明将在 BSP 可用后补充。烧录流程与其他 reComputer J40 系列设备相同。
+一旦 BSP 可用，将补充烧录说明。烧录流程与其他 reComputer J40 系列设备相同。
 :::
 
 请参考 [Flash BSP with Jetpack to Selected Jetson](/cn/flash/jetpack_to_selected_product) 页面获取最新的烧录指南。
@@ -260,13 +260,16 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 资源
 
-- [reComputer Rugged J401 规格书](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf)
+- [reComputer Rugged J40 规格书](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf) 
+- [载板原理图](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf)
+- [PSE 板原理图](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf)
+- [3D 文件](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp)
 - [Linux_for_Tegra 源码](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson 设备对比](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中体验顺畅。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

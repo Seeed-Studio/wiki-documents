@@ -12,14 +12,14 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-05-13'
-updatedAt: '2026-08-06'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/
 ---
 
 :::danger note
 Quando o dispositivo estiver em qualquer um dos estados abaixo, não reinicie nem desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável (bricked).
-1. Não tiver concluído o processo de transmissão de mensagem
-2. Estiver sendo configurado
+1. Não concluir o processo de transmissão de mensagem
+2. Estar em configuração
 :::
 ## Introdução
 
@@ -84,12 +84,12 @@ A versão P1-Pro possui bateria e módulo GPS integrados. Para a versão P1, os 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-Certifique-se de que a carcaça esteja corretamente montada e os parafusos bem apertados para manter a integridade à prova d’água do dispositivo.
+Certifique-se de que a carcaça esteja corretamente montada e os parafusos bem apertados para manter a integridade à prova d'água do dispositivo.
 :::
 
 ### Ligar o dispositivo
 
-O dispositivo precisa ser ativado conectando o cabo USB antes do primeiro uso. Se a luz azul Mesh piscar, o dispositivo foi ligado com sucesso, como mostrado no vídeo abaixo:
+O dispositivo precisa ser ativado conectando o cabo USB antes do primeiro uso. Se a luz azul Mesh piscar, o dispositivo foi ligado com sucesso, conforme mostrado no vídeo abaixo:
 
 <div class="table-center">
 <iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -136,12 +136,12 @@ import TabItem from '@theme/TabItem';
 
 Se você quiser enviar mensagens de texto e se comunicar com outros nós no cliente web, pode conectar o dispositivo ao [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) agora.
 
-  Etapa 1: Abrir o site
+  Etapa 1: Abra o site
 
-[Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir ao site.
+[Click here](https://client.meshtastic.org/messages/broadcast/0) para ir ao site.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  Etapa 2: Adicionar o novo dispositivo 
+  Etapa 2: Adicione o novo dispositivo 
 
     Clique em "+ New Connection". 
 
@@ -219,7 +219,7 @@ No iOS, ative `Accurate Location`. Caso contrário, o posicionamento pode ser im
 ## Instalação
 
 :::danger note
-Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel na posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar o acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa corretamente instalada. Para maior proteção contra água, você também pode considerar aplicar medidas extras de vedação.
+Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel na posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar o acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa corretamente instalada. Para proteção adicional contra água, você também pode considerar aplicar medidas extras de vedação.
 :::
 
 - **Lista de peças**
@@ -343,9 +343,9 @@ Isso geralmente é causado por uma falha na gravação do firmware. Ao gravar o 
 
 - Solução de problemas
 
-[Clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#re-flash-o-firmware) para regravar o firmware.
+[Clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-firmware) para regravar o firmware.
 
-### Dispositivo inutilizado (bricked)
+### Dispositivo brickado
 
 #### Descrição
 
@@ -367,13 +367,15 @@ Para usuários do Windows, pressione a tecla "Win" e a tecla "R", depois digite 
 
 Para usuários de Mac, pressione a tecla "Command" e a tecla "Espaço" para abrir o Spotlight. Em seguida, digite "terminal" e pressione "Return". Isso abre a linha de comando.
 
+Para usuários de Linux, abra um terminal e use a guia **Linux** abaixo para instalar a ferramenta com pipx.
+
 **Pré-requisitos**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
 
-Verifique na sua linha de comando se o Python e o pip foram instalados com sucesso.
+Verifique na sua linha de comando se o Python e o pip foram instalados com sucesso. No Linux, use `python3` em vez de `python` para essas verificações.
 
 ```
 python --version
@@ -383,12 +385,12 @@ python --version
 python -m pip --version
 ```
 
-Em seguida, "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
+Então "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
 
 <Tabs>
 <TabItem value="pypi" label="Instalando a partir do PyPI">
 
-Este é o método recomendado para instalar a versão mais recente:
+Para Windows e macOS, instale a versão mais recente com o seguinte comando. Usuários de Linux devem usar a guia **Linux**.
 
 ```
 pip3 install --user adafruit-nrfutil
@@ -430,7 +432,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a opção `--user`:
+Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é mais antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a flag `--user`:
 
 ```
 pip3 install -r --user requirements.txt
@@ -444,7 +446,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-Para gerar um binário executável autônomo da ferramenta (Windows e MacOS), execute estes comandos:
+Para gerar um binário executável autônomo da ferramenta (Windows e macOS), execute estes comandos:
 
 ```
 pip3 install pyinstaller
@@ -456,6 +458,27 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 Você encontrará o executável em `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` (com `.exe` se você estiver no Windows).
 Copie ou mova-o para outro lugar para sua conveniência, como um diretório no seu `%PATH%`.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+No Ubuntu/Debian, instale `adafruit-nrfutil` com pipx. Ele isola a ferramenta do ambiente Python do sistema e evita o erro `externally-managed-environment`:
+
+```bash
+sudo apt update
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
+```
+
+No Fedora, use `sudo dnf install pipx` em vez de apt. Reabra o seu terminal e, em seguida, verifique:
+
+```bash
+adafruit-nrfutil version
+```
+
+Use `adafruit-nrfutil version`, não `adafruit-nrfutil --version`. Se o comando não for encontrado, verifique se `pipx ensurepath` foi concluído e reabra o terminal.
 
 </TabItem>
 </Tabs>
@@ -470,9 +493,35 @@ Para usuários do Windows, por exemplo:
 Para usuários de Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Etapa 3: Grave o bootloader**
+**Para usuários de Linux:**
+
+Conecte o Solar Node P1 / P1-Pro com um cabo de dados USB. Compare a saída a seguir antes e depois de conectá-lo para identificar sua porta serial:
+
+```bash
+ls /dev/ttyACM*
+```
+
+O dispositivo geralmente aparece como `/dev/ttyACM0`; se nada for listado, tente também `ls /dev/ttyUSB*`. Para entrar manualmente no modo DFU, pressione duas vezes o botão `RST` do dispositivo e, em seguida, verifique a porta novamente. Use a porta DFU atual para a gravação.
+
+Verifique as permissões da porta, substituindo `/dev/ttyACM0` pela sua porta real:
+
+```bash
+ls -l /dev/ttyACM0
+```
+
+No Ubuntu/Debian, as portas seriais geralmente pertencem ao grupo `dialout`. Se você receber `Permission denied` e a porta pertencer a `dialout`, adicione seu usuário a esse grupo:
+
+```bash
+sudo usermod -aG dialout "$USER"
+```
+
+Saia e entre novamente para que a alteração tenha efeito. Em outras distribuições, use o grupo de acesso serial mostrado por `ls -l` e siga as instruções da sua distribuição.
+
+**Passo 3: Grave o bootloader**
 
 No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo a porta pela correta para o seu dispositivo:
+
+Mantenha `xiao_nrf52840_ble_bootloader.zip` como um arquivo ZIP; não o extraia. Feche qualquer monitor serial ou gravador via navegador conectado ao dispositivo. Se o dispositivo já estiver em modo DFU após pressionar duas vezes `RST`, omita `--touch 1200` e use sua porta DFU atual.
 
 - **Para Windows**:
 
@@ -483,22 +532,54 @@ Altere COMXX para o número da sua porta COM. Por exemplo, se o seu dispositivo 
 
 `adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
 
- Alguns dispositivos mudarão o número da porta após você inserir este comando. Se a instalação falhar, verifique o número da porta novamente.
+Se a porta serial mudar após este comando, siga o Passo 4 abaixo.
 
 
-- **Para outros**:
+- **Para macOS**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
 ```
 
+- **Para Linux**:
+
+Se você entrou no modo DFU manualmente no Passo 2, execute este comando sem `--touch 1200`. Substitua `/dev/ttyACM0` pela sua porta DFU atual:
+
+```bash
+adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/ttyACM0 -b 115200 --singlebank
+```
+
+Se o dispositivo ainda estiver executando o firmware de aplicação e tiver uma porta serial, você pode adicionar `--touch 1200` para solicitar o modo DFU. Se ele não responder, pressione duas vezes `RST`, identifique novamente a porta DFU e use o comando sem `--touch 1200`.
+
+**Passo 4: Lidar com a mudança de porta serial**
+
+`--touch 1200` solicita o modo DFU abrindo e fechando a porta serial a 1200 baud. O sistema operacional pode então atribuir uma porta diferente. Se a saída mostrar `Touched serial port` seguida de um erro de porta não encontrada, verifique se apareceu uma nova porta DFU. Esse erro por si só não confirma uma gravação bem-sucedida nem significa que o dispositivo foi danificado.
+
+Mantenha o cabo USB conectado. No Linux, execute `ls /dev/ttyACM*` novamente (ou `ls /dev/ttyUSB*` se aplicável). No Windows, atualize o Gerenciador de Dispositivos; no macOS, verifique `ls /dev/cu.*`. Tente novamente usando a nova porta DFU e **omita `--touch 1200`**. Por exemplo, se a nova porta Linux for `/dev/ttyACM1`:
+
+```bash
+adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/ttyACM1 -b 115200 --singlebank
+```
+
+Use o nome real da sua porta. Se a porta não puder ser aberta, verifique suas permissões conforme descrito no Passo 2 e certifique-se de que nenhum outro aplicativo a esteja usando. Se nenhuma porta DFU aparecer, pressione duas vezes `RST` e verifique novamente antes de tentar de novo.
+
+**Passo 5: Confirme o resultado e reinstale o firmware de aplicação**
+
+Aguarde a conclusão da transferência e a ferramenta exibir:
+
+```text
+Device programmed.
+```
+
+Esta mensagem confirma que a transferência do bootloader foi concluída com sucesso. Mantenha o cabo conectado durante a transferência. Uma mudança de porta ou o aparecimento de uma unidade USB por si só não é confirmação de uma gravação bem-sucedida.
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-Quando você tiver concluído as etapas acima, siga esta [etapa](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-firmware) para gravar o firmware do aplicativo.
+Gravar o bootloader não reinstala o firmware de aplicação Meshtastic. Após a transferência bem-sucedida, siga [Flash Firmware](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-firmware) para instalá-lo antes de usar o dispositivo.
 
-### Não é possível se comunicar no canal primário
+### Incapaz de se comunicar no canal primário
 
-Se o dispositivo não conseguir se comunicar com nós próximos ou enviar mensagens, primeiro verifique se a região LoRa e o modem preset correspondem aos nós ao redor. Você também deve verificar se o **PSK** padrão foi alterado. Um PSK diferente no canal primário impedirá que o dispositivo se comunique com outros nós nesse canal.
+Se o dispositivo não conseguir se comunicar com nós próximos ou enviar mensagens, primeiro verifique se a região LoRa e o modem preset correspondem aos nós ao redor. Você também deve verificar se o **PSK** padrão foi alterado. Um PSK diferente no canal primário impedirá o dispositivo de se comunicar com outros nós nesse canal.
 
 A maneira mais fácil de encontrar esse problema é por meio do aplicativo móvel. Abra o app, conecte-se ao dispositivo de destino e navegue até `Settings` -> `Channels`. Selecione o canal primário e verifique o valor do **PSK**. Se for diferente dos nós ao redor, atualize-o para o mesmo PSK e salve as configurações do canal.
 
@@ -518,27 +599,27 @@ A maneira mais fácil de encontrar esse problema é por meio do aplicativo móve
 
 **Solução**
 
-Se você não tiver certeza de quais configurações foram alteradas, restaure o dispositivo para as configurações padrão seguindo o guia de [Factory Reset](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#factory-reset). Se apenas o PSK tiver sido alterado, defina-o novamente para `AQ==`.
+Se você não tiver certeza de quais configurações foram alteradas, restaure o dispositivo para as configurações padrão seguindo o guia [Factory Reset](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#factory-reset). Se apenas o PSK foi alterado, defina-o novamente para `AQ==`.
 
  ### Dispositivo desliga automaticamente
 
  #### Descrição
 
  - Após o dispositivo ligar, ele desliga ou reinicia automaticamente depois de um tempo.
- - O log da porta serial executa por um tempo e depois para.
+ - O log da porta serial executou por um tempo e depois parou.
 
  Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo enquanto ele está em um dos seguintes estados: sem concluir o processo de transmissão de mensagem ou estando em configuração.
 
  #### Solução de problemas
 
-[Clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-erase) para executar um flash erase e, em seguida, regravar o firmware mais recente.
+[Clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-erase) para executar um flash erase e, em seguida, gravar novamente o firmware mais recente.
 
 
 ### Factory Reset
 
 Se você quiser restaurar as configurações padrão, pode realizar um factory reset. Existem dois métodos para fazer o factory reset.
 
-- [Clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-erase) para executar um flash erase e, em seguida, regravar o firmware mais recente.
+- [Clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-erase) para executar um flash erase e, em seguida, gravar novamente o firmware mais recente.
 
 - Clique no botão `Factory Reset` no app. O dispositivo será reiniciado automaticamente com a configuração de fábrica.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
@@ -547,7 +628,7 @@ Se você quiser restaurar as configurações padrão, pode realizar um factory r
 
 #### Reset do NodeDB
 
-NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ser porque o seu nodedB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
+NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, pode ser porque seu NodeDB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
 
 NodeDB armazena detalhes como:
 
@@ -563,20 +644,20 @@ Abra o app e conecte-se ao dispositivo de destino. Vá para **Settings**->**Devi
 
 #### Trocar informações de usuário
 
-Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e o "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, você pode solicitá-los manualmente a trocar informações no app.
+Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, pode solicitá-los manualmente a trocar informações no app.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo em Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada do dispositivo em Settings" width={300} height="auto" /></p>
 
 #### Regenerar chave privada
 
-Dois nós precisam conhecer a chave privada um do outro para poder se comunicar entre si. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar a chave privada para ele.
+Cada nó possui um par de chaves pública/privada. Para trocar uma mensagem privada criptografada, o remetente a criptografa com a chave pública do destinatário, e somente a chave privada desse destinatário pode descriptografá-la. Dois nós podem, portanto, se comunicar de forma privada assim que conhecerem a chave pública um do outro. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar sua chave privada. Após a regeneração, exclua esse nó das listas de nós dos outros dispositivos para que eles possam se reconectar e obter sua nova chave pública.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo em Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada do dispositivo em Settings" width={600} height="auto" /></p>
 
 Reinicie o dispositivo com falha para que a configuração tenha efeito.
 
 :::note
-Após a regeneração da chave, o outro dispositivo precisa se reconectar ao nó. Portanto, é melhor excluir o nó da lista de nós do outro dispositivo.
+Após a regeneração da chave, outro dispositivo precisa se reconectar ao nó. Portanto, é melhor excluir o nó da lista de nós de outros dispositivos.
 :::
 
 :::tip
@@ -591,11 +672,11 @@ Observe a diferença entre as seguintes opções:
 O consumo de energia depende principalmente de fatores como a frequência de transmissão de dados e a taxa de atualização do GPS.
 Os valores abaixo são apenas para referência; o consumo real pode variar com base nas condições de uso no mundo real.
 
-- **Consumo de energia no modo de desligamento em espera**
+- **Consumo de energia no modo de suspensão desligado**
 
 |Descrição|Consumo|
 |---|---|
-|Corrente de operação do GPS_LED|1.02 mA|
+|Corrente de trabalho do GPS_LED|1.02 mA|
 |Alimentado, mas não ativado|56.195 μA|
 |Alimentado e ativado|611 μA|
 
@@ -620,17 +701,17 @@ Os valores abaixo são apenas para referência; o consumo real pode variar com b
 
 - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica desempenho ruim.
 
-- **RSSI** é determinado em conjunto pelo dispositivo e seu ambiente ao redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo desempenho ruim.
+- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo desempenho ruim.
 
-      Para obter o melhor desempenho de sinal, use o dispositivo em uma área aberta, sem obstruções e com interferência mínima.
+      Para obter o melhor desempenho de sinal, utilize o dispositivo em uma área aberta, sem obstruções e com interferência mínima.
 
 ### Corrente de carregamento
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
-A corrente máxima de carregamento do Xiao nRF-52840 Plus é 200 mA. O chip de gerenciamento de carregamento CN3165 suporta 0,99 A. Portanto, a corrente máxima de carregamento é 1 A.
+A corrente máxima de carregamento do Xiao nRF-52840 Plus é 200 mA. O chip de gerenciamento de carregamento CN3165 suporta 0.99 A. Portanto, a corrente máxima de carregamento é 1 A.
 
-## Recursos
+## Recurso
 - [Tabela de cálculo da vida útil da bateria do Solar Node](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 
 ## Suporte técnico e discussão sobre o produto

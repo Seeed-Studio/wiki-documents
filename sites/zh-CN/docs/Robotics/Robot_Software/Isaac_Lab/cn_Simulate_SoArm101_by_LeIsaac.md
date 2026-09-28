@@ -171,7 +171,7 @@ python scripts/environments/teleoperation/replay.py \
 cd ..
 git clone https://github.com/huggingface/lerobot.git
 cd lerobot
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install -e .
 ```

@@ -1,6 +1,6 @@
 ---
 description: This wiki provides assembly and startup tutorials for the StackForce Mini Wheeled Legged Robot , as well as learning materials and links required for its development.
-title: StackForce Mini Wheeled Legged Robot
+title: Mini Wheeled Legged Quick Start
 keywords:
   - StackForce
   - Robotics
@@ -12,7 +12,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-12-10'
-updatedAt: '2026-03-17'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/
 ---
 

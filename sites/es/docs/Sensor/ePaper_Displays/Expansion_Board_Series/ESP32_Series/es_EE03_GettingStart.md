@@ -3,7 +3,7 @@ description: Primeros pasos con la placa controladora EE03 de tinta electrónica
 title: Primeros pasos con EE03
 keywords:
   - E-ink
-  - Placa controladora
+  - Driver Board
   - 10.3 inch
   - ESP32
   - SenseCraft Seeedash
@@ -12,10 +12,10 @@ slug: /getting_started_with_ee03
 sidebar_position: 2
 sku: 100080566
 last_update:
-  date: 09/10/2026
-  author: Luki
+  date: 09/22/2026
+  author: Nemo
 createdAt: '2026-03-02'
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/es/getting_started_with_ee03/
 ---
 
@@ -57,11 +57,11 @@ Impulsada por **XIAO ESP32-S3 Plus**, la placa controladora de ePaper EE03 es co
 ### Características
 
 - **XIAO ESP32-S3 Plus integrado:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible.
-- **Compatibilidad dedicada con pantalla ePaper monocroma de 10,3":** Diseñada específicamente para la pantalla ePaper de 10,3" de refresco de alta velocidad, lo que garantiza una configuración rápida y un funcionamiento estable.
-- **Refresco de alta velocidad habilitado:** El control de temporización T-CON integrado garantiza un accionamiento de alta velocidad preciso, mientras que el SHT40 a bordo proporciona medición de temperatura en tiempo real para la compensación de la forma de onda.
+- **Compatibilidad dedicada con pantalla ePaper monocroma de 10,3":** Diseñada específicamente para pantallas ePaper de 10,3" de refresco de alta velocidad, lo que garantiza una configuración rápida y un funcionamiento estable.
+- **Refresco de alta velocidad habilitado:** El control de temporización T-CON integrado garantiza un accionamiento de alta velocidad preciso, mientras que el SHT40 integrado proporciona medición de temperatura en tiempo real para la compensación de la forma de onda.
 - **Conector BAT con interruptor:** Ofrece una conexión sencilla de la batería e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro de consumo.
-- **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, proporcionando flexibilidad para acelerar el desarrollo del proyecto y funciones personalizables.
-- **Firmware SenseCraft Seeedash pregrabado:** Solo tienes que conectarla y empezar a usarla de inmediato con SenseCraft Seeedash, nuestra plataforma de diseño de interfaces sin código impulsada por IA. Elige entre plantillas variadas o crea interfaces arrastrando y soltando (con asistencia opcional de IA) y despliega en la pantalla ePaper con solo unos clics.
+- **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, lo que proporciona flexibilidad para acelerar proyectos y funciones personalizables.
+- **Firmware SenseCraft Seeedash precargado:** Solo tienes que conectarla y empezar a usarla de inmediato con SenseCraft Seeedash, nuestra plataforma de diseño de interfaces sin código impulsada por IA. Elige entre abundantes plantillas o crea interfaces mediante arrastrar y soltar (con asistencia opcional de IA) y despliega en la pantalla ePaper con solo unos clics.
 
 ### Especificaciones
 
@@ -77,7 +77,7 @@ Impulsada por **XIAO ESP32-S3 Plus**, la placa controladora de ePaper EE03 es co
 ### Aplicaciones
 
 - **Lectores de libros electrónicos digitales:** Ofrecen una experiencia de lectura monocroma similar al papel con escala de grises de 16 niveles y refresco rápido para cambios de página más fluidos y actualizaciones más receptivas.
-- **Panel de control en tiempo real:** Muestra información en vivo como actualizaciones meteorológicas, calendarios, notificaciones clave y widgets de datos como consumo de energía, estado de sensores o KPIs.
+- **Panel de control en tiempo real:** Muestra información en vivo como actualizaciones meteorológicas, calendarios, notificaciones clave y widgets de datos como consumo de energía, estado de sensores o KPI.
 - **Alertas de seguridad:** Muestra alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
 - **Panel de llegadas de transporte público:** Muestra en un vistazo horarios de llegada en tiempo real de autobuses/trenes, estado de rutas y avisos de servicio para el desplazamiento diario.
 
@@ -99,68 +99,68 @@ Esta sección te guiará para conectar tu EE03 a la plataforma SenseCraft Seeeda
 
 ### Instalación del equipo
 
-**Paso 1. Conectar la pantalla y la placa**
+**Paso 1. Conecta la pantalla y la placa**
 Conecta con cuidado el cable FPC de tu pantalla ePaper al conector de la placa controladora EE03. Asegúrate de que el mecanismo de bloqueo esté bien asegurado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/01.gif" style={{width:800, height:'auto'}}/></div>
 
-**Paso 2. Encender**
+**Paso 2. Encendido**
 Conecta la placa EE03 a una fuente de alimentación (ordenador o adaptador USB) utilizando un cable USB Type-C. Al encenderla, la pantalla se actualizará y mostrará una imagen de bienvenida.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_7.jpg" style={{width:300,height:'auto'}}/></div>
 
-**Paso 3. Entrar en el modo de configuración de red**
-Después de la imagen de bienvenida, la pantalla se actualizará automáticamente para mostrar la interfaz de configuración de red. Esto indica que el dispositivo está listo para conectarse a la red Wi‑Fi.
+**Paso 3. Entra en el modo de configuración de red**
+Después de la imagen de bienvenida, la pantalla se actualizará automáticamente para mostrar la interfaz de configuración de red. Esto indica que el dispositivo está listo para conectarse a Wi‑Fi.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_3.png" style={{width:300,height:'auto'}}/></div>
 
 
 ### Configuración de red
 
-**Paso 4. Configurar Wi‑Fi mediante el teléfono móvil**
-Utiliza tu teléfono móvil para escanear el código QR que se muestra en la pantalla. Sigue las indicaciones en tu teléfono para introducir el SSID y la contraseña de tu red Wi‑Fi local y conectar el EE03 a Internet.
+**Paso 4. Configura el Wi‑Fi mediante el teléfono móvil**
+Utiliza tu teléfono móvil para escanear el código QR que se muestra en la pantalla. Sigue las indicaciones en tu teléfono para introducir el SSID y la contraseña de tu red Wi‑Fi local y conectar la EE03 a Internet.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/Step_4.png" style={{width:600,height:'auto'}}/></div>
 
-**Paso 5. Obtener el código de emparejamiento**
+**Paso 5. Obtén el código de emparejamiento**
 Una vez que la configuración de red se haya completado correctamente, la pantalla se actualizará de nuevo y mostrará un **código de emparejamiento** único. Necesitarás este código para el siguiente paso.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_2.png" style={{width:300,height:'auto'}}/></div>
 
 ### Vinculación con la plataforma y actualización
 
-**Paso 6. Vincular el dispositivo en SenseCraft Seeedash**
+**Paso 6. Vincula el dispositivo en SenseCraft Seeedash**
 Ve a la [plataforma SenseCraft Seeedash](https://sensecraft.seeed.cc/hmi/device). Inicia sesión en tu cuenta. Navega a la sección de gestión de dispositivos y selecciona "New Device". Introduce el código de emparejamiento que se muestra en tu pantalla de tinta electrónica.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.png" style={{width:500, height:'auto'}}/></div>
 
-**Paso 7. Crear y enviar una nueva interfaz**     
+**Paso 7. Crea y envía una nueva interfaz**     
 En la plataforma SenseCraft Seeedash, selecciona la plantilla adecuada para la pantalla de 10,3 pulgadas para crear una nueva interfaz o subir una imagen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/5.png" style={{width:500, height:'auto'}}/></div>
 
-**Paso 8. Aplicar tus imágenes**
+**Paso 8. Aplica tus imágenes**
 Una vez terminado, haz clic en el botón "Apply" y selecciona tu dispositivo EE03.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.png" style={{width:800, height:'auto'}}/></div>
 
-**Paso 9. Mostrar en la pantalla**
-Finalmente, el EE03 recibirá los datos y actualizará la pantalla de 10,3 pulgadas con tu nuevo contenido.
+**Paso 9. Muestra en la pantalla**
+Finalmente, la EE03 recibirá los datos y actualizará la pantalla de 10,3 pulgadas con tu nuevo contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_7.png" style={{width:300, height:'auto'}}/></div>
 
 
 ## Primeros pasos con Arduino
 
-### Instalar la librería Seeed GFX2
+### Instalar la biblioteca Seeed GFX2
 
 :::tip
-Esta librería tiene la misma función que la librería TFT y **no** es compatible con ella. Si has instalado la librería TFT u otras librerías de pantalla similares, desinstálalas primero.
+Esta biblioteca tiene la misma función que la biblioteca TFT y **no** es compatible con ella. Si has instalado la biblioteca TFT u otras bibliotecas de pantalla similares, desinstálalas primero.
 :::
 
-Descarga e instala la librería Seeed GFX2 desde GitHub.
+Descarga e instala la biblioteca Seeed GFX2 desde GitHub.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/14.png" style={{width:800, height:'auto'}}/></div>
 
@@ -170,12 +170,12 @@ Descarga e instala la librería Seeed GFX2 desde GitHub.
 </a>
 </div>
 
-Después de descargar la librería, ve a **Sketch** -> **Include Library** -> **Add .ZIP Library** y selecciona la librería descargada.
+Después de descargar la biblioteca, ve a **Sketch** -> **Include Library** -> **Add .ZIP Library** y selecciona la biblioteca descargada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/15.png" style={{width:500, height:'auto'}}/></div>
 
 
-### Configurar y grabar el programa
+### Configura y graba el programa
 
 Como se muestra en la imagen, navega hasta el ejemplo mediante este menú:
 File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → ESP32 Series → EE03 → 10.3 Monochrome ePaper Display → 10_3_inch_Monochrome_HelloWorld
@@ -189,7 +189,7 @@ Ten en cuenta que PSRAM debe estar habilitado.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/17.png" style={{width:400, height:'auto'}}/></div>
 
 Luego haz clic en **Upload** para cargar el código.
-Ahora verás la respuesta en la pantalla de tu epaper. A continuación se muestra el resultado del ejemplo HelloWorld.
+Ahora verás la respuesta en tu pantalla de epaper. A continuación se muestra el resultado del ejemplo HelloWorld.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/7.png" style={{width:500, height:'auto'}}/></div>
 
@@ -210,7 +210,7 @@ Ahora verás la respuesta en la pantalla de tu epaper. A continuación se muestr
 *   Esto puede ocurrir si la pantalla no se ha actualizado durante mucho tiempo o si la fuente de alimentación es inestable. Intenta actualizar la pantalla de nuevo a través de la plataforma Seeedash.
 
 **P4: La pantalla emite un zumbido de alta frecuencia durante la actualización.**
-*   Esto es normal en las pantallas ePaper. El circuito de accionamiento de alto voltaje produce un sonido audible durante el ciclo de actualización, especialmente en pantallas más grandes. No indica un fallo de hardware y se detendrá una vez que la actualización se complete.
+*   Esto es normal para las pantallas ePaper. El circuito de accionamiento de alto voltaje produce un sonido audible durante el ciclo de actualización, especialmente con pantallas más grandes. No indica un fallo de hardware y se detendrá una vez que la actualización se complete.
 
 **P5: El enlace del dispositivo SenseCraft Seeedash falla.**
 *   Verifica que el Pair Code se haya introducido correctamente (distingue mayúsculas y minúsculas).
@@ -223,7 +223,7 @@ Ahora verás la respuesta en la pantalla de tu epaper. A continuación se muestr
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">

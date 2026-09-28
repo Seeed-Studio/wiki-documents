@@ -1,5 +1,5 @@
 ---
-description: Este guia explica como enviar imagens reconstruídas por IA via MeshCore usando compressão de imagem com taxa de bits ultrabaixa.
+description: Este guia explica como enviar imagens reconstruídas por IA via MeshCore usando compressão de imagem de taxa de bits ultrabaixa.
 title: Transmissão de Imagem
 keywords:
   - MeshCore
@@ -9,7 +9,7 @@ keywords:
   - Compressão de Imagem com IA
   - LoRa Mesh
   - AEIC-SE
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png
 slug: /meshcore_ai_image_transmission_x1
 sku: 100087698
 sidebar_position: 1
@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}>
 
-<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>
+<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png" style={{width:900, height:'auto'}}/>
 
 </div>
 
@@ -41,14 +41,14 @@ import TabItem from '@theme/TabItem';
 
 Este recurso de transmissão de imagem é adequado para usuários que precisam compartilhar informações visuais em locais sem Internet confiável ou redes celulares.
 
-- **Exploradores ao ar livre**: Caminhantes, alpinistas e equipes de expedição podem compartilhar condições de trilhas, enviar imagens de paisagens remotas e fornecer informações visuais quando o texto não é suficiente.
-- **Equipes de resposta a emergências e desastres**: A equipe pode compartilhar condições de campo, fornecer atualizações visuais rápidas e melhorar a consciência da equipe por meio de imagens.
+- **Exploradores ao ar livre**: Caminhantes, alpinistas e equipes de expedição podem compartilhar condições de trilha, enviar imagens de paisagens remotas e fornecer informações visuais quando o texto não é suficiente.
+- **Equipes de resposta a emergências e desastres**: A equipe pode compartilhar condições de campo, fornecer atualizações visuais rápidas e melhorar a consciência situacional da equipe por meio de imagens.
 - **Entusiastas de comunicação off-grid**: Adequado para usuários de MeshCore e rádio amador que desejam explorar comunicação de borda com IA.
 
 
 ## Como a Transmissão de Imagem Funciona no MeshCore
 
-A imagem **não é transmitida diretamente**. O remetente usa um codificador de IA local para converter a imagem em um arquivo binário muito pequeno. O receptor não restaura os pixels originais. Em vez disso, um decodificador de IA local usa os dados compactados para gerar uma imagem visualmente semelhante.
+A imagem **não é transmitida diretamente**. O remetente usa um codificador de IA local para converter a imagem em um arquivo binário muito pequeno. O receptor não restaura os pixels originais. Em vez disso, um decodificador de IA local usa os dados comprimidos para gerar uma imagem visualmente semelhante.
 
 
 O fluxo de trabalho é:
@@ -68,11 +68,11 @@ AI Decoder
 Reconstructed Image
 ```
 
-## Comece a Usar o MeshCore Open
+## Introdução ao MeshCore Open
 
-### Configuração Inicial
+### Configuração inicial
 
-1. Instale o App MeshCore Open. [Clique aqui](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar a versão do APP que oferece suporte à transmissão de imagem.
+1. Instale o app MeshCore Open. [Clique aqui](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar a versão do APP que suporta transmissão de imagem.
 2. Conecte seu nó MeshCore ao APP. [Clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#app-connection) para ler o guia de conexão do MeshTracker X1.
 3. Configure sua região LoRa e as configurações de rede.
 4. Certifique-se de que outro nó MeshCore esteja disponível como receptor.
@@ -81,7 +81,7 @@ Para instruções gerais de configuração do MeshCore, consulte o [Guia de Intr
 
 ### Instalar o modelo
 
-Ative a transmissão de imagem e baixe os arquivos de modelo ml na configuração do APP.
+Ative a transmissão de imagem e baixe os arquivos de modelo de ML na configuração do APP.
 
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Setting.png" style={{width:600, height:'auto'}}/>
@@ -95,18 +95,18 @@ Escolha uma imagem do seu telefone.
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshOpen_PhotoSelection.png" style={{width:300, height:'auto'}}/>
 </div>
 
-O APP processará automaticamente a imagem antes da transmissão. Os dados de imagem compactados serão transmitidos pela rede MeshCore. O tempo de transmissão depende do número de saltos na malha, configuração de rádio, tráfego de rede e qualidade do sinal. Os dados transmitidos contêm apenas a representação compactada, não a imagem original.
+O APP processará automaticamente a imagem antes da transmissão. Os dados de imagem comprimidos serão transmitidos pela rede MeshCore. O tempo de transmissão depende do número de saltos na malha, configuração de rádio, tráfego de rede e qualidade do sinal. Os dados transmitidos contêm apenas a representação comprimida, não a imagem original.
 
-Quando o nó receptor recebe os dados compactados, o decodificador então executa a reconstrução da imagem. A imagem reconstruída aparecerá na interface de chat.
+Quando o nó receptor recebe os dados comprimidos, o decodificador então realiza a reconstrução da imagem. A imagem reconstruída aparecerá na interface de chat.
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png" style={{width:600, height:'auto'}}/>
 </div>
 
 ## Entendendo Imagens Reconstruídas por IA
 
-A imagem de saída não é uma cópia perfeita em pixels da imagem original. O decodificador pode gerar detalhes adicionais que não foram transmitidos. Portanto, esse recurso é adequado para consciência de cena, comunicação ao ar livre, monitoramento remoto e compartilhamento de informações visuais. Não é adequado para coleta de evidências, verificação de identidade, análise científica de imagens e aplicações que exigem reprodução exata da imagem.
+A imagem de saída não é uma cópia perfeita em nível de pixel da imagem original. O decodificador pode gerar detalhes adicionais que não foram transmitidos. Portanto, este recurso é adequado para consciência de cena, comunicação ao ar livre, monitoramento remoto e compartilhamento de informações visuais. Não é adequado para coleta de evidências, verificação de identidade, análise científica de imagens e aplicações que exigem reprodução exata da imagem.
 
 ## Recursos
 
 - [Documentação do MeshCore Open](https://meshcoreopen.org/docs/getting-started/)
-- [Codec de Imagem com Taxa de Bits Ultrabaixa AEIC-SE](https://huggingface.co/zjs81/aeic-se-onnx)
+- [Codec de Imagem de Taxa de Bits Ultrabaixa AEIC-SE](https://huggingface.co/zjs81/aeic-se-onnx)

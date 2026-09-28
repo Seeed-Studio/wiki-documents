@@ -14,7 +14,7 @@ last_update:
   date: 4/14/2026
   author: Zibo
 createdAt: '2026-04-14'
-updatedAt: '2026-06-23'
+updatedAt: '2026-06-17'
 sku: 100042928
 url: https://wiki.seeedstudio.com/es/rtl8852be_wireless_module_for_jetson/
 ---
@@ -34,16 +34,16 @@ url: https://wiki.seeedstudio.com/es/rtl8852be_wireless_module_for_jetson/
 
 
 
-El RTL8852BE es un módulo inalámbrico M.2 Wi‑Fi 6 (802.11ax) basado en el chipset Realtek. Integra una interfaz PCIe para WLAN y una interfaz USB para Bluetooth, ofreciendo un rendimiento significativamente mayor y una latencia más baja en comparación con los módulos Wi‑Fi 5 de la generación anterior. Es ideal para dispositivos embebidos como [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) que requieren conectividad inalámbrica de alto rendimiento.
+El RTL8852BE es un módulo inalámbrico Wi‑Fi 6 (802.11ax) M.2 basado en el chipset Realtek. Integra una interfaz PCIe para WLAN y una interfaz USB para Bluetooth, ofreciendo un rendimiento de transferencia significativamente mayor y una latencia más baja en comparación con los módulos Wi‑Fi 5 de la generación anterior. Es ideal para dispositivos embebidos como el [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) que requieren conectividad inalámbrica de alto rendimiento.
 
 ## Características
 
-- Soporta banda dual de 2.4 GHz / 5 GHz
+- Compatible con banda dual de 2.4 GHz / 5 GHz
 - IEEE 802.11 a/b/g/n/ax (Wi‑Fi 6)
-- Tasa PHY de hasta 1200 Mbps en la banda de 5 GHz
+- Velocidad PHY de hasta 1200 Mbps en la banda de 5 GHz
 - Factor de forma: M.2 2230, llave A o llave E
 - Alimentación: DC 3.3V
-- Soporta Linux (JetPack 5 / JetPack 6), Windows 10/11
+- Compatible con Linux (JetPack 5 / JetPack 6), Windows 10/11
 
 ## Especificaciones
 
@@ -140,7 +140,7 @@ git clone https://github.com/a5a5aa555oo/rtw89
 cd rtw89
 ```
 
-Edita el `Makefile` para establecer la ruta correcta de los encabezados del kernel:
+Edita el `Makefile` para establecer la ruta correcta a los encabezados del kernel:
 
 ```diff
 # JP 6.2
@@ -197,7 +197,7 @@ sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.PNG"/>
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
 </div>
 
 ### Verificar la conexión WiFi 6
@@ -214,7 +214,7 @@ iw dev wlan0 link
 La salida mostrará información como:
 
 - **freq**: La frecuencia de operación (por ejemplo, 5180 MHz corresponde a la banda de 5 GHz)
-- **HE-MCS**: El esquema de modulación y codificación Wi‑Fi 6 (por ejemplo, MCS 9 representa la mayor eficiencia de codificación)
+- **HE-MCS**: El esquema de modulación y codificación de Wi‑Fi 6 (por ejemplo, MCS 9 representa la mayor eficiencia de codificación)
 - **TX/RX rate**: Las velocidades actuales de transmisión y recepción
 
 ## Configuración de Bluetooth

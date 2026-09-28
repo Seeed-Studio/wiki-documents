@@ -1,12 +1,12 @@
 ---
 description: Este documento explica como combinar o braço seguidor SO-ARM101 com a mão hábil AmazingHand e realizar teleoperação usando o LeRobot.
-title: Guia Completo de Treinamento para SO-ARM com AmazingHand
+title: SO-Arm com AmazingHand
 keywords:
   - Lerobot
   - SO-ARM
   - AmazingHand
-  - Robótica
-  - Teleoperação
+  - Robotics
+  - Teleoperation
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/soarm_amazinghand/soarm_amazinghand.webp
 slug: /soarm_amazinghand_teleop
 sku: 114993666,114993667,100063642,100062181

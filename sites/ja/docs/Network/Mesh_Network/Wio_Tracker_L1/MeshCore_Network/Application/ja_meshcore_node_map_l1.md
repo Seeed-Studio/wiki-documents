@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg
 slug: /meshcore_node_map_l1
 sku: 114993648,114993649,114993653,114993654
-sidebar_position: 2
+sidebar_position: 4
 last_update:
   date: 3/19/2026
   author: Michelle Huang
@@ -26,11 +26,11 @@ Node Map は、ノードの位置をプロットすることで [MeshCore](https
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreMAPFirst.png" style={{width:900, height:'auto'}}/></div>
 
-MeshCore Node Map は、ノードが定期的に自分の地理的位置をネットワークに報告することに依存しています。これは特に次の用途に有用です：
+MeshCore Node Map は、ノードが定期的に地理的位置をネットワークへ報告することに依存しています。特に次の用途に有用です：
 
-- **近くのリピータの発見**：利用可能なリピータを特定して接続性を拡張する
+- **近くのリピーターの発見**：利用可能なリピーターを特定し、接続性を拡張する
 - **自分のネットワークの監視**：ノードのステータスと位置を追跡する
-- **デバッグと最適化**：リピータやゲートウェイの配置を最適化する
+- **デバッグと最適化**：リピーターやゲートウェイの配置を最適化する
 
 
 ## MeshCore 公式マップのチュートリアル
@@ -39,19 +39,19 @@ MeshCore Node Map は、ノードが定期的に自分の地理的位置をネ�
 
 ### コンパニオンの設定
 
-コンパニオンノードを MeshCore Node Map 上に表示するには、デバイスが位置情報を報告するよう正しく設定されている必要があります。次のように設定します：
+コンパニオンノードを MeshCore Node Map 上に表示するには、そのデバイスが位置情報を報告するよう正しく設定されている必要があります。次のように設定します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreMap.png" style={{width:1000, height:'auto'}}/></div>
 
-### リピータまたはルームサーバーの設定
+### リピーターまたは Room Server の設定
 
-リピータまたはルームサーバーを MeshCore Node Map 上に表示するには、デバイスが位置情報を報告するよう正しく設定されている必要があります。 
+リピーターまたは room server を MeshCore Node Map 上に表示するには、そのデバイスが位置情報を報告するよう正しく設定されている必要があります。 
 
-まずリピータにログインします。リピータのデフォルト管理者パスワードは `password` です。 
+まずリピーターにログインします。リピーターのデフォルト管理者パスワードは `password` です。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AAdmin.png" alt="pir" width={900} height="auto" /></p>
 
-GPS を有効にして位置情報を取得します（一部のリピータファームウェアはリアルタイム位置の更新をサポートしていないため、その場合は手動で位置を選択する必要があります）。
+GPS を有効にして位置情報を取得します（一部のリピーターファームウェアはリアルタイム位置情報の更新をサポートしていないため、その場合は手動で位置を選択する必要があります）。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreGPSSnciny.png" alt="pir" width={900} height="auto" /></p>
 
@@ -61,13 +61,13 @@ GPS を有効にして位置情報を取得します（一部のリピータフ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg" style={{width:1000, height:'auto'}}/></div>
 
-デバイス名、ロール、設定情報を確認できます。このマップを使用することで、生存しているノードがどこにあるかを簡単に把握できます。
+デバイス名、ロール、設定情報を確認できます。このマップを使うことで、生存しているノードがどこにあるかを簡単に把握できます。
 
 ## （上級者向け）独自の Node Map フロントエンドを構築する
 
 上級ユーザー向けに、カスタム Node Map フロントエンドを構築することも可能です。次のワークフローを使用することを推奨します： 
 
-[通常の MeshCore ノード] → [MQTT を設定した Mesh ノード] → [バックエンド API / データベース] → [フロントエンドのマップ UI]
+[Normal MeshCore Node] → [Mesh Nodes set with MQTT] → [Backend API / Database] → [Frontend Map UI]
 
 ## 技術サポート & 製品ディスカッション
 

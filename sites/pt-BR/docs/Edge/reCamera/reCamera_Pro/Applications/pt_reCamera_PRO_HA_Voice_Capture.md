@@ -1,33 +1,35 @@
 ---
-title: Alerta de foto acionado por som com integração entre reCamera Pro e Home Assistant
-description: Este wiki explica como integrar a reCamera Pro ao Home Assistant para enviar automaticamente uma mensagem personalizada e uma captura de imagem atual da câmera para o painel do Home Assistant quando um som específico for detectado.
+title: Integração do reCamera Pro com Home Assistant Alerta de Foto Disparado por Som
+description: Este wiki explica como integrar o reCamera Pro com o Home Assistant para enviar automaticamente uma mensagem personalizada e uma captura de imagem atual da câmera para o painel do Home Assistant quando um som específico for detectado.
 keywords:
   - reCamera
   - Home Assistant
   - MQTT
-  - Detecção de som
+  - Detecção de Som
   - Edge AI
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif
-slug: /recamera_pro_ha_sound_alert
+slug: /recamera_pro_ha_sound_alert_legacy
+draft: true
 sidebar_position: 2
 last_update:
   date: 2026-07-27
   author: Sizhao zhou
 createdAt: '2026-07-27'
 updatedAt: '2026-07-28'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_ha_sound_alert/
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_ha_sound_alert_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/home_assistant_alerts.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_ha_sound_alert/), which now serves the original slug /recamera_pro_ha_sound_alert. This file is kept for history as a draft (slug /recamera_pro_ha_sound_alert_legacy) and is excluded from production builds. Do not link here. -->
 
-# Integração entre reCamera Pro e Home Assistant: alerta de foto acionado por som
+# Integração do reCamera Pro com Home Assistant: Alerta de Foto Disparado por Som
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" /></div>
 
 ## Introdução
 
-Este wiki explica como integrar a reCamera Pro ao Home Assistant (HA) para enviar automaticamente uma mensagem personalizada e uma captura de imagem atual da câmera para o painel do Home Assistant quando um som específico for detectado. Usando o protocolo MQTT para comunicação bidirecional, quando a reCamera Pro detecta um som especificado (por exemplo, "help") com um nível de confiança acima de um limite, ela envia automaticamente uma mensagem de alerta e uma imagem ao vivo para o HA.
+Este wiki explica como integrar o reCamera Pro com o Home Assistant (HA) para enviar automaticamente uma mensagem personalizada e uma captura de imagem atual da câmera para o painel do Home Assistant quando um som específico for detectado. Usando o protocolo MQTT para comunicação bidirecional, quando o reCamera Pro detecta um som especificado (por exemplo, "help") com um nível de confiança acima de um limite, ele envia automaticamente uma mensagem de alerta e uma imagem ao vivo para o HA.
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif" /></div>
 
-## Preparação de hardware
+## Preparação de Hardware
 
 - Um host executando Home Assistant (suporta implantação via Docker, HA OS ou venv)
 - Um dispositivo reCamera Pro
@@ -48,13 +50,13 @@ Este wiki explica como integrar a reCamera Pro ao Home Assistant (HA) para envia
  </tr>
 </table>
 
-## Instalando o add-on da reCamera no HA
+## Instalando o Add-on do reCamera no HA
 
-Vamos adicionar um add-on da reCamera ao Home Assistant para exibir mensagens e imagens da reCamera Pro no HA. Duas formas de instalação estão disponíveis: script de instalação automática (recomendado) e instalação manual.
+Vamos adicionar um add-on do reCamera ao Home Assistant para exibir mensagens e imagens do reCamera Pro no HA. Duas formas de instalação estão disponíveis: script de instalação automática (recomendado) e instalação manual.
 
-### Método 1: Script de instalação automática (recomendado)
+### Método 1: Script de Instalação Automática (Recomendado)
 
-Baixe o [script install.py](https://drive.google.com/file/d/1nFBHJNkOUPqcAAUCYw43IhGhDWIYNhUX/view?usp=drive_link), execute-o e informe o diretório de configuração do HA para concluir automaticamente toda a instalação.
+Baixe o [script install.py](https://drive.google.com/file/d/1nFBHJNkOUPqcAAUCYw43IhGhDWIYNhUX/view?usp=drive_link), execute-o e entre no diretório de configuração do HA para concluir automaticamente toda a instalação.
 
 ```bash
 # Download install.py (includes all files, no additional downloads needed)
@@ -67,18 +69,18 @@ python3 install.py /home/zsz/HA/config
 O script irá automaticamente:
 1. Copiar o código da integração para `custom_components/recamera_chat/`
 2. Copiar os arquivos de frontend para `www/recamera_chat/`
-3. Acrescentar as configurações `recamera_chat` e `panel_custom` em `configuration.yaml` (faz backup automático do original)
+3. Adicionar as configurações `recamera_chat` e `panel_custom` ao `configuration.yaml` (faz backup automático do original)
 4. Verificar se todos os arquivos estão no lugar
 
 :::tip
 O script é compatível com Linux / Windows / macOS e funciona com todos os métodos de implantação, incluindo Docker, HA OS e venv.
 :::
 
-Após a instalação, pule para a [Etapa 4: Reiniciar o Home Assistant](#etapa-4-reiniciar-o-home-assistant).
+Após a instalação, pule para [Etapa 4: Reinicie o Home Assistant](#Etapa-4:-Reinicie-o-Home-Assistant).
 
-### Método 2: Instalação manual
+### Método 2: Instalação Manual
 
-#### Etapa 1: Baixar o pacote de implantação
+#### Etapa 1: Baixar o Pacote de Implantação
 
 Baixe o pacote de implantação [recamera_chat.zip](https://drive.google.com/file/d/1UgukqGPetQhh_klJBN13dTUfxcCZCAMY/view?usp=drive_link) e extraia-o. A estrutura de diretórios extraída é a seguinte:
 
@@ -97,7 +99,7 @@ recamera_chat/
 └── configuration_snippet.yaml
 ```
 
-#### Etapa 2: Copiar arquivos para o diretório de configuração do HA
+#### Etapa 2: Copiar Arquivos para o Diretório de Configuração do HA
 
 Copie as pastas `custom_components` e `www` para o diretório de configuração do Home Assistant.
 
@@ -109,10 +111,10 @@ A localização do diretório de configuração do HA depende do seu método de 
 :::
 
 :::danger
-`www/` e `custom_components/` são diretórios **irmãos** e ambos devem ser colocados diretamente na raiz de configuração. Não coloque `www/` dentro de `custom_components/`, caso contrário a barra lateral não será exibida.
+`www/` e `custom_components/` são **diretórios irmãos** e ambos devem ser colocados diretamente na raiz de configuração. Não coloque `www/` dentro de `custom_components/`, caso contrário a barra lateral não será exibida.
 :::
 
-**Exemplo de implantação com Docker:**
+**Exemplo de Implantação com Docker:**
 
 ```bash
 # Assuming the HA configuration directory is /home/zsz/HA/config
@@ -172,39 +174,39 @@ panel_custom:
 O número de versão em `module_url` (por exemplo, `?v=13`) deve corresponder ao número de versão no arquivo `panel.js`. Se os números de versão não corresponderem, o navegador pode carregar um cache antigo, fazendo com que o painel não seja exibido.
 :::
 
-#### Etapa 4: Reiniciar o Home Assistant
+#### Etapa 4: Reinicie o Home Assistant
 
 Reinicie o HA para aplicar a configuração:
 
 - Interface web: Settings -> System -> Ícone de energia (canto superior direito) -> Restart
 - Linha de comando (Docker): `docker restart homeassistant`
 
-#### Etapa 5: Verificar a implantação
+#### Etapa 5: Verificar a Implantação
 
 1. Após a conclusão da reinicialização, a aba **reCamera** (com um ícone de câmera) deve aparecer na barra lateral do HA.
 2. Clique nela para ver a interface de chat, com o status **Connected** no canto superior direito.
-3. Digite um texto na caixa de entrada e pressione Enter ou clique no botão **Send**.
-4. O lado da reCamera que assina `recamera/chat/to_camera` deve receber a mensagem.
+3. Digite texto na caixa de entrada e pressione Enter ou clique no botão **Send**.
+4. O lado do reCamera que assina `recamera/chat/to_camera` deve receber a mensagem.
 
 :::warning
 Se a aba reCamera não aparecer na barra lateral após a reinicialização, faça a solução de problemas na seguinte ordem:
-1. Verifique se `www/recamera_chat/panel.js` está localizado sob o diretório `www/` na raiz de configuração (e não em `custom_components/www/`)
-2. Verifique se `configuration.yaml` contém o bloco de configuração `panel_custom`
-3. Verifique se o número de versão `?v=13` em `panel.js` corresponde ao número de versão em `module_url` em `configuration.yaml`
+1. Verifique se `www/recamera_chat/panel.js` está localizado sob o diretório `www/` na raiz de configuração (não em `custom_components/www/`)
+2. Verifique se o `configuration.yaml` contém o bloco de configuração `panel_custom`
+3. Verifique se o número de versão `?v=13` em `panel.js` corresponde ao número de versão em `module_url` no `configuration.yaml`
 4. Pressione Ctrl+F5 para forçar a atualização do navegador e limpar o cache
 :::
 
-## Configurando a reCamera Pro
+## Configurando o reCamera Pro
 
-Como este exemplo exige que a câmera tire fotos, você precisa primeiro parar o processo principal da reCamera Pro para liberar os recursos da câmera. Execute o seguinte comando:
+Como este exemplo requer que a câmera tire fotos, você precisa parar primeiro o processo principal do reCamera Pro para liberar os recursos da câmera. Execute o seguinte comando:
 
 ```bash
 pkill -x rkipc
 ```
 
-Após parar o processo principal, baixe o programa em Python: [Programa da reCamera](https://drive.google.com/file/d/1hQZNFvYzIFAPasy6_DWrxtMavjDmzrV_/view?usp=drive_link)
+Após parar o processo principal, baixe o programa em Python: [Programa do reCamera](https://drive.google.com/file/d/1hQZNFvYzIFAPasy6_DWrxtMavjDmzrV_/view?usp=drive_link)
 
-### Modificar parâmetros de configuração do programa
+### Modificar Parâmetros de Configuração do Programa
 
 Após baixar o programa, você precisa modificar os seguintes parâmetros para que ele seja executado corretamente:
 
@@ -218,15 +220,15 @@ CONFIDENCE_THRESHOLD = 94.0         # Trigger threshold, unit: percentage
 MQTT_MESSAGE = "Someone is calling for help!!"  # Message to send when triggered
 ```
 
-- **MQTT_HOST**: Endereço do broker MQTT, preencha com o endereço IP do seu host HA
-- **MQTT_PORT**: Porta do broker MQTT, preencha com 1883
+- **MQTT_HOST**: Endereço do Broker MQTT, preencha com o endereço IP do seu host HA
+- **MQTT_PORT**: Porta do Broker MQTT, preencha com 1883
 - **TARGET_SOUND**: Nome do som a ser detectado, preencha com `"help"`
 - **CONFIDENCE_THRESHOLD**: Limite de disparo, unidade: porcentagem, preencha com `94.0`. Mensagens e imagens só serão enviadas se a confiança exceder esse valor.
-- **MQTT_MESSAGE**: Mensagem a ser enviada quando acionado; você pode preencher com o conteúdo que deseja exibir no painel do HA.
+- **MQTT_MESSAGE**: Mensagem a ser enviada quando disparado, você pode preencher com o conteúdo que deseja exibir no painel do HA.
 
-### Enviar o código para a reCamera Pro e executar
+### Enviar o Código para o reCamera Pro e Executar
 
-1. Envie o código modificado para a reCamera Pro usando o seguinte comando:
+1. Envie o código modificado para o reCamera Pro usando o seguinte comando:
 
 ```bash
 scp voice_capture.py root@<device_IP>:/userdata
@@ -238,20 +240,20 @@ scp voice_capture.py root@<device_IP>:/userdata
 python3 ./voice_capture.py
 ```
 
-## Resultados esperados
+## Resultados Esperados
 
-1. Após iniciar o programa de detecção de som, a reCamera Pro monitora continuamente os sons do ambiente.
-2. Quando o som especificado (por exemplo, "help") é detectado com um nível de confiança acima do limite, ela captura automaticamente a cena atual.
-3. Ela envia uma mensagem de alerta personalizada e uma imagem para o Home Assistant via MQTT.
-4. O painel da reCamera na barra lateral do HA exibe a mensagem e a imagem recebidas.
+1. Após iniciar o programa de detecção de som, o reCamera Pro monitora continuamente os sons ambientes.
+2. Quando o som especificado (por exemplo, "help") é detectado com um nível de confiança acima do limite, ele captura automaticamente a cena atual.
+3. Ele envia uma mensagem de alerta personalizada e uma imagem para o Home Assistant via MQTT.
+4. O painel do reCamera na barra lateral do HA exibe a mensagem e a imagem recebidas.
 
-## Solução de problemas
+## Solução de Problemas
 
-| Problema | Possível causa | Solução |
+| Problema | Possível Causa | Solução |
 | --- | --- | --- |
-| Nenhuma aba reCamera na barra lateral do HA | Caminho de arquivo incorreto ou configuração não aplicada | Verifique o caminho `www/recamera_chat/panel.js` e a configuração em `configuration.yaml` |
-| O painel mostra "Disconnected" | Falha na conexão MQTT | Verifique se o endereço e a porta do broker MQTT estão corretos |
-| Detecção de som sem resposta | Microfone não conectado ou permissões insuficientes | Confirme se o microfone USB está conectado, verifique o dispositivo de áudio na reCamera Pro |
+| Nenhuma aba reCamera na barra lateral do HA | Caminho de arquivo incorreto ou configuração não aplicada | Verifique o caminho `www/recamera_chat/panel.js` e a configuração do `configuration.yaml` |
+| Painel mostra "Disconnected" | Falha na conexão MQTT | Verifique se o endereço e a porta do broker MQTT estão corretos |
+| Detecção de som sem resposta | Microfone não conectado ou permissões insuficientes | Confirme se o microfone USB está conectado, verifique o dispositivo de áudio no reCamera Pro |
 | Imagem não exibida | Recurso da câmera ocupado | Confirme se `pkill -x rkipc` foi executado para liberar a câmera |
 
 ## Recursos

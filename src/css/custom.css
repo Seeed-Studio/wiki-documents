@@ -2340,3 +2340,30 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 		font-size: clamp(0.98rem, 0.9rem + 1vw, 1.15rem);
 	}
 }
+
+.robotics-section-title {
+	margin-top: 1.4rem;
+  }
+  
+  /* 一级 Section */
+  .robotics-section-title > .menu__list-item-collapsible > .menu__link,
+  .robotics-section-title > .menu__link {
+	font-size: 0.9rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+  
+	color: var(--ifm-color-primary);
+  
+	border-left: 3px solid var(--ifm-color-primary);
+  
+	padding: 0.35rem 0.65rem;
+  
+	background: var(--ifm-color-emphasis-100);
+  
+	border-radius: 3px;
+  }
+  
+  /* 一级标题下面的内容稍微拉开 */
+  .robotics-section-title > .menu__list {
+	margin-top: 0.35rem;
+  }

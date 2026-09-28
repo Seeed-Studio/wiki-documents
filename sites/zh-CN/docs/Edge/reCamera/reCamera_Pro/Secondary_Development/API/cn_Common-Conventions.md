@@ -1,12 +1,13 @@
 ﻿---
-description: 本页介绍适用于所有接口的通用规则，包括响应格式、字段命名约定以及 URL 拼接方式。建议您先阅读本页内容，这样在后续查看具体接口时，就无需频繁返回本页查阅。
+description: 本页介绍适用于所有接口的通用规则，包括响应格式、字段命名约定以及 URL 拼接方式。建议您先阅读本页，这样在后续查看具体接口时，就无需频繁返回本页查阅。
 title: 通用约定
 keywords:
   - Edge AI
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_common_conventions
+slug: /recamera_pro_api_common_conventions_legacy
+draft: true
 sku: 10003420
 sidebar_position: 4
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_api_common_conventions/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_api_common_conventions_legacy/
 ---
+<!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：本页已被 Reference/API/common_conventions.md（https://wiki.seeedstudio.com/cn/recamera_pro_api_common_conventions/）取代，后者现在使用原始 slug /recamera_pro_api_common_conventions。此文件作为草稿（slug /recamera_pro_api_common_conventions_legacy）保留以供历史记录，并不会被包含在正式构建中。请不要链接到本页。 -->
 
 # 通用约定
 
@@ -47,7 +49,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_api_common_conventions/
 
 ### 错误响应
 
-当请求失败时，设备会返回：
+当请求失败时，设备返回：
 
 ```json
 {
@@ -58,7 +60,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_api_common_conventions/
 
 ## 字段命名
 
-JSON 字段名使用小驼峰命名法。首字母前缀表示数据类型：
+JSON 字段名使用小驼峰命名。首字母表示数据类型：
 
 | 前缀 | 类型 | 示例 |
 |---|---|---|
@@ -73,7 +75,7 @@ JSON 字段名使用小驼峰命名法。首字母前缀表示数据类型：
 
 ### CGI 接口
 
-大多数接口需要在前面加上 CGI 基础路径：
+大多数接口需要带上 CGI 基础路径：
 
 ```text
 http://<DEVICE_IP>/cgi-bin/entry.cgi/<API_PATH>
@@ -81,7 +83,7 @@ http://<DEVICE_IP>/cgi-bin/entry.cgi/<API_PATH>
 
 ### 直连路径接口
 
-部分接口会绕过 CGI 层，直接通过路径访问：
+部分接口绕过 CGI 层，直接访问：
 
 ```text
 http://<DEVICE_IP>/api/v1/device/serial-port
@@ -100,7 +102,7 @@ Cookie: token=<JWT_TOKEN>
 
 ## 错误码
 
-错误码按功能模块进行分段：
+错误码按功能模块分段：
 
 | 前缀 | 模块 |
 |---|---|
@@ -116,7 +118,7 @@ Cookie: token=<JWT_TOKEN>
 |---:|---|
 | `10001` | 密码强度过低 |
 | `10002` | Token 已过期 |
-| `10003` | 固件下载已在进行中 |
+| `10003` | 已有固件下载任务在进行中 |
 | `10004` | 端口号超出范围 |
 | `10005` | 端口号已被占用 |
 
@@ -124,7 +126,7 @@ Cookie: token=<JWT_TOKEN>
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用产品的过程中尽可能顺畅。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

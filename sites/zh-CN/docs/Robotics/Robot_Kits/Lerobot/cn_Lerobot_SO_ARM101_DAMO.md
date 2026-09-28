@@ -1,6 +1,6 @@
 ---
 description: 本wiki提供了 SO-ARM101-乐云具身智能平台适配套件的组装与调试教程，并在最新版 Lerobot 框架内实现数据采集与训练。
-title: Lerobot中使用SO-ARM101-乐云具身智能平台适配套件
+title: SO-Arm 乐云具身智能平台
 keywords:
   - Lerobot
   - Huggingface

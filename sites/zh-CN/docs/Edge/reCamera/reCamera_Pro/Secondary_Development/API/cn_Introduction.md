@@ -1,12 +1,13 @@
 ﻿---
-description: 本页概述了 API，向你介绍基础地址、协议和认证方式。请先阅读本页以获得全面了解。
+description: 本页概述了 API，向你介绍基础地址、协议和认证方式。请先阅读本页以获得全面理解。
 title: 介绍
 keywords:
   - Edge AI
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_introduction
+slug: /recamera_pro_api_introduction_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_api_introduction/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_api_introduction_legacy/
 ---
+<!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：本页面已被 Reference/API/introduction.md（https://wiki.seeedstudio.com/cn/recamera_pro_api_introduction/）取代，该文件现在使用原始 slug /recamera_pro_api_introduction。此文件作为草稿（slug /recamera_pro_api_introduction_legacy）保留以供历史记录，并被排除在正式构建之外。请不要链接到此处。 -->
 
 # 介绍
 
@@ -66,7 +68,7 @@ http://<DEVICE_IP>/api/v1/file?path=/mnt/sdcard/test.mp4
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

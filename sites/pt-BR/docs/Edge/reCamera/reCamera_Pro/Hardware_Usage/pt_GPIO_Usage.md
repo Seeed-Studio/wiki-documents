@@ -8,25 +8,27 @@ keywords:
   - sysfs
   - Linux
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_gpio_guide
+slug: /recamera_pro_gpio_guide_legacy
+draft: true
 sku: 10003420
 sidebar_position: 5
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
-createdAt: "2026-08-25"
-updatedAt: "2026-08-25"
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_gpio_guide/
+createdAt: '2026-08-25'
+updatedAt: '2026-08-26'
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_gpio_guide_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/gpio_pins.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_gpio_guide/), which now serves the original slug /recamera_pro_gpio_guide. This file is kept for history as a draft (slug /recamera_pro_gpio_guide_legacy) and is excluded from production builds. Do not link here. -->
 
 # Guia de Uso dos Pinos GPIO do reCamera Pro
 
 ## Introdução
 
-Este artigo descreve como usar os pinos GPIO no reCamera Pro. Você aprenderá como determinar o pino GPIO alvo usando a fórmula de cálculo do número do pino, exportar e configurar a direção e o nível do pino via interface sysfs, e usar scripts em Python para controlar saídas GPIO ou ler níveis de entrada.
+Este artigo descreve como usar pinos GPIO no reCamera Pro. Você aprenderá como determinar o pino GPIO de destino usando a fórmula de cálculo do número do pino, exportar e configurar a direção e o nível do pino via interface sysfs e usar scripts Python para controlar saídas GPIO ou ler níveis de entrada.
 
 :::note
-No reCamera Pro, há apenas dois GPIOs de uso geral expostos, e sua tensão de saída varia de 12 V a 21 V (dependendo da entrada DC-IN), o que não é adequado para a maioria dos dispositivos. No entanto, você pode reconfigurar os pinos UART ou CAN na interface de expansão como GPIOs de uso geral. Esses pinos fornecem um nível padrão de 3,3 V.
+No reCamera Pro, há apenas dois GPIOs de uso geral expostos, e sua tensão de saída varia de 12V a 21V (dependendo da entrada DC-IN), o que não é adequado para a maioria dos dispositivos. No entanto, você pode reconfigurar os pinos UART ou CAN na interface de expansão como GPIOs de uso geral. Esses pinos fornecem um nível padrão de 3,3V.
 :::
 
 ## Localizando os Pinos GPIO
@@ -110,7 +112,7 @@ echo 1 > value
 
 ## Referência de Código em Python
 
-O script em Python a seguir demonstra como controlar um pino GPIO para gerar níveis alto e baixo:
+O script Python a seguir demonstra como controlar um pino GPIO para gerar níveis alto e baixo:
 
 ```python
 import os
@@ -150,7 +152,7 @@ time.sleep(1)
 
 - [Documentação Oficial do reCamera Pro](https://wiki.seeedstudio.com/cn/recamera_pro_getting_started/)
 
-## Suporte Técnico e Discussão sobre o Produto
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes opções de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

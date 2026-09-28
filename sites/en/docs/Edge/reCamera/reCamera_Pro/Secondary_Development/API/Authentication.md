@@ -6,16 +6,18 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_authentication
+slug: /recamera_pro_api_authentication_legacy
+draft: true
 sku: 10003420
 sidebar_position: 3
 last_update:
   date: 07/15/2026
   author: Sizhao zhou
 createdAt: '2026-07-15'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/recamera_pro_api_authentication/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_api_authentication_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/authentication.md (https://wiki.seeedstudio.com/recamera_pro_api_authentication/), which now serves the original slug /recamera_pro_api_authentication. This file is kept for history as a draft (slug /recamera_pro_api_authentication_legacy) and is excluded from production builds. Do not link here. -->
 
 # Authentication
 

@@ -31,7 +31,7 @@ url: https://wiki.seeedstudio.com/cn/orbbec_gemini336/
 Gemini 336是Gemini 330系列的全新成员，延续Gemini335出色的深度效果和性能，通过过滤可见光，提升主动红外成像表现，针对性优化室内反光区域/高动态场景暗部区域/户外强光下的深度成像质量,为用户提供稳定的高质量深度数据。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-336-3D-Camera-3D-p-6662.html" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 </a></div>
 

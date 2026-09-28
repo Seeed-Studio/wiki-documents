@@ -14,7 +14,7 @@ last_update:
   date: 4/14/2026
   author: Zibo
 createdAt: '2026-04-14'
-updatedAt: '2026-06-23'
+updatedAt: '2026-06-17'
 sku: 100042928
 url: https://wiki.seeedstudio.com/cn/rtl8852be_wireless_module_for_jetson/
 ---
@@ -63,7 +63,7 @@ RTL8852BE 是一款基于 Realtek 芯片组的 Wi-Fi 6（802.11ax）M.2 无线�
     </tr>
     <tr>
       <td>主机接口</td>
-      <td>用于 WLAN 的 PCIe 2.1/2.0 & 用于 Bluetooth 的 USB 2.0</td>
+      <td>用于 WLAN 的 PCIe 2.1/2.0 以及用于 Bluetooth 的 USB 2.0</td>
     </tr>
     <tr>
       <td>天线</td>
@@ -79,7 +79,7 @@ RTL8852BE 是一款基于 Realtek 芯片组的 Wi-Fi 6（802.11ax）M.2 无线�
     </tr>
     <tr>
       <td>最大无线速率</td>
-      <td>最高 1200 Mbps</td>
+      <td>最高可达 1200 Mbps</td>
     </tr>
     <tr>
       <td>工作温度</td>
@@ -94,7 +94,7 @@ RTL8852BE 是一款基于 Realtek 芯片组的 Wi-Fi 6（802.11ax）M.2 无线�
 
 ## 支持的设备
 
-所有 reComputer Seri
+All reComputer Seri
 
 - 所有 reComputer 系列
 
@@ -188,7 +188,7 @@ ifconfig
 sudo iw dev wlan0 scan | grep -E "SSID|freq"
 ```
 
-如果不同，请将 `wlan0` 替换为实际的接口名称。
+如果接口名称不同，请将 `wlan0` 替换为实际的接口名称。
 
 ### 连接到 WiFi 网络
 
@@ -197,7 +197,7 @@ sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.PNG"/>
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
 </div>
 
 ### 验证 WiFi 6 连接

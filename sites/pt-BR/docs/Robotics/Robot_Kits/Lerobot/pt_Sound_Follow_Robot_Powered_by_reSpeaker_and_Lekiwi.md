@@ -1,11 +1,11 @@
 ---
-description: Este wiki fornece uma estrutura de implementação abrangente para equipar o Kit de Robô Lekiwi com capacidades de seguir som usando ReSpeaker Mic Array v2.0 e reComputer Jetson Mini, cobrindo integração de hardware, configuração de ambiente e adaptação de software, ao mesmo tempo em que demonstra funcionalidade de rastreamento de fonte de áudio em tempo real.
-title: Lekiwi com Seguimento de Som
+description: Este wiki fornece uma estrutura de implementação abrangente para equipar o Lekiwi Robot Kit com capacidades de seguir som usando o ReSpeaker Mic Array v2.0 e o reComputer Jetson Mini, cobrindo integração de hardware, configuração de ambiente e adaptação de software, enquanto demonstra a funcionalidade de rastreamento de fonte de áudio em tempo real.
+title: SO-Arm com Respeaker
 keywords:
   - Lerobot
   - Huggingface
-  - Carro
-  - Robótica
+  - Car
+  - Robotics
   - reSpeaker
   - Lekiwi
   - reComputer
@@ -15,18 +15,18 @@ last_update:
   date: 6/24/2025
   author: Youjiang
 createdAt: '2025-06-24'
-updatedAt: '2026-03-20'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/pt-br/sound_follow_robot/
 ---
 
 ## Introdução
 
-O Kit de Robô Lewiki, integrado com o ReSpeaker Mic Array v2.0, obtém capacidades de interação por voz e navegação por som. Este guia detalha o processo passo a passo para configurar tanto o hardware quanto os ambientes de software para alcançar a funcionalidade de seguir som no robô.
+O Lewiki Robot Kit, integrado com o ReSpeaker Mic Array v2.0, ganha capacidades de interação por voz e navegação por som. Este guia detalha o processo passo a passo para configurar os ambientes de hardware e software a fim de alcançar a funcionalidade de seguir som no robô.
 
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>Kit de Robô Lekiwi</th>
+        <th>Lekiwi Robot Kit</th>
         <th>ReSpeaker Mic Array v2.0</th>
         <th>reComputer Mini J4012</th>
     </tr>
@@ -75,11 +75,11 @@ O Kit de Robô Lewiki, integrado com o ReSpeaker Mic Array v2.0, obtém capacida
 
 ## Pré-requisitos
 
-- Kit de Robô Lewiki
+- Lewiki Robot Kit
 - ReSpeaker Mic Array v2.0
 
 :::note
-Considerando futuras expansões de funcionalidades, este wiki utiliza o `reComputer Jetson Mini J4012` como o dispositivo de controle principal do robô. Você também pode obter todas as funcionalidades descritas neste wiki usando um `Raspberry Pi 5`.
+Considerando futuras expansões de funcionalidades, este wiki utiliza o `reComputer Jetson Mini J4012` como dispositivo principal de controle do robô. Você também pode alcançar todas as funcionalidades descritas neste wiki usando um `Raspberry Pi 5`.
 :::
 
 ## Conexão de Hardware
@@ -93,14 +93,14 @@ Considerando futuras expansões de funcionalidades, este wiki utiliza o `reCompu
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/sound_follow/robot.jpg" />
 </div>
 
-## Prepare o Ambiente de Software
+## Preparar o Ambiente de Software
 
 ### Ambiente Virtual do Lerobot
 
 Se você já configurou o ambiente virtual do Lerobot no seu reComputer durante o processo de montagem do Lekiwi, pode pular para a próxima seção.
 Caso contrário, você pode configurar o ambiente virtual do Lerobot usando os seguintes comandos:
 
-**Passo 1.** Instalar Miniconda
+**Passo 1.** Instalar o Miniconda
 
 ```bash
 mkdir -p ~/miniconda3
@@ -113,7 +113,7 @@ source ~/.bashrc
 **Passo 2.** Criar ambiente conda para o lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 git clone https://github.com/huggingface/lerobot.git ~/lerobot
 conda install ffmpeg -c conda-forge
@@ -138,10 +138,10 @@ sudo chmod +x /etc/udev/rules.d/51-mic-usb.rules
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-## Instale o Software da Aplicação
+## Instalar o Software de Aplicação
 
 Navegue até o diretório `lerobot/lerobot/common/robots/lekiwi/` e crie um novo script Python chamado `sound_follow.py` neste local.
-Em seguida, copie o conteúdo a seguir para sound_follow.py.
+Em seguida, copie o seguinte conteúdo para sound_follow.py.
 
 <details>
 
@@ -404,7 +404,7 @@ def send_action(self, action: dict[str, Any]) -> dict[str, Any]:
     return {**base_goal_vel}
 ```
 
-## Iniciar o Aplicativo
+## Iniciar o aplicativo
 
 Execute o seguinte comando para iniciar o robô:
 
@@ -414,9 +414,9 @@ sudo chmod 666 /dev/ttyACM*
 python -m lerobot.common.robots.lekiwi.sound_follow
 ```
 
-## Demonstração do Efeito
+## Demonstração do efeito
 
-Após iniciar o programa, o robô irá girar em direção às fontes sonoras, alinhando continuamente sua "cabeça" com a direção do áudio de entrada.
+Após iniciar o programa, o robô irá girar em direção às fontes sonoras, alinhando continuamente sua "cabeça" com a direção do áudio recebido.
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/uI_leYm_m-w" title="A Sound Follow Robot Powered by reSpeaker and Lekiwi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -424,12 +424,12 @@ Após iniciar o programa, o robô irá girar em direção às fontes sonoras, al
 
 ## Referências
 
-- https://wiki.seeedstudio.com/pt-br/ReSpeaker_Mic_Array_v2.0/#versão
+- https://wiki.seeedstudio.com/pt-br/ReSpeaker_Mic_Array_v2.0/#version
 - https://github.com/respeaker/usb_4_mic_array
 
-## Suporte Técnico & Discussão de Produto
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para lhe oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

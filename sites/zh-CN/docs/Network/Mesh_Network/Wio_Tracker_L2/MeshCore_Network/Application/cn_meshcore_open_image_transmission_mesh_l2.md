@@ -1,5 +1,5 @@
 ---
-description: 本指南介绍如何基于 Card Tracker wio tracker L2，使用超低码率图像压缩，在 MeshCore 上发送由 AI 重建的图像。
+description: 本指南介绍如何基于 Card Tracker wio tracker L2，使用超低码率图像压缩，通过 MeshCore 发送由 AI 重建的图像。
 title: 图像传输
 keywords:
   - MeshCore
@@ -9,7 +9,7 @@ keywords:
   - AI 图像压缩
   - LoRa Mesh
   - AEIC-SE
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_L2_Pro.png
 slug: /meshcore_ai_image_transmission_l2
 sku: 100029766
 sidebar_position: 1
@@ -24,31 +24,31 @@ url: https://wiki.seeedstudio.com/cn/meshcore_ai_image_transmission_l2/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 适用于 Wio Tracker L2 的 MeshCore AI 图像传输
+# 基于 Wio Tracker L2 的 MeshCore AI 图像传输
 
 <div style={{textAlign:'center'}}>
 
-<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Project.png" style={{width:900, height:'auto'}}/>
+<img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_L2_Pro.png" style={{width:900, height:'auto'}}/>
 
 </div>
 
-[MeshCore](https://meshcore.io/) 专为低带宽 LoRa Mesh 通信而设计。传统图像传输较为困难，因为普通照片通常需要数百 KB 甚至更多的数据。[MeshCore Open](https://meshcoreopen.org/) 通过结合以下内容，在 MeshCore 上实现了**超低码率图像传输**：
+[MeshCore](https://meshcore.io/) 专为低带宽 LoRa Mesh 通信而设计。传统图像传输较为困难，因为普通照片通常需要数百 KB 甚至更多的数据。[MeshCore Open](https://meshcoreopen.org/) 通过结合以下组件，实现了在 MeshCore 上的**超低码率图像传输**：
 
 - MeshCore Open App
 - 基于 AI 的图像压缩
 - MeshCore `GRP_DATA` 数据包
 
 
-此图像传输功能适用于需要在没有可靠互联网或蜂窝网络的地方共享视觉信息的用户。
+此图像传输功能适用于在没有可靠互联网或蜂窝网络的场景下，需要共享视觉信息的用户。
 
 - **户外探索者**：徒步者、攀登者和探险队可以共享道路状况、发送远程景观图像，并在文字不足以表达时提供视觉信息。
-- **应急与灾害响应团队**：团队可以共享现场情况，通过图像提供快速的视觉更新并提升团队态势感知。
+- **应急与灾害响应团队**：团队可以共享现场情况，提供快速的视觉更新，并通过图像提升团队态势感知。
 - **离网通信爱好者**：适合希望探索 AI 驱动边缘通信的 MeshCore 和业余无线电用户。
 
 
-## 图像传输在 MeshCore 中如何工作
+## MeshCore 中的图像传输原理
 
-图像**不会被直接传输**。发送端使用本地 AI 编码器将图像转换为一个非常小的二进制文件。接收端不会还原原始像素，而是由本地 AI 解码器使用压缩数据生成一张在视觉上相似的图像。
+图像**并不会被直接传输**。发送端使用本地 AI 编码器将图像转换为一个非常小的二进制文件。接收端不会还原原始像素，而是使用本地 AI 解码器根据压缩数据生成一张在视觉上相似的图像。
 
 
 工作流程如下：
@@ -68,12 +68,12 @@ AI Decoder
 Reconstructed Image
 ```
 
-## 开始使用 MeshCore Open
+## MeshCore Open 入门
 
 ### 初始设置
 
-1. 安装 MeshCore Open App。[点击这里](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) 安装支持图像传输的 APP 版本。
-2. 将你的 MeshCore 节点连接到 APP。[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#connect-via-app) 阅读 L1 连接指南。
+1. 安装 MeshCore Open App。[点击此处](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) 安装支持图像传输的 APP 版本。
+2. 将你的 MeshCore 节点连接到 APP。[点击此处](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#connect-via-app) 阅读 L1 连接指南。
 3. 配置你的 LoRa 区域和网络设置。
 4. 确保有另一台 MeshCore 节点可作为接收端。
 
@@ -81,7 +81,7 @@ Reconstructed Image
 
 ### 安装模型
 
-在 APP 设置中启用图像传输并下载 ml 模型文件。
+在 APP 设置中启用图像传输，并下载 ml 模型文件。
 
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Setting.png" style={{width:600, height:'auto'}}/>

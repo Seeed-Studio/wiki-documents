@@ -16,7 +16,7 @@ last_update:
   date: 2026-2-2
   author: Dayu
 createdAt: '2026-02-02'
-updatedAt: '2026-02-10'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/j501_mini_starai_viola_fruit_sorting/
 ---
 
@@ -101,7 +101,7 @@ This wiki is based on JetPack 6.2.1 and uses the Jetson AGX Orin module.
 ### Prerequisites
 
 - Ubuntu 22.04 (on J501 Mini with JetPack 6.2.1)
-- Python 3.10
+- Python 3.12
 - CUDA 12+
 - PyTorch 2.6+ (GPU version)
 
@@ -118,7 +118,7 @@ source ~/.bashrc
 
 ```bash
 # Create conda environment
-conda create -y -n lerobot python=3.10 && conda activate lerobot
+conda create -y -n lerobot python=3.12 && conda activate lerobot
 
 # Clone LeRobot repository
 git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot

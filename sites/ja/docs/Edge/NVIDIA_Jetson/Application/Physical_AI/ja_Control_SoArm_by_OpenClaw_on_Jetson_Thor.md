@@ -9,7 +9,7 @@ last_update:
   author: youjiang
 createdAt: '2026-03-09'
 url: https://wiki.seeedstudio.com/ja/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/
-updatedAt: '2026-03-16'
+updatedAt: '2026-03-13'
 ---
 
 # Jetson Thor上でOpenClawによりSO-Armを制御する
@@ -18,9 +18,9 @@ updatedAt: '2026-03-16'
 
 このWikiでは、Jetson Thor上でOpenClawとLeRobotを組み合わせて、ローカルAIエージェントによりSO-Armを制御する方法を説明します。
 
-**NVIDIA Jetson AGX Thor** は、ロボティクスおよびPhysical AIワークロード向けに設計された高性能エッジAIプラットフォームであり、認識・計画・制御のための強力なオンデバイス計算能力を提供します。
+**NVIDIA Jetson AGX Thor** は、ロボティクスおよびフィジカルAIワークロード向けに設計された高性能エッジAIプラットフォームであり、認識・計画・制御のための強力なオンデバイス計算能力を提供します。
 
-**SO-Arm** は、オープンソースで低コストなロボットアームプラットフォーム（SO-ARM100/SO-ARM101）であり、Embodied AI実験、遠隔操作、マニピュレーションタスク開発に広く利用されています。
+**SO-Arm** は、具現化AI実験、遠隔操作、およびマニピュレーションタスク開発に広く使用されている、オープンソースかつ低コストのロボットアームプラットフォーム（SO-ARM100/SO-ARM101）です。
 
 **OpenClaw** は、ローカルのツールやモデルをオーケストレーションできるAIエージェントフレームワークです。本プロジェクトでは、OpenClawを高レベル制御インターフェースとして使用し、LeRobotがSO-Arm向けの低レベルモーター通信およびキャリブレーションユーティリティを提供します。
 
@@ -30,7 +30,7 @@ updatedAt: '2026-03-16'
 </div>
 
 :::note
-このガイドでは、OpenClawがエージェントのプランニングとタスクオーケストレーションを担当し、SO-Armの動作実行はLeRobotが担当します。
+このガイドでは、OpenClawがエージェントのプランニングとタスクオーケストレーションを担当し、SO-Armのモーション実行はLeRobotが担当します。
 :::
 
 ## 目次
@@ -47,14 +47,14 @@ updatedAt: '2026-03-16'
 
 ### デバイス一覧
 
-- NVIDIA® Jetson AGX Thor™ Developer Kit ×1
-- SO-ARM101 低コストAIアーム ×1
+- 1x NVIDIA® Jetson AGX Thor™ Developer Kit
+- 1x SO-ARM101 低コストAIアーム
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
         <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
-        <th> SO-ARM101 Low-Cost AI Arm </th>
+        <th> SO-ARM101 低コストAIアーム </th>
     </tr>
     <tr>
         <td>
@@ -95,8 +95,8 @@ updatedAt: '2026-03-16'
 
 ### 電源投入時のチェックリスト
 
-- Thorが正常に起動し、ネットワークに接続できる。
-- SO-Armコントローラボード上のLEDが点灯している。
+- Thorが正常に起動し、ネットワークに接続されている。
+- SO-ArmコントローラボードのLEDが点灯している。
 - USB接続後にシリアルデバイスが現れる。
 
 ```bash
@@ -139,7 +139,7 @@ source ~/.bashrc
 LeRobot用の環境を作成します:
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install 'lerobot[feetech]'
 pip uninstall torch torchvision
@@ -163,7 +163,7 @@ lerobot-find-port
 期待される結果:
 
 - `torch.cuda.is_available()` が `True` を出力する
-- アームのシリアルポートが検出される（例：`/dev/ttyACM0`）
+- アームのシリアルポートが検出される（例 `/dev/ttyACM0`）
 
 ## OllamaをインストールしてローカルLLMを実行
 
@@ -180,12 +180,12 @@ ollama pull qwen3.5:35b
 ```
 
 :::info
-このガイドでは `qwen3.5:35b` を例として使用します。性能やメモリ制約に応じて、別のOllamaモデルに置き換えることもできます。
+このガイドでは、例として `qwen3.5:35b` を使用します。性能やメモリ制約に応じて、別のOllamaモデルに置き換えることもできます。
 :::
 
 ## Jetson ThorにOpenClawをインストール
 
-### OpenClawをインストール
+### OpenClawのインストール
 
 ```bash
 curl -fsSL https://openclaw.ai/install.sh | bash
@@ -338,8 +338,8 @@ SO-Arm制御スキルをインストールします:
 - [SO-ARM101 URDF](https://github.com/TheRobotStudio/SO-ARM100/blob/main/Simulation/SO101/so101_new_calib.urdf) をダウンロードします
 - それを `~/.openclaw/workspace/skills/soarm-control/references` に移動します
 
-[任意] 検出モデルを追加します: 
-- 検出モデル（YoloV11n）を[こちら](https://wiki.seeedstudio.com/ja/How_to_Train_and_Deploy_YOLOv8_on_reComputer/)を参考に学習させます
+[オプション] 検出モデルを追加します: 
+- 検出モデル（YoloV11n）を[こちら](https://wiki.seeedstudio.com/ja/How_to_Train_and_Deploy_YOLOv8_on_reComputer/)を参照して学習させます
 - 検出モデル（`best.pt`）を `~/.openclaw/workspace/skills/soarm-control/scripts` に移動します
 
 
@@ -387,7 +387,7 @@ lerobot-calibrate \
 
 :::note
 完全なキャリブレーション手順については、以下を参照してください:
-[LeRobotにおけるSO-Arm - Calibrate](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#calibrate)
+[SO-Arm in LeRobot - Calibrate](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#キャリブレーション)
 :::
 
 ## 制御デモを実行
@@ -421,9 +421,9 @@ OpenClaw WebUI でロボット制御の指示を入力します。OpenClaw は�
 - https://github.com/huggingface/lerobot
 - https://github.com/TheRobotStudio/SO-ARM100
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

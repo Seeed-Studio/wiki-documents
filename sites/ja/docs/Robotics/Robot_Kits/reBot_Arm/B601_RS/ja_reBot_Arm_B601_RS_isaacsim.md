@@ -1,11 +1,11 @@
 ---
-description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグ用にシミュレーション環境へ reBot Arm B601-RS ロボットを展開する方法を説明します。
-title: reBot Arm B601-RS Isaac Sim
+description: このチュートリアルでは、Isaacsim をダウンロードし、開発およびデバッグのためにシミュレーション環境で reBotArm ロボットを展開する方法を説明します。
+title: B601-RS と Isaacsim
 keywords:
   - Isaacsim
   - マニピュレータ
   - ロボット
-  - リモート制御操作
+  - 遠隔操作
   - 運動学
   - Robostride
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg

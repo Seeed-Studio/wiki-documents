@@ -1,11 +1,11 @@
 ---
 description: Este documento presentará cómo comenzar rápidamente con los motores de la serie HighTorque.
-title: Motor de la Serie HighTorque
+title: HighTorque SDK
 keywords:
-  - Joint Module
+  - Módulo de articulación
   - Motor
-  - Robotics
-  - Robotic Arm
+  - Robótica
+  - Brazo robótico
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /hightorque_series
 sku: 114090071,114090072

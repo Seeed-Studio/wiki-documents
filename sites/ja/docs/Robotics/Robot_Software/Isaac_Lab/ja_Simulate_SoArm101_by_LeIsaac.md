@@ -1,5 +1,5 @@
 ---
-description: このチュートリアルでは、LeIsaacを使用してIsaac LabでSOArm101ロボットアームを遠隔操作し、訓練する方法を説明します。データ収集、NVIDIA Isaac GR00Tによるモデルファインチューニング、デプロイメントを含みます。
+description: このチュートリアルでは、LeIsaac を使用して Isaac Lab 内で SOArm101 ロボットアームを遠隔操作および学習させる方法を説明します。これには、データ収集、NVIDIA Isaac GR00T を用いたモデルのファインチューニング、およびデプロイが含まれます。
 title: Lightwheel LeIsaac
 keywords:
   - NVIDIA
@@ -9,34 +9,34 @@ slug: /simulate_soarm101_by_leisaac
 last_update:
   date: 8/1/2025
   author: Youjiang
-createdAt: '2025-09-12'
+createdAt: '2025-08-01'
 updatedAt: '2025-09-12'
 url: https://wiki.seeedstudio.com/ja/simulate_soarm101_by_leisaac/
 ---
 
-# Lightwheel LeIsaacを始める — Hugging Face LeRobot x GR00T N1.5 x Isaac Simを組み合わせたオープンソースワークフロー
+# Lightwheel LeIsaac を始めよう — オープンソースワークフロー（Hugging Face LeRobot × GR00T N1.5 × Isaac Sim の統合）
 
-## はじめに
+## 概要
 
-このwikiでは、leisaacのドキュメントに従って、leisaacによってIsaacLabでSoArm101ロボットアームを遠隔操作する方法を示します。さらに、Isaac Labから収集したデータを使用して、Isaac Labシミュレーション環境内でファインチューニングされたNvidia Isaac GR00T N1.5モデルのデプロイメントを実演します。このwikiで使用される主要なプロジェクト：
+この wiki では leisaac のドキュメントに沿って、IsaacLab 上で leisaac を用いて SoArm101 ロボットアームを遠隔操作する方法を紹介します。さらに、Isaac Lab で収集したデータを使用してファインチューニングした Nvidia Isaac GR00T N1.5 モデルを、Isaac Lab シミュレーション環境内にデプロイする手順も示します。本 wiki で使用する主なプロジェクトは次のとおりです：
 
-- [LeIsaac](https://github.com/LightwheelAI/leisaac)は、SO101Leader（LeRobot）を使用してIsaacLabで遠隔操作機能を提供し、データ収集、データ変換、その後のポリシー訓練を含みます。
-- [NVIDIA Isaac™ Lab](https://developer.nvidia.com/isaac/lab)は、ロボットポリシーの訓練を支援するために設計されたロボット学習用のオープンソース統合フレームワークです。
-- [SO-ARM101](https://github.com/TheRobotStudio/SO-ARM100)は、低コストでオープンソースの3Dプリント可能なロボットアームキットです。オープンソースのLeRobotライブラリとシームレスに動作するよう設計されています。
-- [NVIDIA Isaac GR00T N1.5](https://github.com/NVIDIA/Isaac-GR00T)は、汎用ヒューマノイドロボットの推論とスキルのためのオープン基盤モデルです。
+- [LeIsaac](https://github.com/LightwheelAI/leisaac) は、SO101Leader（LeRobot）を使用して IsaacLab 内での遠隔操作機能を提供し、データ収集、データ変換、およびその後のポリシー学習をサポートします。
+- [NVIDIA Isaac™ Lab](https://developer.nvidia.com/isaac/lab) は、ロボットポリシーの学習を支援するために設計された、ロボット学習向けのオープンソース統合フレームワークです。
+- [SO-ARM101](https://github.com/TheRobotStudio/SO-ARM100) は、低コストでオープンソースの 3D プリント可能なロボットアームキットです。オープンソースの LeRobot ライブラリとシームレスに連携するよう設計されています。
+- [NVIDIA Isaac GR00T N1.5](https://github.com/NVIDIA/Isaac-GR00T) は、汎用ヒューマノイドロボットの推論とスキルのためのオープンな基盤モデルです。
 
-## 要件
+## 必要環境
 
 - Ubuntu PC
-- SoArm101 Leader Arm
+- SoArm101 リーダーアーム
 
 :::info
-このwikiで使用されるコンピューターは、NVIDIA RTX 3080 GPUを搭載し、Ubuntu 22.04 LTSで動作しています。
+この wiki で使用しているコンピュータは NVIDIA RTX 3080 GPU を搭載し、Ubuntu 22.04 LTS 上で動作しています。
 :::
 
 ## シミュレーション環境のセットアップ
 
-ターミナルで以下のコマンドを使用してIsaac Labランタイム環境をインストールします：
+Isaac Lab ランタイム環境をインストールするには、ターミナルで次のコマンドを使用します：
 
 ```bash
 # Create and activate environment
@@ -64,16 +64,16 @@ git checkout v2.1.0
 ```
 
 :::note
-お使いのコンピューターにcondaがインストールされていない場合は、インストールについて[このガイド](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)を参照してください。
+お使いのコンピュータに conda がインストールされていない場合は、[このガイド](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) を参照してインストールしてください。
 :::
 
 :::info
-50シリーズGPUを使用している場合は、isaacsim5.0とfeature/isaacsim_5_0ブランチのisaaclabを使用することをお勧めします。
+50 シリーズ GPU を使用している場合は、isaacsim5.0 と feature/isaacsim_5_0 ブランチの isaaclab を使用することを推奨します。
 :::
 
-## LeIsaacのインストール
+## LeIsaac のインストール
 
-LeIsaacリポジトリをクローンし、依存関係としてインストールします。
+LeIsaac リポジトリをクローンし、依存パッケージとしてインストールします。
 
 ```bash
 cd ..
@@ -84,12 +84,12 @@ pip install pynput pyserial deepdiff feetech-servo-sdk
 ```
 
 :::note
-`leisaac` conda仮想環境内でのインストールを確実に行ってください。
+必ず `leisaac` conda 仮想環境内でインストールを行ってください。
 :::
 
 ## アセットの準備
 
-LeIsaacは例のUSDアセット—キッチンシーンを提供します。関連するシーンを[ここ](https://github.com/LightwheelAI/leisaac/releases/tag/v0.1.0)からダウンロードし、assetsディレクトリに展開できます。ディレクトリ構造は次のようになります：
+LeIsaac は、キッチンシーンのサンプル USD アセットを提供しています。関連するシーンは[こちら](https://github.com/LightwheelAI/leisaac/releases/tag/v0.1.0)からダウンロードし、assets ディレクトリに展開します。ディレクトリ構造は次のようになります：
 
 ```txt
 <assets>
@@ -108,21 +108,21 @@ LeIsaacは例のUSDアセット—キッチンシーンを提供します。関�
 
 ## データセットの収集
 
-SO-ARM101リーダーをUSBケーブルでUbuntuコンピューターに接続し、コマンドを使用してシリアルポートの権限を付与します。
+SO-ARM101 リーダーを USB ケーブルで Ubuntu コンピュータに接続し、次にコマンドを使用してシリアルポートの権限を付与します。
 
 ```bash
 ls /dev/ttyACM*
 sudo chmod 666 /dev/ttyACM0
 ```
 
-すべてが正常に動作する場合、類似のログ出力が表示されます。
+すべてが正しく動作していれば、次のようなログ出力が表示されるはずです。
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/connect_arm.png" />
 </div>
 
-以下のスクリプトで遠隔操作タスクを実行してデータセットを収集します：
+次のスクリプトを使用してテレオペレーションタスクを実行し、データセットを収集します：
 
 ```bash
 python scripts/environments/teleoperation/teleop_se3_agent.py \
@@ -140,15 +140,15 @@ python scripts/environments/teleoperation/teleop_se3_agent.py \
 <iframe width="800" height="400" src="https://www.youtube.com/embed/XY3LEXGP8hI" title="Simulate SoArm101 by LeIsaac (1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-IsaacLabウィンドウに入った後、キーボードの`b`キーを押して遠隔操作を開始します。その後、指定されたteleop_deviceを使用してシミュレーション内のロボットを制御できます。操作完了後に環境をリセットする必要がある場合は、`r`または`n`キーを押すだけです。`r`は環境をリセットしてタスクを失敗としてマークし、`n`は環境をリセットしてタスクを成功としてマークします。
+IsaacLab のウィンドウに入ったら、キーボードの `b` キーを押してテレオペレーションを開始します。その後、指定した teleop_device を使用してシミュレーション内のロボットを操作できます。操作を終えて環境をリセットする必要がある場合は、`r` または `n` キーを押すだけです。`r` は環境をリセットしタスクを失敗としてマークし、`n` は環境をリセットしタスクを成功としてマークします。
 
 <div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/XkgBY4aa8AE" title="Teleoperate SoArm101 by LeIsaac" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## データセットの再生
+## データセットのリプレイ
 
-遠隔操作後、以下のスクリプトを使用してシミュレーション環境で収集したデータセットを再生できます：
+テレオペレーション後、次のスクリプトを使用して、シミュレーション環境内で収集したデータセットをリプレイできます：
 
 ```bash
 python scripts/environments/teleoperation/replay.py \
@@ -166,20 +166,20 @@ python scripts/environments/teleoperation/replay.py \
 
 ## データ変換
 
-収集された遠隔操作データは、指定されたディレクトリにHDF5形式で保存されます。このデータを使用してプロキシモデルを訓練する場合、LeIsaacの変換スクリプトを使用してデータセットをLeRobot互換形式に変換する必要があります。
+収集したテレオペレーションデータは、指定したディレクトリ内に HDF5 形式で保存されます。このデータをプロキシモデルの学習に使用する場合は、LeIsaac の変換スクリプトを使用して、データセットを LeRobot 互換形式に変換する必要があります。
 
-このスクリプトはLeRobot仮想環境内で実行する必要があります。この[wiki](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#install-lerobot)の手順に従って新しいLeRobot環境を作成してください。
+このスクリプトは LeRobot 仮想環境内で実行する必要があります。この[wiki](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#install-lerobot) の手順に従って、新しい LeRobot 環境を作成してください。
 
 ```bash
 cd ..
 git clone https://github.com/huggingface/lerobot.git
 cd lerobot
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install -e .
 ```
 
-次に、スクリプト内のパラメータを変更し、以下のコマンドを実行できます：
+その後、スクリプト内のパラメータを変更し、次のコマンドを実行します：
 
 ```bash
 cd ../leisaac
@@ -192,12 +192,12 @@ python scripts/convert/isaaclab2lerobot.py
 </div>
 
 :::note
-データ収集中にデータセット保存パスを変更した場合は、実行前に変換スクリプト内の対応するパスを更新する必要があります。
+データ収集中にデータセットの保存パスを変更した場合は、変換スクリプトを実行する前に、スクリプト内の対応するパスを必ず更新してください。
 :::
 
-プログラムの実行完了後、変換されたデータセットは`~/.cache/huggingface/lerobot/`で見つけることができます。
+プログラムの実行が完了すると、変換されたデータセットは `~/.cache/huggingface/lerobot/` に保存されます。
 
-LeRobotの組み込みデータセット可視化ツールキットを使用して、変換されたデータを検査することもできます。
+また、LeRobot に組み込まれているデータセット可視化ツールキットを使用して、変換後のデータを確認することもできます。
 
 ```bash
 cd ../lerobot
@@ -208,9 +208,9 @@ python -m lerobot.scripts.visualize_dataset --repo-id EverNorif/so101_test_orang
 <iframe width="900" height="450" src="https://www.youtube.com/embed/LPSxPMoP-pk" title="Simulate SoArm101 by LeIsaac (2)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## ポリシー訓練
+## ポリシー学習
 
-このwikiでは、NVIDIA Isaac GR00T N1.5をファインチューニングします。まず、Isaac-GR00T仮想環境をセットアップしましょう：
+この wiki では、NVIDIA Isaac GR00T N1.5 をファインチューニングします。まず Isaac-GR00T 仮想環境をセットアップしましょう：
 
 ```bash
 cd ..
@@ -224,10 +224,10 @@ pip install --no-build-isolation flash-attn==2.7.1.post4
 ```
 
 :::info
-flash-attnのインストールにはパッケージのコンパイルが含まれ、非常に時間がかかる場合があります。システム環境に合致するプリコンパイル済みパッケージバージョンを[ダウンロード](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.1.post4)し、コマンド：pip install ./package_nameを使用してローカルにインストールすることをお勧めします。
+flash-attn のインストールにはパッケージのコンパイルが含まれ、非常に時間がかかる場合があります。お使いのシステム環境に合った事前コンパイル済みパッケージを[ダウンロード](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.1.post4)し、`pip install ./package_name` コマンドを使用してローカルインストールすることを推奨します。
 :::
 
-ターミナルで以下のコマンドを実行して訓練を開始します：
+トレーニングを開始するには、ターミナルで次のコマンドを実行します：
 
 ```bash
 cd <path-to-Isaac-GR00T>
@@ -249,14 +249,14 @@ python scripts/gr00t_finetune.py \
 
 ## ポリシー推論
 
-この段階で、ファインチューニングされたNVIDIA Isaac GR00T N1.5モデルをデプロイして、Isaac LabでSO-ARM101ロボットアームを制御できます。
-Isaac-GR00Tのデプロイメントアーキテクチャは、推論エンドポイントと制御エンドポイント間の分離設計を採用しています：
+この段階では、ファインチューニングした NVIDIA Isaac GR00T N1.5 モデルをデプロイし、Isaac Lab 内で SO-ARM101 ロボットアームを制御できます。
+Isaac-GR00T のデプロイアーキテクチャは、推論エンドポイントと制御エンドポイントを分離した設計を採用しています：
 
-- 推論エンドポイント（サーバー）：モデル推論タスクの実行のみに専念します。
-- 制御エンドポイント（クライアント）：ロボットアームの状態取得と動作制御の調整を担当します。
+- 推論エンドポイント（サーバー）：モデル推論タスクの実行専用。
+- 制御エンドポイント（クライアント）：ロボットアームの状態取得と動作制御のオーケストレーションを担当。
 
 **サーバー**
-新しいターミナルウィンドウを開いて実行します：
+新しいターミナルウィンドウを開き、次を実行します：
 
 ```bash
 conda activate gr00t
@@ -265,11 +265,12 @@ python scripts/inference_service.py --server --model_path  ./so101-orange-checkp
 ```
 
 <div align="center">
-    <img width={800}    src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/server.png" />
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/server.png" />
 </div>
 
 **クライアント**
-新しいターミナルウィンドウを開いて実行します：
+新しいターミナルウィンドウを開き、次を実行します：
 
 ```bash
 conda activate leisaac
@@ -287,18 +288,18 @@ python scripts/evaluation/policy_inference.py \
 ```
 
 :::note
-ZMQ関連のエラーが発生した場合は、`pip install pyzmq`を実行して解決してください。
+ZMQ 関連のエラーが発生した場合は、`pip install pyzmq` を実行して解決してください。
 :::
 
 <div class="video-container">
 <iframe width="900" height="450" src="https://www.youtube.com/embed/GRzFK7o3lOQ" title="Simulate SoArm101 by LeIsaac (3)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-最終的に訓練されたモデルは、SOArm101ロボットアームでオレンジを掴むことに失敗しました。これは実験中に3セットのデータしか収集しなかったためです。より多くのデータを収集できれば、モデルの精度は大幅に向上するでしょう！
+最終的に学習されたモデルは、SOArm101 ロボットアームを制御してオレンジをつかむことに失敗しました。これは、実験中に 3 セット分のデータしか収集しなかったためです。より多くのデータを収集できれば、モデルの精度は大幅に向上するはずです！
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

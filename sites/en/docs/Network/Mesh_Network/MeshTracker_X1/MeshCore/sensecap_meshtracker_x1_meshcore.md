@@ -13,7 +13,7 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-08-18'
+updatedAt: '2026-09-20'
 url: https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/
 ---
 

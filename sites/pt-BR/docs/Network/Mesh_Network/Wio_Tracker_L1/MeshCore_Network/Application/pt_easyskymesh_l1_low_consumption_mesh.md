@@ -1,7 +1,7 @@
 ---
 
 description: Este guia explica como usar o EasySkyMesh com o Wio Tracker L1 para construir redes de sensores IoT de baixo consumo de energia baseadas em MeshCore.
-title: Firmware IoT EasySkyMesh
+title: Economia de energia
 keywords:
    - EasySkyMesh
    - MeshCore
@@ -9,10 +9,10 @@ keywords:
    - LoRa Mesh
    - MeshCore Sensor
    - PowerSaving
-image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_MeshCore_Device_Low_Power_Consumption_L1_Pro.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_L1-pHONE.png
 slug: /easyskymesh_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
-sidebar_position: 3
+sidebar_position: 1
 last_update:
    date: 9/17/2026
    author: Michelle Huang
@@ -25,15 +25,15 @@ url: https://wiki.seeedstudio.com/pt-br/easyskymesh_wio_tracker_l1/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Firmware IoT EasySkyMesh para Wio Tracker L1
+# Firmware EasySkyMesh IoT para Wio Tracker L1
 
 [EasySkyMesh](https://github.com/IoTThinks/EasySkyMesh) é um projeto da comunidade baseado em [MeshCore](https://meshcore.io/) que se concentra na construção de firmware de baixo consumo de energia. Este firmware permite que o L1 Pro atinja uma vida útil de bateria de **18 dias** enquanto mantém a função de comunicação MeshCore.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMeshProject.png" style={{width:900, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_L1-pHONE.png" style={{width:600, height:'auto'}}/></div>
 
 EasySkyMesh adiciona recursos para **economia de energia e coleta de dados de sensores**. Os dados dos sensores podem ser coletados pelos nós MeshCore e transmitidos por meio de uma rede MeshCore existente. É particularmente útil para:
 
-* Redes de sensores de baixo consumo de energia
+* Redes de sensores de baixo consumo
 * Monitoramento remoto
 * Implantações alimentadas por energia solar
 * Monitoramento ambiental
@@ -54,7 +54,7 @@ Conecte o Wio Tracker L1 ao seu computador usando a porta USB Tipo-C.
 
 ### Baixar o firmware EasySkyMesh
 
-Acesse a página de [Releases do EasySkyMesh](https://github.com/IoTThinks/EasySkyMesh/releases). Selecione uma release que seja compatível com sua placa.
+Acesse a página de [Releases do EasySkyMesh](https://github.com/IoTThinks/EasySkyMesh/releases). Selecione uma release que ofereça suporte à sua placa.
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMeshFirmwareDownload.png" style={{width:600, height:'auto'}}/></div>
@@ -93,7 +93,7 @@ O projeto fornece releases de firmware PowerSaving com otimizações para difere
 
 ### Firmware Companion
 
-Todos os recursos PowerSaving são ativados por padrão. O RX PowerSaving é definido como "balanced".
+Todos os recursos de PowerSaving são ativados por padrão. A economia de energia de RX é definida como "balanced".
 
 O tempo de atividade em m (minutos), h m (horas minutos) e d h (dias horas) é mostrado à esquerda do ícone de bateria no OLED.
 
@@ -101,11 +101,11 @@ O tempo de atividade em m (minutos), h m (horas minutos) e d h (dias horas) é m
 
 ### Firmware de repetidor e servidor de sala
 
-O PowerSaving vem desativado por padrão. Você pode ativar o PowerSaving por meio do MeshCore CLI.
+A economia de energia está desativada por padrão. Você pode ativar o PowerSaving por meio do MeshCore CLI.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_Powersaving_On.png" style={{width:900, height:'auto'}}/></div>
 
-Ative o PowerSaving por meio de:
+Ative a economia de energia por:
 
 ```text
 powersaving on
@@ -124,22 +124,22 @@ powersaving
 EasySkyMesh estende o MeshCore com suporte a sensores, permitindo que leituras de sensores sejam coletadas e transmitidas pela rede MeshCore existente. O projeto atualmente documenta suporte para vários sensores I2C comuns, incluindo:
 
 | Sensor        | Medição                                 | Endereço I2C |
-| ------------- | --------------------------------------- | ----------- |
-| AHT10 / AHT20 | Temperatura / Umidade                   | `0x38`      |
-| BME280        | Temperatura / Umidade / Pressão         | `0x76`      |
-| BME680        | Temperatura / Umidade / Pressão / Gás   | `0x76`      |
-| BMP280        | Temperatura / Pressão                   | `0x76`      |
-| SHTC3         | Temperatura / Umidade                   | `0x70`      |
-| SHT4X         | Temperatura / Umidade                   | `0x44`      |
-| LPS22HB       | Temperatura / Pressão                   | `0x5C`      |
-| INA3221       | Tensão / Corrente / Potência            | `0x42`      |
-| INA219        | Tensão / Corrente / Potência            | `0x40`      |
-| INA260        | Tensão / Corrente / Potência            | `0x41`      |
-| INA226        | Tensão / Corrente / Potência            | `0x44`      |
-| MLX90614      | Temperatura sem contato                 | `0x5A`      |
-| VL53L0X       | Distância                               | `0x29`      |
+| ------------- | --------------------------------------- | ------------ |
+| AHT10 / AHT20 | Temperatura / Umidade                   | `0x38`       |
+| BME280        | Temperatura / Umidade / Pressão         | `0x76`       |
+| BME680        | Temperatura / Umidade / Pressão / Gás   | `0x76`       |
+| BMP280        | Temperatura / Pressão                   | `0x76`       |
+| SHTC3         | Temperatura / Umidade                   | `0x70`       |
+| SHT4X         | Temperatura / Umidade                   | `0x44`       |
+| LPS22HB       | Temperatura / Pressão                   | `0x5C`       |
+| INA3221       | Tensão / Corrente / Potência            | `0x42`       |
+| INA219        | Tensão / Corrente / Potência            | `0x40`       |
+| INA260        | Tensão / Corrente / Potência            | `0x41`       |
+| INA226        | Tensão / Corrente / Potência            | `0x44`       |
+| MLX90614      | Temperatura sem contato                 | `0x5A`       |
+| VL53L0X       | Distância                               | `0x29`       |
 
- Algumas versões de firmware podem selecionar automaticamente o endereço I2C para sensores como BME280, BME680 e BMP280. Para versões do EasySkyMesh compatíveis, o comando de CLI `sensor` pode ser usado para verificar os pinos seriais I2C e GPS:
+ Algumas versões de firmware podem selecionar automaticamente o endereço I2C para sensores como BME280, BME680 e BMP280. Para versões compatíveis do EasySkyMesh, o comando de CLI `sensor` pode ser usado para verificar os pinos I2C e os pinos seriais do GPS:
 
 ```text
 sensor
@@ -167,7 +167,7 @@ Verifique:
 6. Se o sensor está listado como compatível.
 
 
-Se o problema persistir, consulte o [repositório EasySkyMesh no GitHub](https://github.com/IoTThinks/EasySkyMesh) para a documentação e issues mais recentes.
+Se o problema persistir, verifique o [repositório EasySkyMesh no GitHub](https://github.com/IoTThinks/EasySkyMesh) para a documentação e issues mais recentes.
 
 ## Recursos
 

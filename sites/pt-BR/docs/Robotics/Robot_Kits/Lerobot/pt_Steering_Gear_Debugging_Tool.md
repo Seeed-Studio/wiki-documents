@@ -1,19 +1,19 @@
 ---
-description: Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot.
-title: Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot
+description: Ferramenta de depuração de engrenagem de direção para SO-ARM no Lerobot.
+title: Ferramenta de Depuração do SO-Arm
 keywords:
   - Lerobot
   - SO-ARM
-  - Robótica
+  - Robotics
   - Servo
-  - Calibração
+  - Calibration
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_steering_gear_debugging_tool
 last_update:
   date: 6/29/2026
   author: ZhangJiaQuan
 url: https://wiki.seeedstudio.com/pt-br/lerobot_steering_gear_debugging_tool/
-createdAt: '2026-06-30'
+createdAt: '2026-06-29'
 updatedAt: '2026-07-20'
 ---
 

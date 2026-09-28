@@ -4,16 +4,32 @@ title: Live View
 keywords:
   - reCamera pro
   - web ui
-slug: /recamera_pro_live_view
+slug: /recamera_pro_live_view_legacy
+draft: true
 sku: 10003420
 sidebar_position: 3
 last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-09'
-url: https://wiki.seeedstudio.com/recamera_pro_live_view/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_live_view_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page was split across the new task guides; its content moved primarily to Build_Your_App/preview_capture_record.md (https://wiki.seeedstudio.com/recamera_pro_live_preview/). The old URL /recamera_pro_live_view/ is redirected to /recamera_pro_live_preview/ via an aliases entry in that page's frontmatter. This file is kept for history as a draft (slug /recamera_pro_live_view_legacy) and is excluded from production builds. Do not link here. -->
+
+## Content Migration Index (Legacy Page)
+
+The old URL /recamera_pro_live_view/ redirects to /recamera_pro_live_preview/. Where each section moved:
+
+| Original section | New home |
+| --- | --- |
+| Video Preview | [Preview, Capture and Manual Recording](https://wiki.seeedstudio.com/recamera_pro_live_preview/) |
+| Basic Settings, Display Settings | [Image Quality and Low Light](https://wiki.seeedstudio.com/recamera_pro_image_quality/) |
+| OSD Settings, Image Masking | [OSD and Privacy Masks](https://wiki.seeedstudio.com/recamera_pro_osd_masks/) |
+| Streaming Settings | [Stream Video over RTSP](https://wiki.seeedstudio.com/recamera_pro_rtsp/) |
+| AI Results | [Configure Detection](https://wiki.seeedstudio.com/recamera_pro_ai_inference/) |
+| Typical Use Cases | [reCamera Pro home](https://wiki.seeedstudio.com/recamera_pro/) |
+| Field reference (all modules) | [Web UI Reference](https://wiki.seeedstudio.com/recamera_pro_webui_reference/) |
 
 The reCamera Pro has a built-in real-time video monitoring page, allowing users to view live camera feeds directly through a browser. Users can configure video streams, display settings, OSD overlays, privacy masking, and streaming parameters. This page is suitable for device installation and debugging, previewing footage, adjusting video parameters, and functional verification before deployment.
 The reCamera Pro has a built-in real-time video monitoring page, allowing users to view live camera feeds directly through a browser. Users can configure video streams, display settings, OSD overlays, privacy masking, and streaming parameters. This page is suitable for device installation and debugging, previewing footage, adjusting video parameters, and functional verification before deployment.

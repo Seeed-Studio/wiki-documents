@@ -1,18 +1,18 @@
 ---
-description: このwikiはMyactuatorシリーズモーターのチュートリアルを提供します。
-title: MyActuatorシリーズモーター
+description: このWikiでは、Myactuatorシリーズモーターのチュートリアルを提供します。
+title: MyActuator
 keywords:
-  - actuator
-  - motor
-  - arm
-  - robotics
+  - アクチュエータ
+  - モーター
+  - アーム
+  - ロボティクス
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/all.webp
 slug: /myactuator_series
 sku: 114090068,114090069
 last_update:
   date: 05/29/2025
   author: ZhuYaoHui
-createdAt: '2025-05-30'
+createdAt: '2023-08-20'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/myactuator_series/
 ---

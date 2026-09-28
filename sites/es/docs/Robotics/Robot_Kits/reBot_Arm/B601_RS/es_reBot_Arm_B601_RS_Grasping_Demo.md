@@ -1,13 +1,13 @@
 ---
-description: Este tutorial cubre dos implementaciones de agarre visual para el reBot Arm B601-RS, incluyendo un flujo de trabajo con YOLO/OBB y otro de agarre basado en ROS2.
-title: Demostración de agarre visual con reBot Arm B601-RS
+description: Este tutorial abarca dos implementaciones de agarre visual para el reBot Arm B601-RS, incluyendo una canalización YOLO/OBB y un flujo de trabajo de agarre basado en ROS2.
+title: B601-RS con agarre visual
 keywords:
   - reBot Arm
   - B601-RS
-  - Agarre
+  - Grasping
   - RGB-D
   - YOLO
-  - Calibración mano-ojo
+  - Hand-Eye Calibration
   - Robot
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif
 slug: /rebot_arm_b601_rs_grasping_demo

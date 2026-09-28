@@ -27,32 +27,44 @@ Primeiro, vamos conectar o Seeed Studio XIAO SAMD21 ao computador e enviar um c�
 
 ### Configuração de hardware
 
-- [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) x1
-- Cabo Type‑C x1
+- [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) ou [Seeed Studio XIAO SAMD21 Plus](https://www.seeedstudio.com/Seeed-Studio-XIAO-SAMD21-Plus-p-6933.html) x1
+- Cabo Type-C x1
 - PC x1
 
 ### Gravar o firmware
 
 #### Para XIAO SAMD21
 
-- **Passo 1**. Pressione e segure o botão **BOOT** e então conecte o Seeed Studio XIAO SAMD21 ao PC através do cabo Type‑C. Se tudo funcionar bem, um disco **Arduino** será exibido no PC.
+:::tip
+
+- [**Modo Bootloader para a série XIAO SAMD21**](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/#enter-bootloader-mode)
+
+:::
+
+- **Passo 1**. Conecte o Seeed Studio XIAO SAMD21 ao seu computador por meio de um cabo Type‑C e, em seguida, toque duas vezes no botão Reset para entrar no modo BOOT. Se tudo funcionar bem, um disco **Arduino** será exibido no PC.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
 - **Passo 2**. Grave o firmware
 
-Basta acessar o [Firmware MicroPython do XIAO SAMD21](https://micropython.org/download/SEEED_XIAO_SAMD21/) oficial e baixar o firmware mais recente
+Basta acessar o site oficial do MicroPython e baixar o firmware mais recente
 
-Também é possível [compilar seu próprio firmware](https://wiki.seeedstudio.com/pt-br/Compiling_MicroPython_for_embedded_devices/) para garantir segurança e suporte aos recursos mais recentes, mas isso não é necessário.
+    - [Firmware MicroPython da série XIAO SAMD21](https://micropython.org/download/SEEED_XIAO_SAMD21/)
+
+
+Também é possível [compilar o seu próprio firmware](https://wiki.seeedstudio.com/pt-br/Compiling_MicroPython_for_embedded_devices/) para garantir segurança e suporte aos recursos mais recentes, mas isso não é necessário.
 <br/>
+
 #### Para XIAO SAMD21 Plus
 
-- **Passo 1**. Conecte o XIAO SAMD21 Plus ao seu PC com um cabo Type‑C e, em seguida, pressione o botão Reset duas vezes consecutivas. Se tudo funcionar corretamente, um disco **Arduino** aparecerá no seu PC.
+- **Passo 1**. Conecte o XIAO SAMD21 Plus ao seu PC com um cabo Type‑C e, em seguida, pressione o botão Reset duas vezes consecutivas. Se tudo estiver correto, um disco **Arduino** aparecerá no seu PC.
 
 <div align="center"><img width="300" src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
 - **Passo 2**. Clique no link abaixo para baixar o firmware e, em seguida, arraste e solte o arquivo `.uf2` no disco **Arduino** para concluir a gravação do firmware.
-[XIAO SAMD21 Plus MicroPython Firmware](https://files.seeedstudio.com/wiki/XIAO_SAMD/img/xiao-samd21-plus-micropython.zip)
+
+    - [Firmware MicroPython da série XIAO SAMD21](https://micropython.org/download/SEEED_XIAO_SAMD21/)
+
 
 ### Configuração de software
 
@@ -74,28 +86,28 @@ Também é possível [compilar seu próprio firmware](https://wiki.seeedstudio.c
 
 ### Tabela de atribuição de pinos da série SEEED XIAO SAMD21
 
-| Nome do pino MicroPython | GPIO XIAO SAMD21 (ID) | GPIO XIAO SAMD21 Plus (ID) | IRQ<br />SAMD21 / Plus | ADC | Função |
+| Nome do pino MicroPython | GPIO XIAO SAMD21 (ID) | GPIO XIAO SAMD21 Plus (ID) | IRQ SAMD21 / Plus | ADC | Função |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| D0 / A0 / A0_D0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO, ADC, DAC |
-| D1 / A1 / A1_D1 | PA04 (4) | PA04 (4) | 4 / 4 | 4 | GPIO, ADC |
-| D2 / A2 / A2_D2 | PA10 (10) | PA10 (10) | 10 / 10 | 18 | GPIO, ADC |
-| D3 / A3 / A3_D3 | PA11 (11) | PA11 (11) | 11 / 11 | 19 | GPIO, ADC |
-| D4 / A4 / A4_D4 / SDA | PA08 (8) | PA08 (8) | NMI / NMI | 16 | GPIO, ADC, I2C SDA |
-| D5 / A5 / A5_D5 / SCL | PA09 (9) | PA09 (9) | 9 / 9 | 17 | GPIO, ADC, I2C SCL |
-| D6 / A6 / A6_D6 / TX | PB08 (40) | PB08 (40) | 8 / 8 | 2 | GPIO, ADC, UART TX |
-| D7 / A7 / A7_D7 / RX | PB09 (41) | PB09 (41) | 9 / 9 | 3 | GPIO, ADC, UART RX |
-| D8 / A8 / A8_D8 / SCK | PA07 (7) | PA07 (7) | 7 / 7 | 7 | GPIO, ADC, SPI SCK |
-| D9 / A9 / A9_D9 / MISO | PA05 (5) | PA05 (5) | 5 / 5 | 5 | GPIO, ADC, SPI MISO |
-| D10 / A10 / A10_D10 / MOSI | PA06 (6) | PA06 (6) | 6 / 6 | 6 | GPIO, ADC, SPI MOSI |
-| D11 / TX_LED | PA19 (19) | — | 3 / — | — | LED TX da placa original |
-| D12 / RX_LED | PA18 (18) | PA28 (28) | 2 / 8 | — | LED RX original; GPIO de expansão Plus |
-| D13 / USER_LED / SCL1 | PA17 (17) | PA17 (17) | 1 / 1 | — | LED de usuário original; Plus I2C1 SCL |
+| D0 / A0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO, ADC, DAC |
+| D1 / A1 | PA04 (4) | PA04 (4) | 4 / 4 | 4 | GPIO, ADC |
+| D2 / A2 | PA10 (10) | PA10 (10) | 10 / 10 | 18 | GPIO, ADC |
+| D3 / A3 | PA11 (11) | PA11 (11) | 11 / 11 | 19 | GPIO, ADC |
+| D4 / A4 / SDA | PA08 (8) | PA08 (8) | NMI / NMI | 16 | GPIO, ADC, I2C SDA |
+| D5 / A5 / SCL | PA09 (9) | PA09 (9) | 9 / 9 | 17 | GPIO, ADC, I2C SCL |
+| D6 / A6 / TX | PB08 (40) | PB08 (40) | 8 / 8 | 2 | GPIO, ADC, UART TX |
+| D7 / A7 / RX | PB09 (41) | PB09 (41) | 9 / 9 | 3 | GPIO, ADC, UART RX |
+| D8 / A8 / SCK | PA07 (7) | PA07 (7) | 7 / 7 | 7 | GPIO, ADC, SPI SCK |
+| D9 / A9 / MISO | PA05 (5) | PA05 (5) | 5 / 5 | 5 | GPIO, ADC, SPI MISO |
+| D10 / A10 / MOSI | PA06 (6) | PA06 (6) | 6 / 6 | GPIO, ADC, SPI MOSI |
+| USER_LED / D13 / SCL1 | PA17 (17) | PA17 (17) | 1 / 1 | — | LED de usuário original; Plus D13 e I2C1 SCL |
+| RX_LED / D27 | PA18 (18) | PA18 (18) | 2 / 2 | — | LED RX original; Plus D27 |
+| TX_LED / D19 / I2S_SD | PA19 (19) | PA19 (19) | 3 / 3 | — | LED TX original; Plus D19 e dados I2S |
+| D12 | — | PA28 (28) | — / 8 | — | GPIO de expansão Plus |
 | D14 / SDA1 | — | PA16 (16) | — / 0 | — | Plus I2C1 SDA |
 | D15 | — | PA15 (15) | — / 15 | — | GPIO de expansão Plus |
 | D16 | — | PA14 (14) | — / 14 | — | GPIO de expansão Plus |
 | D17 | — | PA13 (13) | — / 13 | — | GPIO de expansão Plus |
 | D18 | — | PA12 (12) | — / 12 | — | GPIO de expansão Plus |
-| D19 / I2S_SD | — | PA19 (19) | — / 3 | — | GPIO Plus e dados I2S |
 | D20 / I2S_SCK | — | PA20 (20) | — / 4 | — | GPIO Plus e clock I2S |
 | D21 / I2S_WS | — | PA21 (21) | — / 5 | — | GPIO Plus e seleção de palavra I2S |
 | D22 | — | PB10 (42) | — / 10 | — | GPIO de expansão Plus |
@@ -103,9 +115,10 @@ Também é possível [compilar seu próprio firmware](https://wiki.seeedstudio.c
 | D24 | — | PB23 (55) | — / 7 | — | GPIO de expansão Plus |
 | D25 | — | PA23 (23) | — / 7 | — | GPIO de expansão Plus |
 | D26 | — | PA22 (22) | — / 6 | — | GPIO de expansão Plus |
-| D27 | — | PA18 (18) | — / 2 | — | GPIO de expansão Plus |
-| RGB_LED | — | PA27 (27) | — / 15 | — | Dados do LED RGB endereçável |
-| BUTTON | — | PB22 (54) | — / 6 | — | Botão de usuário Plus |
+| RGB_LED | — | PA27 (27) | — / 15 | — | LED RGB endereçável Plus (WS2812) |
+| BUTTON | — | PB22 (54) | — / 6 | — | Botão de usuário Plus (ativo em nível baixo) |
+| USB_DM | PA24 (24) | PA24 (24) | 12 / 12 | — | USB D− (USB nativo, não GPIO) |
+| USB_DP | PA25 (25) | PA25 (25) | 13 / 13 | — | USB D+ (USB nativo, não GPIO) |
 | SWCLK | PA30 (30) | PA30 (30) | 10 / 10 | — | Clock SWD |
 | SWDIO | PA31 (31) | PA31 (31) | 11 / 11 | — | Dados SWD |
 
@@ -129,9 +142,11 @@ Precisamos preparar:
 
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-Copie os códigos a seguir para o Thonny.
+    Copie os códigos a seguir para o Thonny.
 
-Podemos ver que o RX_LED azul acende e pisca uma vez por segundo
+1. Para XIAO SAMD21, o RX_LED é PA18
+
+    Podemos ver que o RX_LED azul acende e pisca uma vez por segundo
 
 ```python
 from machine import Pin, Timer
@@ -152,7 +167,58 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3.gif" /></div>
 
-### Controle de relés com GPIO
+2. Para XIAO SAMD21 Plus, os RX_LED e TX_LED foram removidos. Um LED WS2812 é usado em seu lugar, com seu pino de dados atribuído a PA27.
+<br/>
+```py
+from machine import Pin, Timer
+import machine
+import time
+
+led = Pin(27, Pin.OUT)
+
+Counter = 0
+
+
+def ws2812_write(r, g, b):
+    data = bytearray([g, r, b])
+
+    machine.bitstream(
+        led,
+        0,
+        (400, 850, 800, 450),
+        data
+    )
+
+    time.sleep_us(80)
+
+
+def fun(tim):
+    global Counter
+
+    Counter += 1
+    print(Counter)
+
+    if Counter % 2 == 1:
+        ws2812_write(0, 0, 255)
+    else:
+        ws2812_write(0, 0, 0)
+
+
+# Initial state: OFF
+ws2812_write(0, 0, 0)
+
+# 500 ms periodic timer
+tim = Timer(-1)
+tim.init(
+    period=500,
+    mode=Timer.PERIODIC,
+    callback=fun
+)
+```
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3_1.gif" /></div>
+
+### Relés de controle por GPIO
 
 Precisamos preparar:
 
@@ -184,14 +250,14 @@ tim.init(period=200, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><video width={600} height={240} controls>
     <source src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/4.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
+    Seu navegador não suporta a tag de vídeo.
   </video></div>
 
-### Detecção de pessoas para controle automático
+### Detecção de presença humana para controle automático
 
 Precisamos preparar:
 
-- [Radar Doppler para detecção de pessoas](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Sleep-Breathing-Monitoring-Module-p-5304.html?queryID=32e8107bce436db9b886cf1b8c698667&objectID=5304&indexName=bazaar_retailer_products)
+- [Radar Doppler para detecção humana](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Sleep-Breathing-Monitoring-Module-p-5304.html?queryID=32e8107bce436db9b886cf1b8c698667&objectID=5304&indexName=bazaar_retailer_products)
 - [Seeeduino-XIAO-Expansion-Board](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO-Expansion-Board/)
 - [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
@@ -224,7 +290,7 @@ tim.init(period=50, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><video width={600} height={240} controls>
     <source src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/5.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
+    Seu navegador não oferece suporte à tag de vídeo.
   </video></div>
 
 ### Suporte a I2C
@@ -248,11 +314,11 @@ print(i2c.readfrom(0x51, 4))
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/8.png" /></div>
 
-A familiaridade com o MicroPython permite que você faça mais; estamos ansiosos para criar mais valor para você. Sinta-se à vontade para compartilhar seus projetos conosco também!
+A familiaridade com micropython permite que você faça mais, estamos ansiosos para criar mais valor para você. Fique à vontade para compartilhar seus projetos conosco também!
 
 ### Suporte a DAC
 
-Agradecemos a Aleksei Tertychnyi por enviar o código; todas as funcionalidades relacionadas foram desenvolvidas e contribuídas por ele.
+Agradecemos a Aleksei Tertychnyi por enviar o código, todas as funcionalidades relacionadas foram desenvolvidas e contribuídas por ele.
 
 ```python
 from machine import Pin, Timer, DAC
@@ -274,7 +340,7 @@ tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=loop)
 ```
 
-A tensão no **pino A0** começará a aumentar gradualmente; após atingir o máximo em aproximadamente *3,3 V*, cairá para *0 V* e o ciclo se repetirá.
+A tensão no **pino A0** começará a aumentar gradualmente, após atingir o máximo em aproximadamente *3,3 V*, cairá para *0 V* e o ciclo se repetirá.
 
 ### Suporte a ADC
 Exemplo de código MicroPython para ADC:
@@ -304,7 +370,7 @@ tim.init(period=1000,              # callback period in milliseconds (1000 ms = 
 
 ## Console de Dispositivo MicroPython
 
-Nosso parceiro **Neil** escreveu um programa de console de linha de comando para o XIAO usando MicroPython. Com este programa, você pode facilmente enviar, baixar e excluir arquivos. Agradecemos a ele por sua contribuição ao XIAO!
+Nosso parceiro **Neil** escreveu um programa de console de linha de comando para o XIAO usando MicroPython. Com este programa você pode facilmente enviar, baixar e excluir arquivos. Agradecemos a ele por sua contribuição ao XIAO!
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Saiba mais</font></span></strong></a></div>
 

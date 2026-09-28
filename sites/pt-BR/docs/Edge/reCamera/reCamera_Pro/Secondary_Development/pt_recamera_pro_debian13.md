@@ -6,22 +6,24 @@ keywords:
   - reCamera Pro
   - RV1126B
   - Debian 13
-slug: /recamera_pro_debian
+slug: /recamera_pro_debian_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 09/07/2026
+  date: 09/08/2026
   author: yylin
 createdAt: '2026-08-04'
 updatedAt: '2026-09-07'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_debian/
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_debian_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/experimental_debian13.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_debian/), which now serves the original slug /recamera_pro_debian. This file is kept for history as a draft (slug /recamera_pro_debian_legacy) and is excluded from production builds. Do not link here. -->
 
 ## Introdução
 
-A reCamera Pro é equipada com o chip RV1126B e está disponível com 2 GB ou 4 GB de memória. Ela vem com firmware Buildroot para um início rápido com inferência de IA. Esta página fornece uma imagem Debian 13 para usuários que precisam de mais flexibilidade para desenvolvimento e implantação.
+A reCamera Pro é alimentada pelo chip RV1126B e está disponível com 2 GB ou 4 GB de memória. Ela vem com firmware Buildroot para um início rápido com inferência de IA. Esta página fornece uma imagem Debian 13 para usuários que precisam de mais flexibilidade para desenvolvimento e implantação.
 
-Após gravar a imagem Debian 13, você pode compilar seus próprios aplicativos com CMake, instalar as dependências necessárias com `apt` e executar contêineres Docker. A imagem é compatível com os drivers de fábrica da Seeed e não requer alterações na device tree. A câmera, o microfone, o alto-falante e o Wi-Fi funcionam conforme o esperado; Bluetooth não é suportado.
+Após gravar a imagem Debian 13, você pode compilar seus próprios aplicativos com CMake, instalar as dependências necessárias com `apt` e executar contêineres Docker. A imagem é compatível com os drivers de fábrica da Seeed e não requer alterações na device tree. A câmera, o microfone, o alto-falante e o Wi-Fi funcionam como esperado; Bluetooth não é suportado.
 
 :::warning
 Este firmware é atualmente experimental. A Seeed não o mantém neste momento; ele é fornecido como uma opção adicional de desenvolvimento.
@@ -31,7 +33,7 @@ Este firmware é atualmente experimental. A Seeed não o mantém neste momento; 
 
 ### Baixar a imagem
 
-[Baixar a imagem do Debian 13](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz).
+[Baixe a imagem Debian 13](https://github.com/yyling0101-a11y/reCamere_pro_debian_img/releases/download/v1.0.0/recamera_pro_debian13_v1.0.0.tar.gz).
 
 ### Baixar a ferramenta de gravação e o driver
 
@@ -77,7 +79,7 @@ A tela a seguir indica que o driver foi instalado com sucesso.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-7.png" /></div>
 
-7. Selecione a entrada `rootfs` e clique na elipse (`...`) à sua direita. Substitua o arquivo de imagem por `rootfs_debian_clean.img` do diretório de firmware extraído.
+7. Selecione a entrada `rootfs` e clique na elipse (`...`) à sua direita. Substitua seu arquivo de imagem por `rootfs_debian_clean.img` do diretório de firmware extraído.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera-Pro/Secondary_Development/debian13/image-11.png" /></div>
 
@@ -116,7 +118,7 @@ A gravação sobrescreve os dados do sistema no dispositivo. Faça backup dos da
 
 #### Preparar o ambiente
 
-Clone o repositório de ferramentas da Rockchip e verifique se ele contém o `upgrade_tool`:
+Clone o repositório de ferramentas da Rockchip e verifique se ele contém `upgrade_tool`:
 
 ```bash
 cd ~
@@ -128,7 +130,7 @@ cd ~/rkbin/tools
 ls -lh upgrade_tool
 ```
 
-Em seguida, clone `Linux_Upgrade_Tool` e torne o `upgrade_tool` executável:
+Em seguida, clone `Linux_Upgrade_Tool` e torne `upgrade_tool` executável:
 
 ```bash
 cd ~
@@ -159,7 +161,7 @@ Isso confirma que o dispositivo está conectado e em modo Loader.
 
 #### Gravar o firmware
 
-Certifique-se de que todos os arquivos de imagem foram baixados e extraídos. Em seguida, use o `upgrade_tool` para gravar cada partição no dispositivo. Substitua os caminhos de imagem de exemplo abaixo pelo caminho real dos seus arquivos de firmware extraídos:
+Certifique-se de que todos os arquivos de imagem tenham sido baixados e extraídos. Em seguida, use `upgrade_tool` para gravar cada partição no dispositivo. Substitua os caminhos de imagem de exemplo abaixo pelo caminho real para seus arquivos de firmware extraídos:
 
 ```bash
 # 1. env
@@ -189,7 +191,7 @@ sudo ./upgrade_tool RD
 
 ## Sobre o novo firmware
 
-Após a gravação, conecte o dispositivo à sua rede usando um cabo Ethernet. Esta imagem não oferece suporte ao adaptador de rede virtual USB-C original. Você pode encontrar o endereço IP do dispositivo no seu roteador ou na interface de gerenciamento de Wi-Fi. O SSH está habilitado na imagem, portanto você pode fazer login diretamente via SSH. Se uma conexão de rede não estiver disponível, use o console serial UART com baud rate de `1500000`.
+Após a gravação, conecte o dispositivo à sua rede usando um cabo Ethernet. Esta imagem não oferece suporte ao adaptador de rede virtual USB-C original. Você pode encontrar o endereço IP do dispositivo no seu roteador ou na interface de gerenciamento de Wi-Fi. O SSH está habilitado na imagem, portanto você pode fazer login diretamente via SSH. Se uma conexão de rede não estiver disponível, use o console serial UART com taxa de baud de `1500000`.
 
 O sistema fornece apenas o usuário `root`, com a senha padrão `123123`. Altere a senha imediatamente após o primeiro login:
 
@@ -201,7 +203,7 @@ Em seguida, conclua as seguintes etapas de configuração do sistema.
 
 ## Configurar temporariamente um proxy HTTP
 
-Se você precisar de um proxy HTTP para acessar a rede, por exemplo ao usar o `apt`, defina temporariamente as seguintes variáveis de ambiente. Pule esta etapa se você não usar um proxy. Substitua o endereço e a porta de exemplo pelos do seu servidor proxy.
+Se você precisar de um proxy HTTP para acessar a rede, por exemplo ao usar `apt`, defina temporariamente as seguintes variáveis de ambiente. Pule esta etapa se você não usar um proxy. Substitua o endereço e a porta de exemplo pelos do seu servidor proxy.
 
 ```bash
 export http_proxy="http://192.168.4.78:7890"
@@ -233,7 +235,7 @@ for dev in /dev/v4l-subdev*; do
 done
 ```
 
-Normalmente, você verá uma saída semelhante à seguinte:
+Você normalmente verá uma saída semelhante à seguinte:
 
 ```bash
 ========== /dev/v4l-subdev2 ==========
@@ -266,7 +268,7 @@ vertical_flip: 0
 
 ## Testar a câmera
 
-Use o V4L2 para capturar um quadro bruto NV12 e, em seguida, use o FFmpeg para convertê-lo em JPEG:
+Use V4L2 para capturar um quadro bruto NV12 e, em seguida, use o FFmpeg para convertê-lo em JPEG:
 
 ```bash
 v4l2-ctl -d /dev/video12 \
@@ -285,7 +287,7 @@ ffmpeg \
   -y /tmp/camera.jpg
 ```
 
-Quando o comando terminar, visualize a imagem JPEG, processada pelo ISP e com orientação correta, em `/tmp/camera.jpg`.
+Quando o comando terminar, visualize a imagem JPEG processada pelo ISP e corretamente orientada em `/tmp/camera.jpg`.
 
 ## Configurar o microfone e o alto-falante
 
@@ -425,7 +427,7 @@ gst-launch-1.0 -e \
 
 Quando o comando terminar, visualize a imagem processada pelo ISP em `/tmp/camera.jpg`.
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes níveis de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

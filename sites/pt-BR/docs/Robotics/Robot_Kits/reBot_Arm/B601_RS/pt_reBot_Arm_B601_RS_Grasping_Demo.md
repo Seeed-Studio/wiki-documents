@@ -1,14 +1,14 @@
 ---
 description: Este tutorial abrange duas implementações de preensão visual para o reBot Arm B601-RS, incluindo um pipeline YOLO/OBB e um fluxo de trabalho de preensão baseado em ROS2.
-title: Demonstração de Preensão Visual com reBot Arm B601-RS
+title: B601-RS com Preensão Visual
 keywords:
   - reBot Arm
   - B601-RS
-  - Preensão
+  - Grasping
   - RGB-D
   - YOLO
-  - Calibração mão-olho
-  - Robô
+  - Hand-Eye Calibration
+  - Robot
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif
 slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
