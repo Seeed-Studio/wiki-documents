@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/cn/recomputer_jetson_super_getting_started/
 ---
 
@@ -25,7 +25,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 </div>
 
 reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性能上带来高达 1.7 倍的提升，达到 157 TOPS。该系列包含搭载 Jetson Orin Nano（11410311, 11410312）和 Jetson Orin NX（11410313, 11410314）的型号。
-它面向开发与量产双重场景设计，集成了丰富的接口，包括 M.2 Key E/M、双 RJ45 以太网、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI 和 CAN。预装 Jetpack 6.2 和 Linux OS BSP，可实现开箱即用、快速推向市场。
+它面向开发与量产双重场景设计，集成了丰富的接口，包括 M.2 Key E/M、双 RJ45 以太网、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI 和 CAN。预装 Jetpack 6.2 与 Linux OS BSP，可实现开箱即用、快速推向市场。
 它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用相结合，助力 Physical AI 开发。
 
 :::note
@@ -34,29 +34,29 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>立即定制 ➜</font></span></strong></a>
 </div>
 
 ## 关键特性  
 
 ### 🚀 ​**性能提升**  
 
-- ​**1.7 倍 AI 性能提升**，相较 reComputer Classic，可实现 ​**157 TOPS**  
+- 相比 reComputer Classic，​**AI 性能提升 1.7 倍**，可提供 ​**157 TOPS**  
 - 由 ​**Jetson Orin Nano**（型号：11410311, 11410312）和 ​**Jetson Orin NX**（型号：11410313, 11410314）驱动  
 
 ### 🔌 ​**丰富的连接与接口**  
 
 - ​**M.2 Key E/M** + ​**Mini-PCIe**，便于扩展  
-- ​**双 RJ45 以太网** 接口，支持高速网络  
+- ​**双 RJ45 以太网** 接口，支持高速网络连接  
 - ​**4x USB 3.2**、​**HDMI 2.1**、​**4x CSI**（摄像头串行接口）  
 - 支持 ​**CAN 总线**，适用于工业/机器人应用  
 
 ### 🛠️ ​**面向开发与量产**  
 
 - 预装 ​**Jetpack 6.2** 和 ​**Linux OS BSP**，支持开箱部署  
-- 与以下边缘 AI 框架无缝集成：  
+- 与以下框架无缝集成边缘 AI：  
   - ​**NVIDIA**、​**Hugging Face**、​**ONNX**、​**PyTorch**  
-  - ​**ROS2/1**，用于机器人应用  
+  - 面向机器人应用的 ​**ROS2/1**  
 - 支持 ​**多模态 AI** 和 ​**Physical AI** 开发  
 
 ### 🤖 ​**面向边缘 AI 与机器人优化**  
@@ -73,7 +73,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 
 - ​**Jetson Orin Nano**：12V 5A（5525 圆孔电源接口）  
 - ​**Jetson Orin NX**：19V 4.74A（5525 圆孔电源接口）  
-- 始终使用 ​**官方适配器**，并满足电源需求。  
+- 始终使用 ​**官方适配器** 并满足电源要求。  
 
 #### 2. ​**交流电源线**  
 
@@ -132,10 +132,10 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>内存</td>
-      <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
-      <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
-      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
-      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>4GB 64 位 LPDDR5<br />34 GB/s</td>
+      <td>8GB 128 位 LPDDR5<br />68 GB/s</td>
+      <td>8GB 128 位 LPDDR5 102.4GB/s</td>
+      <td>16GB 128 位 LPDDR5 102.4GB/s</td>
     </tr>
     <tr>
       <td>DL 加速器</td>
@@ -166,7 +166,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>存储</td>
-      <td colSpan={4}>1x M.2 KEY M PCIe（含 1 块 M.2 NVMe 2280 128G SSD）</td>
+      <td colSpan={4}>1x M.2 KEY M PCIe（含 1 块 M.2 NVMe 2280 SSD 128G）</td>
     </tr>
     <tr>
       <td rowSpan={3}>网络</td>
@@ -188,7 +188,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>摄像头</td>
-      <td colSpan={3}>4x mipi CSI（2 通道 15-Pin）</td>
+      <td colSpan={3}>4x mipi CSI（2 通道 15 针）</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -197,7 +197,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     <tr>
       <td>显示</td>
       <td colSpan={3}>1x HDMI 2.1</td>
-    </tr>
+    </tr]
     <tr>
       <td>风扇</td>
       <td colSpan={3}>1x 4 针风扇接口（5V PWM）；<br />1x 4 针风扇接口（12V PWM）；</td>
@@ -228,7 +228,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>电源</td>
-      <td colSpan={4}>12–19V 5525 圆孔直流电源接口 </td>
+      <td colSpan={4}>12–19V 5525 圆孔直流电源接口</td>
     </tr>
     <tr>
       <td>Jetpack 版本</td>
@@ -260,7 +260,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 
 ## 交互式 3D 浏览器
 
-在交互式 3D 查看器中探索 reComputer Super 系列。你可以旋转设备、查看硬件接口、浏览爆炸装配图，并了解更多支持的模块信息。
+在交互式 3D 查看器中探索 reComputer Super 系列。你可以旋转设备、查看硬件接口、浏览爆炸装配视图，并了解更多支持的模块信息。
 
 <div
   style={{
@@ -305,7 +305,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 关于每个硬件接口的详细规格和使用说明，请参考[硬件接口使用指南](https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/)。
 :::
 
-## 刷写 JetPack 操作系统
+## 刷写 JetPack OS
 
 ### 支持的模块
 
@@ -314,7 +314,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 - [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
 - [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
-### 前置条件
+### 前置准备
 
 - Ubuntu 主机电脑
 - reComputer Super
@@ -354,13 +354,13 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
   </tbody>
 </table>
 
-<p><strong>Note:</strong> 对于 JetPack 7.2，Ubuntu 24.04 仅支持烧录和目标端组件安装。如果您需要主机开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
+<p><strong>Note:</strong> 对于 JetPack 7.2，Ubuntu 24.04 仅支持用于烧录和目标端组件安装。如果您需要主机开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
 
 :::
 
 ### 准备 Jetpack 镜像
 
-这里，我们需要在 Ubuntu PC 上下载与所使用 Jetson 模组对应的系统镜像：
+在这里，我们需要根据所使用的 Jetson 模组，将对应的系统镜像下载到 Ubuntu 电脑上：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -391,8 +391,8 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">Download</a></td>
-      <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAdqGsOC33XuaA6i60KX2k6s">Download</a></td>
+      <td>93130562F8C5EA02857C01BCB49B7626</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.2</td>
@@ -420,11 +420,11 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 </div>
 
 :::danger
-JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等待下载完成。
+JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请耐心等待下载完成。
 :::
 
 :::info
-要验证下载固件的完整性，您可以对比 SHA256 哈希值。
+为了验证下载固件的完整性，您可以对比 SHA256 哈希值。
 
 在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 获取下载文件的 SHA256 哈希值。如果结果与 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
 :::
@@ -498,7 +498,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </div>
 
 :::info
-请根据您的需求完成 **系统配置（System Configuration）**。
+请根据您的需求完成 **System Configuration**（系统配置）。
 :::
 
 ## 硬件接口使用
@@ -526,7 +526,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
