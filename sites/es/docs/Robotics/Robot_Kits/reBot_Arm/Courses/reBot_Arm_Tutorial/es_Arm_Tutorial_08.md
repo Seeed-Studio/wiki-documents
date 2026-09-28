@@ -1,12 +1,12 @@
 ---
-description: "Capítulo 8 del Curso para Principiantes de IA Física de Seeed — controla el reBot Arm con el SDK de Python: parámetros, conexión con administrador de contexto, movimiento, punto cero y estado de las articulaciones."
+description: 'Capítulo 8 del Curso de Introducción a la IA Física de Seeed: controla el reBot Arm con el SDK de Python: parámetros, conexión con administrador de contexto, movimiento, punto cero y estado de las articulaciones.'
 title: Capítulo 8 - Control del reBot Arm usando el SDK de Python
 keywords:
   - reBot
-  - Robotic Arm
+  - Brazo robótico
   - Python SDK
   - reBotArm
-  - Course
+  - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_physical_ai_course_chapter_8
 displayed_sidebar: RebotCourseSidebar
@@ -16,12 +16,11 @@ last_update:
   date: 2026-09-17
   author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_8/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -32,7 +31,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 2 · Capítulo 8 · Teoría y práctica</span>
     <h2>8. Control del reBot Arm usando el SDK de Python</h2>
     <p>
-      Capítulo 8 del Curso para Principiantes de IA Física de Seeed — controla el reBot Arm con
+      Capítulo 8 del Curso de Introducción a la IA Física de Seeed: controla el reBot Arm con
       el SDK de Python: parámetros, conexión con administrador de contexto, movimiento, punto cero y estado de las articulaciones.
     </p>
     <div className="hero-actions">
@@ -41,20 +40,10 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#motion">Movimiento</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>En este capítulo</strong>
-    <span>8.1 Modificar parámetros y cambiar modos</span>
-    <span>8.2 Conectar/desconectar el brazo robótico (usando administrador de contexto)</span>
-    <span>8.3 Controlar el movimiento del brazo robótico</span>
-    <span>8.4 Establecer el punto cero del brazo robótico</span>
-    <span>8.5 Actualizar el estado de las articulaciones del brazo robótico</span>
-  </div>
 </section>
 
-<RebotCourseNav />
-
 <section className="section-card">
-  <p>1. Si el entorno no está instalado, consulta la sección 7.2 para el entorno de instalación.</p>
+  <p>1. Si el entorno no está instalado, consulta la sección 7.2 para la instalación del entorno.</p>
 
   <p>2. Los parámetros de cada controlador de articulación del brazo robótico del SDK de Python deben ajustarse según los requisitos reales de uso. Los parámetros actuales solo pueden satisfacer escenarios con requisitos de baja precisión.</p>
 
@@ -106,7 +95,7 @@ Por ejemplo:
   use_mode: POS_VEL
 ```
 
-Los `kp` y `kd` de MIT, y los `vel_kp`, `vel_ki`, `pos_kp`, `pos_ki` y `vlim` de POS_VEL son los parámetros del modo correspondiente, que se pueden cambiar según el efecto de control del brazo robótico. `use_mode` puede cambiar el modo de control de la articulación correspondiente, y se puede cambiar a `MIT` o `POS_VEL`.
+Los `kp` y `kd` de MIT, y los `vel_kp`, `vel_ki`, `pos_kp`, `pos_ki` y `vlim` de POS_VEL son los parámetros del modo correspondiente, que se pueden cambiar según el efecto de control del brazo robótico. `use_mode` puede cambiar el modo de control de la articulación correspondiente y se puede cambiar a `MIT` o `POS_VEL`.
 
 </section>
 
@@ -124,7 +113,7 @@ Consulta `example/rebotDM/1_rebotDM_connect.py` o `example/rebotRS/1_rebotRS_con
 
 :::warning Notas
 1. Comprueba si el puerto existe.
-2. Se deben otorgar permisos de puerto antes de ejecutar el programa.
+2. Se deben otorgar permisos al puerto antes de ejecutar el programa.
 :::
 
 reBot DM usa un puerto serie, creado de la siguiente manera:
@@ -149,7 +138,7 @@ with reBotArm_handle(ctrl, "rebotDM") as handle:
 with reBotArm_handle(ctrl, "rebotRS") as handle:
 ```
 
-Donde `reBotArm_handle` también admite el parámetro `config_path`. Este parámetro puede especificar el archivo de configuración importado, y el archivo de configuración predeterminado del brazo robótico ya no se importará. Puedes consultar los archivos de configuración en `config` para escribir tu propio archivo de configuración.
+Donde `reBotArm_handle` también admite el parámetro `config_path`. Este parámetro puede especificar el archivo de configuración importado, y ya no se importará el archivo de configuración predeterminado del brazo robótico. Puedes consultar los archivos de configuración en `config` para escribir tu propio archivo de configuración.
 
 ```python
 with reBotArm_handle(ctrl, "rebotDM", config_path="absolute path of yaml") as handle:
@@ -160,15 +149,15 @@ with reBotArm_handle(ctrl, "rebotRS", config_path="absolute path of yaml") as ha
 Implementación principal:
 
 1. La función `__enter__` llamará a la función `connect` para conectarse automáticamente al brazo robótico. Si la conexión falla, se mostrará el registro correspondiente.
-2. La función `__exit__` llamará a la función `disconnect` para desconectarse automáticamente del brazo robótico cuando el programa salga.
-3. Conectarse al brazo robótico añadirá motores al controlador de bus, comprobará la comunicación del motor al encender, verificará si el ID CAN del motor y el ID maestro son válidos, verificará si el archivo de configuración es válido y cambiará el modo de control del motor al modo de control objetivo.
+2. La función `__exit__` llamará a la función `disconnect` para desconectarse automáticamente del brazo robótico cuando el programa termine.
+3. Conectarse al brazo robótico añadirá motores al controlador de bus, comprobará la comunicación de los motores al encender, verificará si el ID CAN del motor y el ID maestro son válidos, verificará si el archivo de configuración es válido y cambiará el modo de control del motor al modo de control objetivo.
 4. Al desconectarse del brazo robótico, primero se restaurará automáticamente el estado inicial y luego se deshabilitará.
 
 :::warning
 Después de usar Ctrl+C para salir del programa, espera unos segundos. No sigas pulsando Ctrl+C; debes esperar a que el brazo robótico vuelva automáticamente a su posición inicial y luego se deshabilite.
 :::
 
-Si no deseas usar el administrador de contexto, puedes llamar directamente a la función `connect` y a la función `disconnect` para conectar/desconectar el brazo robótico.
+Si no quieres usar el administrador de contexto, puedes llamar directamente a la función `connect` y a la función `disconnect` para conectar/desconectar el brazo robótico.
 
 </section>
 
@@ -254,7 +243,7 @@ with reBotArm_handle(ctrl, "rebotRS") as handle:
         time.sleep(0.002)
 ```
 
-`get_joints_state()`: Actualiza activamente el estado de cada articulación del brazo robótico y devuelve los ángulos actuales de las articulaciones.
+`get_joints_state()`: Actualiza de forma activa el estado de cada articulación del brazo robótico y devuelve los ángulos actuales de las articulaciones.
 
 </section>
 

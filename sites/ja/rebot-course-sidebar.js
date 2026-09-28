@@ -1,125 +1,110 @@
 // @ts-check
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+
+const C = 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial';
+const RS = 'Robotics/Robot_Kits/reBot_Arm/B601_RS';
+const DM = 'Robotics/Robot_Kits/reBot_Arm/B601_DM';
+
+const backToRobotics = () => ({
+  type: 'ref',
+  id: 'ja_Edge_Robotics',
+  label: '<-ロボティクスに戻る',
+  className: 'sideboard_calss',
+});
+
+const courseLink = () => ({
+  type: 'category',
+  label: 'コース',
+  className: 'robotics-section-title',
+  collapsed: false,
+  collapsible: false,
+  items: [
+    {
+      type: 'ref',
+      id: `${C}/ja_Arm_Tutorial_Introduction`,
+      label: '入門コース',
+    },
+  ],
+});
+
+// The course's own standalone sidebar (opened when browsing course pages).
+const courseSidebar = () => [
+  backToRobotics(),
+  {
+    type: 'doc',
+    id: `${C}/ja_Arm_Tutorial_Introduction`,
+    label: 'コース紹介',
+    className: 'sideboard_calss',
+  },
+  {
+    type: 'category',
+    label: 'ステージ 1：基本概念と機材準備',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/ja_Arm_Tutorial_01`,
+      `${C}/ja_Arm_Tutorial_02`,
+      `${C}/ja_Arm_Tutorial_03`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'ステージ 2：ロボットアームの組み立てと基本制御',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/ja_Arm_Tutorial_04`,
+      `${C}/ja_Arm_Tutorial_05`,
+      `${C}/ja_Arm_Tutorial_06`,
+      `${C}/ja_Arm_Tutorial_07`,
+      `${C}/ja_Arm_Tutorial_08`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'ステージ 3：模倣学習と LeRobot',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/ja_Arm_Tutorial_09`,
+      `${C}/ja_Arm_Tutorial_10`,
+      `${C}/ja_Arm_Tutorial_11`,
+      `${C}/ja_Arm_Tutorial_12`,
+      `${C}/ja_Arm_Tutorial_13`,
+      `${C}/ja_Arm_Tutorial_14`,
+      `${C}/ja_Arm_Tutorial_15`,
+      `${C}/ja_Arm_Tutorial_16`,
+      `${C}/ja_Arm_Tutorial_17`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'ステージ 4：VLA と Isaac GR00T',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/ja_Arm_Tutorial_18`,
+      `${C}/ja_Arm_Tutorial_19`,
+      `${C}/ja_Arm_Tutorial_20`,
+      `${C}/ja_Arm_Tutorial_21`,
+      `${C}/ja_Arm_Tutorial_22`,
+    ],
+  },
+];
+
 const sidebars = {
 
-  RebotCourseSidebar: [
-    {
-      type: 'ref',
-      id: 'ja_Edge_Robotics',
-      label: '<-ロボティクスに戻る',
-      className: 'sideboard_calss',
-    },
-    {
-      type: 'doc',
-      id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_Introduction',
-      label: 'コース紹介',
-      className: 'sideboard_calss',
-    },
-    {
-      type: 'category',
-      label: 'ステージ 1：基本概念と機材準備',
-      className: 'robotics-section-title',
-      collapsed: false,
-      collapsible: false,
-      items: [
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_01',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_02',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_03',
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'ステージ 2：ロボットアームの組み立てと基本制御',
-      className: 'robotics-section-title',
-      collapsed: false,
-      collapsible: false,
-      items: [
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_04',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_05',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_06',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_07',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_08',
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'ステージ 3：模倣学習と LeRobot',
-      className: 'robotics-section-title',
-      collapsed: false,
-      collapsible: false,
-      items: [
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_09',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_10',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_11',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_12',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_13',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_14',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_15',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_16',
-        },
-        {
-          type: 'doc',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_17',
-        },
-      ],
-    },
-  ],
+  // Standalone course sidebar.
+  RebotCourseSidebar: courseSidebar(),
 
+  // reBot B601-RS: Quick Start & SDK / Applications / Course (jumps to course).
   RebotRsSidebar: [
-    {
-      type: 'ref',
-      id: 'ja_Edge_Robotics',
-      label: '<-ロボティクスに戻る',
-      className: 'sideboard_calss',
-    },
+    backToRobotics(),
     {
       type: 'category',
       label: 'クイックスタート & SDK',
@@ -127,10 +112,10 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_Getting_Started',
-        'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_Lerobot',
-        'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_pinocchio',
-        'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_control_mit',
+        `${RS}/ja_reBot_Arm_B601_RS_Getting_Started`,
+        `${RS}/ja_reBot_Arm_B601_RS_Lerobot`,
+        `${RS}/ja_reBot_Arm_B601_RS_pinocchio`,
+        `${RS}/ja_reBot_Arm_B601_RS_control_mit`,
       ],
     },
     {
@@ -140,36 +125,19 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_Grasping_Demo',
-        'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_ROS2_Integration',
-        'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_isaacsim',
-        'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide',
-        'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_Agent',
+        `${RS}/ja_reBot_Arm_B601_RS_Grasping_Demo`,
+        `${RS}/ja_reBot_Arm_B601_RS_ROS2_Integration`,
+        `${RS}/ja_reBot_Arm_B601_RS_isaacsim`,
+        `${RS}/ja_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`,
+        `${RS}/ja_reBot_Arm_B601_RS_Agent`,
       ],
     },
-    {
-      type: 'category',
-      label: 'コース',
-      className: 'robotics-section-title',
-      collapsed: false,
-      collapsible: false,
-      items: [
-        {
-          type: 'ref',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_Introduction',
-          label: '入門コース',
-        },
-      ],
-    },
+    courseLink(),
   ],
 
+  // reBot B601-DM: Quick Start & SDK / Applications / Course (jumps to course).
   RebotDmSidebar: [
-    {
-      type: 'ref',
-      id: 'ja_Edge_Robotics',
-      label: '<-ロボティクスに戻る',
-      className: 'sideboard_calss',
-    },
+    backToRobotics(),
     {
       type: 'category',
       label: 'クイックスタート & SDK',
@@ -177,9 +145,9 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Getting_Started',
-        'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Lerobot',
-        'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_pinocchio',
+        `${DM}/ja_reBot_Arm_B601_DM_Getting_Started`,
+        `${DM}/ja_reBot_Arm_B601_DM_Lerobot`,
+        `${DM}/ja_reBot_Arm_B601_DM_pinocchio`,
       ],
     },
     {
@@ -189,26 +157,13 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Grasping_Demo',
-        'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_ROS2_Integration',
-        'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_isaacsim',
-        'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
+        `${DM}/ja_reBot_Arm_B601_DM_Grasping_Demo`,
+        `${DM}/ja_reBot_Arm_B601_DM_ROS2_Integration`,
+        `${DM}/ja_reBot_Arm_B601_DM_isaacsim`,
+        `${DM}/ja_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`,
       ],
     },
-    {
-      type: 'category',
-      label: 'コース',
-      className: 'robotics-section-title',
-      collapsed: false,
-      collapsible: false,
-      items: [
-        {
-          type: 'ref',
-          id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_Introduction',
-          label: '入門コース',
-        },
-      ],
-    },
+    courseLink(),
   ],
 
 };

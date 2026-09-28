@@ -1,6 +1,6 @@
 ---
-description: "Capítulo 11 del Curso para Principiantes de IA Física de Seeed: configuración del entorno, calibración del brazo seguidor y líder, mapeo de articulaciones, seguridad en la teleoperación, inicio de la teleoperación maestro-esclavo, frecuencia de control y latencia, y práctica práctica."
-title: Capítulo 11 - Calibración del Líder y el Seguidor y Teleoperación
+description: Capítulo 11 del Curso de Introducción a la IA Física de Seeed - configuración del entorno, calibración del brazo seguidor y líder, mapeo de articulaciones, seguridad en la teleoperación, inicio de la teleoperación maestro‑esclavo, frecuencia de control y latencia, y práctica guiada.
+title: Capítulo 11 - Calibración de Líder y Seguidor y Teleoperación
 keywords:
   - reBot
   - LeRobot
@@ -18,12 +18,11 @@ last_update:
   date: 2026-09-19
   author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_11/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -32,33 +31,17 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 <section className="doc-hero">
   <div>
     <span className="eyebrow">Etapa 3 · Capítulo 11 · Práctica</span>
-    <h2>11. Calibración del Líder y el Seguidor y Teleoperación</h2>
+    <h2>11. Calibración de Líder y Seguidor y Teleoperación</h2>
     <p>
-      Capítulo 11 del Curso para Principiantes de IA Física de Seeed: configuración del entorno,
-      calibración del brazo seguidor y líder, mapeo de articulaciones, seguridad en la teleoperación, inicio de la teleoperación
-      maestro-esclavo, frecuencia de control y latencia, y práctica práctica.
+      Capítulo 11 del Curso de Introducción a la IA Física de Seeed: configuración del entorno, calibración del brazo seguidor y del brazo líder, mapeo de articulaciones, seguridad en la teleoperación, inicio de la teleoperación maestro‑esclavo, frecuencia de control y latencia, y práctica guiada.
     </p>
-    <div className="hero-actions">
+      <div className="hero-actions">
       <a href="#environment">Entorno</a>
       <a href="#calibrate-follower">Calibración</a>
       <a href="#teleoperate">Teleoperación</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>En este capítulo</strong>
-    <span>11.1 Desempaquetado, cableado y montaje del brazo</span>
-    <span>11.2 Configuración del entorno</span>
-    <span>11.3 Calibración del brazo seguidor</span>
-    <span>11.4 Calibración del brazo líder</span>
-    <span>11.5 Mapeo de articulaciones: dirección, rango y pinza</span>
-    <span>11.6 Directrices de seguridad para la teleoperación</span>
-    <span>11.7 Inicio de la teleoperación maestro-esclavo</span>
-    <span>11.8 Frecuencia de control y latencia</span>
-    <span>11.9 Práctica práctica</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 11.1 Desempaquetado, cableado y montaje del brazo
 
@@ -84,7 +67,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <h2>11.2 Configuración del entorno</h2>
   </div>
 
-Suponiendo que ya has creado un entorno virtual en la Etapa 2, a continuación solo necesitamos clonar el repositorio e instalar el entorno en el entorno conda que creaste. NO uses una máquina virtual ni WSL; es mejor instalar Ubuntu 22.04 directamente.
+Suponiendo que ya has creado un entorno virtual en la Etapa 2, a continuación solo necesitamos clonar el repositorio e instalar el entorno en el entorno conda que creaste. NO uses una máquina virtual ni WSL; es mejor instalar directamente Ubuntu 22.04.
 
 :::tip
 Recuerda: todos los pasos posteriores deben realizarse dentro del entorno virtual y del entorno `lerobot`.
@@ -98,7 +81,7 @@ cd ~/rebot_lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git
 ```
 
-**Paso 2:** Entra en el entorno virtual e instala LeRobot y los plugins de reBot
+**Paso 2:** Entrar en el entorno virtual e instalar LeRobot y los plugins de reBot
 
 ```bash
 conda create -y -n rebot_arm python=3.12
@@ -126,7 +109,7 @@ conda install ffmpeg -c conda-forge
 conda install ffmpeg=7.1.1 -c conda-forge
 ```
 
-- Puedes comprobar mediante `ffmpeg -encoders | grep svtav1` si el codificador libsvtav1 es compatible.
+- Puedes comprobar si se admite el codificador libsvtav1 mediante `ffmpeg -encoders | grep svtav1`.
 
 **Paso 4:** Configuración especial para dispositivos NVIDIA Jetson (omite este paso en un PC normal)
 
@@ -170,16 +153,16 @@ Si muestra `False`, instalaste la versión para CPU: necesitas reinstalar PyTorc
     <h2>11.3 Calibración del brazo seguidor</h2>
   </div>
 
-- A continuación, asegúrate de que el robot reBot B601-RS esté conectado a la alimentación y al cable de datos antes de calibrar.
-- Los archivos de calibración del Líder y el Seguidor se almacenan respectivamente en `~/.cache/huggingface/lerobot/calibration/robots` y `~/.cache/huggingface/lerobot/calibration/teleoperators`. Para recalibrar, elimina los archivos correspondientes o simplemente ejecuta el comando de calibración: la terminal te indicará que pulses <kbd>C</kbd> para recalibrar o pulses <kbd>Enter</kbd> para usar el archivo de calibración existente.
+- A continuación, antes de calibrar, asegúrate de que el robot reBot B601-RS esté conectado a la alimentación y al cable de datos.
+- Los archivos de calibración de Líder y Seguidor se almacenan respectivamente en `~/.cache/huggingface/lerobot/calibration/robots` y `~/.cache/huggingface/lerobot/calibration/teleoperators`. Para recalibrar, elimina los archivos correspondientes o simplemente ejecuta el comando de calibración: la terminal mostrará un mensaje indicando que pulses <kbd>C</kbd> para recalibrar o pulses <kbd>Enter</kbd> para usar el archivo de calibración existente.
 - Si no puedes conectarte al seguidor, consulta la Etapa 2 y usa la interfaz de motorbridge para comprobar si el brazo funciona correctamente.
 - Sigue las indicaciones para mover el brazo Seguidor a la posición cero que se muestra arriba. El brazo solo necesita calibrarse una vez en el mismo ordenador después del montaje. A continuación se muestran los comandos de calibración; consulta la posición cero en la imagen (la pinza debe estar completamente cerrada).
 
 <div className="image-frame">
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-01.png" alt="Posición cero del seguidor" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-01.png" alt="Follower zero position" />
 </div>
 
-**Para la calibración del seguidor DM:**
+**Para la calibración del Seguidor DM:**
 
 ```bash
 sudo chmod 666 /dev/ttyACM*
@@ -191,7 +174,7 @@ lerobot-calibrate \
     --robot.can_adapter=damiao
 ```
 
-**Para la calibración del seguidor RS:**
+**Para la calibración del Seguidor RS:**
 
 Si tu sistema aún no tiene instalado el controlador PCAN, consulta esta página: [PCAN driver installed](https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/#software-setup-and-calibration-workflow)
 
@@ -216,13 +199,13 @@ for i in /sys/class/net/can*; do
 done
 ```
 
-Salida de ejemplo:
+Ejemplo de salida:
 
 ```text
 can2  # Could also be can0, can1, or other CAN number
 ```
 
-El número de puerto usado en todos los comandos posteriores del seguidor debe coincidir con la salida aquí.
+El número de puerto usado en todos los comandos posteriores del seguidor debe coincidir con el resultado mostrado aquí.
 
 :::warning
 Si tu Jetson no tiene el [PCAN driver installed](https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/#software-setup-and-calibration-workflow), la comunicación será persistentemente anómala.
@@ -242,12 +225,12 @@ Si tu Jetson no tiene el [PCAN driver installed](https://wiki.seeedstudio.com/es
 
 - Cuando comienza la calibración, la posición actual de cada servo en el reBot Arm 102 se **restablecerá a cero**.
 - `joint_ranges` (límites de articulación) provienen del archivo de configuración `config_rebot_arm_102_leader.py`, no de los datos de calibración.
-- Si una articulación siempre parece atascada cerca de un límite, comprueba primero la configuración de `joint_ranges`.
+- Si una articulación parece quedarse siempre atascada cerca de un límite, comprueba primero la configuración de `joint_ranges`.
 - Las direcciones de las articulaciones se definen en el archivo de configuración; si las direcciones no coinciden, modifica la configuración en lugar de recalibrar.
-- El Líder reBot 102 utiliza un módulo USB-a-UART, normalmente asignado a `/dev/ttyUSB*`.
+- El Líder reBot 102 utiliza un módulo USB‑a‑UART, que normalmente se asigna a `/dev/ttyUSB*`.
 - Usa `ls /dev/ttyUSB*` para ver el número de puerto real.
 
-En la primera conexión, es posible que obtengas un error indicando que no se puede encontrar el puerto serie `/dev/ttyACM0`; esto se debe a que `brltty` está ocupando el puerto. Sigue estos pasos:
+En la primera conexión, es posible que aparezca un error indicando que no se puede encontrar el puerto serie `/dev/ttyACM0`; esto se debe a que `brltty` está ocupando el puerto. Sigue estos pasos:
 
 ```bash
 sudo dmesg | grep ttyUSB   # See 'disconnected' on the last line
@@ -255,7 +238,7 @@ sudo apt remove brltty     # Remove brltty
 ```
 
 <div className="image-frame">
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-02.png" alt="Puerto serie del brazo líder" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-02.png" alt="Leader arm serial port" />
 </div>
 
 Sigue las indicaciones para mover el brazo Líder a la posición cero que se muestra arriba:
@@ -269,7 +252,7 @@ lerobot-calibrate \
     --teleop.id=rebot_arm_102_leader
 ```
 
-Mantenlo quieto y luego pulsa <kbd>Enter</kbd> hasta que la calibración se complete.
+Mantenlo inmóvil y luego pulsa <kbd>Enter</kbd> hasta que la calibración se complete.
 
 </section>
 
@@ -282,7 +265,7 @@ Mantenlo quieto y luego pulsa <kbd>Enter</kbd> hasta que la calibración se comp
   </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-03.png" alt="Mapeo de articulaciones" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-03.png" alt="Joint mapping" />
 </div>
 
 </section>
@@ -296,24 +279,24 @@ Mantenlo quieto y luego pulsa <kbd>Enter</kbd> hasta que la calibración se comp
   </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-04.png" alt="Directrices de seguridad para la teleoperación" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-04.png" alt="Teleoperation safety guidelines" />
 </div>
 
 </section>
 
-## 11.7 Inicio de la teleoperación maestro-esclavo
+## 11.7 Inicio de la teleoperación maestro‑esclavo
 
 <section id="teleoperate" className="section-card">
   <div className="section-title">
     <span>Teleoperación</span>
-    <h2>11.7 Inicio de la teleoperación maestro-esclavo</h2>
+    <h2>11.7 Inicio de la teleoperación maestro‑esclavo</h2>
   </div>
 
-:::danger ¡Las mismas reglas de seguridad se aplican a todos los escenarios de movimiento del brazo!
-Durante la teleoperación, si los cables de alimentación se aflojan, la conexión de alimentación es deficiente o los cables de señal se desconectan, primero debes detener el código, devolver el brazo a su posición inicial cero, luego reconectar la alimentación y reiniciar el programa, para evitar que la corrupción de datos haga que el brazo se salga de control y genere peligro.
+:::danger ¡Las mismas normas de seguridad se aplican a todos los escenarios de movimiento del brazo!
+Durante la teleoperación, si los cables de alimentación se aflojan, la conexión de alimentación es deficiente o los cables de señal se desconectan, primero debes detener el código, devolver el brazo a su posición cero inicial y luego volver a conectar la alimentación y reiniciar el programa, para evitar que la corrupción de datos haga que el brazo se salga de control y genere peligro.
 :::
 
-**Teleoperación DM** — primero concede permisos a los puertos serie:
+**Teleoperación DM**: primero concede permisos a los puertos serie:
 
 ```bash
 # leader
@@ -379,9 +362,9 @@ Que la teleoperación se sienta "sensible" depende de dos cosas: cuántos bucles
 
 ### ¿Qué Es la Frecuencia de Control? ¿Se Puede Configurar?
 
-El bucle de teleoperación tiene por defecto **60 Hz** — completa 60 bucles por segundo de "leer Leader → mapear → enviar CAN → leer de vuelta"; cada bucle tiene un presupuesto de tiempo de 16,7 ms. Esta frecuencia se puede ajustar mediante el parámetro `fps` de la configuración de teleoperación, pero ten en cuenta dos cosas:
+El bucle de teleoperación usa por defecto **60 Hz** — completa 60 bucles por segundo de "leer Leader → mapear → enviar CAN → leer de vuelta"; cada bucle tiene un presupuesto de tiempo de 16,7 ms. Esta frecuencia se puede ajustar mediante el parámetro `fps` de la configuración de teleoperate, pero ten en cuenta dos cosas:
 
-- **El límite superior está determinado por el tiempo del circuito de hardware, no por el software.** La cadena anterior en sí misma tarda más de diez milisegundos por bucle, por lo que el límite superior práctico para este hardware es de alrededor de 60–100 Hz. Configurarlo más alto no tiene sentido: la frecuencia real no aumentará y solo verás advertencias de tiempo de período excedido.
+- **El límite superior está determinado por el tiempo del circuito de hardware, no por el software.** La cadena anterior por sí sola tarda más de diez milisegundos por bucle, así que el límite práctico superior para este hardware está alrededor de 60–100 Hz. Configurarlo más alto no tiene sentido: la frecuencia real no aumentará y solo verás advertencias de tiempo de periodo excedido.
 - **60 Hz ya supera con creces lo necesario.** Los movimientos humanos conscientes más rápidos son solo de 5–10 Hz; 60 Hz es como tomar diez instantáneas de cada pequeño movimiento, por lo que la densidad de muestreo cubre completamente el ancho de banda de la mano.
 
 </section>
@@ -396,9 +379,9 @@ El bucle de teleoperación tiene por defecto **60 Hz** — completa 60 bucles po
 
 La teleoperación es estable, pero "puede moverse" y "puede trabajar" aún requieren práctica deliberada. La calidad de los datos del Capítulo 13 depende de tu nivel de destreza actual. Practica en tres niveles:
 
-- **Ejercicio 1: Transferencia de objetos sin carga (familiarizarse con la sensación).** Coloca algunos bloques ligeros en el espacio de trabajo. Practica: moverte sobre el objetivo → descender → cerrar el efector final → levantar. Objetivo: 10 repeticiones sin colisiones ni caídas a mitad de ejecución, con cada ejecución fluyendo suavemente y sin vacilaciones.
+- **Ejercicio 1: Transferencia de objetos sin carga (familiarizarse con la sensación).** Coloca algunos bloques ligeros en el espacio de trabajo. Practica: moverte sobre el objetivo → descender → cerrar el efector final → levantar. Objetivo: 10 repeticiones sin colisiones ni caídas a mitad de ejecución, con cada ejecución fluyendo de forma suave y sin vacilaciones.
 - **Ejercicio 2: Transporte y colocación (cadena completa de tareas).** Completa todo el flujo de trabajo de "agarrar → transportar → colocar en el contenedor designado". Objetivo: 10 repeticiones consecutivas con poses de inicio y fin casi idénticas cada vez.
-- **Estándar de aprobación:** puedes completar 20 tareas completas seguidas a un ritmo constante sin sentirte tenso; entonces estarás listo para el siguiente capítulo.
+- **Criterio de aprobación:** puedes completar 20 tareas completas seguidas a un ritmo constante sin sentirte tenso; entonces estarás listo para el siguiente capítulo.
 
 </section>
 

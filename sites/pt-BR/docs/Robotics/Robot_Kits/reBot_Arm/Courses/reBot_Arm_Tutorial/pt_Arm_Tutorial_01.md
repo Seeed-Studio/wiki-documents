@@ -1,11 +1,11 @@
 ---
-description: "Capítulo 1 do Curso para Iniciantes em IA Física da Seeed — entenda o que são robôs e braços robóticos, graus de liberdade e a diferença entre controle tradicional, aprendizado por imitação e VLA."
-title: Capítulo 1 - Robôs e IA Física
+description: Capítulo 1 do Curso para Iniciantes em Physical AI da Seeed — entenda o que são robôs e braços robóticos, graus de liberdade e a diferença entre controle tradicional, aprendizado por imitação e VLA.
+title: Capítulo 1 - Robôs e Physical AI
 keywords:
   - reBot
   - Robotic Arm
   - Robot
-  - IA Física
+  - Physical AI
   - DOF
   - Imitation Learning
   - VLA
@@ -19,12 +19,11 @@ last_update:
   date: 2026-09-17
   author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_1/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,9 +32,9 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 <section className="doc-hero">
   <div>
     <span className="eyebrow">Estágio 1 · Capítulo 1 · Teoria</span>
-    <h2>1. Conhecendo Robôs e IA Física</h2>
+    <h2>1. Conhecendo Robôs e Physical AI</h2>
     <p>
-      Capítulo 1 do Curso para Iniciantes em IA Física da Seeed — entenda o que são robôs e
+      Capítulo 1 do Curso para Iniciantes em Physical AI da Seeed — entenda o que são robôs e
       braços robóticos, graus de liberdade e a diferença entre controle tradicional, aprendizado por imitação
       e VLA.
     </p>
@@ -44,17 +43,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#paradigms">Paradigmas de controle</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>Neste capítulo</strong>
-    <span>1.1 Objetivos de Aprendizagem</span>
-    <span>1.2 O que é um Robô?</span>
-    <span>1.3 O que é um Braço Robótico?</span>
-    <span>1.4 Controle Tradicional, Aprendizado por Imitação e VLA</span>
-    <span>1.5 O Papel do reBot Arm no Curso</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 1.1 Objetivos de Aprendizagem
 
@@ -68,27 +57,27 @@ Após concluir este capítulo, você deverá ser capaz de:
 
 1. Explicar os conceitos básicos de robôs e braços robóticos.
 2. Identificar juntas, elos, graus de liberdade e efetuadores finais em um braço robótico.
-3. Entender percepção, tomada de decisão e controle em um sistema robótico.
+3. Compreender percepção, tomada de decisão e controle em um sistema robótico.
 4. Distinguir entre braços robóticos industriais e braços robóticos de inteligência incorporada.
 5. Distinguir entre controle tradicional por programa, aprendizado por imitação e VLA.
-6. Descrever a composição de um sistema completo de braço robótico com inteligência incorporada.
-7. Entender o papel do reBot Arm em todo o sistema de inteligência incorporada.
+6. Descrever a composição de um sistema completo de braço robótico de inteligência incorporada.
+7. Compreender o papel do reBot Arm em todo o sistema de inteligência incorporada.
 
 </section>
 
-## 1.2 O que é um Robô?
+## 1.2 O Que é um Robô?
 
 <section id="robot" className="section-card">
   <div className="section-title">
     <span>Fundamentos</span>
-    <h2>1.2 O que é um Robô?</h2>
+    <h2>1.2 O Que é um Robô?</h2>
   </div>
 
 Um robô não é apenas uma máquina que se parece com um humano. Do ponto de vista funcional, um robô é um sistema que pode:
 
 - Adquirir informações sobre si mesmo ou sobre o ambiente;
 - Realizar computação ou tomada de decisão com base em objetivos;
-- Mudar seu próprio estado ou o ambiente ao redor por meio de atuadores.
+- Alterar seu próprio estado ou o ambiente ao redor por meio de atuadores.
 
 Um sistema robótico geralmente pode ser abstraído como:
 
@@ -96,35 +85,35 @@ Um sistema robótico geralmente pode ser abstraído como:
   <img width={500} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-01.png" alt="Abstração de sistema robótico" />
 </div>
 
-Por exemplo, um robô de mesa para preensão precisa completar o seguinte processo:
+Por exemplo, um robô de mesa para agarrar objetos precisa concluir o seguinte processo:
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
-  <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-02.png" alt="Processo de robô de mesa para preensão" />
+  <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-02.png" alt="Processo de robô de mesa para agarrar objetos" />
 </div>
 
-Portanto, um robô não precisa apenas “ser capaz de se mover”, mas também deve ser capaz de formar um laço fechado em execução contínua.
+Portanto, um robô não apenas precisa "ser capaz de se mover", mas também deve ser capaz de formar um laço fechado em execução contínua.
 
-### A Diferença entre Robôs e Máquinas Comuns
+### A Diferença Entre Robôs e Máquinas Comuns
 
-Máquinas comuns geralmente trabalham de forma fixa. Por exemplo:
+Máquinas comuns geralmente funcionam de maneira fixa. Por exemplo:
 
 - Um ventilador elétrico continua girando após ser ligado;
 - Uma esteira transportadora funciona a uma velocidade fixa;
 - Um motor comum gira após receber tensão.
 
-Robôs, por outro lado, normalmente têm capacidades mais fortes de percepção de estado, controle por programa e execução de tarefas. Por exemplo, um braço robótico pode controlar múltiplas juntas para se mover para diferentes posturas com base em diferentes posições-alvo.
+Robôs, por outro lado, normalmente têm capacidades mais fortes de percepção de estado, controle por programa e execução de tarefas. Por exemplo, um braço robótico pode controlar várias juntas para se mover a diferentes posturas com base em diferentes posições-alvo.
 
 </section>
 
-## 1.3 O que é um Braço Robótico?
+## 1.3 O Que é um Braço Robótico?
 
 <section id="arm" className="section-card">
   <div className="section-title">
     <span>Fundamentos</span>
-    <h2>1.3 O que é um Braço Robótico?</h2>
+    <h2>1.3 O Que é um Braço Robótico?</h2>
   </div>
 
-Um braço robótico é um mecanismo robótico composto por múltiplas juntas e elos. Por meio do movimento coordenado de várias juntas, ele leva o efetuador final a uma posição e postura especificadas e conclui tarefas como preensão, manuseio, montagem, polimento e soldagem.
+Um braço robótico é um mecanismo robótico composto por múltiplas juntas e elos. Por meio do movimento coordenado de várias juntas, ele leva o efetuador final a uma posição e postura especificadas e conclui tarefas como agarrar, manusear, montar, polir e soldar.
 
 Um braço robótico pode ser entendido de forma simples como:
 
@@ -134,9 +123,9 @@ Um braço robótico pode ser entendido de forma simples como:
 
 Braços robóticos compartilham algumas semelhanças com braços humanos. No entanto, um braço robótico não precisa necessariamente imitar a anatomia humana. Seu número de juntas, arranjo e espaço de trabalho são projetados de acordo com os requisitos da tarefa.
 
-### O que são Graus de Liberdade
+### O Que São Graus de Liberdade
 
-Graus de liberdade são comumente indicados como DOF (Degree of Freedom). DOF descreve o número de direções independentes nas quais um sistema mecânico pode se mover.
+Graus de liberdade são comumente denotados como DOF (Degree of Freedom). DOF descreve o número de direções independentes nas quais um sistema mecânico pode se mover.
 
 No espaço tridimensional, a pose completa de um corpo rígido inclui:
 
@@ -185,7 +174,7 @@ Um braço robótico pode obter ações por meio de diferentes métodos.
     <div className="image-frame" style={{margin: '0.5rem 0'}}>
       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-06.png" alt="Aprendizado por imitação" />
     </div>
-    <p>Uma pessoa primeiro teleopera o braço robótico para completar uma tarefa, e então um modelo aprende a partir dos dados de demonstração. Indicado para tarefas de preensão, organização e operação contínua.</p>
+    <p>Uma pessoa primeiro teleopera o braço robótico para concluir uma tarefa e, em seguida, um modelo aprende a partir dos dados de demonstração. Indicado para tarefas de agarrar, organizar e operação contínua.</p>
   </div>
 
   <div>
@@ -193,14 +182,14 @@ Um braço robótico pode obter ações por meio de diferentes métodos.
     <div className="image-frame" style={{margin: '0.5rem 0'}}>
       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-07.png" alt="VLA" />
     </div>
-    <p>VLA usa informações de visão, linguagem e ação para permitir que o braço robótico conclua tarefas com base em linguagem natural.</p>
+    <p>VLA usa informações visuais, de linguagem e de ação para permitir que o braço robótico conclua tarefas com base em linguagem natural.</p>
   </div>
 </div>
 
 Por exemplo:
 
 :::note
-Coloque o bloco vermelho da esquerda dentro da caixa.
+Coloque o bloco vermelho à esquerda dentro da caixa.
 :::
 
 </section>
