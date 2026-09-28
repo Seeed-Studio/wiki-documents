@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 14 do Curso para Iniciantes em Inteligência Incorporada da Seeed — estrutura do dataset e inspeção de qualidade: o que é realmente armazenado em disco, os quatro padrões de qualidade, reprodução e inspeção de imagens, e o que fazer quando problemas são encontrados."
+description: "Capítulo 14 do Curso para Iniciantes em IA Física da Seeed — estrutura do dataset e inspeção de qualidade: o que é realmente armazenado em disco, os quatro padrões de qualidade, reprodução e inspeção de imagens, e o que fazer quando problemas são encontrados."
 title: Capítulo 14 - Estrutura do Dataset e Inspeção de Qualidade
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Parquet
   - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_14
+slug: /rebot_physical_ai_course_chapter_14
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_14/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_14/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 3 · Capítulo 14 · Teoria e Prática</span>
     <h2>14. Estrutura do Dataset e Inspeção de Qualidade</h2>
     <p>
-      Capítulo 14 do Curso para Iniciantes em Inteligência Incorporada da Seeed — o que é realmente
+      Capítulo 14 do Curso para Iniciantes em IA Física da Seeed — o que é realmente
       armazenado em disco, os quatro padrões de qualidade, reprodução e inspeção de imagens, e o que
       fazer quando problemas são encontrados.
     </p>

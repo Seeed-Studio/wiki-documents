@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 6 del Curso para Principiantes de Inteligencia Incorporada de Seeed: ensambla el reBot Arm, ensambla la fuente de alimentación, cablea el brazo y enciéndelo por primera vez."
+description: "Capítulo 6 del Curso para Principiantes de IA Física de Seeed: ensambla el reBot Arm, ensambla la fuente de alimentación, cablea el brazo y enciéndelo por primera vez."
 title: Capítulo 6 - Ensamblaje, fuente de alimentación y primer encendido
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Cableado
   - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_6
+slug: /rebot_physical_ai_course_chapter_6
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_6/
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_6/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 2 · Capítulo 6 · Práctica</span>
     <h2>6. Ensamblaje, fuente de alimentación y primer encendido</h2>
     <p>
-      Capítulo 6 del Curso para Principiantes de Inteligencia Incorporada de Seeed: ensambla el reBot Arm,
+      Capítulo 6 del Curso para Principiantes de IA Física de Seeed: ensambla el reBot Arm,
       ensambla la fuente de alimentación, cablea el brazo y enciéndelo por primera vez.
     </p>
     <div className="hero-actions">

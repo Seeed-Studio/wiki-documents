@@ -1,5 +1,5 @@
 ---
-description: 'Chapter 13 of the Seeed Embodied Intelligence Beginner''s Course — camera configuration and LeRobot data collection: single vs dual camera setup, finding camera device names, image/action synchronization, creating a dataset, recording and re-recording, visualization, and supplementing or deleting data.'
+description: 'Chapter 13 of the Seeed Physical AI Beginner''s Course — camera configuration and LeRobot data collection: single vs dual camera setup, finding camera device names, image/action synchronization, creating a dataset, recording and re-recording, visualization, and supplementing or deleting data.'
 title: Chapter 13 - Camera Configuration and LeRobot Data Collection
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Dataset
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_13
+slug: /rebot_physical_ai_course_chapter_13
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_13/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_13/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 13 · Practice</span>
     <h2>13. Camera Configuration and LeRobot Data Collection</h2>
     <p>
-      Chapter 13 of the Seeed Embodied Intelligence Beginner's Course — single vs dual camera setup,
+      Chapter 13 of the Seeed Physical AI Beginner's Course — single vs dual camera setup,
       finding camera device names, image/action synchronization, creating a dataset, recording and
       re-recording, visualization, and supplementing or deleting data.
     </p>
@@ -43,20 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#create-dataset">Dataset</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>13.1 Single-Camera vs. Dual-Camera Setup</span>
-    <span>13.2 Overhead and Wrist Cameras</span>
-    <span>13.3 Finding Camera Device Names</span>
-    <span>13.4 Image and Action Synchronization</span>
-    <span>13.5 Create LeRobot Dataset</span>
-    <span>13.6 Recording, Pausing, and Re-recording Episodes</span>
-    <span>13.7 Visualizing and Playing Back a Dataset</span>
-    <span>13.8 Supplementing and Deleting Data</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 13.1 Single-Camera vs. Dual-Camera Setup
 

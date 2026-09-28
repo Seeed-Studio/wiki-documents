@@ -1,25 +1,25 @@
 ---
-description: "Curso para Iniciantes em Inteligência Incorporada da Seeed — um guia gratuito e prático para construir e aprender com o braço robótico reBot 100% open-source. A Fase 1 aborda conceitos básicos, hardware e preparação de equipamentos."
-title: Curso para Iniciantes em Inteligência Incorporada da Seeed
+description: "Curso para Iniciantes em IA Física da Seeed — um guia gratuito e prático para construir e aprender com o braço robótico reBot 100% open-source. A Fase 1 aborda conceitos básicos, hardware e preparação de equipamentos."
+title: Curso para Iniciantes em IA Física da Seeed
 keywords:
   - reBot
   - B601-DM
   - B601-RS
   - Braço Robótico
-  - Inteligência Incorporada
+  - IA Física
   - Curso
   - Tutorial
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_introduction
+slug: /rebot_physical_ai_course_introduction
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_introduction/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_introduction/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -32,7 +32,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <section className="doc-hero">
   <div>
-    <span className="eyebrow">reBot × Inteligência Incorporada</span>
+    <span className="eyebrow">reBot × IA Física</span>
     <h2>8 Fases, 40 Capítulos — gratuito e prático</h2>
     <p>
       Um guia gratuito e prático para construir e aprender com o braço robótico reBot 100% open-source.
@@ -103,15 +103,15 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
 ### Fase 1: Conceitos Básicos e Preparação de Equipamentos
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_1">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_1">
     <span className="course-index">1</span>
     <div className="course-path-copy">
-      <strong>Conhecendo Robôs e Inteligência Incorporada</strong>
+      <strong>Conhecendo Robôs e IA Física</strong>
       <span>Capítulo 1</span>
     </div>
     <span className="course-tag">Teoria</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_2">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_2">
     <span className="course-index">2</span>
     <div className="course-path-copy">
       <strong>Conhecendo o Hardware do reBot Arm e o Projeto Open-Source</strong>
@@ -119,7 +119,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Teoria &amp; Prática</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_3">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_3">
     <span className="course-index">3</span>
     <div className="course-path-copy">
       <strong>Seleção de Hardware para os Próximos Cursos</strong>
@@ -132,7 +132,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
 ### Fase 2: Montagem do Braço Robótico e Controle Básico
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_4">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_4">
     <span className="course-index">4</span>
     <div className="course-path-copy">
       <strong>Fundamentos de Braços Robóticos e Atuadores de Junta</strong>
@@ -140,7 +140,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Teoria</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_5">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_5">
     <span className="course-index">5</span>
     <div className="course-path-copy">
       <strong>Barramento CAN e Comunicação com o Motor</strong>
@@ -148,7 +148,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Teoria</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_6">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_6">
     <span className="course-index">6</span>
     <div className="course-path-copy">
       <strong>Montagem, Fonte de Alimentação e Primeiro Ligar</strong>
@@ -156,7 +156,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Prática</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_7">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_7">
     <span className="course-index">7</span>
     <div className="course-path-copy">
       <strong>Biblioteca de Controle de Motor MotorBridge</strong>
@@ -164,7 +164,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Prática</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_8">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_8">
     <span className="course-index">8</span>
     <div className="course-path-copy">
       <strong>Controlando o reBot Arm Usando o Python SDK</strong>
@@ -177,7 +177,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
 ### Fase 3: Aprendizado por Imitação e LeRobot
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_9">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_9">
     <span className="course-index">9</span>
     <div className="course-path-copy">
       <strong>Fundamentos de Aprendizado de Robôs e Aprendizado por Imitação</strong>
@@ -185,7 +185,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Teoria &amp; Prática</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_10">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_10">
     <span className="course-index">10</span>
     <div className="course-path-copy">
       <strong>Arquitetura de Sistema do LeRobot e do reBot Arm</strong>
@@ -193,7 +193,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Teoria</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_11">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_11">
     <span className="course-index">11</span>
     <div className="course-path-copy">
       <strong>Calibração de Líder e Seguidor e Teleoperação</strong>
@@ -201,7 +201,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Prática</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_12">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_12">
     <span className="course-index">12</span>
     <div className="course-path-copy">
       <strong>Conjuntos de Dados de Robôs e Design de Tarefas</strong>
@@ -209,7 +209,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Teoria</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_13">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_13">
     <span className="course-index">13</span>
     <div className="course-path-copy">
       <strong>Configuração de Câmera e Coleta de Dados com LeRobot</strong>
@@ -217,7 +217,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Prática</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_14">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_14">
     <span className="course-index">14</span>
     <div className="course-path-copy">
       <strong>Estrutura de Conjunto de Dados e Inspeção de Qualidade</strong>
@@ -225,7 +225,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Teoria &amp; Prática</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_15">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_15">
     <span className="course-index">15</span>
     <div className="course-path-copy">
       <strong>Modelo ACT e Segmentação de Ações</strong>
@@ -233,7 +233,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Teoria</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_16">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_16">
     <span className="course-index">16</span>
     <div className="course-path-copy">
       <strong>Treinando Sua Primeira Política ACT</strong>
@@ -241,7 +241,7 @@ Este curso usa o reBot Arm B601-DM e B601-RS como plataformas práticas, combina
     </div>
     <span className="course-tag">Prática</span>
   </a>
-  <a className="course-path-item" href="/pt-br/rebot_embodied_ai_course_chapter_17">
+  <a className="course-path-item" href="/pt-br/rebot_physical_ai_course_chapter_17">
     <span className="course-index">17</span>
     <div className="course-path-copy">
       <strong>Inferência em Robô Real, Avaliação e Iteração de Dados</strong>

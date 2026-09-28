@@ -1,5 +1,5 @@
 ---
-description: 'Chapter 14 of the Seeed Embodied Intelligence Beginner''s Course — dataset structure and quality inspection: what is actually stored on disk, the four quality standards, playback and image inspection, and what to do when problems are found.'
+description: 'Chapter 14 of the Seeed Physical AI Beginner''s Course — dataset structure and quality inspection: what is actually stored on disk, the four quality standards, playback and image inspection, and what to do when problems are found.'
 title: Chapter 14 - Dataset Structure and Quality Inspection
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Parquet
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_14
+slug: /rebot_physical_ai_course_chapter_14
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_14/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_14/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 14 · Theory & Practice</span>
     <h2>14. Dataset Structure and Quality Inspection</h2>
     <p>
-      Chapter 14 of the Seeed Embodied Intelligence Beginner's Course — what is actually stored on
+      Chapter 14 of the Seeed Physical AI Beginner's Course — what is actually stored on
       disk, the four quality standards, playback and image inspection, and what to do when problems
       are found.
     </p>
@@ -43,16 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#fix">Fixes</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>14.1 Dataset Structure: What's Actually Stored on Disk</span>
-    <span>14.2 What Counts as "Good" Data: Four Quality Standards</span>
-    <span>14.3 Playback and Image Inspection</span>
-    <span>14.4 What to Do When Problems Are Found</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 14.1 Dataset Structure: What's Actually Stored on Disk
 

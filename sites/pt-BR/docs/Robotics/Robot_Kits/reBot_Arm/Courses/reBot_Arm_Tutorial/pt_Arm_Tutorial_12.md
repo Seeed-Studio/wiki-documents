@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 12 do Curso para Iniciantes em Inteligência Incorporada da Seeed — conjuntos de dados de robôs e design de tarefas: o que é um Episódio, o que há em um registro de dados, carimbos de tempo e sincronização, condições de início/fim, consistência vs diversidade, quantidade vs qualidade de dados e um exemplo prático de criação de dados."
+description: "Capítulo 12 do Curso para Iniciantes em IA Física da Seeed — conjuntos de dados de robôs e design de tarefas: o que é um Episódio, o que há em um registro de dados, carimbos de tempo e sincronização, condições de início/fim, consistência vs diversidade, quantidade vs qualidade de dados e um exemplo prático de criação de dados."
 title: Capítulo 12 - Conjuntos de Dados de Robôs e Design de Tarefas
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Data Collection
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_12
+slug: /rebot_physical_ai_course_chapter_12
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_12/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_12/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 3 · Capítulo 12 · Teoria</span>
     <h2>12. Conjuntos de Dados de Robôs e Design de Tarefas</h2>
     <p>
-      Capítulo 12 do Curso para Iniciantes em Inteligência Incorporada da Seeed — o que é um Episódio, o que
+      Capítulo 12 do Curso para Iniciantes em IA Física da Seeed — o que é um Episódio, o que
       há em um registro de dados, carimbos de tempo e sincronização, condições de início/fim, consistência vs
       diversidade, quantidade vs qualidade de dados e um exemplo prático de criação de dados.
     </p>

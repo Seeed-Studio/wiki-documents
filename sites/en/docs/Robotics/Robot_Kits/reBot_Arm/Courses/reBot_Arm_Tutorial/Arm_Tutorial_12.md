@@ -1,5 +1,5 @@
 ---
-description: 'Chapter 12 of the Seeed Embodied Intelligence Beginner''s Course — robot datasets and task design: what an Episode is, what is in one data record, timestamps and synchronization, start/end conditions, consistency vs diversity, data quantity vs quality, and a worked data-creation example.'
+description: 'Chapter 12 of the Seeed Physical AI Beginner''s Course — robot datasets and task design: what an Episode is, what is in one data record, timestamps and synchronization, start/end conditions, consistency vs diversity, data quantity vs quality, and a worked data-creation example.'
 title: Chapter 12 - Robot Datasets and Task Design
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Data Collection
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_12
+slug: /rebot_physical_ai_course_chapter_12
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_12/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_12/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 12 · Theory</span>
     <h2>12. Robot Datasets and Task Design</h2>
     <p>
-      Chapter 12 of the Seeed Embodied Intelligence Beginner's Course — what an Episode is, what is
+      Chapter 12 of the Seeed Physical AI Beginner's Course — what an Episode is, what is
       in one data record, timestamps and synchronization, start/end conditions, consistency vs
       diversity, data quantity vs quality, and a worked data-creation example.
     </p>
@@ -43,22 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#example">Example</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>12.1 What Is an Episode?</span>
-    <span>12.2 What Exactly Is in One Data Record?</span>
-    <span>12.3 Timestamps and Data Synchronization</span>
-    <span>12.4 Task Design: Start and End Conditions</span>
-    <span>12.5 Task Consistency vs. Diversity</span>
-    <span>12.6 Success and Failure Criteria</span>
-    <span>12.7 Data Quantity vs. Data Quality</span>
-    <span>12.8 Single-Task vs. Multi-Task Datasets</span>
-    <span>12.9 Data Collection Iteration</span>
-    <span>12.10 Data Creation Example</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 12.1 What Is an Episode?
 

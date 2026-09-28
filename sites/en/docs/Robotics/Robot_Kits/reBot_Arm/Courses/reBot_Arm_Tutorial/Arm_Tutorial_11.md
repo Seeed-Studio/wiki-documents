@@ -1,5 +1,5 @@
 ---
-description: Chapter 11 of the Seeed Embodied Intelligence Beginner's Course — environment setup, follower and leader arm calibration, joint mapping, teleoperation safety, starting master-slave teleoperation, control frequency and latency, and hands-on practice.
+description: Chapter 11 of the Seeed Physical AI Beginner's Course — environment setup, follower and leader arm calibration, joint mapping, teleoperation safety, starting master-slave teleoperation, control frequency and latency, and hands-on practice.
 title: Chapter 11 - Leader and Follower Calibration and Teleoperation
 keywords:
   - reBot
@@ -10,20 +10,19 @@ keywords:
   - Follower Arm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_11
+slug: /rebot_physical_ai_course_chapter_11
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_11/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_11/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -34,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 11 · Practice</span>
     <h2>11. Leader and Follower Calibration and Teleoperation</h2>
     <p>
-      Chapter 11 of the Seeed Embodied Intelligence Beginner's Course — environment setup, follower
+      Chapter 11 of the Seeed Physical AI Beginner's Course — environment setup, follower
       and leader arm calibration, joint mapping, teleoperation safety, starting master-slave
       teleoperation, control frequency and latency, and hands-on practice.
     </p>
@@ -44,21 +43,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#teleoperate">Teleoperation</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>11.1 Unboxing, Wiring, and Mounting the Arm</span>
-    <span>11.2 Environment Setup</span>
-    <span>11.3 Calibrating the Follower Arm</span>
-    <span>11.4 Calibrating the Leader Arm</span>
-    <span>11.5 Joint Mapping: Direction, Range, and Gripper</span>
-    <span>11.6 Teleoperation Safety Guidelines</span>
-    <span>11.7 Starting Master-Slave Teleoperation</span>
-    <span>11.8 Control Frequency and Latency</span>
-    <span>11.9 Hands-On Practice</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 11.1 Unboxing, Wiring, and Mounting the Arm
 

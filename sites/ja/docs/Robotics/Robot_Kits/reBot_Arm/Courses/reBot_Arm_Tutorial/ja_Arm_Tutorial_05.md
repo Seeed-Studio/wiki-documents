@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course の第5章 — CAN バスの基礎、標準フレームと拡張フレーム、CAN データリンク層、および SocketCAN。"
+description: "Seeed Physical AI Beginner's Course の第5章 — CAN バスの基礎、標準フレームと拡張フレーム、CAN データリンク層、および SocketCAN。"
 title: 第5章 - CAN バスとモーター通信
 keywords:
   - reBot
@@ -10,16 +10,16 @@ keywords:
   - RS Motor
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_5
+slug: /rebot_physical_ai_course_chapter_5
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_5/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_5/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -34,7 +34,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 2 · 第5章 · 理論</span>
     <h2>5. CAN バスとモーター通信</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course の第5章 — CAN バスの基礎、標準フレームと
+      Seeed Physical AI Beginner's Course の第5章 — CAN バスの基礎、標準フレームと
       拡張データフレーム、CAN データリンク層、および SocketCAN について説明します。
     </p>
     <div className="hero-actions">

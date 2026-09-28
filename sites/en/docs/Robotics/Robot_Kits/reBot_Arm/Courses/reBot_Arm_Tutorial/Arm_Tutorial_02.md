@@ -1,5 +1,5 @@
 ---
-description: Chapter 2 of the Seeed Embodied Intelligence Beginner's Course — get to know the reBot Arm open-source project, the difference between the DM and RS versions, and its open-source hardware and software.
+description: Chapter 2 of the Seeed Physical AI Beginner's Course — get to know the reBot Arm open-source project, the difference between the DM and RS versions, and its open-source hardware and software.
 title: Chapter 2 - Hardware and the Open-Source Project
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Open Source
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_2
+slug: /rebot_physical_ai_course_chapter_2
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-18'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_2/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_2/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 1 · Chapter 2 · Theory &amp; Practice</span>
     <h2>2. Getting to Know reBot Arm Hardware and the Open-Source Project</h2>
     <p>
-      Chapter 2 of the Seeed Embodied Intelligence Beginner's Course — get to know the reBot Arm
+      Chapter 2 of the Seeed Physical AI Beginner's Course — get to know the reBot Arm
       open-source project, the difference between the DM and RS versions, and its open-source
       hardware and software.
     </p>
@@ -42,16 +41,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#open-source">Open source</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>2.1 What Is reBot Arm</span>
-    <span>2.2 Why Design Two Versions: DM and RS</span>
-    <span>2.3 Parameter Comparison Between reBot Arm DM and reBot Arm RS</span>
-    <span>2.4 Open-Source Hardware and Open-Source Software</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 2.1 What Is reBot Arm
 

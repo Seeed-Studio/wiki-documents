@@ -1,25 +1,25 @@
 ---
-description: "Seeed Embodied Intelligence 初級コース — 100% オープンソースの reBot ロボットアームを使って構築し学ぶための、無料で実践的なガイドです。ステージ 1 では、基本概念、ハードウェア、および機材準備を扱います。"
-title: Seeed Embodied Intelligence 初級コース
+description: "Seeed Physical AI 初級コース — 100% オープンソースの reBot ロボットアームを使って構築し学ぶための、無料で実践的なガイドです。ステージ 1 では、基本概念、ハードウェア、および機材準備を扱います。"
+title: Seeed Physical AI 初級コース
 keywords:
   - reBot
   - B601-DM
   - B601-RS
   - ロボットアーム
-  - Embodied Intelligence
+  - Physical AI
   - コース
   - チュートリアル
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_introduction
+slug: /rebot_physical_ai_course_introduction
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_introduction/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_introduction/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -32,7 +32,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <section className="doc-hero">
   <div>
-    <span className="eyebrow">reBot × Embodied Intelligence</span>
+    <span className="eyebrow">reBot × Physical AI</span>
     <h2>8 ステージ・40 章 — 無料で実践的</h2>
     <p>
       100% オープンソースの reBot ロボットアームを使って構築し学ぶための、無料で実践的なガイドです。
@@ -103,15 +103,15 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 ### ステージ 1：基本概念と機材準備
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_1">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_1">
     <span className="course-index">1</span>
     <div className="course-path-copy">
-      <strong>ロボットと Embodied Intelligence を知る</strong>
+      <strong>ロボットと Physical AI を知る</strong>
       <span>第 1 章</span>
     </div>
     <span className="course-tag">理論</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_2">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_2">
     <span className="course-index">2</span>
     <div className="course-path-copy">
       <strong>reBot Arm ハードウェアとオープンソースプロジェクトを知る</strong>
@@ -119,7 +119,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">理論 &amp; 実践</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_3">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_3">
     <span className="course-index">3</span>
     <div className="course-path-copy">
       <strong>以降のコースのためのハードウェア選定</strong>
@@ -132,7 +132,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 ### ステージ 2：ロボットアームの組み立てと基本制御
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_4">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_4">
     <span className="course-index">4</span>
     <div className="course-path-copy">
       <strong>ロボットアームと関節アクチュエータの基礎</strong>
@@ -140,7 +140,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">理論</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_5">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_5">
     <span className="course-index">5</span>
     <div className="course-path-copy">
       <strong>CAN バスとモーター通信</strong>
@@ -148,7 +148,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">理論</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_6">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_6">
     <span className="course-index">6</span>
     <div className="course-path-copy">
       <strong>組み立て、電源、および初回の電源投入</strong>
@@ -156,7 +156,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">実践</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_7">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_7">
     <span className="course-index">7</span>
     <div className="course-path-copy">
       <strong>MotorBridge モーター制御ライブラリ</strong>
@@ -164,7 +164,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">実践</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_8">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_8">
     <span className="course-index">8</span>
     <div className="course-path-copy">
       <strong>Python SDK を用いた reBot Arm の制御</strong>
@@ -177,7 +177,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 ### ステージ 3：模倣学習と LeRobot
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_9">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_9">
     <span className="course-index">9</span>
     <div className="course-path-copy">
       <strong>ロボット学習と模倣学習の基礎</strong>
@@ -185,7 +185,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">理論 &amp; 実践</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_10">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_10">
     <span className="course-index">10</span>
     <div className="course-path-copy">
       <strong>LeRobot と reBot Arm のシステムアーキテクチャ</strong>
@@ -193,7 +193,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">理論</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_11">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_11">
     <span className="course-index">11</span>
     <div className="course-path-copy">
       <strong>リーダー・フォロワーのキャリブレーションと遠隔操作</strong>
@@ -201,7 +201,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">実践</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_12">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_12">
     <span className="course-index">12</span>
     <div className="course-path-copy">
       <strong>ロボットデータセットとタスク設計</strong>
@@ -209,7 +209,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">理論</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_13">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_13">
     <span className="course-index">13</span>
     <div className="course-path-copy">
       <strong>カメラ設定と LeRobot によるデータ収集</strong>
@@ -217,7 +217,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">実践</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_14">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_14">
     <span className="course-index">14</span>
     <div className="course-path-copy">
       <strong>データセット構造と品質検査</strong>
@@ -225,7 +225,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">理論 &amp; 実践</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_15">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_15">
     <span className="course-index">15</span>
     <div className="course-path-copy">
       <strong>ACT モデルとアクションチャンク</strong>
@@ -233,7 +233,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">理論</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_16">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_16">
     <span className="course-index">16</span>
     <div className="course-path-copy">
       <strong>最初の ACT ポリシーをトレーニングする</strong>
@@ -241,7 +241,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <span className="course-tag">実践</span>
   </a>
-  <a className="course-path-item" href="/ja/rebot_embodied_ai_course_chapter_17">
+  <a className="course-path-item" href="/ja/rebot_physical_ai_course_chapter_17">
     <span className="course-index">17</span>
     <div className="course-path-copy">
       <strong>実機ロボットでの推論・評価・データ反復</strong>
