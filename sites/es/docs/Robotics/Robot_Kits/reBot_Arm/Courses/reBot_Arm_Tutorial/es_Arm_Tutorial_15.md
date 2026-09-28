@@ -1,6 +1,6 @@
 ---
-description: "Capítulo 15 del Curso para Principiantes en IA Física de Seeed: el modelo ACT y el action chunking: entrada y salida de ACT, la estructura ResNet y Transformer, intuición sobre la atención, CVAE, action chunk vs action horizon, defensas contra la acumulación de errores y los límites de capacidad de ACT."
-title: Capítulo 15 - Modelo ACT y Action Chunking
+description: 'Capítulo 15 del Curso de Introducción a la IA Física de Seeed: el modelo ACT y el troceado de acciones (action chunking): entrada y salida de ACT, la estructura ResNet y Transformer, intuición sobre la atención, CVAE, action chunk vs action horizon, defensas contra la acumulación de errores y los límites de capacidad de ACT.'
+title: Capítulo 15 - Modelo ACT y Troceado de Acciones
 keywords:
   - reBot
   - ACT
@@ -18,12 +18,11 @@ last_update:
   date: 2026-09-19
   author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_15/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -32,9 +31,9 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 <section className="doc-hero">
   <div>
     <span className="eyebrow">Etapa 3 · Capítulo 15 · Teoría</span>
-    <h2>15. Modelo ACT y Action Chunking</h2>
+    <h2>15. Modelo ACT y Troceado de Acciones</h2>
     <p>
-      Capítulo 15 del Curso para Principiantes en IA Física de Seeed: entrada y salida de ACT,
+      Capítulo 15 del Curso de Introducción a la IA Física de Seeed: entrada y salida de ACT,
       la estructura ResNet y Transformer, intuición sobre la atención, CVAE, action chunk vs action horizon,
       defensas contra la acumulación de errores y los límites de capacidad de ACT.
     </p>
@@ -44,32 +43,17 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#chunk-horizon">Chunk vs horizon</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>En este capítulo</strong>
-    <span>15.1 De Behavioral Cloning a ACT</span>
-    <span>15.2 Entrada y salida de ACT</span>
-    <span>15.3 Estructura interna de ACT</span>
-    <span>15.4 Qué es un Transformer</span>
-    <span>15.5 Cómo se usa Transformer en ACT</span>
-    <span>15.6 Qué es CVAE</span>
-    <span>15.7 Action Chunk vs. Action Horizon</span>
-    <span>15.8 Continuidad de la acción y acumulación de errores</span>
-    <span>15.9 ¿Para qué tareas es adecuado ACT?</span>
-    <span>15.10 Límites de capacidad de ACT</span>
-  </div>
 </section>
 
-<RebotCourseNav />
-
-## 15.1 De Behavioral Cloning a ACT
+## 15.1 Del Clonado de Comportamiento a ACT
 
 <section id="why-act" className="section-card">
   <div className="section-title">
     <span>ACT</span>
-    <h2>15.1 De Behavioral Cloning a ACT: solo hace falta un "buen modelo"</h2>
+    <h2>15.1 Del Clonado de Comportamiento a ACT: Solo Necesitas un "Buen Modelo"</h2>
   </div>
 
-El Capítulo 9 trató sobre behavioral cloning: registrar demostraciones de teleoperación como un conjunto de datos y dejar que el modelo aprenda a "hacer lo que ves". Eso dejó una pregunta: ¿qué modelo merece estos datos? Un modelo de política desplegable debe superar al menos tres obstáculos:
+El Capítulo 9 cubrió el clonando de comportamiento: registrar demostraciones de teleoperación como un conjunto de datos y dejar que el modelo aprenda a "hacer lo que ves". Eso dejó una pregunta: ¿qué modelo merece estos datos? Un modelo de política desplegable debe superar al menos tres obstáculos:
 
 1. Entender imágenes.
 2. Pensar de forma coherente.
@@ -85,28 +69,28 @@ El nombre de ACT ES toda su filosofía de diseño: **Action Chunking + Transform
 
 </section>
 
-## 15.2 Entrada y salida de ACT
+## 15.2 Entrada y Salida de ACT
 
 <section id="input-output" className="section-card">
   <div className="section-title">
     <span>Interfaz</span>
-    <h2>15.2 Entrada y salida de ACT: ver primero ambos extremos</h2>
+    <h2>15.2 Entrada y Salida de ACT: Ver Primero Ambos Extremos</h2>
   </div>
 
 La forma más fiable de entender cualquier modelo es mirar primero su "interfaz": qué recibe y qué produce.
 
-### Entrada: observación actual
+### Entrada: Observación Actual
 
 Durante la inferencia, ACT recibe un fotograma de observación que contiene dos tipos de información:
 
 | Entrada | En el reBot Arm | Dimensionalidad |
 | :--- | :--- | :--- |
-| Imágenes (Observación) | Flujo RGB dual cenital + muñeca | 2 × imágenes |
-| Estado articular (State) | 6 ángulos articulares + apertura del gripper | Vector de 7 dimensiones |
+| Imágenes (Observación) | Flujo dual RGB cenital + muñeca | 2 × imágenes |
+| Estado articular (Estado) | 6 ángulos articulares + apertura del gripper | Vector de 7 dimensiones |
 
 Ten en cuenta que ACT es **solo por fotogramas**: no recuerda fotogramas pasados; cada decisión se basa en "lo que ve ahora + dónde están las articulaciones ahora".
 
-### Salida: Action Chunk para una ventana corta de futuro
+### Salida: Action Chunk para una Ventana Corta de Futuro
 
 La salida de ACT **no es** la siguiente acción, sino todo un bloque de secuencia de acciones (Action Chunk):
 
@@ -124,25 +108,25 @@ En la configuración predeterminada de ACT en LeRobot, k (tamaño del chunk) sue
 
 </section>
 
-## 15.3 Estructura interna de ACT
+## 15.3 Estructura Interna de ACT
 
 <section id="architecture" className="section-card">
   <div className="section-title">
     <span>Architecture</span>
-    <h2>15.3 Estructura interna de ACT: tres talleres en una misma línea de montaje</h2>
+    <h2>15.3 Estructura Interna de ACT: Tres Talleres en Una Misma Línea de Ensamblaje</h2>
   </div>
 
-### Taller 1: Visual Backbone (ResNet): de píxeles a características
+### Taller 1: Espina Dorsal Visual (ResNet): de Píxeles a Características
 
 Las imágenes de la cámara cenital y de muñeca pasan cada una por una ResNet18 (una CNN preentrenada en ImageNet), comprimidas en un conjunto de **características visuales**. Piensa en ResNet como la "corteza visual" del modelo: los píxeles en bruto no significan nada para él; extrae información estructurada como "hay un objeto rojo a la izquierda de la mesa" o "hay una abertura justo debajo del gripper".
 
-### Taller 2: Transformer Encoder: entender "el presente"
+### Taller 2: Codificador Transformer: Entender "el Presente"
 
-Las características visuales + el vector de estado articular se fusionan y entran en el Transformer encoder. El trabajo del encoder es fusionar múltiples flujos en una comprensión unificada de la situación actual: "dónde está el objetivo, dónde estoy yo, en qué punto va la tarea".
+Las características visuales + el vector de estado articular se combinan y entran en el codificador Transformer. El trabajo del codificador es fusionar múltiples flujos en una comprensión unificada de la situación actual: "dónde está el objetivo, dónde estoy yo, cuánto se ha avanzado en la tarea".
 
-### Taller 3: Transformer Decoder: planificar "el futuro"
+### Taller 3: Decodificador Transformer: Planificar "el Futuro"
 
-El decoder toma la comprensión del encoder y **genera la secuencia de acciones para los próximos k pasos de una sola vez**. No escupe acciones una por una; como al escribir una partitura, compone todo el "movimiento futuro" de un solo aliento; esta es la razón fundamental por la que los action chunks son internamente tan coherentes.
+El decodificador toma la comprensión del codificador y **genera la secuencia de acciones para los próximos k pasos de una sola vez**. No escupe acciones una por una; como escribir una partitura, compone todo el "movimiento futuro" de un solo aliento: esta es la razón fundamental por la que los action chunks son internamente tan coherentes.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-03.png" alt="ACT internal structure" />
@@ -155,7 +139,7 @@ El decoder toma la comprensión del encoder y **genera la secuencia de acciones 
 <section id="transformer" className="section-card">
   <div className="section-title">
     <span>Transformer</span>
-    <h2>15.4 Qué es un Transformer: intuición detrás de la atención</h2>
+    <h2>15.4 Qué es un Transformer: Intuición Detrás de la Atención</h2>
   </div>
 
 Los talleres 2 y 3 de ACT son ambos Transformers, pero ¿qué ES un Transformer?
@@ -163,8 +147,8 @@ Los talleres 2 y 3 de ACT son ambos Transformers, pero ¿qué ES un Transformer?
 Fue propuesto por Google en 2017 para traducción automática; el artículo se titula "Attention Is All You Need", y más tarde se convirtió en la arquitectura fundamental de los grandes modelos de lenguaje. No hacen falta fórmulas: bastan tres intuiciones:
 
 1. **Token: cortar la información en "partes".** Los Transformers no procesan directamente frases o píxeles en bruto; primero cortan la entrada en partes estandarizadas (tokens): una frase en palabras, una imagen en parches, un vector de estado articular también puede ser un token. Una vez que toda la información se unifica en "una secuencia de partes", el mismo mecanismo las procesa todas.
-2. **Self-Attention: cada parte puede "ver" todas las demás.** Este es el núcleo del Transformer. Al procesar cada parte, calcula su relevancia con todas las demás partes y se centra en absorber información de las más relevantes; "a qué mirar" no lo prescribe el humano, el modelo lo aprende.
-3. **Encoder y Decoder: uno entiende, otro genera.** El Encoder fusiona una secuencia de entrada de partes en "una comprensión de la situación actual"; el Decoder toma esta comprensión y genera una nueva secuencia de partes de salida: en traducción, es la frase en el idioma destino; en ACT, es la secuencia de acciones futuras.
+2. **Autoatención: cada parte puede "ver" todas las demás partes.** Este es el núcleo del Transformer. Al procesar cada parte, calcula su relevancia con cada otra parte y se centra en absorber información de las más relevantes: "qué mirar" no lo prescribe el humano; el modelo lo aprende.
+3. **Codificador y Decodificador: uno entiende, otro genera.** El Codificador fusiona una secuencia de entrada de partes en "una comprensión de la situación actual"; el Decodificador toma esta comprensión y genera una nueva secuencia de partes de salida: en traducción, es la frase en el idioma de destino; en ACT, es la secuencia de acciones futuras.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-04.png" alt="Transformer" />
@@ -172,19 +156,19 @@ Fue propuesto por Google en 2017 para traducción automática; el artículo se t
 
 </section>
 
-## 15.5 Cómo se usa Transformer en ACT
+## 15.5 Cómo se Usa Transformer en ACT
 
 <section id="transformer-in-act" className="section-card">
   <div className="section-title">
     <span>Attention</span>
-    <h2>15.5 Cómo se usa Transformer en ACT</h2>
+    <h2>15.5 Cómo se Usa Transformer en ACT</h2>
   </div>
 
-- **En el encoder: fusionar múltiples observaciones.** Los parches de características visuales de ambas imágenes (a través de ResNet) más el vector de estado articular se convierten todos en tokens que se introducen en el encoder. El self-attention los alinea: "la posición actual del gripper" y "ese bloque rojo en la imagen" se vinculan en una comprensión unificada: dónde está el objetivo, dónde estoy yo, en qué punto va la tarea.
-- **En el decoder: planificar toda la secuencia de acciones de una vez.** El decoder usa k vectores de consulta correspondientes a k pasos de acción futuros; estas consultas extraen información de la comprensión del encoder y también se coordinan entre sí mediante self-attention: la acción en el paso 37 "sabe" lo que el paso 36 pretende hacer. Por lo tanto, todo el bloque de acción es un todo coherente, no 100 decisiones aisladas.
+- **En el codificador: fusionar múltiples observaciones.** Los parches de características visuales de ambas imágenes (a través de ResNet) más el vector de estado articular se convierten todos en tokens que se introducen en el codificador. La autoatención los alinea: "la posición actual del gripper" y "ese bloque rojo en la imagen" se vinculan en una comprensión unificada: dónde está el objetivo, dónde estoy yo, cuánto se ha avanzado en la tarea.
+- **En el decodificador: planificar toda la secuencia de acciones de una vez.** El decodificador usa k vectores de consulta correspondientes a k pasos de acción futuros; estas consultas extraen información de la comprensión del codificador mientras también se coordinan entre sí mediante autoatención: la acción en el paso 37 "sabe" lo que el paso 36 pretende hacer. Por lo tanto, todo el bloque de acciones es un todo coherente, no 100 decisiones aisladas.
 - **En el enfoque de la atención: saber a qué "mirar".** Al generar cada acción, el modelo se centra automáticamente en las regiones de la imagen más relevantes para la acción actual: al acercarse al objetivo, se centra en la posición relativa gripper-bloque; mientras se mueve, se centra en la dirección del objetivo, en lugar de tratar todas las regiones por igual.
 
-Resumen en una frase: **ResNet "ve con claridad", el Transformer encoder "entiende", el Transformer decoder "planifica con coherencia"**, todo impulsado por la atención.
+Resumen en una frase: **ResNet "ve con claridad", el codificador Transformer "entiende", el decodificador Transformer "planifica con coherencia"**, todo impulsado por la atención.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-05.png" alt="Attention in ACT" />
@@ -202,99 +186,99 @@ Resumen en una frase: **ResNet "ve con claridad", el Transformer encoder "entien
 
 CVAE (Conditional Variational Autoencoder). El ACT de LeRobot en realidad se entrena con esto, solo que no lo ves en la línea de comandos `lerobot-train --policy.type=act`.
 
-### Qué problema evita: el promedio falla
+### Qué Foso Evita: El Promedio Falla
 
 El trabajo de CVAE no es "reducir al humano a una única respuesta correcta", sino reconocer que, dada la observación actual, las acciones pueden tener múltiples estilos; durante el entrenamiento, primero identifica de qué estilo se trata y luego reproduce esa secuencia de acciones.
 
 El artículo hizo comparaciones (en tareas simuladas):
 
-- Si las demostraciones son con script (solo una forma), eliminar CVAE apenas afecta la tasa de éxito.
-- Con datos humanos, eliminarlo hace que el éxito caiga de ~35% a 2%.
+- Si las demostraciones están guionizadas (solo una forma), eliminar CVAE apenas afecta la tasa de éxito.
+- Con datos humanos, eliminarlo reduce el éxito de ~35% a 2%.
 
-Así que CVAE no sirve para que las fórmulas se vean más elegantes; sirve para permitir que el modelo maneje datos donde "los humanos cambian de enfoque y tienen las manos temblorosas".
+Así que CVAE no está para hacer que las fórmulas se vean más elegantes; está para permitir que el modelo maneje datos donde "los humanos cambian de enfoque y tienen manos temblorosas".
 
-"Condicional" significa: las acciones generadas deben estar fundamentadas en lo que se ve actualmente — ya sea un cangrejo de río o un bloque sobre la mesa, no puede inventar cosas. CVAE es "dado lo que ves, compón cómo moverte a continuación".
+"Condicional" significa: las acciones generadas deben estar ancladas en lo que se ve actualmente; ya sea un cangrejo de río o un bloque en la mesa, no puede inventar cosas. CVAE es "dado lo que ves, compón cómo moverte a continuación".
 
 </section>
 
-## 15.7 Fragmento de acción vs. Horizonte de acción
+## 15.7 Action Chunk vs. Action Horizon
 
 <section id="chunk-horizon" className="section-card">
   <div className="section-title">
-    <span>Fragmento vs horizonte</span>
-    <h2>15.7 Fragmento de acción vs. Horizonte de acción</h2>
+    <span>Chunk vs horizon</span>
+    <h2>15.7 Action Chunk vs. Action Horizon</h2>
   </div>
 
-Estos son los dos conceptos distinguidos con mayor precisión en este capítulo; son dos parámetros que se pueden ajustar de forma independiente:
+Estos son los dos conceptos que se distinguen con mayor precisión en este capítulo; son dos parámetros que se pueden ajustar de forma independiente:
 
-- **Fragmento de acción:** la longitud de la secuencia de acciones que el modelo **predice en una sola pasada hacia adelante**, es decir, el número de filas k en la matriz de salida. En LeRobot, ACT usa por defecto un tamaño de fragmento de 100.
-- **Horizonte de acción:** después de predecir estos 100 pasos, cuántos se **ejecutan realmente en lazo abierto**, antes de volver a observar y volver a predecir.
+- **Action Chunk:** la longitud de la secuencia de acciones que el modelo **predice en una sola pasada hacia adelante**, es decir, el número de filas k en la matriz de salida. En LeRobot, ACT usa por defecto un tamaño de chunk de 100.
+- **Action Horizon:** después de predecir estos 100 pasos, cuántos se **ejecutan realmente en lazo abierto**, antes de volver a observar y volver a predecir.
 
-La relación es: **el fragmento predicho puede ser largo, pero cada vez solo se confía en el primer segmento pequeño.**
+La relación es: **el chunk predicho puede ser largo, pero cada vez solo se confía en el primer segmento pequeño.**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-06.png" alt="Fragmento de acción vs horizonte de acción" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-06.png" alt="Action chunk vs action horizon" />
 </div>
 
-¿Por qué no ejecutar los 100 pasos? Porque las predicciones se vuelven menos fiables cuanto más lejos estén — el entorno cambia, los objetos pueden ser golpeados, y para la segunda mitad la "situación asumida" por el modelo ya se ha desviado de la realidad. **Ejecutar en lazo abierto durante demasiado tiempo = conducir con los ojos cerrados.** Cuanto más pequeño es el Horizonte, más a menudo el modelo "abre los ojos para volver a comprobar", haciéndolo más robusto frente a perturbaciones; pero si es demasiado pequeño se pierde la suavidad que aporta el fragmentado.
+¿Por qué no ejecutar los 100 pasos? Porque las predicciones se vuelven menos fiables cuanto más lejos miran: el entorno cambia, los objetos pueden moverse, y para la segunda mitad la "situación asumida" por el modelo ya se ha desviado de la realidad. **Ejecutar en lazo abierto durante demasiado tiempo = conducir con los ojos cerrados.** Cuanto más pequeño es el Horizon, con más frecuencia el modelo "abre los ojos para volver a comprobar", lo que lo hace más robusto frente a perturbaciones; pero si es demasiado pequeño se pierde la suavidad que aporta el chunking.
 
 :::tip Una analogía
-Es como usar la navegación del teléfono mientras conduces. La navegación (el modelo) calcula toda la ruta (fragmento) en una sola pasada, pero no bloqueas el volante: cada pocos kilómetros echas un vistazo al tráfico en tiempo real (volver a observar) y la navegación vuelve a planificar en consecuencia (volver a predecir). La distancia durante la cual "confías en la ruta antigua y sigues conduciendo" es el Horizonte.
+Es como usar la navegación del teléfono mientras conduces. La navegación (el modelo) calcula toda la ruta (chunk) de una vez, pero no bloqueas el volante: cada pocos kilómetros echas un vistazo al tráfico en tiempo real (re-observar) y la navegación vuelve a planificar en consecuencia (re-predecir). La distancia durante la cual "confías en la ruta antigua y sigues conduciendo" es el Horizon.
 :::
 
 </section>
 
-## 15.8 Continuidad de acción y acumulación de errores
+## 15.8 Continuidad de la Acción y Acumulación de Error
 
 <section id="defenses" className="section-card">
   <div className="section-title">
     <span>Defensas</span>
-    <h2>15.8 Continuidad de acción y acumulación de errores: las dos líneas de defensa de ACT</h2>
+    <h2>15.8 Continuidad de la Acción y Acumulación de Error: Dos Líneas de Defensa de ACT</h2>
   </div>
 
-El Capítulo 9 dejó dos amenazas para la estabilidad de robots reales: el jitter de acción y la acumulación de errores. Ahora veamos cómo ACT las aborda con métodos estructurados.
+El Capítulo 9 dejó dos amenazas para la estabilidad de robots reales: el jitter de acción y la acumulación de error. Ahora veamos cómo ACT las aborda con métodos estructurados.
 
-- **Defensa 1: la coherencia intra-fragmento corrige el jitter.**
+- **Defensa 1: la coherencia intra-chunk corrige el jitter.**
 - **Defensa 2: el ensamblado temporal corrige las discontinuidades.**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-07.png" alt="Defensas de ACT" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-07.png" alt="ACT defenses" />
 </div>
 
 </section>
 
-## 15.9 ¿Para qué tareas es adecuado ACT?
+## 15.9 ¿Para Qué Tareas es Adecuado ACT?
 
 <section id="fit" className="section-card">
   <div className="section-title">
     <span>Adecuación</span>
-    <h2>15.9 ¿Para qué tareas es adecuado ACT?</h2>
+    <h2>15.9 ¿Para Qué Tareas es Adecuado ACT?</h2>
   </div>
 
 Dadas las características de diseño de ACT, su "zona de confort" es bastante clara:
 
 | Adecuado para | Motivo |
 | :--- | :--- |
-| Manipulación de sobremesa (agarrar, colocar, organizar, enchufar/desenchufar) | ACT se originó en estas tareas; las necesidades de datos y el tamaño del modelo encajan |
-| Tareas únicas o pocas tareas | El behavioral cloning aprende mapeos específicos de tareas; más tareas = se necesitan más datos |
+| Manipulación sobre mesa (agarrar, colocar, organizar, enchufar/desenchufar) | ACT se originó en estas tareas; las necesidades de datos y el tamaño del modelo encajan |
+| Tareas únicas o pocas tareas | El behavioral cloning aprende mapeos específicos de tarea; más tareas = se necesitan más datos |
 | Tareas cortas (segundos hasta ~1 minuto) | El error se acumula con el tiempo; las tareas más cortas son más estables |
 | Tareas con información visual suficiente | Escenas donde las cámaras duales cenital + de muñeca cubren la información clave |
 | Hardware con recursos limitados | ACT tiene relativamente pocos parámetros; las GPU de consumo pueden entrenar e inferir; la CPU también puede inferir |
 
 </section>
 
-## 15.10 Límites de capacidad de ACT
+## 15.10 Límites de Capacidad de ACT
 
 <section id="boundaries" className="section-card">
   <div className="section-title">
     <span>Límites</span>
-    <h2>15.10 Límites de capacidad de ACT</h2>
+    <h2>15.10 Límites de Capacidad de ACT</h2>
   </div>
 
 Igualmente importante es saber lo que no puede hacer:
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-08.png" alt="Límites de capacidad de ACT" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-08.png" alt="ACT capability boundaries" />
 </div>
 
 </section>

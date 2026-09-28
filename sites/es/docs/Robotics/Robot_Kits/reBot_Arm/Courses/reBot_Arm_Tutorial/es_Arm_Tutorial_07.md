@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 7 del Curso para Principiantes en IA Física de Seeed — MotorBridge, la biblioteca de control de motores CAN entre proveedores, y cómo controlar motores DM y RS vía web y Python."
+description: Capítulo 7 del Curso de Introducción a la IA Física de Seeed — MotorBridge, la biblioteca de control de motores CAN entre proveedores, y cómo controlar motores DM y RS vía web y Python.
 title: Capítulo 7 - Biblioteca de Control de Motores MotorBridge
 keywords:
   - reBot
@@ -18,12 +18,11 @@ last_update:
   date: 2026-09-17
   author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_7/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -34,8 +33,8 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 2 · Capítulo 7 · Práctica</span>
     <h2>7. Biblioteca de Control de Motores MotorBridge</h2>
     <p>
-      Capítulo 7 del Curso para Principiantes en IA Física de Seeed — MotorBridge, la
-      biblioteca de control de motores CAN entre proveedores, y cómo controlar motores DM y RS vía web y Python.
+      Capítulo 7 del Curso de Introducción a la IA Física de Seeed — MotorBridge, la biblioteca de control de motores CAN entre proveedores,
+      y cómo controlar motores DM y RS vía web y Python.
     </p>
     <div className="hero-actions">
       <a href="#install">Instalación</a>
@@ -43,22 +42,13 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#rs-motors">Motores RS</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>En este capítulo</strong>
-    <span>7.1 ¿Qué es MotorBridge?</span>
-    <span>7.2 Entorno de instalación</span>
-    <span>7.3 MotorBridge controla motores DM</span>
-    <span>7.4 MotorBridge controla motores RS</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 7.1 ¿Qué es MotorBridge?
 
 <section id="what-is-motorbridge" className="section-card">
   <div className="section-title">
-    <span>Descripción general</span>
+    <span>Visión general</span>
     <h2>7.1 ¿Qué es MotorBridge?</h2>
   </div>
 
@@ -70,7 +60,7 @@ MotorBridge es una **pila de software de control de motores CAN unificada entre 
 
 **Qué puntos de dolor de la industria resuelve:**
 
-Las articulaciones integradas en el mercado (Damiao, RobStride, MyActuator, etc.) tienen cada una protocolos CAN propietarios, formatos de comandos y modos de control completamente incompatibles. MotorBridge proporciona una capa de encapsulación abstracta — **las llamadas al API de la capa superior son completamente consistentes, y la capa inferior se adapta automáticamente a los diferentes protocolos de los proveedores**. Cambiar de motor solo requiere modificar los parámetros del proveedor, sin cambiar la lógica de control de movimiento.
+Las articulaciones integradas del mercado (Damiao, RobStride, MyActuator, etc.) tienen cada una protocolos CAN propietarios, formatos de comandos y modos de control completamente incompatibles. MotorBridge proporciona una capa de encapsulación abstracta — **las llamadas al API de capa superior son completamente consistentes, y la capa inferior se adapta automáticamente a los diferentes protocolos de los proveedores**. Cambiar de motor solo requiere modificar los parámetros del proveedor, sin cambiar la lógica de control de movimiento.
 
 En concreto, resuelve:
 
@@ -96,13 +86,13 @@ Admite Python, C++ (en desarrollo), nodos ROS2. Los desarrolladores llaman direc
 - Python: ctypes enlaza la biblioteca dinámica compilada por Rust, ligera y sin pérdida de rendimiento;
 - Herramientas de soporte: CLI de línea de comandos, consola de visualización web MotorBridge-Studio.
 
-### Ventajas en comparación con SDKs tradicionales específicos de proveedor
+### Ventajas frente a los SDK específicos de cada proveedor
 
-| Elemento de comparación | SDKs nativos del proveedor | MotorBridge |
+| Elemento de comparación | SDK nativos del proveedor | MotorBridge |
 | :--- | :--- | :--- |
-| Compatibilidad con múltiples marcas de motores | Dedicado a una sola marca, cambiar de motor requiere reescribir el código | API unificada, cambiar de motor solo requiere modificar los parámetros del proveedor |
-| Rendimiento en tiempo real | Implementación en Python, tartamudeos por GC, temporización inestable | Capa inferior en Rust, sin recolección de basura, fuerte rendimiento en tiempo real |
-| Herramientas de depuración | Cada uno tiene un upper computer independiente, operaciones inconsistentes | CLI unificada + consola de visualización web |
+| Compatibilidad con múltiples marcas de motores | Dedicados a una sola marca, cambiar de motor requiere reescribir el código | API unificada, cambiar de motor solo requiere modificar los parámetros del proveedor |
+| Rendimiento en tiempo real | Implementación en Python, tirones por GC, temporización inestable | Capa inferior en Rust, sin recolección de basura, fuerte rendimiento en tiempo real |
+| Herramientas de depuración | Cada uno tiene un programa de PC independiente, operaciones inconsistentes | CLI unificada + consola de visualización web |
 | Soporte multilenguaje | La mayoría solo proporciona Python | Python/C++/ROS2 comparten la biblioteca de capa inferior |
 | Encapsulación de protocolo | Requiere que los desarrolladores analicen manualmente los mensajes CAN | Oculta completamente los detalles del protocolo CAN subyacente |
 | Multiplataforma | Adaptación inconsistente | Soporte completo para Windows/macOS/Linux |
@@ -129,7 +119,7 @@ wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge
 bash Miniforge3-Linux-x86_64.sh
 ```
 
-A continuación, sigue las indicaciones para introducir `yes` o pulsa la tecla Enter. Después de una instalación correcta, introduce el siguiente comando para actualizar el script del terminal:
+A continuación, sigue las indicaciones para introducir `yes` o pulsa la tecla Enter. Tras una instalación correcta, introduce el siguiente comando para actualizar el script del terminal:
 
 ```bash
 source ~/.bashrc
@@ -167,7 +157,7 @@ Abre la [página de lanzamientos de Miniforge](https://github.com/conda-forge/mi
 
 ### 7.2.2 Crear entorno
 
-Entorno virtual de Python 3.10 o superior — motorbridge requiere la versión de Python >= 3.10:
+Entorno virtual de Python 3.10 o superior — motorbridge requiere Python versión >= 3.10:
 
 ```bash
 conda create -y -n rebot_motorbridge python=3.12
@@ -238,7 +228,7 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 ```
 
 :::warning
-El número de puerto debe ser el puerto correcto y se deben conceder permisos antes de enlazar.
+El número de puerto debe ser el puerto correcto, y se deben conceder permisos antes de enlazarlo.
 :::
 
 3. Después de introducir el comando anterior, vuelve a la página web y haz clic en **Connect**. Tras una conexión correcta, aparecerá el texto verde `Connected` en la esquina superior derecha.
@@ -259,7 +249,7 @@ El número de puerto debe ser el puerto correcto y se deben conceder permisos an
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-04.jpg" alt="Scan result card" />
 </div>
 
-6. En el lado derecho están los parámetros relacionados con el motor. Haz clic en el botón de habilitar en la esquina inferior izquierda y la luz del motor se volverá verde. En este punto, puedes controlar el motor.
+6. A la derecha están los parámetros relacionados con el motor. Haz clic en el botón de habilitar en la esquina inferior izquierda, y la luz del motor se pondrá verde. En este punto, puedes controlar el motor.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-05.jpg" alt="Motor parameters and enable" />
@@ -279,7 +269,7 @@ Por ejemplo, si `can_id` es 1, entonces `master_id` debe ser `0x11`, es decir, 1
 
 ### Control mediante código Python
 
-Si el entorno no está instalado, primero consulta el entorno de instalación en la sección 7.2. Los ejemplos relacionados con el motor DM se implementan todos a través del puerto serie de Damiao.
+Si el entorno no está instalado, primero consulta el entorno de instalación en la sección 7.2. Los ejemplos relacionados con motores DM se implementan todos a través del puerto serie de Damiao.
 
 Primero, descarga el código de ejemplo:
 
@@ -303,7 +293,7 @@ cd your_folder_path/motorbridge_ctrl/dm_motor_ctrl
 python 1_enable_dm.py
 ```
 
-Fenómeno: Después de habilitar el motor DM, la luz del motor se vuelve verde. Después de 3 segundos, el motor DM se deshabilita.
+Fenómeno: Después de que el motor DM se habilita, la luz del motor se vuelve verde. Después de 3 segundos, el motor DM se deshabilita.
 
 ```python
 # Enable specified motor, disable motor after 3 seconds
@@ -399,7 +389,7 @@ if __name__ == "__main__":
 python 3_set_id.py
 ```
 
-La entrada de la función principal de implementación `set_DMmotor_ID` es el ID CAN antiguo, el nuevo ID CAN a configurar, el nuevo ID maestro a configurar y el puerto.
+La entrada de la función principal de implementación `set_DMmotor_ID` es el ID CAN antiguo, el nuevo ID CAN que se va a configurar, el nuevo ID maestro que se va a configurar y el puerto.
 
 ```python
 from motorbridge import Controller
@@ -443,11 +433,11 @@ if __name__ == "__main__":
 python 4_mit_ctrl.py
 ```
 
-Fenómeno: El ejemplo solo proporciona tau, por lo que el motor seguirá girando. Según el modo MIT, se pueden derivar varios modos de control. Por ejemplo, cuando kp=0 y kd no es 0, al dar vel se puede lograr una rotación a velocidad constante; cuando kp=0 y kd=0, al dar tau se puede lograr una salida de par determinada.
+Fenómeno: El ejemplo solo da tau, por lo que el motor seguirá girando. Según el modo MIT, se pueden derivar varios modos de control. Por ejemplo, cuando kp=0 y kd no es 0, dando vel se puede lograr una rotación a velocidad constante; cuando kp=0 y kd=0, dando tau se puede lograr una salida de par dada.
 
 :::warning Notas
-1. Cuando solo se da tau, no des un tau demasiado grande. Si tau es demasiado grande, el motor girará cada vez más rápido para alcanzar el tau deseado.
-2. Al controlar la posición, kd no puede establecerse en 0, de lo contrario causará oscilación del motor o incluso pérdida de control.
+1. Cuando solo se da tau, no des un tau demasiado grande. Si tau es demasiado grande, el motor girará cada vez más rápido para lograr el tau deseado.
+2. Al controlar la posición, kd no se puede establecer en 0, de lo contrario causará oscilación del motor o incluso pérdida de control.
 3. Las unidades de pos y vlim son rad y rad/s respectivamente, y el tipo de datos es float.
 :::
 
@@ -494,7 +484,7 @@ ctrl.close()
 python 5_pos_vel_ctrl.py
 ```
 
-`pos` es la posición objetivo para el control, y `vlim` se usa para limitar la velocidad absoluta máxima durante el movimiento.
+`pos` es la posición objetivo para el control, y `vlim` se utiliza para limitar la velocidad absoluta máxima durante el movimiento.
 
 :::warning
 Las unidades de pos y vlim son rad y rad/s respectivamente, y el tipo de datos es float.
@@ -618,7 +608,7 @@ ctrl.close_bus()
 ctrl.close()
 ```
 
-`pos` es la posición objetivo para el control, `vlim` es el límite de velocidad, y `ratio` representa la cantidad de par utilizada. Cuando ratio es 0, significa sin par; cuando es 1, significa par completo.
+`pos` es la posición objetivo para el control, `vlim` es el límite de velocidad, y `ratio` representa la cantidad de par utilizada. Cuando ratio es 0, significa que no hay par; cuando es 1, significa par completo.
 
 #### Obtener el estado del motor
 
@@ -677,7 +667,7 @@ ctrl.close_bus()
 ctrl.close()
 ```
 
-El ejemplo dado en `8_get_state.py` sirve para obtener la trama de respuesta devuelta por el motor en la trama anterior durante el proceso de control. Esta trama de respuesta se envía cuando se envía una trama de control al motor, y el motor responderá, lo que equivale a un modo de pregunta y respuesta. Si solo quieres que el motor devuelva una trama de respuesta para obtener el estado sin dejar que el motor se mueva, puedes consultar el método de lectura del estado del motor en `9_set_zero.py`.
+El ejemplo dado en `8_get_state.py` sirve para obtener la trama de respuesta devuelta por el motor en la trama anterior durante el proceso de control. Esta trama de respuesta se envía cuando se envía una trama de control al motor, y el motor responderá, lo que equivale a un modo de pregunta y respuesta. Si solo quieres que el motor devuelva una trama de respuesta para obtener el estado sin hacer que el motor se mueva, puedes consultar el método de lectura del estado del motor en `9_set_zero.py`.
 
 #### Establecer el punto cero del motor
 
@@ -736,7 +726,7 @@ Fenómeno: Después de establecer correctamente el punto cero, se leerá el esta
 
 ## 7.4 MotorBridge controla motores RS
 
-Si tu sistema aún no tiene instalado el controlador PCAN, consulta esta página: [PCAN driver installed](https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/#configuración-de-software-y-flujo-de-trabajo-de-calibración)
+Si tu sistema aún no tiene instalado el controlador PCAN, consulta esta página: [PCAN driver installed](https://wiki.seeedstudio.com/es/rebot_b601_rs_getting_started/#software-setup-and-calibration-workflow)
 
 <section id="rs-motors" className="section-card">
   <div className="section-title">
@@ -783,13 +773,13 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can
 motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can0
 ```
 
-- **Windows**, introduce el siguiente comando:
+- En **Windows**, introduce el siguiente comando:
 
 ```bash
 motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can0@1000000
 ```
 
-4. Después de introducir el comando anterior, vuelve a la página web y haz clic en **Connect**. Tras una conexión exitosa, aparecerá el texto verde `Connected` en la esquina superior derecha.
+4. Después de introducir el comando anterior, vuelve a la página web y haz clic en **Connect**. Tras una conexión exitosa, aparecerá el texto `Connected` en verde en la esquina superior derecha.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-08.jpg" alt="Connected" />
@@ -807,7 +797,7 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-10.jpg" alt="Scan result card" />
 </div>
 
-7. En el lado derecho están los parámetros relacionados con el motor. Haz clic en el botón de habilitar en la esquina inferior izquierda y la luz del motor se volverá verde. En este punto, puedes controlar el motor.
+7. En el lado derecho están los parámetros relacionados con el motor. Haz clic en el botón de habilitación en la esquina inferior izquierda y la luz del motor se pondrá verde. En este punto, puedes controlar el motor.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-11.jpg" alt="Motor parameters and enable" />
@@ -819,7 +809,7 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can
 
 10. Configura el ID del motor. Si el motor se utiliza en reBot, `can_id` debe establecerse en el número de articulación correspondiente, y `master_id` es fijo.
 
-### Control con código Python
+### Control mediante código Python
 
 #### Habilitar/Deshabilitar motores RS
 
@@ -874,7 +864,7 @@ Fenómeno: Después de habilitar el motor RS, la luz del motor se vuelve verde. 
 
 #### Escanear ID del motor
 
-`2_scan_RSmotor.py` es un ejemplo de escanear el ID CAN de los motores RS.
+`2_scan_RSmotor.py` es un ejemplo de escaneo del CAN ID de los motores RS.
 
 ```bash
 python 2_scan_RSmotor.py
@@ -921,11 +911,11 @@ if __name__ == "__main__":
         print(f"  can_id=0x{can_id:02X}")
 ```
 
-La entrada de la función principal de implementación `scan_robstride_motors` es el rango de ID CAN y el puerto. Después de ejecutarse, se mostrarán el ID CAN escaneado y su ID maestro correspondiente. Este script se puede utilizar para comprobar si el ID CAN y el ID maestro correspondiente son correctos.
+La entrada de la función principal de implementación `scan_robstride_motors` es el rango de CAN ID y el puerto. Después de ejecutarse, se mostrarán el CAN ID escaneado y su correspondiente master ID. Este script se puede utilizar para comprobar si el CAN ID y el master ID correspondiente son correctos.
 
-#### Establecer ID CAN e ID maestro correspondiente
+#### Establecer CAN ID y master ID correspondiente
 
-`3_set_id.py` es un ejemplo de cómo establecer el ID CAN y el ID maestro de los motores RS.
+`3_set_id.py` es un ejemplo de configuración del CAN ID y del master ID de los motores RS.
 
 ```bash
 python 3_set_id.py
@@ -958,7 +948,7 @@ if __name__ == "__main__":
     set_RSmotor_ID(old_can_id, new_can_id, channel="can0")
 ```
 
-La entrada de la función principal de implementación `set_RSmotor_ID` es el antiguo ID CAN, el nuevo ID CAN que se va a establecer y el puerto.
+La entrada de la función principal de implementación `set_RSmotor_ID` es el antiguo CAN ID, el nuevo CAN ID que se va a establecer y el puerto.
 
 #### Controlar diferentes modos
 
@@ -1005,11 +995,11 @@ ctrl.close_bus()
 ctrl.close()
 ```
 
-Fenómeno: El ejemplo solo da tau, por lo que el motor seguirá girando. De acuerdo con el modo MIT, se pueden derivar varios modos de control. Por ejemplo, cuando kp=0 y kd no es 0, al dar vel se puede lograr una rotación a velocidad constante; cuando kp=0 y kd=0, al dar tau se puede lograr una salida de par dada.
+Fenómeno: El ejemplo solo da tau, por lo que el motor seguirá girando. De acuerdo con el modo MIT, se pueden derivar varios modos de control. Por ejemplo, cuando kp=0 y kd no es 0, al dar vel se puede lograr una rotación a velocidad constante; cuando kp=0 y kd=0, al dar tau se puede lograr una salida de par determinada.
 
-:::warning Notas
-1. Cuando solo se da tau, no des un tau demasiado grande. Si tau es demasiado grande, el motor girará cada vez más rápido para alcanzar el tau deseado.
-2. Al controlar la posición, kd no se puede establecer en 0, de lo contrario causará oscilación del motor o incluso pérdida de control.
+:::warning Notes
+1. Cuando solo se da tau, no des un valor de tau demasiado grande. Si tau es demasiado grande, el motor girará cada vez más rápido para alcanzar el tau deseado.
+2. Al controlar la posición, kd no puede establecerse en 0, de lo contrario provocará oscilación del motor o incluso pérdida de control.
 3. Las unidades de pos y vlim son rad y rad/s respectivamente, y el tipo de dato es float.
 :::
 
@@ -1057,7 +1047,7 @@ ctrl.close()
 
 :::warning Notas
 1. Las unidades de pos y vlim son rad y rad/s respectivamente, y el tipo de dato es float.
-2. El modo pos_vel utilizado aquí es el modo posición-velocidad (PP).
+2. El modo pos_vel utilizado aquí es el modo de posición-velocidad (PP).
 :::
 
 `6_vel_ctrl.py` es un ejemplo de control para el modo vel.
@@ -1163,7 +1153,7 @@ ctrl.close_bus()
 ctrl.close()
 ```
 
-El ejemplo dado en `7_get_state.py` es para obtener la trama de respuesta devuelta por el motor en la trama anterior durante el proceso de control. Esta trama de respuesta se envía cuando se envía una trama de control al motor, y el motor responderá, lo que equivale a un modo de pregunta y respuesta. Si solo quieres que el motor devuelva una trama de respuesta para obtener el estado sin dejar que el motor se mueva, puedes consultar el ejemplo de lectura del estado del motor en `8_set_zero.py`.
+El ejemplo dado en `7_get_state.py` consiste en obtener la trama de respuesta devuelta por el motor en el fotograma anterior durante el proceso de control. Esta trama de respuesta se envía cuando se envía una trama de control al motor, y el motor responderá, lo que equivale a un modo de pregunta y respuesta. Si solo quieres que el motor devuelva una trama de respuesta para obtener el estado sin dejar que el motor se mueva, puedes consultar el ejemplo de lectura del estado del motor en `8_set_zero.py`.
 
 #### Establecer el punto cero del motor
 
