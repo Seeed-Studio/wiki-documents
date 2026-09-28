@@ -32,28 +32,26 @@ import '/src/css/rebot-wiki-style.css';
     <span className="eyebrow">ステージ 3 · 第14章 · 理論と実践</span>
     <h2>14. データセット構造と品質検査</h2>
     <p>
-      Seeed Physical AI Beginner's Course 第14章 — ディスク上に実際に保存されているもの、
-      4つの品質基準、再生と画像チェック、そして問題が見つかったときにどうするかについて説明します。
-      </p>
+      Seeed Physical AI Beginner's Course 第14章 — ディスク上に実際に保存されているもの、4つの品質基準、再生と画像チェック、そして問題が見つかったときにどうするかについて説明します。
+    </p>
     <div className="hero-actions">
-    <a href="#structure">構造</a>
+      <a href="#structure">構造</a>
       <a href="#quality">品質</a>
       <a href="#fix">対処</a>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
 ## 14.1 データセット構造：ディスク上に実際に保存されているもの
 
 <section id="structure" className="section-card">
   <div className="section-title">
-  <span>構造</span>
+    <span>構造</span>
     <h2>14.1 データセット構造：ディスク上に実際に保存されているもの</h2>
-    </div>
+  </div>
 
 第13章で記録したデータセット `seeed_rebot_b601_rs/test` は、ディスク上では次のような構造になっています：
 
-__CODE_LINE_PLH__
 ```text
 ~/.cache/huggingface/lerobot/seeed_rebot_b601_rs/test/
 ├── data/

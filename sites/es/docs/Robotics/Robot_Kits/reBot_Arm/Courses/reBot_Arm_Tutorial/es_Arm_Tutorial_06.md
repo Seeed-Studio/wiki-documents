@@ -1,5 +1,5 @@
 ---
-description: Capítulo 6 del Curso de Introducción a la IA Física de Seeed: ensambla el reBot Arm, monta la fuente de alimentación, cablea el brazo robótico y enciéndelo por primera vez.
+description: Capítulo 6 del Curso de Introducción a la IA Física de Seeed - ensambla el reBot Arm, monta la fuente de alimentación, cablea el brazo robótico y enciéndelo por primera vez.
 title: Capítulo 6 - Ensamblaje, fuente de alimentación y primer encendido
 keywords:
   - reBot

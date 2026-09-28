@@ -1,5 +1,5 @@
 ---
-description: Capítulo 1 del Curso para Principiantes de Seeed Physical AI: comprende qué son los robots y los brazos robóticos, los grados de libertad y la diferencia entre el control tradicional, el aprendizaje por imitación y VLA.
+description: Capítulo 1 del Curso para Principiantes de Seeed Physical AI - comprende qué son los robots y los brazos robóticos, los grados de libertad y la diferencia entre el control tradicional, el aprendizaje por imitación y VLA.
 title: Capítulo 1 - Robots e IA Física
 keywords:
   - reBot

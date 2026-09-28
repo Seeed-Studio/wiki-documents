@@ -260,7 +260,7 @@ Action prediction window:    [A_t, A_{t+1}, ... A_{t+H-1}]
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19/ch19-07.png" alt="Foundation model and fine-tuning" />
-</div]
+</div>
 
 ### Modelo Fundacional
 

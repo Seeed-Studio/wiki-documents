@@ -1,5 +1,5 @@
 ---
-description: Curso de iniciación a la IA Física de Seeed: una guía gratuita y práctica para construir y aprender con el brazo robótico reBot 100% de código abierto. La Etapa 1 cubre conceptos básicos, hardware y preparación del equipo.
+description: Curso de iniciación a la IA Física de Seeed - una guía gratuita y práctica para construir y aprender con el brazo robótico reBot 100% de código abierto. La Etapa 1 cubre conceptos básicos, hardware y preparación del equipo.
 title: Curso de iniciación a la IA Física de Seeed
 keywords:
   - reBot

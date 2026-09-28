@@ -34,9 +34,7 @@ import '/src/css/rebot-wiki-style.css';
     <span className="eyebrow">Stage 1 · Chapter 1 · Theory</span>
     <h2>1. Getting to Know Robots and Physical AI</h2>
     <p>
-      Chapter 1 of the Seeed Physical AI Beginner's Course — understand what robots and
-      robotic arms are, degrees of freedom, and the difference between traditional control, imitation
-      learning, and VLA.
+      Chapter 1 of the Seeed Physical AI Beginner's Course — understand what robots and robotic arms are, degrees of freedom, and the difference between traditional control, imitation learning, and VLA.
     </p>
     <div className="hero-actions">
       <a href="#objectives">Learning objectives</a>

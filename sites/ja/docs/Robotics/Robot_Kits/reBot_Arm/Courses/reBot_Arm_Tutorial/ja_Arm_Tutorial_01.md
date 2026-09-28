@@ -34,8 +34,7 @@ import '/src/css/rebot-wiki-style.css';
     <span className="eyebrow">ステージ 1 · 第 1 章 · 理論</span>
     <h2>1. ロボットと Physical AI を知る</h2>
     <p>
-      Seeed Physical AI ビギナーコース第 1 章 — ロボットとロボットアームとは何か、
-      自由度、そして従来型制御・模倣学習・VLA の違いを理解します。
+      Seeed Physical AI ビギナーコース第 1 章 — ロボットとロボットアームとは何か、自由度、そして従来型制御・模倣学習・VLA の違いを理解します。
       </p>
     <div className="hero-actions">
     <a href="#objectives">学習目標</a>
@@ -48,9 +47,9 @@ import '/src/css/rebot-wiki-style.css';
 
 <section id="objectives" className="section-card">
   <div className="section-title">
-  <span>目標</span>
+    <span>目標</span>
     <h2>1.1 学習目標</h2>
-    </div>
+  </div>
 
 この章を学び終えると、次のことができるようになります：
 
@@ -68,9 +67,9 @@ import '/src/css/rebot-wiki-style.css';
 
 <section id="robot" className="section-card">
   <div className="section-title">
-  <span>基礎</span>
+    <span>基礎</span>
     <h2>1.2 ロボットとは？</h2>
-    </div>
+  </div>
 
 ロボットは、人間のような見た目をした機械であるとは限りません。機能の観点から見ると、ロボットとは次のことができるシステムです：
 
@@ -82,13 +81,13 @@ import '/src/css/rebot-wiki-style.css';
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
   <img width={500} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-01.png" alt="Robot system abstraction" />
-  </div>
+</div>
 
 例えば、デスクトップ型の把持ロボットは、次のプロセスを完了する必要があります：
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
   <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-02.png" alt="Desktop grasping robot process" />
-  </div>
+</div>
 
 したがって、ロボットは単に「動ける」だけでなく、継続的に動作する閉ループを形成できなければなりません。
 
@@ -108,9 +107,9 @@ import '/src/css/rebot-wiki-style.css';
 
 <section id="arm" className="section-card">
   <div className="section-title">
-  <span>基礎</span>
+    <span>基礎</span>
     <h2>1.3 ロボットアームとは？</h2>
-    </div>
+  </div>
 
 ロボットアームは、複数の関節とリンクから構成されるロボット機構です。複数の関節の協調運動によってエンドエフェクタを所定の位置と姿勢に導き、把持、搬送、組み立て、研磨、溶接などのタスクを完了します。
 
@@ -118,7 +117,7 @@ import '/src/css/rebot-wiki-style.css';
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
   <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-03.png" alt="Robotic arm" />
-  </div>
+</div>
 
 ロボットアームは人間の腕といくつかの共通点があります。しかし、ロボットアームが必ずしも人間の解剖学を模倣しているとは限りません。関節の数や配置、作業空間は、タスクの要件に応じて設計されます。
 
@@ -135,7 +134,7 @@ import '/src/css/rebot-wiki-style.css';
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
   <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-04.png" alt="6 degrees of freedom" />
-  </div>
+</div>
 
 6 自由度ロボットアームは通常、3D 空間におけるエンドエフェクタの位置と姿勢を制御できます。
 
@@ -161,29 +160,29 @@ import '/src/css/rebot-wiki-style.css';
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '1.5rem', margin: '1.25rem 0 1.5rem'}}>
   <div>
-  <h4 style={{margin: '0 0 0.25rem'}}>従来型プログラム制御</h4>
+    <h4 style={{margin: '0 0 0.25rem'}}>従来型プログラム制御</h4>
     <div className="image-frame" style={{margin: '0.5rem 0'}}>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-05.png" alt="Traditional program control" />
-      </div>
+      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-05.png" alt="Traditional program control" />
+    </div>
     <p>固定された位置、固定された作業手順、反復的なタスクに適しています。</p>
-    </div>
-
-  <div>
-  <h4 style={{margin: '0 0 0.25rem'}}>模倣学習</h4>
-    <div className="image-frame" style={{margin: '0.5rem 0'}}>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-06.png" alt="Imitation learning" />
-      </div>
-    <p>まず人間が遠隔操作でロボットアームにタスクを実行させ、そのデモデータからモデルが学習します。把持、整列・整理、連続動作タスクに適しています。</p>
-    </div>
-
-  <div>
-  <h4 style={{margin: '0 0 0.25rem'}}>VLA</h4>
-    <div className="image-frame" style={{margin: '0.5rem 0'}}>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-07.png" alt="VLA" />
-      </div>
-    <p>VLA は視覚・言語・行動の情報を用いて、自然言語に基づいてロボットアームにタスクを実行させます。</p>
-    </div>
   </div>
+
+  <div>
+    <h4 style={{margin: '0 0 0.25rem'}}>模倣学習</h4>
+    <div className="image-frame" style={{margin: '0.5rem 0'}}>
+      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-06.png" alt="Imitation learning" />
+    </div>
+    <p>まず人間が遠隔操作でロボットアームにタスクを実行させ、そのデモデータからモデルが学習します。把持、整列・整理、連続動作タスクに適しています。</p>
+  </div>
+
+  <div>
+    <h4 style={{margin: '0 0 0.25rem'}}>VLA</h4>
+    <div className="image-frame" style={{margin: '0.5rem 0'}}>
+      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-07.png" alt="VLA" />
+    </div>
+    <p>VLA は視覚・言語・行動の情報を用いて、自然言語に基づいてロボットアームにタスクを実行させます。</p>
+  </div>
+</div>
 
 例えば：
 
@@ -197,17 +196,16 @@ import '/src/css/rebot-wiki-style.css';
 
 <section id="role" className="section-card">
   <div className="section-title">
-  <span>実習プラットフォーム</span>
+    <span>実習プラットフォーム</span>
     <h2>1.5 本コースにおける reBot Arm の役割</h2>
-    </div>
+  </div>
 
 reBot Arm は、本コース全体を通した共通の実習プラットフォームです。今後はこれを用いて次のことを行います：
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
   <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-08.png" alt="The role of reBot Arm" />
-  </div>
+</div>
 
 </section>
 
 </div>
-

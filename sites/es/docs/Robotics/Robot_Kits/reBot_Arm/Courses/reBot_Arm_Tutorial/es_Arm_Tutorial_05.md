@@ -1,5 +1,5 @@
 ---
-description: Capítulo 5 del Curso de Introducción a la IA Física de Seeed: conceptos básicos del bus CAN, tramas de datos estándar vs extendidas, la capa de enlace de datos CAN y SocketCAN.
+description: Capítulo 5 del Curso de Introducción a la IA Física de Seeed - conceptos básicos del bus CAN, tramas de datos estándar vs extendidas, la capa de enlace de datos CAN y SocketCAN.
 title: Capítulo 5 - Bus CAN y Comunicación con Motores
 keywords:
   - reBot
