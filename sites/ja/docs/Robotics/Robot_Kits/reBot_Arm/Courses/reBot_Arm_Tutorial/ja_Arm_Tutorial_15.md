@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course 第15章 — ACTモデルとアクションチャンク：ACTの入出力、ResNetとTransformer構造、Attentionの直感、CVAE、アクションチャンクとアクションホライズン、誤差蓄積への対策、そしてACTの能力の境界。"
+description: "Seeed Physical AI Beginner's Course 第15章 — ACTモデルとアクションチャンク：ACTの入出力、ResNetとTransformer構造、Attentionの直感、CVAE、アクションチャンクとアクションホライズン、誤差蓄積への対策、そしてACTの能力の境界。"
 title: 第15章 - ACTモデルとアクションチャンク
 keywords:
   - reBot
@@ -10,16 +10,16 @@ keywords:
   - Imitation Learning
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_15
+slug: /rebot_physical_ai_course_chapter_15
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_15/
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_15/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -34,7 +34,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ3 · 第15章 · 理論</span>
     <h2>15. ACTモデルとアクションチャンク</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course 第15章 — ACTの入出力、
+      Seeed Physical AI Beginner's Course 第15章 — ACTの入出力、
       ResNetとTransformer構造、Attentionの直感、CVAE、アクションチャンクとアクションホライズン、
       誤差蓄積への防御、そしてACTの能力の境界について解説します。
     </p>

@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 13 del Curso para Principiantes en Inteligencia Incorporada de Seeed — configuración de cámara y recopilación de datos con LeRobot: configuración de cámara única vs doble, búsqueda de nombres de dispositivos de cámara, sincronización de imagen/acción, creación de un conjunto de datos, grabación y regrabación, visualización y ampliación o eliminación de datos."
+description: "Capítulo 13 del Curso para Principiantes en IA Física de Seeed — configuración de cámara y recopilación de datos con LeRobot: configuración de cámara única vs doble, búsqueda de nombres de dispositivos de cámara, sincronización de imagen/acción, creación de un conjunto de datos, grabación y regrabación, visualización y ampliación o eliminación de datos."
 title: Capítulo 13 - Configuración de Cámara y Recopilación de Datos con LeRobot
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Conjunto de datos
   - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_13
+slug: /rebot_physical_ai_course_chapter_13
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_13/
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_13/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 3 · Capítulo 13 · Práctica</span>
     <h2>13. Configuración de Cámara y Recopilación de Datos con LeRobot</h2>
     <p>
-      Capítulo 13 del Curso para Principiantes en Inteligencia Incorporada de Seeed — configuración de cámara única vs doble,
+      Capítulo 13 del Curso para Principiantes en IA Física de Seeed — configuración de cámara única vs doble,
       búsqueda de nombres de dispositivos de cámara, sincronización de imagen/acción, creación de un conjunto de datos, grabación y
       regrabación, visualización y ampliación o eliminación de datos.
     </p>

@@ -1,8 +1,21 @@
 // @ts-check
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+
+const K = 'Robotics/Robot_Kits';
+
+const backToRobotics = () => ({
+  type: 'ref',
+  id: 'es_Edge_Robotics',
+  label: '<-Volver a Robótica',
+  className: 'sideboard_calss',
+});
+
 const sidebars = {
 
+  // Barra lateral principal de robótica. Cada producto es un enlace `ref` para que,
+  // al abrir la documentación de un producto, se muestre la barra lateral propia de ese producto
+  // (véanse las entradas *Sidebar de más abajo).
   RoboticsSidebar: [
     {
       type: 'ref',
@@ -23,365 +36,15 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        {
-          type: 'category',
-          label: 'SO-ARM101',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            'Robotics/Robot_Kits/Lerobot/es_Lerobot_SO100Arm_New',
-            'Robotics/Robot_Kits/Lerobot/es_Steering_Gear_Debugging_Tool',
-            'Robotics/Robot_Kits/Lerobot/es_Lerobot_Dataset_Tool',
-            'Robotics/Robot_Kits/Lerobot/es_Complete_Guide_to_Double-Arm_SO-ARM_Training',
-            'Robotics/Robot_Kits/Lerobot/es_SOARM_AMAZINGHAND_TELEOP',
-            'Robotics/Robot_Kits/Lerobot/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
-            'Robotics/Robot_Kits/Lerobot/es_Lerobot_Lekiwi',
-            'Robotics/Robot_Kits/Lerobot/es_SOARM101_XIAO_MicroROS_Wireless_Teleoperation',
-            'Robotics/Robot_Kits/Lerobot/es_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
-            'Robotics/Robot_Kits/Lerobot/es_Lerobot_SO_ARM101_DAMO',
-          ]
-        },
-
-        {
-          type: 'category',
-          label: 'reBot B601-DM',
-          items: [
-           
-                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_Getting_Started',
-                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_Lerobot',
-                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_pinocchio',
-                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide',
-                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_Grasping_Demo',
-                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_ROS2_Integration',
-                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_isaacsim',
-                {
-                  type: 'ref',
-                  id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/es_Arm_Tutorial_Introduction',
-                  label: 'Curso de IA incorporada',
-                  className: 'sideboard_calss',
-                },
-          ]
-        },
-        {
-          type: 'category',
-          label: 'reBot B601-RS',
-          items: [
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_Getting_Started',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_Lerobot',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_pinocchio',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_control_mit',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_Grasping_Demo',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_ROS2_Integration',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_isaacsim',
-                'Robotics/Robot_Kits/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_Agent',
-                {
-                  type: 'ref',
-                  id: 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial/es_Arm_Tutorial_Introduction',
-                  label: 'Curso de IA incorporada',
-                  className: 'sideboard_calss',
-                },
-          ]
-        },
-
-        {
-          type: 'category',
-          label: 'Star AI Arm',
-          items: [
-            'Robotics/Robot_Kits/Lerobot/es_Lerobot_Starai_Arm',
-            'Robotics/Robot_Kits/Lerobot/es_Starai_Arm_ROS2_Moveit',
-          ]
-        },
-        // {
-        //   type: 'category',
-        //   label: 'End Effectors',
-        //   items: [
-        //     'Robotics/Robot_Kits/End_Effectors/es_DM_Gripper',
-        //   ]
-        // },
-        
-        {
-          type: 'category',
-          label: 'AmazingHand',
-          items: [
-            'Robotics/Robot_Kits/Hand/es_AmazingHand',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'ReachyMini',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            {
-              type: 'doc',
-              id: 'Robotics/Robot_Kits/ReachyMini/es_intro',
-              label: 'Introducción',
-            },
-            {
-              type: 'doc',
-              id: 'Robotics/Robot_Kits/ReachyMini/es_ReachyMini_Getting_Started',
-              label: 'Primeros pasos',
-            },
-            {
-              type: 'doc',
-              id: 'Robotics/Robot_Kits/ReachyMini/es_AGENTS',
-              label: 'Guía del Agente de IA',
-            },
-            {
-              type: 'doc',
-              id: 'Robotics/Robot_Kits/ReachyMini/es_vibe-code-with-your-agent',
-              label: 'Programa con tu agente',
-            },
-            {
-              type: 'category',
-              label: 'Casos de desarrollo',
-              collapsible: false,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/es_home_assistant',
-                  label: 'Integración con Home Assistant',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/es_reachymini_voice_control_soarm',
-                  label: 'Control por voz de Reachy Mini para SO-ARM',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/development_cases/es_reachymini_sway_screen',
-                  label: 'Control de movimiento de la pantalla de Reachy Mini',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Reachy Mini (inalámbrico)',
-              collapsible: false,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_get_started',
-                  label: 'Primeros pasos',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_usage',
-                  label: 'Uso',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_hardware',
-                  label: 'Hardware',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_media_advanced_controls',
-                  label: 'Controles avanzados de medios',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_reset',
-                  label: 'Restablecer',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_install_daemon_from_branch',
-                  label: 'Instalar daemon desde una rama',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_development_workflow',
-                  label: 'Flujo de trabajo de desarrollo',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/es_reflash_the_rpi_ISO',
-                  label: 'Volver a grabar la ISO',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Reachy Mini Lite',
-              collapsible: false,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/es_get_started',
-                  label: 'Primeros pasos',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/es_usage',
-                  label: 'Uso',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/es_hardware',
-                  label: 'Hardware',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/es_media_advanced_controls',
-                  label: 'Controles avanzados de medios',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/es_wizard',
-                  label: 'Asistente',
-                },
-              ],
-            },
-            // {
-            //   type: 'category',
-            //   label: 'Simulation',
-            //   collapsible: false,
-            //   collapsed: false,
-            //   items: [
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/platforms/simulation/es_get_started',
-            //       label: 'Getting Started',
-            //     },
-            //   ],
-            // },
-            // {
-            //   type: 'category',
-            //   label: 'SDK Guide',
-            //   collapsible: false,
-            //   collapsed: false,
-            //   items: [
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/es_readme',
-            //       label: 'SDK Overview',
-            //     },
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/es_installation',
-            //       label: 'Installation',
-            //     },
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/es_quickstart',
-            //       label: 'Quickstart',
-            //     },
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/es_python-sdk',
-            //       label: 'Python SDK',
-            //     },
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/es_javascript-sdk',
-            //       label: 'JavaScript SDK',
-            //     },
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/es_integration',
-            //       label: 'AI Integrations',
-            //     },
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/es_core-concept',
-            //       label: 'Core Concepts',
-            //     },
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/es_media-architecture',
-            //       label: 'Media Architecture',
-            //     },
-            //     { 
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/SDK/es_gstreamer-installation',
-            //       label: 'GStreamer Installation',
-            //     },
-            //   ],
-            // },
-            // {
-            //   type: 'category',
-            //   label: 'Help & Troubleshooting',
-            //   collapsible: false,
-            //   collapsed: false,
-            //   items: [
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/es_troubleshooting',
-            //       label: 'Troubleshooting',
-            //     },
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/es_motors_diagnosis',
-            //       label: 'Motors Diagnosis',
-            //     },
-            //     {
-            //       type: 'doc',
-            //       id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/es_change_mic_fpc_cable',
-            //       label: 'Change Mic FPC Cable',
-            //     },
-            //   ],
-            // },
-            // {
-            //   type: 'category',
-            //   label: 'Examples',
-            //   collapsible: false,
-            //   collapsed: false,
-            //   items: [
-            //     {
-            //       type: 'autogenerated',
-            //       dirName: 'Robotics/Robot_Kits/ReachyMini/examples',
-            //     },
-            //   ],
-            // },
-            // {
-            //   type: 'category',
-            //   label: 'API Reference',
-            //   collapsible: false,
-            //   collapsed: false,
-            //   items: [
-            //     {
-            //       type: 'autogenerated',
-            //       dirName: 'Robotics/Robot_Kits/ReachyMini/API',
-            //     },
-            //   ],
-            // },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Robot con ruedas',
-          items: [
-            'Robotics/Robot_Kits/StackForce/es_StackForce_Giant_Bipedal_Wheeled_Robot',
-            'Robotics/Robot_Kits/StackForce/es_StackForce_Mini_Wheeled_Legged_Robot',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Robot humanoide',
-          items: [
-            {
-              type: 'category',
-              label: 'Atom-S',
-              items: [
-                'Robotics/Robot_Kits/Humanoid/Atom-S/es_Atom-S',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Atom-X',
-              items: [
-                'Robotics/Robot_Kits/Humanoid/Atom-X/es_Atom-X',
-              ]
-            },
-          ]
-        },
+        { type: 'ref', id: `${K}/Lerobot/es_Lerobot_SO100Arm_New`, label: 'SO-ARM101', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_Getting_Started`, label: 'reBot B601-DM', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/reBot_Arm/B601_RS/es_reBot_Arm_B601_RS_Getting_Started`, label: 'reBot B601-RS', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/Lerobot/es_Lerobot_Starai_Arm`, label: 'Star AI Arm', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/Hand/es_AmazingHand`, label: 'AmazingHand', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/Lerobot/es_Lerobot_Lekiwi`, label: 'Lekiwi', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/ReachyMini/es_ReachyMini_Getting_Started`, label: 'ReachyMini', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/StackForce/es_StackForce_Giant_Bipedal_Wheeled_Robot`, label: 'Robot con ruedas', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/Humanoid/Atom-S/es_Atom-S`, label: 'Robot humanoide', className: 'sideboard_calss' },
       ]
     },
     {
@@ -491,6 +154,99 @@ const sidebars = {
       ]
     },
 
+  ],
+
+  // ---- Barras laterales independientes por producto (se abren al navegar por la documentación de cada producto) ----
+
+  SoArm101Sidebar: [
+    backToRobotics(),
+    {
+      type: 'category',
+      label: 'Inicio rápido y herramientas',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        { type: 'doc', id: `${K}/Lerobot/es_Lerobot_SO100Arm_New` },
+        `${K}/Lerobot/es_Steering_Gear_Debugging_Tool`,
+        `${K}/Lerobot/es_Lerobot_Dataset_Tool`,
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Aplicaciones',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        `${K}/Lerobot/es_Complete_Guide_to_Double-Arm_SO-ARM_Training`,
+        `${K}/Lerobot/es_SOARM101_XIAO_MicroROS_Wireless_Teleoperation`,
+        `${K}/Lerobot/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor`,
+        `${K}/Lerobot/es_Lerobot_SO_ARM101_DAMO`,
+      ],
+    },
+  ],
+
+  LekiwiSidebar: [
+    backToRobotics(),
+    { type: 'doc', id: `${K}/Lerobot/es_Lerobot_Lekiwi` },
+    `${K}/Lerobot/es_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi`,
+  ],
+
+  AmazingHandSidebar: [
+    backToRobotics(),
+    { type: 'doc', id: `${K}/Hand/es_AmazingHand` },
+    `${K}/Lerobot/es_SOARM_AMAZINGHAND_TELEOP`,
+  ],
+
+  StarAiSidebar: [
+    backToRobotics(),
+    { type: 'doc', id: `${K}/Lerobot/es_Lerobot_Starai_Arm` },
+    `${K}/Lerobot/es_Starai_Arm_ROS2_Moveit`,
+  ],
+
+  ReachyMiniSidebar: [
+    backToRobotics(),
+    { type: 'doc', id: `${K}/ReachyMini/es_ReachyMini_Getting_Started`, label: 'Primeros pasos' },
+    {
+      type: 'category',
+      label: 'Casos de desarrollo',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        { type: 'doc', id: `${K}/ReachyMini/development_cases/es_home_assistant`, label: 'Integración con Home Assistant' },
+        { type: 'doc', id: `${K}/ReachyMini/development_cases/es_reachymini_voice_control_soarm`, label: 'Control por voz de Reachy Mini para SO-ARM' },
+        { type: 'doc', id: `${K}/ReachyMini/development_cases/es_reachymini_sway_screen`, label: 'Control de movimiento de la pantalla de Reachy Mini' },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Reachy Mini (inalámbrico)',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        { type: 'doc', id: `${K}/ReachyMini/platforms/reachy_mini/es_get_started`, label: 'Primeros pasos' },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Reachy Mini Lite',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        { type: 'doc', id: `${K}/ReachyMini/platforms/reachy_mini_lite/es_get_started`, label: 'Primeros pasos' },
+      ],
+    },
+  ],
+
+  StackForceSidebar: [
+    backToRobotics(),
+    { type: 'doc', id: `${K}/StackForce/es_StackForce_Giant_Bipedal_Wheeled_Robot` },
+    `${K}/StackForce/es_StackForce_Mini_Wheeled_Legged_Robot`,
+  ],
+
+  AtomSidebar: [
+    backToRobotics(),
+    { type: 'doc', id: `${K}/Humanoid/Atom-S/es_Atom-S` },
+    `${K}/Humanoid/Atom-X/es_Atom-X`,
   ],
 
 };

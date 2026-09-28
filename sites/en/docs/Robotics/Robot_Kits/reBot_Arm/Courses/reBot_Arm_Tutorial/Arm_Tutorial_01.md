@@ -1,30 +1,29 @@
 ---
-description: Chapter 1 of the Seeed Embodied Intelligence Beginner's Course — understand what robots and robotic arms are, degrees of freedom, and the difference between traditional control, imitation learning, and VLA.
-title: Chapter 1 - Robots and Embodied Intelligence
+description: Chapter 1 of the Seeed Physical AI Beginner's Course — understand what robots and robotic arms are, degrees of freedom, and the difference between traditional control, imitation learning, and VLA.
+title: Chapter 1 - Robots and Physical AI
 keywords:
   - reBot
   - Robotic Arm
   - Robot
-  - Embodied Intelligence
+  - Physical AI
   - DOF
   - Imitation Learning
   - VLA
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_1
+slug: /rebot_physical_ai_course_chapter_1
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-18'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_1/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_1/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,9 +32,9 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 <section className="doc-hero">
   <div>
     <span className="eyebrow">Stage 1 · Chapter 1 · Theory</span>
-    <h2>1. Getting to Know Robots and Embodied Intelligence</h2>
+    <h2>1. Getting to Know Robots and Physical AI</h2>
     <p>
-      Chapter 1 of the Seeed Embodied Intelligence Beginner's Course — understand what robots and
+      Chapter 1 of the Seeed Physical AI Beginner's Course — understand what robots and
       robotic arms are, degrees of freedom, and the difference between traditional control, imitation
       learning, and VLA.
     </p>
@@ -44,17 +43,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#paradigms">Control paradigms</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>1.1 Learning Objectives</span>
-    <span>1.2 What Is a Robot?</span>
-    <span>1.3 What Is a Robotic Arm?</span>
-    <span>1.4 Traditional Control, Imitation Learning, and VLA</span>
-    <span>1.5 The Role of reBot Arm in the Course</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 1.1 Learning Objectives
 

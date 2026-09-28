@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 6 do Curso para Iniciantes em Inteligência Incorporada da Seeed — monte o reBot Arm, monte a fonte de alimentação, faça a fiação do braço e ligue-o pela primeira vez."
+description: "Capítulo 6 do Curso para Iniciantes em IA Física da Seeed — monte o reBot Arm, monte a fonte de alimentação, faça a fiação do braço e ligue-o pela primeira vez."
 title: Capítulo 6 - Montagem, Fonte de Alimentação e Primeira Ligação
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Fiação
   - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_6
+slug: /rebot_physical_ai_course_chapter_6
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_6/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_6/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 2 · Capítulo 6 · Prática</span>
     <h2>6. Montagem, Fonte de Alimentação e Primeira Ligação</h2>
     <p>
-      Capítulo 6 do Curso para Iniciantes em Inteligência Incorporada da Seeed — monte o reBot Arm,
+      Capítulo 6 do Curso para Iniciantes em IA Física da Seeed — monte o reBot Arm,
       monte a fonte de alimentação, faça a fiação do braço e ligue-o pela primeira vez.
     </p>
     <div className="hero-actions">

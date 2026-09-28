@@ -1,5 +1,5 @@
 ---
-description: 'Chapter 17 of the Seeed Embodied Intelligence Beginner''s Course — real-robot inference, evaluation, and data iteration: inference data flow, preprocessing and de-normalization, starting inference, action chunk execution, safety, success-rate evaluation, generalization testing, failure analysis, and failure-driven data collection.'
+description: 'Chapter 17 of the Seeed Physical AI Beginner''s Course — real-robot inference, evaluation, and data iteration: inference data flow, preprocessing and de-normalization, starting inference, action chunk execution, safety, success-rate evaluation, generalization testing, failure analysis, and failure-driven data collection.'
 title: Chapter 17 - Real-Robot Inference, Evaluation, and Data Iteration
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Data Iteration
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_17
+slug: /rebot_physical_ai_course_chapter_17
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_17/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_17/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 17 · Theory & Practice</span>
     <h2>17. Real-Robot Inference, Evaluation, and Data Iteration</h2>
     <p>
-      Chapter 17 of the Seeed Embodied Intelligence Beginner's Course — inference data flow,
+      Chapter 17 of the Seeed Physical AI Beginner's Course — inference data flow,
       preprocessing and de-normalization, starting inference, action chunk execution, safety,
       success-rate evaluation, generalization testing, failure analysis, and failure-driven data
       collection.
@@ -44,21 +43,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#data-iteration">Iteration</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>17.1 Inference Data Flow</span>
-    <span>17.2 Preprocessing and De-normalization</span>
-    <span>17.3 Starting Real-Robot Inference</span>
-    <span>17.4 Action Chunk Execution</span>
-    <span>17.5 Safety: Limits, Speed Limits, E-Stop</span>
-    <span>17.6 Evaluation: Success Rate and Completion Time</span>
-    <span>17.7 Generalization Testing</span>
-    <span>17.8 Failure Type Analysis</span>
-    <span>17.9 Data Iteration: Failure-Driven Data Collection</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 17.1 Inference Data Flow
 
