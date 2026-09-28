@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 9 del Curso para Principiantes en Inteligencia Incorporada de Seeed: fundamentos del aprendizaje de robots y del aprendizaje por imitación: por qué el brazo necesita aprendizaje, control basado en reglas vs. basado en aprendizaje, observación/estado/acción, fragmentos de acción, distribución de datos y las tres fases de entrenamiento, inferencia y evaluación."
+description: "Capítulo 9 del Curso para Principiantes en IA Física de Seeed: fundamentos del aprendizaje de robots y del aprendizaje por imitación: por qué el brazo necesita aprendizaje, control basado en reglas vs. basado en aprendizaje, observación/estado/acción, fragmentos de acción, distribución de datos y las tres fases de entrenamiento, inferencia y evaluación."
 title: Capítulo 9 - Fundamentos del Aprendizaje de Robots y del Aprendizaje por Imitación
 keywords:
   - reBot
@@ -8,16 +8,16 @@ keywords:
   - Robot Learning
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_9
+slug: /rebot_physical_ai_course_chapter_9
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_9/
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_9/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -32,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 3 · Capítulo 9 · Teoría y práctica</span>
     <h2>9. Fundamentos del Aprendizaje de Robots y del Aprendizaje por Imitación</h2>
     <p>
-      Capítulo 9 del Curso para Principiantes en Inteligencia Incorporada de Seeed: por qué el brazo necesita aprendizaje,
+      Capítulo 9 del Curso para Principiantes en IA Física de Seeed: por qué el brazo necesita aprendizaje,
       control basado en reglas vs. basado en aprendizaje, observación/estado/acción, fragmentos de acción, distribución de
       datos y las tres fases de entrenamiento, inferencia y evaluación.
     </p>

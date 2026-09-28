@@ -1,5 +1,5 @@
 ---
-description: Chapter 10 of the Seeed Embodied Intelligence Beginner's Course — what LeRobot is, leader/follower arm division of labor, the Robot and Teleoperator plugin architecture, the camera/CAN/arm data flow, and DM vs RS configuration differences.
+description: Chapter 10 of the Seeed Physical AI Beginner's Course — what LeRobot is, leader/follower arm division of labor, the Robot and Teleoperator plugin architecture, the camera/CAN/arm data flow, and DM vs RS configuration differences.
 title: Chapter 10 - LeRobot and reBot Arm System Architecture
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Follower Arm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_10
+slug: /rebot_physical_ai_course_chapter_10
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_10/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_10/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,7 +32,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 10 · Theory</span>
     <h2>10. LeRobot and reBot Arm System Architecture</h2>
     <p>
-      Chapter 10 of the Seeed Embodied Intelligence Beginner's Course — what LeRobot is,
+      Chapter 10 of the Seeed Physical AI Beginner's Course — what LeRobot is,
       leader/follower arm division of labor, the Robot and Teleoperator plugin architecture, the
       camera/CAN/arm data flow, and DM vs RS configuration differences.
     </p>
@@ -43,18 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#plugins">Plugins</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>10.1 What Is LeRobot and Why Do We Need It?</span>
-    <span>10.2 Leader Arm and Follower Arm</span>
-    <span>10.3 Plugin Architecture</span>
-    <span>10.4 Data Flow Overview: Cameras, CAN, and the Arm</span>
-    <span>10.5 Four Workflows: Four Uses of the Same System</span>
-    <span>10.6 DM vs. RS Configuration Differences</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 10.1 What Is LeRobot and Why Do We Need It?
 

@@ -1,8 +1,10 @@
 ---
-description: Getting Started with ReSpeaker Lite
+description: ReSpeaker Lite is an XMOS XU316-powered USB/I2S voice interface dev board with a dual microphone array for far-field speech capture. It features onboard AI audio front-end algorithms including acoustic echo cancellation, noise suppression, interference cancellation, and automatic gain control. Get started with firmware flashing, wiring, and out-of-box usage.
 title: Getting Started with reSpeaker Lite
 keywords:
   - ReSpeaker
+  - Xiao esp32
+  - Voice assistant 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
@@ -16,13 +18,35 @@ url: https://wiki.seeedstudio.com/reSpeaker_usb_v3/
 
 ## Introduction
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-107990273-respeaker-lite-45font.jpg" alt="pir" width={600} height="auto" /></p>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-</div>
+<table align="center">
+  <tr>
+    <th>reSpeaker Lite 2-Mic Array With XIAO ESP32-S3 </th>
+    <th>reSpeaker Lite 2-Mic Array </th>
+
+  </tr>
+  <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/904832d1-b0d8-461a-bbbc-cbfa5a1f71a9.jpg" style={{width:500, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-107990273-respeaker-lite-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+
+  </tr>
+  <tr>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+    </div></td>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+    </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+
+    </div></td>
+  </tr>
+</table>
+
 
 Powered by XMOS XU316 AI Sound and Audio chipset, this dev board excels in audio processing with its integrated dual microphone array, ideal for speech recognition and voice control. Featuring advanced onboard audio front-end algorithms, the XU316 chip provides interference cancellation, echo cancellation, and noise suppression. It supports I2S and USB connections and is compatible with Seeed Studio XIAO ESP32S3 (Sense), Adafruit QT Py, Raspberry Pi, and PC.
 
@@ -93,10 +117,10 @@ There are 2 versions for the ReSpeaker Lite board:
 
 To use it as a USB sound device, please flash the USB version firmware(default firmware).
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-version.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/usb_firmware.png" alt="pir" width={900} height="auto" /></p>
 
 To use it with XIAO ESP32S3, please flash the I2S version firmware.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/i2s-version.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/i2s_firmware.png" alt="pir" width={900} height="auto" /></p>
 :::
 
 #### Wiring
@@ -277,20 +301,28 @@ dfu-util -l
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
-## Comparison
 
-||[ReSpeaker Lite](https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html)|[ReSpeaker Mic Array v2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2-0.html)|[reSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html)|
-|--|--|--|--|
-||<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/xiao-res.png" alt="pir" width={150} height="auto" /></p>|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/mic-array2.0.png" alt="pir" width={150} height="auto" /></p>|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/mic-pi-hat.png" alt="pir" width={150} height="auto" /></p>|
-|<p style={{textAlign: 'center'}}>Core Chip</p>|<p style={{textAlign: 'center'}}>XMOS XU316</p>|<p style={{textAlign: 'center'}}>XMOS XVF-3000</p>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>Microphones</p>|<p style={{textAlign: 'center'}}>PDM MEMS Microphones x2</p>|<p style={{textAlign: 'center'}}>PDM MEMS Microphones x4</p>|<p style={{textAlign: 'center'}}>Analog MEMS Microphones x2</p>
-|<p style={{textAlign: 'center'}}>Voice Capture Distance</p>|<p style={{textAlign: 'center'}}>3m</p>|<p style={{textAlign: 'center'}}>5m</p>|<p style={{textAlign: 'center'}}>3m</p>|
-|<p style={{textAlign: 'center'}}>Sensitivity</p>|<p style={{textAlign: 'center'}}>-26 dBFS</p>|<p style={{textAlign: 'center'}}>-26 dBFS</p>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>Acoustic Overload Point</p>|<p style={{textAlign: 'center'}}>120 dBSPL</p>|<p style={{textAlign: 'center'}}>120 dBSPL</p>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>SNR</p>|<p style={{textAlign: 'center'}}>64 dB</p>|<p style={{textAlign: 'center'}}>63 dB</p>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>Onboard Audio Processing Algorithms</p>|<ul><li>Acoustic Echo Cancellation (AEC)</li><li>Automatic Gain Control (AGC)</li><li>Noise Suppression (NS)</li><li>Interference Cancellation (IC)</li><li>Voice-to-Noise Ratio (VNR)</li></ul>|<ul><li>Acoustic Echo Cancellation (AEC)</li><li>Automatic Gain Control (AGC)</li><li>Noise Suppression (NS)</li><li>Beamforming</li><li>Direction of Arrival (DoA)</li><li>De-Reverberation</li><li>Voice Activity Detection (VAD)</li></ul>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>Compatible Hardware</p>|<ul><li>XIAO ESP32S3(Sense)</li><li>Adafruit QT Py via I2S</li><li>Raspberry Pi</li><li>Any computer or SBC running Linux, macOS, and Windows via USB</li></ul>|<ul><li>Raspberry Pi</li><li>Any computer or SBC running Linux, macOS, and Windows via USB</li></ul>|Raspberry Pi ONLY|
-|<p style={{textAlign: 'center'}}>Perfect for</p>|Directional sound capture, ideal for linear or elongated setups|Omnidirectional sound capture and localization, best placed in the center of open and multi-directional environments|Directional sound capture, ideal for linear or elongated setups|
+## Recording and Playback 
+
+### Setup Audacity 
+
+1. Open **Audacity**
+2. Go to **Audio Setup > Audio Settings**
+
+
+3. Set:
+   - **Host**: `Windows WASAPI`
+   - **Recording Device**: `reSpeaker Lite`
+   - **Channels**: `2 (Stereo)`
+   - **Sample Rate**: `16000 Hz` (for both **Project** and **Default Sample Rate**)
+   - **Sample Format**: `32-bit`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/audio_settings.png" alt="pir" width={600} height="auto"/></p>
+
+1. Click **OK**
+2. You’re ready — start recording!
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/audio_recording .png" alt="pir" width={600} height="auto"/></p>
 
 ### FAQ
 

@@ -1,5 +1,5 @@
 ---
-description: Chapter 7 of the Seeed Embodied Intelligence Beginner's Course — MotorBridge, the cross-vendor CAN motor control library, and how to control DM and RS motors via web and Python.
+description: Chapter 7 of the Seeed Physical AI Beginner's Course — MotorBridge, the cross-vendor CAN motor control library, and how to control DM and RS motors via web and Python.
 title: Chapter 7 - MotorBridge Motor Control Library
 keywords:
   - reBot
@@ -10,20 +10,19 @@ keywords:
   - Python
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_7
+slug: /rebot_physical_ai_course_chapter_7
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_7/
+url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_7/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -34,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 2 · Chapter 7 · Practice</span>
     <h2>7. MotorBridge Motor Control Library</h2>
     <p>
-      Chapter 7 of the Seeed Embodied Intelligence Beginner's Course — MotorBridge, the cross-vendor
+      Chapter 7 of the Seeed Physical AI Beginner's Course — MotorBridge, the cross-vendor
       CAN motor control library, and how to control DM and RS motors via web and Python.
     </p>
     <div className="hero-actions">
@@ -43,16 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#rs-motors">RS motors</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>7.1 What is MotorBridge?</span>
-    <span>7.2 Installation Environment</span>
-    <span>7.3 MotorBridge Controls DM Motors</span>
-    <span>7.4 MotorBridge Controls RS Motors</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 7.1 What is MotorBridge?
 

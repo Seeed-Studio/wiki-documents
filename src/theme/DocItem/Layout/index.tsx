@@ -80,10 +80,24 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
   } = frontMatter as any;
 
   const location = useLocation();
+  const normalizedPath = location.pathname.replace(/\/+$/, '');
+  const isRoboticsLandingPage =
+    normalizedPath === '/robotics_page' ||
+    normalizedPath === '/cn/robotics_page';
 
   useEffect(() => {
     judgeHomePath();
   }, [location.pathname]);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle(
+      'robotics-landing-page',
+      isRoboticsLandingPage,
+    );
+    return () => {
+      document.documentElement.classList.remove('robotics-landing-page');
+    };
+  }, [isRoboticsLandingPage]);
 
   return (
     <div className="row">
@@ -95,7 +109,10 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
 
       {/* 添加数据属性到静态 HTML 元素 */}
       <div
-        className={clsx('col', !docTOC.hidden && styles.docItemCol)}
+        className={clsx(
+          'col',
+          !isRoboticsLandingPage && !docTOC.hidden && styles.docItemCol,
+        )}
         data-sku={sku || ''}
         data-doc-type={docType || ''}
       >

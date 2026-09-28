@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 2 do Curso para Iniciantes em Inteligência Incorporada da Seeed — conheça o projeto open-source reBot Arm, a diferença entre as versões DM e RS e seu hardware e software de código aberto."
+description: "Capítulo 2 do Curso para Iniciantes em IA Física da Seeed — conheça o projeto open-source reBot Arm, a diferença entre as versões DM e RS e seu hardware e software de código aberto."
 title: Capítulo 2 - Hardware e o Projeto Open-Source
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Open Source
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_2
+slug: /rebot_physical_ai_course_chapter_2
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_2/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_2/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 1 · Capítulo 2 · Teoria &amp; Prática</span>
     <h2>2. Conhecendo o Hardware do reBot Arm e o Projeto Open-Source</h2>
     <p>
-      Capítulo 2 do Curso para Iniciantes em Inteligência Incorporada da Seeed — conheça o reBot Arm,
+      Capítulo 2 do Curso para Iniciantes em IA Física da Seeed — conheça o reBot Arm,
       o projeto open-source, a diferença entre as versões DM e RS e seu hardware e software
       de código aberto.
     </p>

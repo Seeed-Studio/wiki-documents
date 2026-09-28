@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 15 do Curso para Iniciantes em Inteligência Incorporada da Seeed — o modelo ACT e o fracionamento de ações: entrada e saída do ACT, a estrutura ResNet e Transformer, intuição sobre atenção, CVAE, bloco de ação vs horizonte de ação, defesas contra acúmulo de erro e limites de capacidade do ACT."
+description: "Capítulo 15 do Curso para Iniciantes em IA Física da Seeed — o modelo ACT e o fracionamento de ações: entrada e saída do ACT, a estrutura ResNet e Transformer, intuição sobre atenção, CVAE, bloco de ação vs horizonte de ação, defesas contra acúmulo de erro e limites de capacidade do ACT."
 title: Capítulo 15 - Modelo ACT e Fracionamento de Ações
 keywords:
   - reBot
@@ -10,16 +10,16 @@ keywords:
   - Imitation Learning
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_15
+slug: /rebot_physical_ai_course_chapter_15
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_15/
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_15/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -34,7 +34,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 3 · Capítulo 15 · Teoria</span>
     <h2>15. Modelo ACT e Fracionamento de Ações</h2>
     <p>
-      Capítulo 15 do Curso para Iniciantes em Inteligência Incorporada da Seeed — entrada e saída do ACT,
+      Capítulo 15 do Curso para Iniciantes em IA Física da Seeed — entrada e saída do ACT,
       a estrutura ResNet e Transformer, intuição sobre atenção, CVAE, bloco de ação vs horizonte de ação,
       defesas contra acúmulo de erro e limites de capacidade do ACT.
     </p>

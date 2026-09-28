@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 3 del Curso para Principiantes de Inteligencia Incorporada de Seeed: la lista de hardware práctico necesario para cada etapa, incluyendo unidades de control principales, el reBot Arm, cámaras, brazo líder y soportes imprimibles."
+description: "Capítulo 3 del Curso para Principiantes de IA Física de Seeed: la lista de hardware práctico necesario para cada etapa, incluyendo unidades de control principales, el reBot Arm, cámaras, brazo líder y soportes imprimibles."
 title: Capítulo 3 - Selección de hardware para los cursos
 keywords:
   - reBot
@@ -9,16 +9,16 @@ keywords:
   - Hardware
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_3
+slug: /rebot_physical_ai_course_chapter_3
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_3/
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_3/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -33,7 +33,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 1 · Capítulo 3 · Teoría y práctica</span>
     <h2>3. Selección de hardware para los cursos posteriores</h2>
     <p>
-      Capítulo 3 del Curso para Principiantes de Inteligencia Incorporada de Seeed: la lista de hardware práctico
+      Capítulo 3 del Curso para Principiantes de IA Física de Seeed: la lista de hardware práctico
       necesario para cada etapa, incluyendo unidades de control principales, el reBot Arm, cámaras, brazo líder
       y soportes imprimibles.
     </p>
