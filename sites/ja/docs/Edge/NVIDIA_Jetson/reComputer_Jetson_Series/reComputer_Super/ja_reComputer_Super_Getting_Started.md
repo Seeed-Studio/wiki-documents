@@ -391,8 +391,8 @@ reComputer Super シリーズは reComputer Classic を強化し、AI 性能を�
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">Download</a></td>
-      <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAdqGsOC33XuaA6i60KX2k6s">Download</a></td>
+      <td>93130562F8C5EA02857C01BCB49B7626</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.2</td>

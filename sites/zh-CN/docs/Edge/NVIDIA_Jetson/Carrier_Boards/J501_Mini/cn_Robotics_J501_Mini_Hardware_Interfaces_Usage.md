@@ -264,14 +264,14 @@ Mini J501 也可用于机器人场景。其支持 NVIDIA Isaac ROS、Hugging Fac
       <td rowSpan={2}>7.2</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBraqxVv-rUQKkcwG2EXybtAUKJgIvgi77ze4eig_Hj3Ns">Download</a></td>
-      <td>1cd0d7004f426a524a55761bf01dd22280829b9834cbd11d4094b29865f46fe9</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDvZETxkTZ9S7gWHBtq-xIHAW3KLxF5kc0g6JQVpx1LBCg">Download</a></td>
+      <td>F95E91C3BFB00D50EB999383F85949B4</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBj3DRU7fhETozDjV3BAOG2Ac69rCRZhqNqr_RXuCliXXM">Download</a></td>
-      <td>c369b02c979a8d0e1bd926725e94eba19be0e1b6a1a145e03a1179e77b72c5fd</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB8Kv094I4nSL8OdUsLOfWgARw-8XUcLzCbdv_QhQ_NUaA">Download</a></td>
+      <td>8FA6E750C2C21678168DAE377E95CE6C</td>
     </tr>
     <tr>
       <td rowSpan={2}>6.2.1</td>
