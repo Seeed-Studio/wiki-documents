@@ -4138,6 +4138,7 @@ const sidebars = {
                 // 'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv8_custom_classification_model',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Multi-GMSL_Cameras_for_Real-Time_Object_Detection_and_3D_Reconstruction_on_Jetson_AGX_Orin',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_ZED_X_GMSL_Cameras_on_reComputer_Robotics',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv11_With_Depth_Camera_For_Distance_Measurement',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Efficient_Multi-Task_Vision_Inference_Engine_Deployment_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_deploy_frigate_on_jetson',

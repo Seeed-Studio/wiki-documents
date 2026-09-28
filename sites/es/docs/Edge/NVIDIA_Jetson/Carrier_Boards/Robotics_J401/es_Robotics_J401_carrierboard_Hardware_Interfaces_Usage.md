@@ -132,7 +132,7 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
     <tr>
       <td>I2C</td>
       <td>2x I2C con conector GH 1.25 de 4 pines</td>
-    </tr]
+    </tr>
     <tr>
       <td>Ventilador</td>
       <td>1x conector de ventilador de 4 pines (5V PWM);<br />1x conector de ventilador de 4 pines (12V PWM)</td>

@@ -143,7 +143,7 @@ reComputer industrial 具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接
     <tr>
       <td>DI/DO</td>
       <td colSpan={6}>4*DI，4*DO，3*GND_DI，2*GND_DO，1*GND_ISO，1*CAN<br /></td>
-    </tr]
+    </tr>
     <tr>
       <td>COM</td>
       <td colSpan={6}>1* DB9（RS232/RS422/RS485）</td>

@@ -152,7 +152,7 @@ A reComputer Robotics J401 é uma placa carrier de borda de IA compacta e de alt
     <tr>
       <th rowSpan="1">Garantia</th>
       <td>2 Anos</td>
-    </tr]
+    </tr>
     <tr>
       <th rowSpan="1">Certificação</th>
       <td>RoHS, REACH, CE, FCC, UKCA, KC</td>

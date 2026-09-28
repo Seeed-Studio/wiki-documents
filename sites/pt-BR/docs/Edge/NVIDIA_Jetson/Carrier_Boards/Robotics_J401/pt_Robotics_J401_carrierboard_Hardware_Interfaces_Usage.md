@@ -136,7 +136,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     <tr>
       <td>Ventoinha</td>
       <td>1x conector de ventoinha de 4 pinos (5V PWM);<br />1x conector de ventoinha de 4 pinos (12V PWM)</td>
-    </tr]
+    </tr>
     <tr>
       <td>Porta de Extensão</td>
       <td>1x conector de expansão de câmera (para placa GMSL2)</td>

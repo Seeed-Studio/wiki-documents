@@ -109,7 +109,7 @@ Mini J501 はロボティクスのシナリオでも使用できます。NVIDIA 
     <tr>
       <td>カメラ</td>
       <td>2x 4 in 1 GMSL2 Mini-Fakra コネクタ（オプション）；</td>
-    </tr]
+    </tr>
     <tr>
       <td>CAN</td>
       <td>2x CAN JST 4ピンコネクタ（GH 1.25）；</td>

@@ -245,7 +245,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     <tr>
       <td>Temperatura de operação</td>
       <td colSpan={4}>-10℃~60℃</td>
-    </tr]
+    </tr>
     <tr>
       <td>Garantia</td>
       <td colSpan={4}>2 anos</td>

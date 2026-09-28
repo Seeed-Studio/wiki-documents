@@ -155,7 +155,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     <tr>
       <td>SIM</td>
       <td colSpan={6}>1* ranura para tarjeta Nano SIM</td>
-    </tr]
+    </tr>
     <tr>
       <td rowSpan={7}>Expansión</td>
       <td>Mini PCIe</td>
