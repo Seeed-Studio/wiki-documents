@@ -1,5 +1,5 @@
 ---
-description: 使用 Meshcore 开始体验 SenseCAP Card Tracker T1000-E。指导设备安装、固件烧录和设备连接。
+description: 开始使用适用于 Meshcore 的 SenseCAP Card Tracker T1000-E。指导设备安装、固件烧录和设备连接。
 title: MeshCore 入门指南
 keywords:
   - Tracker
@@ -11,13 +11,13 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 ---
 
 ## 固件烧录
 
-### 方法 1：通过 Web Flasher
+### 方法一：通过 Web Flasher
 
 使用 USB 线将设备连接到电脑。
 
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
-前往 [Meshcore Web Flasher](https://meshcore.io/flasher)。
+前往 [MeshCore Web Flasher](https://meshcore.io/flasher)。
 
 在 `Community Firmware` 分组中选择 `Seeed Studio SenseCAP T1000-E`。
 
@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/SerialSelection.png" alt="pir" width={800} height="auto" /></p>
 
-如果你点击了 `Erase Flash` 但没有响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已成功进入 DFU。
+如果你点击了 `Erase Flash` 但没有响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已成功进入 DFU 模式。
 
 如果你看到 "Flashing erase firmware:100%"，说明设备已成功擦除。
 
@@ -53,13 +53,13 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/SerialSelection.png" alt="pir" width={800} height="auto" /></p>
 
-如果你点击了 `Flash` 但没有响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已成功进入 DFU。
+如果你点击了 `Flash` 但没有响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已成功进入 DFU 模式。
 
 当进度条完全填满时，表示 Flash 已完成。然后设备会自动重启。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
-### 方法 2：拖拽烧录
+### 方法二：拖拽烧录
 
 使用 USB 线将设备连接到电脑。
 
@@ -67,9 +67,9 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
-前往 [Meshcore Web Flasher](https://meshcore.io/flasher)。
+前往 [MeshCore Web Flasher](https://meshcore.io/flasher)。
 
-在 `Community Firmware` 分组中选择 `Seeed Studio Wio Tracker T1000-E`。
+在 `Community Firmware` 分组中选择 `Seeed Studio SenseCAP T1000-E`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
@@ -83,10 +83,10 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-手动进入 DFU 模式：按住设备按键，然后**快速**连接充电线两次，绿色 LED 将常亮。
+手动进入 DFU 模式：按住设备按键，然后**快速**连接充电线两次，绿色 LED 会常亮。
 
 :::warning
-要成功进入 DFU 模式，你需要快速完成这一操作。可能需要多次尝试。
+要成功进入 DFU 模式，你需要快速完成上述操作。可能需要多次尝试。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
@@ -95,11 +95,11 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/T1000-EDriver.png" alt="pir" width={800} height="auto" /></p>
 
-将下载好的 UF2 文件拖到弹出的磁盘中。
+将下载好的 UF2 文件拖拽到弹出的磁盘中。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/EraseDrag.png" alt="pir" width={800} height="auto" /></p>
 
-固件烧录成功后，该磁盘会消失。此时设备中没有固件，所以设备`不会`自动重启。
+固件烧录成功后，该磁盘会自动消失。此时设备中没有固件，所以设备`不会`自动重启。
 
 #### 烧录固件
 
@@ -111,10 +111,10 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareUF2.png" alt="pir" width={800} height="auto" /></p>
 
-尝试手动进入 DFU 模式：按住设备按键，然后**快速**连接充电线两次，绿色 LED 将常亮。
+尝试手动进入 DFU 模式：按住设备按键，然后**快速**连接充电线两次，绿色 LED 会常亮。
 
 :::warning
-要成功进入 DFU 模式，你需要快速完成这一操作。可能需要多次尝试。
+要成功进入 DFU 模式，你需要快速完成上述操作。可能需要多次尝试。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
@@ -123,11 +123,11 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/T1000-EDriver.png" alt="pir" width={800} height="auto" /></p>
 
-将下载好的 UF2 文件拖到弹出的磁盘中。
+将下载好的 UF2 文件拖拽到弹出的磁盘中。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-固件烧录成功后，该磁盘会消失。此时设备中没有固件，所以设备会自动重启。
+固件烧录成功后，该磁盘会自动消失。设备会自动重启。
 
 ## 配置
 
@@ -145,7 +145,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 ### 获取 APP
 
-可从 Google Store 或 Apple Store 下载。也可以[点击这里](https://meshcore.io/#download)获取 Meshcore APP。
+可从 Google Store 或 Apple Store 下载。也可以[点击这里](https://meshcore.io/#download)获取 MeshCore APP。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
@@ -155,7 +155,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DeviceConnectAn.png" alt="pir" width={600} height="auto" /></p>
 
-输入默认 PIN 码 `123456`，然后点击 `Pair` 连接设备。
+输入默认 PIN 码 `123456`，然后点击 `Pair` 以连接设备。
 
 :::tip
 如果连接失败，请打开手机的蓝牙列表并 `forget` 或 `Unpair` 该设备，然后再尝试重新连接。
@@ -171,11 +171,11 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue2.png" alt="pir" width={600} height="auto" /></p>
 
-3. 在系统蓝牙弹窗中选择你的设备（例如 Meshcore-xxxxxx），然后点击 **Pair**。
+3. 在系统蓝牙弹窗中，选择你的设备（例如 Meshcore-xxxxxx），然后点击 **Pair**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue3.png" alt="pir" width={600} height="auto" /></p>
 
-4. 按提示输入默认蓝牙密码 `123456`，然后点击 **OK**。
+4. 当系统提示时，输入默认蓝牙密码 `123456`，然后点击 **OK**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue4.png" alt="pir" width={600} height="auto" /></p>
 
@@ -212,12 +212,12 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 ### 按键
 
-|按键操作|说明|
+|Button Action|Description|
 |--|--|
-|按下 3 秒|开关机|
-|双击|广播 advert|
-|三击|蜂鸣器开关|
-|四击|GPS 开关|
+|Press for 3s|开关机|
+|Double-click|广播广播包|
+|Triple-click|蜂鸣器开关|
+|Quadruple-click|GPS 开关|
 
 ## 消息传输
 
@@ -225,12 +225,12 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/MeshcoreFramework.png" alt="pir" width={900} height="auto" /></p>
 
-### Advert
+### 广播（Advert）
 
-MeshCore 允许你手动广播你的姓名、位置和公钥，这些信息也会被签名以防止伪造。当你点击 advert 按钮时，它会通过 LoRa 广播这些数据。MeshCore 将其称为 Advert。有两种 advert 方式，“zero hop”和“flood”。
+MeshCore 允许你手动广播你的姓名、位置和公钥，这些信息也会被签名以防止伪造。当你点击 advert 按钮时，它会通过 LoRa 广播这些数据。MeshCore 将此称为 Advert。Advert 有两种方式：“zero hop”和“flood”。
 
-- **Zero hop** 意味着你的 advert 只会广播给能听到它的任何人，仅此而已。
-- **Flooded** 意味着它会被广播出去，然后由所有听到它的中继器重复转发。
+- **Zero hop** 意味着你的 advert 只会广播给能听到它的设备，仅此而已。
+- **Flooded** 意味着它会被广播出去，然后由所有听到它的中继设备重复转发。
 
 你可以在 APP 上发送 advert，也可以直接在设备的 advert 页面上发送 advert。
 
@@ -238,12 +238,12 @@ MeshCore 允许你手动广播你的姓名、位置和公钥，这些信息也�
 
 ### 公共消息
 
-在你配置好 LoRa 之后，你可以在主通道中发送消息。同一频段内的所有附近用户都能收到。
+在你配置好 LoRa 之后，你可以在主频道中发送消息。同一频段内的所有附近用户都能收到。
 
 
 ### 私人消息
 
-只有当两个设备都接收到对方的 advert 时，它们才会建立连接。
+只有当两台设备都接收到对方的 advert 时，它们才会建立连接。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -252,7 +252,7 @@ import TabItem from '@theme/TabItem';
 
 ### 如何重启设备
 
- 按住按键不放，然后连接充电线。
+ 长按按键，然后连接充电线。
 
 ## 故障排查
 
@@ -262,17 +262,17 @@ import TabItem from '@theme/TabItem';
 
 - 更换充电线
 
- - 如果仍然无效，按住设备按键不放，然后连接充电线，查看电脑中是否弹出一个磁盘。如果有，[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-the-bootloader) 重新安装 bootloader。
+ - 如果仍然无效，请按住设备按键，然后连接充电线，查看电脑中是否弹出一个磁盘。如果有，请[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-the-bootloader)重新安装 bootloader。
 
 ### 设备卡在启动循环中
 
-**现象说明：**
+**现象描述：**
 
-设备会反复重启，串口会反复连接和断开。
+设备会不断重启，串口会反复连接和断开。
 
 **解决方案：**
 
-- 步骤 1：尝试手动进入 DFU 模式：按住设备按键不放，然后**快速**连接充电线两次，绿色 LED 会常亮。
+- 步骤 1：尝试手动进入 DFU 模式：按住设备按键，然后**快速**连接充电线两次，绿色 LED 会常亮。
 
 :::note
 要成功进入 DFU 模式，你需要快速完成这个操作。可能需要多次尝试。
@@ -286,11 +286,11 @@ import TabItem from '@theme/TabItem';
 
 ### 设备变砖
 
-#### 现象说明
+#### 描述
 
 设备无响应，没有 LED 指示灯，无法与 App 配对。
 
-**1）设备仍然可以进入 DFU 模式，则尝试烧录 bootloader。**
+**1) 设备仍然可以进入 DFU 模式，则尝试烧录 bootloader。**
 
 #### 烧录 Bootloader
 
@@ -306,7 +306,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1：安装 Adafruit-nrfutil**
 
-对于 Windows 用户，同时按下 "Win" 键和 "R" 键，然后在弹出的窗口中输入 "cmd"，按下 "Enter"。这样可以打开命令行。
+对于 Windows 用户，同时按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，按下 "Enter"。这样可以打开命令行。
 
 对于 Mac 用户，同时按下 "Command" 键和 "Space" 键，以打开 Spotlight。然后输入 "termial"，按下 "Return"。这样可以打开命令行。
 
@@ -362,9 +362,9 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 python 3.x 安装仍然使用 python.exe 这个名称。
+注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 Python 3.x 安装仍然使用 python.exe 这个名称。
 
-要在用户空间（你的 home 目录）中安装：
+要在你的用户空间（主目录）中安装：
 
 ```
 pip3 install -r requirements.txt
@@ -385,7 +385,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-要生成该工具的自包含可执行二进制文件（Windows 和 MacOS），运行以下命令：
+要生成该工具的自包含可执行二进制文件（Windows 和 MacOS），请运行以下命令：
 
 ```
 pip3 install pyinstaller
@@ -405,10 +405,10 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 将设备连接到电脑，并检查端口号。
 
-以 Windows 用户为例：
+对于 Windows 用户，例如：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-以 Mac 用户为例：
+对于 Mac 用户，例如：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
 **步骤 3：烧录 bootloader**
@@ -420,7 +420,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
-请将 COMXX 改为你的端口号。例如，如果你的设备在 com6 上，将命令改为：
+请将 COMXX 改为你的端口号。例如，如果你的设备在 com6 上，请将命令改为：
 
 `adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
@@ -434,24 +434,24 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-完成以上步骤后，[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#firmware-flashing) 烧录应用固件。
+完成以上步骤后，请[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#firmware-flashing)烧录应用固件。
 
-**2）设备无法进入 DFU 模式，但可以检测到串口**
+**2) 设备无法进入 DFU 模式，但可以检测到串口。**
 
 - 打开一个串口工具
 
 - 将波特率设置为 `1200`。
 
 - 连接设备。
-   连接时指示灯会短暂闪烁。持续尝试，直到指示灯保持常亮，表示设备已回到 DFU 模式，然后依次烧录 [bootloader](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-the-bootloader) -> [擦除 flash](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-erase) -> [烧录固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-firmware)
+   连接时指示灯会短暂闪烁。持续尝试，直到指示灯保持常亮，这意味着设备可以回到 DFU 模式，然后烧录 [bootloader](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [擦除 flash](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-erase) -> [烧录固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-firmware)
 
-**3）设备无法进入 DFU 模式且没有串口显示**
+**3) 设备无法进入 DFU 模式且没有串口显示**
 
-- 按住设备按键不放，然后连接充电线。电脑中弹出磁盘后，你可能会看到串口。
+- 按住设备按键，然后连接充电线。电脑中弹出磁盘后，你可能会看到串口。
 
-- 如果仍然无效，请断开充电线，将设备放置几天直至电池完全耗尽，然后重新连接充电线并再次尝试配对。
+- 如果仍然无效，请断开充电线，将设备放置几天直到电池完全耗尽，然后重新连接充电线并再次尝试配对。
 
-**4）如果以上步骤都无效，请联系技术支持：support@sensecapmx.com**
+**4) 如果以上步骤都无效，请联系技术支持：support@sensecapmx.com**
 
 ### 固件烧录失败
 
@@ -459,31 +459,31 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- 检查设备是否处于 DFU 模式，当设备处于 DFU 模式时，绿色指示灯会常亮。
+ 请检查设备是否处于 DFU 模式，当设备处于 DFU 模式时，绿色指示灯会常亮。
 
 - **无法打开串口**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wrong-port.png" alt="pir" width={500} height="auto" /></p>
 
- 检查端口是否正确，或者尝试更换其他端口。
+ 请检查端口是否正确，或者尝试另一个端口。
 
  ### 设备自动关机
 
- #### 现象说明
+ #### 描述
 
- - 设备开机后，过一会儿会自动关机或重启。 
+ - 设备开机后，过一段时间会自动关机或重启。
  - 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中……
+ 这可能是由于在设备处于以下状态时，手动并强制重启或关闭设备导致的：尚未完成消息传输过程、正在配置中……
 
  #### 故障排查
 
 执行一次 [flash-erase](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-erase)。 
 
  ### 恢复出厂设置
-如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过以下两种方法进行恢复出厂设置。
+如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过以下两种方式进行恢复出厂设置。
 
-- 对设备进行[Flash erase](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-erase)。然后重新烧录最新固件。
+- 对设备进行 [Flash erase](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/#flash-erase)。然后重新烧录最新固件。
 
 - 在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Reset.png" alt="pir" width={400} height="auto" /></p>

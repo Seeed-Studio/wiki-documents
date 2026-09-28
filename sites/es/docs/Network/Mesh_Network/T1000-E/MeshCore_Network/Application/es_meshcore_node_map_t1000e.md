@@ -14,7 +14,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: 2026-04-3
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/es/meshcore_node_map_t1000e/
 ---
 import Tabs from '@theme/Tabs';
@@ -35,7 +35,7 @@ El Mapa de Nodos MeshCore depende de que los nodos informen periódicamente su p
 
 ## Tutorial sobre el Mapa Oficial de MeshCore
 
-El Mapa de Nodos MeshCore más popular es el `MeshCore Node Map` oficial. [Haz clic aquí](https://map.meshcore.io/) para entrar en el sitio web.
+El Mapa de Nodos MeshCore más popular es el `MeshCore Node Map` oficial. [Haz clic aquí](https://map.meshcore.io/) para entrar al sitio web.
 
 ### Configuración del compañero
 
@@ -51,7 +51,7 @@ Primero inicia sesión en el repetidor. La contraseña de administrador predeter
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AAdmin.png" alt="pir" width={900} height="auto" /></p>
 
-Habilita el GPS y obtén la ubicación (algunos firmware de repetidores no admiten la actualización de la ubicación en tiempo real, es posible que tengas que elegir tu ubicación manualmente).
+Activa el GPS y obtén la ubicación (algunos firmware de repetidores no admiten la actualización de la ubicación en tiempo real, es posible que tengas que elegir tu ubicación manualmente).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreGPSSnciny.png" alt="pir" width={900} height="auto" /></p>
 
@@ -67,7 +67,7 @@ Puedes ver el nombre del dispositivo, el rol y la información de configuración
 
 Para usuarios avanzados, es posible crear un frontend de Mapa de Nodos personalizado. Se recomienda utilizar el siguiente flujo de trabajo: 
 
-[Nodo MeshCore normal] → [Nodos Mesh configurados con MQTT] → [Backend API / Base de datos] → [Interfaz de mapa de frontend]
+[Nodo MeshCore normal] → [Nodos Mesh configurados con MQTT] → [Backend API / Base de datos] → [Interfaz de Mapa en el Frontend]
 
 ## Soporte técnico y debate sobre el producto
 
