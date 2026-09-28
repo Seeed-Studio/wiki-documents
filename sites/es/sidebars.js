@@ -4658,6 +4658,62 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'SenseCraft Robotics',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'Cloud_Chain/SenseCraft_Robotics/es_sensecraft_robotics_overview',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'Cloud_Chain/SenseCraft_Robotics/es_sensecraft_robotics_overview',
+          label: 'Descripción general',
+        },
+        {
+          type: 'category',
+          label: 'Guías',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/guides/es_sensecraft_robotics_so_arm101',
+              label: 'SO-ARM101',
+            },
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/guides/es_sensecraft_robotics_rebot_arm_102_b601_dm',
+              label: 'reBot Arm 102 + B601 DM',
+            },
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/guides/es_sensecraft_robotics_rebot_arm_102_b601_rs',
+              label: 'reBot Arm 102 + B601 RS',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Preguntas frecuentes',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/faq/es_sensecraft_robotics_common_issues',
+              label: 'Problemas comunes',
+            },
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/faq/es_sensecraft_robotics_data_collection_configuration_recommendation',
+              label: 'Configuración de recopilación de datos',
+            },
+          ],
+        },
+      ],
+    },
     // {
     //   type: 'category',
     //   label: 'SenseCraft Blockchain',
