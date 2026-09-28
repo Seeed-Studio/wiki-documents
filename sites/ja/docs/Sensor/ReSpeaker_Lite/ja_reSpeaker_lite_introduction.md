@@ -1,37 +1,61 @@
 ---
-description: ReSpeaker Lite のはじめに
-title: reSpeaker Lite のはじめに
+description: ReSpeaker Lite は、遠距離音声キャプチャ用のデュアルマイクアレイを備えた、XMOS XU316 搭載 USB/I2S 音声インターフェース開発ボードです。アコースティックエコーキャンセレーション、ノイズ抑制、干渉キャンセレーション、自動ゲイン制御などの AI オーディオフロントエンドアルゴリズムをオンボードで備えています。ファームウェアの書き込み、配線、開封後すぐの使い方から始めましょう。
+title: reSpeaker Lite 入門ガイド
 keywords:
   - ReSpeaker
+  - Xiao esp32
+  - Voice assistant 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
 last_update:
   date: 6/28/2024
   author: Jessie
-createdAt: '2025-05-27'
-updatedAt: '2026-02-27'
+createdAt: '2024-07-03'
+updatedAt: '2026-02-12'
 url: https://wiki.seeedstudio.com/ja/reSpeaker_usb_v3/
 ---
 
 ## はじめに
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-107990273-respeaker-lite-45font.jpg" alt="pir" width={600} height="auto" /></p>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-    </a>
-</div>
+<table align="center">
+  <tr>
+    <th>reSpeaker Lite 2-Mic Array（XIAO ESP32-S3 搭載）</th>
+    <th>reSpeaker Lite 2-Mic Array</th>
 
-XMOS XU316 AI サウンド & オーディオチップセットを搭載したこの開発ボードは、デュアルマイクアレイを内蔵し、音声認識やボイスコントロールに最適な優れたオーディオ処理性能を発揮します。高度なオンボード・オーディオ・フロントエンド・アルゴリズムを備えた XU316 チップは、干渉除去、エコーキャンセル、ノイズ抑制を提供します。I2S および USB 接続をサポートし、Seeed Studio XIAO ESP32S3 (Sense)、Adafruit QT Py、Raspberry Pi、PC と互換性があります。
+  </tr>
+  <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/904832d1-b0d8-461a-bbbc-cbfa5a1f71a9.jpg" style={{width:500, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-107990273-respeaker-lite-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+
+  </tr>
+  <tr>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+      </a>
+    </div></td>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+      </a>
+    </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+
+    </div></td>
+  </tr>
+</table>
+
+
+XMOS XU316 AI サウンド & オーディオチップセットを搭載したこの開発ボードは、統合デュアルマイクアレイにより音声処理に優れ、音声認識や音声制御に最適です。高度なオンボードオーディオフロントエンドアルゴリズムを備えた XU316 チップは、干渉キャンセレーション、エコーキャンセレーション、ノイズ抑制を提供します。I2S および USB 接続をサポートし、Seeed Studio XIAO ESP32S3 (Sense)、Adafruit QT Py、Raspberry Pi、PC と互換性があります。
 
 ## 特長
 
-- **遠距離音声キャプチャ用デュアルマイクアレイ**：2 つの高性能デジタルマイクにより、2 つのマイク入力を用いてポイントノイズを打ち消すことで、騒がしい環境でも遠距離（最大 3 メートル）の音声やボイスを取得・抽出できます。
-- **オンボード AI ASR アルゴリズム**：XMOS XU-316 AI サウンド & オーディオチップにより駆動され、キットには干渉除去 (IC)、アコースティックエコーキャンセル、ノイズ抑制、Voice-to-Noise Ratio (VNR)、Automatic Gain Control (AGC) の自然言語理解アルゴリズムが含まれており、高品質な音声キャプチャを実現します。
+- **遠距離音声キャプチャ用デュアルマイクアレイ**：2 つの高性能デジタルマイクにより、2 つのマイク入力を用いてポイントノイズを打ち消すことで、騒がしい環境でも最大 3 メートル離れた場所からの音声や声をキャプチャ・抽出します。
+- **オンボード AI ASR アルゴリズム**：XMOS XU-316 AI サウンド & オーディオチップにより、干渉キャンセレーション (IC)、アコースティックエコーキャンセレーション、ノイズ抑制、Voice-to-Noise Ratio (VNR)、Automatic Gain Control (AGC) の自然言語理解アルゴリズムを備え、高品質な音声キャプチャを実現します。
 - **オープンソースを採用**：このボードは I2S 経由で一般的なハードウェアプラットフォーム（XIAO ESP32S3 (Sense)、Adafruit QT Py）と互換性があり、USB（Audio Class 2.0 (UAC2)）経由で Raspberry Pi、PC とも互換性があります。
-- **オンボード RGB LED**：ボードにはプログラマブルな WS2812 RGB LED が搭載されており、カスタムエフェクトをサポートし、アプリケーション向けのビジュアルインターフェースを提供します。
+- **オンボード RGB LED**：ボードにはプログラム可能な WS2812 RGB LED が搭載されており、カスタムエフェクトをサポートし、アプリケーション向けのビジュアルインターフェースを提供します。
 - **外部電源サポート**：このボードは外部 5V 電源をサポートしており、さまざまなシナリオに柔軟に適用できます。
 - **カスタム開発向け DFU**：このボードは DFU-Util を介したカスタムファームウェアの更新をサポートします。
 
@@ -47,7 +71,7 @@ XMOS XU316 AI サウンド & オーディオチップセットを搭載したこ
 |**寸法**|35\*86 mm|
 |**オーディオ出力**|スピーカーコネクタ / 3.5mm ヘッドホンジャック|
 |**最大サンプリングレート**|16Khz|
-|**スピーカー**|5W アンプスピーカーをサポートします。|
+|**スピーカー**|5W アンプスピーカーをサポート。|
 
 ## ハードウェア概要
 
@@ -62,11 +86,11 @@ XMOS XU316 AI サウンド & オーディオチップセットを搭載したこ
 |**1**|**デュアルマイクアレイ**|高品質なオーディオ入力を提供します。|
 | :- | :- | :- |
 |**2**|**電源インジケータライト**|電源投入時に点灯します。|
-|**3**|**RGB ライト**|プログラマブルな WS2812、ビジュアルインターフェースを提供します。|
+|**3**|**RGB ライト**|プログラム可能な WS2812。ビジュアルインターフェースを提供します。|
 |**4**|**ミュートインジケータライト**|ミュートボタンが押されると赤く点灯します。|
 |**5**|**USR ボタン**|ユーザー定義ボタン。|
 |**6**|**ミュートボタン**|押すとオーディオ入力をミュートします。|
-|**7**|[XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) **(オプション)**|さらなる開発と統合のために使用します。|
+|**7**|[XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) **（オプション）**|さらなる開発と統合のために使用します。|
 |**8**|**XU316 コアプロセッサ**|オーディオ処理と伝送を担当します。|
 |**9**|**外部電源供給はんだパッド**|外部 5V 電源をサポートします。|
 |**10**|**USB Type-C ポート**|電源供給とデータ伝送に使用します。|
@@ -78,7 +102,7 @@ XMOS XU316 AI サウンド & オーディオチップセットを搭載したこ
 
 ## はじめてみよう
 
-### 開封してすぐに使う
+### 開封後すぐの使い方
 
 ReSpeaker Lite はプラグアンドプレイのモジュラー音声インターフェースで、ドライバは不要です。PC に接続するだけで、'ReSpeaker Lite' という名前の音声デバイスが表示されます。
 
@@ -93,15 +117,15 @@ ReSpeaker Lite ボードには 2 つのバージョンがあります：
 
 USB サウンドデバイスとして使用するには、USB バージョンのファームウェア（デフォルトファームウェア）を書き込んでください。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-version.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/usb_firmware.png" alt="pir" width={900} height="auto" /></p>
 
 XIAO ESP32S3 と一緒に使用するには、I2S バージョンのファームウェアを書き込んでください。
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/i2s-version.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/i2s_firmware.png" alt="pir" width={900} height="auto" /></p>
 :::
 
 #### 配線
 
-USB ケーブルを使って ReSpeaker Lite ボードを PC に接続します。
+USB ケーブルを使用して ReSpeaker Lite ボードを PC に接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-connect.png" alt="pir" width={500} height="auto" /></p>
 
@@ -125,7 +149,7 @@ import TabItem from '@theme/TabItem';
  変数 Path 内のパスはセミコロン ; で区切られていることに注意してください。
  これにより、コマンドプロンプトで dfu-util をグローバルに実行できるようになります。
 
-- スタートメニューを開いて cmd と入力し、Enter キーを押します。表示されたターミナルで、dfu-util -V コマンドを使って dfu-util.exe のパスが設定されているか確認します：
+- スタートメニューを開いて cmd と入力し、Enter キーを押します。表示されたターミナルで dfu-util.exe のパスが設定されているか、dfu-util -V コマンドで確認します：
 
 ```
 C:\Users\yiping>dfu-util -V
@@ -154,7 +178,7 @@ Found DFU: [2886:0019] ver=0205, devnum=9, cfg=1, intf=0, path="1-1.4.1", alt=0,
 ```
 
 :::tip
-もし次のような "Cannot open DFU device" エラーが出る場合は、この手順に従い続けてください。表示されない場合は、ステップ 3 に進んでファームウェアを書き込んでください。
+もし次のような "Cannot open DFU device" エラーが表示された場合は、この手順を続行してください。表示されない場合は、ステップ 3 に進んでファームウェアを書き込んでください。
 :::
 
 ```
@@ -171,7 +195,7 @@ Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
 
 - [Zadig](https://zadig.akeo.ie/) をインストールして開きます。`Options` -> `List All Devices` をクリックします。
 
-- デバイスリストから `ReSpeaker 2 Mics Array` または `ReSpeaker Lite` または DFU `FACTORY (Interface 3)` を見つけ、`WINUSB v6.x.xxxx.xxxxx` ドライバをインストールします。
+- デバイスリストから `ReSpeaker 2 Mics Array` または `ReSpeaker Lite` または DFU `FACTORY (Interface 3)` を探し、`WINUSB v6.x.xxxx.xxxxx` ドライバをインストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-2mic.png" alt="pir" width={500} height="auto" /></p>
 
@@ -185,7 +209,7 @@ Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
 
 <TabItem value="mac" label="MacOS">
 
-- [brew](https://brew.sh/) を使って dfu-util をインストールします：`brew install dfu-util`
+- [brew](https://brew.sh/) で dfu-util をインストールします：`brew install dfu-util`
 
 - `dfu-util -l` を実行して、ReSpeaker Lite が検出されているか確認します：
 
@@ -207,9 +231,9 @@ Found DFU: [2886:0019] ver=0205, devnum=1, cfg=1, intf=3, path="1-1", alt=0, nam
 
 <TabItem value="lin" label="Linux">
 
-- apt を使って dfu-util をインストールします：`sudo apt install dfu-util`
+- apt を使用して dfu-util をインストールします: `sudo apt install dfu-util`
 
-- `sudo dfu-util -l` を実行して、ReSpeaker Lite が検出されているか確認します：
+- `sudo dfu-util -l` を実行して ReSpeaker Lite が検出されているか確認します:
 
 ```
 pi@raspberrypi:~ $ sudo dfu-util -l
@@ -233,7 +257,7 @@ Found DFU: [2886:0019] ver=0205, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 
 - ReSpeaker ボードを PC に接続します。
 
-- 次のコマンド `dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin` を実行します：
+- 次のコマンド `dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin` を実行します:
   - Linux では `sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin` を実行してください
 
 ```
@@ -269,7 +293,7 @@ Resetting USB to switch back to Run-Time mode
 書き込みが完了したら、ボードを再起動してください。
 :::
 
-- ファームウェアのバージョンを確認します：
+- ファームウェアバージョンを確認します:
 
 ```
 dfu-util -l
@@ -277,26 +301,34 @@ dfu-util -l
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
-## 比較
 
-||[ReSpeaker Lite](https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html)|[ReSpeaker Mic Array v2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2-0.html)|[reSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html)|
-|--|--|--|--|
-||<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/xiao-res.png" alt="pir" width={150} height="auto" /></p>|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/mic-array2.0.png" alt="pir" width={150} height="auto" /></p>|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/mic-pi-hat.png" alt="pir" width={150} height="auto" /></p>|
-|<p style={{textAlign: 'center'}}>コアチップ</p>|<p style={{textAlign: 'center'}}>XMOS XU316</p>|<p style={{textAlign: 'center'}}>XMOS XVF-3000</p>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>マイク</p>|<p style={{textAlign: 'center'}}>PDM MEMS マイク x2</p>|<p style={{textAlign: 'center'}}>PDM MEMS マイク x4</p>|<p style={{textAlign: 'center'}}>アナログ MEMS マイク x2</p>
-|<p style={{textAlign: 'center'}}>音声収音距離</p>|<p style={{textAlign: 'center'}}>3m</p>|<p style={{textAlign: 'center'}}>5m</p>|<p style={{textAlign: 'center'}}>3m</p>|
-|<p style={{textAlign: 'center'}}>感度</p>|<p style={{textAlign: 'center'}}>-26 dBFS</p>|<p style={{textAlign: 'center'}}>-26 dBFS</p>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>音響過負荷点</p>|<p style={{textAlign: 'center'}}>120 dBSPL</p>|<p style={{textAlign: 'center'}}>120 dBSPL</p>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>SNR</p>|<p style={{textAlign: 'center'}}>64 dB</p>|<p style={{textAlign: 'center'}}>63 dB</p>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>オンボード音声処理アルゴリズム</p>|<ul><li>Acoustic Echo Cancellation (AEC)</li><li>Automatic Gain Control (AGC)</li><li>Noise Suppression (NS)</li><li>Interference Cancellation (IC)</li><li>Voice-to-Noise Ratio (VNR)</li></ul>|<ul><li>Acoustic Echo Cancellation (AEC)</li><li>Automatic Gain Control (AGC)</li><li>Noise Suppression (NS)</li><li>Beamforming</li><li>Direction of Arrival (DoA)</li><li>De-Reverberation</li><li>Voice Activity Detection (VAD)</li></ul>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>対応ハードウェア</p>|<ul><li>XIAO ESP32S3(Sense)</li><li>Adafruit QT Py via I2S</li><li>Raspberry Pi</li><li>Linux、macOS、Windows を実行する任意のコンピュータまたは SBC（USB 経由）</li></ul>|<ul><li>Raspberry Pi</li><li>Linux、macOS、Windows を実行する任意のコンピュータまたは SBC（USB 経由）</li></ul>|Raspberry Pi ONLY|
-|<p style={{textAlign: 'center'}}>最適な用途</p>|指向性のある音声収音。線形または細長い構成に最適|全方向の音声収音と位置特定。開放的で多方向の環境の中心に配置するのが最適|指向性のある音声収音。線形または細長い構成に最適|
+## 録音と再生 
+
+### Audacity のセットアップ 
+
+1. **Audacity** を開きます
+2. **Audio Setup > Audio Settings** に移動します
+
+
+3. 次のように設定します:
+   - **Host**: `Windows WASAPI`
+   - **Recording Device**: `reSpeaker Lite`
+   - **Channels**: `2 (Stereo)`
+   - **Sample Rate**: `16000 Hz`（**Project** と **Default Sample Rate** の両方）
+   - **Sample Format**: `32-bit`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/audio_settings.png" alt="pir" width={600} height="auto"/></p>
+
+1. **OK** をクリックします
+2. 準備完了です — 録音を開始しましょう！
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/audio_recording .png" alt="pir" width={600} height="auto"/></p>
 
 ### FAQ
 
 - **`ReSpeaker Lite` サウンドデバイスが見つかりません。**
 
- ファームウェアのバージョンを確認し、ファームウェアが USB バージョンで、`2.0.5` 以上であることを確認してください。
+ ファームウェアバージョンを確認し、ファームウェアが USB バージョンで、かつ `2.0.5` 以上であることを確認してください。
 
  ```
  dfu-util -l
@@ -304,7 +336,7 @@ dfu-util -l
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
- USB バージョンでない場合は、[this step](https://wiki.seeedstudio.com/ja/reSpeaker_usb_v3/#flash-firmware) に従ってファームウェアを書き込んでください。
+ USB バージョンでない場合は、[この手順](https://wiki.seeedstudio.com/ja/reSpeaker_usb_v3/#flash-firmware)に従ってファームウェアを書き込んでください。
 
 - **USB ファームウェアを書き込んだ後、Windows で ReSpeaker Lite USB サウンドデバイスを検出できませんか？**
 
@@ -318,4 +350,4 @@ dfu-util -l
 
 [ReSpeaker Lite Github](https://github.com/respeaker/ReSpeaker_Lite/)
 
-[ReSpeaker Lite 3D file](https://files.seeedstudio.com/wiki/respeakerv3/ReSpeakerLitev1.1.step)
+[ReSpeaker Lite 3D ファイル](https://files.seeedstudio.com/wiki/respeakerv3/ReSpeakerLitev1.1.step)
