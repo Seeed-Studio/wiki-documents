@@ -291,8 +291,8 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAdqGsOC33XuaA6i60KX2k6s">Download</a></td>
-      <td>6d9086d692a0f40fad02c75df1ff56ae<br />d9b368320bb2bfe3a777692513529697</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAU2JC-fRK_GfqDy8ureIs1o?e=hYSAit">Download</a></td>
+      <td>f09b3465e7de1032f625ae0f816a2f3c<br />fa2a470ee5fdd215840375529a8771db</td>
     </tr>
   </tbody>
 </table>

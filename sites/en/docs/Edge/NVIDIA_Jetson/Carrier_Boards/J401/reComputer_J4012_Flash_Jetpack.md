@@ -919,30 +919,30 @@ The cooling capacity of the reComputer J401 carrier board is insufficient to sup
     <tr>
       <td>Orin NX 16GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD1BsWy20dpQ6-ucjqOUDqFAT4hAvTcstZkiuLG5zDv5HQ" target="_blank" rel="noopener noreferrer">Download</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9bMEFvEEnR7OeirOHP2gjAZ2b45CF3JpF6OXpfD6AJHU?e=KQ6qLP" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
-      <td>E456356F81144DFA1000EC3DF18D30BC</td>
+      <td>af580015dc79643e22e50a4d93dd4686066110ad1fd02b2f47bce7b6401e5a34</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCFcg4VpxKqQ5TO_tbp2f9dAXJ_185iE1RvU3KDbuw7qX4" target="_blank" rel="noopener noreferrer">Download</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBKvtO5t1WvS7mgxM_kACJQAS8WIUeSEd4FbLKUoiHDsbo?e=JqKfc4" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
-      <td>E456356F81144DFA1000EC3DF18D30BC</td>
+      <td>e734088d376fbbca403ba5d8afa9233869f6dcc2c5dde4ccb23efddd171060c1</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBjTuQE8nJZQKuHW0S-d_yvAY31NHNqYIV31T5nmyUXUJM" target="_blank" rel="noopener noreferrer">Download</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDnUx1X8BFCQ5Axc7GIX-PUAcb7fq9a6ottMX6tSXQwlNI?e=e9TZt0" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
-      <td>35c75bf18416287b4ae2e450f3207b3fd33d765832cd6f1ed86d62d354775a81</td>
+      <td>ac1175f73db4897c7d1e766231adacefd28fd6a329e05019d7550a7ae7b960f9</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCG0vZAYpXDTJBrWKaXycEaAc85mqMbAdHQlh5o0tFrXAE" target="_blank" rel="noopener noreferrer">Download</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCvMMXKYpipQZjKiVTMTnZNAec9U1MS4SHp6tspPzxXBlE?e=D80Pi5" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
-      <td>ee0959c32df50ed41ed7d2940344c69d93b5212b6222fb6451af7b71bad7749e</td>
+      <td>95ffcec87f0e7c8d440aa2da5202c4ed691d39df7560cdaf6e32131c686be74f</td>
     </tr>
   </tbody>
 </table>
@@ -958,7 +958,7 @@ On an Ubuntu host machine, open the terminal and run the command `sha256sum <Fil
 
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-orin-nx-16g-j401-7.2.0-39.2.0-2026-06-18.tar.gz
+# For example: sudo tar xpf mfi_recomputer-orin-nx-16g-j401-7.2.0-39.2.0-2026-08-28.tar.gz
 ```
 
 **Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD:
