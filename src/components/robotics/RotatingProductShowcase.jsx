@@ -16,6 +16,9 @@ const COPY = {
     previous: 'Previous product',
     next: 'Next product',
     instructions: 'Scroll, drag, or use the arrow keys to rotate. Click a card to open it, or press Space to open and close.',
+    gridInstructions: 'Choose a product from the two-column overview to focus it and open its learning paths.',
+    showGrid: 'Show all products',
+    showCarousel: 'Return to carousel',
     of: 'of',
   },
   cn: {
@@ -23,12 +26,16 @@ const COPY = {
     previous: '上一个产品',
     next: '下一个产品',
     instructions: '在卡片区域滚动、拖动或使用方向键切换；点击卡片展开，按空格键展开或收回。',
+    gridInstructions: '从双列总览中选择产品，卡片会聚焦到中央并展开两侧学习路径。',
+    showGrid: '展开双列',
+    showCarousel: '返回轮播',
     of: '共',
   },
 };
 
 const COLLAPSE_DELAY = 560;
 const OPEN_AFTER_ROTATION_DELAY = 620;
+const GRID_EXIT_DELAY = 520;
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
@@ -204,12 +211,15 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
   const stageRef = useRef(null);
   const activeIndexRef = useRef(0);
   const openIndexRef = useRef(null);
+  const gridViewRef = useRef(false);
   const dragRef = useRef({active: false, startX: 0, currentX: 0});
   const suppressClickRef = useRef(false);
   const wheelRef = useRef({amount: 0, lastMove: 0});
   const transitionTimersRef = useRef(new Set());
   const [activeIndex, setActiveIndex] = useState(0);
   const [openIndex, setOpenIndex] = useState(null);
+  const [isGridView, setIsGridView] = useState(false);
+  const [gridSelectionIndex, setGridSelectionIndex] = useState(null);
   const [stageHeight, setStageHeight] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -234,6 +244,11 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
   const updateOpenIndex = useCallback((index) => {
     openIndexRef.current = index;
     setOpenIndex(index);
+  }, []);
+
+  const updateGridView = useCallback((nextValue) => {
+    gridViewRef.current = nextValue;
+    setIsGridView(nextValue);
   }, []);
 
   const switchToCard = useCallback((requestedIndex, openAfter = false) => {
@@ -279,6 +294,67 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
     switchToCard(index, true);
   }, [switchToCard]);
 
+  const selectGridCard = useCallback((index, cardElement) => {
+    if (gridSelectionIndex !== null) return;
+    clearTransitionTimers();
+    updateOpenIndex(null);
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      activeIndexRef.current = index;
+      setActiveIndex(index);
+      updateGridView(false);
+      updateOpenIndex(index);
+      return;
+    }
+
+    const stageRect = stageRef.current?.getBoundingClientRect();
+    const cardRect = cardElement?.getBoundingClientRect();
+    if (stageRect && cardRect) {
+      const rootFontSize = Number.parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      const targetWidth = Math.min(stageRect.width * 0.6, rootFontSize * 58);
+      const targetHeight = targetWidth * (9 / 16);
+      const translateX = stageRect.left + stageRect.width / 2 - (cardRect.left + cardRect.width / 2);
+      const translateY = stageRect.top + targetHeight / 2 - (cardRect.top + cardRect.height / 2);
+      cardElement.style.setProperty('--rp-grid-select-x', `${translateX.toFixed(2)}px`);
+      cardElement.style.setProperty('--rp-grid-select-y', `${translateY.toFixed(2)}px`);
+      cardElement.style.setProperty('--rp-grid-select-scale', `${(targetWidth / cardRect.width).toFixed(4)}`);
+    }
+    setGridSelectionIndex(index);
+
+    scheduleTransition(() => {
+      activeIndexRef.current = index;
+      setActiveIndex(index);
+      updateGridView(false);
+      setGridSelectionIndex(null);
+      cardElement?.style.removeProperty('--rp-grid-select-x');
+      cardElement?.style.removeProperty('--rp-grid-select-y');
+      cardElement?.style.removeProperty('--rp-grid-select-scale');
+      scheduleTransition(() => updateOpenIndex(index), OPEN_AFTER_ROTATION_DELAY);
+    }, GRID_EXIT_DELAY);
+  }, [clearTransitionTimers, gridSelectionIndex, scheduleTransition, updateGridView, updateOpenIndex]);
+
+  const toggleGridView = useCallback(() => {
+    if (gridSelectionIndex !== null) return;
+    clearTransitionTimers();
+
+    if (gridViewRef.current) {
+      updateGridView(false);
+      return;
+    }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const showGrid = () => updateGridView(true);
+    if (openIndexRef.current !== null) {
+      updateOpenIndex(null);
+      if (!reduceMotion) {
+        scheduleTransition(showGrid, COLLAPSE_DELAY);
+        return;
+      }
+    }
+    showGrid();
+  }, [clearTransitionTimers, gridSelectionIndex, scheduleTransition, updateGridView, updateOpenIndex]);
+
   useEffect(() => () => clearTransitionTimers(), [clearTransitionTimers]);
 
   useEffect(() => {
@@ -289,6 +365,10 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
   }, [activeIndex, count, updateOpenIndex]);
 
   useEffect(() => {
+    if (isGridView) {
+      setStageHeight(null);
+      return undefined;
+    }
     const activeCard = rootRef.current?.querySelector(
       '.rotating-product-card[data-active="true"]',
     );
@@ -315,17 +395,17 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
       cancelAnimationFrame(frameId);
       observer.disconnect();
     };
-  }, [activeIndex, openIndex]);
+  }, [activeIndex, isGridView, openIndex]);
 
   useEffect(() => {
     rootRef.current?.querySelectorAll('.rotating-product-card').forEach((card, index) => {
       const distance = Math.abs(getCircularOffset(index, activeIndex, count));
-      const isUnavailable = distance > 1;
+      const isUnavailable = !isGridView && distance > 1;
       card.inert = isUnavailable;
       const summary = card.querySelector(':scope > .product-head');
       if (summary) summary.tabIndex = isUnavailable ? -1 : 0;
     });
-  }, [activeIndex, count, openIndex]);
+  }, [activeIndex, count, isGridView, openIndex]);
 
   useEffect(() => {
     const page = rootRef.current?.closest('.robotics-page');
@@ -373,6 +453,9 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
   }, []);
 
   const handleKeyDown = (event) => {
+    if (gridViewRef.current && (event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === ' ' || event.code === 'Space')) {
+      return;
+    }
     if (event.key === 'ArrowLeft') {
       event.preventDefault();
       move(-1);
@@ -391,7 +474,7 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
   };
 
   const handleWheel = useCallback((event) => {
-    if (openIndexRef.current !== null) {
+    if (openIndexRef.current !== null || gridViewRef.current) {
       wheelRef.current.amount = 0;
       return;
     }
@@ -420,7 +503,11 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
 
   const handlePointerDown = (event) => {
     const target = event.target instanceof Element ? event.target : null;
-    if (event.button !== 0 || target?.closest('a, .rotating-showcase-controls button')) return;
+    if (
+      event.button !== 0
+      || gridViewRef.current
+      || target?.closest('a, .rotating-showcase-controls button, .rotating-showcase-view-toggle')
+    ) return;
     dragRef.current = {active: true, startX: event.clientX, currentX: event.clientX};
     suppressClickRef.current = false;
   };
@@ -457,7 +544,7 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
   return (
     <div
       ref={rootRef}
-      className={`rotating-showcase${openIndex !== null ? ' is-expanded' : ''}${isDragging ? ' is-dragging' : ''}`}
+      className={`rotating-showcase${openIndex !== null ? ' is-expanded' : ''}${isGridView ? ' is-grid-view' : ''}${gridSelectionIndex !== null ? ' is-grid-selecting' : ''}${isDragging ? ' is-dragging' : ''}`}
       role="region"
       aria-roledescription="carousel"
       aria-label={copy.label}
@@ -468,7 +555,20 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
       onPointerUp={finishPointerGesture}
       onPointerCancel={finishPointerGesture}
     >
-      <p className="rotating-showcase-instructions">{copy.instructions}</p>
+      <div className="rotating-showcase-toolbar">
+        <p className="rotating-showcase-instructions">
+          {isGridView ? copy.gridInstructions : copy.instructions}
+        </p>
+        <button
+          type="button"
+          className="rotating-showcase-view-toggle"
+          aria-pressed={isGridView}
+          onClick={toggleGridView}
+        >
+          <span aria-hidden="true">{isGridView ? '↶' : '▦'}</span>
+          {isGridView ? copy.showCarousel : copy.showGrid}
+        </button>
+      </div>
       <div
         ref={stageRef}
         className="product-stack rotating-showcase-stage"
@@ -489,6 +589,7 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
             '--rp-carousel-scale': scale,
             '--rp-carousel-opacity': opacity,
             '--rp-carousel-z-index': 20 - distance,
+            '--rp-grid-delay': `${index * 55}ms`,
           };
 
           return (
@@ -501,7 +602,8 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
               data-expanded={isOpen ? 'true' : 'false'}
               data-carousel-index={index}
               data-carousel-distance={distance}
-              aria-hidden={distance > 1 ? 'true' : undefined}
+              data-grid-selected={gridSelectionIndex === index ? 'true' : 'false'}
+              aria-hidden={!isGridView && distance > 1 ? 'true' : undefined}
             >
               <button
                 type="button"
@@ -512,7 +614,11 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
                     event.preventDefault();
                     return;
                   }
-                  selectCard(index);
+                  if (isGridView) {
+                    selectGridCard(index, event.currentTarget.closest('.rotating-product-card'));
+                  } else {
+                    selectCard(index);
+                  }
                 }}
               >
                 {summaryChildren}

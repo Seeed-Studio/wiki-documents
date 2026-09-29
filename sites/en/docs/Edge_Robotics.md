@@ -1,6 +1,7 @@
 ---
 description: Seeed Studio robotics docs and learning paths.
 title: AI Robotics Wiki
+hide_title: true
 keywords:
   - robotics
   - nvidia
@@ -25,7 +26,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 import RotatingProductShowcase from '@site/src/components/robotics/RotatingProductShowcase';
 import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
-# AI Robotics Wiki
+<h1 className="robotics-page-title">AI Robotics Wiki</h1>
 
 <div className="robotics-page">
   <RoboticsQuote locale="en" />
