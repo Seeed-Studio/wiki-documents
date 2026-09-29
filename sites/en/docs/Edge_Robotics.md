@@ -29,7 +29,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 <h1 className="robotics-page-title">AI Robotics Wiki</h1>
 
 <div className="robotics-page">
-  <RoboticsQuote locale="en" />
+  <RoboticsQuote />
 
   <section className="hero-panel">
     <div>
@@ -47,7 +47,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
   </div>
 
   <section id="robot-kits" className="section-block">
-    <RotatingProductShowcase locale="en">
+    <RotatingProductShowcase>
 
 <details id="rebot-rs" className="product-card rebot product-card--cover">
   <summary className="product-head">
