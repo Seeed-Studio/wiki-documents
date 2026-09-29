@@ -67,7 +67,7 @@ Open **MeshMap** in your web browser: [MeshMap Link](https://meshmap.net/).
 
 You will see all nodes on the map. Nodes reported **via MapReport** are direct updates from the device. Nodes reported **via other nodes** are relayed updates.
 
-Click on any node to view detailed information (device ID, battery level, etc.), mesh route and signal coverage
+Click on any node to view detailed information (device ID, battery level, etc.), mesh route and signal coverage.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMapPositionDisplay.png" style={{width:900, height:'auto'}}/></div>
 
@@ -80,7 +80,7 @@ Click on any node to view detailed information (device ID, battery level, etc.),
    - Enable **OK to MQTT**.
 
 **MQTT Settings**
-   - Enable MQTT
+   - Enable MQTT.
    - Configure the following parameters:
      - Address: `mqtt.meshtastic.liamcottle.net`
      - Username: `uplink`
@@ -96,7 +96,7 @@ Click on any node to view detailed information (device ID, battery level, etc.),
 
 Open **Liam Cottle's Meshtastic Map** in your web browser: [Liam Cottle's Map Link](https://meshtastic.liamcottle.net/). You will see all nodes displayed on the map.
 
-Click on any node to view: detailed information about the device, signal range, historical routes and previous location updates
+Click on any node to view: detailed information about the device, signal range, historical routes and previous location updates.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/LiamPosition.png" style={{width:600, height:'auto'}}/></div>
 
