@@ -14,9 +14,7 @@ export default function DocRootLayout({children}: Props): ReactNode {
   const {pathname} = useLocation();
   const [hiddenSidebarContainer, setHiddenSidebarContainer] = useState(false);
   const normalizedPath = pathname.replace(/\/+$/, '');
-  const isRoboticsLandingPage =
-    normalizedPath === '/robotics_page' ||
-    normalizedPath === '/cn/robotics_page';
+  const isRoboticsLandingPage = normalizedPath.endsWith('/robotics_page');
 
   useEffect(() => {
     document.documentElement.classList.toggle(
