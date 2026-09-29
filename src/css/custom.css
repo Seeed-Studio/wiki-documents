@@ -30,6 +30,16 @@
 	--docusaurus-highlighted-code-line-bg: rgb(80, 80, 100);
 }
 
+/* Soft rounded media treatment for robotics documentation pages. */
+.robotics-doc .markdown img:not(.nav-icon):not([src*='img.shields.io']) {
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+}
+
+[data-theme='dark'] .robotics-doc .markdown img:not(.nav-icon):not([src*='img.shields.io']) {
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
 .navbar_doc_items {
 	display: inline-block;
 	color: var(--text-color);

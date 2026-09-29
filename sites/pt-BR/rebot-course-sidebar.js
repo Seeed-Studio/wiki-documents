@@ -102,7 +102,7 @@ const sidebars = {
   // Standalone course sidebar.
   RebotCourseSidebar: courseSidebar(),
 
-  // reBot B601-RS: Quick Start & SDK / Applications / Course (jumps to course).
+  // reBot-RS: Quick Start & SDK / Applications / Course (jumps to course).
   RebotRsSidebar: [
     backToRobotics(),
     {
@@ -112,10 +112,10 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        `${RS}/pt_reBot_Arm_B601_RS_Getting_Started`,
-        `${RS}/pt_reBot_Arm_B601_RS_Lerobot`,
-        `${RS}/pt_reBot_Arm_B601_RS_pinocchio`,
-        `${RS}/pt_reBot_Arm_B601_RS_control_mit`,
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Getting_Started`, label: 'Início Rápido reBot-RS' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Lerobot`, label: 'reBot-RS com LeRobot' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_pinocchio`, label: 'reBot-RS com Pinocchio' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_control_mit`, label: 'SDK de Motor reBot-RS' },
       ],
     },
     {
@@ -125,17 +125,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        `${RS}/pt_reBot_Arm_B601_RS_Grasping_Demo`,
-        `${RS}/pt_reBot_Arm_B601_RS_ROS2_Integration`,
-        `${RS}/pt_reBot_Arm_B601_RS_isaacsim`,
-        `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`,
-        `${RS}/pt_reBot_Arm_B601_RS_Agent`,
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS com Pega Visual' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS com ROS2' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS com Isaac Sim' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS com Controlador Web' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS com Agent Claw' },
       ],
     },
     courseLink(),
   ],
 
-  // reBot B601-DM: Quick Start & SDK / Applications / Course (jumps to course).
+  // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
   RebotDmSidebar: [
     backToRobotics(),
     {
@@ -145,9 +145,9 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        `${DM}/pt_reBot_Arm_B601_DM_Getting_Started`,
-        `${DM}/pt_reBot_Arm_B601_DM_Lerobot`,
-        `${DM}/pt_reBot_Arm_B601_DM_pinocchio`,
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Getting_Started`, label: 'Início Rápido reBot-DM' },
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Lerobot`, label: 'reBot-DM com LeRobot' },
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_pinocchio`, label: 'reBot-DM com Pinocchio' },
       ],
     },
     {
@@ -157,10 +157,10 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        `${DM}/pt_reBot_Arm_B601_DM_Grasping_Demo`,
-        `${DM}/pt_reBot_Arm_B601_DM_ROS2_Integration`,
-        `${DM}/pt_reBot_Arm_B601_DM_isaacsim`,
-        `${DM}/pt_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`,
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Grasping_Demo`, label: 'Pega Visual reBot-DM' },
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM com ROS2' },
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM com Isaac Sim' },
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM com Controlador Web' },
       ],
     },
     courseLink(),

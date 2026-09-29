@@ -106,11 +106,11 @@ const ITEMS = [
 ];
 
 const ARIA_LABELS = {
-  en: 'reBot Arm B601-DM docs navigation',
-  cn: 'reBot Arm B601-DM 文档导航',
-  ja: 'reBot Arm B601-DM ドキュメントナビゲーション',
-  es: 'Navegación de documentación de reBot Arm B601-DM',
-  'pt-br': 'Navegação da documentação do reBot Arm B601-DM',
+  en: 'reBot-DM docs navigation',
+  cn: 'reBot-DM 文档导航',
+  ja: 'reBot-DM ドキュメントナビゲーション',
+  es: 'Navegación de documentación de reBot-DM',
+  'pt-br': 'Navegação da documentação do reBot-DM',
 };
 
 export default function RebotDmDocNav() {
