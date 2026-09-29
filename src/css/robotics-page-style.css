@@ -179,6 +179,14 @@ html.robotics-landing-page main [class*='docItemCol'] {
   }
 }
 
+/* Hide docs-only footer and paginator on the Robotics landing page. */
+main:has(.robotics-page) .theme-doc-footer,
+main:has(.robotics-page) .pagination-nav,
+html.robotics-landing-page .theme-doc-footer,
+html.robotics-landing-page .pagination-nav {
+  display: none;
+}
+
 .robotics-page * { box-sizing: border-box; }
 .robotics-page a { -webkit-tap-highlight-color: transparent; }
 .robotics-page a:focus-visible, .robotics-page summary:focus-visible { outline: 3px solid var(--rp-accent-border); outline-offset: 3px; }

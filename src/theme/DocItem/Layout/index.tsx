@@ -80,25 +80,13 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
   } = frontMatter as any;
 
   const location = useLocation();
-  const normalizedPath = location.pathname.replace(/\/+$/, '');
   const isRoboticsDoc = Boolean(
     (metadata as { source?: string }).source?.startsWith('@site/docs/Robotics/'),
   );
-  const isRoboticsLandingPage = normalizedPath.endsWith('/robotics_page');
 
   useEffect(() => {
     judgeHomePath();
   }, [location.pathname]);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle(
-      'robotics-landing-page',
-      isRoboticsLandingPage,
-    );
-    return () => {
-      document.documentElement.classList.remove('robotics-landing-page');
-    };
-  }, [isRoboticsLandingPage]);
 
   return (
     <div className="row">
@@ -112,7 +100,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
       <div
         className={clsx(
           'col',
-          !isRoboticsLandingPage && !docTOC.hidden && styles.docItemCol,
+          !docTOC.hidden && styles.docItemCol,
         )}
         data-sku={sku || ''}
         data-doc-type={docType || ''}
@@ -134,9 +122,9 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
             )}
 
             <DocItemContent>{children}</DocItemContent>
-            {!isRoboticsLandingPage && <DocItemFooter />}
+            <DocItemFooter />
           </article>
-          {!isRoboticsLandingPage && <DocItemPaginator />}
+          <DocItemPaginator />
         </div>
         {!hideComment && <Comment />}
       </div>

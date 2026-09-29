@@ -1,4 +1,5 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import {useLocation} from '@docusaurus/router';
 
 const QUOTES = {
   en: [
@@ -34,7 +35,87 @@ const QUOTES = {
     {text: '足够先进的技术，看起来就像魔法。', author: 'Arthur C. Clarke'},
     {text: '未来已经到来，只是还没有均匀分布。', author: 'William Gibson'},
   ],
+  ja: [
+    {text: '今日の科学は明日の技術である。', author: 'Edward Teller'},
+    {text: '未来を予測する最良の方法は、それを発明することだ。', author: 'Alan Kay'},
+    {
+      text: '私たちには少し先しか見えないが、そこにはなすべきことがたくさんある。',
+      author: 'Alan Turing',
+    },
+    {text: '今こそ、恐れを減らすために、より深く理解するときだ。', author: 'Marie Curie'},
+    {text: 'どこかで、何か素晴らしいものが発見されるのを待っている。', author: 'Carl Sagan'},
+    {text: '私が作れないものは、理解していない。', author: 'Richard Feynman'},
+    {text: '想像力は知識よりも重要である。', author: 'Albert Einstein'},
+    {
+      text: '科学が知識を集める速度は、社会が知恵を集める速度より速い。',
+      author: 'Isaac Asimov',
+    },
+    {
+      text: '十分に発達した科学技術は、魔法と見分けがつかない。',
+      author: 'Arthur C. Clarke',
+    },
+    {text: '未来はすでにここにある。ただ均等に行き渡っていないだけだ。', author: 'William Gibson'},
+  ],
+  es: [
+    {text: 'La ciencia de hoy es la tecnología de mañana.', author: 'Edward Teller'},
+    {text: 'La mejor manera de predecir el futuro es inventarlo.', author: 'Alan Kay'},
+    {
+      text: 'Solo podemos ver una corta distancia hacia adelante, pero allí hay mucho que debemos hacer.',
+      author: 'Alan Turing',
+    },
+    {text: 'Ahora es el momento de comprender más, para temer menos.', author: 'Marie Curie'},
+    {text: 'En algún lugar, algo increíble espera ser descubierto.', author: 'Carl Sagan'},
+    {text: 'Lo que no puedo crear, no lo entiendo.', author: 'Richard Feynman'},
+    {text: 'La imaginación es más importante que el conocimiento.', author: 'Albert Einstein'},
+    {
+      text: 'La ciencia reúne conocimiento más rápido de lo que la sociedad reúne sabiduría.',
+      author: 'Isaac Asimov',
+    },
+    {
+      text: 'Cualquier tecnología suficientemente avanzada es indistinguible de la magia.',
+      author: 'Arthur C. Clarke',
+    },
+    {
+      text: 'El futuro ya está aquí; simplemente no está distribuido de manera uniforme.',
+      author: 'William Gibson',
+    },
+  ],
+  'pt-br': [
+    {text: 'A ciência de hoje é a tecnologia de amanhã.', author: 'Edward Teller'},
+    {text: 'A melhor maneira de prever o futuro é inventá-lo.', author: 'Alan Kay'},
+    {
+      text: 'Só conseguimos enxergar uma pequena distância à frente, mas já vemos muito que precisa ser feito.',
+      author: 'Alan Turing',
+    },
+    {text: 'Agora é a hora de compreender mais, para que possamos temer menos.', author: 'Marie Curie'},
+    {
+      text: 'Em algum lugar, algo incrível está esperando para ser descoberto.',
+      author: 'Carl Sagan',
+    },
+    {text: 'Aquilo que eu não consigo criar, eu não entendo.', author: 'Richard Feynman'},
+    {text: 'A imaginação é mais importante que o conhecimento.', author: 'Albert Einstein'},
+    {
+      text: 'A ciência acumula conhecimento mais rápido do que a sociedade acumula sabedoria.',
+      author: 'Isaac Asimov',
+    },
+    {
+      text: 'Qualquer tecnologia suficientemente avançada é indistinguível da magia.',
+      author: 'Arthur C. Clarke',
+    },
+    {
+      text: 'O futuro já chegou; apenas ainda não está distribuído de forma uniforme.',
+      author: 'William Gibson',
+    },
+  ],
 };
+
+function getLocaleFromPath(pathname) {
+  if (pathname === '/cn' || pathname.startsWith('/cn/')) return 'cn';
+  if (pathname === '/ja' || pathname.startsWith('/ja/')) return 'ja';
+  if (pathname === '/es' || pathname.startsWith('/es/')) return 'es';
+  if (pathname === '/pt-br' || pathname.startsWith('/pt-br/')) return 'pt-br';
+  return 'en';
+}
 
 const QUOTE_INTERVAL = 10000;
 const QUOTE_TRANSITION = 360;
@@ -52,7 +133,9 @@ function pickNextIndex(currentIndex, count) {
 const useQuoteLayoutEffect =
   typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
-export default function RoboticsQuote({locale = 'en'}) {
+export default function RoboticsQuote() {
+  const location = useLocation();
+  const locale = getLocaleFromPath(location.pathname);
   const quotes = QUOTES[locale] || QUOTES.en;
   const rootRef = useRef(null);
   const [quoteIndex, setQuoteIndex] = useState(0);
