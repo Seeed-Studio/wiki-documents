@@ -1,6 +1,6 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course 第7章 — ベンダー横断 CAN モーター制御ライブラリ MotorBridge と、Web および Python からの DM / RS モーター制御方法。"
-title: 第7章 - MotorBridge モーター制御ライブラリ
+description: Seeed Physical AI ビギナーコース第 7 章 — MotorBridge、ベンダー横断 CAN モーター制御ライブラリ、および Web と Python から DM モーターと RS モーターを制御する方法。
+title: 第 7 章 - MotorBridge モーター制御ライブラリ
 keywords:
   - reBot
   - MotorBridge
@@ -10,20 +10,19 @@ keywords:
   - Python
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_7
+slug: /rebot_physical_ai_course_chapter_7
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_7/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_7/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -31,11 +30,11 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 <section className="doc-hero">
   <div>
-    <span className="eyebrow">ステージ 2 · 第7章 · 実践</span>
+    <span className="eyebrow">ステージ 2 · 第 7 章 · 実践</span>
     <h2>7. MotorBridge モーター制御ライブラリ</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course 第7章 — ベンダー横断
-      CAN モーター制御ライブラリ MotorBridge と、Web および Python から DM / RS モーターを制御する方法について説明します。
+      Seeed Physical AI ビギナーコース第 7 章 — MotorBridge、ベンダー横断
+      CAN モーター制御ライブラリ、および Web と Python から DM モーターと RS モーターを制御する方法。
     </p>
     <div className="hero-actions">
       <a href="#install">インストール</a>
@@ -43,16 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#rs-motors">RS モーター</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>この章で学ぶこと</strong>
-    <span>7.1 MotorBridge とは？</span>
-    <span>7.2 インストール環境</span>
-    <span>7.3 MotorBridge による DM モーター制御</span>
-    <span>7.4 MotorBridge による RS モーター制御</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 7.1 MotorBridge とは？
 
@@ -62,21 +52,21 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <h2>7.1 MotorBridge とは？</h2>
   </div>
 
-MotorBridge は、ロボットアーム／ヒューマノイドロボット向けの一体型関節モーターを対象とした、**Seeed Studio によるベンダー横断・統一 CAN モーター制御ソフトウェアスタック**です。下位層には高性能な Rust コアを採用し、標準 C ABI インターフェースを提供、さらに Python / C++ / ROS2 の言語バインディングを備えています。1 セットの API で、市場にある主流の一体型関節モーターを駆動できます。
+MotorBridge は、ロボットアーム／ヒューマノイドロボット向けの一体型関節モーターを対象とした、**ベンダー横断の統一 CAN モーター制御ソフトウェアスタック**であり、**Seeed Studio** によってオープンソース化されています。下位層には高性能な Rust コアを採用し、標準的な C ABI インターフェースを提供し、Python/C++/ROS2 の言語バインディングを備えています。1 セットの API で、市場にある主流の一体型関節モーターを駆動できます。
 
 :::tip コアとなる位置付け
-**1 つのコードで、すべての主流関節モーターに対応し、各ベンダー独自の CAN プロトコル差異を吸収** — ロボットアーム開発における、複数モーターブランド対応の煩雑さという課題をピンポイントで解決します。
+**1 セットのコードで、すべての主流関節モーターに対応し、各ベンダー固有の CAN プロトコルの違いを吸収** — ロボットアーム開発における、複数モーターブランド対応の煩雑さというペインポイントをピンポイントで解決します。
 :::
 
-**解決する業界のペインポイント：**
+**どのような業界のペインポイントを解決するか：**
 
-市販の一体型関節（Damiao、RobStride、MyActuator など）は、それぞれ独自の CAN プロトコルやコマンド形式、制御モードを持ち、互換性がまったくありません。MotorBridge はその上に抽象化レイヤーを提供し、**上位 API 呼び出しは完全に統一され、下位層でベンダーごとのプロトコルに自動適応**します。モーターを切り替える際は、ベンダーのパラメータを変更するだけで、モーション制御ロジックを変更する必要はありません。
+市販の一体型関節（Damiao、RobStride、MyActuator など）は、それぞれ独自の CAN プロトコル、コマンド形式、制御モードを持ち、互換性がまったくありません。MotorBridge はその上に抽象化レイヤーを提供し、**上位の API 呼び出しは完全に統一され、下位層でベンダーごとのプロトコルに自動適応します**。モーターを切り替える際は、ベンダーのパラメータを変更するだけでよく、モーション制御ロジックを変更する必要はありません。
 
 具体的には、次の問題を解決します：
 
 1. モーターブランドを変更するたびに、CAN 通信および 3 ループ制御コード一式を書き直す必要がある；
-2. 開発者は 5 つ以上の独自プロトコルを同時に学習し、複数のコードライブラリを保守しなければならない；
-3. 統一されたデバッグ／キャリブレーション／可視化ツールがなく、各モーター付属のツールは相互運用できない；
+2. 開発者は 5 種類以上の独自プロトコルを同時に学習し、複数のコードライブラリを保守する必要がある；
+3. 統一されたデバッグ・キャリブレーション・可視化ツールがなく、各モーター付属のツールは共通化されていない；
 4. Python ネイティブ制御はリアルタイム性が低く、GC ポーズがロボットのモーション制御に影響する。
 
 | モーターベンダー | バスタイプ | 対応制御モード |
@@ -87,25 +77,25 @@ MotorBridge は、ロボットアーム／ヒューマノイドロボット向�
 | HighTorque | CAN2.0 | MIT、位置-速度、純粋速度、力-位置制御 |
 | Hexfellow | CAN-FD | MIT、位置-速度 |
 
-### 全体レイヤー構成（上位から下位へ）
+### 全体のレイヤードアーキテクチャ（上位から下位へ）
 
 **アプリケーション層（ユーザー開発層）：**
 
-Python、C++（開発中）、ROS2 ノードをサポートします。開発者は統一 API を直接呼び出すだけで、下位の CAN プロトコルを意識する必要はありません。
+Python、C++（開発中）、ROS2 ノードをサポートします。開発者は統一された API を直接呼び出し、下位の CAN プロトコルを意識する必要はありません。
 
-- Python：ctypes で Rust でコンパイルされた動的ライブラリをバインドし、軽量かつ性能ロスなし；
+- Python：ctypes で Rust でコンパイルされた動的ライブラリをバインドし、軽量で性能ロスなし；
 - 補助ツール：コマンドライン CLI、Web 可視化コンソール MotorBridge-Studio。
 
 ### 従来のベンダー専用 SDK と比べた利点
 
 | 比較項目 | ベンダー純正 SDK | MotorBridge |
 | :--- | :--- | :--- |
-| 複数モーターブランド対応 | 単一ブランド専用で、モーター切り替え時はコードを書き直し | 統一 API で、モーター変更時はベンダーパラメータを変えるだけ |
-| リアルタイム性能 | Python 実装で GC によるスタッタリングが発生し、タイミングが不安定 | Rust 下位層で GC なし、高いリアルタイム性能 |
-| デバッグツール | それぞれ独立した上位ツールで、操作がバラバラ | 統一 CLI + Web 可視化コンソール |
-| マルチ言語対応 | 多くは Python のみ提供 | Python / C++ / ROS2 で下位ライブラリを共有 |
-| プロトコルのカプセル化 | 開発者が CAN メッセージを手動でパースする必要あり | 下位 CAN プロトコルの詳細を完全に隠蔽 |
-| クロスプラットフォーム | 対応状況がバラバラ | Windows / macOS / Linux をフルサポート |
+| 複数モーターブランド対応 | 単一ブランド専用で、モーター切り替え時はコードを書き直す必要あり | 統一 API で、モーター変更時はベンダーパラメータを変えるだけ |
+| リアルタイム性能 | Python 実装で GC によるスタッタリングがあり、タイミングが不安定 | Rust 下位層で GC なし、リアルタイム性能が高い |
+| デバッグツール | それぞれ独立した上位ツールで、操作がバラバラ | 統一された CLI + Web 可視化コンソール |
+| マルチ言語対応 | 多くは Python のみ提供 | Python/C++/ROS2 が同一の下位ライブラリを共有 |
+| プロトコルのカプセル化 | 開発者が CAN メッセージを手動でパースする必要がある | 下位の CAN プロトコル詳細を完全に隠蔽 |
+| クロスプラットフォーム | 対応状況がバラバラ | Windows/macOS/Linux をフルサポート |
 
 </section>
 
@@ -129,14 +119,14 @@ wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge
 bash Miniforge3-Linux-x86_64.sh
 ```
 
-次に、プロンプトに従って `yes` を入力するか Enter キーを押します。インストールが完了したら、次のコマンドを入力してターミナルスクリプトを更新します：
+次に、プロンプトに従って `yes` を入力するか Enter キーを押します。インストールが成功したら、次のコマンドを入力してターミナルスクリプトを更新します：
 
 ```bash
 source ~/.bashrc
 ```
 
 :::note
-ユーザー名の前に `(base)` が表示されていれば、インストールは成功しています。
+ユーザー名の前に `(base)` が表示されれば、インストールは成功しています。
 :::
 
 #### その他のプラットフォーム
@@ -173,7 +163,7 @@ Python 3.10 以上の仮想環境 — motorbridge には Python バージョン 
 conda create -y -n rebot_motorbridge python=3.12
 ```
 
-続いて仮想環境を有効化します。ターミナルを開き、仮想環境内の関連機能を使いたいときは、毎回この有効化コマンドを再実行する必要があります：
+次に仮想環境を有効化します。ターミナルを開き、仮想環境内の関連機能を使いたいときは、毎回この有効化コマンドを再実行する必要があります：
 
 ```bash
 conda activate rebot_motorbridge
@@ -189,12 +179,12 @@ pip install motorbridge
 
 </section>
 
-## 7.3 MotorBridge による DM モーター制御
+## 7.3 MotorBridge による DM モーターの制御
 
 <section id="dm-motors" className="section-card">
   <div className="section-title">
     <span>DM モーター</span>
-    <h2>7.3 MotorBridge による DM モーター制御</h2>
+    <h2>7.3 MotorBridge による DM モーターの制御</h2>
   </div>
 
 ### Web 制御
@@ -211,7 +201,7 @@ https://motorbridge.github.io/motorbridge-studio/
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-01.jpg" alt="MotorBridge Help" />
 </div>
 
-ここでは Damiao DM モーターを例に説明します：
+Damiao DM モーターを例に説明します：
 
 - **Linux** プラットフォームでは、次のコマンドを入力します：
 
@@ -231,17 +221,17 @@ motorbridge-gateway -- \
   --dt-ms 20
 ```
 
-- **Windows** では、次のコマンドを入力します：
+- **Windows** の場合、次のコマンドを入力します：
 
 ```bash
 motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port COM3 --serial-baud 921600 --dt-ms 20
 ```
 
 :::warning
-ポート番号は正しいポートを指定し、バインド前に権限が付与されている必要があります。
+ポート番号は正しいポートである必要があり、バインド前に権限を付与しておく必要があります。
 :::
 
-3. 上記コマンドを入力したら、Web ページに戻って **Connect** をクリックします。接続に成功すると、右上に緑色の `Connected` という文字が表示されます。
+3. 上記のコマンドを入力したら、Web ページに戻って **Connect** をクリックします。接続に成功すると、右上に緑色の `Connected` という文字が表示されます。
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-02.jpg" alt="Connected" />
@@ -269,7 +259,7 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 
 8. **Enable** ボタンをクリックした後、**Zero+Save** をクリックすると、現在位置をゼロ点として設定できます。
 
-9. モーター ID を設定します。モーターを reBot 上で使用する場合、`can_id` は対応する関節番号に設定し、`master_id` は `0x10 + can_id` に設定します。
+9. モーター ID を設定します。モーターを reBot 上で使用する場合、`can_id` は対応する関節番号に設定し、`master_id` は `0x10 + can_id` に設定する必要があります。
 
 例えば、`can_id` が 1 の場合、`master_id` は `0x11`、つまり 16 + 1 = 17 にする必要があります。その後、**Set CAN_ID** をクリックします。
 
@@ -277,9 +267,9 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-06.jpg" alt="Set CAN ID" />
 </div>
 
-### Python コード制御
+### Python コードによる制御
 
-環境がインストールされていない場合は、まず 7.2 節のインストール環境を参照してください。DM モーター関連のサンプルはすべて、Damiao のシリアルポートを通じて実装されています。
+環境がインストールされていない場合は、まず 7.2 節のインストール環境を参照してください。DM モーター関連のサンプルはすべて Damiao のシリアルポート経由で実装されています。
 
 まず、サンプルコードを取得します：
 
@@ -297,7 +287,7 @@ cd your_folder_path/motorbridge_ctrl/dm_motor_ctrl
 
 #### DM モーターの有効化/無効化
 
-`1_enable_dm.py` は、DM モーターの有効化/無効化の典型的なサンプルです。
+`1_enable_dm.py` は、DM モーターを有効化/無効化する典型的なサンプルです。
 
 ```bash
 python 1_enable_dm.py
@@ -443,11 +433,11 @@ if __name__ == "__main__":
 python 4_mit_ctrl.py
 ```
 
-現象：このサンプルでは tau のみを与えているため、モーターは回転し続けます。MIT モードに基づいて、さまざまな制御モードを導出できます。例えば、kp=0 で kd が 0 でない場合、vel を与えることで定速回転を実現できます；kp=0 かつ kd=0 の場合、tau を与えることで所定トルク出力を実現できます。
+現象：このサンプルでは tau のみを与えているため、モーターは回転し続けます。MIT モードに基づいて、さまざまな制御モードを導出できます。例えば、kp=0 かつ kd が 0 でない場合、vel を与えることで定速回転を実現できます；kp=0 かつ kd=0 の場合、tau を与えることで所定トルク出力を実現できます。
 
 :::warning 注意
-1. tau のみを与える場合、あまり大きな tau を与えないでください。tau が大きすぎると、所望の tau を実現するためにモーターがどんどん速く回転してしまいます。
-2. 位置制御を行う場合、kd を 0 に設定しないでください。そうしないと、モーターの振動や制御不能を引き起こす可能性があります。
+1. tau のみを与える場合、あまり大きな tau を与えないでください。tau が大きすぎると、所望の tau を達成するためにモーターがどんどん速く回転してしまいます。
+2. 位置制御を行う場合、kd を 0 に設定してはいけません。そうしないと、モーターの振動や制御不能を引き起こす可能性があります。
 3. pos と vlim の単位はそれぞれ rad および rad/s で、データ型は float です。
 :::
 
@@ -677,11 +667,11 @@ ctrl.close_bus()
 ctrl.close()
 ```
 
-`8_get_state.py` で示されている例は、制御処理中に前フレームでモーターから返された応答フレームを取得するためのものです。この応答フレームは、モーターに制御フレームを送信したときに送信され、モーターが返信します。これは質疑応答モードに相当します。モーターを動かさずに状態取得のためだけに応答フレームを返させたい場合は、`9_set_zero.py` におけるモーター状態の読み取り方法を参照してください。
+`8_get_state.py` で示されている例は、制御処理中に前フレームでモーターから返された応答フレームを取得するためのものです。この応答フレームは、モーターに制御フレームを送信したときに送られ、モーターが返信します。これは質疑応答モードに相当します。モーターを動かさずに状態取得のためだけに応答フレームを返させたい場合は、`9_set_zero.py` におけるモーター状態の読み取り方法を参照してください。
 
 #### モーターのゼロ点を設定
 
-`9_set_zero.py` は、モーターのゼロ点を設定する例です。
+`9_set_zero.py` はモーターのゼロ点を設定する例です。
 
 ```bash
 python 9_set_zero.py
@@ -736,7 +726,7 @@ ctrl.close()
 
 ## 7.4 MotorBridge による RS モーターの制御
 
-お使いのシステムにまだ PCAN ドライバがインストールされていない場合は、こちらのページを参照してください：[PCAN driver installed](https://wiki.seeedstudio.com/ja/rebot_b601_rs_getting_started/#software-setup-and-calibration-workflow)
+お使いのシステムにまだ PCAN ドライバーがインストールされていない場合は、こちらのページを参照してください：[PCAN driver installed](https://wiki.seeedstudio.com/ja/rebot_b601_rs_getting_started/#ソフトウェアセットアップとキャリブレーションワークフロー)
 
 <section id="rs-motors" className="section-card">
   <div className="section-title">
@@ -744,7 +734,7 @@ ctrl.close()
     <h2>7.4 MotorBridge による RS モーターの制御</h2>
   </div>
 
-### Web コントロール
+### Web 制御
 
 1. `peak_usb` カーネルモジュールをロードし、ポートを確認し、ボーレートを設定してポートを起動します：
 
@@ -765,7 +755,7 @@ sudo ip link set can0 up
 https://motorbridge.github.io/motorbridge-studio/
 ```
 
-3. **Help** オプションをクリックし、使用しているオペレーティングシステムとドライバボードに応じて対応するコマンドをコピーし、IP アドレスとポート番号を確認してから、ターミナルで Enter キーを押して実行します。
+3. **Help** オプションをクリックし、使用しているオペレーティングシステムとドライバーボードに応じて対応するコマンドをコピーし、IP アドレスとポート番号を確認してから、ターミナルで Enter キーを押して実行します。
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-07.jpg" alt="MotorBridge Help" />
@@ -789,7 +779,7 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can
 motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can0@1000000
 ```
 
-4. 上記のコマンドを入力したら、Web ページに戻って **Connect** をクリックします。接続に成功すると、右上に緑色の `Connected` という文字が表示されます。
+4. 上記のコマンドを入力した後、Web ページに戻って **Connect** をクリックします。接続に成功すると、右上に緑色の `Connected` という文字が表示されます。
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7/ch7-08.jpg" alt="Connected" />
@@ -823,7 +813,7 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can
 
 #### RS モーターの有効化/無効化
 
-`1_enable_rs.py` は、RS モーターの有効化/無効化の典型的な例です。
+`1_enable_rs.py` は RS モーターの有効化/無効化の典型的な例です。
 
 ```bash
 python 1_enable_rs.py
@@ -870,11 +860,11 @@ time.sleep(3)
 ctrl.disable_all()
 ```
 
-現象：RS モーターが有効化されると、モーターのランプが緑色になります。3 秒後、RS モーターは無効化され、モーターのランプは赤色になります。
+現象：RS モーターを有効化すると、モーターのランプが緑色になります。3 秒後、RS モーターは無効化され、モーターのランプは赤色になります。
 
 #### モーター ID のスキャン
 
-`2_scan_RSmotor.py` は、RS モーターの CAN ID をスキャンする例です。
+`2_scan_RSmotor.py` は RS モーターの CAN ID をスキャンする例です。
 
 ```bash
 python 2_scan_RSmotor.py
@@ -921,11 +911,11 @@ if __name__ == "__main__":
         print(f"  can_id=0x{can_id:02X}")
 ```
 
-メイン実装関数 `scan_robstride_motors` の入力は、CAN ID の範囲とポートです。実行後、スキャンされた CAN ID とその対応する master ID が表示されます。このスクリプトは、CAN ID と対応する master ID が正しいかどうかを確認するために使用できます。
+主な実装関数 `scan_robstride_motors` の入力は、CAN ID の範囲とポートです。実行後、スキャンされた CAN ID とそれに対応する master ID が表示されます。このスクリプトは、CAN ID と対応する master ID が正しいかどうかを確認するために使用できます。
 
 #### CAN ID と対応する Master ID の設定
 
-`3_set_id.py` は、RS モーターの CAN ID と master ID を設定する例です。
+`3_set_id.py` は RS モーターの CAN ID と master ID を設定する例です。
 
 ```bash
 python 3_set_id.py
@@ -958,11 +948,11 @@ if __name__ == "__main__":
     set_RSmotor_ID(old_can_id, new_can_id, channel="can0")
 ```
 
-メイン実装関数 `set_RSmotor_ID` の入力は、古い CAN ID、設定したい新しい CAN ID、およびポートです。
+主な実装関数 `set_RSmotor_ID` の入力は、古い CAN ID、設定したい新しい CAN ID、およびポートです。
 
 #### 各種モードの制御
 
-`4_mit_ctrl.py` は MIT モードの制御例です。`kp` はコントローラの剛性、`kd` はコントローラの減衰、`tau` はフィードフォワードトルクです。
+`4_mit_ctrl.py` は MIT モードの制御例です。`kp` はコントローラーの剛性、`kd` はコントローラーの減衰、`tau` はフィードフォワードトルクです。
 
 ```bash
 python 4_mit_ctrl.py
@@ -1005,12 +995,12 @@ ctrl.close_bus()
 ctrl.close()
 ```
 
-現象：この例では tau のみを与えているため、モーターは回転し続けます。MIT モードに従って、さまざまな制御モードを導出できます。例えば、kp=0 かつ kd が 0 でない場合、vel を与えることで定速回転を実現できます。kp=0 かつ kd=0 の場合、tau を与えることで所定のトルク出力を実現できます。
+現象：この例では tau のみを与えているため、モーターは回転し続けます。MIT モードに従って、さまざまな制御モードを導き出すことができます。例えば、kp=0 で kd が 0 でない場合、vel を与えることで定速回転を実現できます。kp=0 かつ kd=0 の場合、tau を与えることで所定トルク出力を実現できます。
 
-:::warning 注意
-1. tau のみを与える場合、tau を大きくしすぎないでください。tau が大きすぎると、モーターは所望の tau を達成するためにどんどん速く回転してしまいます。
-2. 位置制御を行う場合、kd を 0 に設定しないでください。そうしないと、モーターが振動したり、制御不能になったりする可能性があります。
-3. pos と vlim の単位はそれぞれ rad および rad/s であり、データ型は float です。
+:::warning Notes
+1. tau のみを与える場合は、あまり大きな tau を与えないでください。tau が大きすぎると、所望の tau を達成するためにモーターはどんどん速く回転してしまいます。
+2. 位置制御を行う場合、kd を 0 に設定しないでください。そうしないと、モーターの振動や制御不能を引き起こす可能性があります。
+3. pos と vlim の単位はそれぞれ rad および rad/s で、データ型は float です。
 :::
 
 `5_pos_vel_ctrl.py` は pos_vel モード用の制御サンプルです。
@@ -1056,7 +1046,7 @@ ctrl.close()
 `pos` は制御対象の目標位置であり、`vlim` は動作中の最大絶対速度を制限するために使用されます。
 
 :::warning 注意
-1. pos と vlim の単位はそれぞれ rad および rad/s であり、データ型は float です。
+1. pos と vlim の単位はそれぞれ rad および rad/s で、データ型は float です。
 2. ここで使用している pos_vel モードは位置-速度モード（PP）です。
 :::
 
@@ -1103,7 +1093,7 @@ ctrl.close()
 ここでの `vel` は制御対象の目標速度です。
 
 :::warning
-pos の単位は rad/s であり、データ型は float です。
+pos の単位は rad/s で、データ型は float です。
 :::
 
 #### モーター状態の取得
@@ -1163,7 +1153,7 @@ ctrl.close_bus()
 ctrl.close()
 ```
 
-`7_get_state.py` で示されているサンプルは、制御処理中にモーターが前フレームで返した応答フレームを取得するものです。この応答フレームは、制御フレームをモーターに送信したときに送られ、モーターが返信するもので、質疑応答モードに相当します。モーターを動かさずに状態取得のためだけに応答フレームを返させたい場合は、`8_set_zero.py` におけるモーター状態読み取りのサンプルを参照してください。
+`7_get_state.py` で示されているサンプルは、制御処理中にモーターが前フレームで返した応答フレームを取得するものです。この応答フレームは、制御フレームをモーターに送信したときに送信され、モーターが返信するもので、質疑応答モードに相当します。モーターを動かさずに状態取得のための応答フレームだけを返させたい場合は、`8_set_zero.py` におけるモーター状態読み取りのサンプルを参照してください。
 
 #### モーターのゼロ点設定
 
@@ -1215,7 +1205,7 @@ ctrl.close_bus()
 ctrl.close()
 ```
 
-現象：ゼロ点の設定に成功すると、モーターの現在状態が読み取られ、ゼロ点設定が成功したかどうかを確認します。
+現象：ゼロ点の設定に成功すると、現在のモーター状態が読み取られ、ゼロ点設定が成功したかどうかを確認します。
 
 </section>
 

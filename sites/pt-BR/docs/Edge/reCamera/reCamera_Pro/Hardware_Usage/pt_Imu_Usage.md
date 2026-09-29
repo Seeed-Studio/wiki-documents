@@ -6,28 +6,30 @@ keywords:
   - reCamera Pro
   - IMU
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_imu_usage
+slug: /recamera_pro_imu_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/imu_data.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_usage/), which now serves the original slug /recamera_pro_imu_usage. This file is kept for history as a draft (slug /recamera_pro_imu_usage_legacy) and is excluded from production builds. Do not link here. -->
 
 # Uso da IMU do reCamera Pro
 
 O modelo de IMU equipado no dispositivo é o ICM-42670-P, um sensor de 6 eixos que integra um acelerômetro de 3 eixos e um giroscópio de 3 eixos. O giroscópio do ICM-42670-P suporta faixas de medição de ±250 / ±500 / ±1000 / ±2000 dps, enquanto o acelerômetro suporta faixas de ±2 / ±4 / ±8 / ±16 g. Seus dados internos são fornecidos em formato de complemento de dois de 16 bits.
 
-## Caminho dos dados
+## Caminho dos Dados
 
 O reCamera PRO usa o driver IIO padrão para a IMU, portanto os dados brutos podem ser obtidos diretamente por meio das interfaces IIO.
 Os arquivos de dados brutos podem ser encontrados no diretório ***/sys/bus/iio/devices/iio:device1/***.
 ![IMU_DATA_SAMPLE](https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO_imu_dir.png)
 
-## Leitura de dados
+## Leitura de Dados
 
 Execute o seguinte comando para ler os dados brutos correspondentes. O exemplo abaixo demonstra a leitura dos dados de aceleração do eixo X:
 
@@ -35,7 +37,7 @@ Execute o seguinte comando para ler os dados brutos correspondentes. O exemplo a
 cat /sys/bus/iio/devices/iio:device1/in_accel_x_raw
 ```
 
-## Obter dados com Python
+## Obter Dados com Python
 
 Python pode ser usado para obter facilmente os dados da IMU. Abaixo está um exemplo simples:
 
@@ -50,7 +52,7 @@ gyro_x = raw * scale
 print(f"Gyroscope X: {gyro_x:.6f} rad/s")
 ```
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

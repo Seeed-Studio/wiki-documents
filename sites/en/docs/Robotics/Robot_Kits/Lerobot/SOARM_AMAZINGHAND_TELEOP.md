@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-12'
-updatedAt: '2026-08-10'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/soarm_amazinghand_teleop/
 ---
 

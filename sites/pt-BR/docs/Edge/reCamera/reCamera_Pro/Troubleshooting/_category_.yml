@@ -1,0 +1,5 @@
+position: 7 # float position is supported
+label: '7. Solução de problemas'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category collapsed by default
+className: recamera_pro_troubleshooting

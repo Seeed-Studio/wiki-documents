@@ -7,16 +7,30 @@ keywords:
   - Edge AI
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_getting_started
+slug: /recamera_pro_getting_started_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-08-18'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_getting_started/
+updatedAt: '2026-08-17'
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_getting_started_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Getting_Started/first_ai_detection.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_getting_started/), which now serves the original slug /recamera_pro_getting_started. This file is kept for history as a draft (slug /recamera_pro_getting_started_legacy) and is excluded from production builds. Do not link here. -->
+
+## Índice de Migração de Conteúdo (Página Legada)
+
+Esta página foi dividida na reestruturação do wiki do reCamera Pro (fase 2). Para onde cada seção foi movida:
+
+| Seção original | Novo local |
+| --- | --- |
+| Introdução, §1 Conexão de Hardware, §2 Login na Interface Web | [Primeira Detecção de IA](https://wiki.seeedstudio.com/pt-br/recamera_pro_getting_started/) (este slug) |
+| §3 Configuração de Wi-Fi | [Acesso via Wi-Fi e Interface Web](https://wiki.seeedstudio.com/pt-br/recamera_pro_wifi_access/) |
+| §4 Redefinindo o Dispositivo | [Atualização e Recuperação de Firmware](https://wiki.seeedstudio.com/pt-br/recamera_pro_firmware_update/) |
+| §5 FAQ e Solução de Problemas | [Solução de Problemas](https://wiki.seeedstudio.com/pt-br/recamera_pro_faqs/) |
+| Resumo de visão geral | [Página inicial do reCamera Pro](https://wiki.seeedstudio.com/pt-br/recamera_pro/) |
 
 # Guia de Início Rápido do reCamera Pro
 
@@ -31,13 +45,13 @@ Bem-vindo ao **reCamera Pro**. Este guia ajudará você a concluir a conexão de
 ## 1. Conexão de Hardware
 
 Antes de iniciar a configuração, certifique-se de que você preparou o seguinte hardware:
-* **Cabo de dados**: Um cabo USB Type-C com capacidade de transmissão de dados (não use um cabo que ofereça apenas carregamento).
-* **Fonte de alimentação**: Um cabo de alimentação DC (requisitos de especificação: **12V, 1A**, a fonte de alimentação padrão de fábrica é: 12V, 3A).
+* **Cabo de Dados**: Um cabo USB Type-C com capacidade de transmissão de dados (não use um cabo que suporte apenas carregamento).
+* **Fonte de Alimentação**: Um cabo de alimentação DC (requisitos de especificação: **12V, 1A**, a fonte de alimentação padrão de fábrica é: 12V, 3A).
 
 ### Etapas de Conexão
 
-1. Como mostrado na figura abaixo, conecte o cabo de alimentação DC de 12V na interface de alimentação do dispositivo, conecte uma extremidade do cabo USB Type-C ao reCamera Pro e conecte a outra extremidade ao seu computador host com Windows (Host PC).
-2. Observe o indicador de status do dispositivo. Quando a **luz verde estiver acesa continuamente**, isso indica que o dispositivo foi inicializado com sucesso e entrou em estado de operação.
+1. Conforme mostrado na figura abaixo, conecte o cabo de alimentação DC de 12V na interface de alimentação do dispositivo, conecte uma extremidade do cabo USB Type-C ao reCamera Pro e a outra extremidade ao computador host com Windows (Host PC).
+2. Observe o indicador de status do dispositivo. Quando a **luz verde estiver acesa continuamente**, isso indica que o dispositivo inicializou com sucesso e entrou em estado de operação.
 
 ![Diagrama da luz de status do sistema e conexão dos cabos](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
@@ -49,7 +63,7 @@ O LED verde indica o status do sistema, enquanto o LED vermelho funciona como in
 2. ***Solid on*** : O equipamento está operando normalmente.
 3. ***off*** : Estado anormal, o processo principal não está em execução.
 4. ***100 ms blink*** : Atualmente em processo de OTA.
-5. ***Short green blink*** : Foi detectado um cartão SD com sistema de arquivos corrompido/sujo.
+5. ***Short green blink*** : Foi detectado um cartão SD com sistema de arquivos corrompido.
 
 ---
 
@@ -106,7 +120,7 @@ Neste ponto, você pode **desconectar com segurança o cabo USB Type-C** para ob
 
 Existem dois métodos para restaurar o dispositivo às configurações de fábrica:
 
-1. Pressione e segure o botão lateral por cerca de 15 segundos até ouvir um som de aviso, indicando que o dispositivo entrou no modo de redefinição. Neste momento, basta aguardar até que a luz de status verde permaneça acesa continuamente para fazer login novamente no dispositivo.
+1. Pressione e segure o botão lateral por cerca de 15 segundos até ouvir um som de aviso, indicando que o dispositivo entrou no modo de redefinição. Neste ponto, basta aguardar até que a luz de status verde permaneça acesa continuamente para fazer login novamente no dispositivo.
 2. Através da interface Web de gerenciamento, clique em **Device Info** -> **System Settings** -> **Factory Reset** para redefinir o dispositivo.
 ![Diagrama de redefinição de fábrica](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
 
@@ -117,8 +131,8 @@ Existem dois métodos para restaurar o dispositivo às configurações de fábri
 Se você não conseguir abrir a interface Web após conectar o cabo Type-C, geralmente é porque a placa de rede virtual do sistema Windows não obteve corretamente um endereço IP. Siga estas etapas para solucionar o problema:
 
 1. Abra o **Control Panel** no computador host com Windows.
-2. Clique para entrar em **Network and Internet** -> **Network and Sharing Center** -> **Change adapter settings**, nesta ordem.
-3. Na lista de conexões de rede exibida, encontre a placa de rede virtual com um nome semelhante a `Remote NDIS based Internet Sharing Device` ou relacionada ao reCamera (você pode tentar desconectar e reconectar o dispositivo para ver qual porta de rede desaparece e reaparece; essa porta é a interface de placa de rede virtual do reCamera Pro).
+2. Clique em **Network and Internet** -> **Network and Sharing Center** -> **Change adapter settings**, nesta ordem.
+3. Na lista de conexões de rede exibida, encontre a placa de rede virtual chamada algo como `Remote NDIS based Internet Sharing Device` ou relacionada ao reCamera (você pode tentar desconectar e reconectar o dispositivo para ver qual porta de rede desaparece e reaparece; essa porta é a interface de placa de rede virtual do reCamera Pro).
 4. Clique com o botão direito neste adaptador de rede e selecione **Properties**.
 5. Clique duas vezes em **Internet Protocol Version 4 (TCP/IPv4)** na lista.
 6. Certifique-se de que a configuração esteja marcada como **Obtain an IP address automatically** e **Obtain DNS server address automatically**.
@@ -140,7 +154,7 @@ Se o seu computador não conseguir acessar a internet após ser conectado a um d
 
 ## Suporte Técnico e Discussão sobre o Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer a você diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos múltiplos canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

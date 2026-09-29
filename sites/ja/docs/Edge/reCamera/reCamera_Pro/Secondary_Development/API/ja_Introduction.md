@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_introduction
+slug: /recamera_pro_api_introduction_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -14,12 +15,13 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_api_introduction/
+url: https://wiki.seeedstudio.com/ja/recamera_pro_api_introduction_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/introduction.md (https://wiki.seeedstudio.com/ja/recamera_pro_api_introduction/), which now serves the original slug /recamera_pro_api_introduction. This file is kept for history as a draft (slug /recamera_pro_api_introduction_legacy) and is excluded from production builds. Do not link here. -->
 
 # はじめに
 
-reCamera RV1126B は HTTP ベースの Web API を提供しており、デバイス情報の取得、システムパラメータの設定、ネットワーク管理、オーディオ・ビデオ制御、AI 推論の実行、ファイル管理、ファームウェア更新などを行うことができます。
+reCamera RV1126B は HTTP ベースの Web API を提供しており、デバイス情報の取得、システムパラメータの設定、ネットワーク管理、オーディオおよびビデオの制御、AI 推論の実行、ファイル管理、ファームウェア更新の実行が可能です。
 
 ## 基本情報
 

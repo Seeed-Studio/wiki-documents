@@ -17,7 +17,7 @@ last_update:
   date: 9/10/2025
   author: TienjuiWong
 createdAt: '2025-09-10'
-updatedAt: '2026-01-07'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/hand_amazinghand/
 ---
 

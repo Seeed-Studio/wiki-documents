@@ -11,7 +11,7 @@ last_update:
   date: 08/19/2024
   author: Youjiang
 createdAt: '2024-08-19'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/reserver_j501_getting_started/
 ---
 

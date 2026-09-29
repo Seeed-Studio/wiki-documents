@@ -10,7 +10,7 @@ last_update:
   date: 01/08/2026
   author: Kian
 createdAt: '2023-07-20'
-updatedAt: '2026-01-08'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_Gateway_Intro/
 ---
 

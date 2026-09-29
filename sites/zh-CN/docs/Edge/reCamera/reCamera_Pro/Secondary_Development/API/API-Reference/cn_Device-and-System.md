@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_device-and-system
+slug: /recamera_pro_api_device-and-system_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
@@ -14,16 +15,17 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_api_device-and-system/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_api_device-and-system_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/device_system.md (https://wiki.seeedstudio.com/cn/recamera_pro_api_device-and-system/), which now serves the original slug /recamera_pro_api_device-and-system. This file is kept for history as a draft (slug /recamera_pro_api_device-and-system_legacy) and is excluded from production builds. Do not link here. -->
 
 # 设备与系统
 
-## 接口概览
+## 端点概览
 
 | Method | Path | Purpose |
 |---|---|---|
-| GET | `/system/device-info` | 获取设备序列号、固件版本、传感器和底板型号 |
+| GET | `/system/device-info` | 获取设备序列号、固件版本、传感器板和底板型号 |
 | GET | `/system/resource-info` | 获取 CPU、NPU、内存和存储使用情况 |
 | GET | `/system/time` | 获取系统时间、时区和 NTP 配置 |
 | PUT | `/system/time` | 设置系统时间 |
@@ -44,7 +46,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_api_device-and-system/
 GET /system/device-info
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -68,7 +70,7 @@ GET /system/device-info
 GET /system/resource-info
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -106,7 +108,7 @@ GET /system/resource-info
 GET /system/time
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -163,7 +165,7 @@ NTP 模式请求体：
 }
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -179,7 +181,7 @@ NTP 模式请求体：
 GET /system/battery
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -195,7 +197,7 @@ GET /system/battery
 | `isAttached` | 是否连接了电池 |
 | `displaySteps` | 当前电量阶梯数 |
 | `totalSteps` | 总电量阶梯数 |
-| `isCharging` | 电池是否正在充电 |
+| `isCharging` | 电池是否在充电 |
 
 ## 检查是否首次登录
 
@@ -203,7 +205,7 @@ GET /system/battery
 GET /system/check
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -221,7 +223,7 @@ GET /system/check
 GET /system/ssh
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -245,7 +247,7 @@ POST /system/ssh
 
 | Field | Description |
 |---|---|
-| `bRunning` | `true` 启动 SSH，`false` 停止 SSH |
+| `bRunning` | `true` 表示启动 SSH，`false` 表示停止 |
 
 ## HTTPS
 
@@ -255,7 +257,7 @@ POST /system/ssh
 GET /system/secure
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -277,7 +279,7 @@ POST /system/secure
 }
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -296,7 +298,7 @@ POST /system/secure
 GET /config/export
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -308,7 +310,7 @@ GET /config/export
 | Field | Description |
 |---|---|
 | `size` | 配置文件大小 |
-| `url` | 下载路径；在前面加上设备 IP 组成完整 URL |
+| `url` | 下载路径；在前面加上设备 IP 即为完整 URL |
 
 下载 URL：
 
@@ -330,7 +332,7 @@ POST /config/upload
 POST /system/reboot
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -339,7 +341,7 @@ POST /system/reboot
 }
 ```
 
-设备将重启，当前连接会中断。请等待设备重新上线后再继续操作。
+设备将会重启，当前连接会中断。请等待设备重新上线后再继续操作。
 
 ## 恢复出厂设置
 
@@ -351,7 +353,7 @@ POST /system/reboot
 POST /system/factory-reset
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -360,7 +362,7 @@ POST /system/factory-reset
 }
 ```
 
-阶段 2，在确认令牌有效期内提交令牌：
+阶段 2，在确认令牌有效期内提交该令牌：
 
 ```text
 POST /system/factory-reset
@@ -374,7 +376,7 @@ POST /system/factory-reset
 }
 ```
 
-响应：
+Response:
 
 ```json
 {
@@ -383,12 +385,12 @@ POST /system/factory-reset
 }
 ```
 
-恢复出厂设置会清除设备的所有配置。请确保已做好备份后再执行此操作。
+恢复出厂设置会清除所有设备配置。执行前请确保已做好备份。
 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持，确保您在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

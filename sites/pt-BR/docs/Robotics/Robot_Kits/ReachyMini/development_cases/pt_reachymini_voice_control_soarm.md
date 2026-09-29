@@ -53,7 +53,7 @@ Arquivos adicionados por este fork:
 3. Um ambiente conda `lerobot` com suporte a feetech foi criado:
 
    ```bash
-   conda create -n lerobot python=3.10
+   conda create -n lerobot python=3.12
    conda activate lerobot
    pip install lerobot[feetech]
    ```
@@ -92,10 +92,10 @@ uv sync
 ```
 
 :::caution
-Se você instalar este app em um ambiente conda enquanto o `lerobot` estiver em outro ambiente conda (veja Pré-requisitos), defina `LEROBOT_PYTHON` em `.env` para o caminho do python do ambiente do lerobot (por exemplo, `/home/ubuntu/miniconda3/envs/lerobot/bin/python`). Não misture com o ambiente reachy_mini.
+Se você instalar este app em um ambiente conda enquanto o `lerobot` estiver em outro ambiente conda (veja Pré-requisitos), defina `LEROBOT_PYTHON` em `.env` para o caminho do python do ambiente do lerobot (por exemplo, `/home/ubuntu/miniconda3/envs/lerobot/bin/python`). Não misture com o ambiente do reachy_mini.
 :::
 
-## Configurar o controle de voz da garra
+## Configurar o controle por voz da garra
 
 Adicione as duas linhas a seguir ao `.env` na raiz do repositório (crie o arquivo se ele não existir):
 
@@ -112,7 +112,7 @@ LEROBOT_PYTHON=/path/to/lerobot/env/bin/python
 
 ## Executar
 
-**Você deve iniciar o app a partir da raiz do repositório** para que `.env` e o diretório de ferramentas relativas sejam resolvidos corretamente:
+**Você deve iniciar o app a partir da raiz do repositório** para que `.env` e o diretório relativo de ferramentas sejam resolvidos corretamente:
 
 ```bash
 cd reachy_mini_conversation_app
@@ -164,13 +164,13 @@ Parâmetros de ajuste comuns neste arquivo:
 - `PORT` — dispositivo serial do braço seguidor.
 - `ARM_ID` — nome do perfil de calibração.
 
-### 2. Permitir que o LLM chame a nova ação → `external_content/external_tools/gripper_control.py`
+### 2. Fazer o LLM chamar a nova ação → `external_content/external_tools/gripper_control.py`
 
 Esta é a ferramenta externa exposta ao LLM — ela determina quais ações o LLM "sabe" que estão disponíveis. Ao adicionar uma ação, atualize isto em sincronia:
 
 - `description` — a descrição da ferramenta, dizendo ao LLM quando chamá-la (quais enunciados do usuário devem acioná-la).
 - `parameters_schema` — adicione o novo nome de ação (por exemplo, `"wave"`) ao `enum` de `action`.
-- `__call__()` — passe a nova `action` para o comando de subprocesso `cmd = [LEROBOT_PYTHON, GRIPPER_SCRIPT, action]`.
+- `__call__()` — repasse a nova `action` para o comando de subprocesso `cmd = [LEROBOT_PYTHON, GRIPPER_SCRIPT, action]`.
 
 Se você quiser controlar um dispositivo completamente diferente, também pode **criar um novo arquivo de ferramenta** nesse diretório (por exemplo, `arm_control.py`), igualmente herdando de `reachy_mini_conversation_app.tools.core_tools.Tool`; com `AUTOLOAD_EXTERNAL_TOOLS=1`, todos os arquivos de ferramenta válidos no diretório são carregados automaticamente. Observe que cada classe de ferramenta deve ter um `Tool.name` exclusivo.
 

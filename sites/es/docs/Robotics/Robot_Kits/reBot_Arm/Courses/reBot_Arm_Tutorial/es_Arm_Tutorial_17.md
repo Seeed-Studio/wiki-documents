@@ -1,28 +1,27 @@
 ---
-description: "Capítulo 17 del Curso para Principiantes en Inteligencia Incorporada de Seeed: inferencia en robot real, evaluación e iteración de datos: flujo de datos de inferencia, preprocesamiento y desnormalización, inicio de la inferencia, ejecución de fragmentos de acción, seguridad, evaluación de la tasa de éxito, pruebas de generalización, análisis de fallos y recopilación de datos impulsada por fallos."
+description: 'Capítulo 17 del Curso de Introducción a la IA Física de Seeed: inferencia en robot real, evaluación e iteración de datos: flujo de datos de inferencia, preprocesamiento y desnormalización, inicio de la inferencia, ejecución de fragmentos de acción, seguridad, evaluación de la tasa de éxito, pruebas de generalización, análisis de fallos y recopilación de datos impulsada por fallos.'
 title: Capítulo 17 - Inferencia en Robot Real, Evaluación e Iteración de Datos
 keywords:
   - reBot
   - ACT
-  - Inference
-  - Evaluation
-  - Data Iteration
-  - Course
+  - Inferencia
+  - Evaluación
+  - Iteración de datos
+  - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_17
+slug: /rebot_physical_ai_course_chapter_17
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_17/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_17/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -30,13 +29,13 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 <section className="doc-hero">
   <div>
-    <span className="eyebrow">Etapa 3 · Capítulo 17 · Teoría y Práctica</span>
+    <span className="eyebrow">Etapa 3 · Capítulo 17 · Teoría y práctica</span>
     <h2>17. Inferencia en Robot Real, Evaluación e Iteración de Datos</h2>
     <p>
-      Capítulo 17 del Curso para Principiantes en Inteligencia Incorporada de Seeed: flujo de datos de inferencia,
+      Capítulo 17 del Curso de Introducción a la IA Física de Seeed: flujo de datos de inferencia,
       preprocesamiento y desnormalización, inicio de la inferencia, ejecución de fragmentos de acción, seguridad,
-      evaluación de la tasa de éxito, pruebas de generalización, análisis de fallos y recopilación de datos
-      impulsada por fallos.
+      evaluación de la tasa de éxito, pruebas de generalización, análisis de fallos y recopilación de datos impulsada por fallos.
+      collection.
     </p>
     <div className="hero-actions">
       <a href="#start-inference">Inferencia</a>
@@ -44,28 +43,14 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#data-iteration">Iteración</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>En este capítulo</strong>
-    <span>17.1 Flujo de Datos de Inferencia</span>
-    <span>17.2 Preprocesamiento y Desnormalización</span>
-    <span>17.3 Inicio de la Inferencia en Robot Real</span>
-    <span>17.4 Ejecución de Fragmentos de Acción</span>
-    <span>17.5 Seguridad: Límites, Límites de Velocidad, Parada de Emergencia</span>
-    <span>17.6 Evaluación: Tasa de Éxito y Tiempo de Finalización</span>
-    <span>17.7 Pruebas de Generalización</span>
-    <span>17.8 Análisis de Tipos de Fallo</span>
-    <span>17.9 Iteración de Datos: Recopilación de Datos Impulsada por Fallos</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 17.1 Flujo de Datos de Inferencia
 
 <section id="inference-flow" className="section-card">
   <div className="section-title">
     <span>Flujo</span>
-    <h2>17.1 Flujo de Datos de Inferencia: Entiéndelo en un Solo Diagrama</h2>
+    <h2>17.1 Flujo de Datos de Inferencia: Entenderlo en un Solo Diagrama</h2>
   </div>
 
 <div className="image-frame">
@@ -144,7 +129,7 @@ lerobot-record \
 ```
 
 - `--dataset.num_episodes=10`: ejecutar 10 episodios.
-- `--dataset.episode_time_s=60`: máximo 60 segundos por episodio. Ajústalo según la duración de la tarea; por ejemplo, agarrar un cangrejo de río y meterlo en una caja tarda ~20-30 segundos, así que pon 30-40 para dejar margen. Si quieres probar el modelo sin tener que esperar, ponlo muy largo (por ejemplo, 300), ya que hay un intervalo entre episodios.
+- `--dataset.episode_time_s=60`: máximo 60 segundos por episodio. Ajústalo según la duración de la tarea; por ejemplo, agarrar un cangrejo de río y meterlo en una caja lleva ~20-30 segundos, así que pon 30-40 para dejar margen. Si quieres probar el modelo sin tener que esperar, ponlo muy largo (por ejemplo, 300), ya que hay un intervalo entre episodios.
 - `--dataset.reset_time_s=10`: 10 segundos entre episodios para que puedas recolocar los objetos (durante la evaluación, mantén el estado inicial lo más consistente posible).
 
 </section>
@@ -163,16 +148,16 @@ lerobot-record \
 
 </section>
 
-## 17.5 Seguridad: Límites, Límites de Velocidad, Parada de Emergencia
+## 17.5 Seguridad: Límites, Límites de Velocidad y Parada de Emergencia
 
 <section id="safety" className="section-card">
   <div className="section-title">
     <span>Seguridad</span>
-    <h2>17.5 Seguridad: Límites, Límites de Velocidad, Parada de Emergencia</h2>
+    <h2>17.5 Seguridad: Límites, Límites de Velocidad y Parada de Emergencia</h2>
   </div>
 
 - **Usa siempre ESC para detener**; no uses Ctrl+C. Antes de detener, deja que el brazo termine el fragmento de acción actual o devuélvelo manualmente a una postura segura para evitar que se detenga en el aire en una posición cargada.
-- Está siempre preparado para cortar la alimentación; si el brazo se comporta de forma anómala, es necesaria una desconexión de emergencia.
+- Está siempre listo para cortar la alimentación; si el brazo se comporta de forma anómala, es necesaria una desconexión de emergencia.
 
 </section>
 
@@ -188,7 +173,7 @@ Fija las condiciones iniciales, ejecuta 20 pruebas consecutivas y registra cada 
 
 - **Tasa de éxito = éxitos ÷ 20.** Para un primer modelo entrenado, >50% es un inicio normal, >80% es excelente.
 - **Tiempo de finalización:** comprueba la estabilidad: ¿las ejecuciones exitosas tienen duraciones similares? Una velocidad inconsistente significa que la política "duda".
-- En las ejecuciones fallidas, **no te limites a anotar una ✗**: registra el modo de fallo.
+- En las ejecuciones fallidas — **no te limites a anotar una ✗** — registra el tipo de fallo.
 
 </section>
 
@@ -204,11 +189,11 @@ Después de probar bajo condiciones estándar, varía las condiciones una por un
 
 | Prueba | Método | Expectativa |
 | :--- | :--- | :--- |
-| Generalización de posición | Coloca el bloque fuera de los cinco puntos marcados con lápiz pero dentro de la cobertura de entrenamiento | Apenas debería caer; si cae, la diversidad de posiciones es insuficiente |
+| Generalización de posición | Coloca el bloque fuera de los cinco puntos marcados a lápiz pero dentro de la cobertura de entrenamiento | Apenas debería caer; si cae, la diversidad de posiciones es insuficiente |
 | Perturbación leve | Coloca objetos no relacionados sobre la mesa | Un modelo entrenado con una escena visualmente limpia no debería verse afectado |
 | Cambio fuerte de distribución | Objetos totalmente nuevos, superficie reflectante espejada | El fallo es de esperar; no es necesario corregirlo |
 
-El objetivo de las pruebas de generalización no es demostrar lo fuerte que es el modelo, sino **delimitar su frontera de capacidad**: úsalo libremente dentro de esa frontera; complementa los datos y amplíala gradualmente más allá.
+El objetivo de las pruebas de generalización no es demostrar lo fuerte que es el modelo, sino **delimitar su frontera de capacidad**: úsalo libremente dentro de esa frontera; complementa datos y expándela gradualmente más allá.
 
 </section>
 
@@ -222,9 +207,9 @@ El objetivo de las pruebas de generalización no es demostrar lo fuerte que es e
 
 | Tipo de fallo | Causa más probable | Contramedida |
 | :--- | :--- | :--- |
-| No puede alcanzar: se mueve hacia una posición incorrecta | Cobertura de datos insuficiente en esa posición (fuera de distribución) | Complementar demostraciones en esa zona |
-| Agarre inestable: toca pero no puede sujetar/se le cae | El momento de cierre de la pinza se ha aprendido de forma imprecisa; muy pocas demostraciones del momento de agarre | Añadir demostraciones de alta calidad del momento de agarre |
-| Movimiento aleatorio en todo momento; las acciones son absurdas | El entrenamiento no ha convergido en absoluto, o la escena/iluminación ha cambiado significativamente | Comprobar si la escena y la iluminación de recopilación de datos coinciden con las de inferencia |
+| No puede alcanzar: se mueve hacia una posición incorrecta | Cobertura de datos insuficiente en esa posición (fuera de distribución) | Añadir demostraciones suplementarias en esa zona |
+| Agarre inestable: toca pero no sujeta/se le cae | El momento de cierre del efector se aprendió de forma imprecisa; muy pocas demostraciones del momento de agarre | Añadir demostraciones de alta calidad del momento de agarre |
+| Movimiento aleatorio en todo momento; las acciones son absurdas | El entrenamiento no convergió en absoluto, o la escena/iluminación cambiaron significativamente | Comprobar si la escena y la iluminación de recopilación de datos coinciden con las de inferencia |
 
 :::tip
 **Descarta primero problemas de configuración y luego sospecha de problemas de datos**: el movimiento aleatorio es una enfermedad de configuración; el no-puede-alcanzar es una enfermedad de datos.
@@ -240,17 +225,17 @@ El objetivo de las pruebas de generalización no es demostrar lo fuerte que es e
     <h2>17.9 Iteración de Datos: Recopilación de Datos Impulsada por Fallos</h2>
   </div>
 
-El paso final del ciclo: convertir los fallos en datos:
+El paso final del bucle: convertir los fallos en datos:
 
 1. **Clasificar:** identificar el tipo de fallo y la escena correspondiente.
-2. **Complementar:** registrar de 10 a 20 demostraciones nuevas para la escena de fallo: ¿no puede alcanzar? graba en esa posición; ¿agarre inestable? graba el momento de agarre. Expande conscientemente el límite de agarre de forma gradual; por ejemplo, coloca bloques en puntos de 5 a 10 cm más allá de la cruz original para ampliar el conjunto de datos.
+2. **Complementar:** registrar de 10 a 20 nuevas demostraciones para la escena de fallo: ¿no puede alcanzar? graba en esa posición; ¿agarre inestable? graba el momento de agarre. Expande conscientemente el límite de agarre de forma gradual; por ejemplo, coloca bloques en puntos de 5-10 cm más allá de la cruz original para ampliar el conjunto de datos.
 3. **Reentrenar:** vuelve a entrenar con el nuevo conjunto de datos.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17/ch17-03.png" alt="Data iteration" />
 </div>
 
-Con esto, el bucle cerrado desde el inicio del capítulo queda completamente completo: teleoperación, recopilación, inspección, entrenamiento, inferencia, evaluación, iteración; esta canalización se reutiliza tal cual para cualquier tarea nueva. Ese es el entregable principal de la Etapa 3.
+Con esto, el bucle cerrado desde el inicio del capítulo queda completamente completo: teleoperación, recopilación, inspección, entrenamiento, inferencia, evaluación, iteración; esta canalización se reutiliza tal cual para cualquier tarea nueva. Ese es el resultado principal de la Etapa 3.
 
 </section>
 

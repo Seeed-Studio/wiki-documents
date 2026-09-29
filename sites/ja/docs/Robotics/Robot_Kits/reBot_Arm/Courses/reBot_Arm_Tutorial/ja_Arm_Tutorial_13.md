@@ -1,5 +1,5 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course 第13章 — カメラ設定と LeRobot データ収集：単眼／二眼カメラ構成、カメラデバイス名の確認、画像とアクションの同期、データセット作成、録画と再録画、可視化、データの追加・削除。"
+description: 'Seeed Physical AI Beginner''s Course 第13章 — カメラ設定と LeRobot データ収集：単眼／デュアルカメラ構成、カメラデバイス名の確認、画像とアクションの同期、データセットの作成、録画と再録画、可視化、データの追加・削除。'
 title: 第13章 - カメラ設定と LeRobot データ収集
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Dataset
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_13
+slug: /rebot_physical_ai_course_chapter_13
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_13/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_13/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,61 +32,48 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">ステージ 3 · 第13章 · 実践</span>
     <h2>13. カメラ設定と LeRobot データ収集</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course 第13章 — 単眼／二眼カメラ構成、
-      カメラデバイス名の確認、画像とアクションの同期、データセット作成、録画と
+      Seeed Physical AI Beginner's Course 第13章 — 単眼／デュアルカメラ構成、
+      カメラデバイス名の確認、画像とアクションの同期、データセットの作成、録画と
       再録画、可視化、データの追加・削除について説明します。
     </p>
     <div className="hero-actions">
       <a href="#カメラ-セットアップ">Cameras</a>
-      <a href="#同期">Sync</a>
-      <a href="#データセット作成">Dataset</a>
+      <a href="#画像とアクションの同期">Sync</a>
+      <a href="#LeRobot-データセットの作成">Dataset</a>
     </div>
-  </div>
-  <div className="hero-card">
-    <strong>この章で学ぶこと</strong>
-    <span>13.1 単眼カメラ vs. 二眼カメラ構成</span>
-    <span>13.2 俯瞰カメラと手首カメラ</span>
-    <span>13.3 カメラデバイス名の確認</span>
-    <span>13.4 画像とアクションの同期</span>
-    <span>13.5 LeRobot データセットの作成</span>
-    <span>13.6 エピソードの録画、一時停止、再録画</span>
-    <span>13.7 データセットの可視化と再生</span>
-    <span>13.8 データの追加と削除</span>
   </div>
 </section>
 
-<RebotCourseNav />
+## 13.1 単眼カメラ vs デュアルカメラ構成
 
-## 13.1 単眼カメラ vs. 二眼カメラ構成
-
-<section id="カメラ-セットアップ" className="section-card">
+<section id="camera-setup" className="section-card">
   <div className="section-title">
     <span>セットアップ</span>
-    <h2>13.1 単眼カメラ vs. 二眼カメラ構成</h2>
+    <h2>13.1 単眼カメラ vs デュアルカメラ構成</h2>
   </div>
 
-- **単眼カメラ構成：** 俯瞰カメラのみ接続します。最初のパイプライン実行や環境確認に適しています — カメラが 1 台少ないということは、デバッグ時の変数が 1 つ減るということです。
-- **二眼カメラ構成**（本コースのメインパス、正式な収集用）：俯瞰 + 手首。ACT モデルもデフォルトで 2 本の入力ストリームを想定しています。俯瞰 + 側面ビューを選択することもできます。
+- **単眼カメラ構成：** オーバーヘッドカメラのみを接続します。最初のパイプライン実行や環境確認に適しています。カメラが 1 台少ないということは、デバッグ時の変数が 1 つ減るということです。
+- **デュアルカメラ構成**（本コースのメインパス、正式な収集用）：オーバーヘッド + リスト。ACT モデルもデフォルトで 2 本の入力ストリームを想定しています。オーバーヘッド + サイドビューという構成も選べます。
 
-3 台または 4 台のカメラも学習と収集に使用できます。ACT 自体にはカメラ台数のハードな上限はありません。各画像ストリームは共有の ResNet18 バックボーンを通って特徴トークン列を生成し、それらを連結して Transformer エンコーダに入力します。元の ACT 論文（ALOHA デュアルアーム）では 4 台のカメラ（俯瞰 2 台 + 手首 2 台）が使用されています。
+3 台または 4 台のカメラを使って学習・収集することもできます。ACT 自体にはカメラ台数のハードな上限はありません。各画像ストリームは共有の ResNet18 バックボーンを通って特徴トークン列を生成し、それらを連結して Transformer エンコーダに入力します。元の ACT 論文（ALOHA デュアルアーム）では 4 台（オーバーヘッド 2 台 + リスト 2 台）のカメラが使われています。
 
 - **コスト：** カメラを 1 台追加するごとに、VRAM と計算量はほぼ線形に増加し、データ要求も増えます（視点が増えるほど学習すべきことが増える）。各ストリームは同期と固定された位置関係を維持する必要があります。
 
 </section>
 
-## 13.2 俯瞰カメラと手首カメラ
+## 13.2 オーバーヘッドカメラとリストカメラ
 
 <section id="camera-roles" className="section-card">
   <div className="section-title">
     <span>カメラ</span>
-    <h2>13.2 俯瞰カメラと手首カメラ</h2>
+    <h2>13.2 オーバーヘッドカメラとリストカメラ</h2>
   </div>
 
-- **俯瞰カメラ（前方）：** 作業空間全体を見下ろすようにマウントに固定します。モデルに「ターゲットがどこにあり、アーム全体の状態がどうなっているか」を伝えます。
-- **手首カメラ（手首）：** アーム先端に取り付けられ、グリッパーに追従します。モデルに「グリッパーとターゲットの相対位置、および閉じるべきかどうか」を伝えます。
+- **オーバーヘッドカメラ（正面）：** 作業空間全体を見下ろすようにマウントに固定します。モデルに「ターゲットがどこにあり、アーム全体がどのような状態か」を伝えます。
+- **リストカメラ（手首）：** アーム先端に取り付けられ、グリッパーに追従します。モデルに「グリッパーとターゲットの相対位置、および閉じるべきかどうか」を伝えます。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13/ch13-01.png" alt="俯瞰カメラと手首カメラ" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13/ch13-01.png" alt="オーバーヘッドカメラとリストカメラ" />
 </div>
 
 </section>
@@ -100,13 +86,13 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <h2>13.3 カメラデバイス名の確認</h2>
   </div>
 
-カメラのインデックスを確認するには、まず次を実行します：
+カメラインデックスを確認するには、まず次を実行します：
 
 ```bash
 lerobot-find-cameras opencv
 ```
 
-`Id: 0` のように表示されます。ここで 0 がカメラインデックスです。
+`Id: 0` のような表示が見えます。この 0 がカメラインデックスです。
 
 ```text
 --- Detected Cameras ---
@@ -126,18 +112,18 @@ Camera #0:
 
 各カメラの名前、ID、デフォルト解像度が一覧表示されます。ディレクトリ内の `~/rebot_lerobot/outputs/captured_images/` を開くと、各カメラで撮影された画像を確認でき、カメラの位置が正しく適切かどうかを検証できます。
 
-また注意点として、ノート PC を使用している場合は内蔵カメラもスキャンされます。正しい俯瞰カメラと手首カメラのインデックスを見つけるには、USB を抜き差しして確認する必要があります。ノート PC の内蔵カメラは通常インデックス 0 です。
+また注意点として、ノート PC を使用している場合は内蔵カメラもスキャンされます。正しいオーバーヘッドカメラとリストカメラのインデックスを見つけるには、USB を抜き差しして確認する必要があります。ノート PC の内蔵カメラは通常インデックス 0 です。
 
-- **接続順序によってインデックスが変わります。** 今日は俯瞰カメラが 0 でも、明日挿し直すと変わるかもしれません。録画セッションの前に毎回 10 秒かけて `lerobot-find-cameras` を再実行し、確認してください。
-- **USB カメラはドック経由ではなく、必ず PC 本体に直接接続してください。** パッシブハブでの帯域競合は、そのまま読めない画像やフレーム落ちとして現れます。理想的には、2 台のカメラを別々の USB コントローラに接続すべきです。
+- **接続順によってインデックスは変わります。** 今日はオーバーヘッドが 0 でも、明日差し直すと変わるかもしれません。録画セッションの前に毎回 10 秒かけて `lerobot-find-cameras` を再実行し、確認してください。
+- **USB カメラはドック経由ではなく、必ず PC 本体に直接接続してください。** パッシブハブでの帯域競合は、そのまま画像が読めない・フレーム落ちといった形で現れます。理想的には、2 台のカメラを別々の USB コントローラに接続してください。
 
 </section>
 
 ## 13.4 画像とアクションの同期
 
-<section id="同期" className="section-card">
+<section id="sync" className="section-card">
   <div className="section-title">
-    <span>Sync</span>
+    <span>同期</span>
     <h2>13.4 画像とアクションの同期</h2>
   </div>
 
@@ -175,7 +161,7 @@ lerobot-teleoperate \
 
 カメラがさらにある場合は、`--robot.cameras` パラメータを変更して追加できます。`index_or_path` の形式に注意してください。これは `python -m lerobot.find_cameras opencv` コマンドの出力におけるカメラ ID の末尾の数字によって決まります。
 
-### 二眼カメラ
+### デュアルカメラ
 
 **RS バージョン：**
 
@@ -213,19 +199,19 @@ lerobot-teleoperate \
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13/ch13-02.png" alt="収集ボックス内部からのカメラ映像" />
 </div>
 
-推奨パラメータ：**640 × 480 @ 30 fps、`fourcc: "MJPG"`**。この 3 つのパラメータはいずれも重要です：
+推奨パラメータ：**640 × 480 @ 30 fps, `fourcc: "MJPG"`**。この 3 つのパラメータはそれぞれ重要です。
 
-- **解像度 640×480：** 画質とリアルタイム性のバランスが取れています。解像度を 2 倍にすると USB 帯域とストレージの負荷は 4 倍になりますが、モデル入力側では結局リサイズされるため、得られるメリットは限定的です。
-- **FPS 30：** 収集 FPS と一致させます。カメラの FPS がこれより低いと、録画時に古いフレームが繰り返し再利用されます。
-- **`fourcc: "MJPG"`：** 送信前に画像を圧縮することで、USB 帯域の負荷を桁違いに削減します。もちろん `YUYV` 形式の画像を試すこともできますが、その場合は解像度と FPS が下がり、アームの動きがカクつきます。現在 `MJPG` 形式であれば、1920×1080 解像度のカメラ 3 台でも 30 FPS を維持できます。
+- **解像度 640×480：** 画質とリアルタイム性のバランスです。解像度を 2 倍にすると USB 帯域とストレージの負荷は 4 倍になりますが、モデル入力側では結局リサイズされるため、得られるメリットは限定的です。
+- **FPS 30：** 収集 FPS と一致させます。カメラの FPS が低いと、録画時に古いフレームが繰り返し再利用されます。
+- **`fourcc: "MJPG"`：** 送信前に画像を圧縮することで、USB 帯域の負荷を桁違いに減らします。もちろん `YUYV` 形式の画像を試すこともできますが、その場合は解像度と FPS が下がり、アームの動きがカクつきます。現在、`MJPG` 形式であれば 1920×1080 解像度のカメラ 3 台でも 30 FPS を維持できます。
 
 </section>
 
 ## 13.5 LeRobot データセットの作成
 
-<section id="データセット作成" className="section-card">
+<section id="create-dataset" className="section-card">
   <div className="section-title">
-    <span>Dataset</span>
+    <span>データセット</span>
     <h2>13.5 LeRobot データセットの作成</h2>
   </div>
 
@@ -233,7 +219,7 @@ lerobot-teleoperate \
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13/ch13-03.png" alt="LeRobot データセットの作成" />
 </div>
 
-以下のコマンドを実行する前に、データを記録できるよう準備しておきます。録画フェーズに入るときに音声による合図があります。合図がない場合は、ターミナルのプロンプトを確認し、開始しているかどうかを確認してください。
+以下のコマンドを実行する前に、データを記録できるよう準備しておいてください。録画フェーズに入るときに音声による合図があります。聞こえない場合は、ターミナルのプロンプトを確認して開始しているかどうかを確認してください。
 
 **RS バージョン：**
 
@@ -277,28 +263,28 @@ lerobot-record \
     --dataset.reset_time_s=20
 ```
 
-データセット自体に関連するパラメータはいくつかあります：
+データセット自体に関係するパラメータはいくつかあります：
 
-| パラメータ | 意味 | 推奨設定 |
+| Parameter | 意味 | 推奨 |
 | :--- | :--- | :--- |
 | `--dataset.repo_id` | データセット名（ローカルフォルダ名も兼ねる） | テスト用と本番用で名前を分ける。例：`rebot_b601/grab_cube_test` / `rebot_b601/grab_cube_v1` |
-| `--dataset.single_task` | タスクの説明（データセット内に保存される） | 英語で、タスクの説明と一致させる |
-| `--dataset.num_episodes` | 記録する Episode の数 | テスト：5、本番：50（デフォルトは 50） |
-| `--dataset.push_to_hub` | 記録後に Hub にアップロードするかどうか | `false` = アップロードしない |
-| `--dataset.episode_time_s=30` | 1 Episode あたりの記録時間 | タスクの複雑さに応じて調整 |
-| `--dataset.reset_time_s=20` | 次の記録のためにシーンをリセットする時間 | シーンのリセット時間に応じて調整 |
+| `--dataset.single_task` | タスクの説明（データセット内に保存） | タスク説明に対応した英語 |
+| `--dataset.num_episodes` | 何エピソード録画するか | テスト：5、本番：50（デフォルトは 50） |
+| `--dataset.push_to_hub` | 録画後に Hub へアップロードするかどうか | `false` = アップロードしない |
+| `--dataset.episode_time_s=30` | 1 エピソードあたりの録画時間 | タスクの複雑さに応じて調整 |
+| `--dataset.reset_time_s=20` | 次の録画に向けてシーンをリセットする時間 | シーンリセットに必要な時間に応じて調整 |
 | `--display_data=true` | カメラ映像をリアルタイム表示するか | - |
 
-その後、データセットはホームディレクトリ配下の `~/.cache/huggingface/lerobot` に保存されます。上記のフォルダは `seeed_rebot_b601_rs/test` の下に作成されます。
+その後、データセットはホームディレクトリ内の `~/.cache/huggingface/lerobot` に保存されます。上記のフォルダは `seeed_rebot_b601_rs/test` の下に作成されます。
 
 </section>
 
-## 13.6 Episode の記録、一時停止、再記録
+## 13.6 エピソードの記録、一時停止、再記録
 
 <section id="recording" className="section-card">
   <div className="section-title">
-    <span>Recording</span>
-    <h2>13.6 Recording, Pausing, and Re-recording Episodes</h2>
+    <span>記録</span>
+    <h2>13.6 エピソードの記録、一時停止、再記録</h2>
   </div>
 
 ### 記録
@@ -307,17 +293,17 @@ lerobot-record \
 
 | キー | 動作 |
 | :--- | :--- |
-| →（右矢印） | 現在の Episode を早期終了し、リセット／次へ進む |
-| ←（左矢印） | 現在の Episode を破棄し、この Episode を再記録する |
-| ESC | 収集セッション全体を終了：動画のエンコード、統計量の計算、データセットの保存を行う |
+| →（右矢印） | 現在のエピソードを早期終了し、リセット／次へ進む |
+| ←（左矢印） | 現在のエピソードを破棄し、このエピソードを再記録する |
+| ESC | 収集セッション全体を終了：動画をエンコードし、統計量を計算し、データセットを保存 |
 
 :::warning
-キーが反応しない場合は `pynput` のバージョンの問題です。`pip install pynput==1.6.8` でダウングレードしてください。
+キーが反応しない場合は `pynput` のバージョンの問題です。ダウングレードしてください：`pip install pynput==1.6.8`。
 :::
 
 ### 再記録
 
-5 Episode を記録して再生を確認したら、本番収集では：`repo_id` を本番用の名前に変更し、`num_episodes=50` を本番用の値に変更し、第 12 章の鉛筆五点法に従って収集します — 1 点につき 1 Episode、1 周あたり 5 点、合計 10 周です。
+5エピソードを記録して再生を確認したら、本番収集では：`repo_id` を本番用の名前に変更し、`num_episodes=50` を本番用の値に変更し、第12章の鉛筆五点法に従います — 1点につき1エピソード、1周あたり5点、合計10周です。
 
 ### 記録の一時停止
 
@@ -331,8 +317,8 @@ lerobot-record \
 
 <section id="viz-replay" className="section-card">
   <div className="section-title">
-    <span>Playback</span>
-    <h2>13.7 Visualizing and Playing Back a Dataset</h2>
+    <span>再生</span>
+    <h2>13.7 データセットの可視化と再生</h2>
   </div>
 
 ### データセットの可視化
@@ -350,7 +336,7 @@ lerobot-dataset-viz \
   --display-compressed-images=false
 ```
 
-`--dataset.push_to_hub=false` を使用してデータをアップロードしていない場合でも、次のようにローカルで可視化できます：
+`--dataset.push_to_hub=false` を使用してデータをアップロードしていない場合でも、次のコマンドでローカル可視化できます：
 
 **RS バージョン：**
 
@@ -370,11 +356,11 @@ lerobot-dataset-viz \
   --display-compressed-images=false
 ```
 
-ここで、`seeed_rebot_b601_rs/test` は収集時に使用したカスタムデータセット名（`repo_id`）です。
+ここで、`seeed_rebot_b601_rs/test` は収集時のカスタムデータセット名（`repo_id`）です。
 
 ### データセットの再生
 
-次に、ロボット上で最初のデータセットを再生してみましょう。`--dataset.episode=0` は最初に収集したデータセットを再生することを意味し、以降同様です。
+ここでは、ロボット上で最初のデータセットを再生してみます：`--dataset.episode=0` は最初に収集したデータセットを再生することを意味し、以降も同様です。
 
 **RS バージョン：**
 
@@ -408,16 +394,16 @@ lerobot-replay \
 
 <section id="edit-dataset" className="section-card">
   <div className="section-title">
-    <span>Editing</span>
-    <h2>13.8 Supplementing and Deleting Data</h2>
+    <span>編集</span>
+    <h2>13.8 データの追加と削除</h2>
   </div>
 
 - 記録中にチェックポイントが自動的に作成されます。
-- 元のコマンドに `--resume=true` を追加して、データの追加記録を続行します。
-- 追加記録を行う場合、`--dataset.num_episodes` にはデータセットの目標総数ではなく、「追加で記録する Episode 数」を設定します。
-- 最初からやり直したい場合は、データセットディレクトリを**手動で削除**してください。
+- 元のコマンドに `--resume=true` を追加して、データの追加収集を続行します。
+- 再開時は、`--dataset.num_episodes` を追加で記録するエピソード数（データセット内の最終的な合計ではない）に設定します。
+- 最初からやり直す場合は、データセットディレクトリを**手動で削除**します。
 
-次のコマンドを使用して Episode を削除します：`--operation.episode_indices "[0]"` は最初の Episode を削除し、以降同様です。削除には時間がかかるので待機し、データセット名も適宜変更してください。
+次のコマンドを使用してエピソードを削除します：`--operation.episode_indices "[0]"` は最初のエピソードを削除し、以降も同様です。削除には時間がかかるので待機し、データセット名を適宜変更してください。
 
 ```bash
 lerobot-edit-dataset \

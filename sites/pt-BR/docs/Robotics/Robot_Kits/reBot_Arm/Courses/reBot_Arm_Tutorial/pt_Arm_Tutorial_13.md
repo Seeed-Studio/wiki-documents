@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 13 do Curso para Iniciantes em Inteligência Incorporada da Seeed — configuração de câmera e coleta de dados com LeRobot: configuração com câmera única vs dupla, encontrando nomes de dispositivos de câmera, sincronização de imagem/ação, criação de dataset, gravação e regravação, visualização e complementação ou exclusão de dados."
+description: 'Capítulo 13 do Curso para Iniciantes em IA Física da Seeed — configuração de câmera e coleta de dados com LeRobot: configuração com uma ou duas câmeras, localização dos nomes dos dispositivos de câmera, sincronização imagem/ação, criação de um dataset, gravação e regravação, visualização e complementação ou exclusão de dados.'
 title: Capítulo 13 - Configuração de Câmera e Coleta de Dados com LeRobot
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Dataset
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_13
+slug: /rebot_physical_ai_course_chapter_13
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_13/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_13/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,8 +32,8 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 3 · Capítulo 13 · Prática</span>
     <h2>13. Configuração de Câmera e Coleta de Dados com LeRobot</h2>
     <p>
-      Capítulo 13 do Curso para Iniciantes em Inteligência Incorporada da Seeed — configuração com câmera única vs dupla,
-      encontrando nomes de dispositivos de câmera, sincronização de imagem/ação, criação de um dataset, gravação e
+      Capítulo 13 do Curso para Iniciantes em IA Física da Seeed — configuração com uma ou duas câmeras,
+      localização dos nomes dos dispositivos de câmera, sincronização imagem/ação, criação de um dataset, gravação e
       regravação, visualização e complementação ou exclusão de dados.
     </p>
     <div className="hero-actions">
@@ -43,61 +42,48 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#create-dataset">Dataset</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>Neste capítulo</strong>
-    <span>13.1 Configuração com Câmera Única vs Dupla</span>
-    <span>13.2 Câmeras Superior e de Pulso</span>
-    <span>13.3 Encontrando Nomes de Dispositivos de Câmera</span>
-    <span>13.4 Sincronização de Imagem e Ação</span>
-    <span>13.5 Criar Dataset do LeRobot</span>
-    <span>13.6 Gravar, Pausar e Regravar Episódios</span>
-    <span>13.7 Visualizar e Reproduzir um Dataset</span>
-    <span>13.8 Complementar e Excluir Dados</span>
-  </div>
 </section>
 
-<RebotCourseNav />
-
-## 13.1 Configuração com Câmera Única vs Dupla
+## 13.1 Configuração com Uma Câmera vs Duas Câmeras
 
 <section id="camera-setup" className="section-card">
   <div className="section-title">
     <span>Configuração</span>
-    <h2>13.1 Configuração com Câmera Única vs Dupla</h2>
+    <h2>13.1 Configuração com Uma Câmera vs Duas Câmeras</h2>
   </div>
 
-- **Configuração com câmera única:** apenas a câmera superior conectada. Boa para uma primeira execução do pipeline e verificação do ambiente — uma câmera a menos significa uma variável a menos na depuração.
-- **Configuração com duas câmeras** (trilha principal do curso, para coleta formal): superior + pulso; o modelo ACT também usa por padrão dois fluxos de entrada. Você também pode escolher superior + vista lateral.
+- **Configuração com uma câmera:** apenas a câmera superior conectada. Boa para uma primeira execução do pipeline e verificação do ambiente — uma câmera a menos significa uma variável a menos na depuração.
+- **Configuração com duas câmeras** (caminho principal do curso, para coleta formal): superior + punho; o modelo ACT também usa por padrão dois fluxos de entrada. Você também pode escolher superior + vista lateral.
 
-Três ou quatro câmeras também podem ser usadas para treinamento e coleta. O próprio ACT não tem limite rígido de quantidade de câmeras: cada fluxo de imagem passa por um backbone ResNet18 compartilhado para produzir uma sequência de tokens de características, que é concatenada no codificador Transformer. O artigo original do ACT (ALOHA dual-arm) usou 4 câmeras (2 superiores + 2 de pulso).
+Três ou quatro câmeras também podem ser usadas para treinamento e coleta. O próprio ACT não tem limite rígido de quantidade de câmeras: cada fluxo de imagem passa por um backbone ResNet18 compartilhado para produzir uma sequência de tokens de características, que é concatenada no codificador Transformer. O artigo original do ACT (ALOHA dual-arm) usou 4 câmeras (2 superiores + 2 no punho).
 
-- **Custo:** cada câmera adicional aumenta aproximadamente de forma linear a VRAM e o custo computacional, e também aumenta a necessidade de dados (mais pontos de vista significam mais coisas para aprender); cada fluxo deve manter sincronização e posicionamento fixo.
+- **Custo:** cada câmera adicional aumenta aproximadamente de forma linear o uso de VRAM e o custo computacional, e também aumenta a necessidade de dados (mais pontos de vista significam mais coisas para aprender); cada fluxo deve manter sincronização e posicionamento fixo.
 
 </section>
 
-## 13.2 Câmeras Superior e de Pulso
+## 13.2 Câmeras Superior e de Punho
 
 <section id="camera-roles" className="section-card">
   <div className="section-title">
     <span>Câmeras</span>
-    <h2>13.2 Câmeras Superior e de Pulso</h2>
+    <h2>13.2 Câmeras Superior e de Punho</h2>
   </div>
 
 - **Câmera superior (frontal):** fixa em um suporte com vista de todo o espaço de trabalho; informa ao modelo "onde está o alvo e o estado geral do braço".
-- **Câmera de pulso (pulso):** montada na extremidade do braço, seguindo o gripper; informa ao modelo "a posição relativa entre o gripper e o alvo, e se deve fechar".
+- **Câmera de punho (punho):** montada na extremidade do braço, acompanhando o gripper; informa ao modelo "a posição relativa entre o gripper e o alvo, e se deve fechar".
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13/ch13-01.png" alt="Câmeras superior e de pulso" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13/ch13-01.png" alt="Câmeras superior e de punho" />
 </div>
 
 </section>
 
-## 13.3 Encontrando Nomes de Dispositivos de Câmera
+## 13.3 Encontrando os Nomes dos Dispositivos de Câmera
 
 <section id="camera-names" className="section-card">
   <div className="section-title">
     <span>Dispositivos</span>
-    <h2>13.3 Encontrando Nomes de Dispositivos de Câmera</h2>
+    <h2>13.3 Encontrando os Nomes dos Dispositivos de Câmera</h2>
   </div>
 
 Para verificar os índices das câmeras, primeiro execute:
@@ -126,10 +112,10 @@ Camera #0:
 
 Ele lista o nome, o ID e a resolução padrão de cada câmera. Você pode encontrar `~/rebot_lerobot/outputs/captured_images/` no diretório para visualizar as imagens capturadas por cada câmera, verificando se o posicionamento das câmeras está correto e adequado.
 
-Observe também: se estiver usando um laptop, a câmera embutida será escaneada; você precisará desconectar/conectar novamente para encontrar os índices corretos das câmeras superior e de pulso. A câmera embutida do laptop geralmente é o índice 0.
+Observe também: se estiver usando um laptop, a câmera integrada será escaneada; você precisará desconectar/reconectar para encontrar os índices corretos das câmeras superior e de punho. A câmera integrada do laptop geralmente é o índice 0.
 
 - **A ordem de conexão altera os índices.** Hoje a câmera superior é 0; amanhã, após reconectar, pode mudar. Gaste 10 segundos reexecutando `lerobot-find-cameras` antes de cada sessão de gravação para confirmar.
-- **Câmeras USB devem ser conectadas diretamente ao computador, não por um dock.** Contenção de largura de banda em hubs passivos se manifesta diretamente como imagens ilegíveis ou quadros perdidos; idealmente, as duas câmeras devem ser conectadas a controladores USB diferentes.
+- **Câmeras USB devem ser conectadas diretamente ao computador, não por meio de um dock.** Contenção de largura de banda em hubs passivos se manifesta diretamente como imagens ilegíveis ou quadros perdidos; idealmente, as duas câmeras devem ser conectadas a controladores USB diferentes.
 
 </section>
 
@@ -141,7 +127,7 @@ Observe também: se estiver usando um laptop, a câmera embutida será escaneada
     <h2>13.4 Sincronização de Imagem e Ação</h2>
   </div>
 
-### Câmera Única
+### Uma Câmera
 
 **Versão RS:**
 
@@ -173,7 +159,7 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-Se você tiver mais câmeras, pode adicioná-las alterando o parâmetro `--robot.cameras`. Observe o formato `index_or_path`, que é determinado pelo último dígito do ID da câmera exibido pelo comando `python -m lerobot.find_cameras opencv`.
+Se você tiver mais câmeras, pode adicioná-las alterando o parâmetro `--robot.cameras`. Observe o formato de `index_or_path`, que é determinado pelo último dígito do ID da câmera exibido pelo comando `python -m lerobot.find_cameras opencv`.
 
 ### Duas Câmeras
 
@@ -217,7 +203,7 @@ Parâmetros recomendados: **640 × 480 @ 30 fps, `fourcc: "MJPG"`**. Cada um dos
 
 - **Resolução 640×480:** um equilíbrio entre clareza e desempenho em tempo real. Dobrar a resolução quadruplica a largura de banda USB e o overhead de armazenamento, enquanto a entrada do modelo já redimensiona as imagens de qualquer forma — benefício limitado.
 - **FPS 30:** corresponde ao FPS de coleta. Se o FPS da câmera for menor, a gravação reutilizará repetidamente quadros antigos.
-- **`fourcc: "MJPG"`:** a imagem é comprimida antes da transmissão, reduzindo a pressão de largura de banda USB em uma ordem de grandeza. Você pode, é claro, tentar imagens no formato `YUYV`, mas isso reduzirá a resolução e o FPS, causando engasgos no braço. Atualmente o formato `MJPG` suporta 3 câmeras em resolução 1920×1080 mantendo 30 FPS.
+- **`fourcc: "MJPG"`:** a imagem é comprimida antes da transmissão, reduzindo a pressão de largura de banda USB em uma ordem de grandeza. Você pode, claro, tentar imagens no formato `YUYV`, mas isso reduzirá a resolução e o FPS, causando engasgos no braço. Atualmente o formato `MJPG` suporta 3 câmeras em resolução 1920×1080 mantendo 30 FPS.
 
 </section>
 
@@ -233,7 +219,7 @@ Parâmetros recomendados: **640 × 480 @ 30 fps, `fourcc: "MJPG"`**. Cada um dos
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13/ch13-03.png" alt="Criar dataset do LeRobot" />
 </div>
 
-Antes de executar o comando abaixo, esteja pronto para gravar dados; haverá um aviso sonoro ao entrar na fase de gravação. Se não houver, verifique os avisos no terminal para ver se iniciou.
+Antes de executar o comando abaixo, esteja pronto para gravar dados; haverá um aviso sonoro ao entrar na fase de gravação. Se não houver, verifique as mensagens no terminal para ver se iniciou.
 
 **Versão RS:**
 
@@ -277,17 +263,17 @@ lerobot-record \
     --dataset.reset_time_s=20
 ```
 
-Há vários parâmetros relacionados ao próprio conjunto de dados:
+Há vários parâmetros relacionados ao próprio dataset:
 
 | Parâmetro | Significado | Recomendação |
 | :--- | :--- | :--- |
-| `--dataset.repo_id` | Nome do conjunto de dados (também o nome da pasta local) | Nomes separados para conjuntos de teste e formais, por exemplo, `rebot_b601/grab_cube_test` / `rebot_b601/grab_cube_v1` |
-| `--dataset.single_task` | Descrição da tarefa (armazenada no conjunto de dados) | Em inglês, correspondendo à descrição da tarefa |
-| `--dataset.num_episodes` | Quantos Episódios gravar | Teste: 5; formal: 50 (o padrão é 50) |
+| `--dataset.repo_id` | Nome do dataset (também o nome da pasta local) | Nomes separados para conjuntos de teste e formais, por exemplo, `rebot_b601/grab_cube_test` / `rebot_b601/grab_cube_v1` |
+| `--dataset.single_task` | Descrição da tarefa (armazenada no dataset) | Em inglês, correspondendo à descrição da tarefa |
+| `--dataset.num_episodes` | Quantos Episódios gravar | Teste: 5; formal: 50 (padrão é 50) |
 | `--dataset.push_to_hub` | Se deve enviar para o Hub após a gravação | `false` = não enviar |
-| `--dataset.episode_time_s=30` | Tempo de gravação por Episódio | Ajuste com base na complexidade da tarefa |
-| `--dataset.reset_time_s=20` | Tempo para redefinir a cena para a próxima gravação | Ajuste com base no tempo de redefinição da cena |
-| `--display_data=true` | Mostrar o feed da câmera em tempo real | - |
+| `--dataset.episode_time_s=30` | Tempo de gravação por Episódio | Ajustar com base na complexidade da tarefa |
+| `--dataset.reset_time_s=20` | Tempo para resetar a cena para a próxima gravação | Ajustar com base no tempo de reset da cena |
+| `--display_data=true` | Mostrar o fluxo da câmera em tempo real | - |
 
 Depois disso, o conjunto de dados será salvo no diretório home em `~/.cache/huggingface/lerobot`. A pasta acima será criada em `seeed_rebot_b601_rs/test`.
 
@@ -303,11 +289,11 @@ Depois disso, o conjunto de dados será salvo no diretório home em `~/.cache/hu
 
 ### Gravação
 
-Controles de teclado durante a gravação:
+Controles do teclado durante a gravação:
 
 | Tecla | Ação |
 | :--- | :--- |
-| → (Seta para a direita) | Encerrar o Episódio atual mais cedo, prosseguir para redefinir/próximo |
+| → (Seta para a direita) | Encerrar o Episódio atual mais cedo, prosseguir para reset/próximo |
 | ← (Seta para a esquerda) | Descartar o Episódio atual, regravar este |
 | ESC | Encerrar toda a sessão de coleta: codificar vídeos, calcular estatísticas, salvar conjunto de dados |
 
@@ -337,7 +323,7 @@ Não pressione Ctrl+C para pausar a gravação — pressione <kbd>Esc</kbd>, cas
 
 ### Visualizando um Conjunto de Dados
 
-Se você enviou dados, também pode visualizá-los localmente com:
+Se você enviou os dados, também pode visualizá-los localmente com:
 
 ```bash
 echo ${HF_USER}/rebot_test
@@ -350,7 +336,7 @@ lerobot-dataset-viz \
   --display-compressed-images=false
 ```
 
-Se você usou `--dataset.push_to_hub=false` e não enviou dados, também pode visualizar localmente com:
+Se você usou `--dataset.push_to_hub=false` e não enviou os dados, também pode visualizar localmente com:
 
 **Versão RS:**
 
@@ -417,7 +403,7 @@ O robô agora deve executar as mesmas ações que você gravou durante a teleope
 - Ao retomar, defina `--dataset.num_episodes` para o número de Episódios adicionais a serem gravados (não o total desejado no conjunto de dados).
 - Para começar do zero, **exclua manualmente** o diretório do conjunto de dados.
 
-Use o seguinte comando para excluir Episódios: `--operation.episode_indices "[0]"` exclui o primeiro Episódio, e assim por diante. Tenha paciência durante a exclusão e modifique o nome do conjunto de dados de acordo.
+Use o seguinte comando para excluir Episódios: `--operation.episode_indices "[0]"` exclui o primeiro Episódio, e assim por diante. Tenha paciência durante a exclusão e modifique o nome do conjunto de dados conforme necessário.
 
 ```bash
 lerobot-edit-dataset \

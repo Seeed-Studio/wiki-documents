@@ -21,7 +21,7 @@ last_update:
   date: 9/11/2026
   author: Kasun Thushara
 createdAt: '2026-09-11'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-14'
 url: https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_clip/
 ---
 

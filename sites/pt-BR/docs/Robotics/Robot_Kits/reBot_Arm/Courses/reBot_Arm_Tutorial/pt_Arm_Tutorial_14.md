@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 14 do Curso para Iniciantes em Inteligência Incorporada da Seeed — estrutura do dataset e inspeção de qualidade: o que é realmente armazenado em disco, os quatro padrões de qualidade, reprodução e inspeção de imagens, e o que fazer quando problemas são encontrados."
+description: 'Capítulo 14 do Curso para Iniciantes em IA Física da Seeed — estrutura do dataset e inspeção de qualidade: o que é realmente armazenado em disco, os quatro padrões de qualidade, reprodução e inspeção de imagens, e o que fazer quando problemas são encontrados.'
 title: Capítulo 14 - Estrutura do Dataset e Inspeção de Qualidade
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Parquet
   - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_14
+slug: /rebot_physical_ai_course_chapter_14
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_14/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_14/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -30,12 +29,12 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 <section className="doc-hero">
   <div>
-    <span className="eyebrow">Estágio 3 · Capítulo 14 · Teoria e Prática</span>
+    <span className="eyebrow">Estágio 3 · Capítulo 14 · Teoria & Prática</span>
     <h2>14. Estrutura do Dataset e Inspeção de Qualidade</h2>
     <p>
-      Capítulo 14 do Curso para Iniciantes em Inteligência Incorporada da Seeed — o que é realmente
-      armazenado em disco, os quatro padrões de qualidade, reprodução e inspeção de imagens, e o que
-      fazer quando problemas são encontrados.
+      Capítulo 14 do Curso para Iniciantes em IA Física da Seeed — o que é realmente armazenado em
+      disco, os quatro padrões de qualidade, reprodução e inspeção de imagens, e o que fazer quando problemas
+      são encontrados.
     </p>
     <div className="hero-actions">
       <a href="#structure">Estrutura</a>
@@ -43,16 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#fix">Correções</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>Neste capítulo</strong>
-    <span>14.1 Estrutura do Dataset: O Que é Realmente Armazenado em Disco</span>
-    <span>14.2 O Que Conta Como Dados “Bons”: Quatro Padrões de Qualidade</span>
-    <span>14.3 Reprodução e Inspeção de Imagens</span>
-    <span>14.4 O Que Fazer Quando Problemas São Encontrados</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 14.1 Estrutura do Dataset: O Que é Realmente Armazenado em Disco
 
@@ -87,20 +77,20 @@ O dataset gravado no Capítulo 13, `seeed_rebot_b601_rs/test`, fica assim em dis
 
 **Três formatos de armazenamento, cada um para um tipo de dado:**
 
-| Formato | O que Armazena | Por quê |
+| Formato | O que armazena | Por quê |
 | :--- | :--- | :--- |
 | Vídeo MP4 | Todos os frames de imagem de ambas as câmeras | Imagens ocupam >90% do tamanho do dataset; compressão de vídeo economiza de 1 a 2 ordens de magnitude em relação a imagens por frame. |
-| Tabela Parquet | Valores numéricos por frame: estado, ação, timestamps, índices | Armazenamento colunar; ler “todos os valores da junta 3” não exige carregar o arquivo inteiro. |
+| Tabela Parquet | Valores numéricos por frame: estado, ação, timestamps, índices | Armazenamento colunar; ler "todos os valores da junta 3" não exige carregar o arquivo inteiro. |
 | Metainfo | Definições de estrutura, estatísticas, tarefas, índice de episódios | Carregadores e programas de treinamento leem isto primeiro para saber como interpretar os outros dois. |
 
 </section>
 
-## 14.2 O Que Conta Como Dados “Bons”: Quatro Padrões de Qualidade
+## 14.2 O Que Conta Como Dados "Bons": Quatro Padrões de Qualidade
 
 <section id="quality" className="section-card">
   <div className="section-title">
     <span>Qualidade</span>
-    <h2>14.2 O Que Conta Como Dados “Bons”: Quatro Padrões de Qualidade</h2>
+    <h2>14.2 O Que Conta Como Dados "Bons": Quatro Padrões de Qualidade</h2>
   </div>
 
 Para julgar se um dataset está pronto para treinamento, observe quatro dimensões:
@@ -119,7 +109,7 @@ Para julgar se um dataset está pronto para treinamento, observe quatro dimensõ
     <h2>14.3 Reprodução e Inspeção de Imagens</h2>
   </div>
 
-Para reprodução visual use `lerobot-dataset-viz`; para reprodução em robô real use `lerobot-replay`. Para reprodução em robô real, use **Episódio 0, um no meio e o último**: o primeiro verifica a correção do fluxo de trabalho, o do meio verifica deriva de estado, o último revela mais facilmente queda de qualidade relacionada à fadiga.
+Para reprodução de visualização use `lerobot-dataset-viz`; para reprodução em robô real use `lerobot-replay`. Para reprodução em robô real, use **Episódio 0, um no meio e o último**: o primeiro verifica a correção do fluxo de trabalho, o do meio verifica deriva de estado, o último revela mais facilmente queda de qualidade relacionada à fadiga.
 
 Durante a reprodução, verifique com base nestes critérios:
 
@@ -140,7 +130,7 @@ Durante a reprodução, verifique com base nestes critérios:
 
 Três caminhos quando problemas são encontrados:
 
-- **Alguns poucos Episódios ruins** (por exemplo, Episódios 3 e 17 estão borrados) → exclua esses 2 e depois grave mais 2.
+- **Alguns poucos Episódios ruins** (por exemplo, Episódios 3 e 17 estão borrados) → exclua esses 2, depois grave mais 2.
 - **Problemas em todo o lote** (por exemplo, metade tem iluminação diferente, o lote inteiro tem dessincronização de áudio e vídeo) → não faça remendos, regrave todo o conjunto. Um dataset remendado prejudica mais o modelo do que ter menos dados.
 
 Dois fatos sobre exclusão: após a exclusão, a ferramenta **reconstrói** automaticamente o dataset — os episódios são renumerados de forma consecutiva, `stats.json` é recalculado; você não precisa corrigir nada manualmente. Seja excluindo ou complementando, a ferramenta regenera os metadados.

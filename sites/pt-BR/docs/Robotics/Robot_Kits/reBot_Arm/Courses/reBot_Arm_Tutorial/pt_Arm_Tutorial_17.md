@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 17 do Curso para Iniciantes em Inteligência Incorporada da Seeed — inferência em robô real, avaliação e iteração de dados: fluxo de dados de inferência, pré-processamento e desnormalização, início da inferência, execução de blocos de ação, segurança, avaliação da taxa de sucesso, teste de generalização, análise de falhas e coleta de dados guiada por falhas."
+description: 'Capítulo 17 do Curso para Iniciantes em IA Física da Seeed — inferência em robô real, avaliação e iteração de dados: fluxo de dados de inferência, pré-processamento e desnormalização, início da inferência, execução de blocos de ações, segurança, avaliação da taxa de sucesso, teste de generalização, análise de falhas e coleta de dados orientada por falhas.'
 title: Capítulo 17 - Inferência em Robô Real, Avaliação e Iteração de Dados
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Data Iteration
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_17
+slug: /rebot_physical_ai_course_chapter_17
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_17/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_17/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,10 +32,10 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Estágio 3 · Capítulo 17 · Teoria e Prática</span>
     <h2>17. Inferência em Robô Real, Avaliação e Iteração de Dados</h2>
     <p>
-      Capítulo 17 do Curso para Iniciantes em Inteligência Incorporada da Seeed — fluxo de dados de inferência,
-      pré-processamento e desnormalização, início da inferência, execução de blocos de ação, segurança,
-      avaliação da taxa de sucesso, teste de generalização, análise de falhas e coleta de dados guiada por falhas.
-      collection.
+      Capítulo 17 do Curso para Iniciantes em IA Física da Seeed — fluxo de dados de inferência,
+      pré-processamento e desnormalização, início da inferência, execução de blocos de ações, segurança,
+      avaliação da taxa de sucesso, teste de generalização, análise de falhas e coleta de dados orientada por falhas
+      .
     </p>
     <div className="hero-actions">
       <a href="#start-inference">Inferência</a>
@@ -44,21 +43,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#data-iteration">Iteração</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>Neste capítulo</strong>
-    <span>17.1 Fluxo de Dados de Inferência</span>
-    <span>17.2 Pré-processamento e Desnormalização</span>
-    <span>17.3 Iniciando a Inferência em Robô Real</span>
-    <span>17.4 Execução de Blocos de Ação</span>
-    <span>17.5 Segurança: Limites, Limites de Velocidade, Parada de Emergência</span>
-    <span>17.6 Avaliação: Taxa de Sucesso e Tempo de Conclusão</span>
-    <span>17.7 Teste de Generalização</span>
-    <span>17.8 Análise de Tipos de Falha</span>
-    <span>17.9 Iteração de Dados: Coleta de Dados Guiada por Falhas</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 17.1 Fluxo de Dados de Inferência
 
@@ -69,7 +54,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
   </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17/ch17-01.png" alt="Inference data flow" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17/ch17-01.png" alt="Fluxo de dados de inferência" />
 </div>
 
 </section>
@@ -90,7 +75,7 @@ Durante o treinamento o modelo consome dados normalizados; durante a inferência
 | Para fora do modelo | Ação multiplicada pelo desvio padrão, mais a média; restaurar para ângulos reais das juntas | Mesmo que acima |
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17/ch17-02.png" alt="Preprocessing and de-normalization" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17/ch17-02.png" alt="Pré-processamento e desnormalização" />
 </div>
 
 </section>
@@ -143,36 +128,36 @@ lerobot-record \
   --policy.push_to_hub=false
 ```
 
-- `--dataset.num_episodes=10`: executar 10 episódios.
+- `--dataset.num_episodes=10`: executa 10 episódios.
 - `--dataset.episode_time_s=60`: máximo de 60 segundos por episódio. Defina com base na duração da tarefa — por exemplo, pegar um lagostim e colocá-lo em uma caixa leva cerca de 20-30 segundos, então defina 30-40 para deixar uma margem. Se você quiser testar o modelo sem esperar, defina um valor bem alto (por exemplo, 300), já que há um intervalo entre episódios.
 - `--dataset.reset_time_s=10`: 10 segundos entre episódios para você reposicionar os objetos (durante a avaliação, mantenha o estado inicial o mais consistente possível).
 
 </section>
 
-## 17.4 Execução de Blocos de Ação
+## 17.4 Execução de Blocos de Ações
 
 <section id="chunk-execution" className="section-card">
   <div className="section-title">
     <span>Execução</span>
-    <h2>17.4 Execução de Blocos de Ação</h2>
+    <h2>17.4 Execução de Blocos de Ações</h2>
   </div>
 
-- Uma inferência gera um bloco de ação de 100 passos; **apenas os primeiros n passos são executados em malha aberta** (`n_action_steps`), depois o sistema volta a observar — previsões mais distantes são menos confiáveis.
+- Uma inferência gera um bloco de ações de 100 passos; **apenas os primeiros n passos são executados em malha aberta** (`n_action_steps`), depois se faz nova observação — previsões mais distantes são menos confiáveis.
 - Quando o agrupamento temporal está ativado (`temporal_ensemble_coeff`), a ação em cada passo de tempo é uma média ponderada de múltiplas previsões, com trepidação praticamente nula.
 - Se o robô real parecer "engasgado", provavelmente é o intervalo de computação entre blocos — o bloco antigo terminou e o novo ainda não foi calculado. Aumentar `n_action_steps` pode ajudar, ao custo de menor resistência a perturbações.
 
 </section>
 
-## 17.5 Segurança: Limites, Limites de Velocidade, Parada de Emergência
+## 17.5 Segurança: Limites, Limites de Velocidade, Botão de Emergência
 
 <section id="safety" className="section-card">
   <div className="section-title">
     <span>Segurança</span>
-    <h2>17.5 Segurança: Limites, Limites de Velocidade, Parada de Emergência</h2>
+    <h2>17.5 Segurança: Limites, Limites de Velocidade, Botão de Emergência</h2>
   </div>
 
-- **Sempre use ESC para parar**; não use Ctrl+C. Antes de parar, deixe o braço terminar o bloco de ação atual ou retorne-o manualmente para uma pose segura para evitar parar no ar em uma posição carregada.
-- Esteja sempre pronto para cortar a alimentação; se o braço se comportar de forma anormal, é necessário desligar a energia em emergência.
+- **Sempre use ESC para parar**; não use Ctrl+C. Antes de parar, deixe o braço terminar o bloco de ações atual ou retorne-o manualmente para uma pose segura para evitar parar no ar em uma posição carregada.
+- Esteja sempre pronto para cortar a alimentação; se o braço se comportar de forma anormal, é necessário desligamento de emergência.
 
 </section>
 
@@ -187,8 +172,8 @@ lerobot-record \
 Fixe as condições iniciais, execute 20 testes consecutivos e registre cada um.
 
 - **Taxa de sucesso = sucessos ÷ 20.** Para um primeiro modelo treinado, >50% é um começo normal, >80% é excelente.
-- **Tempo de conclusão:** verifique a estabilidade — as execuções bem-sucedidas têm duração semelhante? Velocidade inconsistente significa que a política está "hesitando".
-- Execuções com falha — **não registre apenas um ✗** — anote o modo de falha.
+- **Tempo de conclusão:** verifique a estabilidade — as execuções bem-sucedidas têm duração semelhante? Velocidade inconsistente significa que a política está "hesitante".
+- Nas execuções com falha — **não registre apenas um ✗** — anote o tipo de falha.
 
 </section>
 
@@ -200,11 +185,11 @@ Fixe as condições iniciais, execute 20 testes consecutivos e registre cada um.
     <h2>17.7 Teste de Generalização</h2>
   </div>
 
-Depois de testar em condições padrão, varie as condições uma a uma e veja quanto a taxa de sucesso cai (ACT com 50 episódios não terá grande generalização; recomendamos adicionar dados).
+Após testar em condições padrão, varie as condições uma a uma e veja quanto a taxa de sucesso cai (ACT com 50 episódios não terá grande generalização; recomendamos adicionar dados).
 
 | Teste | Método | Expectativa |
 | :--- | :--- | :--- |
-| Generalização de posição | Coloque o bloco fora dos cinco pontos de lápis, mas dentro da cobertura de treinamento | Deve quase não cair; se cair, a diversidade de posições é insuficiente |
+| Generalização de posição | Coloque o bloco fora dos cinco pontos marcados a lápis, mas dentro da cobertura de treinamento | Deve quase não cair; se cair, a diversidade de posições é insuficiente |
 | Perturbação leve | Coloque objetos não relacionados sobre a mesa | Um modelo treinado em cena visualmente limpa não deve ser afetado |
 | Grande mudança de distribuição | Objetos totalmente novos, superfície espelhada reflexiva | A falha é esperada; não há necessidade de corrigir |
 
@@ -232,12 +217,12 @@ O objetivo do teste de generalização não é provar quão forte é o modelo, m
 
 </section>
 
-## 17.9 Iteração de Dados: Coleta de Dados Guiada por Falhas
+## 17.9 Iteração de Dados: Coleta de Dados Orientada por Falhas
 
 <section id="data-iteration" className="section-card">
   <div className="section-title">
     <span>Iteração</span>
-    <h2>17.9 Iteração de Dados: Coleta de Dados Guiada por Falhas</h2>
+    <h2>17.9 Iteração de Dados: Coleta de Dados Orientada por Falhas</h2>
   </div>
 
 A etapa final do ciclo — transformar falhas em dados:
@@ -247,10 +232,10 @@ A etapa final do ciclo — transformar falhas em dados:
 3. **Re-treinar:** re-treinar com o novo conjunto de dados.
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17/ch17-03.png" alt="Data iteration" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17/ch17-03.png" alt="Iteração de dados" />
 </div>
 
-Com isso, o loop fechado do início do capítulo está totalmente completo: teleoperação, coleta, inspeção, treinamento, inferência, avaliação, iteração — esse pipeline é reutilizado como está para qualquer nova tarefa. Esse é o principal resultado da Fase 3.
+Com isso, o ciclo fechado desde o início do capítulo fica totalmente completo: teleoperação, coleta, inspeção, treinamento, inferência, avaliação, iteração — esse pipeline é reutilizado como está para qualquer nova tarefa. Esse é o resultado central do Estágio 3.
 
 </section>
 

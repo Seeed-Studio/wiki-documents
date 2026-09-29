@@ -1,5 +1,5 @@
 ---
-description: 本指南将帮助您完成硬件连接、登录设备 Web 界面、配置无线网络，以及排查常见连接故障。
+description: 本指南将帮助你完成硬件连接、登录设备 Web 界面、配置无线网络，以及排查常见连接故障。
 title: reCamera Pro 快速入门指南
 keywords:
   - reCamera
@@ -7,37 +7,51 @@ keywords:
   - Edge AI
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_getting_started
+slug: /recamera_pro_getting_started_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-08-18'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_getting_started/
+updatedAt: '2026-08-17'
+url: https://wiki.seeedstudio.com/cn/recamera_pro_getting_started_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Getting_Started/first_ai_detection.md (https://wiki.seeedstudio.com/cn/recamera_pro_getting_started/), which now serves the original slug /recamera_pro_getting_started. This file is kept for history as a draft (slug /recamera_pro_getting_started_legacy) and is excluded from production builds. Do not link here. -->
+
+## 内容迁移索引（历史页面）
+
+本页面在 reCamera Pro Wiki 重构（第二阶段）中被拆分。各个章节的新位置如下：
+
+| 原章节 | 新位置 |
+| --- | --- |
+| Introduction，第 1 节 硬件连接，第 2 节 Web UI 登录 | [首次 AI 检测](https://wiki.seeedstudio.com/cn/recamera_pro_getting_started/)（此 slug） |
+| 第 3 节 Wi-Fi 配置 | [Wi-Fi 与 Web UI 访问](https://wiki.seeedstudio.com/cn/recamera_pro_wifi_access/) |
+| 第 4 节 设备重置 | [固件更新与恢复](https://wiki.seeedstudio.com/cn/recamera_pro_firmware_update/) |
+| 第 5 节 常见问题与故障排查 | [故障排查](https://wiki.seeedstudio.com/cn/recamera_pro_faqs/) |
+| 概览总结 | [reCamera Pro 主页](https://wiki.seeedstudio.com/cn/recamera_pro/) |
 
 # reCamera Pro 快速入门指南
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" /></div>
 
-## 介绍
+## 简介
 
-欢迎使用 **reCamera Pro**。本指南将帮助您完成硬件连接、登录设备 Web 界面、配置无线网络，以及排查常见连接故障。
+欢迎使用 **reCamera Pro**。本指南将帮助你完成硬件连接、登录设备 Web 界面、配置无线网络，以及排查常见连接故障。
 
 ---
 
 ## 1. 硬件连接
 
-在开始配置之前，请确保您已准备好以下硬件：
-* **数据线**：一根具备数据传输功能的 USB Type-C 线缆（请勿使用仅支持充电的线缆）。
-* **电源**：一根 DC 电源线（规格要求：**12V, 1A**，出厂标配电源为：12V, 3A）。
+在开始配置之前，请确保你已准备好以下硬件：
+* **数据线**：一根具备数据传输能力的 USB Type-C 线缆（请勿使用仅支持充电的线缆）。
+* **电源适配器**：一根 DC 电源线（规格要求：**12V，1A**，标配电源适配器为：12V，3A）。
 
 ### 连接步骤
 
-1. 如下图所示，将 12V DC 电源线插入设备电源接口，将 USB Type-C 线缆一端连接到 reCamera Pro，另一端连接到您的 Windows 主机（Host PC）。
-2. 观察设备状态指示灯，当**绿灯常亮**时，表示设备已成功启动并进入工作状态。
+1. 如下图所示，将 12V DC 电源线插入设备的电源接口，将 USB Type-C 线缆一端连接到 reCamera Pro，另一端连接到你的 Windows 主机（Host PC）。
+2. 观察设备状态指示灯。当**绿灯常亮**时，表示设备已成功启动并进入工作状态。
 
 ![系统状态灯与线缆连接示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
@@ -55,7 +69,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_pro_getting_started/
 
 ## 2. 登录设备 Web 管理界面
 
-reCamera Pro 内置直观的 Web 管理系统，您可以通过浏览器直接对其进行配置。
+reCamera Pro 内置直观的 Web 管理系统，你可以通过浏览器直接对其进行配置。
 
 :::note 注意
 在尝试登录 Web 界面之前，请确保 USB Type-C 线缆已正确连接到电脑，并且设备已完成启动初始化。
@@ -64,49 +78,49 @@ reCamera Pro 内置直观的 Web 管理系统，您可以通过浏览器直接�
 ### 操作步骤
 
 1. 在主机上打开浏览器（推荐使用 Chrome 或 Edge 浏览器）。
-2. 在地址栏中输入默认 IP 地址：`192.168.42.1` 并按回车。
-3. 进入登录界面后，输入您的设备登录密码。
-4. 勾选登录按钮下方的两个合规与记住选项，然后点击登录进入 reCamera Pro 系统主界面（默认进入“实时预览”页面）。
+2. 在地址栏中输入默认 IP 地址：`192.168.42.1` 并按下回车键。
+3. 进入登录界面后，输入你的设备登录密码。
+4. 勾选登录按钮下方的两个合规与记住选项，然后点击登录，进入 reCamera Pro 系统主界面（默认进入“实时预览”页面）。
 
 ![Web 登录与主界面示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
 :::tip 常见故障排查
-如果在 Windows 系统下输入 `192.168.42.1` 后页面无法加载，请直接跳转到本文档底部的[5. 常见问题与故障排查（FAQ）](#5-常见问题与故障排查faq)章节进行网卡检查。
+如果在 Windows 系统下输入 `192.168.42.1` 后页面无法加载，请直接跳转到本文档底部的 [5. 常见问题与故障排查（FAQ）](#5-常见问题与故障排查faq) 章节进行网卡检查。
 :::
 
 ---
 
 ## 3. 无线网络（Wi-Fi）配置
 
-为了使设备能够访问互联网或在局域网内实现无线管理，请为其配置 Wi-Fi 连接。
+为了让设备能够访问互联网，或在局域网内实现无线管理，请为其配置 Wi-Fi 连接。
 
 ### 操作步骤
 
 1. 成功登录 Web 主界面后，点击左侧导航栏中的 **Device Info**。
 2. 在二级菜单或右侧配置区域中，点击 **Network Settings**。
 3. 打开 Wi-Fi 功能（如果默认处于关闭状态），系统会自动扫描附近的无线网络。
-4. 在可用网络列表中选择您的 Wi-Fi SSID，输入正确的无线密码并点击连接。
+4. 在可用网络列表中选择你的 Wi-Fi SSID，输入正确的无线密码，并点击连接。
 
 ![无线网络配置步骤示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_wifi_setting.png)
 
 ### 无线远程连接（可选步骤）
 
-成功连接 Wi-Fi 后，您可以点击已连接的 Wi-Fi 名称，查看其详细网络信息（如分配的 IP 地址、MAC 地址等）。
+成功连接 Wi-Fi 后，你可以点击已连接的 Wi-Fi 名称，查看其详细网络信息（例如分配的 IP 地址、MAC 地址等）。
 
 ![查看 Wi-Fi 详情示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/wifi_details.png)
 
 :::tip 拔掉 Type-C 线缆实现无线管理
-在通过 Wi-Fi 获取到局域网分配的 IP（例如：`192.168.4.200`）后，只要您的电脑与 reCamera Pro 处于同一局域网内，即可在浏览器中直接输入该 IP 地址（例如：`http://192.168.4.200`）登录设备。
-此时，您可以放心地**拔掉 USB Type-C 线缆**，实现完全无线的操作与管理。
+在获得 Wi-Fi 分配的局域网 IP 后（例如 `192.168.4.200`），只要你的电脑与 reCamera Pro 处于同一局域网内，就可以在浏览器中直接输入该 IP 地址（例如 `http://192.168.4.200`）登录设备。
+此时，你可以放心地**拔掉 USB Type-C 线缆**，实现完全无线的操作与管理。
 :::
 
 ---
 
-## 4. 设备恢复出厂设置
+## 4. 设备重置
 
 恢复设备出厂设置有两种方法：
 
-1. 长按侧边按键约 15 秒，直至听到提示音，表示设备已进入重置模式。此时只需等待绿灯保持常亮，即可重新登录设备。
+1. 长按侧边按键约 15 秒，直到听到提示音，表示设备已进入重置模式。此时只需等待绿色状态灯持续常亮，即可重新登录设备。
 2. 通过 Web 管理界面，点击 **Device Info** -> **System Settings** -> **Factory Reset** 来重置设备。
 ![恢复出厂设置示意图](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
 
@@ -118,7 +132,7 @@ reCamera Pro 内置直观的 Web 管理系统，您可以通过浏览器直接�
 
 1. 在 Windows 主机上打开 **Control Panel**。
 2. 依次点击进入 **Network and Internet** -> **Network and Sharing Center** -> **Change adapter settings**。
-3. 在弹出的网络连接列表中，找到名称类似 `Remote NDIS based Internet Sharing Device` 或与 reCamera 相关的虚拟网卡（可以尝试拔插设备，观察哪个网口消失又出现，该网口即为 reCamera Pro 的虚拟网卡接口）。
+3. 在弹出的网络连接列表中，找到名称类似 `Remote NDIS based Internet Sharing Device` 或与 reCamera 相关的虚拟网卡（你可以尝试拔插设备，观察哪个网口消失又出现，该网口即为 reCamera Pro 的虚拟网卡接口）。
 4. 右键点击该网络适配器，选择 **Properties**。
 5. 在列表中双击 **Internet Protocol Version 4 (TCP/IPv4)**。
 6. 确认配置中已勾选 **Obtain an IP address automatically** 和 **Obtain DNS server address automatically**。
@@ -129,18 +143,18 @@ reCamera Pro 内置直观的 Web 管理系统，您可以通过浏览器直接�
   controls
   width="100%"
   preload="metadata">
-  您的浏览器不支持播放此视频。
+  Your browser does not support playing this video.
 </video>
 
 ### Q2：通过 USB 线缆将 reCamera 连接到电脑后，电脑无法上网
 
-如果您的电脑在通过 USB 线缆连接设备后无法访问互联网，请参考以下内容：[网络错误示意图](https://wiki.seeedstudio.com/cn/recamera_network_connection/#computer-network-error)
+如果你的电脑在通过 USB 线缆连接设备后无法访问互联网，请参考以下内容：[network error diagram](https://wiki.seeedstudio.com/cn/recamera_network_connection/#computer-network-error)
 
 ---
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -6,20 +6,22 @@ keywords:
   - reCamera Pro
   - IMU
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_imu_usage
+slug: /recamera_pro_imu_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_imu_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/ja/recamera_pro_imu_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/imu_data.md (https://wiki.seeedstudio.com/ja/recamera_pro_imu_usage/), which now serves the original slug /recamera_pro_imu_usage. This file is kept for history as a draft (slug /recamera_pro_imu_usage_legacy) and is excluded from production builds. Do not link here. -->
 
 # reCamera Pro IMU の使用方法
 
-本デバイスに搭載されている IMU モデルは ICM-42670-P であり、3 軸加速度センサと 3 軸ジャイロスコープを統合した 6 軸センサです。ICM-42670-P のジャイロスコープは ±250 / ±500 / ±1000 / ±2000 dps の測定レンジをサポートし、加速度センサは ±2 / ±4 / ±8 / ±16 g のレンジをサポートします。内部データは 16 ビットの 2 の補数形式で出力されます。
+本デバイスに搭載されている IMU モデルは ICM-42670-P であり、3 軸加速度センサと 3 軸ジャイロスコープを統合した 6 軸センサです。ICM-42670-P のジャイロスコープは ±250 / ±500 / ±1000 / ±2000 dps の測定レンジをサポートし、加速度センサは ±2 / ±4 / ±8 / ±16 g のレンジをサポートします。内部データは 16 ビット 2 の補数形式で出力されます。
 
 ## データパス
 
@@ -29,7 +31,7 @@ reCamera PRO は IMU に対して標準の IIO ドライバを使用している
 
 ## データの読み取り
 
-対応する生データを読み取るには、次のコマンドを実行します。以下の例では、X 軸の加速度データを読み取る方法を示します。
+対応する生データを読み取るには、次のコマンドを実行します。以下の例では、X 軸加速度データの読み取りを示します。
 
 ``` bash
 cat /sys/bus/iio/devices/iio:device1/in_accel_x_raw

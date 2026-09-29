@@ -6,24 +6,34 @@ keywords:
   - reCamera Pro
   - UART
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_uart_usage
+slug: /recamera_pro_uart_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 4
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_uart_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/ja/recamera_pro_uart_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/external_trigger.md (https://wiki.seeedstudio.com/ja/recamera_pro_uart_usage/), which now serves the original slug /recamera_pro_uart_usage. This file is kept for history as a draft (slug /recamera_pro_uart_usage_legacy) and is excluded from production builds. Do not link here. -->
+
+## コンテンツ移行インデックス（レガシーページ）
+
+| 元のセクション | 新しい場所 |
+| --- | --- |
+| DEBUG UART への接続 | [ターミナル、SSH、およびデバッグ UART](https://wiki.seeedstudio.com/ja/recamera_pro_terminal/) |
+| シリアルポートトリガー | [UART 経由の外部トリガー](https://wiki.seeedstudio.com/ja/recamera_pro_uart_usage/) (このスラッグ) |
+| AI 推論結果の受信 | [HTTP/UART 経由で検出結果を送信](https://wiki.seeedstudio.com/ja/recamera_pro_http_uart/) |
 
 # reCamera Pro で UART インターフェースを使用する
 
-デバイスには 2 つのシリアルポートがあります。1 つはデバッグ専用の DEBUG UART、もう 1 つは Web UI トリガー用の UART インターフェースです。
-![Hardware Base Board Interface Diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
-![Expansion Port Schematic](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/EXT_GPIO.jpg)
+デバイスには 2 つのシリアルポートがあります。1 つはデバッグ専用の DEBUG UART、もう 1 つは Web UI トリガー用に使用される UART インターフェースです。
+![ハードウェアベースボードインターフェース図](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/base_board_pin.png)
+![拡張ポート回路図](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/EXT_GPIO.jpg)
 
-## DEBUG UART の接続
+## DEBUG UART への接続
 
 デバッグシリアルポートのボーレートは 1500000 で、ハードウェアインターフェース仕様は MX1.25 です。ピン配列は以下のとおりです。
 ![DEBUG_UART_PIN](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/DEBUG_UART_PIN.jpg)
@@ -55,7 +65,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_uart_usage/
 ![DEBUG_UART_FILE_SHOW](https://files.seeedstudio.com/wiki/reCamera-Pro/Hardware_Usage/DEBUG_UART_FILE_SHOW.png)
 
 :::note
-トリガーコマンドは ASCII 形式でのみ送信できます。HEX 送信には対応しておらず、中国語文字にも対応していません。
+トリガーコマンドは ASCII 形式でのみ送信できます。HEX 送信はサポートされておらず、中国語文字もサポートされていません。
 :::
 
 ### AI 推論結果の受信
@@ -68,7 +78,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_uart_usage/
 
 ## テクニカルサポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

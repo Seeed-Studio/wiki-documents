@@ -8,25 +8,27 @@ keywords:
   - sysfs
   - Linux
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_gpio_guide
+slug: /recamera_pro_gpio_guide_legacy
+draft: true
 sku: 10003420
 sidebar_position: 5
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
-createdAt: "2026-08-25"
-updatedAt: "2026-08-25"
-url: https://wiki.seeedstudio.com/ja/recamera_pro_gpio_guide/
+createdAt: '2026-08-25'
+updatedAt: '2026-08-26'
+url: https://wiki.seeedstudio.com/ja/recamera_pro_gpio_guide_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/gpio_pins.md (https://wiki.seeedstudio.com/ja/recamera_pro_gpio_guide/), which now serves the original slug /recamera_pro_gpio_guide. This file is kept for history as a draft (slug /recamera_pro_gpio_guide_legacy) and is excluded from production builds. Do not link here. -->
 
 # reCamera Pro GPIO ピン使用ガイド
 
 ## はじめに
 
-この記事では、reCamera Pro 上で GPIO ピンを使用する方法について説明します。ピン番号の計算式を用いて目的の GPIO ピンを特定する方法、sysfs インターフェース経由でピンをエクスポートして方向とレベルを設定する方法、そして Python スクリプトを使用して GPIO 出力を制御したり入力レベルを読み取ったりする方法を学びます。
+この記事では、reCamera Pro 上で GPIO ピンを使用する方法について説明します。ピン番号の計算式を用いて目的の GPIO ピンを特定する方法、sysfs インターフェース経由でピンのエクスポートや方向・レベルを設定する方法、そして Python スクリプトを使って GPIO 出力を制御したり入力レベルを読み取ったりする方法を学びます。
 
 :::note
-reCamera Pro では、外部に露出している汎用 GPIO は 2 本のみであり、その出力電圧は 12V〜21V（DC-IN 入力に依存）となるため、ほとんどのデバイスには適していません。しかし、拡張インターフェース上の UART または CAN ピンを汎用 GPIO として再設定することができます。これらのピンは標準的な 3.3V レベルを出力します。
+reCamera Pro では、外部に露出している汎用 GPIO は 2 本のみであり、その出力電圧は 12V〜21V（DC-IN 入力に依存）となるため、ほとんどのデバイスには適していません。ただし、拡張インターフェース上の UART または CAN ピンを汎用 GPIO として再設定することができます。これらのピンは標準的な 3.3V レベルを出力します。
 :::
 
 ## GPIO ピンの位置を特定する
@@ -74,7 +76,7 @@ GPIO bank × 32 + offset within bank
 1. SSH でデバイスに接続する
 2. WebUI のターミナル機能を使用する
 
-### GPIO sysfs インターフェースへ移動
+### GPIO sysfs インターフェースへ移動する
 
 ```bash
 cd /sys/class/gpio
@@ -88,10 +90,10 @@ echo 162 > export
 
 ### GPIO ピンの方向を設定する
 
-ピンの方向は次の 2 つのモードをサポートします。
+ピンの方向は、次の 2 つのモードをサポートします。
 
-- 出力：`out`
-- 入力：`in`（デフォルトモード）
+- 出力: `out`
+- 入力: `in`（デフォルトモード）
 
 ```bash
 echo out > direction
@@ -101,8 +103,8 @@ echo out > direction
 
 レベルは次の 2 つの状態をサポートします。
 
-- 高レベル：`1`
-- 低レベル：`0`
+- High レベル: `1`
+- Low レベル: `0`
 
 ```bash
 echo 1 > value
@@ -110,7 +112,7 @@ echo 1 > value
 
 ## Python コードリファレンス
 
-次の Python スクリプトは、GPIO ピンを制御して高レベルと低レベルを出力する方法を示しています。
+次の Python スクリプトは、GPIO ピンを制御して High および Low レベルを出力する方法を示しています。
 
 ```python
 import os
@@ -152,7 +154,7 @@ time.sleep(1)
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートオプションを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートオプションを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

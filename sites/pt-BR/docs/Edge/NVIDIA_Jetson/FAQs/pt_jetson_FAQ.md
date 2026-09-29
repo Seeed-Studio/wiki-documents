@@ -7,44 +7,44 @@ last_update:
   date: 07/15/2026
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-07-16'
+updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/
 ---
 
 
 Este documento contém todas as perguntas frequentes relacionadas aos produtos da série Jetson. Ele será muito útil se você estiver enfrentando qualquer problema ao usar o Jetson.
 
-#### P1: Solução de problemas de instalação
+#### Q1: Solução de problemas de instalação
 
 Para mais detalhes, clique [aqui](/pt-br/Troubleshooting_Installation)
 
-#### P2: O espaço restante no eMMC do reComputer recebido é de apenas cerca de 2GB, como resolver o problema de espaço insuficiente?
+#### Q2: O espaço restante no eMMC do reComputer recebido é de apenas cerca de 2GB. Como resolver o problema de espaço insuficiente?
 
 Para mais detalhes, clique [aqui](/pt-br/solution_of_insufficient_space)
 
-#### P3: Como resolver o problema de compatibilidade entre o reComputer e a câmera VEYE?
+#### Q3: Como resolver o problema de compatibilidade entre o reComputer e a câmera VEYE?
 
 Para mais detalhes, clique [aqui](/pt-br/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera)
 
-#### P4: Como resolver o problema de compatibilidade entre a câmera IMX477 e a placa carrier A603?
+#### Q4: Como resolver o problema de compatibilidade entre a câmera IMX477 e a placa carrier A603?
 
 Para mais detalhes, clique [aqui](/pt-br/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board)
 
-#### P5: Como obter o log do sistema do reComputer J30/J40?
+#### Q5: Como obter o log do sistema do reComputer J30/J40?
 
 Para mais detalhes, clique [aqui](/pt-br/get_the_system_log_of_recomputer_j30_and_j40)
 
-#### P6: Erros comuns durante a gravação do Jetson.
+#### Q6: Erros comuns durante o processo de gravação (flashing) do Jetson.
 
 Para mais detalhes, clique [aqui](/pt-br/usb_timeout_during_flash)
 
-#### P7: Não consigo usar a porta USB-A, a porta Ethernet ou não há exibição HDMI após gravar o dispositivo.
+#### Q7: Não consigo usar a porta USB-A, a porta Ethernet ou não há exibição HDMI após gravar o dispositivo.
 **R:** Verifique a integridade dos arquivos (por exemplo, fornecemos os checksums SHA256). Para algumas placas carrier (especialmente a série A60X), certifique-se de que o patch de driver foi copiado/aplicado com sucesso ao diretório **Linux_for_tegra**. Há arquivos que exigem permissão **sudo** e, ao copiar diretórios, certifique-se de que o parâmetro **-r** esteja incluído no seu comando.
 
-#### P8: Meu sistema travou/não consegue inicializar/tela preta/perdeu drivers de periféricos depois que executei os comandos "sudo apt-get update && sudo apt-get upgrade".
-**R:** Esses problemas podem ser resumidos como **"Por que não posso atualizar o sistema com apt upgrade em placas carrier personalizadas?"** A resposta curta é: **Não** execute o comando apt upgrade em placas carrier **personalizadas/de terceiros**. Além disso, evite executar quaisquer scripts que incluam comandos apt upgrade ou usar ferramentas de atualização via interface gráfica no Ubuntu. Os pacotes Debian do servidor não levam em conta o design específico das nossas placas personalizadas, e forçar a atualização pode causar incompatibilidades que podem inutilizar seu dispositivo. Esse processo é compatível apenas com o devkit oficial. Para resolver esses problemas, siga nosso guia para regravar o JetPack.
+#### Q8: Meu sistema travou/não consegue inicializar/tela preta/perdeu drivers de periféricos depois que executei os comandos "sudo apt-get update && sudo apt-get upgrade".
+**R:** Esses problemas podem ser resumidos como **"Por que não posso atualizar o sistema com apt upgrade em placas carrier personalizadas?"** A resposta curta é: **Não** execute o comando apt upgrade em placas carrier **personalizadas/de terceiros**. Além disso, evite executar quaisquer scripts que incluam comandos apt upgrade ou usar ferramentas de atualização via interface gráfica no Ubuntu. Os pacotes Debian do servidor não levam em conta o design específico de nossas placas personalizadas, e forçar a atualização pode causar incompatibilidades que podem inutilizar seu dispositivo. Esse processo é compatível apenas com o devkit oficial. Para resolver esses problemas, siga nosso guia para regravar o JetPack.
 
-#### P9: Como posso atualizar pacotes de software se vocês disseram que não posso executar apt upgrade? Haverá riscos de segurança se eu não atualizar o software?
+#### Q9: Como posso atualizar pacotes de software se vocês disseram que não posso executar apt upgrade? Haverá riscos de segurança se eu não atualizar o software?
 
 Para mais detalhes, clique [aqui](/pt-br/upgrade_software_packages_for_jetson)
 
@@ -52,21 +52,21 @@ Para mais detalhes, clique [aqui](/pt-br/upgrade_software_packages_for_jetson)
 
 For details, please click [here](/pt-br/updating_jetpack_with_ota) -->
 
-#### P11: Quais modificações a Seeed faz no BSP Jetson da NVIDIA.
+#### Q11: Quais modificações a Seeed faz no BSP Jetson da NVIDIA.
 
 Para mais detalhes, clique [aqui](/pt-br/differences_of_l4t_between_seeed_and_nvidia)
 
-#### P12: Como habilitar a interface SPI no Jetson-nano?
+#### Q12: Como habilitar a interface SPI no Jetson-nano?
 Para mais detalhes, clique [aqui](/pt-br/enable_spi_interface_on_jetsonnano)
 
-#### P13: Por que às vezes, após concluir o processo de gravação no Jetson, o sistema não consegue inicializar a partir do SSD?
+#### Q13: Por que às vezes, após concluir o processo de gravação no Jetson, o sistema não consegue inicializar a partir do SSD?
 Esse problema ocorre atualmente ao gravar o JetPack 5, e a NVIDIA o documentou oficialmente. Para a solução, clique [aqui.](/pt-br/issue_of_jetpack5_failing_to_boot_from_certain_ssd)
 
-#### P14: Como compilar o projeto de código-fonte para o BSP Jetson da Seeed?
+#### Q14: Como compilar o projeto de código-fonte para o BSP Jetson da Seeed?
 Para mais detalhes, clique [aqui](/pt-br/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
 
-#### P15: Por que o comando `apt upgrade` não pode ser executado no reComputer/reServer?
-Os kernels e drivers do **reComputer/reServer** são personalizados. Se o comando `apt upgrade` for executado, alguns pacotes relacionados ao kernel e aos drivers podem ser substituídos pelos recursos oficiais da NVIDIA, o que pode causar problemas de compatibilidade de software. <mark>Portanto, não execute `apt upgrade` em nenhuma plataforma Jetson de terceiros.</mark>
+#### Q15: Por que o comando `apt upgrade` não pode ser executado em reComputer/reServer?
+Os kernels e drivers do **reComputer/reServer** são personalizados. Se o comando `apt upgrade` for executado, alguns pacotes relacionados a kernel e drivers podem ser substituídos pelos recursos oficiais da NVIDIA, o que pode causar problemas de compatibilidade de software. <mark>Portanto, não execute `apt upgrade` em nenhuma plataforma Jetson de terceiros.</mark>
 
 Você pode consultar as instruções a seguir para bloquear as fontes APT relevantes. Dessa forma, se o apt upgrade for executado acidentalmente, o impacto será minimizado:
 ```bash
@@ -76,11 +76,11 @@ sudo apt-mark hold <package-name>
 sudo apt-mark hold nvidia-l4t-core
 ```
 
-#### P16: Se o reComputer/reServer não tiver o módulo de driver `.ko` necessário, como posso compilar um driver utilizável?
+#### Q16: Se o reComputer/reServer não tiver o módulo de driver `.ko` necessário, como posso compilar um driver utilizável?
 
 Para mais detalhes, clique [aqui](/pt-br/how_to_build_the_ko_module_for_seeed_jetson)
 
-#### P17：Como posso montar um disco rígido externo formatado com exFAT no Jetson (JetPack 6)?
+#### Q17：Como posso montar um disco rígido externo formatado com exFAT no Jetson (JetPack 6)?
 
 Primeiro, instale as dependências:
 ```
@@ -108,33 +108,37 @@ sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
 
 Isso monta a unidade externa formatada em exFAT em `/media/seeed/tmp-exfat/` para que ela possa ser acessada normalmente no Jetson.
 
-#### P18：Como criptografar o disco do Jetson antes de gravar a imagem?
+#### Q18：Como criptografar o disco do Jetson antes de gravar a imagem?
 
 Para mais detalhes, clique [aqui](/pt-br/how_to_encrypt_the_disk_for_jetson)
 
-#### P19：Como estabelecer comunicação entre o Jetson e dispositivos EtherCAT?
+#### Q19：Como estabelecer comunicação entre o Jetson e dispositivos EtherCAT?
 
 Para mais detalhes, clique [aqui](/pt-br/how_to_establish_the_ethercat_on_jetson)
 
-#### P20： Não modifiquei nada relacionado ao kernel do Jetson, mas durante a inicialização o Jetson relatou um erro relacionado ao UUID e então entrou no terminal de recuperação.
+#### Q20： Eu não modifiquei nada relacionado ao kernel do Jetson, mas durante a inicialização o Jetson relatou um erro relacionado ao UUID e então entrou no terminal de recuperação.
 
 Solução para esse problema: clique [aqui](/pt-br/deal_the_issue_of_UUID)
 
-#### P21: Como usar a câmera IMX219 em dispositivos NVIDIA Jetson?
+#### Q21: Como usar a câmera IMX219 em dispositivos NVIDIA Jetson?
 
 Para mais detalhes, clique [aqui](/pt-br/how_to_use_camera_imx219)
 
-#### P22: Quais mudanças o JetPack 7.2 traz para o desempenho de inferência do Jetson AGX Orin?
+#### Q22: Quais mudanças o JetPack 7.2 traz para o desempenho de inferência do Jetson AGX Orin?
 
 Para mais detalhes, clique [aqui](/pt-br/jetpack72_deep_dive)
 
-#### P23: Como restaurar módulos Wi-Fi como Intel AX210/AX200 ou Realtek RTL8852BE após atualizar para o JetPack 7.2?
+#### Q23: Como restaurar módulos Wi-Fi como Intel AX210/AX200 ou Realtek RTL8852BE após atualizar para o JetPack 7.2?
 
 Para mais detalhes, clique [aqui](/pt-br/jetpack72_ax210_ax200_wifi_setup_guide)
 
+#### Q24: Quais modelos de IA posso implantar no meu dispositivo Jetson e como?
+
+Para mais detalhes, clique [aqui](/pt-br/ai_robotics_deploy_ai_models_on_jetson)
+
 ## Suporte técnico
 
-Obrigado por escolher nossos produtos! Estamos **aqui** para oferecer diferentes tipos de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos **aqui** para fornecer diferentes tipos de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,5 +1,5 @@
 ---
-title: Alerta de foto activada por sonido con integración de reCamera Pro y Home Assistant
+title: Alerta de foto activada por sonido con reCamera Pro y Home Assistant
 description: Este wiki explica cómo integrar reCamera Pro con Home Assistant para enviar automáticamente un mensaje personalizado y una instantánea actual de la cámara al panel de Home Assistant cuando se detecta un sonido específico.
 keywords:
   - reCamera
@@ -8,15 +8,17 @@ keywords:
   - Detección de sonido
   - Edge AI
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_HA_Voice_Capture/reCamera-PRO_Voice_Capture.gif
-slug: /recamera_pro_ha_sound_alert
+slug: /recamera_pro_ha_sound_alert_legacy
+draft: true
 sidebar_position: 2
 last_update:
   date: 2026-07-27
   author: Sizhao zhou
 createdAt: '2026-07-27'
 updatedAt: '2026-07-28'
-url: https://wiki.seeedstudio.com/es/recamera_pro_ha_sound_alert/
+url: https://wiki.seeedstudio.com/es/recamera_pro_ha_sound_alert_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Build_Your_App/home_assistant_alerts.md (https://wiki.seeedstudio.com/es/recamera_pro_ha_sound_alert/), which now serves the original slug /recamera_pro_ha_sound_alert. This file is kept for history as a draft (slug /recamera_pro_ha_sound_alert_legacy) and is excluded from production builds. Do not link here. -->
 
 # Integración de reCamera Pro y Home Assistant: alerta de foto activada por sonido
 
@@ -29,7 +31,7 @@ Este wiki explica cómo integrar reCamera Pro con Home Assistant (HA) para envia
 
 ## Preparación de hardware
 
-- Un host que ejecute Home Assistant (admite despliegue con Docker, HA OS o venv)
+- Un host que ejecute Home Assistant (compatible con despliegue en Docker, HA OS o venv)
 - Un dispositivo reCamera Pro
 
 <table align="center">
@@ -48,7 +50,7 @@ Este wiki explica cómo integrar reCamera Pro con Home Assistant (HA) para envia
  </tr>
 </table>
 
-## Instalación del complemento de reCamera en HA
+## Instalación del complemento reCamera en HA
 
 Añadiremos un complemento de reCamera a Home Assistant para mostrar mensajes e imágenes de reCamera Pro en HA. Hay dos métodos de instalación disponibles: script de instalación automática (recomendado) e instalación manual.
 
@@ -67,7 +69,7 @@ python3 install.py /home/zsz/HA/config
 El script hará automáticamente lo siguiente:
 1. Copiar el código de la integración a `custom_components/recamera_chat/`
 2. Copiar los archivos de frontend a `www/recamera_chat/`
-3. Añadir las configuraciones de `recamera_chat` y `panel_custom` a `configuration.yaml` (realiza automáticamente una copia de seguridad del original)
+3. Añadir las configuraciones `recamera_chat` y `panel_custom` a `configuration.yaml` (realiza automáticamente una copia de seguridad del original)
 4. Verificar que todos los archivos estén en su lugar
 
 :::tip
@@ -112,7 +114,7 @@ La ubicación del directorio de configuración de HA depende de tu método de in
 `www/` y `custom_components/` son **directorios hermanos** y ambos deben colocarse directamente en el directorio raíz de configuración. No pongas `www/` dentro de `custom_components/`, de lo contrario la barra lateral no se mostrará.
 :::
 
-**Ejemplo de despliegue con Docker:**
+**Ejemplo de despliegue en Docker:**
 
 ```bash
 # Assuming the HA configuration directory is /home/zsz/HA/config
@@ -182,13 +184,13 @@ Reinicia HA para aplicar la configuración:
 #### Paso 5: verificar el despliegue
 
 1. Una vez completado el reinicio, la pestaña **reCamera** (con un icono de cámara) debería aparecer en la barra lateral de HA.
-2. Haz clic en ella para ver la interfaz de chat, con un estado **Connected** en la esquina superior derecha.
+2. Haz clic en ella para ver la interfaz de chat, con el estado **Connected** en la esquina superior derecha.
 3. Escribe texto en el cuadro de entrada y pulsa Enter o haz clic en el botón **Send**.
 4. El lado de reCamera que se suscribe a `recamera/chat/to_camera` debería recibir el mensaje.
 
 :::warning
 Si la pestaña de reCamera no aparece en la barra lateral después de reiniciar, soluciona el problema en el siguiente orden:
-1. Comprueba si `www/recamera_chat/panel.js` se encuentra bajo el directorio `www/` en la raíz de configuración (no bajo `custom_components/www/`)
+1. Comprueba si `www/recamera_chat/panel.js` está ubicado bajo el directorio `www/` en la raíz de configuración (no bajo `custom_components/www/`)
 2. Comprueba si `configuration.yaml` contiene el bloque de configuración `panel_custom`
 3. Comprueba si el número de versión `?v=13` en `panel.js` coincide con el número de versión en `module_url` en `configuration.yaml`
 4. Pulsa Ctrl+F5 para forzar la actualización del navegador y limpiar la caché
@@ -240,7 +242,7 @@ python3 ./voice_capture.py
 
 ## Resultados esperados
 
-1. Después de iniciar el programa de detección de sonido, reCamera Pro supervisa continuamente los sonidos ambientales.
+1. Después de iniciar el programa de detección de sonido, reCamera Pro monitoriza continuamente los sonidos ambientales.
 2. Cuando se detecta el sonido especificado (por ejemplo, "help") con un nivel de confianza que supera el umbral, captura automáticamente la escena actual.
 3. Envía un mensaje de alerta personalizado y una imagen a Home Assistant a través de MQTT.
 4. El panel de reCamera en la barra lateral de HA muestra el mensaje y la imagen recibidos.
@@ -249,10 +251,10 @@ python3 ./voice_capture.py
 
 | Problema | Posible causa | Solución |
 | --- | --- | --- |
-| No hay pestaña de reCamera en la barra lateral de HA | Ruta de archivo incorrecta o configuración no aplicada | Comprueba la ruta de `www/recamera_chat/panel.js` y la configuración de `configuration.yaml` |
+| No hay pestaña de reCamera en la barra lateral de HA | Ruta de archivo incorrecta o configuración no aplicada | Comprueba la ruta `www/recamera_chat/panel.js` y la configuración de `configuration.yaml` |
 | El panel muestra "Disconnected" | Falló la conexión MQTT | Comprueba si la dirección y el puerto del broker MQTT son correctos |
 | La detección de sonido no responde | Micrófono no conectado o permisos insuficientes | Confirma que el micrófono USB está conectado, comprueba el dispositivo de audio en reCamera Pro |
-| La imagen no se muestra | Recurso de la cámara ocupado | Confirma que se ha ejecutado `pkill -x rkipc` para liberar la cámara |
+| La imagen no se muestra | Recurso de cámara ocupado | Confirma que se ha ejecutado `pkill -x rkipc` para liberar la cámara |
 
 ## Recursos
 

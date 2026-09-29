@@ -15,7 +15,7 @@ last_update:
   date: 6/24/2025
   author: Youjiang
 createdAt: '2025-06-24'
-updatedAt: '2025-10-11'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/sound_follow_robot/
 ---
 
@@ -113,7 +113,7 @@ source ~/.bashrc
 **Step2.** Create conda environment for lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 git clone https://github.com/huggingface/lerobot.git ~/lerobot
 conda install ffmpeg -c conda-forge

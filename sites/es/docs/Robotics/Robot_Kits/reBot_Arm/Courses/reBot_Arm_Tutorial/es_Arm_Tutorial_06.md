@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 6 del Curso para Principiantes de Inteligencia Incorporada de Seeed: ensambla el reBot Arm, ensambla la fuente de alimentación, cablea el brazo y enciéndelo por primera vez."
+description: Capítulo 6 del Curso de Introducción a la IA Física de Seeed - ensambla el reBot Arm, monta la fuente de alimentación, cablea el brazo robótico y enciéndelo por primera vez.
 title: Capítulo 6 - Ensamblaje, fuente de alimentación y primer encendido
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Cableado
   - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_6
+slug: /rebot_physical_ai_course_chapter_6
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_6/
+updatedAt: '2026-09-18'
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_6/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,8 +32,8 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 2 · Capítulo 6 · Práctica</span>
     <h2>6. Ensamblaje, fuente de alimentación y primer encendido</h2>
     <p>
-      Capítulo 6 del Curso para Principiantes de Inteligencia Incorporada de Seeed: ensambla el reBot Arm,
-      ensambla la fuente de alimentación, cablea el brazo y enciéndelo por primera vez.
+      Capítulo 6 del Curso de Introducción a la IA Física de Seeed: ensambla el reBot Arm,
+      monta la fuente de alimentación, cablea el brazo robótico y enciéndelo por primera vez.
     </p>
     <div className="hero-actions">
       <a href="#assembly">Ensamblaje</a>
@@ -42,17 +41,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#power">Encendido</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>En este capítulo</strong>
-    <span>6.1 Ensamblaje del brazo robótico</span>
-    <span>6.2 Ensamblaje de la fuente de alimentación</span>
-    <span>6.3 Cableado del brazo robótico</span>
-    <span>6.4 Requisitos de la fuente de alimentación del brazo robótico</span>
-    <span>6.5 Encendido del brazo robótico</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 6.1 Ensamblaje del brazo robótico
 
@@ -62,8 +51,17 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <h2>6.1 Ensamblaje del brazo robótico</h2>
   </div>
 
-- [Ensamblaje del brazo robótico reBot DM](https://www.youtube.com/watch?v=rfTQoFCfnMc&list=PLpH_4mf13-A0UsztzM_yWQUsxXbYMVydM&index=15)
-- [Ensamblaje del brazo robótico reBot RS](https://www.youtube.com/watch?v=Bv60NPO0TRo&list=PLpH_4mf13-A38iXew5DxqswGLjPQ0BflR&index=6)
+**Ensamblaje del brazo robótico reBot DM**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/rfTQoFCfnMc" title="reBot DM Robotic Arm Assembly" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+**Ensamblaje del brazo robótico reBot RS**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/Bv60NPO0TRo" title="reBot RS Robotic Arm Assembly" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 </section>
 
@@ -75,8 +73,17 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <h2>6.2 Ensamblaje de la fuente de alimentación</h2>
   </div>
 
-- [Ensamblaje de la fuente de alimentación reBot DM](https://www.youtube.com/watch?v=DHFA2UfQzUo&list=PLpH_4mf13-A0UsztzM_yWQUsxXbYMVydM&index=3)
-- [Ensamblaje de la fuente de alimentación reBot RS](https://www.youtube.com/watch?v=5GitUWT9gx0)
+**Ensamblaje de la fuente de alimentación de reBot DM**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/DHFA2UfQzUo" title="reBot DM Power Supply Assembly" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+**Ensamblaje de la fuente de alimentación de reBot RS**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/5GitUWT9gx0" title="reBot RS Power Supply Assembly" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 </section>
 
@@ -90,7 +97,9 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 ### Cableado de reBot DM
 
-Video: [Cableado del brazo robótico reBot DM](https://www.youtube.com/watch?v=vVxCOfu5ZCE)
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/vVxCOfu5ZCE" title="reBot DM Robotic Arm Wiring" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -168,7 +177,9 @@ El motor 1 y el motor 2 deben estar conectados entre sí.
 
 ### Cableado de reBot RS
 
-Video: [Cableado del brazo robótico reBot RS](https://www.youtube.com/watch?v=llSa6qn3yrY&list=PLpH_4mf13-A38iXew5DxqswGLjPQ0BflR&index=8)
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/llSa6qn3yrY" title="reBot RS Robotic Arm Wiring" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -254,17 +265,17 @@ El motor 1 y el motor 2 deben estar conectados entre sí.
     <h2>6.4 Requisitos de la fuente de alimentación del brazo robótico</h2>
   </div>
 
-El requisito de fuente de alimentación para reBot DM es de 24 V, y el requisito de fuente de alimentación para reBot RS es de 48 V.
+El requisito de alimentación para reBot DM es de 24 V, y el requisito de alimentación para reBot RS es de 48 V.
 
 A continuación se muestran nuestras instrucciones recomendadas para el uso de la fuente de alimentación:
 
 :::danger ¡Configura correctamente el selector de voltaje!
-Si el voltaje de tu hogar es 220 V, ajusta el interruptor DIP en el lateral de la fuente de alimentación a 230 V. Si el voltaje de tu hogar es 110 V, ajusta el interruptor DIP de tu fuente de alimentación a 115 V.
+Si el voltaje de tu hogar es de 220 V, ajusta el interruptor DIP en el lateral de la fuente de alimentación a 230 V. Si el voltaje de tu hogar es de 110 V, ajusta el interruptor DIP de tu fuente de alimentación a 115 V.
 :::
 
 | 220V → 230V | 110V → 115V |
 | :---: | :---: |
-| ![Interruptor DIP de la fuente de alimentación 220V](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6/ch6-11.png) | ![Interruptor DIP de la fuente de alimentación 110V](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6/ch6-12.png) |
+| ![Power supply DIP switch 220V](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6/ch6-11.png) | ![Power supply DIP switch 110V](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6/ch6-12.png) |
 
 </section>
 
@@ -276,9 +287,9 @@ Si el voltaje de tu hogar es 220 V, ajusta el interruptor DIP en el lateral de l
     <h2>6.5 Encendido del brazo robótico</h2>
   </div>
 
-Para el brazo robótico reBot DM, las luces de todas las articulaciones se encenderán y se pondrán en rojo; en ese momento, el brazo robótico está en estado deshabilitado.
+Para el brazo robótico reBot DM, las luces de todas las articulaciones se encenderán y se pondrán en rojo; en ese momento, el brazo robótico se encuentra en estado deshabilitado.
 
-El brazo robótico reBot RS no presenta diferencias con respecto a cuando está apagado, y solo se puede determinar a través de la comunicación con el motor.
+El brazo robótico reBot RS no presenta diferencias con respecto a cuando está apagado, y solo se puede determinar su estado mediante la comunicación con el motor.
 
 </section>
 

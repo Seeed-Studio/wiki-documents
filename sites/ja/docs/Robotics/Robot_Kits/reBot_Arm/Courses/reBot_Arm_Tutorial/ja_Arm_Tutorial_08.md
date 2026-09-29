@@ -1,27 +1,26 @@
 ---
-description: "Seeed Embodied Intelligence Beginner's Course 第8章 — Python SDK を使って reBot Arm を制御：パラメータ、コンテキストマネージャによる接続、モーション、ゼロ点、関節状態。"
-title: 第8章 - Python SDK を使用した reBot Arm の制御
+description: 'Seeed Physical AI Beginner''s Course の第 8 章 — Python SDK を使って reBot Arm を制御：パラメータ、コンテキストマネージャによる接続、モーション、ゼロ点、関節状態。'
+title: 第 8 章 - Python SDK を使用した reBot Arm の制御
 keywords:
   - reBot
-  - ロボットアーム
+  - Robotic Arm
   - Python SDK
   - reBotArm
-  - コース
+  - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_8
+slug: /rebot_physical_ai_course_chapter_8
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/ja/rebot_embodied_ai_course_chapter_8/
+updatedAt: '2026-09-18'
+url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_8/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -29,32 +28,22 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 <section className="doc-hero">
   <div>
-    <span className="eyebrow">ステージ 2 · 第8章 · 理論 &amp; 実践</span>
+    <span className="eyebrow">ステージ 2 · 第 8 章 · 理論 &amp; 実践</span>
     <h2>8. Python SDK を使用した reBot Arm の制御</h2>
     <p>
-      Seeed Embodied Intelligence Beginner's Course 第8章 — Python SDK を使って reBot Arm を制御します。
-      パラメータ、コンテキストマネージャによる接続、モーション、ゼロ点、および関節状態について学びます。
+      Seeed Physical AI Beginner's Course の第 8 章では、
+      Python SDK を使って reBot Arm を制御します：パラメータ、コンテキストマネージャによる接続、モーション、ゼロ点、関節状態。
     </p>
     <div className="hero-actions">
-      <a href="#parameters">パラメータ</a>
-      <a href="#connect">接続</a>
-      <a href="#motion">モーション</a>
+      <a href="#パラメータ">パラメータ</a>
+      <a href="#接続">接続</a>
+      <a href="#モーション">モーション</a>
     </div>
-  </div>
-  <div className="hero-card">
-    <strong>この章で学ぶこと</strong>
-    <span>8.1 パラメータの変更とモード切り替え</span>
-    <span>8.2 ロボットアームの接続／切断（コンテキストマネージャの使用）</span>
-    <span>8.3 ロボットアームのモーション制御</span>
-    <span>8.4 ロボットアームのゼロ点設定</span>
-    <span>8.5 ロボットアームの関節状態の更新</span>
   </div>
 </section>
 
-<RebotCourseNav />
-
 <section className="section-card">
-  <p>1. 環境がインストールされていない場合は、7.2 節の環境構築を参照してください。</p>
+  <p>1. まだ環境をインストールしていない場合は、7.2 節を参照して環境をインストールしてください。</p>
 
   <p>2. Python SDK ロボットアームの各関節コントローラのパラメータは、実際の使用要件に応じて調整する必要があります。現在のパラメータは、精度要件が低いシナリオにしか対応できません。</p>
 
@@ -70,19 +59,19 @@ python3 -m pip install pyyaml motorbridge
 git clone https://github.com/hopcan/rebotArm_ctrl.git
 ```
 
-- reBot DM を制御する Python サンプルは `rebotArm_ctrl/example/rebotDM` にあります。
+- reBot DM を制御するための Python サンプルは `rebotArm_ctrl/example/rebotDM` にあります。
 - reBot DM ロボットアームの設定ファイルは `rebotArm_ctrl/config` にあります。
-- reBot RS を制御する Python サンプルは `rebotArm_ctrl/example/rebotRS` にあります。
+- reBot RS を制御するための Python サンプルは `rebotArm_ctrl/example/rebotRS` にあります。
 - reBot RS ロボットアームの設定ファイルは `rebotArm_ctrl/config` にあります。
 
 </section>
 
-## 8.1 パラメータの変更とモード切り替え
+## 8.1 パラメータの変更とモードの切り替え
 
-<section id="parameters" className="section-card">
+<section id="パラメータ" className="section-card">
   <div className="section-title">
     <span>パラメータ</span>
-    <h2>8.1 パラメータの変更とモード切り替え</h2>
+    <h2>8.1 パラメータの変更とモードの切り替え</h2>
   </div>
 
 reBot DM に推奨される制御モードは `POS_VEL` です。ロボットアームの関節制御モードの切り替えとパラメータの設定は、`rebotArm_ctrl/config` 配下の `rebotDM.yaml` 内の対応するパラメータを変更することで、どちらも実現できます。
@@ -110,21 +99,21 @@ MIT の `kp` と `kd`、POS_VEL の `vel_kp`、`vel_ki`、`pos_kp`、`pos_ki`、
 
 </section>
 
-## 8.2 ロボットアームの接続／切断（コンテキストマネージャの使用）
+## 8.2 ロボットアームの接続/切断（コンテキストマネージャの使用）
 
-<section id="connect" className="section-card">
+<section id="接続" className="section-card">
   <div className="section-title">
     <span>接続</span>
-    <h2>8.2 ロボットアームの接続／切断（コンテキストマネージャの使用）</h2>
+    <h2>8.2 ロボットアームの接続/切断（コンテキストマネージャの使用）</h2>
   </div>
 
 `example/rebotDM/1_rebotDM_connect.py` または `example/rebotRS/1_rebotRS_connect.py` を参照してください。
 
 1. まずバスコントローラを作成します。
 
-:::warning 注意
+:::warning Notes
 1. ポートが存在するか確認してください。
-2. プログラム実行前にポートの権限を付与する必要があります。
+2. プログラムを実行する前にポート権限を付与する必要があります。
 :::
 
 reBot DM はシリアルポートを使用し、次のように作成します：
@@ -149,7 +138,7 @@ with reBotArm_handle(ctrl, "rebotDM") as handle:
 with reBotArm_handle(ctrl, "rebotRS") as handle:
 ```
 
-ここで `reBotArm_handle` は `config_path` パラメータもサポートしています。このパラメータで読み込む設定ファイルを指定でき、デフォルトのロボットアーム設定ファイルは読み込まれなくなります。`config` 内の設定ファイルを参考にして、独自の設定ファイルを作成できます。
+ここで `reBotArm_handle` は `config_path` パラメータもサポートします。このパラメータで読み込む設定ファイルを指定でき、デフォルトのロボットアーム設定ファイルは読み込まれなくなります。`config` 内の設定ファイルを参考にして、独自の設定ファイルを作成できます。
 
 ```python
 with reBotArm_handle(ctrl, "rebotDM", config_path="absolute path of yaml") as handle:
@@ -159,22 +148,22 @@ with reBotArm_handle(ctrl, "rebotRS", config_path="absolute path of yaml") as ha
 
 コア実装：
 
-1. `__enter__` 関数は `connect` 関数を呼び出してロボットアームに自動接続します。接続に失敗した場合は、対応するログが出力されます。
+1. `__enter__` 関数は `connect` 関数を呼び出してロボットアームに自動的に接続します。接続に失敗した場合は、対応するログが出力されます。
 2. `__exit__` 関数は `disconnect` 関数を呼び出し、プログラム終了時にロボットアームとの接続を自動的に切断します。
-3. ロボットアームへの接続では、バスコントローラにモータを追加し、起動時にモータ通信をチェックし、モータの CAN ID とマスタ ID が有効か検証し、設定ファイルが有効か検証し、モータの制御モードをターゲットの制御モードに変更します。
-4. ロボットアームの切断では、まず自動的に初期状態を復元し、その後 disable します。
+3. ロボットアームへの接続では、モータをバスコントローラに追加し、起動時にモータ通信をチェックし、モータ CAN ID とマスタ ID が有効か検証し、設定ファイルが有効か検証し、モータ制御モードをターゲット制御モードに変更します。
+4. ロボットアームの切断では、まず初期状態を自動的に復元し、その後 disable します。
 
 :::warning
-Ctrl+C でプログラムを終了した後は、数秒待ってください。Ctrl+C を連続して押し続けないでください。ロボットアームが自動的にホームポジションに戻り、その後 disable されるまで待つ必要があります。
+Ctrl+C を使用してプログラムを終了した後は、数秒待ってください。Ctrl+C を連打しないでください。ロボットアームが自動的にホームポジションに戻り、その後 disable されるまで待つ必要があります。
 :::
 
-コンテキストマネージャを使用したくない場合は、`connect` 関数と `disconnect` 関数を直接呼び出して、ロボットアームを接続／切断できます。
+コンテキストマネージャを使用したくない場合は、`connect` 関数と `disconnect` 関数を直接呼び出してロボットアームを接続/切断できます。
 
 </section>
 
 ## 8.3 ロボットアームのモーション制御
 
-<section id="motion" className="section-card">
+<section id="モーション" className="section-card">
   <div className="section-title">
     <span>モーション</span>
     <h2>8.3 ロボットアームのモーション制御</h2>

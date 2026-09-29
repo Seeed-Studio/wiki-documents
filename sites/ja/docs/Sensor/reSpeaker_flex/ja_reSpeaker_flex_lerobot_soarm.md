@@ -1,5 +1,5 @@
 ---
-description: LeRobot、Groq Whisper STT、LLaMA 3、openwakeword を Nvidia または Ubuntu 上で使用して、音声操作が可能な SO-ARM100 ロボットアームを実現します。
+description: LeRobot、Groq Whisper STT、LLaMA 3、openwakeword を使用し、Nvidia または Ubuntu 上で動作する音声制御 SO-ARM100 ロボットアーム。
 title: reSpeaker で SO-ARM10x に音声インタラクションを追加する
 keywords:
   - reSpeaker flex
@@ -11,7 +11,7 @@ last_update:
   date: 05/19/2026
   author: Kasun Thushara
 createdAt: '2026-05-19'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/ja/respeaker_flex_soarm/
 ---
 
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_soarm/
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/lerobot_flex.png" alt="pir" width={800} height="auto" /></p>
 
 
-LeRobot SO-ARM Voice Controller を使うと、AI による自然な音声コマンドで SO-ARM100 ロボットアームを操作できます。このシステムは、ウェイクワード検出、Groq Whisper 音声認識、LLaMA 3 による言語理解、Orpheus 音声合成を組み合わせることで、完全にハンズフリーでインタラクティブなロボット体験を実現します。[LeRobot framework](https://github.com/huggingface/lerobot?utm_source=chatgpt.com) の上に構築されており、Ubuntu x86 システムおよび NVIDIA Jetson デバイス上で動作し、音声入力には ReSpeaker USB マイクアレイを使用します。ユーザーはカスタムのアームポーズ、ジェスチャー、会話トリガーを作成して、研究、教育、ロボット開発向けのインテリジェントなロボットインタラクションを構築できます。
+LeRobot SO-ARM Voice Controller を使うと、AI による自然な音声コマンドで SO-ARM100 ロボットアームを制御できます。このシステムは、ウェイクワード検出、Groq Whisper 音声認識（STT）、LLaMA 3 による言語理解、Orpheus 音声合成（TTS）を組み合わせ、完全にハンズフリーでインタラクティブなロボティクス体験を実現します。[LeRobot framework](https://github.com/huggingface/lerobot?utm_source=chatgpt.com) の上に構築されており、音声入力には ReSpeaker USB マイクアレイを使用して、Ubuntu x86 システムおよび NVIDIA Jetson デバイス上で動作します。ユーザーはカスタムのアームポーズ、ジェスチャー、会話トリガーを作成して、研究、教育、ロボット開発向けのインテリジェントなロボットインタラクションを構築できます。
 
 
 ## 必要なハードウェア
@@ -150,7 +150,7 @@ You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LL
 
 ## パート 1 — LeRobot をインストールする
 
-### Miniforge をインストール
+### Miniforge をインストールする
 
 **Jetson（ARM64）の場合：**
 ```bash
@@ -167,14 +167,14 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 source ~/.bashrc
 conda init --all
 ```
-### Conda 環境を作成
+### Conda 環境を作成する
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 ```
 
-### LeRobot をクローンしてインストール
+### LeRobot をクローンしてインストールする
 
 ```bash
 git clone https://github.com/KasunThushara/lerobot
@@ -187,15 +187,15 @@ pip install -e ".[feetech]"
 
 ## パート 2 — アームをセットアップする
 
-### モーター ID を設定
+### モーター ID を設定する
 
 各サーボには、組み立て前に一意の ID を割り当てる必要があります。公式ガイドに従ってください：
-[Configure the Motors](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#モーターを設定)
+[Configure the Motors](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#configure-the-motors)
 
 ### アームを組み立てる
 
 SO-ARM100 の組み立てチュートリアルに従ってください：
-[Assembly Guide](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#組み立て)
+[Assembly Guide](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#assembly)
 
 ### USB ポートを確認する
 
@@ -210,7 +210,7 @@ lerobot-find-port
 ### 両方のアームをキャリブレーションする
 
 キャリブレーションでは、生のモーター値を正規化された位置にマッピングします。リーダーアームとフォロワーアームの両方について、次のガイドに従ってください：
-[Calibration Guide](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#キャリブレーション)
+[Calibration Guide](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#calibrate)
 
 キャリブレーションファイルは自動的に次の場所に保存されます：
 ```
@@ -227,7 +227,7 @@ lerobot-find-port
 cd ~/lerobot/examples/voice_arm
 ```
 
-### 依存関係をインストール
+### 依存関係をインストールする
 
 ```bash
 # System dependency required for PyAudio
@@ -236,7 +236,7 @@ sudo apt-get install -y portaudio19-dev
 pip install -r requirements.txt
 ```
 
-### ウェイクワードモデルをダウンロード
+### ウェイクワードモデルをダウンロードする
 
 事前学習済みの **"Hey Jarvis"** モデルを openwakeword から `~/.openwakeword/` にダウンロードします：
 
@@ -293,7 +293,7 @@ MIC_INDEX=1
 python read_positions.py
 ```
 
-スクリプトは、アームを動かしている間、正規化された関節値をリアルタイムで出力します。ポーズが決まったら **Ctrl+C** を押すと、最終位置が表示されるのでコピーできます。
+スクリプトは、アームを動かしている間、正規化された関節値をリアルタイムで出力します。ポーズが決まったら **Ctrl+C** を押すと、最終位置が表示されるので、それをコピーします。
 
 ### ステップ 2 — `robot_arm.py` にポーズを追加する
 
@@ -311,7 +311,7 @@ python read_positions.py
 }),
 ```
 
-アニメーションするジェスチャー（手を振るなど）の場合は、ポーズのリストを使用します — 各ステップはその間に `ARM_GESTURE_DELAY` を挟んで実行されます：
+アニメーション付きジェスチャー（手を振るなど）の場合は、ポーズのリストを使用します — 各ステップはその間に `ARM_GESTURE_DELAY` を挟んで実行されます：
 
 ```python
 "wave_hi": [
@@ -323,7 +323,7 @@ python read_positions.py
 
 ### ステップ 3 — `llm.py` の LLM システムプロンプトを更新する
 
-新しいアクションを有効なアクション一覧とトリガールールに追加し、LLM がそれを認識できるようにします：
+新しいアクションを有効なアクションリストとトリガールールに追加し、LLM がそれを認識できるようにします：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/llm_ss.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -339,14 +339,14 @@ Trigger rules:
 
 ## ボイスコントローラーを実行する
 
-conda 環境が有効になっていることを確認し、次を実行します：
+conda 環境がアクティブになっていることを確認し、次を実行します：
 
 ```bash
 conda activate lerobot
 python pipeline.py
 ```
 
-次のような表示が出るはずです：
+次のような表示が出ます：
 
 ```
 ======================================================
@@ -360,22 +360,22 @@ python pipeline.py
 [WakeWord] Listening for 'hey jarvis' ...
 ```
 
-さあ、**"Hey Jarvis"** と話しかけてコマンドを出してみましょう！
+ここで **"Hey Jarvis"** と話しかけて、コマンドを出してみましょう！
 
 ### 音声コマンドの例
 
-| 話す内容 | 実行される動作 |
+| あなたが話す内容 | 実行される動作 |
 |---------|-------------|
 | *"Hey Jarvis, open the gripper"* | グリッパーが全開になる |
 | *"Hey Jarvis, grab it"* | グリッパーが閉じる |
 | *"Hey Jarvis, go to pick up mode"* | アームが把持用のポーズに移動する |
 | *"Hey Jarvis, can you turn around"* | ベースが横方向に回転する |
-| *"Hey Jarvis, wave at the camera"* | アームが手を振り、ニュートラルに戻る |
+| *"Hey Jarvis, wave at the camera"* | アームが手を振り、ニュートラル位置に戻る |
 | *"Hey Jarvis, go home"* | すべての関節がニュートラル位置に戻る |
 
 ---
 
-## プロジェクトファイル概要
+## プロジェクトファイルの概要
 
 ```
 examples/voice_arm/
@@ -399,14 +399,14 @@ examples/voice_arm/
 
 | 変数 | デフォルト | 説明 |
 |---|---|---|
-| `GROQ_API_KEY` | *(required)* | Groq の API キー |
+| `GROQ_API_KEY` | *(required)* | Groq API キー |
 | `WAKEWORD_MODEL` | `hey jarvis` | ウェイクワードのフレーズ |
 | `MIC_INDEX` | `1` | PyAudio デバイスインデックス |
 | `WAKEWORD_THRESHOLD` | `0.5` | 検出感度 (0.0–1.0) |
 | `WAKEWORD_COOLDOWN` | `2` | 再トリガーまでの秒数 |
-| `RECORDING_SECONDS` | `3` | ウェイクワード検出後に録音する時間 |
-| `LLM_MODEL` | `llama-3.1-8b-instant` | Groq の LLM モデル |
-| `STT_MODEL` | `whisper-large-v3-turbo` | Groq の Whisper モデル |
+| `RECORDING_SECONDS` | `3` | ウェイクワード後に録音する時間 |
+| `LLM_MODEL` | `llama-3.1-8b-instant` | Groq LLM モデル |
+| `STT_MODEL` | `whisper-large-v3-turbo` | Groq Whisper モデル |
 | `TTS_VOICE` | `autumn` | 音声出力に使用するボイス |
 | `ARM_PORT` | `/dev/ttyACM0` | フォロワーアームの USB ポート |
 | `ARM_ID` | `my_awesome_follower_arm` | アーム ID（キャリブレーションファイル名と一致） |
@@ -418,25 +418,25 @@ examples/voice_arm/
 ## トラブルシューティング
 
 **PyAudio のインストールに失敗する**
-まず PortAudio のシステムライブラリをインストールします：
+まず PortAudio システムライブラリをインストールします：
 ```bash
 sudo apt-get install -y portaudio19-dev
 ```
 
 **ウェイクワードがまったく反応しない**
-`list_mics.py` をもう一度実行し、`MIC_INDEX` が ReSpeaker と一致していることを確認します。`WAKEWORD_THRESHOLD` を `0.3` に下げてみてください。マイクから約 1 メートル以内で、はっきりと話してください。
+`list_mics.py` を再度実行し、`MIC_INDEX` が ReSpeaker と一致していることを確認します。`WAKEWORD_THRESHOLD` を `0.3` に下げてみてください。マイクから約 1 メートル以内で、はっきりと話してください。
 
 **コマンド後にアームが動かない**
-`ARM_PORT` が正しいか（`lerobot-find-port`）を確認します。キャリブレーションファイルが `~/.cache/huggingface/lerobot/calibration/robots/so_follower/<ARM_ID>.json` に存在することを確認します。
+`ARM_PORT` が正しいか確認します（`lerobot-find-port`）。キャリブレーションファイルが `~/.cache/huggingface/lerobot/calibration/robots/so_follower/<ARM_ID>.json` に存在することを確認してください。
 
 **アームが誤った位置に動く**
 `ACTION_MAP` のデフォルトポーズ値は初期推定値です。`read_positions.py` を実行し、アームを目的のポーズに物理的に動かしてから、表示された値を `robot_arm.py` にコピーします。
 
 **TTS / STT のエラー**
-`config.env` 内の `GROQ_API_KEY` を再確認します。Groq の無料枠にはレート制限があるため、エラーが発生した場合はコマンドの間を数秒あけてください。
+`config.env` 内の `GROQ_API_KEY` を再確認してください。Groq の無料枠にはレート制限があります — エラーが発生した場合は、コマンドの間を数秒あけてください。
 
 **音声は再生されるが歪んで聞こえる**
-Raspberry Pi では、`raspi-config` → System Options → Audio から、正しいデバイスに音声出力を設定します。
+Raspberry Pi では、`raspi-config` → System Options → Audio から、正しいデバイスに音声出力を設定してください。
 
 ---
 
@@ -444,7 +444,7 @@ Raspberry Pi では、`raspi-config` → System Options → Audio から、正�
 
 以下を利用して構築されています：
 - [LeRobot](https://github.com/huggingface/lerobot) — Hugging Face によるオープンソースのロボティクスフレームワーク
-- [SO-ARM100](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/) — Seeed Studio による低コストのオープンソースロボットアーム
+- [SO-ARM100](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/) — Seeed Studio による低コストなオープンソースロボットアーム
 - [openwakeword](https://github.com/dscripka/openWakeWord) — ローカルのウェイクワード検出
 - [Groq](https://groq.com/) — 超高速な Whisper STT、LLaMA LLM、Orpheus TTS
 - [ReSpeaker Flex](https://wiki.seeedstudio.com/ja/respeaker_flex/) — USB マイクアレイ

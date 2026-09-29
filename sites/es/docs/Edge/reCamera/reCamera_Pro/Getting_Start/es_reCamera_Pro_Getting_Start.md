@@ -7,16 +7,30 @@ keywords:
   - Edge AI
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_getting_started
+slug: /recamera_pro_getting_started_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
   date: 06/01/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-08-18'
-url: https://wiki.seeedstudio.com/es/recamera_pro_getting_started/
+updatedAt: '2026-08-17'
+url: https://wiki.seeedstudio.com/es/recamera_pro_getting_started_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Getting_Started/first_ai_detection.md (https://wiki.seeedstudio.com/es/recamera_pro_getting_started/), which now serves the original slug /recamera_pro_getting_started. This file is kept for history as a draft (slug /recamera_pro_getting_started_legacy) and is excluded from production builds. Do not link here. -->
+
+## Índice de migración de contenido (Página heredada)
+
+Esta página se dividió en la reestructuración del wiki de reCamera Pro (fase 2). Dónde se movió cada sección:
+
+| Sección original | Nuevo destino |
+| --- | --- |
+| Introducción, §1 Conexión de hardware, §2 Inicio de sesión en la interfaz Web | [Primera detección de IA](https://wiki.seeedstudio.com/es/recamera_pro_getting_started/) (este slug) |
+| §3 Configuración de Wi-Fi | [Acceso Wi-Fi y Web UI](https://wiki.seeedstudio.com/es/recamera_pro_wifi_access/) |
+| §4 Restablecimiento del dispositivo | [Actualización y recuperación de firmware](https://wiki.seeedstudio.com/es/recamera_pro_firmware_update/) |
+| §5 Preguntas frecuentes y solución de problemas | [Solución de problemas](https://wiki.seeedstudio.com/es/recamera_pro_faqs/) |
+| Resumen general | [Página principal de reCamera Pro](https://wiki.seeedstudio.com/es/recamera_pro/) |
 
 # Guía de inicio rápido de reCamera Pro
 
@@ -36,7 +50,7 @@ Antes de comenzar la configuración, asegúrate de haber preparado el siguiente 
 
 ### Pasos de conexión
 
-1. Como se muestra en la figura siguiente, conecta el cable de alimentación de CC de 12V a la interfaz de alimentación del dispositivo, conecta un extremo del cable USB Type-C a la reCamera Pro y el otro extremo a tu equipo host con Windows (Host PC).
+1. Como se muestra en la figura siguiente, conecta el cable de alimentación de CC de 12V a la interfaz de alimentación del dispositivo, conecta un extremo del cable USB Type-C a la reCamera Pro y el otro extremo al equipo host con Windows (Host PC).
 2. Observa el indicador de estado del dispositivo. Cuando la **luz verde está fija**, indica que el dispositivo se ha iniciado correctamente y ha entrado en estado de funcionamiento.
 
 ![Diagrama de luz de estado del sistema y conexión de cables](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
@@ -45,20 +59,20 @@ Antes de comenzar la configuración, asegúrate de haber preparado el siguiente 
 
 El LED verde indica el estado del sistema, mientras que el LED rojo funciona como indicador de alimentación. La siguiente tabla describe el estado del dispositivo correspondiente a cada estado del LED verde.
 
-1. ***breathing*** : En este momento, el dispositivo está en proceso de encendido.
+1. ***breathing*** : En este momento, el dispositivo representativo está en proceso de encendido.
 2. ***Solid on*** : El equipo está funcionando con normalidad.
 3. ***off*** : Estado anómalo, el proceso principal no se está ejecutando.
-4. ***100 ms blink*** : Actualmente en proceso de OTA.
+4. ***100 ms blink*** : Actualmente en el proceso de OTA.
 5. ***Short green blink*** : Se ha detectado una tarjeta SD con un sistema de archivos dañado.
 
 ---
 
 ## 2. Iniciar sesión en la interfaz web de gestión del dispositivo
 
-reCamera Pro incorpora un sistema de gestión web intuitivo, que te permite configurarlo directamente a través de un navegador.
+reCamera Pro tiene un sistema de gestión web intuitivo integrado, que te permite configurarlo directamente a través de un navegador.
 
 :::note Atención
-Antes de intentar iniciar sesión en la interfaz web, asegúrate de que el cable USB Type-C esté correctamente conectado al ordenador y de que el dispositivo haya completado su inicialización de arranque.
+Antes de intentar iniciar sesión en la interfaz Web, asegúrate de que el cable USB Type-C esté correctamente conectado al ordenador y de que el dispositivo haya completado su inicialización de arranque.
 :::
 
 ### Pasos de operación
@@ -70,7 +84,7 @@ Antes de intentar iniciar sesión en la interfaz web, asegúrate de que el cable
 
 ![Diagrama de inicio de sesión web e interfaz principal](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/web_login.png)
 
-:::tip Solución de problemas comunes
+:::tip Solución de problemas común
 Si la página no se carga después de introducir `192.168.42.1` en el sistema Windows, ve directamente a la sección [5. Preguntas frecuentes y solución de problemas (FAQ)](#5-preguntas-frecuentes-y-solución-de-problemasfaq) al final de este documento para realizar una comprobación del adaptador de red.
 :::
 
@@ -78,11 +92,11 @@ Si la página no se carga después de introducir `192.168.42.1` en el sistema Wi
 
 ## 3. Configuración de la red inalámbrica (Wi-Fi)
 
-Para permitir que el dispositivo acceda a Internet o habilitar la gestión inalámbrica dentro de la red de área local, configúrale una conexión Wi-Fi.
+Para permitir que el dispositivo acceda a Internet o habilitar la gestión inalámbrica dentro de la red de área local, configura una conexión Wi-Fi para él.
 
 ### Pasos de operación
 
-1. Tras iniciar sesión correctamente en la interfaz web principal, haz clic en **Device Info** en la barra de navegación izquierda.
+1. Después de iniciar sesión correctamente en la interfaz web principal, haz clic en **Device Info** en la barra de navegación izquierda.
 2. En el submenú o en el área de configuración derecha, haz clic en **Network Settings**.
 3. Activa la función Wi-Fi (si está desactivada por defecto) y el sistema escaneará automáticamente las redes inalámbricas cercanas.
 4. Selecciona el SSID de tu Wi-Fi de la lista de redes disponibles, introduce la contraseña inalámbrica correcta y haz clic en conectar.
@@ -91,22 +105,22 @@ Para permitir que el dispositivo acceda a Internet o habilitar la gestión inal�
 
 ### Conexión remota inalámbrica (Paso opcional)
 
-Tras conectarte correctamente al Wi-Fi, puedes hacer clic en el nombre del Wi-Fi conectado para ver su información de red detallada (por ejemplo, dirección IP asignada, dirección MAC, etc.).
+Después de conectarte correctamente al Wi-Fi, puedes hacer clic en el nombre del Wi-Fi conectado para ver su información de red detallada (por ejemplo, dirección IP asignada, dirección MAC, etc.).
 
 ![Diagrama de visualización de detalles de Wi-Fi](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/wifi_details.png)
 
 :::tip Desconecta el cable Type-C para la gestión inalámbrica
-Después de obtener la IP de red local asignada por el Wi-Fi (por ejemplo, `192.168.4.200`), siempre que tu ordenador y la reCamera Pro estén dentro de la misma red de área local, puedes introducir directamente esta dirección IP (por ejemplo, `http://192.168.4.200`) en el navegador para iniciar sesión en el dispositivo.
-En este punto, puedes **desconectar el cable USB Type-C** con seguridad para lograr una operación y gestión totalmente inalámbricas.
+Después de obtener la IP de la red de área local asignada por el Wi-Fi (por ejemplo, `192.168.4.200`), siempre que tu ordenador y la reCamera Pro estén dentro de la misma red de área local, puedes introducir directamente esta dirección IP (por ejemplo, `http://192.168.4.200`) en el navegador para iniciar sesión en el dispositivo.
+En este punto, puedes **desconectar el cable USB Type-C** de forma segura para lograr una operación y gestión totalmente inalámbricas.
 :::
 
 ---
 
-## 4. Restablecer el dispositivo
+## 4. Restablecimiento del dispositivo
 
 Hay dos métodos para restaurar el dispositivo a su configuración de fábrica:
 
-1. Mantén pulsado el botón lateral durante unos 15 segundos hasta que se escuche un sonido de aviso, lo que indica que el dispositivo ha entrado en modo de restablecimiento. En este momento, simplemente espera a que la luz de estado verde permanezca encendida de forma continua para volver a iniciar sesión en el dispositivo.
+1. Mantén pulsado el botón lateral durante unos 15 segundos hasta que se escuche un sonido de aviso, lo que indica que el dispositivo ha entrado en modo de restablecimiento. En este punto, simplemente espera a que la luz de estado verde permanezca encendida de forma continua para volver a iniciar sesión en el dispositivo.
 2. A través de la interfaz web de gestión, haz clic en **Device Info** -> **System Settings** -> **Factory Reset** para restablecer el dispositivo.
 ![Diagrama de restablecimiento de fábrica](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera-Pro_reset_Device.jpg)
 
@@ -116,12 +130,12 @@ Hay dos métodos para restaurar el dispositivo a su configuración de fábrica:
 
 Si no puedes abrir la interfaz web después de conectar el cable Type-C, normalmente se debe a que la tarjeta de red virtual del sistema Windows no obtuvo correctamente una dirección IP. Sigue estos pasos para solucionar el problema:
 
-1. Abre el **Control Panel** en el equipo host con Windows.
-2. Haz clic sucesivamente en **Network and Internet** -> **Network and Sharing Center** -> **Change adapter settings**.
-3. En la lista emergente de conexiones de red, busca la tarjeta de red virtual con un nombre similar a `Remote NDIS based Internet Sharing Device` o relacionado con reCamera (puedes intentar desconectar y volver a conectar el dispositivo para ver qué puerto de red desaparece y reaparece; ese puerto es la interfaz de tarjeta de red virtual de reCamera Pro).
-4. Haz clic con el botón derecho en este adaptador de red y selecciona **Properties**.
+1. Abre el **Panel de control** en el equipo host con Windows.
+2. Haz clic para entrar en **Network and Internet** -> **Network and Sharing Center** -> **Change adapter settings** en secuencia.
+3. En la lista emergente de conexiones de red, busca la tarjeta de red virtual llamada algo como `Remote NDIS based Internet Sharing Device` o relacionada con reCamera (puedes intentar desconectar y volver a conectar el dispositivo para ver qué puerto de red desaparece y reaparece; ese puerto es la interfaz de tarjeta de red virtual de reCamera Pro).
+4. Haz clic derecho en este adaptador de red y selecciona **Properties**.
 5. Haz doble clic en **Internet Protocol Version 4 (TCP/IPv4)** en la lista.
-6. Asegúrate de que la configuración tenga marcadas las opciones **Obtain an IP address automatically** y **Obtain DNS server address automatically**.
+6. Asegúrate de que la configuración tenga marcadas **Obtain an IP address automatically** y **Obtain DNS server address automatically**.
 7. Haz clic en OK para guardar la configuración y vuelve a acceder a `192.168.42.1` en el navegador.
 
 <video
@@ -129,18 +143,18 @@ Si no puedes abrir la interfaz web después de conectar el cable Type-C, normalm
   controls
   width="100%"
   preload="metadata">
-  Your browser does not support playing this video.
+  Tu navegador no admite la reproducción de este vídeo.
 </video>
 
 ### P2: Después de conectar la reCamera al ordenador mediante el cable USB, el ordenador no pudo acceder a Internet
 
-Si tu ordenador no puede acceder a Internet después de conectarse a un dispositivo mediante un cable USB, consulta lo siguiente:[network error diagram](https://wiki.seeedstudio.com/es/recamera_network_connection/#computer-network-error)
+Si tu ordenador no puede acceder a Internet después de conectarse a un dispositivo mediante un cable USB, consulta lo siguiente:[diagrama de error de red](https://wiki.seeedstudio.com/es/recamera_network_connection/#computer-network-error)
 
 ---
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diversos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diversos tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

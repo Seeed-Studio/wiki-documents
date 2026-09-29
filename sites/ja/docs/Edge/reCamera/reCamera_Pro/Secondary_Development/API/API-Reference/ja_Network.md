@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_network
+slug: /recamera_pro_api_network_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
@@ -16,17 +17,18 @@ createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/ja/recamera_pro_api_network/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/network.md (https://wiki.seeedstudio.com/ja/recamera_pro_api_network/), which now serves the original slug /recamera_pro_api_network. This file is kept for history as a draft (slug /recamera_pro_api_network_legacy) and is excluded from production builds. Do not link here. -->
 
 # Network
 
 ## エンドポイント概要
 
-| Method | Path | 目的 |
+| メソッド | パス | 目的 |
 |---|---|---|
 | GET | `/network/lan` | 有線ネットワーク設定を取得 |
-| PUT | `/network/lan` | 有線ネットワーク設定を構成 |
+| PUT | `/network/lan` | 有線ネットワーク設定を設定 |
 | GET | `/network/wlan` | 無線 IPv4 設定を取得 |
-| PUT | `/network/wlan` | 無線 IPv4 設定を構成 |
+| PUT | `/network/wlan` | 無線 IPv4 設定を設定 |
 | GET | `/network/wifi` | 現在の Wi-Fi 接続情報を取得 |
 | GET | `/network/wifi-status` | Wi-Fi 電源状態を取得 |
 | POST | `/network/wifi-status?power=on/off` | Wi-Fi 電源を切り替え |
@@ -34,9 +36,9 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_api_network/
 | POST | `/network/wifi` | Wi-Fi に接続 |
 | DELETE | `/network/wifi` | Wi-Fi から切断または削除 |
 | GET | `/web/setting` | HTTP API 設定を取得 |
-| POST | `/web/setting` | HTTP API 設定を構成 |
+| POST | `/web/setting` | HTTP API 設定を設定 |
 | GET | `/ftp/setting` | FTP サービス設定を取得 |
-| POST | `/ftp/setting` | FTP サービス設定を構成 |
+| POST | `/ftp/setting` | FTP サービス設定を設定 |
 
 ## LAN および WLAN 設定
 
@@ -68,7 +70,7 @@ GET /network/wlan
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `dIpv4.sV4Address` | IPv4 アドレス |
 | `dIpv4.sV4Gateway` | IPv4 ゲートウェイ |
@@ -80,7 +82,7 @@ GET /network/wlan
 | `dLink.iPower` | インターフェースの電源状態 |
 | `dLink.bEnableMethod` | 手動設定が有効かどうか |
 
-### 設定を構成
+### 設定を変更
 
 ```text
 PUT /network/lan
@@ -140,7 +142,7 @@ GET /network/wifi-status
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `iPower` | Wi-Fi 電源状態。`1` はオン、`0` はオフ |
 | `id` | インターフェース ID |
@@ -153,11 +155,11 @@ POST /network/wifi-status?power=on
 POST /network/wifi-status?power=off
 ```
 
-| Parameter | Value | 説明 |
+| パラメータ | 値 | 説明 |
 |---|---|---|
 | `power` | `on`, `off` | Wi-Fi をオンまたはオフにする |
 
-## Wi-Fi スキャンと接続
+## Wi-Fi のスキャンと接続
 
 ### Wi-Fi リストをスキャン
 
@@ -181,14 +183,14 @@ GET /network/wifi-list
 ]
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
-| `sBssid` | Wi-Fi BSSID。接続時の一意識別子として使用 |
+| `sBssid` | Wi-Fi BSSID。接続の一意な識別子として使用 |
 | `sSsid` | Wi-Fi ネットワーク名 |
 | `iFrequency` | 周波数チャネル |
 | `iRssi` | 信号強度 |
 | `sFlags` | セキュリティ種別 |
-| `sConnected` | 現在接続中かどうか |
+| `sConnected` | 現在接続されているかどうか |
 | `sReserved` | パスワードが保存されているかどうか |
 
 ### Wi-Fi に接続
@@ -206,9 +208,9 @@ POST /network/wifi
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
-| `sSsid` | Wi-Fi の一意識別子。`/network/wifi-list` の `sBssid` の値を使用 |
+| `sSsid` | Wi-Fi の一意な識別子。`/network/wifi-list` の `sBssid` の値を使用 |
 | `sPassword` | Wi-Fi パスワード |
 
 レスポンス:
@@ -220,14 +222,14 @@ POST /network/wifi
 }
 ```
 
-### Wi-Fi の切断または削除
+### Wi-Fi から切断または削除
 
 ```text
 DELETE /network/wifi?disconnect=<ssid>
 DELETE /network/wifi?Ignore=<ssid>
 ```
 
-| Parameter | 説明 |
+| パラメータ | 説明 |
 |---|---|
 | `disconnect` | 指定した Wi-Fi から切断 |
 | `Ignore` | 指定した Wi-Fi を削除 |
@@ -265,12 +267,12 @@ GET /web/setting
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `sEnable` | HTTP API が有効かどうか |
 | `sApiKey` | API キー |
 
-### 設定を構成
+### 設定を変更
 
 ```text
 POST /web/setting
@@ -304,14 +306,14 @@ GET /ftp/setting
 }
 ```
 
-| Field | 説明 |
+| フィールド | 説明 |
 |---|---|
 | `sEnable` | FTP サービスが有効かどうか |
 | `sFtpPort` | FTP ポート |
 | `sFtpUser` | FTP ユーザー名 |
 | `sFtpPassword` | FTP パスワード |
 
-### 設定を構成
+### 設定を変更
 
 ```text
 POST /ftp/setting
@@ -341,16 +343,16 @@ GET /network/muticast
 
 エラーコード:
 
-| Code | 説明 |
+| コード | 説明 |
 |---:|---|
 | `10001` | FTP パスワードが弱すぎます |
-| `10004` | FTP ポートが許可範囲外です |
+| `10004` | FTP ポートが範囲外です |
 | `10005` | FTP ポートがすでに使用されています |
 
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

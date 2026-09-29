@@ -6,24 +6,26 @@ keywords:
   - reCamera Pro
   - IMU
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_imu_usage
+slug: /recamera_pro_imu_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 1
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/es/recamera_pro_imu_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/es/recamera_pro_imu_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/imu_data.md (https://wiki.seeedstudio.com/es/recamera_pro_imu_usage/), which now serves the original slug /recamera_pro_imu_usage. This file is kept for history as a draft (slug /recamera_pro_imu_usage_legacy) and is excluded from production builds. Do not link here. -->
 
 # Uso de la IMU de reCamera Pro
 
-El modelo de IMU incorporado en el dispositivo es el ICM-42670-P, un sensor de 6 ejes que integra un acelerómetro de 3 ejes y un giroscopio de 3 ejes. El giroscopio del ICM-42670-P admite rangos de medición de ±250 / ±500 / ±1000 / ±2000 dps, mientras que el acelerómetro admite rangos de ±2 / ±4 / ±8 / ±16 g. Sus datos internos se generan en formato de complemento a dos de 16 bits.
+El modelo de IMU incorporado en el dispositivo es el ICM-42670-P, un sensor de 6 ejes que integra un acelerómetro de 3 ejes y un giroscopio de 3 ejes. El giroscopio del ICM-42670-P admite rangos de medición de ±250 / ±500 / ±1000 / ±2000 dps, mientras que el acelerómetro admite rangos de ±2 / ±4 / ±8 / ±16 g. Sus datos internos se entregan en formato de complemento a dos de 16 bits.
 
 ## Ruta de datos
 
-reCamera PRO utiliza el controlador IIO estándar para la IMU, por lo que los datos en bruto se pueden obtener directamente a través de las interfaces IIO.
+reCamera PRO utiliza el controlador IIO estándar para la IMU, por lo que los datos en bruto pueden obtenerse directamente a través de las interfaces IIO.
 Los archivos de datos en bruto se pueden encontrar en el directorio ***/sys/bus/iio/devices/iio:device1/***.
 ![IMU_DATA_SAMPLE](https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO_imu_dir.png)
 

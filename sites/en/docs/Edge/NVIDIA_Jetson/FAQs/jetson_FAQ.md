@@ -132,6 +132,10 @@ For details, please click [here](/jetpack72_deep_dive)
 
 For details, please click [here](/jetpack72_ax210_ax200_wifi_setup_guide)
 
+#### Q24: What AI models can I deploy on my Jetson device and how?
+
+For details, please click [here](/ai_robotics_deploy_ai_models_on_jetson)
+
 ## Tech support
 
 Thank you for choosing our products! We are **here** to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

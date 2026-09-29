@@ -6,16 +6,18 @@ keywords:
   - reCamera Pro
   - RV1126B
   - Debian 13
-slug: /recamera_pro_debian
+slug: /recamera_pro_debian_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
   date: 09/08/2026
   author: yylin
 createdAt: '2026-08-04'
-updatedAt: '2026-09-07'
-url: https://wiki.seeedstudio.com/recamera_pro_debian/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/recamera_pro_debian_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/experimental_debian13.md (https://wiki.seeedstudio.com/recamera_pro_debian/), which now serves the original slug /recamera_pro_debian. This file is kept for history as a draft (slug /recamera_pro_debian_legacy) and is excluded from production builds. Do not link here. -->
 
 ## Introduction
 

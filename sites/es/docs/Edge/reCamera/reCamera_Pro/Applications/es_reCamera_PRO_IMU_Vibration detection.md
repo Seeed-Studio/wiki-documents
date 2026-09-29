@@ -12,15 +12,17 @@ keywords:
   - ALSA
   - aplay
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/Application/reCamera_PRO_IMU_Detect/reCamera_PRO-IMU-Detect.gif
-slug: /recamera_pro_imu_tilt_shake_detection
+slug: /recamera_pro_imu_tilt_shake_detection_legacy
+draft: true
 sidebar_position: 1
 last_update:
   date: 2026-06-11
   author: Sizhao zhou
 createdAt: '2026-06-11'
 updatedAt: '2026-07-23'
-url: https://wiki.seeedstudio.com/es/recamera_pro_imu_tilt_shake_detection/
+url: https://wiki.seeedstudio.com/es/recamera_pro_imu_tilt_shake_detection_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/tilt_shake_detection.md (https://wiki.seeedstudio.com/es/recamera_pro_imu_tilt_shake_detection/), which now serves the original slug /recamera_pro_imu_tilt_shake_detection. This file is kept for history as a draft (slug /recamera_pro_imu_tilt_shake_detection_legacy) and is excluded from production builds. Do not link here. -->
 
 # Uso de la IMU integrada de reCamera Pro para la detección de inclinación y sacudidas
 
@@ -28,7 +30,7 @@ url: https://wiki.seeedstudio.com/es/recamera_pro_imu_tilt_shake_detection/
 
 ## Introducción
 
-Este artículo explica cómo utilizar la unidad de medición inercial (IMU) de seis ejes integrada en la reCamera Pro — el giroscopio ICM-42670-P — para implementar la detección de inclinación y sacudidas del dispositivo. Cuando el dispositivo se inclina o se sacude, el sistema reproducirá avisos de voz correspondientes a través del altavoz integrado. A través de este tutorial, aprenderás cómo leer datos brutos del giroscopio mediante el controlador IIO de Linux, reproducir sonidos de advertencia usando el controlador de audio ALSA y, en última instancia, integrar un programa completo de detección y alerta.
+Este artículo explica cómo utilizar la unidad de medición inercial (IMU) de seis ejes integrada en la reCamera Pro — el giroscopio ICM-42670-P — para implementar la detección de inclinación y sacudidas del dispositivo. Cuando el dispositivo se inclina o se sacude, el sistema reproducirá los avisos de voz correspondientes a través del altavoz integrado. A través de este tutorial, aprenderás a leer datos brutos del giroscopio mediante el controlador IIO de Linux, reproducir sonidos de advertencia usando el controlador de audio ALSA y, en última instancia, integrar un programa completo de detección y alerta.
 
 ## Preparación de hardware
 - una reCamera Pro
@@ -59,11 +61,11 @@ Al recopilar datos brutos de velocidad angular del giroscopio integrado (ICM-426
 
 ### Detección de sacudidas
 
-Cuando el valor absoluto de los datos de velocidad angular en cualquier eje supera un umbral preestablecido, se determina como una sacudida.
+Cuando el valor absoluto de la velocidad angular en cualquier eje supera un umbral preestablecido, se determina como una sacudida.
 
 ### Detección de inclinación
 
-Cuando el valor absoluto de los datos de velocidad angular en cualquier eje supera un umbral preestablecido, se determina como una inclinación.
+Cuando el valor absoluto de la velocidad angular en cualquier eje supera un umbral preestablecido, se determina como una inclinación.
 
 ## Adquisición de datos del giroscopio integrado
 
@@ -111,7 +113,7 @@ ffmpeg -i test.mp3 test.wav
 ```
 :::
 
-## Código de implementación básica
+## Código de implementación básico
 
 Ahora que entendemos cómo leer datos brutos del giroscopio y reproducir audio, escribamos el código para implementar toda la funcionalidad.
 
@@ -154,8 +156,8 @@ subprocess.run([
 
 ### Código de implementación final
 
-- Cuando el dispositivo se sacude, reproducirá **"Warning: Do not shake the device"**.
-- Cuando el dispositivo se inclina, reproducirá **"Warning: The equipment has toppled over. Please immediately check the equipment status to prevent any accidents"**.
+- Cuando el dispositivo se sacude, reproducirá **"Advertencia: No sacuda el dispositivo"**.
+- Cuando el dispositivo se inclina, reproducirá **"Advertencia: El equipo se ha volcado. Por favor, compruebe inmediatamente el estado del equipo para evitar cualquier accidente"**.
 
 El código correspondiente se puede descargar desde [reCamera_PRO_IMU_Detect](https://drive.google.com/drive/folders/1-3RTc0urrzMJVWGHqnLKwSMuZavLV9O0?usp=drive_link).
 
@@ -193,14 +195,14 @@ scp -r ./icm42670_project root@deviceIP:/userdata
 
 ## Solución de problemas
 
-- **No se pueden leer los datos del giroscopio**: Verifica que la ruta `/sys/bus/iio/devices/iio:device1` exista y que el archivo `in_anglvel_x_raw` sea legible. Si la ruta no existe, es posible que el controlador IIO no esté cargado; comprueba los módulos del kernel.
-- **Fallo en la reproducción de audio**: Confirma que el archivo de audio esté en formato WAV y que el comando `aplay` esté disponible. Si el altavoz no emite sonido, revisa la configuración de volumen de ALSA.
+- **No se pueden leer datos del giroscopio**: Verifica que la ruta `/sys/bus/iio/devices/iio:device1` exista y que el archivo `in_anglvel_x_raw` sea legible. Si la ruta no existe, es posible que el controlador IIO no esté cargado; comprueba los módulos del kernel.
+- **Fallo en la reproducción de audio**: Confirma que el archivo de audio esté en formato WAV y que el comando `aplay` esté disponible. Si el altavoz no emite sonido, comprueba la configuración de volumen de ALSA.
 - **Fallo en la calibración**: Asegúrate de que el dispositivo esté inmóvil y nivelado durante la calibración. Si el tiempo de calibración no es suficiente, utiliza `--force-calib` para recalibrar.
 
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

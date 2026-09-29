@@ -1,5 +1,5 @@
 ---
-description: Meshcore 用 SenseCAP Card Tracker T1000-E の使用を開始します。デバイスの取り付け、ファームウェア書き込み、デバイス接続について案内します。
+description: Meshcore 用 SenseCAP Card Tracker T1000-E の使用を開始します。デバイスのインストール、ファームウェア書き込み、デバイス接続について案内します。
 title: MeshCore を使い始める
 keywords:
   - Tracker
@@ -11,11 +11,11 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/
 ---
 
-## ファームウェアの書き込み
+## ファームウェア書き込み
 
 ### 方法1 Web Flasher 経由
 
@@ -25,13 +25,13 @@ USB ケーブルでデバイスをコンピュータに接続します。
 データ転送中は USB ケーブルを接続したままにしてください。そうしないとデバイスが破損する可能性があります。
 :::
 
-[Meshcore Web Flasher](https://meshcore.io/flasher) にアクセスします。 
+[MeshCore Web Flasher](https://meshcore.io/flasher) にアクセスします。 
 
 `Community Firmware` グループで `Seeed Studio SenseCAP T1000-E` を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -43,11 +43,11 @@ USB ケーブルでデバイスをコンピュータに接続します。
 
 `Erase Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから `Erase Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
 
-"Flashing erase firmware:100%" と表示されたら、デバイスの消去は正常に完了しています。
+"Flashing erase firmware:100%" と表示されたら、デバイスは正常に消去されています。
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
-#### ファームウェアの書き込み
+#### ファームウェア書き込み
 
 `Enter DFU Mode` をクリックし、「nRF xxx」または「TinyUSB」という名前のシリアルポートを選択します。その後、`Flash` をクリックしてシリアルポートを選択します。
 
@@ -67,13 +67,13 @@ USB ケーブルでデバイスをコンピュータに接続します。
 データ転送中は USB ケーブルを接続したままにしてください。そうしないとデバイスが破損する可能性があります。
 :::
 
-[Meshcore Web Flasher](https://meshcore.io/flasher) にアクセスします。 
+[MeshCore Web Flasher](https://meshcore.io/flasher) にアクセスします。 
 
-`Community Firmware` グループで `Seeed Studio Wio Tracker T1000-E` を選択します。
+`Community Firmware` グループで `Seeed Studio SenseCAP T1000-E` を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -99,9 +99,9 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/EraseDrag.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
+ファームウェアが正常に書き込まれるとディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
 
-#### ファームウェアの書き込み
+#### ファームウェア書き込み
 
 最新のファームウェアバージョンを選択します。
 
@@ -111,7 +111,7 @@ UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareUF2.png" alt="pir" width={800} height="auto" /></p>
 
-DFU モードに手動で入ることを試します：デバイスのボタンを押し続け、**素早く** 充電ケーブルを 2 回接続します。緑色の LED が点灯し続けます。
+DFU モードに手動で入ります：デバイスのボタンを押し続け、**素早く** 充電ケーブルを 2 回接続します。緑色の LED が点灯し続けます。
 
 :::warning
 DFU モードに正常に入るには、この操作を素早く行う必要があります。複数回試す必要があるかもしれません。
@@ -127,29 +127,29 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的に再起動します。
+ファームウェアが正常に書き込まれるとディスクは消えます。デバイスは自動的に再起動します。
 
 ## 設定
 
-### デバイスの電源を入れる
+### デバイスの電源オン
 
-ボタンを押して電源を入れます。LED が点灯し、音程が下がっていくメロディーが鳴ります。
+ボタンを押して電源を入れます。LED が点灯し、下降するメロディーが鳴ります。
 
-### デバイスの電源を切る
+### デバイスの電源オフ
 
-ボタンを 3 秒間押し続けて電源を切ります。LED が消灯し、音程が下がるメロディーが鳴ります。
+ボタンを 3 秒間押し続けて電源を切ります。LED が消灯し、下降するメロディーが鳴ります。
 
 :::tip
 ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
 :::
 
-### APP を入手する
+### APP の入手
 
-Google Store または Apple Store からダウンロードします。または [click here](https://meshcore.io/#download) をクリックして Meshcore APP を入手します。
+Google Store または Apple Store からダウンロードします。または [click here](https://meshcore.io/#download) をクリックして MeshCore APP を入手します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
-### アプリ経由で接続する
+### アプリ経由で接続
 
 `Connect` をクリックし、対象デバイスを選択します。デフォルトのデバイス ID は `Meshcore-MAC Address` です。MAC アドレスはデバイスの背面で確認できます。
 
@@ -158,11 +158,11 @@ Google Store または Apple Store からダウンロードします。または
 デフォルトの PIN コード `123456` を入力し、`Pair` をクリックしてデバイスに接続します。
 
 :::tip
-接続に失敗した場合は、スマートフォンの Bluetooth リストを開き、そのデバイスを `forget` または `Unpair` してください。その後、再度接続をお試しください。
+接続に失敗した場合は、スマートフォンの Bluetooth リストを開き、そのデバイスを `forget` または `Unpair` してから、再度接続をお試しください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Unpair.jpg" alt="pir" width={300} height="auto" /></p>
 :::
 
-### Web インターフェース経由で接続する（BLE）
+### Web インターフェース経由で接続（BLE）
 
 1. [MeshCore Web App](https://app.meshcore.nz/) を開き、**Settings** アイコンをクリックします。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue1.png" alt="pir" width={600} height="auto" /></p>
@@ -185,7 +185,7 @@ Google Store または Apple Store からダウンロードします。または
 
 ### LoRa の設定
 
-メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、あなたの地域に合わせて設定する必要があります。
+メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、あなたの地域に応じて設定する必要があります。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
@@ -200,7 +200,7 @@ Google Store または Apple Store からダウンロードします。または
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868 MHz|869.4 - 869.65|10|27|
 
-これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の[LoRa パラメータ](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general)の設定を続けることができます。
+これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の[LoRa パラメータ](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-一般)の設定を続けることができます。
 
 ### GPS の設定
 
@@ -212,33 +212,33 @@ APP の `Position Settings` に移動して GPS を有効にできます。
 
 ### ボタン
 
-|ボタン操作|説明|
+|Button Action|Description|
 |--|--|
-|3秒押す|電源オン/オフ|
-|ダブルクリック|アドバタイズをブロードキャスト|
-|トリプルクリック|ブザー切り替え|
-|クアドラプルクリック|GPS 切り替え|
+|Press for 3s|電源オン/オフ|
+|Double-click|ブロードキャスト広告|
+|Triple-click|ブザー切り替え|
+|Quadruple-click|GPS 切り替え|
 
 ## メッセージ送信
 
-対応デバイスを2台お持ちで、近くに MeshCore ユーザーがあまりいない場合は、両方に BLE Companion ファームウェアを書き込むことで、近くの友人や家族との通信にデバイスを使用できます。
+対応デバイスを2台お持ちで、近くにMeshCoreユーザーがあまりいない場合は、両方をBLE Companionファームウェアに書き換えることで、近くの友人や家族との通信に自分のデバイスを利用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/MeshcoreFramework.png" alt="pir" width={900} height="auto" /></p>
 
 ### アドバタイズ
 
-MeshCore では、なりすまし防止のために署名された、名前・位置情報・公開暗号鍵を手動でブロードキャストできます。アドバタイズボタンをクリックすると、そのデータが LoRa 経由でブロードキャストされます。MeshCore ではこれを Advert と呼びます。アドバタイズには「ゼロホップ」と「フラッド」の2つの方法があります。
+MeshCoreでは、自分の名前、位置情報、および公開暗号鍵を手動でブロードキャストできます。これらの情報にはなりすまし防止のために署名も付与されます。アドバタイズボタンをクリックすると、そのデータがLoRa経由でブロードキャストされます。MeshCoreではこれをAdvertと呼びます。アドバタイズには「ゼロホップ」と「フラッド」の2つの方法があります。
 
-- **ゼロホップ** は、あなたのアドバタイズが届く範囲の相手に一度だけブロードキャストされ、それで終了することを意味します。
-- **フラッド** は、一度ブロードキャストされた後、それを受信したすべてのリピーターによって繰り返し送信されることを意味します。
+- **Zero hop** は、自分のアドバタイズが届く範囲の相手に一度だけ送信され、それで終了することを意味します。
+- **Flooded** は、一度送信されたアドバタイズが、それを受信したすべてのリピーターによって再送信されることを意味します。
 
-アドバタイズはアプリから送信できます。また、デバイスのアドバタイズページから直接送信することもできます。
+アプリからアドバタイズを送信できます。また、デバイスのアドバタイズページから直接送信することもできます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Advert.png" alt="pir" width={300} height="auto" /></p>
 
 ### 公開メッセージ
 
-LoRa を設定した後、プライマリチャンネルでメッセージを送信できます。同じ周波数帯にいる近くのすべての人がそれを受信します。
+LoRaを設定した後、プライマリチャンネルでメッセージを送信できます。同じ周波数帯にいる近くの人は全員、そのメッセージを受信します。
 
 
 ### プライベートメッセージ
@@ -258,41 +258,41 @@ import TabItem from '@theme/TabItem';
 
 ### デバイスの電源が入らない
 
-- デバイスを 1〜2 時間充電する
+- デバイスを1〜2時間充電する
 
 - 充電ケーブルを交換する
 
- - それでもだめな場合は、デバイスのボタンを押し続けたまま充電ケーブルを接続し、PC にディスクが表示されるかどうか確認してください。表示された場合は、[こちらをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#ブートローダーの書き込み)してブートローダーを再インストールしてください。
+ - それでも改善しない場合は、デバイスのボタンを押し続けたまま充電ケーブルを接続し、PCにディスクが表示されるか確認してください。表示された場合は、[こちらをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-the-bootloader)してブートローダーを再インストールしてください。
 
 ### デバイスがブートループに陥る
 
-**説明：**
+**現象:**
 
 デバイスが繰り返し再起動し、シリアルポートが接続と切断を繰り返します。
 
-**解決方法：**
+**解決方法:**
 
-- ステップ 1: 手動で DFU モードに入ることを試します。デバイスのボタンを押し続けたまま、**素早く** 充電ケーブルを 2 回接続します。緑色の LED が点灯し続けます。
+- ステップ1: 手動でDFUモードに入ることを試します。デバイスのボタンを押し続けたまま、**素早く**充電ケーブルを2回接続します。緑色のLEDが点灯し続けます。
 
 :::note
-DFU モードに正常に入るには、この操作を素早く行う必要があります。複数回試す必要があるかもしれません。
+DFUモードに正常に入るには、この操作を素早く行う必要があります。複数回試す必要があるかもしれません。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-- ステップ 2: フラッシュを消去する
+- ステップ2: フラッシュを消去する
 
-- ステップ 3: ファームウェアを書き込む
+- ステップ3: ファームウェアを書き込む
 
 ### デバイスがブリックした
 
 #### 説明
 
-デバイスが反応せず、LED も点灯せず、アプリとペアリングできません。
+デバイスが反応せず、LEDも点灯せず、アプリとペアリングできません。
 
-**1) デバイスがまだ DFU モードに入れる場合は、ブートローダーの書き込みを試してください。**
+**1) デバイスがDFUモードに入ることはできるが、その場合はブートローダーの書き込みを試してください。**
 
-#### ブートローダーの書き込み
+#### ブートローダーを書き込む
 
 - [ブートローダーダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
 
@@ -301,21 +301,21 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 </div>
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理中に**絶対に**切断しないでください。
+ブートローダーを書き込む際は、ケーブル接続が安定していることを必ず確認し、書き込み中に**絶対に**ケーブルを抜かないでください。
 :::
 
-**ステップ 1: Adafruit-nrfutil のインストール**
+**ステップ1: Adafruit-nrfutil のインストール**
 
-Windows ユーザーは、"Win" キーと "r" キーを押し、ポップアップウィンドウに "cmd" と入力して "Enter" を押します。これでコマンドラインを開くことができます。 
+Windowsユーザーは、「Win」キーと「R」キーを押し、ポップアップウィンドウに「cmd」と入力して「Enter」を押します。これでコマンドラインを開くことができます。 
 
-Mac ユーザーは、"Command" キーと "Space" キーを押して Spotlight を開きます。その後 "termial" と入力して "Return" を押します。これでコマンドラインを開くことができます。 
+Macユーザーは、「Command」キーと「Space」キーを押してSpotlightを開き、「termial」と入力して「Return」を押します。これでコマンドラインを開くことができます。 
 
 **前提条件**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-コマンドラインで、python と pip が正しくインストールされているか確認します。
+コマンドラインで、pythonとpipが正しくインストールされているか確認します。
 
 ```
 python --version
@@ -325,28 +325,28 @@ python --version
 python -m pip --version
 ```
 
-その後、「Python xxx」および「pip xxx」と表示されるはずです。表示されない場合は、Python を再インストールしてください。
+その後、「Python xxx」と「pip xxx」が表示されるはずです。表示されない場合は、Pythonを再インストールしてください。
 
 <Tabs>
 <TabItem value="pypi" label="PyPI からインストール">
 
-これは推奨される方法で、最新バージョンをインストールします：
+これは推奨される方法で、最新バージョンをインストールできます。
 
 ```
 pip3 install --user adafruit-nrfutil
 ```
 
-インストールパスを確認します：
+インストールパスを確認します。
 
 ```
 python -m pip show adafruit-nrfutil
 ```
 
-こちらがインストール場所です：
+こちらがインストール場所です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Windows ユーザーは、パスを手動で追加する必要がある場合があります。前のステップで表示されたインストール場所をコピーし、次のように追加します：
+Windowsユーザーは、パスを手動で追加する必要がある場合があります。前のステップで表示されたインストール場所をコピーし、次のように追加します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -355,37 +355,37 @@ Windows ユーザーは、パスを手動で追加する必要がある場合が
 
 <TabItem value="sou" label="ソースからインストール">
 
-PyPi でのインストールに問題がある場合や、ツールを変更したい場合はこの方法を使用します。まずこのリポジトリをクローンし、そのフォルダに移動します。
+PyPiでのインストールに問題がある場合や、このツールを変更したい場合はこの方法を使用します。まずこのリポジトリをクローンし、そのフォルダに移動します。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下のコマンドでは `python3` を使用していますが、Windows の場合は `python` に変更する必要があるかもしれません。これは、Windows での Python 3.x のインストールでは依然として python.exe という名前が使われているためです。
+注意: 以下のコマンドでは `python3` を使用していますが、Windowsの場合は、Python 3.x のインストールでも実行ファイル名が python.exe のままなので、`python` に変更する必要があるかもしれません。
 
-ホームディレクトリのユーザースペースにインストールするには：
+ホームディレクトリのユーザースペースにインストールするには:
 
 ```
 pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-`pip3 install` 実行時に権限エラーが発生する場合、`pip3` が古いか、システムディレクトリにインストールしようと設定されている可能性があります。その場合は `--user` フラグを使用してください：
+`pip3 install` 実行時に権限エラーが発生する場合、`pip3` が古いか、システムディレクトリにインストールしようとしている可能性があります。その場合は `--user` フラグを使用してください。
 
 ```
 pip3 install -r --user requirements.txt
 python3 setup.py install
 ```
 
-システムディレクトリにインストールしたい場合（一般的には非推奨）：
+システムディレクトリにインストールしたい場合（一般的には非推奨）:
 
 ```
 sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-ユーティリティの自己完結型実行バイナリ（Windows および MacOS）を生成するには、次のコマンドを実行します：
+ユーティリティの自己完結型実行バイナリ（WindowsおよびMacOS）を生成するには、次のコマンドを実行します。
 
 ```
 pip3 install pyinstaller
@@ -395,38 +395,38 @@ cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
-`.exe`（Windows の場合）付きで、`Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` 内に .exe が見つかります。
+`.exe` ファイルは `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil`（Windowsの場合は `.exe` 付き）にあります。
 利便性のために、%PATH% に含まれるディレクトリなど、別の場所にコピーまたは移動してください。
 
 </TabItem>
 </Tabs>
 
-**ステップ 2: ポート番号を確認する**
+**ステップ2: ポート番号を確認する**
 
-デバイスを PC に接続し、ポート番号を確認します。
+デバイスをPCに接続し、ポート番号を確認します。
 
-Windows ユーザーの場合の例：
+Windowsユーザーの場合の例:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-Mac ユーザーの場合の例：
+Macユーザーの場合の例:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**ステップ 3: ブートローダーを書き込む**
+**ステップ3: ブートローダーを書き込む**
 
-ターミナルまたはコマンドプロンプトで、ブートローダーの zip パッケージをダウンロードしたディレクトリに移動し、次のコマンドを実行します。その際、デバイスに合った正しいポートに置き換えてください：
+ターミナルまたはコマンドプロンプトで、ブートローダーのzipパッケージをダウンロードしたディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに合った正しいポートに置き換えてください。
 
 - **Windows の場合**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
-COMXX をお使いの COM 番号に変更してください。例えば、デバイスが com6 の場合、コマンドを次のように変更します：
+COMXX を自分のCOM番号に変更してください。例えば、デバイスがCOM6の場合、コマンドを次のように変更します。
 
 `adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- 一部のデバイスは、このコマンドを入力した後にポート番号が変わることがあります。そのため、インストールに失敗した場合は、もう一度ポート番号を確認してください。
+ 一部のデバイスは、このコマンドを入力した後にポート番号が変わることがあります。そのため、インストールに失敗した場合は、再度ポート番号を確認してください。
 
-- **その他の場合**:
+- **その他のOSの場合**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
@@ -434,32 +434,32 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-上記の手順を完了したら、[ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#ファームウェアの書き込み)してアプリケーションファームウェアを書き込んでください。
+上記の手順が完了したら、[ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#firmware-flashing)してアプリケーションファームウェアを書き込んでください。
 
-**2) デバイスが DFU モードに入れないが、シリアルポートは検出できる場合**
+**2) デバイスがDFUモードに入れないが、シリアルポートは検出できる場合**
 
-- シリアルポートツールを開きます
+- シリアルポートツールを開きます。
 
 - ボーレートを `1200` に設定します。
 
 - デバイスを接続します。
-   接続するとライトが一瞬点滅します。ライトが点灯し続けるまでこれを繰り返してください。ライトが点灯し続けるのは、デバイスが DFU モードに戻れたことを意味します。その後、[ブートローダー](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#ブートローダーの書き込み) -> [フラッシュの消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#フラッシュ消去) -> [ファームウェアの書き込み](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#ファームウェアの書き込み) を行ってください。
+   接続するとライトが一瞬点滅します。ライトが点灯し続けるまで繰り返し試してください。ライトが点灯し続ける状態になれば、デバイスがDFUモードに戻ったことを意味します。その後、[ブートローダー](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-the-bootloader) -> [フラッシュ消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-erase) -> [ファームウェア書き込み](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-firmware) の順に実行します。
 
-**3) デバイスが DFU モードに入れず、シリアルポートも表示されない場合**
+**3) デバイスがDFUモードに入れず、シリアルポートも表示されない場合**
 
-- デバイスのボタンを押し続けたまま充電ケーブルを接続します。PC にディスクが表示された後、シリアルポートが見える場合があります。
+- デバイスのボタンを押し続けたまま充電ケーブルを接続します。PCにディスクが表示された後、シリアルポートが見える場合があります。
 
-- それでもだめな場合は、充電ケーブルを外し、バッテリーが完全に放電するまで数日間デバイスを放置してから、再度充電ケーブルを接続し、ペアリングを試してください。
+- それでも改善しない場合は、充電ケーブルを外し、バッテリーが完全に放電するまで数日間デバイスを放置してから、再度充電ケーブルを接続し、ペアリングを試してください。
 
 **4) 上記のいずれの手順でも解決しない場合は、テクニカルサポート support@sensecapmx.com までご連絡ください。**
 
-### ファームウェアの書き込みに失敗する
+### ファームウェア書き込みに失敗する
 
 - **シリアルポートでデータを受信しない**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- デバイスが DFU モードになっているか確認してください。DFU モード中は緑色のライトが点灯し続けます。
+ デバイスがDFUモードになっているか確認してください。DFUモード中は緑色のライトが点灯し続けます。
 
 - **シリアルポートを開けない**
 
@@ -471,17 +471,17 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
  #### 説明
 
- - デバイスの電源を入れた後、しばらくすると自動的に電源が切れるか、再起動します。 
- - シリアルポートログはしばらく動作した後、停止します。
+ - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。 
+ - シリアルポートのログがしばらく流れた後に停止します。
 
- これは、メッセージ送信プロセスが完了していない、設定中である……といった以下の状態のときに、手動で強制的にデバイスを再起動または電源オフしたことが原因である可能性があります。
+ これは、デバイスが次の状態にあるときに、メッセージ送信プロセスが完了していない、設定中である……などの状況で、手動かつ強制的に再起動または電源オフしたことが原因である可能性があります。
 
  #### トラブルシューティング
 
  [flash-erase](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-erase) を実行します。 
 
- ### 工場出荷時設定へのリセット
-デフォルト設定に戻したい場合は、工場出荷時設定へのリセットを行うことができます。工場出荷時設定へのリセットを行う方法は 2 つあります。
+ ### 工場出荷時リセット
+デフォルト設定に戻したい場合は、工場出荷時リセットを行うことができます。工場出荷時リセットを行う方法は 2 つあります。
 
 - デバイスを [Flash erase](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-erase) します。その後、最新のファームウェアを書き込みます。
 

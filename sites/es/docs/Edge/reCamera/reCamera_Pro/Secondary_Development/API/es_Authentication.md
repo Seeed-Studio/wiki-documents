@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_authentication
+slug: /recamera_pro_api_authentication_legacy
+draft: true
 sku: 10003420
 sidebar_position: 3
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/es/recamera_pro_api_authentication/
+url: https://wiki.seeedstudio.com/es/recamera_pro_api_authentication_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/authentication.md (https://wiki.seeedstudio.com/es/recamera_pro_api_authentication/), which now serves the original slug /recamera_pro_api_authentication. This file is kept for history as a draft (slug /recamera_pro_api_authentication_legacy) and is excluded from production builds. Do not link here. -->
 
 # Autenticación
 
@@ -65,7 +67,7 @@ Cuerpo de la solicitud:
 
 | Campo | Descripción |
 |---|---|
-| `iStatus` | `0` = contraseña correcta, `-1` = contraseña incorrecta, `-3` = bloqueado temporalmente |
+| `iStatus` | `0` = contraseña correcta, `-1` = contraseña incorrecta, `-3` = bloqueo temporal |
 | `iAuth` | `1` = inicio de sesión correcto, `0` = inicio de sesión fallido, `2` = se requiere cambio de contraseña |
 | `sWaittime` | Tiempo de espera en segundos cuando está bloqueado |
 
@@ -147,7 +149,7 @@ Respuesta:
 
 ### Cifrado de la contraseña
 
-Calcula el hash SHA256 de la contraseña como una cadena hexadecimal, luego cífralo con la clave pública usando relleno RSA PKCS1v15 y, por último, codifica el resultado en Base64.
+Calcula el hash SHA256 de la contraseña como una cadena hexadecimal, luego cífralo con la clave pública usando padding RSA PKCS1v15 y, por último, codifica el resultado en Base64.
 
 ### Enviar el cambio
 
@@ -188,7 +190,7 @@ Códigos de error:
 | `10001` | La nueva contraseña es demasiado débil |
 | `10002` | El Token ha caducado, inicia sesión de nuevo |
 
-Después de cambiar la contraseña, el Token actual puede volverse inválido. Inicia sesión de nuevo para obtener un nuevo Token.
+Después de cambiar la contraseña, el Token actual puede quedar inválido. Inicia sesión de nuevo para obtener un nuevo Token.
 
 ## Soporte técnico y debate sobre el producto
 

@@ -16,8 +16,8 @@ sidebar_position: 1
 last_update:
   date: 9/19/2026
   author: Michelle Huang
-createdAt: 2026-09-19
-updatedAt: '2026-09-19'
+createdAt: 2026-09-19T00:00:00.000Z
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/meshcore_ai_image_transmission_t1000e/
 ---
 
@@ -46,7 +46,7 @@ This image transmission feature is suitable for users who need to share visual i
 - **Off-grid Communication Enthusiasts**: Suitable for MeshCore and Ham radio users who want to explore AI-powered edge communication
 
 
-## How Image Transmission Work in MeshCore
+## How Image Transmission Works in MeshCore
 
 The image is **not directly transmitted**. The sender uses a local AI encoder to convert the image into a very small binary file. The receiver does not restore the original pixels. Instead, a local AI decoder uses the compressed data to generate a visually similar image.
 
@@ -68,16 +68,16 @@ AI Decoder
 Reconstructed Image
 ```
 
-## Get Start with MeshCore Open
+## Get Started with MeshCore Open
 
 ### Initial Set-up
 
-1. Install MeshCore Open App. [Click here](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) to install the APP release that support image transmission.
+1. Install MeshCore Open App. [Click here](https://meshcoreopen.org/install/) to install the app release that supports image transmission.
 2. Connect your MeshCore node to the APP. [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/) to read T1000-E connection guide.
 3. Configure your LoRa region and network settings.
 4. Make sure another MeshCore node is available as the receiver.
 
-For general MeshCore setup instructions, please refer to [MeshCore Open Getting Start Guide](https://meshcoreopen.org/docs/getting-started/):
+For general MeshCore setup instructions, please refer to [MeshCore Open Getting Started Guide](https://meshcoreopen.org/docs/getting-started/):
 
 ### Install the model
 
@@ -104,7 +104,7 @@ When the receiving node receives the compressed data, the decoder then performs 
 
 ## Understanding AI-Reconstructed Images
 
-The output image is not a pixel-perfect copy of the original image. The decoder may generate additional details that were not transmitted. Therefore, this feature is suitable for scene awareness, outdoor communication, remote monitoring and isual information sharing. It is not suitable for evidence collection, identity verification, scientific image analysis and applications requiring exact image reproduction
+The output image is not a pixel-perfect copy of the original image. The decoder may generate additional details that were not transmitted. Therefore, this feature is suitable for scene awareness, outdoor communication, remote monitoring and visual information sharing. It is not suitable for evidence collection, identity verification, scientific image analysis and applications requiring exact image reproduction
 
 ## Resource
 

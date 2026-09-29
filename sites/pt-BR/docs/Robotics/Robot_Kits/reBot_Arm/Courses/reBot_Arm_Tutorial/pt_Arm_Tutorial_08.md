@@ -1,6 +1,6 @@
 ---
-description: "Capítulo 8 do Curso para Iniciantes em Inteligência Incorporada da Seeed — controle o reBot Arm com o SDK Python: parâmetros, conexão com gerenciador de contexto, movimento, ponto zero e estado das juntas."
-title: Capítulo 8 - Controlando o reBot Arm Usando o SDK Python
+description: 'Capítulo 8 do Curso para Iniciantes em IA Física da Seeed — controle o reBot Arm com o Python SDK: parâmetros, conexão com gerenciador de contexto, movimento, ponto zero e estado das juntas.'
+title: Capítulo 8 - Controlando o reBot Arm Usando o Python SDK
 keywords:
   - reBot
   - Robotic Arm
@@ -8,20 +8,19 @@ keywords:
   - reBotArm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_8
+slug: /rebot_physical_ai_course_chapter_8
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-17
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
-url: https://wiki.seeedstudio.com/pt-br/rebot_embodied_ai_course_chapter_8/
+updatedAt: '2026-09-18'
+url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_8/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -30,10 +29,10 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 <section className="doc-hero">
   <div>
     <span className="eyebrow">Estágio 2 · Capítulo 8 · Teoria &amp; Prática</span>
-    <h2>8. Controlando o reBot Arm Usando o SDK Python</h2>
+    <h2>8. Controlando o reBot Arm Usando o Python SDK</h2>
     <p>
-      Capítulo 8 do Curso para Iniciantes em Inteligência Incorporada da Seeed — controle o reBot Arm com
-      o SDK Python: parâmetros, conexão com gerenciador de contexto, movimento, ponto zero e estado das juntas.
+      Capítulo 8 do Curso para Iniciantes em IA Física da Seeed — controle o reBot Arm com
+      o Python SDK: parâmetros, conexão com gerenciador de contexto, movimento, ponto zero e estado das juntas.
     </p>
     <div className="hero-actions">
       <a href="#parameters">Parâmetros</a>
@@ -41,22 +40,12 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#motion">Movimento</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>Neste capítulo</strong>
-    <span>8.1 Modificar Parâmetros e Alternar Modos</span>
-    <span>8.2 Conectar/Desconectar o Braço Robótico (Usando Gerenciador de Contexto)</span>
-    <span>8.3 Controlar o Movimento do Braço Robótico</span>
-    <span>8.4 Definir Ponto Zero para o Braço Robótico</span>
-    <span>8.5 Atualizar o Estado das Juntas do Braço Robótico</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 <section className="section-card">
   <p>1. Se o ambiente não estiver instalado, consulte a seção 7.2 para o ambiente de instalação.</p>
 
-  <p>2. Os parâmetros de cada controlador de junta do braço robótico do SDK Python precisam ser ajustados de acordo com os requisitos reais de uso. Os parâmetros atuais só podem satisfazer cenários com baixa exigência de precisão.</p>
+  <p>2. Os parâmetros de cada controlador de junta do braço robótico do Python SDK precisam ser ajustados de acordo com os requisitos reais de uso. Os parâmetros atuais só podem atender a cenários com baixa exigência de precisão.</p>
 
 Instale as dependências necessárias:
 
@@ -64,7 +53,7 @@ Instale as dependências necessárias:
 python3 -m pip install pyyaml motorbridge
 ```
 
-[LINE_66>Puxe o código de exemplo:
+[LINE_55>Puxe o código de exemplo:
 
 ```bash
 git clone https://github.com/hopcan/rebotArm_ctrl.git
@@ -85,7 +74,7 @@ git clone https://github.com/hopcan/rebotArm_ctrl.git
     <h2>8.1 Modificar Parâmetros e Alternar Modos</h2>
   </div>
 
-O modo de controle recomendado para o reBot DM é `POS_VEL`. Alternar o modo de controle das juntas do braço robótico e configurar parâmetros pode ser feito modificando os parâmetros correspondentes em `rebotDM.yaml` em `rebotArm_ctrl/config`.
+O modo de controle recomendado para o reBot DM é `POS_VEL`. A troca do modo de controle das juntas do braço robótico e a configuração dos parâmetros podem ser realizadas modificando os parâmetros correspondentes em `rebotDM.yaml` em `rebotArm_ctrl/config`.
 
 Por exemplo:
 
@@ -159,16 +148,16 @@ with reBotArm_handle(ctrl, "rebotRS", config_path="absolute path of yaml") as ha
 
 Implementação principal:
 
-1. A função `__enter__` chamará a função `connect` para se conectar automaticamente ao braço robótico. Se a conexão falhar, o log correspondente será exibido.
+1. A função `__enter__` chamará a função `connect` para conectar-se automaticamente ao braço robótico. Se a conexão falhar, o log correspondente será exibido.
 2. A função `__exit__` chamará a função `disconnect` para desconectar automaticamente do braço robótico quando o programa for encerrado.
 3. Conectar ao braço robótico adicionará motores ao controlador de barramento, verificará a comunicação do motor na energização, verificará se o ID CAN do motor e o ID mestre são válidos, verificará se o arquivo de configuração é válido e alterará o modo de controle do motor para o modo de controle de destino.
 4. Desconectar do braço robótico primeiro restaurará automaticamente o estado inicial e, em seguida, desabilitará.
 
 :::warning
-Após usar Ctrl+C para sair do programa, aguarde alguns segundos. Não continue pressionando Ctrl+C; é necessário aguardar o braço robótico retornar automaticamente à sua posição inicial e então ser desabilitado.
+Após usar Ctrl+C para sair do programa, aguarde alguns segundos. Não continue pressionando Ctrl+C; é necessário aguardar o braço robótico retornar automaticamente à posição inicial e então ser desabilitado.
 :::
 
-Se você não quiser usar o gerenciador de contexto, pode chamar diretamente a função `connect` e a função `disconnect` para conectar/desconectar o braço robótico.
+Se você não quiser usar o gerenciador de contexto, pode chamar diretamente as funções `connect` e `disconnect` para conectar/desconectar o braço robótico.
 
 </section>
 
@@ -219,12 +208,12 @@ Chamar a função `set_zero_position` por meio da classe de controle do braço r
 
 </section>
 
-## 8.5 Atualizar o Estado das Juntas do Braço Robótico
+## 8.5 Atualizar Estado das Juntas do Braço Robótico
 
 <section id="joint-state" className="section-card">
   <div className="section-title">
     <span>Estado das Juntas</span>
-    <h2>8.5 Atualizar o Estado das Juntas do Braço Robótico</h2>
+    <h2>8.5 Atualizar Estado das Juntas do Braço Robótico</h2>
   </div>
 
 Consulte `example/rebotDM/5_rebotDM_request_joints_data.py` ou `example/rebotRS/5_rebotRS_request_joints_data.py`.

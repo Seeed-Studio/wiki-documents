@@ -6,22 +6,24 @@ keywords:
   - reCamera Pro
   - MIPI-DSI Screen
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_mipi_dsi_screen_usage
+slug: /recamera_pro_mipi_dsi_screen_usage_legacy
+draft: true
 sku: 10003420
 sidebar_position: 2
 last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/pt-br/recamera_pro_mipi_dsi_screen_usage/
+updatedAt: '2026-07-14'
+url: https://wiki.seeedstudio.com/pt-br/recamera_pro_mipi_dsi_screen_usage_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Develop/mipi_dsi_display.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_mipi_dsi_screen_usage/), which now serves the original slug /recamera_pro_mipi_dsi_screen_usage. This file is kept for history as a draft (slug /recamera_pro_mipi_dsi_screen_usage_legacy) and is excluded from production builds. Do not link here. -->
 
-# Usando a Interface MIPI DSI no reCamera Pro
+# Usando a interface MIPI DSI no reCamera Pro
 
 Há uma interface MIPI DSI na parte traseira do dispositivo para conectar telas MIPI.
 
-## Conectar a Tela MIPI
+## Conectar a tela MIPI
 
 Abra a tampa traseira da placa base e localize a interface ***22PIN MIPI DSI*** conforme mostrado abaixo.
 
@@ -78,7 +80,7 @@ O link da tela é o seguinte：
           >
             <strong>
               <span style={{ color: "#FFFFFF", fontSize: "16px" }}>
-                Compre agora 🖱️
+                Buy It Now 🖱️
               </span>
             </strong>
           </a>
@@ -88,9 +90,9 @@ O link da tela é o seguinte：
   </tbody>
 </table>
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos múltiplos canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diversos tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -95,12 +95,12 @@ Seeed Studio 仅对硬件本身的质量负责。教程严格按照官方文档�
 **对于 Ubuntu x86:**
 - Ubuntu 22.04  
 - CUDA 12+  
-- Python 3.10  
+- Python 3.12
 - Torch 2.6  
 
 **对于 Jetson Orin:**
 - Jetson JetPack 6.0
-- Python 3.10  
+- Python 3.12
 - Torch 2.3+  
 
 **对于树莓派:**
@@ -174,7 +174,7 @@ rm ~/miniconda3/miniconda.sh
 ### 3. 为 LeRobot 创建并激活一个新的 Conda 环境
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 ```
 
 然后激活您的 Conda 环境（每次打开 Shell 使用 LeRobot 时都需要执行此操作！）：
@@ -214,7 +214,7 @@ cd ~/lerobot && pip install -e ".[lekiwi]"
 ### 3. 为 LeRobot 创建并激活一个新的 Conda 环境
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 ```
 
 然后激活您的 Conda 环境（每次打开 Shell 使用 LeRobot 时都需要执行此操作！）：

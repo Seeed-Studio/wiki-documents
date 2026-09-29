@@ -819,6 +819,11 @@ The cooling capacity of J4011/J4012 is insufficient to support it, and forcing t
       <th>adf524fa3c77f32da9a12bb875ec4b24<br />8da9dad4e4cce9c51641e1cabca4ab88</th>
     </tr>
     <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAECc-lSS1zQIcQEHI6jkQcAdNs5QXdUvH-zVIg2CCV5Iw?e=7W4kx7" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>5a2fbb379bf4b62b82fa67cfba1d804b<br />d78feafa7d854c18bcc9fcb05719f633</th>
+    </tr>
+    <tr>
       <td>reComputer Industrial J3011</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAj4lhkKh6xTIe49xxjoViRAdXQciVaQMQmvpeAuo_ng6k?e=nGj5c7" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>38c8a5cbf2df922725824503e76605d4<br />43111e7ffec1db9eb3de4fccc7d54c21</th>
@@ -843,8 +848,7 @@ The source code for the above images can be found [here](https://github.com/Seee
 :::
 
 :::note
-Please note that due to the increased power consumption and heat generation after enabling `super mode`, the [reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) and [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) cannot operate stably in the highest mode with JetPack 6.2. Therefore, only J4012 (Orin NX 16GB) is available for JetPack 6.2, while J4011 (Orin NX 8GB) is not recommended.
-We are currently designing a new version of reComputer. Stay tuned!
+Please note that due to the increased power consumption and heat generation after enabling `super mode`, the [reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) and [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) cannot operate stably in the highest mode with JetPack 6.2. Do not enable MAXN SUPER mode on these devices.
 :::
 
 - **Step 2:** Extract the generated file

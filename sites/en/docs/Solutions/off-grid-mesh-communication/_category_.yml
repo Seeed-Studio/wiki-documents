@@ -1,0 +1,10 @@
+position: 6
+label: 'Off-Grid Communication'
+collapsible: true
+collapsed: true
+className: _hazard-response
+link:
+  type: generated-index
+  slug: off-grid-mesh-communication
+  title: Off-Grid Communication
+  description: Off-grid and mesh communication for sites without network coverage.

@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_common_conventions
+slug: /recamera_pro_api_common_conventions_legacy
+draft: true
 sku: 10003420
 sidebar_position: 4
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/ja/recamera_pro_api_common_conventions/
+url: https://wiki.seeedstudio.com/ja/recamera_pro_api_common_conventions_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/common_conventions.md (https://wiki.seeedstudio.com/ja/recamera_pro_api_common_conventions/), which now serves the original slug /recamera_pro_api_common_conventions. This file is kept for history as a draft (slug /recamera_pro_api_common_conventions_legacy) and is excluded from production builds. Do not link here. -->
 
 # 共通規約
 
@@ -23,7 +25,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_api_common_conventions/
 
 ### 読み取りエンドポイント
 
-読み取りエンドポイント（GET）は通常、`code` フィールドを含めずに、ビジネスデータオブジェクトをそのまま返します。例：
+読み取りエンドポイント（GET）は通常、`code` フィールドを含まず、ビジネスデータオブジェクトを直接返します。例：
 
 ```json
 {
@@ -58,7 +60,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_pro_api_common_conventions/
 
 ## フィールド命名
 
-JSON フィールド名にはキャメルケースを使用します。先頭の文字はデータ型を表します：
+JSON フィールド名には camelCase を使用します。先頭の文字はデータ型を表します：
 
 | プレフィックス | 型 | 例 |
 |---|---|---|
@@ -69,11 +71,11 @@ JSON フィールド名にはキャメルケースを使用します。先頭の
 | `l` | リスト | `lDetection` |
 | `d` | オブジェクト | `dIpv4` |
 
-## URL 構成
+## URL 構築
 
 ### CGI エンドポイント
 
-ほとんどのエンドポイントは、CGI ベースパスを必要とします：
+ほとんどのエンドポイントでは、CGI ベースパスが必要です：
 
 ```text
 http://<DEVICE_IP>/cgi-bin/entry.cgi/<API_PATH>
@@ -100,7 +102,7 @@ Token の取得方法については、[Authentication](https://wiki.seeedstudio
 
 ## エラーコード
 
-エラーコードは機能モジュールごとに区分されています：
+エラーコードは機能モジュールごとに分割されています：
 
 | プレフィックス | モジュール |
 |---|---|
@@ -118,13 +120,13 @@ Token の取得方法については、[Authentication](https://wiki.seeedstudio
 | `10002` | Token の有効期限が切れています |
 | `10003` | ファームウェアのダウンロードがすでに進行中です |
 | `10004` | ポート番号が範囲外です |
-| `10005` | ポート番号はすでに使用されています |
+| `10005` | ポート番号はすでに使用中です |
 
-全リストについては、[Error Codes](https://wiki.seeedstudio.com/ja/recamera_pro_api_error_codes) を参照してください。
+完全な一覧については、[Error Codes](https://wiki.seeedstudio.com/ja/recamera_pro_api_error_codes) を参照してください。
 
-## 技術サポートと製品ディスカッション
+## テクニカルサポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,0 +1,53 @@
+.docRoot {
+  display: flex;
+  width: 100%;
+}
+
+.docsWrapper {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.fullWidthPage > main {
+  width: 100%;
+  max-width: 100% !important;
+  flex: 1 1 auto !important;
+}
+
+/* Align with homepage .com_module */
+.fullWidthPage > main > div,
+.fullWidthPage :global(.container) {
+  width: 100%;
+  max-width: 1440px !important;
+  padding-right: 6%;
+  padding-left: 6%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.fullWidthPage :global(.row) {
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+.fullWidthPage :global(.col),
+.fullWidthPage :global([class*='docItemCol']) {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.fullWidthPage :global([class*='docItemContainer']),
+.fullWidthPage :global(article) {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+@media (max-width: 960px) {
+  .fullWidthPage > main > div,
+  .fullWidthPage :global(.container) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}

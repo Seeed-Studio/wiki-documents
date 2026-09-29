@@ -9,7 +9,7 @@ last_update:
   author: youjiang
 createdAt: '2026-03-09'
 url: https://wiki.seeedstudio.com/es/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/
-updatedAt: '2026-03-16'
+updatedAt: '2026-03-13'
 ---
 
 # Controlar SO-Arm con OpenClaw en Jetson Thor
@@ -18,11 +18,11 @@ updatedAt: '2026-03-16'
 
 Este wiki explica cómo combinar OpenClaw y LeRobot en Jetson Thor para controlar un SO-Arm con un agente de IA local.
 
-**NVIDIA Jetson AGX Thor** es una plataforma de IA perimetral de alto rendimiento diseñada para robótica y cargas de trabajo de IA física, que proporciona una potente computación en el dispositivo para percepción, planificación y control.
+**NVIDIA Jetson AGX Thor** es una plataforma de IA de borde de alto rendimiento diseñada para robótica y cargas de trabajo de IA física, que proporciona una potente computación en el dispositivo para percepción, planificación y control.
 
-**SO-Arm** es una plataforma de brazo robótico de código abierto y bajo coste (SO-ARM100/SO-ARM101) que se utiliza ampliamente para experimentos de IA encarnada, teleoperación y desarrollo de tareas de manipulación.
+**SO-Arm** es una plataforma de brazo robótico de código abierto y bajo costo (SO-ARM100/SO-ARM101) que se utiliza ampliamente para experimentos de IA encarnada, teleoperación y desarrollo de tareas de manipulación.
 
-**OpenClaw** es un framework de agentes de IA que puede orquestar herramientas y modelos locales. En este proyecto, OpenClaw se utiliza como la interfaz de control de alto nivel, mientras que LeRobot proporciona las utilidades de comunicación de motor de bajo nivel y calibración para SO-Arm.
+**OpenClaw** es un framework de agente de IA que puede orquestar herramientas y modelos locales. En este proyecto, OpenClaw se utiliza como la interfaz de control de alto nivel, mientras que LeRobot proporciona las utilidades de comunicación de motor de bajo nivel y calibración para SO-Arm.
 
 <div align="center">
     <img width={900} 
@@ -30,7 +30,7 @@ Este wiki explica cómo combinar OpenClaw y LeRobot en Jetson Thor para controla
 </div>
 
 :::note
-En esta guía, OpenClaw se encarga de la planificación del agente y la orquestación de tareas, mientras que la ejecución del movimiento de SO-Arm se gestiona con LeRobot.
+En esta guía, OpenClaw se encarga de la planificación del agente y la orquestación de tareas, mientras que la ejecución del movimiento de SO-Arm es gestionada por LeRobot.
 :::
 
 ## Tabla de contenidos
@@ -48,13 +48,13 @@ En esta guía, OpenClaw se encarga de la planificación del agente y la orquesta
 ### Lista de dispositivos
 
 - 1x Kit de desarrollo NVIDIA® Jetson AGX Thor™
-- 1x SO-ARM101 Brazo de IA de bajo coste
+- 1x SO-ARM101 Brazo de IA de bajo costo
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
         <th> Kit de desarrollo NVIDIA® Jetson AGX Thor™ </th>
-        <th> SO-ARM101 Brazo de IA de bajo coste </th>
+        <th> SO-ARM101 Brazo de IA de bajo costo </th>
     </tr>
     <tr>
         <td>
@@ -93,7 +93,7 @@ En esta guía, OpenClaw se encarga de la planificación del agente y la orquesta
 - Conecta el adaptador de alimentación de CC correspondiente a la placa controladora de SO-Arm.
 - Enciende Thor y luego enciende la placa controladora del brazo.
 
-### Lista de comprobación de encendido
+### Lista de verificación de encendido
 
 - Thor arranca con normalidad y la red está disponible.
 - Los LED de la placa controladora de SO-Arm están encendidos.
@@ -139,7 +139,7 @@ source ~/.bashrc
 Crear entorno LeRobot:
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install 'lerobot[feetech]'
 pip uninstall torch torchvision
@@ -180,7 +180,7 @@ ollama pull qwen3.5:35b
 ```
 
 :::info
-Esta guía utiliza `qwen3.5:35b` como ejemplo. Puedes sustituirlo por otro modelo de Ollama según tus restricciones de rendimiento y memoria.
+Esta guía utiliza `qwen3.5:35b` como ejemplo. Puedes reemplazarlo por otro modelo de Ollama según tus restricciones de rendimiento y memoria.
 :::
 
 ## Instalar OpenClaw en Jetson Thor
@@ -338,7 +338,7 @@ Preparar archivo de descripción del robot:
 - Descarga [SO-ARM101 URDF](https://github.com/TheRobotStudio/SO-ARM100/blob/main/Simulation/SO101/so101_new_calib.urdf)
 - Muévelo a `~/.openclaw/workspace/skills/soarm-control/references`
 
-[Optional] Añadir modelo de detección: 
+[Opcional] Añadir modelo de detección: 
 - Entrena un modelo de detección (YoloV11n) consulta [aquí](https://wiki.seeedstudio.com/es/How_to_Train_and_Deploy_YOLOv8_on_reComputer/)
 - Mueve el modelo de detección (`best.pt`) a `~/.openclaw/workspace/skills/soarm-control/scripts`
 

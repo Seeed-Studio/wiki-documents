@@ -12,7 +12,7 @@ last_update:
   date: 11/24/2025
   author: Li Shanghang
 createdAt: '2025-06-23'
-updatedAt: '2025-11-24'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/feetech_servo/
 ---
 

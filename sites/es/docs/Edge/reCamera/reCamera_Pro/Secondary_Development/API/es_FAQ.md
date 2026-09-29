@@ -1,12 +1,13 @@
 ﻿---
-description: Introducción a los posibles problemas que pueden surgir al usar la API.
+description: Introducción a posibles problemas que pueden surgir al usar la API.
 title: FAQ
 keywords:
   - Edge AI
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_faq
+slug: /recamera_pro_api_faq_legacy
+draft: true
 sku: 10003420
 sidebar_position: 6
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/es/recamera_pro_api_faq/
+url: https://wiki.seeedstudio.com/es/recamera_pro_api_faq_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Troubleshooting/api_troubleshooting.md (https://wiki.seeedstudio.com/es/recamera_pro_api_faq/), which now serves the original slug /recamera_pro_api_faq. This file is kept for history as a draft (slug /recamera_pro_api_faq_legacy) and is excluded from production builds. Do not link here. -->
 
 # FAQ
 
@@ -27,9 +29,9 @@ La contraseña es incorrecta. Verifica que el nombre de usuario y la contraseña
 
 ### El inicio de sesión devuelve iStatus=-3, ¿qué debo hacer?
 
-Los intentos fallidos repetidos de inicio de sesión han activado un bloqueo basado en IP. Espera `sWaittime` segundos a que caduque el bloqueo y luego inténtalo de nuevo.
+Varios intentos fallidos de inicio de sesión han activado un bloqueo basado en IP. Espera `sWaittime` segundos a que caduque el bloqueo y luego inténtalo de nuevo.
 
-### El inicio de sesión se realiza correctamente, pero las API posteriores devuelven 401, ¿qué debo hacer?
+### El inicio de sesión se realiza correctamente pero las API posteriores devuelven 401, ¿qué debo hacer?
 
 El Token falta o ha caducado. Asegúrate de que la cabecera de la solicitud incluya `Cookie: token=<JWT_TOKEN>` y de que el Token no haya superado su vida útil de 24 horas. Si ha caducado, inicia sesión de nuevo.
 
@@ -47,15 +49,15 @@ Cambiar la dirección IP, la puerta de enlace o los parámetros de Wi‑Fi puede
 
 `/network/wlan` es para la configuración inalámbrica de IPv4 (dirección, puerta de enlace, máscara, DNS). `/network/wifi` es para la información de la conexión Wi‑Fi actual, conectar y desconectar.
 
-### ¿Qué debo poner en sSsid al conectarme a una red Wi‑Fi?
+### ¿Qué debo poner en sSsid al conectarme a Wi‑Fi?
 
-`sSsid` es el identificador único de la red Wi‑Fi. Llama primero a `/network/wifi-list` y luego utiliza el valor `sBssid` de la lista para conectarte.
+`sSsid` es el identificador único de la red Wi‑Fi. Llama primero a `/network/wifi-list` y luego usa el valor `sBssid` de la lista para conectarte.
 
 ## HTTPS
 
 ### El navegador advierte sobre un certificado no confiable al acceder por HTTPS, ¿qué debo hacer?
 
-El dispositivo utiliza un certificado autofirmado. Para pruebas locales, puedes continuar ignorando la advertencia. Para un despliegue en producción, instala un certificado de confianza.
+El dispositivo utiliza un certificado autofirmado. Para pruebas locales, puedes continuar ignorando la advertencia. Para despliegues en producción, instala un certificado de confianza.
 
 ### No se puede acceder al dispositivo mediante HTTP después de habilitar HTTPS, ¿qué debo hacer?
 
@@ -69,7 +71,7 @@ La mayoría de los endpoints requieren la ruta base CGI `/cgi-bin/entry.cgi`. Lo
 
 ### ¿Por qué un endpoint devuelve 404?
 
-Es posible que la versión actual del firmware no implemente ese endpoint, o que la ruta se haya construido de forma incorrecta. Verifica si la ruta necesita `/cgi-bin/entry.cgi` y comprueba la versión del firmware.
+Es posible que la versión de firmware actual no implemente ese endpoint, o que la ruta esté construida de forma incorrecta. Verifica si la ruta necesita `/cgi-bin/entry.cgi` y comprueba la versión del firmware.
 
 ## Soporte técnico y debate sobre el producto
 

@@ -6,7 +6,8 @@ keywords:
   - reCamera Pro
   - API
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
-slug: /recamera_pro_api_authentication
+slug: /recamera_pro_api_authentication_legacy
+draft: true
 sku: 10003420
 sidebar_position: 3
 last_update:
@@ -14,8 +15,9 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-07-15'
 updatedAt: '2026-07-15'
-url: https://wiki.seeedstudio.com/cn/recamera_pro_api_authentication/
+url: https://wiki.seeedstudio.com/cn/recamera_pro_api_authentication_legacy/
 ---
+<!-- LEGACY PAGE (reCamera Pro wiki restructure, phase 2): this page has been superseded by Reference/API/authentication.md (https://wiki.seeedstudio.com/cn/recamera_pro_api_authentication/), which now serves the original slug /recamera_pro_api_authentication. This file is kept for history as a draft (slug /recamera_pro_api_authentication_legacy) and is excluded from production builds. Do not link here. -->
 
 # 身份验证
 
@@ -23,12 +25,12 @@ reCamera 使用 JWT Token 身份验证。登录成功后，设备会通过 `Set-
 
 ## 接口概览
 
-| 方法 | 路径 | 目的 | 是否需要登录 |
+| Method | Path | Purpose | Requires Login |
 |---|---|---|---|
-| GET | `/system/key` | 获取 RSA 公钥（用于修改密码） | 否 |
-| POST | `/system/login` | 登录并获取 Token | 否 |
-| GET | `/system/check` | 检查是否为首次登录 | 否 |
-| PUT | `/system/password` | 修改管理员密码 | 是 |
+| GET | `/system/key` | 获取 RSA 公钥（用于修改密码） | No |
+| POST | `/system/login` | 登录并获取 Token | No |
+| GET | `/system/check` | 检查是否为首次登录 | No |
+| PUT | `/system/password` | 修改管理员密码 | Yes |
 
 ## 登录
 
@@ -48,7 +50,7 @@ Content-Type: application/json
 }
 ```
 
-| 字段 | 描述 |
+| Field | Description |
 |---|---|
 | `sUserName` | 登录用户名，默认是 `admin` |
 | `sPassword` | 登录密码，以明文传输 |
@@ -63,11 +65,11 @@ Content-Type: application/json
 }
 ```
 
-| 字段 | 描述 |
+| Field | Description |
 |---|---|
 | `iStatus` | `0` = 密码正确，`-1` = 密码错误，`-3` = 暂时锁定 |
 | `iAuth` | `1` = 登录成功，`0` = 登录失败，`2` = 需要修改密码 |
-| `sWaittime` | 被锁定时的等待时间（秒） |
+| `sWaittime` | 被锁定时需要等待的秒数 |
 
 ### 获取 Token
 
@@ -105,7 +107,7 @@ Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9...
 
 ### 登录锁定
 
-设备基于 IP 实施失败尝试次数限制。当多次输入错误密码后，`iLoginAttempts` 会递增。当达到限制时，设备返回 `iStatus=-3`，并带有 `sWaittime` 值。你必须等待锁定时间结束后才能再次尝试。
+设备基于 IP 实施登录失败次数限制。多次输入错误密码后，`iLoginAttempts` 会递增。当达到限制时，设备返回 `iStatus=-3`，并带有 `sWaittime` 值。你必须等待锁定时间结束后才能再次尝试。
 
 ## 检查是否首次登录
 
@@ -141,13 +143,13 @@ GET /cgi-bin/entry.cgi/system/key
 }
 ```
 
-| 字段 | 描述 |
+| Field | Description |
 |---|---|
-| `sPublicKey` | RSA 公钥，用于修改密码时的密码加密 |
+| `sPublicKey` | RSA 公钥，用于修改密码时对密码进行加密 |
 
 ### 密码加密
 
-先计算密码的 SHA256 哈希值并转为十六进制字符串，然后使用公钥按 RSA PKCS1v15 填充方式加密，最后对结果进行 Base64 编码。
+先计算密码的 SHA256 哈希值（十六进制字符串），再使用公钥按 RSA PKCS1v15 填充方式加密，最后对结果进行 Base64 编码。
 
 ### 提交修改
 
@@ -166,7 +168,7 @@ Content-Type: application/json
 }
 ```
 
-| 字段 | 描述 |
+| Field | Description |
 |---|---|
 | `sUserName` | 用户名 |
 | `sOldPassword` | 加密后的旧密码 |
@@ -183,7 +185,7 @@ Content-Type: application/json
 
 错误码：
 
-| 错误码 | 描述 |
+| Code | Description |
 |---:|---|
 | `10001` | 新密码太弱 |
 | `10002` | Token 已过期，请重新登录 |

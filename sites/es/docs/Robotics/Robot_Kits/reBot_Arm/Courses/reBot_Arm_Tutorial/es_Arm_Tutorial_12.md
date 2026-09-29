@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 12 del Curso para Principiantes en Inteligencia Incorporada de Seeed — conjuntos de datos de robots y diseño de tareas: qué es un Episodio, qué hay en un registro de datos, marcas de tiempo y sincronización, condiciones de inicio/fin, consistencia vs diversidad, cantidad de datos vs calidad y un ejemplo práctico de creación de datos."
+description: 'Capítulo 12 del Curso de Introducción a la IA Física de Seeed — conjuntos de datos de robots y diseño de tareas: qué es un Episodio, qué hay en un registro de datos, marcas de tiempo y sincronización, condiciones de inicio/fin, consistencia vs diversidad, cantidad de datos vs calidad y un ejemplo práctico de creación de datos.'
 title: Capítulo 12 - Conjuntos de Datos de Robots y Diseño de Tareas
 keywords:
   - reBot
@@ -9,20 +9,19 @@ keywords:
   - Data Collection
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_12
+slug: /rebot_physical_ai_course_chapter_12
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/es/rebot_embodied_ai_course_chapter_12/
+updatedAt: '2026-09-21'
+url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_12/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
 
 # 
 
@@ -33,9 +32,9 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Etapa 3 · Capítulo 12 · Teoría</span>
     <h2>12. Conjuntos de Datos de Robots y Diseño de Tareas</h2>
     <p>
-      Capítulo 12 del Curso para Principiantes en Inteligencia Incorporada de Seeed: qué es un Episodio, qué hay
-      en un registro de datos, marcas de tiempo y sincronización, condiciones de inicio/fin, consistencia vs
-      diversidad, cantidad de datos vs calidad y un ejemplo práctico de creación de datos.
+      Capítulo 12 del Curso de Introducción a la IA Física de Seeed: qué es un Episodio, qué hay
+      en un registro de datos, marcas de tiempo y sincronización, condiciones de inicio/fin, consistencia
+      vs diversidad, cantidad de datos vs calidad y un ejemplo práctico de creación de datos.
     </p>
     <div className="hero-actions">
       <a href="#episodio">Episodio</a>
@@ -43,22 +42,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#ejemplo">Ejemplo</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>En este capítulo</strong>
-    <span>12.1 ¿Qué es un Episodio?</span>
-    <span>12.2 ¿Qué hay exactamente en un registro de datos?</span>
-    <span>12.3 Marcas de tiempo y sincronización de datos</span>
-    <span>12.4 Diseño de tareas: condiciones de inicio y fin</span>
-    <span>12.5 Consistencia vs. diversidad de tareas</span>
-    <span>12.6 Criterios de éxito y fallo</span>
-    <span>12.7 Cantidad de datos vs. calidad de datos</span>
-    <span>12.8 Conjuntos de datos de una sola tarea vs. multitarea</span>
-    <span>12.9 Iteración de la recopilación de datos</span>
-    <span>12.10 Ejemplo de creación de datos</span>
-  </div>
 </section>
-
-<RebotCourseNav />
 
 ## 12.1 ¿Qué es un Episodio?
 
@@ -84,7 +68,7 @@ A partir de este capítulo, cada operación que hagas significa que has cambiado
 
 Recuerda el Capítulo 9: esto debería resultarte familiar. Sí, es lo que aprendimos antes: **Observación, Estado, Acción**.
 
-Fíjate en el origen de la Acción: registra la acción objetivo dada (a través del Leader), no la posición a la que realmente llegó el Follower después. Esto coincide exactamente con la definición de clonación de comportamiento: el modelo aprende "bajo esta observación y estado, qué pretendía hacer el humano en ese momento".
+Ten en cuenta el origen de la Acción: registra la acción objetivo dada (a través del Leader), no la posición a la que el Follower realmente llegó después. Esto coincide exactamente con la definición de clonación de comportamiento: el modelo aprende "bajo esta observación y estado, qué pretendía hacer el humano en ese momento".
 
 </section>
 
@@ -96,7 +80,7 @@ Fíjate en el origen de la Acción: registra la acción objetivo dada (a través
     <h2>12.3 Marcas de tiempo y sincronización de datos</h2>
   </div>
 
-Las imágenes van por USB, los datos de las articulaciones van por CAN: estos dos flujos de datos naturalmente llegan al ordenador en momentos diferentes. LeRobot añade una marca de tiempo a cada fotograma de datos, alineando así imágenes, estados y acciones del "mismo momento" en una sola fila.
+Las imágenes van por USB, los datos de las articulaciones van por CAN: los dos flujos de datos naturalmente llegan al ordenador en momentos diferentes. LeRobot añade una marca de tiempo a cada fotograma de datos, alineando así imágenes, estados y acciones del "mismo momento" en una sola fila.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-01.png" alt="Timestamps and synchronization" />
@@ -120,27 +104,27 @@ Antes de recopilar datos, escribe claramente la definición de la tarea en texto
 
 ### Condición de fin: dibuja una "línea de meta" clara para el Episodio
 
-- **Final exitoso:** objetivo de la tarea alcanzado (por ejemplo, "bloque completamente dentro de la caja, pinza abierta, brazo levantado").
-- **Terminación por fallo:** se produce una situación irrecuperable (objeto caído, contenedor volcado, brazo entra en una postura peligrosa); deja de registrar este Episodio inmediatamente.
+- **Final exitoso:** objetivo de la tarea alcanzado (por ejemplo, "bloque completamente dentro de la caja, pinza abierta y brazo levantado").
+- **Terminación por fallo:** se produce una situación irrecuperable (objeto caído, contenedor volcado, brazo entra en una postura peligrosa): detén inmediatamente la grabación de este Episodio.
 
 </section>
 
-## 12.5 Consistencia vs. diversidad de tareas
+## 12.5 Consistencia vs. diversidad de la tarea
 
 <section id="consistency-diversity" className="section-card">
   <div className="section-title">
     <span>Diseño de datos</span>
-    <h2>12.5 Consistencia vs. diversidad de tareas: la tensión central en el diseño de datos</h2>
+    <h2>12.5 Consistencia vs. diversidad de la tarea: la tensión central en el diseño de datos</h2>
   </div>
 
 Esta es la sección más crítica del capítulo. Los datos de demostración de alta calidad deben satisfacer simultáneamente dos requisitos que parecen contradictorios.
 
-### Consistencia: enseñar una sola "forma de hacerlo"
+### Consistencia: enseñar una "forma de hacerlo"
 
 - **Estilo de operación consistente:** para la misma tarea, todos los Episodios deben usar la misma estrategia (por ejemplo, acercarse siempre al bloque desde la derecha, agarrarlo y bajarlo dentro de la caja desde arriba). Si la mitad de los datos agarran desde la izquierda y la otra mitad desde la derecha, el modelo aprende el "promedio" de dos enfoques, a menudo una trayectoria extraña que no agarra nada.
-- **Ritmo consistente:** la velocidad de movimiento y las posiciones de pausa deben ser aproximadamente estables; si estableces 20 segundos, complétalo en 20 segundos. Los datos con velocidades variables hacen que las acciones del modelo sean inconsistentes en velocidad.
-- **Flujo de trabajo consistente:** cada ejecución debe pasar por todo el flujo de trabajo "acercarse → agarrar → transportar → colocar → retirar" sin saltarse pasos.
-- **Estado inicial de la escena controlado:** los objetos deben colocarse dentro de un área designada (el área puede ser grande, pero los límites deben ser claros); retira los elementos no relacionados del espacio de trabajo.
+- **Ritmo consistente:** la velocidad de movimiento y las posiciones de pausa deben ser aproximadamente estables; si estableces 20 segundos, complétalo en 20 segundos. Los datos con velocidades muy variables hacen que las acciones del modelo sean inconsistentes en velocidad.
+- **Flujo de trabajo consistente:** cada ejecución debe pasar por todo el flujo de trabajo "acercarse → agarrar → transportar → colocar → retirarse" sin saltarse pasos.
+- **Estado inicial de la escena controlado:** los objetos deben colocarse dentro de un área designada (el área puede ser grande, pero los límites deben ser claros); elimina los elementos no relacionados del espacio de trabajo.
 - **Posición fija de la cámara:** las cámaras no deben moverse durante la recopilación; para el modelo, mover la cámara 5 cm significa que el mundo ha cambiado.
 
 ### Diversidad: suficientes "variaciones" vistas
@@ -158,16 +142,16 @@ Esta es la sección más crítica del capítulo. Los datos de demostración de a
     <h2>12.6 Criterios de éxito y fallo</h2>
   </div>
 
-  | **Estándar no cualificado (ambiguo)**              | **Estándar cualificado (medible)**                                                                                   |
+  | **Estándar no calificado (ambiguo)**              | **Estándar calificado (medible)**                                                                                     |
 | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------- |
-| "Mientras el objeto esté más o menos agarrado."   | "La pinza está completamente cerrada y agarra el centro del bloque."                                                |
-| "Mientras el bloque esté dentro de la caja."      | "El bloque se coloca cerca del centro de la caja en lugar de al azar cerca del borde."                              |
-| "Solo recoge el bloque y ponlo en la caja."       | "Todo el movimiento debe ser fluido y la duración de cada episodio registrado debe mantenerse razonablemente constante." |
+| "Mientras el objeto esté más o menos agarrado."   | "La pinza está completamente cerrada y agarra el centro del bloque."                                                 |
+| "Mientras el bloque esté dentro de la caja."      | "El bloque se coloca cerca del centro de la caja en lugar de al azar cerca del borde."                               |
+| "Solo recoge el bloque y ponlo en la caja."       | "Todo el movimiento debe ser fluido y la duración de cada episodio grabado debe mantenerse razonablemente constante." |
 
 
-Para los segmentos fallidos durante la grabación, el principio es sencillo: **vuelve a grabar este Episodio.** No conserves datos fallidos esperando que "quizás el modelo aprenda de ellos"; el modelo realmente aprenderá, incluidos los fallos.
+Para los segmentos fallidos durante la grabación, el principio es sencillo: **vuelve a grabar este Episodio.** No conserves datos fallidos esperando que "quizás el modelo aprenda de ellos"; el modelo sí aprenderá, incluidos los fallos.
 
-"Tarea completada" debe ser un estado **objetivamente determinable**, no "parece que está bien". Unos buenos criterios de éxito se ven así:
+"Tarea completada" debe ser un estado **objetivamente determinable**, no "parece que está bien". Buenos criterios de éxito se ven así:
 
 </section>
 
@@ -179,7 +163,7 @@ Para los segmentos fallidos durante la grabación, el principio es sencillo: **v
     <h2>12.7 Cantidad de datos vs. calidad de datos</h2>
   </div>
 
-Referencia empírica (para una sola tarea de sobremesa en un entorno limpio como una caja de recopilación de datos; si no hay caja de recopilación de datos, aumenta el tamaño del conjunto de datos):
+Referencia empírica (para una sola tarea de sobremesa en un entorno limpio, como una caja de recopilación de datos; si no hay caja de recopilación de datos, aumenta el tamaño del conjunto de datos):
 
 | Cantidad de datos | Efecto esperado |
 | :--- | :--- |
@@ -187,26 +171,26 @@ Referencia empírica (para una sola tarea de sobremesa en un entorno limpio como
 | **50–100 Episodios** | La tasa de éxito alcanza un rango utilizable; el punto óptimo para la mayoría de experimentos de una sola tarea |
 | **100+ Episodios** | Rendimientos decrecientes, a menos que la tarea sea compleja o los requisitos de tasa de éxito sean muy altos |
 
-Para multitarea, aumenta los datos proporcionalmente a la complejidad. Por supuesto, se pueden complementar los datos después del entrenamiento: cuando veas que el rendimiento del modelo no es bueno, puedes añadir más datos.
+Para tareas múltiples, aumenta los datos en proporción a la complejidad. Por supuesto, se pueden complementar los datos después del entrenamiento: cuando veas que el rendimiento del modelo no es bueno, puedes añadir más datos.
 
 Pero pon esta frase antes de los números:
 
 - **50 Episodios de alta calidad son mejores que 200 descuidados.**
-- **Si hay un problema con la recopilación de datos, no dudes: vuelve a grabar este Episodio inmediatamente.**
+- **Si hay un problema con la recopilación de datos, no lo dudes: vuelve a grabar este Episodio inmediatamente.**
 - **Si quieres una fuerte capacidad de generalización, necesitarás cientos o miles de Episodios.**
 
 </section>
 
-## 12.8 Conjuntos de datos de una sola tarea vs. multitarea
+## 12.8 Conjuntos de datos de una sola tarea vs. de múltiples tareas
 
 <section id="single-multi-task" className="section-card">
   <div className="section-title">
     <span>Conjuntos de datos</span>
-    <h2>12.8 Conjuntos de datos de una sola tarea vs. multitarea</h2>
+    <h2>12.8 Conjuntos de datos de una sola tarea vs. de múltiples tareas</h2>
   </div>
 
-- **Conjunto de datos de una sola tarea:** un conjunto de datos contiene solo una tarea (por ejemplo, "bloque en la caja"). El modelo tiene un único objetivo, los requisitos de datos son pequeños y es más fácil lograr una alta tasa de éxito. Tu primer modelo debe empezar con una sola tarea.
-- **Conjunto de datos multitarea:** un conjunto de datos contiene múltiples tareas (agarrar bloque, abrir cajón, poner bloque en el cajón); cada Episodio está etiquetado con `task_index` para indicar a qué tarea pertenece. El aprovechamiento de los datos es alto y es la dirección hacia políticas generales, pero las tareas compiten por la capacidad del modelo, por lo que se necesitan más datos por tarea para aprender bien.
+- **Conjunto de datos de una sola tarea:** un conjunto de datos contiene solo una tarea (por ejemplo, "bloque en la caja"). El modelo tiene un único objetivo, los requisitos de datos son pequeños y es más fácil lograr una alta tasa de éxito. Tu primer modelo debe comenzar con una sola tarea.
+- **Conjunto de datos de múltiples tareas:** un conjunto de datos contiene varias tareas (agarrar bloque, abrir cajón, poner bloque en el cajón); cada Episodio está etiquetado con `task_index` para indicar a qué tarea pertenece. El aprovechamiento de los datos es alto y es la dirección hacia políticas generales, pero las tareas compiten por la capacidad del modelo, lo que requiere más datos por tarea para aprender bien.
 
 </section>
 
@@ -218,7 +202,7 @@ Pero pon esta frase antes de los números:
     <h2>12.9 Iteración de la recopilación de datos</h2>
   </div>
 
-Recopila en lotes con validación iterativa: recopila 50 → entrena → evalúa en el robot real → recopila más para los escenarios de fallo → vuelve a entrenar. Si la dirección general del modelo es correcta pero la precisión es baja, añadir datos ayuda; si el comportamiento del modelo es completamente erróneo, hay un problema con el diseño de la tarea o de los datos, y por mucha cantidad adicional de datos que añadas no servirá de nada.
+Recopila en lotes con validación iterativa: recopila 50 → entrena → evalúa en el robot real → recopila más para los escenarios de fallo → vuelve a entrenar. Si la dirección general del modelo es correcta pero la precisión es baja, añadir datos ayuda; si el comportamiento del modelo es completamente erróneo, hay un problema con el diseño de la tarea o de los datos, y ninguna cantidad adicional de datos ayudará.
 
 </section>
 
@@ -232,50 +216,50 @@ Recopila en lotes con validación iterativa: recopila 50 → entrena → evalúa
 
 ### Diseño de la escena
 
-1. Coloca los tubos de ensayo en un soporte para tubos de ensayo. Nota: fija la base del soporte con cinta de doble cara para evitar que se mueva; mantén las cámaras y el brazo en posiciones fijas y no cambies la iluminación.
+1. Coloca tubos de ensayo en un soporte para tubos de ensayo. Nota: fija la base del soporte con cinta de doble cara para evitar que se mueva; mantén las cámaras y el brazo en posiciones fijas y mantén la iluminación sin cambios.
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-02.png" alt="Scene design" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-02.png" alt="Diseño de la escena" />
 </div>
 
 2. Coloca los tubos de ensayo según los puntos que se muestran en la figura; 1→2→3→4→5 es una ronda. Recoge datos durante 10 rondas.
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-03.png" alt="Test tube placement points" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-03.png" alt="Puntos de colocación de los tubos de ensayo" />
 </div>
 
-El problema más doloroso para los principiantes al registrar datos es "cómo colocar los objetos para practicar a fondo": la colocación aleatoria hace que todo se agrupe en un área pequeña (el modelo solo reconoce ese punto y falla en otras posiciones) o que se dispersen de forma irregular (algunas zonas se practican en exceso y otras nunca se tocan). Es como repasar solo los ejercicios que ya dominas y suspender cuando el examen cambia el formato; o como mostrarle a un robot solo un tipo de aperitivo, de modo que no sepa por dónde empezar en un bufé. Aquí tienes un método sencillo y estandarizado:
+El problema más doloroso para los principiantes al registrar datos es "cómo colocar los objetos para practicar a fondo": si los colocas al azar, o bien se agrupan todos en una zona pequeña (el modelo solo reconoce ese punto y falla en otras posiciones), o bien quedan dispersos de forma irregular (algunas zonas se practican en exceso y otras nunca se tocan). Es como repasar solo los ejercicios que ya dominas y suspender cuando el examen cambia el formato; o como mostrarle a un robot solo un tipo de snack, de modo que no sepa por dónde empezar en un buffet. Aquí tienes un método sencillo y estandarizado:
 
 1. **Marcar puntos:** usa un lápiz para marcar **5 puntos** en el área de recolección de datos (caja de recolección / tapete de escritorio), dispuestos en forma de **cruz**: 1 en el centro y uno en la parte superior, inferior, izquierda y derecha.
-2. **Establecer el espaciado:** los puntos adyacentes deben estar separados por **5–10 cm**, asegurando que los cinco puntos estén dentro del espacio de trabajo del brazo y sean claramente visibles en ambas cámaras.
-3. **Distribuir:** recoge **10 Episodios en cada punto**; 5 puntos × 10 = **50 Episodios**, lo que cumple el objetivo. Ten en cuenta también: no recojas 10 Episodios en el punto 1, luego 10 en el punto 2, etc.; en su lugar, recoge 1 Episodio en cada punto (5 puntos = 1 ronda) y haz 10 rondas de esta manera.
+2. **Ajustar el espaciado:** los puntos adyacentes deben estar separados por **5–10 cm**, asegurando que los cinco puntos estén dentro del espacio de trabajo del brazo y sean claramente visibles en ambas vistas de la cámara.
+3. **Distribuir:** recoge **10 Episodios en cada punto**; 5 puntos × 10 = **50 Episodios**, lo que cumple el objetivo. Ten en cuenta también: no recojas 10 Episodios en el punto 1, luego 10 en el punto 2, etc.; en su lugar, recoge 1 Episodio en cada punto (5 puntos = 1 ronda) y realiza 10 rondas de esta manera.
 
 ### Diseño de agarre y colocación
 
 1. Posición inicial
 
 <div className="image-frame">
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-04.jpg" alt="Initial position" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-04.jpg" alt="Posición inicial" />
 </div>
 
 2. Agarrar el objeto
 
-- Mueve el brazo directamente por encima del tubo de ensayo (siempre muévete al centro del tubo a la misma altura sobre él).
+- Mueve el brazo directamente por encima del tubo de ensayo (siempre muévelo al centro del tubo a la misma altura sobre él).
 
 <div className="image-frame">
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-05.jpg" alt="Move above the test tube" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-05.jpg" alt="Moverse por encima del tubo de ensayo" />
 </div>
 
 - Abre la garra (¿por qué empezar a una distancia fija? Para evitar golpear el tubo al abrir la garra y desplazar su posición).
 
 <div className="image-frame">
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-06.jpg" alt="Open the gripper" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-06.jpg" alt="Abrir la garra" />
 </div>
 
 - Agarra siempre con la misma fuerza y velocidad.
 
 <div className="image-frame">
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-07.jpg" alt="Grasp the object" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-07.jpg" alt="Agarrar el objeto" />
 </div>
 
 3. Colocar el objeto
@@ -283,19 +267,19 @@ El problema más doloroso para los principiantes al registrar datos es "cómo co
 - Muévete directamente por encima del centro del soporte para tubos de ensayo.
 
 <div className="image-frame">
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-08.jpg" alt="Move above the rack" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-08.jpg" alt="Moverse por encima del soporte" />
 </div>
 
 - Abre la garra a velocidad constante y eleva el brazo; deberías ver cómo el tubo se asienta suavemente en el soporte.
 
 <div className="image-frame">
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-09.jpg" alt="Place the object" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-09.jpg" alt="Colocar el objeto" />
 </div>
 
 - Después de colocar el tubo, devuelve el brazo a su posición inicial.
 
 <div className="image-frame">
-  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-10.jpg" alt="Return to home" />
+  <img width={700} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-10.jpg" alt="Volver a la posición inicial" />
 </div>
 
 Eso es todo: un Episodio perfecto está completo. Ahora solo tienes que repetirlo 50 veces.
@@ -305,8 +289,8 @@ Eso es todo: un Episodio perfecto está completo. Ahora solo tienes que repetirl
 ¿Por qué no puedo mover el soporte para tubos de ensayo, las cámaras, las posiciones de los tubos o cambiar la iluminación?
 
 - **Despejando el malentendido:** "Mover todo libremente" genera ruido, no diversidad.
-- **Teoría del presupuesto de generalización:** con datos limitados, las variaciones gastadas en una dimensión enseñan al modelo esa dimensión: gastarlas en la posición del objetivo le enseña a agarrar tubos en diferentes posiciones; gastarlas en variaciones de la posición de la cámara hace que el modelo aprenda tanto el agarre como las diferencias de punto de vista, lo que requiere muchos más datos y produce peores resultados.
-- **¿Y si realmente necesito variaciones?:** no se trata de "no fijar" durante la grabación, sino de la iteración de datos complementarios posterior: ampliar conscientemente los límites para lograr la generalización que buscamos.
+- **Teoría del presupuesto de generalización:** con datos limitados, las variaciones que gastas en una dimensión enseñan al modelo esa dimensión: gastarlas en la posición del objetivo le enseña a agarrar tubos en diferentes posiciones; gastarlas en variaciones de la posición de la cámara hace que el modelo tenga que aprender tanto el agarre como las diferencias de punto de vista, lo que requiere muchos más datos y produce peores resultados.
+- **Qué hacer si realmente necesito variaciones:** no se trata de "no fijar" nada durante la grabación, sino de la iteración posterior con datos suplementarios: ampliar conscientemente los límites para lograr la generalización que buscamos.
 
 </section>
 

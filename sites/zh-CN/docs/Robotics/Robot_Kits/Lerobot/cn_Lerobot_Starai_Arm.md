@@ -97,12 +97,12 @@ url: https://wiki.seeedstudio.com/cn/lerobot_starai_arm/
 **对于 Ubuntu x86:**
 - Ubuntu 22.04  
 - CUDA 12+  
-- Python 3.10  
+- Python 3.12
 - Torch 2.6  
 
 **对于 Jetson Orin:**
 - Jetson JetPack 6.0+
-- Python 3.10  
+- Python 3.12
 - Torch 2.6  
 
 
@@ -136,7 +136,7 @@ conda init --all
 2.创建并激活一个新的 conda 环境用于 LeRobot
 
 ```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
+conda create -y -n lerobot python=3.12 && conda activate lerobot
 ```
 
 3.克隆 LeRobot 仓库：
