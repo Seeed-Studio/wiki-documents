@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-24 10:31:35 (北京时间)
-// 多语言页面: 2533 个
+// 生成时间: 2026-09-28 17:15:42 (北京时间)
+// 多语言页面: 2546 个
 
 (function() {
   'use strict';
@@ -347,6 +347,48 @@
     "pt"
   ],
   "/sensecraft_hmi_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft_robotics_common_issues": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft_robotics_data_collection_configuration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft_robotics_rebot_arm_102_b601_dm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft_robotics_rebot_arm_102_b601_rs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft_robotics_so_arm101": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft_robotics": [
     "cn",
     "en",
     "es",
@@ -709,6 +751,13 @@
     "ja",
     "pt"
   ],
+  "/zed_x_gmsl_cameras_on_recomputer_robotics": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/alwaysAI-Jetson-Getting-Started": [
     "cn",
     "en",
@@ -976,6 +1025,13 @@
     "pt"
   ],
   "/run_zero_shot_detection_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_deploy_ai_models_on_jetson": [
     "cn",
     "en",
     "es",
@@ -6980,6 +7036,36 @@
     "pt"
   ],
   "/rebot_physical_ai_course_chapter_17": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_18": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_19": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_20": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_21": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_22": [
     "en",
     "es",
     "ja",
