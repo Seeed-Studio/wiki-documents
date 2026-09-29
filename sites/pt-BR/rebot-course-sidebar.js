@@ -128,7 +128,7 @@ const sidebars = {
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS com Pega Visual' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS com ROS2' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS com Isaac Sim' },
-        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS com Web Controler' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS com Controlador Web' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS com Agent Claw' },
       ],
     },
