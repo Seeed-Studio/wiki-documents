@@ -1,6 +1,7 @@
 ---
 description: 本主题介绍 Seeed Studio 的机器人产品文档与学习路径。
 title: AI Robotics Wiki
+hide_title: true
 keywords:
   - robotics
   - nvidia
@@ -22,16 +23,16 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 import '/src/css/robotics-page-style.css';
 import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import RotatingProductShowcase from '@site/src/components/robotics/RotatingProductShowcase';
+import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
-# AI Robotics Wiki
-
-> *"今天的科学就是明天的技术。" - Edward Teller*
+<h1 className="robotics-page-title">AI Robotics Wiki</h1>
 
 <div className="robotics-page">
+  <RoboticsQuote />
 
   <section className="hero-panel">
     <div>
-      <span className="eyebrow">Seeed Studio Robotics Wiki</span>
       <h2>不知道从哪篇文档开始？先选择你手上的机器人套件</h2>
     </div>
   </section>
@@ -45,38 +46,38 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   </div>
 
   <section id="robot-kits" className="section-block">
-    <div className="product-stack">
+    <RotatingProductShowcase>
 
 <details id="rebot-rs" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>reBot B601-RS 机械臂</h3>
+    <h3>reBot-RS 机械臂</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
       <h4>快速上手与 SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/cn/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>快速开始</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>B601-RS 与 LeRobot</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>B601-RS 与 Pinocchio</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>B601-RS 电机 SDK</b></div></a>
+        <a className="step-card" href="/cn/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>reBot-RS 快速入门</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS 与 LeRobot</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS 与 Pinocchio</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>reBot-RS 电机 SDK</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>应用</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>B601-RS 视觉夹取</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>B601-RS 与 ROS2</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>B601-RS 与 Isaacsim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>B601-RS Web 仿真器</b></div></a>
-        <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>B601-RS 与 Agent Claw</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS 视觉夹取</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS 与 ROS2</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 仿真器</b></div></a>
+        <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>开源资料</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">B601-RS 硬件资料合集</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">B601-RS 机械臂描述文件（URDF / Mesh）</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">B601-RS 数字孪生 / Web 仿真器</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">reBot-RS 硬件资料合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">reBot-RS 机械臂描述文件（URDF / Mesh）</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS 数字孪生 / Web 仿真器</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
@@ -93,33 +94,33 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <details id="rebot-dm" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>reBot B601-DM 机械臂</h3>
+    <h3>reBot-DM 机械臂</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
       <h4>快速上手与 SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/cn/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>快速开始</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>B601-DM 与 LeRobot</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>B601-DM 与 Pinocchio</b></div></a>
+        <a className="step-card" href="/cn/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>reBot-DM 快速入门</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM 与 LeRobot</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM 与 Pinocchio</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>应用</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>B601-DM 视觉夹取</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>B601-DM 与 ROS2</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>B601-DM 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>B601-DM Web 仿真器</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM 视觉夹取</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM 与 ROS2</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM 与 Isaac Sim</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 仿真器</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>开源资料</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">B601-DM 硬件资料合集</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">B601-DM 机械臂描述文件（URDF / Mesh）</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">B601-DM 真机性能测试</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">B601-DM 数字孪生 / Web 仿真器</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">reBot-DM 硬件资料合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">reBot-DM 机械臂描述文件（URDF / Mesh）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">reBot-DM 真机性能测试</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">reBot-DM 数字孪生 / Web 仿真器</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
@@ -235,7 +236,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 </details>
 
 
-    </div>
+    </RotatingProductShowcase>
   </section>
 
   <section id="actuators" className="section-block compact-section">
@@ -282,7 +283,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     </div>
     <div className="resource-columns">
       <div><h4>ROS 生态系统</h4><a href="/cn/installing_ros1/">ROS 1 安装</a><a href="/cn/install_ros2_humble/">ROS 2 安装</a><a href="/cn/install_isaacros/">Isaac ROS 安装</a><a href="/cn/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/cn/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
-      <div><h4>NVIDIA Isaac</h4><a href="/cn/install_isaaclab/">Isaac Lab 安装</a><a href="/cn/training_soarm101_policy_with_isaacLab/">SO Arm 强化学习</a><a href="/cn/simulate_soarm101_by_leisaac/">SO100 机械臂与 IsaacSim</a></div>
+      <div><h4>NVIDIA Isaac</h4><a href="/cn/install_isaaclab/">Isaac Lab 安装</a><a href="/cn/training_soarm101_policy_with_isaacLab/">SO Arm 强化学习</a><a href="/cn/simulate_soarm101_by_leisaac/">SO100 机械臂与 Isaac Sim</a></div>
       <div><h4>PX4 / VLA</h4><a href="/cn/control_px4_with_recomputer_jetson/">PX4 与 Jetson</a><a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/">PX4 目标跟踪</a><a href="/cn/control_robotic_arm_via_gr00t/">StarAI 与 NVIDIA GR00T</a></div>
     </div>
   </section>

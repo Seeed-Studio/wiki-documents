@@ -70,7 +70,7 @@ function useDocTOC() {
 
 export default function DocItemLayout({ children }: Props): JSX.Element {
   const docTOC = useDocTOC();
-  const { frontMatter } = useDoc();
+  const { frontMatter, metadata } = useDoc();
 
   // 使用类型断言解决 TypeScript 错误
   const {
@@ -80,24 +80,13 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
   } = frontMatter as any;
 
   const location = useLocation();
-  const normalizedPath = location.pathname.replace(/\/+$/, '');
-  const isRoboticsLandingPage =
-    normalizedPath === '/robotics_page' ||
-    normalizedPath === '/cn/robotics_page';
+  const isRoboticsDoc = Boolean(
+    (metadata as { source?: string }).source?.startsWith('@site/docs/Robotics/'),
+  );
 
   useEffect(() => {
     judgeHomePath();
   }, [location.pathname]);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle(
-      'robotics-landing-page',
-      isRoboticsLandingPage,
-    );
-    return () => {
-      document.documentElement.classList.remove('robotics-landing-page');
-    };
-  }, [isRoboticsLandingPage]);
 
   return (
     <div className="row">
@@ -111,14 +100,14 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
       <div
         className={clsx(
           'col',
-          !isRoboticsLandingPage && !docTOC.hidden && styles.docItemCol,
+          !docTOC.hidden && styles.docItemCol,
         )}
         data-sku={sku || ''}
         data-doc-type={docType || ''}
       >
         <DocVersionBanner />
         <div className={styles.docItemContainer}>
-          <article>
+          <article className={clsx(isRoboticsDoc && 'robotics-doc')}>
             <DocBreadcrumbs />
             <DocVersionBadge />
 
