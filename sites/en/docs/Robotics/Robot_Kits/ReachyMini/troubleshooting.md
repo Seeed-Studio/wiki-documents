@@ -517,6 +517,7 @@ Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 
 <details>
 <summary><strong>Does the battery has safety features?</strong></summary>
+
 Wireless includes a proper battery charger.
 The battery integrates a BMS with a temperature sensor too.
 
@@ -524,6 +525,7 @@ The battery integrates a BMS with a temperature sensor too.
 
 <details>
 <summary><strong>How do I see the battery left?</strong></summary>
+
 We do not have the possibility to check the battery status, that's a known limitation of the design.
 
 We only have the led indication for "low battery" when it's time to charge it. (green -> orange -> red)

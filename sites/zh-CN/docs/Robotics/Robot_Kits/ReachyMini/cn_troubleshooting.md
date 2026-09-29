@@ -508,6 +508,7 @@ Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 
 <details>
 <summary><strong>电池有安全功能吗？</strong></summary>
+
 无线版包含一个适当的电池充电器。
 电池还集成了BMS和温度传感器。
 
@@ -515,6 +516,7 @@ Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 
 <details>
 <summary><strong>如何查看剩余电池？</strong></summary>
+
 我们无法检查电池状态，这是设计的已知限制。
 
 我们只有在需要充电时才有"电池电量低"的LED指示。（绿色→橙色→红色）
