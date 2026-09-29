@@ -69,7 +69,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS with Visual Grasping</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS with ROS2</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS with Isaac Sim</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS with Web Controler</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS with Web Controller</b></div></a>
         <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS with Agent Claw</b></div></a>
       </div>
     </div>
@@ -118,7 +118,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM Visual Grasp</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM with ROS2</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM with Isaac Sim</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM with Web Controler</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM with Web Controller</b></div></a>
       </div>
     </div>
     <div className="learning-group">
