@@ -9,11 +9,14 @@ import React, {
   useRef,
   useState,
 } from 'react';
+import {useLocation} from '@docusaurus/router';
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 
 const COPY = {
   en: {
     label: 'Robot kit selector',
+    carousel: 'carousel',
+    product: 'Product',
     previous: 'Previous product',
     next: 'Next product',
     instructions: 'Scroll, drag, or use the arrow keys to rotate. Click a card to open it, or press Space to open and close.',
@@ -24,6 +27,8 @@ const COPY = {
   },
   cn: {
     label: '机器人套件选择器',
+    carousel: '轮播',
+    product: '产品',
     previous: '上一个产品',
     next: '下一个产品',
     instructions: '在卡片区域滚动、拖动或使用方向键切换；点击卡片展开，按空格键展开或收回。',
@@ -32,7 +37,51 @@ const COPY = {
     showCarousel: '返回轮播',
     of: '共',
   },
+  ja: {
+    label: 'ロボットキットセレクター',
+    carousel: 'カルーセル',
+    product: '製品',
+    previous: '前の製品',
+    next: '次の製品',
+    instructions: 'カード上でスクロール、ドラッグ、または矢印キーを使って切り替えます。カードをクリックして開くか、Space キーで開閉します。',
+    gridInstructions: '2列の一覧から製品を選択すると、中央にフォーカスして学習パスを開きます。',
+    showGrid: 'すべての製品を表示',
+    showCarousel: 'カルーセルに戻る',
+    of: '/',
+  },
+  es: {
+    label: 'Selector de kits robóticos',
+    carousel: 'carrusel',
+    product: 'Producto',
+    previous: 'Producto anterior',
+    next: 'Producto siguiente',
+    instructions: 'Desplázate, arrastra o usa las flechas para cambiar de producto. Haz clic en una tarjeta para abrirla, o pulsa Espacio para abrirla y cerrarla.',
+    gridInstructions: 'Elige un producto en la vista general de dos columnas para centrarlo y abrir sus rutas de aprendizaje.',
+    showGrid: 'Mostrar todos los productos',
+    showCarousel: 'Volver al carrusel',
+    of: 'de',
+  },
+  'pt-br': {
+    label: 'Seletor de kits robóticos',
+    carousel: 'carrossel',
+    product: 'Produto',
+    previous: 'Produto anterior',
+    next: 'Próximo produto',
+    instructions: 'Role, arraste ou use as setas para alternar entre os produtos. Clique em um cartão para abri-lo ou pressione Espaço para abrir e fechar.',
+    gridInstructions: 'Escolha um produto na visão geral em duas colunas para centralizá-lo e abrir suas trilhas de aprendizado.',
+    showGrid: 'Mostrar todos os produtos',
+    showCarousel: 'Voltar ao carrossel',
+    of: 'de',
+  },
 };
+
+function getLocaleFromPath(pathname) {
+  if (pathname === '/cn' || pathname.startsWith('/cn/')) return 'cn';
+  if (pathname === '/ja' || pathname.startsWith('/ja/')) return 'ja';
+  if (pathname === '/es' || pathname.startsWith('/es/')) return 'es';
+  if (pathname === '/pt-br' || pathname.startsWith('/pt-br/')) return 'pt-br';
+  return 'en';
+}
 
 const COLLAPSE_DELAY = 560;
 const OPEN_AFTER_ROTATION_DELAY = 620;
@@ -224,8 +273,11 @@ function getCardLayout(card, isActive) {
   return {summary, summaryChildren, leftContent, rightContent};
 }
 
-export default function RotatingProductShowcase({children, locale = 'en'}) {
+export default function RotatingProductShowcase({children}) {
+  const location = useLocation();
+  const locale = getLocaleFromPath(location.pathname);
   const copy = COPY[locale] || COPY.en;
+
   const cards = useMemo(
     () => Children.toArray(children).filter((child) => isValidElement(child)),
     [children],
@@ -252,8 +304,8 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
   const [isDragging, setIsDragging] = useState(false);
 
   const titles = useMemo(
-    () => cards.map((card, index) => getCardTitle(card, `Product ${index + 1}`)),
-    [cards],
+    () => cards.map((card, index) => getCardTitle(card, `${copy.product} ${index + 1}`)),
+    [cards, copy.product],
   );
 
   const clearTransitionTimers = useCallback(() => {
@@ -601,9 +653,18 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
 
   const handleKeyDown = (event) => {
     if (gridSelectionRef.current) return;
-    if (gridViewRef.current && (event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === ' ' || event.code === 'Space')) {
+    if (
+      gridViewRef.current
+      && (
+        event.key === 'ArrowLeft'
+        || event.key === 'ArrowRight'
+        || event.key === ' '
+        || event.code === 'Space'
+      )
+    ) {
       return;
     }
+
     if (event.key === 'ArrowLeft') {
       event.preventDefault();
       move(-1);
@@ -639,6 +700,7 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
       wheelRef.current = createWheelGestureState();
       return;
     }
+
     const target = event.target instanceof Element ? event.target : null;
 
     if (!target?.closest('.rotating-product-card')) {
@@ -657,7 +719,10 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
 
     if (now < gesture.lockedUntil) {
       gesture.lastEventAt = now;
-      gesture.lockedUntil = Math.max(gesture.lockedUntil, now + WHEEL_GESTURE_TIMEOUT);
+      gesture.lockedUntil = Math.max(
+        gesture.lockedUntil,
+        now + WHEEL_GESTURE_TIMEOUT,
+      );
       return;
     }
 
@@ -671,6 +736,7 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
 
     gesture.axisX += deltaX;
     gesture.axisY += deltaY;
+
     if (!gesture.axis) {
       if (
         Math.abs(gesture.axisX) < WHEEL_AXIS_THRESHOLD
@@ -679,6 +745,7 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
         gesture.lastEventAt = now;
         return;
       }
+
       gesture.axis = event.shiftKey
         || Math.abs(gesture.axisX) > Math.abs(gesture.axisY)
         ? 'horizontal'
@@ -688,27 +755,32 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
     const delta = gesture.axis === 'horizontal'
       ? (event.shiftKey ? deltaY : deltaX)
       : deltaY;
+
     if (!delta) {
       gesture.lastEventAt = now;
       return;
     }
 
     const direction = Math.sign(delta);
+
     if (direction !== gesture.direction) {
       gesture.amount = 0;
       gesture.direction = direction;
     }
+
     gesture.amount += delta;
 
     const threshold = gesture.axis === 'horizontal'
       ? WHEEL_HORIZONTAL_THRESHOLD
       : WHEEL_VERTICAL_THRESHOLD;
+
     if (Math.abs(gesture.amount) < threshold) {
       gesture.lastEventAt = now;
       return;
     }
 
     move(direction);
+
     wheelRef.current = {
       ...createWheelGestureState(),
       lastEventAt: now,
@@ -719,46 +791,73 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
   useEffect(() => {
     const stage = stageRef.current;
     if (!stage) return undefined;
+
     stage.addEventListener('wheel', handleWheel, {passive: false});
+
     return () => stage.removeEventListener('wheel', handleWheel);
   }, [handleWheel]);
 
   const handlePointerDown = (event) => {
     const target = event.target instanceof Element ? event.target : null;
+
     if (
       event.button !== 0
       || gridViewRef.current
       || !target?.closest('.rotating-product-card')
-      || target?.closest('a, .rotating-showcase-controls button, .rotating-showcase-view-toggle')
-    ) return;
-    dragRef.current = {active: true, startX: event.clientX, currentX: event.clientX};
+      || target?.closest(
+        'a, .rotating-showcase-controls button, .rotating-showcase-view-toggle',
+      )
+    ) {
+      return;
+    }
+
+    dragRef.current = {
+      active: true,
+      startX: event.clientX,
+      currentX: event.clientX,
+    };
+
     suppressClickRef.current = false;
   };
 
   const handlePointerMove = (event) => {
     if (!dragRef.current.active) return;
+
     dragRef.current.currentX = event.clientX;
     const delta = event.clientX - dragRef.current.startX;
+
     if (Math.abs(delta) > 7) {
       suppressClickRef.current = true;
       setIsDragging(true);
+
       if (!event.currentTarget.hasPointerCapture(event.pointerId)) {
         event.currentTarget.setPointerCapture(event.pointerId);
       }
     }
-    stageRef.current?.style.setProperty('--rp-carousel-drag-x', `${clamp(delta * 0.22, -34, 34)}px`);
+
+    stageRef.current?.style.setProperty(
+      '--rp-carousel-drag-x',
+      `${clamp(delta * 0.22, -34, 34)}px`,
+    );
   };
 
   const finishPointerGesture = (event) => {
     if (!dragRef.current.active) return;
+
     const delta = dragRef.current.currentX - dragRef.current.startX;
     dragRef.current.active = false;
     setIsDragging(false);
+
     stageRef.current?.style.removeProperty('--rp-carousel-drag-x');
+
     if (event.currentTarget.hasPointerCapture(event.pointerId)) {
       event.currentTarget.releasePointerCapture(event.pointerId);
     }
-    if (Math.abs(delta) > 46) move(delta < 0 ? 1 : -1);
+
+    if (Math.abs(delta) > 46) {
+      move(delta < 0 ? 1 : -1);
+    }
+
     window.setTimeout(() => {
       suppressClickRef.current = false;
     }, 0);
@@ -769,7 +868,7 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
       ref={rootRef}
       className={`rotating-showcase${openIndex !== null ? ' is-expanded' : ''}${isGridView ? ' is-grid-view' : ''}${gridSelectionIndex !== null ? ' is-grid-selecting' : ''}${isDragging ? ' is-dragging' : ''}`}
       role="region"
-      aria-roledescription="carousel"
+      aria-roledescription={copy.carousel}
       aria-label={copy.label}
       tabIndex={0}
       onKeyDown={handleKeyDown}
@@ -778,6 +877,7 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
         <p className="rotating-showcase-instructions">
           {isGridView ? copy.gridInstructions : copy.instructions}
         </p>
+
         <button
           type="button"
           className="rotating-showcase-view-toggle"
@@ -788,6 +888,7 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
           {isGridView ? copy.showCarousel : copy.showGrid}
         </button>
       </div>
+
       <div
         ref={stageRef}
         className="product-stack rotating-showcase-stage"
@@ -802,9 +903,17 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
           const distance = Math.abs(offset);
           const isActive = index === activeIndex;
           const isOpen = openIndex === index;
-          const {summary, summaryChildren, leftContent, rightContent} = getCardLayout(card, isActive);
+
+          const {
+            summary,
+            summaryChildren,
+            leftContent,
+            rightContent,
+          } = getCardLayout(card, isActive);
+
           const scale = [1, 0.84, 0.7, 0.6, 0.54][Math.min(distance, 4)];
           const opacity = [1, 0.72, 0.34, 0.08, 0][Math.min(distance, 4)];
+
           const style = {
             ...card.props.style,
             '--rp-carousel-x': `${offset * 72}%`,
@@ -845,25 +954,32 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
                       event.preventDefault();
                       return;
                     }
+
                     if (isGridView) {
-                      selectGridCard(index, event.currentTarget.closest('.rotating-product-card'));
+                      selectGridCard(
+                        index,
+                        event.currentTarget.closest('.rotating-product-card'),
+                      );
                     } else {
                       if (gridReturnRef.current && openIndex === index) {
                         returnToGrid();
                         return;
                       }
+
                       selectCard(index);
                     }
                   }}
                 >
                   {summaryChildren}
                 </button>
+
                 <aside
                   className="rotating-product-side rotating-product-side--left"
                   aria-hidden={!isOpen || gridSelectionIndex !== null}
                 >
                   {renderPanelContent(leftContent, 'left')}
                 </aside>
+
                 <aside
                   className="rotating-product-side rotating-product-side--right"
                   aria-hidden={!isOpen || gridSelectionIndex !== null}
@@ -877,16 +993,32 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
       </div>
 
       <div className="rotating-showcase-controls">
-        <button type="button" onClick={() => move(-1)} aria-label={copy.previous}>
+        <button
+          type="button"
+          onClick={() => move(-1)}
+          aria-label={copy.previous}
+        >
           <span className="rotating-showcase-arrow" aria-hidden="true">
             <FaChevronLeft />
           </span>
         </button>
-        <div className="rotating-showcase-status" aria-live="polite" aria-atomic="true">
+
+        <div
+          className="rotating-showcase-status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           <strong>{titles[activeIndex]}</strong>
-          <span>{activeIndex + 1} {copy.of} {count}</span>
+          <span>
+            {activeIndex + 1} {copy.of} {count}
+          </span>
         </div>
-        <button type="button" onClick={() => move(1)} aria-label={copy.next}>
+
+        <button
+          type="button"
+          onClick={() => move(1)}
+          aria-label={copy.next}
+        >
           <span className="rotating-showcase-arrow" aria-hidden="true">
             <FaChevronRight />
           </span>
@@ -895,7 +1027,10 @@ export default function RotatingProductShowcase({children, locale = 'en'}) {
 
       <div className="rotating-showcase-dots" aria-hidden="true">
         {cards.map((card, index) => (
-          <span key={card.key || card.props.id || index} className={index === activeIndex ? 'is-active' : undefined} />
+          <span
+            key={card.key || card.props.id || index}
+            className={index === activeIndex ? 'is-active' : undefined}
+          />
         ))}
       </div>
     </div>
