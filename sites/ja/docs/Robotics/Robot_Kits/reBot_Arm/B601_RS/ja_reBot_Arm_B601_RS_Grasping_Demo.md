@@ -932,9 +932,10 @@ source ~/rebotarm_ros2/install/setup.bash
   -p target_class:="cube" \
   -p place_class:="box" \
   -p yolo_device:=gpu \
-  -p grasp_z_offset_m:=0.02 \
+  -p grasp_z_offset_m:=0.01 \
   -p place_z_offset_m:=0.1 \
-  -p grasp_x_offset_m:=-0.04 \
+  -p grasp_x_offset_m:=-0.02 \
+  -p grasp_y_offset_m:=0.002 \
   -p move_to_observation_on_start:=true \
   -p auto_publish_on_detect:=true
 ```
@@ -950,19 +951,20 @@ Python パスを、作成した YOLO 環境に変更します。
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args 
--p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt 
--p color_topic:=/camera/camera/color/image_raw 
--p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw 
--p color_info_topic:=/camera/camera/color/camera_info 
--p optical_frame:=camera_color_optical_frame 
--p target_class:="cube" 
--p place_class:="box" 
--p yolo_device:=gpu 
--p grasp_z_offset_m:=0.01 
--p place_z_offset_m:=0.1 
--p grasp_x_offset_m:=-0.04 
--p move_to_observation_on_start:=true 
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+-p yolo_model:=/home/ubuntu/rebot_visual_model/yoloe-26s-seg.pt \
+-p color_topic:=/camera/camera/color/image_raw \
+-p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+-p color_info_topic:=/camera/camera/color/camera_info \
+-p optical_frame:=camera_color_optical_frame \
+-p target_class:=cube \
+-p place_class:=box \
+-p yolo_device:=gpu \
+-p grasp_z_offset_m:=0.01 \
+-p grasp_y_offset_m:=-0.005 \
+-p place_z_offset_m:=0.1 \
+-p grasp_x_offset_m:=-0.01 \
+-p move_to_observation_on_start:=true \
 -p auto_publish_on_detect:=true
 ```
 
