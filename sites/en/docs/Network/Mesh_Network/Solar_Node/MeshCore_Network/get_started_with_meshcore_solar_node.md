@@ -271,7 +271,7 @@ The TX LED only blinks when the Solar Node itself transmits LoRa data (for examp
 :::tip
 **Power button (power on/off)**
 
-MeshCore v1.14.0 and earlier do not support powering on/off by long-pressing the power button. To power on, apply power (USB / battery / solar — any single supply is enough to run it). To power off, you must cut all power: this device has several power inputs (battery, USB, and solar), so all of them must be disconnected before the device actually turns off. The device cannot be powered off with the power button — this is normal behavior for these firmware versions, not a button fault.
+MeshCore v1.14.0 and earlier do not support powering on/off by long-pressing the power button. To power on, apply power (USB / battery / solar — any single supply is enough to run it). The device cannot be powered off with the power button — this is normal behavior for these firmware versions, not a button fault.
 
 MeshCore v1.14.1 and later support the power button, as follows:
 
