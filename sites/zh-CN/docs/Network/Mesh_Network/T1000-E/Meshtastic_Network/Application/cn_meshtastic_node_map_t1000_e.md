@@ -1,5 +1,5 @@
 ---
-description: 本指南介绍如何使用 Meshtastic Node Map 显示 Meshtastic 设备的位置。
+description: 本指南介绍如何使用 Meshtastic Node Map 显示 Meshtastic 设备在地图上的位置。
 title: Meshtastic 节点地图
 keywords:
   - Meshtastic
@@ -14,13 +14,13 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: '2026-03-19'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/cn/meshtastic_node_map_t1000_e/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-本指南介绍如何在 Meshtastic Node Map 上显示 [Meshtastic](https://meshtastic.org/docs/introduction/) 设备的位置，使用 [Wio Tracker L1 Pro](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) 和 [T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) 设备，前提是这些设备已经刷入 Meshtastic 固件。
+本指南介绍如何使用 [Wio Tracker L1 Pro](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) 和 [T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) 设备，在 Meshtastic Node Map 上显示 [Meshtastic](https://meshtastic.org/docs/introduction/) 设备的位置，前提是这些设备已经刷入 Meshtastic 固件。
 
 ## Meshtastic 网络监控简介
 
@@ -28,7 +28,7 @@ Meshtastic Node Map 是一个在线界面，用于在地图上可视化 Meshtast
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" style={{width:900, height:'auto'}}/></div>
 
-Meshtastic 设备会通过 MQTT 定期向 Meshtastic 服务器上报其位置。Node Map 获取这些报告，并显示每个节点的位置、路径和信号范围。设备可以通过以下方式上报位置：
+Meshtastic 设备会通过 MQTT 定期向 Meshtastic 服务器上报其位置。Node Map 获取这些上报数据，并显示每个节点的位置、路径和信号范围。设备可以通过以下方式上报位置：
 
 - **直接通过 MapReport：** 设备直接向服务器发送位置信息。
 - **通过其他节点间接上报：** 位置信息通过邻近节点中继。
@@ -59,13 +59,13 @@ Meshtastic Node Map 非常适合：
 **MQTT 设置**
    - 在设备上启用 MQTT。
    - 使用默认的 Meshtastic 服务器、用户名和密码。
-   - 启用 **MapReport** 并勾选 **I agree**。根据需要选择上报间隔。
+   - 启用 **MapReport** 并勾选 **I agree**。根据需求选择上报间隔。
 
 ### 查看设备位置
 
 在浏览器中打开 **MeshMap**： [MeshMap 链接](https://meshmap.net/)。 
 
-你将会在地图上看到所有节点。通过 **MapReport** 上报的节点是设备的直接更新。通过 **其他节点** 上报的节点是中继更新。
+你将在地图上看到所有节点。通过 **MapReport** 上报的节点是设备的直接更新。通过 **其他节点** 上报的节点是中继更新。
 
 点击任意节点即可查看详细信息（设备 ID、电池电量等）、Mesh 路由和信号覆盖范围。
 
@@ -80,7 +80,7 @@ Meshtastic Node Map 非常适合：
    - 启用 **OK to MQTT**。
 
 **MQTT 设置**
-   - 启用 MQTT
+   - 启用 MQTT。
    - 配置以下参数：
      - Address: `mqtt.meshtastic.liamcottle.net`
      - Username: `uplink`
@@ -94,7 +94,7 @@ Meshtastic Node Map 非常适合：
 
 ### 查看设备位置
 
-在浏览器中打开 **Liam Cottle's Meshtastic Map**： [Liam Cottle's Map 链接](https://meshtastic.liamcottle.net/)。你将会在地图上看到所有节点。
+在浏览器中打开 **Liam Cottle's Meshtastic Map**： [Liam Cottle's Map 链接](https://meshtastic.liamcottle.net/)。你将在地图上看到所有节点。
 
 点击任意节点即可查看：设备的详细信息、信号范围、历史路径以及之前的位置更新。
 
