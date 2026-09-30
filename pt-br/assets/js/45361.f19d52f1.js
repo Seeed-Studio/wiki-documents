@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwiki_pt_br=self.webpackChunkwiki_pt_br||[]).push([["45361"],{21192(k,e,i){i.r(e)}}]);
