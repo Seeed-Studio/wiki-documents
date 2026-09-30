@@ -61,7 +61,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 このページでは、異なる実装による 2 つのビジュアルグラスピングデモを紹介します：
 
 - **ビジュアルグラスピング方式 1**: 環境構築、カメラ統合、ハンドアイキャリブレーション、把持デバッグを含む YOLO + RGB-D + Python SDK パイプライン。
-- **ビジュアルグラスピング方式 2**: 複数のターミナルでアーム、Gemini 2 / D405 カメラ、および把持ノードを起動し、物体のピック＆プレースを行う ROS2 + YOLOE ワークフロー。
+- **ビジュアルグラスピング方式 2**: 複数のターミナルでアーム、Gemini 2 / D405 / D435i カメラ、および把持ノードを起動し、物体のピック＆プレースを行う ROS2 + YOLOE ワークフロー。
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping demo" />
@@ -664,7 +664,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 このソリューションでは、reBot Arm B601-RS 上で **ROS2** と **YOLO** を使用して物体検出・把持・配置を行います。システムは、アーム、深度カメラ、および把持ノードを別々のターミナルで起動します。
 
-深度カメラは現在 **Orbbec Gemini 2** と **RealSense D405** をサポートしています。このワークフローでは、ハンドアイキャリブレーションにキャリブレーションボードは不要です。取り付けや 3D プリント部品の公差により、アームごとにわずかな把持オフセットが生じる場合があります。
+深度カメラは現在 **Orbbec Gemini 2** と **RealSense D405 / D435i** をサポートしています。このワークフローでは、ハンドアイキャリブレーションにキャリブレーションボードは不要です。取り付けや 3D プリント部品の公差により、アームごとにわずかな把持オフセットが生じる場合があります。
 
 ### 2. 環境構築
 
@@ -706,7 +706,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 </details>
 
 <details className="content-details">
-<summary>クリックして D405 セットアップを展開</summary>
+<summary>クリックして D405 / D435i のインストール手順を展開</summary>
 
 1. RealSense SDK をクローンし、`v2.58.1` に切り替えます：
 
@@ -823,7 +823,7 @@ source ~/rebotarm_ros2/install/setup.bash
 
 ### 3. プロジェクトの実行
 
-開始前に、アームの電源が入っていること、CAN インターフェースが `can0` であること、Gemini 2 または D405 が USB 接続されていることを確認してください。その後、CAN を起動します：
+開始前に、アームの電源が入っていること、CAN インターフェースが `can0` であること、Gemini 2、D405、または D435i が USB 接続されていることを確認してください。その後、CAN を起動します：
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -831,7 +831,7 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-把持ロジックを追いやすくするため、スタックは別々のターミナルで起動します。Gemini 2 と D405 では起動コマンドが異なるため、自分のカメラに対応するものを選択してください。ワンクリックで起動したい場合は、独自の起動スクリプトを作成できます。
+把持ロジックを追いやすくするため、スタックは別々のターミナルで起動します。Gemini 2、D405、D435i では起動コマンドが異なるため、自分のカメラに対応するものを選択してください。ワンクリックで起動したい場合は、独自の起動スクリプトを作成できます。
 
 #### ターミナル A — アーム + RViz の起動
 
@@ -855,6 +855,18 @@ source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
 ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=can0 use_rviz:=true
+```
+
+</details>
+
+<details className="content-details">
+<summary>クリックして D435i を展開</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=can0 use_rviz:=true
 ```
 
 </details>
@@ -887,6 +899,21 @@ ros2 launch realsense2_camera rs_launch.py \
 
 </details>
 
+<details className="content-details">
+<summary>クリックして D435i を展開</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch realsense2_camera rs_launch.py \
+  align_depth.enable:=true \
+  depth_module.depth_profile:=640x360x30 \
+  depth_module.color_profile:=640x360x30
+```
+
+</details>
+
 #### ターミナル C — 観測姿勢への移動 + YOLO 検出
 
 まず `conda activate yolo` で conda 環境を有効化します。環境名が `yolo` でない場合は、実際の conda 環境名に置き換えてください。
@@ -904,7 +931,7 @@ source ~/rebotarm_ros2/install/setup.bash
   -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
   -p target_class:="cube" \
   -p place_class:="box" \
-  -p yolo_device:=0 \
+  -p yolo_device:=gpu \
   -p grasp_z_offset_m:=0.02 \
   -p place_z_offset_m:=0.1 \
   -p grasp_x_offset_m:=-0.04 \
@@ -941,12 +968,41 @@ source ~/rebotarm_ros2/install/setup.bash
 
 </details>
 
+<details className="content-details">
+<summary>クリックして D435i を展開</summary>
+
+Python パスを、作成した YOLO 環境に変更します。
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+  -p color_topic:=/camera/camera/color/image_raw \
+  -p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+  -p color_info_topic:=/camera/camera/color/camera_info \
+  -p optical_frame:=camera_color_optical_frame \
+  -p target_class:="cube" \
+  -p place_class:="box" \
+  -p yolo_device:=gpu \
+  -p grasp_z_offset_m:=0.01 \
+  -p place_z_offset_m:=0.1 \
+  -p grasp_y_offset_m:=0.01 \
+  -p grasp_x_offset_m:=-0.04 \
+  -p move_to_observation_on_start:=true \
+  -p auto_publish_on_detect:=true
+```
+
+</details>
+
 | パラメータ | 説明 |
 |-----------|-------------|
 | `yolo_device:=gpu` | GPU を使用します。ディスクリート GPU がない場合は `cpu` を設定します。GPU 0 を使用するには `yolo_device:=0` も使用できます |
 | `target_class` | 把持対象物体の YOLOE テキストクラス名。実際の物体に合わせて変更します。デフォルトの YOLO クラスをサポートします |
 | `place_class` | 配置対象の YOLOE テキストクラス名。実際の物体に合わせて変更します。デフォルトの YOLO クラスをサポートします |
 | `grasp_x_offset_m` | `base_link` における前後オフセット。負の値は姿勢を後方に引きます |
+| `grasp_y_offset_m` | 把持の左右オフセット。`0.01` は左へ 1 cm、負の値は右へずらします |
 | `grasp_z_offset_m` | 把持高さの微調整。デフォルトは標準グリッパーより長いフレキシブルグリッパー用です |
 | `place_z_offset_m` | 物体を配置する際の追加リフト量。配置点よりどの程度の高さで物体を離すかを制御します |
 
