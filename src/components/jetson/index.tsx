@@ -323,6 +323,7 @@ export const translations = {
       installTitle: 'Install jetson-examples',
       deployTitle: 'Deploy LLaVA',
       modelsTitle: 'Supported Models',
+      deployCta: 'One-Click Deploy',
       features: ['20+ Examples', 'One Command', 'Open Source'],
       quickLinks: {
         github: 'GitHub Repo',
@@ -461,6 +462,7 @@ export const translations = {
       installTitle: 'jetson-examplesをインストール',
       deployTitle: 'LLaVAをデプロイ',
       modelsTitle: 'サポートされているモデル',
+      deployCta: 'ワンクリックでデプロイ',
       features: ['20+ サンプル', 'ワンコマンド', 'オープンソース'],
       quickLinks: {
         github: 'GitHubリポジトリ',
@@ -599,6 +601,7 @@ export const translations = {
       installTitle: '安装 jetson-examples',
       deployTitle: '部署 LLaVA',
       modelsTitle: '支持的模型',
+      deployCta: '一键部署',
       features: ['20+ 示例', '一键命令', '开源'],
       quickLinks: {
         github: 'GitHub 仓库',
@@ -737,6 +740,7 @@ export const translations = {
       installTitle: 'Instalar jetson-examples',
       deployTitle: 'Desplegar LLaVA',
       modelsTitle: 'Modelos Soportados',
+      deployCta: 'Despliegue con un clic',
       features: ['20+ Ejemplos', 'Un Comando', 'Código Abierto'],
       quickLinks: {
         github: 'Repositorio GitHub',
@@ -875,6 +879,7 @@ export const translations = {
       installTitle: 'Instalar jetson-examples',
       deployTitle: 'Implantar LLaVA',
       modelsTitle: 'Modelos Suportados',
+      deployCta: 'Implantar com um clique',
       features: ['20+ Exemplos', 'Um Comando', 'Código Aberto'],
       quickLinks: {
         github: 'Repositório GitHub',
@@ -1800,6 +1805,16 @@ const RecomputerPage = ({ lang }: Props) => {
                       </code>
                     </pre>
                   </div>
+
+                  <a
+                    href="https://sensecraft.seeed.cc/ai-lab/en/models"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.deploy_btn}
+                  >
+                    <span>{t.examples.deployCta}</span>
+                    <span>→</span>
+                  </a>
 
                   <div className={styles.examples_models}>
                     <div className={styles.models_title}>{t.examples.modelsTitle}</div>

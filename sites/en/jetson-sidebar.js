@@ -264,7 +264,8 @@ const sidebars = {
       'Edge/NVIDIA_Jetson/Jetson_Product_Selection_Guide',
       'Edge/NVIDIA_Jetson/Flash_Jetpack',
       'Edge/NVIDIA_Jetson/Jetson_Debug_Guide',
-      { type: 'link', label: 'reComputer Jetson for Beginners', href: 'https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners' },
+      { type: 'link', label: 'reComputer Jetson for Beginners', href: 'https://sensecraft.seeed.cc/ai-lab/en/tutorials/j/introduction' },
+      { type: 'link', label: 'OSHW-Jetson-Series', href: 'https://github.com/Seeed-Studio/OSHW-Jetson-Series' },
       {
         type: 'category',
         label: 'JetPack 7.2',
@@ -311,7 +312,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_FAQ',
           ],
         },
-        { type: 'link', label: 'jetson-examples', href: 'https://github.com/Seeed-Projects/jetson-examples' },
+        { type: 'link', label: 'jetson-examples', href: 'https://sensecraft.seeed.cc/ai-lab/en/models' },
         { type: 'link', label: 'Linux for Tegra', href: 'https://github.com/Seeed-Studio/Linux_for_Tegra' },
       ],
     },
