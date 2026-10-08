@@ -65,12 +65,8 @@ import 'katex/dist/katex.min.css';
   look-up reference while you work through Chapter 26.
   :::
 
-  **Why stage 5 comes after stage 4.** Stage 3 and stage 4 taught the arm to imitate and to follow
-  language. Those systems are learned: they see the world and act on it, but they do not *guarantee*
-  anything. The moment you need a straight weld seam, a repeatable grasp or a safe emergency stop,
-  you need the deterministic layer underneath — the mathematics and motion control in this stage.
-  The picture above is the contrast in one image: a VLM describes the world, a VLA acts on it, and
-  everything you learn here decides *how* the action is actually executed.
+  **Why stage 5 comes after stage 4.** Stage 3 and stage 4 taught the arm to imitate and to follow language. Those systems are learned: they see the world and act on it, but they do not *guarantee* anything. The moment you need a straight weld seam, a repeatable grasp or a safe emergency stop, you need the deterministic layer underneath — the mathematics and motion control in this stage.
+  The picture above is the contrast in one image: a VLM describes the world, a VLA acts on it, and everything you learn here decides *how* the action is actually executed.
 
   | Aspect | VLM (Vision-Language Model) | VLA (Vision-Language-Action Model) |
   | :--- | :--- | :--- |
@@ -170,10 +166,7 @@ For example: the arm is placed on a table, with the center of the arm base as th
 | **Z** | 🔵 Blue | Blue |
 
 :::note
-Right-hand rule: point `+X` along the index finger and `+Y` along the middle finger; the thumb gives
-`+Z`. Rotations about `+X`, `+Y`, `+Z` are positive counter-clockwise when looking back along the
-axis towards the origin. Every robotics tool (RViz, MeshCat, SolidWorks, URDF) uses this same
-convention, which is why the RGB = XYZ color mapping is worth memorizing.
+Right-hand rule: point `+X` along the index finger and `+Y` along the middle finger; the thumb gives `+Z`. Rotations about `+X`, `+Y`, `+Z` are positive counter-clockwise when looking back along the axis towards the origin. Every robotics tool (RViz, MeshCat, SolidWorks, URDF) uses this same convention, which is why the RGB = XYZ color mapping is worth memorizing.
 :::
 
 ## 23.4 Joint Space Frame and End-Effector Frame
@@ -220,9 +213,7 @@ The camera frame and the end-effector frame are usually obtained through a trans
 | ROS `camera_optical_frame` | right | down | forward | yes |
 
 :::warning
-Never mix the two conventions silently. A "y down" camera and a "y up" camera differ by a 180 deg
-rotation about x, and a hand-eye calibration computed with one convention will send the gripper to
-the wrong side of the object when used with the other.
+Never mix the two conventions silently. A "y down" camera and a "y up" camera differ by a 180 deg rotation about x, and a hand-eye calibration computed with one convention will send the gripper to the wrong side of the object when used with the other.
 :::
 
 Where the camera frame appears in a visual grasping pipeline:
@@ -316,8 +307,7 @@ $$
 
 **Rotation transform**
 
-The three elementary rotation matrices. Writing $c = \cos\theta$ and $s = \sin\theta$ keeps the
-matrices readable; expand them by substituting back when you work them out by hand.
+The three elementary rotation matrices. Writing $c = \cos\theta$ and $s = \sin\theta$ keeps the matrices readable; expand them by substituting back when you work them out by hand.
 
 $$
 R_x(\theta) =
@@ -342,8 +332,7 @@ s &  c & 0 \\
 \end{pmatrix}
 $$
 
-The homogeneous version of each rotation keeps the same 3x3 block with a zero translation column,
-so a rotation matrix $R$ becomes
+The homogeneous version of each rotation keeps the same 3x3 block with a zero translation column, so a rotation matrix $R$ becomes
 
 $$
 \begin{pmatrix}
@@ -367,10 +356,7 @@ $$
 | Z axis | $R_z(\theta)$ | $\begin{pmatrix} c & -s & 0 & 0 \\ s & c & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$ |
 
 :::note
-**Why the bottom row is $[0\ 0\ 0\ 1]$.** It carries no physical meaning; it exists so that the matrix
-product of two transforms is again a transform, and so that a *point* $(x, y, z, 1)$ and a
-*direction* $(x, y, z, 0)$ can be transformed by the same matrix — the direction ignores the
-translation, the point does not.
+**Why the bottom row is $[0\ 0\ 0\ 1]$.** It carries no physical meaning; it exists so that the matrix product of two transforms is again a transform, and so that a *point* $(x, y, z, 1)$ and a *direction* $(x, y, z, 0)$ can be transformed by the same matrix — the direction ignores the translation, the point does not.
 :::
 
 **Composing transforms** — chaining is just matrix multiplication, and the inverse is cheap:
@@ -410,9 +396,7 @@ $$
 In engineering: **use Euler angles for humans, quaternions for the machine**.
 
 :::tip
-On the reBot Arm this shows up concretely: MeshCat and Pinocchio think in rotation matrices and
-SE(3) objects, while you type roll/pitch/yaw in degrees at the terminal. The demos in Chapter 26
-convert between the two for you (`rpyToMatrix`, `matrixToRpy`).
+On the reBot Arm this shows up concretely: MeshCat and Pinocchio think in rotation matrices and SE(3) objects, while you type roll/pitch/yaw in degrees at the terminal. The demos in Chapter 26 convert between the two for you (`rpyToMatrix`, `matrixToRpy`).
 :::
 
 - A **frame** is three axes plus an origin; the arm needs at least world, base, joint, tool and camera frames.
