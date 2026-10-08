@@ -16,7 +16,7 @@ last_update:
   date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/cn/robotics_page/
 ---
 
@@ -188,6 +188,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </div>
       <div className="mini-track">
         <h4>开发案例</h4>
+        <a href="/cn/reachymini_conversation/">Reachy Mini 豆包语音对话应用</a>
         <a href="/cn/reachymini_development_cases_home_assistant/">Home Assistant 集成</a>
         <a href="/cn/reachymini_development_cases_gripper_voice_control/">Reachy Mini 语音控制 SO-ARM</a>
         <a href="/cn/reachymini_development_cases_sway_screen/">Reachy Mini 屏幕体感控制</a>

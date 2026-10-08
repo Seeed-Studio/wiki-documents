@@ -12,7 +12,7 @@ slug: /recamera_meshtastic_ha_security_system
 sku: 100029708
 sidebar_position: 13
 last_update:
-  date: 06/29/2026
+  date: 10/08/2026
   author: Sizhao Zhou
 createdAt: '2026-06-29'
 updatedAt: '2026-06-30'
@@ -153,9 +153,9 @@ Do **not** enable WiFi and MQTT on the transmitter; it only needs to focus on re
 By default, the Node-RED and SSCMA background services of reCamera occupy camera resources. Log in to reCamera via SSH (default IP is `192.168.42.1`, username and password are both `recamera`), and execute the following commands in the terminal to stop the background services:  
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```  
 
 ### 4.2 Start the Video Stream Forwarding Script  

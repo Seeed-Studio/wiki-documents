@@ -1,6 +1,6 @@
 ---
 description: エッジゲートウェイ上の中央空調設定値の監視制御：OPC UA、Modbus、BACnet/IP と SDM630 電力量計を1つのポイントモデルに統合し、KNNで設定値を予測、書き込みはすべて読み戻して確認
-title: 'スマートHVAC制御：機器選定・導入・実測データ'
+title: スマートHVAC制御：機器選定・導入・実測データ
 keywords:
   - HVAC setpoint control
   - building energy retrofit

@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-07-30'
+updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/cn/reachymini_intro/
 ---
 
@@ -85,6 +85,7 @@ with ReachyMini() as mini:
 * **[构建和发布应用](/reachymini_sdk_apps)**：创建、测试、发布和调试Reachy Mini应用。
 * **[核心概念](/reachymini_sdk_core-concept)**：架构、坐标系统和安全限制。
 * **[教程](/reachymini_examples_minimal_demo)**：实践示例逐步学习SDK。
+* **[Reachy Mini 豆包语音对话应用](/reachymini_conversation)**：接入豆包大模型与流式语音识别，实现语音对话、动作执行与手部跟随。
 * **[Home Assistant 集成](/reachymini_development_cases_home_assistant)**：通过HACS将Reachy Mini接入Home Assistant智能家居。
 * **[Reachy Mini 语音控制 SO-ARM](/reachymini_development_cases_gripper_voice_control)**：通过对话应用用语音控制SO-ARM从臂爪夹开合。
 * 📂 [**浏览示例文件夹**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)

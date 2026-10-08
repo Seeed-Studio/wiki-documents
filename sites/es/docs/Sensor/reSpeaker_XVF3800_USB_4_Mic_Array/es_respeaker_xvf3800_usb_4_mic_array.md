@@ -10,7 +10,7 @@ last_update:
   date: 11/10/2025
   author: Kasun Thushara
 createdAt: '2025-08-20'
-updatedAt: '2026-08-24'
+updatedAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/
 ---
 

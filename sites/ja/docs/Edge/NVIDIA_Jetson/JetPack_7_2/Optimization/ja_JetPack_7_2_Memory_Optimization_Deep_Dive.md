@@ -1,6 +1,6 @@
 ---
-description: 'Jetson メモリに影響する JetPack 7.2 のソフトウェア変更点を理解します：CUDA と TensorRT スタック、公式 Yocto サポート、最適化スキル、そして Orin 向けに実測された LLM デプロイメント予算。'
-title: 'JetPack 7.2 メモリ最適化：ソフトウェアの進歩と LLM デプロイメント予算'
+description: Jetson メモリに影響する JetPack 7.2 のソフトウェア変更点を理解します：CUDA と TensorRT スタック、公式 Yocto サポート、最適化スキル、そして Orin 向けに実測された LLM デプロイメント予算。
+title: JetPack 7.2 メモリ最適化：ソフトウェアの進歩と LLM デプロイメント予算
 keywords:
   - JetPack 7.2
   - メモリ最適化
@@ -15,7 +15,7 @@ last_update:
   date: 08/27/2026
   author: zibo
 createdAt: '2026-08-27'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/ja/jetpack_7_2_memory_optimization_deep_dive/
 ---
 

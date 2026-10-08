@@ -4,7 +4,7 @@ title: reSpeaker Lite 入門ガイド
 keywords:
   - ReSpeaker
   - Xiao esp32
-  - Voice assistant 
+  - Voice assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
@@ -12,7 +12,7 @@ last_update:
   date: 6/28/2024
   author: Jessie
 createdAt: '2024-07-03'
-updatedAt: '2026-02-12'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/ja/reSpeaker_usb_v3/
 ---
 

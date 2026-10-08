@@ -12,6 +12,8 @@ last_update:
   date: 09/21/2026
   author: Seeed Studio
 url: https://wiki.seeedstudio.com/ja/recamera_pro/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # ここから始める

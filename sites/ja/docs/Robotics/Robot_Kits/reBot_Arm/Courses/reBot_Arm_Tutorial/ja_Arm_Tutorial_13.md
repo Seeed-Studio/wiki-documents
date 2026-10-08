@@ -1,5 +1,5 @@
 ---
-description: 'Seeed Physical AI Beginner''s Course 第13章 — カメラ設定と LeRobot データ収集：単眼／デュアルカメラ構成、カメラデバイス名の確認、画像とアクションの同期、データセットの作成、録画と再録画、可視化、データの追加・削除。'
+description: Seeed Physical AI Beginner's Course 第13章 — カメラ設定と LeRobot データ収集：単眼／デュアルカメラ構成、カメラデバイス名の確認、画像とアクションの同期、データセットの作成、録画と再録画、可視化、データの追加・削除。
 title: 第13章 - カメラ設定と LeRobot データ収集
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-19
   author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_13/
 ---
 
