@@ -1,5 +1,5 @@
 ---
-description: 'Seeed Physical AI Beginner''s Course 第17章 — 実機ロボットでの推論・評価・データ反復：推論データフロー、前処理と逆正規化、推論の開始、アクションチャンクの実行、安全性、成功率評価、汎化テスト、失敗分析、および失敗駆動のデータ収集。'
+description: Seeed Physical AI Beginner's Course 第17章 — 実機ロボットでの推論・評価・データ反復：推論データフロー、前処理と逆正規化、推論の開始、アクションチャンクの実行、安全性、成功率評価、汎化テスト、失敗分析、および失敗駆動のデータ収集。
 title: 第17章 - 実機ロボットでの推論・評価・データ反復
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-19
   author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_17/
 ---
 

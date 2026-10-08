@@ -1,6 +1,6 @@
 ---
 description: 実行するAIモデルの選択、検出クラスの設定、ConfidenceおよびIOUしきい値の構成、推論頻度の制御、そしてreCamera Pro上でのリアルタイム出力の監視を行います。
-title: "検出の設定：クラス、しきい値、頻度"
+title: 検出の設定：クラス、しきい値、頻度
 keywords:
   - reCamera
   - reCamera Pro
@@ -16,6 +16,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/ja/recamera_pro_ai_inference/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # 検出の設定：クラス、しきい値、頻度

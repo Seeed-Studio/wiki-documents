@@ -13,6 +13,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/es/recamera_pro_imu_usage/
+createdAt: '2026-07-09'
+updatedAt: '2026-09-23'
 ---
 
 # Uso de la IMU de reCamera Pro

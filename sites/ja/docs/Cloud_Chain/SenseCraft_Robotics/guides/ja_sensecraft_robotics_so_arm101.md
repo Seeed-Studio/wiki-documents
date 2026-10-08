@@ -10,6 +10,9 @@ slug: /sensecraft_robotics_so_arm101
 last_update:
   date: 09/24/2026
   author: Seeed Studio
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/ja/sensecraft_robotics_so_arm101/
+updatedAt: '2026-09-24'
 ---
 
 このチュートリアルでは、SenseCraft Robotics と組み合わせた SO-ARM101 Leader アームと SO-ARM101 Follower アームを使用します。プロジェクト作成とデバイスセットアップから、データ収集、モデル学習、運用までの一連のワークフローを扱います。

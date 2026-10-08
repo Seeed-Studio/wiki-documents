@@ -1,5 +1,5 @@
 ---
-description: "Chapter 22 of the Seeed Physical AI Beginner's Course — GR00T inference and real-robot deployment: the end-to-end loop, decoupling inference and control, single-machine vs distributed, camera/state/language inputs, action chunk output, latency, action buffering and RTC, safety limits, evaluation, and the stage project."
+description: 'Chapter 22 of the Seeed Physical AI Beginner''s Course — GR00T inference and real-robot deployment: the end-to-end loop, decoupling inference and control, single-machine vs distributed, camera/state/language inputs, action chunk output, latency, action buffering and RTC, safety limits, evaluation, and the stage project.'
 title: Chapter 22 - GR00T Inference and Real-Robot Deployment
 keywords:
   - reBot
@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-25'
 url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_22/
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 20 do Curso para Iniciantes em IA Física da Seeed — preparando o dataset reBot VLA: pré-requisitos, checando o dataset LeRobot, adicionando descrições de tarefas em linguagem natural, configurando chaves de estado/ação/câmera, criando meta/modality.json, definindo a tag de embodiment, verificando a ordem das juntas e dimensões, e organização multi-tarefa."
+description: 'Capítulo 20 do Curso para Iniciantes em IA Física da Seeed — preparando o dataset reBot VLA: pré-requisitos, checando o dataset LeRobot, adicionando descrições de tarefas em linguagem natural, configurando chaves de estado/ação/câmera, criando meta/modality.json, definindo a tag de embodiment, verificando a ordem das juntas e dimensões, e organização multi-tarefa.'
 title: Capítulo 20 - Preparando o Dataset reBot VLA
 keywords:
   - reBot
@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_20/
 ---
 

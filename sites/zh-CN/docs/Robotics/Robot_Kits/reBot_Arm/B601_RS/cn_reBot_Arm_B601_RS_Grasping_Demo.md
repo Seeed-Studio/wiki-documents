@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [[zh-CN]]
 createdAt: '2026-06-15'
-updatedAt: '2026-08-11'
+updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';

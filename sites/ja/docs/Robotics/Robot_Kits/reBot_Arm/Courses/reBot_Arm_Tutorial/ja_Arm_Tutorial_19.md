@@ -1,5 +1,5 @@
 ---
-description: "Seeed Physical AI Beginner's Course の第19章 — ロボットのエンボディメントと GR00T システムアーキテクチャ：エンボディメントとは何か、関節／状態／アクションの定義、カメラと言語のモダリティ、観測ウィンドウとアクションウィンドウ、ファウンデーションモデルのファインチューニング、LeRobot スタック、および GR00T における reBot Arm の位置付け。"
+description: Seeed Physical AI Beginner's Course の第19章 — ロボットのエンボディメントと GR00T システムアーキテクチャ：エンボディメントとは何か、関節／状態／アクションの定義、カメラと言語のモダリティ、観測ウィンドウとアクションウィンドウ、ファウンデーションモデルのファインチューニング、LeRobot スタック、および GR00T における reBot Arm の位置付け。
 title: 第19章 - ロボットのエンボディメントと GR00T システムアーキテクチャ
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_19/
 ---
 

@@ -13,7 +13,7 @@ last_update:
   date: 06/24/2025
   author: ZhuYaoHui
 createdAt: '2025-06-24'
-updatedAt: '2026-01-07'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/pt-br/hightorque_series/
 ---
 

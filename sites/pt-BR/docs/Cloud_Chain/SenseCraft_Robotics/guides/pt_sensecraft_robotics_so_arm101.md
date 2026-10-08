@@ -10,6 +10,9 @@ slug: /sensecraft_robotics_so_arm101
 last_update:
   date: 09/24/2026
   author: Seeed Studio
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/pt-br/sensecraft_robotics_so_arm101/
+updatedAt: '2026-09-24'
 ---
 
 Este tutorial usa um braço SO-ARM101 Leader e um braço SO-ARM101 Follower com o SenseCraft Robotics. Ele cobre o fluxo de trabalho completo, desde a criação do projeto e configuração do dispositivo até a coleta de dados, treinamento do modelo e operação.

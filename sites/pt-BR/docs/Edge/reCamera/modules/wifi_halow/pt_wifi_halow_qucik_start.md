@@ -13,7 +13,7 @@ last_update:
   date: 2026-06-02
   author: Sizhao zhou
 createdAt: '2026-06-02'
-updatedAt: '2026-06-26'
+updatedAt: '2026-08-26'
 url: https://wiki.seeedstudio.com/pt-br/wifi_halow_getting_started/
 ---
 

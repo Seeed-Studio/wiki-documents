@@ -15,7 +15,7 @@ last_update:
   date: 2026-07-27
   author: Sizhao zhou
 createdAt: '2026-07-27'
-updatedAt: '2026-07-28'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/recamera_pro_ha_sound_alert_legacy/
 ---
 <!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：此页面已被 Build_Your_App/home_assistant_alerts.md（https://wiki.seeedstudio.com/cn/recamera_pro_ha_sound_alert/）取代，后者现在使用原始 slug /recamera_pro_ha_sound_alert。此文件作为草稿（slug /recamera_pro_ha_sound_alert_legacy）保留以供历史记录，并从正式构建中排除。请不要链接到此处。 -->

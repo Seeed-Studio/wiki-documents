@@ -17,6 +17,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_development_cpp_skill/
+createdAt: '2026-08-18'
+updatedAt: '2026-09-23'
 ---
 
 # Desenvolver aplicativos reCamera Pro com agentes de codificação de IA
