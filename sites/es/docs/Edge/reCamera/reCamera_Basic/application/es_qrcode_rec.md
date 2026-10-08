@@ -11,10 +11,10 @@ slug: /recamera_qrcode_udp
 sku: 102991897, 100029708, 108990120
 sidebar_position: 17
 last_update:
-  date: 07/08/2026
+  date: 10/08/2026
   author: QiYao Lin
 createdAt: '2026-06-15'
-updatedAt: '2026-07-22'
+updatedAt: '2026-07-08'
 url: https://wiki.seeedstudio.com/es/recamera_qrcode_udp/
 ---
 
@@ -41,11 +41,11 @@ Este ejemplo adopta una arquitectura que separa la "transmisión de vídeo en ti
 El proceso de reconocimiento en tiempo real es el siguiente:
 
 - Captura de cámara: reCamera captura imágenes de la cámara a través de la interfaz de vídeo SG2002 y configura simultáneamente dos canales de vídeo.
-- Transmisión de vídeo RTSP: Un canal de vídeo se codifica como H.264 y se transmite en tiempo real mediante RTSP a dispositivos en el mismo segmento de red. El PC puede extraer y mostrar directamente el flujo de vídeo en tiempo real usando la dirección RTSP.
+- Transmisión de vídeo RTSP: Un canal de vídeo se codifica como H.264 y se transmite en tiempo real mediante RTSP a los dispositivos en el mismo segmento de red. El PC puede extraer y mostrar directamente el flujo de vídeo en tiempo real usando la dirección RTSP.
 - Adquisición de fotogramas para detección de código QR: El otro canal de vídeo genera fotogramas de imagen NV21 de baja resolución para la detección de códigos QR. El programa utiliza solo el plano Y de NV21 como imagen en escala de grises de entrada para el detector de códigos QR, evitando la sobrecarga adicional de conversión a RGB.
-- Caché en cola del fotograma más reciente: El hilo de detección de códigos QR está desacoplado de la devolución de llamada de captura de vídeo. La devolución de llamada de captura no realiza directamente la detección de códigos QR, sino que coloca el último fotograma en escala de grises en una cola de longitud 1. Cuando la velocidad de procesamiento del hilo de detección es más lenta, los fotogramas nuevos sobrescriben a los antiguos, garantizando que en la cola solo se mantenga siempre el fotograma más reciente y evitando el aumento de latencia debido a la acumulación de tareas de detección.
-- Detección asíncrona de códigos QR: El hilo de detección de códigos QR obtiene una imagen de la cola del último fotograma y utiliza la biblioteca de reconocimiento de códigos QR quirc para la detección y decodificación. Dado que el proceso de detección se ejecuta en un hilo independiente, no bloquea la transmisión de vídeo RTSP.
-- Caché de resultados: Después de cada detección, el programa actualiza los últimos resultados de detección de códigos QR, incluyendo si se detectó un código QR, el contenido del código QR, la duración de la detección, frame_id, PTS, hora de captura, hora de finalización de la detección y las coordenadas del cuadro delimitador del código QR.
+- Caché en cola del fotograma más reciente: El hilo de detección de códigos QR está desacoplado de la devolución de llamada de captura de vídeo. La devolución de llamada de captura no realiza directamente la detección de códigos QR, sino que coloca el fotograma en escala de grises más reciente en una cola de longitud 1. Cuando la velocidad de procesamiento del hilo de detección es más lenta, los nuevos fotogramas sobrescriben a los antiguos, garantizando que en la cola solo se mantenga siempre el fotograma más reciente y evitando el aumento de latencia debido a la acumulación de tareas de detección.
+- Detección asíncrona de códigos QR: El hilo de detección de códigos QR obtiene una imagen de la cola del fotograma más reciente y utiliza la biblioteca de reconocimiento de códigos QR quirc para la detección y decodificación. Dado que el proceso de detección se ejecuta en un hilo independiente, no bloquea la transmisión de vídeo RTSP.
+- Caché de resultados: Después de cada detección, el programa actualiza los resultados más recientes de detección de códigos QR, incluyendo si se detectó un código QR, el contenido del código QR, la duración de la detección, frame_id, PTS, hora de captura, hora de finalización de la detección y las coordenadas del cuadro delimitador del código QR.
 - Consulta de resultados por HTTP: Los dispositivos en el mismo segmento de red pueden obtener el resultado de detección de código QR más reciente realizando un GET a `/api/qr/latest`. Esta interfaz solo devuelve el estado de la detección más reciente y no bloquea el flujo de vídeo ni transmite activamente colas históricas de detección.
 - Visualización en el PC: El cliente de Windows muestra el flujo de vídeo en tiempo real en el lado izquierdo mediante RTSP y, en el lado derecho, consulta periódicamente `/api/qr/latest` mediante HTTP para mostrar los resultados de detección de códigos QR más recientes y el tiempo de detección. Si los resultados devueltos incluyen coordenadas del cuadro delimitador del código QR, el cliente escalará y superpondrá los cuadros de detección sobre el flujo de vídeo RTSP.
 
@@ -62,7 +62,7 @@ reCamera
         http://<device-ip>:8080/api/qr/latest
 ```
 
-Este diseño desacopla la transmisión de vídeo de alta inmediatez de la detección de códigos QR, que es relativamente más lenta. El flujo de vídeo RTSP puede mantener una salida continua, mientras que el hilo de detección de códigos QR solo procesa el fotograma más reciente. Incluso si la detección de códigos QR tarda mucho tiempo, no provocará tirones en el vídeo ni acumulación en la cola de detección.
+Este diseño desacopla la transmisión de vídeo de alta inmediatez del proceso de detección de códigos QR, que es relativamente más lento. El flujo de vídeo RTSP puede mantener una salida continua, mientras que el hilo de detección de códigos QR solo procesa el fotograma más reciente. Incluso si la detección de códigos QR tarda mucho tiempo, no provocará tirones en el vídeo ni acumulación en la cola de detección.
 
 ## Configuración de la demostración
 
@@ -74,7 +74,7 @@ Para configurar esta demostración, necesitarás:
 
 ### 1. Compilar el programa en C++
 
-Antes de compilar esta solución, debes configurar el entorno de recamera. Puedes descargar directamente las bibliotecas precompiladas correspondientes desde:
+Antes de compilar esta solución, necesitas configurar el entorno de recamera. Puedes descargar directamente las bibliotecas precompiladas correspondientes desde:
 
 ```text
 https://codeload.github.com/Seeed-Studio/sscma-example-sg200x/tar.gz/refs/tags/0.2.4
@@ -148,9 +148,9 @@ Antes de ejecutar el programa en C++, debes detener los servicios predeterminado
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### 3. Ejecutar el ejecutable en la ReCamera
@@ -168,7 +168,7 @@ Puedes iniciar el programa ejecutando este comando directamente en la terminal d
 sudo ./qrcode_rec
 ```
 
-Los registros de inicio correctos se verán de la siguiente manera:
+Los registros de inicio correctos se verán similares a los siguientes:
 
 ```
 [recamera@reCamera]~$ sudo  ./qrcode_rec
@@ -242,8 +242,8 @@ python3 recamera_qr_pyqt_viewer.py --rtsp rtsp://192.168.4.5:8554/live0 --qr-url
 
 | Parameter | Description | Default |
 |-----------|-------------|---------|
-| `--rtsp` | Dirección RTSP | `192.168.4.5` |
-| `--qr-url` | URL para obtener los resultados de reconocimiento | `http://192.168.4.5:8080/api/qr/latest` |
+| `--rtsp` | RTSP address | `192.168.4.5` |
+| `--qr-url` | URL to get recognition results | `http://192.168.4.5:8080/api/qr/latest` |
 
 
 ### En la ventana del receptor de Python
