@@ -151,6 +151,12 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MR8E6VE5S&p=1&autoplay=0&muted=1" title="reBot-B601-DM 完整接线上手视频" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+### 柔性夹爪安装
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=117234554899587&bvid=BV1VCb563EvZ&cid=41691711940&p=1&autoplay=0&muted=1" title="柔性夹爪安装" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## 第二步：写入电机ID及零点
 
 :::tip

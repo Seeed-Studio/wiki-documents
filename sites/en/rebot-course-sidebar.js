@@ -95,6 +95,19 @@ const courseSidebar = () => [
       `${C}/Arm_Tutorial_22`,
     ],
   },
+  {
+    type: 'category',
+    label: 'Stage 5: Robot Arm Mathematics and Motion Control',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/Arm_Tutorial_23`,
+      `${C}/Arm_Tutorial_24`,
+      `${C}/Arm_Tutorial_25`,
+      `${C}/Arm_Tutorial_26`,
+    ],
+  },
 ];
 
 const sidebars = {
