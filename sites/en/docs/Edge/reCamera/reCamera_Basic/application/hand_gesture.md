@@ -13,7 +13,7 @@ sku: 102991897, 100029708, 108990120
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 18
 last_update:
-  date: 06/26/2026
+  date: 10/08/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-26'
 updatedAt: '2026-06-26'
@@ -194,9 +194,9 @@ Before running the C++ program, you must stop the default Node-RED services beca
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### Step 4: Run the Executable on the reCamera
