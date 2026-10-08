@@ -24,6 +24,7 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_25/
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import 'katex/dist/katex.min.css';
 
 # 
 
@@ -191,27 +192,37 @@ the path in Cartesian space and the timing in joint space.
 
 Joint-space trajectory:
 
-`theta(t) = theta_start + (theta_end - theta_start) * t`
+$$
+\theta(t) = \theta_{start} + (\theta_{end} - \theta_{start})\,t
+$$
 
 The joint smoothly goes from 0 deg to 90 deg, taking a value every 10% along the way.
 
 Position-space trajectory:
 
-`p(t) = p_start + (p_end - p_start) * t`
+$$
+\mathbf{p}(t) = \mathbf{p}_{start} + (\mathbf{p}_{end} - \mathbf{p}_{start})\,t
+$$
 
-The end moves in a straight line from (0, 0, 0) to (1, 0, 0); intermediate position = start + ratio * direction.
+The end moves in a straight line from $(0, 0, 0)$ to $(1, 0, 0)$; an intermediate position is $\mathbf{p}_{start} + s\,(\mathbf{p}_{end} - \mathbf{p}_{start})$, where the ratio $s$ goes from 0 to 1.
 
-Pros & cons
+**Pros & cons**
 
-Pros:
+The problem is the velocity profile: the joint moves at a constant, non-zero speed and then stops instantly.
+
+$$
+\dot{\theta}(t) = \frac{\theta_{end} - \theta_{start}}{T} \ne 0, \qquad \ddot{\theta}(t) = 0
+$$
+
+**Pros:**
 
 - Simple and easy to compute
 - Done in one line of code
 - High real-time performance
 
-Cons:
+**Cons:**
 
-- Velocity jumps (start/end velocity != midpoint)
+- Velocity jumps at the start and end (it is not zero there)
 - The arm "jolts" at start/stop
 - Not suitable for high-precision tasks
 
@@ -247,16 +258,24 @@ The start/stop "jolt" is the core problem — so finer trajectories use cubic/qu
 |High-speed motion|Cubic (sufficient)|
 |Research / demo|Quintic (smoothest)|
 
-```Plain Text
-Linear   theta(t) = a0 + a1 t
-Cubic    theta(t) = a0 + a1 t + a2 t^2 + a3 t^3
-Quintic  theta(t) = a0 + a1 t + a2 t^2 + a3 t^3 + a4 t^4 + a5 t^5
+$$
+\begin{aligned}
+\text{Linear:}\quad  \theta(t) &= a_0 + a_1 t \\
+\text{Cubic:}\quad   \theta(t) &= a_0 + a_1 t + a_2 t^2 + a_3 t^3 \\
+\text{Quintic:}\quad \theta(t) &= a_0 + a_1 t + a_2 t^2 + a_3 t^3 + a_4 t^4 + a_5 t^5
+\end{aligned}
+$$
 
-Quintic with rest-to-rest boundary conditions:
-  theta(0) = 0, theta_dot(0) = 0, theta_ddot(0) = 0
-  theta(T) = 90 deg, theta_dot(T) = 0, theta_ddot(T) = 0
-  6 conditions, 6 unknowns -> unique solution
-```
+**Quintic with rest-to-rest boundary conditions** — the arm starts at rest and stops at rest:
+
+$$
+\begin{aligned}
+\theta(0) &= 0, & \dot{\theta}(0) &= 0, & \ddot{\theta}(0) &= 0 \\
+\theta(T) &= 90^\circ, & \dot{\theta}(T) &= 0, & \ddot{\theta}(T) &= 0
+\end{aligned}
+$$
+
+Six conditions, six unknowns $a_0, a_1, \ldots, a_5$ — a unique solution.
 
 <a id="control"></a>
 
@@ -268,12 +287,9 @@ Quintic with rest-to-rest boundary conditions:
 
 The torque sent to the motor is **the sum of two things**:
 
-```Plain Text
-tau_cmd = tau_feedforward (from model) + tau_feedback (corrected from error)
-              |                              |
-              |                              +-- fix when something is wrong
-              +-- computed in advance, incl. gravity compensation
-```
+$$
+\tau_{cmd} = \underbrace{\tau_{feedforward}}_{\text{computed in advance, incl. gravity compensation}} + \underbrace{\tau_{feedback}}_{\text{corrected from the error, fixes what goes wrong}}
+$$
 
 **Feedforward: send in advance based on the model**
 
@@ -321,11 +337,12 @@ Feedback is **real-time comparison and real-time correction**:
 
 **What the actual controller looks like**
 
-```Plain Text
-tau_cmd = tau_feedforward + tau_feedback
-       = [M(q) q_ddot + C(q,q_dot) q_dot + G(q)] + [K_p * e + K_d * e_dot]
-         \____ feedforward (incl. gravity) ____/  \__ feedback __/
-```
+$$
+\begin{aligned}
+\tau_{cmd} &= \tau_{feedforward} + \tau_{feedback} \\
+&= \underbrace{\big[ M(q)\,\ddot{q} + C(q, \dot{q})\,\dot{q} + G(q) \big]}_{\text{feedforward (incl. gravity)}} + \underbrace{\big[ K_p\,e + K_d\,\dot{e} \big]}_{\text{feedback}}
+\end{aligned}
+$$
 
 **Gravity is inside feedforward** — no need to compute it separately.
 

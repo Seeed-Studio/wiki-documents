@@ -65,10 +65,6 @@ import 'katex/dist/katex.min.css';
   look-up reference while you work through Chapter 26.
   :::
 
-  <div className="image-frame">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-26/ch26-01.png" alt="VLM versus VLA" />
-  </div>
-
   **Why stage 5 comes after stage 4.** Stage 3 and stage 4 taught the arm to imitate and to follow
   language. Those systems are learned: they see the world and act on it, but they do not *guarantee*
   anything. The moment you need a straight weld seam, a repeatable grasp or a safe emergency stop,
@@ -103,32 +99,49 @@ Forward and inverse kinematics (covered in the next chapter) involve a large num
 
 - A **vector** describes a quantity with direction and magnitude: a position, a velocity, a force.
 - A **matrix** describes a linear mapping: how a vector in one frame becomes a vector in another frame.
-- The three objects used everywhere in robotics are the **3x1 position vector** `p`, the **3x3 rotation matrix** `R`, and the **4x4 homogeneous transform** `T`.
+- The three objects used everywhere in robotics are the **3x1 position vector** $\mathbf{p}$, the **3x3 rotation matrix** $R$, and the **4x4 homogeneous transform** $T$.
 
-A useful sanity check for any rotation matrix `R`:
+A useful sanity check for any rotation matrix $R$:
 
-```text
-R is orthonormal:  R^T R = I
-det(R) = +1        (a proper rotation, no mirroring)
-```
+$$
+\begin{aligned}
+R^\top R &= I && \text{(orthonormal)} \\
+\det(R) &= +1 && \text{(a proper rotation, no mirroring)}
+\end{aligned}
+$$
 
 <details>
 <summary><strong>Worked micro-example: reading a 4x4 transform</strong></summary>
 
-```text
-        [ 0  0  1 | 0.30 ]      R = [ 0  0  1 ]      t = [ 0.30 ]
-    T = [ 0  1  0 | 0.05 ]          [ 0  1  0 ]          [ 0.05 ]
-        [-1  0  0 | 0.42 ]          [-1  0  0 ]          [ 0.42 ]
-        [ 0  0  0 | 1    ]
-```
+$$
+T =
+\begin{pmatrix}
+0 & 0 & 1 & 0.30 \\
+0 & 1 & 0 & 0.05 \\
+-1 & 0 & 0 & 0.42 \\
+0 & 0 & 0 & 1
+\end{pmatrix},
+\qquad
+R =
+\begin{pmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+-1 & 0 & 0
+\end{pmatrix},
+\qquad
+\mathbf{t} =
+\begin{pmatrix}
+0.30 \\ 0.05 \\ 0.42
+\end{pmatrix}
+$$
 
-Read the columns of `R` as the axes of the child frame expressed in the parent frame:
+Read the columns of $R$ as the axes of the child frame expressed in the parent frame:
 
-- child x = `[0, 0, -1]` -> points down in the parent frame
-- child y = `[0, 1, 0]` -> same as the parent y
-- child z = `[1, 0, 0]` -> points along the parent x
+- child x = $[0,\ 0,\ -1]^\top$ -> points down in the parent frame
+- child y = $[0,\ 1,\ 0]^\top$ -> same as the parent y
+- child z = $[1,\ 0,\ 0]^\top$ -> points along the parent x
 
-and read `t` as where the child frame's origin sits. That is all a transform is.
+and read $\mathbf{t}$ as where the child frame's origin sits. That is all a transform is.
 
 </details>
 
@@ -185,9 +198,9 @@ The end-effector frame is established at the robot's end; there is also a tool f
 
 | Frame | Attached to | Origin | Typical use |
 | :--- | :--- | :--- | :--- |
-| World `{world}` | The environment | A fixed point on the table / cell | Task-level coordinates, camera work |
-| Base `{base}` | The robot base | Base center | Root of the kinematic chain |
-| Joint `{j_i}` | Joint `i` | Joint `i` axis | FK / IK internal computation |
+| World $\{world\}$ | The environment | A fixed point on the table / cell | Task-level coordinates, camera work |
+| Base $\{base\}$ | The robot base | Base center | Root of the kinematic chain |
+| Joint $\{j_i\}$ | Joint $i$ | Joint $i$ axis | FK / IK internal computation |
 | Flange | Last joint output | Flange center | Where a tool is mounted |
 | Tool / TCP | The tool itself | Tool center point | Path planning, grasping points |
 
@@ -214,17 +227,21 @@ the wrong side of the object when used with the other.
 
 Where the camera frame appears in a visual grasping pipeline:
 
-```text
-pixel (u, v)  --intrinsics K-->  camera frame  --hand-eye T_cam->tcp-->  end-effector frame
-                                                   --FK-->  base frame  --IK-->  joint angles
-```
+$$
+\begin{aligned}
+\text{pixel } (u, v) &\ \xrightarrow{\ \text{intrinsics } K\ } \text{camera frame} \\
+&\ \xrightarrow{\ \text{hand-eye } T_{\text{cam}\to\text{tcp}}\ } \text{end-effector frame} \\
+&\ \xrightarrow{\ \text{FK}\ } \text{base frame} \\
+&\ \xrightarrow{\ \text{IK}\ } \text{joint angles}
+\end{aligned}
+$$
 
 <a id="transforms"></a>
 
 ## 23.6 Matrix Representation of Coordinate Transformations
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23/ch23-05.png" alt="Elementary frame rotations i, j, k" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23/ch23.jpg" alt="Elementary frame rotations i, j, k" />
 </div>
 
 **Homogeneous** representation unifies "linear transform + translation" into a single matrix multiplication.
@@ -233,10 +250,17 @@ Under **non-homogeneous** representation, translation is an addition outside the
 
 **General homogeneous transform**
 
-```text
-    T = [ R  t ]        R: 3x3 rotation (orientation)
-        [ 0  1 ]        t: 3x1 translation (position)
-```
+$$
+T =
+\begin{pmatrix}
+R & \mathbf{t} \\
+\mathbf{0}^\top & 1
+\end{pmatrix},
+\qquad
+R:\ 3\times3 \text{ rotation (orientation)},
+\qquad
+\mathbf{t}:\ 3\times1 \text{ translation (position)}
+$$
 
 **Translation transform**
 
@@ -343,24 +367,30 @@ $$
 | Z axis | $R_z(\theta)$ | $\begin{pmatrix} c & -s & 0 & 0 \\ s & c & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$ |
 
 :::note
-**Why the bottom row is `[0 0 0 1]`.** It carries no physical meaning; it exists so that the matrix
-product of two transforms is again a transform, and so that a *point* `(x, y, z, 1)` and a
-*direction* `(x, y, z, 0)` can be transformed by the same matrix — the direction ignores the
+**Why the bottom row is $[0\ 0\ 0\ 1]$.** It carries no physical meaning; it exists so that the matrix
+product of two transforms is again a transform, and so that a *point* $(x, y, z, 1)$ and a
+*direction* $(x, y, z, 0)$ can be transformed by the same matrix — the direction ignores the
 translation, the point does not.
 :::
 
 **Composing transforms** — chaining is just matrix multiplication, and the inverse is cheap:
 
-```text
-T_a^c = T_a^b * T_b^c          composition (chain rule)
-(T_a^b)^-1 = T_b^a = [ R^T  -R^T t ]
-                     [  0      1   ]     (R^T instead of a 3x3 inversion)
-```
+$$
+\begin{aligned}
+T_a^c &= T_a^b \, T_b^c && \text{composition (chain rule)} \\
+\left( T_a^b \right)^{-1} = T_b^a &=
+\begin{pmatrix}
+R^\top & -R^\top \mathbf{t} \\
+\mathbf{0}^\top & 1
+\end{pmatrix}
+&& (R^\top \text{ instead of a } 3\times3 \text{ inversion})
+\end{aligned}
+$$
 
 ## 23.7 Euler Angles and Quaternions
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23/ch23-06.png" alt="Roll, pitch, yaw" />
+  <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23/ch23-06.png" alt="Roll, pitch, yaw" />
 </div>
 
 **Euler angles vs. quaternions**
@@ -370,7 +400,7 @@ T_a^c = T_a^b * T_b^c          composition (chain rule)
 
 | Aspect | Euler angles (roll/pitch/yaw) | Quaternion |
 | :--- | :--- | :--- |
-| Numbers | 3 | 4, with the constraint `w^2+x^2+y^2+z^2 = 1` |
+| Numbers | 3 | 4, with the constraint $w^2+x^2+y^2+z^2 = 1$ |
 | Intuitive | Yes, easy to read and log | No |
 | Singularity | Gimbal lock when the middle angle reaches +/-90 deg | None |
 | Interpolation | Poor (jumps, multi-valued) | Good (slerp) |
@@ -386,7 +416,7 @@ convert between the two for you (`rpyToMatrix`, `matrixToRpy`).
 :::
 
 - A **frame** is three axes plus an origin; the arm needs at least world, base, joint, tool and camera frames.
-- `(world) = (base)` on the reBot Arm because the base is bolted down.
+- $\{world\} = \{base\}$ on the reBot Arm because the base is bolted down.
 - A **homogeneous transform** packs rotation and translation into one 4x4 matrix; chaining is multiplication.
 - **Euler angles** for humans, **quaternions** for the machine.
 - Next chapter: use these transforms to compute the end-effector pose from joint angles — and back again.
