@@ -19,7 +19,7 @@ last_update:
   author: Dayu
 createdAt: '2026-09-20'
 url: https://wiki.seeedstudio.com/ai_robotics_deploy_tensorrt_model_connect_on_jetson/
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-24'
 ---
 
 # Deploy TensorRT-Model-Connect on Jetson AGX Orin

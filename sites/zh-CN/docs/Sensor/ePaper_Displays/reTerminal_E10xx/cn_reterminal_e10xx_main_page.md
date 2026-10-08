@@ -9,7 +9,7 @@ last_update:
   date: 09/10/2026
   author: Luki
 createdAt: '2025-07-25'
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/
 ---
 # reTerminal E 系列电子纸显示器概览

@@ -1,5 +1,5 @@
 ---
-description: "Chapter 20 of the Seeed Physical AI Beginner's Course — preparing the reBot VLA dataset: prerequisites, checking the LeRobot dataset, adding language task descriptions, configuring state/action/camera keys, creating meta/modality.json, setting the embodiment tag, verifying joint order and dimensions, and multi-task organization."
+description: 'Chapter 20 of the Seeed Physical AI Beginner''s Course — preparing the reBot VLA dataset: prerequisites, checking the LeRobot dataset, adding language task descriptions, configuring state/action/camera keys, creating meta/modality.json, setting the embodiment tag, verifying joint order and dimensions, and multi-task organization.'
 title: Chapter 20 - Preparing the reBot VLA Dataset
 keywords:
   - reBot
@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-25'
 url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_20/
 ---
 

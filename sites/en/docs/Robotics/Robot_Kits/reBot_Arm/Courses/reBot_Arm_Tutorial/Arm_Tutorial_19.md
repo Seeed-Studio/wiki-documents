@@ -1,5 +1,5 @@
 ---
-description: "Chapter 19 of the Seeed Physical AI Beginner's Course — robot embodiment and the GR00T system architecture: what an embodiment is, joints/state/action definitions, camera and language modalities, the observation and action windows, foundation model fine-tuning, the LeRobot stack, and the reBot Arm's position in GR00T."
+description: 'Chapter 19 of the Seeed Physical AI Beginner''s Course — robot embodiment and the GR00T system architecture: what an embodiment is, joints/state/action definitions, camera and language modalities, the observation and action windows, foundation model fine-tuning, the LeRobot stack, and the reBot Arm''s position in GR00T.'
 title: Chapter 19 - Robot Embodiment and GR00T System Architecture
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-25'
 url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_19/
 ---
 

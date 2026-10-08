@@ -9,7 +9,7 @@ last_update:
   author: youjiang
 createdAt: '2026-03-09'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/
-updatedAt: '2026-03-16'
+updatedAt: '2026-09-23'
 ---
 
 # 在 Jetson Thor 上通过 OpenClaw 控制 SO-Arm

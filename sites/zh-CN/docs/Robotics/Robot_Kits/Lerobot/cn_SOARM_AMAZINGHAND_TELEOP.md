@@ -1,6 +1,6 @@
 ---
 description: 本文档说明如何将 SO-ARM101 从臂与 AmazingHand 灵巧手结合，并通过 LeRobot 进行遥操作。
-title: SO-Arm 与 AmazingHand 
+title: SO-Arm 与 AmazingHand
 keywords:
   - Lerobot
   - SO-ARM
@@ -14,7 +14,7 @@ last_update:
   date: 2026-07-12
   author: ZhuYuan
 createdAt: '2026-07-12'
-updatedAt: '2026-08-10'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/cn/soarm_amazinghand_teleop/
 ---
 # SO-ARM与AmazingHand完整训练指南

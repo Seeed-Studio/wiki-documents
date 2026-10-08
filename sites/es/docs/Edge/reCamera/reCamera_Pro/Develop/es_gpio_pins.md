@@ -15,6 +15,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/es/recamera_pro_gpio_guide/
+createdAt: '2026-08-26'
+updatedAt: '2026-09-23'
 ---
 
 # Guía de uso de pines GPIO en reCamera Pro

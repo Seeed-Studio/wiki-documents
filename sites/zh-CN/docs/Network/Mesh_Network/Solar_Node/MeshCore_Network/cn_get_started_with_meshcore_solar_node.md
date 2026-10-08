@@ -13,7 +13,7 @@ last_update:
   author: Advent Jiang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/
-updatedAt: '2026-09-18'
+updatedAt: '2026-10-08'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 

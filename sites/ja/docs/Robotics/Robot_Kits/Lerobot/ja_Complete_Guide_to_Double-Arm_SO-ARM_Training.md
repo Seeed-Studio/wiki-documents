@@ -1,6 +1,6 @@
 ---
 description: LeRobot を使用した両腕 SO-ARM トレーニングの完全ガイド。
-title: SO-Arm デュアルテレオペレーション 
+title: SO-Arm デュアルテレオペレーション
 keywords:
   - Lerobot
   - SO-ARM
@@ -17,7 +17,7 @@ translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/ja/lerobot_double_arm_so_arm_training/
 createdAt: '2026-07-01'
-updatedAt: '2026-08-10'
+updatedAt: '2026-09-22'
 ---
 
 import Link from '@docusaurus/Link';

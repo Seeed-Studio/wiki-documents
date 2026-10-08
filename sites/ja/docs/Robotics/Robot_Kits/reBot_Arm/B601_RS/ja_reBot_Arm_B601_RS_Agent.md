@@ -1,5 +1,5 @@
 ---
-description: 'wrc_demo 操作ガイド：reBot Arm B601-RS のビジュアル把持デモのための完全な手順 — 環境構築、モデルのダウンロード、LLM の切り替え、ハンドアイキャリブレーション、デモの実行、トラブルシューティング。'
+description: wrc_demo 操作ガイド：reBot Arm B601-RS のビジュアル把持デモのための完全な手順 — 環境構築、モデルのダウンロード、LLM の切り替え、ハンドアイキャリブレーション、デモの実行、トラブルシューティング。
 title: B601-RS と Agent Claw
 keywords:
   - wrc_demo
@@ -18,7 +18,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/wrc_demo_tutorial/
 ---
 

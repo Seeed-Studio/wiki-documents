@@ -1,6 +1,6 @@
 ---
 description: エッジ廃棄物分別の構築、出力契約、実測境界と実装詳細
-title: 'エッジ廃棄物分別：素材クラス、4分類、MQTT'
+title: エッジ廃棄物分別：素材クラス、4分類、MQTT
 keywords:
   - waste sorting
   - waste classification edge AI

@@ -1,6 +1,6 @@
 ---
 description: 使用 SenseCraft 平台将 ONNX 模型转换为 RKNN 格式，然后无需本地工具即可部署到 reCamera Pro。
-title: "SenseCraft ONNX-to-RKNN 转换"
+title: SenseCraft ONNX-to-RKNN 转换
 keywords:
   - reCamera
   - reCamera Pro
@@ -16,6 +16,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_sensecraft/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # SenseCraft ONNX-to-RKNN 转换

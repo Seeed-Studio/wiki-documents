@@ -10,6 +10,9 @@ slug: /sensecraft_robotics_rebot_arm_102_b601_rs
 last_update:
   date: 09/24/2026
   author: Seeed Studio
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/es/sensecraft_robotics_rebot_arm_102_b601_rs/
+updatedAt: '2026-09-24'
 ---
 
 Este tutorial utiliza reBot Arm 102 (brazo líder) y B601 RS (brazo seguidor) con SenseCraft Robotics para presentar el flujo de trabajo completo, desde la creación del proyecto y la configuración del dispositivo hasta la recopilación de datos, el entrenamiento del modelo y el despliegue.

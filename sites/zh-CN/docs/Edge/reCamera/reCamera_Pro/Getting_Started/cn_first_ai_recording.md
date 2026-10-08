@@ -1,6 +1,6 @@
 ---
 description: 您的第一个端到端 reCamera Pro 任务——配置一个由 AI 触发的录像规则，让检测到的目标自动开始录像，然后找到并回放该视频文件。
-title: '第一个任务：检测并录像'
+title: 第一个任务：检测并录像
 keywords:
   - reCamera
   - reCamera Pro
@@ -14,6 +14,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_first_recording/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # 第一个任务：检测并录像

@@ -17,6 +17,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_uart_usage/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # 从外部设备触发拍摄

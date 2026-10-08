@@ -13,7 +13,7 @@ last_update:
   date: 2026-08-05
   author: Sizhaozhou
 createdAt: '2026-08-05'
-updatedAt: '2026-08-05'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_faqs_legacy/
 ---
 <!-- PÁGINA LEGADA (reestruturação do wiki da reCamera Pro, fase 2): esta página foi substituída por Troubleshooting/troubleshooting.md (https://wiki.seeedstudio.com/pt-br/recamera_pro_faqs/), que agora utiliza o slug original /recamera_pro_faqs. Este arquivo é mantido para histórico como rascunho (slug /recamera_pro_faqs_legacy) e é excluído das compilações de produção. Não crie links para esta página. -->

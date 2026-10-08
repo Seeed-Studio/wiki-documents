@@ -1,6 +1,6 @@
 ---
 description: 启动 reCamera Pro，登录 Web UI，开始实时预览，并确认你的首次 AI 检测结果——从开箱到获得一台可用 AI 相机的最快路径。
-title: '快速上手：完成你的首次 AI 检测'
+title: 快速上手：完成你的首次 AI 检测
 keywords:
   - reCamera
   - reCamera Pro
@@ -14,6 +14,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_getting_started/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # 快速上手：完成你的首次 AI 检测

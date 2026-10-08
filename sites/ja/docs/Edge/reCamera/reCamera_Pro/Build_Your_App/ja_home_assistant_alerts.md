@@ -1,6 +1,6 @@
 ---
 description: 特定の音が検出されたときに、MQTT を使用してメッセージとカメラスナップショットを Home Assistant に送信するように reCamera Pro を統合します。
-title: "Home Assistant：音声トリガー付き写真アラート"
+title: Home Assistant：音声トリガー付き写真アラート
 keywords:
   - reCamera
   - reCamera Pro
@@ -16,6 +16,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/ja/recamera_pro_ha_sound_alert/
+createdAt: '2026-07-30'
+updatedAt: '2026-09-23'
 ---
 
 # reCamera Pro と Home Assistant の連携：音声トリガー付き写真アラート

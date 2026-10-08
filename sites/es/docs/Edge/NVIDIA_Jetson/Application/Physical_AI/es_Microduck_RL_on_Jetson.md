@@ -9,7 +9,7 @@ last_update:
   author: Dayu
 createdAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/es/ai_robotics_microduck_rl_on_jetson/
-updatedAt: '2026-09-05'
+updatedAt: '2026-09-17'
 ---
 
 

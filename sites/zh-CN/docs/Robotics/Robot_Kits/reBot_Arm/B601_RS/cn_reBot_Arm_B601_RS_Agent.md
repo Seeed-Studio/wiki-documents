@@ -16,10 +16,9 @@ last_update:
   date: 2026-08-28
   author: Seeed Studio
 translation:
-  skip:
-    - [zh-CN]
+  skip: [[zh-CN]]
 createdAt: '2026-06-15'
-updatedAt: '2026-08-28'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/cn/wrc_demo_tutorial/
 ---
 
