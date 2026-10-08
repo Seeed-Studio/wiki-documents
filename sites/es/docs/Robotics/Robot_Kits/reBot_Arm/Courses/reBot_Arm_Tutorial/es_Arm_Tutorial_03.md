@@ -1,5 +1,5 @@
 ---
-description: Capítulo 3 del Curso de Introducción a la IA Física de Seeed: la lista de hardware práctico necesario para cada etapa, incluyendo unidades de control principales, el reBot Arm, cámaras, brazo líder y soportes imprimibles.
+description: Capítulo 3 del Curso de Introducción a la IA Física de Seeed - la lista de hardware práctico necesario para cada etapa, incluyendo unidades de control principales, el reBot Arm, cámaras, brazo líder y soportes imprimibles.
 title: Capítulo 3 - Selección de hardware para los cursos
 keywords:
   - reBot
