@@ -84,7 +84,7 @@ Todos los capítulos requieren un dispositivo de control principal como punto fi
 | reBot Arm B601 DM/RS | [reBot DM Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html)<br/>[reBot RS Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html) | 1 | - Elige uno de DM/RS<br/>- Para reducir la presión de compra, también puedes adquirir solo las piezas. Seeed también proporciona tutoriales de montaje muy detallados paso a paso.<br/>- Como la fuente de alimentación enviada por Seeed utiliza materiales ignífugos, el precio es algo más alto. También puedes comprar por tu cuenta fuentes de alimentación originales Mean Well (Taiwán). |
 | reBot Arm 102 Leader Arm | [reBot Arm 102 Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html)<br/>[Power for leader arm](https://www.seeedstudio.com/AC-DC-Power-Adapter-DC5521-Male-12V-2A-1500mm-p-6839.html) | 1 | - |
 | Cámara monocular de muñeca 720P | [UVC Monocular Camera](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) | 2 | - |
-| Soporte para cámara de muñeca | [UVC32_mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/UVC32_mount.step) | 1 |  |
+| Soporte para cámara de muñeca | [UVC32_mount.step](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/UVC32_mount.step) | 1 |  |
 | Soporte cenital para cámara Hikvision | [Single Mount + Universal Ring + Live Overhead; Universal](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.49cb2e8dt6KH1K&id=797067194359&mi_id=0000qWvzUV0CAietxWIGsLRo68nEdNUwWmvnKFhXbqbu1Ac) | 1 | - |
 
 ### Etapa 4: VLA e Isaac Groot
@@ -94,7 +94,7 @@ Todos los capítulos requieren un dispositivo de control principal como punto fi
 | reBot Arm B601 DM/RS | [reBot DM Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html)<br/>[reBot RS Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html) | 1 | - Elige uno de DM/RS<br/>- Para reducir la presión de compra, también puedes adquirir solo las piezas. Seeed también proporciona tutoriales de montaje muy detallados paso a paso.<br/>- Como la fuente de alimentación enviada por Seeed utiliza materiales ignífugos, el precio es algo más alto. También puedes comprar por tu cuenta fuentes de alimentación originales Mean Well (Taiwán). |
 | reBot Arm 102 Leader Arm | [reBot Arm 102 Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html)<br/>[Power for leader arm](https://www.seeedstudio.com/AC-DC-Power-Adapter-DC5521-Male-12V-2A-1500mm-p-6839.html) | 1 | - |
 | Cámara monocular de muñeca 720P | [UVC Monocular Camera](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) | 2 | - |
-| Soporte para cámara de muñeca | [UVC32_mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/UVC32_mount.step) | 1 |  |
+| Soporte para cámara de muñeca | [UVC32_mount.step](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/UVC32_mount.step) | 1 |  |
 | Soporte cenital para cámara Hikvision | [Single Mount + Universal Ring + Live Overhead; Universal](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.49cb2e8dt6KH1K&id=797067194359&mi_id=0000qWvzUV0CAietxWIGsLRo68nEdNUwWmvnKFhXbqbu1Ac) | 1 | - |
 
 ### Etapa 5: Matemáticas del brazo robótico y control de movimiento
@@ -109,7 +109,7 @@ Todos los capítulos requieren un dispositivo de control principal como punto fi
 | :--- | :--- | :---: | :--- |
 | reBot Arm B601 DM/RS | [reBot DM Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html)<br/>[reBot RS Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html) | 1 | - Elige uno de DM/RS<br/>- Para reducir la presión de compra, también puedes adquirir solo las piezas. Seeed también proporciona tutoriales de montaje muy detallados paso a paso.<br/>- Como la fuente de alimentación enviada por Seeed utiliza materiales ignífugos, el precio es algo más alto. También puedes comprar por tu cuenta fuentes de alimentación originales Mean Well (Taiwán). |
 | Cámara de profundidad Realsense 435i u Orbbec Gemini2 o cámara estéreo Realsense 405 | [Intel RealSense Depth Camera D435i](https://www.seeedstudio.com/Intel-RealSense-Depth-Camera-D435i-p-4423.html) | 1 | - |
-| Soporte de muñeca para cámara | [D435_Gemini2_Mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/D435_Gemini2_Mount.step)<br/>[D405_305_Mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/D405_305_Mount.step) | 1 |  |
+| Soporte de muñeca para cámara | [D435_Gemini2_Mount.step](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/D435_Gemini2_Mount.step)<br/>[D405_305_Mount.step](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/D405_305_Mount.step) | 1 |  |
 
 ### Etapa 7: ROS2 e integración de sistemas robóticos
 
