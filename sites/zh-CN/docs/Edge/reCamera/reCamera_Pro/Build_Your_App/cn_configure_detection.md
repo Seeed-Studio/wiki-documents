@@ -1,6 +1,6 @@
 ---
 description: 选择要运行的 AI 模型，配置检测类别，设置置信度和 IOU 阈值，控制推理频率，并在 reCamera Pro 上监控实时输出。
-title: "配置检测：类别、阈值和频率"
+title: 配置检测：类别、阈值和频率
 keywords:
   - reCamera
   - reCamera Pro
@@ -16,6 +16,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_ai_inference/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # 配置检测：类别、阈值和频率

@@ -1,6 +1,6 @@
 ---
 description: 在浏览器中观看实时画面、拍照、开始和停止手动录像，并在 reCamera Pro 上在主码流和子码流之间切换。
-title: "预览、拍照和手动录像"
+title: 预览、拍照和手动录像
 keywords:
   - reCamera
   - reCamera Pro
@@ -17,6 +17,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_live_preview/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # 预览、拍照和手动录像

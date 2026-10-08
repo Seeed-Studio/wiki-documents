@@ -12,7 +12,7 @@ last_update:
   date: 08/05/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-08-05'
+updatedAt: '2026-08-26'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome/
 ---
 

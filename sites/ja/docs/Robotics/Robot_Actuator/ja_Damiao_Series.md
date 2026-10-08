@@ -13,7 +13,7 @@ last_update:
   date: 06/1/2025
   author: ZhuYaoHui
 createdAt: '2025-06-01'
-updatedAt: '2026-06-01'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/damiao_series/
 ---
 

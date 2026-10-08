@@ -11,7 +11,7 @@ last_update:
   date: 9/19/2026
   author: Janet
 createdAt: '2023-09-21'
-updatedAt: '2026-09-19'
+updatedAt: '2026-09-20'
 url: https://wiki.seeedstudio.com/es/faq_for_SenseCAP_T1000/
 ---
 

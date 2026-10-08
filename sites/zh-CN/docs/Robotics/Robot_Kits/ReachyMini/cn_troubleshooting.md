@@ -19,7 +19,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-05-19'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/cn/reachymini_troubleshooting/
 ---
 

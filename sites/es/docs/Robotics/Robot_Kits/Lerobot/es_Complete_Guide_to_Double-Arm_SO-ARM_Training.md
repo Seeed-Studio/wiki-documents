@@ -1,6 +1,6 @@
 ---
 description: Guía completa para el entrenamiento de doble brazo SO-ARM con LeRobot.
-title: SO-Arm Teleoperación Dual 
+title: SO-Arm Teleoperación Dual
 keywords:
   - Lerobot
   - SO-ARM
@@ -17,7 +17,7 @@ translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/es/lerobot_double_arm_so_arm_training/
 createdAt: '2026-07-01'
-updatedAt: '2026-08-10'
+updatedAt: '2026-09-22'
 ---
 
 import Link from '@docusaurus/Link';

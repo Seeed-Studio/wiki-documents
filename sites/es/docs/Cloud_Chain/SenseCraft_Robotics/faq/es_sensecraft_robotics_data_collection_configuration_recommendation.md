@@ -10,6 +10,9 @@ slug: /sensecraft_robotics_data_collection_configuration
 last_update:
   date: 09/24/2026
   author: Seeed Studio
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/es/sensecraft_robotics_data_collection_configuration/
+updatedAt: '2026-09-24'
 ---
 
 **Una referencia de selección para la recopilación de datos, la disposición de visión y los parámetros de entrenamiento.**

@@ -525,6 +525,7 @@ html[data-theme='dark'] .robotics-quicklinks {
 .product-card.lekiwi { --rp-accent: #0891b2; --rp-accent-soft: rgba(8, 145, 178, 0.12); --rp-accent-border: rgba(8, 145, 178, 0.30); }
 .product-card.stackforce { --rp-accent: #ca8a04; --rp-accent-soft: rgba(202, 138, 4, 0.13); --rp-accent-border: rgba(202, 138, 4, 0.30); }
 .product-card.reachy { --rp-accent: #0d9488; --rp-accent-soft: rgba(13, 148, 136, 0.12); --rp-accent-border: rgba(13, 148, 136, 0.30); }
+.product-card.amazinghand { --rp-accent: #2563eb; --rp-accent-soft: rgba(37, 99, 235, 0.10); --rp-accent-border: rgba(37, 99, 235, 0.28); }
 .product-card.atom { --rp-accent: #16a34a; --rp-accent-soft: rgba(22, 163, 74, 0.12); --rp-accent-border: rgba(22, 163, 74, 0.30); }
 .product-head {
   min-width: 0;
@@ -679,6 +680,17 @@ html[data-theme='dark'] .robotics-quicklinks {
   max-width: none;
   white-space: nowrap;
 }
+#amazinghand {
+  --rp-cover: url('https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100063642_amazing_hand_right-1_1.jpg');
+}
+#amazinghand.product-card--cover .product-head {
+  background:
+    linear-gradient(0deg, rgba(8, 15, 30, 0.72), transparent 58%) center / 100% 100% no-repeat,
+    var(--rp-cover) center / contain no-repeat,
+    #0c2f57;
+  background-size: 100% 100%, contain;
+}
+
 #lekiwi {
   --rp-cover: url('https://media-cdn.seeedstudio.com/media/catalog/product/f/u/full-kit-0_annotation.jpg');
 }
@@ -878,6 +890,7 @@ html[data-theme='dark'] .robotics-quicklinks {
   border-radius: 32px;
   outline: none;
   touch-action: pan-y;
+  overflow-anchor: none;
 }
 .rotating-showcase:focus-visible {
   outline: 3px solid var(--rp-accent-border);
@@ -978,6 +991,15 @@ html[data-theme='dark'] .robotics-quicklinks {
     box-shadow 0.38s ease,
     border-color 0.28s ease;
 }
+.rotating-product-card-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
 .rotating-showcase .rotating-product-card[data-carousel-distance='0'],
 .rotating-showcase .rotating-product-card[data-carousel-distance='1'] {
   pointer-events: auto;
@@ -1015,6 +1037,23 @@ html[data-theme='dark'] .robotics-quicklinks {
   background-size: 100% 100%, contain, 100% 100%;
   border-radius: inherit;
 }
+.rotating-showcase.is-grid-view .rotating-product-card {
+  transition:
+    transform 0.32s cubic-bezier(0.22, 1.26, 0.36, 1),
+    filter 0.32s ease,
+    opacity 0.32s ease,
+    box-shadow 0.32s ease;
+}
+.rotating-showcase.is-grid-view:has(.rotating-product-card:hover) .rotating-product-card:not(:hover) {
+  opacity: 0.72;
+  filter: saturate(0.78) brightness(0.78);
+  transform: scale(0.96);
+}
+.rotating-showcase.is-grid-view .rotating-product-card:hover {
+  z-index: 2;
+  transform: scale(1.02);
+  box-shadow: var(--rp-shadow-accent);
+}
 .rotating-showcase.is-grid-view .rotating-product-card[data-active='false'] .product-head h3 {
   display: inline-block;
 }
@@ -1026,7 +1065,7 @@ html[data-theme='dark'] .robotics-quicklinks {
   content: none;
   display: none;
 }
-.rotating-showcase.is-grid-view .rotating-product-card > .rotating-product-side {
+.rotating-showcase.is-grid-view .rotating-product-card-inner > .rotating-product-side {
   display: none !important;
 }
 .rotating-showcase.is-grid-view .rotating-showcase-controls,
@@ -1034,28 +1073,30 @@ html[data-theme='dark'] .robotics-quicklinks {
   opacity: 0.32;
   pointer-events: none;
 }
-.rotating-showcase.is-grid-view.is-grid-selecting .rotating-product-card {
-  animation: none;
-  transition:
-    opacity 0.46s ease,
-    filter 0.46s ease,
-    transform 0.52s cubic-bezier(0.4, 0, 0.2, 1);
+.rotating-showcase.is-grid-selecting .rotating-product-card {
+  transition: none !important;
+  animation: none !important;
 }
-.rotating-showcase.is-grid-view.is-grid-selecting .rotating-product-card[data-grid-selected='false'] {
-  opacity: 0;
-  filter: blur(5px) saturate(0.6);
-  transform: translateY(18px) scale(0.94);
+.rotating-showcase.is-grid-selecting .rotating-product-card[data-grid-selected='false'] {
+  animation: rpGridSelectionDim 0.42s cubic-bezier(0.4, 0, 0.2, 1) both !important;
+  opacity: 0 !important;
+  filter: blur(4px) saturate(0.55) brightness(0.75) !important;
+  pointer-events: none !important;
+}
+.rotating-showcase.is-grid-selecting .rotating-product-card[data-grid-selected='true'] {
+  z-index: 40;
+  box-shadow: none;
   pointer-events: none;
 }
-.rotating-showcase.is-grid-view.is-grid-selecting .rotating-product-card[data-grid-selected='true'] {
-  z-index: 5;
-  opacity: 1;
-  transform: translate3d(
-    var(--rp-grid-select-x, 0),
-    var(--rp-grid-select-y, -4px),
-    0
-  ) scale(var(--rp-grid-select-scale, 1.025));
-  box-shadow: var(--rp-shadow-accent);
+.rotating-showcase.is-grid-selecting .rotating-product-card[data-grid-selected='true'] .rotating-product-card-inner {
+  animation: rpGridSelectionFocus 0.62s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform;
+}
+.rotating-showcase.is-grid-selecting .rotating-product-card[data-grid-selected='true'] .rotating-product-side {
+  animation: rpGridSelectionSideReveal 0.3s ease 0.34s both;
+}
+.rotating-showcase.is-grid-selecting .rotating-product-card[data-grid-selected='true'] .rotating-product-leaf {
+  animation-delay: calc(0.34s + var(--rp-leaf-delay));
 }
 .rotating-showcase .rotating-product-card[data-active='false'] .product-head h3 {
   display: none;
@@ -1120,7 +1161,7 @@ html[data-theme='dark'] .robotics-quicklinks {
   filter: saturate(0.68) brightness(0.78);
   pointer-events: auto;
 }
-.rotating-showcase .rotating-product-card > .rotating-product-side {
+.rotating-showcase .rotating-product-card-inner > .rotating-product-side {
   display: none;
 }
 .rotating-showcase .rotating-product-card[data-expanded='true'] {
@@ -1132,7 +1173,7 @@ html[data-theme='dark'] .robotics-quicklinks {
   border-color: transparent;
   box-shadow: none;
 }
-.rotating-showcase .rotating-product-card[data-expanded='true'] > .product-head {
+.rotating-showcase .rotating-product-card[data-expanded='true'] .rotating-product-card-inner > .product-head {
   width: 100%;
   overflow: hidden;
   border: 1px solid var(--rp-border);
@@ -1155,7 +1196,7 @@ html[data-theme='dark'] .robotics-quicklinks {
 .rotating-product-side--right {
   left: calc(100% + 0.7rem);
 }
-.rotating-showcase .rotating-product-card[data-expanded='true'] > .rotating-product-side {
+.rotating-showcase .rotating-product-card[data-expanded='true'] .rotating-product-card-inner > .rotating-product-side {
   display: grid;
   align-content: start;
   gap: 0.8rem;
@@ -1382,6 +1423,39 @@ html[data-theme='dark'] .rotating-showcase-arrow {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes rpGridSelectionFocus {
+  from {
+    transform: translate3d(
+      var(--rp-grid-select-x, 0),
+      var(--rp-grid-select-y, 0),
+      0
+    ) scale(var(--rp-grid-select-scale, 1));
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes rpGridSelectionDim {
+  from {
+    opacity: 1;
+    filter: saturate(1);
+  }
+  to {
+    opacity: 0;
+    filter: blur(4px) saturate(0.55) brightness(0.75);
+  }
+}
+
+@keyframes rpGridSelectionSideReveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

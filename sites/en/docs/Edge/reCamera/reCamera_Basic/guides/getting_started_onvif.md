@@ -37,7 +37,7 @@ Before you begin, prepare the following devices and make sure they are connected
 | Device | Purpose |
 | --- | --- |
 | One reCamera | Runs the ONVIF and RTSP services. reCamera 2002 series, Gimbal, and HQ PoE models are supported. |
-| A Linux computer | Installs and runs SenseCraft Solution to deploy the solution. The example below uses Ubuntu 24.04 x86_64. |
+| A computer | Installs and runs SenseCraft Solution to deploy the solution. The example below uses Ubuntu 24.04 x86_64. |
 | Home Assistant, an NVR, or a VMS (optional) | Discovers reCamera and views or records its video. |
 
 > **Network note:** The HQ PoE model does not support Wi-Fi. Connect it to a PoE-capable switch for both power and network access. Whichever model you use, ensure that reCamera and the client that discovers it are on the same local network. Discovery across subnets usually requires additional network configuration.

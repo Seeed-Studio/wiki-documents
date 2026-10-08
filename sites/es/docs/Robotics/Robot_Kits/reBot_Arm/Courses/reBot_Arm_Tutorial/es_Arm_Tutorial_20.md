@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 20 del Curso de Introducción a la IA Física de Seeed: preparación del conjunto de datos reBot VLA: requisitos previos, comprobación del conjunto de datos de LeRobot, añadido de descripciones de tareas en lenguaje natural, configuración de las claves de estado/acción/cámara, creación de meta/modality.json, establecimiento de la etiqueta de embodiment, verificación del orden de las articulaciones y las dimensiones, y organización multi‑tarea."
+description: 'Capítulo 20 del Curso de Introducción a la IA Física de Seeed: preparación del conjunto de datos reBot VLA: requisitos previos, comprobación del conjunto de datos de LeRobot, añadido de descripciones de tareas en lenguaje natural, configuración de las claves de estado/acción/cámara, creación de meta/modality.json, establecimiento de la etiqueta de embodiment, verificación del orden de las articulaciones y las dimensiones, y organización multi‑tarea.'
 title: Capítulo 20 - Preparación del conjunto de datos reBot VLA
 keywords:
   - reBot
@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_20/
 ---
 

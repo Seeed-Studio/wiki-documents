@@ -19,6 +19,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_imu_tilt_shake_detection/
+createdAt: '2026-07-16'
+updatedAt: '2026-09-23'
 ---
 
 # Usando a IMU integrada da reCamera Pro para detecção de inclinação e agitação

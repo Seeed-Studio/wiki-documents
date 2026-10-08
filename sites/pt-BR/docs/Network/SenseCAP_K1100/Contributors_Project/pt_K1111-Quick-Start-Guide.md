@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2025-09-02'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/pt-br/K1111-Quick-Start-Guide/
 ---
 # Sistema de alarme de monitoramento de umidade do solo

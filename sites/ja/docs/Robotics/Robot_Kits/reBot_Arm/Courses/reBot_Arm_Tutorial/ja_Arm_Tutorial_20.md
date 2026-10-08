@@ -1,5 +1,5 @@
 ---
-description: "Seeed Physical AI Beginner's Course 第20章 — reBot VLA データセットの準備：前提条件、LeRobot データセットの確認、言語タスク記述の追加、state/action/camera キーの設定、meta/modality.json の作成、embodiment タグの設定、関節順序と次元の検証、およびマルチタスク構成。"
+description: Seeed Physical AI Beginner's Course 第20章 — reBot VLA データセットの準備：前提条件、LeRobot データセットの確認、言語タスク記述の追加、state/action/camera キーの設定、meta/modality.json の作成、embodiment タグの設定、関節順序と次元の検証、およびマルチタスク構成。
 title: 第20章 - reBot VLA データセットの準備
 keywords:
   - reBot
@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_20/
 ---
 

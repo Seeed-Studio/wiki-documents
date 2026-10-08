@@ -16,7 +16,7 @@ last_update:
   date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/cn/robotics_page/
 ---
 
@@ -85,7 +85,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot teleoperator adapter</a>
         <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">视觉抓取 Demo</a>
-        <a href="https://github.com/xiehuangbao888/Camera-Mount" target="_blank" rel="noopener noreferrer">相机支架合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/README_zh.md" target="_blank" rel="noopener noreferrer">相机支架合集</a>
       </div>
     </div>
   </div>
@@ -128,7 +128,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot teleoperator adapter</a>
         <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">视觉抓取 Demo</a>
-        <a href="https://github.com/xiehuangbao888/Camera-Mount" target="_blank" rel="noopener noreferrer">相机支架合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/README_zh.md" target="_blank" rel="noopener noreferrer">相机支架合集</a>
       </div>
     </div>
   </div>
@@ -162,6 +162,19 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 </details>
 
 
+<details id="amazinghand" className="product-card amazinghand product-card--cover">
+  <summary className="product-head">
+    <h3>AmazingHand 灵巧手</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-steps">
+      <a className="step-card" href="/cn/hand_amazinghand/"><span className="step-index">1</span><div><b>AmazingHand 入门指南</b></div></a>
+      <a className="step-card" href="/cn/soarm_amazinghand_teleop/"><span className="step-index">2</span><div><b>SO-ARM 与 AmazingHand 联动</b></div></a>
+    </div>
+  </div>
+</details>
+
+
 <details id="reachy" className="product-card reachy product-card--cover">
   <summary className="product-head">
     <h3>Reachy Mini</h3>
@@ -175,6 +188,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </div>
       <div className="mini-track">
         <h4>开发案例</h4>
+        <a href="/cn/reachymini_conversation/">Reachy Mini 豆包语音对话应用</a>
         <a href="/cn/reachymini_development_cases_home_assistant/">Home Assistant 集成</a>
         <a href="/cn/reachymini_development_cases_gripper_voice_control/">Reachy Mini 语音控制 SO-ARM</a>
         <a href="/cn/reachymini_development_cases_sway_screen/">Reachy Mini 屏幕体感控制</a>

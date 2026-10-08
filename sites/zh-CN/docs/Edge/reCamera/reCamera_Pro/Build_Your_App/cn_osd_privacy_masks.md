@@ -15,6 +15,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_osd_masks/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # OSD 叠加与隐私遮罩

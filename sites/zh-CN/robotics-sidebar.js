@@ -241,6 +241,7 @@ const sidebars = {
       collapsed: false,
       items: [
         { type: 'doc', id: `${K}/ReachyMini/development_cases/cn_home_assistant`, label: 'Home Assistant 集成' },
+        { type: 'doc', id: `${K}/ReachyMini/development_cases/cn_ReachyMini_conversation`, label: 'Reachy Mini 豆包语音对话应用' },
         { type: 'doc', id: `${K}/ReachyMini/development_cases/cn_reachymini_voice_control_soarm`, label: 'Reachy Mini 语音控制 SO-ARM' },
         { type: 'doc', id: `${K}/ReachyMini/development_cases/cn_reachymini_sway_screen`, label: 'Reachy Mini 屏幕体感控制' },
       ],

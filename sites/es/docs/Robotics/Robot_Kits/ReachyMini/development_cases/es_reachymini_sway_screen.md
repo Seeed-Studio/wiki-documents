@@ -19,7 +19,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-09-20'
-updatedAt: '2026-09-22'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/es/reachymini_development_cases_sway_screen/
 ---
 

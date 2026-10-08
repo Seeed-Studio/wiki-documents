@@ -18,7 +18,7 @@ last_update:
   date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -164,6 +164,12 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 </div>
 </section>
+</div>
+
+### 柔性夹爪安装
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=117234554899587&bvid=BV1VCb563EvZ&cid=41691711940&p=1&autoplay=0&muted=1" title="柔性夹爪安装" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 相信你已经跟随上方视频完成了电源安装和机械臂组装前期准备工作,接下来开始介绍写入电机ID和校准机械臂的步骤。

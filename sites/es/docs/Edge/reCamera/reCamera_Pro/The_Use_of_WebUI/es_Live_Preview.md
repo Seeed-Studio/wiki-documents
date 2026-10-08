@@ -12,7 +12,7 @@ last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-09'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/es/recamera_pro_live_preview_legacy/
 ---
 <!-- PÁGINA LEGADA (reorganización del wiki de reCamera Pro, fase 2): esta página ha sido reemplazada por Build_Your_App/preview_capture_record.md (https://wiki.seeedstudio.com/es/recamera_pro_live_preview/), que ahora utiliza el slug original /recamera_pro_live_preview. Este archivo se mantiene con fines históricos como borrador (slug /recamera_pro_live_preview_legacy) y se excluye de las compilaciones de producción. No enlaces aquí. -->

@@ -10,6 +10,9 @@ slug: /sensecraft_robotics_so_arm101
 last_update:
   date: 09/24/2026
   author: Seeed Studio
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/cn/sensecraft_robotics_so_arm101/
+updatedAt: '2026-09-24'
 ---
 
 本教程使用 SO-ARM101 主臂 + SO-ARM101 从臂配合 SenseCraft Robotics，介绍从项目创建、设备设置、数据采集到模型训练和运行的完整流程。

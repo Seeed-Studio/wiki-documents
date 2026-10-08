@@ -9,6 +9,9 @@ keywords:
   - reSpeaker XVF3800 常见问题
   - reSpeaker XVF3800 故障排查
   - reSpeaker XVF3800 固件
+createdAt: '2026-09-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_faq/
+updatedAt: '2026-09-03'
 ---
 
 <div class="respeaker-faq-page">

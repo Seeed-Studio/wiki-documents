@@ -1,5 +1,5 @@
 ---
-description: "使用 reSpeaker Clip 的 RTC SDK 通过 BLE 推流实时 Opus 音频：运行 FFT 演示、理解会话建立流程、编写最小接收端并解码实时音频。"
+description: 使用 reSpeaker Clip 的 RTC SDK 通过 BLE 推流实时 Opus 音频：运行 FFT 演示、理解会话建立流程、编写最小接收端并解码实时音频。
 title: 使用 reSpeaker Clip RTC SDK 构建实时音频流
 keywords:
   - reSpeaker clip
@@ -17,7 +17,7 @@ last_update:
   date: 08/24/2026
   author: Ray
 createdAt: '2026-08-24'
-updatedAt: '2026-08-24'
+updatedAt: '2026-08-27'
 url: https://wiki.seeedstudio.com/cn/respeaker_clip_rtc_streaming/
 ---
 

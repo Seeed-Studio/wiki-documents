@@ -10,6 +10,9 @@ slug: /sensecraft_robotics_rebot_arm_102_b601_rs
 last_update:
   date: 09/24/2026
   author: Seeed Studio
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/ja/sensecraft_robotics_rebot_arm_102_b601_rs/
+updatedAt: '2026-09-24'
 ---
 
 このチュートリアルでは、SenseCraft Robotics と reBot Arm 102（リーダーアーム）、B601 RS（フォロワーアーム）を使用して、プロジェクト作成とデバイスセットアップから、データ収集、モデル学習、デプロイまでの一連のワークフローを紹介します。
