@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-17
   author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-09-28'
+updatedAt: '2026-09-25'
 url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_3/
 ---
 
@@ -33,8 +33,8 @@ import '/src/css/rebot-wiki-style.css';
     <h2>3. Seleção de Hardware para os Cursos Subsequentes</h2>
     <p>
       Capítulo 3 do Curso para Iniciantes em IA Física da Seeed — a lista de hardware prático
-      necessária para cada etapa, incluindo unidades de controle principal, o reBot Arm, câmeras, braço líder
-      e suportes imprimíveis.
+      necessária para cada etapa, incluindo unidades de controle principal, o reBot Arm, câmeras,
+      braço líder e suportes imprimíveis.
     </p>
     <div className="hero-actions">
       <a href="#main-control-unit">Unidade de controle principal</a>
@@ -84,7 +84,7 @@ Todos os capítulos exigem um dispositivo de controle principal como ponto final
 | reBot Arm B601 DM/RS | [reBot DM Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html)<br/>[reBot RS Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html) | 1 | - Escolha um entre DM/RS<br/>- Para reduzir a pressão de compra, você também pode adquirir a versão somente com peças. A Seeed também fornece tutoriais de montagem muito detalhados, passo a passo.<br/>- Como a fonte de alimentação enviada pela Seeed usa materiais resistentes ao fogo, o preço é um pouco mais alto. Você também pode comprar por conta própria fontes de alimentação originais Mean Well (Taiwan). |
 | reBot Arm 102 Leader Arm | [reBot Arm 102 Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html)<br/>[Power for leader arm](https://www.seeedstudio.com/AC-DC-Power-Adapter-DC5521-Male-12V-2A-1500mm-p-6839.html) | 1 | - |
 | Câmera Monocular de Pulso 720P | [UVC Monocular Camera](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) | 2 | - |
-| Suporte para Câmera de Pulso | [UVC32_mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/UVC32_mount.step) | 1 | Você precisa imprimir isto por conta própria. Se você não tiver uma impressora, pode entrar em contato com o atendimento ao cliente para obter uma gratuitamente. |
+| Suporte para Câmera de Pulso | [UVC32_mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/UVC32_mount.step) | 1 |  |
 | Suporte Suspenso para Câmera Hikvision | [Single Mount + Universal Ring + Live Overhead; Universal](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.49cb2e8dt6KH1K&id=797067194359&mi_id=0000qWvzUV0CAietxWIGsLRo68nEdNUwWmvnKFhXbqbu1Ac) | 1 | - |
 
 ### Estágio 4: VLA e Isaac Groot
@@ -94,7 +94,7 @@ Todos os capítulos exigem um dispositivo de controle principal como ponto final
 | reBot Arm B601 DM/RS | [reBot DM Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html)<br/>[reBot RS Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html) | 1 | - Escolha um entre DM/RS<br/>- Para reduzir a pressão de compra, você também pode adquirir a versão somente com peças. A Seeed também fornece tutoriais de montagem muito detalhados, passo a passo.<br/>- Como a fonte de alimentação enviada pela Seeed usa materiais resistentes ao fogo, o preço é um pouco mais alto. Você também pode comprar por conta própria fontes de alimentação originais Mean Well (Taiwan). |
 | reBot Arm 102 Leader Arm | [reBot Arm 102 Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html)<br/>[Power for leader arm](https://www.seeedstudio.com/AC-DC-Power-Adapter-DC5521-Male-12V-2A-1500mm-p-6839.html) | 1 | - |
 | Câmera Monocular de Pulso 720P | [UVC Monocular Camera](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) | 2 | - |
-| Suporte para Câmera de Pulso | [UVC32_mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/UVC32_mount.step) | 1 | Você precisa imprimir isto por conta própria. Se você não tiver uma impressora, pode entrar em contato com o atendimento ao cliente para obter uma gratuitamente. |
+| Suporte para Câmera de Pulso | [UVC32_mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/UVC32_mount.step) | 1 |  |
 | Suporte Suspenso para Câmera Hikvision | [Single Mount + Universal Ring + Live Overhead; Universal](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.49cb2e8dt6KH1K&id=797067194359&mi_id=0000qWvzUV0CAietxWIGsLRo68nEdNUwWmvnKFhXbqbu1Ac) | 1 | - |
 
 ### Estágio 5: Matemática do Braço Robótico e Controle de Movimento
@@ -109,7 +109,7 @@ Todos os capítulos exigem um dispositivo de controle principal como ponto final
 | :--- | :--- | :---: | :--- |
 | reBot Arm B601 DM/RS | [reBot DM Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html)<br/>[reBot RS Robotic Arm with Power Supply and Wood Clamp](https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html) | 1 | - Escolha um entre DM/RS<br/>- Para reduzir a pressão de compra, você também pode adquirir a versão somente com peças. A Seeed também fornece tutoriais de montagem muito detalhados, passo a passo.<br/>- Como a fonte de alimentação enviada pela Seeed usa materiais resistentes ao fogo, o preço é um pouco mais alto. Você também pode comprar por conta própria fontes de alimentação originais Mean Well (Taiwan). |
 | Câmera de Profundidade Realsense 435i ou Orbbec Gemini2 ou Câmera Estéreo Realsense 405 | [Intel RealSense Depth Camera D435i](https://www.seeedstudio.com/Intel-RealSense-Depth-Camera-D435i-p-4423.html) | 1 | - |
-| Suporte de Pulso para Câmera | [D435_Gemini2_Mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/D435_Gemini2_Mount.step)<br/>[D405_305_Mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/D405_305_Mount.step) | 1 | Você precisa imprimir isto por conta própria. Se você não tiver uma impressora, pode entrar em contato com o atendimento ao cliente para obter uma gratuitamente. |
+| Suporte de Pulso para Câmera | [D435_Gemini2_Mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/D435_Gemini2_Mount.step)<br/>[D405_305_Mount.step](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-3/D405_305_Mount.step) | 1 |  |
 
 ### Estágio 7: ROS2 e Integração de Sistema Robótico
 
