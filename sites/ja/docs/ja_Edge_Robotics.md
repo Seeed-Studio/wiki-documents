@@ -92,7 +92,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot テレオペレータアダプタ</a>
         <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">ビジュアルグラスピングデモ</a>
-        <a href="https://github.com/xiehuangbao888/Camera-Mount" target="_blank" rel="noopener noreferrer">カメラマウントコレクション</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">カメラマウントコレクション</a>
       </div>
     </div>
   </div>
@@ -141,7 +141,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot テレオペレータアダプタ</a>
         <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">ビジュアルグラスピングデモ</a>
-        <a href="https://github.com/xiehuangbao888/Camera-Mount" target="_blank" rel="noopener noreferrer">カメラマウントコレクション</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">カメラマウントコレクション</a>
       </div>
     </div>
   </div>
@@ -170,6 +170,19 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Isaac Lab 強化学習</b></div></a>
         <a className="step-card optional" href="/ja/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
+    </div>
+  </div>
+</details>
+
+
+<details id="amazinghand" className="product-card amazinghand product-card--cover">
+  <summary className="product-head">
+    <h3>AmazingHand デクスタラスハンド</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-steps">
+      <a className="step-card" href="/ja/hand_amazinghand/"><span className="step-index">1</span><div><b>AmazingHand 入門ガイド</b></div></a>
+      <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">2</span><div><b>SO-ARM と AmazingHand の連携</b></div></a>
     </div>
   </div>
 </details>

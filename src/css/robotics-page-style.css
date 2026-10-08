@@ -525,6 +525,7 @@ html[data-theme='dark'] .robotics-quicklinks {
 .product-card.lekiwi { --rp-accent: #0891b2; --rp-accent-soft: rgba(8, 145, 178, 0.12); --rp-accent-border: rgba(8, 145, 178, 0.30); }
 .product-card.stackforce { --rp-accent: #ca8a04; --rp-accent-soft: rgba(202, 138, 4, 0.13); --rp-accent-border: rgba(202, 138, 4, 0.30); }
 .product-card.reachy { --rp-accent: #0d9488; --rp-accent-soft: rgba(13, 148, 136, 0.12); --rp-accent-border: rgba(13, 148, 136, 0.30); }
+.product-card.amazinghand { --rp-accent: #2563eb; --rp-accent-soft: rgba(37, 99, 235, 0.10); --rp-accent-border: rgba(37, 99, 235, 0.28); }
 .product-card.atom { --rp-accent: #16a34a; --rp-accent-soft: rgba(22, 163, 74, 0.12); --rp-accent-border: rgba(22, 163, 74, 0.30); }
 .product-head {
   min-width: 0;
@@ -679,6 +680,17 @@ html[data-theme='dark'] .robotics-quicklinks {
   max-width: none;
   white-space: nowrap;
 }
+#amazinghand {
+  --rp-cover: url('https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100063642_amazing_hand_right-1_1.jpg');
+}
+#amazinghand.product-card--cover .product-head {
+  background:
+    linear-gradient(0deg, rgba(8, 15, 30, 0.72), transparent 58%) center / 100% 100% no-repeat,
+    var(--rp-cover) center / contain no-repeat,
+    #0c2f57;
+  background-size: 100% 100%, contain;
+}
+
 #lekiwi {
   --rp-cover: url('https://media-cdn.seeedstudio.com/media/catalog/product/f/u/full-kit-0_annotation.jpg');
 }
