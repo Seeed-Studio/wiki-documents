@@ -10,6 +10,9 @@ slug: /sensecraft_robotics_rebot_arm_102_b601_dm
 last_update:
   date: 09/24/2026
   author: Seeed Studio
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/cn/sensecraft_robotics_rebot_arm_102_b601_dm/
+updatedAt: '2026-09-24'
 ---
 
 本教程使用 reBot Arm 102（主臂）和 B601 DM（从臂）配合 SenseCraft Robotics，介绍从项目创建、设备设置、数据采集到模型训练和运行的完整流程。

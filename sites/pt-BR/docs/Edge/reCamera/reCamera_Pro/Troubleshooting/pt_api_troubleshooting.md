@@ -13,6 +13,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_api_faq/
+createdAt: '2026-07-16'
+updatedAt: '2026-09-23'
 ---
 
 # Solucionar Problemas de Chamadas de API

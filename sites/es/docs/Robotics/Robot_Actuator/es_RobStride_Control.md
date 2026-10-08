@@ -14,7 +14,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-11-19'
-updatedAt: '2026-06-08'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/es/robstride_control/
 ---
 

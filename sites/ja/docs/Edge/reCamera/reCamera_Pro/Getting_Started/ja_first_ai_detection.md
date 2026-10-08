@@ -1,6 +1,6 @@
 ---
 description: reCamera Pro の電源を入れ、Web UI にログインし、ライブプレビューを開始して、最初の AI 検出結果を確認します。開封から動作する AI カメラまで最速で到達するための手順です。
-title: 'クイックスタート：最初の AI 検出を確認する'
+title: クイックスタート：最初の AI 検出を確認する
 keywords:
   - reCamera
   - reCamera Pro
@@ -14,6 +14,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/ja/recamera_pro_getting_started/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # クイックスタート：最初の AI 検出を確認する

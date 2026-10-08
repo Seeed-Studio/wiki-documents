@@ -1,5 +1,5 @@
 ---
-description: 'Seeed Physical AI Beginner''s Course 第14章 — データセット構造と品質検査：ディスク上に実際に保存されているもの、4つの品質基準、再生と画像チェック、問題が見つかったときにどうするか。'
+description: Seeed Physical AI Beginner's Course 第14章 — データセット構造と品質検査：ディスク上に実際に保存されているもの、4つの品質基準、再生と画像チェック、問題が見つかったときにどうするか。
 title: 第14章 - データセット構造と品質検査
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-19
   author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_14/
 ---
 

@@ -15,7 +15,7 @@ last_update:
   date: 07/09/2026
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-09-01'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/cn/recomputer_j501_mini_getting_started/
 ---
 # Mini J501 载板硬件与快速上手

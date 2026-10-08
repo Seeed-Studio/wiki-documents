@@ -8,6 +8,8 @@ last_update:
   date: 09/05/2026
   author: Dayu
 createdAt: '2026-09-04'
+url: https://wiki.seeedstudio.com/cn/ai_robotics_microduck_rl_jetson_environment/
+updatedAt: '2026-09-05'
 ---
 
 # 在 Jetson 上部署 Microduck 强化学习环境

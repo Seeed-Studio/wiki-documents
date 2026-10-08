@@ -13,7 +13,7 @@ last_update:
   author: Advent Jiang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/
-updatedAt: '2026-09-18'
+updatedAt: '2026-09-30'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -259,15 +259,26 @@ If you need an antenna with higher gain, we recommend the [860-930MHz 3dBi fiber
 
 ### Power on the device
 
-The device needs to be activated by connecting the USB cable. On startup, the blue LED lights up for about 3s, which means that the device has been successfully turned on.
+The device powers on as soon as power is applied: connecting USB, a battery, or a solar supply makes the MCU start running on power-on reset (power-on works on all firmware versions). For firmware v1.14.1 and later, if the device is in the off state, you can also press and release the power button briefly to wake it up.
 
-The TX LED only blinks when the Solar Node itself transmits LoRa data (for example, when sending an advert). Receiving data does not turn on the TX LED. During LoRa TX, the LED color depends on the firmware version - see the firmware version differences above.
+To confirm the device has powered on successfully, use either of these two reliable methods:
+
+1. About 16 seconds after power-on, the TX LED flashes once — after boot, the device automatically sends an advert, and the TX LED blinks at the moment of transmission, indicating the device is on.
+2. Or open `https://meshcore.io/flasher`, click Console, connect to the device over serial, and send the `ver` command. If a valid version string is returned, the device has powered on successfully and the firmware is running normally.
+
+The TX LED only blinks when the Solar Node itself transmits LoRa data (for example, when sending an advert). Receiving data does not light up the TX LED. The TX LED color depends on the firmware version (see "Firmware Version Differences" above): v1.12.0–v1.14.0 = blue, v1.14.1–v1.15.0 = white, v1.16.0 and later = blue.
 
 :::tip
 **Power button (power on/off)**
 
-- MeshCore v1.14.0 and earlier: long-pressing the Power button to power on/off is `NOT` supported. If long-pressing Power has no response, this is the normal firmware version behavior, not a button fault.
-- MeshCore v1.14.1 and later: long-press the Power button for about `3s` to turn the device on/off. You will see a white light blink shortly, which indicates the device is successfully turning on/off.
+MeshCore v1.14.0 and earlier do not support powering on/off by long-pressing the power button. To power on, apply power (USB / battery / solar — any single supply is enough to run it). The device cannot be powered off with the power button — this is normal behavior for these firmware versions, not a button fault.
+
+MeshCore v1.14.1 and later support the power button, as follows:
+
+- Power on: either apply power, or — when the device is off — briefly press the power button to wake it up;
+- Power off: press and hold the power button for about 1.5 seconds, then release, to enter the off state.
+
+Note: the power-on/off action itself lights up no indicator LED — the firmware only blinks the TX LED when transmitting LoRa data, and its color is either blue or white depending on the version.
 
 **Button reference**
 

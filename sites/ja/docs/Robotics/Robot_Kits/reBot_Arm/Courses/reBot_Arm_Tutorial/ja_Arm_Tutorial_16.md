@@ -1,5 +1,5 @@
 ---
-description: 'Seeed Physical AI Beginner''s Course の第16章 — 最初の ACT ポリシーを学習する：バッチサイズ、学習率とステップ数、チェックポイント管理、学習の開始、loss と GPU 状態のモニタリング、中断した学習の再開。'
+description: Seeed Physical AI Beginner's Course の第16章 — 最初の ACT ポリシーを学習する：バッチサイズ、学習率とステップ数、チェックポイント管理、学習の開始、loss と GPU 状態のモニタリング、中断した学習の再開。
 title: 第16章 - 最初の ACT ポリシーを学習する
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-19
   author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_16/
 ---
 

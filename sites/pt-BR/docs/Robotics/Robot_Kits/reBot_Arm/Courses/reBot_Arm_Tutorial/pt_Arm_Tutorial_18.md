@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 18 do Curso para Iniciantes em IA Física da Seeed — fundamentos de aprendizado multimodal e VLA: visão/linguagem/ação, VLM vs VLA, ACT vs VLA, tarefas condicionadas por linguagem, tarefa única vs múltiplas tarefas vs generalização, ações contínuas vs tokens de ação, e capacidades e limitações de VLA."
+description: 'Capítulo 18 do Curso para Iniciantes em IA Física da Seeed — fundamentos de aprendizado multimodal e VLA: visão/linguagem/ação, VLM vs VLA, ACT vs VLA, tarefas condicionadas por linguagem, tarefa única vs múltiplas tarefas vs generalização, ações contínuas vs tokens de ação, e capacidades e limitações de VLA.'
 title: Capítulo 18 - Aprendizado Multimodal e Fundamentos de VLA
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_18/
 ---
 

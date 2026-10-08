@@ -15,7 +15,7 @@ last_update:
 translation:
   skip: [[zh-CN]]
 createdAt: '2026-08-17'
-updatedAt: '2026-08-18'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';

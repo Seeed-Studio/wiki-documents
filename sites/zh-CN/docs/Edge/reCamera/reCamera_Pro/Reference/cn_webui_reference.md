@@ -16,6 +16,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_webui_reference/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # Web UI 参考

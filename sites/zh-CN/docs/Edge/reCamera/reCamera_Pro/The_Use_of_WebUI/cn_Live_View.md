@@ -12,7 +12,7 @@ last_update:
   date: 07/09/2026
   author: yylin
 createdAt: '2026-07-09'
-updatedAt: '2026-07-09'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/recamera_pro_live_view_legacy/
 ---
 <!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：此页面已拆分到新的任务指南中；其内容主要迁移到 Build_Your_App/preview_capture_record.md（https://wiki.seeedstudio.com/cn/recamera_pro_live_preview/）。旧 URL /recamera_pro_live_view/ 通过该页面 frontmatter 中的 aliases 条目重定向到 /recamera_pro_live_preview/。此文件作为草稿（slug /recamera_pro_live_view_legacy）保留以供历史记录，并从正式构建中排除。请不要在此处添加链接。 -->

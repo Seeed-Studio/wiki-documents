@@ -14,7 +14,7 @@ last_update:
   date: 07/15/2026
   author: Sizhao zhou
 createdAt: '2026-07-15'
-updatedAt: '2026-07-15'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/recamera_pro_api_common_conventions_legacy/
 ---
 <!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：本页已被 Reference/API/common_conventions.md（https://wiki.seeedstudio.com/cn/recamera_pro_api_common_conventions/）取代，后者现在使用原始 slug /recamera_pro_api_common_conventions。此文件作为草稿（slug /recamera_pro_api_common_conventions_legacy）保留以供历史记录，并不会被包含在正式构建中。请不要链接到本页。 -->

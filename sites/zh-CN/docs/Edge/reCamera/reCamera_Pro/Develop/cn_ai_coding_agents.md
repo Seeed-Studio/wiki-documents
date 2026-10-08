@@ -17,6 +17,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_development_cpp_skill/
+createdAt: '2026-08-18'
+updatedAt: '2026-09-23'
 ---
 
 # 使用 AI 编码代理开发 reCamera Pro 应用

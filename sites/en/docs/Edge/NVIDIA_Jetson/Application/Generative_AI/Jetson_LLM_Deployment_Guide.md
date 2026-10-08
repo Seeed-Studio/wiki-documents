@@ -16,6 +16,9 @@ slug: /ai_robotics_deploy_ai_models_on_jetson
 last_update:
   date: 09/25/2026
   author: Seeed Wiki Team
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/ai_robotics_deploy_ai_models_on_jetson/
+updatedAt: '2026-09-28'
 ---
 
 # Deploy AI Models on Jetson: What Can Run and How

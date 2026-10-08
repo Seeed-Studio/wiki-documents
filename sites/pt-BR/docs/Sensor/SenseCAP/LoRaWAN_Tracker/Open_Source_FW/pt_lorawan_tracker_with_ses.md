@@ -10,7 +10,7 @@ last_update:
   date: 9/1/2026
   author: Advent Jiang
 createdAt: '2025-01-09'
-updatedAt: '2026-03-16'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/pt-br/open_source_lorawan/
 ---
 

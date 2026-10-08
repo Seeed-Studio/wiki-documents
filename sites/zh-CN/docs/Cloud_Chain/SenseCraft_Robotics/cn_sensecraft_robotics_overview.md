@@ -10,6 +10,9 @@ slug: /sensecraft_robotics
 last_update:
   date: 09/24/2026
   author: Seeed Studio
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/cn/sensecraft_robotics/
+updatedAt: '2026-09-24'
 ---
 
 ## 1. 软件介绍

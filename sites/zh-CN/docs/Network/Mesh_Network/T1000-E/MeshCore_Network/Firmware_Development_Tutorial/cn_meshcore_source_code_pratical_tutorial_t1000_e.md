@@ -14,7 +14,7 @@ last_update:
   author: Michelle Huang
 url: https://wiki.seeedstudio.com/cn/meshcore_source_code_pratical_tutorial_t1000_e/
 createdAt: '2026-03-27'
-updatedAt: '2026-09-18'
+updatedAt: '2026-09-28'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
