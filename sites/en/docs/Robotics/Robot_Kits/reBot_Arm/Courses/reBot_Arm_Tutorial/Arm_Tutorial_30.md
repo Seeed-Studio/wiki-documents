@@ -74,6 +74,11 @@ Advantages of this architecture:
 - Motion control is a safety loop and must run locally
 
 ### Two interaction modes
+| Mode | Name | Interaction Method | Applicable Scenarios | Internet Required |
+| ---- | ---- | ---- | ---- | ---- |
+| Mode 1 | DOA Sound Source Tracking | Automatically detect the direction of sound source and turn towards it | Exhibition demos, interactive installations | No |
+| Mode 2 | Voice Command Control | Hold Enter key to control | Voice assistant, teaching demonstrations | Yes (Groq API) |
+
 
 ### System architecture
 
@@ -116,6 +121,15 @@ You speak / make a sound
 ## 30.2 Hardware Preparation
 
 ### What to Prepare
+| Component | Model | Qty | General Function | Purchase Recommendation |
+| ---- | ---- | ---- | ---- | ---- |
+| Robotic Arm | reBot Arm B601-DM | 1 | The "body" to execute motions | [Official Seeed Studio](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html) |
+| Microphone Array | reSpeaker XVF3800 | 1 | Capture sound and detect direction | [Official Seeed Studio](https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html) |
+| Host PC | Ubuntu 22.04 PC | 1 | The "brain" running programs | x86_64 architecture |
+| USB Cable | USB-A to USB-C | 2 | Device connection | Usually included with device |
+| Woodworking Clamp | 3 inch or larger | 2 | Fix the base of robotic arm | [Official Seeed Studio](https://www.seeedstudio.com/6-Inch-G-Clamp-p-6912.html)   |
+| Power Supply | 24V 15A (XT30 connector) | 1 | Power the robotic arm |  [Official Seeed Studio](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)  |
+
 
 #### Why this hardware
 
@@ -161,31 +175,10 @@ Windows users' options:
 
 ### Hardware Wiring Diagram
 
-```text
-+-----------------------------------+
-          |          Ubuntu 22.04 PC            |
-          |   +----------+                      |
-          |  |  Python  |  ←-- runs main prog |
-          |  |  3.10    |                      |
-          |   +----------+                      |
-          |          |                          |
-          |   +------+-----+                  |
-          |  |  Groq API   |  ←-- cloud AI    |
-          |  |  (Internet)  |                 |
-          |   +-------------+                  |
-          +-----+--------+--------------------+
-                |        |
-            USB-C cable  USB-C cable
-                |        |
-          +-----+--+  +--+-----------+
-          |reSpeaker|  | reBot Arm    |
-          |4 mics  |  |  B601-DM      |
-          +--------+  +--------------+
-                |
-          +-----+------+
-          |speaker/phone|  (optional, for voice broadcast)
-          +-------------+
-```
+<div className="image-frame">
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-30/ch30-01.png" alt="Hand-eye calibration AX = XB" />
+</div>
+
 
 Wiring steps:
 
@@ -387,27 +380,6 @@ Security reminder:
 - Do not post screenshots on social media
 - If leaked, immediately delete and regenerate it in the Groq console
 
-### Proxy setup (if needed)
-
-Test:
-
-```bash
-ping console.groq.com -c 3
-```
-
-If it does not connect, configure a proxy:
-
-```python
-VOICE_CFG = {
-    ...
-    "proxy": "http://192.168.4.7:7897",  # your proxy address
-}
-```
-
-Common proxy ports:
-
-- Clash: `http://127.0.0.1:7890`
-- v2rayN: `http://127.0.0.1:10809`
 
 ## 30.4 Hardware Connection and Assembly
 

@@ -62,23 +62,16 @@ This practice covers:
 - Grasp pose computation;
 - Arm grasp control.
 
-Final completion: **autonomous visual grasping task**. Final flow:
-
-```text
-camera observes environment
-v
-recognize target
-v
-compute target position
-v
-arm moves
-v
-gripper grasps
-v
-move and place
-```
 
 ## 29.2 Hardware Setup
+
+| Component | Model / Requirements |
+| ---- | ---- |
+| Robotic Arm | reBot Arm B601 (2 configurations: DM / RS) |
+| Depth Camera | Orbbec Gemini 2, Intel RealSense D435i / D405 |
+| Communication Interface | USB2CAN serial bridge (for robotic arm); USB 3.0 (for camera) |
+| Host PC | Ubuntu 22.04+, Python 3.10+, x86_64 |
+
 
 ### Wiring
 
@@ -199,43 +192,17 @@ cd ../..
         python -c "import pyrealsense2; print('pyrealsense2 OK')"
         ```
 
-    - If the system needs the full RealSense toolchain or udev rules, refer to the RealSense SDK documentation to install `librealsense2`.
-    - **SDK resources**
 
 ## 29.4 RGB-D Camera Installation
 
-Choose the camera mounting method based on experiment needs.
+<div className="image-frame">
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-01.png" alt="Hand-eye calibration AX = XB" />
+</div>
 
-Eye-to-Hand:
+<div className="image-frame">
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-02.png" alt="Hand-eye calibration AX = XB" />
+</div>
 
-- Camera fixed, observing the workspace.
-    - add image
-- Calibration board workflow
-    - Fix the calibration board as shown in the diagram
-    - Run the calibration program
-        - Key points of the program
-    - Obtain the calibration result: the calibration matrix
-
-Eye-in-Hand:
-
-- Camera mounted on the arm end.
-    - add image
-- Calibration board workflow
-    - Download and print the calibration board. To avoid print scaling making the board smaller than intended, verify with a ruler that the ArUco board is actually 100mm x 100mm.
-    - Fix the calibration board as shown in the diagram
-    - Run the calibration program
-        - Key points of the program
-    - Obtain the calibration result: the calibration matrix
-
-### Adjusting the camera viewpoint
-
-- Adjust: height, angle, working distance.
-- Goal: keep the target fully in view.
-
-### Depth data test
-
-- Observe: the Depth image.
-- Check: holes or obvious noise. If depth is abnormal, downstream localization will fail.
 
 <a id="grasping"></a>
 

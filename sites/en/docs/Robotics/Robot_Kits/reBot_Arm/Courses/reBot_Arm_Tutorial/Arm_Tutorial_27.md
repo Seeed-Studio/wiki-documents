@@ -68,19 +68,10 @@ Because the arm does not know:
 
 Therefore robot vision must complete a full process:
 
-```text
-RGB image capture
-    |
-object detection / instance segmentation
-    |
-match depth for the corresponding pixels
-    |
-pixel coordinates -> camera 3D coordinates
-    |
-hand-eye calibration coordinate transform (camera -> arm frame)
-    |
-motion planning + grasp execution
-```
+<div className="image-frame">
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01-1.png" alt="Robot vision vs ordinary computer vision" />
+</div>
+
 
 <a id="robot-vision"></a>
 
@@ -335,30 +326,6 @@ Calibration error and grasp point, homogeneous transform X
     - Depth: tells the robot how far each pixel is from the camera?
 - A point cloud is obtained by converting RGB-D:
 
-    ```text
-    (x,y,z)
-    (x,y,z)
-    (x,y,z)
-    ...
-    ```
-
-- Composed of many 3D points:
-
-    ```text
-    point cloud model
-
-           . . .
-        . .     .
-      .           .
-      .           .
-        . . . . .
-    ```
-
-- Each point represents a spatial position on the object's surface; with color it is a colored point cloud.
-
-    ```text
-    (x,y,z,R,G,B)
-    ```
 
 ### Uses of point clouds
 

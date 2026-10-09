@@ -74,17 +74,6 @@ In a real robot system, the robot does not face an already annotated target posi
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28/ch28-01.png" alt="Four-stage robot vision pipeline" />
 </div>
 
-Robot vision is a pipeline where each stage's output feeds the next:
-
-```text
-object detection -> segmentation mask -> OBB -> grasp pose estimation
-   |           |         |          |
-   |           |         |          +-> 6-DoF pose
-   |           |         +-> short-edge direction = gripper open/close direction
-   |           +-> pixel-level ROI, used to crop the point cloud
-   +-> class + coarse position
-```
-
 Each stage has its own technical choices:
 
 | Stage | Output | Typical algorithms |
@@ -167,26 +156,6 @@ results = model.predict(image)
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28/ch28-04.png" alt="OBB versus horizontal box for grasping" />
 </div>
 
-A horizontal box contains lots of background for tilted objects:
-
-```text
-[diagram: a wrench tilted 45 degrees]
-
-Horizontal box:
-+--------------+
-|  \          |
-|   \ wrench  |
-|    \        |
-+--------------+
-background ~40%
-
-OBB box:
-    +===+
-   |   |  hugs the wrench
-    +===+
-background ~5%
-```
-
 The OBB short-edge direction directly gives the gripper open/close direction—the key input for downstream 6-DoF grasp estimation.
 
 ### Oriented Bounding Box (OBB) Principles
@@ -195,92 +164,6 @@ The OBB short-edge direction directly gives the gripper open/close direction—t
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28/ch28-05.png" alt="OBB five parameters and angle periodicity" />
 </div>
 
-An oriented box is represented by 5 parameters: OBB = (cx, cy, w, h, theta). Parameter descriptions:
-
-- (cx, cy): center pixel coordinates
-- w: width (short or long edge, must be specified beforehand)
-- h: height (perpendicular to w)
-- theta: rotation angle (radians or degrees)
-
-    ```text
-    +-------------+
-            |               | h
-       theta ←|-------------|+
-            |      cx,cy    |
-            +-------------+
-                  w
-    ```
-
-So OBB provides the geometric basis for grasp direction:
-
-```python
-# pseudocode
-short_edge = OBB short-edge direction        # gripper open/close direction
-approach_axis = -position_to_camera  # approach direction (object toward camera)
-open_axis = short_edge            # vision frame Y axis
-grip_axis = cross(open_axis, approach_axis)  # vision frame X axis
-```
-
-#### The angle periodicity problem
-
-- Rotation 0 and 180 degrees are geometrically equivalent for a long object, but L1/L2 loss computes them as "180 degrees apart," causing unstable training.
-
-    ```text
-    [diagram: angle periodicity]
-
-        +===+         +===+
-        |   |   <=>    |   |
-        +===+         +===+
-        theta = 0 deg   theta = 180 deg
-    ```
-
-- Solution: IoU loss (Probiou). IoU (Intersection over Union) is naturally insensitive to rotation:
-    - At rotation 0, IoU = 1.0 (overlapping)
-    - At rotation 90, IoU = 0.0 (not overlapping)
-    - At rotation 180, IoU = 1.0 (overlapping)
-    - So directly optimizing IoU avoids angle periodicity and learns the more essential notion of "overlap."
-    - IoU formula
-        - IoU (Intersection over Union) is the most basic measure of "how much two boxes overlap" in detection:
-
-            ```text
-            [diagram: intersection and union of two rectangles A, B]
-
-               A: +----+
-                  |    |    B: +----+
-                  |  +-|----+    |
-                  +--+-+    |    |
-                     +------+    |
-
-               A intersect B: overlapping region (small middle rectangle)
-               A union B: total area covered by A and B
-            ```
-
-    - Mathematical form:
-
-        $$
-        IoU(A,B)=\frac{\mid A\cap B \mid}{\mid A\cup B \mid}
-        $$
-
-    - Fast computation for axis-aligned rectangles; for a normal horizontal box (x1, y1, x2, y2), it can be computed analytically:
-
-        ```text
-        Case 1: intersecting
-           +------+
-           |  A   |
-           |   +--+--+
-           |   |int|  |
-           +---+--+  |
-               |  B  |
-               +-----+
-
-        Case 2: not intersecting (IoU=0)
-           +---+
-           | A |
-           +---+
-                    +---+
-                    | B |
-                    +---+
-        ```
 
 ### Post-processing: NMS
 
@@ -324,74 +207,13 @@ NMS is the standard post-detection step. After YOLO detects an image, the same o
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28/ch28-07.png" alt="Precision and recall" />
 </div>
 
-#### Precision and Recall
-
-- mAP is built from Precision and Recall; understand these two first.
-- Precision formula: high Precision = the model does not make false positives.
-
-    $$
-    Precision = \frac{TP}{TP+FP}
-    $$
-
-    - Meaning: of all boxes the model calls "cup," how many are truly cups.
-        - Example: the model outputs 5 boxes, 3 correct and 2 wrong
-        - Precision = 3 / 5 = 60%
-- Recall formula: high Recall = the model does not miss objects.
-
-    $$
-    Recall = \frac{TP}{TP+FN}
-    $$
-
-    - Meaning: of all real cups in the image, how many the model found.
-        - Example: there are 4 real cups in the image; the model found 3
-        - Recall = 3 / 4 = 75%
-- Precision and Recall trade off against each other, so a combined metric is needed.
-
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28/ch28-08.png" alt="Average precision and the precision-recall curve" />
 </div>
 
-**AP (Average Precision)—area under the P-R curve; computation steps:**
-
-For one class, sort all predicted boxes by confidence from high to low, then sweep confidence thresholds (e.g. 0.9, 0.8, 0.7 ...). Each threshold yields a (Precision, Recall) pair; plot the P-R curve; area under the curve = AP. P-R curve geometry:
-
-#### Physical meaning of AP
-
-- AP captures: "across confidence thresholds, the model maintains both high precision and full recall."
-
-    ```text
-    [diagram: P-R curve]
-
-      Precision
-      1.0 |   *
-          |  /| *
-      0.8 | / |   **
-          |/   |     **
-      0.6 |    |       ***
-          |    |         ***
-      0.4 |    |            *****
-          |    |                 *********
-      0.2 |    |                          *********
-          +----+----------------------------- Recall
-          0.0  0.2  0.4  0.6  0.8  1.0
-
-          AP = area under curve (ideal 1.0)
-    ```
-
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28/ch28-09.png" alt="mAP mean average precision metric" />
 </div>
-
-#### mAP (mean Average Precision)
-
-- **Formula**:
-
-$$
-mAP=\frac{1}{N}\sum^N_{i=1}AP_i
-$$
-
-- N is the number of classes, AP_i is the AP of class i.
-- **Meaning**: the average AP across all classes, reflecting the model's combined performance on **all classes**.
 
 ### From Detection Result to Grasp Direction
 
@@ -399,55 +221,6 @@ $$
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28/ch28-10.png" alt="Detection box versus grasp point" />
 </div>
 
-A detection box is not a grasp point. Many beginners assume "box center = grasp position," but they differ:
-
-```text
-
-        detection box
-      +--------+
-      |  +--+  |
-      |  |  |  |    cup body center
-      |  |  |  | ← box center != grasp point
-      |  |  |  |
-      |  +--+  |
-      |   )    | ← cup handle = best grasp point
-      +--------+
-```
-
-**The best grasp position is usually not the target center, but:**
-
-| Object | Best grasp point |
-| :--- | :--- |
-| Cup | Near the handle |
-| Wrench | The handle |
-| Spoon | The handle |
-| Book | Middle of the long edge |
-
-#### Three grasp-candidate-point methods
-
-| Method | How it works | Good for | Pros | Cons |
-| :--- | :--- | :--- | :--- | :--- |
-| 1. Centre grasp | Use the box centre directly as the grasp point | Regular objects (square boxes, cubes) | Simple | Poor for long or irregular objects |
-| 2. Keypoint detection | Train a model to detect specific keypoints (cup handle, grip, ...) | Objects with obvious grasp features | High precision | Needs extra annotation data |
-| 3. 3D information | Use depth to find the highest point (grasp near the top), the plane centre (flat objects) or a graspable region (mask + depth analysis) | Complex scenes | No extra annotation | Complex algorithm |
-
-#### The natural link between OBB and grasp direction
-
-- The OBB short-edge direction directly corresponds to the gripper open/close direction—the most important use of OBB in robot vision:
-
-    ```text
-    [diagram: OBB short edge = gripper open/close direction]
-
-           short edge (grasp direction)
-          ←------------------>
-          +------------------+
-          |                  |
-          |      object      | long edge
-          |                  |
-          +------------------+
-    ```
-
-- This property—OBB short edge = grasp direction—makes OBB the cleanest input for 6-DoF grasp estimation. It is also the core basis of geometric grasp estimation.
 
 ## 28.4 ArUco and Camera Calibration
 
@@ -457,20 +230,6 @@ A detection box is not a grasp point. Many beginners assume "box center = grasp 
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28/ch28-11.png" alt="Pinhole camera model, pixel to 3D" />
 </div>
 
-```text
-[diagram: side view of pinhole imaging]
-
-        camera optical center O
-         |
-         | f (focal length)
-         |
-   ------+--------- image plane
-         |  ← pixel (u, v)
-         |
-   ------+--------- object plane
-         |
-   world point (X, Y, Z)
-```
 
 #### Similar-triangle derivation
 
@@ -530,28 +289,6 @@ A detection box is not a grasp point. Many beginners assume "box center = grasp 
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28/ch28-12.png" alt="ArUco marker structure and dictionaries" />
 </div>
 
-```text
-[diagram: ArUco marker structure]
-+-------------+
-| ############ |
-| # 1 0 1 0 # |
-| # 0 1 1 0 # |   internal binary code
-| # 1 1 0 1 # |   determines ID (0-49)
-| # 0 1 0 0 # |
-| ############ |
-+-------------+
-   ^          ^
-   top-left    top-right (4 corner world coordinates known)
-```
-
-#### A marker has two parts
-
-- **The black outer border handles "localization"**—the algorithm detects four corners along the border, fixing their pixel coordinates in the image;
-- **The internal binary matrix handles "identity"**—a 4x4 grid has 16 bits and can encode many distinct IDs. The common DICT_4X4_50 provides 50 unique IDs; for more, use DICT_6X6_250 or DICT_7X7_1000.
-    - The ID is the "dictionary lookup key." Knowing "which number the marker is" lets the algorithm look up its real size and position in the world frame. A camera only captures a 2D image; there is no "scale" in it: a 5 cm marker close up and a 10 cm marker far away can look identical in a photo. The ID is the dictionary index—once recognized, you look up the marker's real edge length and the 3D coordinates of its 4 corners. With real 3D coordinates paired with 2D pixels, you can solve the camera pose.
-- So the full ArUco workflow is: detect black border -> find four corners -> read internal code and identify ID -> using "known ID means known marker size and corner positions in the world frame," solve for camera pose.
-- Pros comparison
-
 ### ArUco Pose Estimation (solvePnP)
 
 <div className="image-frame">
@@ -572,33 +309,6 @@ A detection box is not a grasp point. Many beginners assume "box center = grasp 
 </div>
 
 #### Physical meaning of solvePnP
-
-```text
-image plane (u, v)
-        +----------+
-   p1 --|.         |
-        |          |
-   p2 --|.  detected|
-        |  4 corners|
-   p3 --|.         |
-        |          |
-   p4 --|.         |
-        +----------+
-              ^ K (intrinsics)
-              |
-         solvePnP
-              |
-              v R, t
-
-   3D space (X, Y, Z)
-        +----------+
-        | marker  |← rotation R
-        |  P1 P2   |
-        |  P4 P3   |
-        +----------+
-              ^
-        position t (t meters from camera)
-```
 
 - Given 3D world coordinates (a fixed 3D frame describing "where the marker's corner is in real space" with 3 numbers (X, Y, Z), in real length units cm/m), the corresponding 2D pixel coordinates (a 2D image frame describing "where that corner landed in the picture" with 2 numbers (u, v)), and camera intrinsics K, solvePnP back-deduces the camera's rotation R and translation t. It internally uses least-squares optimization, minimizing projection error; the output is the marker's pose relative to the camera.
 
