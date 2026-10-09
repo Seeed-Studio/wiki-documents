@@ -14,10 +14,10 @@ slug: /recamera_udp_face_analysis
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899,108990119,108990120,E20245041001,100018917, 100041077, 100029708, 100074316
 sidebar_position: 12
 last_update:
-  date: 04/30/2026
+  date: 10/08/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-07-22'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/cn/recamera_udp_face_analysis/
 ---
 
@@ -63,12 +63,12 @@ C++ 应用程序在 reCamera 上运行，并通过 UDP 推送视频帧以及检�
 export PATH='current compile chain path'/host-tools/gcc/riscv64-linux-musl-x86_64/bin:$PATH
 ```
 
-首先，确保你已经准备好所需模型：
+首先，确保你拥有所需的模型：
 - `yolo_face.cvimodel` - YOLO 人脸检测模型
 - `age_gender_race.cvimodel` - 用于年龄/性别/种族的 FairFace 模型
 - `emotion.cvimodel` - 情绪识别模型
 
-你可以从 [sscma-example-sg200x v1.0.1 发布版本](https://github.com/RobotXTeam/sscma-example-sg200x/releases/tag/v1.0.1)下载这三个模型文件，或者训练你自己的模型，然后将其量化/转换为 `.cvimodel` 格式。
+你可以从 [sscma-example-sg200x v1.0.1 发布页](https://github.com/RobotXTeam/sscma-example-sg200x/releases/tag/v1.0.1)下载这三个模型文件，或者训练你自己的模型，然后将其量化/转换为 `.cvimodel` 格式。
 
 进入解决方案目录并编译：
 
@@ -81,10 +81,10 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-std=c++17" ..
 make -j$(nproc)
 ```
 
-编译完成的可执行文件位置为：`build/face_udp`
+编译后的可执行文件位置为：`build/face_udp`
 
 :::note
-仓库在解决方案文件夹中已包含预编译模型：
+代码仓库在解决方案文件夹中已包含预编译模型：
 - `yolo-face_mixfp16.cvimodel`
 - `age_gender_race_bf16.cvimodel`
 - `emotion_bf16.cvimodel`
@@ -97,9 +97,9 @@ make -j$(nproc)
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### 3. 在 ReCamera 上运行可执行文件
@@ -120,7 +120,7 @@ chmod +x face_udp
 | `emotion.cvimodel` | 情绪模型（必需） | - |
 | `single\|multi` | YOLO head 类型 | multi |
 | `threshold` | 检测阈值 | 0.5（multi）/ 0.7（single） |
-| `skip` | 每 N 帧推理一次 | 3（multi）/ 1（single） |
+| `skip` | 每 N 帧进行一次推理 | 3（multi）/ 1（single） |
 | `udp_ip` | 用于 UDP 的 PC IP 地址 | - |
 | `udp_port` | UDP 端口号 | - |
 | `log_every_n_infer` | 每 N 次推理打印一次日志 | 20 |
@@ -186,7 +186,7 @@ UDP Send:
 ======================================
 ```
 
-### 在 Python 接收窗口中
+### 在 Python 接收端窗口中
 
 PC 将显示一个窗口，其中包括：
 - 带 JPEG 帧的实时视频流
@@ -203,8 +203,8 @@ PC 将显示一个窗口，其中包括：
 
 ### 相机访问错误
 
-如果你看到 "No camera" 错误：
-- 确保 Node-RED 服务已停止（参见上面的步骤 2）
+如果你看到 “No camera” 错误：
+- 确保已停止 Node-RED 服务（参见上面的步骤 2）
 - 检查相机连接
 
 ### UDP 连接失败
@@ -213,7 +213,7 @@ PC 将显示一个窗口，其中包括：
 - 确认 PC 和 ReCamera 处于同一网络
 - 检查 PC 上的防火墙设置
 - 确认 UDP 端口 5001 未被阻塞
-- 使用 `ping` 在设备之间进行测试
+- 使用 `ping` 测试设备之间的连通性
 
 ### 模型加载错误
 
