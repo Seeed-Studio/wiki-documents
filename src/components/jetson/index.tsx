@@ -16,11 +16,27 @@ import * as config_auto from './config.auto';
 
 // 共享产品数据
 import { productOptions, PRODUCT_DATA, PRODUCT_CATEGORIES, type ProductOption } from './productData';
+import { productOptionsAuto } from './config.products.auto';
+
+// 自动生成产品中已知的“系列级/非产品”噪音条目（value 由 scripts/generate-jetson-products.js 生成）。
+// 新增真实产品文档后重跑生成脚本，新条目会自动出现在设备网格里；这里只屏蔽历史噪音。
+const AUTO_NOISE_VALUES = new Set([
+  'other-nvidia-jetson', 'carrier-j501', 'mini-mini-j401', 'other-faqs',
+  'other-jetson-developtool', 'other-recomputer-jetson-series', 'industrial-recomputer-industrial',
+  'other-recomputer-j10', 'other-recomputer-j1010', 'other-recomputer-j1020v2',
+  'other-recomputer-j20', 'other-recomputer-j30-40', 'other-recomputer-j401b',
+  'mini-recomputer-mini', 'robotics-recomputer-robotics-j40', 'super-recomputer-super',
+  'robotics-recomputer-robotics-j50-mini',
+]);
+
+export const ALL_PRODUCTS: ProductOption[] = [
+  ...productOptions,
+  ...productOptionsAuto.filter(p => !AUTO_NOISE_VALUES.has(p.value)),
+];
 
 // SVG Icons
 import {
-  ProductsIcon, DemoIcon, FaqIcon, WarningIcon, StorageIcon, ClockIcon,
-  RefreshIcon, PlugIcon, HardDriveIcon, ZapIcon, LinuxIcon, TreeIcon,
+  ProductsIcon, DemoIcon, FaqIcon, StorageIcon, RefreshIcon, ZapIcon, LinuxIcon, TreeIcon,
   PackageIcon, MonitorIcon, WrenchIcon, BookIcon, EyeIcon, BotIcon,
   FactoryIcon, BookOpenIcon, SparklesIcon, SettingsIcon, MessageSquareIcon,
   MicIcon, PaletteIcon, GemIcon, MoreHorizontalIcon, RocketIcon, HelpCircleIcon,
@@ -43,6 +59,7 @@ type CommunityProject = {
   img?: string;
   URL?: Partial<Record<Lang, string>>;
   category?: Partial<Record<Lang, string[]>>;
+  description?: Partial<Record<Lang, string>>;
 };
 
 type Props = {
@@ -103,152 +120,140 @@ const EXAMPLE_MODELS = [
   { name: '+10 more', category: 'more', Icon: MoreHorizontalIcon }
 ];
 
-// FAQ 数据
-const FAQ_DATA = [
+// 分类 FAQ 数据（由常见问题页面标题生成，锚点与 FAQ 页面实际渲染一致）
+const FAQ_CATEGORIES: Array<{
+  Icon: React.ComponentType<{ size?: number }>;
+  title: Partial<Record<Lang, string>>;
+  items: Array<{ title: Partial<Record<Lang, string>>; url: Partial<Record<Lang, string>> }>;
+}> = [
   {
-    Icon: WarningIcon,
-    title: {
-      en: 'System Crashed After apt upgrade',
-      ja: 'apt upgrade 後にシステムがクラッシュ',
-      zh: 'apt upgrade 后系统崩溃',
-      es: 'El sistema falló después de apt upgrade',
-      pt: 'O sistema falhou após apt upgrade'
-    },
-    desc: {
-      en: 'Why you should NOT run apt upgrade on custom carrier boards and how to recover',
-      ja: 'カスタムキャリアボードで apt upgrade を実行すべきでない理由と復旧方法',
-      zh: '为什么不应在自定义载板上执行 apt upgrade，以及如何恢复',
-      es: 'Por qué NO debe ejecutar apt upgrade en carrier boards personalizados y cómo recuperarse',
-      pt: 'Por que você NÃO deve executar apt upgrade em carrier boards personalizados e como recuperar o sistema'
-    },
-    url: {
-      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q8-my-system-crashedunable-to-bootblack-screenlost-peripheral-drivers-after-i-execute-sudo-apt-get-update--sudo-apt-get-upgrade-commands',
-      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q8-sudo-apt-get-update--sudo-apt-get-upgrade-コマンドを実行した後システムがクラッシュし起動できないブラックスクリーンになったり周辺機器ドライバーが失われたりしました',
-      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q8-执行-sudo-apt-get-update--sudo-apt-get-upgrade-命令后我的系统崩溃无法启动黑屏丢失外设驱动',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q8-mi-sistema-falló-no-puede-arrancar-pantalla-negra-perdió-los-controladores-de-los-periféricos-después-de-ejecutar-los-comandos-sudo-apt-get-update--sudo-apt-get-upgrade',
-      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q8-meu-sistema-falhou-não-consegue-inicializar-tela-preta-perdeu-os-drivers-de-periféricos-depois-que-executei-os-comandos-sudo-apt-get-update--sudo-apt-get-upgrade'
-    }
+    Icon: RefreshIcon,
+    title: {en: "Flashing & Installation", ja: "フラッシュとインストール", zh: "刷机与烧录", es: "Instalación y Flasheo", pt: "Instalação e Gravação"},
+    items: [
+      {
+        title: {en: "Troubleshooting Installation", ja: "インストールに関するトラブルシューティング", zh: "安装故障排查", es: "Solución de problemas de instalación", pt: "Solução de problemas de instalação"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q1-troubleshooting-installation", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q1-インストールに関するトラブルシューティング", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q1-安装故障排查", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p1-solución-de-problemas-de-instalación", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q1-solução-de-problemas-de-instalação"}
+      },
+      {
+        title: {en: "Common flashing errors during Jetson flashing.", ja: "Jetson のフラッシュ中によく発生する書き込みエラー", zh: "Jetson 烧录过程中常见的烧录错误。", es: "Errores comunes durante el flasheo de Jetson.", pt: "Erros comuns durante o processo de gravação (flashing) do Jetson."},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q6-common-flashing-errors-during-jetson-flashing", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q6-jetson-のフラッシュ中によく発生する書き込みエラー", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q6-jetson-烧录过程中常见的烧录错误", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p6-errores-comunes-durante-el-flasheo-de-jetson", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q6-erros-comuns-durante-o-processo-de-gravação-flashing-do-jetson"}
+      },
+      {
+        title: {en: "I cannot use USB-A port, Ethernet port or no HDMI dispaly after flashing the device.", ja: "デバイスをフラッシュした後、USB-A ポートや Ethernet ポートが使えない、または HDMI に表示が出ません。", zh: "设备烧录完成后，我无法使用 USB-A 接口、以太网接口，或者没有 HDMI 显示。", es: "No puedo usar el puerto USB-A, el puerto Ethernet o no hay visualización HDMI después de flashear el dispositivo.", pt: "Não consigo usar a porta USB-A, a porta Ethernet ou não há exibição HDMI após gravar o dispositivo."},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q7-i-cannot-use-usb-a-port-ethernet-port-or-no-hdmi-dispaly-after-flashing-the-device", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q7-デバイスをフラッシュした後usb-a-ポートや-ethernet-ポートが使えないまたは-hdmi-に表示が出ません", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q7-设备烧录完成后我无法使用-usb-a-接口以太网接口或者没有-hdmi-显示", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p7-no-puedo-usar-el-puerto-usb-a-el-puerto-ethernet-o-no-hay-visualización-hdmi-después-de-flashear-el-dispositivo", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q7-não-consigo-usar-a-porta-usb-a-a-porta-ethernet-ou-não-há-exibição-hdmi-após-gravar-o-dispositivo"}
+      },
+      {
+        title: {en: "Why is it that sometimes after completing the flashing process on Jetson, the system fails to boot from the SSD?", ja: "Jetson でフラッシュ処理を完了したのに、SSD からシステムが起動しないことがあるのはなぜですか？", zh: "为什么有时在完成 Jetson 烧录后，系统无法从 SSD 启动？", es: "¿Por qué a veces, después de completar el proceso de flasheo en Jetson, el sistema no arranca desde el SSD?", pt: "Por que às vezes, após concluir o processo de gravação no Jetson, o sistema não consegue inicializar a partir do SSD?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q13-why-is-it-that-sometimes-after-completing-the-flashing-process-on-jetson-the-system-fails-to-boot-from-the-ssd", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q13-jetson-でフラッシュ処理を完了したのにssd-からシステムが起動しないことがあるのはなぜですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q13-为什么有时在完成-jetson-烧录后系统无法从-ssd-启动", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p13-por-qué-a-veces-después-de-completar-el-proceso-de-flasheo-en-jetson-el-sistema-no-arranca-desde-el-ssd", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q13-por-que-às-vezes-após-concluir-o-processo-de-gravação-no-jetson-o-sistema-não-consegue-inicializar-a-partir-do-ssd"}
+      },
+      {
+        title: {en: "I did not modify anything related to the Jetson kernel, but during boot the Jetson reported a UUID-related error and then entered the recovery terminal.", ja: "Jetson カーネルに関連する変更は何も行っていないのに、起動時に Jetson が UUID 関連のエラーを報告し、その後リカバリターミナルに入ってしまいます。", zh: "我没有修改任何与 Jetson 内核相关的内容，但在启动过程中 Jetson 报告了与 UUID 相关的错误，然后进入了恢复终端。", es: "No modifiqué nada relacionado con el kernel de Jetson, pero durante el arranque Jetson informó un error relacionado con el UUID y luego entró en la terminal de recuperación.", pt: "Eu não modifiquei nada relacionado ao kernel do Jetson, mas durante a inicialização o Jetson relatou um erro relacionado ao UUID e então entrou no terminal de recuperação."},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q20-i-did-not-modify-anything-related-to-the-jetson-kernel-but-during-boot-the-jetson-reported-a-uuid-related-error-and-then-entered-the-recovery-terminal", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q20-jetson-カーネルに関連する変更は何も行っていないのに起動時に-jetson-が-uuid-関連のエラーを報告しその後リカバリターミナルに入ってしまいます", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q20我没有修改任何与-jetson-内核相关的内容但在启动过程中-jetson-报告了与-uuid-相关的错误然后进入了恢复终端", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p20-no-modifiqué-nada-relacionado-con-el-kernel-de-jetson-pero-durante-el-arranque-jetson-informó-un-error-relacionado-con-el-uuid-y-luego-entró-en-la-terminal-de-recuperación", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q20-eu-não-modifiquei-nada-relacionado-ao-kernel-do-jetson-mas-durante-a-inicialização-o-jetson-relatou-um-erro-relacionado-ao-uuid-e-então-entrou-no-terminal-de-recuperação"}
+      },
+    ],
+  },
+  {
+    Icon: ZapIcon,
+    title: {en: "System & Upgrade", ja: "システムとアップグレード", zh: "系统与升级", es: "Sistema y Actualización", pt: "Sistema e Atualização"},
+    items: [
+      {
+        title: {en: "How to get the system log of reComputer J30/J40?", ja: "reComputer J30/J40 のシステムログを取得するにはどうすればよいですか？", zh: "如何获取 reComputer J30/J40 的系统日志？", es: "¿Cómo obtener el registro del sistema de reComputer J30/J40?", pt: "Como obter o log do sistema do reComputer J30/J40?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q5-how-to-get-the-system-log-of-recomputer-j30j40", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q5-recomputer-j30j40-のシステムログを取得するにはどうすればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q5-如何获取-recomputer-j30j40-的系统日志", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p5-cómo-obtener-el-registro-del-sistema-de-recomputer-j30j40", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q5-como-obter-o-log-do-sistema-do-recomputer-j30j40"}
+      },
+      {
+        title: {en: "My system crashed/unable to boot/black screen/lost peripheral drivers after I execute \"sudo apt-get update && sudo apt-get upgrade\" commands.", ja: "\"sudo apt-get update && sudo apt-get upgrade\" コマンドを実行した後、システムがクラッシュした／起動できない／画面が真っ黒になる／周辺機器ドライバが失われました。", zh: "在执行 \"sudo apt-get update && sudo apt-get upgrade\" 命令后，我的系统崩溃/无法启动/黑屏/外设驱动丢失。", es: "Mi sistema se bloqueó/no puede arrancar/pantalla en negro/perdió controladores de periféricos después de ejecutar los comandos \"sudo apt-get update && sudo apt-get upgrade\".", pt: "Meu sistema travou/não consegue inicializar/tela preta/perdeu drivers de periféricos depois que executei os comandos \"sudo apt-get update && sudo apt-get upgrade\"."},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q8-my-system-crashedunable-to-bootblack-screenlost-peripheral-drivers-after-i-execute-sudo-apt-get-update--sudo-apt-get-upgrade-commands", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q8-sudo-apt-get-update--sudo-apt-get-upgrade-コマンドを実行した後システムがクラッシュした起動できない画面が真っ黒になる周辺機器ドライバが失われました", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q8-在执行-sudo-apt-get-update--sudo-apt-get-upgrade-命令后我的系统崩溃无法启动黑屏外设驱动丢失", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p8-mi-sistema-se-bloqueóno-puede-arrancarpantalla-en-negroperdió-controladores-de-periféricos-después-de-ejecutar-los-comandos-sudo-apt-get-update--sudo-apt-get-upgrade", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q8-meu-sistema-travounão-consegue-inicializartela-pretaperdeu-drivers-de-periféricos-depois-que-executei-os-comandos-sudo-apt-get-update--sudo-apt-get-upgrade"}
+      },
+      {
+        title: {en: "How can I upgrade software packages if you told me that I cannot execute apt upgrade? Will there be security risks if I don't upgrade the software?", ja: "apt upgrade を実行できないと言われましたが、ソフトウェアパッケージはどのようにアップグレードすればよいですか？ソフトウェアをアップグレードしないとセキュリティリスクはありますか？", zh: "如果你们说不能执行 apt upgrade，那我该如何升级软件包？如果不升级软件会有安全风险吗？", es: "¿Cómo puedo actualizar los paquetes de software si me dijeron que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?", pt: "Como posso atualizar pacotes de software se vocês disseram que não posso executar apt upgrade? Haverá riscos de segurança se eu não atualizar o software?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q9-how-can-i-upgrade-software-packages-if-you-told-me-that-i-cannot-execute-apt-upgrade-will-there-be-security-risks-if-i-dont-upgrade-the-software", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q9-apt-upgrade-を実行できないと言われましたがソフトウェアパッケージはどのようにアップグレードすればよいですかソフトウェアをアップグレードしないとセキュリティリスクはありますか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q9-如果你们说不能执行-apt-upgrade那我该如何升级软件包如果不升级软件会有安全风险吗", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p9-cómo-puedo-actualizar-los-paquetes-de-software-si-me-dijeron-que-no-puedo-ejecutar-apt-upgrade-habrá-riesgos-de-seguridad-si-no-actualizo-el-software", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q9-como-posso-atualizar-pacotes-de-software-se-vocês-disseram-que-não-posso-executar-apt-upgrade-haverá-riscos-de-segurança-se-eu-não-atualizar-o-software"}
+      },
+      {
+        title: {en: "Why can’t the `apt upgrade` command be executed on reComputer/reServer?", ja: "なぜ reComputer/reServer では `apt upgrade` コマンドを実行できないのですか？", zh: "为什么不能在 reComputer/reServer 上执行 `apt upgrade` 命令？", es: "¿Por qué no se puede ejecutar el comando `apt upgrade` en reComputer/reServer?", pt: "Por que o comando `apt upgrade` não pode ser executado em reComputer/reServer?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q15-why-cant-the-apt-upgrade-command-be-executed-on-recomputerreserver", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q15-なぜ-recomputerreserver-では-apt-upgrade-コマンドを実行できないのですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q15-为什么不能在-recomputerreserver-上执行-apt-upgrade-命令", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p15-por-qué-no-se-puede-ejecutar-el-comando-apt-upgrade-en-recomputerreserver", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q15-por-que-o-comando-apt-upgrade-não-pode-ser-executado-em-recomputerreserver"}
+      },
+      {
+        title: {en: "What changes does JetPack 7.2 bring to Jetson AGX Orin inference performance?", ja: "JetPack 7.2 は Jetson AGX Orin の推論性能にどのような変化をもたらしますか？", zh: "JetPack 7.2 为 Jetson AGX Orin 的推理性能带来了哪些变化？", es: "¿Qué cambios aporta JetPack 7.2 al rendimiento de inferencia de Jetson AGX Orin?", pt: "Quais mudanças o JetPack 7.2 traz para o desempenho de inferência do Jetson AGX Orin?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q22-what-changes-does-jetpack-72-bring-to-jetson-agx-orin-inference-performance", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q22-jetpack-72-は-jetson-agx-orin-の推論性能にどのような変化をもたらしますか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q22-jetpack-72-为-jetson-agx-orin-的推理性能带来了哪些变化", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p22-qué-cambios-aporta-jetpack-72-al-rendimiento-de-inferencia-de-jetson-agx-orin", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q22-quais-mudanças-o-jetpack-72-traz-para-o-desempenho-de-inferência-do-jetson-agx-orin"}
+      },
+    ],
   },
   {
     Icon: StorageIcon,
-    title: {
-      en: 'Insufficient eMMC Space',
-      ja: 'eMMC 容量不足',
-      zh: 'eMMC 空间不足',
-      es: 'Espacio insuficiente en eMMC',
-      pt: 'Espaço insuficiente no eMMC'
-    },
-    desc: {
-      en: 'Only 2GB left on eMMC? Solutions for expanding storage on reComputer devices',
-      ja: 'eMMC の空き容量が 2GB しかない？reComputer デバイスのストレージ拡張方法',
-      zh: 'eMMC 只剩 2GB？reComputer 设备的存储扩展方案',
-      es: '¿Solo quedan 2 GB en eMMC? Soluciones para ampliar el almacenamiento en dispositivos reComputer',
-      pt: 'Restam apenas 2 GB no eMMC? Soluções para expandir o armazenamento em dispositivos reComputer'
-    },
-    url: {
-      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q2-the-remaining-space-in-the-emmc-in-the-received-recomputer-is-only-about-2gb-how-to-solve-the-problem-of-insufficient-space',
-      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q2-受け取った-recomputer-の-emmc-の残り容量が約-2gb-しかありませんストレージ不足の問題をどう解決すればよいですか',
-      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q2-收到的-recomputer-中-emmc-剩余空间只有约-2gb如何解决空间不足问题',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q2-el-espacio-restante-en-la-emmc-del-recomputer-recibido-es-de-solo-unos-2-gb-cómo-resolver-el-problema-de-espacio-insuficiente',
-      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q2-o-espaço-restante-no-emmc-do-recomputer-recebido-é-de-apenas-cerca-de-2-gb-como-resolver-o-problema-de-espaço-insuficiente'
-    }
+    title: {en: "Storage & Disk", ja: "ストレージとディスク", zh: "存储与磁盘", es: "Almacenamiento y Disco", pt: "Armazenamento e Disco"},
+    items: [
+      {
+        title: {en: "The remaining space in the eMMC in the received reComputer is only about 2GB, how to solve the problem of insufficient space?", ja: "受け取った reComputer の eMMC の残り容量が約 2GB しかありません。容量不足の問題をどのように解決すればよいですか？", zh: "收到的 reComputer 中 eMMC 的剩余空间只有约 2GB，如何解决空间不足的问题？", es: "El espacio restante en la eMMC del reComputer recibido es de solo unos 2GB, ¿cómo resolver el problema de espacio insuficiente?", pt: "O espaço restante no eMMC do reComputer recebido é de apenas cerca de 2GB. Como resolver o problema de espaço insuficiente?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q2-the-remaining-space-in-the-emmc-in-the-received-recomputer-is-only-about-2gb-how-to-solve-the-problem-of-insufficient-space", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q2-受け取った-recomputer-の-emmc-の残り容量が約-2gb-しかありません容量不足の問題をどのように解決すればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q2-收到的-recomputer-中-emmc-的剩余空间只有约-2gb如何解决空间不足的问题", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p2-el-espacio-restante-en-la-emmc-del-recomputer-recibido-es-de-solo-unos-2gb-cómo-resolver-el-problema-de-espacio-insuficiente", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q2-o-espaço-restante-no-emmc-do-recomputer-recebido-é-de-apenas-cerca-de-2gb-como-resolver-o-problema-de-espaço-insuficiente"}
+      },
+      {
+        title: {en: "How can I mount an external hard drive formatted with exFAT on Jetson (JetPack 6)?", ja: "exFAT でフォーマットされた外付けハードドライブを Jetson（JetPack 6）でマウントするにはどうすればよいですか？", zh: "如何在 Jetson（JetPack 6）上挂载使用 exFAT 格式化的外置硬盘？", es: "¿Cómo puedo montar en Jetson (JetPack 6) un disco duro externo formateado con exFAT?", pt: "Como posso montar um disco rígido externo formatado com exFAT no Jetson (JetPack 6)?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q17how-can-i-mount-an-external-hard-drive-formatted-with-exfat-on-jetson-jetpack-6", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q17exfat-でフォーマットされた外付けハードドライブを-jetsonjetpack-6でマウントするにはどうすればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q17如何在-jetsonjetpack-6上挂载使用-exfat-格式化的外置硬盘", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p17cómo-puedo-montar-en-jetson-jetpack-6-un-disco-duro-externo-formateado-con-exfat", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q17como-posso-montar-um-disco-rígido-externo-formatado-com-exfat-no-jetson-jetpack-6"}
+      },
+      {
+        title: {en: "How to encrypt the disk of Jetson before flashing the image?", ja: "Jetson のイメージを書き込む前にディスクを暗号化するにはどうすればよいですか？", zh: "如何在烧录镜像前对 Jetson 的磁盘进行加密？", es: "¿Cómo cifrar el disco de Jetson antes de flashear la imagen?", pt: "Como criptografar o disco do Jetson antes de gravar a imagem?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q18how-to-encrypt-the-disk-of-jetson-before-flashing-the-image", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q18jetson-のイメージを書き込む前にディスクを暗号化するにはどうすればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q18如何在烧录镜像前对-jetson-的磁盘进行加密", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p18cómo-cifrar-el-disco-de-jetson-antes-de-flashear-la-imagen", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q18como-criptografar-o-disco-do-jetson-antes-de-gravar-a-imagem"}
+      },
+    ],
   },
   {
-    Icon: ClockIcon,
-    title: {
-      en: 'Flash Timeout Issues',
-      ja: 'フラッシュ時のタイムアウト問題',
-      zh: '刷机超时问题',
-      es: 'Problemas de tiempo de espera al flashear',
-      pt: 'Problemas de tempo limite ao gravar'
-    },
-    desc: {
-      en: 'Troubleshooting timeout problems during JetPack flashing process',
-      ja: 'JetPack 書き込み中のタイムアウト問題のトラブルシューティング',
-      zh: '排查 JetPack 刷机过程中的超时问题',
-      es: 'Solución de problemas de tiempo de espera durante el proceso de flasheo de JetPack',
-      pt: 'Solução de problemas de tempo limite durante o processo de gravação do JetPack'
-    },
-    url: {
-      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q6-timeout-issue-during-flash-jetpack',
-      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q6-jetpack-フラッシュ中のタイムアウト問題',
-      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q6-刷写-jetpack-时出现超时问题',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q6-problema-de-tiempo-de-espera-durante-el-flasheo-de-jetpack',
-      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q6-problema-de-tempo-limite-durante-a-gravação-do-jetpack'
-    }
+    Icon: EyeIcon,
+    title: {en: "Camera & Peripherals", ja: "カメラと周辺機器", zh: "相机与外设", es: "Cámara y Periféricos", pt: "Câmera e Periféricos"},
+    items: [
+      {
+        title: {en: "How to solve the compatibility issue between reComputer and VEYE camera?", ja: "reComputer と VEYE カメラの互換性の問題をどのように解決すればよいですか？", zh: "如何解决 reComputer 与 VEYE 相机之间的兼容性问题？", es: "¿Cómo resolver el problema de compatibilidad entre reComputer y la cámara VEYE?", pt: "Como resolver o problema de compatibilidade entre o reComputer e a câmera VEYE?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q3-how-to-solve-the-compatibility-issue-between-recomputer-and-veye-camera", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q3-recomputer-と-veye-カメラの互換性の問題をどのように解決すればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q3-如何解决-recomputer-与-veye-相机之间的兼容性问题", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p3-cómo-resolver-el-problema-de-compatibilidad-entre-recomputer-y-la-cámara-veye", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q3-como-resolver-o-problema-de-compatibilidade-entre-o-recomputer-e-a-câmera-veye"}
+      },
+      {
+        title: {en: "How to solve the compatibility issue between IMX477 Camera and A603 carrier board?", ja: "IMX477 カメラと A603 キャリアボードの互換性の問題をどのように解決すればよいですか？", zh: "如何解决 IMX477 相机与 A603 载板之间的兼容性问题？", es: "¿Cómo resolver el problema de compatibilidad entre la cámara IMX477 y la placa carrier A603?", pt: "Como resolver o problema de compatibilidade entre a câmera IMX477 e a placa carrier A603?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q4-how-to-solve-the-compatibility-issue-between-imx477-camera-and-a603-carrier-board", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q4-imx477-カメラと-a603-キャリアボードの互換性の問題をどのように解決すればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q4-如何解决-imx477-相机与-a603-载板之间的兼容性问题", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p4-cómo-resolver-el-problema-de-compatibilidad-entre-la-cámara-imx477-y-la-placa-carrier-a603", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q4-como-resolver-o-problema-de-compatibilidade-entre-a-câmera-imx477-e-a-placa-carrier-a603"}
+      },
+      {
+        title: {en: "How to enable the SPI interface on Jetson-nano?", ja: "Jetson-nano で SPI インターフェースを有効にするにはどうすればよいですか？", zh: "如何在 Jetson-nano 上启用 SPI 接口？", es: "¿Cómo habilitar la interfaz SPI en Jetson-nano?", pt: "Como habilitar a interface SPI no Jetson-nano?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q12-how-to-enable-the-spi-interface-on-jetson-nano", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q12-jetson-nano-で-spi-インターフェースを有効にするにはどうすればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q12-如何在-jetson-nano-上启用-spi-接口", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p12-cómo-habilitar-la-interfaz-spi-en-jetson-nano", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q12-como-habilitar-a-interface-spi-no-jetson-nano"}
+      },
+      {
+        title: {en: "How to use the IMX219 camera on NVIDIA Jetson devices?", ja: "NVIDIA Jetson デバイスで IMX219 カメラを使用するにはどうすればよいですか？", zh: "如何在 NVIDIA Jetson 设备上使用 IMX219 相机？", es: "¿Cómo usar la cámara IMX219 en dispositivos NVIDIA Jetson?", pt: "Como usar a câmera IMX219 em dispositivos NVIDIA Jetson?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q21-how-to-use-the-imx219-camera-on-nvidia-jetson-devices", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q21-nvidia-jetson-デバイスで-imx219-カメラを使用するにはどうすればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q21-如何在-nvidia-jetson-设备上使用-imx219-相机", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p21-cómo-usar-la-cámara-imx219-en-dispositivos-nvidia-jetson", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q21-como-usar-a-câmera-imx219-em-dispositivos-nvidia-jetson"}
+      },
+      {
+        title: {en: "How to restore Wi-Fi modules such as Intel AX210/AX200 or Realtek RTL8852BE after upgrading to JetPack 7.2?", ja: "JetPack 7.2 にアップグレードした後、Intel AX210/AX200 や Realtek RTL8852BE などの Wi-Fi モジュールをどのように復旧すればよいですか？", zh: "升级到 JetPack 7.2 后，如何恢复 Intel AX210/AX200 或 Realtek RTL8852BE 等 Wi-Fi 模块？", es: "¿Cómo restaurar módulos Wi-Fi como Intel AX210/AX200 o Realtek RTL8852BE después de actualizar a JetPack 7.2?", pt: "Como restaurar módulos Wi-Fi como Intel AX210/AX200 ou Realtek RTL8852BE após atualizar para o JetPack 7.2?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q23-how-to-restore-wi-fi-modules-such-as-intel-ax210ax200-or-realtek-rtl8852be-after-upgrading-to-jetpack-72", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q23-jetpack-72-にアップグレードした後intel-ax210ax200-や-realtek-rtl8852be-などの-wi-fi-モジュールをどのように復旧すればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q23-升级到-jetpack-72-后如何恢复-intel-ax210ax200-或-realtek-rtl8852be-等-wi-fi-模块", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p23-cómo-restaurar-módulos-wi-fi-como-intel-ax210ax200-o-realtek-rtl8852be-después-de-actualizar-a-jetpack-72", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q23-como-restaurar-módulos-wi-fi-como-intel-ax210ax200-ou-realtek-rtl8852be-após-atualizar-para-o-jetpack-72"}
+      },
+    ],
   },
   {
-    Icon: RefreshIcon,
-    title: {
-      en: 'SSD Boot Issues',
-      ja: 'SSD 起動の問題',
-      zh: 'SSD 启动问题',
-      es: 'Problemas de arranque desde SSD',
-      pt: 'Problemas de inicialização pelo SSD'
-    },
-    desc: {
-      en: 'System fails to boot from SSD after flashing? Solutions for JetPack 5',
-      ja: '書き込み後に SSD から起動できない？JetPack 5 向けの解決策',
-      zh: '刷机后系统无法从 SSD 启动？JetPack 5 的解决方案',
-      es: '¿El sistema no arranca desde SSD después del flasheo? Soluciones para JetPack 5',
-      pt: 'O sistema não inicializa pelo SSD após a gravação? Soluções para o JetPack 5'
-    },
-    url: {
-      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q13-why-is-it-that-sometimes-after-completing-the-flashing-process-on-jetson-the-system-fails-to-boot-from-the-ssd',
-      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q13-jetson-でフラッシュ処理を完了した後にssdから起動できないことがあるのはなぜですか',
-      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q13-为什么有时在-jetson-上完成刷机后系统无法从-ssd-启动',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q13-por-qué-a-veces-después-de-completar-el-proceso-de-flasheo-en-jetson-el-sistema-no-arranca-desde-el-ssd',
-      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q13-por-que-às-vezes-depois-de-concluir-o-processo-de-gravação-no-jetson-o-sistema-não-inicializa-pelo-ssd'
-    }
+    Icon: WrenchIcon,
+    title: {en: "Driver & Kernel", ja: "ドライバーとカーネル", zh: "驱动与内核", es: "Controladores y Kernel", pt: "Drivers e Kernel"},
+    items: [
+      {
+        title: {en: "What modifications does Seeed make to NVIDIA's Jetson BSP.", ja: "Seeed は NVIDIA の Jetson BSP にどのような変更を加えていますか。", zh: "Seeed 对 NVIDIA 的 Jetson BSP 做了哪些修改。", es: "¿Qué modificaciones hace Seeed al BSP de Jetson de NVIDIA?", pt: "Quais modificações a Seeed faz no BSP Jetson da NVIDIA."},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q11-what-modifications-does-seeed-make-to-nvidias-jetson-bsp", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q11-seeed-は-nvidia-の-jetson-bsp-にどのような変更を加えていますか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q11-seeed-对-nvidia-的-jetson-bsp-做了哪些修改", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p11-qué-modificaciones-hace-seeed-al-bsp-de-jetson-de-nvidia", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q11-quais-modificações-a-seeed-faz-no-bsp-jetson-da-nvidia"}
+      },
+      {
+        title: {en: "How to Build the Source Code Project for Seeed's Jetson BSP?", ja: "Seeed の Jetson BSP 用ソースコードプロジェクトをビルドするにはどうすればよいですか？", zh: "如何为 Seeed 的 Jetson BSP 构建源码工程？", es: "¿Cómo compilar el proyecto de código fuente para el BSP de Jetson de Seeed?", pt: "Como compilar o projeto de código-fonte para o BSP Jetson da Seeed?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q14-how-to-build-the-source-code-project-for-seeeds-jetson-bsp", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q14-seeed-の-jetson-bsp-用ソースコードプロジェクトをビルドするにはどうすればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q14-如何为-seeed-的-jetson-bsp-构建源码工程", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p14-cómo-compilar-el-proyecto-de-código-fuente-para-el-bsp-de-jetson-de-seeed", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q14-como-compilar-o-projeto-de-código-fonte-para-o-bsp-jetson-da-seeed"}
+      },
+      {
+        title: {en: "If the reComputer/reServer does not have the required `.ko` driver module, how can I compile a usable driver?", ja: "reComputer/reServer に必要な `.ko` ドライバモジュールがない場合、どのようにして使用可能なドライバをコンパイルできますか？", zh: "如果 reComputer/reServer 中没有所需的 `.ko` 驱动模块，该如何编译可用的驱动？", es: "Si el reComputer/reServer no tiene el módulo de controlador `.ko` requerido, ¿cómo puedo compilar un controlador utilizable?", pt: "Se o reComputer/reServer não tiver o módulo de driver `.ko` necessário, como posso compilar um driver utilizável?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q16-if-the-recomputerreserver-does-not-have-the-required-ko-driver-module-how-can-i-compile-a-usable-driver", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q16-recomputerreserver-に必要な-ko-ドライバモジュールがない場合どのようにして使用可能なドライバをコンパイルできますか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q16-如果-recomputerreserver-中没有所需的-ko-驱动模块该如何编译可用的驱动", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p16-si-el-recomputerreserver-no-tiene-el-módulo-de-controlador-ko-requerido-cómo-puedo-compilar-un-controlador-utilizable", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q16-se-o-recomputerreserver-não-tiver-o-módulo-de-driver-ko-necessário-como-posso-compilar-um-driver-utilizável"}
+      },
+    ],
   },
   {
-    Icon: PlugIcon,
-    title: {
-      en: 'Missing Driver Module',
-      ja: '不足しているドライバーモジュール',
-      zh: '缺失驱动模块',
-      es: 'Módulo de controlador faltante',
-      pt: 'Módulo de driver ausente'
-    },
-    desc: {
-      en: 'How to compile custom .ko driver modules for reComputer/reServer',
-      ja: 'reComputer/reServer 向けにカスタム .ko ドライバーモジュールをコンパイルする方法',
-      zh: '如何为 reComputer/reServer 编译自定义 .ko 驱动模块',
-      es: 'Cómo compilar módulos de controlador .ko personalizados para reComputer/reServer',
-      pt: 'Como compilar módulos de driver .ko personalizados para reComputer/reServer'
-    },
-    url: {
-      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q16-if-the-recomputerreserver-does-not-have-the-required-ko-driver-module-how-can-i-compile-a-usable-driver',
-      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q16-recomputer-reserver-に必要な-ko-ドライバーモジュールがない場合使用可能なドライバーをどのようにコンパイルできますか',
-      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q16-如果-recomputerreserver-没有所需的-ko-驱动模块如何编译可用驱动',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q16-si-recomputerreserver-no-tiene-el-módulo-de-controlador-ko-requerido-cómo-puedo-compilar-un-controlador-utilizable',
-      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q16-se-o-recomputerreserver-não-tiver-o-módulo-de-driver-ko-necessário-como-posso-compilar-um-driver-utilizável'
-    }
+    Icon: HelpCircleIcon,
+    title: {en: "Others", ja: "その他", zh: "其他", es: "Otros", pt: "Outros"},
+    items: [
+      {
+        title: {en: "How to establish communication between Jetson and EtherCAT devices?", ja: "Jetson と EtherCAT デバイス間で通信を確立するにはどうすればよいですか？", zh: "如何在 Jetson 与 EtherCAT 设备之间建立通信？", es: "¿Cómo establecer comunicación entre Jetson y dispositivos EtherCAT?", pt: "Como estabelecer comunicação entre o Jetson e dispositivos EtherCAT?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q19how-to-establish-communication-between-jetson-and-ethercat-devices", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q19jetson-と-ethercat-デバイス間で通信を確立するにはどうすればよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q19如何在-jetson-与-ethercat-设备之间建立通信", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p19cómo-establecer-comunicación-entre-jetson-y-dispositivos-ethercat", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q19como-estabelecer-comunicação-entre-o-jetson-e-dispositivos-ethercat"}
+      },
+      {
+        title: {en: "What AI models can I deploy on my Jetson device and how?", ja: "Jetson デバイス上でどのような AI モデルをデプロイでき、どのように行えばよいですか？", zh: "我可以在 Jetson 设备上部署哪些 AI 模型，以及如何部署？", es: "¿Qué modelos de IA puedo desplegar en mi dispositivo Jetson y cómo?", pt: "Quais modelos de IA posso implantar no meu dispositivo Jetson e como?"},
+        url: {en: "https://wiki.seeedstudio.com/Jetson_FAQ/#q24-what-ai-models-can-i-deploy-on-my-jetson-device-and-how", ja: "https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q24-jetson-デバイス上でどのような-ai-モデルをデプロイできどのように行えばよいですか", zh: "https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q24-我可以在-jetson-设备上部署哪些-ai-模型以及如何部署", es: "https://wiki.seeedstudio.com/es/Jetson_FAQ/#p24-qué-modelos-de-ia-puedo-desplegar-en-mi-dispositivo-jetson-y-cómo", pt: "https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q24-quais-modelos-de-ia-posso-implantar-no-meu-dispositivo-jetson-e-como"}
+      },
+    ],
   },
-  {
-    Icon: HardDriveIcon,
-    title: {
-      en: 'exFAT External Drive',
-      ja: 'exFAT 外付けドライブ',
-      zh: 'exFAT 外接硬盘',
-      es: 'Unidad externa exFAT',
-      pt: 'Unidade externa exFAT'
-    },
-    desc: {
-      en: 'Mount exFAT formatted external drives on Jetson with JetPack 6',
-      ja: 'JetPack 6 の Jetson で exFAT フォーマットの外付けドライブをマウントする方法',
-      zh: '在 JetPack 6 的 Jetson 上挂载 exFAT 格式的外接硬盘',
-      es: 'Montar unidades externas formateadas en exFAT en Jetson con JetPack 6',
-      pt: 'Monte unidades externas formatadas em exFAT no Jetson com JetPack 6'
-    },
-    url: {
-      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q17-how-can-i-mount-an-external-hard-drive-formatted-with-exfat-on-jetson-jetpack-6',
-      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q17-jetson-jetpack-6-で-exfat-形式の外付けハードドライブをマウントするにはどうすればよいですか',
-      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q17-如何在-jetson-jetpack-6-上挂载-exfat-格式的外部硬盘',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q17-cómo-puedo-montar-un-disco-duro-externo-formatado-con-exfat-en-jetson-jetpack-6',
-      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q17-como-posso-montar-um-disco-rígido-externo-formatado-com-exfat-no-jetson-jetpack-6'
-    }
-  }
 ];
 
 export const translations = {
@@ -268,7 +273,7 @@ export const translations = {
     usage1: {
       title: 'Jetpack Flash and Hardware Usage',
       desc: 'Start with our flashing guide, then explore hardware documentation for your specific device.',
-      tabs: ['Carrier Board', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Others']
+      tabs: ['Carrier Board', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Rugged', 'reServer', 'Others']
     },
     flashGuide: {
       title: 'JetPack Flashing Guide',
@@ -364,6 +369,11 @@ export const translations = {
       cta: 'View Full FAQ',
       commonIssues: 'Common Issues',
       commonIssuesDesc: 'Quick answers to frequently encountered problems',
+      searchPlaceholder: 'Search frequently asked questions...',
+      searchResults: '{count} results found',
+      searchEmpty: 'No results found. Try a different keyword or browse the full FAQ.',
+      viewAll: 'View all',
+      faqUrl: 'https://wiki.seeedstudio.com/Jetson_FAQ/',
       installation: 'Installation & Setup',
       installationDesc: 'Guides for getting started with your Jetson device'
     },
@@ -407,7 +417,7 @@ export const translations = {
     usage1: {
       title: 'JetPack フラッシュとハードウェア使用法',
       desc: 'ほとんどの reComputer Jetson 製品には JetPack がプリインストールされています。すべてのデバイスでフラッシュガイドを利用可能です。',
-      tabs: ['キャリアボード', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Others']
+      tabs: ['キャリアボード', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Rugged', 'reServer', 'Others']
     },
     flashGuide: {
       title: 'JetPack フラッシュガイド',
@@ -503,6 +513,11 @@ export const translations = {
       cta: 'FAQを見る',
       commonIssues: '一般的な問題',
       commonIssuesDesc: 'よく発生する問題への迅速な回答',
+      searchPlaceholder: 'よくある質問を検索...',
+      searchResults: '{count} 件の結果が見つかりました',
+      searchEmpty: '該当する結果が見つかりませんでした。別のキーワードをお試しいただくか、FAQ 全体をご覧ください。',
+      viewAll: 'すべて見る',
+      faqUrl: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/',
       installation: 'インストールと設定',
       installationDesc: 'Jetsonデバイスの開始に関するガイド'
     },
@@ -546,7 +561,7 @@ export const translations = {
     usage1: {
       title: 'JetPack 刷机和硬件使用',
       desc: '大多数 reComputer Jetson 产品预装了 JetPack。所有设备均可使用刷机指南。',
-      tabs: ['载板', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Others']
+      tabs: ['载板', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Rugged', 'reServer', 'Others']
     },
     flashGuide: {
       title: 'JetPack 刷机指南',
@@ -642,6 +657,11 @@ export const translations = {
       cta: '查看完整 FAQ',
       commonIssues: '常见问题',
       commonIssuesDesc: '快速解答经常遇到的问题',
+      searchPlaceholder: '搜索常见问题...',
+      searchResults: '找到 {count} 个相关问题',
+      searchEmpty: '未找到相关问题，请尝试其他关键词，或查看完整 FAQ。',
+      viewAll: '查看全部',
+      faqUrl: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/',
       installation: '安装与设置',
       installationDesc: 'Jetson 设备入门指南'
     },
@@ -685,7 +705,7 @@ export const translations = {
     usage1: {
       title: 'Flasheo JetPack y Uso de Hardware',
       desc: 'La mayoría de los productos reComputer Jetson vienen con JetPack preinstalado. Guías de flasheo disponibles para todos los dispositivos.',
-      tabs: ['Carrier Board', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Others']
+      tabs: ['Carrier Board', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Rugged', 'reServer', 'Others']
     },
     flashGuide: {
       title: 'Guía de Flasheo JetPack',
@@ -781,6 +801,11 @@ export const translations = {
       cta: 'Ver FAQ Completo',
       commonIssues: 'Problemas Comunes',
       commonIssuesDesc: 'Respuestas rápidas a problemas frecuentes',
+      searchPlaceholder: 'Buscar preguntas frecuentes...',
+      searchResults: '{count} resultados encontrados',
+      searchEmpty: 'No se encontraron resultados. Pruebe con otra palabra clave o consulte el FAQ completo.',
+      viewAll: 'Ver todo',
+      faqUrl: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/',
       installation: 'Instalación y Configuración',
       installationDesc: 'Guías para comenzar con su dispositivo Jetson'
     },
@@ -824,7 +849,7 @@ export const translations = {
     usage1: {
       title: 'Gravação do JetPack e Uso do Hardware',
       desc: 'A maioria dos produtos reComputer Jetson vem com JetPack pré-instalado. Guias de gravação estão disponíveis para todos os dispositivos.',
-      tabs: ['Carrier Board', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Others']
+      tabs: ['Carrier Board', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Rugged', 'reServer', 'Others']
     },
     flashGuide: {
       title: 'Guia de Gravação do JetPack',
@@ -920,6 +945,11 @@ export const translations = {
       cta: 'Ver FAQ Completo',
       commonIssues: 'Problemas Comuns',
       commonIssuesDesc: 'Respostas rápidas para problemas encontrados com frequência',
+      searchPlaceholder: 'Pesquisar perguntas frequentes...',
+      searchResults: '{count} resultados encontrados',
+      searchEmpty: 'Nenhum resultado encontrado. Tente outra palavra-chave ou consulte o FAQ completo.',
+      viewAll: 'Ver tudo',
+      faqUrl: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/',
       installation: 'Instalação e Configuração',
       installationDesc: 'Guias para começar com seu dispositivo Jetson'
     },
@@ -979,6 +1009,7 @@ const RecomputerPage = ({ lang }: Props) => {
     const params = new URLSearchParams(location.search);
     const tab = params.get('tab');
     const category = params.get('category');
+    const devicetab = params.get('devicetab');
     if (tab === 'demo' || tab === 'products' || tab === 'faq' || tab === 'community' || tab === 'devices') {
       setActivePage(tab);
       if (tab === 'community') {
@@ -987,6 +1018,10 @@ const RecomputerPage = ({ lang }: Props) => {
       if (tab === 'devices') {
         setExpandedSections(prev => ({ ...prev, devices: true }));
       }
+    }
+    // 设备网格 tab 深链：?tab=devices&devicetab=N（0=Carrier Board … 8=Others）
+    if (devicetab !== null && /^[0-8]$/.test(devicetab)) {
+      setActiveDeviceTab(Number(devicetab));
     }
     if (
       category === 'cv' ||
@@ -1001,12 +1036,13 @@ const RecomputerPage = ({ lang }: Props) => {
   }, [location.search]);
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [faqQuery, setFaqQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const ITEMS_PER_PAGE = 9;
 
   const [expandedSections, setExpandedSections] = useState({
     examples: true,
-    devices: false,
+    devices: true,
     flashGuide: true,
     bsp: true,
     devTool: true,
@@ -1106,6 +1142,28 @@ const RecomputerPage = ({ lang }: Props) => {
     setCurrentPage(1);
   };
 
+  // FAQ categories filtered by the search query (matches question text in
+  // the current locale; categories without matches are dropped).
+  const getFilteredFaqCategories = () => {
+    const query = faqQuery.trim().toLowerCase();
+    return FAQ_CATEGORIES
+      .map((cat) => ({
+        ...cat,
+        items: query
+          ? cat.items.filter((item) => {
+              const title = getLocaleValue(item.title, resolvedLang, item.title.en) || '';
+              return title.toLowerCase().includes(query);
+            })
+          : cat.items
+      }))
+      .filter((cat) => cat.items.length > 0);
+  };
+
+  const filteredFaqCount = getFilteredFaqCategories().reduce(
+    (total, cat) => total + cat.items.length,
+    0
+  );
+
   // Shared Community Projects section, used by the demo tab and the
   // standalone community view (?tab=community, reached from the sidebar
   // "Applications" link).
@@ -1182,6 +1240,11 @@ const RecomputerPage = ({ lang }: Props) => {
                   <h3 className={styles.project_title}>
                     {getLocaleValue(project.name, resolvedLang, project.name?.en || '')}
                   </h3>
+                  {getLocaleValue(project.description, resolvedLang, '') && (
+                    <p className={styles.project_description}>
+                      {getLocaleValue(project.description, resolvedLang, project.description?.en || '')}
+                    </p>
+                  )}
                 </div>
               </a>
             ))}
@@ -1268,7 +1331,7 @@ const RecomputerPage = ({ lang }: Props) => {
           <div className={styles.device_grid}>
             {activeDeviceTab === 0 && (
               <>
-                {productOptions.filter(PRODUCT_CATEGORIES.carrier.filter).map((product: ProductOption) => (
+                {ALL_PRODUCTS.filter(PRODUCT_CATEGORIES.carrier.filter).map((product: ProductOption) => (
                   <a
                     key={product.value}
                     href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
@@ -1293,7 +1356,7 @@ const RecomputerPage = ({ lang }: Props) => {
 
             {activeDeviceTab === 1 && (
               <>
-                {productOptions.filter(PRODUCT_CATEGORIES.super.filter).map((product: ProductOption) => (
+                {ALL_PRODUCTS.filter(PRODUCT_CATEGORIES.super.filter).map((product: ProductOption) => (
                   <a
                     key={product.value}
                     href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
@@ -1318,7 +1381,7 @@ const RecomputerPage = ({ lang }: Props) => {
 
             {activeDeviceTab === 2 && (
               <>
-                {productOptions.filter(PRODUCT_CATEGORIES.mini.filter).map((product: ProductOption) => (
+                {ALL_PRODUCTS.filter(PRODUCT_CATEGORIES.mini.filter).map((product: ProductOption) => (
                   <a
                     key={product.value}
                     href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
@@ -1343,7 +1406,7 @@ const RecomputerPage = ({ lang }: Props) => {
 
             {activeDeviceTab === 3 && (
               <>
-                {productOptions.filter(PRODUCT_CATEGORIES.robotics.filter).map((product: ProductOption) => (
+                {ALL_PRODUCTS.filter(PRODUCT_CATEGORIES.robotics.filter).map((product: ProductOption) => (
                   <a
                     key={product.value}
                     href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
@@ -1368,7 +1431,7 @@ const RecomputerPage = ({ lang }: Props) => {
 
             {activeDeviceTab === 4 && (
               <>
-                {productOptions.filter(PRODUCT_CATEGORIES.classic.filter).map((product: ProductOption) => (
+                {ALL_PRODUCTS.filter(PRODUCT_CATEGORIES.classic.filter).map((product: ProductOption) => (
                   <a
                     key={product.value}
                     href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
@@ -1393,7 +1456,7 @@ const RecomputerPage = ({ lang }: Props) => {
 
             {activeDeviceTab === 5 && (
               <>
-                {productOptions.filter(PRODUCT_CATEGORIES.industrial.filter).map((product: ProductOption) => (
+                {ALL_PRODUCTS.filter(PRODUCT_CATEGORIES.industrial.filter).map((product: ProductOption) => (
                   <a
                     key={product.value}
                     href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
@@ -1418,7 +1481,57 @@ const RecomputerPage = ({ lang }: Props) => {
 
             {activeDeviceTab === 6 && (
               <>
-                {productOptions.filter(PRODUCT_CATEGORIES.other.filter).map((product: ProductOption) => (
+                {ALL_PRODUCTS.filter(PRODUCT_CATEGORIES.rugged.filter).map((product: ProductOption) => (
+                  <a
+                    key={product.value}
+                    href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.device_card}
+                  >
+                    <div className={styles.device_image}>
+                      <img src={product.img} alt={product.label} />
+                    </div>
+                    <div className={styles.device_content}>
+                      <div className={styles.device_name}>{product.label}</div>
+                      <div className={styles.device_action}>
+                        <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                        <span className={styles.device_action_arrow}>→</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )}
+
+            {activeDeviceTab === 7 && (
+              <>
+                {ALL_PRODUCTS.filter(PRODUCT_CATEGORIES.reserver.filter).map((product: ProductOption) => (
+                  <a
+                    key={product.value}
+                    href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.device_card}
+                  >
+                    <div className={styles.device_image}>
+                      <img src={product.img} alt={product.label} />
+                    </div>
+                    <div className={styles.device_content}>
+                      <div className={styles.device_name}>{product.label}</div>
+                      <div className={styles.device_action}>
+                        <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                        <span className={styles.device_action_arrow}>→</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )}
+
+            {activeDeviceTab === 8 && (
+              <>
+                {ALL_PRODUCTS.filter(PRODUCT_CATEGORIES.other.filter).map((product: ProductOption) => (
                   <a
                     key={product.value}
                     href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
@@ -1890,7 +2003,7 @@ const RecomputerPage = ({ lang }: Props) => {
               <div className={styles.hero_subtitle}>{t.faq.subtitle}</div>
               <h1>{t.faq.title}</h1>
               <p className={styles.hero_description}>{t.faq.desc}</p>
-              <a href="https://wiki.seeedstudio.com/Jetson_FAQ/" target="_blank" rel="noreferrer" className={styles.hero_cta}>
+              <a href={t.faq.faqUrl} target="_blank" rel="noreferrer" className={styles.hero_cta}>
                 <span>{t.faq.cta}</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
@@ -1912,27 +2025,73 @@ const RecomputerPage = ({ lang }: Props) => {
             </div>
 
             {expandedSections.faq && (
-              <div className={styles.faq_grid}>
-                {FAQ_DATA.map((faq, idx) => {
-                  const FaqIconComponent = faq.Icon;
-                  return (
-                    <a
-                      key={idx}
-                      href={getLocaleValue(faq.url, resolvedLang, faq.url.en)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={styles.faq_card}
-                    >
-                      <div className={styles.faq_icon}><FaqIconComponent size={28} /></div>
-                      <div className={styles.faq_content}>
-                        <h3 className={styles.faq_title}>{getLocaleValue(faq.title, resolvedLang, faq.title.en)}</h3>
-                        <p className={styles.faq_desc}>{getLocaleValue(faq.desc, resolvedLang, faq.desc.en)}</p>
-                        <span className={styles.faq_link}>{t.common.learnMore}</span>
-                      </div>
-                    </a>
-                  );
-                })}
-              </div>
+              <>
+                <div className={styles.search_container}>
+                  <div className={styles.search_wrapper}>
+                    <span className={styles.search_icon}>🔍</span>
+                    <input
+                      type="text"
+                      className={styles.search_input}
+                      placeholder={t.faq.searchPlaceholder}
+                      value={faqQuery}
+                      onChange={(e) => setFaqQuery(e.target.value)}
+                    />
+                    {faqQuery && (
+                      <button
+                        className={styles.search_clear}
+                        onClick={() => setFaqQuery('')}
+                      >
+                        ✕
+                      </button>
+                    )}
+                  </div>
+                  <span className={styles.search_results}>
+                    {t.faq.searchResults.replace('{count}', String(filteredFaqCount))}
+                  </span>
+                </div>
+
+                {getFilteredFaqCategories().length === 0 ? (
+                  <div className={styles.faq_empty}>{t.faq.searchEmpty}</div>
+                ) : (
+                  <div className={styles.faq_category_grid}>
+                    {getFilteredFaqCategories().map((cat, catIdx) => {
+                      const CatIcon = cat.Icon;
+                      return (
+                        <div key={catIdx} className={styles.faq_category_card}>
+                          <div className={styles.faq_category_header}>
+                            <span className={styles.faq_category_icon}><CatIcon size={22} /></span>
+                            <h3 className={styles.faq_category_title}>
+                              {getLocaleValue(cat.title, resolvedLang, cat.title.en)}
+                            </h3>
+                          </div>
+                          <ul className={styles.faq_category_items}>
+                            {cat.items.map((item, itemIdx) => (
+                              <li key={itemIdx}>
+                                <a
+                                  href={getLocaleValue(item.url, resolvedLang, item.url.en)}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className={styles.faq_category_item}
+                                >
+                                  {getLocaleValue(item.title, resolvedLang, item.title.en)}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                          <a
+                            href={t.faq.faqUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={styles.faq_view_all}
+                          >
+                            {t.faq.viewAll} →
+                          </a>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>
