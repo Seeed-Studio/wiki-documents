@@ -1,7 +1,6 @@
 ---
 description: Introdução à placa carrier reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor.
 title: Introdução ao reComputer Robotics J601
-sidebar_label: Gravar JetPack
 keywords:
   - reComputer Robotics J601
   - AGX Thor
@@ -15,7 +14,7 @@ last_update:
   date: 08/28/2026
   author: haochen
 createdAt: '2026-04-24'
-updatedAt: '2026-09-01'
+updatedAt: '2026-08-28'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
 ---
 
