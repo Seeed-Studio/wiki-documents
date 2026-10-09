@@ -1626,7 +1626,7 @@ const RecomputerPage = ({ lang }: Props) => {
                       <a
                         key={idx}
                         className={styles.beginner_module_card}
-                        href={`${LANG_PATH_PREFIX[resolvedLang]}/nvidia_jetson?tab=demo&category=${categoryKey}`}
+                        href={`${LANG_PATH_PREFIX[resolvedLang]}/NVIDIA_Jetson/?tab=demo&category=${categoryKey}`}
                         onClick={(e) => {
                           e.preventDefault();
                           setActivePage('demo');
