@@ -376,8 +376,8 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     <tr>
       <td rowSpan={4}>7.2</td>
       <td> Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm">Download</a></td>
-      <td>0978be490c5ff7c1648317240e8f00d7<br />6b2d025ed30a945249eaa69112a047c8</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB-xhKB8WtjT7NNVuoLnQAGAcHwWMrE39VgAwN6zHG7E1Q">Download</a></td>
+      <td>EEC7CA6A46487F307B77A9AA24FE4B91</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
