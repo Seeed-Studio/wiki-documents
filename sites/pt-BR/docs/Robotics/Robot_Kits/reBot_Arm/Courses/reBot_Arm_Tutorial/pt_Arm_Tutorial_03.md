@@ -1,6 +1,7 @@
 ---
 description: Capítulo 3 do Curso para Iniciantes em IA Física da Seeed — a lista de hardware prático necessária para cada etapa, incluindo unidades de controle principal, o reBot Arm, câmeras, braço líder e suportes imprimíveis.
 title: Capítulo 3 - Seleção de Hardware para os Cursos
+hide_title: true
 keywords:
   - reBot
   - B601-DM
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_3/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

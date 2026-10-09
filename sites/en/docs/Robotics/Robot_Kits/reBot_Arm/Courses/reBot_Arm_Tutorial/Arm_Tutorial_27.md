@@ -1,6 +1,7 @@
 ---
 description: "Chapter 27 of the Seeed Physical AI Beginner's Course — how a robot turns pixels into 3D: the robot vision pipeline, RGB-D sensing, depth maps, stereo / structured-light / TOF depth cameras, the pinhole camera model with intrinsics and extrinsics, pixel-to-3D conversion and point clouds."
 title: Chapter 27 - Robot Vision and 3D Perception
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -25,8 +26,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_27/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 

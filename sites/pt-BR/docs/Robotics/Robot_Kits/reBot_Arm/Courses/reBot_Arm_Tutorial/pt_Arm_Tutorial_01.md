@@ -1,6 +1,7 @@
 ---
 description: Capítulo 1 do Curso para Iniciantes em Physical AI da Seeed — entenda o que são robôs e braços robóticos, graus de liberdade e a diferença entre controle tradicional, aprendizado por imitação e VLA.
 title: Capítulo 1 - Robôs e Physical AI
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_1/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

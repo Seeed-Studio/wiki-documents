@@ -108,6 +108,19 @@ const courseSidebar = () => [
       `${C}/es_Arm_Tutorial_26`,
     ],
   },
+  {
+    type: 'category',
+    label: 'Etapa 6: Visión Robótica y Agarre Autónomo',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/es_Arm_Tutorial_27`,
+      `${C}/es_Arm_Tutorial_28`,
+      `${C}/es_Arm_Tutorial_29`,
+      `${C}/es_Arm_Tutorial_30`,
+    ],
+  },
 ];
 
 const sidebars = {

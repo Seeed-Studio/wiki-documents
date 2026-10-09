@@ -1,6 +1,7 @@
 ---
 description: Chapter 5 of the Seeed Physical AI Beginner's Course — CAN bus basics, standard vs extended data frames, the CAN data link layer, and SocketCAN.
 title: Chapter 5 - CAN Bus and Motor Communication
+hide_title: true
 keywords:
   - reBot
   - CAN Bus
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_5/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

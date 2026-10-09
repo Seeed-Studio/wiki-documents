@@ -1,6 +1,7 @@
 ---
 description: Capítulo 4 do Curso para Iniciantes em IA Física da Seeed — fundamentos de braços robóticos e atuadores de junta, incluindo faixas de segurança, estrutura, redutores, encoders e modos de controle de motores DM/RS.
 title: Capítulo 4 - Fundamentos de Braços Robóticos e Atuadores de Junta
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -26,8 +27,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_4/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

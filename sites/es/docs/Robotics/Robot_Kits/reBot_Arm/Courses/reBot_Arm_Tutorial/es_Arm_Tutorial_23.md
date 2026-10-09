@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 23 del Curso de Introducción a la IA Física de Seeed: marcos de coordenadas y transformaciones homogéneas: marcos del mundo, base, articulaciones, efector final y cámara; vectores y matrices; matrices de traslación y rotación; encadenamiento de transformaciones; y ángulos de Euler frente a cuaterniones."
 title: Capítulo 23 - Fundamentos Matemáticos del Brazo Robótico y Sistemas de Coordenadas
+hide_title: true
 keywords:
   - reBot
   - Brazo Robótico
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_23/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 
