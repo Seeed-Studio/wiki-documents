@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 29 do Curso de Iniciação em IA Física da Seeed — prática de preensão visual autônoma com o reBot Arm: instalação do SDK da câmera RGB-D e do repositório de preensão, execução dos programas de preensão e preensão‑e‑colocação, compensação de posição e uma trilha opcional de preensão em nuvem de pontos com GraspNet."
 title: Capítulo 29 - Preensão Visual Autônoma com reBot Arm
+hide_title: true
 keywords:
   - reBot
   - Braço Robótico
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_29/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 

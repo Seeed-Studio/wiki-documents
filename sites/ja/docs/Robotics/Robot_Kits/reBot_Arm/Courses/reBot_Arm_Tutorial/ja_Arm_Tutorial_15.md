@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI Beginner's Course 第15章 — ACTモデルとアクションチャンク：ACTの入力と出力、ResNetとTransformerの構造、Attentionの直感、CVAE、アクションチャンクとアクションホライズンの比較、誤差蓄積への対策、そしてACTの能力の境界。
 title: 第15章 - ACTモデルとアクションチャンク
+hide_title: true
 keywords:
   - reBot
   - ACT
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_15/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

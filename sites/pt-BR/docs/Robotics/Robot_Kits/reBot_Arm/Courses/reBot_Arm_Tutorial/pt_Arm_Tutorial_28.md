@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 28 do Curso para Iniciantes em IA Física da Seeed — detecção de objetos e calibração mão‑olho: taxonomia de tarefas de visão, YOLO e detecção de vocabulário aberto, caixas delimitadoras orientadas, NMS e mAP, marcadores ArUco com solvePnP, calibração mão‑olho AX = XB e estimação de pose de preensão 6‑DoF com GraspNet."
 title: Capítulo 28 - Detecção de Objetos e Calibração Mão-Olho
+hide_title: true
 keywords:
   - reBot
   - Braço Robótico
@@ -26,8 +27,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_28/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 

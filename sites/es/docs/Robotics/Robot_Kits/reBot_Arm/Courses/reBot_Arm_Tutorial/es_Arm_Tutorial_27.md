@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 27 del Curso de Introducción a la IA Física de Seeed: cómo un robot convierte píxeles en 3D: la canalización de visión robótica, la captación RGB-D, mapas de profundidad, cámaras de profundidad estéreo / de luz estructurada / TOF, el modelo de cámara de orificio con parámetros intrínsecos y extrínsecos, conversión de píxeles a 3D y nubes de puntos."
 title: Capítulo 27 - Visión Robótica y Percepción 3D
+hide_title: true
 keywords:
   - reBot
   - Brazo Robótico
@@ -25,8 +26,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_27/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 

@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 15 del Curso de Introducción a la IA Física de Seeed: el modelo ACT y el troceado de acciones (action chunking): entrada y salida de ACT, la estructura ResNet y Transformer, intuición sobre la atención, CVAE, action chunk vs action horizon, defensas contra la acumulación de errores y los límites de capacidad de ACT.'
 title: Capítulo 15 - Modelo ACT y Troceado de Acciones
+hide_title: true
 keywords:
   - reBot
   - ACT
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_15/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

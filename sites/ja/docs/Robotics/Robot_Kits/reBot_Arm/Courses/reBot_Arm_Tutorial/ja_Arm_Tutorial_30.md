@@ -1,6 +1,7 @@
 ---
 description: "Seeed Physical AI Beginner's Course の第30章 — 選択科目の音声・マルチモーダルインタラクションプロジェクト：DOA 音源追跡付き reSpeaker マイクアレイと Groq Whisper 音声認識、Llama インテント理解を組み合わせて、ハードウェア配線からコマンドラインリファレンスまで、音声で reBot Arm を制御します。"
 title: 第30章 - 音声とマルチモーダルインタラクション
+hide_title: true
 keywords:
   - reBot
   - ロボットアーム
@@ -25,8 +26,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_30/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 

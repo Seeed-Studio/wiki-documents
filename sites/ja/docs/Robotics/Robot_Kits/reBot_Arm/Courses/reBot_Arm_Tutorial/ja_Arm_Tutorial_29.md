@@ -1,6 +1,7 @@
 ---
 description: "Seeed Physical AI Beginner's Course 第29章 — reBot Arm を用いた自律ビジュアル把持の実践：RGB-D カメラ SDK と把持リポジトリのインストール、把持および把持・配置プログラムの実行、位置補正、そしてオプションの GraspNet 点群把持トラック。"
 title: 第29章 - reBot Arm 自律ビジュアル把持
+hide_title: true
 keywords:
   - reBot
   - ロボットアーム
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_29/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 

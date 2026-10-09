@@ -1,6 +1,7 @@
 ---
 description: 'Chapter 17 of the Seeed Physical AI Beginner''s Course — real-robot inference, evaluation, and data iteration: inference data flow, preprocessing and de-normalization, starting inference, action chunk execution, safety, success-rate evaluation, generalization testing, failure analysis, and failure-driven data collection.'
 title: Chapter 17 - Real-Robot Inference, Evaluation, and Data Iteration
+hide_title: true
 keywords:
   - reBot
   - ACT
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_17/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

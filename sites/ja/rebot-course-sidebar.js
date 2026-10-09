@@ -108,6 +108,19 @@ const courseSidebar = () => [
       `${C}/ja_Arm_Tutorial_26`,
     ],
   },
+  {
+    type: 'category',
+    label: 'ステージ 6：ロボットビジョンと自律把持',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/ja_Arm_Tutorial_27`,
+      `${C}/ja_Arm_Tutorial_28`,
+      `${C}/ja_Arm_Tutorial_29`,
+      `${C}/ja_Arm_Tutorial_30`,
+    ],
+  },
 ];
 
 const sidebars = {

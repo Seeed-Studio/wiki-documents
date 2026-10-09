@@ -1,6 +1,7 @@
 ---
 description: 'Chapter 9 of the Seeed Physical AI Beginner''s Course — foundations of robot learning and imitation learning: why the arm needs learning, rule-based vs learning-based control, observation/state/action, action chunks, data distribution, and the three phases of training, inference, and evaluation.'
 title: Chapter 9 - Foundations of Robot Learning and Imitation Learning
+hide_title: true
 keywords:
   - reBot
   - Imitation Learning
@@ -21,8 +22,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_9/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

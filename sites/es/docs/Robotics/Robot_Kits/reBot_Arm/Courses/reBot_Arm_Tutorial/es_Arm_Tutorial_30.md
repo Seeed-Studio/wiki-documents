@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 30 del Curso de Introducción a la IA Física de Seeed: un proyecto optativo de interacción por voz y multimodal: una matriz de micrófonos reSpeaker con seguimiento DOA de la fuente de sonido más reconocimiento de voz Whisper de Groq y comprensión de intención con Llama para controlar por voz el reBot Arm, desde el cableado de hardware hasta la referencia de la línea de comandos."
 title: Capítulo 30 - Interacción por Voz y Multimodal
+hide_title: true
 keywords:
   - reBot
   - Brazo Robótico
@@ -25,8 +26,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_30/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 

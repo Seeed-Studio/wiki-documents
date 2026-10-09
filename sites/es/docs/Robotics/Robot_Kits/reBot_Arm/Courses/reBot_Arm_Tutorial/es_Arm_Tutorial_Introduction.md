@@ -1,6 +1,7 @@
 ---
 description: "Curso de iniciación a la IA Física de Seeed: una guía gratuita y práctica para construir y aprender con el brazo robótico reBot, 100% de código abierto. Se han publicado seis etapas y 30 capítulos, que cubren la configuración y el control básico, el aprendizaje por imitación con LeRobot, VLA con Isaac GR00T, las matemáticas y el control de movimiento del brazo robótico, y la visión robótica con agarre autónomo."
 title: Curso de iniciación a la IA Física de Seeed
+hide_title: true
 keywords:
   - reBot
   - B601-DM
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_introduction/
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
-
-# 
 
 <div className="rebot-page">
 

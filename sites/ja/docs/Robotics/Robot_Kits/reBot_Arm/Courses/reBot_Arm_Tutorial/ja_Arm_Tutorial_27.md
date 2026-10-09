@@ -1,6 +1,7 @@
 ---
 description: "Seeed Physical AI Beginner's Course の第27章 — ロボットがピクセルから3Dを得るまで：ロボットビジョンパイプライン、RGB-D センシング、デプスマップ、ステレオ / 構造化光 / TOF デプスカメラ、内部パラメータと外部パラメータを持つピンホールカメラモデル、ピクセルから3Dへの変換と点群。"
 title: 第27章 - ロボットビジョンと3D認識
+hide_title: true
 keywords:
   - reBot
   - ロボットアーム
@@ -25,8 +26,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_27/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 

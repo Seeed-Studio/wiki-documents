@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 23 do Curso para Iniciantes em IA Física da Seeed — referenciais de coordenadas e transformadas homogêneas: referenciais de mundo, base, junta, efetuador final e câmera, vetores e matrizes, matrizes de translação e rotação, encadeamento de transformadas e ângulos de Euler versus quaternions."
 title: Capítulo 23 - Fundamentos Matemáticos do Braço Robótico e Sistemas de Coordenadas
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_23/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 29 del Curso de Introducción a la IA Física de Seeed: práctica de agarre visual autónomo con el reBot Arm: instalación del SDK de la cámara RGB-D y del repositorio de agarre, ejecución de los programas de agarre y agarre‑y‑colocación, compensación de posición y una pista opcional de agarre con nubes de puntos usando GraspNet."
 title: Capítulo 29 - Agarre Visual Autónomo con reBot Arm
+hide_title: true
 keywords:
   - reBot
   - Brazo robótico
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_29/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 

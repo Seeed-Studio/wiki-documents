@@ -1,6 +1,7 @@
 ---
 description: "Seeed Physical AI Beginner's Course — 100% オープンソースの reBot ロボットアームを使って構築と学習を行うための、無料でハンズオンなガイドです。セットアップと基本制御、LeRobot を用いた模倣学習、Isaac GR00T を用いた VLA、ロボットアームの数学とモーションコントロール、ロボットビジョンと自律把持をカバーする 6 ステージ・30 章が公開されています。"
 title: Seeed Physical AI ビギナーズコース
+hide_title: true
 keywords:
   - reBot
   - B601-DM
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_introduction/
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
-
-# 
 
 <div className="rebot-page">
 

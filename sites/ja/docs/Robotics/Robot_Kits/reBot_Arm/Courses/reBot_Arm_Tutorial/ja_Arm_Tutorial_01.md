@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI ビギナーコース第 1 章 — ロボットとロボットアームとは何か、自由度、従来型制御・模倣学習・VLA の違いを理解します。
 title: 第 1 章 - ロボットと Physical AI
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_1/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

@@ -1,6 +1,7 @@
 ---
 description: "Seeed Physical AI Beginner's Course 第28章 — 物体検出とハンドアイキャリブレーション：ビジョンタスクの分類、YOLO とオープンボキャブラリ検出、回転バウンディングボックス、NMS と mAP、solvePnP を用いた ArUco マーカー、AX = XB ハンドアイキャリブレーション、そして GraspNet による 6-DoF 把持姿勢推定。"
 title: 第28章 - 物体検出とハンドアイキャリブレーション
+hide_title: true
 keywords:
   - reBot
   - ロボットアーム
@@ -26,8 +27,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_28/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-#
 
 <div className="rebot-page">
 
