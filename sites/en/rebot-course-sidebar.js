@@ -121,6 +121,33 @@ const courseSidebar = () => [
       `${C}/Arm_Tutorial_30`,
     ],
   },
+  {
+    type: 'category',
+    label: 'Stage 7: ROS2 and Robot System Integration',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/Arm_Tutorial_31`,
+      `${C}/Arm_Tutorial_32`,
+      `${C}/Arm_Tutorial_33`,
+      `${C}/Arm_Tutorial_34`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Stage 8: MuJoCo and Isaac Sim Robot Arm Simulation',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/Arm_Tutorial_35`,
+      `${C}/Arm_Tutorial_36`,
+      `${C}/Arm_Tutorial_37`,
+      `${C}/Arm_Tutorial_38`,
+      `${C}/Arm_Tutorial_39`,
+    ],
+  },
 ];
 
 const sidebars = {
