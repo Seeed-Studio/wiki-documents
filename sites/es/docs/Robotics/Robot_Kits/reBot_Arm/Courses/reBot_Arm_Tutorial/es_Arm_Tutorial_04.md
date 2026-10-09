@@ -1,6 +1,7 @@
 ---
 description: Capítulo 4 del Curso de Introducción a la IA Física de Seeed - fundamentos de brazos robóticos y actuadores articulares, incluidos rangos de seguridad, estructura, reductores, codificadores y modos de control de motores DM/RS.
 title: Capítulo 4 - Fundamentos de los brazos robóticos y los actuadores articulares
+hide_title: true
 keywords:
   - reBot
   - Brazo robótico
@@ -26,8 +27,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_4/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI ビギナーコース第21章 — Isaac GR00T を用いた reBot Arm のファインチューニング：環境構築、ファウンデーションモデルのダウンロード、データセットパス、単一 GPU / 複数 GPU でのファインチューニング、VRAM と loss の監視、チェックポイント保存、実機推論、トラブルシューティング、および学習のコツ。
 title: 第21章 - Isaac GR00T を用いた reBot Arm のファインチューニング
+hide_title: true
 keywords:
   - reBot
   - GR00T
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_21/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

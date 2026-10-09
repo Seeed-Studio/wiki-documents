@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 9 del Curso de Introducción a la IA Física de Seeed: fundamentos del aprendizaje de robots y del aprendizaje por imitación: por qué el brazo necesita aprendizaje, control basado en reglas vs. basado en aprendizaje, observación/estado/acción, fragmentos de acción, distribución de datos y las tres fases de entrenamiento, inferencia y evaluación.'
 title: Capítulo 9 - Fundamentos del Aprendizaje de Robots y del Aprendizaje por Imitación
+hide_title: true
 keywords:
   - reBot
   - Imitation Learning
@@ -21,8 +22,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_9/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

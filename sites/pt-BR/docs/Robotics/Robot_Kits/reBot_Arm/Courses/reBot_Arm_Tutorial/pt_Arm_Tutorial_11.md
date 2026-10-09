@@ -1,6 +1,7 @@
 ---
 description: Capítulo 11 do Curso para Iniciantes em IA Física da Seeed — configuração do ambiente, calibração dos braços seguidor e líder, mapeamento de juntas, segurança na teleoperação, início da teleoperação mestre‑escravo, frequência de controle e latência, e prática hands-on.
 title: Capítulo 11 - Calibração de Líder e Seguidor e Teleoperação
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_11/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

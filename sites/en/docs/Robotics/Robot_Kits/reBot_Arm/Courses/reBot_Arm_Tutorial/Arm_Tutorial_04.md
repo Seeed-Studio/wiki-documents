@@ -1,6 +1,7 @@
 ---
 description: Chapter 4 of the Seeed Physical AI Beginner's Course — fundamentals of robotic arms and joint actuators, including safety ranges, structure, reducers, encoders, and DM/RS motor control modes.
 title: Chapter 4 - Fundamentals of Robotic Arms and Joint Actuators
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -26,8 +27,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_4/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

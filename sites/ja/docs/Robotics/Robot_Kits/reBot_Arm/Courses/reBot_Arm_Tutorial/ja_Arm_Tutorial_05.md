@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI Beginner's Course の第5章 — CAN バスの基礎、標準フレームと拡張フレーム、CAN データリンク層、および SocketCAN について解説します。
 title: 第5章 - CAN バスとモーター通信
+hide_title: true
 keywords:
   - reBot
   - CAN Bus
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_5/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

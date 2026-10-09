@@ -1,6 +1,7 @@
 ---
 description: Chapter 1 of the Seeed Physical AI Beginner's Course — understand what robots and robotic arms are, degrees of freedom, and the difference between traditional control, imitation learning, and VLA.
 title: Chapter 1 - Robots and Physical AI
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_1/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

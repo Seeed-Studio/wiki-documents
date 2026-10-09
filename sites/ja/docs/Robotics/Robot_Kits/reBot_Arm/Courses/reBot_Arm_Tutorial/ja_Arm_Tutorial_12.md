@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI Beginner's Course の第12章 — ロボットのデータセットとタスク設計：Episode とは何か、1つのデータレコードに何が入っているか、タイムスタンプと同期、開始／終了条件、一貫性と多様性、データ量とデータ品質、そしてデータ作成の具体例。
 title: 第12章 - ロボットのデータセットとタスク設計
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_12/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

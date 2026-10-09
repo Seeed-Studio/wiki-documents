@@ -108,6 +108,19 @@ const courseSidebar = () => [
       `${C}/pt_Arm_Tutorial_26`,
     ],
   },
+  {
+    type: 'category',
+    label: 'Fase 6: Visão Robótica e Preensão Autônoma',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/pt_Arm_Tutorial_27`,
+      `${C}/pt_Arm_Tutorial_28`,
+      `${C}/pt_Arm_Tutorial_29`,
+      `${C}/pt_Arm_Tutorial_30`,
+    ],
+  },
 ];
 
 const sidebars = {

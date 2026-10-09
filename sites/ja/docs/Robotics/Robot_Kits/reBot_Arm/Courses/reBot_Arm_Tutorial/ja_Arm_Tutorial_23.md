@@ -1,6 +1,7 @@
 ---
 description: "Seeed Physical AI Beginner's Course 第23章 — 座標系と同次変換：ワールド、ベース、関節、エンドエフェクタおよびカメラ座標系、ベクトルと行列、並進行列と回転行列、変換の連鎖、そしてオイラー角とクォータニオンの比較。"
 title: 第23章 - ロボットアームの数学的基礎と座標系
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_23/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 
