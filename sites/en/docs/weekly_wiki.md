@@ -34,7 +34,7 @@ This wiki explains how to control the reBot Arm B601-DM using natural voice comm
 
 </div>
 
-### [reComputer Rugged J401 for Industrial Vision](http://localhost:3000/ai_robotics_recomputer_rugged_j401_cv_demo)
+### [reComputer Rugged J401 for Industrial Vision](http://localhost:3000/jetson/recomputer_rugged_j401/industrial_vision)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="pir" width={800} height="auto" /></p>
 

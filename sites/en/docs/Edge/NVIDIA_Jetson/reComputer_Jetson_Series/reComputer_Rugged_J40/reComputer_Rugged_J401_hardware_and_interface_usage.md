@@ -8,17 +8,23 @@ keywords:
   - Jetson
   - hardware interface
 image: https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png
-slug: /ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage
+slug: /jetson/recomputer_rugged_j401/hardware_and_interface_usage
+aliases:
+  - /ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage
 sku: 100046979,100002634
 last_update:
-  date: 09/18/2026
+  date: 09/30/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/
+updatedAt: '2026-09-30'
+url: https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/hardware_and_interface_usage/
 ---
 
+import RuggedJ40DocNav from '@site/src/components/jetson/RuggedJ40DocNav';
+
 # reComputer Rugged J401 Hardware and Interface Usage
+
+<RuggedJ40DocNav />
 
 This wiki introduces the various hardware and interfaces of reComputer Rugged J40 and explains how to use them to expand your project ideas. Most interfaces on the reComputer Rugged J40 use M12 connectors, providing IP66-rated water and dust resistance as well as excellent vibration resistance. This makes it suitable for long-term deployment in harsh outdoor environments, such as onboard vessels and in port monitoring systems.
 
