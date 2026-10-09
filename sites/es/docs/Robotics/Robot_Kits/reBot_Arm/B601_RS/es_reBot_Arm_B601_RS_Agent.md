@@ -18,7 +18,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/es/wrc_demo_tutorial/
 ---
 

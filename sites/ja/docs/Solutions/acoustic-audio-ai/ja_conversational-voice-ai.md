@@ -1,6 +1,6 @@
 ---
 description: エッジデバイスで割り込み可能な音声端末を構築する方法——必要なボードとマイク、利用できるインターフェース、言語×デバイス対応表、RK3576でのASR/TTS実測データ
-title: 'エッジで割り込み可能な対話音声AI：構築・導入・実測結果'
+title: エッジで割り込み可能な対話音声AI：構築・導入・実測結果
 keywords:
   - conversational voice AI
   - barge-in voice assistant

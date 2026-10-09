@@ -16,7 +16,7 @@ last_update:
   date: 9/17/2026
   author: Michelle Huang
 createdAt: 2026-09-17T00:00:00.000Z
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/easyskymesh_wio_tracker_l1/
 ---
 

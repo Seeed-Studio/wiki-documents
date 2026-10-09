@@ -95,6 +95,19 @@ const courseSidebar = () => [
       `${C}/es_Arm_Tutorial_22`,
     ],
   },
+  {
+    type: 'category',
+    label: 'Stage 5: Robot Arm Mathematics and Motion Control',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/es_Arm_Tutorial_23`,
+      `${C}/es_Arm_Tutorial_24`,
+      `${C}/es_Arm_Tutorial_25`,
+      `${C}/es_Arm_Tutorial_26`,
+    ],
+  },
 ];
 
 const sidebars = {
@@ -102,7 +115,7 @@ const sidebars = {
   // Standalone course sidebar.
   RebotCourseSidebar: courseSidebar(),
 
-  // reBot B601-RS: Quick Start & SDK / Applications / Course (jumps to course).
+  // reBot-RS: Quick Start & SDK / Applications / Course (jumps to course).
   RebotRsSidebar: [
     backToRobotics(),
     {
@@ -112,10 +125,10 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        `${RS}/es_reBot_Arm_B601_RS_Getting_Started`,
-        `${RS}/es_reBot_Arm_B601_RS_Lerobot`,
-        `${RS}/es_reBot_Arm_B601_RS_pinocchio`,
-        `${RS}/es_reBot_Arm_B601_RS_control_mit`,
+        { type: 'doc', id: `${RS}/es_reBot_Arm_B601_RS_Getting_Started`, label: 'Inicio rápido de reBot-RS' },
+        { type: 'doc', id: `${RS}/es_reBot_Arm_B601_RS_Lerobot`, label: 'reBot-RS con LeRobot' },
+        { type: 'doc', id: `${RS}/es_reBot_Arm_B601_RS_pinocchio`, label: 'reBot-RS con Pinocchio' },
+        { type: 'doc', id: `${RS}/es_reBot_Arm_B601_RS_control_mit`, label: 'SDK de motor reBot-RS' },
       ],
     },
     {
@@ -125,17 +138,17 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        `${RS}/es_reBot_Arm_B601_RS_Grasping_Demo`,
-        `${RS}/es_reBot_Arm_B601_RS_ROS2_Integration`,
-        `${RS}/es_reBot_Arm_B601_RS_isaacsim`,
-        `${RS}/es_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`,
-        `${RS}/es_reBot_Arm_B601_RS_Agent`,
+        { type: 'doc', id: `${RS}/es_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS con agarre visual' },
+        { type: 'doc', id: `${RS}/es_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS con ROS2' },
+        { type: 'doc', id: `${RS}/es_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS con Isaac Sim' },
+        { type: 'doc', id: `${RS}/es_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS con Controlador Web' },
+        { type: 'doc', id: `${RS}/es_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS con Agent Claw' },
       ],
     },
     courseLink(),
   ],
 
-  // reBot B601-DM: Quick Start & SDK / Applications / Course (jumps to course).
+  // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
   RebotDmSidebar: [
     backToRobotics(),
     {
@@ -145,9 +158,9 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        `${DM}/es_reBot_Arm_B601_DM_Getting_Started`,
-        `${DM}/es_reBot_Arm_B601_DM_Lerobot`,
-        `${DM}/es_reBot_Arm_B601_DM_pinocchio`,
+        { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_Getting_Started`, label: 'Inicio rápido de reBot-DM' },
+        { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_Lerobot`, label: 'reBot-DM con LeRobot' },
+        { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_pinocchio`, label: 'reBot-DM con Pinocchio' },
       ],
     },
     {
@@ -157,10 +170,10 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        `${DM}/es_reBot_Arm_B601_DM_Grasping_Demo`,
-        `${DM}/es_reBot_Arm_B601_DM_ROS2_Integration`,
-        `${DM}/es_reBot_Arm_B601_DM_isaacsim`,
-        `${DM}/es_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`,
+        { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_Grasping_Demo`, label: 'Agarre visual reBot-DM' },
+        { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM con ROS2' },
+        { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM con Isaac Sim' },
+        { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM con controlador web' },
       ],
     },
     courseLink(),

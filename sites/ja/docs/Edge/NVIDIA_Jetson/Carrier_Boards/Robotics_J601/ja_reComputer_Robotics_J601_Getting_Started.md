@@ -1,7 +1,6 @@
 ---
-description: NVIDIA Jetson AGX Thor モジュール向け reComputer Robotics J601 キャリアボードの入門ガイドです。
+description: NVIDIA Jetson AGX Thor モジュール向け reComputer Robotics J601 キャリアボードの入門ガイド。
 title: reComputer Robotics J601 入門ガイド
-sidebar_label: JetPack をフラッシュ
 keywords:
   - reComputer Robotics J601
   - AGX Thor

@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -61,7 +61,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 Esta página cubre dos demostraciones de agarre visual con diferentes implementaciones:
 
 - **Método de agarre visual 1**: Un flujo de trabajo YOLO + RGB-D + Python SDK que cubre la configuración del entorno, integración de la cámara, calibración mano-ojo y depuración del agarre.
-- **Método de agarre visual 2**: Un flujo de trabajo ROS2 + YOLOE que inicia el brazo, la cámara Gemini 2 / D405 y los nodos de agarre en múltiples terminales para recoger y colocar objetos.
+- **Método de agarre visual 2**: Un flujo de trabajo ROS2 + YOLOE que inicia el brazo, la cámara Gemini 2 / D405 / D435i y los nodos de agarre en múltiples terminales para recoger y colocar objetos.
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="Demostración de agarre visual con reBot Arm B601-RS" />
@@ -664,7 +664,7 @@ Si la salida es `False`, corrige primero la instalación de CUDA / PyTorch. Si e
 
 Esta solución utiliza **ROS2** y **YOLO** en el reBot Arm B601-RS para la detección, el agarre y la colocación de objetos. El sistema inicia el brazo, la cámara de profundidad y los nodos de agarre en terminales separadas.
 
-La cámara de profundidad actualmente es compatible con **Orbbec Gemini 2** y **RealSense D405**. Este flujo de trabajo no requiere un tablero de calibración para la calibración mano-ojo. Debido a las tolerancias de montaje y de las piezas impresas, cada brazo puede mostrar un pequeño desplazamiento en el agarre.
+La cámara de profundidad actualmente es compatible con **Orbbec Gemini 2** y **RealSense D405 / D435i**. Este flujo de trabajo no requiere un tablero de calibración para la calibración mano-ojo. Debido a las tolerancias de montaje y de las piezas impresas, cada brazo puede mostrar un pequeño desplazamiento en el agarre.
 
 ### 2. Configuración del entorno
 
@@ -706,7 +706,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 </details>
 
 <details className="content-details">
-<summary>Haz clic para desplegar la configuración de D405</summary>
+<summary>Haz clic para desplegar los pasos de instalación de D405 / D435i</summary>
 
 1. Clona el SDK de RealSense y cambia a `v2.58.1`:
 
@@ -823,7 +823,7 @@ source ~/rebotarm_ros2/install/setup.bash
 
 ### 3. Ejecutar el proyecto
 
-Antes de comenzar, confirma que el brazo está encendido, que la interfaz CAN es `can0`, y que Gemini 2 o D405 están conectadas por USB. Luego levanta CAN:
+Antes de comenzar, confirma que el brazo está encendido, que la interfaz CAN es `can0`, y que Gemini 2, D405 o D435i están conectadas por USB. Luego levanta CAN:
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -831,7 +831,7 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-Inicia la pila en terminales separadas para que la lógica de agarre sea más fácil de seguir. Gemini 2 y D405 usan diferentes comandos de lanzamiento; elige los correspondientes a tu cámara. Si quieres un lanzamiento con un solo clic, puedes escribir tu propio script de inicio.
+Inicia la pila en terminales separadas para que la lógica de agarre sea más fácil de seguir. Gemini 2, D405 y D435i usan diferentes comandos de lanzamiento; elige los correspondientes a tu cámara. Si quieres un lanzamiento con un solo clic, puedes escribir tu propio script de inicio.
 
 #### Terminal A — Iniciar el brazo + RViz
 
@@ -855,6 +855,18 @@ source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
 ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=can0 use_rviz:=true
+```
+
+</details>
+
+<details className="content-details">
+<summary>Haz clic para desplegar D435i</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=can0 use_rviz:=true
 ```
 
 </details>
@@ -887,6 +899,21 @@ ros2 launch realsense2_camera rs_launch.py \
 
 </details>
 
+<details className="content-details">
+<summary>Haz clic para desplegar D435i</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch realsense2_camera rs_launch.py \
+  align_depth.enable:=true \
+  depth_module.depth_profile:=640x360x30 \
+  depth_module.color_profile:=640x360x30
+```
+
+</details>
+
 #### Terminal C — Mover a la pose de observación + detección con YOLO
 
 Activa primero tu entorno conda con `conda activate yolo`. Si el nombre del entorno no es `yolo`, sustitúyelo por el nombre real de tu entorno conda.
@@ -904,10 +931,11 @@ source ~/rebotarm_ros2/install/setup.bash
   -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
   -p target_class:="cube" \
   -p place_class:="box" \
-  -p yolo_device:=0 \
-  -p grasp_z_offset_m:=0.02 \
+  -p yolo_device:=gpu \
+  -p grasp_z_offset_m:=0.01 \
   -p place_z_offset_m:=0.1 \
-  -p grasp_x_offset_m:=-0.04 \
+  -p grasp_x_offset_m:=-0.02 \
+  -p grasp_y_offset_m:=0.002 \
   -p move_to_observation_on_start:=true \
   -p auto_publish_on_detect:=true
 ```
@@ -923,20 +951,49 @@ Cambia la ruta de Python al entorno YOLO que creaste.
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args 
--p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt 
--p color_topic:=/camera/camera/color/image_raw 
--p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw 
--p color_info_topic:=/camera/camera/color/camera_info 
--p optical_frame:=camera_color_optical_frame 
--p target_class:="cube" 
--p place_class:="box" 
--p yolo_device:=gpu 
--p grasp_z_offset_m:=0.01 
--p place_z_offset_m:=0.1 
--p grasp_x_offset_m:=-0.04 
--p move_to_observation_on_start:=true 
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+-p yolo_model:=/home/ubuntu/rebot_visual_model/yoloe-26s-seg.pt \
+-p color_topic:=/camera/camera/color/image_raw \
+-p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+-p color_info_topic:=/camera/camera/color/camera_info \
+-p optical_frame:=camera_color_optical_frame \
+-p target_class:=cube \
+-p place_class:=box \
+-p yolo_device:=gpu \
+-p grasp_z_offset_m:=0.01 \
+-p grasp_y_offset_m:=-0.005 \
+-p place_z_offset_m:=0.1 \
+-p grasp_x_offset_m:=-0.01 \
+-p move_to_observation_on_start:=true \
 -p auto_publish_on_detect:=true
+```
+
+</details>
+
+<details className="content-details">
+<summary>Haz clic para desplegar D435i</summary>
+
+Cambia la ruta de Python al entorno YOLO que creaste.
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+  -p color_topic:=/camera/camera/color/image_raw \
+  -p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+  -p color_info_topic:=/camera/camera/color/camera_info \
+  -p optical_frame:=camera_color_optical_frame \
+  -p target_class:="cube" \
+  -p place_class:="box" \
+  -p yolo_device:=gpu \
+  -p grasp_z_offset_m:=0.01 \
+  -p place_z_offset_m:=0.1 \
+  -p grasp_y_offset_m:=0.01 \
+  -p grasp_x_offset_m:=-0.04 \
+  -p move_to_observation_on_start:=true \
+  -p auto_publish_on_detect:=true
 ```
 
 </details>
@@ -947,6 +1004,7 @@ source ~/rebotarm_ros2/install/setup.bash
 | `target_class` | Nombre de clase de texto YOLOE del objeto a agarrar; cámbialo para que coincida con el objeto real. Admite las clases YOLO predeterminadas |
 | `place_class` | Nombre de clase de texto YOLOE del objetivo de colocación; cámbialo para que coincida con el objeto real. Admite las clases YOLO predeterminadas |
 | `grasp_x_offset_m` | Desplazamiento hacia adelante/atrás en `base_link`; un valor negativo tira la pose hacia atrás |
+| `grasp_y_offset_m` | Desplazamiento de agarre izquierda/derecha. `0.01` desplaza 1 cm a la izquierda; un valor negativo desplaza a la derecha |
 | `grasp_z_offset_m` | Ajuste fino de la altura de agarre. El valor predeterminado es para el gripper flexible, que es más largo que el gripper estándar |
 | `place_z_offset_m` | Elevación extra usada al colocar, para controlar a qué altura se suelta el objeto por encima del punto de colocación |
 

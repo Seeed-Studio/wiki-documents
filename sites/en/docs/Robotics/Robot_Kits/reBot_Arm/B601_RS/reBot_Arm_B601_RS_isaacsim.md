@@ -1,8 +1,8 @@
 ---
-description: This tutorial shows how to download Isaacsim and deploy the reBotArm robot in a simulation environment for development and debugging.
-title: B601-RS with Isaacsim
+description: This tutorial shows how to download Isaac Sim and deploy the reBotArm robot in a simulation environment for development and debugging.
+title: B601-RS with Isaac Sim
 keywords:
-  - Isaacsim
+  - Isaac Sim
   - Mechanical arm
   - Robot
   - Remote control operation
@@ -14,7 +14,7 @@ last_update:
   date: 8/14/2026
   author: LiuJunjie
 createdAt: '2026-07-07'
-updatedAt: '2026-09-17'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -54,7 +54,7 @@ reBot-Isaacsim is an NVIDIA Isaac Sim simulation project designed specifically f
 The computers used in this wiki are equipped with NVIDIA RTX 4080 GPUs and run the Ubuntu 22.04 LTS operating system.
 :::
 
-## Install Isaacsim
+## Install Isaac Sim
 
 Official links and resources:
 
@@ -446,6 +446,5 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 
 

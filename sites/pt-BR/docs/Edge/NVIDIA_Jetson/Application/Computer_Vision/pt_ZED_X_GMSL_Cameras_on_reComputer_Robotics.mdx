@@ -1,0 +1,659 @@
+---
+description: Conecte, habilite e valide câmeras GMSL2 Stereolabs ZED X-series nas plataformas reComputer Robotics da Seeed Studio.
+title: Usar câmeras GMSL ZED X-Series com reComputer Robotics
+keywords:
+  - ZED X
+  - GMSL2
+  - Stereolabs
+  - reComputer Robotics
+  - reComputer Robotics J50 Mini
+  - reComputer Robotics J50
+  - reComputer Robotics J40
+  - Robotics J601
+  - depth camera
+  - Jetson
+image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
+slug: /zed_x_gmsl_cameras_on_recomputer_robotics
+last_update:
+  date: 09/27/2026
+  author: Dayu
+createdAt: '2026-09-27'
+updatedAt: '2026-09-28'
+url: https://wiki.seeedstudio.com/pt-br/zed_x_gmsl_cameras_on_recomputer_robotics/
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<style>{`
+  .zed-hero {
+    position: relative;
+    overflow: hidden;
+    margin: 1.25rem 0 2rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid rgba(141, 194, 31, 0.38);
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(141, 194, 31, 0.25), transparent 34%),
+      radial-gradient(circle at 12% 100%, rgba(0, 153, 168, 0.16), transparent 38%),
+      var(--ifm-card-background-color);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  }
+  .zed-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.8rem;
+    color: #78a918;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .zed-hero h1 {
+    max-width: 850px;
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.35rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+  .zed-hero-copy {
+    max-width: 760px;
+    margin: 1rem 0 0;
+    font-size: 1.08rem;
+    line-height: 1.75;
+    opacity: 0.88;
+  }
+  .zed-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.35rem;
+  }
+  .zed-pill {
+    padding: 0.46rem 0.78rem;
+    border: 1px solid rgba(141, 194, 31, 0.42);
+    border-radius: 999px;
+    background: rgba(141, 194, 31, 0.09);
+    font-size: 0.88rem;
+    font-weight: 650;
+  }
+  .zed-product-card {
+    display: grid;
+    grid-template-columns: minmax(250px, 42%) 1fr;
+    gap: clamp(1.2rem, 3vw, 2.4rem);
+    align-items: center;
+    min-height: 340px;
+    margin-top: 0.8rem;
+    padding: clamp(1rem, 3vw, 1.8rem);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 20px;
+    background: linear-gradient(145deg, var(--ifm-card-background-color), var(--ifm-background-surface-color));
+  }
+  .zed-product-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    padding: 1rem;
+    border-radius: 16px;
+    background: #fff;
+  }
+  .zed-product-visual img {
+    width: 100%;
+    max-height: 270px;
+    object-fit: contain;
+  }
+  .zed-product-copy h3 {
+    margin: 0.55rem 0 0.7rem;
+    font-size: clamp(1.45rem, 3vw, 2.05rem);
+  }
+  .zed-product-description {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+  .zed-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.34rem 0.62rem;
+    border-radius: 999px;
+    background: rgba(141, 194, 31, 0.14);
+    color: #689715;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+  }
+  .zed-status-soon {
+    background: rgba(14, 165, 233, 0.12);
+    color: #0284c7;
+  }
+  .zed-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+  .zed-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+    background: #8dc21f;
+    color: #132000 !important;
+    font-weight: 750;
+    text-decoration: none !important;
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+  }
+  .zed-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(141, 194, 31, 0.24);
+  }
+  .zed-button-secondary {
+    border: 1px solid var(--ifm-color-emphasis-400);
+    background: transparent;
+    color: var(--ifm-font-color-base) !important;
+  }
+  .zed-flow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin: 1.2rem 0 1.8rem;
+  }
+  .zed-flow-step {
+    padding: 1rem;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 14px;
+    background: var(--ifm-card-background-color);
+  }
+  .zed-flow-step strong {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #78a918;
+  }
+  .zed-coming-soon {
+    margin-top: 0.8rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px dashed rgba(14, 165, 233, 0.55);
+    border-radius: 18px;
+    background: rgba(14, 165, 233, 0.06);
+    text-align: center;
+  }
+  .zed-coming-soon h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.65rem;
+  }
+  .zed-demo {
+    overflow: hidden;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 18px;
+    background: #090d11;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.16);
+  }
+  .zed-demo img {
+    display: block;
+    width: 100%;
+  }
+  .zed-demo-caption {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  @media (max-width: 800px) {
+    .zed-product-card { grid-template-columns: 1fr; }
+    .zed-product-visual { min-height: 220px; }
+    .zed-flow { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .zed-flow { grid-template-columns: 1fr; }
+    .zed-actions { flex-direction: column; }
+  }
+`}</style>
+
+<div className="zed-hero">
+  <span className="zed-eyebrow">Seeed Studio × Stereolabs</span>
+  <h1>Visão de profundidade ZED X, pronta para reComputer Robotics</h1>
+  <div className="zed-hero-copy">
+    Leve visão estéreo GMSL2 robusta e de longo alcance para robôs compactos, máquinas autônomas e sistemas de IA física. As plataformas reComputer Robotics da Seeed Studio combinam computação NVIDIA Jetson, I/O pronto para robótica e conectividade GMSL escalável em um hardware pronto para implantação.
+  </div>
+  <div className="zed-pill-row">
+    <span className="zed-pill">Jetson Orin &amp; Thor</span>
+    <span className="zed-pill">Até 8 câmeras GMSL2</span>
+    <span className="zed-pill">JetPack 6.2 &amp; 7.2</span>
+    <span className="zed-pill">Pré-visualização de profundidade no ZED Studio</span>
+  </div>
+</div>
+
+Este guia explica como usar **câmeras GMSL2 Stereolabs ZED X-series** com o hardware de robótica da Seeed Studio. Quatro plataformas foram adaptadas para a família de câmeras ZED X. O passo a passo completo está atualmente disponível para **reComputer Robotics J50 Mini**; os outros tutoriais específicos de dispositivo serão adicionados em breve.
+
+## Selecione sua plataforma
+
+Escolha uma plataforma abaixo. Os dois grupos de abas nesta página são sincronizados, então sua seleção é mantida no guia correspondente do dispositivo.
+
+<Tabs groupId="zed-robotics-platform">
+  <TabItem value="j50-mini" label="J50 Mini" default>
+
+    <div className="zed-product-card">
+      <div className="zed-product-visual">
+        <img src="https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png" alt="reComputer Robotics J50 Mini"/>
+      </div>
+      <div className="zed-product-copy">
+        <span className="zed-status">● Guia disponível</span>
+        <h3>reComputer Robotics J50 Mini</h3>
+        <div className="zed-product-description">Um computador de robótica AGX Orin compacto com uma arquitetura de expansão GMSL2 para até oito câmeras — ideal para humanoides, AMRs e sistemas multicâmera com restrição de espaço.</div>
+        <div className="zed-actions">
+          <a className="zed-button" href="#device-specific-setup">Abrir configuração ↓</a>
+          <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Mini-J5012-with-GMSL-Extension-p-6878.html" target="_blank" rel="noopener noreferrer">Ver produto ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </TabItem>
+  <TabItem value="j50" label="J50">
+
+    <div className="zed-product-card">
+      <div className="zed-product-visual">
+        <img src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" alt="reComputer Robotics J50"/>
+      </div>
+      <div className="zed-product-copy">
+        <span className="zed-status zed-status-soon">● Guia em breve</span>
+        <h3>reComputer Robotics J50</h3>
+        <div className="zed-product-description">Uma plataforma AGX Orin com alto número de I/Os para cargas de trabalho de robótica exigentes, combinando 10GbE, múltiplas interfaces CAN, armazenamento flexível e expansão para até oito câmeras GMSL2.</div>
+        <div className="zed-actions">
+          <a className="zed-button" href="#device-specific-setup">Ver status ↓</a>
+          <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank" rel="noopener noreferrer">Ver produto ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </TabItem>
+  <TabItem value="j40" label="J40">
+
+    <div className="zed-product-card">
+      <div className="zed-product-visual">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics J40"/>
+      </div>
+      <div className="zed-product-copy">
+        <span className="zed-status zed-status-soon">● Guia em breve</span>
+        <h3>reComputer Robotics J40</h3>
+        <div className="zed-product-description">Um computador de robótica Orin Nano/NX equilibrado com I/O de sensores rico e expansão GMSL2 opcional para quatro câmeras, para robôs autônomos e percepção em tempo real na borda.</div>
+        <div className="zed-actions">
+          <a className="zed-button" href="#device-specific-setup">Ver status ↓</a>
+          <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank" rel="noopener noreferrer">Ver produto ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </TabItem>
+  <TabItem value="j601" label="J601">
+
+    <div className="zed-product-card">
+      <div className="zed-product-visual">
+        <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg" alt="Robotics J601 carrier board"/>
+      </div>
+      <div className="zed-product-copy">
+        <span className="zed-status zed-status-soon">● Guia em breve</span>
+        <h3>Placa Carrier Robotics J601</h3>
+        <div className="zed-product-description">Uma placa carrier Jetson AGX Thor projetada para IA física de próxima geração, com rede de alta largura de banda, I/O para robótica e expansão para até oito câmeras GMSL2.</div>
+        <div className="zed-actions">
+          <a className="zed-button" href="#device-specific-setup">Ver status ↓</a>
+          <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html" target="_blank" rel="noopener noreferrer">Ver produto ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </TabItem>
+</Tabs>
+
+## Configuração específica do dispositivo
+
+<div className="zed-flow">
+  <div className="zed-flow-step"><strong>01 · Conectar</strong>Desligue e conecte a câmera ZED X GMSL.</div>
+  <div className="zed-flow-step"><strong>02 · Ativar</strong>Grave o BSP mais recente ou instale o DEB correspondente.</div>
+  <div className="zed-flow-step"><strong>03 · Instalar</strong>Instale o ZED SDK que corresponde à sua versão L4T.</div>
+  <div className="zed-flow-step"><strong>04 · Validar</strong>Inicie o ZED Studio e inspecione o fluxo de profundidade.</div>
+</div>
+
+<Tabs groupId="zed-robotics-platform">
+  <TabItem value="j50-mini" label="J50 Mini" default>
+
+### reComputer Robotics J50 Mini
+
+#### O que você precisa
+
+- reComputer Robotics J50 Mini com a placa de extensão GMSL
+- Uma câmera ZED X-series GMSL2 compatível
+- Um cabo ou chicote GMSL2 Fakra/Mini-Fakra compatível
+- JetPack 6.2.x ou JetPack 7.2
+- Acesso à Internet, um monitor, teclado e mouse para o ZED Studio
+
+:::info
+Este guia abrange o driver da plataforma Seeed e a configuração do ZED SDK. A compatibilidade do modelo de câmera pode depender da versão do ZED SDK instalada. Use o ZED SDK mais recente compatível com a sua versão JetPack/L4T.
+:::
+
+#### 1. Conectar a câmera
+
+1. Desligue completamente o reComputer.
+2. Desconecte a entrada de alimentação DC.
+3. Conecte a câmera ZED X a uma porta GMSL2 usando o cabo ou chicote compatível. Certifique-se de que o conector esteja totalmente encaixado e travado.
+4. Reconecte a alimentação e inicialize o dispositivo.
+
+:::warning
+Não conecte ou desconecte a câmera GMSL com o sistema ligado (hot-plug). Sempre remova a alimentação antes de conectar ou desconectar a câmera ou o chicote GMSL.
+:::
+
+#### 2. Ativar o suporte a ZED X GMSL
+
+Escolha **um** dos caminhos a seguir. Gravar o BSP mais recente é recomendado para uma implantação limpa; instalar o DEB é mais rápido quando você deseja manter um sistema existente.
+
+<Tabs groupId="j50-mini-zed-driver-method">
+  <TabItem value="latest-bsp" label="Opção 1 · Gravar BSP mais recente" default>
+
+Verifique as informações da compilação do BSP já instalado no dispositivo:
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+Procure pelo campo `DATE`. Se o BSP tiver sido compilado em **24 de setembro de 2026 ou depois**, o suporte a ZED X GMSL já está incluído e você pode continuar para a instalação do ZED SDK.
+
+Se a compilação for mais antiga, grave a imagem mais recente **JetPack 7.2 / L4T 39.2.0** datada de **24 de setembro de 2026** seguindo as etapas abaixo. As duas variantes de módulo usam imagens diferentes, então selecione a aba que corresponde ao módulo Jetson instalado no seu J50 Mini.
+
+:::warning
+A gravação reescreve o armazenamento de destino. Faça backup dos dados de aplicativos, arquivos de configuração e credenciais antes de começar.
+:::
+
+##### Preparar o host e baixar a imagem
+
+Prepare um computador host físico com Ubuntu 20.04, 22.04 ou 24.04, um cabo de dados USB Tipo-C e o J50 Mini com seu SSD NVMe instalado. Baixe a imagem que corresponde ao seu módulo diretamente no host Ubuntu:
+
+<Tabs groupId="j50-mini-flash-module">
+  <TabItem value="agx-orin-64gb" label="AGX Orin 64GB" default>
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDvZETxkTZ9S7gWHBtq-xIHAboN_nYGeVXoep4xtANP7mI?e=94fjJU" target="_blank" rel="noopener noreferrer">Baixar BSP de 64GB ↗</a>
+</div>
+
+Nome do arquivo:
+
+```text
+mfi_recomputer-mini-agx-orin-64g-j501-7.2.0-39.2.0-2026-09-24.tar.gz
+```
+
+  </TabItem>
+  <TabItem value="agx-orin-32gb" label="AGX Orin 32GB">
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB8Kv094I4nSL8OdUsLOfWgAbt1VH9e5t2uGzurR7q9iRg?e=N8WRnM" target="_blank" rel="noopener noreferrer">Baixar BSP de 32GB ↗</a>
+</div>
+
+Nome do arquivo:
+
+```text
+mfi_recomputer-mini-agx-orin-32g-j501-7.2.0-39.2.0-2026-09-24.tar.gz
+```
+
+  </TabItem>
+</Tabs>
+
+:::tip
+Se você quiser manter uma instalação existente do JetPack 6.2.x, use **Opção 2 · Instalar DEB** em vez de gravar esta imagem JetPack 7.2.
+:::
+
+##### Entrar no modo Force Recovery
+
+1. Desligue o J50 Mini e desconecte sua alimentação.
+2. Pressione e segure o botão **REC**.
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" alt="Botão REC no reComputer Robotics J50 Mini" />
+</div>
+
+3. Conecte o cabo de alimentação e então solte o botão **REC**.
+4. Conecte o J50 Mini ao host Ubuntu com um cabo de dados USB Tipo-C através da porta de gravação mostrada abaixo.
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png" alt="Porta USB Tipo-C de gravação no reComputer Robotics J50 Mini" />
+</div>
+
+5. No host Ubuntu, verifique o modo de recuperação:
+
+```bash
+lsusb
+```
+
+A saída deve incluir o ID USB do seu módulo:
+
+| Módulo Jetson | Saída esperada |
+| --- | --- |
+| AGX Orin 64GB | `0955:7023 NVidia Corp.` |
+| AGX Orin 32GB | `0955:7223 NVidia Corp.` |
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png" alt="Dispositivo Jetson detectado em modo force recovery com lsusb" />
+</div>
+
+##### Extrair e gravar a imagem
+
+Execute os comandos para o módulo que você selecionou. Se o seu navegador salvou o arquivo em outro local, substitua `~/Downloads` pelo diretório de download real.
+
+<Tabs groupId="j50-mini-flash-module">
+  <TabItem value="agx-orin-64gb" label="AGX Orin 64GB" default>
+
+```bash
+cd ~/Downloads
+sudo tar xpf mfi_recomputer-mini-agx-orin-64g-j501-7.2.0-39.2.0-2026-09-24.tar.gz
+cd mfi_recomputer-mini-agx-orin-64g-j501-7.2.0-39.2.0-2026-09-24
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+  </TabItem>
+  <TabItem value="agx-orin-32gb" label="AGX Orin 32GB">
+
+```bash
+cd ~/Downloads
+sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-7.2.0-39.2.0-2026-09-24.tar.gz
+cd mfi_recomputer-mini-agx-orin-32g-j501-7.2.0-39.2.0-2026-09-24
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+  </TabItem>
+</Tabs>
+
+O processo de gravação normalmente leva vários minutos. A mensagem a seguir indica que ele foi concluído com sucesso:
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png" alt="Gravação do Jetson concluída com sucesso" />
+</div>
+
+Após a gravação, desconecte o cabo USB, desligue e ligue novamente o J50 Mini e conclua a configuração inicial do Ubuntu. O suporte a ZED X GMSL já está incluído neste BSP, então continue diretamente para **3. Instalar o ZED SDK**.
+
+  </TabItem>
+  <TabItem value="deb-package" label="Opção 2 · Instalar DEB">
+
+Primeiro, identifique a versão do Jetson Linux instalada:
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+Use apenas o pacote que corresponde à versão L4T informada. Não instale ambos os pacotes.
+
+<Tabs groupId="j50-mini-zed-jetpack">
+  <TabItem value="jp62" label="JetPack 6.2.x" default>
+
+Para **JetPack 6.2.1 / L4T 36.4.4**, baixe o pacote abaixo:
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDirqpSbx-mS5LVEQikAnUFAZzzHlhqz6ugZQFBLAhoT9I?e=lmyCH1" target="_blank" rel="noopener noreferrer">Baixar DEB do JetPack 6.2 ↗</a>
+</div>
+
+Instale-o com o APT e depois reinicie:
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.6-L4T36.4.4-SDK-VERIFIED_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+  <TabItem value="jp72" label="JetPack 7.2">
+
+Para **JetPack 7.2 / L4T 39.2.0**, baixe o pacote abaixo:
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBTbeDwHYOJRpGKDN_UZCByAeEe3sS0MIPTbrSiodHMhlg?e=EE5Uza" target="_blank" rel="noopener noreferrer">Baixar DEB do JetPack 7.2 ↗</a>
+</div>
+
+Instale-o com o APT e depois reinicie:
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.7-L4T39.2.0_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+</Tabs>
+
+Após reiniciar, confirme que o pacote está instalado:
+
+```bash
+dpkg -l | grep stereolabs-zedx
+```
+
+  </TabItem>
+</Tabs>
+
+#### 3. Instalar o ZED SDK
+
+Acesse a [página de download do Stereolabs ZED SDK](https://www.stereolabs.com/developers/release/) e selecione o instalador NVIDIA Jetson que corresponde à versão informada por `cat /etc/nv_tegra_release`:
+
+| Sistema instalado | Selecione na página do ZED SDK |
+| --- | --- |
+| JetPack 6.2.x / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
+| JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
+
+Instale `zstd`, torne o instalador baixado executável e execute-o. Substitua o espaço reservado abaixo pelo nome de arquivo realmente baixado.
+
+```bash
+sudo apt update
+sudo apt install -y zstd
+cd ~/Downloads
+chmod +x ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+./ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+```
+
+Siga as instruções do instalador e mantenha as ferramentas ZED selecionadas. Reinicie após a conclusão da instalação:
+
+```bash
+sudo reboot
+```
+
+:::tip
+A versão L4T no nome do instalador do ZED SDK deve corresponder à versão L4T no reComputer. Um SDK ou DEB de câmera incompatível pode impedir que a câmera seja detectada.
+:::
+
+#### 4. Validar com o ZED Studio
+
+Inicie o ZED Studio a partir de um terminal:
+
+```bash
+ZED_Studio
+```
+
+Você também pode iniciá-lo diretamente a partir do diretório de instalação do SDK:
+
+```bash
+/usr/local/zed/tools/ZED_Studio
+```
+
+O ZED Studio deve detectar a câmera conectada. Abra a visualização ao vivo e ative **Depth** para confirmar que tanto o fluxo de imagem quanto o pipeline de profundidade estão funcionando.
+
+<Tabs groupId="zed-studio-result">
+  <TabItem value="jp72-result" label="JetPack 7.2" default>
+
+    <div className="zed-demo">
+      <img src="https://files.seeedstudio.com/wiki/zed-gmsl/zed-jp72.gif" alt="ZED Studio showing a ZED X GMSL camera and depth view on JetPack 7.2"/>
+      <p className="zed-demo-caption">Pré-visualização da câmera ZED X GMSL e visualização de profundidade no JetPack 7.2</p>
+    </div>
+
+  </TabItem>
+  <TabItem value="jp62-result" label="JetPack 6.2">
+
+    <div className="zed-demo">
+      <img src="https://files.seeedstudio.com/wiki/zed-gmsl/zed-jp62.gif" alt="ZED Studio showing a ZED X GMSL camera and depth view on JetPack 6.2"/>
+      <p className="zed-demo-caption">Pré-visualização da câmera ZED X GMSL e visualização de profundidade no JetPack 6.2</p>
+    </div>
+
+  </TabItem>
+</Tabs>
+
+:::success Resultado esperado
+A câmera aparece no ZED Studio, a imagem ao vivo é estável e a visualização de profundidade é atualizada em tempo real. Seu reComputer Robotics J50 Mini agora está pronto para aplicações com o ZED SDK, integração com ROS, gravação e cargas de trabalho de percepção downstream.
+:::
+
+  </TabItem>
+  <TabItem value="j50" label="J50">
+
+    <div className="zed-coming-soon">
+      <span className="zed-status zed-status-soon">Suporte ZED X GMSL adaptado</span>
+      <h3>O guia do reComputer Robotics J50 estará disponível em breve</h3>
+      <p>A integração da plataforma está disponível. Um passo a passo específico para o dispositivo, incluindo conexão, instalação de driver e validação, será publicado aqui.</p>
+      <a className="zed-button zed-button-secondary" href="/pt-br/ai_robotics_recomputer_j501_robotics_getting_started">Explore a plataforma J50</a>
+    </div>
+
+  </TabItem>
+  <TabItem value="j40" label="J40">
+
+    <div className="zed-coming-soon">
+      <span className="zed-status zed-status-soon">Suporte ZED X GMSL adaptado</span>
+      <h3>O guia do reComputer Robotics J40 estará disponível em breve</h3>
+      <p>A integração da plataforma está disponível. Um passo a passo específico para o dispositivo, incluindo conexão, instalação de driver e validação, será publicado aqui.</p>
+      <a className="zed-button zed-button-secondary" href="/pt-br/recomputer_robotics_j401_getting_started">Explore a plataforma J40</a>
+    </div>
+
+  </TabItem>
+  <TabItem value="j601" label="J601">
+
+    <div className="zed-coming-soon">
+      <span className="zed-status zed-status-soon">Suporte ZED X GMSL adaptado</span>
+      <h3>O guia Robotics J601 estará disponível em breve</h3>
+      <p>A integração da placa carrier está disponível. Um passo a passo específico para o dispositivo, incluindo conexão, instalação de driver e validação, será publicado aqui.</p>
+      <a className="zed-button zed-button-secondary" href="/pt-br/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started">Explore a placa carrier J601</a>
+    </div>
+
+  </TabItem>
+</Tabs>
+
+## Solução de problemas
+
+- **Câmera não detectada:** Confirme que o DEB, o BSP e o ZED SDK correspondem à versão L4T instalada. Em seguida, desligue e reconecte o cabo da câmera.
+- **APT relata incompatibilidade de pacote:** Não force a instalação. Baixe o pacote para a versão L4T exibida por `cat /etc/nv_tegra_release`.
+- **ZED Studio não abre:** Confirme que a área de trabalho gráfica está em execução e inicie `/usr/local/zed/tools/ZED_Studio` a partir de um terminal para ver a saída de erro.
+- **A imagem aparece, mas a profundidade não está disponível:** Confirme que você instalou o ZED SDK completo com ferramentas e que o modelo de câmera selecionado é compatível com essa versão do SDK.
+- **Vídeo intermitente:** Desligue e verifique o cabo Fakra/Mini-Fakra, a posição de travamento e o comprimento de cabo suportado antes de testar novamente.
+
+## Recursos
+
+- [Placa carrier Robotics J501 Mini: hardware e primeiros passos](/pt-br/recomputer_j501_mini_getting_started)
+- [Downloads do Stereolabs ZED SDK](https://www.stereolabs.com/developers/release/)
+- [Documentação do Stereolabs ZED SDK](https://docs.stereolabs.com/docs/development/zed-sdk)
+- [Documentação do Stereolabs ZED Studio](https://www.stereolabs.com/docs/development/zed-tools/zed-studio)
+
+## Suporte técnico e discussão de produtos
+
+Obrigado por escolher os produtos Seeed Studio! Se você encontrar algum problema ao integrar uma câmera ZED X, inclua o seu modelo de reComputer, a saída completa de `cat /etc/nv_tegra_release`, o nome do arquivo DEB instalado e a versão do ZED SDK ao solicitar suporte.
+
+<div class="button_tech_support_container">
+  <a href="https://forum.seeedstudio.com/" target="_blank" rel="noopener noreferrer">
+    <button class="button_tech_support">Suporte técnico &amp; discussão de produtos</button>
+  </a>
+</div>

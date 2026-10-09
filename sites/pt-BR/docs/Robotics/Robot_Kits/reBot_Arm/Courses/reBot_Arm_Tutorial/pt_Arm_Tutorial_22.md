@@ -1,5 +1,5 @@
 ---
-description: "Capítulo 22 do Curso para Iniciantes em IA Física da Seeed — inferência GR00T e implantação em robô real: o loop ponta a ponta, desacoplamento entre inferência e controle, máquina única vs distribuída, entradas de câmera/estado/linguagem, saída em blocos de ações, latência, buffer de ações e RTC, limites de segurança, avaliação e o projeto de estágio."
+description: 'Capítulo 22 do Curso para Iniciantes em IA Física da Seeed — inferência GR00T e implantação em robô real: o loop ponta a ponta, desacoplamento entre inferência e controle, máquina única vs distribuída, entradas de câmera/estado/linguagem, saída em blocos de ações, latência, buffer de ações e RTC, limites de segurança, avaliação e o projeto de estágio.'
 title: Capítulo 22 - Inferência GR00T e Implantação em Robô Real
 keywords:
   - reBot
@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_22/
 ---
 

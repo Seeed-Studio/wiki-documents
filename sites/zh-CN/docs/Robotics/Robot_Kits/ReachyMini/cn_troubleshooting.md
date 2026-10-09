@@ -1,4 +1,4 @@
----
+﻿---
 description: 综合故障排除指南和常见问题解答，涵盖Reachy Mini的常见问题、组装、连接、硬件、SDK和错误消息。
 title: 故障排除与常见问题
 slug: /reachymini_troubleshooting
@@ -19,7 +19,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-05-19'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/cn/reachymini_troubleshooting/
 ---
 
@@ -508,6 +508,7 @@ Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 
 <details>
 <summary><strong>电池有安全功能吗？</strong></summary>
+
 无线版包含一个适当的电池充电器。
 电池还集成了BMS和温度传感器。
 
@@ -515,6 +516,7 @@ Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 
 <details>
 <summary><strong>如何查看剩余电池？</strong></summary>
+
 我们无法检查电池状态，这是设计的已知限制。
 
 我们只有在需要充电时才有"电池电量低"的LED指示。（绿色→橙色→红色）
@@ -835,6 +837,7 @@ gst-launch-1.0 audiotestsrc wave="pink-noise" ! audioconvert ! audioresample ! a
 
 <details>
 <summary><strong>电机'&lt;名称&gt;'硬件错误：['输入电压错误']</strong></summary>
+
 我们在Reachy Mini上使用了更高的电压，这是故意的 :)
 
 </details>
@@ -885,6 +888,65 @@ rm -rf /venvs/apps_venv
 * **无输入：** 需要固件2.1.3。运行[更新脚本](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/assets/firmware/update.sh)。
 * **无方向：** 需要固件2.1.0+。
 * 检查扁平柔性电缆是否正确安装（组装指南第45-47页）。
+
+</details>
+
+<details>
+<summary><strong>舵机参数刷入脚本</strong></summary>
+
+当某个舵机（如 S5）参数异常时，可使用备份/恢复工具将标准参数重新刷入。
+
+**涉及文件**
+
+- `dynamixel_xl330_backup_restore.py` — 备份/恢复工具
+- `DYNAMIXEL_XL330_BACKUP.json` — 该型号标准参数文件
+
+下载地址：[dynamixel_xl330_backup_restore.py](https://files.seeedstudio.com/wiki/reachymini/dynamixel_xl330_backup_restore.py) 和 [DYNAMIXEL_XL330_BACKUP.json](https://files.seeedstudio.com/wiki/reachymini/DYNAMIXEL_XL330_BACKUP.json)
+
+**前提**
+
+- Python 3；Reachy Mini 经 U2D2 连接电脑，舵机正常供电（与日常调试一致）。
+- 安装依赖：`pip install dynamixel-sdk pyserial`
+- 把两个文件放在同一个文件夹，所有命令在该文件夹内执行。
+
+**步骤**
+
+1. **启动工具**
+
+   ```bash
+   python dynamixel_xl330_backup_restore.py
+   ```
+
+   选 U2D2 串口、波特率 1,000,000。主菜单先扫描列出全部舵机，确认六台都在，型号 XL330-M288，并记下 S5 的实际 ID。
+
+2. **安全备份（必做）**
+
+   选菜单 2（Export / backup ALL），把当前六台电机参数导出为 JSON（默认名形如 `DYNAMIXEL_XL330_BACKUP_时间戳.json`），改名为 `backup_all.json` 并保留。这是恢复前的原始状态，便于回退；也便于核对寄存器差异。
+
+3. **恢复正常参数到 S5**
+
+   选菜单 3（Restore），在 JSON 列表里选我们提供的正常参数文件。映射模式选 1（Same ID）。脚本列出"恢复计划"，显示将要写入哪些舵机（current → backup → final ID）。
+
+   请确认 S5 在其中、且每台的 final ID 与其当前 ID 一致（不会被改名），再输入 `RESTORE`。
+
+   脚本会：强制 Torque 关闭 → 逐项写入配置/PID/剖面/Indirect Address → 回读每一项校验 → 最后完整复核；全程 Torque 保持关闭，无意外动作。
+
+   > 若正常参数文件里只有 S5 的档，只会写 S5 一台；若包含全部六台，六台都会被刷新为标准参数。两种情况都由"恢复计划"明确列出，看清再确认。
+
+4. **退出脚本，给舵机断电再上电，在机器人上重新测试 S5 满顶高度负载。**
+
+**检查项**
+
+- 重刷后 S5 是否能自行到达顶部（是否仍需手推/有无嗡嗡声）。
+- 脚本最后输出是 `RESTORE + VERIFY SUCCESS` 还是出现 `[FAIL]` 行（若有，发对应行）。
+- 第 2 步的 `backup_all.json` 文件。
+
+**注意**
+
+- 重刷后 Torque 处于关闭属正常，机器人软件上电时自行使能。
+- 若脚本报 `MODEL MISMATCH`，说明 S5 型号与其余电机不同，这是重要线索，请告知我们。
+- 若"恢复计划"里没有 S5、或 final ID 与当前 ID 不一致，先不要输入 `RESTORE`，联系我们（多半是参数文件 ID 与 S5 实际 ID 对不上，我们改一份）。
+- 若重刷 + 校验通过且问题依旧，即可认定配置层面无异常，据此推进换货。
 
 </details>
 

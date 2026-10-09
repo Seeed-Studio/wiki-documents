@@ -1,5 +1,5 @@
 ---
-description: 一个用于搭建 MeshCore 固件源代码环境、编译 T1000-E 并烧录固件的实用教程。
+description: 设置 MeshCore 固件源代码环境、编译 T1000-E 并烧录固件的实用教程。
 title: MeshCore 开发教程
 keywords:
   - MeshCore
@@ -14,14 +14,14 @@ last_update:
   author: Michelle Huang
 url: https://wiki.seeedstudio.com/cn/meshcore_source_code_pratical_tutorial_t1000_e/
 createdAt: '2026-03-27'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-28'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## 前置准备
+## 前置条件
 
-### 必备工具
+### 必要工具
 
 在开始之前，请准备以下工具：
 
@@ -57,31 +57,31 @@ PlatformIO 会自动安装必要的依赖。安装成功后，你可以看到 `P
 
 ### 开发教程
 
-找到你的目标板卡对应的 environment。以 T1000-E Bluetooth Copanion 为例：
+找到你的目标板卡对应的环境。以 T1000-E Bluetooth Companion 为例：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000EBoard.jpg" style={{width:800, height:'auto'}}/></div>
 
 
 然后 PlatformIO 会为该板卡准备所需的依赖。
 
-修改你的代码。推荐修改对应板卡的 `variant.h` 文件。
+修改你的代码。建议修改对应板卡的 `variant.h` 文件。
 
-完成代码编写后，运行以下命令来编译代码并生成 uf2 文件。
+完成编码后，运行以下命令来编译代码并将其转换为 UF2 文件。
 
 ``` bash
 pio run -e t1000e_companion_radio_ble
 pio run -e t1000e_companion_radio_ble -t create_uf2
 ```
 
-长按设备按键，然后快速插拔充电线两次，绿色 LED 会常亮。将 uf2 文件拖入弹出的磁盘中。uf2 文件应位于 `.pio\build\t1000e_companion_radio_ble`
+按住设备按键，然后快速插入充电线两次，绿色 LED 会常亮。将 UF2 文件拖入弹出的磁盘中。UF2 文件应位于 `.pio\build\t1000e_companion_radio_ble` 中。
 
 ### 示例
 
 #### 用户灯光控制
 
-本示例演示如何让用户灯常亮。将以下代码复制到 `/examples/companion_radio/ui-new/ui-orig/UITask.cpp`
+本示例演示如何让用户灯持续点亮。将以下代码复制到 `/examples/companion_radio/ui-new/ui-orig/UITask.cpp`
 
-``` python
+``` cpp
 void UITask::userLedHandler() {
 #ifdef PIN_STATUS_LED
 #ifdef T1000_E
@@ -97,53 +97,53 @@ void UITask::userLedHandler() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000ELight.jpg" style={{width:900, height:'auto'}}/></div>
 
 
-编译它并将生成的 uf2 文件烧录到你的 T1000-E 上。
+编译它并将 UF2 文件烧录到你的 T1000-E 上。
 
-## （进阶）PR 提交
+## （进阶）提交 PR
 
 感谢你考虑为 MeshCore 项目做出贡献！你可以如何贡献？
 **1. 报告 Bug**
 
 - 使用 Issues 跟踪器
 - 使用清晰的标题（例如 "Crash when calling begin() with invalid pin"）
-- 描述复现问题的完整步骤
-- 提供你的开发板、IDE 版本、库版本以及相关代码片段
-- 如有可能，附上最小可复现示例代码
+- 描述复现问题的精确步骤
+- 包含你的开发板、IDE 版本、库版本以及相关代码片段
+- 如有可能，附上最小可复现示例草图
 
-**2. 提出改进建议 / 新功能**
-- 新建一个以 [Feature request] 为前缀的 issue
-- 解释使用场景 → 这个改进要解决什么问题？
+**2. 建议改进 / 新功能**
+- 打开一个 issue，并在标题前加上前缀 [Feature request]
+- 解释使用场景 → 这个改进能解决什么问题？
 - 描述你理想中的 API / 行为（代码示例会非常有帮助）
-**3. 提交代码更改（Pull Request）**
+**3. 提交代码更改（Pull Requests）**
 ### 小改动 
 （拼写错误、注释、示例、小 Bug 修复）
-→ 直接提交 pull request 即可——无需事先创建 issue
+→ 直接打开一个 pull request —— 无需事先创建 issue
 
 ### 大改动 / 新功能
-1. 先新建一个 issue 来讨论想法
+1. 先打开一个 issue 来讨论想法
 2. 获得维护者的大致 👍 认可
-3. 从 `dev` 分支 fork 仓库并创建你的分支（fix/xxx、feature/yyy、docs/whatever）
+3. 从 'dev' 分支 fork 仓库并创建你的分支（fix/xxx、feature/yyy、docs/whatever）
 4. 完成你的修改
-5. 在合适的情况下更新或新增示例
+5. 在合适的情况下更新或添加示例
 6. 在代码中添加/更新注释
 7. 提交 pull request
 
 ### Pull Request 指南
-- 一个功能 / 修复 = 一个 pull request（小一点的 PR 更容易也更快被审核）
+- 一个功能 / 修复 = 一个 pull request（更小的 PR 更容易也更快被审核）
 - 使用有描述性的提交信息
-  Good: Fix I2C timeout handling on ESP32
-  Bad: update
-- 关联任何相关 issue（Fixes #123、Closes #89 等）
-- 如果你修改了公共 API，请更新 README.md 和 library.properties
-- 新功能应在 examples/ 中包含一个示例代码
+  好：Fix I2C timeout handling on ESP32
+  坏：update
+- 引用任何相关的 issue（Fixes #123、Closes #89 等）
+- 如果你更改了公共 API，请更新 README.md 和 library.properties
+- 新功能应在 examples/ 中包含一个示例草图
 ### 代码风格
 请遵循现有的 C++ 风格（参考 .clang-format）
 
 - 使用 2 个空格缩进（不要使用 Tab）
 - 函数和变量使用 camelCase
 - 类名使用 UpperCamelCase / PascalCase
-- 使用 ALL_CAPS 定义 `#define` 常量
-- 在合理情况下保持每行长度 < ~100 个字符
+- 使用 ALL_CAPS 定义 #define 常量
+- 在合理情况下，将每行长度保持在约 100 个字符以内
 （但与现有代码保持一致比严格遵守规则更重要）
 
 ## 技术支持与产品讨论

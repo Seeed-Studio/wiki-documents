@@ -1,8 +1,8 @@
 ---
-description: 本教程展示了如何下载Isaacsim，并将reBotArm机器人部署在仿真环境中，进行开发和调试。
+description: 本教程展示了如何下载 Isaac Sim，并将reBotArm机器人部署在仿真环境中，进行开发和调试。
 title: B601-RS 跑Isaac Sim
 keywords:
-  - Isaacsim
+  - Isaac Sim
   - 机械臂
   - 机器人
   - 遥控操作
@@ -14,7 +14,7 @@ last_update:
   date: 8/14/2026
   author: LiuJunjie
 createdAt: '2026-07-07'
-updatedAt: '2026-08-17'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -54,7 +54,7 @@ reBot-Isaacsim 是一个专为 reBotArm 设计的 NVIDIA Isaac Sim 仿真项目�
 本wiki中使用的计算机配备了 NVIDIA RTX 4080 GPU，并运行 Ubuntu 22.04 LTS 操作系统。
 :::
 
-## 安装Isaacsim
+## 安装 Isaac Sim
 
 官方链接和资源：
 
@@ -443,5 +443,4 @@ ip -details link show can0 | grep bitrate
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 

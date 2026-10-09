@@ -10,7 +10,7 @@ last_update:
   date: 05/16/2023
   author: Lakshantha
 createdAt: '2025-06-05'
-updatedAt: '2026-06-29'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/ja/reComputer_Industrial_Getting_Started/
 ---
 
@@ -20,11 +20,11 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
 
-reComputer industrial シリーズは、NVIDIA Jetson™ Xavier NX / Orin Nano / Orin NX モジュールを搭載したフルシステムを提供し、20 TOPS から 100 TOPS までの AI 性能を実現します。Jetpack 5.1.3 をプリインストールした reComputer industrial は開発を簡素化し、映像解析、物体検出、自然言語処理、医用画像処理、ロボットなどのアプリケーション構築に最適で、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーといった産業分野全体におけるデジタルトランスフォーメーションをもたらします。
+reComputer industrial シリーズは、NVIDIA Jetson™ Xavier NX / Orin Nano / Orin NX モジュールを搭載したフルシステムを提供し、20 TOPS から 100 TOPS までの AI 性能を実現します。Jetpack 5.1.3 をプリインストールしており、開発を簡素化することで、映像解析、物体検出、自然言語処理、医用画像処理、ロボットなどのアプリケーション構築に最適です。これにより、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなど、さまざまな産業分野におけるデジタルトランスフォーメーションを推進します。
 
-reComputer industrial はパッシブヒートシンクとファンレス設計を採用しており、過酷な環境での使用に最適です。パッシブヒートシンクによりファンを使用せずに効率的な冷却が可能となり、ほこりやその他の汚染物質によるコンポーネント故障のリスクを低減します。ファンレス設計は騒音レベルと消費電力も低減するため、騒音に敏感な環境での使用に適しており、エネルギーコストの削減にもつながります。
+reComputer industrial はパッシブヒートシンクとファンレス設計を採用しており、要求の厳しい環境での使用に最適です。パッシブヒートシンクにより、ファンを必要とせず効率的な冷却が可能となり、ほこりやその他の汚染物質によるコンポーネント故障のリスクを低減します。ファンレス設計は騒音レベルと消費電力も低減するため、静音性が求められる環境での使用に適しており、エネルギーコストの削減にもつながります。
 
-reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち 1 つは PoE PSE ポートで、IP カメラなどのデバイスに Ethernet 経由で電力を供給できます。これにより別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でもネットワーク機器を容易に展開できます。もう一方の GbE ポートはネットワークスイッチやルーターへの接続に使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
+reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち 1 つは PoE PSE ポートで、IP カメラなどのデバイスに Ethernet 経由で電力を供給できます。これにより、別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でもネットワーク機器を容易に展開できます。もう一方の GbE ポートはネットワークスイッチやルーターへの接続に使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
 
 :::note
 カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
@@ -37,11 +37,11 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
 
 ## 特長
 
-- **ファンレスコンパクト PC:** サーマルリファレンスデザイン、0.7m/s の気流で -20 ～ 60°C の広い温度範囲をサポート
-- **産業用インターフェース向けに設計:** 2x RJ-45 GbE（1 つは POE-PSE 802.3 af 用）; 1x RS-232/RS-422/RS-485; 4x DI/DO; 1x CAN; 3x USB3.2; 1x TPM2.0（モジュールはオプション）
-- **ハイブリッド接続:** 1x Nano SIM カードスロットを備え、5G/4G/LTE/LoRaWAN®（モジュールはオプション）をサポート
-- **柔軟な取り付け:** デスク、DIN レール、壁掛け、VESA
-- **認証:** FCC、CE、RoHS、UKCA
+- **ファンレスコンパクト PC：** サーマルリファレンスデザイン、0.7m/s の気流で -20 ～ 60°C の広い温度範囲をサポート
+- **産業用インターフェース向けに設計：** 2x RJ-45 GbE（1 つは POE-PSE 802.3 af 用）；1x RS-232/RS-422/RS-485；4x DI/DO；1x CAN；3x USB3.2；1x TPM2.0（モジュールはオプション）
+- **ハイブリッド接続：** 1x Nano SIM カードスロットを備え、5G/4G/LTE/LoRaWAN®（モジュールはオプション）をサポート
+- **柔軟な取り付け：** デスク、DIN レール、壁掛け、VESA
+- **認証：** FCC、CE、RoHS、UKCA
 
 ## 仕様
 
@@ -159,7 +159,7 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
     <tr>
       <td rowSpan={7}>拡張</td>
       <td>Mini PCIe</td>
-      <td colSpan={6}>4G/LoRaWAN® 用 Mini PCIe（モジュールはオプション） <br /></td>
+      <td colSpan={6}>4G/LoRaWAN® 用 Mini PCIe（モジュールはオプション）<br /></td>
     </tr>
     <tr>
       <td>Wi-Fi</td>
@@ -251,13 +251,13 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
 
 ## JetPack をフラッシュする
 
-reComputer Industrial には、必要なドライバとともに JetPack 5.1.3 が 128GB SSD にプリインストールされています。これには CUDA、CUDNN、TensorRT などの SDK コンポーネントが含まれています。ただし、付属の SSD や新しい SSD に Jetpack を再フラッシュしたい場合は、次の手順に従うことができます。
+reComputer Industrial には、必要なドライバとともに JetPack 5.1.3 が 128GB SSD にプリインストールされています。これには CUDA、CUDNN、TensorRT などの SDK コンポーネントが含まれます。ただし、付属の SSD や新しい SSD に Jetpack を再フラッシュしたい場合は、次の手順に従ってください。
 
 :::note
-reComputer Industrial で SSD を使用する場合は、Seeed 製の [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) バージョンのみを選択することを推奨します。
+reComputer Industrial で SSD を使用する場合は、Seeed の [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) バージョンのみを選択することを推奨します。
 :::
 
-### 前提条件
+### 事前準備
 
 reComputer Industrial を使い始める前に、以下のハードウェアを準備する必要があります
 
@@ -309,12 +309,12 @@ reComputer Industrial を使い始める前に、以下のハードウェアを�
   </tbody>
 </table>
 
-<p><strong>Note:</strong> JetPack 7.2 では、Ubuntu 24.04 はフラッシュおよびターゲット側コンポーネントのインストールのみサポートされます。ホスト開発コンポーネントが必要な場合は、Ubuntu 20.04 または 22.04 を使用してください。</p>
+<p><strong>Note:</strong> JetPack 7.2 の場合、Ubuntu 24.04 はフラッシュおよびターゲット側コンポーネントのインストールのみサポートされます。ホスト開発コンポーネントが必要な場合は、Ubuntu 20.04 または 22.04 を使用してください。</p>
 :::
 
 ### 強制リカバリモードに入る
 
-次に、デバイスを書き込むために reComputer Industrial ボードをリカバリモードにする必要があります。
+これからデバイスをフラッシュするために、reComputer Industrial ボードをリカバリモードにする必要があります。
 
 1. **USB2.0 DEVICE** ポートと PC の間を USB Type-C ケーブルで接続します。
 2. ピンを使用して **RECOVERY** ホールに差し込み、リカバリボタンを押したままにします。
@@ -327,7 +327,7 @@ reComputer Industrial を使い始める前に、以下のハードウェアを�
 RECOVERY ボタンを押したままの状態で電源を入れていることを確認してください。そうしないとリカバリモードに入ることができません
 :::
 
-Ubuntu ホスト PC でターミナルウィンドウを開き、コマンド **lsusb** を入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリモードになっています。
+Ubuntu ホスト PC でターミナルウィンドウを開き、**lsusb** コマンドを入力します。使用している Jetson SoM に応じて、返された内容に以下のいずれかの出力が含まれていれば、ボードは強制リカバリモードになっています。
 
 - Orin NX 16GB の場合: **0955:7323 NVidia Corp**
 - Orin NX 8GB の場合: **0955:7423 NVidia Corp**
@@ -346,8 +346,8 @@ import TabItem from '@theme/TabItem';
 
 ここでは 2 つの異なるフラッシュ方法を提供します。
 
-1. NVIDIA JetPack、ハードウェア周辺機器ドライバを含む、当社が用意したシステムイメージ全体をダウンロードしてデバイスにフラッシュする
-2. 公式の NVIDIA L4T をダウンロードし、付属のハードウェア周辺機器ドライバを使用してデバイスにフラッシュする
+1. NVIDIA JetPack、ハードウェア周辺ドライバを含む、当社が用意したシステムイメージ全体をダウンロードしてデバイスにフラッシュする
+2. 公式の NVIDIA L4T をダウンロードし、付属のハードウェア周辺ドライバを使用してデバイスにフラッシュする
 
 :::note
 1 つ目の方法のダウンロードサイズは約 14GB、2 つ目の方法のダウンロードサイズは約 3GB です。
@@ -410,16 +410,16 @@ import TabItem from '@theme/TabItem';
 </div>
 
 <p style={{ fontSize: '0.9em', color: 'yellow' , textAlign: 'center'}}>
-  * Download1 と Download2 のイメージファイルは同一です。ダウンロード速度の速いリンクを選択してください。
+  * Download1 と Download2 のイメージファイルは同一です。ダウンロード速度が速い方のリンクを選択してください。
 </p>
 
 :::info
 ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ正常であることが確認できます。
+Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全で破損していないことが確認できます。
 :::
 
-上記イメージのソースコードは[こちら](https://github.com/Seeed-Studio/Linux_for_Tegra)にあります
+上記イメージのソースコードは[こちら](https://github.com/Seeed-Studio/Linux_for_Tegra)で確認できます
 
 - **Step 2:** 生成されたファイルを解凍します
 
@@ -434,7 +434,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-これでシステムイメージのボードへのフラッシュが開始されます。フラッシュが成功すると、以下のような出力が表示されます
+これでボードへのシステムイメージのフラッシュが開始されます。フラッシュが成功すると、以下のような出力が表示されます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -478,7 +478,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
   <tbody>
     <tr>
       <td rowSpan={2}>Jetson Orin NX 8GB/ 16GB,<br />Orin Nano 8GB</td>
-      <td rowSpan={2}><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/orin-nx-8-16-nano-8-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td rowSpan={2}><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/orin-nx-8-16-nano-8-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={4}>5.1.1</td>
       <td rowSpan={4}>35.3.1</td>
     </tr>
@@ -486,31 +486,31 @@ sudo ./tools/l4t_flash_prerequisites.sh
     </tr>
     <tr>
       <td>Jetson Orin Nano 4GB</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/orin-nano-4-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/orin-nano-4-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Xavier NX 8GB/ 16GB</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/xavier-nx-8-16-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/xavier-nx-8-16-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
 
-- **ステップ 2:** ダウンロードした周辺機器ドライバを **Linux_For_Tegra** ディレクトリと同じフォルダに移動します
+- **Step 2:** ダウンロードした周辺機器ドライバを **Linux_For_Tegra** ディレクトリと同じフォルダに移動します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/125.png"/></div>
 
-- **ステップ 3:** ダウンロードしたドライバの .zip ファイルを解凍します。ここでは、.zip ファイルを解凍するために必要な **unzip** パッケージを追加でインストールします
+- **Step 3:** ダウンロードしたドライバの .zip ファイルを解凍します。ここでは、.zip ファイルを解凍するために必要な **unzip** パッケージを追加でインストールします
 
 ```sh
 sudo apt install unzip
 sudo unzip xxxx.zip # Replace xxxx with the driver file name
 ```
 
-ここでファイルを置き換えるかどうかを尋ねられます。必要なファイルを置き換えるには A と入力して ENTER を押します
+ここでファイルを置き換えるかどうかを尋ねられます。必要なファイルを置き換えるために A と入力して ENTER を押します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/126.png"/></div>
 
-- **ステップ 4:** **Linux_for_Tegra** ディレクトリに移動し、次のようにフラッシュコマンドを実行します
+- **Step 4:** **Linux_for_Tegra** ディレクトリに移動し、次のようにフラッシュコマンドを実行します
 
 ```sh
 cd Linux_for_Tegra
@@ -526,7 +526,7 @@ sudo ADDITIONAL_DTB_OVERLAY_OPT="BootOrderNvme.dtbo" ./tools/kernel_flash/l4t_in
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **ステップ 5:** ボード上の HDMI コネクタを使用してボードをディスプレイに接続し、初期設定を完了します
+- **Step 5:** ボード上の HDMI コネクタを使用してボードをディスプレイに接続し、初期設定を完了します
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
@@ -536,7 +536,7 @@ sudo ADDITIONAL_DTB_OVERLAY_OPT="BootOrderNvme.dtbo" ./tools/kernel_flash/l4t_in
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
-- **ステップ 6:** デバイス上でターミナルウィンドウを開き、以下を実行します。デバイスが再起動し、使用可能な状態になります！
+- **Step 6:** デバイス上でターミナルウィンドウを開き、以下を実行します。デバイスが再起動し、使用可能な状態になります！
 
 ```sh
 systemctl disable nvgetty.service
@@ -560,46 +560,46 @@ sudo apt install nvidia-jetpack -y
 
 <TabItem value="Jetpack 5.1.3" label="Jetpack5.1.3">
 
-- **ステップ 1:** 使用しているボードに対応するシステムイメージを Ubuntu PC にダウンロードします
+- **Step 1:** 使用しているボードに対応するシステムイメージを Ubuntu PC にダウンロードします
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>デバイス</th>
-      <th>リンク</th>
+      <th>Device</th>
+      <th>Link</th>
       <th>SHA256</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAJh3XDNNnbT7NU_WmR6d8-AV2KS89nk2raBrtbDX5lbRY" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAJh3XDNNnbT7NU_WmR6d8-AV2KS89nk2raBrtbDX5lbRY" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>436017DA6FBA2EF910F5F6C5D80749FB53029EC5108A461101CA3A69C1F8CEC3</th>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCggS3uTiIzQqidauGapvXtAS8tiOaWRZtusAN1S6SXsTs?e=LLjnrY" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCggS3uTiIzQqidauGapvXtAS8tiOaWRZtusAN1S6SXsTs?e=LLjnrY" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>9c590665723aa8847898f976070ecc120b936474262b360459627342c4c0c6f1</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAx3qELD5fvTKvYA8Bi-TwAAV5SJdxC6ok_lnwjqiw3Prg?e=MIcJng" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAx3qELD5fvTKvYA8Bi-TwAAV5SJdxC6ok_lnwjqiw3Prg?e=MIcJng" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>fe3fe9b275156ddd9cde2b4fcf628122bf4a66e1ff1184cf6769be81ba6e4942</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBiL7sGB2_7RZs5FNIf2bikAXzJxCr6z1XA8fIkgqpzluA?e=dZYPSh" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBiL7sGB2_7RZs5FNIf2bikAXzJxCr6z1XA8fIkgqpzluA?e=dZYPSh" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>75de6440ca1c04f08b4356fee0d8e4a4ba1cb858f9fabb5bbc0eebd3c387c81d</th>
     </tr>
         <tr>
       <td>reComputer Industrial J2012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EfB-onLVAIxFreZTCSpejYIBPX42dZoKnKrDm8ZC27DI_w?e=fAOXZr" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EfB-onLVAIxFreZTCSpejYIBPX42dZoKnKrDm8ZC27DI_w?e=fAOXZr" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>B54CF2545A8ED8BFE115C439B0B427112BD882F03292B9F5C03AB55746C707C1</th>
     </tr>
         <tr>
       <td>reComputer Industrial J2011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EXmfIDIx80hCk61-dZogyUwBe6uOlz0U6tZEW3i7WC2JBw?e=BLjUW3" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EXmfIDIx80hCk61-dZogyUwBe6uOlz0U6tZEW3i7WC2JBw?e=BLjUW3" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>11BDB47D06CA8409CFCEA109B8BACD9BB79A54A275D2664D6CF492BFEAD31131</th>
     </tr>
   </tbody>
@@ -616,13 +616,13 @@ Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマ
 上記イメージのソースコードは[こちら](https://github.com/Seeed-Studio/Linux_for_Tegra)で確認できます。
 :::
 
-- **ステップ 2:** 生成されたファイルを解凍します
+- **Step 2:** 生成されたファイルを解凍します
 
 ```sh
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **ステップ 3:** 先ほど解凍したファイルに移動し、次のようにフラッシュコマンドを実行します
+- **Step 3:** 先ほど解凍したファイルに移動し、次のようにフラッシュコマンドを実行します
 
 ```sh
 cd mfi_xxxx
@@ -633,7 +633,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **ステップ 4:** ボード上の HDMI コネクタを使用して J401 をディスプレイに接続し、初期設定を完了します：
+- **Step 4:** ボード上の HDMI コネクタを使用して J401 をディスプレイに接続し、初期設定を完了します：
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
@@ -645,36 +645,36 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <TabItem value="Jetpack 6.0" label="Jetpack6.0">
 
-- **ステップ 1:** 使用しているボードに対応するシステムイメージを Ubuntu PC にダウンロードします
+- **Step 1:** 使用しているボードに対応するシステムイメージを Ubuntu PC にダウンロードします
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>デバイス</th>
-      <th>リンク</th>
+      <th>Device</th>
+      <th>Link</th>
       <th>SHA256</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbKZo6jvhR5MtP5hSB2mWIUBLkMB_pl4zCJoGhAbao5yQw?e=WmoPbO" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbKZo6jvhR5MtP5hSB2mWIUBLkMB_pl4zCJoGhAbao5yQw?e=WmoPbO" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>6c1e5abbdd60f771cd5c1a6e82f4ce7dfd0448018af94926d0240b853badbaf0</th>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdScxnClMMZElyNJXLzqY5EBSXN9cyUnkkl4fWfsDhn0xg?e=XYZB6n" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdScxnClMMZElyNJXLzqY5EBSXN9cyUnkkl4fWfsDhn0xg?e=XYZB6n" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>79c16c25602ebefa239402c23d0dcdae5ddc3eb23fdadb90654fbc34a1aa44dd</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Edt8dUapj7VCh5-X5ZgdeUIBjBSnx2wSweO-gjkMs1BxSw?e=Hi5rvU" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Edt8dUapj7VCh5-X5ZgdeUIBjBSnx2wSweO-gjkMs1BxSw?e=Hi5rvU" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>7221185ba7f499d837b046e6f8b73c1c9f4e28cc76eb2068719370e00dcd3f42</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbKvTU_hdp9DjvFMMqi_RwkBC6LlpTtF_xfchhTtiV7fFg?e=pEhzOx" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbKvTU_hdp9DjvFMMqi_RwkBC6LlpTtF_xfchhTtiV7fFg?e=pEhzOx" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>7b997786317b518f9762e0828a0ac411ef984bd9927a9eeb5f8a900b185627ba</th>
     </tr>
   </tbody>
@@ -691,20 +691,20 @@ Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマ
 上記イメージのソースコードは[こちら](https://github.com/Seeed-Studio/Linux_for_Tegra)で確認できます。
 :::
 
-- **ステップ 2:** 生成されたファイルを解凍します
+- **Step 2:** 生成されたファイルを解凍します
 
 ```sh
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **ステップ 3:** 先ほど展開したファイルに移動し、次のようにフラッシュコマンドを実行します
+- **ステップ 3:** 先ほど展開したファイルの場所に移動し、次のようにフラッシュコマンドを実行します
 
 ```sh
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-これでボードにシステムイメージの書き込みが開始されます。書き込みが成功すると、次のような出力が表示されます
+これでボードへのシステムイメージのフラッシュが開始されます。フラッシュが成功すると、次のような出力が表示されます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -714,14 +714,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
 
-その後、ボードは再起動し、使用できる状態になります！
+その後、ボードは再起動し、使用可能な状態になります！
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 </TabItem>
 
 <TabItem value="Jetpack 6.1" label="Jetpack6.1">
 
-- **ステップ 1:** 使用しているボードに対応するシステムイメージを Ubuntu PC にダウンロードします
+- **ステップ 1:** 使用しているボードに対応したシステムイメージを Ubuntu PC にダウンロードします
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -760,7 +760,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 :::info
 ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ正常であることが確認できます。
+Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ正常であることが確認できます。
 :::
 
 :::info
@@ -773,14 +773,14 @@ Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **ステップ 3:** 先ほど展開したファイルに移動し、次のようにフラッシュコマンドを実行します
+- **ステップ 3:** 先ほど展開したファイルの場所に移動し、次のようにフラッシュコマンドを実行します
 
 ```sh
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-これでボードにシステムイメージの書き込みが開始されます。書き込みが成功すると、次のような出力が表示されます
+これでボードへのシステムイメージのフラッシュが開始されます。フラッシュが成功すると、次のような出力が表示されます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -798,10 +798,10 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 :::danger
 **Orin NX 16GB/8GB** モジュールを使用している場合は、**MAXN SUPER モードを有効にしないでください**。
-J4011/J4012 の冷却能力ではこれをサポートするには不十分であり、このモードを強制するとモジュールが永久的な損傷を受ける可能性があります。
+J4011/J4012 の冷却能力ではこれをサポートするには不十分であり、このモードを強制するとモジュールが永久的に損傷する可能性があります。
 :::
 
-- **ステップ 1:** 使用しているボードに対応するシステムイメージを Ubuntu PC にダウンロードします
+- **ステップ 1:** 使用しているボードに対応したシステムイメージを Ubuntu PC にダウンロードします
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -817,6 +817,11 @@ J4011/J4012 の冷却能力ではこれをサポートするには不十分で�
       <td>reComputer Industrial J4012</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB2G7x8LjMaTZ_JSm8QTKebAfjjE1zNMkx9967kemKxPdw?e=hdGqgd" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>adf524fa3c77f32da9a12bb875ec4b24<br />8da9dad4e4cce9c51641e1cabca4ab88</th>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAECc-lSS1zQIcQEHI6jkQcAdNs5QXdUvH-zVIg2CCV5Iw?e=7W4kx7" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>5a2fbb379bf4b62b82fa67cfba1d804b<br />d78feafa7d854c18bcc9fcb05719f633</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
@@ -835,7 +840,7 @@ J4011/J4012 の冷却能力ではこれをサポートするには不十分で�
 :::info
 ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ正常であることが確認できます。
+Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ正常であることが確認できます。
 :::
 
 :::info
@@ -843,8 +848,7 @@ Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <
 :::
 
 :::note
-`super mode` を有効にすると消費電力と発熱が増加するため、[reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) および [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) は JetPack 6.2 で最高モードでは安定して動作できません。そのため、JetPack 6.2 では J4012（Orin NX 16GB）のみが利用可能であり、J4011（Orin NX 8GB）は推奨されません。
-現在、新しいバージョンの reComputer を設計中です。続報をお待ちください。
+`super mode` を有効にすると消費電力と発熱が増加するため、[reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) および [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) は JetPack 6.2 の最高モードでは安定動作できません。これらのデバイスでは MAXN SUPER モードを有効にしないでください。
 :::
 
 - **ステップ 2:** 生成されたファイルを展開します
@@ -853,14 +857,14 @@ Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **ステップ 3:** 先ほど展開したファイルに移動し、次のようにフラッシュコマンドを実行します
+- **ステップ 3:** 先ほど展開したファイルの場所に移動し、次のようにフラッシュコマンドを実行します
 
 ```sh
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-これでボードにシステムイメージの書き込みが開始されます。書き込みが成功すると、次のような出力が表示されます
+これでボードへのシステムイメージのフラッシュが開始されます。フラッシュが成功すると、次のような出力が表示されます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -884,7 +888,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <TabItem value="Jetpack 7.2" label="Jetpack7.2">
 
-- **ステップ 1:** 使用しているボードに対応するシステムイメージを Ubuntu PC にダウンロードします
+- **ステップ 1:** 使用しているボードに対応したシステムイメージを Ubuntu PC にダウンロードします
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -923,7 +927,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 :::info
 ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。得られたハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全であり改ざんされていないことが確認できます。
+Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ改ざんされていないことが確認できます。
 :::
 
 :::info
@@ -936,7 +940,7 @@ Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマ
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** 先ほど解凍したファイルへ移動し、次のようにフラッシュコマンドを実行します
+- **Step 3:** 先ほど解凍したファイルのディレクトリに移動し、次のようにフラッシュコマンドを実行します
 
 ```sh
 cd mfi_xxxx
@@ -952,7 +956,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-ご利用の用途に応じて、**System Configuration** を完了してください。
+ニーズに応じて**システム構成**を完了してください。
 :::
 
 </TabItem>
@@ -963,7 +967,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## ハードウェアおよびインターフェースの使用方法
 
-reComputer Industrial ボード上のすべてのハードウェアおよびインターフェースの使用方法について詳しく知るには、当社が用意した関連 wiki ドキュメントに従うことをお勧めします。
+reComputer Industrial ボード上のすべてのハードウェアおよびインターフェースの使用方法について詳しく知るには、当社が用意した関連 wiki ドキュメントを参照することをお勧めします。
 
 - [reComputer Industrial J20 ハードウェアおよびインターフェースの使用方法](https://wiki.seeedstudio.com/ja/reComputer_Industrial_J20_Hardware_Interfaces_Usage)
 - [reComputer Industrial J40, J30 ハードウェアおよびインターフェースの使用方法](https://wiki.seeedstudio.com/ja/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage)
@@ -972,12 +976,12 @@ reComputer Industrial ボード上のすべてのハードウェアおよびイ�
 
 - [reComputer Industrial データシート](https://files.seeedstudio.com/products/NVIDIA/reComputer-Industrial-datasheet.pdf)
 - [reComputer Industrial リファレンスガイド](https://files.seeedstudio.com/products/NVIDIA/reComputer-Industrial-Reference-Guide.pdf)
-- [NVIDIA Jetson デバイスおよびキャリアボードの比較](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+- [NVIDIA Jetson デバイスおよびキャリアボード比較](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 - [reComputer Industrial 3D ファイル](https://files.seeedstudio.com/products/NVIDIA/Industrial/reComputer-Industrial.stp)
-- [Seeed Jetson シリーズ カタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Seeed Jetson シリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Seeed Studio Edge AI 導入事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson シリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetson デバイス一覧（1 ページ）](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Seeed Jetson デバイス概要（1 ページ）](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
@@ -988,7 +992,7 @@ reComputer Industrial ボード上のすべてのハードウェアおよびイ�
 
 ## 技術サポートと製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+当社の製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

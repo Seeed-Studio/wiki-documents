@@ -14,7 +14,7 @@ last_update:
   author: Michelle Huang
 url: https://wiki.seeedstudio.com/pt-br/meshcore_source_code_pratical_tutorial_t1000_e/
 createdAt: '2026-03-27'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-28'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -29,7 +29,7 @@ Antes de começar, prepare as seguintes ferramentas:
 2. [Python 3](https://www.python.org/downloads/)
 3. [VS Code](https://code.visualstudio.com/)
 
-### Instalar PlatformIO
+### Instalar o PlatformIO
 
 Pesquise por `PlatformIO` no marketplace de Extensões do VS Code e instale-o.
 
@@ -62,18 +62,18 @@ Encontre o ambiente para a sua placa de destino. Tome o T1000-E Bluetooth Compan
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000EBoard.jpg" style={{width:800, height:'auto'}}/></div>
 
 
-Então o PlatformIO irá preparar as dependências necessárias para a placa.
+Em seguida, o PlatformIO preparará as dependências necessárias para a placa.
 
 Altere o seu código. Recomenda-se alterar o arquivo `variant.h` da sua placa.
 
-Após concluir a codificação, execute o seguinte comando para compilar o código e convertê-lo em um arquivo uf2.
+Após concluir a codificação, execute o seguinte comando para compilar o código e convertê-lo em um arquivo UF2.
 
 ``` bash
 pio run -e t1000e_companion_radio_ble
 pio run -e t1000e_companion_radio_ble -t create_uf2
 ```
 
-Pressione e segure o botão do dispositivo e, em seguida, conecte rapidamente o cabo de carregamento duas vezes; o LED verde ficará aceso continuamente. Arraste o arquivo uf2 para o disco que aparecer. O arquivo uf2 deve ser encontrado em `.pio\build\t1000e_companion_radio_ble`
+Pressione e segure o botão do dispositivo e, em seguida, conecte rapidamente o cabo de carregamento duas vezes; o LED verde ficará aceso continuamente. Arraste o arquivo UF2 para o disco que aparecer. O arquivo UF2 deve ser encontrado em `.pio\build\t1000e_companion_radio_ble`
 
 ### Exemplo
 
@@ -81,7 +81,7 @@ Pressione e segure o botão do dispositivo e, em seguida, conecte rapidamente o 
 
 Este exemplo mostra como controlar a luz do usuário para ficar constantemente acesa. Copie o código a seguir para `/examples/companion_radio/ui-new/ui-orig/UITask.cpp`
 
-``` python
+``` cpp
 void UITask::userLedHandler() {
 #ifdef PIN_STATUS_LED
 #ifdef T1000_E
@@ -97,9 +97,9 @@ void UITask::userLedHandler() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000ELight.jpg" style={{width:900, height:'auto'}}/></div>
 
 
-Compile-o e grave o arquivo uf2 no seu T1000-E.
+Compile e grave o arquivo UF2 no seu T1000-E.
 
-## (Avançado) Antes de enviar PR
+## (Avançado) Envio de PR
 
 Obrigado por considerar contribuir para o projeto MeshCore! Como você pode contribuir?
 **1. Reportar bugs**
@@ -121,7 +121,7 @@ Obrigado por considerar contribuir para o projeto MeshCore! Como você pode cont
 
 ### Alterações maiores / novos recursos
 1. Abra primeiro uma issue para discutir a ideia
-2. Obtenha um sinal positivo aproximado (👍) dos mantenedores
+2. Obtenha um sinal de positivo aproximado (👍) dos mantenedores
 3. Faça fork do repositório a partir do branch 'dev' e crie o seu branch (fix/xxx, feature/yyy, docs/whatever)
 4. Faça suas alterações
 5. Atualize ou adicione exemplos quando apropriado
@@ -137,7 +137,7 @@ Obrigado por considerar contribuir para o projeto MeshCore! Como você pode cont
 - Se você alterar a API pública, atualize README.md e library.properties
 - Novos recursos devem incluir um sketch de exemplo em examples/
 ### Estilo de código
-Por favor, siga o estilo C++ existente (conforme o .clang-format)
+Siga o estilo C++ existente (conforme o .clang-format)
 
 - Recuo de 2 espaços (sem tabs)
 - camelCase para funções e variáveis

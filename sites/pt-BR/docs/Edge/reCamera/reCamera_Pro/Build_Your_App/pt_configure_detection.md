@@ -1,6 +1,6 @@
 ---
 description: Escolha qual modelo de IA executar, configure classes de detecção, defina limites de confiança e IOU, controle a frequência de inferência e monitore a saída em tempo real na reCamera Pro.
-title: "Configurar Detecção: Classes, Limiares e Frequência"
+title: 'Configurar Detecção: Classes, Limiares e Frequência'
 keywords:
   - reCamera
   - reCamera Pro
@@ -16,6 +16,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/pt-br/recamera_pro_ai_inference/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # Configurar Detecção: Classes, Limiares e Frequência

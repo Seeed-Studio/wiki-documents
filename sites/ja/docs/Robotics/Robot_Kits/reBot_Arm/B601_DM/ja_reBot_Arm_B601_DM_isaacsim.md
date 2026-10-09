@@ -2,7 +2,7 @@
 description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグのためにシミュレーション環境で reBot-B601-DM ロボットを展開する方法を説明します。
 title: B601-DM と Isaac Sim
 keywords:
-  - Isaacsim
+  - Isaac Sim
   - ロボットアーム
   - ロボット
   - 遠隔操作
@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-77'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';

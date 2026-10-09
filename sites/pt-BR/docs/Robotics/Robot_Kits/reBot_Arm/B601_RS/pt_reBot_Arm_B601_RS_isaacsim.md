@@ -1,11 +1,11 @@
 ---
-description: Este tutorial mostra como baixar o Isaacsim e implantar o robô reBotArm em um ambiente de simulação para desenvolvimento e depuração.
-title: B601-RS com Isaacsim
+description: Este tutorial mostra como baixar o Isaac Sim e implantar o robô reBotArm em um ambiente de simulação para desenvolvimento e depuração.
+title: B601-RS com Isaac Sim
 keywords:
-  - Isaacsim
+  - Isaac Sim
   - Braço mecânico
   - Robô
-  - Operação de controle remoto
+  - Operação por controle remoto
   - Cinemática
   - Robostride
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg
@@ -14,7 +14,7 @@ last_update:
   date: 8/14/2026
   author: LiuJunjie
 createdAt: '2026-07-07'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_rs_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -54,7 +54,7 @@ reBot-Isaacsim é um projeto de simulação NVIDIA Isaac Sim projetado especific
 Os computadores usados neste wiki estão equipados com GPUs NVIDIA RTX 4080 e executam o sistema operacional Ubuntu 22.04 LTS.
 :::
 
-## Instalar Isaacsim
+## Instalar Isaac Sim
 
 Links e recursos oficiais:
 
@@ -63,9 +63,9 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/quick-install.html
 https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaac-sim-latest-release
 
 
-### 🔧 Método 1: Instalação de binário pré-compilado
+### 🔧 Método 1: Instalação por binário pré-compilado
 
-> 💡 Adequado para a maioria dos usuários, não é necessário compilar, pronto para uso imediato.
+> 💡 Adequado para a maioria dos usuários, sem necessidade de compilação, pronto para uso imediato.
 
 #### Download e descompactação
 
@@ -97,7 +97,7 @@ Em seguida, execute `source ~/.bashrc` para que tenha efeito.
 ${ISAACSIM_PATH}/isaac-sim.sh
 ```
 
-O primeiro lançamento fará cache dos shaders, o que pode levar de 5 a 10 minutos, portanto, seja paciente enquanto a interface gráfica é exibida.
+Na primeira inicialização, os shaders serão armazenados em cache, o que pode levar de 5 a 10 minutos, portanto, aguarde pacientemente enquanto a interface gráfica aparece.
 
 ### ⚙️ Método 2: Compilar a partir do código-fonte (recomendado)
 
@@ -112,7 +112,7 @@ sudo apt install cmake build-essential git python3-pip
 
 Certifique-se de que CUDA e cuDNN estejam instalados corretamente e correspondam ao driver da sua GPU.
 
-#### Clonagem e compilação
+#### Clonar e compilar
 
 ```Bash
 git clone https://github.com/NVIDIA-Omniverse/IsaacSim.git
@@ -157,7 +157,7 @@ uv sync
 
 ### Alternar a configuração de hardware para RS
 
-O asset Isaac Sim deste repositório é RS (`usd/RS-rebot-dev-arm`). O `rebotarm.yaml` upstream é DM por padrão. Tanto `RebotArm()` quanto `load_robot_model()` seguem esse arquivo, portanto, compensação de gravidade, leitor de juntas, IK e Traj precisam de RS primeiro; se permanecer em DM, o protocolo do motor não irá corresponder e o Pinocchio carregará o URDF DM. Isso apenas suja a árvore de trabalho do submódulo — não faça commit:
+O asset Isaac Sim deste repositório é RS (`usd/RS-rebot-dev-arm`). O `rebotarm.yaml` upstream é DM por padrão. Tanto `RebotArm()` quanto `load_robot_model()` seguem esse arquivo, portanto, compensação de gravidade, leitor de juntas, IK e Traj precisam de RS primeiro; se permanecer em DM, o protocolo do motor não corresponderá e o Pinocchio carregará o URDF DM. Isso apenas suja a árvore de trabalho do submódulo — não faça commit:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -173,9 +173,9 @@ Este projeto fornece vários senders para atender a diferentes cenários de uso:
 | Componente | Descrição |
 |-----------|------------|
 | `gravity_joint_sender` | **Compensação de gravidade + Modo de manete**: Para braços robóticos modificados (gripper removido, manete acoplada), guiado à mão; a compensação vem do `GravityCompensation` upstream, este repositório apenas espelha os ângulos das juntas para o Isaac Sim |
-| `isaacsim_ik_sender` | **Modo de cinemática inversa (IK)**: Insira a pose do efetuador final, use o solucionador de IK para obter os ângulos das juntas e enviá-los ao Isaac Sim |
-| `isaacsim_traj_sender` | **Modo de planejamento de trajetória (Traj)**: Adiciona planejamento de trajetória no espaço de juntas (perfil de tempo MIN_JERK) sobre o IK para obter controle de movimento suave |
-| `isaacsim_joint_test_sender` | **Modo de teste de juntas**: Envia trajetórias de ângulo de junta predefinidas sem um robô real para verificar se o receiver do Isaac Sim e a comunicação estão funcionando corretamente |
+| `isaacsim_ik_sender` | **Modo de Cinemática Inversa (IK)**: Insira a pose do efetuador final, use o solucionador de IK para obter os ângulos das juntas e enviá-los ao Isaac Sim |
+| `isaacsim_traj_sender` | **Modo de planejamento de trajetória (Traj)**: Adiciona planejamento de trajetória no espaço de juntas (perfil de tempo MIN_JERK) sobre o IK para alcançar controle de movimento suave |
+| `isaacsim_joint_test_sender` | **Modo de teste de juntas**: Envia trajetórias de ângulos de juntas predefinidas sem um robô real para verificar se o receiver do Isaac Sim e a comunicação estão funcionando corretamente |
 | `joint_reader_sender` | **Modo de mapeamento Real-para-Sim**: Apenas leitura dos ângulos das juntas e mapeamento para o Isaac Sim, ideal para uso com outros projetos de controle (por exemplo, sincronizar no Isaac Sim para visualização o robô real executando outras tarefas) |
 
 ### Estrutura de diretórios
@@ -255,9 +255,9 @@ uv run python isaacsim_joint_test_sender.py
 
 O sender interpola continuamente entre várias configurações de juntas predefinidas e as transmite para o Isaac Sim. Ele não lê o YAML de hardware, portanto, nem `set_hw_rs.py` nem CAN são necessários.
 
-#### ② Modo de cinemática inversa (`isaacsim_ik_sender`)
+#### ② Modo de Cinemática Inversa (`isaacsim_ik_sender`)
 
-Insira uma pose do efetuador final (posição/orientação). O solucionador de IK calcula a configuração das juntas e move o braço robótico no Isaac Sim. `load_robot_model()` lê o `rebotarm.yaml` do submódulo, portanto, altere para RS primeiro:
+Insira uma pose do efetuador final (posição/orientação). O solucionador de IK calcula a configuração das juntas e move o braço robótico no Isaac Sim. `load_robot_model()` lê o submódulo `rebotarm.yaml`, portanto, altere para RS primeiro:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -324,7 +324,7 @@ uv run python joint_reader_sender.py
 
 **Comportamento esperado:**
 - `set_hw_rs.py` alterna a configuração do motor para RS (alteração local; não faça commit)
-- Ler apenas os ângulos das juntas (modo de feedback passivo), sem enviar quaisquer comandos de controle
+- Ler apenas os ângulos das juntas (modo de feedback passivo), sem enviar nenhum comando de controle
 - Transmitir continuamente os ângulos das juntas via UDP a 60 Hz
 - Visualizar o robô físico no Isaac Sim enquanto ele é controlado por outro projeto
 
@@ -352,14 +352,14 @@ UDP JSON na porta `127.0.0.1:5005`.
 
 **Pipeline de controle da garra:**
 
-O receptor aplica o `gripper_position` recebido diretamente como alvo de posição de ambas as juntas prismáticas dos dedos, limitado por dedo a `[0, upper limit]` (limites superiores em USD: 0,05 m em ambos os dedos; os dedos são acionados 1:1 por um motor através de um único pinhão). Não há escala extra no lado do receptor. Os remetentes mapeiam sua entrada para `gripper_position` da seguinte forma:
+O receptor aplica o `gripper_position` recebido diretamente como alvo de posição de ambas as juntas prismáticas dos dedos, limitado por dedo a `[0, upper limit]` (limites superiores USD: 0,05 m em ambos os dedos; os dedos são acionados 1:1 por um motor através de um único pinhão). Não há escala extra no lado do receptor. Os remetentes mapeiam sua entrada para `gripper_position` da seguinte forma:
 
 | Remetente | Mapeamento para `gripper_position` (m) |
 |------|------|
 | `gravity_joint_sender` | `gripper_q × 0.03` (`GRIPPER_POSITION_SCALE = 0.03`) |
 | `joint_reader_sender` | `gripper_q × 0.007` (`GRIPPER_POSITION_SCALE = 0.007`) |
 | `isaacsim_traj_sender` | `ratio × 0.045` (entrada `gripper <0~1>`, limitada a 0,045 m) |
-| `isaacsim_ik_sender` | `ratio ∈ [0, 1]` bruto enviado em metros, então qualquer ratio ≥ o limite superior de um dedo abre totalmente esse dedo |
+| `isaacsim_ik_sender` | `ratio ∈ [0, 1]` bruto enviado como metros, então qualquer ratio ≥ ao limite superior de um dedo abre totalmente esse dedo |
 
 ## Parâmetros de Configuração
 
@@ -433,9 +433,9 @@ ip -details link show can0 | grep bitrate
 | Receptor | Python oficial do Isaac Sim (`python.sh`) | `run_isaacsim_receiver.sh` |
 
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte Técnico & Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
@@ -446,6 +446,5 @@ Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tip
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 
 

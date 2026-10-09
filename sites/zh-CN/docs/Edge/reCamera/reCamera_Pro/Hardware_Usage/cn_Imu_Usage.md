@@ -14,7 +14,7 @@ last_update:
   date: 07/09/2026
   author: Sizhao zhou
 createdAt: '2026-06-01'
-updatedAt: '2026-07-14'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/recamera_pro_imu_usage_legacy/
 ---
 <!-- 旧版页面（reCamera Pro wiki 重构，第 2 阶段）：此页面已被 Develop/imu_data.md（https://wiki.seeedstudio.com/cn/recamera_pro_imu_usage/）取代，该页面现在使用原始 slug /recamera_pro_imu_usage。此文件作为草稿（slug /recamera_pro_imu_usage_legacy）保留以供历史记录，并且不会被包含在正式构建中。请不要链接到此处。 -->

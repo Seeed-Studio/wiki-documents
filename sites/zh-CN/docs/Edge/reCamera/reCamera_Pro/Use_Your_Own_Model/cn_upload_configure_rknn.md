@@ -15,6 +15,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_rknn_upload/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # 上传并配置 RKNN 模型

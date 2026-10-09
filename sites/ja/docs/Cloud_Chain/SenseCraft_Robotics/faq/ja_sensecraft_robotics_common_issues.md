@@ -10,6 +10,9 @@ slug: /sensecraft_robotics_common_issues
 last_update:
   date: 09/24/2026
   author: Seeed Studio
+createdAt: '2026-09-24'
+url: https://wiki.seeedstudio.com/ja/sensecraft_robotics_common_issues/
+updatedAt: '2026-09-24'
 ---
 
 ## デバイスの接続と検出

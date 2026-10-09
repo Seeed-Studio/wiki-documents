@@ -9,7 +9,7 @@ last_update:
   author: Dayu
 createdAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/cn/ai_robotics_microduck_rl_custom_motion_training/
-updatedAt: '2026-09-07'
+updatedAt: '2026-09-17'
 ---
 
 # 创建自定义 Microduck 动作

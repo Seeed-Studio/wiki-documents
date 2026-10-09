@@ -1,8 +1,8 @@
 ---
-description: Este tutorial muestra cómo descargar Isaacsim y desplegar el robot reBotArm en un entorno de simulación para desarrollo y depuración.
-title: B601-RS con Isaacsim
+description: Este tutorial muestra cómo descargar Isaac Sim y desplegar el robot reBotArm en un entorno de simulación para desarrollo y depuración.
+title: B601-RS con Isaac Sim
 keywords:
-  - Isaacsim
+  - Isaac Sim
   - Brazo mecánico
   - Robot
   - Operación de control remoto
@@ -14,7 +14,7 @@ last_update:
   date: 8/14/2026
   author: LiuJunjie
 createdAt: '2026-07-07'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -41,12 +41,12 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 ## Introducción
 
-reBot-Isaacsim es un proyecto de simulación NVIDIA Isaac Sim diseñado específicamente para el reBotArm. Aprovecha el motor de física de alta fidelidad de Isaac Sim para replicar con precisión las características cinemáticas y la lógica de coordinación del efector final del brazo robótico en un entorno virtual, proporcionando un entorno independiente solo de simulación para el desarrollo de algoritmos de control, la verificación de planificación de trayectorias y las pruebas de protocolos de comunicación.
+reBot-Isaacsim es un proyecto de simulación NVIDIA Isaac Sim diseñado específicamente para el reBotArm. Aprovecha el motor de física de alta fidelidad de Isaac Sim para replicar con precisión las características cinemáticas y la lógica de coordinación de la pinza del brazo robótico en un entorno virtual, proporcionando un entorno independiente solo de simulación para el desarrollo de algoritmos de control, la verificación de planificación de trayectorias y las pruebas de protocolos de comunicación.
 
 ## Requisitos del entorno
 - Sistema operativo: Ubuntu 22.04 LTS / 24.04 LTS (recomendado) o Windows 11 (requiere WSL2)  
-- GPU: Tarjeta gráfica NVIDIA RTX series (se recomienda RTX 3070 o superior), VRAM ≥ 8GB  
-- Controlador: Controlador oficial de NVIDIA ≥ 535.x, compatible con CUDA 12.x  
+- GPU: tarjeta gráfica NVIDIA RTX series (se recomienda RTX 3070 o superior), VRAM ≥ 8GB  
+- Controlador: controlador oficial de NVIDIA ≥ 535.x, compatible con CUDA 12.x  
 - Memoria: ≥ 32GB de RAM (las escenas de Isaac Sim y las simulaciones físicas usan mucha memoria)  
 - Almacenamiento: ≥ 100GB de espacio disponible en SSD (para la instalación de Isaac Sim, caché y recursos USD)
 
@@ -54,7 +54,7 @@ reBot-Isaacsim es un proyecto de simulación NVIDIA Isaac Sim diseñado específ
 Los ordenadores utilizados en este wiki están equipados con GPU NVIDIA RTX 4080 y ejecutan el sistema operativo Ubuntu 22.04 LTS.
 :::
 
-## Instalar Isaacsim
+## Instalar Isaac Sim
 
 Enlaces y recursos oficiales:
 
@@ -97,7 +97,7 @@ Luego ejecuta `source ~/.bashrc` para que surta efecto.
 ${ISAACSIM_PATH}/isaac-sim.sh
 ```
 
-En el primer inicio se almacenarán en caché los shaders, lo que puede tardar de 5 a 10 minutos, así que ten paciencia mientras aparece la interfaz gráfica.
+El primer inicio almacenará en caché los shaders, lo que puede tardar de 5 a 10 minutos, así que ten paciencia mientras aparece la interfaz gráfica.
 
 ### ⚙️ Método 2: Compilar desde el código fuente (recomendado)
 
@@ -134,7 +134,7 @@ Después de compilar desde el código fuente, apunta `ISAACSIM_ROOT` a ese direc
 export ISAACSIM_ROOT="$PWD/_build/linux-x86_64/release"
 ```
 
-## Descargar el proyecto
+## Descargar proyecto
 
 Este repositorio extrae la biblioteca de control upstream `reBotArm_control_py` como un submódulo de git. Clona con submódulos:
 
@@ -157,7 +157,7 @@ uv sync
 
 ### Cambiar la configuración de hardware a RS
 
-El recurso de Isaac Sim de este repositorio es RS (`usd/RS-rebot-dev-arm`). El `rebotarm.yaml` upstream usa DM por defecto. Tanto `RebotArm()` como `load_robot_model()` siguen este archivo, por lo que la compensación de gravedad, el lector de articulaciones, IK y Traj necesitan RS primero; si lo dejas en DM, el protocolo del motor no coincidirá y Pinocchio cargará el URDF de DM. Esto solo ensucia el árbol de trabajo del submódulo — no lo confirmes (commit):
+El recurso de Isaac Sim de este repositorio es RS (`usd/RS-rebot-dev-arm`). El `rebotarm.yaml` upstream usa DM por defecto. Tanto `RebotArm()` como `load_robot_model()` siguen este archivo, por lo que la compensación de gravedad, el lector de articulaciones, IK y Traj necesitan RS primero; si se deja en DM, el protocolo del motor no coincidirá y Pinocchio cargará el URDF de DM. Esto solo ensucia el árbol de trabajo del submódulo — no lo confirmes (commit):
 
 ```bash
 cd reBotArm_Isaacsim
@@ -172,11 +172,11 @@ Este proyecto proporciona varios emisores para satisfacer diferentes escenarios 
 
 | Componente | Descripción |
 |-----------|------------|
-| `gravity_joint_sender` | **Modo de compensación de gravedad + modo de control con asa**: Para brazos robóticos modificados (efector final retirado, asa acoplada), guiado a mano; la compensación proviene de `GravityCompensation` upstream, este repositorio solo refleja los ángulos de las articulaciones en Isaac Sim |
+| `gravity_joint_sender` | **Modo de compensación de gravedad + modo de manejo**: Para brazos robóticos modificados (pinza retirada, mango acoplado), guiado a mano; la compensación proviene de `GravityCompensation` upstream, este repositorio solo refleja los ángulos de las articulaciones en Isaac Sim |
 | `isaacsim_ik_sender` | **Modo de cinemática inversa (IK)**: Introduce la pose del efector final, utiliza el solucionador IK para obtener los ángulos de las articulaciones y los envía a Isaac Sim |
-| `isaacsim_traj_sender` | **Modo de planificación de trayectoria (Traj)**: Añade planificación de trayectorias en el espacio articular (perfil de tiempo MIN_JERK) sobre IK para lograr un control de movimiento suave |
-| `isaacsim_joint_test_sender` | **Modo de prueba de articulaciones**: Envía trayectorias de ángulos de articulaciones preestablecidas sin un robot real para verificar si el receptor de Isaac Sim y la comunicación funcionan correctamente |
-| `joint_reader_sender` | **Modo de mapeo del mundo real a la simulación**: Solo lectura de ángulos de articulaciones y mapeo a Isaac Sim, ideal para usar con otros proyectos de control (por ejemplo, sincronizar en Isaac Sim para visualización el robot real que realiza otras tareas) |
+| `isaacsim_traj_sender` | **Modo de planificación de trayectoria (Traj)**: Añade planificación de trayectoria en el espacio articular (perfil de tiempo MIN_JERK) sobre IK para lograr un control de movimiento suave |
+| `isaacsim_joint_test_sender` | **Modo de prueba de articulaciones**: Envía trayectorias de ángulos articulares preestablecidas sin un robot real para verificar si el receptor y la comunicación de Isaac Sim funcionan correctamente |
+| `joint_reader_sender` | **Modo de mapeo del mundo real a la simulación**: Solo lectura de ángulos articulares y mapeo a Isaac Sim, ideal para usar con otros proyectos de control (por ejemplo, sincronizar en Isaac Sim el robot real que realiza otras tareas para visualización) |
 
 ### Estructura de directorios
 
@@ -220,7 +220,7 @@ cd reBotArm_Isaacsim
 - Iniciar la interfaz gráfica de Isaac Sim
 - Cargar el plano de suelo y los recursos USD del brazo robótico
 - Escuchar paquetes UDP en `127.0.0.1:5005`
-- Esperar a que se conecte un emisor
+- Esperar a que un emisor se conecte
 
 ### Terminal 2 — Iniciar el emisor apropiado
 
@@ -276,7 +276,7 @@ gripper <0~1>               # Update gripper only
 
 #### ③ Modo de planificación de trayectoria (`isaacsim_traj_sender`)
 
-Añade planificación de trayectorias en el espacio articular (MIN_JERK) sobre IK para un movimiento suave del robot. También utiliza `load_robot_model()` con ese YAML, así que cambia primero a RS:
+Añade planificación de trayectoria en el espacio articular (MIN_JERK) sobre IK para un movimiento suave del robot. También utiliza `load_robot_model()` con ese YAML, así que cambia primero a RS:
 
 ```bash
 cd reBotArm_Isaacsim
@@ -324,9 +324,9 @@ uv run python joint_reader_sender.py
 
 **Comportamiento esperado:**
 - `set_hw_rs.py` cambia la configuración del motor a RS (cambio local; no hacer commit)
-- Leer solo los ángulos articulares (modo de retroalimentación pasiva), sin enviar ningún comando de control
+- Leer solo los ángulos articulares (modo de realimentación pasiva), sin enviar ningún comando de control
 - Transmitir continuamente los ángulos articulares vía UDP a 60 Hz
-- Visualizar el robot físico en Isaac Sim mientras está controlado por otro proyecto
+- Visualizar el robot físico en Isaac Sim mientras es controlado por otro proyecto
 
 ## Protocolo de comunicación
 
@@ -359,7 +359,7 @@ El receptor aplica el `gripper_position` recibido directamente como objetivo de 
 | `gravity_joint_sender` | `gripper_q × 0.03` (`GRIPPER_POSITION_SCALE = 0.03`) |
 | `joint_reader_sender` | `gripper_q × 0.007` (`GRIPPER_POSITION_SCALE = 0.007`) |
 | `isaacsim_traj_sender` | `ratio × 0.045` (entrada `gripper <0~1>`, recortada a 0.045 m) |
-| `isaacsim_ik_sender` | `ratio ∈ [0, 1]` sin procesar enviada como metros, por lo que cualquier ratio ≥ al límite superior de un dedo abre completamente ese dedo |
+| `isaacsim_ik_sender` | `ratio ∈ [0, 1]` en bruto enviado como metros, por lo que cualquier ratio ≥ al límite superior de un dedo abre completamente ese dedo |
 
 ## Parámetros de configuración
 
@@ -388,7 +388,7 @@ El receptor aplica el `gripper_position` recibido directamente como objetivo de 
 
 ### `OSError: [Errno 98] Address already in use`
 
-El puerto `5005` ya está ocupado. Encuentra y termina el proceso que está usando el puerto:
+El puerto `5005` ya está ocupado. Localiza y termina el proceso que está usando el puerto:
 
 ```bash
 # Find the process using port 5005
@@ -446,6 +446,5 @@ Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes t
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 
 

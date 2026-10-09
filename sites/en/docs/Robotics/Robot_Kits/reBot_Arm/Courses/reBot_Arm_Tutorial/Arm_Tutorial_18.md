@@ -1,5 +1,5 @@
 ---
-description: "Chapter 18 of the Seeed Physical AI Beginner's Course — multimodal learning and VLA basics: vision/language/action, VLM vs VLA, ACT vs VLA, language-conditioned tasks, single-task vs multi-task vs generalization, continuous actions vs action tokens, and VLA capabilities and limitations."
+description: 'Chapter 18 of the Seeed Physical AI Beginner''s Course — multimodal learning and VLA basics: vision/language/action, VLM vs VLA, ACT vs VLA, language-conditioned tasks, single-task vs multi-task vs generalization, continuous actions vs action tokens, and VLA capabilities and limitations.'
 title: Chapter 18 - Multimodal Learning and VLA Basics
 keywords:
   - reBot
@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-24
   author: ZhuYaoHui
 createdAt: '2026-09-24'
-updatedAt: '2026-09-24'
+updatedAt: '2026-09-25'
 url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_18/
 ---
 

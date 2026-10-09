@@ -1,6 +1,6 @@
 ---
 description: エッジ商品認識の構築、導入方法、実測データと実装詳細
-title: 'エッジ商品認識：構築・導入・実測結果'
+title: エッジ商品認識：構築・導入・実測結果
 keywords:
   - edge product recognition
   - checkout product recognition without barcode

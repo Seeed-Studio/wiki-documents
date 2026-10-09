@@ -13,10 +13,10 @@ sku: 102991897, 100029708, 108990120
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 18
 last_update:
-  date: 06/26/2026
+  date: 10/08/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-26'
-updatedAt: '2026-07-22'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/ja/recamera_hand_gesture/
 ---
 
@@ -24,14 +24,14 @@ url: https://wiki.seeedstudio.com/ja/recamera_hand_gesture/
 
 ## はじめに
 
-このプロジェクトでは、公式の Google **MediaPipe ハンドジェスチャー認識スイート**を **reCamera** 上に完全移植してリアルタイムでジェスチャー認識を行い、その映像と認識結果を UDP 経由で PC にストリーミングして可視化する方法を示します。
+このプロジェクトでは、公式の Google **MediaPipe ハンドジェスチャー認識スイート**を **reCamera** 上に完全移植してリアルタイムのジェスチャー認識を行い、その映像と認識結果を UDP 経由で PC にストリーミングして可視化する方法を示します。
 
-本システムは **8 種類のジェスチャーカテゴリ**（None / Closed_Fist / Open_Palm / Pointing_Up / Thumb_Down / Thumb_Up / Victory / ILoveYou）を認識でき、さらに **21 個の手のランドマーク**および**利き手情報（左手/右手）**も出力します。以下のようなアプリケーションシナリオに適しています：
+本システムは **8 種類のジェスチャーカテゴリ**（None / Closed_Fist / Open_Palm / Pointing_Up / Thumb_Down / Thumb_Up / Victory / ILoveYou）を認識でき、さらに **21 個のハンドランドマーク**と **利き手情報（左手 / 右手）** も出力します。以下のような用途に適しています：
 
 - **スマートホームのジェスチャー操作**：あらかじめ定義したジェスチャーで照明、カーテン、家電スイッチを操作でき、音声やスマホアプリが不要です。
 - **産業用途の非接触インタラクション**：手袋を着用している作業者や両手がふさがっている作業者でも、簡単なジェスチャーで装置にコマンドを送信できます。
 - **教育・展示でのインタラクション**：科学館や展示ホールなどで、来場者がジェスチャーによってマルチメディアコンテンツをトリガーし、没入型の体験を提供できます。
-- **アクセシビリティ支援**：聴覚障害や身体の可動性が制限されているユーザーに対し、ジェスチャーによるデバイス操作の入口を提供します。
+- **アクセシビリティ支援**：聴覚障害や身体の可動性が制限されているユーザーに対し、ジェスチャーベースのデバイス操作の入り口を提供します。
 
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/hand_gesture/test.gif" />
@@ -105,7 +105,7 @@ url: https://wiki.seeedstudio.com/ja/recamera_hand_gesture/
 
 ### モデル変換パイプライン（TFLite → ONNX → cvimodel）
 
-公式 MediaPipe リポジトリから TFLite 形式のモデルをダウンロードします。これらは reCamera の TPU がサポートする `.cvimodel` 形式に変換する必要があります：
+公式 MediaPipe リポジトリから TFLite 形式のモデルをダウンロードします。これらを reCamera の TPU がサポートする `.cvimodel` 形式に変換する必要があります：
 
 ```
 MediaPipe TFLite (FLOAT16)
@@ -132,7 +132,7 @@ CVIMODEL (cv181x)
 | embedder | embedding | 1.0000 | 0.9992 |
 | classifier | probs | 1.0000 | 0.9978 |
 
-> **Note**: INT8 量子化後、`world63`（ワールド座標系ランドマーク）の精度にはある程度の損失があります（cos=0.81）。しかし、エンドツーエンドのジェスチャー分類結果は TFLite と一致しており（カテゴリ判定は信頼できます）、多くの用途では問題ありません。もしアプリケーションがワールド座標の精度に強く依存する場合は、このモデルの BF16 バージョンを使用することを推奨します。
+> **Note**: INT8 量子化後、`world63`（ワールド座標ランドマーク）の精度にはある程度の損失があります（cos=0.81）。しかし、エンドツーエンドのジェスチャー分類結果は TFLite と一致しており（カテゴリ判定は信頼できます）、多くの用途では問題ありません。もしアプリケーションがワールド座標の精度に強く依存する場合は、このモデルの BF16 版を使用することを推奨します。
 
 
 ## デモのビルド
@@ -146,10 +146,10 @@ CVIMODEL (cv181x)
 ### ステップ 1: C++ プログラムをコンパイルする
 
 :::note
-このソリューションをビルドする前に、[メインプロジェクトドキュメント](https://wiki.seeedstudio.com/ja/recamera_develop_with_c_cpp/)に従って **ReCamera-OS** 環境（バージョン 0.2.1 以上）を設定し、SDK パスおよびクロスコンパイル用ツールチェーンを構成しておいてください。
+このソリューションをビルドする前に、[メインプロジェクトドキュメント](https://wiki.seeedstudio.com/ja/recamera_develop_with_c_cpp/)に従って **ReCamera-OS** 環境（バージョン 0.2.1 以上）を設定し、SDK パスとクロスコンパイルツールチェーンを構成しておいてください。
 :::
 
-クロスコンパイル用ツールチェーンの環境変数を設定します：
+クロスコンパイルツールチェーンの環境変数を設定します：
 
 ```bash
 export PATH='current compile chain path'/host-tools/gcc/riscv64-linux-musl-x86_64/bin:$PATH
@@ -174,7 +174,7 @@ make -j$(nproc)
 
 | モデル | ファイル名 | 説明 |
 |------|--------|------|
-| Palm Detection | `hand_detector_cv181x_int8.cvimodel` | モデル 1: SSD パーム検出 |
+| Palm Detection | `hand_detector_cv181x_int8.cvimodel` | モデル 1: SSD palm 検出 |
 | Landmark Detection | `hand_landmarks_detector_cv181x_int8.cvimodel` | モデル 2: 21 個のランドマーク |
 | Gesture Embedding | `gesture_embedder_cv181x_int8.cvimodel` | モデル 3: 128 次元埋め込み |
 | Gesture Classification | `canned_gesture_classifier_cv181x_int8.cvimodel` | モデル 4: 8 クラス分類 |
@@ -194,9 +194,9 @@ C++ プログラムを実行する前に、デフォルトの Node-RED サービ
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### ステップ 4: reCamera 上で実行ファイルを実行する
@@ -212,12 +212,12 @@ chmod +x hand_gesture
 
 | パラメータ | 説明 | デフォルト |
 |------|------|--------|
-| `palm_model` | パーム検出モデル（必須） | - |
+| `palm_model` | Palm 検出モデル（必須） | - |
 | `landmark_model` | ランドマーク検出モデル（必須） | - |
 | `embedder_model` | ジェスチャー埋め込みモデル（必須） | - |
 | `classifier_model` | ジェスチャー分類モデル（必須） | - |
-| `min_score` | パーム検出のしきい値 | `0.5` |
-| `udp_ip` | PC の IP アドレス（指定すると UDP ストリーミングを有効化） | - |
+| `min_score` | Palm 検出のしきい値 | `0.5` |
+| `udp_ip` | PC の IP アドレス（UDP ストリーミングを有効化） | - |
 | `udp_port` | UDP ポート番号 | - |
 | `jpeg_w` | JPEG ストリーミングフレーム幅 | `320` |
 | `jpeg_h` | JPEG ストリーミングフレーム高さ | `240` |
@@ -264,7 +264,7 @@ PC 上で、必要な Python ライブラリがインストールされている
 pip install opencv-python numpy
 ```
 
-ソリューションディレクトリに入り、レシーバースクリプトを実行します：
+ソリューションディレクトリに入り、受信側スクリプトを実行します：
 
 ```bash
 cd sscma-example-sg200x/solutions/sesg-project/hand_gesture
@@ -286,7 +286,7 @@ PC にはリアルタイムのビデオウィンドウが表示され、次の�
 
 ## 期待される出力
 
-### reCamera 端末上
+### reCamera ターミナル上
 
 プログラムの実行後、推論パフォーマンスのログが表示されます：
 
@@ -332,12 +332,12 @@ PC がデータを受信しない場合：
 - UDP ポートがブロックされていないことを確認します
 - `ping` を使用してデバイス間の接続性をテストします
 
-### ジェスチャー認識の信頼度が異常
+### ジェスチャー認識の信頼度が異常な場合
 
 認識されたジェスチャーの信頼度が明らかにおかしい場合：
 
-- 分類器モデルの後にある **C++ softmax パッチ** が正しく実装されていることを確認します
-- Softmax を含む ONNX 出力を、cvimodel 出力（logits）の代わりに誤って使用していないか確認します
+- 分類器モデルの後段にある **C++ softmax パッチ** が正しく実装されていることを確認します
+- Softmax を含む ONNX 出力を、cvimodel 出力（logits）と取り違えて使用していないか確認します
 
 ## C++ コード構造
 
@@ -357,7 +357,7 @@ hand_gesture/
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

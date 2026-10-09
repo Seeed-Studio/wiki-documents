@@ -1,6 +1,6 @@
 ---
-description: Este guia de desenvolvedor apresenta a arquitetura, o runtime, a ponte ROS2, a integração LLM/MCP e o fluxo de trabalho de desenvolvimento secundário do console web reBotArm_simulator-DM e da stack ROS2/MuJoCo na ReBot Arm Digital Twin & Control Stack para B601-DM.
-title: B601-DM com Web Controler
+description: Este guia de desenvolvedor apresenta a arquitetura, o runtime, a ponte ROS2, a integração LLM/MCP e o fluxo de trabalho de desenvolvimento secundário do console web reBotArm_simulator-DM e da stack ROS2/MuJoCo na ReBot Arm Digital Twin & Control Stack para o B601-DM.
+title: B601-DM com Controlador Web
 keywords:
   - reBot Arm
   - B601-DM
@@ -21,7 +21,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-30'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
 import '/src/css/rebot-wiki-style.css';

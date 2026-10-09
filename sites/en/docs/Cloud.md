@@ -20,7 +20,7 @@ last_update:
   date: 09/11/2026
   author: Luki
 createdAt: '2023-01-05'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/Cloud/
 ---
 

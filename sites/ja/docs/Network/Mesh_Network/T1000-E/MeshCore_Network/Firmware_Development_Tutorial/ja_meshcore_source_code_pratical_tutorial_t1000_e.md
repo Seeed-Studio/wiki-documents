@@ -1,5 +1,5 @@
 ---
-description: MeshCore ファームウェアのソースコード環境をセットアップし、T1000-E をコンパイルしてファームウェアを書き込むための実践チュートリアルです。
+description: MeshCore ファームウェアのソースコード環境をセットアップし、T1000-E をコンパイルしてファームウェアを書き込むための実践的なチュートリアルです。
 title: MeshCore 開発チュートリアル
 keywords:
   - MeshCore
@@ -14,7 +14,7 @@ last_update:
   author: Michelle Huang
 url: https://wiki.seeedstudio.com/ja/meshcore_source_code_pratical_tutorial_t1000_e/
 createdAt: '2026-03-27'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-28'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -43,7 +43,7 @@ VS Code の拡張機能マーケットプレイスで `PlatformIO` を検索し�
 
 プロジェクトを配置したいフォルダを開きます。ターミナルでそのフォルダを開きます。[ここをクリック](https://github.com/meshcore-dev/MeshCore)してプロジェクトを git clone します。
 
-VSCode を開き、PlatformIO アイコンをクリックして `select a folder` を選択します。プロジェクトをクローンしたフォルダを選択します。
+VSCode を開き、PlatformIO アイコンをクリックして `select a folder` を選択します。クローンしたプロジェクトのフォルダを選択します。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png)
 
@@ -66,14 +66,14 @@ PlatformIO は必要な依存関係を自動的にインストールします。
 
 コードを変更します。ボード用の `variant.h` ファイルを変更することを推奨します。
 
-コーディングを完了したら、次のコマンドを実行してコードをコンパイルし、uf2 ファイルに変換します。
+コーディングが完了したら、次のコマンドを実行してコードをコンパイルし、UF2 ファイルに変換します。
 
 ``` bash
 pio run -e t1000e_companion_radio_ble
 pio run -e t1000e_companion_radio_ble -t create_uf2
 ```
 
-デバイスボタンを押し続けたまま、充電ケーブルを素早く 2 回接続すると、緑色の LED が点灯し続けます。ポップアップしたディスクに uf2 ファイルをドラッグします。uf2 ファイルは `.pio\build\t1000e_companion_radio_ble` にあります。
+デバイスボタンを押し続けたまま、充電ケーブルを素早く 2 回接続すると、緑色の LED が点灯し続けます。ポップアップしたディスクに UF2 ファイルをドラッグします。UF2 ファイルは `.pio\build\t1000e_companion_radio_ble` にあります。
 
 ### 例
 
@@ -81,7 +81,7 @@ pio run -e t1000e_companion_radio_ble -t create_uf2
 
 この例では、ユーザーライトを常時点灯させる方法を示します。次のコードを `/examples/companion_radio/ui-new/ui-orig/UITask.cpp` にコピーします。
 
-``` python
+``` cpp
 void UITask::userLedHandler() {
 #ifdef PIN_STATUS_LED
 #ifdef T1000_E
@@ -97,9 +97,9 @@ void UITask::userLedHandler() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000ELight.jpg" style={{width:900, height:'auto'}}/></div>
 
 
-コンパイルして、uf2 ファイルを T1000-E に書き込みます。
+コンパイルして、UF2 ファイルを T1000-E に書き込みます。
 
-## （上級）PR 提出
+## （上級）PR の提出
 
 MeshCore プロジェクトへの貢献をご検討いただきありがとうございます！どのように貢献できますか？
 **1. バグ報告**
@@ -117,19 +117,19 @@ MeshCore プロジェクトへの貢献をご検討いただきありがとう�
 **3. コード変更の提出（Pull Request）**
 ### 小さな修正
 （誤字、コメント、サンプル、小さなバグ修正）
-→ 事前に issue を立てる必要はありません。Pull Request を直接作成してください。
+→ そのまま pull request を作成して構いません — 事前の issue は不要です
 
 ### 大きな変更 / 新機能
 1. まず issue を作成してアイデアを議論する
-2. メンテナから大まかな 👍 をもらう
+2. メンテナーから大まかな 👍 をもらう
 3. 'dev' ブランチからリポジトリを fork し、自分のブランチ（fix/xxx, feature/yyy, docs/whatever）を作成する
 4. 変更を加える
 5. 必要に応じてサンプルを更新または追加する
-6. コード内のコメントを追加／更新する
+6. コード内のコメントを追加 / 更新する
 7. Pull Request を送信する
 
 ### Pull Request のガイドライン
-- 1 つの機能 / 修正につき 1 つの Pull Request（小さい PR の方がレビューしやすく、早くマージされます）
+- 1 つの機能 / 修正 = 1 つの Pull Request（小さい PR の方がレビューしやすく、早くマージされます）
 - 説明的なコミットメッセージを使用する
   良い例: Fix I2C timeout handling on ESP32
   悪い例: update
@@ -137,13 +137,13 @@ MeshCore プロジェクトへの貢献をご検討いただきありがとう�
 - 公開 API を変更した場合は、README.md と library.properties を更新する
 - 新機能には examples/ 内のサンプルスケッチを含めること
 ### コーディングスタイル
-.clang-format に従い、既存の C++ スタイルに従ってください。
+.clang-format に従い、既存の C++ スタイルに従ってください
 
 - インデントはスペース 2 つ（タブは使用しない）
 - 関数および変数には camelCase を使用
 - クラス名には UpperCamelCase / PascalCase を使用
-- #define 定数は ALL_CAPS を使用
-- 可能であれば 1 行はおおよそ 100 文字未満に保つ
+- #define の定数は ALL_CAPS を使用
+- 可能な範囲で 1 行を約 100 文字未満に保つ
 （ただし、厳密なルールよりも既存コードとの一貫性を優先します）
 
 ## 技術サポート & 製品ディスカッション

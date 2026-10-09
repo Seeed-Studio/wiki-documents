@@ -1,4 +1,4 @@
----
+﻿---
 description: Comprehensive troubleshooting guide and FAQ for Reachy Mini covering frequent issues, assembly, connection, hardware, SDK, and error messages.
 title: Troubleshooting & FAQ
 slug: /reachymini_troubleshooting
@@ -19,7 +19,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-05-19'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/reachymini_troubleshooting/
 ---
 
@@ -517,6 +517,7 @@ Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 
 <details>
 <summary><strong>Does the battery has safety features?</strong></summary>
+
 Wireless includes a proper battery charger.
 The battery integrates a BMS with a temperature sensor too.
 
@@ -524,6 +525,7 @@ The battery integrates a BMS with a temperature sensor too.
 
 <details>
 <summary><strong>How do I see the battery left?</strong></summary>
+
 We do not have the possibility to check the battery status, that's a known limitation of the design.
 
 We only have the led indication for "low battery" when it's time to charge it. (green -> orange -> red)
@@ -851,6 +853,7 @@ You can play back a sound while recording simultaneously to test the echo cancel
 
 <details>
 <summary><strong>Motor &#39;&lt;name&gt;&#39; hardware errors: [&#39;Input Voltage Error&#39;]</strong></summary>
+
 We are using a higher voltage on Reachy Mini, it's on purpose :)
 
 </details>
@@ -907,7 +910,64 @@ rm -rf /venvs/apps_venv
 
 </details>
 
+<details>
+<summary><strong>Servo parameter restore script</strong></summary>
 
+When a servo (e.g., S5) has abnormal parameters, you can use the backup/restore tool to flash the standard parameters back.
+
+**Files involved**
+
+- `dynamixel_xl330_backup_restore.py` — backup/restore tool
+- `DYNAMIXEL_XL330_BACKUP.json` — standard parameter file for this model
+
+Download URLs: [dynamixel_xl330_backup_restore.py](https://files.seeedstudio.com/wiki/reachymini/dynamixel_xl330_backup_restore.py) and [DYNAMIXEL_XL330_BACKUP.json](https://files.seeedstudio.com/wiki/reachymini/DYNAMIXEL_XL330_BACKUP.json)
+
+**Prerequisites**
+
+- Python 3; Reachy Mini connected to the computer via U2D2, servos powered normally (same as everyday debugging).
+- Install dependencies: `pip install dynamixel-sdk pyserial`
+- Place both files in the same folder and run all commands from within that folder.
+
+**Steps**
+
+1. **Launch the tool**
+
+   ```bash
+   python dynamixel_xl330_backup_restore.py
+   ```
+
+   Select the U2D2 serial port and baudrate 1,000,000. The main menu first scans and lists all servos — confirm all six are present, model XL330-M288, and note the actual ID of S5.
+
+2. **Safe backup (mandatory)**
+
+   Select menu option 2 (Export / backup ALL) to export the current parameters of all six motors to a JSON file (default name like `DYNAMIXEL_XL330_BACKUP_timestamp.json`). Rename it to `backup_all.json` and keep it. This is the pre-restore original state, useful for rollback and for checking register differences.
+
+3. **Restore standard parameters to S5**
+
+   Select menu option 3 (Restore) and choose the standard parameter file we provided from the JSON list. Select mapping mode 1 (Same ID). The script displays a "restore plan" showing which servos will be written (current → backup → final ID).
+
+   Confirm that S5 is included and that each motor's final ID matches its current ID (no renaming), then type `RESTORE`.
+
+   The script will: force Torque off → write each config/PID/profile/Indirect Address parameter → read back and verify each item → final full review; Torque stays off throughout, with no unexpected motion.
+
+   > If the standard parameter file only contains S5's entry, only S5 will be written; if it contains all six, all six will be flashed with standard parameters. Both cases are clearly listed in the "restore plan" — review before confirming.
+
+4. **Exit the script, power-cycle the servos, and re-test S5 at full travel height load on the robot.**
+
+**Checklist**
+
+- After re-flashing, can S5 reach the top by itself (still needs a push / buzzing sound)?
+- Does the script output `RESTORE + VERIFY SUCCESS` or any `[FAIL]` lines (if so, send the corresponding lines)?
+- The `backup_all.json` file from step 2.
+
+**Notes**
+
+- After re-flashing, Torque being off is normal — the robot software will enable it on power-up.
+- If the script reports `MODEL MISMATCH`, it means S5's model differs from the other motors — this is an important clue, please let us know.
+- If the "restore plan" does not include S5, or the final ID doesn't match the current ID, do not type `RESTORE` — contact us (likely the parameter file's ID doesn't match S5's actual ID; we'll provide a corrected one).
+- If re-flashing + verification pass but the issue persists, the configuration is confirmed normal, which supports proceeding with a replacement.
+
+</details>
 
 ## 📦 Shipping & Warranty
 

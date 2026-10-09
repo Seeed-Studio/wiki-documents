@@ -2,7 +2,7 @@
 description: This tutorial shows how to download Isaac Sim and deploy the reBot-B601-DM robot in a simulation environment for development and debugging.
 title: B601-DM with Isaac Sim
 keywords:
-  - Isaacsim
+  - Isaac Sim
   - robotic arm
   - robot
   - remote operation
@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-77'
-updatedAt: '2026-09-23'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';

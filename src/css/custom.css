@@ -30,6 +30,16 @@
 	--docusaurus-highlighted-code-line-bg: rgb(80, 80, 100);
 }
 
+/* Soft rounded media treatment for robotics documentation pages. */
+.robotics-doc .markdown img:not(.nav-icon):not([src*='img.shields.io']) {
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+}
+
+[data-theme='dark'] .robotics-doc .markdown img:not(.nav-icon):not([src*='img.shields.io']) {
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
 .navbar_doc_items {
 	display: inline-block;
 	color: var(--text-color);
@@ -2363,7 +2373,35 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 	border-radius: 3px;
   }
   
-  /* 一级标题下面的内容稍微拉开 */
+/* 一级标题下面的内容稍微拉开 */
   .robotics-section-title > .menu__list {
-	margin-top: 0.35rem;
+    margin-top: 0.35rem;
+  }
+
+  /* Jetson sidebar: section titles — distinct green variant */
+  .jetson-applications-title {
+    margin-top: 1.4rem;
+  }
+
+  .jetson-applications-title > .menu__list-item-collapsible > .menu__link,
+  .jetson-applications-title > .menu__link {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #15803d;
+    border-left: 3px solid #22c55e;
+    padding: 0.35rem 0.65rem;
+    background: rgba(34, 197, 94, 0.10);
+    border-radius: 3px;
+  }
+
+  [data-theme='dark'] .jetson-applications-title > .menu__list-item-collapsible > .menu__link,
+  [data-theme='dark'] .jetson-applications-title > .menu__link {
+    color: #4ade80;
+    border-left-color: #22c55e;
+    background: rgba(34, 197, 94, 0.16);
+  }
+
+  .jetson-applications-title > .menu__list {
+    margin-top: 0.35rem;
   }

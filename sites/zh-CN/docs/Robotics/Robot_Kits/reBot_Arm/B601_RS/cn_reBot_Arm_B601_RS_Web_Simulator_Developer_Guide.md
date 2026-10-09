@@ -20,7 +20,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-13'
-updatedAt: '2026-08-24'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -35,7 +35,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <RebotRsDocNav />
 
 <p align="center">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
 </p>
 
 <div className="rebot-buy-button-group">

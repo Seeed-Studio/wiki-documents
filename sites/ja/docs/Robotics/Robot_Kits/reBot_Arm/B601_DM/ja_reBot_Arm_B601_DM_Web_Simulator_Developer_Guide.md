@@ -1,6 +1,6 @@
 ---
 description: この開発者向けガイドでは、B601-DM 用 ReBot Arm Digital Twin & Control Stack における reBotArm_simulator-DM Web コンソールおよび ROS2/MuJoCo スタックのアーキテクチャ、ランタイム、ROS2 ブリッジ、LLM/MCP 連携、二次開発ワークフローについて紹介します。
-title: B601-DM Web コントローラー
+title: Web コントローラ付き B601-DM
 keywords:
   - reBot Arm
   - B601-DM
@@ -21,7 +21,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-30'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
 import '/src/css/rebot-wiki-style.css';

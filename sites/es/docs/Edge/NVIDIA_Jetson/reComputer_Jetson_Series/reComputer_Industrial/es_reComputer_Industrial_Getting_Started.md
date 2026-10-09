@@ -10,7 +10,7 @@ last_update:
   date: 05/16/2023
   author: Lakshantha
 createdAt: '2025-06-05'
-updatedAt: '2026-06-28'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/es/reComputer_Industrial_Getting_Started/
 ---
 
@@ -20,9 +20,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
 
-La serie reComputer industrial ofrece sistemas completos que incluyen módulos NVIDIA Jetson™ Xavier NX/ Orin Nano/Orin NX/, con un rendimiento de IA que va de 20 TOPS a 100 TOPS. Con Jetpack 5.1.3 preinstalado, reComputer industrial simplifica el desarrollo, ideal para crear aplicaciones de analítica de vídeo, detección de objetos, procesamiento de lenguaje natural, imagen médica y robótica, lo que impulsa la transformación digital en industrias como ciudades inteligentes, seguridad, automatización industrial y fábricas inteligentes.
+La serie reComputer industrial ofrece sistemas completos que incluyen módulos NVIDIA Jetson™ Xavier NX/ Orin Nano/ Orin NX/, con un rendimiento de IA que va de 20 TOPS a 100 TOPS. Con Jetpack 5.1.3 preinstalado, reComputer industrial simplifica el desarrollo y es ideal para crear aplicaciones de analítica de vídeo, detección de objetos, procesamiento de lenguaje natural, imagen médica y robótica, lo que aporta transformación digital a sectores como ciudades inteligentes, seguridad, automatización industrial y fábricas inteligentes.
 
-reComputer industrial viene con un disipador pasivo y un diseño sin ventilador, lo que lo hace ideal para su uso en entornos exigentes. El disipador pasivo permite una refrigeración eficiente sin necesidad de ventilador, reduciendo el riesgo de fallos de componentes debido al polvo u otros contaminantes. El diseño sin ventilador también reduce los niveles de ruido y el consumo de energía, lo que lo hace adecuado para su uso en entornos sensibles al ruido y minimiza los costes energéticos.
+reComputer industrial viene con un disipador pasivo y un diseño sin ventilador, lo que lo hace ideal para su uso en entornos exigentes. El disipador pasivo permite una refrigeración eficiente sin necesidad de ventilador, reduciendo el riesgo de fallos de componentes debidos al polvo u otros contaminantes. El diseño sin ventilador también reduce los niveles de ruido y el consumo de energía, lo que lo hace adecuado para su uso en entornos sensibles al ruido y minimiza los costes energéticos.
 
 reComputer industrial dispone de 2 puertos RJ45 GbE, uno de los cuales es un puerto PoE PSE para proporcionar alimentación a través de Ethernet a dispositivos como cámaras IP. Esto elimina la necesidad de una fuente de alimentación independiente y facilita el despliegue de dispositivos de red en zonas sin tomas de corriente fácilmente disponibles. El otro puerto GbE se utiliza para conectarse a un switch o router de red, lo que permite la comunicación con otros dispositivos de la red y el acceso a Internet.
 
@@ -99,12 +99,12 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>Memoria</td>
-      <td>16GB LPDDR5 de 128 bits<br />102.4GB/s</td>
-      <td>8GB LPDDR5 de 128 bits<br />102.4GB/s</td>
-      <td>8GB LPDDR5 de 128 bits<br />68 GB/s</td>
-      <td>4GB LPDDR5 de 64 bits<br />34 GB/s</td>
-      <td>16GB LPDDR4x de 128 bits<br />59.7GB/s</td>
-      <td>8GB LPDDR4x de 128 bits<br />59.7GB/s</td>
+      <td>16GB 128-bit LPDDR5<br />102.4GB/s</td>
+      <td>8GB 128-bit LPDDR5<br />102.4GB/s</td>
+      <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
+      <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
+      <td>16GB 128-bit LPDDR4x<br />59.7GB/s</td>
+      <td>8GB 128-bit LPDDR4x<br />59.7GB/s</td>
     </tr>
     <tr>
       <td>Codificación de vídeo</td>
@@ -134,11 +134,11 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     <tr>
       <td rowSpan={6}>E/S</td>
       <td>Red</td>
-      <td colSpan={6}>1* LAN1 RJ45 GbE PoE(PSE 802.3 af 15 W)<br />1* LAN2 RJ45 GbE (10/100/1000Mbps) </td>
+      <td colSpan={6}>1* LAN1 RJ45 GbE PoE (PSE 802.3 af 15 W)<br />1* LAN2 RJ45 GbE (10/100/1000Mbps) </td>
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={6}>3* USB3.2 Gen1, 1* USB2.0 Type C (modo dispositivo), 1* USB2.0 Type C para Debug UART &amp; RP2040</td>
+      <td colSpan={6}>3* USB3.2 Gen1, 1* USB2.0 Type C (modo dispositivo), 1* USB2.0 Type C para UART de depuración y RP2040</td>
     </tr>
     <tr>
       <td>DI/DO</td>
@@ -171,7 +171,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>Ventilador</td>
-      <td colSpan={6}>Sin ventilador, disipador pasivo<br />1*conector de ventilador (5V PWM)</td>
+      <td colSpan={6}>Sin ventilador, disipador pasivo<br />1*Conectores de ventilador (5V PWM)</td>
     </tr>
     <tr>
       <td>TPM</td>
@@ -179,7 +179,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={6}>1* zócalo RTC (incluye CR1220), 1* RTC de 2 pines</td>
+      <td colSpan={6}>1* zócalo RTC (CR1220 incluido), 1* RTC de 2 pines</td>
     </tr>
     <tr>
       <td>Cámara</td>
@@ -196,7 +196,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td rowSpan={3}>Mecánico<br /></td>
-      <td>Dimensiones (W x D x H)</td>
+      <td>Dimensiones (An x Pr x Al)</td>
       <td colSpan={6}>159mm×155mm×57mm</td>
     </tr>
     <tr>
@@ -218,7 +218,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
     </tr>
     <tr>
       <td>Vibración</td>
-      <td colSpan={6}>3 Grms @ 5 ~ 500 Hz, aleatorio, 1 hr/eje</td>
+      <td colSpan={6}>3 Grms @ 5 ~ 500 Hz, aleatorio, 1 h/eje</td>
     </tr>
     <tr>
       <td>Choque</td>
@@ -251,10 +251,10 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 ## Flashear JetPack
 
-reComputer Industrial viene con JetPack 5.1.3 preinstalado en un SSD de 128GB junto con los controladores necesarios. Esto incluye componentes del SDK como CUDA, CUDNN y TensorRT. Sin embargo, si quieres volver a flashear Jetpack en el SSD incluido o en un nuevo SSD, puedes seguir los pasos.
+reComputer Industrial viene con JetPack 5.1.3 preinstalado en un SSD de 128GB junto con los controladores necesarios. Esto incluye componentes del SDK como CUDA, CUDNN y TensorRT. Sin embargo, si quieres volver a flashear Jetpack en el SSD incluido o en un SSD nuevo, puedes seguir los pasos.
 
 :::note
-Si quieres utilizar SSD con reComputer Industrial, solo te recomendamos que elijas las versiones de [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html) y [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) de Seeed.
+Si quieres utilizar SSD con reComputer Industrial, solo te recomendamos elegir las versiones de [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html) y [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) de Seeed.
 :::
 
 ### Requisitos previos
@@ -262,9 +262,9 @@ Si quieres utilizar SSD con reComputer Industrial, solo te recomendamos que elij
 Debes preparar el siguiente hardware antes de comenzar con reComputer Industrial
 
 - reComputer Industrial
-- Adaptador de corriente proporcionado con cable de alimentación ([US version](https://www.seeedstudio.com/AC-US-p-5122.html) o [EU version](https://www.seeedstudio.com/AC-EU-p-5121.html))
+- Adaptador de corriente suministrado con cable de alimentación ([versión US](https://www.seeedstudio.com/AC-US-p-5122.html) o [versión EU](https://www.seeedstudio.com/AC-EU-p-5121.html))
 - PC host con Ubuntu
-- Cable de transmisión de datos USB Type-C
+- Cable de transmisión de datos USB tipo C
 - Monitor externo
 - Cable HDMI
 - Teclado y ratón
@@ -316,7 +316,7 @@ Consulta la siguiente tabla para preparar la máquina host.
 
 Ahora debes entrar en modo de recuperación en la placa reComputer Industrial para poder flashear el dispositivo.
 
-1. Conecta un cable USB Type-C entre el puerto **USB2.0 DEVICE** y tu PC.
+1. Conecta un cable USB tipo C entre el puerto **USB2.0 DEVICE** y tu PC.
 2. Utiliza un pin e insértalo en el orificio **RECOVERY** para pulsar el botón de recuperación y mantenlo presionado.
 3. Conecta el **conector de alimentación de bloque de terminales de 2 pines** incluido al conector de alimentación de la placa y conecta el adaptador de corriente incluido con un cable de alimentación para encender la placa.
 4. Suelta el botón de recuperación.
@@ -327,7 +327,7 @@ Ahora debes entrar en modo de recuperación en la placa reComputer Industrial pa
 Asegúrate de encender el dispositivo mientras mantienes presionado el botón RECOVERY; de lo contrario, no entrará en modo de recuperación
 :::
 
-En el PC host con Ubuntu, abre una ventana de Terminal e introduce el comando **lsusb**. Si el contenido devuelto tiene una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo de recuperación forzada.
+En el PC host con Ubuntu, abre una ventana de Terminal e introduce el comando **lsusb**. Si el contenido devuelto incluye una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo de recuperación forzada.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
@@ -410,7 +410,7 @@ La descarga del primer método es de alrededor de 14GB y la del segundo método 
 </div>
 
 <p style={{ fontSize: '0.9em', color: 'yellow' , textAlign: 'center'}}>
-  * Los archivos de imagen de Download1 y Download2 son los mismos. Puedes elegir el enlace con la velocidad de descarga más rápida.
+  * Los archivos de imagen de Download1 y Download2 son los mismos. Puedes elegir el enlace con mayor velocidad de descarga.
 </p>
 
 :::info
@@ -464,7 +464,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 
 **Descargar y preparar controladores**
 
-- **Paso 1:** Descarga los archivos de controladores en tu PC con Ubuntu correspondientes a la placa que estás utilizando
+- **Paso 1:** Descarga los archivos del controlador en tu PC con Ubuntu correspondientes a la placa que estás utilizando
 
 <table>
   <thead>
@@ -499,7 +499,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/125.png"/></div>
 
-- **Paso 3:** Extrae el archivo .zip del controlador descargado. Aquí instalamos adicionalmente el paquete **unzip** que es necesario para descomprimir el archivo .zip
+- **Paso 3:** Extrae el archivo .zip del controlador descargado. Aquí instalamos adicionalmente el paquete **unzip**, que es necesario para descomprimir el archivo .zip
 
 ```sh
 sudo apt install unzip
@@ -522,7 +522,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 sudo ADDITIONAL_DTB_OVERLAY_OPT="BootOrderNvme.dtbo" ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_nvme.xml -S 80GiB  -p "-c bootloader/t186ref/cfg/flash_l4t_t194_qspi_p3668.xml --no-systemimg" --network usb0  recomputer-xavier-nx-industrial external
 ```
 
-Ahora comenzará a flashear la imagen del sistema a la placa. Si el flasheo es exitoso, verás la siguiente salida
+Ahora comenzará a flashear la imagen del sistema en la placa. Si el flasheo se realiza correctamente, verás la siguiente salida
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -544,7 +544,7 @@ sudo depmod -a
 sudo reboot
 ```
 
-Además, si deseas instalar componentes del SDK como CUDA, cuDNN, TensorRT, ejecuta lo siguiente
+Además, si quieres instalar componentes del SDK como CUDA, cuDNN, TensorRT, ejecuta lo siguiente
 
 ```sh
 sudo apt update
@@ -609,7 +609,7 @@ sudo apt install nvidia-jetpack -y
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, se confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, se confirma que el firmware que descargaste está completo e intacto.
 :::
 
 :::info
@@ -629,11 +629,11 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-Ahora comenzará a flashear la imagen del sistema a la placa. Si el flasheo es exitoso, verás la siguiente salida
+Ahora comenzará a flashear la imagen del sistema en la placa. Si el flasheo se realiza correctamente, verás la siguiente salida
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Paso 4:** Conecta la J401 a una pantalla usando el conector HDMI de la placa y completa la configuración inicial:
+- **Paso 4:** Conecta el J401 a una pantalla usando el conector HDMI de la placa y completa la configuración inicial:
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
@@ -684,7 +684,7 @@ Completa la **Configuración del sistema** según tus necesidades.
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, se confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, se confirma que el firmware que descargaste está completo e intacto.
 :::
 
 :::info
@@ -760,7 +760,7 @@ Después de eso, la placa se reiniciará y estará lista para usar.
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, confirma que el firmware que descargaste está completo e intacto.
 :::
 
 :::info
@@ -789,7 +789,7 @@ Ahora comenzará a flashear la imagen del sistema en la placa. Si el flasheo se 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-Completa la **Configuración del Sistema** según tus necesidades.
+Completa la **Configuración del sistema** según tus necesidades.
 :::
 
 </TabItem>
@@ -798,7 +798,7 @@ Completa la **Configuración del Sistema** según tus necesidades.
 
 :::danger
 Si estás utilizando un módulo **Orin NX 16GB/8GB**, **no habilites el modo MAXN SUPER**.
-La capacidad de refrigeración de J4011/J4012 es insuficiente para soportarlo, y forzar este modo puede causar daños permanentes al módulo.
+La capacidad de refrigeración de J4011/J4012 es insuficiente para soportarlo, y forzar este modo puede provocar daños permanentes en el módulo.
 :::
 
 - **Paso 1:** Descarga la imagen del sistema en tu PC con Ubuntu correspondiente a la placa que estás utilizando
@@ -819,6 +819,11 @@ La capacidad de refrigeración de J4011/J4012 es insuficiente para soportarlo, y
       <th>adf524fa3c77f32da9a12bb875ec4b24<br />8da9dad4e4cce9c51641e1cabca4ab88</th>
     </tr>
     <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAECc-lSS1zQIcQEHI6jkQcAdNs5QXdUvH-zVIg2CCV5Iw?e=7W4kx7" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>5a2fbb379bf4b62b82fa67cfba1d804b<br />d78feafa7d854c18bcc9fcb05719f633</th>
+    </tr>
+    <tr>
       <td>reComputer Industrial J3011</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAj4lhkKh6xTIe49xxjoViRAdXQciVaQMQmvpeAuo_ng6k?e=nGj5c7" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>38c8a5cbf2df922725824503e76605d4<br />43111e7ffec1db9eb3de4fccc7d54c21</th>
@@ -835,7 +840,7 @@ La capacidad de refrigeración de J4011/J4012 es insuficiente para soportarlo, y
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, confirma que el firmware que descargaste está completo e intacto.
 :::
 
 :::info
@@ -843,8 +848,7 @@ El código fuente de las imágenes anteriores se puede encontrar [aquí](https:/
 :::
 
 :::note
-Ten en cuenta que debido al aumento del consumo de energía y la generación de calor después de habilitar `super mode`, el [reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) y el [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) no pueden funcionar de manera estable en el modo más alto con JetPack 6.2. Por lo tanto, solo J4012 (Orin NX 16GB) está disponible para JetPack 6.2, mientras que J4011 (Orin NX 8GB) no se recomienda.
-Actualmente estamos diseñando una nueva versión de reComputer. ¡Mantente atento.
+Ten en cuenta que, debido al aumento del consumo de energía y la generación de calor después de habilitar `super mode`, el [reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) y el [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) no pueden funcionar de forma estable en el modo más alto con JetPack 6.2. No habilites el modo MAXN SUPER en estos dispositivos.
 :::
 
 - **Paso 2:** Extrae el archivo generado
@@ -869,7 +873,7 @@ Ahora comenzará a flashear la imagen del sistema en la placa. Si el flasheo se 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-Completa la **Configuración del Sistema** según tus necesidades.
+Completa la **Configuración del sistema** según tus necesidades.
 :::
 
 - **Paso 4:** Conecta el J401 a una pantalla usando el conector HDMI de la placa y completa la configuración inicial:
@@ -877,7 +881,7 @@ Completa la **Configuración del Sistema** según tus necesidades.
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-Completa la **Configuración del Sistema** según tus necesidades。
+Completa la **Configuración del sistema** según tus necesidades.
 :::
 
 </TabItem>
@@ -923,7 +927,7 @@ Completa la **Configuración del Sistema** según tus necesidades。
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, se confirma que el firmware que descargaste está completo e intacto.
+En una máquina host con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, se confirma que el firmware que descargaste está completo e intacto.
 :::
 
 :::info
@@ -936,7 +940,7 @@ El código fuente de las imágenes anteriores se puede encontrar [aquí](https:/
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Paso 3:** Navega al archivo extraído de antes y ejecuta el comando de flasheo como se indica a continuación
+- **Paso 3:** Navega al archivo extraído anteriormente y ejecuta el comando de flasheo como se indica a continuación
 
 ```sh
 cd mfi_xxxx
@@ -963,7 +967,7 @@ Completa la **Configuración del sistema** según tus necesidades.
 
 ## Uso del hardware e interfaces
 
-Para aprender más sobre cómo usar todo el hardware y las interfaces en la placa reComputer Industrial, te recomendamos seguir la documentación relevante de la wiki que hemos preparado.
+Para aprender más sobre cómo utilizar todo el hardware y las interfaces en la placa reComputer Industrial, te recomendamos seguir la documentación relevante del wiki que hemos preparado.
 
 - [Uso del hardware e interfaces de reComputer Industrial J20](https://wiki.seeedstudio.com/es/reComputer_Industrial_J20_Hardware_Interfaces_Usage)
 - [Uso del hardware e interfaces de reComputer Industrial J40, J30](https://wiki.seeedstudio.com/es/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage)

@@ -1,7 +1,6 @@
 ---
-description: 开始使用适用于 NVIDIA Jetson AGX Thor 模组的 reComputer Robotics J601 载板。
+description: NVIDIA Jetson AGX Thor 模组 reComputer Robotics J601 载板快速上手指南。
 title: reComputer Robotics J601 入门指南
-sidebar_label: 刷写 JetPack
 keywords:
   - reComputer Robotics J601
   - AGX Thor

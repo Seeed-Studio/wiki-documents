@@ -1,5 +1,5 @@
 ---
-description: 'Seeed Physical AI Beginner''s Course の第9章 — ロボット学習と模倣学習の基礎：なぜアームに学習が必要なのか、ルールベース制御と学習ベース制御の違い、観測／状態／行動、アクションチャンク、データ分布、そして学習・推論・評価という3つのフェーズ。'
+description: Seeed Physical AI Beginner's Course の第9章 — ロボット学習と模倣学習の基礎：なぜアームに学習が必要なのか、ルールベース制御と学習ベース制御の違い、観測／状態／行動、アクションチャンク、データ分布、そして学習・推論・評価という3つのフェーズ。
 title: 第9章 - ロボット学習と模倣学習の基礎
 keywords:
   - reBot
@@ -16,7 +16,7 @@ last_update:
   date: 2026-09-19
   author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_9/
 ---
 

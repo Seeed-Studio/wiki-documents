@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [[zh-CN]]
 createdAt: '2026-06-15'
-updatedAt: '2026-08-11'
+updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -59,7 +59,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 本页包含两种不同逻辑的视觉夹取 Demo：
 
 - **一、视觉抓取方式1**：基于 YOLO、RGB-D 深度相机和 Python SDK，完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。
-- **二、视觉抓取方式2**：基于 ROS2 与 YOLOE，通过多终端启动机械臂、Gemini 2 / D405 相机和抓取节点，完成抓取与放置。
+- **二、视觉抓取方式2**：基于 ROS2 与 YOLOE，通过多终端启动机械臂、Gemini 2 / D405 / D435i 相机和抓取节点，完成抓取与放置。
 
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS 视觉夹取 Demo" />
@@ -270,16 +270,16 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 **SDK 资料汇总**
 
 
-| 资料                | 链接                                                                 |
-| ------------------- | -------------------------------------------------------------------- |
-| Gemini 2 产品页     | https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51      |
-| 开发资料总链接      | https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1 |
-| Orbbec SDK v2       | https://github.com/orbbec/OrbbecSDK_v2                               |
-| SDK v2 API 文档     | https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/            |
-| pyorbbecsdk         | https://github.com/orbbec/pyorbbecsdk                                |
-| pyorbbecsdk 文档    | https://orbbec.github.io/pyorbbecsdk/index.html                      |
-| ROS2 Wrapper        | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main                |
-| RealSense SDK | https://github.com/realsenseai/librealsense                          |
+| 资料             | 链接                                                                 |
+| ---------------- | -------------------------------------------------------------------- |
+| Gemini 2 产品页  | https://www.orbbec.com.cn/index/Product/info.html?cate=38&id=51      |
+| 开发资料总链接   | https://www.orbbec.com.cn/index/Download2025/info.html?cate=121&id=1 |
+| Orbbec SDK v2    | https://github.com/orbbec/OrbbecSDK_v2                               |
+| SDK v2 API 文档  | https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/            |
+| pyorbbecsdk      | https://github.com/orbbec/pyorbbecsdk                                |
+| pyorbbecsdk 文档 | https://orbbec.github.io/pyorbbecsdk/index.html                      |
+| ROS2 Wrapper     | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main                |
+| RealSense SDK    | https://github.com/realsenseai/librealsense                          |
 
 #### 步骤 5. 配置 GraspNet（可选）
 
@@ -665,7 +665,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 本方案基于 **ROS2** 与 **YOLO**，在 reBot Arm B601-RS 上完成目标检测、抓取与放置。系统通过多终端分别启动机械臂、深度相机和抓取节点。
 
-当前深度相机支持 **Orbbec Gemini 2** 与 **RealSense D405**。本方案不需要标定板做手眼标定；受安装和打印件公差影响，每台机械臂抓取时会有微小误差。
+当前深度相机支持 **Orbbec Gemini 2** 与 **RealSense D405 / D435i**。本方案不需要标定板做手眼标定；受安装和打印件公差影响，每台机械臂抓取时会有微小误差。
 
 ### 2. 环境安装
 
@@ -707,7 +707,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 </details>
 
 <details className="content-details">
-<summary>点击展开 D405 安装步骤</summary>
+<summary>点击展开 D405、D435i 安装步骤</summary>
 
 1. 克隆 RealSense SDK，并切换到 `v2.58.1`：
 
@@ -825,7 +825,7 @@ source ~/rebotarm_ros2/install/setup.bash
 
 ### 3. 运行项目
 
-启动前请确认：机械臂已上电，CAN 接口为 `can0`，Gemini 2 或 D405 已通过 USB 连接。然后先拉起 CAN：
+启动前请确认：机械臂已上电，CAN 接口为 `can0`，Gemini 2、D405 或 D435i 已通过 USB 连接。然后先拉起 CAN：
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -833,7 +833,7 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-下面按终端分别启动，方便看清视觉抓取的逻辑。Gemini 2 与 D405 的启动命令不同，请按实际相机选择。如果希望一键启动，可以自行编写启动脚本。
+下面按终端分别启动，方便看清视觉抓取的逻辑。Gemini 2、D405 与 D435i 的启动命令不同，请按实际相机选择。如果希望一键启动，可以自行编写启动脚本。
 
 #### 终端 A — 启动机械臂 + RViz
 
@@ -857,6 +857,18 @@ source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
 ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=can0 use_rviz:=true
+```
+
+</details>
+
+<details className="content-details">
+<summary>点击展开 D435i</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=can0 use_rviz:=true
 ```
 
 </details>
@@ -889,6 +901,21 @@ ros2 launch realsense2_camera rs_launch.py \
 
 </details>
 
+<details className="content-details">
+<summary>点击展开 D435i</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch realsense2_camera rs_launch.py \
+  align_depth.enable:=true \
+  depth_module.depth_profile:=640x360x30 \
+  depth_module.color_profile:=640x360x30
+```
+
+</details>
+
 #### 终端 C — 机械臂到达观察位 + YOLO 识别
 
 运行前请先 `conda activate yolo`。如果环境名不是 `yolo`，把命令中的环境名换成实际 conda 环境。
@@ -906,10 +933,11 @@ source ~/rebotarm_ros2/install/setup.bash
   -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
   -p target_class:="cube" \
   -p place_class:="box" \
-  -p yolo_device:=0 \
-  -p grasp_z_offset_m:=0.02 \
+  -p yolo_device:=gpu \
+  -p grasp_z_offset_m:=0.01 \
   -p place_z_offset_m:=0.1 \
-  -p grasp_x_offset_m:=-0.04 \
+  -p grasp_x_offset_m:=-0.02 \
+  -p grasp_y_offset_m:=0.002 \
   -p move_to_observation_on_start:=true \
   -p auto_publish_on_detect:=true
 ```
@@ -925,20 +953,49 @@ source ~/rebotarm_ros2/install/setup.bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args 
--p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt 
--p color_topic:=/camera/camera/color/image_raw 
--p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw 
--p color_info_topic:=/camera/camera/color/camera_info 
--p optical_frame:=camera_color_optical_frame 
--p target_class:="cube" 
--p place_class:="box" 
--p yolo_device:=gpu 
--p grasp_z_offset_m:=0.01 
--p place_z_offset_m:=0.1 
--p grasp_x_offset_m:=-0.04 
--p move_to_observation_on_start:=true 
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+-p yolo_model:=/home/ubuntu/rebot_visual_model/yoloe-26s-seg.pt \
+-p color_topic:=/camera/camera/color/image_raw \
+-p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+-p color_info_topic:=/camera/camera/color/camera_info \
+-p optical_frame:=camera_color_optical_frame \
+-p target_class:=cube \
+-p place_class:=box \
+-p yolo_device:=gpu \
+-p grasp_z_offset_m:=0.01 \
+-p grasp_y_offset_m:=-0.005 \
+-p place_z_offset_m:=0.1 \
+-p grasp_x_offset_m:=-0.01 \
+-p move_to_observation_on_start:=true \
 -p auto_publish_on_detect:=true
+```
+
+</details>
+
+<details className="content-details">
+<summary>点击展开 D435i</summary>
+
+需改为自己所设定的 yolo 安装的环境路径
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+  -p color_topic:=/camera/camera/color/image_raw \
+  -p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+  -p color_info_topic:=/camera/camera/color/camera_info \
+  -p optical_frame:=camera_color_optical_frame \
+  -p target_class:="cube" \
+  -p place_class:="box" \
+  -p yolo_device:=gpu \
+  -p grasp_z_offset_m:=0.01 \
+  -p place_z_offset_m:=0.1 \
+  -p grasp_y_offset_m:=0.01 \
+  -p grasp_x_offset_m:=-0.04 \
+  -p move_to_observation_on_start:=true \
+  -p auto_publish_on_detect:=true
 ```
 
 </details>
@@ -950,6 +1007,7 @@ source ~/rebotarm_ros2/install/setup.bash
 | `target_class`     | 目标抓取物体的 YOLOE 文本类名，可按实际物体修改,支持所有yolo默认能识别的物体 |
 | `place_class`      | 目标放置物体的 YOLOE 文本类名，可按实际物体修改,支持所有yolo默认能识别的物体 |
 | `grasp_x_offset_m` | `base_link` 前后方向，负数表示往后拉，可按需要调整                           |
+| `grasp_y_offset_m` | 抓取的左右方向。`0.01` 为左偏 1cm，负数为右方                                |
 | `grasp_z_offset_m` | 抓取高度微调。默认参数按柔性夹爪设置（比普通夹爪更长），可按实际夹爪高度调整 |
 | `place_z_offset_m` | 放置时的抬高高度，用于控制到达放置点后多高再放下物体                         |
 

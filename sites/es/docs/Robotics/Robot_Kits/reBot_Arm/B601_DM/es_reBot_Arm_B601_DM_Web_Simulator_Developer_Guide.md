@@ -1,17 +1,17 @@
 ---
 description: Esta guía para desarrolladores presenta la arquitectura, el runtime, el puente ROS2, la integración LLM/MCP y el flujo de trabajo de desarrollo secundario de la consola web reBotArm_simulator-DM y del stack ROS2/MuJoCo en el ReBot Arm Digital Twin & Control Stack para B601-DM.
-title: B601-DM con Controlador Web
+title: B601-DM con controlador web
 keywords:
   - reBot Arm
   - B601-DM
-  - Web Simulator
+  - Simulador web
   - Three.js
   - URDF
   - rosbridge
   - LLM
   - MCP
-  - Robot Arm
-  - Robotics
+  - Brazo robótico
+  - Robótica
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png
 slug: /rebot_arm_b601_dm_web_simulator_developer_guide
 sku: 100065783, 100095532
@@ -21,7 +21,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-30'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
 import '/src/css/rebot-wiki-style.css';

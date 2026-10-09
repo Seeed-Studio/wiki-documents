@@ -14,6 +14,8 @@ last_update:
   date: 09/21/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/cn/recamera_pro_deploy_checklist/
+createdAt: '2026-09-23'
+updatedAt: '2026-09-23'
 ---
 
 # 部署前检查清单

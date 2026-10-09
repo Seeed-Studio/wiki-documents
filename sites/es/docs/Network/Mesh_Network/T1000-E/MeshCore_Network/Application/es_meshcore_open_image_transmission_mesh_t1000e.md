@@ -7,7 +7,7 @@ keywords:
   - Card Tracker T1000-E
   - Transmisión de Imágenes
   - Compresión de Imágenes con IA
-  - LoRa Mesh
+  - Malla LoRa
   - AEIC-SE
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_t1000e.png
 slug: /meshcore_ai_image_transmission_t1000e
@@ -16,8 +16,8 @@ sidebar_position: 1
 last_update:
   date: 9/19/2026
   author: Michelle Huang
-createdAt: 2026-09-19
-updatedAt: '2026-09-19'
+createdAt: 2026-09-19T00:00:00.000Z
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/es/meshcore_ai_image_transmission_t1000e/
 ---
 
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 </div>
 
-[MeshCore](https://meshcore.io/) está diseñado para comunicación LoRa mesh de bajo ancho de banda. La transmisión de imágenes tradicional es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes de tasa de bits ultra baja** sobre MeshCore combinando:
+[MeshCore](https://meshcore.io/) está diseñado para comunicación de malla LoRa de bajo ancho de banda. La transmisión tradicional de imágenes es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes de tasa de bits ultra baja** sobre MeshCore combinando:
 
 - App MeshCore Open
 - Compresión de imágenes basada en IA
@@ -68,11 +68,11 @@ AI Decoder
 Reconstructed Image
 ```
 
-## Primeros pasos con MeshCore Open
+## Comenzar con MeshCore Open
 
 ### Configuración inicial
 
-1. Instala la App MeshCore Open. [Haz clic aquí](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar la versión de la APP que admite transmisión de imágenes.
+1. Instala la app MeshCore Open. [Haz clic aquí](https://meshcoreopen.org/install/) para instalar la versión de la app que admite transmisión de imágenes.
 2. Conecta tu nodo MeshCore a la APP. [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/) para leer la guía de conexión de T1000-E.
 3. Configura tu región LoRa y los ajustes de red.
 4. Asegúrate de que otro nodo MeshCore esté disponible como receptor.
@@ -95,7 +95,7 @@ Elige una imagen de tu teléfono.
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshOpen_PhotoSelection.png" style={{width:300, height:'auto'}}/>
 </div>
 
-La APP procesará automáticamente la imagen antes de la transmisión. Los datos de la imagen comprimida se transmitirán a través de la red MeshCore. El tiempo de transmisión depende del número de saltos en la malla, la configuración de radio, el tráfico de red y la calidad de la señal. Los datos transmitidos contienen solo la representación comprimida, no la imagen original.
+La APP procesará automáticamente la imagen antes de la transmisión. Los datos de la imagen comprimida se transmitirán a través de la red MeshCore. El tiempo de transmisión depende del número de saltos de malla, la configuración de radio, el tráfico de red y la calidad de la señal. Los datos transmitidos contienen solo la representación comprimida, no la imagen original.
 
 Cuando el nodo receptor recibe los datos comprimidos, el decodificador realiza entonces la reconstrucción de la imagen. La imagen reconstruida aparecerá en la interfaz de chat.
 <div style={{textAlign:'center'}}>
@@ -104,7 +104,7 @@ Cuando el nodo receptor recibe los datos comprimidos, el decodificador realiza e
 
 ## Comprender las imágenes reconstruidas por IA
 
-La imagen de salida no es una copia perfecta píxel a píxel de la imagen original. El decodificador puede generar detalles adicionales que no fueron transmitidos. Por lo tanto, esta función es adecuada para conocimiento de la escena, comunicación al aire libre, monitoreo remoto y compartición de información visual. No es adecuada para recolección de evidencia, verificación de identidad, análisis científico de imágenes ni aplicaciones que requieran reproducción exacta de la imagen.
+La imagen de salida no es una copia perfecta píxel a píxel de la imagen original. El decodificador puede generar detalles adicionales que no fueron transmitidos. Por lo tanto, esta función es adecuada para conocimiento de la escena, comunicación al aire libre, monitoreo remoto y compartición de información visual. No es adecuada para recolección de evidencias, verificación de identidad, análisis científico de imágenes ni aplicaciones que requieran reproducción exacta de la imagen.
 
 ## Recursos
 
