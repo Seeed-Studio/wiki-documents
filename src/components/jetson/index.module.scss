@@ -1029,6 +1029,27 @@
     font-weight: 600;
   }
 
+  .deploy_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #76b900;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      background: #679f00;
+      box-shadow: 0 4px 14px rgba(118, 185, 0, 0.35);
+      transform: translateY(-1px);
+    }
+  }
+
   .examples_models {
     margin-bottom: 20px;
   }
