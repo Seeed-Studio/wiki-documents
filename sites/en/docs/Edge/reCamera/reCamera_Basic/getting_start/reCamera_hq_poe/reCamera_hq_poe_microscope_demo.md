@@ -14,7 +14,7 @@ slug: /recamera_hq_poe_microscope_demo
 sku: 100041077,100018917,100029708,100074316
 sidebar_position: 3
 last_update:
-  date: 11/08/2025
+  date: 10/08/2026
   author: Parker Hu
 createdAt: '2025-11-10'
 updatedAt: '2026-01-07'
@@ -24,6 +24,54 @@ url: https://wiki.seeedstudio.com/recamera_hq_poe_microscope_demo/
 # reCamera_Microscope
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/4.gif" /></div>
+
+## Hardware preparation
+
+This tutorial uses the following products:
+
+<table align="center">
+
+<tbody><tr>
+
+<th>Seeed Studio reCamera 2002 HQ PoE 8GB</th>
+
+<th>1/2.9" M12 Ultra Telephoto Lens for reCamera - 2MP, 15° (22mm-B)</th>
+
+</tr>
+
+<tr>
+
+<td><div align="center"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" style={{width:210, height:'auto'}}/></div></td>
+
+<td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100070335-_22mm_b_.jpg" style={{width:210, height:'auto'}}/></div></td>
+
+</tr>
+
+<tr>
+
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html" target="_blank" rel="noopener noreferrer">
+
+<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+
+</a>
+
+</div></td>
+
+<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+
+<a class="get_one_now_item" href="https://www.seeedstudio.com/22mm-B-p-6646.html" target="_blank" rel="noopener noreferrer">
+
+<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+
+</a>
+
+</div></td>
+
+</tr>
+
+</tbody></table>
 
 ## 🔥What is reCamera_Microscope?
 
