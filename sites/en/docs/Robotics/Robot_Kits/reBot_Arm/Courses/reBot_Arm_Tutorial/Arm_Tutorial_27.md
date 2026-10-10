@@ -142,7 +142,7 @@ A complete visual grasping system usually includes:
 ### RGB Images and Object Detection
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-04.png" alt="RGB channels, object detection and target centre" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-04.png" alt="RGB channels, object detection and target center" />
 </div>
 
 #### (1) RGB Images
@@ -236,7 +236,7 @@ The three common depth cameras in robot vision are stereo cameras, structured-li
 
 | Camera | Principle | Pros | Cons |
 | :--- | :--- | :--- | :--- |
-| **Stereo** | Mimics human eyes: two cameras compare where the same object appears in the left and right view, and depth follows from that disparity | Needs no active illumination; works at longer range | Fails on textureless objects — a white wall and a solid-colour object look nearly identical to both cameras |
+| **Stereo** | Mimics human eyes: two cameras compare where the same object appears in the left and right view, and depth follows from that disparity | Needs no active illumination; works at longer range | Fails on textureless objects — a white wall and a solid-color object look nearly identical to both cameras |
 | **Structured light** | Actively projects a known pattern (dot matrix, stripes, grid) and reads how the pattern deforms on the object | High accuracy at close range | Easily disturbed by strong light and outdoor conditions |
 | **TOF (Time Of Flight)** | Emits light, waits for the reflection and times the round trip | High real-time performance | Affected by reflective surfaces, transparent objects and multipath reflection |
 
@@ -255,9 +255,9 @@ Robot vision involves four coordinate frames:
 | Frame | Unit | Meaning | Example |
 | :--- | :--- | :--- | :--- |
 | Image frame | Pixels | Where the object is in the picture | `(u, v)` |
-| Camera frame | Metres | Where the object is relative to the camera | `(Xc, Yc, Zc)` — X rightward, Y downward, Z out of the lens |
-| Robot frame | Metres | Where the object is relative to the arm; the arm is ultimately controlled in robot coordinates | — |
-| Tool frame (end gripper frame) | Metres | The frame the arm uses to execute a grasp | — |
+| Camera frame | Meters | Where the object is relative to the camera | `(Xc, Yc, Zc)` — X rightward, Y downward, Z out of the lens |
+| Robot frame | Meters | Where the object is relative to the arm; the arm is ultimately controlled in robot coordinates | — |
+| Tool frame (end gripper frame) | Meters | The frame the arm uses to execute a grasp | — |
 
 ### Camera Intrinsics
 
@@ -272,7 +272,7 @@ Why are intrinsics needed?
 | Parameter | Meaning |
 | :--- | :--- |
 | `fx`, `fy` | Focal length in x and y (pixels) |
-| `cx`, `cy` | Principal point in x and y — the image centre (pixels) |
+| `cx`, `cy` | Principal point in x and y — the image center (pixels) |
 | `k1`, `k2`, `k3`, `p1`, `p2` | Distortion coefficients |
 
 - Lens distortion offsets pixel positions near the image edges. Without undistortion, the (u,v) pixel coordinates themselves have error, and the 3D conversion drifts. In practice, undistort the image first, then use the pixel coordinates.

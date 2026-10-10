@@ -754,6 +754,6 @@ python sound_tracking_arm.py --mode voice --tts-voice zh-CN-XiaoxiaoMultilingual
 
 ---
 
-> （注：部分内容由豆包工作 AI 生成）
+> Note: part of this content was generated with Doubao AI.
 
 </div>
