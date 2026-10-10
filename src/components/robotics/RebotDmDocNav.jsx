@@ -79,11 +79,11 @@ const ITEMS = [
   {
     slug: '/rebot_arm_b601_dm_web_simulator_developer_guide/',
     labels: {
-      en: 'Web Sim',
-      cn: 'Web 仿真',
-      ja: 'Web シミュレーション',
-      es: 'Simulación web',
-      'pt-br': 'Simulação web',
+      en: 'Web Control System',
+      cn: 'Web 控制系统',
+      ja: 'Web 制御システム',
+      es: 'Sistema de control web',
+      'pt-br': 'Sistema de Controle Web',
     },
     hints: {
       en: ['MuJoCo / ROS2'],
