@@ -73,7 +73,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </div>
     </div>
     <div className="learning-group">
-      <h4>开源资料</h4>
+      <h4>课程</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
       <div className="rebot-resource-list">
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">reBot-RS 硬件资料合集</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">reBot-RS 机械臂描述文件（URDF / Mesh）</a>
@@ -115,7 +120,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </div>
     </div>
     <div className="learning-group">
-      <h4>开源资料</h4>
+      <h4>课程</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
       <div className="rebot-resource-list">
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">reBot-DM 硬件资料合集</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">reBot-DM 机械臂描述文件（URDF / Mesh）</a>

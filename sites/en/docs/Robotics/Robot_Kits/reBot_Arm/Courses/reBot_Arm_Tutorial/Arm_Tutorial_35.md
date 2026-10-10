@@ -1,6 +1,7 @@
 ---
 description: "Chapter 35 of the Seeed Physical AI Beginner's Course — robot simulation from the ground up: why simulation is a flight simulator for robots, the three core elements (model, environment, controller), the robot model's visual / collision / inertial avatars, joints, actuators and sensors, simulation step size versus control frequency, the URDF / MJCF / USD formats, MuJoCo versus Isaac Sim, and the digital twin."
 title: Chapter 35 - Robot Simulation Basics and Platform Introduction
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm

@@ -1,6 +1,7 @@
 ---
 description: "Chapter 38 of the Seeed Physical AI Beginner's Course — running the reBot Arm in Isaac Sim: installing and starting Isaac Sim, the scene structure, USD basics, importing the arm with the URDF Importer, checking links, joints, visuals and collisions, configuring the articulation root and joint drives, stiffness and damping, the gripper linkage, the ground and workbench, Python control, and four practice demos."
 title: Chapter 38 - Running the reBot Arm in Isaac Sim
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm

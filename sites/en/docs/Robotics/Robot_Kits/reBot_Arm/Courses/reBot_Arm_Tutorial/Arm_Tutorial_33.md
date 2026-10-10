@@ -1,6 +1,7 @@
 ---
 description: "Chapter 33 of the Seeed Physical AI Beginner's Course — hands-on ROS2 integration of the reBot Arm: building the ROS2 workspace, wrapping the Python SDK in a driver node, launching and visualizing the arm in RViz, driving it through Topic / Service / Action interfaces, and safe stopping with troubleshooting."
 title: Chapter 33 - reBot Arm ROS2 Integration
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -125,7 +126,7 @@ python3 -m pip install motorbridge
 #verify
 motorbridge -v
 #output
-motorbridge 0.x.x
+motorbridge 0.5.0
 ```
 
 <a id="launch"></a>
@@ -323,8 +324,6 @@ ros2 topic pub --once /rebotarm/joints/joint1/cmd/mit \
   "{pos: 0.2, vel: 0.0, kp: 80.0, kd: 4.0, tau: 0.0}"
 ```
 
-<iframe width="560" height="560" src="https://www.youtube.com/embed/7VzPXS9PbT8?si=hmTLbyY8WdpZzsYd&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 During trajectory execution, low-level cmd is rejected by default (`cmd_arbitration:=reject`). For preemptive override, pass `cmd_arbitration:=preempt` at launch.
 
 ### Service: trigger-style control
@@ -424,8 +423,6 @@ ros2 run rebotarmcontroller GravityCompensation
 ```
 
 When the script starts, it first calls `/rebotarm/enable`, then starts gravity compensation. On `Ctrl+C` exit, the script sequentially calls `/rebotarm/gravity_compensation/stop` → `/rebotarm/safe_home` → `/rebotarm/disable`, so the arm first stops gravity compensation, then returns to the safe zero position and disables.
-
-<iframe width="560" height="560" src="https://www.youtube.com/embed/4FPrY15HRWo?si=RZngNdVo9lFm7gR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <a id="safety"></a>
 

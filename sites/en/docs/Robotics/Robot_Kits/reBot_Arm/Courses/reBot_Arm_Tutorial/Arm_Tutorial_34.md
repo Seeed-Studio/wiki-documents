@@ -1,6 +1,7 @@
 ---
 description: "Chapter 34 of the Seeed Physical AI Beginner's Course — MoveIt 2 motion planning on the reBot Arm: the move_group architecture, SRDF planning groups, joint limits, the collision model and self-collision matrix, the planning scene, Cartesian paths, obstacle planning, trajectory execution and the draw_square / pick_place demos."
 title: Chapter 34 - MoveIt2 Motion Planning
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -118,7 +119,7 @@ SRDF also defines named states (`group_state`) for quick reset:
 
 End-effector declaration:
 
-```bash
+```xml
 <end_effector name="gripper" parent_link="gripper_link"
               group="gripper" parent_group="arm"/>
 ```
@@ -133,7 +134,7 @@ End-effector declaration:
 
 The virtual joint fixes the arm to the world frame:
 
-```bash
+```xml
 <virtual_joint name="FixedBase" type="fixed"
                parent_frame="world" child_link="base_link"/>
 ```
@@ -407,8 +408,6 @@ ros2 launch rebotarm_moveit_demos draw_square.launch.py model:=dm
 `draw_square` controls `gripper_tcp` to visit the four corners of a rectangle, verifying whether the IK, trajectory planning, and execution chain work. Default parameters are in `src/rebotarm_moveit_demos/config/draw_square.yaml`.
 
 ### Pick-and-place demo
-
-<iframe width="560" height="560" src="https://www.youtube.com/embed/IbQEc9Ku1gA?si=yM-lXehjCWkV7K6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 `pick_place` adds a to-be-grasped object to the planning scene, then controls the gripper to open → move to the grasp pose → close the gripper → attach the object → move to the place pose → release the object. Default parameters are in `src/rebotarm_moveit_demos/config/pick_place.yaml`.
 

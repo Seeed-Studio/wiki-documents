@@ -1,6 +1,7 @@
 ---
 description: "Chapter 31 of the Seeed Physical AI Beginner's Course — ROS2 communication and robot software architecture: why a robot needs ROS2, nodes, the Topic / Service / Action mechanisms, message interfaces, QoS, the parameter server, launch files, the rosbag tool and why modular robot software is built this way."
 title: Chapter 31 - ROS2 Communication and Robot Software Architecture
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -81,12 +82,22 @@ Since nodes are independent, how do they cooperate? This leads to the three majo
 
 Communication between nodes mainly falls into three types: **Topic**, **Service**, and **Action**.
 
+### A. Topic
+
 | | Topic | Service | Action |
 | :--- | :--- | :--- | :--- |
 | What it is | Publish/Subscribe, like an official account (WeChat public feed) | Client/Server, like calling to ask for directions | A combination of Topic and Service, for complex tasks, like ordering takeout in an app |
 | Features | Asynchronous, one-way data flow; one publisher to many subscribers, and readers can unsubscribe at any time | Synchronous, two-way: one request, one response, and the client usually blocks while it waits | Asynchronous with progress feedback and the ability to cancel midway; it has a Goal, Feedback and Result |
 | Example | A temperature sensor node publishes "current temperature" like a weather account; an air-conditioner node subscribes and starts cooling above 28 degrees | Like calling to ask for directions: one question, one answer, quick response, used for tasks such as "open the arm gripper" | Like ordering takeout: while you wait you get progress feedback, you can cancel if something goes wrong, and you finally get the result |
 | Use cases | High-frequency, continuous data that needs no immediate reply: camera video, LiDAR point clouds, real-time joint angles | Short, fast commands that need a clear result: query the battery level, open or close the gripper, switch the working mode | Long-running, complex physical actions that may be interrupted at any time: move the arm from A to B, with progress and cancellation |
+
+### B. Service
+
+Service is the **Client/Server** model: one request, one response, and the client usually blocks while it waits — the **Service** column of the table above has the details.
+
+### C. Action
+
+Action is a combination of Topic and Service for long tasks, made of three parts — **Goal**, **Feedback** and **Result** — the **Action** column of the table above has the details.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31/ch31-02.png" alt="Topic, Service and Action communication patterns side by side" />
@@ -105,9 +116,9 @@ After understanding "how nodes talk" (Topic/Service/Action), we still need to sp
 - **What it is:** A standardized data structure for passing data between nodes (like a strictly formatted table).
 - **Why it is needed:** If the camera node sends image data in format A but the brain node only understands format B, they cannot communicate. ROS2 predefines a huge set of standard Messages (e.g., generic images, generic velocity commands). As long as everyone fills in the form according to the standard, hardware from any vendor can connect seamlessly.
 - **Message formats corresponding to the three mechanisms:**
-    - **`.msg`** **file (for Topic):** A simple data packet. For example, a "velocity message" only contains linear velocity (how fast to go forward) and angular velocity (how sharply to turn).
-    - **`.srv`** **file (for Service):** Split into upper and lower parts. The upper part defines the request (Request) format; the lower part defines the response (Response) format, separated by `---`.
-    - **`.action`** **file (for Action):** Split into three parts, defining the Goal, Result, and continuous Feedback data formats, also separated by `---`.
+    - **`.msg`**** file (for Topic):** A simple data packet. For example, a "velocity message" only contains linear velocity (how fast to go forward) and angular velocity (how sharply to turn).
+    - **`.srv`**** file (for Service):** Split into upper and lower parts. The upper part defines the request (Request) format; the lower part defines the response (Response) format, separated by `---`.
+    - **`.action`**** file (for Action):** Split into three parts, defining the Goal, Result, and continuous Feedback data formats, also separated by `---`.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31/ch31-03.png" alt="Message formats for Topic, Service and Action" />

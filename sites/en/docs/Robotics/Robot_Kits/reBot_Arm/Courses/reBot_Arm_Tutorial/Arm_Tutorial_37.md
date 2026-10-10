@@ -1,6 +1,7 @@
 ---
 description: "Chapter 37 of the Seeed Physical AI Beginner's Course — kinematics and trajectory control in MuJoCo: joint space versus Cartesian space, reading the end-effector pose, forward and inverse kinematics with the DLS algorithm, target position and orientation, joint interpolation, linear and minimum-jerk trajectories, control frequency, joint limits, and four runnable demos."
 title: Chapter 37 - Kinematics and Trajectory Control in MuJoCo
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
