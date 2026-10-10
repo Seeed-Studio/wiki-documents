@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI Beginner's Course の第18章 — マルチモーダル学習と VLA の基礎：Vision/Language/Action、VLM と VLA の違い、ACT と VLA の違い、言語条件付きタスク、単一タスク vs マルチタスク vs 汎化、連続アクション vs アクショントークン、そして VLA の能力と限界。
 title: 第18章 - マルチモーダル学習と VLA の基礎
+hide_title: true
 keywords:
   - reBot
   - VLA
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_18/
 
 import '/src/css/rebot-wiki-style.css';
 
-# 
-
 <div className="rebot-page">
 
 <section className="doc-hero">
@@ -43,6 +42,30 @@ import '/src/css/rebot-wiki-style.css';
     </div>
   </div>
 </section>
+
+### このステージで必要なハードウェア
+
+このステージで用意するもの。全ステージの一覧は[第 3 章](/ja/rebot_physical_ai_course_chapter_3/)にあります。
+
+**メイン制御ユニット**
+
+| 項目 | 購入 | 数量 |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+デスクトップまたはノート PC も必要です:Ubuntu 22.04、GTX 4080 以上(VRAM 12GB 以上)、メモリ 16GB 以上。
+
+**このステージ**
+
+| 項目 | 購入 | 数量 |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+| [reBot Arm 102 Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html) | 🛒 | 1 |
+| [720P 単眼リストカメラ](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) | 🛒 | 2 |
+| [リストカメラマウント](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/UVC32_mount.step) | 🛒 | 1 |
+| [Hikvision カメラ天吊りマウント](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.49cb2e8dt6KH1K&id=797067194359&mi_id=0000qWvzUV0CAietxWIGsLRo68nEdNUwWmvnKFhXbqbu1Ac) | 🛒 | 1 |
+
 
 <section className="section-card">
   <p>前の章では、reBot Arm 上で <strong>ACT (Action Chunking with Transformers)</strong> のようなポリシーを用いて、「画像を見て関節アクションを出力する」模倣学習を行いました。このような手法は通常、<strong>単一タスク</strong> 用に学習されます。つまり、モデルは「赤いキューブを箱に入れる」という 1 つの振る舞いだけを学習し、タスクを切り替えるにはデータの再収集と再学習が必要になります。</p>

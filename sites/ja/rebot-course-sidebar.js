@@ -13,24 +13,29 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
-const courseLink = () => ({
+// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
+// keeps the beginner-course jump that every product's Course group starts with.
+const courseItems = () => [
+  {
+    type: 'ref',
+    id: `${C}/ja_Arm_Tutorial_Introduction`,
+    label: '入門コース',
+  },
+];
+
+const courseLink = (items = courseItems()) => ({
   type: 'category',
   label: 'コース',
   className: 'robotics-section-title',
   collapsed: false,
   collapsible: false,
-  items: [
-    {
-      type: 'ref',
-      id: `${C}/ja_Arm_Tutorial_Introduction`,
-      label: '入門コース',
-    },
-  ],
+  items,
 });
 
 // The course's own standalone sidebar (opened when browsing course pages).
 const courseSidebar = () => [
   backToRobotics(),
+
   {
     type: 'doc',
     id: `${C}/ja_Arm_Tutorial_Introduction`,
@@ -95,6 +100,32 @@ const courseSidebar = () => [
       `${C}/ja_Arm_Tutorial_22`,
     ],
   },
+  {
+    type: 'category',
+    label: 'Stage 5: Robot Arm Mathematics and Motion Control',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/ja_Arm_Tutorial_23`,
+      `${C}/ja_Arm_Tutorial_24`,
+      `${C}/ja_Arm_Tutorial_25`,
+      `${C}/ja_Arm_Tutorial_26`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'ステージ 6：ロボットビジョンと自律把持',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/ja_Arm_Tutorial_27`,
+      `${C}/ja_Arm_Tutorial_28`,
+      `${C}/ja_Arm_Tutorial_29`,
+      `${C}/ja_Arm_Tutorial_30`,
+    ],
+  },
 ];
 
 const sidebars = {
@@ -116,6 +147,7 @@ const sidebars = {
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Lerobot`, label: 'reBot-RS と LeRobot' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_pinocchio`, label: 'reBot-RS と Pinocchio' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_control_mit`, label: 'reBot-RS モーター SDK' },
+        { type: 'link', label: 'ノーコードでVLA入門：SenseCraft Robotics プラットフォーム', href: 'https://wiki.seeedstudio.com/ja/sensecraft_robotics_rebot_arm_102_b601_rs/' },
       ],
     },
     {
@@ -132,7 +164,10 @@ const sidebars = {
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS と Agent Claw' },
       ],
     },
-    courseLink(),
+    courseLink([
+      ...courseItems(),
+      { type: 'link', label: 'DLI コース: Sim-to-Real VLA パイプライン', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+    ])
   ],
 
   // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
@@ -148,6 +183,7 @@ const sidebars = {
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Getting_Started`, label: 'reBot-DM クイックスタート' },
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Lerobot`, label: 'reBot-DM と LeRobot' },
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_pinocchio`, label: 'reBot-DM と Pinocchio' },
+        { type: 'link', label: 'ノーコードでVLA入門：SenseCraft Robotics プラットフォーム', href: 'https://wiki.seeedstudio.com/ja/sensecraft_robotics_rebot_arm_102_b601_dm/' },
       ],
     },
     {

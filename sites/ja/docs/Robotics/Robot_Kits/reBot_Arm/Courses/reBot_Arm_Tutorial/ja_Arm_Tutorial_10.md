@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI Beginner's Course の第10章 — LeRobot とは何か、リーダー／フォロワーアームの役割分担、Robot と Teleoperator のプラグインアーキテクチャ、カメラ／CAN／アームのデータフロー、および DM と RS の設定差分について説明します。
 title: 第10章 - LeRobot と reBot アームのシステムアーキテクチャ
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_10/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

@@ -61,6 +61,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/es/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS con LeRobot</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS con Pinocchio</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>SDK de motor de reBot-RS</b></div></a>
+        <a className="step-card" href="/es/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>VLA sin código: plataforma SenseCraft Robotics</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -77,6 +78,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>Curso</h4>
       <div className="learning-steps">
         <a className="step-card" href="/es/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para principiantes</b></div></a>
+        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>Curso DLI: Pipeline VLA Sim-to-Real</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -92,7 +94,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperador LeRobot</a>
         <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">Demostración de agarre visual</a>
-        <a href="https://github.com/xiehuangbao888/Camera-Mount" target="_blank" rel="noopener noreferrer">Colección de soportes de cámara</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">Colección de soportes de cámara</a>
       </div>
     </div>
   </div>
@@ -110,6 +112,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/es/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Inicio rápido de reBot-DM</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM con LeRobot</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM con Pinocchio</b></div></a>
+        <a className="step-card" href="/es/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>VLA sin código: plataforma SenseCraft Robotics</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -141,7 +144,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperador LeRobot</a>
         <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">Demostración de agarre visual</a>
-        <a href="https://github.com/xiehuangbao888/Camera-Mount" target="_blank" rel="noopener noreferrer">Colección de soportes de cámara</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">Colección de soportes de cámara</a>
       </div>
     </div>
   </div>
@@ -158,6 +161,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/es/lerobot_so100m_new/"><span className="step-index">1</span><div><b>Inicio rápido de SO100 / SO101</b></div></a>
         <a className="step-card" href="/es/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Herramienta de depuración de servos</b></div></a>
+        <a className="step-card" href="/es/sensecraft_robotics_so_arm101/"><span className="step-index">🖥️</span><div><b>VLA sin código: plataforma SenseCraft Robotics</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -170,6 +174,19 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/es/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Aprendizaje por refuerzo en Isaac Lab</b></div></a>
         <a className="step-card optional" href="/es/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
+    </div>
+  </div>
+</details>
+
+
+<details id="amazinghand" className="product-card amazinghand product-card--cover">
+  <summary className="product-head">
+    <h3>Mano robótica AmazingHand</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-steps">
+      <a className="step-card" href="/es/hand_amazinghand/"><span className="step-index">1</span><div><b>Guía de inicio de AmazingHand</b></div></a>
+      <a className="step-card" href="/es/soarm_amazinghand_teleop/"><span className="step-index">2</span><div><b>SO-ARM con AmazingHand</b></div></a>
     </div>
   </div>
 </details>

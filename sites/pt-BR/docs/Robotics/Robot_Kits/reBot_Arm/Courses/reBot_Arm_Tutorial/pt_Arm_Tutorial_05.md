@@ -1,6 +1,7 @@
 ---
 description: Capítulo 5 do Curso para Iniciantes em IA Física da Seeed — fundamentos do barramento CAN, quadros de dados padrão vs estendidos, a camada de enlace de dados CAN e SocketCAN.
 title: Capítulo 5 - Barramento CAN e Comunicação com Motor
+hide_title: true
 keywords:
   - reBot
   - CAN Bus
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_5/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

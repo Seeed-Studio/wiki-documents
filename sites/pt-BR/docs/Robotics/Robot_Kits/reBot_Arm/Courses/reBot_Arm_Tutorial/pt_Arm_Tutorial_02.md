@@ -1,6 +1,7 @@
 ---
 description: Capítulo 2 do Curso para Iniciantes em IA Física da Seeed — conheça o projeto open-source reBot Arm, a diferença entre as versões DM e RS e seu hardware e software open-source.
 title: Capítulo 2 - Hardware e o Projeto Open-Source
+hide_title: true
 keywords:
   - reBot
   - B601-DM
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_2/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

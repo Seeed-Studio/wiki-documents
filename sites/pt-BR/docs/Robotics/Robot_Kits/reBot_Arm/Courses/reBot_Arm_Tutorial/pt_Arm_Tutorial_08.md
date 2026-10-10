@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 8 do Curso para Iniciantes em IA Física da Seeed — controle o reBot Arm com o Python SDK: parâmetros, conexão com gerenciador de contexto, movimento, ponto zero e estado das juntas.'
 title: Capítulo 8 - Controlando o reBot Arm Usando o Python SDK
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -21,8 +22,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_8/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

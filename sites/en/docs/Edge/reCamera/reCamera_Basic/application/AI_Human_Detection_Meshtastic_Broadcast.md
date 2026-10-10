@@ -12,7 +12,7 @@ sku: 100029708,102010611,114993649
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 1
 last_update:
-  date: 2026-01-28
+  date: 2026-10-08
   author: John Xiang
 createdAt: '2026-01-28'
 updatedAt: '2026-07-24'
@@ -101,9 +101,9 @@ Use tools like **MobaXTerm** to log in to **reCamera** via SSH. Default IP: Usua
 Since the Node-RED service running by default on reCamera consumes significant system resources, you must execute the following three commands to stop it before running the C++ Demo:
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_2_1n.jpg" /></div>
 

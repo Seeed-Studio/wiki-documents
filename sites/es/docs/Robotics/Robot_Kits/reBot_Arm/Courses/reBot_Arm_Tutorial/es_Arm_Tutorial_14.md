@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 14 del Curso de Introducción a la IA Física de Seeed — estructura del dataset e inspección de calidad: qué se almacena realmente en disco, los cuatro estándares de calidad, reproducción e inspección de imágenes, y qué hacer cuando se encuentran problemas.'
 title: Capítulo 14 - Estructura del Dataset e Inspección de Calidad
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_14/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

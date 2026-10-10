@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-28 17:15:42 (北京时间)
-// 多语言页面: 2546 个
+// 生成时间: 2026-10-09 17:01:41 (北京时间)
+// 多语言页面: 2554 个
 
 (function() {
   'use strict';
@@ -7066,6 +7066,54 @@
     "pt"
   ],
   "/rebot_physical_ai_course_chapter_22": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_23": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_24": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_25": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_26": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_27": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_28": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_29": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_30": [
     "en",
     "es",
     "ja",

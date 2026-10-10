@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI ビギナーコース第4章 — ロボットアームおよび関節アクチュエータの基礎。安全範囲、構造、減速機、エンコーダ、DM/RS モーターの制御モードを含みます。
 title: 第4章 - ロボットアームと関節アクチュエータの基礎
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -27,8 +28,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_4/
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
 
-# 
-
 <div className="rebot-page">
 
 <section className="doc-hero">
@@ -46,6 +45,26 @@ import 'katex/dist/katex.min.css';
     </div>
   </div>
 </section>
+
+### このステージで必要なハードウェア
+
+このステージで用意するもの。全ステージの一覧は[第 3 章](/ja/rebot_physical_ai_course_chapter_3/)にあります。
+
+**メイン制御ユニット**
+
+| 項目 | 購入 | 数量 |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+デスクトップまたはノート PC も必要です:Ubuntu 22.04、GTX 4080 以上(VRAM 12GB 以上)、メモリ 16GB 以上。
+
+**このステージ**
+
+| 項目 | 購入 | 数量 |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+
 
 ## 4.1 ロボットアームの安全範囲と作業空間
 

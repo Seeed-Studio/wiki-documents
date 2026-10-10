@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 22 del Curso de Introducción a la IA Física de Seeed — inferencia de GR00T y despliegue en robots reales: el bucle de extremo a extremo, desacoplar inferencia y control, máquina única vs distribuido, entradas de cámara/estado/lenguaje, salida de fragmentos de acción, latencia, almacenamiento en búfer de acciones y RTC, límites de seguridad, evaluación y el proyecto de etapa.'
 title: Capítulo 22 - Inferencia de GR00T y Despliegue en Robots Reales
+hide_title: true
 keywords:
   - reBot
   - GR00T
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_22/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

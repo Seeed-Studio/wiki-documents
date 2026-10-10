@@ -1,6 +1,7 @@
 ---
 description: Chapter 6 of the Seeed Physical AI Beginner's Course — assemble the reBot Arm, assemble the power supply, wire the arm, and power it on for the first time.
 title: Chapter 6 - Assembly, Power Supply, and First Power-On
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_6/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

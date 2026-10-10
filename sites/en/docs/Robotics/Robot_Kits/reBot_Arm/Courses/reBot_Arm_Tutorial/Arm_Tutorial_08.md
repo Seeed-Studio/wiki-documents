@@ -1,6 +1,7 @@
 ---
 description: 'Chapter 8 of the Seeed Physical AI Beginner''s Course — control the reBot Arm with the Python SDK: parameters, context manager connection, motion, zero point, and joint state.'
 title: Chapter 8 - Controlling reBot Arm Using Python SDK
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -21,8 +22,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_8/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 21 do Curso para Iniciantes em IA Física da Seeed — ajuste fino do reBot Arm com Isaac GR00T: configuração do ambiente, download do modelo base, caminho do conjunto de dados, ajuste fino com GPU única e múltiplas GPUs, monitoramento de VRAM e loss, salvamento de checkpoints, inferência em robô real, solução de problemas e dicas de treinamento.'
 title: Capítulo 21 - Ajuste fino do reBot Arm com Isaac GR00T
+hide_title: true
 keywords:
   - reBot
   - GR00T
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_21/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

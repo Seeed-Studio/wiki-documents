@@ -11,7 +11,7 @@ slug: /recamera_qrcode_udp
 sku: 102991897, 100029708, 108990120
 sidebar_position: 17
 last_update:
-  date: 07/08/2026
+  date: 10/08/2026
   author: QiYao Lin
 createdAt: '2026-06-15'
 updatedAt: '2026-07-08'
@@ -148,9 +148,9 @@ Before running the C++ program, you must stop the default Node-RED services as t
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### 3. Run the Executable on ReCamera

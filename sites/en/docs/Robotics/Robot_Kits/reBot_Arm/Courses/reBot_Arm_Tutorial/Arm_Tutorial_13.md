@@ -1,6 +1,7 @@
 ---
 description: 'Chapter 13 of the Seeed Physical AI Beginner''s Course — camera configuration and LeRobot data collection: single vs dual camera setup, finding camera device names, image/action synchronization, creating a dataset, recording and re-recording, visualization, and supplementing or deleting data.'
 title: Chapter 13 - Camera Configuration and LeRobot Data Collection
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_13/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

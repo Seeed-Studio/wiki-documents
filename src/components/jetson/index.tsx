@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import styles from './index.module.scss';
 import { useColorMode } from '@docusaurus/theme-common';
@@ -15,7 +15,7 @@ import * as config_pt from './config.pt.js';
 import * as config_auto from './config.auto';
 
 // 共享产品数据
-import { productOptions, PRODUCT_DATA, PRODUCT_CATEGORIES } from './productData';
+import { productOptions, PRODUCT_DATA, PRODUCT_CATEGORIES, type ProductOption } from './productData';
 
 // SVG Icons
 import {
@@ -37,6 +37,13 @@ type CommunityCategoryKey =
   | 'multimodal'
   | 'physical'
   | 'managed';
+
+type CommunityProject = {
+  name?: Partial<Record<Lang, string>>;
+  img?: string;
+  URL?: Partial<Record<Lang, string>>;
+  category?: Partial<Record<Lang, string[]>>;
+};
 
 type Props = {
   lang?: Lang;
@@ -316,6 +323,7 @@ export const translations = {
       installTitle: 'Install jetson-examples',
       deployTitle: 'Deploy LLaVA',
       modelsTitle: 'Supported Models',
+      deployCta: 'One-Click Deploy',
       features: ['20+ Examples', 'One Command', 'Open Source'],
       quickLinks: {
         github: 'GitHub Repo',
@@ -454,6 +462,7 @@ export const translations = {
       installTitle: 'jetson-examplesをインストール',
       deployTitle: 'LLaVAをデプロイ',
       modelsTitle: 'サポートされているモデル',
+      deployCta: 'ワンクリックでデプロイ',
       features: ['20+ サンプル', 'ワンコマンド', 'オープンソース'],
       quickLinks: {
         github: 'GitHubリポジトリ',
@@ -592,6 +601,7 @@ export const translations = {
       installTitle: '安装 jetson-examples',
       deployTitle: '部署 LLaVA',
       modelsTitle: '支持的模型',
+      deployCta: '一键部署',
       features: ['20+ 示例', '一键命令', '开源'],
       quickLinks: {
         github: 'GitHub 仓库',
@@ -730,6 +740,7 @@ export const translations = {
       installTitle: 'Instalar jetson-examples',
       deployTitle: 'Desplegar LLaVA',
       modelsTitle: 'Modelos Soportados',
+      deployCta: 'Despliegue con un clic',
       features: ['20+ Ejemplos', 'Un Comando', 'Código Abierto'],
       quickLinks: {
         github: 'Repositorio GitHub',
@@ -868,6 +879,7 @@ export const translations = {
       installTitle: 'Instalar jetson-examples',
       deployTitle: 'Implantar LLaVA',
       modelsTitle: 'Modelos Suportados',
+      deployCta: 'Implantar com um clique',
       features: ['20+ Exemplos', 'Um Comando', 'Código Aberto'],
       quickLinks: {
         github: 'Repositório GitHub',
@@ -958,9 +970,35 @@ const RecomputerPage = ({ lang }: Props) => {
   const t = translations[resolvedLang];
   const config = configMap[resolvedLang];
 
-  const [activePage, setActivePage] = useState<'products' | 'demo' | 'faq'>('products');
+  const [activePage, setActivePage] = useState<'products' | 'demo' | 'faq' | 'community' | 'devices'>('products');
   const [activeCategory, setActiveCategory] = useState<CommunityCategoryKey>('all');
   const [activeDeviceTab, setActiveDeviceTab] = useState(0);
+
+  // Sidebar "Applications" links use ?tab=demo&category=<key>; keep state in sync with the URL.
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tab = params.get('tab');
+    const category = params.get('category');
+    if (tab === 'demo' || tab === 'products' || tab === 'faq' || tab === 'community' || tab === 'devices') {
+      setActivePage(tab);
+      if (tab === 'community') {
+        setExpandedSections(prev => ({ ...prev, community: true }));
+      }
+      if (tab === 'devices') {
+        setExpandedSections(prev => ({ ...prev, devices: true }));
+      }
+    }
+    if (
+      category === 'cv' ||
+      category === 'gen' ||
+      category === 'devtools' ||
+      category === 'multimodal' ||
+      category === 'physical' ||
+      category === 'managed'
+    ) {
+      setActiveCategory(category);
+    }
+  }, [location.search]);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -968,7 +1006,7 @@ const RecomputerPage = ({ lang }: Props) => {
 
   const [expandedSections, setExpandedSections] = useState({
     examples: true,
-    devices: true,
+    devices: false,
     flashGuide: true,
     bsp: true,
     devTool: true,
@@ -1043,7 +1081,7 @@ const RecomputerPage = ({ lang }: Props) => {
     if (!searchQuery.trim()) return allProjects;
 
     const query = searchQuery.toLowerCase();
-    return allProjects.filter((project: any) =>
+    return allProjects.filter((project: CommunityProject) =>
       (getLocaleValue(project.name, resolvedLang, project.name?.en || '') || '').toLowerCase().includes(query) ||
       (getLocaleValue(project.category, resolvedLang, []) || []).some((cat: string) => cat.toLowerCase().includes(query)) ||
       (project.category?.en || []).some((cat: string) => cat.toLowerCase().includes(query))
@@ -1067,6 +1105,346 @@ const RecomputerPage = ({ lang }: Props) => {
     setSearchQuery(e.target.value);
     setCurrentPage(1);
   };
+
+  // Shared Community Projects section, used by the demo tab and the
+  // standalone community view (?tab=community, reached from the sidebar
+  // "Applications" link).
+  const communityProjectsSection = (
+    <div className={styles.section} id="community-projects">
+      <div className={styles.section_header}>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <h2 className={styles.section_title}>{t.community.title}</h2>
+          <p className={styles.section_description}>{t.community.desc}</p>
+        </div>
+        <CollapseButton section="community" isExpanded={expandedSections.community} />
+      </div>
+
+      {expandedSections.community && (
+        <>
+          <div className={styles.search_container}>
+            <div className={styles.search_wrapper}>
+              <span className={styles.search_icon}>🔍</span>
+              <input
+                type="text"
+                className={styles.search_input}
+                placeholder={t.community.searchPlaceholder}
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+              {searchQuery && (
+                <button
+                  className={styles.search_clear}
+                  onClick={() => {
+                    setSearchQuery('');
+                    setCurrentPage(1);
+                  }}
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+            <span className={styles.search_results}>
+              {t.community.searchResults.replace('{count}', String(getFilteredProjects().length))}
+            </span>
+          </div>
+
+          <div className={styles.project_filters}>
+            {COMMUNITY_CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                className={clsx(styles.filter_btn, activeCategory === cat.id && styles.active)}
+                onClick={() => handleCategoryChange(cat.id)}
+              >
+                {t.community[cat.key]}
+              </button>
+            ))}
+          </div>
+
+          <div className={styles.project_grid}>
+            {getPaginatedProjects().map((project: CommunityProject, idx: number) => (
+              <a
+                key={idx}
+                href={getLocaleValue(project.URL, resolvedLang, project.URL?.en)}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.project_card}
+              >
+                <div className={styles.project_image}>
+                  <img
+                    src={project.img}
+                    alt={getLocaleValue(project.name, resolvedLang, project.name?.en || '')}
+                  />
+                </div>
+                <div className={styles.project_content}>
+                  <span className={styles.project_category}>
+                    {getLocaleValue(project.category, resolvedLang, project.category?.en || [])?.[0] || 'Jetson'}
+                  </span>
+                  <h3 className={styles.project_title}>
+                    {getLocaleValue(project.name, resolvedLang, project.name?.en || '')}
+                  </h3>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {totalPages > 1 && (
+            <div className={styles.pagination}>
+              <button
+                className={styles.page_btn}
+                onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+              >
+                {t.community.prev}
+              </button>
+              <div className={styles.page_numbers}>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                  <button
+                    key={page}
+                    className={clsx(styles.page_number, currentPage === page && styles.active)}
+                    onClick={() => setCurrentPage(page)}
+                  >
+                    {page}
+                  </button>
+                ))}
+              </div>
+              <button
+                className={styles.page_btn}
+                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+              >
+                {t.community.next}
+              </button>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+
+  // Shared "Jetpack Flash and Hardware Usage" section, used by the products
+  // tab and the standalone devices view (?tab=devices, reached from the
+  // sidebar "Devices" link).
+  const devicesSection = (
+    <div className={styles.section} id="devices">
+      <div className={styles.section_header}>
+        <div style={{ flex: 1 }}>
+          <h2 className={styles.section_title}>{t.usage1.title}</h2>
+          <p className={styles.section_description}>{t.usage1.desc}</p>
+        </div>
+        <CollapseButton section="devices" isExpanded={expandedSections.devices} />
+      </div>
+
+      <a
+        href={`${LANG_PATH_PREFIX[resolvedLang]}/flash/jetpack_to_selected_product`}
+        className={styles.flash_guide_promo}
+      >
+            <div className={styles.flash_guide_promo_icon}><ZapIcon size={40} /></div>
+            <div className={styles.flash_guide_promo_content}>
+              <h3 className={styles.flash_guide_promo_title}>{t.flashGuide.ctaTitle}</h3>
+              <p className={styles.flash_guide_promo_desc}>{t.flashGuide.ctaDesc}</p>
+              <div className={styles.flash_guide_promo_features}>
+                {t.flashGuide.features.map((feature, idx) => (
+                  <span key={idx} className={styles.flash_guide_promo_feature}>✓ {feature}</span>
+                ))}
+              </div>
+            </div>
+            <div className={styles.flash_guide_promo_arrow}>{t.common.clickMe}</div>
+          </a>
+
+          {expandedSections.devices && (
+            <>
+              <div className={styles.tab_nav} style={{ margin: '32px 0 24px' }}>
+            {t.usage1.tabs.map((tab, idx) => (
+              <button
+                key={idx}
+                className={clsx(styles.tab_btn, activeDeviceTab === idx && styles.active)}
+                onClick={() => setActiveDeviceTab(idx)}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          <div className={styles.device_grid}>
+            {activeDeviceTab === 0 && (
+              <>
+                {productOptions.filter(PRODUCT_CATEGORIES.carrier.filter).map((product: ProductOption) => (
+                  <a
+                    key={product.value}
+                    href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.device_card}
+                  >
+                    <div className={styles.device_image}>
+                      <img src={product.img} alt={product.label} />
+                    </div>
+                    <div className={styles.device_content}>
+                      <div className={styles.device_name}>{product.label}</div>
+                      <div className={styles.device_action}>
+                        <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                        <span className={styles.device_action_arrow}>→</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )}
+
+            {activeDeviceTab === 1 && (
+              <>
+                {productOptions.filter(PRODUCT_CATEGORIES.super.filter).map((product: ProductOption) => (
+                  <a
+                    key={product.value}
+                    href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.device_card}
+                  >
+                    <div className={styles.device_image}>
+                      <img src={product.img} alt={product.label} />
+                    </div>
+                    <div className={styles.device_content}>
+                      <div className={styles.device_name}>{product.label}</div>
+                      <div className={styles.device_action}>
+                        <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                        <span className={styles.device_action_arrow}>→</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )}
+
+            {activeDeviceTab === 2 && (
+              <>
+                {productOptions.filter(PRODUCT_CATEGORIES.mini.filter).map((product: ProductOption) => (
+                  <a
+                    key={product.value}
+                    href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.device_card}
+                  >
+                    <div className={styles.device_image}>
+                      <img src={product.img} alt={product.label} />
+                    </div>
+                    <div className={styles.device_content}>
+                      <div className={styles.device_name}>{product.label}</div>
+                      <div className={styles.device_action}>
+                        <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                        <span className={styles.device_action_arrow}>→</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )}
+
+            {activeDeviceTab === 3 && (
+              <>
+                {productOptions.filter(PRODUCT_CATEGORIES.robotics.filter).map((product: ProductOption) => (
+                  <a
+                    key={product.value}
+                    href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.device_card}
+                  >
+                    <div className={styles.device_image}>
+                      <img src={product.img} alt={product.label} />
+                    </div>
+                    <div className={styles.device_content}>
+                      <div className={styles.device_name}>{product.label}</div>
+                      <div className={styles.device_action}>
+                        <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                        <span className={styles.device_action_arrow}>→</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )}
+
+            {activeDeviceTab === 4 && (
+              <>
+                {productOptions.filter(PRODUCT_CATEGORIES.classic.filter).map((product: ProductOption) => (
+                  <a
+                    key={product.value}
+                    href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.device_card}
+                  >
+                    <div className={styles.device_image}>
+                      <img src={product.img} alt={product.label} />
+                    </div>
+                    <div className={styles.device_content}>
+                      <div className={styles.device_name}>{product.label}</div>
+                      <div className={styles.device_action}>
+                        <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                        <span className={styles.device_action_arrow}>→</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )}
+
+            {activeDeviceTab === 5 && (
+              <>
+                {productOptions.filter(PRODUCT_CATEGORIES.industrial.filter).map((product: ProductOption) => (
+                  <a
+                    key={product.value}
+                    href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.device_card}
+                  >
+                    <div className={styles.device_image}>
+                      <img src={product.img} alt={product.label} />
+                    </div>
+                    <div className={styles.device_content}>
+                      <div className={styles.device_name}>{product.label}</div>
+                      <div className={styles.device_action}>
+                        <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                        <span className={styles.device_action_arrow}>→</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )}
+
+            {activeDeviceTab === 6 && (
+              <>
+                {productOptions.filter(PRODUCT_CATEGORIES.other.filter).map((product: ProductOption) => (
+                  <a
+                    key={product.value}
+                    href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.device_card}
+                  >
+                    <div className={styles.device_image}>
+                      <img src={product.img} alt={product.label} />
+                    </div>
+                    <div className={styles.device_content}>
+                      <div className={styles.device_name}>{product.label}</div>
+                      <div className={styles.device_action}>
+                        <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                        <span className={styles.device_action_arrow}>→</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
+            )}
+          </div>
+        </>
+      )}
+    </div>
+  );
 
   return (
     <div className={clsx(styles.jetson_page, styles[colorMode])}>
@@ -1097,6 +1475,12 @@ const RecomputerPage = ({ lang }: Props) => {
         </div>
       </div>
 
+      {activePage === 'devices' && (
+        <div className={styles.page_content}>
+          {devicesSection}
+        </div>
+      )}
+
       {activePage === 'products' && (
         <div className={styles.page_content}>
           <div className={styles.hero_section}>
@@ -1116,225 +1500,7 @@ const RecomputerPage = ({ lang }: Props) => {
             </div>
           </div>
 
-          <div className={styles.section} id="devices">
-            <div className={styles.section_header}>
-              <div style={{ flex: 1 }}>
-                <h2 className={styles.section_title}>{t.usage1.title}</h2>
-                <p className={styles.section_description}>{t.usage1.desc}</p>
-              </div>
-              <CollapseButton section="devices" isExpanded={expandedSections.devices} />
-            </div>
-
-            {expandedSections.devices && (
-              <>
-                <a
-                  href={`${LANG_PATH_PREFIX[resolvedLang]}/flash/jetpack_to_selected_product`}
-                  className={styles.flash_guide_promo}
-                >
-                  <div className={styles.flash_guide_promo_icon}><ZapIcon size={40} /></div>
-                  <div className={styles.flash_guide_promo_content}>
-                    <h3 className={styles.flash_guide_promo_title}>{t.flashGuide.ctaTitle}</h3>
-                    <p className={styles.flash_guide_promo_desc}>{t.flashGuide.ctaDesc}</p>
-                    <div className={styles.flash_guide_promo_features}>
-                      {t.flashGuide.features.map((feature, idx) => (
-                        <span key={idx} className={styles.flash_guide_promo_feature}>✓ {feature}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className={styles.flash_guide_promo_arrow}>{t.common.clickMe}</div>
-                </a>
-
-                <div className={styles.tab_nav} style={{ margin: '32px 0 24px' }}>
-                  {t.usage1.tabs.map((tab, idx) => (
-                    <button
-                      key={idx}
-                      className={clsx(styles.tab_btn, activeDeviceTab === idx && styles.active)}
-                      onClick={() => setActiveDeviceTab(idx)}
-                    >
-                      {tab}
-                    </button>
-                  ))}
-                </div>
-
-                <div className={styles.device_grid}>
-                  {activeDeviceTab === 0 && (
-                    <>
-                      {productOptions.filter(PRODUCT_CATEGORIES.carrier.filter).map((product: any) => (
-                        <a
-                          key={product.value}
-                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={styles.device_card}
-                        >
-                          <div className={styles.device_image}>
-                            <img src={product.img} alt={product.label} />
-                          </div>
-                          <div className={styles.device_content}>
-                            <div className={styles.device_name}>{product.label}</div>
-                            <div className={styles.device_action}>
-                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                              <span className={styles.device_action_arrow}>→</span>
-                            </div>
-                          </div>
-                        </a>
-                      ))}
-                    </>
-                  )}
-
-                  {activeDeviceTab === 1 && (
-                    <>
-                      {productOptions.filter(PRODUCT_CATEGORIES.super.filter).map((product: any) => (
-                        <a
-                          key={product.value}
-                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={styles.device_card}
-                        >
-                          <div className={styles.device_image}>
-                            <img src={product.img} alt={product.label} />
-                          </div>
-                          <div className={styles.device_content}>
-                            <div className={styles.device_name}>{product.label}</div>
-                            <div className={styles.device_action}>
-                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                              <span className={styles.device_action_arrow}>→</span>
-                            </div>
-                          </div>
-                        </a>
-                      ))}
-                    </>
-                  )}
-
-                  {activeDeviceTab === 2 && (
-                    <>
-                      {productOptions.filter(PRODUCT_CATEGORIES.mini.filter).map((product: any) => (
-                        <a
-                          key={product.value}
-                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={styles.device_card}
-                        >
-                          <div className={styles.device_image}>
-                            <img src={product.img} alt={product.label} />
-                          </div>
-                          <div className={styles.device_content}>
-                            <div className={styles.device_name}>{product.label}</div>
-                            <div className={styles.device_action}>
-                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                              <span className={styles.device_action_arrow}>→</span>
-                            </div>
-                          </div>
-                        </a>
-                      ))}
-                    </>
-                  )}
-
-                  {activeDeviceTab === 3 && (
-                    <>
-                      {productOptions.filter(PRODUCT_CATEGORIES.robotics.filter).map((product: any) => (
-                        <a
-                          key={product.value}
-                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={styles.device_card}
-                        >
-                          <div className={styles.device_image}>
-                            <img src={product.img} alt={product.label} />
-                          </div>
-                          <div className={styles.device_content}>
-                            <div className={styles.device_name}>{product.label}</div>
-                            <div className={styles.device_action}>
-                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                              <span className={styles.device_action_arrow}>→</span>
-                            </div>
-                          </div>
-                        </a>
-                      ))}
-                    </>
-                  )}
-
-                  {activeDeviceTab === 4 && (
-                    <>
-                      {productOptions.filter(PRODUCT_CATEGORIES.classic.filter).map((product: any) => (
-                        <a
-                          key={product.value}
-                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={styles.device_card}
-                        >
-                          <div className={styles.device_image}>
-                            <img src={product.img} alt={product.label} />
-                          </div>
-                          <div className={styles.device_content}>
-                            <div className={styles.device_name}>{product.label}</div>
-                            <div className={styles.device_action}>
-                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                              <span className={styles.device_action_arrow}>→</span>
-                            </div>
-                          </div>
-                        </a>
-                      ))}
-                    </>
-                  )}
-
-                  {activeDeviceTab === 5 && (
-                    <>
-                      {productOptions.filter(PRODUCT_CATEGORIES.industrial.filter).map((product: any) => (
-                        <a
-                          key={product.value}
-                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={styles.device_card}
-                        >
-                          <div className={styles.device_image}>
-                            <img src={product.img} alt={product.label} />
-                          </div>
-                          <div className={styles.device_content}>
-                            <div className={styles.device_name}>{product.label}</div>
-                            <div className={styles.device_action}>
-                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                              <span className={styles.device_action_arrow}>→</span>
-                            </div>
-                          </div>
-                        </a>
-                      ))}
-                    </>
-                  )}
-
-                  {activeDeviceTab === 6 && (
-                    <>
-                      {productOptions.filter(PRODUCT_CATEGORIES.other.filter).map((product: any) => (
-                        <a
-                          key={product.value}
-                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={styles.device_card}
-                        >
-                          <div className={styles.device_image}>
-                            <img src={product.img} alt={product.label} />
-                          </div>
-                          <div className={styles.device_content}>
-                            <div className={styles.device_name}>{product.label}</div>
-                            <div className={styles.device_action}>
-                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                              <span className={styles.device_action_arrow}>→</span>
-                            </div>
-                          </div>
-                        </a>
-                      ))}
-                    </>
-                  )}
-                </div>
-              </>
-            )}
-          </div>
+          {devicesSection}
 
           <div className={styles.section}>
             <div className={styles.section_header}>
@@ -1460,7 +1626,7 @@ const RecomputerPage = ({ lang }: Props) => {
                       <a
                         key={idx}
                         className={styles.beginner_module_card}
-                        href={`${LANG_PATH_PREFIX[resolvedLang]}/nvidia_jetson?tab=demo&category=${categoryKey}`}
+                        href={`${LANG_PATH_PREFIX[resolvedLang]}/NVIDIA_Jetson/?tab=demo&category=${categoryKey}`}
                         onClick={(e) => {
                           e.preventDefault();
                           setActivePage('demo');
@@ -1640,6 +1806,16 @@ const RecomputerPage = ({ lang }: Props) => {
                     </pre>
                   </div>
 
+                  <a
+                    href="https://sensecraft.seeed.cc/ai-lab/en/models"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.deploy_btn}
+                  >
+                    <span>{t.examples.deployCta}</span>
+                    <span>→</span>
+                  </a>
+
                   <div className={styles.examples_models}>
                     <div className={styles.models_title}>{t.examples.modelsTitle}</div>
                     <div className={styles.models_grid}>
@@ -1697,115 +1873,13 @@ const RecomputerPage = ({ lang }: Props) => {
             )}
           </div>
 
-          <div className={styles.section} id="community-projects">
-            <div className={styles.section_header}>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <h2 className={styles.section_title}>{t.community.title}</h2>
-                <p className={styles.section_description}>{t.community.desc}</p>
-              </div>
-              <CollapseButton section="community" isExpanded={expandedSections.community} />
-            </div>
+          {communityProjectsSection}
+        </div>
+      )}
 
-            {expandedSections.community && (
-              <>
-                <div className={styles.search_container}>
-                  <div className={styles.search_wrapper}>
-                    <span className={styles.search_icon}>🔍</span>
-                    <input
-                      type="text"
-                      className={styles.search_input}
-                      placeholder={t.community.searchPlaceholder}
-                      value={searchQuery}
-                      onChange={handleSearchChange}
-                    />
-                    {searchQuery && (
-                      <button
-                        className={styles.search_clear}
-                        onClick={() => {
-                          setSearchQuery('');
-                          setCurrentPage(1);
-                        }}
-                      >
-                        ✕
-                      </button>
-                    )}
-                  </div>
-                  <span className={styles.search_results}>
-                    {t.community.searchResults.replace('{count}', String(getFilteredProjects().length))}
-                  </span>
-                </div>
-
-                <div className={styles.project_filters}>
-                  {COMMUNITY_CATEGORIES.map((cat) => (
-                    <button
-                      key={cat.id}
-                      className={clsx(styles.filter_btn, activeCategory === cat.id && styles.active)}
-                      onClick={() => handleCategoryChange(cat.id)}
-                    >
-                      {t.community[cat.key]}
-                    </button>
-                  ))}
-                </div>
-
-                <div className={styles.project_grid}>
-                  {getPaginatedProjects().map((project: any, idx: number) => (
-                    <a
-                      key={idx}
-                      href={getLocaleValue(project.URL, resolvedLang, project.URL?.en)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={styles.project_card}
-                    >
-                      <div className={styles.project_image}>
-                        <img
-                          src={project.img}
-                          alt={getLocaleValue(project.name, resolvedLang, project.name?.en || '')}
-                        />
-                      </div>
-                      <div className={styles.project_content}>
-                        <span className={styles.project_category}>
-                          {getLocaleValue(project.category, resolvedLang, project.category?.en || [])?.[0] || 'Jetson'}
-                        </span>
-                        <h3 className={styles.project_title}>
-                          {getLocaleValue(project.name, resolvedLang, project.name?.en || '')}
-                        </h3>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-
-                {totalPages > 1 && (
-                  <div className={styles.pagination}>
-                    <button
-                      className={styles.page_btn}
-                      onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                      disabled={currentPage === 1}
-                    >
-                      {t.community.prev}
-                    </button>
-                    <div className={styles.page_numbers}>
-                      {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                        <button
-                          key={page}
-                          className={clsx(styles.page_number, currentPage === page && styles.active)}
-                          onClick={() => setCurrentPage(page)}
-                        >
-                          {page}
-                        </button>
-                      ))}
-                    </div>
-                    <button
-                      className={styles.page_btn}
-                      onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                      disabled={currentPage === totalPages}
-                    >
-                      {t.community.next}
-                    </button>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
+      {activePage === 'community' && (
+        <div className={styles.page_content}>
+          {communityProjectsSection}
         </div>
       )}
 

@@ -1,6 +1,7 @@
 ---
 description: Capítulo 10 del Curso de Introducción a la IA Física de Seeed - qué es LeRobot, división del trabajo entre brazo líder/seguidor, la arquitectura de plugins Robot y Teleoperator, el flujo de datos cámara/CAN/brazo y las diferencias de configuración entre DM y RS.
 title: Capítulo 10 - Arquitectura del Sistema LeRobot y reBot Arm
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_10/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

@@ -1,6 +1,7 @@
 ---
 description: 'Chapter 15 of the Seeed Physical AI Beginner''s Course — the ACT model and action chunking: ACT input and output, the ResNet and Transformer structure, attention intuition, CVAE, action chunk vs action horizon, error accumulation defenses, and ACT''s capability boundaries.'
 title: Chapter 15 - ACT Model and Action Chunking
+hide_title: true
 keywords:
   - reBot
   - ACT
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_15/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

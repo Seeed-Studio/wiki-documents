@@ -1,5 +1,5 @@
 ---
-description: 使用 reCamera 和 Meshtastic 构建远距离安防系统——通过 LoRa 自组网将 AI 检测告警无线推送到 Home Assistant
+description: 使用 reCamera 和 Meshtastic 构建远距离安防系统 —— 通过 LoRa 自组网将 AI 检测告警无线推送到 Home Assistant
 title: 使用 reCamera 和 Meshtastic 构建远距离安防系统
 keywords:
   - 边缘 AI
@@ -12,10 +12,10 @@ slug: /recamera_meshtastic_ha_security_system
 sku: 100029708
 sidebar_position: 13
 last_update:
-  date: 06/29/2026
+  date: 10/08/2026
   author: Sizhao Zhou
 createdAt: '2026-06-29'
-updatedAt: '2026-07-22'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/cn/recamera_meshtastic_ha_security_system/
 ---
 
@@ -25,9 +25,9 @@ url: https://wiki.seeedstudio.com/cn/recamera_meshtastic_ha_security_system/
 
 ## 1. 介绍  
 
-在没有 WiFi 或蜂窝网络覆盖的荒野、大型农场或偏远山区，如何实现智能安防监控？  
+如何在没有 WiFi 或蜂窝网络覆盖的荒野、大型农场或偏远山区实现智能安防监控？  
 
-本教程提供了一套极客范十足的“无网安防”方案：利用 **reCamera PoE** 强大的边缘 AI 算力进行实时人体检测，一旦检测到目标，立即通过底层硬件引脚触发 **XIAO ESP32S3 + Wio-SX1262 模组（发射端）**。告警信号被转换为低频无线电波，跨越数公里复杂地形，被室内的 **Wio-SX1262 接收端** 捕获，并无缝转换为 MQTT 消息推送到本地的 **Home Assistant (HA)** 系统。  
+本教程提供了一套极客范十足的“无网络安防”方案：利用 **reCamera PoE** 强大的边缘 AI 算力进行实时人体检测，一旦检测到目标，立即通过底层硬件引脚触发 **XIAO ESP32S3 + Wio-SX1262 模组（发射端）**。告警信号被转换为低频无线电波，跨越数公里复杂地形，被室内的 **Wio-SX1262 接收端**捕获，并无缝转换为 MQTT 消息推送到本地的 **Home Assistant (HA)** 系统。  
 
 整个链路无需任何云端服务器，真正实现隐私、安全、低功耗与超远距离的完美结合。  
 
@@ -39,8 +39,8 @@ url: https://wiki.seeedstudio.com/cn/recamera_meshtastic_ha_security_system/
 
 - reCamera PoE 运行 YOLO 人体检测模型，在检测到人时通过 GPIO 引脚输出低电平信号  
 - XIAO ESP32S3（发射端）通过 D2 引脚捕获低电平触发，并通过 Wio-SX1262 发送 LoRa 无线数据包  
-- XIAO ESP32S3（接收端）通过 Wio-SX1262 接收 LoRa 数据包，并通过 WiFi 使用 MQTT 协议将其推送到 Home Assistant  
-- Home Assistant 接收 MQTT 消息并触发自动化告警（通知、与其他智能设备联动等）  
+- XIAO ESP32S3（接收端）通过 Wio-SX1262 接收 LoRa 数据包，并通过 WiFi 使用 MQTT 协议推送到 Home Assistant  
+- Home Assistant 接收到 MQTT 消息后触发自动化告警（通知、与其他智能设备联动等）  
 
 ---  
 
@@ -77,14 +77,14 @@ url: https://wiki.seeedstudio.com/cn/recamera_meshtastic_ha_security_system/
 
 ## 3. Meshtastic 网络配置  
 
-为了实现两块 XIAO ESP32S3 之间的远距离 LoRa 通信，我们需要为其刷入 **Meshtastic** 开源固件。  
+为了实现两块 XIAO ESP32S3 之间的远距离 LoRa 通信，我们需要为它们刷入 **Meshtastic** 开源固件。  
 
 ### 3.1 固件烧录与基础射频同步（接收端与发射端都需要）  
 
 **步骤 1**：使用 USB-C 数据线将 XIAO ESP32S3 连接到电脑。  
 
 :::note Note  
-在烧录前，需要将 ESP32 置于 Bootloader 下载模式。操作方法：按住 BOOT 键，按一次 RESET 键，然后松开 BOOT 键。  
+在烧录前，需要将 ESP32 置于 Bootloader 下载模式。操作方法：按住 BOOT 键，短按一次 RESET 键，然后松开 BOOT 键。  
 :::  
 
 **步骤 2**：访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)，在设备类型中选择 `Seeed Xiao ESP32-S3`，勾选 **Full Erase**，点击 **Flash** 写入固件。  
@@ -113,7 +113,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_meshtastic_ha_security_system/
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/xiao_mqtt_config.png" /></div>  
 
-**步骤 4**：完成所有配置后，点击右上角 **Save** 保存并等待设备重启。  
+**步骤 4**：完成所有配置后，点击右上角的 **Save** 保存并等待设备重启。  
 
 ### 3.3 发射端配置（放置在室外连接 reCamera）  
 
@@ -123,7 +123,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_meshtastic_ha_security_system/
 请**不要**在发射端启用 WiFi 和 MQTT；它只需专注于接收 GPIO 触发并发送 LoRa 无线信号。  
 :::  
 
-**步骤 1**：断开接收端 ESP32，将其替换为发射端使用的 ESP32，并在 Meshtastic Web Client 中直接点击 **Connect** 进行连接。  
+**步骤 1**：断开接收端 ESP32，将其替换为发射端使用的 ESP32，在 Meshtastic Web Client 中直接点击 **Connect** 进行连接。  
 
 **步骤 2 — 同步射频参数**：进入 **Radio Config → LoRa**，确保与接收端保持一致（Region 和 Modem Preset 完全相同）；无需启用 MQTT。  
 
@@ -137,12 +137,12 @@ url: https://wiki.seeedstudio.com/cn/recamera_meshtastic_ha_security_system/
 
 | 参数 | 设置 | 说明 |
 | :--- | :--- | :--- |
-| Minimum Broadcast Seconds | 15 | 最小广播间隔，防止频繁触发导致信道拥塞 |
-| Friendly Name | Human | 自定义告警名称，将作为 MQTT 消息标识符使用 |
+| Minimum Broadcast Seconds | 15 | 最小广播间隔，用于防止频繁触发导致信道拥塞 |
+| Friendly Name | Human | 自定义告警名称，将作为 MQTT 消息标识使用 |
 | Monitor Pin | 3 | 对应 XIAO ESP32S3 的 D2 引脚 |
 | Detection Triggered Type | LOGIC_LOW | 低电平触发（reCamera 在检测到人时输出低电平） |  
 
-**步骤 5**：点击右上角 **Save** 保存并等待设备重启。  
+**步骤 5**：点击右上角的 **Save** 保存并等待设备重启。  
 
 ---  
 
@@ -150,12 +150,12 @@ url: https://wiki.seeedstudio.com/cn/recamera_meshtastic_ha_security_system/
 
 ### 4.1 释放系统资源  
 
-默认情况下，reCamera 的 Node-RED 和 SSCMA 后台服务会占用相机资源。通过 SSH 登录 reCamera（默认 IP 为 `192.168.42.1`，用户名和密码均为 `recamera`），在终端中执行以下命令以停止后台服务：  
+默认情况下，reCamera 的 Node-RED 和 SSCMA 后台服务会占用相机资源。通过 SSH 登录 reCamera（默认 IP 为 `192.168.42.1`，用户名和密码均为 `recamera`），在终端中执行以下命令停止后台服务：  
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```  
 
 ### 4.2 启动视频流转发脚本  
@@ -187,8 +187,8 @@ sudo ./model_detector ./Models/model.cvimodel 192.168.4.7
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/reCamera_xiao_connect_line.png" /></div>  
 
-:::note Note  
-请为 ESP32 发射端单独供电（通过 USB 线或电池），以确保 LoRa 模块具有充足的发射功率。  
+:::note 注意  
+请为 ESP32 发射端单独提供电源（通过 USB 线或电池），以确保 LoRa 模块具有足够的发射功率。  
 :::  
 
 ---  
@@ -197,7 +197,7 @@ sudo ./model_detector ./Models/model.cvimodel 192.168.4.7
 
 ### 5.1 确认接收端运行正常  
 
-在开始之前，请确保接收端 ESP32 已上电并正常运行，连接到与 HA 主机相同的 WiFi 网络，且 MQTT 地址配置正确。  
+开始前，请确保接收端 ESP32 已上电并正常运行，连接到与 HA 主机相同的 WiFi 网络，并且 MQTT 地址配置正确。  
 
 ### 5.2 在 HA 中监听 MQTT 消息  
 
@@ -205,7 +205,7 @@ sudo ./model_detector ./Models/model.cvimodel 192.168.4.7
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/ha_show_result.png" /></div>  
 
-当 reCamera 检测到有人体时，Meshtastic 发射端会通过 LoRa 将告警信息发送给接收端，接收端再通过 MQTT 向 HA 推送一条包含 `Human`（在发射端配置的 Friendly Name）的消息。你将会在 MQTT 监听界面实时看到这条告警消息：  
+当 reCamera 检测到有人时，Meshtastic 发射端会通过 LoRa 将告警信息发送给接收端，接收端再通过 MQTT 向 HA 推送一条包含 `Human`（在发射端配置的 Friendly Name）的消息。你将会在 MQTT 监听界面实时看到这条告警消息：  
 
 ```json
 {
@@ -217,7 +217,7 @@ sudo ./model_detector ./Models/model.cvimodel 192.168.4.7
 
 ### 5.3 在 HA 中配置自动化告警  
 
-在 Home Assistant 中创建一条自动化规则，当 MQTT 消息中的 `payload.text` 为 `Human detect` 时，触发告警动作（如手机通知、联动警报器、日志记录等），从而完成整个“无网络安防”系统的闭环。  
+在 Home Assistant 中创建一条自动化规则，当 MQTT 消息中的 `payload.text` 为 `Human detect` 时，触发告警动作（如手机通知、联动警报器、记录日志等），从而完成整个“无网络安防”系统的闭环。  
 
 ---  
 
@@ -233,15 +233,15 @@ sudo ./model_detector ./Models/model.cvimodel 192.168.4.7
 
 ## 7. 常见问题  
 
-### Q1：如果接收端和发射端无法通信怎么办？  
+### Q1: 如果接收端和发射端无法通信怎么办？  
 
 检查两端的 LoRa `Region` 和 `Modem Preset` 是否完全一致，以及 `Pre-Shared Key` 是否相同。此外，确认两台设备之间的距离是否在有效的 LoRa 通信范围内，并检查天线是否安装正确。  
 
-### Q2：reCamera 检测到人体，但 HA 没有收到告警？  
+### Q2: reCamera 检测到人，但 HA 没有收到告警？  
 
 按以下顺序排查：reCamera 的 GPIO 信号输出是否正常（可用万用表测量）；发射端上 Detection Sensor 模块的 Monitor Pin 是否正确配置为 3（D2）；接收端的 WiFi 和 MQTT 配置是否正确，以及 MQTT Address 是否填写为 HA 主机的 IP。  
 
-### Q3：如何确认 Meshtastic 接收端已成功连接到 WiFi 和 MQTT？  
+### Q3: 如何确认 Meshtastic 接收端已成功连接 WiFi 和 MQTT？  
 
 在 Meshtastic Web Client 中查看接收端的设备状态面板，确认 WiFi 状态为 Connected，MQTT 状态为 Connected。  
 
@@ -249,7 +249,7 @@ sudo ./model_detector ./Models/model.cvimodel 192.168.4.7
 
 ## 8. 资源  
 
-- [reCamera 快速上手指南](https://wiki.seeedstudio.com/cn/recamera_getting_started/)  
+- [reCamera 快速入门指南](https://wiki.seeedstudio.com/cn/recamera_getting_started/)  
 - [Meshtastic 官方文档](https://meshtastic.org/docs/)  
 - [Meshtastic Web Flasher](https://flasher.meshtastic.org/)  
 - [reCamera OS GitHub](https://github.com/Seeed-Studio/reCamera-OS)  
@@ -259,7 +259,7 @@ sudo ./model_detector ./Models/model.cvimodel 192.168.4.7
 
 ## 技术支持与产品讨论  
 
-感谢你选择我们的产品！我们提供不同层级的支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。  
+感谢你选择我们的产品！我们提供不同层级的支持，以确保你在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。  
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

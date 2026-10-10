@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI Beginner's Course の第22章 — GR00T 推論と実ロボットデプロイ：エンドツーエンドループ、推論と制御の分離、単一マシン vs 分散構成、カメラ／状態／言語入力、アクションチャンク出力、レイテンシ、アクションバッファリングと RTC、安全制限、評価、そしてステージプロジェクト。
 title: 第22章 - GR00T 推論と実ロボットデプロイ
+hide_title: true
 keywords:
   - reBot
   - GR00T
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_22/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

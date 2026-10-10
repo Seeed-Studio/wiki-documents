@@ -1,6 +1,7 @@
 ---
 description: 'Chapter 12 of the Seeed Physical AI Beginner''s Course — robot datasets and task design: what an Episode is, what is in one data record, timestamps and synchronization, start/end conditions, consistency vs diversity, data quantity vs quality, and a worked data-creation example.'
 title: Chapter 12 - Robot Datasets and Task Design
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_12/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

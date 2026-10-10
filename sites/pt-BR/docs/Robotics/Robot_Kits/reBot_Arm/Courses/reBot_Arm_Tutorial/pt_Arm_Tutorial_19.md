@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 19 do Curso para Iniciantes em IA Física da Seeed — corporificação de robôs e a arquitetura do sistema GR00T: o que é uma corporificação, definições de juntas/estado/ação, modalidades de câmera e linguagem, as janelas de observação e ação, ajuste fino do modelo base, a pilha LeRobot e a posição do reBot Arm no GR00T.'
 title: Capítulo 19 - Corporificação de Robôs e Arquitetura do Sistema GR00T
+hide_title: true
 keywords:
   - reBot
   - GR00T
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_19/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

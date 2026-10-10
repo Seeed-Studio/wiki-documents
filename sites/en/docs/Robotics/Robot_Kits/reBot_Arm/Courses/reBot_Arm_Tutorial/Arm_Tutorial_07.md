@@ -1,6 +1,7 @@
 ---
 description: Chapter 7 of the Seeed Physical AI Beginner's Course — MotorBridge, the cross-vendor CAN motor control library, and how to control DM and RS motors via web and Python.
 title: Chapter 7 - MotorBridge Motor Control Library
+hide_title: true
 keywords:
   - reBot
   - MotorBridge
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_7/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

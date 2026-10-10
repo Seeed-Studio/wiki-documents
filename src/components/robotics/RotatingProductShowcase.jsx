@@ -11,6 +11,7 @@ import React, {
 } from 'react';
 import {useLocation} from '@docusaurus/router';
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
+import {createWheelGestureState, handleCarouselWheel} from './carouselWheel.mjs';
 
 const COPY = {
   en: {
@@ -20,6 +21,7 @@ const COPY = {
     previous: 'Previous product',
     next: 'Next product',
     instructions: 'Scroll, drag, or use the arrow keys to rotate. Click a card to open it, or press Space to open and close.',
+    expandedInstructions: 'Scroll to browse the page. Click the card again to close it and resume swipe navigation.',
     gridInstructions: 'Choose a product from the two-column overview to focus it and open its learning paths.',
     showGrid: 'Show all products',
     showCarousel: 'Return to carousel',
@@ -32,6 +34,7 @@ const COPY = {
     previous: '上一个产品',
     next: '下一个产品',
     instructions: '在卡片区域滚动、拖动或使用方向键切换；点击卡片展开，按空格键展开或收回。',
+    expandedInstructions: '卡片已展开：滑动可上下浏览网页；再次点击卡片收起后，恢复滑动切换。',
     gridInstructions: '从双列总览中选择产品，卡片会聚焦到中央并展开两侧学习路径。',
     showGrid: '展开双列',
     showCarousel: '返回轮播',
@@ -44,6 +47,7 @@ const COPY = {
     previous: '前の製品',
     next: '次の製品',
     instructions: 'カード上でスクロール、ドラッグ、または矢印キーを使って切り替えます。カードをクリックして開くか、Space キーで開閉します。',
+    expandedInstructions: 'スクロールでページを閲覧できます。カードをもう一度クリックして閉じると、スワイプでの切り替えが再開します。',
     gridInstructions: '2列の一覧から製品を選択すると、中央にフォーカスして学習パスを開きます。',
     showGrid: 'すべての製品を表示',
     showCarousel: 'カルーセルに戻る',
@@ -56,6 +60,7 @@ const COPY = {
     previous: 'Producto anterior',
     next: 'Producto siguiente',
     instructions: 'Desplázate, arrastra o usa las flechas para cambiar de producto. Haz clic en una tarjeta para abrirla, o pulsa Espacio para abrirla y cerrarla.',
+    expandedInstructions: 'Desplázate para explorar la página. Haz clic de nuevo en la tarjeta para cerrarla y volver a cambiar de producto deslizando.',
     gridInstructions: 'Elige un producto en la vista general de dos columnas para centrarlo y abrir sus rutas de aprendizaje.',
     showGrid: 'Mostrar todos los productos',
     showCarousel: 'Volver al carrusel',
@@ -68,6 +73,7 @@ const COPY = {
     previous: 'Produto anterior',
     next: 'Próximo produto',
     instructions: 'Role, arraste ou use as setas para alternar entre os produtos. Clique em um cartão para abri-lo ou pressione Espaço para abrir e fechar.',
+    expandedInstructions: 'Role para navegar pela página. Clique novamente no cartão para fechá-lo e voltar a alternar os produtos deslizando.',
     gridInstructions: 'Escolha um produto na visão geral em duas colunas para centralizá-lo e abrir suas trilhas de aprendizado.',
     showGrid: 'Mostrar todos os produtos',
     showCarousel: 'Voltar ao carrossel',
@@ -86,29 +92,6 @@ function getLocaleFromPath(pathname) {
 const COLLAPSE_DELAY = 560;
 const OPEN_AFTER_ROTATION_DELAY = 620;
 const GRID_SELECTION_DURATION = 620;
-const WHEEL_GESTURE_TIMEOUT = 150;
-const WHEEL_COOLDOWN = 360;
-const WHEEL_AXIS_THRESHOLD = 8;
-const WHEEL_HORIZONTAL_THRESHOLD = 44;
-const WHEEL_VERTICAL_THRESHOLD = 56;
-
-function getWheelDeltaScale(deltaMode) {
-  if (deltaMode === 1) return 16;
-  if (deltaMode === 2) return 400;
-  return 1;
-}
-
-function createWheelGestureState() {
-  return {
-    amount: 0,
-    axis: null,
-    axisX: 0,
-    axisY: 0,
-    direction: 0,
-    lastEventAt: 0,
-    lockedUntil: 0,
-  };
-}
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
@@ -192,15 +175,9 @@ function splitBodyContent(body) {
   return [left, right];
 }
 
-function getLeafStyle(side, index, originalStyle) {
-  const direction = side === 'left' ? -1 : 1;
-  const tier = Math.min(index, 8);
-  const angle = direction * (1.55 - Math.min(tier, 6) * 0.16);
+function getLeafStyle(index, originalStyle) {
   return {
     ...originalStyle,
-    '--rp-leaf-x': `${direction * tier * 4}px`,
-    '--rp-leaf-y': `${tier * 3}px`,
-    '--rp-leaf-rotate': `${angle.toFixed(2)}deg`,
     '--rp-leaf-delay': `${index * 70}ms`,
   };
 }
@@ -215,7 +192,7 @@ function decoratePanelNode(node, side, counter) {
       const index = counter.value++;
       return cloneElement(child, {
         className: `${child.props.className || ''} rotating-product-leaf`.trim(),
-        style: getLeafStyle(side, index, child.props.style),
+        style: getLeafStyle(index, child.props.style),
       });
     });
     return cloneElement(node, {}, children);
@@ -228,7 +205,7 @@ function decoratePanelNode(node, side, counter) {
         const index = counter.value++;
         return cloneElement(child, {
           className: `${child.props.className || ''} rotating-product-leaf`.trim(),
-          style: getLeafStyle(side, index, child.props.style),
+          style: getLeafStyle(index, child.props.style),
         });
       }
       return decoratePanelNode(child, side, counter);
@@ -239,7 +216,7 @@ function decoratePanelNode(node, side, counter) {
   const index = counter.value++;
   return cloneElement(node, {
     className: `${className} rotating-product-leaf`.trim(),
-    style: getLeafStyle(side, index, node.props.style),
+    style: getLeafStyle(index, node.props.style),
   });
 }
 
@@ -322,6 +299,7 @@ export default function RotatingProductShowcase({children}) {
   }, []);
 
   const updateOpenIndex = useCallback((index) => {
+    wheelRef.current = createWheelGestureState();
     openIndexRef.current = index;
     setOpenIndex(index);
   }, []);
@@ -600,7 +578,11 @@ export default function RotatingProductShowcase({children}) {
     rootRef.current?.querySelectorAll('.rotating-product-card').forEach((card, index) => {
       const distance = Math.abs(getCircularOffset(index, activeIndex, count));
       const isUnavailable = !isGridView && distance > 1;
-      card.inert = isUnavailable;
+      // A trackpad wheel transaction can remain targeted at this moving card.
+      // Making it inert mid-gesture can interrupt delivery until the pointer moves.
+      // aria-hidden and the summary's tabIndex already exclude distant cards;
+      // their learning panels remain display:none while collapsed.
+      card.inert = false;
       const summary = card.querySelector(':scope > .rotating-product-card-inner > .product-head');
       if (summary) summary.tabIndex = isUnavailable ? -1 : 0;
     });
@@ -691,110 +673,24 @@ export default function RotatingProductShowcase({children}) {
   };
 
   const handleWheel = useCallback((event) => {
-    if (
-      openIndexRef.current !== null
-      || gridViewRef.current
-      || gridSelectionRef.current
-      || event.ctrlKey
-    ) {
-      wheelRef.current = createWheelGestureState();
-      return;
-    }
-
-    const target = event.target instanceof Element ? event.target : null;
-
-    if (!target?.closest('.rotating-product-card')) {
-      wheelRef.current = createWheelGestureState();
-      return;
-    }
-
-    event.preventDefault();
-    event.stopPropagation();
-
-    const now = performance.now();
-    const gesture = wheelRef.current;
-    const scale = getWheelDeltaScale(event.deltaMode);
-    const deltaX = event.deltaX * scale;
-    const deltaY = event.deltaY * scale;
-
-    if (now < gesture.lockedUntil) {
-      gesture.lastEventAt = now;
-      gesture.lockedUntil = Math.max(
-        gesture.lockedUntil,
-        now + WHEEL_GESTURE_TIMEOUT,
-      );
-      return;
-    }
-
-    if (now - gesture.lastEventAt > WHEEL_GESTURE_TIMEOUT) {
-      gesture.amount = 0;
-      gesture.axis = null;
-      gesture.axisX = 0;
-      gesture.axisY = 0;
-      gesture.direction = 0;
-    }
-
-    gesture.axisX += deltaX;
-    gesture.axisY += deltaY;
-
-    if (!gesture.axis) {
-      if (
-        Math.abs(gesture.axisX) < WHEEL_AXIS_THRESHOLD
-        && Math.abs(gesture.axisY) < WHEEL_AXIS_THRESHOLD
-      ) {
-        gesture.lastEventAt = now;
-        return;
-      }
-
-      gesture.axis = event.shiftKey
-        || Math.abs(gesture.axisX) > Math.abs(gesture.axisY)
-        ? 'horizontal'
-        : 'vertical';
-    }
-
-    const delta = gesture.axis === 'horizontal'
-      ? (event.shiftKey ? deltaY : deltaX)
-      : deltaY;
-
-    if (!delta) {
-      gesture.lastEventAt = now;
-      return;
-    }
-
-    const direction = Math.sign(delta);
-
-    if (direction !== gesture.direction) {
-      gesture.amount = 0;
-      gesture.direction = direction;
-    }
-
-    gesture.amount += delta;
-
-    const threshold = gesture.axis === 'horizontal'
-      ? WHEEL_HORIZONTAL_THRESHOLD
-      : WHEEL_VERTICAL_THRESHOLD;
-
-    if (Math.abs(gesture.amount) < threshold) {
-      gesture.lastEventAt = now;
-      return;
-    }
-
-    move(direction);
-
-    wheelRef.current = {
-      ...createWheelGestureState(),
-      lastEventAt: now,
-      lockedUntil: now + WHEEL_COOLDOWN,
-    };
-  }, [move]);
+    handleCarouselWheel(event, {
+      gesture: wheelRef.current,
+      now: performance.now(),
+      disabled: count < 2
+        || openIndexRef.current !== null
+        || gridViewRef.current
+        || Boolean(gridSelectionRef.current),
+      move,
+    });
+  }, [count, move]);
 
   useEffect(() => {
     const stage = stageRef.current;
     if (!stage) return undefined;
 
-    stage.addEventListener('wheel', handleWheel, {passive: false});
+    stage.addEventListener('wheel', handleWheel, {passive: false, capture: true});
 
-    return () => stage.removeEventListener('wheel', handleWheel);
+    return () => stage.removeEventListener('wheel', handleWheel, {capture: true});
   }, [handleWheel]);
 
   const handlePointerDown = (event) => {
@@ -802,6 +698,7 @@ export default function RotatingProductShowcase({children}) {
 
     if (
       event.button !== 0
+      || openIndexRef.current !== null
       || gridViewRef.current
       || !target?.closest('.rotating-product-card')
       || target?.closest(
@@ -875,7 +772,9 @@ export default function RotatingProductShowcase({children}) {
     >
       <div className="rotating-showcase-toolbar">
         <p className="rotating-showcase-instructions">
-          {isGridView ? copy.gridInstructions : copy.instructions}
+          {isGridView
+            ? copy.gridInstructions
+            : openIndex !== null ? copy.expandedInstructions : copy.instructions}
         </p>
 
         <button

@@ -1,6 +1,7 @@
 ---
 description: Chapter 10 of the Seeed Physical AI Beginner's Course — what LeRobot is, leader/follower arm division of labor, the Robot and Teleoperator plugin architecture, the camera/CAN/arm data flow, and DM vs RS configuration differences.
 title: Chapter 10 - LeRobot and reBot Arm System Architecture
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_10/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

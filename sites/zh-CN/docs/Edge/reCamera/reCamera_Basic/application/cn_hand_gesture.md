@@ -13,10 +13,10 @@ sku: 102991897, 100029708, 108990120
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 18
 last_update:
-  date: 06/26/2026
+  date: 10/08/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-26'
-updatedAt: '2026-07-22'
+updatedAt: '2026-06-26'
 url: https://wiki.seeedstudio.com/cn/recamera_hand_gesture/
 ---
 
@@ -26,10 +26,10 @@ url: https://wiki.seeedstudio.com/cn/recamera_hand_gesture/
 
 本项目演示如何将 Google 官方的 **MediaPipe 手势识别套件** 完整移植到 **reCamera** 上，实现实时手势识别，并通过 UDP 将视频和识别结果流式传输到 PC 进行可视化。
 
-系统可以识别 **8 种手势类别**（None / Closed_Fist / Open_Palm / Pointing_Up / Thumb_Down / Thumb_Up / Victory / ILoveYou），同时输出 **21 个手部关键点** 以及 **左右手（handedness）** 信息，适用于以下应用场景：
+系统可以识别 **8 种手势类别**（None / Closed_Fist / Open_Palm / Pointing_Up / Thumb_Down / Thumb_Up / Victory / ILoveYou），同时输出 **21 个手部关键点** 以及 **左右手（handedness）** 信息。适用于以下应用场景：
 
 - **智能家居手势控制**：通过预设手势控制灯光、窗帘和家电开关，无需语音或手机 App。
-- **工业无接触交互**：戴手套或双手被占用的工人可以通过简单手势向设备发送指令。
+- **工业无接触交互**：工人戴手套或双手被占用时，可通过简单手势向设备发送指令。
 - **教育与展陈交互**：在科技馆或展览馆中，参观者可通过手势触发多媒体内容，获得沉浸式体验。
 - **无障碍辅助**：为听障或行动不便用户提供基于手势的设备控制入口。
 
@@ -40,7 +40,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_hand_gesture/
 
 要运行本演示，需要以下硬件：
 
-- **一台 reCamera 设备**（支持所有 reCamera 机型）
+- **一台 reCamera 设备**（支持所有 reCamera 型号）
 - **一台 PC**（用于运行 Python 接收端进行可视化；必须与 reCamera 处于同一局域网）
 
 你可以根据部署需求选择 **任意版本的 reCamera**：
@@ -135,7 +135,7 @@ CVIMODEL (cv181x)
 > **注意**：INT8 量化后，`world63`（世界坐标关键点）的精度有一定损失（cos=0.81），但端到端的手势分类结果与 TFLite 保持一致（类别判断可靠）。如果你的应用对世界坐标精度高度敏感，建议使用该模型的 BF16 版本。
 
 
-## 构建演示程序
+## 构建 Demo
 
 要构建本示例，你需要：
 
@@ -190,13 +190,13 @@ scp hand_gesture hand_detector_cv181x_int8.cvimodel hand_landmarks_detector_cv18
 ### 步骤 3：配置 reCamera
 
 :::warning
-在运行 C++ 程序之前，必须先停止默认的 Node-RED 服务，因为它们会占用摄像头资源。请通过 SSH 运行以下命令：
+在运行 C++ 程序之前，必须先停止默认的 Node-RED 服务，因为它们会占用相机资源。请通过 SSH 运行以下命令：
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### 步骤 4：在 reCamera 上运行可执行文件
@@ -219,15 +219,15 @@ chmod +x hand_gesture
 | `min_score` | 手掌检测阈值 | `0.5` |
 | `udp_ip` | PC 的 IP 地址（启用 UDP 流式传输） | - |
 | `udp_port` | UDP 端口号 | - |
-| `jpeg_w` | JPEG 流视频帧宽度 | `320` |
-| `jpeg_h` | JPEG 流视频帧高度 | `240` |
-| `jpeg_fps` | JPEG 流视频帧率 | `10` |
+| `jpeg_w` | JPEG 流式帧宽度 | `320` |
+| `jpeg_h` | JPEG 流式帧高度 | `240` |
+| `jpeg_fps` | JPEG 流式帧率 | `10` |
 | `skip_multi` | 多手（≥2）时，每 N 帧运行一次推理 | `3` |
-| `skip_single` | 单手时，每帧运行一次推理 | `1` |
+| `skip_single` | 单手时，每帧运行推理 | `1` |
 
 #### 示例命令
 
-**基础用法（无 UDP 流，仅本地推理）**：
+**基础用法（无 UDP 流式传输，仅本地推理）**：
 
 ```bash
 sudo ./hand_gesture \
@@ -252,13 +252,13 @@ sudo ./hand_gesture \
 ```
 
 :::note
-1. 请将 `192.168.XX.XX` 替换为与你的 reCamera 处于同一网络的 PC 实际 IP 地址。仅当同时提供 `udp_ip` 和 `udp_port` 时才会启用 UDP 流式传输。
+1. 请将 `192.168.XX.XX` 替换为与你的 reCamera 处于同一网络的 PC 实际 IP 地址。只有同时提供 `udp_ip` 和 `udp_port` 时才会启用 UDP 流式传输。
 2. 如果程序显示 “[Heartbeat] Before the first retrieveFrame(RGB888) call...” 后卡住，请重启 reCamera。
 :::
 
 ### 步骤 5：在 PC 上运行 Python 接收端
 
-在 PC 上，确保已安装所需的 Python 库：
+在你的电脑上，确保已安装所需的 Python 库：
 
 ```bash
 pip install opencv-python numpy
@@ -271,7 +271,7 @@ cd sscma-example-sg200x/solutions/sesg-project/hand_gesture
 python3 tools/udp_receiver.py 5001
 ```
 
-PC 端会显示一个实时视频窗口，包括：
+电脑端会显示一个实时视频窗口，包括：
 
 - **JPEG 视频流**
 - **手掌检测框**（蓝色矩形）
@@ -282,7 +282,7 @@ PC 端会显示一个实时视频窗口，包括：
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/hand_gesture/test.png" />
 </div>
-<p align="center">PC 端实时手势识别结果</p>
+<p align="center">电脑端实时手势识别结果</p>
 
 ## 预期输出
 
@@ -314,7 +314,7 @@ PC 端会显示一个实时视频窗口，包括：
 [LB-DIAG] #2 canvas 192x192: nonzero=82944 min=0 max=255 mean=81.8
 ```
 
-> **注意**：手掌模型需要 192×192 的输入，这低于 VPSS 的最小缩放分辨率。因此，CH0 使用 640×480（VPSS 支持），模型在内部通过软件 letterbox 将其缩放到 192×192。
+> **注意**：palm 模型需要 192×192 的输入，这低于 VPSS 的最小缩放分辨率。因此，CH0 使用 640×480（VPSS 支持），模型在内部通过软件 letterbox 将其缩放到 192×192。
 
 ### 摄像头访问错误
 
@@ -325,10 +325,10 @@ PC 端会显示一个实时视频窗口，包括：
 
 ### UDP 连接失败
 
-如果 PC 未接收到数据：
+如果电脑未收到数据：
 
-- 确认 PC 和 reCamera 在同一网络中
-- 检查 PC 上的防火墙设置
+- 确认电脑和 reCamera 在同一网络中
+- 检查电脑上的防火墙设置
 - 确保 UDP 端口未被阻塞
 - 使用 `ping` 测试设备之间的连通性
 

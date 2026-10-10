@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 17 do Curso para Iniciantes em IA Física da Seeed — inferência em robô real, avaliação e iteração de dados: fluxo de dados de inferência, pré-processamento e desnormalização, início da inferência, execução de blocos de ações, segurança, avaliação da taxa de sucesso, teste de generalização, análise de falhas e coleta de dados orientada por falhas.'
 title: Capítulo 17 - Inferência em Robô Real, Avaliação e Iteração de Dados
+hide_title: true
 keywords:
   - reBot
   - ACT
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_17/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

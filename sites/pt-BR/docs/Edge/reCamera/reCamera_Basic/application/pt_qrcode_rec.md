@@ -11,10 +11,10 @@ slug: /recamera_qrcode_udp
 sku: 102991897, 100029708, 108990120
 sidebar_position: 17
 last_update:
-  date: 07/08/2026
+  date: 10/08/2026
   author: QiYao Lin
 createdAt: '2026-06-15'
-updatedAt: '2026-07-22'
+updatedAt: '2026-07-08'
 url: https://wiki.seeedstudio.com/pt-br/recamera_qrcode_udp/
 ---
 
@@ -36,7 +36,7 @@ Este exemplo demonstra como configurar um **sistema de reconhecimento de código
 
 ### Modo de Separação entre Fluxo de Vídeo + Resultado de Detecção de Código QR
 
-Este exemplo adota uma arquitetura que separa a "transmissão de vídeo em tempo real" e a "consulta assíncrona de resultados de detecção de código QR". O lado da reCamera é responsável por capturar imagens da câmera, enviar o fluxo de vídeo RTSP e executar uma thread separada de detecção de código QR dentro do dispositivo. O lado do PC obtém o vídeo em tempo real via RTSP e, simultaneamente, acessa os resultados mais recentes de detecção de código QR por meio de uma interface HTTP.
+Este exemplo adota uma arquitetura que separa a "transmissão de vídeo em tempo real" da "consulta assíncrona de resultados de detecção de código QR". O lado da reCamera é responsável por capturar imagens da câmera, enviar o fluxo de vídeo RTSP e executar uma thread separada de detecção de código QR dentro do dispositivo. O lado do PC obtém o vídeo em tempo real via RTSP e, simultaneamente, acessa os resultados mais recentes de detecção de código QR por meio de uma interface HTTP.
 
 O processo de reconhecimento em tempo real é o seguinte:
 
@@ -62,7 +62,7 @@ reCamera
         http://<device-ip>:8080/api/qr/latest
 ```
 
-Esse design desacopla a transmissão de vídeo de alta taxa em tempo real da detecção de código QR, que é relativamente demorada. O fluxo de vídeo RTSP pode manter saída contínua, enquanto a thread de detecção de código QR processa apenas o quadro mais recente. Mesmo que a detecção de código QR leve muito tempo, isso não causará travamentos no vídeo nem acúmulo na fila de detecção.
+Esse design desacopla a transmissão de vídeo de alta taxa em tempo real da detecção de código QR, que é relativamente demorada. O fluxo de vídeo RTSP pode manter saída contínua, enquanto a thread de detecção de código QR processa apenas o quadro mais recente. Mesmo que a detecção de código QR leve muito tempo, isso não causará travamentos de vídeo ou acúmulo na fila de detecção.
 
 ## Configuração da Demo
 
@@ -92,7 +92,7 @@ git clone https://github.com/yyling0101-a11y/qrcode_rec.git
 cd /qrcode_rec/
 ```
 
-O diretório do repositório após o clone será semelhante a isto:
+O diretório do repositório após o clone terá a seguinte aparência:
 ```text
 (base) yylin@LAPTOP-TI348HL9:~/qrcode_rec$ tree -L 2 -I "build"
 .
@@ -123,7 +123,7 @@ O diretório do repositório após o clone será semelhante a isto:
     └── requirements.txt
 ```
 
-O diretório `main` contém o código-fonte para rodar na reCamera, e `recamera_qr_win_client` contém o código-fonte para visualização de resultados a ser executado em dispositivos x86. Antes de compilar, você precisa modificar o diretório especificado no arquivo `CMakeLists.txt` no diretório principal para apontar para o diretório onde você descompactou o pacote pré-compilado baixado na etapa anterior.
+O diretório `main` contém o código-fonte para rodar na reCamera, e `recamera_qr_win_client` contém o código-fonte para visualização de resultados a ser executado em dispositivos x86. Antes de compilar, você precisa modificar o diretório especificado no arquivo `CMakeLists.txt` no diretório main para apontar para o diretório onde você descompactou o pacote pré-compilado baixado na etapa anterior.
 
 Inicie a compilação:
 ```bash
@@ -148,9 +148,9 @@ Antes de executar o programa em C++, você deve parar os serviços padrão do No
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### 3. Executar o Arquivo Executável na reCamera
@@ -240,10 +240,10 @@ python3 recamera_qr_pyqt_viewer.py --rtsp rtsp://192.168.4.5:8554/live0 --qr-url
 
 #### Parâmetros do Receptor Python
 
-| Parâmetro | Descrição | Padrão |
+| Parameter | Description | Default |
 |-----------|-------------|---------|
-| `--rtsp` | Endereço RTSP | `192.168.4.5` |
-| `--qr-url` | URL para obter resultados de reconhecimento | `http://192.168.4.5:8080/api/qr/latest` |
+| `--rtsp` | RTSP address | `192.168.4.5` |
+| `--qr-url` | URL to get recognition results | `http://192.168.4.5:8080/api/qr/latest` |
 
 
 ### Na janela do receptor em Python

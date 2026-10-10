@@ -1,6 +1,7 @@
 ---
 description: Capítulo 4 do Curso para Iniciantes em IA Física da Seeed — fundamentos de braços robóticos e atuadores de junta, incluindo faixas de segurança, estrutura, redutores, encoders e modos de controle de motores DM/RS.
 title: Capítulo 4 - Fundamentos de Braços Robóticos e Atuadores de Junta
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -27,8 +28,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_4/
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
 
-# 
-
 <div className="rebot-page">
 
 <section className="doc-hero">
@@ -46,6 +45,26 @@ import 'katex/dist/katex.min.css';
     </div>
   </div>
 </section>
+
+### Hardware necessário para este estágio
+
+O que preparar para este estágio. A lista completa de todos os estágios está no [capítulo 3](/pt-br/rebot_physical_ai_course_chapter_3/).
+
+**Unidade de controle principal**
+
+| Item | Comprar | Qtd. |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+Também é necessário um computador de mesa ou notebook: Ubuntu 22.04, GTX 4080 ou superior com 12 GB+ de VRAM e 16 GB+ de RAM.
+
+**Para este estágio**
+
+| Item | Comprar | Qtd. |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+
 
 ## 4.1 Faixa de Segurança e Espaço de Trabalho do Braço Robótico
 

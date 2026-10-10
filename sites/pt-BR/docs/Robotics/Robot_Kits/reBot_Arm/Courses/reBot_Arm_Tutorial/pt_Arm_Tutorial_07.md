@@ -1,6 +1,7 @@
 ---
 description: Capítulo 7 do Curso para Iniciantes em IA Física da Seeed — MotorBridge, a biblioteca de controle de motores CAN entre diferentes fabricantes, e como controlar motores DM e RS via web e Python.
 title: Capítulo 7 - Biblioteca de Controle de Motores MotorBridge
+hide_title: true
 keywords:
   - reBot
   - MotorBridge
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_7/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

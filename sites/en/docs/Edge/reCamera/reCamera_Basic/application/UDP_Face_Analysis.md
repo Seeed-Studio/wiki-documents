@@ -14,7 +14,7 @@ slug: /recamera_udp_face_analysis
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899,108990119,108990120,E20245041001,100018917, 100041077, 100029708, 100074316
 sidebar_position: 12
 last_update:
-  date: 04/30/2026
+  date: 10/08/2026
   author: Samuel
 createdAt: '2026-04-30'
 updatedAt: '2026-06-12'
@@ -97,9 +97,9 @@ Before running the C++ program, you must stop the default Node-RED services as t
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### 3. Run the Executable on ReCamera

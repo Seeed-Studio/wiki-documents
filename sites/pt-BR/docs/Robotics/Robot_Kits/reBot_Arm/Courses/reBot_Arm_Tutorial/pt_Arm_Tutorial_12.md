@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 12 do Curso para Iniciantes em IA Física da Seeed — conjuntos de dados de robôs e design de tarefas: o que é um Episódio, o que há em um registro de dados, carimbos de tempo e sincronização, condições de início/fim, consistência vs diversidade, quantidade vs qualidade de dados e um exemplo prático de criação de dados.'
 title: Capítulo 12 - Conjuntos de Dados de Robôs e Design de Tarefas
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_12/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 
