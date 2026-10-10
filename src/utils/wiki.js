@@ -1,14 +1,6 @@
 const docList = [
   [
     {
-      "path": "/jetson/recomputer_rugged_j401/industrial_vision",
-      "image": "https://files.seeedstudio.com/wiki/rugged/rugged_banner.png",
-      "title": "reComputer Rugged J401 for Industrial Vision",
-      "date": "2026-09-20",
-      "title_cn": "面向工业视觉的 reComputer Rugged J401",
-      "title_ja": "産業用ビジョン向け reComputer Rugged J401",
-      "title_es": "reComputer Rugged J401 para Visión Industrial",
-      "title_pt": "reComputer Rugged J401 para Visão Industrial"
       "path": "/sensecraft_robotics_rebot_arm_102_b601_dm",
       "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp",
       "title": "reBot Arm 102 + B601 DM Training Guide",
@@ -53,7 +45,7 @@ const docList = [
   ],
   [
     {
-      "path": "/ai_robotics_recomputer_rugged_j401_cv_demo",
+      "path": "/jetson/recomputer_rugged_j401/industrial_vision",
       "image": "https://files.seeedstudio.com/wiki/rugged/rugged_banner.png",
       "title": "reComputer Rugged J401 for Industrial Vision",
       "date": "2026-09-20",
