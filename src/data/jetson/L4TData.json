@@ -11,11 +11,11 @@
     {
         "product": "j4011s",
         "l4t": "39.2.0",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAcA60i9AaiS7uPpL0EDCEYAcP_CYT1i_Uo6IXvO8hpOSQ",
         "mirrorlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1",
-        "filename": "mfi_recomputer-super-orin-nx-8g-7.2.0-39.2.0-2026-06-19.tar.gz",
+        "filename": "mfi_recomputer-super-orin-nx-8g-j401-7.2.0-39.2.0-2026-07-31.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "7613332f8eeb315a0d9d51744a8f0a9e8e11e92e091d2a06ad609235a54f7c72"
+        "sha256": "021ADA2CFD34E9C876F57E50C3448B3C"
     },
     {
         "product": "j3011s",
