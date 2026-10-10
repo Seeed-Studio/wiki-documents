@@ -135,6 +135,7 @@ function extractData() {
             img: project.img,
             URL: {},
             category: {},
+            description: {},
             lastUpdated: project.lastUpdated,
             author: project.author
           });
@@ -145,6 +146,10 @@ function extractData() {
         existing.name[lang] = project.name;
         existing.URL[lang] = project.URL;
         existing.category[lang] = project.category;
+
+        if (project.description) {
+          existing.description[lang] = project.description;
+        }
 
         if (!existing.img && project.img) {
           existing.img = project.img;

@@ -1,0 +1,169 @@
+#!/usr/bin/env node
+// 自动从 docs/Edge/NVIDIA_Jetson 的产品目录生成缺失的产品条目。
+// 运行: node scripts/generate-jetson-products.js
+// 输出: src/components/jetson/config.products.auto.ts（index.tsx 合并使用）
+const fs = require('fs');
+const path = require('path');
+
+const JETSON_DIR = 'sites/en/docs/Edge/NVIDIA_Jetson';
+const OUT = 'src/components/jetson/config.products.auto.ts';
+
+// 多语言文档目录与站点前缀：英文文档作为产品识别来源，其余语言通过 slug 匹配。
+const LANG_DOCS_DIRS = {
+  zh: 'sites/zh-CN/docs/Edge/NVIDIA_Jetson',
+  ja: 'sites/ja/docs/Edge/NVIDIA_Jetson',
+  es: 'sites/es/docs/Edge/NVIDIA_Jetson',
+  pt: 'sites/pt-BR/docs/Edge/NVIDIA_Jetson'
+};
+const LANG_URL_PREFIX = {
+  zh: '/cn',
+  ja: '/ja',
+  es: '/es',
+  pt: '/pt-br'
+};
+
+const FM_RE = /^---\s*\n([\s\S]*?)\n---/;
+const field = (fm, name) => {
+  const m = fm.match(new RegExp('^' + name + ':\\s*(.+)$', 'm'));
+  return m ? m[1].trim().replace(/^['"]|['"]$/g, '') : '';
+};
+
+const DENY = /_bk\.|faq|warranty|assembly|configure|pcn\.|serial|spi|rtl|rm520|em12|how_to|overview_of/i;
+const ANCHOR_PREF = [/getting_start/i, /intro/i, /flash/i];
+const INTERFACE_RE = /hardware.*interface|interfaces_usage|interface_usage|usage/i;
+const FLASH_RE = /flash/i;
+
+function walk(dir, applyDenyFilter = true) {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap(d => {
+    const p = path.join(dir, d.name);
+    if (d.isDirectory()) return walk(p, applyDenyFilter);
+    if (/\.(md|mdx)$/.test(d.name) && (!applyDenyFilter || !DENY.test(d.name))) return [p];
+    return [];
+  });
+}
+
+// 系列分类关键词表：新增产品系列时在此加一行即可（匹配 reComputer_Jetson_Series 下的目录名）。
+const SERIES_KEYWORDS = {
+  robotics: [/robotics/i],
+  rugged: [/rugged/i],
+  industrial: [/industrial/i],
+  super: [/super/i],
+  mini: [/mini/i],
+  classic: [/classic/i],
+};
+
+function categoryOf(rel) {
+  if (rel.startsWith('Carrier_Boards/')) {
+    const b = rel.split('/')[1] || '';
+    if (/mini/i.test(b)) return 'mini';
+    if (/robotics/i.test(b)) return 'robotics';
+    return 'carrier';
+  }
+  if (rel.startsWith('reServer_Jetson_Series/')) return 'reserver';
+  if (rel.startsWith('reComputer_Jetson_Series/')) {
+    for (const [cat, patterns] of Object.entries(SERIES_KEYWORDS)) {
+      if (patterns.some(p => p.test(rel))) return cat;
+    }
+    return 'other';
+  }
+  return 'other';
+}
+
+// 产品目录 = 直接含候选文档的目录（排除 Application / JetPack_7_2）
+const productDirs = new Set();
+walk(JETSON_DIR).forEach(f => {
+  const rel = path.relative(JETSON_DIR, f).replace(/\\/g, '/');
+  if (rel.startsWith('Application/') || rel.startsWith('JetPack_7_2/')) return;
+  productDirs.add(path.dirname(f));
+});
+
+// 已手写产品中的 wiki URL（正则提取源码，避免 require TS）
+const prodSrc = fs.readFileSync('src/components/jetson/productData.ts', 'utf8');
+const curatedSlugs = new Set([...prodSrc.matchAll(/createLocalizedWikiUrl\('([^']+)'\)/g)].map(m => m[1]));
+
+const makeUrl = slug => `https://wiki.seeedstudio.com${slug.startsWith('/') ? slug : '/' + slug}/`;
+const normalizeSlug = slug => `/${slug.replace(/^\/+|\/+$/g, '')}`;
+
+// 建立翻译文档 slug 索引：仅匹配确实存在的本地语言文档，不无条件拼接语言前缀。
+const localizedSlugs = Object.fromEntries(Object.entries(LANG_DOCS_DIRS).map(([lang, dir]) => {
+  const slugs = new Set();
+  if (fs.existsSync(dir)) {
+    walk(dir, false).forEach(file => {
+      const content = fs.readFileSync(file, 'utf8');
+      const fm = (content.match(FM_RE) || [])[1] || '';
+      const slug = field(fm, 'slug');
+      if (slug) slugs.add(normalizeSlug(slug));
+    });
+  } else {
+    console.warn(`[WARN] 多语言目录不存在，${lang} 链接将回退英文: ${dir}`);
+  }
+  return [lang, slugs];
+}));
+
+const makeLocalizedUrls = slug => {
+  const normalized = normalizeSlug(slug);
+  const enUrl = makeUrl(normalized);
+  const urls = { en: enUrl };
+  for (const [lang, prefix] of Object.entries(LANG_URL_PREFIX)) {
+    urls[lang] = localizedSlugs[lang].has(normalized)
+      ? makeUrl(`${prefix}${normalized}`)
+      : enUrl;
+  }
+  return urls;
+};
+
+const entries = [];
+[...productDirs].sort().forEach(dir => {
+  const rel = path.relative(JETSON_DIR, dir).replace(/\\/g, '/');
+  const files = fs.readdirSync(dir).filter(n => /\.(md|mdx)$/.test(n) && !DENY.test(n));
+  if (!files.length) return;
+
+  const read = f => {
+    const c = fs.readFileSync(path.join(dir, f), 'utf8');
+    const fm = (c.match(FM_RE) || [])[1] || '';
+    return { fm, title: field(fm, 'title'), image: field(fm, 'image'), slug: field(fm, 'slug'), file: f };
+  };
+  const docs = files.map(read);
+
+  const anchor = (ANCHOR_PREF.map(r => docs.find(d => r.test(d.file))).find(Boolean)) || docs[0];
+  if (!anchor || !anchor.slug) return;
+  if (curatedSlugs.has(makeUrl(anchor.slug))) return; // 手工条目已包含
+
+  const usageDoc = docs.find(d => INTERFACE_RE.test(d.file) && d.slug) || anchor;
+  const flashDoc = docs.find(d => FLASH_RE.test(d.file) && d.slug) || anchor;
+
+  const cat = categoryOf(rel);
+  const base = path.basename(dir).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const value = cat + '-' + base;
+
+  let label = (anchor.title || '').replace(/^(getting started with|getting started:|intro(duction)? to|about)\s+/i, '')
+    .replace(/\s+(getting started|intro|introduction)$/i, '');
+  if (!label) label = path.basename(dir);
+
+  entries.push({
+    value,
+    label,
+    l4t: [],
+    img: anchor.image || '',
+    interfaceUsage: makeLocalizedUrls(usageDoc.slug),
+    flashUrl: makeLocalizedUrls(flashDoc.slug),
+    category: cat
+  });
+});
+
+const ts = `// AUTO-GENERATED by scripts/generate-jetson-products.js — DO NOT EDIT MANUALLY.
+// 运行: node scripts/generate-jetson-products.js
+// 数据来源: sites/en/docs/Edge/NVIDIA_Jetson/{Carrier_Boards,reComputer_Jetson_Series,reServer_Jetson_Series,Other_Devices}
+import type { ProductOption } from './productData';
+
+export const productOptionsAuto: ProductOption[] = ${JSON.stringify(entries, null, 2)};
+`;
+fs.writeFileSync(OUT, ts);
+console.log(`generated ${entries.length} auto products -> ${OUT}`);
+entries.forEach(e => console.log('  ', e.category, '|', e.label, '|', e.flashUrl.en));
+const unclassified = entries.filter(e => e.category === 'other');
+if (unclassified.length) {
+  console.warn(`\n⚠️  ${unclassified.length} 个产品未精确分类（归入 other）：`);
+  unclassified.forEach(e => console.warn('   - ' + e.label));
+  console.warn('   如需精确分类，请在 scripts/generate-jetson-products.js 的 SERIES_KEYWORDS（或 categoryOf）中补一条规则。');
+}
