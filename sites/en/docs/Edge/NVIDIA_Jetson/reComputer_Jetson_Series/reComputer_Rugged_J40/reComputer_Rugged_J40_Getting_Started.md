@@ -255,7 +255,7 @@ Both configurations use the same rugged enclosure and industrial interface set. 
 
 For connector pinouts, interface configuration, and expansion instructions, continue to the [Hardware & I/O guide](/jetson/recomputer_rugged_j401/hardware_and_interface_usage/).
 
-## Flash JetPack
+## Flash JetPack {#flash-jetpack}
 
 Follow the workflow in order. The numbered layout keeps the host preparation, recovery-mode operation, and terminal commands together in one place.
 
@@ -358,7 +358,7 @@ Wait until the terminal reports that flashing completed successfully. Then disco
 </section>
 </div>
 
-## Applications
+## Applications {#applications}
 
 Explore application examples that combine reComputer Rugged J40 hardware with deployable edge AI workflows. New examples can be added to this collection as they become available.
 

@@ -11,15 +11,24 @@ keywords:
   - RTSP
   - MediaPipe
 image: https://files.seeedstudio.com/wiki/rugged/rugged_banner.png
-slug: /ai_robotics_recomputer_rugged_j401_cv_demo
+slug: /jetson/recomputer_rugged_j401/industrial_vision
+aliases:
+  - /ai_robotics_recomputer_rugged_j401_cv_demo
 sku: 100046979,100002634
 last_update:
-  date: 09/20/2026
+  date: 09/30/2026
   author: Zibo
 createdAt: '2026-09-20'
-updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/es/ai_robotics_recomputer_rugged_j401_cv_demo/
+updatedAt: '2026-09-30'
+url: https://wiki.seeedstudio.com/es/jetson/recomputer_rugged_j401/industrial_vision/
 ---
+
+import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
+import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
+
+# reComputer Rugged J401 para Visión Industrial
+
+<JetsonProductDocNav {...ruggedJ401DocNav} />
 
 ## Introducción
 
@@ -389,7 +398,7 @@ Añade fuentes RTSP adicionales a `HUB_EXTRA_CAMERAS` en `/etc/seg-demo/visual-h
 - [EfficientTAM](https://github.com/yformer/EfficientTAM)
 - [Depth Anything V2 Metric Indoor Small](https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf)
 - [MediaPipe Face Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker)
-- [Primeros pasos con reComputer Rugged J40](https://wiki.seeedstudio.com/es/ai_robotics_recomputer_rugged_j40_getting_started/)
+- [Primeros pasos con reComputer Rugged J40](/jetson/recomputer_rugged_j401/getting_started/)
 
 ## Soporte técnico y debate sobre el producto
 

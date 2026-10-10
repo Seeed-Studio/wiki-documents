@@ -1,7 +1,15 @@
 import React, {useEffect} from 'react';
 import Link from '@docusaurus/Link';
 import {useLocation} from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import '/src/css/jetson-product-wiki-style.css';
+
+function localize(value, locale) {
+  if (value && typeof value === 'object') {
+    return value[locale] || value.en || '';
+  }
+  return value;
+}
 
 function normalizePath(path = '') {
   return path.split('#')[0].replace(/\/+$/, '');
@@ -18,6 +26,8 @@ export default function JetsonProductDocNav({
   ariaLabel = 'Jetson product documentation',
 }) {
   const {pathname, hash} = useLocation();
+  const {i18n} = useDocusaurusContext();
+  const locale = i18n.currentLocale || 'en';
   const currentPath = normalizePath(pathname);
 
   const pathMatches = (target) => currentPath.endsWith(normalizePath(target));
@@ -78,7 +88,7 @@ export default function JetsonProductDocNav({
   }, [pathname, hash]);
 
   return (
-    <nav className="jetson-product-doc-nav" aria-label={ariaLabel}>
+    <nav className="jetson-product-doc-nav" aria-label={localize(ariaLabel, locale) || 'Jetson product documentation'}>
       {items.map((item) => {
         const sharesApplicationTarget =
           application && normalizePath(item.to) === normalizePath(application.to);
@@ -91,8 +101,8 @@ export default function JetsonProductDocNav({
             className={`jetson-product-doc-nav-item${active ? ' active' : ''}`}
             aria-current={active ? 'page' : undefined}
           >
-            <span className="jetson-product-doc-nav-label">{item.label}</span>
-            <small>{item.hint}</small>
+            <span className="jetson-product-doc-nav-label">{localize(item.label, locale)}</span>
+            <small>{localize(item.hint, locale)}</small>
           </Link>
         );
       })}
@@ -103,8 +113,8 @@ export default function JetsonProductDocNav({
           className={`jetson-product-doc-nav-item jetson-product-doc-nav-application${applicationActive ? ' active' : ''}`}
           aria-current={applicationActive ? 'page' : undefined}
         >
-          <span className="jetson-product-doc-nav-label">{application.label}</span>
-          <small>{application.hint}</small>
+          <span className="jetson-product-doc-nav-label">{localize(application.label, locale)}</span>
+          <small>{localize(application.hint, locale)}</small>
         </Link>
       )}
     </nav>

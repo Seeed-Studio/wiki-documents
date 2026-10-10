@@ -1,5 +1,5 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-09-28 17:15:42 (北京时间)
+// 生成时间: 2026-10-10 14:01:58 (北京时间)
 // 多语言页面: 2546 个
 
 (function() {
@@ -2081,21 +2081,21 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_rugged_j401_cv_demo": [
+  "/jetson/recomputer_rugged_j401/industrial_vision": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage": [
+  "/jetson/recomputer_rugged_j401/hardware_and_interface_usage": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_rugged_j40_getting_started": [
+  "/jetson/recomputer_rugged_j401/getting_started": [
     "cn",
     "en",
     "es",
