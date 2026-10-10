@@ -1760,6 +1760,9 @@ html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
 }
 
 .robotics-page .robotics-search-play {
+  --rp-search-scene-duration: 16s;
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1770,22 +1773,78 @@ html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
   transition: opacity 220ms ease, visibility 220ms ease;
 }
 
-.robotics-page .robotics-search-mini-float {
-  --rp-mini-tilt: 0deg;
+.robotics-page .robotics-search-duck-track {
+  position: absolute;
+  inset: 0;
+  bottom: 0;
+  z-index: 3;
+  overflow: hidden;
+  overflow: clip;
+  pointer-events: none;
+}
+
+.robotics-page .robotics-search-duck-glide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 100%;
+  animation: rpSearchDuckGlide var(--rp-search-scene-duration) linear infinite;
+}
+
+.robotics-page .robotics-search-duck-pose {
+  display: block;
+  transform-origin: 50% 92%;
+  animation: rpSearchDuckPose var(--rp-search-scene-duration) cubic-bezier(0.45, 0, 0.25, 1) infinite;
+}
+
+.robotics-page .robotics-search-duck-look {
+  display: block;
+  transform-origin: 58% 24%;
+  animation: rpSearchDuckLook var(--rp-search-scene-duration) ease-in-out infinite;
+}
+
+.robotics-page .robotics-search-duck {
+  display: block;
+  height: 4.25rem;
+  width: auto;
+  max-width: 6.6rem;
+  object-fit: contain;
+}
+
+.robotics-page .robotics-search-mini-hit {
+  --rp-mini-hit-distance: 1.35rem;
+  --rp-mini-hit-tilt: 18deg;
   display: block;
   transform-origin: 50% 100%;
-  animation: rpSearchMiniFloat 4.8s ease-in-out infinite;
+}
+
+.robotics-page .robotics-search-mini-hit--rs {
+  animation: rpSearchMiniHitRS var(--rp-search-scene-duration) cubic-bezier(0.34, 1.2, 0.64, 1) infinite;
+}
+
+.robotics-page .robotics-search-mini-hit--reachy {
+  --rp-mini-hit-distance: 1.5rem;
+  --rp-mini-hit-tilt: 20deg;
+  animation: rpSearchMiniHitReachy var(--rp-search-scene-duration) cubic-bezier(0.34, 1.2, 0.64, 1) infinite;
+}
+
+.robotics-page .robotics-search-mini-float {
+  --rp-mini-tilt: 0deg;
+  position: relative;
+  z-index: 1;
+  display: block;
+  transform-origin: 50% 100%;
+  transform: rotate(var(--rp-mini-tilt));
 }
 
 .robotics-page .robotics-search-mini-float--rs {
   --rp-mini-tilt: -2.5deg;
-  animation-duration: 4.4s;
 }
 
 .robotics-page .robotics-search-mini-float--reachy {
   --rp-mini-tilt: 2deg;
-  animation-duration: 5.3s;
-  animation-delay: -1.5s;
 }
 
 .robotics-page .robotics-search-mini {
@@ -1794,7 +1853,7 @@ html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
   height: 3.9rem;
   max-width: 6.25rem;
   object-fit: contain;
-  background: rgba(255, 255, 255, 0.96);
+  background: #ffffff;
   border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 12px;
   box-shadow:
@@ -1810,10 +1869,6 @@ html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
     0 5px 14px rgba(15, 23, 42, 0.08);
 }
 
-.robotics-page .robotics-search:focus-within .robotics-search-play {
-  opacity: 0.55;
-}
-
 .robotics-page .robotics-search.is-open {
   z-index: 60;
 }
@@ -1826,6 +1881,7 @@ html[data-theme='dark'] .kit-index-grid a { background: var(--rp-card-bg); }
 .robotics-page .robotics-search-shell {
   --rp-search-angle: 0deg;
   position: relative;
+  z-index: 1;
   isolation: isolate;
   padding: 2px;
   background:
@@ -2158,13 +2214,117 @@ html[data-theme='dark'] .robotics-page .robotics-search-results span {
   color: #aaa4b2;
 }
 
-@keyframes rpSearchMiniFloat {
+@keyframes rpSearchDuckGlide {
+  from { transform: translate3d(-100%, 0, 0); }
+  to { transform: translate3d(100%, 0, 0); }
+}
+
+@keyframes rpSearchDuckPose {
   0%,
-  100% {
-    transform: translateY(0) rotate(var(--rp-mini-tilt));
+  18% {
+    transform: translate3d(0, 0.16rem, 0) scaleY(0.94) rotate(1.5deg);
   }
-  50% {
-    transform: translateY(-0.42rem) rotate(calc(var(--rp-mini-tilt) * -1));
+  23%,
+  45% {
+    transform: translate3d(0, 0, 0) scaleY(1) rotate(0deg);
+  }
+  50%,
+  68% {
+    transform: translate3d(0, 0.16rem, 0) scaleY(0.94) rotate(1.5deg);
+  }
+  75%,
+  95% {
+    transform: translate3d(0, 0, 0) scaleY(1) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0.16rem, 0) scaleY(0.94) rotate(1.5deg);
+  }
+}
+
+@keyframes rpSearchDuckLook {
+  0%,
+  58%,
+  72%,
+  100% {
+    transform: perspective(260px) rotateY(0deg) translate3d(0, 0, 0) scale(1);
+  }
+  62%,
+  68% {
+    transform: perspective(260px) rotateY(-9deg) translate3d(-0.04rem, 0.02rem, 0) scale(1.02);
+  }
+}
+
+@keyframes rpSearchMiniHitRS {
+  0%,
+  34%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  36% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * -0.2), 0, 0) rotate(-4deg);
+  }
+  39% {
+    transform: translate3d(var(--rp-mini-hit-distance), 0, 0) rotate(var(--rp-mini-hit-tilt));
+  }
+  43% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * -0.55), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * -0.65));
+  }
+  47% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * 0.68), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * 0.5));
+  }
+  51% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * -0.32), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * -0.3));
+  }
+  55% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * 0.38), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * 0.26));
+  }
+  60% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * 0.15), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * 0.1));
+  }
+  65%,
+  90% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * 0.74), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * 0.78));
+  }
+  97%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+@keyframes rpSearchMiniHitReachy {
+  0%,
+  42%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  44% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * -0.2), 0, 0) rotate(-4deg);
+  }
+  47% {
+    transform: translate3d(var(--rp-mini-hit-distance), 0, 0) rotate(var(--rp-mini-hit-tilt));
+  }
+  51% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * -0.55), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * -0.65));
+  }
+  55% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * 0.68), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * 0.5));
+  }
+  59% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * -0.32), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * -0.3));
+  }
+  63% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * 0.38), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * 0.26));
+  }
+  68% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * 0.15), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * 0.1));
+  }
+  73%,
+  92% {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * 0.74), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * 0.78));
+  }
+  97%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
   }
 }
 
@@ -2178,11 +2338,32 @@ html[data-theme='dark'] .robotics-page .robotics-search-results span {
     height: 2.95rem;
     max-width: 4.5rem;
   }
+  .robotics-page .robotics-search-duck {
+    height: 3.25rem;
+    max-width: 4.3rem;
+  }
+  .robotics-page .robotics-search-mini-hit {
+    --rp-mini-hit-distance: 0.68rem;
+    --rp-mini-hit-tilt: 12deg;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .robotics-page .robotics-search-mini-float {
-    animation: none;
+    transform: rotate(var(--rp-mini-tilt));
+  }
+  .robotics-page .robotics-search-mini-hit--rs,
+  .robotics-page .robotics-search-mini-hit--reachy {
+    transform: translate3d(calc(var(--rp-mini-hit-distance) * 0.68), 0, 0) rotate(calc(var(--rp-mini-hit-tilt) * 0.72));
+  }
+  .robotics-page .robotics-search-duck-glide {
+    transform: translate3d(54%, 0, 0);
+  }
+  .robotics-page .robotics-search-duck-pose {
+    transform: translate3d(0, 0.16rem, 0) scaleY(0.94) rotate(1.5deg);
+  }
+  .robotics-page .robotics-search-duck-look {
+    transform: none;
   }
   .robotics-page .robotics-search-mini {
     transition: none;
