@@ -175,7 +175,7 @@ Windows users' options:
 ### Hardware Wiring Diagram
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-30/ch30-01.png" alt="Hand-eye calibration AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-30/ch30-01.png" alt="Voice system connection topology: PC, Groq API, reSpeaker, reBot arm" />
 </div>
 
 

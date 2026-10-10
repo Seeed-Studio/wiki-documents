@@ -90,7 +90,7 @@ Because the arm does not know:
 Therefore robot vision must complete a full process:
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01-1.png" alt="Robot vision vs ordinary computer vision" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01-1.png" alt="Six-stage RGB-to-grasp robot vision pipeline flowchart" />
 </div>
 
 
