@@ -1,3 +1,4 @@
+
 /**
  * Swizzled DocSidebarItem/Category.
  * 扩展：分类可通过 customProps.communityCategory 指向 Community Projects
@@ -98,7 +99,8 @@ export default function DocSidebarItemCategory({
   ...props
 }) {
   const {items, label, collapsible, className} = item;
-  const href = customHref(item) || item.href;
+  const customizedHref = customHref(item);
+  const href = customizedHref || item.href;
   const {
     docs: {
       sidebar: {autoCollapseCategories},
@@ -176,8 +178,8 @@ export default function DocSidebarItemCategory({
           role={collapsible && !href ? 'button' : undefined}
           aria-expanded={collapsible && !href ? !collapsed : undefined}
           href={
-            href
-              ? href
+            customizedHref
+              ? customizedHref
               : collapsible
                 ? (hrefWithSSRFallback ?? '#')
                 : hrefWithSSRFallback

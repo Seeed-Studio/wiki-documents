@@ -8,6 +8,20 @@ const path = require('path');
 const JETSON_DIR = 'sites/en/docs/Edge/NVIDIA_Jetson';
 const OUT = 'src/components/jetson/config.products.auto.ts';
 
+// 多语言文档目录与站点前缀：英文文档作为产品识别来源，其余语言通过 slug 匹配。
+const LANG_DOCS_DIRS = {
+  zh: 'sites/zh-CN/docs/Edge/NVIDIA_Jetson',
+  ja: 'sites/ja/docs/Edge/NVIDIA_Jetson',
+  es: 'sites/es/docs/Edge/NVIDIA_Jetson',
+  pt: 'sites/pt-BR/docs/Edge/NVIDIA_Jetson'
+};
+const LANG_URL_PREFIX = {
+  zh: '/cn',
+  ja: '/ja',
+  es: '/es',
+  pt: '/pt-br'
+};
+
 const FM_RE = /^---\s*\n([\s\S]*?)\n---/;
 const field = (fm, name) => {
   const m = fm.match(new RegExp('^' + name + ':\\s*(.+)$', 'm'));
@@ -19,11 +33,11 @@ const ANCHOR_PREF = [/getting_start/i, /intro/i, /flash/i];
 const INTERFACE_RE = /hardware.*interface|interfaces_usage|interface_usage|usage/i;
 const FLASH_RE = /flash/i;
 
-function walk(dir) {
+function walk(dir, applyDenyFilter = true) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(d => {
     const p = path.join(dir, d.name);
-    if (d.isDirectory()) return walk(p);
-    if (/\.(md|mdx)$/.test(d.name) && !DENY.test(d.name)) return [p];
+    if (d.isDirectory()) return walk(p, applyDenyFilter);
+    if (/\.(md|mdx)$/.test(d.name) && (!applyDenyFilter || !DENY.test(d.name))) return [p];
     return [];
   });
 }
@@ -68,6 +82,35 @@ const prodSrc = fs.readFileSync('src/components/jetson/productData.ts', 'utf8');
 const curatedSlugs = new Set([...prodSrc.matchAll(/createLocalizedWikiUrl\('([^']+)'\)/g)].map(m => m[1]));
 
 const makeUrl = slug => `https://wiki.seeedstudio.com${slug.startsWith('/') ? slug : '/' + slug}/`;
+const normalizeSlug = slug => `/${slug.replace(/^\/+|\/+$/g, '')}`;
+
+// 建立翻译文档 slug 索引：仅匹配确实存在的本地语言文档，不无条件拼接语言前缀。
+const localizedSlugs = Object.fromEntries(Object.entries(LANG_DOCS_DIRS).map(([lang, dir]) => {
+  const slugs = new Set();
+  if (fs.existsSync(dir)) {
+    walk(dir, false).forEach(file => {
+      const content = fs.readFileSync(file, 'utf8');
+      const fm = (content.match(FM_RE) || [])[1] || '';
+      const slug = field(fm, 'slug');
+      if (slug) slugs.add(normalizeSlug(slug));
+    });
+  } else {
+    console.warn(`[WARN] 多语言目录不存在，${lang} 链接将回退英文: ${dir}`);
+  }
+  return [lang, slugs];
+}));
+
+const makeLocalizedUrls = slug => {
+  const normalized = normalizeSlug(slug);
+  const enUrl = makeUrl(normalized);
+  const urls = { en: enUrl };
+  for (const [lang, prefix] of Object.entries(LANG_URL_PREFIX)) {
+    urls[lang] = localizedSlugs[lang].has(normalized)
+      ? makeUrl(`${prefix}${normalized}`)
+      : enUrl;
+  }
+  return urls;
+};
 
 const entries = [];
 [...productDirs].sort().forEach(dir => {
@@ -102,8 +145,8 @@ const entries = [];
     label,
     l4t: [],
     img: anchor.image || '',
-    interfaceUsage: makeUrl(usageDoc.slug),
-    flashUrl: makeUrl(flashDoc.slug),
+    interfaceUsage: makeLocalizedUrls(usageDoc.slug),
+    flashUrl: makeLocalizedUrls(flashDoc.slug),
     category: cat
   });
 });
@@ -117,7 +160,7 @@ export const productOptionsAuto: ProductOption[] = ${JSON.stringify(entries, nul
 `;
 fs.writeFileSync(OUT, ts);
 console.log(`generated ${entries.length} auto products -> ${OUT}`);
-entries.forEach(e => console.log('  ', e.category, '|', e.label, '|', e.flashUrl));
+entries.forEach(e => console.log('  ', e.category, '|', e.label, '|', e.flashUrl.en));
 const unclassified = entries.filter(e => e.category === 'other');
 if (unclassified.length) {
   console.warn(`\n⚠️  ${unclassified.length} 个产品未精确分类（归入 other）：`);

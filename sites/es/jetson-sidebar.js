@@ -18,6 +18,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Placas Portadoras',
+        customProps: { devicesTab: 0 },
         collapsed: true,
         collapsible: true,
         items: [
@@ -83,9 +84,9 @@ const sidebars = {
       {
         type: 'category',
         label: 'reComputer Jetson',
+        customProps: { devicesTab: 4 },
         collapsed: true,
         collapsible: true,
-        link: { type: 'doc', id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/es_reComputer_Intro' },
         items: [
           {
             type: 'category',
@@ -203,6 +204,7 @@ const sidebars = {
       {
         type: 'category',
         label: 'reServer Jetson',
+        customProps: { devicesTab: 7 },
         collapsed: true,
         collapsible: true,
         items: [
@@ -235,11 +237,18 @@ const sidebars = {
         'Edge/NVIDIA_Jetson/Other_Devices/es_RTL8852BE_Wireless_Module_for_Jetson',
         'Edge/NVIDIA_Jetson/Other_Devices/es_RM520N_Module_for_Jetson',
         'Edge/NVIDIA_Jetson/Other_Devices/es_EM12-G_GNSS_Module_for_reComputer_Robotics_J3011',
+        'Edge/NVIDIA_Jetson/FAQs/es_How_to_use_Camera_IMX219',
+        'Edge/NVIDIA_Jetson/FAQs/es_Use_IMX477_Camera_with_A603',
+        'Edge/NVIDIA_Jetson/FAQs/es_Use_Arducam_OV9281_Camera_with_A603',
+        'Edge/NVIDIA_Jetson/FAQs/es_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
+        'Edge/NVIDIA_Jetson/FAQs/es_JetPack72_AX210_AX200_WiFi_Setup_Guide',
+        'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_ZED_X_GMSL_Cameras_on_reComputer_Robotics',
       ],
     },
     {
       type: 'category',
       label: 'Otros Dispositivos',
+      customProps: { devicesTab: 8 },
       collapsed: true,
       collapsible: true,
       items: [
@@ -266,6 +275,7 @@ const sidebars = {
       'Edge/NVIDIA_Jetson/es_Jetson_Debug_Guide',
       { type: 'link', label: 'reComputer Jetson for Beginners', href: 'https://sensecraft.seeed.cc/ai-lab/en/tutorials/j/introduction' },
       { type: 'link', label: 'OSHW-Jetson-Series', href: 'https://github.com/Seeed-Studio/OSHW-Jetson-Series' },
+      { type: 'link', label: 'Linux for Tegra', href: 'https://github.com/Seeed-Studio/Linux_for_Tegra' },
       {
         type: 'category',
         label: 'JetPack 7.2',
@@ -313,7 +323,6 @@ const sidebars = {
           ],
         },
         { type: 'link', label: 'jetson-examples', href: 'https://sensecraft.seeed.cc/ai-lab/en/models' },
-        { type: 'link', label: 'Linux for Tegra', href: 'https://github.com/Seeed-Studio/Linux_for_Tegra' },
       ],
     },
     {
@@ -322,23 +331,43 @@ const sidebars = {
       className: 'jetson-applications-title',
       items: [
         'Edge/NVIDIA_Jetson/FAQs/es_jetson_FAQ',
-        'Edge/NVIDIA_Jetson/FAQs/es_Create_Backup_and_Restore_on_reComputer',
-        'Edge/NVIDIA_Jetson/FAQs/es_Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
-        'Edge/NVIDIA_Jetson/FAQs/es_Deploy_OTA_ON_reComputer',
-        'Edge/NVIDIA_Jetson/FAQs/es_Headless_Setup_and_Recovery_for_A603',
-        'Edge/NVIDIA_Jetson/FAQs/es_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
-        'Edge/NVIDIA_Jetson/FAQs/es_How_to_use_Camera_IMX219',
-        'Edge/NVIDIA_Jetson/FAQs/es_Use_IMX477_Camera_with_A603',
-        'Edge/NVIDIA_Jetson/FAQs/es_Use_Arducam_OV9281_Camera_with_A603',
-        'Edge/NVIDIA_Jetson/FAQs/es_Differences_of_L4T_Between_Seeed_and_NVIDIA',
-        'Edge/NVIDIA_Jetson/FAQs/es_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
-        'Edge/NVIDIA_Jetson/FAQs/es_How_to_Establish_the_Ethercat_on_Jetson',
-        'Edge/NVIDIA_Jetson/FAQs/es_Make_DIY_BSP_for_Jetson',
-        'Edge/NVIDIA_Jetson/FAQs/es_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
-        'Edge/NVIDIA_Jetson/FAQs/es_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
-        'Edge/NVIDIA_Jetson/FAQs/es_Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot',
-        'Edge/NVIDIA_Jetson/FAQs/es_Flash_JetPack_with_WSL2',
-        'Edge/NVIDIA_Jetson/FAQs/es_Jetson_Initrd_Flash_Fails_with_ZFS_Host',
+        {
+          type: 'category',
+          label: 'Sistema y flasheo',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Edge/NVIDIA_Jetson/FAQs/es_Create_Backup_and_Restore_on_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/es_Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/es_Deploy_OTA_ON_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/es_Flash_JetPack_with_WSL2',
+            'Edge/NVIDIA_Jetson/FAQs/es_Headless_Setup_and_Recovery_for_A603',
+            'Edge/NVIDIA_Jetson/FAQs/es_Jetson_Initrd_Flash_Fails_with_ZFS_Host',
+            'Edge/NVIDIA_Jetson/FAQs/es_Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'BSP y desarrollo',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Edge/NVIDIA_Jetson/FAQs/es_Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/es_Make_DIY_BSP_from_Orin_Nano_DevKit_to_reComputer_Classic_And_Super',
+            'Edge/NVIDIA_Jetson/FAQs/es_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
+            'Edge/NVIDIA_Jetson/FAQs/es_How_to_Establish_the_Ethercat_on_Jetson',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Conocimiento',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Edge/NVIDIA_Jetson/FAQs/es_Differences_of_L4T_Between_Seeed_and_NVIDIA',
+            'Edge/NVIDIA_Jetson/FAQs/es_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+          ],
+        },
       ],
     },
     {
@@ -350,9 +379,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Visión por Computadora',
+          customProps: { communityCategory: 'cv' },
           items: [
-            { type: 'link', label: 'Ver proyectos', href: '/es/NVIDIA_Jetson/?tab=community&category=cv' },
-            'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_ZED_X_GMSL_Cameras_on_reComputer_Robotics',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson_AGX_Thor',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Streaming_Vision_Agent_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_industrial_vision_monitoring_on_industrial',
@@ -368,8 +396,8 @@ const sidebars = {
         {
           type: 'category',
           label: 'IA Generativa',
+          customProps: { communityCategory: 'gen' },
           items: [
-            { type: 'link', label: 'Ver proyectos', href: '/es/NVIDIA_Jetson/?tab=community&category=gen' },
             'Edge/NVIDIA_Jetson/Application/Generative_AI/es_Finetune_LLM_by_Llama_Factory_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/es_Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/es_Local_RAG_based_on_Jetson_with_LlamaIndex',
@@ -385,6 +413,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Herramientas de Desarrollador',
+          customProps: { communityCategory: 'devtools' },
           items: [
             'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Build_and_Flash_Yocto_for_reComputer_Super',
             'Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Develop_reComputer_Jetson_using_Clawdbot',
@@ -415,8 +444,8 @@ const sidebars = {
         {
           type: 'category',
           label: 'IA Multimodal',
+          customProps: { communityCategory: 'multimodal' },
           items: [
-            { type: 'link', label: 'Ver proyectos', href: '/es/NVIDIA_Jetson/?tab=community&category=multimodal' },
             'Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Voice_LLM_for_Reachy_Mini',
             'Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Speech_vlm',
             'Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_use_vlm_guard_warehouse',
@@ -427,8 +456,8 @@ const sidebars = {
         {
           type: 'category',
           label: 'IA Encarnada',
+          customProps: { communityCategory: 'physical' },
           items: [
-            { type: 'link', label: 'Ver proyectos', href: '/es/NVIDIA_Jetson/?tab=community&category=physical' },
             'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Microduck_RL_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Getting_Started_with_Jetson_Claw_on_Orin_Nano_NX_8GB',
             'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
@@ -446,8 +475,8 @@ const sidebars = {
         {
           type: 'category',
           label: 'Servicios Administrados',
+          customProps: { communityCategory: 'managed' },
           items: [
-            { type: 'link', label: 'Ver proyectos', href: '/es/NVIDIA_Jetson/?tab=community&category=managed' },
             'Edge/NVIDIA_Jetson/Application/Managed_Services/es_Allxon-Jetson-Getting-Started',
             'Edge/NVIDIA_Jetson/Application/Managed_Services/es_neqto_engine_for_linux_recomputer',
             'Edge/NVIDIA_Jetson/Application/Managed_Services/es_Scailable-Jetson-Getting-Started',

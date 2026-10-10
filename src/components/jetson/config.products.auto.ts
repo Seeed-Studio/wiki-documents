@@ -9,8 +9,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Flash BSP with Jetpack to Selected Jetson",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/flash/jetpack_to_selected_product/",
-    "flashUrl": "https://wiki.seeedstudio.com/flash/jetpack_to_selected_product/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/flash/jetpack_to_selected_product/",
+      "zh": "https://wiki.seeedstudio.com/cn/flash/jetpack_to_selected_product/",
+      "ja": "https://wiki.seeedstudio.com/ja/flash/jetpack_to_selected_product/",
+      "es": "https://wiki.seeedstudio.com/es/flash/jetpack_to_selected_product/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/flash/jetpack_to_selected_product/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/flash/jetpack_to_selected_product/",
+      "zh": "https://wiki.seeedstudio.com/cn/flash/jetpack_to_selected_product/",
+      "ja": "https://wiki.seeedstudio.com/ja/flash/jetpack_to_selected_product/",
+      "es": "https://wiki.seeedstudio.com/es/flash/jetpack_to_selected_product/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/flash/jetpack_to_selected_product/"
+    },
     "category": "other"
   },
   {
@@ -18,8 +30,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Flash Jetpack",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/j501_carrier_board_interfaces_usage/",
-    "flashUrl": "https://wiki.seeedstudio.com/reserver_j501_getting_started/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/j501_carrier_board_interfaces_usage/",
+      "zh": "https://wiki.seeedstudio.com/cn/j501_carrier_board_interfaces_usage/",
+      "ja": "https://wiki.seeedstudio.com/ja/j501_carrier_board_interfaces_usage/",
+      "es": "https://wiki.seeedstudio.com/es/j501_carrier_board_interfaces_usage/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/j501_carrier_board_interfaces_usage/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/reserver_j501_getting_started/",
+      "zh": "https://wiki.seeedstudio.com/cn/reserver_j501_getting_started/",
+      "ja": "https://wiki.seeedstudio.com/ja/reserver_j501_getting_started/",
+      "es": "https://wiki.seeedstudio.com/es/reserver_j501_getting_started/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reserver_j501_getting_started/"
+    },
     "category": "carrier"
   },
   {
@@ -27,8 +51,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Flash Jetpack",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/recomputer-mini-1.webp",
-    "interfaceUsage": "https://wiki.seeedstudio.com/j401_mini_carrierboard_hardware_interfaces_usage/",
-    "flashUrl": "https://wiki.seeedstudio.com/recomputer_mini_j401_getting_started/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/j401_mini_carrierboard_hardware_interfaces_usage/",
+      "zh": "https://wiki.seeedstudio.com/cn/j401_mini_carrierboard_hardware_interfaces_usage/",
+      "ja": "https://wiki.seeedstudio.com/ja/j401_mini_carrierboard_hardware_interfaces_usage/",
+      "es": "https://wiki.seeedstudio.com/es/j401_mini_carrierboard_hardware_interfaces_usage/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/j401_mini_carrierboard_hardware_interfaces_usage/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/recomputer_mini_j401_getting_started/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_mini_j401_getting_started/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_mini_j401_getting_started/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_mini_j401_getting_started/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_mini_j401_getting_started/"
+    },
     "category": "mini"
   },
   {
@@ -36,8 +72,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Flash JetPack with WSL2",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/Flash_JetPack_with_WSL2/check_custom_kernel.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/ai_robotics_flash_jetpack_with_wsl2/",
-    "flashUrl": "https://wiki.seeedstudio.com/ai_robotics_flash_jetpack_with_wsl2/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/ai_robotics_flash_jetpack_with_wsl2/",
+      "zh": "https://wiki.seeedstudio.com/cn/ai_robotics_flash_jetpack_with_wsl2/",
+      "ja": "https://wiki.seeedstudio.com/ja/ai_robotics_flash_jetpack_with_wsl2/",
+      "es": "https://wiki.seeedstudio.com/es/ai_robotics_flash_jetpack_with_wsl2/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/ai_robotics_flash_jetpack_with_wsl2/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/ai_robotics_flash_jetpack_with_wsl2/",
+      "zh": "https://wiki.seeedstudio.com/cn/ai_robotics_flash_jetpack_with_wsl2/",
+      "ja": "https://wiki.seeedstudio.com/ja/ai_robotics_flash_jetpack_with_wsl2/",
+      "es": "https://wiki.seeedstudio.com/es/ai_robotics_flash_jetpack_with_wsl2/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/ai_robotics_flash_jetpack_with_wsl2/"
+    },
     "category": "other"
   },
   {
@@ -45,8 +93,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Flash Firmware",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/Reference-UI.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/jetson_developtool_flash_firmware/",
-    "flashUrl": "https://wiki.seeedstudio.com/jetson_developtool_flash_firmware/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/jetson_developtool_flash_firmware/",
+      "zh": "https://wiki.seeedstudio.com/cn/jetson_developtool_flash_firmware/",
+      "ja": "https://wiki.seeedstudio.com/ja/jetson_developtool_flash_firmware/",
+      "es": "https://wiki.seeedstudio.com/es/jetson_developtool_flash_firmware/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/jetson_developtool_flash_firmware/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/jetson_developtool_flash_firmware/",
+      "zh": "https://wiki.seeedstudio.com/cn/jetson_developtool_flash_firmware/",
+      "ja": "https://wiki.seeedstudio.com/ja/jetson_developtool_flash_firmware/",
+      "es": "https://wiki.seeedstudio.com/es/jetson_developtool_flash_firmware/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/jetson_developtool_flash_firmware/"
+    },
     "category": "other"
   },
   {
@@ -54,8 +114,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "reComputer-Jetson® Guide",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/reComputer_Intro/",
-    "flashUrl": "https://wiki.seeedstudio.com/reComputer_Intro/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/reComputer_Intro/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_Intro/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_Intro/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_Intro/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_Intro/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/reComputer_Intro/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_Intro/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_Intro/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_Intro/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_Intro/"
+    },
     "category": "other"
   },
   {
@@ -63,8 +135,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "reComputer Industrial",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/reComputer_Industrial_J20_Hardware_Interfaces_Usage/",
-    "flashUrl": "https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/reComputer_Industrial_J20_Hardware_Interfaces_Usage/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_Industrial_J20_Hardware_Interfaces_Usage/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_Industrial_J20_Hardware_Interfaces_Usage/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_Industrial_J20_Hardware_Interfaces_Usage/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_Industrial_J20_Hardware_Interfaces_Usage/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_Industrial_Getting_Started/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_Industrial_Getting_Started/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_Industrial_Getting_Started/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_Industrial_Getting_Started/"
+    },
     "category": "industrial"
   },
   {
@@ -72,8 +156,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "reComputer for Jetson Series",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/reComputer_Jetson_Series_Introduction/",
-    "flashUrl": "https://wiki.seeedstudio.com/reComputer_Jetson_Series_Introduction/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/reComputer_Jetson_Series_Introduction/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_Introduction/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Introduction/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_Jetson_Series_Introduction/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_Jetson_Series_Introduction/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/reComputer_Jetson_Series_Introduction/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_Introduction/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Introduction/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_Jetson_Series_Introduction/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_Jetson_Series_Introduction/"
+    },
     "category": "other"
   },
   {
@@ -81,8 +177,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Getting start with reComputer J1010",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/reComputer_J1010_with_Jetson_getting_start/",
-    "flashUrl": "https://wiki.seeedstudio.com/reComputer_J1010_with_Jetson_getting_start/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/reComputer_J1010_with_Jetson_getting_start/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_J1010_with_Jetson_getting_start/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_J1010_with_Jetson_getting_start/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_J1010_with_Jetson_getting_start/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_J1010_with_Jetson_getting_start/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/reComputer_J1010_with_Jetson_getting_start/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_J1010_with_Jetson_getting_start/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_J1010_with_Jetson_getting_start/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_J1010_with_Jetson_getting_start/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_J1010_with_Jetson_getting_start/"
+    },
     "category": "other"
   },
   {
@@ -90,8 +198,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Getting start with reComputer J1020v2",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/reComputer_J1020v2_with_Jetson_getting_start/",
-    "flashUrl": "https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/reComputer_J1020v2_with_Jetson_getting_start/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_J1020v2_with_Jetson_getting_start/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_J1020v2_with_Jetson_getting_start/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_J1020v2_with_Jetson_getting_start/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_J1020v2_with_Jetson_getting_start/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_J1020_A206_Flash_JetPack/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_J1020_A206_Flash_JetPack/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_J1020_A206_Flash_JetPack/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_J1020_A206_Flash_JetPack/"
+    },
     "category": "other"
   },
   {
@@ -99,8 +219,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Getting start with reComputer J20",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/",
-    "flashUrl": "https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_j20_with_jetson_getting_start/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_j20_with_jetson_getting_start/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_j20_with_jetson_getting_start/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_j20_with_jetson_getting_start/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_j20_with_jetson_getting_start/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_j20_with_jetson_getting_start/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_j20_with_jetson_getting_start/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_j20_with_jetson_getting_start/"
+    },
     "category": "other"
   },
   {
@@ -108,8 +240,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Getting start with reComputer J30/40",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/reComputer_J30_40_with_Jetson_getting_start/",
-    "flashUrl": "https://wiki.seeedstudio.com/reComputer_J30_40_with_Jetson_getting_start/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/reComputer_J30_40_with_Jetson_getting_start/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_J30_40_with_Jetson_getting_start/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_J30_40_with_Jetson_getting_start/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_J30_40_with_Jetson_getting_start/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_J30_40_with_Jetson_getting_start/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/reComputer_J30_40_with_Jetson_getting_start/",
+      "zh": "https://wiki.seeedstudio.com/cn/reComputer_J30_40_with_Jetson_getting_start/",
+      "ja": "https://wiki.seeedstudio.com/ja/reComputer_J30_40_with_Jetson_getting_start/",
+      "es": "https://wiki.seeedstudio.com/es/reComputer_J30_40_with_Jetson_getting_start/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/reComputer_J30_40_with_Jetson_getting_start/"
+    },
     "category": "other"
   },
   {
@@ -117,8 +261,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "Getting start with reComputer J401B",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.webp",
-    "interfaceUsage": "https://wiki.seeedstudio.com/recomputer_j401b_interfaces_usage/",
-    "flashUrl": "https://wiki.seeedstudio.com/recomputer_j401b_getting_start/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/recomputer_j401b_interfaces_usage/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_j401b_interfaces_usage/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_j401b_interfaces_usage/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_j401b_interfaces_usage/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_j401b_interfaces_usage/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/recomputer_j401b_getting_start/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_j401b_getting_start/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_j401b_getting_start/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_j401b_getting_start/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_j401b_getting_start/"
+    },
     "category": "other"
   },
   {
@@ -126,8 +282,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "reComputer Mini",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini.webp",
-    "interfaceUsage": "https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/",
-    "flashUrl": "https://wiki.seeedstudio.com/recomputer_jetson_mini_getting_started/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_jetson_mini_hardware_interfaces_usage/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_jetson_mini_hardware_interfaces_usage/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_jetson_mini_hardware_interfaces_usage/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/recomputer_jetson_mini_getting_started/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_getting_started/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_jetson_mini_getting_started/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_jetson_mini_getting_started/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_jetson_mini_getting_started/"
+    },
     "category": "mini"
   },
   {
@@ -135,8 +303,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "reComputer Robotics",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics_2.webp",
-    "interfaceUsage": "https://wiki.seeedstudio.com/recomputer_robotics_j401_hardware_interfaces_usage/",
-    "flashUrl": "https://wiki.seeedstudio.com/recomputer_robotics_j401_getting_started/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/recomputer_robotics_j401_hardware_interfaces_usage/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_robotics_j401_hardware_interfaces_usage/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_robotics_j401_hardware_interfaces_usage/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_robotics_j401_hardware_interfaces_usage/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_robotics_j401_hardware_interfaces_usage/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/recomputer_robotics_j401_getting_started/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_robotics_j401_getting_started/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_robotics_j401_getting_started/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_robotics_j401_getting_started/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_robotics_j401_getting_started/"
+    },
     "category": "robotics"
   },
   {
@@ -144,8 +324,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "reComputer Robotics J50 Mini",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
-    "interfaceUsage": "https://wiki.seeedstudio.com/recomputer_robotics_j50_mini_getting_started/",
-    "flashUrl": "https://wiki.seeedstudio.com/recomputer_robotics_j50_mini_getting_started/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/recomputer_robotics_j50_mini_getting_started/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_robotics_j50_mini_getting_started/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_robotics_j50_mini_getting_started/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_robotics_j50_mini_getting_started/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_robotics_j50_mini_getting_started/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/recomputer_robotics_j50_mini_getting_started/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_robotics_j50_mini_getting_started/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_robotics_j50_mini_getting_started/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_robotics_j50_mini_getting_started/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_robotics_j50_mini_getting_started/"
+    },
     "category": "robotics"
   },
   {
@@ -153,8 +345,20 @@ export const productOptionsAuto: ProductOption[] = [
     "label": "reComputer Super",
     "l4t": [],
     "img": "https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp",
-    "interfaceUsage": "https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/",
-    "flashUrl": "https://wiki.seeedstudio.com/recomputer_jetson_super_getting_started/",
+    "interfaceUsage": {
+      "en": "https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_jetson_super_hardware_interfaces_usage/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_jetson_super_hardware_interfaces_usage/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_jetson_super_hardware_interfaces_usage/"
+    },
+    "flashUrl": {
+      "en": "https://wiki.seeedstudio.com/recomputer_jetson_super_getting_started/",
+      "zh": "https://wiki.seeedstudio.com/cn/recomputer_jetson_super_getting_started/",
+      "ja": "https://wiki.seeedstudio.com/ja/recomputer_jetson_super_getting_started/",
+      "es": "https://wiki.seeedstudio.com/es/recomputer_jetson_super_getting_started/",
+      "pt": "https://wiki.seeedstudio.com/pt-br/recomputer_jetson_super_getting_started/"
+    },
     "category": "super"
   }
 ];
