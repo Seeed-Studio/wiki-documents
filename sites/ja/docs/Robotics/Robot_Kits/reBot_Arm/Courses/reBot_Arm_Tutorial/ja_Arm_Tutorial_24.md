@@ -1,6 +1,7 @@
 ---
 description: "Seeed Physical AI Beginner's Course 第24章 — 関節空間とデカルト空間、DHパラメータとURDFからの順運動学、逆運動学とその複数解／解なし、ヤコビアンと速度運動学、特異姿勢とダンピング付き最小二乗法、解析的IKと数値的IK。"
 title: 第24章 - 順運動学、逆運動学、ヤコビアン
+hide_title: true
 keywords:
   - reBot
   - ロボットアーム
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_24/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

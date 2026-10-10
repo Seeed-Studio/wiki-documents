@@ -7071,6 +7071,54 @@
     "ja",
     "pt"
   ],
+  "/rebot_physical_ai_course_chapter_23": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_24": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_25": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_26": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_27": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_28": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_29": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_physical_ai_course_chapter_30": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/rebot_physical_ai_course_introduction": [
     "en",
     "es",

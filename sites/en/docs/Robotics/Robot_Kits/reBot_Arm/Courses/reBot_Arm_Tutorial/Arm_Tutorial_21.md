@@ -1,6 +1,7 @@
 ---
 description: 'Chapter 21 of the Seeed Physical AI Beginner''s Course — fine-tuning the reBot Arm with Isaac GR00T: environment setup, downloading the foundation model, dataset path, single-GPU and multi-GPU fine-tuning, monitoring VRAM and loss, saving checkpoints, real-robot inference, troubleshooting, and training tips.'
 title: Chapter 21 - Fine-tuning the reBot Arm with Isaac GR00T
+hide_title: true
 keywords:
   - reBot
   - GR00T
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_21/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

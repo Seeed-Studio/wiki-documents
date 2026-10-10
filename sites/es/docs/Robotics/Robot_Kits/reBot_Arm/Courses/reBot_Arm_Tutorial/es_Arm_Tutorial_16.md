@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 16 del Curso de Introducción a la IA Física de Seeed: entrena tu primera política ACT: tamaño de lote, tasa de aprendizaje y pasos, gestión de checkpoints, inicio del entrenamiento, monitorización de la pérdida y del estado de la GPU, y reanudación de entrenamientos interrumpidos.'
 title: Capítulo 16 - Entrenar tu primera política ACT
+hide_title: true
 keywords:
   - reBot
   - ACT
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_16/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

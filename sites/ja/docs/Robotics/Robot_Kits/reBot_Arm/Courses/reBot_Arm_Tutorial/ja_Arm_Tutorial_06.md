@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI 初級コース第 6 章 — reBot Arm の組み立て、電源の組み立て、アームの配線、そして初回の電源投入を行います。
 title: 第 6 章 - 組み立て、電源、および初回の電源投入
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_6/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

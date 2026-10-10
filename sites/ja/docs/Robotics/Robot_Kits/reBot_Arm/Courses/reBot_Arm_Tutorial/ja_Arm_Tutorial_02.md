@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI ビギナーコース第 2 章 — reBot Arm オープンソースプロジェクト、DM 版と RS 版の違い、およびそのオープンソースハードウェアとソフトウェアについて学びます。
 title: 第 2 章 - ハードウェアとオープンソースプロジェクト
+hide_title: true
 keywords:
   - reBot
   - B601-DM
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_2/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

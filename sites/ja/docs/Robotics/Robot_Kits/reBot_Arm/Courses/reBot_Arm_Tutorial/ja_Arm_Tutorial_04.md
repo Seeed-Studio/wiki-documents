@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI ビギナーコース第4章 — ロボットアームおよび関節アクチュエータの基礎。安全範囲、構造、減速機、エンコーダ、DM/RS モーターの制御モードを含みます。
 title: 第4章 - ロボットアームと関節アクチュエータの基礎
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -26,8 +27,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_4/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

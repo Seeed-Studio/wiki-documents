@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 25 do Curso para Iniciantes em IA Física da Seeed — caminho versus trajetória, interpolação em espaço de juntas e em espaço cartesiano, polinômios lineares, cúbicos e quínticos, e o comando de torque construído a partir de feedforward (modelo e gravidade) mais correção de erro por feedback."
 title: Capítulo 25 - Planejamento de Trajetória e Controle de Braço Robótico
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -25,8 +26,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_25/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

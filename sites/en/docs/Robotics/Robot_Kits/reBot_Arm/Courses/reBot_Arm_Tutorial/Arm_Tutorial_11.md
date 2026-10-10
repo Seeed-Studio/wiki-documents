@@ -1,6 +1,7 @@
 ---
 description: Chapter 11 of the Seeed Physical AI Beginner's Course — environment setup, follower and leader arm calibration, joint mapping, teleoperation safety, starting master-slave teleoperation, control frequency and latency, and hands-on practice.
 title: Chapter 11 - Leader and Follower Calibration and Teleoperation
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_11/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

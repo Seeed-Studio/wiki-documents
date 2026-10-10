@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 26 del Curso de Introducción a la IA Física de Seeed — práctica con Pinocchio y MeshCat en el reBot Arm: instalación de uv, carga del URDF y ejecución de las demos de cinemática directa, cinemática inversa (mínimos cuadrados amortiguados con búsqueda en línea) y planificación de trayectorias (geodésica en SE(3) más CLIK)."
 title: Capítulo 26 - Pinocchio y MeshCat
+hide_title: true
 keywords:
   - reBot
   - Brazo robótico
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_26/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

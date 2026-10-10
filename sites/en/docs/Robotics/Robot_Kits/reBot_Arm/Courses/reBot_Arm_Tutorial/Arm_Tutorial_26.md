@@ -1,6 +1,7 @@
 ---
 description: "Chapter 26 of the Seeed Physical AI Beginner's Course — hands-on Pinocchio and MeshCat on the reBot Arm: installing uv, loading the URDF, and running the forward kinematics, inverse kinematics (damped least squares with line search) and trajectory planning (SE(3) geodesic plus CLIK) demos."
 title: Chapter 26 - Pinocchio and MeshCat
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_26/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 
