@@ -69,7 +69,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>ビジュアルグラスピングによる reBot-RS</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>ROS2 と連携した reBot-RS</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>Isaac Sim と連携した reBot-RS</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Web コントローラによる reBot-RS</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 制御システム</b></div></a>
         <a className="step-card" href="/ja/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>Agent Claw による reBot-RS</b></div></a>
       </div>
     </div>
@@ -84,7 +84,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="rebot-resource-list">
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">reBot-RS ハードウェアコレクション</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">reBot-RS 説明パッケージ（URDF / Mesh）</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS デジタルツイン / Web シミュレータ</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS デジタルツイン / Web 制御システム</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm メインリポジトリ</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 コントローラ</a>
@@ -118,7 +118,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM ビジュアルグラスプ</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>ROS2 と連携した reBot-DM</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>Isaac Sim と連携した reBot-DM</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Web コントローラによる reBot-DM</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 制御システム</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -133,7 +133,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">reBot-DM ハードウェアコレクション</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">reBot-DM 説明パッケージ（URDF / Mesh）</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">reBot-DM 実機性能テスト</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">reBot-DM デジタルツイン / Web シミュレータ</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">reBot-DM デジタルツイン / Web 制御システム</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm メインリポジトリ</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 コントローラ</a>
@@ -158,16 +158,17 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/ja/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 クイックスタート</b></div></a>
         <a className="step-card" href="/ja/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>サーボデバッグツール</b></div></a>
+        <a className="step-card" href="/ja/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>SO-Arm データセットツール</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>アプリケーション</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">3</span><div><b>SO101 と NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/ja/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>デュアルアーム SO-ARM トレーニング</b></div></a>
-        <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM と Amazing Hand デクスタラスハンド</b></div></a>
-        <a className="step-card" href="/ja/simulate_soarm101_by_leisaac/"><span className="step-index">6</span><div><b>LeIsaac シミュレーション</b></div></a>
-        <a className="step-card" href="/ja/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Isaac Lab 強化学習</b></div></a>
+        <a className="step-card" href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 と NVIDIA GR00T</b></div></a>
+        <a className="step-card" href="/ja/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>デュアルアーム SO-ARM トレーニング</b></div></a>
+        <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM と Amazing Hand デクスタラスハンド</b></div></a>
+        <a className="step-card" href="/ja/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac シミュレーション</b></div></a>
+        <a className="step-card" href="/ja/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab 強化学習</b></div></a>
         <a className="step-card optional" href="/ja/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>

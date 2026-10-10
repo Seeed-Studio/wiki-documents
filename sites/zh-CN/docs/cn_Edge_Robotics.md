@@ -68,7 +68,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS 与 ROS2</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 仿真器</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 控制系统</b></div></a>
         <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
       </div>
     </div>
@@ -77,7 +77,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="rebot-resource-list">
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">reBot-RS 硬件资料合集</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">reBot-RS 机械臂描述文件（URDF / Mesh）</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS 数字孪生 / Web 仿真器</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS 数字孪生 / Web 控制系统</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
@@ -111,7 +111,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/cn/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM 与 ROS2</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 仿真器</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 控制系统</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -120,7 +120,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">reBot-DM 硬件资料合集</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">reBot-DM 机械臂描述文件（URDF / Mesh）</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">reBot-DM 真机性能测试</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">reBot-DM 数字孪生 / Web 仿真器</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">reBot-DM 数字孪生 / Web 控制系统</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
@@ -145,16 +145,17 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/cn/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 快速开始</b></div></a>
         <a className="step-card" href="/cn/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>舵机调试工具</b></div></a>
+        <a className="step-card" href="/cn/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>SO-Arm 数据集工具</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>拓展应用</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">3</span><div><b>SO101 与 NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/cn/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>双臂 SO-ARM 训练</b></div></a>
-        <a className="step-card" href="/cn/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM结合Amazing Hand灵巧手</b></div></a>
-        <a className="step-card" href="/cn/simulate_soarm101_by_leisaac/"><span className="step-index">6</span><div><b>LeIsaac 仿真</b></div></a>
-        <a className="step-card" href="/cn/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Isaac Lab 强化学习</b></div></a>
+        <a className="step-card" href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 与 NVIDIA GR00T</b></div></a>
+        <a className="step-card" href="/cn/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>双臂 SO-ARM 训练</b></div></a>
+        <a className="step-card" href="/cn/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM结合Amazing Hand灵巧手</b></div></a>
+        <a className="step-card" href="/cn/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac 仿真</b></div></a>
+        <a className="step-card" href="/cn/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab 强化学习</b></div></a>
         <a className="step-card optional" href="/cn/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>

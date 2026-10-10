@@ -69,7 +69,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/pt-br/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS com Pega Visual</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS com ROS2</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS com Isaac Sim</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS com Controlador Web</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de Controle Web do reBot-RS</b></div></a>
         <a className="step-card" href="/pt-br/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS com Agent Claw</b></div></a>
       </div>
     </div>
@@ -84,7 +84,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="rebot-resource-list">
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">Coleção de hardware do reBot-RS</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">Pacote de descrição do reBot-RS (URDF / Mesh)</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">Gêmeo digital / simulador Web do reBot-RS</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">Gêmeo digital / sistema de controle Web do reBot-RS</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">Repositório principal do reBot-DevArm</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">SDK em Python</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">Controlador ROS2</a>
@@ -118,7 +118,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>Pega Visual do reBot-DM</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM com ROS2</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM com Isaac Sim</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM com Controlador Web</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de Controle Web do reBot-DM</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -133,7 +133,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">Coleção de hardware do reBot-DM</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">Pacote de descrição do reBot-DM (URDF / Mesh)</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">Teste de desempenho em máquina real do reBot-DM</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">Gêmeo digital / simulador Web do reBot-DM</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">Gêmeo digital / sistema de controle Web do reBot-DM</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">Repositório principal do reBot-DevArm</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">SDK em Python</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">Controlador ROS2</a>
@@ -158,16 +158,17 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/pt-br/lerobot_so100m_new/"><span className="step-index">1</span><div><b>Início Rápido SO100 / SO101</b></div></a>
         <a className="step-card" href="/pt-br/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Ferramenta de Depuração de Servo</b></div></a>
+        <a className="step-card" href="/pt-br/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>Ferramenta de Dataset SO-Arm</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Aplicações</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">3</span><div><b>SO101 e NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>Treinamento SO-ARM de Dois Braços</b></div></a>
-        <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM com Mão Hábil Amazing Hand</b></div></a>
-        <a className="step-card" href="/pt-br/simulate_soarm101_by_leisaac/"><span className="step-index">6</span><div><b>Simulação LeIsaac</b></div></a>
-        <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">7</span><div><b>Aprendizado por Reforço no Isaac Lab</b></div></a>
+        <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 e NVIDIA GR00T</b></div></a>
+        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Treinamento SO-ARM de Dois Braços</b></div></a>
+        <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM com Mão Hábil Amazing Hand</b></div></a>
+        <a className="step-card" href="/pt-br/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>Simulação LeIsaac</b></div></a>
+        <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Aprendizado por Reforço no Isaac Lab</b></div></a>
         <a className="step-card optional" href="/pt-br/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
