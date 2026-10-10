@@ -1,8 +1,5 @@
 import React from 'react';
-import Link from '@docusaurus/Link';
-import {useLocation} from '@docusaurus/router';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import '/src/css/rebot-wiki-style.css';
+import RebotDocRail from './RebotDocRail';
 
 const ITEMS = [
   {
@@ -42,11 +39,11 @@ const ITEMS = [
   {
     slug: '/rebot_arm_b601_rs_web_simulator_developer_guide/',
     labels: {
-      en: 'Web Sim',
-      cn: 'Web 仿真',
-      ja: 'Web シミュレーション',
-      es: 'Simulación web',
-      'pt-br': 'Simulação web',
+      en: 'Web Control System',
+      cn: 'Web 控制系统',
+      ja: 'Web 制御システム',
+      es: 'Sistema de control web',
+      'pt-br': 'Sistema de Controle Web',
     },
     hints: {
       en: ['MuJoCo / ROS2'],
@@ -134,46 +131,5 @@ const ARIA_LABELS = {
 };
 
 export default function RebotRsDocNav() {
-  const {pathname} = useLocation();
-  const {i18n} = useDocusaurusContext();
-
-  const locale = i18n.currentLocale || 'en';
-  const current = pathname.replace(/\/+$/, '');
-
-  return (
-    <nav
-      className="doc-nav doc-nav--series"
-      aria-label={ARIA_LABELS[locale] || ARIA_LABELS.en}
-    >
-      {ITEMS.map((item) => {
-        const itemPath = item.slug.replace(/\/+$/, '');
-        const active = current.endsWith(itemPath);
-
-        const label = item.labels[locale] || item.labels.en;
-        const hints =
-          (item.hints && (item.hints[locale] || item.hints.en)) || [];
-
-        return (
-          <Link
-            key={item.slug}
-            to={item.slug}
-            className={active ? 'active' : undefined}
-            aria-current={active ? 'page' : undefined}
-          >
-            {label}
-
-            {hints.length ? (
-              <span className="doc-nav-hints">
-                {hints.map((hint) => (
-                  <span key={hint} className="doc-nav-hint">
-                    {hint}
-                  </span>
-                ))}
-              </span>
-            ) : null}
-          </Link>
-        );
-      })}
-    </nav>
-  );
+  return <RebotDocRail items={ITEMS} series="reBot-RS" ariaLabels={ARIA_LABELS} />;
 }

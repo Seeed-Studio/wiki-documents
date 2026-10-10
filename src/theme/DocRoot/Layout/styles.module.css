@@ -8,6 +8,20 @@
   flex: 1 0 auto;
 }
 
+@media (min-width: 997px) {
+  /* Fix only the collapsed expand control; keep the menu viewport unchanged
+     so its text does not move when the original sidebar opens. */
+  .docRoot:has([data-rebot-doc-rail]) > :global(.theme-doc-sidebar-container) > div > :global([role='button']) {
+    position: fixed;
+    top: var(--ifm-navbar-height);
+    bottom: 0;
+    inset-inline-start: 0;
+    inset-inline-end: auto;
+    width: var(--doc-sidebar-hidden-width, 30px);
+    height: auto;
+  }
+}
+
 .fullWidthPage > main {
   width: 100%;
   max-width: 100% !important;

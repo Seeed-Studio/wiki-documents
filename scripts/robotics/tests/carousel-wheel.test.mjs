@@ -15,6 +15,10 @@ const require = createRequire(import.meta.url);
 // its native listener. This verifies the wiring without pretending to reproduce
 // browser hit-testing or physical trackpad input.
 function componentHarness(pathname = '/cn/robotics_page/') {
+  class Element {
+    constructor(onCard = true) { this.onCard = onCard; }
+    closest(selector) { return selector === '.rotating-product-card' && this.onCard ? this : null; }
+  }
   const effects = [];
   const refs = [];
   const react = {
@@ -52,10 +56,16 @@ function componentHarness(pathname = '/cn/robotics_page/') {
       throw new Error(`Unexpected dependency: ${name}`);
     },
     performance: {now: () => now},
+    Element,
     window: {matchMedia: () => ({matches: true})},
   });
   const tree = exports.default({children: Array.from({length: 4}, () => ({props: {children: []}}))});
-  return {effects, refs, tree, setTime: (value) => { now = value; }};
+  return {
+    effects, refs, tree,
+    cardTarget: new Element(),
+    gapTarget: new Element(false),
+    setTime: (value) => { now = value; },
+  };
 }
 
 function testComponentLocales(name, callback) {
@@ -136,7 +146,7 @@ test('a deliberate reverse swipe works during the previous inertia tail', () => 
   assert.deepEqual(moves, [1, -1]);
 });
 
-test('side cards and stage gaps always cancel page scrolling, even below threshold', () => {
+test('consumed wheel gestures cancel page scrolling, even below threshold', () => {
   const {dispatch, moves} = harness();
   for (const [now, target] of [[0, {kind: 'side-card'}], [16, {kind: 'stage-gap'}]]) {
     const event = dispatch(now, {deltaY: 3, target});
@@ -181,7 +191,7 @@ test('horizontal, vertical, shifted and non-pixel wheel deltas keep their direct
   }
 });
 
-testComponentLocales('component captures and cleans up stage wheel events', ({effects, refs, setTime}) => {
+testComponentLocales('component captures and cleans up stage wheel events', ({effects, refs, setTime, cardTarget}) => {
   let registration;
   let removal;
   refs[1].current = {
@@ -195,7 +205,7 @@ testComponentLocales('component captures and cleans up stage wheel events', ({ef
   assert.equal(options.passive, false);
   assert.equal(options.capture, true);
   let cancelled = 0;
-  const target = {};
+  const target = cardTarget;
   for (const time of [0, 500, 1000]) {
     setTime(time);
     listener({
@@ -211,6 +221,38 @@ testComponentLocales('component captures and cleans up stage wheel events', ({ef
   assert.equal(removal[2].capture, true);
 });
 
+testComponentLocales('stage gaps scroll the page without switching products or accumulating motion', ({effects, refs, setTime, cardTarget, gapTarget}) => {
+  let listener;
+  refs[1].current = {
+    addEventListener: (_, callback) => { listener = callback; },
+    removeEventListener() {},
+  };
+  effects.find((effect) => effect.toString().includes('stage.addEventListener'))();
+  const dispatch = (time, target, deltaY) => {
+    setTime(time);
+    const event = {
+      target, deltaX: 0, deltaY, deltaMode: 0,
+      defaultPrevented: false, propagationStopped: false,
+      preventDefault() { this.defaultPrevented = true; },
+      stopPropagation() { this.propagationStopped = true; },
+    };
+    listener(event);
+    return event;
+  };
+
+  dispatch(0, cardTarget, 30);
+  for (const time of [16, 32, 48]) {
+    const event = dispatch(time, gapTarget, 100);
+    assert.equal(event.defaultPrevented, false);
+    assert.equal(event.propagationStopped, false);
+    assert.equal(refs[2].current, 0);
+  }
+  dispatch(64, cardTarget, 30);
+  assert.equal(refs[2].current, 0);
+  assert.equal(dispatch(80, cardTarget, 30).defaultPrevented, true);
+  assert.equal(refs[2].current, 1);
+});
+
 testComponentLocales('moving cards preserve wheel delivery and keyboard navigation', ({effects, refs}) => {
   const summaries = Array.from({length: 4}, () => ({tabIndex: 0}));
   const cards = summaries.map((summary) => ({inert: true, querySelector: () => summary}));
@@ -220,7 +262,7 @@ testComponentLocales('moving cards preserve wheel delivery and keyboard navigati
   assert.deepEqual(summaries.map((summary) => summary.tabIndex), [0, 0, -1, 0]);
 });
 
-testComponentLocales('opening and closing the active card toggles page scrolling', ({effects, refs, tree, setTime}, pathname) => {
+testComponentLocales('opening and closing the active card toggles page scrolling', ({effects, refs, tree, setTime, cardTarget}, pathname) => {
   assert.equal(tree.props['aria-label'], pathname.startsWith('/cn/')
     ? '机器人套件选择器'
     : 'Robot kit selector');
@@ -234,6 +276,7 @@ testComponentLocales('opening and closing the active card toggles page scrolling
   const activeCard = stage.props.children[0][0];
   const button = activeCard.props.children[0].props.children[0];
   const event = () => ({
+    target: cardTarget,
     deltaX: 0, deltaY: 100, deltaMode: 0,
     defaultPrevented: false,
     preventDefault() { this.defaultPrevented = true; }, stopPropagation() {},

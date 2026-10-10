@@ -90,7 +90,7 @@ export function handleCarouselWheel(event, {
     return;
   }
 
-  // Capture the whole stationary stage, including gaps between moving cards.
+  // The component checks card ownership before consuming a wheel gesture.
   event.preventDefault();
   event.stopPropagation();
   const direction = consumeWheelGesture(gesture, event, now);

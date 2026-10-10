@@ -2405,3 +2405,14 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
   .jetson-applications-title > .menu__list {
     margin-top: 0.35rem;
   }
+
+/* Keep documentation disclosures transparent in both themes and all states. */
+.theme-doc-markdown details {
+  --ifm-alert-background-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.theme-doc-markdown details > summary {
+  background: transparent;
+}

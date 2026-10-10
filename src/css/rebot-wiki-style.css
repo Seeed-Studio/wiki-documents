@@ -380,12 +380,13 @@
 
 /* 可选 Demo：安全提示常驻，仅折叠实际运行命令 */
 .rebot-demo-details {
+  --docusaurus-details-decoration-color: var(--ifm-color-emphasis-300);
   margin: 1rem 0 0;
-  padding: 0 1rem 1rem;
+  padding: 0 1rem;
   overflow: hidden;
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 14px;
-  background: var(--ifm-color-emphasis-100);
+  background: transparent;
 }
 
 .rebot-demo-details > summary {
@@ -393,7 +394,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  margin: 0 -1rem -1rem;
+  margin: 0 -1rem;
   padding: 0.8rem 1rem;
   cursor: pointer;
   color: var(--ifm-font-color-base);
@@ -418,12 +419,7 @@
   line-height: 1;
 }
 
-.rebot-demo-details[open] > summary {
-  margin-bottom: 0.9rem;
-  border-bottom: 1px solid var(--ifm-color-emphasis-300);
-}
-
-.rebot-demo-details[open] > summary::after {
+.rebot-demo-details[open]:not([data-collapsed='true']) > summary::after {
   content: '−';
 }
 
@@ -508,32 +504,34 @@
 
 /* details 卡片 */
 .content-details {
+  --docusaurus-details-decoration-color: var(--rb-border, var(--ifm-alert-border-color));
   margin: 0.9rem 0;
-  padding: 1rem 1.05rem;
+  padding: 0 1.05rem;
   border-radius: 18px;
   border: 1px solid var(--rb-border);
-  background: linear-gradient(180deg, var(--rb-surface), var(--rb-surface-soft));
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+  background: transparent;
   overflow: hidden;
 }
 
-.content-details summary {
+.content-details > summary {
   cursor: pointer;
   list-style: none;
   padding: 0.95rem 1rem;
-  margin: -1rem -1.05rem 0;
+  margin: 0 -1.05rem;
   font-weight: 900;
   color: var(--rb-text);
-  background: linear-gradient(90deg, rgba(37, 99, 235, 0.08), transparent);
-}
-
-.content-details[open] summary {
-  border-bottom: 1px solid var(--rb-border);
-  margin-bottom: 1rem;
+  background: transparent;
 }
 
 .content-details summary::-webkit-details-marker {
   display: none;
+}
+
+/* Keep title geometry fixed; spacing and the divider expand with the content. */
+.rebot-demo-details > summary + div > div,
+.content-details > summary + div > div {
+  margin-top: 0;
+  padding: 1rem 0;
 }
 
 /* 安全提示 */

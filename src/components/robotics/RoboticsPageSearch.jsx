@@ -1,5 +1,7 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {useLocation} from '@docusaurus/router';
+import {searchRoboticsItems} from './roboticsSearch.mjs';
+import {getCameraMountSearchItems, getCameraMountCollectionKeywords, isCameraMountCollection} from './roboticsSearchResources.mjs';
 
 const I18N = {
   en: {
@@ -40,27 +42,6 @@ function getLocaleFromPath(pathname) {
   if (pathname === '/es' || pathname.startsWith('/es/')) return 'es';
   if (pathname === '/pt-br' || pathname.startsWith('/pt-br/')) return 'pt-br';
   return 'en';
-}
-
-function normalize(value) {
-  return value.toLocaleLowerCase().replace(/\s+/g, ' ').trim();
-}
-
-function scoreSearchResult(item, query) {
-  const title = item.title;
-  const description = item.description;
-  const href = item.href;
-  let score = 0;
-
-  if (title === query) score += 120;
-  else if (title.startsWith(query)) score += 90;
-  else if (title.includes(query)) score += 70;
-
-  if (description.includes(query)) score += 25;
-  if (href.includes(query)) score += 20;
-  if (/(getting_started|get_started|quick_start|inicio_rapido)/i.test(href)) score += 45;
-
-  return score;
 }
 
 function SearchMiniRobots() {
@@ -109,9 +90,9 @@ export default function RoboticsPageSearch() {
     const page = rootRef.current?.closest('.robotics-page');
     if (!page) return;
 
-    const seen = new Set();
+    const seen = new Map();
     const searchableLinks = page.querySelectorAll(
-      '.kit-index-grid a, .learning-steps a, .mini-track a, .resource-grid a, .resource-columns a',
+      '.kit-index-grid a, .learning-steps a, .mini-track a, .rebot-resource-list a, .resource-grid a, .resource-columns a',
     );
 
     const nextItems = Array.from(searchableLinks).flatMap((link) => {
@@ -122,22 +103,38 @@ export default function RoboticsPageSearch() {
       if (!href || !title) return [];
 
       const key = `${href}:${title}`;
-      if (seen.has(key)) return [];
-      seen.add(key);
 
+      const product = link.closest('.product-card');
+      const productTitle = product?.querySelector('.product-head h3')?.textContent?.trim();
       const description =
         link.querySelector('small')?.textContent?.trim() ||
-        link.closest('details')?.querySelector('.product-head h3')?.textContent?.trim() ||
+        productTitle ||
         link.closest('.section-block')?.querySelector('.section-title-row h2')?.textContent?.trim() ||
         '';
+      // Carousel cards are articles after rendering, rather than source details.
+      // Keep their model IDs and headings searchable for generic tutorial labels.
+      const resourceGroup = link.closest('.rebot-resource-list')?.parentElement.querySelector('h4')?.textContent || '';
+      const resourceKeywords = isCameraMountCollection(href) ? getCameraMountCollectionKeywords() : '';
+      const keywords = `${product?.id || ''} ${productTitle || ''} ${resourceGroup} ${resourceGroup ? 'public resources 公共资源 开源资料' : ''} ${resourceKeywords}`;
 
-      const searchable = normalize(`${title} ${description} ${href}`);
-
-      return [{href, title, description, searchable}];
+      const existing = seen.get(key);
+      if (existing) {
+        existing.keywords += ` ${keywords}`;
+        if (description && !existing.description.includes(description)) {
+          existing.description = [existing.description, description].filter(Boolean).join(' / ');
+        }
+        return [];
+      }
+      const item = {href, title, description, keywords, target: link.getAttribute('target') || undefined};
+      seen.set(key, item);
+      return [item];
     });
 
+    if (nextItems.some((item) => isCameraMountCollection(item.href))) {
+      nextItems.push(...getCameraMountSearchItems(locale));
+    }
     setItems(nextItems);
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     const focusSearch = (event) => {
@@ -152,20 +149,7 @@ export default function RoboticsPageSearch() {
     return () => document.removeEventListener('keydown', focusSearch);
   }, []);
 
-  const results = useMemo(() => {
-    const normalizedQuery = normalize(query);
-    if (!normalizedQuery) return [];
-    return items
-      .filter((item) => item.searchable.includes(normalizedQuery))
-      .map((item, index) => ({
-        item,
-        index,
-        score: scoreSearchResult(item, normalizedQuery),
-      }))
-      .sort((a, b) => b.score - a.score || a.index - b.index)
-      .map((result) => result.item)
-      .slice(0, 12);
-  }, [items, query]);
+  const results = useMemo(() => searchRoboticsItems(items, query), [items, query]);
 
   useEffect(() => {
     setActiveIndex(results.length ? 0 : -1);
@@ -202,7 +186,8 @@ export default function RoboticsPageSearch() {
       event.preventDefault();
       const result = results[activeIndex];
       openResult(result);
-      window.location.assign(result.href);
+      if (result.target === '_blank') window.open(result.href, '_blank', 'noopener,noreferrer');
+      else window.location.assign(result.href);
     } else if (event.key === 'Escape') {
       setQuery('');
     }
@@ -258,6 +243,8 @@ export default function RoboticsPageSearch() {
               id={`robotics-search-result-${index}`}
               key={`${result.href}:${result.title}`}
               href={result.href}
+              target={result.target}
+              rel={result.target === '_blank' ? 'noopener noreferrer' : undefined}
               role="option"
               aria-selected={index === activeIndex}
               className={index === activeIndex ? 'is-active' : undefined}
