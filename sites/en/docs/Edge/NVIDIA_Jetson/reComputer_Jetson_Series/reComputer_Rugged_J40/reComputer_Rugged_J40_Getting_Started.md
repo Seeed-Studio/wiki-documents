@@ -19,56 +19,57 @@ updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/
 ---
 
-import RuggedJ40DocNav from '@site/src/components/jetson/RuggedJ40DocNav';
+import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
+import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 # Getting Started with reComputer Rugged J40
 
-<RuggedJ40DocNav />
+<JetsonProductDocNav {...ruggedJ401DocNav} />
 
-<div className="rugged-j40-page">
+<div className="jetson-product-page">
 
-<section className="rugged-hero">
+<section className="jetson-product-hero">
   <div>
-    <span className="rugged-eyebrow">Rugged Edge AI · NVIDIA Jetson</span>
+    <span className="jetson-product-eyebrow">Rugged Edge AI · NVIDIA Jetson</span>
     <h2>Deploy AI where dust, water, and vibration are part of the job</h2>
     <p>The reComputer Rugged J40 combines NVIDIA Jetson Orin performance with an IP66-rated, fanless enclosure and locking M12 connectivity. It is designed for reliable edge AI deployment on vehicles, in ports, on farms, at sea, and across industrial sites.</p>
-    <div className="rugged-actions">
-      <a className="rugged-button" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank" rel="noopener noreferrer">Get reComputer Rugged J4012 ↗</a>
-      <a className="rugged-button rugged-button--secondary" href="#flash-jetpack">Start with JetPack ↓</a>
+    <div className="jetson-product-actions">
+      <a className="jetson-product-button" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank" rel="noopener noreferrer">Get reComputer Rugged J4012 ↗</a>
+      <a className="jetson-product-button jetson-product-button--secondary" href="#flash-jetpack">Start with JetPack ↓</a>
     </div>
   </div>
-  <div className="rugged-hero-media">
+  <div className="jetson-product-hero-media">
     <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J40 industrial edge AI computer" />
   </div>
 </section>
 
-<div className="rugged-fact-grid">
-  <div className="rugged-fact"><strong>IP66</strong><span>Sealed against dust and powerful water jets</span></div>
-  <div className="rugged-fact"><strong>Up to 100 TOPS</strong><span>Jetson Orin NX 16GB edge AI performance</span></div>
-  <div className="rugged-fact"><strong>4× PoE GbE</strong><span>Power and connect industrial IP cameras</span></div>
-  <div className="rugged-fact"><strong>−20°C to 60°C</strong><span>Fanless operation with 0.7 m/s airflow</span></div>
+<div className="jetson-product-fact-grid">
+  <div className="jetson-product-fact"><strong>IP66</strong><span>Sealed against dust and powerful water jets</span></div>
+  <div className="jetson-product-fact"><strong>Up to 100 TOPS</strong><span>Jetson Orin NX 16GB edge AI performance</span></div>
+  <div className="jetson-product-fact"><strong>4× PoE GbE</strong><span>Power and connect industrial IP cameras</span></div>
+  <div className="jetson-product-fact"><strong>−20°C to 60°C</strong><span>Fanless operation with 0.7 m/s airflow</span></div>
 </div>
 
 ## Choose Your Jetson Configuration
 
 Both configurations use the same rugged enclosure and industrial interface set. Choose the Jetson module according to the AI workload, memory requirement, and power budget of your deployment.
 
-<div className="rugged-product-grid">
-  <article className="rugged-product-card">
-    <span className="rugged-product-badge">Performance configuration</span>
+<div className="jetson-product-variant-grid">
+  <article className="jetson-product-variant-card">
+    <span className="jetson-product-variant-badge">Performance configuration</span>
     <h3>reComputer Rugged J4012</h3>
     <p>For multi-camera vision, larger AI models, and workloads that benefit from higher GPU and memory bandwidth.</p>
-    <div className="rugged-product-metrics">
+    <div className="jetson-product-variant-metrics">
       <span>Jetson Orin NX</span>
       <span>16GB LPDDR5</span>
       <span>100 TOPS</span>
     </div>
   </article>
-  <article className="rugged-product-card">
-    <span className="rugged-product-badge">Efficiency configuration</span>
+  <article className="jetson-product-variant-card">
+    <span className="jetson-product-variant-badge">Efficiency configuration</span>
     <h3>reComputer Rugged J3011</h3>
     <p>For efficient perception, monitoring, telemetry, and industrial control workloads with a lower power profile.</p>
-    <div className="rugged-product-metrics">
+    <div className="jetson-product-variant-metrics">
       <span>Jetson Orin Nano</span>
       <span>8GB LPDDR5</span>
       <span>40 TOPS</span>
@@ -78,18 +79,18 @@ Both configurations use the same rugged enclosure and industrial interface set. 
 
 ## Why reComputer Rugged J40
 
-<div className="rugged-feature-grid">
-  <div className="rugged-feature"><strong>Sealed M12 Connectivity</strong><span>Locking connectors help maintain stable power, networking, and I/O in mobile and outdoor installations.</span></div>
-  <div className="rugged-feature"><strong>Fanless Passive Cooling</strong><span>No moving fan reduces maintenance needs in dusty environments and enables quiet operation.</span></div>
-  <div className="rugged-feature"><strong>Industrial I/O</strong><span>Isolated CAN-FD, RS-232/422/485, and digital I/O connect directly to sensors, actuators, and controllers.</span></div>
-  <div className="rugged-feature"><strong>Camera-Ready Networking</strong><span>Four PoE GbE ports simplify multi-camera systems by carrying data and power over the same cable.</span></div>
-  <div className="rugged-feature"><strong>Wireless Expansion</strong><span>M.2 Key E and Key B slots support Wi-Fi, Bluetooth, 5G, and GPS expansion.</span></div>
-  <div className="rugged-feature"><strong>Vehicle &amp; Outdoor Deployment</strong><span>Wide-voltage input, vibration resistance, and an IP66 enclosure suit AMRs, vehicles, vessels, and field equipment.</span></div>
+<div className="jetson-product-feature-grid">
+  <div className="jetson-product-feature"><strong>Sealed M12 Connectivity</strong><span>Locking connectors help maintain stable power, networking, and I/O in mobile and outdoor installations.</span></div>
+  <div className="jetson-product-feature"><strong>Fanless Passive Cooling</strong><span>No moving fan reduces maintenance needs in dusty environments and enables quiet operation.</span></div>
+  <div className="jetson-product-feature"><strong>Industrial I/O</strong><span>Isolated CAN-FD, RS-232/422/485, and digital I/O connect directly to sensors, actuators, and controllers.</span></div>
+  <div className="jetson-product-feature"><strong>Camera-Ready Networking</strong><span>Four PoE GbE ports simplify multi-camera systems by carrying data and power over the same cable.</span></div>
+  <div className="jetson-product-feature"><strong>Wireless Expansion</strong><span>M.2 Key E and Key B slots support Wi-Fi, Bluetooth, 5G, and GPS expansion.</span></div>
+  <div className="jetson-product-feature"><strong>Vehicle &amp; Outdoor Deployment</strong><span>Wide-voltage input, vibration resistance, and an IP66 enclosure suit AMRs, vehicles, vessels, and field equipment.</span></div>
 </div>
 
 ## Specifications
 
-<div className="rugged-table-wrap">
+<div className="jetson-product-table-wrap">
 <table>
   <thead>
     <tr>
@@ -229,7 +230,7 @@ Both configurations use the same rugged enclosure and industrial interface set. 
 
 ## Hardware Overview
 
-<div className="rugged-hardware-gallery">
+<div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png" alt="Side view of reComputer Rugged J40 showing its industrial connectors" />
     <figcaption>Side view · Network, USB, display, and antenna connections</figcaption>
@@ -258,17 +259,17 @@ For connector pinouts, interface configuration, and expansion instructions, cont
 
 Follow the workflow in order. The numbered layout keeps the host preparation, recovery-mode operation, and terminal commands together in one place.
 
-<div className="rugged-step-flow">
-<section className="rugged-step-item">
-  <span className="rugged-step-number">1</span>
-  <div className="rugged-step-content">
+<div className="jetson-product-step-flow">
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">1</span>
+  <div className="jetson-product-step-content">
     <h3>Choose and Download the BSP</h3>
-    <p className="rugged-step-label">Step 1 · Match the image to the exact Jetson configuration</p>
+    <p className="jetson-product-step-label">Step 1 · Match the image to the exact Jetson configuration</p>
 
 Open the Jetson flashing resource page and check for the latest image for your exact reComputer Rugged model and Jetson module.
 
-<div className="rugged-actions">
-  <a className="rugged-button" href="/flash/jetpack_to_selected_product" target="_blank">Open JetPack Image Selector ↗</a>
+<div className="jetson-product-actions">
+  <a className="jetson-product-button" href="/flash/jetpack_to_selected_product" target="_blank">Open JetPack Image Selector ↗</a>
 </div>
 
 :::warning
@@ -278,11 +279,11 @@ Do not flash an image for a different carrier board or Jetson module. If your ex
   </div>
 </section>
 
-<section className="rugged-step-item">
-  <span className="rugged-step-number">2</span>
-  <div className="rugged-step-content">
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">2</span>
+  <div className="jetson-product-step-content">
     <h3>Prepare the Equipment</h3>
-    <p className="rugged-step-label">Step 2 · Set up the Ubuntu host and cables</p>
+    <p className="jetson-product-step-label">Step 2 · Set up the Ubuntu host and cables</p>
 
 Prepare the following items before disconnecting or powering the device:
 
@@ -300,13 +301,13 @@ Use a physical Ubuntu host where possible. USB passthrough in a virtual machine 
   </div>
 </section>
 
-<section className="rugged-step-item">
-  <span className="rugged-step-number">3</span>
-  <div className="rugged-step-content">
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">3</span>
+  <div className="jetson-product-step-content">
     <h3>Enter Force Recovery Mode</h3>
-    <p className="rugged-step-label">Step 3 · Connect the DEVICE port and verify the USB ID</p>
+    <p className="jetson-product-step-label">Step 3 · Connect the DEVICE port and verify the USB ID</p>
 
-<img className="rugged-step-image" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg" alt="Recovery button and DEVICE port used to flash reComputer Rugged J40" />
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg" alt="Recovery button and DEVICE port used to flash reComputer Rugged J40" />
 
 1. Connect a USB Type-C data cable between the **DEVICE** port and the Ubuntu host.
 2. Press and hold the **REC** button.
@@ -330,11 +331,11 @@ If the expected ID is missing, reconnect the USB cable, try another host USB por
   </div>
 </section>
 
-<section className="rugged-step-item">
-  <span className="rugged-step-number">4</span>
-  <div className="rugged-step-content">
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">4</span>
+  <div className="jetson-product-step-content">
     <h3>Extract and Flash the Image</h3>
-    <p className="rugged-step-label">Step 4 · Run the mass-flash package from the Ubuntu host</p>
+    <p className="jetson-product-step-label">Step 4 · Run the mass-flash package from the Ubuntu host</p>
 
 Change to the directory containing the downloaded image and extract it:
 
@@ -361,13 +362,13 @@ Wait until the terminal reports that flashing completed successfully. Then disco
 
 Explore application examples that combine reComputer Rugged J40 hardware with deployable edge AI workflows. New examples can be added to this collection as they become available.
 
-<div className="rugged-application-grid">
-  <article className="rugged-application-card">
-    <a className="rugged-application-cover" href="/jetson/recomputer_rugged_j401/industrial_vision/" aria-label="Open the Industrial Forklift Vision application">
+<div className="jetson-product-application-grid">
+  <article className="jetson-product-application-card">
+    <a className="jetson-product-application-cover" href="/jetson/recomputer_rugged_j401/industrial_vision/" aria-label="Open the Industrial Forklift Vision application">
       <img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="Industrial forklift vision applications powered by reComputer Rugged J401" />
     </a>
-    <div className="rugged-application-body">
-      <div className="rugged-application-labels" aria-label="Application capabilities">
+    <div className="jetson-product-application-body">
+      <div className="jetson-product-application-labels" aria-label="Application capabilities">
         <span>Detection</span>
         <span>Inference Benchmark</span>
       </div>
@@ -381,36 +382,36 @@ Explore application examples that combine reComputer Rugged J40 hardware with de
 
 Use these files for mechanical integration, carrier-board design review, BSP development, and Jetson platform selection.
 
-<div className="rugged-resource-grid">
-  <a className="rugged-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf" target="_blank" rel="noopener noreferrer">
-    <span className="rugged-resource-icon" aria-hidden="true">PDF</span>
-    <span className="rugged-resource-copy"><strong>Product Datasheet</strong><small>Electrical, mechanical, and environmental specifications</small></span>
-    <span className="rugged-resource-arrow" aria-hidden="true">↗</span>
+<div className="jetson-product-resource-grid">
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">PDF</span>
+    <span className="jetson-product-resource-copy"><strong>Product Datasheet</strong><small>Electrical, mechanical, and environmental specifications</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
-  <a className="rugged-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
-    <span className="rugged-resource-icon" aria-hidden="true">SCH</span>
-    <span className="rugged-resource-copy"><strong>Carrier Board Schematic</strong><small>Review the carrier-board circuits and signal routing</small></span>
-    <span className="rugged-resource-arrow" aria-hidden="true">↗</span>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">SCH</span>
+    <span className="jetson-product-resource-copy"><strong>Carrier Board Schematic</strong><small>Review the carrier-board circuits and signal routing</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
-  <a className="rugged-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
-    <span className="rugged-resource-icon" aria-hidden="true">PSE</span>
-    <span className="rugged-resource-copy"><strong>PSE Board Schematic</strong><small>PoE power-sourcing circuit design reference</small></span>
-    <span className="rugged-resource-arrow" aria-hidden="true">↗</span>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">PSE</span>
+    <span className="jetson-product-resource-copy"><strong>PSE Board Schematic</strong><small>PoE power-sourcing circuit design reference</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
-  <a className="rugged-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp" target="_blank" rel="noopener noreferrer">
-    <span className="rugged-resource-icon" aria-hidden="true">3D</span>
-    <span className="rugged-resource-copy"><strong>3D Mechanical Model</strong><small>STEP assembly for installation and enclosure planning</small></span>
-    <span className="rugged-resource-arrow" aria-hidden="true">↗</span>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">3D</span>
+    <span className="jetson-product-resource-copy"><strong>3D Mechanical Model</strong><small>STEP assembly for installation and enclosure planning</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
-  <a className="rugged-resource-card" href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank" rel="noopener noreferrer">
-    <span className="rugged-resource-icon" aria-hidden="true">GIT</span>
-    <span className="rugged-resource-copy"><strong>Linux_for_Tegra Source</strong><small>Seeed Jetson BSP sources and customization resources</small></span>
-    <span className="rugged-resource-arrow" aria-hidden="true">↗</span>
+  <a className="jetson-product-resource-card" href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">GIT</span>
+    <span className="jetson-product-resource-copy"><strong>Linux_for_Tegra Source</strong><small>Seeed Jetson BSP sources and customization resources</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
-  <a className="rugged-resource-card" href="https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf" target="_blank" rel="noopener noreferrer">
-    <span className="rugged-resource-icon" aria-hidden="true">CMP</span>
-    <span className="rugged-resource-copy"><strong>Jetson Device Comparison</strong><small>Compare Jetson modules and Seeed carrier platforms</small></span>
-    <span className="rugged-resource-arrow" aria-hidden="true">↗</span>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">CMP</span>
+    <span className="jetson-product-resource-copy"><strong>Jetson Device Comparison</strong><small>Compare Jetson modules and Seeed carrier platforms</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
 </div>
 

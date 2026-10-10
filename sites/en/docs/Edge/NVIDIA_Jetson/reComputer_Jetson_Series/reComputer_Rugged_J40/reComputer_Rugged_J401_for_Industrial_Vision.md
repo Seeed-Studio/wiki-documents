@@ -23,11 +23,12 @@ updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/industrial_vision/
 ---
 
-import RuggedJ40DocNav from '@site/src/components/jetson/RuggedJ40DocNav';
+import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
+import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 # reComputer Rugged J401 for Industrial Vision
 
-<RuggedJ40DocNav />
+<JetsonProductDocNav {...ruggedJ401DocNav} />
 
 ## Introduction
 
