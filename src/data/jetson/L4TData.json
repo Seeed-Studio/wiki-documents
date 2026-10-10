@@ -2,38 +2,38 @@
     {
         "product": "j4012s",
         "l4t": "39.2.0",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB-xhKB8WtjT7NNVuoLnQAGAcW7ZxofeJjIa8Z9-ULwux0?e=8GNboV",
         "mirrorlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf",
-        "filename": "mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz",
+        "filename": "mfi_recomputer-super-orin-nx-16g-j401-7.2.0-39.2.0-2026-07-31.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "5c66fcbf8f4bcb21477ada08c78796f69524ccc6eccf929fdd9f026e948482f1"
+        "sha256": "ca333821c991da20db5cf9737e6439dcecf4d5e295ed33a981d4eea856cb3220"
     },
     {
         "product": "j4011s",
         "l4t": "39.2.0",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAcA60i9AaiS7uPpL0EDCEYAcxlBthGLIC28GjY_DmdG7I?e=1Zklz1",
         "mirrorlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1",
-        "filename": "mfi_recomputer-super-orin-nx-8g-7.2.0-39.2.0-2026-06-19.tar.gz",
+        "filename": "mfi_recomputer-super-orin-nx-8g-j401-7.2.0-39.2.0-2026-07-31.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "7613332f8eeb315a0d9d51744a8f0a9e8e11e92e091d2a06ad609235a54f7c72"
+        "sha256": "290ebf050e74dd30a3f17ab690772a21a421abf0e8efcf89ff6c4fc2fe8e1ab7"
     },
     {
         "product": "j3011s",
         "l4t": "39.2.0",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCumgxDQ7-SQ4c-zNL1Lv6fAazr7M2ao0XhSVLQskdbPF4?e=9MeULa",
         "mirrorlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ",
-        "filename": "mfi_recomputer-super-orin-nano-8g-7.2.0-39.2.0-2026-06-19.tar.gz",
+        "filename": "mfi_recomputer-super-orin-nano-8g-j401-7.2.0-39.2.0-2026-07-31.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "22a21d0ee9abdceb812e06ac399d8ca5f14a3880fdf989c876223e72b21f4de6"
+        "sha256": "2b851a7a19105e1e2dd6903881e9e6827b45c85151ce6a2dabda9928b97ae9e7"
     },
     {
         "product": "j3010s",
         "l4t": "39.2.0",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBbvOytYiQ5TpwiSraaD3npAZpCvsperY8OedbHtL4aoXs?e=qNrb0P",
         "mirrorlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm",
-        "filename": "mfi_recomputer-super-orin-nano-4g-7.2.0-39.2.0-2026-06-19.tar.gz",
+        "filename": "mfi_recomputer-super-orin-nano-4g-j401-7.2.0-39.2.0-2026-07-31.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "0978be490c5ff7c1648317240e8f00d76b2d025ed30a945249eaa69112a047c8"
+        "sha256": "b3acb95bf1064067029ce8159d48f8ae5633a5ca4d9bb34fa955a39c5f2838ed"
     },
     {
         "product": "j4012s",
