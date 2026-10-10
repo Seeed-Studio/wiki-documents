@@ -262,6 +262,7 @@ const sidebars = {
       collapsible: true,
       items: [
       'Edge/NVIDIA_Jetson/Jetson_Product_Selection_Guide',
+      'Edge/NVIDIA_Jetson/Jetson_Camera_Selection_Guide',
       'Edge/NVIDIA_Jetson/Flash_Jetpack',
       'Edge/NVIDIA_Jetson/Jetson_Debug_Guide',
       { type: 'link', label: 'reComputer Jetson for Beginners', href: 'https://sensecraft.seeed.cc/ai-lab/en/tutorials/j/introduction' },
