@@ -323,8 +323,8 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCqGvCStwmPRpVHo4yBNEJEAfiD6w_iCeRtB0IuXotrdK0?e=P5sImI" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <td>a2ea4d9ad06e66e2befab14484471cb<br />6984ccef396e59262c83c40ed7911bbb2</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCumgxDQ7-SQ4c-zNL1Lv6fAXSGGswfK5E2RX-AQGQt_Hc" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td>FA6D75598A1B68CB98BA46378A43AE35</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
