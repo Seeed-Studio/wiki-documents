@@ -9,11 +9,6 @@
 }
 
 @media (min-width: 997px) {
-  /* A sidebar wheel gesture must not scroll the page at the menu boundary. */
-  .docRoot:has([data-rebot-doc-navigation]) > :global(.theme-doc-sidebar-container) :global(nav.menu) {
-    overscroll-behavior-y: contain;
-  }
-
   /* Fix only the collapsed expand control; keep the menu viewport unchanged
      so its text does not move when the original sidebar opens. */
   .docRoot:has([data-rebot-doc-rail]) > :global(.theme-doc-sidebar-container) > div > :global([role='button']) {

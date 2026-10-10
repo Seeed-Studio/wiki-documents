@@ -76,19 +76,16 @@ export default function RebotDocRail({items, series, ariaLabels}) {
   const {i18n} = useDocusaurusContext();
   const locale = i18n.currentLocale || 'en';
 
+  if (!collapsed) return null;
+
   return (
-    <>
-      <span hidden data-rebot-doc-navigation="true" />
-      {collapsed && (
-        <Rail
-          key={pathname}
-          items={items}
-          series={series}
-          locale={locale}
-          pathname={pathname}
-          ariaLabel={ariaLabels[locale] || ariaLabels.en}
-        />
-      )}
-    </>
+    <Rail
+      key={pathname}
+      items={items}
+      series={series}
+      locale={locale}
+      pathname={pathname}
+      ariaLabel={ariaLabels[locale] || ariaLabels.en}
+    />
   );
 }
