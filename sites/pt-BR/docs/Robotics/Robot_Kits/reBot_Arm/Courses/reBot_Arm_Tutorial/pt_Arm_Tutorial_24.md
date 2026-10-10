@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 24 do Curso para Iniciantes em IA Física da Seeed — espaço de juntas versus espaço cartesiano, cinemática direta a partir de parâmetros DH e URDF, cinemática inversa e suas múltiplas ou inexistentes soluções, o Jacobiano e a cinemática de velocidade, singularidades e mínimos quadrados amortecidos, e CI analítica versus numérica."
 title: Capítulo 24 - Cinemática Direta, Cinemática Inversa e o Jacobiano
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_24/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

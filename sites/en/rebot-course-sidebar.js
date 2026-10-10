@@ -108,6 +108,19 @@ const courseSidebar = () => [
       `${C}/Arm_Tutorial_26`,
     ],
   },
+  {
+    type: 'category',
+    label: 'Stage 6: Robot Vision and Autonomous Grasping',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/Arm_Tutorial_27`,
+      `${C}/Arm_Tutorial_28`,
+      `${C}/Arm_Tutorial_29`,
+      `${C}/Arm_Tutorial_30`,
+    ],
+  },
 ];
 
 const sidebars = {

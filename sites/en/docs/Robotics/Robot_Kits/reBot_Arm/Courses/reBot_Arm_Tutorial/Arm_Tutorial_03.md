@@ -1,6 +1,7 @@
 ---
 description: Chapter 3 of the Seeed Physical AI Beginner's Course — the hands-on hardware list required for each stage, including main control units, the reBot Arm, cameras, leader arm, and printable mounts.
 title: Chapter 3 - Hardware Selection for Courses
+hide_title: true
 keywords:
   - reBot
   - B601-DM
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_3/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

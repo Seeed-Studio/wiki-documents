@@ -1,6 +1,7 @@
 ---
 description: 'Chapter 16 of the Seeed Physical AI Beginner''s Course — train your first ACT policy: batch size, learning rate and steps, checkpoint management, starting training, monitoring loss and GPU status, and resuming interrupted training.'
 title: Chapter 16 - Training Your First ACT Policy
+hide_title: true
 keywords:
   - reBot
   - ACT
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_16/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

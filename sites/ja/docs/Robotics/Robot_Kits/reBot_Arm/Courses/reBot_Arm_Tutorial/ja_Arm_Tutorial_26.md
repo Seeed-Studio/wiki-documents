@@ -1,6 +1,7 @@
 ---
 description: "Seeed Physical AI Beginner's Course の第26章 — reBot Arm 上で Pinocchio と MeshCat を実践：uv のインストール、URDF の読み込み、順運動学、逆運動学（ラインサーチ付きダンピング付き最小二乗法）および軌道計画（SE(3)測地線＋CLIK）デモの実行。"
 title: 第26章 - Pinocchio と MeshCat
+hide_title: true
 keywords:
   - reBot
   - ロボットアーム
@@ -24,8 +25,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_26/
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

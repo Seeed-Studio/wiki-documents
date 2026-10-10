@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI ビギナーコース第 7 章 — MotorBridge、ベンダー横断 CAN モーター制御ライブラリ、および Web と Python から DM モーターと RS モーターを制御する方法。
 title: 第 7 章 - MotorBridge モーター制御ライブラリ
+hide_title: true
 keywords:
   - reBot
   - MotorBridge
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_7/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

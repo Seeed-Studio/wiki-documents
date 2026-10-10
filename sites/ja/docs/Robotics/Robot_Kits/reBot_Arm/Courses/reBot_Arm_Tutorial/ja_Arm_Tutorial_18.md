@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI Beginner's Course の第18章 — マルチモーダル学習と VLA の基礎：Vision/Language/Action、VLM と VLA の違い、ACT と VLA の違い、言語条件付きタスク、単一タスク vs マルチタスク vs 汎化、連続アクション vs アクショントークン、そして VLA の能力と限界。
 title: 第18章 - マルチモーダル学習と VLA の基礎
+hide_title: true
 keywords:
   - reBot
   - VLA
@@ -22,8 +23,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_18/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

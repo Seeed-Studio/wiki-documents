@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI Beginner's Course 第11章 — 環境構築、フォロワーおよびリーダーアームのキャリブレーション、関節マッピング、遠隔操作の安全性、マスタースレーブ遠隔操作の開始、制御周波数とレイテンシ、ハンズオン演習。
 title: 第11章 - リーダーとフォロワーのキャリブレーションと遠隔操作
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -23,8 +24,6 @@ url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_11/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 
