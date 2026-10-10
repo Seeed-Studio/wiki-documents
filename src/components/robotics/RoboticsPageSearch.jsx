@@ -1,6 +1,5 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {useLocation} from '@docusaurus/router';
-import microduck from '../../../assets/robotics/microduck.png';
 import {searchRoboticsItems} from './roboticsSearch.mjs';
 import {getCameraMountSearchItems, getCameraMountCollectionKeywords, isCameraMountCollection} from './roboticsSearchResources.mjs';
 
@@ -45,60 +44,32 @@ function getLocaleFromPath(pathname) {
   return 'en';
 }
 
-function SearchDuck() {
+function SearchMiniRobots() {
   return (
-    <span className="robotics-search-duck-pose" aria-hidden="true">
-      <span className="robotics-search-duck-look">
+    <div className="robotics-search-play" aria-hidden="true">
+      <span className="robotics-search-mini-float robotics-search-mini-float--rs">
         <img
-          className="robotics-search-duck"
-          src={microduck}
+          className="robotics-search-mini robotics-search-mini--rs"
+          src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
           alt=""
-          width={420}
-          height={452}
+          width={5507}
+          height={4035}
           loading="eager"
           decoding="async"
           draggable={false}
         />
       </span>
-    </span>
-  );
-}
-
-function SearchMiniRobots() {
-  return (
-    <div className="robotics-search-play" aria-hidden="true">
-      <span className="robotics-search-mini-float robotics-search-mini-float--rs">
-        <span className="robotics-search-mini-hit robotics-search-mini-hit--rs">
-          <img
-            className="robotics-search-mini robotics-search-mini--rs"
-            src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
-            alt=""
-            width={5507}
-            height={4035}
-            loading="eager"
-            decoding="async"
-            draggable={false}
-          />
-        </span>
-      </span>
       <span className="robotics-search-mini-float robotics-search-mini-float--reachy">
-        <span className="robotics-search-mini-hit robotics-search-mini-hit--reachy">
-          <img
-            className="robotics-search-mini robotics-search-mini--reachy"
-            src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp"
-            alt=""
-            width={1375}
-            height={1031}
-            loading="eager"
-            decoding="async"
-            draggable={false}
-          />
-        </span>
-      </span>
-      <span className="robotics-search-duck-track">
-        <span className="robotics-search-duck-glide">
-          <SearchDuck />
-        </span>
+        <img
+          className="robotics-search-mini robotics-search-mini--reachy"
+          src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp"
+          alt=""
+          width={1375}
+          height={1031}
+          loading="eager"
+          decoding="async"
+          draggable={false}
+        />
       </span>
     </div>
   );

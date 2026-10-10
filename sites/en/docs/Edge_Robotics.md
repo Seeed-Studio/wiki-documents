@@ -283,7 +283,9 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div>
         <h4>Other Joint Motors</h4>
         <a href="/myactuator_series/">MyActuator X Series</a>
-        <a href="/hightorque_control/">HighTorque Series</a>
+        <a href="/hightorque_series/">HighTorque Series / SDK</a>
+        <a href="/hightorque_getting_started/">HighTorque Getting Started</a>
+        <a href="/hightorque_control/">HighTorque Motor Control</a>
         <a href="/stackforce_series/">Stackforce Series</a>
       </div>
       <div>

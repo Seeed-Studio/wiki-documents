@@ -266,7 +266,9 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <a href="/cn/myactuator_series/">MyActuator X 系列</a>
       <a href="/cn/damiao_series/">Damiao DM43 系列</a>
       <a href="/cn/feetech_servo/">Feetech STS3215 舵机</a>
-      <a href="/cn/hightorque_control/">HighTorque 系列</a>
+      <a href="/cn/hightorque_series/">HighTorque 系列 / SDK</a>
+      <a href="/cn/hightorque_getting_started/">HighTorque 入门指南</a>
+      <a href="/cn/hightorque_control/">HighTorque 电机控制</a>
       <a href="/cn/fashionstar_servo/">Fashionstar 系列</a>
       <a href="/cn/stackforce_series/">Stackforce 系列</a>
       <a href="/cn/robstride_control/">RobStride 控制</a>

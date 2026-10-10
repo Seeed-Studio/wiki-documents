@@ -1,0 +1,151 @@
+.rail {
+  position: fixed;
+  top: calc(50% + var(--ifm-navbar-height) / 2);
+  left: calc(var(--doc-sidebar-hidden-width, 30px) + 0.5rem);
+  z-index: calc(var(--ifm-z-index-fixed, 200) - 1);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 32px;
+  margin-bottom: 12px;
+  background: transparent;
+  color: var(--ifm-color-emphasis-700);
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+
+.home svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.home:hover {
+  color: var(--ifm-color-primary);
+}
+
+.home:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+.ticks {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 26px;
+  color: var(--ifm-font-color-base);
+  text-decoration: none !important;
+}
+
+.tick {
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--ifm-color-emphasis-400);
+  transition: width 160ms ease, background-color 160ms ease;
+}
+
+.item[data-major='true'] .tick {
+  width: 18px;
+}
+
+.item[aria-current='page'] .tick {
+  width: 30px;
+  height: 3px;
+  background: var(--ifm-color-primary);
+  box-shadow: 0 0 6px var(--ifm-color-primary),
+    0 0 14px var(--ifm-color-primary);
+}
+
+.item[data-preview='true'] .tick {
+  width: 30px;
+  background: var(--ifm-color-primary);
+  box-shadow: 0 0 6px var(--ifm-color-primary);
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.preview {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 260px;
+  padding: 0.85rem 1rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(-4px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+/* Keep the preview open while the pointer crosses from the tick to the card. */
+.preview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  width: 10px;
+}
+
+.item[data-preview='true'] .preview {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(-50%);
+}
+
+.series,
+.hints {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.76rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.title {
+  color: var(--ifm-font-color-base);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 996px) {
+  .rail,
+  .home {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tick,
+  .preview,
+  .home {
+    transition: none;
+  }
+}
