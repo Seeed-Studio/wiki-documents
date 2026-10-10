@@ -60,6 +60,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/cn/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS 与 LeRobot</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS 与 Pinocchio</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>reBot-RS 电机 SDK</b></div></a>
+        <a className="step-card" href="/cn/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>无码化上手VLA：SenseCraft Robotics 平台</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -76,6 +77,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>课程</h4>
       <div className="learning-steps">
         <a className="step-card" href="/cn/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
+        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>DLI 课程：Sim-to-Real VLA 全流程</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -108,6 +110,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/cn/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>reBot-DM 快速入门</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM 与 LeRobot</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM 与 Pinocchio</b></div></a>
+        <a className="step-card" href="/cn/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>无码化上手VLA：SenseCraft Robotics 平台</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -155,6 +158,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/cn/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 快速开始</b></div></a>
         <a className="step-card" href="/cn/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>舵机调试工具</b></div></a>
+        <a className="step-card" href="/cn/sensecraft_robotics_so_arm101/"><span className="step-index">🖥️</span><div><b>无码化上手VLA：SenseCraft Robotics 平台</b></div></a>
       </div>
     </div>
     <div className="learning-group">

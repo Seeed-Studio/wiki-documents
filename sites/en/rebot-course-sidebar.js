@@ -13,24 +13,29 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
-const courseLink = () => ({
+// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
+// keeps the beginner-course jump that every product's Course group starts with.
+const courseItems = () => [
+  {
+    type: 'ref',
+    id: `${C}/Arm_Tutorial_Introduction`,
+    label: 'Beginner Course',
+  },
+];
+
+const courseLink = (items = courseItems()) => ({
   type: 'category',
   label: 'Course',
   className: 'robotics-section-title',
   collapsed: false,
   collapsible: false,
-  items: [
-    {
-      type: 'ref',
-      id: `${C}/Arm_Tutorial_Introduction`,
-      label: 'Beginner Course',
-    },
-  ],
+  items,
 });
 
 // The course's own standalone sidebar (opened when browsing course pages).
 const courseSidebar = () => [
   backToRobotics(),
+
   {
     type: 'doc',
     id: `${C}/Arm_Tutorial_Introduction`,
@@ -169,6 +174,7 @@ const sidebars = {
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Lerobot`, label: 'reBot-RS with LeRobot' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_pinocchio`, label: 'reBot-RS with Pinocchio' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_control_mit`, label: 'reBot-RS Motor SDK' },
+        { type: 'link', label: 'No-Code VLA: SenseCraft Robotics Platform', href: 'https://wiki.seeedstudio.com/sensecraft_robotics_rebot_arm_102_b601_rs/' },
       ],
     },
     {
@@ -185,7 +191,10 @@ const sidebars = {
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Agent`, label: 'reBot-RS with Agent Claw' },
       ],
     },
-    courseLink(),
+    courseLink([
+      ...courseItems(),
+      { type: 'link', label: 'DLI Course: Sim-to-Real VLA Pipeline', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+    ])
   ],
 
   // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
@@ -201,6 +210,7 @@ const sidebars = {
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Getting_Started`, label: 'reBot-DM Quick Start' },
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Lerobot`, label: 'reBot-DM with LeRobot' },
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_pinocchio`, label: 'reBot-DM with Pinocchio' },
+        { type: 'link', label: 'No-Code VLA: SenseCraft Robotics Platform', href: 'https://wiki.seeedstudio.com/sensecraft_robotics_rebot_arm_102_b601_dm/' },
       ],
     },
     {

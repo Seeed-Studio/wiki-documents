@@ -58,6 +58,24 @@ import '/src/css/rebot-wiki-style.css';
 
 </section>
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ VLA sin código · Sin configurar entorno</span>
+    <p className="sensecraft-banner__title">Sin configurar nada: usa el reBot Arm y LeRobot desde una sola app</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics es la plataforma sin código de Seeed para SO-ARM101, reBot Arm 102 + B601-RS y B601-DM. Conecta los brazos, calibra, recoge demostraciones, entrena y ejecuta la inferencia desde una interfaz guiada.</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ Flujo guiado de 6 pasos</li>
+      <li>✅ Entrenamiento en la nube</li>
+      <li>✅ Cliente Windows / macOS</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir a SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/es/sensecraft_robotics/">Guía del software</a>
+  </div>
+</div>
+
 ## 11.2 Configuración del entorno
 
 <section id="environment" className="section-card">

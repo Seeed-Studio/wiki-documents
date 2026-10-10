@@ -13,24 +13,29 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
-const courseLink = () => ({
+// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
+// keeps the beginner-course jump that every product's Course group starts with.
+const courseItems = () => [
+  {
+    type: 'ref',
+    id: `${C}/cn_Arm_Tutorial_Introduction`,
+    label: '入门课程',
+  },
+];
+
+const courseLink = (items = courseItems()) => ({
   type: 'category',
   label: '课程',
   className: 'robotics-section-title',
   collapsed: false,
   collapsible: false,
-  items: [
-    {
-      type: 'ref',
-      id: `${C}/cn_Arm_Tutorial_Introduction`,
-      label: '入门课程',
-    },
-  ],
+  items,
 });
 
 // 课程自己的独立侧边栏（浏览课程页面时展开）。
 const courseSidebar = () => [
   backToRobotics(),
+
   {
     type: 'doc',
     id: `${C}/cn_Arm_Tutorial_Introduction`,
@@ -169,6 +174,7 @@ const sidebars = {
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Lerobot`, label: 'reBot-RS 与 LeRobot' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_pinocchio`, label: 'reBot-RS 与 Pinocchio' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_control_mit`, label: 'reBot-RS 电机 SDK' },
+        { type: 'link', label: '无码化上手VLA：SenseCraft Robotics 平台', href: 'https://wiki.seeedstudio.com/cn/sensecraft_robotics_rebot_arm_102_b601_rs/' },
       ],
     },
     {
@@ -185,7 +191,10 @@ const sidebars = {
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS 与 Agent Claw' },
       ],
     },
-    courseLink(),
+    courseLink([
+      ...courseItems(),
+      { type: 'link', label: 'DLI 课程：Sim-to-Real VLA 全流程', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+    ])
   ],
 
   // reBot-DM：快速上手与 SDK / 应用 / 课程（跳转到课程）。
@@ -201,6 +210,7 @@ const sidebars = {
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Getting_Started`, label: 'reBot-DM 快速入门' },
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Lerobot`, label: 'reBot-DM 与 LeRobot' },
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_pinocchio`, label: 'reBot-DM 与 Pinocchio' },
+        { type: 'link', label: '无码化上手VLA：SenseCraft Robotics 平台', href: 'https://wiki.seeedstudio.com/cn/sensecraft_robotics_rebot_arm_102_b601_dm/' },
       ],
     },
     {
