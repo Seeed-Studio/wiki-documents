@@ -43,6 +43,26 @@ import 'katex/dist/katex.min.css';
   </div>
 </section>
 
+### このステージで必要なハードウェア
+
+このステージで用意するもの。全ステージの一覧は[第 3 章](/ja/rebot_physical_ai_course_chapter_3/)にあります。
+
+**メイン制御ユニット**
+
+| 項目 | 購入 | 数量 |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+デスクトップまたはノート PC も必要です:Ubuntu 22.04、GTX 4080 以上(VRAM 12GB 以上)、メモリ 16GB 以上。
+
+**このステージ**
+
+| 項目 | 購入 | 数量 |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+
+
 <section className="section-card">
   <div className="section-title">
     <span>概要</span>

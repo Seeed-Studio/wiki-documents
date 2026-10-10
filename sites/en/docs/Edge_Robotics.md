@@ -61,6 +61,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS with LeRobot</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS with Pinocchio</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>reBot-RS Motor SDK</b></div></a>
+        <a className="step-card" href="/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>No-Code VLA: SenseCraft Robotics Platform</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -77,6 +78,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>Course</h4>
       <div className="learning-steps">
         <a className="step-card" href="/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Beginner Course</b></div></a>
+        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>DLI Course: Sim-to-Real VLA Pipeline</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -110,6 +112,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>reBot-DM Quick Start</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM with LeRobot</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM with Pinocchio</b></div></a>
+        <a className="step-card" href="/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>No-Code VLA: SenseCraft Robotics Platform</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -158,6 +161,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Quick Start</b></div></a>
         <a className="step-card" href="/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b></div></a>
+        <a className="step-card" href="/sensecraft_robotics_so_arm101/"><span className="step-index">🖥️</span><div><b>No-Code VLA: SenseCraft Robotics Platform</b></div></a>
       </div>
     </div>
     <div className="learning-group">

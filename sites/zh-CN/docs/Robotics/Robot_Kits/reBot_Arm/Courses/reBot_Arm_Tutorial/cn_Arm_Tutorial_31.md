@@ -1,0 +1,212 @@
+---
+description: "Seeed 具身智能入门课程第七阶段：ROS2 与机器人系统集成第 31 章 — ROS2 通信与机器人软件架构：一个现代机器人通常由各种复杂的硬件组成：有负责“看”的相机，有负责“想”的计算机，还有负责“动”的电机。如果让这些硬件各自为战，机器人将寸步难行。 ROS2（Robot Operating System 2）其实不是一个像 Windows 或 Linux 那样的传统操作系统，而是机器人的“神经系统”…"
+title: 第 31 章 - ROS2 通信与机器人软件架构
+hide_title: true
+keywords:
+  - reBot
+  - 机械臂
+  - 具身智能
+  - 课程
+image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
+slug: /rebot_physical_ai_course_chapter_31
+displayed_sidebar: RebotCourseSidebar
+translation:
+  skip: [zh-CN]
+last_update:
+  date: 2026-10-09
+  author: Seeed Studio Robotics Team
+createdAt: '2026-10-09'
+updatedAt: '2026-10-09'
+url: https://wiki.seeedstudio.com/cn/rebot_physical_ai_course_chapter_31/
+---
+
+import '/src/css/rebot-wiki-style.css';
+import 'katex/dist/katex.min.css';
+
+# 
+
+<div className="rebot-page">
+
+<section className="doc-hero">
+  <div>
+    <span className="eyebrow">第 7 阶段 · 第 31 章 · 理论</span>
+    <h2>31. ROS2 通信与机器人软件架构</h2>
+    <p>
+      一个现代机器人通常由各种复杂的硬件组成：有负责“看”的相机，有负责“想”的计算机，还有负责“动”的电机。如果让这些硬件各自为战，机器人将寸步难行。 ROS2（Robot Operating System 2）其实不是一个像 Windows 或 Linux 那样的传统操作系统，而是机器人的“神经系统”或“沟通桥梁”。它提供了一套标准的通信规则，让感知（眼睛）、规划（大脑）和控制（四肢）模块能够高效、顺畅地交换信息。
+    </p>
+    <div className="hero-actions">
+      <a href="#overview">本章概览</a>
+    </div>
+  </div>
+</section>
+
+### 本阶段需要的硬件
+
+本阶段需要准备的硬件如下。全部阶段的完整清单见 [第 3 章](/cn/rebot_physical_ai_course_chapter_3/)。
+
+**主控单元**
+
+| 硬件 | 购买 | 数量 |
+| :--- | :---: | :---: |
+| [Jetson Orin Nano Super 8G](https://detail.tmall.com/item.htm?abbucket=14&id=712054933688&mi_id=0000b4o7-mmwtJhlvCEhSP4viA7xIJPisw8IuibhHvzfMNs&rn=79312731d60820183c59a45a12571cae&skuId=6114111210073&spm=a1z10.5-b.w4011-22390330418.113.43ae1734XfPvdN) | 🛒 | 1 |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://detail.tmall.com/item.htm?abbucket=14&id=957845742837&mi_id=0000pv-h8DvXhmbEW2jrasWWe-BhFP2E5HGxD4KpP2RKKpE&rn=79312731d60820183c59a45a12571cae&skuId=6281653119238&spm=a1z10.5-b.w4011-22390330418.169.43ae1734XfPvdN) | 🛒 | 1 |
+
+另外还需要一台台式机或笔记本:Ubuntu 22.04、GTX 4080 以上(12G 显存以上)、16GB 以上内存。
+
+**本阶段**
+
+| 硬件 | 购买 | 数量 |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://detail.tmall.com/item.htm?abbucket=14&id=1042412233386&pisk=hfB-eJgryJp7dpE0kCCZSVvHso4GO9xBAMSEAU9WrvHdSNMoK34UpwLAfQqP-wfvJZ_vPTVy-v3dlMmkO9YhpLJedubwHPmyhH-INJYBNKN2IpvYSR2GDjMMkoI3zPDG0hK6d3TWPIZvjHmWdBTCcoKBx4TBPwsbDH8XVetBREsXqHcSRwO5cntpf3tBOUTXl3-Mde_BdoIXuHpBRw9QDi_myQZrrVRZdRLqSbSWkAIVHCgMWgLjdP622R86OGGp7T_cATXygfN9LifOJ6_UsjJRA_9Wjgy-Hds5iHzFKoGQT151j1D_OTU1eOCdg4MFLWfcFtAZPkXzI61P7swqa_WdAisVljZYIJfhiTdZ3PBfZ_JwUKesDz1vPsAhnW4zLlPW0_z8BPiDyhp2DFqJ2XleOn-vSoExTXRW0nLg2blETBtV.&rn=b08f608734893daceae119d7e15a5f39&skuId=6279331210830&spm=a1z10.5-b.w4011-22390330418.66.1f361734SN96R4) | 🛒 | 1 |
+
+
+<a id="overview"></a>
+
+## 31.1 为什么机器人需要 ROS2？
+
+一个现代机器人通常由各种复杂的硬件组成：有负责“看”的相机，有负责“想”的计算机，还有负责“动”的电机。如果让这些硬件各自为战，机器人将寸步难行。 ROS2（Robot Operating System 2）其实不是一个像 Windows 或 Linux 那样的传统操作系统，而是机器人的“神经系统”或“沟通桥梁”。**它提供了一套标准的通信规则**，让感知（眼睛）、规划（大脑）和控制（四肢）模块能够高效、顺畅地交换信息。
+
+**ROS2 与上一代 ROS1 的核心区别（为 QoS 做铺垫）：**
+
+- **ROS1 的痛点（中心化）：** 依赖一个叫做 `roscore` 的“总管”。一旦“总管”死机，整个机器人的通信就全盘崩溃；而且它对网络环境要求高，Wi-Fi 稍微差一点就会断连。
+- **ROS2 的进化（去中心化与 DDS）：** 彻底砍掉了“总管”，节点之间变成了点对点的直接通信（基于 DDS 技术）。不仅没有了单点故障的风险，还引入了 QoS（服务质量）机制，能够适应极差的网络环境和对实时性要求极高的工业场景。
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-01cn.jpg" alt="" />
+</div>
+
+## 31.2 Node（节点）：机器人的基本工作单元
+
+在 ROS2 的世界里，**Node 是一种独立的实体（进程/程序）**。它是机器人软件架构中最基础的干活单元。
+
+- **特点：** 专事专办。一个设计良好的机器人系统是由许多单一功能的 Node 组成的。
+- **例子：** “相机节点”只负责采集图像，“电机节点”只负责驱动轮子。它们各自独立运行，即使相机节点崩溃了，电机节点依然能正常工作。
+
+> **既然节点都是独立的，它们之间怎么配合呢？这就引出了节点间的三大通信方式。**
+
+## 31.3 节点间的通信方式（通信机制）：节点间交流的“接口类型”
+
+节点之间的通信主要分为三种种类：**Topic（话题）**、**Service（服务）**和 **Action（动作）**。
+
+### A. Topic（话题）
+
+- **是什么：** 基于“发布/订阅 (Publish/Subscribe)”模型的通信方式，就像**公众号**。
+- **特点：** 异步通信、单向数据流。一个节点可以一直发，不管有没有人收；支持“一对多”、“多对一”和“多对多”。
+- **举个栗子：**类似于“关注微信公众号”。温度传感器节点就像一个天气公众号，持续向外发布“当前温度”的文章。空调控制节点作为读者订阅了这个公众号，一旦收到“温度超过28度”的数据，就开始制冷。公众号不管有几个人看都会按时发文章，读者也可以随时取消关注。
+- **适用场景：** 适合传输**高频、持续、无需立刻回复**的数据。比如：相机的实时视频流、激光雷达的点云数据、机械臂各个关节的实时角度。
+
+### B. Service（服务）
+
+- **是什么：** 基于“客户端/服务端 (Client/Server)”模型的通信方式，就像**打电话问路**。
+- **特点：** 同步通信、双向互动。一问一答，客户端发出请求（Request），服务端处理后必须给出响应（Response）。在等待回复期间，客户端通常会阻塞（等待）。
+- **举个栗子：**类似于“打电话问路”。一问一答，响应迅速。通常用于执行短时间的任务，比如“打开机械臂夹爪”。客户端发出请求（Request），服务端执行并立刻返回结果（Response）
+- **适用场景：** 适合执行**短暂、快速、需要明确结果**的指令。比如：查询机器人当前的电量、打开/关闭末端夹爪、切换机器人的工作模式。
+
+### C. Action（动作）
+
+- **是什么：** 是 Topic 和 Service 的结合体，专门为了复杂的任务而生。就像**在 App 上点外卖**。
+- **特点：** 异步通信、带有进度反馈、可以中途取消。由目标（Goal）、反馈（Feedback）和结果（Result）三部分组成。
+- **举个栗子：**类似于“点外卖”。用于耗时较长的任务，比如“让机械臂移动到指定位置”。在等待期间，你能不断收到“外卖员正在路上”的进度反馈（Feedback），遇到问题也可以随时取消（Cancel），最终收到外卖完成的反馈（Result）。
+- **适用场景：** 适合执行**耗时较长、随时可能被打断**的复杂物理动作。比如：让机械臂从 A 点移动到 B 点。在移动过程中，你可以不断收到“目前移动了百分之几”的反馈，如果发现前方有危险，可以立刻发指令“取消任务”。
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-02cn.jpg" alt="" />
+</div>
+
+> **现在我们知道了节点间的通信方式有哪些了， 那么他们到底在传输什么内容呢？ 又遵循什么样的规则呢？接下来引出Message（消息接口）Message 就是它们交流时使用的“标准表单”或“共同语言”（数据格式）。**
+
+## 31.4 Message（消息接口）：节点间交流的“传输媒介格式”
+
+在了解了节点之间“怎么聊”（Topic/Service/Action）之后，我们还需要规定“聊什么、用什么格式聊”。这就引出了 Message（消息）。
+
+- **是什么：** 节点之间传递数据的标准化数据结构（类似于一张排版严格的表格）。
+- **为什么需要它：** 如果相机节点发出的图像数据是 A 格式，大脑节点只认识 B 格式，它们就无法沟通。ROS2 预先定义了海量的标准 Message（比如通用图像、通用速度指令），只要大家都按这个标准填表，任何厂家的硬件都能无缝对接。
+- **对应三种通信机制的 Message 格式：**
+
+  - **`.msg` 文件（用于 Topic）：** 简单的数据包。例如一个“速度消息”，里面只包含线速度（向前跑多快）和角速度（转弯有多急）。
+  - **`.srv` 文件（用于 Service）：** 分为上下两部分。上半部分定义请求（Request）格式，下半部分定义响应（Response）格式。中间用 `---` 隔开。
+  - **`.action` 文件（用于 Action）：** 分为三部分。分别定义目标（Goal）、结果（Result）和持续反馈（Feedback）的数据格式，中间同样用 `---` 隔开。
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-03cn.jpg" alt="" />
+</div>
+
+> **统一了交流格式后，又是谁在中间维持着节点间通信服务的质量呢？相比 ROS1，在 ROS2 中，QoS 机制策略保持了节点间通信的稳定性和实时性。**
+
+## 31.5 QoS（服务质量）：节点间交流的“交通指挥官”
+
+为了保障上述通信的稳定性，ROS2 引入了 QoS。你可以为不同的通信方式设定不同的传输规则：
+
+- **可靠模式 (Reliable)：** 类似发微信，必须保证对方收到，底层机制会自动重传直到成功。
+- **适用场景：** 发送机械臂急停指令（Service），绝不能丢失。
+- **尽力而为模式 (Best Effort)：** 类似视频通话，丢了一两帧数据无所谓，保证极低的延迟最重要。
+- **适用场景：** 高频发送的相机画面（Topic）。
+
+> **至此，单个节点的运转和它们之间的通信已经非常完善了。但是在实际工程中，一个复杂的机器人因为搭载了很多传感器和控制器动辄有几十上百个节点。如果每次开机都要手动一个个去启动，显然是不现实的。为了解决这个麻烦，ROS2 提供了 Launch 和 Parameter 机制。**
+
+## 31.6 Parameter  server（参数服务器）与 Launch（启动机制文件）
+
+### A. Launch（启动机制文件与自动化部署）
+
+- **痛点引入：** 现在的机器人系统非常复杂。比如你要启动一个自动驾驶的机器人，可能需要同时开启激光雷达节点、相机节点、机械臂控制节点、路径规划节点等几十个 Node。如果要工程师每次都打开几十个终端窗口，手动敲几十次命令，不仅让人崩溃，还极易出错（比如大脑节点比眼睛节点先启动，导致拿不到数据而报错）。
+- **是什么：** 机器人系统的“一键启动键”**或**“交响乐总指挥”。它是用 Python（或 XML/YAML）编写的自动化编排脚本。
+- **特点（核心优势）：** 它可以把相机、电机、规划算法等所有相关联的节点“打包”起来一次性拉起，管理它们启动的先后顺序（生命周期），并且在启动的瞬间，统一给它们分发配置好的 Parameter（参数），极大提升了开发和部署效率。
+- **举个栗子：** 这就像智能家居里的“观影模式”。你不需要手动分别去拉窗帘、关大灯、开电视、调音响。你只需按下一个键（运行一个 Launch 文件），所有的设备就会按照设定好的顺序和状态，立刻开始协同工作。
+- **实际应用场景：**
+
+  - **一键统筹全局：** 一行命令启动整个机器人的感知、决策和控制系统。
+  - **多场景快速切换：** 在开发时，我们可以写两个 Launch 文件。一个叫 `sim.launch.py`（用于给节点分配虚拟环境的参数进行仿真），另一个叫 `real.launch.py`（用于分配真实硬件参数控制真机）。只需运行不同的文件，就能一键无缝切换工作环境，而无需改动任何核心代码。
+
+### B. Parameter（参数机制与动态配置）
+
+- **痛点引入：** 假设你正在调试机械臂，发现它运动得太快了。如果每次修改速度都需要去修改 C++ 或 Python 的源代码，然后再花几分钟重新编译、重新启动程序，那开发效率就太低了。
+- **是什么：** 节点运行时的“全局配置字典”**或**“控制面板”。它允许节点向外暴露一些可调节的变量。
+- **特点（核心优势）：** 最大的特点就是“动态修改，即时生效”。你可以在不修改底层代码、不需要重新编译的情况下，动态改变机器人的行为。有了Parameter我们就可以动态的调整参数实时查看效果了。
+- **举个栗子：** 这就像我们在玩 3D 游戏，不需要退出游戏去改代码，只需要在运行途中按 ESC 呼出设置菜单，把“画质”调低、“鼠标灵敏度”调高，保存后游戏画面立刻就发生了改变。
+- **实际应用场景：**
+
+  - **作为机器人的“全局配置文件”：** 统一管理各个模块的初始设定。
+  - **硬件参数微调：** 例如动态调整相机的曝光度、图像分辨率，或者激光雷达的扫描频率。
+  - **算法实时调优：** 我们可以把机械臂的“最大运行速度”设为一个 Parameter，测试时不仅可以在外部通过 Launch 文件随意赋予初始值，还能在程序运行时通过命令行**动态调整参数，并实时用肉眼查看机械臂运动效果的改变**。有了 Parameter，调参过程变得直观且高效。
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-04cn.jpg" alt="" />
+</div>
+
+> **当机器人顺利启动并运行起来后，如果我们想记录下它运行时的所有数据以便复盘或找 Bug，该怎么办呢？这就轮到 rosbag 登场了。**
+
+## 31.7 rosbag 工具 ：机器人的“行车记录仪”
+
+在机器人开发和调试的过程中，我们经常会遇到这样的痛点：机器人在室外测试时发生了意外情况，但回到实验室后却怎么也复现不出来；或者真实机器人的硬件极其昂贵且耗电，我们无法全天候开机测试算法。
+
+为了解决这些问题，ROS2 提供了强大的 **rosbag** 工具。
+
+- **是什么：** 它可以将系统中任意 Topic 上流通的 Message（如雷达点云、相机图像、电机转速等）带上**时间戳**，原封不动地录制下来，并保存为本地文件（在 ROS2 中通常是 SQLite3 数据库格式）。类似于机器人的“行车记录仪”，可以把 Topic 上的数据全盘录制下来，用于事后回放与离线 Debug。
+- **它的“欺骗性”原理：** 当你播放一个 rosbag 文件时，它会按照原本的时间顺序和频率，再次向外发布这些 Topic。对于下游的算法节点（比如目标检测、路径规划）来说，**它们根本无法分辨当前接收到的数据是来自真实的硬件传感器，还是来自 rosbag 的回放。**
+
+**核心应用场景：**
+
+1. **离线算法调试（最常用）：** 算法工程师不用顶着烈日去室外跟着机器人跑。只需要让测试人员在室外录制一段含有丰富场景的 rosbag。工程师在开着空调的办公室里，可以无限次地回放这段数据，用来验证和调优自己的感知或导航算法。
+2. **现场事故复盘（找 Bug 神器）：** 如果机器人在运行中突然撞墙了。通过回放事发当时的 rosbag，开发者可以一帧一帧地查看：到底是因为相机漏检了障碍物？还是规划节点算出了错误的轨迹？或者是底盘没有执行停止指令？
+3. **AI 数据集采集：** 现代机器人大量依赖深度学习模型，通过 rosbag 可以非常方便地采集海量真实的传感器数据，用于后续的模型训练。
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-05cn.jpg" alt="" />
+</div>
+
+## 37.8 模块化机器人系统
+
+通过上述机制，ROS2 让机器人软件变得高度**模块化**。你可以随时把“激光雷达节点”替换成另一个品牌的雷达节点，只要它们发布的 Message 格式一致，下游的大脑（规划节点）完全不需要修改代码。这就是现代机器人软件架构的核心魅力。**总结：** 独立的 Node 搭配标准化的 Topic/Service/Action 通信，外加 Launch 的统一调度，构成了 ROS2 极度**模块化**的软件架构，让机器人的开发像搭乐高积木一样灵活。
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-06cn.jpg" alt="" />
+</div>
+
+---
+
+### 章节过渡：从“神经系统”到“机器模型”
+
+如果说第 31 章是给机器人搭建了“神经系统”（通信机制），那么第 32 章就是教计算机如何认识并控制机器人的“物理实体”，让计算机能真实感受到机器以什么方式存在以及空间位置的变换。
+
+</div>

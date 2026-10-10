@@ -1,5 +1,5 @@
 ---
-description: "Seeed Physical AI Beginner's Course — a free, hands-on guide to building and learning with the 100% open-source reBot robotic arm. Six stages and 30 chapters are published, covering setup and basic control, imitation learning with LeRobot, VLA with Isaac GR00T, robot arm mathematics and motion control, and robot vision with autonomous grasping."
+description: "Seeed Physical AI Beginner's Course — a free, hands-on guide to building and learning with the 100% open-source reBot robotic arm. All eight stages and 39 chapters are published, covering setup and basic control, imitation learning with LeRobot, VLA with Isaac GR00T, robot arm mathematics and motion control, robot vision with autonomous grasping, ROS2 robot system integration, and robot arm simulation in MuJoCo and Isaac Sim."
 title: Seeed Physical AI Beginner's Course
 hide_title: true
 keywords:
@@ -16,10 +16,10 @@ displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-10-08
+  date: 2026-10-09
   author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-10-08'
+updatedAt: '2026-10-09'
 url: https://wiki.seeedstudio.com/rebot_physical_ai_course_introduction/
 ---
 
@@ -30,13 +30,14 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <section className="doc-hero">
   <div>
-    <span className="eyebrow">reBot × Physical AI · 6 stages published</span>
-    <h2>6 Stages, 30 Chapters — free and hands-on</h2>
+    <span className="eyebrow">reBot × Physical AI · All 8 stages published</span>
+    <h2>8 Stages, 39 Chapters — free and hands-on</h2>
     <p>
       A free, hands-on guide to building and learning with the 100% open-source reBot robotic arm.
       The published chapters take you from basic concepts, assembly and motor control, through
       imitation learning with LeRobot and VLA with Isaac GR00T, to the robot arm mathematics and
-      motion control behind it all — and on to robot vision and autonomous grasping.
+      motion control behind it all — and on to robot vision, autonomous grasping, ROS2 robot system
+      integration and simulation.
     </p>
     <div className="hero-actions">
       <a href="#structure">Course structure</a>
@@ -48,8 +49,8 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     <strong>Course at a glance</strong>
     <span>Written and shared for free by the Seeed robotics team.</span>
     <span>Pairs with the 100% open-source, reproducible reBot robotic arm.</span>
-    <span><strong>Stages 1–6 published</strong> (Chapters 1–30): basics and hardware, assembly and control, imitation learning, VLA, mathematics and motion control, and robot vision and grasping.</span>
-    <span>Stages 7–8 (ROS2 integration and simulation) are on the way.</span>
+    <span><strong>All 8 stages published</strong> (Chapters 1–39): basics and hardware, assembly and control, imitation learning, VLA, mathematics and motion control, robot vision and grasping, ROS2 system integration, and MuJoCo / Isaac Sim simulation.</span>
+    <span>The course is complete — all 39 chapters are on the wiki.</span>
   </div>
 </section>
 
@@ -58,7 +59,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 :::tip
 This course was created and shared for free by the Seeed Studio AI Robotics team, to give robotics learners, students, job seekers, and makers a clear and systematic learning path. You are welcome to learn from it and share it with others, but unauthorized copying, commercial redistribution, or misuse of the content is prohibited — the copyright belongs to Seeed Studio (Shenzhen) Co., Ltd.
 
-It is built around <strong>reBot</strong>, a 100% open-source, commercially usable and reproducible robotic arm, and combines theory with hands-on practice to cover robotic arm control, traditional robotics algorithms, and modern VLA-based embodied AI. The course is completely free — if you find it useful, please support the project by starring <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm on GitHub</a> ⭐, where the hardware drawings, BOM files, and other open-source resources are also available. Experienced users can go straight to our <a href="https://wiki.seeedstudio.com/robotics_page/" target="_blank" rel="noopener noreferrer">Robotics Wiki</a> for tutorials and examples. The focus is practical understanding rather than deep mathematical derivation, so you can build a solid foundation quickly and prepare for more advanced study. Stage 5 does introduce the mathematical foundations — coordinate frames, kinematics, the Jacobian and trajectory planning — but it is written as reference material you can read once and then look up while working through the hands-on chapter. Stage 6 follows the same pattern: Chapters 27 and 28 are vision theory, and Chapter 29 is the hands-on visual grasping practice.
+It is built around <strong>reBot</strong>, a 100% open-source, commercially usable and reproducible robotic arm, and combines theory with hands-on practice to cover robotic arm control, traditional robotics algorithms, and modern VLA-based embodied AI. The course is completely free — if you find it useful, please support the project by starring <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm on GitHub</a> ⭐, where the hardware drawings, BOM files, and other open-source resources are also available. Experienced users can go straight to our <a href="https://wiki.seeedstudio.com/robotics_page/" target="_blank" rel="noopener noreferrer">Robotics Wiki</a> for tutorials and examples. The focus is practical understanding rather than deep mathematical derivation, so you can build a solid foundation quickly and prepare for more advanced study. Stage 5 does introduce the mathematical foundations — coordinate frames, kinematics, the Jacobian and trajectory planning — but it is written as reference material you can read once and then look up while working through the hands-on chapter. Stage 6 follows the same pattern: Chapters 27 and 28 are vision theory, and Chapter 29 is the hands-on visual grasping practice. Stage 7 does the same again — Chapters 31 and 32 are the ROS2 concepts, and Chapters 33 and 34 put the arm on a real ROS2 system. Stage 8 closes the course by putting the arm inside a computer: Chapter 35 is simulation theory, Chapters 36 and 37 run the arm in MuJoCo, Chapter 38 builds it in Isaac Sim, and Chapter 39 synchronizes the real arm into the simulation.
 :::
 
 <section id="community" className="section-card">
@@ -370,11 +371,87 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
   </a>
 </div>
 
-### Stage 7–8
+### Stage 7: ROS2 and Robot System Integration
 
-:::note
-Coming soon — ROS2 and robot system integration (Stage 7), and MuJoCo / Isaac Sim simulation (Stage 8) will be added to the wiki progressively.
-:::
+<div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
+  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_31">
+    <span className="course-index">31</span>
+    <div className="course-path-copy">
+      <strong>ROS2 Communication and Robot Software Architecture</strong>
+      <span>Chapter 31</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_32">
+    <span className="course-index">32</span>
+    <div className="course-path-copy">
+      <strong>URDF, TF, and Robot Models</strong>
+      <span>Chapter 32</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_33">
+    <span className="course-index">33</span>
+    <div className="course-path-copy">
+      <strong>reBot Arm ROS2 Integration</strong>
+      <span>Chapter 33</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_34">
+    <span className="course-index">34</span>
+    <div className="course-path-copy">
+      <strong>MoveIt2 Motion Planning</strong>
+      <span>Chapter 34</span>
+    </div>
+    <span className="course-tag">Theory &amp; Practice</span>
+  </a>
+</div>
+
+### Stage 8: MuJoCo and Isaac Sim Robot Arm Simulation
+
+<div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
+  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_35">
+    <span className="course-index">35</span>
+    <div className="course-path-copy">
+      <strong>Robot Simulation Basics and Platform Introduction</strong>
+      <span>Chapter 35</span>
+    </div>
+    <span className="course-tag">Theory</span>
+  </a>
+  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_36">
+    <span className="course-index">36</span>
+    <div className="course-path-copy">
+      <strong>Running the reBot Arm in MuJoCo</strong>
+      <span>Chapter 36</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_37">
+    <span className="course-index">37</span>
+    <div className="course-path-copy">
+      <strong>Kinematics and Trajectory Control in MuJoCo</strong>
+      <span>Chapter 37</span>
+    </div>
+    <span className="course-tag">Theory &amp; Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_38">
+    <span className="course-index">38</span>
+    <div className="course-path-copy">
+      <strong>Running the reBot Arm in Isaac Sim</strong>
+      <span>Chapter 38</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_39">
+    <span className="course-index">39</span>
+    <div className="course-path-copy">
+      <strong>Synchronizing the Real and Simulated Arms</strong>
+      <span>Chapter 39</span>
+    </div>
+    <span className="course-tag">Practice</span>
+  </a>
+</div>
 
 </section>
 

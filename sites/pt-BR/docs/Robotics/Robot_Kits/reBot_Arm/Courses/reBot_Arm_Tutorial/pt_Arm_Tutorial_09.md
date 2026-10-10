@@ -42,6 +42,30 @@ import '/src/css/rebot-wiki-style.css';
   </div>
 </section>
 
+### Hardware necessário para este estágio
+
+O que preparar para este estágio. A lista completa de todos os estágios está no [capítulo 3](/pt-br/rebot_physical_ai_course_chapter_3/).
+
+**Unidade de controle principal**
+
+| Item | Comprar | Qtd. |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+Também é necessário um computador de mesa ou notebook: Ubuntu 22.04, GTX 4080 ou superior com 12 GB+ de VRAM e 16 GB+ de RAM.
+
+**Para este estágio**
+
+| Item | Comprar | Qtd. |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+| [reBot Arm 102 Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html) | 🛒 | 1 |
+| [Câmera Monocular de Pulso 720P](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) | 🛒 | 2 |
+| [Suporte para Câmera de Pulso](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/UVC32_mount.step) | 🛒 | 1 |
+| [Suporte Suspenso para Câmera Hikvision](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.49cb2e8dt6KH1K&id=797067194359&mi_id=0000qWvzUV0CAietxWIGsLRo68nEdNUwWmvnKFhXbqbu1Ac) | 🛒 | 1 |
+
+
 ## 9.1 Por Que Braços Robóticos Precisam de Aprendizado?
 
 <section id="why-learning" className="section-card">

@@ -8,8 +8,6 @@ keywords:
   - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
-aliases:
-  - /so-arm101
 sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 3/11/2026
@@ -109,30 +107,8 @@ import TabItem from '@theme/TabItem';
   </div>
 
 :::tip
-本教程已更新至最新版 [lerobot](https://huggingface.co/docs/lerobot/index)，如需查阅旧版教程，请点击[此处](https://wiki.seeedstudio.com/cn/lerobot_so100m/)。
+本教程已更新至最新版 [lerobot](https://huggingface.co/docs/lerobot/index)。
 :::
-
-[SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100) 是由 [TheRobotStudio](https://www.therobotstudio.com/) 发起的一个完全开源的机器人手臂项目。它包含 Leader Arm 与 Follower Arm，并提供完整的 3D 打印文件、装配说明和操作指南。[LeRobot](https://github.com/huggingface/lerobot/tree/main) 致力于为真实世界的机器人提供 PyTorch 中的模型、数据集和工具。其目标是降低机器人学的入门门槛，使每个人都能通过共享数据集和预训练模型进行贡献和受益。LeRobot 集成了经过验证的前沿方法，专注于模仿学习和强化学习。它提供了一套预训练模型、包含人类收集的示范数据集和仿真环境，使用户无需进行机器人组装即可开始使用。未来几周，计划在当前最具成本效益和性能的机器人上增强对真实世界机器人的支持。
-
-<div className="video-container">
-<iframe
-  loading="lazy"
-  width="900"
-  height="600"
-  src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819388312&bvid=BV1H6UUBcErT&cid=34226440480&p=1&autoplay=0&muted=1&mute=1&danmaku=0"
-  title="B站视频播放器"
-  frameBorder="0"
-  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerPolicy="strict-origin-when-cross-origin"
-  allowFullScreen
-></iframe>
-</div>
-
-### 项目简介
-
-SO-ARM10x 可以与 reComputer Jetson AI 智能机器人套件组合使用，将高精度机械臂控制与边缘 AI 计算能力结合，形成完整的机器人开发方案。该套件基于 Jetson Orin 或 AGX Orin 平台，结合 SO-ARM10x 机器人手臂和 LeRobot AI 框架，为用户提供适用于教育、科研和工业自动化等多种场景的智能机器人系统。
-
-本 Wiki 将从硬件组装与舵机校准开始，逐步完成 LeRobot 环境配置、遥操作、相机接入、数据集采集、策略训练与真实机械臂评估。
 
 <div className="image-frame">
     <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="" />
@@ -154,165 +130,6 @@ SO-ARM10x 可以与 reComputer Jetson AI 智能机器人套件组合使用，将
     <span>建议先查看文末 FAQ；如果仍无法解决，可联系客服加入 Seeed Studio LeRobot 交流群，也可以在 LeRobot GitHub 或 Discord 频道提问。</span>
   </div>
 </div>
-</section>
-
-## SO-ARM10x 系列特点
-
-<section id="features" className="section-card">
-  <div className="section-title">
-    <span>Features</span>
-    <h2>SO-ARM10x 系列特点</h2>
-    <p>快速了解 SO-ARM10x 的开源、低成本、LeRobot 集成与 NVIDIA 平台兼容特性。</p>
-  </div>
-
-<div className="feature-grid">
-  <div>
-    <strong>开源 & 低成本</strong>
-    <span>由 TheRobotStudio 提供，是一套开源、低成本的机器人手臂解决方案。</span>
-  </div>
-  <div>
-    <strong>支持 LeRobot 平台集成</strong>
-    <span>面向现实机器人任务的模仿学习，覆盖数据采集、仿真、训练与部署。</span>
-  </div>
-  <div>
-    <strong>丰富的学习资源</strong>
-    <span>包含组装、校准、测试、数据采集、训练与部署文档。</span>
-  </div>
-  <div>
-    <strong>兼容 NVIDIA 平台</strong>
-    <span>支持通过 reComputer Mini J4012 Orin NX 16GB 平台进行部署。</span>
-  </div>
-</div>
-</section>
-
-## 更新内容
-
-<section id="updates" className="section-card">
-  <div className="section-title">
-    <span>Updates</span>
-    <h2>更新内容</h2>
-    <p>查看 SO-ARM101 相比 SO-ARM100 的布线、电机和实时跟随更新。</p>
-  </div>
-
-<div className="feature-grid">
-  <div>
-    <strong>布线优化</strong>
-    <span>SO-ARM101 改进了布线，解决第 3 关节处可能断线的问题，并减少对关节活动范围的限制。</span>
-  </div>
-  <div>
-    <strong>主臂齿轮比优化</strong>
-    <span>Leader Arm 采用优化后的齿轮比电机，无需外部减速机构，同时提升性能。</span>
-  </div>
-  <div>
-    <strong>新增实时跟随</strong>
-    <span>主臂可以实时跟随从臂动作，便于未来策略中的人工干预与动作修正。</span>
-  </div>
-</div>
-</section>
-
-## 规格参数
-
-<section id="specifications" className="section-card">
-  <div className="section-title">
-    <span>Specifications</span>
-    <h2>规格参数</h2>
-    <p>展开查看 SO-ARM100 与 SO-ARM101 的电机、电源、通信和控制规格。</p>
-  </div>
-
-<details className="content-details">
-<summary>点击查看 SO-ARM10x 规格参数</summary>
-
-本教程硬件由[矽递科技Seeed Studio](https://www.seeedstudio.com/)提供
-
-<table>
-  <thead>
-    <tr>
-      <th>类型</th>
-      <th colSpan="2">SO-ARM100</th>
-      <th colSpan="2">SO-ARM101</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">标准版</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">专业版</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">标准版</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">专业版</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Leader Arm</td>
-      <td rowSpan="2">12 个 ST-3215- C001 (7.4V) 1:345 齿轮比电机，适用于所有关节</td>
-      <td rowSpan="2">12 个 ST-3215-C018/ST-3215-C047 (12 V) 1:345 齿轮比电机，适用于所有关节</td>
-      <td colSpan="2">
-        1 个 ST-3215- C001 (7.4V) 1:345 齿轮比电机，仅用于第2号关节<br />
-        2 个 ST-3215-C044 (7.4V) 1:191 齿轮比电机，用于第1号和第3号关节<br />
-        3 个 ST-3215-C046 (7.4V) 1:147 齿轮比电机，用于第4号、第5号关节及第6号夹爪
-      </td>
-    </tr>
-    <tr>
-      <td>Follower Arm</td>
-      <td colSpan="2">与SO-ARM100相同</td>
-    </tr>
-    <tr>
-      <td>电源</td>
-      <td>5.5 mm×2.1 mm DC 5 V 4 A</td>
-      <td>5.5 mm×2.1 mm DC 12 V 2 A</td>
-      <td>5.5 mm×2.1 mm DC 5 V 4 A</td>
-      <td>
-        5.5 mm×2.1 mm DC 12 V 2 A（从臂Follower）<br />
-        5.5 mm×2.1 mm DC 5 V 4 A（主臂Leader）
-      </td>
-    </tr>
-    <tr>
-      <td>角度传感器</td>
-      <td colSpan="4">12位磁编码器</td>
-    </tr>
-    <tr>
-      <td>推荐工作温度范围</td>
-      <td colSpan="4">0 °C ～ 40 °C</td>
-    </tr>
-    <tr>
-      <td>通信方式</td>
-      <td colSpan="4">UART</td>
-    </tr>
-    <tr>
-      <td>控制方式</td>
-      <td colSpan="4">PC</td>
-    </tr>
-  </tbody>
-</table>
-
-:::danger
-若购买 **SO101 Arm Kit 标准版**，所有电源均为5 V。若购买 **SO101 Arm Kit Pro 版**，Leader机械臂的校准及每一步骤均使用5 V电源，Follower机械臂的校准及每一步骤均使用12 V电源。
-:::
-
-</details>
-</section>
-
-## 材料清单（BOM）
-
-<section id="bom" className="section-card">
-  <div className="section-title">
-    <span>BOM</span>
-    <h2>材料清单（BOM）</h2>
-    <p>查看套件中包含的舵机、驱动板、线缆、电源和结构件。</p>
-  </div>
-
-<details className="content-details">
-<summary>点击查看材料清单</summary>
-
-
-| 部件              | 数量 | 是否包含 |
-| ----------------- | ---- | -------- |
-| 舵机              | 12   | ✅       |
-| 舵机驱动板        | 2    | ✅       |
-| USB-C线缆（2条）  | 1    | ✅       |
-| 电源适配器        | 2    | ✅       |
-| 3D 打印桌面夹具   | 4    | ✅       |
-| 手臂的3D 打印部件 | 1    | Option   |
-
-</details>
 </section>
 
 ## 3D 打印参考参数
@@ -373,6 +190,24 @@ SO-ARM10x 可以与 reComputer Jetson AI 智能机器人套件组合使用，将
 
 </details>
 </section>
+
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ 免代码 · 免配环境</span>
+    <p className="sensecraft-banner__title">不想装环境、不想写代码？一个软件就能跑 reBot Arm 与 LeRobot</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics 是 Seeed 面向 SO-ARM101、reBot Arm 102 + B601-RS / B601-DM 的免代码平台。在引导式界面里完成设备连接、标定、数据采集、模型训练与推理验证 —— 不需要配 Python 环境，也不需要敲命令行。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 步引导式流程</li>
+      <li>✅ 云端训练 · 本地无需 GPU</li>
+      <li>✅ Windows / macOS 客户端</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/zh?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">前往 SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/cn/sensecraft_robotics/">软件使用教程</a>
+  </div>
+</div>
 
 ## 初始系统环境
 

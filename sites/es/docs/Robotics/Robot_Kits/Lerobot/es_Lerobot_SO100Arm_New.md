@@ -8,8 +8,6 @@ keywords:
   - Robótica
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
-aliases:
-  - /so-arm101
 sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 3/11/2026
@@ -117,26 +115,8 @@ import TabItem from '@theme/TabItem';
   </div>
 
 :::tip
-Este tutorial se ha actualizado para la última versión de [LeRobot](https://huggingface.co/docs/lerobot/index). Para ver la versión anterior, haz clic [aquí](https://wiki.seeedstudio.com/es/lerobot_so100m/).
+Este tutorial se ha actualizado para la última versión de [LeRobot](https://huggingface.co/docs/lerobot/index).
 :::
-
-[SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100) es un proyecto de brazo robótico totalmente de código abierto lanzado por [TheRobotStudio](https://www.therobotstudio.com/). Incluye tanto un brazo seguidor como un brazo líder, con archivos detallados de impresión 3D y guías de operación. [LeRobot](https://github.com/huggingface/lerobot/tree/main) proporciona modelos PyTorch, conjuntos de datos y herramientas para robótica en el mundo real, reduciendo la barrera de entrada para el aprendizaje por imitación y el despliegue de políticas.
-
-<div className="video-container">
-  <iframe
-    loading="lazy"
-    width="900"
-    height="600"
-    src="https://www.youtube.com/embed/sD34HnAkGNc?si=hqKd_sH5Oc9sdcwd&autoplay=0&mute=1"
-    title="SO-ARM10x LeRobot overview video"
-    frameBorder="0"
-    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  ></iframe>
-</div>
-
-SO-ARM10x y el kit de robótica con IA reComputer Jetson combinan el control de brazo robótico de alta precisión con una plataforma de computación de IA. Junto con Jetson Orin o AGX Orin y el framework LeRobot, esta configuración puede utilizarse para educación, investigación y experimentos de automatización industrial.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM10x kit" />
@@ -151,161 +131,6 @@ SO-ARM10x y el kit de robótica con IA reComputer Jetson combinan el control de 
 :::caution
 Seeed Studio es responsable de la calidad del hardware del kit. El tutorial de software sigue la documentación oficial de LeRobot tan de cerca como es posible. Si encuentras problemas de software o dependencias que no puedas resolver, consulta las FAQ al final de esta página e informa de los problemas en el [repositorio de GitHub de LeRobot](https://github.com/huggingface/lerobot) o en el [canal de Discord de LeRobot](https://discord.gg/8TnwDdjFGU).
 :::
-
-<div className="video-container">
-  <iframe
-    loading="lazy"
-    width="900"
-    height="600"
-    src="https://www.youtube.com/embed/JrF_ymUvrqc?si=vslu5NNI-ZIzVXLc&autoplay=0&mute=1"
-    title="SO-ARM10x project video"
-    frameBorder="0"
-    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  ></iframe>
-</div>
-
-</section>
-
-## Características principales
-
-<section id="features" className="section-card">
-  <div className="section-title">
-    <span>Características</span>
-    <h2>Características principales</h2>
-    <p>SO-ARM10x se centra en el aprendizaje de código abierto, la robótica de bajo coste, la integración con LeRobot y el despliegue en NVIDIA.</p>
-  </div>
-
-  <div className="feature-grid">
-    <div><strong>Código abierto y bajo coste</strong><span>Una solución de brazo robótico de código abierto basada en el proyecto SO-ARM de TheRobotStudio.</span></div>
-    <div><strong>Integración con LeRobot</strong><span>Diseñado para teleoperación, grabación de conjuntos de datos, entrenamiento y evaluación en robots reales en LeRobot.</span></div>
-    <div><strong>Ricos recursos de aprendizaje</strong><span>Incluye guías de montaje, calibración, pruebas, conjuntos de datos, entrenamiento y despliegue.</span></div>
-    <div><strong>Compatible con NVIDIA</strong><span>Se puede desplegar con plataformas como reComputer Mini J4012 Orin NX 16GB.</span></div>
-    <div><strong>Aplicaciones en múltiples escenarios</strong><span>Adecuado para educación, investigación, demostraciones de automatización y aprendizaje de robótica.</span></div>
-  </div>
-</section>
-
-## Novedades
-
-<section id="updates" className="section-card">
-  <div className="section-title">
-    <span>Actualizaciones</span>
-    <h2>Novedades en SO-ARM101</h2>
-    <p>SO-ARM101 mejora el cableado, las relaciones de engranajes del brazo líder y el comportamiento de seguimiento en tiempo real.</p>
-  </div>
-
-  <div className="notice-grid">
-    <div className="notice-card"><strong>Optimización del cableado</strong><span>En comparación con SO-ARM100, SO-ARM101 mejora el cableado y evita el problema de desconexión de la articulación 3. El nuevo enrutamiento ya no limita el rango de movimiento de la articulación.</span></div>
-    <div className="notice-card"><strong>Actualización de la relación de engranajes del líder</strong><span>El brazo líder utiliza motores con una relación de engranajes optimizada, lo que mejora el rendimiento y elimina la necesidad de cajas de engranajes externas.</span></div>
-    <div className="notice-card"><strong>Seguimiento en tiempo real</strong><span>El brazo líder puede seguir al brazo seguidor en tiempo real, lo que ayuda en futuros flujos de trabajo de políticas donde una persona puede intervenir y corregir las acciones del robot.</span></div>
-  </div>
-</section>
-
-
-## Especificación
-
-<section id="specifications" className="section-card">
-  <div className="section-title">
-    <span>Especificaciones</span>
-    <h2>Especificación</h2>
-    <p>Consulta las especificaciones de motor, alimentación, comunicación y control de SO-ARM100 y SO-ARM101.</p>
-  </div>
-
-<details className="content-details">
-<summary>Ver especificaciones de SO-ARM10x</summary>
-
-<table>
-  <thead>
-    <tr>
-      <th>Tipo</th>
-      <th colSpan="2">SO-ARM100</th>
-      <th colSpan="2">SO-ARM101</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">Arm Kit Pro</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">Arm Kit Pro</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Brazo líder</td>
-      <td rowSpan="2">12x motores ST-3215- C001 (7.4V) con relación de engranajes 1:345 para todas las articulaciones</td>
-      <td rowSpan="2">12x motores ST-3215-C018/ST-3215-C047 (12V) con relación de engranajes 1:345 para todas las articulaciones</td>
-      <td colSpan="2">
-        1x motor ST-3215- C001 (7.4V) con relación de engranajes 1:345 solo para la articulación 2<br />
-        2x motores ST-3215-C044 (7.4V) con relación de engranajes 1:191 para las articulaciones 1 y 3<br />
-        3x motores ST-3215-C046 (7.4V) con relación de engranajes 1:147 para las articulaciones 4, 5 y la pinza (articulación 6)
-      </td>
-    </tr>
-    <tr>
-      <td>Brazo seguidor</td>
-      <td colSpan="2">Igual que SO-ARM100</td>
-    </tr>
-    <tr>
-      <td>Fuente de alimentación</td>
-      <td>5.5 mm × 2.1 mm CC 5 V 4 A</td>
-      <td>5.5 mm × 2.1 mm CC 12 V 2 A</td>
-      <td>5.5 mm × 2.1 mm CC 5 V 4 A</td>
-      <td>
-        5.5 mm × 2.1 mm CC 12 V 2 A (Brazo seguidor)<br />
-        5.5 mm × 2.1 mm CC 5 V 4 A (Brazo líder)
-      </td>
-    </tr>
-    <tr>
-      <td>Sensor de ángulo</td>
-      <td colSpan="4">Codificador magnético de 12 bits</td>
-    </tr>
-    <tr>
-      <td>Temperatura de funcionamiento recomendada</td>
-      <td colSpan="4">0 °C a 40 °C</td>
-    </tr>
-    <tr>
-      <td>Comunicación</td>
-      <td colSpan="4">UART</td>
-    </tr>
-    <tr>
-      <td>Método de control</td>
-      <td colSpan="4">PC</td>
-    </tr>
-  </tbody>
-</table>
-
-:::danger
-
-Si compras la versión Arm Kit, ambas fuentes de alimentación son de 5V. Si compras la versión Arm Kit Pro, utiliza la fuente de alimentación de 5V para la calibración y cada paso del brazo robótico líder, y la fuente de alimentación de 12V para la calibración y cada paso del brazo robótico seguidor.
-
-:::
-
-</details>
-
-</section>
-
-## Lista de materiales (BOM)
-
-<section id="bom" className="section-card">
-  <div className="section-title">
-    <span>BOM</span>
-    <h2>Lista de materiales (BOM)</h2>
-    <p>Consulta los servos, placas de control de motor, cables, fuentes de alimentación, abrazaderas y piezas opcionales impresas en 3D incluidas en el kit.</p>
-  </div>
-
-<details className="content-details">
-<summary>Ver lista de materiales</summary>
-
-| Parte | Cantidad | Incluido|
-|--|--|--|
-|  Servomotores | 12 | ✅ |
-| Placa de control de motor | 2 | ✅ |
-| Cable USB-C 2 uds | 1 | ✅ |
-| Fuente de alimentación2 | 2 | ✅ |
-| Abrazadera de mesa| 4 | ✅ |
-| Piezas del brazo impresas en 3D | 1 | Opción |
-
-</details>
 
 </section>
 
@@ -331,7 +156,7 @@ Los archivos STL proporcionados están listos para imprimirse en muchas impresor
 
 - Material: PLA+
 - Diámetro de boquilla y precisión: boquilla de 0.4mm con altura de capa de 0.2mm o boquilla de 0.6mm con altura de capa de 0.4mm.
-- Densidad de relleno: 15%  
+- Densidad de relleno: 15%
 
 **Paso 2: Configura la impresora**
 
@@ -368,6 +193,24 @@ Instrucciones sobre el material de impresión:
 
 </section>
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ Sin código · Sin configurar entorno</span>
+    <p className="sensecraft-banner__title">Sin configurar nada: usa el reBot Arm y LeRobot desde una sola app</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics es la plataforma sin código de Seeed para SO-ARM101, reBot Arm 102 + B601-RS y B601-DM. Conecta los brazos, calibra, recoge demostraciones, entrena y ejecuta la inferencia desde una interfaz guiada.</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ Flujo guiado de 6 pasos</li>
+      <li>✅ Entrenamiento en la nube</li>
+      <li>✅ Cliente Windows / macOS</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir a SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/es/sensecraft_robotics/">Guía del software</a>
+  </div>
+</div>
+
 ## Entorno inicial del sistema
 
 <section id="environment" className="section-card">
@@ -379,10 +222,10 @@ Instrucciones sobre el material de impresión:
 
 **Para Ubuntu x86:**
 
-- Ubuntu 22.04  
-- CUDA 12+  
+- Ubuntu 22.04
+- CUDA 12+
 - Python 3.12
-- Torch 2.6+  
+- Torch 2.6+
 
 **Para Jetson Orin:**
 
@@ -465,7 +308,7 @@ Si encuentras un error como este, también puedes usar este comando.
 
 <CodeBlock language="bash">
 {`conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
-conda remove opencv   # Uninstall OpenCV 
+conda remove opencv   # Uninstall OpenCV
 pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
 conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
@@ -1320,7 +1163,7 @@ Prueba de cámara Orbbec única + prueba de cámara estándar:
       width: 640,
       height: 480,
       fps: 30,
-      fourcc: "MJPG"} 
+      fourcc: "MJPG"}
     }' \\
     --teleop.type=so101_leader \\
     --teleop.port=/dev/ttyACM1 \\
@@ -1532,20 +1375,20 @@ Verás que aparecen muchas líneas como esta:
 
 **Función de registro**
 
-La función **record** proporciona un conjunto de herramientas para capturar y gestionar datos durante el funcionamiento del robot.  
+La función **record** proporciona un conjunto de herramientas para capturar y gestionar datos durante el funcionamiento del robot.
 
 **1. Almacenamiento de datos**
 
 - Los datos se almacenan usando el formato `LeRobotDataset` y se guardan en disco durante la grabación.
-- De forma predeterminada, el conjunto de datos se envía a tu página de Hugging Face después de la grabación.  
+- De forma predeterminada, el conjunto de datos se envía a tu página de Hugging Face después de la grabación.
 - Para desactivar la subida, usa: `--dataset.push_to_hub=False`
 
 **2. Checkpoint y reanudación**
 
-- Los checkpoints se crean automáticamente durante la grabación.  
+- Los checkpoints se crean automáticamente durante la grabación.
 - Para reanudar después de una interrupción, vuelve a ejecutar el mismo comando con: `--resume=true`
 
-⚠️ Nota crítica: Al reanudar, establece `--dataset.num_episodes` en el número de episodios adicionales que se van a registrar (no en el número total de episodios objetivo del conjunto de datos).  
+⚠️ Nota crítica: Al reanudar, establece `--dataset.num_episodes` en el número de episodios adicionales que se van a registrar (no en el número total de episodios objetivo del conjunto de datos).
 
 - Para empezar a grabar desde cero, **elimina manualmente** el directorio del conjunto de datos.
 
@@ -1553,21 +1396,21 @@ La función **record** proporciona un conjunto de herramientas para capturar y g
 
 Configura el flujo de grabación de datos usando argumentos de línea de comandos:
 
-| Parámetro | Descripción | Predeterminado |  
-|-----------|-------------|---------|  
-| --dataset.episode_time_s | Duración por episodio de datos (segundos) | 60 |  
-| --dataset.reset_time_s | Tiempo de reinicio del entorno después de cada episodio (segundos) | 60 |  
-| --dataset.num_episodes | Número total de episodios a registrar | 50 |  
+| Parámetro | Descripción | Predeterminado |
+|-----------|-------------|---------|
+| --dataset.episode_time_s | Duración por episodio de datos (segundos) | 60 |
+| --dataset.reset_time_s | Tiempo de reinicio del entorno después de cada episodio (segundos) | 60 |
+| --dataset.num_episodes | Número total de episodios a registrar | 50 |
 
 **4. Controles de teclado durante la grabación**
 
 Controla el flujo de grabación de datos usando atajos de teclado:
 
-| Tecla | Acción |  
-|-----|--------|  
-| → (Flecha derecha) | Detener anticipadamente el episodio actual/reiniciar; pasar al siguiente. |  
-| ← (Flecha izquierda) | Cancelar el episodio actual; volver a grabarlo. |  
-| ESC | Detener la sesión inmediatamente, codificar los vídeos y subir el conjunto de datos. |  
+| Tecla | Acción |
+|-----|--------|
+| → (Flecha derecha) | Detener anticipadamente el episodio actual/reiniciar; pasar al siguiente. |
+| ← (Flecha izquierda) | Cancelar el episodio actual; volver a grabarlo. |
+| ESC | Detener la sesión inmediatamente, codificar los vídeos y subir el conjunto de datos. |
 
 :::tip
 
@@ -1581,17 +1424,17 @@ Si el teclado no funciona, puede que necesites instalar otra versión de pynput.
 
 **Consejos para recopilar datos**
 
-- Sugerencia de tarea: Agarra objetos en diferentes ubicaciones y colócalos en un contenedor.  
-- Escala: Registra ≥50 episodios (10 episodios por ubicación).  
-- Coherencia:  
-  - Mantén las cámaras fijas.  
-  - Mantén un comportamiento de agarre idéntico.  
-  - Asegúrate de que los objetos manipulados sean visibles en las transmisiones de la cámara.  
-- Progresión:  
-  - Comienza con agarres fiables antes de añadir variaciones (nuevas ubicaciones, técnicas, ajustes de cámara).  
-  - Evita aumentos rápidos de complejidad para prevenir fallos.  
+- Sugerencia de tarea: Agarra objetos en diferentes ubicaciones y colócalos en un contenedor.
+- Escala: Registra ≥50 episodios (10 episodios por ubicación).
+- Coherencia:
+  - Mantén las cámaras fijas.
+  - Mantén un comportamiento de agarre idéntico.
+  - Asegúrate de que los objetos manipulados sean visibles en las transmisiones de la cámara.
+- Progresión:
+  - Comienza con agarres fiables antes de añadir variaciones (nuevas ubicaciones, técnicas, ajustes de cámara).
+  - Evita aumentos rápidos de complejidad para prevenir fallos.
 
-💡 Regla general: Deberías ser capaz de realizar la tarea tú mismo solo mirando las imágenes de la cámara.  
+💡 Regla general: Deberías ser capaz de realizar la tarea tú mismo solo mirando las imágenes de la cámara.
 
 Si quieres profundizar en este tema importante, puedes consultar la [entrada de blog](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) que escribimos sobre qué hace que un conjunto de datos sea bueno.
 

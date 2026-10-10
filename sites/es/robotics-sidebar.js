@@ -169,6 +169,7 @@ const sidebars = {
         { type: 'doc', id: `${K}/Lerobot/es_Lerobot_SO100Arm_New` },
         `${K}/Lerobot/es_Steering_Gear_Debugging_Tool`,
         `${K}/Lerobot/es_Lerobot_Dataset_Tool`,
+        { type: 'link', label: 'VLA sin código: plataforma SenseCraft Robotics', href: 'https://wiki.seeedstudio.com/es/sensecraft_robotics_so_arm101/' },
       ],
     },
     {

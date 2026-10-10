@@ -197,6 +197,7 @@ const sidebars = {
         { type: 'doc', id: `${K}/Lerobot/cn_Lerobot_SO100Arm_New` },
         `${K}/Lerobot/cn_Steering_Gear_Debugging_Tool`,
         `${K}/Lerobot/cn_Lerobot_Dataset_Tool`,
+        { type: 'link', label: '无码化上手VLA：SenseCraft Robotics 平台', href: 'https://wiki.seeedstudio.com/cn/sensecraft_robotics_so_arm101/' },
       ],
     },
     {
