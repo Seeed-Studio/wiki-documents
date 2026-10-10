@@ -40,6 +40,32 @@ import 'katex/dist/katex.min.css';
   </div>
 </section>
 
+### 本阶段需要的硬件
+
+本阶段需要准备的硬件如下。全部阶段的完整清单见 [第 3 章](/cn/rebot_physical_ai_course_chapter_3/)。
+
+**主控单元**
+
+| 硬件 | 购买 | 数量 |
+| :--- | :---: | :---: |
+| [Jetson Orin Nano Super 8G](https://detail.tmall.com/item.htm?abbucket=14&id=712054933688&mi_id=0000b4o7-mmwtJhlvCEhSP4viA7xIJPisw8IuibhHvzfMNs&rn=79312731d60820183c59a45a12571cae&skuId=6114111210073&spm=a1z10.5-b.w4011-22390330418.113.43ae1734XfPvdN) | 🛒 | 1 |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://detail.tmall.com/item.htm?abbucket=14&id=957845742837&mi_id=0000pv-h8DvXhmbEW2jrasWWe-BhFP2E5HGxD4KpP2RKKpE&rn=79312731d60820183c59a45a12571cae&skuId=6281653119238&spm=a1z10.5-b.w4011-22390330418.169.43ae1734XfPvdN) | 🛒 | 1 |
+
+另外还需要一台台式机或笔记本:Ubuntu 22.04、GTX 4080 以上(12G 显存以上)、16GB 以上内存。
+
+**本阶段**
+
+| 硬件 | 购买 | 数量 |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://detail.tmall.com/item.htm?abbucket=14&id=1042412233386&pisk=hfB-eJgryJp7dpE0kCCZSVvHso4GO9xBAMSEAU9WrvHdSNMoK34UpwLAfQqP-wfvJZ_vPTVy-v3dlMmkO9YhpLJedubwHPmyhH-INJYBNKN2IpvYSR2GDjMMkoI3zPDG0hK6d3TWPIZvjHmWdBTCcoKBx4TBPwsbDH8XVetBREsXqHcSRwO5cntpf3tBOUTXl3-Mde_BdoIXuHpBRw9QDi_myQZrrVRZdRLqSbSWkAIVHCgMWgLjdP622R86OGGp7T_cATXygfN9LifOJ6_UsjJRA_9Wjgy-Hds5iHzFKoGQT151j1D_OTU1eOCdg4MFLWfcFtAZPkXzI61P7swqa_WdAisVljZYIJfhiTdZ3PBfZ_JwUKesDz1vPsAhnW4zLlPW0_z8BPiDyhp2DFqJ2XleOn-vSoExTXRW0nLg2blETBtV.&rn=b08f608734893daceae119d7e15a5f39&skuId=6279331210830&spm=a1z10.5-b.w4011-22390330418.66.1f361734SN96R4) | 🛒 | 1 |
+| [reBot Arm 102 Leader臂](https://detail.tmall.com/item.htm?id=1049936833505&mi_id=0000deS0kaEXxZ9O6WXy0cSAEHEHfnKrWbWirotbP9Xhjxs&skuId=6284021463060&spm=a21xtw.29978516.0.0&xxc=shop) | 🛒 | 1 |
+| [720P单目腕部相机](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.7f132e8dPCwpJg&id=617129515352&mi_id=0000k7qsnCECCU2kXKj6V7MgFsw_44nBLwqzX8T-u3ohAIo) | 🛒 | 1 |
+| [1080P海康](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.597c2e8dP8ScuS&id=644467575802&mi_id=0000E7DNQZM7JtHvCuXtvuUvf3q78cE2O2k0nvBTzlWbND4) | 🛒 | 1 |
+| 腕部相机支架 | — | 1 |
+| [海康相机俯拍支架](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.49cb2e8dt6KH1K&id=797067194359&mi_id=0000qWvzUV0CAietxWIGsLRo68nEdNUwWmvnKFhXbqbu1Ac) | 🛒 | 1 |
+
+
 <a id="overview"></a>
 
 ## 机器人学习与模仿学习基础

@@ -43,6 +43,26 @@ import 'katex/dist/katex.min.css';
   </div>
 </section>
 
+### Hardware necessário para este estágio
+
+O que preparar para este estágio. A lista completa de todos os estágios está no [capítulo 3](/pt-br/rebot_physical_ai_course_chapter_3/).
+
+**Unidade de controle principal**
+
+| Item | Comprar | Qtd. |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+Também é necessário um computador de mesa ou notebook: Ubuntu 22.04, GTX 4080 ou superior com 12 GB+ de VRAM e 16 GB+ de RAM.
+
+**Para este estágio**
+
+| Item | Comprar | Qtd. |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+
+
 <section className="section-card">
   <div className="section-title">
     <span>Visão geral</span>

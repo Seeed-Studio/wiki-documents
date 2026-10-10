@@ -42,6 +42,30 @@ import '/src/css/rebot-wiki-style.css';
   </div>
 </section>
 
+### Hardware necesario para esta etapa
+
+Lo que hay que preparar para esta etapa. La lista completa de todas las etapas está en [el capítulo 3](/es/rebot_physical_ai_course_chapter_3/).
+
+**Unidad de control principal**
+
+| Artículo | Comprar | Cant. |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+También se requiere un sobremesa o portátil: Ubuntu 22.04, GTX 4080 o superior con 12 GB+ de VRAM y 16 GB+ de RAM.
+
+**Para esta etapa**
+
+| Artículo | Comprar | Cant. |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+| [reBot Arm 102 Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html) | 🛒 | 1 |
+| [Cámara monocular de muñeca 720P](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) | 🛒 | 2 |
+| [Soporte para cámara de muñeca](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/UVC32_mount.step) | 🛒 | 1 |
+| [Soporte cenital para cámara Hikvision](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.49cb2e8dt6KH1K&id=797067194359&mi_id=0000qWvzUV0CAietxWIGsLRo68nEdNUwWmvnKFhXbqbu1Ac) | 🛒 | 1 |
+
+
 ## 9.1 ¿Por Qué los Brazos Robóticos Necesitan Aprendizaje?
 
 <section id="why-learning" className="section-card">

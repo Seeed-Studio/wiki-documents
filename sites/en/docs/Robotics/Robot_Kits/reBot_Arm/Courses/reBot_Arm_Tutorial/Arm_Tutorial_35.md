@@ -48,6 +48,26 @@ import 'katex/dist/katex.min.css';
   </div>
 </section>
 
+### Hardware needed for this stage
+
+What to prepare for this stage. The complete list for every stage is in [Chapter 3](/rebot_physical_ai_course_chapter_3/).
+
+**Main control unit**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+A desktop or laptop is also required: Ubuntu 22.04, GTX 4080 or better with 12GB+ VRAM, 16GB+ RAM.
+
+**For this stage**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+
+
 {/* TODO: the original document shows a figure here (image 1.png) that was not exported - the file is not in 图片和附件/ and there is nothing to upload, so the figure has to be re-created before the page is complete. */}
 <a id="overview"></a>
 
