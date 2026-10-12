@@ -45,7 +45,7 @@ updatedAt: '2026-10-09'
 | Term | Meaning |
 | --- | --- |
 | **BSP** | Board Support Package: board-level support including U-Boot, kernel, rootfs, and drivers |
-| **BoardConfig** | project/cfg/<series>/BoardConfig-*.mk; the complete set of board parameters for a build |
+| **BoardConfig** | project/cfg/{series}/BoardConfig-*.mk; the complete set of board parameters for a build |
 | **lunch** | Select a BoardConfig; terminology from the Android build system. Generates the .BoardConfig.mk symbolic link |
 | **sysdrv** | System-driver component SDK containing U-Boot / kernel / MCU sources; can be built independently with make |
 | **media** | Multimedia component SDK containing mpp / rockit / rkaiq / rga / iva, etc.; can be built independently with make |

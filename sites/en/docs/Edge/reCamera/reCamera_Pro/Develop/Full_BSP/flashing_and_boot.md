@@ -136,20 +136,20 @@ Tool version v2.26 (`tools/linux/Linux_Upgrade_Tool/revision.txt`). Common comma
 | `ul <loader> [-noreset] [EMMC]` | UpgradeLoader: download the loader to memory |
 | `db <loader>` | DownloadBoot |
 | `uf <update.img> [-noreset]` | UpgradeFirmware: flash the full package |
-| `di -p <parameter.txt>` | Write the partition table |
-| `di -b <boot.img>` | Write the boot partition |
-| `di -rootfs <rootfs.img>` | Write the rootfs partition |
-| `di -u <userdata.img>` | Write the userdata partition |
-| `di -r <recovery.img>` | Write recovery |
-| `di -m <misc.img>` | Write misc |
+| `di -p [parameter.txt]` | Write the partition table |
+| `di -b [boot.img]` | Write the boot partition |
+| `di -rootfs [rootfs.img]` | Write the rootfs partition |
+| `di -u [userdata.img]` | Write the userdata partition |
+| `di -r [recovery.img]` | Write recovery |
+| `di -m [misc.img]` | Write misc |
 | `pl` | PartitionList: read the device partition table |
-| `ef <loader|firmware>` | EraseFlash: erase flash |
+| `ef [loader|firmware]` | EraseFlash: erase flash |
 | `rd` | ResetDevice: reboot |
-| `sn <serial-number>` / `rsn` | Write / read the serial number (with `project/app/recamera_utils/sn_tool`) |
-| `sfi <firmware>` | ShowFirmwareInfo: show firmware information |
-| `exf <firmware|loader> <dir>` | ExtractFirmware: extract an image or loader |
-| `gpt <parameter> <out.gpt>` | Generate GPT from the partition table |
-| `rl <startSec> <len> [file]` / `wl <startSec> [sizeSec] <file>` | Read / write LBA data |
+| `sn [serial-number]` / `rsn` | Write / read the serial number (with `project/app/recamera_utils/sn_tool`) |
+| `sfi [firmware]` | ShowFirmwareInfo: show firmware information |
+| `exf [firmware|loader] [dir]` | ExtractFirmware: extract an image or loader |
+| `gpt [parameter] [out.gpt]` | Generate GPT from the partition table |
+| `rl [startSec] [len] [file]` / `wl [startSec] [sizeSec] [file]` | Read / write LBA data |
 
 Example:
 

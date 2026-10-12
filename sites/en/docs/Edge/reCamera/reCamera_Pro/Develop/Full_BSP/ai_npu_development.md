@@ -261,7 +261,7 @@ rkllm_inference_demo \
 | `max_new_tokens` | Maximum number of generated tokens |
 | `max_context_len` | Context length |
 | `rknn_core_num` | `2` → `RKNN_NPU_CORE_0_1`; `3` → `RKNN_NPU_CORE_0_1_2`; any other value → `AUTO` |
-| `img_start/img_end/img_content` | Vision special tokens; defaults to Qwen-VL style `<|vision_start|>` / `<|vision_end|>` / `<|image_pad|>` |
+| `img_start/img_end/img_content` | Vision special tokens; defaults to Qwen-VL style `vision_start`, `vision_end`, and `image_pad` tokens |
 
 Interactive input supports `0` / `1` for built-in example prompts, custom text, image-text questions prefixed with `<image>`, `clear` to clear the KV cache, and `exit` to quit.
 
