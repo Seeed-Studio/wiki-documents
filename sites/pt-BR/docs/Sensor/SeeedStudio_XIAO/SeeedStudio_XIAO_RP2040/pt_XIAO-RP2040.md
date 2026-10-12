@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao-rp2040-45font_1.w
 slug: /XIAO-RP2040
 sku: 102010428, 100045204
 last_update:
-  date: 1/11/2023
+  date: 10/12/2026
   author: shuxu hu
 createdAt: '2023-01-16'
 updatedAt: '2026-08-25'
@@ -51,7 +51,7 @@ A série Seeed Studio XIAO RP2040 inclui o **XIAO RP2040** e o **XIAO RP2040 Plu
 
 As principais diferenças entre as duas placas são o número de GPIOs expostos, as conexões periféricas disponíveis e os recursos de gerenciamento de energia onboard.
 
-O XIAO RP2040 padrão usa o footprint XIAO comum de 14 pinos, composto por 11 pinos GPIO e três pinos de alimentação. Seus 11 pinos de E/S digitais são compatíveis com PWM, sendo que quatro também suportam entrada analógica. A placa fornece interfaces I2C, UART, SPI e SWD em um formato compacto de 21 × 17,8 mm.
+O XIAO RP2040 padrão usa o footprint XIAO comum de 14 pinos, composto por 11 pinos GPIO e três pinos de alimentação. Seus 11 pinos de E/S digitais são compatíveis com PWM, sendo que quatro também suportam entrada analógica. A placa oferece interfaces I2C, UART, SPI e SWD em um formato compacto de 21 × 17,8 mm.
 
 O XIAO RP2040 Plus mantém o mesmo layout XIAO comum de 14 pinos e adiciona 15 pads de solda GPIO na parte traseira e nas laterais da placa. Isso aumenta o número total de pinos de E/S digitais expostos de 11 para 26. Ele também adiciona uma segunda interface I2C, pads dedicados para USB D+/D− e conexões relacionadas à bateria, incluindo BAT+, BAT− e BAT_EN.
 
@@ -71,13 +71,13 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
 - **Ricos recursos de memória:** 264 KB de SRAM e 2 MB de memória Flash onboard
 - **Ampla compatibilidade de software:** Suporta Arduino, PlatformIO, MicroPython, CircuitPython, TinyGo, Rust, Zephyr e mais
 - **Footprint XIAO comum:** Ambas as versões mantêm o layout XIAO padrão de 14 pinos, incluindo 11 pinos GPIO e três pinos de alimentação
-- **Formato compacto:** Design do tamanho de um polegar de 21 × 17,8 mm para dispositivos vestíveis e aplicações com restrição de espaço
+- **Formato compacto:** Design do tamanho de um polegar, 21 × 17,8 mm, para dispositivos vestíveis e aplicações com restrição de espaço
 - **Interfaces do XIAO RP2040 padrão:** 11 pinos de E/S digitais, quatro pinos de entrada analógica, 11 pinos compatíveis com PWM, I2C, UART, SPI e SWD
 - **E/S expandida do XIAO RP2040 Plus:** Adiciona 15 pads GPIO para um total de 26 pinos de E/S digitais, juntamente com uma segunda interface I2C e pads dedicados para USB D+/D−
 - **Gerenciamento de bateria integrado:** O XIAO RP2040 Plus inclui um PMIC onboard, indicação de carregamento de bateria, conexões dedicadas de bateria e proteção contra retorno de corrente de BAT para 3V3
 - **Opções flexíveis de montagem:** Pinos comuns compatíveis com protoboard combinados com bordas metalizadas e pads compatíveis com SMD para placas-carrier personalizadas
 
-## Especificações
+## Especificação
 
 <table>
   <thead>
@@ -106,7 +106,7 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
     </tr>
     <tr>
       <td><strong>Flash</strong></td>
-      <td colspan="2">2 MB Flash onboard</td>
+      <td colspan="2">2 MB de Flash onboard</td>
     </tr>
     <tr>
       <td><strong>Interface</strong></td>
@@ -160,11 +160,11 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
       <td><strong>Alimentação</strong></td>
       <td colspan="2">
         Tensão de entrada (Type-C): 5V<br/>
-        Tensão de entrada (BAT): 5V
+        Tensão de entrada (BAT): 3,7 V ~ 4,2 V
       </td>
     </tr>
     <tr>
-      <td><strong>Proteção contra retorno de corrente de BAT para 3V3</strong></td>
+      <td><strong>Proteção contra retorno de corrente BAT-para-3V3</strong></td>
       <td>Não</td>
       <td>Sim</td>
     </tr>
@@ -203,11 +203,11 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
 <Tabs>
 <TabItem value="XIAO RP2040" label="XIAO RP2040" default>
 
-### Frente do XIAO RP2040
+### XIAO RP2040 - Frente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/XIAO_RP2040_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Verso do XIAO RP2040
+### XIAO RP2040 - Verso
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/XIAO_RP2040_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -215,11 +215,11 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
 
 <TabItem value="XIAO RP2040 Plus" label="XIAO RP2040 Plus">
 
-### Frente do XIAO RP2040 Plus
+### XIAO RP2040 Plus - Frente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/XIAO-RP2040-Plus-Front.png" style={{width:1000, height:'auto'}}/></div>
 
-### Verso do XIAO RP2040 Plus
+### XIAO RP2040 Plus - Verso
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/XIAO-RP2040-Plus-Back.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -240,7 +240,7 @@ Por favor, preste atenção ao usar, não levante a tampa de blindagem.
 
 ## **Mapa de pinos**
 
-| Pino XIAO | Função                | XIAO RP2040  | XIAO RP2040 Plus | Descrição                                                     |
+| Pino XIAO   | Função                | XIAO RP2040  | XIAO RP2040 Plus | Descrição                                                     |
 | :--------- | :--------------------- | :----------- | :---------------- | :----------------------------------------------------------- |
 | 5V         | VBUS                   | VBUS         | VBUS              | Entrada/saída de alimentação USB 5 V                         |
 | GND        | GND                    | GND          | GND               | Terra                                                        |
@@ -278,7 +278,7 @@ Por favor, preste atenção ao usar, não levante a tampa de blindagem.
 | USER_LED_R | Canal vermelho         | GPIO17       | —                 | Controle direto do canal vermelho do LED RGB no XIAO RP2040  |
 | USER_LED_G | Canal verde            | GPIO16       | —                 | Controle direto do canal verde do LED RGB no XIAO RP2040     |
 | USER_LED_G | Canal azul             | GPIO25       | —                 | Controle direto do canal azul do LED RGB no XIAO RP2040      |
-| RGB_LED    | Dados WS2812B          | —            | GPIO12/NEOPIX     | Controle de dados de cor WS2812B de fio único    |
+| RGB_LED    | Dados WS2812B          | —            | GPIO12/NEOPIX     | Controle de dados de cor WS2812B de fio único                |
 | RGB_EN     | Habilitar WS2812B      | —            | GPIO11            | Habilita a alimentação do WS2812B; não é um pino de dados de cor |
 | User LED   | LED controlado pelo usuário | —       | GPIO25            | LED de usuário separado no XIAO RP2040 Plus                  |
 | BAT_EN     | Habilitar bateria      | —            | GPIO24            | Controle de alimentação da bateria na versão Plus            |
@@ -298,14 +298,14 @@ Por favor, preste atenção ao usar, não levante a tampa de blindagem.
 
 Neste ponto, o chip entra no modo Bootloader e a porta de gravação aparece novamente. Como o chip RP2040 possui duas partições, uma é o Bootloader e a outra é o programa do usuário. O produto grava um código de bootloader na memória do sistema quando sai de fábrica. Podemos alternar os modos executando as etapas acima.
 
-### Resetar
+### Reset
 
 Se você quiser resetar o Seeed Studio XIAO RP2040, execute os seguintes passos:
 
 - Conecte o Seeed Studio XIAO RP2040 ao seu computador.
 - Pressione os pinos **R** **uma vez**.
 
-Atenção: O comportamento dos LEDs monocromáticos programáveis integrados (eles são vermelho, azul e verde) é o inverso daquele em um Arduino. No Seeed Studio XIAO RP2040, o pino precisa ser puxado para nível baixo para habilitar.
+Atenção: O comportamento dos LEDs monocromáticos programáveis integrados (eles são vermelho, azul e verde) é o inverso daquele em um Arduino. No Seeed Studio XIAO RP2040, o pino deve ser puxado para nível baixo para habilitar.
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.png" alt="pir" width={800} height="auto" /></p>
@@ -333,7 +333,7 @@ Tenha cuidado para não causar curto-circuito entre os terminais positivo e nega
 
 De acordo com o esquemático, o XIAO RP2040 Plus usa o CI carregador de bateria de íon-lítio **SGM40567-4.2XG/TR** para fornecer carregamento de corrente constante e tensão constante para uma bateria de íon-lítio de célula única. O status de carregamento é indicado pelo piscar do **Charge_LED**.<br/>
 
-O circuito de medição da tensão da bateria usa um chaveador de carga **TPS22916CNYFPR** para habilitar ou desabilitar o caminho de medição. Quando a tensão da bateria precisa ser medida, o MCU habilita o caminho de medição através de **BAT_EN (GPIO24)**, reduzindo assim o consumo da bateria enquanto o dispositivo está em modo de espera.<br/>
+O circuito de medição da tensão da bateria usa um chaveador de carga **TPS22916CNYFPR** para habilitar ou desabilitar o caminho de medição. Quando a tensão da bateria precisa ser medida, o MCU habilita o caminho de medição por meio de **BAT_EN (GPIO24)**, reduzindo assim o consumo da bateria enquanto o dispositivo está em modo de espera.<br/>
 
 Além disso, um chaveador analógico **SGM4875XXDM6G/TR** é usado para alternar o canal de entrada do ADC. Controlado por **GPIO24/BAT_EN**, ele seleciona se o sinal de medição da bateria ou outro sinal de entrada analógica é conectado ao pino **A3 (GPIO29) ADC**, permitindo o uso multiplexado do pino do ADC.
 
@@ -346,7 +346,7 @@ Quando o pino A3 é usado como entrada ADC para medir a tensão da bateria, ele 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_battery_charge.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-A tensão da bateria é medida usando um circuito divisor resistivo. A tensão lida pelo ADC é metade da tensão real da bateria, portanto o software deve multiplicar a medição do ADC por 2 para obter a tensão real da bateria.
+A tensão da bateria é medida usando um circuito divisor de tensão resistivo. A tensão lida pelo ADC é metade da tensão real da bateria, portanto o software deve multiplicar a medição do ADC por 2 para obter a tensão real da bateria.
 
 <details>
 
@@ -409,7 +409,7 @@ void loop() {
 <br/>
 :::note
 
-Para aplicações de baixo consumo, desabilite **BAT_EN** após a conclusão da medição da tensão da bateria para reduzir o consumo de corrente de repouso causado pelos resistores do divisor de tensão.
+Para aplicações de baixo consumo, desabilite **BAT_EN** após a conclusão da medição da tensão da bateria para reduzir o consumo de potência em repouso causado pelos resistores do divisor de tensão.
 
 :::
 
@@ -423,7 +423,7 @@ Para aplicações de baixo consumo, desabilite **BAT_EN** após a conclusão da 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_battery_detection.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-## Visualizador de esquemático online
+## Visualizador online do esquemático
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
@@ -434,31 +434,31 @@ Para aplicações de baixo consumo, desabilite **BAT_EN** após a conclusão da 
 
 **Projeto de hardware**
 - **📄[Datasheet]** [Raspberry Pi RP2040 Datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf )
-- **📄[Esquemático]** [XIAO RP2040 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf )
+- **📄[Schematic]** [Esquemático do XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf )
 - **🗃️[Arquivos de projeto de PCB]** 
-  - [ XIAO RP2040 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.3_SCH&PCB_20260304.zip )
-  - [XIAO RP2040 Eagle Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip )
+  - [ Projeto KiCad do XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.3_SCH&PCB_20260304.zip )
+  - [Projeto Eagle do XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip )
 - **🗃️[Bibliotecas de projeto de PCB]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
-  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de pinagem]** [XIAO RP2040 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx )
+  - [Footprints KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [Símbolos SCH KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Diagrama de pinagem]** [Planilha de pinagem do XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx )
 
 **Projeto mecânico**
-- **📄[Dimensões 2D]** [XIAO RP2040 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
-- **📄[Modelo 3D]** [ XIAO RP2040 3D Model](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip )
+- **📄[Dimensões 2D]** [Dimensões do XIAO RP2040 em DXF](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
+- **📄[Modelo 3D]** [ Modelo 3D do XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip )
 
 ### XIAO RP2040 Plus
 
 **Projeto de hardware**
 - **📄[Datasheet]** [Raspberry Pi RP2040 Datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf )
-- **📄[Esquemático]** [XIAO RP2040 Plus Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_SCH.pdf )
+- **📄[Schematic]** [Esquemático do XIAO RP2040 Plus](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_SCH.pdf )
 - **🗃️[Arquivos de projeto de PCB]** 
-  - [ XIAO RP2040 Plus KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
-  - [XIAO RP2040 Plus Eagle Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
+  - [ Projeto KiCad do XIAO RP2040 Plus](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
+  - [Projeto Eagle do XIAO RP2040 Plus](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
 - **🗃️[Bibliotecas de projeto de PCB]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
-  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de pinagem]** [XIAO RP2040 Plus Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-Plus-pinout.xlsx)
+  - [Footprints KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [Símbolos SCH KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Diagrama de pinagem]** [Planilha de pinagem do XIAO RP2040 Plus](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-Plus-pinout.xlsx)
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
