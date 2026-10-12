@@ -1474,6 +1474,30 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO STM32C5',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/es_XIAO_STM32C5_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/es_XIAO_STM32C5_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/es_XIAO_STM32C5_CANFD_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/es_XIAO_STM32C5_Application',
+            {
+              type: 'category',
+              label: 'Plataforma',
+              items: [ 
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/es_XIAO_STM32C5_With_STM32CubeIDE',
+              ],
+            },
+             {
+              type: 'category',
+              label: 'Lenguaje de Programación',
+              items: [ 
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/es_XIAO_STM32C5_With_MicroPython',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO Compañero de Depuración',
           collapsed: true,
           collapsible: true,
