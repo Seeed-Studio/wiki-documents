@@ -74,10 +74,10 @@ Real RobStride motors → SocketCAN can0 → MotorBridge SDK state cache
 
 Key source files:
 
-- Hardware state reading and caching: [hardware_manager.py](ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/hardware_manager.py)
-- ROS joint state publishing: [ros_publishers.py](ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/ros_publishers.py)
-- MuJoCo sync node: [mujoco_sync.py](ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarm_mujoco_rs/rebotarm_mujoco_rs/mujoco_sync.py)
-- Simulation-side fake driver: [fake_rs_driver.py](ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/fake_rs_driver.py)
+- Hardware state reading and caching: `hardware_manager.py`
+- ROS joint state publishing: `ros_publishers.py`
+- MuJoCo sync node: `mujoco_sync.py`
+- Simulation-side fake driver: `fake_rs_driver.py`
 
 <a id="units"></a>
 
@@ -148,7 +148,7 @@ MuJoCo Sync node subscribes
 rosbridge WebSocket → browser
 ```
 
-The MuJoCo sync node's subscription and publication are defined in [mujoco_sync.py](/home/robot/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarm_mujoco_rs/rebotarm_mujoco_rs/mujoco_sync.py):
+The MuJoCo sync node's subscription and publication are defined in `mujoco_sync.py`:
 
 ```python
 self.subscription = self.create_subscription(
@@ -175,7 +175,7 @@ namespace is also set to `rebotarm`, but it only subscribes and never sends moto
 
 ### DDS discovery range
 
-[rs_env.sh](/home/robot/ReBot_Arm_DigitalTwin_RS/scripts/rs_env.sh) restricts the DDS discovery range to the local host, avoiding nodes losing each other after Wi-Fi roaming:
+`rs_env.sh` restricts the DDS discovery range to the local host, avoiding nodes losing each other after Wi-Fi roaming:
 
 ```bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE="${REBOTARM_ROS_DISCOVERY_RANGE:-LOCALHOST}"
@@ -197,7 +197,7 @@ This project's latency requirements (60 Hz states, human-eye-acceptable) are far
 
 ### Separating the async cache from the feedback frequency
 
-[hardware_manager.py](/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/hardware_manager.py) is designed around separating the hardware feedback polling frequency from the
+`hardware_manager.py` is designed around separating the hardware feedback polling frequency from the
 
 ROS publish frequency:
 
@@ -241,7 +241,7 @@ When synchronization lags or is not responsive, measure layer by layer along the
 3. Web reception layer: the rosbridge subscription throttle may keep the browser side below 25 Hz.
 4. Display interpolation layer: the browser interpolates 32-120 ms between adjacent measurements.
 
-For the detailed data flow and troubleshooting methods, see [DATA_FLOW_RS_ZH.md](/home/robot/ReBot_Arm_DigitalTwin_RS/DATA_FLOW_RS_ZH.md).
+For the detailed data flow and troubleshooting methods, see `DATA_FLOW_RS_ZH.md`.
 
 ## 39.6 Gripper State Synchronization
 
@@ -249,7 +249,7 @@ Gripper synchronization is more complex than the arm joints, because it involves
 
 ### MuJoCo gripper model
 
-In [rs_arm.xml](/home/robot/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarm_mujoco_rs/models/rs_arm.xml), the gripper consists of three joints:
+In `rs_arm.xml`, the gripper consists of three joints:
 
 ```xml
 <joint name="joint7" type="slide" axis="0 1 0" range="0 0.05"/>
@@ -289,7 +289,7 @@ Note: in kinematic mode, the three joints are written with the same value direct
 
 ### Hardware confirmation gate
 
-[start_rs_hardware.sh](/ReBot_Arm_DigitalTwin_RS/scripts/start_rs_hardware.sh) requires explicit confirmation before starting the real-robot controller, to prevent accidental operation from moving the arm:
+`start_rs_hardware.sh` requires explicit confirmation before starting the real-robot controller, to prevent accidental operation from moving the arm:
 
 ```bash
 if [[ "${REBOTARM_RS_HARDWARE_CONFIRM:-}" != "I_UNDERSTAND_RS_WILL_MOVE" ]]; then
@@ -298,11 +298,11 @@ if [[ "${REBOTARM_RS_HARDWARE_CONFIRM:-}" != "I_UNDERSTAND_RS_WILL_MOVE" ]]; the
 fi
 ```
 
-But the MuJoCo follow script [start_rs_mujoco_follow.sh](/ReBot_Arm_DigitalTwin_RS/scripts/start_rs_mujoco_follow.sh) does not need this confirmation, because it only subscribes to the real-robot topics and does not send motor commands or open SocketCAN:
+But the MuJoCo follow script `start_rs_mujoco_follow.sh` does not need this confirmation, because it only subscribes to the real-robot topics and does not send motor commands or open SocketCAN:
 
 ### Process mutex lock
 
-[start_rs_hardware.sh](/ReBot_Arm_DigitalTwin_RS/scripts/start_rs_hardware.sh) uses flock for process mutex on hardware launch, preventing two controllers from competing for the motors at the same time:
+`start_rs_hardware.sh` uses flock for process mutex on hardware launch, preventing two controllers from competing for the motors at the same time:
 
 ```bash
 exec 9>"${REBOTARM_HARDWARE_LOCK}"
@@ -316,7 +316,7 @@ It can also recognize controllers paused with Ctrl+Z, send SIGCONT first and the
 
 ### State machine arbitration
 
-[hardware_manager.py](/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/hardware_manager.py) uses a state machine to reject unsafe commands:
+`hardware_manager.py` uses a state machine to reject unsafe commands:
 
 ```python
 def _begin_lowlevel_streaming(self, required_mode: str) -> None:
@@ -332,7 +332,7 @@ The states include: `IDLE`, `LOWLEVEL_STREAMING`, `TRAJ_RUNNING`, `GRAVITY_COMP`
 
 ### Safe homing
 
-Before disabling, if the arm is not near the zero pose (any joint's absolute angle exceeds 2 degrees, or velocity exceeds 0.15 rad/s), the controller first enters the `SAFE_HOMING` state: clears old targets, closes the gripper, performs homing, verifies arrival, and only then disables the motors. For the detailed flow, see Section 5 of [DATA_FLOW_RS_ZH.md](/ReBot_Arm_DigitalTwin_RS/DATA_FLOW_RS_ZH.md).
+Before disabling, if the arm is not near the zero pose (any joint's absolute angle exceeds 2 degrees, or velocity exceeds 0.15 rad/s), the controller first enters the `SAFE_HOMING` state: clears old targets, closes the gripper, performs homing, verifies arrival, and only then disables the motors. For the detailed flow, see Section 5 of `DATA_FLOW_RS_ZH.md`.
 
 ---
 

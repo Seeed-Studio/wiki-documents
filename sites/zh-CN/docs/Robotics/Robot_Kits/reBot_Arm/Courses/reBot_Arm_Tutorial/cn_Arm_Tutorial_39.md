@@ -65,10 +65,10 @@ Real-to-Sim 的典型用途：
 
 关键源文件：
 
-- 硬件状态读取与缓存：\[hardware_manager.py\](ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/hardware_manager.py)
-- ROS 关节状态发布：\[ros_publishers.py\](ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/ros_publishers.py)
-- MuJoCo 同步节点：\[mujoco_sync.py\](ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarm_mujoco_rs/rebotarm_mujoco_rs/mujoco_sync.py)
-- 仿真侧假驱动：\[fake_rs_driver.py\](ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/fake_rs_driver.py)
+- 硬件状态读取与缓存：`hardware_manager.py`
+- ROS 关节状态发布：`ros_publishers.py`
+- MuJoCo 同步节点：`mujoco_sync.py`
+- 仿真侧假驱动：`fake_rs_driver.py`
 
 ## 39.4 DM 与 RS 关节单位转换
 
@@ -135,7 +135,7 @@ MuJoCo Sync 节点订阅
 rosbridge WebSocket → 浏览器
 ```
 
-MuJoCo 同步节点的订阅和发布在 \[mujoco_sync.py\](/home/robot/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarm_mujoco_rs/rebotarm_mujoco_rs/mujoco_sync.py) 中定义：
+MuJoCo 同步节点的订阅和发布在 `mujoco_sync.py` 中定义：
 
 ```Python
 self.subscription = self.create_subscription(
@@ -162,7 +162,7 @@ Real-to-Sim 场景下，MuJoCo 同步节点订阅真机的 `/rebotarm/joint_stat
 
 ### DDS 发现范围
 
-\[rs_env.sh\](/home/robot/ReBot_Arm_DigitalTwin_RS/scripts/rs_env.sh) 将 DDS 发现范围限制为本地主机，避免 Wi-Fi 漫游后节点互相找不到：
+`rs_env.sh` 将 DDS 发现范围限制为本地主机，避免 Wi-Fi 漫游后节点互相找不到：
 
 ```Bash
 export ROS_AUTOMATIC_DISCOVERY_RANGE="${REBOTARM_ROS_DISCOVERY_RANGE:-LOCALHOST}"
@@ -184,7 +184,7 @@ export ROS_AUTOMATIC_DISCOVERY_RANGE="${REBOTARM_ROS_DISCOVERY_RANGE:-LOCALHOST}
 
 ### 异步缓存与反馈频率分离
 
-\[hardware_manager.py\](/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/hardware_manager.py) 的设计核心是把硬件反馈查询频率和
+`hardware_manager.py` 的设计核心是把硬件反馈查询频率和
 
 ROS 发布频率分离：
 
@@ -228,7 +228,7 @@ def _update(self) -> None:
 3. 网页接收层：rosbridge 订阅节流可能导致浏览器端不到 25 Hz。
 4. 显示插值层：浏览器在相邻测量值之间做 32-120 ms 插值。
 
-详细的数据流和排查方法见 \[DATA_FLOW_RS_ZH.md\](/home/robot/ReBot_Arm_DigitalTwin_RS/DATA_FLOW_RS_ZH.md)。
+详细的数据流和排查方法见 `DATA_FLOW_RS_ZH.md`。
 
 ## 39.9 夹爪状态同步
 
@@ -236,7 +236,7 @@ def _update(self) -> None:
 
 ### MuJoCo 夹爪模型
 
-\[rs_arm.xml\](/home/robot/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarm_mujoco_rs/models/rs_arm.xml) 中夹爪由三个关节组成：
+`rs_arm.xml` 中夹爪由三个关节组成：
 
 ```XML
 <joint name="joint7" type="slide" axis="0 1 0" range="0 0.05"/>
@@ -274,7 +274,7 @@ def _update_kinematic(self) -> None:
 
 ### 硬件确认门控
 
-\[start_rs_hardware.sh\](/ReBot_Arm_DigitalTwin_RS/scripts/start_rs_hardware.sh) 在启动真机控制器前要求显式确认，防止误操作导致机械臂运动：
+`start_rs_hardware.sh` 在启动真机控制器前要求显式确认，防止误操作导致机械臂运动：
 
 ```Bash
 if [[ "${REBOTARM_RS_HARDWARE_CONFIRM:-}" != "I_UNDERSTAND_RS_WILL_MOVE" ]]; then
@@ -283,11 +283,11 @@ if [[ "${REBOTARM_RS_HARDWARE_CONFIRM:-}" != "I_UNDERSTAND_RS_WILL_MOVE" ]]; the
 fi
 ```
 
-但 MuJoCo 跟随脚本\[start_rs_mujoco_follow.sh\](/ReBot_Arm_DigitalTwin_RS/scripts/start_rs_mujoco_follow.sh)不需要这个确认，因为它只订阅真机话题、不发送电机命令、不打开 SocketCAN：
+但 MuJoCo 跟随脚本`start_rs_mujoco_follow.sh`不需要这个确认，因为它只订阅真机话题、不发送电机命令、不打开 SocketCAN：
 
 ### 进程互斥锁
 
-\[start_rs_hardware.sh\](/ReBot_Arm_DigitalTwin_RS/scripts/start_rs_hardware.sh) 使用 flock实现硬件启动的进程互斥，防止两个控制器同时竞争电机：
+`start_rs_hardware.sh` 使用 flock实现硬件启动的进程互斥，防止两个控制器同时竞争电机：
 
 ```Bash
 exec 9>"${REBOTARM_HARDWARE_LOCK}"
@@ -301,7 +301,7 @@ fi
 
 ### 状态机仲裁
 
-\[hardware_manager.py\](/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarmcontroller/rebotarmcontroller/hardware_manager.py) 使用状态机拒绝不安全的命令：
+`hardware_manager.py` 使用状态机拒绝不安全的命令：
 
 ```Python
 def _begin_lowlevel_streaming(self, required_mode: str) -> None:
@@ -317,7 +317,7 @@ def _begin_lowlevel_streaming(self, required_mode: str) -> None:
 
 ### 安全回零
 
-失能前如果机械臂不在零位附近（各关节绝对角度超过 2 度、速度超过 0.15 rad/s），控制器会先进入 `SAFE_HOMING` 状态，清除旧目标、关闭夹爪、执行回零、验证到位后才失能电机。详细流程见 \[DATA_FLOW_RS_ZH.md\](/ReBot_Arm_DigitalTwin_RS/DATA_FLOW_RS_ZH.md) 第 5 节。
+失能前如果机械臂不在零位附近（各关节绝对角度超过 2 度、速度超过 0.15 rad/s），控制器会先进入 `SAFE_HOMING` 状态，清除旧目标、关闭夹爪、执行回零、验证到位后才失能电机。详细流程见 `DATA_FLOW_RS_ZH.md` 第 5 节。
 
 ---
 

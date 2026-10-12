@@ -173,7 +173,7 @@ _urdf.import_urdf(urdf_path, output_usd_path, import_config)
 
 ## **网格文件路径**
 
-URDF 引用的 STL 网格在 \[meshes_rs/\](/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarm_bringup/description/meshes_rs/) 目录下。导入器会自动解析`package://rebotarm_bringup/description/meshes_rs/` 前缀。如果导入失败，检查`ROS_PACKAGE_PATH` 环境变量或手动把 mesh 路径改为绝对路径。
+URDF 引用的 STL 网格在 `meshes_rs/` 目录下。导入器会自动解析`package://rebotarm_bringup/description/meshes_rs/` 前缀。如果导入失败，检查`ROS_PACKAGE_PATH` 环境变量或手动把 mesh 路径改为绝对路径。
 
 ## **38.5 检查 Link 和 Joint**
 

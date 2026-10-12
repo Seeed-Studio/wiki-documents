@@ -182,7 +182,7 @@ _urdf.import_urdf(urdf_path, output_usd_path, import_config)
 
 ### Mesh file paths
 
-The STL meshes referenced by the URDF are in the [meshes_rs/](/ReBot_Arm_DigitalTwin_RS/rebotarm_ros2/src/rebotarm_bringup/description/meshes_rs/) directory. The importer automatically resolves the `package://rebotarm_bringup/description/meshes_rs/` prefix. If the import fails, check the `ROS_PACKAGE_PATH` environment variable or manually change the mesh paths to absolute paths.
+The STL meshes referenced by the URDF are in the `meshes_rs/` directory. The importer automatically resolves the `package://rebotarm_bringup/description/meshes_rs/` prefix. If the import fails, check the `ROS_PACKAGE_PATH` environment variable or manually change the mesh paths to absolute paths.
 
 ## 38.5 Checking Links and Joints
 
