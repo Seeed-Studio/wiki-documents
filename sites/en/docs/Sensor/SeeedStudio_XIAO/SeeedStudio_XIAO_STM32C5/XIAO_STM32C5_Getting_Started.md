@@ -554,7 +554,7 @@ The XIAO STM32C5 carries an on‑board **[LSM6DS3TR‑C](https://www.st.com.cn/r
 
 To mitigate the impact of ambient temperature variation on sensor bias and measurement stability, the board implements an active temperature‑compensation heating circuit. Heating resistors placed around the IMU provide uniform heating for the sensor, and heating power can be adjusted via PWM signals. Combined with internal temperature readings from the IMU, software control keeps the sensor operating at a relatively stable temperature. This reduces measurement drift caused by temperature drift and improves data consistency during long‑term operation and under variable‑temperature conditions.
 
-- Reference Usage: [XIAO STM32C5 IMU Usage](https://wiki.seeedstudio.com/xiao_stm32c5_application/#imu-usag)
+- Reference Usage: [XIAO STM32C5 IMU Usage](https://wiki.seeedstudio.com/xiao_stm32c5_application/#imu-usage)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_7.png" style={{width:550, height:'auto'}}/></div>
 
@@ -564,7 +564,7 @@ The XIAO STM32C5 has two CAN FD controllers. FDCAN1 exposes logic-level TX and R
 
 The board has a disconnectable onboard 120 Ω termination resistor, enabled by default. Keep it enabled when the XIAO is at a physical end of the CAN bus and that end has no other terminator. Disable it when the XIAO is an intermediate node or another terminator is already installed at the same end. Ensure that the opposite end of the bus is also properly terminated. The transceiver supports standby mode to reduce power consumption when CAN communication is not needed.
 
-- Reference Usage: [XIAO STM32C5 CANFD Usage](https://files.seeedstudio.com/wiki/xiao_stm32c5_canfd_usage)
+- Reference Usage: [XIAO STM32C5 CANFD Usage](https://wiki.seeedstudio.com/xiao_stm32c5_canfd_usage/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/canfd_2.png" style={{width:550, height:'auto'}}/></div>
 
