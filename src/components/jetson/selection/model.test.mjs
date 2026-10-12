@@ -26,6 +26,20 @@ import {
   moduleOptionsForType,
   portSummary,
 } from "./model.js";
+import {
+  getLangFromPathname,
+  jetsonDocTarget,
+  localizeWikiHref,
+} from "./locale.js";
+import {
+  jetsonT,
+  messages,
+  phrases,
+  presentFilterTags,
+  presentNotice,
+  presentPortSummary,
+  tx,
+} from "./i18n.js";
 
 const p = (id) => products.find((p) => p.id === id);
 const f = (change) => ({ ...emptyFilters(), ...change });
@@ -534,4 +548,109 @@ test("catalog guides resolve to real English routes and page remains isolated fr
     "6-high-end-autonomy--large-compute-rd",
   ])
     assert.ok(mdx.includes(`id="${id}"`));
+});
+
+const LANGS = ["en", "zh", "ja", "es", "pt"];
+
+test("language comes from the first URL segment and falls back to English", () => {
+  assert.equal(getLangFromPathname("/jetson-product-selection-guide/"), "en");
+  assert.equal(getLangFromPathname("/"), "en");
+  assert.equal(getLangFromPathname(""), "en");
+  assert.equal(getLangFromPathname("/cn/jetson-product-selection-guide/"), "zh");
+  assert.equal(getLangFromPathname("/CN"), "zh");
+  assert.equal(getLangFromPathname("/zh-cn/docs"), "zh");
+  assert.equal(getLangFromPathname("/ja/jetson/camera-selection-guide/"), "ja");
+  assert.equal(getLangFromPathname("/es/jetson-product-selection-guide/"), "es");
+  assert.equal(getLangFromPathname("/pt-br/jetson-product-selection-guide/"), "pt");
+  assert.equal(getLangFromPathname("/pt/page"), "pt");
+  assert.equal(getLangFromPathname("/connection/camera"), "en");
+  assert.equal(getLangFromPathname("/catalog"), "en");
+  assert.equal(getLangFromPathname("/jafoo"), "en");
+  assert.equal(getLangFromPathname("/espanol"), "en");
+  assert.equal(getLangFromPathname("/cn-extra"), "en");
+  assert.equal(jetsonT("de")("clearFilters"), messages.en.clearFilters);
+});
+
+test("every language has the same non-empty interface strings", () => {
+  const keys = Object.keys(messages.en);
+  assert.ok(keys.length > 80);
+  for (const lang of LANGS) {
+    assert.deepEqual(Object.keys(messages[lang]).sort(), keys.sort());
+    for (const key of keys) assert.equal(typeof messages[lang][key], "string");
+    for (const key of keys) assert.notEqual(messages[lang][key].trim(), "");
+  }
+  for (const [english, value] of Object.entries(phrases)) {
+    assert.equal(tx("en", english), english);
+    for (const lang of LANGS.filter((item) => item !== "en")) {
+      assert.equal(typeof value[lang], "string", english);
+      assert.notEqual(value[lang].trim(), "");
+    }
+  }
+});
+
+test("dynamic strings keep product names and inserted values", () => {
+  const zh = jetsonT("zh");
+  assert.equal(zh("noticeAdded", { name: "reComputer J4012" }), "已将 reComputer J4012 加入比较。");
+  assert.equal(zh("gbOrMore", { n: 16 }), "16GB 或更大");
+  assert.equal(zh("topsOrMore", { n: 40 }), "40 TOPS 或更高");
+  assert.equal(zh("usbAAtLeast", { n: 6 }), "USB-A ≥ 6");
+  assert.equal(zh("specCaption", { group: "模组与内存", name: "reComputer J4012" }), "reComputer J4012 的模组与内存");
+  assert.equal(zh("firmwareLine", { version: "6.2", status: "预装" }), "JetPack 6.2 — 预装");
+  assert.equal(presentNotice("reComputer J4012 added to comparison.", "ja"), "reComputer J4012 を比較に追加しました。");
+  assert.equal(presentNotice("reComputer J4012 removed from comparison.", "es"), "reComputer J4012 se quitó de la comparación.");
+  assert.equal(presentNotice("Compare products of the same type.", "en"), "Compare products of the same type.");
+  assert.equal(
+    presentNotice("Two configurations are already selected. Remove one before adding another.", "pt"),
+    messages.pt.noticeFull,
+  );
+  const added = toggleComparison([], products.find((item) => item.id === "F"), "system");
+  assert.equal(presentNotice(added.message, "en"), added.message);
+});
+
+test("English filter tags and port summaries stay identical to the selection model", () => {
+  const filters = {
+    ...emptyFilters(),
+    application: "robotics",
+    memory: "8",
+    computeMin: "40",
+    interfaces: ["usb_a", "ethernet"],
+    usbAMin: "2",
+    search: "Orin",
+    voltage: "12",
+    temperature: "-20",
+    storage: "sd",
+    jetpack: "6.2",
+    module: "orin_nx",
+  };
+  assert.deepEqual(presentFilterTags(filters, "en"), filterTags(filters));
+  assert.deepEqual(presentFilterTags(emptyFilters(), "zh"), []);
+  const translated = presentFilterTags(filters, "zh").map((tag) => tag.label);
+  assert.ok(translated.some((label) => label.startsWith("应用场景：")));
+  assert.ok(translated.includes("USB-A ≥ 2"));
+  assert.equal(translated.filter((label) => label === "JetPack 6.2").length, 1);
+  for (const product of products) {
+    assert.equal(presentPortSummary(product, "en"), portSummary(product));
+  }
+  const carrier = products.find((item) => item.familyId === "board-j601");
+  assert.match(presentPortSummary(carrier, "ja"), /イーサネット|CAN/);
+  assert.equal(tx("fr", "Not documented"), "Not documented");
+  assert.equal(tx("zh", "Not documented"), "未记录");
+});
+
+test("wiki links use a language prefix only when that page exists", () => {
+  const guide = "/reComputer_J1010_with_Jetson_getting_start/";
+  const hashed = "/sensing_gmsl_cameras/#getting-started";
+  const englishOnly = "/jetson/camera-selection-guide/";
+  const external = "https://www.seeedstudio.com/reComputer-J4012-p-1.html";
+  assert.equal(localizeWikiHref(guide, "en"), guide);
+  assert.equal(localizeWikiHref(guide, "zh"), `/cn${guide}`);
+  assert.equal(localizeWikiHref(hashed, "es"), `/es${hashed}`);
+  assert.equal(localizeWikiHref(englishOnly, "ja"), englishOnly);
+  assert.equal(localizeWikiHref(external, "pt"), external);
+  assert.equal(localizeWikiHref("/ai_roboticsyolov26_dual_camera_system/", "es"), "/ai_roboticsyolov26_dual_camera_system/");
+  assert.equal(localizeWikiHref("/rebot_physical_ai_course_chapter_3/", "zh"), "/rebot_physical_ai_course_chapter_3/");
+  assert.deepEqual(jetsonDocTarget(guide, "zh"), { kind: "link", href: guide });
+  assert.deepEqual(jetsonDocTarget(englishOnly, "zh"), { kind: "anchor", href: englishOnly });
+  assert.deepEqual(jetsonDocTarget(guide, "en"), { kind: "link", href: guide });
+  assert.deepEqual(jetsonDocTarget(external, "ja"), { kind: "link", href: external });
 });

@@ -13,6 +13,8 @@ import {applicationEvidence, applicationUses} from './cameraApplications.js';
 import {cameraCompatibility, familyGuideReferences} from './cameraCompatibility.js';
 import {wikiResources} from './cameraResources.js';
 import {defaultFilters, selectCameras, isCameraAvailable, changeFilter, comparisonCandidates, activeFilterEntries} from './cameraModel.js';
+import {cameraT, evidenceText, fieldText, wikiField} from './i18n.js';
+import {localizeWikiHref} from '../jetson/selection/locale.js';
 
 const camera = (id) => cameras.find((item) => item.id === id);
 const require = createRequire(import.meta.url);
@@ -24,13 +26,15 @@ const module = {exports: {}};
 runInNewContext(code, {module, exports: module.exports, require: (id) => ({
   './cameraApplications': {applicationUses}, './cameraCompatibility': {cameraCompatibility}, './platformData': {platformFamilies},
   './applicationScenes': {applicationSceneOptions},
+  './i18n': {cameraT, evidenceText, fieldText, wikiField, localizeWikiHref},
 }[id] || (id.endsWith('.css') ? {} : require(id)))});
 const {CompatibilityJetson, ApplicationUses} = module.exports;
 
 test('the recommendation banner is removed while Application is a real filter control', () => {
   assert.equal(module.exports.ApplicationGuide, undefined);
   const selector = readFileSync(new URL('./CameraSelector.jsx', import.meta.url), 'utf8');
-  assert.match(selector, /label="Application" filterKey="application"/);
+  assert.match(selector, /filterKey="application"/);
+  assert.match(readFileSync(new URL('./i18n.js', import.meta.url), 'utf8'), /Select Compare on two camera cards to view their specifications side by side\. Choose either two RGB cameras or two RGB \+ Depth cameras\./);
   assert.doesNotMatch(selector, /ApplicationGuide|Application guide|setApplication|camera-application-guide-title|Selection tips/);
   const css = readFileSync(new URL('./CameraSelector.module.css', import.meta.url), 'utf8');
   assert.doesNotMatch(css, /applicationGuide|applicationFocus/);
@@ -38,7 +42,9 @@ test('the recommendation banner is removed while Application is a real filter co
 
 test('comparison instructions name the card action and explain the matching output requirement', () => {
   const selector = readFileSync(new URL('./CameraSelector.jsx', import.meta.url), 'utf8');
-  assert.ok(selector.includes('Select Compare on two camera cards to view their specifications side by side. Choose either two RGB cameras or two RGB + Depth cameras.'));
+  const copy = readFileSync(new URL('./i18n.js', import.meta.url), 'utf8');
+  assert.ok(copy.includes('Select Compare on two camera cards to view their specifications side by side. Choose either two RGB cameras or two RGB + Depth cameras.'));
+  assert.match(selector, /compareHelpEmpty/);
   assert.doesNotMatch(selector, /Connections can differ\./);
 });
 

@@ -2,6 +2,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Selector.module.css";
 import ApplicationIllustration from "./ApplicationIllustration";
+import { jetsonT } from "./i18n";
 
 export function CloseIcon() {
   return (
@@ -24,6 +25,7 @@ export function Menu({
   multiple = false,
   help,
   compact = false,
+  t = jetsonT("en"),
 }) {
   const [open, setOpen] = useState(false),
     [active, setActive] = useState(0),
@@ -235,7 +237,7 @@ export function Menu({
         <span>
           {!compact && <span className={styles.label}>{label}</span>}
           <span className={styles.controlValue}>
-            {chosen || (multiple ? "Any interfaces" : "Not selected")}
+            {chosen || (multiple ? t("anyInterfaces") : t("notSelected"))}
           </span>
         </span>
         <span aria-hidden="true">⌄</span>
@@ -332,7 +334,7 @@ export function Menu({
             </div>
             {multiple && (
               <button type="button" className={styles.menuDone} onClick={close}>
-                Done
+                {t("done")}
               </button>
             )}
           </div>,
@@ -348,6 +350,7 @@ export function InterfaceMenu({
   minimum,
   quantities,
   onChange,
+  t = jetsonT("en"),
 }) {
   const [open, setOpen] = useState(false),
     [position, setPosition] = useState({});
@@ -356,7 +359,9 @@ export function InterfaceMenu({
     id = useId();
   const summary = options
     .filter((o) => value.includes(o.value))
-    .map((o) => (o.value === "usb_a" ? `USB-A ≥ ${minimum || 1}` : o.label))
+    .map((o) =>
+      o.value === "usb_a" ? t("usbAAtLeast", { n: minimum || 1 }) : o.label,
+    )
     .join(", ");
   function close() {
     setOpen(false);
@@ -410,16 +415,16 @@ export function InterfaceMenu({
         type="button"
         ref={trigger}
         className={styles.control}
-        aria-label="Required interfaces"
+        aria-label={t("requiredInterfaces")}
         aria-haspopup="dialog"
         aria-expanded={open}
         aria-controls={id}
         onClick={() => setOpen((v) => !v)}
       >
         <span>
-          <span className={styles.label}>Required interfaces</span>
+          <span className={styles.label}>{t("requiredInterfaces")}</span>
           <span className={styles.controlValue}>
-            {summary || "Any interfaces"}
+            {summary || t("anyInterfaces")}
           </span>
         </span>
         <span aria-hidden="true">⌄</span>
@@ -433,7 +438,7 @@ export function InterfaceMenu({
             className={styles.menu}
             style={position}
             role="dialog"
-            aria-label="Required interfaces"
+            aria-label={t("requiredInterfaces")}
             onBlur={(e) => {
               if (e.relatedTarget && !e.currentTarget.contains(e.relatedTarget))
                 setOpen(false);
@@ -458,10 +463,7 @@ export function InterfaceMenu({
               }
             }}
           >
-            <p className={styles.menuHelp}>
-              Select every interface you need. Wireless options mean module
-              expansion, not an installed radio.
-            </p>
+            <p className={styles.menuHelp}>{t("interfaceHelp")}</p>
             {options.map((option) => (
               <div key={option.value}>
                 <label
@@ -486,15 +488,15 @@ export function InterfaceMenu({
                 </label>
                 {option.value === "usb_a" && value.includes("usb_a") && (
                   <label className={styles.quantity}>
-                    Minimum USB-A ports
+                    {t("minUsbA")}
                     <select
-                      aria-label="Minimum USB-A ports"
+                      aria-label={t("minUsbA")}
                       value={minimum || "1"}
                       onChange={(e) => onChange(value, e.target.value)}
                     >
                       {quantities.map((n) => (
                         <option key={n} value={n}>
-                          {n} or more
+                          {t("orMore", { n })}
                         </option>
                       ))}
                     </select>
@@ -503,7 +505,7 @@ export function InterfaceMenu({
               </div>
             ))}
             <button type="button" className={styles.menuDone} onClick={close}>
-              Done
+              {t("done")}
             </button>
           </div>,
           host,
@@ -512,7 +514,7 @@ export function InterfaceMenu({
   );
 }
 
-export function ProductImage({ product, className = "" }) {
+export function ProductImage({ product, className = "", t = jetsonT("en") }) {
   const [failed, setFailed] = useState(false);
   useEffect(() => setFailed(false), [product.id, product.image]);
   return (
@@ -525,13 +527,20 @@ export function ProductImage({ product, className = "" }) {
           onError={() => setFailed(true)}
         />
       ) : (
-        <span className={styles.imageFallback}>Product image unavailable</span>
+        <span className={styles.imageFallback}>{t("imageUnavailable")}</span>
       )}
     </div>
   );
 }
 
-export function Modal({ title, onClose, children, footer, wide = false }) {
+export function Modal({
+  title,
+  onClose,
+  children,
+  footer,
+  wide = false,
+  t = jetsonT("en"),
+}) {
   const dialog = useRef(null),
     opener = useRef(null),
     close = useRef(onClose);
@@ -597,7 +606,7 @@ export function Modal({ title, onClose, children, footer, wide = false }) {
         <button
           type="button"
           className={styles.close}
-          aria-label="Close dialog"
+          aria-label={t("closeDialog")}
           onClick={onClose}
         >
           <CloseIcon />

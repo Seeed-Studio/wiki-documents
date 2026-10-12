@@ -1,10 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {formatDistance, parseDistanceDraft} from './cameraModel';
+import {cameraT, presentDistanceResult, showDistance} from './i18n';
 import styles from './CameraSelector.module.css';
 
 const draftFor = (distance) => ({minM: distance?.minM?.toString() || '', maxM: distance?.maxM?.toString() || ''});
 
-export default function DistanceFilter({distance, resetVersion, onChange, onInvalidChange}) {
+export default function DistanceFilter({distance, resetVersion, onChange, onInvalidChange, lang = 'en'}) {
+  const t = cameraT(lang);
   const [draft, setDraft] = useState(() => draftFor(distance));
   const [validation, setValidation] = useState({error: '', invalidFields: []});
   const emitted = useRef(distance);
@@ -24,7 +25,7 @@ export default function DistanceFilter({distance, resetVersion, onChange, onInva
   const edit = (key, value) => {
     const next = {...draft, [key]: value};
     setDraft(next);
-    const result = parseDistanceDraft(next);
+    const result = presentDistanceResult(next, lang);
     setValidation(result);
     onInvalidChange(Boolean(result.error));
     if (!result.error) {
@@ -33,18 +34,20 @@ export default function DistanceFilter({distance, resetVersion, onChange, onInva
     }
   };
 
+  const nearest = t('nearestTarget');
+  const farthest = t('farthestTarget');
   return <section className={styles.distancePanel} aria-labelledby="camera-distance-title">
-    <div className={styles.distanceIntro}><h3 id="camera-distance-title">Working distance</h3><p id="camera-distance-help">Optional. The published ideal range must cover your target distances.</p></div>
+    <div className={styles.distanceIntro}><h3 id="camera-distance-title">{t('distanceTitle')}</h3><p id="camera-distance-help">{t('distanceHelp')}</p></div>
     <div className={styles.distanceInputs}>
-      {[['minM', 'Nearest target (m)'], ['maxM', 'Farthest target (m)']].map(([key, label]) => <label key={key} className={styles.field}>
-        <span>{label}</span><input type="text" inputMode="decimal" autoComplete="off" aria-label={label} value={draft[key]} placeholder="Optional"
+      {[['minM', nearest], ['maxM', farthest]].map(([key, label]) => <label key={key} className={styles.field}>
+        <span>{label}</span><input type="text" inputMode="decimal" autoComplete="off" aria-label={label} value={draft[key]} placeholder={t('optional')}
           aria-invalid={validation.invalidFields.includes(key)} aria-describedby={`camera-distance-help${validation.error ? ' camera-distance-error' : ''}`}
           onChange={(event) => edit(key, event.target.value)} />
       </label>)}
     </div>
-    <p id="camera-distance-error" className={styles.distanceError} role="status" aria-atomic="true">{validation.error && `${validation.error} ${distance ? `Results still use ${formatDistance(distance)}.` : 'Results still have no distance limit.'}`}</p>
-    <div className={styles.distanceFoot}><p>Range coverage is a first check, not a guarantee of accuracy on your materials or in your lighting.</p>
-      {(draft.minM || draft.maxM) && <button type="button" className={styles.textButton} onClick={() => onChange('distance', null)}>Clear distance requirements</button>}
+    <p id="camera-distance-error" className={styles.distanceError} role="status" aria-atomic="true">{validation.error && `${validation.error} ${distance ? t('distanceStill', {distance: showDistance(distance, lang)}) : t('distanceNoLimit')}`}</p>
+    <div className={styles.distanceFoot}><p>{t('distanceFoot')}</p>
+      {(draft.minM || draft.maxM) && <button type="button" className={styles.textButton} onClick={() => onChange('distance', null)}>{t('clearDistance')}</button>}
     </div>
   </section>;
 }

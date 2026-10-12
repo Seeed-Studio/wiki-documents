@@ -1,16 +1,17 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {platformFamilies, platformOptions, platformProfiles} from './platformData';
-import {connectionLabel} from './cameraModel';
+import {cameraT} from './i18n';
 import styles from './CameraSelector.module.css';
 
-function PlatformImage({platform}) {
+function PlatformImage({platform, t}) {
   const [failed, setFailed] = useState(false);
   useEffect(() => setFailed(false), [platform.imageUrl]);
-  return failed ? <span className={styles.platformImageError}>Image unavailable</span>
+  return failed ? <span className={styles.platformImageError}>{t('imageUnavailable')}</span>
     : <img src={platform.imageUrl} alt={platform.label} onError={() => setFailed(true)} />;
 }
 
-export default function PlatformPicker({filters, onChange}) {
+export default function PlatformPicker({filters, onChange, lang = 'en'}) {
+  const t = cameraT(lang);
   const [open, setOpen] = useState(false);
   const triggerRef = useRef(null);
   const dialogRef = useRef(null);
@@ -93,19 +94,19 @@ export default function PlatformPicker({filters, onChange}) {
 
   // Keep the site's image zoom from opening behind this native dialog.
   return <div className={styles.platformField} onClick={(event) => event.stopPropagation()}>
-    <button ref={triggerRef} type="button" className={styles.platformTrigger} aria-label={`reComputer series: ${selected.label}`} aria-haspopup="dialog" aria-expanded={open} aria-controls="camera-platform-dialog" onClick={show}>
-      {selected.imageUrl && <span className={styles.platformThumb}><PlatformImage key={selected.id} platform={selected} /></span>}
-      <span className={styles.platformTriggerText}><small>reComputer series</small><span>{selected.label}</span></span><span aria-hidden="true">⌄</span>
+    <button ref={triggerRef} type="button" className={styles.platformTrigger} aria-label={t('seriesAria', {label: selected.id === 'all' ? t('notSelected') : selected.label})} aria-haspopup="dialog" aria-expanded={open} aria-controls="camera-platform-dialog" onClick={show}>
+      {selected.imageUrl && <span className={styles.platformThumb}><PlatformImage key={selected.id} platform={selected} t={t} /></span>}
+      <span className={styles.platformTriggerText}><small>{t('seriesLabel')}</small><span>{selected.id === 'all' ? t('notSelected') : selected.label}</span></span><span aria-hidden="true">⌄</span>
     </button>
     <dialog id="camera-platform-dialog" ref={dialogRef} className={`${styles.dialog} ${styles.platformDialog}`} aria-labelledby="camera-platform-title" onClose={close} onKeyDown={onKeyDown} onClick={(event) => {if (event.target === event.currentTarget) event.currentTarget.close();}}>
-      <header className={styles.platformHeader}><h2 id="camera-platform-title">Choose your series</h2><button type="button" className={styles.closeButton} aria-label="Close device picker" onClick={() => dialogRef.current.close()}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18" /></svg></button></header>
+      <header className={styles.platformHeader}><h2 id="camera-platform-title">{t('chooseSeries')}</h2><button type="button" className={styles.closeButton} aria-label={t('closePicker')} onClick={() => dialogRef.current.close()}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18" /></svg></button></header>
       <div ref={bodyRef} className={styles.platformBody}>
-        <button type="button" className={styles.platformAny} data-choice-id="all" aria-pressed={selected.id === 'all'} onClick={() => choose('all')}>Not selected <span>Browse all series</span></button>
+        <button type="button" className={styles.platformAny} data-choice-id="all" aria-pressed={selected.id === 'all'} onClick={() => choose('all')}>{t('notSelected')} <span>{t('browseAll')}</span></button>
         <div ref={gridRef} className={styles.platformGrid}>
-          {platformFamilies.map((item) => <button type="button" key={item.id} className={styles.platformOption} data-choice-id={item.id} aria-pressed={selected.id === item.id} aria-label={`Select ${item.label}`} onClick={() => choose(item.id)}>
-            <span className={styles.platformImage}><PlatformImage platform={item} /></span>
+          {platformFamilies.map((item) => <button type="button" key={item.id} className={styles.platformOption} data-choice-id={item.id} aria-pressed={selected.id === item.id} aria-label={t('selectSeries', {label: item.label})} onClick={() => choose(item.id)}>
+            <span className={styles.platformImage}><PlatformImage platform={item} t={t} /></span>
             <strong className={styles.platformName}><span>{item.name}</span>{' '}<span className={styles.platformSeries}>{item.series}</span></strong>
-            <span>{platformProfiles[item.profile].connections.map((id) => connectionLabel[id]).join(' · ')} {selected.id === item.id && <span aria-hidden="true">✓</span>}</span>
+            <span>{platformProfiles[item.profile].connections.map((id) => t(`connection.${id}`)).join(' · ')} {selected.id === item.id && <span aria-hidden="true">✓</span>}</span>
           </button>)}
         </div>
       </div>

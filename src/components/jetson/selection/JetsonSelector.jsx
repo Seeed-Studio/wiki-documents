@@ -1,6 +1,16 @@
 import React, { useMemo, useState } from "react";
 import Link from "@docusaurus/Link";
+import { useLocation } from "@docusaurus/router";
 import { products } from "./catalog";
+import { getLangFromPathname, jetsonDocTarget } from "./locale";
+import {
+  jetsonT,
+  localizeOptions,
+  presentFilterTags,
+  presentNotice,
+  presentPortSummary,
+  tx,
+} from "./i18n";
 import {
   types,
   isInView,
@@ -18,13 +28,11 @@ import {
   sortConfigurations,
   cardConfiguration,
   toggleComparison,
-  filterTags,
   matchesProduct,
   valueText,
   specificationGroups,
   comparisonGroups,
   compatibleExpansions,
-  portSummary,
 } from "./model";
 import { detailValue, detailReferences } from "./detailPresentation";
 import {
@@ -42,27 +50,32 @@ const configOptions = (list) =>
     value: p.id,
     label: `${p.name}${p.memoryGb != null ? ` · ${p.memoryGb}GB` : ""}`,
   }));
-function Resources({ product, includeReferences = false }) {
+function DocLink({ href, lang, children }) {
+  const target = jetsonDocTarget(href, lang);
+  if (target.kind === "anchor") return <a href={target.href}>{children}</a>;
+  return <Link to={target.href}>{children}</Link>;
+}
+function Resources({ product, includeReferences = false, lang, t }) {
   const references = includeReferences ? detailReferences(product) : [];
   return (
     <div className={styles.resources}>
       {product.guides.map((link) => (
-        <Link key={link.url} to={link.url}>
-          {link.label} ↗
-        </Link>
+        <DocLink key={link.url} href={link.url} lang={lang}>
+          {tx(lang, link.label)} ↗
+        </DocLink>
       ))}
       {product.moduleSpec && (
         <a href={product.sources[1]} target="_blank" rel="noreferrer">
-          Module specifications ↗
+          {t("moduleSpecifications")} ↗
         </a>
       )}
       {references.length > 0 && (
         <div className={styles.referenceGroup}>
-          <h4>Specifications &amp; references</h4>
+          <h4>{t("referencesTitle")}</h4>
           {references.map((link) => (
-            <Link key={link.url} to={link.url}>
-              {link.label} ↗
-            </Link>
+            <DocLink key={link.url} href={link.url} lang={lang}>
+              {tx(lang, link.label)} ↗
+            </DocLink>
           ))}
         </div>
       )}
@@ -77,20 +90,23 @@ function Details({
   selected,
   filters,
   comparisonType,
+  lang,
+  t,
 }) {
   const [id, setId] = useState(initial.id);
   const [feedback, setFeedback] = useState("");
   const p = candidates.find((p) => p.id === id) || initial;
   return (
-    <Modal title={p.name} onClose={onClose}>
+    <Modal title={p.name} onClose={onClose} t={t}>
       <div className={styles.detailLayout}>
         <aside className={styles.detailSummary}>
-          <ProductImage product={p} />
+          <ProductImage product={p} t={t} />
           {candidates.length > 1 && (
             <Menu
-              label="Configuration"
+              label={t("configuration")}
               value={p.id}
               options={configOptions(candidates)}
+              t={t}
               onChange={(id) => {
                 setId(id);
                 setFeedback("");
@@ -98,7 +114,7 @@ function Details({
             />
           )}
           {!matchesProduct(p, filters) && (
-            <p className={styles.outside}>Outside current filters</p>
+            <p className={styles.outside}>{t("outsideFilters")}</p>
           )}
           {p.purchaseUrl && (
             <a
@@ -107,7 +123,7 @@ function Details({
               target="_blank"
               rel="noreferrer"
             >
-              Get One Now ↗
+              {t("getOneNow")} ↗
             </a>
           )}
           <button
@@ -117,30 +133,30 @@ function Details({
               else
                 setFeedback(
                   comparisonType && comparisonType !== p.type
-                    ? "Compare products of the same type. Close Details and remove the current selection first."
-                    : "Two configurations are already selected. Close Details and remove one from the comparison bar.",
+                    ? t("feedbackSameType")
+                    : t("feedbackFull"),
                 );
             }}
           >
             {selected.includes(p.id)
-              ? "Remove from comparison"
-              : "Add to comparison"}
+              ? t("removeComparison")
+              : t("addComparison")}
           </button>
           {feedback && (
             <p role="status" className={styles.outside}>
               {feedback}
             </p>
           )}
-          {p.notes && <p className={styles.muted}>{p.notes}</p>}
-          <Resources product={p} includeReferences />
+          {p.notes && <p className={styles.muted}>{tx(lang, p.notes)}</p>}
+          <Resources product={p} includeReferences lang={lang} t={t} />
         </aside>
         <div className={styles.specifications}>
           {specificationGroups(p).map((group) => (
             <section key={group.title}>
-              <h3>{group.title}</h3>
+              <h3>{tx(lang, group.title)}</h3>
               <table className={styles.specTable}>
                 <caption className={styles.srOnly}>
-                  {group.title} for {p.name}
+                  {t("specCaption", { group: tx(lang, group.title), name: p.name })}
                 </caption>
                 <colgroup>
                   <col style={{ width: "25%" }} />
@@ -167,12 +183,12 @@ function Details({
                       const display = detailValue(p, row);
                       return (
                         <tr key={row[2]} data-spec-field={row[2]}>
-                          <th scope="row">{display.label}</th>
+                          <th scope="row">{tx(lang, display.label)}</th>
                           <td>
-                            {display.primary}
+                            {tx(lang, display.primary)}
                             {display.note && (
                               <small className={styles.specNote}>
-                                {display.note}
+                                {tx(lang, display.note)}
                               </small>
                             )}
                           </td>
@@ -182,13 +198,16 @@ function Details({
                 </tbody>
               </table>
               {group.title === "JetPack" && p.jetpackNotes && (
-                <p className={styles.firmwareSources}>{p.jetpackNotes}</p>
+                <p className={styles.firmwareSources}>{tx(lang, p.jetpackNotes)}</p>
               )}
               {group.title === "JetPack" && p.firmwareEvidence?.length > 1 && (
                 <div className={styles.firmwareSources}>
                   {p.firmwareEvidence.map((e) => (
                     <p key={e.source}>
-                      JetPack {e.version} — {e.status}
+                      {t("firmwareLine", {
+                        version: e.version,
+                        status: tx(lang, e.status),
+                      })}
                     </p>
                   ))}
                 </div>
@@ -197,24 +216,26 @@ function Details({
           ))}
           {compatibleExpansions(p).length > 0 && (
             <section>
-              <h3>Compatible expansion boards</h3>
+              <h3>{t("compatibleBoards")}</h3>
               {compatibleExpansions(p).map(({ product: board, included }) => (
                 <div key={board.id} className={styles.expansion}>
                   <strong>{board.name}</strong>
                   <p>
-                    {included
-                      ? "Included in this configuration"
-                      : "Optional — purchased separately"}
+                    {included ? t("includedConfig") : t("optionalBoard")}
                   </p>
-                  <p>Added interfaces: {portSummary(board)}</p>
-                  <Resources product={board} />
+                  <p>
+                    {t("addedInterfacesLine", {
+                      ports: presentPortSummary(board, lang),
+                    })}
+                  </p>
+                  <Resources product={board} lang={lang} t={t} />
                   {board.purchaseUrl && (
                     <a
                       href={board.purchaseUrl}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Product page ↗
+                      {t("productPage")} ↗
                     </a>
                   )}
                 </div>
@@ -226,42 +247,39 @@ function Details({
     </Modal>
   );
 }
-function Comparison({ items, filters, onClose, onDetails }) {
+function Comparison({ items, filters, onClose, onDetails, lang, t }) {
   const [differences, setDifferences] = useState(false);
   const groups = comparisonGroups(items);
   return (
     <Modal
-      title="Compare two configurations"
+      title={t("compareTitle")}
       wide
       onClose={onClose}
+      t={t}
       footer={
         <button className={styles.secondary} onClick={onClose}>
-          Edit selection
+          {t("editSelection")}
         </button>
       }
     >
-      <p className={styles.comparisonLegend}>
-        Green marks a documented advantage for that parameter, not a better
-        overall product or measured performance. Different power modes are
-        noted.
-      </p>
+      <p className={styles.comparisonLegend}>{t("legend")}</p>
       <label className={styles.check}>
         <input
           type="checkbox"
           checked={differences}
           onChange={(e) => setDifferences(e.target.checked)}
         />
-        Show differences only
+        {t("differencesOnly")}
       </label>
       <div className={styles.compareNames}>
         {items.map((p) => (
           <div key={p.id}>
             <strong>{p.name}</strong>
             {!matchesProduct(p, filters) && (
-              <span className={styles.outside}>Outside current filters</span>
+              <span className={styles.outside}>{t("outsideFilters")}</span>
             )}
             <button className={styles.textButton} onClick={() => onDetails(p)}>
-              Details
+              {t("details")}
             </button>
           </div>
         ))}
@@ -274,7 +292,7 @@ function Comparison({ items, filters, onClose, onDetails }) {
           return (
             visible.length > 0 && (
               <section key={group.title}>
-                <h3>{group.title}</h3>
+                <h3>{tx(lang, group.title)}</h3>
                 {visible.map((row) => {
                   const displays = row.values.map((value, index) =>
                     detailValue(items[index], [row.label, value, row.id]),
@@ -286,15 +304,15 @@ function Comparison({ items, filters, onClose, onDetails }) {
                       key={row.id}
                     >
                       <strong>
-                        {displays[0].label}
+                        {tx(lang, displays[0].label)}
                         {row.different && row.advantageIndex == null && (
                           <span className={styles.differenceBadge}>
-                            Different
+                            {t("different")}
                           </span>
                         )}
                         {row.notes.map((note) => (
                           <small className={styles.comparisonNote} key={note}>
-                            {note}
+                            {tx(lang, note)}
                           </small>
                         ))}
                       </strong>
@@ -310,15 +328,15 @@ function Comparison({ items, filters, onClose, onDetails }) {
                             row.advantageIndex === index ? "true" : undefined
                           }
                         >
-                          {display.primary}
+                          {tx(lang, display.primary)}
                           {display.note && (
                             <small className={styles.specNote}>
-                              {display.note}
+                              {tx(lang, display.note)}
                             </small>
                           )}
                           {row.advantageIndex === index && (
                             <span className={styles.advantageBadge}>
-                              {row.reason}
+                              {tx(lang, row.reason)}
                             </span>
                           )}
                         </span>
@@ -333,7 +351,7 @@ function Comparison({ items, filters, onClose, onDetails }) {
       </div>
       <div className={styles.compareLinks}>
         {items.map((p) => (
-          <Resources key={p.id} product={p} />
+          <Resources key={p.id} product={p} lang={lang} t={t} />
         ))}
       </div>
     </Modal>
@@ -341,6 +359,9 @@ function Comparison({ items, filters, onClose, onDetails }) {
 }
 
 export default function JetsonSelector() {
+  const { pathname } = useLocation();
+  const lang = getLangFromPathname(pathname);
+  const t = useMemo(() => jetsonT(lang), [lang]);
   const [type, setType] = useState("all"),
     [states, setStates] = useState(createTypeState);
   const [message, setMessage] = useState(""),
@@ -351,14 +372,17 @@ export default function JetsonSelector() {
   const list = useMemo(() => filteredProducts(filters, type), [filters, type]);
   const groups = useMemo(() => groupProducts(list), [list]);
   const allType = products.filter((p) => isInView(p, type)),
-    tags = filterTags(filters);
+    tags = presentFilterTags(filters, lang);
   const selectedProducts = selected
     .map((id) => products.find((p) => p.id === id))
     .filter(Boolean);
-  const moduleOptions = moduleOptionsForType(type);
+  const moduleOptions = moduleOptionsForType(type).map((option) => ({
+    ...option,
+    description: option.description ? tx(lang, option.description) : option.description,
+  }));
   const jetpackOptions = [...new Set(allType.flatMap((p) => p.jetpackVersions))]
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-    .map((value) => ({ value, label: `JetPack ${value}` }));
+    .map((value) => ({ value, label: t("jetpackOption", { version: value }) }));
   function update(change) {
     setStates((s) => ({ ...s, [type]: { ...s[type], ...change } }));
   }
@@ -371,11 +395,7 @@ export default function JetsonSelector() {
   }
   function clear() {
     update({ filters: emptyFilters() });
-    setMessage(
-      selected.length
-        ? "Filters cleared. Comparison selection kept."
-        : "Filters cleared.",
-    );
+    setMessage(selected.length ? t("filtersClearedKept") : t("filtersCleared"));
   }
   function removeTag(tag) {
     if (tag.key === "interfaces" && tag.value === "usb_a") {
@@ -399,7 +419,7 @@ export default function JetsonSelector() {
   function toggle(p) {
     const result = toggleComparison(selected, p, type);
     update({ selected: result.selected });
-    setMessage(result.message);
+    setMessage(presentNotice(result.message, lang));
     return result.selected !== selected;
   }
   function configure(groupId, id) {
@@ -410,62 +430,74 @@ export default function JetsonSelector() {
       className={`${styles.selector} ${selected.length ? styles.withTray : ""}`}
       data-jetson-selector
     >
-      <div className={styles.toolbar} aria-label="Product filters">
+      <div className={styles.toolbar} aria-label={t("productFilters")}>
         <Menu
-          label="Product type"
+          label={t("productType")}
           value={type}
-          options={types}
+          options={localizeOptions(types, lang)}
+          t={t}
           onChange={(v) => {
             setType(v);
             setMessage("");
           }}
         />
         <Menu
-          label="Application"
+          label={t("application")}
           value={filters.application}
           options={[
-            { value: "", label: "All applications", illustration: "all" },
-            ...applications,
+            { value: "", label: t("allApplications"), illustration: "all" },
+            ...localizeOptions(applications, lang),
           ]}
+          t={t}
           onChange={(v) => filter("application", v)}
-          help="Filters by documented product positioning. Other products may support the same task with suitable integration."
+          help={t("applicationHelp")}
         />
         {type !== "expansion" && (
           <Menu
-            label={type === "carrier" ? "Supported modules" : "Jetson module"}
+            label={type === "carrier" ? t("moduleCarrier") : t("moduleSystem")}
             value={filters.module}
-            options={any("Any module", moduleOptions)}
+            options={any(t("anyModule"), moduleOptions)}
+            t={t}
             onChange={(v) => filter("module", v)}
           />
         )}
         {type !== "carrier" && (
           <Menu
-            label="Minimum memory"
+            label={t("minMemory")}
             value={filters.memory}
             options={any(
-              "Any memory",
+              t("anyMemory"),
               [4, 8, 16, 32, 64].map((v) => ({
                 value: String(v),
-                label: `${v}GB or more`,
+                label: t("gbOrMore", { n: v }),
               })),
             )}
+            t={t}
             onChange={(v) => filter("memory", v)}
           />
         )}
         {type !== "carrier" && (
           <Menu
-            label="Minimum AI compute (TOPS)"
+            label={t("minCompute")}
             value={filters.computeMin}
-            options={any("Any compute", computeOptions())}
+            options={any(
+              t("anyCompute"),
+              computeOptions().map((option) => ({
+                ...option,
+                label: t("topsOrMore", { n: option.value }),
+              })),
+            )}
+            t={t}
             onChange={(v) => filter("computeMin", v)}
-            help="Filters by published TOPS for the listed configuration. Figures may use different compute and power modes; they are not measured system performance."
+            help={t("computeHelp")}
           />
         )}
         <InterfaceMenu
           value={filters.interfaces}
-          options={interfaces}
+          options={localizeOptions(interfaces, lang)}
           minimum={filters.usbAMin}
           quantities={usbAOptions(type)}
+          t={t}
           onChange={(interfaces, usbAMin) => {
             update({ filters: { ...filters, interfaces, usbAMin } });
             setMessage("");
@@ -473,75 +505,74 @@ export default function JetsonSelector() {
         />
         {type !== "expansion" && (
           <Menu
-            label="Support JetPack"
+            label={t("jetpack")}
             value={filters.jetpack}
-            options={any("Any version", jetpackOptions)}
+            options={any(t("anyVersion"), jetpackOptions)}
+            t={t}
             onChange={(v) => filter("jetpack", v)}
-            help="Documented supported versions, not the factory-installed version. See Details for the corresponding guides."
+            help={t("jetpackHelp")}
           />
         )}
         <label className={`${styles.control} ${styles.search}`}>
-          <span className={styles.label}>Find a model</span>
+          <span className={styles.label}>{t("findModel")}</span>
           <input
-            aria-label="Find a model"
+            aria-label={t("findModel")}
             value={filters.search}
             onChange={(e) => filter("search", e.target.value)}
-            placeholder="Model, SKU or interface"
+            placeholder={t("findPlaceholder")}
             type="search"
           />
         </label>
         <Menu
-          label="Storage & expansion"
+          label={t("storage")}
           value={filters.storage}
-          options={any("Any expansion", storageOptions)}
+          options={any(t("anyExpansion"), localizeOptions(storageOptions, lang))}
+          t={t}
           onChange={(v) => filter("storage", v)}
-          help="A slot is an expansion option, not an installed SSD or wireless modem."
+          help={t("storageHelp")}
         />
         <Menu
-          label="Protection rating"
+          label={t("protection")}
           value={filters.ip}
-          options={any("Any rating", [
+          options={any(t("anyRating"), [
             { value: "IP40", label: "IP40" },
             { value: "IP66", label: "IP66" },
           ])}
+          t={t}
           onChange={(v) => filter("ip", v)}
-          help="Matches the documented rating exactly. Products without a documented rating are excluded when a rating is required."
+          help={t("protectionHelp")}
         />
         <label className={styles.control}>
-          <span className={styles.label}>DC input voltage (V)</span>
+          <span className={styles.label}>{t("voltageLabel")}</span>
           <input
             type="number"
             step="any"
             min="0"
-            aria-label="DC input voltage"
-            placeholder="Any voltage"
+            aria-label={t("voltageAria")}
+            placeholder={t("anyVoltage")}
             value={filters.voltage}
             onChange={(e) => filter("voltage", e.target.value)}
           />
         </label>
         <label className={styles.control}>
-          <span className={styles.label}>Operating temperature (°C)</span>
+          <span className={styles.label}>{t("temperatureLabel")}</span>
           <input
             type="number"
             step="any"
-            aria-label="Operating temperature"
-            placeholder="Any temperature"
+            aria-label={t("temperatureAria")}
+            placeholder={t("anyTemperature")}
             value={filters.temperature}
             onChange={(e) => filter("temperature", e.target.value)}
           />
         </label>
-        <p className={styles.advancedNote}>
-          Temperature coverage is checked within one documented operating mode.
-          Read the airflow, cooling and power-mode conditions in Details.
-        </p>
+        <p className={styles.advancedNote}>{t("advancedNote")}</p>
       </div>
       <div className={styles.resultsHeader}>
         <h2 aria-live="polite">
-          {groups.length} series{" "}
+          {t(groups.length === 1 ? "seriesOne" : "seriesOther", { n: groups.length })}
           <span>
             {" "}
-            / {list.length}{" "}
-            {list.length === 1 ? "configuration" : "configurations"}
+            / {t(list.length === 1 ? "configOne" : "configOther", { n: list.length })}
           </span>
         </h2>
         <button
@@ -549,16 +580,16 @@ export default function JetsonSelector() {
           disabled={!tags.length}
           onClick={clear}
         >
-          <span aria-hidden="true">↶</span> Clear filters
+          <span aria-hidden="true">↶</span> {t("clearFilters")}
         </button>
       </div>
       {tags.length > 0 && (
-        <div className={styles.tags} aria-label="Selected filters">
+        <div className={styles.tags} aria-label={t("selectedFilters")}>
           {tags.map((tag) => (
             <button
               className={styles.tag}
               key={`${tag.key}-${tag.value || ""}`}
-              aria-label={`Remove ${tag.label} filter`}
+              aria-label={t("removeFilter", { label: tag.label })}
               onClick={() => removeTag(tag)}
             >
               {tag.label}
@@ -567,10 +598,7 @@ export default function JetsonSelector() {
           ))}
         </div>
       )}
-      <p className={styles.hint}>
-        Select two configurations of the same product type to compare their
-        specifications.
-      </p>
+      <p className={styles.hint}>{t("compareHint")}</p>
       <div className={styles.status} role="status">
         {message}
       </div>
@@ -585,39 +613,40 @@ export default function JetsonSelector() {
                 key={group.id}
                 data-family={group.id}
               >
-                <ProductImage product={p} />
+                <ProductImage product={p} t={t} />
                 <div className={styles.cardContent}>
                   {type === "all" && (
                     <span className={styles.typeBadge}>
-                      {p.type === "system" ? "System" : "Carrier board"}
+                      {p.type === "system" ? t("badgeSystem") : t("badgeCarrier")}
                     </span>
                   )}
                   <h3>{group.name}</h3>
                   <Menu
                     compact
-                    label={`Configuration for ${group.name}`}
+                    label={t("configurationFor", { name: group.name })}
                     value={p.id}
                     options={configOptions(group.products)}
+                    t={t}
                     onChange={(id) => configure(group.id, id)}
                   />
                   <dl className={styles.cardSpecs}>
                     {p.type === "system" ? (
                       <>
                         <div>
-                          <dt>Module</dt>
+                          <dt>{t("specModule")}</dt>
                           <dd>{p.module?.replace("Jetson ", "")}</dd>
                         </div>
                         <div>
-                          <dt>DC input</dt>
-                          <dd>{valueText(p.power)}</dd>
+                          <dt>{t("dcInput")}</dt>
+                          <dd>{tx(lang, valueText(p.power))}</dd>
                         </div>
                       </>
                     ) : (
                       <div className={styles.fullSpec}>
                         <dt>
                           {p.type === "carrier"
-                            ? "Supported modules"
-                            : "Compatible host"}
+                            ? t("supportedModules")
+                            : t("compatibleHost")}
                         </dt>
                         <dd>
                           {p.type === "carrier"
@@ -628,18 +657,18 @@ export default function JetsonSelector() {
                                     ?.label.replace("Jetson ", ""),
                                 )
                                 .join(" · ")
-                            : p.host}
+                            : tx(lang, p.host)}
                         </dd>
                       </div>
                     )}
                     <div className={styles.fullSpec}>
                       <dt>
                         {type === "expansion"
-                          ? "Added interfaces"
-                          : "Key interfaces"}
+                          ? t("addedInterfaces")
+                          : t("keyInterfaces")}
                       </dt>
                       <dd>
-                        {portSummary(p).split(" · ").slice(0, 4).join(" · ")}
+                        {presentPortSummary(p, lang).split(" · ").slice(0, 4).join(" · ")}
                       </dd>
                     </div>
                   </dl>
@@ -648,16 +677,16 @@ export default function JetsonSelector() {
                       className={styles.secondary}
                       onClick={() => setDetail(p)}
                     >
-                      Details
+                      {t("details")}
                     </button>
                     <label className={styles.check}>
                       <input
                         type="checkbox"
-                        aria-label={`Compare ${p.name}`}
+                        aria-label={t("compareNamed", { name: p.name })}
                         checked={checked}
                         onChange={() => toggle(p)}
                       />
-                      Compare
+                      {t("compare")}
                     </label>
                   </div>
                 </div>
@@ -667,32 +696,29 @@ export default function JetsonSelector() {
         </div>
       ) : (
         <div className={styles.empty}>
-          <h3>No configurations match these requirements.</h3>
-          <p>
-            Remove a selected condition above or clear the filters to browse
-            this product type.
-          </p>
+          <h3>{t("emptyTitle")}</h3>
+          <p>{t("emptyBody")}</p>
           <button className={styles.secondary} onClick={clear}>
-            Clear filters
+            {t("clearFilters")}
           </button>
         </div>
       )}
       {selectedProducts.length > 0 && (
-        <aside className={styles.tray} aria-label="Comparison selection">
+        <aside className={styles.tray} aria-label={t("trayLabel")}>
           <div>
-            <strong>{selected.length}/2 selected</strong>
+            <strong>{t("selectedCount", { n: selected.length })}</strong>
             <div className={styles.trayItems}>
               {selectedProducts.map((p) => (
                 <div className={styles.trayItem} key={p.id}>
                   <span>
                     {p.name}
                     {!matchesProduct(p, filters, type) && (
-                      <small>Outside current filters</small>
+                      <small>{t("outsideFilters")}</small>
                     )}
                   </span>
                   <button
                     className={styles.iconButton}
-                    aria-label={`Remove ${p.name} from comparison`}
+                    aria-label={t("removeNamed", { name: p.name })}
                     onClick={() => toggle(p)}
                   >
                     <CloseIcon />
@@ -706,14 +732,14 @@ export default function JetsonSelector() {
               className={styles.textButton}
               onClick={() => update({ selected: [] })}
             >
-              Clear selection
+              {t("clearSelection")}
             </button>
             <button
               className={styles.primary}
               disabled={selected.length !== 2}
               onClick={() => setCompare(true)}
             >
-              Compare ({selected.length})
+              {t("compareCount", { n: selected.length })}
             </button>
           </div>
         </aside>
@@ -728,6 +754,8 @@ export default function JetsonSelector() {
           filters={filters}
           selected={selected}
           comparisonType={selectedProducts[0]?.type}
+          lang={lang}
+          t={t}
           onClose={() => setDetail(null)}
           onCompare={toggle}
         />
@@ -736,6 +764,8 @@ export default function JetsonSelector() {
         <Comparison
           items={selectedProducts}
           filters={filters}
+          lang={lang}
+          t={t}
           onClose={() => setCompare(false)}
           onDetails={(p) => {
             setCompare(false);

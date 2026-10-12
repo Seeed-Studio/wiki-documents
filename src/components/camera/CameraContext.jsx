@@ -2,9 +2,11 @@ import React from 'react';
 import {applicationUses} from './cameraApplications';
 import {cameraCompatibility} from './cameraCompatibility';
 import {platformFamilies} from './platformData';
+import {cameraT, evidenceText, fieldText, localizeWikiHref, wikiField} from './i18n';
 import styles from './CameraSelector.module.css';
 
-export function CompatibilityJetson({camera, platform}) {
+export function CompatibilityJetson({camera, platform, lang = 'en'}) {
+  const t = cameraT(lang);
   const families = cameraCompatibility(camera, platform);
   const selected = platformFamilies.find(({id}) => id === platform);
   const guides = new Map();
@@ -16,33 +18,34 @@ export function CompatibilityJetson({camera, platform}) {
     }
   }
   return <section className={styles.detailContext} aria-labelledby="camera-compatibility-title">
-    <h3 id="camera-compatibility-title">Compatibility Jetson</h3>
-    <p className={styles.specNote}>Series with a candidate connection in this guide. Support depends on the carrier, JetPack and camera driver; not every configuration has been tested.</p>
-    {selected && !families.some(({selected: current}) => current) && <p className={styles.compatibilityNotice}>{selected.label} is outside this camera’s connection options.</p>}
+    <h3 id="camera-compatibility-title">{t('compatibilityTitle')}</h3>
+    <p className={styles.specNote}>{t('compatibilityNote')}</p>
+    {selected && !families.some(({selected: current}) => current) && <p className={styles.compatibilityNotice}>{t('outsideSeries', {name: selected.label})}</p>}
     <ul className={styles.compatibilityList}>
       {families.map((family) => <li key={family.id} data-current={family.selected}>
-        {family.label}{family.selected && <small>Selected series</small>}
+        {family.label}{family.selected && <small>{t('selectedSeries')}</small>}
       </li>)}
     </ul>
     {guides.size > 0 ? <details className={styles.contextGuides}>
-      <summary>Series-specific guides & examples</summary>
+      <summary>{t('seriesGuides')}</summary>
       <ul>{[...guides.values()].map((guide) => <li key={guide.url}>
-        <a href={guide.url} target="_blank" rel="noopener noreferrer">{guide.title} <span aria-hidden="true">↗</span></a>
-        <small>{guide.families.join(' · ')}</small><p>{guide.note}</p>
+        <a href={localizeWikiHref(guide.url, lang)} target="_blank" rel="noopener noreferrer">{wikiField(guide, 'title', lang)} <span aria-hidden="true">↗</span></a>
+        <small>{guide.families.join(' · ')}</small><p>{wikiField(guide, 'note', lang)}</p>
       </li>)}</ul>
-    </details> : <p className={styles.specNote}>No series-specific setup guide is linked for this camera.</p>}
+    </details> : <p className={styles.specNote}>{t('noSeriesGuide')}</p>}
   </section>;
 }
 
-export function ApplicationUses({camera}) {
+export function ApplicationUses({camera, lang = 'en'}) {
+  const t = cameraT(lang);
   const uses = applicationUses(camera);
   if (!uses.length) return null;
   return <section className={styles.detailContext} aria-labelledby="camera-applications-title">
-    <h3 id="camera-applications-title">Related application examples</h3>
-    <p className={styles.specNote}>These references show how this model has been used. Other cameras may support the same task with suitable software and calibration.</p>
+    <h3 id="camera-applications-title">{t('usesTitle')}</h3>
+    <p className={styles.specNote}>{t('usesNote')}</p>
     <ul className={styles.applicationUses}>{uses.map(({id, label, evidence}) => <li key={id}>
-      <strong>{label}</strong>{evidence.map(({url, kind, reason}) => <div key={url}>
-        <p>{reason}</p><a href={url} target="_blank" rel="noopener noreferrer">{kind} <span aria-hidden="true">↗</span></a>
+      <strong>{lang === 'en' ? label : t(`scene.${id}`)}</strong>{evidence.map((item) => <div key={item.url}>
+        <p>{evidenceText(item, lang)}</p><a href={localizeWikiHref(item.url, lang)} target="_blank" rel="noopener noreferrer">{fieldText(lang, item.kind)} <span aria-hidden="true">↗</span></a>
       </div>)}
     </li>)}</ul>
   </section>;

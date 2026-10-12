@@ -1,8 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {cameras, platformOptions} from './cameraData.js';
+import {cameras, interfaceOptions, platformOptions} from './cameraData.js';
+import {applicationEvidence} from './cameraApplications.js';
+import {wikiResources} from './cameraResources.js';
+import {getLangFromPathname, localizeWikiHref} from '../jetson/selection/locale.js';
+import {bestForCopy, bestForText, cameraT, evidenceCopy, evidenceText, messages as cameraMessages, presentDistanceResult, showCompareReason, showDistance, showDistanceExplanation, wikiCopy, wikiField} from './i18n.js';
 import {applicationSceneOptions, matchesApplication} from './applicationScenes.js';
-import {defaultFilters, outputOptionsFor, activeFilterEntries, parseDistanceDraft, distanceMatch, distanceExplanation, formatDistance, selectCameras, changeFilter, depthCameraFilters, filterHints, capabilityOptions, coverageOptions, connectionOptionsFor, isCameraAvailable, facetCount, compareDisabledReason, comparisonCandidates, comparisonInsights, formatImage, formatFov, formatFrameRate, keyFact, outputLabel, outputOptions, COMPARISON_LIMIT} from './cameraModel.js';
+import {defaultFilters, outputOptionsFor, activeFilterEntries, parseDistanceDraft, distanceMatch, distanceExplanation, formatDistance, selectCameras, changeFilter, depthCameraFilters, filterHints, capabilityOptions, coverageOptions, connectionOptionsFor, isCameraAvailable, facetCount, compareDisabledReason, comparisonCandidates, comparisonInsights, formatImage, formatFov, formatFrameRate, keyFact, outputLabel, outputOptions, resolutionOptions, linkOptions, COMPARISON_LIMIT} from './cameraModel.js';
 
 const find = (id) => cameras.find((camera) => camera.id === id);
 const list = (changes) => selectCameras(cameras, {...defaultFilters, ...changes});
@@ -329,4 +333,90 @@ test('all catalogue records have distinct ids and structured specs', () => {
   }
   assert.equal(list({coverage: 'unlisted'}).length, 2);
   assert.equal(list({coverage: 'lens'}).length, 8);
+});
+
+const LANGS = ['en', 'zh', 'ja', 'es', 'pt'];
+const t = cameraT('en');
+
+test('camera pages use the same language prefixes and English fallback', () => {
+  assert.equal(getLangFromPathname('/jetson/camera-selection-guide/'), 'en');
+  assert.equal(getLangFromPathname('/cn/jetson/camera-selection-guide/'), 'zh');
+  assert.equal(getLangFromPathname('/ja/jetson/camera-selection-guide/'), 'ja');
+  assert.equal(getLangFromPathname('/es/jetson/camera-selection-guide/'), 'es');
+  assert.equal(getLangFromPathname('/pt-br/jetson/camera-selection-guide/'), 'pt');
+  assert.equal(getLangFromPathname('/cameras'), 'en');
+  assert.equal(cameraT('unknown')('details'), 'Details');
+});
+
+test('interface copy is complete and English labels match the catalogue', () => {
+  const keys = Object.keys(cameraMessages.en);
+  for (const lang of LANGS) assert.deepEqual(Object.keys(cameraMessages[lang]).sort(), [...keys].sort());
+  for (const option of applicationSceneOptions) {
+    assert.equal(t(`scene.${option.id}`), option.label);
+    if (option.description) assert.equal(t(`scene.${option.id}.desc`), option.description);
+  }
+  for (const option of interfaceOptions) assert.equal(t(`connection.${option.id}`), option.label);
+  for (const option of outputOptions) assert.equal(t(`output.${option.id}`), option.label);
+  for (const option of resolutionOptions) assert.equal(t(`resolution.${option.id}`), option.label);
+  for (const option of coverageOptions) assert.equal(t(`coverage.${option.id}`), option.label);
+  for (const option of capabilityOptions) {
+    assert.equal(t(`capability.${option.id}`), option.label);
+    assert.equal(t(`capability.${option.id}.desc`), option.description);
+  }
+  for (const option of linkOptions) assert.equal(t(`link.${option.id}`), option.label);
+  assert.equal(t('hint.application'), filterHints.application);
+  assert.equal(t('hint.connection'), filterHints.connection);
+  assert.equal(t('hint.output'), filterHints.output);
+  assert.equal(t('hint.resolution'), filterHints.resolution);
+  assert.equal(t('hint.coverage'), filterHints.coverage);
+  assert.equal(
+    t('compareHelpEmpty'),
+    'Select Compare on two camera cards to view their specifications side by side. Choose either two RGB cameras or two RGB + Depth cameras.',
+  );
+});
+
+test('product explanations, guides and examples have all four translations', () => {
+  for (const camera of cameras) {
+    assert.ok(bestForCopy[camera.id], camera.id);
+    assert.equal(bestForText(camera, 'en'), camera.bestFor);
+    for (const lang of LANGS.filter((item) => item !== 'en')) {
+      assert.notEqual(bestForCopy[camera.id][lang], camera.bestFor, camera.id);
+      assert.equal(bestForText(camera, lang), bestForCopy[camera.id][lang]);
+    }
+  }
+  for (const resource of wikiResources) {
+    assert.ok(wikiCopy[resource.url], resource.url);
+    assert.equal(wikiField(resource, 'title', 'en'), resource.title);
+    assert.equal(wikiField(resource, 'note', 'pt'), wikiCopy[resource.url].note.pt);
+  }
+  for (const item of applicationEvidence) {
+    assert.ok(evidenceCopy[`${item.application}|${item.url}`], item.url);
+    assert.equal(evidenceText(item, 'en'), item.reason);
+    assert.equal(evidenceText(item, 'ja'), evidenceCopy[`${item.application}|${item.url}`].ja);
+  }
+});
+
+test('distance, comparison and wiki text interpolate without changing English results', () => {
+  const distance = {minM: 0.3, maxM: 5};
+  assert.equal(showDistance(distance, 'en'), formatDistance(distance));
+  assert.equal(showDistance(distance, 'zh'), '0.3–5 m');
+  assert.equal(showDistance({minM: null, maxM: 2}, 'ja'), '最遠目標 2 m');
+  assert.equal(showDistance({minM: 0.3, maxM: null}, 'es'), 'objetivo a 0.3 m (el más cercano)');
+  const camera = find('gemini-2');
+  const narrow = find('d405');
+  assert.equal(showDistanceExplanation(camera, distance, false, 'en'), 'Ideal range covers your 0.3–5 m requirement');
+  assert.match(showDistanceExplanation(narrow, distance, false, 'pt'), /0\.3–5 m/);
+  const draft = parseDistanceDraft({minM: '5', maxM: '1'});
+  assert.equal(presentDistanceResult({minM: '5', maxM: '1'}, 'en').error, draft.error);
+  assert.match(presentDistanceResult({minM: '5', maxM: '1'}, 'zh').error, /最近目标/);
+  assert.equal(presentDistanceResult({minM: 'x', maxM: ''}, 'es').error, cameraMessages.es.distancePositive);
+  const selected = [find('gemini-336')];
+  const blocked = find('imx219-77');
+  assert.equal(showCompareReason(blocked, selected, 'en'), compareDisabledReason(blocked, selected));
+  assert.match(showCompareReason(blocked, selected, 'zh'), /RGB 图像/);
+  assert.equal(
+    localizeWikiHref('/orbbec_gemini_335lg/#gmsl2-connection', 'ja'),
+    '/ja/orbbec_gemini_335lg/#gmsl2-connection',
+  );
+  assert.equal(localizeWikiHref('https://www.orbbec.com/gemini-335lg/', 'zh'), 'https://www.orbbec.com/gemini-335lg/');
 });
