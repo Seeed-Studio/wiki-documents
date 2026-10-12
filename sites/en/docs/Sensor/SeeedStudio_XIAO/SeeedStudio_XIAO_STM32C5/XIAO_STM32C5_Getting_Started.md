@@ -8,11 +8,11 @@ keywords:
   - can fd
 image: https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/Seeed-Studio-XIAO-STM32C5.webp
 slug: /xiao_stm32c5_getting_started
-sku: 
+sku: 100036669
 last_update:
   date: 08/11/2026
   author: Zeller
-createdAt: '2025-08-11'
+createdAt: '2026-08-07'
 updatedAt: '2026-08-11'
 url: https://wiki.seeedstudio.com/xiao_stm32c5_getting_started/
 ---
@@ -554,7 +554,7 @@ The XIAO STM32C5 carries an on‑board **[LSM6DS3TR‑C](https://www.st.com.cn/r
 
 To mitigate the impact of ambient temperature variation on sensor bias and measurement stability, the board implements an active temperature‑compensation heating circuit. Heating resistors placed around the IMU provide uniform heating for the sensor, and heating power can be adjusted via PWM signals. Combined with internal temperature readings from the IMU, software control keeps the sensor operating at a relatively stable temperature. This reduces measurement drift caused by temperature drift and improves data consistency during long‑term operation and under variable‑temperature conditions.
 
-- Reference Usage: [XIAO STM32C5 IMU Usage](https://files.seeedstudio.com/wiki/xiao_stm32c5_application/#imu-usage)
+- Reference Usage: [XIAO STM32C5 IMU Usage](https://wiki.seeedstudio.com/xiao_stm32c5_application/#imu-usag)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_7.png" style={{width:550, height:'auto'}}/></div>
 

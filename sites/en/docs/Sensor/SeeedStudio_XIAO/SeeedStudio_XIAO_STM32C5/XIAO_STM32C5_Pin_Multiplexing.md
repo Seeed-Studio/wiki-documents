@@ -8,11 +8,11 @@ keywords:
   - pin multiplexing
 image: https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/Seeed-Studio-XIAO-STM32C5.webp
 slug: /xiao_stm32c5_pin_multiplexing
-sku: 
+sku: 100036669
 last_update:
   date: 08/26/2026
   author: Zeller
-createdAt: '2025-08-26'
+createdAt: '2026-08-26'
 updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/xiao_stm32c5_pin_multiplexing/
 ---

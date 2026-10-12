@@ -8,11 +8,11 @@ keywords:
   - micropython
 image: https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/Seeed-Studio-XIAO-STM32C5.webp
 slug: /xiao_stm32c5_with_micropython
-sku:
+sku: 100036669
 last_update:
   date: 09/02/2026
   author: Zeller
-createdAt: '2025-09-01'
+createdAt: '2026-09-01'
 updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/xiao_stm32c5_with_micropython/
 ---
@@ -342,7 +342,7 @@ The XIAO STM32C5 provides two CAN FD interfaces. One exposes logic-level transmi
 
 The onboard CAN FD circuit also includes a disconnectable 120 Ω termination resistor. Enable this resistor when the board is at one end of the bus. Disconnect it when the board is in the middle of the bus or when another 120 Ω resistor is already installed at the XIAO end of the bus. The transceiver also supports standby control for reduced power consumption when CAN communication is not in use.
 
-- Reference Usage: [XIAO STM32C5 CANFD Usage](https://files.seeedstudio.com/wiki/xiao_stm32c5_canfd_usage)
+- Reference Usage: [XIAO STM32C5 CANFD Usage](https://wiki.seeedstudio.com/xiao_stm32c5_canfd_usage/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/canfd_2.png" style={{width:550, height:'auto'}}/></div>
 

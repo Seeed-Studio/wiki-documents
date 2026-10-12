@@ -14,11 +14,11 @@ keywords:
   - round display
 image: https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/Seeed-Studio-XIAO-STM32C5.webp
 slug: /xiao_stm32c5_application
-sku: 
+sku: 100036669
 last_update:
   date: 09/14/2026
   author: Zeller
-createdAt: '2025-09-08'
+createdAt: '2026-09-08'
 updatedAt: '2026-09-14'
 url: https://wiki.seeedstudio.com/xiao_stm32c5_application/
 ---

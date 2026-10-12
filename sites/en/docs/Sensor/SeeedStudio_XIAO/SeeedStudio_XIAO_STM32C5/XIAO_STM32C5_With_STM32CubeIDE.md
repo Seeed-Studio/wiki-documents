@@ -8,12 +8,12 @@ keywords:
   - stm32cubeide
 image: https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/Seeed-Studio-XIAO-STM32C5.webp
 slug: /xiao_stm32c5_with_stm32cubeide
-sku: 
+sku: 100036669
 last_update:
-  date: 08/11/2026
+  date: 08/17/2026
   author: Zeller
-createdAt: '2025-08-11'
-updatedAt: '2026-08-11'
+createdAt: '2026-08-14'
+updatedAt: '2026-08-17'
 url: https://wiki.seeedstudio.com/xiao_stm32c5_with_stm32cubeide/
 ---
 import Tabs from '@theme/Tabs';
