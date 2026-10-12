@@ -153,7 +153,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="reBot Arm B601-RS のモーター 1 とモーター 2 を接続している様子" />
 </div>
 
-次に、USB-to-CAN モジュール、電源・信号分岐基板、XT30 電源ケーブル、XT30 2+2 ケーブルを下図のように接続します。XT30 2+2 ケーブルのもう一方の端をモーター 1 に接続し、電源ケーブルを 48 V 電源に接続します。
+次に、USB-to-CAN モジュール、電源・信号分岐基板、XT30 電源ケーブル、XT30 2+2 ケーブルを下図のように接続し、PCAN の DIP スイッチを **120R** に設定します。XT30 2+2 ケーブルのもう一方の端をモーター 1 に接続し、電源ケーブルを 48 V 電源に接続します。
 
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="USB-to-CAN モジュールと電源ケーブルを reBot Arm B601-RS に接続している様子" />

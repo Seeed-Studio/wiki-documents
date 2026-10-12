@@ -1,71 +1,44 @@
 import React, {useEffect, useState} from 'react';
-
-const CACHE_TTL_MS = 60 * 60 * 1000;
+import {getCachedStars, loadGitHubStars} from './githubStars.mjs';
 
 function formatStarCount(count) {
   return new Intl.NumberFormat('en', {
     notation: 'compact',
     maximumFractionDigits: 1,
-  }).format(count);
+  }).format(count).replace(/K$/, 'k');
 }
 
 export default function GitHubStarButton({
   owner,
   repo,
-  fallbackCount = 4240,
+  fallbackCount = 4400,
   ariaLabel = `Star ${repo} on GitHub`,
 }) {
-  const [starCount, setStarCount] = useState(fallbackCount);
+  const [starData, setStarData] = useState(null);
+  const repoKey = `${owner}/${repo}`;
+  const hasRealCount = starData?.repoKey === repoKey;
+  const starCount = hasRealCount ? starData.count : fallbackCount;
+  const countLabel = hasRealCount
+    ? `${starCount.toLocaleString('en')} stars`
+    : `${formatStarCount(starCount)} stars (initial estimate)`;
 
   useEffect(() => {
-    const cacheKey = `github-stars:${owner}/${repo}`;
+    let active = true;
+    const cached = getCachedStars(owner, repo);
+    setStarData(cached ? {repoKey, count: cached.count} : null);
 
-    try {
-      const cached = JSON.parse(window.localStorage.getItem(cacheKey));
-      if (
-        Number.isFinite(cached?.count) &&
-        Date.now() - cached.timestamp < CACHE_TTL_MS
-      ) {
-        setStarCount(cached.count);
-        return undefined;
-      }
-    } catch {
-      // Continue with the API request if storage is unavailable or invalid.
-    }
-
-    const controller = new AbortController();
-
-    fetch(`https://api.github.com/repos/${owner}/${repo}`, {
-      headers: {
-        Accept: 'application/vnd.github+json',
-        'X-GitHub-Api-Version': '2022-11-28',
-      },
-      signal: controller.signal,
-    })
-      .then((response) => {
-        if (!response.ok) throw new Error(`GitHub API returned ${response.status}`);
-        return response.json();
-      })
-      .then((data) => {
-        if (!Number.isFinite(data.stargazers_count)) return;
-        setStarCount(data.stargazers_count);
-        try {
-          window.localStorage.setItem(
-            cacheKey,
-            JSON.stringify({count: data.stargazers_count, timestamp: Date.now()}),
-          );
-        } catch {
-          // The live value is still displayed when storage cannot be written.
-        }
+    loadGitHubStars(owner, repo)
+      .then((count) => {
+        if (active) setStarData({repoKey, count});
       })
       .catch((error) => {
-        if (error.name !== 'AbortError') {
+        if (active) {
           console.warn('Unable to load the GitHub star count.', error);
         }
       });
 
-    return () => controller.abort();
-  }, [owner, repo]);
+    return () => { active = false; };
+  }, [owner, repo, repoKey]);
 
   return (
     <div className="rebot-github-star-wrap">
@@ -74,7 +47,8 @@ export default function GitHubStarButton({
         href={`https://github.com/${owner}/${repo}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={ariaLabel}
+        aria-label={`${ariaLabel}; ${countLabel}`}
+        title={countLabel}
       >
         <span className="rebot-github-star-shine" aria-hidden="true" />
         <span className="rebot-github-star-label">
@@ -85,7 +59,7 @@ export default function GitHubStarButton({
         </span>
         <span
           className="rebot-github-star-count"
-          aria-label={`${starCount.toLocaleString('en')} stars`}
+          aria-label={countLabel}
         >
           <svg aria-hidden="true" viewBox="0 0 24 24">
             <path d="m12 2.4 2.85 5.78 6.38.93-4.62 4.5 1.09 6.36L12 16.97l-5.7 3 1.09-6.36-4.62-4.5 6.38-.93L12 2.4Z" />

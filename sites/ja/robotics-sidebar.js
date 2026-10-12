@@ -11,6 +11,120 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
+// Homepage links must not claim the docs owned by the focused sidebars.
+const asReferences = (item) => typeof item === 'string'
+  ? { type: 'ref', id: item }
+  : { ...item, items: item.items.map(asReferences) };
+
+const actuatorCategory = {
+  type: 'category',
+  label: 'アクチュエーター',
+  className: 'robotics-section-title',
+  collapsible: false,
+  collapsed: false,
+  items: [
+    {
+      type: 'category',
+      label: 'HighTorque',
+      items: [
+        'Robotics/Robot_Actuator/HighTorque/ja_HighTorque',
+        'Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Getting_Started',
+        'Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Control',
+      ]
+    },
+    'Robotics/Robot_Actuator/ja_Feetech_Servo',
+    'Robotics/Robot_Actuator/ja_FashionStar_Servo',
+    'Robotics/Robot_Actuator/ja_Stackforce_Series',
+    'Robotics/Robot_Actuator/ja_Myactuator_Series',
+    'Robotics/Robot_Actuator/ja_Damiao_Series',
+    'Robotics/Robot_Actuator/ja_RobStride_Control',
+  ]
+};
+
+const sensorCategory = {
+  type: 'category',
+  label: 'センサー',
+  className: 'robotics-section-title',
+  collapsible: false,
+  collapsed: false,
+  items: [
+    {
+      type: 'category',
+      label: 'Lidar',
+      items: [
+        'Robotics/Robot_Sensor/Lidar/ja_Robosense_Lidar',
+        'Robotics/Robot_Sensor/Lidar/ja_MID360',
+        'Robotics/Robot_Sensor/Lidar/ja_A_Loam',
+        'Robotics/Robot_Sensor/Lidar/ja_SLAMTEC',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'カメラ',
+      items: [
+        'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_AC1',
+        'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+        'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini_336',
+        'Robotics/Robot_Sensor/Camera/ja_Orbbec_Depth_Camera',
+        'Robotics/Robot_Sensor/Camera/ja_realsense_3D_seg',
+        'Robotics/Robot_Sensor/Camera/ja_ORB_SLAM3_with_Orbbec_Gemini2',
+        'Robotics/Robot_Sensor/Camera/ja_Pycuvslam_On_reComputer',
+        'Robotics/Robot_Sensor/Camera/ja_Orbbec_Gemini_335Lg',
+        'Robotics/Robot_Sensor/Camera/ja_Sensing_GMSL_Camera',
+        'Robotics/Robot_Sensor/Camera/ja_CSI_Camera'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'IMU',
+      items: [
+        'Robotics/Robot_Sensor/IMU/ja_Hexfellow_Y200',
+        'Robotics/Robot_Sensor/IMU/ja_WHEELTEC_IMU',
+      ]
+    },
+  ]
+};
+
+const softwareCategory = {
+  type: 'category',
+  label: 'ソフトウェア',
+  className: 'robotics-section-title',
+  collapsible: false,
+  collapsed: false,
+  items: [
+    {
+      type: 'category',
+      label: 'ROS',
+      items: [
+        'Robotics/Robot_Software/ROS/ja_Installing_ROS1',
+        'Robotics/Robot_Software/ROS/ja_Install_IsaacROS',
+        'Robotics/Robot_Software/ROS/ja_Install_ROS2_Humble',
+        'Robotics/Robot_Software/ROS/ja_Isaac_ROS_AprilTag',
+        'Robotics/Robot_Software/ROS/ja_Isaac_ROS_Visual_SLAM',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Isaac Lab',
+      items: [
+        'Robotics/Robot_Software/Isaac_Lab/ja_Install_Isaac_lab',
+        'Robotics/Robot_Software/Isaac_Lab/ja_Simulate_SoArm101_by_LeIsaac',
+        'Robotics/Robot_Software/Isaac_Lab/ja_Training_SoARM101_Policy_with_IsaacLab',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'PX4',
+      items: [
+        'Robotics/Robot_Software/PX4/ja_Control_PX4_with_reComputer_Jetson',
+        'Robotics/Robot_Software/PX4/ja_Object_Tracking_with_reComputer_Jetson_and_PX4',
+      ]
+    },
+    'Robotics/Robot_Software/VLA/ja_control_robotic_arm_via_gr00t',
+    'Robotics/Robot_Software/ja_control_robotic_arm_via_phospho',
+  ]
+};
+
 const sidebars = {
 
   // Main robotics sidebar. Each product is a `ref` link so that opening a
@@ -46,116 +160,42 @@ const sidebars = {
         { type: 'ref', id: `${K}/Humanoid/Atom-S/ja_Atom-S`, label: 'ヒューマノイドロボット', className: 'sideboard_calss' },
       ]
     },
-    {
-      type: 'category',
-      label: 'アクチュエーター',
-      className: 'robotics-section-title',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'category',
-          label: 'HighTorque',
-          items: [
-            'Robotics/Robot_Actuator/HighTorque/ja_HighTorque',
-            'Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Getting_Started',
-            'Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Control',
-          ]
-        },
-        'Robotics/Robot_Actuator/ja_Feetech_Servo',
-        'Robotics/Robot_Actuator/ja_FashionStar_Servo',
-        'Robotics/Robot_Actuator/ja_Stackforce_Series',
-        'Robotics/Robot_Actuator/ja_Myactuator_Series',
-        'Robotics/Robot_Actuator/ja_Damiao_Series',
-        'Robotics/Robot_Actuator/ja_RobStride_Control',
-      ]
-    },
-    {
-      type: 'category',
-      label: 'センサー',
-      className: 'robotics-section-title',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'category',
-          label: 'Lidar',
-          items: [
-            'Robotics/Robot_Sensor/Lidar/ja_Robosense_Lidar',
-            'Robotics/Robot_Sensor/Lidar/ja_MID360',
-            'Robotics/Robot_Sensor/Lidar/ja_A_Loam',
-            'Robotics/Robot_Sensor/Lidar/ja_SLAMTEC',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'カメラ',
-          items: [
-            'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_AC1',
-            'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
-            'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini_336',
-            'Robotics/Robot_Sensor/Camera/ja_Orbbec_Depth_Camera',
-            'Robotics/Robot_Sensor/Camera/ja_realsense_3D_seg',
-            'Robotics/Robot_Sensor/Camera/ja_ORB_SLAM3_with_Orbbec_Gemini2',
-            'Robotics/Robot_Sensor/Camera/ja_Pycuvslam_On_reComputer',
-            'Robotics/Robot_Sensor/Camera/ja_Orbbec_Gemini_335Lg',
-            'Robotics/Robot_Sensor/Camera/ja_Sensing_GMSL_Camera',
-            'Robotics/Robot_Sensor/Camera/ja_CSI_Camera'
-          ]
-        },
-        {
-          type: 'category',
-          label: 'IMU',
-          items: [
-            'Robotics/Robot_Sensor/IMU/ja_Hexfellow_Y200',
-            'Robotics/Robot_Sensor/IMU/ja_WHEELTEC_IMU',
-          ]
-        },
-      ]
-    },
-    {
-      type: 'category',
-      label: 'ソフトウェア',
-      className: 'robotics-section-title',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'category',
-          label: 'ROS',
-          items: [
-            'Robotics/Robot_Software/ROS/ja_Installing_ROS1',
-            'Robotics/Robot_Software/ROS/ja_Install_IsaacROS',
-            'Robotics/Robot_Software/ROS/ja_Install_ROS2_Humble',
-            'Robotics/Robot_Software/ROS/ja_Isaac_ROS_AprilTag',
-            'Robotics/Robot_Software/ROS/ja_Isaac_ROS_Visual_SLAM',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Isaac Lab',
-          items: [
-            'Robotics/Robot_Software/Isaac_Lab/ja_Install_Isaac_lab',
-            'Robotics/Robot_Software/Isaac_Lab/ja_Simulate_SoArm101_by_LeIsaac',
-            'Robotics/Robot_Software/Isaac_Lab/ja_Training_SoARM101_Policy_with_IsaacLab',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'PX4',
-          items: [
-            'Robotics/Robot_Software/PX4/ja_Control_PX4_with_reComputer_Jetson',
-            'Robotics/Robot_Software/PX4/ja_Object_Tracking_with_reComputer_Jetson_and_PX4',
-          ]
-        },
-        'Robotics/Robot_Software/VLA/ja_control_robotic_arm_via_gr00t',
-        'Robotics/Robot_Software/ja_control_robotic_arm_via_phospho',
-      ]
-    },
+    asReferences(actuatorCategory),
+    asReferences(sensorCategory),
+    asReferences(softwareCategory),
 
   ],
 
   // ---- Independent product sidebars (opened when browsing each product's docs) ----
+
+  // Reference docs use one sidebar per resource family.
+  ActuatorSidebar: [backToRobotics(), actuatorCategory],
+  LidarSidebar: [
+    backToRobotics(),
+    { ...sensorCategory.items[0], collapsible: false, collapsed: false },
+  ],
+  CameraSidebar: [
+    backToRobotics(),
+    { ...sensorCategory.items[1], collapsible: false, collapsed: false },
+  ],
+  ImuSidebar: [
+    backToRobotics(),
+    { ...sensorCategory.items[2], collapsible: false, collapsed: false },
+  ],
+  RosSidebar: [
+    backToRobotics(),
+    { ...softwareCategory.items[0], collapsible: false, collapsed: false },
+  ],
+  IsaacLabSidebar: [
+    backToRobotics(),
+    { ...softwareCategory.items[1], collapsible: false, collapsed: false },
+  ],
+  Px4Sidebar: [
+    backToRobotics(),
+    { ...softwareCategory.items[2], collapsible: false, collapsed: false },
+  ],
+  VlaSidebar: [backToRobotics(), softwareCategory.items[3]],
+  PhosphoSidebar: [backToRobotics(), softwareCategory.items[4]],
 
   SoArm101Sidebar: [
     backToRobotics(),
