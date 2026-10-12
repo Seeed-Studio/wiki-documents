@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-10 14:01:58 (北京时间)
-// 多语言页面: 2546 个
+// 生成时间: 2026-10-12 15:23:54 (北京时间)
+// 多语言页面: 2555 个
 
 (function() {
   'use strict';
@@ -1704,6 +1704,13 @@
     "pt"
   ],
   "/jetpack_7_2_unified_platform_iso_sbsa": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/camera-selection-guide": [
     "cn",
     "en",
     "es",
