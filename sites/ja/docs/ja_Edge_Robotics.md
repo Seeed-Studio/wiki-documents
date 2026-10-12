@@ -283,7 +283,9 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div>
         <h4>その他の関節モーター</h4>
         <a href="/ja/myactuator_series/">MyActuator X シリーズ</a>
-        <a href="/ja/hightorque_control/">HighTorque シリーズ</a>
+        <a href="/ja/hightorque_series/">HighTorque シリーズ / SDK</a>
+        <a href="/ja/hightorque_getting_started/">HighTorque 入門ガイド</a>
+        <a href="/ja/hightorque_control/">HighTorque モーター制御</a>
         <a href="/ja/stackforce_series/">Stackforce シリーズ</a>
       </div>
       <div>

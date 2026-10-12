@@ -283,7 +283,9 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div>
         <h4>Outros Motores de Junta</h4>
         <a href="/pt-br/myactuator_series/">Série MyActuator X</a>
-        <a href="/pt-br/hightorque_control/">Série HighTorque</a>
+        <a href="/pt-br/hightorque_series/">Série HighTorque / SDK</a>
+        <a href="/pt-br/hightorque_getting_started/">Primeiros passos do HighTorque</a>
+        <a href="/pt-br/hightorque_control/">Controle de motores HighTorque</a>
         <a href="/pt-br/stackforce_series/">Série Stackforce</a>
       </div>
       <div>

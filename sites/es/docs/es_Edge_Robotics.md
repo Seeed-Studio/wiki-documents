@@ -283,7 +283,9 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div>
         <h4>Otros motores de articulación</h4>
         <a href="/es/myactuator_series/">MyActuator X Serie</a>
-        <a href="/es/hightorque_control/">HighTorque Serie</a>
+        <a href="/es/hightorque_series/">HighTorque Serie / SDK</a>
+        <a href="/es/hightorque_getting_started/">HighTorque Primeros pasos</a>
+        <a href="/es/hightorque_control/">HighTorque Control de motores</a>
         <a href="/es/stackforce_series/">Stackforce Serie</a>
       </div>
       <div>
