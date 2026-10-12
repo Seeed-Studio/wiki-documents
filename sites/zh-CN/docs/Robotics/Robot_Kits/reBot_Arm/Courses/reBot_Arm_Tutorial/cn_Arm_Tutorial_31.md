@@ -73,7 +73,7 @@ import 'katex/dist/katex.min.css';
 - **ROS2 的进化（去中心化与 DDS）：** 彻底砍掉了“总管”，节点之间变成了点对点的直接通信（基于 DDS 技术）。不仅没有了单点故障的风险，还引入了 QoS（服务质量）机制，能够适应极差的网络环境和对实时性要求极高的工业场景。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-31cn/ch31-01cn.jpg" alt="" />
 </div>
 
 ## 31.2 Node（节点）：机器人的基本工作单元
@@ -111,7 +111,7 @@ import 'katex/dist/katex.min.css';
 - **适用场景：** 适合执行**耗时较长、随时可能被打断**的复杂物理动作。比如：让机械臂从 A 点移动到 B 点。在移动过程中，你可以不断收到“目前移动了百分之几”的反馈，如果发现前方有危险，可以立刻发指令“取消任务”。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-31cn/ch31-02cn.jpg" alt="" />
 </div>
 
 > **现在我们知道了节点间的通信方式有哪些了， 那么他们到底在传输什么内容呢？ 又遵循什么样的规则呢？接下来引出Message（消息接口）Message 就是它们交流时使用的“标准表单”或“共同语言”（数据格式）。**
@@ -129,7 +129,7 @@ import 'katex/dist/katex.min.css';
   - **`.action` 文件（用于 Action）：** 分为三部分。分别定义目标（Goal）、结果（Result）和持续反馈（Feedback）的数据格式，中间同样用 `---` 隔开。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-31cn/ch31-03cn.jpg" alt="" />
 </div>
 
 > **统一了交流格式后，又是谁在中间维持着节点间通信服务的质量呢？相比 ROS1，在 ROS2 中，QoS 机制策略保持了节点间通信的稳定性和实时性。**
@@ -171,7 +171,7 @@ import 'katex/dist/katex.min.css';
   - **算法实时调优：** 我们可以把机械臂的“最大运行速度”设为一个 Parameter，测试时不仅可以在外部通过 Launch 文件随意赋予初始值，还能在程序运行时通过命令行**动态调整参数，并实时用肉眼查看机械臂运动效果的改变**。有了 Parameter，调参过程变得直观且高效。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-31cn/ch31-04cn.jpg" alt="" />
 </div>
 
 > **当机器人顺利启动并运行起来后，如果我们想记录下它运行时的所有数据以便复盘或找 Bug，该怎么办呢？这就轮到 rosbag 登场了。**
@@ -192,7 +192,7 @@ import 'katex/dist/katex.min.css';
 3. **AI 数据集采集：** 现代机器人大量依赖深度学习模型，通过 rosbag 可以非常方便地采集海量真实的传感器数据，用于后续的模型训练。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-31cn/ch31-05cn.jpg" alt="" />
 </div>
 
 ## 37.8 模块化机器人系统
@@ -200,7 +200,7 @@ import 'katex/dist/katex.min.css';
 通过上述机制，ROS2 让机器人软件变得高度**模块化**。你可以随时把“激光雷达节点”替换成另一个品牌的雷达节点，只要它们发布的 Message 格式一致，下游的大脑（规划节点）完全不需要修改代码。这就是现代机器人软件架构的核心魅力。**总结：** 独立的 Node 搭配标准化的 Topic/Service/Action 通信，外加 Launch 的统一调度，构成了 ROS2 极度**模块化**的软件架构，让机器人的开发像搭乐高积木一样灵活。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31cn/ch31-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-31cn/ch31-06cn.jpg" alt="" />
 </div>
 
 ---

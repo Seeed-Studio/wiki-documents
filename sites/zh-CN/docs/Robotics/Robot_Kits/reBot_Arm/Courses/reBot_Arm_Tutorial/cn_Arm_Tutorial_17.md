@@ -47,7 +47,7 @@ import 'katex/dist/katex.min.css';
 ## 推理数据流：一张图看懂
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17cn/ch17-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-17cn/ch17-01cn.jpg" alt="" />
 </div>
 
 ---
@@ -62,7 +62,7 @@ import 'katex/dist/katex.min.css';
 | 出模型 | action 乘标准差、加均值，还原成真实关节角度 | 同上 |
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17cn/ch17-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-17cn/ch17-02cn.jpg" alt="" />
 </div>
 
 ---
@@ -179,7 +179,7 @@ lerobot-record \
 3. **重训**：根据新的数据集进行重新训练。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-17cn/ch17-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-17cn/ch17-03cn.jpg" alt="" />
 </div>
 
 至此，本章开头的闭环完整跑通：遥操作、采集、检查、训练、推理、评估、迭代——这套流程对任何新任务原样复用，这就是第三阶段的核心交付。

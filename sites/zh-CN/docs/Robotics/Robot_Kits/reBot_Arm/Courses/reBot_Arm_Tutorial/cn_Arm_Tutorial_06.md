@@ -48,46 +48,76 @@ import 'katex/dist/katex.min.css';
 
 - reBotDM机械臂组装
 
+**reBot DM 机械臂组装**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/rfTQoFCfnMc" title="reBot DM 机械臂组装"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 - reBotRS机械臂组装
 
+**reBot RS 机械臂组装**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/Bv60NPO0TRo" title="reBot RS 机械臂组装"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 ## 电源组装
 
 - reBotDM电源组装
 
+**reBot DM 电源组装**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/DHFA2UfQzUo" title="reBot DM 电源组装"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 - reBotRS电源组装
 
+**reBot RS 电源组装**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/5GitUWT9gx0" title="reBot RS 电源组装"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 ## 机械臂接线
 
 - rebotDM机械臂接线
 
+**reBot DM 机械臂接线**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/vVxCOfu5ZCE" title="reBot DM 机械臂接线"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 1. 机械臂连接转接板
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-01cn.jpg" alt="" />
 </div>
 
 1. 电源连接 xt60转xt30线
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-02cn.jpg" alt="" />
 </div>
 
 1. xt60转xt30线连接转接板
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-03cn.jpg" alt="" />
 </div>
 
 1. usb2can连接gh1.25 2pin
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-04cn.jpg" alt="" />
 </div>
 
 1. gh1.25 2pin另一端连接转接版
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-05cn.jpg" alt="" />
 </div>
 
 1. usb2can通过typec数据线连接电脑即可
@@ -99,34 +129,40 @@ import 'katex/dist/katex.min.css';
 
 - rebotRS机械臂接线
 
+**reBot RS 机械臂接线**
+
+<div className="video-container">
+  <iframe src="https://www.youtube.com/embed/llSa6qn3yrY" title="reBot RS 机械臂接线"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 1. 机械臂连接转接板
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-06cn.jpg" alt="" />
 </div>
 
 1. 电源连接 xt60转xt30线
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-07cn.jpg" alt="" />
 </div>
 
 1. xt60转xt30线连接转接板
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-08cn.jpg" alt="" />
 </div>
 
 1. canable连接gh1.25 2pin线
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-09cn.jpg" alt="" />
 </div>
 
 1. gh1.25 2pin线另一端连接转接版
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-10cn.jpg" alt="" />
 </div>
 
 1. canable连接电脑即可
@@ -142,7 +178,7 @@ rebotDM的供电要求是24v，rebotRS的供电要求是48v。
 
 下面是我们推荐的电源使用说明。如果你的家庭电压是220V，请把电源侧面拨码调至230V，如果你的家庭电压是110V，请把你电源的拨码调至115V。
 
-<table><colgroup><col/><col/></colgroup><tbody><tr><td vertical-align="top"><img name="image.png" mime="image/png" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-11cn.jpg"/></td><td vertical-align="top"><img name="image.png" mime="image/png" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-6cn/ch06-12cn.jpg"/></td></tr></tbody></table>
+<table><colgroup><col/><col/></colgroup><tbody><tr><td vertical-align="top"><img name="image.png" mime="image/png" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-11cn.jpg"/></td><td vertical-align="top"><img name="image.png" mime="image/png" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-6cn/ch06-12cn.jpg"/></td></tr></tbody></table>
 
 ## 机械臂上电
 

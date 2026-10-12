@@ -73,7 +73,7 @@ import 'katex/dist/katex.min.css';
 ## 机器人视觉中的任务链
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-01cn.jpg" alt="" />
 </div>
 
 每一环都有特定的技术选择：
@@ -86,7 +86,7 @@ import 'katex/dist/katex.min.css';
 ## 四种视觉任务对比
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-02cn.jpg" alt="" />
 </div>
 
 分类（Classification）：最简单的视觉任务：输入一张图片，输出一个类别标签
@@ -132,7 +132,7 @@ import 'katex/dist/katex.min.css';
 ## 开放词汇检测（YOLOE / YOLO-World）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-03cn.jpg" alt="" />
 </div>
 
 工业机器人经常遇到 COCO 80 类没有覆盖的物体：特定颜色的盒子（"红盒子"）、自定义零件（"M3 螺栓"）、临时摆放的工具（"扳手"），传统 YOLO 要识别这些，必须重新训练数据集（数百张标注），成本高。
@@ -171,7 +171,7 @@ results = model.predict(image)
 ## 为什么机器人视觉多用 OBB
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-04cn.jpg" alt="" />
 </div>
 
 OBB 的短边方向直接给出夹爪开合方向，这是后续 6-DoF 抓取估计的关键输入。
@@ -179,13 +179,13 @@ OBB 的短边方向直接给出夹爪开合方向，这是后续 6-DoF 抓取估
 ## 定向框（OBB）原理
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-05cn.jpg" alt="" />
 </div>
 
 ## 后处理 NMS
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-06cn.jpg" alt="" />
 </div>
 
 NMS 是检测后处理的标准步骤，YOLO检测完一张图后，同一个物体会被多个网格“重复”预测出多个重叠框，NMS就是把这些重复框去掉，只留一个效果最好的，解决"一个物体被多个网格重复预测"的问题。
@@ -220,21 +220,21 @@ NMS 是检测后处理的标准步骤，YOLO检测完一张图后，同一个物
 ## mAP（评价指标）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-07cn.jpg" alt="" />
 </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-08cn.jpg" alt="" />
 </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-09cn.jpg" alt="" />
 </div>
 
 ## 从检测结果到抓取方向
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-10cn.jpg" alt="" />
 </div>
 
 ## ArUco 与相机标定
@@ -242,7 +242,7 @@ NMS 是检测后处理的标准步骤，YOLO检测完一张图后，同一个物
 ## 像素→三维坐标的完整推导
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-11cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-11cn.jpg" alt="" />
 </div>
 
 **相似三角形推导**
@@ -280,13 +280,13 @@ NMS 是检测后处理的标准步骤，YOLO检测完一张图后，同一个物
 ## ArUco 标记原理
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-12cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-12cn.jpg" alt="" />
 </div>
 
 ## ArUco 位姿估计（solvePnP）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-13cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-13cn.jpg" alt="" />
 </div>
 
 solvePnP 要解决什么问题
@@ -300,7 +300,7 @@ solvePnP 要解决什么问题
   - 回到后面的手眼标定。手眼标定要解的方程是 AX = XB，其中 B 就是“标记到相机”的变换 T_marker2cam——这个 B 正是靠 ArUco 检测角点、再用 solvePnP 求出来的。**没有 solvePnP 就没有 B，没有 B 就解不出 X，手眼标定根本做不下去。**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-14cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-14cn.jpg" alt="" />
 </div>
 
 **solvePnP 的物理含义：**
@@ -312,7 +312,7 @@ solvePnP 要解决什么问题
 ## AX = XB 的几何意义
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-15cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-15cn.jpg" alt="" />
 </div>
 
 **问题定义**
@@ -354,11 +354,11 @@ X 是相机与末端的固定变换（相机装在末端上）:
 ## 刚体变换数学基础
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-16cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-16cn.jpg" alt="" />
 </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-17cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-17cn.jpg" alt="" />
 </div>
 
 4×4 齐次变换矩阵
@@ -376,7 +376,7 @@ T = [ R   t ]    R: 3×3 旋转矩阵
 三种旋转表示
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-18cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-18cn.jpg" alt="" />
 </div>
 
 - 旋转矩阵 R
@@ -395,7 +395,7 @@ T = [ R   t ]    R: 3×3 旋转矩阵
     ```
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-19cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-19cn.jpg" alt="" />
 </div>
 
 - 欧拉角（ZYX 内禀）
@@ -456,7 +456,7 @@ T = [ R   t ]    R: 3×3 旋转矩阵
 ## Eye-in-Hand 与 Eye-to-Hand 的差异
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-20cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-20cn.jpg" alt="" />
 </div>
 
 ```Plain Text
@@ -474,7 +474,7 @@ Eye-to-Hand：
 <sheet sheet-id="gphRf2" token="BXyssJZNMhqOL7tsLspcVbBan1I"></sheet>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-21cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-21cn.jpg" alt="" />
 </div>
 
 **ETH 的特殊处理（取逆）**
@@ -497,7 +497,7 @@ Eye-to-Hand：
 ## **"取逆"指的是什么**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-22cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-22cn.jpg" alt="" />
 </div>
 
 - **"取逆" = 取矩阵的逆（matrix inverse）。** 在 ETH 模式下，OpenCV 不接受 `T_gripper2base`（末端到基座），而是要求 `T_base2gripper`（基座到末端），所以要把它**取矩阵逆**。
@@ -518,7 +518,7 @@ Eye-to-Hand：
 ## 标定姿态设计原则
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-23cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-23cn.jpg" alt="" />
 </div>
 
 **覆盖性原则**
@@ -543,7 +543,7 @@ Eye-to-Hand：
 ## 标定后坐标变换链
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-24cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-24cn.jpg" alt="" />
 </div>
 
 **实现参考**：
@@ -601,7 +601,7 @@ Eye-to-Hand：
 ## 标定误差与重投影分析
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-25cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-25cn.jpg" alt="" />
 </div>
 
 **重投影误差**
@@ -649,7 +649,7 @@ Eye-to-Hand：
 **视觉抓取系（GraspNet 约定）**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-26cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-26cn.jpg" alt="" />
 </div>
 
 ```Plain Text
@@ -672,7 +672,7 @@ Z (approach)
 **机器人 TCP 系（reBotArm 约定）**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-27cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-27cn.jpg" alt="" />
 </div>
 
 ```Plain Text
@@ -691,7 +691,7 @@ Z
 **两个坐标系转换**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-28cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-28cn.jpg" alt="" />
 </div>
 
 - **实现参考**：
@@ -815,7 +815,7 @@ Z
 **三轴正交化详解**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-29cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-29cn.jpg" alt="" />
 </div>
 
 - **为什么要正交化**：
@@ -835,7 +835,7 @@ Z
 **反投影函数**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-30cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-30cn.jpg" alt="" />
 </div>
 
 - **作用**：把单个像素坐标（带已知深度）转换为相机坐标系下的 3D **点**（位置）
@@ -863,7 +863,7 @@ Z
 **像素向量转 3D 向量**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-31cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-31cn.jpg" alt="" />
 </div>
 
 - **作用**：把像素空间的**向量**（方向+长度）转换为相机坐标系下的 3D **向量**（方向+长度）。
@@ -932,7 +932,7 @@ Z
 **几何法的适用与局限**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-32cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-32cn.jpg" alt="" />
 </div>
 
 <sheet sheet-id="cKfbS5" token="BXyssJZNMhqOL7tsLspcVbBan1I"></sheet>
@@ -942,7 +942,7 @@ Z
 **实现参考**：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-33cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-33cn.jpg" alt="" />
 </div>
 
 ```Plain Text
@@ -976,7 +976,7 @@ RGB + 深度
 **输入：点云 + Mask**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-34cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-34cn.jpg" alt="" />
 </div>
 
 - **实现参考**：
@@ -1009,7 +1009,7 @@ RGB + 深度
 **输出格式**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-35cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-35cn.jpg" alt="" />
 </div>
 
 ```Plain Text
@@ -1035,13 +1035,13 @@ Grasp {
 **适用场景**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-36cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-36cn.jpg" alt="" />
 </div>
 
 ## 抓取位姿到基坐标系的转换
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-28cn/ch28-37cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-28cn/ch28-37cn.jpg" alt="" />
 </div>
 
 - **实现参考**：

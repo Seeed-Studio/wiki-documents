@@ -49,11 +49,11 @@ import 'katex/dist/katex.min.css';
 ## **路径 vs 轨迹**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-25cn/ch25-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-25cn/ch25-01cn.jpg" alt="" />
 </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-25cn/ch25-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-25cn/ch25-02cn.jpg" alt="" />
 </div>
 
 想象你要从家走到公司。
@@ -133,7 +133,7 @@ import 'katex/dist/katex.min.css';
 ## 关节空间和笛卡尔空间轨迹
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-25cn/ch25-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-25cn/ch25-03cn.jpg" alt="" />
 </div>
 
 | 维度 | 关节空间轨迹 | 笛卡尔空间轨迹 |
@@ -157,7 +157,7 @@ import 'katex/dist/katex.min.css';
 ## 线性插值
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-25cn/ch25-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-25cn/ch25-04cn.jpg" alt="" />
 </div>
 
 <grid>
@@ -197,7 +197,7 @@ import 'katex/dist/katex.min.css';
 **为什么需要多项式**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-25cn/ch25-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-25cn/ch25-05cn.jpg" alt="" />
 </div>
 
 **核心差别**
@@ -223,7 +223,7 @@ import 'katex/dist/katex.min.css';
 ## 前馈、反馈和重力补偿
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-25cn/ch25-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-25cn/ch25-06cn.jpg" alt="" />
 </div>
 
 发到电机的力矩 = **两件事加起来**：

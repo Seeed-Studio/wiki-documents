@@ -45,7 +45,7 @@ import 'katex/dist/katex.min.css';
 本章基于 **LeRobot + GR00T N1.7**（`nvidia/GR00T-N1.7-3B`）。请确保第 20 章数据集已就绪。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-01cn.jpg" alt="" />
 </div>
 
 ---
@@ -53,7 +53,7 @@ import 'katex/dist/katex.min.css';
 ## 环境准备
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-02cn.jpg" alt="" />
 </div>
 
 ## 推荐硬件
@@ -113,7 +113,7 @@ wandb login   # 可选，用于训练曲线可视化
 ## 下载基础模型
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-03cn.jpg" alt="" />
 </div>
 
 基础模型托管在 Hugging Face：
@@ -142,7 +142,7 @@ huggingface-cli download nvidia/Cosmos-Reason2-2B
 ##  配置数据集路径
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-04cn.jpg" alt="" />
 </div>
 
 ## 本地数据集
@@ -169,7 +169,7 @@ export DATASET_REPO_ID="${HF_USER}/rebot_vla_pick_cube"
 ## 启动单 GPU 微调
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-05cn.jpg" alt="" />
 </div>
 
 以下命令针对 **reBot Arm 单臂、new_embodiment**（数据集 `repo_id` 按 RS/DM 替换）。`chunk_size=40` 对齐 N1.7 官方 `action_horizon`；LeRobot `groot` 源码默认是 50，二者都远大于 N1.5/N1.6 的 16，**不要用 16**。
@@ -235,7 +235,7 @@ lerobot-train \
 ##  启动多 GPU 微调
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-06cn.jpg" alt="" />
 </div>
 
 多卡环境使用 `accelerate`：
@@ -284,7 +284,7 @@ accelerate launch \
 ## 查看显存、Loss 和训练日志
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-07cn.jpg" alt="" />
 </div>
 
 ## 显存监
@@ -322,7 +322,7 @@ tail -f ${OUTPUT_DIR}/logs/*.log
 ## 保存 Checkpoint
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-08cn.jpg" alt="" />
 </div>
 
 训练过程中 checkpoint 保存在：
@@ -360,7 +360,7 @@ huggingface-cli upload ${REPO_ID} \
 ## 真机推理与评估
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-09cn.jpg" alt="" />
 </div>
 
 ## 方式 A：`lerobot-record` 带策略录制（推荐入门）
@@ -433,7 +433,7 @@ lerobot-rollout \
 ## 常见问题排查
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-10cn.jpg" alt="" />
 </div>
 
 ## 模型下载失败
@@ -481,7 +481,7 @@ nvidia-smi
 ## 训练效果优化建议
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-21cn/ch21-11cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-21cn/ch21-11cn.jpg" alt="" />
 </div>
 
 | 方向 | 建议 |

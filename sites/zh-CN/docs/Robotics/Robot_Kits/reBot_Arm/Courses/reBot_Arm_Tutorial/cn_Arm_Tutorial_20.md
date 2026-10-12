@@ -45,7 +45,7 @@ import 'katex/dist/katex.min.css';
 GR00T 在 LeRobot 上使用 **LeRobotDataset v2/v3 格式**，并额外要求 `meta/modality.json` 描述 state、action、video、annotation 的语义拆分。本章假设你已通过 `lerobot-record` 在 reBot Arm 上采集了 ACT 数据，接下来将其升级为 VLA 训练数据。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-01cn.jpg" alt="" />
 </div>
 
 ---
@@ -53,7 +53,7 @@ GR00T 在 LeRobot 上使用 **LeRobotDataset v2/v3 格式**，并额外要求 `m
 ## 前置条件
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-02cn.jpg" alt="" />
 </div>
 
 | 项目 | 要求 |
@@ -84,7 +84,7 @@ RS 使用前配置 CAN：`sudo ip link set can0 type can bitrate 1000000 && sudo
 ## 检查 LeRobot 数据集
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-03cn.jpg" alt="" />
 </div>
 
 ## 数据集目录结构
@@ -137,7 +137,7 @@ print("第 0 帧 action shape:", dataset[0]["action"].shape)
 ## 添加语言任务描述
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-04cn.jpg" alt="" />
 </div>
 
 VLA 训练**必须**有语言条件。有两种方式：
@@ -194,7 +194,7 @@ lerobot-record \
 ##  配置 State Keys 与 Action Keys
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-05cn.jpg" alt="" />
 </div>
 
 reBot Arm B601-RS / B601-DM 的 7 维向量按以下关节顺序拼接（与 LeRobot 驱动一致）：
@@ -221,7 +221,7 @@ reBot Arm B601-RS / B601-DM 的 7 维向量按以下关节顺序拼接（与 LeR
 ## 配置 Camera Keys
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-06cn.jpg" alt="" />
 </div>
 
 GR00T 通过 `modality.json` 的 `video` 字段，把数据集中的原始相机键映射为标准键名。
@@ -264,7 +264,7 @@ lerobot-find-cameras opencv
 ## 创建 `meta/modality.json`
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-07cn.jpg" alt="" />
 </div>
 
 在数据集 `meta/` 目录下创建 `modality.json`。以下是 **reBot Arm B601 单臂 7 维关节空间**（RS / DM 相同）的完整示例：
@@ -322,7 +322,7 @@ lerobot-find-cameras opencv
 ## 设置 Embodiment Tag
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-08cn.jpg" alt="" />
 </div>
 
 对 reBot Arm 这类自定义机器人，训练和推理统一使用：
@@ -344,7 +344,7 @@ embodiment_tag = new_embodiment
 ##  检查关节顺序和数据维度
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-09cn.jpg" alt="" />
 </div>
 
 这是最容易导致「训练 loss 下降但真机完全不动」的问题。请逐项核对：
@@ -402,7 +402,7 @@ print(ds.meta.stats["action"])
 ##  多任务数据集组织
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-10cn.jpg" alt="" />
 </div>
 
 若要训练「一个模型、多种语言任务」，推荐两种方式：
@@ -435,7 +435,7 @@ LeRobot 支持多数据集训练（视版本而定）；更简单的方式是录
 ## 数据质量检查清单
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-20cn/ch20-11cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-20cn/ch20-11cn.jpg" alt="" />
 </div>
 
 上传 Hub 或开始训练前，确认：

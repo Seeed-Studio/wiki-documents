@@ -63,7 +63,7 @@ import 'katex/dist/katex.min.css';
 - **腕部相机（wrist）**：装在机械臂末端跟着夹爪走，告诉模型"夹爪和目标的相对位置、该不该闭合"。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13cn/ch13-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-13cn/ch13-01cn.jpg" alt="" />
 </div>
 
 ---
@@ -174,7 +174,7 @@ lerobot-teleoperate \
 可以看到这是在数采实验盒里面的图像信息，同时，我们
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13cn/ch13-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-13cn/ch13-02cn.jpg" alt="" />
 </div>
 
 推荐参数：**848 × 480 @ 30 fps ，`fourcc: "MJPG"`**。三个参数各有讲究：
@@ -188,7 +188,7 @@ lerobot-teleoperate \
 ## 创建 LeRobot Dataset
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-13cn/ch13-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-13cn/ch13-03cn.jpg" alt="" />
 </div>
 
 输出如下指令前，应随时准备进行录制数据，会有声音提示进入录制阶段，如若没有可根据终端上的提示进行查看是否开始

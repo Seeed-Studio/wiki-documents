@@ -230,7 +230,7 @@ ros2 topic list -t
 - **RViz 显示**：通过 RViz，你可以看到基于 URDF 模型的机械臂实时运动，实现“所见即所得”的监控效果。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-33cn/ch33-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-33cn/ch33-01cn.jpg" alt="" />
 </div>
 
 启动后，`reBotArmController` 节点会持续发布机械臂状态。状态发布由`JointStatePublisher` 类（`ros_publishers.py`）统一管理，通过定时器以可配置频率（默认 100 Hz）驱动，无需外部触发。

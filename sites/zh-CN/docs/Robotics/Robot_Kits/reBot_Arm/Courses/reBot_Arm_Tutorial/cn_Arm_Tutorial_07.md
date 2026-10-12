@@ -174,7 +174,7 @@ https://motorbridge.github.io/motorbridge-studio/
 2、然后点击**帮助**选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-01cn.jpg" alt="" />
 </div>
 
 3、帮助选项中，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。以达妙DM电机为例：
@@ -209,25 +209,25 @@ motorbridge-gateway -- \
 4、输入上面命令后，回到网页，点击连接后，连接成功后右上角会出现绿色的已连接的文字。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-02cn.jpg" alt="" />
 </div>
 
 5、选择dm电机后，并点击扫描Damiao
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-03cn.jpg" alt="" />
 </div>
 
 6、扫描成功后出现下面的卡片
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-04cn.jpg" alt="" />
 </div>
 
 7、右侧是电机的相关参数，左下角的使能按钮，电机的灯变成绿色。此时可以对电机进行控制。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-05cn.jpg" alt="" />
 </div>
 
 8、拖动滑动条或者在小框输入对应的角度（单位是rad），然后点击 Move ，电机会转动到目标角度。
@@ -241,7 +241,7 @@ motorbridge-gateway -- \
 </callout>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-06cn.jpg" alt="" />
 </div>
 
 ## Python 代码控制
@@ -759,7 +759,7 @@ https://motorbridge.github.io/motorbridge-studio/
 3、然后点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-07cn.jpg" alt="" />
 </div>
 
 4、然后点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
@@ -785,25 +785,25 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can
 5、输入上面命令后，回到网页，点击连接后，连接成功后右上角会出现绿色的已连接的文字。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-08cn.jpg" alt="" />
 </div>
 
 6、选择rs电机后，并点击扫描 Robstride 电机
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-09cn.jpg" alt="" />
 </div>
 
 7、扫描成功后出现下面的卡片
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-10cn.jpg" alt="" />
 </div>
 
   8、右侧是电机的相关参数，左下角的使能按钮，电机的灯变成绿色。此时可以对电机进行控制。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-7cn/ch07-11cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-7cn/ch07-11cn.jpg" alt="" />
 </div>
 
 9、拖动滑动条或者在小框输入对应的角度（单位是rad），然后点击 Move ，电机会转动到目标角度。

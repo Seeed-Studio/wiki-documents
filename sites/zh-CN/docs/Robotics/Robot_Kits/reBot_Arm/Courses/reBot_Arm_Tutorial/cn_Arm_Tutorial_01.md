@@ -67,13 +67,13 @@ import 'katex/dist/katex.min.css';
 一套机器人系统通常可以抽象为：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1cn/ch01-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-1cn/ch01-01cn.jpg" alt="" />
 </div>
 
 例如，一台桌面抓取机器人需要完成以下过程：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1cn/ch01-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-1cn/ch01-02cn.jpg" alt="" />
 </div>
 
 因此，机器人不仅需要“会动”，还需要能够形成一个持续运行的闭环。
@@ -97,7 +97,7 @@ import 'katex/dist/katex.min.css';
 可以把机械臂简单理解为：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1cn/ch01-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-1cn/ch01-03cn.jpg" alt="" />
 </div>
 
 机械臂和人类手臂具有一定相似性。但是，机械臂不一定模仿人体结构。它的关节数量、排列方式和工作空间会根据任务需求进行设计。
@@ -116,7 +116,7 @@ import 'katex/dist/katex.min.css';
 因此，一个物体在三维空间中最多具有 6 个自由度。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1cn/ch01-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-1cn/ch01-04cn.jpg" alt="" />
 </div>
 
 六自由度机械臂通常能够控制末端执行器在三维空间中的位置和姿态。
@@ -136,7 +136,7 @@ import 'katex/dist/katex.min.css';
 ### 传统程序控制
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1cn/ch01-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-1cn/ch01-05cn.jpg" alt="" />
 </div>
 
 适合固定位置、固定流程和重复任务。
@@ -146,7 +146,7 @@ import 'katex/dist/katex.min.css';
 人类先遥操作机械臂完成任务，模型再从示范数据中学习。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1cn/ch01-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-1cn/ch01-06cn.jpg" alt="" />
 </div>
 
 适合抓取、整理和连续操作任务。
@@ -156,7 +156,7 @@ import 'katex/dist/katex.min.css';
 VLA 使用视觉、语言和动作信息，让机械臂根据自然语言完成任务。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1cn/ch01-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-1cn/ch01-07cn.jpg" alt="" />
 </div>
 
 例如：
@@ -170,7 +170,7 @@ reBot Arm 是整套课程的统一实践平台。
 后续我们将使用它完成：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1cn/ch01-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-1cn/ch01-08cn.jpg" alt="" />
 </div>
 
 ---

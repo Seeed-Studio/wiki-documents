@@ -73,7 +73,7 @@ import 'katex/dist/katex.min.css';
 - **额定负载**划定了安全、高效运行的基准线，不能长期超越。忽视额定负载是极其危险的。超过额定负载运行，会直接导致：电机力矩不足、电机过热与寿命缩短和突发机械故障。
 - **最大负载**则标明了绝对不能触碰的物理红线，是一次性的强度极限。将最大负载当作日常使用标准是极其危险的。这意味着机械臂的每个部件都工作在结构强度的边缘，任何微小的冲击或姿态变化都可能导致灾难性的结构失效，如关节断裂、机械臂坍塌。
 
-<table><colgroup><col/><col/><col/></colgroup><tbody><tr><td vertical-align="top">名称</td><td vertical-align="top">reBot Arm Dm</td><td vertical-align="top">reBot Arm Rs</td></tr><tr><td vertical-align="top">零位姿态</td><td vertical-align="top"><img name="img_v3_0213t_353ba040-8a7a-4a60-92f1-bfdce988552g.jpg" mime="image/jpeg" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-14cn.jpg"/></td><td vertical-align="top"><img name="img_v3_0213t_994c7e4e-2f48-45cd-96ab-90f3ae16b13g.jpg" mime="image/jpeg" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-15cn.jpg"/></td></tr><tr><td vertical-align="top">J1关节运动范围</td><td vertical-align="top">-150°－+150°</td><td vertical-align="top">-150°－+150°</td></tr><tr><td vertical-align="top">J2关节运动范围</td><td vertical-align="top">-220°－0°</td><td vertical-align="top">-220°－0°</td></tr><tr><td vertical-align="top">J3关节运动范围</td><td vertical-align="top">-220°－0°</td><td vertical-align="top">-220°－0°</td></tr><tr><td vertical-align="top">J4关节运动范围</td><td vertical-align="top">-90°－+90°</td><td vertical-align="top">-90°－+90°</td></tr><tr><td vertical-align="top">J5关节运动范围</td><td vertical-align="top">-90°－+90°</td><td vertical-align="top">-90°－+90°</td></tr><tr><td vertical-align="top">J6关节运动范围</td><td vertical-align="top">-180°－+180°</td><td vertical-align="top">-180°－+180°</td></tr><tr><td vertical-align="top">夹爪运动范围</td><td vertical-align="top">-325°－0°</td><td vertical-align="top">-345°－0°</td></tr></tbody></table>
+<table><colgroup><col/><col/><col/></colgroup><tbody><tr><td vertical-align="top">名称</td><td vertical-align="top">reBot Arm Dm</td><td vertical-align="top">reBot Arm Rs</td></tr><tr><td vertical-align="top">零位姿态</td><td vertical-align="top"><img name="img_v3_0213t_353ba040-8a7a-4a60-92f1-bfdce988552g.jpg" mime="image/jpeg" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-14cn.jpg"/></td><td vertical-align="top"><img name="img_v3_0213t_994c7e4e-2f48-45cd-96ab-90f3ae16b13g.jpg" mime="image/jpeg" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-15cn.jpg"/></td></tr><tr><td vertical-align="top">J1关节运动范围</td><td vertical-align="top">-150°－+150°</td><td vertical-align="top">-150°－+150°</td></tr><tr><td vertical-align="top">J2关节运动范围</td><td vertical-align="top">-220°－0°</td><td vertical-align="top">-220°－0°</td></tr><tr><td vertical-align="top">J3关节运动范围</td><td vertical-align="top">-220°－0°</td><td vertical-align="top">-220°－0°</td></tr><tr><td vertical-align="top">J4关节运动范围</td><td vertical-align="top">-90°－+90°</td><td vertical-align="top">-90°－+90°</td></tr><tr><td vertical-align="top">J5关节运动范围</td><td vertical-align="top">-90°－+90°</td><td vertical-align="top">-90°－+90°</td></tr><tr><td vertical-align="top">J6关节运动范围</td><td vertical-align="top">-180°－+180°</td><td vertical-align="top">-180°－+180°</td></tr><tr><td vertical-align="top">夹爪运动范围</td><td vertical-align="top">-325°－0°</td><td vertical-align="top">-345°－0°</td></tr></tbody></table>
 
 机械臂的零位姿态是所有运动规划和位置计算的绝对基准。机械臂要移动到某个点，本质上就是计算每个关节需要从零位这个起点旋转多少角度。因此每个关节电机设置零点和机械臂初始的时候都应该保持这个姿态。
 
@@ -82,7 +82,7 @@ import 'katex/dist/katex.min.css';
 ## 机械臂基本结构介绍
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-01cn.jpg" alt="" />
 </div>
 
 ###### 中文讲解视频链接
@@ -104,7 +104,7 @@ import 'katex/dist/katex.min.css';
 关节执行器由 **驱动器 → 电机 → 减速器 → 轴承/输出法兰 → 机器人连杆组成，**同时有 **编码器/力矩传感器 → 控制器 → 驱动器** 构成闭环控制。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-02cn.jpg" alt="" />
 </div>
 
 ## 减速器
@@ -127,7 +127,7 @@ reBot 机械臂目前采用了两种不同的关节驱动技术方案：**达妙
 DM 和 RS 电机用的减速器都是行星减速器。因此这里只介绍行星减速器的原理。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-03cn.jpg" alt="" />
 </div>
 
 行星减速器一般是齿圈固定，太阳轮输入，行星架输出。此时电机的传动比最大。假设传动比为 $i $ 。传动比  $i $只跟齿圈的齿数 $Z_r$和太阳轮的齿数 $Z_s$ 有关。传动比的表达式为：
@@ -299,7 +299,7 @@ QDD低减速比带来的高力透明度、强反驱性能和较低机械阻抗�
 磁阻芯片：就是那个“地图传感器”。它周围有360°的方向刻度，它能像读指南针一样，实时读出当前磁场指向的是0°、90°还是270°。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-04cn.jpg" alt="" />
 </div>
 
 - 关节电机用两个编码器的原因
@@ -320,11 +320,11 @@ QDD低减速比带来的高力透明度、强反驱性能和较低机械阻抗�
 
 ## DM电机接口和线序
 
-<table><colgroup><col/><col/><col/></colgroup><tbody><tr><td vertical-align="top">名称</td><td vertical-align="top">图片</td><td vertical-align="top">作用</td></tr><tr><td vertical-align="top">XT30(2+2)</td><td vertical-align="top"><img name="image.png" mime="image/png" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-16cn.jpg"/></td><td vertical-align="top">1、通过XT30(2+2)-F 插头的电源连 接线连接电源，额定电压为24V， 为电机供电。  电源接口-2 <br/> 2、通过CAN通信端子连接外部控 制设备，可接收CAN控制命令，反 馈电机状态信息。<br/>  3、电机包含两个电源接口，任一接 （含CAN通信端子）  口可单独连接使用，也可多机串联 使用，方便走线。</td></tr><tr><td vertical-align="top">gh1.25 3pin</td><td vertical-align="top"><img name="image.png" mime="image/png" scale="0.741935" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-17cn.jpg"/></td><td vertical-align="top">通过 GH1.25 连接线-3pin，使用 USB2CAN 调试工具连接到PC， 通过达妙科技调试助手对电机进行参数设置，以及固件升级等</td></tr></tbody></table>
+<table><colgroup><col/><col/><col/></colgroup><tbody><tr><td vertical-align="top">名称</td><td vertical-align="top">图片</td><td vertical-align="top">作用</td></tr><tr><td vertical-align="top">XT30(2+2)</td><td vertical-align="top"><img name="image.png" mime="image/png" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-16cn.jpg"/></td><td vertical-align="top">1、通过XT30(2+2)-F 插头的电源连 接线连接电源，额定电压为24V， 为电机供电。  电源接口-2 <br/> 2、通过CAN通信端子连接外部控 制设备，可接收CAN控制命令，反 馈电机状态信息。<br/>  3、电机包含两个电源接口，任一接 （含CAN通信端子）  口可单独连接使用，也可多机串联 使用，方便走线。</td></tr><tr><td vertical-align="top">gh1.25 3pin</td><td vertical-align="top"><img name="image.png" mime="image/png" scale="0.741935" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-17cn.jpg"/></td><td vertical-align="top">通过 GH1.25 连接线-3pin，使用 USB2CAN 调试工具连接到PC， 通过达妙科技调试助手对电机进行参数设置，以及固件升级等</td></tr></tbody></table>
 
 ## RS电机接口和线序
 
-<table><colgroup><col/><col/><col/></colgroup><tbody><tr><td vertical-align="top">名称</td><td vertical-align="top">图片</td><td vertical-align="top">作用</td></tr><tr><td vertical-align="top">XT30(2+2)</td><td vertical-align="top"><img name="image.png" mime="image/png" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-18cn.jpg"/></td><td vertical-align="top">1、通过XT30(2+2)-F 插头的电源连 接线连接电源，额定电压为24V， 为电机供电。  电源接口-2 <br/> 2、通过CAN通信端子连接外部控 制设备，可接收CAN控制命令，反 馈电机状态信息。<br/>  3、电机包含两个电源接口，任一接 （含CAN通信端子）  口可单独连接使用，也可多机串联 使用，方便走线。</td></tr></tbody></table>
+<table><colgroup><col/><col/><col/></colgroup><tbody><tr><td vertical-align="top">名称</td><td vertical-align="top">图片</td><td vertical-align="top">作用</td></tr><tr><td vertical-align="top">XT30(2+2)</td><td vertical-align="top"><img name="image.png" mime="image/png" scale="1.000000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-18cn.jpg"/></td><td vertical-align="top">1、通过XT30(2+2)-F 插头的电源连 接线连接电源，额定电压为24V， 为电机供电。  电源接口-2 <br/> 2、通过CAN通信端子连接外部控 制设备，可接收CAN控制命令，反 馈电机状态信息。<br/>  3、电机包含两个电源接口，任一接 （含CAN通信端子）  口可单独连接使用，也可多机串联 使用，方便走线。</td></tr></tbody></table>
 
 ## DM电机的运控模式
 
@@ -333,7 +333,7 @@ QDD低减速比带来的高力透明度、强反驱性能和较低机械阻抗�
 ## MIT协议
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-05cn.jpg" alt="" />
 </div>
 
 MIT模式可以通过 **位置、速度和力矩** 三种参数控制电机。
@@ -375,7 +375,7 @@ MIT模式可以根据不同参数组合实现不同的控制方式：
 ## 位置速度模式
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-06cn.jpg" alt="" />
 </div>
 
 位置串级模式是采用三环串联控制的模式，位置环作为最外环，其输出作为速度环的给定，而速度环的输出作为内环电流环的给定，用以控制实际的电流输出。
@@ -398,7 +398,7 @@ MIT模式可以根据不同参数组合实现不同的控制方式：
 ## 速度模式
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-07cn.jpg" alt="" />
 </div>
 
 速度模式外环是速度环，速度环的输出作为内环电流环的给定。
@@ -414,7 +414,7 @@ v_des单位为rad/s，数据类型为float，如需使用调试助手自动计�
 ## PVT模式（力位混控）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-08cn.jpg" alt="" />
 </div>
 
 PVT（力位混控）模式为在位置速度模式控制的基础上动态控制输出扭矩的大小。在速度环的输出指令后增加了电流指令饱和环节，使得电流环的给定限定在给定范围内。
@@ -433,7 +433,7 @@ PVT（力位混控）模式为在位置速度模式控制的基础上动态控�
 ## 运控模式
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-09cn.jpg" alt="" />
 </div>
 
 RS的运控模式跟DM的MIT模式是差不多的。运控模式的控制逻辑如下：
@@ -475,7 +475,7 @@ MIT模式可以根据不同参数组合实现不同的控制方式：
 ## 电流模式
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-10cn.jpg" alt="" />
 </div>
 
 这个是将电机的电流环作为控制接口给到用户，这个模式一般不会用到。这个接口的用法可以参考 FOC 算法。
@@ -483,7 +483,7 @@ MIT模式可以根据不同参数组合实现不同的控制方式：
 ## 速度模式
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-11cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-11cn.jpg" alt="" />
 </div>
 
 速度模式是将设定速度和当前速度的差作为pi控制器的输入，pi控制器的输出力矩会被限制到一个区间。力矩通过内部的公式折算为期望 iq 电流，通过电流环输出。
@@ -498,7 +498,7 @@ MIT模式可以根据不同参数组合实现不同的控制方式：
 ## **位置速度模式 （CSP）**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-12cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-12cn.jpg" alt="" />
 </div>
 
 位置模式CSP也可以称为位置速度模式。设定角度和当前角度的差作为位置环的输入，其中位置环是纯比例控制器，位置环输出经过速度限制后作为速度环的输入。速度环是pi控制器，输出的力矩经过力矩保护限幅后折算成期望iq电流，通过电流环输出。
@@ -516,7 +516,7 @@ MIT模式可以根据不同参数组合实现不同的控制方式：
 ## **位置速度模式 （PP)**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-4cn/ch04-13cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-4cn/ch04-13cn.jpg" alt="" />
 </div>
 
 该模式也是 motorbridge 给出的位置速度模式接口。

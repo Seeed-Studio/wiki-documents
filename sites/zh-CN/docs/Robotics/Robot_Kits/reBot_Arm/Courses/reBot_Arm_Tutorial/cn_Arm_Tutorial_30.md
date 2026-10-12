@@ -164,7 +164,7 @@ Windows 用户选择：
 ## 硬件连接示意图
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-30cn/ch30-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-30cn/ch30-01cn.jpg" alt="" />
 </div>
 
 连接步骤：

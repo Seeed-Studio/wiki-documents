@@ -65,7 +65,7 @@ import 'katex/dist/katex.min.css';
 - 图像走 USB、关节数据走 CAN，两路数据到达电脑的时间天然有先后。LeRobot 给每帧数据打上**时间戳**，以此把"同一时刻"的图像、状态、动作对齐成一行。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-01cn.jpg" alt="" />
 </div>
 
 ---
@@ -154,13 +154,13 @@ import 'katex/dist/katex.min.css';
 1.将试管放入试管盒里，注意需要将试管盒底部用双面胶固定，防止其移动位置，同时相机，机械臂也要保持固定位置，光线也要保持不变。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-02cn.jpg" alt="" />
 </div>
 
 2.将试管按照如图所示的点进行摆放采集数据，即为1->2->3->4->5为一轮，采集持续10轮
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-03cn.jpg" alt="" />
 </div>
 
 - 新手录数据时最头疼的问题是"物体位置怎么摆才算练到位"——随手一摆，要么全挤在一小块地方（模型只认这一块，换个位置就不会抓），要么东一个西一个没规律（有的地方练得多、有的地方没练过）。这就像复习时只刷自己会做的题，考试换个题型就抓瞎；也像只给机器人看一种口味的零食，结果它到了自助餐厅完全不知道从何下嘴。推荐一个又简单又规范的方法：
@@ -175,7 +175,7 @@ import 'katex/dist/katex.min.css';
 1.初始位置
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-04cn.jpg" alt="" />
 </div>
 
 2.夹取物块
@@ -183,19 +183,19 @@ import 'katex/dist/katex.min.css';
 - 将机械臂移动到试管正上方（保持每次都移动到试管的中心位置且距离上方相同的距离）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-05cn.jpg" alt="" />
 </div>
 
 - 张开爪夹（为什么一开始要距离小龙虾一定的距离，就是为了避免张开爪夹的时候碰撞到试管导致其位置发生变化）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-06cn.jpg" alt="" />
 </div>
 
 - 保持每次相同的力度与速度进行夹取
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-07cn.jpg" alt="" />
 </div>
 
 3.放置物块
@@ -203,19 +203,19 @@ import 'katex/dist/katex.min.css';
 - 移动到试管盒的中心正上方
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-08cn.jpg" alt="" />
 </div>
 
 - 匀速进行张开爪夹并且抬起机械臂，此时可以看到试管已经平稳落到试管盒的上方
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-09cn.jpg" alt="" />
 </div>
 
 - 放置完试管以后，将我们的机械臂进行归位
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12cn/ch12-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-10cn.jpg" alt="" />
 </div>
 
 - 到此，一条完美的数据集已经制作完成，接下来，你只需要重复50次这样的操作即可

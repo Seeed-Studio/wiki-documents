@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/get_sarted.webp
 slug: /Seeeduino-XIAO
 sku: 110010004, 102010388, 102010328
 last_update:
-  date: 9/7/2026
+  date: 10/12/2026
   author: shuxu hu
 createdAt: '2023-01-16'
 updatedAt: '2026-09-07'
@@ -900,7 +900,6 @@ For low-power applications, disable **BAT_EN** after the battery voltage measure
 
 **Mechanical Design**
 - **📄[2D Dimensions]** [XIAO Dimension in DXF](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar )
-- **📄[3D Model]** [XIAO SAMD21 Plus 3D Model](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip )
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"

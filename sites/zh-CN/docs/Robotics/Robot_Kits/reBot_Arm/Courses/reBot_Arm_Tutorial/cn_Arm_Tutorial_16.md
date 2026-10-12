@@ -84,7 +84,7 @@ import 'katex/dist/katex.min.css';
 - **步数** = 他总共看了多少小段。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-16cn/ch16-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-16cn/ch16-01cn.jpg" alt="" />
 </div>
 
 ---
@@ -171,11 +171,11 @@ step: 10000  smpl: 80K  ep: 35.6  loss: 1.832  grdn: 12.4  lr: 1.0e-05  updt_s: 
 - **应该保持不变的：`lr`、`updt_s`、`data_s`、GPU 利用率。**`lr` 全程等于你设的值，它只是供你确认；每步耗时（`updt_s`/`data_s`）和 `watch -n 1 nvidia-smi` 里的 GPU 利用率都应该**平稳**——利用率持续偏低或忽高忽低，说明 GPU 在等数据，瓶颈在数据加载而不在显卡。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-16cn/ch16-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-16cn/ch16-02cn.jpg" alt="" />
 </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-16cn/ch16-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-16cn/ch16-03cn.jpg" alt="" />
 </div>
 
 ---

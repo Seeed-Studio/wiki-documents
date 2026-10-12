@@ -87,7 +87,7 @@ import 'katex/dist/katex.min.css';
   - **重要性：** 如果你想在真机上做**机械臂的重力补偿**或者在仿真里看它会不会摔倒，这个属性必须填得极为精确，否则机器人的动作就会轻飘飘或者直接乱飞。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-32cn/ch32-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-32cn/ch32-01cn.jpg" alt="" />
 </div>
 
 > 现在机器人的数字模型已经建好了，但在它运动起来时，各个关节的相对位置每时每刻都在变。计算机怎么知道机器人的“手”现在到底伸到了哪里？这就引出了 ROS2 中极其重要的概念：TF 坐标树。
@@ -119,7 +119,7 @@ import 'katex/dist/katex.min.css';
 URDF 和 Xacro 为机器人绘制了蓝图，Visual/Collision/Inertial 赋予了它真实的物理法则，而 TF 和 RSP 则让这具身体在运动中保持了对自身的绝对感知。掌握了这套模型，我们就建立起了**计算机数字世界与真实物理硬件之间的完美对应关系**，为下一章真机驱动集成（reBot Arm）和运动规划打下了坚实的基础。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-32cn/ch32-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-32cn/ch32-02cn.jpg" alt="" />
 </div>
 
 ---
@@ -135,7 +135,7 @@ URDF 和 Xacro 为机器人绘制了蓝图，Visual/Collision/Inertial 赋予了
 在接下来的 第 33 章【实践】：reBot Arm ROS2 集成 中，我们将把一台真实的物理机械臂（reBot Arm）真正接入到我们搭建好的 ROS2 网络中。我们将运用 31 章学过的 Topic、Service 和 Action，结合 32 章建立的 URDF 模型，教你如何编写一个“驱动大脑”，把底层的硬件指令封装成标准接口，让虚拟的数字模型与真实的钢铁之躯实现完美的同步共舞。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-32cn/ch32-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-32cn/ch32-03cn.jpg" alt="" />
 </div>
 
 </div>

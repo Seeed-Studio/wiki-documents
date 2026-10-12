@@ -22,6 +22,10 @@ updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/wrc_demo_tutorial/
 ---
 
+import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+
+<RebotRsDocNav />
+
 # reBot Arm B601-RS エンボディドエージェント設計フレームワーク
 
 <p align="center">

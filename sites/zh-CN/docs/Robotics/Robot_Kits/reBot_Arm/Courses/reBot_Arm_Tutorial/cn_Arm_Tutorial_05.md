@@ -63,7 +63,7 @@ CAN 是 Controller Area Network 的缩写，是 ISO国际标准化的串行通�
 一般机械臂或者机器人的CAN总线网络结构使用的闭环结构的CAN总线网络，也就是总线两端各连接一个120欧的电阻，两根信号线形成回路。这种CAN总线网络由ISO 11898标准定义，是高速、短距离的CAN网络，通信速率为125kbit/s到1Mbit/s。在1Mbit/s通讯速率时，总线长度最长达40m。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-5cn/ch05-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-5cn/ch05-01cn.jpg" alt="" />
 </div>
 
 总线由两根信号线CAN_L和CAN_H组成。CAN传输的是差分信号，通过两根信号线的电压差，也就是CAN_H-CAN_L来表示总线电平。对应于逻辑1的称为隐性电平，对应于逻辑0称为显性电平。在ISO11898中，隐性电平在电压差0附近，显性电平主要在电压差2V附近。
@@ -124,7 +124,7 @@ CAN 是 Controller Area Network 的缩写，是 ISO国际标准化的串行通�
 **SOF → ID → 控制字段 → DLC → Data → CRC → ACK → EOF**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-5cn/ch05-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-5cn/ch05-02cn.jpg" alt="" />
 </div>
 
 具体解释见下图：
@@ -132,7 +132,7 @@ CAN 是 Controller Area Network 的缩写，是 ISO国际标准化的串行通�
 <table><colgroup><col/><col/></colgroup><tbody><tr><td vertical-align="top">名称</td><td vertical-align="top">作用</td></tr><tr><td vertical-align="top">空闲段（bus idel）</td><td vertical-align="top">总线为隐性电平 1，所有节点都不操作总线，当没有设备发送数据时，CAN 总线处于空闲状态。当前没有设备讲话，大家都在等待。</td></tr><tr><td vertical-align="top">帧起始段（SOF）</td><td vertical-align="top">SOF 固定为一个显性位 <code>0</code>，由于 CAN 总线空闲时为 <code>1</code>，当总线上突然出现 <code>0</code> 时，其他设备就知道：有设备开始发送数据了。因此 SOF 可以理解成：<b>“我要开始发送了。”</b></td></tr><tr><td vertical-align="top">仲裁段（帧ID、RTR或SRR）</td><td vertical-align="top">ID：可以把它理解成：这条消息的编号。<br/>例如可以在电机控制中通过<code>0x01</code>：1号电机控制命令；<code>0x02</code>：2号电机控制命令等等；<b>ID更准确地表示“消息的身份或类型”。ID 数值越小，优先级越高。</b><br/>RTR：它主要用于区分：普通数据帧RTR=0和远程请求帧RTR=1。<b>日常发送普通 CAN 数据时，RTR 一般为 0。</b><br/>SRR：扩展帧专用的仲裁位，固定为 1。主要用于保证相同基础 ID 下，标准帧优先于扩展帧。</td></tr><tr><td vertical-align="top">控制段（IDE、保留位、DLC）</td><td vertical-align="top">IDE位用于区分标准桢还是扩展桢，<b>IDE = 1</b> 扩展帧，29 bit ID。<b>IDE = 0</b> 标准帧 11 bit ID。扩展帧的 ID 范围更大，可以提供更多的消息编号<br/>DLC：告诉接收方有多少数据。例如：<ul><li>DLC = 1，表示有 1 Byte 数据<b>8 bit</b>；</li><li>DLC = 4，表示有 4 Byte 数据<b>32 bit</b>；</li><li>DLC = 8，表示有 8 Byte 数据<b>64 bit</b>。</li></ul></td></tr><tr><td vertical-align="top">Data Field 数据段</td><td vertical-align="top">就是真正的数据内容，长度与 DLC 对应，例如，主控制器要向电机发送：目标位置；目标速度；目标力矩。<b>查看设备厂家提供的 CAN 通信协议，确认每个字节分别代表什么。</b></td></tr><tr><td vertical-align="top">CRC段</td><td vertical-align="top">CAN 数据的“检查码”。对所有的数据位进行 CRC 计算，包括帧起始、仲裁段、控制段、数据段，<b>检查 CAN 数据在传输过程中是否出现错误。</b>其中CRC 界定符必须是隐性电平。</td></tr><tr><td vertical-align="top">ACK段</td><td vertical-align="top">ACK——告诉发送方“我收到了”，发送方发送完毕后，释放总线，隐性电平 1，接收方若接收正确需要在此位回复显性电平 0，此时发送方读取 ACK 槽为 0，则表示收到 ACK。其中ACK界定符是接收方释放电平，为隐性电平。</td></tr><tr><td vertical-align="top">帧结束段（EOF，<b>End Of Frame</b>）</td><td vertical-align="top">当前这一条 CAN 数据发送结束。7 个隐性 1</td></tr></tbody></table>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-5cn/ch05-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-5cn/ch05-03cn.jpg" alt="" />
 </div>
 
 ## SocketCAN

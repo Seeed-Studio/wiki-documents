@@ -11,6 +11,149 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
+// Homepage links must not claim the docs owned by the focused sidebars.
+const asReferences = (item) => typeof item === 'string'
+  ? { type: 'ref', id: item }
+  : { ...item, items: item.items.map(asReferences) };
+
+const actuatorCategory = {
+  type: 'category',
+  label: '关节电机',
+  className: 'robotics-section-title',
+  collapsible: false,
+  collapsed: false,
+  items: [
+    {
+      type: 'category',
+      label: '高擎',
+      items: [
+        'Robotics/Robot_Actuator/HighTorque/cn_HighTorque',
+        'Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Getting_Started',
+        'Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Control',
+      ]
+    },
+    'Robotics/Robot_Actuator/cn_Feetech_Servo',
+    'Robotics/Robot_Actuator/cn_FashionStar_Servo',
+    'Robotics/Robot_Actuator/cn_Stackforce_Series',
+    'Robotics/Robot_Actuator/cn_Myactuator_Series',
+    'Robotics/Robot_Actuator/cn_Damiao_Series',
+    'Robotics/Robot_Actuator/cn_RobStride_Control',
+  ]
+};
+
+const sensorCategory = {
+  type: 'category',
+  label: '传感器',
+  className: 'robotics-section-title',
+  collapsible: false,
+  collapsed: false,
+  // link: {
+  //   type: "doc",
+  //   id: 'Edge/NVIDIA_Jetson/Application',
+  // },
+  items: [
+    {
+      type: 'category',
+      label: '激光雷达',
+      // link: {
+      //   type: "doc",
+      //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+      // },
+      items: [
+        'Robotics/Robot_Sensor/Lidar/cn_Robosense_Lidar',
+        'Robotics/Robot_Sensor/Lidar/cn_MID360',
+        'Robotics/Robot_Sensor/Lidar/cn_A_Loam',
+        'Robotics/Robot_Sensor/Lidar/cn_SLAMTEC',
+      ]
+    },
+    {
+      type: 'category',
+      label: '摄像头',
+      // link: {
+      //   type: "doc",
+      //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+      // },
+      items: [
+        'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_AC1',
+        'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini_336',
+        'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+        'Robotics/Robot_Sensor/Camera/cn_Orbbec_Depth_Camera',
+        'Robotics/Robot_Sensor/Camera/cn_realsense_3D_seg',
+        'Robotics/Robot_Sensor/Camera/cn_ORB_SLAM3_with_Orbbec_Gemini2',
+        'Robotics/Robot_Sensor/Camera/cn_Pycuvslam_On_reComputer',
+        'Robotics/Robot_Sensor/Camera/cn_Orbbec_Gemini_335Lg',
+        'Robotics/Robot_Sensor/Camera/cn_Sensing_GMSL_Camera',
+        'Robotics/Robot_Sensor/Camera/cn_CSI_Camera',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'IMU',
+      // link: {
+      //   type: "doc",
+      //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+      // },
+      items: [
+        'Robotics/Robot_Sensor/IMU/cn_Hexfellow_Y200',
+        'Robotics/Robot_Sensor/IMU/cn_WHEELTEC_IMU',
+      ]
+    },
+  ]
+};
+
+const softwareCategory = {
+  type: 'category',
+  label: '软件',
+  className: 'robotics-section-title',
+  collapsible: false,
+  collapsed: false,
+  items: [
+    {
+      type: 'category',
+      label: 'ROS',
+      // link: {
+      //   type: "doc",
+      //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+      // },
+      items: [
+        "Robotics/Robot_Software/ROS/cn_Installing_ROS1",
+        "Robotics/Robot_Software/ROS/cn_Install_IsaacROS",
+        "Robotics/Robot_Software/ROS/cn_Install_ROS2_Humble",
+        "Robotics/Robot_Software/ROS/cn_Isaac_ROS_AprilTag",
+        "Robotics/Robot_Software/ROS/cn_Isaac_ROS_Visual_SLAM",
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Isaac Lab',
+      // link: {
+      //   type: "doc",
+      //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+      // },
+      items: [
+        'Robotics/Robot_Software/Isaac_Lab/cn_Install_Isaac_lab',
+        'Robotics/Robot_Software/Isaac_Lab/cn_Simulate_SoArm101_by_LeIsaac',
+        'Robotics/Robot_Software/Isaac_Lab/cn_XiaoPi',
+        'Robotics/Robot_Software/Isaac_Lab/cn_Training_SoARM101_Policy_with_IsaacLab',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'PX4',
+      // link: {
+      //   type: "doc",
+      //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+      // },
+      items: [
+        "Robotics/Robot_Software/PX4/cn_Control_PX4_with_reComputer_Jetson",
+        "Robotics/Robot_Software/PX4/cn_Object_Tracking_with_reComputer_Jetson_and_PX4",
+      ]
+    },
+    'Robotics/Robot_Software/VLA/cn_control_robotic_arm_via_gr00t',
+    'Robotics/Robot_Software/cn_control_robotic_arm_via_phospho',
+  ]
+};
+
 const sidebars = {
 
   // Main robotics sidebar. Each product is a `ref` link so that opening a
@@ -46,145 +189,42 @@ const sidebars = {
         { type: 'ref', id: `${K}/Humanoid/Atom-S/cn_Atom-S`, label: '小型人形机器人', className: 'sideboard_calss' },
       ]
     },
-    {
-      type: 'category',
-      label: '关节电机',
-      className: 'robotics-section-title',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'category',
-          label: '高擎',
-          items: [
-            'Robotics/Robot_Actuator/HighTorque/cn_HighTorque',
-            'Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Getting_Started',
-            'Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Control',
-          ]
-        },
-        'Robotics/Robot_Actuator/cn_Feetech_Servo',
-        'Robotics/Robot_Actuator/cn_FashionStar_Servo',
-        'Robotics/Robot_Actuator/cn_Stackforce_Series',
-        'Robotics/Robot_Actuator/cn_Myactuator_Series',
-        'Robotics/Robot_Actuator/cn_Damiao_Series',
-        'Robotics/Robot_Actuator/cn_RobStride_Control',
-      ]
-    },
-    {
-      type: 'category',
-      label: '传感器',
-      className: 'robotics-section-title',
-      collapsible: false,
-      collapsed: false,
-      // link: {
-      //   type: "doc",
-      //   id: 'Edge/NVIDIA_Jetson/Application',
-      // },
-      items: [
-        {
-          type: 'category',
-          label: '激光雷达',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            'Robotics/Robot_Sensor/Lidar/cn_Robosense_Lidar',
-            'Robotics/Robot_Sensor/Lidar/cn_MID360',
-            'Robotics/Robot_Sensor/Lidar/cn_A_Loam',
-            'Robotics/Robot_Sensor/Lidar/cn_SLAMTEC',
-          ]
-        },
-        {
-          type: 'category',
-          label: '摄像头',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_AC1',
-            'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini_336',
-            'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
-            'Robotics/Robot_Sensor/Camera/cn_Orbbec_Depth_Camera',
-            'Robotics/Robot_Sensor/Camera/cn_realsense_3D_seg',
-            'Robotics/Robot_Sensor/Camera/cn_ORB_SLAM3_with_Orbbec_Gemini2',
-            'Robotics/Robot_Sensor/Camera/cn_Pycuvslam_On_reComputer',
-            'Robotics/Robot_Sensor/Camera/cn_Orbbec_Gemini_335Lg',
-            'Robotics/Robot_Sensor/Camera/cn_Sensing_GMSL_Camera',
-            'Robotics/Robot_Sensor/Camera/cn_CSI_Camera',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'IMU',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            'Robotics/Robot_Sensor/IMU/cn_Hexfellow_Y200',
-            'Robotics/Robot_Sensor/IMU/cn_WHEELTEC_IMU',
-          ]
-        },
-      ]
-    },
-    {
-      type: 'category',
-      label: '软件',
-      className: 'robotics-section-title',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'category',
-          label: 'ROS',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            "Robotics/Robot_Software/ROS/cn_Installing_ROS1",
-            "Robotics/Robot_Software/ROS/cn_Install_IsaacROS",
-            "Robotics/Robot_Software/ROS/cn_Install_ROS2_Humble",
-            "Robotics/Robot_Software/ROS/cn_Isaac_ROS_AprilTag",
-            "Robotics/Robot_Software/ROS/cn_Isaac_ROS_Visual_SLAM",
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Isaac Lab',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            'Robotics/Robot_Software/Isaac_Lab/cn_Install_Isaac_lab',
-            'Robotics/Robot_Software/Isaac_Lab/cn_Simulate_SoArm101_by_LeIsaac',
-            'Robotics/Robot_Software/Isaac_Lab/cn_XiaoPi',
-            'Robotics/Robot_Software/Isaac_Lab/cn_Training_SoARM101_Policy_with_IsaacLab',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'PX4',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            "Robotics/Robot_Software/PX4/cn_Control_PX4_with_reComputer_Jetson",
-            "Robotics/Robot_Software/PX4/cn_Object_Tracking_with_reComputer_Jetson_and_PX4",
-          ]
-        },
-        'Robotics/Robot_Software/VLA/cn_control_robotic_arm_via_gr00t',
-        'Robotics/Robot_Software/cn_control_robotic_arm_via_phospho',
-      ]
-    },
+    asReferences(actuatorCategory),
+    asReferences(sensorCategory),
+    asReferences(softwareCategory),
 
   ],
 
   // ---- Independent product sidebars (opened when browsing each product's docs) ----
+
+  // Reference docs use one sidebar per resource family.
+  ActuatorSidebar: [backToRobotics(), actuatorCategory],
+  LidarSidebar: [
+    backToRobotics(),
+    { ...sensorCategory.items[0], collapsible: false, collapsed: false },
+  ],
+  CameraSidebar: [
+    backToRobotics(),
+    { ...sensorCategory.items[1], collapsible: false, collapsed: false },
+  ],
+  ImuSidebar: [
+    backToRobotics(),
+    { ...sensorCategory.items[2], collapsible: false, collapsed: false },
+  ],
+  RosSidebar: [
+    backToRobotics(),
+    { ...softwareCategory.items[0], collapsible: false, collapsed: false },
+  ],
+  IsaacLabSidebar: [
+    backToRobotics(),
+    { ...softwareCategory.items[1], collapsible: false, collapsed: false },
+  ],
+  Px4Sidebar: [
+    backToRobotics(),
+    { ...softwareCategory.items[2], collapsible: false, collapsed: false },
+  ],
+  VlaSidebar: [backToRobotics(), softwareCategory.items[3]],
+  PhosphoSidebar: [backToRobotics(), softwareCategory.items[4]],
 
   SoArm101Sidebar: [
     backToRobotics(),

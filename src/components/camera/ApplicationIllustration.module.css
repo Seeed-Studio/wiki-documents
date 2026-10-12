@@ -1,0 +1,32 @@
+.preview { display: block; flex: 0 0 72px; width: 72px; height: 72px; overflow: hidden; border-radius: 8px; background: var(--camera-soft); color: var(--camera-ink); pointer-events: none; }
+.preview svg { display: block; width: 100%; height: 100%; }
+.floor { stroke: var(--camera-line); }
+.sight, .route { stroke: var(--camera-accent); stroke-dasharray: 3 4; opacity: .65; }
+.field { fill: var(--camera-accent); fill-opacity: .12; stroke: var(--camera-accent); stroke-opacity: .45; }
+.link { stroke-width: 6; stroke: var(--camera-muted); }
+.joint, .obstacle { fill: var(--camera-surface); }
+.accent, .workpiece { stroke: var(--camera-accent); }
+.workpiece, .accentFill { fill: var(--camera-accent); fill-opacity: .2; stroke: var(--camera-accent); }
+.arm { transform-origin: 22px 62px; }
+.measurement { opacity: .7; }
+
+/* Explanatory sequences run once; neither the option nor its text moves. */
+.preview[data-playing='true'] :is(.arm, .workpiece, .gripperLeft, .gripperRight, .rover, .inspectedPart, .measurement) { animation-duration: 2.5s; animation-timing-function: ease-in-out; animation-iteration-count: 1; animation-fill-mode: both; }
+.preview[data-playing='true'] .arm { animation-name: reach; }
+.preview[data-playing='true'] .workpiece { animation-name: pick; }
+.preview[data-playing='true'] .gripperLeft { animation-name: gripLeft; }
+.preview[data-playing='true'] .gripperRight { animation-name: gripRight; }
+.preview[data-playing='true'] .rover { animation-name: navigate; }
+.preview[data-playing='true'] .inspectedPart { animation-name: convey; }
+.preview[data-playing='true'] .measurement { animation-name: measure; }
+
+@keyframes reach { 0%, 12% { transform: rotate(-14deg); } 32%, 45% { transform: rotate(8deg); } 65% { transform: rotate(-12deg); } 85%, 100% { transform: rotate(8deg); } }
+@keyframes pick { 0%, 45%, 85%, 100% { transform: translate(0, 0); } 65% { transform: translate(-1px, -11px); } }
+@keyframes gripLeft { 0%, 30%, 90%, 100% { transform: translateX(0); } 40%, 80% { transform: translateX(2px); } }
+@keyframes gripRight { 0%, 30%, 90%, 100% { transform: translateX(0); } 40%, 80% { transform: translateX(-2px); } }
+@keyframes navigate { 0%, 10% { transform: translate(0, 0); } 45% { transform: translate(0, -38px); } 80%, 100% { transform: translate(43px, -38px); } }
+@keyframes convey { 0%, 10% { transform: translateX(0); } 50%, 100% { transform: translateX(18px); } }
+@keyframes measure { 0%, 45% { opacity: 0; } 70%, 100% { opacity: 1; } }
+
+@media (max-width: 640px) { .preview { flex-basis: 56px; width: 56px; height: 56px; } }
+@media (prefers-reduced-motion: reduce) { .preview[data-playing='true'] * { animation: none; } }

@@ -90,7 +90,7 @@ import 'katex/dist/katex.min.css';
 **这就是传统程序控制的根本困境：真实世界是连续变化的，而 if-else 是离散的。** 你不可能穷举世界所有的样子。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9cn/ch09-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-9cn/ch09-01cn.jpg" alt="" />
 </div>
 
 - **那么，人类是怎么解决这个问题的？**
@@ -106,7 +106,7 @@ import 'katex/dist/katex.min.css';
 在继续之前，我们先把两种控制方式摆在一起看清楚
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9cn/ch09-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-9cn/ch09-02cn.jpg" alt="" />
 </div>
 
 - 请注意，这两者不是谁取代谁的关系。工厂里拧螺丝的机械臂，几十年如一日重复同一个动作，规则控制至今仍是最好的选择——它精确、可靠、可审计。学习控制擅长的，是那些**规则写不出来、或者写起来代价太高的任务**。
@@ -124,7 +124,7 @@ import 'katex/dist/katex.min.css';
   - 在模仿学习中，人类操作者通过遥操作（Teleoperation）控制机械臂完成任务，系统同时记录"看到的画面"和"执行的动作"。这些数据被用来训练一个模型，训练完成后，模型就能在没有人类操作的情况下，自己看着画面做出动作。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9cn/ch09-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-9cn/ch09-03cn.jpg" alt="" />
 </div>
 
 ## 什么是行为克隆
@@ -136,7 +136,7 @@ import 'katex/dist/katex.min.css';
   - 训练好之后，模型看到新的画面，就能"模仿"人给出动作。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9cn/ch09-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-9cn/ch09-04cn.jpg" alt="" />
 </div>
 
 ---
@@ -167,7 +167,7 @@ import 'katex/dist/katex.min.css';
   - 夹爪的目标开合程度。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9cn/ch09-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-9cn/ch09-05cn.jpg" alt="" />
 </div>
 
 ---
@@ -189,7 +189,7 @@ import 'katex/dist/katex.min.css';
   - **动作更平滑连贯。**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9cn/ch09-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-9cn/ch09-06cn.jpg" alt="" />
 </div>
 
 当然，Action Chunk 也不是越长越好。预测得太远，环境可能在中途发生变化（比如物体被碰了一下），而机械臂还在执行"过时"的动作。实际系统会采用开环执行一小段、然后重新观测再预测的折中方案。
@@ -207,7 +207,7 @@ import 'katex/dist/katex.min.css';
 - 模型训练时见过的所有"（观测，动作）"配对，构成了一个**数据分布（Data Distribution）**。推理时，如果机械臂遇到的画面和状态落在这个分布之内，模型通常表现良好；一旦跑出分布之外，模型的输出就失去依据，行为变得不可预测。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9cn/ch09-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-9cn/ch09-07cn.jpg" alt="" />
 </div>
 
 这带来几个非常实际的推论:
@@ -227,7 +227,7 @@ import 'katex/dist/katex.min.css';
 ## 训练、推理和评估：模仿学习的三个阶段
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9cn/ch09-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-9cn/ch09-08cn.jpg" alt="" />
 </div>
 
 ## 训练：离线学习
@@ -259,7 +259,7 @@ import 'katex/dist/katex.min.css';
 ## 模仿学习的优势与局限
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9cn/ch09-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-9cn/ch09-09cn.jpg" alt="" />
 </div>
 
 ---

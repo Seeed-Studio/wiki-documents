@@ -73,7 +73,7 @@ import 'katex/dist/katex.min.css';
 本章引入 **VLA（Vision-Language-Action）** 的核心思想：让机器人不仅能「看」，还能「听懂」自然语言指令，并在多种任务之间共享同一个策略网络。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18cn/ch18-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-01cn.jpg" alt="" />
 </div>
 
 ---
@@ -81,7 +81,7 @@ import 'katex/dist/katex.min.css';
 ## 什么是多模态模型
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18cn/ch18-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-02cn.jpg" alt="" />
 </div>
 
 **多模态（Multimodal）** 指模型同时处理两种及以上信息来源。对人类来说，做「把杯子递给我」这件事，你会同时用到：
@@ -116,7 +116,7 @@ import 'katex/dist/katex.min.css';
 ## Vision、Language 和 Action
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18cn/ch18-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-03cn.jpg" alt="" />
 </div>
 
 在 VLA 框架中，三个模态各有明确分工：
@@ -136,7 +136,7 @@ VLA 与纯视觉策略的关键区别：**语言成为条件变量**。训练时
 ##  VLM 与 VLA 的区别
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18cn/ch18-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-04cn.jpg" alt="" />
 </div>
 
 | 对比项 | VLM（Vision-Language Model） | VLA（Vision-Language-Action） |
@@ -155,7 +155,7 @@ Isaac GR00T N1.7 在架构上复用了 VLM 的能力：其骨干网络是 **Cosm
 ## ACT 与 VLA 的区别
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18cn/ch18-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-05cn.jpg" alt="" />
 </div>
 
 在前几章接触的 ACT，和本章的 VLA，都是模仿学习（Behavior Cloning）家族，但设计目标不同：
@@ -184,7 +184,7 @@ ACT 的核心技巧是 **Action Chunking**：一次预测未来若干步动作�
 ## 语言条件机器人任务
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18cn/ch18-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-06cn.jpg" alt="" />
 </div>
 
 语言条件（Language-conditioned）任务的标准形式：
@@ -220,7 +220,7 @@ ACT 的核心技巧是 **Action Chunking**：一次预测未来若干步动作�
 ##  单任务、多任务和泛化
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18cn/ch18-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-07cn.jpg" alt="" />
 </div>
 
 | 训练范式 | 说明 | 适用场景 |
@@ -243,7 +243,7 @@ VLA 的「泛化」分几个层次，不要混为一谈：
 ## 连续动作与动作 Token
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18cn/ch18-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-08cn.jpg" alt="" />
 </div>
 
 机器人控制量有两种主流表示：
@@ -282,7 +282,7 @@ action_tokens = [tok_42, tok_17, tok_89, ...]
 ##  VLA 的能力与局限
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18cn/ch18-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-09cn.jpg" alt="" />
 </div>
 
 ## 能力

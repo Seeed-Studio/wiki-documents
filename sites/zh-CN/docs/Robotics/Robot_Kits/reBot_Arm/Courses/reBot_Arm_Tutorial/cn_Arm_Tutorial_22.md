@@ -45,7 +45,7 @@ import 'katex/dist/katex.min.css';
 第 21 章完成了微调与基础真机命令；本章把**推理部署**单独拆开：讲清推理端与控制端如何解耦、同机/分布式怎么选、输入输出如何对齐，以及延迟、异步缓存、安全限位和任务评估。最后用阶段项目「将试管放入左侧试管架」把整条链路跑通。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-01cn.jpg" alt="" />
 </div>
 
 ---
@@ -53,7 +53,7 @@ import 'katex/dist/katex.min.css';
 ##  端到端闭环长什么样
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-02cn.jpg" alt="" />
 </div>
 
 一次成功的 VLA 真机回合，可抽象为固定频率的控制循环：
@@ -95,7 +95,7 @@ import 'katex/dist/katex.min.css';
 ##  推理端和控制端解耦
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-03cn.jpg" alt="" />
 </div>
 
 把系统拆成两端，是为了**实时控制**与**重计算**互不拖累：
@@ -124,7 +124,7 @@ import 'katex/dist/katex.min.css';
 ## 同机部署和分布式部署
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-04cn.jpg" alt="" />
 </div>
 
 ## 同机部署（推荐入门）
@@ -165,7 +165,7 @@ lerobot-rollout \
 ## 相机、状态和语言输入
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-05cn.jpg" alt="" />
 </div>
 
 推理端每次调用需要三类条件输入，缺一不可（或与训练时声明一致）：
@@ -202,7 +202,7 @@ reBot Arm：`single_arm` 6 维 + `gripper` 1 维 = **7 维**，顺序与第 19/2
 ## Action Chunk 输出
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-06cn.jpg" alt="" />
 </div>
 
 GR00T 单次推理输出的不是一个瞬时关节指令，而是**动作块**：
@@ -228,7 +228,7 @@ H = chunk_size / action_horizon   # N1.7 微调常用 40
 ## 网络延迟和推理延迟
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-07cn.jpg" alt="" />
 </div>
 
 端到端延迟 roughly：
@@ -255,7 +255,7 @@ T_e2e ≈ T_capture + T_pack + T_net + T_infer + T_unpack + T_actuate
 ## 动作缓存和异步推理
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-08cn.jpg" alt="" />
 </div>
 
 ## 动作缓存（Action Queue）
@@ -288,7 +288,7 @@ lerobot-rollout \
 ## 真机安全限制
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-09cn.jpg" alt="" />
 </div>
 
 VLA 输出未经物理约束保证，**安全必须由控制层兜底**：
@@ -311,7 +311,7 @@ VLA 输出未经物理约束保证，**安全必须由控制层兜底**：
 ##  VLA 任务评估
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-10cn.jpg" alt="" />
 </div>
 
 ## 评估方式
@@ -343,7 +343,7 @@ VLA 输出未经物理约束保证，**安全必须由控制层兜底**：
 ##  阶段项目：将试管放入左侧试管架
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-22cn/ch22-11cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-22cn/ch22-11cn.jpg" alt="" />
 </div>
 
 ## 项目目标

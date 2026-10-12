@@ -74,7 +74,7 @@ import 'katex/dist/katex.min.css';
 对于 reBot Arm ，仿真不是可选项，而是默认开发路径。工作空间中的`start_fake_bringup.sh` 脚本启动的就是一个纯仿真环境——使用 mock 硬件接口，不需要连接真实机械臂，就可以完成从关节控制到 MoveIt2 运动规划的全部验证。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-35cn/ch35-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-35cn/ch35-01cn.jpg" alt="" />
 </div>
 
 ## 35.2 仿真在开发中的三个核心作用
@@ -98,7 +98,7 @@ import 'katex/dist/katex.min.css';
 一句话关系：控制器发出力矩/位置指令 -> 驱动模型在环境中运动 -> 传感器反馈状态给控制器，形成闭环。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-35cn/ch35-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-35cn/ch35-02cn.jpg" alt="" />
 </div>
 
 在 reBot Arm 的 MJCF 模型中，这三部分都有具体体现：机器人模型——从 `base_link` 开始，通过嵌套的 `<body>` 元素构建完整运动链：
@@ -126,7 +126,7 @@ base_link -> link1 -> link2 -> link3 -> link4 -> link5 -> link6 -> end_link
 ```
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-35cn/ch35-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-35cn/ch35-03cn.jpg" alt="" />
 </div>
 
 场景中包含一张桌子、三个待抓取物体（红色立方体、蓝色方块、黄色圆柱），以及一个mocap 类型的 IK 目标球。这些环境元素使得仿真不仅仅是"看机械臂动"，而是可以在完整的抓取场景中测试 pick-and-place 流程。
@@ -147,7 +147,7 @@ base_link -> link1 -> link2 -> link3 -> link4 -> link5 -> link6 -> end_link
 | Inertial（惯性模型） | 演员的"体重和重心" | 定义质量（mass）、质心位置（origin）和转动惯量（inertia matrix）。决定物理真实感的关键。 | 只有数学参数，无图形。 |
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-35cn/ch35-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-35cn/ch35-04cn.jpg" alt="" />
 </div>
 
 **避坑警告**：很多人图省事把 Visual 直接复制给 Collision，导致仿真卡顿（显卡顶不住）且碰撞检测极不稳定。Collision 必须用凸包（Convex Hull）简化！
@@ -440,7 +440,7 @@ self.declare_parameter("stale_timeout", 1.0)  # 1 秒无数据则停止同步
 | 级别 3 | 预测 | 基于当前负载，虚拟体提前推算出"2 秒后电机可能过载"，在真实世界触发降速保护。 |
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-35cn/ch35-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-35cn/ch35-05cn.jpg" alt="" />
 </div>
 
 **平滑与超时**：数字孪生需要处理真机数据的抖动和中断。`smoothing_alpha` 参数控制跟踪平滑度（1.0 为直接跟踪，小于 1.0 为指数平滑），`stale_timeout` 控制数据超时后的行为。

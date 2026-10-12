@@ -45,7 +45,7 @@ import 'katex/dist/katex.min.css';
 GR00T 是 **跨本体（Cross-embodiment）** 基础模型：它在多种机器人数据上预训练，通过 **Embodiment Tag** 和 **Modality 配置** 区分不同硬件。本章说明 reBot Arm 在 LeRobot + GR00T 栈中的位置，以及推理时各组件如何协作。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-01cn.jpg" alt="" />
 </div>
 
 ---
@@ -53,7 +53,7 @@ GR00T 是 **跨本体（Cross-embodiment）** 基础模型：它在多种机器�
 ##  什么是 Robot Embodiment（机器人本体）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-02cn.jpg" alt="" />
 </div>
 
 **Embodiment（本体）** 描述一台机器人的「物理与控制身份」，包括：
@@ -84,7 +84,7 @@ GR00T 是 **跨本体（Cross-embodiment）** 基础模型：它在多种机器�
 ## 机器人关节、State 和 Action 定义
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-03cn.jpg" alt="" />
 </div>
 
 以 reBot Arm B601（6 轴 + 夹爪）为例：
@@ -126,7 +126,7 @@ action_chunk.shape = (40, 7)   # 40 步 × 7 维
 ## Camera Modality（相机模态）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-04cn.jpg" alt="" />
 </div>
 
 GR00T 以 **视觉为主、语言为辅、状态为补充**。相机配置需与训练数据严格对齐。
@@ -152,7 +152,7 @@ GR00T 以 **视觉为主、语言为辅、状态为补充**。相机配置需与
 ## Language Modality（语言模态）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-05cn.jpg" alt="" />
 </div>
 
 语言在 GR00T 流水线中作为 **条件输入**，与图像 token 一起送入 VLM 骨干。
@@ -191,7 +191,7 @@ GR00T 以 **视觉为主、语言为辅、状态为补充**。相机配置需与
 ##  时间窗口与动作窗口
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-06cn.jpg" alt="" />
 </div>
 
 VLA 推理不是「看一帧、出一个动作」，而是涉及**时间维度的采样设计**：
@@ -219,7 +219,7 @@ VLA 推理不是「看一帧、出一个动作」，而是涉及**时间维度�
 ##  基础模型与微调
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-07cn.jpg" alt="" />
 </div>
 
 ## 基础模型（Foundation Model）
@@ -268,7 +268,7 @@ pip install -e ".[groot]"
 ## GR00T 系统架构（LeRobot 栈）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-08cn.jpg" alt="" />
 </div>
 
 基于 LeRobot 的 reBot GR00T 系统可分为四层：
@@ -316,7 +316,7 @@ pip install -e ".[groot]"
 ## GR00T 推理 Server 与 Robot Control Client
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-09cn.jpg" alt="" />
 </div>
 
 在开发板上跑通时，常把**重计算**与**实时控制**分离：
@@ -359,7 +359,7 @@ LeRobot 默认将推理与 rollout **放在同一进程**（`--device=cuda`）�
 ## reBot Arm 在 GR00T 中的定位
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-19cn/ch19-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-19cn/ch19-10cn.jpg" alt="" />
 </div>
 
 | 项目 | reBot Arm B601 建议配置 |

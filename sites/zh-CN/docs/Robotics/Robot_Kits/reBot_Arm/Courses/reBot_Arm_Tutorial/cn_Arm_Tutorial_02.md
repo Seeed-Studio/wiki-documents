@@ -47,7 +47,7 @@ import 'katex/dist/katex.min.css';
 ## 2.1 reBot Arm 是什么
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-2cn/ch02-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-2cn/ch02-01cn.jpg" alt="" />
 </div>
 
 reBot Arm B601 是由Seeedstudio发布的一款从结构硬件到软件的完全开源的机械臂，是一款面向机器人教学、算法开发和具身智能研究的开源桌面机械臂。它采用模块化机械结构，提供约 750 mm 臂展和 6+1 自由度，通过 USB-CAN 与计算机连接，可用于机械臂控制、机器人视觉、模仿学习和 VLA 等实验。
@@ -79,7 +79,7 @@ reBot Arm B601 提供：
 两个版本采用相似的机械结构和上层软件体系，但使用了不同类型的关节电机。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-2cn/ch02-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-2cn/ch02-02cn.jpg" alt="" />
 </div>
 
 ### **2.3 reBot Arm Dm与reBot Arm RS参数对比**
@@ -93,7 +93,7 @@ reBot Arm 的硬件和软件资料均对外开放。
 GitHub 仓库：[https://github.com/Seeed-Projects/reBot-DevArm/](https://github.com/Seeed-Projects/reBot-DevArm/)
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-2cn/ch02-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-2cn/ch02-03cn.jpg" alt="" />
 </div>
 
 ---

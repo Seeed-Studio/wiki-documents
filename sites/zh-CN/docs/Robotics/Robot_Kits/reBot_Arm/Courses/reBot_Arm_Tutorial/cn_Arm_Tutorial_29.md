@@ -195,12 +195,12 @@ cd ../..
 - 相机固定观察工作区域。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29cn/ch29-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-29cn/ch29-01cn.jpg" alt="" />
 </div>
 - 相机安装在机械臂末端。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29cn/ch29-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-29cn/ch29-02cn.jpg" alt="" />
 </div>
 
 ## 视觉抓取

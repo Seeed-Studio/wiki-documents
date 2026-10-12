@@ -74,7 +74,7 @@ import 'katex/dist/katex.min.css';
 ## 世界坐标系和基坐标系
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23cn/ch23-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-23cn/ch23-01cn.jpg" alt="" />
 </div>
 
 世界坐标系，可以理解为机械臂所处的环境的坐标系，基坐标系以机器人底座建立的坐标系。在rebot arm 的设计中，因为机器人底座是固定的，所以世界坐标系和基坐标系重合。
@@ -82,7 +82,7 @@ import 'katex/dist/katex.min.css';
 例如：机械臂放在桌子上，以机械臂底座中心为原点，桌面为 xy 平面，桌脚垂直方向为 z 轴方向，建立世界坐标系，坐标系遵守右手准则。而基坐标系也与世界坐标系重合。（常用笛卡尔坐标系）
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23cn/ch23-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-23cn/ch23-02cn.jpg" alt="" />
 </div>
 
 **机器人/视觉领域的 XYZ 三轴颜色约定（RGB = XYZ）**
@@ -98,7 +98,7 @@ import 'katex/dist/katex.min.css';
 关节空间坐标系是在机器人控制中最常用到的坐标系。它建立于机器人的关节上，机器人有多少关节，就有多少维度。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23cn/ch23-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-23cn/ch23-03cn.jpg" alt="" />
 </div>
 
 末端坐标系
@@ -106,7 +106,7 @@ import 'katex/dist/katex.min.css';
 - 原点：工具中心点
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23cn/ch23-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-23cn/ch23-04cn.jpg" alt="" />
 </div>
 
 末端坐标系建立在机器人的末端上，另外还有工具坐标系。当我们需要让末端抵达某个位置，则需要关心末端坐标，如果末端上装了夹爪，则我们会关心夹爪的坐标。
@@ -123,7 +123,7 @@ import 'katex/dist/katex.min.css';
 ## 坐标变换的矩阵表示
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23cn/ch23-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-23cn/ch23-05cn.jpg" alt="" />
 </div>
 
 **齐次**表示把"线性变换 + 平移"统一成一个矩阵乘法，
@@ -148,7 +148,7 @@ import 'katex/dist/katex.min.css';
 ## 欧拉角和四元数
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-23cn/ch23-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-23cn/ch23-06cn.jpg" alt="" />
 </div>
 
 **欧拉角和四元数对比**

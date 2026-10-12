@@ -185,7 +185,7 @@ ros2 launch rebotarm_mujoco real2sim.launch.py
 ```
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-36cn/ch36-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-36cn/ch36-01cn.jpg" alt="" />
 </div>
 
 ## **通过 ROS2 launch 启动（带完整环境）**
@@ -231,7 +231,7 @@ ros2 launch rebotarm_mujoco joint_slider_gui.launch.py
 ```
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-36cn/ch36-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-36cn/ch36-02cn.jpg" alt="" />
 </div>
 
 ## **FAQ**

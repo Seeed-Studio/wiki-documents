@@ -48,8 +48,10 @@ import 'katex/dist/katex.min.css';
 
 - reBot DM
 
+<iframe width="600" height="400" src="https://www.youtube.com/embed/llSa6qn3yrY?si=D3ZUoBbih8_qtcFD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 - reBot RS 
 
+<iframe width="600" height="400" src="https://www.youtube.com/embed/llSa6qn3yrY?si=Ejc4Q97tFzURuh1u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 如果你的系统还没有安装PCAN驱动，请看这里[reBot Arm B601-RS Quick Start | Seeed Studio Wiki](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/#software-setup-and-calibration-workflow)
 
 <div className="sensecraft-banner">
@@ -152,7 +154,7 @@ print(torch.cuda.is_available())   # 应输出 True
 - 按照提示，将follower机械臂移动到上图所示的零点,机械臂在组装完成后在相同电脑设备下只需要校准一次，以下是校准指令，参考零位如图（夹爪要完全闭合）。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11cn/ch11-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-11cn/ch11-01cn.jpg" alt="" />
 </div>
 
 **对于DM从臂校准**
@@ -219,7 +221,7 @@ sudo apt remove brltty #移除brltty
 ```
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11cn/ch11-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-11cn/ch11-02cn.jpg" alt="" />
 </div>
 
 按照提示，将leader机械臂移动到上图所示的零点，
@@ -238,13 +240,13 @@ lerobot-calibrate \
 ## 关节映射：方向、范围与夹爪
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11cn/ch11-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-11cn/ch11-03cn.jpg" alt="" />
 </div>
 
 ## 遥操作安全规范
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11cn/ch11-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-11cn/ch11-04cn.jpg" alt="" />
 </div>
 
 ## 启动主从遥操作
@@ -310,7 +312,7 @@ lerobot-teleoperate \
 ## 延迟从哪里来？为什么必然存在？
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11cn/ch11-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-11cn/ch11-05cn.jpg" alt="" />
 </div>
 
 ## 控制频率是多少？能设置吗？

@@ -54,7 +54,7 @@ import 'katex/dist/katex.min.css';
 - 数据采集、训练、推理三套代码怎么共用同一份机械臂控制逻辑？
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-10cn/ch10-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-10cn/ch10-01cn.jpg" alt="" />
 </div>
 
 如果每个人都自己造一遍轮子，机器人学习永远只是少数实验室的游戏。LeRobot 就是 Hugging Face 为解决这个问题做的开源框架——它用 PyTorch 实现了经过验证的模仿学习算法（ACT、smovla、GROOT 等），定义了标准的机器人数据集格式，并提供从遥操作、数据采集、训练到真机部署的完整命令行工具链。
@@ -67,7 +67,7 @@ import 'katex/dist/katex.min.css';
 - 答案是主从遥操作：用一条结构相似、轻便灵活的示教臂作为"输入设备"，人摆主臂，从臂实时跟随。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-10cn/ch10-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-10cn/ch10-02cn.jpg" alt="" />
 </div>
 
 - **Leader Arm（主臂 / 示教臂）**：人手握着动的这条臂。它**只负责读数**——实时读取自己各关节的角度，发送给电脑。它不需要输出力，所以可以用轻量、低成本的舵机方案。
@@ -93,7 +93,7 @@ LeRobot 的第一设计原则：框架不认识任何具体硬件，只定义接
 </callout>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-10cn/ch10-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-10cn/ch10-03cn.jpg" alt="" />
 </div>
 
 ---
@@ -103,7 +103,7 @@ LeRobot 的第一设计原则：框架不认识任何具体硬件，只定义接
 一个控制周期里，到底有哪些数据、以什么格式、走哪条路？ 一台电脑同时挂着三类外设，对应三条数据通路：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-10cn/ch10-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-10cn/ch10-04cn.jpg" alt="" />
 </div>
 
 ---

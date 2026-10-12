@@ -61,11 +61,11 @@ import 'katex/dist/katex.min.css';
 ## **关节空间 vs 笛卡尔空间**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24cn/ch24-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-24cn/ch24-01cn.jpg" alt="" />
 </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24cn/ch24-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-24cn/ch24-02cn.jpg" alt="" />
 </div>
 
 |  | 关节空间 (Joint Space) | 笛卡尔空间 (Cartesian Space) |
@@ -105,7 +105,7 @@ import 'katex/dist/katex.min.css';
 ## **正运动学 vs 逆运动学**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24cn/ch24-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-24cn/ch24-03cn.jpg" alt="" />
 </div>
 
 |  | 正运动学 (FK) | 逆运动学 (IK) |
@@ -138,7 +138,7 @@ import 'katex/dist/katex.min.css';
 **从关节角度计算末端位姿的过程**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24cn/ch24-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-24cn/ch24-04cn.jpg" alt="" />
 </div>
 
 **一句话版本**
@@ -219,7 +219,7 @@ T_1^3 = T_1^2 · T_2^3 → 末端位姿
 ## 逆运动学
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24cn/ch24-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-24cn/ch24-05cn.jpg" alt="" />
 </div>
 
 **从末端位姿计算关节角度的过程**
@@ -367,7 +367,7 @@ $$\dot{q} = J^{-1} \cdot v_{end}$$
 ## **解析 IK vs 数值 IK**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24cn/ch24-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-24cn/ch24-06cn.jpg" alt="" />
 </div>
 
 想象你要算 25 × 4。

@@ -84,7 +84,7 @@ import 'katex/dist/katex.min.css';
 判断一份数据集能不能进训练，看四个维度：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-14cn/ch14-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-14cn/ch14-01cn.jpg" alt="" />
 </div>
 
 ---

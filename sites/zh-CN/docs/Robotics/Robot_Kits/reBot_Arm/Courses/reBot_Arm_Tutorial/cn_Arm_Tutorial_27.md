@@ -72,7 +72,7 @@ import 'katex/dist/katex.min.css';
 ## 章节概述：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-01cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-01cn.jpg" alt="" />
 </div>
 
 机器人视觉是机器人感知外部环境的重要方式。对于机械臂而言，仅仅知道“物体在图片中的位置”是不够的，机器人真正需要的是物体在真实三维空间中的位置。
@@ -89,7 +89,7 @@ import 'katex/dist/katex.min.css';
 因此机器人视觉需要完成一个完整过程：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-02cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-02cn.jpg" alt="" />
 </div>
 
 ## 机器人视觉系统简介
@@ -97,7 +97,7 @@ import 'katex/dist/katex.min.css';
 ## 什么是机器人视觉
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-03cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-03cn.jpg" alt="" />
 </div>
 
 机器人视觉是指机器人利用摄像头等传感设备获取环境信息，并通过算法理解环境，从而完成定位、识别、抓取等任务。与普通计算机视觉不同：
@@ -115,7 +115,7 @@ import 'katex/dist/katex.min.css';
 ## 机械臂视觉抓取流程
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-04cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-04cn.jpg" alt="" />
 </div>
 
 一个完整的视觉抓取系统通常包括：
@@ -144,7 +144,7 @@ import 'katex/dist/katex.min.css';
 ## RGB图像与目标检测
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-05cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-05cn.jpg" alt="" />
 </div>
 
 **（1）RGB图像**
@@ -188,7 +188,7 @@ $u=\frac{x_{1}+x_{2}}{2}$、$v=\frac{y_{1}+y_{2}}{2}$
 ## 为什么机器人需要深度信息
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-06cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-06cn.jpg" alt="" />
 </div>
 
 假设目标中心点：
@@ -206,7 +206,7 @@ $u=\frac{x_{1}+x_{2}}{2}$、$v=\frac{y_{1}+y_{2}}{2}$
 ## 深度图与RGB-D数据
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-07cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-07cn.jpg" alt="" />
 </div>
 
 ## 深度图
@@ -231,7 +231,7 @@ $u=\frac{x_{1}+x_{2}}{2}$、$v=\frac{y_{1}+y_{2}}{2}$
 ## 深度相机原理
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-08cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-08cn.jpg" alt="" />
 </div>
 
 目前机器人视觉中常见三类深度相机有双目相机、结构光相机、TOF相机。
@@ -267,7 +267,7 @@ TOF：Time Of Flight（飞行时间）。
 ## 坐标体系
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-09cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-09cn.jpg" alt="" />
 </div>
 
 机器人视觉涉及三个坐标系：
@@ -295,7 +295,7 @@ TOF：Time Of Flight（飞行时间）。
 ## 相机内参
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-10cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-10cn.jpg" alt="" />
 </div>
 
 为什么需要内参？
@@ -311,7 +311,7 @@ TOF：Time Of Flight（飞行时间）。
 ## 像素坐标转换三维坐标
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-11cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-11cn.jpg" alt="" />
 </div>
 
 已知下列物体信息：
@@ -336,7 +336,7 @@ $$Z=Depth$$
 ## 相机外参与坐标转换
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-12cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-12cn.jpg" alt="" />
 </div>
 
 为什么需要外参？
@@ -363,7 +363,7 @@ $$Z=Depth$$
 ## 点云
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27cn/ch27-13cn.jpg" alt="" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-27cn/ch27-13cn.jpg" alt="" />
 </div>
 
 **点云是什么？**
