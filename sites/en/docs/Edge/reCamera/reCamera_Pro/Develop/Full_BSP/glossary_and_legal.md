@@ -197,7 +197,7 @@ Important documents available only in Chinese include the ROCKIVA SDK, the full 
 | File a Rockchip issue | docs/en/Rockchip_User_Guide_Bug_System_EN.pdf |
 | SDK application and synchronization | docs/en/Rockchip_User_Guide_SDK_Application_And_Synchronization_EN.pdf |
 
-The SDK root also has symbolic links to frequently used documents: Rockchip_RV1126B_Quick_Start_Linux_IPC_SDK_{CN,EN}.pdf, Rockchip_RV1126B_Quick_Start_RT-Thread_MCU_CN.pdf, Copyright_Statement.md, RECAMERA2-IPC-RELEASE-NOTES.md, and RK-RELEASE-NOTES-IPC.txt.
+The SDK root also has symbolic links to frequently used documents: `Rockchip_RV1126B_Quick_Start_Linux_IPC_SDK_{CN,EN}.pdf`, Rockchip_RV1126B_Quick_Start_RT-Thread_MCU_CN.pdf, Copyright_Statement.md, RECAMERA2-IPC-RELEASE-NOTES.md, and RK-RELEASE-NOTES-IPC.txt.
 
 ## Copyright and Compliance
 
