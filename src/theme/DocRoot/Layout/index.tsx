@@ -6,7 +6,6 @@ import BackToTopButton from '@theme/BackToTopButton';
 import DocRootLayoutSidebar from '@theme/DocRoot/Layout/Sidebar';
 import DocRootLayoutMain from '@theme/DocRoot/Layout/Main';
 import type {Props} from '@theme/DocRoot/Layout';
-import DocSidebarVisibilityContext from '../../../components/robotics/DocSidebarVisibilityContext';
 
 import styles from './styles.module.css';
 
@@ -28,30 +27,27 @@ export default function DocRootLayout({children}: Props): ReactNode {
   }, [isRoboticsLandingPage]);
 
   return (
-    <DocSidebarVisibilityContext.Provider
-      value={Boolean(sidebar) && hiddenSidebarContainer && !isRoboticsLandingPage}>
-      <div className={styles.docsWrapper}>
-        <BackToTopButton />
-        <div
-          className={clsx(
-            styles.docRoot,
-            isRoboticsLandingPage && styles.fullWidthPage,
-          )}>
-          {sidebar && !isRoboticsLandingPage && (
-            <DocRootLayoutSidebar
-              sidebar={sidebar.items}
-              hiddenSidebarContainer={hiddenSidebarContainer}
-              setHiddenSidebarContainer={setHiddenSidebarContainer}
-            />
-          )}
-          <DocRootLayoutMain
-            hiddenSidebarContainer={
-              isRoboticsLandingPage || hiddenSidebarContainer
-            }>
-            {children}
-          </DocRootLayoutMain>
-        </div>
+    <div className={styles.docsWrapper}>
+      <BackToTopButton />
+      <div
+        className={clsx(
+          styles.docRoot,
+          isRoboticsLandingPage && styles.fullWidthPage,
+        )}>
+        {sidebar && !isRoboticsLandingPage && (
+          <DocRootLayoutSidebar
+            sidebar={sidebar.items}
+            hiddenSidebarContainer={hiddenSidebarContainer}
+            setHiddenSidebarContainer={setHiddenSidebarContainer}
+          />
+        )}
+        <DocRootLayoutMain
+          hiddenSidebarContainer={
+            isRoboticsLandingPage || hiddenSidebarContainer
+          }>
+          {children}
+        </DocRootLayoutMain>
       </div>
-    </DocSidebarVisibilityContext.Provider>
+    </div>
   );
 }
