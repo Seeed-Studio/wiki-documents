@@ -640,16 +640,23 @@ test("English filter tags and port summaries stay identical to the selection mod
 test("wiki links use a language prefix only when that page exists", () => {
   const guide = "/reComputer_J1010_with_Jetson_getting_start/";
   const hashed = "/sensing_gmsl_cameras/#getting-started";
-  const englishOnly = "/jetson/camera-selection-guide/";
+  const cameraGuide = "/jetson/camera-selection-guide/";
+  const englishOnly = "/page-without-translation/";
   const external = "https://www.seeedstudio.com/reComputer-J4012-p-1.html";
   assert.equal(localizeWikiHref(guide, "en"), guide);
   assert.equal(localizeWikiHref(guide, "zh"), `/cn${guide}`);
   assert.equal(localizeWikiHref(hashed, "es"), `/es${hashed}`);
+  assert.equal(localizeWikiHref(cameraGuide, "en"), cameraGuide);
+  assert.equal(localizeWikiHref(cameraGuide, "zh"), `/cn${cameraGuide}`);
+  assert.equal(localizeWikiHref(cameraGuide, "ja"), `/ja${cameraGuide}`);
+  assert.equal(localizeWikiHref(cameraGuide, "es"), `/es${cameraGuide}`);
+  assert.equal(localizeWikiHref(cameraGuide, "pt"), `/pt-br${cameraGuide}`);
   assert.equal(localizeWikiHref(englishOnly, "ja"), englishOnly);
   assert.equal(localizeWikiHref(external, "pt"), external);
   assert.equal(localizeWikiHref("/ai_roboticsyolov26_dual_camera_system/", "es"), "/ai_roboticsyolov26_dual_camera_system/");
   assert.equal(localizeWikiHref("/rebot_physical_ai_course_chapter_3/", "zh"), "/rebot_physical_ai_course_chapter_3/");
   assert.deepEqual(jetsonDocTarget(guide, "zh"), { kind: "link", href: guide });
+  assert.deepEqual(jetsonDocTarget(cameraGuide, "zh"), { kind: "link", href: cameraGuide });
   assert.deepEqual(jetsonDocTarget(englishOnly, "zh"), { kind: "anchor", href: englishOnly });
   assert.deepEqual(jetsonDocTarget(guide, "en"), { kind: "link", href: guide });
   assert.deepEqual(jetsonDocTarget(external, "ja"), { kind: "link", href: external });
