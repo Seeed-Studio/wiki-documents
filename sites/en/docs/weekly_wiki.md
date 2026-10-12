@@ -18,97 +18,75 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 28th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 12th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Seeed Physical AI Beginner's Course](https://wiki.seeedstudio.com/rebot_physical_ai_course_introduction/)
+### [Jetson Camera Selection Guide](https://wiki.seeedstudio.com/jetson/camera-selection-guide/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/intro/intro-03.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combining robotic arm theory, robotics learning theory, and real hardware practice.
-
-</div>
-
-### [SenseCraft Robotics Software Overview](https://wiki.seeedstudio.com/sensecraft_robotics/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/overview/sensecraft-robotics-official-website-en.webp" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/1/114992260_-preview-19.png" alt="Jetson-compatible CSI camera" width={500} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-SenseCraft™ Robotics is a training and runtime platform for real-world robotic arm tasks. It provides an integrated workflow covering device connection, calibration, data collection, model training, and validation, helping users in education, research, and robotics applications move more quickly from demonstration data to physical actions.
+Find and compare cameras for Jetson-based reComputer and reServer devices. Filter by platform, application, camera interface, resolution, and working distance, then compare two models and check their specifications and setup guides.
 
 </div>
 
-### [Deploy a PREEMPT_RT Real-Time Kernel with a Prebuilt DEB Package on Seeed reComputer Jetson Devices](https://wiki.seeedstudio.com/deploy_preempt_rt_kernel_with_prebuilt_deb_package_on_recomputer_jetson/)
+### Seeed Physical AI Beginner's Course — Robot Arm Mathematics and Control (Chapters 23–26)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/zzd/gpio_square_wave_realtime_kernel.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24/ch24-01.png" alt="Robot arm kinematics and coordinate systems" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-A real-time kernel, also known as a PREEMPT_RT kernel, is a Linux kernel variant with enhanced real-time scheduling capabilities. It reduces scheduling latency and improves task execution determinism, which is critical for workloads such as motor control, sensor data acquisition, and industrial bus communication (CAN, EtherCAT) in robotics, industrial automation, and edge computing scenarios.
+Four new chapters cover coordinate frames and transformations, forward and inverse kinematics, Jacobians, and trajectory planning. The final chapter brings these concepts into practice using Pinocchio and MeshCat with the reBot Arm.
 
-If you prefer to build the PREEMPT_RT kernel from source, please refer to [this wiki](https://wiki.seeedstudio.com/flash_preempt_rt_kernel_on_recomputer_jetson_jetpack_6_2_1/). This guide takes a much simpler path: a single prebuilt DEB package installs the real-time kernel in about one minute, keeps the original standard kernel untouched as a fallback, and lets you switch between the two kernels at any time.
+**New chapters:** [23 — Coordinate Systems](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_23/) · [24 — Kinematics and Jacobian](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_24/) · [25 — Trajectory Planning](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_25/) · [26 — Pinocchio and MeshCat](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_26/).
 
 </div>
 
-### [Reachy Mini × XIAO Screen Motion Control](https://wiki.seeedstudio.com/reachymini_development_cases_sway_screen/)
+### Seeed Physical AI Beginner's Course — Robot Vision and Autonomous Grasping (Chapters 27–30)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reachymini/reachymini_sway_screen_demo.gif" alt="pir" width={400} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01.png" alt="Robot vision and 3D perception" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Combine the **Reachy Mini** robot with the **XIAO ESP32-S3 Plus touch display** — using the built-in IMU sensor (LSM6DS3), tilting the screen controls the robot's body sway, head yaw, and head pitch.
+The latest stage introduces RGB-D sensing, 3D perception, object detection, and hand-eye calibration. It then moves into hands-on visual grasping with the reBot Arm and an optional voice and multimodal interaction project using reSpeaker.
+
+**New chapters:** [27 — Robot Vision](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_27/) · [28 — Object Detection and Calibration](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_28/) · [29 — Autonomous Visual Grasping](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_29/) · [30 — Voice and Multimodal Interaction](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_30/).
 
 </div>
 
-### [Interruptible Conversational Voice AI on the Edge: Build, Deploy, and Measured Results](https://wiki.seeedstudio.com/solutions/conversational-voice-ai/)
+## Existing Wiki Updated
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-respeaker-xvf3800-4-mic-array.jpg" alt="pir" width={800} height="auto" /></p>
+### [Interactive Jetson Product Selection Guide](https://wiki.seeedstudio.com/jetson-product-selection-guide/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.webp" alt="Jetson carrier board" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces an interruptible conversational Voice AI solution for edge devices. It covers the required hardware, local speech processing, acoustic echo cancellation, and integration with OpenAI-compatible backends. It also explains deployment, configuration, and supported interfaces for real-world applications.
+The Jetson product selection guide now has a redesigned interactive tool for filtering systems and carrier boards by hardware requirements. Select configurations, inspect specifications, and compare two products side by side.
 
 </div>
 
-### [On-Device AI Fall Detection: Build, Deploy, and Measured Results](https://wiki.seeedstudio.com/solutions/edge-fall-detection/)
+### [Getting Started with reComputer Rugged J40](https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/panel-dashboard-en-97ba47b3.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J40" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces an on-device AI fall detection solution for fixed-room environments. It covers supported hardware, local detection, RTSP camera integration, and MQTT-based alert delivery. It also explains deployment, alarm handling, and measured performance across different edge platforms.
+The refreshed guide introduces reComputer Rugged J40 configurations, industrial interfaces, and JetPack setup. It highlights the IP66 fanless design, M12 connectivity, and PoE camera support for edge AI applications in demanding environments.
 
 </div>
 
-### [Edge Product Recognition: Build, Deploy, and Measured Results](https://wiki.seeedstudio.com/solutions/edge-product-recognition/)
+### [reBot Arm B601-RS Visual Grasping Demo](https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/shelf-states-c62596bb.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces an edge AI product recognition solution for checkout and shelf monitoring. It covers supported hardware, SKU registration without retraining, local product detection and recognition, and MQTT-based integration. It also explains on-site deployment and measured performance across different edge platforms.
+The updated tutorial brings together two visual grasping workflows for the B601-RS robotic arm, including YOLO-based object detection and a ROS 2-based approach. It covers RGB-D camera setup, calibration, and practical grasping workflows.
 
 </div>
-
-### [Use ZED X-Series GMSL Cameras with reComputer Robotics](https://wiki.seeedstudio.com/zed_x_gmsl_cameras_on_recomputer_robotics/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/zed-gmsl/zed-jp72.gif" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide explains how to use **Stereolabs ZED X-series GMSL2 cameras** with Seeed Studio robotics hardware. Four platforms have been adapted for the ZED X camera family. The complete walkthrough is currently available for **reComputer Robotics J50 Mini**; the other device-specific walkthroughs will be added soon.
-
-</div>
-
-<!-- ## Existing Wiki Updated
-
-### [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/)
-
-We have updated the [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/) guide with the new XIAO_nRF52840_NFC library, expanded antenna tuning instructions, setup verification, and practical NFC tag examples. -->
 
 ## The Efforts of Contributor
 
