@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-10 14:01:58 (北京时间)
-// 多语言页面: 2546 个
+// 生成时间: 2026-10-12 18:32:57 (北京时间)
+// 多语言页面: 2561 个
 
 (function() {
   'use strict';
@@ -1704,6 +1704,13 @@
     "pt"
   ],
   "/jetpack_7_2_unified_platform_iso_sbsa": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/camera-selection-guide": [
     "cn",
     "en",
     "es",
@@ -14089,6 +14096,48 @@
     "pt"
   ],
   "/xiao_topic_page": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_application": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_canfd_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_with_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_with_stm32cubeide": [
     "cn",
     "en",
     "es",
