@@ -45,7 +45,7 @@ const docList = [
   ],
   [
     {
-      "path": "/ai_robotics_recomputer_rugged_j401_cv_demo",
+      "path": "/jetson/recomputer_rugged_j401/industrial_vision",
       "image": "https://files.seeedstudio.com/wiki/rugged/rugged_banner.png",
       "title": "reComputer Rugged J401 for Industrial Vision",
       "date": "2026-09-20",
