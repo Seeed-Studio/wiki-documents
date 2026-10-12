@@ -1,0 +1,82 @@
+.page {
+  --grasp-accent: #2563eb;
+  --grasp-soft: #eff6ff;
+  --grasp-border: var(--ifm-color-emphasis-200);
+  --grasp-muted: var(--ifm-color-emphasis-700);
+  min-width: 0;
+}
+
+:global([data-theme='dark']) .page {
+  --grasp-accent: #93b4ff;
+  --grasp-soft: #202e48;
+}
+
+.methodNumber {
+  display: inline-block;
+  color: var(--grasp-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.selectionHint {
+  color: var(--grasp-muted);
+  line-height: 1.8;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.methodCard {
+  padding: 1.4rem;
+  border: 1px solid var(--grasp-border);
+  border-top: 3px solid var(--grasp-accent);
+  border-radius: 14px;
+  background: var(--ifm-background-surface-color);
+}
+
+.methodCard h3 { margin: 0.65rem 0; font-size: 1.1rem; line-height: 1.5; }
+.methodCard p { color: var(--grasp-muted); font-size: 0.94rem; line-height: 1.8; }
+.methodCard dl { margin: 1rem 0 0; }
+.methodCard dl > div { padding: 0.8rem 0; border-top: 1px solid var(--grasp-border); }
+.methodCard dl > div:last-child { padding-bottom: 0; }
+.methodCard dt { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem; }
+.methodCard dd { margin: 0; color: var(--grasp-muted); font-size: 0.9rem; line-height: 1.75; }
+
+.tutorials { margin: 1rem 0 2.5rem; min-width: 0; }
+.tutorials > :global(.tabs-container) > :global(.tabs) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
+  padding: 0.4rem;
+  gap: 0.4rem;
+  border: 1px solid var(--grasp-border);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+}
+.tutorials > :global(.tabs-container) > :global(.tabs) > :global(.tabs__item) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem 0.75rem;
+  border: 0;
+  border-radius: 8px;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.tutorials > :global(.tabs-container) > :global(.tabs) > :global(.tabs__item--active) { background: var(--grasp-soft); color: var(--grasp-accent); box-shadow: inset 0 0 0 1px var(--grasp-accent); }
+.tutorials > :global(.tabs-container) > :global(.tabs) > :global(.tabs__item:focus-visible) { outline: 2px solid var(--grasp-accent); outline-offset: 2px; }
+.tutorials > :global(.tabs-container) > :global(.margin-top--md) > :global([role='tabpanel']) { padding-top: 0.75rem; }
+.tutorials > :global(.tabs-container) > :global(.margin-top--md) > :global([role='tabpanel'] > h2) { margin-top: 0.5rem; }
+
+@media (max-width: 600px) {
+  .comparison { grid-template-columns: 1fr; }
+  .methodCard { padding: 1.1rem; }
+  .tutorials > :global(.tabs-container) > :global(.tabs) > :global(.tabs__item) { padding: 0.8rem 0.45rem; font-size: 0.88rem; }
+}
