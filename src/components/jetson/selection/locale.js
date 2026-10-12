@@ -66,6 +66,7 @@ const WIKI_TRANSLATED = new Set([
   "/flash/jetpack_to_selected_product/",
   "/how_to_use_camera_imx219/",
   "/j501_carrier_board_interfaces_usage/",
+  "/jetson/camera-selection-guide/",
   "/jetson_fisheye_surround_view_demo/",
   "/lerobot_so100m/",
   "/lerobot_so100m_new/",
