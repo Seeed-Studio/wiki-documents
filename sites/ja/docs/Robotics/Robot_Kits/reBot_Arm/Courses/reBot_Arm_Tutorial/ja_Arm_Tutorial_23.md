@@ -36,9 +36,9 @@ import 'katex/dist/katex.min.css';
       Seeed Physical AI ビギナーコース第23章 — 座標フレームと同次変換：ワールド、ベース、関節、エンドエフェクタおよびカメラフレーム、ベクトルと行列、並進行列と回転行列、変換の連鎖、オイラー角とクォータニオンの比較。
     </p>
     <div className="hero-actions">
-      <a href="#学習目標">Learning objectives</a>
-      <a href="#座標フレーム">Coordinate frames</a>
-      <a href="#同次変換">Homogeneous transforms</a>
+      <a href="#objectives">Learning objectives</a>
+      <a href="#frames">Coordinate frames</a>
+      <a href="#transforms">Homogeneous transforms</a>
     </div>
   </div>
 </section>

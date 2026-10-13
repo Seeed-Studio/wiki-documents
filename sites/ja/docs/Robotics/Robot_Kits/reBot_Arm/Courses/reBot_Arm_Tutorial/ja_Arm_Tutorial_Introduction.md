@@ -40,9 +40,9 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
       統合およびシミュレーションまでを扱います。
     </p>
     <div className="hero-actions">
-      <a href="#コース構成">コース構成</a>
-      <a href="#コース設計">コース設計</a>
-      <a href="#コミュニティ">コミュニティ</a>
+      <a href="#structure">コース構成</a>
+      <a href="#principles">コース設計</a>
+      <a href="#community">コミュニティ</a>
     </div>
   </div>
   <div className="hero-card">

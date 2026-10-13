@@ -35,9 +35,9 @@ import '/src/css/rebot-wiki-style.css';
       datos y las tres fases de entrenamiento, inferencia y evaluación.
     </p>
     <div className="hero-actions">
-      <a href="#por-qué-aprendizaje">Why learning</a>
-      <a href="#distribución-de-datos">Data distribution</a>
-      <a href="#flujo-de-trabajo">Pipeline</a>
+      <a href="#why-learning">Why learning</a>
+      <a href="#data-distribution">Data distribution</a>
+      <a href="#pipeline">Pipeline</a>
     </div>
   </div>
 </section>

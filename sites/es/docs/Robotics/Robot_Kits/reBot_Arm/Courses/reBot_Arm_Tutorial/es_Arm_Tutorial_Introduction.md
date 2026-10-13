@@ -40,9 +40,9 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
       y la simulación.
     </p>
     <div className="hero-actions">
-      <a href="#estructura">Estructura del curso</a>
-      <a href="#principios">Diseño del curso</a>
-      <a href="#comunidad">Comunidad</a>
+      <a href="#structure">Estructura del curso</a>
+      <a href="#principles">Diseño del curso</a>
+      <a href="#community">Comunidad</a>
     </div>
   </div>
   <div className="hero-card">

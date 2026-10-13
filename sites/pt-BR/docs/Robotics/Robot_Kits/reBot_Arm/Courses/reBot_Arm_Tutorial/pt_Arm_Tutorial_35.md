@@ -40,10 +40,10 @@ import 'katex/dist/katex.min.css';
       Capítulo 35 do Curso de Iniciação em IA Física da Seeed — simulação de robôs do zero: por que a simulação é um simulador de voo para robôs, os três elementos centrais (modelo, ambiente, controlador), os avatares visual / de colisão / inercial do modelo do robô, juntas, atuadores e sensores, tamanho do passo de simulação versus frequência de controle, os formatos URDF / MJCF / USD, MuJoCo versus Isaac Sim e o gêmeo digital.
     </p>
     <div className="hero-actions">
-      <a href="#visão-geral">Visão geral do capítulo</a>
-      <a href="#elementos">Elementos centrais</a>
-      <a href="#formatos">URDF, MJCF, USD</a>
-      <a href="#escolher">Escolhendo um simulador</a>
+      <a href="#overview">Visão geral do capítulo</a>
+      <a href="#elements">Elementos centrais</a>
+      <a href="#formats">URDF, MJCF, USD</a>
+      <a href="#choose">Escolhendo um simulador</a>
     </div>
   </div>
 </section>

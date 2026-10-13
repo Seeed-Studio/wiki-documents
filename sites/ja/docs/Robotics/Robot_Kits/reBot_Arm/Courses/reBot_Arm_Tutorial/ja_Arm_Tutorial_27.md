@@ -37,10 +37,10 @@ import 'katex/dist/katex.min.css';
       Seeed Physical AI Beginner's Course の第27章 — ロボットがピクセルから3Dを得る方法：ロボットビジョンパイプライン、RGB-Dセンシング、深度マップ、ステレオ / 構造化光 / TOF深度カメラ、内部パラメータと外部パラメータを持つピンホールカメラモデル、ピクセルから3Dへの変換と点群。
     </p>
     <div className="hero-actions">
-      <a href="#概要">章の概要</a>
-      <a href="#ロボットビジョン">ロボットビジョンシステム</a>
-      <a href="#深度">深度 &amp; RGB-D</a>
-      <a href="#カメラモデル">カメラモデル</a>
+      <a href="#overview">章の概要</a>
+      <a href="#robot-vision">ロボットビジョンシステム</a>
+      <a href="#depth">深度 &amp; RGB-D</a>
+      <a href="#coordinates">カメラモデル</a>
     </div>
   </div>
 </section>

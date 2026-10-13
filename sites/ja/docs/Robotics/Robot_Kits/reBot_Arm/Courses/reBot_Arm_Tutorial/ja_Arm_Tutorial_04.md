@@ -40,8 +40,8 @@ import 'katex/dist/katex.min.css';
       。
     </p>
     <div className="hero-actions">
-      <a href="#安全範囲">安全範囲</a>
-      <a href="#dm-制御モード">制御モード</a>
+      <a href="#safety-range">安全範囲</a>
+      <a href="#dm-control-modes">制御モード</a>
     </div>
   </div>
 </section>

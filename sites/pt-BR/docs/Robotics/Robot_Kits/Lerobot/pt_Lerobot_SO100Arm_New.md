@@ -1646,7 +1646,7 @@ como:
   --robot.id=my_awesome_follower_arm \\
   --display_data=false \\
   --dataset.repo_id=seeed/eval_test123 \\
-  --dataset.single_task="Colocar o bloco de lego na caixa transparente" \\
+  --dataset.single_task="Put lego brick into the transparent box" \\
   --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model`}
 </CodeBlock>
 
@@ -1720,7 +1720,7 @@ Da mesma forma que ao gravar um episódio, é recomendado que você esteja conec
   --robot.port=/dev/ttyACM0 \\
   --robot.cameras=="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \\
   --display_data=true \\
-  --task="Descrição da sua tarefa" \\ # can be skipped for ACT
+  --task="Your task description" \\ # can be skipped for ACT
   --duration=60`}
 </CodeBlock>
 
@@ -1843,7 +1843,7 @@ Consulte [Pi0](https://huggingface.co/docs/lerobot/pi0)
   --robot.id=my_awesome_follower_arm \\
   --display_data=false \\
   --dataset.repo_id=seeed/eval_test123 \\
-  --dataset.single_task="Colocar o bloco de lego na caixa transparente" \\
+  --dataset.single_task="Put lego brick into the transparent box" \\
   --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model`}
 </CodeBlock>
 
@@ -1889,7 +1889,7 @@ Consulte [Pi0.5](https://huggingface.co/docs/lerobot/pi05)
   --robot.id=my_awesome_follower_arm \\
   --display_data=false \\
   --dataset.repo_id=seeed/eval_test123 \\
-  --dataset.single_task="Colocar o bloco de lego na caixa transparente" \\
+  --dataset.single_task="Put lego brick into the transparent box" \\
   --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model`}
 </CodeBlock>
 

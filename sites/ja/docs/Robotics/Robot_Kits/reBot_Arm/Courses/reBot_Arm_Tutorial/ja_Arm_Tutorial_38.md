@@ -40,10 +40,10 @@ import 'katex/dist/katex.min.css';
       Seeed Physical AI Beginner's Course 第38章 — Isaac Sim で reBot Arm を動かす：Isaac Sim のインストールと起動、シーン構造、USD の基礎、URDF Importer によるアームのインポート、リンク・ジョイント・ビジュアル・コリジョンの確認、Articulation Root と Joint Drive の設定、剛性と減衰、グリッパのリンク構造、床と作業台、Python 制御、そして 4 つの練習デモ。
     </p>
     <div className="hero-actions">
-      <a href="#概要">章の概要</a>
-      <a href="#USD-基礎">USD の基礎</a>
-      <a href="#アームをインポート">アームをインポート</a>
-      <a href="#練習デモ">練習デモ</a>
+      <a href="#overview">章の概要</a>
+      <a href="#usd">USD の基礎</a>
+      <a href="#import">アームをインポート</a>
+      <a href="#demos">練習デモ</a>
     </div>
   </div>
 </section>

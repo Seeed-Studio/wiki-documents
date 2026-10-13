@@ -41,7 +41,7 @@ import 'katex/dist/katex.min.css';
     </p>
     <div className="hero-actions">
       <a href="#rango-de-seguridad">Safety range</a>
-      <a href="#modos-de-control-dm">Control modes</a>
+      <a href="#dm-control-modes">Control modes</a>
     </div>
   </div>
 </section>

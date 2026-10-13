@@ -36,8 +36,8 @@ import '/src/css/rebot-wiki-style.css';
       汎化、連続アクション vs アクショントークン、そして VLA の能力と限界について解説します。
     </p>
     <div className="hero-actions">
-      <a href="#VLM-と-VLA-の違い">VLM vs VLA</a>
-      <a href="#ACT-と-VLA-の違い">ACT vs VLA</a>
+      <a href="#vlm-vla">VLM vs VLA</a>
+      <a href="#act-vla">ACT vs VLA</a>
       <a href="#能力">Capabilities</a>
     </div>
   </div>

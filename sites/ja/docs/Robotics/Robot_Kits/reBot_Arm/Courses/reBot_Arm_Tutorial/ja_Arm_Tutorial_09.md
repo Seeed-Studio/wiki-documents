@@ -35,9 +35,9 @@ import '/src/css/rebot-wiki-style.css';
       分布、そして学習・推論・評価という3つのフェーズについて学びます。
     </p>
     <div className="hero-actions">
-      <a href="#なぜ学習が必要か">Why learning</a>
-      <a href="#データ分布">Data distribution</a>
-      <a href="#パイプライン">Pipeline</a>
+      <a href="#why-learning">Why learning</a>
+      <a href="#data-distribution">Data distribution</a>
+      <a href="#pipeline">Pipeline</a>
     </div>
   </div>
 </section>
