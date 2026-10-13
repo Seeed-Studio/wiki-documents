@@ -45,6 +45,28 @@ import 'katex/dist/katex.min.css';
   </div>
 </section>
 
+### Hardware necesario para esta etapa
+
+Lo que hay que preparar para esta etapa. La lista completa de todas las etapas está en [el capítulo 3](/es/rebot_physical_ai_course_chapter_3/).
+
+**Unidad de control principal**
+
+| Artículo | Comprar | Cant. |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+También se requiere un sobremesa o portátil: Ubuntu 22.04, GTX 4080 o superior con 12 GB+ de VRAM y 16 GB+ de RAM.
+
+**Para esta etapa**
+
+| Artículo | Comprar | Cant. |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+| [Cámara de profundidad Realsense 435i u Orbbec Gemini2 o cámara estéreo Realsense 405](https://www.seeedstudio.com/Intel-RealSense-Depth-Camera-D435i-p-4423.html) | 🛒 | 1 |
+| [Soporte de muñeca para cámara](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/D435_Gemini2_Mount.step) | 🛒 | 1 |
+
+
 {/* TODO: the original document opened Chapter 27 with a walkthrough video (《理论》.mp4 / 【理论】.mp4). The file is not in 图片和附件/ yet — upload it to the course CDN and link it here once it is available. */}
 <a id="overview"></a>
 

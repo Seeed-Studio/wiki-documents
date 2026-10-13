@@ -45,6 +45,28 @@ import 'katex/dist/katex.min.css';
   </div>
 </section>
 
+### このステージで必要なハードウェア
+
+このステージで用意するもの。全ステージの一覧は[第 3 章](/ja/rebot_physical_ai_course_chapter_3/)にあります。
+
+**メイン制御ユニット**
+
+| 項目 | 購入 | 数量 |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+デスクトップまたはノート PC も必要です:Ubuntu 22.04、GTX 4080 以上(VRAM 12GB 以上)、メモリ 16GB 以上。
+
+**このステージ**
+
+| 項目 | 購入 | 数量 |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+| [Realsense 435i または Orbbec Gemini2 深度カメラ または Realsense 405 ステレオカメラ](https://www.seeedstudio.com/Intel-RealSense-Depth-Camera-D435i-p-4423.html) | 🛒 | 1 |
+| [カメラ用リストマウント](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/D435_Gemini2_Mount.step) | 🛒 | 1 |
+
+
 {/* TODO: 元のドキュメントでは、第27章の冒頭にウォークスルー動画（《理论》.mp4 / 【理论】.mp4）がありました。このファイルはまだ 图片和附件/ にありません — コースの CDN にアップロードされ利用可能になったら、ここにリンクしてください。 */}
 <a id="overview"></a>
 
