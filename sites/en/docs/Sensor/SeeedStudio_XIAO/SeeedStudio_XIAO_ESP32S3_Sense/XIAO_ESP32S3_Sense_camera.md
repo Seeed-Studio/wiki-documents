@@ -1845,11 +1845,11 @@ The example code in this Wiki is tuned for the best possible image quality — U
 |---|---|---|---|
 | CPU frequency | Arduino IDE: `Tools → CPU Frequency: 240MHz` → `160MHz` (or add `setCpuFrequencyMhz(160);` in `setup()`) | Medium | No (sensor imaging and JPEG encoding are done inside the OV5640, independent of the CPU) |
 | Focus frequency | Switch continuous auto-focus (`autoFocusMode`) to periodically triggered single-shot focus, or lengthen the focus interval | Small | Unchanged for still scenes; moving scenes take longer to re-focus |
-| Frame grabbing | `CAMERA_GRAB_LATEST` → `CAMERA_GRAB_WHEN_EMPTY` (the camera only writes frames into free buffers, so with `fb_count = 1` it stops overwriting the buffer while your code holds the frame, instead of continuously replacing it) | Medium | The frame you grab may be a few frames older than with `CAMERA_GRAB_LATEST`; sharpness is unaffected |
+| Frame grabbing | `CAMERA_GRAB_LATEST` → `CAMERA_GRAB_WHEN_EMPTY` (the camera fills available buffers, which reduces the continuous frame processing; it is not on-demand capture and does not put the sensor in standby) | Medium | The frame you grab may be a few frames older than with `CAMERA_GRAB_LATEST`; sharpness is unaffected |
 | Resolution | `FRAMESIZE_UXGA` (1600×1200) → `FRAMESIZE_HD` (1280×720) or `SVGA` (800×600) | Large | Fewer pixels, so less detail when enlarged (per-pixel sharpness is unchanged) |
 | Double buffering | `fb_count` from 2 to 1 (together with the grab-mode change above) | Medium | No |
 
-> The best-value combination is to change "always grabbing UXGA" into "grabbing HD only when needed" — that is, `CAMERA_GRAB_WHEN_EMPTY` plus one step down in resolution. The temperature drops noticeably, with almost no impact on the sharpness of single captures.
+> The best-value combination is to use a lower resolution and a single frame buffer to reduce capture-processing overhead — that is, one step down in resolution plus `CAMERA_GRAB_WHEN_EMPTY` with `fb_count = 1`. The temperature drops noticeably, with almost no impact on the sharpness of single captures. Note that `CAMERA_GRAB_WHEN_EMPTY` fills available buffers; it does not provide on-demand sensor capture or standby.
 
 ### Method 2: Reduce power by lowering the IO drive capability
 :::tip
