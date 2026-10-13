@@ -1081,3 +1081,233 @@ html[data-theme='dark'] .rebot-buy-button-group:hover .rebot-buy-button-glow {
     grid-column: auto;
   }
 }
+
+/* === SenseCraft Robotics promo banner === */
+/* Self-contained: works on the robotics landing page (--rp-* tokens) and on the course pages
+   (--rb-* tokens) without depending on either. */
+.sensecraft-banner {
+  --sc-accent: #2563eb;
+  --sc-accent-2: #14b8a6;
+  --sc-surface: #ffffff;
+  --sc-surface-soft: #f6f9ff;
+  --sc-text: #0f172a;
+  --sc-muted: #5b6b82;
+  --sc-border: rgba(37, 99, 235, 0.22);
+  --sc-shadow: 0 14px 34px rgba(37, 99, 235, 0.14);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.25rem 1.5rem;
+  align-items: center;
+  margin: 1.25rem 0 1.75rem;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid var(--sc-border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.13), transparent 42%),
+    radial-gradient(circle at 100% 100%, rgba(20, 184, 166, 0.14), transparent 46%),
+    linear-gradient(180deg, var(--sc-surface), var(--sc-surface-soft));
+  box-shadow: var(--sc-shadow);
+}
+
+html[data-theme='dark'] .sensecraft-banner {
+  --sc-accent: #60a5fa;
+  --sc-accent-2: #2dd4bf;
+  --sc-surface: #1b1f27;
+  --sc-surface-soft: #232936;
+  --sc-text: #f8fafc;
+  --sc-muted: #a8b2c3;
+  --sc-border: rgba(96, 165, 250, 0.28);
+  --sc-shadow: 0 16px 36px rgba(0, 0, 0, 0.34);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(96, 165, 250, 0.18), transparent 42%),
+    radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.16), transparent 46%),
+    linear-gradient(180deg, var(--sc-surface), var(--sc-surface-soft));
+}
+
+.sensecraft-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.55rem;
+  padding: 0.22rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid var(--sc-border);
+  background: rgba(37, 99, 235, 0.10);
+  color: var(--sc-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+html[data-theme='dark'] .sensecraft-banner__badge {
+  background: rgba(96, 165, 250, 0.16);
+}
+
+.sensecraft-banner__title {
+  margin: 0 0 0.3rem;
+  color: var(--sc-text);
+  font-size: 1.16rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.sensecraft-banner__lead {
+  margin: 0 0 0.7rem;
+  color: var(--sc-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.sensecraft-banner__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sensecraft-banner__points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--sc-border);
+  background: var(--sc-surface);
+  color: var(--sc-text);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.sensecraft-banner__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-width: 210px;
+}
+
+.sensecraft-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--sc-accent), var(--sc-accent-2));
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none !important;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.sensecraft-banner__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.34);
+  color: #ffffff !important;
+}
+
+.sensecraft-banner__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--sc-border);
+  background: var(--sc-surface);
+  color: var(--sc-accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.sensecraft-banner__link:hover {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--sc-accent);
+}
+
+@media (max-width: 720px) {
+  .sensecraft-banner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sensecraft-banner__actions {
+    min-width: 0;
+  }
+}
+
+/* === SO-ARM buy-now panel === */
+/* Centred inside a soft gradient frame that matches the course design tokens.  The colors have
+   literal fallbacks so the panel still looks right on pages that do not set the --rb-* tokens. */
+.get-one-now-panel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto 1.75rem;
+  padding: 1.6rem 1.25rem;
+  max-width: 520px;
+  border: 1px solid var(--rb-border, rgba(148, 163, 184, 0.28));
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.10), transparent 62%),
+    linear-gradient(180deg, var(--rb-surface, #ffffff), var(--rb-surface-soft, #f8fafc));
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.08),
+    0 0 0 6px rgba(37, 99, 235, 0.06);
+  overflow: hidden;
+}
+
+/* accent hairline along the top edge */
+.get-one-now-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #14b8a6);
+}
+
+.get-one-now-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+  color: #ffffff !important;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-decoration: none !important;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.get-one-now-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.34);
+  color: #ffffff !important;
+}
+
+html[data-theme='dark'] .get-one-now-panel {
+  border-color: rgba(96, 165, 250, 0.28);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(96, 165, 250, 0.16), transparent 62%),
+    linear-gradient(180deg, #1b1f27, #232936);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.34);
+}
+
+@media (max-width: 600px) {
+  .get-one-now-panel {
+    padding: 1.25rem 1rem;
+  }
+  .get-one-now-button {
+    width: 100%;
+    padding: 0.8rem 1.25rem;
+  }
+}
