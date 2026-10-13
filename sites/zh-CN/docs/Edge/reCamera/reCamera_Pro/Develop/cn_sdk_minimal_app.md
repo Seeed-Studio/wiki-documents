@@ -1,140 +1,189 @@
 ---
-description: 设置 reCamera Pro SDK 交叉编译环境，并通过 Visual Wake + STT 项目这一完整示例，演示如何构建和部署一个最小原生应用。
-title: SDK 与最小应用
+description: 安装 reCamera Pro 交叉编译 SDK，为 RV1126B 构建一个小型 C++ 程序，检查生成的二进制文件，并在设备上运行。
+title: 设置 reCamera Pro 交叉编译 SDK
 keywords:
-  - reCamera
   - reCamera Pro
   - RV1126B
   - SDK
   - 交叉编译
+  - CMake
   - RKNN
-  - GStreamer
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_sdk_setup
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 09/21/2026
-  author: MOSS
+  date: 10/12/2026
+  author: Seeed Studio
 url: https://wiki.seeedstudio.com/cn/recamera_pro_sdk_setup/
-createdAt: '2026-09-23'
-updatedAt: '2026-09-23'
+createdAt: '2026-09-21'
+updatedAt: '2026-10-12'
 ---
 
-# SDK 与最小应用
+# 设置 reCamera Pro 交叉编译 SDK
 
-本页说明如何在主机上准备用于构建 reCamera Pro 原生应用的环境，以及完整的构建与部署循环是如何工作的。文中以 [Visual Wake and Offline Speech Recognition](/cn/recamera_pro_visual_wake_stt/) 项目为示例，这是一个完全在设备上运行的真实 RKNN + GStreamer 应用。
+本指南使用 [reCamera Pro 交叉编译 SDK](https://github.com/Seeed-Projects/recamera_pro_toolchain) 在 Linux PC 或 WSL 上构建一个小型 C++ 程序，然后在 reCamera Pro 上运行。你将安装编译器和目标库，构建示例，检查它是 ARM 64 位程序，并将其复制到相机上。
 
-有关通用开发约定（工具链版本、模型格式、编程语言），请参阅 [选择开发路径](/cn/recamera_pro_dev_path/)。如果你更希望由 AI 编码代理驱动此工作流，请参阅 [使用 AI 编码代理开发](/cn/recamera_pro_development_cpp_skill/)。
+> 此 SDK 适用于搭载 Rockchip RV1126B 处理器的 reCamera Pro。它不适用于 SG2002/RISC-V reCamera。
 
-## 前置条件
+## 你需要准备什么
 
-- 一台可通过 USB 虚拟以太网（默认 `192.168.42.1`）或局域网访问的 reCamera Pro（RV1126B，aarch64）
-- 一台 Linux 电脑，或带有 WSL 的 Windows 电脑，用于模型转换和交叉编译
-- 主机上已安装可用的 reCamera Pro SDK
-- RKNN-Toolkit2 2.3.2 和 RKNN Runtime 2.3.2 —— 不要混用任意 RKNN Runtime 版本
+- 运行量产固件的 reCamera Pro
+- 一台 Linux PC，或安装了 WSL 2 和 Ubuntu 的 Windows PC
+- 主机可以访问 GitHub Releases 的网络，用于下载 SDK 资源（安装后约 2.5 GB）
+- CMake、Ninja 和 `pkg-config`
+- 用于部署步骤的 reCamera Pro SSH 访问权限
 
-{/* TODO(verify): document where to download the reCamera Pro SDK, its expected directory layout, and how to verify the SDK version; the source project only references a local SDK path */}
+该 SDK 以 64 位 ARM Linux 为目标，提供 Rockchip GCC 12.4.0 编译器、目标 sysroot、GStreamer 1.22 开发文件以及 RKNN API/运行时 2.3.2。模型转换是单独进行的：在 x86_64 主机上使用 RKNN-Toolkit2 2.3.2 并设置 `target_platform='rv1126b'` 来转换 ONNX 模型。
 
-## 配置 SDK 路径
+## 1. 安装 SDK
 
-reCamera Pro 项目中的构建脚本通常通过环境变量定位 SDK。对于 Visual Wake 项目，`scripts/build_recamera.sh` 会在默认本地路径查找 SDK；请将其指向你自己的 SDK 检出目录：
-
-```bash
-export RECAMERA_PRO_SDK=/absolute/path/to/recamera-pro-sdk
-```
-
-构建脚本还会验证 `librknnrt.so`。如果你的 SDK 或 runtime 将其存放在其他位置，请在脚本中将 `qualified_rknnrt` 路径更新为已验证的 RKNN 2.3.2 runtime，同时保留校验和验证步骤。
-
-## 获取项目并交叉编译
-
-克隆项目仓库，并在项目根目录运行其交叉构建脚本：
+安装主机工具并克隆 SDK 仓库：
 
 ```bash
-git clone https://github.com/yyling0101-a11y/recamera_pro_face_stt.git
-cd recamera_pro_face_stt
-bash scripts/build_recamera.sh
+sudo apt update
+sudo apt install -y git cmake ninja-build pkg-config
+git clone https://github.com/Seeed-Projects/recamera_pro_toolchain.git
+cd recamera_pro_toolchain
 ```
 
-脚本会验证 SDK，加载其构建环境，并生成一个部署包：
-
-```text
-build-recamera/deploy/
-├── visual_wake_app
-├── models/
-│   ├── scrfd_500m_640_fp16.rknn
-│   ├── pfld_98_112_fp16.rknn
-│   └── stt/                         # encoder, decoder, joiner, and vocabulary
-└── web/dashboard.html
-```
-
-你自己编写的最小应用也遵循相同结构：一个 aarch64 可执行文件、其 RKNN 模型文件，以及任意 Web 或配置资源，全部放在同一个目录中。
-
-## 部署到设备
-
-将部署目录中的**内容**复制到设备上的某个单一目录中，然后通过 SSH 连接并将二进制文件设为可执行：
+下载并验证带版本号的编译器和 sysroot，然后加载 SDK 环境：
 
 ```bash
-scp -r build-recamera/deploy/* root@192.168.42.1:/userdata/visual-wake/
+./scripts/setup.sh
+source scripts/env.sh
+bash scripts/check-sdk.sh
+```
+
+`setup.sh` 会将 SDK 资源安装到仓库的 `toolchain/` 和 `sysroot/` 目录中，并检查它们的 SHA-256 校验和。在网络连接较慢时，下载可能需要一些时间。在配置项目之前，每个新终端中都需要再次运行 `source scripts/env.sh`。
+
+## 2. 构建随 SDK 提供的示例
+
+首先构建随附的冒烟测试示例。它会链接 RKNN Runtime、OpenCV 和 GStreamer，因此可以检查 SDK 是否能找到主要的目标库。
+
+在仓库根目录下执行：
+
+```bash
+source scripts/env.sh
+cmake -S examples/sdk_smoke -B examples/sdk_smoke/build -G Ninja
+cmake --build examples/sdk_smoke/build
+```
+
+可执行文件会生成在 `examples/sdk_smoke/build/` 下。如果 CMake 之前已经使用你的主机编译器配置过该构建目录，请删除该构建目录，并在使用 SDK 构建之前重新配置。
+
+## 3. 构建一个小型 C++ 应用
+
+你可以在自己的 CMake 项目中使用该 SDK。创建一个与 `recamera_pro_toolchain` 同级的项目目录：
+
+```bash
+mkdir -p ~/my-recamerapro-app
+cd ~/my-recamerapro-app
+```
+
+创建 `main.cpp`：
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello from reCamera Pro" << std::endl;
+    return 0;
+}
+```
+
+创建 `CMakeLists.txt`：
+
+```cmake
+cmake_minimum_required(VERSION 3.16)
+project(my_recamera_app LANGUAGES CXX)
+
+add_executable(my_recamera_app main.cpp)
+```
+
+加载 SDK 环境，然后进行配置和构建。如果你在其他位置克隆了 SDK，请替换下面的路径：
+
+```bash
+cd ~/my-recamerapro-app
+source ~/recamera_pro_toolchain/scripts/env.sh
+cmake -S . -B build -G Ninja
+cmake --build build
+```
+
+该环境会为 CMake 选择 aarch64 交叉编译器和目标 sysroot。对于使用 RKNN 或 GStreamer 的项目，请参考 SDK 仓库中的 [CMake 集成示例](https://github.com/Seeed-Projects/recamera_pro_toolchain#minimal-cmake-integration) 来查找并链接目标库。
+
+## 4. 检查可执行文件
+
+在将程序复制到相机之前，先确认它是为正确的处理器构建的，并且不包含主机路径：
+
+```bash
+file build/my_recamera_app
+source ~/recamera_pro_toolchain/scripts/env.sh
+"${CROSS_COMPILE}readelf" -l build/my_recamera_app | grep interpreter
+"${CROSS_COMPILE}readelf" -d build/my_recamera_app | grep -E 'NEEDED|RPATH|RUNPATH'
+```
+
+检查以下结果：
+
+- `file` 报告为 ARM aarch64，而不是 x86-64 或 RISC-V。
+- ELF 解释器为 `/lib/ld-linux-aarch64.so.1`。
+- 任意运行时搜索路径指向 `/oem/usr/lib`；其中不包含主机或 WSL 路径。
+
+SDK 的工具链文件会将设备运行时路径设置为 `/oem/usr/lib`。不要向可执行文件中添加来自主机、SDK 目录或构建目录的绝对路径。
+
+## 5. 复制到 reCamera Pro 并运行
+
+通过 USB 虚拟以太网或局域网连接到相机。如果你的相机使用不同的 IP 地址，请将下面的 `192.168.42.1` 替换为实际地址。为程序创建一个目录并复制可执行文件：
+
+```bash
+ssh root@192.168.42.1 'mkdir -p /userdata/my-recamerapro-app'
+scp build/my_recamera_app root@192.168.42.1:/userdata/my-recamerapro-app/
 ssh root@192.168.42.1
-cd /userdata/visual-wake
-chmod +x visual_wake_app
 ```
 
-:::tip
-保持 `models/` 和 `web/` 目录的相对路径不变。应用会使用这些默认相对路径加载其资源。
-:::
-
-## 运行与验证
-
-从部署目录中运行该应用：
+在相机上运行它：
 
 ```bash
-./visual_wake_app
+cd /userdata/my-recamerapro-app
+chmod +x my_recamera_app
+./my_recamera_app
 ```
 
-在正常运行期间，可执行的事件会显示在终端中：
+预期输出：
 
 ```text
-VISUAL_WAKE track=1
-STT_RESULT 打开灯
+Hello from reCamera Pro
 ```
 
-使用 `--help` 可列出所有运行时选项。例如，下面的命令仅验证视觉处理流水线并禁用网络服务：
+只复制你的应用程序及其所需的资源文件。不要覆盖 `/oem/usr/lib/librknnrt.so`；SDK 中的 RKNN Runtime 仅用于链接，并已与量产设备运行时进行过比对。
 
-```bash
-./visual_wake_app --no-stt --no-rtsp --no-web --debug
-```
+## 故障排查
 
-成功部署意味着：二进制文件能在设备上启动，加载其 RKNN 模型，打开摄像头，并打印可识别的事件或推理输出。
+| 现象 | 需要检查的内容 |
+| --- | --- |
+| `setup.sh` 无法下载某个资源 | 检查主机的网络连接并重新运行 `./scripts/setup.sh`。该脚本会验证已下载文件的校验和。 |
+| CMake 选择了主机编译器 | 在同一终端中运行 `source scripts/env.sh`，使用一个全新的构建目录，然后重新配置。 |
+| `pkg-config` 找到的是主机库 | 在配置之前加载 `scripts/env.sh`；它会将 `pkg-config` 指向 SDK 的 sysroot。 |
+| 设备上出现 `Exec format error` | 对可执行文件运行 `file`，确认其报告为 ARM aarch64。 |
+| 运行时缺少某个共享库 | 检查可执行文件的 `NEEDED` 条目，并确认所需库存在于设备固件中。不要将主机库复制到设备上。 |
 
-## 常见环境问题
-
-| 问题 | 可能原因 | 解决方案 |
-| --- | --- | --- |
-| 构建时找不到 OpenCV 或 RKNN | SDK 环境缺失或 runtime 不兼容 | 验证 `RECAMERA_PRO_SDK`，加载 SDK 的 `env.sh`，并使用 RKNN 2.3.2 |
-| 运行时找不到模型文件 | 部署目录结构未被保留 | 确认执行目录中存在 `models/` 和 `web/` |
-| 可执行文件是 x86-64 | 使用了主机编译器而非 aarch64 交叉编译器 | 使用与目标兼容的编译器和 reCamera Pro sysroot 重新构建 |
-| 二进制文件无法加载某个库 | Sysroot、ABI 或 runtime 搜索路径与开发板不匹配 | 检查 ELF 依赖，并将每个目标库与设备上的库进行对比 |
-
-{/* TODO(verify): add expected output of a version check command (SDK version, librknnrt.so version on device) so users can confirm host and device compatibility before deploying */}
+SDK 的 sysroot 使用的 libc 提供了直到 GLIBC 2.38 的符号。在宣称与不同固件版本兼容之前，请检查固件 ABI。成功的交叉构建仅确认编译和链接通过；它并不验证你的应用在相机上的运行情况、模型精度或运行时行为。
 
 ## 后续步骤
 
-- [摄像头、音频与推理开发](/cn/recamera_pro_media_dev/) —— GStreamer 摄像头采集、ALSA 音频和 RTSP 输出细节
-- [使用 AI 编码代理开发](/cn/recamera_pro_development_cpp_skill/) —— 使用 AI 代理自动化模型转换和原生构建
-- [Visual Wake and Offline Speech Recognition](/cn/recamera_pro_visual_wake_stt/) —— 本页所用的完整示例
+- [reCamera Pro SDK 仓库](https://github.com/Seeed-Projects/recamera_pro_toolchain) — SDK 安装脚本、CMake 集成以及 `sdk_smoke` 示例
+- [相机、音频与推理开发](/cn/recamera_pro_media_dev/) — GStreamer 相机采集、音频和 RTSP
+- [选择开发路径](/cn/recamera_pro_dev_path/) — 为你的项目选择合适的开发流程
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中体验顺畅。你可以选择最适合自己的支持渠道。
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div className="button_tech_support_container">
+  <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+  <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div className="button_tech_support_container">
+  <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
 </div>

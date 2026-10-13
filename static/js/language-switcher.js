@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-12 18:32:57 (北京时间)
-// 多语言页面: 2561 个
+// 生成时间: 2026-10-13 13:41:15 (北京时间)
+// 多语言页面: 2548 个
 
 (function() {
   'use strict';
@@ -3978,27 +3978,6 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_ha_sound_alert_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_imu_tilt_shake_detection_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_visual_wake_stt_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/recamera_pro_ai_inference": [
     "cn",
     "en",
@@ -4153,6 +4132,118 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_ai_npu_development": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_app_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_audio_development": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_build_environment": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_device_debug": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_download": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_flash_boot": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_full_build": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_sdk_reference": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_ota_release": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_services": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_sdk_source_notes": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_source_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_system_customization": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_bsp_troubleshooting": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_video_isp_development": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_gpio_guide": [
     "cn",
     "en",
@@ -4209,27 +4300,6 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_faqs_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_hardware_specifications_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_getting_started_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/recamera_pro_getting_started": [
     "cn",
     "en",
@@ -4245,41 +4315,6 @@
     "pt"
   ],
   "/recamera_pro_wifi_access": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_gpio_guide_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_imu_usage_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_mipi_dsi_screen_usage_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_speaker_usage_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_uart_usage_legacy": [
     "cn",
     "en",
     "es",
@@ -4363,125 +4398,6 @@
     "ja",
     "pt"
   ],
-  "/recamera_pro_api_device-and-system_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_api_network_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_api_authentication_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_api_common_conventions_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_api_error_codes_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_api_faq_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_api_introduction_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_api_quick_start_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_debian_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_development_cpp_skill_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_rknn_model_conversion_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_ai_inference_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_device_info_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_live_preview_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_live_view_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_record_settings_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_terminal_legacy": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/recamera_pro_api_faq": [
     "cn",
     "en",
@@ -4497,13 +4413,6 @@
     "pt"
   ],
   "/recamera_pro_faqs": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recamera_pro_acoustic_lab_usage_legacy": [
     "cn",
     "en",
     "es",
