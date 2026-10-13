@@ -128,7 +128,7 @@ Check the boot sequence with:
 | Symptom | Cause | Resolution |
 | --- | --- | --- |
 | Sample cannot open VI / device node is busy | `rkipc` already owns the device | Run `sh /oem/usr/bin/RkLunch-stop.sh`, then retry; restore the service when finished |
-| Image is all black or green | Sensor not detected or IQ file missing | Run `dmesg | grep -i <sensor>` and check `/oem/usr/share/iqfiles/` |
+| Image is all black or green | Sensor not detected or IQ file missing | Run `dmesg | grep -i [sensor]` and check `/oem/usr/share/iqfiles/` |
 | Wrong colors or heavy noise | IQ file does not match the sensor | Compare `RK_CAMERA_SENSOR_IQFILES` with the installed sensor |
 | Cannot receive the RTSP stream | go2rtc has not enabled external port 554 | Check `[video.0.rtsp] enable` in `/userdata/config/rkipc.ini`, then restart `S50go2rtc` |
 | Web UI shows video but an external player does not | go2rtc API is bound to 127.0.0.1 | Use WebRTC on `:8555` or forward port `1984` over SSH |
