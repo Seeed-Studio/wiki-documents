@@ -27,9 +27,9 @@ const MANIFEST_PATH = path.join(path.dirname(new URL(import.meta.url).pathname),
 
 const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 
-test('manifest: exactly 29 approved entries, all PUBLISH, no BLOCK', () => {
+test('manifest: exactly 30 approved entries, all PUBLISH, no BLOCK', () => {
   const manifest = loadManifest();
-  assert.strictEqual(manifest.entries.length, 29);
+  assert.strictEqual(manifest.entries.length, 30);
   for (const entry of manifest.entries) {
     assert.strictEqual(entry.publicationDecision, 'PUBLISH');
   }
@@ -91,10 +91,10 @@ test('render: only products with approved entries produce pages (no empty pages)
   }
 });
 
-test('render: FAQ counts per product (XVF3800=12, Lite=8, Flex=4, Pi HAT=1, Clip=3, XVF3000=1) and anchors unique', () => {
+test('render: FAQ counts per product (XVF3800=13, Lite=8, Flex=4, Pi HAT=1, Clip=3, XVF3000=1) and anchors unique', () => {
   const manifest = loadManifest();
   const byProduct = (p) => manifest.entries.filter((e) => e.productKey === p);
-  assert.strictEqual(byProduct('xvf3800_usb_4_mic').length, 12);
+  assert.strictEqual(byProduct('xvf3800_usb_4_mic').length, 13);
   assert.strictEqual(byProduct('respeaker_lite').length, 8);
   assert.strictEqual(byProduct('flex_xvf3800').length, 4);
   assert.strictEqual(byProduct('respeaker_2_mics_pi_hat').length, 1);
