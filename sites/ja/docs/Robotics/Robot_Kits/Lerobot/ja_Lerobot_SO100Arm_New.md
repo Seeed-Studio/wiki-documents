@@ -371,7 +371,7 @@ conda init --all`}
 
 <CodeBlock language="bash">
 {`conda install ffmpeg=7.1.1 -c conda-forge`}
-</CodeBlock]
+</CodeBlock>
 
 - 【Linux のみ】ffmpeg のビルド依存関係をインストールし、libsvtav1 を有効にしてソースから ffmpeg をコンパイルし、`which ffmpeg` で確認できる、インストールに対応した ffmpeg バイナリを使用していることを確認します。
 
@@ -1632,7 +1632,7 @@ SO100 と SO101 のコードは互換性があります。SO100 のユーザー�
   --robot.id=my_awesome_follower_arm \\
   --display_data=false \\
   --dataset.repo_id=\${HF_USER}/eval_so100 \\
-  --dataset.single_task="Put lego brick into the transparent box" \\`
+  --dataset.single_task="Put lego brick into the transparent box" \\
   --policy.path=\${HF_USER}/my_policy`}
 </CodeBlock>
 

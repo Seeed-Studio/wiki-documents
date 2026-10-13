@@ -163,7 +163,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>サーボデバッグツール</b></div></a>
         <a className="step-card" href="/ja/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>SO-Arm データセットツール</b></div></a>
       </div>
-    </div]
+    </div>
     <div className="learning-group">
       <h4>アプリケーション</h4>
       <div className="learning-steps">

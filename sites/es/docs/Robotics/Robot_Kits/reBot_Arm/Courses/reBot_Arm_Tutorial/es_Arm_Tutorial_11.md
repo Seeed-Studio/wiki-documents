@@ -1,5 +1,5 @@
 ---
-description: Capítulo 11 del Curso de Introducción a la IA Física de Seeed: configuración del entorno, calibración del brazo seguidor y líder, mapeo de articulaciones, seguridad en teleoperación, inicio de la teleoperación maestro-esclavo, frecuencia de control y latencia, y práctica guiada.
+description: "Capítulo 11 del Curso de Introducción a la IA Física de Seeed: configuración del entorno, calibración del brazo seguidor y líder, mapeo de articulaciones, seguridad en teleoperación, inicio de la teleoperación maestro-esclavo, frecuencia de control y latencia, y práctica guiada."
 title: Capítulo 11 - Calibración de Líder y Seguidor y Teleoperación
 hide_title: true
 keywords:

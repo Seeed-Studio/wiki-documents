@@ -371,7 +371,7 @@ Isso geralmente instala o ffmpeg 7.X para a sua plataforma, compilado com o codi
 
 <CodeBlock language="bash">
 {`conda install ffmpeg=7.1.1 -c conda-forge`}
-</CodeBlock]
+</CodeBlock>
 
 - [Somente no Linux] Instalar as dependências de compilação do ffmpeg e compilar o ffmpeg a partir do código-fonte com libsvtav1, e certificar-se de usar o binário ffmpeg correspondente à sua instalação com `which ffmpeg`.
 
@@ -788,7 +788,7 @@ Execute na seguinte ordem (os comandos solicitarão interativamente que você se
 
 <CodeBlock language="bash">
 {`python -m src.tools.servo_center_test`}
-</CodeBlock]
+</CodeBlock>
 
 Após a calibração de posição central, volte para as etapas do `lerobot-calibrate` acima e refaça a calibração de todo o braço.
 
@@ -1632,7 +1632,7 @@ Você pode usar a função `record` de [`lerobot/record.py`](https://github.com/
   --robot.id=my_awesome_follower_arm \\
   --display_data=false \\
   --dataset.repo_id=\${HF_USER}/eval_so100 \\
-  --dataset.single_task="Put lego brick into the transparent box" \\`
+  --dataset.single_task="Put lego brick into the transparent box" \\
   --policy.path=\${HF_USER}/my_policy`}
 </CodeBlock>
 
