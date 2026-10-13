@@ -384,7 +384,7 @@ void loop() {
 **Q3: The board does not power on when using battery.**
 
 - **Check the power switch.** Slide the battery power switch to the ON position — the board will not draw power from the battery when the switch is off.
-- **Verify the JST connector polarity.** Ensure the JST 2.0 mm battery connector is plugged in with the correct polarity. Reversing the connector will prevent the board from powering on.
+- **Verify the JST connector polarity.** Ensure the JST 2.0 mm battery connector is plugged in with the correct polarity. Reversed battery polarity may damage the hardware. Verify the connector's +/− markings before connecting the battery.
 - **Charge the battery.** If the battery is fully drained, the board may not start. Connect USB Type-C to charge the battery and try again.
 
 **Q4: Seeedash Firmware Flasher cannot detect the board.**
