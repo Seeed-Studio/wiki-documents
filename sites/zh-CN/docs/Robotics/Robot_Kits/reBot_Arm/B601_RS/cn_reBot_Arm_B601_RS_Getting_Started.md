@@ -154,7 +154,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="确认写入 B601-RS 电机参数" />
 </div>
-接着按照如下图示，将 USB2CAN 模块、电源信号分离板、电源线 XT30、XT30 2+2相连接，其中XT30 2+2 另一端接 motor1，电源线接入 48V 电源。
+接着按照如下图示，将 USB2CAN 模块、电源信号分离板、电源线 XT30、XT30 2+2 相连接，并将 PCAN 的拨码开关拨至 **120R**。其中 XT30 2+2 另一端接 motor1，电源线接入 48V 电源。
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="确认写入 B601-RS 电机参数" />
 

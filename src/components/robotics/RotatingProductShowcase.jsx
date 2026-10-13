@@ -21,7 +21,7 @@ const COPY = {
     previous: 'Previous product',
     next: 'Next product',
     instructions: 'Scroll, drag, or use the arrow keys to rotate. Click a card to open it, or press Space to open and close.',
-    expandedInstructions: 'Scroll to browse the page. Click the card again to close it and resume swipe navigation.',
+    expandedInstructions: 'Card expanded: click a label to open its Wiki tutorial, or scroll to browse the page. Click the card again to close it and resume swipe navigation.',
     gridInstructions: 'Choose a product from the two-column overview to focus it and open its learning paths.',
     showGrid: 'Show all products',
     showCarousel: 'Return to carousel',
@@ -34,7 +34,7 @@ const COPY = {
     previous: '上一个产品',
     next: '下一个产品',
     instructions: '在卡片区域滚动、拖动或使用方向键切换；点击卡片展开，按空格键展开或收回。',
-    expandedInstructions: '卡片已展开：滑动可上下浏览网页；再次点击卡片收起后，恢复滑动切换。',
+    expandedInstructions: '卡片已展开：点击对应标签可跳转至指定Wiki教程，滑动可上下浏览网页；再次点击卡片收起后，恢复滑动切换。',
     gridInstructions: '从双列总览中选择产品，卡片会聚焦到中央并展开两侧学习路径。',
     showGrid: '展开双列',
     showCarousel: '返回轮播',
@@ -47,7 +47,7 @@ const COPY = {
     previous: '前の製品',
     next: '次の製品',
     instructions: 'カード上でスクロール、ドラッグ、または矢印キーを使って切り替えます。カードをクリックして開くか、Space キーで開閉します。',
-    expandedInstructions: 'スクロールでページを閲覧できます。カードをもう一度クリックして閉じると、スワイプでの切り替えが再開します。',
+    expandedInstructions: 'カードが開いています。ラベルをクリックすると対応する Wiki チュートリアルに移動し、スクロールでページを閲覧できます。カードをもう一度クリックして閉じると、スワイプでの切り替えが再開します。',
     gridInstructions: '2列の一覧から製品を選択すると、中央にフォーカスして学習パスを開きます。',
     showGrid: 'すべての製品を表示',
     showCarousel: 'カルーセルに戻る',
@@ -60,7 +60,7 @@ const COPY = {
     previous: 'Producto anterior',
     next: 'Producto siguiente',
     instructions: 'Desplázate, arrastra o usa las flechas para cambiar de producto. Haz clic en una tarjeta para abrirla, o pulsa Espacio para abrirla y cerrarla.',
-    expandedInstructions: 'Desplázate para explorar la página. Haz clic de nuevo en la tarjeta para cerrarla y volver a cambiar de producto deslizando.',
+    expandedInstructions: 'Tarjeta abierta: haz clic en una etiqueta para acceder a su tutorial de Wiki o desplázate para explorar la página. Haz clic de nuevo en la tarjeta para cerrarla y volver a cambiar de producto deslizando.',
     gridInstructions: 'Elige un producto en la vista general de dos columnas para centrarlo y abrir sus rutas de aprendizaje.',
     showGrid: 'Mostrar todos los productos',
     showCarousel: 'Volver al carrusel',
@@ -73,7 +73,7 @@ const COPY = {
     previous: 'Produto anterior',
     next: 'Próximo produto',
     instructions: 'Role, arraste ou use as setas para alternar entre os produtos. Clique em um cartão para abri-lo ou pressione Espaço para abrir e fechar.',
-    expandedInstructions: 'Role para navegar pela página. Clique novamente no cartão para fechá-lo e voltar a alternar os produtos deslizando.',
+    expandedInstructions: 'Cartão aberto: clique em uma etiqueta para acessar o tutorial correspondente na Wiki ou role para navegar pela página. Clique novamente no cartão para fechá-lo e voltar a alternar os produtos deslizando.',
     gridInstructions: 'Escolha um produto na visão geral em duas colunas para centralizá-lo e abrir suas trilhas de aprendizado.',
     showGrid: 'Mostrar todos os produtos',
     showCarousel: 'Voltar ao carrossel',
@@ -673,10 +673,13 @@ export default function RotatingProductShowcase({children}) {
   };
 
   const handleWheel = useCallback((event) => {
+    const target = event.target instanceof Element ? event.target : null;
+
     handleCarouselWheel(event, {
       gesture: wheelRef.current,
       now: performance.now(),
       disabled: count < 2
+        || !target?.closest('.rotating-product-card')
         || openIndexRef.current !== null
         || gridViewRef.current
         || Boolean(gridSelectionRef.current),

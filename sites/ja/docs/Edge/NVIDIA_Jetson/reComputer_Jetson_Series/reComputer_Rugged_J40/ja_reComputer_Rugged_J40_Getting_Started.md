@@ -7,42 +7,91 @@ keywords:
   - Jetson
   - 入門ガイド
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg
-slug: /ai_robotics_recomputer_rugged_j40_getting_started
+slug: /jetson/recomputer_rugged_j401/getting_started
+aliases:
+  - /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
-  date: 09/18/2026
+  date: 09/30/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-09-21'
-url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_rugged_j40_getting_started/
+updatedAt: '2026-09-30'
+url: https://wiki.seeedstudio.com/ja/jetson/recomputer_rugged_j401/getting_started/
 ---
+
+import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
+import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
+import Link from '@docusaurus/Link';
 
 # reComputer Rugged J40 入門ガイド
 
-<div align="center">
-  <img width="700" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J4012" />
+<JetsonProductDocNav {...ruggedJ401DocNav} />
+
+<div className="jetson-product-page">
+
+<section className="jetson-product-hero">
+  <div>
+    <span className="jetson-product-eyebrow">堅牢エッジ AI · NVIDIA Jetson</span>
+    <h2>粉じん、水、振動が日常の現場へ AI を展開</h2>
+    <p>reComputer Rugged J40 は、NVIDIA Jetson Orin の性能に、IP66 等級のファンレス筐体とロック式 M12 接続を組み合わせた製品です。車両、港湾、農場、海上、産業現場での信頼性の高いエッジ AI 展開を目的に設計されています。</p>
+    <div className="jetson-product-actions">
+      <a className="jetson-product-button" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank" rel="noopener noreferrer">reComputer Rugged J4012 を入手 ↗</a>
+      <a className="jetson-product-button jetson-product-button--secondary" href="#flash-jetpack">JetPack から始める ↓</a>
+    </div>
+  </div>
+  <div className="jetson-product-hero-media">
+    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J40 産業用エッジ AI コンピュータ" />
+  </div>
+</section>
+
+<div className="jetson-product-fact-grid">
+  <div className="jetson-product-fact"><strong>IP66</strong><span>粉じんと強力な噴流から保護</span></div>
+  <div className="jetson-product-fact"><strong>最大 100 TOPS</strong><span>Jetson Orin NX 16GB のエッジ AI 性能</span></div>
+  <div className="jetson-product-fact"><strong>4× PoE GbE</strong><span>産業用 IP カメラへ給電して接続</span></div>
+  <div className="jetson-product-fact"><strong>−20°C ～ 60°C</strong><span>0.7 m/s の気流でファンレス動作</span></div>
 </div>
 
-reComputer Rugged J4012 は、NVIDIA Jetson Orin NX 16GB を搭載した IP66 等級のエッジ AI コンピュータです。密閉された M12 コネクタにより、USB、PSE 対応 Ethernet、CAN、RS-232/422/485、DI/DO インターフェースを提供し、さらに M.2 Key B スロットで 5G 拡張をサポートすることで、AMR、ロボティクス、農業、産業オートメーション、海洋用途に最適です。
+## Jetson 構成を選ぶ
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong>
-  </a>
+どちらの構成も同じ堅牢筐体と産業用インターフェースを使用します。AI ワークロード、メモリ要件、消費電力に合わせて Jetson モジュールを選択してください。
+
+<div className="jetson-product-variant-grid">
+  <article className="jetson-product-variant-card">
+    <span className="jetson-product-variant-badge">性能構成</span>
+    <h3>reComputer Rugged J4012</h3>
+    <p>マルチカメラビジョン、より大きな AI モデル、高い GPU とメモリ帯域が有効なワークロード向けです。</p>
+    <div className="jetson-product-variant-metrics">
+      <span>Jetson Orin NX</span>
+      <span>16GB LPDDR5</span>
+      <span>100 TOPS</span>
+    </div>
+  </article>
+  <article className="jetson-product-variant-card">
+    <span className="jetson-product-variant-badge">効率構成</span>
+    <h3>reComputer Rugged J3011</h3>
+    <p>より低い消費電力で、効率的な認識、監視、テレメトリ、産業制御のワークロード向けです。</p>
+    <div className="jetson-product-variant-metrics">
+      <span>Jetson Orin Nano</span>
+      <span>8GB LPDDR5</span>
+      <span>40 TOPS</span>
+    </div>
+  </article>
 </div>
 
-## 特長
+## reComputer Rugged J40 を選ぶ理由
 
-- **IP66 防水**：すべての外部インターフェースに M12 防水コネクタを採用した完全密閉エンクロージャ
-- **ファンレスパッシブ冷却**：0.7 m/s の気流条件で -20°C ～ +60°C の範囲で静音動作
-- **堅牢・耐振動**：3 Grms @ 5–500 Hz、1 時間/軸 — 車載および船舶用途に適合
-- **豊富な産業用 I/O**：CAN-FD（アイソレート）、RS-232/422/485、DI/DO、すべて M12 A コードコネクタ経由
-- **柔軟なネットワーキング**：4× PoE GbE + 1× GbE（M12）、M.2 Key E（Wi-Fi/BT）、M.2 Key B（5G/GPS）
-- **広い電圧入力範囲**：M12 B/A コードコネクタ経由で 19–48 V DC
-- **認証**：CE、FCC、RoHS、REACH
+<div className="jetson-product-feature-grid">
+  <div className="jetson-product-feature"><strong>密閉 M12 接続</strong><span>ロック式コネクタにより、移動体や屋外設置でも電源、ネットワーク、I/O を安定して維持できます。</span></div>
+  <div className="jetson-product-feature"><strong>ファンレスパッシブ冷却</strong><span>可動ファンがないため、粉じん環境での保守を減らし、静音動作が可能です。</span></div>
+  <div className="jetson-product-feature"><strong>産業用 I/O</strong><span>アイソレート CAN-FD、RS-232/422/485、デジタル I/O で、センサー、アクチュエータ、コントローラに直接接続できます。</span></div>
+  <div className="jetson-product-feature"><strong>カメラ向けネットワーク</strong><span>4 つの PoE GbE ポートがデータと電力を同じケーブルで運び、マルチカメラシステムを簡素化します。</span></div>
+  <div className="jetson-product-feature"><strong>ワイヤレス拡張</strong><span>M.2 Key E と Key B スロットが Wi-Fi、Bluetooth、5G、GPS の拡張に対応します。</span></div>
+  <div className="jetson-product-feature"><strong>車載・屋外展開</strong><span>広い入力電圧、耐振動、IP66 筐体により、AMR、車両、船舶、フィールド機器に適しています。</span></div>
+</div>
 
 ## 仕様
 
+<div className="jetson-product-table-wrap">
 <table>
   <thead>
     <tr>
@@ -86,7 +135,7 @@ reComputer Rugged J4012 は、NVIDIA Jetson Orin NX 16GB を搭載した IP66 �
     <tr>
       <td rowSpan={2}>ストレージ</td>
       <td>eMMC</td>
-      <td colSpan={2}>-</td>
+      <td colSpan={2}>—</td>
     </tr>
     <tr>
       <td>拡張</td>
@@ -95,7 +144,7 @@ reComputer Rugged J4012 は、NVIDIA Jetson Orin NX 16GB を搭載した IP66 �
     <tr>
       <td rowSpan={8}>I/O</td>
       <td>Ethernet</td>
-      <td colSpan={2}>4× GbE RJ45 PoE PSE（802.3af、M12 防水）+ 1× GbE RJ45（M12 防水）</td>
+      <td colSpan={2}>4× GbE PoE PSE（802.3af、M12 防水）+ 1× GbE（M12 防水）</td>
     </tr>
     <tr>
       <td>USB</td>
@@ -150,7 +199,7 @@ reComputer Rugged J4012 は、NVIDIA Jetson Orin NX 16GB を搭載した IP66 �
     </tr>
     <tr>
       <td>動作温度</td>
-      <td colSpan={2}>-20°C ～ +60°C（0.7 m/s の気流時）</td>
+      <td colSpan={2}>−20°C ～ +60°C（0.7 m/s の気流時）</td>
     </tr>
     <tr>
       <td>湿度</td>
@@ -178,105 +227,207 @@ reComputer Rugged J4012 は、NVIDIA Jetson Orin NX 16GB を搭載した IP66 �
     </tr>
   </tbody>
 </table>
+</div>
 
 ## ハードウェア概要
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png"/>
-  <p>側面図 1</p>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png" alt="産業用コネクタを示す reComputer Rugged J40 の側面図" />
+    <figcaption>側面図 · ネットワーク、USB、ディスプレイ、アンテナ接続</figcaption>
+  </figure>
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png" alt="reComputer Rugged J40 の反対側の側面図" />
+    <figcaption>側面図 · 電源、シリアル、CAN、デジタル I/O 接続</figcaption>
+  </figure>
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png" alt="reComputer Rugged J40 の底面図" />
+    <figcaption>底面図 · 取り付けと筐体レイアウト</figcaption>
+  </figure>
 </div>
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png"/>
-  <p>側面図 2</p>
-</div>
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png"/>
-  <p>底面図</p>
-</div>
-
-**LED インジケータ：**
+### LED インジケータ
 
 | LED | 色 | 状態 | 説明 |
-|-----|-------|--------|-------------|
+| --- | --- | --- | --- |
 | PWR | 緑 | On | デバイスに電源が供給されています |
 | PWR | 緑 | Off | デバイスに電源が供給されていません |
 | ACT | 緑 | Flashing | SSD アクセス動作中 |
 
-## JetPack の書き込み
+コネクタのピン配置、インターフェース設定、拡張手順については、[ハードウェアと I/O ガイド](/jetson/recomputer_rugged_j401/hardware_and_interface_usage/)を参照してください。
 
-:::note
-BSP が利用可能になり次第、書き込み手順を追加します。書き込みプロセスは、他の reComputer J40 シリーズデバイスと同じ手順に従います。
-:::
+## JetPack の書き込み {#flash-jetpack}
 
-最新の書き込みガイドについては、[Flash BSP with Jetpack to Selected Jetson](/ja/flash/jetpack_to_selected_product) ページを参照してください。
+手順に沿って進めてください。番号付きのレイアウトで、ホストの準備、リカバリモードの操作、ターミナルコマンドをまとめています。
 
-### 前提条件
+<div className="jetson-product-step-flow">
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">1</span>
+  <div className="jetson-product-step-content">
+    <h3>BSP を選んでダウンロードする</h3>
+    <p className="jetson-product-step-label">手順 1 · イメージを正確な Jetson 構成に合わせる</p>
 
-- reComputer Rugged J40
-- 電源（19–48 V DC）
-- Ubuntu ホスト PC（20.04 または 22.04）
-- USB Type-C データケーブル（書き込み用）
-- 外部モニタ + HDMI ケーブル
-- キーボードとマウス
+Jetson 書き込みリソースページを開き、使用する reComputer Rugged の型番と Jetson モジュールに対応する最新イメージを確認します。
 
-### Force Recovery モードに入る
-
-<div align="center">
-  <img width="700" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg"/>
+<div className="jetson-product-actions">
+  <Link className="jetson-product-button" to="/flash/jetpack_to_selected_product" target="_blank" rel="noopener noreferrer">JetPack イメージセレクターを開く ↗</Link>
 </div>
 
-1. **DEVICE** ポートと Ubuntu ホスト PC の間を USB Type-C ケーブルで接続します。
-2. **REC**（Recovery）ボタンを押し続けます。
-3. REC を押したまま、電源を接続してボードの電源を入れます。
-4. Recovery ボタンを離します。
+:::warning
+別のキャリアボードや Jetson モジュール用のイメージは書き込まないでください。reComputer Rugged J4012 または J3011 の正確な構成が一覧にない場合は、先に Seeed Studio サポートへ連絡してください。
+:::
 
-Ubuntu ホスト PC 上で、次のコマンドでリカバリモードを確認します：
+  </div>
+</section>
+
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">2</span>
+  <div className="jetson-product-step-content">
+    <h3>機材を準備する</h3>
+    <p className="jetson-product-step-label">手順 2 · Ubuntu ホストとケーブルをセットアップする</p>
+
+接続を外す、またはデバイスへ電源を入れる前に、次のものを準備します。
+
+- reComputer Rugged J4012 または J3011
+- 19–48 V DC 電源
+- 物理 Ubuntu 20.04 または 22.04 ホスト PC
+- 書き込み用 USB Type-C データケーブル
+- 外部モニタと HDMI ケーブル
+- キーボードとマウス
+
+:::tip
+可能な限り物理 Ubuntu ホストを使用してください。仮想マシンの USB パススルーは書き込みを中断することがあります。
+:::
+
+  </div>
+</section>
+
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">3</span>
+  <div className="jetson-product-step-content">
+    <h3>Force Recovery モードに入る</h3>
+    <p className="jetson-product-step-label">手順 3 · DEVICE ポートを接続し、USB ID を確認する</p>
+
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg" alt="reComputer Rugged J40 の書き込みに使うリカバリボタンと DEVICE ポート" />
+
+1. **DEVICE** ポートと Ubuntu ホストの間を USB Type-C データケーブルで接続します。
+2. **REC** ボタンを押し続けます。
+3. **REC** を押したまま、電源を接続してデバイスの電源を入れます。
+4. **REC** ボタンを離します。
+5. Ubuntu ホストで Jetson が認識されていることを確認します。
 
 ```bash
 lsusb
 ```
 
-モジュールごとの想定出力：
-- Orin NX 16GB: `0955:7323 NVidia Corp`
-- Orin Nano 8GB: `0955:7523 NVidia Corp`
+構成ごとの想定出力：
 
-## 展開と書き込み
+| 製品 | Jetson モジュール | 想定 USB ID |
+| --- | --- | --- |
+| reComputer Rugged J4012 | Orin NX 16GB | `0955:7323 NVidia Corp` |
+| reComputer Rugged J3011 | Orin Nano 8GB | `0955:7523 NVidia Corp` |
 
-**ステップ 1：** ダウンロードしたイメージファイルを展開します：
+想定 ID が表示されない場合は、USB ケーブルを接続し直し、ホストの別の USB ポートを試し、続行前にリカバリ手順を繰り返してください。
+
+  </div>
+</section>
+
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">4</span>
+  <div className="jetson-product-step-content">
+    <h3>イメージを展開して書き込む</h3>
+    <p className="jetson-product-step-label">手順 4 · Ubuntu ホストから量産書き込みパッケージを実行する</p>
+
+ダウンロードしたイメージがあるディレクトリへ移動して展開します。
 
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
 ```
 
-**ステップ 2：** 展開したディレクトリに移動し、書き込みコマンドを実行します：
+展開したディレクトリに入り、書き込みを開始します。
 
 ```bash
 cd mfi_xxxx
-sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
 ```
+
+ターミナルで書き込みの成功が報告されるまで待ちます。その後、USB ケーブルを外し、reComputer の電源を入れ直し、モニタと入力デバイスを接続して、Ubuntu の初回起動設定を完了します。
+
+  </div>
+</section>
+</div>
+
+## アプリケーション {#applications}
+
+reComputer Rugged J40 のハードウェアと、展開可能なエッジ AI ワークフローを組み合わせた応用例を確認できます。新しい例は公開され次第、このコレクションに追加できます。
+
+<div className="jetson-product-application-grid">
+  <article className="jetson-product-application-card">
+    <Link className="jetson-product-application-cover" to="/jetson/recomputer_rugged_j401/industrial_vision/" aria-label="産業用フォークリフトビジョンのアプリケーションを開く">
+      <img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="reComputer Rugged J401 による産業用フォークリフトビジョンアプリケーション" />
+    </Link>
+    <div className="jetson-product-application-body">
+      <div className="jetson-product-application-labels" aria-label="アプリケーションの機能">
+        <span>検出</span>
+        <span>推論ベンチマーク</span>
+      </div>
+      <h3><Link to="/jetson/recomputer_rugged_j401/industrial_vision/">産業用フォークリフトビジョン</Link></h3>
+      <p>reComputer Rugged J401 上で、マルチカメラ検出、深度警告、ドライバー監視、ターゲット追跡、計測済みの Jetson 推論ワークロードを展開します。</p>
+    </div>
+  </article>
+</div>
 
 ## リソース
 
-- [reComputer Rugged J40 データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf) 
-- [キャリアボード回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf)
-- [PSE ボード回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf)
-- [3D ファイル](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp)
-- [Linux_for_Tegra ソースコード](https://github.com/Seeed-Studio/Linux_for_Tegra)
-- [NVIDIA Jetson デバイス比較](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+機械統合、キャリアボードの設計確認、BSP 開発、Jetson プラットフォームの選定にこれらのファイルを使用します。
+
+<div className="jetson-product-resource-grid">
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">PDF</span>
+    <span className="jetson-product-resource-copy"><strong>製品データシート</strong><small>電気、機械、環境仕様</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">SCH</span>
+    <span className="jetson-product-resource-copy"><strong>キャリアボード回路図</strong><small>キャリアボードの回路と信号配線を確認</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">PSE</span>
+    <span className="jetson-product-resource-copy"><strong>PSE ボード回路図</strong><small>PoE 給電回路の設計リファレンス</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">3D</span>
+    <span className="jetson-product-resource-copy"><strong>3D 機械モデル</strong><small>設置と筐体計画用の STEP アセンブリ</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">GIT</span>
+    <span className="jetson-product-resource-copy"><strong>Linux_for_Tegra ソース</strong><small>Seeed Jetson BSP ソースとカスタマイズ資料</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">CMP</span>
+    <span className="jetson-product-resource-copy"><strong>Jetson デバイス比較</strong><small>Jetson モジュールと Seeed キャリアプラットフォームを比較</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+</div>
 
 ## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div className="button_tech_support_container">
+  <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+  <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div className="button_tech_support_container">
+  <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+</div>
+
 </div>

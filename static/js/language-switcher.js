@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-09 17:01:41 (北京时间)
-// 多语言页面: 2554 个
+// 生成时间: 2026-10-12 18:32:57 (北京时间)
+// 多语言页面: 2561 个
 
 (function() {
   'use strict';
@@ -1710,6 +1710,13 @@
     "ja",
     "pt"
   ],
+  "/jetson/camera-selection-guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/jetson_debug_guide": [
     "cn",
     "en",
@@ -2081,21 +2088,21 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_rugged_j401_cv_demo": [
+  "/jetson/recomputer_rugged_j401/industrial_vision": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage": [
+  "/jetson/recomputer_rugged_j401/hardware_and_interface_usage": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_rugged_j40_getting_started": [
+  "/jetson/recomputer_rugged_j401/getting_started": [
     "cn",
     "en",
     "es",
@@ -14089,6 +14096,48 @@
     "pt"
   ],
   "/xiao_topic_page": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_application": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_canfd_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_with_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_stm32c5_with_stm32cubeide": [
     "cn",
     "en",
     "es",

@@ -153,7 +153,7 @@ Conecta el Motor 1 y el Motor 2 como se muestra a continuación.
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="Conectar el Motor 1 y el Motor 2 en el reBot Arm B601-RS" />
 </div>
 
-Luego conecta el módulo USB-a-CAN, la placa divisora de alimentación y señal, el cable de alimentación XT30 y el cable XT30 2+2 como se muestra a continuación. Conecta el otro extremo del cable XT30 2+2 al Motor 1 y conecta el cable de alimentación a la fuente de alimentación de 48 V.
+Luego conecta el módulo USB-a-CAN, la placa divisora de alimentación y señal, el cable de alimentación XT30 y el cable XT30 2+2 como se muestra a continuación, y ajusta el interruptor DIP de PCAN a **120R**. Conecta el otro extremo del cable XT30 2+2 al Motor 1 y conecta el cable de alimentación a la fuente de alimentación de 48 V.
 
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="Conectar el módulo USB-a-CAN y los cables de alimentación al reBot Arm B601-RS" />
