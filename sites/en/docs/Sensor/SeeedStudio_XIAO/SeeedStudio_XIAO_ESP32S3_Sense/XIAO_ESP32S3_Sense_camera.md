@@ -744,23 +744,20 @@ Before starting this project, you will need to prepare the following hardware in
 
 Since this project will use Round Display for XIAO, please read the contents of the **[Wiki environment configuration of the display expansion board](https://wiki.seeedstudio.com/get_start_round_display#software-preparation)**, install the necessary libraries and configure the TFT environment before you run the routines of this project.
 
-Since the XIAO EPS32S3 Sense is designed with three pull-up resistors R4~R6 connected to the SD card slot, and the round display also has pull-up resistors, the SD card cannot be read when both are used at the same time. To solve this problem, we need to cut off J3 on the XIAO ESP32S3 Sense expansion board.
+Since the XIAO EPS32S3 Sense is designed with three pull-up resistors R4~R6 connected to the SD card slot, and the round display also has pull-up resistors, the two SD card slots conflict when both boards are used at the same time. There are two ways to solve this problem:
 
-:::tip
-However, **we need to thank engineer Mjrovai for the new method of using the microSD card slot on the XIAO ESP32S3 Sense at the same time**, which is also possible at software level. We can refer to **[his methods and procedures](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
-:::
+- **Option 1 — no hardware change (used by the example code in this project)**: keep J3 intact and use the microSD card slot on the XIAO ESP32S3 Sense itself. As demonstrated by **engineer Mjrovai**, this is possible at software level — the code below initializes the SD card with `SD_CS_PIN 21` (the Sense card reader). For details, refer to **[his methods and procedures](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
+- **Option 2 — cut J3 and use the Round Display slot**: cut off J3 on the XIAO ESP32S3 Sense expansion board. After disconnecting J3, the SD card slot on XIAO ESP32S3 Sense will no longer work, so you need to insert the microSD card into the SD card slot on the Round Display, and change `SD_CS_PIN` in the code from `21` to `D2`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:500, height:'auto'}}/></div>
 
-After disconnecting J3, the SD card slot on XIAO ESP32S3 Sense will not work properly, so you need to insert a microSD card into the SD card slot on the Round Display.
+:::tip
+If you choose Option 2, we recommend that you remove the camera module first to avoid scratching the camera when you cut the J3 connection with the blade.
+:::
 
 Next, please install the microSD card, XIAO ESP32S3 Sense and Round Display in order.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/101.gif" style={{width:500, height:'auto'}}/></div>
-
-:::tip
-We recommend that you remove the camera module first to avoid scratching the camera when you cut the J3 connection with the blade.
-:::
 
 ### Specific operation
 
@@ -786,7 +783,7 @@ Here is the Arduino program for this project.
  * - The camera buffer data should be captured as RGB565 (raw image) with a 240x240 frame size
  * to be displayed on the round display. This raw image should be converted to jpeg before save
  * in the SD card. This can be done with the line:
- * esp_err_t ret = frame2jpg(fb, 12, &out_buf, &out_len);
+ * bool ok = frame2jpg(fb, 12, &out_buf, &out_len);
  *
  * - The XCLK_FREQ_HZ should be reduced from 20KHz to 10KHz in order to prevent
  * the message "no EV-VSYNC-OVF message" that appears on Serial Monitor (probably due the time
@@ -813,16 +810,14 @@ Here is the Arduino program for this project.
 #define TOUCH_INT D7
 
 /*
- * NOTE: Since the XIAO EPS32S3 Sense is designed with three pull-up resistors
- * R4~R6 connected to the SD card slot, and the round display also has
- * pull-up resistors, the Round Display SD card cannot be read when both
- * are used at the same time. To solve this problem, we need to cut off
- * J3 on the XIAO ESP32S3 Sense expansion board.
- * https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#preliminary-preparation
+ * NOTE: This sketch keeps J3 intact and uses the microSD card slot on the
+ * XIAO ESP32S3 Sense itself (SD_CS_PIN 21), so no hardware change is needed
+ * (Mjrovai's software-level method). If you have cut J3 and want to use the
+ * Round Display card reader instead, comment out the 21 line and use D2.
  */
 
 #define SD_CS_PIN 21 // ESP32S3 Sense SD Card Reader
-//#define SD_CS_PIN D2 // XIAO Round Display SD Card Reader
+//#define SD_CS_PIN D2 // XIAO Round Display SD Card Reader (requires J3 cut)
 
 #include "camera_pins.h"
 
@@ -1005,18 +1000,18 @@ void loop() {
       char filename[32];
       sprintf(filename, "/image%d.jpg", imageCount);
 
-      // RGB565 -> JPEG, then save to SD
+      // RGB565 -> JPEG, then save to SD (frame2jpg returns bool: true = success)
       size_t out_len = 0;
       uint8_t* out_buf = NULL;
-      esp_err_t ret = frame2jpg(fb, 12, &out_buf, &out_len);
-      if (ret != ESP_OK) {
-        Serial.println("JPEG conversion failed");
-      } else {
+      bool ok = frame2jpg(fb, 12, &out_buf, &out_len);
+      if (ok) {
         // Save photo to file
         writeFile(SD, filename, out_buf, out_len);
         Serial.printf("Saved picture: %s\n", filename);
         imageCount++;
         free(out_buf);
+      } else {
+        Serial.println("JPEG conversion failed");
       }
     }
 
@@ -1844,17 +1839,17 @@ The OV5640 module heats up noticeably during long-running use. This section offe
 
 ### Method 1: Reduce heat by tuning parameters
 
-The example code in this Wiki is tuned for the best possible image quality — the OV5640's maximum resolution (5MP / 2592×1944), double-buffered continuous frame grabbing, and a 240MHz CPU — so the board heats up noticeably during long runs. If you find the temperature too high, or you do not need that much resolution, you can lower the power consumption in the following ways, most of which do not affect the sharpness of single captures:
+The example code in this Wiki is tuned for the best possible image quality — UXGA resolution (1600×1200) with double-buffered continuous frame grabbing in the photo examples, and a 240MHz CPU — so the board heats up noticeably during long runs. If you find the temperature too high, or you do not need that much resolution, you can lower the power consumption in the following ways, most of which do not affect the sharpness of single captures:
 
 | Lever | What to change | Heat reduction | Affects image quality? |
 |---|---|---|---|
 | CPU frequency | Arduino IDE: `Tools → CPU Frequency: 240MHz` → `160MHz` (or add `setCpuFrequencyMhz(160);` in `setup()`) | Medium | No (sensor imaging and JPEG encoding are done inside the OV5640, independent of the CPU) |
 | Focus frequency | Switch continuous auto-focus (`autoFocusMode`) to periodically triggered single-shot focus, or lengthen the focus interval | Small | Unchanged for still scenes; moving scenes take longer to re-focus |
-| Frame grabbing | `CAMERA_GRAB_LATEST` → `CAMERA_GRAB_WHEN_EMPTY` (capture only when a frame is requested, instead of grabbing continuously) | Large | No (the latest frame is still used when capturing) |
-| Resolution | `FRAMESIZE_QSXGA` (2592×1944) → `FRAMESIZE_HD` (1280×720) or `SXGA` | Large | Fewer pixels, so less detail when enlarged (per-pixel sharpness is unchanged) |
+| Frame grabbing | `CAMERA_GRAB_LATEST` → `CAMERA_GRAB_WHEN_EMPTY` (the camera only writes frames into free buffers, so with `fb_count = 1` it stops overwriting the buffer while your code holds the frame, instead of continuously replacing it) | Medium | The frame you grab may be a few frames older than with `CAMERA_GRAB_LATEST`; sharpness is unaffected |
+| Resolution | `FRAMESIZE_UXGA` (1600×1200) → `FRAMESIZE_HD` (1280×720) or `SVGA` (800×600) | Large | Fewer pixels, so less detail when enlarged (per-pixel sharpness is unchanged) |
 | Double buffering | `fb_count` from 2 to 1 (together with the grab-mode change above) | Medium | No |
 
-> The best-value combination is to change "always grabbing 5MP" into "grabbing HD only when needed" — that is, `CAMERA_GRAB_WHEN_EMPTY` plus one step down in resolution. The temperature drops noticeably, with almost no impact on the sharpness of single captures.
+> The best-value combination is to change "always grabbing UXGA" into "grabbing HD only when needed" — that is, `CAMERA_GRAB_WHEN_EMPTY` plus one step down in resolution. The temperature drops noticeably, with almost no impact on the sharpness of single captures.
 
 ### Method 2: Reduce power by lowering the IO drive capability
 :::tip
