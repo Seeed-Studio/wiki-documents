@@ -21,10 +21,16 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';
 import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GraspingTabs from '@site/src/components/robotics/RebotGraspingTabs';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css';
 
 # reBot Arm B601-RS 视觉夹取 Demo
 
 <RebotRsDocNav />
+
+<div className={styles.page}>
 
 <div align="center">
     <img width={800}
@@ -56,16 +62,47 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>深度感知 · 目标检测 · 手眼标定 · 自主抓取 · 全开源</strong>
 </p>
 
-本页包含两种不同逻辑的视觉夹取 Demo：
-
-- **一、视觉抓取方式1**：基于 YOLO、RGB-D 深度相机和 Python SDK，完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。
-- **二、视觉抓取方式2**：基于 ROS2 与 YOLOE，通过多终端启动机械臂、Gemini 2 / D405 / D435i 相机和抓取节点，完成抓取与放置。
-
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS 视觉夹取 Demo" />
 </p>
 
+## 两种抓取方式有什么区别？
+
+本页包含两种不同逻辑的视觉夹取 Demo。先了解开发框架、标定方式与启动流程的区别，再选择下方标签查看对应教程。
+
+<div className={styles.comparison}>
+  <section className={styles.methodCard} aria-label="方式 1：Python SDK">
+    <span className={styles.methodNumber}>方式 01</span>
+    <h3>Python SDK + YOLO / OBB</h3>
+    <p>基于 YOLO、RGB-D 深度相机和 Python SDK，完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。</p>
+    <dl>
+      <div><dt>抓取逻辑</dt><dd>利用检测框或 OBB 最小外接矩形估计抓取姿态；可选 GraspNet 6D 姿态估计。</dd></div>
+      <div><dt>手眼标定</dt><dd>首次完整抓取前，使用 ArUco 标记完成 Eye-in-Hand 手眼标定。</dd></div>
+      <div><dt>启动方式</dt><dd>运行 Python 脚本，逐步验证检测、姿态估计与机械臂抓取。</dd></div>
+    </dl>
+  </section>
+  <section className={styles.methodCard} aria-label="方式 2：ROS 2">
+    <span className={styles.methodNumber}>方式 02</span>
+    <h3>ROS 2 + YOLOE</h3>
+    <p>基于 ROS 2 与 YOLOE，通过多终端启动机械臂、Gemini 2 / D405 / D435i 相机和抓取节点，完成抓取与放置。</p>
+    <dl>
+      <div><dt>抓取逻辑</dt><dd>由视觉抓取节点完成目标检测、抓取与放置，通过文本类名指定抓取和放置目标。</dd></div>
+      <div><dt>手眼标定</dt><dd>不需要标定板；安装和打印件公差造成的微小误差可通过偏移参数调整。</dd></div>
+      <div><dt>启动方式</dt><dd>在多个终端分别启动机械臂、相机、抓取节点，再触发抓取放置。</dd></div>
+    </dl>
+  </section>
+</div>
+
+## 选择抓取方式
+
+<p className={styles.selectionHint}>点击标签切换教程，按照所选方式完成安装与运行。</p>
+
+<GraspingTabs>
+<TabItem value="python-sdk" label="方式 1 · Python SDK / OBB">
+
 ## 一、视觉抓取方式1
+
+这条路线使用 **Python SDK + RGB-D 相机 + YOLO / OBB** 完成抓取，不需要 ROS 2 工作空间。默认路线适合普通桌面物体；如需更复杂的 6D 抓取，可按需启用后面的 GraspNet 进阶模块。
 
 ### 1. 项目特点
 
@@ -143,7 +180,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 1. 将深度相机通过 USB 3.0 连接到主机。
 2. 将 USB2CAN 适配器连接到机械臂 CAN 总线。
 3. 确认 48V 电源、相机和机械臂全部连接可靠。
-4. 配置权限：
+4. 如遇权限问题，可执行：
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
@@ -158,11 +195,24 @@ sudo chmod 666 /dev/ttyUSB0
 | 操作系统 | Ubuntu 22.04+ |
 | Python   | 3.10          |
 
-### 5. 安装步骤
+### 5. 安装基础环境
+
+按以下顺序完成基础安装。步骤 0–3 是默认路线必做内容；步骤 4 按实际相机选择。GraspNet 的安装与运行单独放在后面的进阶模块中。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">0</span>
+<div className="rebot-step-content">
 
 #### 步骤 0. 先完成机械臂基础准备
 
 开始本教程前，请先完成 [reBot Arm B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/) 中的内容，包括机械臂组装、零点初始化、电机 ID 配置与基础连通性确认。
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
 #### 步骤 1. 克隆仓库
 
@@ -173,6 +223,12 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
 #### 步骤 2. 创建并配置 conda 环境
 
 ```bash
@@ -180,7 +236,17 @@ conda env create -f environment.yml -n rebotarm
 conda activate rebotarm
 ```
 
+:::note 预期结果
+终端提示符前出现 `rebotarm`，表示当前已激活该环境，后续依赖将安装到该环境中。
+:::
+
 如果你想使用其他环境名，可以将命令中的 `rebotarm` 替换为自定义名称。
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
 
 #### 步骤 3. 安装机械臂 SDK
 
@@ -206,6 +272,12 @@ hardware_yaml: rebotarm_rs.yaml
 
 视觉抓取程序会读取该 SDK 配置，并自动选择对应的机械臂控制模式与夹爪参数。
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
 #### 步骤 4. 安装深度相机 SDK
 
 本项目支持 Orbbec Gemini 2 与 RealSense D435i / D405 等 RGB-D 深度相机。请根据实际使用的相机安装对应 SDK；如果当前环境已经能正常导入相机驱动，可跳过本步骤。
@@ -214,31 +286,84 @@ hardware_yaml: rebotarm_rs.yaml
 
 Orbbec Gemini 2 深度相机依赖 `pyorbbecsdk`（Orbbec SDK v2 的 Python 版本）。优先推荐直接安装预编译 Python 包：
 
-**方式一：通过 pip 安装（推荐）**
+在 Linux / Ubuntu 上，无论选择哪种安装方式，首次使用相机时都建议配置 udev 规则，让普通用户能够访问 USB 设备。规则安装在系统目录，每台机器只需配置一次；如果已经配置过，可跳过对应命令。
+
+<Tabs defaultValue="pip">
+<TabItem value="pip" label="方式一：通过 pip 安装（推荐）">
 
 ```bash
 pip install pyorbbecsdk2
 ```
 
-**方式二：从 GitHub 获取**
+**配置 udev 规则（Linux / Ubuntu）**
+
+`pyorbbecsdk2` 2.1.0 及以上版本提供环境配置脚本。保持当前 conda 环境激活，运行包内脚本；脚本会请求 sudo 权限，并自动安装、重新加载 udev 规则：
+
+```bash
+orbbec_sdk_dir="$(python -c 'import os, pyorbbecsdk; print(os.path.dirname(pyorbbecsdk.__file__))')"
+python "$orbbec_sdk_dir/shared/setup_env.py"
+```
+
+如果提示找不到 `shared/setup_env.py`，请先运行 `pip install --upgrade "pyorbbecsdk2>=2.1.0"`，再重新执行上述命令。详情见 [Orbbec 官方安装文档](https://orbbec.github.io/pyorbbecsdk/source/2_installation/install_the_package.html)。
+
+</TabItem>
+<TabItem value="github" label="方式二：从 GitHub 获取">
+
+保持 `rebotarm` 环境激活，先安装编译依赖，再编译 Python 扩展：
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y cmake build-essential libusb-1.0-0-dev
+sudo apt-get install -y cmake build-essential libusb-1.0-0-dev python3-dev
 
 cd sdk
 git clone https://github.com/orbbec/pyorbbecsdk.git
 cd pyorbbecsdk
-pip install -e .
+git checkout v2-main
+python -m pip install pybind11
+mkdir -p build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release \
+  -DPython3_EXECUTABLE="$(python -c 'import sys; print(sys.executable)')" \
+  -Dpybind11_DIR="$(python -m pybind11 --cmakedir)"
+cmake --build . --parallel "$(nproc)"
+cmake --install .
+cd ..
 ```
 
-对于中国大陆用户可以使用：
+对于中国大陆用户，可以将上面的 GitHub 克隆命令替换为：
 
 ```bash
 git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 ```
 
-源码安装时，请先通过 CMake 编译生成原生扩展，确保 `install/lib` 中已有 `pyorbbecsdk*.so` 和 Orbbec 动态库，再执行 `pip install -e .`。
+编译完成后，确认 `install/lib` 中已有 `pyorbbecsdk*.so` 和 Orbbec 动态库（新版位于 `install/lib/pyorbbecsdk/`），再安装 Python 包。CMake 与 conda 环境配置可参考 [Orbbec 官方源码编译文档](https://orbbec.github.io/pyorbbecsdk/source/2_installation/build_the_package.html)。
+
+```bash
+pip install -e .
+```
+
+**配置 udev 规则（Linux / Ubuntu）**
+
+在克隆的 `pyorbbecsdk` 仓库根目录下运行以下命令。新版仓库使用环境配置脚本，旧版仓库使用 `install_udev_rules.sh`：
+
+```bash
+if [ -f scripts/env_setup/setup_env.py ]; then
+  python scripts/env_setup/setup_env.py
+else
+  sudo bash scripts/install_udev_rules.sh
+  sudo udevadm control --reload-rules
+  sudo udevadm trigger
+fi
+```
+
+完成后返回项目根目录，继续后面的验证与运行步骤：
+
+```bash
+cd ../..
+```
+
+</TabItem>
+</Tabs>
 
 注意，如果上述安装过程中均发生错误导致安装失败，请参考下方 Orbbec 官方文档进行安装操作。
 
@@ -246,14 +371,6 @@ git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 
 ```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
-```
-
-首次使用 Orbbec 相机时建议安装 udev 规则：
-
-```bash
-sudo bash scripts/install_udev_rules.sh
-sudo udevadm control --reload-rules
-sudo udevadm trigger
 ```
 
 **RealSense D435i / D405**
@@ -265,7 +382,11 @@ pip install pyrealsense2
 python -c "import pyrealsense2; print('pyrealsense2 OK')"
 ```
 
-如果系统需要完整的 RealSense 工具链或 udev 规则，请参考 RealSense SDK 官方文档安装 `librealsense2`。
+如果系统需要完整的 RealSense 工具链或 udev 规则，请参考 [librealsense 官方文档](https://github.com/realsenseai/librealsense)。
+
+:::note 预期结果
+对应验证命令输出 `pyorbbecsdk OK` 或 `pyrealsense2 OK`，且没有 `ModuleNotFoundError`。
+:::
 
 **SDK 资料汇总**
 
@@ -281,7 +402,248 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 | ROS2 Wrapper     | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main                |
 | RealSense SDK    | https://github.com/realsenseai/librealsense                          |
 
-#### 步骤 5. 配置 GraspNet（可选）
+</div>
+</section>
+</div>
+
+### 6. 目录结构
+
+```
+rebot_grasp/
+├── config/
+│   ├── default.yaml              # 主配置文件
+│   └── calibration/
+│       └── <camera_type>/
+│           ├── intrinsics.npz    # 相机内参
+│           └── hand_eye.npz      # 手眼标定结果
+├── drivers/
+│   ├── camera/
+│   │   ├── base.py               # 相机抽象基类
+│   │   ├── orbbec_gemini2.py     # Gemini 2 驱动
+│   │   └── realsense.py          # RealSense 驱动（备用）
+│   └── robot/
+│       └── grasp_driver.py       # 基于机械臂 SDK 的轻量抓取辅助
+├── calibration/
+│   ├── aruco_pose.py             # ArUco 位姿估计
+│   └── hand_eye.py               # 手眼标定求解
+├── utils/
+│   ├── ordinary_grasp.py         # OBB 抓取姿态估计与可视化
+│   └── transforms.py             # 坐标变换工具
+├── scripts/
+│   ├── main.py                   # 主抓取程序
+│   ├── set.py                    # 抓取与放置程序
+│   ├── ordinary_grasp_pipeline.py
+│   ├── object_detection.py
+│   └── collect_handeye_eih.py
+├── sdk/
+│   ├── pyorbbecsdk/              # Orbbec SDK Python 封装（源码安装时）
+│   └── reBotArm_control_py/      # reBot Arm SDK
+└── environment.yml               # 推荐的 conda 环境文件
+```
+
+### 7. 手眼标定
+
+第一次运行完整抓取前，先完成 Eye-in-Hand 手眼标定。
+
+运行标定程序前，请先启动并确认 CAN 接口：
+
+```bash
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000
+sudo ip link set can0 up
+ip -details link show can0
+```
+
+开始前，请先在 `config/default.yaml` 中确认以下 ArUco 尺寸参数与你实际打印的标记一致：
+
+```yaml
+calibration:
+  aruco:
+    marker_length_m: 0.1
+```
+
+确认配置后运行自动标定：
+
+```bash
+python scripts/collect_handeye_eih.py
+```
+
+自动模式下，机械臂会自动遍历 50 个预设姿态，检测到ArUco稳定后自动采样。即使中途按 `c` 或 `q` 中断，脚本也会尝试基于当前已有样本计算标定结果。
+
+如果你希望手动推动机械臂采集，可以使用手动模式：
+
+```bash
+python scripts/collect_handeye_eih.py --manual
+```
+
+手动模式下，机械臂会进入重力补偿状态。你可以将末端推到合适视角后按 `Enter` 采集，按 `c` 或 `q` 结束并计算结果。
+
+:::tip
+如果您在校准之后发现机械臂的抓取精度无法满足需求，可以设置`config/default.yaml`参数 `calibration.hand_eye_compensation_m`中的 `X（前后）、Y（左右）、Z（高低）` 参数给予位置补偿。
+:::
+
+标定结果保存到：
+
+```text
+config/calibration/<camera_type>/hand_eye.npz
+```
+
+样本数建议最少 5 个样本且建议不少于 15 个样本。
+
+### 8. 运行与调试
+
+建议按以下顺序验证：前两个场景不连接机械臂，先检查相机、目标检测与抓取估计；后两个场景会连接并控制机械臂。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+#### 1. 仅验证目标检测
+
+```bash
+python scripts/object_detection.py
+```
+
+若需调整检测模型或类别，可在 `config/default.yaml` 中修改：
+
+```yaml
+yolo:
+  model_name: "yoloe-26l-seg.pt"
+  device: "cpu"
+  use_world: true
+  custom_classes:
+    - "yellow banana"
+    - "water bottle"
+    - "cup"
+```
+
+用于确认：
+
+- 相机可以正常打开
+- YOLO 模型加载正常
+- YOLO 目标检测功能正常
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+#### 2. 仅验证抓取估计
+
+```bash
+python scripts/ordinary_grasp_pipeline.py
+```
+
+若需要调整抓取估计频率或预抓取回退距离，可修改：
+
+```yaml
+grasp_pipeline:
+  infer_every_live: 3
+  grasp:
+    depth_quantile: 0.5
+    pregrasp_offset_m: 0.080
+    insertion_depth_m: 0.015
+    min_base_z_m: 0.00
+```
+
+这个脚本不会连接机械臂，只用于验证：
+
+- OBB 或最小外接矩形是否合理
+- 抓取点是否位于目标中央区域
+- 短轴方向是否符合夹爪开合方向预期
+
+按键说明：
+
+- 鼠标左键：点测深度
+- `G`：打印当前最佳抓取姿态
+- `Q` / `Esc`：退出
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+#### 3. 执行主抓取程序
+
+```bash
+python scripts/main.py
+```
+
+如果想先验证目标位姿并跳过抓取动作：
+
+```bash
+python scripts/main.py --dry-run
+```
+
+建议先通过 `--dry-run` 验证位姿和工作空间，再执行真实抓取。当前脚本在此模式下仍会初始化机械臂、移动到预备位，并在退出时执行清理与回零；仅验证视觉时，请使用前两个不连接机械臂的脚本。
+
+主程序执行流程：
+
+1. 初始化 RGB-D 相机，确认图像流可用
+2. 机械臂与夹爪使能
+3. 移动到预备位，如果需要调整机械臂启动后的预备位置，请在 `config/default.yaml` 中修改：
+
+```yaml
+robot:
+  ready_pose:
+    x: 0.3
+    y: 0.0
+    z: 0.3
+    roll: 0.0
+    pitch: 0.7
+    duration: 3.0
+```
+
+4. 实时检测桌面目标
+5. 基于短轴估计抓取姿态
+6. 按 `G` 采当前帧并执行抓取
+
+运行时按键：
+
+- `G`：抓取当前最佳目标
+- `R`：恢复实时预览
+- `Q` / `Esc`：退出程序
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+#### 4. `scripts/set.py` — 抓取与放置程序
+
+功能效果：将香蕉抓取并放置到盒子里面
+
+```bash
+python scripts/set.py
+```
+
+完成流程：
+
+1. 相机与机械臂初始化，移动到预备点位
+2. 实时相机预览 + YOLO 目标检测与实例分割
+3. 按 `G` 冻结帧，经手眼变换计算机械臂目标位姿
+4. 机械臂移动抓取香蕉并抬高
+5. 机械臂将香蕉放置在盒子内，并回归初始姿态
+6. 按 `Q` 退出系统，机械臂回归零点
+
+</div>
+</section>
+</div>
+
+### 9. GraspNet 进阶模块（可选）
+
+默认的 Python SDK / OBB 路线不需要 GraspNet。只有需要基于 RGB-D 点云估计 6D 夹取姿态时，才按下面步骤安装依赖并运行对应 Demo。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+#### 步骤 1. 安装 GraspNet 与 CUDA 算子
 
 如果只运行 `scripts/main.py` 或 `scripts/ordinary_grasp_pipeline.py`，不需要配置 GraspNet。只有在运行 `scripts/graspnet_camera_demo.py` 或 `scripts/grasp.py` 时，才需要准备 GraspNet、CUDA 版 PyTorch、PointNet2/knn CUDA 算子和预训练权重。
 
@@ -359,200 +721,13 @@ graspnet:
 
 `checkpoint` 支持三种写法：仅文件名会自动从 `sdk/graspnet-baseline/checkpoints/` 查找；相对路径会按项目根目录解析；绝对路径会直接使用。
 
-### 6. 目录结构
+</div>
+</section>
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
 
-```
-rebot_grasp/
-├── config/
-│   ├── default.yaml              # 主配置文件
-│   └── calibration/
-│       └── <camera_type>/
-│           ├── intrinsics.npz    # 相机内参
-│           └── hand_eye.npz      # 手眼标定结果
-├── drivers/
-│   ├── camera/
-│   │   ├── base.py               # 相机抽象基类
-│   │   ├── orbbec_gemini2.py     # Gemini 2 驱动
-│   │   └── realsense.py          # RealSense 驱动（备用）
-│   └── robot/
-│       └── grasp_driver.py       # 基于机械臂 SDK 的轻量抓取辅助
-├── calibration/
-│   ├── aruco_pose.py             # ArUco 位姿估计
-│   └── hand_eye.py               # 手眼标定求解
-├── utils/
-│   ├── ordinary_grasp.py         # OBB 抓取姿态估计与可视化
-│   └── transforms.py             # 坐标变换工具
-├── scripts/
-│   ├── main.py                   # 主抓取程序
-│   ├── set.py                    # 抓取与放置程序
-│   ├── ordinary_grasp_pipeline.py
-│   ├── object_detection.py
-│   └── collect_handeye_eih.py
-├── sdk/
-│   ├── pyorbbecsdk/              # Orbbec SDK Python 封装
-│   └── reBotArm_control_py/      # reBot Arm SDK
-└── environment.yml               # 推荐的 conda 环境文件
-```
-
-### 7. 手眼标定
-
-第一次运行完整抓取前，先完成 Eye-in-Hand 手眼标定。
-
-运行标定程序前，请先启动并确认 CAN 接口：
-
-```bash
-sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000
-sudo ip link set can0 up
-ip -details link show can0
-```
-
-```bash
-python scripts/collect_handeye_eih.py
-```
-
-开始前，请先在 `config/default.yaml` 中确认以下ArUco尺寸参数与你实际打印的标记一致：
-
-```yaml
-calibration:
-  aruco:
-    marker_length_m: 0.1
-```
-
-自动模式下，机械臂会自动遍历 50 个预设姿态，检测到ArUco稳定后自动采样。即使中途按 `c` 或 `q` 中断，脚本也会尝试基于当前已有样本计算标定结果。
-
-如果你希望手动推动机械臂采集，可以使用手动模式：
-
-```bash
-python scripts/collect_handeye_eih.py --manual
-```
-
-手动模式下，机械臂会进入重力补偿状态。你可以将末端推到合适视角后按 `Enter` 采集，按 `c` 或 `q` 结束并计算结果。
-
-:::tip
-如果您在校准之后发现机械臂的抓取精度无法满足需求，可以设置`config/default.yaml`参数 `calibration.hand_eye_compensation_m`中的 `X（前后）、Y（左右）、Z（高低）` 参数给予位置补偿。
-:::
-
-标定结果保存到：
-
-```text
-config/calibration/<camera_type>/hand_eye.npz
-```
-
-样本数建议最少 5 个样本且建议不少于 15 个样本。
-
-### 8. 运行与调试
-
-#### 1. 仅验证目标检测
-
-```bash
-python scripts/object_detection.py
-```
-
-若需调整检测模型或类别，可在 `config/default.yaml` 中修改：
-
-```yaml
-yolo:
-  model_name: "yoloe-26l-seg.pt"
-  device: "cpu"
-  use_world: true
-  custom_classes:
-    - "yellow banana"
-    - "water bottle"
-    - "cup"
-```
-
-用于确认：
-
-- 相机可以正常打开
-- YOLO 模型加载正常
-- YOLO 目标检测功能正常
-
-#### 2. 仅验证抓取估计
-
-```bash
-python scripts/ordinary_grasp_pipeline.py
-```
-
-若需要调整抓取估计频率或预抓取回退距离，可修改：
-
-```yaml
-grasp_pipeline:
-  infer_every_live: 3
-  grasp:
-    depth_quantile: 0.5
-    pregrasp_offset_m: 0.080
-    insertion_depth_m: 0.015
-    min_base_z_m: 0.00
-```
-
-这个脚本不会连接机械臂，只用于验证：
-
-- OBB 或最小外接矩形是否合理
-- 抓取点是否位于目标中央区域
-- 短轴方向是否符合夹爪开合方向预期
-
-按键说明：
-
-- 鼠标左键：点测深度
-- `G`：打印当前最佳抓取姿态
-- `Q` / `Esc`：退出
-
-#### 3. 执行主抓取程序
-
-```bash
-python scripts/main.py
-```
-
-如果只想先验证目标位姿，不让机械臂真实动作：
-
-```bash
-python scripts/main.py --dry-run
-```
-
-建议先通过 `--dry-run` 验证位姿和工作空间，再执行真实抓取。
-
-主程序执行流程：
-
-1. 初始化 RGB-D 相机，确认图像流可用
-2. 机械臂与夹爪使能
-3. 移动到预备位，如果需要调整机械臂启动后的预备位置，请在 `config/default.yaml` 中修改：
-
-```yaml
-robot:
-  ready_pose:
-    x: 0.3
-    y: 0.0
-    z: 0.3
-    roll: 0.0
-    pitch: 0.7
-    duration: 3.0
-```
-
-4. 实时检测桌面目标
-5. 基于短轴估计抓取姿态
-6. 按 `G` 采当前帧并执行抓取
-
-运行时按键：
-
-- `G`：抓取当前最佳目标
-- `R`：恢复实时预览
-- `Q` / `Esc`：退出程序
-
-#### 4. `scripts/set.py` — 抓取与放置程序
-
-功能效果：将香蕉抓取并放置到盒子里面
-
-完成流程：
-
-1. 相机与机械臂初始化，移动到预备点位
-2. 实时相机预览 + YOLO 目标检测与实例分割
-3. 按 `G` 冻结帧，经手眼变换计算机械臂目标位姿
-4. 机械臂移动抓取香蕉并抬高
-5. 机械臂将香蕉放置在盒子内，并回归初始姿态
-6. 按 `Q` 退出系统，机械臂回归零点
-
-#### 5. GraspNet 相机估计 Demo（可选）
+#### 步骤 2. 运行 GraspNet 相机估计 Demo
 
 ```bash
 python scripts/graspnet_camera_demo.py
@@ -568,7 +743,13 @@ python scripts/graspnet_camera_demo.py
 
 推理后可通过 Open3D 查看点云与夹取候选。
 
-#### 6. GraspNet 机械臂抓取程序（可选）
+</div>
+</section>
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+#### 步骤 3. 运行 GraspNet 机械臂抓取程序
 
 ```bash
 python scripts/grasp.py
@@ -578,9 +759,13 @@ python scripts/grasp.py --target-class "light blue coffee cup"
 
 该脚本基于 GraspNet 估计结果接入机械臂执行流程：YOLO 选择目标，GraspNet 输出 6D 夹取姿态，经手眼标定转换到机械臂基坐标系，再检查 IK 可达性并执行预夹取、夹取、退回动作。
 
-运行`python scripts/grasp.py`将运行完整 GraspNet 机械臂抓取流程，会实际控制机械臂运动。`--dry-run`：只打印目标位姿和候选筛选结果，不执行抓取动作。`--target-class "light blue coffee cup"`可以指定 YOLO 目标类别，只对该类别对应目标进行 GraspNet 候选筛选与抓取。
+运行 `python scripts/grasp.py` 将运行完整 GraspNet 机械臂抓取流程，会实际控制机械臂运动。`--dry-run` 打印目标位姿和候选筛选结果，并跳过抓取动作；当前脚本仍会初始化机械臂、移动到预备位，并在退出时执行清理与回零。`--target-class "light blue coffee cup"` 可以指定 YOLO 目标类别，只对该类别对应目标进行 GraspNet 候选筛选与抓取。
 
-### 9. FAQ
+</div>
+</section>
+</div>
+
+### 10. 常见问题
 
 <h4>1. <code>ModuleNotFoundError: No module named 'motorbridge'</code></h4>
 
@@ -659,6 +844,9 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 如果输出为 `False`，需要先修复 CUDA / PyTorch 安装；如果输出为 `True` 但仍报错，建议重新编译 `pointnet2` 和 `knn`。
 
+</TabItem>
+<TabItem value="ros2-yoloe" label="方式 2 · ROS 2 / YOLOE">
+
 ## 二、视觉抓取方式2
 
 ### 1. 项目介绍
@@ -669,9 +857,20 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ### 2. 环境安装
 
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
 #### 步骤 1. 安装机械臂 ROS2 工程
 
 请先按 [reBot Arm B601-RS ROS2 集成](https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/) 完成 `rebotarm_ros2` 工作空间的安装与编译。
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
 
 #### 步骤 2. 安装相机
 
@@ -746,7 +945,7 @@ sudo make install
 sudo ldconfig
 ```
 
-```4.
+4.
 
 ```bash
 cd ~/rebotarm_ros2/src
@@ -757,6 +956,12 @@ colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
 
 </details>
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
 #### 步骤 3. 导入视觉抓取包
 
 ```bash
@@ -765,6 +970,12 @@ git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
 cd ~/rebotarm_ros2
 colcon build --symlink-install
 ```
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
 
 #### 步骤 4. 安装 YOLO / YOLOE 环境
 
@@ -807,6 +1018,12 @@ wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobilecli
 wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
 ```
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+
 #### 步骤 5. 编译工作空间
 
 ```bash
@@ -823,6 +1040,10 @@ source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 ```
 
+</div>
+</section>
+</div>
+
 ### 3. 运行项目
 
 启动前请确认：机械臂已上电，CAN 接口为 `can0`，Gemini 2、D405 或 D435i 已通过 USB 连接。然后先拉起 CAN：
@@ -834,6 +1055,11 @@ sudo ip link set can0 up
 ```
 
 下面按终端分别启动，方便看清视觉抓取的逻辑。Gemini 2、D405 与 D435i 的启动命令不同，请按实际相机选择。如果希望一键启动，可以自行编写启动脚本。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">A</span>
+<div className="rebot-step-content">
 
 #### 终端 A — 启动机械臂 + RViz
 
@@ -872,6 +1098,12 @@ ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=c
 ```
 
 </details>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">B</span>
+<div className="rebot-step-content">
 
 #### 终端 B — 启动相机
 
@@ -915,6 +1147,12 @@ ros2 launch realsense2_camera rs_launch.py \
 ```
 
 </details>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">C</span>
+<div className="rebot-step-content">
 
 #### 终端 C — 机械臂到达观察位 + YOLO 识别
 
@@ -1011,6 +1249,12 @@ source ~/rebotarm_ros2/install/setup.bash
 | `grasp_z_offset_m` | 抓取高度微调。默认参数按柔性夹爪设置（比普通夹爪更长），可按实际夹爪高度调整 |
 | `place_z_offset_m` | 放置时的抬高高度，用于控制到达放置点后多高再放下物体                         |
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">D</span>
+<div className="rebot-step-content">
+
 #### 终端 D — 一键抓取放置
 
 默认 3 秒后触发。
@@ -1028,6 +1272,12 @@ ros2 launch rebot_visual_grasp grasp_go.launch.py
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 ```
 
+</div>
+</section>
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">E</span>
+<div className="rebot-step-content">
+
 #### 终端 E — 回零（可选）
 
 新版 `rebotarm` 在终端里按 `Ctrl + C` 退出后会自动回零。如果需要手动回零：
@@ -1037,6 +1287,13 @@ source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 ```
+
+</div>
+</section>
+</div>
+
+</TabItem>
+</GraspingTabs>
 
 ## 联系方式
 
@@ -1061,3 +1318,5 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) 文档](https://graspnet.net/)
+
+</div>

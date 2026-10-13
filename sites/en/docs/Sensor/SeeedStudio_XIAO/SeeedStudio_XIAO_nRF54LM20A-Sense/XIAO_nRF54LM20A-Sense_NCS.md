@@ -198,9 +198,9 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_10.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-3. Search for **nRF Connect**, modify **Board Roots**, and add the path `~\your_path\platform-seeedboards\zephyr`. The board definitions for XIAO nRF54LM20A series are stored here.
+3. Search for **nRF Connect**, modify **Board Roots**, and add the path `~\your_path\platform-seeedboards\zephyr\nrf`. The board definitions for XIAO nRF54LM20A series are stored here.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_11.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/ncs-fix.jpeg" style={{width:800, height:'auto'}}/></div>
 
 ### Create a new application
 

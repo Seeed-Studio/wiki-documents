@@ -153,7 +153,7 @@ Connect Motor 1 and Motor 2 as shown below.
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="Connect Motor 1 and Motor 2 on the reBot Arm B601-RS" />
 </div>
 
-Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cable, and XT30 2+2 cable as shown below. Connect the other end of the XT30 2+2 cable to Motor 1 and connect the power cable to the 48 V power supply.
+Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cable, and XT30 2+2 cable as shown below, and set the PCAN DIP switch to **120R**. Connect the other end of the XT30 2+2 cable to Motor 1 and connect the power cable to the 48 V power supply.
 
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="Connect the USB-to-CAN module and power cables to the reBot Arm B601-RS" />

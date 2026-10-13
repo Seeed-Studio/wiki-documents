@@ -75,6 +75,24 @@ Seeed Studio のチュートリアルは、公式ドキュメントに基づい�
 <iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ コード不要 · 環境構築不要</span>
+    <p className="sensecraft-banner__title">セットアップなしで、reBot Arm と LeRobot を 1 つのアプリで</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics は SO-ARM101、reBot Arm 102 + B601-RS / B601-DM 向けの Seeed のノーコードプラットフォームです。接続、キャリブレーション、データ収集、学習、推論までをガイド付き UI で実行できます。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 ステップのガイド付きフロー</li>
+      <li>✅ クラウド学習</li>
+      <li>✅ Windows / macOS クライアント</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">SenseCraft Robotics を開く ↗</a>
+    <a className="sensecraft-banner__link" href="/ja/sensecraft_robotics/">ソフトウェアガイド</a>
+  </div>
+</div>
+
 ## 初期システム環境
 
 <Tabs groupId="lerobot-platform">

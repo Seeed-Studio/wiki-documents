@@ -8,8 +8,6 @@ keywords:
   - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
-aliases:
-  - /so-arm101
 sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 3/11/2026
@@ -117,26 +115,8 @@ import TabItem from '@theme/TabItem';
   </div>
 
 :::tip
-このチュートリアルは最新の [LeRobot](https://huggingface.co/docs/lerobot/index) に合わせて更新されています。以前のバージョンを表示するには、[こちら](https://wiki.seeedstudio.com/ja/lerobot_so100m/)をクリックしてください。
+このチュートリアルは最新の [LeRobot](https://huggingface.co/docs/lerobot/index) に合わせて更新されています。
 :::
-
-[SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100) は、[TheRobotStudio](https://www.therobotstudio.com/) によって立ち上げられた、完全オープンソースのロボットアームプロジェクトです。フォロワーアームとリーダーアームの両方を含み、詳細な3Dプリントファイルと操作ガイドが提供されています。[LeRobot](https://github.com/huggingface/lerobot/tree/main) は、実世界ロボティクス向けの PyTorch モデル、データセット、ツールを提供し、模倣学習とポリシーデプロイの参入障壁を下げます。
-
-<div className="video-container">
-  <iframe
-    loading="lazy"
-    width="900"
-    height="600"
-    src="https://www.youtube.com/embed/sD34HnAkGNc?si=hqKd_sH5Oc9sdcwd&autoplay=0&mute=1"
-    title="SO-ARM10x LeRobot overview video"
-    frameBorder="0"
-    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  ></iframe>
-</div>
-
-SO-ARM10x と reComputer Jetson AI ロボティクスキットは、高精度なロボットアーム制御と AI コンピューティングプラットフォームを組み合わせたものです。Jetson Orin または AGX Orin と LeRobot フレームワークを組み合わせることで、教育、研究、産業オートメーション実験に利用できます。
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM10x kit" />
@@ -151,161 +131,6 @@ SO-ARM10x と reComputer Jetson AI ロボティクスキットは、高精度な
 :::caution
 Seeed Studio はキットのハードウェア品質に責任を負います。ソフトウェアチュートリアルは、可能な限り公式の LeRobot ドキュメントに従っています。ソフトウェアや依存関係に関する問題が解決できない場合は、このページ末尾の FAQ を確認し、[LeRobot GitHub リポジトリ](https://github.com/huggingface/lerobot) または [LeRobot Discord チャンネル](https://discord.gg/8TnwDdjFGU) に問題を報告してください。
 :::
-
-<div className="video-container">
-  <iframe
-    loading="lazy"
-    width="900"
-    height="600"
-    src="https://www.youtube.com/embed/JrF_ymUvrqc?si=vslu5NNI-ZIzVXLc&autoplay=0&mute=1"
-    title="SO-ARM10x project video"
-    frameBorder="0"
-    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  ></iframe>
-</div>
-
-</section>
-
-## 主な特長
-
-<section id="features" className="section-card">
-  <div className="section-title">
-    <span>特長</span>
-    <h2>主な特長</h2>
-    <p>SO-ARM10x は、オープンソース学習、低コストロボティクス、LeRobot 連携、NVIDIA へのデプロイに重点を置いています。</p>
-  </div>
-
-  <div className="feature-grid">
-    <div><strong>オープンソースかつ低コスト</strong><span>TheRobotStudio の SO-ARM プロジェクトに基づくオープンソースロボットアームソリューション。</span></div>
-    <div><strong>LeRobot との統合</strong><span>LeRobot でのテレオペレーション、データセット記録、学習、実機評価のために設計されています。</span></div>
-    <div><strong>豊富な学習リソース</strong><span>組み立て、キャリブレーション、テスト、データセット、学習、デプロイのガイドを含みます。</span></div>
-    <div><strong>NVIDIA 互換</strong><span>reComputer Mini J4012 Orin NX 16GB などのプラットフォームと組み合わせてデプロイ可能です。</span></div>
-    <div><strong>マルチシナリオ応用</strong><span>教育、研究、自動化デモ、ロボティクス学習に適しています。</span></div>
-  </div>
-</section>
-
-## 新着情報
-
-<section id="updates" className="section-card">
-  <div className="section-title">
-    <span>更新情報</span>
-    <h2>SO-ARM101 の新機能</h2>
-    <p>SO-ARM101 では、配線、リーダーアームのギア比、リアルタイム追従動作が改善されています。</p>
-  </div>
-
-  <div className="notice-grid">
-    <div className="notice-card"><strong>配線の最適化</strong><span>SO-ARM100 と比較して、SO-ARM101 では配線が改善され、ジョイント3の断線問題を回避しています。新しい配線ルーティングでは、もはや関節の動作範囲が制限されません。</span></div>
-    <div className="notice-card"><strong>リーダーのギア比アップデート</strong><span>リーダーアームには最適化されたギア比のモーターが使用されており、性能が向上し、外部ギアボックスが不要になりました。</span></div>
-    <div className="notice-card"><strong>リアルタイム追従</strong><span>リーダーアームはフォロワーアームをリアルタイムで追従でき、人間が介入してロボットの動作を修正できる将来のポリシーワークフローに役立ちます。</span></div>
-  </div>
-</section>
-
-
-## 仕様
-
-<section id="specifications" className="section-card">
-  <div className="section-title">
-    <span>仕様</span>
-    <h2>仕様</h2>
-    <p>SO-ARM100 および SO-ARM101 のモーター、電源、通信、制御仕様を確認します。</p>
-  </div>
-
-<details className="content-details">
-<summary>SO-ARM10x の仕様を表示</summary>
-
-<table>
-  <thead>
-    <tr>
-      <th>タイプ</th>
-      <th colSpan="2">SO-ARM100</th>
-      <th colSpan="2">SO-ARM101</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">Arm Kit Pro</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">Arm Kit Pro</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>リーダーアーム</td>
-      <td rowSpan="2">すべての関節に 1:345 のギア比を持つ 12 個の ST-3215- C001 (7.4V) モーター</td>
-      <td rowSpan="2">すべての関節に 1:345 のギア比を持つ 12 個の ST-3215-C018/ST-3215-C047 (12V) モーター</td>
-      <td colSpan="2">
-        関節 2 のみに 1:345 のギア比を持つ 1 個の ST-3215- C001 (7.4V) モーター<br />
-        関節 1 および 3 に 1:191 のギア比を持つ 2 個の ST-3215-C044 (7.4V) モーター<br />
-        関節 4、5、およびグリッパー（関節 6）に 1:147 のギア比を持つ 3 個の ST-3215-C046 (7.4V) モーター
-      </td>
-    </tr>
-    <tr>
-      <td>フォロワーアーム</td>
-      <td colSpan="2">SO-ARM100 と同じ</td>
-    </tr>
-    <tr>
-      <td>電源</td>
-      <td>5.5 mm × 2.1 mm DC 5 V 4 A</td>
-      <td>5.5 mm × 2.1 mm DC 12 V 2 A</td>
-      <td>5.5 mm × 2.1 mm DC 5 V 4 A</td>
-      <td>
-        5.5 mm × 2.1 mm DC 12 V 2 A（フォロワーアーム）<br />
-        5.5 mm × 2.1 mm DC 5 V 4 A（リーダーアーム）
-      </td>
-    </tr>
-    <tr>
-      <td>角度センサー</td>
-      <td colSpan="4">12 ビット磁気エンコーダ</td>
-    </tr>
-    <tr>
-      <td>推奨動作温度</td>
-      <td colSpan="4">0 °C ～ 40 °C</td>
-    </tr>
-    <tr>
-      <td>通信</td>
-      <td colSpan="4">UART</td>
-    </tr>
-    <tr>
-      <td>制御方法</td>
-      <td colSpan="4">PC</td>
-    </tr>
-  </tbody>
-</table>
-
-:::danger
-
-Arm Kit バージョンを購入した場合、両方の電源は 5V です。Arm Kit Pro バージョンを購入した場合は、リーダーロボットアームのキャリブレーションおよびすべての手順には 5V 電源を使用し、フォロワーロボットアームのキャリブレーションおよびすべての手順には 12V 電源を使用してください。
-
-:::
-
-</details>
-
-</section>
-
-## 部品表 (BOM)
-
-<section id="bom" className="section-card">
-  <div className="section-title">
-    <span>BOM</span>
-    <h2>部品表 (BOM)</h2>
-    <p>キットに含まれるサーボ、モーター制御ボード、ケーブル、電源、クランプ、およびオプションの 3D プリント部品を確認します。</p>
-  </div>
-
-<details className="content-details">
-<summary>部品表を表示</summary>
-
-| 部品 | 数量 | 同梱|
-|--|--|--|
-|  サーボモーター | 12 | ✅ |
-| モーター制御ボード | 2 | ✅ |
-| USB-C ケーブル 2 本 | 1 | ✅ |
-| 電源 2 | 2 | ✅ |
-| テーブルクランプ| 4 | ✅ |
-| アームの 3D プリント部品 | 1 | オプション |
-
-</details>
 
 </section>
 
@@ -331,7 +156,7 @@ SO101 の公式アップデートに伴い、SO100 は今後サポートされ�
 
 - 材料: PLA+
 - ノズル径と精度: 0.4mm ノズル径で 0.2mm レイヤー高さ、または 0.6mm ノズルで 0.4mm レイヤー高さ。
-- インフィル密度: 15%  
+- インフィル密度: 15%
 
 **ステップ 2: プリンタをセットアップする**
 
@@ -368,6 +193,24 @@ SO101 の公式アップデートに伴い、SO100 は今後サポートされ�
 
 </section>
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ コード不要 · 環境構築不要</span>
+    <p className="sensecraft-banner__title">セットアップなしで、reBot Arm と LeRobot を 1 つのアプリで</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics は SO-ARM101、reBot Arm 102 + B601-RS / B601-DM 向けの Seeed のノーコードプラットフォームです。接続、キャリブレーション、データ収集、学習、推論までをガイド付き UI で実行できます。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 ステップのガイド付きフロー</li>
+      <li>✅ クラウド学習</li>
+      <li>✅ Windows / macOS クライアント</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">SenseCraft Robotics を開く ↗</a>
+    <a className="sensecraft-banner__link" href="/ja/sensecraft_robotics/">ソフトウェアガイド</a>
+  </div>
+</div>
+
 ## 初期システム環境
 
 <section id="environment" className="section-card">
@@ -379,10 +222,10 @@ SO101 の公式アップデートに伴い、SO100 は今後サポートされ�
 
 **Ubuntu x86 の場合:**
 
-- Ubuntu 22.04  
-- CUDA 12 以上  
+- Ubuntu 22.04
+- CUDA 12 以上
 - Python 3.12
-- Torch 2.6 以上  
+- Torch 2.6 以上
 
 **Jetson Orin の場合:**
 
@@ -465,7 +308,7 @@ source ~/.bashrc`}
 
 <CodeBlock language="bash">
 {`conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
-conda remove opencv   # Uninstall OpenCV 
+conda remove opencv   # Uninstall OpenCV
 pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
 conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
@@ -1320,7 +1163,7 @@ USBFS キャッシュサイズを一時的に増やす
       width: 640,
       height: 480,
       fps: 30,
-      fourcc: "MJPG"} 
+      fourcc: "MJPG"}
     }' \\
     --teleop.type=so101_leader \\
     --teleop.port=/dev/ttyACM1 \\
@@ -1532,20 +1375,20 @@ echo $HF_USER`}
 
 **Record 関数**
 
-**record** 関数は、ロボットの動作中にデータを取得および管理するための一連のツールを提供します。  
+**record** 関数は、ロボットの動作中にデータを取得および管理するための一連のツールを提供します。
 
 **1. データ保存**
 
 - データは `LeRobotDataset` 形式で保存され、記録中にディスクへ書き込まれます。
-- デフォルトでは、記録後にデータセットはあなたの Hugging Face ページにプッシュされます。  
+- デフォルトでは、記録後にデータセットはあなたの Hugging Face ページにプッシュされます。
 - アップロードを無効にするには、`--dataset.push_to_hub=False` を使用します。
 
 **2. チェックポイントと再開**
 
-- 記録中にチェックポイントが自動的に作成されます。  
+- 記録中にチェックポイントが自動的に作成されます。
 - 中断後に再開するには、`--resume=true` を付けて同じコマンドを再実行します。
 
-⚠️ 重要な注意：再開する場合、`--dataset.num_episodes` には、データセット全体の目標エピソード数ではなく、「追加で記録するエピソード数」を設定してください。  
+⚠️ 重要な注意：再開する場合、`--dataset.num_episodes` には、データセット全体の目標エピソード数ではなく、「追加で記録するエピソード数」を設定してください。
 
 - 最初から記録をやり直すには、データセットディレクトリを**手動で削除**します。
 
@@ -1553,21 +1396,21 @@ echo $HF_USER`}
 
 コマンドライン引数を使ってデータ記録の流れを設定します：
 
-| Parameter | Description | Default |  
-|-----------|-------------|---------|  
-| --dataset.episode_time_s | 各データエピソードの長さ（秒） | 60 |  
-| --dataset.reset_time_s | 各エピソード後の環境リセット時間（秒） | 60 |  
-| --dataset.num_episodes | 記録するエピソードの総数 | 50 |  
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| --dataset.episode_time_s | 各データエピソードの長さ（秒） | 60 |
+| --dataset.reset_time_s | 各エピソード後の環境リセット時間（秒） | 60 |
+| --dataset.num_episodes | 記録するエピソードの総数 | 50 |
 
 **4. 記録中のキーボード操作**
 
 キーボードショートカットを使ってデータ記録の流れを制御します：
 
-| Key | Action |  
-|-----|--------|  
-| → (右矢印) | 現在のエピソードを早期終了／リセットし、次へ進む。 |  
-| ← (左矢印) | 現在のエピソードをキャンセルし、再記録する。 |  
-| ESC | セッションを即座に停止し、動画をエンコードしてデータセットをアップロードする。 |  
+| Key | Action |
+|-----|--------|
+| → (右矢印) | 現在のエピソードを早期終了／リセットし、次へ進む。 |
+| ← (左矢印) | 現在のエピソードをキャンセルし、再記録する。 |
+| ESC | セッションを即座に停止し、動画をエンコードしてデータセットをアップロードする。 |
 
 :::tip
 
@@ -1581,17 +1424,17 @@ echo $HF_USER`}
 
 **データ収集のためのヒント**
 
-- タスクの提案：さまざまな位置にある物体を把持し、ビンの中に置く。  
-- 規模：50 エピソード以上を記録する（位置ごとに 10 エピソード）。  
-- 一貫性：  
-  - カメラを固定したままにする。  
-  - 同じ把持動作を維持する。  
-  - 操作対象の物体がカメラ映像内に見えるようにする。  
-- 段階的な拡張：  
-  - 新しい位置、手法、カメラ調整を追加する前に、まずは安定した把持を実現する。  
-  - 失敗を防ぐため、複雑さを急激に増やさない。  
+- タスクの提案：さまざまな位置にある物体を把持し、ビンの中に置く。
+- 規模：50 エピソード以上を記録する（位置ごとに 10 エピソード）。
+- 一貫性：
+  - カメラを固定したままにする。
+  - 同じ把持動作を維持する。
+  - 操作対象の物体がカメラ映像内に見えるようにする。
+- 段階的な拡張：
+  - 新しい位置、手法、カメラ調整を追加する前に、まずは安定した把持を実現する。
+  - 失敗を防ぐため、複雑さを急激に増やさない。
 
-💡 経験則：カメラ画像だけを見て、自分自身でタスクを実行できる状態であるべきです。  
+💡 経験則：カメラ画像だけを見て、自分自身でタスクを実行できる状態であるべきです。
 
 この重要なトピックをさらに深く知りたい場合は、良いデータセットとは何かについて執筆した[ブログ記事](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset)を参照してください。
 
