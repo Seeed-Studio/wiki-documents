@@ -3,7 +3,7 @@ export const applicationSceneOptions = [
   {id: 'all', label: 'All applications', illustration: 'all'},
   {id: 'manipulation', label: 'Robot-arm control', illustration: 'manipulation', description: 'USB RGB cameras and USB depth cameras'},
   {id: 'recognition', label: 'Visual detection & recognition', illustration: 'recognition', description: 'CSI and USB cameras, including depth models'},
-  {id: 'measurement', label: 'Visual measurement', illustration: 'measurement', description: 'Cameras with a driver or SDK depth stream'},
+  {id: 'measurement', label: 'Depth measurement', illustration: 'measurement', description: 'Cameras with a driver or SDK depth stream'},
   {id: 'driving', label: 'Intelligent driving', illustration: 'driving', description: 'GMSL, depth or built-in IR night-vision cameras'},
 ];
 
