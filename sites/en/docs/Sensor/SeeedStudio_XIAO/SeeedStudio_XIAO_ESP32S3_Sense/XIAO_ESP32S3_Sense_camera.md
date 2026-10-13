@@ -420,19 +420,6 @@ static esp_err_t stream_handler(httpd_req_t *req)
 void startCameraServer()
 ```
 
-:::note 降温与调参说明（中文，临时放置，待整理到合适位置）
-当前 Wiki 中的示例代码为了呈现最佳效果，参数基本是"拉满"状态——OV5640 最高分辨率（5MP / 2592×1944）、双缓冲连续抓帧、240MHz CPU——因此长时间运行会明显发烫。如果你觉得温度过高，或并不需要这么高的清晰度，可以通过以下方式降低功耗，且多数不会影响单张抓图的清晰度：
-
-| 杠杆 | 改什么 → 改成什么 | 降温效果 | 是否影响清晰度 |
-|---|---|---|---|
-| CPU 频率 | Arduino IDE：`工具(Tools) → CPU Frequency: 240MHz` → `160MHz`（或在 `setup()` 里加 `setCpuFrequencyMhz(160);`） | 中 | 否（传感器成像与 JPEG 编码在 OV5640 内部完成，与 CPU 无关） |
-| 对焦频率 | 将连续自动对焦（`autoFocusMode`）改为周期性单次触发对焦，或拉长对焦间隔 | 小 | 静物不变；移动场景需等更久才重新对焦 |
-| 抓帧模式 | `CAMERA_GRAB_LATEST` → `CAMERA_GRAB_WHEN_EMPTY`（只在取帧时才抓，不连续抓） | 大 | 否（抓图时仍取最新帧） |
-| 分辨率 | `FRAMESIZE_QSXGA`(2592×1944) → `FRAMESIZE_HD`(1280×720) 或 `SXGA` | 大 | 像素数降低，放大后细节减少（单像素清晰度不变） |
-| 双缓冲 | `fb_count` 由 2 改为 1（配合抓帧模式改动） | 中 | 否 |
-
-> 性价比最高的组合：把"一直在抓 5MP"改成"需要时才抓 HD"——即 `CAMERA_GRAB_WHEN_EMPTY` + 降一档分辨率，温度能明显下降，单张抓图清晰度几乎不受影响。
-:::
 
 ## Taking photos with the camera
 
@@ -461,11 +448,11 @@ Here is the Arduino program for this project.
 #define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
 
 #include "camera_pins.h"
-#include "ESP32_OV5640_AF.h"   // OV5640 自动对焦库 (github.com/0015/ESP32-OV5640-AF)
+#include "ESP32_OV5640_AF.h"   // OV5640 auto-focus library (github.com/0015/ESP32-OV5640-AF)
 
 OV5640 ov5640 = OV5640();
 
-#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA // Wiki: AF 对焦需 >=1280x1024
+#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA // AF focusing requires >=1280x1024
 #define OV5640_FOCUS_TIMEOUT_MS  8000
 
 unsigned long lastCaptureTime = 0; // Last shooting time
@@ -507,7 +494,7 @@ void writeFile(fs::FS &fs, const char * path, uint8_t * data, size_t len){
     file.close();
 }
 
-// 等待 OV5640 连续自动对焦收敛 (FW_STATUS == 0x10 FOCUSED)
+// Wait for the OV5640 continuous auto-focus to settle (FW_STATUS == 0x10 FOCUSED)
 bool waitForOv5640Focus() {
   const uint32_t started = millis();
   uint8_t status = 0;
@@ -584,26 +571,26 @@ void setup() {
   
   camera_sign = true; // Camera initialization check passes
 
-  // --- OV5640 自动对焦初始化（出厂固件缺失的关键步骤，否则镜头默认失焦） ---
+  // --- OV5640 auto-focus init (a key step missing from factory firmware; without it the lens defaults out of focus) ---
   sensor_t *s = esp_camera_sensor_get();
   if (s && s->id.PID == OV5640_PID) {
     Serial.println("OV5640 detected, initializing auto-focus...");
-    // 切到 SXGA 做对焦（AF 固件需要 >=1280x1024 才能评估对比度）
+    // Switch to SXGA for focusing (the AF firmware needs >=1280x1024 to evaluate contrast)
     if (s->set_framesize(s, OV5640_AF_FOCUS_FRAMESIZE) != 0) {
       Serial.println("WARN: cannot set SXGA for AF focus, captures will be out of focus");
     } else if (!ov5640.start(s)) {
       Serial.println("WARN: OV5640 CHIPID check failed, AF skipped");
-      s->set_framesize(s, config.frame_size); // 恢复拍摄分辨率
+      s->set_framesize(s, config.frame_size); // restore the capture framesize
     } else {
-      int r1 = ov5640.focusInit();                       // 灌入对焦固件，0=成功
-      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // 启用连续自动对焦
+      int r1 = ov5640.focusInit();                       // load focus firmware, 0 = success
+      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // enable continuous auto-focus
       Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
       if (r1 == 0 && r2 == 0 && waitForOv5640Focus()) {
         Serial.println("OV5640 AF ready.");
       } else {
         Serial.println("ERROR: OV5640 AF setup failed; captures will be out of focus.");
       }
-      // 恢复到拍摄分辨率
+      // Restore the capture framesize
       if (s->set_framesize(s, config.frame_size) != 0) {
         Serial.println("WARN: cannot restore capture framesize");
       }
@@ -807,16 +794,18 @@ Here is the Arduino program for this project.
  *
  * Adapted by MRovai @02June23
  *
- * 通用 OV5640 自动对焦补丁（仅对 OV5640 生效，定焦模组 OV3660/NT99141 等自动跳过）：
- *  - esp_camera_init 后判 PID == OV5640_PID 才做 focusInit / autoFocusMode
- *  - RGB565 模式下不切 SXGA（会撑爆 fb 缓冲），依赖 OV5640 内部全尺寸做对焦评估
+ * Generic OV5640 auto-focus patch (only applies to the OV5640; fixed-focus modules
+ * such as the OV3660/NT99141 are skipped automatically):
+ *  - After esp_camera_init, run focusInit / autoFocusMode only when PID == OV5640_PID
+ *  - In RGB565 mode do not switch to SXGA (it would overflow the fb buffer);
+ *    rely on the OV5640's internal full-size image for focus evaluation
 */
 
 #include <Arduino.h>
 #include <TFT_eSPI.h>
 #include <SPI.h>
 #include "esp_camera.h"
-#include "ESP32_OV5640_AF.h"   // OV5640 自动对焦库 (github.com/0015/ESP32-OV5640-AF)，仅 OV5640 生效
+#include "ESP32_OV5640_AF.h"   // OV5640 auto-focus library (github.com/0015/ESP32-OV5640-AF), OV5640 only
 #include "FS.h"
 #include "SD.h"
 
@@ -848,11 +837,11 @@ bool sd_sign = false;              // Check sd status
 
 TFT_eSPI tft = TFT_eSPI();
 
-// --- OV5640 AF（仅 OV5640 模组生效） ---
+// --- OV5640 AF (OV5640 module only) ---
 OV5640 ov5640 = OV5640();
 #define OV5640_FOCUS_TIMEOUT_MS 8000
 
-// 等待 OV5640 连续自动对焦收敛 (FW_STATUS == 0x10 FOCUSED)
+// Wait for the OV5640 continuous auto-focus to settle (FW_STATUS == 0x10 FOCUSED)
 bool waitForOv5640Focus() {
   const uint32_t started = millis();
   uint8_t status = 0;
@@ -926,8 +915,8 @@ void setup() {
   config.frame_size = FRAMESIZE_240X240;
   config.pixel_format = PIXFORMAT_RGB565;
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
-  // RGB565 240×240 用内部 DRAM 单缓冲：TFT_eSPI 的 SPI DMA 能直接读 DRAM，
-  // 读 PSRAM 会导致 pushColors 崩（见 Setup66 + PSRAM 组合的问题记录）
+  // RGB565 240x240 uses a single internal-DRAM buffer: TFT_eSPI's SPI DMA can read
+  // DRAM directly, while reading from PSRAM crashes pushColors (see the Setup66 + PSRAM issue notes)
   config.fb_location = CAMERA_FB_IN_DRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
@@ -941,17 +930,19 @@ void setup() {
   Serial.println("Camera ready");
   camera_sign = true; // Camera initialization check passes
 
-  // --- OV5640 自动对焦初始化（仅 OV5640，定焦模组跳过） ---
-  // 出厂固件缺失的关键步骤：esp_camera_init 不做 AF，OV5640 默认失焦。
-  // RGB565 模式不切 SXGA（会撑爆 fb 缓冲），依赖 OV5640 内部全尺寸做对焦评估。
+  // --- OV5640 auto-focus init (OV5640 only; fixed-focus modules are skipped) ---
+  // A key step missing from factory firmware: esp_camera_init does not set up AF,
+  // so the OV5640 defaults to an out-of-focus lens.
+  // In RGB565 mode do not switch to SXGA (it would overflow the fb buffer);
+  // rely on the OV5640's internal full-size image for focus evaluation.
   sensor_t *s = esp_camera_sensor_get();
   if (s && s->id.PID == OV5640_PID) {
     Serial.println("OV5640 detected, initializing auto-focus...");
     if (!ov5640.start(s)) {
       Serial.println("WARN: OV5640 CHIPID check failed, AF skipped");
     } else {
-      int r1 = ov5640.focusInit();                       // 灌入对焦固件，0=成功
-      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // 启用连续自动对焦
+      int r1 = ov5640.focusInit();                       // load focus firmware, 0 = success
+      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // enable continuous auto-focus
       Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
       if (r1 == 0 && r2 == 0) {
         waitForOv5640Focus();
@@ -967,7 +958,7 @@ void setup() {
   // Display initialization
   tft.init();
   pinMode(TFT_BL, OUTPUT);
-  digitalWrite(TFT_BL, HIGH);  // 开背光
+  digitalWrite(TFT_BL, HIGH);  // turn on the backlight
   tft.setRotation(1);
   tft.fillScreen(TFT_WHITE);
 
@@ -1314,7 +1305,7 @@ Here is the Arduino program for this project.
 
 ```cpp
 #include "esp_camera.h"
-#include "ESP32_OV5640_AF.h"   // OV5640 自动对焦库 (仅 OV5640 生效)
+#include "ESP32_OV5640_AF.h"   // OV5640 auto-focus library (OV5640 only)
 #include <WiFi.h>
 
 //
@@ -1341,9 +1332,9 @@ const char *password = "**********";
 void startCameraServer();
 void setupLedFlash(int pin);
 
-// --- OV5640 AF（仅 OV5640 模组生效，定焦模组 OV3660/NT99141 等自动跳过） ---
+// --- OV5640 AF (OV5640 module only; fixed-focus modules such as the OV3660/NT99141 are skipped automatically) ---
 OV5640 ov5640 = OV5640();
-#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA  // AF 对焦评估需 >=1280x1024
+#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA  // AF focus evaluation requires >=1280x1024
 #define OV5640_FOCUS_TIMEOUT_MS 8000
 bool waitForOv5640Focus() {
   const uint32_t started = millis();
@@ -1427,7 +1418,7 @@ void setup() {
   if (s && s->id.PID == OV5640_PID) {
     s->set_reg(s, 0x302C, 0xC0, 0x00);
   }
-  // --- OV5640 自动对焦初始化（仅 OV5640，定焦模组跳过） ---
+  // --- OV5640 auto-focus init (OV5640 only; fixed-focus modules are skipped) ---
   if (s && s->id.PID == OV5640_PID) {
     Serial.println("OV5640 detected, initializing auto-focus...");
     if (s->set_framesize(s, OV5640_AF_FOCUS_FRAMESIZE) == 0 && ov5640.start(s)) {
@@ -1435,7 +1426,7 @@ void setup() {
       int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;
       Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
       if (r1 == 0 && r2 == 0) waitForOv5640Focus();
-      s->set_framesize(s, config.frame_size);  // 恢复
+      s->set_framesize(s, config.frame_size);  // restore the capture framesize
     } else {
       Serial.println("WARN: OV5640 AF setup failed, skipped");
       s->set_framesize(s, config.frame_size);
@@ -1849,13 +1840,30 @@ Mode 1 is recommended because it has a more pronounced focusing effect than Mode
 
 ## OV5640 Heat Optimization
 
+The OV5640 module heats up noticeably during long-running use. This section offers two ways to bring the temperature down: tuning the software parameters (Method 1), and lowering the IO drive capability through a register configuration (Method 2).
+
+### Method 1: Reduce heat by tuning parameters
+
+The example code in this Wiki is tuned for the best possible image quality — the OV5640's maximum resolution (5MP / 2592×1944), double-buffered continuous frame grabbing, and a 240MHz CPU — so the board heats up noticeably during long runs. If you find the temperature too high, or you do not need that much resolution, you can lower the power consumption in the following ways, most of which do not affect the sharpness of single captures:
+
+| Lever | What to change | Heat reduction | Affects image quality? |
+|---|---|---|---|
+| CPU frequency | Arduino IDE: `Tools → CPU Frequency: 240MHz` → `160MHz` (or add `setCpuFrequencyMhz(160);` in `setup()`) | Medium | No (sensor imaging and JPEG encoding are done inside the OV5640, independent of the CPU) |
+| Focus frequency | Switch continuous auto-focus (`autoFocusMode`) to periodically triggered single-shot focus, or lengthen the focus interval | Small | Unchanged for still scenes; moving scenes take longer to re-focus |
+| Frame grabbing | `CAMERA_GRAB_LATEST` → `CAMERA_GRAB_WHEN_EMPTY` (capture only when a frame is requested, instead of grabbing continuously) | Large | No (the latest frame is still used when capturing) |
+| Resolution | `FRAMESIZE_QSXGA` (2592×1944) → `FRAMESIZE_HD` (1280×720) or `SXGA` | Large | Fewer pixels, so less detail when enlarged (per-pixel sharpness is unchanged) |
+| Double buffering | `fb_count` from 2 to 1 (together with the grab-mode change above) | Medium | No |
+
+> The best-value combination is to change "always grabbing 5MP" into "grabbing HD only when needed" — that is, `CAMERA_GRAB_WHEN_EMPTY` plus one step down in resolution. The temperature drops noticeably, with almost no impact on the sharpness of single captures.
+
+### Method 2: Reduce power by lowering the IO drive capability
 :::tip
 This section applies only to the **OV5640** camera module. The OV2640 has no such register and is skipped automatically by the `PID` check in the code below.
 :::
 
 When the OV5640 runs continuously for a long time — video streaming, live preview, or continuous auto-focus — the chip temperature can rise above 70°C. This is a hardware-level root cause and cannot be fully eliminated in software; it can only be mitigated.
 
-### Why the OV5640 heats up
+#### Why the OV5640 heats up
 
 1. **Internal DVDD regulator drop**: when the I/O supply (DOVDD) is 2.8V and the internal DVDD regulator is used, the large voltage drop itself dissipates significant power (noted in the official datasheet).
 2. **Improper power-up sequence** introduces leakage current and raises static power consumption.
@@ -1863,7 +1871,7 @@ When the OV5640 runs continuously for a long time — video streaming, live prev
 
 The only effective software lever is to **lower the IO pin drive current** to reduce dynamic power.
 
-### How it works — register 0x302C
+#### How it works — register 0x302C
 
 Register `0x302C` (named `DRIVE_CAPABILITY` in the esp32-camera source) controls the drive capability of the IO pins (D0–D7, PCLK, VSYNC, HREF). The key field is **Bit[7:6]**:
 
@@ -1876,13 +1884,7 @@ Register `0x302C` (named `DRIVE_CAPABILITY` in the esp32-camera source) controls
 
 Changing Bit[7:6] from `11` to `00` drops the drive capability from 4x to 1x. That is the entire principle — there is no other magic involved.
 
-:::note
-**IDF project (equivalent, already shipped):** in the ESP-IDF project the same effect is achieved by editing `ov5640_settings.h` and adding `{DRIVE_CAPABILITY, 0x03}` to the `sensor_default_regs[]` table, which is written into the chip during `sensor.reset()` inside `esp_camera_init()`. `0x03 = 0b00000011`, so Bit[7:6] = `00` → 1x drive. The `esp_camera_init()` function itself is unchanged — only the register value it writes differs.
-
-**Arduino (this wiki):** the Arduino `esp32-camera` lives inside the boards package directory (the path varies by OS/version and is overwritten on every package update), so we cannot ask users to edit the `.h` file. Instead we write the register at runtime with `set_reg` — the same style already used in [Method 2](#method-2) for focus control: `sensor->set_reg(sensor, 0x3022, 0xff, 0x03)`.
-:::
-
-### Code — add this right after `esp_camera_init()`
+#### Code — add this right after `esp_camera_init()`
 
 ```cpp
 // --- OV5640 Heat Optimization ---
@@ -1896,14 +1898,12 @@ if (s && s->id.PID == OV5640_PID) {
 }
 ```
 
-Line by line:
-
 - `esp_camera_init(&config)` — called as usual, the function is **not** modified. Internally it calls `sensor.reset()`, which writes a batch of default registers.
 - `esp_camera_sensor_get()` — gets the `sensor_t *` pointer needed to talk to the sensor.
 - `if (s->id.PID == OV5640_PID)` — only applies to the OV5640. All examples in this wiki are also compatible with the OV2640, and `0x302C` is OV5640-specific, so it must not be written to an OV2640. The video-streaming example already uses the same `if (s->id.PID == OV3660_PID)` pattern.
 - `s->set_reg(s, 0x302C, 0xC0, 0x00)` — reads back `0x302C`, clears only **Bit[7:6]** to `00` (mask `0xC0 = 0b11000000`, value `0x00`), and leaves the other bits at whatever the library set. This is safer than writing `0x03` directly — it does not depend on the library's default value and touches only the drive-capability bits.
 
-### Effect & risk
+#### Effect and risks
 
 - **Effect**: under long-running continuous streaming, the OV5640 chip temperature drops from ~70°C+ to ~54°C (varies with ambient temperature and heat-sink).
 - **Risk**: lower drive capability slows signal edges, which raises the bar for PCB trace noise immunity; in extreme cases it may introduce image noise or sampling distortion. On the XIAO ESP32S3 Sense + OV5640 (heat-sink version) the impact is acceptable in testing.

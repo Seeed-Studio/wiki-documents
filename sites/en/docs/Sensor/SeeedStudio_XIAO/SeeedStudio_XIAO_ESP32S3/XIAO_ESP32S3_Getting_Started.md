@@ -58,7 +58,7 @@ Seeed Studio XIAO Series are diminutive development boards, sharing a similar ha
 Seeed Studio XIAO ESP32-S3 Sense integrates camera sensor, digital microphone and SD card supporting. Combining embedded ML computing power and photography capability, this development board can be your great tool to get started with intelligent voice and vision AI.
 
 :::tip
-The **OV2640 camera** has been discontinued, and the subsequent XIAO ESP32-S3 Sense used the **OV3660 camera** model. Due to the OV3660 being out of stock, the XIAO ESP32-S3 Sense camera is now upgraded to the **OV5640 camera with auto-focus (AF)** — a higher-resolution module that supports automatic focus. The Wiki camera example code applies to the OV2640, OV3660 and OV5640; AF support is integrated into the examples for the OV5640 (the OV3660 and OV2640 have no AF hardware and operate at a fixed focus).
+The **OV2640 camera** has been discontinued, and the subsequent XIAO ESP32-S3 Sense used the **OV3660 camera** model. Due to the OV3660 being out of stock, the XIAO ESP32-S3 Sense camera is now upgraded to the **OV5640 camera with auto-focus (AF)** — a higher-resolution module that supports automatic focus. The Wiki camera example code applies to the OV2640, OV3660 and OV5640; AF support is integrated into the examples for the OV5640 (the OV3660 and OV2640 have no AF hardware and operate at a fixed focus). During this camera module transition, boards may ship with either the OV5640 or the OV3660 — the Wiki example code has been adapted to support both, so either module works without affecting usage.
 :::
 
 ### Specification
