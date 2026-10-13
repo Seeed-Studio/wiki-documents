@@ -45,6 +45,28 @@ import 'katex/dist/katex.min.css';
   </div>
 </section>
 
+### Hardware needed for this stage
+
+What to prepare for this stage. The complete list for every stage is in [Chapter 3](/rebot_physical_ai_course_chapter_3/).
+
+**Main control unit**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+A desktop or laptop is also required: Ubuntu 22.04, GTX 4080 or better with 12GB+ VRAM, 16GB+ RAM.
+
+**For this stage**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+| [Realsense 435i or Orbbec Gemini2 Depth Camera or Realsense 405 Stereo Camera](https://www.seeedstudio.com/Intel-RealSense-Depth-Camera-D435i-p-4423.html) | 🛒 | 1 |
+| [Camera Wrist Mount](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/D435_Gemini2_Mount.step) | 🛒 | 1 |
+
+
 {/* TODO: the original document opened Chapter 27 with a walkthrough video (《理论》.mp4 / 【理论】.mp4). The file is not in 图片和附件/ yet — upload it to the course CDN and link it here once it is available. */}
 <a id="overview"></a>
 
@@ -68,7 +90,7 @@ Because the arm does not know:
 Therefore robot vision must complete a full process:
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01-1.png" alt="Robot vision vs ordinary computer vision" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01-1.png" alt="Six-stage RGB-to-grasp robot vision pipeline flowchart" />
 </div>
 
 
@@ -120,7 +142,7 @@ A complete visual grasping system usually includes:
 ### RGB Images and Object Detection
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-04.png" alt="RGB channels, object detection and target centre" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-04.png" alt="RGB channels, object detection and target center" />
 </div>
 
 #### (1) RGB Images
@@ -214,7 +236,7 @@ The three common depth cameras in robot vision are stereo cameras, structured-li
 
 | Camera | Principle | Pros | Cons |
 | :--- | :--- | :--- | :--- |
-| **Stereo** | Mimics human eyes: two cameras compare where the same object appears in the left and right view, and depth follows from that disparity | Needs no active illumination; works at longer range | Fails on textureless objects — a white wall and a solid-colour object look nearly identical to both cameras |
+| **Stereo** | Mimics human eyes: two cameras compare where the same object appears in the left and right view, and depth follows from that disparity | Needs no active illumination; works at longer range | Fails on textureless objects — a white wall and a solid-color object look nearly identical to both cameras |
 | **Structured light** | Actively projects a known pattern (dot matrix, stripes, grid) and reads how the pattern deforms on the object | High accuracy at close range | Easily disturbed by strong light and outdoor conditions |
 | **TOF (Time Of Flight)** | Emits light, waits for the reflection and times the round trip | High real-time performance | Affected by reflective surfaces, transparent objects and multipath reflection |
 
@@ -233,9 +255,9 @@ Robot vision involves four coordinate frames:
 | Frame | Unit | Meaning | Example |
 | :--- | :--- | :--- | :--- |
 | Image frame | Pixels | Where the object is in the picture | `(u, v)` |
-| Camera frame | Metres | Where the object is relative to the camera | `(Xc, Yc, Zc)` — X rightward, Y downward, Z out of the lens |
-| Robot frame | Metres | Where the object is relative to the arm; the arm is ultimately controlled in robot coordinates | — |
-| Tool frame (end gripper frame) | Metres | The frame the arm uses to execute a grasp | — |
+| Camera frame | Meters | Where the object is relative to the camera | `(Xc, Yc, Zc)` — X rightward, Y downward, Z out of the lens |
+| Robot frame | Meters | Where the object is relative to the arm; the arm is ultimately controlled in robot coordinates | — |
+| Tool frame (end gripper frame) | Meters | The frame the arm uses to execute a grasp | — |
 
 ### Camera Intrinsics
 
@@ -250,7 +272,7 @@ Why are intrinsics needed?
 | Parameter | Meaning |
 | :--- | :--- |
 | `fx`, `fy` | Focal length in x and y (pixels) |
-| `cx`, `cy` | Principal point in x and y — the image centre (pixels) |
+| `cx`, `cy` | Principal point in x and y — the image center (pixels) |
 | `k1`, `k2`, `k3`, `p1`, `p2` | Distortion coefficients |
 
 - Lens distortion offsets pixel positions near the image edges. Without undistortion, the (u,v) pixel coordinates themselves have error, and the 3D conversion drifts. In practice, undistort the image first, then use the pixel coordinates.
