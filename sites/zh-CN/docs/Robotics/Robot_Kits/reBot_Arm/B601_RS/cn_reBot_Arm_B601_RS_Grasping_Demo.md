@@ -20,15 +20,12 @@ updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GraspingTabs from '@site/src/components/robotics/RebotGraspingTabs';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css';
 
 # reBot Arm B601-RS 视觉夹取 Demo
-
-<RebotRsDocNav />
 
 <div className={styles.page}>
 
