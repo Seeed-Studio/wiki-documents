@@ -1,22 +1,22 @@
 ---
-description: Este wiki fornece uma introdução abrangente aos recursos de hardware e ao uso das interfaces da placa carrier reComputer Jetson Robotics J601. Ele abrange especificações detalhadas, módulos compatíveis, instruções de configuração e guias práticos para usar várias interfaces, como M.2, Ethernet, USB, CAN, RS485/RS232, UART, I2C, I2S, GPIO, expansão de câmera GMSL2, 5G e GPS, ajudando os usuários a iniciar rapidamente o desenvolvimento de robótica na plataforma J601.
+description: Este wiki fornece uma introdução abrangente aos recursos de hardware e ao uso das interfaces da placa carrier reComputer Jetson Robotics J601. Ele abrange especificações detalhadas, módulos suportados, instruções de configuração e guias práticos para usar várias interfaces, como M.2, Ethernet, USB, CAN, RS485/RS232, UART, I2C, I2S, GPIO, expansão de câmera GMSL2, 5G e GPS, ajudando os usuários a iniciar rapidamente o desenvolvimento de robótica na plataforma J601.
 title: Uso das Interfaces
 tags:
-  - Placa carrier J601-Robotics
+  - J601-Robotics carrier board
   - Jetson
   - AGX Thor
-  - Robótica
-  - Uso das Interfaces
+  - Robotics
+  - Interfaces Usage
   - Interfaces
   - Hardware
 image: https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg
 slug: /recomputer_jetson_robotics_j601_interfaces_usage
 sku: 100060965
 last_update:
-  date: 06/18/2026
+  date: 10/13/2026
   author: Zibo
 createdAt: '2026-06-18'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_robotics_j601_interfaces_usage/
 ---
 
@@ -26,17 +26,42 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 A reComputer Robotics J601 é uma placa carrier de robótica de alto desempenho projetada para o módulo NVIDIA Jetson AGX Thor, voltada para aplicações avançadas de IA incorporada e controle robótico. Equipada com amplas opções de conectividade — incluindo 4x Ethernet 10GbE, slots M.2 para módulos 5G e Wi-Fi/BT, portas USB 3.2, 4x CAN (com suporte a CAN FD), RS-232/422/485, I2C, I2S, UART, GPIO (GPI/GPO), expansão GMSL2 (até 8 câmeras) e entrada DC de ampla faixa — ela atua como um poderoso cérebro robótico capaz de processar dados complexos de vários sensores.
 
-Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1, a reComputer Robotics J601 faz a ponte entre a tomada de decisão orientada por grandes modelos de linguagem e o controle físico de robôs, como planejamento de movimento e fusão de sensores. Ideal para o desenvolvimento rápido de robôs autônomos, ela acelera o tempo de lançamento no mercado com interfaces prontas para uso e frameworks de IA otimizados.
+Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1, a reComputer Robotics J601 faz a ponte entre a tomada de decisão orientada por modelos de linguagem de grande porte e o controle físico de robôs, como planejamento de movimento e fusão de sensores. Ideal para o desenvolvimento rápido de robôs autônomos, ela acelera o tempo de lançamento no mercado com interfaces prontas para uso e frameworks de IA otimizados.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg"/>
 </div>
 
+## Instalação do dissipador de calor
+
+Para garantir uma dissipação de calor estável durante a operação de longo prazo, você pode instalar um dissipador de calor na placa carrier reComputer J601.
+
+**Materiais necessários:** 
+- almofada de silicone térmico
+- dissipador de calor com ventilador
+- placa carrier reComputer J601
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink1.png"/>
+</div>
+
+**Passo 1.** Fixe a almofada de silicone térmico no ponto de contato entre o dissipador de calor e a placa carrier.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png"/>
+</div>
+
+**Passo 2.** Conecte o dissipador de calor e a placa carrier.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink3.png"/>
+</div>
+
 ## USB
 
-A placa carrier Robotics J601 está equipada com várias portas USB, incluindo 4 portas USB 3.2 Type-A (Host, 10Gbps) para conexão de periféricos de alta velocidade, uma porta USB 3.2 Type-C (J4) para recuperação/gravação e uma porta USB 2.0 Type-C (J3) para modo dispositivo/depuração.
+A placa carrier Robotics J601 está equipada com várias portas USB, incluindo 4x portas USB 3.2 Tipo A (Host, 10Gbps) para conexão de periféricos de alta velocidade, uma porta USB 3.2 Tipo C (J4) para recuperação/gravação e uma porta USB 2.0 Tipo C (J3) para modo dispositivo/depuração.
 
-### Teste de Velocidade USB 3.2
+### Teste de velocidade USB 3.2
 
 Conecte um pendrive USB 3.0 e teste sua velocidade de leitura/gravação. Observe que as velocidades reais dependem do próprio desempenho do pendrive USB.
 
@@ -59,7 +84,7 @@ echo "seeed" | sudo -S dd if=/dev/sda of=/dev/null bs=1000M count=2
 ```
 
 :::info
-Substitua `/dev/sda` pelo nome real do dispositivo do seu pendrive USB. Você pode usar `lsblk` para verificar.
+Substitua `/dev/sda` pelo nome de dispositivo real do seu pendrive USB. Você pode usar `lsblk` para verificar.
 :::
 
 Torne o script executável e execute-o:
@@ -73,56 +98,56 @@ chmod +x test_usb_speed.sh
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/usb_speed.PNG"/>
 </div>
 
-### Porta de Depuração USB 2.0 Type-C
+### Porta de depuração USB 2.0 Tipo C
 
-Usando esta porta serial, por meio do cabo de dados USB-C, você pode monitorar no PC as informações de depuração de entrada e saída.
+Usando esta porta serial, por meio do cabo de dados USB-C, você pode monitorar as informações de depuração de entrada e saída no lado do PC.
 
 #### Windows
 
-**Passo 1.** Conecte o J601 ao PC por meio de um cabo de dados USB-C.
+**Passo 1.** Conecte a J601 ao PC por meio de um cabo de dados USB-C.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/usb2.0_debug.PNG"/>
 </div>
 
 
-**Passo 2.** Baixe o [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) no seu PC.
+**Passo2.** Baixe o [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) no seu PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
 </div>
 
-**Passo 3.** Conecte o PC por meio de um cabo de dados USB, extraia o arquivo baixado e instale o driver no seu PC.
+**Passo3.** Conecte o PC por meio de um cabo de dados USB, extraia o arquivo baixado e instale o driver no seu PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
-**Passo 4.** Abra o Gerenciador de Dispositivos no seu PC com Windows e verifique o número da porta COM atribuída ao reComputer J601. Ele deve aparecer em "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", onde X é o número da porta COM.
+**Passo4.** Abra o Gerenciador de Dispositivos no seu PC com Windows e verifique o número da porta COM atribuída ao reComputer J601. Ele deve aparecer em "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", onde X é o número da porta COM.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
 </div>
 
-**Passo 5.** Abra a ferramenta de porta serial (aqui usamos a ferramenta MobaXterm como exemplo) e crie uma nova sessão.
+**Passo5.** Abra a ferramenta de porta serial (aqui usamos a ferramenta MobaXterm como exemplo) e crie uma nova sessão.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
 </div>
 
-**Passo 6.** Selecione a ferramenta Serial.
+**Passo6.** Selecione a ferramenta Serial.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
 </div>
 
-**Passo 7.** Selecione a porta serial correspondente, defina a taxa de baud para 115200 e clique em "OK".
+**Passo7.** Selecione a porta serial correspondente, defina a taxa de baud para 115200 e clique em "OK".
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png"/>
 </div>
 
-**Passo 8.** Faça login no seu reComputer J601 com o nome de usuário e a senha.
+**Passo8.** Faça login no seu reComputer J601 com o nome de usuário e a senha.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug2.png"/>
@@ -130,7 +155,7 @@ Usando esta porta serial, por meio do cabo de dados USB-C, você pode monitorar 
 
 #### Linux
 
-**Passo 1.** Conecte o J601 ao PC Linux por meio de um cabo de dados USB-C.
+**Passo 1.** Conecte a J601 ao PC com Linux por meio de um cabo de dados USB-C.
 
 **Passo 2.** Encontre o dispositivo serial:
 
@@ -148,13 +173,13 @@ ls /dev/ttyUSB*
 screen /dev/ttyUSB0 -b 115200
 ```
 
-Agora você deve ver a saída do console serial do J601 e pode fazer login com seu nome de usuário e senha.
+Agora você deve ver a saída do console serial da J601 e pode fazer login com seu nome de usuário e senha.
 
 ## GMSL
 
 A Robotics J601 possui um conector de expansão de câmera GMSL que suporta até **8 câmeras GMSL** simultaneamente, possibilitando aplicações de visão robótica com múltiplas câmeras.
 
-### Modelos de Câmera GMSL Suportados
+### Modelos de câmera GMSL suportados
 
 - [SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)
 - SG2-AR0233C-5200-G2A
@@ -162,7 +187,7 @@ A Robotics J601 possui um conector de expansão de câmera GMSL que suporta até
 - SG8S-AR0820C-5300-G2A
 - [Orbbec Gemini 335Lg](https://www.seeedstudio.com/Orbbec-Gemini-335LG-3D-Camera-p-6541.html)
 
-### Conexão de Hardware
+### Conexão de hardware
 
 Conecte a placa de expansão GMSL ao conector de expansão de câmera na placa carrier J601 e, em seguida, conecte suas câmeras GMSL à placa de expansão.
 
@@ -170,7 +195,7 @@ Conecte a placa de expansão GMSL ao conector de expansão de câmera na placa c
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/GMSL_connect.png"/>
 </div>
 
-### Instruções de Uso
+### Instruções de uso
 
 :::note
 Antes de habilitar a funcionalidade GMSL, certifique-se de que você instalou uma versão do JetPack com o driver da placa de expansão GMSL.
@@ -205,7 +230,7 @@ gst-launch-1.0 -q filesrc location=/tmp/gmsl0.yuyv do-timestamp=true blocksize=4
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl.png"/>
 </div>
 
-### Usar a Câmera Gemini 335Lg
+### Usar a câmera Gemini 335Lg
 
 ```bash
 # Download the Orbbec Gemini 335Lg visualization tool
@@ -216,13 +241,13 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 ./OrbbecViewer
 ```
 
-Na primeira vez que você ligá-la, talvez seja necessário atualizar o firmware. Ao abrir o fluxo de dados, você poderá visualizar o vídeo da câmera.
+Na primeira vez que você ligá-la, talvez seja necessário atualizar o firmware. Ao abrir o fluxo de dados, você pode visualizar o vídeo da câmera.
 
 ## UART
 
 A Robotics J601 fornece uma interface UART por meio de um conector JST padrão para comunicação serial com dispositivos externos. A porta UART está conectada a `/dev/ttyTHS1` no sistema Jetson com taxa de baud padrão de 115200.
 
-### Conexão de Hardware
+### Conexão de hardware
 
 Para comunicação UART, conecte a ferramenta USB-para-TTL de acordo com a seguinte fiação:
 
@@ -234,9 +259,9 @@ Para comunicação UART, conecte a ferramenta USB-para-TTL de acordo com a segui
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png"/>
 </div>
 
-### Instruções de Uso
+### Instruções de uso
 
-Conecte a ferramenta USB-para-TTL à porta UART da Robotics J601 e ao PC e, em seguida, abra a ferramenta de porta serial no PC e defina a taxa de baud para **115200**.
+Conecte a ferramenta USB-para-TTL à porta UART da Robotics J601 e ao PC, depois abra a ferramenta de porta serial no PC e defina a taxa de baud para **115200**.
 
 Você pode usar um script Python simples para teste de comunicação serial:
 
@@ -267,26 +292,26 @@ python3 uart_test.py
 
 ## I2S
 
-A Robotics J601 fornece uma interface de áudio I2S com saída para amplificador e entrada para microfone para reprodução e gravação de áudio. A interface I2S é exposta por meio do conector J14 JST GH-1.25.
+A Robotics J601 fornece uma interface de áudio I2S com saída amplificada e entrada de microfone para reprodução e gravação de áudio. A interface I2S é exposta por meio do conector J14 JST GH-1.25.
 
-### Definição de Pinos
+### Definição dos pinos
 
 | Pin # | Module Pin Name | Module Pin # | Usage/Description | Type/Dir |
 | --- | --- | --- | --- | --- |
-| 1 | - | - | Fonte de Alimentação 3V3 | Power |
-| 2 | I2S2_DIN | F6 | Porta de Áudio I2S2 2 Dados de Entrada (Level Shifted de 1.8V para 3.3V) | Input |
-| 3 | I2S2_FS | E4 | Porta de Áudio I2S2 2 Clock Esquerda/Direita (Level Shifted de 1.8V para 3.3V) | Bidir |
-| 4 | I2S2_CLK | G4 | Porta de Áudio I2S2 2 Clock (Level Shifted de 1.8V para 3.3V) | Bidir |
-| 5 | I2S2_DOUT | F5 | Porta de Áudio I2S2 2 Dados de Saída (Level Shifted de 1.8V para 3.3V) | Output |
+| 1 | - | - | Fonte de alimentação 3V3 | Power |
+| 2 | I2S2_DIN | F6 | I2S2 Porta de Áudio 2 Dados de Entrada (nível convertido de 1,8V para 3,3V) | Input |
+| 3 | I2S2_FS | E4 | I2S2 Porta de Áudio 2 Clock Esquerda/Direita (nível convertido de 1,8V para 3,3V) | Bidir |
+| 4 | I2S2_CLK | G4 | I2S2 Porta de Áudio 2 Clock (nível convertido de 1,8V para 3,3V) | Bidir |
+| 5 | I2S2_DOUT | F5 | I2S2 Porta de Áudio 2 Dados de Saída (nível convertido de 1,8V para 3,3V) | Output |
 | 6 | - | - | Terra | Ground |
 
-### Conexão de Hardware
+### Conexão de hardware
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2s_connect.png"/>
 </div>
 
-### Instruções de Uso
+### Instruções de uso
 
 **Passo 1.** Configure o mux de áudio I2S2 e teste a saída de tom:
 
@@ -315,13 +340,13 @@ Substitua `your_audio_file.wav` pelo caminho para o seu arquivo de áudio real. 
 
 ## I2C
 
-O Robotics J601 fornece uma interface I2C por meio do conector JST GH-1.25 J12, permitindo a conexão fácil de sensores e periféricos para expansão do sistema.
+A Robotics J601 fornece uma interface I2C por meio do conector JST GH-1.25 J12, permitindo a conexão fácil de sensores e periféricos para expansão do sistema.
 
 ### Definição de pinos
 
 | Pino # | Nome do pino do módulo | Pino do módulo # | Uso/Descrição | Tipo/Dir |
 | --- | --- | --- | --- | --- |
-| 1 | - | - | Terra | Terra |
+| 1 | - | - | Terra | Ground |
 | 2 | DP_AUX_CH2_N | E18 | I2C4_SDA_3V3 | Bidirecional |
 | 3 | DP_AUX_CH2_P | E19 | I2C4_SCL_3V3 | Saída |
 | 4 | - | - | Fonte de alimentação 3V3 | Alimentação |
@@ -334,10 +359,10 @@ O conector I2C usa o barramento **I2C4** no SoC Jetson AGX Thor.
 
 Conecte seu dispositivo I2C à interface I2C na placa carrier:
 
-- Terra → Terra (Pino 1)
+- Ground → Ground (Pino 1)
 - SDA → SDA (Pino 2)
 - SCL → SCL (Pino 3)
-- Alimentação → 3V3 (Pino 4)
+- Power → 3V3 (Pino 4)
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_connect.png"/>
@@ -362,7 +387,7 @@ i2cdetect -l
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c1.PNG"/>
 </div>
 
-**Passo 3.** Faça a varredura de dispositivos no barramento I2C:
+**Passo 3.** Faça uma varredura por dispositivos no barramento I2C:
 
 ```bash
 sudo i2cdetect -y -r 1
@@ -384,7 +409,7 @@ sudo i2cget -y 1 0x58 0x00
 
 ## GPIO (GPI/GPO)
 
-O Robotics J601 fornece interfaces GPIO digitais por meio de dois conectores JST GH-1.25: um conector **GPI (General Purpose Input)** J20 com 4 canais de entrada e um conector **GPO (General Purpose Output)** J14 com 4 canais de saída. Todos os sinais GPIO são convertidos de nível de 1,8 V (domínio do SoC) para 3,3 V, tornando-os diretamente compatíveis com sensores e periféricos padrão de 3,3 V.
+A Robotics J601 fornece interfaces GPIO digitais por meio de dois conectores JST GH-1.25: um conector **GPI (General Purpose Input)** J20 com 4 canais de entrada e um conector **GPO (General Purpose Output)** J14 com 4 canais de saída. Todos os sinais GPIO são convertidos de nível de 1,8 V (domínio do SoC) para 3,3 V, tornando-os diretamente compatíveis com sensores e periféricos padrão de 3,3 V.
 
 ### Definição de pinos
 
@@ -397,7 +422,7 @@ O Robotics J601 fornece interfaces GPIO digitais por meio de dois conectores JST
 | 3 | GPIO64 | J6 | GPI_2_3V3 (Convertido de nível de 1,8 V para 3,3 V) | Entrada, 3,3 V |
 | 4 | GPIO65 | J7 | GPI_3_3V3 (Convertido de nível de 1,8 V para 3,3 V) | Entrada, 3,3 V |
 | 5 | GPIO49 | G6 | GPI_4_3V3 (Convertido de nível de 1,8 V para 3,3 V) | Entrada, 3,3 V |
-| 6 | - | - | Terra | Terra |
+| 6 | - | - | Terra | Ground |
 
 #### Conector GPO - J14 (Saída)
 
@@ -408,7 +433,7 @@ O Robotics J601 fornece interfaces GPIO digitais por meio de dois conectores JST
 | 3 | SPI2_CS0_N | D60 | GPO_2_3V3 (Convertido de nível de 1,8 V para 3,3 V) | Saída, 3,3 V |
 | 4 | SPI2_CLK | E61 | GPO_3_3V3 (Convertido de nível de 1,8 V para 3,3 V) | Saída, 3,3 V |
 | 5 | SPI2_MOSI | F60 | GPO_4_3V3 (Convertido de nível de 1,8 V para 3,3 V) | Saída, 3,3 V |
-| 6 | - | - | Terra | Terra |
+| 6 | - | - | Terra | Ground |
 
 ### Conexão de hardware
 
@@ -476,7 +501,7 @@ gpo_line.set_value(1)  # Set high
 
 ## CAN
 
-CAN (Controller Area Network) é um padrão robusto de barramento veicular que permite que microcontroladores e dispositivos se comuniquem entre si sem um computador host. O Robotics J601 fornece **4 interfaces CAN** (CAN0, CAN1, CAN2, CAN3) por meio de conectores JST GH-1.25, todas com suporte ao modo CAN FD.
+CAN (Controller Area Network) é um padrão robusto de barramento veicular que permite que microcontroladores e dispositivos se comuniquem entre si sem um computador host. A Robotics J601 fornece **4 interfaces CAN** (CAN0, CAN1, CAN2, CAN3) por meio de conectores JST GH-1.25, todas com suporte ao modo CAN FD.
 
 ### Mapeamento de pinos do conector CAN
 
@@ -488,12 +513,12 @@ CAN (Controller Area Network) é um padrão robusto de barramento veicular que p
 | CAN3 | J25 | Terra | CAN3_L_ISO | CAN3_H_ISO | Alimentação 5V |
 
 :::info
-Todas as 4 interfaces CAN são isoladas. Cada conector fornece uma alimentação de 5 V no Pino 4.
+Todas as 4 interfaces CAN são isoladas. Cada conector fornece uma fonte de alimentação de 5 V no Pino 4.
 :::
 
 ### Controle do resistor de terminação de 120Ω
 
-Cada interface CAN possui um resistor de terminação de 120Ω controlado por software. Os mapeamentos GPIO são os seguintes:
+Cada interface CAN possui um resistor de terminação de 120Ω controlado por software. Os mapeamentos de GPIO são os seguintes:
 
 | Interface | Chip GPIO | Linha GPIO | Nome de controle |
 | --- | --- | --- | --- |
@@ -513,7 +538,7 @@ gpioinfo
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gpioinfo.PNG"/>
 </div>
 
-### Comunicação CAN Clássica
+### Comunicação CAN Classic
 
 Aqui demonstramos a comunicação de dados entre CAN0 e CAN1.
 
@@ -587,7 +612,7 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
 :::info
 - `5AA` / `7DF` é o ID CAN
 - `##` indica um quadro CAN FD
-- O dígito após `##` é o sinalizador BRS (Bit Rate Switch): `1` = BRS ativo
+- O dígito após `##` é o flag BRS (Bit Rate Switch): `1` = BRS ativo
 - O seguinte é a carga útil de dados (até 128 caracteres hexadecimais para 64 bytes)
 :::
 
@@ -595,7 +620,7 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c2.png"/>
 </div>
 
-### Script abrangente de teste CAN
+### Script de teste abrangente de CAN
 
 O script a seguir executa um teste completo de CAN FD, incluindo verificação de dependências, configuração de interface, verificação básica de comunicação e um teste de estresse de 10 segundos.
 
@@ -730,7 +755,7 @@ chmod +x can_test.sh
 
 ## RS485
 
-A placa carrier reComputer J601 possui uma porta RS-485 isolada dedicada, exposta através do conector JST GH-1.25 de 4 pinos J24. As definições dos pinos são as seguintes:
+A placa carrier reComputer J601 possui uma porta RS-485 isolada dedicada, exposta através do conector J24 JST GH-1.25 de 4 pinos. As definições dos pinos são as seguintes:
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/rs485-jstpin.png"/>
@@ -821,7 +846,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
 :::tip
-Para ver o texto que você digita no minicom, é necessário ativar o recurso Local Echo. Por padrão, o minicom não exibe as teclas pressionadas, portanto isso é um problema muito comum.
+Para ver o texto que você digita no minicom, é necessário ativar o recurso Local Echo. Por padrão, o minicom não exibe as teclas pressionadas, portanto este é um problema muito comum.
 - passo 1. Pressione `Ctrl+A`
 - passo 2. Em seguida, pressione `E`
 
@@ -891,7 +916,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
 :::tip
-Para ver o texto que você digita no minicom, é necessário ativar o recurso Local Echo. Por padrão, o minicom não exibe as teclas pressionadas, portanto isso é um problema muito comum.
+Para ver o texto que você digita no minicom, é necessário ativar o recurso Local Echo. Por padrão, o minicom não exibe as teclas pressionadas, portanto este é um problema muito comum.
 - passo 1. Pressione `Ctrl+A`
 - passo 2. Em seguida, pressione `E`
 :::
@@ -955,7 +980,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
 :::tip
-Para ver o texto que você digita no minicom, é necessário ativar o recurso Local Echo. Por padrão, o minicom não exibe as teclas pressionadas, portanto isso é um problema muito comum.
+Para ver o texto que você digita no minicom, é necessário ativar o recurso Local Echo. Por padrão, o minicom não exibe as teclas pressionadas, portanto este é um problema muito comum.
 - passo 1. Pressione `Ctrl+A`
 - passo 2. Em seguida, pressione `E`
 :::
@@ -1067,7 +1092,7 @@ sudo ./test_rgb.sh
 
 ## Ethernet
 
-A placa carrier Robotics J601 possui **4x portas Ethernet RJ45 10GbE** para conectividade de rede cabeada, com suporte planejado para os protocolos PTP e EtherCAT. (Observação: os módulos T4000 suportam 3x 10GbE.)
+A placa carrier Robotics J601 possui **4x portas Ethernet RJ45 de 10GbE** para conectividade de rede cabeada, com suporte planejado para os protocolos PTP e EtherCAT. (Observação: os módulos T4000 suportam 3x 10GbE.)
 
 ### Conexão de hardware
 
@@ -1164,7 +1189,7 @@ sudo nmcli device wifi connect "your WiFi name" password "WiFi password" ifname 
 
 ### Bluetooth
 
-A funcionalidade Bluetooth está disponível por meio do slot M.2 Key E.
+A funcionalidade Bluetooth está disponível através do slot M.2 Key E.
 
 **Passo 1.** Abra a ferramenta de controle Bluetooth:
 
@@ -1185,7 +1210,7 @@ scan on
 
 ## Módulo 5G (M.2 Key B)
 
-O slot M.2 Key B oferece suporte à expansão com módulo 5G, permitindo conectividade celular de alta velocidade para cenários de robótica e IA de borda.
+O slot M.2 Key B suporta expansão com módulo 5G, permitindo conectividade celular de alta velocidade para cenários de robótica e IA de borda.
 
 ### Conexão de hardware
 
@@ -1259,7 +1284,7 @@ AT+QGPS=1
 
 **Passo 3.** Saia do minicom pressionando **Ctrl+A** e depois **X**, e selecione **Yes** para sair.
 
-**Passo 4.** Depois que o GPS estiver ativado, os dados dos satélites serão enviados pela porta de dados do GPS (normalmente `/dev/ttyUSB1`). Leia os dados NMEA brutos:
+**Passo 4.** Depois que o GPS estiver ativado, os dados de satélite serão enviados pela porta de dados do GPS (normalmente `/dev/ttyUSB1`). Leia os dados NMEA brutos:
 
 ```bash
 sudo cat /dev/ttyUSB1
