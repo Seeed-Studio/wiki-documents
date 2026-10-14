@@ -163,7 +163,7 @@ Recordings were uploaded to the host as WAV and timed from upload to finished tr
 | reComputer J40 Series | Japanese counter audio (FLEURS) | 34.0 s | **1.71 s** (measured) | 2 segments (measured) | Fast multilingual handling for review |
 | reComputer J40 Series | English two sentences (LibriSpeech) | 6.3 s | **1.24 s** (measured) | 2 / 2 turns (measured) | Rapid turnaround |
 | reComputer RK3588 Series (8 GB) | Chinese long dialogue (FLEURS-A) | 30.5 s | **3.0 s** (measured) | 2 / 4 turns (measured) | 10x real-time speed, multi-core parallel |
-| reComputer RK3576 Series (8 GB) | Chinese long dialogue (FLEURS-A) | 30.5 s | **4.61 s** (measured) | 2 / 4 turns (measured) | Done in <5 s, suitable for non-urgent filing |
+| reComputer RK3576 Series (8 GB) | Chinese long dialogue (FLEURS-A) | 30.5 s | **4.61 s** (measured) | 2 / 4 turns (measured) | Done in under 5 s, suitable for non-urgent filing |
 | reComputer RK3576 Series | Chinese customer service (FLEURS-B) | 26.1 s | **4.67 s** (measured) | 2 / 5 turns (measured) | Stable single-worker execution |
 
 ### 2. Shift-End Batch Upload Concurrency (10 Badges Uploading 10 min Total Audio)
