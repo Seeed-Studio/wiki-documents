@@ -451,8 +451,7 @@ sudo apt install -y \
     make \
     libpopt-dev \
     can-utils \
-    ethtool \
-    nvidia-l4t-kernel-headers
+    ethtool
 ```
 
 現在のカーネルヘッダーディレクトリが存在することを確認します：
