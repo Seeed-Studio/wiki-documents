@@ -1,5 +1,5 @@
 ---
-description: Inspección de ensamblaje en el dispositivo: comparación de piezas faltantes contra una lista de elementos esperados de plantilla, medición de dimensiones calibrada con ArUco y un único veredicto OK/NG entregado al PLC mediante Modbus TCP y al MES mediante MQTT. Hardware, esquema de despliegue, contratos de salida y datos medidos.
+description: "Inspección de ensamblaje en el dispositivo: comparación de piezas faltantes contra una lista de elementos esperados de plantilla, medición de dimensiones calibrada con ArUco y un único veredicto OK/NG entregado al PLC mediante Modbus TCP y al MES mediante MQTT. Hardware, esquema de despliegue, contratos de salida y datos medidos."
 title: 'Inspección de Ensamblaje en el Borde: Piezas Faltantes, Dimensiones, Modbus y MQTT'
 keywords:
   - inspección de ensamblaje

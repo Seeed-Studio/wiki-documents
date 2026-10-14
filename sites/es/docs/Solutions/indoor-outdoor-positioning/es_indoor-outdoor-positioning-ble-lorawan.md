@@ -1,5 +1,5 @@
 ---
-description: Localizar personas y activos en interiores y exteriores en un solo mapa con balizas BLE, GNSS y LoRaWAN: qué dispositivos necesitas, cómo se distribuye un sitio, cómo integrar el flujo WebSocket y datos medidos en el servidor
+description: "Localizar personas y activos en interiores y exteriores en un solo mapa con balizas BLE, GNSS y LoRaWAN: qué dispositivos necesitas, cómo se distribuye un sitio, cómo integrar el flujo WebSocket y datos medidos en el servidor"
 title: 'Posicionamiento interior y exterior con BLE + LoRaWAN: implementación, despliegue y resultados medidos'
 keywords:
   - sistema de posicionamiento en interiores

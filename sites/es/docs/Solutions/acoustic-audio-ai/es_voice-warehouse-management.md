@@ -1,5 +1,5 @@
 ---
-description: Ejecutar un sistema de gestión de almacén por voz en hardware perimetral: qué dispositivos necesitas, cómo el puente MCP conecta el habla con el inventario, cómo desplegar cada uno de los cinco niveles y resultados de pruebas de carga medidos en un dispositivo de la serie reComputer R2000
+description: "Ejecutar un sistema de gestión de almacén por voz en hardware perimetral: qué dispositivos necesitas, cómo el puente MCP conecta el habla con el inventario, cómo desplegar cada uno de los cinco niveles y resultados de pruebas de carga medidos en un dispositivo de la serie reComputer R2000"
 title: 'Gestión de almacén por voz en hardware perimetral: construcción, despliegue y resultados medidos'
 keywords:
   - sistema de gestión de almacén controlado por voz

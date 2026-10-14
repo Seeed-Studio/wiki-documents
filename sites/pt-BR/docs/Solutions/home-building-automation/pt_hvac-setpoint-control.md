@@ -200,9 +200,9 @@ Tudo o que o deployment expõe fica atrás de uma porta HTTP no host do gateway.
 
 Os logs do contêiner fazem rotação em 10 MB com quatro backups (`docker logs missionpack_knn`). Exporte o trilho de auditoria de comandos, o journal de rollback e o histórico de alarmes antes que expirem.
 
-  ### Escopo de protocolo southbound
+### Escopo de protocolo southbound
 
-  Todos os pontos ficam em um único registro, limitado a **2.000 pontos**, dos quais no máximo **50 podem ser graváveis**. Os 10 pontos de medidor SDM630 são somente leitura; eles contam para os 2.000 e não para os 50.
+Todos os pontos ficam em um único registro, limitado a **2.000 pontos**, dos quais no máximo **50 podem ser graváveis**. Os 10 pontos de medidor SDM630 são somente leitura; eles contam para os 2.000 e não para os 50.
 
 | Transporte | Papel | Restrições |
 |---|---|---|

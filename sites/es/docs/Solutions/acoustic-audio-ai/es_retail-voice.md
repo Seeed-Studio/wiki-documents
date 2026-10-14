@@ -1,5 +1,5 @@
 ---
-description: Conversión de voz a texto en tienda con dos rutas: transcribir en un dispositivo perimetral y subir JSON de texto, o enviar audio de reSpeaker Clip a través de SenseCraft Voice App y la pasarela al servicio de voz para OpenVoiceStream ASR, redacción, almacenamiento y visualización en el backend de retail. El hardware, la canalización y la capacidad de ASR medida se documentan por separado de la latencia de ingesta.
+description: "Conversión de voz a texto en tienda con dos rutas: transcribir en un dispositivo perimetral y subir JSON de texto, o enviar audio de reSpeaker Clip a través de SenseCraft Voice App y la pasarela al servicio de voz para OpenVoiceStream ASR, redacción, almacenamiento y visualización en el backend de retail. El hardware, la canalización y la capacidad de ASR medida se documentan por separado de la latencia de ingesta."
 title: 'Voz en Retail: Transcripción en Dispositivo o una Pila de Servidor Redactora y Borrable'
 keywords:
   - voz en retail

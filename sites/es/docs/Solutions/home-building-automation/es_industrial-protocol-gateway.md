@@ -1,5 +1,5 @@
 ---
-description: Concentrador de datos industrial multiprotocolo en un gateway perimetral: fuentes OPC UA, Modbus TCP/RTU, BACnet/IP y MQTT unificadas en un único modelo de puntos, leídas y controladas mediante un único contrato MQTT versionado, con almacenamiento y reenvío hacia el norte
+description: "Concentrador de datos industrial multiprotocolo en un gateway perimetral: fuentes OPC UA, Modbus TCP/RTU, BACnet/IP y MQTT unificadas en un único modelo de puntos, leídas y controladas mediante un único contrato MQTT versionado, con almacenamiento y reenvío hacia el norte"
 title: 'Concentrador de Datos Industrial Multiprotocolo: Hardware, Despliegue y Resultados Medidos'
 keywords:
   - gateway de protocolos industriales

@@ -1,5 +1,5 @@
 ---
-description: Controla las luces y los electrodomésticos en Home Assistant por voz con reconocimiento de voz local: hardware, despliegue, interfaces y datos medidos en un reComputer J40
+description: "Controla las luces y los electrodomésticos en Home Assistant por voz con reconocimiento de voz local: hardware, despliegue, interfaces y datos medidos en un reComputer J40"
 title: Control de voz local en Home Assistant — Selección, despliegue y datos medidos
 keywords:
   - voz local de Home Assistant

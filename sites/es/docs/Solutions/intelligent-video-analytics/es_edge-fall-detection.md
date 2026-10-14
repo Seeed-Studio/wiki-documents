@@ -1,5 +1,5 @@
 ---
-description: Creación de un sistema local de alerta de caídas para cuidado de personas mayores, residencias asistidas y atención domiciliaria: qué dispositivos necesitas, cómo desplegarlo, qué interfaces expone y datos medidos en siete dispositivos
+description: "Creación de un sistema local de alerta de caídas para cuidado de personas mayores, residencias asistidas y atención domiciliaria: qué dispositivos necesitas, cómo desplegarlo, qué interfaces expone y datos medidos en siete dispositivos"
 title: 'Detección de caídas con IA en el dispositivo: creación, despliegue y resultados medidos'
 keywords:
   - fall detection system

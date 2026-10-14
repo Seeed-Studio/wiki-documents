@@ -1,5 +1,5 @@
 ---
-description: Inspección de defectos en superficies de acero en el dispositivo: seis clases de defectos, un veredicto OK/NG entregado al PLC mediante Modbus TCP y al MES mediante MQTT, en Jetson Orin o en una reComputer Serie R2000 con un Hailo-8. Hardware, esquema de despliegue, contratos de salida y datos medidos.
+description: "Inspección de defectos en superficies de acero en el dispositivo: seis clases de defectos, un veredicto OK/NG entregado al PLC mediante Modbus TCP y al MES mediante MQTT, en Jetson Orin o en una reComputer Serie R2000 con un Hailo-8. Hardware, esquema de despliegue, contratos de salida y datos medidos."
 title: 'Inspección de Defectos Superficiales en el Borde: Seis Clases, Modbus y MQTT'
 keywords:
   - inspección de defectos superficiales

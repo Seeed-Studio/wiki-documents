@@ -1,5 +1,5 @@
 ---
-description: Reconocimiento de matrículas y apertura de barrera por lista blanca con tus cámaras de acceso existentes y un host perimetral: hardware, despliegue, interfaces y datos medidos en hosts Jetson y RK
+description: "Reconocimiento de matrículas y apertura de barrera por lista blanca con tus cámaras de acceso existentes y un host perimetral: hardware, despliegue, interfaces y datos medidos en hosts Jetson y RK"
 title: Reconocimiento de matrículas en el borde — Selección, despliegue y datos medidos
 keywords:
   - reconocimiento de matrículas

@@ -1,5 +1,5 @@
 ---
-description: Control de consignas de supervisión para HVAC central en una pasarela perimetral (edge gateway): un modelo de punto único sobre OPC UA, Modbus y BACnet/IP más un medidor de energía SDM630, predicción de consignas con KNN y una ruta de escritura que verifica cada escritura leyendo de nuevo el punto
+description: "Control de consignas de supervisión para HVAC central en una pasarela perimetral (edge gateway): un modelo de punto único sobre OPC UA, Modbus y BACnet/IP más un medidor de energía SDM630, predicción de consignas con KNN y una ruta de escritura que verifica cada escritura leyendo de nuevo el punto"
 title: 'Control de consignas de HVAC en una pasarela perimetral: hardware, despliegue y resultados medidos'
 keywords:
   - control de consignas de HVAC

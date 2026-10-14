@@ -1,5 +1,5 @@
 ---
-description: Control de acceso facial para una puerta sin personal: qué hardware necesitas, cómo desplegarlo, qué interfaces expone y tiempos medidos de activación de la biblioteca de rostros, apertura de puerta y rechazos
+description: "Control de acceso facial para una puerta sin personal: qué hardware necesitas, cómo desplegarlo, qué interfaces expone y tiempos medidos de activación de la biblioteca de rostros, apertura de puerta y rechazos"
 title: 'Acceso Facial para Tienda No Atendida: Hardware, Distribución de la Biblioteca de Rostros y Límites Medidos'
 keywords:
   - control de acceso facial para tienda no atendida

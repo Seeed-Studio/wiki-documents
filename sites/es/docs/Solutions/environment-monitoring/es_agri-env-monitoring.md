@@ -1,5 +1,5 @@
 ---
-description: Creación de un sitio de monitoreo de suelo y aire con LoRaWAN que se integra en Home Assistant: qué dispositivos necesitas, cómo desplegar cada una de las tres rutas de ingesta, qué interfaces MQTT están disponibles
+description: "Creación de un sitio de monitoreo de suelo y aire con LoRaWAN que se integra en Home Assistant: qué dispositivos necesitas, cómo desplegar cada una de las tres rutas de ingesta, qué interfaces MQTT están disponibles"
 title: 'Monitoreo Ambiental Agrícola con LoRaWAN: Hardware, Despliegue e Interfaces'
 keywords:
   - monitoreo ambiental agrícola
