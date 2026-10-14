@@ -1,16 +1,16 @@
 ---
-description: "Capítulo 30 del Curso de Introducción a la IA Física de Seeed: un proyecto optativo de interacción por voz y multimodal: una matriz de micrófonos reSpeaker con seguimiento DOA de la fuente de sonido más reconocimiento de voz Whisper de Groq y comprensión de intención con Llama para controlar por voz el reBot Arm, desde el cableado de hardware hasta la referencia de la línea de comandos."
-title: Capítulo 30 - Interacción por Voz y Multimodal
+description: "Capítulo 30 del Curso de Introducción a la IA Física de Seeed: un proyecto optativo de interacción por voz y multimodal: una matriz de micrófonos reSpeaker con seguimiento DOA de la fuente de sonido más reconocimiento de voz Whisper de Groq y comprensión de intención con Llama para controlar por voz el reBot Arm, desde el cableado de hardware hasta la referencia de línea de comandos."
+title: Capítulo 30 - Interacción por voz y multimodal
 hide_title: true
 keywords:
   - reBot
-  - Brazo Robótico
+  - Robotic Arm
   - reSpeaker
   - DOA
   - Whisper
-  - Control por Voz
+  - Voice Control
   - Multimodal
-  - Curso
+  - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_physical_ai_course_chapter_30
 displayed_sidebar: RebotCourseSidebar
@@ -32,9 +32,9 @@ import 'katex/dist/katex.min.css';
 <section className="doc-hero">
   <div>
     <span className="eyebrow">Etapa 6 · Capítulo 30 · Optativo</span>
-    <h2>30. Interacción por Voz y Multimodal</h2>
+    <h2>30. Interacción por voz y multimodal</h2>
     <p>
-      Capítulo 30 del Curso de Introducción a la IA Física de Seeed: un proyecto optativo de interacción por voz y multimodal: una matriz de micrófonos reSpeaker con seguimiento DOA de la fuente de sonido más reconocimiento de voz Whisper de Groq y comprensión de intención con Llama para controlar por voz el reBot Arm, desde el cableado de hardware hasta la referencia de la línea de comandos.
+      Capítulo 30 del Curso de Introducción a la IA Física de Seeed: un proyecto optativo de interacción por voz y multimodal: una matriz de micrófonos reSpeaker con seguimiento DOA de la fuente de sonido más reconocimiento de voz Whisper de Groq y comprensión de intención con Llama para controlar por voz el reBot Arm, desde el cableado de hardware hasta la referencia de línea de comandos.
     </p>
     <div className="hero-actions">
       <a href="#overview">Resumen del capítulo</a>
@@ -47,13 +47,13 @@ import 'katex/dist/katex.min.css';
 
 <a id="overview"></a>
 
-## 30.1 Resumen del Capítulo
+## 30.1 Resumen del capítulo
 
 Usa un reSpeaker para controlar por voz el reBot Arm. Este documento te guía paso a paso, desde cero, para construir un sistema de brazo inteligente que "puede oír y puede moverse".
 
 Este es un **sistema de control de brazo inteligente impulsado por voz**.
 
-Cuando dices "hola", el brazo gira hacia ti y asiente; cuando dices "baila", se balancea felizmente; aplaude al otro lado de la habitación y "oye" la dirección del sonido y gira para mirarte.
+Cuando dices "hola", el brazo gira hacia ti y asiente; cuando dices "baila", se balancea felizmente; si aplaudes al otro lado de la habitación, "oye" la dirección del sonido y gira para mirarte.
 
 El sistema hace tres cosas:
 
@@ -107,7 +107,7 @@ You speak / make a sound
     - **Capa de algoritmos** (el "cerebro" que procesa los datos):
         - Localización de sonido DOA (local, en tiempo real)
         - Reconocimiento de voz Whisper (Groq Cloud)
-        - Comprensión de intención Llama-3.3 (Groq Cloud)
+        - Comprensión de intención con Llama-3.3 (Groq Cloud)
         - Planificación de interpolación de movimiento (local, control suave)
     - **Capa de aplicación** (efectos que puedes ver):
         - Modo de seguimiento DOA
@@ -117,7 +117,7 @@ You speak / make a sound
 
 <a id="hardware"></a>
 
-## 30.2 Preparación de Hardware
+## 30.2 Preparación de hardware
 
 ### Qué preparar
 | Componente | Modelo | Cant. | Función general | Recomendación de compra |
@@ -139,9 +139,9 @@ You speak / make a sound
 
 **El reBot Arm B601-DM** es un brazo de sobremesa de 7 GDL:
 
-- 7 GDL significa un movimiento muy flexible (cercano a un brazo humano)
+- 7 GDL significa un movimiento muy flexible (cercano al brazo humano)
 - B601-DM es la versión con motor DM (la otra es la versión con servos RS); los motores DM tienen mayor precisión
-- Soporte integrado para la biblioteca de cinemática Pinocchio
+- Compatibilidad integrada con la biblioteca de cinemática Pinocchio
 
 ### Visión general del hardware
 
@@ -165,7 +165,7 @@ En una frase: un "oído que todo lo oye": cuatro "oídos" para escuchar el sonid
 | :--- | :--- |
 | SO | Ubuntu 22.04 LTS (64 bits) |
 | Arquitectura | x86_64 (PC Intel/AMD normal) |
-| Mínimo | CPU de 4 núcleos / 8 GB de RAM / 50 GB de disco / acceso a internet |
+| Mínimo | CPU de 4 núcleos / 8 GB de RAM / 50 GB de disco / acceso a Internet |
 
 Opciones para usuarios de Windows:
 
@@ -175,7 +175,7 @@ Opciones para usuarios de Windows:
 ### Diagrama de cableado del hardware
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-30/ch30-01.png" alt="Calibración mano-ojo AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-30/ch30-01.png" alt="Voice system connection topology: PC, Groq API, reSpeaker, reBot arm" />
 </div>
 
 
@@ -184,11 +184,11 @@ Pasos de cableado:
 - Conecta el reSpeaker al PC con un cable USB-C
 - Conecta el reBot Arm al PC con un cable USB-C
 - (Opcional) conecta un altavoz o auriculares a la salida de audio del reSpeaker
-- Asegúrate de que el PC tenga conexión a internet
+- Asegúrate de que el PC tenga conexión a Internet
 
 <a id="setup"></a>
 
-## 30.3 Configuración del Entorno
+## 30.3 Configuración del entorno
 
 ### Instalar Miniforge
 
@@ -200,7 +200,7 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 #### Por qué Miniforge en lugar de Python del sistema
 
 - **Aislamiento**: cada proyecto tiene su propio entorno de Python, independiente de los demás
-- **Versiones flexibles**: fijar una versión específica de Python para el proyecto (por ejemplo, 3.10.2)
+- **Versiones flexibles**: puedes fijar una versión específica de Python para el proyecto (por ejemplo, 3.10.2)
 - **Gestión de dependencias**: conda resuelve dependencias binarias complejas (por ejemplo, las bibliotecas C++ de Pinocchio)
 
 Indicaciones del instalador:
@@ -237,7 +237,7 @@ Esto tarda unos 10-30 minutos y hará lo siguiente:
 - Crear un entorno Python 3.10.2 llamado `flex`
 - Instalar pinocchio, numpy, pyusb y otras dependencias
 
-El resultado correcto se ve así:
+El éxito se ve así:
 
 ```text
 Executing transaction: ... done
@@ -247,9 +247,9 @@ Executing transaction: ... done
 
 #### Por qué pinocchio
 
-- Pinocchio es una biblioteca C++ rápida de cinemática de cuerpos rígidos
+- Pinocchio es una biblioteca rápida de cinemática de cuerpos rígidos en C++
 - Proporciona cinemática directa (FK), cinemática inversa (IK) y dinámica
-- Es la dependencia central para el control de movimiento del brazo en este proyecto
+- Es la dependencia principal para el control de movimiento del brazo en este proyecto
 
 ### Activar el entorno Conda
 
@@ -257,7 +257,7 @@ Executing transaction: ... done
 conda activate flex
 ```
 
-Activación correcta: aparece `(flex)` antes del prompt
+Activación correcta: `(flex)` aparece antes del prompt
 
 ```bash
 (flex) user@computer:~/reBot-Arm-reSpeaker-Flex$
@@ -273,7 +273,7 @@ sudo apt-get update && sudo apt-get install -y ffmpeg
 
 #### Qué hace ffmpeg
 
-- ffmpeg es una herramienta de procesamiento de audio/vídeo; este proyecto la usa para postprocesar archivos de audio después de TTS: convertir el formato de audio, ajustar la frecuencia de muestreo y unir/recortar audio.
+- ffmpeg es una herramienta de procesamiento de audio/vídeo; este proyecto la usa para posprocesar archivos de audio después de TTS: convertir el formato de audio, ajustar la frecuencia de muestreo y unir/recortar audio.
 
 ### Instalar uv
 
@@ -387,11 +387,11 @@ Recordatorio de seguridad:
 - Paso 1: conectar reSpeaker
     - Conecta reSpeaker al PC con un cable USB-C
     - El LED de reSpeaker debería encenderse
-    - `lsusb` debería mostrar el dispositivo de Seeed Studio
+    - `lsusb` debería mostrar el dispositivo Seeed Studio
 - Paso 2: conectar el reBot Arm
     - Sujeta la base del brazo a una mesa con una abrazadera de carpintero
     - Conecta el brazo al PC con un cable USB-C
-    - Conecta la alimentación de 24 V (XT30); **no lo enciendas todavía**
+    - Conecta la alimentación de 24 V (XT30); **aún no enciendas**
     - **Lista de comprobación de seguridad previa al encendido:**
         - Base del brazo asegurada
         - Sin obstáculos en el rango de movimiento
@@ -399,7 +399,7 @@ Recordatorio de seguridad:
         - Cable USB conectado
         - Cable de alimentación conectado correctamente
 - Paso 3: encender la alimentación
-    - Después de comprobarlo, enciende la fuente de 24 V
+    - Tras confirmar, enciende la fuente de 24 V
     - El brazo emite un suave sonido de encendido del motor
     - `ls /dev/ttyUSB*` debería mostrar `/dev/ttyUSB0`
 
@@ -505,7 +505,7 @@ python sound_tracking_arm.py --mode voice  # voice mode
 #### Qué es DOA
 
 - DOA = Direction of Arrival
-- Estimar de qué dirección viene el sonido (como cuando los oídos juzgan de dónde viene un sonido)
+- Estimar de qué dirección viene el sonido (como los oídos juzgando de dónde viene un sonido)
 
 #### Flujo de trabajo
 
@@ -535,7 +535,7 @@ Exit (Press Ctrl+C)
 #### Detalles del algoritmo principal
 
 - Cola de búfer de ángulos de 4 fotogramas
-- **Problema**: los ángulos DOA de un solo fotograma tiemblan (+/-5°~10°); si se controla el brazo directamente, provoca un movimiento constante de sacudidas.
+- **Problema**: los ángulos DOA de un solo fotograma tiemblan (+/-5°~10°); si se controla el brazo directamente, provoca un temblor constante.
 - **Solución**: un búfer circular almacena los últimos 4 fotogramas de datos DOA (~200 ms).
 
     ```text
@@ -558,7 +558,7 @@ Exit (Press Ctrl+C)
 #### Filtro de suavizado por similitud de coseno
 
 - **Problema**: el micrófono puede juzgar mal la dirección (ruido repentino, sonido reflejado).
-- **Solución**: comprobar la coherencia del ángulo entre los fotogramas recientes; demasiada diferencia se trata como ruido.
+- **Solución**: comprobar la coherencia del ángulo entre fotogramas recientes; demasiada diferencia se trata como ruido.
 
     ```python
     import numpy as np
@@ -666,7 +666,7 @@ scipy.io.wavfile.write("output.wav", 16000, (amplified * 32767).astype(np.int16)
     {"action": "turn_left", "params": {"angle": 45}, "reply": "Okay, turning left."}
     ```
 
-**Ventaja**: no se necesitan palabras de comando fijas; solo habla de forma natural como si charlaras.
+**Ventaja**: no se necesitan palabras de comando fijas; simplemente habla de forma natural como si charlaras.
 
 - Ejemplo de diseño de prompt
 
@@ -754,6 +754,6 @@ python sound_tracking_arm.py --mode voice --tts-voice zh-CN-XiaoxiaoMultilingual
 
 ---
 
-> （Nota: parte del contenido fue generado por Doubao Gongzuo AI）
+> Nota: parte de este contenido fue generado con Doubao AI.
 
 </div>

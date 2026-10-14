@@ -21,9 +21,6 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
-
-<RebotDmDocNav />
 
 <div align="center">
     <img width={800}
