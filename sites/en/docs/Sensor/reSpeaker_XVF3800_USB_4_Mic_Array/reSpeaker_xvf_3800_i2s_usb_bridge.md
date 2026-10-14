@@ -142,6 +142,9 @@ Expected Results
 - **Playback:** play a stereo 32-bit 16 kHz WAV file to the `BRIDGE I2S Slave 16k` output; sound should come from the reSpeaker codec/speaker.
 - **Capture:** record 16 kHz stereo 32-bit audio from its input.
 
+**Reference Audacity Snapshot**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/usb_i2s_bridge/audio_settings.jpg" alt="pir" width={600} height="auto" /></p>
+
 <!-- TODO: add audio test screenshot here -->
 
 ## Resources
