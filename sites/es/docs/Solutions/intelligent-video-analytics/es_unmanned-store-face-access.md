@@ -1,8 +1,8 @@
 ---
-description: Control de acceso facial para una puerta sin personal - qué hardware necesitas, cómo desplegarlo, qué interfaces expone y tiempos medidos de activación de la biblioteca de rostros, apertura de puerta y rechazos
-title: 'Acceso facial para tienda desatendida: hardware, distribución de la biblioteca de rostros y límites medidos'
+description: Control de acceso facial para una puerta sin personal: qué hardware necesitas, cómo desplegarlo, qué interfaces expone y tiempos medidos de activación de la biblioteca de rostros, apertura de puerta y rechazos
+title: 'Acceso Facial para Tienda No Atendida: Hardware, Distribución de la Biblioteca de Rostros y Límites Medidos'
 keywords:
-  - control de acceso facial para tienda desatendida
+  - control de acceso facial para tienda no atendida
   - acceso a puerta con reconocimiento facial
   - prueba de vida pasiva anti-spoofing
   - distribución versionada de biblioteca de rostros
@@ -19,7 +19,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/es/solutions/unmanned-store-face-access/
 generated_from: sensecraft-solutions@e1864ef
 ---
@@ -30,9 +30,16 @@ No es un producto de seguridad certificado ni un sistema de seguridad vital. Los
 
 ## Qué hace esta solución
 
-Una cámara en una puerta detrás de la cual no hay nadie reconoce un rostro, exige que se supere una prueba de vida pasiva, comprueba a la persona contra la biblioteca de rostros actual, el horario y la lista de bloqueo y — solo si todo eso se cumple — activa un pulso en un relé que conmuta una cerradura alimentada por su propia fuente de 12/24 V. Cada decisión, tanto permitida como denegada, se publica en MQTT y se añade a un registro de auditoría encadenado por hash que la consola puede verificar.
+Una cámara en una puerta detrás de la cual no hay nadie reconoce un rostro, requiere que se supere una comprobación de
+prueba de vida pasiva, verifica a la persona contra la biblioteca de rostros actual, el horario
+y la lista de bloqueo y — solo si todo eso se cumple — activa por pulsos un relé que conmuta una cerradura
+alimentada por su propia fuente de 12/24 V. Cada decisión, tanto permitida como denegada, se publica
+en MQTT y se añade a un registro de auditoría encadenado por hash que la consola puede verificar.
 
-Encaja en la entrada de personal, almacén o puerta trasera de una tienda sin personal o con personal parcial; en una oficina compartida donde la plantilla cambia semanalmente y el registro debe ser autoservicio; en una sala de equipos donde el registro de quién pasó importa más que el rendimiento; y en un sitio que ya tiene cámaras RTSP en la puerta y no quiere sustituirlas.
+Encaja en la entrada de personal, almacén o puerta trasera de una tienda sin personal o con personal parcial;
+en una oficina compartida donde la plantilla cambia semanalmente y el registro debe ser autoservicio; en una
+sala de equipos donde el registro de quién pasó importa más que el rendimiento; y en un
+sitio que ya tiene cámaras RTSP en la puerta y no quiere sustituirlas.
 
 - Selección y despliegue: [página de diseño de referencia](https://www.seeed.cc/solutions/reference-designs/unmanned_store_access)
 - Repositorio ascendente: no publicado; el código está en un repositorio interno.
@@ -45,7 +52,7 @@ Encaja en la entrada de personal, almacén o puerta trasera de una tienda sin pe
             </div>
             <div class="info-content">
                 <h3>Abre sin conexión (tres de cinco preajustes)</h3>
-                <p>El reconocimiento, la prueba de vida, la decisión y el desbloqueo ocurren todos en la puerta. Un dispositivo que pierde la nube sigue abriendo con la última biblioteca de rostros que cargó correctamente. En los dos preajustes con relé por MQTT, la señal de desbloqueo cruza la red hasta el relé.</p>
+                <p>El reconocimiento, la prueba de vida, la decisión y el desbloqueo ocurren en la puerta. Un dispositivo que pierde la nube sigue abriendo con la última biblioteca de rostros que cargó correctamente. En los dos preajustes de relé por MQTT, la señal de desbloqueo cruza la red hasta el relé.</p>
             </div>
         </li>
         <li class="info-item">
@@ -72,7 +79,7 @@ Encaja en la entrada de personal, almacén o puerta trasera de una tienda sin pe
             </div>
             <div class="info-content">
                 <h3>Cada decisión se audita</h3>
-                <p>Las decisiones permitidas y denegadas van tanto a MQTT como a un registro de auditoría encadenado por hash. Editar cualquier registro pasado rompe la cadena, y la comprobación de cadena de la consola lo informa.</p>
+                <p>Tanto las decisiones permitidas como las denegadas van a MQTT y a un registro de auditoría encadenado por hash. Editar cualquier registro pasado rompe la cadena, y la comprobación de cadena de la consola lo informa.</p>
             </div>
         </li>
     </ul>
@@ -80,10 +87,10 @@ Encaja en la entrada de personal, almacén o puerta trasera de una tienda sin pe
 
 ### Lo que ve el dispositivo en la puerta
 
-Reconocimiento en una reCamera Pro: el recuadro del rostro lleva el id de la persona coincidente y la decisión para ese fotograma. Sin nadie delante, la vista es solo el encuadre.
+Reconocimiento en una reCamera Pro: el recuadro de la cara lleva el id de la persona coincidente y la decisión para ese fotograma. Cuando no hay nadie delante, la vista es solo el encuadre.
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/live-recognition-ce7667d4.jpg" alt="Vista de aplicación de reCamera Pro: recuadro de rostro y la decisión para ese fotograma"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/live-recognition-ce7667d4.jpg" alt="Vista de aplicación de reCamera Pro: recuadro de la cara y la decisión para ese fotograma"/>
 </div>
 
 <div align="center">
@@ -92,22 +99,38 @@ Reconocimiento en una reCamera Pro: el recuadro del rostro lleva el id de la per
 
 ## Qué hardware necesitas
 
-Tres roles de dispositivo en la puerta, más un host en la nube o en las instalaciones.
+Tres roles de dispositivo en la puerta, más un host en la nube o on-prem.
 
-**① La cámara en la puerta.** Puede ser el propio sensor del dispositivo (reCamera Pro o reCamera estándar) o una cámara RTSP existente que alimenta a un host separado. Móntala aproximadamente a la altura del rostro, encuadrada de modo que un rostro llene una parte utilizable del fotograma a la distancia a la que la gente realmente se detiene. Las puertas a contraluz y los reflejos en el vidrio son causas frecuentes de fallos de reconocimiento.
+**① La cámara en la puerta.** Puede ser el propio sensor del dispositivo (reCamera Pro o
+reCamera estándar) o una cámara RTSP existente que alimenta a un host separado. Móntala aproximadamente a la altura de la cara, encuadrada de modo que una cara llene una parte utilizable del fotograma
+a la distancia a la que la gente realmente se detiene. Las puertas a contraluz y los reflejos en el vidrio son causas
+habituales de fallos de reconocimiento.
 
-**② El elemento que reconoce y decide.**
+**② Lo que reconoce y decide.**
 
-| Host de reconocimiento | Dónde se ejecuta el reconocimiento | Forma de instalación |
-|---|---|---|
-| reCamera Pro (RV1126B) | En la cámara, junto a su aplicación de reconocimiento facial existente | Instalado en la cámara, sin contenedor (Buildroot, sin Docker) |
-| reCamera estándar (SG2002 / CV181x) | En la cámara, en un único proceso nativo: detección, embedding, prueba de vida y emparejamiento | Un pequeño daemon copiado en la cámara, sin contenedor |
-| reComputer Industrial J20 | En contenedores, contra un flujo RTSP existente | Contenedores sobre SSH |
-| reComputer J30 / J40 / R2000 | En contenedores, contra un flujo RTSP existente | Contenedores sobre SSH |
+| | Host de reconocimiento | Dónde se ejecuta el reconocimiento | Forma de instalación | Cuándo elegirlo |
+|---|---|---|---|---|
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/0/100021896main_4.jpg" alt="reCamera Pro" width="110" /> | [reCamera Pro (RV1126B)](https://www.seeedstudio.com/reCamera-Pro-p-5984.html)<br/>Cámara inteligente de alto rendimiento | En la cámara, junto a su aplicación de reconocimiento facial existente | Instalado en la cámara, sin contenedor (Buildroot, sin Docker) | Aún no hay cámara en la puerta; se necesita prueba de vida y coincidencia rápidas en el dispositivo |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002 (SG2002)](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>Cámara inteligente de entrada | En la cámara, en un único proceso nativo: detección, embedding, prueba de vida y coincidencia | Un pequeño daemon copiado en la cámara, sin contenedor | Puerta única autónoma y rentable |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Host perimetral Jetson Orin | En contenedores, contra un flujo RTSP existente | Contenedores sobre SSH | Cámara RTSP existente; una caja centraliza varias puertas |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Controlador industrial sin ventilador | En contenedores, contra un flujo RTSP existente | Contenedores sobre SSH | Instalación en armario, E/S multicanal aislada e interfaces de relé |
 
-**③ El relé.** La cerradura debe estar detrás de un relé o contacto seco, con su propia fuente de 12/24 V, separada de la de la placa de cómputo. Una cerradura consume de 300 mA a 1 A; un pin GPIO y una salida digital optoaislada transportan miliamperios. Cuatro ajustes — `active_high`, `pulse_ms`, `relay_contact` y `fail_mode` — se configuran por instalación y no tienen valores predeterminados: una cerradura magnética a prueba de fallo cableada a través del contacto normalmente abierto queda permanentemente abierta, y nada lo muestra hasta que se prueba la puerta.
+**③ El relé.** La cerradura debe estar detrás de un relé o contacto seco, con su propia fuente de
+12/24 V, separada de la de la placa de cómputo. Una cerradura consume de 300 mA a 1 A; un pin GPIO y una
+salida digital optoaislada transportan miliamperios. Cuatro ajustes — `active_high`, `pulse_ms`,
+`relay_contact` y `fail_mode` — se configuran por instalación y no tienen valores predeterminados: una
+cerradura magnética a prueba de fallo cableada a través del contacto normalmente abierto queda permanentemente abierta,
+y nada lo muestra hasta que se prueba la puerta.
 
-**④ El host en la nube o en las instalaciones.** Cualquier máquina Linux amd64 o arm64 con Docker; sin GPU. Ejecuta el servicio de biblioteca de rostros, la consola de gestión y el broker MQTT. Debe ser accesible desde cada dispositivo de puerta, y su reloj debe ser correcto: los dispositivos sin RTC toman su corrección de hora de la cabecera HTTP `Date`.
+**④ El host en la nube o on-prem.** Cualquier caja Linux amd64 o arm64 con Docker; sin GPU. Ejecuta
+el servicio de biblioteca de rostros, la consola de gestión y el broker MQTT. Debe ser accesible
+desde cada dispositivo de puerta, y su reloj debe ser correcto: los dispositivos sin RTC toman su corrección
+de hora de la cabecera HTTP `Date`.
+
+### Límites de selección negativa
+
+- **Tamaño de la base de datos de rostros**: Se recomienda que la base de datos de rostros en cámara sea ≤ 1.000 usuarios registrados. Por encima de 3.000 usuarios, la latencia de comparación aumenta; usa en su lugar un host perimetral dedicado.
+- **Contraluz severo**: La luz solar exterior directa sin sombra satura la detección IR de prueba de vida; instala un parasol o iluminación de relleno antirreflejos.
 
 ## Cómo desplegar en el sitio
 
@@ -115,43 +138,59 @@ Dos partes, y el orden importa.
 
 ### Uno: cablear la puerta — LED, luego relé, luego cerradura
 
-Confirma la polaridad y el ancho de pulso con un LED. Confirma que el contacto hace clic en el relé. Solo entonces conecta una cerradura. Una cerradura magnética a prueba de fallo va a través de COM y NC; una cerradura a prueba de intrusión va a través de COM y NO. Si esto se conecta al revés, la puerta queda permanentemente abierta, por lo que `relay_contact` no tiene valor predeterminado.
+Confirma la polaridad y el ancho de pulso con un LED. Confirma que el contacto hace clic en el relé. Solo
+entonces pon una cerradura en él. Una cerradura magnética a prueba de fallo pasa por COM y NC; una
+cerradura de resorte a prueba de intrusión pasa por COM y NO. Si esto se conecta al revés, la puerta queda permanentemente abierta, por lo que
+`relay_contact` no tiene valor predeterminado.
 
-**Comprueba que el pin GPIO esté libre.** En una reCamera Pro inspeccionada, `gpio131` ya estaba exportado y controlado por otra aplicación. El actuador se niega a arrancar en un pin cuyo estado actual no coincide con el estado inactivo configurado, y no tomará el control de un pin a menos que se le indique explícitamente. En la baseboard reCamera 2002 HQ PoE, el conector de 6 pines lleva tres líneas IO — D1 = sysfs 490 (la única que no está multiplexada), CLK = 487, SMD = 488 — pero la polaridad de nivel del conector y la corriente de salida disponible no figuran en la documentación del proveedor, así que no conectes una cerradura ahí antes de que un multímetro y un LED las hayan confirmado. En la J20, la especificación de diseño sitúa DO1–DO4 en sysfs 463/464/465/462; si la imagen de destino las expone de ese modo o a través de `Jetson.GPIO` no se ha confirmado en hardware.
+**Comprueba que el pin GPIO esté libre.** En una reCamera Pro inspeccionada, `gpio131` ya estaba
+exportado y controlado por otra aplicación. El actuador se niega a arrancar en un pin cuyo
+estado actual no coincide con el estado inactivo configurado, y no tomará el control de un pin
+a menos que se le indique explícitamente. En la base PoE HQ de 6 pines de la reCamera 2002, el conector de 6 pines lleva
+tres líneas de E/S — D1 = sysfs 490 (la única que no está multiplexada), CLK = 487, SMD = 488 — pero
+la polaridad de nivel del encabezado y la corriente de accionamiento disponible no están en la documentación del proveedor,
+así que no conectes una cerradura ahí antes de que un multímetro y un LED las hayan confirmado.
+En el J20 la especificación de diseño sitúa DO1–DO4 en sysfs 463/464/465/462; si la imagen de destino
+las expone de esa forma o a través de `Jetson.GPIO` no se ha confirmado en hardware.
 
-### Dos: levantar primero el lado en la nube y luego el lado del dispositivo
+### Dos: levanta primero la parte en la nube y luego la del dispositivo
 
-Los pasos completos por preajuste están en la página de diseño de referencia, donde responder a unas pocas preguntas sobre el sitio también te da el paquete de aplicación correspondiente para descargar.
+Los pasos completos por preajuste están en la página del diseño de referencia, donde responder a unas pocas preguntas sobre el sitio también te da el paquete de aplicación correspondiente para descargar.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/unmanned_store_access" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}>Elige una configuración y descarga 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}>Elige una configuración y descárgala 🖱️</font></span></strong>
     </a>
 </div><br />
 
-El lado en la nube es el servicio de biblioteca de rostros, la consola y un broker, a partir de los archivos de compose en `assets/cloud/`. La consola se niega a arrancar sin un token configurado. **Un token compartido sobre HTTP plano no es autenticación**; termina TLS en un proxy inverso delante de ella. La configuración del broker incluida es texto plano anónimo y es solo para pruebas; producción necesita TLS, identidades por dispositivo y ACL de temas, nada de lo cual está en la configuración incluida.
+La parte en la nube es el servicio de biblioteca de rostros, la consola y un bróker, a partir de los archivos de compose
+en `assets/cloud/`. La consola se niega a arrancar sin un token configurado.
+**Un token compartido sobre HTTP plano no es autenticación**; termina TLS en un proxy inverso delante de ella. La configuración del bróker
+incluida es texto plano anónimo y es solo para pruebas; producción necesita TLS,
+identidades por dispositivo y ACL de temas, nada de lo cual está en la configuración incluida.
 
-El lado del dispositivo difiere por preajuste: contenedores sobre SSH en los preajustes reComputer, una copia de un daemon en ambas reCamera.
+La parte del dispositivo difiere según el preajuste: contenedores sobre SSH en los preajustes reComputer,
+una copia de un demonio en ambas reCameras.
 
-Una vez que el lado en la nube esté en marcha, comprueba en la página de dispositivos de la consola que el dispositivo de la puerta está en línea, enviando latidos y con la versión de biblioteca de rostros esperada:
-
-<div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/console-devices-en-f978d0b3.png" alt="Página de dispositivo de la consola: estado en línea, latido, versión actual de la biblioteca de rostros y estado del actuador"/>
-</div>
-
-Después registra a las personas que puedan pasar en la página de personas. El registro genera una nueva versión de la biblioteca de rostros, que el dispositivo recoge en su siguiente sondeo.
-
-<div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/console-persons-en-8c8db34d.png" alt="Página de personas de la consola: personas registradas y el punto de entrada para el registro"/>
-</div>
-
-A continuación se muestra un ciclo completo: registrar a una persona, publicar la versión, el dispositivo la descarga y cambia, la puerta la reconoce.
+Una vez que la parte en la nube esté levantada, comprueba en la página de dispositivos de la consola que el dispositivo de la puerta está en línea, enviando latidos y en la versión de biblioteca de rostros esperada:
 
 <div align="center">
-  <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/console-flow-7a02b8a9.gif" alt="Registro hasta que el dispositivo descarga la nueva biblioteca de rostros y reconoce a la persona en la puerta"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/console-devices-en-f978d0b3.png" alt="Página de dispositivos de la consola: estado en línea, latido, versión actual de la biblioteca de rostros y estado del actuador"/>
 </div>
 
-Antes de instalar una cerradura, confirma en la placa base PoE que la línea GPIO realmente se puede accionar:
+Luego inscribe a las personas que pueden pasar en la página de personas. La inscripción genera una nueva versión de la biblioteca de rostros, que el dispositivo recoge en su siguiente sondeo.
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/console-persons-en-8c8db34d.png" alt="Página de personas de la consola: personas inscritas y el punto de entrada para la inscripción"/>
+</div>
+
+A continuación se muestra un ciclo completo: inscribir a una persona, publicar la versión, el dispositivo la descarga y conmuta, la puerta la reconoce.
+
+<div align="center">
+  <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/console-flow-7a02b8a9.gif" alt="Desde la inscripción hasta que el dispositivo descarga la nueva biblioteca de rostros y reconoce a la persona en la puerta"/>
+</div>
+
+Antes de poner una cerradura, confirma en la placa base PoE que la línea GPIO realmente se puede accionar:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/poe-activation-2de5d904.png" alt="Arranque del actuador en una reCamera 2002 HQ PoE, reclamando la línea GPIO D1"/>
@@ -161,9 +200,9 @@ Antes de instalar una cerradura, confirma en la placa base PoE que la línea GPI
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/gpio-relay-check-ad22020d.png" alt="Lectura de nivel en la misma línea (sysfs 490) tras una decisión de permitir"/>
 </div>
 
-<!-- TODO imagen: la puerta en sí (cámara, relé y cerradura tal como están instalados) — necesita una sesión de fotos en campo -->
-
-Se permite una URL de biblioteca en texto plano `http://` en una LAN, pero solo con una firma HMAC-SHA256 sobre el manifiesto; sin una clave el dispositivo se niega a arrancar. La firma protege contra manipulaciones en tránsito; cualquier clave de dispositivo filtrada puede usarse para falsificar una biblioteca.
+Se permite una URL de biblioteca en texto plano `http://` en una LAN, pero solo con una firma HMAC-SHA256
+sobre el manifiesto; sin una clave el dispositivo se niega a arrancar. La firma
+protege contra la manipulación en tránsito; cualquier clave de dispositivo filtrada se puede usar para falsificar una biblioteca.
 
 ## Qué interfaces expone
 
@@ -171,15 +210,15 @@ La interfaz son cinco temas MQTT y dos superficies HTTP.
 
 | Tema / endpoint | Carga útil | Retenido |
 |---|---|---|
-| `access/v1/events` (MQTT 8883, QoS 1) | Un JSON por decisión: ver más abajo | No |
+| `access/v1/events` (MQTT 8883, QoS 1) | Un JSON por decisión — ver más abajo | No |
 | `access/v1/status/{device_id}` | Latido cada 30 segundos: estado del actuador, versión de la biblioteca y etiqueta del modelo, si la detección de vida está cargada | Solo último testamento |
 | `access/v1/commands/{door_id}` | `unlock`, `hold_open`, `lock` | **Nunca** |
 | `access/v1/receipts/{command_id}` | El estado final de un comando | No |
-| `access/v1/relay/{relay_id}/set` y `/state` | Solo presets de relé vía MQTT; `state` informa del contacto físico y no refleja si la puerta está abierta | `set` no, `state` sí |
+| `access/v1/relay/{relay_id}/set` and `/state` | Solo preajustes con relé MQTT; `state` informa el contacto físico y no refleja si la puerta está abierta | `set` no, `state` sí |
 | `GET /v1/facedb/current`, `GET /v1/facedb/{version}` (HTTP 8080) | Toda la superficie de distribución de la biblioteca. `Range` para descargas fragmentadas y reanudables | — |
-| `/api/events`, `/api/devices`, `/api/persons`, `/api/audit/verify` (HTTP 8088) | API de la consola protegida por el token de tres roles. Sin lectura anónima | — |
+| `/api/events`, `/api/devices`, `/api/persons`, `/api/audit/verify` (HTTP 8088) | API de la consola detrás de la puerta de token de tres roles. Sin lectura anónima | — |
 
-Los tres roles de token de la consola: el visor lee, el operador emite `unlock` / `hold_open` / `lock`, el administrador registra, elimina y revierte. `/api/audit/verify` comprueba la cadena de hashes del registro de auditoría: el registro es NDJSON de solo anexado, cada registro lleva el hash del registro anterior y cualquier modificación de un registro histórico se informa.
+Los tres roles de token de la consola: viewer lee, operator emite `unlock` / `hold_open` / `lock`, admin inscribe, borra y revierte. `/api/audit/verify` comprueba la cadena de hashes del registro de auditoría: el registro es NDJSON solo de anexado, cada registro lleva el hash del registro anterior, y cualquier alteración de un registro histórico se informa.
 
 ### La carga útil del evento
 
@@ -203,32 +242,42 @@ Los tres roles de token de la consola: el visor lee, el operador emite `unlock` 
 }
 ```
 
-Tres campos a vigilar al integrar. **`facedb_version` es `null` antes de la primera sincronización correcta**, lo que significa que el dispositivo aún no tiene biblioteca (no es lo mismo que la versión 0); el motivo de denegación se informa por separado como `no_facedb`. **`threshold` es el valor en vigor para esa decisión**, así que un cambio de umbral aparece en el flujo de eventos. **`clock.valid`** indica si se puede confiar en la marca de tiempo corregida; los dispositivos nunca ajustan su reloj del sistema, solo mantienen un desplazamiento. Un resultado de detección de vida `null` significa que la comprobación no se ejecutó; se trata como un fallo y se informa como `liveness_unknown`.
+Tres campos a vigilar al integrar. **`facedb_version` es `null` antes de la primera
+sincronización correcta**, lo que significa que el dispositivo aún no tiene biblioteca (no es lo mismo que la versión 0); el
+motivo de denegación se informa por separado como `no_facedb`. **`threshold` es el valor en vigor
+para esa decisión**, así que un cambio de umbral aparece en el flujo de eventos. **`clock.valid`** indica si se puede confiar en la marca de tiempo corregida; los dispositivos nunca ajustan su reloj del sistema, solo llevan un desplazamiento. Un resultado de detección de vida `null` significa que la comprobación no se ejecutó; se trata como un fallo y se informa como `liveness_unknown`.
 
 ### La puerta de comandos
 
-Un comando debe llevar un conjunto de campos exacto, un `command_id` UUIDv4, un `issued_at` RFC3339 con zona horaria y un TTL dentro de los límites, y se comprueba contra una tabla de repetición por identidad. Un comando reenviado **no abre la puerta por segunda vez**; el dispositivo devuelve el recibo original para que el llamador lo concilie. Uno caducado se devuelve como `TTL_EXPIRED`. Se rechaza una identidad anónima.
+Un comando debe llevar un conjunto de campos exacto, un `command_id` UUIDv4, un `issued_at` RFC3339
+con zona horaria y un TTL dentro de los límites, y se comprueba contra una tabla de reintentos por identidad.
+Un comando reentregado **no abre la puerta por segunda vez**; el dispositivo devuelve el
+recibo original para que el llamador lo concilie. Uno caducado
+vuelve como `TTL_EXPIRED`. Se rechaza una identidad anónima.
 
-Los temas `set` y de comandos nunca se retienen. Un desbloqueo retenido se reproduce en cada reconexión, por lo que la puerta se abriría sola después de un corte de energía.
+Los temas `set` y de comandos nunca se retienen. Un desbloqueo retenido se reproduce en
+cada reconexión, así que la puerta se abriría sola después de un corte de energía.
 
 ### Distribución de la biblioteca de rostros
 
-El dispositivo sondea `current`, compara versiones y solo descarga archivos cuando la versión ha cambiado, con fragmentación y reanudación mediante `Range` estándar. Cada archivo se comprueba con SHA-256 y se verifica la firma del manifiesto antes de un cambio atómico; un fallo en cualquier paso deja la versión antigua en su lugar. Eliminar a una persona produce una nueva versión sin ella más una barrera de eliminación, y cualquier reversión posterior a una versión que aún la contenga se rechaza por nombre.
+El dispositivo sondea `current`, compara versiones y solo descarga archivos cuando la versión ha cambiado, con fragmentación y reanudación sobre `Range` estándar. Cada archivo se comprueba con SHA-256 y se verifica la firma del manifiesto antes de un cambio atómico; un fallo en cualquier paso deja la versión antigua en su lugar. Eliminar a una persona produce una nueva versión sin ella más una barrera de eliminación, y cualquier reversión posterior a una versión que aún la contenga se rechaza por nombre.
 
-El manifiesto de cada versión lleva cinco campos de licencia — `license_id`, `use_scope`, `redistributable`, `source_revision`, `sha256` — de modo que las condiciones de la licencia viajan con el artefacto.
+El manifiesto de cada versión lleva cinco campos de licencia — `license_id`, `use_scope`, `redistributable`,
+`source_revision`, `sha256` — de modo que los términos de la licencia viajan con el artefacto.
 
 ## Rendimiento y datos medidos
 
 ### Latencia de activación de la biblioteca de rostros
 
-El tiempo desde que se publica una nueva versión de la biblioteca hasta que el dispositivo la ejecuta.
+El tiempo desde que se publica una nueva versión de la biblioteca hasta que el dispositivo la está ejecutando.
 
 | Plataforma | Activación completa | Condiciones |
 |---|---|---|
 | reCamera estándar (SG2002 / CV181x riscv64, firmware 0.2.2) | **p50 491.6 ms, p95 507.8 ms** (n=20) | USB-RNDIS, 2 personas, biblioteca de 16.5 KB. Viaje de ida y vuelta `op:reload` p50 100.0 ms (n=25) |
-| reCamera Pro (RV1126B, Buildroot 2023.02.6) | 62.2 ms (v1), 45.4 ms (v2); ciclo sin cambios cuando está al día 6.2 ms | Ethernet, 1–2 personas, biblioteca de menos de 20 KB |
+| reCamera Pro (RV1126B, Buildroot 2023.02.6) | 62.2 ms (v1), 45.4 ms (v2); ciclo sin cambios al día 6.2 ms | Ethernet, 1–2 personas, biblioteca de menos de 20 KB |
 
-**Escalado con el tamaño de la biblioteca.** Dos puntos de escala en la reCamera estándar, una ejecución cada uno: 402 personas / 2.86 MB en 9 801.7 ms, y 1502 personas / 10.66 MB en 22 278.7 ms. El tiempo de activación crece con el tamaño de la biblioteca; usa estas dos cifras para planificar la primera sincronización de una biblioteca grande.
+**Escalado con el tamaño de la biblioteca.** Dos puntos de escala en la reCamera estándar, una ejecución cada uno:
+402 personas / 2.86 MB en 9 801.7 ms, y 1502 personas / 10.66 MB en 22 278.7 ms. El tiempo de activación crece con el tamaño de la biblioteca; usa estas dos cifras para planificar la primera sincronización de una biblioteca grande.
 
 Reproducir: en el repositorio ascendente `unmanned-store-access`, `evaluation/runs/2026-09-06-recamera-std-p3-r2/results.md` y `evaluation/runs/2026-09-07-recamera-pro-p1/results.md`.
 
@@ -240,7 +289,7 @@ Desde el primer fotograma reproducido entregado a la aplicación hasta que el pi
 |---|---|---|
 | reCamera Pro (RV1126B), f1-access 0.1.1 | **0.62 s** (0.67) | **0.66 s** (0.68) |
 
-Condiciones: fotogramas 1280x720 reproducidos a 12.5 fps, detección de vida activada, rostro mínimo 40 px, umbral de coincidencia 0.40; la sonda es un clip de vídeo estándar reproducido a través del propio flujo de procesamiento del dispositivo, no una persona en vivo. El pin se activó en 24 de 24 ejecuciones. La retención de contacto de 1 500 ms tras la escritura del pin no se cuenta; no hay relé ni cerradura conectados, por lo que estas cifras no incluyen respuesta mecánica.
+Condiciones: fotogramas 1280x720 reproducidos a 12.5 fps, detección de vida activada, cara mínima 40 px, umbral de coincidencia 0.40; la sonda es un clip de vídeo estándar reproducido a través del propio flujo de procesamiento del dispositivo, no una persona en vivo. El pin se activó en 24 de 24 ejecuciones. La retención de contacto de 1 500 ms tras la escritura del pin no se cuenta; no hay relé ni cerradura conectados, así que estas cifras no contienen respuesta mecánica.
 
 ### Rechazos (reCamera Pro, vídeo reproducido)
 
@@ -254,17 +303,19 @@ Condiciones: fotogramas 1280x720 reproducidos a 12.5 fps, detección de vida act
 | Reproducción en pantalla de teléfono, clip B | 10, plantilla construida a partir del clip de ataque | 0 / 20 |
 | Imagen fija en pantalla | 10, plantilla construida a partir del clip de ataque | 0 / 20 |
 
-Condiciones: en las dos filas de persona no registrada la biblioteca contiene solo vectores sintéticos, por lo que la persona del clip no está registrada; en las tres filas de pantalla la plantilla se construye a partir del propio clip de ataque, por lo que el rostro en la biblioteca y el rostro en la pantalla son la misma persona; la fila de pantalla fija es un fotograma de visualización mantenido inmóvil.
+| Still screen image | 10, template built from the attack clip | 0 / 20 |
+
+Condiciones: en las dos filas de persona no registrada la biblioteca solo contiene vectores sintéticos, por lo que la persona del clip no está registrada; en las tres filas de pantalla la plantilla se construye a partir del propio clip de ataque, por lo que la cara en la biblioteca y la cara en la pantalla son de la misma persona; la fila de pantalla fija es un fotograma de visualización mantenido inmóvil.
 
 ### Otras mediciones
 
 | Métrica | Valor | Condiciones |
 |---|---|---|
-| Evento de reconocimiento a lectura del pin GPIO | p50 1.448 ms, p95 2.709 ms (n=22) | reCamera Pro, eventos de reconocimiento sintéticos inyectados, lectura vía sysfs, sin circuito externo; un límite superior en un eslabón de la ruta de software, acción de la puerta no incluida |
-| Servicio de reconocimiento, un fotograma: caja de rostro + veredicto de detección de vida + embedding de 512 dimensiones | 24-26 ms de tiempo de servidor, 30.3 ms p50 sobre HTTP (12 peticiones) | reComputer J40 Serie (Orin NX 16 GB, JetPack 6), un fotograma de un flujo RTSP 1280x720 |
+| Evento de reconocimiento a lectura de pin GPIO | p50 1.448 ms, p95 2.709 ms (n=22) | reCamera Pro, eventos de reconocimiento sintéticos inyectados, lectura vía sysfs, sin circuito externo; una cota superior de un eslabón de la ruta de software, acción de la puerta no incluida |
+| Servicio de reconocimiento, un fotograma: caja de cara + veredicto de vivacidad + embedding de 512 d | 24-26 ms de tiempo de servidor, 30.3 ms p50 sobre HTTP (12 peticiones) | reComputer J40 Serie (Orin NX 16 GB, JetPack 6), un fotograma de un flujo RTSP 1280x720 |
 | Primer arranque del servicio de reconocimiento | Motores TensorRT construidos en el equipo en 61 s + 62 s + 73 s; el endpoint de salud responde 214 s después del arranque | reComputer J40 Serie (Orin NX 16 GB, JetPack 6) |
 
-La lectura de `gpio130` en la reCamera Pro es de uno de los pines UART4 M0 del puerto de expansión reconfigurado como GPIO — la familia de 3.3 V, no una de las dos salidas nativas de 12–21 V de la placa.
+La lectura de `gpio130` en la reCamera Pro es uno de los pines UART4 M0 del puerto de expansión reconfigurado como GPIO — la familia de 3.3 V, no una de las dos salidas nativas de 12–21 V de la placa.
 
 Reproducir (lectura GPIO): `evaluation/runs/2026-09-07-recamera-pro-p1/results.md`.
 
@@ -273,22 +324,22 @@ Reproducir (lectura GPIO): `evaluation/runs/2026-09-07-recamera-pro-p1/results.m
 | Host de reconocimiento | Modelo de reconocimiento y dónde se ejecuta |
 |---|---|
 | reCamera Pro | El propio modelo de reconocimiento del dispositivo, `rv1126b:scrfd500m+mbf512@fp16` |
-| reCamera estándar | Un proceso nativo en el dispositivo realiza detección, embedding, detección de vida y emparejamiento |
+| reCamera estándar | Un proceso nativo en el dispositivo realiza detección, embedding, vivacidad y emparejamiento |
 | Presets de reComputer | Un servicio de reconocimiento en un contenedor; los motores TensorRT se construyen en el equipo en el primer arranque |
 
-La verificación de vivacidad está aplicada: si el servicio de reconocimiento no informa que la vivacidad está cargada, el adaptador se niega a ejecutarse.
+La vivacidad se hace cumplir: si el servicio de reconocimiento no informa que la vivacidad está cargada, el adaptador se niega a ejecutarse.
 
 Parámetros que cambian el comportamiento del despliegue:
 
-- Intervalo de sondeo de la biblioteca de rostros (30 s por defecto): el dispositivo consulta nuevas versiones en este intervalo, por lo que la latencia de activación de la biblioteca depende de él.
-- Umbral de coincidencia: el umbral suministrado es un valor inicial; ajústalo barriendo pares positivos y negativos en la cámara instalada. El `threshold` del evento informa del valor en vigor para cada decisión.
-- Los cuatro ajustes del relé `active_high`, `pulse_ms`, `relay_contact`, `fail_mode`: sin valores predeterminados; se configuran por instalación.
+- Intervalo de sondeo de la biblioteca de caras (30 s por defecto): el dispositivo sondea nuevas versiones en este intervalo, por lo que la latencia de activación de la biblioteca depende de él.
+- Umbral de coincidencia: el umbral enviado es un valor inicial; ajústalo barriendo pares positivos y negativos en la cámara instalada. El `threshold` del evento informa del valor en vigor para cada decisión.
+- Los cuatro ajustes del relé `active_high`, `pulse_ms`, `relay_contact`, `fail_mode`: sin valores por defecto; se configuran por instalación.
 
 ### Degradaciones conocidas
 
-- **Registro para reCamera Pro.** El `buffalo_l` usado para el registro en la nube y el propio `rv1126b:scrfd500m+mbf512@fp16` del dispositivo se sitúan en espacios de modelo cuya similitud coseno es aproximadamente cero, por lo que la ruta de registro incluida aún no puede producir una biblioteca utilizable en producción para este dispositivo. La reCamera estándar calcula las incrustaciones en el dispositivo y no se ve afectada.
-- **La vivacidad en el backend RKNN no está implementada upstream.** Los presets que se ejecutan en RKNN no pueden cumplir con "liveness enforced".
-- **Cambiar el backbone de rostro implica reconstruir todas las versiones de la biblioteca de rostros.** Las incrustaciones no son comparables entre modelos, por lo que todas las versiones antiguas se vuelven inutilizables; la protección `model_tag` en el manifiesto impide que un dispositivo cargue una por error.
+- **Registro para reCamera Pro.** El `buffalo_l` usado para el registro en la nube y el propio `rv1126b:scrfd500m+mbf512@fp16` del dispositivo se sitúan en espacios de modelo cuya similitud coseno es aproximadamente cero, por lo que la ruta de registro incluida aún no puede producir una biblioteca utilizable en producción para este dispositivo. La reCamera estándar calcula embeddings en el dispositivo y no se ve afectada.
+- **La vivacidad en el backend RKNN no está implementada upstream.** Los presets que se ejecutan en RKNN no pueden cumplir con "vivacidad aplicada".
+- **Cambiar el backbone de cara implica reconstruir todas las versiones de la biblioteca de caras.** Los embeddings no son comparables entre modelos, por lo que todas las versiones antiguas se vuelven inutilizables; la protección `model_tag` en el manifiesto impide que un dispositivo cargue una por error.
 
 ### Próximos pasos
 
@@ -296,11 +347,17 @@ Parámetros que cambian el comportamiento del despliegue:
 
 ## Fuentes de datos y recursos
 
-**Licencias.** El código del paquete de la solución y del repositorio upstream es Apache-2.0. **Los pesos del modelo no lo son.** La detección de rostros y las incrustaciones usan el `buffalo_l` de InsightFace; la propia declaración de InsightFace es que el código es MIT sin limitación de uso comercial, pero que los datos de entrenamiento —y los modelos entrenados con esos datos— están disponibles solo para fines de investigación no comerciales. `buffalo_l` es uno de esos modelos: `license_id: non-commercial`, `use_scope: non-commercial`, `redistributable: false`. El paquete de la solución no incluye los pesos, y un despliegue comercial debe sustituir el backbone de rostro por uno con licencia comercial.
+**Licencias.** El código del paquete de la solución y del repositorio upstream es Apache-2.0. **Los pesos del modelo
+no lo son.** La detección de caras y el embedding usan `buffalo_l` de InsightFace; la propia
+declaración de InsightFace es que el código es MIT sin limitación de uso comercial, pero que los
+datos de entrenamiento — y los modelos entrenados con esos datos — están disponibles solo para fines de investigación
+no comerciales. `buffalo_l` es uno de esos modelos: `license_id: non-commercial`,
+`use_scope: non-commercial`, `redistributable: false`. El paquete de la solución no incluye los pesos, y un despliegue comercial debe sustituir el backbone de cara por uno con licencia comercial.
 
-El modelo de vivacidad pasiva, Silent-Face-Anti-Spoofing de MiniVision, es Apache-2.0: `use_scope: commercial`, redistribuible, usado sin modificar.
+El modelo de vivacidad pasiva, Silent-Face-Anti-Spoofing de MiniVision, es Apache-2.0:
+`use_scope: commercial`, redistribuible, usado sin modificar.
 
 - Términos de la licencia: `gallery/ATTRIBUTION.md` en el paquete de la solución, y la sección de licencias de la descripción del paquete.
 - Brecha de espacio de modelo de registro: upstream `docs/user-guide.md` §5.1.
-- Los fotogramas de reconocimiento de puerta provienen de una reCamera Pro; la persona que aparece en ellos es un miembro del proyecto que tomó la foto.
+- Los fotogramas de reconocimiento de puerta provienen de una reCamera Pro; la persona en ellos es un miembro del proyecto que tomó la toma.
 - Las capturas de pantalla de la consola son **datos de demostración sintéticos**; las personas, puntuaciones y eventos no son resultados de campo.
