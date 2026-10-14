@@ -44,7 +44,7 @@ Um site que começa com o preset de transcrição no dispositivo pode migrar par
 
 ## O que esta solução faz
 
-### Preset: Transcrição no Dispositivo
+### Predefinição: Transcrição no Dispositivo
 
 
 Uma matriz de microfones no balcão capta a conversa, e uma pequena caixa ao lado converte o áudio em texto e envia o JSON da transcrição final para o backend de varejo para armazenamento e exibição. No modo Clip, o SenseCraft Voice App envia o áudio pelo gateway para o voice-service, que chama o OpenVoiceStream para ASR e grava o resultado no mesmo backend.
@@ -94,7 +94,7 @@ Adequado para: lojas únicas ou lojas piloto em que as gravações não podem sa
     </ul>
 </div>
 
-### Preset: Pilha de Servidor
+### Predefinição: Pilha de Servidor
 
 
 O áudio chega e a transcrição redatada é gravada no banco de dados; o conteúdo armazenado pode ser apagado por titular, com uma contagem de resíduos retornada. O pacote é um Docker compose com versões fixadas: reconhecimento, impressão de voz, o serviço que redige e armazena, MySQL, MinIO e o console de administração, além de um endpoint WebSocket de ASR para ingestão de áudio.
@@ -119,7 +119,7 @@ O texto na lista já está redatado: nomes e números de telefone são substitu�
 
 ## De que hardware você precisa
 
-### Preset: Transcrição no Dispositivo
+### Predefinição: Transcrição no Dispositivo
 
 
 Dois dispositivos por zona de fala, mais um diretório gravável.
@@ -137,7 +137,7 @@ Dois dispositivos por zona de fala, mais um diretório gravável.
 
 Também é necessário: uma porta host USB livre; um diretório gravável para transcrições (e áudio opcional) — o compose limita o tamanho do log dos contêineres e mantém os modelos em volumes nomeados, então apenas o diretório de transcrições cresce com o uso; uma rede para envio ao backend e o download de modelos na primeira inicialização.
 
-### Preset: Pilha de Servidor
+### Predefinição: Pilha de Servidor
 
 
 No máximo duas coisas: o host que executa a pilha e uma matriz de microfones no caminho do coletor de borda.
@@ -151,7 +151,7 @@ No máximo duas coisas: o host que executa a pilha e uma matriz de microfones no
 
 **② Matriz de microfones (somente caminho do coletor de borda)**: [reSpeaker XVF3800 USB 4-Mic Array](https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html) (SKU 101991441). Supressão de ruído, cancelamento de eco e formação de feixe são executados no DSP da matriz; o host recebe um fluxo mono de 16 kHz via USB.
 
-**Inicie um host de stack com 1–2 streams.** A simultaneidade somente de ASR está na tabela de cinco dispositivos em "Performance and measured data".
+**Inicie um host de stack com 1–2 streams.** A simultaneidade somente de ASR está na tabela de cinco dispositivos em "Desempenho e dados medidos".
 
 Outros pré-requisitos: o coletor deve alcançar a porta de ASR do host da stack; coloque a terminação TLS na frente ao atravessar uma rede não confiável, porque o token pode trafegar como um parâmetro de consulta de URL.
 
@@ -186,7 +186,7 @@ As etapas por dispositivo estão na página de design de referência. O fluxo:
 
 Tempo: cerca de 40 minutos por implantação depois que os modelos são baixados. Com o volume de modelos já populado, o tempo de reinicialização até saudável no RK3576 mediu cerca de 25 s.
 
-### Predefinição: Server Stack
+### Predefinição: Pilha de Servidor
 
 
 Duas predefinições, ambas classificadas como intermediárias, cerca de 60 minutos, ambas terminando em uma etapa de aceitação manual. As operações por dispositivo estão na página de design de referência, onde você escolhe uma configuração para o seu local e baixa o pacote de aplicativo correspondente.
@@ -229,7 +229,7 @@ O modo de dispositivo produz JSON de transcrição final e o envia para o backen
 
 **O campo `speaker` aparece somente quando a correspondência de impressão de voz está ativada.** Ele é um rótulo de cluster do registro local e não identifica uma pessoa. O campo `backend` na resposta offline nomeia o runtime que atendeu à solicitação, para que você possa distinguir o SenseVoice no NPU de um fallback em CPU.
 
-### Predefinição: Server Stack
+### Predefinição: Pilha de Servidor
 
 
 Todos os dados são lidos de endpoints HTTP ou WebSocket no host da stack. Os tokens são entradas `name:role:token` em `.env` (`VOICE_API_TOKENS`, `ASR_API_TOKENS`), e a função define quais rotas um token pode alcançar.
@@ -267,12 +267,12 @@ O que três campos significam:
 
 A autenticação separa duas falhas: credenciais ausentes retornam 401, função insuficiente retorna 403, para que um integrador saiba se deve alterar o token ou a função. Rotas sem uma regra explícita exigem pelo menos viewer, portanto novos endpoints não são públicos por padrão; tokens legados sem função são rebaixados para viewer.
 
-## Performance and measured data
+## Desempenho e dados medidos
 
 ### Predefinição: Transcrição no dispositivo
 
 
-#### Runtimes e parâmetros principais
+#### Tempos de execução e parâmetros principais
 
 O repositório do serviço de voz OpenVoiceStream não é público, portanto não há link do GitHub.
 
@@ -311,7 +311,7 @@ Reprodução: `assets/docker/docker-compose.local-rk3576.yml` (cabeçalho do arq
 - **Fora da faixa de captação.** Além de cerca de 3 m, ou com ruído constante acima de cerca de 70 dB, o arranjo não consegue separar o locutor e os erros de reconhecimento aumentam; ajustar os parâmetros acima não ajuda.
 - **Inglês é mais fraco que chinês no perfil de streaming Paraformer.** No mesmo conjunto curto: WER inglês 34,6%, CER chinês 9,4%.
 
-### Predefinição: Server Stack
+### Predefinição: Pilha de Servidor
 
 
 #### Capacidade e latência de ASR: cinco dispositivos comparados
@@ -360,7 +360,7 @@ Reprodução: `openvoicestream/bench/asr_bench/build_unified_report.py`
 - **Fontes de dados de desempenho**: `openvoicestream/docs/perf/paraformer-rk3576-streaming-ab-20260608.md`, `openvoicestream/docs/specs/diarization-capability.md`, `openvoicestream/docs/perf-test-runbook.md`. O repositório OpenVoiceStream não é público, portanto esses documentos não têm link público.
 - **Diagrama de arquitetura**: gerado a partir do catálogo aprovado de adesivos de produto. O nó de microfone usa um símbolo de função genérico, não o gabinete real do XVF3800.
 
-### Predefinição: Server Stack
+### Predefinição: Pilha de Servidor
 
 
 - **Conjunto de referência de PII**: 114 amostras em chinês e inglês por trás dos números de precisão e recall; não é fornecido com o pacote.

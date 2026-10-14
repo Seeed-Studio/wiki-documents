@@ -33,14 +33,9 @@ Esta es una **capa de integración de protocolos y concentrador de datos**, no u
 
 ## Qué hace esta solución
 
-Un integrador de gestión de edificios, energía o equipos llega al sitio y descubre que los datos ya existen:
-detrás de un controlador OPC UA, un medidor Modbus, un manejador de aire BACnet/IP y un gateway de sensores MQTT, cuatro
-esquemas de direccionamiento diferentes y cuatro modos de fallo distintos. Esta solución reúne los cuatro en **un único
-registro de puntos en un único host perimetral**, y proporciona al sistema superior un único contrato MQTT de lectura/escritura. En un sitio nuevo
-conectas los controladores y asignas los puntos; la capa de protocolo permanece tal como está.
+Un integrador de gestión de edificios, energía o equipos llega al sitio y descubre que los datos ya existen: detrás de un controlador OPC UA, un medidor Modbus, un manejador de aire BACnet/IP y un gateway de sensores MQTT, cuatro esquemas de direccionamiento diferentes y cuatro modos de fallo distintos. Esta solución reúne los cuatro en **un único registro de puntos en un único host perimetral**, y proporciona al sistema superior un único contrato MQTT de lectura/escritura. En un sitio nuevo conectas los controladores y asignas los puntos; la capa de protocolo permanece tal como está.
 
-Despliega el contenedor, añade una fuente, deja que el descubrimiento proponga candidatos, confirma los puntos que quieres, verifica
-su calidad y luego publícalos: localmente en el puerto 1883, hacia el norte a un broker en la nube en el 8883, o ambos.
+Despliega el contenedor, añade una fuente, deja que el descubrimiento proponga candidatos, confirma los puntos que quieres, verifica su calidad y luego publícalos: localmente en el puerto 1883, hacia el norte a un broker en la nube en el 8883, o ambos.
 
 - Selección y despliegue: [página de diseño de referencia](https://www.seeed.cc/solutions/reference-designs/multi_protocol_gateway)
 
@@ -87,8 +82,7 @@ su calidad y luego publícalos: localmente en el puerto 1883, hacia el norte a u
 
 ### Lo que muestra la consola
 
-La página Access enumera cada fuente configurada con su estado de ejecución en vivo; después de que el primer controlador esté
-cableado, esta es la página que indica si realmente se conectó:
+La página Access enumera cada fuente configurada con su estado de ejecución en vivo; después de que el primer controlador esté cableado, esta es la página que indica si realmente se conectó:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/multi_protocol_gateway/access-list-en-9837244f.png" alt="Página Access: protocolo, dirección y estado de ejecución en vivo para cada fuente"/>
@@ -112,17 +106,11 @@ El gateway viene en una robusta carcasa industrial para carril DIN que se enganc
 
 ## Qué hardware necesitas
 
-Dos cosas: los dispositivos de campo que ya están instalados y un host que pueda alcanzar cada una de sus
-redes.
+Dos cosas: los dispositivos de campo que ya están instalados y un host que pueda alcanzar cada una de sus redes.
 
-**① Dispositivos de campo**: cualquier cosa que ya hable OPC UA, Modbus (TCP o RTU), BACnet/IP o MQTT. Nada en
-el lado de planta se sustituye. Lo que debes tener por fuente: el endpoint y las credenciales OPC UA; el
-ID de unidad Modbus, el mapa de registros, el orden de bytes y de palabras; una interfaz de red en la subred BACnet con las
-difusiones alcanzándola; y, para MQTT, una asignación explícita de temas a puntos. Modbus RTU además necesita un
-adaptador USB a RS-485 a menos que el host lleve RS-485 a bordo.
+**① Dispositivos de campo**: cualquier cosa que ya hable OPC UA, Modbus (TCP o RTU), BACnet/IP o MQTT. Nada en el lado de planta se sustituye. Lo que debes tener por fuente: el endpoint y las credenciales OPC UA; el ID de unidad Modbus, el mapa de registros, el orden de bytes y de palabras; una interfaz de red en la subred BACnet con las difusiones alcanzándola; y, para MQTT, una asignación explícita de temas a puntos. Modbus RTU además necesita un adaptador USB a RS-485 a menos que el host lleve RS-485 a bordo.
 
-**② El host del concentrador de datos**: un host Docker sencillo, x86-64 o arm64, que determina qué interfaces de campo obtienes
-sin adaptador y si alguien puede operar el sistema sin un portátil en el sitio:
+**② El host del concentrador de datos**: un host Docker sencillo, x86-64 o arm64, que determina qué interfaces de campo obtienes sin adaptador y si alguien puede operar el sistema sin un portátil en el sitio:
 
 | | Host | E/S de campo integradas | Cuándo elegirlo |
 |---|---|---|---|
@@ -130,14 +118,9 @@ sin adaptador y si alguien puede operar el sistema sin un portátil en el sitio:
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1100" width="110" /> | [reComputer R1100 Serie](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html)<br/>Gateway y controlador IoT basado en CM4 | RS-485, RS-232, DI/DO, Ethernet Gigabit, CAN | El sitio tiene dispositivos RS-232 o contactos secos DI/DO también |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image1.jpeg" alt="reTerminal DM" width="110" /> | [reTerminal DM Serie](https://www.seeedstudio.com/reTerminal-DM-p-5616.html)<br/>HMI de 10,1 pulgadas con los mismos servicios | RS-485, CAN, Ethernet (la variante CM4104032 añade RS-232, DI/DO, bornera) | No hay un ordenador permanente en la sala de planta; la configuración y las comprobaciones diarias se realizan en el dispositivo |
 
-El límite de puntos de software es el mismo en los tres: **2.000 puntos, 50 de ellos escribibles**, aplicado en el código.
-Una carga de trabajo de 2.000 puntos no superó la prueba de capacidad en la plataforma de clase CM4 del R1000 (configuración de 2 GB,
-probado en una placa de desarrollo), así que elige el R1100 o el reTerminal DM a esa escala; para despliegues más pequeños en R1000
-todavía no hay un recuento de puntos medido. El tamaño de la eMMC determina cuánta cola de caída hacia el norte
-y cuánta historia de recepción de comandos permanece en la caja; el servicio en sí necesita unos 4 GB libres.
+El límite de puntos de software es el mismo en los tres: **2.000 puntos, 50 de ellos escribibles**, aplicado en el código. Una carga de trabajo de 2.000 puntos no superó la prueba de capacidad en la plataforma de clase CM4 del R1000 (configuración de 2 GB, probado en una placa de desarrollo), así que elige el R1100 o el reTerminal DM a esa escala; para despliegues más pequeños en R1000 todavía no hay un recuento de puntos medido. El tamaño de la eMMC determina cuánta cola de caída hacia el norte y cuánta historia de recepción de comandos permanece en la caja; el servicio en sí necesita unos 4 GB libres.
 
-Otros prerrequisitos: Docker Engine 20.10 o más reciente, puertos 8280 y 1883 libres (o elige otros sin uso antes de
-desplegar) y alcance de red desde el host a cada red de protocolo.
+Otros prerrequisitos: Docker Engine 20.10 o más reciente, puertos 8280 y 1883 libres (o elige otros sin uso antes de desplegar) y alcance de red desde el host a cada red de protocolo.
 
 ### Límites de selección negativa
 
@@ -173,8 +156,7 @@ desplegar) y alcance de red desde el host a cada red de protocolo.
 
 ### Dos: instala el software e incorpora la primera fuente
 
-Los pasos por dispositivo y los paquetes de aplicación están en la página del diseño de referencia; elige una configuración para
-tu sitio y descárgala.
+Los pasos por dispositivo y los paquetes de aplicación están en la página del diseño de referencia; elige una configuración para tu sitio y descárgala.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/multi_protocol_gateway" target="_blank">
@@ -182,40 +164,29 @@ tu sitio y descárgala.
     </a>
 </div><br />
 
-1. **Despliega**: el destino local se instala en la máquina que ejecuta SenseCraft Solution; el destino remoto
-   se instala por SSH en una reComputer R2000 serie o reTerminal DM en la red del controlador.
+1. **Despliega**: el destino local se instala en la máquina que ejecuta SenseCraft Solution; el destino remoto se instala por SSH en una reComputer R2000 serie o reTerminal DM en la red del controlador.
 2. **Crea el primer administrador**: no se requiere un token de registro en la primera ejecución.
-3. **Añade una fuente**: OPC UA, Modbus, BACnet/IP o MQTT, luego ejecuta el descubrimiento donde esté disponible: exploración OPC UA,
-   escaneo de unidades Modbus TCP, BACnet Who-Is, observación de temas MQTT. Cada uno produce **candidatos**.
-   El asistente solicita la dirección y el intervalo de sondeo por protocolo:
+3. **Añade una fuente**: OPC UA, Modbus, BACnet/IP o MQTT, luego ejecuta el descubrimiento donde esté disponible: exploración OPC UA, escaneo de unidades Modbus TCP, BACnet Who-Is, observación de temas MQTT. Cada uno produce **candidatos**. El asistente solicita la dirección y el intervalo de sondeo por protocolo:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/multi_protocol_gateway/access-wizard-step1-en-7a3d57a8.png" alt="Paso uno del asistente de acceso: elige el protocolo, rellena la dirección y el intervalo de sondeo"/>
 </div>
 
-4. **Confirma los puntos**: solo los candidatos confirmados se convierten en puntos gestionados. Cuando el descubrimiento es incompleto o
-   no está disponible, introduce los puntos a mano.
+4. **Confirma los puntos**: solo los candidatos confirmados se convierten en puntos gestionados. Cuando el descubrimiento es incompleto o no está disponible, introduce los puntos a mano.
 5. **Verifica la calidad antes de conceder acceso de escritura**: comprueba primero los valores en vivo y la calidad por punto en la página Points.
-   6. **Configura el servicio de datos**: el broker integrado y, opcionalmente, el publicador hacia el norte.
+6. **Configura el servicio de datos**: el broker integrado y, opcionalmente, el publicador hacia el norte.
 
-Dificultad **intermedia**, unos **15 minutos** hasta una consola en ejecución; incorporar el primer controlador y
-comprobar la calidad de sus datos lleva más tiempo.
+Dificultad **intermedia**, unos **15 minutos** hasta una consola en ejecución; incorporar el primer controlador y comprobar la calidad de sus datos lleva más tiempo.
 
 ## Interfaces disponibles
 
 Los datos salen del host a través de tres interfaces:
 
-- **Operadores**: la consola del navegador en HTTP **8280**: gestión de fuentes, tabla de puntos, acuses de
-  recibo de comandos, gestión de plugins.
-  - **Sistemas in situ (SCADA, plataforma energética, tu propio servicio)**: suscríbete al broker integrado en
-  **1883**. La telemetría de puntos llega bajo `missionpack/v1/{gateway}/points/{point_id}`, con temas de presencia,
-  comandos y acuses de recibo bajo el mismo contrato.
-  - **Sistemas en la nube o centrales**: habilita la publicación hacia el norte a un broker externo en **8883**. La telemetría
-  se agrupa en lotes con QoS 1, el estado de salud por fuente y el estado de última voluntad se conservan, y un latido QoS 0 se ejecuta
-  en paralelo. **La imagen publicada actualmente no tiene publicador hacia el norte.**
+- **Operadores**: la consola del navegador en HTTP **8280**: gestión de fuentes, tabla de puntos, acuses de recibo de comandos, gestión de plugins.
+- **Sistemas in situ (SCADA, plataforma energética, tu propio servicio)**: suscríbete al broker integrado en **1883**. La telemetría de puntos llega bajo `missionpack/v1/{gateway}/points/{point_id}`, con temas de presencia, comandos y acuses de recibo bajo el mismo contrato.
+- **Sistemas en la nube o centrales**: habilita la publicación hacia el norte a un broker externo en **8883**. La telemetría se agrupa en lotes con QoS 1, el estado de salud por fuente y el estado de última voluntad se conservan, y un latido QoS 0 se ejecuta en paralelo. **La imagen publicada actualmente no tiene publicador hacia el norte.**
 
-`{gateway}` es el id de la pasarela que estableces en el momento del despliegue, de modo que varios hubs puedan publicar en un solo broker sin
-colisionar.
+`{gateway}` es el id de la pasarela que estableces en el momento del despliegue, de modo que varios hubs puedan publicar en un solo broker sin colisionar.
 
 ### El contrato de temas
 
@@ -229,7 +200,6 @@ colisionar.
 
 El sobre hacia el norte es `missionpack.northbound.v1`:
 
-__CODE_LINE_PLH__
 ```json
 {
   "schema_version": "missionpack.northbound.v1",
@@ -248,17 +218,14 @@ __CODE_LINE_PLH__
     }
   ]
 }
+```
 
-**`source_revision` y `point_revision`**: la revisión cambia cuando se vuelve a asignar un punto, lo que distingue un
-cambio de configuración de un cambio de valor de campo. Un consumidor que no los comprueba une datos de
-antes y después de un cambio de configuración en una sola serie.
+**`source_revision` y `point_revision`**: la revisión cambia cuando se vuelve a asignar un punto, lo que distingue un cambio de configuración de un cambio de valor de campo. Un consumidor que no los comprueba une datos de antes y después de un cambio de configuración en una sola serie.
 
 Dos límites del contrato:
 
-- **El protocolo es MissionPack v1; esta versión no es compatible con Sparkplug B**, por lo que una aplicación
-  host Sparkplug necesita un paso de traducción.
-  - **MQTT simple es solo para telemetría.** Habilita TLS y una identidad de control autorizada antes de permitir
-  comandos remotos.
+- **El protocolo es MissionPack v1; esta versión no es compatible con Sparkplug B**, por lo que una aplicación host Sparkplug necesita un paso de traducción.
+- **MQTT simple es solo para telemetría.** Habilita TLS y una identidad de control autorizada antes de permitir comandos remotos.
 
 ### Alcance del protocolo hacia el sur
 
@@ -320,11 +287,7 @@ El tiempo de ejecución se distribuye como una imagen de contenedor (x86-64 y ar
 
 ## Fuentes de datos y activos
 
-- **Resultados medidos**: carga del simulador de cuatro protocolos, en una reComputer R2000 serie (arm64) y una estación de trabajo Linux x86_64, commits upstream `b5fe4cc` y `f831bae`. Reproducido desde el propio
-  `description.md` del paquete upstream; los registros de ejecución en bruto residen en el proyecto upstream.
-  - **Imágenes de producto y enlaces**: catálogo de productos de Seeed (`media-cdn.seeedstudio.com`), SKUs que coinciden con los
-  paquetes en la página del diseño de referencia.
-  - **Diagrama de arquitectura**: dibujado a partir de la topología `solution.yaml` upstream; es un
-  esquema de la composición del dispositivo, no una captura de pantalla.
-  - La imagen del contenedor de tiempo de ejecución se distribuye desde `sensecraft-missionpack.seeed.cn`, no desde este wiki.
-- The runtime container image is distributed from `sensecraft-missionpack.seeed.cn`, not from this wiki.
+- **Resultados medidos**: carga del simulador de cuatro protocolos, en una reComputer R2000 serie (arm64) y una estación de trabajo Linux x86_64, commits upstream `b5fe4cc` y `f831bae`. Reproducido desde el propio `description.md` del paquete upstream; los registros de ejecución en bruto residen en el proyecto upstream.
+- **Imágenes de producto y enlaces**: catálogo de productos de Seeed (`media-cdn.seeedstudio.com`), SKUs que coinciden con los paquetes en la página del diseño de referencia.
+- **Diagrama de arquitectura**: dibujado a partir de la topología `solution.yaml` upstream; es un esquema de la composición del dispositivo, no una captura de pantalla.
+- La imagen del contenedor de tiempo de ejecución se distribuye desde `sensecraft-missionpack.seeed.cn`, no desde este wiki.

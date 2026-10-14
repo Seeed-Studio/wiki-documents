@@ -164,7 +164,7 @@ Todos os serviços usam rede em modo host, então `<host>` é o próprio endere�
 | Endpoint | Qual deployment | O que transporta |
 |---|---|---|
 | `ws://<host>:8621/v2v/stream` | todo preset | A sessão duplex: PCM de entrada, transcrição e PCM de TTS de saída, além do abort que uma interrupção dispara |
-| `POST http://<host>:8621/asr` | todo preset | Transcrição offline de arquivo inteiro, sem VAD e sem streaming. Os números de acurácia offline em "Performance and measured data" são medidos aqui |
+| `POST http://<host>:8621/asr` | todo preset | Transcrição offline de arquivo inteiro, sem VAD e sem streaming. Os números de acurácia offline em "Desempenho e dados medidos" são medidos aqui |
 | `POST http://<host>:8621/tts` | todo preset | Síntese; o cabeçalho de resposta `x-rtf` carrega o fator de tempo real |
 | `GET http://<host>:8621/health` | todo preset | Prontidão; usado como healthcheck do Compose |
 | `http://<host>:18000` | todo preset | Dashboard web: estado do turno e a transcrição de cada turno |
@@ -174,7 +174,7 @@ Todos os serviços usam rede em modo host, então `<host>` é o próprio endere�
 
 As duas rotas locais expõem a mesma interface que a rota em nuvem, então a troca altera apenas `LLM_BASE_URL`. A menos que aponte para fora, não há broker nem componente em nuvem no caminho de dados.
 
-## Performance and measured data {#measured-detail}
+## Desempenho e dados medidos {#measured-detail}
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Solution/openvoicestream" target="_blank" rel="noopener noreferrer">

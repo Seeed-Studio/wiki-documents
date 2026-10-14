@@ -33,14 +33,9 @@ Este é um **recomendador de setpoint supervisório**, não um sistema de contro
 
 ## O que esta solução faz
 
-Uma planta central de HVAC em um escritório, shopping ou fábrica normalmente opera com um cronograma fixo: o mesmo setpoint
-esteja o andar cheio ou vazio. Esta solução coloca um gateway ao lado da planta que lê o controlador de HVAC
-e um medidor de energia em **um modelo de ponto único**, aprende uma recomendação de setpoint a partir dos
-próprios dados históricos daquele edifício e a escreve de volta no controlador; uma escrita conta como aplicada somente depois que o
-valor tiver sido lido de volta do campo e corresponder ao que foi enviado.
+Uma planta central de HVAC em um escritório, shopping ou fábrica normalmente opera com um cronograma fixo: o mesmo setpoint esteja o andar cheio ou vazio. Esta solução coloca um gateway ao lado da planta que lê o controlador de HVAC e um medidor de energia em **um modelo de ponto único**, aprende uma recomendação de setpoint a partir dos próprios dados históricos daquele edifício e a escreve de volta no controlador; uma escrita conta como aplicada somente depois que o valor tiver sido lido de volta do campo e corresponder ao que foi enviado.
 
-Ela é usada em planta central: chillers, unidades de tratamento de ar e os controladores à sua frente. Não é para
-aparelhos de ar-condicionado tipo split e não está no circuito de segurança.
+Ela é usada em planta central: chillers, unidades de tratamento de ar e os controladores à sua frente. Não é para aparelhos de ar-condicionado tipo split e não está no circuito de segurança.
 
 - Seleção e implantação: [página de design de referência](https://www.seeed.cc/solutions/reference-designs/smart_hvac_control)
 - Repositório de código-fonte: não publicado. `github.com/Seeed-Solution/Solution_HVAC_SmartControl` não é acessível publicamente.
@@ -88,12 +83,7 @@ aparelhos de ar-condicionado tipo split e não está no circuito de segurança.
 
 ### O que o console mostra
 
-O console em execução renderiza a tabela de pontos com qualidade por ponto, a página de acesso com cada fonte e
-sua contagem de pontos registrados, e um livro-razão de recebimento de comandos. É no livro-razão que o caminho de escrita fica visível:
-cada linha traz o valor solicitado, o valor efetivo, o ator, o reconhecimento do protocolo e —
-após o atraso de estabilização — o resultado da leitura de retorno. Uma escrita cujo registrador tenha sido alterado fora de banda é lida como
-`mismatched, compensated` com o valor que foi encontrado, e o comando de compensação emitido por
-`plugin:prediction:rollback` aparece como a próxima linha.
+O console em execução renderiza a tabela de pontos com qualidade por ponto, a página de acesso com cada fonte e sua contagem de pontos registrados, e um livro-razão de recebimento de comandos. É no livro-razão que o caminho de escrita fica visível: cada linha traz o valor solicitado, o valor efetivo, o ator, o reconhecimento do protocolo e — após o atraso de estabilização — o resultado da leitura de retorno. Uma escrita cujo registrador tenha sido alterado fora de banda é lida como `mismatched, compensated` com o valor que foi encontrado, e o comando de compensação emitido por `plugin:prediction:rollback` aparece como a próxima linha.
 
 A página de acesso lista cada fonte com sua contagem de pontos registrados; este é o primeiro lugar em que a fiação aparece como funcionando:
 
@@ -125,27 +115,20 @@ As capturas acima estão conectadas aos próprios simuladores de protocolo do pa
 
 Três coisas: um controlador que você já tenha, um medidor e um host Docker.
 
-**① O controlador de HVAC** — qualquer que já esteja à frente da planta, desde que fale OPC UA, Modbus
-TCP/RTU ou BACnet/IP. Para um teste em seco sem planta conectada, o pacote inclui um simulador OPC UA na porta
-4841.
+**① O controlador de HVAC** — qualquer que já esteja à frente da planta, desde que fale OPC UA, Modbus TCP/RTU ou BACnet/IP. Para um teste em seco sem planta conectada, o pacote inclui um simulador OPC UA na porta 4841.
 
-**② O medidor de energia** — um Eastron SDM630 no mapa de registradores Modbus V2, via Modbus TCP, um gateway Modbus TCP
-ou RS-485. Dez pontos somente leitura: tensão e corrente trifásicas, potência ativa total (kW), fator de potência total,
-frequência, energia ativa importada (kWh).
+**② O medidor de energia** — um Eastron SDM630 no mapa de registradores Modbus V2, via Modbus TCP, um gateway Modbus TCP ou RS-485. Dez pontos somente leitura: tensão e corrente trifásicas, potência ativa total (kW), fator de potência total, frequência, energia ativa importada (kWh).
 
-**③ O host do gateway** — o único dispositivo que você precisa escolher. O serviço é uma carga de trabalho Docker em x86-64 ou
-arm64, então uma máquina Linux já na rede da planta é um alvo suportado.
+**③ O host do gateway** — o único dispositivo que você precisa escolher. O serviço é uma carga de trabalho Docker em x86-64 ou arm64, então uma máquina Linux já na rede da planta é um alvo suportado.
 
 | | Gateway | Armazenamento | Quando escolhê-lo |
 |---|---|---:|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991374.jpg" alt="reComputer R1124-10" width="110" /> | [reComputer R1124-10](https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html)<br/>4 GB RAM, RS-485 / RS-232 / DI / DO on board | 16 GB eMMC | O histórico fica em um servidor; o gateway mantém uma pequena janela local |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html)<br/>mesma placa, eMMC maior | 32 GB eMMC | Meses de histórico de operação permanecem no gateway; o conjunto de treinamento pode ser reimportado localmente |
 
-A série R1100 traz RS-485 on board, então um medidor em RS-485 não precisa de adaptador USB. O **serviço em si
-precisa de cerca de 1 GB de disco**; o armazenamento decide quanto histórico você pode consultar localmente sem um servidor.
+A série R1100 traz RS-485 on board, então um medidor em RS-485 não precisa de adaptador USB. O **serviço em si precisa de cerca de 1 GB de disco**; o armazenamento decide quanto histórico você pode consultar localmente sem um servidor.
 
-Outros pré-requisitos: Docker Engine 20.10 ou mais recente, portas 8280 e 4841 livres no host e pelo menos uma semana de
-operação histórica em CSV ou Excel com colunas de carimbo de data/hora, setpoint, temperatura medida e consumo de energia.
+Outros pré-requisitos: Docker Engine 20.10 ou mais recente, portas 8280 e 4841 livres no host e pelo menos uma semana de operação histórica em CSV ou Excel com colunas de carimbo de data/hora, setpoint, temperatura medida e consumo de energia.
 
 ### Limites de Seleção Negativa
 
@@ -157,10 +140,7 @@ operação histórica em CSV ou Excel com colunas de carimbo de data/hora, setpo
 ### 1. Instale o hardware: fiação
 
 :::tip[Verifique primeiro a ordem de bytes e palavras do medidor]
-O modelo SDM630 integrado usa por padrão bytes e palavras em big-endian, conforme o padrão publicado pelo fornecedor.
-Leia um registrador com um valor físico conhecido e
-compare com o próprio visor do medidor. Tensão e frequência que são próximas mas incorretas, ou energia importada
-que salta para trás, geralmente significam um erro na configuração da ordem das palavras; verifique a ordem das palavras antes da fiação.
+O modelo SDM630 integrado usa por padrão bytes e palavras em big-endian, conforme o padrão publicado pelo fornecedor. Leia um registrador com um valor físico conhecido e compare com o próprio visor do medidor. Tensão e frequência que são próximas mas incorretas, ou energia importada que salta para trás, geralmente significam um erro na configuração da ordem das palavras; verifique a ordem das palavras antes da fiação.
 :::
 
 
@@ -174,18 +154,18 @@ Os campos de formulário por etapa e os pacotes de aplicação estão na página
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/smart_hvac_control" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}>Escolha uma configuração e faça o download 🖱️</font></span></strong>
     </a>
-    </div><br />
+</div><br />
 
-    Resumo:
+Resumo:
 
 1. **Fazer o deploy do serviço** — deployment Docker, seja na máquina que executa a ferramenta de deployment ou via SSH para um dispositivo na rede da planta. O formulário carrega o transporte do medidor, o endpoint OPC UA, os limites de segurança, o modo de controle e os limiares de alarme.
 2. **Abrir o console** — criar o primeiro administrador e confirmar que ambas as fontes estão online com suas contagens de pontos esperadas. O assistente de acesso solicita endereço e intervalo de polling por protocolo:
 
 <div align="center">
-   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/access-wizard-step1-en-7a3d57a8.png" alt="Primeira etapa do assistente de acesso: escolha o protocolo, preencha o endereço e o intervalo de polling"/>
-   </div>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/access-wizard-step1-en-7a3d57a8.png" alt="Primeira etapa do assistente de acesso: escolha o protocolo, preencha o endereço e o intervalo de polling"/>
+</div>
 
-   3. **Comissionar** — registrar o medidor, executar previsões em modo observe, injetar falhas de propósito e só então habilitar escritas. Antes que um lote seja enviado, confirme na página de seleção exatamente quais pontos ele cobre:
+3. **Comissionar** — registrar o medidor, executar previsões em modo observe, injetar falhas de propósito e só então habilitar escritas. Antes que um lote seja enviado, confirme na página de seleção exatamente quais pontos ele cobre:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/batch-select-en-9bd95ba4.png" alt="Seleção de envio em lote: os pontos cobertos por este lote e seus valores atuais"/>
@@ -195,7 +175,7 @@ Os campos de formulário por etapa e os pacotes de aplicação estão na página
 
 A estimativa até um console em execução com leitura de pontos é de cerca de **60 minutos**. O comissionamento leva mais tempo, porque inclui um ciclo completo de ocupação com previsões em modo observe revisadas por quem opera a planta.
 
-  :::caution[O que a imagem publicada cobre]
+:::caution[O que a imagem publicada cobre]
 A imagem publicada `missionpack-knn:v1.6.5` **não** inclui o template SDM630, o coordenador de rollback nem o envelope de alarme. Na v1.6.5 as subetapas de modo observe ainda se aplicam; as subetapas de medidor, rollback e alarme não podem ser concluídas.
 :::
 
@@ -283,31 +263,3 @@ O modelo de previsão é KNN, treinado no próprio histórico operacional do edi
 - **Dados históricos de operação** — fornecidos pelo site que faz o deployment. Nada é distribuído com o pacote, e nenhum conjunto de dados público é usado ou exigido.
 - **Capturas de console** — capturas de tela originais do software empacotado em execução contra os próprios simuladores de protocolo do pacote. A configuração do simulador, o host de captura e os checksums são registrados em `gallery/ATTRIBUTION.md` do pacote. Nenhum ativo de terceiros, marca registrada ou imagem de stock é incluído.
 - **Diagrama de arquitetura** — desenhado a partir de um IR de arquitetura estruturado; trabalho original, sem arte de terceiros.
-
-- **Write-back verification is off by default**: the prediction-run config (created in the console) must state `"rollback": { "enabled": true, "settle_seconds": 2.5 }` explicitly; a config without a `rollback` section is treated as `enabled: false`.
-- **`settle_seconds`** (0–30, default 1.0) **must be longer than the source's sampling interval**, or the readback sees the pre-write value and reports a mismatch that does not exist.
-
-### Known degradation
-
-- **The prediction rate has a structural ceiling (not fixed)**: the prediction loop sleeps a fixed interval after each cycle, so its rate is `1/(1.0 + t_cycle)`. At 2,000 points `t_cycle` is about **0.119 s**, which puts the ceiling near **0.894 cycle/s**, below the 0.90 gate the soak test requires.
-- **Only Modbus writes are verified by readback**: a BACnet output has no write priority available and is skipped.
-- **Byte order**: until checked against the meter's own display, meter points are decoded with the vendor-default (big-endian) word order and may be wrong.
-
-### Next steps
-
-- Read/write with independent readback against real OPC UA, Modbus TCP, Modbus RTU (USB-to-RS-485) and BACnet/IP devices on a reComputer R10 series or reTerminal DM.
-- A 72-hour unattended run on the same target hosts, with network, broker, process and device recovery drills during the run.
-
-## Data and asset sources
-
-- **SDM630 register map** — Eastron's published Modbus protocol document (Modbus V2 register map, IEEE-754
-  float32 input registers). Addresses follow that document; the big-endian byte and word order is the
-  vendor default.
-- **Historical operation data** — supplied by the deploying site. Nothing is distributed with the package,
-  and no public dataset is used or required.
-- **Console captures** — original screen captures of the packaged software running against the
-  package's own protocol simulators. The simulator configuration, capture host and checksums are
-  recorded in the package's `gallery/ATTRIBUTION.md`. No third-party asset, brand mark or stock image is
-  included.
-- **Architecture diagram** — drawn from a structured architecture IR; original
-  work, no third-party art.

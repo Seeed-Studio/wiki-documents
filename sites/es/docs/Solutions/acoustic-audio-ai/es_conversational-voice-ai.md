@@ -164,7 +164,7 @@ Todos los servicios usan red en modo host, así que `<host>` es la propia direcc
 | Endpoint | Qué despliegue | Qué transporta |
 |---|---|---|
 | `ws://<host>:8621/v2v/stream` | cada preset | La sesión dúplex: PCM de entrada, transcripción y PCM de TTS de salida, más el aborto que dispara una interrupción |
-| `POST http://<host>:8621/asr` | cada preset | Transcripción offline de archivo completo, sin VAD y sin streaming. Las cifras de precisión offline en "Performance and measured data" se miden aquí |
+| `POST http://<host>:8621/asr` | cada preset | Transcripción offline de archivo completo, sin VAD y sin streaming. Las cifras de precisión offline en "Rendimiento y datos medidos" se miden aquí |
 | `POST http://<host>:8621/tts` | cada preset | Síntesis; la cabecera de respuesta `x-rtf` transporta el factor en tiempo real |
 | `GET http://<host>:8621/health` | cada preset | Disponibilidad; se usa como healthcheck de Compose |
 | `http://<host>:18000` | cada preset | Panel web: estado del turno y transcripción de cada turno |

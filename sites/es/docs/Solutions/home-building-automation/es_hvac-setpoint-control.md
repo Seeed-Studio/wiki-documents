@@ -33,14 +33,9 @@ Este es un **recomendador de consignas de supervisión**, no un sistema de contr
 
 ## Lo que hace esta solución
 
-Una planta central de HVAC en una oficina, un centro comercial o una fábrica suele funcionar con un horario fijo: la misma consigna
-tanto si la planta está llena como si está vacía. Esta solución coloca una pasarela junto a la planta que lee el controlador de HVAC
-y un medidor de energía en **un modelo de punto único**, aprende una recomendación de consigna a partir de los propios datos
-históricos de ese edificio y la escribe de vuelta en el controlador; una escritura cuenta como aplicada solo después de que
-el valor se haya leído de nuevo desde campo y coincida con lo que se envió.
+Una planta central de HVAC en una oficina, un centro comercial o una fábrica suele funcionar con un horario fijo: la misma consigna tanto si la planta está llena como si está vacía. Esta solución coloca una pasarela junto a la planta que lee el controlador de HVAC y un medidor de energía en **un modelo de punto único**, aprende una recomendación de consigna a partir de los propios datos históricos de ese edificio y la escribe de vuelta en el controlador; una escritura cuenta como aplicada solo después de que el valor se haya leído de nuevo desde campo y coincida con lo que se envió.
 
-Se utiliza en planta central: enfriadoras, unidades de tratamiento de aire y los controladores que tienen delante. No es para
-aires acondicionados tipo split y no está en el lazo de seguridad.
+Se utiliza en planta central: enfriadoras, unidades de tratamiento de aire y los controladores que tienen delante. No es para aires acondicionados tipo split y no está en el lazo de seguridad.
 
 - Selección y despliegue: [página de diseño de referencia](https://www.seeed.cc/solutions/reference-designs/smart_hvac_control)
 - Repositorio de código fuente: no publicado. `github.com/Seeed-Solution/Solution_HVAC_SmartControl` no es de acceso público.
@@ -88,12 +83,7 @@ aires acondicionados tipo split y no está en el lazo de seguridad.
 
 ### Lo que muestra la consola
 
-La consola en ejecución representa la tabla de puntos con la calidad por punto, la página de acceso con cada fuente y
-su recuento de puntos registrados, y un libro mayor de recepción de comandos. El libro mayor es donde la ruta de escritura es visible:
-cada fila lleva el valor solicitado, el valor efectivo, el actor, el acuse de recibo del protocolo y —
-tras el retardo de asentamiento— el resultado de la lectura de retorno. Una escritura cuyo registro se haya cambiado por fuera se lee como
-`mismatched, compensated` con el valor que se encontró, y el comando de compensación emitido por
-`plugin:prediction:rollback` aparece como la siguiente fila.
+La consola en ejecución representa la tabla de puntos con la calidad por punto, la página de acceso con cada fuente y su recuento de puntos registrados, y un libro mayor de recepción de comandos. El libro mayor es donde la ruta de escritura es visible: cada fila lleva el valor solicitado, el valor efectivo, el actor, el acuse de recibo del protocolo y — tras el retardo de asentamiento— el resultado de la lectura de retorno. Una escritura cuyo registro se haya cambiado por fuera se lee como `mismatched, compensated` con el valor que se encontró, y el comando de compensación emitido por `plugin:prediction:rollback` aparece como la siguiente fila.
 
 La página de acceso enumera cada fuente con su recuento de puntos registrados; este es el primer lugar donde el cableado se muestra como operativo:
 
@@ -125,28 +115,20 @@ Las capturas anteriores están conectadas a los propios simuladores de protocolo
 
 Tres cosas: un controlador que ya tengas, un medidor y un host Docker.
 
-**① El controlador de HVAC**: cualquiera que ya esté delante de la planta, siempre que hable OPC UA, Modbus
-TCP/RTU o BACnet/IP. Para una prueba en vacío sin planta conectada, el paquete incluye un simulador OPC UA en el puerto
-4841.
+**① El controlador de HVAC**: cualquiera que ya esté delante de la planta, siempre que hable OPC UA, Modbus TCP/RTU o BACnet/IP. Para una prueba en vacío sin planta conectada, el paquete incluye un simulador OPC UA en el puerto 4841.
 
-**② El medidor de energía**: un Eastron SDM630 con el mapa de registros Modbus V2, sobre Modbus TCP, una pasarela Modbus TCP
-o RS-485. Diez puntos de solo lectura: tensión y corriente trifásicas, potencia activa total (kW), factor de
-potencia total, frecuencia, energía activa importada (kWh).
+**② El medidor de energía**: un Eastron SDM630 con el mapa de registros Modbus V2, sobre Modbus TCP, una pasarela Modbus TCP o RS-485. Diez puntos de solo lectura: tensión y corriente trifásicas, potencia activa total (kW), factor de potencia total, frecuencia, energía activa importada (kWh).
 
-**③ El host de la pasarela**: el único dispositivo que necesitas elegir. El servicio es una carga de trabajo Docker en x86-64 o
-arm64, por lo que una máquina Linux que ya esté en la red de la planta es un destino compatible.
+**③ El host de la pasarela**: el único dispositivo que necesitas elegir. El servicio es una carga de trabajo Docker en x86-64 o arm64, por lo que una máquina Linux que ya esté en la red de la planta es un destino compatible.
 
 | | Pasarela | Almacenamiento | Cuándo elegirla |
 |---|---|---:|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991374.jpg" alt="reComputer R1124-10" width="110" /> | [reComputer R1124-10](https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html)<br/>4 GB RAM, RS-485 / RS-232 / DI / DO integrados | 16 GB eMMC | El historial vive en un servidor; la pasarela mantiene una ventana local corta |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html)<br/>la misma placa, eMMC más grande | 32 GB eMMC | Meses de historial de operación permanecen en la pasarela; el conjunto de entrenamiento puede volver a importarse localmente |
 
-La Serie R1100 incorpora RS-485 a bordo, por lo que un medidor en RS-485 no necesita adaptador USB. El **servicio en sí
-necesita alrededor de 1 GB de disco**; el almacenamiento determina cuánta historia puedes consultar localmente sin un servidor.
+La Serie R1100 incorpora RS-485 a bordo, por lo que un medidor en RS-485 no necesita adaptador USB. El **servicio en sí necesita alrededor de 1 GB de disco**; el almacenamiento determina cuánta historia puedes consultar localmente sin un servidor.
 
-Otros requisitos previos: Docker Engine 20.10 o más reciente, los puertos 8280 y 4841 del host libres y al menos una semana de
-operación histórica en CSV o Excel con columnas de marca de tiempo, consigna, temperatura medida y consumo de
-energía.
+Otros requisitos previos: Docker Engine 20.10 o más reciente, los puertos 8280 y 4841 del host libres y al menos una semana de operación histórica en CSV o Excel con columnas de marca de tiempo, consigna, temperatura medida y consumo de energía.
 
 ### Límites de selección negativa
 
@@ -158,16 +140,10 @@ energía.
 ### 1. Instalar el hardware: cableado
 
 :::tip[Comprueba primero el orden de bytes y palabras del medidor]
-La plantilla integrada del SDM630 usa por defecto bytes y palabras big-endian, tomada del valor por defecto publicado por el proveedor.
-Lee un registro con un valor físico conocido y
-compáralo con la propia pantalla del medidor. Una tensión y frecuencia que sean cercanas pero incorrectas, o una energía importada
-que salta hacia atrás, suelen significar un error en el ajuste del orden de palabras; comprueba el orden de palabras antes de cablear.
+La plantilla integrada del SDM630 usa por defecto bytes y palabras big-endian, tomada del valor por defecto publicado por el proveedor. Lee un registro con un valor físico conocido y compáralo con la propia pantalla del medidor. Una tensión y frecuencia que sean cercanas pero incorrectas, o una energía importada que salta hacia atrás, suelen significar un error en el ajuste del orden de palabras; comprueba el orden de palabras antes de cablear.
 :::
 
-Coloca la pasarela en la misma red que el controlador y el medidor (o su pasarela Modbus TCP). Para
-Modbus RTU, haz coincidir la velocidad en baudios, la paridad y el id de unidad con la configuración del medidor; una discrepancia solo se muestra
-como un tiempo de espera, sin mensaje de error. Usa el **perfil de despliegue serial-device**: el perfil estándar
-de Docker no adjunta ningún dispositivo serie del host, por lo que no hay `/dev/ttyUSB0` dentro del contenedor.
+Coloca la pasarela en la misma red que el controlador y el medidor (o su pasarela Modbus TCP). Para Modbus RTU, haz coincidir la velocidad en baudios, la paridad y el id de unidad con la configuración del medidor; una discrepancia solo se muestra como un tiempo de espera, sin mensaje de error. Usa el **perfil de despliegue serial-device**: el perfil estándar de Docker no adjunta ningún dispositivo serie del host, por lo que no hay `/dev/ttyUSB0` dentro del contenedor.
 
 ### 2. Software: tres pasos
 
@@ -181,48 +157,34 @@ Los campos del formulario por paso y los paquetes de aplicación están en la p�
 
 Resumen:
 
-1. **Despliega el servicio** — despliegue con Docker, ya sea en la máquina que ejecuta la herramienta de despliegue o
-   por SSH a un dispositivo en la red de planta. El formulario incluye el transporte del medidor, el endpoint OPC UA, los
-   límites de seguridad, el modo de control y los umbrales de alarma.
-2. **Abre la consola** — crea el primer administrador y confirma que ambas fuentes están en línea con sus
-   conteos de puntos esperados. El asistente de acceso pide dirección e intervalo de sondeo por protocolo:
+1. **Despliega el servicio** — despliegue con Docker, ya sea en la máquina que ejecuta la herramienta de despliegue o por SSH a un dispositivo en la red de planta. El formulario incluye el transporte del medidor, el endpoint OPC UA, los límites de seguridad, el modo de control y los umbrales de alarma.
+2. **Abre la consola** — crea el primer administrador y confirma que ambas fuentes están en línea con sus conteos de puntos esperados. El asistente de acceso pide dirección e intervalo de sondeo por protocolo:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/access-wizard-step1-en-7a3d57a8.png" alt="Primer paso del asistente de acceso: elige el protocolo, rellena la dirección y el intervalo de sondeo"/>
 </div>
 
-3. **Puesta en servicio** — registra el medidor, ejecuta predicciones en modo de observación, inyecta fallos a propósito y solo
-   entonces habilita las escrituras. Antes de que salga un lote, confirma en la página de selección exactamente qué puntos cubre:
+3. **Puesta en servicio** — registra el medidor, ejecuta predicciones en modo de observación, inyecta fallos a propósito y solo entonces habilita las escrituras. Antes de que salga un lote, confirma en la página de selección exactamente qué puntos cubre:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/batch-select-en-9bd95ba4.png" alt="Selección de envío por lotes: los puntos cubiertos por este lote y sus valores actuales"/>
 </div>
 
-**Deja Control Mode en `observe` y deja Safety Baseline Approved By en blanco.** Mientras el aprobador esté
-en blanco, la línea base aparece como no aprobada; introducir un nombre significa que ese ingeniero aprueba los límites de seguridad.
+**Deja Control Mode en `observe` y deja Safety Baseline Approved By en blanco.** Mientras el aprobador esté en blanco, la línea base aparece como no aprobada; introducir un nombre significa que ese ingeniero aprueba los límites de seguridad.
 
-La estimación hasta una consola en ejecución con lectura de puntos es de unos **60 minutos**. La puesta en servicio lleva más tiempo,
-porque incluye un ciclo completo de ocupación de predicciones en modo de observación revisadas por quien opera la
-planta.
+La estimación hasta una consola en ejecución con lectura de puntos es de unos **60 minutos**. La puesta en servicio lleva más tiempo, porque incluye un ciclo completo de ocupación de predicciones en modo de observación revisadas por quien opera la planta.
 
 :::caution[Qué cubre la imagen publicada]
-La imagen publicada `missionpack-knn:v1.6.5` **no** incluye la plantilla SDM630, el coordinador de rollback ni
-el sobre de alarma. En la v1.6.5 los subpasos de modo de observación siguen aplicando; los subpasos de medidor, rollback y alarma
-no se pueden completar.
+La imagen publicada `missionpack-knn:v1.6.5` **no** incluye la plantilla SDM630, el coordinador de rollback ni el sobre de alarma. En la v1.6.5 los subpasos de modo de observación siguen aplicando; los subpasos de medidor, rollback y alarma no se pueden completar.
 :::
 
 ## Interfaces disponibles
 
-Todo lo que expone el despliegue se encuentra detrás de un puerto HTTP en el host de la pasarela. Nada sale de la red de
-planta a menos que la publicación hacia el norte esté activada.
+Todo lo que expone el despliegue se encuentra detrás de un puerto HTTP en el host de la pasarela. Nada sale de la red de planta a menos que la publicación hacia el norte esté activada.
 
-- **Operadores** — la consola en el navegador en `8280`: tabla de puntos con calidad por punto, registro de medidores,
-  ejecuciones de predicción, acuses de recibo de comandos, banner de alarmas.
-- **Supervisión** — `GET /system/runtime-metrics`. Con la publicación hacia el norte activada incluye
-  `northbound.spool.queued` y `northbound.spool.dropped`; `queued` de vuelta a 0 con `dropped` sin cambios es
-  la comprobación que pide el paso de puesta en servicio.
-- **Tu propio sistema** — la misma superficie de API de la consola detrás de `8280`, más el endpoint de salud que el despliegue
-  espera al arrancar.
+- **Operadores** — la consola en el navegador en `8280`: tabla de puntos con calidad por punto, registro de medidores, ejecuciones de predicción, acuses de recibo de comandos, banner de alarmas.
+- **Supervisión** — `GET /system/runtime-metrics`. Con la publicación hacia el norte activada incluye `northbound.spool.queued` y `northbound.spool.dropped`; `queued` de vuelta a 0 con `dropped` sin cambios es la comprobación que pide el paso de puesta en servicio.
+- **Tu propio sistema** — la misma superficie de API de la consola detrás de `8280`, más el endpoint de salud que el despliegue espera al arrancar.
 
 ### Lista completa de endpoints
 
@@ -233,13 +195,9 @@ planta a menos que la publicación hacia el norte esté activada.
 | `8280` `/api/v1/health` | Comprobación de salud; el arranque permite 30 s | No |
 | `4841` | Simulador OPC UA integrado, para una prueba en seco | No |
 
-**En un acuse de recibo de comando, lee la columna de readback**: `protocol_acknowledged` solo significa que el controlador
-aceptó la trama. La columna de readback (`matched`, o `mismatched, compensated` con el valor encontrado) es
-lo que realmente contiene el campo. Una compensación emitida por el coordinador de rollback aparece como su propio acuse
-inmediatamente después de la escritura que deshizo, de modo que el rastro de auditoría se lee en orden sin unir dos tablas.
+**En un acuse de recibo de comando, lee la columna de readback**: `protocol_acknowledged` solo significa que el controlador aceptó la trama. La columna de readback (`matched`, o `mismatched, compensated` con el valor encontrado) es lo que realmente contiene el campo. Una compensación emitida por el coordinador de rollback aparece como su propio acuse inmediatamente después de la escritura que deshizo, de modo que el rastro de auditoría se lee en orden sin unir dos tablas.
 
-Los registros del contenedor rotan a 10 MB con cuatro copias de seguridad (`docker logs missionpack_knn`). Exporta el rastro de auditoría de comandos,
-el diario de rollback y el historial de alarmas antes de que caduquen.
+Los registros del contenedor rotan a 10 MB con cuatro copias de seguridad (`docker logs missionpack_knn`). Exporta el rastro de auditoría de comandos, el diario de rollback y el historial de alarmas antes de que caduquen.
 
 ### Alcance del protocolo hacia el sur
 
@@ -300,14 +258,8 @@ El modelo de predicción es KNN, entrenado con el propio historial de operación
 
 ## Fuentes de datos y activos
 
-- **Mapa de registros SDM630** — documento publicado por Eastron sobre el protocolo Modbus (mapa de registros Modbus V2, registros de entrada float32
-  IEEE-754). Las direcciones siguen ese documento; el orden de bytes y palabras big-endian es el
-  predeterminado del proveedor.
-- **Datos históricos de operación** — suministrados por el sitio que realiza el despliegue. No se distribuye nada con el paquete,
-  y no se usa ni requiere ningún conjunto de datos público.
-- **Capturas de consola** — capturas de pantalla originales del software empaquetado ejecutándose contra los
-  propios simuladores de protocolo del paquete. La configuración del simulador, el host de captura y las sumas de comprobación se
-  registran en `gallery/ATTRIBUTION.md` del paquete. No se incluye ningún recurso de terceros, marca comercial ni imagen de stock.
-  - **Diagrama de arquitectura** — dibujado a partir de un IR de arquitectura estructurada; trabajo
-  original, sin arte de terceros.
+- **Mapa de registros SDM630** — documento publicado por Eastron sobre el protocolo Modbus (mapa de registros Modbus V2, registros de entrada float32 IEEE-754). Las direcciones siguen ese documento; el orden de bytes y palabras big-endian es el predeterminado del proveedor.
+- **Datos históricos de operación** — suministrados por el sitio que realiza el despliegue. No se distribuye nada con el paquete, y no se usa ni requiere ningún conjunto de datos público.
+- **Capturas de consola** — capturas de pantalla originales del software empaquetado ejecutándose contra los propios simuladores de protocolo del paquete. La configuración del simulador, el host de captura y las sumas de comprobación se registran en `gallery/ATTRIBUTION.md` del paquete. No se incluye ningún recurso de terceros, marca comercial ni imagen de stock.
+- **Diagrama de arquitectura** — dibujado a partir de un IR de arquitectura estructurada; trabajo original, sin arte de terceros.
 
