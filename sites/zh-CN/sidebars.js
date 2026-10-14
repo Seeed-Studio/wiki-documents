@@ -1475,6 +1475,30 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO STM32C5',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/cn_XIAO_STM32C5_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/cn_XIAO_STM32C5_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/cn_XIAO_STM32C5_CANFD_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/cn_XIAO_STM32C5_Application',
+            {
+              type: 'category',
+              label: '平台',
+              items: [ 
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/cn_XIAO_STM32C5_With_STM32CubeIDE',
+              ],
+            },
+             {
+              type: 'category',
+              label: '编程语言',
+              items: [ 
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/cn_XIAO_STM32C5_With_MicroPython',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO 调试助手',
           collapsed: true,
           collapsible: true,

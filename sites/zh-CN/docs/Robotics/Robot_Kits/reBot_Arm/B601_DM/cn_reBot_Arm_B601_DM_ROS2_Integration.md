@@ -24,11 +24,8 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # reBot Arm B601-DM ROS2 集成
-
-<RebotDmDocNav />
 
 <div align="center">
     <img width={800}

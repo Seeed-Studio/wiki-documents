@@ -1,5 +1,5 @@
 ---
-description: "Curso de iniciación a la IA Física de Seeed: una guía gratuita y práctica para construir y aprender con el brazo robótico reBot, 100% de código abierto. Se han publicado seis etapas y 30 capítulos, que cubren la configuración y el control básico, el aprendizaje por imitación con LeRobot, VLA con Isaac GR00T, las matemáticas y el control de movimiento del brazo robótico, y la visión robótica con agarre autónomo."
+description: "Curso de iniciación a la IA Física de Seeed — una guía gratuita y práctica para construir y aprender con el brazo robótico reBot, 100% de código abierto. Se han publicado las ocho etapas y los 39 capítulos, que cubren la configuración y el control básico, el aprendizaje por imitación con LeRobot, la VLA con Isaac GR00T, las matemáticas y el control de movimiento del brazo robótico, la visión robótica con agarre autónomo, la integración del sistema robótico con ROS2 y la simulación del brazo robótico en MuJoCo e Isaac Sim."
 title: Curso de iniciación a la IA Física de Seeed
 hide_title: true
 keywords:
@@ -16,10 +16,10 @@ displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-10-08
+  date: 2026-10-09
   author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-10-08'
+updatedAt: '2026-10-09'
 url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_introduction/
 ---
 
@@ -30,13 +30,14 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <section className="doc-hero">
   <div>
-    <span className="eyebrow">reBot × IA Física · 6 etapas publicadas</span>
-    <h2>6 etapas, 30 capítulos: gratuito y práctico</h2>
+    <span className="eyebrow">reBot × IA Física · Las 8 etapas publicadas</span>
+    <h2>8 etapas, 39 capítulos — gratis y práctico</h2>
     <p>
       Una guía gratuita y práctica para construir y aprender con el brazo robótico reBot, 100% de código abierto.
       Los capítulos publicados te llevan desde los conceptos básicos, el montaje y el control de motores, pasando por
-      el aprendizaje por imitación con LeRobot y VLA con Isaac GR00T, hasta las matemáticas del brazo robótico y
-      el control de movimiento que hay detrás de todo ello, y luego a la visión robótica y el agarre autónomo.
+      el aprendizaje por imitación con LeRobot y la VLA con Isaac GR00T, hasta las matemáticas del brazo robótico y
+      el control de movimiento que hay detrás de todo — y luego a la visión robótica, el agarre autónomo, la integración del sistema robótico con ROS2
+      y la simulación.
     </p>
     <div className="hero-actions">
       <a href="#structure">Estructura del curso</a>
@@ -48,17 +49,17 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     <strong>Resumen del curso</strong>
     <span>Escrito y compartido de forma gratuita por el equipo de robótica de Seeed.</span>
     <span>Se combina con el brazo robótico reBot, 100% de código abierto y reproducible.</span>
-    <span><strong>Etapas 1–6 publicadas</strong> (Capítulos 1–30): fundamentos y hardware, montaje y control, aprendizaje por imitación, VLA, matemáticas y control de movimiento, y visión robótica y agarre.</span>
-    <span>Las etapas 7–8 (integración con ROS2 y simulación) están en camino.</span>
+    <span><strong>Las 8 etapas publicadas</strong> (Capítulos 1–39): fundamentos y hardware, montaje y control, aprendizaje por imitación, VLA, matemáticas y control de movimiento, visión robótica y agarre, integración del sistema con ROS2 y simulación en MuJoCo / Isaac Sim.</span>
+    <span>El curso está completo — los 39 capítulos están en la wiki.</span>
   </div>
 </section>
 
 <GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
 
 :::tip
-Este curso fue creado y compartido de forma gratuita por el equipo de IA Robótica de Seeed Studio, para ofrecer a estudiantes de robótica, alumnos, buscadores de empleo y makers una ruta de aprendizaje clara y sistemática. Puedes aprender con él y compartirlo con otras personas, pero se prohíbe la copia no autorizada, la redistribución comercial o el uso indebido del contenido: los derechos de autor pertenecen a Seeed Studio (Shenzhen) Co., Ltd.
+Este curso fue creado y compartido de forma gratuita por el equipo de IA Robótica de Seeed Studio, para ofrecer a estudiantes de robótica, alumnos, buscadores de empleo y makers una ruta de aprendizaje clara y sistemática. Puedes aprender con él y compartirlo con otros, pero se prohíbe la copia no autorizada, la redistribución comercial o el uso indebido del contenido — los derechos de autor pertenecen a Seeed Studio (Shenzhen) Co., Ltd.
 
-Está construido en torno a <strong>reBot</strong>, un brazo robótico 100% de código abierto, reproducible y apto para uso comercial, y combina teoría con práctica para abarcar el control de brazos robóticos, los algoritmos tradicionales de robótica y la IA encarnada moderna basada en VLA. El curso es completamente gratuito; si te resulta útil, apoya el proyecto dando una estrella a <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm en GitHub</a> ⭐, donde también están disponibles los planos de hardware, archivos BOM y otros recursos de código abierto. Los usuarios con experiencia pueden ir directamente a nuestra <a href="https://wiki.seeedstudio.com/es/robotics_page/" target="_blank" rel="noopener noreferrer">Wiki de Robótica</a> para ver tutoriales y ejemplos. El enfoque está en la comprensión práctica más que en la derivación matemática profunda, para que puedas construir una base sólida rápidamente y prepararte para estudios más avanzados. La Etapa 5 sí introduce los fundamentos matemáticos —marcos de coordenadas, cinemática, jacobiano y planificación de trayectorias—, pero está escrita como material de referencia que puedes leer una vez y luego consultar mientras trabajas en el capítulo práctico. La Etapa 6 sigue el mismo patrón: los capítulos 27 y 28 tratan la teoría de visión, y el capítulo 29 es la práctica de agarre visual.
+Está construido en torno a <strong>reBot</strong>, un brazo robótico 100% de código abierto, reproducible y apto para uso comercial, y combina teoría con práctica para cubrir el control de brazos robóticos, los algoritmos tradicionales de robótica y la IA encarnada moderna basada en VLA. El curso es completamente gratuito — si te resulta útil, apoya el proyecto dando una estrella a <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm en GitHub</a> ⭐, donde también están disponibles los planos de hardware, archivos BOM y otros recursos de código abierto. Los usuarios con experiencia pueden ir directamente a nuestra <a href="https://wiki.seeedstudio.com/es/robotics_page/" target="_blank" rel="noopener noreferrer">Wiki de Robótica</a> para ver tutoriales y ejemplos. El enfoque está en la comprensión práctica más que en la derivación matemática profunda, para que puedas construir una base sólida rápidamente y prepararte para estudios más avanzados. La Etapa 5 sí introduce los fundamentos matemáticos — marcos de coordenadas, cinemática, el Jacobiano y la planificación de trayectorias — pero está escrita como material de referencia que puedes leer una vez y luego consultar mientras trabajas en el capítulo práctico. La Etapa 6 sigue el mismo patrón: los Capítulos 27 y 28 son teoría de visión, y el Capítulo 29 es la práctica de agarre visual. La Etapa 7 hace lo mismo de nuevo — los Capítulos 31 y 32 tratan los conceptos de ROS2, y los Capítulos 33 y 34 ponen el brazo en un sistema ROS2 real. La Etapa 8 cierra el curso poniendo el brazo dentro de un ordenador: el Capítulo 35 es teoría de simulación, los Capítulos 36 y 37 ejecutan el brazo en MuJoCo, el Capítulo 38 lo construye en Isaac Sim y el Capítulo 39 sincroniza el brazo real con la simulación.
 :::
 
 <section id="community" className="section-card">
@@ -228,7 +229,7 @@ Este curso utiliza los reBot Arm B601-DM y B601-RS como plataformas prácticas, 
   <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_15">
     <span className="course-index">15</span>
     <div className="course-path-copy">
-      <strong>Modelo ACT y fragmentación de acciones</strong>
+      <strong>Modelo ACT y segmentación de acciones</strong>
       <span>Capítulo 15</span>
     </div>
     <span className="course-tag">Teoría</span>
@@ -310,7 +311,7 @@ Este curso utiliza los reBot Arm B601-DM y B601-RS como plataformas prácticas, 
   <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_24">
     <span className="course-index">24</span>
     <div className="course-path-copy">
-      <strong>Cinemática directa, cinemática inversa y el Jacobiano</strong>
+      <strong>Cinemática directa, cinemática inversa y jacobiano</strong>
       <span>Capítulo 24</span>
     </div>
     <span className="course-tag">Teoría</span>
@@ -370,11 +371,87 @@ Este curso utiliza los reBot Arm B601-DM y B601-RS como plataformas prácticas, 
   </a>
 </div>
 
-### Etapas 7–8
+### Etapa 7: ROS2 e integración de sistemas robóticos
 
-:::note
-Próximamente: ROS2 e integración de sistemas robóticos (Etapa 7), y simulación con MuJoCo / Isaac Sim (Etapa 8) se irán añadiendo progresivamente al wiki.
-:::
+<div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_31">
+    <span className="course-index">31</span>
+    <div className="course-path-copy">
+      <strong>Comunicación ROS2 y arquitectura de software robótico</strong>
+      <span>Capítulo 31</span>
+    </div>
+    <span className="course-tag">Teoría</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_32">
+    <span className="course-index">32</span>
+    <div className="course-path-copy">
+      <strong>URDF, TF y modelos de robots</strong>
+      <span>Capítulo 32</span>
+    </div>
+    <span className="course-tag">Teoría</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_33">
+    <span className="course-index">33</span>
+    <div className="course-path-copy">
+      <strong>Integración ROS2 del brazo reBot</strong>
+      <span>Capítulo 33</span>
+    </div>
+    <span className="course-tag">Práctica</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_34">
+    <span className="course-index">34</span>
+    <div className="course-path-copy">
+      <strong>Planificación de movimiento con MoveIt2</strong>
+      <span>Capítulo 34</span>
+    </div>
+    <span className="course-tag">Teoría y práctica</span>
+  </a>
+</div>
+
+### Etapa 8: Simulación del brazo robótico con MuJoCo e Isaac Sim
+
+<div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_35">
+    <span className="course-index">35</span>
+    <div className="course-path-copy">
+      <strong>Fundamentos de simulación robótica e introducción a la plataforma</strong>
+      <span>Capítulo 35</span>
+    </div>
+    <span className="course-tag">Teoría</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_36">
+    <span className="course-index">36</span>
+    <div className="course-path-copy">
+      <strong>Ejecutar el brazo reBot en MuJoCo</strong>
+      <span>Capítulo 36</span>
+    </div>
+    <span className="course-tag">Práctica</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_37">
+    <span className="course-index">37</span>
+    <div className="course-path-copy">
+      <strong>Cinemática y control de trayectorias en MuJoCo</strong>
+      <span>Capítulo 37</span>
+    </div>
+    <span className="course-tag">Teoría y práctica</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_38">
+    <span className="course-index">38</span>
+    <div className="course-path-copy">
+      <strong>Ejecutar el brazo reBot en Isaac Sim</strong>
+      <span>Capítulo 38</span>
+    </div>
+    <span className="course-tag">Práctica</span>
+  </a>
+  <a className="course-path-item" href="/es/rebot_physical_ai_course_chapter_39">
+    <span className="course-index">39</span>
+    <div className="course-path-copy">
+      <strong>Sincronización del brazo real y el simulado</strong>
+      <span>Capítulo 39</span>
+    </div>
+    <span className="course-tag">Práctica</span>
+  </a>
+</div>
 
 </section>
 
