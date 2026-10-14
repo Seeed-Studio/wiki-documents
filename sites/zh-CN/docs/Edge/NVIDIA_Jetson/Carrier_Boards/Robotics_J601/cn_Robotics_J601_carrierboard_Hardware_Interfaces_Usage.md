@@ -13,7 +13,7 @@ image: https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg
 slug: /recomputer_jetson_robotics_j601_interfaces_usage
 sku: 100060965
 last_update:
-  date: 06/18/2026
+  date: 10/13/2026
   author: Zibo
 createdAt: '2026-06-18'
 updatedAt: '2026-07-02'
@@ -30,6 +30,28 @@ reComputer Robotics J601 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg"/>
+</div>
+
+## 散热片安装
+
+为确保长时间运行时的稳定散热，你可以为 reComputer J601 载板安装散热片。
+
+**所需材料：** 导热硅胶垫、散热器、reComputer J601 载板
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink1.png"/>
+</div>
+
+**步骤 1.** 将导热硅胶垫固定在散热片与载板之间的接触点。
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png"/>
+</div>
+
+**步骤 2.** 连接散热器和载板。
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink3.png"/>
 </div>
 
 ## USB
