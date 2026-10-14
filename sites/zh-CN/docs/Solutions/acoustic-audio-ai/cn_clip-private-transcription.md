@@ -100,12 +100,12 @@ reSpeaker Clip 录下的会谈、问诊、门店对话，经蓝牙同步到你�
 
 **② 转写主机**：按门店/诊室规模与工牌数量四选一。
 
-| | 转写主机 | 实测单录音用时<br>(30秒中文双人) | 集中交班承载能力<br>(10枚工牌同时回传) | 什么时候选它 |
+| | 转写主机 | 实测单录音用时<br />(30秒中文双人) | 集中交班承载能力<br />(10枚工牌同时回传) | 什么时候选它 |
 |---|---|---:|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 系列（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX 16GB，JetPack 6.2 | **1.2 秒** | **约 3.5 秒全转完**<br>(排队延迟 < 3.5 秒) | 推荐旗舰配置，服务 10~50 枚工牌；16GB 显存可兼顾本地 8B 大模型对话摘要与质检 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110144-recomputer-j3011-front.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 系列（J3011）](https://www.seeedstudio.com/reComputer-J3011-p-5585.html)<br/>Jetson Orin Nano 8GB，JetPack 6.2 | **1.3 秒** | **约 4.1 秒全转完**<br>(排队延迟 < 4.1 秒) | 主流性价比配置，服务 5~20 枚工牌；体验与 J40 基本一致，显存占用仅 486 MB |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3588_box.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 系列（8 GB）](https://www.seeedstudio.com/reComputer-AIA-A801-p-5942.html)<br/>RK3588 3-Core NPU | **3.0 秒** | **约 14.5 秒全转完**<br>(3 个并行流水线) | 中型工作站配置，服务 5~15 枚工牌；3 个独立 NPU 核心原生支持 3 个 Worker 硬件并行 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 系列（8 GB）](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>板载 NPU | **4.6 秒** | 约 46 秒全转完<br>(单 Worker 顺序排队) | 极低成本方案，服务 1~3 枚工牌；峰值内存仅 442 MB，适合小微独立诊室按序处理 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 系列（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX 16GB，JetPack 6.2 | **1.2 秒** | **约 3.5 秒全转完**<br />(排队延迟 < 3.5 秒) | 推荐旗舰配置，服务 10~50 枚工牌；16GB 显存可兼顾本地 8B 大模型对话摘要与质检 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110144-recomputer-j3011-front.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 系列（J3011）](https://www.seeedstudio.com/reComputer-J3011-p-5585.html)<br/>Jetson Orin Nano 8GB，JetPack 6.2 | **1.3 秒** | **约 4.1 秒全转完**<br />(排队延迟 < 4.1 秒) | 主流性价比配置，服务 5~20 枚工牌；体验与 J40 基本一致，显存占用仅 486 MB |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3588_box.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 系列（8 GB）](https://www.seeedstudio.com/reComputer-AIA-A801-p-5942.html)<br/>RK3588 3-Core NPU | **3.0 秒** | **约 14.5 秒全转完**<br />(3 个并行流水线) | 中型工作站配置，服务 5~15 枚工牌；3 个独立 NPU 核心原生支持 3 个 Worker 硬件并行 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 系列（8 GB）](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>板载 NPU | **4.6 秒** | 约 46 秒全转完<br />(单 Worker 顺序排队) | 极低成本方案，服务 1~3 枚工牌；峰值内存仅 442 MB，适合小微独立诊室按序处理 |
 
 - Jetson 系列需搭配 JetPack 6.2，磁盘预留至少 15 GB 空间。
 - RK3576 选 8 GB 内存版本，采用 W4A16 量化权重，转写占约 442 MB 物理内存；主机需要蓝牙模块。
@@ -174,10 +174,10 @@ Clip 在主机的蓝牙范围内才会同步，主机放在员工下班交还或
 
 | 选型机型 | 推荐并发工牌数 | 10 枚工牌总耗时 | 最后一人排队等待时间 | 调度机制与可靠性保障 | 推荐业务场景 |
 |---|---|---|---|---|---|
-| **reComputer J40 系列**<br>（Orin NX 16GB） | **10 ~ 50 枚** | **约 3.5 秒** | **< 3.5 秒**（无感延迟） | **超实时毫秒级队列消化**：单上下文 CUDA Graph 锁保护，不爆显存、杜绝 429 报错，并发任务毫秒级出队 | 大型商超、连锁门店、政务大厅晚间集中交班 |
-| **reComputer J30 系列**<br>（Orin Nano 8GB） | **5 ~ 20 枚** | **约 4.1 秒** | **< 4.1 秒**（无感延迟） | 同上，GPU 满载吞吐达 29.5 QPS，显存仅占 486 MB，运行极其稳定 | 8~15 人标准门店、独立专卖店 |
-| **reComputer RK3588 系列**<br>（RK3588 8GB） | **5 ~ 15 枚** | **约 14.5 秒** | **约 5.0 秒**（3 并行流水线） | **多核心硬件真并发**：3 个独立 NPU 核心各承载 1 个 Worker 真正并行处理 | 中型工作站、多工位分布式回传 |
-| **reComputer RK3576 系列**<br>（RK3576 8GB） | **1 ~ 3 枚** | 约 46 秒 | 约 46 秒（单流按序） | **单 Worker 轻量运行**：峰值内存仅 442 MB（W4A16 压缩模型），单路按顺序处理，建议错峰同步 | 独立诊室、心理咨询室、小微柜台（低成本单设备交替） |
+| **reComputer J40 系列**<br />（Orin NX 16GB） | **10 ~ 50 枚** | **约 3.5 秒** | **< 3.5 秒**（无感延迟） | **超实时毫秒级队列消化**：单上下文 CUDA Graph 锁保护，不爆显存、杜绝 429 报错，并发任务毫秒级出队 | 大型商超、连锁门店、政务大厅晚间集中交班 |
+| **reComputer J30 系列**<br />（Orin Nano 8GB） | **5 ~ 20 枚** | **约 4.1 秒** | **< 4.1 秒**（无感延迟） | 同上，GPU 满载吞吐达 29.5 QPS，显存仅占 486 MB，运行极其稳定 | 8~15 人标准门店、独立专卖店 |
+| **reComputer RK3588 系列**<br />（RK3588 8GB） | **5 ~ 15 枚** | **约 14.5 秒** | **约 5.0 秒**（3 并行流水线） | **多核心硬件真并发**：3 个独立 NPU 核心各承载 1 个 Worker 真正并行处理 | 中型工作站、多工位分布式回传 |
+| **reComputer RK3576 系列**<br />（RK3576 8GB） | **1 ~ 3 枚** | 约 46 秒 | 约 46 秒（单流按序） | **单 Worker 轻量运行**：峰值内存仅 442 MB（W4A16 压缩模型），单路按顺序处理，建议错峰同步 | 独立诊室、心理咨询室、小微柜台（低成本单设备交替） |
 
 > **为什么 Jetson 采用“单上下文排队锁”而非“多进程并发”？**  
 > 在 Orin Nano / NX 物理实测表明，SenseVoice TensorRT FP16 单上下文配合 CUDA Graph 已占满 GPU 吞吐（GR3D 达 98%，纯算力推理仅 30~33 ms，**175 倍超实时**）。如果盲目开启多进程并发（Multi-stream/Context），不仅额外吞噬 200~300 MB 显存，且因 CPU Enqueue 争抢使单路延迟恶化至 135 ms。采用单上下文锁队列调度，并发提交的请求毫秒级排队消化，**既能承载数十路并发连接，又彻底杜绝了显存溢出与 429 报错**。

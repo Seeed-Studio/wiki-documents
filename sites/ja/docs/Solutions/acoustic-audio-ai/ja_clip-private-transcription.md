@@ -98,12 +98,12 @@ reSpeaker Clip で録音した面談、診察、店頭での会話を、Bluetoot
 
 **② 文字起こしホスト**：現場の規模とバッジ台数に応じて 4 段階から選択。
 
-| | 文字起こしホスト | 単一対話の処理時間<br>(30秒・中国語2人対話) | 交代時一括同期の処理能力<br>(バッジ10台分を一括送信) | 選ぶ場面 |
+| | 文字起こしホスト | 単一対話の処理時間<br />(30秒・中国語2人対話) | 交代時一括同期の処理能力<br />(バッジ10台分を一括送信) | 選ぶ場面 |
 |---|---|---:|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 シリーズ（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX 16GB、JetPack 6.2 | **1.2 秒** | **約 3.5 秒で完了**<br>(最大待ち時間 < 3.5 秒) | 10〜50 台のバッジを運用する推奨構成。16GB 統合メモリにより、ローカル 8B LLM による対話要約・コンプライアンス監査も同居可能 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110144-recomputer-j3011-front.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 シリーズ（J3011）](https://www.seeedstudio.com/reComputer-J3011-p-5585.html)<br/>Jetson Orin Nano 8GB、JetPack 6.2 | **1.3 秒** | **約 4.1 秒で完了**<br>(最大待ち時間 < 4.1 秒) | 5〜20 台向けの主流コスト重視構成。体感は J40 と同等、VRAM 専有量はわずか 486 MB |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3588_box.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 シリーズ（8 GB）](https://www.seeedstudio.com/reComputer-AIA-A801-p-5942.html)<br/>RK3588 3-Core NPU | **3.0 秒** | **約 14.5 秒で完了**<br>(3 並列パイプライン) | 5〜15 台向けの中規模ワークステーション。3 つの独立 NPU コアで 3 つの Worker を真の並列稼働 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 シリーズ（8 GB）](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>オンボード NPU | **4.6 秒** | 約 46 秒で完了<br>(単一 Worker 順次処理) | 1〜3 台向けの低コスト構成。ピーク RSS わずか 442 MB（W4A16）、個人クリニックやカウンセリング室の順次処理に最適 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 シリーズ（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX 16GB、JetPack 6.2 | **1.2 秒** | **約 3.5 秒で完了**<br />(最大待ち時間 < 3.5 秒) | 10〜50 台のバッジを運用する推奨構成。16GB 統合メモリにより、ローカル 8B LLM による対話要約・コンプライアンス監査も同居可能 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110144-recomputer-j3011-front.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 シリーズ（J3011）](https://www.seeedstudio.com/reComputer-J3011-p-5585.html)<br/>Jetson Orin Nano 8GB、JetPack 6.2 | **1.3 秒** | **約 4.1 秒で完了**<br />(最大待ち時間 < 4.1 秒) | 5〜20 台向けの主流コスト重視構成。体感は J40 と同等、VRAM 専有量はわずか 486 MB |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3588_box.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 シリーズ（8 GB）](https://www.seeedstudio.com/reComputer-AIA-A801-p-5942.html)<br/>RK3588 3-Core NPU | **3.0 秒** | **約 14.5 秒で完了**<br />(3 並列パイプライン) | 5〜15 台向けの中規模ワークステーション。3 つの独立 NPU コアで 3 つの Worker を真の並列稼働 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 シリーズ（8 GB）](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>オンボード NPU | **4.6 秒** | 約 46 秒で完了<br />(単一 Worker 順次処理) | 1〜3 台向けの低コスト構成。ピーク RSS わずか 442 MB（W4A16）、個人クリニックやカウンセリング室の順次処理に最適 |
 
 - Jetson シリーズ：JetPack 6.2 が必須、空きディスク 15 GB 以上。
 - RK3576：8 GB メモリ版を選択。W4A16 量子化重みを使用し、メモリ専有量は約 442 MB。ホストに Bluetooth が必要です。
@@ -172,10 +172,10 @@ Clip はホストの Bluetooth 範囲内でのみ同期するため、スタッ�
 
 | 機器選定 | 推奨バッジ数 | 10台分処理総時間 | 最大待ち時間（キュー遅延） | スケジューリングと信頼性機構 | 推奨現場 |
 |---|---|---|---|---|---|
-| **reComputer J40 シリーズ**<br>（Orin NX 16GB） | **10 〜 50 台** | **約 3.5 秒** | **< 3.5 秒**（待ち時間ほぼゼロ） | **超リアルタイム・ミリ秒単位キュー消化**：単一コンテキスト CUDA Graph ロックでメモリ溢れや 429 エラーを完全防止 | 大型スーパー、チェーン店、行政窓口 |
-| **reComputer J30 シリーズ**<br>（Orin Nano 8GB） | **5 〜 20 台** | **約 4.1 秒** | **< 4.1 秒**（待ち時間ほぼゼロ） | 同上、GPU スループット 29.5 QPS、VRAM 使用量わずか 486 MB | スタッフ 8〜15 名の標準店舗・専門店 |
-| **reComputer RK3588 シリーズ**<br>（RK3588 8GB） | **5 〜 15 台** | **約 14.5 秒** | **約 5.0 秒**（3 並列パイプライン） | **ハードウェア真の並行処理**：3 つの独立 NPU コアで 3 つの Worker を並行稼働 | 中規模ワークステーション、分散窓口 |
-| **reComputer RK3576 シリーズ**<br>（RK3576 8GB） | **1 〜 3 台** | 約 46 秒 | 約 46 秒（順次処理） | **単一 Worker 軽量運用**：メモリピークわずか 442 MB（W4A16）、順次キュー処理 | 個人クリニック、相談室、小型窓口 |
+| **reComputer J40 シリーズ**<br />（Orin NX 16GB） | **10 〜 50 台** | **約 3.5 秒** | **< 3.5 秒**（待ち時間ほぼゼロ） | **超リアルタイム・ミリ秒単位キュー消化**：単一コンテキスト CUDA Graph ロックでメモリ溢れや 429 エラーを完全防止 | 大型スーパー、チェーン店、行政窓口 |
+| **reComputer J30 シリーズ**<br />（Orin Nano 8GB） | **5 〜 20 台** | **約 4.1 秒** | **< 4.1 秒**（待ち時間ほぼゼロ） | 同上、GPU スループット 29.5 QPS、VRAM 使用量わずか 486 MB | スタッフ 8〜15 名の標準店舗・専門店 |
+| **reComputer RK3588 シリーズ**<br />（RK3588 8GB） | **5 〜 15 台** | **約 14.5 秒** | **約 5.0 秒**（3 並列パイプライン） | **ハードウェア真の並行処理**：3 つの独立 NPU コアで 3 つの Worker を並行稼働 | 中規模ワークステーション、分散窓口 |
+| **reComputer RK3576 シリーズ**<br />（RK3576 8GB） | **1 〜 3 台** | 約 46 秒 | 約 46 秒（順次処理） | **単一 Worker 軽量運用**：メモリピークわずか 442 MB（W4A16）、順次キュー処理 | 個人クリニック、相談室、小型窓口 |
 
 > **なぜ Jetson ではマルチプロセス並行ではなく「単一コンテキスト排他ロック」を採用するのか：**  
 > Orin Nano / NX の実測では、SenseVoice TensorRT FP16 + CUDA Graph により単一ストリームで既に GPU 演算能力（GR3D 98%、推論時間わずか 30〜33 ms、**175 倍超リアルタイム**）をフル活用しています。並行コンテキストを無理に多重起動すると、200〜300 MB の余分な VRAM を消費する上に CPU エンキューの競合が発生し、1 ストリームあたりの遅延が 135 ms まで悪化します。単一コンテキストのキューロックにより、同時に送信された音声チャンクをミリ秒単位で高速消化することで、**数十台の並行接続を受け入れながらメモリ枯渇や 429 エラーを完全に防止**しています。
