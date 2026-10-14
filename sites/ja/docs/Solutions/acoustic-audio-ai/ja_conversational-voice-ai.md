@@ -1,6 +1,6 @@
 ---
 description: エッジデバイスで割り込み可能な音声端末を構築する方法——必要なボードとマイク、利用できるインターフェース、言語×デバイス対応表、RK3576でのASR/TTS実測データ
-title: エッジで割り込み可能な対話音声AI：構築・導入・実測結果
+title: 'エッジで割り込み可能な対話音声AI：構築・導入・実測結果'
 keywords:
   - conversational voice AI
   - barge-in voice assistant
@@ -21,7 +21,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/ja/solutions/conversational-voice-ai/
 generated_from: sensecraft-solutions@aa522af
 ---
@@ -80,7 +80,9 @@ generated_from: sensecraft-solutions@aa522af
     </ul>
 </div>
 
-<!-- TODO image: microphone array and speaker as installed on a service desk or kiosk — needs a field shoot -->
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/conversational_voice_ai/dashboard-chat-multiturn-zh-67ef2b7b.png" alt="オンデバイス対話型音声エージェントのマルチターン対話リアルタイム監視ダッシュボード"/>
+</div>
 
 ## 必要な機器
 
@@ -108,6 +110,11 @@ reComputer R2000シリーズでもCPU音声スタック（sherpa-onnx、英語�
 **④ RK構成で完全ローカル対話を行う場合**：RK3588ホストにRK1828 / RM182X PCIe NPUカードを追加し、Qwen3-4Bを動かします。カードには独立した12 V電源が必要で、ホスト側にはドライバーとデバイスノードが必要です。カードに常駐できる大規模モデルは一度に1つです。
 
 このほか、初回起動にはインターネット接続と空きディスク（Orin NXでは25 GB以上）が必要です。導入ツールからネットワーク経由でホストに到達できる必要もあります。
+
+### 選定における制約・非推奨条件
+
+- **オンプレミス LLM 負荷**：RK3576 は軽量な音声認識・合成向けです。7B クラスの対話型 LLM をエッジ単体で動かす場合は、GPU 搭載の reComputer J40 シリーズを選定してください。
+- **高騒音環境**：75 dB を超える騒音環境では無指向性マイクを避け、指向性ノイズキャンセリングマイクアレイを使用してください。
 
 ## 現場への導入
 
@@ -137,8 +144,6 @@ reComputer R2000シリーズでもCPU音声スタック（sherpa-onnx、英語�
 2. **対話言語を選択**：導入処理は他のサービスを起動する前に`(language, device)`を1つの音声プロファイルに解決します。reComputer R2000シリーズでの中国語など非対応の組み合わせはコード2で終了し、`docker compose up`全体を止めます。一部だけ起動した状態にはなりません。
 3. **エンドポイントとペルソナを入力**：クラウドプリセットではbase URL、キー、モデルID（既定値は北京リージョンのQwenエンドポイントと`qwen3.5-flash`）とシステムプロンプトを入力します。**常時リスニング**を**ウェイクワード必須**に切り替え、短い中国語または英語のフレーズを入力することもできます。イメージ内蔵のオープンボキャブラリ対応sherpa-onnx検出器が起動時にローカルでコンパイルします。
 4. **ダッシュボードで確認**：ポート18000のWebダッシュボードにlistening / thinking / speaking / barged-inが表示されます。
-
-<!-- TODO image: 4 つのダッシュボード状態と 1 回の割り込みの画面録画 — 導入済みデバイスでの撮影が必要 -->
 
 受入確認：実際の部屋と実際の音量で3ターン行い、各回答の開始0.5–1秒後に割り込みます。元の回答がすぐ止まり、割り込んだ発話が失われないことを確認します。
 

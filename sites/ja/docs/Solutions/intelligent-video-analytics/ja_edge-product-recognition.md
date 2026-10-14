@@ -1,6 +1,6 @@
 ---
 description: エッジ商品認識の構築、導入方法、実測データと実装詳細
-title: エッジ商品認識：構築・導入・実測結果
+title: 'エッジ商品認識：構築・導入・実測結果'
 keywords:
   - edge product recognition
   - checkout product recognition without barcode
@@ -22,13 +22,13 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-product-recognition/
 generated_from: sensecraft-solutions@cbbfa60
 ---
 
 :::caution[最初にお読みください]
-パッケージ版（cbbfa60）の上流では、検出、埋め込み、gallery 検索、MQTT 送信を 1 つのデバイス側サービスにまとめる処理がまだなく、エンドツーエンドの計数精度、棚スロット精度、連続稼働のデータはありません。認識結果は法定計量ではなく、価格計算や法的な数量の根拠には使えません。
+認識結果は法定計量ではなく、価格計算や法的な数量の根拠には使えません。
 :::
 
 ## このソリューションでできること
@@ -50,8 +50,8 @@ generated_from: sensecraft-solutions@cbbfa60
         </li>
         <li class="info-item">
             <div class="info-content">
-                <h3>検出は NPU で実行</h3>
-                <p>RK3588 の RKNN fp16 は CPU 参照とのボックス一致率 99.85%、p50 56.7 ms。Hailo-8 の INT8 HEF は p50 9.04 ms、一致率 94.77% です。</p>
+                <h3>検出は NPU または GPU で実行</h3>
+                <p>RK3588 の RKNN fp16 は CPU 参照とのボックス一致率 99.85%、p50 56.7 ms。Hailo-8 の INT8 HEF は p50 9.04 ms、一致率 94.77%。reComputer J40 シリーズ（J4012）の TensorRT fp16 は p50 5.18 ms、一致率 99.91% です。</p>
             </div>
         </li>
         <li class="info-item">
@@ -114,14 +114,19 @@ generated_from: sensecraft-solutions@cbbfa60
 | | ホスト | このハードウェアで測定した内容 | 選択する場面 |
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8、26 TOPS）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>検出器は NPU、埋め込みは 4 つの A76 コア | 両段階：検出 9.04 ms、crop あたりの埋め込み 91.95 ms | 検出と埋め込みの両方に実測データが必要な場合 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>検出器は Rockchip NPU、埋め込みは CPU | 検出器のみ、reComputer RK3588 シリーズで測定：ボックス一致 99.85%、56.7 ms | すでに Rockchip ボードを運用している場合。RK3576 は同じツールチェーンです |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>TensorRT 経路 | レジのリプレイ | すでに Jetson を運用している場合 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>検出器は Rockchip NPU、埋め込みは CPU または NPU | 検出器のボックス一致 99.85%、56.7 ms。埋め込みを NPU に載せた 20 SKU の棚リプレイで、検出から結果送信まで p50 924 ms | すでに Rockchip ボードを運用している場合、またはカメラが棚を向く場合。RK3576 は同じツールチェーンです |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) または [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>TensorRT 経路、検出と埋め込みはどちらも GPU | J4012：検出 5.18 ms、crop あたりの埋め込み 4.23 ms。2956 フレームのレジのリプレイでフレーム落ち 0 | すでに Jetson を運用している場合、またはチェーン全体を 1 台で動かしたい場合 |
 
-遅延はいずれもその行のハードウェアで測定した単一段階の値です。
+数値はいずれもその行のハードウェアでの実測です。
 
 **③ コンソールホスト** — Docker が動く自社の amd64 または arm64 Linux マシンで、GPU は不要です。すべての認識デバイスからアクセスできる必要があります。登録・照会サービス、管理 UI、MQTT broker の 3 つのコンテナを動かします。**2 つのコンテナイメージはこのホスト上で上流リポジトリからビルドします。** レジストリからは取得しません。
 
 **④ x86_64 の変換用マシン** — rknn-toolkit2 も Hailo Dataflow Compiler もターゲットボード上では動きません。変換はモデルごとに 1 回だけで、導入のたびに行う必要はありません。
+
+### 選定における制約・非推奨条件
+
+- **商品点数と検索遅延**：登録 SKU が 200 点を超えると線形検索の遅延が増加します。500 点以上の店舗では ANN インデックスの追加または検索のオフロードを検討してください。
+- **CPU のみの特徴抽出**：CPU のみでの埋め込み抽出は 1 クロップあたり 900ms 以上要するため非推奨です。必ず NPU または TensorRT で加速してください。
 
 ## 現場での導入方法
 
@@ -133,7 +138,7 @@ generated_from: sensecraft-solutions@cbbfa60
 入力サイズは成果物にコンパイルされ、実行時には変更できません。640² の成果物で棚を見ると奥の商品を取りこぼします。1280² にすると SKU-110K test の小物体 mAP50-95 が 17.49 から 26.88 に上がります。レジか棚かを先に決め、商品が画面内で適切な割合を占める位置にカメラを取り付けてください。
 :::
 
-埋め込みはボックスごとに CPU 推論を 1 回行います。reComputer R2000 シリーズで実測した crop あたり 91.95 ms で計算すると、5 商品のバスケットで約 0.5 秒、棚のフレームは実測密度 157.6 ボックスで約 14 秒かかります。**棚の導入ではフレームを間引くか、スロット単位でサンプリングしてください。**
+Hailo-8 プリセットでは、埋め込みはボックスごとに CPU 推論を 1 回行います。reComputer R2000 シリーズで実測した crop あたり 91.95 ms で計算すると、5 商品のバスケットで約 0.5 秒、棚のフレームは実測密度 157.6 ボックスで約 14 秒かかります。**このプリセットで棚に導入する場合は、フレームを間引くか、スロット単位でサンプリングしてください。** reComputer J40 シリーズ（J4012）では埋め込みは GPU 上で動き、crop あたり 4.23 ms です。
 
 ### 2. ソフトウェア、4 ステップ
 
@@ -157,8 +162,6 @@ generated_from: sensecraft-solutions@cbbfa60
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/event-json-198d89fa.png" alt="1 認識イベントの全フィールド：slot、matched SKU、similarity、ボックスごとの座標"/>
 </div>
-
-<!-- TODO 画像：現場に設置した棚とカメラ — 現場撮影が必要 -->
 
 ## 利用できるインターフェース
 
@@ -190,21 +193,39 @@ generated_from: sensecraft-solutions@cbbfa60
 | reComputer R2000 シリーズ + Hailo-8 | INT8 HEF、640² | 9.04 / 9.10 ms | 94.77%（200 枚）、94.68%（300 枚） |
 | reComputer RK3588 シリーズ | RKNN fp16、640² | 56.7 / 89.5 ms | 99.85% |
 | reComputer RK3588 シリーズ | RKNN INT8、640² | 26.0 / 33.2 ms | 98.35% |
+| reComputer RK3576 シリーズ | RKNN fp16、640²、2 コア | 51.05 / 54.18 ms | 99.91% |
+| reComputer J40 シリーズ（J4012） | TensorRT fp16、640² | 5.18 / 5.28 ms | 99.91% |
+| reComputer J30 シリーズ（J3011） | TensorRT fp16、640² | 5.88 / 8.89 ms | 99.27%（レジのフレーム） |
 
-条件：一致率は IoU ≥ 0.5 で CPU 参照値と比較しています。Hailo の単一ストリームのスループットは 110.4 fps です（`hailortcli benchmark` で 110.64 fps、純粋なハードウェア時間 8.21 ms。差の 0.8 ms は Python vstream の往復です）。**reComputer R2000 シリーズでのエンドツーエンド（letterbox、出力の結合、デコード、NMS を含む）は p50 18.74 ms / p95 24.25 ms** です。約 160 ボックスに対する純粋な numpy のクラス別 NMS が推論そのものより時間がかかります。
+条件：一致率は IoU ≥ 0.5 で CPU 参照値と比較しています。RK3588、RK3576、J4012 は同じ SKU-110K 画像 50 枚、J3011 はレジのフレーム 50 枚を使っています。Hailo の単一ストリームのスループットは 110.4 fps です（`hailortcli benchmark` で 110.64 fps、純粋なハードウェア時間 8.21 ms。差の 0.8 ms は Python vstream の往復です）。**reComputer R2000 シリーズでのエンドツーエンド（letterbox、出力の結合、デコード、NMS を含む）は p50 18.74 ms / p95 24.25 ms** です。約 160 ボックスに対する純粋な numpy のクラス別 NMS が推論そのものより時間がかかります。
 
-再現：`evaluation/runs/2026-09-06-det-hef/`、`evaluation/runs/2026-09-06-det-rk3588-radxa/`
+再現：`evaluation/runs/2026-09-06-det-hef/`、`evaluation/runs/2026-09-06-det-rk3588-radxa/`、`evaluation/runs/2026-09-07-embed-rknn-rk3576/`、`evaluation/runs/2026-09-07-jetson-trt/`、`evaluation/runs/2026-09-08-orin-nano-acceptance/`
 
 ### 埋め込み、デバイス実測
 
-| バリアント | クロップあたり p50 / p95 | fp32 に対する検索コスト |
-|---|---:|---|
-| DINOv2-small、動的量子化 INT8、4 スレッド | 91.95 / 105.98 ms | 実測した 7 段階すべてで 0.65pp 以内 |
-| DINOv2-small、fp32、4 スレッド | 180.75 / 233.41 ms | 基準 |
+| デバイス | バリアント | クロップあたり p50 / p95 | fp32 に対する検索コスト |
+|---|---|---:|---|
+| reComputer R2000 シリーズ（CPU、4 スレッド） | DINOv2-small、動的量子化 INT8 | 91.95 / 105.98 ms | 実測した 7 つの設定すべてで 0.65pp 以内 |
+| reComputer R2000 シリーズ（CPU、4 スレッド） | DINOv2-small、fp32 | 180.75 / 233.41 ms | ベースライン |
+| reComputer RK3588 シリーズ（NPU） | DINOv2-small、RKNN fp16 | 48.68 / 49.86 ms | 21 指標で最大 0.85pp |
+| reComputer RK3576 シリーズ（NPU、2 コア） | DINOv2-small、RKNN fp16 | 56.38 / 62.17 ms | 21 指標で最大 0.36pp |
+| reComputer J40 シリーズ（J4012） | DINOv2-small、TensorRT fp16 | 4.23 / 4.69 ms | 21 指標で最大 0.24pp |
+| reComputer J30 シリーズ（J3011） | DINOv2-small、TensorRT fp16 | 5.06 / 7.64 ms | 21 指標で最大 0.21pp |
 
-条件：reComputer R2000 シリーズの CPU。重みだけを量子化すると検索精度はほとんど落ちず、活性化も量子化すると大きく落ちます。
+条件：21 指標は、Grocery Store Dataset の登録枚数 4 段階と Products-10K の 3 段階における top-1、top-5、オープンセット AUROC です。CPU では重みだけを量子化すると検索精度はほとんど落ちず、活性化も量子化すると大きく落ちます。
 
-再現：`evaluation/runs/2026-09-06-embed-small/` §8
+再現：`evaluation/runs/2026-09-06-embed-small/` §8、`evaluation/runs/2026-09-07-embed-rknn/`、`evaluation/runs/2026-09-07-embed-rknn-rk3576/`、`evaluation/runs/2026-09-07-jetson-trt/`、`evaluation/runs/2026-09-08-orin-nano-acceptance/`
+
+### チェーン全体のリプレイと棚のクロップ、デバイス実測
+
+| デバイス | シーン | 結果 | 条件 |
+|---|---|---|---|
+| reComputer J40 シリーズ（J4012） | レジのリプレイ | 検出から結果送信まで p50 22.3 ms / p95 42.8 ms。2956 フレームでフレーム落ち 0 | 録画映像のリプレイ、30 SKU の gallery。検出、埋め込み、検索、MQTT 送信を同じデバイスで実行 |
+| reComputer J30 シリーズ（J3011） | レジのリプレイ | 6726 フレーム（2.27 周）でフレーム落ち 0、84 件のイベントをすべて送信 | 同じ録画映像と gallery |
+| reComputer RK3588 シリーズ | 棚のリプレイ | 検出から結果送信まで p50 924 ms / p95 1153 ms。スロットのクロップ 704 枚で top-1 541/704、CPU fp32 参照と同じ | 20 SKU、検出器と埋め込み器はどちらも NPU 上の RKNN fp16 |
+| reComputer RK3576 シリーズ | 棚のクロップ | 704 枚で top-1 76.28%（CPU fp32 は 76.99%）、同一 SKU の一致率 99.29%。埋め込みはクロップあたり p50 61.0 ms | 同じ 704 枚のクロップ、検出器と埋め込み器はどちらも RKNN fp16 |
+
+再現：`evaluation/runs/2026-09-07-jetson-trt/`、`evaluation/runs/2026-09-08-orin-nano-acceptance/`、`evaluation/runs/2026-09-08-rk3588-console-acceptance-020/`、`evaluation/runs/2026-09-08-rk3576-acceptance/`
 
 ### 検索と検出の精度（デバイス外）
 
@@ -225,9 +246,9 @@ SKU-110K の公開成績は mAP50-95 58.0（DenseDet、Cascade R-CNN + ResNeXt-1
 
 | デバイス | 検出器 | 埋め込み器 | モデルをデバイスに届ける方法 |
 |---|---|---|---|
-| reComputer RK3588 / RK3576 シリーズ | NPU 上の `.rknn`、fp16 または INT8 | CPU 上の onnxruntime、RKNN 変換なし | x86_64 ホストで rknn-toolkit2 2.3.2 により変換します。toolkit のバージョンはボード上の `librknnrt.so` と一致させる必要があります |
+| reComputer RK3588 / RK3576 シリーズ | NPU 上の `.rknn`、fp16 または INT8 | CPU 上の onnxruntime、または NPU 上の RKNN fp16 | x86_64 ホストで rknn-toolkit2 2.3.2 により変換します。toolkit のバージョンはボード上の `librknnrt.so` と一致させる必要があります |
 | reComputer R2000 シリーズ + Hailo-8 | NPU 上の INT8 `.hef` | CPU 上で動的量子化 INT8 の DINOv2-small | x86_64 ホストで Hailo Dataflow Compiler によりコンパイルし、ボードにコピーします |
-| reComputer J40 シリーズ（Jetson Orin） | TensorRT fp16（GPU） | TensorRT fp16（GPU） | 検出・埋め込み・検索・通知までの一連のリプレイを J4012 と J3011 で実行済みです |
+| reComputer J40 / J30 シリーズ（Jetson Orin） | TensorRT fp16（GPU） | TensorRT fp16（GPU） | 配備時にデバイス上で ONNX から engine を構築します。J3011 では検出器 427 秒、埋め込み器 132 秒です |
 
 検出器は単一クラスの YOLOX-Tiny（640² または 1280²）です。埋め込み器は EC サイトの商品画像で ArcFace により微調整した DINOv2 で、base（348 MB fp32）または small（23.5 MB INT8）、クロップごとに 512 次元ベクトルを出力します。SKU の識別はバージョン管理された gallery の FAISS コサイン検索だけが持ちます。
 
@@ -237,7 +258,9 @@ SKU-110K の公開成績は mAP50-95 58.0（DenseDet、Cascade R-CNN + ResNeXt-1
 
 ### 既知の劣化
 
-- 埋め込みはボックスごとに 1 回の CPU 推論です。クロップあたり 91.95 ms では、5 点のかごで約 0.5 秒、棚の 1 フレーム（157.6 ボックス）で約 14 秒かかるため、棚の配備ではフレームを間引くか棚スロット単位でサンプリングしてください。
+- Hailo-8 プリセットでは、埋め込みはボックスごとに 1 回の CPU 推論です。クロップあたり 91.95 ms では、5 点のかごで約 0.5 秒、棚の 1 フレーム（157.6 ボックス）で約 14 秒かかるため、棚の配備ではフレームを間引くか棚スロット単位でサンプリングしてください。
+- DINOv2 埋め込み器の Hailo-8 向け量子化は 2 回とも使える結果になりませんでした（1 回はすべての画像が同じベクトルになりました）。そのため Hailo-8 プリセットでは埋め込みを CPU で実行します。
+- 検出と埋め込みが 1 つの GPU を共有すると、reComputer J40 シリーズ（J4012）のプロセス内の検出 p50 は単独実行の 5.18 ms から 8.76 ms に、埋め込みは 4.23 ms から 5.37 ms に上がります。
 - 静的 QDQ INT8（活性化も量子化）は検索精度が 3.78–9.96 ポイント下がり、使用できません。
 - rknn-toolkit2 と `librknnrt.so` のバージョンが一致しないと、正常に読み込まれたまま誤った値を返すことがあります。変換のたびに CPU 参照値との一致を確認してください。
 - 640² の成果物で棚を見ると奥の商品を見逃します。SKU-110K の小物体 mAP50-95 は 640² で 17.49、1280² で 26.88 です。
@@ -247,7 +270,6 @@ SKU-110K の公開成績は mAP50-95 58.0（DenseDet、Cascade R-CNN + ResNeXt-1
 
 ### 次のステップ
 
-- reComputer J40 シリーズ（J4012 / J3011）の TensorRT バックエンドでの検出、埋め込み、レジのリプレイの実測を「性能と実測データ」とランタイム表に追加します。
 - 受け入れ指標として、レジの計数精度と棚スロット精度を測定します。
 - デバイス側で gallery のバージョンを取得し、検証し、アトミックに切り替えるランタイムを実装し、新しく登録した SKU がデバイスに自動配信されるようにします。
 

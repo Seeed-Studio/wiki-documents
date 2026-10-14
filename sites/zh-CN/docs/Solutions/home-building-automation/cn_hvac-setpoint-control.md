@@ -22,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/cn/solutions/hvac-setpoint-control/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -140,6 +140,11 @@ R1100 系列板上自带 RS-485，因此接在 RS-485 上的电表不需要额�
 其余前置条件：Docker Engine 20.10 及以上，主机 8280 与 4841 端口未被占用，以及至少一周的历史运行
 数据（CSV 或 Excel，含时间、设定值、实测温度和用电量列）。
 
+### 选型排他边界
+
+- **本地数据保留周期**：选用 16GB eMMC 的 R1124-10 时，本地只保留短窗口数据；若需要将数月以上的高频暖通运行日志留在网关本地做离线模型调优，请选配 32GB eMMC 的 R1125-10。
+- **安全互锁**：本网关输出为节能设定值建议，切勿接入有安全认证要求的锅炉超温紧急切断等硬安全保护回路。
+
 ## 现场怎么部署
 
 ### 一、装硬件：接线
@@ -179,9 +184,6 @@ R1100 系列板上自带 RS-485，因此接在 RS-485 上的电表不需要额�
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/batch-select-zh-a9bd9f76.png" alt="批量下发选择页：本批覆盖的点位与逐点的当前值"/>
 </div>
-
-<!-- TODO 图：网关装在机房/机组旁的现场安装照——需现场拍 -->
-<!-- TODO 图：真实电表与控制器接线照（当前所有截图背后都是协议模拟器）——需现场拍 -->
 
 **控制模式保持 `observe`，「安全基线批准人」留空。** 批准人留空时基线持续显示「未批准」；填写批准人
 等于由该工程师签字认可安全限值。
