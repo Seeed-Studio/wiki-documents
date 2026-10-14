@@ -116,7 +116,7 @@ La ranura de tarjeta de la XIAO ESP32S3 Sense ocupa 14 GPIO del ESP32-S3, y los 
             <td align="center">DVP_Y6</td>
             <td align="center">GPIO15</td>
             <td align="center">DVP_Y2</td>
-        </tr]
+        </tr>
         <tr>
             <td align="center">GPIO16</td>
             <td align="center">DVP_Y5</td>
