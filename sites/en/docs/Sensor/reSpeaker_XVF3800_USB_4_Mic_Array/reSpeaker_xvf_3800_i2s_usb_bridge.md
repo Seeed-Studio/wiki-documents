@@ -95,7 +95,7 @@ Select **Verify** to compile, then **Upload**.
 
 ```cpp
 // #define BRIDGE_MODE BRIDGE_I2S_MASTER_48K
-#define BRIDGE_MODE BRIDGE_I2S_MASTER_16K
+#define BRIDGE_MODE BRIDGE_I2S_SLAVE_16K
 ```
 
 4. In Arduino IDE, open **File > Sketchbook > reSpeaker_ESP32S3_USB_BRIDGE** (the folder name now matches the `.ino`).
@@ -105,7 +105,7 @@ Select **Verify** to compile, then **Upload**.
 Disconnect and reconnect the USB cable. You should see:
 
 - A **CDC serial port** (for example, `COM5` on Windows) — this is the control port.
-- An **audio device** named `BRIDGE I2S Master 16k` (stereo, 32-bit, 16 kHz in and out).
+- An **audio device** named `BRIDGE I2S Slave 16k` (stereo, 32-bit, 16 kHz in and out).
 
 Close any program (such as a serial monitor) that is holding the port before continuing.
 
@@ -139,7 +139,7 @@ Expected Results
 
 ## Test Audio
 
-- **Playback:** play a stereo 32-bit 16 kHz WAV file to the `BRIDGE I2S Master 16k` output; sound should come from the reSpeaker codec/speaker.
+- **Playback:** play a stereo 32-bit 16 kHz WAV file to the `BRIDGE I2S Slave 16k` output; sound should come from the reSpeaker codec/speaker.
 - **Capture:** record 16 kHz stereo 32-bit audio from its input.
 
 <!-- TODO: add audio test screenshot here -->
