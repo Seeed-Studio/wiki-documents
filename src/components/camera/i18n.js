@@ -41,7 +41,7 @@ const TABLE = {
     "Cámaras CSI y USB, incluidos los modelos de profundidad",
     "Câmeras CSI e USB, incluindo modelos de profundidade",
   ),
-  "scene.measurement": row("Visual measurement", "视觉测量", "視覚計測", "Medición visual", "Medição visual"),
+  "scene.measurement": row("Depth measurement", "深度测量", "深度計測", "Medición de profundidad", "Medição de profundidade"),
   "scene.measurement.desc": row(
     "Cameras with a driver or SDK depth stream",
     "具备驱动或 SDK 深度流的相机",

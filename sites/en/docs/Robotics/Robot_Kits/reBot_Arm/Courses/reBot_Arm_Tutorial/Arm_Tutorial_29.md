@@ -195,11 +195,11 @@ cd ../..
 ## 29.4 RGB-D Camera Installation
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-01.png" alt="Hand-eye calibration AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-01.png" alt="Eye-to-hand fixed RGB-D camera installation and calibration diagram" />
 </div>
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-02.png" alt="Hand-eye calibration AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-02.png" alt="Eye-in-hand end-effector camera mounting and calibration panels" />
 </div>
 
 
