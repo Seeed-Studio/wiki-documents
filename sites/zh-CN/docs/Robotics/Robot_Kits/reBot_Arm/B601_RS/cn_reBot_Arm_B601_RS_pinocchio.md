@@ -22,12 +22,9 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS Pinocchio 与 MeshCat 入门
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}

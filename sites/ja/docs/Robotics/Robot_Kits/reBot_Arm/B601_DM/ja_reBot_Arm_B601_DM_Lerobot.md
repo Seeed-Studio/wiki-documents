@@ -21,14 +21,11 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_lerobot/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # LeRobot における reBot Arm B601-DM
-
-<RebotDmDocNav />
 
 <div align="center">
     <img width={800}

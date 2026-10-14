@@ -28,12 +28,9 @@ import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM Digital Twin & Control Stack
-
-<RebotDmDocNav />
 
 <div align="center">
     <img width={800}

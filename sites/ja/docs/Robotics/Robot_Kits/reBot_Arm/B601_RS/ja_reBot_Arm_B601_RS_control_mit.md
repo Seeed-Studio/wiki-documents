@@ -23,11 +23,8 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_mit_control/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 # reBot Arm B601-RS MIT 位置制御
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
