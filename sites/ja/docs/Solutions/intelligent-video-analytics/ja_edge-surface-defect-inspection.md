@@ -291,7 +291,7 @@ D-FINE-S と RT-DETRv2-S は Jetson でのみ使えます。Hailo Dataflow Compi
 
 ## データと素材の出典 {#data-and-asset-sources}
 
--- **NEU-DET（東北大学表面欠陥データベース、Roboflow 転載版）** — 付属のベースライン検出器の学習および検証データであり、上記の精度数値の出典です。変換済みモデル重みはリファレンスデザイン評価およびパイプライン検証用に公式 CDN でホストされています。商用運用にあたっては、対象ワークや照明環境に合わせ、現場画像での再学習を推奨します。
+- **NEU-DET（東北大学表面欠陥データベース、Roboflow 転載版）** — 付属のベースライン検出器の学習および検証データであり、上記の精度数値の出典です。変換済みモデル重みはリファレンスデザイン評価およびパイプライン検証用に公式 CDN でホストされています。商用運用にあたっては、対象ワークや照明環境に合わせ、現場画像での再学習を推奨します。
 - **DeepPCB** — [github.com/tangsanli5201/DeepPCB](https://github.com/tangsanli5201/DeepPCB)、MIT ライセンス。任意の教師なし anomaly トラックだけが使用し、NEU-DET とは無関係です。MIT ライセンスは再配布と商用利用を許可し、コピーや派生物に著作権表示を残すことを求めます。
 - **YOLOX** — [github.com/Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)、Apache-2.0。既定の検出 backbone で、AGPL の条件を避けるため Ultralytics ではなくこちらを選びました。本ソリューションのどこでも Ultralytics のコードや重みは使用していません。
 - **D-FINE** — [github.com/Peterande/D-FINE](https://github.com/Peterande/D-FINE)、Apache-2.0、および **RT-DETRv2** — [github.com/lyuwenyu/RT-DETR](https://github.com/lyuwenyu/RT-DETR)、Apache-2.0。2 つの任意検出トラックで、それぞれ COCO ライセンスの checkpoint だけから fine-tune しています。上流自身が Objects365 学習重みのライセンス未確認を記載しているため、それらの重みはダウンロードも配布もしていません。ライセンスと commit の固定は `tracks/detector/PROVENANCE.md` にあります。
