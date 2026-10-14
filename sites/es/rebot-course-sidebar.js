@@ -102,7 +102,7 @@ const courseSidebar = () => [
   },
   {
     type: 'category',
-    label: 'Stage 5: Robot Arm Mathematics and Motion Control',
+    label: 'Etapa 5: Matemáticas del brazo robótico y control de movimiento',
     className: 'robotics-section-title',
     collapsed: false,
     collapsible: false,
@@ -124,6 +124,33 @@ const courseSidebar = () => [
       `${C}/es_Arm_Tutorial_28`,
       `${C}/es_Arm_Tutorial_29`,
       `${C}/es_Arm_Tutorial_30`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Etapa 7: ROS2 e integración de sistemas robóticos',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/es_Arm_Tutorial_31`,
+      `${C}/es_Arm_Tutorial_32`,
+      `${C}/es_Arm_Tutorial_33`,
+      `${C}/es_Arm_Tutorial_34`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Etapa 8: Simulación de brazos robóticos con MuJoCo e Isaac Sim',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/es_Arm_Tutorial_35`,
+      `${C}/es_Arm_Tutorial_36`,
+      `${C}/es_Arm_Tutorial_37`,
+      `${C}/es_Arm_Tutorial_38`,
+      `${C}/es_Arm_Tutorial_39`,
     ],
   },
 ];

@@ -27,9 +27,25 @@ const MANIFEST_PATH = path.join(path.dirname(new URL(import.meta.url).pathname),
 
 const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 
-test('manifest: exactly 29 approved entries, all PUBLISH, no BLOCK', () => {
+// `createdAt`, `url` and `updatedAt` are owned by normalize-frontmatter.js and
+// update-doc-updatedat.yml, not by the FAQ pipeline (the "frontmatter reformat"
+// test below treats them as external and non-conflicting), so they are removed
+// before a committed page is compared against a fresh render.
+const stripToolingFrontmatter = (content) => {
+  const open = content.indexOf('---\n');
+  const close = open === -1 ? -1 : content.indexOf('\n---\n', open + 4);
+  if (close === -1) return content;
+  const frontmatter = content
+    .slice(open + 4, close)
+    .split('\n')
+    .filter((line) => !/^(createdAt|url|updatedAt):/.test(line))
+    .join('\n');
+  return `${content.slice(0, open + 4)}${frontmatter}${content.slice(close)}`;
+};
+
+test('manifest: exactly 30 approved entries, all PUBLISH, no BLOCK', () => {
   const manifest = loadManifest();
-  assert.strictEqual(manifest.entries.length, 29);
+  assert.strictEqual(manifest.entries.length, 30);
   for (const entry of manifest.entries) {
     assert.strictEqual(entry.publicationDecision, 'PUBLISH');
   }
@@ -91,10 +107,10 @@ test('render: only products with approved entries produce pages (no empty pages)
   }
 });
 
-test('render: FAQ counts per product (XVF3800=12, Lite=8, Flex=4, Pi HAT=1, Clip=3, XVF3000=1) and anchors unique', () => {
+test('render: FAQ counts per product (XVF3800=13, Lite=8, Flex=4, Pi HAT=1, Clip=3, XVF3000=1) and anchors unique', () => {
   const manifest = loadManifest();
   const byProduct = (p) => manifest.entries.filter((e) => e.productKey === p);
-  assert.strictEqual(byProduct('xvf3800_usb_4_mic').length, 12);
+  assert.strictEqual(byProduct('xvf3800_usb_4_mic').length, 13);
   assert.strictEqual(byProduct('respeaker_lite').length, 8);
   assert.strictEqual(byProduct('flex_xvf3800').length, 4);
   assert.strictEqual(byProduct('respeaker_2_mics_pi_hat').length, 1);
@@ -304,11 +320,14 @@ test('css: FAQ question-callout contract stays scoped, lime and responsive', () 
 
 test('manifest and generated sources stay in sync (no drift after apply)', () => {
   // The committed generated files must match a fresh render of the manifest.
+  // Only the tooling-owned frontmatter fields are excluded from the comparison;
+  // every pipeline-owned byte (managed region, title, description, slug,
+  // keywords, last_update, intro and support sections) is still compared.
   const manifest = loadManifest();
   const targets = planTargets(manifest);
   for (const t of targets) {
     const onDisk = fs.readFileSync(path.join(REPO_ROOT, t.rel), 'utf8');
-    assert.strictEqual(onDisk, t.content, `${t.rel} drifted from manifest`);
+    assert.strictEqual(stripToolingFrontmatter(onDisk), t.content, `${t.rel} drifted from manifest`);
   }
 });
 

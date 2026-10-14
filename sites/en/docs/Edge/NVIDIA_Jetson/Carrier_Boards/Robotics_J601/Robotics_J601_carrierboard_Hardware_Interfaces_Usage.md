@@ -13,7 +13,7 @@ image: https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg
 slug: /recomputer_jetson_robotics_j601_interfaces_usage
 sku: 100060965
 last_update:
-  date: 06/18/2026
+  date: 10/13/2026
   author: Zibo
 createdAt: '2026-06-18'
 updatedAt: '2026-07-01'
@@ -30,6 +30,31 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg"/>
+</div>
+
+## Heatsink Installation
+
+To ensure stable heat dissipation during long-term operation, you can install a heatsink on the reComputer J601 Carrier Board.
+
+**Materials needed:** 
+- thermal silicone pad
+- heatsink with fan
+- reComputer J601 Carrier Board
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink1.png"/>
+</div>
+
+**Step 1.** Attach the thermal silicone pad to the contact point between the heatsink and the carrier board.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png"/>
+</div>
+
+**Step 2.** Connect the heatsink and the carrier board.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink3.png"/>
 </div>
 
 ## USB
