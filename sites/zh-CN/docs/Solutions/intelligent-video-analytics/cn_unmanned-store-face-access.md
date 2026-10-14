@@ -19,7 +19,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/cn/solutions/unmanned-store-face-access/
 generated_from: sensecraft-solutions@e1864ef
 ---
@@ -104,12 +104,12 @@ reCamera Pro 的识别画面：人脸框上带着匹配到的人员编号与本�
 
 **② 做识别与判定的那台机器。**
 
-| 识别主机 | 识别在哪里跑 | 安装形态 |
-|---|---|---|
-| reCamera Pro（RV1126B） | 摄像头本机，跑在已有的人脸识别应用旁边 | 装在摄像头本机，不用容器（Buildroot 系统，没有 docker） |
-| 标准版 reCamera（SG2002 / CV181x） | 摄像头本机，在同一个原生进程里完成检测、嵌入、活体与匹配 | 拷一个小守护进程，不用容器 |
-| reComputer Industrial J20 | 容器里，接现有 RTSP 流 | 经 SSH 部署容器 |
-| reComputer J30 / J40 / R2000 | 容器里，接现有 RTSP 流 | 经 SSH 部署容器 |
+| | 识别主机 | 识别在哪里跑 | 安装形态 | 什么时候选它 |
+|---|---|---|---|---|
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/0/100021896main_4.jpg" alt="reCamera Pro" width="110" /> | [reCamera Pro（RV1126B）](https://www.seeedstudio.com/reCamera-Pro-p-5984.html)<br/>高性能一体化智能相机 | 摄像头本机，跑在已有的人脸识别应用旁边 | 装在摄像头本机，不用容器（Buildroot 系统，没有 docker） | 门口还没有摄像头，需要端侧快速完成活体与比对 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002（SG2002）](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>入门一体化智能相机 | 摄像头本机，在同一个原生进程里完成检测、嵌入、活体与匹配 | 拷一个小守护进程，不用容器 | 预算优先，单门独立门禁 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin 边缘算力盒 | 容器里，接现有 RTSP 流 | 经 SSH 部署容器 | 门口已有普通 RTSP 摄像头，一台主机集中管理多扇门 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>工业无风扇控制器 | 容器里，接现有 RTSP 流 | 经 SSH 部署容器 | 工业机柜安装，带多路隔离 IO 与继电器接口 |
 
 **③ 继电器。** 锁必须接在继电器或干接点后面，用独立的 12/24 V 电源，
 与计算板的供电分开。锁的工作电流 300 mA–1 A，GPIO 引脚和光隔数字输出只有 mA 级。
@@ -119,6 +119,11 @@ reCamera Pro 的识别画面：人脸框上带着匹配到的人员编号与本�
 **④ 云端或本地主机。** 任意装了 Docker 的 amd64 或 arm64 Linux 机器，不需要 GPU。
 它跑人脸库服务、管理界面与 MQTT broker，必须对每一台门口设备可达，并且自身时钟必须
 准确——没有 RTC 的设备靠它的 HTTP `Date` 头做时间修正。
+
+### 选型排他边界
+
+- **人脸底库规模上限**：摄像头端侧人脸底库建议在 1,000 人以内；若企事业单位员工库超过 3,000 人，端侧比对时延明显增大，不宜在端侧单机运行，建议选配专用边缘主机。
+- **强逆光与室外直晒**：无遮阳棚的室外大门口强逆光直晒时，双目活体检测精度会受红外光饱和影响，必须加装遮阳罩或专用防眩光补光灯。
 
 ## 现场怎么部署
 
@@ -182,8 +187,6 @@ DO1–DO4 是 sysfs 463/464/465/462；目标镜像以这种方式还是通过 `J
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/gpio-relay-check-ad22020d.png" alt="同一路 GPIO（sysfs 490）在一次放行判定后的电平回读"/>
 </div>
-
-<!-- TODO 图：门口实景（摄像头 + 继电器 + 锁的现场安装照）——需现场拍 -->
 
 局域网内允许把人脸库配成明文 `http://` 地址，但必须带对 manifest 的 HMAC-SHA256 签名；
 没有密钥设备拒绝启动。签名防的是链路上的篡改；任何一台设备的密钥泄漏，都可以用来伪造人脸库。

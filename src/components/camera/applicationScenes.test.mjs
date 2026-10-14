@@ -22,7 +22,7 @@ const Illustration = module.exports.default;
 
 test('scene metadata has four distinct, descriptive task options and one static overview', () => {
   assert.deepEqual(applicationSceneOptions.map(({id}) => id), ['all', 'manipulation', 'recognition', 'measurement', 'driving']);
-  assert.deepEqual(applicationSceneOptions.slice(1).map(({label}) => label), ['Robot-arm control', 'Visual detection & recognition', 'Visual measurement', 'Intelligent driving']);
+  assert.deepEqual(applicationSceneOptions.slice(1).map(({label}) => label), ['Robot-arm control', 'Visual detection & recognition', 'Depth measurement', 'Intelligent driving']);
   assert.equal(new Set(applicationSceneOptions.map(({illustration}) => illustration)).size, 5);
   for (const option of applicationSceneOptions.slice(1)) {
     assert.ok(option.label.length > 10);

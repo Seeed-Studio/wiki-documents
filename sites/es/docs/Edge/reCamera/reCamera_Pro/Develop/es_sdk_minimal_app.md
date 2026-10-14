@@ -1,140 +1,189 @@
 ---
-description: Configura el entorno de compilación cruzada del SDK de reCamera Pro y recorre la compilación y el despliegue de una aplicación nativa mínima, usando el proyecto Visual Wake + STT como ejemplo práctico.
-title: SDK y aplicación mínima
+description: Instala el SDK de compilación cruzada de reCamera Pro, compila un pequeño programa en C++ para RV1126B, comprueba el binario y ejecútalo en el dispositivo.
+title: Configurar el SDK de compilación cruzada de reCamera Pro
 keywords:
-  - reCamera
   - reCamera Pro
   - RV1126B
   - SDK
-  - cross-compilation
+  - compilación cruzada
+  - CMake
   - RKNN
-  - GStreamer
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_sdk_setup
 sku: 10003420
 sidebar_position: 2
 last_update:
-  date: 09/21/2026
-  author: MOSS
+  date: 10/12/2026
+  author: Seeed Studio
 url: https://wiki.seeedstudio.com/es/recamera_pro_sdk_setup/
-createdAt: '2026-09-23'
-updatedAt: '2026-09-23'
+createdAt: '2026-09-21'
+updatedAt: '2026-10-12'
 ---
 
-# SDK y aplicación mínima
+# Configurar el SDK de compilación cruzada de reCamera Pro
 
-Esta página explica cómo preparar un entorno host para compilar aplicaciones nativas de reCamera Pro y cómo funciona un ciclo completo de compilación y despliegue. Los pasos se demuestran con el proyecto [Visual Wake and Offline Speech Recognition](/es/recamera_pro_visual_wake_stt/), una aplicación real de RKNN + GStreamer que se ejecuta completamente en el dispositivo.
+Esta guía utiliza el [SDK de compilación cruzada de reCamera Pro](https://github.com/Seeed-Projects/recamera_pro_toolchain) para compilar un pequeño programa en C++ en un PC con Linux o en WSL, y luego ejecutarlo en reCamera Pro. Instalarás el compilador y las bibliotecas de destino, compilarás el ejemplo, comprobarás que es un programa ARM de 64 bits y lo copiarás a la cámara.
 
-Para el contrato general de desarrollo (versiones de toolchain, formatos de modelo, lenguajes), consulta [Choose a Development Path](/es/recamera_pro_dev_path/). Si prefieres que un agente de programación con IA dirija este flujo de trabajo, consulta [Develop with AI Coding Agents](/es/recamera_pro_development_cpp_skill/).
+> Este SDK es para reCamera Pro con el procesador Rockchip RV1126B. No funciona con la reCamera SG2002/RISC-V.
 
-## Requisitos previos
+## Lo que necesitas
 
-- Una reCamera Pro (RV1126B, aarch64) accesible a través de Ethernet virtual por USB (`192.168.42.1` por defecto) o LAN
-- Un ordenador con Linux, o un ordenador con Windows y WSL, para la conversión de modelos y la compilación cruzada
-- Un SDK de reCamera Pro funcional en el host
-- RKNN-Toolkit2 2.3.2 y RKNN Runtime 2.3.2 — no mezcles versiones arbitrarias de RKNN Runtime
+- reCamera Pro ejecutando su firmware de producción
+- Un PC con Linux o un PC con Windows con WSL 2 y Ubuntu
+- Acceso de red desde el host a GitHub Releases para descargar los recursos del SDK (unos 2,5 GB instalados)
+- CMake, Ninja y `pkg-config`
+- Acceso SSH a la reCamera Pro para el paso de despliegue
 
-{/* TODO(verify): documentar dónde descargar el SDK de reCamera Pro, su estructura de directorios esperada y cómo verificar la versión del SDK; el proyecto fuente solo hace referencia a una ruta local del SDK */}
+El SDK tiene como objetivo Linux ARM de 64 bits y proporciona el compilador Rockchip GCC 12.4.0, el sysroot de destino, los archivos de desarrollo de GStreamer 1.22 y RKNN API/runtime 2.3.2. La conversión de modelos es independiente: convierte modelos ONNX en un host x86_64 con RKNN-Toolkit2 2.3.2 y `target_platform='rv1126b'`.
 
-## Configurar la ruta del SDK
+## 1. Instalar el SDK
 
-Los scripts de compilación en los proyectos de reCamera Pro normalmente localizan el SDK mediante una variable de entorno. Para el proyecto Visual Wake, `scripts/build_recamera.sh` busca el SDK en una ruta local predeterminada; en su lugar, apúntalo a tu propio checkout del SDK:
-
-```bash
-export RECAMERA_PRO_SDK=/absolute/path/to/recamera-pro-sdk
-```
-
-El script de compilación también valida `librknnrt.so`. Si tu SDK o runtime lo almacena en otro lugar, actualiza la ruta `qualified_rknnrt` en el script a un runtime RKNN 2.3.2 verificado, manteniendo el paso de validación de checksum.
-
-## Obtener un proyecto y compilar de forma cruzada
-
-Clona el repositorio del proyecto y ejecuta su script de compilación cruzada desde la raíz del proyecto:
+Instala las herramientas del host y clona el repositorio del SDK:
 
 ```bash
-git clone https://github.com/yyling0101-a11y/recamera_pro_face_stt.git
-cd recamera_pro_face_stt
-bash scripts/build_recamera.sh
+sudo apt update
+sudo apt install -y git cmake ninja-build pkg-config
+git clone https://github.com/Seeed-Projects/recamera_pro_toolchain.git
+cd recamera_pro_toolchain
 ```
 
-El script valida el SDK, carga su entorno de compilación y genera un paquete de despliegue:
-
-```text
-build-recamera/deploy/
-├── visual_wake_app
-├── models/
-│   ├── scrfd_500m_640_fp16.rknn
-│   ├── pfld_98_112_fp16.rknn
-│   └── stt/                         # encoder, decoder, joiner, and vocabulary
-└── web/dashboard.html
-```
-
-Una aplicación mínima propia sigue la misma estructura: un ejecutable aarch64, sus archivos de modelo RKNN y cualquier recurso web o de configuración, todo dispuesto en un solo directorio.
-
-## Desplegar en el dispositivo
-
-Copia el **contenido** del directorio de despliegue en un único directorio del dispositivo, luego conéctate por SSH y haz que el binario sea ejecutable:
+Descarga y verifica el compilador y el sysroot versionados, luego carga el entorno del SDK:
 
 ```bash
-scp -r build-recamera/deploy/* root@192.168.42.1:/userdata/visual-wake/
+./scripts/setup.sh
+source scripts/env.sh
+bash scripts/check-sdk.sh
+```
+
+`setup.sh` instala los recursos del SDK en los directorios `toolchain/` y `sysroot/` del repositorio y comprueba sus sumas de verificación SHA-256. La descarga puede tardar en una conexión lenta. Ejecuta `source scripts/env.sh` de nuevo en cada terminal nueva antes de configurar un proyecto.
+
+## 2. Compilar el ejemplo incluido en el SDK
+
+Primero compila la prueba de humo incluida. Enlaza contra RKNN Runtime, OpenCV y GStreamer, por lo que comprueba que el SDK puede encontrar las principales bibliotecas de destino.
+
+Desde la raíz del repositorio:
+
+```bash
+source scripts/env.sh
+cmake -S examples/sdk_smoke -B examples/sdk_smoke/build -G Ninja
+cmake --build examples/sdk_smoke/build
+```
+
+El ejecutable se escribe en `examples/sdk_smoke/build/`. Si CMake configuró previamente este directorio de compilación con tu compilador de host, elimina ese directorio de compilación y configúralo de nuevo antes de compilar con el SDK.
+
+## 3. Compilar una pequeña aplicación en C++
+
+Puedes usar el SDK con tu propio proyecto CMake. Crea un directorio de proyecto junto a `recamera_pro_toolchain`:
+
+```bash
+mkdir -p ~/my-recamerapro-app
+cd ~/my-recamerapro-app
+```
+
+Crea `main.cpp`:
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello from reCamera Pro" << std::endl;
+    return 0;
+}
+```
+
+Crea `CMakeLists.txt`:
+
+```cmake
+cmake_minimum_required(VERSION 3.16)
+project(my_recamera_app LANGUAGES CXX)
+
+add_executable(my_recamera_app main.cpp)
+```
+
+Carga el entorno del SDK, luego configura y compila. Sustituye la ruta de abajo si clonaste el SDK en otro lugar:
+
+```bash
+cd ~/my-recamerapro-app
+source ~/recamera_pro_toolchain/scripts/env.sh
+cmake -S . -B build -G Ninja
+cmake --build build
+```
+
+El entorno selecciona el compilador cruzado aarch64 y el sysroot de destino para CMake. Para proyectos que usan RKNN o GStreamer, sigue el [ejemplo de integración con CMake](https://github.com/Seeed-Projects/recamera_pro_toolchain#integración-mínima-con-cmake) del repositorio del SDK para encontrar y enlazar las bibliotecas de destino.
+
+## 4. Comprobar el ejecutable
+
+Antes de copiar el programa a la cámara, confirma que se compiló para el procesador correcto y que no contiene una ruta del host:
+
+```bash
+file build/my_recamera_app
+source ~/recamera_pro_toolchain/scripts/env.sh
+"${CROSS_COMPILE}readelf" -l build/my_recamera_app | grep interpreter
+"${CROSS_COMPILE}readelf" -d build/my_recamera_app | grep -E 'NEEDED|RPATH|RUNPATH'
+```
+
+Comprueba estos resultados:
+
+- `file` informa ARM aarch64, no x86-64 ni RISC-V.
+- El intérprete ELF es `/lib/ld-linux-aarch64.so.1`.
+- Cualquier ruta de búsqueda en tiempo de ejecución apunta a `/oem/usr/lib`; no contiene una ruta del host o de WSL.
+
+El archivo de toolchain del SDK establece la ruta de ejecución del dispositivo en `/oem/usr/lib`. No añadas una ruta absoluta desde tu host, el directorio del SDK o el directorio de compilación al ejecutable.
+
+## 5. Copiarlo y ejecutarlo en reCamera Pro
+
+Conéctate a la cámara mediante Ethernet virtual por USB o tu LAN. Sustituye `192.168.42.1` abajo si tu cámara usa una dirección IP diferente. Crea un directorio para el programa y copia el ejecutable:
+
+```bash
+ssh root@192.168.42.1 'mkdir -p /userdata/my-recamerapro-app'
+scp build/my_recamera_app root@192.168.42.1:/userdata/my-recamerapro-app/
 ssh root@192.168.42.1
-cd /userdata/visual-wake
-chmod +x visual_wake_app
 ```
 
-:::tip
-Mantén los directorios `models/` y `web/` en sus rutas relativas. La aplicación carga sus recursos usando esas rutas relativas predeterminadas.
-:::
-
-## Ejecutar y verificar
-
-Ejecuta la aplicación desde su directorio de despliegue:
+En la cámara, ejecútalo:
 
 ```bash
-./visual_wake_app
+cd /userdata/my-recamerapro-app
+chmod +x my_recamera_app
+./my_recamera_app
 ```
 
-Durante el funcionamiento normal, los eventos accionables aparecen en la terminal:
+Salida esperada:
 
 ```text
-VISUAL_WAKE track=1
-STT_RESULT 打开灯
+Hello from reCamera Pro
 ```
 
-Usa `--help` para listar todas las opciones de ejecución. Por ejemplo, este comando solo verifica la canalización visual y desactiva los servicios de red:
+Copia solo tu aplicación y sus recursos necesarios. No sobrescribas `/oem/usr/lib/librknnrt.so`; el RKNN Runtime del SDK se usa para el enlace y se ha comprobado frente al runtime del dispositivo de producción.
 
-```bash
-./visual_wake_app --no-stt --no-rtsp --no-web --debug
-```
+## Solución de problemas
 
-Un despliegue satisfactorio significa: el binario se inicia en el dispositivo, carga sus modelos RKNN, abre la cámara e imprime eventos reconocibles o resultados de inferencia.
+| Síntoma | Qué comprobar |
+| --- | --- |
+| `setup.sh` no puede descargar un recurso | Comprueba la conexión a internet del host y vuelve a ejecutar `./scripts/setup.sh`. El script verifica las sumas de verificación descargadas. |
+| CMake selecciona el compilador del host | Ejecuta `source scripts/env.sh` en el mismo terminal, usa un directorio de compilación nuevo y configura de nuevo. |
+| `pkg-config` encuentra bibliotecas del host | Carga `scripts/env.sh` antes de configurar; apunta `pkg-config` al sysroot del SDK. |
+| `Exec format error` en el dispositivo | Ejecuta `file` sobre el ejecutable y confirma que informa ARM aarch64. |
+| Falta una biblioteca compartida en tiempo de ejecución | Comprueba las entradas `NEEDED` del ejecutable y confirma que la biblioteca requerida existe en el firmware del dispositivo. No copies bibliotecas del host al dispositivo. |
 
-## Problemas comunes de entorno
-
-| Problema | Posible causa | Solución |
-| --- | --- | --- |
-| La compilación no puede encontrar OpenCV o RKNN | Falta el entorno del SDK o el runtime es incompatible | Verifica `RECAMERA_PRO_SDK`, carga el `env.sh` del SDK y usa RKNN 2.3.2 |
-| No se pueden encontrar los archivos de modelo en tiempo de ejecución | No se preservó la estructura de despliegue | Confirma que `models/` y `web/` existen en el directorio de ejecución |
-| El ejecutable es x86-64 | Se usó el compilador del host en lugar del compilador cruzado aarch64 | Vuelve a compilar con un compilador compatible con el destino y el sysroot de reCamera Pro |
-| El binario no puede cargar una biblioteca | El sysroot, el ABI o la ruta de búsqueda de runtime no coincide con la placa | Inspecciona las dependencias ELF y compara cada biblioteca de destino con la del dispositivo |
-
-{/* TODO(verify): añadir la salida esperada de un comando de comprobación de versión (versión del SDK, versión de librknnrt.so en el dispositivo) para que los usuarios puedan confirmar la compatibilidad entre host y dispositivo antes de desplegar */}
+El sysroot del SDK usa una libc con símbolos hasta GLIBC 2.38. Comprueba el ABI del firmware antes de declarar compatibilidad con una versión de firmware diferente. Una compilación cruzada satisfactoria confirma la compilación y el enlace; no verifica el funcionamiento de la cámara, la precisión del modelo ni el comportamiento en tiempo de ejecución de tu aplicación.
 
 ## Próximos pasos
 
-- [Camera, Audio, and Inference Development](/es/recamera_pro_media_dev/) — detalles de captura de cámara con GStreamer, audio ALSA y salida RTSP
-- [Develop with AI Coding Agents](/es/recamera_pro_development_cpp_skill/) — automatiza la conversión de modelos y las compilaciones nativas con un agente de IA
-- [Visual Wake and Offline Speech Recognition](/es/recamera_pro_visual_wake_stt/) — el ejemplo completo utilizado en esta página
+- [Repositorio del SDK de reCamera Pro](https://github.com/Seeed-Projects/recamera_pro_toolchain) — scripts de configuración del SDK, integración con CMake y el ejemplo `sdk_smoke`
+- [Desarrollo de Cámara, Audio e Inferencia](/es/recamera_pro_media_dev/) — captura de cámara con GStreamer, audio y RTSP
+- [Elegir una ruta de desarrollo](/es/recamera_pro_dev_path/) — selecciona un flujo de trabajo de desarrollo para tu proyecto
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diversos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos múltiples canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diversos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Puedes elegir el canal que mejor se adapte a ti.
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div className="button_tech_support_container">
+  <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+  <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div className="button_tech_support_container">
+  <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
 </div>

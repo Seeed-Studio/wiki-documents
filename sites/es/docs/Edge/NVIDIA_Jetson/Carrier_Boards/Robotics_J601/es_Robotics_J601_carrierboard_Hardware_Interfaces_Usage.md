@@ -2,21 +2,21 @@
 description: Este wiki proporciona una introducción completa a las características de hardware y al uso de las interfaces de la carrier board reComputer Jetson Robotics J601. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como M.2, Ethernet, USB, CAN, RS485/RS232, UART, I2C, I2S, GPIO, expansión de cámara GMSL2, 5G y GPS, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J601.
 title: Uso de interfaces
 tags:
-  - J601-Robotics carrier board
+  - Carrier board J601-Robotics
   - Jetson
   - AGX Thor
-  - Robotics
-  - Interfaces Usage
+  - Robótica
+  - Uso de interfaces
   - Interfaces
   - Hardware
 image: https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg
 slug: /recomputer_jetson_robotics_j601_interfaces_usage
 sku: 100060965
 last_update:
-  date: 06/18/2026
+  date: 10/13/2026
   author: Zibo
 createdAt: '2026-06-18'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-01'
 url: https://wiki.seeedstudio.com/es/recomputer_jetson_robotics_j601_interfaces_usage/
 ---
 
@@ -30,6 +30,31 @@ Al ser compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y 
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg"/>
+</div>
+
+## Instalación del disipador
+
+Para garantizar una disipación de calor estable durante el funcionamiento a largo plazo, puedes instalar un disipador en la Carrier Board reComputer J601.
+
+**Materiales necesarios:** 
+- almohadilla de silicona térmica
+- disipador con ventilador
+- Carrier Board reComputer J601
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink1.png"/>
+</div>
+
+**Paso 1.** Coloca la almohadilla de silicona térmica en el punto de contacto entre el disipador y la carrier board.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png"/>
+</div>
+
+**Paso 2.** Conecta el disipador y la carrier board.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink3.png"/>
 </div>
 
 ## USB
@@ -59,7 +84,7 @@ echo "seeed" | sudo -S dd if=/dev/sda of=/dev/null bs=1000M count=2
 ```
 
 :::info
-Sustituye `/dev/sda` por el nombre de dispositivo real de tu unidad USB. Puedes usar `lsblk` para comprobarlo.
+Reemplaza `/dev/sda` con el nombre de dispositivo real de tu unidad USB. Puedes usar `lsblk` para comprobarlo.
 :::
 
 Haz que el script sea ejecutable y ejecútalo:
@@ -98,7 +123,7 @@ Usando este puerto serie, a través del cable de datos USB‑C, puedes monitoriz
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
-**Paso 4.** Abre el Administrador de dispositivos en tu PC con Windows y comprueba el número de puerto COM asignado al reComputer J601. Debería aparecer en "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número de puerto COM.
+**Paso 4.** Abre el Administrador de dispositivos en tu PC con Windows y comprueba el número de puerto COM asignado a la reComputer J601. Debería aparecer en "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número de puerto COM.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
@@ -164,7 +189,7 @@ La Robotics J601 incorpora un conector de expansión para cámaras GMSL que admi
 
 ### Conexión de hardware
 
-Conecta la placa de expansión GMSL al conector de expansión de cámara en la carrier board J601 y, a continuación, conecta tus cámaras GMSL a la placa de expansión.
+Conecta la placa de expansión GMSL al conector de expansión de cámara en la carrier board J601 y luego conecta tus cámaras GMSL a la placa de expansión.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/GMSL_connect.png"/>
@@ -238,7 +263,7 @@ Para la comunicación UART, conecta la herramienta USB‑a‑TTL según el sigui
 
 Conecta la herramienta USB‑a‑TTL al puerto UART de la Robotics J601 y al PC, luego abre la herramienta de puerto serie en el PC y establece la velocidad en baudios en **115200**.
 
-Puedes usar un script sencillo de Python para probar la comunicación serie:
+Puedes usar un sencillo script de Python para probar la comunicación serie:
 
 ```python
 import serial
@@ -267,17 +292,17 @@ python3 uart_test.py
 
 ## I2S
 
-La Robotics J601 proporciona una interfaz de audio I2S con salida de amplificador y entrada de micrófono para reproducción y grabación de audio. La interfaz I2S se expone a través del conector J14 JST GH‑1.25.
+La Robotics J601 proporciona una interfaz de audio I2S con salida de amplificador y entrada de micrófono para reproducción y grabación de audio. La interfaz I2S se expone a través del conector J14 JST GH-1.25.
 
 ### Definición de pines
 
 | Pin # | Nombre de pin del módulo | # de pin del módulo | Uso/Descripción | Tipo/Dir |
 | --- | --- | --- | --- | --- |
 | 1 | - | - | Fuente de alimentación 3V3 | Alimentación |
-| 2 | I2S2_DIN | F6 | Puerto de audio I2S2 2 Datos de entrada (nivel desplazado de 1.8V a 3.3V) | Entrada |
-| 3 | I2S2_FS | E4 | Puerto de audio I2S2 2 Reloj izquierda/derecha (nivel desplazado de 1.8V a 3.3V) | Bidireccional |
-| 4 | I2S2_CLK | G4 | Puerto de audio I2S2 2 Reloj (nivel desplazado de 1.8V a 3.3V) | Bidireccional |
-| 5 | I2S2_DOUT | F5 | Puerto de audio I2S2 2 Datos de salida (nivel desplazado de 1.8V a 3.3V) | Salida |
+| 2 | I2S2_DIN | F6 | Puerto de audio I2S2 2 Datos de entrada (nivel cambiado de 1.8V a 3.3V) | Entrada |
+| 3 | I2S2_FS | E4 | Puerto de audio I2S2 2 Reloj izquierda/derecha (nivel cambiado de 1.8V a 3.3V) | Bidireccional |
+| 4 | I2S2_CLK | G4 | Puerto de audio I2S2 2 Reloj (nivel cambiado de 1.8V a 3.3V) | Bidireccional |
+| 5 | I2S2_DOUT | F5 | Puerto de audio I2S2 2 Datos de salida (nivel cambiado de 1.8V a 3.3V) | Salida |
 | 6 | - | - | Tierra | Tierra |
 
 ### Conexión de hardware
@@ -299,7 +324,7 @@ speaker-test -D hw:2,0 -c 2 -r 48000 -t sine -f 440 -l 1
 ```
 
 :::info
-La opción `-l 1` significa que el tono de prueba se reproducirá solo una vez y luego se detendrá.
+La bandera `-l 1` significa que el tono de prueba se reproducirá solo una vez y luego se detendrá.
 :::
 
 **Paso 2.** Reproduce tu propio archivo de audio:
@@ -324,7 +349,7 @@ El Robotics J601 proporciona una interfaz I2C a través del conector JST GH-1.25
 | 1 | - | - | Tierra | Tierra |
 | 2 | DP_AUX_CH2_N | E18 | I2C4_SDA_3V3 | Bidireccional |
 | 3 | DP_AUX_CH2_P | E19 | I2C4_SCL_3V3 | Salida |
-| 4 | - | - | Alimentación 3V3 | Alimentación |
+| 4 | - | - | Fuente de alimentación 3V3 | Alimentación |
 
 :::info
 El conector I2C utiliza el bus **I2C4** en el SoC Jetson AGX Thor.
@@ -332,7 +357,7 @@ El conector I2C utiliza el bus **I2C4** en el SoC Jetson AGX Thor.
 
 ### Conexión de hardware
 
-Conecta tu dispositivo I2C a la interfaz I2C en la placa carrier:
+Conecta tu dispositivo I2C a la interfaz I2C en la placa portadora:
 
 - Tierra → Tierra (Pin 1)
 - SDA → SDA (Pin 2)
@@ -392,7 +417,7 @@ El Robotics J601 proporciona interfaces GPIO digitales a través de dos conector
 
 | Pin # | Nombre de pin del módulo | Pin del módulo # | Uso/Descripción | Tipo/Dir |
 | --- | --- | --- | --- | --- |
-| 1 | - | - | Alimentación 3V3 | Alimentación |
+| 1 | - | - | Fuente de alimentación 3V3 | Alimentación |
 | 2 | SPI2_MISO | D62 | GPI_1_3V3 (Cambio de nivel de 1.8V a 3.3V) | Entrada, 3.3V |
 | 3 | GPIO64 | J6 | GPI_2_3V3 (Cambio de nivel de 1.8V a 3.3V) | Entrada, 3.3V |
 | 4 | GPIO65 | J7 | GPI_3_3V3 (Cambio de nivel de 1.8V a 3.3V) | Entrada, 3.3V |
@@ -403,7 +428,7 @@ El Robotics J601 proporciona interfaces GPIO digitales a través de dos conector
 
 | Pin # | Nombre de pin del módulo | Pin del módulo # | Uso/Descripción | Tipo/Dir |
 | --- | --- | --- | --- | --- |
-| 1 | - | - | Alimentación 3V3 | Alimentación |
+| 1 | - | - | Fuente de alimentación 3V3 | Alimentación |
 | 2 | GPIO13 | G7 | GPO_1_3V3 (Cambio de nivel de 1.8V a 3.3V) | Salida, 3.3V |
 | 3 | SPI2_CS0_N | D60 | GPO_2_3V3 (Cambio de nivel de 1.8V a 3.3V) | Salida, 3.3V |
 | 4 | SPI2_CLK | E61 | GPO_3_3V3 (Cambio de nivel de 1.8V a 3.3V) | Salida, 3.3V |
@@ -412,7 +437,7 @@ El Robotics J601 proporciona interfaces GPIO digitales a través de dos conector
 
 ### Conexión de hardware
 
-Conecta tu dispositivo GPIO al conector GPI o GPO en la placa carrier usando un cable GH-1.25:
+Conecta tu dispositivo GPIO al conector GPI o GPO en la placa portadora usando un cable GH-1.25:
 
 - VCC → 3V3 (Pin 1)
 - Señal → pin GPI/GPO (Pin 2–5)
@@ -488,7 +513,7 @@ CAN (Controller Area Network) es un estándar robusto de bus para vehículos que
 | CAN3 | J25 | Tierra | CAN3_L_ISO | CAN3_H_ISO | Alimentación 5V |
 
 :::info
-Las 4 interfaces CAN están aisladas. Cada conector proporciona una alimentación de 5V en el Pin 4.
+Las 4 interfaces CAN están aisladas. Cada conector proporciona una fuente de alimentación de 5V en el Pin 4.
 :::
 
 ### Control de la resistencia de terminación de 120Ω
@@ -587,7 +612,7 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
 :::info
 - `5AA` / `7DF` es el ID CAN
 - `##` indica una trama CAN FD
-- El dígito después de `##` es el indicador BRS (Bit Rate Switch): `1` = BRS activo
+- El dígito después de `##` es la bandera BRS (Bit Rate Switch): `1` = BRS activo
 - Lo siguiente es la carga útil de datos (hasta 128 caracteres hexadecimales para 64 bytes)
 :::
 
@@ -595,9 +620,9 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c2.png"/>
 </div>
 
-### Script de prueba CAN integral
+### Script de prueba integral de CAN
 
-El siguiente script realiza una prueba CAN FD completa que incluye verificación de dependencias, configuración de interfaces, verificación básica de comunicación y una prueba de estrés de 10 segundos.
+El siguiente script realiza una prueba completa de CAN FD que incluye verificación de dependencias, configuración de interfaces, verificación básica de comunicación y una prueba de estrés de 10 segundos.
 
 Crea el script de prueba:
 
@@ -730,7 +755,7 @@ chmod +x can_test.sh
 
 ## RS485
 
-La Carrier Board reComputer J601 incorpora un puerto RS-485 aislado dedicado expuesto a través del conector JST GH-1.25 de 4 pines J24. Las definiciones de pines son las siguientes:
+La Carrier Board reComputer J601 incorpora un puerto RS-485 aislado dedicado, expuesto mediante el conector JST GH-1.25 de 4 pines J24. Las definiciones de pines son las siguientes:
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/rs485-jstpin.png"/>
@@ -742,7 +767,7 @@ La Carrier Board reComputer J601 incorpora un puerto RS-485 aislado dedicado exp
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/jst485-c.png"/>
 </div>
 
-Aquí utilizamos un `usb-to-rs485` para realizar la prueba:
+Aquí usamos un `usb-to-rs485` para realizar la prueba:
 
 ```bash
 #[Jetson] Init UART: 115200 baud, 8N1, raw mode, no flow control.
@@ -802,12 +827,12 @@ Cambia el interruptor en la parte inferior de la placa al modo RS485 como se mue
 </div>
 
 :::tip
-Para el cableado RS485, conecta el `A/D+` del adaptador USB-RS485 al pin 2 del DB9 y `B/D-` al pin 1 del DB9. Algunos adaptadores USB-RS485 etiquetan A/B de forma inversa. Si el Jetson recibe bytes aleatorios mientras el PC no está enviando, intercambia A y B y prueba de nuevo.
+Para el cableado RS485, conecta el `A/D+` del adaptador USB-RS485 al pin 2 del DB9 y `B/D-` al pin 1 del DB9. Algunos adaptadores USB-RS485 etiquetan A/B de forma opuesta. Si el Jetson recibe bytes aleatorios mientras el PC no está enviando, intercambia A y B y prueba de nuevo.
 :::
 
 ### Prueba de comunicación
 
-Aquí utilizamos minicom para realizar la prueba：
+Aquí usamos minicom para realizar la prueba：
 
 ```bash
 # Set pin 6 on GPIO chip 3 to low level to enable the DB9 transceiver
@@ -834,7 +859,7 @@ Prueba que el PC envíe un mensaje a Jetson.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c1.png"/>
 </div>
 
-Dado que RS485 es un protocolo half-dúplex, para probar que Jetson puede enviar información al PC mediante RS485 es necesario activar el modo RS485.
+Dado que RS485 es un protocolo half-duplex, para probar que Jetson puede enviar información al PC mediante RS485, es necesario activar el modo RS485.
 - paso 1. Pulsa `Ctrl+A`
 - paso 2. Luego, pulsa `O` para abrir la opción de configuración.
 
@@ -877,7 +902,7 @@ Cambia el interruptor en la parte inferior de la placa al modo RS232 como se mue
 
 ### Prueba de comunicación
 
-Aquí utilizamos minicom para realizar la prueba：
+Aquí usamos minicom para realizar la prueba：
 
 ```bash
 # Set pin 6 on GPIO chip 3 to low level to enable the DB9 transceiver
@@ -941,7 +966,7 @@ Cambia el interruptor en la parte inferior de la placa al modo RS422 como se mue
 
 ### Prueba de comunicación
 
-Aquí utilizamos minicom para realizar la prueba：
+Aquí usamos minicom para realizar la prueba：
 
 ```bash
 # Set pin 6 on GPIO chip 3 to low level to enable the DB9 transceiver
@@ -1077,7 +1102,7 @@ La carrier board Robotics J601 incorpora **4 puertos Ethernet RJ45 10GbE** para 
 
 ### Instrucciones de uso
 
-Para probar la velocidad del puerto Ethernet, utiliza `iperf3` de la siguiente manera:
+Para probar la velocidad del puerto Ethernet, usa `iperf3` de la siguiente manera:
 
 **Prueba de velocidad de subida:**
 
@@ -1102,7 +1127,7 @@ iperf3 -c <server_ip> -B <bind_ip> -R
 :::info
 - `<server_ip>` es la dirección IP del servidor iperf3. El cliente se conectará a este servidor para realizar una prueba de ancho de banda.
 - `<bind_ip>` vincula la dirección IP local especificada como origen del tráfico de prueba.
-- La opción `-R` invierte la dirección de la prueba para probar la velocidad de descarga.
+- La bandera `-R` invierte la dirección de la prueba para probar la velocidad de descarga.
 :::
 
 ## M.2 Key E
@@ -1254,12 +1279,12 @@ AT+QGPS=1
 
 :::info
 - Si la respuesta es `OK`, el receptor GPS se ha iniciado correctamente.
-- Si la respuesta es `+CME ERROR: 549`, el GPS ya está habilitado, no es necesario habilitarlo de nuevo.
+- Si la respuesta es `+CME ERROR: 549`, el GPS ya está habilitado — no es necesario habilitarlo de nuevo.
 :::
 
 **Paso 3.** Sal de minicom presionando **Ctrl+A** y luego **X**, y selecciona **Yes** para salir.
 
-**Paso 4.** Una vez habilitado el GPS, los datos de los satélites se enviarán desde el puerto de datos GPS (normalmente `/dev/ttyUSB1`). Lee los datos NMEA en bruto:
+**Paso 4.** Una vez habilitado el GPS, los datos de los satélites se transmitirán desde el puerto de datos GPS (normalmente `/dev/ttyUSB1`). Lee los datos NMEA en bruto:
 
 ```bash
 sudo cat /dev/ttyUSB1
@@ -1284,7 +1309,7 @@ Asegúrate de tener una vista despejada del cielo para la adquisición de señal
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

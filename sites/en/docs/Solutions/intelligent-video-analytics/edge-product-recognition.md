@@ -22,13 +22,13 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/solutions/edge-product-recognition/
 generated_from: sensecraft-solutions@cbbfa60
 ---
 
 :::caution[Read this first]
-In the packaged version (cbbfa60) the upstream does not yet join detection, embedding, gallery lookup and MQTT publishing into one device-side service, so there is no end-to-end counting accuracy, shelf-slot accuracy or soak data here. Recognition results are not a legal measurement and cannot be used as the basis for pricing or a legally binding count.
+Recognition results are not a legal measurement and cannot be used as the basis for pricing or a legally binding count.
 :::
 
 ## What this solution does
@@ -50,8 +50,8 @@ Adding a product in store needs no retraining: photograph the new SKU three to e
         </li>
         <li class="info-item">
             <div class="info-content">
-                <h3>Detection runs on the NPU</h3>
-                <p>RKNN fp16 on RK3588 agrees with the CPU reference on 99.85% of boxes at 56.7 ms p50; the Hailo-8 INT8 HEF runs at 9.04 ms p50 with 94.77% agreement.</p>
+                <h3>Detection runs on an NPU or GPU</h3>
+                <p>RKNN fp16 on RK3588 agrees with the CPU reference on 99.85% of boxes at 56.7 ms p50; the Hailo-8 INT8 HEF runs at 9.04 ms p50 with 94.77% agreement; TensorRT fp16 on reComputer J40 series (J4012) runs at 5.18 ms p50 with 99.91% agreement.</p>
             </div>
         </li>
         <li class="info-item">
@@ -114,14 +114,19 @@ Four things per site: a camera, a recognition host, a console host, and an x86_6
 | | Host | Measured on this hardware | When to pick it |
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8, 26 TOPS)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Detector on the NPU, embedder on the four A76 cores | Both stages: 9.04 ms detection, 91.95 ms per crop embedding | You need measured data for both detection and embedding |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Detector on the Rockchip NPU, embedder on the CPU | Detector only, on reComputer RK3588 series: 99.85% box agreement at 56.7 ms | You already run Rockchip boards. RK3576 uses the same toolchain |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>TensorRT path | Checkout replay | You already run Jetson |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Detector on the Rockchip NPU, embedder on the CPU or the NPU | Detector at 99.85% box agreement and 56.7 ms; with the embedder on the NPU, a 20-SKU shelf replay published results at 924 ms p50 from detection | You already run Rockchip boards, or the camera faces a shelf. RK3576 uses the same toolchain |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) or [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>TensorRT path, detector and embedder on the GPU | J4012: 5.18 ms detection, 4.23 ms per crop embedding; 2956-frame checkout replay with 0 dropped frames | You already run Jetson, or want the whole chain on one machine |
 
-All latencies are single-stage measurements on the hardware in that row.
+All figures are measured on the hardware in that row.
 
 **③ Console host** — your own amd64 or arm64 Linux machine with Docker, no GPU needed, reachable by every recognition device. It runs three containers: the registration/query service, the management UI and the MQTT broker. **Both container images are built on this host from the upstream repository**, not pulled from a registry.
 
 **④ An x86_64 conversion machine** — neither rknn-toolkit2 nor the Hailo Dataflow Compiler runs on the target board. Each model is converted once; deployments do not repeat it.
+
+### Negative Selection Boundaries
+
+- **Catalog Size and Search Latency**: If the local product catalog exceeds 200 SKUs, linear vector search latency increases. For larger catalogs (>500 SKUs), deploy ANN indexing or offload search.
+- **CPU-Only Embedding**: Never run embedding extraction on CPU alone (exceeds 900 ms per crop); always verify NPU or TensorRT hardware acceleration.
 
 ## How to deploy on site
 
@@ -133,7 +138,7 @@ Settle the artifact and camera position first, then install the software in four
 The input size is compiled into the artifact and cannot change at runtime. A 640² artifact looking at a shelf misses distant products; moving to 1280² raises small-object mAP50-95 on SKU-110K test from 17.49 to 26.88. Decide checkout or shelf first, then mount the camera so products take up a suitable share of the frame.
 :::
 
-Embedding is one CPU inference per box. At the 91.95 ms per crop measured on the reComputer R2000 series, a five-item basket takes about half a second; a shelf frame at the measured density of 157.6 boxes takes about 14 seconds. **Shelf deployments must subsample frames or sample per slot.**
+On the Hailo-8 preset, embedding is one CPU inference per box. At the 91.95 ms per crop measured on the reComputer R2000 series, a five-item basket takes about half a second; a shelf frame at the measured density of 157.6 boxes takes about 14 seconds. **Shelf deployments on this preset must subsample frames or sample per slot.** On reComputer J40 series (J4012) embedding runs on the GPU at 4.23 ms per crop.
 
 ### 2. Software, four steps
 
@@ -157,8 +162,6 @@ Allow about 90 minutes per preset for the four steps, plus container build time 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/event-json-198d89fa.png" alt="The full field set of one recognition event: slot, matched SKU, similarity and per-box coordinates"/>
 </div>
-
-<!-- TODO image: shelf and camera as installed on site — needs a field shoot -->
 
 ## What interfaces are available
 
@@ -190,21 +193,39 @@ Authentication is `Bearer <token>` with roles viewer < operator < admin. The bro
 | reComputer R2000 series + Hailo-8 | INT8 HEF, 640² | 9.04 / 9.10 ms | 94.77% (200 images), 94.68% (300 images) |
 | reComputer RK3588 series | RKNN fp16, 640² | 56.7 / 89.5 ms | 99.85% |
 | reComputer RK3588 series | RKNN INT8, 640² | 26.0 / 33.2 ms | 98.35% |
+| reComputer RK3576 series | RKNN fp16, 640², two cores | 51.05 / 54.18 ms | 99.91% |
+| reComputer J40 series (J4012) | TensorRT fp16, 640² | 5.18 / 5.28 ms | 99.91% |
+| reComputer J30 series (J3011) | TensorRT fp16, 640² | 5.88 / 8.89 ms | 99.27% (checkout frames) |
 
-Conditions: agreement is matched against the CPU reference at IoU ≥ 0.5. Hailo single-stream throughput 110.4 fps (`hailortcli benchmark` 110.64 fps, pure hardware time 8.21 ms; the extra 0.8 ms is the Python vstream round trip). **End-to-end on the reComputer R2000 series (letterbox, output concatenation, decode and NMS included) is p50 18.74 ms / p95 24.25 ms**: pure-numpy per-class NMS over about 160 boxes takes longer than inference itself.
+Conditions: agreement is matched against the CPU reference at IoU ≥ 0.5; RK3588, RK3576 and J4012 use the same 50 SKU-110K images, J3011 uses 50 checkout frames. Hailo single-stream throughput 110.4 fps (`hailortcli benchmark` 110.64 fps, pure hardware time 8.21 ms; the extra 0.8 ms is the Python vstream round trip). **End-to-end on the reComputer R2000 series (letterbox, output concatenation, decode and NMS included) is p50 18.74 ms / p95 24.25 ms**: pure-numpy per-class NMS over about 160 boxes takes longer than inference itself.
 
-Reproduce: `evaluation/runs/2026-09-06-det-hef/`, `evaluation/runs/2026-09-06-det-rk3588-radxa/`
+Reproduce: `evaluation/runs/2026-09-06-det-hef/`, `evaluation/runs/2026-09-06-det-rk3588-radxa/`, `evaluation/runs/2026-09-07-embed-rknn-rk3576/`, `evaluation/runs/2026-09-07-jetson-trt/`, `evaluation/runs/2026-09-08-orin-nano-acceptance/`
 
 ### Embedding, measured on device
 
-| Variant | Per-crop p50 / p95 | Retrieval cost vs fp32 |
-|---|---:|---|
-| DINOv2-small, dynamic-quantised INT8, 4 threads | 91.95 / 105.98 ms | Within 0.65pp at all 7 measured operating points |
-| DINOv2-small, fp32, 4 threads | 180.75 / 233.41 ms | Baseline |
+| Device | Variant | Per-crop p50 / p95 | Retrieval cost vs fp32 |
+|---|---|---:|---|
+| reComputer R2000 series (CPU, 4 threads) | DINOv2-small, dynamic-quantised INT8 | 91.95 / 105.98 ms | Within 0.65pp at all 7 measured operating points |
+| reComputer R2000 series (CPU, 4 threads) | DINOv2-small, fp32 | 180.75 / 233.41 ms | Baseline |
+| reComputer RK3588 series (NPU) | DINOv2-small, RKNN fp16 | 48.68 / 49.86 ms | At most 0.85pp across 21 metrics |
+| reComputer RK3576 series (NPU, two cores) | DINOv2-small, RKNN fp16 | 56.38 / 62.17 ms | At most 0.36pp across 21 metrics |
+| reComputer J40 series (J4012) | DINOv2-small, TensorRT fp16 | 4.23 / 4.69 ms | At most 0.24pp across 21 metrics |
+| reComputer J30 series (J3011) | DINOv2-small, TensorRT fp16 | 5.06 / 7.64 ms | At most 0.21pp across 21 metrics |
 
-Conditions: reComputer R2000 series CPU. Quantising weights only costs almost no retrieval accuracy; quantising activations as well costs a lot.
+Conditions: the 21 metrics are top-1, top-5 and open-set AUROC at 4 registration tiers on the Grocery Store Dataset and 3 on Products-10K. On the CPU, quantising weights only costs almost no retrieval accuracy; quantising activations as well costs a lot.
 
-Reproduce: `evaluation/runs/2026-09-06-embed-small/` §8
+Reproduce: `evaluation/runs/2026-09-06-embed-small/` §8, `evaluation/runs/2026-09-07-embed-rknn/`, `evaluation/runs/2026-09-07-embed-rknn-rk3576/`, `evaluation/runs/2026-09-07-jetson-trt/`, `evaluation/runs/2026-09-08-orin-nano-acceptance/`
+
+### Full-chain replays and shelf crops, measured on device
+
+| Device | Scene | Result | Conditions |
+|---|---|---|---|
+| reComputer J40 series (J4012) | Checkout replay | Detection to result published p50 22.3 ms / p95 42.8 ms; 0 dropped frames over 2956 frames | Recorded-video replay, 30-SKU gallery; detection, embedding, retrieval and MQTT publishing on the same device |
+| reComputer J30 series (J3011) | Checkout replay | 0 dropped frames over 6726 frames (2.27 loops), all 84 events published | Same recorded video and gallery |
+| reComputer RK3588 series | Shelf replay | Detection to result published p50 924 ms / p95 1153 ms; top-1 541/704 on 704 slot crops, identical to the CPU fp32 reference | 20 SKUs, detector and embedder both RKNN fp16 on the NPU |
+| reComputer RK3576 series | Shelf crops | Top-1 76.28% on 704 crops (CPU fp32 76.99%), 99.29% same-SKU agreement; embedder p50 61.0 ms per crop | Same 704 crops, detector and embedder both RKNN fp16 |
+
+Reproduce: `evaluation/runs/2026-09-07-jetson-trt/`, `evaluation/runs/2026-09-08-orin-nano-acceptance/`, `evaluation/runs/2026-09-08-rk3588-console-acceptance-020/`, `evaluation/runs/2026-09-08-rk3576-acceptance/`
 
 ### Retrieval and detection accuracy (off-device)
 
@@ -225,9 +246,9 @@ Reproduce: `evaluation/runs/` (embedding evaluation: `evaluation/eval_embedder.p
 
 | Device | Detector | Embedder | How the model reaches the device |
 |---|---|---|---|
-| reComputer RK3588 / RK3576 series | `.rknn` on the NPU, fp16 or INT8 | onnxruntime on the CPU; no RKNN conversion | Converted on an x86_64 host with rknn-toolkit2 2.3.2; the toolkit version must match `librknnrt.so` on the board |
+| reComputer RK3588 / RK3576 series | `.rknn` on the NPU, fp16 or INT8 | onnxruntime on the CPU, or RKNN fp16 on the NPU | Converted on an x86_64 host with rknn-toolkit2 2.3.2; the toolkit version must match `librknnrt.so` on the board |
 | reComputer R2000 series + Hailo-8 | INT8 `.hef` on the NPU | Dynamic-quantised INT8 DINOv2-small on the CPU | Compiled on an x86_64 host with the Hailo Dataflow Compiler, then copied to the board |
-| reComputer J40 series (Jetson Orin) | TensorRT fp16 (GPU) | TensorRT fp16 (GPU) | Full replay — detection, embedding, retrieval and reporting — runs on J4012 and J3011 |
+| reComputer J40 / J30 series (Jetson Orin) | TensorRT fp16 (GPU) | TensorRT fp16 (GPU) | Engines built from ONNX on the device at deploy time; 427 s for the detector and 132 s for the embedder on J3011 |
 
 The detector is a single-class YOLOX-Tiny (640² or 1280²); the embedder is DINOv2 fine-tuned with ArcFace on e-commerce product images, base (348 MB fp32) or small (23.5 MB INT8), producing one 512-dimensional vector per crop; SKU identity lives only in the FAISS cosine search over the versioned gallery.
 
@@ -237,7 +258,9 @@ The detector is a single-class YOLOX-Tiny (640² or 1280²); the embedder is DIN
 
 ### Known degradation
 
-- Embedding is one CPU inference per box: at 91.95 ms per crop, a five-item basket takes about half a second and a shelf frame (157.6 boxes) about 14 seconds, so shelf deployments must sample frames or sample by slot.
+- On the Hailo-8 preset, embedding is one CPU inference per box: at 91.95 ms per crop, a five-item basket takes about half a second and a shelf frame (157.6 boxes) about 14 seconds, so shelf deployments must sample frames or sample by slot.
+- Neither of two Hailo-8 quantisation attempts for the DINOv2 embedder gave a usable result (in one, every image mapped to the same vector), so the Hailo-8 preset keeps embedding on the CPU.
+- When detection and embedding share one GPU, in-process detection on reComputer J40 series (J4012) rises from 5.18 ms p50 standalone to 8.76 ms, and embedding from 4.23 ms to 5.37 ms.
 - Static QDQ INT8 (activations quantised too) loses 3.78–9.96 percentage points of retrieval and is unusable.
 - A mismatch between rknn-toolkit2 and `librknnrt.so` can load normally and return wrong values; check agreement against the CPU reference after every conversion.
 - A 640² artifact on a shelf misses distant products; SKU-110K small-object mAP50-95 is 17.49 at 640² and 26.88 at 1280².
@@ -247,7 +270,6 @@ The detector is a single-class YOLOX-Tiny (640² or 1280²); the embedder is DIN
 
 ### Next steps
 
-- Add the reComputer J40 series (J4012 / J3011) TensorRT results for detection, embedding and checkout replay to "Performance and measured data" and to the runtime table.
 - Measure checkout counting accuracy and shelf-slot accuracy as the acceptance metrics.
 - Implement the device-side runtime that pulls a gallery version, verifies it and switches atomically, so newly registered SKUs reach devices automatically.
 

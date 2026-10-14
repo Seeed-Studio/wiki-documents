@@ -1,6 +1,6 @@
 ---
 description: エッジ廃棄物分別の構築、出力契約、実測境界と実装詳細
-title: エッジ廃棄物分別：素材クラス、4分類、MQTT
+title: 'エッジ廃棄物分別：素材クラス、4分類、MQTT'
 keywords:
   - waste sorting
   - waste classification edge AI
@@ -21,7 +21,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-waste-sorting/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -53,7 +53,7 @@ generated_from: sensecraft-solutions@cbbfa60
             </div>
             <div class="info-content">
                 <h3>機器はすぐに使えます</h3>
-                <p>アプリケーションパッケージを入れれば動作し、初回導入は約 35 分です。8 クラス top-1 0.8877、4 分類 top-1 0.9500（検証画像 7417 枚、CPU onnxruntime でのオフライン基準値。性能と実測データを参照）。</p>
+                <p>アプリケーションパッケージを入れれば動作し、初回導入は約 35 分です。reComputer R2000 シリーズ（R2035-12、Hailo-8）で検証画像 7417 枚を実測し、素材 top-1 0.8889、4 分類 top-1 0.9507 です（性能と実測データを参照）。</p>
             </div>
         </li>
         <li class="info-item">
@@ -100,12 +100,9 @@ generated_from: sensecraft-solutions@cbbfa60
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_waste_sorting/mqtt-events-terminal-b19bfb30.png" alt="Consecutive classification events on waste/recamera-cvi/results, each carrying the eight-class result, the four-way mapping and inference time"/>
 </div>
 
-<!-- TODO image: the drop point as installed (camera mounted above the bin) — needs a field shoot -->
-<!-- TODO image: the local panel on 8080, MJPEG preview and top-3 list — needs a screenshot from a deployed device -->
-
 ## 必要な機器
 
-投入口に必要なのは、トリガー、カメラ、ホストの 3 つです。
+投入口に必要なのは、トリガー、カメラ、ホストの 3 つです。reCamera または reCamera Pro を選ぶ場合、カメラと分類ホストは同じ 1 台です。
 
 **① トリガー** — ホストにつないだボタン、ポート 8080 の `POST /trigger`、または画面内の動き。3 つとも同じ 800 ms のデバウンスを共有し、同じイベントを生成します。区別は payload の `trigger` フィールドで行います。
 
@@ -113,17 +110,25 @@ generated_from: sensecraft-solutions@cbbfa60
 
 **③ 分類ホスト** — 使えるモデル経路を決めます。
 
-| 分類ホスト | アクセラレータ | 配備時の分類器 | オープン語彙トラック | 選択する場面 |
-|---|---|---|---|---|
-| reComputer J3011 (Jetson Orin Nano 8GB) | Orin GPU | EfficientNet-Lite0 224²、TensorRT FP16 | 提供なし | 投入口 1 か所、ベースライン分類器のみ |
-| reComputer J4012 (Jetson Orin NX 16GB) | Orin GPU | EfficientNet-Lite0 224²、TensorRT FP16 | 提供（提供する唯一のデバイスクラス） | 再学習なしで後から品目クラスを追加したい場合 |
-| reComputer R2000 シリーズ (Hailo-8) | Hailo-8 | EfficientNet-Lite0 224²、INT8 HEF | なし | Hailo-8 ハードウェアを使う場合。HEF はデバイス外でコンパイルし、導入時にダウンロード |
+| | 分類ホスト | アクセラレータ | 配備時の分類器 | オープン語彙トラック | 選択する場面 |
+|---|---|---|---|---|---|
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>エントリーAIホスト | Orin GPU | EfficientNet-Lite0 224²、TensorRT FP16 | 提供なし | 投入口 1 か所、ベースライン分類器のみ |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>高性能AIホスト | Orin GPU | EfficientNet-Lite0 224²、TensorRT FP16 | 提供（提供する唯一のデバイスクラス） | 再学習なしで後から品目クラスを追加したい場合 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>ファンレス産業用筐体 | Hailo-8 | EfficientNet-Lite0 224²、INT8 HEF | 提供なし | カメラが既にあり、制御盤に設置する場合。HEF はデバイス外でコンパイルし、導入時にダウンロード。Hailo ランタイムのバージョンを揃える必要があります |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 シリーズ](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>高コスパ産業用ボード | RK3588 NPU | EfficientNet-Lite0 224²、INT8 | 提供なし | カメラが既にあり、ハードウェアコストを最小にしたい場合。ごみ箱の筐体やキオスクに設置。モデルはデバイス外で変換し、デバイス上で engine を構築しません |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002 (SG2002)](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>オールインワンAIカメラ | カメラ内蔵 TPU | EfficientNet-Lite0 224²、BF16 | 提供なし | 投入口にまだカメラがなく、ハードウェアコストを最小にしたい場合。分類器はカメラ上で動き、別途ホストは不要 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/0/100021896main_4.jpg" alt="reCamera Pro" width="110" /> | [reCamera Pro](https://www.seeedstudio.com/reCamera-Pro-p-5984.html)<br/>高性能オールインワンAIカメラ | カメラ内蔵 NPU (RV1126B) | EfficientNet-Lite0 224²、INT8 | 提供なし | まだカメラがなく、コストが最優先ではない場合。分類器はカメラ上で動きます |
 
 両 reComputer モデルには、同じモジュールとランタイムのファンレス産業用筐体（reComputer Industrial J3011 / J4012）があり、制御盤や屋外筐体に取り付けられます。
 
 オープン語彙の列はデバイスカタログのリソース説明によるものです。SigLIP 2 視覚タワーは 371 MB の ONNX で、CPU onnxruntime のオフライン基準値で画像 1 枚あたり p50 66.93 ms かかり、アクセラレータが必要です。
 
 **④ その他** — MQTT コンシューマ（パッケージは 1883 で待ち受けるローカル broker を同梱）。フタや仕分け表示灯を使う場合は、駆動ハードウェアと GPIO コールバックの統合コードが必要です。出荷時はどのピンにも割り当てていません。主処理チェーンにインターネット接続は不要です。
+
+### 選定における制約・非推奨条件
+
+- **オープンボキャブラリ対応**：再学習なしで新品目を動的追加する必要がある場合は J3011（非対応）を避け、J4012（16GB）を選定してください。
+- **コンベアのモーションブラー**：コンベア速度が 1.5 m/s を超える場合、ローリングシャッターカメラはブレが生じるため、グローバルシャッターカメラを採用してください。
 
 ## 現場での導入方法
 
@@ -145,10 +150,10 @@ generated_from: sensecraft-solutions@cbbfa60
     </a>
 </div><br />
 
-どちらのプリセットも手順は同じです：
+プリセットは `Camera + reComputer J30 / J40 (Orin)`、`Camera + reComputer R2000 series (R2035-12, Hailo-8)`、`Camera + reComputer RK3588`、`reCamera (SG2002)`、`reCamera Pro` の 5 つです。以下は Orin と Hailo-8 の 2 プリセットの手順で、ほかの 3 プリセットの手順はデプロイページにあります。
 
-1. **プリセットとホストを選びます。** `Camera + reComputer J30 / J40 (Orin)` または `Camera + reComputer R2000 series (Hailo-8)`。
-2. **ごみ分別ランタイムを配備します**（必須）。Orin では配備中にデバイス上で TensorRT engine を構築します。engine は GPU アーキテクチャと TensorRT バージョンに紐づくため、事前にコンパイルして配布することはできません。Hailo では配備手順が 3 つの Hailo ABI チェックを行った後、HEF をダウンロードします。
+1. **プリセットとホストを選びます。** `Camera + reComputer J30 / J40 (Orin)` または `Camera + reComputer R2000 series (R2035-12, Hailo-8)`。
+2. **ごみ分別ランタイムを配備します**（必須）。Orin では配備中にデバイス上で TensorRT engine を構築します（J4012 で 68 秒）。engine は GPU アーキテクチャと TensorRT バージョンに紐づくため、事前にコンパイルして配布することはできません。Hailo では配備手順が 3 つの Hailo ABI チェックを行った後、HEF をダウンロードします。
 3. **リアルタイムの分類を確認します**（任意）。ポート 8080 のローカルパネルに MJPEG プレビュー、ヘルスカウンタ、最近の結果の top3 が表示されます。何かを接続する前に、ここで画角を確認してください。
 4. **トリガーを接続し、分類を 1 回確認します**（必須）。ボタン、HTTP 呼び出し、動体イベントのいずれか 1 回で、`waste/<stream-id>/results` にちょうど 1 件の MQTT メッセージが出て、`category` と `confidence` が `top3[0]` と一致することを確認します。
 5. **オープン語彙トラックに切り替えます**（任意、Orin のみ）。配備時に `model.track: open_vocab` を設定します。
@@ -174,6 +179,31 @@ generated_from: sensecraft-solutions@cbbfa60
 - **画像は payload に入りません。** `image_ref.kind` は `none`、`local`、`object_store` のいずれかです。payload に base64 の画像データが入っていれば契約違反で、publish 前に拒否されます。
 - **`category` は常に `top3[0]`、`confidence` は常に `top3[0].confidence` と等しくなります。** どちらも publish 前に確認し、不合格の payload はカウントして破棄するため、受信側で突き合わせる必要はありません。
 
+```json
+{
+  "type": "waste_classification",
+  "version": "1.0.0",
+  "device": "waste-sorting-station-01",
+  "stream_id": "cam_inlet_01",
+  "timestamp": 1729000000.789,
+  "trigger": "sensor",
+  "inference_time_ms": 3.53,
+  "pipeline_ms": 4.12,
+  "category": {
+    "class_id": 3,
+    "class_name": "plastic_bottle",
+    "china_category": "recyclable",
+    "china_category_zh": "可回收物"
+  },
+  "confidence": 0.942,
+  "top3": [
+    {"class_id": 3, "class_name": "plastic_bottle", "confidence": 0.942},
+    {"class_id": 5, "class_name": "glass_bottle", "confidence": 0.038},
+    {"class_id": 1, "class_name": "metal_can", "confidence": 0.012}
+  ]
+}
+```
+
 同梱の MQTT broker は匿名接続を許可しています。ローカルでの立ち上げ用で、本番では認証付きの broker に切り替えてください。
 
 ## 性能と実測データ {#measured-data}
@@ -184,26 +214,37 @@ generated_from: sensecraft-solutions@cbbfa60
     </a>
 </div><br />
 
-### デバイス実測：reComputer RK3588 シリーズ
+### デバイス実測：ベースライン分類器（EfficientNet-Lite0）
 
-| モデル / 精度 | 遅延 p50 / p95（mean） | CPU 参照値との一致率 | 正解に対する精度 | 条件 |
-|---|---|---|---|---|
-| **EfficientNet-Lite0（m1c）、fp16** | 7.906 ms / 8.129 ms（7.041 ms） | 1.00 | 0.78 | val 画像 50 枚 |
-| EfficientNet-Lite0（m1c）、int8 calib64+normal | 3.780 ms / 3.984 ms（3.807 ms） | 0.90 | 0.72 | 校正 63 枚、`normal` アルゴリズム |
-| EfficientNet-Lite0（m1c）、int8 calib64+mmse | 3.785 ms / 3.981 ms（3.808 ms） | 0.98 | 0.78 | 校正 63 枚、`mmse` アルゴリズム |
-| EfficientNet-Lite0（m1c）、int8 calib256+normal | 3.766 ms / 3.920 ms（3.500 ms） | 0.90 | 0.72 | 校正 252 枚、`normal` アルゴリズム |
-| **EfficientNet-Lite0（m1c）、int8 calib256+mmse** — 推奨 | 3.803 ms / 4.003 ms（3.834 ms） | **1.00** | **0.78** | 校正 252 枚、`mmse`。一致率と精度は fp16 と同等で、**52% 高速** |
-| SigLIP 2 視覚タワー、fp16 | 169.4 ms / 170.5 ms | 埋め込みコサイン mean **0.999617**、min 0.998841 | — | 191 MB の `.rknn` |
+| デバイス | 精度 | 検証画像 | 素材 top-1 | 4 分類 top-1 | 同じ画像での CPU fp32 との差 | 純推論 p50 / p95 |
+|---|---|---:|---:|---:|---:|---|
+| reComputer R2000 シリーズ（R2035-12）+ Hailo-8 | INT8（uint8 入力 HEF） | 7417 | **0.8889** | **0.9507** | +0.12 pp | 3.166 ms / 3.249 ms |
+| reComputer RK3588 シリーズ | INT8（calib256+mmse） | 7417 | **0.8882** | 0.9507 | +0.05 pp | 3.165 ms / 3.857 ms |
+| reComputer RK3588 シリーズ | fp16 | 7417 | 0.8882 | 0.9505 | +0.05 pp | 5.962 ms / 12.566 ms |
+| reCamera Pro（RV1126B NPU） | INT8 | 1060 | 0.8764 | 0.9566 | +0.19 pp | 5.824 ms / 6.047 ms |
+| reCamera（SG2002 TPU） | BF16 | 1060 | 0.8792 | 0.9566 | +0.47 pp | 24.276 ms / 24.323 ms |
 
-条件：rknn-toolkit2 2.3.2 で変換、librknnrt 2.3.2、`core_mask=AUTO`、per-channel 量子化。`mmse` の変換時間は `normal` の 40–90 倍（校正 256 枚で 17.3 分対 11.5 秒）ですが、変換時に一度かかるだけで実行時には影響しません。
+条件：純推論で、画像取得と前処理を含まず、単一ストリームで連続実行しています。前処理は短辺 256 → 中央クロップ 224 で、正規化はモデルに組み込まれ、デバイスには uint8 を渡します。7417 枚は検証セット全体、1060 枚は 7 枚ごとに 1 枚を取ったサブセットで、このサブセットでの CPU fp32 top-1 は 0.8745（全体では 0.8877）です。画像セットをまたいで top-1 を比べるときは「CPU fp32 との差」の列を見てください。reCamera Pro はカメラ内蔵アプリケーションを停止した状態で測定しました。reCamera のピーク常駐メモリは 11.6 MB です。
 
-再現：`solutions/edge_waste_sorting/evaluation/runs/2026-09-06-m1c-rk3588-radxa`
+- 2 台の NPU ホストの p50 は同じ（3.2 ms）です。Hailo-8 は p95 が p50 より 0.08 ms 高いだけで、RK3588 INT8 では 0.69 ms 高くなります。
+- RK3588 では INT8 と fp16 の素材 top-1 が同じで、INT8 は 1.9 倍高速です。INT8 は校正画像 252 枚、`mmse` アルゴリズム、per-channel 量子化を使います。50 枚のサンプルでは、CPU との一致率は `normal` が 0.90、`mmse` が 0.98–1.00 でした。`mmse` の変換時間は `normal` の 40–90 倍（校正 256 枚で 17.3 分対 11.5 秒）ですが、変換時に一度かかるだけです。
+- Hailo-8 の HEF は DFC 3.31.0、`optimization_level=2`（量子化を考慮した微調整）でコンパイルしています。以前の `optimization_level=1` の HEF は CPU fp32 より 2.40 pp 低く、現在の HEF ではこの差はなくなりました。
+- reCamera Pro では INT8 が fp16 の 2.9 倍、reCamera の 4.2 倍の速度です。同じ 1060 枚で INT8、fp16、CPU fp32 の差は 0.2 pp 未満です。
 
-reComputer RK3576 シリーズでは SigLIP 2 視覚タワーと置き換え済みの MobileNetV3-Small だけを実行しました。SigLIP 2 視覚タワー fp16 は p50 152.51 ms / p95 176.59 ms、埋め込みコサイン mean **0.99965**、min 0.99900 です。
+再現：`evaluation/runs/2026-09-07-hailo-quant-tuning`、`evaluation/runs/2026-09-07-devices/results-rk3588.md`、`evaluation/runs/2026-09-06-m1c-rk3588-radxa`、`evaluation/runs/2026-09-07-recamera-pro`、`evaluation/runs/2026-09-07-devices/results-recamera-sg2002.md`
 
-再現：`evaluation/runs/2026-09-06-rk3576-cat`
+### デバイス実測：Orin の engine 構築とトリガーから結果まで
 
-### ベースライン分類器の精度：EfficientNet-Lite0（m1c、出荷版）
+| 項目 | 結果 | デバイス | 条件 |
+|---|---|---|---|
+| TensorRT engine の構築 | 68 秒 / 72 秒 | reComputer J40 シリーズ（J4012）/ J30 シリーズ（J3011） | FP16、配備時にデバイス上で構築 |
+| トリガーから結果まで | **4.122 ms** | reComputer J40 シリーズ（J4012） | `POST /trigger` 1 回に対応する MQTT イベントの `pipeline_ms`。うち推論 3.533 ms |
+| 純推論 p50 / p95 | 0.992 ms / 1.265 ms | reComputer J40 シリーズ（J4012） | 配備に使う engine、検証サブセット 1060 枚、単一ストリームで連続実行 |
+| 素材 top-1 | 0.8755、CPU との一致率 99.91% | reComputer J40 シリーズ（J4012）。J30 シリーズ（J3011）で再測定しビット単位で一致 | 同じ 1060 枚のサブセット、CPU fp32 は 0.8745 |
+
+再現：`evaluation/runs/2026-09-08-orin-nx-acceptance`、`evaluation/runs/2026-09-08-orin-nx-acceptance-2`、`evaluation/runs/2026-09-08-orin-nano-acceptance`
+
+### ベースライン分類器：CPU 参照精度
 
 | 指標 | 値 | 条件 |
 |---|---:|---|
@@ -215,11 +256,10 @@ reComputer RK3576 シリーズでは SigLIP 2 視覚タワーと置き換え済�
 | 画像 1 枚あたりの推論遅延、CPU | mean 16.796 ms / p50 14.724 ms / p95 28.718 ms | `session.run` のみ、CPU のオフライン基準値、batch 1。デバイスの指標ではありません |
 | 確信度 0.5 未満の画像 | 318 枚（4.3%） | val |
 | ORT PTQ INT8 と fp32 の一致率 | 0.965 | val 画像 200 枚、per-channel + MinMax、崩壊なし |
-| Hailo DFC エミュレータ INT8 と CPU の top-1 一致率 | 0.890 | val 画像 200 枚。正解に対する精度 0.755（同じ画像で CPU 0.795）。出荷 HEF より前のビルドで、ボード上の遅延は含みません |
 
 4 分類 top-1（0.9500）が素材 top-1（0.8877）より高いのは、glass、metal、plastic 間の混同がすべて資源ごみに入るためです。4 分類だけを見ると素材の判別力を過大に評価します。
 
-再現：`evaluation/runs/2026-09-06-m1c-cpu`、`evaluation/runs/2026-09-06-m1c-hef`
+再現：`evaluation/runs/2026-09-06-m1c-cpu`
 
 ### オープン語彙トラック：SigLIP 2 ViT-B/16
 
@@ -253,6 +293,15 @@ reComputer RK3576 シリーズでは SigLIP 2 視覚タワーと置き換え済�
 
 再現：`evaluation/runs/2026-09-05-w1-cpu`
 
+SigLIP 2 視覚タワーの Rockchip NPU での実測です（fp16、rknn-toolkit2 / librknnrt 2.3.2。RK3588 のモデルは 191 MB の `.rknn`）：
+
+| デバイス | 画像 1 枚あたり p50 / p95 | CPU との埋め込みコサイン mean / min |
+|---|---|---|
+| reComputer RK3588 シリーズ | 169.4 ms / 170.5 ms | 0.999617 / 0.998841 |
+| reComputer RK3576 シリーズ | 152.51 ms / 176.59 ms | 0.99965 / 0.99900 |
+
+再現：`evaluation/runs/2026-09-06-m1c-rk3588-radxa`、`evaluation/runs/2026-09-06-rk3576-cat`
+
 ### 配備サイズ
 
 | 項目 | サイズ |
@@ -267,8 +316,10 @@ reComputer RK3576 シリーズでは SigLIP 2 視覚タワーと置き換え済�
 |---|---|---|---|---|
 | reComputer J30 / J40 シリーズ | EfficientNet-Lite0 224² | FP16 | TensorRT | 配備時にデバイス上で engine を構築します。GPU アーキテクチャと TensorRT バージョンに紐づくため、事前コンパイルして配布できません |
 | reComputer J40 シリーズ（任意のオープン語彙トラック） | SigLIP 2 ViT-B/16 視覚タワー + 固定テキストプロトタイプ | — | — | `model.track: open_vocab` |
-| reComputer R2000 シリーズ + Hailo-8 | EfficientNet-Lite0 224² | INT8（uint8 HEF、`optimization_level=2`） | HailoRT 4.21.0 | HEF はデバイス外で DFC 3.31.0 によりコンパイルし、配備時にダウンロードします |
+| reComputer R2000 シリーズ + Hailo-8 | EfficientNet-Lite0 224² | INT8（uint8 入力、正規化は HEF 内、`optimization_level=2`） | HailoRT 4.21.0 | HEF はデバイス外で DFC 3.31.0 によりコンパイルし、配備時にダウンロードします |
 | reComputer RK3588 シリーズ | EfficientNet-Lite0 224² | INT8（calib256+mmse） | librknnrt 2.3.2 | デバイス外で rknn-toolkit2 2.3.2 により変換します |
+| reCamera Pro | EfficientNet-Lite0 224² | INT8 | カメラの NPU（RV1126B）、RKNN | デバイス外で rknn-toolkit2 2.3.2 により変換し、配備時にカメラへインストールします |
+| reCamera（SG2002） | EfficientNet-Lite0 224² | BF16 | カメラの TPU、cvimodel | デバイス外で TPU-MLIR により変換し、配備時にカメラへインストールします |
 
 - トリガーのデバウンス：**800 ms**。前回の処理中に届いたトリガーは統合され、キューには入りません
 - 連続モード：top-1 が **3 フレーム**連続で同じときだけ送信します。トリガーモードは 1 回の撮影で 1 つの答えです
@@ -284,10 +335,6 @@ reComputer RK3576 シリーズでは SigLIP 2 視覚タワーと置き換え済�
 - 置き換え済みの MobileNetV3-Small は 3 つのエッジ経路すべてで INT8 が崩壊しました。Hailo DFC エミュレータの一致率 0.115、reComputer RK3576 シリーズ 0.10、reComputer RK3588 シリーズ 0.22（fp16 は 0.98–1.00）で、そのためベースラインを EfficientNet-Lite0 に変更しました。RK3588 の INT8 の結果は RK3576 にはそのまま当てはまりません。
 - SigLIP 2 視覚タワーは Hailo-8 向けの INT8 量子化に失敗し（`hailo optimize` が `ne_activation_mul_and_add78` 層でエラー）、HEF はありません。オープン語彙トラックは reComputer R2000 シリーズでは動きません。
 - どちらのデータセットも単品の写真（TrashNet は白い背景板、GC3 は物体が中心からずれ、よく隠れています）で、濡れた、潰れた、積み重なった、逆光の、一部が袋に入ったごみは含みません。実際の投入口での精度は表の数値より下がります。
-
-### 次のステップ
-
-- reComputer R2000 シリーズ（R2035-12、Hailo-8）での検証画像 7417 枚全体のマテリアル判定と 4 分類の実測、および reComputer J40 シリーズ（J4012）でのトリガーから結果までの遅延と engine 構築時間を「性能と実測データ」に追加します。
 
 ## データと素材の出典
 

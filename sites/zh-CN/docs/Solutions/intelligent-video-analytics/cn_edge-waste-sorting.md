@@ -21,7 +21,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-waste-sorting/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -53,7 +53,7 @@ generated_from: sensecraft-solutions@cbbfa60
             </div>
             <div class="info-content">
                 <h3>设备开箱即用</h3>
-                <p>装好应用包即可运行，首次部署约 35 分钟。八类 top-1 0.8877、四分类 top-1 0.9500（7417 张验证图，CPU onnxruntime 离线基准，见性能与实测数据）。</p>
+                <p>装好应用包即可运行，首次部署约 35 分钟。reComputer R2000 系列（R2035-12，Hailo-8）在 7417 张验证图上实测物料 top-1 0.8889、四分类 top-1 0.9507（见性能与实测数据）。</p>
             </div>
         </li>
         <li class="info-item">
@@ -100,12 +100,9 @@ generated_from: sensecraft-solutions@cbbfa60
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_waste_sorting/mqtt-events-terminal-b19bfb30.png" alt="订阅 waste/recamera-cvi/results 抓到的连续分类事件，每条含八类结果、四分类映射与推理耗时"/>
 </div>
 
-<!-- TODO 图：投放口实景照（相机装在投放区上方的现场安装照）——需现场拍 -->
-<!-- TODO 图：本地面板 8080 的 MJPEG 预览与 top3 列表截图——需在已部署设备上截 -->
-
 ## 需要哪些硬件
 
-投放点上三样东西：触发源、相机、主机。
+投放点上三样东西：触发源、相机、主机。选 reCamera 或 reCamera Pro 时，相机与分类主机是同一台设备。
 
 **① 触发** —— 接在主机上的按钮、8080 端口上的 `POST /trigger`，或画面里的移动。三者共用同一个 800 ms 去抖，产生同样的事件，用 payload 里的 `trigger` 字段区分。
 
@@ -113,17 +110,25 @@ generated_from: sensecraft-solutions@cbbfa60
 
 **③ 分类主机** —— 决定能用哪几条模型路径。
 
-| 分类主机 | 加速器 | 当前下发的分类器 | 开放词汇 track | 什么时候选它 |
-|---|---|---|---|---|
-| reComputer J3011（Jetson Orin Nano 8GB） | Orin GPU | EfficientNet-Lite0 224²，TensorRT FP16 | 不提供 | 单个投放点、只跑基线分类器 |
-| reComputer J4012（Jetson Orin NX 16GB） | Orin GPU | EfficientNet-Lite0 224²，TensorRT FP16 | 提供（唯一提供它的设备类别） | 以后要在不重训的前提下加物品类别 |
-| reComputer R2000 系列（Hailo-8） | Hailo-8 | EfficientNet-Lite0 224²，INT8 HEF | 无 | 已有或要用 Hailo-8 硬件；HEF 在设备外编译，部署时下载 |
+| | 分类主机 | 加速器 | 当前下发的分类器 | 开放词汇 track | 什么时候选它 |
+|---|---|---|---|---|---|
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011（Jetson Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>基础边缘计算主机 | Orin GPU | EfficientNet-Lite0 224²，TensorRT FP16 | 不提供 | 单个投放点、只跑基线分类器 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012（Jetson Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>大算力边缘计算主机 | Orin GPU | EfficientNet-Lite0 224²，TensorRT FP16 | 提供（唯一提供它的设备类别） | 以后要在不重训的前提下加物品类别 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>无风扇工业机箱 | Hailo-8 | EfficientNet-Lite0 224²，INT8 HEF | 不提供 | 已有摄像头、装控制柜；HEF 在设备外编译，部署时下载，Hailo 运行时版本必须对齐 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 系列](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>高性价比工控板卡 | RK3588 NPU | EfficientNet-Lite0 224²，INT8 | 不提供 | 已有摄像头、硬件成本压到最低，装在桶体或自助终端里；模型在设备外转换，不在设备上构建引擎 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002（SG2002）](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>一体化智能相机 | 相机自带 TPU | EfficientNet-Lite0 224²，BF16 | 不提供 | 投放点还没有摄像头、硬件成本压到最低；分类器跑在相机上，不用另配主机 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/0/100021896main_4.jpg" alt="reCamera Pro" width="110" /> | [reCamera Pro](https://www.seeedstudio.com/reCamera-Pro-p-5984.html)<br/>高性能一体化智能相机 | 相机自带 NPU（RV1126B） | EfficientNet-Lite0 224²，INT8 | 不提供 | 投放点还没有摄像头、成本不是第一考虑；分类器跑在相机上 |
 
 两款 reComputer 都有无风扇工业机箱版本（reComputer Industrial J3011 / J4012），模组与运行时相同，可装控制柜或户外机箱。
 
 开放词汇一列来自设备目录里的资源说明：SigLIP 2 视觉塔是 371 MB 的 ONNX，CPU onnxruntime 离线基准单图 p50 66.93 ms，需要加速器。
 
 **④ 其余** —— 一个 MQTT 消费方（包里自带本地 broker，监听 1883）；方案里有翻盖或分道指示灯时，还需要驱动硬件和 GPIO 回调的集成代码，出厂不绑任何引脚。主链路不需要外网。
+
+### 选型排他边界
+
+- **开放词汇免重训需求**：若业务需要在不重新训练模型的前提下动态增加物品分类，请勿选择 J3011（不提供该 Track），必须选配 J4012（16GB）。
+- **高速传送带运动模糊**：传送带速度若超过 1.5 m/s，普通卷帘快门（Rolling Shutter）USB 摄像头会产生严重果冻效应与运动模糊，必须选配工业全局快门相机。
 
 ## 现场怎么部署
 
@@ -145,10 +150,10 @@ generated_from: sensecraft-solutions@cbbfa60
     </a>
 </div><br />
 
-两个套餐流程相同：
+共五个套餐：`摄像头 + reComputer J30 / J40（Orin）`、`摄像头 + reComputer R2000 系列（R2035-12，Hailo-8）`、`摄像头 + reComputer RK3588`、`reCamera（SG2002）`、`reCamera Pro`。下面是 Orin 与 Hailo-8 两个套餐的流程，其余三个套餐的步骤见部署页。
 
-1. **选套餐与主机。** `摄像头 + reComputer J30 / J40（Orin）` 或 `摄像头 + reComputer R2000 系列（Hailo-8）`。
-2. **部署垃圾分类运行时**（必需）。Orin 路径在部署时于设备上构建 TensorRT engine，engine 绑定具体 GPU 架构与 TensorRT 版本，不能预编分发。Hailo 路径的部署步骤先检查三道 Hailo ABI 关卡，再下载 HEF。
+1. **选套餐与主机。** `摄像头 + reComputer J30 / J40（Orin）` 或 `摄像头 + reComputer R2000 系列（R2035-12，Hailo-8）`。
+2. **部署垃圾分类运行时**（必需）。Orin 路径在部署时于设备上构建 TensorRT engine（J4012 上 68 s），engine 绑定具体 GPU 架构与 TensorRT 版本，不能预编分发。Hailo 路径的部署步骤先检查三道 Hailo ABI 关卡，再下载 HEF。
 3. **看实时分类**（可选）。8080 端口的本地面板有 MJPEG 预览、健康计数与最近结果的 top3。接任何设备之前，先在这里确认取景。
 4. **接触发并确认一次分类**（必需）。一次按钮、HTTP 调用或移动事件应在 `waste/<流编号>/results` 上恰好产生一条 MQTT 消息，且 `category` 与 `confidence` 与 `top3[0]` 一致。
 5. **切换到开放词汇 track**（可选，仅 Orin）。部署时设 `model.track: open_vocab`。
@@ -174,6 +179,31 @@ generated_from: sensecraft-solutions@cbbfa60
 - **图片不在 payload 里。** `image_ref.kind` 只有 `none`、`local`、`object_store`。payload 里出现 base64 图片字节违反契约，发布前会被拒。
 - **`category` 恒等于 `top3[0]`，`confidence` 恒等于 `top3[0].confidence`。** 两条都在发布前检查，不合格的 payload 计数并丢弃，消费方不需要自己核对。
 
+```json
+{
+  "type": "waste_classification",
+  "version": "1.0.0",
+  "device": "waste-sorting-station-01",
+  "stream_id": "cam_inlet_01",
+  "timestamp": 1729000000.789,
+  "trigger": "sensor",
+  "inference_time_ms": 3.53,
+  "pipeline_ms": 4.12,
+  "category": {
+    "class_id": 3,
+    "class_name": "plastic_bottle",
+    "china_category": "recyclable",
+    "china_category_zh": "可回收物"
+  },
+  "confidence": 0.942,
+  "top3": [
+    {"class_id": 3, "class_name": "plastic_bottle", "confidence": 0.942},
+    {"class_id": 5, "class_name": "glass_bottle", "confidence": 0.038},
+    {"class_id": 1, "class_name": "metal_can", "confidence": 0.012}
+  ]
+}
+```
+
 随包的 MQTT broker 允许匿名连接，用于本地调试；正式部署换成带凭据的 broker。
 
 ## 性能与实测数据 {#measured-data}
@@ -184,26 +214,37 @@ generated_from: sensecraft-solutions@cbbfa60
     </a>
 </div><br />
 
-### 设备实测：reComputer RK3588 系列
+### 设备实测：基线分类器（EfficientNet-Lite0）
 
-| 模型 / 精度 | 时延 p50 / p95（mean） | 与 CPU 参考一致率 | 对真值准确率 | 条件 |
-|---|---|---|---|---|
-| **EfficientNet-Lite0（m1c），fp16** | 7.906 ms / 8.129 ms（7.041 ms） | 1.00 | 0.78 | 50 张 val 图 |
-| EfficientNet-Lite0（m1c），int8 calib64+normal | 3.780 ms / 3.984 ms（3.807 ms） | 0.90 | 0.72 | 63 张校准，`normal` 算法 |
-| EfficientNet-Lite0（m1c），int8 calib64+mmse | 3.785 ms / 3.981 ms（3.808 ms） | 0.98 | 0.78 | 63 张校准，`mmse` 算法 |
-| EfficientNet-Lite0（m1c），int8 calib256+normal | 3.766 ms / 3.920 ms（3.500 ms） | 0.90 | 0.72 | 252 张校准，`normal` 算法 |
-| **EfficientNet-Lite0（m1c），int8 calib256+mmse**——推荐 | 3.803 ms / 4.003 ms（3.834 ms） | **1.00** | **0.78** | 252 张校准，`mmse`；一致率与准确率都与 fp16 持平，且**快 52%** |
-| SigLIP 2 视觉塔，fp16 | 169.4 ms / 170.5 ms | 嵌入余弦 mean **0.999617**，min 0.998841 | — | 191 MB `.rknn` |
+| 设备 | 精度 | 验证图 | 物料 top-1 | 四分类 top-1 | 与同批图 CPU fp32 之差 | 纯推理 p50 / p95 |
+|---|---|---:|---:|---:|---:|---|
+| reComputer R2000 系列（R2035-12）+ Hailo-8 | INT8（uint8 输入 HEF） | 7417 | **0.8889** | **0.9507** | +0.12 pp | 3.166 ms / 3.249 ms |
+| reComputer RK3588 系列 | INT8（calib256+mmse） | 7417 | **0.8882** | 0.9507 | +0.05 pp | 3.165 ms / 3.857 ms |
+| reComputer RK3588 系列 | fp16 | 7417 | 0.8882 | 0.9505 | +0.05 pp | 5.962 ms / 12.566 ms |
+| reCamera Pro（RV1126B NPU） | INT8 | 1060 | 0.8764 | 0.9566 | +0.19 pp | 5.824 ms / 6.047 ms |
+| reCamera（SG2002 TPU） | BF16 | 1060 | 0.8792 | 0.9566 | +0.47 pp | 24.276 ms / 24.323 ms |
 
-条件：rknn-toolkit2 2.3.2 转换，librknnrt 2.3.2，`core_mask=AUTO`，per-channel 量化。`mmse` 的转换耗时是 `normal` 的 40–90 倍（256 张校准时 17.3 分钟对 11.5 秒），只在转换时付出一次，不影响运行时。
+条件：纯推理，不含取图与预处理，单路背靠背；预处理为短边 256 → 中心裁剪 224，归一化烘焙进模型，设备只接收 uint8。7417 张是验证集全集；1060 张是每 7 张取 1 张的子集，该子集上 CPU fp32 top-1 为 0.8745（全集 0.8877），跨图集比较时看「与同批图 CPU fp32 之差」一列。reCamera Pro 在停掉相机内置应用后测得；reCamera 峰值常驻内存 11.6 MB。
 
-复现：`solutions/edge_waste_sorting/evaluation/runs/2026-09-06-m1c-rk3588-radxa`
+- 两台 NPU 主机的 p50 相同（3.2 ms）；Hailo-8 的 p95 只比 p50 高 0.08 ms，RK3588 INT8 高 0.69 ms。
+- RK3588 上 INT8 与 fp16 的物料 top-1 相同，INT8 快 1.9 倍。INT8 用 252 张校准图、`mmse` 算法、per-channel 量化；50 张抽样上 `normal` 算法与 CPU 一致率 0.90，`mmse` 为 0.98–1.00。`mmse` 的转换耗时是 `normal` 的 40–90 倍（256 张校准时 17.3 分钟对 11.5 秒），只在转换时付出一次。
+- Hailo-8 的 HEF 用 DFC 3.31.0、`optimization_level=2`（量化感知微调）编译；此前 `optimization_level=1` 的 HEF 比 CPU fp32 低 2.40 pp，换成当前 HEF 后差距消失。
+- reCamera Pro 上 INT8 比 fp16 快 2.9 倍，是 reCamera 的 4.2 倍；INT8、fp16 与 CPU fp32 在同一 1060 张上相差不到 0.2 pp。
 
-reComputer RK3576 系列上只跑过 SigLIP 2 视觉塔与已取代的 MobileNetV3-Small：SigLIP 2 视觉塔 fp16 p50 152.51 ms / p95 176.59 ms，嵌入余弦 mean **0.99965**，min 0.99900。
+复现：`evaluation/runs/2026-09-07-hailo-quant-tuning`、`evaluation/runs/2026-09-07-devices/results-rk3588.md`、`evaluation/runs/2026-09-06-m1c-rk3588-radxa`、`evaluation/runs/2026-09-07-recamera-pro`、`evaluation/runs/2026-09-07-devices/results-recamera-sg2002.md`
 
-复现：`evaluation/runs/2026-09-06-rk3576-cat`
+### 设备实测：Orin 路径的构建与触发到出结果
 
-### 基线分类器精度：EfficientNet-Lite0（m1c，出货）
+| 项目 | 结果 | 设备 | 条件 |
+|---|---|---|---|
+| TensorRT engine 构建 | 68 s / 72 s | reComputer J40 系列（J4012）/ J30 系列（J3011） | FP16，部署时在设备上构建 |
+| 触发到出结果 | **4.122 ms** | reComputer J40 系列（J4012） | 一次 `POST /trigger` 对应 MQTT 事件里的 `pipeline_ms`，其中推理 3.533 ms |
+| 纯推理 p50 / p95 | 0.992 ms / 1.265 ms | reComputer J40 系列（J4012） | 部署用的 engine，1060 张验证子集，单路背靠背 |
+| 物料 top-1 | 0.8755，与 CPU 一致率 99.91% | reComputer J40 系列（J4012）；J30 系列（J3011）复测逐位一致 | 同一 1060 张子集，CPU fp32 为 0.8745 |
+
+复现：`evaluation/runs/2026-09-08-orin-nx-acceptance`、`evaluation/runs/2026-09-08-orin-nx-acceptance-2`、`evaluation/runs/2026-09-08-orin-nano-acceptance`
+
+### 基线分类器：CPU 参考精度
 
 | 指标 | 数值 | 条件 |
 |---|---:|---|
@@ -215,11 +256,10 @@ reComputer RK3576 系列上只跑过 SigLIP 2 视觉塔与已取代的 MobileNet
 | 单图推理时延，CPU | mean 16.796 ms / p50 14.724 ms / p95 28.718 ms | 仅 `session.run`，CPU 离线基准，batch 1，不是设备指标 |
 | 置信度低于 0.5 的图 | 318 张（4.3%） | val |
 | ORT PTQ INT8 与 fp32 一致率 | 0.965 | 200 张 val 图，per-channel + MinMax，未塌缩 |
-| Hailo DFC 模拟器 INT8 与 CPU 的 top-1 一致率 | 0.890 | 200 张 val 图；对真值准确率 0.755（CPU 同批图 0.795）；来自早于出货 HEF 的版本，不含板级时延 |
 
 四分类 top-1（0.9500）比物料 top-1（0.8877）高，因为 glass、metal、plastic 之间的混淆都落在可回收物里；只看四分类会高估对材质的判别力。
 
-复现：`evaluation/runs/2026-09-06-m1c-cpu`、`evaluation/runs/2026-09-06-m1c-hef`
+复现：`evaluation/runs/2026-09-06-m1c-cpu`
 
 ### 开放词汇 track：SigLIP 2 ViT-B/16
 
@@ -253,6 +293,15 @@ reComputer RK3576 系列上只跑过 SigLIP 2 视觉塔与已取代的 MobileNet
 
 复现：`evaluation/runs/2026-09-05-w1-cpu`
 
+SigLIP 2 视觉塔在 Rockchip NPU 上的实测（fp16，rknn-toolkit2 / librknnrt 2.3.2，RK3588 上的模型为 191 MB `.rknn`）：
+
+| 设备 | 单图 p50 / p95 | 与 CPU 嵌入余弦 mean / min |
+|---|---|---|
+| reComputer RK3588 系列 | 169.4 ms / 170.5 ms | 0.999617 / 0.998841 |
+| reComputer RK3576 系列 | 152.51 ms / 176.59 ms | 0.99965 / 0.99900 |
+
+复现：`evaluation/runs/2026-09-06-m1c-rk3588-radxa`、`evaluation/runs/2026-09-06-rk3576-cat`
+
 ### 部署占用
 
 | 项目 | 大小 |
@@ -267,8 +316,10 @@ reComputer RK3576 系列上只跑过 SigLIP 2 视觉塔与已取代的 MobileNet
 |---|---|---|---|---|
 | reComputer J30 / J40 系列 | EfficientNet-Lite0 224² | FP16 | TensorRT | 部署时在设备上构建 engine，绑定 GPU 架构与 TensorRT 版本，不能预编分发 |
 | reComputer J40 系列（可选开放词汇 track） | SigLIP 2 ViT-B/16 视觉塔 + 常量文本原型 | — | — | `model.track: open_vocab` |
-| reComputer R2000 系列 + Hailo-8 | EfficientNet-Lite0 224² | INT8（uint8 HEF，`optimization_level=2`） | HailoRT 4.21.0 | HEF 在设备外用 DFC 3.31.0 编译，部署时下载 |
+| reComputer R2000 系列 + Hailo-8 | EfficientNet-Lite0 224² | INT8（uint8 输入，归一化在 HEF 内，`optimization_level=2`） | HailoRT 4.21.0 | HEF 在设备外用 DFC 3.31.0 编译，部署时下载 |
 | reComputer RK3588 系列 | EfficientNet-Lite0 224² | INT8（calib256+mmse） | librknnrt 2.3.2 | rknn-toolkit2 2.3.2 在设备外转换 |
+| reCamera Pro | EfficientNet-Lite0 224² | INT8 | 相机 NPU（RV1126B），RKNN | rknn-toolkit2 2.3.2 在设备外转换，部署时装到相机上 |
+| reCamera（SG2002） | EfficientNet-Lite0 224² | BF16 | 相机 TPU，cvimodel | TPU-MLIR 在设备外转换，部署时装到相机上 |
 
 - 触发去抖：**800 ms**，前一次未完成时到达的触发合并，不排队
 - 连续模式：连续 **3 帧** top-1 相同才发布；触发模式一次拍摄一个答案
@@ -284,10 +335,6 @@ reComputer RK3576 系列上只跑过 SigLIP 2 视觉塔与已取代的 MobileNet
 - MobileNetV3-Small（已取代）的 INT8 在三条边缘链路上都塌缩：Hailo DFC 模拟器一致率 0.115、reComputer RK3576 系列 0.10、reComputer RK3588 系列 0.22（fp16 0.98–1.00），所以基线换成 EfficientNet-Lite0。RK3588 的 INT8 结果不能直接套用到 RK3576。
 - SigLIP 2 视觉塔在 Hailo-8 上 INT8 量化失败（`hailo optimize` 在 `ne_activation_mul_and_add78` 层报错），没有 HEF；开放词汇 track 不能在 reComputer R2000 系列上跑。
 - 两个数据集都是单件物品照片（TrashNet 白色背板，GC3 物体偏心且常被遮挡），不含潮湿、压扁、堆叠、逆光或部分装袋的垃圾；投放点现场的精度会低于表中数字。
-
-### 下一步
-
-- 把 reComputer R2000 系列（R2035-12，Hailo-8）在全部 7417 张验证图上的物料与四分类实测，以及 reComputer J40 系列（J4012）上的触发到出结果时延与 engine 构建时间并入「性能与实测数据」。
 
 ## 数据与素材出处
 

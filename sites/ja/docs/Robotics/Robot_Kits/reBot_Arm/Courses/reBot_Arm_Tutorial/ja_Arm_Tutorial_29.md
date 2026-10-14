@@ -33,7 +33,7 @@ import 'katex/dist/katex.min.css';
     <span className="eyebrow">ステージ 6 · 第29章 · 実践</span>
     <h2>29. reBot Arm 自律ビジュアル把持</h2>
     <p>
-      Seeed Physical AI Beginner's Course 第29章 — reBot Arm を用いた自律ビジュアル把持の実践：RGB-D カメラ SDK と把持リポジトリのインストール、把持および把持・配置プログラムの実行、位置補正、そしてオプションの GraspNet 点群把持トラック。
+      Seeed Physical AI Beginner's Course 第29章では、reBot Arm を用いた自律ビジュアル把持をハンズオン形式で学びます：RGB-D カメラ SDK と把持リポジトリのインストール、把持および把持・配置プログラムの実行、位置補正、さらにオプションとして GraspNet による点群把持トラックを扱います。
     </p>
     <div className="hero-actions">
       <a href="#overview">本章の概要</a>
@@ -50,7 +50,7 @@ import 'katex/dist/katex.min.css';
 
 本章では、reBot Arm のビジュアル把持デモをケーススタディとして用い、ロボットのビジュアル把持システムを一通り構築します。
 
-最終的な結果：アームが RGB-D カメラを通して作業空間を観測し、検出モデルでターゲット物体を認識し、深度からターゲットの空間位置を計算し、アームを制御して自動で把持および配置を行います。
+最終的な結果：アームが RGB-D カメラを通して作業空間を観測し、検出モデルで対象物体を認識し、深度から対象の空間位置を算出し、アームを制御して自動で把持・配置します。
 
 この実践では次の内容を扱います：
 
@@ -77,7 +77,7 @@ import 'katex/dist/katex.min.css';
 - 深度カメラを USB 3.0 でホストに接続します。
 - USB2CAN アダプタをアームの CAN バスに接続します。
 - 24V 電源、カメラ、アームがすべて確実に接続されていることを確認します。
-- 権限を設定します：
+- パーミッションを設定します：
 
     ```text
     sudo chmod a+rw /dev/bus/usb/*/*   # depth camera USB permission
@@ -90,7 +90,7 @@ import 'katex/dist/katex.min.css';
 
 ### ステップ 1: ビジュアル把持リポジトリをクローンする
 
-- 公式の Seeed-Projects リポジトリを優先して使用してください。これはビジュアル把持部分のみを含み、アーム制御 SDK は別途インストールする必要があります。
+- 公式の Seeed-Projects リポジトリを利用することを推奨します。これはビジュアル把持部分のみを含んでおり、アーム制御 SDK は別途インストールする必要があります。
 
     ```bash
     git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
@@ -104,7 +104,7 @@ conda env create -f environment.yml
 conda activate rebotarm
 ```
 
-- ヒント：別の環境名を使いたい場合は、コマンド内の `rebotarm` を任意の名前に置き換えてください。
+- ヒント：別の環境名を使いたい場合は、コマンド中の `rebotarm` を任意の名前に置き換えてください。
 
 ### ステップ 3. アーム制御ライブラリをインストールする
 
@@ -115,7 +115,7 @@ pip install -e .
 cd ../..
 ```
 
-- `pip install -e .` で `Multiple top-level packages discovered in a flat-layout` と表示された場合は、`reBotArm_control_py/pyproject.toml` に明示的なパッケージ検出設定を追加し、`pip install -e .` を再実行してください：
+- `pip install -e .` で `Multiple top-level packages discovered in a flat-layout` と表示された場合は、`reBotArm_control_py/pyproject.toml` に明示的なパッケージ検出設定を追加し、再度 `pip install -e .` を実行してください：
 
     ```toml
     [build-system]
@@ -130,7 +130,7 @@ cd ../..
 
 ### ステップ 4. アームモデルを設定する
 
-- `/rebot_grasp/sdk/reBotArm_control_py/config/` 配下でアームの `rebotarm.yaml` を探します。`hardware_yaml:` をアームモデルに合わせて設定すると、プログラムは対応するモーターハードウェアパラメータを読み込みます。
+- `/rebot_grasp/sdk/reBotArm_control_py/config/` 配下で、使用するアームの `rebotarm.yaml` を探します。`hardware_yaml:` をアームモデルに合わせて設定すると、プログラムは対応するモーターハードウェアパラメータを読み込みます。
 
     ```text
     # reBotArm global config
@@ -144,7 +144,7 @@ cd ../..
 
 ### ステップ 5. 深度カメラ SDK をインストールする
 
-- 本プロジェクトは Orbbec Gemini 2 や RealSense D435i / D405 などの RGB-D カメラをサポートします。使用するカメラに対応した SDK をインストールしてください。すでにカメラドライバが現在の環境で正しくインポートできる場合は、このステップをスキップできます。
+- 本プロジェクトは Orbbec Gemini 2 や RealSense D435i / D405 などの RGB-D カメラをサポートします。使用するカメラに対応した SDK をインストールしてください。すでにカメラドライバが現在の環境で正しく import できている場合は、このステップはスキップできます。
 - **Orbbec Gemini 2**
     - Orbbec Gemini 2 には **pyorbbecsdk**（Orbbec SDK v2 の Python 版）が必要です。事前ビルド済みの Python パッケージをインストールする方法を推奨します：
         - **オプション 1: pip でインストール（推奨）**
@@ -171,20 +171,20 @@ cd ../..
             git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
             ```
 
-        - ソースからインストールする場合は、まず CMake を使ってネイティブ拡張をビルドし、`install/lib` に `pyorbbecsdk*.so` と Orbbec 共有ライブラリが含まれていることを確認してから、`pip install -e .` を実行してください。
+        - ソースからインストールする場合は、まず CMake を使ってネイティブ拡張をビルドし、`install/lib` に `pyorbbecsdk*.so` と Orbbec の共有ライブラリが含まれていることを確認してから、`pip install -e .` を実行します。
         - 注意：上記の方法がすべてうまくいかない場合は、Orbbec 公式ドキュメントを参照してください。
-        - **インストールを検証する**
+        - **インストールの確認**
 
             ```bash
             python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
             ```
 
-        - **OrbbecViewer（任意、カメラ検証用）**
-            - 事前ビルド済みパッケージをダウンロードし、`OrbbecViewer` を実行して、デモを実行する前にカメラ接続と深度ストリームを確認します。
+        - **OrbbecViewer（任意、カメラ確認用）**
+            - 事前ビルド済みパッケージをダウンロードし、`OrbbecViewer` を実行して、デモを動かす前にカメラ接続と深度ストリームを確認します。
             - GitHub: [https://github.com/orbbec/OrbbecSDK_v2/releases](https://github.com/orbbec/OrbbecSDK_v2/releases)
             - Gitee: [https://gitee.com/orbbecdeveloper/OrbbecSDK_v2/releases](https://gitee.com/orbbecdeveloper/OrbbecSDK_v2/releases)
 - **RealSense D435i / D405**
-    - RealSense カメラには通常 `pyrealsense2` が必要で、一般的には pip で直接インストールします：
+    - RealSense カメラには通常 `pyrealsense2` が必要で、一般的には pip から直接インストールします：
 
         ```bash
         pip install pyrealsense2
@@ -195,11 +195,11 @@ cd ../..
 ## 29.4 RGB-D カメラの設置
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-01.png" alt="Hand-eye calibration AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-01.png" alt="アイ・トゥ・ハンド方式の固定 RGB-D カメラの設置とキャリブレーション図" />
 </div>
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-02.png" alt="Hand-eye calibration AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-02.png" alt="アイ・イン・ハンド方式のエンドエフェクタカメラの取り付けとキャリブレーションパネル" />
 </div>
 
 
@@ -209,14 +209,14 @@ cd ../..
 
 ### メイン把持プログラム
 
-`scripts/main.py` — メイン把持プログラムであり、完全なビジュアル把持パイプラインです：
+`scripts/main.py` — メインの把持プログラムであり、完全なビジュアル把持パイプラインです：
 
-- RGB-D カメラを初期化し、画像ストリームが利用可能であることを確認
+- RGB-D カメラを初期化し、画像ストリームが取得できることを確認
 - アームとグリッパーを有効化し、事前高さ位置へ移動
 - リアルタイムカメラプレビュー + YOLO 検出とインスタンスセグメンテーション
 - OBB の短軸からグリッパーの向きを推定し、深度の分位数から把持高さを推定
 - `G` を押してフレームを固定し、ハンドアイ変換でアームの目標姿勢を計算
-- アームが事前把持点へ移動 -> 降下 -> グリッパーを閉じる -> 持ち上げる -> 事前位置へ戻る
+- アームがプレ把持点へ移動 -> 降下 -> グリッパーを閉じる -> 持ち上げる -> 事前位置へ戻る
 
     ```text
     python scripts/main.py
@@ -224,13 +224,13 @@ cd ../..
 
 ### 把持・配置プログラム
 
-`scripts/set.py` — 把持・配置プログラムで、バナナを把持して箱に入れます。
+`scripts/set.py` — 把持・配置プログラムで、バナナを把持して箱に配置します。
 
 - カメラとアームを初期化し、事前位置へ移動
 - リアルタイムカメラプレビュー + YOLO 検出とインスタンスセグメンテーション
 - `G` を押してフレームを固定し、ハンドアイ変換でアームの目標姿勢を計算
 - アームがバナナを把持して持ち上げる
-- アームがバナナを箱に入れ、初期姿勢に戻る
+- アームがバナナを箱に配置し、初期姿勢に戻る
 - `Q` を押して終了；アームはゼロ位置に戻ります。
 
     ```text
@@ -239,7 +239,7 @@ cd ../..
 
 ### 位置補正
 
-キャリブレーション後もアームの把持精度が十分でない場合は、`config/default.yaml` を開き、`calibration.hand_eye_compensation_m` 内の `X（前後）、Y（左右）、Z（上下）` の値を調整して位置補正を行ってください。
+キャリブレーション後もアームの把持精度が十分でない場合は、`config/default.yaml` を開き、`calibration.hand_eye_compensation_m` 内の `X（前後）、Y（左右）、Z（上下）` の値を調整して位置補正を行います。
 
 ```yaml
 ------------------------------------
@@ -258,25 +258,25 @@ calibration:
 
 <a id="graspnet"></a>
 
-## 29.6 3D 点群把持【選択】
+## 29.6 3D 点群把持【選択トラック】
 
 ### GraspNet とは？
 
-GraspNet は主に、「物体の 3D 形状が与えられたとき、ロボットはどこをどのような姿勢で把持すべきか？」という問いに答えます。
+GraspNet が主に答えるのは、「物体の 3D 形状が与えられたとき、ロボットはどこをどの姿勢で把持すべきか？」という問いです。
 
-GraspNet は点群ベースのロボット把持手法、より正確には 3D 点群に対する 6 自由度把持姿勢の生成・評価フレームワークです。要するに、点群は「ロボットが見ている 3D 世界のデータ」であり、GraspNet は「その 3D データからロボットが最適な把持姿勢を見つける方法」です。
+GraspNet は点群ベースのロボット把持手法、より正確には 3D 点群に対する 6 自由度把持姿勢の生成・評価フレームワークです。簡単に言えば、点群は「ロボットが見ている 3D 世界のデータ」であり、GraspNet は「その 3D データからロボットが最適な把持姿勢を見つける方法」です。
 
 入力：RGB-D データ -> 点群 -> GraspNet -> 把持姿勢
 
 出力：6 自由度の把持姿勢 $G=(x,y,z,R)$。内容は次の通りです：
 
-- 位置：アームのグリッパーがどこへ行くべきか：
+- 位置：アームのグリッパーがどこへ行くべきか
 
     ```text
     x,y,z
     ```
 
-- 姿勢：グリッパーがどの方向を向くべきか：
+- 姿勢：グリッパーがどの向きを向くべきか
 
     ```text
     roll,pitch,yaw
@@ -286,22 +286,22 @@ GraspNet は点群ベースのロボット把持手法、より正確には 3D �
 
 ### GraspNet の設定
 
-物体の把持姿勢をより正確に推定するために、本プロジェクトでは [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) を適用し、アームの把持性能を向上させています。
+物体の把持姿勢をより正確に推定するために、本プロジェクトでは [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) を取り入れて、アームの把持性能を向上させています。
 
-GraspNet の `pointnet2` / `knn` 拡張には CUDA コンパイラが必要です。開始前に `nvcc` が見つかること、およびその CUDA バージョンが PyTorch のビルドに使用されたバージョンと一致していることを確認してください：
+GraspNet の `pointnet2` / `knn` 拡張には CUDA コンパイラが必要です。開始前に、`nvcc` が見つかること、およびその CUDA バージョンが PyTorch のビルドに使用されたバージョンと一致していることを確認してください：
 
 ```bash
 nvcc --version
 python -c "import torch; print(torch.__version__, torch.version.cuda)"
 ```
 
-`nvcc` が存在しない、またはその CUDA バージョンが `torch.version.cuda` と異なる場合は、PyTorch の CUDA バージョンに一致する CUDA コンパイラをインストールしてください。例えば、PyTorch が `13.0` と表示している場合：
+`nvcc` が見つからない、またはその CUDA バージョンが `torch.version.cuda` と異なる場合は、PyTorch の CUDA バージョンに一致する CUDA コンパイラをインストールしてください。例えば、PyTorch が `13.0` と表示している場合：
 
 ```bash
 conda install -c nvidia cuda-nvcc=13.0
 ```
 
-この 2 つは一致している必要があります。一致しない場合、`pointnet2` / `knn` のコンパイル時に `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` というエラーが発生します。
+両者は一致している必要があります。一致していない場合、`pointnet2` / `knn` のコンパイル時に `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` というエラーが発生します。
 
 ```bash
 cd sdk
@@ -337,38 +337,38 @@ cd ../../..
 
 | 症状 | 対処方法 |
 | :--- | :--- |
-| `python setup.py install` が CUDA / PyTorch のバージョンエラーを出す | 拡張が conda 環境内の既存の PyTorch と CUDA を再利用できるように、`pip install . --no-build-isolation` を使用します |
+| `python setup.py install` が CUDA/PyTorch バージョンエラーを出す | `pip install . --no-build-isolation` を使用して、拡張モジュールが conda 環境内の既存の PyTorch と CUDA を再利用するようにします |
 | コンパイル時に `fatal error: cusparse.h: No such file or directory` と表示される | `find $CONDA_PREFIX -name cusparse.h` を実行し、そのディレクトリを `CPATH` / `CPLUS_INCLUDE_PATH` に追加します。conda の `cuda-toolkit` を使う場合、通常は上記の pip の `nvidia/cu13/include` ではなく `$CONDA_PREFIX/targets/x86_64-linux/include` です |
-| `sklearn` パッケージ名に関する警告 | 上記の `sed` によって `scikit-learn` にリネームされます。依存スタックが変わらない限りは `numpy==1.23.4` の固定を維持してください。`transforms3d==0.3.1` は依然として `np.float` のような NumPy エイリアスを使用しているためです |
+| `sklearn` パッケージ名に関する警告 | 上記の `sed` によって `scikit-learn` にリネームされます。依存スタックが変わらない限りは `numpy==1.23.4` のピン留めを維持してください。`transforms3d==0.3.1` は依然として `np.float` のような NumPy エイリアスを使用しているためです |
 
 #### 学習済みモデルの設定
 
-- graspnet-baseline リポジトリから公式の GraspNet 学習済み重み（[Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view)、[Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A)）をダウンロードし、`checkpoint-rs.tar` を次の場所に配置します：
+- graspnet-baseline リポジトリから公式の GraspNet 学習済み重みをダウンロードし（[Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view)、[Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A)）、`checkpoint-rs.tar` を次の場所に配置します：
 
     ```bash
     sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
     ```
 
-- その後、`config/default.yaml` を確認します：
+- その後、`config/default.yaml` 内を確認します：
 
     ```yaml
     graspnet:
       checkpoint: "checkpoint-rs.tar"
     ```
 
-- `checkpoint` は 3 つの形式をサポートします：ファイル名のみの場合は `sdk/graspnet-baseline/checkpoints/` 以下を検索します。相対パスはプロジェクトルートから解決され、絶対パスはそのまま使用されます。
+- `checkpoint` は 3 つの形式をサポートします：ファイル名のみの場合は `sdk/graspnet-baseline/checkpoints/` 以下で検索されます。相対パスの場合はプロジェクトルートから解決され、絶対パスの場合はそのまま使用されます。
 
 ### 実行とデバッグ
 
 1. GraspNet カメラ推定デモ — `scripts/graspnet_camera_demo.py`
-- アームを接続せずに、RGB-D カメラのみを用いて GraspNet 6D 把持推定を実行します。このスクリプトはライブカメラプレビューを維持し、YOLO ボックスで対象領域を選択し、GraspNet のシーン全体の候補からそのバウンディングボックス内の実行可能な把持をフィルタリングします。`G` または `Space` で現在フレームを推論し、`R` でライブプレビューを再開、`Q` または `Esc` で終了します。推論後は、Open3D を通じて点群と把持候補を表示します。
+- アームを接続せずに、RGB-D カメラのみを用いて GraspNet 6D 把持推定を実行します。このスクリプトはライブカメラプレビューを維持し、YOLO ボックスを使って対象領域を選択し、GraspNet のシーン全体の候補からそのバウンディングボックス内の実行可能な把持をフィルタリングします。`G` または `Space` を押すと現在フレームを推論し、`R` でライブプレビューを再開、`Q` または `Esc` で終了します。推論後、Open3D を通じて点群と把持候補を表示します。
 
     ```bash
     python scripts/graspnet_camera_demo.py
     ```
 
 2. GraspNet アーム把持プログラム — `scripts/grasp.py`
-- `graspnet_camera_demo.py` の推定結果に基づいてアームを駆動して実行します。YOLO が対象を選択し、GraspNet が 6D 把持姿勢を出力し、ハンドアイキャリブレーションでそれをアームのベース座標系に変換し、その後 IK 到達可能性をチェックして、プレグラスプ／グラスプ／リトリートを実行します。デバッグ中は、`--dry-run` を使用してターゲット姿勢と候補フィルタリングのみを出力することを推奨します。
+- `graspnet_camera_demo.py` の推定結果に基づいてアームを駆動して実行します。YOLO がターゲットを選択し、GraspNet が 6D 把持姿勢を出力し、ハンドアイキャリブレーションによってそれをアームのベース座標系に変換し、その後 IK 到達可能性をチェックして、プレグラスプ／グラスプ／リトリートを実行します。デバッグ中は、`--dry-run` を使用してターゲット姿勢と候補フィルタリングのみを出力することを推奨します。
 
     ```bash
     python scripts/grasp.py --dry-run

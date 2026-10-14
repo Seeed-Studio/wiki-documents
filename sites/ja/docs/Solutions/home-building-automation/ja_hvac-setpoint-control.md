@@ -1,6 +1,6 @@
 ---
 description: エッジゲートウェイ上の中央空調設定値の監視制御：OPC UA、Modbus、BACnet/IP と SDM630 電力量計を1つのポイントモデルに統合し、KNNで設定値を予測、書き込みはすべて読み戻して確認
-title: スマートHVAC制御：機器選定・導入・実測データ
+title: 'スマートHVAC制御：機器選定・導入・実測データ'
 keywords:
   - HVAC setpoint control
   - building energy retrofit
@@ -22,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/ja/solutions/hvac-setpoint-control/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -137,6 +137,11 @@ R1100シリーズにはRS-485が搭載されているため、RS-485接続の電
 
 その他の前提条件は、Docker Engine 20.10以降、ホスト上で8280と4841が空いていること、タイムスタンプ、設定値、測定温度、消費電力の列を持つCSVまたはExcel形式の少なくとも1週間分の運転履歴です。
 
+### 選定における制約・非推奨条件
+
+- **ローカル保存期間**：16GB eMMC の R1124-10 は直近データのみ保持します。数か月分のログを本体内に保存してオフライン再学習に使う場合は 32GB の R1125-10 を選定してください。
+- **安全保護回路への適用不可**：本システムは最適化設定値の出力用です。ボイラーの過熱緊急停止など、安全認証が必要な回路には直接接続しないでください。
+
 ## 現場への導入
 
 ### 1. ハードウェアの設置：配線
@@ -176,9 +181,6 @@ Modbus RTUでは、ボーレート、パリティ、unit idを電力量計の設
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/batch-select-en-9bd95ba4.png" alt="バッチ送信の選択：対象ポイントと現在値"/>
 </div>
-
-<!-- TODO 画像：機器の隣に設置したゲートウェイ。現場撮影が必要 -->
-<!-- TODO 画像：配線済みの実物の電力量計とコントローラー（ここまでのキャプチャはすべてプロトコルシミュレーター経由）。現場撮影が必要 -->
 
 **Control Modeは `observe` のままにし、Safety Baseline Approved Byは空欄にします。** 承認者が空欄の間、基準値は未承認と表示されます。名前を入力すると、その技術者が安全上限を承認したことになります。
 

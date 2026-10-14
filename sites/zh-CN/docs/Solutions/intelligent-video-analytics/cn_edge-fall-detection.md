@@ -22,7 +22,7 @@ last_update:
   date: 09/01/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-01'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-fall-detection/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -194,6 +194,12 @@ generated_from: sensecraft-solutions@cbbfa60
 
 需要的硬件：局域网内算力盒子上的 USB 麦克风与扬声器，加一个提供 TTS 与流式 ASR 的 OpenVoiceStream 实例。音频不走摄像头：两款 reCamera 都没有确认可用的麦克风，SG2002 跑不了本地 ASR。音频不落盘，持久化的只有判定结论、置信度、时延与转写文本；设 `store_transcript: false` 连文本也不留。
 
+### 选型排他边界
+
+- **单房间 vs 集中式多点**：reCamera Pro 属于一体化方案，单机仅覆盖单个房间。若需在护士站或中控室集中接入 4–16 路现有监控视频，应选配 reComputer R2000 或 RK3588 主机。
+- **大广角与严重遮挡**：大广角鱼眼镜头边缘畸变严重或存在大面积病床护栏遮挡时，单目 2D 姿态模型误报/漏报率会明显上升，需配合吸顶垂直视角或补光布置。
+- **Hailo-8（R2000）多路输入与硬件解码约束**：虽然 Hailo-8 算力芯片可支持 16 路姿态推理，但其底座主机（reComputer R2000 系列）**无多路并发硬件视频解码能力**。实测的 16 路是在 **640×640 预缩放子码流**（每路 15 FPS）下测得；若直接接入多路 1080p RTSP 主码流，主机的 CPU 软解将迅速打满（100%）并发生严重丢帧。实际部署时，**前端摄像头必须配置为输出 640×480 或 640×360 辅码流**送入网关分析；若必须单机硬解多路 1080p 主码流，应选配带独立 NVDEC 硬件解码单元的 Jetson J40 系列。
+
 ## 现场怎么部署
 
 分两步：先把摄像头装对位置，再把软件装上去。
@@ -279,8 +285,6 @@ Orin 与 Hailo 套餐另外需要一个固定的室内机位，可能发生跌�
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/device-console-zh-c6590327.jpg" alt="告警主机上的设备控制台：检测器与告警服务的运行状态"/>
 </div>
-
-<!-- TODO 图：现场安装实景照（摄像头装在房间里的机位照）——需现场拍 -->
 
 预计耗时 **45 分钟**，难度 **intermediate**。Orin 套餐最慢，因为首次部署要在设备上构建 TensorRT 引擎。
 
@@ -435,6 +439,8 @@ RK 的 INT8 用 240 帧 GMDCSA 标定过，在未参与标定的帧上每帧检�
 #### 路数折算
 
 「推理上限路数」= 聚合吞吐 ÷ 15 FPS，只算加速器，是理论天花板。「建议路数」在此基础上打了折——RK 上实测的端到端吞吐只有推理上限的 28%–44%，因为 RTSP 解码、跟踪、状态机和 MQTT 也要占用 CPU 与内存带宽。在板上其他业务未停的情况下，实测端到端吞吐 RK3588 约 8.6 FPS、RK3576 约 4.9 FPS。
+
+**Hailo-8 16 路实测前提与视频解码约束**：Hailo-8 在 R2000 上的 16 路建议路数，是在输入为 **640×640 视频流**（每路 15 FPS）的条件下测得。由于 reComputer R2000 系列主机缺乏多路并发硬件视频解码能力，纯依靠 CPU 软件解码 1080p 视频流至多承载 2–4 路即达 CPU 瓶颈。实地落地接入多路已有摄像头时，必须将前端摄像头配置为输出辅码流（Sub-stream，推荐 640×480 或 640×360）送入主机分析，避免 CPU 软解饱和导致丢帧。
 
 ### 运行时与关键参数
 

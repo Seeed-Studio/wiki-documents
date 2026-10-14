@@ -1,15 +1,15 @@
 ---
-description: "Capítulo 29 do Curso de Iniciação em IA Física da Seeed — prática de preensão visual autônoma com o reBot Arm: instalação do SDK da câmera RGB-D e do repositório de preensão, execução dos programas de preensão e preensão‑e‑colocação, compensação de posição e uma trilha opcional de preensão em nuvem de pontos com GraspNet."
-title: Capítulo 29 - Preensão Visual Autônoma com reBot Arm
+description: "Capítulo 29 do Curso para Iniciantes em IA Física da Seeed — prática de preensão visual autônoma com o reBot Arm: instalação do SDK da câmera RGB-D e do repositório de preensão, execução dos programas de preensão e de preensão‑e‑colocação, compensação de posição e uma trilha opcional de preensão em nuvem de pontos com GraspNet."
+title: Capítulo 29 - Preensão Visual Autônoma com o reBot Arm
 hide_title: true
 keywords:
   - reBot
-  - Braço Robótico
-  - Preensão Visual
-  - Câmera RGB-D
-  - Calibração Mão-Olho
+  - Robotic Arm
+  - Visual Grasping
+  - RGB-D Camera
+  - Hand-Eye Calibration
   - GraspNet
-  - Curso
+  - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_physical_ai_course_chapter_29
 displayed_sidebar: RebotCourseSidebar
@@ -31,9 +31,9 @@ import 'katex/dist/katex.min.css';
 <section className="doc-hero">
   <div>
     <span className="eyebrow">Estágio 6 · Capítulo 29 · Prática</span>
-    <h2>29. Preensão Visual Autônoma com reBot Arm</h2>
+    <h2>29. Preensão Visual Autônoma com o reBot Arm</h2>
     <p>
-      Capítulo 29 do Curso de Iniciação em IA Física da Seeed — prática de preensão visual autônoma com o reBot Arm: instalação do SDK da câmera RGB-D e do repositório de preensão, execução dos programas de preensão e preensão‑e‑colocação, compensação de posição e uma trilha opcional de preensão em nuvem de pontos com GraspNet.
+      Capítulo 29 do Curso para Iniciantes em IA Física da Seeed — prática de preensão visual autônoma com o reBot Arm: instalação do SDK da câmera RGB-D e do repositório de preensão, execução dos programas de preensão e de preensão‑e‑colocação, compensação de posição e uma trilha opcional de preensão em nuvem de pontos com GraspNet.
     </p>
     <div className="hero-actions">
       <a href="#overview">Visão geral do capítulo</a>
@@ -50,14 +50,14 @@ import 'katex/dist/katex.min.css';
 
 Este capítulo usa o demo de preensão visual do reBot Arm como estudo de caso para construir um sistema completo de preensão visual robótica.
 
-Resultado final: o braço observa a área de trabalho por meio de uma câmera RGB-D, reconhece o objeto alvo com um modelo de detecção, calcula a posição espacial do alvo a partir da profundidade e controla o braço para agarrá‑lo e colocá‑lo automaticamente.
+Resultado final: o braço observa a área de trabalho por meio de uma câmera RGB-D, reconhece o objeto‑alvo com um modelo de detecção, calcula a posição espacial do alvo a partir da profundidade e controla o braço para agarrá‑lo e colocá‑lo automaticamente.
 
 Esta prática abrange:
 
 - Implantação da câmera RGB-D;
 - Execução do modelo de detecção;
 - Localização visual;
-- Calibração mão-olho;
+- Calibração mão‑olho;
 - Cálculo da pose de preensão;
 - Controle de preensão do braço.
 
@@ -115,7 +115,7 @@ pip install -e .
 cd ../..
 ```
 
-- Se `pip install -e .` relatar `Multiple top-level packages discovered in a flat-layout`, adicione descoberta explícita de pacotes em `reBotArm_control_py/pyproject.toml` e execute novamente `pip install -e .`:
+- Se `pip install -e .` reportar `Multiple top-level packages discovered in a flat-layout`, adicione descoberta explícita de pacotes em `reBotArm_control_py/pyproject.toml` e execute novamente `pip install -e .`:
 
     ```toml
     [build-system]
@@ -126,11 +126,11 @@ cd ../..
     include = ["reBotArm_control_py*"]
     ```
 
-- O programa de preensão visual lê essa configuração do SDK e seleciona automaticamente o modo de controle de braço e os parâmetros do gripper correspondentes.
+- O programa de preensão visual lê essa configuração do SDK e seleciona automaticamente o modo de controle do braço e os parâmetros do gripper correspondentes.
 
 ### Etapa 4. Configurar o modelo do braço
 
-- Em `/rebot_grasp/sdk/reBotArm_control_py/config/`, localize o `rebotarm.yaml` do braço. Defina `hardware_yaml:` para corresponder ao modelo do braço; o programa então carrega os parâmetros de hardware dos motores correspondentes.
+- Em `/rebot_grasp/sdk/reBotArm_control_py/config/`, encontre o `rebotarm.yaml` do braço. Defina `hardware_yaml:` para corresponder ao modelo do braço; o programa então carrega os parâmetros de hardware dos motores correspondentes.
 
     ```text
     # reBotArm global config
@@ -146,7 +146,7 @@ cd ../..
 
 - Este projeto oferece suporte a câmeras RGB-D como Orbbec Gemini 2 e RealSense D435i / D405. Instale o SDK correspondente à sua câmera; pule esta etapa se o driver da câmera já for importado corretamente no ambiente atual.
 - **Orbbec Gemini 2**
-    - A Orbbec Gemini 2 requer **pyorbbecsdk** (a versão em Python do Orbbec SDK v2). Dê preferência à instalação do pacote Python pré‑compilado:
+    - A Orbbec Gemini 2 requer **pyorbbecsdk** (a versão Python do Orbbec SDK v2). Dê preferência à instalação do pacote Python pré‑compilado:
         - **Opção 1: instalar via pip (recomendado)**
 
             ```bash
@@ -195,11 +195,11 @@ cd ../..
 ## 29.4 Instalação da Câmera RGB-D
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-01.png" alt="Calibração mão-olho AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-01.png" alt="Diagrama de instalação e calibração de câmera RGB-D fixa olho‑para‑mão" />
 </div>
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-02.png" alt="Calibração mão-olho AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-02.png" alt="Montagem de câmera no efetuador final olho‑na‑mão e painéis de calibração" />
 </div>
 
 
@@ -215,8 +215,8 @@ cd ../..
 - Habilitar o braço e o gripper, mover para a posição de pré‑altura
 - Pré‑visualização em tempo real da câmera + detecção YOLO e segmentação por instância
 - Estimar a orientação do gripper a partir do eixo curto do OBB; estimar a altura de preensão a partir do quantil de profundidade
-- Pressione `G` para congelar o quadro; calcular a pose alvo do braço via transformação mão‑olho
-- O braço se move para o ponto de pré‑preensão -> desce -> fecha o gripper -> ergue -> retorna à posição de pré‑preensão
+- Pressione `G` para congelar o quadro; calcular a pose‑alvo do braço via transformação mão‑olho
+- O braço se move para o ponto de pré‑preensão -> desce -> fecha o gripper -> ergue -> retorna à posição inicial
 
     ```text
     python scripts/main.py
@@ -228,7 +228,7 @@ cd ../..
 
 - Inicializar câmera e braço; mover para a pré‑posição
 - Pré‑visualização em tempo real da câmera + detecção YOLO e segmentação por instância
-- Pressione `G` para congelar o quadro; calcular a pose alvo do braço via transformação mão‑olho
+- Pressione `G` para congelar o quadro; calcular a pose‑alvo do braço via transformação mão‑olho
 - O braço agarra a banana e a ergue
 - O braço coloca a banana na caixa e retorna à pose inicial
 - Pressione `Q` para sair; o braço retorna a zero.
@@ -264,11 +264,11 @@ calibration:
 
 GraspNet responde principalmente: dada a forma 3D do objeto, onde o robô deve agarrar e em que pose?
 
-GraspNet é um método de preensão robótica baseado em nuvem de pontos — mais precisamente, um framework de geração e avaliação de poses de preensão 6‑DoF para nuvens de pontos 3D. Em resumo, a nuvem de pontos é “os dados do mundo 3D que o robô enxerga”, e GraspNet é “como o robô encontra a melhor pose de preensão a partir desses dados 3D”.
+GraspNet é um método de preensão robótica baseado em nuvem de pontos — mais precisamente, um framework de geração e avaliação de poses de preensão em 6 DoF para nuvens de pontos 3D. Em resumo, a nuvem de pontos é “os dados do mundo 3D que o robô vê”, e GraspNet é “como o robô encontra a melhor pose de preensão a partir desses dados 3D”.
 
 Entrada: dados RGB-D -> nuvem de pontos -> GraspNet -> pose de preensão
 
-Saída: uma pose de preensão 6‑DoF $G=(x,y,z,R)$, incluindo:
+Saída: uma pose de preensão em 6 DoF $G=(x,y,z,R)$, incluindo:
 
 - Posição, para onde o gripper do braço deve ir:
 
@@ -288,7 +288,7 @@ Saída: uma pose de preensão 6‑DoF $G=(x,y,z,R)$, incluindo:
 
 Para estimar com mais precisão as poses de preensão dos objetos, este projeto adapta [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) para melhorar o desempenho de preensão do braço.
 
-As extensões `pointnet2` / `knn` do GraspNet precisam de um compilador CUDA. Antes de começar, confirme que `nvcc` é encontrado e que sua versão de CUDA corresponde à usada para compilar o PyTorch:
+As extensões `pointnet2` / `knn` do GraspNet precisam de um compilador CUDA. Antes de começar, confirme que `nvcc` é encontrado e que sua versão de CUDA corresponde àquela com a qual o PyTorch foi compilado:
 
 ```bash
 nvcc --version
@@ -301,7 +301,7 @@ Se `nvcc` estiver ausente ou sua versão de CUDA for diferente de `torch.version
 conda install -c nvidia cuda-nvcc=13.0
 ```
 
-As duas devem corresponder; caso contrário, ao compilar `pointnet2` / `knn` será exibido `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`.
+Os dois devem corresponder; caso contrário, compilar `pointnet2` / `knn` gera `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`.
 
 ```bash
 cd sdk
@@ -337,13 +337,13 @@ Três armadilhas que vale a pena conhecer antes de começar:
 
 | Sintoma | O que fazer |
 | :--- | :--- |
-| `python setup.py install` gera erros de versão do CUDA/PyTorch | Use `pip install . --no-build-isolation` para que a extensão reutilize o PyTorch e o CUDA que já estão no ambiente conda |
-| A compilação informa `fatal error: cusparse.h: No such file or directory` | Execute `find $CONDA_PREFIX -name cusparse.h` e adicione esse diretório a `CPATH` / `CPLUS_INCLUDE_PATH`; com o `cuda-toolkit` do conda geralmente é `$CONDA_PREFIX/targets/x86_64-linux/include`, e não o caminho `nvidia/cu13/include` do pip acima |
-| Um aviso sobre o nome do pacote `sklearn` | O `sed` acima o renomeia para `scikit-learn`. Mantenha o pin `numpy==1.23.4` a menos que a pilha de dependências mude, porque `transforms3d==0.3.1` ainda usa aliases do NumPy como `np.float` |
+| `python setup.py install` gera erros de versão do CUDA/PyTorch | Use `pip install . --no-build-isolation` para que a extensão reutilize o PyTorch e o CUDA já presentes no ambiente conda |
+| A compilação relata `fatal error: cusparse.h: No such file or directory` | Execute `find $CONDA_PREFIX -name cusparse.h` e adicione esse diretório a `CPATH` / `CPLUS_INCLUDE_PATH`; com o `cuda-toolkit` do conda geralmente é `$CONDA_PREFIX/targets/x86_64-linux/include`, não o caminho pip `nvidia/cu13/include` acima |
+| Um aviso de nome de pacote `sklearn` | O `sed` acima o renomeia para `scikit-learn`. Mantenha o pin `numpy==1.23.4` a menos que a pilha de dependências mude, porque `transforms3d==0.3.1` ainda usa aliases do NumPy como `np.float` |
 
 #### Configurar o modelo pré-treinado
 
-- Baixe os pesos oficiais pré-treinados do GraspNet do repositório graspnet-baseline ([Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A)) e coloque `checkpoint-rs.tar` em:
+- Baixe os pesos oficiais pré-treinados do GraspNet a partir do repositório graspnet-baseline ([Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A)) e coloque `checkpoint-rs.tar` em:
 
     ```bash
     sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
@@ -368,7 +368,7 @@ Três armadilhas que vale a pena conhecer antes de começar:
     ```
 
 2. Programa de pegada com braço GraspNet — `scripts/grasp.py`
-- Com base nas estimativas de `graspnet_camera_demo.py`, acione a execução do braço: o YOLO seleciona o alvo, o GraspNet gera uma pose de pegada 6D, a calibração mão-olho a transforma para o referencial da base do braço, depois a alcançabilidade por IK é verificada e as etapas de pré-pegada/pegada/retirada são executadas. Durante a depuração, prefira `--dry-run` para apenas imprimir as poses alvo e a filtragem de candidatos.
+- Com base nas estimativas de `graspnet_camera_demo.py`, acione a execução do braço: o YOLO seleciona o alvo, o GraspNet produz uma pose de pegada 6D, a calibração mão-olho a transforma para o referencial da base do braço, então a alcançabilidade por IK é verificada e as fases de pré-pegada/pegada/retirada são executadas. Durante a depuração, prefira `--dry-run` para apenas imprimir poses alvo e filtragem de candidatos.
 
     ```bash
     python scripts/grasp.py --dry-run

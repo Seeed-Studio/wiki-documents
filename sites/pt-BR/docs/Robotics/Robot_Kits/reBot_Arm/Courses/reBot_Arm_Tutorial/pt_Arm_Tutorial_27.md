@@ -1,16 +1,16 @@
 ---
-description: "Capítulo 27 do Curso de Iniciação em IA Física da Seeed — como um robô transforma pixels em 3D: o pipeline de visão robótica, sensoriamento RGB-D, mapas de profundidade, câmeras de profundidade estéreo / luz estruturada / TOF, o modelo de câmera pinhole com parâmetros intrínsecos e extrínsecos, conversão de pixel para 3D e nuvens de pontos."
+description: "Capítulo 27 do Curso para Iniciantes em IA Física da Seeed — como um robô transforma pixels em 3D: o pipeline de visão robótica, sensoriamento RGB-D, mapas de profundidade, câmeras de profundidade estéreo / luz estruturada / TOF, o modelo de câmera pinhole com parâmetros intrínsecos e extrínsecos, conversão de pixel para 3D e nuvens de pontos."
 title: Capítulo 27 - Visão Robótica e Percepção 3D
 hide_title: true
 keywords:
   - reBot
-  - Robotic Arm
-  - Robot Vision
+  - Braço Robótico
+  - Visão Robótica
   - RGB-D
-  - Depth Camera
-  - Camera Intrinsics
-  - Point Cloud
-  - Course
+  - Câmera de Profundidade
+  - Parâmetros Intrínsecos da Câmera
+  - Nuvem de Pontos
+  - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /rebot_physical_ai_course_chapter_27
 displayed_sidebar: RebotCourseSidebar
@@ -34,19 +34,41 @@ import 'katex/dist/katex.min.css';
     <span className="eyebrow">Estágio 6 · Capítulo 27 · Teoria</span>
     <h2>27. Visão Robótica e Percepção 3D</h2>
     <p>
-      Capítulo 27 do Curso de Iniciação em IA Física da Seeed — como um robô transforma pixels em 3D: o pipeline de visão robótica, sensoriamento RGB-D, mapas de profundidade, câmeras de profundidade estéreo / luz estruturada / TOF, o modelo de câmera pinhole com parâmetros intrínsecos e extrínsecos, conversão de pixel para 3D e nuvens de pontos.
+      Capítulo 27 do Curso para Iniciantes em IA Física da Seeed — como um robô transforma pixels em 3D: o pipeline de visão robótica, sensoriamento RGB-D, mapas de profundidade, câmeras de profundidade estéreo / luz estruturada / TOF, o modelo de câmera pinhole com parâmetros intrínsecos e extrínsecos, conversão de pixel para 3D e nuvens de pontos.
     </p>
     <div className="hero-actions">
-      <a href="#overview">Visão geral do capítulo</a>
-      <a href="#robot-vision">Sistemas de visão robótica</a>
-      <a href="#depth">Profundidade &amp; RGB-D</a>
-      <a href="#coordinates">Modelo de câmera</a>
+      <a href="#visão-geral">Visão geral do capítulo</a>
+      <a href="#visão-robótica">Sistemas de visão robótica</a>
+      <a href="#profundidade">Profundidade &amp; RGB-D</a>
+      <a href="#modelo-de-câmera">Modelo de câmera</a>
     </div>
   </div>
 </section>
 
+### Hardware necessário para este estágio
+
+O que preparar para este estágio. A lista completa para cada estágio está no [Capítulo 3](/pt-br/rebot_physical_ai_course_chapter_3/).
+
+**Unidade de controle principal**
+
+| Item | Comprar | Qtde |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+Também é necessário um desktop ou laptop: Ubuntu 22.04, GTX 4080 ou superior com 12GB+ de VRAM, 16GB+ de RAM.
+
+**Para este estágio**
+
+| Item | Comprar | Qtde |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+| [Realsense 435i ou Orbbec Gemini2 Depth Camera ou Realsense 405 Stereo Camera](https://www.seeedstudio.com/Intel-RealSense-Depth-Camera-D435i-p-4423.html) | 🛒 | 1 |
+| [Suporte de Câmera para o Pulso](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/D435_Gemini2_Mount.step) | 🛒 | 1 |
+
+
 {/* TODO: the original document opened Chapter 27 with a walkthrough video (《理论》.mp4 / 【理论】.mp4). The file is not in 图片和附件/ yet — upload it to the course CDN and link it here once it is available. */}
-<a id="overview"></a>
+<a id="visão-geral"></a>
 
 ## 27.1 Visão Geral do Capítulo
 
@@ -63,18 +85,18 @@ Porque o braço não sabe:
 - A que distância o copo está da câmera;
 - A que altura o copo está;
 - Onde o copo está em relação ao braço;
-- O quanto o braço deve se mover para agarrá-lo.
+- Quanto o braço deve se mover para agarrá-lo.
 
-Portanto, a visão robótica precisa completar um processo completo:
+Portanto, a visão robótica deve completar um processo completo:
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01-1.png" alt="Visão robótica vs visão computacional comum" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01-1.png" alt="Fluxograma de seis estágios do pipeline de visão robótica de RGB até a preensão" />
 </div>
 
 
-<a id="robot-vision"></a>
+<a id="visão-robótica"></a>
 
-## 27.2 Introdução aos Sistemas de Visão Robótica
+## 27.2 Introdução a Sistemas de Visão Robótica
 
 ### O que é Visão Robótica
 
@@ -115,7 +137,7 @@ Um sistema completo de preensão visual geralmente inclui:
 - Etapa 4: Transformação de coordenadas
     - Converter coordenadas da câmera em coordenadas do braço.
 - Etapa 5: Execução do movimento
-    - O robô planeja o movimento a partir da posição alvo e executa a preensão.
+    - O robô planeja o movimento a partir da posição alvo e realiza a preensão.
 
 ### Imagens RGB e Detecção de Objetos
 
@@ -133,13 +155,13 @@ Imagens RGB são os dados visuais mais comuns usados por robôs. RGB significa:
 
 Cada pixel é composto por três valores: $R = 255$, $G = 0$, $B = 0$.
 
-Imagens RGB fornecem principalmente: informações de cor, informações de textura, informações de aparência do objeto. Mas imagens RGB têm um problema importante: elas não possuem informações de distância espacial.
+Imagens RGB fornecem principalmente: informação de cor, informação de textura, informação de aparência do objeto. Mas imagens RGB têm um problema importante: elas não possuem informação de distância espacial.
 
-- Por exemplo: dois copos, um a 20 cm da câmera, outro a 2 m. Se forem do mesmo tamanho, podem parecer muito semelhantes em uma imagem 2D. RGB só consegue dizer ao robô "onde o copo está na imagem", mas não "a que distância o copo está de mim."
+- Por exemplo: dois copos, um a 20 cm da câmera, outro a 2 m de distância. Se forem do mesmo tamanho, podem parecer muito semelhantes em uma imagem 2D. RGB só consegue dizer ao robô "onde o copo está na imagem", mas não "a que distância o copo está de mim."
 
 #### (2) Resultados da Detecção de Objetos
 
-O robô geralmente não usa a imagem inteira diretamente; primeiro ele executa a detecção de objetos.
+O robô geralmente não usa a imagem inteira diretamente; ele primeiro executa a detecção de objetos.
 
 Algoritmos de detecção (YOLO, Mask R-CNN) fornecem como saída:
 
@@ -151,7 +173,7 @@ Algoritmos de detecção (YOLO, Mask R-CNN) fornecem como saída:
 
 #### (3) Cálculo do Centro do Alvo a partir da Caixa
 
-O robô geralmente precisa do centro do alvo. A imagem que o computador vê é essencialmente uma grade de pixels. Para uma imagem 1920x1080, cada pixel tem sua própria coordenada: canto superior esquerdo (0,0), canto inferior direito (1920,1080); x aumenta para a direita, y aumenta para baixo. Portanto, a saída de detecção (u,v) é essencialmente coordenadas de imagem. Calcule:
+O robô geralmente precisa do centro do alvo. A imagem que o computador vê é essencialmente uma grade de pixels. Para uma imagem 1920x1080, cada pixel tem sua própria coordenada: canto superior esquerdo (0,0), canto inferior direito (1920,1080); x aumenta para a direita, y aumenta para baixo. Assim, a saída de detecção (u,v) é essencialmente coordenadas de imagem. Calcule:
 
 $$
 u=\frac{x_{1}+x_{2}}{2},\qquad v=\frac{y_{1}+y_{2}}{2}
@@ -159,7 +181,7 @@ $$
 
 Resultado: (u,v). Esse ponto é a posição 2D do alvo na imagem. Mas ainda não pode controlar diretamente o braço.
 
-<a id="depth"></a>
+<a id="profundidade"></a>
 
 ## 27.3 Por que Robôs Precisam de Informação de Profundidade
 
@@ -202,7 +224,7 @@ Funda a imagem RGB e a imagem de profundidade para obter dados RGB-D. RGB-D cont
 
 Por exemplo:
 
-- O robô vê a imagem RGB e descobre que é um copo; vê a imagem de profundidade e descobre que o copo está a 0,65 m da câmera. Só então o robô consegue agarrá-lo.
+- O robô vê a imagem RGB e aprende que isso é um copo; vê a imagem de profundidade e aprende que o copo está a 0,65 m da câmera. Só então o robô pode agarrar.
 
 ## 27.5 Princípios de Câmeras de Profundidade
 
@@ -212,13 +234,13 @@ Por exemplo:
 
 As três câmeras de profundidade mais comuns em visão robótica são câmeras estéreo, câmeras de luz estruturada e câmeras TOF.
 
-| Câmera | Princípio | Vantagens | Desvantagens |
+| Câmera | Princípio | Prós | Contras |
 | :--- | :--- | :--- | :--- |
 | **Estéreo** | Imita os olhos humanos: duas câmeras comparam onde o mesmo objeto aparece nas visões esquerda e direita, e a profundidade é obtida a partir dessa disparidade | Não precisa de iluminação ativa; funciona a longas distâncias | Falha em objetos sem textura — uma parede branca e um objeto de cor sólida parecem quase idênticos para ambas as câmeras |
 | **Luz estruturada** | Projeta ativamente um padrão conhecido (matriz de pontos, listras, grade) e lê como o padrão se deforma sobre o objeto | Alta precisão a curta distância | Facilmente perturbada por luz forte e condições externas |
 | **TOF (Time Of Flight)** | Emite luz, espera pela reflexão e mede o tempo de ida e volta | Alto desempenho em tempo real | Afetada por superfícies reflexivas, objetos transparentes e reflexão multipercurso |
 
-<a id="coordinates"></a>
+<a id="modelo-de-câmera"></a>
 
 ## 27.6 Modelo de Coordenadas da Câmera e Parâmetros Intrínsecos
 
@@ -237,7 +259,7 @@ A visão robótica envolve quatro referenciais de coordenadas:
 | Referencial do robô | Metros | Onde o objeto está em relação ao braço; o braço é controlado, em última instância, em coordenadas do robô | — |
 | Referencial da ferramenta (referencial do efetuador final) | Metros | O referencial que o braço usa para executar uma preensão | — |
 
-### Parâmetros Intrínsecos da Câmera
+### Parâmetros intrínsecos da câmera
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-08.png" alt="" />
@@ -245,7 +267,7 @@ A visão robótica envolve quatro referenciais de coordenadas:
 
 Por que os parâmetros intrínsecos são necessários?
 
-- Porque uma imagem 2D não é o espaço real. A câmera projeta o espaço 3D em uma imagem 2D; isso é chamado de projeção, e os parâmetros intrínsecos descrevem essa projeção. Com os intrínsecos você pode recalcular pixels 2D de volta para o espaço 3D — isto é, os intrínsecos descrevem como a câmera forma a imagem.
+- Porque uma imagem 2D não é o espaço real. A câmera projeta o espaço 3D em uma imagem 2D; isso é chamado de projeção, e os parâmetros intrínsecos descrevem essa projeção. Com os intrínsecos você pode recalcular os pixels 2D de volta para o espaço 3D — isto é, os intrínsecos descrevem como a câmera forma uma imagem.
 
 | Parâmetro | Significado |
 | :--- | :--- |
@@ -253,7 +275,7 @@ Por que os parâmetros intrínsecos são necessários?
 | `cx`, `cy` | Ponto principal em x e y — o centro da imagem (pixels) |
 | `k1`, `k2`, `k3`, `p1`, `p2` | Coeficientes de distorção |
 
-- A distorção da lente desloca as posições dos pixels perto das bordas da imagem. Sem correção de distorção, as próprias coordenadas de pixel (u,v) têm erro e a conversão 3D se desvia. Na prática, primeiro faça a correção de distorção da imagem e depois use as coordenadas de pixel.
+- A distorção da lente desloca as posições dos pixels perto das bordas da imagem. Sem correção de distorção, as próprias coordenadas de pixel (u,v) têm erro, e a conversão 3D deriva. Na prática, primeiro corrija a distorção da imagem e depois use as coordenadas de pixel.
 
 ## 27.7 Convertendo pixels em coordenadas 3D
 
@@ -266,7 +288,7 @@ Dadas as seguintes informações sobre o objeto:
 - Posição 2D: (u,v)
 - Profundidade: Z
 
-Usando os parâmetros intrínsecos, obtenha do objeto:
+Usando os intrínsecos, obtenha do objeto:
 
 - (X,Y,Z)
 
@@ -284,17 +306,17 @@ $$
 Z=\text{Depth}
 $$
 
-O significado: transformar um ponto na imagem em um ponto no espaço real, para que o robô finalmente saiba onde está o alvo.
+O significado: transformar um ponto na imagem em um ponto no espaço real, para que o robô finalmente saiba onde o alvo está.
 
-## 27.8 Extrínsecos da câmera e transformação de coordenadas
+## 27.8 Parâmetros extrínsecos da câmera e transformação de coordenadas
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-10.png" alt="Camera extrinsics and hand-eye calibration" />
 </div>
 
-Por que os extrínsecos são necessários?
+Por que os parâmetros extrínsecos são necessários?
 
-- Porque o referencial da câmera e o referencial do robô são diferentes. Por exemplo, o eixo Z da câmera aponta para a frente, enquanto o eixo Z do robô aponta para cima. Os dois referenciais diferem tanto em orientação quanto em posição, portanto é necessária uma transformação. Os extrínsecos da câmera descrevem a relação de pose de corpo rígido entre o referencial da câmera e o referencial do robô; resolver esses parâmetros é chamado de calibração mão-olho.
+- Porque o referencial da câmera e o referencial do robô são diferentes. Por exemplo, o eixo Z da câmera aponta para a frente, enquanto o eixo Z do robô aponta para cima. Os dois referenciais diferem tanto em orientação quanto em posição, então é necessária uma transformação. Os parâmetros extrínsecos da câmera descrevem a relação de pose de corpo rígido entre o referencial da câmera e o referencial do robô; resolver esses parâmetros é chamado de calibração mão-olho.
 
 ### Princípios da calibração mão-olho
 
@@ -306,11 +328,11 @@ Por que os extrínsecos são necessários?
 
 Erro de calibração e ponto de preensão, transformação homogênea X
 
-- Robôs geralmente usam uma matriz 4x4 para representar transformações de coordenadas.
+- Os robôs geralmente usam uma matriz 4x4 para representar transformações de coordenadas.
 - A matriz contém:
     - Matriz de rotação R, representando a mudança de orientação.
     - Vetor de translação T, representando a mudança de posição.
-- Por fim: $P_{robot}=TP_{camera}$, obtendo a posição que o robô pode usar.
+- Por fim: $P_{robot}=TP_{camera}$, fornecendo a posição que o robô pode usar.
 
 ## 27.9 Nuvens de pontos
 
