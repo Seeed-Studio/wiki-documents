@@ -448,8 +448,7 @@ sudo apt install -y \
     make \
     libpopt-dev \
     can-utils \
-    ethtool \
-    nvidia-l4t-kernel-headers
+    ethtool
 ```
 
 Verifica que el directorio de cabeceras del kernel actual exista:
