@@ -29,8 +29,8 @@ url: https://wiki.seeedstudio.com/pt-br/solutions/retail-heatmap-grafana/
 generated_from: sensecraft-solutions@recamera_heatmap_grafana
 ---
 
-:::caution[Usage notice]
-O mapa de calor registra apenas **onde as pessoas estão**. Ele não identifica ninguém e não faz correspondência de rostos. A precisão da detecção não foi avaliada; consulte [Performance and measured data](#appendix-measured-data).
+:::caution[Aviso de uso]
+O mapa de calor registra apenas **onde as pessoas estão**. Ele não identifica ninguém e não faz correspondência de rostos. A precisão da detecção não foi avaliada; consulte [Desempenho e dados medidos](#appendix-measured-data).
 :::
 
 ## O que esta solução faz
@@ -231,11 +231,11 @@ A entrada é filmagem RTSP real. A medição cobre **todo o caminho desde o quad
 
 Essas duas linhas não se comparam diretamente com a tabela de ponta a ponta acima: 9,7 ms excluem decodificação, rastreamento e publicação, e cerca de 10 FPS é a taxa de processamento na câmera, não a taxa em que os resultados chegam ao backend.
 
-#### Multi-stream
+#### Múltiplos fluxos
 
 Cada número acima veio de um host observando uma câmera. "Várias câmeras em um host" é a divisão de trabalho entre presets (a rota Jetson assume esse papel). Um backend pode aceitar qualquer número de detectores no nível de protocolo, separados por nome de instalação e ID de câmera; o limite está no lado do host de IA.
 
-### Runtimes e parâmetros principais
+### Tempos de execução e parâmetros principais
 
 | Host de detecção | Modelo de detecção | Precisão | Runtime | Como o modelo é entregue |
 |---|---|---|---|---|

@@ -310,7 +310,7 @@ Reproduzir: `evaluation/runs/2026-09-06-m1c-rk3588-radxa`, `evaluation/runs/2026
 | ONNX da torre de visão SigLIP 2 (`siglip2_vision_224.onnx`) | 371.695.898 B |
 | Bancos de protótipos + relatório de calibração | cerca de 155 KB no total |
 
-### Runtimes e parâmetros principais
+### Tempos de execução e parâmetros principais
 
 | Dispositivo | Modelo | Precisão | Runtime | Como o modelo chega ao dispositivo |
 |---|---|---|---|---|

@@ -44,7 +44,7 @@ Un sitio que empieza con el preset en dispositivo puede pasar a la pila de servi
 
 ## Lo que hace esta solución
 
-### Preajuste: Transcripción en Dispositivo
+### Preajuste: Transcripción en el dispositivo
 
 
 Una matriz de micrófonos en el mostrador capta la conversación, y una pequeña caja junto a ella convierte el audio en texto y sube el JSON de la transcripción final al backend de retail para almacenamiento y visualización. En modo Clip, SenseCraft Voice App envía el audio a través de la pasarela a voice-service, que llama a OpenVoiceStream para ASR y escribe el resultado en el mismo backend.
@@ -119,7 +119,7 @@ El texto de la lista ya está redactado: los nombres y números de teléfono se 
 
 ## Qué hardware necesitas
 
-### Preajuste: Transcripción en Dispositivo
+### Preajuste: Transcripción en el dispositivo
 
 
 Dos dispositivos por zona de habla, más un directorio con permisos de escritura.

@@ -263,7 +263,7 @@ Reproduzir: `solutions/edge_inspection_surface/evaluation/runs/`
 | Imagem Jetson | 375 MB | TensorRT e CUDA do host são montados no contêiner, não empacotados na imagem |
 | Pegada adicional no reComputer R2000 series | cerca de 452 MB | imagem de runtime de 443 MB + 8,9 MB HEF + config |
 
-### Runtimes e parâmetros principais
+### Tempos de execução e parâmetros principais
 
 | Dispositivo | Modelo | Precisão | Runtime | Como o modelo chega ao dispositivo |
 |---|---|---|---|---|

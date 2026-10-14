@@ -26,7 +26,7 @@ url: https://wiki.seeedstudio.com/pt-br/solutions/voice-warehouse-management/
 generated_from: sensecraft-solutions@smart_warehouse
 ---
 
-:::caution[Usage notice]
+:::caution[Aviso de uso]
 Este é um auxílio ao operador, não um livro de registro de inventário certificado. A REST API não possui fila offline: solicitações enviadas durante uma falha de rede ou serviço são rejeitadas e não são reproduzidas após a recuperação.
 :::
 

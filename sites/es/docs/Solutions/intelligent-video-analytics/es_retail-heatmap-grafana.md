@@ -235,7 +235,7 @@ Estas dos filas no se comparan directamente con la tabla de extremo a extremo an
 
 Cada cifra anterior proviene de un host viendo una cámara. "Varias cámaras en un host" es la división del trabajo entre presets (la ruta Jetson cumple ese papel). Un backend puede aceptar cualquier número de detectores a nivel de protocolo, separados por nombre de instalación e ID de cámara; el límite está en el lado del host de IA.
 
-### Runtimes y parámetros clave
+### Tiempos de ejecución y parámetros clave
 
 | Host de detección | Modelo de detección | Precisión | Runtime | Cómo se entrega el modelo |
 |---|---|---|---|---|

@@ -234,7 +234,7 @@ O fluxo geral:
   <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/recamera-pro-firmware-update-a9539b3d.gif" alt="Gerenciamento de dispositivo → Embedded → reCamera Pro, expandido para preencher endereço e porta ADB"/>
 </div>
 
-4. **Verifique o preview para confirmar o enquadramento** — Depois de instalado, o app mostra um feed ao vivo com um esqueleto e o estado sobrepostos à pessoa. Confirme que a câmera realmente vê o que precisa antes de conectar as notificações. A captura de tela abaixo é a página de preview da reCamera Pro. **Os rótulos de status vêm de um replay, não de uma execução medida**; os números medidos estão em "Performance and measured data".
+4. **Verifique o preview para confirmar o enquadramento** — Depois de instalado, o app mostra um feed ao vivo com um esqueleto e o estado sobrepostos à pessoa. Confirme que a câmera realmente vê o que precisa antes de conectar as notificações. A captura de tela abaixo é a página de preview da reCamera Pro. **Os rótulos de status vêm de um replay, não de uma execução medida**; os números medidos estão em "Desempenho e dados medidos".
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/live-fall-demo-f4ef5180.gif" alt="A transição do estado normal para caído, mostrada na visualização do App Center do reCamera Pro"/>
@@ -444,7 +444,7 @@ Reprodução: [`evaluation/`](https://github.com/suharvest/edgefallkit/tree/main
 
 **Condições do teste de 16 streams no Hailo-8 e decodificação de vídeo no host**: As 16 streams recomendadas no Hailo-8 R2000 foram medidas usando **streams de vídeo de entrada 640×640** a 15 FPS. Como o host do reComputer R2000 Series não possui decodificação de vídeo por hardware multicanal, a decodificação por software de streams 1080p vai saturar a CPU em cerca de 2–4 streams. Para implantações reais com múltiplas câmeras, as câmeras devem ser configuradas para fornecer sub-streams de resolução mais baixa (recomendado 640×480 ou 640×360) para evitar gargalos de decodificação na CPU.
 
-### Runtimes e parâmetros principais
+### Tempos de execução e parâmetros principais
 
 Todas as plataformas executam a mesma família de modelos de pose 640². O que difere é o runtime e como o modelo chega ao dispositivo:
 

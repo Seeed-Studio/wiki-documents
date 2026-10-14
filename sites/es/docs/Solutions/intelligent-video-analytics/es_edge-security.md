@@ -317,7 +317,7 @@ Se midió la reComputer RK3588 Serie hasta 32 transmisiones:
 
 ### Tiempos de ejecución y parámetros clave
 
-El tiempo de ejecución y la ruta de decodificación de cada host están en la tabla de hosts bajo "What hardware you need". Parámetros que cambian el comportamiento de la implementación:
+El tiempo de ejecución y la ruta de decodificación de cada host están en la tabla de hosts bajo "Qué hardware necesitas". Parámetros que cambian el comportamiento de la implementación:
 
 - `require_hw_decode` (activado por defecto): el detector rechaza la decodificación por CPU. Una página de dispositivo que muestra decodificación `sw` significa que se desactivó.
 - `conf_threshold` por transmisión (0-1, ajustable en la pared en tiempo de ejecución): cuando un modelo int8 produce cajas adicionales de baja confianza, sube primero el umbral y vuelve a fp16 solo si eso no es suficiente.

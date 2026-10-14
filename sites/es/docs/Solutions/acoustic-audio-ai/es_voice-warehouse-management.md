@@ -26,7 +26,7 @@ url: https://wiki.seeedstudio.com/es/solutions/voice-warehouse-management/
 generated_from: sensecraft-solutions@smart_warehouse
 ---
 
-:::caution[Usage notice]
+:::caution[Aviso de uso]
 Esto es una ayuda para el operador, no un libro de inventario certificado. La REST API no tiene cola sin conexión: las solicitudes enviadas durante una caída de red o servicio fallan y no se reejecutan después de la recuperación.
 :::
 

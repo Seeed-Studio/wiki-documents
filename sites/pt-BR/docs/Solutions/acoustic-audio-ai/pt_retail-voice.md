@@ -44,7 +44,7 @@ Um site que começa com o preset de transcrição no dispositivo pode migrar par
 
 ## O que esta solução faz
 
-### Predefinição: Transcrição no Dispositivo
+### Predefinição: Transcrição no dispositivo
 
 
 Uma matriz de microfones no balcão capta a conversa, e uma pequena caixa ao lado converte o áudio em texto e envia o JSON da transcrição final para o backend de varejo para armazenamento e exibição. No modo Clip, o SenseCraft Voice App envia o áudio pelo gateway para o voice-service, que chama o OpenVoiceStream para ASR e grava o resultado no mesmo backend.
@@ -119,7 +119,7 @@ O texto na lista já está redatado: nomes e números de telefone são substitu�
 
 ## De que hardware você precisa
 
-### Predefinição: Transcrição no Dispositivo
+### Predefinição: Transcrição no dispositivo
 
 
 Dois dispositivos por zona de fala, mais um diretório gravável.
@@ -352,7 +352,7 @@ Reprodução: `openvoicestream/bench/asr_bench/build_unified_report.py`
 
 ## Fontes de dados e ativos
 
-### Predefinição: Transcrição no Dispositivo
+### Predefinição: Transcrição no dispositivo
 
 
 - **Modelos de reconhecimento, pontuação, detecção de ponto final e impressão de voz**: SenseVoice e Paraformer para reconhecimento, CT-Transformer para pontuação, CAM++ para impressão de voz, Silero VAD para detecção de ponto final. Cada um segue sua licença upstream; verifique a licença de cada modelo que você usar antes de implantação comercial. Os modelos são baixados na primeira inicialização a partir do espelho escolhido na implantação.

@@ -315,9 +315,9 @@ O reComputer RK3588 Series foi medido até 32 streams:
 - **Implantações multi-stream são limitadas por memória.** Processos novos ocupam 173-226 MB, mas ciclos de referência do rknnlite fazem um processo crescer: um detector que havia rodado por dois dias mediu 1839 MB, e dezesseis desses não cabem em 16 GB. Use o backend ctypes ou um `gc.collect()` periódico para multi-stream.
 - Dois detectores concorrentes é a maior configuração medida em um hub compartilhado.
 
-### Runtimes e parâmetros principais
+### Tempos de execução e parâmetros principais
 
-O runtime e o caminho de decodificação de cada host estão na tabela de hosts em "What hardware you need". Parâmetros que alteram o comportamento da implantação:
+O runtime e o caminho de decodificação de cada host estão na tabela de hosts em "De que hardware você precisa". Parâmetros que alteram o comportamento da implantação:
 
 - `require_hw_decode` (ativado por padrão) — o detector recusa decodificação na CPU. Uma página de dispositivo mostrando decodificação `sw` significa que ele foi desativado.
 - `conf_threshold` por stream (0-1, ajustável na parede em tempo de execução) — quando um modelo int8 produz caixas extras de baixa confiança, aumente primeiro o limiar e volte para fp16 somente se isso não for suficiente.
@@ -328,7 +328,7 @@ O runtime e o caminho de decodificação de cada host estão na tabela de hosts 
 - A p50 de inferência do reComputer RK3588 Series varia cerca de 8 ms entre execuções; a p95 é reprodutível.
 - Quando o detector não consegue acompanhar o stream, o rastreador continua emitindo novos IDs de rastreamento e uma pessoa parada gera alertas repetidos. Compare a taxa de detecção na página do dispositivo com a taxa de frames da câmera.
 
-## Fontes de dados e assets
+## Fontes de dados e ativos
 
 - O clipe de verdade de temporização de regras é composto por um script a partir de uma trajetória definida em segundos, de modo que os instantes reais de cruzamento e entrada são conhecidos antes da execução.
 - A fonte de vídeo nas capturas de tela da bancada de trabalho é a fonte de teste de barras de cor do repositório.

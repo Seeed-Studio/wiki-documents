@@ -234,7 +234,7 @@ El flujo general:
   <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/recamera-pro-firmware-update-a9539b3d.gif" alt="Gestión de dispositivos → Embedded → reCamera Pro, expandido para rellenar dirección y puerto ADB"/>
 </div>
 
-4. **Comprueba la vista previa para confirmar el encuadre** — Una vez instalada, la app muestra un feed en vivo con un esqueleto y el estado superpuestos sobre la persona. Confirma que la cámara realmente ve lo que necesita antes de cablear las notificaciones. La captura de pantalla de abajo es la página de vista previa de reCamera Pro. **Las etiquetas de estado provienen de una reproducción, no de una ejecución medida**; las cifras medidas están en "Performance and measured data".
+4. **Comprueba la vista previa para confirmar el encuadre** — Una vez instalada, la app muestra un feed en vivo con un esqueleto y el estado superpuestos sobre la persona. Confirma que la cámara realmente ve lo que necesita antes de cablear las notificaciones. La captura de pantalla de abajo es la página de vista previa de reCamera Pro. **Las etiquetas de estado provienen de una reproducción, no de una ejecución medida**; las cifras medidas están en "Rendimiento y datos medidos".
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/live-fall-demo-f4ef5180.gif" alt="La transición de estado de normal a caído, mostrada en la vista previa del reCamera Pro App Center"/>
@@ -444,7 +444,7 @@ Reproducir: [`evaluation/`](https://github.com/suharvest/edgefallkit/tree/main/e
 
 **Condiciones de prueba de 16 flujos en Hailo-8 y decodificación de vídeo en el host**: Los 16 flujos recomendados en el Hailo-8 R2000 se midieron usando **flujos de vídeo de entrada 640×640** a 15 FPS. Debido a que el host de reComputer R2000 Serie carece de decodificación de vídeo hardware multicanal, la decodificación por software de flujos 1080p saturará la CPU aproximadamente entre 2 y 4 flujos. Para despliegues reales con múltiples cámaras, las cámaras deben configurarse para entregar subflujos de menor resolución (se recomiendan 640×480 o 640×360) para evitar cuellos de botella de decodificación en la CPU.
 
-### Runtimes y parámetros clave
+### Tiempos de ejecución y parámetros clave
 
 Todas las plataformas ejecutan la misma familia de modelos de pose 640². Lo que cambia es el runtime y cómo llega el modelo al dispositivo:
 
