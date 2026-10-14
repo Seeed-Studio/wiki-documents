@@ -440,8 +440,7 @@ sudo apt install -y \
     make \
     libpopt-dev \
     can-utils \
-    ethtool \
-    nvidia-l4t-kernel-headers
+    ethtool
 ```
 确认当前内核头文件目录存在：
 ```bash
