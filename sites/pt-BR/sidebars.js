@@ -2016,6 +2016,7 @@ const sidebars = {
                 },
               ],
             },
+            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_reSpeaker_xvf_3800_i2s_usb_bridge',
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_python_sdk',
           ],
         },
