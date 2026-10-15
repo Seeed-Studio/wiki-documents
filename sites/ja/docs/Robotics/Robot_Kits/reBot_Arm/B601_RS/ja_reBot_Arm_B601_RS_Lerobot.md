@@ -862,6 +862,30 @@ lerobot-teleoperate \
 ```
 
 </TabItem>
+
+<TabItem value="camera-mount" label="カメラマウント">
+
+**カメラマウントの取り付け**
+
+カメラの位置を固定して、クリーンなデータ収集を実現します。多角度の自由調整に対応し、俯瞰 + 手首、俯瞰 + 側面などのビューに対応します。一般的な USB カメラや、D435i、D405、Gemini 2 などの深度カメラに対応し、SO-ARM101 や reBot などのロボットアームにも対応します。データ収集実験ボックスと組み合わせて使用でき、ダウンロードしたデータセットとモデルをそのまま再利用できます。
+
+<div class="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/2r3tvA7oJ_c" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10&reBot-B601-p-7003.html" target="_blank" rel="noopener noreferrer">
+    <span>今すぐ購入</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
+</TabItem>
 </Tabs>
 
 ## データセット収集
