@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 9 do Curso para Iniciantes em IA Física da Seeed — fundamentos de aprendizado de robôs e aprendizado por imitação: por que o braço precisa de aprendizado, controle baseado em regras vs. baseado em aprendizado, observação/estado/ação, blocos de ação, distribuição de dados e as três fases de treinamento, inferência e avaliação.'
 title: Capítulo 9 - Fundamentos de Aprendizado de Robôs e Aprendizado por Imitação
+hide_title: true
 keywords:
   - reBot
   - Imitation Learning
@@ -8,7 +9,7 @@ keywords:
   - Robot Learning
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_9
+slug: /robotics/rebot_physical_ai_course_chapter_9
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -16,13 +17,11 @@ last_update:
   date: 2026-09-19
   author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_9/
+updatedAt: '2026-09-25'
+url: https://wiki.seeedstudio.com/pt-br/robotics/rebot_physical_ai_course_chapter_9/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 
@@ -36,70 +35,94 @@ import '/src/css/rebot-wiki-style.css';
       dados e as três fases de treinamento, inferência e avaliação.
     </p>
     <div className="hero-actions">
-      <a href="#por-que-aprendizado">Why learning</a>
-      <a href="#distribuição-de-dados">Data distribution</a>
+      <a href="#why-learning">Why learning</a>
+      <a href="#data-distribution">Data distribution</a>
       <a href="#pipeline">Pipeline</a>
     </div>
   </div>
 </section>
 
-## 9.1 Por Que Braços Robóticos Precisam de Aprendizado?
+### Hardware needed for this stage
+
+What to prepare for this stage. The complete list for every stage is in [Chapter 3](/pt-br/robotics/rebot_physical_ai_course_chapter_3/).
+
+**Main control unit**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+A desktop or laptop is also required: Ubuntu 22.04, GTX 4080 or better with 12GB+ VRAM, 16GB+ RAM.
+
+**For this stage**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+| [reBot Arm 102 Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html) | 🛒 | 1 |
+| [720P Monocular Wrist Camera](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) | 🛒 | 2 |
+| [Wrist Camera Mount](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/b601-camera-mounts/UVC32_mount.step) | 🛒 | 1 |
+| [Hikvision Camera Overhead Mount](https://item.taobao.com/item.htm?spm=tbpc.boughtlist.suborder_itemtitle.1.49cb2e8dt6KH1K&id=797067194359&mi_id=0000qWvzUV0CAietxWIGsLRo68nEdNUwWmvnKFhXbqbu1Ac) | 🛒 | 1 |
+
+
+## 9.1 Why Do Robot Arms Need Learning?
 
 <section id="why-learning" className="section-card">
   <div className="section-title">
-    <span>Motivação</span>
-    <h2>9.1 Por Que Braços Robóticos Precisam de Aprendizado?</h2>
+    <span>Motivation</span>
+    <h2>9.1 Why Do Robot Arms Need Learning?</h2>
   </div>
 
-No Estágio 2, você já consegue controlar o braço robótico com o SDK em Python: ler ângulos das juntas, enviar posições alvo, abrir e fechar a garra. Então é natural pensar — é só escrever um programa que faça o braço pegar automaticamente os blocos na mesa, certo?
+In Stage 2, you can already control the robot arm with the Python SDK: read joint angles, send target positions, open and close the gripper. So it's natural to think — just write a program that makes the arm automatically pick up blocks on the table, right?
 
-Então você escreve esse programa. Na primeira demonstração no laboratório, o programa funcionou muito bem. Mas no dia seguinte, as coisas mudam — e você vai perceber que, para lidar com essas mudanças, cada vez mais instruções "if" são adicionadas ao programa, até que ele se torna um enorme catálogo de casos especiais que ninguém consegue manter.
+So you write such a program. During the first demo in the lab, the program worked great. But the next day, things changed — and you'll find that to handle these changes, more and more "if" statements get added to the program, eventually becoming a giant catalog of special cases that no one can maintain.
 
-**Este é o dilema fundamental do controle programático tradicional: o mundo real muda continuamente, enquanto if-else é discreto.** Você não consegue enumerar todos os possíveis estados do mundo.
+**This is the fundamental dilemma of traditional programmatic control: the real world changes continuously, while if-else is discrete.** You cannot enumerate every possible state of the world.
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-01.png" alt="O dilema do controle programático tradicional" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-01.png" alt="The dilemma of traditional programmatic control" />
 </div>
 
-**Permitir que braços robóticos adquiram habilidades dessa forma é justamente o que o Aprendizado de Robôs busca resolver.** E o aprendizado por imitação abordado neste estágio é a abordagem mais madura e mais fácil de implantar em hardware real.
+**Enabling robot arms to acquire skills this way is what Robot Learning sets out to solve.** And the imitation learning covered in this stage is the most mature and easiest-to-deploy-on-real-hardware approach.
 
 </section>
 
-## 9.2 Controle Baseado em Regras vs. Controle Baseado em Aprendizado
+## 9.2 Rule-Based Control vs. Learning-Based Control
 
 <section id="control-paradigms" className="section-card">
   <div className="section-title">
-    <span>Paradigmas</span>
-    <h2>9.2 Controle Baseado em Regras vs. Controle Baseado em Aprendizado</h2>
+    <span>Paradigms</span>
+    <h2>9.2 Rule-Based Control vs. Learning-Based Control</h2>
   </div>
 
-Antes de continuar, vamos colocar lado a lado as duas abordagens de controle e enxergá-las com clareza.
+Before continuing, let's put the two control approaches side by side and see them clearly.
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-02.png" alt="Controle baseado em regras vs. controle baseado em aprendizado" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-02.png" alt="Rule-based control vs. learning-based control" />
 </div>
 
 :::note
-Os Estágios 3 e 4 deste curso seguem o caminho do "controle baseado em aprendizado". Mas lembre-se: mesmo no futuro, seus sistemas de aprendizado ainda manterão um grande número de regras — como limites de juntas e restrições de velocidade segura. Aprendizado e regras são complementares.
+Stages 3 and 4 of this course follow the "learning-based control" path. But remember: even in the future, your learning systems will still retain a large number of rules — such as joint limits and safe speed constraints. Learning and rules are complementary.
 :::
 
 </section>
 
-## 9.3 Aprendizado por Imitação e Behavioral Cloning
+## 9.3 Imitation Learning and Behavioral Cloning
 
 <section id="imitation-learning" className="section-card">
   <div className="section-title">
-    <span>Imitação</span>
-    <h2>9.3 Aprendizado por Imitação e Behavioral Cloning</h2>
+    <span>Imitation</span>
+    <h2>9.3 Imitation Learning and Behavioral Cloning</h2>
   </div>
 
-### O Que é Aprendizado por Imitação
+### What Is Imitation Learning
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-03.png" alt="Aprendizado por imitação" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-03.png" alt="Imitation learning" />
 </div>
 
-### O Que é Behavioral Cloning
+### What Is Behavioral Cloning
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-04.png" alt="Behavioral cloning" />
@@ -107,123 +130,123 @@ Os Estágios 3 e 4 deste curso seguem o caminho do "controle baseado em aprendiz
 
 </section>
 
-## 9.4 Observação, Estado e Ação
+## 9.4 Observation, State, and Action
 
 <section id="observation-state-action" className="section-card">
   <div className="section-title">
-    <span>Conceitos de dados</span>
-    <h2>9.4 Observação, Estado e Ação</h2>
+    <span>Data concepts</span>
+    <h2>9.4 Observation, State, and Action</h2>
   </div>
 
-Todos os dados em aprendizado por imitação podem ser categorizados em três conceitos. Esses três termos aparecerão repetidamente em todos os capítulos seguintes, então construa aqui uma intuição precisa.
+All data in imitation learning can be categorized into three concepts. These three terms will appear repeatedly in every chapter that follows, so build accurate intuition here.
 
-- **Observação:** o mundo que o robô "vê".
-- **Estado:** a condição "própria" do robô.
-- **Ação:** o que o robô "vai fazer".
+- **Observation:** the world the robot "sees."
+- **State:** the robot's "own" condition.
+- **Action:** what the robot "will do."
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-05.png" alt="Observação, estado e ação" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-05.png" alt="Observation, state, and action" />
 </div>
 
 </section>
 
-## 9.5 Ações de Único Passo vs. Blocos de Ação
+## 9.5 Single-Step Actions vs. Action Chunks
 
 <section id="action-chunks" className="section-card">
   <div className="section-title">
-    <span>Ações</span>
-    <h2>9.5 Ações de Único Passo vs. Blocos de Ação</h2>
+    <span>Actions</span>
+    <h2>9.5 Single-Step Actions vs. Action Chunks</h2>
   </div>
 
-- **Ação de único passo:** uma decisão por quadro.
-- **Bloco de ação:** prever de uma vez uma sequência de ações.
+- **Single-step action:** one decision per frame.
+- **Action chunk:** predict a sequence of actions at once.
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-06.png" alt="Ação de único passo vs. bloco de ação" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-06.png" alt="Single-step action vs. action chunk" />
 </div>
 
-Claro, blocos de ação mais longos nem sempre são melhores. Prever muito à frente significa que o ambiente pode mudar no meio da execução (por exemplo, um objeto é esbarrado), enquanto o braço ainda está executando ações "desatualizadas". Sistemas reais usam um compromisso: executar em malha aberta por um curto segmento, depois reobservar e voltar a prever.
+Of course, longer action chunks aren't always better. Predicting too far ahead means the environment may change mid-execution (e.g., an object gets bumped), while the arm is still executing "outdated" actions. Real systems use a compromise: execute open-loop for a short segment, then re-observe and re-predict.
 
 </section>
 
-## 9.6 Distribuição de Dados e Generalização do Modelo
+## 9.6 Data Distribution and Model Generalization
 
 <section id="data-distribution" className="section-card">
   <div className="section-title">
-    <span>Distribuição</span>
-    <h2>9.6 Distribuição de Dados e Generalização do Modelo</h2>
+    <span>Distribution</span>
+    <h2>9.6 Data Distribution and Model Generalization</h2>
   </div>
 
-Esta é a seção mais importante deste capítulo, e a que iniciantes mais facilmente ignoram, mas que determina o sucesso ou fracasso na prática. Guarde primeiro esta frase:
+This is the most important section of this chapter, and the one beginners most easily overlook, yet it determines success or failure in practice. Remember this one sentence first:
 
-**Um modelo de aprendizado por imitação só consegue aprender o que está nos dados e só consegue funcionar dentro do intervalo coberto pelos dados.**
+**An imitation learning model can only learn what's in the data, and can only work within the range covered by the data.**
 
-- Todos os pares (observação, ação) que o modelo viu durante o treinamento constituem uma **Distribuição de Dados**. Durante a inferência, se as imagens e estados que o braço encontra caírem dentro dessa distribuição, o modelo geralmente se comporta bem; uma vez que saiam da distribuição, a saída do modelo perde sua base e o comportamento se torna imprevisível.
+- All (observation, action) pairs the model saw during training constitute a **Data Distribution**. During inference, if the images and states the arm encounters fall within this distribution, the model generally performs well; once they go outside the distribution, the model's output loses its basis and behavior becomes unpredictable.
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-07.png" alt="Distribuição de dados" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-07.png" alt="Data distribution" />
 </div>
 
-Isso leva a várias implicações bem práticas:
+This leads to several very practical implications:
 
-- Se você quer que ele pegue blocos em qualquer posição da mesa, os dados precisam cobrir todas as posições da mesa — se você só coletar dados no centro da mesa, o modelo só vai pegar no centro.
-- Se você quer que ele pegue objetos de cores diferentes, os dados precisam conter cores diferentes — caso contrário, uma nova cor é um mundo desconhecido para ele.
-- Iluminação, fundo e posição da câmera devem permanecer o mais consistentes possível com a coleta de dados — um modelo treinado com dados coletados à tarde pode falhar completamente sob iluminação interna à noite.
+- If you want it to grasp blocks at any position on the table, the data must cover all positions on the table — if you only collect data at the center of the table, the model will only grasp at the center.
+- If you want it to grasp objects of different colors, the data must contain different colors — otherwise, a new color is an unfamiliar world to it.
+- Lighting, background, and camera position should all stay as consistent as possible with data collection — a model trained on afternoon-collected data may completely fail under evening indoor lighting.
 
-E **generalização** é a capacidade do modelo de aplicar padrões aprendidos a partir dos dados a novas situações dentro da distribuição que ele não viu individualmente. Por exemplo, se no treinamento ele viu blocos em 100 posições diferentes, e durante a inferência um bloco aparece na 101ª posição (ainda sobre a mesa), o modelo ainda consegue pegá-lo — isso é generalização. Generalização não é mágica; ela vem da **diversidade** dos dados: quanto mais rica e contínua for a cobertura dos dados, menores serão as "lacunas" dentro da distribuição e melhor será a generalização.
+And **generalization** is the model's ability to apply patterns learned from data to new situations within the distribution that it has not seen individually. For example, if training saw blocks at 100 different positions, and during inference a block appears at the 101st position (still on the tabletop), the model can still grasp it — that's generalization. Generalization isn't magic; it comes from the data's **diversity**: the richer and more continuous the data coverage, the smaller the "gaps" within the distribution, and the better the generalization.
 
 :::tip
-O limite superior do aprendizado por imitação é essencialmente determinado no momento em que os dados são coletados. O treinamento apenas realiza esse limite superior.
+The upper limit of imitation learning is essentially determined at the moment data is collected. Training merely realizes that upper limit.
 :::
 
 </section>
 
-## 9.7 Treinamento, Inferência e Avaliação
+## 9.7 Training, Inference, and Evaluation
 
 <section id="pipeline" className="section-card">
   <div className="section-title">
     <span>Pipeline</span>
-    <h2>9.7 Treinamento, Inferência e Avaliação</h2>
+    <h2>9.7 Training, Inference, and Evaluation</h2>
   </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-08.png" alt="As três fases do aprendizado por imitação" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-08.png" alt="The three phases of imitation learning" />
 </div>
 
-### Treinamento: Aprendizado Offline
+### Training: Offline Learning
 
-O treinamento acontece depois que a coleta de dados é concluída; é um processo **offline**: o braço pode ser desligado e deixado de lado; todo o trabalho é feito na GPU.
+Training happens after data collection is complete; it's an **offline** process: the arm can be powered off and set aside; all work is done on the GPU.
 
-- **Input:** conjunto de dados coletado (séries temporais de imagens, State e Action);
-- **Processo:** o modelo lê repetidamente os dados, ajustando continuamente seus parâmetros internos para que suas Actions previstas se aproximem cada vez mais das demonstrações humanas;
-- **Output:** um arquivo de modelo treinado.
+- **Input:** collected dataset (time series of images, State, and Action);
+- **Process:** the model repeatedly reads the data, continuously adjusting its internal parameters so that its predicted Actions increasingly match the human demonstrations;
+- **Output:** a trained model file.
 
-A qualidade do treinamento é observada principalmente por meio da **Loss**: à medida que a Loss diminui, as ações previstas pelo modelo se tornam cada vez mais parecidas com as demonstrações humanas.
+Training quality is primarily observed through **Loss**: as Loss decreases, the model's predicted actions increasingly resemble human demonstrations.
 
-### Inferência: Tomada de Decisão Online
+### Inferência: Tomada de decisão online
 
-Inferência é o processo em que o modelo é **implantado no robô real e funciona em tempo real**: ler câmera e estados das juntas → o modelo prevê um Action Chunk → enviá-lo para os motores para execução. A inferência tem requisitos de tempo real — o modelo precisa gerar ações em dezenas de milissegundos, caso contrário o braço vai engasgar.
+Inferência é o processo em que o modelo é **implantado no robô real e funciona em tempo real**: lê os estados da câmera e das juntas → o modelo prevê um Action Chunk → envia-o para os motores para execução. A inferência tem requisitos de tempo real — o modelo deve gerar ações em dezenas de milissegundos, caso contrário o braço irá engasgar.
 
-### Avaliação: Julgada pela Taxa de Sucesso
+### Avaliação: Julgado pela taxa de sucesso
 
-O modelo foi treinado, a Loss está baixa — ele realmente consegue fazer o trabalho? Não necessariamente.
+O modelo é treinado, a Loss está baixa — ele realmente consegue fazer o trabalho? Não necessariamente.
 
-**Loss baixa só significa que o modelo é "parecido com o humano", não que ele "consiga completar a tarefa".** O único método de avaliação confiável é o teste em robô real:
+**Loss baixa só significa que o modelo é "parecido com o humano", não que ele "consegue completar a tarefa".** O único método de avaliação confiável é o teste em robô real:
 
-- Definir critérios claros de sucesso da tarefa (por exemplo, "o bloco termina dentro da caixa");
-- Variar as condições iniciais (posição do bloco, iluminação), repetir o teste N vezes;
-- Calcular a taxa de sucesso da tarefa — por exemplo, 14 sucessos em 20 testes = 70% de taxa de sucesso.
+- Defina critérios claros de sucesso da tarefa (por exemplo, "o bloco termina dentro da caixa");
+- Varie as condições iniciais (posição do bloco, iluminação), repita o teste N vezes;
+- Calcule a taxa de sucesso da tarefa — por exemplo, 14 sucessos em 20 testes = 70% de taxa de sucesso.
 
-Casos de falha encontrados durante a avaliação não são pontos finais; eles são insumo para a próxima rodada de coleta de dados — onde quer que ocorram falhas, colete dados adicionais ali e então retreine. Este é o ciclo de iteração de dados, e é a rotina diária de projetos reais de aprendizado de robôs.
+Casos de falha encontrados durante a avaliação não são pontos finais; eles são insumo para a próxima rodada de coleta de dados — onde quer que ocorram falhas, colete dados adicionais ali e então re-treine. Este é o ciclo de iteração de dados, e é a rotina diária de projetos reais de aprendizado em robôs.
 
 </section>
 
-## 9.8 Vantagens e Limitações do Aprendizado por Imitação
+## 9.8 Vantagens e limitações do Imitation Learning
 
 <section id="advantages" className="section-card">
   <div className="section-title">
     <span>Compensações</span>
-    <h2>9.8 Vantagens e Limitações do Aprendizado por Imitação</h2>
+    <h2>9.8 Vantagens e limitações do Imitation Learning</h2>
   </div>
 
 <div className="image-frame">

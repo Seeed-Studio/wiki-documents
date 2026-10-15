@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 13 del Curso de Introducción a la IA Física de Seeed — configuración de cámara y recopilación de datos con LeRobot: configuración con una o dos cámaras, búsqueda de nombres de dispositivos de cámara, sincronización de imagen/acción, creación de un dataset, grabación y regrabación, visualización y ampliación o eliminación de datos.'
 title: Capítulo 13 - Configuración de Cámara y Recopilación de Datos con LeRobot
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -9,7 +10,7 @@ keywords:
   - Dataset
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_13
+slug: /robotics/rebot_physical_ai_course_chapter_13
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -18,12 +19,10 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_13/
+url: https://wiki.seeedstudio.com/es/robotics/rebot_physical_ai_course_chapter_13/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

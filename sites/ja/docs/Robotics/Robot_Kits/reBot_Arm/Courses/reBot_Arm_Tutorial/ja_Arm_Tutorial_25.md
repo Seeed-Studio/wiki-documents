@@ -1,6 +1,7 @@
 ---
 description: "Seeed Physical AI Beginner's Course 第25章 — パスとトラジェクトリ、関節空間とデカルト空間での補間、線形・3次・5次多項式、およびフィードフォワード（モデルと重力）とフィードバック誤差補正から構成されるトルク指令。"
 title: 第25章 - 軌道計画とロボットアーム制御
+hide_title: true
 keywords:
   - reBot
   - ロボットアーム
@@ -11,7 +12,7 @@ keywords:
   - 重力補償
   - コース
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_25
+slug: /robotics/rebot_physical_ai_course_chapter_25
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -20,13 +21,11 @@ last_update:
   author: Seeed Studio Robotics Team
 createdAt: '2026-09-25'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_25/
+url: https://wiki.seeedstudio.com/ja/robotics/rebot_physical_ai_course_chapter_25/
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

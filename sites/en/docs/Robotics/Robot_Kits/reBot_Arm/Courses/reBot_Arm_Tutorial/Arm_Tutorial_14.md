@@ -1,6 +1,7 @@
 ---
 description: 'Chapter 14 of the Seeed Physical AI Beginner''s Course — dataset structure and quality inspection: what is actually stored on disk, the four quality standards, playback and image inspection, and what to do when problems are found.'
 title: Chapter 14 - Dataset Structure and Quality Inspection
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -9,7 +10,7 @@ keywords:
   - Parquet
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_14
+slug: /robotics/rebot_physical_ai_course_chapter_14
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -18,12 +19,10 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_14/
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_14/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

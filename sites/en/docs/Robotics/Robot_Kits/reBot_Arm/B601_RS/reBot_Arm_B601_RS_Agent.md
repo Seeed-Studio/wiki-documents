@@ -22,6 +22,7 @@ updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/wrc_demo_tutorial/
 ---
 
+
 # reBot Arm B601-RS Embodied Agent Design Framework
 
 <p align="center">

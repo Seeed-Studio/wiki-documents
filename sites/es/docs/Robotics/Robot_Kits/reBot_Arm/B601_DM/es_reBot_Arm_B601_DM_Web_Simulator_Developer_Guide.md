@@ -28,12 +28,9 @@ import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM Digital Twin & Control Stack
-
-<RebotDmDocNav />
 
 <div align="center">
     <img width={800}
@@ -101,7 +98,7 @@ El simulador web en sí no se conecta directamente al hardware. Todos los comand
 ls /dev/ttyACM*
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Salida esperada</summary>
 
 ```text
@@ -226,7 +223,7 @@ Después de la instalación, ejecuta diagnósticos para confirmar que el entorno
 ./rebotarm doctor
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Salida esperada (resumen)</summary>
 
 ```text
@@ -384,7 +381,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start sim
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Salida esperada</summary>
 
 ```text
@@ -483,7 +480,7 @@ source scripts/source_rebotarm_env.sh
 Este script carga, en orden, ROS2 (`/opt/ros/jazzy/setup.bash`), el entorno virtual de Python (`.venv/bin/activate`), las rutas de cmeel (extensiones C de Pinocchio) y el workspace (`install/setup.bash`).
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Notas del módulo principal</b> (haz clic para expandir)</summary>
 
 **server.js — servidor estático Node.js**
@@ -584,7 +581,7 @@ Al iniciar, primero llama a `/api/llm/health` para comprobar el estado del text-
 
 </details>
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Resumen de la interfaz ROS2</b> (haz clic para expandir)</summary>
 
 Las interfaces clave de ROS2 a las que el simulador web se suscribe y publica se enumeran a continuación. El espacio de nombres predeterminado es `rebotarm`.
@@ -684,7 +681,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Salida esperada</summary>
 
 ```text
@@ -802,7 +799,7 @@ La dirección WebSocket de rosbridge la introduce manualmente el usuario en el p
 
 La página intenta cargar la última dirección guardada cuando el cuadro de entrada está vacío. Modifica el valor por defecto o introduce directamente la dirección real en el panel de conexión web.
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Referencia rápida de archivos clave</b> (haz clic para expandir)</summary>
 
 | Archivo | Propósito |

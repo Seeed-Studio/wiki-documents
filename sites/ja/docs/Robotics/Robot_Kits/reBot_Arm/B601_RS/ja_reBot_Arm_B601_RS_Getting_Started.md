@@ -26,12 +26,9 @@ import '/src/css/rebot-wiki-style.css';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS クイックスタート
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
@@ -153,7 +150,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="reBot Arm B601-RS のモーター 1 とモーター 2 を接続している様子" />
 </div>
 
-次に、USB-to-CAN モジュール、電源・信号分岐基板、XT30 電源ケーブル、XT30 2+2 ケーブルを下図のように接続します。XT30 2+2 ケーブルのもう一方の端をモーター 1 に接続し、電源ケーブルを 48 V 電源に接続します。
+次に、USB-to-CAN モジュール、電源・信号分岐基板、XT30 電源ケーブル、XT30 2+2 ケーブルを下図のように接続し、PCAN の DIP スイッチを **120R** に設定します。XT30 2+2 ケーブルのもう一方の端をモーター 1 に接続し、電源ケーブルを 48 V 電源に接続します。
 
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="USB-to-CAN モジュールと電源ケーブルを reBot Arm B601-RS に接続している様子" />
@@ -392,7 +389,7 @@ sudo ip link set can0 up
 ドライバーインストール後に PCAN デバイスのファームウェアが正しくない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、復旧手順に従ってください。
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN ファームウェアのダウンロード＆ドライバー修復手順 - Ubuntu</summary>
 
 Ubuntu ユーザーはこのガイドを参照してください
@@ -451,8 +448,7 @@ sudo apt install -y \
     make \
     libpopt-dev \
     can-utils \
-    ethtool \
-    nvidia-l4t-kernel-headers
+    ethtool
 ```
 
 現在のカーネルヘッダーディレクトリが存在することを確認します：
@@ -632,7 +628,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 ドライバインストール後に PCAN デバイスのファームウェアが正しくない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、復旧手順に従ってください。
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN ファームウェアのダウンロード &amp; ドライバ修復手順 - macOS</summary>
 
 MAC ユーザーはこのガイドを参照してください
@@ -678,7 +674,7 @@ USB を挿し直します。
 ドライバをインストールしてもデバイスマネージャーで **PCAN-USB** が検出されない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、復旧手順に従ってください。
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN ファームウェアのダウンロード &amp; ドライバ修復手順 - Windows</summary>
 

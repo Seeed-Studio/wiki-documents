@@ -21,7 +21,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/solutions/conversational-voice-ai/
 generated_from: sensecraft-solutions@aa522af
 ---
@@ -80,7 +80,9 @@ Built for places where a person speaks to a machine with their hands busy: servi
     </ul>
 </div>
 
-<!-- TODO image: microphone array and speaker as installed on a service desk or kiosk — needs a field shoot -->
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/conversational_voice_ai/dashboard-chat-multiturn-zh-67ef2b7b.png" alt="On-device conversational voice agent dashboard showing multi-turn dialogue status"/>
+</div>
 
 ## What hardware you need
 
@@ -108,6 +110,11 @@ reComputer R2000 series also runs a CPU speech stack (sherpa-onnx, English only)
 **④ Fully local conversation on the RK route**: add an RK1828 / RM182X PCIe NPU card to an RK3588 host to run Qwen3-4B. The card needs its own 12 V supply, and the host needs the driver and device node. Only one large model can be resident on the card at a time.
 
 Also: the first start needs internet access and free disk (at least 25 GB on Orin NX), and the deployment tool must be able to reach the host over the network.
+
+### Negative Selection Boundaries
+
+- **On-Premise LLM Workload**: RK3576 is ideal for lightweight ASR/TTS streaming, but not for running 7B-class conversational LLMs locally; choose the GPU-accelerated reComputer J40 Series.
+- **High Acoustic Noise**: In noisy environments above 75 dB, avoid omnidirectional microphones and use dedicated directional noise-cancelling microphone arrays.
 
 ## How to deploy on site
 
@@ -137,8 +144,6 @@ The SenseCraft Solution app deploys to the host over SSH (or locally, if you are
 2. **Choose the conversation language**: the deployment resolves `(language, device)` to one speech profile before starting the other services. An unsupported pair, such as Chinese on reComputer R2000 series, exits with code 2 and stops the whole `docker compose up`; nothing starts halfway.
 3. **Fill in the endpoint and persona**: base URL, key and model ID for the cloud preset (defaults: the Beijing-region Qwen endpoint with `qwen3.5-flash`), plus the system prompt. You can switch from **Always listening** to **Wake word required** and type any short Chinese or English phrase; the open-vocabulary sherpa-onnx detector in the image compiles it locally at startup.
 4. **Verify in the dashboard**: the web dashboard on port 18000 shows listening / thinking / speaking / barged-in.
-
-<!-- TODO image: the four dashboard states and a screen recording of one interruption — needs capture on a deployed device -->
 
 Acceptance: three turns in the real room at real speaker volume, interrupting 0.5–1 s after each answer starts. Check that the old reply stops immediately and the interrupting utterance is not lost.
 

@@ -1,7 +1,6 @@
 ---
 description: Getting started with the reComputer Robotics J601 carrier board for NVIDIA Jetson AGX Thor modules.
 title: Getting Started with reComputer Robotics J601
-sidebar_label: Flash JetPack
 keywords:
   - reComputer Robotics J601
   - AGX Thor

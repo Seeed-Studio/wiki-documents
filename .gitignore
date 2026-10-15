@@ -14,14 +14,19 @@
 .cache-loader
 /sites/en/src
 /sites/en/static
+/sites/en/build
 /sites/zh-CN/src
 /sites/zh-CN/static
+/sites/zh-CN/build
 /sites/ja/src
 /sites/ja/static
+/sites/ja/build
 /sites/es/src
 /sites/es/static
+/sites/es/build
 /sites/pt-BR/src
 /sites/pt-BR/static
+/sites/pt-BR/build
 
 # Misc
 .DS_Store

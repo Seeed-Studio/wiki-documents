@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI Beginner's Course の第 8 章 — Python SDK を使って reBot Arm を制御：パラメータ、コンテキストマネージャによる接続、モーション、ゼロ点、関節状態。
 title: 第 8 章 - Python SDK を使用した reBot Arm の制御
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -8,7 +9,7 @@ keywords:
   - reBotArm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_8
+slug: /robotics/rebot_physical_ai_course_chapter_8
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -17,12 +18,10 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_8/
+url: https://wiki.seeedstudio.com/ja/robotics/rebot_physical_ai_course_chapter_8/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

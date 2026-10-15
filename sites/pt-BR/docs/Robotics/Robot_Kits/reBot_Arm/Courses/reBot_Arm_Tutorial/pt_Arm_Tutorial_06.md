@@ -1,6 +1,7 @@
 ---
 description: Capítulo 6 do Curso para Iniciantes em IA Física da Seeed — monte o reBot Arm, monte a fonte de alimentação, faça a fiação do braço e ligue-o pela primeira vez.
 title: Capítulo 6 - Montagem, Fonte de Alimentação e Primeira Ligação
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -9,7 +10,7 @@ keywords:
   - Wiring
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_6
+slug: /robotics/rebot_physical_ai_course_chapter_6
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -18,12 +19,10 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_6/
+url: https://wiki.seeedstudio.com/pt-br/robotics/rebot_physical_ai_course_chapter_6/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

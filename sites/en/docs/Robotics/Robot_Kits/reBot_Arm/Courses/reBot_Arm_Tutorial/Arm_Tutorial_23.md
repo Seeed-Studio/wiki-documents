@@ -1,6 +1,7 @@
 ---
 description: "Chapter 23 of the Seeed Physical AI Beginner's Course — coordinate frames and homogeneous transforms: world, base, joint, end-effector and camera frames, vectors and matrices, translation and rotation matrices, chaining transforms, and Euler angles versus quaternions."
 title: Chapter 23 - Robot Arm Mathematical Foundations and Coordinate Systems
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -10,7 +11,7 @@ keywords:
   - Quaternion
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_23
+slug: /robotics/rebot_physical_ai_course_chapter_23
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -19,13 +20,11 @@ last_update:
   author: Seeed Studio Robotics Team
 createdAt: '2026-09-25'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_23/
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_23/
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 
@@ -43,6 +42,26 @@ import 'katex/dist/katex.min.css';
     </div>
   </div>
 </section>
+
+### Hardware needed for this stage
+
+What to prepare for this stage. The complete list for every stage is in [Chapter 3](/robotics/rebot_physical_ai_course_chapter_3/).
+
+**Main control unit**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+A desktop or laptop is also required: Ubuntu 22.04, GTX 4080 or better with 12GB+ VRAM, 16GB+ RAM.
+
+**For this stage**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+
 
 <section className="section-card">
   <div className="section-title">
@@ -106,7 +125,7 @@ R^\top R &= I && \text{(orthonormal)} \\
 \end{aligned}
 $$
 
-<details>
+<details className="rebot-demo-details">
 <summary><strong>Worked micro-example: reading a 4x4 transform</strong></summary>
 
 $$

@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 24 del Curso de Introducción a la IA Física de Seeed: espacio articular frente a espacio cartesiano, cinemática directa a partir de parámetros DH y URDF, cinemática inversa y sus soluciones múltiples o inexistentes, el Jacobiano y la cinemática de velocidades, singularidades y mínimos cuadrados amortiguados, y CI analítica frente a numérica."
 title: Capítulo 24 - Cinemática directa, cinemática inversa y el Jacobiano
+hide_title: true
 keywords:
   - reBot
   - Brazo robótico
@@ -10,7 +11,7 @@ keywords:
   - Singularidad
   - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_24
+slug: /robotics/rebot_physical_ai_course_chapter_24
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -19,13 +20,11 @@ last_update:
   author: Seeed Studio Robotics Team
 createdAt: '2026-09-25'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_24/
+url: https://wiki.seeedstudio.com/es/robotics/rebot_physical_ai_course_chapter_24/
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

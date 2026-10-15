@@ -1,8 +1,8 @@
 ---
-title: AI 人体検出と Meshtastic 通知
-description: この Wiki では、AI カメラと XIAO ESP32S3 & Wio SX1262 による Meshtastic ネットワークを用いて、リアルタイムアラートをブロードキャストする AI 駆動の人体検出システムを紹介します。
+title: AI 人体検知と Meshtastic 通知
+description: この Wiki では、AI カメラと XIAO ESP32S3 & Wio SX1262 による Meshtastic メッシュネットワークを用いて、リアルタイムアラートをブロードキャストする AI 駆動の人体検知システムを紹介します。
 keywords:
-  - AI 人体検出
+  - AI 人体検知
   - XIAO ESP32S3
   - ESP-Mesh
   - エッジ AI
@@ -12,7 +12,7 @@ sku: 100029708,102010611,114993649
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 1
 last_update:
-  date: 2026-01-28
+  date: 2026-10-08
   author: John Xiang
 createdAt: '2026-01-28'
 updatedAt: '2026-07-24'
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/ja/ai_human_detection_meshtastic_broadcast/
 ---
 
 ## はじめに
-このデモでは、reCamera を Meshtastic LoRa メッシュネットワークと統合したエッジ AI リモート監視ソリューションを紹介します。reCamera のオンデバイス推論機能を活用し、ローカルの YOLO11n モデルが人を検出して直接 GPIO 信号をトリガします。この物理信号により、XIAO ESP32S3 ノードが Meshtastic ネットワーク全体に「Human detected」というアラートをブロードキャストします。このアーキテクチャは、複数の reCamera と Meshtastic ノードを統合して広範囲をカバーすることをサポートします。 
+このデモでは、reCamera と Meshtastic LoRa メッシュネットワークを統合したエッジ AI リモート監視ソリューションを紹介します。reCamera のオンデバイス推論機能を活用し、ローカルの YOLO11n モデルが人を検出して直接 GPIO 信号をトリガします。この物理信号により、XIAO ESP32S3 ノードが Meshtastic ネットワーク全体に「Human detected」というアラートをブロードキャストします。このアーキテクチャは、複数の reCamera と Meshtastic ノードを統合して広範囲をカバーすることを想定しています。 
 
 ## ハードウェアの準備
 <table align="center">
@@ -54,25 +54,25 @@ url: https://wiki.seeedstudio.com/ja/ai_human_detection_meshtastic_broadcast/
 </tbody></table>
 
 ## デモのセットアップ
-このデモを実現するために、reCamera と 2 つの Mesh ノードをそれぞれ異なる方法で設定する必要があります。まず reCamera 上で C++ プログラムを実行し、人を検出したときに GPIO 信号をトリガするようにします。続いて、最初の Mesh ノードに Meshtastic ファームウェアを書き込み、この Mesh ノードが GPIO 信号を監視し、信号がトリガされたときに Meshtastic ネットワークへメッセージを送信できるようにします。ブロードキャストされたメッセージは 2 台目の Mesh ノードで受信され、最後に、スマートフォンを Bluetooth で 2 台目の Mesh ノードに接続することで、送信されたメッセージをスマートフォン上で確認できます。
+このデモを実現するには、reCamera と 2 つの Mesh ノードをそれぞれ異なる方法で設定する必要があります。まず reCamera 上で C++ プログラムを実行し、人を検出したときに GPIO 信号をトリガするようにします。次に、最初の Mesh ノードに Meshtastic ファームウェアを書き込み、この Mesh ノードが GPIO 信号を監視し、信号がトリガされたときに Meshtastic ネットワークへメッセージを送信できるようにします。ブロードキャストされたメッセージは 2 台目の Mesh ノードで受信され、最後に、スマートフォンを Bluetooth で 2 台目の Mesh ノードに接続することで、送信されたメッセージをスマートフォン上で確認できます。
 
 ### reCamera の設定
 :::warning
-お持ちの reCamera ベースボードが PoE バージョンであることを必ず確認してください。GPIO インターフェースを備えているのは PoE バージョンの reCamera のみです。標準版と PoE 版の reCamera の違いについては、[reCamera 2002(w) 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/ja/recamera_2002_series_hardware_and_specs/) および [reCamera HQ PoE 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/ja/reCamera_hq_poe_hardware_and_specs/) を参照してください。
+お使いの reCamera ベースボードが PoE バージョンであることを必ず確認してください。GPIO インターフェースを備えているのは PoE バージョンの reCamera のみです。標準版と PoE 版の reCamera の違いについては、[reCamera 2002(w) 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/ja/recamera_2002_series_hardware_and_specs/) および [reCamera HQ PoE 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/ja/reCamera_hq_poe_hardware_and_specs/) を参照してください。
 
-もし PoE バージョンの reCamera - [reCamera HQ PoE 8GB/64GB](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html) を購入している場合は、そのまま使用してこのデモを再現できます。
+すでに PoE バージョンの reCamera - [reCamera HQ PoE 8GB/64GB](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html) を購入している場合は、そのまま使用してこのデモを再現できます。
 
 標準版の reCamera - [reCamera 2002(w) 8GB/64GB](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html) を購入している場合は、追加で PoE ベースボード - [reCamera Base Board PoE](https://www.seeedstudio.com/reCamera-2002-Base-Board-PoE-p-6559.html) を購入し、標準ベースボードと交換して reCamera に取り付ける必要があります。
 :::
 
-以下の設定の目的は、**reCamera** 上に **物体検出** アプリケーションをデプロイすることです。デフォルトの Node-RED サービスを停止することで、reCamera 上で `model_detector` という専用の C++ 実行プログラムを動作させられるようにします。 
+以下の設定の目的は、**reCamera** 上に **物体検出** アプリケーションをデプロイすることです。デフォルトの Node-RED サービスを停止することで、reCamera 上で `model_detector` と呼ばれる専用の C++ 実行プログラムを動作させます。 
 
 このセットアップでは、**YOLO11n** モデル（COCO データセットで学習）を使用してリアルタイムのエッジコンピューティングを行います。 
 
-最終的な目標は、reCamera が自律的に特定の物体（この例では人）を検出できるようにすることです。検出が発生すると、システムは **GPIO 490** を **High** レベルに引き上げることでハードウェア信号をトリガします。このハードウェアトリガが、**XIAO ESP32S3 + Wio SX1262** Meshtastic ノードとの通信の橋渡しとなります。
+最終的な目的は、reCamera が特定の物体（この例では人）を自律的に検出できるようにすることです。検出が行われると、**GPIO 490** を **High** レベルに引き上げることでハードウェア信号をトリガします。このハードウェアトリガが、**XIAO ESP32S3 + Wio SX1262** Meshtastic ノードとの通信の橋渡しとなります。
 
 #### GPIO ピンを露出させる
-reCamera PoE ベースボード上の GPIO ピンを露出させるには、ベースボードのネジを外してカバーを取り外す必要があります。すると、ベースボード上に 6 ピンのコネクタがあるのが分かります。ここでは、このコネクタから GPIO 490 と GND を使用します。この 6 ピンコネクタのようなベースボード上のインターフェースの詳細については、[reCamera Base Board with PoE Hardware Specification](https://wiki.seeedstudio.com/ja/recamera_hq_poe_hardware/#b3_poe) を参照してください。
+reCamera PoE ベースボード上の GPIO ピンを露出させるには、ベースボードのネジを外してカバーを取り外す必要があります。すると、ベースボード上に 6 ピンのコネクタがあるのが分かります。このコネクタから GPIO 490 と GND を使用します。この 6 ピンコネクタのようなベースボード上のインターフェースの詳細については、[reCamera Base Board with PoE Hardware Specification](https://wiki.seeedstudio.com/ja/recamera_hq_poe_hardware/#b3_poe) を参照してください。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_1_1.jpg" /></div>
 
@@ -80,7 +80,7 @@ reCamera PoE ベースボード上の GPIO ピンを露出させるには、ベ�
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_1_2.jpg" /></div>
 
-このケーブルをベースボードに接続します。最終的な接続は下図のようになります。GPIO 490 は緑のケーブルに、GND は黒のケーブルに接続されています。
+ケーブルをベースボードに接続します。最終的な接続は下図のようになります。GPIO 490 は緑のケーブルに、GND は黒のケーブルに接続されています。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_1_3.jpg" /></div>
 
@@ -90,52 +90,52 @@ reCamera PoE ベースボード上の GPIO ピンを露出させるには、ベ�
 :::note
 reCamera のカメラリソースは排他的であるため、デフォルトで動作している Node-RED および関連する AI サービスが、基盤となる画像ドライバを長時間占有します。これらのサービスが動作している状態で C++ の物体検出プログラムを直接起動すると、複数プロセス間で競合が発生し、カメラに正常にアクセスできないために C++ プログラムが起動に失敗します。 
 
-したがって、Web サービスを停止した後もデバイスをリモートで制御できるようにするため、SSH 経由で reCamera にアクセスする必要があります。そのうえで、SSH を通じて reCamera のターミナルでコマンドを実行し、Node-RED などのバックグラウンドプロセスを停止してカメラのロックを解除し、model_detector プログラムのために必要なハードウェアアクセスパスを確保します。
+したがって、Web サービスを停止した後もデバイスをリモートで制御できるように、SSH 経由で reCamera にアクセスする必要があります。そのうえで、SSH を通じて reCamera のターミナルでコマンドを実行し、Node-RED などのバックグラウンドプロセスを停止してカメラのロックを解除し、model_detector プログラムが必要とするハードウェアアクセス経路を確保します。
 :::
 
-#### SSH 接続の確立
+#### SSH 接続を確立する
 **MobaXTerm** などのツールを使用して、SSH 経由で **reCamera** にログインします。デフォルト IP：通常は `192.168.42.1`
 * ログイン後は、ユーザーデータやモデルの保存に一般的に使用される `/userdata/` ディレクトリに移動することを推奨します。
 
-#### Node-RED 関連サービスの停止
-reCamera 上でデフォルトで動作している Node-RED サービスは多くのシステムリソースを消費するため、C++ デモを実行する前に、必ず次の 3 つのコマンドを実行して停止させる必要があります：
+#### Node-RED 関連サービスを停止する
+reCamera 上でデフォルトで動作している Node-RED サービスは多くのシステムリソースを消費するため、C++ デモを実行する前に、必ず次の 3 つのコマンドを実行して停止させてください：
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_2_1n.jpg" /></div>
 
-#### モデルとファームウェアのアップロード
+#### モデルとファームウェアをアップロードする
 
 **MobaXTerm のファイル転送機能**（左側のファイルパネルにあるアップロードアイコン）を使用して、次のファイルを `/home/recamera/` ディレクトリにアップロードします。
 
 **コンパイル済みファームウェア**: 例 `model_detector`
 **量子化済みモデル**: 例 `yolo11n_cv181x_int8.cvimodel`
 
-ここでの `model_detector` は実行可能ファイルです。これは **reCamera SDK** を構成し、C++ ソースコードを**クロスコンパイル**することで生成されます。このプログラムのロジックは次のとおりです。アップロードした `yolo.cvimodel` を使用してフレーム内に人が存在するかどうかを検出します。人が検出されると、reCamera PoE ベースボード上の **GPIO 490** が **High** に設定され、検出されない場合は **Low** のままになります。
+ここでの `model_detector` は実行可能ファイルです。これは **reCamera SDK** を設定し、C++ ソースコードを**クロスコンパイル**することで生成されます。このプログラムのロジックは次のとおりです。アップロードした `yolo.cvimodel` を使用してフレーム内に人が存在するかどうかを検出します。人が検出されると、reCamera PoE ベースボード上の **GPIO 490** が **High** に設定され、検出されない場合は **Low** のままになります。
 
-クロスコンパイル環境の構築は複雑になる可能性があるため、利便性のためにあらかじめコンパイル済みの実行ファイルを提供しています。これをダウンロードして reCamera にアップロードするだけで利用できます。[Compiled C++ Model Detector Code](https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/model_detector)
+クロスコンパイル環境の構築は複雑になる可能性があるため、利便性のために事前コンパイル済みの実行ファイルを提供しています。これをダウンロードして reCamera に直接アップロードするだけで利用できます。[Compiled C++ Model Detector Code](https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/model_detector)
 
-モデルファイルについては、**COCO データセット**に基づいて学習された YOLO11n 検出モデルです。80 クラスを含み、人や車両など日常的な物体を認識できます。同様に、学習や変換を自分で行う必要がないようにダウンロードリンクを提供しています。ダウンロード後、そのまま reCamera にアップロードして使用できます。[reCamera Yolo Models](https://wiki.seeedstudio.com/ja/recamera_on_device_models/)
+モデルファイルについては、**COCO データセット** をベースに学習された YOLO11n 検出モデルです。80 クラスを含み、人や車両など日常的な物体を認識できます。同様に、トレーニングや変換を自分で行う必要がないよう、ダウンロードリンクを提供しています。ダウンロード後、そのまま reCamera にアップロードして使用できます。[reCamera Yolo Models](https://wiki.seeedstudio.com/ja/recamera_on_device_models/)
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_2_2n.jpg" /></div>
 
 :::note
-ソースコードの修正とクロスコンパイルは、組み込みシステムの経験がある方に推奨されます。さらに深く探求したい場合は、関連ドキュメントを参照してください。
+ソースコードの修正とクロスコンパイルは、組み込みシステムの経験がある方に推奨されます。さらに詳しく知りたい場合は、関連ドキュメントを参照してください。
 :::
 
-#### 権限付与と実行
+#### 権限を付与して実行する
 ターミナルで、まずコンパイル済みファームウェアと量子化済みモデルをアップロードしたフォルダに移動します。次に、ファームウェアに実行権限を付与し、検出プログラムを起動します。
 ```bash
 chmod +x model_detector
 ```
 
-視覚的なデモのために、model_detector プログラムには UDP ビデオストリーミング機能が統合されています。reCamera と PC が同じローカルネットワーク（LAN）上にある限り、reCamera 上でプログラムを実行し、PC 上で udp_receiver.py スクリプトを実行することでリアルタイムプレビューを実現できます。
+視覚的なデモのために、model_detector プログラムには UDP ビデオストリーミング機能が統合されています。reCamera と PC が同じローカルネットワーク（LAN）上にある限り、reCamera 上でプログラムを実行し、PC 上で udp_receiver.py スクリプトを実行することで、リアルタイムプレビューを実現できます。
 
 :::note
-この UDP ストリームは、あくまでローカルでの監視およびデモ用途（「おまけ」機能）に限定されています。LoRa 技術の物理的な帯域幅制約により、Meshtastic ネットワーク上でのビデオストリーミングはサポートされておらず、実現もできません。Mesh ネットワークを介して実際に送信されるデータは、「Human detected」のような軽量なテキストアラートに限られます。
+この UDP ストリームは、あくまでローカル監視およびデモ用（「おまけ」機能）に限定されています。LoRa 技術の物理的な帯域幅制約により、Meshtastic ネットワーク上でのビデオストリーミングはサポートされておらず、実現もできません。Mesh ネットワークを介して実際に送信されるデータは、「Human detected」のような軽量なテキストアラートに限られます。
 :::
 
 次のコマンドを実行して、`0.5`（50%）を信頼度しきい値の例として使用し、model_detector プログラムを実行します：
@@ -149,7 +149,7 @@ sudo ./model_detector [model_name] [confidence_threshold] [PC_IP_address] [udp_p
 * `[PC_IP_address]`: `udp_receiver.py` スクリプトを実行するあなたの PC の IP アドレス。この例では `10.0.0.228` です。**必ず、私のではなく、あなた自身の PC の IP アドレスを使用してください。**
 * `[udp_port]`: ビデオストリーミングに使用される UDP ポート番号。この例では `5000` です。
 
-以下は完全なコマンド例です：
+完全なコマンド例は次のとおりです：
 ```bash
 sudo ./model_detector yolo11n_cv181x_int8.cvimodel 0.5 10.0.0.228 5000
 ```
@@ -164,7 +164,7 @@ python .\udp_receiver.py --port [udp_port] --scale [scale_factor]
 * `[udp_port]`: reCamera からのビデオストリーミングに使用される UDP ポート番号。この例では `5000` です。
 * `[scale_factor]`: ビデオフレームをリサイズするためのスケール係数。この例では `1.5` です。
 
-以下は完全なコマンド例です：
+完全なコマンド例は次のとおりです：
 ```bash
 python .\udp_receiver.py --port 5000 --scale 1.5
 ```
@@ -180,23 +180,23 @@ python .\udp_receiver.py --port 5000 --scale 1.5
 ここでは、**最初の Mesh ノード** を設定します。このノードは、reCamera からの IO 出力を受信し、テキストメッセージ **"Human detected"** をブロードキャストする役割を担います。
 
 #### ファームウェアの書き込み
-デバイスには特定の Mesh ファームウェアを書き込む必要があります。Mesh ネットワークの独自のチャネル管理メカニズムにより、標準ファームウェアでは **DetectionSensor** モジュールが **Channel 0** に出力した情報は通常破棄されます。これは、高頻度の検出データが Mesh ネットワークのチャネルを占有してしまうのを防ぐために意図的に設計されています。以下の手順に従ってください：
+デバイスには特定の Mesh ファームウェアを書き込む必要があります。Mesh ネットワークの独自のチャネル管理メカニズムにより、標準ファームウェアでは **DetectionSensor** モジュールが **Channel 0** に出力した情報は通常破棄されます。これは、高頻度の検出データが Mesh ネットワークのチャネルを詰まらせないようにするための意図的な設計です。以下の手順に従ってください：
 
 :::note
-書き込みを行う前に、一時的に **Wio SX1262 拡張ボード** を XIAO から取り外してください。拡張ボード自体は書き込み処理を妨げませんが、物理的に XIAO ESP32S3 上の **BOOT** ボタンを塞いでしまいます。
+書き込みの前に、一時的に XIAO から **Wio SX1262 拡張ボード** を取り外してください。拡張ボード自体は書き込み処理を妨げませんが、XIAO ESP32S3 上の **BOOT** ボタンを物理的に塞いでしまいます。
 :::
 
 1.  まず、事前にコンパイルされた Mesh ファームウェア [Custom Meshtastic Firmware](https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/firmware-seeed-xiao-s3-2.7.17.63aadba52.factory.bin) をダウンロードします。
-2.  XIAO ESP32S3 を USB ケーブルでコンピュータに接続し、**ブートローダーモードに入ります**。このガイド [XIAO S3 bootloader guide](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/#bootloader-mode) を参照できます。
+2.  XIAO ESP32S3 を USB ケーブルでコンピュータに接続し、**ブートローダーモードに入ります**。このガイド [XIAO S3 bootloader guide](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/#bootloader-mode) を参照してください。
 3.  Web ベースの書き込みツール [Meshtastic Web Flasher](https://flasher.meshtastic.org/) を使用し、**Seeed XIAO esp32s3** デバイスを選択してから、先ほどダウンロードしたファームウェアを選択し、最後に **Flash** ボタンをクリックしてファームウェアを XIAO ESP32S3 に書き込みます。
 ビデオチュートリアルも用意されていますが、Meshtastic 公式ファームウェアではなく、ダウンロードしたファームウェアを書き込むことを忘れないでください。[Flash Firmware Video](https://wiki.seeedstudio.com/ja/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic/#flash-firmware)。
 4.  書き込みが完了し、エラーが報告されないことを確認したら、XIAO ESP32S3 の電源を切るために USB ケーブルを抜きます。Wio SX1262 拡張ボードを再度取り付け、USB ケーブルをコンピュータに再接続します。これでデバイスは新しいファームウェアで起動します。
 
 #### Mesh ノードの設定
-Mesh ノードを設定する方法は 2 つあります。まず、デバイスを USB ケーブルでコンピュータに接続します。その後、1: 別の Mesh Web ツール [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) を使用してシリアル経由で Mesh ノードにアクセスする 2: Meshtastic モバイルアプリをダウンロードして、スマートフォンの Bluetooth 経由で Mesh ノードにアクセスする、のいずれかを選べます。ここでは、PC 上で [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) を使用して esp32s3 と Wio Tracker を設定する方法を示します。
+Mesh ノードを設定する方法は 2 つあります。まず、デバイスを USB ケーブルでコンピュータに接続し、1: 別の Mesh Web ツール [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) を使用してシリアル経由で Mesh ノードにアクセスする 2: Meshtastic モバイルアプリをダウンロードして、スマートフォンの Bluetooth 経由で Mesh ノードにアクセスする、のいずれかを行います。ここでは、PC 上で [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) を使用して esp32s3 と Wio Tracker を設定する方法を示します。
 
 :::note
-iOS と Android 上の Mesh アプリの UI、および meshtastic Web クライアントツールの UI は異なる場合がありますが、LoRa 周波数帯の設定などの具体的な設定項目は、それぞれの設定オプション内に必ず存在します。そのため、iOS を持っていなくても心配する必要はありません。他のプラットフォームのアプリにも必ず対応する設定オプションがあります。
+iOS と Android 上の Mesh アプリの UI、および meshtastic Web クライアントツールの UI は異なる場合がありますが、LoRa 周波数帯の設定などの具体的な設定は、それぞれの設定オプションの中に必ず存在します。そのため、iOS を持っていなくても心配する必要はありません。他のプラットフォームのアプリにも必ず対応する設定オプションがあります。
 :::
 
 :::note
@@ -222,7 +222,7 @@ iOS と Android 上の Mesh アプリの UI、および meshtastic Web クライ
 
 5.'Region' と 'Modem Preset' をそれぞれ 'US' と 'Short Turbo' に設定します：
 :::note
-実際には、Region と Modem Preset の設定に厳密な制限はありませんが、所有している 2 つの Mesh ノードデバイスの Region と Modem Preset の設定が一致していることを必ず確認してください。本ドキュメントでは、例として 'US' と 'Short Turbo' を使用しています。
+実際には、Region と Modem Preset の設定に厳密な制限はありませんが、2 つの Mesh ノードデバイス間で Region と Modem Preset の設定が一致していることを必ず確認してください。本ドキュメントでは、例として 'US' と 'Short Turbo' を使用しています。
 :::
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_6.png" /></div>
@@ -257,14 +257,14 @@ iOS と Android 上の Mesh アプリの UI、および meshtastic Web クライ
 SjVzNWwzNTEwQWZUWlo0Yg==
 
 ### Wio Tracker L1（Meshtastic ノード）の設定
-Wio Tracker の設定も上記と同様で、[Meshtastic Web Flasher](https://flasher.meshtastic.org/) を使用し、'Wio Tracker L1' を選択して、先ほどダウンロードしたカスタムファームウェアではなく **Official Meshtastic Firmware** を書き込みます。詳しくは [Wio Tracker L1 Firmware Flashing Tutorial](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) を参照してください。
+Wio Tracker の設定も上記と同様で、[Meshtastic Web Flasher](https://flasher.meshtastic.org/) を使用し、'Wio Tracker L1' を選択して、先ほどダウンロードしたカスタムファームウェアではなく **Official Meshtastic Firmware** を書き込みます。[Wio Tracker L1 Firmware Flashing Tutorial](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) を参照してください。
 
-同様に、Wio Tracker L1 についても Region と Modem Preset を 'US' と 'Short Turbo' に設定します。その後、Channel1 を有効にし、Pre-Shared Key を先ほど生成した 128-bit Key に設定します。
+上記と同様に、Wio Tracker L1 についても Region と Modem Preset を 'US' と 'Short Turbo' に設定します。その後、Channel1 を有効にし、Pre-Shared Key を先ほど生成した 128-bit Key に設定します。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/3_1_1.png" /></div>
 
 ### 組み立て
-同様に、reCamera 上の GPIO490（緑のワイヤ）を XIAO esp32s3 の D2 に、GND を GND ピンに接続します。これでシステムが動作します。
+上記と同様に、reCamera 上の GPIO490（緑のワイヤ）を XIAO esp32s3 の D2 に、GND を GND ピンに接続します。これでシステムが動作します。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/4_1_1.jpg" /></div>
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/4_1_2.jpg" /></div>
@@ -273,9 +273,9 @@ Wio Tracker の設定も上記と同様で、[Meshtastic Web Flasher](https://fl
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/4_1_3.jpg" /></div>
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。特定のカスタマイズ目標についてのガイダンスが必要な場合や、ワークフローをさらに拡張したい場合は、いつでもお気軽にお問い合わせください。お客様が弊社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。私たちは、お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただきありがとうございます。特定のカスタマイズ目標についてガイダンスが必要な場合や、ワークフローをさらに拡張したい場合は、いつでもお気軽にお問い合わせください。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

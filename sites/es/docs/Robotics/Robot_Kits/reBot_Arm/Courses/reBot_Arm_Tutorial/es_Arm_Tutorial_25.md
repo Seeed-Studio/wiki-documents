@@ -1,6 +1,7 @@
 ---
 description: "Capítulo 25 del Curso de Introducción a la IA Física de Seeed: trayectoria frente a recorrido, interpolación en espacio articular y en espacio cartesiano, polinomios lineales, cúbicos y quínticos, y la orden de par construida a partir de feedforward (modelo y gravedad) más corrección de error por feedback."
 title: Capítulo 25 - Planificación de Trayectorias y Control del Brazo Robótico
+hide_title: true
 keywords:
   - reBot
   - Brazo Robótico
@@ -11,7 +12,7 @@ keywords:
   - Compensación de Gravedad
   - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_25
+slug: /robotics/rebot_physical_ai_course_chapter_25
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -20,13 +21,11 @@ last_update:
   author: Equipo de Robótica de Seeed Studio
 createdAt: '2026-09-25'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_25/
+url: https://wiki.seeedstudio.com/es/robotics/rebot_physical_ai_course_chapter_25/
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

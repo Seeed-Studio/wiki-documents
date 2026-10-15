@@ -1,6 +1,7 @@
 ---
 description: "Chapter 25 of the Seeed Physical AI Beginner's Course — path versus trajectory, joint-space and Cartesian-space interpolation, linear, cubic and quintic polynomials, and the torque command built from feedforward (model and gravity) plus feedback error correction."
 title: Chapter 25 - Trajectory Planning and Robot Arm Control
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -11,7 +12,7 @@ keywords:
   - Gravity Compensation
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_25
+slug: /robotics/rebot_physical_ai_course_chapter_25
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -20,13 +21,11 @@ last_update:
   author: Seeed Studio Robotics Team
 createdAt: '2026-09-25'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_25/
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_25/
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

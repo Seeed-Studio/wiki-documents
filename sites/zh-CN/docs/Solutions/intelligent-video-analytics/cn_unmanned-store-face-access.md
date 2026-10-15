@@ -19,7 +19,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/cn/solutions/unmanned-store-face-access/
 generated_from: sensecraft-solutions@e1864ef
 ---
@@ -30,13 +30,9 @@ generated_from: sensecraft-solutions@e1864ef
 
 ## 这套方案是干什么的
 
-一道没有人站在后面的门，门口的摄像头识别人脸，要求静默活体检查通过，再核对当前人脸库、
-时段与黑名单——全部成立时才给继电器一个脉冲，由继电器切换一把跑在独立 12/24 V 电源上的
-门锁。每一次判定，放行与拒绝一样，都发到 MQTT 并追加进带哈希链的审计日志，管理界面上
-可以校验这条链。
+一道没有人站在后面的门，门口的摄像头识别人脸，要求静默活体检查通过，再核对当前人脸库、时段与黑名单——全部成立时才给继电器一个脉冲，由继电器切换一把跑在独立 12/24 V 电源上的门锁。每一次判定，放行与拒绝一样，都发到 MQTT 并追加进带哈希链的审计日志，管理界面上可以校验这条链。
 
-它适合无人或少人值守门店的员工入口、库房与后门；名单每周都变、注册要能自助完成的共享
-办公；留痕比吞吐更重要的设备间；以及门口本来就有 RTSP 摄像头、又不想换掉它们的站点。
+它适合无人或少人值守门店的员工入口、库房与后门；名单每周都变、注册要能自助完成的共享办公；留痕比吞吐更重要的设备间；以及门口本来就有 RTSP 摄像头、又不想换掉它们的站点。
 
 - 选型与部署：[可部署方案页](https://www.seeedstudio.com.cn/solutions/reference-designs/unmanned_store_access)
 - 开源地址：暂无，代码目前在内部仓库。
@@ -98,27 +94,25 @@ reCamera Pro 的识别画面：人脸框上带着匹配到的人员编号与本�
 
 门口三个设备角色，加一台云端或本地主机。
 
-**① 门口的摄像头。** 要么用设备自带的传感器（reCamera Pro 或标准版 reCamera），
-要么用现有的 RTSP 摄像头接一台单独的主机。安装高度大致齐面部，取景要让人真正停下来的
-距离上单张人脸在画面里占到可用比例。逆光门口与玻璃反光是常见的识别失败原因。
+**① 门口的摄像头。** 要么用设备自带的传感器（reCamera Pro 或标准版 reCamera），要么用现有的 RTSP 摄像头接一台单独的主机。安装高度大致齐面部，取景要让人真正停下来的距离上单张人脸在画面里占到可用比例。逆光门口与玻璃反光是常见的识别失败原因。
 
 **② 做识别与判定的那台机器。**
 
-| 识别主机 | 识别在哪里跑 | 安装形态 |
-|---|---|---|
-| reCamera Pro（RV1126B） | 摄像头本机，跑在已有的人脸识别应用旁边 | 装在摄像头本机，不用容器（Buildroot 系统，没有 docker） |
-| 标准版 reCamera（SG2002 / CV181x） | 摄像头本机，在同一个原生进程里完成检测、嵌入、活体与匹配 | 拷一个小守护进程，不用容器 |
-| reComputer Industrial J20 | 容器里，接现有 RTSP 流 | 经 SSH 部署容器 |
-| reComputer J30 / J40 / R2000 | 容器里，接现有 RTSP 流 | 经 SSH 部署容器 |
+| | 识别主机 | 识别在哪里跑 | 安装形态 | 什么时候选它 |
+|---|---|---|---|---|
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/0/100021896main_4.jpg" alt="reCamera Pro" width="110" /> | [reCamera Pro（RV1126B）](https://www.seeedstudio.com/reCamera-Pro-p-5984.html)<br/>高性能一体化智能相机 | 摄像头本机，跑在已有的人脸识别应用旁边 | 装在摄像头本机，不用容器（Buildroot 系统，没有 docker） | 门口还没有摄像头，需要端侧快速完成活体与比对 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002（SG2002）](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>入门一体化智能相机 | 摄像头本机，在同一个原生进程里完成检测、嵌入、活体与匹配 | 拷一个小守护进程，不用容器 | 预算优先，单门独立门禁 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin 边缘算力盒 | 容器里，接现有 RTSP 流 | 经 SSH 部署容器 | 门口已有普通 RTSP 摄像头，一台主机集中管理多扇门 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>工业无风扇控制器 | 容器里，接现有 RTSP 流 | 经 SSH 部署容器 | 工业机柜安装，带多路隔离 IO 与继电器接口 |
 
-**③ 继电器。** 锁必须接在继电器或干接点后面，用独立的 12/24 V 电源，
-与计算板的供电分开。锁的工作电流 300 mA–1 A，GPIO 引脚和光隔数字输出只有 mA 级。
-`active_high`、`pulse_ms`、`relay_contact`、`fail_mode` 这四项按安装现场配置，不设
-默认值：断电即开的电磁锁接到常开触点上，门会一直敞着，不实测看不出来。
+**③ 继电器。** 锁必须接在继电器或干接点后面，用独立的 12/24 V 电源，与计算板的供电分开。锁的工作电流 300 mA–1 A，GPIO 引脚和光隔数字输出只有 mA 级。 `active_high`、`pulse_ms`、`relay_contact`、`fail_mode` 这四项按安装现场配置，不设默认值：断电即开的电磁锁接到常开触点上，门会一直敞着，不实测看不出来。
 
-**④ 云端或本地主机。** 任意装了 Docker 的 amd64 或 arm64 Linux 机器，不需要 GPU。
-它跑人脸库服务、管理界面与 MQTT broker，必须对每一台门口设备可达，并且自身时钟必须
-准确——没有 RTC 的设备靠它的 HTTP `Date` 头做时间修正。
+**④ 云端或本地主机。** 任意装了 Docker 的 amd64 或 arm64 Linux 机器，不需要 GPU。它跑人脸库服务、管理界面与 MQTT broker，必须对每一台门口设备可达，并且自身时钟必须准确——没有 RTC 的设备靠它的 HTTP `Date` 头做时间修正。
+
+### 选型排他边界
+
+- **人脸底库规模上限**：摄像头端侧人脸底库建议在 1,000 人以内；若企事业单位员工库超过 3,000 人，端侧比对时延明显增大，不宜在端侧单机运行，建议选配专用边缘主机。
+- **强逆光与室外直晒**：无遮阳棚的室外大门口强逆光直晒时，双目活体检测精度会受红外光饱和影响，必须加装遮阳罩或专用防眩光补光灯。
 
 ## 现场怎么部署
 
@@ -126,17 +120,9 @@ reCamera Pro 的识别画面：人脸框上带着匹配到的人员编号与本�
 
 ### 一、接门：先 LED，再继电器，最后锁
 
-在 LED 上确认极性与脉宽，在继电器上确认触点会响，之后才把锁接上去。断电即开的电磁锁
-走 COM/NC，断电即锁的电插锁走 COM/NO。接反会让门一直敞着，所以 `relay_contact`
-不设默认值。
+在 LED 上确认极性与脉宽，在继电器上确认触点会响，之后才把锁接上去。断电即开的电磁锁走 COM/NC，断电即锁的电插锁走 COM/NO。接反会让门一直敞着，所以 `relay_contact` 不设默认值。
 
-**先确认 GPIO 引脚空闲。** 盘点过的一台 reCamera Pro 上，`gpio131` 已被另一个
-应用 export 并驱动。执行器在引脚当前状态与配置的空闲状态不符时拒绝启动，除非被显式
-要求，否则不会接管任何引脚。reCamera 2002 HQ PoE 的底板上有一组 6-pin 排针，三路 IO
-（D1 = sysfs 490，唯一一路非复用；CLK = 487；SMD = 488），但排针的电平极性与可供电流
-厂商文档里没有写，用万用表和 LED 确认之前不要在那里接锁。J20 上按设计 spec，
-DO1–DO4 是 sysfs 463/464/465/462；目标镜像以这种方式还是通过 `Jetson.GPIO` 暴露
-它们，还没有在真机上确认。
+**先确认 GPIO 引脚空闲。** 盘点过的一台 reCamera Pro 上，`gpio131` 已被另一个应用 export 并驱动。执行器在引脚当前状态与配置的空闲状态不符时拒绝启动，除非被显式要求，否则不会接管任何引脚。reCamera 2002 HQ PoE 的底板上有一组 6-pin 排针，三路 IO （D1 = sysfs 490，唯一一路非复用；CLK = 487；SMD = 488），但排针的电平极性与可供电流厂商文档里没有写，用万用表和 LED 确认之前不要在那里接锁。J20 上按设计 spec， DO1–DO4 是 sysfs 463/464/465/462；目标镜像以这种方式还是通过 `Jetson.GPIO` 暴露它们，还没有在真机上确认。
 
 ### 二、先起云端，再装设备侧
 
@@ -148,12 +134,9 @@ DO1–DO4 是 sysfs 463/464/465/462；目标镜像以这种方式还是通过 `J
     </a>
 </div><br />
 
-云端是人脸库服务、管理界面与一个 broker，来自 `assets/cloud/` 下的 compose 文件。
-一个 token 都没配时管理界面直接拒绝启动。**共享 token 走明文 HTTP 等于没有鉴权**，要在反向代理上终止 TLS。随包的 broker 配置
-是匿名明文，只用于测试；生产环境需要 TLS、按设备身份认证和 topic ACL，随包配置里都没有。
+云端是人脸库服务、管理界面与一个 broker，来自 `assets/cloud/` 下的 compose 文件。一个 token 都没配时管理界面直接拒绝启动。**共享 token 走明文 HTTP 等于没有鉴权**，要在反向代理上终止 TLS。随包的 broker 配置是匿名明文，只用于测试；生产环境需要 TLS、按设备身份认证和 topic ACL，随包配置里都没有。
 
-设备侧各套餐不同：reComputer 各套餐经 SSH 部署容器，两台 reCamera 都是拷一个
-守护进程。
+设备侧各套餐不同：reComputer 各套餐经 SSH 部署容器，两台 reCamera 都是拷一个守护进程。
 
 云端起来之后，先在管理界面的设备页确认这台门口设备已经上线、心跳与人脸库版本正常：
 
@@ -183,10 +166,7 @@ DO1–DO4 是 sysfs 463/464/465/462；目标镜像以这种方式还是通过 `J
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/gpio-relay-check-ad22020d.png" alt="同一路 GPIO（sysfs 490）在一次放行判定后的电平回读"/>
 </div>
 
-<!-- TODO 图：门口实景（摄像头 + 继电器 + 锁的现场安装照）——需现场拍 -->
-
-局域网内允许把人脸库配成明文 `http://` 地址，但必须带对 manifest 的 HMAC-SHA256 签名；
-没有密钥设备拒绝启动。签名防的是链路上的篡改；任何一台设备的密钥泄漏，都可以用来伪造人脸库。
+局域网内允许把人脸库配成明文 `http://` 地址，但必须带对 manifest 的 HMAC-SHA256 签名；没有密钥设备拒绝启动。签名防的是链路上的篡改；任何一台设备的密钥泄漏，都可以用来伪造人脸库。
 
 ## 有哪些接口
 
@@ -226,27 +206,19 @@ DO1–DO4 是 sysfs 463/464/465/462；目标镜像以这种方式还是通过 `J
 }
 ```
 
-对接时注意三个字段。**首次同步成功之前 `facedb_version` 是 `null`**，表示设备上还没有库
-（不同于版本 0），拒绝原因单独报 `no_facedb`。**`threshold` 是这一次判定实际生效的值**，
-阈值变化在事件流里就能看到。**`clock.valid`** 说明经修正的时间戳能不能信；设备从不设置系统时钟，
-只带一个偏移量。活体结果为 `null` 表示这道检查没有运行，按失败处理，原因报 `liveness_unknown`。
+对接时注意三个字段。**首次同步成功之前 `facedb_version` 是 `null`**，表示设备上还没有库（不同于版本 0），拒绝原因单独报 `no_facedb`。**`threshold` 是这一次判定实际生效的值**，阈值变化在事件流里就能看到。**`clock.valid`** 说明经修正的时间戳能不能信；设备从不设置系统时钟，只带一个偏移量。活体结果为 `null` 表示这道检查没有运行，按失败处理，原因报 `liveness_unknown`。
 
 ### 指令闸门
 
-一条指令必须带精确的字段集、UUIDv4 的 `command_id`、带时区的 RFC3339 `issued_at`，
-以及在上界内的 TTL，还要过一张按身份隔离的重放表。重复投递的指令**不会第二次开门**，
-设备返回原来那张回执供调用方对账。过期的以 `TTL_EXPIRED` 返回，
-匿名身份被拒。
+一条指令必须带精确的字段集、UUIDv4 的 `command_id`、带时区的 RFC3339 `issued_at`，以及在上界内的 TTL，还要过一张按身份隔离的重放表。重复投递的指令**不会第二次开门**，设备返回原来那张回执供调用方对账。过期的以 `TTL_EXPIRED` 返回，匿名身份被拒。
 
-`set` 主题与指令主题都绝不 retained。retained 的开门指令会在每次重连时重放，
-断电恢复后门会自己开。
+`set` 主题与指令主题都绝不 retained。retained 的开门指令会在每次重连时重放，断电恢复后门会自己开。
 
 ### 人脸库下发
 
 设备轮询 `current` 比对版本，变了才取文件，分块与断点续传走标准 `Range`。下载后逐文件 SHA-256 校验、manifest 验签，再原子切换；任何一步失败都保持旧版本不动。移除一个人会生成一个不含他的新版本并写入删除屏障，此后回滚到任何仍包含此人的版本都会被点名拒绝。
 
-每个版本的 manifest 都带五个许可字段——`license_id`、`use_scope`、`redistributable`、
-`source_revision`、`sha256`，许可条款随制品一起分发。
+每个版本的 manifest 都带五个许可字段——`license_id`、`use_scope`、`redistributable`、 `source_revision`、`sha256`，许可条款随制品一起分发。
 
 ## 性能与实测数据
 
@@ -259,9 +231,7 @@ DO1–DO4 是 sysfs 463/464/465/462；目标镜像以这种方式还是通过 `J
 | 标准版 reCamera（SG2002 / CV181x riscv64，固件 0.2.2） | **p50 491.6 ms、p95 507.8 ms**（n=20） | USB-RNDIS，2 人、16.5 KB 库。`op:reload` 往返 p50 100.0 ms（n=25） |
 | reCamera Pro（RV1126B，Buildroot 2023.02.6） | 62.2 ms（v1）、45.4 ms（v2）；库不变时空转 6.2 ms | 以太网，1–2 人、不到 20 KB 的库 |
 
-**随库大小的变化。** 标准版 reCamera 上两个规模点各跑一次：402 人 / 2.86 MB 用
-9 801.7 ms，1502 人 / 10.66 MB 用 22 278.7 ms。激活时间随库的大小增加，首次铺开大库时
-按这两个数字规划同步时间。
+**随库大小的变化。** 标准版 reCamera 上两个规模点各跑一次：402 人 / 2.86 MB 用 9 801.7 ms，1502 人 / 10.66 MB 用 22 278.7 ms。激活时间随库的大小增加，首次铺开大库时按这两个数字规划同步时间。
 
 复现：上游仓库 `unmanned-store-access` 内 `evaluation/runs/2026-09-06-recamera-std-p3-r2/results.md`、`evaluation/runs/2026-09-07-recamera-pro-p1/results.md`。
 
@@ -329,14 +299,9 @@ reCamera Pro 上回读的 `gpio130` 是扩展口 UART4 M0 的一对脚之一改�
 
 ## 数据与素材出处
 
-**许可。** 方案包与上游仓库的代码是 Apache-2.0，**模型权重不是**。人脸检测与嵌入用的是 InsightFace
-的 `buffalo_l`；InsightFace 自己的声明是代码为 MIT、商用无限制，但带标注的训练数据以及
-用这些数据训练出的模型只能用于非商业研究用途。`buffalo_l` 正是这样一个模型：
-`license_id: non-commercial`、`use_scope: non-commercial`、`redistributable: false`。
-方案包不附带这些权重，商业部署必须把人脸骨干换成有商用授权的模型。
+**许可。** 方案包与上游仓库的代码是 Apache-2.0，**模型权重不是**。人脸检测与嵌入用的是 InsightFace 的 `buffalo_l`；InsightFace 自己的声明是代码为 MIT、商用无限制，但带标注的训练数据以及用这些数据训练出的模型只能用于非商业研究用途。`buffalo_l` 正是这样一个模型： `license_id: non-commercial`、`use_scope: non-commercial`、`redistributable: false`。方案包不附带这些权重，商业部署必须把人脸骨干换成有商用授权的模型。
 
-静默活体模型是 MiniVision 的 Silent-Face-Anti-Spoofing，Apache-2.0：
-`use_scope: commercial`，可再分发，未做修改地使用。
+静默活体模型是 MiniVision 的 Silent-Face-Anti-Spoofing，Apache-2.0： `use_scope: commercial`，可再分发，未做修改地使用。
 
 - 许可条款：方案包内 `gallery/ATTRIBUTION.md`，以及包描述里的许可说明一节。
 - 注册链路的模型空间缺口：上游 `docs/user-guide.md` §5.1。

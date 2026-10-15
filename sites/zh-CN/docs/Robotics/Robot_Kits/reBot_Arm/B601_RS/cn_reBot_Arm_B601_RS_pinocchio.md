@@ -22,12 +22,9 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS Pinocchio 与 MeshCat 入门
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
@@ -216,7 +213,7 @@ sudo ip link set can0 up    #拉起can0
 
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>调试用工具（仅异常情况使用）</summary>
 
 **单电机控制台 — Robostride RS06 (`0x01rs06_test.py`)**

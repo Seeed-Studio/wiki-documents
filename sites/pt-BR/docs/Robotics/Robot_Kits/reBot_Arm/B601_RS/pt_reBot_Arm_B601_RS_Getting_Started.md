@@ -26,12 +26,9 @@ import '/src/css/rebot-wiki-style.css';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS Início Rápido
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
@@ -153,7 +150,7 @@ Conecte o Motor 1 e o Motor 2 conforme mostrado abaixo.
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="Conecte o Motor 1 e o Motor 2 no reBot Arm B601-RS" />
 </div>
 
-Em seguida, conecte o módulo USB-para-CAN, a placa divisora de energia e sinal, o cabo de alimentação XT30 e o cabo XT30 2+2 conforme mostrado abaixo. Conecte a outra extremidade do cabo XT30 2+2 ao Motor 1 e conecte o cabo de alimentação à fonte de alimentação de 48 V.
+Em seguida, conecte o módulo USB-para-CAN, a placa divisora de energia e sinal, o cabo de alimentação XT30 e o cabo XT30 2+2 conforme mostrado abaixo, e defina a chave DIP do PCAN para **120R**. Conecte a outra extremidade do cabo XT30 2+2 ao Motor 1 e conecte o cabo de alimentação à fonte de alimentação de 48 V.
 
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="Conecte o módulo USB-para-CAN e os cabos de alimentação ao reBot Arm B601-RS" />
@@ -392,7 +389,7 @@ sudo ip link set can0 up
 Se o dispositivo PCAN tiver firmware incorreto após a instalação do driver, expanda a seção abaixo, baixe o firmware do PCAN e siga as etapas de recuperação.
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>Download do Firmware PCAN &amp; Etapas de Reparo do Driver - Ubuntu</summary>
 
 Usuários de Ubuntu, consultem este guia
@@ -451,8 +448,7 @@ sudo apt install -y \
     make \
     libpopt-dev \
     can-utils \
-    ethtool \
-    nvidia-l4t-kernel-headers
+    ethtool
 ```
 
 Verifique se o diretório atual de cabeçalhos do kernel existe:
@@ -632,7 +628,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 Se o dispositivo PCAN estiver com firmware incorreto após a instalação do driver, expanda a seção abaixo, baixe o firmware PCAN e siga as etapas de recuperação.
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>Download de Firmware PCAN &amp; Etapas de Reparo do Driver - macOS</summary>
 
 Usuários de MAC, por favor, consultem este guia
@@ -678,7 +674,7 @@ Baixe [PEAK-System_Driver-Setup.zip](https://files.seeedstudio.com/wiki/robotics
 Se **PCAN-USB** não for detectado no Gerenciador de Dispositivos após instalar o driver, expanda a seção abaixo, baixe o firmware PCAN e siga as etapas de recuperação.
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>Download de Firmware PCAN &amp; Etapas de Reparo do Driver - Windows</summary>
 

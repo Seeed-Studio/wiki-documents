@@ -1,6 +1,7 @@
 ---
 description: Seeed Physical AI 初級コース第3章 — 各ステージで必要となる実習用ハードウェア一覧。メイン制御ユニット、reBot Arm、カメラ、リーダーアーム、3Dプリント用マウントを含みます。
 title: 第3章 - コース向けハードウェア選定
+hide_title: true
 keywords:
   - reBot
   - B601-DM
@@ -9,7 +10,7 @@ keywords:
   - Hardware
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_3
+slug: /robotics/rebot_physical_ai_course_chapter_3
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -18,12 +19,10 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_3/
+url: https://wiki.seeedstudio.com/ja/robotics/rebot_physical_ai_course_chapter_3/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

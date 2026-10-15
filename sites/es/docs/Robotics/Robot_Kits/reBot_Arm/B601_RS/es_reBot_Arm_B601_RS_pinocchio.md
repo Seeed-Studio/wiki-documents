@@ -23,12 +23,9 @@ url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS Pinocchio & MeshCat
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
@@ -279,7 +276,7 @@ sudo ip link set can0 up    # Bring up can0
 
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>Herramientas de depuración (usar solo cuando ocurra una excepción)</summary>
 
 **Consola de un solo motor — Robostride RS06 (`0x01rs06_test.py`)**

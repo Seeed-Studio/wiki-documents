@@ -19,7 +19,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/solutions/unmanned-store-face-access/
 generated_from: sensecraft-solutions@e1864ef
 ---
@@ -98,16 +98,21 @@ Three device roles at the door, plus one cloud or on-prem host.
 
 **② The thing that recognises and decides.**
 
-| Recognition host | Where recognition runs | Install form |
-|---|---|---|
-| reCamera Pro (RV1126B) | On the camera, beside its existing face-recognition app | Installed on the camera, no container (Buildroot, no Docker) |
-| Standard reCamera (SG2002 / CV181x) | On the camera, in one native process — detection, embedding, liveness and matching | A small daemon copied onto the camera, no container |
-| reComputer Industrial J20 | In containers, against an existing RTSP stream | Containers over SSH |
-| reComputer J30 / J40 / R2000 | In containers, against an existing RTSP stream | Containers over SSH |
+| | Recognition host | Where recognition runs | Install form | When to choose it |
+|---|---|---|---|---|
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/0/100021896main_4.jpg" alt="reCamera Pro" width="110" /> | [reCamera Pro (RV1126B)](https://www.seeedstudio.com/reCamera-Pro-p-5984.html)<br/>High-performance smart camera | On the camera, beside its existing face-recognition app | Installed on the camera, no container (Buildroot, no Docker) | No camera at the door yet; need fast on-device liveness and matching |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002 (SG2002)](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>Entry-level smart camera | On the camera, in one native process — detection, embedding, liveness and matching | A small daemon copied onto the camera, no container | Cost-effective standalone single door |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin edge host | In containers, against an existing RTSP stream | Containers over SSH | Existing RTSP camera; one box centralizes multiple doors |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Industrial fanless controller | In containers, against an existing RTSP stream | Containers over SSH | Cabinet install, multi-channel isolated IO and relay interfaces |
 
 **③ The relay.** The lock must sit behind a relay or dry contact, on its own 12/24 V supply, separate from the compute board's. A lock draws 300 mA to 1 A; a GPIO pin and an opto-isolated digital output carry milliamps. Four settings — `active_high`, `pulse_ms`, `relay_contact` and `fail_mode` — are configured per installation and have no defaults: a fail-safe magnetic lock wired through the normally-open contact stands open permanently, and nothing shows it until the door is tested.
 
 **④ The cloud or on-prem host.** Any amd64 or arm64 Linux box with Docker; no GPU. It runs the face library service, the management console and the MQTT broker. It must be reachable from every door device, and its clock must be right: devices with no RTC take their time correction from its HTTP `Date` header.
+
+### Negative Selection Boundaries
+
+- **Face Database Size**: The on-camera face database is recommended for ≤ 1,000 enrolled users. Above 3,000 users, comparison latency increases; use a dedicated edge host instead.
+- **Severe Backlight**: Direct unshaded outdoor sunlight saturates IR liveness detection; install a sunshade or anti-glare fill lighting.
 
 ## How to deploy on site
 
@@ -160,8 +165,6 @@ Before a lock goes on, confirm on the PoE baseboard that the GPIO line can actua
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/unmanned_store_access/gpio-relay-check-ad22020d.png" alt="Level readback on the same line (sysfs 490) after one allow decision"/>
 </div>
-
-<!-- TODO image: the door itself (camera, relay and lock as installed) — needs a field shoot -->
 
 A plaintext `http://` library URL is permitted on a LAN, but only with an HMAC-SHA256 signature over the manifest; without a key the device refuses to start. The signature protects against tampering on the wire; any leaked device key can be used to forge a library.
 

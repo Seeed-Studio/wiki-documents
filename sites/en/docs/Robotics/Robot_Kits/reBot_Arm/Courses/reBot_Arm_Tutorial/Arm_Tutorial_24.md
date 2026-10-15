@@ -1,6 +1,7 @@
 ---
 description: "Chapter 24 of the Seeed Physical AI Beginner's Course — joint space versus Cartesian space, forward kinematics from DH parameters and URDF, inverse kinematics and its multiple or missing solutions, the Jacobian and velocity kinematics, singularities and damped least squares, and analytic versus numerical IK."
 title: Chapter 24 - Forward Kinematics, Inverse Kinematics, and the Jacobian
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -10,7 +11,7 @@ keywords:
   - Singularity
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_24
+slug: /robotics/rebot_physical_ai_course_chapter_24
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -19,13 +20,11 @@ last_update:
   author: Seeed Studio Robotics Team
 createdAt: '2026-09-25'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_24/
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_24/
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 

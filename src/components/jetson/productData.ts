@@ -18,6 +18,8 @@ export interface ProductOption {
   img: string;
   interfaceUsage: LocalizedUrl;
   flashUrl?: LocalizedUrl;
+  /** 自动生成产品（config.products.auto.ts）会带显式分类；手工条目为空，走 value 推断 */
+  category?: 'carrier' | 'super' | 'mini' | 'robotics' | 'classic' | 'industrial' | 'other';
 }
 
 const createLocalizedWikiUrl = (enUrl: string): LocalizedUrl => {
@@ -252,7 +254,7 @@ export const productOptions: ProductOption[] = [
   },
   {
     value: 'j501mini',
-    label: 'reComputer Robotics J501 Mini',
+    label: 'reComputer Mini J501',
     l4t: ["39.2.0", "36.4.4 (GMSL✅)"],
     img: 'https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_j501_mini_getting_started/'),
@@ -411,6 +413,38 @@ export const productOptions: ProductOption[] = [
     img: 'https://files.seeedstudio.com/wiki/recomputerzhongwen/first_1.png',
     interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation/'),
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation/')
+  },
+  {
+    value: 'j401rugged',
+    label: 'reComputer Rugged J40',
+    l4t: ["39.2.0", "36.4.3"],
+    img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg',
+    interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/'),
+    flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j40_getting_started/')
+  },
+  {
+    value: 'j501classic',
+    label: 'reComputer Classic J501',
+    l4t: ["39.2.0", "36.4.3"],
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/Classic_J501/100006184-gallery_img_1.jpg',
+    interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/ai_robotics_seeed_agx_orin_dev_kit_getting_started/'),
+    flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/ai_robotics_seeed_agx_orin_dev_kit_getting_started/')
+  },
+  {
+    value: 'j2032reserver',
+    label: 'reServer J2032',
+    l4t: ["39.2.0", "36.4.4"],
+    img: 'https://files.seeedstudio.com/wiki/reServerJ2032/J2032_product_image.png',
+    interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reServer_J2032_Getting_Started/'),
+    flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/reServer_J2032_Flash_Jetpack/')
+  },
+  {
+    value: 'j601robotics',
+    label: 'reComputer Robotics J601',
+    l4t: ["39.2.0", "36.4.4 (GMSL✅)"],
+    img: 'https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg',
+    interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/recomputer_jetson_robotics_j601_interfaces_usage/'),
+    flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/')
   }
 ];
 
@@ -429,9 +463,11 @@ export const PRODUCT_DATA = Object.fromEntries(
 export const PRODUCT_CATEGORIES = {
   carrier: { key: 'carrier', label: 'Carrier Board', filter: (p: ProductOption) => ['a203', 'a203v2', 'a205', 'a603', 'a607', 'a608', 'j101', 'j202', 'j401', 'j501-carrier-board', 'j401-mini', 'j501-mini', 'j401-robotics', 'j501-carrier'].includes(p.value) },
   super: { key: 'super', label: 'Super', filter: (p: ProductOption) => p.value.endsWith('s') && !p.value.includes('robotics') },
-  mini: { key: 'mini', label: 'Mini', filter: (p: ProductOption) => p.value.includes('mini') && !p.value.includes('j501') && !['j401-mini', 'j501-mini'].includes(p.value) },
+  mini: { key: 'mini', label: 'Mini', filter: (p: ProductOption) => p.value.includes('mini') && !['j401-mini', 'j501-mini'].includes(p.value) },
   robotics: { key: 'robotics', label: 'Robotics', filter: (p: ProductOption) => (p.value.includes('robotics') && p.value !== 'j401-robotics') || (p.value === 'j501') },
   classic: { key: 'classic', label: 'Classic', filter: (p: ProductOption) => p.value.includes('classic') },
-  industrial: { key: 'industrial', label: 'Industrial', filter: (p: ProductOption) => p.value.includes('industrial') || p.value.includes('reserver') || p.value.includes('j501-carrier') },
+  industrial: { key: 'industrial', label: 'Industrial', filter: (p: ProductOption) => p.value.includes('industrial') },
+  reserver: { key: 'reserver', label: 'reServer', filter: (p: ProductOption) => p.category === 'reserver' || p.value.includes('reserver') || p.value === 'j501-carrier' },
+  rugged: { key: 'rugged', label: 'Rugged', filter: (p: ProductOption) => p.category === 'rugged' || p.value.includes('rugged') },
   other: { key: 'other', label: 'Other', filter: (p: ProductOption) => ['jetson-mate', 't906', 'agx-orin-h01', 'xavier-agx-h01', 'a203e', 'a205e'].includes(p.value) }
 };

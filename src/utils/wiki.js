@@ -1,10 +1,76 @@
 const docList = [
   [
     {
+      "path": "/respeaker_xvf3800_i2s_usb_bridge",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp",
+      "title": "reSpeaker XVF3800 USB Audio Bridge with XIAO ESP32S3",
+      "date": "2026-10-12",
+      "title_cn": "reSpeaker XVF3800 搭配 XIAO ESP32S3 的 USB 音频桥",
+      "title_ja": "reSpeaker XVF3800 USB オーディオブリッジ with XIAO ESP32S3",
+      "title_es": "Puente de audio USB reSpeaker XVF3800 con XIAO ESP32S3",
+      "title_pt": "Ponte de Áudio USB reSpeaker XVF3800 com XIAO ESP32S3"
+    },
+    {
+      "path": "/solutions/clip-private-transcription",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/clip_private_transcription/panel-transcript-detail-zh-20261009-a9a0f4d1.jpg",
+      "title": "Private On-Premise Transcription for reSpeaker Clip — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "reSpeaker Clip 本地私有化转写方案：选型、部署与实测数据",
+      "title_ja": "reSpeaker Clip ローカル文字起こし：選定・導入・実測データ",
+      "title_es": "Transcripción privada local para reSpeaker Clip — Selección, despliegue y datos medidos",
+      "title_pt": "Transcrição privada local para reSpeaker Clip — seleção, implantação e dados medidos"
+    }
+  ],
+  [
+    {
+      "path": "/solutions/home-assistant-local-voice",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/home_assistant_whole_home/voice-light-on-zh-20261008-a03bf773.jpg",
+      "title": "Home Assistant Local Voice Control — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "Home Assistant 本地语音控制方案：选型、部署与实测数据",
+      "title_ja": "Home Assistant ローカル音声操作：選定・導入・実測データ",
+      "title_es": "Control de voz local en Home Assistant — Selección, despliegue y datos medidos",
+      "title_pt": "Controle de Voz Local no Home Assistant — Seleção, Implantação e Dados Medidos"
+    },
+    {
+      "path": "/solutions/edge-license-plate-recognition",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/edge_plate_recognition/panel-plate-1-jetson-blue-oblique-20261009-2e5b3792.jpg",
+      "title": "Edge License Plate Recognition — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "边缘车牌识别方案：选型、部署与实测数据",
+      "title_ja": "エッジ ナンバープレート認識：選定・導入・実測データ",
+      "title_es": "Reconocimiento de matrículas en el borde — Selección, despliegue y datos medidos",
+      "title_pt": "Reconhecimento de Placas na Borda — Seleção, Implantação e Dados Medidos"
+    }
+  ],
+  [
+    {
+      "path": "/solutions/edge-parking-counting",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/edge_parking_counting/panel-counting-2-after-20261009-fd76361b.jpg",
+      "title": "Parking Entry/Exit Vehicle Counting — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "停车场车辆进出计数方案：选型、部署与实测数据",
+      "title_ja": "駐車場 入出庫カウント：選定・導入・実測データ",
+      "title_es": "Conteo de vehículos en entradas/salidas de aparcamientos — Selección, despliegue y datos medidos",
+      "title_pt": "Contagem de Veículos em Entradas/Saídas de Estacionamento — Seleção, Implantação e Dados Medidos"
+    },
+    {
+      "path": "/solutions/edge-parking-occupancy",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/edge_parking_occupancy/panel-occupancy-1-mixed-20261009-5635c9d1.jpg",
+      "title": "Camera-Based Parking Occupancy Detection — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "视频车位占用检测方案：选型、部署与实测数据",
+      "title_ja": "カメラによる駐車スペース検知：選定・導入・実測データ",
+      "title_es": "Detección de ocupación de aparcamiento basada en cámara — Selección, despliegue y datos medidos",
+      "title_pt": "Detecção de Ocupação de Estacionamento Baseada em Câmera — Seleção, Implantação e Dados Medidos"
+    }
+  ],
+  [
+    {
       "path": "/sensecraft_robotics_rebot_arm_102_b601_dm",
       "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp",
       "title": "reBot Arm 102 + B601 DM Training Guide",
-      "date": "09/24/2026",
+      "date": "2026-09-24",
       "title_cn": "reBot Arm 102 + B601 DM 训练指南",
       "title_ja": "reBot Arm 102 + B601 DM トレーニングガイド",
       "title_es": "Guía de entrenamiento reBot Arm 102 + B601 DM",
@@ -14,7 +80,7 @@ const docList = [
       "path": "/sensecraft_robotics_rebot_arm_102_b601_rs",
       "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/00-task-overview-rs-en.webp",
       "title": "reBot Arm 102 + B601 RS Training Guide",
-      "date": "09/24/2026",
+      "date": "2026-09-24",
       "title_cn": "reBot Arm 102 + B601 RS 训练指南",
       "title_ja": "reBot Arm 102 + B601 RS トレーニングガイド",
       "title_es": "Guía de entrenamiento de reBot Arm 102 + B601 RS",
@@ -26,7 +92,7 @@ const docList = [
       "path": "/sensecraft_robotics_so_arm101",
       "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/00-task-overview-soarm-en.webp",
       "title": "SO-ARM101 Training Guide",
-      "date": "09/24/2026",
+      "date": "2026-09-24",
       "title_cn": "SO-ARM101 训练指南",
       "title_ja": "SO-ARM101 トレーニングガイド",
       "title_es": "Guía de entrenamiento SO-ARM101",
@@ -45,7 +111,7 @@ const docList = [
   ],
   [
     {
-      "path": "/ai_robotics_recomputer_rugged_j401_cv_demo",
+      "path": "/jetson/recomputer_rugged_j401/industrial_vision",
       "image": "https://files.seeedstudio.com/wiki/rugged/rugged_banner.png",
       "title": "reComputer Rugged J401 for Industrial Vision",
       "date": "2026-09-20",
@@ -63,72 +129,6 @@ const docList = [
       "title_ja": "MeshTracker X1 を用いた MeshCore 上での AI 画像伝送",
       "title_es": "Transmisión de Imágenes con IA sobre MeshCore con MeshTracker X1",
       "title_pt": "Transmissão de Imagem com IA via MeshCore com MeshTracker X1"
-    }
-  ],
-  [
-    {
-      "path": "/deploy_preempt_rt_kernel_with_prebuilt_deb_package_on_recomputer_jetson",
-      "image": "https://files.seeedstudio.com/wiki/zzd/gpio_square_wave_realtime_kernel.png",
-      "title": "Deploy a PREEMPT_RT Real-Time Kernel with a Prebuilt DEB Package on Seeed reComputer Jetson Devices",
-      "date": "2026-09-18",
-      "title_cn": "在 Seeed reComputer Jetson 设备上使用预构建 DEB 软件包部署 PREEMPT_RT 实时内核",
-      "title_ja": "Seeed reComputer Jetson デバイスに事前ビルド済み DEB パッケージで PREEMPT_RT リアルタイムカーネルをデプロイする",
-      "title_es": "Desplegar un kernel en tiempo real PREEMPT_RT con un paquete DEB precompilado en dispositivos Seeed reComputer Jetson",
-      "title_pt": "Implantar um kernel em tempo real PREEMPT_RT com um pacote DEB pré‑compilado em dispositivos Seeed reComputer Jetson"
-    },
-    {
-      "path": "/easyskymesh_wio_tracker_l1",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_L1-pHONE.png",
-      "title": "EasySkyMesh IoT Firmware for Wio Tracker L1",
-      "date": "2026-09-17T00:00:00.000Z",
-      "title_cn": "适用于 Wio Tracker L1 的 EasySkyMesh IoT 固件",
-      "title_ja": "Wio Tracker L1 向け EasySkyMesh IoT ファームウェア",
-      "title_es": "Firmware IoT EasySkyMesh para Wio Tracker L1",
-      "title_pt": "Firmware EasySkyMesh IoT para Wio Tracker L1"
-    }
-  ],
-  [
-    {
-      "path": "/recamera_onvif",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg",
-      "title": "Deploy ONVIF on reCamera",
-      "date": "2026-09-14",
-      "title_cn": "reCamera 集成 ONVIF 服务",
-      "title_ja": "reCamera に ONVIF をデプロイする",
-      "title_es": "Desplegar ONVIF en reCamera",
-      "title_pt": "Implantar ONVIF na reCamera"
-    },
-    {
-      "path": "/control_rebot_arm_using_voice_with_respeaker_clip",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png",
-      "title": "Control reBot Arm using voice with reSpeaker Clip",
-      "date": "2026-09-11",
-      "title_cn": "使用 reSpeaker Clip 通过语音控制 reBot Arm",
-      "title_ja": "reSpeaker Clip を使って音声で reBot Arm を制御する",
-      "title_es": "Controlar reBot Arm usando la voz con reSpeaker Clip",
-      "title_pt": "Controlar reBot Arm usando voz com reSpeaker Clip"
-    }
-  ],
-  [
-    {
-      "path": "/sensecap_s1000_v2_co2_calibration",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_S1000_V2_CO2_Calibration.jpg",
-      "title": "SenseCAP S1000 V2 CO₂ Calibration",
-      "date": "2026-09-09",
-      "title_cn": "SenseCAP S1000 V2 CO₂ 标定",
-      "title_ja": "SenseCAP S1000 V2 CO₂ キャリブレーション",
-      "title_es": "Calibración de CO₂ del SenseCAP S1000 V2",
-      "title_pt": "Calibração de CO₂ do SenseCAP S1000 V2"
-    },
-    {
-      "path": "/solutions/conversational-voice-ai",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-respeaker-xvf3800-4-mic-array.jpg",
-      "title": "Interruptible Conversational Voice AI on the Edge: Build, Deploy, and Measured Results",
-      "date": "2026-09-07",
-      "title_cn": "端侧可打断对话式语音 AI 方案：搭建、部署与实测数据",
-      "title_ja": "エッジで割り込み可能な対話音声AI：構築・導入・実測結果",
-      "title_es": "IA de voz conversacional interrumpible en el Edge: creación, despliegue y resultados medidos",
-      "title_pt": "IA de Voz Conversacional Interrompível na Borda: Construção, Implantação e Resultados Medidos"
     }
   ]
 ];

@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 17 del Curso de Introducción a la IA Física de Seeed: inferencia en robot real, evaluación e iteración de datos: flujo de datos de inferencia, preprocesamiento y desnormalización, inicio de la inferencia, ejecución de fragmentos de acción, seguridad, evaluación de la tasa de éxito, pruebas de generalización, análisis de fallos y recopilación de datos impulsada por fallos.'
 title: Capítulo 17 - Inferencia en Robot Real, Evaluación e Iteración de Datos
+hide_title: true
 keywords:
   - reBot
   - ACT
@@ -9,7 +10,7 @@ keywords:
   - Iteración de datos
   - Curso
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_17
+slug: /robotics/rebot_physical_ai_course_chapter_17
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -18,12 +19,10 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_17/
+url: https://wiki.seeedstudio.com/es/robotics/rebot_physical_ai_course_chapter_17/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

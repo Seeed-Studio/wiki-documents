@@ -13,24 +13,29 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
-const courseLink = () => ({
+// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
+// keeps the beginner-course jump that every product's Course group starts with.
+const courseItems = () => [
+  {
+    type: 'ref',
+    id: `${C}/Arm_Tutorial_Introduction`,
+    label: 'Beginner Course',
+  },
+];
+
+const courseLink = (items = courseItems()) => ({
   type: 'category',
   label: 'Course',
   className: 'robotics-section-title',
   collapsed: false,
   collapsible: false,
-  items: [
-    {
-      type: 'ref',
-      id: `${C}/Arm_Tutorial_Introduction`,
-      label: 'Beginner Course',
-    },
-  ],
+  items,
 });
 
 // The course's own standalone sidebar (opened when browsing course pages).
 const courseSidebar = () => [
   backToRobotics(),
+
   {
     type: 'doc',
     id: `${C}/Arm_Tutorial_Introduction`,
@@ -108,6 +113,46 @@ const courseSidebar = () => [
       `${C}/Arm_Tutorial_26`,
     ],
   },
+  {
+    type: 'category',
+    label: 'Stage 6: Robot Vision and Autonomous Grasping',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/Arm_Tutorial_27`,
+      `${C}/Arm_Tutorial_28`,
+      `${C}/Arm_Tutorial_29`,
+      `${C}/Arm_Tutorial_30`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Stage 7: ROS2 and Robot System Integration',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/Arm_Tutorial_31`,
+      `${C}/Arm_Tutorial_32`,
+      `${C}/Arm_Tutorial_33`,
+      `${C}/Arm_Tutorial_34`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Stage 8: MuJoCo and Isaac Sim Robot Arm Simulation',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/Arm_Tutorial_35`,
+      `${C}/Arm_Tutorial_36`,
+      `${C}/Arm_Tutorial_37`,
+      `${C}/Arm_Tutorial_38`,
+      `${C}/Arm_Tutorial_39`,
+    ],
+  },
 ];
 
 const sidebars = {
@@ -129,6 +174,7 @@ const sidebars = {
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Lerobot`, label: 'reBot-RS with LeRobot' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_pinocchio`, label: 'reBot-RS with Pinocchio' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_control_mit`, label: 'reBot-RS Motor SDK' },
+        { type: 'link', label: 'No-Code VLA: SenseCraft Robotics Platform', href: 'https://wiki.seeedstudio.com/sensecraft_robotics_rebot_arm_102_b601_rs/' },
       ],
     },
     {
@@ -141,11 +187,14 @@ const sidebars = {
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS with Visual Grasping' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS with ROS2' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS with Isaac Sim' },
-        { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS with Web Controller' },
+        { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS Web Control System' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Agent`, label: 'reBot-RS with Agent Claw' },
       ],
     },
-    courseLink(),
+    courseLink([
+      ...courseItems(),
+      { type: 'link', label: 'DLI Course: Sim-to-Real VLA Pipeline', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+    ])
   ],
 
   // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
@@ -161,6 +210,7 @@ const sidebars = {
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Getting_Started`, label: 'reBot-DM Quick Start' },
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Lerobot`, label: 'reBot-DM with LeRobot' },
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_pinocchio`, label: 'reBot-DM with Pinocchio' },
+        { type: 'link', label: 'No-Code VLA: SenseCraft Robotics Platform', href: 'https://wiki.seeedstudio.com/sensecraft_robotics_rebot_arm_102_b601_dm/' },
       ],
     },
     {
@@ -173,7 +223,7 @@ const sidebars = {
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Grasping_Demo`, label: 'reBot-DM Visual Grasp' },
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM with ROS2' },
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM with Isaac Sim' },
-        { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM with Web Controller' },
+        { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web Control System' },
       ],
     },
     courseLink(),

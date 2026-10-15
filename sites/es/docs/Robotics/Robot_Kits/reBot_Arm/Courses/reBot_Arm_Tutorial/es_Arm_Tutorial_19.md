@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 19 del Curso de Introducción a la IA Física de Seeed — encarnación del robot y la arquitectura del sistema GR00T: qué es una encarnación, definiciones de articulaciones/estado/acción, modalidades de cámara y lenguaje, las ventanas de observación y acción, el ajuste fino del modelo fundacional, la pila de LeRobot y la posición del reBot Arm en GR00T.'
 title: Capítulo 19 - Encarnación del Robot y Arquitectura del Sistema GR00T
+hide_title: true
 keywords:
   - reBot
   - GR00T
@@ -9,7 +10,7 @@ keywords:
   - VLA
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_19
+slug: /robotics/rebot_physical_ai_course_chapter_19
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -18,12 +19,10 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-24'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_19/
+url: https://wiki.seeedstudio.com/es/robotics/rebot_physical_ai_course_chapter_19/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

@@ -13,24 +13,29 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
-const courseLink = () => ({
+// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
+// keeps the beginner-course jump that every product's Course group starts with.
+const courseItems = () => [
+  {
+    type: 'ref',
+    id: `${C}/pt_Arm_Tutorial_Introduction`,
+    label: 'Curso para iniciantes',
+  },
+];
+
+const courseLink = (items = courseItems()) => ({
   type: 'category',
   label: 'Curso',
   className: 'robotics-section-title',
   collapsed: false,
   collapsible: false,
-  items: [
-    {
-      type: 'ref',
-      id: `${C}/pt_Arm_Tutorial_Introduction`,
-      label: 'Curso para iniciantes',
-    },
-  ],
+  items,
 });
 
 // The course's own standalone sidebar (opened when browsing course pages).
 const courseSidebar = () => [
   backToRobotics(),
+
   {
     type: 'doc',
     id: `${C}/pt_Arm_Tutorial_Introduction`,
@@ -97,7 +102,7 @@ const courseSidebar = () => [
   },
   {
     type: 'category',
-    label: 'Stage 5: Robot Arm Mathematics and Motion Control',
+    label: 'Fase 5: Matemática do Braço Robótico e Controle de Movimento',
     className: 'robotics-section-title',
     collapsed: false,
     collapsible: false,
@@ -106,6 +111,46 @@ const courseSidebar = () => [
       `${C}/pt_Arm_Tutorial_24`,
       `${C}/pt_Arm_Tutorial_25`,
       `${C}/pt_Arm_Tutorial_26`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Fase 6: Visão Robótica e Preensão Autônoma',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/pt_Arm_Tutorial_27`,
+      `${C}/pt_Arm_Tutorial_28`,
+      `${C}/pt_Arm_Tutorial_29`,
+      `${C}/pt_Arm_Tutorial_30`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Fase 7: ROS2 e Integração de Sistemas Robóticos',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/pt_Arm_Tutorial_31`,
+      `${C}/pt_Arm_Tutorial_32`,
+      `${C}/pt_Arm_Tutorial_33`,
+      `${C}/pt_Arm_Tutorial_34`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'Fase 8: Simulação de Braços Robóticos com MuJoCo e Isaac Sim',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/pt_Arm_Tutorial_35`,
+      `${C}/pt_Arm_Tutorial_36`,
+      `${C}/pt_Arm_Tutorial_37`,
+      `${C}/pt_Arm_Tutorial_38`,
+      `${C}/pt_Arm_Tutorial_39`,
     ],
   },
 ];
@@ -129,6 +174,7 @@ const sidebars = {
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Lerobot`, label: 'reBot-RS com LeRobot' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_pinocchio`, label: 'reBot-RS com Pinocchio' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_control_mit`, label: 'SDK de Motor reBot-RS' },
+        { type: 'link', label: 'VLA sem código: plataforma SenseCraft Robotics', href: 'https://wiki.seeedstudio.com/pt-br/sensecraft_robotics_rebot_arm_102_b601_rs/' },
       ],
     },
     {
@@ -141,11 +187,14 @@ const sidebars = {
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS com Pega Visual' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS com ROS2' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS com Isaac Sim' },
-        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS com Controlador Web' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'Sistema de Controle Web do reBot-RS' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS com Agent Claw' },
       ],
     },
-    courseLink(),
+    courseLink([
+      ...courseItems(),
+      { type: 'link', label: 'Curso DLI: Pipeline VLA Sim-to-Real', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+    ])
   ],
 
   // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
@@ -161,6 +210,7 @@ const sidebars = {
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Getting_Started`, label: 'Início Rápido reBot-DM' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Lerobot`, label: 'reBot-DM com LeRobot' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_pinocchio`, label: 'reBot-DM com Pinocchio' },
+        { type: 'link', label: 'VLA sem código: plataforma SenseCraft Robotics', href: 'https://wiki.seeedstudio.com/pt-br/sensecraft_robotics_rebot_arm_102_b601_dm/' },
       ],
     },
     {
@@ -173,7 +223,7 @@ const sidebars = {
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Grasping_Demo`, label: 'Pega Visual reBot-DM' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM com ROS2' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM com Isaac Sim' },
-        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM com Controlador Web' },
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'Sistema de Controle Web do reBot-DM' },
       ],
     },
     courseLink(),

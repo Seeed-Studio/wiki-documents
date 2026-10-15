@@ -22,11 +22,14 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GraspingTabs from '@site/src/components/robotics/RebotGraspingTabs';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css';
 
 # reBot Arm B601-RS ビジュアルグラスピングデモ
 
-<RebotRsDocNav />
+<div className={styles.page}>
 
 <div align="center">
     <img width={800}
@@ -58,16 +61,47 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>奥行き認識 · 物体検出 · ハンドアイキャリブレーション · 自律把持 · 完全オープンソース</strong>
 </p>
 
-このページでは、異なる実装による 2 つのビジュアルグラスピングデモを紹介します：
-
-- **ビジュアルグラスピング方式 1**: 環境構築、カメラ統合、ハンドアイキャリブレーション、把持デバッグを含む YOLO + RGB-D + Python SDK パイプライン。
-- **ビジュアルグラスピング方式 2**: 複数のターミナルでアーム、Gemini 2 / D405 / D435i カメラ、および把持ノードを起動し、物体のピック＆プレースを行う ROS2 + YOLOE ワークフロー。
-
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping demo" />
 </p>
 
+## 2 つの把持方式の違いは？
+
+このページでは、実装の異なる 2 つのビジュアル把持デモを扱います。フレームワーク、キャリブレーション要件、起動手順を比較し、下からチュートリアルを選んでください。
+
+<div className={styles.comparison}>
+  <section className={styles.methodCard} aria-label="方式 1: Python SDK">
+    <span className={styles.methodNumber}>方式 01</span>
+    <h3>Python SDK + YOLO / OBB</h3>
+    <p>YOLO、RGB-D 深度カメラ、Python SDK を使い、環境構築とカメラ統合からハンドアイキャリブレーション、把持のデバッグまでの一連の流れを実行します。</p>
+    <dl>
+      <div><dt>把持ロジック</dt><dd>検出ボックスまたは OBB の最小外接矩形から把持姿勢を推定します。より複雑な 6D 姿勢推定には、任意で GraspNet を使用できます。</dd></div>
+      <div><dt>ハンドアイキャリブレーション</dt><dd>初めて完全な把持を実行する前に、ArUco マーカーを使った Eye-in-Hand キャリブレーションを完了します。</dd></div>
+      <div><dt>起動</dt><dd>Python スクリプトを実行し、検出、姿勢推定、ロボット把持を段階的に確認します。</dd></div>
+    </dl>
+  </section>
+  <section className={styles.methodCard} aria-label="方式 2: ROS 2">
+    <span className={styles.methodNumber}>方式 02</span>
+    <h3>ROS 2 + YOLOE</h3>
+    <p>ROS 2 と YOLOE を使い、別々のターミナルでアーム、Gemini 2 / D405 / D435i カメラ、把持ノードを起動してピック＆プレースを行います。</p>
+    <dl>
+      <div><dt>把持ロジック</dt><dd>ビジュアル把持ノードが物体を検出し、把持して配置します。テキストのクラス名で把持対象と配置対象を指定します。</dd></div>
+      <div><dt>ハンドアイキャリブレーション</dt><dd>キャリブレーションボードは不要です。取り付けや造形部品のわずかな公差は、オフセットパラメータで補正します。</dd></div>
+      <div><dt>起動</dt><dd>別々のターミナルでアーム、カメラ、把持ノードを起動してから、ピックとプレースを実行します。</dd></div>
+    </dl>
+  </section>
+</div>
+
+## 把持方式を選ぶ
+
+<p className={styles.selectionHint}>タブを切り替えて、選んだ方式のチュートリアルを表示し、そのインストールと実行手順に従ってください。</p>
+
+<GraspingTabs>
+<TabItem value="python-sdk" label="方式 1 · Python SDK / OBB">
+
 ## ビジュアルグラスピング方式 1
+
+このルートは ROS 2 ワークスペースを使わず、**Python SDK + RGB-D カメラ + YOLO / OBB** を使用します。デフォルトのルートは一般的な卓上物体に適しています。より複雑な 6D 把持が必要な場合は、下の任意 GraspNet モジュールを有効にしてください。
 
 ### 1. プロジェクトの特徴
 
@@ -144,7 +178,7 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 1. 深度カメラを USB 3.0 でホストに接続します。
 2. USB2CAN アダプタをアームの CAN バスに接続します。
 3. 48V 電源、カメラ、ロボットアームがすべて確実に接続されていることを確認します。
-4. パーミッションを設定します：
+4. 権限の問題が発生した場合は、次を実行します：
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
@@ -158,11 +192,24 @@ sudo chmod 666 /dev/ttyUSB0
 | オペレーティングシステム | Ubuntu 22.04+ |
 | Python | 3.10 |
 
-### 5. インストール手順
+### 5. 基本環境のインストール
+
+次の手順を順番に実行してください。デフォルトのルートではステップ 0〜3 が必須です。ステップ 4 では使用するハードウェアに合わせてカメラ SDK を選んでください。GraspNet のインストールと実行手順は、下記の別の応用モジュールにまとめています。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">0</span>
+<div className="rebot-step-content">
 
 #### ステップ 0. まずロボットアームの基本準備を完了する
 
 このチュートリアルを始める前に、[reBot Arm B601-RS クイックスタート](https://wiki.seeedstudio.com/ja/rebot_b601_rs_getting_started/) の内容（ロボットアームの組み立て、ゼロ点初期化、モーター ID 設定、基本的な接続確認）を完了してください。
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
 #### ステップ 1. リポジトリをクローンする
 
@@ -173,6 +220,12 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
 #### ステップ 2. conda 環境を作成・設定する
 
 ```bash
@@ -180,7 +233,17 @@ conda env create -f environment.yml -n rebotarm
 conda activate rebotarm
 ```
 
+:::note 期待される結果
+ターミナルのプロンプトに `rebotarm` と表示されていれば、この環境が有効であり、以降の依存関係はこの環境にインストールされます。
+:::
+
 別の環境名を使いたい場合は、コマンド内の `rebotarm` を任意の名前に置き換えてください。
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
 
 #### ステップ 3. ロボットアーム SDK をインストールする
 
@@ -206,54 +269,105 @@ hardware_yaml: rebotarm_rs.yaml
 
 ビジュアルグラスピングプログラムはこの SDK 設定を読み取り、対応するアーム制御モードとグリッパパラメータを自動的に選択します。
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
 #### ステップ 4. 深度カメラ SDK をインストールする
 
 このプロジェクトは Orbbec Gemini 2 や RealSense D435i / D405 などの RGB-D 深度カメラをサポートします。使用するカメラに対応した SDK をインストールしてください。すでに環境でカメラドライバを import できる場合は、このステップをスキップできます。
 
 **Orbbec Gemini 2**
 
-Orbbec Gemini 2 深度カメラは、Orbbec SDK v2 の Python ラッパーである `pyorbbecsdk` に依存します。まずはビルド済みの Python パッケージをインストールすることを推奨します：
+Orbbec Gemini 2 深度カメラは、Orbbec SDK v2 の Python ラッパーである `pyorbbecsdk` に依存します。まずはビルド済みの Python パッケージをインストールすることを推奨します。
 
-**オプション 1: pip からインストール（推奨）**
+Linux / Ubuntu では、どちらのインストール方法を選んでも、カメラを初めて使う前に udev ルールを設定してください。このルールにより一般ユーザーが USB デバイスにアクセスでき、システム全体にインストールされるため、各マシンでこの設定が必要なのは 1 回だけです。すでに設定済みの場合は、対応するコマンドを省略してください。
+
+<Tabs defaultValue="pip">
+<TabItem value="pip" label="オプション 1: pip からインストール（推奨）">
 
 ```bash
 pip install pyorbbecsdk2
 ```
 
-**オプション 2: GitHub から取得**
+**udev ルールを設定する（Linux / Ubuntu）**
+
+`pyorbbecsdk2` 2.1.0 以降には環境セットアップスクリプトが含まれています。conda 環境を有効にしたまま、インストール済みパッケージからスクリプトを実行してください。sudo 権限を要求し、udev ルールのインストールと再読み込みを自動で行います。
+
+```bash
+orbbec_sdk_dir="$(python -c 'import os, pyorbbecsdk; print(os.path.dirname(pyorbbecsdk.__file__))')"
+python "$orbbec_sdk_dir/shared/setup_env.py"
+```
+
+`shared/setup_env.py` が見つからない場合は、`pip install --upgrade "pyorbbecsdk2>=2.1.0"` を実行してから、上のコマンドを再度実行してください。詳細は [公式の Orbbec インストールガイド](https://orbbec.github.io/pyorbbecsdk/source/2_installation/install_the_package.html)を参照してください。
+
+</TabItem>
+<TabItem value="github" label="オプション 2: GitHub から取得">
+
+`rebotarm` 環境を有効なままにしてください。ビルド依存関係をインストールしてから、Python 拡張をコンパイルします：
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y cmake build-essential libusb-1.0-0-dev
+sudo apt-get install -y cmake build-essential libusb-1.0-0-dev python3-dev
 
 cd sdk
 git clone https://github.com/orbbec/pyorbbecsdk.git
 cd pyorbbecsdk
-pip install -e .
+git checkout v2-main
+python -m pip install pybind11
+mkdir -p build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release \
+  -DPython3_EXECUTABLE="$(python -c 'import sys; print(sys.executable)')" \
+  -Dpybind11_DIR="$(python -m pybind11 --cmakedir)"
+cmake --build . --parallel "$(nproc)"
+cmake --install .
+cd ..
 ```
 
-中国本土のユーザーは次を利用できます：
+中国本土のユーザーは、上の GitHub clone コマンドを次に置き換えることができます：
 
 ```bash
 git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 ```
 
-ソースからインストールする場合は、`pip install -e .` を実行する前に、CMake でネイティブ拡張がビルドされており、`install/lib` に `pyorbbecsdk*.so` と Orbbec の共有ライブラリが含まれていることを確認してください。
+ビルド後、`install/lib` に `pyorbbecsdk*.so` と Orbbec の共有ライブラリ（新しいバージョンでは `install/lib/pyorbbecsdk/` 配下）が含まれていることを確認してから、Python パッケージをインストールします。CMake と conda の設定については、[公式の Orbbec ソースビルドガイド](https://orbbec.github.io/pyorbbecsdk/source/2_installation/build_the_package.html)を参照してください。
 
-上記のすべてのインストール方法がうまくいかない場合は、以下の公式 Orbbec ドキュメントを参照してください。
+```bash
+pip install -e .
+```
+
+**udev ルールを設定する（Linux / Ubuntu）**
+
+クローンした `pyorbbecsdk` リポジトリのルートで次を実行します。新しいバージョンは環境セットアップスクリプトを使い、古いバージョンは `install_udev_rules.sh` を使います：
+
+```bash
+if [ -f scripts/env_setup/setup_env.py ]; then
+  python scripts/env_setup/setup_env.py
+else
+  sudo bash scripts/install_udev_rules.sh
+  sudo udevadm control --reload-rules
+  sudo udevadm trigger
+fi
+```
+
+検証と実行の手順に進む前に、プロジェクトルートへ戻ってください：
+
+```bash
+cd ../..
+```
+
+</TabItem>
+</Tabs>
+
+両方のインストール方法がうまくいかない場合は、以下の公式 Orbbec ドキュメントを参照してください。
 
 **インストールの確認**
 
 ```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
-```
-
-初めて使用する場合は、udev ルールをインストールすることを推奨します：
-
-```bash
-sudo bash scripts/install_udev_rules.sh
-sudo udevadm control --reload-rules
-sudo udevadm trigger
 ```
 
 **RealSense D435i / D405**
@@ -265,7 +379,11 @@ pip install pyrealsense2
 python -c "import pyrealsense2; print('pyrealsense2 OK')"
 ```
 
-システムに RealSense のフルツールチェーンや udev ルールが必要な場合は、公式の RealSense SDK ドキュメントに従って `librealsense2` をインストールしてください。
+システムに RealSense のフルツールチェーンや udev ルールが必要な場合は、[公式の librealsense ドキュメント](https://github.com/realsenseai/librealsense)に従ってください。
+
+:::note 期待される結果
+対応する確認コマンドが、`ModuleNotFoundError` なしで `pyorbbecsdk OK` または `pyrealsense2 OK` を出力します。
+:::
 
 **SDK リソースまとめ**
 
@@ -280,7 +398,249 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 | ROS2 ラッパー | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
 | RealSense SDK | https://github.com/realsenseai/librealsense |
 
-#### ステップ 5. GraspNet を設定する（オプション）
+</div>
+</section>
+</div>
+
+### 6. ディレクトリ構成
+
+```
+rebot_grasp/
+├── config/
+│   ├── default.yaml              # Main configuration file
+│   └── calibration/
+│       └── <camera_type>/
+│           ├── intrinsics.npz    # Camera intrinsics
+│           └── hand_eye.npz      # Hand-eye calibration results
+├── drivers/
+│   ├── camera/
+│   │   ├── base.py               # Camera abstract base class
+│   │   ├── orbbec_gemini2.py     # Gemini 2 driver
+│   │   └── realsense.py          # RealSense driver (alternative)
+│   └── robot/
+│       └── grasp_driver.py       # Lightweight grasp helper based on arm SDK
+├── calibration/
+│   ├── aruco_pose.py             # ArUco pose estimation
+│   └── hand_eye.py               # Hand-eye calibration solver
+├── utils/
+│   ├── ordinary_grasp.py         # OBB grasp pose estimation and visualization
+│   └── transforms.py             # Coordinate transformation utilities
+├── scripts/
+│   ├── main.py                   # Main grasping program
+│   ├── set.py                    # Grasp and place program
+│   ├── ordinary_grasp_pipeline.py
+│   ├── object_detection.py
+│   └── collect_handeye_eih.py
+├── sdk/
+│   ├── pyorbbecsdk/              # Orbbec SDK Python wrapper (source installation)
+│   └── reBotArm_control_py/      # reBot Arm SDK
+└── environment.yml               # Recommended conda environment file
+```
+
+### 7. ハンドアイキャリブレーション
+
+フルの把持パイプラインを実行する前に、まず Eye-in-Hand 方式のハンドアイキャリブレーションを完了してください。
+
+キャリブレーションスクリプトを実行する前に、CAN インターフェースを起動して動作を確認します：
+
+```bash
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000
+sudo ip link set can0 up
+ip -details link show can0
+```
+
+実行前に、`config/default.yaml` 内の次の ArUco サイズパラメータが、実際に印刷したマーカーと一致していることを確認してください：
+
+```yaml
+calibration:
+  aruco:
+    marker_length_m: 0.1
+```
+
+設定を確認したら、自動キャリブレーションを実行します：
+
+```bash
+python scripts/collect_handeye_eih.py
+```
+
+
+自動モードでは、アームは 50 個のプリセット姿勢を走査し、ArUco マーカーが安定して検出されたタイミングでサンプルを記録します。途中で `c` または `q` で処理を中断した場合でも、スクリプトは収集済みサンプルからキャリブレーション結果の計算を試みます。
+
+サンプリング中にロボットアームを手動で動かしたい場合は、マニュアルモードを使用します：
+
+```bash
+python scripts/collect_handeye_eih.py --manual
+```
+
+マニュアルモードでは、アームは重力補償モードに入ります。エンドエフェクタを適切な視点に動かし、`Enter` を押してキャプチャし、`c` または `q` を押して終了および結果の計算を行います。
+
+:::tip
+キャリブレーション後にロボットアームの把持精度が要件を満たさない場合は、`config/default.yaml` の `calibration.hand_eye_compensation_m` 配下にある `X`（前後）、`Y`（左右）、`Z`（上下）パラメータを設定して、位置補正を行うことができます。
+:::
+
+キャリブレーション結果は次の場所に保存されます：
+
+```text
+config/calibration/<camera_type>/hand_eye.npz
+```
+
+推奨サンプル数は少なくとも 5 サンプルで、15 サンプル以上を推奨します。
+
+### 8. 実行とデバッグ
+
+次の順にシナリオを確認してください。最初の 2 つはロボットアームに接続せず、カメラ、検出、把持推定を確認します。続く 2 つはロボットアームに接続して制御します。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+#### 1. 物体検出のみを検証
+
+```bash
+python scripts/object_detection.py
+```
+
+検出モデルやクラスを変更する必要がある場合は、`config/default.yaml` を編集します：
+
+```yaml
+yolo:
+  model_name: "yoloe-26l-seg.pt"
+  device: "cpu"
+  use_world: true
+  custom_classes:
+    - "yellow banana"
+    - "water bottle"
+    - "cup"
+```
+
+このステップは次の点を確認するのに有用です：
+
+- カメラが正しくオープンできること
+- YOLO モデルが正しくロードされること
+- YOLO の物体検出が期待どおりに動作すること
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+#### 2. 把持推定のみを検証
+
+```bash
+python scripts/ordinary_grasp_pipeline.py
+```
+
+把持推論の頻度やプレグラスプの退避距離を調整する必要がある場合は、次を編集します：
+
+```yaml
+grasp_pipeline:
+  infer_every_live: 3
+  grasp:
+    depth_quantile: 0.5
+    pregrasp_offset_m: 0.080
+    insertion_depth_m: 0.015
+    min_base_z_m: 0.00
+```
+
+このスクリプトはロボットアームには接続しません。次の点を検証するためだけに使用します：
+
+- OBB または最小外接矩形が妥当かどうか
+- 把持点がターゲット中心付近に位置しているかどうか
+- 短軸方向が想定されるグリッパ開閉方向と一致しているかどうか
+
+主な操作キー：
+
+- 左クリック：選択した画素の深度を確認
+- `G`: 現在の最良把持姿勢を出力
+- `Q` / `Esc`: 終了
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+#### 3. メイン把持プログラムの実行
+
+```bash
+python scripts/main.py
+```
+
+把持動作を省略してターゲット姿勢を検証するには：
+
+```bash
+python scripts/main.py --dry-run
+```
+
+実際の把持を実行する前に、`--dry-run` で姿勢と作業空間を検証してください。このモードでも、現在のスクリプトはアームを初期化し、レディ姿勢へ移動し、終了時にクリーンアップとホーミングを行います。ビジョンのみを確認する場合は、アームに接続しない最初の 2 つのスクリプトを使用してください。
+
+メインプログラムのフロー：
+
+1. RGB-D カメラを初期化し、画像ストリームが利用可能であることを確認する。
+2. ロボットアームとグリッパを有効化する。
+3. レディ姿勢に移動する。起動時のレディ姿勢を変更したい場合は、`config/default.yaml` を編集します：
+
+```yaml
+robot:
+  ready_pose:
+    x: 0.3
+    y: 0.0
+    z: 0.3
+    roll: 0.0
+    pitch: 0.7
+    duration: 3.0
+```
+
+4. テーブルトップ上のターゲットをリアルタイムに検出する。
+5. 短軸から把持姿勢を推定する。
+6. `G` を押して現在のフレームをキャプチャし、把持を実行する。
+
+実行時のキー操作：
+
+- `G`: 現在の最良ターゲットを把持
+- `R`: ライブプレビューを再開
+- `Q` / `Esc`: 終了
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+#### 4. `scripts/set.py` — 把持および配置プログラム
+
+機能：バナナを把持して箱の中に配置します。
+
+```bash
+python scripts/set.py
+```
+
+完了する処理フロー：
+
+1. カメラとアームの初期化、レディ位置への移動
+2. リアルタイムカメラプレビュー + YOLO による物体検出とインスタンスセグメンテーション
+3. `G` を押してフレームを固定し、ハンドアイ変換を通じてアームのターゲット姿勢を計算
+4. アームがバナナを把持して持ち上げる
+5. アームがバナナを箱に配置し、初期姿勢に戻る
+6. `Q` を押してシステムを終了し、アームがゼロ位置に戻る
+
+</div>
+</section>
+</div>
+
+### 9. GraspNet 応用モジュール（任意）
+
+デフォルトの Python SDK / OBB ルートでは GraspNet は不要です。RGB-D 点群から 6D 把持姿勢を推定する必要がある場合のみ、次の手順に従ってください。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+#### ステップ 1. GraspNet と CUDA オペレータをインストールする
 
 `scripts/main.py` や `scripts/ordinary_grasp_pipeline.py` を実行するだけなら GraspNet は不要です。GraspNet、CUDA 対応の PyTorch、PointNet2/knn の CUDA オペレータ、および学習済みチェックポイントを必要とする `scripts/graspnet_camera_demo.py` または `scripts/grasp.py` を実行したい場合のみ設定してください。
 
@@ -358,200 +718,13 @@ graspnet:
 
 `checkpoint` フィールドは 3 つの形式をサポートします：ファイル名の場合は `sdk/graspnet-baseline/checkpoints/` 配下として解決されます。相対パスの場合はプロジェクトルートからの相対パスとして解決されます。絶対パスの場合はそのまま使用されます。
 
-### 6. ディレクトリ構成
+</div>
+</section>
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
 
-```
-rebot_grasp/
-├── config/
-│   ├── default.yaml              # Main configuration file
-│   └── calibration/
-│       └── <camera_type>/
-│           ├── intrinsics.npz    # Camera intrinsics
-│           └── hand_eye.npz      # Hand-eye calibration results
-├── drivers/
-│   ├── camera/
-│   │   ├── base.py               # Camera abstract base class
-│   │   ├── orbbec_gemini2.py     # Gemini 2 driver
-│   │   └── realsense.py          # RealSense driver (alternative)
-│   └── robot/
-│       └── grasp_driver.py       # Lightweight grasp helper based on arm SDK
-├── calibration/
-│   ├── aruco_pose.py             # ArUco pose estimation
-│   └── hand_eye.py               # Hand-eye calibration solver
-├── utils/
-│   ├── ordinary_grasp.py         # OBB grasp pose estimation and visualization
-│   └── transforms.py             # Coordinate transformation utilities
-├── scripts/
-│   ├── main.py                   # Main grasping program
-│   ├── set.py                    # Grasp and place program
-│   ├── ordinary_grasp_pipeline.py
-│   ├── object_detection.py
-│   └── collect_handeye_eih.py
-├── sdk/
-│   ├── pyorbbecsdk/              # Orbbec SDK Python wrapper
-│   └── reBotArm_control_py/      # reBot Arm SDK
-└── environment.yml               # Recommended conda environment file
-```
-
-### 7. ハンドアイキャリブレーション
-
-フルの把持パイプラインを実行する前に、まず Eye-in-Hand 方式のハンドアイキャリブレーションを完了してください。
-
-キャリブレーションスクリプトを実行する前に、CAN インターフェースを起動して動作を確認します：
-
-```bash
-sudo ip link set can0 down 2>/dev/null
-sudo ip link set can0 type can bitrate 1000000
-sudo ip link set can0 up
-ip -details link show can0
-```
-
-```bash
-python scripts/collect_handeye_eih.py
-```
-
-実行前に、`config/default.yaml` 内の次の ArUco サイズパラメータが、実際に印刷したマーカーと一致していることを確認してください：
-
-```yaml
-calibration:
-  aruco:
-    marker_length_m: 0.1
-```
-
-自動モードでは、アームは 50 個のプリセット姿勢を走査し、ArUco マーカーが安定して検出されたタイミングでサンプルを記録します。途中で `c` または `q` で処理を中断した場合でも、スクリプトは収集済みサンプルからキャリブレーション結果の計算を試みます。
-
-サンプリング中にロボットアームを手動で動かしたい場合は、マニュアルモードを使用します：
-
-```bash
-python scripts/collect_handeye_eih.py --manual
-```
-
-マニュアルモードでは、アームは重力補償モードに入ります。エンドエフェクタを適切な視点に動かし、`Enter` を押してキャプチャし、`c` または `q` を押して終了および結果の計算を行います。
-
-:::tip
-キャリブレーション後にロボットアームの把持精度が要件を満たさない場合は、`config/default.yaml` の `calibration.hand_eye_compensation_m` 配下にある `X`（前後）、`Y`（左右）、`Z`（上下）パラメータを設定して、位置補正を行うことができます。
-:::
-
-キャリブレーション結果は次の場所に保存されます：
-
-```text
-config/calibration/<camera_type>/hand_eye.npz
-```
-
-推奨サンプル数は少なくとも 5 サンプルで、15 サンプル以上を推奨します。
-
-### 8. 実行とデバッグ
-
-#### 1. 物体検出のみを検証
-
-```bash
-python scripts/object_detection.py
-```
-
-検出モデルやクラスを変更する必要がある場合は、`config/default.yaml` を編集します：
-
-```yaml
-yolo:
-  model_name: "yoloe-26l-seg.pt"
-  device: "cpu"
-  use_world: true
-  custom_classes:
-    - "yellow banana"
-    - "water bottle"
-    - "cup"
-```
-
-このステップは次の点を確認するのに有用です：
-
-- カメラが正しくオープンできること
-- YOLO モデルが正しくロードされること
-- YOLO の物体検出が期待どおりに動作すること
-
-#### 2. 把持推定のみを検証
-
-```bash
-python scripts/ordinary_grasp_pipeline.py
-```
-
-把持推論の頻度やプレグラスプの退避距離を調整する必要がある場合は、次を編集します：
-
-```yaml
-grasp_pipeline:
-  infer_every_live: 3
-  grasp:
-    depth_quantile: 0.5
-    pregrasp_offset_m: 0.080
-    insertion_depth_m: 0.015
-    min_base_z_m: 0.00
-```
-
-このスクリプトはロボットアームには接続しません。次の点を検証するためだけに使用します：
-
-- OBB または最小外接矩形が妥当かどうか
-- 把持点がターゲット中心付近に位置しているかどうか
-- 短軸方向が想定されるグリッパ開閉方向と一致しているかどうか
-
-主な操作キー：
-
-- 左クリック：選択した画素の深度を確認
-- `G`: 現在の最良把持姿勢を出力
-- `Q` / `Esc`: 終了
-
-#### 3. メイン把持プログラムの実行
-
-```bash
-python scripts/main.py
-```
-
-ロボットアームを動かさずにターゲット姿勢だけを検証したい場合：
-
-```bash
-python scripts/main.py --dry-run
-```
-
-実際の把持を実行する前に、まず `--dry-run` で姿勢と到達可能な作業空間を検証することを推奨します。
-
-メインプログラムのフロー：
-
-1. RGB-D カメラを初期化し、画像ストリームが利用可能であることを確認する。
-2. ロボットアームとグリッパを有効化する。
-3. レディ姿勢に移動する。起動時のレディ姿勢を変更したい場合は、`config/default.yaml` を編集します：
-
-```yaml
-robot:
-  ready_pose:
-    x: 0.3
-    y: 0.0
-    z: 0.3
-    roll: 0.0
-    pitch: 0.7
-    duration: 3.0
-```
-
-4. テーブルトップ上のターゲットをリアルタイムに検出する。
-5. 短軸から把持姿勢を推定する。
-6. `G` を押して現在のフレームをキャプチャし、把持を実行する。
-
-実行時のキー操作：
-
-- `G`: 現在の最良ターゲットを把持
-- `R`: ライブプレビューを再開
-- `Q` / `Esc`: 終了
-
-#### 4. `scripts/set.py` — 把持および配置プログラム
-
-機能：バナナを把持して箱の中に配置します。
-
-完了する処理フロー：
-
-1. カメラとアームの初期化、レディ位置への移動
-2. リアルタイムカメラプレビュー + YOLO による物体検出とインスタンスセグメンテーション
-3. `G` を押してフレームを固定し、ハンドアイ変換を通じてアームのターゲット姿勢を計算
-4. アームがバナナを把持して持ち上げる
-5. アームがバナナを箱に配置し、初期姿勢に戻る
-6. `Q` を押してシステムを終了し、アームがゼロ位置に戻る
-
-#### 5. GraspNet カメラ推定デモ（任意）
+#### ステップ 2. GraspNet カメラ推定デモを実行する
 
 ```bash
 python scripts/graspnet_camera_demo.py
@@ -567,7 +740,13 @@ python scripts/graspnet_camera_demo.py
 
 推論後、Open3D によって点群と把持候補を可視化できます。
 
-#### 6. GraspNet ロボット把持プログラム（任意）
+</div>
+</section>
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+#### ステップ 3. GraspNet ロボット把持プログラムを実行する
 
 ```bash
 python scripts/grasp.py
@@ -577,9 +756,14 @@ python scripts/grasp.py --target-class "light blue coffee cup"
 
 このスクリプトは、GraspNet の推定結果をロボットアームの実行フローに接続します。YOLO がターゲットを選択し、GraspNet が 6D 把持姿勢を出力し、ハンドアイキャリブレーションがそれをロボットベース座標系に変換し、スクリプトはプレグラスプ、把持、退避のモーションシーケンスを実行する前に IK の到達可能性をチェックします。
 
-`python scripts/grasp.py` を実行すると、GraspNet によるロボット把持フロー全体が起動し、実際にロボットアームを制御します。`--dry-run` は把持動作を実行せず、ターゲット姿勢と候補フィルタリング結果のみを出力します。`--target-class "light blue coffee cup"` は YOLO のターゲットクラスを指定し、そのクラスに対する GraspNet 候補だけをフィルタリングして把持します。
+`python scripts/grasp.py` を実行すると、GraspNet によるロボット把持フロー全体が起動し、ロボットアームを制御します。`--dry-run` はターゲット姿勢と候補フィルタリング結果を出力し、把持動作は行いません。現在のスクリプトは、このモードでもアームを初期化し、レディ姿勢へ移動し、終了時にクリーンアップとホーミングを行います。`--target-class "light blue coffee cup"` は YOLO のターゲットクラスを指定し、そのクラスに対する GraspNet 候補だけをフィルタリングして把持します。
 
-### 9. FAQ
+</div>
+</section>
+</div>
+
+### 10. FAQ
+
 
 <h4>1. <code>ModuleNotFoundError: No module named 'motorbridge'</code></h4>
 
@@ -658,6 +842,9 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 出力が `False` の場合は、まず CUDA / PyTorch のインストールを修正してください。`True` だがエラーが残る場合は、`pointnet2` と `knn` を再ビルドします。
 
+</TabItem>
+<TabItem value="ros2-yoloe" label="方式 2 · ROS 2 / YOLOE">
+
 ## ビジュアル把持方式 2
 
 ### 1. プロジェクト概要
@@ -668,9 +855,21 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ### 2. 環境構築
 
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
 #### 手順 1. ロボットアーム ROS2 ワークスペースのインストール
 
 まず、[reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_ros2_integration/) に従って `rebotarm_ros2` ワークスペースのインストールとビルドを完了します。
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
 
 #### 手順 2. カメラのインストール
 
@@ -755,6 +954,12 @@ colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
 
 </details>
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
 #### 手順 3. ビジュアル把持パッケージのインポート
 
 ```bash
@@ -763,6 +968,12 @@ git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
 cd ~/rebotarm_ros2
 colcon build --symlink-install
 ```
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
 
 #### 手順 4. YOLO / YOLOE 環境のインストール
 
@@ -805,6 +1016,12 @@ wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobilecli
 wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
 ```
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+
 #### 手順 5. ワークスペースをビルドする
 
 ```bash
@@ -821,6 +1038,10 @@ source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 ```
 
+</div>
+</section>
+</div>
+
 ### 3. プロジェクトの実行
 
 開始前に、アームの電源が入っていること、CAN インターフェースが `can0` であること、Gemini 2、D405、または D435i が USB 接続されていることを確認してください。その後、CAN を起動します：
@@ -832,6 +1053,12 @@ sudo ip link set can0 up
 ```
 
 把持ロジックを追いやすくするため、スタックは別々のターミナルで起動します。Gemini 2、D405、D435i では起動コマンドが異なるため、自分のカメラに対応するものを選択してください。ワンクリックで起動したい場合は、独自の起動スクリプトを作成できます。
+
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">A</span>
+<div className="rebot-step-content">
 
 #### ターミナル A — アーム + RViz の起動
 
@@ -870,6 +1097,12 @@ ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=c
 ```
 
 </details>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">B</span>
+<div className="rebot-step-content">
 
 #### ターミナル B — カメラの起動
 
@@ -913,6 +1146,12 @@ ros2 launch realsense2_camera rs_launch.py \
 ```
 
 </details>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">C</span>
+<div className="rebot-step-content">
 
 #### ターミナル C — 観測姿勢への移動 + YOLO 検出
 
@@ -1008,6 +1247,12 @@ source ~/rebotarm_ros2/install/setup.bash
 | `grasp_z_offset_m` | 把持高さの微調整。デフォルトは標準グリッパーより長いフレキシブルグリッパー用です |
 | `place_z_offset_m` | 物体を配置する際の追加リフト量。配置点よりどの程度の高さで物体を離すかを制御します |
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">D</span>
+<div className="rebot-step-content">
+
 #### ターミナル D — ワンクリックで把持と配置
 
 デフォルトのトリガー遅延は 3 秒です。
@@ -1025,6 +1270,12 @@ ros2 launch rebot_visual_grasp grasp_go.launch.py
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 ```
 
+</div>
+</section>
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">E</span>
+<div className="rebot-step-content">
+
 #### ターミナル E — ホームポジションに戻る（オプション）
 
 新しい `rebotarm` ビルドでは、ターミナルで `Ctrl + C` を押すと、アームは自動的にホームポジションに戻ります。手動でホームに戻すには：
@@ -1034,6 +1285,13 @@ source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 ```
+
+</div>
+</section>
+</div>
+
+</TabItem>
+</GraspingTabs>
 
 ## お問い合わせ
 
@@ -1058,3 +1316,5 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) ドキュメント](https://graspnet.net/)
+
+</div>

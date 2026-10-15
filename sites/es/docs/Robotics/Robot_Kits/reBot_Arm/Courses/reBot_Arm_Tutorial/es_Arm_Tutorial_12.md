@@ -1,6 +1,7 @@
 ---
 description: 'Capítulo 12 del Curso de Introducción a la IA Física de Seeed — conjuntos de datos de robots y diseño de tareas: qué es un Episodio, qué hay en un registro de datos, marcas de tiempo y sincronización, condiciones de inicio/fin, consistencia vs diversidad, cantidad de datos vs calidad y un ejemplo práctico de creación de datos.'
 title: Capítulo 12 - Conjuntos de Datos de Robots y Diseño de Tareas
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -9,7 +10,7 @@ keywords:
   - Data Collection
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_12
+slug: /robotics/rebot_physical_ai_course_chapter_12
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -18,12 +19,10 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_12/
+url: https://wiki.seeedstudio.com/es/robotics/rebot_physical_ai_course_chapter_12/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-
-# 
 
 <div className="rebot-page">
 

@@ -22,7 +22,7 @@ last_update:
   date: 09/01/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-01'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/solutions/edge-fall-detection/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -194,6 +194,12 @@ When enabled, a raised fall alarm makes the service speak a prompt into the room
 
 Hardware needed: a USB microphone and speaker on a LAN compute box, plus an OpenVoiceStream instance for TTS and streaming ASR. Audio does not go through the cameras: neither reCamera model has a confirmed usable microphone, and the SG2002 cannot run local ASR. Audio is never written to disk; only the verdict, confidence, latency and transcribed text are persisted, and `store_transcript: false` drops the text as well.
 
+### Negative Selection Boundaries
+
+- **Single-Room vs Central Multi-Stream**: reCamera Pro is an all-in-one edge camera suited for single rooms. For central nursing station deployments aggregating 4–16 existing streams, choose a reComputer R2000 or RK3588 host.
+- **Wide-Angle and Occlusion**: Fisheye distortion or dense bed rails degrade 2D pose estimation; mount cameras with clear line-of-sight and avoid severe oblique angles.
+- **Hailo-8 (R2000) Multi-Stream Video Decoding Constraint**: Although Hailo-8 NPU throughput supports 16 pose streams, the reComputer R2000 Series host **lacks multi-channel hardware video decoding**. The measured 16 streams were achieved with **640×640 pre-scaled video streams** at 15 FPS. Feeding 16 streams of full 1080p RTSP directly will peg the host CPU at 100% on software decoding and cause severe frame drops. In real deployments, **cameras must be configured to supply 640×480 or 640×360 sub-streams** to the gateway. If you require full on-box 1080p hardware decoding across many streams, select the Jetson J40 Series with dedicated NVDEC hardware.
+
 ## How to deploy on site
 
 Two steps: get the camera position right first, then install the software.
@@ -281,8 +287,6 @@ Detector and service state on the host itself are on the device console:
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/device-console-en-76e94f0c.jpg" alt="Device console on the alarm host: detector and alarm service running state"/>
 </div>
-
-<!-- TODO image: on-site installation photo (camera mounted in a room) — needs a field shoot -->
 
 Estimated time is **45 minutes**, rated **intermediate**. The Orin package is the longest because the first deploy builds a TensorRT engine on the device.
 
@@ -437,6 +441,8 @@ Reproduce: [`evaluation/`](https://github.com/suharvest/edgefallkit/tree/main/ev
 #### Stream counts
 
 "Inference-bound streams" = aggregate throughput ÷ 15 FPS. It counts the accelerator only and is a theoretical ceiling. "Recommended streams" discounts that — end-to-end throughput measured on RK reaches only 28%–44% of the inference ceiling, because RTSP decode, tracking, the state machine and MQTT also consume CPU and memory bandwidth. With other workloads still running on the board, end-to-end throughput measured about 8.6 FPS on RK3588 and about 4.9 FPS on RK3576.
+
+**Hailo-8 16-Stream Test Conditions and Host Video Decoding**: The recommended 16 streams on the Hailo-8 R2000 were measured using **640×640 input video streams** at 15 FPS. Because the reComputer R2000 Series host lacks multi-channel hardware video decoding, software decoding 1080p streams will choke the CPU at roughly 2–4 streams. For real multi-camera deployments, cameras must be set to deliver lower-resolution sub-streams (recommended 640×480 or 640×360) to prevent CPU decoding bottlenecks.
 
 ### Runtimes and key parameters
 

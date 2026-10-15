@@ -1186,7 +1186,7 @@ html[data-theme='dark'] .robotics-quicklinks {
   position: absolute;
   top: 0;
   z-index: 30;
-  width: 22%;
+  width: calc(23.5% - 0.7rem);
   min-width: 0;
   pointer-events: auto;
 }
@@ -1213,10 +1213,37 @@ html[data-theme='dark'] .robotics-quicklinks {
 .rotating-product-side .learning-group + .learning-group {
   margin-top: 0;
 }
+.rotating-product-side .learning-group > h4,
+.rotating-product-side .mini-track > h4 {
+  color: #405914;
+  background:
+    linear-gradient(110deg, transparent 18%, rgba(255, 255, 255, 0.5) 48%, transparent 78%),
+    color-mix(in srgb, #8dc21f 22%, var(--rp-card-bg));
+  border-radius: 0;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(141, 194, 31, 0.28),
+    0 0 14px rgba(141, 194, 31, 0.2);
+}
+html[data-theme='dark'] .rotating-product-side .learning-group > h4,
+html[data-theme='dark'] .rotating-product-side .mini-track > h4 {
+  color: #b9db70;
+  background:
+    linear-gradient(110deg, transparent 18%, rgba(185, 219, 112, 0.12) 48%, transparent 78%),
+    color-mix(in srgb, #8dc21f 22%, var(--rp-card-bg));
+  box-shadow:
+    inset 0 1px 0 rgba(185, 219, 112, 0.24),
+    inset 0 -1px 0 rgba(141, 194, 31, 0.3),
+    0 0 16px rgba(141, 194, 31, 0.22);
+}
 .rotating-product-side .learning-group > h4 {
   margin-bottom: 0.48rem;
   padding: 0.28rem 0.48rem;
   font-size: 0.76rem;
+}
+.rotating-product-side .mini-track > h4 {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
 }
 .rotating-product-side .learning-steps,
 .rotating-product-side .reachy-path-grid,
@@ -1226,6 +1253,7 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 .rotating-product-side .step-card {
   grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
   gap: 0.18rem 0.55rem;
   min-height: 0;
   padding: 0.68rem;
@@ -1236,22 +1264,51 @@ html[data-theme='dark'] .robotics-quicklinks {
   height: 28px;
   font-size: 0.78rem;
 }
-.rotating-product-side .step-card b,
-.rotating-product-side .mini-track,
-.rotating-product-side .rebot-resource-list a {
-  font-size: 0.76rem;
+.rotating-product-side .step-card b {
+  color: inherit;
+  font: inherit;
 }
 .rotating-product-side .mini-track {
   padding: 0.68rem;
   border-radius: 14px;
 }
-.rotating-product-side .mini-track h4 {
-  margin-bottom: 0.5rem;
-  font-size: 0.8rem;
+.rotating-product-side .step-card,
+.rotating-product-side .mini-track a,
+.rotating-product-side .rebot-resource-list a {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 3.25rem;
+  margin: 0;
+  padding: 0.68rem;
+  color: var(--rp-text);
+  background: var(--rp-card-bg);
+  border: 1px solid var(--rp-border);
+  border-radius: 13px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .rotating-product-side .mini-track a,
 .rotating-product-side .rebot-resource-list a {
-  padding: 0.48rem 0.55rem;
+  display: flex;
+  align-items: center;
+}
+.rotating-product-side .step-card:hover,
+.rotating-product-side .mini-track a:hover,
+.rotating-product-side .rebot-resource-list a:hover {
+  color: var(--rp-accent);
+  background: var(--rp-card-bg);
+  border-color: var(--rp-accent-border);
+  transform: none;
+}
+.rotating-product-side .mini-track a + a {
+  margin-top: 0.5rem;
 }
 .rotating-product-leaf {
   transform-origin: 50% 50%;
@@ -1472,7 +1529,7 @@ html[data-theme='dark'] .rotating-showcase-arrow {
   }
   to {
     opacity: 1;
-    transform: translate3d(var(--rp-leaf-x), var(--rp-leaf-y), 0) rotate(var(--rp-leaf-rotate)) scale(1);
+    transform: none;
   }
 }
 
@@ -1483,7 +1540,7 @@ html[data-theme='dark'] .rotating-showcase-arrow {
   }
   to {
     opacity: 1;
-    transform: translate3d(var(--rp-leaf-x), var(--rp-leaf-y), 0) rotate(var(--rp-leaf-rotate)) scale(1);
+    transform: none;
   }
 }
 
@@ -2145,4 +2202,161 @@ html[data-theme='dark'] .robotics-page .robotics-search-mini {
 
 @keyframes rpSearchBorderSpin {
   to { --rp-search-angle: 360deg; }
+}
+
+/* === SenseCraft Robotics promo banner === */
+/* Self-contained: works on the robotics landing page (--rp-* tokens) and on the course pages
+   (--rb-* tokens) without depending on either. */
+.sensecraft-banner {
+  --sc-accent: #2563eb;
+  --sc-accent-2: #14b8a6;
+  --sc-surface: #ffffff;
+  --sc-surface-soft: #f6f9ff;
+  --sc-text: #0f172a;
+  --sc-muted: #5b6b82;
+  --sc-border: rgba(37, 99, 235, 0.22);
+  --sc-shadow: 0 14px 34px rgba(37, 99, 235, 0.14);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.25rem 1.5rem;
+  align-items: center;
+  margin: 1.25rem 0 1.75rem;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid var(--sc-border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.13), transparent 42%),
+    radial-gradient(circle at 100% 100%, rgba(20, 184, 166, 0.14), transparent 46%),
+    linear-gradient(180deg, var(--sc-surface), var(--sc-surface-soft));
+  box-shadow: var(--sc-shadow);
+}
+
+html[data-theme='dark'] .sensecraft-banner {
+  --sc-accent: #60a5fa;
+  --sc-accent-2: #2dd4bf;
+  --sc-surface: #1b1f27;
+  --sc-surface-soft: #232936;
+  --sc-text: #f8fafc;
+  --sc-muted: #a8b2c3;
+  --sc-border: rgba(96, 165, 250, 0.28);
+  --sc-shadow: 0 16px 36px rgba(0, 0, 0, 0.34);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(96, 165, 250, 0.18), transparent 42%),
+    radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.16), transparent 46%),
+    linear-gradient(180deg, var(--sc-surface), var(--sc-surface-soft));
+}
+
+.sensecraft-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.55rem;
+  padding: 0.22rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid var(--sc-border);
+  background: rgba(37, 99, 235, 0.10);
+  color: var(--sc-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+html[data-theme='dark'] .sensecraft-banner__badge {
+  background: rgba(96, 165, 250, 0.16);
+}
+
+.sensecraft-banner__title {
+  margin: 0 0 0.3rem;
+  color: var(--sc-text);
+  font-size: 1.16rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.sensecraft-banner__lead {
+  margin: 0 0 0.7rem;
+  color: var(--sc-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.sensecraft-banner__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sensecraft-banner__points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--sc-border);
+  background: var(--sc-surface);
+  color: var(--sc-text);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.sensecraft-banner__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-width: 210px;
+}
+
+.sensecraft-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--sc-accent), var(--sc-accent-2));
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none !important;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.sensecraft-banner__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.34);
+  color: #ffffff !important;
+}
+
+.sensecraft-banner__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--sc-border);
+  background: var(--sc-surface);
+  color: var(--sc-accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.sensecraft-banner__link:hover {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--sc-accent);
+}
+
+@media (max-width: 720px) {
+  .sensecraft-banner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sensecraft-banner__actions {
+    min-width: 0;
+  }
 }

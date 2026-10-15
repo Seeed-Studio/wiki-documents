@@ -1,5 +1,5 @@
 ---
-description: Construa um sistema de segurança de longo alcance usando reCamera e Meshtastic — envie alertas de detecção de IA sem fio para o Home Assistant via rede mesh LoRa
+description: Construa um sistema de segurança de longo alcance usando reCamera e Meshtastic — envie alertas de detecção por IA sem fio para o Home Assistant via rede mesh LoRa
 title: Construindo um Sistema de Segurança de Longo Alcance com reCamera e Meshtastic
 keywords:
   - Edge AI
@@ -12,10 +12,10 @@ slug: /recamera_meshtastic_ha_security_system
 sku: 100029708
 sidebar_position: 13
 last_update:
-  date: 06/29/2026
+  date: 10/08/2026
   author: Sizhao Zhou
 createdAt: '2026-06-29'
-updatedAt: '2026-07-22'
+updatedAt: '2026-06-30'
 url: https://wiki.seeedstudio.com/pt-br/recamera_meshtastic_ha_security_system/
 ---
 
@@ -27,7 +27,7 @@ url: https://wiki.seeedstudio.com/pt-br/recamera_meshtastic_ha_security_system/
 
 Como implementar monitoramento de segurança inteligente em áreas selvagens, grandes fazendas ou regiões montanhosas remotas sem cobertura de rede WiFi ou celular?  
 
-Este tutorial fornece uma solução de "segurança sem rede" altamente geek: aproveitar o poderoso poder de computação de IA de borda da **reCamera PoE** para detecção de pessoas em tempo real. Assim que um alvo for detectado, acione imediatamente o **módulo XIAO ESP32S3 + Wio-SX1262 (transmissor)** por meio dos pinos de hardware de baixo nível. O sinal de alerta é convertido em ondas de rádio de baixa frequência, atravessando quilômetros de terreno complexo até ser capturado pelo **receptor Wio-SX1262** interno, e traduzido perfeitamente em mensagens MQTT enviadas para o seu sistema **Home Assistant (HA)** local.  
+Este tutorial fornece uma solução altamente geek de "segurança sem rede": aproveitar o poderoso poder de computação de IA de borda da **reCamera PoE** para detecção de pessoas em tempo real. Assim que um alvo for detectado, acione imediatamente o **módulo XIAO ESP32S3 + Wio-SX1262 (transmissor)** por meio dos pinos de hardware de baixo nível. O sinal de alerta é convertido em ondas de rádio de baixa frequência, atravessando quilômetros de terreno complexo até ser capturado pelo **receptor Wio-SX1262** interno, e traduzido perfeitamente em mensagens MQTT enviadas para o seu sistema local **Home Assistant (HA)**.  
 
 Toda a cadeia não requer servidores em nuvem, alcançando verdadeiramente a combinação perfeita de privacidade, baixo consumo de energia e alcance ultra longo.  
 
@@ -37,8 +37,8 @@ Toda a cadeia não requer servidores em nuvem, alcançando verdadeiramente a com
 
 O fluxo geral de dados é o seguinte:  
 
-- A reCamera PoE executa o modelo de detecção de pessoas YOLO e gera um sinal de nível baixo através do pino GPIO quando uma pessoa é detectada  
-- O XIAO ESP32S3 (transmissor) captura o gatilho de nível baixo através do pino D2 e envia pacotes de rádio LoRa por meio do Wio-SX1262  
+- A reCamera PoE executa o modelo de detecção de pessoas YOLO e gera um sinal em nível baixo através do pino GPIO quando uma pessoa é detectada  
+- O XIAO ESP32S3 (transmissor) captura o gatilho em nível baixo através do pino D2 e envia pacotes de rádio LoRa por meio do Wio-SX1262  
 - O XIAO ESP32S3 (receptor) recebe pacotes LoRa via Wio-SX1262 e os envia para o Home Assistant via WiFi usando o protocolo MQTT  
 - O Home Assistant recebe a mensagem MQTT e aciona alertas automatizados (notificações, acionamento de outros dispositivos inteligentes, etc.)  
 
@@ -70,28 +70,28 @@ O fluxo geral de dados é o seguinte:
 </table>  
 
 - Kit XIAO ESP32S3 & Wio-SX1262: 2 conjuntos (um para transmissor LoRa, outro para receptor LoRa)  
-- Host inteligente local: 1 unidade, usada para executar o Home Assistant e o Broker MQTT (qualquer mini host capaz de executar o HA é aceitável)  
+- Host inteligente local: 1 unidade, usada para executar o Home Assistant e o MQTT Broker (qualquer pequeno host capaz de executar o HA é aceitável)  
 - Cabos de extensão Dupont: vários, usados para a fiação física de sinal entre o GPIO da reCamera e o XIAO ESP32S3  
 
 ---  
 
 ## 3. Configuração da Rede Meshtastic  
 
-Para alcançar comunicação LoRa de longo alcance entre dois dispositivos XIAO ESP32S3, precisamos gravar neles o firmware de código aberto **Meshtastic**.  
+Para alcançar comunicação LoRa de longo alcance entre dois dispositivos XIAO ESP32S3, precisamos gravar neles o firmware open-source **Meshtastic**.  
 
 ### 3.1 Gravação de Firmware e Sincronização Básica de RF (Necessário para Receptor e Transmissor)  
 
 **Passo 1**: Conecte o XIAO ESP32S3 ao computador por meio de um cabo de dados USB-C.  
 
 :::note Note  
-Antes de gravar, coloque o ESP32 no modo de download do Bootloader. Método de operação: mantenha pressionado o botão BOOT, pressione o botão RESET uma vez e, em seguida, solte o botão BOOT.  
+Antes de gravar, coloque o ESP32 no modo de download do Bootloader. Método de operação: mantenha pressionado o botão BOOT, pressione o botão RESET uma vez e depois solte o botão BOOT.  
 :::  
 
 **Passo 2**: Acesse o [Meshtastic Web Flasher](https://flasher.meshtastic.org/), selecione `Seeed Xiao ESP32-S3` como o tipo de dispositivo, marque **Full Erase** e clique em **Flash** para gravar o firmware.  
 
-**Passo 3**: Após a gravação do firmware, acesse o [Meshtastic Web Client](https://client.meshtastic.org/), clique em **Add Connection** para adicionar um novo dispositivo, selecione **Serial** como método de conexão, selecione o dispositivo serial correspondente e clique em **Connect**.  
+**Passo 3**: Após a gravação do firmware, acesse o [Meshtastic Web Client](https://client.meshtastic.org/), clique em **Add Connection** para adicionar um novo dispositivo, selecione **Serial** como o método de conexão, selecione o dispositivo serial correspondente e clique em **Connect**.  
 
-**Passo 4**: Vá para **Settings → Radio Config → LoRa**, ajuste `Region` para a faixa de frequência legal em sua localização (por exemplo, `CN` ou `US`), e defina `Modem Preset` como **`Short Turbo`** para uma velocidade de resposta mais rápida.  
+**Passo 4**: Vá para **Settings → Radio Config → LoRa**, ajuste `Region` para a faixa de frequência legal na sua localização (por exemplo, `CN` ou `US`), e defina `Modem Preset` como **`Short Turbo`** para uma velocidade de resposta mais rápida.  
 
 ### 3.2 Configuração do Receptor (Colocado em Ambiente Interno para Conectar ao HA)  
 
@@ -100,12 +100,12 @@ O receptor é responsável por receber pacotes LoRa e enviá-los ao Home Assista
 **Passo 1 — Gerar e Salvar a Chave**: Na aba **Channels**, gere uma `Pre-Shared Key` de 128 bits para o canal Primário.  
 
 :::note Note  
-Certifique-se de copiar e salvar esta chave offline; ela precisará ser inserida no transmissor posteriormente, e as chaves em ambas as pontas devem ser idênticas.  
+Certifique-se de copiar e salvar esta chave offline; ela precisará ser inserida no transmissor depois, e as chaves em ambas as pontas devem ser idênticas.  
 :::  
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/reCamera_Meshtastic_password.png" /></div>  
 
-**Passo 2 — Conectar à Rede Local**: Em **Device Config → Network**, ative o WiFi e insira o SSID e a senha do seu WiFi doméstico.  
+**Passo 2 — Conectar à Rede Local**: Em **Device Config → Network**, ative o WiFi e insira o SSID e a senha do WiFi da sua casa.  
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/xiao_connect_wifi.png" /></div>  
 
@@ -125,7 +125,7 @@ O transmissor é responsável por monitorar as mudanças de nível do pino GPIO 
 
 **Passo 1**: Desconecte o ESP32 receptor, substitua-o pelo ESP32 do transmissor e clique diretamente em **Connect** no Meshtastic Web Client para conectar.  
 
-**Passo 2 — Sincronizar Parâmetros de RF**: Vá para **Radio Config → LoRa** e certifique-se de que estejam consistentes com o receptor (Region e Modem Preset exatamente iguais); não há necessidade de ativar MQTT.  
+**Passo 2 — Sincronizar Parâmetros de RF**: Vá para **Radio Config → LoRa** e garanta que estejam consistentes com o receptor (Region e Modem Preset exatamente iguais); não há necessidade de ativar MQTT.  
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/xiao_shut_lora_config.png" /></div>  
 
@@ -153,9 +153,9 @@ O transmissor é responsável por monitorar as mudanças de nível do pino GPIO 
 Por padrão, os serviços em segundo plano Node-RED e SSCMA da reCamera ocupam recursos da câmera. Faça login na reCamera via SSH (o IP padrão é `192.168.42.1`, nome de usuário e senha são ambos `recamera`), e execute os seguintes comandos no terminal para parar os serviços em segundo plano:  
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```  
 
 ### 4.2 Iniciar o Script de Encaminhamento de Fluxo de Vídeo  
@@ -182,12 +182,12 @@ sudo ./model_detector ./Models/model.cvimodel 192.168.4.7
 
 Após concluir as configurações de software acima, use cabos Dupont para conectar fisicamente o XIAO ESP32S3 (transmissor) à reCamera:  
 
-- Cabo preto: Conecte o pino **GND** do ESP32 → pino **GND** da reCamera  
-- Cabo verde: Conecte o pino **D2** do ESP32 → pino de saída de sinal GPIO da reCamera  
+- Cabo preto: Conectar o pino **GND** do ESP32 → pino **GND** da reCamera  
+- Cabo verde: Conectar o pino **D2** do ESP32 → pino de saída de sinal GPIO da reCamera  
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_Meshtastic_HA/reCamera_xiao_connect_line.png" /></div>  
 
-:::note Note  
+:::note Nota  
 Forneça uma fonte de alimentação separada para o transmissor ESP32 (via cabo USB ou bateria) para garantir que o módulo LoRa tenha potência de transmissão suficiente.  
 :::  
 
@@ -195,7 +195,7 @@ Forneça uma fonte de alimentação separada para o transmissor ESP32 (via cabo 
 
 ## 5. Recebendo alertas no Home Assistant  
 
-### 5.1 Confirmar se o receptor está funcionando normalmente  
+### 5.1 Confirme se o receptor está funcionando normalmente  
 
 Antes de começar, certifique-se de que o ESP32 receptor esteja ligado e em execução, conectado à mesma rede WiFi que o host do HA, e que o endereço MQTT esteja configurado corretamente.  
 
@@ -221,11 +221,11 @@ Crie uma regra de automação no Home Assistant para acionar ações de alerta (
 
 ---  
 
-## 6. Observações  
+## 6. Notas  
 
 - O `Region` e o `Modem Preset` LoRa do transmissor e do receptor devem ser exatamente iguais; caso contrário, a comunicação falhará  
 - A `Pre-Shared Key` do transmissor e do receptor deve ser a mesma; caso contrário, os pacotes não poderão ser descriptografados corretamente  
-- Definir `Minimum Broadcast Seconds` muito curto pode causar congestionamento no canal LoRa; é recomendado mantê-lo acima de 15 segundos  
+- Definir `Minimum Broadcast Seconds` muito curto pode causar congestionamento no canal LoRa; recomenda-se mantê-lo acima de 15 segundos  
 - O pino GPIO da reCamera é de nível 3,3 V, o que é compatível com o nível do pino D2 do XIAO ESP32S3, não sendo necessária conversão de nível  
 - O transmissor deve ser colocado em uma posição aberta e elevada tanto quanto possível para obter a melhor distância de comunicação LoRa  
 
@@ -235,11 +235,11 @@ Crie uma regra de automação no Home Assistant para acionar ações de alerta (
 
 ### P1: E se o receptor e o transmissor não conseguirem se comunicar?  
 
-Verifique se o `Region` e o `Modem Preset` LoRa em ambas as extremidades são exatamente iguais e se a `Pre-Shared Key` é idêntica. Além disso, confirme se a distância entre os dois dispositivos está dentro do alcance efetivo de comunicação LoRa e verifique se a antena está instalada corretamente.  
+Verifique se o `Region` e o `Modem Preset` LoRa em ambas as extremidades são exatamente os mesmos e se a `Pre-Shared Key` é idêntica. Além disso, confirme se a distância entre os dois dispositivos está dentro do alcance efetivo de comunicação LoRa e verifique se a antena está instalada corretamente.  
 
 ### P2: A reCamera detecta uma pessoa, mas o HA não recebe o alerta?  
 
-Faça a solução de problemas na seguinte ordem: se a saída de sinal GPIO da reCamera é normal (pode ser medida com um multímetro); se o Monitor Pin do módulo Detection Sensor no transmissor está corretamente configurado para 3 (D2); se as configurações de WiFi e MQTT do receptor estão corretas e se o MQTT Address está preenchido com o IP do host do HA.  
+Faça a solução de problemas na seguinte ordem: se o sinal GPIO de saída da reCamera é normal (mensurável com um multímetro); se o Monitor Pin do módulo Detection Sensor no transmissor está corretamente configurado para 3 (D2); se as configurações de WiFi e MQTT do receptor estão corretas e se o MQTT Address está preenchido com o IP do host do HA.  
 
 ### P3: Como confirmar que o receptor Meshtastic se conectou com sucesso ao WiFi e ao MQTT?  
 

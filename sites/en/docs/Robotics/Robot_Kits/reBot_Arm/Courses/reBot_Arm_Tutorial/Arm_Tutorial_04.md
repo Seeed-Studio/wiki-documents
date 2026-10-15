@@ -1,6 +1,7 @@
 ---
 description: Chapter 4 of the Seeed Physical AI Beginner's Course — fundamentals of robotic arms and joint actuators, including safety ranges, structure, reducers, encoders, and DM/RS motor control modes.
 title: Chapter 4 - Fundamentals of Robotic Arms and Joint Actuators
+hide_title: true
 keywords:
   - reBot
   - Robotic Arm
@@ -12,7 +13,7 @@ keywords:
   - Control Mode
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_4
+slug: /robotics/rebot_physical_ai_course_chapter_4
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -21,13 +22,11 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_4/
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_4/
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import 'katex/dist/katex.min.css';
-
-# 
 
 <div className="rebot-page">
 
@@ -46,6 +45,26 @@ import 'katex/dist/katex.min.css';
     </div>
   </div>
 </section>
+
+### Hardware needed for this stage
+
+What to prepare for this stage. The complete list for every stage is in [Chapter 3](/robotics/rebot_physical_ai_course_chapter_3/).
+
+**Main control unit**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J3011-with-GMSL-extension-board-p-6538.html) | 🛒 | 1 |
+| [NVIDIA Jetson AGX Thor 128G](https://www.seeedstudio.com/reComputer-Classic-J5012-p-6881.html) | 🛒 | 1 |
+
+A desktop or laptop is also required: Ubuntu 22.04, GTX 4080 or better with 12GB+ VRAM, 16GB+ RAM.
+
+**For this stage**
+
+| Item | Buy | Qty |
+| :--- | :---: | :---: |
+| [reBot Arm B601 DM/RS](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html) | 🛒 | 1 |
+
 
 ## 4.1 Robotic Arm Safety Range and Workspace
 

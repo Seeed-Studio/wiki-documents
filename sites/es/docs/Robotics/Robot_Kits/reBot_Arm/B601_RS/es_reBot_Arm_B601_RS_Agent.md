@@ -22,6 +22,7 @@ updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/es/wrc_demo_tutorial/
 ---
 
+
 # Marco de Diseño de Agente Incorporado para reBot Arm B601-RS
 
 <p align="center">
