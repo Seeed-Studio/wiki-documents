@@ -13,7 +13,7 @@ keywords:
   - Digital Twin
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_35
+slug: /robotics/rebot_physical_ai_course_chapter_35
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -22,7 +22,7 @@ last_update:
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-09'
 updatedAt: '2026-10-09'
-url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_35/
+url: https://wiki.seeedstudio.com/es/robotics/rebot_physical_ai_course_chapter_35/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -50,7 +50,7 @@ import 'katex/dist/katex.min.css';
 
 ### Hardware necesario para esta etapa
 
-Qué preparar para esta etapa. La lista completa para cada etapa está en el [Capítulo 3](/es/rebot_physical_ai_course_chapter_3/).
+Qué preparar para esta etapa. La lista completa para cada etapa está en el [Capítulo 3](/es/robotics/rebot_physical_ai_course_chapter_3/).
 
 **Unidad de control principal**
 

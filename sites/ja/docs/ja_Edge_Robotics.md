@@ -77,7 +77,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>コース</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/ja/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>初心者向けコース</b></div></a>
+        <a className="step-card" href="/ja/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>初心者向けコース</b></div></a>
         <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>DLI コース：Sim-to-Real VLA パイプライン</b></div></a>
       </div>
     </div>
@@ -127,7 +127,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>コース</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/ja/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>初心者向けコース</b></div></a>
+        <a className="step-card" href="/ja/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>初心者向けコース</b></div></a>
       </div>
     </div>
     <div className="learning-group">
