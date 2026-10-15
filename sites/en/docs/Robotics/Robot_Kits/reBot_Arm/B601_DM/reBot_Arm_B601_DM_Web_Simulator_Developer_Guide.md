@@ -98,7 +98,7 @@ The web simulator itself does not connect to hardware directly. All control comm
 ls /dev/ttyACM*
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Expected output</summary>
 
 ```text
@@ -223,7 +223,7 @@ After installation, run diagnostics to confirm the environment is ready:
 ./rebotarm doctor
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Expected output (summary)</summary>
 
 ```text
@@ -381,7 +381,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start sim
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Expected output</summary>
 
 ```text
@@ -480,7 +480,7 @@ source scripts/source_rebotarm_env.sh
 This script loads, in order, ROS2 (`/opt/ros/jazzy/setup.bash`), the Python venv (`.venv/bin/activate`), the cmeel paths (Pinocchio's C extensions), and the workspace (`install/setup.bash`).
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Core module notes</b> (click to expand)</summary>
 
 **server.js — Node.js static server**
@@ -581,7 +581,7 @@ On startup it first calls `/api/llm/health` to health-check the text-agent; afte
 
 </details>
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>ROS2 interface overview</b> (click to expand)</summary>
 
 The key ROS2 interfaces that the web simulator subscribes to and publishes are listed below. The default namespace is `rebotarm`.
@@ -681,7 +681,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Expected output</summary>
 
 ```text
@@ -799,7 +799,7 @@ The rosbridge WebSocket address is entered manually by the user in the "ROS2 Bri
 
 The page tries to load the last saved address when the input box is empty. Modify the default or directly enter the actual address in the web connection panel.
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Key file quick reference</b> (click to expand)</summary>
 
 | File | Purpose |

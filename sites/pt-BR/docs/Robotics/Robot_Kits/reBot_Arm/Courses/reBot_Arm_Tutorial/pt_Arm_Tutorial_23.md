@@ -125,7 +125,7 @@ R^\top R &= I && \text{(ortonormal)} \\
 \end{aligned}
 $$
 
-<details>
+<details className="rebot-demo-details">
 <summary><strong>Microexemplo resolvido: lendo uma transformada 4x4</strong></summary>
 
 $$

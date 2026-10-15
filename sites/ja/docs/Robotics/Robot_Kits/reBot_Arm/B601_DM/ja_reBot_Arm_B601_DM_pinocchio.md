@@ -326,7 +326,7 @@ sudo chmod 666 /dev/can0
 ```
 
 :::
-<details>
+<details className="rebot-demo-details">
 <summary>デバッグツール（例外発生時のみ使用）</summary>
 
 **単一モーター制御コンソール（`0x01damiao_test.py`）**
