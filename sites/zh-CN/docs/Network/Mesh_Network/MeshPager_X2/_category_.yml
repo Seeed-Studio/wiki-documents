@@ -1,0 +1,8 @@
+position: 2.5
+label: 'MeshPager X2'
+collapsible: true
+collapsed: true
+className: hidden
+link:
+  type: doc
+  id: x2/cn_node
