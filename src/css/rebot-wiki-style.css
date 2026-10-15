@@ -378,29 +378,24 @@
   background: #eff6ff;
 }
 
-/* AI Robotics 文档页内的 details 折叠块统一保持透明。作用域由
-   src/theme/DocRoot/Layout 按 robotics sidebar 切换的 html.robotics-docs-page
-   限定，不影响 Wiki 其他区域的 details 样式。 */
-html.robotics-docs-page .theme-doc-markdown details {
+/* Robotics docs only. Scope comes from the existing .robotics-doc class. */
+.robotics-doc .theme-doc-markdown details {
   --ifm-alert-background-color: transparent;
   background: transparent;
   box-shadow: none;
 }
 
-/* 裸 <details>（无专用 class）默认是蓝色边框/箭头（--ifm-alert-border-color），
-   统一成与 .rebot-demo-details 一致的浅灰；专用 class 的样式由自身规则管理。 */
-html.robotics-docs-page .theme-doc-markdown
+.robotics-doc .theme-doc-markdown
   details:not(.rebot-demo-details):not(.content-details) {
   --docusaurus-details-decoration-color: var(--ifm-color-emphasis-300);
   border-color: var(--ifm-color-emphasis-300);
 }
 
-html.robotics-docs-page .theme-doc-markdown details > summary {
+.robotics-doc .theme-doc-markdown details > summary {
   background: transparent;
 }
 
-/* 同样作用域下的 :::tip / :::note 等 admonition 也保持透明（只留左侧色条）。 */
-html.robotics-docs-page .theme-doc-markdown .theme-admonition {
+.robotics-doc .theme-doc-markdown .theme-admonition {
   --ifm-alert-background-color: transparent;
   background: transparent;
   box-shadow: none;
