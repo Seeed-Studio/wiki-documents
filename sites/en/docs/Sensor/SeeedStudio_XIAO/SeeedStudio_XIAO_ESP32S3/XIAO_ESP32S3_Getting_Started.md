@@ -9,7 +9,7 @@ slug: /xiao_esp32s3_getting_started
 sku: 113991114, 113991115, 114010001, 102010634, 102010635, 102010671
 type: gettingstarted
 last_update:
-  date: 05/14/2026
+  date: 10/15/2026
   author: Luki
 createdAt: '2023-03-22'
 updatedAt: '2026-09-11'
@@ -954,6 +954,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
   - **📄[Datasheet]** [OV3660 CMOS Sensor Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf )
 - **[OV5640]** 
   - **📄[Datasheet]** [OV5640 Camera Module Specification](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/OV5640_Camera_Module_Specification.pdf )
+  - **📄[Datasheet]** [New OV5640 Camera Module Specification](https://files.seeedstudio.com/wiki/xiaos3-sscma/OV5640-8225N-120.pdf)
   - **📄[Datasheet]** [OV5640 CMOS Sensor Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
 - **[OV2640]** 
   - **📄[Datasheet]** [OV2640 CMOS Sensor Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
