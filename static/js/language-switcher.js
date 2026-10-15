@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-13 17:26:59 (北京时间)
-// 多语言页面: 2556 个
+// 生成时间: 2026-10-14 17:03:08 (北京时间)
+// 多语言页面: 2570 个
 
 (function() {
   'use strict';
@@ -16358,6 +16358,13 @@
     "ja",
     "pt"
   ],
+  "/solutions/clip-private-transcription": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/solutions/conversational-voice-ai": [
     "cn",
     "en",
@@ -16386,7 +16393,28 @@
     "ja",
     "pt"
   ],
+  "/solutions/retail-voice": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/solutions/smart-retail-voice-ai-solution-1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/voice-warehouse-management": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/agri-env-monitoring": [
     "cn",
     "en",
     "es",
@@ -16400,6 +16428,13 @@
     "ja",
     "pt"
   ],
+  "/solutions/home-assistant-local-voice": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/solutions/hvac-setpoint-control": [
     "cn",
     "en",
@@ -16407,7 +16442,21 @@
     "ja",
     "pt"
   ],
+  "/solutions/industrial-protocol-gateway": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/non_invasive_ct_energy_consumption": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/indoor-outdoor-positioning-ble-lorawan": [
     "cn",
     "en",
     "es",
@@ -16428,6 +16477,13 @@
     "ja",
     "pt"
   ],
+  "/solutions/edge-assembly-inspection": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/solutions/edge-fall-detection": [
     "cn",
     "en",
@@ -16435,7 +16491,42 @@
     "ja",
     "pt"
   ],
+  "/solutions/edge-license-plate-recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/edge-parking-counting": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/edge-parking-occupancy": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/solutions/edge-product-recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/edge-security": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/edge-surface-defect-inspection": [
     "cn",
     "en",
     "es",
@@ -16457,6 +16548,13 @@
     "pt"
   ],
   "/solutions/jetson-crowd-tracking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/retail-heatmap-grafana": [
     "cn",
     "en",
     "es",

@@ -33,13 +33,9 @@ generated_from: sensecraft-solutions@multi_protocol_gateway
 
 ## 这套方案是干什么的
 
-做楼宇、能源或设备管理方案的集成商到了现场，会发现数据本来就有——只是分别待在 OPC UA 控制器、Modbus
-电表、BACnet/IP 空调机组和 MQTT 传感器网关后面，四套寻址方式、四种故障表现。这个方案把四者放进**同一台
-边缘主机上的同一张点位注册表**，对上层只给一套 MQTT 读写契约。换到新现场时，重新接控制器、映射点位即可，
-协议适配层不用改。
+做楼宇、能源或设备管理方案的集成商到了现场，会发现数据本来就有——只是分别待在 OPC UA 控制器、Modbus 电表、BACnet/IP 空调机组和 MQTT 传感器网关后面，四套寻址方式、四种故障表现。这个方案把四者放进**同一台边缘主机上的同一张点位注册表**，对上层只给一套 MQTT 读写契约。换到新现场时，重新接控制器、映射点位即可，协议适配层不用改。
 
-部署容器、添加数据源、让自动发现给出候选、确认需要的点位、核对数据质量，然后把它们提供出去——本地
-1883 端口、北向到云端 Broker 的 8883 端口，或者两者都要。
+部署容器、添加数据源、让自动发现给出候选、确认需要的点位、核对数据质量，然后把它们提供出去——本地 1883 端口、北向到云端 Broker 的 8883 端口，或者两者都要。
 
 - 选型与部署：[可部署方案页](https://www.seeedstudio.com.cn/solutions/reference-designs/multi_protocol_gateway)
 
@@ -112,13 +108,9 @@ generated_from: sensecraft-solutions@multi_protocol_gateway
 
 两样东西：现场已经装好的设备，以及一台能访问它们各自网络的主机。
 
-**① 现场设备** —— 凡是已经支持 OPC UA、Modbus（TCP 或 RTU）、BACnet/IP 或 MQTT 的设备都算，机组侧
-不做替换。按数据源你必须先有：OPC UA 的服务地址与凭据；Modbus 的从站地址、寄存器映射、字节序与字序；
-一块位于 BACnet 网段、广播能到达的网卡；MQTT 作为数据源时，明确的主题到点位映射。Modbus RTU 另需一个
-USB 转 RS-485 适配器，除非主机自带 RS-485。
+**① 现场设备** —— 凡是已经支持 OPC UA、Modbus（TCP 或 RTU）、BACnet/IP 或 MQTT 的设备都算，机组侧不做替换。按数据源你必须先有：OPC UA 的服务地址与凭据；Modbus 的从站地址、寄存器映射、字节序与字序；一块位于 BACnet 网段、广播能到达的网卡；MQTT 作为数据源时，明确的主题到点位映射。Modbus RTU 另需一个 USB 转 RS-485 适配器，除非主机自带 RS-485。
 
-**② 数据中枢主机** —— 一台普通 Docker 主机，x86-64 或 arm64。它决定你不加适配器就能拿到哪些现场接口，
-以及现场没有电脑时能不能操作：
+**② 数据中枢主机** —— 一台普通 Docker 主机，x86-64 或 arm64。它决定你不加适配器就能拿到哪些现场接口，以及现场没有电脑时能不能操作：
 
 | | 主机 | 板载现场接口 | 什么时候选它 |
 |---|---|---|---|
@@ -126,12 +118,9 @@ USB 转 RS-485 适配器，除非主机自带 RS-485。
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1100" width="110" /> | [reComputer R1100 系列](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html)<br/>基于 CM4 的物联网网关与控制器 | RS-485、RS-232、DI/DO、千兆以太网、CAN | 现场还有 RS-232 设备或 DI/DO 干接点 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image1.jpeg" alt="reTerminal DM" width="110" /> | [reTerminal DM 系列](https://www.seeedstudio.com/reTerminal-DM-p-5616.html)<br/>10.1 寸 HMI，跑同一套服务 | RS-485、CAN、以太网（CM4104032 型号另有 RS-232、DI/DO、接线端子） | 机房没有常驻电脑，配置与巡检要在设备上完成 |
 
-三台机器的软件点位上限相同：**2,000 个点位，其中 50 个可写**，由代码强制。2,000 点负载在 R1000 同代的
-CM4 级平台（2 GB 配置，在开发板上测）上未通过容量测试，到这个规模选 R1100 或 reTerminal DM；R1000
-用于更小规模时，可承载的点位数暂无实测数据。eMMC 容量决定本机保留多少北向断网缓存与命令回执历史；服务本身约需 4 GB 可用磁盘。
+三台机器的软件点位上限相同：**2,000 个点位，其中 50 个可写**，由代码强制。2,000 点负载在 R1000 同代的 CM4 级平台（2 GB 配置，在开发板上测）上未通过容量测试，到这个规模选 R1100 或 reTerminal DM；R1000 用于更小规模时，可承载的点位数暂无实测数据。eMMC 容量决定本机保留多少北向断网缓存与命令回执历史；服务本身约需 4 GB 可用磁盘。
 
-其他前置条件：Docker Engine 20.10 及以上，8280 与 1883 端口空闲（或在部署前另选未占用端口），以及主机
-到各协议网络的可达性。
+其他前置条件：Docker Engine 20.10 及以上，8280 与 1883 端口空闲（或在部署前另选未占用端口），以及主机到各协议网络的可达性。
 
 ### 选型排他边界
 
@@ -175,19 +164,15 @@ CM4 级平台（2 GB 配置，在开发板上测）上未通过容量测试，�
     </a>
 </div><br />
 
-1. **部署** —— 本地目标装在运行 SenseCraft Solution 的这台机器上；远程目标经 SSH 装到控制器网段上的
-   reComputer R2000 系列或 reTerminal DM。
+1. **部署** —— 本地目标装在运行 SenseCraft Solution 的这台机器上；远程目标经 SSH 装到控制器网段上的 reComputer R2000 系列或 reTerminal DM。
 2. **创建首个管理员** —— 首次运行不需要注册令牌。
-3. **添加数据源** —— OPC UA、Modbus、BACnet/IP 或 MQTT，然后在支持的地方运行发现：OPC UA 浏览、
-   Modbus TCP 站号扫描、BACnet Who-Is、MQTT 主题观察。它们产生的都是**候选项**。向导按协议逐项问地址与
-   轮询周期：
+3. **添加数据源** —— OPC UA、Modbus、BACnet/IP 或 MQTT，然后在支持的地方运行发现：OPC UA 浏览、 Modbus TCP 站号扫描、BACnet Who-Is、MQTT 主题观察。它们产生的都是**候选项**。向导按协议逐项问地址与轮询周期：
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/multi_protocol_gateway/access-wizard-step1-zh-e1388a8e.png" alt="接入向导第一步：选协议、填地址与轮询周期"/>
 </div>
 
-4. **确认点位** —— 只有被确认的候选才成为受管点位。发现不完整或不可用时，可以手工填写
-   点位。
+4. **确认点位** —— 只有被确认的候选才成为受管点位。发现不完整或不可用时，可以手工填写点位。
 5. **授予写权限之前先核对质量** —— 先在点位页看实时值与逐点数据质量。
 6. **配置数据服务** —— 内置 Broker，以及可选的北向上送。
 
@@ -198,10 +183,8 @@ CM4 级平台（2 GB 配置，在开发板上测）上未通过容量测试，�
 数据从三个接口离开主机：
 
 - **运维人员** —— HTTP **8280** 上的浏览器控制台：数据源管理、点位总表、命令回执、插件管理。
-- **现场系统（SCADA、能耗平台、自有服务）** —— 订阅 **1883** 上的内置 Broker。点位遥测在
-  `missionpack/v1/{gateway}/points/{point_id}` 下，在线状态、命令与回执主题共用同一套契约。
-- **云端或总部系统** —— 启用到外部 Broker 的北向上送，端口 **8883**。遥测按 QoS 1 批量发送，每个数据源
-  的健康与遗嘱状态是 retained，另有 QoS 0 心跳。**当前发布的镜像不含北向上送。**
+- **现场系统（SCADA、能耗平台、自有服务）** —— 订阅 **1883** 上的内置 Broker。点位遥测在 `missionpack/v1/{gateway}/points/{point_id}` 下，在线状态、命令与回执主题共用同一套契约。
+- **云端或总部系统** —— 启用到外部 Broker 的北向上送，端口 **8883**。遥测按 QoS 1 批量发送，每个数据源的健康与遗嘱状态是 retained，另有 QoS 0 心跳。**当前发布的镜像不含北向上送。**
 
 `{gateway}` 是部署时自己设的网关标识，因此多台中枢可以向同一个 Broker 上送而不互相覆盖。
 
@@ -237,8 +220,7 @@ CM4 级平台（2 GB 配置，在开发板上测）上未通过容量测试，�
 }
 ```
 
-**`source_revision` 与 `point_revision`**：点位被重新映射时 revision 会变，据此区分「配置变了」和「现场值
-变了」。不检查 revision 的消费方会把配置变更前后的数据接成同一条序列。
+**`source_revision` 与 `point_revision`**：点位被重新映射时 revision 会变，据此区分「配置变了」和「现场值变了」。不检查 revision 的消费方会把配置变更前后的数据接成同一条序列。
 
 契约的两条限制：
 
@@ -305,8 +287,7 @@ CM4 级平台（2 GB 配置，在开发板上测）上未通过容量测试，�
 
 ## 数据与素材出处
 
-- **实测结果** —— 四协议模拟器生成负载，机器为 reComputer R2000 系列（arm64）与一台 Linux x86_64 工作站，
-  上游提交 `b5fe4cc` 与 `f831bae`。转自上游包自带的 `description.md`；原始运行记录随上游项目保存。
+- **实测结果** —— 四协议模拟器生成负载，机器为 reComputer R2000 系列（arm64）与一台 Linux x86_64 工作站，上游提交 `b5fe4cc` 与 `f831bae`。转自上游包自带的 `description.md`；原始运行记录随上游项目保存。
 - **产品图与链接** —— Seeed 产品库（`media-cdn.seeedstudio.com`），SKU 与可部署方案页配置器的 bundle 一致。
 - **架构图** —— 依据上游 `solution.yaml` 的拓扑绘制，是设备构成示意图，不是界面截图。
 - 运行时容器镜像从 `sensecraft-missionpack.seeed.cn` 分发，不随 wiki 提供。
