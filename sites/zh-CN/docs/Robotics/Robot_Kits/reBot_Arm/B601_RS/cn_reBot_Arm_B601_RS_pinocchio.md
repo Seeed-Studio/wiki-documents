@@ -216,7 +216,7 @@ sudo ip link set can0 up    #拉起can0
 
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>调试用工具（仅异常情况使用）</summary>
 
 **单电机控制台 — Robostride RS06 (`0x01rs06_test.py`)**

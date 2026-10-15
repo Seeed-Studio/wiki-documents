@@ -101,7 +101,7 @@ O simulador web em si não se conecta diretamente ao hardware. Todos os comandos
 ls /dev/ttyACM*
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Saída esperada</summary>
 
 ```text
@@ -226,7 +226,7 @@ Após a instalação, execute diagnósticos para confirmar que o ambiente está 
 ./rebotarm doctor
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Saída esperada (resumo)</summary>
 
 ```text
@@ -384,7 +384,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start sim
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Saída esperada</summary>
 
 ```text
@@ -483,7 +483,7 @@ source scripts/source_rebotarm_env.sh
 Esse script carrega, na ordem, o ROS2 (`/opt/ros/jazzy/setup.bash`), o venv do Python (`.venv/bin/activate`), os caminhos do cmeel (extensões C do Pinocchio) e o workspace (`install/setup.bash`).
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Notas do módulo principal</b> (clique para expandir)</summary>
 
 **server.js — servidor estático Node.js**
@@ -584,7 +584,7 @@ Na inicialização ele primeiro chama `/api/llm/health` para verificar a saúde 
 
 </details>
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Visão geral da interface ROS2</b> (clique para expandir)</summary>
 
 As principais interfaces ROS2 às quais o simulador web assina e publica estão listadas abaixo. O namespace padrão é `rebotarm`.
@@ -684,7 +684,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Saída esperada</summary>
 
 ```text
@@ -802,7 +802,7 @@ O endereço WebSocket do rosbridge é inserido manualmente pelo usuário no pain
 
 A página tenta carregar o último endereço salvo quando a caixa de entrada está vazia. Modifique o padrão ou insira diretamente o endereço real no painel de conexão web.
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Referência rápida de arquivos-chave</b> (clique para expandir)</summary>
 
 | Arquivo | Finalidade |

@@ -392,7 +392,7 @@ sudo ip link set can0 up
 Si el dispositivo PCAN tiene un firmware incorrecto después de la instalación del controlador, despliega la sección siguiente, descarga el firmware de PCAN y sigue los pasos de recuperación.
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>Descarga de firmware de PCAN y pasos de reparación del controlador - Ubuntu</summary>
 
 Los usuarios de Ubuntu, por favor consulten esta guía
@@ -632,7 +632,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 Si el dispositivo PCAN tiene un firmware incorrecto después de la instalación del controlador, despliega la sección siguiente, descarga el firmware de PCAN y sigue los pasos de recuperación.
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>Descarga de firmware de PCAN y pasos de reparación del controlador - macOS</summary>
 
 Los usuarios de MAC, por favor consulten esta guía
@@ -678,7 +678,7 @@ Descarga [PEAK-System_Driver-Setup.zip](https://files.seeedstudio.com/wiki/robot
 Si **PCAN-USB** no se detecta en el Administrador de dispositivos después de instalar el controlador, despliega la sección siguiente, descarga el firmware de PCAN y sigue los pasos de recuperación.
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>Descarga de firmware de PCAN y pasos de reparación del controlador - Windows</summary>
 

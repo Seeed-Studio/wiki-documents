@@ -329,7 +329,7 @@ sudo chmod 666 /dev/can0
 ```
 
 :::
-<details>
+<details className="rebot-demo-details">
 <summary>Debugging Tools (use only when an exception occurs)</summary>
 
 **Single Motor Control Console (`0x01damiao_test.py`)**

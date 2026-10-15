@@ -388,7 +388,7 @@ sudo ip link set can0 up
 电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN 固件下载与驱动修复步骤 - Ubuntu</summary>
 
@@ -407,7 +407,7 @@ Ubuntu 用户请参考本指南
 ```text
 scp flash_pcan.sh pcan_canable_hw.bin seeed@你的Ubuntu的IP:~/Downloads/
 ```
-或者直接拖进优盘再插到 Ubuntu 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+或者直接拖进优盘再插到 Ubuntu 上复制过去，都行——只要最后落在 `~/Downloads`、`~/下载`、当前目录，或者 `/tmp` 里任意一个，脚本都能自动找到。
 
 4.执行：
 
@@ -597,7 +597,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN 固件下载与驱动修复步骤 - macOS</summary>
 
@@ -617,7 +617,7 @@ MAC 用户请参考本指南
 scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
 ```
 
-或者直接拖进优盘再插到 MAC 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+或者直接拖进优盘再插到 MAC 上复制过去，都行——只要最后落在 `~/Downloads`、`~/下载`、当前目录，或者 `/tmp` 里任意一个，脚本都能自动找到。
 
 4.执行：
 
@@ -643,7 +643,7 @@ scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
 电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN 固件下载与驱动修复步骤 - Windows</summary>
 

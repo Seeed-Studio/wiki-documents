@@ -392,7 +392,7 @@ sudo ip link set can0 up
 ドライバーインストール後に PCAN デバイスのファームウェアが正しくない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、復旧手順に従ってください。
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN ファームウェアのダウンロード＆ドライバー修復手順 - Ubuntu</summary>
 
 Ubuntu ユーザーはこのガイドを参照してください
@@ -632,7 +632,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 ドライバインストール後に PCAN デバイスのファームウェアが正しくない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、復旧手順に従ってください。
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN ファームウェアのダウンロード &amp; ドライバ修復手順 - macOS</summary>
 
 MAC ユーザーはこのガイドを参照してください
@@ -678,7 +678,7 @@ USB を挿し直します。
 ドライバをインストールしてもデバイスマネージャーで **PCAN-USB** が検出されない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、復旧手順に従ってください。
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN ファームウェアのダウンロード &amp; ドライバ修復手順 - Windows</summary>
 
