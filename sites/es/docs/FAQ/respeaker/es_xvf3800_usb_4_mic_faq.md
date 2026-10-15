@@ -9,7 +9,7 @@ keywords:
   - reSpeaker XVF3800 FAQ
   - reSpeaker XVF3800 troubleshooting
   - reSpeaker XVF3800 firmware
-createdAt: '2026-09-03'
+createdAt: '2026-08-31'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_faq/
 updatedAt: '2026-09-03'
 ---
@@ -24,18 +24,18 @@ Esta página contiene respuestas verificadas para el reSpeaker XVF3800 USB 4-Mic
 
 - Confirma la variante exacta del producto y el modo de firmware (USB o I2S) en el que se está ejecutando el dispositivo.
 - Comprueba la versión actual del firmware antes de aplicar pasos específicos de versión.
-- Las respuestas de esta página se verificaron por última vez el 2026-08-31; vuelve a comprobar las fuentes oficiales enlazadas si estás leyendo esto más tarde.
+- Las respuestas de esta página se verificaron por última vez el 2026-08-31; vuelve a comprobar las fuentes oficiales enlazadas si la estás leyendo más tarde.
 
 <!-- RESPEAKER_FAQ_AUTO_START -->
 ## Documentación y uso {#documentation-and-usage}
 
 ### ¿Cómo abro la carcasa del XVF3800 sin dañarla? {#open-casing-safely}
 
-**Se aplica a:** ReSpeaker XVF3800 USB 4-Mic Array suministrado con la carcasa de encaje con clip
+**Se aplica a:** ReSpeaker XVF3800 USB 4-Mic Array suministrado con la carcasa de encaje por clips
 
 **Última verificación:** 2026-09-01
 
-Primero apaga y desconecta el dispositivo, luego levanta suavemente a lo largo de un borde de la carcasa con una uña. Libera uno de los tres clips de bloqueo antes de trabajar alrededor de los clips restantes; no fuerces la tapa ni uses una herramienta metálica afilada.
+Apaga y desconecta primero el dispositivo, luego levanta suavemente a lo largo de un borde de la carcasa con una uña. Libera uno de los tres clips de bloqueo antes de trabajar alrededor de los clips restantes; no fuerces la tapa ni uses una herramienta metálica afilada.
 
 **Requisitos previos:**
 
@@ -45,7 +45,7 @@ Primero apaga y desconecta el dispositivo, luego levanta suavemente a lo largo d
 1. Desconecta todos los cables y coloca la carcasa sobre una superficie limpia.
 2. Usa una uña para levantar suavemente a lo largo de un borde hasta que se libere el primer clip de bloqueo.
 3. Continúa alrededor del borde y libera los otros dos clips sin torcer la tapa.
-4. Detente si un clip no se mueve con una presión suave; vuelve a colocarte en el clip en lugar de forzar la carcasa.
+4. Detente si un clip no se mueve con una presión suave; vuelve a colocarte directamente en el clip en lugar de forzar la carcasa.
 
 **Criterios de éxito:**
 
@@ -61,45 +61,45 @@ Primero apaga y desconecta el dispositivo, luego levanta suavemente a lo largo d
 
 - [Guía de resolución de problemas de la carcasa del XVF3800](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#how-can-i-open-the-casing-without-damaging-it)
 
-### ¿Dónde puedo obtener archivos mecánicos del XVF3800 para un diseño de carcasa? {#mechanical-design-files}
+### ¿Dónde puedo obtener archivos mecánicos del XVF3800 para diseñar una carcasa? {#mechanical-design-files}
 
 **Se aplica a:** Integración mecánica del ReSpeaker XVF3800 USB 4-Mic Array y su carcasa publicada
 
 **Última verificación:** 2026-09-01
 
-Utiliza la sección de Recursos de la Wiki oficial. Publica un dibujo mecánico 2D, un modelo 3D STEP a nivel de placa y archivos STEP separados para la parte superior e inferior de la carcasa. Estos son las referencias mecánicas públicas; la página no publica una lista de materiales (BOM) de componentes ni garantiza que se incluya cada número de parte de componente.
+Utiliza la sección Resources de la Wiki oficial. Publica un dibujo mecánico 2D, un modelo 3D STEP a nivel de placa y archivos STEP separados para la parte superior e inferior de la carcasa. Estos son las referencias mecánicas públicas; la página no publica una lista de materiales (BOM) de componentes ni garantiza que se incluya cada número de parte de componente.
 
 **Requisitos previos:**
 
 - Un visor de PDF para el dibujo 2D o software CAD compatible con STEP para los archivos 3D
 - Confirmación de la variante exacta de placa y carcasa que se va a integrar
 
-1. Abre la sección de Recursos de la página actual de introducción del XVF3800.
+1. Abre la sección Resources de la página actual de introducción del XVF3800.
 2. Descarga el dibujo mecánico 2D y los archivos STEP relevantes de la placa o la carcasa.
 3. Importa los archivos en la herramienta CAD y verifica los orificios de montaje, los espacios libres de conectores y las dos mitades de la carcasa con respecto a la variante de producto prevista.
 4. Solicita aclaraciones antes de la liberación si el diseño depende de un número de parte de componente o una tolerancia que no aparece en los archivos públicos.
 
 **Criterios de éxito:**
 
-- El archivo 2D oficial o STEP se abre en el visor o herramienta CAD seleccionados
-- El diseño de la carcasa se basa solo en dimensiones que están realmente presentes en el archivo publicado
+- El archivo 2D oficial o el archivo STEP se abre en el visor o herramienta CAD seleccionados
+- El diseño de la carcasa se basa solo en dimensiones que realmente están presentes en el archivo publicado
 
 **Notas:**
 
-- La sección pública de Recursos es la autoridad para los archivos 2D y 3D disponibles.
+- La sección pública Resources es la autoridad para los archivos 2D y 3D disponibles.
 - No declares números de parte de componentes no publicados, tolerancias acústicas ni límites de distancia placa-tapa.
 
 **Referencias:**
 
 - [Recursos mecánicos oficiales del XVF3800](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#resources)
 
-### ¿Dónde está la lista de comandos I2C del XVF3800 y cómo verifico el control I2C? {#i2c-command-reference}
+### ¿Dónde está la lista de comandos I2C del XVF3800 y cómo verifico el control por I2C? {#i2c-command-reference}
 
 **Se aplica a:** ReSpeaker XVF3800 conectado a XIAO ESP32S3 u otro host I2C embebido compatible
 
 **Última verificación:** 2026-09-01
 
-Utiliza la referencia oficial de comandos I2C del XVF3800. El host es el maestro I2C, el XVF3800 es el esclavo en la dirección de 7 bits `0x2C`, y las lecturas usan un byte de comando con el bit 7 activado seguido de una respuesta cuyo primer byte es el estado. Comienza con la lectura documentada de `VERSION` antes de enviar escrituras de ajuste o encaminamiento.
+Utiliza la referencia oficial de comandos I2C del XVF3800. El host es el maestro I2C, el XVF3800 es el esclavo en la dirección de 7 bits `0x2C`, y las lecturas usan un byte de comando con el bit 7 activado seguido de una respuesta cuyo primer byte es el estado. Comienza con la lectura documentada de `VERSION` antes de enviar escrituras de ajuste o de encaminamiento.
 
 **Requisitos previos:**
 
@@ -107,15 +107,15 @@ Utiliza la referencia oficial de comandos I2C del XVF3800. El host es el maestro
 - Un maestro I2C configurado para los pines SDA y SCL documentados de la placa
 - La referencia oficial actual de comandos I2C
 
-1. Configura el host para la dirección I2C de 7 bits `0x2C` del XVF3800.
+1. Configura el host para la dirección I2C de 7 bits del XVF3800 `0x2C`.
 2. Usa la trama de escritura documentada `[resid] [cmd] [write_byte_num] [data...]`; para lecturas, envía `[resid] [cmd | 0x80] [read_len + 1]` antes de solicitar la respuesta.
 3. Implementa el ejemplo de `VERSION` con ID de recurso 48, ID de comando 0 y una carga útil de tres bytes.
 4. Trata el estado de respuesta `0` como éxito y el estado `64` como reintento; no analices los datos de la carga útil como válidos cuando el estado no sea satisfactorio.
-5. Después de que `VERSION` funcione, copia solo el ID de recurso, ID de comando, tipo, número de valores y dirección del comando requerido desde la tabla de comandos actual.
+5. Después de que `VERSION` funcione, copia solo el ID de recurso, el ID de comando, el tipo, el número de valores y la dirección del comando requerido desde la tabla de comandos actual.
 
 **Criterios de éxito:**
 
-- La transacción I2C devuelve el estado 0 y una versión de firmware de tres bytes
+- La transacción I2C devuelve estado 0 y una versión de firmware de tres bytes
 - La versión reportada es plausible para la imagen de firmware instalada en el XVF3800
 
 **Notas:**
@@ -136,17 +136,17 @@ Utiliza la referencia oficial de comandos I2C del XVF3800. El host es el maestro
 
 **Última verificación:** 2026-08-31
 
-Primero verifica el cable de datos, el puerto USB-C XMOS y la enumeración del host. Si el dispositivo está ejecutando firmware I2S o su firmware normal ya no responde, entra en Modo Seguro y flashea una imagen oficial de firmware USB mediante DFU por USB.
+Primero verifica el cable de datos, el puerto USB-C XMOS y la enumeración del host. Si el dispositivo está ejecutando firmware I2S o su firmware normal ya no responde, entra en Safe Mode y flashea una imagen oficial de firmware USB mediante USB DFU.
 
 **Requisitos previos:**
 
-- Un cable de datos USB en buen estado conectado al puerto USB-C XMOS cerca del conector de 3,5 mm
+- Un cable de datos USB comprobado conectado al puerto USB-C XMOS cerca del conector de 3,5 mm
 - dfu-util instalado en el host Linux
 - El repositorio completo de firmware oficial descargado o clonado
 
-1. Ejecuta `lsusb` y `arecord -l`. Si ninguno de los dos comandos muestra el dispositivo, prueba con un cable de datos en buen estado y un puerto USB directo del host antes de cambiar el firmware.
-2. Apaga el XVF3800. Mantén pulsado el botón Mute mientras vuelves a conectar la alimentación. Un LED rojo parpadeante confirma el Modo Seguro.
-3. Ejecuta `sudo dfu-util -l`. El Modo Seguro debería exponer las particiones DFU Upgrade y Factory.
+1. Ejecuta `lsusb` y `arecord -l`. Si ninguno de los dos comandos muestra el dispositivo, prueba con un cable de datos comprobado y un puerto USB directo del host antes de cambiar el firmware.
+2. Apaga el XVF3800. Mantén pulsado el botón Mute mientras vuelves a conectar la alimentación. Un LED rojo parpadeando confirma el Safe Mode.
+3. Ejecuta `sudo dfu-util -l`. El Safe Mode debería exponer las particiones DFU Upgrade y Factory.
 4. Flashea una imagen USB oficial con `sudo dfu-util -R -e -a 1 -D /path/to/respeaker_xvf3800_usb_dfu_firmware.bin`.
 5. Después del reinicio automático, repite `lsusb` y `arecord -l`, luego lee `VERSION` con la herramienta oficial de control del host.
 
@@ -157,8 +157,8 @@ Primero verifica el cable de datos, el puerto USB-C XMOS y la enumeración del h
 
 **Notas:**
 
-- El firmware I2S está destinado a un host I2S y no proporciona la enumeración normal de audio USB.
-- Si el Modo Seguro tampoco aparece en `dfu-util -l`, continúa aislando cable, alimentación y puerto del host; no supongas que la recuperación de firmware puede arreglar un dispositivo que nunca se enumera.
+- El firmware I2S está pensado para un host I2S y no proporciona una enumeración normal de audio USB.
+- Si el Safe Mode tampoco aparece en `dfu-util -l`, continúa aislando cable, alimentación y puerto del host; no supongas que la recuperación de firmware puede arreglar un dispositivo que nunca se enumera.
 
 **Referencias:**
 
@@ -173,33 +173,33 @@ Primero verifica el cable de datos, el puerto USB-C XMOS y la enumeración del h
 
 **Última verificación:** 2026-08-31
 
-Utiliza el Modo Seguro de fábrica y luego vuelve a flashear la imagen oficial correcta mediante el método de actualización admitido por ese modo. Para la recuperación de vuelta a audio USB, usa DFU por USB desde el Modo Seguro.
+Utiliza el Safe Mode de fábrica y luego vuelve a flashear la imagen oficial correcta mediante el método de actualización que admita ese modo. Para la recuperación de vuelta a audio USB, usa USB DFU desde Safe Mode.
 
 **Requisitos previos:**
 
-- Un cable de datos USB en buen estado conectado al puerto USB-C XMOS cerca del conector de 3,5 mm
+- Un cable de datos USB comprobado conectado al puerto USB-C XMOS cerca del conector de 3,5 mm
 - dfu-util instalado
 - La imagen oficial de firmware correcta para el modo de funcionamiento USB o I2S previsto
 
 1. Desconecta completamente la alimentación.
-2. Mantén pulsado el botón Mute y vuelve a conectar la alimentación. Mantén pulsado hasta que el LED rojo parpadee; esto indica que el Modo Seguro de fábrica está activo.
+2. Mantén pulsado el botón Mute y vuelve a conectar la alimentación. Mantén pulsado hasta que el LED rojo parpadee; esto indica que el Safe Mode de fábrica está activo.
 3. Ejecuta `dfu-util -l` en Windows o macOS, o `sudo dfu-util -l` en Linux. Confirma que las interfaces DFU Upgrade y DFU Factory están presentes.
 4. Para restaurar el funcionamiento USB, flashea la imagen USB oficial seleccionada con `dfu-util -R -e -a 1 -D /path/to/firmware.bin` (usa `sudo` en Linux).
 5. Deja que la placa se reinicie y luego verifica la enumeración de audio USB y lee `VERSION` con la herramienta oficial de control del host.
 
 **Criterios de éxito:**
 
-- La placa sale del Modo Seguro y se enumera en su modo de funcionamiento previsto
+- La placa sale del Safe Mode y se enumera en su modo de funcionamiento previsto
 - La versión de firmware reportada coincide con la imagen que se flasheó
 
 **Notas:**
 
-- El firmware USB admite DFU por USB; el firmware I2S admite DFU por I2C; el Modo Seguro de fábrica admite ambos.
-- Descarga el repositorio oficial completo o clónalo. No guardes una página HTML de GitHub como un binario de firmware.
+- El firmware USB admite USB DFU; el firmware I2S admite I2C DFU; el Safe Mode de fábrica admite ambos.
+- Descarga el repositorio oficial completo o clónalo. No guardes una página HTML de GitHub como binario de firmware.
 
 **Referencias:**
 
-- [Guía del Modo Seguro y actualización de firmware del XVF3800](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/)
+- [Guía de Safe Mode y actualización de firmware del XVF3800](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/)
 - [Repositorio oficial de firmware del XVF3800](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares)
 
 ### ¿Por qué `LED_EFFECT 5` devuelve un error fuera de rango en el XVF3800? {#led-effect-5-out-of-range}
@@ -208,17 +208,17 @@ Utiliza el Modo Seguro de fábrica y luego vuelve a flashear la imagen oficial c
 
 **Última verificación:** 2026-08-31
 
-El modo de anillo (`LED_EFFECT = 5`) y `LED_RING_COLOR` requieren firmware USB v2.0.7 o posterior, además de un mapa de comandos de control de host actualizado. El firmware antiguo o una herramienta antigua solo reconocen los efectos del 0 al 4.
+El modo anillo (`LED_EFFECT = 5`) y `LED_RING_COLOR` requieren firmware USB v2.0.7 o posterior, además de un mapa de comandos de control de host actualizado. El firmware antiguo o una herramienta antigua solo reconocen los efectos del 0 al 4.
 
 **Requisitos previos:**
 
-- Firmware USB v2.0.7 o posterior; v2.1.0 es la versión actual del changelog en el momento de la verificación
+- Firmware USB v2.0.7 o posterior; v2.1.0 es la versión actual del registro de cambios en el momento de la verificación
 - El `python_control/xvf_host.py` actual del repositorio oficial
 
 1. Ejecuta `python xvf_host.py VERSION` y confirma que el firmware USB es v2.0.7 o posterior.
 2. Si es más antiguo, flashea una imagen USB oficial actual y reinicia el dispositivo.
 3. Establece los 12 colores del anillo con `python xvf_host.py LED_RING_COLOR --values` seguido de exactamente 12 valores de color.
-4. Activa el modo de anillo con `python xvf_host.py LED_EFFECT --values 5`.
+4. Activa el modo anillo con `python xvf_host.py LED_EFFECT --values 5`.
 
 **Criterios de éxito:**
 
@@ -253,7 +253,7 @@ No, no cuando el firmware USB que se está ejecutando expone la interfaz normal 
 1. Ejecuta `dfu-util -l` (`sudo dfu-util -l` en Linux cuando sea necesario).
 2. Si `reSpeaker DFU Upgrade` aparece como configuración alternativa 1, flashea con `dfu-util -R -e -a 1 -D /path/to/official_usb_firmware.bin`.
 3. Espera al reinicio automático provocado por `-R`, luego ejecuta `dfu-util -l` y el comando oficial `VERSION` para verificar el dispositivo.
-4. Si la interfaz DFU Upgrade está ausente porque el firmware I2S está activo o el firmware normal no responde, detente y sigue en su lugar el procedimiento publicado de recuperación en Modo Seguro.
+4. Si la interfaz DFU Upgrade está ausente porque el firmware I2S está activo o el firmware normal no responde, detente y sigue en su lugar el procedimiento de recuperación en Modo Seguro publicado.
 
 **Criterios de éxito:**
 
@@ -263,7 +263,7 @@ No, no cuando el firmware USB que se está ejecutando expone la interfaz normal 
 **Notas:**
 
 - El Modo Seguro es una vía de recuperación, no un paso previo obligatorio para cada actualización de firmware USB receptivo.
-- El firmware I2S no expone DFU USB normal; el Modo Seguro de fábrica soporta tanto DFU USB como DFU I2C.
+- El firmware I2S no expone DFU USB normal; el Modo Seguro de fábrica admite tanto DFU USB como DFU I2C.
 - No uses la operación 'Guardar como' del navegador en una página de archivo de GitHub; clona o descarga el repositorio completo.
 
 **Referencias:**
@@ -280,7 +280,7 @@ No, no cuando el firmware USB que se está ejecutando expone la interfaz normal 
 
 **Última verificación:** 2026-09-01
 
-En Linux, los seis controles de captura pueden estar silenciados o establecidos en cero incluso cuando el firmware está funcionando. Usa la imagen USB actual de seis canales, habilita todos los interruptores de captura en ALSA, establece niveles de captura distintos de cero y guarda el estado del mezclador. El registro de cambios actual del firmware define los canales USB del 3 al 6 como encaminables de forma independiente y documenta el mapeo de micrófonos en bruto del perfil antiguo de seis canales.
+En Linux, los seis controles de captura pueden estar silenciados o establecidos en cero incluso cuando el firmware está funcionando. Usa la imagen USB actual de seis canales, habilita todos los interruptores de captura en ALSA, establece niveles de captura distintos de cero y guarda el estado del mezclador. El registro de cambios actual del firmware define los canales USB del 3 al 6 como direccionables de forma independiente y documenta el mapeo de micrófonos en bruto del perfil antiguo de seis canales.
 
 **Requisitos previos:**
 
@@ -291,8 +291,8 @@ En Linux, los seis controles de captura pueden estar silenciados o establecidos 
 1. Ejecuta `arecord -l` y anota el número de tarjeta ALSA del XVF3800 como `N`.
 2. Ejecuta `amixer -c N cset numid=8 on,on,on,on,on,on` para habilitar los seis interruptores de captura.
 3. Ejecuta `amixer -c N cset numid=10 60,60,60,60,60,60`, ajustando el nivel distinto de cero si es necesario.
-4. Ejecuta `sudo alsactl store N`, luego realiza una nueva grabación de seis canales y revisa cada canal.
-5. Si el silencio regresa después de un reinicio USB, verifica que la imagen flasheada sea actual; el registro de cambios oficial documenta correcciones de recuperación tras reinicio USB en la v2.0.10 y las imágenes más recientes sustituyen a esa versión.
+4. Ejecuta `sudo alsactl store N`, luego realiza una nueva grabación de prueba de seis canales e inspecciona cada canal.
+5. Si el silencio vuelve después de un reinicio USB, verifica que la imagen flasheada sea actual; el registro de cambios oficial documenta correcciones de recuperación tras reinicio USB en la v2.0.10 y las imágenes más recientes sustituyen a esa versión.
 
 **Criterios de éxito:**
 
@@ -307,7 +307,7 @@ En Linux, los seis controles de captura pueden estar silenciados o establecidos 
 
 **Referencias:**
 
-- [Solución de problemas de seis canales del XVF3800](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#por-qué-algunos-canales-están-silenciosos-con-el-firmware-de-6-canales-del-xvf3800)
+- [Solución de problemas de seis canales del XVF3800](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#por-qué-están-algunos-canales-en-silencio-con-el-firmware-de-6-canales-del-xvf3800)
 - [Registro de cambios actual del firmware USB XVF3800](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/usb/changelog.md)
 - [Directorio actual del firmware USB XVF3800](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
@@ -321,18 +321,18 @@ Selecciona la tarjeta de sonido XVF3800 en `alsamixer`, sube su control `PCM-1` 
 
 **Requisitos previos:**
 
-- Unos auriculares externos, altavoz activo o altavoz compatible conectado a una salida XVF3800 documentada
+- Unos auriculares externos, altavoz activo o altavoz compatible conectado a una salida documentada del XVF3800
 - Utilidades del mezclador ALSA instaladas
 - El XVF3800 visible como tarjeta de sonido de reproducción en Linux
 
 1. Ejecuta `alsamixer`, pulsa F6 y selecciona la tarjeta de sonido XVF3800.
 2. Ve a `PCM-1` y súbelo al 100% mientras reproduces una muestra de prueba conocida.
 3. Pulsa Esc, luego ejecuta `sudo alsactl store` antes de desconectar el XVF3800.
-4. Si la salida sigue siendo baja, verifica el dispositivo de salida conectado y el cable; opcionalmente instala `pavucontrol` e inspecciona el nivel de reproducción del host.
+4. Si la salida sigue siendo baja, verifica el dispositivo de salida y el cable conectados; opcionalmente instala `pavucontrol` e inspecciona el nivel de reproducción del host.
 
 **Criterios de éxito:**
 
-- La muestra de prueba conocida se oye a un nivel adecuado a través del dispositivo de salida externo
+- La muestra de prueba conocida es audible a un nivel adecuado a través del dispositivo de salida externo
 - El nivel ALSA `PCM-1` permanece establecido después de reiniciar el host o el dispositivo
 
 **Notas:**
@@ -344,11 +344,50 @@ Selecciona la tarjeta de sonido XVF3800 en `alsamixer`, sube su control `PCM-1` 
 
 - [Solución de problemas de volumen de altavoz en Linux para el XVF3800](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#does-playback-sound-from-speaker-output-not-enough-)
 
+### ¿Por qué es baja la precisión de reconocimiento de voz del reSpeaker XVF3800 USB 4-Mic Array y cómo puedo mejorarla? {#improve-recognition-accuracy}
+
+**Aplicable a:** reSpeaker XVF3800 USB 4-Mic Array ejecutando el firmware USB oficial de seis canales a 16 kHz, capturando a través de los dos canales de salida procesados (Ch0 Conference y Ch1 ASR) en el host
+
+**Última verificación:** 2026-10-13
+
+La precisión de reconocimiento en el XVF3800 depende principalmente de las condiciones acústicas en las que se usa la matriz, no de un único ajuste fijo: en la prueba comparativa de Seeed, el mismo dispositivo y firmware produjeron tasas de error de palabras en inglés de alrededor del 6% a alrededor del 35% según la cantidad de ruido que llegaba a la matriz. Mejora primero las condiciones de captura y no supongas que uno de los dos canales de salida procesados es siempre mejor: elige el canal midiendo en tu propio entorno.
+
+![Prueba comparativa de reconocimiento de voz del reSpeaker XVF3800: tasa de error e intervalos de confianza del 95% por condición](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xvf3800_asr_accuracy_overview.png)
+
+En esa prueba, aumentar la relación señal-ruido de 0 dB a +10 dB redujo la tasa de error en ambos canales de salida procesados y para ambos idiomas, mientras que la diferencia entre los dos canales cambió de dirección según la condición y en su mayoría no se pudo resolver con un 95% de confianza. La prueba es exploratoria y sus cifras absolutas solo se aplican a la configuración probada.
+
+**Requisitos previos:**
+
+- Confirma la imagen de firmware en uso y qué índice de captura del host se asigna a Ch0 y Ch1
+- Mantén una configuración fija de grabación de referencia y una configuración fija de transcripción para que los resultados de antes y después sigan siendo comparables
+
+1. Graba el mismo audio de referencia a través de ambos canales de salida procesados (Ch0 y Ch1) en las condiciones donde la precisión sea deficiente, y transcribe ambos con el mismo modelo y la misma configuración.
+2. Evalúa ambos canales frente a la misma transcripción de referencia — tasa de error de palabras para inglés, tasa de error de caracteres para chino — de modo que los dos canales se comparen sobre material idéntico.
+3. Reduce el ruido que llega a la matriz o aumenta el nivel de voz para que la relación voz‑ruido en el dispositivo mejore, y luego repite la misma grabación y evaluación. En la prueba comparativa de Seeed, este paso produjo la reducción de tasa de error más grande y consistente.
+4. Adopta el canal que mida mejor en tu propio entorno y vuelve a comprobar esa elección siempre que cambien las condiciones acústicas o el firmware.
+
+**Criterios de éxito:**
+
+- Ambos canales se evalúan frente a la misma transcripción de referencia, y el cambio en la tasa de error después de cada ajuste es medible
+- El canal utilizado en la aplicación es el que midió mejor en tu propio entorno, no un valor predeterminado asumido
+
+**Notas:**
+
+- En la prueba comparativa de Seeed, la dirección de la diferencia Ch1 − Ch0 cambió con la condición acústica, y solo una minoría de las comparaciones por pares tuvo intervalos de confianza del 95% que excluyeran el cero; no se puede generalizar una preferencia de canal a partir de esos datos.
+- La prueba comparativa es exploratoria: cubre dos sesiones de captura con 6–10 repeticiones por condición, no aplicó corrección por comparaciones múltiples y la matriz más amplia planificada no está completa.
+- La prueba comparativa excluyó toda captura en la que cualquier idioma o canal obtuviera una puntuación del 80% o superior, por lo que sus cifras publicadas no describen los peores casos.
+- Los puntos de 0 dB y +10 dB en la prueba comparativa provienen de muestras diferentes, y no se calculó ningún intervalo por pares para ese cambio; la comparación de canales refleja toda la salida procesada más la canalización de reconocimiento, no un único módulo DSP.
+
+**Referencias:**
+
+- [reSpeaker XVF3800 USB 4-Mic Array official firmware and USB profiles](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
+- [reSpeaker XVF3800 USB 4-Mic Array product documentation](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/)
+
 ## Problemas de hardware {#hardware-issues}
 
 ### ¿El XVF3800 tiene un altavoz integrado? {#external-speaker-required}
 
-**Aplicable a:** ReSpeaker XVF3800 USB 4-Mic Array, con o sin XIAO ESP32S3
+**Se aplica a:** ReSpeaker XVF3800 USB 4-Mic Array, con o sin XIAO ESP32S3
 
 **Última verificación:** 2026-09-01
 
@@ -356,32 +395,32 @@ No. El XVF3800 es una matriz de micrófonos y un dispositivo de procesamiento de
 
 **Requisitos previos:**
 
-- Unos auriculares externos, altavoz activo o altavoz compatible para la salida JST documentada
+- Unos auriculares externos, un altavoz activo o un altavoz compatible para la salida JST documentada
 - Una fuente de reproducción configurada para el modo de funcionamiento USB o I2S activo
 
-1. Elige la salida de auriculares de 3,5 mm o la interfaz de altavoz JST integrada que se muestra en la vista general oficial de hardware.
+1. Elige la salida de auriculares de 3,5 mm o la interfaz de altavoz JST integrada que se muestra en la descripción general oficial del hardware.
 2. Conecta el dispositivo de salida externo antes de iniciar la reproducción.
-3. Reproduce una muestra de audio conocida y selecciona la salida XVF3800 en el host cuando se use el modo USB.
+3. Reproduce una muestra de audio conocida y selecciona la salida XVF3800 en el host cuando se utilice el modo USB.
 
 **Criterios de éxito:**
 
-- Se oye audio desde el dispositivo de salida externo conectado
+- Se escucha audio desde el dispositivo de salida externo conectado
 - No se espera sonido alguno del propio encapsulado de la matriz de micrófonos
 
 **Notas:**
 
-- La vista general pública de hardware documenta un conector de auriculares de 3,5 mm y una interfaz de altavoz JST, pero ningún altavoz integrado.
+- La descripción pública del hardware documenta un conector de auriculares de 3,5 mm y una interfaz de altavoz JST, pero ningún altavoz integrado.
 - No infieras un pinout específico del conector ni un modelo de altavoz de terceros más allá de la documentación oficial de hardware actual.
 
 **Referencias:**
 
-- [Primeros pasos con ReSpeaker XVF3800](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/)
+- [Introducción a ReSpeaker XVF3800](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/)
 
 ## Producto y negocio {#product-and-business}
 
-### ¿El XVF3800 USB 4-Mic Array soporta 48 kHz por USB? {#usb-48-khz-support}
+### ¿El XVF3800 USB 4-Mic Array admite 48 kHz por USB? {#usb-48-khz-support}
 
-**Aplicable a:** ReSpeaker XVF3800 USB 4-Mic Array usado para captura USB en Windows, Linux o macOS
+**Se aplica a:** ReSpeaker XVF3800 USB 4-Mic Array utilizado para captura USB en Windows, Linux o macOS
 
 **Última verificación:** 2026-08-31
 
@@ -389,31 +428,31 @@ Sí. Usa la imagen oficial dedicada `respeaker_xvf3800_usb_dfu_firmware_v2.1.0_4
 
 **Requisitos previos:**
 
-- El repositorio completo del firmware oficial actual, incluida la imagen exacta `_v2.1.0_48k2ch.bin`
-- Una conexión de datos USB conocida y funcional al puerto XMOS USB-C y `dfu-util` instalado en el host
+- El repositorio completo y actual del firmware oficial, incluida la imagen exacta `_v2.1.0_48k2ch.bin`
+- Una conexión de datos USB funcional al puerto XMOS USB-C y `dfu-util` instalado en el host
 - Una aplicación de grabación que pueda mostrar y seleccionar los formatos expuestos por el dispositivo USB activo
 
 1. Clona o descarga el repositorio oficial completo y selecciona `xmos_firmwares/usb/respeaker_xvf3800_usb_dfu_firmware_v2.1.0_48k2ch.bin`.
-2. Flashea esa imagen mediante DFU por USB con el procedimiento oficial de actualización del XVF3800 y luego permite que el dispositivo se reinicie.
-3. Inspecciona los formatos informados por el dispositivo de audio USB reiniciado. Selecciona 48 000 Hz y dos canales de captura solo si el host expone esa combinación.
+2. Flashea esa imagen mediante USB DFU con el procedimiento oficial de actualización del XVF3800 y luego permite que el dispositivo se reinicie.
+3. Inspecciona los formatos informados por el dispositivo de audio USB reiniciado. Selecciona 48.000 Hz y dos canales de captura solo si el host expone esa combinación.
 4. Inicia una breve grabación de prueba y confirma que la captura comienza sin un error de negociación de formato.
 
 **Criterios de éxito:**
 
-- El host informa un modo de captura de 48 000 Hz y dos canales para la imagen del XVF3800 flasheada
-- Una grabación de dos canales se inicia a 48 000 Hz sin un error de negociación de formato
+- El host informa un modo de captura de 48.000 Hz y dos canales para la imagen XVF3800 flasheada
+- Una grabación de dos canales se inicia a 48.000 Hz sin un error de negociación de formato
 
 **Notas:**
 
-- El registro de cambios oficial de USB marca la v2.1.0 como la versión actual, y el directorio actual también contiene imágenes dedicadas `v2.1.0_16k6ch` y `v2.1.0_48k2ch`.
+- El registro oficial de cambios USB marca la v2.1.0 como la versión actual, y el directorio actual también contiene imágenes dedicadas `v2.1.0_16k6ch` y `v2.1.0_48k2ch`.
 - El directorio del repositorio y el registro de cambios no publican un volcado del descriptor de USB Audio Class para estos binarios. Por lo tanto, este FAQ no declara un ancho de muestra USB ni ninguna combinación adicional de frecuencia de muestreo/canales.
-- La sección de firmware/frecuencia de muestreo del Wiki del XVF3800 debe corregirse antes o al mismo tiempo que la publicación de este FAQ, porque su declaración anterior de todo a 16 kHz entra en conflicto con el directorio de firmware actual.
+- La sección de firmware/frecuencia de muestreo del Wiki del XVF3800 debe corregirse antes o al mismo tiempo que la publicación de este FAQ, porque su antigua afirmación de todo a 16 kHz entra en conflicto con el directorio de firmware actual.
 
 **Referencias:**
 
-- [Directorio actual del firmware USB oficial del XVF3800](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
-- [Registro de cambios oficial del firmware USB del XVF3800](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/usb/changelog.md)
-- [Commit oficial que añade compatibilidad USB a 48 kHz](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/commit/8b0967aef554c2d270e70d428ed4e19f4ab811b8)
+- [Directorio actual oficial de firmware USB del XVF3800](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
+- [Registro oficial de cambios del firmware USB del XVF3800](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/usb/changelog.md)
+- [Commit oficial que añade compatibilidad USB con 48 kHz](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/commit/8b0967aef554c2d270e70d428ed4e19f4ab811b8)
 
 ### ¿El XVF3800 expone un número de serie de dispositivo único? {#unique-device-serial}
 
@@ -421,28 +460,28 @@ Sí. Usa la imagen oficial dedicada `respeaker_xvf3800_usb_dfu_firmware_v2.1.0_4
 
 **Última verificación:** 2026-09-01
 
-Sí. La descripción general de hardware oficial actual describe un número de serie de dispositivo único integrado para identificación y gestión de múltiples dispositivos. En la enumeración USB o DFU, utiliza el campo de número de serie del dispositivo informado por el host en lugar del SKU del producto cuando asocies una unidad física con un registro de aplicación.
+Sí. La descripción general oficial de hardware actual describe un número de serie de dispositivo único integrado para identificación y gestión de múltiples dispositivos. En la enumeración USB o DFU, utiliza el campo de número de serie del dispositivo informado por el host en lugar del SKU del producto al asociar una unidad física con un registro de aplicación.
 
 **Requisitos previos:**
 
 - Un host compatible con Windows, macOS o Linux
-- Una conexión con capacidad de datos al puerto XMOS USB-C
-- Una herramienta de enumeración del host como `dfu-util -l` cuando la interfaz DFU está disponible
+- Una conexión de datos al puerto XMOS USB-C
+- Una herramienta de enumeración en el host, como `dfu-util -l` cuando la interfaz DFU esté disponible
 
 1. Conecta un XVF3800 al host a través del puerto XMOS USB-C.
 2. Ejecuta la herramienta de enumeración USB del host; `dfu-util -l` muestra un campo `serial=` cuando la interfaz DFU es visible.
-3. Almacena el número de serie informado como el identificador del dispositivo, no como una versión de firmware o SKU.
+3. Almacena el número de serie informado como identificador del dispositivo, no como versión de firmware o SKU.
 4. Para un despliegue con múltiples dispositivos, enumera cada unidad por separado y verifica que la aplicación asocie la unidad física prevista con su número de serie informado.
 
 **Criterios de éxito:**
 
 - El host informa un número de serie de dispositivo no vacío para el XVF3800 conectado
-- La aplicación puede distinguir la unidad prevista usando el número de serie informado en lugar de la posición en el bus USB
+- La aplicación puede distinguir la unidad prevista utilizando el número de serie informado en lugar de la posición en el bus USB
 
 **Notas:**
 
 - La página oficial del producto denomina a esto un número de serie de dispositivo único y lo presenta como una función de gestión de múltiples dispositivos.
-- Este FAQ no declara compatibilidad con Android ni comportamiento dúplex completo; esos eran partes separadas y no admitidas de la pregunta original.
+- Este FAQ no afirma compatibilidad con Android ni comportamiento full‑duplex; esos eran partes separadas y no admitidas de la pregunta original.
 
 **Referencias:**
 

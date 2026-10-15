@@ -19,9 +19,6 @@ url: https://wiki.seeedstudio.com/es/rebot_arm_b601_rs_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}

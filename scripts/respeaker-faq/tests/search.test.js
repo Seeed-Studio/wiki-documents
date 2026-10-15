@@ -156,8 +156,8 @@ test('sortResults is deterministic (tie broken by product label then question)',
   );
 });
 
-test('integration: real index has 29 items and every URL uses slug+anchor', () => {
-  assert.strictEqual(REAL_INDEX.items.length, 29);
+test('integration: real index has 30 items and every URL uses slug+anchor', () => {
+  assert.strictEqual(REAL_INDEX.items.length, 30);
   for (const item of REAL_INDEX.items) {
     assert.match(item.url, /^\/[a-z0-9_]+#[a-z0-9-]+$/, item.id);
     assert.ok(item.question);
@@ -201,9 +201,9 @@ test('integration: searching the real index for "48khz" style query finds the 48
   assert.ok(items.some((i) => i.id === 'xvf3800_48khz_usb_support'));
 });
 
-test('integration: product filter XVF3800 returns twelve items on real data', () => {
+test('integration: product filter XVF3800 returns thirteen items on real data', () => {
   const { items } = searchFaqs(REAL_INDEX.items, { product: 'xvf3800_usb_4_mic' });
-  assert.strictEqual(items.length, 12);
+  assert.strictEqual(items.length, 13);
 });
 
 test('integration: product filters resolve for every rendered product page', () => {

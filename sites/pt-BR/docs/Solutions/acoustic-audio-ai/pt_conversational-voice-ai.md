@@ -21,7 +21,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/pt-br/solutions/conversational-voice-ai/
 generated_from: sensecraft-solutions@aa522af
 ---
@@ -80,11 +80,13 @@ Feito para lugares onde uma pessoa fala com uma máquina com as mãos ocupadas: 
     </ul>
 </div>
 
-<!-- TODO imagem: array de microfones e alto-falante instalados em um balcão de atendimento ou quiosque — precisa de sessão de fotos em campo -->
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/conversational_voice_ai/dashboard-chat-multiturn-zh-67ef2b7b.png" alt="Painel de agente de voz conversacional no dispositivo mostrando o status de diálogo de múltiplas voltas"/>
+</div>
 
 ## De que hardware você precisa
 
-Quatro coisas no local: um array de microfones, um alto-falante e um host de voz; se o texto da conversação não puder sair do local, também uma placa aceleradora ou um host grande o bastante para um modelo 4B.
+Quatro coisas no local: um array de microfones, um alto-falante e um host de voz; se o texto da conversação não puder sair do local, também um cartão acelerador ou um host grande o bastante para um modelo 4B.
 
 **① O array de microfones** deve fazer cancelamento de eco acústico (AEC) em hardware.
 
@@ -96,18 +98,23 @@ Quatro coisas no local: um array de microfones, um alto-falante e um host de voz
 
 **③ O host de voz** executa reconhecimento, síntese e o agente residente, e determina quais idiomas você pode oferecer:
 
-| | Host de voz | Idiomas que ele pode atender | Quando escolhê-lo |
+| | Host de voz | Idiomas que pode atender | Quando escolhê-lo |
 |---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>NPU Rockchip, Qwen3-ASR W8A8 + Matcha | Chinês, inglês | Host de menor custo para a pilha de fala totalmente local; os dados medidos em "Desempenho e dados medidos" vêm desta placa |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>NPU Rockchip, adiciona Kokoro RKNN para TTS | Todos os 30 | Você precisa dos 28 idiomas além de chinês e inglês, ou planeja adicionar uma placa RK1828 para conversação local depois |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Qwen3-ASR int4 + Matcha na GPU | Todos os 30 | O host também executa outras cargas de trabalho de IA e precisa de folga na GPU. Não execute um modelo 4B local nele |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>Rockchip NPU, Qwen3-ASR W8A8 + Matcha | Chinês, inglês | Host de menor custo para toda a pilha de fala local; os dados medidos em "Desempenho e dados medidos" vêm desta placa |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Rockchip NPU, adiciona Kokoro RKNN para TTS | Todos os 30 | Você precisa dos 28 idiomas além de chinês e inglês, ou planeja adicionar um cartão RK1828 para conversação local depois |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Qwen3-ASR int4 + Matcha na GPU | Todos os 30 | O host também executa outras cargas de trabalho de IA e precisa de folga de GPU. Não execute um modelo local 4B nele |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Fala mais Qwen3.5-4B no mesmo host | Todos os 30 | O texto da conversação não pode sair do local |
 
 A série reComputer R2000 também executa uma pilha de fala em CPU (sherpa-onnx, apenas inglês); ela ainda não é oferecida no configurador na página de design de referência. Ela não oferece suporte a chinês, e ASR e TTS compartilham quatro núcleos de CPU.
 
-**④ Conversação totalmente local na rota RK**: adicione uma placa NPU RK1828 / RM182X PCIe a um host RK3588 para executar Qwen3-4B. A placa precisa de sua própria alimentação de 12 V, e o host precisa do driver e do nó de dispositivo. Apenas um modelo grande pode ficar residente na placa por vez.
+**④ Conversação totalmente local na rota RK**: adicione um cartão NPU RK1828 / RM182X PCIe a um host RK3588 para executar Qwen3-4B. O cartão precisa de sua própria alimentação de 12 V, e o host precisa do driver e do nó de dispositivo. Apenas um modelo grande pode ficar residente no cartão por vez.
 
 Além disso: a primeira inicialização precisa de acesso à internet e espaço livre em disco (pelo menos 25 GB em Orin NX), e a ferramenta de implantação deve conseguir alcançar o host pela rede.
+
+### Limites de seleção negativa
+
+- **Carga de trabalho de LLM on-premise**: RK3576 é ideal para streaming leve de ASR/TTS, mas não para executar LLMs conversacionais de classe 7B localmente; escolha a série reComputer J40 acelerada por GPU.
+- **Alto ruído acústico**: Em ambientes ruidosos acima de 75 dB, evite microfones omnidirecionais e use arrays de microfones direcionais dedicados com cancelamento de ruído.
 
 ## Como implantar no local
 
@@ -116,12 +123,12 @@ Instale primeiro o microfone e o alto-falante, depois execute o assistente de im
 ### 1. Posicionando o microfone e o alto-falante
 
 :::tip[Verifique se o microfone tem cancelamento de eco em hardware]
-Barge-in, detecção de turno e manter o microfone aberto durante a reprodução exigem um canal de captura com a saída do alto-falante já removida em hardware. Um microfone sem AEC em hardware causa interrupções falsas ou um loop de eco, e nenhuma configuração de software corrige isso.
+Barge-in, detecção de turnos e manter o microfone aberto durante a reprodução exigem um canal de captura com a saída do alto-falante já removida em hardware. Um microfone sem AEC em hardware causa interrupções falsas ou um loop de eco, e nenhuma configuração de software corrige isso.
 :::
 
 - Use o reSpeaker XVF3800 por padrão. Se você usar outro array, faça primeiro um teste acústico no local; arrays desconhecidos usam o canal 1 por padrão.
 - Faça a aceitação com o alto-falante em volume normal de ambiente. Um terminal que passa em volume baixo pode falhar em volume de operação por motivos acústicos não relacionados aos modelos.
-- O reSpeaker pode ser conectado antes da implantação ou conectado a quente depois que o agente estiver em execução. O agente seleciona o dispositivo de captura pela identidade de produto USB, ignora pseudo-entradas HDMI/DP e se recupera de desconectar/reconectar sem reiniciar o contêiner.
+- O reSpeaker pode ser conectado antes da implantação ou conectado a quente depois que o agente estiver ativo. O agente seleciona o dispositivo de captura pela identidade de produto USB, ignora pseudo-entradas HDMI/DP e se recupera de desconectar/reconectar sem reiniciar o contêiner.
 
 ### 2. Instalando o software
 
@@ -129,24 +136,22 @@ O app SenseCraft Solution implanta no host via SSH (ou localmente, se você esti
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/conversational_voice_ai" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}>Escolha uma configuração e implante 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}>Escolha uma configuração e faça o deploy 🖱️</font></span></strong>
     </a>
 </div><br />
 
-1. **Escolha um preset**: cloud / compatível com OpenAI, ou totalmente local. Com um preset em nuvem, o texto da conversação vai para um endpoint externo; com um preset totalmente local, nada sai do local.
-2. **Escolha o idioma da conversa**: a implantação resolve `(language, device)` em um único perfil de fala antes de iniciar os outros serviços. Um par não suportado, como chinês em reComputer série R2000, sai com código 2 e interrompe todo o `docker compose up`; nada inicia pela metade.
-3. **Preencha o endpoint e a persona**: URL base, chave e ID do modelo para o preset em nuvem (padrões: o endpoint Qwen da região de Pequim com `qwen3.5-flash`), além do prompt de sistema. Você pode alternar de **Always listening** para **Wake word required** e digitar qualquer frase curta em chinês ou inglês; o detector de vocabulário aberto sherpa-onnx na imagem a compila localmente na inicialização.
+1. **Escolha um preset**: em nuvem / compatível com OpenAI, ou totalmente local. Com um preset em nuvem, o texto da conversa vai para um endpoint externo; com um preset totalmente local, nada sai do site.
+2. **Escolha o idioma da conversa**: o deployment resolve `(language, device)` em um perfil de fala antes de iniciar os outros serviços. Um par não suportado, como chinês no reComputer R2000 series, sai com código 2 e interrompe todo o `docker compose up`; nada inicia pela metade.
+3. **Preencha o endpoint e a persona**: URL base, chave e ID do modelo para o preset em nuvem (padrões: o endpoint Qwen na região de Pequim com `qwen3.5-flash`), mais o prompt de sistema. Você pode alternar de **Always listening** para **Wake word required** e digitar qualquer frase curta em chinês ou inglês; o detector de vocabulário aberto sherpa-onnx na imagem o compila localmente na inicialização.
 4. **Verifique no dashboard**: o dashboard web na porta 18000 mostra ouvindo / pensando / falando / interrompido.
 
-<!-- TODO imagem: os quatro estados do dashboard e uma gravação de tela de uma interrupção — precisa de captura em um dispositivo implantado -->
+Aceitação: três turnos na sala real, com volume real de alto-falante, interrompendo 0,5–1 s depois que cada resposta começa. Verifique se a resposta antiga para imediatamente e se o enunciado de interrupção não é perdido.
 
-Aceitação: três turnos na sala real, com volume real de alto-falante, interrompendo 0,5–1 s após cada resposta começar. Verifique se a resposta antiga para imediatamente e se o enunciado de interrupção não é perdido.
-
-Tempo: cerca de 30 minutos para um preset em nuvem. Presets totalmente locais levam mais tempo porque a primeira inicialização baixa os arquivos de modelo; após uma inicialização online bem-sucedida, as imagens e os arquivos de modelo são armazenados em cache e o dispositivo roda offline.
+Tempo: cerca de 30 minutos para um preset em nuvem. Presets totalmente locais levam mais tempo porque o primeiro início faz o download dos arquivos de modelo; após um início online bem-sucedido, as imagens e os arquivos de modelo ficam em cache e o dispositivo roda offline.
 
 ## Interfaces disponíveis
 
-O agente chama uma API de Chat Completions em streaming compatível com OpenAI. Aponte `LLM_BASE_URL` para o seu próprio serviço para integrar: um endpoint de RAG sobre seus documentos, um framework de agente com chamadas de ferramentas, uma camada de comando de robô, um backend de pedidos ou de tickets. A camada de fala não muda.
+O agente chama uma API de Chat Completions em streaming compatível com OpenAI. Aponte `LLM_BASE_URL` para o seu próprio serviço para integrar: um endpoint de RAG sobre seus documentos, um framework de agentes com chamadas de ferramentas, uma camada de comandos de robô, um backend de pedidos ou de tickets. A camada de fala não muda.
 
 - **Modelo hospedado**: mantenha os padrões ou substitua URL base, chave e ID do modelo. O endpoint deve suportar Chat Completions em streaming.
 - **Seu próprio serviço**: implemente a mesma interface. O agente envia a transcrição como o turno do usuário e faz streaming da resposta para a síntese, de modo que a primeira frase começa a tocar antes que o seu serviço termine de gerar.
@@ -156,7 +161,7 @@ O agente chama uma API de Chat Completions em streaming compatível com OpenAI. 
 
 Todos os serviços usam rede em modo host, então `<host>` é o próprio endereço do host de voz.
 
-| Endpoint | Qual implantação | O que transporta |
+| Endpoint | Qual deployment | O que transporta |
 |---|---|---|
 | `ws://<host>:8621/v2v/stream` | todo preset | A sessão duplex: PCM de entrada, transcrição e PCM de TTS de saída, além do abort que uma interrupção dispara |
 | `POST http://<host>:8621/asr` | todo preset | Transcrição offline de arquivo inteiro, sem VAD e sem streaming. Os números de acurácia offline em "Desempenho e dados medidos" são medidos aqui |
@@ -167,7 +172,7 @@ Todos os serviços usam rede em modo host, então `<host>` é o próprio endere�
 | `http://<host>:8000/v1`, `/health` | preset local Orin NX | Chat Completions compatível com OpenAI para o Qwen3.5-4B no dispositivo |
 | `LLM_BASE_URL` (saída) | preset em nuvem | Qualquer endpoint compatível com OpenAI |
 
-Ambas as rotas locais expõem a mesma interface que a rota em nuvem, então a troca altera apenas `LLM_BASE_URL`. A menos que aponte para fora, não há broker nem componente em nuvem no caminho de dados.
+As duas rotas locais expõem a mesma interface que a rota em nuvem, então a troca altera apenas `LLM_BASE_URL`. A menos que aponte para fora, não há broker nem componente em nuvem no caminho de dados.
 
 ## Desempenho e dados medidos {#measured-detail}
 
@@ -185,24 +190,24 @@ O protocolo duplex e o Agent são os mesmos em todo host; apenas os backends que
 |---|---|---|---|
 | RK3576 | `rk.asr` — Qwen3-ASR, codificador RKNN + decodificador RKLLM, W8A8 | `rk.tts` — matcha-icefall-zh-en, acústico ORT + RKNN Vocos | `rk3576-default` |
 | RK3588 (zh / en) | `rk.asr` — mesmo | `rk.tts` — matcha-icefall-zh-en | `rk3588-default` |
-| RK3588 (outros 28) | `rk.asr` — mesmo | `rk.tts` — Kokoro v1.0 híbrido, decodificador frontal RKNN INT8 + prefixo/cauda CPU ONNX | `rk3588-kokoro-rknn` |
+| RK3588 (outros 28) | `rk.asr` — mesmo | `rk.tts` — Kokoro v1.0 híbrido, frente de decodificador RKNN INT8 + prefixo/sufixo CPU ONNX | `rk3588-kokoro-rknn` |
 | Orin Nano 8GB / Orin NX 16GB (zh / en) | `jetson.trt_edge_llm` — Qwen3-ASR 0.6B, int4 | `jetson.matcha_trt` — matcha-icefall-zh-en, Vocos bf16/fp16 | `jetson-edgellm-v091-matcha` |
 | Orin NX 16GB (outros 28) | `jetson.trt_edge_llm` — Qwen3-ASR 0.6B, int4 | `jetson.trt_edge_llm` — Qwen3-TTS CustomVoice, int4 | `jetson-edgellm-v091-customvoice` |
-| reComputer série R2000 (inglês) | `cpu.sherpa_asr` — sherpa-onnx streaming zh-en, CPU int8 | `cpu.sherpa` — voz sherpa-onnx em CPU, int8 | `rpi5-default` |
+| reComputer R2000 series (inglês) | `cpu.sherpa_asr` — sherpa-onnx streaming zh-en, CPU int8 | `cpu.sherpa` — voz sherpa-onnx em CPU, int8 | `rpi5-default` |
 
-O preset totalmente local do Orin NX usa a imagem TensorRT-Edge-LLM v0.9.1; engines construídos para outras versões de TensorRT / JetPack não são carregados. No lado RK, os arquivos de modelo são baixados na primeira inicialização.
+O preset totalmente local do Orin NX usa a imagem TensorRT-Edge-LLM v0.9.1; engines construídos para outras versões de TensorRT / JetPack não são carregados. No lado RK, os arquivos de modelo são baixados no primeiro início.
 
-**Matriz idioma × dispositivo.** A implantação escolhe um perfil a partir de (idioma, dispositivo). Das 18 células, 15 são implantáveis e 3 não são suportadas; das células implantáveis, 5 têm medições fim a fim e nas outras 10 cada componente tem medições no dispositivo. As células não suportadas: chinês em reComputer série R2000, e os "outros 28" idiomas em RK3576 e reComputer série R2000. O chinês não faz fallback para Whisper: em todas as placas medidas, o CER de chinês do Whisper é 35–56%. O RK3576 tem apenas a voz Matcha zh-en de TTS, então consegue transcrever os outros 28 idiomas, mas não consegue sintetizar uma resposta.
+**Matriz idioma × dispositivo.** O deployment escolhe um perfil a partir de (idioma, dispositivo). Das 18 células, 15 são implantáveis e 3 não são suportadas; das células implantáveis, 5 têm medições ponta a ponta e nas outras 10 cada componente tem medições no dispositivo. As células não suportadas: chinês no reComputer R2000 series, e os "outros 28" idiomas no RK3576 e no reComputer R2000 series. O chinês não faz fallback para Whisper: em todas as placas medidas, o CER de chinês do Whisper é 35–56%. O RK3576 tem apenas a voz Matcha zh-en de TTS, então ele pode transcrever os outros 28 idiomas, mas não consegue sintetizar uma resposta.
 
-Três parâmetros que afetam os resultados da implantação:
+Três parâmetros que afetam os resultados do deployment:
 
 - `barge_in_min_speaking_ms` `500`, `barge_in_min_chars` `2`: uma interrupção só conta depois que a resposta começou a tocar e a interrupção é mais longa que uma sílaba.
 - `playback_drain_enabled` `true`: o Agent permanece em SPEAKING até o buffer de reprodução local esvaziar. Com isso desligado, fala durante a cauda da resposta é tratada como um novo turno e a resposta antiga continua tocando.
-- Fim de turno no servidor: silero, 400 ms de silêncio + `QWEN3_ASR_FRONTEND_EOU_MIN_AUDIO_S=2.5`, encerrando o turno na primeira pausa natural; uma frase longa com uma pausa no meio recebe resposta apenas à sua primeira oração.
+- Fim de turno no lado do servidor: silero, 400 ms de silêncio + `QWEN3_ASR_FRONTEND_EOU_MIN_AUDIO_S=2.5`, encerrando o turno na primeira pausa natural; uma frase longa com uma pausa no meio recebe resposta apenas à sua primeira oração.
 
 ### Medições da série reComputer RK3576
 
-Condições: Debian 12 + Rockchip BSP, perfil `rk3576-default`; o script de teste e o contêiner de fala rodam no mesmo dispositivo e se comunicam via `127.0.0.1:8621`, então os números excluem transferência de rede.
+Condições: Debian 12 + Rockchip BSP, perfil `rk3576-default`; o script de teste e o contêiner de fala rodam no mesmo dispositivo e se comunicam por `127.0.0.1:8621`, então os números excluem transferência de rede.
 
 **ASR no endpoint offline** (`POST /asr`, arquivo inteiro, sem VAD, sem streaming):
 
@@ -213,7 +218,7 @@ Condições: Debian 12 + Rockchip BSP, perfil `rk3576-default`; o script de test
 | Inglês | curto | 5 | WER 3,65% / CER 1,11% |
 | Inglês | longo 10–20 s | 5 | WER 6,99% / CER 4,16% |
 
-Cada arquivo longo em inglês voltou como texto completo com múltiplas orações; os erros restantes são desvios de reconhecimento (`"3:2"` transcrito como `"three to two"`), não truncamento.
+Cada arquivo longo em inglês retornou como texto completo com múltiplas orações; os erros restantes são desvios de reconhecimento (`"3:2"` transcrito como `"three to two"`), não truncamento.
 
 **ASR em uma sessão ao vivo** (`/v2v/stream`, padrões de fábrica `ASR_MAX_NEW_TOKENS=64`, `ASR_FINAL_STOP_ON_PUNCT=1`), avaliado em relação ao texto de referência completo:
 
@@ -224,9 +229,9 @@ Cada arquivo longo em inglês voltou como texto completo com múltiplas oraçõe
 | Inglês | curto | 5 | WER 16,95% / CER 10,16% |
 | Inglês | longo 10–20 s | 5 | WER 63,38% / CER 62,58% |
 
-A alta taxa de erro em sessão ao vivo vem da decisão de fim de turno no servidor, não de truncamento do decodificador: com `ASR_MAX_NEW_TOKENS` elevado para 256 e `ASR_FINAL_STOP_ON_PUNCT` ajustado para 0, as transcrições em ambos os idiomas são idênticas byte a byte.
+A alta taxa de erro em sessão ao vivo vem da decisão de fim de turno no lado do servidor, não de truncamento do decodificador: com `ASR_MAX_NEW_TOKENS` elevado para 256 e `ASR_FINAL_STOP_ON_PUNCT` definido como 0, as transcrições em ambos os idiomas são idênticas byte a byte.
 
-**TTS** (`POST /tts`, lido do cabeçalho de resposta `x-rtf`, Matcha acústico ORT + RKNN Vocos, voz icefall zh-en):
+**TTS** (`POST /tts`, lido do cabeçalho de resposta `x-rtf`, Matcha ORT acústico + RKNN Vocos, voz icefall zh-en):
 
 | Idioma | n | Fator de tempo real | Faixa |
 |---|---:|---:|---|
@@ -243,7 +248,7 @@ O áudio em inglês por frase tem duração de 2,5–4,3 s.
 | ASR final → primeiro frame de TTS (`final_to_tts_audio`) | Inglês | 5 | p50 1127 ms, média 1126 ms, 1021–1232 ms |
 | Fim da fala → ASR final (`eos_to_final`) | Inglês | 5 | média 2837 ms |
 
-O valor medido de fim da fala → ASR final em chinês (`stop_to_final`) chega depois da resposta falada e não é citado.
+O valor medido de fim da fala → ASR final (`stop_to_final`) em chinês chega depois da resposta falada e não é citado.
 
 Reproduza: `docs/perf/rk3576-matrix-20260906.md` e `docs/known-issues/rk3576-v2v-multi-utterance-timeout.md` no repositório openvoicestream; `eos_to_final` em inglês com `asr_stream_ws_bench.py`.
 
@@ -251,22 +256,22 @@ Reproduza: `docs/perf/rk3576-matrix-20260906.md` e `docs/known-issues/rk3576-v2v
 
 | Métrica | Valor | Condições |
 |---|---|---|
-| ASR em chinês | CER 0 no conjunto golden, em streaming e offline | Qwen3-ASR 0.6B int4 |
+| ASR em chinês | CER 0 no conjunto golden, streaming e offline | Qwen3-ASR 0.6B int4 |
 
 ### Degradações conhecidas
 
 - **Microfone sem AEC em hardware.** Cada número acima foi obtido em um canal de captura com AEC em hardware. Sem isso, o microfone causa interrupções falsas ou microfonia, e nenhum valor de configuração compensa isso.
 - **Pausas no meio da frase.** No mesmo áudio, o endpoint offline dá CER 9,62% e a sessão ao vivo 84,06%; a diferença vem da política de tomada de turno, e o conteúdo após uma pausa no meio da frase não recebe resposta.
-- **Volume de aceitação abaixo do volume de trabalho.** Um terminal que passa em volume baixo pode falhar em volume de trabalho por motivos acústicos.
+- **Volume de aceitação abaixo do volume de trabalho.** Um terminal que passa no teste em volume baixo pode falhar no volume de trabalho por razões acústicas.
 
-### Próximos passos
+### Próximas etapas
 
-- Ajustar a detecção de fim de turno no servidor para que uma pausa no meio da frase não encerre mais o turno cedo.
-- Medir latência e acurácia fim a fim para as outras 10 células implantáveis da matriz idioma × dispositivo.
+- Ajustar a detecção de fim de turno no lado do servidor para que uma pausa no meio da frase não encerre o turno antes da hora.
+- Medir a latência ponta a ponta e a precisão para as outras 10 células implantáveis da matriz idioma × dispositivo.
 
-## Fontes de dados e assets
+## Fontes de dados e recursos
 
-- **FLEURS**: o corpus de ASR para as medições do RK3576, CC BY 4.0, 5 clipes curtos e 5 longos por idioma, verificados por sha256. O TTS usou 5 frases autoescritas por idioma. A fonte para a comparação de Whisper entre dispositivos é `docs/perf/whisper-cross-device-20260827.md` no repositório openvoicestream.
-- **Registros brutos de execução**: `docs/perf/rk3576-matrix-20260906.md` no repositório openvoicestream; cada número de RK3576 acima mapeia para um registro lá.
-- **Modelos de fala**: Qwen3-ASR, Matcha-TTS (voz icefall zh-en), Kokoro v1.0, Qwen3-TTS CustomVoice e sherpa-onnx mantêm cada um seus termos de licença upstream. Verifique a licença de cada modelo que você realmente implantar antes do envio comercial.
+- **FLEURS**: o corpus de ASR para as medições em RK3576, CC BY 4.0, 5 clipes curtos e 5 longos por idioma, verificados por sha256. O TTS usou 5 frases escritas manualmente por idioma. A fonte para a comparação de Whisper entre dispositivos é `docs/perf/whisper-cross-device-20260827.md` no repositório openvoicestream.
+- **Registros brutos de execução**: `docs/perf/rk3576-matrix-20260906.md` no repositório openvoicestream; cada valor de RK3576 acima corresponde a um registro lá.
+- **Modelos de fala**: Qwen3-ASR, Matcha-TTS (voz icefall zh-en), Kokoro v1.0, Qwen3-TTS CustomVoice e sherpa-onnx mantêm cada um seus termos de licença originais. Verifique a licença de cada modelo que você realmente implantar antes do envio comercial.
 - Os corpora não são distribuídos com o repositório; obtenha-os separadamente.

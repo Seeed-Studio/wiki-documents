@@ -102,7 +102,7 @@ const courseSidebar = () => [
   },
   {
     type: 'category',
-    label: 'Stage 5: Robot Arm Mathematics and Motion Control',
+    label: 'ステージ 5：ロボットアームの数学と運動制御',
     className: 'robotics-section-title',
     collapsed: false,
     collapsible: false,
@@ -124,6 +124,33 @@ const courseSidebar = () => [
       `${C}/ja_Arm_Tutorial_28`,
       `${C}/ja_Arm_Tutorial_29`,
       `${C}/ja_Arm_Tutorial_30`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'ステージ 7：ROS2 とロボットシステム統合',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/ja_Arm_Tutorial_31`,
+      `${C}/ja_Arm_Tutorial_32`,
+      `${C}/ja_Arm_Tutorial_33`,
+      `${C}/ja_Arm_Tutorial_34`,
+    ],
+  },
+  {
+    type: 'category',
+    label: 'ステージ 8：MuJoCo と Isaac Sim ロボットアームシミュレーション',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${C}/ja_Arm_Tutorial_35`,
+      `${C}/ja_Arm_Tutorial_36`,
+      `${C}/ja_Arm_Tutorial_37`,
+      `${C}/ja_Arm_Tutorial_38`,
+      `${C}/ja_Arm_Tutorial_39`,
     ],
   },
 ];

@@ -21,7 +21,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/cn/solutions/conversational-voice-ai/
 generated_from: sensecraft-solutions@aa522af
 ---
@@ -80,7 +80,9 @@ generated_from: sensecraft-solutions@aa522af
     </ul>
 </div>
 
-<!-- TODO 图：麦克风阵列与音箱在服务台/展台上的现场安装照——需现场拍 -->
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/conversational_voice_ai/dashboard-chat-multiturn-zh-67ef2b7b.png" alt="端侧多轮语音交互与对话实时状态看板"/>
+</div>
 
 ## 需要哪些硬件
 
@@ -108,6 +110,11 @@ reComputer R2000 系列也能跑 CPU 语音链路（sherpa-onnx，只支持英�
 **④ RK 路线的全本地对话**：在 RK3588 主机上加一块 RK1828 / RM182X PCIe NPU 卡跑 Qwen3-4B。卡要独立 12V 供电，主机要装驱动并有设备节点，同一时刻只能常驻一个大模型。
 
 另外：首次启动要联网，并留出空闲磁盘（Orin NX 至少 25 GB）；部署工具要能通过网络访问到主机。
+
+### 选型排他边界
+
+- **本地端侧大模型并发**：RK3576 适合运行轻量级 ASR/TTS 管道，但若需要在本地端侧独立跑 7B 级别对话 LLM，请勿选择 RK3576，应选配带独立 GPU 的 reComputer J40 系列。
+- **工业高噪音环境**：在大于 75 dB 的持续嘈杂车间，不宜使用无定向麦克风阵列，必须配合降噪阵列或定向拾音器。
 
 ## 现场怎么部署
 
@@ -137,8 +144,6 @@ reComputer R2000 系列也能跑 CPU 语音链路（sherpa-onnx，只支持英�
 2. **选对话语言**：部署先把（语言，设备）解析成一份语音配置，再启动其余服务。不支持的组合（例如 reComputer R2000 系列上的中文）以退出码 2 停止整个 `docker compose up`，不会只起一半。
 3. **填接口与人设**：云端套餐填接口地址、Key 和模型 ID（默认是北京地域 Qwen 接口 + `qwen3.5-flash`），以及系统提示词。可以把"持续监听"改成"唤醒词后响应"，输入任意简短中英文短语，镜像内置的开放词表 sherpa-onnx 检测器会在启动时本地编译。
 4. **在面板里验证**：18000 端口的 Web 面板显示 listening / thinking / speaking / barged-in。
-
-<!-- TODO 图：18000 面板的四种状态截图，以及一次打断的录屏 GIF——需在已部署设备上采集 -->
 
 验收：在真实房间、真实音量下连续三轮，每次在回答开始后 0.5–1 秒打断，确认旧回复立刻停止，打断的那句话没有丢。
 

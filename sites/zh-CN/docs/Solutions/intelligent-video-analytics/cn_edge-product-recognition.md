@@ -22,13 +22,13 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-product-recognition/
 generated_from: sensecraft-solutions@cbbfa60
 ---
 
 :::caution[先看这里]
-打包版本（cbbfa60）的上游还没有把检测、嵌入、库检索与 MQTT 上报串成一个设备侧服务，这里没有端到端的计数准确率、货位准确率与长稳数据；识别结果不是法定计量，不能作为计价或法定计数的依据。
+识别结果不是法定计量，不能作为计价或法定计数的依据。
 :::
 
 ## 这套方案是干什么的
@@ -50,8 +50,8 @@ generated_from: sensecraft-solutions@cbbfa60
         </li>
         <li class="info-item">
             <div class="info-content">
-                <h3>检测在 NPU 上运行</h3>
-                <p>RK3588 上 RKNN fp16 与 CPU 参考的框一致率 99.85%、p50 56.7 ms；Hailo-8 的 INT8 HEF p50 9.04 ms、一致率 94.77%。</p>
+                <h3>检测在 NPU 或 GPU 上运行</h3>
+                <p>RK3588 上 RKNN fp16 与 CPU 参考的框一致率 99.85%、p50 56.7 ms；Hailo-8 的 INT8 HEF p50 9.04 ms、一致率 94.77%；reComputer J40 系列（J4012）上 TensorRT fp16 p50 5.18 ms、一致率 99.91%。</p>
             </div>
         </li>
         <li class="info-item">
@@ -114,14 +114,19 @@ generated_from: sensecraft-solutions@cbbfa60
 | | 主机 | 这套硬件上测过什么 | 什么时候选它 |
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8，26 TOPS）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>检测上 NPU，嵌入跑在四个 A76 核上 | 两段都测了：检测 9.04 ms，嵌入每裁剪 91.95 ms | 检测与嵌入都要有实测数据 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>检测上 Rockchip NPU，嵌入留在 CPU | 只有检测段，在 reComputer RK3588 系列上：框一致率 99.85%，56.7 ms | 已经在用 Rockchip 板卡。RK3576 工具链相同 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>TensorRT 路线 | 收银回放 | 已经在用 Jetson |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>检测上 Rockchip NPU，嵌入在 CPU 或 NPU | 检测框一致率 99.85%，56.7 ms；嵌入上 NPU 后，20 SKU 货架回放从检出到结果发出 p50 924 ms | 已经在用 Rockchip 板卡，或相机对着货架。RK3576 工具链相同 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) 或 [reComputer J3011（Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>TensorRT 路线，检测与嵌入都上 GPU | J4012：检测 5.18 ms，嵌入每裁剪 4.23 ms；2956 帧收银回放 0 丢帧 | 已经在用 Jetson，或要整条链路跑在一台机器上 |
 
-延迟都是该行硬件上的单段实测。
+数字都是该行硬件上的实测。
 
 **③ 管理端主机** — 你自己的 amd64 或 arm64 Linux 机器，装 Docker，不需要 GPU，每台识别设备都能访问到。它跑三个容器：注册/查询服务、管理界面、MQTT broker。**两个容器镜像都在这台主机上从上游仓库构建**，不从 registry 拉取。
 
 **④ 一台 x86_64 转换机** — rknn-toolkit2 与 Hailo Dataflow Compiler 都不在目标板上运行。每个模型转换一次，部署时不用重复。
+
+### 选型排他边界
+
+- **商品 SKU 规模与检索延迟**：单机嵌入向量库若超过 200 个 SKU，端侧线性比对时延会增加。超过 500 SKU 的大型便利店建议在本地部署近似近邻检索（ANN）或上云比对。
+- **无 NPU 运行商品嵌入**：请勿在纯 CPU 模式下运行商品特征提取嵌入模型（单裁剪耗时超 900ms），务必确保编译上板至 NPU 或 TensorRT。
 
 ## 现场怎么部署
 
@@ -133,7 +138,7 @@ generated_from: sensecraft-solutions@cbbfa60
 输入尺寸编译进产物，运行时不能改。用 640² 的产物看货架会漏掉远端商品；换到 1280² 后 SKU-110K test 上的小目标 mAP50-95 从 17.49 升到 26.88。先确定是收银台还是货架，再把机位装到商品在画面里占比合适的位置。
 :::
 
-嵌入是每个框一次 CPU 推理。按 reComputer R2000 系列上实测的每裁剪 91.95 ms 算，五件商品的篮子约半秒；货架一帧按实测密度 157.6 个框算约 14 秒。**货架部署要抽帧或按货位采样。**
+Hailo-8 套餐的嵌入是每个框一次 CPU 推理。按 reComputer R2000 系列上实测的每裁剪 91.95 ms 算，五件商品的篮子约半秒；货架一帧按实测密度 157.6 个框算约 14 秒。**这个套餐做货架部署要抽帧或按货位采样。** reComputer J40 系列（J4012）上嵌入在 GPU 上，每裁剪 4.23 ms。
 
 ### 二、装软件：四步
 
@@ -157,8 +162,6 @@ generated_from: sensecraft-solutions@cbbfa60
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/event-json-198d89fa.png" alt="一条识别事件的完整字段：货位、匹配 SKU、相似度与逐框坐标"/>
 </div>
-
-<!-- TODO 图：货架与摄像头的现场安装照——需现场拍 -->
 
 ## 有哪些接口
 
@@ -190,21 +193,39 @@ generated_from: sensecraft-solutions@cbbfa60
 | reComputer R2000 系列 + Hailo-8 | INT8 HEF，640² | 9.04 / 9.10 ms | 94.77%（200 张），94.68%（300 张） |
 | reComputer RK3588 系列 | RKNN fp16，640² | 56.7 / 89.5 ms | 99.85% |
 | reComputer RK3588 系列 | RKNN INT8，640² | 26.0 / 33.2 ms | 98.35% |
+| reComputer RK3576 系列 | RKNN fp16，640²，双核 | 51.05 / 54.18 ms | 99.91% |
+| reComputer J40 系列（J4012） | TensorRT fp16，640² | 5.18 / 5.28 ms | 99.91% |
+| reComputer J30 系列（J3011） | TensorRT fp16，640² | 5.88 / 8.89 ms | 99.27%（收银台帧） |
 
-条件：一致率按 IoU ≥ 0.5 与 CPU 参考比对。Hailo 单流吞吐 110.4 fps（`hailortcli benchmark` 110.64 fps，纯硬件时间 8.21 ms，多出的 0.8 ms 是 Python vstream 往返）。**reComputer R2000 系列上端到端（含 letterbox、输出拼接、解码与 NMS）p50 18.74 ms / p95 24.25 ms**：对约 160 个框做纯 numpy 逐类 NMS，耗时超过推理本身。
+条件：一致率按 IoU ≥ 0.5 与 CPU 参考比对；RK3588、RK3576 与 J4012 用同一批 50 张 SKU-110K 图，J3011 用 50 张收银台帧。Hailo 单流吞吐 110.4 fps（`hailortcli benchmark` 110.64 fps，纯硬件时间 8.21 ms，多出的 0.8 ms 是 Python vstream 往返）。**reComputer R2000 系列上端到端（含 letterbox、输出拼接、解码与 NMS）p50 18.74 ms / p95 24.25 ms**：对约 160 个框做纯 numpy 逐类 NMS，耗时超过推理本身。
 
-复现：`evaluation/runs/2026-09-06-det-hef/`、`evaluation/runs/2026-09-06-det-rk3588-radxa/`
+复现：`evaluation/runs/2026-09-06-det-hef/`、`evaluation/runs/2026-09-06-det-rk3588-radxa/`、`evaluation/runs/2026-09-07-embed-rknn-rk3576/`、`evaluation/runs/2026-09-07-jetson-trt/`、`evaluation/runs/2026-09-08-orin-nano-acceptance/`
 
 ### 嵌入，设备实测
 
-| 变体 | 单裁剪 p50 / p95 | 相对 fp32 的检索代价 |
-|---|---:|---|
-| DINOv2-small，动态量化 INT8，4 线程 | 91.95 / 105.98 ms | 全部 7 个实测档位上均在 0.65pp 以内 |
-| DINOv2-small，fp32，4 线程 | 180.75 / 233.41 ms | 基线 |
+| 设备 | 变体 | 单裁剪 p50 / p95 | 相对 fp32 的检索代价 |
+|---|---|---:|---|
+| reComputer R2000 系列（CPU，4 线程） | DINOv2-small，动态量化 INT8 | 91.95 / 105.98 ms | 全部 7 个实测档位上均在 0.65pp 以内 |
+| reComputer R2000 系列（CPU，4 线程） | DINOv2-small，fp32 | 180.75 / 233.41 ms | 基线 |
+| reComputer RK3588 系列（NPU） | DINOv2-small，RKNN fp16 | 48.68 / 49.86 ms | 21 个指标最大差 0.85pp |
+| reComputer RK3576 系列（NPU，双核） | DINOv2-small，RKNN fp16 | 56.38 / 62.17 ms | 21 个指标最大差 0.36pp |
+| reComputer J40 系列（J4012） | DINOv2-small，TensorRT fp16 | 4.23 / 4.69 ms | 21 个指标最大差 0.24pp |
+| reComputer J30 系列（J3011） | DINOv2-small，TensorRT fp16 | 5.06 / 7.64 ms | 21 个指标最大差 0.21pp |
 
-条件：reComputer R2000 系列 CPU。只量化权重几乎不损失检索精度，激活一起量化则损失明显。
+条件：21 个指标是 Grocery Store Dataset 4 个注册档位与 Products-10K 3 个注册档位上的 top-1、top-5 与开集 AUROC。CPU 上只量化权重几乎不损失检索精度，激活一起量化则损失明显。
 
-复现：`evaluation/runs/2026-09-06-embed-small/` §8
+复现：`evaluation/runs/2026-09-06-embed-small/` §8、`evaluation/runs/2026-09-07-embed-rknn/`、`evaluation/runs/2026-09-07-embed-rknn-rk3576/`、`evaluation/runs/2026-09-07-jetson-trt/`、`evaluation/runs/2026-09-08-orin-nano-acceptance/`
+
+### 整链路回放与货架裁剪，设备实测
+
+| 设备 | 场景 | 结果 | 条件 |
+|---|---|---|---|
+| reComputer J40 系列（J4012） | 收银台回放 | 检出到结果发出 p50 22.3 ms / p95 42.8 ms；2956 帧 0 丢帧 | 录制视频回放，30 SKU 商品库，检测、嵌入、检索与 MQTT 上报在同一台设备上 |
+| reComputer J30 系列（J3011） | 收银台回放 | 6726 帧（2.27 轮）0 丢帧，84 个事件全部发布 | 同一段录制视频与商品库 |
+| reComputer RK3588 系列 | 货架回放 | 检出到结果发出 p50 924 ms / p95 1153 ms；704 张货位裁剪 top-1 541/704，与 CPU fp32 参考相同 | 20 SKU，检测与嵌入都用 RKNN fp16 上 NPU |
+| reComputer RK3576 系列 | 货架裁剪 | 704 张 top-1 76.28%（CPU fp32 76.99%），同 SKU 一致率 99.29%；嵌入单裁剪 p50 61.0 ms | 同一批 704 张裁剪，检测与嵌入都用 RKNN fp16 |
+
+复现：`evaluation/runs/2026-09-07-jetson-trt/`、`evaluation/runs/2026-09-08-orin-nano-acceptance/`、`evaluation/runs/2026-09-08-rk3588-console-acceptance-020/`、`evaluation/runs/2026-09-08-rk3576-acceptance/`
 
 ### 检索与检测准确率（非设备端）
 
@@ -225,9 +246,9 @@ SKU-110K 的公开成绩是 mAP50-95 58.0（DenseDet，Cascade R-CNN + ResNeXt-1
 
 | 设备 | 检测器 | 嵌入器 | 模型怎么到设备上 |
 |---|---|---|---|
-| reComputer RK3588 / RK3576 系列 | NPU 上的 `.rknn`，fp16 或 INT8 | CPU 上的 onnxruntime，没有 RKNN 转换 | 在 x86_64 主机上用 rknn-toolkit2 2.3.2 转换；toolkit 版本必须与板上 `librknnrt.so` 匹配 |
+| reComputer RK3588 / RK3576 系列 | NPU 上的 `.rknn`，fp16 或 INT8 | CPU 上的 onnxruntime，或 NPU 上的 RKNN fp16 | 在 x86_64 主机上用 rknn-toolkit2 2.3.2 转换；toolkit 版本必须与板上 `librknnrt.so` 匹配 |
 | reComputer R2000 系列 + Hailo-8 | NPU 上的 INT8 `.hef` | CPU 上动态量化 INT8 的 DINOv2-small | 在 x86_64 主机上用 Hailo Dataflow Compiler 编译后拷到板上 |
-| reComputer J40 系列（Jetson Orin） | TensorRT fp16（GPU） | TensorRT fp16（GPU） | 检测 + 嵌入 + 检索 + 上报的整机回放在 J4012 与 J3011 上跑通 |
+| reComputer J40 / J30 系列（Jetson Orin） | TensorRT fp16（GPU） | TensorRT fp16（GPU） | 部署时在设备上从 ONNX 构建 engine，J3011 上检测 427 s、嵌入 132 s |
 
 检测器是单类 YOLOX-Tiny（640² 或 1280²）；嵌入器是在电商商品图上用 ArcFace 微调的 DINOv2，base（348 MB fp32）或 small（23.5 MB INT8），每个裁剪输出一个 512 维向量；SKU 身份只在版本化商品库的 FAISS 余弦检索里。
 
@@ -237,7 +258,9 @@ SKU-110K 的公开成绩是 mAP50-95 58.0（DenseDet，Cascade R-CNN + ResNeXt-1
 
 ### 已知退化
 
-- 嵌入是每个框一次 CPU 推理：按每裁剪 91.95 ms，五件商品的篮子约半秒，货架一帧（157.6 个框）约 14 秒，货架部署要抽帧或按货位采样。
+- Hailo-8 套餐上嵌入是每个框一次 CPU 推理：按每裁剪 91.95 ms，五件商品的篮子约半秒，货架一帧（157.6 个框）约 14 秒，货架部署要抽帧或按货位采样。
+- DINOv2 嵌入器在 Hailo-8 上的两次量化都没有得到可用结果（其中一次所有图映射到同一个向量），所以 Hailo-8 套餐的嵌入留在 CPU。
+- 检测与嵌入共用一块 GPU 时，reComputer J40 系列（J4012）进程内检测 p50 从单独运行的 5.18 ms 升到 8.76 ms，嵌入从 4.23 ms 升到 5.37 ms。
 - 静态 QDQ INT8（激活也量化）检索掉 3.78–9.96 个百分点，不可用。
 - rknn-toolkit2 与 `librknnrt.so` 版本不匹配时可能照常加载并给出错误数值；每次转换后与 CPU 参考做一致性核对。
 - 用 640² 产物看货架会漏掉远端商品；SKU-110K 小目标 mAP50-95 在 640² 为 17.49，1280² 为 26.88。
@@ -247,7 +270,6 @@ SKU-110K 的公开成绩是 mAP50-95 58.0（DenseDet，Cascade R-CNN + ResNeXt-1
 
 ### 下一步
 
-- 把 reComputer J40 系列（J4012 / J3011）TensorRT 后端的检测、嵌入与收银回放实测并入「性能与实测数据」和运行时表。
 - 测收银台计数准确率与货架货位准确率，作为验收指标。
 - 实现设备端拉取商品库版本、校验、原子切换的运行时，让新注册的 SKU 自动下发到设备。
 

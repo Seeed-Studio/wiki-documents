@@ -1,14 +1,14 @@
 ---
-description: Creación de un sistema local de alerta de caídas para cuidado de personas mayores, residencias asistidas y atención domiciliaria - qué dispositivos necesitas, cómo desplegarlo, qué interfaces expone y datos medidos en siete dispositivos
+description: "Creación de un sistema local de alerta de caídas para cuidado de personas mayores, residencias asistidas y atención domiciliaria: qué dispositivos necesitas, cómo desplegarlo, qué interfaces expone y datos medidos en siete dispositivos"
 title: 'Detección de caídas con IA en el dispositivo: creación, despliegue y resultados medidos'
 keywords:
-  - sistema de detección de caídas
-  - alerta de caída
-  - alerta de caída en residencia
-  - IA en el dispositivo
-  - estimación de pose
-  - detección de caídas
-  - IA en el borde
+  - fall detection system
+  - fall alert
+  - nursing home fall alert
+  - on-device AI
+  - pose estimation
+  - fall detection
+  - edge AI
   - reCamera
   - reComputer
   - Jetson
@@ -22,7 +22,7 @@ last_update:
   date: 09/01/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-01'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/es/solutions/edge-fall-detection/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -33,7 +33,7 @@ Solo alerta asistencial. No es un dispositivo médico ni de seguridad vital cert
 
 ## Qué hace esta solución
 
-Instala una cámara en la habitación. Cuando alguien se cae, un mensaje llega en segundos a quien tenga que verlo: el puesto de enfermería, el Home Assistant de un familiar, el NVR de recepción o tu propio sistema. Diseñado para entornos de habitación fija: residencias de mayores, centros de rehabilitación, atención domiciliaria, dormitorios de un solo ocupante. Medido en un conjunto de datos público: 95,8 % de recall de caídas y 1,4 s de media desde la caída hasta que el mensaje sale (detalles en "Rendimiento y datos medidos" más abajo).
+Instala una cámara en la habitación. Cuando alguien se cae, un mensaje llega en segundos a quien deba verlo: el puesto de enfermería, el Home Assistant de un familiar, el NVR de recepción o tu propio sistema. Diseñado para entornos de habitación fija: residencias de ancianos, centros de rehabilitación, atención domiciliaria, dormitorios de un solo ocupante. Medido en un conjunto de datos público: 95,8 % de recall de caídas y 1,4 s de media desde la caída hasta que el mensaje sale (detalles en "Rendimiento y datos medidos" más abajo).
 
 - Implementación de código abierto: [github.com/suharvest/edgefallkit](https://github.com/suharvest/edgefallkit)
 - Elegir una configuración y desplegar: [página de diseño de referencia](https://www.seeed.cc/solutions/reference-designs/fall_detection)
@@ -46,7 +46,7 @@ Instala una cámara en la habitación. Cuando alguien se cae, un mensaje llega e
             </div>
             <div class="info-content">
                 <h3>Funciona localmente, sin vídeo en la nube</h3>
-                <p>La detección, decisión y mensajería se ejecutan todas en el dispositivo local; solo un mensaje de texto de unos pocos cientos de bytes cruza la red. Las alertas siguen funcionando sin conexión y no hay suscripción en la nube por cámara.</p>
+                <p>La detección, la decisión y la mensajería se ejecutan todas en el dispositivo local; solo un mensaje de texto de unos pocos cientos de bytes cruza la red. Las alertas siguen funcionando sin conexión y no hay suscripción en la nube por cámara.</p>
             </div>
         </li>
         <li class="info-item">
@@ -64,7 +64,7 @@ Instala una cámara en la habitación. Cuando alguien se cae, un mensaje llega e
             </div>
             <div class="info-content">
                 <h3>Usa las cámaras y sistemas que ya tienes</h3>
-                <p>Las cámaras IP existentes se conectan por RTSP sin cambios en la cámara. Las alertas salen por MQTT: Home Assistant las recoge mediante auto-descubrimiento, y un NVR o sistema de llamada a enfermería se suscribe a un único tema.</p>
+                <p>Las cámaras IP existentes se conectan por RTSP sin cambios en la cámara. Las alertas salen por MQTT: Home Assistant las recoge mediante autodetección, y un NVR o un sistema de llamada a enfermería se suscribe a un tema.</p>
             </div>
         </li>
         <li class="info-item">
@@ -93,7 +93,7 @@ Lo que el dispositivo realmente genera: un esqueleto superpuesto sobre la person
 
 El panel de alarmas viene incluido en la pila de compose en los presets reComputer J30 / J40, RK y R2000. En los dos presets de reCamera es un componente opcional en un host separado.
 
-Una vez que el detector de caídas publica eventos, el panel de alarmas gestiona lo que sigue: cada habitación es una zona con sus propias reglas, se abre una alarma, alguien de guardia la confirma o descarta en una consola de una sola página, y la alarma confirmada sale como un webhook o un mensaje MQTT con el nombre del operador. Diseñado para residencias asistidas, atención domiciliaria y cualquier sitio donde cada alarma tenga que poder rastrearse hasta una persona después.
+Una vez que el detector de caídas publica eventos, el panel de alarmas gestiona lo que sigue: cada habitación es una zona con sus propias reglas, se abre una alarma, alguien de guardia la confirma o la descarta en una consola de una sola página, y la alarma confirmada sale como un webhook o un mensaje MQTT con el nombre del operador. Diseñado para residencias asistidas, atención domiciliaria y cualquier sitio donde cada alarma deba poder rastrearse hasta una persona después.
 
 <div class="info-section">
     <ul class="info-list">
@@ -130,7 +130,7 @@ Una vez que el detector de caídas publica eventos, el panel de alarmas gestiona
             </div>
             <div class="info-content">
                 <h3>Sin vídeo en la notificación</h3>
-                <p>Id de alarma, tipo, zona, id de flujo, marca de tiempo, operador, clave de idempotencia. La captura de instantáneas es un interruptor que está apagado por defecto.</p>
+                <p>Id de alarma, tipo, zona, id de flujo, marca de tiempo, operador, clave de idempotencia. La captura de instantánea es un interruptor que está apagado por defecto.</p>
             </div>
         </li>
     </ul>
@@ -138,7 +138,7 @@ Una vez que el detector de caídas publica eventos, el panel de alarmas gestiona
 
 #### Lo que muestra la consola
 
-El operador trabaja solo desde la consola de confirmación: la lista de alarmas con el estado actual de cada una, el veredicto de comprobación por voz cuando esa opción está activada, y los botones de confirmar/descartar que escriben el nombre del operador en el registro de auditoría. El servicio de alarmas sirve la consola en HTTP 8080.
+El operador trabaja solo desde la consola de confirmación: la lista de alarmas con el estado actual de cada una, el veredicto de registro de voz cuando esa opción está activada, y los botones de confirmar/descartar que escriben el nombre del operador en el registro de auditoría. El servicio de alarmas sirve la consola en HTTP 8080.
 
 Las capturas de pantalla de la consola de abajo usan **datos reproducidos**: datos sintéticos de bbox y seguimiento, sin imágenes de cámara y sin personas en cuadro.
 
@@ -146,7 +146,7 @@ Las capturas de pantalla de la consola de abajo usan **datos reproducidos**: dat
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/panel-dashboard-en-97ba47b3.png" alt="Inicio de la consola de confirmación: lista de habitaciones a la izquierda, flujo de alarmas a la derecha, cada alarma con tipo, zona y estado actual"/>
 </div>
 
-Al abrir una alarma se ve todo su historial: hora del evento, transiciones de estado y quién pulsó confirmar.
+Abrir una alarma muestra todo su historial: hora del evento, transiciones de estado y quién pulsó confirmar.
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/room-detail-en-ba109d0a.png" alt="Detalle de una sola habitación: configuración de zona, ocupación actual e historial de alarmas para esa habitación"/>
@@ -156,16 +156,16 @@ Al abrir una alarma se ve todo su historial: hora del evento, transiciones de es
 
 Hay dos elementos en el sitio: la cámara que produce la imagen y el host que ejecuta la detección.
 
-**① Cámara**: ¿ya tienes una cámara IP? Úsala tal cual por RTSP; no hace falta cambiar nada en la cámara. Si no, la reCamera 2002 / Pro combina cámara y cómputo en una sola unidad: conéctala y está lista.
+**① Cámara**: ¿ya tienes una cámara IP? Úsala tal cual por RTSP; no es necesario cambiar nada en la cámara. Si no, la reCamera 2002 / Pro combina cámara y cómputo en una sola unidad: conéctala y está lista.
 
 **② Host del detector** — El dispositivo que ejecuta la detección y la toma de decisiones; también determina cuántos streams puedes ejecutar y cuánto cuesta. Con una cámara existente, esto es una caja separada; con reCamera, la cámara es el host del detector.
 
 | | Host del detector | Streams por unidad | Cuándo elegirlo |
 |---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera 2002 / Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>Cámara y cómputo en una sola unidad | 1 | Una habitación, la forma más rápida de hacer funcionar una única alerta |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera 2002 / Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>Cámara y cómputo en una sola unidad | 1 | Una habitación, la forma más rápida de hacer que funcione una sola alerta |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3576 / RK3588](https://www.seeedstudio.com/reComputer-RK3588-40-p-6818.html) | 1 | Ya estandarizado en placas Rockchip |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html) | 16 | Necesitas una sola caja para manejar muchos streams |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Orin Nano / Orin NX | 7 / 8 | Varias habitaciones y quieres margen para crecer |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Orin Nano / Orin NX | 7 / 8 | Varias habitaciones, y quieres margen para crecer |
 
 Los recuentos de streams se derivan del rendimiento medido del acelerador (consulta "Stream counts" más abajo).
 
@@ -177,14 +177,14 @@ Tres cosas: lo que produce los eventos de detección, un host que decide qué se
 
 **① La fuente de eventos** — o bien cámaras RTSP que ya posees, en cuyo caso el detector se despliega en el host de alarmas y apunta a tu stream, o cámaras reCamera que ya ejecutan el detector por sí mismas, en cuyo caso nada cambia en la detección.
 
-**② El host de la alarma** — esta es la caja que ejecuta las zonas, los timeouts, la máquina de estados, el almacén de auditoría SQLite, la página de confirmación y la cola de entrega. En dos de los tres paquetes también ejecuta el detector.
+**② El host de alarmas** — esta es la caja que ejecuta las zonas, los timeouts, la máquina de estados, el almacén de auditoría SQLite, la página de confirmación y la cola de entrega. En dos de los tres paquetes también ejecuta el detector.
 
-| | Host de la alarma | Dónde se ejecuta el detector | Cuándo elegirlo |
+| | Host de alarmas | Dónde se ejecuta el detector | Cuándo elegirlo |
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Detector, servicio de alarmas, broker y consola en un solo Jetson | En esta caja, motor TensorRT construido en el primer despliegue | Las cámaras existen y el sitio aún no tiene gateway. Acepta más streams de los tres paquetes |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>La misma pila, modelo de pose más grande | En esta caja, YOLO11m en lugar de YOLO11s | Más habitaciones de las que un J3011 puede vigilar, o se quiere un modelo de pose más grande. Mismo paquete, una opción diferente en el formulario de despliegue |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Carcasa industrial sin ventilador | En esta caja, HEF precompilado | El host va en un armario o un montante: sin ventilador, amplio rango de temperatura, montaje en carril DIN o en pared |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>Cámara AI todo en uno; el servicio de alarmas se instala en una máquina que ya tienes | En la cámara | Aún no hay cámaras, o las cámaras ya están detectando. El servicio de alarmas se levanta a mano: el formulario de despliegue no tiene clase de dispositivo para un gateway que tú aportes |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>Cámara AI todo en uno; el servicio de alarmas se ejecuta en una máquina que ya tienes | En la cámara | Aún no hay cámaras, o las cámaras ya están detectando. El servicio de alarmas se levanta a mano: el formulario de despliegue no tiene clase de dispositivo para un gateway que tú aportes |
 
 Otros requisitos previos: un broker MQTT accesible en el puerto 1883 (los paquetes Orin y Hailo levantan uno; el paquete reCamera puede usar aquel al que las cámaras ya publican), una vista interior fija en los paquetes Orin y Hailo, y un endpoint de webhook o un suscriptor MQTT que reciba las notificaciones.
 
@@ -194,18 +194,24 @@ Cuando está activada, una alarma de caída generada hace que el servicio pronun
 
 Hardware necesario: un micrófono y altavoz USB en una caja de cómputo en la LAN, más una instancia de OpenVoiceStream para TTS y ASR en streaming. El audio no pasa por las cámaras: ninguno de los modelos reCamera tiene un micrófono utilizable confirmado, y la SG2002 no puede ejecutar ASR local. El audio nunca se escribe en disco; solo se conservan el veredicto, la confianza, la latencia y el texto transcrito, y `store_transcript: false` descarta también el texto.
 
+### Límites de selección negativa
+
+- **Habitación única vs multi-stream central**: reCamera Pro es una cámara edge todo en uno adecuada para habitaciones individuales. Para despliegues en central de enfermería que agregan de 4 a 16 streams existentes, elige un host reComputer R2000 o RK3588.
+- **Gran angular y oclusión**: La distorsión ojo de pez o barandillas de cama densas degradan la estimación de pose 2D; monta las cámaras con línea de visión despejada y evita ángulos muy oblicuos.
+- **Restricción de decodificación de vídeo multi-stream en Hailo-8 (R2000)**: Aunque el rendimiento de la NPU Hailo-8 admite 16 streams de pose, el host reComputer R2000 Serie **carece de decodificación de vídeo por hardware multicanal**. Los 16 streams medidos se lograron con **streams de vídeo preescalados a 640×640** a 15 FPS. Enviar directamente 16 streams RTSP completos de 1080p saturará la CPU del host al 100% con decodificación por software y causará caídas graves de fotogramas. En despliegues reales, **las cámaras deben configurarse para suministrar sub-streams de 640×480 o 640×360** al gateway. Si necesitas decodificación por hardware 1080p completa en caja a través de muchos streams, selecciona la Jetson J40 Serie con hardware NVDEC dedicado.
+
 ## Cómo desplegar en el sitio
 
-Dos pasos: primero coloca bien la cámara y luego instala el software.
+Dos pasos: primero coloca la cámara en la posición correcta y luego instala el software.
 
 ### Paso 1: montar la cámara {#step-1-mount-the-camera}
 
 :::tip[Requisitos de colocación]
-Fija el soporte, a 2–3 m de la persona, de lado o en ángulo, con hombros y caderas visibles. La caída en sí tiene que ocurrir en cámara: si la persona ya está tumbada cuando el dispositivo se inicia, solo informa de la pose y no dispara una alerta. Los ángulos cenitales totalmente verticales, los planos generales de pasillos largos y el mobiliario que bloquea la mayor parte de la persona reducen notablemente la precisión.
+Fija el soporte, a 2–3 m de la persona, de lado o en ángulo, con hombros y caderas visibles. La caída en sí tiene que ocurrir en cámara: si la persona ya está tumbada cuando el dispositivo se inicia, solo informa la pose y no dispara una alerta. Los ángulos cenitales totalmente verticales, las tomas amplias de pasillos largos y el mobiliario que bloquea la mayor parte de la persona reducen notablemente la precisión.
 :::
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/camera-placement-be3fb598.svg" alt="Colocación de la cámara: un montaje lateral u oblicuo a 2–3 m funciona; tomas cenitales, planos generales y vistas ocluidas no funcionan"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/camera-placement-be3fb598.svg" alt="Colocación de la cámara: un montaje lateral u oblicuo a 2–3 m funciona; tomas cenitales, tomas amplias y vistas ocluidas no funcionan"/>
 </div>
 
 ### Paso 2: instalar el software — cuatro pasos {#step-2-install-the-software}
@@ -231,44 +237,44 @@ El flujo general:
 4. **Comprueba la vista previa para confirmar el encuadre** — Una vez instalada, la app muestra un feed en vivo con un esqueleto y el estado superpuestos sobre la persona. Confirma que la cámara realmente ve lo que necesita antes de cablear las notificaciones. La captura de pantalla de abajo es la página de vista previa de reCamera Pro. **Las etiquetas de estado provienen de una reproducción, no de una ejecución medida**; las cifras medidas están en "Rendimiento y datos medidos".
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/live-fall-demo-f4ef5180.gif" alt="La transición de estado de normal a caído, mostrada en la vista previa del App Center de reCamera Pro"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/live-fall-demo-f4ef5180.gif" alt="La transición de estado de normal a caído, mostrada en la vista previa del reCamera Pro App Center"/>
 </div>
 
-Desde la instalación hasta estar en ejecución: alrededor de media hora para reCamera. Jetson tarda más, porque el motor de inferencia tiene que construirse en el dispositivo la primera vez (461 segundos o más, medido).
+Desde la instalación hasta la ejecución: alrededor de media hora para reCamera. Jetson tarda más, porque el motor de inferencia tiene que compilarse en el dispositivo la primera vez (461 segundos o más, medidos).
 
 ### Panel de alarmas: zonas e instalación
 
-Dos partes: coloca las cámaras donde las zonas funcionen y luego instala y configura.
+Dos partes: coloca las cámaras donde las zonas funcionarán, luego instala y configura.
 
 #### 1. Cámaras y zonas
 
 :::tip[Las zonas son rectángulos normalizados sobre el fotograma de la cámara]
-Mover o reorientar una cámara invalida el diseño de zonas **sin error alguno**: el rectángulo sigue existiendo pero cubre otra parte de la habitación. Vuelve a comprobar cada zona después de cualquier cambio físico en una cámara.
+Mover o reorientar una cámara invalida el diseño de zonas **sin ningún error**: el rectángulo sigue existiendo pero cubre una parte diferente de la habitación. Vuelve a comprobar cada zona después de cualquier cambio físico en una cámara.
 :::
 
 En los paquetes Orin y Hailo también necesitas una vista interior fija donde una persona permanezca visible a lo largo de la trayectoria de caída esperada. El detector es el mismo detector EdgeFallKit, con los mismos requisitos de colocación que arriba (una vista lateral o desde una esquina a 2–3 m, con hombros y caderas visibles).
 
 Dos puntos al dibujar zonas, o el sitio producirá alarmas adicionales:
 
-- **`no_motion` se activará durante el sueño** a menos que la zona excluya la cama o el timeout sea más largo que una siesta normal. El movimiento es el desplazamiento del centro del bbox de una persona rastreada por encima de `motion_threshold`, no flujo óptico ni velocidad de puntos clave, por lo que los movimientos pequeños bajo una manta no cuentan.
-- **La oclusión genera un `no_person` falso.** Una zona solo se rearma después de que la persona vuelve a verse, así que una oclusión produce una sola alarma.
+- **`no_motion` se activará durante el sueño** a menos que la zona excluya la cama o el tiempo de espera sea más largo que una siesta normal. El movimiento es el desplazamiento del centro del bbox de una persona rastreada por encima de `motion_threshold`, no flujo óptico ni velocidad de puntos clave, por lo que los movimientos pequeños bajo una manta no cuentan.
+- **La oclusión genera un `no_person` falso.** Una zona solo se rearma después de que la persona vuelve a ser vista, así que una oclusión produce una sola alarma.
 
 #### 2. Software: cuatro pasos
 
-Los pasos por dispositivo están en la misma página de diseño de referencia anterior, donde puedes elegir una configuración y descargar el paquete de aplicación correspondiente.
+Los pasos por dispositivo están en la misma página de diseño de referencia de arriba, donde puedes elegir una configuración y descargar el paquete de aplicación correspondiente.
 
 1. **Elige una configuración**: el configurador pregunta qué hay en la pared y dónde va el host, y devuelve uno de los tres paquetes.
-2. **Instala el paquete**: los paquetes de Orin y Hailo despliegan el detector y el servicio de alarmas juntos. El paquete de reCamera no instala nada para la detección; el servicio de alarmas se levanta manualmente en un gateway que tú proporcionas.
-3. **Rellena la configuración**: zonas y sus `no_person_timeout` / `no_motion_timeout`, las ventanas de la máquina de estados, la URL del webhook y el nombre del dispositivo que forma el primer segmento del tópico. Las zonas se dibujan directamente sobre la imagen y surten efecto al guardar:
+2. **Instala el paquete**: los paquetes Orin y Hailo despliegan el detector y el servicio de alarmas juntos. El paquete reCamera no instala nada para la detección; el servicio de alarmas se levanta manualmente en un gateway que tú proporcionas.
+3. **Rellena la configuración**: las zonas y sus `no_person_timeout` / `no_motion_timeout`, las ventanas de la máquina de estados, la URL del webhook y el nombre del dispositivo que forma el primer segmento del tópico. Las zonas se dibujan directamente sobre la imagen y surten efecto al guardar:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/panel-draw-zone-d715c416.gif" alt="Dibujar una zona en la vista en vivo; sigue en su lugar después de guardar y recargar"/>
 </div>
 
-La página de configuración muestra la vista en vivo de esa habitación a la izquierda y los dos timeouts de la zona a la derecha. Cuando la cámara está sin conexión, la vista vuelve a la última captura y la configuración sigue siendo editable.
+La página de configuración muestra la vista en vivo de esa habitación a la izquierda y los dos tiempos de espera de la zona a la derecha. Cuando la cámara está desconectada, la vista vuelve a la última instantánea y la configuración sigue siendo editable.
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/config-live-view-en-e238b3a7.png" alt="Página de configuración de zona: vista en vivo a la izquierda, timeouts de no-persona y no-movimiento a la derecha"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/config-live-view-en-e238b3a7.png" alt="Página de configuración de zona: vista en vivo a la izquierda, tiempos de espera de no-person y no-motion a la derecha"/>
 </div>
 4. **Verifica**: genera una alarma de prueba y obsérvala completarse: la alarma aparece en la consola, se registra una acción del operador asociada a ella y el endpoint del webhook recibe un POST con una clave de idempotencia. A continuación, una alarma inyectada pasa de aparecer a confirmada:
 
@@ -282,59 +288,57 @@ El estado del detector y del servicio en el propio host está en la consola del 
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/fall_detection/device-console-en-76e94f0c.jpg" alt="Consola del dispositivo en el host de alarmas: estado de ejecución del detector y del servicio de alarmas"/>
 </div>
 
-<!-- TODO imagen: foto de la instalación en el sitio (cámara montada en una habitación) — necesita una sesión de fotos en campo -->
+El tiempo estimado es de **45 minutos**, con dificultad **intermedia**. El paquete Orin es el más largo porque el primer despliegue construye un motor TensorRT en el dispositivo.
 
-El tiempo estimado es de **45 minutos**, con dificultad **intermedia**. El paquete de Orin es el más largo porque el primer despliegue construye un motor TensorRT en el dispositivo.
+## Qué interfaces expone
 
-## Interfaces que expone
+El dispositivo publica eventos en el broker MQTT que se ejecuta en sí mismo (puerto 1883); tu sistema solo se suscribe. Tres formas de conectarse:
 
-El dispositivo publica eventos en el broker MQTT que se ejecuta en él mismo (puerto 1883); tu sistema solo tiene que suscribirse. Tres formas de conectarse:
+- **Home Assistant**: no se necesita configuración. El dispositivo se anuncia mediante el protocolo de descubrimiento automático y cuatro entidades aparecen directamente en HA: un sensor de caídas, estado actual, id de evento y presencia; conéctalos a tus automatizaciones.
+- **Sistemas NVR / de llamada a enfermería**: suscríbete a `<device>/fall-detection/results`. Si lo único que te importa es "¿alguien se ha caído?", observa `fall_event` en el payload: solo se establece una vez, en el momento en que el estado entra en "fallen", así que una caída lo activa una vez, no repetidamente mientras la persona esté en el suelo.
+- **Sistema personalizado / API**: suscríbete de la misma manera; el payload también incluye `person_count`, `fallen_count` y el `track_id` / `state` / `bbox` de cada persona, suficiente para construir tu propio panel. reCamera además expone RTSP 8554 `/live0` para la transmisión en vivo.
 
-- **Home Assistant**: no se necesita configuración. El dispositivo se anuncia mediante el protocolo de auto-descubrimiento y aparecen directamente en HA cuatro entidades: un sensor de caídas, estado actual, id de evento y presencia; conéctalos a tus automatizaciones.
-- **Sistemas NVR / de llamada a enfermería**: suscríbete a `<device>/fall-detection/results`. Si lo único que te importa es "¿alguien se ha caído?", observa `fall_event` en el payload: solo se establece una vez, en el momento en que el estado entra en "fallen", así que una caída lo dispara una vez, no repetidamente mientras la persona esté en el suelo.
-- **Sistema personalizado / API**: suscríbete de la misma manera; el payload también incluye `person_count`, `fallen_count` y, para cada persona, su `track_id` / `state` / `bbox`, suficiente para construir tu propio panel. reCamera además expone RTSP 8554 `/live0` para la transmisión en vivo.
-
-`<device>` es el nombre que rellenaste antes: asígnalo por habitación o cama para que varios dispositivos en el mismo broker nunca se sobrescriban entre sí.
+`<device>` es el nombre que rellenaste antes: ponle nombre por habitación o cama para que varios dispositivos en el mismo broker nunca se sobrescriban entre sí.
 
 ### Tópicos y payload completos
 
 | Tópico / puerto | Payload | Retenido |
 |---|---|---|
-| `<device>/fall-detection/results` (multi-stream: `.../results/{stream_id}`) | Un JSON por frame: `state`, `fall_detected`, `fall_event`, `event_id`, `person_count`, `fallen_count`, más `track_id` / `state` / `bbox` para cada entrada en `persons[]` | No |
-| `<device>/fall-detection/status` | `online` / `offline`, publicado mediante el último testamento de MQTT | Sí |
-| `homeassistant/` | Configuración de auto-descubrimiento: sensor de caídas, estado, id de evento, presencia | Sí |
+| `<device>/fall-detection/results` (multi-stream: `.../results/{stream_id}`) | Un JSON por fotograma: `state`, `fall_detected`, `fall_event`, `event_id`, `person_count`, `fallen_count`, más `track_id` / `state` / `bbox` para cada entrada en `persons[]` | No |
+| `<device>/fall-detection/status` | `online` / `offline`, publicado mediante el last will de MQTT | Sí |
+| `homeassistant/` | Configuración de descubrimiento automático: sensor de caídas, estado, id de evento, presencia | Sí |
 | RTSP 8554 `/live0` (reCamera) | Vídeo en vivo para vista previa y NVR | — |
 
-El id de stream también se escribe en el payload, de modo que los consumidores posteriores no tienen que analizar el tópico para conocer la fuente.
+El id de stream también se escribe en el payload, de modo que los consumidores posteriores no tengan que analizar el tópico para conocer el origen.
 
-El broker también se ejecuta en el host del detector: reCamera usa el suyo integrado, y cada configuración de reComputer levanta `eclipse-mosquitto:2` junto al detector, sirviendo el puerto 1883 desde el host. No se necesita un broker externo y nada en la cadena necesita acceso a internet.
+El broker también se ejecuta en el host del detector: reCamera usa el suyo integrado y cada configuración reComputer levanta `eclipse-mosquitto:2` junto al detector, sirviendo el puerto 1883 desde el host. No se necesita un broker externo y nada en la cadena necesita acceso a internet.
 
 ### Interfaces del panel de alarmas
 
-El servicio de alarmas es lo único con lo que te integras y se ejecuta en el host de alarmas. Tres formas de entrar, según lo que ya tengas:
+El servicio de alarmas es lo único con lo que te integras y se ejecuta en el host de alarmas. Tres formas de entrada, según lo que ya tengas:
 
 - **Un sistema de llamada a enfermería o un servicio de paginación**: usa el webhook. Un POST por alarma confirmada, que incluye el id de la alarma, tipo, zona, id de stream, marca de tiempo y operador. Haz la desduplicación con la clave de idempotencia, no con la marca de tiempo.
-- **Un sitio basado en MQTT**: enciende el bus de alarmas y suscríbete a `eldercare/alarm/<zone-id>`. Mismo payload que el webhook. Está desactivado por defecto.
-- **Tu propio panel o sistema de registros**: haz polling o lee `GET /api/alarms` en HTTP 8080 para obtener los registros completos de alarmas, incluido el historial de estados y el operador en cada uno.
+- **Un sitio basado en MQTT**: activa el bus de alarmas y suscríbete a `eldercare/alarm/<zone-id>`. Mismo payload que el webhook. Está desactivado por defecto.
+- **Tu propio panel o sistema de registros**: consulta o lee `GET /api/alarms` en HTTP 8080 para obtener los registros completos de alarmas, incluido el historial de estados y el operador en cada uno.
 
-La clave de idempotencia es `zone:kind:event_timestamp:global_event_id`. `stream_id` se lee del payload del mensaje y nunca se extrae del tópico, por lo que una reescritura del broker o un prefijo de bridge no pueden redirigir silenciosamente una zona. Los registros de alarmas (eventos, transiciones de estado, operadores y acuses de entrega) se conservan durante 90 días.
+La clave de idempotencia es `zone:kind:event_timestamp:global_event_id`. `stream_id` se lee del payload del mensaje y nunca se extrae del tópico, por lo que una reescritura del broker o un prefijo de bridge no pueden redirigir una zona silenciosamente. Los registros de alarmas (eventos, transiciones de estado, operadores y acuses de entrega) se conservan durante 90 días.
 
-#### Tópicos y payloads completos
+#### Los tópicos y payloads completos
 
 | Tópico / puerto | Payload | Predeterminado |
 |---|---|---|
 | HTTP 8080 `GET /api/alarms`, página en `/` | Registros de alarmas: `id`, `kind`, `zone_id`, `stream_id`, `state`, `event_timestamp`, `operator`. La misma página sirve para confirmar y descartar | Activado |
-| HTTP POST a tu URL de webhook | `{"id":"a-17","kind":"fall","zone_id":"bedroom","stream_id":"cam-01","state":"notified","event_timestamp":1788581337237,"operator":"nurse-a"}` más una cabecera de idempotencia. Sin captura, sin vídeo | Activado una vez que se establece la URL |
+| HTTP POST a tu URL de webhook | `{"id":"a-17","kind":"fall","zone_id":"bedroom","stream_id":"cam-01","state":"notified","event_timestamp":1788581337237,"operator":"nurse-a"}` más una cabecera de idempotencia. Sin instantánea, sin vídeo | Activado una vez que se establece la URL |
 | MQTT 1883 `eldercare/alarm/<zone-id>` | Mismo payload que el webhook | Desactivado |
 | MQTT 1883 `<device-name>/fall-detection/results/<stream-id>` | El stream `fall_result_v1` que consume este servicio: `stream_id`, `person_count`, `fall_event`, bbox por persona | Entrada, publicado por el detector |
 
-**El campo `state`**: `escalated` significa que se perdió el plazo de notificación; no vuelve a `notified` cuando un reintento posterior tiene éxito. No muestres `escalated` como un fallo de entrega en un panel; solo significa que el plazo ha pasado.
+**El campo `state`**: `escalated` significa que se superó el plazo de notificación; no vuelve a `notified` cuando un reintento posterior tiene éxito. No muestres `escalated` como un fallo de entrega en un panel; solo significa que el plazo pasó.
 
-El broker se ejecuta en el host de alarmas en los paquetes de Orin y Hailo, y en las cámaras o el gateway en el paquete de reCamera; nada en la ruta necesita internet. El broker incluido permite conexiones anónimas y está pensado para una LAN de confianza; añade credenciales y TLS antes de que el dispositivo sea accesible desde fuera de ella.
+El broker se ejecuta en el host de alarmas en los paquetes Orin y Hailo, y en las cámaras o el gateway en el paquete reCamera; nada en la ruta necesita internet. El broker incluido permite conexiones anónimas y está pensado para una LAN de confianza; añade credenciales y TLS antes de que el dispositivo sea accesible desde fuera de ella.
 
 ## Rendimiento y datos medidos {#appendix-measured-data}
 
-Todo lo siguiente se mide en dispositivos frente a un conjunto de datos público. Los informes brutos por clip y los checksums están en el repositorio bajo [`evaluation/`](https://github.com/suharvest/edgefallkit/tree/main/evaluation). El código fuente incluye conversión de modelos por plataforma, orquestación con Docker y scripts de entrenamiento de pesos de decisión.
+Todo lo siguiente se mide en dispositivos frente a un conjunto de datos público. Los informes sin procesar por clip y las sumas de verificación están en el repositorio bajo [`evaluation/`](https://github.com/suharvest/edgefallkit/tree/main/evaluation). La fuente incluye conversión de modelos por plataforma, orquestación con Docker y scripts de entrenamiento de pesos de decisión.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/suharvest/edgefallkit" target="_blank" rel="noopener noreferrer">
@@ -344,21 +348,21 @@ Todo lo siguiente se mide en dispositivos frente a un conjunto de datos público
 
 ### Resultados de precisión
 
-Promediado sobre seis configuraciones congeladas: **precisión 85,8%, recall de caídas 95,8%, especificidad 77,8%, F1 85,7%, latencia media de alerta 1,4 s**. Las configuraciones individuales quedan entre 81,5% y 88,9%.
+Promediado sobre seis configuraciones congeladas: **precisión 85,8%, recall de caídas 95,8%, especificidad 77,8%, F1 85,7%, latencia media de alerta 1,4 s**. Las configuraciones individuales se sitúan entre 81,5% y 88,9%.
 
 Estas seis configuraciones son Jetson YOLO11s, Jetson YOLO11m, reCamera Pro, RK3576, RK3588 y Hailo-8, cada una con su propia configuración congelada. La línea base v0.2 de la reCamera 2002 (74,1% de precisión) se excluye del promedio: ejecuta una generación anterior de pesos temporales. Los detalles por configuración están en la [tabla unificada de precisión](https://github.com/suharvest/edgefallkit/blob/main/evaluation/RESULTS.md#统一准确性表) del repositorio.
 
-Condiciones: conjunto de datos [GMDCSA-24 v2.1](https://github.com/ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos) (MIT), dividido por sujeto; el Sujeto 4 reservado se evalúa una sola vez, 27 clips (12 caídas / 15 actividades de la vida diaria); todo el vídeo a 15 FPS; una alerta más de 0,5 s antes del inicio de caída anotado cuenta como falso positivo; cada plataforma reentrena y congela los pesos de decisión a partir de su propia salida de pose, sin nada compartido entre plataformas.
+Condiciones: dataset [GMDCSA-24 v2.1](https://github.com/ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos) (MIT), dividido por sujeto; el Sujeto 4 reservado se evalúa una sola vez, 27 clips (12 caídas / 15 actividades de la vida diaria); todo el vídeo a 15 FPS; una alerta más de 0,5 s antes del inicio de caída anotado cuenta como falso positivo; cada plataforma reentrena y congela los pesos de decisión a partir de su propia salida de pose, sin nada compartido entre plataformas.
 
-Reproducir: `platforms/jetson/tools/evaluate_videos.py` (el conjunto de datos no se distribuye con el repositorio: obténlo por tu cuenta).
+Reproducir: `platforms/jetson/tools/evaluate_videos.py` (el dataset no se distribuye con el repositorio — debes obtenerlo por tu cuenta).
 
-**La precisión no diferencia los dispositivos**: en un conjunto de prueba de 27 clips, un clip son 3,7 puntos porcentuales, y RK3576, RK3588 y Hailo obtienen la misma puntuación (88,9%). El tamaño del modelo tampoco se correlaciona con la puntuación. Elige un dispositivo según el número de flujos, el hardware existente y la fuente de vídeo.
+**La precisión no separa los dispositivos**: en un conjunto de prueba de 27 clips, un clip equivale a 3,7 puntos porcentuales, y RK3576, RK3588 y Hailo obtienen la misma puntuación (88,9%). El tamaño del modelo tampoco se correlaciona con la puntuación. Elige un dispositivo por número de flujos, hardware existente y fuente de vídeo.
 
 ### Dispositivos probados
 
-Siete dispositivos, cuatro aceleradores. "Extremo a extremo" significa que se ejecutó y puntuó en el conjunto de prueba toda la ruta desde la ingesta del flujo hasta una alerta; "velocidad de inferencia" significa que solo se midió la velocidad de detección.
+Siete dispositivos, cuatro aceleradores. "End-to-end" significa que se ejecutó y puntuó en el conjunto de prueba toda la ruta desde la ingesta del flujo hasta una alerta; "inference speed" significa que solo se midió la velocidad de detección.
 
-| Dispositivo | Acelerador | Modelo distribuido | Extremo a extremo | Velocidad de inferencia |
+| Dispositivo | Acelerador | Modelo distribuido | End-to-end | Inference speed |
 |---|---|---|:-:|:-:|
 | reCamera 2002 | NPU integrada | YOLO11n-Pose INT8 | ✅ | ✅ |
 | reCamera Pro | NPU integrada (RK) | YOLO11n-Pose INT8 | ✅ | ✅ |
@@ -368,13 +372,13 @@ Siete dispositivos, cuatro aceleradores. "Extremo a extremo" significa que se ej
 | reComputer J30 | GPU Orin Nano | YOLO11s-Pose FP16 | ✅ | ✅ FP16 / INT8 |
 | reComputer J40 | GPU Orin NX | YOLO11m-Pose FP16 | ✅ | ✅ FP16 / INT8 |
 
-La latencia por fotograma por dispositivo, el rendimiento multi-flujo y las condiciones de prueba están en los [resultados de rendimiento detallados](#性能实测详表) más abajo.
+La latencia por fotograma por dispositivo, el rendimiento multi-flujo y las condiciones de prueba están en los [resultados detallados de rendimiento](#性能实测详表) más abajo.
 
-### Resultados de rendimiento detallados {#性能实测详表}
+### Resultados detallados de rendimiento {#性能实测详表}
 
 #### Latencia por fotograma y rendimiento
 
-El mismo modelo en diferentes dispositivos: **YOLO11n-Pose, entrada 640²**. Las cifras por fotograma son solo de inferencia en el acelerador (sin decodificación RTSP, sin postprocesado); el rendimiento agregado es la mayor tasa de fotogramas total medida entre 1 y 6 contextos concurrentes. FP16 e INT8 están en tablas separadas. Las filas de Hailo-8 se midieron en reComputer R2000 Serie + módulo Hailo-8 M.2 (26 TOPS).
+El mismo modelo en diferentes dispositivos: **YOLO11n-Pose, entrada 640²**. Las cifras por fotograma son solo de inferencia en el acelerador (sin decodificación RTSP, sin postprocesado); el rendimiento agregado es la tasa de fotogramas total más alta medida entre 1 y 6 contextos concurrentes. FP16 e INT8 están en tablas separadas. Las filas de Hailo-8 se midieron en reComputer R2000 Serie + módulo Hailo-8 M.2 (26 TOPS).
 
 FP16:
 
@@ -397,7 +401,7 @@ INT8:
 
 **▲ La fila de Hailo usa el tamaño s: el tamaño n es más lento en este acelerador.** El directorio hailo8 del Model Zoo oficial v2.15 solo distribuye `yolov8s_pose` y `yolov8m_pose`, sin ningún modelo de pose tamaño n. Compilamos nosotros mismos un YOLO11n-Pose con Hailo Dataflow Compiler 3.31.0 (640², INT8, calibración GMDCSA de 64 fotogramas) y medimos **9,01 ms / 92,2 FPS** en la misma placa, frente a 6,87 ms / 393,9 FPS para el tamaño s: la latencia por fotograma es del mismo orden (+31%), pero el rendimiento difiere en 4,3×. El compilador dividió 11n en **3 contextos**, intercambiando pesos en cada fotograma; el modelo s del Model Zoo es de un solo contexto con pesos residentes. A 15 FPS por flujo, 92,2 FPS aún deja aproximadamente un margen de 6×; la diferencia solo afecta a la densidad multi-flujo. El resultado aplica a la compilación de este único HEF.
 
-**Jetson INT8 usa motores calibrados y se lista por separado.** Las filas INT8 anteriores son todas YOLO11n; los motores Jetson INT8 calibrados existentes hasta ahora solo son para YOLOv8s / YOLOv8m-Pose (calibración de entropía en fotogramas GMDCSA — 64 para s, 494 para m — con retroceso a FP16 para capas que no tienen implementación INT8), así que no son el mismo modelo que en las otras plataformas:
+**Jetson INT8 usa motores calibrados y se lista por separado.** Las filas INT8 anteriores son todas YOLO11n; los motores Jetson INT8 calibrados hasta ahora existen solo para YOLOv8s / YOLOv8m-Pose (calibración de entropía en fotogramas GMDCSA — 64 para s, 494 para m — con retroceso a FP16 para capas que no tienen implementación INT8), por lo que no son el mismo modelo que en las otras plataformas:
 
 | Plataforma | Modelo de pose | Precisión | Por fotograma | Agregado |
 |---|---|---|---:|---:|
@@ -406,17 +410,17 @@ INT8:
 | reComputer J30 (Orin Nano Super) | YOLOv8m-Pose | Mixta (neck + head FP16) | 8,11 ms | 123 FPS |
 | reComputer J40 (Orin NX Super) | YOLOv8m-Pose | Mixta (neck + head FP16) | 7,18 ms | 139 FPS |
 
-Condiciones: 640², batch 1, mediana de tres ejecuciones de 120 s, solo cómputo de GPU. YOLOv8s INT8 es 1,57× más rápido que FP16 en el mismo dispositivo. YOLOv8m totalmente INT8 pierde su salida de caída, de ahí la precisión mixta para m. Evaluación de despliegue en GMDCSA-24 Sujeto 4 (27 clips): YOLOv8s INT8 F1 66,7%, YOLOv8m precisión mixta 87,0%. Los presets siguen distribuyendo YOLO11s / YOLO11m FP16.
+Condiciones: 640², batch 1, mediana de tres ejecuciones de 120 s, solo cómputo de GPU. YOLOv8s INT8 es 1,57× más rápido que FP16 en el mismo dispositivo. YOLOv8m totalmente INT8 pierde su salida de caídas, de ahí la precisión mixta para m. La evaluación de despliegue en GMDCSA-24 Sujeto 4 (27 clips): YOLOv8s INT8 F1 66,7%, YOLOv8m precisión mixta 87,0%. Los presets siguen distribuyendo YOLO11s / YOLO11m FP16.
 
 Reproducir: `tools/build_calibrated_int8.py`.
 
-El INT8 de RK se calibró en 240 fotogramas GMDCSA; en fotogramas fuera del conjunto de calibración su recuento de detecciones por fotograma coincide exactamente con FP16, por lo que es desplegable.
+El INT8 de RK se calibró en 240 fotogramas GMDCSA; en fotogramas fuera del conjunto de calibración, su recuento de detecciones por fotograma coincide exactamente con FP16, por lo que es desplegable.
 
-#### Latencia del pipeline en fotogramas reales
+#### Latencia de la canalización en fotogramas reales
 
-Ambas tablas anteriores reciben **fotogramas sintéticos en blanco de 640** y miden solo la inferencia en el acelerador. Las imágenes reales son más lentas, porque cualquier cosa en el fotograma tiene que pasar por decodificación de raw-head, DFL, keypoints y NMS:
+Ambas tablas anteriores se alimentan con **fotogramas sintéticos en blanco de 640** y miden solo la inferencia en el acelerador. Las imágenes reales son más lentas, porque todo lo que hay en el fotograma tiene que pasar por decodificación de raw-head, DFL, keypoints y NMS:
 
-| Plataforma | Modelo de pose | Acelerador | Pipeline en fotograma real | Delta pre/post |
+| Plataforma | Modelo de pose | Acelerador | Canalización en fotograma real | Delta pre/post |
 |---|---|---:|---:|---:|
 | reCamera 2002 | YOLO11n INT8 | 52,74 ms ◇ | 53,23 ms | 0,012 ms |
 | reCamera Pro | YOLO11n INT8 | 35,2 ms ✦ | 36,6 ms | 1,4 ms |
@@ -426,75 +430,77 @@ Ambas tablas anteriores reciben **fotogramas sintéticos en blanco de 640** y mi
 | reComputer J30 Serie (J3011) | YOLO11n FP16 | 3,7 ms ◆ | 5,57 ms | 1,9 ms |
 | reComputer J40 Serie (J4012) | YOLO11n FP16 | 3,3 ms ◆ | 5,18 ms | 1,9 ms |
 
-"Pipeline" = inferencia + preprocesado + decodificación de raw-head / DFL / keypoints / NMS. **Excluye** decodificación RTSP, tracking, la MLP temporal y MQTT. La cifra de 5,18 ms de Orin NX proviene de 400 fotogramas medidos, los 5,57 ms de Orin Nano de 1359, y los 8,77 ms de Hailo de 1951 (de los cuales la inferencia hardware es 6,87 ms y la decodificación más NMS representan solo 0,052 ms).
+"Canalización" = inferencia + preprocesado + decodificación de raw-head / DFL / keypoints / NMS. **Excluye** decodificación RTSP, tracking, el MLP temporal y MQTT. La cifra de 5,18 ms para Orin NX proviene de 400 fotogramas medidos, los 5,57 ms de Orin Nano de 1359, y los 8,77 ms de Hailo de 1951 (de los cuales la inferencia hardware es 6,87 ms y la decodificación más NMS representan solo 0,052 ms).
 
-- **◇ reCamera 2002 no puede separar una columna de "solo acelerador"**: expone un único temporizador cuyo alcance coincide exactamente con la definición de pipeline de esta tabla, así que 52,74 ms ya incluyen pre y postprocesado (250 fotogramas medidos, con y sin una persona en escena son casi idénticos).
-- **✦ La fila de reCamera Pro se midió con relojes bloqueados** (NPU 950 MHz, CPU en modo performance). El governor por defecto `rknpu_ondemand` se midió estabilizándose en 800 MHz y 43,1 ms — una diferencia del 23% en la misma placa solo por el governor de frecuencia. RK3576 / RK3588 se midieron ejecutándose siempre en su escalón máximo y no se ven afectados.
-- **◆ La columna Jetson es cómputo puro de GPU con `trtexec`** (sin copias al host), mientras que la columna RK es `rknnlite.inference()`; miden cosas distintas, así que compara entre plataformas usando la columna de pipeline. Por esa columna Jetson es aproximadamente 11× más rápido que RK3588 y aproximadamente 14× más rápido que RK3576.
+- **◇ reCamera 2002 no puede separar una columna de "solo acelerador"**: expone un único temporizador cuyo alcance coincide exactamente con la definición de canalización de esta tabla, por lo que 52,74 ms ya incluyen pre y postprocesado (250 fotogramas medidos, con y sin una persona en escena son casi idénticos).
+- **✦ La fila de reCamera Pro se midió con relojes bloqueados** (NPU 950 MHz, CPU en modo performance). El gobernador por defecto `rknpu_ondemand` se midió estabilizándose en 800 MHz y 43,1 ms — una diferencia del 23% en la misma placa solo por el gobernador de frecuencia. RK3576 / RK3588 se midieron ejecutándose siempre en su nivel máximo y no se ven afectados.
+- **◆ La columna Jetson es cómputo puro de GPU con `trtexec`** (sin copias al host), mientras que la columna RK es `rknnlite.inference()`; miden cosas distintas, así que compara entre plataformas usando la columna de canalización. Por esa columna, Jetson es aproximadamente 11× más rápido que RK3588 y aproximadamente 14× más rápido que RK3576.
 
 Reproducir: [`evaluation/`](https://github.com/suharvest/edgefallkit/tree/main/evaluation).
 
 #### Número de flujos
 
-"Flujos limitados por inferencia" = rendimiento agregado ÷ 15 FPS. Cuenta solo el acelerador y es un techo teórico. "Flujos recomendados" descuenta eso: el rendimiento extremo a extremo medido en RK alcanza solo el 28%–44% del techo de inferencia, porque la decodificación RTSP, el tracking, la máquina de estados y MQTT también consumen CPU y ancho de banda de memoria. Con otras cargas aún ejecutándose en la placa, el rendimiento extremo a extremo medido fue de unos 8,6 FPS en RK3588 y unos 4,9 FPS en RK3576.
+"Flujos limitados por inferencia" = rendimiento agregado ÷ 15 FPS. Cuenta solo el acelerador y es un techo teórico. "Flujos recomendados" descuenta eso: el rendimiento end-to-end medido en RK alcanza solo el 28%–44% del techo de inferencia, porque la decodificación RTSP, el tracking, la máquina de estados y MQTT también consumen CPU y ancho de banda de memoria. Con otras cargas aún ejecutándose en la placa, el rendimiento end-to-end medido fue de unos 8,6 FPS en RK3588 y de unos 4,9 FPS en RK3576.
 
-### Runtimes y parámetros clave
+**Condiciones de prueba de 16 flujos en Hailo-8 y decodificación de vídeo en el host**: Los 16 flujos recomendados en el Hailo-8 R2000 se midieron usando **flujos de vídeo de entrada 640×640** a 15 FPS. Debido a que el host de reComputer R2000 Serie carece de decodificación de vídeo hardware multicanal, la decodificación por software de flujos 1080p saturará la CPU aproximadamente entre 2 y 4 flujos. Para despliegues reales con múltiples cámaras, las cámaras deben configurarse para entregar subflujos de menor resolución (se recomiendan 640×480 o 640×360) para evitar cuellos de botella de decodificación en la CPU.
+
+### Tiempos de ejecución y parámetros clave
 
 Todas las plataformas ejecutan la misma familia de modelos de pose 640². Lo que cambia es el runtime y cómo llega el modelo al dispositivo:
 
 | Host del detector | Modelo de pose | Precisión | Runtime | Entrega del modelo |
 |---|---|---|---|---|
 | reCamera 2002 | YOLO11n-Pose | INT8 | NPU de la cámara | Instalado desde la consola como una app de cámara |
-| reComputer J30 / J40 | YOLO11s (Orin Nano) / YOLO11m (Orin NX) | FP16 | TensorRT | El motor se **construye en el dispositivo** — ligado a esa arquitectura de GPU y versión de TensorRT, por lo que no puede distribuirse precompilado. Medido en Orin Nano: 461 s para YOLO11s |
+| reComputer J30 / J40 | YOLO11s (Orin Nano) / YOLO11m (Orin NX) | FP16 | TensorRT | El engine se **construye en el dispositivo** — ligado a esa arquitectura de GPU y versión de TensorRT, por lo que no se puede distribuir precompilado. Medido en Orin Nano: 461 s para YOLO11s |
 | reComputer RK3576 / RK3588 | YOLO11n-Pose | FP16 | RKNN Lite | `.rknn` se distribuye por placa; un modelo compilado para RK3588 no cargará en RK3576 |
 | reComputer R2000 Serie (R2035-12, Hailo-8) | YOLOv8s-Pose | INT8 | GStreamer + `hailonet` | HEF oficial precompilado, verificado contra un digest fijo |
 
-El despliegue de Hailo está bloqueado a **HailoRT 4.21**: el plugin de GStreamer, la biblioteca de usuario y el driver de kernel deben coincidir todos, y ningún otro proceso puede tener el acelerador.
+El despliegue de Hailo está bloqueado en **HailoRT 4.21**: el plugin de GStreamer, la biblioteca de usuario y el controlador del kernel deben coincidir todos, y ningún otro proceso puede retener el acelerador.
 
-Parámetros que cambian el comportamiento del despliegue (valor distribuido por defecto entre paréntesis):
+Parámetros que cambian el comportamiento del despliegue (valor predeterminado enviado entre paréntesis):
 
 - `max_fps` (15): tasa de procesamiento por flujo; los recuentos de flujos anteriores se derivan de ella.
-- `fall.temporal_confirmation_required` (true): entrar en "fallen" requiere confirmación del modelo temporal, el mecanismo principal que mantiene bajos los falsos positivos; si se pone en false, las características geométricas pueden confirmar una caída por sí solas.
+- `fall.temporal_confirmation_required` (true): entrar en "fallen" requiere confirmación del modelo temporal, el mecanismo principal que mantiene bajos los falsos positivos; ponlo en false y las características geométricas pueden confirmar una caída por sí solas.
 - `cooldown_sec` (3.00): una caída cuenta una vez; `fall_event` solo se dispara al entrar en el estado de caída.
 
 Panel de alarmas:
 
-- `statemachine.evidence_sec` (5.0) / `statemachine.confirm_window_sec` (60.0): la ventana de evidencia y la ventana del operador; juntas fijan la mayor parte del tiempo desde la alarma hasta la notificación.
-- `statemachine.confirm_timeout_action` (tratar como real y notificar): lo que ocurre cuando nadie responde dentro de la ventana del operador.
-- `publish_empty_frames` (true en el paquete Orin): el detector Jetson publica fotogramas vacíos cuando no hay nadie en escena; sin ellos el timeout de `no_person` no recibe entrada. Vuelve a activarlo si sustituyes la configuración de detector distribuida por la propia del dispositivo; el runtime de Hailo no tiene tal interruptor y no lo necesita.
+- `statemachine.evidence_sec` (5.0) / `statemachine.confirm_window_sec` (60.0): la ventana de evidencia y la ventana del operador; juntas establecen la mayor parte del tiempo desde la alarma hasta la notificación.
+- `statemachine.confirm_timeout_action` (treat as real and notify): lo que ocurre cuando nadie responde dentro de la ventana del operador.
+- `publish_empty_frames` (true on the Orin package): el detector Jetson publica fotogramas vacíos cuando no hay nadie a la vista; sin ellos, el tiempo de espera de `no_person` no recibe entrada. Vuelve a configurarlo si sustituyes la configuración de detector enviada por la propia del dispositivo; el runtime de Hailo no tiene tal interruptor y no lo necesita.
 
 ### Datos medidos del panel de alarmas {#alarm-path-measured}
 
-El servicio de alarmas no hace detección por sí mismo; la precisión de detección está en "Resultados de precisión" más arriba. La latencia de alarma se suma a la latencia de detección (media por plataforma 1,22–1,75 s).
+El servicio de alarmas no realiza detección por sí mismo; la precisión de detección está en "Resultados de precisión" más arriba. La latencia de alarma se suma a la latencia de detección (media por plataforma 1,22–1,75 s).
 
 | Métrica | Valor | Condiciones |
 |---|---:|---|
-| Latencia de alerta, de la marca de tiempo del evento al envío de la notificación | P50 2061 ms / P95 2093 ms | Reproducción local, un reproductor sustituyendo a las cámaras, excluyendo inferencia y red entre máquinas; 5 reproducciones de caídas, 15 FPS × 12 s cada una; 1 s de evidencia + 1 s de autoconfirmación; una sola zona, un solo flujo, webhook de loopback |
-| Retraso de detección de "sin persona" respecto al timeout configurado | P50 65 ms / P95 77 ms | Reproducción local, 3 ejecuciones, 10 FPS × 11 s, timeout de 5 s, tick de 0,1 s, sin broker |
-| Recuperación tras caída, entregas únicas correctas sobre las en cola | 3 de 3, 0 duplicados, primera entrega 96 ms después de la recuperación | Reproducción local, endpoint de webhook devolviendo 503 durante 4 s, 3 alarmas en cola, intervalo de reintento de 2 s |
-| Falsas alarmas | 0 en 0,02 horas-cámara | 72 s de reproducción en silencio, demasiado corto para una tasa |
-| De caída a webhook recibido | P50 2487 ms / P95 2751 ms | reCamera One (USB-RNDIS), fotogramas reales de `fall-detection` + alarmas de caída inyectadas a través del broker propio del dispositivo; primeras 5 de 10 inyecciones (el resto se detuvieron por el límite de tasa de notificaciones, ver degradación conocida); también se entregó una alarma real de 60 s sin actividad |
-| De caída a webhook recibido, con inferencia Hailo-8 | P50 2830 ms / P95 3061 ms (mín 2102 ms) | reComputer R2000 Serie + módulo Hailo-8 M.2, HEF oficial YOLOv8s-Pose, HailoRT 4.21.0; reproducción RTSP de un clip de caída GMDCSA-24 (640×640, 15 FPS); 10 alarmas, 1 s de evidencia + 1 s de autoconfirmación + 2 s de rearme; una sola zona, un solo flujo; las 10 dentro del plazo de notificación de 5 s |
+| Latencia de alerta, de la marca de tiempo del evento al envío de la notificación | P50 2061 ms / P95 2093 ms | Reproducción local, un reproductor sustituyendo a las cámaras, excluyendo inferencia y red entre máquinas; 5 reproducciones de caídas, 15 FPS × 12 s cada una; 1 s de evidencia + 1 s de autoconfirmación; una sola zona, un solo flujo, webhook en loopback |
+| Retraso de detección de ausencia de persona respecto al tiempo de espera configurado | P50 65 ms / P95 77 ms | Reproducción local, 3 ejecuciones, 10 FPS × 11 s, 5 s de tiempo de espera, tick de 0,1 s, sin broker |
+| Recuperación tras caída del servicio, entregas únicas correctas sobre las en cola | 3 de 3, 0 duplicados, primera entrega 96 ms después de la recuperación | Reproducción local, endpoint de webhook devolviendo 503 durante 4 s, 3 alarmas en cola, intervalo de reintento de 2 s |
+| Falsas alarmas | 0 sobre 0,02 horas-cámara | 72 s de reproducción en silencio, demasiado corto para una tasa |
+| De la caída al webhook recibido | P50 2487 ms / P95 2751 ms | reCamera One (USB-RNDIS), fotogramas reales de `fall-detection` + alarmas de caída inyectadas a través del broker propio del dispositivo; primeras 5 de 10 inyecciones (el resto se detuvieron por el límite de tasa de notificaciones, ver degradación conocida); también se entregó una alarma real de 60 s sin actividad |
+| De la caída al webhook recibido, con inferencia Hailo-8 | P50 2830 ms / P95 3061 ms (mín 2102 ms) | reComputer R2000 Serie + módulo Hailo-8 M.2, YOLOv8s-Pose HEF oficial, HailoRT 4.21.0; reproducción RTSP de un clip de caída GMDCSA-24 (640×640, 15 FPS); 10 alarmas, 1 s de evidencia + 1 s de autoconfirmación + 2 s de rearme; una sola zona, un solo flujo; las 10 dentro del plazo de notificación de 5 s |
 
-La latencia de alerta es aproximadamente la suma de las dos ventanas más unos 60 ms de envío. Las ventanas de esta tabla se acortaron; con los valores predeterminados enviados (5 s de evidencia, 60 s de operador) la misma ruta comienza en unos 65 s (derivados).
+La latencia de alerta es aproximadamente la suma de las dos ventanas más unos 60 ms de envío. Las ventanas de esta tabla se acortaron; con los valores predeterminados enviados (5 s de evidencia, 60 s de operador) la misma ruta empieza en unos 65 s (derivado).
 
-Reproducción: los tres directorios de ejecución fechados 2026-09-05, 2026-09-06 y 2026-09-08 bajo `eldercare-alarm/evaluation/runs/`; la definición de latencia está en `evaluation/measure_alert_latency.py`.
+Reproducir: los tres directorios de ejecución fechados 2026-09-05, 2026-09-06 y 2026-09-08 bajo `eldercare-alarm/evaluation/runs/`; la definición de latencia está en `evaluation/measure_alert_latency.py`.
 
-### Degradaciones conocidas
+### Degradación conocida
 
-- **Colocación de la cámara.** Las cifras anteriores provienen de una cámara fija, encuadre a media distancia, en interiores, con hombros y caderas visibles. Un montaje lateral u oblicuo a 2–3 m funciona; tomas cenitales desde arriba, planos generales de pasillos largos y una fuerte oclusión por muebles reducen la precisión.
-- **Un conjunto de datos diferente reduce el recall.** En el conjunto de datos externo RealBiomFall (34 clips, todas caídas), el recall medido es 58,8% en reCamera y 52,9% para el YOLO11m desplegado en reComputer J30 / J40; la mayoría de los fallos provienen de que el modelo de pose no detecta a la persona. En un sitio nuevo, vuelve a extraer las trayectorias a partir de metraje del propio sitio y luego vuelve a entrenar y a fijar de nuevo los pesos de decisión.
-- **El rendimiento disminuye cuando otra carga de trabajo mantiene ocupada la GPU.** Las cifras de Jetson anteriores se midieron con las cargas de trabajo co-residentes detenidas; con su propia carga de inferencia en ejecución, Orin NX midió solo 264,9 FPS agregados (306,2 FPS detenida), por debajo de Orin Nano. Orin Nano midió lo mismo en ambos casos (270,5 / 270,7 FPS) porque su carga de trabajo no usa la GPU.
-- **Las notificaciones tienen límite de frecuencia.** Como máximo 5 por cada 600 s; las alarmas más allá de eso no se notifican y no generan ningún error (a partir de la 6.ª inyección en reCamera One).
+- **Colocación de la cámara.** Las cifras anteriores provienen de una cámara fija, encuadre a media distancia, en interiores, con hombros y caderas visibles. Un montaje lateral u oblicuo a 2–3 m funciona; montajes cenitales verticales, planos amplios de pasillos largos y oclusión fuerte por muebles reducen la precisión.
+- **Un conjunto de datos diferente reduce el recall.** En el conjunto de datos externo RealBiomFall (34 clips, todas caídas), el recall medido es del 58,8% en reCamera y del 52,9% para el YOLO11m desplegado en reComputer J30 / J40; la mayoría de los fallos provienen de que el modelo de pose no detecta a la persona. En un sitio nuevo, vuelve a extraer trayectorias de metraje in situ, luego reentrena y vuelve a congelar los pesos de decisión.
+- **El rendimiento cae cuando otra carga de trabajo retiene la GPU.** Las cifras de Jetson anteriores se midieron con las cargas de trabajo co-residentes detenidas; con su propia carga de inferencia en ejecución, Orin NX midió solo 264,9 FPS agregados (306,2 FPS detenido), por debajo de Orin Nano. Orin Nano midió lo mismo en ambos casos (270,5 / 270,7 FPS) porque su carga de trabajo no usa la GPU.
+- **Las notificaciones tienen límite de tasa.** Como máximo 5 por 600 s; las alarmas más allá de eso no se notifican y no generan error (a partir de la 6.ª inyección en reCamera One).
 
 ### Próximos pasos
 
 - Ejecutar la evaluación externa RealBiomFall en las rutas RK y Hailo.
-- Grabar vídeo de campo y trazas de pose en reCamera, y usar reproducción anotada para evaluar los umbrales de decisión y volver a entrenar el perfil temporal.
+- Grabar vídeo de campo y trazas de pose en reCamera, y usar reproducción anotada para evaluar los umbrales de decisión y reentrenar el perfil temporal.
 
 ## Fuentes de datos y recursos
 
-- **GMDCSA-24 v2.1** — Tanto la evaluación de precisión como el metraje de demostración provienen de este conjunto de datos, [ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos](https://github.com/ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos), licencia MIT. Los rostros en las imágenes de demostración se han pixelado y difuminado con Gauss: la licencia cubre los derechos de autor del autor, no los derechos de imagen de los sujetos.
-- **RealBiomFall** — El subconjunto de prueba utilizado para la prueba de generalización externa, 34 clips, todas caídas, por lo que solo se informan el recall y la latencia.
-- Ninguno de los conjuntos de datos se distribuye con el repositorio `edgefallkit`; obténlos por tu cuenta para reproducir la evaluación.
+- **GMDCSA-24 v2.1**: Tanto la evaluación de precisión como el metraje de demostración provienen de este conjunto de datos, [ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos](https://github.com/ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos), licencia MIT. Los rostros en las imágenes de demostración se han pixelado y difuminado con Gauss: la licencia cubre los derechos de autor del autor, no los derechos de imagen de los sujetos.
+- **RealBiomFall**: El subconjunto de prueba utilizado para la prueba de generalización externa, 34 clips, todas caídas, por lo que solo se informan recall y latencia.
+- Ninguno de los conjuntos de datos se distribuye con el repositorio `edgefallkit`; obténlos tú mismo para reproducir la evaluación.
 - El diagrama de colocación de la cámara está dibujado internamente.

@@ -77,7 +77,7 @@ fi
 ## Phase 2 — Curated manifest validation ###################################
 phase "Phase 2: Curated manifest validation"
 if node scripts/respeaker-faq/pipeline.mjs --validate >/dev/null 2>&1; then
-  pass "pipeline --validate (29 entries, all PUBLISH, no BLOCK)"
+  pass "pipeline --validate (30 entries, all PUBLISH, no BLOCK)"
   record 'manifest' PASS
 else
   fail "pipeline --validate"

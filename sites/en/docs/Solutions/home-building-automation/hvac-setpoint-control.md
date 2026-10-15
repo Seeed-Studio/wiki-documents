@@ -22,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-23'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/solutions/hvac-setpoint-control/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -130,6 +130,11 @@ The R1100 series carries RS-485 on board, so a meter on RS-485 needs no USB adap
 
 Other prerequisites: Docker Engine 20.10 or newer, host ports 8280 and 4841 free, and at least one week of historical operation as CSV or Excel with timestamp, setpoint, measured temperature and power consumption columns.
 
+### Negative Selection Boundaries
+
+- **Local Storage Horizon**: R1124-10 (16GB eMMC) stores a short local window; if you require months of high-frequency telemetry stored on-premise for offline model retraining, choose R1125-10 (32GB).
+- **Safety Interlocks**: This gateway provides advisory setpoints; never wire it into emergency boiler or chiller safety cut-off circuits requiring certified safety controllers.
+
 ## How to deploy on site
 
 ### 1. Install the hardware: wiring
@@ -164,9 +169,6 @@ Outline:
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/batch-select-en-9bd95ba4.png" alt="Batch dispatch selection: the points covered by this batch and their current values"/>
 </div>
-
-<!-- TODO image: gateway installed in the plant room next to the unit — needs a field shoot -->
-<!-- TODO image: a physical meter and controller as wired (every capture here is behind a protocol simulator) — needs a field shoot -->
 
 **Leave Control Mode at `observe` and leave Safety Baseline Approved By blank.** While the approver is blank the baseline shows as unapproved; entering a name means that engineer signs off the safety limits.
 

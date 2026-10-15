@@ -22,11 +22,8 @@ url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # Demo de agarre visual reBot Arm B601-DM
-
-<RebotDmDocNav />
 
 <div align="center">
     <img width={800}
