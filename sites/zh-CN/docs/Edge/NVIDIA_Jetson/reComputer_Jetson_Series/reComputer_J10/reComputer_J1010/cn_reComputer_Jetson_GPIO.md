@@ -10,9 +10,11 @@ last_update:
   date: 04/12/2023
   author: Lakshantha
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/reComputer_Jetson_GPIO/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # 如何在 reComputer Jetson 开发板上使用 40 引脚 GPIO
 
@@ -214,6 +216,17 @@ sudo gpioset --mode=wait gpiochip0 85=0
 如果您想了解更多关于 **gpioset** 命令的信息，请参考：
 https://www.acmesystems.it/gpiod
 :::
+
+
+
+## 资源
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

@@ -1029,6 +1029,27 @@
     font-weight: 600;
   }
 
+  .deploy_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #76b900;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      background: #679f00;
+      box-shadow: 0 4px 14px rgba(118, 185, 0, 0.35);
+      transform: translateY(-1px);
+    }
+  }
+
   .examples_models {
     margin-bottom: 20px;
   }
@@ -1382,48 +1403,69 @@
     }
   }
 
+  @keyframes projectCardIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .project_card {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid #e0e0e0;
     text-decoration: none;
-    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    animation: projectCardIn 0.4s ease both;
 
     &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
       border-color: #76b900;
+
+      .project_image img {
+        transform: scale(1.05);
+      }
     }
   }
 
+  .project_grid .project_card:nth-child(2) { animation-delay: 0.04s; }
+  .project_grid .project_card:nth-child(3) { animation-delay: 0.08s; }
+  .project_grid .project_card:nth-child(4) { animation-delay: 0.12s; }
+  .project_grid .project_card:nth-child(5) { animation-delay: 0.16s; }
+  .project_grid .project_card:nth-child(6) { animation-delay: 0.20s; }
+
   .project_image {
-    height: 140px;
+    height: 150px;
     background: #f8f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.3s ease;
     }
   }
 
   .project_content {
-    padding: 16px;
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .project_category {
-    display: inline-block;
-    padding: 3px 8px;
-    background: #f0f0f0;
-    color: #76b900;
+    align-self: flex-start;
+    padding: 3px 9px;
+    background: rgba(118, 185, 0, 0.10);
+    color: #558c00;
     font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    border-radius: 999px;
+    margin: 0 0 2px;
   }
 
   .project_title {
@@ -1431,6 +1473,20 @@
     font-weight: 600;
     color: #1a1a1a;
     line-height: 1.4;
+    margin: 0;
+  }
+
+  .project_description {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #6b7280;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   // ========== Old Community Styles (Legacy) ==========
@@ -1563,6 +1619,214 @@
     }
   }
 
+  // ========== Seeed Jetson DevelopTool Styles ==========
+  .devtool_container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .devtool_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fcf0 100%);
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: #76b900;
+      box-shadow: 0 8px 32px rgba(118, 185, 0, 0.15);
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .devtool_info {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .devtool_header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .devtool_icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: rgba(118, 185, 0, 0.12);
+    color: #76b900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .devtool_title_group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .devtool_subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #76b900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .devtool_main_title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.3;
+  }
+
+  .devtool_description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .devtool_features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .devtool_feature_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+  }
+
+  .devtool_feature_icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
+
+  .devtool_feature_text {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .devtool_tags_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .devtool_tag {
+    padding: 4px 12px;
+    background: rgba(118, 185, 0, 0.1);
+    color: #5a9100;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 999px;
+  }
+
+  .devtool_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+  }
+
+  .devtool_cta_primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #76b900;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #5a9100;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+  }
+
+  .devtool_cta_secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: #76b900;
+      color: #76b900;
+    }
+  }
+
+  .devtool_video {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background: #f5f7fa;
+    gap: 12px;
+  }
+
+  .devtool_video_label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .devtool_video_frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+
   // ========== Dark Mode Styles ==========
   &.dark {
     // Dark Mode Page Tabs
@@ -1652,7 +1916,7 @@
     }
 
     // Dark Mode FAQ
-    .faq_card {
+    .faq_category_card {
       background: #242526;
       border-color: #303030;
 
@@ -1662,16 +1926,25 @@
       }
     }
 
-    .faq_title {
+    .faq_category_title {
       color: #f5f6f7;
     }
 
-    .faq_desc {
+    .faq_category_item {
       color: #a0a0a0;
+      border-bottom-color: #343536;
+
+      &:hover {
+        color: #76b900;
+      }
     }
 
-    .faq_link {
+    .faq_view_all {
       color: #76b900;
+    }
+
+    .faq_empty {
+      color: #666;
     }
 
     // Dark Mode Search
@@ -1745,6 +2018,7 @@
 
       &:hover {
         border-color: #76b900;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
       }
     }
 
@@ -1753,12 +2027,16 @@
     }
 
     .project_category {
-      background: #303030;
+      background: rgba(118, 185, 0, 0.16);
       color: #76b900;
     }
 
     .project_title {
       color: #f5f6f7;
+    }
+
+    .project_description {
+      color: #9ca3af;
     }
 
     .hero_section {
@@ -2224,6 +2502,77 @@
     .bsp_main_card:hover .bsp_arrow {
       background: linear-gradient(135deg, #76b900 0%, #5a9400 100%);
     }
+
+    // Dark Mode Seeed Jetson DevelopTool
+    .devtool_card {
+      background: linear-gradient(135deg, #242526 0%, #1f2b18 100%);
+      border-color: #303030;
+
+      &:hover {
+        border-color: #76b900;
+        box-shadow: 0 8px 32px rgba(118, 185, 0, 0.25);
+      }
+    }
+
+    .devtool_icon {
+      background: rgba(118, 185, 0, 0.18);
+      color: #8bc34a;
+    }
+
+    .devtool_main_title {
+      color: #f5f6f7;
+    }
+
+    .devtool_subtitle {
+      color: #8bc34a;
+    }
+
+    .devtool_description {
+      color: #b0b0b0;
+    }
+
+    .devtool_feature_item {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .devtool_feature_text {
+      color: #ccc;
+    }
+
+    .devtool_tag {
+      background: rgba(118, 185, 0, 0.2);
+      color: #8bc34a;
+    }
+
+    .devtool_cta_secondary {
+      background: #1b1b1d;
+      color: #f5f6f7;
+      border-color: #303030;
+
+      &:hover {
+        border-color: #76b900;
+        color: #8bc34a;
+      }
+    }
+
+    .devtool_video {
+      background: #1b1b1d;
+    }
+
+    .devtool_video_label {
+      color: #a0a0a0;
+    }
+
+    .beginner_cta_button_secondary {
+      background: #1b1b1d;
+      color: #f5f6f7;
+      border-color: #303030;
+
+      &:hover {
+        border-color: #76b900;
+        color: #8bc34a;
+      }
+    }
   }
 
   // ========== Pagination ==========
@@ -2286,9 +2635,9 @@
   }
 
   // ========== FAQ Styles ==========
-  .faq_grid {
+  .faq_category_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 16px;
 
     @media (max-width: 768px) {
@@ -2296,59 +2645,84 @@
     }
   }
 
-  .faq_card {
+  .faq_category_card {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 16px;
+    flex-direction: column;
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    padding: 20px;
-    text-decoration: none;
+    padding: 18px 20px 14px;
     transition: all 0.2s ease;
 
     &:hover {
       border-color: #76b900;
+      box-shadow: 0 4px 16px rgba(118, 185, 0, 0.08);
     }
   }
 
-  .faq_icon {
+  .faq_category_header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .faq_category_icon {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #76b900;
     flex-shrink: 0;
-    margin-top: 2px;
   }
 
-  .faq_content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 0;
-  }
-
-  .faq_title {
-    font-size: 0.95rem;
+  .faq_category_title {
+    font-size: 1rem;
     font-weight: 600;
     color: #1a1a1a;
-    margin-bottom: 6px;
-    line-height: 1.4;
+    line-height: 1.3;
   }
 
-  .faq_desc {
-    font-size: 0.8rem;
-    color: #666;
-    line-height: 1.4;
-    margin-bottom: 12px;
+  .faq_category_items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     flex: 1;
   }
 
-  .faq_link {
+  .faq_category_item {
+    display: block;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.45;
+    border-bottom: 1px dashed #e8e8e8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #76b900;
+    }
+  }
+
+  .faq_view_all {
+    display: inline-block;
+    margin-top: 12px;
     color: #76b900;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .faq_empty {
+    text-align: center;
+    color: #888;
     font-size: 0.9rem;
-    font-weight: 500;
+    padding: 40px 16px;
   }
 
   // ========== Flash Guide Promo (inside Devices Section) ==========
@@ -2588,11 +2962,13 @@
     border: 1px solid #e0e0e0;
     border-radius: 12px;
     transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
 
     &:hover {
       border-color: #76b900;
       transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(118, 185, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(118, 185, 0, 0.15);
     }
   }
 
@@ -2658,6 +3034,40 @@
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(118, 185, 0, 0.3);
+    }
+  }
+
+  .beginner_cta_group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    > a {
+      flex: 1 1 0;
+      min-width: 220px;
+    }
+  }
+
+  .beginner_cta_button_secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: #fff;
+    color: #1a1a1a;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: #76b900;
+      color: #76b900;
+      box-shadow: 0 4px 12px rgba(118, 185, 0, 0.15);
     }
   }
 
@@ -2926,4 +3336,9 @@
       }
     }
   }
+}
+
+// J601 demo grid embedded in wiki doc pages
+.j601_demo_embed {
+  margin: 24px 0;
 }

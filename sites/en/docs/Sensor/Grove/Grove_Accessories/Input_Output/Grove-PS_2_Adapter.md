@@ -10,7 +10,7 @@ last_update:
   date: 01/09/2022
   author: gunengyu
 createdAt: '2023-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-31'
 url: https://wiki.seeedstudio.com/Grove-PS_2_Adapter/
 ---
  ![](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/img/PS221_sensor.jpg)

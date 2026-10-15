@@ -10,7 +10,7 @@ last_update:
   date: 9/3/2024
   author: Yaohui
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/cn/recomputer_j20_with_jetson_getting_start/
 ---
 

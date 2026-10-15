@@ -11,7 +11,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/DSO_Nano/
 ---
 The DSO Nano is a one-channel handheld oscilloscope, suitable for quick field measurements and more. You will find it very simple to use, but it is nonetheless a quite amazing little tool.

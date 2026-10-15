@@ -11,7 +11,7 @@ last_update:
   date: 04/04/2023
   author: Peter Pan
 createdAt: '2023-04-05'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/
 ---
 # reTerminal DM Getting Started with Node Red

@@ -11,7 +11,7 @@ last_update:
   date: 5/28/2025
   author: ZhuYaoHui
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/ja/isaac_ros_apriltag/
 ---
 

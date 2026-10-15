@@ -7,19 +7,17 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseC
 slug: /SenseCAP_T2000_tracker/Introduction
 sku: 100082900,100057727,100087298
 last_update:
-  date: 1/5/2026
+  date: 4/2/2026
   author: Janet
 createdAt: '2025-11-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/
 ---
-
-
 # SenseCAP T2000 Tracker Introduction
 
 ## Overview
 
-[**SenseCAP T2000**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), an industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection, a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed. The T2000-A and T2000-B support long-lasting battery operation, while the solar-powered T2000-C with a rechargeable battery ensures continuous outdoor use, making the series ideal for long-term, maintenance-free asset tracking.
+[**SenseCAP T2000**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), an industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection(T2000-A/B models are now ATEX certified), a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed. The T2000-A and T2000-B support long-lasting battery operation, while the solar-powered T2000-C with a rechargeable battery ensures continuous outdoor use, making the series ideal for long-term, maintenance-free asset tracking.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.png" alt="pir" width={800} height="auto" /></p>
 
@@ -39,7 +37,7 @@ url: https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/
 | **Power Supply** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>Built-in battery</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>Built-in battery</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>Built-in rechargeable battery + 0.5W Solar Panel</div> |
 | **Battery Capacity** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>8000mAh</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>8000mAh</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>4000mAh</div> |
 | **Positioning Mode** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li><li>WiFi</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li></ul></div></div> |
-| **Protection Rating** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><ul style={{"margin":"0","padding":"0","listStylePosition":"inside"}}><li>IP67</li></ul></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><ul style={{"margin":"0","padding":"0","listStylePosition":"inside"}}><li>IP67</li></ul></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><ul style={{"margin":"0","padding":"0","listStylePosition":"inside"}}><li>IP67</li></ul></div> |
+| **Protection Rating** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><ul style={{"margin":"0","padding":"0","listStylePosition":"inside"}}><li>IP67</li><li>ATEX</li></ul></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><ul style={{"margin":"0","padding":"0","listStylePosition":"inside"}}><li>IP67</li><li>ATEX</li></ul></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><ul style={{"margin":"0","padding":"0","listStylePosition":"inside"}}><li>IP67</li></ul></div> |
 :::
 
 ## Features
@@ -157,7 +155,7 @@ SenseCAP T2000 Series Asset Trackers are the ideal solution for managing high-va
 We provide three different solutions for users, and comes in three versions: A, B and C.
 
 - **T2000-A/T2000-B:**
-Designed for extreme environments with a robust 8000mAh built-in battery, and IP67-rated protection. Both support GNSS and Bluetooth positioning, with the T2000-B offering expanded positioning capabilities through the addition of WiFi scanning technology.
+Designed for extreme environments with a robust 8000mAh built-in battery, and IP67-rated and ATEX protection. Both support GNSS and Bluetooth positioning, with the T2000-B offering expanded positioning capabilities through the addition of WiFi scanning technology.
 
 - **T2000-C:**
 Combining a 4000mAh rechargeable battery with a 0.5W solar panel for extended operational life. It supports GNSS and Bluetooth positioning and maintains reliable performance in temperatures from -20°C to 60°C, all while providing the same IP67 protection as the other models.
@@ -179,6 +177,7 @@ Combining a 4000mAh rechargeable battery with a 0.5W solar panel for extended op
 | Protection Rating | IP67 |
 | Dimensions | 117 × 65 × 30 mm |
 | Weight | 180g |
+| Certification | FCC, CE, ATEX |
 
 <br />
 <br />
@@ -194,6 +193,7 @@ Combining a 4000mAh rechargeable battery with a 0.5W solar panel for extended op
 | Protection Rating | IP67 |
 | Dimensions | 117 × 65 × 30 mm |
 | Weight | 180g |
+| Certification | FCC, CE |
 
 ## Tech Support & Product Discussion
 

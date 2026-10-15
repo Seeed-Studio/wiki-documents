@@ -9,7 +9,7 @@ last_update:
   date: 12/07/2023
   author: Parker
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/H28K_Datasheet/
 ---
 

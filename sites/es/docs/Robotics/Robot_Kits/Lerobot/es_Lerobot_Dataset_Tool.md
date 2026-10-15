@@ -1,6 +1,6 @@
 ---
 description: Este wiki cubre las utilidades del conjunto de datos de LeRobot, incluyendo eliminar episodios, fusionar conjuntos de datos y más.
-title: Herramienta de Conjunto de Datos de LeRobot
+title: Herramienta de Conjunto de Datos SO-Arm
 keywords:
   - Lerobot
   - Hugging Face
@@ -13,10 +13,9 @@ last_update:
   date: 2/11/2026
   author: ZhangJiaQuan
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/es/lerobot_dataset_tool/
 ---
 

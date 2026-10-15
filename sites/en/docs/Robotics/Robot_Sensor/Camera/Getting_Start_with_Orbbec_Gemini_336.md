@@ -15,10 +15,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp
 slug: /orbbec_gemini336
 last_update:
-  date: 2025-08-22T00:00:00.000Z
+  date: 2025-08-22
   author: Zibo
 createdAt: '2025-12-01'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/orbbec_gemini336/
 ---
 
@@ -32,7 +32,7 @@ The Gemini 336 is a brand-new addition to the Gemini 330 series. Building on the
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-336-3D-Camera-3D-p-6662.html" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 

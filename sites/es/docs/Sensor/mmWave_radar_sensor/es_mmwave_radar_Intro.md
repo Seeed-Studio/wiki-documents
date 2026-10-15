@@ -10,11 +10,11 @@ last_update:
   date: 03/28/2025
   author: Hugo
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-05-12'
 url: https://wiki.seeedstudio.com/es/mmwave_radar_Intro/
 ---
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp" style={{width:'auto', height:'auto'}}/></div>
 
 Bienvenido a descubrir los Sensores de Radar mmWave de Seeed Studio. Esta página está diseñada para ser una fuente integral de información, guiándote a través de todos los aspectos de estos sensores.
 

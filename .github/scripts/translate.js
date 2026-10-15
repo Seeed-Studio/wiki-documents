@@ -1,7 +1,13 @@
 const OpenAI = require('openai');
 const fs = require('fs').promises;
 const path = require('path');
-const { execSync } = require('child_process');
+const { execSync, execFileSync } = require('child_process');
+const {
+  normalizeLf,
+  analyzeFrontMatterOnlyChange,
+  canReplaceFrontMatter,
+  replaceFrontMatter,
+} = require('./frontmatter-incremental');
 
 // 使用 js-yaml 解析 Front Matter（若不可用，则回退正则）
 let yaml;
@@ -31,6 +37,11 @@ const LANGUAGE_CONFIG = {
     folder: 'es',
     name: 'Español',
     pathPrefix: '/es'
+  },
+  'pt-BR': {
+    folder: 'pt-BR',
+    name: 'Português (Brasil)',
+    pathPrefix: '/pt-br'
   }
 };
 
@@ -62,7 +73,7 @@ const PRESERVE_TERMS = {
 };
 
 // 术语表：强制把英文术语译成指定目标语言短语（优先从 .github/scripts/glossary.json 读取；不存在则使用内置空表）
-let GLOSSARY = { "zh-CN": {}, "ja": {}, "es": {} };
+let GLOSSARY = { "zh-CN": {}, "ja": {}, "es": {}, "pt-BR": {} };
 (async () => {
   try {
     const gPath = path.join(__dirname, 'glossary.json');
@@ -380,6 +391,8 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 标记后的所有缩进（空格或制表符）
    - URL链接
    - HTML / JSX 标签的结构与属性（不要新增、删除或重排标签；不要修改属性名或属性值）
+   - 标题末尾显式自定义锚点（例如 \`{#mechanical-cad-files}\`）是机器标识：必须逐字符保留，不得翻译、改写或重新生成
+   - FAQ 界面文案中的占位符（例如 \`%count%\`、\`%total%\`、\`%date%\`、\`%skus%\`）必须逐字符保留
 
    **代码相关规则：**
    - 代码块内容（\`\`\`之间的内容）必须完全保持原样
@@ -523,7 +536,7 @@ ${glossaryPairs}
     ' 输出；不得混用其它自然语言。若发生混用，改译为目标语言。\n';
   prompt = prompt.replace('<translation_rules>', '<translation_rules>\n' + LANGUAGE_GUARD);
 
-  // === 按目标语言替换 <example> 为本地化示例（仅 es / ja 覆盖；默认保留中文示例） ===
+  // === 按目标语言替换 <example> 为本地化示例（仅 es / ja / pt-BR 覆盖；默认保留中文示例） ===
   function getLocalizedExampleBlock(lang) {
     if (lang === 'es') {
       return (
@@ -609,6 +622,50 @@ Salida incorrecta (prohibido):
 [LINE_10] <TabItem value='Install through host'>        ❌ label がない場合、value は翻訳する必要がある
 [LINE_11] [イントロ](#/Sensor/Guide/ハードウェア概要)   ❌ 「#」より前の URL 構造を変更しない
 [LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a> ❌ 中国語混在
+</example>`
+      );
+    }
+
+    if (lang === 'pt-BR') {
+      return (
+`<example>
+Entrada:
+[LINE_0] ## Getting Started
+[LINE_1][EMPTY_LINE]
+[LINE_2] This is a tutorial about:
+[LINE_3]   - First item
+[LINE_4]   - [BLE Scanner](#ble-scanner)
+[LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
+[LINE_9] <TabItem value="For E1002" label="For E1002">
+[LINE_10] <TabItem value='Install through host'>
+[LINE_11] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
+
+Saída correta:
+[LINE_0] ## Introdução
+[LINE_1][EMPTY_LINE]
+[LINE_2] Este é um tutorial sobre:
+[LINE_3]   - Primeiro item
+[LINE_4]   - [Scanner BLE](#BLE-Scanner)
+[LINE_5]     - Item aninhado
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+[LINE_7] Clique em "Settings" no aplicativo (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Central do Desenvolvedor</span></a>
+[LINE_9] <TabItem value="For E1002" label="Para E1002">
+[LINE_10] <TabItem value='Instalar pelo host'>
+[LINE_11] Veja mais: [Introdução](/Sensor/Guide/#visão-geral-do-hardware)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#Primeiros-passos">Open</a>
+
+Saída incorreta (proibido):
+[LINE_3] - Primeiro item                              ❌ Recuo perdido
+[LINE_4]   - [Scanner BLE](#BLE Scanner)               ❌ Espaço no fragmento
+[LINE_9] <TabItem value="Para E1002" label="Para E1002"> ❌ Com label, não alterar value
+[LINE_10] <TabItem value='Install through host'>         ❌ Sem label, value deve ser traduzido
+[LINE_11] [Introdução](#/Sensor/Guide/visão-geral-do-hardware) ❌ Não alterar nada antes de "#"
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a> ❌ Não misturar chinês
 </example>`
       );
     }
@@ -749,7 +806,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
         const response = await openai.chat.completions.create({
-          model: 'gpt-5.1-2025-11-13',
+          model: 'gpt-5.1',
           max_completion_tokens: 20000,
           temperature: 0,
           messages: [
@@ -774,10 +831,10 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})...`);
+      console.log(`📡 调用ChatGPT API (尝试 ${attempt}/${maxRetries})...`);
 
       const response = await openai.chat.completions.create({
-        model: 'gpt-5.1-2025-11-13',
+        model: 'gpt-5.1',
         max_completion_tokens: 20000,
         temperature: 0,
         messages: [
@@ -851,12 +908,12 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
     .join('\n');
 
   const cleanPathPrefix = pathPrefix.startsWith('/') ? pathPrefix.slice(1) : pathPrefix;
-  const localeFolder = LANGUAGE_CONFIG[targetLang].folder;
 
   const langFilePrefix =
     targetLang === 'zh-CN' ? 'cn_' :
     targetLang === 'ja'    ? 'ja_' :
-    targetLang === 'es'    ? 'es_' : '';
+    targetLang === 'es'    ? 'es_' :
+    targetLang === 'pt-BR' ? 'pt_' : '';
 
   return `你是一个专业的技术文档翻译专家。请将以下 _category_.yml 文件从英文翻译成${langName}。
 
@@ -881,9 +938,8 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
      - 目标语言的 id 按下面的公式改写：
        1. 保留中间目录 A/B/C 不变
        2. 把最后一段 F 改成 "${langFilePrefix}F"
-       3. 最前面再加上语言前缀 "${localeFolder}/"
-       4. 也就是：英文 id = "A/B/C/F"
-          目标语言 id = "${localeFolder}/A/B/C/${langFilePrefix}F"
+       3. 也就是：英文 id = "A/B/C/F"
+          目标语言 id = "A/B/C/${langFilePrefix}F"
 5. **术语保护**：
 ${termsList}
 
@@ -944,7 +1000,7 @@ function processInternalLinks(content, targetLang) {
   
   // 处理各种链接格式
   content = content.replace(
-    /https:\/\/wiki\.seeedstudio\.com\/((?!zh-CN|ja|es|cn)[^#\s"')]*)/gi,
+    /https:\/\/wiki\.seeedstudio\.com\/((?!zh-CN|ja|es|pt-BR|cn|pt-br)[^#\s"')]*)/gi,
     (match, path) => {
       const cleanPath = path.startsWith('/') ? path.slice(1) : path;
       return `https://wiki.seeedstudio.com${pathPrefix}/${cleanPath}`;
@@ -954,7 +1010,7 @@ function processInternalLinks(content, targetLang) {
   content = content.replace(
     /<a\s+([^>]*\s+)?href="(\/[^"]*)"([^>]*)>/gi, 
     (match, beforeAttrs, url, afterAttrs) => {
-      if (url.startsWith('http') || url.match(/^\/(zh-CN|ja|es|cn)\//)) {
+      if (url.startsWith('http') || url.match(/^\/(zh-CN|ja|es|pt-BR|cn|pt-br)\//)) {
         return match;
       }
       const newUrl = pathPrefix + url;
@@ -967,7 +1023,7 @@ function processInternalLinks(content, targetLang) {
   content = content.replace(
     /\[([^\]]*)\]\((\/[^)]*)\)/gi,
     (match, text, url) => {
-      if (url.startsWith('http') || url.match(/^\/(zh-CN|ja|es|cn)\//)) {
+      if (url.startsWith('http') || url.match(/^\/(zh-CN|ja|es|pt-BR|cn|pt-br)\//)) {
         return match;
       }
       const newUrl = pathPrefix + url;
@@ -1115,7 +1171,8 @@ function generateTargetPath(originalPath, targetLang) {
   
   const langPrefix = targetLang === 'zh-CN' ? 'cn_' : 
                     targetLang === 'ja' ? 'ja_' : 
-                    targetLang === 'es' ? 'es_' : '';
+                    targetLang === 'es' ? 'es_' :
+                    targetLang === 'pt-BR' ? 'pt_' : '';
   
   const newFileName = langPrefix + parsedPath.name + parsedPath.ext;
   const newRelativePath = path.join(parsedPath.dir, newFileName);
@@ -1341,6 +1398,118 @@ async function translateFile(filePath, targetLang) {
     console.error(`❌ 文件翻译失败 ${filePath}: ${error.message}`);
     translationStatus.failed++;
     return { success: false, error: error.message, path: filePath };
+  }
+}
+
+
+// Front Matter-only 修改走轻量路径：
+// - 正文变化 -> 完全沿用原 translateFile()
+// - 仅 Front Matter 变化 -> 只翻译 Front Matter，并保留目标语言正文
+async function translateModifiedFile(filePath, targetLang, baseSha) {
+  if (isProtectedPath(filePath) || filePath.endsWith('_category_.yml')) {
+    return translateFile(filePath, targetLang);
+  }
+
+  let currentContent;
+  try {
+    currentContent = normalizeLf(await fs.readFile(filePath, 'utf8'));
+  } catch (error) {
+    console.warn(`⚠️ 无法读取当前文件，回退全文翻译: ${filePath}: ${error.message}`);
+    return translateFile(filePath, targetLang);
+  }
+
+  const fmText = extractFrontMatter(currentContent);
+  const fmObj = parseFrontMatterObj(fmText);
+  if (shouldSkipLangByFrontMatter(fmObj, targetLang)) {
+    return translateFile(filePath, targetLang);
+  }
+
+  let baseContent;
+  try {
+    baseContent = execFileSync('git', ['show', `${baseSha}:${filePath}`], {
+      encoding: 'utf8',
+      maxBuffer: 20 * 1024 * 1024,
+    });
+  } catch (error) {
+    console.log(`ℹ️ 无法读取 base 版本，回退全文翻译: ${filePath}`);
+    return translateFile(filePath, targetLang);
+  }
+
+  const analysis = analyzeFrontMatterOnlyChange(baseContent, currentContent);
+  if (!analysis) {
+    return translateFile(filePath, targetLang);
+  }
+
+  const targetPath = generateTargetPath(filePath, targetLang);
+
+  let targetContent;
+  try {
+    // Front Matter-only 更新时，优先使用 source PR 的 base SHA 上的目标语言文档。
+    // 这样即使 contributor 的 fork 很久没有同步，也不会把旧版译文正文带回翻译 PR。
+    targetContent = normalizeLf(
+      execFileSync('git', ['show', `${baseSha}:${targetPath}`], {
+        encoding: 'utf8',
+        maxBuffer: 20 * 1024 * 1024,
+      })
+    );
+  } catch (error) {
+    // 理论上已有文档的修改应该能从 base SHA 取到目标译文。
+    // 如果 base SHA 上确实不存在（例如历史缺失译文），再兼容读取当前工作区。
+    try {
+      targetContent = normalizeLf(await fs.readFile(targetPath, 'utf8'));
+      console.log(`ℹ️ base SHA 上未找到目标语言文件，回退读取当前工作区: ${targetPath}`);
+    } catch (readError) {
+      console.log(`ℹ️ 目标语言文件不存在，回退全文翻译: ${targetPath}`);
+      return translateFile(filePath, targetLang);
+    }
+  }
+
+  if (!canReplaceFrontMatter(targetContent)) {
+    console.log(`ℹ️ 目标语言 Front Matter 无法安全识别，回退全文翻译: ${targetPath}`);
+    return translateFile(filePath, targetLang);
+  }
+
+  console.log(`⚡ 仅 Front Matter 发生变化: ${filePath} -> ${targetLang}`);
+  console.log(`   正文保持现有译文，不重新发送给模型`);
+  translationStatus.total++;
+
+  try {
+    const translatedResult = await translateWithClaude(
+      analysis.frontMatter,
+      targetLang,
+      3,
+      false,
+      null,
+      false,
+      false
+    );
+
+    const updatedContent = replaceFrontMatter(targetContent, translatedResult.text);
+    if (!updatedContent) {
+      throw new Error('无法安全替换目标语言 Front Matter');
+    }
+
+    await fs.writeFile(targetPath, updatedContent, 'utf8');
+
+    console.log(`✅ Front Matter 增量翻译完成: ${targetPath}`);
+    translationStatus.completed++;
+
+    return {
+      success: true,
+      path: targetPath,
+      action: 'translated',
+      translationMode: 'frontmatter_only',
+    };
+  } catch (error) {
+    console.error(`❌ Front Matter 增量翻译失败 ${filePath}: ${error.message}`);
+    translationStatus.failed++;
+
+    return {
+      success: false,
+      error: error.message,
+      path: filePath,
+      action: 'frontmatter_update_failed',
+    };
   }
 }
 
@@ -1591,10 +1760,16 @@ async function main() {
     const langConfig = LANGUAGE_CONFIG[lang];
     console.log(`\n📄 开始处理 ${langConfig.name}...`);
     
-    // 处理新增和修改的文件
-    const filesToTranslate = [...operations.added, ...operations.modified];
-    for (const file of filesToTranslate) {
+    // 新增文件完全沿用原来的全文翻译逻辑
+    for (const file of operations.added) {
       const result = await translateFile(file, lang);
+      allResults.push(result);
+    }
+
+    // 修改文件先判断是否仅 Front Matter 变化。
+    // 正文有任何变化时仍然调用原来的 translateFile。
+    for (const file of operations.modified) {
+      const result = await translateModifiedFile(file, lang, baseSha);
       allResults.push(result);
     }
     

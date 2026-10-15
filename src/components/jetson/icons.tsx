@@ -240,3 +240,9 @@ export const HelpCircleIcon: React.FC<IconProps> = ({ className, size = 80 }) =>
     <path d="M12 17h.01" />
   </svg>
 );
+
+export const CloudIcon: React.FC<IconProps> = ({ className, size = 24 }) => (
+  <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M17.5 19c0-1.7-1.3-3-3-3h-11a3 3 0 0 1-3-3c0-1.6 1.2-2.9 2.8-3a5 5 0 0 1 9.4-1.6 3 3 0 0 1 4.8 2.4c1.4.4 2.5 1.7 2.5 3.2 0 1.7-1.3 3-3 3z" />
+  </svg>
+);

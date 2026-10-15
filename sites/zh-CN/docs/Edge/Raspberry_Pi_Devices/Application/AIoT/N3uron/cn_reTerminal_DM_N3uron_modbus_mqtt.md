@@ -14,7 +14,7 @@ last_update:
   date: 5/6/2024
   author: Kasun Thushara and Xabier Fernández
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/cn/reTerminalDM_N3uron_modbus_mqtt/
 ---
 ## 介绍

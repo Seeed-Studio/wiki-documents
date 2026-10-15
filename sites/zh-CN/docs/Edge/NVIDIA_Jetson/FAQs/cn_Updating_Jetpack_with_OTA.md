@@ -10,7 +10,7 @@ last_update:
   date: 3/19/2025
   author: Youjiang
 createdAt: '2025-03-20'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/cn/updating_jetpack_with_ota/
 ---
 

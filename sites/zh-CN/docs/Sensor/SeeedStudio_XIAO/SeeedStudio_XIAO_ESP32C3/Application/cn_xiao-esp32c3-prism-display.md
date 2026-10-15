@@ -10,7 +10,7 @@ last_update:
   date: 02/01/2024
   author: timo614
 createdAt: '2024-11-13'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/cn/xiao-esp32c3-prism-display/
 ---
 

@@ -14,7 +14,7 @@ last_update:
   date: 12/20/2024
   author: Kasun Thushara
 createdAt: '2024-12-23'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/tcp_ip_raspberry_pi_4g_lte_hat/
 ---
 

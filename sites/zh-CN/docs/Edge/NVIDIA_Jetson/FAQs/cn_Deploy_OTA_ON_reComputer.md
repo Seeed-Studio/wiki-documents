@@ -13,7 +13,7 @@ last_update:
   date: 12/05/2025
   author: Zibo
 createdAt: '2025-12-08'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-09'
 url: https://wiki.seeedstudio.com/cn/deploy_ota_on_recomputer/
 ---
 

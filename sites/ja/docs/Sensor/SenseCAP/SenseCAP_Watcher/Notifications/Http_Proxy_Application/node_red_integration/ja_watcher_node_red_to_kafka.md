@@ -10,7 +10,7 @@ last_update:
   date: 07/24/2024
   author: Allen
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-24'
 url: https://wiki.seeedstudio.com/ja/watcher_node_red_to_kafka/
 ---
 

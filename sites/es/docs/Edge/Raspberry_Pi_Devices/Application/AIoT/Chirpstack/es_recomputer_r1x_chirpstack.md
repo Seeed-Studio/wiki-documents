@@ -11,7 +11,7 @@ last_update:
   date: 9/18/2025
   author: Kasun Thushara
 createdAt: '2025-09-19'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-20'
 url: https://wiki.seeedstudio.com/es/chirpstack_lora_gateway_r1x00/
 ---
 

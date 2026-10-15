@@ -11,7 +11,7 @@ last_update:
   date: 2025/5/28
   author: zhuyaohui
 createdAt: '2025-05-28'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/install_isaacros/
 ---
 

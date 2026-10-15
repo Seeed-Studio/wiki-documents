@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: '应用'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reterminal_d10xx_applications
+link:
+  type: generated-index
+  slug: reterminal_d10xx_applications
+  title: reTerminal D 系列应用
+  description: 本文是 reTerminal D 系列应用的汇总页面。

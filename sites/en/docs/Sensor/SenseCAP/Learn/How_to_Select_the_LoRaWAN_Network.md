@@ -9,7 +9,7 @@ last_update:
   date: 1/9/2023
   author: Jessie
 createdAt: '2024-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/select_lorawan_network/
 ---
 

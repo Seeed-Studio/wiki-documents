@@ -9,7 +9,7 @@ last_update:
   date: 12/11/2024
   author: Joshua Lee
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/how-to-distinguish-respeaker_2-mics_pi_hat-hardware-revisions/
 ---
 

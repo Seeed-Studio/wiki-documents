@@ -15,7 +15,7 @@ last_update:
   author: Jason
 sidebar_position: 3
 createdAt: '2025-07-28'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_bluetooth_usage/
 ---
 

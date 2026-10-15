@@ -10,7 +10,7 @@ last_update:
   date: 08/28/2023
   author: Matthew
 createdAt: '2023-08-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/Grove_Wio_E5_P2P/
 ---
 

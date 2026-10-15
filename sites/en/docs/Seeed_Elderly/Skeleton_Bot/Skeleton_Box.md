@@ -9,7 +9,7 @@ last_update:
   date: 01/20/2023
   author: Matthew
 createdAt: '2023-02-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/Skeleton_Box/
 ---
 

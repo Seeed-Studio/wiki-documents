@@ -2,4 +2,4 @@ position: 3 # float position is supported
 label: 'トレーニング'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
-className: sensecraft_ai_Tutorials_Training
+className: sensecraft_ai_Models_Training

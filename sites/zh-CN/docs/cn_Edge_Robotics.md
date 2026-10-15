@@ -1,718 +1,321 @@
 ---
-description: 本主题介绍 Seeed Studio 的机器人产品文档与学习课程。
-title: 机器人
+description: 本主题介绍 Seeed Studio 的机器人产品文档与学习路径。
+title: AI Robotics Wiki
+hide_title: true
 keywords:
   - robotics
   - nvidia
   - ros
   - isaac
+  - lerobot
   - learning
   - reinforcement learning
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /robotics_page
 last_update:
-  date: 05/29/2025
+  date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-30'
 url: https://wiki.seeedstudio.com/cn/robotics_page/
 ---
 
-# 🤖 机器人
+import '/src/css/robotics-page-style.css';
+import RoboticsPageSearch from '@site/src/components/robotics/RoboticsPageSearch';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import RotatingProductShowcase from '@site/src/components/robotics/RotatingProductShowcase';
+import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
-> *"今天的科学就是明天的技术。" - Edward Teller*
+<h1 className="robotics-page-title">AI Robotics Wiki</h1>
 
-<div className="robotic-tab-container">
-  
-  <input type="radio" id="tab-hardware" name="robo-tabs" defaultChecked className="tab-input-hidden" />
-  <input type="radio" id="tab-learning" name="robo-tabs" className="tab-input-hidden" />
+<div className="robotics-page">
+  <RoboticsQuote />
 
-  <!-- 顶部 Tab 切换条 -->
-  <div className="tab-nav-wrapper">
-    <nav className="tab-nav">
-      <label htmlFor="tab-hardware" className="tab-item">
-        <span className="icon">📦</span>
-        <span className="text">硬件文档库</span>
-      </label>
-      <label htmlFor="tab-learning" className="tab-item">
-        <span className="icon">🎓</span>
-        <span className="text">学习中心</span>
-        <span className="badge">New</span>
-      </label>
-      <div className="tab-slider"></div>
-    </nav>
+  <section className="hero-panel">
+    <div>
+      <h2>不知道从哪篇文档开始？先选择你手上的机器人套件</h2>
+    </div>
+  </section>
+
+  <RoboticsPageSearch />
+
+  <div className="robotics-quicklinks">
+    <a href="https://279070161-sketch.github.io/reBot/" target="_blank" rel="noopener noreferrer">🚀 产品主页</a>
+    <GitHubStarButton owner="Seeed-Projects" repo="reBot-DevArm" />
+    <a href="https://www.seeedstudio.com/Robotics-c-2427.html" target="_blank" rel="noopener noreferrer">🛒 购买</a>
   </div>
 
-  <!-- ==================== Tab 1: 硬件文档 (保持原样但修复MDX语法) ==================== -->
-  <div className="tab-content content-hardware">
+  <section id="robot-kits" className="section-block">
+    <RotatingProductShowcase>
 
-    <div className="quick-nav-container">
-      <nav className="quick-nav">
-        <a href="#robot-kits" className="nav-item">
-          <span className="icon">📦</span>
-          <span className="text">机器人套件</span>
-          <div className="hover-effect"></div>
-        </a>
-        <a href="#actuators" className="nav-item">
-          <span className="icon">⚙️</span>
-          <span className="text">关节执行器</span>
-          <div className="hover-effect"></div>
-        </a>
-        <a href="#sensors" className="nav-item">
-          <span className="icon">👁️</span>
-          <span className="text">传感器</span>
-          <div className="hover-effect"></div>
-        </a>
-        <a href="#software" className="nav-item">
-          <span className="icon">💻</span>
-          <span className="text">软件</span>
-          <div className="hover-effect"></div>
-        </a>
-      </nav>
+<details id="rebot-rs" className="product-card rebot product-card--cover">
+  <summary className="product-head">
+    <h3>reBot-RS 机械臂</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-group">
+      <h4>快速上手与 SDK</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>reBot-RS 快速入门</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS 与 LeRobot</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS 与 Pinocchio</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>reBot-RS 电机 SDK</b></div></a>
+        <a className="step-card" href="/cn/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>无码化上手VLA：SenseCraft Robotics 平台</b></div></a>
+      </div>
     </div>
-
-    <div className="nav-grid">
-
-      <h2 id="robot-kits">📦 机器人套件</h2>
-
-      <div className="category-group">
-        <div className="category-card robot-kits">
-
-          <h3>🤗 Reachy</h3>
-          <div className="card-container">
-              <a href="/cn/reachymini_getting_started" className="content-card">
-                <span className="text">Reachy Mini上手使用</span>
-                <span className="tag recommended">New</span>
-              </a>
-          </div>
-
-          <h3>🤗 SO-Arm机械臂</h3>
-          <div className="card-container">
-              <a href="/cn/lerobot_so100m_new/" className="content-card">
-                <span className="text">SO100/101 机械臂</span>
-              </a>
-              <a href="/cn/simulate_soarm101_by_leisaac/" className="content-card">
-                <span className="text">SO10x 机械臂与 LeIsaac</span>
-              </a>
-              <a href="/cn/control_robotic_arm_via_phospho/" className="content-card">
-                <span className="text">Phospho Lerobot</span>
-              </a>
-              <a href="/cn/training_soarm101_policy_with_isaacLab/" className="content-card">
-                  <span className="text">So Arm 强化学习</span>
-                  <span className="tag recommended">New</span>
-              </a>
-              <a href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
-                  <span className="text">SO101 与 NVIDIA GR00T</span>
-                  <span className="tag recommended">New</span>
-              </a>
-          </div>
-
-          <h3>🚗 Lekiwi移动底盘</h3>
-          <div className="card-container">
-              <a href="/cn/lerobot_lekiwi/" className="content-card">
-                <span className="text">Lekiwi 移动底盘</span>
-              </a>
-              <a href="/cn/sound_follow_robot/" className="content-card">
-                <span className="text">Lekiwi 声音跟随</span>
-              </a>
-          </div>
-
-          <h3>🦾 StarAI机械臂</h3>
-          <div className="card-container">
-              <a href="/cn/lerobot_starai_arm/" className="content-card">
-                <span className="text">StarAI 机械臂</span>
-                <span className="tag recommended">New</span>
-              </a>
-              <a href="/cn/starai_arm_ros_moveit/" className="content-card">
-                <span className="text">StarAI 机械臂 MoveIt 2</span>
-                <span className="tag recommended">New</span>
-              </a>
-              <a href="/cn/control_robotic_arm_via_gr00t" className="content-card">
-                <span className="text">StarAI 与 NVIDIA GR00T</span>
-              </a>
-          </div>
-
-          <h3>🦿 轮足</h3>
-          <div className="card-container">
-              <a href="/cn/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
-                <span className="text">小轮足机器人</span>
-                <span className="tag recommended">New</span>
-              </a>
-          </div>
-
-          <h3>🖐️ 灵巧手</h3>
-          <div className="card-container">
-              <a href="/cn/hand_amazinghand/" className="content-card">
-                <span className="text">AmazingHand</span>
-                <span className="tag recommended">New</span>
-              </a>
-          </div>
-
-          <h3>🦀 末端执行器</h3>
-          <div className="card-container">
-              <a href="/cn/dm_gripper/" className="content-card">
-                <span className="text">DM 夹爪</span>
-                <span className="tag recommended">New</span>
-              </a>
-          </div>
-
-        </div>
+    <div className="learning-group">
+      <h4>应用</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS 视觉夹取</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS 与 ROS2</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 控制系统</b></div></a>
+        <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
       </div>
-
-      <h2 id="actuators">⚙️ 执行器</h2>
-
-      <div className="category-group">
-      <div className="category-card actuators">
-
-      <div className="card-container">
-          <a href="/cn/myactuator_series/" className="content-card">
-            <span className="text">MyActuator X 系列</span>
-          </a>
-          <a href="/cn/damiao_series/" className="content-card">
-            <span className="text">Damiao DM43 系列</span>
-          </a>
-          <a href="/cn/feetech_servo/" className="content-card">
-            <span className="text">Feetech STS3215 舵机</span>
-          </a>
-          <a href="/cn/hightorque_control" className="content-card">
-            <span className="text">HighTorque 系列</span>
-          </a>
-          <a href="/cn/fashionstar_servo/" className="content-card">
-            <span className="text">Fashionstar 系列</span>
-          </a>
-          <a href="/cn/stackforce_series/" className="content-card">
-            <span className="text">Stackforce 系列</span>
-          </a>
-          <a href="/cn/robstride_control/" className="content-card">
-            <span className="text">RobStride 控制</span>
-            <span className="tag recommended">New</span>
-          </a>
-      </div>
-
-      </div>
-      </div>
-
-      <h2 id="sensors">👁️ 传感器</h2>
-
-      <div className="category-group">
-      <div className="category-card sensors">
-
-      <strong>📡 LiDAR</strong>  
-
-      <div className="card-container">
-          <a href="/cn/robosense_lidar/" className="content-card">
-            <span className="text">RoboSense</span>
-          </a>
-          <a href="/cn/mid360/" className="content-card">
-            <span className="text">Livox MID360</span>
-          </a>
-          <a href="/cn/a_loam/" className="content-card">
-            <span className="text">A-LOAM 算法</span>
-          </a>
-          <a href="/cn/slamtec/" className="content-card">
-            <span className="text">Slamtec 系列</span>
-          </a>
-      </div>
-
-      <strong>📷 相机</strong>  
-
-      <div className="card-container">
-          <a href="/cn/orbbec_gemini2/" className="content-card">
-            <span className="text">Orbbec Gemini 2</span>
-          </a>
-          <a href="/cn/orbbec_gemini_335lg" className="content-card">
-            <span className="text">Gemini 335Lg 深度相机</span>
-            <span className="tag recommended">New</span>
-          </a>
-          <a href="/cn/orbbec_gemini336" className="content-card">
-            <span className="text">Gemini 336 深度相机</span>
-            <span className="tag recommended">New</span>
-          </a>
-          <a href="/cn/sensing_gmsl_cameras" className="content-card">
-            <span className="text">SENSING GMSL2 相机</span>
-          </a>
-          <a href="/cn/ac1" className="content-card">
-            <span className="text">RoboSense AC1</span>
-            <span className="tag recommended">New</span>
-          </a>
-          <a href="/cn/orbbec_depth_camera_on_ros/" className="content-card">
-            <span className="text">Orbbec 与 ROS</span>
-          </a>
-          <a href="/cn/orb_slam3_orbbec_gemini2/" className="content-card">
-            <span className="text">ORB-SLAM3 与 Gemini2</span>
-          </a>
-          <a href="/cn/csi_camera_on_ros/" className="content-card">
-            <span className="text">Jetson 上的 CSI 相机</span>
-          </a>
-          <a href="/cn/pycuvslam_recomputer_robotics/" className="content-card">
-            <span className="text">PyCuVSLAM</span>
-          </a>
-
-      </div>
-
-      <strong>🎤 语音</strong>  
-
-      <div className="card-container">
-          <a href="/cn/ReSpeaker_Core_v2.0/" className="content-card">
-            <span className="text">ReSpeaker Core v2.0</span>
-          </a>
-          <a href="/cn/ReSpeaker_Mic_Array_v2.0/" className="content-card">
-            <span className="text">ReSpeaker Mic Array v2.0</span>
-          </a>
-      </div>
-
-      <strong>🧭 IMU</strong>  
-
-      <div className="card-container">
-          <a href="/cn/hexfellow_y200/" className="content-card">
-            <span className="text">HEXFELLOW Y200</span>
-          </a>
-          <a href="/cn/wheeltec_imu/" className="content-card">
-            <span className="text">WHEELTEC IMU</span>
-          </a>
-      </div>
-
-      </div>
-      </div>
-
-      <h2 id="software">💻 软件</h2>
-
-      <div className="category-group">
-      <div className="category-card software">
-
-      <strong>ROS 生态系统</strong>  
-
-      <div className="card-container">
-          <a href="/cn/installing_ros1/" className="content-card">
-            <span className="text">ROS 1 安装</span>
-          </a>
-          <a href="/cn/install_ros2_humble/" className="content-card">
-            <span className="text">ROS 2 安装</span>
-          </a>
-          <a href="/cn/install_isaacros/" className="content-card">
-            <span className="text">Isaac ROS 安装</span>
-          </a>
-          <a href="/cn/isaac_ros_apriltag/" className="content-card">
-            <span className="text">Isaac ROS AprilTag</span>
-          </a>
-          <a href="/cn/isaac_ros_visual_slam/" className="content-card">
-            <span className="text">Isaac ROS V-SLAM</span>
-          </a>
-      </div>
-
-      <strong>PX4</strong>  
-      <div className="card-container">
-      <a href="/cn/control_px4_with_recomputer_jetson/" className="content-card">
-        <span className="text">PX4 与 Jetson</span>
-      </a>
-
-      <a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/" className="content-card">
-        <span className="text">PX4 目标跟踪</span>
-      </a>
-
-      </div>
-
-      <strong>NVIDIA Isaac</strong>  
-      <div className="card-container">
-      <a href="/cn/install_isaaclab/" className="content-card">
-        <span className="text">Isaac Lab 安装</span>
-      </a>
-      <a href="/cn/training_soarm101_policy_with_isaacLab/" className="content-card">
-        <span className="text">SO Arm 强化学习</span>
-        <span className="tag recommended">New</span>
-      </a>
-      <a href="/cn/simulate_soarm101_by_leisaac/" className="content-card">
-        <span className="text">SO100 机械臂与 IsaacSim</span>
-        <span className="tag recommended">New</span>
-      </a>
-      </div>
-
-      <strong>VLA</strong>  
-      <div className="card-container">
-      <a href="/cn/control_robotic_arm_via_gr00t" className="content-card">
-        <span className="text">StarAI 与 NVIDIA GR00T</span>
-      </a>
-      </div>
-
-      </div>
-      </div>
-
     </div>
-  </div> 
-
-  <!-- ==================== Tab 2: 学习中心 (Learning) ==================== -->
-  <div className="tab-content content-learning">
-
-    <div className="learning-intro">
-        <h2>🎓 机器人学院</h2>
-        <p>从 ROS 基础概念到进阶的 Sim2Real 强化学习，这里提供循序渐进的系统化课程。</p>
+    <div className="learning-group">
+      <h4>课程</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
+        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>DLI 课程：Sim-to-Real VLA 全流程</b></div></a>
+      </div>
     </div>
-
-    <!-- Section 1: Core Software -->
-    <h3 className="course-section-title">💻 核心软件与仿真</h3>
-    <div className="course-grid">
-
-      <!-- ROS 1 -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/1.%E4%B8%AD%E6%96%87/1.ROS%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%85%AB%E8%AE%B2/README.MD" className="course-card">
-        <div className="course-cover c-ros1">ROS 1</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 8小时</span></div>
-          <h3>ROS 1 基础入门八讲</h3>
-          <p>学习节点、话题、服务和基础入门</p>
-          <span className="btn-start">开始学习</span>
-        </div>
-      </a>
-
-      <!-- ROS 1 -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/1.%E4%B8%AD%E6%96%87/2.ROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%BF%E7%9C%9F%E4%B8%83%E8%AE%B2/README.MD" className="course-card">
-        <div className="course-cover c-ros1">ROS 1</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 8小时</span></div>
-          <h3>ROS1 机器人仿真七讲</h3>
-          <p>从建模仿真到自主导航。</p>
-          <span className="btn-start">开始学习</span>
-        </div>
-      </a>
-
-      <!-- ROS 2 -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/1.%E4%B8%AD%E6%96%87/1.ROS2%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%85%AB%E8%AE%B2/README.MD" className="course-card">
-        <div className="course-cover c-ros2">ROS 2</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 4小时</span></div>
-          <h3>ROS 2 基础入门八讲</h3>
-          <p>学习节点、话题、服务和基础入门。</p>
-          <span className="btn-start">开始学习</span>
-        </div>
-      </a>
-
-
-
-      <!-- Moveit2 -->
-      <a href="" className="course-card">
-        <div className="course-cover c-moveit">MoveIt 1/2</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">机械臂入门</span> <span>⏱️ 6h</span></div>
-          <h3>MoveIt 1/2</h3>
-          <p>学习Moveit 1/2 导入自己的机械臂并完成运动学正逆解 </p>
-          <span className="btn-plan">计划中</span>
-        </div>
-      </a>
-
-      <!-- Pinocchio -->
-      <a href="" className="course-card">
-        <div className="course-cover c-pinocchio">Pinocchio</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level int">机械臂进阶</span> <span>⏱️ 6小时</span></div>
-          <h3>匹诺曹Pinocchio</h3>
-          <p>学习匹诺曹机器人学框架，开发自己机械臂的运动学及动力学任务</p>
-          <span className="btn-plan">计划中</span>
-        </div>
-      </a>
-
-      <!-- Isaac Sim -->
-      <a href="" className="course-card">
-        <div className="course-cover c-isaac">ISAAC</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level adv">高级</span> <span>⏱️ 12小时</span></div>
-          <h3>NVIDIA Isaac Sim & Lab</h3>
-          <p>Sim2Real 仿真到现实工作流，USD 管道与环境搭建。</p>
-          <span className="btn-plan">计划中</span>
-        </div>
-      </a>
-
-      <!-- MuJoCo -->
-      <a href="" className="course-card">
-        <div className="course-cover c-mujoco">MuJoCo</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level adv">高级</span> <span>⏱️ 10小时</span></div>
-          <h3>MuJoCo 物理引擎</h3>
-          <p>面向敏捷机器人控制的高精度动力学建模与仿真。</p>
-          <span className="btn-plan">计划中</span>
-        </div>
-      </a>
-
-      <!-- Reinforcement Learning -->
-      <a href="" className="course-card">
-        <div className="course-cover c-rl">RL</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level adv">困难</span> <span>⏱️ 20小时</span></div>
-          <h3>机器人强化学习</h3>
-          <p>PPO 算法、深度强化学习训练流程，以及 Jetson 端部署。</p>
-          <span className="btn-plan">计划中</span>
-        </div>
-      </a>
-
+    <div className="learning-group">
+      <div className="rebot-resource-list">
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">reBot-RS 硬件资料合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">reBot-RS 机械臂描述文件（URDF / Mesh）</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS 数字孪生 / Web 控制系统</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
+        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
+        <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">LeRobot robot adapter</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot teleoperator adapter</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">视觉抓取 Demo</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/README_zh.md" target="_blank" rel="noopener noreferrer">相机支架合集</a>
+      </div>
     </div>
-
-    <!-- Section 2: Robot Applications -->
-    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 机器人应用实战</h3>
-    <div className="course-grid">
-
-      <!-- Humanoid -->
-      <a href="" className="course-card">
-        <div className="course-cover c-human">人形</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 5小时</span></div>
-          <h3>小形舵机机器人入门课程</h3>
-          <p>小型人形机器人硬件驱动、动作舞蹈编排及二次开发</p>
-          <span className="btn-plan">计划中</span>
-        </div>
-      </a>
-
-      <!-- Lekiwi -->
-      <a href="" className="course-card">
-        <div className="course-cover c-lekiwi">移动底盘</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 6小时</span></div>
-          <h3>移动机器人开发 Lekiwi</h3>
-          <p>基于 Lekiwi 底盘的 SLAM 建图、Nav2 导航与自动巡逻。</p>
-          <span className="btn-plan">计划中</span>
-        </div>
-      </a>
-
-      <!-- Robotic Arm -->
-      <a href="" className="course-card">
-        <div className="course-cover c-arm">机械臂</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 15小时</span></div>
-          <h3>StarAi 机械臂系统课程</h3>
-          <p>StarAI 6+1自由度机械臂运动学、动力学到模仿学习和强化学习VLA进阶 </p>
-          <span className="btn-plan">计划中</span>
-        </div>
-      </a>
-
-      <!-- Wheeled-Legged -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/%E4%B8%AD%E6%96%87/README.md" className="course-card">
-        <div className="course-cover c-legged">轮足机器人</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 8小时</span></div>
-          <h3>StackForce 轮足机器人系统课程</h3>
-          <p>轮足机器人的LQR平衡控制算法与运动规划。</p>
-          <span className="btn-start">开始学习</span>
-        </div>
-      </a>
+  </div>
+</details>
 
 
-      <!-- ReachyMini -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ReachyMini_Tutorial/1.%E4%B8%AD%E6%96%87/README.md" className="course-card">
-        <div className="course-cover c-reachy">桌面机器人</div>
-        <div className="course-info">
-          <div className="course-meta"><span className="level adv">高级</span> <span>⏱️ 8小时</span></div>
-          <h3>ReachyMini 系统课程</h3>
-          <p>ReachyMini 基本使用、接口教程及二次开发系统课程。</p>
-          <span className="btn-start">开始学习</span>
-        </div>
-      </a>
-
-
+<details id="rebot-dm" className="product-card rebot product-card--cover">
+  <summary className="product-head">
+    <h3>reBot-DM 机械臂</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-group">
+      <h4>快速上手与 SDK</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>reBot-DM 快速入门</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM 与 LeRobot</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM 与 Pinocchio</b></div></a>
+        <a className="step-card" href="/cn/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>无码化上手VLA：SenseCraft Robotics 平台</b></div></a>
+      </div>
     </div>
-
-  </div> 
-
-</div> 
-
-<style>{`
-/* =========================================
-   1. Tab Logic (CSS Only)
-   ========================================= */
-.robotic-tab-container { width: 100%; position: relative; }
-.tab-input-hidden { display: none; }
-.tab-nav-wrapper { display: flex; justify-content: center; margin-bottom: 2rem; margin-top: 1rem; }
-.tab-nav {
-  position: relative; display: flex; background: #f1f3f5; border-radius: 100px;
-  padding: 5px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); user-select: none;
-}
-.tab-item {
-  position: relative; z-index: 2; padding: 10px 30px; font-weight: 600; color: #666;
-  cursor: pointer; transition: color 0.3s ease; display: flex; align-items: center; gap: 8px; font-size: 1rem; margin: 0;
-}
-.tab-item .icon { font-size: 1.2rem; }
-.badge {
-  background: #ff4757; color: white; font-size: 0.6rem; padding: 2px 6px;
-  border-radius: 10px; margin-left: 5px; position: relative; top: -1px;
-}
-.tab-slider {
-  position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc(50% - 5px);
-  background: white; border-radius: 100px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); z-index: 1;
-}
-
-#tab-hardware:checked ~ .tab-nav-wrapper .tab-nav .tab-slider { transform: translateX(0); }
-#tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #4a90e2; }
-#tab-learning:checked ~ .tab-nav-wrapper .tab-nav .tab-slider { transform: translateX(100%); }
-#tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #7b61ff; }
-
-.tab-content { display: none; animation: fadeIn 0.4s ease; }
-#tab-hardware:checked ~ .content-hardware { display: block; }
-#tab-learning:checked ~ .content-learning { display: block; }
-
-@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-
-/* =========================================
-   2. Hardware Styles (Original)
-   ========================================= */
-.quick-nav-container {
-  margin: 2rem 0; padding: 1rem;
-  background: radial-gradient(at 10% 20%, #f0fdf4 0%, transparent 50%), radial-gradient(at 90% 80%, #f0f7ff 0%, transparent 50%), white;
-  border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: none;
-}
-.quick-nav { display: flex; justify-content: space-around; gap: 1rem; }
-.nav-item {
-  position: relative; padding: 0.8rem 1.5rem; border-radius: 12px; display: flex; margin: 6px 6px;
-  flex-direction: column; align-items: center; text-decoration: none !important; color: #333;
-  font-weight: 500; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 1; width: 100%;
-}
-.nav-item .icon { font-size: 1.8rem; margin-bottom: 0.5rem; transition: transform 0.3s; }
-.nav-item .text { font-size: 0.95rem; white-space: nowrap; }
-.nav-item .hover-effect {
-  position: absolute; bottom: 0; left: 0; width: 100%; height: 0;
-  background: linear-gradient(135deg, #4a90e2 0%, #50e3c2 100%);
-  border-radius: 12px; transition: height 0.3s ease; z-index: -1;
-}
-.nav-item:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); color: white; }
-.nav-item:hover .icon { transform: scale(1.2) rotate(10deg); }
-.nav-item:hover .hover-effect { height: 100%; }
-
-.nav-grid { display: block; gap: 2rem; margin-top: 2rem; }
-.category-group { margin-bottom: 2.5rem; }
-.category-card {
-  position: relative; padding: 1.8rem; border-radius: 16px; background: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; overflow: hidden; border: 1px solid transparent;
-}
-.category-card::before { content: ""; position: absolute; top: 0; left: 0; width: 6px; height: 100%; }
-.robot-kits::before { background: linear-gradient(to bottom, #4a90e2, #50e3c2); }
-.actuators::before { background: linear-gradient(to bottom, #50e3c2, #a0e3c2); }
-.sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
-.software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
-
-.card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 12px; margin-bottom: 1.5rem; }
-.content-card {
-  display: flex; align-items: center; justify-content: space-between; padding: 10px 16px;
-  background: #f9fafb; border: 1px solid transparent; border-radius: 8px; text-decoration: none !important;
-  color: var(--ifm-font-color-base); font-weight: 500; font-size: 0.9rem; transition: all 0.25s ease; position: relative; overflow: hidden;
-}
-.content-card .text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 8px; z-index: 2; }
-.content-card:hover {
-  background: #fff; border-color: #4a90e2; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
-  transform: translateY(-2px); color: #4a90e2;
-}
-.content-card::after { content: ""; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: #4a90e2; transition: width 0.2s ease; }
-.content-card:hover::after { width: 4px; }
-
-.tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; font-weight: 700; text-transform: uppercase; flex-shrink: 0; z-index: 2; }
-.recommended { background: rgba(255, 107, 107, 0.1); color: #ff6b6b; border: 1px solid rgba(255, 107, 107, 0.2); animation: pulse 2s infinite; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); } 70% { box-shadow: 0 0 0 4px rgba(255, 107, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); } }
-
-/* =========================================
-   3. Learning Styles
-   ========================================= */
-.learning-intro { text-align: center; margin-bottom: 2rem; }
-.learning-intro h2 { margin-bottom: 0.5rem; background: -webkit-linear-gradient(45deg, #7b61ff, #4a90e2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.learning-intro p { color: #666; max-width: 600px; margin: 0 auto; }
-
-.course-section-title {
-  margin: 1.5rem 0 1rem; font-size: 1.2rem; font-weight: 700; color: #444; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;
-}
-
-.course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-.course-card {
-  background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  text-decoration: none !important; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #eee; display: flex; flex-direction: column;
-}
-.course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-
-/* Covers for different topics */
-.course-cover { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; color: white; letter-spacing: 1px; }
-
-/* AI & Software Colors */
-.c-ros2 { background: linear-gradient(135deg, #10b981, #059669); }
-.c-ros1 { background: linear-gradient(135deg, #4b5563, #374151); }
-.c-pinocchio { background: linear-gradient(135deg, #3b82f6, #fa000c); }
-.c-moveit { background: linear-gradient(135deg, #f90306, #ea000c); }
-.c-isaac { background: linear-gradient(135deg, #76b900, #366e00); }
-.c-rl { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
-.c-mujoco { background: linear-gradient(135deg, #f97316, #ea580c); }
-
-/* Robot Platform Colors */
-.c-arm { background: linear-gradient(135deg, #3b82f6, #2563eb); }
-.c-legged { background: linear-gradient(135deg, #eab308, #ca8a04); }
-.c-human { background: linear-gradient(135deg, #ec4899, #db2777); }
-.c-reachy { background: linear-gradient(135deg, #14b8a6, #0d9488); }
-.c-lekiwi { background: linear-gradient(135deg, #06b6d4, #0891b2); }
-.c-gray { background: #eee; color: #aaa; }
-
-.course-info { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; }
-.course-meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: #888; margin-bottom: 0.5rem; }
-.level { font-weight: 700; text-transform: uppercase; }
-.beg { color: #059669; } .int { color: #d97706; } .adv { color: #dc2626; }
-
-.course-info h3 { font-size: 1.1rem; margin: 0 0 0.5rem 0; color: #1f2937; line-height: 1.3; }
-.course-info p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; }
-
-.btn-start {
-  display: block; text-align: center; padding: 8px 0; background:  #ecfdf5; color: #059669; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
-}
-.course-card:hover .btn-start { background: #10b981; color: white; }
-
-.btn-plan {
-  display: block; 
-  text-align: center; 
-  padding: 8px 0; 
-  font-weight: 600; 
-  font-size: 0.9rem; 
-  border-radius: 8px; 
-  transition: all 0.2s;
-
-  /* 差异化设计 */
-  background: #fff7ed; /* 极浅的橙色背景 */
-  color: #ea580c;      /* 较深的橙色文字 */
-  cursor: default;
-}
-
-/* Hover 效果：保持暖色调，不像 Start 按钮那样反转颜色，避免抢夺视线 */
-.course-card:hover .btn-plan {
-  background: #ffedd5;
-  color: #c2410c;
-}
+    <div className="learning-group">
+      <h4>应用</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM 视觉夹取</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM 与 ROS2</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM 与 Isaac Sim</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 控制系统</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>课程</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <div className="rebot-resource-list">
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">reBot-DM 硬件资料合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">reBot-DM 机械臂描述文件（URDF / Mesh）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">reBot-DM 真机性能测试</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">reBot-DM 数字孪生 / Web 控制系统</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
+        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
+        <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">LeRobot robot adapter</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot teleoperator adapter</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">视觉抓取 Demo</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/README_zh.md" target="_blank" rel="noopener noreferrer">相机支架合集</a>
+      </div>
+    </div>
+  </div>
+</details>
 
 
-/* =========================================
-   4. Dark Mode 适配
-   ========================================= */
-html[data-theme='dark'] .tab-nav { background: #2f2f32; box-shadow: none; }
-html[data-theme='dark'] .tab-slider { background: #444; }
-html[data-theme='dark'] .tab-item { color: #aaa; }
-html[data-theme='dark'] #tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #60a5fa; }
-html[data-theme='dark'] #tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #a78bfa; }
+<details id="soarm" className="product-card soarm product-card--cover">
+  <summary className="product-head">
+    <h3>SO100 / SO101 机械臂</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-group">
+      <h4>快速开始与工具</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 快速开始</b></div></a>
+        <a className="step-card" href="/cn/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>舵机调试工具</b></div></a>
+        <a className="step-card" href="/cn/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>SO-Arm 数据集工具</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>拓展应用</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 与 NVIDIA GR00T</b></div></a>
+        <a className="step-card" href="/cn/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>双臂 SO-ARM 训练</b></div></a>
+        <a className="step-card" href="/cn/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM结合Amazing Hand灵巧手</b></div></a>
+        <a className="step-card" href="/cn/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac 仿真</b></div></a>
+        <a className="step-card" href="/cn/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab 强化学习</b></div></a>
+        <a className="step-card optional" href="/cn/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
+      </div>
+    </div>
+  </div>
+</details>
 
-/* Hardware Dark Mode */
-html[data-theme='dark'] .quick-nav-container { background: linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); border: none; }
-html[data-theme='dark'] .nav-item { color: #e5e7eb; background: rgb(47, 50, 57); box-shadow: 0 2px 4px rgba(0,0,0,0.4); }
-html[data-theme='dark'] .category-card { background: #1b1b1d; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-color: #303033; }
-html[data-theme='dark'] .content-card { background: #242526; color: #e5e7eb; border-color: #303033; }
-html[data-theme='dark'] .content-card:hover { background: #2f2f32; border-color: #60a5fa; color: #60a5fa; }
-html[data-theme='dark'] .content-card::after { background: #60a5fa; }
-html[data-theme='dark'] .recommended { background: rgba(255, 107, 107, 0.15); color: #ff8e8e; border-color: rgba(255, 142, 142, 0.3); }
-html[data-theme='dark'] h2, html[data-theme='dark'] h3 { color: #f9fafb; }
 
-/* Learning Dark Mode */
-html[data-theme='dark'] .course-card { background: #1b1b1d; border-color: #303033; }
-html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
-html[data-theme='dark'] .course-info p { color: #9ca3af; }
-html[data-theme='dark'] .btn-start { background: #2f2f32; color: #60a5fa; }
-html[data-theme='dark'] .course-card:hover .btn-start { background: #60a5fa; color: white; }
-html[data-theme='dark'] .btn-plan { background: #2f2f32; color: #ea580c; }
-html[data-theme='dark'] .course-card:hover .btn-plan { background: #ea580c; color: white; }
-html[data-theme='dark'] .learning-section-title { color: #ccc; border-bottom-color: #444; }
+<details id="amazinghand" className="product-card amazinghand product-card--cover">
+  <summary className="product-head">
+    <h3>AmazingHand 灵巧手</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-steps">
+      <a className="step-card" href="/cn/hand_amazinghand/"><span className="step-index">1</span><div><b>AmazingHand 入门指南</b></div></a>
+      <a className="step-card" href="/cn/soarm_amazinghand_teleop/"><span className="step-index">2</span><div><b>SO-ARM 与 AmazingHand 联动</b></div></a>
+    </div>
+  </div>
+</details>
 
-@media (max-width: 768px) {
-  .quick-nav { flex-direction: column; gap: 0.5rem; }
-  .nav-item { flex-direction: row; justify-content: start; padding: 0.8rem 1rem; }
-  .nav-item .icon { margin-bottom: 0; margin-right: 0.8rem; }
-  .card-container, .course-grid { grid-template-columns: 1fr; }
-  .category-card { padding: 1.2rem; }
-  .tab-nav { width: 100%; }
-  .tab-item { padding: 10px 15px; font-size: 0.9rem; flex: 1; justify-content: center; }
-}
-`}</style>
+
+<details id="reachy" className="product-card reachy product-card--cover">
+  <summary className="product-head">
+    <h3>Reachy Mini</h3>
+  </summary>
+  <div className="product-body">
+    <div className="reachy-path-grid">
+      <div className="mini-track">
+        <h4>快速入门</h4>
+        <a href="/cn/reachymini_platforms_reachy_mini_get_started/">Reachy Mini 无线版快速入门</a>
+        <a href="/cn/reachymini_platforms_reachy_mini_lite_get_started/">Reachy Mini Lite 快速入门</a>
+      </div>
+      <div className="mini-track">
+        <h4>开发案例</h4>
+        <a href="/cn/reachymini_conversation/">Reachy Mini 豆包语音对话应用</a>
+        <a href="/cn/reachymini_development_cases_home_assistant/">Home Assistant 集成</a>
+        <a href="/cn/reachymini_development_cases_gripper_voice_control/">Reachy Mini 语音控制 SO-ARM</a>
+        <a href="/cn/reachymini_development_cases_sway_screen/">Reachy Mini 屏幕体感控制</a>
+      </div>
+    </div>
+  </div>
+</details>
+
+
+<details id="lekiwi" className="product-card lekiwi product-card--cover">
+  <summary className="product-head">
+    <h3>Lekiwi 移动底盘</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/cn/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Lekiwi 移动底盘快速开始</b></div></a>
+    <a className="step-card" href="/cn/sound_follow_robot/"><span className="step-index">2</span><div><b>声音跟随 Demo</b></div></a>
+  </div>
+  </div>
+</details>
+
+
+<details id="stackforce" className="product-card stackforce product-card--cover">
+  <summary className="product-head">
+    <h3>StackForce Mini 轮足机器人</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/cn/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>StackForce Mini 快速开始</b></div></a>
+  </div>
+  </div>
+</details>
+
+
+<details id="starai" className="product-card starai product-card--cover">
+  <summary className="product-head">
+    <h3>StarAI 机械臂</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/cn/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI 机械臂快速开始</b></div></a>
+    <a className="step-card" href="/cn/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>MoveIt 2 运动规划</b></div></a>
+    <a className="step-card" href="/cn/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI 与 NVIDIA GR00T</b></div></a>
+  </div>
+  </div>
+</details>
+
+
+<details id="atom" className="product-card atom product-card--cover">
+  <summary className="product-head">
+    <h3>Atom 小型人形机器人</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-steps">
+    <a className="step-card" href="/cn/atom_s/"><span className="step-index">1</span><div><b>Atom-S 入门指南</b></div></a>
+    <a className="step-card" href="/cn/atom_x/"><span className="step-index">2</span><div><b>Atom-X 入门指南</b></div></a>
+  </div>
+  </div>
+</details>
+
+
+    </RotatingProductShowcase>
+  </section>
+
+  <section id="actuators" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Reference</span>
+        <h2>关节执行器</h2>
+      </div>
+      <p>当你需要单独调试电机、理解通信协议或排查关节问题时，再查看这些资料。</p>
+    </div>
+    <div className="resource-grid">
+      <a href="/cn/myactuator_series/">MyActuator X 系列</a>
+      <a href="/cn/damiao_series/">Damiao DM43 系列</a>
+      <a href="/cn/feetech_servo/">Feetech STS3215 舵机</a>
+      <a href="/cn/hightorque_series/">HighTorque 系列 / SDK</a>
+      <a href="/cn/hightorque_getting_started/">HighTorque 入门指南</a>
+      <a href="/cn/hightorque_control/">HighTorque 电机控制</a>
+      <a href="/cn/fashionstar_servo/">Fashionstar 系列</a>
+      <a href="/cn/stackforce_series/">Stackforce 系列</a>
+      <a href="/cn/robstride_control/">RobStride 控制</a>
+    </div>
+  </section>
+
+  <section id="sensors" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Reference</span>
+        <h2>传感器</h2>
+      </div>
+      <p>用于视觉夹取、SLAM、语音交互和机器人状态感知。</p>
+    </div>
+    <div className="resource-columns">
+      <div><h4>LiDAR</h4><a href="/cn/robosense_lidar/">RoboSense</a><a href="/cn/mid360/">Livox MID360</a><a href="/cn/a_loam/">A-LOAM 算法</a><a href="/cn/slamtec/">Slamtec 系列</a></div>
+      <div><h4>相机</h4><a href="/cn/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/cn/orbbec_gemini_335lg/">Gemini 335Lg 深度相机</a><a href="/cn/orbbec_gemini336">Gemini 336 深度相机</a><a href="/cn/sensing_gmsl_cameras">SENSING GMSL2 相机</a><a href="/cn/ac1">RoboSense AC1</a><a href="/cn/orbbec_depth_camera_on_ros/">Orbbec 与 ROS</a><a href="/cn/orb_slam3_orbbec_gemini2/">ORB-SLAM3 与 Gemini2</a><a href="/cn/csi_camera_on_ros/">Jetson 上的 CSI 相机</a><a href="/cn/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
+      <div><h4>语音</h4><a href="/cn/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/cn/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>IMU</h4><a href="/cn/hexfellow_y200/">HEXFELLOW Y200</a><a href="/cn/wheeltec_imu/">WHEELTEC IMU</a></div>
+    </div>
+  </section>
+
+  <section id="software" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Reference</span>
+        <h2>软件生态</h2>
+      </div>
+      <p>机器人套件跑通后，可以根据项目目标进入 ROS、Isaac、PX4 或 VLA 方向。</p>
+    </div>
+    <div className="resource-columns">
+      <div><h4>ROS 生态系统</h4><a href="/cn/installing_ros1/">ROS 1 安装</a><a href="/cn/install_ros2_humble/">ROS 2 安装</a><a href="/cn/install_isaacros/">Isaac ROS 安装</a><a href="/cn/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/cn/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
+      <div><h4>NVIDIA Isaac</h4><a href="/cn/install_isaaclab/">Isaac Lab 安装</a><a href="/cn/training_soarm101_policy_with_isaacLab/">SO Arm 101 强化学习</a><a href="/cn/simulate_soarm101_by_leisaac/">SO Arm 101 机械臂与 Isaac Sim</a></div>
+      <div><h4>PX4 / VLA</h4><a href="/cn/control_px4_with_recomputer_jetson/">PX4 与 Jetson</a><a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/">PX4 目标跟踪</a><a href="/cn/control_robotic_arm_via_gr00t/">StarAI 与 NVIDIA GR00T</a></div>
+    </div>
+  </section>
+
+</div>

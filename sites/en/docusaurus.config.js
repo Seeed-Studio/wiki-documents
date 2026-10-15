@@ -271,7 +271,7 @@ module.exports = (async () => {
             rehypePlugins: [rehypeKatex],
 
             // Edit link 先保持正确
-            editUrl: 'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/en/docs/',
+            editUrl: 'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/en/',
           },
 
 
@@ -299,6 +299,7 @@ module.exports = (async () => {
               'zh-CN/**',
               'ja/**',
               'es/**',
+              'pt-br/**',
             ],
           },
         }),
@@ -359,8 +360,19 @@ module.exports = (async () => {
         })(),
       ],
       
-      'docusaurus-plugin-image-zoom',
+      path.resolve(__dirname, '../../plugins/image-zoom'),
+      [
+        path.resolve(__dirname, '../../plugins/respeaker-faq-index'),
+        { locale: 'en' },
+      ],
       'docusaurus-plugin-sass',
+      [
+        'docusaurus-plugin-copy-page-button',
+        {
+          injectButton: false,
+          enabledActions: ['copy', 'view', 'chatgpt', 'claude', 'gemini'],
+        },
+      ],
     ],
 
     themeConfig:
@@ -589,15 +601,22 @@ module.exports = (async () => {
               className: 'navbar_doc_right_items',
             },
             {
-              to: 'https://sensecraft.seeed.cc/ai/#/home',
-              label: 'SenseCraft AI',
+              type: 'dropdown',
+              label: 'AI Platform',
               position: 'right',
-              className: 'navbar_doc_right_items',
-            },
-            {
-              href: 'https://sensecraft.seeed.cc/ai/#/home',
-              position: 'right',
-              className: 'header-SSCMA',
+              className: 'navbar_doc_right_items ai-platform-dropdown',
+              items: [
+                {
+                  label: 'SenseCraft AI',
+                  to: 'https://sensecraft.seeed.cc/ai/#/home',
+                  className: 'ai-platform-menu-item sensecraft-ai-menu-item',
+                },
+                {
+                  label: 'reComputer AI Lab',
+                  to: 'https://sensecraft.seeed.cc/ai-lab',
+                  className: 'ai-platform-menu-item recomputer-ai-lab-menu-item',
+                },
+              ],
             },
             {
               href: 'https://github.com/Seeed-Studio/wiki-documents',
@@ -718,18 +737,20 @@ module.exports = (async () => {
         },
         contextualSearch: true,
         typesense: {
-          typesenseCollectionName: 'wiki_platform_test_1767765204',
+          typesenseCollectionName: 'wiki_platform_aliases_v1',
           typesenseServerConfig: {
             nodes: [
               {
                 host: 'search.seeedstudio.com',
+                port: 443,
                 protocol: 'https',
               },
             ],
-            apiKey: 'z1DHV8drOZizrn9TSlf0U9QgNENgBxGR',
+            apiKey: 'Wq4m3wi2ltwebP1v7bYlmkTGBcu31kHe',
           },
           typesenseSearchParameters: {
-            query_by: 'hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
+            query_by: 'product_aliases,resolved_category,hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
+            query_by_weights: '10,6,4,3,2,1',
           },
           transformSearchParameters: (
             /** @type {string} */ inputString,
@@ -740,6 +761,7 @@ module.exports = (async () => {
               return {
                 ...searchParameters,
                 query_by: 'sku_tag',
+                query_by_weights: '1',   
                 query: inputString,
                 // filter_by: 'doc_type_tag:=gettingstarted && !doc_type_tag:=project',
               };

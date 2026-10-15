@@ -8,7 +8,7 @@ last_update:
   date: 2/1/2023
   author: jianjing Huang
 createdAt: '2023-03-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Quantum-Mini-Linux-Development-Kit/
 ---
 

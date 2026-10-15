@@ -10,7 +10,7 @@ last_update:
   date: 12/30/2022
   author: jianjing Huang
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41/
 ---
 

@@ -7,10 +7,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t2000_tracker
 last_update:
-  date: 1/28/2026
+  date: 3/12/2026
   author: Janet
 createdAt: '2025-11-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/sensecap_t2000_tracker/
 ---
 
@@ -23,7 +23,9 @@ url: https://wiki.seeedstudio.com/sensecap_t2000_tracker/
 
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/" class="sensecap">Introduction</a>
-          <a href= "https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T2000_tracker/" class="sensecap">User Guide</a>
+          <a href= "https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T2000_tracker/" class="sensecap">Quick Start</a>
+          <a href= "https://wiki.seeedstudio.com/t2000_payload_format/" class="sensecap">Payload Format</a>
+          <a href= "https://wiki.seeedstudio.com/t2000_faq/" class="sensecap">FAQ</a>
 </div>
 
 ### Integrated with LoRaWAN® Network Server

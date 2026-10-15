@@ -11,7 +11,7 @@ last_update:
   date: 01/06/2022
   author: gunengyu
 createdAt: '2022-01-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/Grove-BLE-dual_model-v1.0/
 ---
 

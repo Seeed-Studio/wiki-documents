@@ -11,7 +11,7 @@ last_update:
   date: 6/14/2023
   author: Kasun Thushara
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/plex_media_server/
 ---
 # El Futuro del Entretenimiento Doméstico; Router LinkStar-H68K y Servidor de Medios Plex

@@ -1,6 +1,6 @@
 ---
 description: This wiki covers LeRobot dataset utilities, including deleting episodes, merging datasets, and more.
-title: Lerobot Dataset Tool
+title: SO-Arm Dataset Tool
 keywords:
   - Lerobot
   - Hugging Face
@@ -13,10 +13,9 @@ last_update:
   date: 2/11/2026
   author: ZhangJiaQuan
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/lerobot_dataset_tool/
 ---
 

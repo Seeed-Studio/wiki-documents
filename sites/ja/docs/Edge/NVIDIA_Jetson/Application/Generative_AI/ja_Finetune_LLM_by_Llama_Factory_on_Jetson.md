@@ -12,7 +12,7 @@ last_update:
   date: 07/03/2024
   author: Youjiang
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/ja/Finetune_LLM_on_Jetson/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 2/16/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/NFC_Shield/
 ---
 <!-- ---

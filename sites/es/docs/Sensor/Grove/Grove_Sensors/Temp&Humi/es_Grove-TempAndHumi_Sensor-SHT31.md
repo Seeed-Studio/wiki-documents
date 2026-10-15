@@ -10,7 +10,7 @@ last_update:
   date: 12/29/2025
   author: Brandy
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Grove-TempAndHumi_Sensor-SHT31/
 ---
 

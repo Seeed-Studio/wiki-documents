@@ -1,6 +1,6 @@
 ---
 description: 本Wiki提供 Lerobot 数据集的工具使用，包括删除剧集，合并数据集等。
-title: Lerobot数据集工具
+title: SO-Arm  数据集工具
 keywords:
   - Lerobot
   - Hugging Face
@@ -13,7 +13,7 @@ last_update:
   date: 3/2/2026
   author: ZhangJiaQuan
 createdAt: '2026-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/cn/lerobot_dataset_tool/
 ---
 <div align="center">

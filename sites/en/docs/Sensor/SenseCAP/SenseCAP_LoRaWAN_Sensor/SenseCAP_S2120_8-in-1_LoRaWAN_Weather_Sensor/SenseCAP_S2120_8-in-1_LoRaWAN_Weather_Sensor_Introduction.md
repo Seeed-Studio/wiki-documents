@@ -9,7 +9,7 @@ last_update:
   date: 12/25/2025
   author: Janet
 createdAt: '2023-03-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-25'
 url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction/
 ---
 

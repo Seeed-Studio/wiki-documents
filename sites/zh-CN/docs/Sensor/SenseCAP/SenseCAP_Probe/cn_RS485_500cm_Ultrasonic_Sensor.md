@@ -9,7 +9,7 @@ last_update:
   date: 3/28/2023
   author: Yvonne
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor/
 ---
 

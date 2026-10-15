@@ -9,7 +9,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-26'
 url: https://wiki.seeedstudio.com/DSO_Quad-Calibration/
 ---
 

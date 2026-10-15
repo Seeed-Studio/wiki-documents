@@ -13,21 +13,24 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/recomputer_industrial_r22xx_getting_start/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg" style={{width:800, height:'auto'}}/></div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-</div>
-
 The reComputer Industrial R22xx, powered by Raspberry Pi CM5, is an adaptable edge AI NVR with AI capabilities. It features comprehensive industrial interfaces **(5x Ethernet, 4xUSB, 2x RS485, 1x RS232, 1x CAN FD, 4x DI and 4x DO)** and flexible wireless connectivity options (4G/5G, LoRa®, Wi-Fi/BLE), making it ideal for diverse industrial applications.
 
 The reComputer Industrial R22xx series is ideal for use in industrial AI applications. It can be used in aspects such as data acquisition and process monitoring, automation and robot control, intelligent manufacturing, and industrial communication and networking. With its small size, flexibility, low cost, and programmability, it provides strong support for automation & IoT system and more.
+
+:::note
+Available customization options: logo branding, packaging, and firmware flashing.
+:::
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
+</div>
 
 ## Features
 
@@ -50,7 +53,7 @@ The reComputer Industrial R22xx series is ideal for use in industrial AI applica
 
 - On-chip Wi-Fi
 - On-chip BLE
-- Mini-PCIe: LTE, USB LoRa®, USB Zigbee
+- Mini-PCIe: LTE, USB LoRa®
 - M.2 KEY-B: 4G/5G
 
 **Rich Interfaces**
@@ -132,7 +135,7 @@ The reComputer Industrial R22xx series is ideal for use in industrial AI applica
       </tr>
       <tr>
         <td rowspan="2"> USB </td>
-        <td colspan="2"> 3 x USB-A 3.0 Host; 1 x USB-A 2.0 Host </td>
+        <td colspan="2"> 4 x USB-A 3.0 Host</td>
       </tr>
       <tr>
         <td colspan="2"> 1 x USB-C 2.0 (For flashing OS & Debug) </td>
@@ -166,7 +169,7 @@ The reComputer Industrial R22xx series is ideal for use in industrial AI applica
       <tr>
         <td>M.2 Slot</td>
         <td>2x M.2 M-key 2280 Slot for NVMe SSD；
-1x M.2 M-key 2280 Slot for AI Accelerator
+1x M.2 M-key 2240 Slot for AI Accelerator
 (Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS);
 1x M.2 B-key 3042/3052 Slot for 5G/4G LTE</td>
       </tr>
@@ -208,10 +211,6 @@ The reComputer Industrial R22xx series is ideal for use in industrial AI applica
       <tr>
         <td>4G/5G Cellular</td>
         <td>4G LTE/5G*</td>
-      </tr>
-      <tr>
-        <td>Zigbee</td>
-        <td>USB Zigbee*</td>
       </tr>
       <tr>
         <td colspan="2">**Standards**</td>
@@ -411,9 +410,8 @@ The reComputer Industrial R22xx does not come with a power button by default, an
 | **HDMI**        | 2 x HDMI 2.0                                                                          |
 | **LED**         | 4 x LED indicators                                                                    |
 | **SIM Card Slot**   | supports Nano SIM Card                                                            |
-| **M.2 M-KEY Slot**  | 2x M.2 M-key 2280 Slot for NVMe SSD；1x M.2 M-key 2280 Slot for AI Accelerator(Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS) |
+| **M.2 M-KEY Slot**  | 2x M.2 M-key 2280 Slot for NVMe SSD；1x M.2 M-key 2240 Slot for AI Accelerator(Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS) |
 | **M.2 B-KEY Slot**  | 1x for 5G/4G LTE                                                                  |
-| **mini PCIe Slot**  | 1x for 4G LTE/LoRa/Zigbee                                                         |
 | **Buzzer**          | 1                                                                                 |
 | **Reset Button**    | 1                                                                                 |
 
@@ -840,7 +838,7 @@ The size differences between standard SIM, Micro SIM and Nano SIM cards are as f
 | **Slot**       | **Supported Protocols**   |  
 |---------------|--------------------------|  
 | **M.2 M-KEY 2280** | 2 x M.2 NVMe SSD        |  
-| **M.2 M-KEY 2280** | 1 x M.2 AI  Accelerator |  
+| **M.2 M-KEY 2240** | 1 x M.2 AI  Accelerator |  
 
 The M.2 M-KEY 2280 slot on the reComputer Industrial R22xx is designed to accommodate NVMe M.2 2280 SSDs for 128GB, 256GB, 512GB, 1TB and 2TB in capacity. This slot allows for high-speed storage expansion, enabling users to enhance the performance and capacity of their system.
 
@@ -852,12 +850,12 @@ The M.2 M-KEY 2280 slot on the reComputer Industrial R22xx is designed to accomm
 >  
 > It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended 2TB SSD(SKU 114993467). This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
 
-The M.2 M-KEY 2280 slot on the reComputer Industrial R22xx is designed to accommodate PCIE M.2 AI  Accelerator. And the R22xx-12 series has been pre-installed with a Hailo-8 M.2 AI Acceleration up to 26TOPS.
+The M.2 M-KEY 2240 slot on the reComputer Industrial R22xx is designed to accommodate PCIE M.2 AI  Accelerator. And the R22xx-12 series has been pre-installed with a Hailo-8 M.2 AI Acceleration up to 26TOPS.
 
 ### Mini-PCIe Slot
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.11-1.png" style={{width:800, height:'auto'}}/></div>
-The MiniPCIe slot on the reComputer Industrial R22xx is designed to accommodate devices such as 4G LTE, USB LoRaWAN®, and USB Zigbee.
+The MiniPCIe slot on the reComputer Industrial R22xx is designed to accommodate devices such as 4G LTE, USB LoRaWAN®
 
 ### Reset Hole
 
@@ -897,6 +895,9 @@ The reComputer Industrial R2200 features 2x native HDMI interface from CM5, supp
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.16-1.png" style={{width:200, height:'auto'}}/></div>
 The reComputer Industrial R2200 features an RTC circuit that powered by the capacitor, enabling it to maintain timekeeping functionality even in the event of power loss.
 
+:::note
+When using the RTC, if the device suddenly loses power, you need to wait until the RTC is fully discharged before reconnecting power and restarting. If it is not fully discharged, the device may fail to meet the restart condition and may not start up properly.
+:::
 
 ### Watchdog
 
@@ -948,18 +949,6 @@ Here is the accessories and optional modules list:
         <td>LoRa® Antenna</td>
         <td>LoRa Antenna Kit - 868-915 MHz</td>
         <td>110061501</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Zigbee Module</td>
-        <td>Mini-PCIe USB Zigbee Module</td>
-        <td>110992005</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Zigbee Antenna</td>
-        <td>Zigbee Antenna Kit for reComputer R</td>
-        <td>110061641</td>
       </tr>
       <tr>
         <td rowspan="8">4G antenna with 4G module for 4G function, GPS antenna with 4G module for GPS function</td>
@@ -1041,7 +1030,7 @@ Here is the accessories and optional modules list:
   </table>
 </div>
 
-The reComputer Industrial R22xx mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. Additionally, 4G module and LoRa® module shouldn't be used at the same time, can not plug in two LoRa® modules on board.
+The reComputer Industrial R22xx mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module and LoRa® module using the USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol. Additionally, 4G module and LoRa® module shouldn't be used at the same time, can not plug in two LoRa® modules on board.
 
 > Note
 > Can not plug in 2 LoRa® modules on board.
@@ -1059,21 +1048,14 @@ The reComputer Industrial R22xx mainboard features one M.2 B-KEY Slot  and one M
 The reComputer Industrial R22xx mainboard features one M.2 B-KEY Slot, supporting a 4G/5G module using the USB protocol. The EC25 4G module from Quectel has been fully tested to be compatible with the reComputer Industrial R22xx.
 
 > Note
-> Please note that if you require 4G/5G functionality, it is necessary to purchase the corresponding 4G module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa®/Zigbee Module and Antenna".
+> Please note that if you require 4G/5G functionality, it is necessary to purchase the corresponding 4G module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa® Module and Antenna".
 
 ### LoRa® Module  
 
 The Mini-PCIe slot supports LoRa® module using the USB and SPI protocol.  The WM1302 module from Seeed Studio has been fully tested to be compatible with the reComputer Industrial R2000.
 
 > Note
-> Please note that if you require LoRa® functionality, it is necessary to purchase the corresponding LoRa® module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa®/Zigbee Module and Antenna".
-
-### Zigbee Module
-
-The Mini-PCIe slot offer support for Zigbee modules utilizing the USB protocol, allowing for seamless integration of Zigbee functionality into compatible devices. This feature enables efficient communication and control within Zigbee networks, enhancing the versatility and connectivity of the system. With the Mini-PCIe slot available for Zigbee modules, users have the flexibility to implement diverse applications for enhanced reliability.
-
-> Note  
-> Please note that if you require Zigbee functionality, it is necessary to purchase the corresponding Zigbee module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa®/Zigbee Module and Antenna".
+> Please note that if you require LoRa® functionality, it is necessary to purchase the corresponding LoRa® module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa® Module and Antenna".
 
 ### SSD
 

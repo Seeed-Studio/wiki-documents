@@ -12,7 +12,7 @@ last_update:
   date: 9/14/2023
   author: Jessie
 createdAt: '2023-09-15'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/home_assistant_with_sensecap_lorawan_sensors/
 ---
 

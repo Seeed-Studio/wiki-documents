@@ -21,13 +21,19 @@ const i18n = {
     forum:  { title: "Seeed フォーラム",      desc: "製品に関する深い議論に参加し、経験を共有し、コミュニティや技術専門家からサポートを受けましょう。" },
     email:  { title: "メール",               desc: "メールでお問い合わせいただくと、専門家からの直接的な支援や詳細な営業情報を受けられます。" },
     discord:{ title: "Discord",            desc: "Seeed チームやコミュニティとリアルタイムに交流し、最新情報を入手しましょう。" },
-    github: { title: "GitHub ディスカッション", desc: "ドキュメントチームと連携し、改善提案や問題報告、フィードバックでドキュメントをより良くしましょう。" },
+    github: { title: "GitHub ディスカッション", desc: "ドキュメントチームと連携し、改善提案や問題報告、フィードバックでドキュメントをより良くしましょう." },
   },
   es: {
     forum:  { title: "Foro de Seeed",       desc: "Únete a debates profundos sobre productos, comparte tus experiencias y recibe ayuda de la comunidad y expertos técnicos." },
     email:  { title: "Correo electrónico",  desc: "Envíanos un correo para recibir asistencia directa de expertos o información comercial detallada." },
     discord:{ title: "Discord",            desc: "Chatea en tiempo real con el equipo de Seeed y la comunidad, mantente al día y conecta al instante." },
     github: { title: "Debate en GitHub",    desc: "Colabora con nuestro equipo de documentación para proponer mejoras, reportar problemas y compartir comentarios." },
+  },
+  pt: {
+    forum:  { title: "Fórum da Seeed",      desc: "Participe de discussões aprofundadas sobre produtos, compartilhe suas experiências e receba ajuda da comunidade e de especialistas técnicos." },
+    email:  { title: "E-mail",              desc: "Obtenha assistência direta e profissional de nossos especialistas ou informações comerciais detalhadas entrando em contato por e-mail." },
+    discord:{ title: "Discord",            desc: "Converse em tempo real com a equipe da Seeed Studio e a comunidade, fique por dentro das últimas novidades e conecte-se instantaneamente." },
+    github: { title: "Discussão no GitHub", desc: "Colabore com nossa equipe de documentação para sugerir melhorias, relatar problemas e compartilhar feedback para tornar nossa documentação ainda melhor." },
   },
 };
 

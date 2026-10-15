@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-05'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/Retro_Phone_Kit/
 ---
 ![](https://files.seeedstudio.com/wiki/Retro_Phone_Kit/img/Retro%20Phone%20Kit.jpg)

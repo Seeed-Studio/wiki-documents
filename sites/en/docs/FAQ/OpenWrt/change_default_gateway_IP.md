@@ -7,7 +7,7 @@ last_update:
   date: 6/21/2023
   author: Seraphina
 createdAt: '2023-07-28'
-updatedAt: '2026-03-03'
+updatedAt: '2023-07-28'
 url: https://wiki.seeedstudio.com/change_default_gateway_IP/
 ---
 

@@ -1,122 +1,134 @@
 const docList = [
   [
     {
-      "path": "/get_started_with_meshcore_solar_node",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp",
-      "title": "Get Started with MeshCore on SenseCAP Solar Node",
-      "date": "3/6/2026",
-      "title_cn": "SenseCAP Solar Node MeshCore 入门指南",
-      "title_ja": "SenseCAP Solar Node で始める MeshCore 入門",
-      "title_es": "Guía de inicio de MeshCore en SenseCAP Solar Node"
+      "path": "/respeaker_xvf3800_i2s_usb_bridge",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp",
+      "title": "reSpeaker XVF3800 USB Audio Bridge with XIAO ESP32S3",
+      "date": "2026-10-12",
+      "title_cn": "reSpeaker XVF3800 搭配 XIAO ESP32S3 的 USB 音频桥",
+      "title_ja": "reSpeaker XVF3800 USB オーディオブリッジ with XIAO ESP32S3",
+      "title_es": "Puente de audio USB reSpeaker XVF3800 con XIAO ESP32S3",
+      "title_pt": "Ponte de Áudio USB reSpeaker XVF3800 com XIAO ESP32S3"
     },
     {
-      "path": "/sound_event_detection_module_home_assistant",
-      "image": "https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.png",
-      "title": "Home Assistant and Sound Event Detection Module",
-      "date": "2026-03-04",
-      "title_cn": "Home Assistant 与声音事件检测模块",
-      "title_ja": "Home Assistant と Sound Event Detection Module",
-      "title_es": "Home Assistant y Módulo de Detección de Eventos de Sonido"
+      "path": "/solutions/clip-private-transcription",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/clip_private_transcription/panel-transcript-detail-zh-20261009-a9a0f4d1.jpg",
+      "title": "Private On-Premise Transcription for reSpeaker Clip — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "reSpeaker Clip 本地私有化转写方案：选型、部署与实测数据",
+      "title_ja": "reSpeaker Clip ローカル文字起こし：選定・導入・実測データ",
+      "title_es": "Transcripción privada local para reSpeaker Clip — Selección, despliegue y datos medidos",
+      "title_pt": "Transcrição privada local para reSpeaker Clip — seleção, implantação e dados medidos"
     }
   ],
   [
     {
-      "path": "/lerobot_dataset_tool",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp",
-      "title": "Lerobot Dataset Tool",
-      "date": "2026-03-02",
-      "title_cn": "Lerobot数据集工具",
-      "title_ja": "Lerobot データセットツール",
-      "title_es": "Herramienta de Conjunto de Datos de LeRobot"
+      "path": "/solutions/home-assistant-local-voice",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/home_assistant_whole_home/voice-light-on-zh-20261008-a03bf773.jpg",
+      "title": "Home Assistant Local Voice Control — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "Home Assistant 本地语音控制方案：选型、部署与实测数据",
+      "title_ja": "Home Assistant ローカル音声操作：選定・導入・実測データ",
+      "title_es": "Control de voz local en Home Assistant — Selección, despliegue y datos medidos",
+      "title_pt": "Controle de Voz Local no Home Assistant — Seleção, Implantação e Dados Medidos"
     },
     {
-      "path": "/getting_started_with_ee03",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.jpg",
-      "title": "Getting Started with XIAO ePaper Display Board - EE03",
-      "date": "2026-03-02",
-      "title_cn": "XIAO 电子纸显示板 EE03 快速上手",
-      "title_ja": "XIAO ePaper Display Board - EE03 入門ガイド",
-      "title_es": "Primeros pasos con la XIAO ePaper Display Board - EE03"
+      "path": "/solutions/edge-license-plate-recognition",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/edge_plate_recognition/panel-plate-1-jetson-blue-oblique-20261009-2e5b3792.jpg",
+      "title": "Edge License Plate Recognition — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "边缘车牌识别方案：选型、部署与实测数据",
+      "title_ja": "エッジ ナンバープレート認識：選定・導入・実測データ",
+      "title_es": "Reconocimiento de matrículas en el borde — Selección, despliegue y datos medidos",
+      "title_pt": "Reconhecimento de Placas na Borda — Seleção, Implantação e Dados Medidos"
     }
   ],
   [
     {
-      "path": "/sound_event_detection_module",
-      "image": "https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png",
-      "title": "Getting Started with Sound Event Detection Module",
-      "date": "2026-03-02",
-      "title_cn": "声音事件检测模块快速上手",
-      "title_ja": "Sound Event Detection Module 入門ガイド",
-      "title_es": "Introducción al Módulo de Detección de Eventos de Sonido"
+      "path": "/solutions/edge-parking-counting",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/edge_parking_counting/panel-counting-2-after-20261009-fd76361b.jpg",
+      "title": "Parking Entry/Exit Vehicle Counting — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "停车场车辆进出计数方案：选型、部署与实测数据",
+      "title_ja": "駐車場 入出庫カウント：選定・導入・実測データ",
+      "title_es": "Conteo de vehículos en entradas/salidas de aparcamientos — Selección, despliegue y datos medidos",
+      "title_pt": "Contagem de Veículos em Entradas/Saídas de Estacionamento — Seleção, Implantação e Dados Medidos"
     },
     {
-      "path": "/sensecap_t1000_e_meshcore",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.webp",
-      "title": "Get Started with MeshCore on SenseCAP T1000-E",
-      "date": "2026-02-28",
-      "title_cn": "SenseCAP T1000-E MeshCore 入门指南",
-      "title_ja": "SenseCAP T1000-E で始める MeshCore 入門",
-      "title_es": "Guía de inicio de MeshCore en SenseCAP T1000-E"
+      "path": "/solutions/edge-parking-occupancy",
+      "image": "https://files.seeedstudio.com/wiki/reference-design/edge_parking_occupancy/panel-occupancy-1-mixed-20261009-5635c9d1.jpg",
+      "title": "Camera-Based Parking Occupancy Detection — Selection, Deployment and Measured Data",
+      "date": "2026-10-09",
+      "title_cn": "视频车位占用检测方案：选型、部署与实测数据",
+      "title_ja": "カメラによる駐車スペース検知：選定・導入・実測データ",
+      "title_es": "Detección de ocupación de aparcamiento basada en cámara — Selección, despliegue y datos medidos",
+      "title_pt": "Detecção de Ocupação de Estacionamento Baseada em Câmera — Seleção, Implantação e Dados Medidos"
     }
   ],
   [
     {
-      "path": "/get_started_with_other_mesh_firmware",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp",
-      "title": "Get Started with MeshCore on Wio Tracker L1 Pro",
-      "date": "2026-02-28",
-      "title_cn": "Wio Tracker L1 Pro MeshCore 入门指南",
-      "title_ja": "Wio Tracker L1 Pro で始める MeshCore 入門",
-      "title_es": "Guía de inicio de MeshCore en Wio Tracker L1 Pro"
+      "path": "/sensecraft_robotics_rebot_arm_102_b601_dm",
+      "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp",
+      "title": "reBot Arm 102 + B601 DM Training Guide",
+      "date": "2026-09-24",
+      "title_cn": "reBot Arm 102 + B601 DM 训练指南",
+      "title_ja": "reBot Arm 102 + B601 DM トレーニングガイド",
+      "title_es": "Guía de entrenamiento reBot Arm 102 + B601 DM",
+      "title_pt": "Guia de Treinamento reBot Arm 102 + B601 DM"
     },
     {
-      "path": "/xiao_esp32s3_&_wio_sx1262_kit_mqtt",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png",
-      "title": "Setting up an MQTT Gateway with XIAO ESP32S3 & Wio-SX1262 Kit",
-      "date": "2026-02-28",
-      "title_cn": "使用 XIAO ESP32S3 & Wio-SX1262 Kit 搭建 MQTT 网关",
-      "title_ja": "XIAO ESP32S3 & Wio-SX1262 Kit を使用した MQTT ゲートウェイの構築",
-      "title_es": "Configuración de una pasarela MQTT con XIAO ESP32S3 y Wio-SX1262 Kit"
+      "path": "/sensecraft_robotics_rebot_arm_102_b601_rs",
+      "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/00-task-overview-rs-en.webp",
+      "title": "reBot Arm 102 + B601 RS Training Guide",
+      "date": "2026-09-24",
+      "title_cn": "reBot Arm 102 + B601 RS 训练指南",
+      "title_ja": "reBot Arm 102 + B601 RS トレーニングガイド",
+      "title_es": "Guía de entrenamiento de reBot Arm 102 + B601 RS",
+      "title_pt": "Guia de Treinamento reBot Arm 102 + B601 RS"
     }
   ],
   [
     {
-      "path": "/ai_robotics_flash_jetpack_with_wsl2",
-      "image": "https://files.seeedstudio.com/wiki/Flash_JetPack_with_WSL2/check_custom_kernel.png",
-      "title": "Flash JetPack with WSL2",
-      "date": "2026-02-24",
-      "title_cn": "使用 WSL2 刷写 JetPack",
-      "title_ja": "WSL2 で JetPack をフラッシュする",
-      "title_es": "Flashear JetPack con WSL2"
+      "path": "/sensecraft_robotics_so_arm101",
+      "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/00-task-overview-soarm-en.webp",
+      "title": "SO-ARM101 Training Guide",
+      "date": "2026-09-24",
+      "title_cn": "SO-ARM101 训练指南",
+      "title_ja": "SO-ARM101 トレーニングガイド",
+      "title_es": "Guía de entrenamiento SO-ARM101",
+      "title_pt": "Guia de Treinamento SO-ARM101"
     },
     {
-      "path": "/round_display_animation_workshop",
-      "image": "https://files.seeedstudio.com/wiki/round_display_animation_workshop/hb_screen.jpg",
-      "title": "Animation workshop: XIAO ESP32-S3 and LVGL optimization guide",
-      "date": "2026-02-24",
-      "title_cn": "动画工作坊：XIAO ESP32-S3 与 LVGL 优化指南",
-      "title_ja": "アニメーションワークショップ: XIAO ESP32-S3 と LVGL 最適化ガイド",
-      "title_es": "Taller de animación: guía de optimización de XIAO ESP32-S3 y LVGL"
+      "path": "/ai_robotics_deploy_tensorrt_model_connect_on_jetson",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100003716-gallery_img_1_1.jpg",
+      "title": "Deploy TensorRT-Model-Connect on Jetson AGX Orin",
+      "date": "2026-09-20",
+      "title_cn": "在 Jetson AGX Orin 上部署 TensorRT-Model-Connect",
+      "title_ja": "Jetson AGX Orin に TensorRT-Model-Connect をデプロイする",
+      "title_es": "Implementar TensorRT-Model-Connect en Jetson AGX Orin",
+      "title_pt": "Implantar TensorRT-Model-Connect no Jetson AGX Orin"
     }
   ],
   [
     {
-      "path": "/respeaker_xvf_3800_openclaw",
-      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp",
-      "title": "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push",
-      "date": "2026-02-10",
-      "title_cn": "ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送",
-      "title_ja": "ReSpeaker + OpenClaw: Lark グループスマート位置特定とインタラクティブ会議カードプッシュ",
-      "title_es": "ReSpeaker + OpenClaw: Localización Inteligente de Grupos Lark y Envío de Tarjetas de Reunión Interactivas"
+      "path": "/jetson/recomputer_rugged_j401/industrial_vision",
+      "image": "https://files.seeedstudio.com/wiki/rugged/rugged_banner.png",
+      "title": "reComputer Rugged J401 for Industrial Vision",
+      "date": "2026-09-20",
+      "title_cn": "面向工业视觉的 reComputer Rugged J401",
+      "title_ja": "産業用ビジョン向け reComputer Rugged J401",
+      "title_es": "reComputer Rugged J401 para Visión Industrial",
+      "title_pt": "reComputer Rugged J401 para Visão Industrial"
     },
     {
-      "path": "/respeaker_xvf3800_agora_ten_framework_client",
-      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
-      "title": "reSpeaker XVF3800 + Agora ten-framework Edge Conversational Client Deployment Guide",
-      "date": "2026-02-09",
-      "title_cn": "reSpeaker XVF3800 + Agora ten-framework 边缘对话客户端部署指南",
-      "title_ja": "reSpeaker XVF3800 + Agora ten-framework エッジ対話クライアント デプロイガイド",
-      "title_es": "Guía de Despliegue del Cliente Conversacional en el Borde reSpeaker XVF3800 + Agora ten-framework"
+      "path": "/meshcore_ai_image_transmission_x1",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png",
+      "title": "AI Image Transmission over MeshCore with MeshTracker X1",
+      "date": "2026-09-19T00:00:00.000Z",
+      "title_cn": "使用 MeshTracker X1 在 MeshCore 上进行 AI 图像传输",
+      "title_ja": "MeshTracker X1 を用いた MeshCore 上での AI 画像伝送",
+      "title_es": "Transmisión de Imágenes con IA sobre MeshCore con MeshTracker X1",
+      "title_pt": "Transmissão de Imagem com IA via MeshCore com MeshTracker X1"
     }
   ]
 ];

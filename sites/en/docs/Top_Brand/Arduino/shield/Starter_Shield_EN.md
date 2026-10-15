@@ -10,7 +10,7 @@ last_update:
   date: 2/16/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/Starter_Shield_EN/
 ---
 

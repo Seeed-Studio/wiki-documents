@@ -10,7 +10,7 @@ last_update:
   date: 6/14/2023
   author: Peter Pan
 createdAt: '2023-06-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/EdgeBox-RPi-200-boot-from-external-media/
 ---
 

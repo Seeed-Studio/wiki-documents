@@ -8,15 +8,14 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft-ai/application/application-for-homeassistant
 aliases:
   - /connect_vision_ai_v2_to_ha
-sidebar_position: 1
+sidebar_position: 3
 last_update:
   date: 01/10/2024
   author: Citric
 createdAt: '2024-01-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-08-04'
 url: https://wiki.seeedstudio.com/sensecraft-ai/application/application-for-homeassistant/
 ---
-
 # Connect Grove Vision AI V2 to Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a4.png" style={{width:1000, height:'auto'}}/></div>
@@ -198,7 +197,7 @@ Open the [SenseCraft Model Assistant Tool](https://seeed-studio.github.io/SenseC
 Then select **XIAO ESP32S3** and click **Connect**.
 
 :::caution
-Note that although the XIAO ESP32S3 is selected here, we are still using the XIAO ESP32C3!
+Note that although the XIAO ESP32-S3 is selected here, we are still using the XIAO ESP32-C3!
 :::
 
 Click the button below to download the firmware file and click the **Add File** button on the web page to flash the `SSCMA_XIAO_ESP32C3_adapter_sensecraft_v1.1.8.bin` firmware for the `0x0` address.
@@ -215,16 +214,9 @@ Finally, click the **Flash** button and wait for the programme to be uploaded su
 
 ### Step 6. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
 
-First, we need to open the main SenseCraft AI page.
+Access the Grove Vision AI V2 workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/36).
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
-</div>
-<br />
-
-Click on **Vision Workspace -> Grove Vision AI V2** in the navigation menu.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/52.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/grove_vision_ai_v2_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
 Please use a Type-C type cable to connect **Grove Vision AI V2** to your computer.
 

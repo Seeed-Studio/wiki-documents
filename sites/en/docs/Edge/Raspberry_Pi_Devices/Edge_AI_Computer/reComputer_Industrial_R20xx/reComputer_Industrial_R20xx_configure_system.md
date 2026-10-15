@@ -1,5 +1,5 @@
 ---
-description: Learn how to configure and test hardware components on the reComputer Industrial R20xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 5G，4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing, and UPS for safe shutdown.
+description: Learn how to configure and test hardware components on the reComputer Industrial R20xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 5G，4G, RS485, RS232, DI/DO testing, and UPS for safe shutdown.
 title: Configure reComputer Industrial R20xx
 keywords:
   - Raspberry pi
@@ -11,13 +11,13 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-06-08'
 url: https://wiki.seeedstudio.com/recomputer_industrial_r20xx_configure_system/
 ---
 
 ## Overview
 
-Learn how to configure and test hardware components on the reComputer Industrial R20xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, 5G，Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing, UPS for safe shutdown and more.
+Learn how to configure and test hardware components on the reComputer Industrial R20xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, 5G, RS485, RS232, DI/DO testing, UPS for safe shutdown and more.
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -493,54 +493,6 @@ ifconfig
 ping www.baidu.com -I usb0
 ```
 
-## Zigbee over Mini-PCIe
-
-To test **Zigbee communication** between two Zigbee modules, follow these steps:  
-
-1. Check Available Serial Ports
-
-Use the following command to check available serial ports:
-
-```bash
-cat /dev/ttyUSB*
-```
-
-**Install a Serial Communication Tool**
-
-2. Install Serial Communication Tool:
-
-```bash
-sudo apt-get install cutecom
-```
-
-3. Open Serial Port for Coordinator (First Zigbee Module):
-
-- Open the cutecom tool and configure it for the first serial port:
-- Baud rate: ***115200***
-- Check the ***"Hex output"*** option at the bottom of the interface.
-- Follow these steps to configure the first Zigbee module:
-- Set as coordinator: Send command ***‘55 04 00 05 00 05’***, expect response ***‘55 04 00 05 00 05’***.
-- Reset device: Press reset button or send command ***‘55 07 00 04 00 FF FF 00 04’***.
-- Network formation: Send command ***‘55 03 00 02 02’***.
-
-4. Open Serial Port for Router (Second Zigbee Module):
-Open another instance of ***cutecom*** and configure it for the second serial port with the same settings as before.
-Follow these steps to configure the second Zigbee module:
-
-- Set as router: Send command ***‘55 04 00 05 01 04’***, expect response ***‘55 04 00 05 00 05’***.
-- Reset device: Press reset button or send command ***‘55 07 00 04 00 FF FF 00 04’***.
-- Network formation: Send command ***‘55 03 00 02 02’***.
-
-5. Check Device Status:
-Send command ***‘55 03 00 00 00’*** to check the device status. Expect a response similar to ***‘55 2a 00 00 00 01 XX XX XX XX’***, where ‘XX’ represents device information.
-6. Enter Transparent Mode:
-If network formation is successful, enter transparent mode by sending command ***55 07 00 11 00 03 00 01 13***. Both modules should be in transparent mode for direct communication. To exit transparent mode, send "+++".
-7. Additional Notes:
-
-- If router configuration fails, the device may already be a coordinator. Leave the network using command '55 07 00 04 02 xx xx xx'.
-- Test transmission power using commands '55 04 0D 00 00 0D' (query) and '55 04 0D 01 XX XX' (set).
-Ensure you replace ***/dev/ttyUSB*** with the correct serial port for each Zigbee module. Follow these steps carefully to test Zigbee communication between the two modules successfully.
-
 ## RS485 Testing
 
 The reComputer Industrial R20xx includes **three RS485 ports**. Below are their corresponding **COM ports** and **device files**:  
@@ -703,19 +655,19 @@ reComputer Industrial R20xx contains 8x DO ports, user can configure these ports
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
       <tr>
-        <td>DO6</td>
+        <td>DO5</td>
         <td>GPIO577</td>
+      </tr>
+      <tr>
+        <td>DO6</td>
+        <td>GPIO578</td>
       </tr>
       <tr>
         <td>DO7</td>
@@ -759,6 +711,12 @@ If the USB hub is functioning properly, you should see its details listed in the
 
 ## RTC (Real-Time Clock) Testing
 
+:::note
+Since the reComputer device is equipped with the CM5 chip, there are two RTC units on the device: ① The built-in RTC of CM5 (rtc0); ② The RTC assembled on reComputer (rtc1).
+
+rtc0 cannot retain time data. Therefore, to use the RTC function, you need to manually specify the device number rtc1 when setting the time.
+:::
+
 To test the Real-Time Clock (RTC) functionality, follow these steps:
 
 1. Disable automatic time synchronization:
@@ -772,27 +730,87 @@ sudo systemctl disable systemd-timesyncd
 Set the RTC to a specific date and time:
 
 ```bash
-sudo hwclock --set --date "2025-7-17 12:00:00"
+sudo hwclock --set --date "2025-7-17 12:00:00" -f /dev/rtc1
 ```
 
 3. Sync RTC Time to the System
 Update the system time to match the RTC time:  
 
 ```bash
-sudo hwclock --hctosys
+sudo hwclock --hctosys -f /dev/rtc1
 ```
 
 4. Check the RTC time:
 
 ```bash
-sudo hwclock -r
+sudo hwclock -r -f /dev/rtc1
 ```
 
 This command will read and display the time stored in the RTC.
 
 5. Disconnect the power source from the RTC, wait a few minutes, then reconnect it and check the RTC time again to see if it retained the correct time.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1_new.png" style={{width:800, height:'auto'}}/></div>
+
+### Use RTC1 as the System Hardware Clock 
+
+The default RTC device is rtc0, and the time synchronization service only synchronizes the system time to the default RTC device. To use rtc1 as the primary hardware clock, create custom systemd services to read the time from rtc1 during startup and periodically write the current system time back to rtc1.
+
+1. Create a Service for hctosys
+
+Create a systemd service to load the system time from rtc1 during startup.
+
+```bash
+sudo tee /etc/systemd/system/rtc1-hctosys.service >/dev/null <<'EOF'
+[Unit]
+Description=Load system time from RTC1
+After=dev-rtc1.device
+Wants=dev-rtc1.device
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --hctosys --utc -f /dev/rtc1
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable rtc1-hctosys.service
+```
+
+2. Create a Service for systohc
+
+Create a systemd service to save the current system time to rtc1, and a timer to run the service periodically.
+
+```bash
+sudo tee /etc/systemd/system/rtc1-systohc.service >/dev/null <<'EOF'
+[Unit]
+Description=Save system time to RTC1
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --systohc --utc -f /dev/rtc1
+EOF
+
+sudo tee /etc/systemd/system/rtc1-systohc.timer >/dev/null <<'EOF'
+[Unit]
+Description=Periodically save system time to RTC1
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Unit=rtc1-systohc.service
+
+[Install]
+WantedBy=timers.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now rtc1-systohc.timer
+```
+
+The timer starts two minutes after boot and updates rtc1 every ten minutes thereafter. You can adjust the interval according to your requirements.
 
 ## Watchdog Timer Testing
 
@@ -872,7 +890,7 @@ The GPIO corresponding to the buzzer is gpio627. Enter the following script to t
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction
 echo 1 > /sys/class/gpio/gpio627/value
-```  
+```
 
 2. Turn off the buzzer :Turn off the buzzer :
 
@@ -880,7 +898,7 @@ echo 1 > /sys/class/gpio/gpio627/value
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction 
 echo 0 > /sys/class/gpio/gpio627/value
-```  
+```
 
 ## TPM 2.0
 
@@ -888,7 +906,7 @@ If you connect TPM 2.0 module to device, the following code can help check TPM c
 
 ```bash
 ls /dev | grep tpm
-```  
+```
 
 **Interpreting the Output:**  
 
@@ -902,13 +920,13 @@ To interact with the ATECC608A device and generate a random serial number, follo
 
 ```bash
 curl -LJO https://github.com/wirenboard/atecc-util/releases/download/v0.4.12/atecc-util_0.4.12_arm64.deb
-```  
+```
 
 2. Extract the contents of the .deb package to the current directory:
 
 ```bash
 dpkg -x ./atecc-util_0.4.12_arm64.deb .
-```  
+```
 
 3. Navigate to the atecc Directory:
 
@@ -933,19 +951,19 @@ Here are the commands to interact with an EEPROM (Electrically Erasable Programm
 
 ```bash
  sudo chmod 777 /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
 2. Write the string "This is a test string" to the EEPROM device:
 
 ```bash
 echo "This is a test string" > /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
 3. Read the contents of the EEPROM device and displays it in ***hexadecimal*** format using the hexdump utility:
 
 ```bash
 cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
-```  
+```
 
 ## Checking SSD Detection
 

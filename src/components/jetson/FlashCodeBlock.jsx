@@ -19,10 +19,43 @@
  */
 import React from 'react';
 import CodeBlock from '@theme/CodeBlock';
+import { useLocation } from '@docusaurus/router';
 import { useJetsonStore } from '@site/src/stores/useJetsonStore';
 import { getL4TData } from '@site/src/components/jetson/DownloadLink';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-// 多语言内容配置（en / zh / ja / es）
+const normalizeLang = (lang = 'en') => {
+  const l = String(lang).toLowerCase();
+
+  if (l === 'cn' || l.startsWith('zh')) return 'zh';
+  if (l.startsWith('ja')) return 'ja';
+  if (l.startsWith('es')) return 'es';
+  if (l.startsWith('pt')) return 'pt';
+  if (l.startsWith('en')) return 'en';
+
+  return 'en';
+};
+
+const getLangFromPathname = (pathname = '/') => {
+  if (pathname.startsWith('/pt-br')) return 'pt';
+  if (pathname.startsWith('/cn')) return 'zh';
+  if (pathname.startsWith('/ja')) return 'ja';
+  if (pathname.startsWith('/es')) return 'es';
+  return 'en';
+};
+
+const useLocalizedTexts = (lang) => {
+  const { i18n } = useDocusaurusContext();
+  const location = useLocation();
+
+  const currentLang = lang
+    ? normalizeLang(lang)
+    : getLangFromPathname(location.pathname || '/') || normalizeLang(i18n.currentLocale);
+
+  return content[currentLang] || content.en;
+};
+
+// 多语言内容配置（en / zh / ja / es / pt）
 const content = {
   en: {
     // VerifySHA256
@@ -96,6 +129,16 @@ const content = {
       "Connect the board to the Ubuntu host PC with a USB Type-C data transmission cable.",
     powerUpFirst: "Power up the carrier board by connecting the power cable.",
     releaseForceCovery: "Release the force recovery button.",
+    classicJ501ConnectRecoveryUsb: "Connect the dedicated recovery USB Type-C port to the Ubuntu host PC.",
+    classicJ501PressRecovery: "Press and hold the recovery button.",
+    j501MiniHoldReset: "Keep pressing button to the RESET mode.",
+    maxnWarningIntro: "If you are using an Orin NX 16GB/8GB module,",
+    maxnWarningAction: "do not enable MAXN SUPER mode",
+    maxnWarningBody: "The cooling capacity of the reComputer J401 carrier board is insufficient to support it, and forcing this mode may result in permanent damage to the module.",
+    classicJ501RecoveryAlt: "reComputer Classic J501 recovery button and USB port",
+    j501ForceRecoveryVideoTitle: "J501 Enter Force Recovery Mode",
+    flashPortAlt: "Flash Port",
+    usbConnectionAlt: "USB Connection",
 
     // Device detection
     deviceNotDetected: "If the device is not detected, try the following:",
@@ -145,6 +188,8 @@ const content = {
     hostRecommendationTable: "Please refer to the table below to prepare the host machine.",
     jetpackVersion: "JetPack Version",
     ubuntuVersion: "Ubuntu Version (Host Computer)",
+    hostJetpack72Note:
+      "For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.",
 
     // Button headers
     buttonHeader: "Button Header",
@@ -228,6 +273,16 @@ const content = {
     connectUsbFirst: "先用 USB Type-C 数据线将载板连接到 Ubuntu 主机。",
     powerUpFirst: "再连接电源线，为载板上电。",
     releaseForceCovery: "松开强制恢复按钮。",
+    classicJ501ConnectRecoveryUsb: "使用专用的恢复 USB Type-C 接口将设备连接到 Ubuntu 主机。",
+    classicJ501PressRecovery: "按住 Recovery 恢复按钮。",
+    j501MiniHoldReset: "持续按住按钮，使设备进入 RESET 模式。",
+    maxnWarningIntro: "如果您使用的是 Orin NX 16GB/8GB 模块，",
+    maxnWarningAction: "请不要启用 MAXN SUPER 模式",
+    maxnWarningBody: "reComputer J401 载板的散热能力不足以支持该模式，强制启用可能导致模块永久损坏。",
+    classicJ501RecoveryAlt: "reComputer Classic J501 恢复按钮和 USB 接口",
+    j501ForceRecoveryVideoTitle: "J501 进入强制恢复模式",
+    flashPortAlt: "刷写接口",
+    usbConnectionAlt: "USB 连接",
 
     // Device detection
     deviceNotDetected: "若未检测到设备，请尝试：",
@@ -271,6 +326,8 @@ const content = {
     hostRecommendationTable: "请参考下表准备主机环境：",
     jetpackVersion: "JetPack 版本",
     ubuntuVersion: "Ubuntu 版本（主机）",
+    hostJetpack72Note:
+      "对于 JetPack 7.2，Ubuntu 24.04 仅支持刷写和目标端组件安装；如果需要主机开发组件，请使用 Ubuntu 20.04 或 22.04。",
 
     // Button headers
     buttonHeader: "按键/引脚",
@@ -351,6 +408,16 @@ const content = {
       "まず USB Type-C ケーブルでボードを Ubuntu ホスト PC に接続します。",
     powerUpFirst: "次に電源ケーブルを接続してキャリアボードを起動します。",
     releaseForceCovery: "強制リカバリボタンを離します。",
+    classicJ501ConnectRecoveryUsb: "専用のリカバリ用 USB Type-C ポートを Ubuntu ホスト PC に接続します。",
+    classicJ501PressRecovery: "リカバリボタンを押し続けます。",
+    j501MiniHoldReset: "ボタンを押し続けて RESET モードにします。",
+    maxnWarningIntro: "Orin NX 16GB/8GB モジュールを使用している場合は、",
+    maxnWarningAction: "MAXN SUPER モードを有効にしないでください",
+    maxnWarningBody: "reComputer J401 キャリアボードの冷却能力ではこのモードを支えられず、強制するとモジュールが恒久的に損傷する可能性があります。",
+    classicJ501RecoveryAlt: "reComputer Classic J501 のリカバリボタンと USB ポート",
+    j501ForceRecoveryVideoTitle: "J501 を強制リカバリモードにする",
+    flashPortAlt: "フラッシュポート",
+    usbConnectionAlt: "USB 接続",
 
     deviceNotDetected: "デバイスが認識されない場合は次を試してください：",
     reconnectUsb: "USB ケーブルを挿し直します。",
@@ -396,6 +463,8 @@ const content = {
     hostRecommendationTable: "以下の表を参考にホスト環境を準備してください。",
     jetpackVersion: "JetPack バージョン",
     ubuntuVersion: "Ubuntu バージョン（ホスト）",
+    hostJetpack72Note:
+      "JetPack 7.2 では、Ubuntu 24.04 はフラッシュとターゲット側コンポーネントのインストールのみをサポートします。ホスト開発コンポーネントが必要な場合は Ubuntu 20.04 または 22.04 を使用してください。",
 
     buttonHeader: "ボタン/ピン",
     description: "説明",
@@ -477,6 +546,16 @@ const content = {
       "Primero conecte la placa al PC con Ubuntu con un cable de datos USB Type-C.",
     powerUpFirst: "Después, conecte la alimentación para encender la carrier board.",
     releaseForceCovery: "Suelte el botón de recuperación forzada.",
+    classicJ501ConnectRecoveryUsb: "Conecte el puerto USB Type-C dedicado para recuperación al PC anfitrión con Ubuntu.",
+    classicJ501PressRecovery: "Mantenga presionado el botón de recuperación.",
+    j501MiniHoldReset: "Mantenga presionado el botón para poner el dispositivo en modo RESET.",
+    maxnWarningIntro: "Si utiliza un módulo Orin NX 16GB/8GB,",
+    maxnWarningAction: "no active el modo MAXN SUPER",
+    maxnWarningBody: "La capacidad de refrigeración de la carrier board reComputer J401 es insuficiente para soportarlo y forzar este modo puede causar daños permanentes al módulo.",
+    classicJ501RecoveryAlt: "Botón de recuperación y puerto USB de reComputer Classic J501",
+    j501ForceRecoveryVideoTitle: "J501: entrar en modo de recuperación forzada",
+    flashPortAlt: "Puerto de flasheo",
+    usbConnectionAlt: "Conexión USB",
 
     deviceNotDetected: "Si el dispositivo no es detectado, pruebe:",
     reconnectUsb: "Reconectar el cable USB.",
@@ -526,6 +605,8 @@ const content = {
       "Consulte la siguiente tabla para preparar el equipo anfitrión.",
     jetpackVersion: "Versión de JetPack",
     ubuntuVersion: "Versión de Ubuntu (Host)",
+    hostJetpack72Note:
+      "Para JetPack 7.2, Ubuntu 24.04 solo es compatible con el flasheo y la instalación de componentes del dispositivo de destino. Use Ubuntu 20.04 o 22.04 si necesita componentes de desarrollo en el host.",
 
     buttonHeader: "Botón/Pin",
     description: "Descripción",
@@ -540,6 +621,169 @@ const content = {
     pinLayout: "Distribución de pines",
     lsusbResult: "resultado de lsusb",
     jetsonFirstBoot: "Configuración inicial de Jetson"
+  },
+
+  // Português (Brasil)
+  pt: {
+    // VerifySHA256
+    verifySha256Intro:
+      "Para verificar o hash SHA256 do arquivo baixado, execute no terminal:",
+    verifySha256Note:
+      "Se o hash resultante corresponder ao SHA256 fornecido na wiki, isso confirma que o firmware baixado está completo e íntegro.",
+    forExample: "Por exemplo:",
+
+    // Requirements
+    ubuntuHost: "Computador host Ubuntu",
+    usbMicroB: "Cabo de dados USB Micro-B",
+    usbTypeC: "Cabo de dados USB Type-C",
+
+    // Recovery mode
+    recoveryModeNote:
+      "Antes de prosseguir com as etapas de instalação, precisamos garantir que a placa esteja no modo de recuperação forçada (Force Recovery).",
+    recoveryModeNoteNext:
+      "Antes de prosseguir para a próxima etapa, precisamos garantir que a placa esteja no modo de recuperação forçada.",
+    recoveryModeClickStep:
+      'Clique em "Passo a passo" para ver como entrar no modo de recuperação.',
+    stepByStep: "Passo a passo",
+
+    // Recovery steps content
+    recoveryIntro:
+      "Antes de gravar a imagem, certifique-se de que o dispositivo Jetson esteja conectado corretamente via USB e ligado. A conexão USB é necessária para que o PC host detecte o dispositivo e se comunique no modo de recuperação.",
+    recoveryVideoTitle: "Entrar no modo de recuperação forçada (reComputer Mini)",
+
+    // Common steps
+    step1: "Etapa 1.",
+    step2: "Etapa 2.",
+    step3: "Etapa 3.",
+    step4: "Etapa 4.",
+    step5: "Etapa 5.",
+
+    // Recovery steps
+    connectUsbDevice:
+      "Conecte um cabo USB Micro-B entre a porta USB2.0 DEVICE e o PC host Ubuntu.",
+    insertRecovery:
+      "Use um pino e insira no orifício RECOVERY para pressionar e segurar o botão de recuperação.",
+    connectPower: "Conecte a alimentação.",
+    releaseRecovery: "Solte o botão RECOVERY.",
+
+    // Switch steps
+    switchReset: "Mude a chave para o modo RESET.",
+    powerUpCarrier: "Ligue a carrier board conectando o cabo de alimentação.",
+    connectUsbc:
+      "Conecte a placa ao PC host Ubuntu com um cabo de dados USB Type-C.",
+    runLsusb:
+      "No PC host Linux, abra um Terminal e execute o comando lsusb. Se o conteúdo retornado incluir uma das seguintes saídas de acordo com o Jetson SoM em uso, então a placa está no modo de recuperação forçada.",
+
+    // Jumper steps
+    useJumper: "Use um fio jumper para conectar o pino FC REC ao pino GND.",
+    powerRecomputer:
+      "Ligue o reComputer conectando o cabo incluído ao adaptador de energia.",
+
+    // Industrial/ReServer specific steps
+    connectUsbTypeC:
+      "Conecte um cabo USB Type-C entre a porta USB2.0 DEVICE e o seu PC.",
+    connectUsbTypeCDevice:
+      "Conecte um cabo USB Type-C entre a porta DEVICE e o seu PC.",
+    insertRecoveryHole:
+      "Use um pino e insira no orifício RECOVERY para pressionar o botão de recuperação e mantenha-o pressionado.",
+    insertRecHole:
+      "Use um pino e insira no orifício REC para pressionar o botão de recuperação e mantenha-o pressionado.",
+    connect2PinPower:
+      "Conecte o conector de alimentação de 2 pinos incluído ao conector de alimentação da placa e conecte o adaptador de energia com o cabo de alimentação para ligar a placa.",
+    releaseRecoveryHole: "Solte o botão RECOVERY.",
+    releaseRecHole: "Solte o botão REC.",
+
+    // J501 specific
+    connectUsbFirst:
+      "Conecte primeiro a placa ao PC host Ubuntu com um cabo de dados USB Type-C.",
+    powerUpFirst: "Ligue a carrier board conectando o cabo de alimentação.",
+    releaseForceCovery: "Solte o botão de recuperação forçada.",
+    classicJ501ConnectRecoveryUsb: "Conecte a porta USB Type-C dedicada à recuperação ao PC host Ubuntu.",
+    classicJ501PressRecovery: "Pressione e mantenha pressionado o botão de recuperação.",
+    j501MiniHoldReset: "Mantenha o botão pressionado para colocar o dispositivo no modo RESET.",
+    maxnWarningIntro: "Se você estiver usando um módulo Orin NX 16GB/8GB,",
+    maxnWarningAction: "não ative o modo MAXN SUPER",
+    maxnWarningBody: "A capacidade de resfriamento da carrier board reComputer J401 é insuficiente para suportá-lo, e forçar esse modo pode resultar em danos permanentes ao módulo.",
+    classicJ501RecoveryAlt: "Botão de recuperação e porta USB do reComputer Classic J501",
+    j501ForceRecoveryVideoTitle: "J501: entrar no modo de recuperação forçada",
+    flashPortAlt: "Porta de gravação",
+    usbConnectionAlt: "Conexão USB",
+
+    // Device detection
+    deviceNotDetected: "Se o dispositivo não for detectado, tente o seguinte:",
+    reconnectUsb: "Reconecte o cabo USB.",
+    differentPort: "Use uma porta USB diferente (de preferência USB 2.0).",
+    ensureRecovery:
+      "Certifique-se de que o dispositivo esteja em modo de recuperação (pressione e segure Recovery + Reset).",
+    ensureRecoverySimple:
+      "Certifique-se de que o dispositivo esteja em modo de recuperação.",
+
+    afterRecoveryMode:
+      "Depois que o dispositivo entrar no modo de recuperação, abra um Terminal e execute no PC host Linux:",
+    recoveryModeIds:
+      "Se a saída incluir um dos seguintes IDs, a placa está no modo de recuperação forçada:",
+
+    // Orin variants
+    orinNx16gb: "Para Orin NX 16GB:",
+    orinNx8gb: "Para Orin NX 8GB:",
+    orinNano8gb: "Para Orin Nano 8GB:",
+    orinNano4gb: "Para Orin Nano 4GB:",
+    xavierNx: "Para Xavier NX:",
+    agxOrin32gb: "Para AGX Orin 32GB:",
+    agxOrin64gb: "Para AGX Orin 64GB:",
+
+    imageExample: "A imagem abaixo é para o Orin Nano 8GB:",
+    imageExampleAgx: "A imagem abaixo é para o AGX Orin 32GB:",
+
+    // ExtractAndFlash
+    step1Extract: "Etapa 1:",
+    extractImageFile:
+      "Extraia o arquivo de imagem baixado no PC host Ubuntu:",
+    step2Flash: "Etapa 2:",
+    executeFlashCommand:
+      "Execute o seguinte comando para gravar o sistema JetPack no SSD NVMe:",
+    flashSuccess:
+      "Você verá a seguinte saída se o processo de gravação for bem-sucedido:",
+    flashDuration: "O comando de gravação pode levar de 2 a 10 minutos.",
+    step3Connect: "Etapa 3:",
+    connectDisplay:
+      "Conecte o Jetson a um monitor usando o conector da placa (HDMI ou Type-C, dependendo da sua carrier board) e conclua a configuração inicial:",
+    systemConfiguration:
+      "Conclua a configuração do sistema de acordo com as suas necessidades.",
+    step4Optional: "Etapa 4 (Opcional):",
+    installJetpack: "Instalar o NVIDIA JetPack SDK",
+    installJetpackInstructions:
+      "Abra o terminal no dispositivo Jetson e execute os seguintes comandos:",
+
+    // Host Environment
+    hostRecommendation: "Recomendação para o host",
+    hostRecommendationText:
+      "Recomendamos usar dispositivos host Ubuntu físicos em vez de máquinas virtuais.",
+    hostRecommendationTable:
+      "Consulte a tabela abaixo para preparar a máquina host.",
+    jetpackVersion: "Versão do JetPack",
+    ubuntuVersion: "Versão do Ubuntu (Computador host)",
+    hostJetpack72Note:
+      "Para JetPack 7.2, o Ubuntu 24.04 é compatível apenas com flashing e instalação de componentes no dispositivo de destino. Use Ubuntu 20.04 ou 22.04 se precisar de componentes de desenvolvimento no host.",
+
+    // Button headers
+    buttonHeader: "Botão / Pino",
+    description: "Descrição",
+
+    // Path placeholder
+    pathToImage: "<caminho-para-a-imagem>",
+
+    // Product names
+    or: "ou",
+
+    // Switch/Reset images alt text
+    switchToReset: "Mudar para RESET",
+    recoveryModeStep: "Etapa do modo de recuperação",
+    gifAboutReset: "gif sobre RESET",
+    buttonAboutReset: "botão RESET",
+    pinLayout: "Layout de pinos",
+    lsusbResult: "resultado do lsusb",
+    jetsonFirstBoot: "Configuração inicial do Jetson"
   }
 };
 
@@ -547,12 +791,12 @@ const content = {
  * VerifySHA256
  * ------------
  */
-export const VerifySHA256 = ({ lang = 'en' }) => {
+export const VerifySHA256 = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const l4t = useJetsonStore(state => state.l4t);
   const obj = getL4TData(product, l4t);
   const filename = obj?.filename || 'mfi_xxxx.tar.gz';
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
   return (
     <>
       <p>{texts.verifySha256Intro}</p>
@@ -566,9 +810,9 @@ export const VerifySHA256 = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsMini = ({ lang = 'en' }) => {
+export const PrepareRequirementsMini = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012mini', 'j4011mini', 'j3010mini', 'j3011mini'];
   if (!allowed.includes(product)) {
@@ -588,9 +832,9 @@ export const PrepareRequirementsMini = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryMini = ({ lang = 'en' }) => {
+export const RecoveryMini = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012mini', 'j4011mini', 'j3010mini', 'j3011mini'];
   if (!allowed.includes(product)) {
@@ -704,20 +948,29 @@ export const RecoveryMini = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsRobotics = ({ lang = 'en' }) => {
+export const PrepareRequirementsRobotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics'];
+  const carrierProducts = [
+    'j401-robotics-orin-nx-16g',
+    'j401-robotics-orin-nx-8g',
+    'j401-robotics-orin-nano-8g',
+    'j401-robotics-orin-nano-4g'
+  ];
+  const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics', ...carrierProducts];
   if (!allowed.includes(product)) {
     return null;
   }
+  const deviceName = carrierProducts.includes(product)
+    ? 'J401-Robotics Carrier Board with NVIDIA Jetson Orin Nano/NX Module'
+    : `reComputer Robotics J4012 / J4011 / J3010 ${texts.or} J3011`;
 
   return (
     <div>
       <ul>
         <li>{texts.ubuntuHost}</li>
-        <li>reComputer Robotics J4012 / J4011 / J3010 {texts.or} J3011</li>
+        <li>{deviceName}</li>
         <li>{texts.usbTypeC}</li>
       </ul>
 
@@ -726,11 +979,20 @@ export const PrepareRequirementsRobotics = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryRobotics = ({ lang = 'en' }) => {
+export const RecoveryRobotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics'];
+  const allowed = [
+    'j4012robotics',
+    'j4011robotics',
+    'j3011robotics',
+    'j3010robotics',
+    'j401-robotics-orin-nx-16g',
+    'j401-robotics-orin-nx-8g',
+    'j401-robotics-orin-nano-8g',
+    'j401-robotics-orin-nano-4g'
+  ];
   if (!allowed.includes(product)) {
     return null;
   }
@@ -823,9 +1085,9 @@ export const RecoveryRobotics = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsSuper = ({ lang = 'en' }) => {
+export const PrepareRequirementsSuper = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012s', 'j4011s', 'j3011s', 'j3010s'];
   if (!allowed.includes(product)) {
@@ -845,9 +1107,9 @@ export const PrepareRequirementsSuper = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoverySuper = ({ lang = 'en' }) => {
+export const RecoverySuper = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012s', 'j4011s', 'j3011s', 'j3010s'];
   if (!allowed.includes(product)) {
@@ -942,35 +1204,99 @@ export const RecoverySuper = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsClassic = ({ lang = 'en' }) => {
+export const PrepareRequirementsClassic = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic'];
+  const classicJ501Products = ['j5012classic', 'j5011classic'];
+  const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic', ...classicJ501Products];
   if (!allowed.includes(product)) {
     return null;
   }
+
+  const isClassicJ501 = classicJ501Products.includes(product);
 
   return (
     <div>
       <ul>
         <li>{texts.ubuntuHost}</li>
-        <li>reComputer J4012 / J4011 / J3010 {texts.or} J3011</li>
+        <li>{isClassicJ501 ? 'reComputer Classic J5011 / J5012' : `reComputer J4012 / J4011 / J3010 ${texts.or} J3011`}</li>
         <li>{texts.usbTypeC}</li>
       </ul>
 
-      <HostEnvironmentNote lang={lang} />
+      {isClassicJ501 ? <HostEnvironmentNote1 lang={lang} /> : <HostEnvironmentNote lang={lang} />}
     </div>
   );
 };
 
-export const RecoveryClassic = ({ lang = 'en' }) => {
+export const RecoveryClassic = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
-  const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic'];
+  const classicJ501Products = ['j5012classic', 'j5011classic'];
+  const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic', ...classicJ501Products];
   if (!allowed.includes(product)) {
     return null;
+  }
+
+  if (classicJ501Products.includes(product)) {
+    return (
+      <div>
+        <div className="alert alert--info" role="alert" style={{ marginBottom: '1em' }}>
+          {texts.recoveryModeNoteNext}
+          <br />
+          {texts.recoveryModeClickStep}
+        </div>
+
+        <details style={{ marginBottom: '1em' }}>
+          <summary
+            style={{
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              backgroundColor: 'var(--ifm-background-surface-color)',
+              padding: '0.6em 1em',
+              border: '1px solid #c3dafe',
+              borderRadius: '6px',
+              fontSize: '1.05em'
+            }}
+          >
+            {texts.stepByStep}
+          </summary>
+
+          <div style={{ textAlign: 'center', margin: '1em 0' }}>
+            <img
+              width={800}
+              src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Classic_J501/hardware_recovery_button.png"
+              alt={texts.classicJ501RecoveryAlt}
+            />
+          </div>
+
+          <ul>
+            <li><strong>{texts.step1}</strong> {texts.classicJ501ConnectRecoveryUsb}</li>
+            <li><strong>{texts.step2}</strong> {texts.classicJ501PressRecovery}</li>
+            <li><strong>{texts.step3}</strong> {texts.connectPower}</li>
+            <li><strong>{texts.step4}</strong> {texts.releaseRecoveryHole}</li>
+            <li><strong>{texts.step5}</strong> {texts.runLsusb}</li>
+          </ul>
+        </details>
+
+        <p>{texts.afterRecoveryMode}</p>
+        <CodeBlock language="bash">lsusb</CodeBlock>
+
+        <ul>
+          <li>{texts.agxOrin32gb} <code>0955:7223</code> NVidia Corp</li>
+          <li>{texts.agxOrin64gb} <code>0955:7023</code> NVidia Corp</li>
+        </ul>
+
+        <div style={{ textAlign: 'center', margin: '1em 0' }}>
+          <img
+            width={800}
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Classic_J501/flash_lsusb_recovery.png"
+            alt={texts.lsusbResult}
+          />
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -1009,7 +1335,6 @@ export const RecoveryClassic = ({ lang = 'en' }) => {
           </li>
         </ul>
 
-        {/* 📌 插入表格部分 */}
         <div style={{ display: 'flex', justifyContent: 'center', margin: '1em 0' }}>
           <table border={1} cellPadding={8}>
             <thead>
@@ -1128,18 +1453,17 @@ export const RecoveryClassic = ({ lang = 'en' }) => {
         role="alert"
         style={{ marginTop: '1em' }}
       >
-        If you are using an <strong>Orin NX 16GB/8GB</strong> module, 
-        <strong> do not enable MAXN SUPER mode</strong>. <br />
-        The cooling capacity of the reComputer J401 carrier board is insufficient 
-        to support it, and forcing this mode may result in permanent damage to the module.
+        {texts.maxnWarningIntro}{' '}
+        <strong>{texts.maxnWarningAction}</strong>. <br />
+        {texts.maxnWarningBody}
       </div>
     </div>
   );
 };
 
-export const PrepareRequirementsIndustrial = ({ lang = 'en' }) => {
+export const PrepareRequirementsIndustrial = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = [
     'j4012industrial',
@@ -1168,9 +1492,9 @@ export const PrepareRequirementsIndustrial = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryIndustrial = ({ lang = 'en' }) => {
+export const RecoveryIndustrial = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = [
     'j4012industrial',
@@ -1276,9 +1600,9 @@ export const RecoveryIndustrial = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsReserver = ({ lang = 'en' }) => {
+export const PrepareRequirementsReserver = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012reserver', 'j4011reserver', 'j3011reserver', 'j3010reserver'];
   if (!allowed.includes(product)) {
@@ -1298,9 +1622,9 @@ export const PrepareRequirementsReserver = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryReserver = ({ lang = 'en' }) => {
+export const RecoveryReserver = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012reserver', 'j4011reserver', 'j3011reserver', 'j3010reserver'];
   if (!allowed.includes(product)) {
@@ -1399,9 +1723,9 @@ export const RecoveryReserver = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsJ501 = ({ lang = 'en' }) => {
+export const PrepareRequirementsJ501 = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501-carrier AGX-Orin 64g', 'j501-carrier AGX-Orin 32g'];
   if (!allowed.includes(product)) {
@@ -1424,9 +1748,9 @@ export const PrepareRequirementsJ501 = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsJ501Mini = ({ lang = 'en' }) => {
+export const PrepareRequirementsJ501Mini = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501mini-agx-orin-64g', 'j501mini-agx-orin-32g'];
   if (!allowed.includes(product)) {
@@ -1449,9 +1773,9 @@ export const PrepareRequirementsJ501Mini = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsJ501Robotics = ({ lang = 'en' }) => {
+export const PrepareRequirementsJ501Robotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501-agx-orin-64g', 'j501-agx-orin-32g'];
   if (!allowed.includes(product)) {
@@ -1472,9 +1796,9 @@ export const PrepareRequirementsJ501Robotics = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryJ501 = ({ lang = 'en' }) => {
+export const RecoveryJ501 = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501-carrier AGX-Orin 64g', 'j501-carrier AGX-Orin 32g'];
   if (!allowed.includes(product)) {
@@ -1508,7 +1832,7 @@ export const RecoveryJ501 = ({ lang = 'en' }) => {
             width="800"
             height="450"
             src="https://www.youtube.com/embed/CGMGZGqZPKM"
-            title="J501 Enter Force Recovery Mode"
+            title={texts.j501ForceRecoveryVideoTitle}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -1574,9 +1898,9 @@ export const RecoveryJ501 = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryJ501Mini = ({ lang = 'en' }) => {
+export const RecoveryJ501Mini = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501mini-agx-orin-64g', 'j501mini-agx-orin-32g'];
   if (!allowed.includes(product)) {
@@ -1618,10 +1942,10 @@ export const RecoveryJ501Mini = ({ lang = 'en' }) => {
 
         <ul>
           <li>
-            <strong>{texts.step1}</strong> Keep pressing button to the RESET mode.
+            <strong>{texts.step1}</strong> {texts.j501MiniHoldReset}
           </li>
           <li>
-            <strong>{texts.step2}</strong> Power up the carrier board by connecting the power cable, then release REC button.
+            <strong>{texts.step2}</strong> {texts.powerUpCarrier} {texts.releaseRecHole}
           </li>
           <li>
             <strong>{texts.step3}</strong> {texts.connectUsbc}
@@ -1632,7 +1956,7 @@ export const RecoveryJ501Mini = ({ lang = 'en' }) => {
           <img
             width={600}
             src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png"
-            alt="Flash Port"
+            alt={texts.flashPortAlt}
           />
         </div>
 
@@ -1677,9 +2001,9 @@ export const RecoveryJ501Mini = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryJ501Robotics = ({ lang = 'en' }) => {
+export const RecoveryJ501Robotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501-agx-orin-64g', 'j501-agx-orin-32g'];
   if (!allowed.includes(product)) {
@@ -1715,22 +2039,22 @@ export const RecoveryJ501Robotics = ({ lang = 'en' }) => {
           <img
             width={600}
             src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/flash_1.png"
-            alt="USB Connection"
+            alt={texts.usbConnectionAlt}
           />
         </div>
 
         <ul>
           <li>
-            <strong>{texts.step1}</strong> Connect a USB Type-C data transmission cable between USB2.0 DEVICE port and the Ubuntu host PC.
+            <strong>{texts.step1}</strong> {texts.connectUsbTypeC}
           </li>
           <li>
-            <strong>{texts.step2}</strong> Use a pin and insert into the RECOVERY hole to press recovery button and while holding this.
+            <strong>{texts.step2}</strong> {texts.insertRecoveryHole}
           </li>
           <li>
-            <strong>{texts.step3}</strong> Connect the power supply.
+            <strong>{texts.step3}</strong> {texts.connectPower}
           </li>
           <li>
-            <strong>{texts.step4}</strong> Release the recovery button.
+            <strong>{texts.step4}</strong> {texts.releaseRecoveryHole}
           </li>
           <li>
             <strong>{texts.step5}</strong> {texts.runLsusb}
@@ -1798,13 +2122,13 @@ export const FlashCMD = ({ lang = 'en' }) => {
   );
 };
 
-export const ExtractAndFlash = ({ lang = 'en' }) => {
+export const ExtractAndFlash = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const l4t = useJetsonStore(state => state.l4t);
   const obj = getL4TData(product, l4t);
   const filename = obj?.filename || 'mfi_xxxx.tar.gz';
   const foldername = obj?.foldername || 'mfi_xxxx';
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   return (
     <div>
@@ -1872,8 +2196,8 @@ sudo apt install nvidia-jetpack`}</CodeBlock>
   );
 };
 
-const HostEnvironmentNote = ({ lang = 'en' }) => {
-  const texts = content[lang] || content.en;
+const HostEnvironmentNote = ({ lang }) => {
+  const texts = useLocalizedTexts(lang);
   return (
     <>
       <div className="alert alert--info" role="alert">
@@ -1885,16 +2209,17 @@ const HostEnvironmentNote = ({ lang = 'en' }) => {
       </div>
       <p></p>
       <div style={{ overflowX: 'auto', marginBottom: '1em' }}>
-        <table style={{ textAlign: 'center', width: '45%', borderCollapse: 'collapse' }} border={1}>
+        <table style={{ textAlign: 'center', width: '55%', borderCollapse: 'collapse' }} border={1}>
           <thead>
             <tr>
               <th rowSpan={2}>{texts.jetpackVersion}</th>
-              <th colSpan={3}>{texts.ubuntuVersion}</th>
+              <th colSpan={4}>{texts.ubuntuVersion}</th>
             </tr>
             <tr>
               <th>18.04</th>
               <th>20.04</th>
               <th>22.04</th>
+              <th>24.04</th>
             </tr>
           </thead>
           <tbody>
@@ -1903,22 +2228,32 @@ const HostEnvironmentNote = ({ lang = 'en' }) => {
               <td>✅</td>
               <td>✅</td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               <td>JetPack 6.x</td>
               <td></td>
               <td>✅</td>
               <td>✅</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>JetPack 7.2</td>
+              <td></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>✅</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p style={{ fontSize: '0.9em', marginTop: '-0.5em' }}>{texts.hostJetpack72Note}</p>
     </>
   );
 };
 
-const HostEnvironmentNote1 = ({ lang = 'en' }) => {
-  const texts = content[lang] || content.en;
+const HostEnvironmentNote1 = ({ lang }) => {
+  const texts = useLocalizedTexts(lang);
   return (
     <>
       <div className="alert alert--info" role="alert">
@@ -1930,16 +2265,17 @@ const HostEnvironmentNote1 = ({ lang = 'en' }) => {
       </div>
       <p></p>
       <div style={{ overflowX: 'auto', marginBottom: '1em' }}>
-        <table style={{ textAlign: 'center', width: '45%', borderCollapse: 'collapse' }} border={1}>
+        <table style={{ textAlign: 'center', width: '55%', borderCollapse: 'collapse' }} border={1}>
           <thead>
             <tr>
               <th rowSpan={2}>{texts.jetpackVersion}</th>
-              <th colSpan={3}>{texts.ubuntuVersion}</th>
+              <th colSpan={4}>{texts.ubuntuVersion}</th>
             </tr>
             <tr>
               <th>18.04</th>
               <th>20.04</th>
               <th>22.04</th>
+              <th>24.04</th>
             </tr>
           </thead>
           <tbody>
@@ -1948,10 +2284,19 @@ const HostEnvironmentNote1 = ({ lang = 'en' }) => {
               <td></td>
               <td>✅</td>
               <td>✅</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>JetPack 7.2</td>
+              <td></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>✅</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p style={{ fontSize: '0.9em', marginTop: '-0.5em' }}>{texts.hostJetpack72Note}</p>
     </>
   );
 };

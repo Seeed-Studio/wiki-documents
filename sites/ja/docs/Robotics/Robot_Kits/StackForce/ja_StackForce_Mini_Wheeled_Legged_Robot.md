@@ -1,6 +1,6 @@
 ---
-description: このwikiは、StackForce Mini Wheeled Legged Robotの組み立てと起動チュートリアル、および開発に必要な学習資料とリンクを提供します。
-title: StackForce Mini Wheeled Legged Robot
+description: この Wiki では、StackForce Mini Wheeled Legged Robot の組み立ておよび起動チュートリアルに加え、その開発に必要な学習資料やリンクを提供します。
+title: Mini Wheeled Legged クイックスタート
 keywords:
   - StackForce
   - Robotics
@@ -10,10 +10,9 @@ last_update:
   date: 12/8/2025
   author: LiShanghang
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-12-10'
-updatedAt: '2026-03-04'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/
 ---
 
@@ -51,6 +50,8 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 - **StackForce軽量ロボティクス開発プラットフォームのドキュメント：** [http://stackforce.cc/#/](http://stackforce.cc/#/)
 
 - **StackForce軽量ロボティクス開発プラットフォームのオープンソースロボットプロジェクト：** [https://gitee.com/StackForce](https://gitee.com/StackForce)
+
+- **StackForce_ミニ車輪脚ロボットの理論とコード学習** [https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md](https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md)
 
 ## 主な特徴
 

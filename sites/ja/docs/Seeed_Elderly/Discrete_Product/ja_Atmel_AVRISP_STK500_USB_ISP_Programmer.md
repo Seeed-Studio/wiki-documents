@@ -10,7 +10,7 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 createdAt: '2023-02-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/Atmel_AVRISP_STK500_USB_ISP_Programmer/
 ---
 

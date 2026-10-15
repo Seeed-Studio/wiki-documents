@@ -14,7 +14,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/ja/Local_RAG_based_on_Jetson_with_LlamaIndex/
 ---
 

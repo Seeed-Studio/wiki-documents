@@ -10,7 +10,7 @@ last_update:
   date: 1/13/2023
   author: jianjing Huang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V/
 ---
 

@@ -13,7 +13,7 @@ last_update:
   date: 05/16/2025
   author: Youjiang
 createdAt: '2025-09-10'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/ja/deploy_dia_on_jetson/
 ---
 

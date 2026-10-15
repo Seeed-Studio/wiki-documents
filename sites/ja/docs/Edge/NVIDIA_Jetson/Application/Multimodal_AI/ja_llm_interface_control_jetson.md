@@ -7,7 +7,7 @@ last_update:
   date: 01/29/2025
   author: kourosh
 createdAt: '2025-12-29'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-23'
 url: https://wiki.seeedstudio.com/ja/llm_interface_control_jetson/
 ---
 

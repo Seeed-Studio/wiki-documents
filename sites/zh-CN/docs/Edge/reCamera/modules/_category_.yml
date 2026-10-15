@@ -1,0 +1,11 @@
+position: 5 # float position is supported
+label: '模组'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: modules
+link:
+  type: generated-index
+  slug: modules
+  title: 模组
+  description: 关于reCamera所有的模组
+

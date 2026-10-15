@@ -9,7 +9,7 @@ last_update:
   date: 04/16/2023
   author: timo614
 createdAt: '2025-02-21'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/es/XIAO-SAMD21-Zephyr-RTOS/
 ---
 

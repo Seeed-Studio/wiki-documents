@@ -12,7 +12,7 @@ last_update:
   date: 2023/6/26
   author: Kasun Thushara
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/grocy-bookstack-linkstar/
 ---
 # 掌控一切：使用 LinkStar、Grocy 和 BookStack 的自托管办公室管理解决方案

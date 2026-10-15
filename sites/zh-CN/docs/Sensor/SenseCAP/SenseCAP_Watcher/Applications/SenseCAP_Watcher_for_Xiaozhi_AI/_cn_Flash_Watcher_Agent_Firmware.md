@@ -14,7 +14,7 @@ last_update:
   date: 10/27/2025
   author: Twelve
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-02'
 url: https://wiki.seeedstudio.com/cn/flash_watcher_agent_firmware/
 ---
 

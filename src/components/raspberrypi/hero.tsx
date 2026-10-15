@@ -1,9 +1,29 @@
 import React from 'react';
+import { useLocation } from '@docusaurus/router';
 import './hero.css';
 
-const RpiPage = ({ lang = 'en' }) => {
-  // 多语言文案：统一使用 en / zh / ja / es
-  const content = {
+type Lang = 'en' | 'zh' | 'ja' | 'es' | 'pt';
+
+type Props = {
+  lang?: Lang;
+};
+
+const getLangFromPath = (pathname?: string): Lang => {
+  const path = (pathname || '').toLowerCase();
+
+  if (path === '/cn' || path.startsWith('/cn/')) return 'zh';
+  if (path === '/ja' || path.startsWith('/ja/')) return 'ja';
+  if (path === '/es' || path.startsWith('/es/')) return 'es';
+  if (path === '/pt-br' || path.startsWith('/pt-br/')) return 'pt';
+
+  return 'en';
+};
+
+const RpiPage = ({ lang }: Props) => {
+  const location = useLocation();
+  const resolvedLang: Lang = lang ?? getLangFromPath(location.pathname);
+
+  const content: Record<Lang, { paragraph1: string; paragraph2: string }> = {
     en: {
       paragraph1:
         'Raspberry Pi (aka "RPi") was originally designed and created by a non-profit organization with the intention to promote teaching computer science at an affordable cost. Several generations and models of Raspberry Pis have now been released that have expanded their footprints, power and applications.',
@@ -28,10 +48,15 @@ const RpiPage = ({ lang = 'en' }) => {
       paragraph2:
         'En Seeed Studio ofrecemos toda la familia de placas Raspberry Pi, además de accesorios y kits de inicio que te ayudarán a crear proyectos en torno al producto. También hemos preparado numerosos tutoriales en la comunidad de Raspberry Pi de Seeed, donde puedes encontrar fácilmente referencias para construir tus circuitos o escribir tus propias aplicaciones.',
     },
+    pt: {
+      paragraph1:
+        'O Raspberry Pi (também chamado de “RPi”) foi originalmente projetado e criado por uma organização sem fins lucrativos com o objetivo de promover o ensino de ciência da computação a um custo acessível. Hoje já foram lançadas várias gerações e modelos de Raspberry Pi, ampliando seu formato, desempenho e aplicações.',
+      paragraph2:
+        'Na Seeed Studio, oferecemos toda a família de placas Raspberry Pi, além de acessórios complementares e kits iniciais que ajudam você a criar projetos em torno do produto. Além disso, preparamos muitos tutoriais na comunidade Raspberry Pi da Seeed, onde você pode encontrar facilmente referências para montar seus próprios circuitos ou desenvolver suas próprias aplicações.',
+    },
   };
 
-  // 若未匹配到语言，回退到英文
-  const texts = content[lang] || content.en;
+  const texts = content[resolvedLang] || content.en;
 
   return (
     <div className="hero_container">

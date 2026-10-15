@@ -1,12 +1,13 @@
 import type {ReactElement} from 'react';
 
-export type Locale = 'en' | 'cn' | 'ja' | 'es';
+export type Locale = 'en' | 'cn' | 'ja' | 'es' | 'pt-br';
 
 export const LOCALE_PREFIX: Record<Locale, string> = {
   en: '',
   cn: '/cn',
   ja: '/ja',
   es: '/es',
+  'pt-br': '/pt-br',
 };
 
 const KNOWN_PREFIXES = Object.values(LOCALE_PREFIX).filter(Boolean);
@@ -37,12 +38,14 @@ export const LOCALE_BADGE: Record<Locale, string> = {
   cn: 'CN',
   ja: 'JA',
   es: 'ES',
+  'pt-br': 'PT-BR',
 };
 
 export function detectLocaleFromPath(pathname: string): Locale {
   if (pathname === '/cn' || pathname.startsWith('/cn/')) return 'cn';
   if (pathname === '/ja' || pathname.startsWith('/ja/')) return 'ja';
   if (pathname === '/es' || pathname.startsWith('/es/')) return 'es';
+  if (pathname === '/pt-br' || pathname.startsWith('/pt-br/')) return 'pt-br';
   return 'en';
 }
 

@@ -5,10 +5,10 @@ image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/swift-xia
 slug: /xiao-esp32-swift
 sku: 113991254, 102010636, 101991470
 last_update:
-  date: 2024-07-12T02:50:00.462Z
+  date: 2024-07-12
   author: Spencer
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/xiao-esp32-swift/
 ---
 # Seeed Studio XIAO-C6 での Embedded Swift ガイド

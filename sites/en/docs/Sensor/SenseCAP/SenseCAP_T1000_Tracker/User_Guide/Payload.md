@@ -9,7 +9,7 @@ last_update:
   date: 2/21/2023
   author: Jessie
 createdAt: '2024-02-21'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/T1000_payload/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 03/03/2023
   author: Citric
 createdAt: '2023-11-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/xiaoesp32c3-chatgpt/
 ---
 # 学习在 XIAO ESP32C3 上使用 WiFiClient 和 HTTPClient - XIAO ESP32C3 与 ChatGPT 实战

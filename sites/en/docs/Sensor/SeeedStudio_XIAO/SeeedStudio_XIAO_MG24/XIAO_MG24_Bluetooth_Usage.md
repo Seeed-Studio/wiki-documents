@@ -12,7 +12,7 @@ last_update:
   date: 02/8/2025
   author: Hugo
 createdAt: '2025-02-08'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/xiao_mg24_bluetooth/
 ---
 

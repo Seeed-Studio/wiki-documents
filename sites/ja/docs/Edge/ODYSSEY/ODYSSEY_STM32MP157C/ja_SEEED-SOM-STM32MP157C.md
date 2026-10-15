@@ -8,7 +8,7 @@ last_update:
   date: 05/15/2025
   author: w0x7ce
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/SEEED-SOM-STM32MP157C/
 ---
 

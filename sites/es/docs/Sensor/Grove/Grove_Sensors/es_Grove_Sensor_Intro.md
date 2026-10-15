@@ -9,7 +9,7 @@ last_update:
   date: 07/19/2023
   author: Matthew
 createdAt: '2023-07-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/es/Grove_Sensor_Intro/
 ---
 
@@ -84,7 +84,7 @@ Tenemos varios tipos de sensores Grove, incluyendo pero no limitándose a sensor
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Comprar Ahora</font></span></strong></a>
-    <a class="get_one_now_item" href="/es/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Aprender Más</font></span></strong></a>
+    <a class="get_one_now_item" href="/es/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Aprender Más</font></span></strong></a>
 </div>
 
 #### Grove - Sensor de Temperatura y Humedad Pro(DHT22)

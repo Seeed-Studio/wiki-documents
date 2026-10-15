@@ -9,7 +9,7 @@ last_update:
   date: 10/12/2024
   author: Evelyn Chen
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/wio_sx1262/
 ---
 

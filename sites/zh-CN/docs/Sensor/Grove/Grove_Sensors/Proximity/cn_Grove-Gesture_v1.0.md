@@ -11,7 +11,7 @@ last_update:
   date: 09/23/2024
   author: gunengyu
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-Gesture_v1.0/
 ---
 

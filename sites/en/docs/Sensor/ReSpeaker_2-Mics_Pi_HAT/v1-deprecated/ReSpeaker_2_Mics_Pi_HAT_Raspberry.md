@@ -10,7 +10,7 @@ last_update:
   date: 1/29/2026
   author: Mingxi
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-29'
 url: https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT_Raspberry/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 9/19/2025
   author: Kasun Thushara
 createdAt: '2025-09-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_tensorflow/
 ---
 

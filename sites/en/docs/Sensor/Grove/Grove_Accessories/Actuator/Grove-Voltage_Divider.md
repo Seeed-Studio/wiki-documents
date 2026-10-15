@@ -10,7 +10,7 @@ last_update:
   date: 11/30/2023
   author: gunengyu
 createdAt: '2023-11-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/Grove-Voltage_Divider/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 05/12/2023
   author: Citric
 createdAt: '2023-05-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/xiao-ble-qspi-flash-usage/
 ---
 

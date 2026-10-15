@@ -1,0 +1,10 @@
+position: 6 # float position is supported
+label: 'Aplicação'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: application
+link:
+  type: generated-index
+  slug: recamera_basic_application
+  title: Aplicação Básica reCamera
+  description: Documentação de aplicações básicas da reCamera, incluindo a integração da reCamera com plataformas externas de software e hardware.

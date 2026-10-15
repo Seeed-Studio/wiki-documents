@@ -10,7 +10,7 @@ last_update:
   date: 08/19/2024
   author: Allen
 createdAt: '2024-08-20'
-updatedAt: '2026-03-03'
+updatedAt: '2024-08-20'
 url: https://wiki.seeedstudio.com/watcher_node_red_to_open_interpreter/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 12/19/2024
   author: Youjiang
 createdAt: '2024-12-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/update_orin_nano_developer_kit_to_super_kit/
 ---
 

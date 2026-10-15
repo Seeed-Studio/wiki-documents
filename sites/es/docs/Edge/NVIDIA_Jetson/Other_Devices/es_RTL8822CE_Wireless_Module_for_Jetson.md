@@ -14,7 +14,7 @@ last_update:
   date: 12/3/2024
   author: Youjiang
 createdAt: '2024-12-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/rtl8822ce_wireless_module_for_jetson/
 ---
 

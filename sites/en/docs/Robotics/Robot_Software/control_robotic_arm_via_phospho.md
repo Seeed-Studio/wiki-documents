@@ -12,7 +12,7 @@ last_update:
   date: 7/1/2025
   author: Youjiang
 createdAt: '2025-07-01'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-12'
 url: https://wiki.seeedstudio.com/control_robotic_arm_via_phospho/
 ---
 

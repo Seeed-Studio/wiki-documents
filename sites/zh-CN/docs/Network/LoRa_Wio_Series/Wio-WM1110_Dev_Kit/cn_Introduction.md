@@ -11,7 +11,7 @@ last_update:
   date: 6/26/2023
   author: Jessie
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Wio-WM1110_Dev_Kit/Introduction/
 ---
 

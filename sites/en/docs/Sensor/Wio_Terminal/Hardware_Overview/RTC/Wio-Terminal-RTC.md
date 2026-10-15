@@ -9,7 +9,7 @@ last_update:
   date: 1/17/2023
   author: jianjing Huang
 createdAt: '2023-01-17'
-updatedAt: '2026-03-03'
+updatedAt: '2024-02-27'
 url: https://wiki.seeedstudio.com/Wio-Terminal-RTC/
 ---
 

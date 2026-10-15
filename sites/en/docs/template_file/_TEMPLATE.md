@@ -11,7 +11,7 @@ last_update:
   author: w0x7ce
 no_comments: false
 createdAt: '2022-11-21'
-updatedAt: '2026-03-03'
+updatedAt: '2023-09-14'
 url: https://wiki.seeedstudio.com/template/
 ---
 

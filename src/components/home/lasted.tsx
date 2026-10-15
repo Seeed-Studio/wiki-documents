@@ -12,15 +12,15 @@ import { detectLocaleFromPath, localizedLink } from '../../pages/home/lib/locale
 // 例：'/gun_detection_with_frigate_nvr_on_r2000': { cn:'...', ja:'...', es:'...' }
 const LOCAL_TITLE_MAP: Record<
   string,
-  Partial<Record<'cn' | 'ja' | 'es', string>>
+  Partial<Record<'cn' | 'ja' | 'es' | 'pt-br', string>>
 > = {
-  // '/some_path': { cn: '中文标题', ja: '日本語タイトル', es: 'Título en español' },
+  // '/some_path': { cn: '中文标题', ja: '日本語タイトル', es: 'Título en español', 'pt-br': 'Título em português do Brasil' },
 };
 
 // 读取本地化标题（优先取数据里的 title_xx，其次取 LOCAL_TITLE_MAP，最后回退英文 title）
 function getLocalizedDocTitle(
   doc: any,
-  locale: 'en' | 'cn' | 'ja' | 'es'
+  locale: 'en' | 'cn' | 'ja' | 'es' | 'pt-br'
 ): string {
   if (locale === 'cn' && (doc.title_cn || LOCAL_TITLE_MAP[doc.path]?.cn))
     return doc.title_cn || LOCAL_TITLE_MAP[doc.path]?.cn!;
@@ -28,6 +28,8 @@ function getLocalizedDocTitle(
     return doc.title_ja || LOCAL_TITLE_MAP[doc.path]?.ja!;
   if (locale === 'es' && (doc.title_es || LOCAL_TITLE_MAP[doc.path]?.es))
     return doc.title_es || LOCAL_TITLE_MAP[doc.path]?.es!;
+  if (locale === 'pt-br' && (doc.title_pt_br || LOCAL_TITLE_MAP[doc.path]?.['pt-br']))
+    return doc.title_pt_br || LOCAL_TITLE_MAP[doc.path]?.['pt-br']!;
   return doc.title;
 }
 
@@ -46,11 +48,12 @@ function IndexLatestedViki() {
   );
 
   // 标题多语言
-  const I18N_TITLE: Record<'en' | 'cn' | 'ja' | 'es', string> = {
+  const I18N_TITLE: Record<'en' | 'cn' | 'ja' | 'es' | 'pt-br', string> = {
     en: 'Latest Wiki',
     cn: '最新文档',
     ja: '最新のWiki',
     es: 'Wiki más reciente',
+    'pt-br': 'Wiki mais recente',
   };
 
   useEffect(() => {

@@ -12,7 +12,7 @@ last_update:
   date: 1/13/2026
   author: Zeller
 createdAt: '2026-01-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-14'
 url: https://wiki.seeedstudio.com/es/xiao_esp32c5_with_freertos/
 ---
 

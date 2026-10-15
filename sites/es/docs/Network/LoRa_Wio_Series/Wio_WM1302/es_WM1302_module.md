@@ -11,7 +11,7 @@ last_update:
   date: 12/15/2025
   author: David Du
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-08'
 url: https://wiki.seeedstudio.com/es/WM1302_module/
 ---
 

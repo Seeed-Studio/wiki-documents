@@ -1,0 +1,10 @@
+position: 3
+label: 'Home & Building Automation'
+collapsible: true
+collapsed: true
+className: _device-integration-control
+# link:
+#   type: generated-index
+#   slug: home-building-automation
+#   title: Home & Building Automation
+#   description: Home and building automation, energy and protocol integration.

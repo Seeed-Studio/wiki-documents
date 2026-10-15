@@ -9,7 +9,7 @@ last_update:
   date: 01/11/2022
   author: gunengyu
 createdAt: '2024-07-23'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/Azure_IoT_CC/
 ---
 # Codecraft 连接 Azure IoT 与 Wio Terminal

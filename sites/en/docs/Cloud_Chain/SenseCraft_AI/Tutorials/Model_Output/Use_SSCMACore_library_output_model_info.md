@@ -10,7 +10,7 @@ last_update:
   date: 12/12/2024
   author: Citric
 createdAt: '2024-12-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library/
 ---
 

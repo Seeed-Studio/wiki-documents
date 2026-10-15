@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array の使用を開始しましょう。これは、USB または I2C を介した音声キャプチャとクロスプラットフォーム対応を備えた高性能音声インターフェースモジュールです。
+description: ReSpeaker XVF3800 USB 4-Mic Array の使用を開始しましょう。これは、USB または I2C を介したクロスプラットフォーム対応と音声キャプチャ機能を備えた高性能音声インターフェースモジュールです。
 title: reSpeaker XVF3800 USB Mic Array 入門ガイド
 keywords:
   - reSpeaker
@@ -10,7 +10,7 @@ last_update:
   date: 11/10/2025
   author: Kasun Thushara
 createdAt: '2025-08-20'
-updatedAt: '2026-03-06'
+updatedAt: '2026-09-03'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/
 ---
 
@@ -38,9 +38,9 @@ ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェ
 
 - **一意のデバイスシリアル番号** :内蔵 SN により、複数デバイスの展開や高度なデバイス管理が可能
 
-- **2 つの動作モード** :PC にすぐ接続できる USB プラグアンドプレイモードと、組み込みシステムと統合するための INT-Device（I2S）モード—ファームウェアを切り替えることで USB または I2C コマンド経由で設定可能
+- **デュアル動作モード** :PC へ即座に接続できる USB プラグアンドプレイモードと、組み込みシステムと統合するための INT-Device（I2S）モードを搭載し、ファームウェアを切り替えることで USB または I2C コマンド経由で設定可能
 
-- **オープンソース互換** :USB ホスト（Windows、macOS、Raspberry Pi OS）および I2S ホスト（XIAO シリーズ、ESP32、Arduino）で動作します。
+- **オープンソース互換** :USB ホスト（Windows、macOS、Raspberry Pi OS）および I2S ホスト（XIAO シリーズ、ESP32、Arduino）で動作。
 
 - **視覚的フィードバック** :プログラム可能な RGB LED とステータスインジケータにより、デバイス状態や音声アクティビティを表示
 
@@ -52,37 +52,37 @@ ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェ
 
 ### 主なコンポーネント
 
-| **コンポーネント / 機能**       | **説明**                                                                                      |
+| **コンポーネント / 機能**     | **説明**                                                                                             |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **メインオーディオプロセッサ**      | **XMOS XVF3800**。AEC、ビームフォーミング、ノイズ抑制などのオーディオ処理を担当します。       |
-| **マイクアレイ**          | 円形配置の **4 つの PDM MEMS マイク** で、**360° 遠距離音声キャプチャ（5m）** に対応します。 |
-| **オーディオコーデック**               | **TLV320AIC3104**。オーディオの変換と出力を担当します。                                              |
-| **RGB LED**                  | 視覚的フィードバック（例：ステータス、音声アクティビティ）用の **12 個の WS2812** 個別制御 RGB LED。 |
-| **ミュートボタン**               | 押すとマイク入力を **ミュート/ミュート解除** します。                                                       |
-| **ミュートインジケータ LED**        | オーディオがミュートされていることを示すために（通常は赤色で）点灯します。                                               |
-| **リセットボタン**              | ボード/システムのハードウェアリセット。                                                                 |
-| **USB Type-C ポート**           | **電源とデータ** の両方に使用されます（USB Audio Class 2.0 準拠）。                                    |
-| **3.5mm AUX ヘッドホンジャック**  | ヘッドホンまたはアクティブスピーカー用のオーディオ出力。                                                      |
-| **スピーカーコネクタ**         | **JST スピーカーインターフェース** で、**5W アンプ内蔵スピーカー** をサポートします。                                       |
-| **デバッグパッド**                | **XTAG4** などのプログラマ向けデバッグアクセス。                                                     |
-| **I2C & I2S ヘッダ**         | 外部デバイスとの **I2C および I2S 通信** 用に引き出されたヘッダ。                             |
-| **未使用 IO パッド（XIAO）**     | XIAO モジュールに接続された追加の I/O はんだパッド。                                                 |
-| **I2S & I2C 通信**   | これらのプロトコルを使用して Raspberry Pi、PC などの外部ホストへの接続をサポートします。             |
-| **USB & INT-Device モード**    | 2 つの動作モード：プラグアンドプレイ USB または I2S を介した内部 INT デバイスモード。                          |
-| **一意のシリアル番号**      | 識別および複数デバイス管理のための内蔵 **デバイス SN**。                               |
-| **オープンソース互換性** | **Arduino、Raspberry Pi、PC/Mac** で動作し、**XIAO シリーズ** と互換性があります。                   |
-| **高度なオーディオ機能**   | AEC、ビームフォーミング、残響除去、**DoA 検出**、DNN ベースのノイズ抑制、60dB AGC。         |
-| **視覚的フィードバック**           | **RGB LED パターン** と **ステータスインジケータ** によりデバイス状態とオーディオアクティビティを表示します。            |
-| **音質**             | **従来の XVF3000 ベース設計** と同等またはそれ以上。                                         |
+| **メインオーディオプロセッサ** | **XMOS XVF3800**。AEC、ビームフォーミング、ノイズ抑制などのオーディオ処理を担当します。               |
+| **マイクアレイ**              | 円形配置の **4 つの PDM MEMS マイク** により、**360° 遠距離音声キャプチャ（5m）** に対応します。     |
+| **オーディオコーデック**       | **TLV320AIC3104**。オーディオの変換と出力を担当します。                                             |
+| **RGB LED**                   | 視覚的フィードバック（例：ステータス、音声アクティビティ）用の **12 個の WS2812 アドレス指定可能 RGB LED**。 |
+| **ミュートボタン**            | 押すとマイク入力を **ミュート/ミュート解除** します。                                                |
+| **ミュートインジケータ LED**  | オーディオがミュートされていることを示すために（通常は赤色で）点灯します。                          |
+| **リセットボタン**            | ボード/システムのハードウェアリセット。                                                              |
+| **USB Type-C ポート**         | **電源とデータ** の両方に使用（USB Audio Class 2.0 準拠）。                                         |
+| **3.5mm AUX ヘッドホンジャック** | ヘッドホンまたはアクティブスピーカー用のオーディオ出力。                                           |
+| **スピーカーコネクタ**        | **JST スピーカーインターフェース**。**5W アンプ内蔵スピーカー** をサポート。                        |
+| **デバッグパッド**            | **XTAG4** などのプログラマ向けデバッグアクセス。                                                     |
+| **I2C & I2S ヘッダ**          | 外部デバイスとの **I2C および I2S 通信** 用にヘッダを引き出しています。                             |
+| **未使用 IO パッド（XIAO）**  | XIAO モジュールに接続された追加の I/O はんだパッド。                                                 |
+| **I2S & I2C 通信**            | これらのプロトコルを使用して Raspberry Pi、PC などの外部ホストに接続可能。                          |
+| **USB & INT-Device モード**   | デュアルモード動作：プラグアンドプレイ USB または I2S を介した内部 INT デバイスモード。             |
+| **一意のシリアル番号**        | 識別および複数デバイス管理のための内蔵 **デバイス SN**。                                            |
+| **オープンソース互換性**      | **Arduino、Raspberry Pi、PC/Mac** で動作し、**XIAO シリーズ** と互換性があります。                  |
+| **高度なオーディオ機能**      | AEC、ビームフォーミング、残響除去、**DoA 検出**、DNN ベースのノイズ抑制、60dB AGC。                 |
+| **視覚的フィードバック**      | **RGB LED パターン** と **ステータスインジケータ** によりデバイス状態とオーディオアクティビティを表示。 |
+| **音質**                      | **従来の XVF3000 ベース設計** と同等またはそれ以上。                                                |
 
 :::note
-ReSpeaker XVF3800 には 2 つのバリエーションがあり、1 つは XIAO なし、もう 1 つは XIAO ESP32S3 をオンボード搭載したモデルです。XIAO なしバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合バージョンを使用するには、**INT-Device（I2S）モード** 用にビルドされたファームウェアを書き込む必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](/ja/respeaker_xvf3800_xiao_getting_started) を参照してください。
+ReSpeaker XVF3800 には、XIAO なしのバージョンと、XIAO ESP32S3 をオンボード搭載したバージョンの 2 種類があります。XIAO なしバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合バージョンを使用するには、**INT-Device（I2S）モード** 用にビルドされたファームウェアを書き込む必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](/ja/respeaker_xvf3800_xiao_getting_started) を参照してください。
 :::
 
 ### XIAO ESP32S3 サポート
 
-- 複数の出力オプションを備えたステレオ I2S 入出力；XVF3800 のパラメータ設定と管理用の I2C インターフェース。
-- IO ピン経由の XIAO リセット
+- 複数の出力オプションを備えたステレオ I2S 入出力と、XVF3800 パラメータの設定および管理用の I2C インターフェース。
+- IO ピン経由での XIAO リセット
 - インターフェースおよびはんだパッド
 
 ### ピン配置
@@ -93,18 +93,18 @@ ReSpeaker XVF3800 には 2 つのバリエーションがあり、1 つは XIAO 
 
 ### GPIO 概要
 
-reSpeaker XVF3800 には、外部制御用に 3 本の入力ピン（GPI）と 5 本の出力ピン（GPO）が用意されています。これらを使用してボタン状態を読み取ったり、ミュート LED、アンプ、LED などのハードウェアを制御したりできます。
+reSpeaker XVF3800 には、外部制御用に 3 本の入力ピン（GPI）と 5 本の出力ピン（GPO）が用意されています。これらを使用してボタン状態を読み取ったり、ミュート LED、アンプ、LED などのハードウェアを制御できます。
 
-| **ピン名** | **方向** | **機能**                                         |
+| **ピン名** | **方向** | **機能**                                             |
 |--------------|---------------|------------------------------------------------------|
 | X1D09        | Input (RO)    | ミュートボタンの状態（離したとき High）              |
-| X1D13        | Input (RO)    | 未接続                                             |
-| X1D34        | Input (RO)    | 未接続                                             |
-| X0D11        | Output (RW)   | 未接続                                             |
-| X0D30        | Output (RW)   | ミュート LED + マイクミュート制御（High = ミュート）            |
-| X0D31        | Output (RW)   | アンプ有効化（Low = 有効）                     |
-| X0D33        | Output (RW)   | WS2812 LED 電源制御（High = オン）                 |
-| X0D39        | Output (RW)   | 未接続                                             |
+| X1D13        | Input (RO)    | 未接続                                              |
+| X1D34        | Input (RO)    | 未接続                                              |
+| X0D11        | Output (RW)   | 未接続                                              |
+| X0D30        | Output (RW)   | ミュート LED + マイクミュート制御（High = ミュート） |
+| X0D31        | Output (RW)   | アンプ有効（Low = 有効）                             |
+| X0D33        | Output (RW)   | WS2812 LED 電源制御（High = オン）                   |
+| X0D39        | Output (RW)   | 未接続                                              |
 
 ## はじめに
 
@@ -115,7 +115,14 @@ reSpeaker XVF3800 には、外部制御用に 3 本の入力ピン（GPI）と 5
 
 ### ソフトウェアの準備
 
-### 開封してすぐに使う
+### 開封後すぐに使う
+
+:::note
+
+最適な音声ピックアップ性能とオーディオアルゴリズムの正しい動作を確保するために、デバイス背面のマイクポート（Mic Inlet / Sound Hole）が音源の方向を向くようにしてください。マイクポートは、Seeed Studio のロゴが印刷されている側にあります。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mic-outlet.png" alt="pir" width={800} height="auto"/></p>
+:::
 
 #### DOA（到来方向）
 
@@ -136,7 +143,7 @@ LED アレイが入力音声の方向に追従する様子を体験できます�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mute.jpg" alt="pir" width={600} height="auto"/></p>
 
-ReSpeaker 上の **ミュートボタン** は、マイクアレイからの **音声キャプチャを一時的に無効化** するために使用します。
+ReSpeaker 上の **ミュートボタン** は、一時的にマイクアレイからの **音声キャプチャを無効化** するために使用します。
 ミュートボタンを押すとどうなりますか？
 
 - **マイクがミュートされ**、外部の音声はキャプチャも処理もされなくなります。
@@ -149,7 +156,7 @@ ReSpeaker 上の **ミュートボタン** は、マイクアレイからの **�
 
 #### リセットボタン
 
-リセット（RST）ボタンは XVF3800 のハードウェアリセットを提供します。押すとチップが再起動し、システムが最初から再初期化され、完全な電源再投入と同じ動作を行います。
+リセット（RST）ボタンは XVF3800 のハードウェアリセットを行います。押すとチップが再起動し、システムが最初から再初期化され、完全な電源再投入と同じ状態になります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/reset.gif" alt="pir" width={600} height="auto"/></p>
 
@@ -166,25 +173,25 @@ ReSpeaker 上の **ミュートボタン** は、マイクアレイからの **�
 セーフモードは ReSpeaker XVF3800 上の特別なリカバリモードで、Raspberry Pi や ESP32 などのデバイス向けに USB DFU または I2C を介してファームウェアを書き込むことができます。以前に I2S ファームウェアを書き込んでいて USB ファームウェアに戻したい場合は、セーフモードに入って USB DFU を使用し、USB ファームウェアを書き戻すことができます。
 
 :::note
-ReSpeaker XVF3800 上の各種ファームウェアは、それぞれ異なる更新方法をサポートしています。
+ReSpeaker XVF3800 上の各種ファームウェアは、それぞれ異なる更新方法をサポートしています：
 
-- **USB ファームウェア** は **USB DFU** のみをサポートしており、USB 接続を使用してデバイスを更新できます。ただし、**I2C DFU には対応していません**。
+- **USB ファームウェア**は **USB DFU** のみをサポートしており、USB 接続を使ってデバイスを更新できます。ただし、**I2C DFU はサポートしていません**。
 
-- **I2S ファームウェア** はその逆で、**I2C DFU** をサポートしており、I2C インターフェース経由でファームウェア更新が可能ですが、**USB DFU には対応していません**。
+- **I2S ファームウェア**はその逆で、**I2C DFU** をサポートしており、I2C インターフェース経由でファームウェアを更新できますが、**USB DFU はサポートしていません**。
 
-- Factory パーティションに保存されている **Safe Mode ファームウェア** が最も柔軟です。これは **USB DFU と I2C DFU の両方** をサポートします。
+- Factory パーティションに保存されている **Safe Mode ファームウェア**は最も柔軟です。**USB DFU と I2C DFU の両方**をサポートします。
 
 :::
 
 **Safe Mode を使用するタイミング**
 
-- ファームウェアが正しく動作していない（例：USB が認識されない、LED が想定どおりに点灯しない）場合。
-- 新しいファームウェアを書き込みたいが、現在のファームウェアが応答しない場合。
-- 誤ったファームウェアを書き込んでしまい、復旧したい場合。
+- ファームウェアが正しく動作していない（例：USB が認識されない、LED が期待どおりに点灯しない）。
+- 新しいファームウェアを書き込みたいが、現在のファームウェアが反応しない。
+- 誤ったファームウェアを書き込んでしまい、復旧したい。
 
 **Safe Mode への入る方法**
 
-- デバイスの電源を完全にオフにします。
+- デバイスの電源を完全に切ります。
 - Mute ボタンを押し続けます。
 - Mute ボタンを押したまま、電源を再接続します。
 - 赤色 LED が点滅し始めます — これでデバイスが Safe Mode になったことが確認できます。
@@ -194,8 +201,8 @@ ReSpeaker XVF3800 上の各種ファームウェアは、それぞれ異なる�
 
 公式 GitHub リポジトリには 3 種類のファームウェアが用意されています。用途に応じて適切なファームウェアを選択して書き込むことができます。詳細およびダウンロードについては、[Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY) を参照してください。
 
-:::note 
-必ずリポジトリ全体をダウンロードしてください。 
+:::note
+GitHub からファームウェアファイルをダウンロードする際に "save as" を使用しないでください。ファイルが破損します。リポジトリをクローンするか、"Download as ZIP" を使用して、リポジトリ全体（および含まれるすべてのファイル）を ZIP ファイルとしてダウンロードしてください。
 :::
 
 import Tabs from '@theme/Tabs';
@@ -204,27 +211,26 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="USB" label="USB">
 
-USB ファームウェアは、USB ハードウェアインターフェースを介して通信する際に、**Windows、Linux、macOS** などのホスト OS で使用することを想定しています。
+### USB ファームウェア
 
-2 つのファームウェアバリエーションがあります。**respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin** は **2 チャンネル** オーディオを提供し、**respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin** は **6 チャンネル** オーディオを提供します。どちらのファームウェアも **16 kHz** サンプリングレート、**32 ビット** 深度で動作します。
+USB ファームウェアは、Windows、Linux、macOS などのホストシステム向けです。公式の USB ファームウェア変更履歴では v2.1.0 が現行リリースとして示されており、現在のファームウェアディレクトリには次の v2.1.0 イメージが含まれています：
 
-これらのファームウェアファイルは [this link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb) から確認できます。
+| ファームウェアイメージ | リポジトリ上の USB プロファイル表記 |
+| --- | --- |
+| `respeaker_xvf3800_usb_dfu_firmware_v2.1.0.bin` | 標準 v2.1.0 USB イメージ。ファイル名にはサンプリングレートやチャンネル数は記載されていません。 |
+| `respeaker_xvf3800_usb_dfu_firmware_v2.1.0_16k6ch.bin` | 16 kHz、6 チャンネルの USB イメージ。 |
+| `respeaker_xvf3800_usb_dfu_firmware_v2.1.0_48k2ch.bin` | 48 kHz、2 チャンネルの USB イメージ。 |
 
+用途に合ったプロファイル表記のイメージを選択してください。48 kHz・2 チャンネルの USB キャプチャには、必ず `_48k2ch` イメージを使用し、汎用的な v2.1.0 ファイル名から 48 kHz 対応を推測しないでください。
 
-
-| ファームウェア | チャンネル数 | 備考 |
-|---------|----------|-------|
-| respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | 処理済み 2 チャンネル出力 <br /> チャンネル 0: Conference <br /> チャンネル 1: ASR |
-| respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | チャンネル 0: 処理済みオーディオ (Conference) <br /> チャンネル 1: 処理済みオーディオ (ASR) <br /> チャンネル 2: Mic 0 生データ <br /> チャンネル 3: Mic 1 生データ <br /> チャンネル 4: Mic 2 生データ <br /> チャンネル 5: Mic 3 生データ |
-
-
+ファームウェアディレクトリおよび変更履歴には、これらバイナリの USB Audio Class ディスクリプタダンプは公開されていません。書き込み後、録音アプリケーションを設定する前に、ホストが報告するフォーマットを確認してください。デバイスディスクリプタによる裏付けなしに、USB のサンプル幅や追加のサンプリングレート／チャンネル構成を記載しないでください。
 </TabItem>
 
  <TabItem value="I2S" label="I2S">
 
-I2S ファームウェアは、**XIAO ESP32S3** などのマイコンホストにデバイスを接続して使用することを想定しています。この構成では、音声データは I2S プロトコルを使用して送信されます。
+I2S ファームウェアは、**XIAO ESP32S3** のようなマイコンホストにデバイスを接続して使用することを想定しています。この構成では、音声データは I2S プロトコルを使用して送信されます。
 
-ファームウェアファイル **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** は [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s) から入手できます。このファームウェアは **32 ビット** 深度の **2 チャンネル** オーディオをサポートします。
+ファームウェアファイル **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** は[こちら](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)から入手できます。このファームウェアは **2 チャンネル**音声と **32-bit** のビット深度をサポートします。
 
 | ファームウェア | チャンネル数 | 備考 |
 |---------|----------|-------|
@@ -234,29 +240,21 @@ I2S ファームウェアは、**XIAO ESP32S3** などのマイコンホスト�
 
 <TabItem value="HA" label="HA">
 
-Home Assistant ファームウェアは、Home Assistant との統合向けに特別に設計された、もう 1 つの I2S ベースのファームウェアです。この最適化されたファームウェアは 48 kHz サンプリングレートの 2 チャンネルオーディオを使用し、Home Assistant 環境内での互換性とパフォーマンスを向上させます。
-ファームウェアは [here](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main) から確認できます。
-
-
+Home Assistant ファームウェアは、Home Assistant との統合向けに特別に設計された、もう一つの I2S ベースのファームウェアです。この最適化されたファームウェアは 48 kHz サンプリングレートの 2 チャンネル音声を使用し、Home Assistant 環境内でより高い互換性と性能を提供します。
+ファームウェアは[こちら](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)から確認できます。
 
 | ファームウェア | チャンネル数 | 備考 |
 |---------|----------|-------|
 | respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | 処理済み 2 チャンネル出力 <br /> チャンネル 0: ASR <br /> チャンネル 1: ウェイクワード |
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
-
-
 reSpeaker XVF3800 を USB ケーブルで PC に接続します。XMOS のファームウェアを書き込むには、XMOS USB-C ポート（3.5mm ジャックポートの近く）を使用する必要があることに注意してください。
-
-
 
 #### DFU Util のインストール
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) は、USB 経由で Device Firmware Upgrade を行うためのコマンドラインツールです。
-
-
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -264,7 +262,7 @@ reSpeaker XVF3800 を USB ケーブルで PC に接続します。XMOS のファ
 - `dfu-util-0.11-binaries.tar.xz` をダウンロードして展開します（例：`D:\dfu-util-0.11-binaries\win64\`）。  
   [Download Link](http://dfu-util.sourceforge.net/)
 
-- システムの `Path` 変数に `dfu-util.exe` へのパスを追加します。  
+- システムの `Path` 変数に `dfu-util.exe` へのパスを追加します：  
   `My Computer > Properties > Advanced > Environment Variables > Path`
 
 - **Command Prompt**（`cmd`）を開き、インストールを確認します：
@@ -283,15 +281,15 @@ dfu-util -l
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/image2.png" alt="pir" width={600} height="auto"/></p>
 
-> 次のようなメッセージが表示された場合：  
+> 次のメッセージが表示された場合：  
 > `Cannot open DFU device 2886:001a ... (LIBUSB_ERROR_NOT_SUPPORTED)`  
 > 以下のドライバインストール手順に進んでください。
 
 - [Zadig](https://zadig.akeo.ie/) をインストールします。  
-  - Zadig を開き、`Options > List All Devices` を選択します。  
-  - `reSpeaker 3800` または `reSpeaker XVF3800 4-Mic Array` を選択します。  
-  - **WinUSB** ドライバをインストールします。  
-  - デバイスの電源を入れ直します。  
+  - Zadig を開き、`Options > List All Devices` を選択  
+  - `reSpeaker 3800` または `reSpeaker XVF3800 4-Mic Array` を選択  
+  - **WinUSB** ドライバをインストール  
+  - デバイスの電源を入れ直す（電源再投入）  
   - `dfu-util -l` を再度実行し、検出を確認します。
 
 </TabItem>
@@ -310,7 +308,7 @@ brew install dfu-util
 dfu-util -l
 ```
 
-**想定される出力：**
+**期待される出力：**
 
 ```
 dfu-util -l
@@ -342,7 +340,7 @@ sudo apt install dfu-util
 sudo dfu-util -l
 ```
 
-**想定される出力：**
+**期待される出力：**
 
 ```bash
 pi@raspberrypi:~ $ sudo dfu-util -l
@@ -365,14 +363,14 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 
 GitHub から完全なファームウェアリポジトリをダウンロードします：[`XMOS XVF 3800`](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
-- 次のコマンドを実行してファームウェアを書き込みます。
+- 次のコマンドを実行してファームウェアを書き込みます
 
 ```bash
 
 dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
 
-- Linux では sudo を付けて実行します。
+- Linux では、sudo を付けて実行します
 
 ```bash
 sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
@@ -382,7 +380,7 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/image3.png" alt="pir" width={600} height="auto"/></p>
 
-- 新しいファームウェアが書き込まれたことを確認するために、`dfu-util -l` コマンドで再度ファームウェアバージョンを確認します。
+- `dfu-util -l` コマンドで再度ファームウェアバージョンを確認し、新しいファームウェアが書き込まれたことを確認します。
 
 ## 録音と再生
 
@@ -433,8 +431,8 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac4.png" alt="pir" width={600} height="auto"/></p>
 
-4. **OK** をクリックします。
-5. 録音の準備完了です！
+4. **OK** をクリックします
+5. 録音の準備ができました！
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac5.png" alt="pir" width={600} height="auto"/></p>
 
@@ -444,7 +442,7 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 ### Raspberry Pi での録音（コマンドライン）
 
-1. **サウンドカード番号を確認します**：
+1. **サウンドカード番号を確認する**：
 
 ```bash
 arecord -l
@@ -469,7 +467,7 @@ card 4: Array [reSpeaker XVF3800 4-Mic Array], device 0: USB Audio [USB Audio]
 arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 ```
 
- `4` を実際のサウンドカード番号に置き換えます
+ `4` を実際のサウンドカード番号に置き換えてください
 
 ---
 
@@ -479,7 +477,7 @@ arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 alsamixer
 ```
 
-alsamixer では、左右の矢印キーを使用して正しいサウンドデバイスに移動します。上矢印キーで音量を上げます。
+alsamixer では、左右の矢印キーを使って正しいサウンドデバイスに移動します。上矢印キーで音量を上げます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alsa.png" alt="pir" width={600} height="auto"/></p>
 
@@ -493,7 +491,7 @@ aplay -D plughw:4,0 output.wav
 
 1. **Pi-Apps をインストールする（まだインストールしていない場合）**
 
-Raspberry Pi でターミナルを開きます。次のコマンドを実行して Pi-Apps をインストールします
+Raspberry Pi でターミナルを開きます。Pi-Apps をインストールするために次のコマンドを実行します
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
@@ -525,404 +523,655 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 </TabItem>
 </Tabs>
 
-## reSpeaker XVF3800 の制御方法
+## パラメータをどのようにチューニングしますか？
 
-reSpeaker XVF3800 には、デバイスの動作を設定し、パラメータデータを設定または読み取り、デバイス上にパラメータデータを保存できる制御インターフェースが搭載されています。ユーザーは USB または I2C インターフェースを介してデバイスを制御できます。サンプルホストアプリケーションとして、Linux、macOS、Raspberry Pi OS 向けの xvf_host、Windows 向けの xvf_host.exe が提供されており、reSpeaker XVF3800 の制御インターフェースに簡単に接続できます。
+チューニングにより、内蔵オーディオアルゴリズムのパラメータを設定し、XMOS チップと直接通信することができます。
 
-[Here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/host_control) からダウンロードします
+パラメータ設定とデバイスとのやり取りのために、専用の Python 制御インターフェースが提供されています。
 
-:::note
-xvf_host を介した制御についてさらに詳しく知りたい場合は、この[記事](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)をお読みください。
-:::
+[**Python Control Directory**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)
+
+提供されている Python スクリプトを使用すると、次のことができます：
+
+- 内蔵オーディオアルゴリズムのパラメータを設定する
+- DoA（到来方向）データを取得する
+- VAD（音声活動検出）データを取得する
+- オンボード LED を制御する
+- 音声処理パイプラインを制御する
+- XMOS デバイスと直接通信する
+
+**システム要件**
+
+Python 制御インターフェースを使用するには、以下の依存関係が必要です：
+
+- Python 3.6 以降
+- `pyusb` Python ライブラリ
+- `libusb` システムライブラリ
+
+### インストールと依存関係
+
+必要な Python 依存関係を次のコマンドでインストールします：
+
+```bash
+pip install pyusb
+```
+
+オペレーティングシステムによっては、`libusb` パッケージを別途インストールする必要がある場合があります。
+
+### 使用方法
+
+**基本構文**
+
+```bash
+python xvf_host.py [options] command [value(s)...]
+```
+
+**コマンドオプション**
+
+| オプション        | 説明                                                   |
+| -------------- | ----------------------------------------------------- |
+| `-l`, `--list` | サポートされているすべてのコマンドを詳細情報付きで一覧表示 |
+| `--vid`        | USB ベンダー ID を設定（デフォルト：`0x2886`）        |
+| `--pid`        | USB プロダクト ID を設定（デフォルト：`0x001A`）      |
+| `--values`     | 書き込みコマンドに渡す値を指定（オプション）          |
+
+### 使用例
+
+**利用可能なコマンドを一覧表示**
+
+サポートされているすべてのファームウェアコマンドを表示します。
+
+```bash
+python xvf_host.py --list
+```
+
+**ファームウェアバージョンを読み取る**
+
+デバイス上で現在動作しているファームウェアバージョンを取得します。
+
+```bash
+python xvf_host.py VERSION
+```
+
+**出力例**
+
+```text
+VERSION: [2, 0, 7]
+```
+
+**到来方向（DOA）を読み取る**
+
+検出された音源の方向を取得します。
+
+```bash
+python xvf_host.py DOA_VALUE
+```
+
+**出力例**
+
+```text
+DOA_VALUE: [135]
+```
+
+**LED の色を設定する**
+
+16 進数の RGB 値を使用して LED の色を設定します。
+
+```bash
+python xvf_host.py LED_COLOR --values 0xFF0000
+```
+
+**LED の明るさを設定する**
+
+LED の明るさ（パーセンテージ）を調整します。
+
+```bash
+python xvf_host.py LED_BRIGHTNESS --values 50
+```
+
+**マイクアレイのジオメトリを読み取る**
+
+音響処理アルゴリズムで使用されるマイク座標を取得します。
+
+```bash
+python xvf_host.py AEC_MIC_ARRAY_GEO
+```
+
+**出力例**
+
+```text
+AEC_MIC_ARRAY_GEO:
+[0.033, -0.033, 0.000,
+ 0.033,  0.033, 0.000,
+-0.033,  0.033, 0.000,
+-0.033, -0.033, 0.000]
+```
+
+## reSpeaker XVF_HOST アプリケーション
+
+`xvf_host` アプリケーションは、USB を介して reSpeaker XVF3800 と通信するために使用されるホスト側ユーティリティです。これを使用して、XVF3800 の制御パラメータを読み取りまたは変更したり、ファームウェアバージョンを確認したり、GPIO 値を読み取ったり、到来方向（DoA）などの機能にアクセスしたりできます。
+
+
+ホストコントローラーアプリケーションは[こちら](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/host_control)にあります
+
+### ホストアプリケーションファイル
+
+ホストアプリケーションは、リポジトリの `host_control` ディレクトリ内にあります。
+
+代表的なプラットフォームディレクトリは次のとおりです：
+
+```text
+host_control/
+├── linux_x86_64/
+├── mac_arm64/
+├── win32/
+└── ...
+```
+
+各プラットフォームディレクトリには、そのアプリケーションに必要なホストアプリケーションとライブラリが含まれています。
+
+例えば：
+
+**Windows**
+
+```text
+host_control/win32/
+├── command_map.dll
+├── device_usb.dll
+└── xvf_host.exe
+```
+
+**Linux**
+
+```text
+host_control/linux_x86_64/
+├── libcommand_map.so
+├── libdevice_usb.so
+└── xvf_host
+```
+
+**macOS**
+
+```text
+host_control/mac_arm64/
+├── libcommand_map.dylib
+├── libdevice_usb.dylib
+├── libusb-1.0.0.dylib
+└── xvf_host
+```
+
+> **重要：** ホストアプリケーションを別のコンピュータにコピーする際は、プラットフォームディレクトリ全体をまとめて保持してください。実行ファイルは同じディレクトリ内にあるライブラリに依存しています。
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-### Windows ユーザー
+**1. XVF3800 を接続する**
 
-- ReSpeaker XVF3800 が USB 経由で接続されていることを確認します
-- `xvf_host.exe` を次のようなフォルダに解凍します：
+reSpeaker XVF3800 を USB で Windows PC に接続します。
 
-```text
-C:\Tools\xvf_host\
+**2. コマンドプロンプトまたは PowerShell を開く**
+
+Windows ホストアプリケーションディレクトリに移動します：
+
+```powershell
+cd C:\path\to\reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
 ```
 
----
+**3. ホストアプリケーションを確認する**
 
-**インストールを確認する**
+次を実行します：
 
-```bash
-cd C:\Tools\xvf_host
+```powershell
 xvf_host.exe --help
 ```
 
----
+アプリケーションが正しく動作していれば、ヘルプ情報が表示されます。
 
-**デバイス接続を確認する**
+利用可能なすべての制御コマンドを表示するには：
 
-```bash
+```powershell
+xvf_host.exe --list-commands
+```
+
+`--list-commands` オプションは、ホストアプリケーションでサポートされているコマンドを表示します。
+
+**4. XVF3800 との接続を確認する**
+
+次を実行します：
+
+```powershell
 xvf_host.exe VERSION
 ```
 
-期待される出力：
+接続が成功すると、次のような出力が表示されます：
 
-```
+```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-VERSION 2 0 2
+VERSION 2 0 10
 ```
 
----
+ファームウェアバージョンは、XVF3800 にインストールされているファームウェアによって異なります。
 
-**LED 制御**
+`VERSION` コマンドは、`xvf_host.exe` が XVF3800 と通信できることを確認する簡単な方法です。
 
-| コマンド | 例 | 説明 |
-|--------|---------|-------------|
-| `led_effect` | `xvf_host.exe led_effect 1` | 0=off、1=breath、2=rainbow、3=solid、4=DoA |
-| `led_color` | `xvf_host.exe led_color 0xff8800` | 16 進カラー（オレンジ）を設定 |
-| `led_speed` | `xvf_host.exe led_speed 1` | エフェクト速度を設定 |
-| `led_brightness` | `xvf_host.exe led_brightness 255` | 輝度を設定 |
-| `led_gammify` | `xvf_host.exe led_gammify 1` | ガンマ補正を有効化 |
-| `led_doa_color` | `xvf_host.exe led_doa_color 0x0000ff 0xff0000` | DoA のベース色／方向色を設定 |
+**5. GPI 値を読み取る**
 
-🟠 例（オレンジのブレスエフェクト）：
-
-```bash
-xvf_host.exe led_effect 1
-xvf_host.exe led_color 0xff8800
-xvf_host.exe led_speed 1
-xvf_host.exe led_brightness 255
-```
-
-**設定**
-
-```bash
-xvf_host.exe save_configuration 1
-xvf_host.exe clear_configuration 1
-```
-
----
-
-**GPIO 制御**
-
-**入力を読み取る：**
-
-```bash
+```powershell
 xvf_host.exe GPI_READ_VALUES
 ```
 
-出力例：`GPI_READ_VALUES 1 0 0`
+**6. GPO 値を読み取る**
 
-この例では、戻り値 1 0 0 は、ピン X1D09 が High レベル、ピン X1D13 が Low レベル、ピン X1D34 が Low レベルであることを意味します。
-
-**出力を読み取る：**
-
-```bash
+```powershell
 xvf_host.exe GPO_READ_VALUES
 ```
 
-出力例：`GPO_READ_VALUES 0 1 1 0 0`
+**7. 到来方向（DoA）を読み取る**
 
-この例では、戻り値 0 0 0 1 0 は、ピン X0D11 が Low レベル、ピン X0D30 が Low レベル、ピン X0D31 が High レベル、ピン X0D33 が High レベル、ピン X0D39 が Low レベルであることを意味します。
-
-**出力を設定する：**
-
-```bash
-xvf_host.exe GPO_WRITE_VALUE 30 1  # Turn ON mute LED
-xvf_host.exe GPO_WRITE_VALUE 30 0  # Turn OFF mute LED
-```
-
-**到来方向（DoA）**
-
-- DoA は、誰かがどの方向から話しているかを示します。
-- ReSpeaker XVF3800 の **LED リング** は、光で方向を表示します。
-- `xvf_host` ツールを使用して DoA の値を読み取ることもできます。
-
-DoA の値を確認するコマンド
-
-```bash
+```powershell
 xvf_host.exe AEC_AZIMUTH_VALUES
 ```
 
-出力例
+返される方位角の値を使用して、検出された音源の方向を判断できます。
 
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-AEC_AZIMUTH_VALUES 0.91378 (52.36 deg) 0.00000 (0.00 deg) 1.57080 (90.00 deg) 0.91378 (52.36 deg)
+**8. 利用可能なコマンドを一覧表示**
+
+利用可能なすべての XVF3800 ホストコマンドを表示するには：
+
+```powershell
+xvf_host.exe --list-commands
 ```
 
-- **Focused beam 1**：1 つ目の固定リスニング方向
-- **Focused beam 2**：2 つ目の固定リスニング方向
-- **Free running beam**：常に方向をスキャン
-- **Auto selected beam**：最適な音声のために最終的に選択されたビーム（DoA 表示に使用）
+その後、任意のサポートされているコマンドを次のように使用できます：
 
-**音声インジケータ**
-
-- Speech Energy は、音声信号の強さを示します — 音声の音量メーターのようなものです。
-- 誰かが話しているかどうか、またその大きさ／近さを検出するために使用されます。
-- ノイズ、エコー、距離によってエネルギー値は影響を受けます。
-
- Speech Energy を確認するコマンド：
-
-```bash
-xvf_host.exe AEC_SPENERGY_VALUES
+```powershell
+xvf_host.exe <COMMAND>
 ```
 
-出力例
+例えば：
 
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-AEC_SPENERGY_VALUES 2080656 0 2083455 2080656
+```powershell
+xvf_host.exe VERSION
 ```
-
-- **Focused beam 1**：1 つ目のビームのエネルギー
-- **Focused beam 2**：2 つ目のビームのエネルギー
-- **Free running beam**：スキャンしているビームのエネルギー
-- **Auto selected beam**：最終出力に選択されたビームのエネルギー
-
-**オーディオ出力チャネル**
-
-- XVF3800 は **2 つのオーディオチャネル**を提供します：
-  - **左チャネル**：クリーンなポストプロセス済みオーディオ
-  - **右チャネル**：ASR ビームまたはエコー／リファレンスデータ
-
-これらのチャネルを**再ルーティング**して、別のソースを出力させることができます。
-
-コマンド例
-
-左チャネルを Amplified Microphone 0 に設定
-
-```bash
-xvf_host.exe AUDIO_MGR_OP_L 3 0
-```
-
-右チャネルを Far End（リファレンス）データに設定
-
-```bash
-xvf_host.exe AUDIO_MGR_OP_R 5 0
-```
-
-出力例：
-
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-```
-
-**チューニングパラメータ（音質をさらに良くする！）**
-
-- これらの設定は、**エコーキャンセル**、**ノイズ抑制**、**ゲイン**などを改善するのに役立ちます。
-- **デフォルト設定で十分でない場合に使用してください。**
-
- 一般的なパラメータ：
-
-| パラメータ             | 意味                                         |
-|-----------------------|-------------------------------------------------|
-| **AUDIO_MGR_REF_GAIN**   | スピーカー入力ゲイン（エコー信号）             |
-| **AUDIO_MGR_MIC_GAIN**   | マイク入力ゲイン（マイクがどれだけ大きく聞こえるか） |
-| **AUDIO_MGR_SYS_DELAY**  | マイク信号とスピーカー信号の間の遅延         |
-| **PP_AGCMAXGAIN**        | 自動ゲイン制御の最大レベル              |
-| **AEC_ASROUTGAIN**       | ASR ビーム出力のゲイン                      |
-
-より詳細なドキュメントや高度なコマンドについては、公式 GitHub リポジトリを参照してください：  
-[ReSpeaker XVF3800 Host Control README](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)
-
----
 
 </TabItem>
 
-<TabItem value="linux" label="macOS / Linux / Raspberry Pi">
+<TabItem value="linux" label="Linux">
 
-### Raspberry Pi の場合
+**1. XVF3800 を接続する**
 
-- XVF3800 を USB または I2C で接続します
-- `xvf_host` を実行可能にします：
+reSpeaker XVF3800 を USB で Linux コンピュータに接続します。
+
+**2. Linux ホストアプリケーションディレクトリに移動する**
+
+x86-64 Linux システムの場合：
 
 ```bash
-cd /path/to/xvf_host
+cd ~/reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/linux_x86_64
+```
+
+**3. アプリケーションに実行権限を付与する**
+
+次を実行します：
+
+```bash
 chmod +x xvf_host
 ```
 
----
+**4. ホストアプリケーションを確認する**
 
-**インストールを確認する**
+次を実行します：
 
 ```bash
 ./xvf_host --help
+```
+
+利用可能なすべての制御コマンドを表示するには：
+
+```bash
+./xvf_host --list-commands
+```
+
+**5. XVF3800 との接続を確認する**
+
+次を実行します：
+
+```bash
 ./xvf_host VERSION
 ```
 
-期待される結果：
+接続が成功すると、次のような出力が表示されます：
 
-```
+```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-VERSION 2 0 2
+VERSION 2 0 10
 ```
 
-**I2C を使用する：**
+ファームウェアバージョンは、XVF3800 にインストールされているファームウェアによって異なります。
+
+`VERSION` コマンドは、`xvf_host` が XVF3800 と通信できることを確認する簡単な方法です。
+
+**6. USB 権限が拒否された場合**
+
+Linux の USB 権限のためにアプリケーションが USB デバイスにアクセスできない場合、次のコマンドでアプリケーションをテストできます：
 
 ```bash
-./xvf_host --use i2c VERSION
+sudo ./xvf_host VERSION
 ```
 
----
+コマンドが `sudo` 付きでは動作するが、なしでは動作しない場合、問題は Linux の USB デバイス権限または udev ルールに関連している可能性があります。
 
-**LED 制御（Windows と同じ、先頭に ./ を付ける）**
-
-```bash
-./xvf_host led_effect 1
-./xvf_host led_color 0xff8800
-./xvf_host led_speed 1
-./xvf_host led_brightness 255
-```
-
-**設定**
-
-```bash
-./xvf_host save_configuration 1
-./xvf_host clear_configuration 1
-```
-
----
-
-**GPIO 制御**
-
-```bash
-chmod +x ./xvf_host
-```
-
-**入力を読み取る：**
+**7. GPI 値を読み取る**
 
 ```bash
 ./xvf_host GPI_READ_VALUES
 ```
 
-出力例：`GPI_READ_VALUES 1 0 0`
-
-この例では、戻り値 1 0 0 は、ピン X1D09 が High レベル、ピン X1D13 が Low レベル、ピン X1D34 が Low レベルであることを意味します。
-
-**出力を読み取る：**
+**8. GPO 値を読み取る**
 
 ```bash
 ./xvf_host GPO_READ_VALUES
 ```
 
-出力例：`GPO_READ_VALUES 0 1 1 0 0`
-
-この例では、戻り値 0 0 0 1 0 は、ピン X0D11 が Low レベル、ピン X0D30 が Low レベル、ピン X0D31 が High レベル、ピン X0D33 が High レベル、ピン X0D39 が Low レベルであることを意味します。
-
-**出力を設定する：**
-
-```bash
-./xvf_host GPO_WRITE_VALUE 30 1
-./xvf_host GPO_WRITE_VALUE 30 0
-```
-
-**到来方向（DoA）**
-
-- DoA は、誰かがどの方向から話しているかを示します。
-- ReSpeaker XVF3800 の **LED リング** は、光で方向を表示します。
-- `xvf_host` ツールを使用して DoA の値を読み取ることもできます。
-
-DoA の値を確認するコマンド
+**9. 到来方向（DoA）を読み取る**
 
 ```bash
 ./xvf_host AEC_AZIMUTH_VALUES
 ```
 
-出力例
+**10. 利用可能なコマンドを一覧表示**
 
 ```bash
+./xvf_host --list-commands
+```
+
+その後、次のようにサポートされているコマンドを実行できます：
+
+```bash
+./xvf_host <COMMAND>
+```
+
+例えば：
+
+```bash
+./xvf_host VERSION
+```
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+**1. XVF3800 を接続する**
+
+reSpeaker XVF3800 を USB で Mac に接続します。
+
+**2. macOS ホストアプリケーションのディレクトリへ移動する**
+
+Apple Silicon Mac の場合：
+
+```bash
+cd ~/reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/mac_arm64
+```
+
+**3. アプリケーションに実行権限を付与する**
+
+次を実行します：
+
+```bash
+chmod +x xvf_host
+```
+
+**4. ホストアプリケーションを確認する**
+
+次を実行します：
+
+```bash
+./xvf_host --help
+```
+
+利用可能なすべての制御コマンドを表示するには：
+
+```bash
+./xvf_host --list-commands
+```
+
+**5. XVF3800 との接続を確認する**
+
+次を実行します：
+
+```bash
+./xvf_host VERSION
+```
+
+接続が成功すると、次のような出力が表示されます：
+
+```text
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-AEC_AZIMUTH_VALUES 0.91378 (52.36 deg) 0.00000 (0.00 deg) 1.57080 (90.00 deg) 0.91378 (52.36 deg)
+VERSION 2 0 10
 ```
 
-- **Focused beam 1**：1 つ目の固定リスニング方向
-- **Focused beam 2**：2 つ目の固定リスニング方向
-- **Free running beam**：常に方向をスキャン
-- **Auto selected beam**：最適な音声のために最終的に選択されたビーム（DoA 表示に使用）
+ファームウェアバージョンは、XVF3800 にインストールされているファームウェアによって異なります。
 
-**音声インジケータ**
-
-- Speech Energy は、音声信号の強さを示します — 音声の音量メーターのようなものです。
-- 誰かが話しているかどうか、またその大きさ／近さを検出するために使用されます。
-- ノイズ、エコー、および距離はエネルギー値に影響を与える可能性があります。
-
-音声エネルギーを確認するコマンド：
+**6. GPI 値を読み取る**
 
 ```bash
-./xvf_host AEC_SPENERGY_VALUES
+./xvf_host GPI_READ_VALUES
 ```
 
-出力例
+**7. GPO 値を読み取る**
 
 ```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-AEC_SPENERGY_VALUES 2080656 0 2083455 2080656
+./xvf_host GPO_READ_VALUES
 ```
 
-- **Focused beam 1**: 最初のビームのエネルギー
-- **Focused beam 2**: 2 番目のビームのエネルギー
-- **Free running beam**: 走査ビームのエネルギー
-- **Auto selected beam**: 最終出力に選択されたビームのエネルギー
-
-**オーディオ出力チャネル**
-
-- XVF3800 は **2 つのオーディオチャネル** を提供します：
-
-  - **左チャネル**: クリーンなポストプロセス済みオーディオ
-  - **右チャネル**: ASR ビームまたはエコー／リファレンスデータ
-
-これらのチャネルを**再ルーティング**して、異なるソースを出力させることができます。
-
-コマンド例
-
-左チャネルを増幅マイク 0 に設定
+**8. 到来方向 (DoA) を読み取る**
 
 ```bash
-./xvf_host AUDIO_MGR_OP_L 3 0
+./xvf_host AEC_AZIMUTH_VALUES
 ```
 
-右チャネルを Far End（リファレンス）データに設定
+**9. 利用可能なコマンドを一覧表示する**
 
 ```bash
-./xvf_host AUDIO_MGR_OP_R 5 0
+./xvf_host --list-commands
 ```
-
-出力例：
-
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-```
-
-**チューニングパラメータ（音質をさらに良くしよう！）**
-
-- これらの設定は、**エコーキャンセル**、**ノイズ抑制**、**ゲイン** などを改善するのに役立ちます。
-- **デフォルト設定では十分でない場合に使用してください。**
-
-一般的なパラメータ：
-
-| パラメータ                  | 意味                                              |
-| -------------------------- | ------------------------------------------------- |
-| **AUDIO_MGR_REF_GAIN**  | スピーカー入力ゲイン（エコー信号）               |
-| **AUDIO_MGR_MIC_GAIN**  | マイク入力ゲイン（マイクがどれだけ大きく聞こえるか） |
-| **AUDIO_MGR_SYS_DELAY** | マイク信号とスピーカー信号の間の遅延             |
-| **PP_AGCMAXGAIN**         | 自動ゲイン制御の最大レベル                       |
-| **AEC_ASROUTGAIN**        | ASR ビーム出力のゲイン                           |
-
-より詳細なドキュメントや高度なコマンドについては、公式 GitHub リポジトリを参照してください：
-[ReSpeaker XVF3800 Host Control README](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)
-
----
 
 </TabItem>
 </Tabs>
 
+### 共通コマンド
+
+以下のコマンドは、基本的な XVF3800 のテストに役立ちます：
+
+| Command              | Description                        |
+| -------------------- | ---------------------------------- |
+| `--help`             | ホストアプリケーションのヘルプを表示 |
+| `--list-commands`    | 利用可能な XVF3800 コマンドを表示   |
+| `VERSION`            | XVF3800 のファームウェアバージョンを読み取る |
+| `GPI_READ_VALUES`    | GPI 値を読み取る                   |
+| `GPO_READ_VALUES`    | GPO 値を読み取る                   |
+| `AEC_AZIMUTH_VALUES` | 現在の DoA/方位角の値を読み取る     |
+
+
+その他のコマンドは[こちら](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/host_control)で確認できます。
+
+
+## reSpeaker コンソールアプリケーション
+
+reSpeaker デバイスを制御および設定するためのデスクトップアプリケーションを用意しました。
+
+このアプリケーションを使用すると、次のことができます：
+
+- reSpeaker デバイスに接続
+- オーディオ設定の構成（ノイズ抑制、ゲイン、AEC、およびチャンネル構成）
+- 到来方向 (DoA) と音声活動検出 (VAD) のモニタリング
+- LED エフェクトの制御
+- デバイスパラメータの調整
+
+### アプリケーションのインストール
+
+最新リリースを以下からダウンロードします：
+
+https://github.com/respeaker/respeaker-console/releases
+
+| Platform | Architecture  | Package Type         |
+| -------- | ------------- | -------------------- |
+| Windows  | x64           | `.msi` / `.exe`      |
+| macOS    | Apple Silicon | `.dmg` (aarch64)     |
+| macOS    | Intel         | `.dmg` (x86_64)      |
+| Linux    | x64           | `.deb` / `.AppImage` |
+
+### Windows：USB ドライバのセットアップ
+
+アプリケーションを初めて使用する前に、**Zadig** を使用して **WinUSB** ドライバをインストールします。
+
+**ステップ 1：** **Zadig** をダウンロードして実行します。
+
+**ステップ 2：** **Options → List All Devices** を選択します。
+
+**ステップ 3：** デバイス一覧から **reSpeaker 3800** または **reSpeaker XVF3800 4-Mic Array** を選択します。
+
+**ステップ 4：** ドライバとして **WinUSB** を選択します。
+
+**ステップ 5：** **Install Driver** をクリックします。
+
+**ステップ 6：** デバイスを一度取り外し、再接続します。
+
+**ステップ 7：** 次のコマンドを実行して、デバイスが認識されていることを確認します：
+
+```bash
+dfu-util -l
+```
+
+:::note
+`dfu-util.exe` はアプリケーションに同梱されているため、別途インストールする必要はありません。
+:::
+
+### Linux：dfu-util のインストールと USB パーミッションの設定
+
+**dfu-util** をインストールします：
+
+```bash
+sudo apt install dfu-util
+```
+
+USB アクセスには **udev** ルールも必要です。
+
+次のファイルを作成します：
+
+```text
+/etc/udev/rules.d/99-respeaker.rules
+```
+
+次の行を追加します：
+
+```text
+SUBSYSTEM=="usb", ATTRS\{idVendor\}=="2886", MODE="0666", GROUP="plugdev"
+```
+
+udev ルールを再読み込みします：
+
+```bash
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+最後に、デバイスを一度取り外してから再接続します。
+
+### macOS：dfu-util のインストール
+
+ファームウェア更新機能を使用する前に **dfu-util** をインストールします。
+
+```bash
+brew install dfu-util
+```
+
+### アプリケーションの使用方法
+
+アプリケーションをインストールしたら、起動して **reSpeaker Console** にアクセスします。
+
+サイドバーの各セクションを順に見ていきましょう。
+
+#### デバイス接続
+
+まず、reSpeaker デバイスを接続します。
+
+1. **Scan Devices** をクリックします。
+2. アプリケーションが検出されたすべてのデバイスを一覧表示します。
+3. 自分のデバイスを選択します。
+4. **Connect** をクリックして接続を確立します。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/scan.jpg" alt="Device Connection" width={800} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/connect.jpg" alt="Device Connection" width={800} height="auto"/></p>
+
+#### Audio
+
+**Audio** タブでは、オーディオ処理パイプラインを設定および強化できます。
+
+ここでは次の設定が可能です：
+
+- 非定常ノイズ抑制
+- 定常ノイズ抑制
+- 自動ゲイン制御 (AGC)
+- アコースティックエコーキャンセレーション (AEC)
+- 出力チャンネル構成
+- 左右チャンネルマッピング
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/audio.jpg" alt="Audio Tab" width={800} height="auto"/></p>
+
+#### Monitor
+
+**Monitor** タブでは、マイク処理のリアルタイム可視化が提供されます。
+
+次の項目をモニタリングできます：
+
+- 到来方向 (DoA)
+- 音声活動検出 (VAD)
+- ビームエネルギーレベル
+
+これらの指標により、デバイスが音声を正しく検出しているかを確認できます。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/monitor.jpg" alt="Monitor Tab" width={800} height="auto"/></p>
+
+#### LEDs
+
+**LEDs** タブでは、LED リングをカスタマイズできます。
+
+利用可能な機能には次のものがあります：
+
+- ブリージングエフェクト
+- レインボーエフェクト
+- リングエフェクト
+- 輝度調整
+- アニメーション速度の制御
+- RGB カラー選択
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/led.jpg" alt="LEDs Tab" width={800} height="auto"/></p>
+
+#### Parameters
+
+**Parameters** タブでは、すべての設定可能なデバイスパラメータにアクセスできます。
+
+設定は次のようなカテゴリに整理されています：
+
+- Audio
+- アコースティックエコーキャンセレーション (AEC)
+- ポストプロセッシング
+- LEDs / GPIO
+- System
+
+このインターフェースから、パラメータ値を直接更新できます。
+
+各パラメータには、その目的と推奨値の範囲を理解するのに役立つ説明が含まれています。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/app/parameters.jpg" alt="Parameters Tab" width={800} height="auto"/></p>
+
 ## トラブルシューティング
 
-### スピーカー出力の再生音量が十分でないですか？
+### スピーカー出力の再生音量が十分でないのですが？
 
-Linux 上で **ReSpeaker XVF3800** のスピーカー出力音量が小さすぎる場合、XVF3800 サウンドカードの **ALSA ミキサーレベル** を調整する必要があるかもしれません。出力音量を上げるには、以下の手順に従ってください。
+Linux で **ReSpeaker XVF3800** のスピーカー出力音量が小さすぎる場合、XVF3800 サウンドカードの **ALSA ミキサーレベル** を調整する必要があるかもしれません。出力音量を上げるには、以下の手順に従ってください。
 
-**ステップ 1: ALSA ミキサーを開く**
+**ステップ 1：ALSA ミキサーを開く**
 
 1. ターミナルを開きます。
 2. 次のコマンドを入力し、**Enter** キーを押します：
@@ -930,29 +1179,30 @@ Linux 上で **ReSpeaker XVF3800** のスピーカー出力音量が小さすぎ
    ```bash
    alsamixer
    ```
-**ステップ 2: XVF3800 サウンドカードを選択**
+
+**ステップ 2：XVF3800 サウンドカードを選択する**
 
 1. **F6** キーを押してサウンドカード選択メニューを開きます。
 2. **上下矢印キー** を使用して **XVF3800** サウンドカードを選択します。
 3. **Enter** キーを押して選択を確定します。
 
-**ステップ 3: PCM-1 の音量を調整**
+**ステップ 3：PCM-1 の音量を調整する**
 
 1. **左右矢印キー** を使用して **PCM-1** に移動します。
 2. **上矢印キー** を使用して音量レベルを **100%** まで上げます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
 
-**ステップ 4: ALSA 設定を保存**
+**ステップ 4：ALSA 設定を保存する**
 
 1. **ESC** キーを押して `alsamixer` を終了します。
-2. XVF3800 の接続を外す前に、次のコマンドを実行して設定を保存します：
+2. XVF3800 を取り外す前に、次のコマンドを実行して設定を保存します：
 
 ```bash
    sudo alsactl store
    ```
 
-**ステップ 5: 追加オプション（PulseAudio の使用）**
+**ステップ 5：追加オプション（PulseAudio の使用）**
 
 ALSA レベルを調整してもまだ音がはっきり聞こえない場合は、より詳細な音量調整のために **PulseAudio Volume Control** をインストールしてみてください：
 
@@ -962,21 +1212,73 @@ sudo apt install pavucontrol -y
 
 その後、**pavucontrol** を開き、必要に応じて出力音量を 100% を超えて上げることができます。
 
-### USB ドライバを再インストールした後、ReSpeaker が録音も再生もできません
+### USB ドライバを再インストールした後、ReSpeaker が録音・再生できません
 
 デバイスマネージャーで ReSpeaker に関連するすべてのドライバをアンインストールしてください。これで問題が解決しました。
 
 ### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できませんか？
 
-スタートメニューを開き、「Device manager」と入力します。関連する reSpeaker XVF 3800 デバイスを見つけて右クリックし、Uninstall devices を選択します。その後、デバイスを再起動します（USB を抜き差し）。すると Windows が正しいサウンドカードドライバを再インストールします。
+スタートメニューを開き、「Device manager」と入力します。関連する reSpeaker XVF 3800 デバイスを見つけて右クリックし、Uninstall devices を選択します。その後、デバイスを再起動します（USB を抜き差しします）。すると Windows が適切なサウンドカードドライバを再インストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
+### ケースを傷つけずに開けるにはどうすればよいですか？
+
+指の爪を使って、ケースの縁をそっと持ち上げることができます。カバーは 3 つのロッククリップで固定されています。いずれか 1 つのクリップを外せば、比較的簡単にケースを開けることができます。クリップや筐体を破損しないよう、慎重に取り扱ってください。
+
+### reSpeaker XVF3800 がサウンドデバイスとして認識されないのはなぜですか？
+
+reSpeaker XVF3800 ESP32 バージョンは、デフォルトで I2S ファームウェアが書き込まれて出荷されるため、PC に接続しても USB オーディオデバイスとしては表示されません。この情報は、Bazaar の製品ページおよび公式ドキュメントに記載されています。
+
+デバイスを **USB オーディオデバイス** として使用したい場合は、USB ファームウェアを書き込み直す必要があります。次の手順に従ってください：
+
+1. **まずセーフモードに入ります：**
+   [セーフモードの手順](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#セーフモード)
+
+2. **USB ファームウェアを書き込みます：**
+   [ファームウェア更新手順](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェアを更新)
+
+### XVF3800 の 6 チャンネルファームウェアで一部のチャンネルが無音なのはなぜですか？
+
+6 チャンネルファームウェアを書き込んだ後は、生のマイクチャンネルをシステムのオーディオミキサーコントロールから有効化する必要がある場合があります。
+
+Linux の場合、まずオーディオカード ID を確認します：
+
+```bash
+arecord -l
+```
+
+例えば、XVF3800 が **card 1** として表示される場合、キャプチャチャネルを有効にし、その音量を設定します：
+
+```bash
+amixer -c 1 cset numid=8 on,on,on,on,on,on
+amixer -c 1 cset numid=10 60,60,60,60,60,60
+```
+
+必要に応じて音量値を調整し、設定を保存します：
+
+```bash
+sudo alsactl store 1
+```
+
+これらの設定を適用すると、6 つすべてのチャネルでゼロ以外のオーディオが取得されるはずです。
+
+**Windows：** 一部のチャネルが無音のままの場合は、**Device Manager** から XVF3800 デバイスドライバをアンインストールし、その後デバイスを抜き差ししてみてください。これにより、Windows がデバイスとドライバを再構成できます。
+
+## I2C コマンドを使用して reSpeaker XVF3800 USB Mic Array を XIAO ESP32S3 で制御する方法は？
+
+詳細な I2C コマンド一覧とコード例を提供しています。[Using I2C Commands to Control reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3](/ja/respeaker_xvf_3800_i2c_list) セクションを参照してください。
+
 ## リソース
 
+- [ReSpeaker XVF3800 2D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
 - [ReSpeaker XVF3800 3D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
 - [ReSpeaker XVF3800 3D-Enclosure-Up ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
 - [ReSpeaker XVF3800 3D-Enclosure-Down ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
+
+## 参考資料
+
+- [XMOS XVF3800 チップ データシート](https://www.xmos.com/documentation/XM-014888-PC/html/)
 
 ## 技術サポート & 製品ディスカッション
 

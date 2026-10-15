@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 createdAt: '2025-05-27'
-updatedAt: '2026-03-05'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/ja/IoT_Fast_Prototyping_Kit_S5D9/
 ---
 

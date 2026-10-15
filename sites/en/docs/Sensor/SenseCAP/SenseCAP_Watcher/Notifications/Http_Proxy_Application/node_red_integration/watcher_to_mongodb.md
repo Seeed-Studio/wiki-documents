@@ -11,7 +11,7 @@ last_update:
   date: 07/18/2024
   author: Vincent
 createdAt: '2024-07-19'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/watcher_node_red_to_mongodb/
 ---
 

@@ -1,5 +1,9 @@
 // @ts-check
 
+const roboticsSidebars = require('./robotics-sidebar');
+const rebotCourseSidebars = require('./rebot-course-sidebar');
+const jetsonSidebars = require('./jetson-sidebar');
+
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   jaSidebar: [
@@ -470,30 +474,6 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ディスプレイ',
-              items: [
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-1.2_inch_IPS_Display',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-4-Digit_Display',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-0.54_inch_Red_Dual_Alphanumeric_Display',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-0.54_inch_Red_Quad_Alphanumeric_Display',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-16x2_LCD_Series',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-LCD_RGB_Backlight',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-OLED-Display-0.66-SSD1306_v1.0',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-OLED_Display_0.96inch',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-OLED-Display-0.96-SSD1315',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-OLED_Display_1.12inch',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-OLED-Display-1.12-SH1107_V3.0',
-                'Sensor/Grove/Grove_Accessories/Display/ja_I2C_LCD',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-Triple_Color_E-Ink_Display_2_13',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-Triple_Color_E-Ink_Display_1_54',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-Serial_LCD_V1.0',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-BlinkM',
-                'Sensor/Grove/Grove_Accessories/Display/ja_Grove-Serial_Camera_Kit',
-              ],
-            },
-            {
-              type: 'category',
               label: 'アクチュエーター',
               items: [
                 'Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-2-Coil_Latching_Relay',
@@ -714,6 +694,8 @@ const sidebars = {
               label: 'ユーザーガイド',
               items: [
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/ja_Quick_Start',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/ja_Payload_Format',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/ja_FAQ',
               ],
             },
             {
@@ -727,19 +709,24 @@ const sidebars = {
             }
           ],
         },
-        //       {
-        //            type: 'category',
-        //           label: 'SenseCAP T1000-P Pet Tracker',
-        //           collapsed: true,
-        //           collapsible: true,
-        //          link: {
-        //            type: "doc",
-        //           id: 'Sensor/SenseCAP/SenseCAP_T1000-P/t1000_p_intro',
-        //         },
-        //        items: [
-        //         'Sensor/SenseCAP/SenseCAP_T1000-P/get_started_with_t1000_p',
-        //           ],
-        //     },
+        {
+          type: 'category',
+          label: 'SenseCAP Bluetoothビーコン',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/ja_BC01_Indoor_Bluetooth_Beacon',
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/ja_BC02_Outdoor_Bluetooth_Beacon',
+            {
+              type: 'category',
+              label: 'BC03 屋内Bluetoothビーコン',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/ja_BC03_Indoor_Bluetooth_Beacon_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/ja_BC03_Indoor_Bluetooth_Beacon_User_Guide',
+              ],
+            }
+          ],
+        },
         {
           type: 'category',
           label: 'SenseCAPセンサー',
@@ -821,8 +808,8 @@ const sidebars = {
                 id: "Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ja_ONE_intro",
               },
               items: [
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ja_SenseCAP-One-Series-Meteorological-Sensors',
                 'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ja_ORCH-S4-Weather-Station',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ja_SenseCAP-One-Series-Meteorological-Sensors',
                 {
                   type: 'category',
                   label: 'SenseCAP One Compact Weather Station',
@@ -830,6 +817,8 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/ja_Introduction',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/ja_Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/ja_Benchmark_Labs_Forecast_Integration_for_Seeed_Weather_Stations',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/ja_Firmware_Update',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ja_SenseCAP_S1000_V2_CO2_Calibration',
                   ],
                 },
               ],
@@ -884,6 +873,14 @@ const sidebars = {
             id: 'Sensor/SenseCAP/SenseCAP_Intro/ja_SenseCAP_Data_Logger_Intro',
           },
           items: [
+            {
+              type: 'category',
+              label: 'SenseCAP Combo 5-in-1 4Gセンサー',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP_Combo/ja_SenseCAP_Combo_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP_Combo/ja_Get_Started_with_SenseCAP_Combo',
+              ],
+            },
             'Sensor/SenseCAP/SenseCAP_Data_Logger/ja_SenseCAP-Sensor-Hub-Data-Logger',
             'Sensor/SenseCAP/SenseCAP_Data_Logger/ja_Data_Logger',
             {
@@ -915,22 +912,22 @@ const sidebars = {
         },
       ],
     },
-    {
-      type: 'category',
-      label: 'SenseCAP Indicator',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Sensor/SenseCAP/SenseCAP_Indicator/ja_Introduction',
-      },
-      items: [
-        {
-          type: 'autogenerated',
-          dirName: 'Sensor/SenseCAP/SenseCAP_Indicator',
-        },
-      ]
-    },
+    // {
+    //   type: 'category',
+    //   label: 'SenseCAP Indicator',
+    //   collapsed: true,
+    //   collapsible: true,
+    //   link: {
+    //     type: "doc",
+    //     id: 'Sensor/SenseCAP/SenseCAP_Indicator/ja_Introduction',
+    //   },
+    //   items: [
+    //     {
+    //       type: 'autogenerated',
+    //       dirName: 'Sensor/SenseCAP/SenseCAP_Indicator',
+    //     },
+    //   ]
+    // },
     {
       type: 'category',
       label: 'SenseCAP Watcher',
@@ -1011,7 +1008,7 @@ const sidebars = {
         'Sensor/SeeedStudio_XIAO/ja_SeeedStudio_XIAO_Series_Projects',
         {
           type: 'category',
-          label: 'XIAO SAMD21',
+          label: 'XIAO SAMD21 シリーズ',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/ja_Seeeduino-XIAO',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/ja_XIAO-SAMD21-Zephyr-RTOS',
@@ -1068,7 +1065,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'XIAO RP2040',
+          label: 'XIAO RP2040 シリーズ',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/ja_XIAO-RP2040',
             {
@@ -1185,6 +1182,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Built-in-Sensor',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Power_Consumptions',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_MicroPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Arduino',
             {
               type: 'category',
               label: 'ワイヤレス接続',
@@ -1209,6 +1207,47 @@ const sidebars = {
             //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Bluetooth_Usage',
             //   ],
             // },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'XIAO nRF54LM20Aシリーズ',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_NCS',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_Built-in-Sensor',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_Low_Power',
+            {
+              type: 'category',
+              label: 'ワイヤレス接続',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/ja_XIAO_nRF54LM20A-Sense_Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/ja_XIAO_nRF54LM20A_Matter_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/ja_XIAO_nRF54LM20A_NFC_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'アプリケーション',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Application/ja_XIAO_nRF54LM20A_with_epaper_and_sdcard',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'プログラミング言語',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_with_MicroPython',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'プラットフォーム',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/ja_XIAO_nRF54LM20A-Sense_with_Arduino',
+              ],
+            },
           ],
         },
         {
@@ -1292,7 +1331,7 @@ const sidebars = {
               label: 'ワイヤレス接続',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/ja_XIAO_ESP32C5_WiFi_Usage',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/ja_XIAO_ESP32C5_Buletooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/ja_XIAO_ESP32C5_Bluetooth_Usage',
               ],
             },
             {
@@ -1300,6 +1339,7 @@ const sidebars = {
               label: 'RTOS',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/ja_XIAO_ESP32C5_With_FreeRTOS',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/ja_XIAO_ESP32C5_With_Zephyr',
               ],
             },
           ],
@@ -1435,6 +1475,30 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO STM32C5',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/ja_XIAO_STM32C5_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/ja_XIAO_STM32C5_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/ja_XIAO_STM32C5_CANFD_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/ja_XIAO_STM32C5_Application',
+            {
+              type: 'category',
+              label: 'プラットフォーム',
+              items: [ 
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/ja_XIAO_STM32C5_With_STM32CubeIDE',
+              ],
+            },
+             {
+              type: 'category',
+              label: 'プログラミング言語',
+              items: [ 
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_STM32C5/ja_XIAO_STM32C5_With_MicroPython',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO デバッグメイト',
           collapsed: true,
           collapsible: true,
@@ -1455,31 +1519,6 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'XIAO 用電子ペーパー拡張ボード',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/ja_XIAO-eInk-Expansion-Board',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/ja_ePaper_Breakout_Board_with_OEPL',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'XIAO用円形ディスプレイ',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/ja_SeeedStudio_Round_Display_for_XIAO',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/ja_SeeedStudio_RoundDisplay_Usage',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/ja_Draw_dials_with_Display_and_lvgl',
-                {
-                  type: 'category',
-                  label: 'アプリケーション',
-                  items: [
-                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/ja_SeeedStudio_Round_Display_Christmas_ball',
-                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/ja_SeeedStudio_Round_Display_Animation_Workshop',
-                  ],
-                },
-              ],
-            },
-            {
-              type: 'category',
               label: 'XIAO用GPSモジュール',
               // link: {
               //   type: "doc",
@@ -1497,7 +1536,6 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_xiao-rgb-matrix',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_gpio_expander_for_xiao',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_xiao_eink_expansion_board_v2',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_XIAO-RS485-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_Bus_Servo_Driver_Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_LED_Driver_Board',
@@ -1528,21 +1566,36 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '電子ペーパー',
-      items: [
-        {
-          type: 'autogenerated',
-          dirName: 'Sensor/ePaper',
-        },
-      ],
-    },
-    {
-      type: 'category',
       label: 'XIAOガジェット',
       items: [
         {
           type: 'autogenerated',
           dirName: 'Sensor/SeeedStudio_XIAO_Gadgets',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: '電子ペーパーディスプレイ',
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "Sensor/ePaper_Displays/ja_seeed_epaper_displays",
+      },
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'Sensor/ePaper_Displays',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'LCDディスプレイ（液晶ディスプレイ）',
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'Sensor/LCD_Displays',
         },
       ],
     },
@@ -1933,34 +1986,92 @@ const sidebars = {
                 id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_with_xiao_intro',
               },
               items: [
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_i2s_test',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_rgb_test',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_volume',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_record_playback',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_gpio',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_mqtt_stream',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_udp_streaming',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_http',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_doa_vad',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_i2c_list',
                 {
                   type: 'category',
-                  label: 'アプリケーション',
+                  label: '再生と録音',
                   items: [
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ha',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_voice_agent',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_xiaozhi',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_arm',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora_ten_framework',
-                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_openclaw',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_i2s_test',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_record_playback',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_volume',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'ストリーミング',
+                  items: [
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_udp_streaming',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_http',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_mqtt_stream',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_websockets',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'デバイス制御',
+                  items: [
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_rgb_test',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_gpio',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_doa_vad',
                   ],
                 },
               ],
             },
+            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_reSpeaker_xvf_3800_i2s_usb_bridge',
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_python_sdk',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reSpeaker Flex',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'XIAO対応 reSpeaker Flex',
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: '再生と録音',
+                  items: [
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_i2s_test',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_playback_record',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_volume_xiao',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'オーディオストリーミング',
+                  items: [
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_udp_stream',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_http_stream',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_mqtt',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'デバイス制御',
+                  items: [
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_gpio',
+                    'Sensor/reSpeaker_flex/ja_reSpeaker_flex_doa',
+                  ],
+                },
+              ],
+            },
+            'Sensor/reSpeaker_flex/ja_reSpeaker_flex_python_control',
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
         {
@@ -1981,33 +2092,60 @@ const sidebars = {
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_xiao_respeaker',
               },
               items: [
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_i2s_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_rgb_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_volume',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_button',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_record_and_play',
-                // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb', // commented out
                 {
-                  type: 'doc',
-                  id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_generator',
-                  label: 'Streams Generator',
+                  type: 'category',
+                  label: '再生と録音',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_i2s_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_record_and_play',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_volume',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_player_spiffs',
+                  ],
                 },
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_print',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_memory',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_player_spiffs',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_mqtt',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_i2s_tflite',
+                {
+                  type: 'category',
+                  label: 'ストリーミング',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_generator',
+                      label: 'Streams Generator',
+                    },
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_print',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_memory',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_mqtt',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'デバイス制御',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_rgb_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_button',
+                  ],
+                },
               ],
             },
             {
               type: 'category',
               label: 'アプリケーション',
               items: [
-                'Sensor/ReSpeaker_Lite/Application/ja_respeaker_lite_ha',
+                // 'Sensor/ReSpeaker_Lite/Application/ja_respeaker_lite_ha',
                 'Sensor/ReSpeaker_Lite/Application/ja_respeaker_lite_pi5',
               ],
             },
             'Sensor/ReSpeaker_Lite/ja_respeaker_enclosure',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reSpeaker XVF 3000',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v3.0',
+            'Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v2.0',
+            'Seeed_Elderly/reSpeaker/ja_ReSpeaker-USB-Mic-Array',
           ],
         },
         {
@@ -2033,21 +2171,10 @@ const sidebars = {
               label: 'v2ユーザー向け',
               items: [
                 'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ja_ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2',
-                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ja_ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+                // 'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ja_ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
               ],
             },
             'Sensor/ReSpeaker_2-Mics_Pi_HAT/ja_ReSpeaker_2_Mics_Pi_HAT-Hardware-Revisions',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'reSpeaker XVF 3000',
-          collapsed: true,
-          collapsible: true,
-          items: [
-            'Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v3.0',
-            'Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v2.0',
-            'Seeed_Elderly/reSpeaker/ja_ReSpeaker-USB-Mic-Array',
           ],
         },
         {
@@ -2060,10 +2187,129 @@ const sidebars = {
             id: 'Sensor/Sound_event_sensor/ja_sound_event_sensor_intro',
           },
           items: [
-            'Sensor/Sound_event_sensor/ja_sound_event_sensor_intro_ha',
+            // 'Sensor/Sound_event_sensor/ja_sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reSpeaker Clip',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_getting_started',
+          },
+          items: [
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_getting_started',
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_basic_sdk_guide',
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_rtc_streaming',
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_service_integration',
+            'Sensor/reSpeaker_clip/ja_respeaker_clip_sensecraft_voice_sdk',
+            {
+              type: 'category',
+              label: 'ファームウェア SDK',
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_firmware_quick_start',
+                  label: 'はじめに',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_firmware_development_guide',
+                  label: '開発ガイド',
+                },
+                {
+                  type: 'doc',
+                  id: 'Sensor/reSpeaker_clip/ja_respeaker_clip_customization_at_command',
+                  label: 'カスタム AT コマンド',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'よくある質問',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/ja_respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/ja_xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/ja_flex_xvf3800_faq',
+            'FAQ/respeaker/ja_respeaker_lite_faq',
+            'FAQ/respeaker/ja_xvf3000_faq',
+            'FAQ/respeaker/ja_respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/ja_respeaker_clip_faq',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'アプリケーション',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            {
+              type: 'category',
+              label: 'Home Assistant',
+              items: [
+                'Sensor/Sound_event_sensor/ja_sound_event_sensor_intro_ha',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ha',
+                'Sensor/ReSpeaker_Lite/Application/ja_respeaker_lite_ha',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'ロボティクス',
+              items: [
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_rebot_arm',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_arm',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_ros',
+                'Sensor/reSpeaker_clip/ja_respeaker_clip_rebot_arm',
+              ],
+            },
+            {
+              type: 'category',
+              label: '音声認識',
+              items: [
+                {
+                type: 'category',
+                label: 'TensorFlow',
+                items: [
+                  'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_respeaker_streams_i2s_tflite',
+                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
+                  'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ja_ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+                ],
+              },
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',                
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_picovoice',
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_sensecraft',
+              ],
+            },
+            {
+              type: 'category',
+              label: '会話型AI',
+              items: [
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_voice_agent',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_xiaozhi',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora_ten_framework',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_openclaw',
+                'Sensor/reSpeaker_clip/ja_respeaker_clip_python_usage_stt_llm_transcribe',
+                'Sensor/reSpeaker_clip/ja_respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/ja_respeaker_clip_chat_architecture',
+              ],
+            },
           ],
         },
       ],
@@ -2215,16 +2461,6 @@ const sidebars = {
                 'Sensor/Beyond_Grove/Accessories/Tools/ja_DSO_Quad-Calibration',
                 'Sensor/Beyond_Grove/Accessories/Tools/ja_Mini_Soldering_Iron',
                 'Sensor/Beyond_Grove/Accessories/Tools/ja_RF_Explorer_Software',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'ディスプレイ',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Display/ja_1-69inch_LCD_SPI_display',
-                'Sensor/Beyond_Grove/Accessories/Display/ja_1-47inch_LCD_SPI_display',
-                'Sensor/Beyond_Grove/Accessories/Display/ja_LCD_16-2_Characters-Green_Yellow_back_light',
-                'Sensor/Beyond_Grove/Accessories/Display/ja_LCD_8-2_Characters-Blue_back_light',
               ],
             },
           ],
@@ -2590,38 +2826,38 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Meshtastic Network',
+      label: 'Mesh Network',
       collapsed: true,
       collapsible: true,
       link: {
         type: "doc",
-        id: 'Network/Meshtastic_Network/ja_meshtastic_intro',
+        id: 'Network/Mesh_Network/ja_mesh_intro',
       },
       items: [
         {
           type: 'autogenerated',
-          dirName: 'Network/Meshtastic_Network',
+          dirName: 'Network/Mesh_Network',
         },
       ]
     },
     // {
     //   type: 'category',
-    //   label: 'Meshtastic Network',
+    //   label: 'Mesh Network',
     //   collapsed: true,
     //   collapsible: true,
     //   link: {
     //     type: "doc",
-    //     id: 'Network/Meshtastic_Network/meshtastic_intro',
+    //     id: 'Network/Mesh_Network/mesh_intro',
     //   },
     //   items: [
     //     {
     //       type: 'category',
     //       label: 'T1000-E Tracker',
     //       items: [
-    //         'Network/Meshtastic_Network/T1000-E/t1000_e_intro',
+    //         'Network/Mesh_Network/T1000-E/t1000_e_intro',
     //         {
     //           type: 'doc',
-    //           id: 'Network/Meshtastic_Network/T1000-E/sensecap_t1000_e',
+    //           id: 'Network/Mesh_Network/T1000-E/sensecap_t1000_e',
     //           label: 'Get Started with T1000-E',
     //         },
     //       ],
@@ -2630,17 +2866,17 @@ const sidebars = {
     //           type: 'category',
     //           label: 'SenseCAP Indicator for Meshtastic',
     //           items: [
-    //             'Network/Meshtastic_Network/SenseCAP_Indicator/sensecap_indicator_meshtastic',
+    //             'Network/Mesh_Network/SenseCAP_Indicator/sensecap_indicator_meshtastic',
     //           ],
     //         },
     //         {
     //           type: 'category',
     //           label: 'Wio Tracker 1110 Meshtastic Kit',
     //           items: [
-    //             'Network/Meshtastic_Network/wio_tracker_kit/meshtastic_kit_wio_tracker_1110',
+    //             'Network/Mesh_Network/wio_tracker_kit/meshtastic_kit_wio_tracker_1110',
     //             {
     //               type: 'doc', 
-    //               id:'Network/Meshtastic_Network/wio_tracker_kit/flash_meshtastic_kit',
+    //               id:'Network/Mesh_Network/wio_tracker_kit/flash_meshtastic_kit',
     //               label: 'Flash Firmware', 
     //             },
     //           ],
@@ -2649,7 +2885,7 @@ const sidebars = {
     //           type: 'category',
     //           label: 'XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic',
     //           items: [
-    //             'Network/Meshtastic_Network/XIAO_ESP32S3_&_SX1262_Kit/Get_Started_meshtastic',
+    //             'Network/Mesh_Network/XIAO_ESP32S3_&_SX1262_Kit/Get_Started_meshtastic',
     //           ],
     //         },
     //       ],
@@ -2681,6 +2917,24 @@ const sidebars = {
           label: 'reComputer R1225 LoRaWAN Gateway',
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/ja_R1225_introduction',
+            'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/ja_R1225_Quick_Start',
+            {
+              type: 'category',
+              label: 'Cloud Platform Integration',
+              items: [
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/ja_Connecting_R1225_to_ChirpStack',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/ja_Connecting_R1225_to_TTN',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/ja_Connecting_R1225_to_AWS_IoT',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'アプリケーション',
+              items: [
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/ja_How_to_use_modbus_rs485',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/ja_How_to_use_bacnet_ms_tp',
+              ],
+            },
           ],
         },
         {
@@ -2703,50 +2957,51 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/ja_flash_opensource_firmware_to_m2_gateway'
           ],
         },
-        {
-          type: 'category',
-          label: 'Helium Gateway',
-          items: [
-            {
-              type: 'category',
-              label: 'SenseCAP M1 Gateway',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_Local_Console',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_FAQ',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_Troubleshooting',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SenseCAP M2 Data Only',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/ja_SenseCAP_M2_Data_Only_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/ja_SenseCAP_M2_Data_Only_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/ja_M2_Local_Console',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SenseCAP M2 Light Gateway',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/ja_SenseCAP_M2_Light_Gateway_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/ja_SenseCAP_M2_Light_Gateway_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/ja_SenseCAP_M2_Light_Gateway_FAQ',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Flux Gateway',
-          items: [
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/ja_SenseCAP_M4_Overview',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/ja_SenseCAP_M4_Quick_Start',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/ja_SenseCAP_M4_FAQ',
-          ],
-        },
+        // {
+        //   type: 'category',
+        //   label: 'Helium Gateway',
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M1 Gateway',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_Local_Console',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_FAQ',
+        //         'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/ja_SenseCAP_M1_Troubleshooting',
+        //       ],
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M2 Data Only',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/ja_SenseCAP_M2_Data_Only_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/ja_SenseCAP_M2_Data_Only_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/ja_M2_Local_Console',
+        //       ],
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'SenseCAP M2 Light Gateway',
+        //       items: [
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/ja_SenseCAP_M2_Light_Gateway_Overview',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/ja_SenseCAP_M2_Light_Gateway_Quick_Start',
+        //         'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/ja_SenseCAP_M2_Light_Gateway_FAQ',
+        //       ],
+        //     },
+        //   ],
+        // },
+        // {
+        //   type: 'category',
+        //   label: 'Flux Gateway',
+        //   items: [
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/ja_SenseCAP_M4_Overview',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/ja_SenseCAP_M4_Quick_Start',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/ja_SenseCAP_M4_FAQ',
+        //     'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/ja_Install_Ubuntu_on_SenseCAP_M4',
+        //   ],
+        // },
         {
           type: 'category',
           label: '屋外ゲートウェイ',
@@ -2784,24 +3039,24 @@ const sidebars = {
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/ja_K1100-Vision-AI-Module-Grove-LoRa-E5',
               ],
             },
-            {
-              type: 'category',
-              label: 'Helium Cloud Services',
-              items: [
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/ja_Helium-Introduction',
-                {
-                  type: 'category',
-                  label: 'Helium Connected & Azure Integrated',
-                  items: [
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/ja_Connecting-to-Helium',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/ja_Integrate-into-Azure-IoT-Hub',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/ja_Configuring-Web-APP-Visualization',
-                  ],
-                },
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/ja_Integrate_into_Google_Sheets_via_Helium',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/ja_Connect_AWS_via_helium',
-              ],
-            },
+            // {
+            //   type: 'category',
+            //   label: 'Helium Cloud Services',
+            //   items: [
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/ja_Helium-Introduction',
+            //     {
+            //       type: 'category',
+            //       label: 'Helium Connected & Azure Integrated',
+            //       items: [
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/ja_Connecting-to-Helium',
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/ja_Integrate-into-Azure-IoT-Hub',
+            //         'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/ja_Configuring-Web-APP-Visualization',
+            //       ],
+            //     },
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/ja_Integrate_into_Google_Sheets_via_Helium',
+            //     'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/ja_Connect_AWS_via_helium',
+            //   ],
+            // },
             {
               type: 'category',
               label: 'TTN Cloud Services',
@@ -3033,6 +3288,7 @@ const sidebars = {
       label: 'その他のネットワークデバイス',
       items: [
         'Network/TTN_Gateway/ja_The-Things-Indoor-Gateway',
+        'Network/ja_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
           label: 'Wio-WM6108 WiFi-Halow Devices',
@@ -3427,7 +3683,6 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-Electron',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-Flutter',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-LVGL',
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-Qt-for-Python',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_weather-dashboard-with-Grafana-reTerminal',
                   ]
                 },
@@ -3588,6 +3843,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Agent',
+              items: [
+                {
+                  type: 'category',
+                  label: 'openClaw',
+                  items: [
+                        'Edge/Raspberry_Pi_Devices/Application/Agent/openClaw/ja_getting_started_with_openclaw_on_recomputer'
+                      ]
+                },
+              ]
+            },
+            {
+              type: 'category',
               label: 'ツール',
               items: [
                 'Edge/Raspberry_Pi_Devices/Application/Development_Tools/ja_recomputer_use_uv_to_build_package',
@@ -3600,405 +3868,9 @@ const sidebars = {
       ],
     },
     {
-      type: 'category',
+      type: 'link',
       label: 'NVIDIA® Jetson™',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Edge/NVIDIA_Jetson/ja_RecomputerPage',
-      },
-      items: [
-        // Getting Started
-        {
-          type: 'category',
-          label: 'はじめに',
-          items: [
-            // Carrier Boards
-            {
-              type: 'category',
-              label: 'キャリアボード',
-              items: [
-                'Edge/NVIDIA_Jetson/Carrier_Boards/J101/ja_reComputer_J1010_J101_Flash_Jetpack',
-                'Edge/NVIDIA_Jetson/Carrier_Boards/J202/ja_reComputer_J2021_J202_Flash_Jetpack',
-                {
-                  type: 'category',
-                  label: 'J401キャリアボード',
-                  items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/J401/ja_reComputer_J4012_Flash_Jetpack',
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/J401/ja_J401_carrierboard_Hardware_Interfaces_Usage',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'J401-Mini キャリアボード',
-                  items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Mini_J401/ja_reComputer_Mini_J4012_Flash_Jetpack',
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Mini_J401/ja_J401_Mini_carrierboard_Hardware_Interfaces_Usage',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'J501 キャリアボード',
-                  items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/J501/ja_reServer_Industrial_J501_Getting_Started',
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/J501/ja_Hardware_Interfaces_Usage',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'J501-Mini キャリアボード',
-                  items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/J501_Mini/ja_Robotics_J501_Mini_Hardware_Interfaces_Usage',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'J401-Robotics キャリアボード',
-                  items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J401/ja_Robotics_J401_carrierboard_Hardware_Interfaces_Usage',
-                  ],
-                },
-                'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/ja_reComputer_A203_Flash_System',
-                'Edge/NVIDIA_Jetson/Carrier_Boards/A205/ja_reComputer_A205_Flash_System',
-                'Edge/NVIDIA_Jetson/Carrier_Boards/A603/ja_A603_Flash_JetPack',
-                'Edge/NVIDIA_Jetson/Carrier_Boards/A607/ja_A607_Flash_JetPack',
-                'Edge/NVIDIA_Jetson/Carrier_Boards/A608/ja_A608_Flash_JetPack',
-              ],
-            },
-            // reComputer Jetson Series
-            {
-              type: 'category',
-              label: 'reComputer Jetson',
-              link: {
-                type: "doc",
-                id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/ja_reComputer_Intro',
-              },
-              items: [
-                {
-                  type: 'category',
-                  label: 'reComputer J10',
-                  link: {
-                    type: "doc",
-                    id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/ja_reComputer_Jetson_Series_Introduction',
-                  },
-                  items: [
-                    {
-                      type: 'category',
-                      label: 'reComputer J1010',
-                      items: [
-                        'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/ja_reComputer_J1010_with_Jetson_getting_start',
-                        'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/ja_J101_Enable_SD_Card',
-                        'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/ja_J1010_Boot_From_SD_Card',
-                        'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/ja_reComputer_Jetson_GPIO',
-                        'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/ja_reComputer_Jetson_Memory_Expansion',
-                        'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/ja_reComputer_Jetson_Series_Hardware_Layout',
-                        'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/ja_reComputer_Jetson_Series_Initiation',
-                      ],
-                    },
-                    {
-                      type: 'category',
-                      label: 'reComputer J1020',
-                      items: [
-                        'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1020v2/ja_reComputer_J1020v2_with_Jetson_getting_start',
-                        'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1020v2/ja_reComputer_J1020_A206_Flash_JetPack',
-                      ],
-                    },
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer J20',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J20/ja_reComputer_J20_with_Jetson_getting_start',
-                  ]
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer J30/40',
-                  // link: {
-                  //   type: "doc",
-                  //   id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40',
-                  // },
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40/ja_reComputer_J30_40_with_Jetson_getting_start',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40/ja_reComputer_Jetson_with_Infineon_Wi-Fi_Module',
-                  ]
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer 工業用',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Industrial/ja_reComputer_Industrial_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Industrial/ja_reComputer_Industrial_J20_Hardware_Interfaces_Usage',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Industrial/ja_reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer Mini',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/ja_reComputer_Mini_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/ja_reComputer_Mini_Hardware_Interfaces_Usage',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer Rugged J40',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Rugged_J40/ja_reComputer_Rugged_J40_Getting_Started',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer Robotics J40',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Hardware_Interfaces_Usage',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer Robotics J50',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/ja_reComputer_Robotics_J501_Getting_Started',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer J401B',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/ja_recomputer_j401b_getting_start',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/ja_recomputer_j401b_interfaces_usage',
-                  ]
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer Super',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/ja_reComputer_Super_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/ja_reComputer_Super_Hardware_Interfaces_Usage',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/ja_reComputer_Super_vs_Classic_Next-Gen_AI_Performance_in_Edge_Inferencing',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/ja_Replace_the_Thermal_Conductive_Paste_for_reComputer',
-                  ],
-                },
-              ]
-            },
-            // reServer Jetson Series
-            {
-              type: 'category',
-              label: 'reServer Jetson',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_Getting_Started',
-              // },
-              items: [
-                //'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_Getting_Started',
-                {
-                  type: 'category',
-                  label: 'reServer Industrial J30/40',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/ja_reServer_Industrial_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/ja_reServer_Industrial_Hardware_Interface_Usage',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'reServer J2032',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_J2032/ja_reServer_J2032_Flash_Jetpack',
-                    'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_J2032/ja_reServer_J2032_Getting_Started',
-                  ],
-                },
-              ]
-            },
-            // Other Devices
-            {
-              type: 'category',
-              label: 'その他のデバイス',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/Other_Devices',
-              // },
-              items: [
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_RTL8822CE_Wireless_Module_for_Jetson',
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_RM520N_Module_for_Jetson',
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_Jetson_Xavier_AGX_H01_Driver_Installation',
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_Jetson-Mate',
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_Mini_AI_Computer_T906',
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_reComputer_A203E_Flash_System',
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_reComputer_A205E_Flash_System',
-                'Edge/NVIDIA_Jetson/Other_Devices/ja_reComputer_Jetson_Series_GPIO_Grove',
-              ]
-            },
-            //flashing jetpack page
-            'Edge/NVIDIA_Jetson/ja_Flash_Jetpack',
-          ]
-        },
-        // Applications
-        {
-          type: 'category',
-          label: 'アプリケーション',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application',
-          // },
-          items: [
-            // Computer Vision
-            {
-              type: 'category',
-              label: 'コンピュータビジョン',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/Application/Computer_Vision',
-              // },
-              items: [
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_DashCamNet-with-Jetson-Xavier-NX-Multicamera',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_How_to_Train_and_Deploy_YOLOv8_on_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Jetson-Nano-MaskCam',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Security_Scan',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_reComputer_Jetson_Series_Projects',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Traffic-Management-DeepStream-SDK',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv5-Object-Detection-Jetson',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv8-DeepStream-TRT-Jetson',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv8-TRT-Jetson',
-                // 'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv8_custom_classification_model',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Multi-GMSL_Cameras_for_Real-Time_Object_Detection_and_3D_Reconstruction_on_Jetson_AGX_Orin',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv11_With_Depth_Camera_For_Distance_Measurement',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Efficient_Multi-Task_Vision_Inference_Engine_Deployment_on_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_deploy_frigate_on_jetson',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_AI-NVR_with_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv26_Dual_USB_Camera_Image_Processing_System on_Jetson',
-              ]
-            },
-            // Generative AI
-            {
-              type: 'category',
-              label: '生成 AI',
-              link: {
-                type: "doc",
-                id: 'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Generative_AI_Intro',
-              },
-              items: [
-                // Models
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Finetune_LLM_by_Llama_Factory_on_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Quantized_Llama2_7B_with_MLC_LLM_on_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_run_local_llm_text_to_image_on_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Local_RAG_based_on_Jetson_with_LlamaIndex',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_run_zero_shot_detection_on_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_run_VLM_on_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
-                // Projects
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Local_OpenClaw(Clawdbot)_on_reComputer_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Riva_and_Llama2_on_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Real_Time_Subtitle_Recoder_on_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Ollama_and_AnythingLLM_on_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Quickly_Deploy_DeepSeek_on_reComputer_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_DeepSeek_on_reComputer_Jetson_with_MLC',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_GPT_OSS_Running_Live_on_reComputer_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Control_Motor_by_Voice_LLM_on_Jetson',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'マルチモーダル AI',
-              items: [
-                // Models
-                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
-                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Speech_vlm',
-                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_use_vlm_guard_warehouse',
-                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Chatbot_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_llm_interface_control_jetson',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'エンボディド AI',
-              items: [
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Chatbot_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_J501_Mini_StarAI_Viola_Fruit_Sorting',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Control_SoArm_by_OpenClaw_on_Jetson_Thor'
-              ]
-            },
-            // Managed Services
-            {
-              type: 'category',
-              label: 'マネージドサービス',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/Application/Managed_Services',
-              // },
-              items: [
-                'Edge/NVIDIA_Jetson/Application/Managed_Services/ja_Allxon-Jetson-Getting-Started',
-                'Edge/NVIDIA_Jetson/Application/Managed_Services/ja_neqto_engine_for_linux_recomputer',
-                'Edge/NVIDIA_Jetson/Application/Managed_Services/ja_Scailable-Jetson-Getting-Started',
-                'Edge/NVIDIA_Jetson/Application/Managed_Services/ja_Update-Jetson-Linux-OTA-Using-Allxon',
-              ]
-            },
-            // Developer Tools
-            {
-              type: 'category',
-              label: '開発者ツール',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
-              // },
-              items: [
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Develop_reComputer_Jetson_using_Clawdbot',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Gapi-Jetson-Getting-Started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_alwaysAI-Jetson-Getting-Started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Cochl.Sense-Jetson-Getting-Started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_CVEDIA-Jetson-Getting-Started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_DeciAI-Getting-Started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_HardHat',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Jetson-AI-developer-tools',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_jetson-docker-getting-started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Lumeo-Jetson-Getting-Started',
-                // 'Edge/NVIDIA_Jetson/Application/Developer_Tools/No-code-Edge-AI-Tool',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_reComputer_Jetson_Series_Resource',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_NVStreamer_Getting_Started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Roboflow-Jetson-Getting-Started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Install_torch_on_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_vnc_for_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Implement_Ethercat_communication_on_reComputer',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Distributed_llama_cpp_RPC_on_Jetson',
-              ]
-            },
-          ]
-        },
-        // FAQs
-        {
-          type: 'category',
-          label: 'よくある質問',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/FAQs',
-          // },
-          items: [
-            'Edge/NVIDIA_Jetson/FAQs/ja_jetson_FAQ',
-            'Edge/NVIDIA_Jetson/FAQs/ja_Create_Backup_and_Restore_on_reComputer',
-            'Edge/NVIDIA_Jetson/FAQs/ja_Deploy_OTA_ON_reComputer',
-            // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
-            'Edge/NVIDIA_Jetson/FAQs/ja_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
-            'Edge/NVIDIA_Jetson/FAQs/ja_Use_IMX477_Camera_with_A603',
-            'Edge/NVIDIA_Jetson/FAQs/ja_Differences_of_L4T_Between_Seeed_and_NVIDIA',
-            'Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
-            'Edge/NVIDIA_Jetson/FAQs/ja_How_to_Establish_the_Ethercat_on_Jetson',
-            'Edge/NVIDIA_Jetson/FAQs/ja_Make_DIY_BSP_for_Jetson',
-            'Edge/NVIDIA_Jetson/FAQs/ja_Flash_JetPack_with_WSL2',
-          ]
-        }
-      ],
+      href: '/ja/NVIDIA_Jetson/',
     },
     {
       type: 'category',
@@ -4165,26 +4037,14 @@ const sidebars = {
       label: 'reCamera',
       collapsed: true,
       collapsible: true,
-      items: [
-        {
-          type: 'autogenerated',
-          dirName: 'Edge/reCamera',
-        },
-      ]
-    },
-    {
-      type: 'category',
-      label: 'reTerminal E シリーズ',
-      collapsed: true,
-      collapsible: true,
       link: {
         type: "doc",
-        id: 'Edge/reTerminal_E10xx/ja_reterminal_e10xx_main_page',
+        id: 'Edge/reCamera/ja_ReCameraPage',
       },
       items: [
         {
           type: 'autogenerated',
-          dirName: 'Edge/reTerminal_E10xx',
+          dirName: 'Edge/reCamera',
         },
       ]
     },
@@ -4204,389 +4064,10 @@ const sidebars = {
       ],
     },
     {
-      type: 'doc',
+      type: 'ref',
       id: 'ja_Edge_Robotics',
       label: 'ロボティクスページ',
       className: 'sideboard_calss',
-    },
-    {
-      type: 'category',
-      label: 'ロボットキット',
-      collapsed: true,
-      collapsible: true,
-      items: [
-        {
-          type: 'category',
-          label: 'Lerobot',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            //'Robotics/Robot_Kits/Lerobot/En_Hackathon_Thor',
-            'Robotics/Robot_Kits/Lerobot/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
-            'Robotics/Robot_Kits/Lerobot/ja_Lerobot_Starai_Arm',
-            'Robotics/Robot_Kits/Lerobot/ja_Starai_Arm_ROS2_Moveit',
-            'Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO100Arm_New',
-            'Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO_ARM101_DAMO',
-            'Robotics/Robot_Kits/Lerobot/ja_Lerobot_Dataset_Tool',
-            //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
-            'Robotics/Robot_Kits/Lerobot/ja_Lerobot_Lekiwi',
-            'Robotics/Robot_Kits/Lerobot/ja_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'エンドエフェクタ',
-          items: [
-            'Robotics/Robot_Kits/End_Effectors/ja_DM_Gripper',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'ハンド',
-          items: [
-            'Robotics/Robot_Kits/Hand/ja_AmazingHand',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'ReachyMini',
-          collapsible: true,
-          collapsed: false,
-          items: [
-            {
-              type: 'doc',
-              id: 'Robotics/Robot_Kits/ReachyMini/ja_intro',
-              label: 'Introduction',
-            },
-            {
-              type: 'category',
-              label: 'Reachy Mini (Wireless)',
-              collapsible: true,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_get_started',
-                  label: 'Getting Started',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_usage',
-                  label: 'Usage',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_hardware',
-                  label: 'Hardware',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_media_advanced_controls',
-                  label: 'Media Advanced Controls',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_reset',
-                  label: 'Reset',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_install_daemon_from_branch',
-                  label: 'Install Daemon from Branch',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_development_workflow',
-                  label: 'Development Workflow',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/ja_reflash_the_rpi_ISO',
-                  label: 'Reflash the ISO',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Reachy Mini Lite',
-              collapsible: true,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_get_started',
-                  label: 'Getting Started',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_usage',
-                  label: 'Usage',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_hardware',
-                  label: 'Hardware',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_media_advanced_controls',
-                  label: 'Media Advanced Controls',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/ja_wizard',
-                  label: 'Wizard',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Simulation',
-              collapsible: true,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/simulation/ja_get_started',
-                  label: 'Getting Started',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SDK Guide',
-              collapsible: true,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/ja_readme',
-                  label: 'SDK Overview',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/ja_installation',
-                  label: 'Installation',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/ja_quickstart',
-                  label: 'Quickstart',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/ja_python-sdk',
-                  label: 'Python SDK',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/ja_javascript-sdk',
-                  label: 'JavaScript SDK',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/ja_integration',
-                  label: 'AI Integrations',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/ja_core-concept',
-                  label: 'Core Concepts',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/ja_media-architecture',
-                  label: 'Media Architecture',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/ja_gstreamer-installation',
-                  label: 'GStreamer Installation',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Help & Troubleshooting',
-              collapsible: true,
-              collapsed: false,
-              items: [
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/ja_troubleshooting',
-                  label: 'Troubleshooting',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/ja_motors_diagnosis',
-                  label: 'Motors Diagnosis',
-                },
-                {
-                  type: 'doc',
-                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/ja_change_mic_fpc_cable',
-                  label: 'Change Mic FPC Cable',
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Examples',
-              collapsible: true,
-              collapsed: true,
-              items: [
-                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/examples' },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'API Reference',
-              collapsible: true,
-              collapsed: true,
-              items: [
-                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/API' },
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Stackforce',
-          items: [
-            'Robotics/Robot_Kits/StackForce/ja_StackForce_Giant_Bipedal_Wheeled_Robot',
-            'Robotics/Robot_Kits/StackForce/ja_StackForce_Mini_Wheeled_Legged_Robot',
-          ]
-        },
-      ]
-    },
-    {
-      type: 'category',
-      label: 'アクチュエーター',
-      // link: {
-      //   type: "doc",
-      //   id: 'Edge/NVIDIA_Jetson/Application',
-      // },
-      items: [
-        {
-          type: 'category',
-          label: '高トルク',
-          items: [
-            'Robotics/Robot_Actuator/HighTorque/ja_HighTorque',
-            'Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Getting_Started',
-            'Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Control',
-          ]
-        },
-        'Robotics/Robot_Actuator/ja_Feetech_Servo',
-        'Robotics/Robot_Actuator/ja_FashionStar_Servo',
-        'Robotics/Robot_Actuator/ja_Stackforce_Series',
-        'Robotics/Robot_Actuator/ja_Myactuator_Series',
-        'Robotics/Robot_Actuator/ja_Damiao_Series',
-        'Robotics/Robot_Actuator/ja_RobStride_Control',
-      ]
-    },
-    {
-      type: 'category',
-      label: 'センサー',
-      // link: {
-      //   type: "doc",
-      //   id: 'Edge/NVIDIA_Jetson/Application',
-      // },
-      items: [
-        {
-          type: 'category',
-          label: 'Lidar',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            'Robotics/Robot_Sensor/Lidar/ja_Robosense_Lidar',
-            'Robotics/Robot_Sensor/Lidar/ja_MID360',
-            'Robotics/Robot_Sensor/Lidar/ja_A_Loam',
-            'Robotics/Robot_Sensor/Lidar/ja_SLAMTEC',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'カメラ',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_AC1',
-            'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
-            'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini_336',
-            'Robotics/Robot_Sensor/Camera/ja_Orbbec_Depth_Camera',
-            'Robotics/Robot_Sensor/Camera/ja_ORB_SLAM3_with_Orbbec_Gemini2',
-            'Robotics/Robot_Sensor/Camera/ja_Pycuvslam_On_reComputer',
-            'Robotics/Robot_Sensor/Camera/ja_Orbbec_Gemini_335Lg',
-            'Robotics/Robot_Sensor/Camera/ja_Sensing_GMSL_Camera',
-            'Robotics/Robot_Sensor/Camera/ja_CSI_Camera',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'IMU',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            'Robotics/Robot_Sensor/IMU/ja_Hexfellow_Y200',
-            'Robotics/Robot_Sensor/IMU/ja_WHEELTEC_IMU',
-          ]
-        },
-      ]
-    },
-    {
-      type: 'category',
-      label: 'ソフトウェア',
-      items: [
-        {
-          type: 'category',
-          label: 'ROS',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            "Robotics/Robot_Software/ROS/ja_Installing_ROS1",
-            "Robotics/Robot_Software/ROS/ja_Install_IsaacROS",
-            "Robotics/Robot_Software/ROS/ja_Install_ROS2_Humble",
-            "Robotics/Robot_Software/ROS/ja_Isaac_ROS_AprilTag",
-            "Robotics/Robot_Software/ROS/ja_Isaac_ROS_Visual_SLAM",
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Isaag Lab',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            'Robotics/Robot_Software/Isaac_Lab/ja_Install_Isaac_lab',
-            'Robotics/Robot_Software/Isaac_Lab/ja_Simulate_SoArm101_by_LeIsaac',
-            'Robotics/Robot_Software/Isaac_Lab/ja_Training_SoARM101_Policy_with_IsaacLab',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'PX4',
-          // link: {
-          //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-          // },
-          items: [
-            "Robotics/Robot_Software/PX4/ja_Control_PX4_with_reComputer_Jetson",
-            "Robotics/Robot_Software/PX4/ja_Object_Tracking_with_reComputer_Jetson_and_PX4",
-          ]
-        },
-        'Robotics/Robot_Software/VLA/ja_control_robotic_arm_via_gr00t',
-        'Robotics/Robot_Software/ja_control_robotic_arm_via_phospho',
-      ]
     },
     {
       type: 'doc',
@@ -4603,6 +4084,22 @@ const sidebars = {
         {
           type: 'autogenerated',
           dirName: 'Cloud_Chain/SenseCraft_AI',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'CodeCraft',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'Cloud_Chain/CodeCraft/ja_0-codecraft-overview',
+      },
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'Cloud_Chain/CodeCraft',
         },
       ],
     },
@@ -4632,7 +4129,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft HMI',
+      label: 'SenseCraft Seeedash',
       collapsed: true,
       collapsible: true,
       link: {
@@ -4648,16 +4145,73 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft Blockchain',
+      label: 'SenseCraft Robotics',
       collapsed: true,
       collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'Cloud_Chain/SenseCraft_Robotics/ja_sensecraft_robotics_overview',
+      },
       items: [
         {
-          type: 'autogenerated',
-          dirName: 'Cloud_Chain/SenseCraft_Blockchain',
+          type: 'doc',
+          id: 'Cloud_Chain/SenseCraft_Robotics/ja_sensecraft_robotics_overview',
+          label: '概要',
+        },
+        {
+          type: 'category',
+          label: 'ガイド',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/guides/ja_sensecraft_robotics_so_arm101',
+              label: 'SO-ARM101',
+            },
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/guides/ja_sensecraft_robotics_rebot_arm_102_b601_dm',
+              label: 'reBot Arm 102 + B601 DM',
+            },
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/guides/ja_sensecraft_robotics_rebot_arm_102_b601_rs',
+              label: 'reBot Arm 102 + B601 RS',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'よくある質問',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/faq/ja_sensecraft_robotics_common_issues',
+              label: '一般的な問題',
+            },
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/faq/ja_sensecraft_robotics_data_collection_configuration_recommendation',
+              label: 'データ収集設定',
+            },
+          ],
         },
       ],
     },
+    // {
+    //   type: 'category',
+    //   label: 'SenseCraft Blockchain',
+    //   collapsed: true,
+    //   collapsible: true,
+    //   items: [
+    //     {
+    //       type: 'autogenerated',
+    //       dirName: 'Cloud_Chain/SenseCraft_Blockchain',
+    //     },
+    //   ],
+    // },
+
     // START OF Seeed SOLUTION
     {
       type: 'link',
@@ -4670,6 +4224,23 @@ const sidebars = {
       dirName: 'Solutions',
     },
     // END OF Solution
+    // START OF Fusion
+    {
+      type: 'link',
+      label: 'Fusion',
+      href: 'https://www.seeedstudio.com/fusion.html',
+      className: 'sideboard_calss',
+    },
+    {
+      type: 'category',
+      label: 'PCB & PCBA',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/ja_Service_for_Fusion_PCB',
+      ],
+    },
+    // END OF Fusion
     {
       type: 'doc',
       id: 'Topics/ja_Topic_introduction',
@@ -4780,6 +4351,7 @@ const sidebars = {
                 'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov5',
                 'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov8',
                 'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov8_pose',
+                'Topics/TinyML/ModelAssistant/deploy/ja_ma_deploy_yolov26',
               ]
             },
           ],
@@ -5420,7 +4992,11 @@ const sidebars = {
     },
     'ja_About',
     'ja_License',
-  ]
+  ],
+
+  ...roboticsSidebars,
+  ...rebotCourseSidebars,
+  ...jetsonSidebars,
 };
 
 module.exports = sidebars;

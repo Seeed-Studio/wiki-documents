@@ -1,5 +1,0 @@
-position: 2 # float position is supported
-label: 'XIAO ePaper电子墨水显示板 EE02'
-collapsible: true # make the category collapsible
-collapsed: true # keep the category open by default
-className: xiao_epaper_display_board_ee02

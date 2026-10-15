@@ -10,7 +10,7 @@ last_update:
   date: 09/22/2023
   author: Lakshantha
 createdAt: '2023-06-08'
-updatedAt: '2026-03-04'
+updatedAt: '2026-06-29'
 url: https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/
 ---
 
@@ -24,10 +24,14 @@ reServer Industrial comes with a passive heatsink and a fanless design, making i
 
 reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for providing power over Ethernet to devices like IP cameras. This eliminates the need for a separate power source and makes it easier to deploy network devices in areas without readily available power outlets. The remaining GbE port is used to connect to a network switch or router, enabling communication with other devices on the network and access to the Internet.
 
+:::note
+Available customization options: logo branding, packaging, and firmware flashing.
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
+</div>
 
 ## Features
 
@@ -245,7 +249,7 @@ reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for provi
 The device will come pre-installed with JetPack 5.1.1. If there are no special requirements, you don't need to reflash the system.
 :::
 
-reServer Industrial comes pre-installed with JetPack 5.1.1 on a 128GB SSD along with the necessary drivers. This includes SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash Jetpack to the included SSD or to a new SSD, you can follow the steps below. Currently we only provide guidance for JP5.1.1 and we will keep updating this in the future.
+reServer Industrial comes pre-installed with JetPack 5.1.1 on a 128GB SSD along with the necessary drivers. This includes SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash JetPack to the included SSD or to a new SSD, you can follow the steps below.
 
 :::note
 If you want to use SSDs with reServer Industrial, we only recommend you choose the [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), the [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html), and the [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) versions from Seeed.
@@ -262,6 +266,49 @@ You need to prepare the following hardware before getting started with reServer 
 - External monitor
 - HDMI cable
 - Keyboard and Mouse
+
+:::info
+We recommend that you use physical Ubuntu host devices instead of virtual machines.
+Please refer to the table below to prepare the host machine.
+
+<table style={{textAlign: 'center'}}>
+  <tbody>
+    <tr>
+        <td  rowspan="2"> JetPack Version </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
+    </tr>
+    <tr>
+        <td > 18.04 </td>
+        <td > 20.04 </td>
+        <td > 22.04 </td>
+        <td > 24.04 </td>
+    </tr>
+    <tr>
+        <td >JetPack 5.x</td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 6.x</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
+:::
 
 ### Enter Force Recovery Mode
 
@@ -316,7 +363,7 @@ import TabItem from '@theme/TabItem';
     </thead>
     <tbody>
       <tr>
-        <td rowSpan={5}>reServer Industrial J4012</td>
+        <td rowSpan={6}>reServer Industrial J4012</td>
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
@@ -367,7 +414,17 @@ import TabItem from '@theme/TabItem';
         </td>
       </tr>
       <tr>
-        <td rowSpan={5}>reServer Industrial J4011</td>
+        <td>7.2</td>
+        <td>39.2.0</td>
+        <td>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB2YV-odVTxTZGy3D-1hPMEAXOH0iN6v_IAmHIUVZFymiE?e=cgN4kc" target="_blank" rel="noopener noreferrer">Download1</a>
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
+      <tr>
+        <td rowSpan={6}>reServer Industrial J4011</td>
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
@@ -418,7 +475,17 @@ import TabItem from '@theme/TabItem';
         </td>
       </tr>
       <tr>
-        <td rowSpan={5}>reServer Industrial J3011</td>
+        <td>7.2</td>
+        <td>39.2.0</td>
+        <td>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDWd-W-rHfES4JiXSPXUWJ4AQbt4APS-jeWDtskFAZb6kw?e=XaI195" target="_blank" rel="noopener noreferrer">Download1</a>
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
+      <tr>
+        <td rowSpan={6}>reServer Industrial J3011</td>
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
@@ -469,7 +536,17 @@ import TabItem from '@theme/TabItem';
         </td>
       </tr>
       <tr>
-        <td rowSpan={5}>reServer Industrial J3010</td>
+        <td>7.2</td>
+        <td>39.2.0</td>
+        <td>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB5T6WBaPY7Q5vjG9Q_u2uJAW2zWj9vOYU3GGT_R5lqSzE?e=gmOKa7" target="_blank" rel="noopener noreferrer">Download1</a>
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
+      <tr>
+        <td rowSpan={6}>reServer Industrial J3010</td>
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
@@ -519,9 +596,59 @@ import TabItem from '@theme/TabItem';
           -
         </td>
       </tr>
+      <tr>
+        <td>7.2</td>
+        <td>39.2.0</td>
+        <td>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA_GpwpaczHTbTaXQEsNAreAVBjoiwpi7dtiz4kiOZRlIo?e=ZKa4sL" target="_blank" rel="noopener noreferrer">Download1</a>
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
+
+<div class="table-center">
+  <table style={{textAlign: 'center'}}>
+    <thead>
+      <tr>
+        <th>Device</th>
+        <th>JetPack Version</th>
+        <th>SHA256</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>reServer Industrial J4012</td>
+        <td>7.2</td>
+        <td>fcf2eb2d0977856cc8e74aa1483397b61<br />eff588fdae00145c67a9ed7953beba7</td>
+      </tr>
+      <tr>
+        <td>reServer Industrial J4011</td>
+        <td>7.2</td>
+        <td>b687dc99d86d9e9a9c071b39d3062e68<br />d8e7f542d58fcb7e8117db21b18d9c11</td>
+      </tr>
+      <tr>
+        <td>reServer Industrial J3011</td>
+        <td>7.2</td>
+        <td>d805862bd75bb8d2f0970fb72c336d30<br />a69c7e3daa84dcecce83806e42b794e1</td>
+      </tr>
+      <tr>
+        <td>reServer Industrial J3010</td>
+        <td>7.2</td>
+        <td>86ad9eec225bab64adccfb3d9ce5678f<br />85fb7f4881fe589df9e74334fb477acc</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+:::info
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
+
+On an Ubuntu host machine, run `sha256sum <file_name>.tar.gz` and compare the output with the SHA256 value in the table above.
+:::
 
 <p style={{ fontSize: '0.9em', color: 'yellow' , textAlign: 'center'}}>
   * The image files from both Download1 and Download2 are the same. You can choose the link with the faster download speed.
@@ -533,6 +660,8 @@ import TabItem from '@theme/TabItem';
 
 ```sh
 tar -xvf <file_name>.tar.gz
+# For JetPack 7.2 example:
+# tar -xvf mfi_reserver-industrial-orin-nx-16g-7.2.0-39.2.0-2026-06-24.tar.gz
 ```
 
 #### Flash to Jetson
@@ -540,7 +669,9 @@ tar -xvf <file_name>.tar.gz
 - **Step 1:** Navigate to the extracted file from before and execute the flash command as follows
 
 ```sh
-cd mfi_reserver-orin-industrial
+cd mfi_xxxx
+# For JetPack 7.2 example:
+# cd mfi_reserver-industrial-orin-nx-16g-7.2.0-39.2.0
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 

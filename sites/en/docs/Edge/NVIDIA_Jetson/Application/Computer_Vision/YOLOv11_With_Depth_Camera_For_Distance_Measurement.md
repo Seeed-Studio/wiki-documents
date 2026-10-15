@@ -18,7 +18,7 @@ last_update:
   date: 07/04/2025
   author: Zibo
 createdAt: '2025-07-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/yolov11_with_depth_camera/
 ---
 

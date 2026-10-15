@@ -1,18 +1,18 @@
 ---
-description: このwikiはHighTorqueモーター制御完全ガイドを提供します
-title: HighTorqueモーター制御完全ガイド
+description: このWikiはHighTorqueモーター制御の完全ガイドを提供します
+title: HighTorque Motor SDK
 keywords:
-  - actuator
-  - motor
-  - arm
-  - robotics
+  - アクチュエータ
+  - モーター
+  - アーム
+  - ロボティクス
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech-ST3215-Servo.webp
 slug: /hightorque_control
 last_update:
   date: 11/19/2025
   author: Tienjuiwong
 createdAt: '2025-11-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/hightorque_control/
 ---
 
@@ -160,7 +160,7 @@ sudo modprobe can_dev
 sudo ip link set can0 down
 
 # Configure CAN interface parameters
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 
 # Start interface
 sudo ip link set can0 up

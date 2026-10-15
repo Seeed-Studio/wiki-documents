@@ -14,6 +14,7 @@ import ShowcaseFilterToggle, {
   readOperator,
 } from './_components/ShowcaseFilterToggle';
 import styles from './styles.module.scss';
+import { detectLocaleFromPath } from '../home/lib/locale';
 import {
   getKnowledgebaseContent,
   KnowledgebaseCard,
@@ -363,16 +364,18 @@ type KnowledgebasePageProps = {
 };
 
 export default function KnowledgebasePage({
-  locale = 'en',
+  locale,
 }: KnowledgebasePageProps) {
-  const normalizedLocale: Locale = (['en', 'cn', 'ja', 'es'] as Locale[]).includes(
-    locale,
+  const location = useLocation<UserState>();
+
+  const pathLocale = detectLocaleFromPath(location.pathname);
+  const normalizedLocale: Locale = (['en', 'cn', 'ja', 'es', 'pt-br'] as Locale[]).includes(
+    locale as Locale,
   )
-    ? locale
-    : 'en';
+    ? (locale as Locale)
+    : pathLocale;
 
   const content = getKnowledgebaseContent(normalizedLocale);
-  const location = useLocation<UserState>();
   const [operator, setOperator] = useState<Operator>('OR');
   const [selectedTags, setSelectedTags] = useState<TagType[]>([]);
   const [searchName, setSearchName] = useState<string | null>(null);

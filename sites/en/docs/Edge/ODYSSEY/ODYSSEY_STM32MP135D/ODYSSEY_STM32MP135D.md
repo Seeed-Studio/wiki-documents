@@ -8,7 +8,7 @@ last_update:
   date: 10/13/2023
   author: Xogium
 createdAt: '2023-10-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ODYSSEY-STM32MP135D/
 ---
 

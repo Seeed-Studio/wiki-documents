@@ -4,8 +4,9 @@ function initCustomScripts() {
     cn: `与 Seeed 合作 - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">创作者</a>、<a target="_blank" href="https://www.seeedstudio.com/ranger-program/">社区大使</a>， <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">贡献者</a>，总有一个角色适合你！`,
     ja: `Seeed と協力しましょう - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">クリエイター</a>、<a target="_blank" href="https://www.seeedstudio.com/ranger-program/">コミュニティアンバサダー</a>、または <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">コントリビューター</a>、あなたにぴったりの役割がきっと見つかります！`,
     es: `Colabora con Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creadores</a>, <a target="_blank" href="https://www.seeedstudio.com/ranger-program/">Embajador/a de la comunidad</a> o <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Colaboradores</a>, siempre hay un rol ideal para ti.`,
+    'pt-br': `Colabore com a Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Criadores</a>, <a target="_blank" href="https://www.seeedstudio.com/ranger-program/">Ranger</a> ou <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contribuidor</a>, sempre existe uma função ideal para você!`,
   };
-  const LOCALE_PREFIXES = ['/cn', '/ja', '/es'];
+  const LOCALE_PREFIXES = ['/cn', '/ja', '/es', '/pt-br'];
 
   let announcementElement = null;
   let announcementElementObserver = null;
@@ -20,6 +21,9 @@ function initCustomScripts() {
     }
     if (pathname === '/es' || pathname.startsWith('/es/')) {
       return 'es';
+    }
+    if (pathname === '/pt-br' || pathname.startsWith('/pt-br/')) {
+      return 'pt-br';
     }
     return 'en';
   }
@@ -162,4 +166,3 @@ if (document.readyState === 'loading') {
 } else {
   initCustomScripts()
 }
-

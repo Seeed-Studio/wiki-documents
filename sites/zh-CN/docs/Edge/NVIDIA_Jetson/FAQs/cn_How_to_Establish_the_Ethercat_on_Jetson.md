@@ -11,7 +11,7 @@ last_update:
   date: 11/14/2025
   author: Dayu
 createdAt: '2025-11-14'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-24'
 url: https://wiki.seeedstudio.com/cn/how_to_establish_the_ethercat_on_jetson/
 ---
 

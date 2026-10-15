@@ -3,35 +3,47 @@ description: Seeed Studio XIAO RP2040 with MicroPython
 title: MicroPython
 keywords:
   - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao-rp2040-45font_1.webp
 slug: /XIAO-RP2040-with-MicroPython
 last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/XIAO-RP2040-with-MicroPython/
 ---
 
-# **Seeed Studio XIAO RP2040 with MicroPython**
+# Seeed Studio XIAO RP2040 with MicroPython
 
-## **Introduction of MicroPython**
+## Introduction of MicroPython
 
 [MicroPython](https://github.com/micropython/micropython/wiki) is a Python interprer with a partial native code compilation feature. It provides a subset of Python 3.5 features, implemented for embedded processors and constrained systems. It is different from CPython and you can read more about the differences [here](https://github.com/micropython/micropython/wiki/Differences).
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
-## **Getting Started**
+## Getting Started
 
-First, we are going to connect the Seeed Studio XIAO RP2040 to the computer and upload a simple code from MicroPython to check whether the board is functioning well.
+First, we are going to connect the Seeed Studio XIAO RP2040  Series to the computer and upload a simple code from MicroPython to check whether the board is functioning well.
 
-### **Hardware Setup**
+### Hardware Setup
 
-- [Seeed Studio XIAO RP2040](https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html) x1
+- [Seeed Studio XIAO RP2040](https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html) or [Seeed Studio XIAO RP2040 Plus](https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-Plus-p-6932.html) x1
 - Type-C cable x1
 - PC x1
 
-### **Software Setup**
+### Connect XIAO RP2040 Series to the PC
+
+- **Step 1**. Press and hold the **BOOT** button and then connect the Seeed Studio XIAO RP2040 Series to the PC through the Type-C cable. If it works well, there is an **RPI-RP2** disk shown on the PC.
+
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
+
+- **Step 2**.Flash the Firmware
+
+    Just go to the official and download the latest firmware,  then drag‑and‑drop the `.uf2` file into the **RPI-RP2** disk to finish firmware flashing.
+
+    - [XIAO RP2040 Series MicroPython Firmware](https://micropython.org/download/SEEED_XIAO_RP2040/)
+
+### Software Setup
 
 - **Step 1**. Download and Install the latest version of [Thonny editor](https://thonny.org/) according to your operating system
 
@@ -39,35 +51,21 @@ First, we are going to connect the Seeed Studio XIAO RP2040 to the computer and 
 
 - **Step 2**. Launch the Thonny
 
-- **Step 3**. Click **"Tools-->Options"** to open the settings.
+- **Step 3**. Click **Tools-->Options** to open the settings.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
-- **Step 4**. Chose the "Interpreter" interface and select the device as **"MicroPython(Raspberry Pi Pico)"** and the port as **"Try to detect prot automatically"**
+- **Step 4**. Chose the **Interpreter** interface and select the device as **MicroPython(generic)** and the port as **Board CDC @ Port**
 
-<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_9.png" /></div>
+<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/mpy_1.png" /></div>
 
-### **Connect Seeed Studio XIAO RP2040 to the PC and Light it up**
+**Step 5.** Version information will be displayed in the Shell.
 
-- **Step 1**. Press and hold the "BOOT" button and then connect the Seeed Studio XIAO RP2040 to the PC through the Type-C cable. If it works well, there is an "RPI-RP2" desk shown on the PC.
+<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/mpy_2_1.png" /></div><br/>
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
+**Step 6.** Go to Files -> New, paste the code below, and run the script.
 
-- **Step 2**. Click **Install or update MicroPython**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/installandupdate.png" /></div>
-
-It will then automatically search for the device and display it on the Target Volume. In the version selection in Micropython below, we just leave the default.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/chooseversion.png" /></div>
-
-Click on the Install button and close this page when the installation status says Done. The following information will be shown on the interface once the firmware is complete.
-
-<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk3.png" /></div>
-
-- **Step 3**. Copy the following codes to Thonny.
-
-```cpp
+```py
 from machine import Pin, Timer
  
 led = Pin(25, Pin.OUT)
@@ -84,31 +82,67 @@ tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 ```
 
-- **Step 4**. Upload the codes by clicking the "Run current script" button. For the first time, Thonny will ask where you want to save your codes file. Both **This Computer** and **Raspberry Pi Pico** are fine.
+- The LED will blink at 1-second intervals.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/mpy_1.jpg" /></div><br/>
 
-If it works well, you will see the LED light turn on and off once a second. And the output of the increasing number will as well be displayed in the Shell.
+:::tip
 
-<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_13.png" /></div>
+- The [Additional Resources](#additional-resources) section contains MicroPython firmware and relevant examples for XIAO RP2040 Plus.You may use these examples by following the XIAO RP2040 tutorials, but make sure to replace and modify the corresponding pins.
+- To check the differences within the XIAO RP2040 series, please refer to [XIAO RP2040 Series Pin Overview](https://wiki.seeedstudio.com/XIAO-RP2040/#hardware-overview)
 
-The connection is commplete and now we can proceed to the other projects.
+:::
 
-## **Light up RGB LED on the Seeed Studio XIAO RP2040**
+## XIAO RP2040 Series Pins
+
+| MicroPython Pin Name | XIAO RP2040 GPIO | XIAO RP2040 Plus GPIO | ADC | Function |
+| :--- | :---: | :---: | :---: | :--- |
+| D0 / A0 | GPIO26 | GPIO26 | 0 | GPIO, ADC0 |
+| D1 / A1 | GPIO27 | GPIO27 | 1 | GPIO, ADC1 |
+| D2 / A2 | GPIO28 | GPIO28 | 2 | GPIO, ADC2 |
+| D3 / A3 | GPIO29 | GPIO29 | 3 | GPIO, ADC3 |
+| D4 / SDA | GPIO6 | GPIO6 | — | GPIO, I2C SDA |
+| D5 / SCL | GPIO7 | GPIO7 | — | GPIO, I2C SCL |
+| D6 / TX | GPIO0 | GPIO0 | — | GPIO, UART TX |
+| D7 / RX | GPIO1 | GPIO1 | — | GPIO, UART RX |
+| D8 / SCK | GPIO2 | GPIO2 | — | GPIO, SPI SCK |
+| D9 / MISO | GPIO4 | GPIO4 | — | GPIO, SPI MISO |
+| D10 / MOSI | GPIO3 | GPIO3 | — | GPIO, SPI MOSI |
+| NEOPIXEL | GPIO12 | GPIO12 | — | WS2812 NeoPixel data |
+| NEOPIXEL_POWER / NEO_PWR / RGB_EN | GPIO11 | GPIO11 | — | NeoPixel power enable (RGB_EN on Plus) |
+| LED_G / D23 | GPIO16 | GPIO16 | — | RGB LED green; Plus D23 |
+| LED_R / D24 | GPIO17 | GPIO17 | — | RGB LED red; Plus D24 |
+| LED_B / LED | GPIO25 | GPIO25 | — | RGB LED blue / user LED |
+| D12 | — | GPIO18 | — | Plus expansion GPIO |
+| D13 / SCL1 | — | GPIO21 | — | Plus I2C1 SCL |
+| D14 / SDA1 | — | GPIO20 | — | Plus I2C1 SDA |
+| D15 | — | GPIO19 | — | Plus expansion GPIO |
+| D16 | — | GPIO22 | — | Plus expansion GPIO |
+| D17 | — | GPIO23 | — | Plus expansion GPIO |
+| D19 | — | GPIO5 | — | Plus expansion GPIO |
+| D20 | — | GPIO13 | — | Plus expansion GPIO |
+| D21 | — | GPIO14 | — | Plus expansion GPIO |
+| D22 | — | GPIO15 | — | Plus expansion GPIO |
+| D25 | — | GPIO10 | — | Plus expansion GPIO |
+| D26 | — | GPIO9 | — | Plus expansion GPIO |
+| D27 | — | GPIO8 | — | Plus expansion GPIO |
+| BAT_EN | — | GPIO24 | — | Plus battery power enable |
+
+## Light up RGB LED on the Seeed Studio XIAO RP2040
 
 There is an RGB LED equipped in the Seeed Studio XIAO RP2040 and we are going to light it up by MicroPython. It is required a third-party library so we need to add an additional library first.
 
 - **Step 1**. Download the [ws2812.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ws2812.py) library and open it with Thonny.
 
-- **Step 2**. Click "File-->Save as" and save the library.
+- **Step 2**. Click **File-->Save as** and save the library.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk4.png" /></div>
 
-Chose the "Raspberry Pi Pico" as the location we save.
+Chose the **Raspberry Pi Pico** as the location we save.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk5.png" /></div>
 
-Make sure the saved file name is "ws2812.py", otherwise it will not work.
+Make sure the saved file name is **ws2812.py**, otherwise it will not work.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk6.png" /></div>
 
@@ -148,7 +182,7 @@ If it works well, you will see the RGB LED light convert and flash the lights. A
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_14.png" /></div>
 
-## **Connect with Seeed Studio XIAO RP2040 with Display through IIC**
+## Connect with Seeed Studio XIAO RP2040 with Display through IIC
 
 In this project, we are going to connect [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) through the IIC interface to demonstrate the IIC function on the Seeed Studio XIAO RP2040.
 
@@ -206,6 +240,8 @@ Our partner **Neil** has written a command line console program for XIAO using M
 Some additional libraries and sample codes are here:
 
 - **[ZIP]** [XIAO-RP2040-MicroPython-Grove.zip](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/XIAO-RP2040-MicroPython-Grove.zip)
+
+- **[ZIP]** [XIAO-RP2040-Plus-Firmware-And-Examples](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/xiao_rp2040_plus_micropython.zip)
 
 ## Tech Support & Product Discussion
 

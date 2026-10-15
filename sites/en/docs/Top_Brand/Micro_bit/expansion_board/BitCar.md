@@ -9,7 +9,7 @@ last_update:
   date: 12/29/2023
   author: Seraphina
 createdAt: '2024-01-02'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-29'
 url: https://wiki.seeedstudio.com/Bitcar/
 ---
 

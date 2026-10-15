@@ -11,7 +11,7 @@ last_update:
   date: 07/30/2025
   author: Dayu
 createdAt: '2025-09-15'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/cn/issue_of_jetpack5_failing_to_boot_from_certain_ssd/
 ---
 

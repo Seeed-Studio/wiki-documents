@@ -13,7 +13,7 @@ last_update:
   date: 05/7/2024
   author: ZhuYaoHui
 createdAt: '2024-07-08'
-updatedAt: '2026-03-03'
+updatedAt: '2024-07-09'
 url: https://wiki.seeedstudio.com/installing_ros1/
 ---
 # How to Install ROS1 on reComputer

@@ -9,7 +9,7 @@ last_update:
   date: 1/16/2023
   author: jianjing Huang
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2023-03-06'
 url: https://wiki.seeedstudio.com/Wio-Terminal-Audio-GUI/
 ---
 

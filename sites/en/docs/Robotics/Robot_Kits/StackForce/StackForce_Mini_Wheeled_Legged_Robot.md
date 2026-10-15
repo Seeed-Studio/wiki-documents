@@ -1,6 +1,6 @@
 ---
 description: This wiki provides assembly and startup tutorials for the StackForce Mini Wheeled Legged Robot , as well as learning materials and links required for its development.
-title: StackForce Mini Wheeled Legged Robot
+title: Mini Wheeled Legged Quick Start
 keywords:
   - StackForce
   - Robotics
@@ -10,10 +10,9 @@ last_update:
   date: 12/8/2025
   author: LiShanghang
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-12-10'
-updatedAt: '2026-03-04'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/
 ---
 
@@ -51,6 +50,8 @@ The robot includes a full-body kinematic model and a state-adaptive self-stabili
 - **Documentation for the StackForce lightweight robotics development platform:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
 
 - **Open-source robot projects for the StackForce lightweight robotics development platform:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
+
+- **StackForce_Mini_Wheeled_Legged_Robot theory and code learning** [https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md](https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md)
 
 ## Main Features
 

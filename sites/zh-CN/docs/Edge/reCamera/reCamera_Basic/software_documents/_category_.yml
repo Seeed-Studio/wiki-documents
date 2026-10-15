@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: '软件文档'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_software
+link:
+  type: generated-index
+  slug: recamera_software_docs
+  title: reCamera 基础软件开发文档
+  description: reCamera 在启动后即可直接使用。它预装了稳定的 reCamera OS，支持固件 OTA 更新。此外，设备中集成了 Node-RED 和 SenseCraft AI 平台，以提供更便捷的部署体验。该集成为入门开发者提供了基于 Node-RED 节点的模块化编程体验。对于高级开发者，还可以基于 Linux 进行深入开发，并使用 Python 等进行灵活创作。我们热忱欢迎精通 JavaScript、C/C++、Python、Linux OS、buildroot 的开发者，以及极客、学生和初学者参与进一步开发与应用探索。

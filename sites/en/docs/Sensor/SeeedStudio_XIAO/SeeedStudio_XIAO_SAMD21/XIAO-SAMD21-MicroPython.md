@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/XIAO-SAMD21-MicroPython/
 ---
 
@@ -21,17 +21,52 @@ url: https://wiki.seeedstudio.com/XIAO-SAMD21-MicroPython/
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
-## **Getting Started**
+## Getting Started
 
 First, we are going to connect the Seeed Studio XIAO SAMD21 to the computer and upload a simple code from MicroPython to check whether the board is functioning well.
 
-### **Hardware Setup**
+### Hardware Setup
 
-- [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) x1
+- [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) or [Seeed Studio XIAO SAMD21 Plus](https://www.seeedstudio.com/Seeed-Studio-XIAO-SAMD21-Plus-p-6933.html) x1
 - Type-C cable x1
 - PC x1
 
-### **Software Setup**
+### Flash the Firmware
+
+#### For XIAO SAMD21
+
+:::tip
+
+- [**Bootloader Mode For XIAO SAMD21 Series**](https://wiki.seeedstudio.com/Seeeduino-XIAO/#enter-bootloader-mode)
+
+:::
+
+- **Step 1**. Connect the Seeed Studio XIAO SAMD21 to your computer via a Type‑C cable, then double‑tap the Reset button to enter BOOT mode. If it works well, there is an **Arduino** disk shown on the PC.
+
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
+
+- **Step 2**. Flash the firmware
+
+Just go to the MicroPython official and download the latest firmware
+
+    - [XIAO SAMD21 Series MicroPython Firmware](https://micropython.org/download/SEEED_XIAO_SAMD21/)
+
+
+It is also possible to [compile your own firmware](https://wiki.seeedstudio.com/Compiling_MicroPython_for_embedded_devices/) in order to ensure security and support for the latest features, but this is not necessary.
+<br/>
+
+#### For XIAO SAMD21 Plus
+
+- **Step 1**. Connect the XIAO SAMD21 Plus to your PC with a Type‑C cable, then press the Reset button twice consecutively. If everything works correctly, an **Arduino** disk will appear on your PC.
+
+<div align="center"><img width="300" src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
+
+- **Step 2**. Click the link below to download the firmware, then drag‑and‑drop the `.uf2` file into the **Arduino** disk to finish firmware flashing.
+
+    - [XIAO SAMD21 Series MicroPython Firmware](https://micropython.org/download/SEEED_XIAO_SAMD21/)
+
+
+### Software Setup
 
 - **Step 1**. Download and Install the latest version of [Thonny editor](https://thonny.org/) according to your operating system
 
@@ -39,47 +74,57 @@ First, we are going to connect the Seeed Studio XIAO SAMD21 to the computer and 
 
 - **Step 2**. Launch the Thonny
 
-- **Step 3**. Click **"Tools-->Options"** to open the settings.
+- **Step 3**. Click **Tools-->Options** to open the settings.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
-- **Step 4**. Chose the "Interpreter" interface and select the device as **"MicroPython(generic)"** and the port as **"Try to detect port automatically"**
+- **Step 4**. Chose the **Interpreter** interface and select the device as **MicroPython(generic)** and the port as **Board CDC @ Port**
 
-<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/1.jpg" /></div>
-
-### **Connect Seeed Studio XIAO SAMD21 to the PC and Light it up**
-
-- **Step 1**. Press and hold the "BOOT" button and then connect the Seeed Studio XIAO SAMD21 to the PC through the Type-C cable. If it works well, there is an "Arduino" desk shown on the PC.
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
-
-- **Step 2**. Flash the firmware
-
-Just go to the official [link](https://micropython.org/download/SEEED_XIAO_SAMD21/) and download the latest firmware
-
-It is also possible to [compile your own firmware](https://wiki.seeedstudio.com/Compiling_MicroPython_for_embedded_devices/) in order to ensure security and support for the latest features, but this is not necessary.
+<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/mpy_1.png" /></div>
 
 ## Software Development
 
-### SEEED XIAO SAMD21 pin assignment table
+### SEEED XIAO SAMD21 Series pin assignment table
 
-|Pin|GPIO|Xiao Pin name|IRQ|ADC|
-|-|--|---|--|---|
-|2|PA02|0|2|0| * | * | * | * |
-|4|PA04|1|4|4| * | * | * | * |
-|10|PA10|2|10|18| * | * | * | * |
-|11|PA11|3|11|19| * | * | * | * |
-|8|PA08|4|*|16| * | * | * | * |
-|9|PA09|5|9|17| * | * | * | * |
-|40|PB082|6|8|2| * | * | * | * |
-|41|PB09|7|9|3| * | * | * | * |
-|7|PA07|8|7|7| * | * | * | * |
-|5|PA05|9|5|5| * | * | * | * |
-|6|PA06|10|6|6| * | * | * | * |
-|18|PA18|RX_LED|2|*| * | * | * | * |
-|30|PA30|SWCLK|10|*| * | * | * | * |
-|31|PA31|SWDIO|11|*| * | * | * | * |
-|19|PA19|TX_LED|3|*| * | * | * | * |
+| MicroPython Pin Name | XIAO SAMD21 GPIO (ID) | XIAO SAMD21 Plus GPIO (ID) | IRQ SAMD21 / Plus | ADC | Function |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| D0 / A0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO, ADC, DAC |
+| D1 / A1 | PA04 (4) | PA04 (4) | 4 / 4 | 4 | GPIO, ADC |
+| D2 / A2 | PA10 (10) | PA10 (10) | 10 / 10 | 18 | GPIO, ADC |
+| D3 / A3 | PA11 (11) | PA11 (11) | 11 / 11 | 19 | GPIO, ADC |
+| D4 / A4 / SDA | PA08 (8) | PA08 (8) | NMI / NMI | 16 | GPIO, ADC, I2C SDA |
+| D5 / A5 / SCL | PA09 (9) | PA09 (9) | 9 / 9 | 17 | GPIO, ADC, I2C SCL |
+| D6 / A6 / TX | PB08 (40) | PB08 (40) | 8 / 8 | 2 | GPIO, ADC, UART TX |
+| D7 / A7 / RX | PB09 (41) | PB09 (41) | 9 / 9 | 3 | GPIO, ADC, UART RX |
+| D8 / A8 / SCK | PA07 (7) | PA07 (7) | 7 / 7 | 7 | GPIO, ADC, SPI SCK |
+| D9 / A9 / MISO | PA05 (5) | PA05 (5) | 5 / 5 | 5 | GPIO, ADC, SPI MISO |
+| D10 / A10 / MOSI | PA06 (6) | PA06 (6) | 6 / 6 | 6 | GPIO, ADC, SPI MOSI |
+| USER_LED / D13 / SCL1 | PA17 (17) | PA17 (17) | 1 / 1 | — | Original user LED; Plus D13 & I2C1 SCL |
+| RX_LED / D27 | PA18 (18) | PA18 (18) | 2 / 2 | — | Original RX LED; Plus D27 |
+| TX_LED / D19 / I2S_SD | PA19 (19) | PA19 (19) | 3 / 3 | — | Original TX LED; Plus D19 & I2S data |
+| D12 | — | PA28 (28) | — / 8 | — | Plus expansion GPIO |
+| D14 / SDA1 | — | PA16 (16) | — / 0 | — | Plus I2C1 SDA |
+| D15 | — | PA15 (15) | — / 15 | — | Plus expansion GPIO |
+| D16 | — | PA14 (14) | — / 14 | — | Plus expansion GPIO |
+| D17 | — | PA13 (13) | — / 13 | — | Plus expansion GPIO |
+| D18 | — | PA12 (12) | — / 12 | — | Plus expansion GPIO |
+| D20 / I2S_SCK | — | PA20 (20) | — / 4 | — | Plus GPIO & I2S clock |
+| D21 / I2S_WS | — | PA21 (21) | — / 5 | — | Plus GPIO & I2S word select |
+| D22 | — | PB10 (42) | — / 10 | — | Plus expansion GPIO |
+| D23 | — | PB11 (43) | — / 11 | — | Plus expansion GPIO |
+| D24 | — | PB23 (55) | — / 7 | — | Plus expansion GPIO |
+| D25 | — | PA23 (23) | — / 7 | — | Plus expansion GPIO |
+| D26 | — | PA22 (22) | — / 6 | — | Plus expansion GPIO |
+| RGB_LED | — | PA27 (27) | — / 15 | — | Plus addressable RGB LED (WS2812) |
+| BUTTON | — | PB22 (54) | — / 6 | — | Plus user button (active low) |
+| USB_DM | PA24 (24) | PA24 (24) | 12 / 12 | — | USB D− (native USB, not GPIO) |
+| USB_DP | PA25 (25) | PA25 (25) | 13 / 13 | — | USB D+ (native USB, not GPIO) |
+| SWCLK | PA30 (30) | PA30 (30) | 10 / 10 | — | SWD clock |
+| SWDIO | PA31 (31) | PA31 (31) | 11 / 11 | — | SWD data |
+
+:::note
+The number inside parentheses in GPIO (ID) refers to the MicroPython SAMD Pin ID, not the physical MCU package pin number.
+:::
 
 ### Upload your code
 
@@ -97,9 +142,11 @@ We need to prepare:
 
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-Copy the following codes to Thonny.
+    Copy the following codes to Thonny.
 
-We can see that the blue RX_LED is lit up and blinks once per second
+1. For XIAO SAMD21 , The RX_LED is PA18
+
+    We can see that the blue RX_LED is lit up and blinks once per second
 
 ```python
 from machine import Pin, Timer
@@ -119,6 +166,57 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 ```
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3.gif" /></div>
+
+2. For XIAO SAMD21 Plus, the RX_LED and TX_LED have been removed. A WS2812 LED is used instead, with its data pin assigned to PA27.
+<br/>
+```py
+from machine import Pin, Timer
+import machine
+import time
+
+led = Pin(27, Pin.OUT)
+
+Counter = 0
+
+
+def ws2812_write(r, g, b):
+    data = bytearray([g, r, b])
+
+    machine.bitstream(
+        led,
+        0,
+        (400, 850, 800, 450),
+        data
+    )
+
+    time.sleep_us(80)
+
+
+def fun(tim):
+    global Counter
+
+    Counter += 1
+    print(Counter)
+
+    if Counter % 2 == 1:
+        ws2812_write(0, 0, 255)
+    else:
+        ws2812_write(0, 0, 0)
+
+
+# Initial state: OFF
+ws2812_write(0, 0, 0)
+
+# 500 ms periodic timer
+tim = Timer(-1)
+tim.init(
+    period=500,
+    mode=Timer.PERIODIC,
+    callback=fun
+)
+```
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3_1.gif" /></div>
 
 ### GPIO Control Relays
 

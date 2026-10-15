@@ -9,7 +9,7 @@ last_update:
   date: 11/29/2024
   author: Salman
 createdAt: '2024-11-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/cn/tinyml_course_Image_classification_project/
 ---
 

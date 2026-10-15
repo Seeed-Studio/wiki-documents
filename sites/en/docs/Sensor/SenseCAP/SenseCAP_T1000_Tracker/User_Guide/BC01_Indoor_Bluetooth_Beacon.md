@@ -11,7 +11,7 @@ last_update:
   date: 05/29/2025
   author: Zeke
 createdAt: '2023-10-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/bluetooth_beacon_for_SenseCAP_Traker/
 ---
 

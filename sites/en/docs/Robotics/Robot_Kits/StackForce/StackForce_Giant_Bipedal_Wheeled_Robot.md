@@ -1,6 +1,6 @@
 ---
 description: StackForce Giant Bipedal Wheeled Robot Professional Development Guide, including advanced features, in-depth development tutorials, API documentation, and practical application cases
-title: StackForce Giant Bipedal Wheeled Robot
+title: Giant Wheeled Robot Quick Start
 keywords:
   - StackForce
   - Wheel-legged Robot
@@ -13,10 +13,9 @@ last_update:
   date: 12/12/2025
   author: TienjuiWong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-12-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/stackforce_giant_bipedal_wheeled_robot/
 ---
 

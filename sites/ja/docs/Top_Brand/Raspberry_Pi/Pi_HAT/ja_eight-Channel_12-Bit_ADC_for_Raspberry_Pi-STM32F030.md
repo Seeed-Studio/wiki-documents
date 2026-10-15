@@ -10,7 +10,7 @@ last_update:
   date: 05/15/2025
   author: jianjing Huang
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/
 ---
 

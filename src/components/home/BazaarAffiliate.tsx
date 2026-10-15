@@ -18,6 +18,7 @@ const I18N_HEADER_TABS = {
   cn: { header: '加入我们',       tabs: { contributor: '贡献者',          ranger: '社区大使',                 affiliate: '创作者与推广' } },
   ja: { header: '参加しよう',     tabs: { contributor: 'コントリビューター', ranger: 'コミュニティアンバサダー',   affiliate: 'クリエイター＆アフィリエイト' } },
   es: { header: 'Participa',      tabs: { contributor: 'Colaboradores',    ranger: 'Embajador/a de la comunidad', affiliate: 'Creadores y afiliados' } },
+  'pt-br': { header: 'Participe', tabs: { contributor: 'Contribuidores', ranger: 'Embaixadores da comunidade', affiliate: 'Criadores e afiliados' } },
 } as const;
 
 // 统一主题色
@@ -165,6 +166,37 @@ Reclutamiento flexible, experiencias diversas y recompensas significativas.`,
 No lo dudes: empieza a promocionar y gana grandes recompensas.`,
       contact: '¿Dudas? Escríbenos: ',
       buttons: [{ text: 'Ver detalles del programa' }],
+    },
+  },
+  'pt-br': {
+    contributor: {
+      title: 'Junte-se à nossa comunidade de contribuidores',
+      subtitle: 'Torne-se um contribuidor do Wiki e compartilhe seu conhecimento!',
+      description: `Temos o prazer de convidar makers, desenvolvedores e engenheiros apaixonados para se juntarem à Seeed Studio e colaborarem conosco na construção e no suporte de soluções de hardware inovadoras em todo o mundo.`,
+      contact: 'Explore tarefas e colabore no GitHub: ',
+      contactLinkText: 'Quadro de projetos no GitHub',
+      buttons: [{ text: 'Saiba mais' }],
+    },
+    ranger: {
+      title: 'Torne-se um Seeed Ranger',
+      subtitle: 'Junte-se à nossa comunidade exclusiva de desenvolvedores!',
+      description: `O programa Seeed Studio Ranger reúne desenvolvedores experientes que compartilham conhecimento, constroem comunidades e impulsionam a inovação.
+
+Junte-se a nós para criar conexões globais, fortalecer parcerias locais e obter insights valiosos a partir do feedback da comunidade.
+
+Aproveite um recrutamento flexível e oportunidades para explorar experiências diversas com recompensas significativas.`,
+      contact: 'Tem interesse em se tornar um Ranger? Inscreva-se aqui: ',
+      contactLinkText: 'Formulário de inscrição para Ranger',
+      buttons: [{ text: 'Conheça o programa Ranger' }],
+    },
+    affiliate: {
+      title: 'Participe do programa de criadores e afiliados',
+      subtitle: 'A Seeed está procurando criadores de tecnologia e promotores de comunidade!',
+      description: `Participe e desbloqueie 10% de comissão na campanha de hardware compatível com Home Assistant. Os produtos favoritos dos desenvolvedores estão cheios de potencial para projetos.
+
+Não hesite, comece a divulgar e ganhe ótimas recompensas.`,
+      contact: 'Tem dúvidas? Envie um e-mail para saber mais: ',
+      buttons: [{ text: 'Ver detalhes do programa' }],
     },
   },
 } as const;

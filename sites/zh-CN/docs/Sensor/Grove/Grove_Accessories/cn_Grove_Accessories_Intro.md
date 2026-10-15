@@ -9,7 +9,7 @@ last_update:
   date: 07/19/2023
   author: Matthew
 createdAt: '2023-07-20'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/cn/Grove_Accessories_Intro/
 ---
 

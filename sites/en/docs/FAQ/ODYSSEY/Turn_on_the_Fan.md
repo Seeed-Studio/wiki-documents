@@ -7,7 +7,7 @@ last_update:
   date: 2023.6.25
   author: cheng.tang
 createdAt: '2023-06-26'
-updatedAt: '2026-03-03'
+updatedAt: '2024-10-22'
 url: https://wiki.seeedstudio.com/Turn_on_the_Fan/
 ---
 

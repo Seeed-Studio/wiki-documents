@@ -10,7 +10,7 @@ last_update:
   date: 12/4/2024
   author: Jessie
 createdAt: '2024-12-10'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/traffic_saving_config/
 ---
 

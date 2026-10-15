@@ -9,7 +9,7 @@ last_update:
   date: 2/1/2023
   author: hushuxu
 createdAt: '2023-02-01'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-10'
 url: https://wiki.seeedstudio.com/Arch_V1.1/
 ---
 

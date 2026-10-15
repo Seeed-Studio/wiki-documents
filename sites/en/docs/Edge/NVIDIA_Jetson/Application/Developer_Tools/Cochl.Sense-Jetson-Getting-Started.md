@@ -9,7 +9,7 @@ last_update:
   date: 03/27/2023
   author: Lakshantha
 createdAt: '2023-03-27'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-26'
 url: https://wiki.seeedstudio.com/Cochl.Sense-Jetson-Getting-Started/
 ---
 

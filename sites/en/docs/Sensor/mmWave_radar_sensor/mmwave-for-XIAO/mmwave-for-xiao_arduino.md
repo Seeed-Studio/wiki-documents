@@ -10,7 +10,7 @@ last_update:
   date: 11/13/2023
   author: Citric
 createdAt: '2023-11-13'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/mmwave_for_xiao_arduino/
 ---
 

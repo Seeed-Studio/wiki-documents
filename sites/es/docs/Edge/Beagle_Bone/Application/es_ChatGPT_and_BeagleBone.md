@@ -11,7 +11,7 @@ last_update:
   date: 9/4/2024
   author: ShuishengPeng
 createdAt: '2024-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/respeaker_lite_beagley-ai_chatgpt/
 ---
 

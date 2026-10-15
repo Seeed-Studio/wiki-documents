@@ -8,7 +8,7 @@ last_update:
   date: 10/11/2025
   author: Twelve
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/cn/integrate_watcher_to_ha/
 ---
 

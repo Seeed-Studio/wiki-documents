@@ -11,7 +11,7 @@ last_update:
   author: w0x7ce
 no_comments: false
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_Resource/
 ---
 

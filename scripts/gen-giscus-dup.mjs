@@ -94,30 +94,28 @@ function extractLocs(xml) {
 }
 
 function loadAllPageUrlsFromSitemap(buildDir) {
-  const root = pickRootSitemap(buildDir);
-  if (!root) {
+  const sitemapFiles = listSitemapXmlFiles(buildDir);
+  if (!sitemapFiles.length) {
     throw new Error("No sitemap*.xml found under build/. Run `yarn build` first.");
   }
 
-  const visited = new Set();
+  const visitedXml = new Set();
   const pageUrls = new Set();
 
   function locToLocalXmlPath(loc) {
     try {
       const u = new URL(loc);
-      const rel = u.pathname.replace(/^\/+/, ""); // 去掉开头 /
-      // 兼容子目录：build/sitemap/sitemap-0.xml
+      const rel = u.pathname.replace(/^\/+/, "");
       const p1 = path.join(buildDir, rel);
       if (fs.existsSync(p1)) return p1;
 
-      // 兜底：只用 basename 在 build 根下找
       const p2 = path.join(buildDir, path.basename(rel));
       if (fs.existsSync(p2)) return p2;
     } catch {
-      // loc 不是 URL 时，尝试当作相对路径
-      const rel = loc.replace(/^\/+/, "");
+      const rel = String(loc).replace(/^\/+/, "");
       const p1 = path.join(buildDir, rel);
       if (fs.existsSync(p1)) return p1;
+
       const p2 = path.join(buildDir, path.basename(rel));
       if (fs.existsSync(p2)) return p2;
     }
@@ -126,47 +124,46 @@ function loadAllPageUrlsFromSitemap(buildDir) {
 
   function walkXmlFile(xmlPath) {
     const real = path.resolve(xmlPath);
-    if (visited.has(real)) return;
-    visited.add(real);
+    if (visitedXml.has(real)) return;
+    visitedXml.add(real);
 
     const xml = readFileIfExists(real);
     if (!xml) return;
 
-    // sitemap index：loc 指向其它 sitemap 文件
     if (xml.includes("<sitemapindex")) {
       const locs = extractLocs(xml);
       for (const loc of locs) {
-        if (loc.endsWith(".gz")) continue; // 暂不处理 .gz
+        if (loc.endsWith(".gz")) continue;
         const childPath = locToLocalXmlPath(loc);
         if (childPath) walkXmlFile(childPath);
       }
       return;
     }
 
-    // urlset：loc 为页面 URL
     if (xml.includes("<urlset")) {
       const locs = extractLocs(xml);
       for (const loc of locs) {
-        // 过滤掉 xml 文件自身
         if (loc.endsWith(".xml") || loc.endsWith(".xml.gz")) continue;
         pageUrls.add(loc);
       }
       return;
     }
 
-    // 兜底：全收非 xml
     for (const loc of extractLocs(xml)) {
       if (loc.endsWith(".xml") || loc.endsWith(".xml.gz")) continue;
       pageUrls.add(loc);
     }
   }
 
-  walkXmlFile(root);
+  for (const sitemapFile of sitemapFiles) {
+    walkXmlFile(sitemapFile);
+  }
 
   const urls = [...pageUrls];
-  console.log(`Root sitemap: ${root}`);
+  console.log(`Sitemap files found: ${sitemapFiles.length}`);
+  console.log(`Sitemap sample:`, sitemapFiles.slice(0, 10));
   console.log(`Sitemap page URLs: ${urls.length}`);
-  console.log(`Sitemap sample:`, urls.slice(0, 5));
+  console.log(`Page URL sample:`, urls.slice(0, 10));
   return urls;
 }
 

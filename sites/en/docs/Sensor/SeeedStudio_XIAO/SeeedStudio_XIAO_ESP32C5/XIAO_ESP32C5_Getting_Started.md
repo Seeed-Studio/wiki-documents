@@ -7,14 +7,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /xiao_esp32c5_getting_started
 last_update:
-  date: 11/26/2025
+  date: 7/9/2026
   author: Zeller
   sidebar_position: 0
 createdAt: '2025-12-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/
 ---
-
 ## Introduction
 
 <div class="table-center">
@@ -123,22 +122,16 @@ url: https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/
 
 ## Hardware overview
 
-<table align="center">
- <tr>
-     <th>XIAO ESP32-C5 indication diagram</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/front.png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32-C5 Pin List</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/PinList_1.png" style={{width:1000, height:'auto'}}/></div></td>
- </tr>
-</table>
+### Front
 
- ## **Pin Map**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+## Pin Map
+
 | XIAO Pin                | Function   | Chip Pin  | Alternate Functions       | Description                  |
 | :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
 | 5V                     | VBUS       |           |                          | Power Input/Output           |
@@ -152,9 +145,9 @@ url: https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/
 | D5                     | SCL        | GPIO24    |                          | GPIO, I2C Clock              |
 | D6                     | TX         | GPIO11    |                          | GPIO, UART Transmit          |
 | D7                     | RX         | GPIO12    |                          | GPIO, UART Receive           |
-| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO, SPI Clock              |
-| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO, SPI Data               |
-| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO, SPI Data               |
+| D8                     | SCK        | GPIO8     |                          | GPIO, SPI Clock              |
+| D9                     | MISO       | GPIO9     |                          | GPIO, SPI Data               |
+| D10                    | MOSI       | GPIO10    |                          | GPIO, SPI Data               |
 | MTDO                   |            | GPIO5     | LP_UART_TXD, LP_GPIO5    | JTAG                         |
 | MTDI                   |            | GPIO3     | LP_I2C_SCL, LP_GPIO3     | JTAG, ADC                    |
 | MTCK                   |            | GPIO4     | LP_UART_RXD, LP_GPIO4    | JTAG, ADC                    |
@@ -174,7 +167,7 @@ To enable you to get started with the XIAO ESP32-C5 faster, please read the hard
 
 You need to prepare the following:
 
-- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
+- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html)
 - 1 x Computer
 - 1 x USB Type-C cable
 
@@ -389,7 +382,8 @@ According to the datasheet, the effective measurement range of the ESP32-C5 cove
 - **📄[Schematic]** [XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf )
 - **🗃️[PCB Design Files]** [XIAO ESP32-C5 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip )
 - **🗃️[PCB Design Libraries]** 
- - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip)
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[Pinout Diagram]** [XIAO ESP32-C5 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/XIAO_ESP32C5_Pinout.xlsx )
 
 **Mechanical Design**

@@ -1,0 +1,5 @@
+position: 4 # float position is supported
+label: '固件开发教程'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: firmware_development_tutorial

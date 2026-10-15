@@ -3,8 +3,26 @@
   margin-top: 0;
 }
 
+.copyPageButtonWrapper {
+  margin-bottom: 16px;
+}
+
+.mobileCopyPageButton {
+  margin-bottom: 16px;
+}
+
 @media (min-width: 997px) {
   .docItemCol {
     max-width: 75% !important;
+  }
+
+  .mobileCopyPageButton {
+    display: none;
+  }
+}
+
+@media (max-width: 996px) {
+  .copyPageButtonWrapper {
+    display: none;
   }
 }

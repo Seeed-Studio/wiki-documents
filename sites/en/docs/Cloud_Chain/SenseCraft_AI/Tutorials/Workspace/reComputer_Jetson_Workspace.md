@@ -14,9 +14,10 @@ last_update:
   date: 08/22/2024
   author: Frank
 createdAt: '2024-08-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/nvidia-jetson-workspace/
 ---
+
 
 ## Getting Started
 
@@ -68,14 +69,14 @@ The edge ai program requires a minimum of 32G of storage space to run, if not, y
 
 ### Add Device
 
-1. Click "Add Device" button on Device Workspace Page
+1. On the SenseCraft AI platform, navigate to **`Models`** > **`Workspace`** > **`NVIDIA Jetson`** and click **`Add Device`**.
 2. Enter a device custom name and get the bind code from device.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image28.png)
 
 3. Back to device‘s SenseCraft AI application. Click "Bind to SenseCraft AI platform",and then application will display bind code and temporary name.
 
-- Bind Code: enter the correct and valid bind code on SenseCraft AI-Model Zoo to finish binding the device.
+- Bind Code: enter the correct and valid bind code on the SenseCraft AI platform to finish binding the device.
 - Temporary Name: if the bind code is duplicated then you need to enter the correct temporay name.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image29.png)
@@ -187,7 +188,7 @@ Manage all AI models that have been downloaded on the device and support add mod
 
 ## **Tech Support**
 
-**Need help with your SenseCAP Indicator? We're here to assist you!**
+**Need help with your reComputer Jetson? We're here to assist you!**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
@@ -198,3 +199,4 @@ Manage all AI models that have been downloaded on the device and support add mod
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+/div>

@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-12'
 url: https://wiki.seeedstudio.com/Xado_OLED_128multiply64/
 ---
 ![](https://files.seeedstudio.com/wiki/Xado_OLED_128multiply64/img/Xadow_OLED.jpg)

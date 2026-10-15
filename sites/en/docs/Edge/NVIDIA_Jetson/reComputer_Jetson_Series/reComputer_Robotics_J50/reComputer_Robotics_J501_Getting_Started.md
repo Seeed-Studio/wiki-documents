@@ -15,7 +15,7 @@ last_update:
   date: 12/09/2025
   author: Lorraine
 createdAt: '2026-01-12'
-updatedAt: '2026-03-04'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/
 ---
 
@@ -247,21 +247,32 @@ Please refer to the table below to prepare the host machine.
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
         <td > 20.04 </td>
         <td > 22.04 </td>
+        <td > 24.04 </td>
     </tr>
     <tr>
         <td >JetPack 6.x</td>
         <td > </td>
         <td > ✅ </td>
         <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 7.2</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Note:</strong> For JetPack 7.2, Ubuntu 24.04 is supported for flashing and target-side component installation only. Use Ubuntu 20.04 or 22.04 if you need host development components.</p>
 
 :::
 
@@ -282,11 +293,24 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
   </thead>
   <tbody>
     <tr>
-      <td rowSpan={4}>6.2.1</td>
+      <td rowSpan={2}>7.2</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAXbYCZzHpuRYt4WJFhzqLJAUxZVvEo8cq4OVmZZmEE82E?e=IZ6csg">Download</a></td>
-      <td>46167c63566fa07d9882be338becd44<br/>7021c8fc0a73da18d0291c414cf5c6f4a  </td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBHOaCA_77pT4TRnRM80ZRwAYWI6uFAkaoXvMawW_SrD5Q">Download</a></td>
+      <td>dddee915df6dcd939dc05743c6e5e9df<br />6c2b2b6836a969ce4ae4bc02d3078d50</td>
+    </tr>
+    <tr>
+      <td>AGX Orin 32GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC3k6dHKR8cSZjMUL7j7u9yAbnjbBg84bmV2Cg5YRQnFA8">Download</a></td>
+      <td>6da5c7cd6c143460958a460a5f9d663<br />91cb49bb4da8f0e158ecbd34c0a6336f1</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>6.2.1</td>
+      <td> AGX Orin 64GB</td>
+      <td>✅</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCiNRM83_Q1Qq2lodZbxxz7AQb046lJeZh4aTUo20T6ks4">Download</a></td>
+      <td>46167c63566fa07d9882be338becd44<br />7021c8fc0a73da18d0291c414cf5c6f4a</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
@@ -299,7 +323,7 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
 </div>
 
 :::danger
-The Jetpack6 image file is approximately **14.2GB** in size and should take around 60 minutes to download. Please kindly wait for the download to complete.
+The JetPack image files are large and may take around 60 minutes to download. Please wait for the download to complete.
 :::
 
 :::info
@@ -352,7 +376,8 @@ The below image is for AGX Orin 32GB:
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-robo-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
+# For JetPack 7.2 example: sudo tar xpf mfi_recomputer-robo-agx-orin-32g-j501-7.2.0-39.2.0-2026-06-26.tar.gz
+# For JetPack 6.2.1 example: sudo tar xpf mfi_recomputer-robo-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
 ```
 
 **Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
@@ -832,45 +857,35 @@ This section demonstrates connecting CAN0↔CAN1 and CAN2↔CAN3 on the Jetson a
 
 | Channel Name | Interface Type | Pin Name | GPIO Chip | GPIO Number | Termination Resistor Control |
 |--------------|----------------|----------|-----------|-------------|------------------------------|
-| CAN0         | Native         | PAA.04   | gpiochip1 | 4           | gpiochip1 line4 (PAA.04)    |
-| CAN1         | Native         | PAA.07   | gpiochip1 | 7           | gpiochip1 line7 (PAA.07)    |
-| CAN2         | SPI-to-CAN     | -        | gpiochip2 | 10          | gpiochip2 line10             |
-| CAN3         | SPI-to-CAN     | -        | gpiochip2 | 12          | gpiochip2 line12             |
+| CAN0         | Native         | CAN0_120R_EN | gpiochip2 | 9        | gpiochip2 line9              |
+| CAN1         | Native         | CAN1_120R_EN | gpiochip2 | 8        | gpiochip2 line8              |
+| CAN2         | SPI-to-CAN     | CAN2_120R_EN | gpiochip2 | 10       | gpiochip2 line10             |
+| CAN3         | SPI-to-CAN     | CAN3_120R_EN | gpiochip2 | 12       | gpiochip2 line12             |
 
-The termination resistors for CAN0 and CAN1 can be controlled via two pins: PAA.04, located at gpiochip1 line4, and PAA.07, located at gpiochip1 line7.  
+The 120 Ω termination resistors for the four CAN channels are controlled by the corresponding GPIO lines on `gpiochip2`. The control signals are active-low: setting a line to `0` connects the termination resistor, while setting it to `1` disconnects the termination resistor.
 
-Termination resistor control follows these rules:  
-
-```
-When `PAA.04 = 1`, the 120 Ω termination resistor of CAN0 is **disconnected**;  
-when `PAA.04 = 0`, the 120 Ω termination resistor of CAN0 is **connected**.
-
-When `PAA.07 = 1`, the 120 Ω termination resistor of CAN1 is **disconnected**;  
-when `PAA.07 = 0`, the 120 Ω termination resistor of CAN1 is **connected**.
-```
-
-Enter the following command to view the pins on gpiochip 1:
+Enter the following command to view the GPIO lines:
 
 ```bash
-gpioinfo gpiochip1
+gpioinfo gpiochip2
 ```
 
-<div align="center">
-  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gpiochip1-can.png"/>
-</div>
-
-Refer to the following commands to set `PAA.04` and `PAA.07` to 0:
+Use the following commands to connect the termination resistors:
 
 ```bash
-sudo gpioset --mode=wait gpiochip1 4=0
-sudo gpioset --mode=wait gpiochip1 7=0
+sudo gpioset --mode=wait gpiochip2 9=0  # CAN0
+sudo gpioset --mode=wait gpiochip2 8=0  # CAN1
+sudo gpioset --mode=wait gpiochip2 10=0 # CAN2
+sudo gpioset --mode=wait gpiochip2 12=0 # CAN3
 ```
 
-Refer to the following commands to set `PAA.04` and `PAA.07` to 1:
+Use the following commands to disconnect the termination resistors:
 
 ```bash
-sudo gpioset --mode=wait gpiochip1 4=1
-sudo gpioset --mode=wait gpiochip1 7=1
+sudo gpioset --mode=wait gpiochip2 9=1  # CAN0
+sudo gpioset --mode=wait gpiochip2 8=1  # CAN1
+sudo gpioset --mode=wait gpiochip2 10=1 # CAN2
+sudo gpioset --mode=wait gpiochip2 12=1 # CAN3
 ```
 
 #### Classic CAN mode

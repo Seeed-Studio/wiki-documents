@@ -11,7 +11,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/3W_Solar_Panel_138x160/
 ---
 ![](https://files.seeedstudio.com/wiki/3W_Solar_Panel_138x160/img/3wsp.JPG)

@@ -9,9 +9,10 @@ last_update:
   date: 05/23/2024
   author: Matthew
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/Sensor_Network/
 ---
+
 
 Sensing is the initial and perhaps the most crucial step in obtaining digitized data from the physical world. By utilizing sensors and information infrastructures within a dynamic sensing framework, we lay the groundwork for monitoring societal activities and comprehending our physical and natural environments. This sensing process enables us to gather and understand data from the world around us.
 
@@ -266,7 +267,7 @@ On this page, there are two main categories of products
             <a href="/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HDC1000</font></span></a>
             <br/>
             <a href="/Grove-TempAndHumi_Sensor-SHT31" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a><span><font size="2">,</font></span>
-            <a href="/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT35 </font></span></a><span><font size="2">,</font></span>
+            <a href="/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT35 </font></span></a><span><font size="2">,</font></span>
             <a href="/Grove-SHT4x" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x </font></span></a>
             <br/>
     </div>
@@ -526,7 +527,7 @@ On this page, there are two main categories of products
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Obselete / Retired Product</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Obsolete / Retired Product</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Seeed Studio legacy sensors and communication modules.</font></div>
             <a href="/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click HERE </font></span></a> to see the full picture.
     </div>

@@ -8,7 +8,7 @@ last_update:
   date: 10/17/2024
   author: Evelyn Chen
 createdAt: '2024-10-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_TTN/
 ---
 

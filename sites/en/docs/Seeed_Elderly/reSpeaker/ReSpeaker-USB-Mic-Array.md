@@ -10,7 +10,7 @@ last_update:
   date: 1/12/2023
   author: jianjing Huang
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-12'
 url: https://wiki.seeedstudio.com/ReSpeaker-USB-Mic-Array/
 ---
 

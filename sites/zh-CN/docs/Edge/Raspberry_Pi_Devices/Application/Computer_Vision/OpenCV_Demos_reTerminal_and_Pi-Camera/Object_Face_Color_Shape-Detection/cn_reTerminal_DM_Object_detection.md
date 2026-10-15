@@ -13,7 +13,7 @@ last_update:
   date: 12/7/2023
   author: Kasun Thushara
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/cn/reTerminal_DM_Object_detection/
 ---
 

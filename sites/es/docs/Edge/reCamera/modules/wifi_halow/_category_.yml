@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'Wifi Halow'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wifi_halow
+link:
+  type: generated-index
+  slug: wifi_halow
+  title: Wifi Halow
+  description: Documentación de Wifi Halow

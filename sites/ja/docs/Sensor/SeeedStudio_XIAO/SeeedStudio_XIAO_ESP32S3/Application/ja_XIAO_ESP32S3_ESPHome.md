@@ -9,7 +9,7 @@ last_update:
   date: 12/25/2023
   author: Zachay-NAU
 createdAt: '2023-12-20'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-24'
 url: https://wiki.seeedstudio.com/ja/XIAO_ESP32S3_esphome/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 08/17/2023
   author: Citric
 createdAt: '2023-08-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/mmwave_human_detection_kit/
 ---
 

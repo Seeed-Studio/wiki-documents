@@ -10,7 +10,7 @@ last_update:
   date: 03/03/2023
   author: Citric
 createdAt: '2024-07-18'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Radar_MR60FDA1/
 ---
 # 60GHz 毫米波传感器 - 跌倒检测模块专业版 (MR60FDA1)

@@ -2,15 +2,14 @@
 description: Weekly Wiki
 title: Weekly Wiki
 keywords:
-  - weeely wiki
+  - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 03/09/2026
+  date: 10/12/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-10-12'
 ---
-
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
 ## Greetings
@@ -19,85 +18,75 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is March 9th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 12th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with Sound Event Detection Module](https://wiki.seeedstudio.com/sound_event_detection_module/)
+### [Jetson Camera Selection Guide](https://wiki.seeedstudio.com/jetson/camera-selection-guide/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-A compact edge audio board delivers real-time sound detection with strong local data privacy protection. It detects five abnormal sound events — Baby Cry, Glass Break, Gunshot, T3/T4 Alarms, and Snore, enabling immediate response and reliable early warning. Designed for native ESPHome integration with seamless compatibility for Home Assistant with XIAO series, ideal for home security monitoring or responsive automation triggers.
-
-</div>
-
-### [Get Started with Meshhcore on SenseCAP T1000-E](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/1/114992260_-preview-19.png" alt="Jetson-compatible CSI camera" width={500} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to set up and use the **SenseCAP T1000-E with MeshCore firmware**, including how to flash the firmware via Web Flasher or drag-and-drop, connect the device to the mobile app, and configure LoRa region, GPS, and messaging features. It also covers basic device operation and troubleshooting to help users start communicating over a LoRa mesh network.
+Find and compare cameras for Jetson-based reComputer and reServer devices. Filter by platform, application, camera interface, resolution, and working distance, then compare two models and check their specifications and setup guides.
 
 </div>
 
-### [Get Started with Meshhcore on Wio Tracker L1 Pro](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/)
+### Seeed Physical AI Beginner's Course — Robot Arm Mathematics and Control (Chapters 23–26)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24/ch24-01.png" alt="Robot arm kinematics and coordinate systems" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to get started with **MeshCore or other mesh firmware on the Wio Tracker L1 Pro**, including how to flash the firmware using WebUSB or drag-and-drop. It also covers basic setup steps such as configuring the LoRa region, enabling GPS, and sending messages through the mesh network.
+Four new chapters cover coordinate frames and transformations, forward and inverse kinematics, Jacobians, and trajectory planning. The final chapter brings these concepts into practice using Pinocchio and MeshCat with the reBot Arm.
+
+**New chapters:** [23 — Coordinate Systems](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_23/) · [24 — Kinematics and Jacobian](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_24/) · [25 — Trajectory Planning](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_25/) · [26 — Pinocchio and MeshCat](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_26/).
 
 </div>
 
-### [Get Started with MeshCore on SenseCAP Solar Node](https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/)
+### Seeed Physical AI Beginner's Course — Robot Vision and Autonomous Grasping (Chapters 27–30)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01.png" alt="Robot vision and 3D perception" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to **set up and deploy a MeshCore-based SenseCAP Solar Node**, including flashing the firmware, activating the device, and connecting it to apps or web tools for configuration. It also covers hardware setup such as installing batteries, mounting the solar node, and configuring LoRa and GPS for outdoor mesh communication.
+The latest stage introduces RGB-D sensing, 3D perception, object detection, and hand-eye calibration. It then moves into hands-on visual grasping with the reBot Arm and an optional voice and multimodal interaction project using reSpeaker.
+
+**New chapters:** [27 — Robot Vision](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_27/) · [28 — Object Detection and Calibration](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_28/) · [29 — Autonomous Visual Grasping](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_29/) · [30 — Voice and Multimodal Interaction](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_30/).
 
 </div>
 
-### [Setting up an MQTT Gateway with XIAO ESP32S3 & Wio-SX1262 Kit](https://wiki.seeedstudio.com/xiao_esp32s3_&_wio_sx1262_kit_mqtt/)
+## Existing Wiki Updated
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTFramework.png" alt="pir" width={800} height="auto" /></p>
+### [Interactive Jetson Product Selection Guide](https://wiki.seeedstudio.com/jetson-product-selection-guide/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.webp" alt="Jetson carrier board" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to send LoRa data to an MQTT broker using the **XIAO ESP32S3 & Wio-SX1262 Kit**. It demonstrates how to set up the hardware, configure the firmware, and transmit sensor data through LoRa and publish it to an MQTT server for IoT applications.
+The Jetson product selection guide now has a redesigned interactive tool for filtering systems and carrier boards by hardware requirements. Select configurations, inspect specifications, and compare two products side by side.
 
 </div>
 
-### [Home Assistant and Sound Event Detection Module](https://wiki.seeedstudio.com/sound_event_detection_module_home_assistant/)
+### [Getting Started with reComputer Rugged J40](https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J40" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-A compact edge audio board provides real-time sound detection with strong local data privacy protection. It can detect five abnormal sound events—Baby Cry, Glass Break, Gunshot, T3/T4 alarms, and Snore—enabling immediate response and reliable early warning. In this tutorial, we will learn how to compile and upload the firmware to a XIAO ESP32 board.
+The refreshed guide introduces reComputer Rugged J40 configurations, industrial interfaces, and JetPack setup. It highlights the IP66 fanless design, M12 connectivity, and PoE camera support for edge AI applications in demanding environments.
 
 </div>
 
-### [Lerobot Dataset Tool](https://wiki.seeedstudio.com/lerobot_dataset_tool/)
+### [reBot Arm B601-RS Visual Grasping Demo](https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki introduces tools for editing, managing, and visualizing LeRobot datasets. It explains how to remove episodes or features, split or merge datasets, convert image datasets to video format, and preview datasets locally or on Hugging Face.
+The updated tutorial brings together two visual grasping workflows for the B601-RS robotic arm, including YOLO-based object detection and a ROS 2-based approach. It covers RGB-D camera setup, calibration, and practical grasping workflows.
 
 </div>
-
-<!-- ## Existing Wiki Updated
-
-### [Getting Started with XIAO ePaper Display Board - EE02](https://wiki.seeedstudio.com/getting_started_with_ee02/)
-
-We have added an [example](https://wiki.seeedstudio.com/getting_started_with_ee02/#getting-started-with-arduino) demonstrating how to operate the EE02 using Arduino. -->
 
 ## The Efforts of Contributor
 
@@ -221,5 +210,34 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.2.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki260202)
 - [weekly wiki on 2026.2.09th](/Seeed_Elderly/weekly_wiki/2026/wiki260209)
 - [weekly wiki on 2026.3.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki260302)
+- [weekly wiki on 2026.3.09th](/Seeed_Elderly/weekly_wiki/2026/wiki260309)
+- [weekly wiki on 2026.3.16th](/Seeed_Elderly/weekly_wiki/2026/wiki260316)
+- [weekly wiki on 2026.3.23rd](/Seeed_Elderly/weekly_wiki/2026/wiki260323)
+- [weekly wiki on 2026.3.30th](/Seeed_Elderly/weekly_wiki/2026/wiki260330)
+- [weekly wiki on 2026.4.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260406)
+- [weekly wiki on 2026.4.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260413)
+- [weekly wiki on 2026.4.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260420)
+- [weekly wiki on 2026.4.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260427)
+- [weekly wiki on 2026.5.11th](/Seeed_Elderly/weekly_wiki/2026/wiki260511)
+- [weekly wiki on 2026.5.18th](/Seeed_Elderly/weekly_wiki/2026/wiki260518)
+- [weekly wiki on 2026.5.25th](/Seeed_Elderly/weekly_wiki/2026/wiki260525)
+- [weekly wiki on 2026.6.01st](/Seeed_Elderly/weekly_wiki/2026/wiki260601)
+- [weekly wiki on 2026.6.08th](/Seeed_Elderly/weekly_wiki/2026/wiki260608)
+- [weekly wiki on 2026.6.15th](/Seeed_Elderly/weekly_wiki/2026/wiki260615)
+- [weekly wiki on 2026.6.22nd](/Seeed_Elderly/weekly_wiki/2026/wiki260622)
+- [weekly wiki on 2026.6.29th](/Seeed_Elderly/weekly_wiki/2026/wiki260629)
+- [weekly wiki on 2026.7.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260706)
+- [weekly wiki on 2026.7.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260713)
+- [weekly wiki on 2026.7.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260720)
+- [weekly wiki on 2026.7.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260727)
+- [weekly wiki on 2026.8.03rd](/Seeed_Elderly/weekly_wiki/2026/wiki260803)
+- [weekly wiki on 2026.8.10th](/Seeed_Elderly/weekly_wiki/2026/wiki260810)
+- [weekly wiki on 2026.8.17th](/Seeed_Elderly/weekly_wiki/2026/wiki260817)
+- [weekly wiki on 2026.8.24th](/Seeed_Elderly/weekly_wiki/2026/wiki260824)
+- [weekly wiki on 2026.8.31st](/Seeed_Elderly/weekly_wiki/2026/wiki260831)
+- [weekly wiki on 2026.9.07th](/Seeed_Elderly/weekly_wiki/2026/wiki260907)
+- [weekly wiki on 2026.9.14th](/Seeed_Elderly/weekly_wiki/2026/wiki260914)
+- [weekly wiki on 2026.9.21st](/Seeed_Elderly/weekly_wiki/2026/wiki260921)
+- [weekly wiki on 2026.9.28th](/Seeed_Elderly/weekly_wiki/2026/wiki260928)
 
 </details>

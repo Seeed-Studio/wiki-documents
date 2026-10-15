@@ -17,6 +17,35 @@ import { useLocation } from '@docusaurus/router';
 import { judgeHomePath } from '../../../utils/jsUtils';
 import TopNav from '../../../components/topNav';
 import Head from '@docusaurus/Head';
+import CopyPageButton from 'docusaurus-plugin-copy-page-button/react';
+import prepareTablesForCopyPage from '../../../utils/prepareTablesForCopyPage';
+import useIsBrowser from '@docusaurus/useIsBrowser';
+
+const CopyPageButtonAny = CopyPageButton as React.ComponentType<any>;
+
+function StableCopyPageButton() {
+  const [options, setOptions] = React.useState<Record<string, any> | null>(null);
+  const isBrowser = useIsBrowser();
+
+  useEffect(() => {
+    // Tabs remount after hydration. Prepare their final DOM before mounting the
+    // plugin, which captures page content only once in its own mount effect.
+    if (!isBrowser) {
+      return;
+    }
+    const article = document.querySelector<HTMLElement>('main article');
+    if (article) {
+      prepareTablesForCopyPage(article);
+    }
+    setOptions((window as any).__COPY_PAGE_BUTTON_OPTIONS__ || {});
+  }, [isBrowser]);
+
+  if (!options) {
+    return null;
+  }
+
+  return <CopyPageButtonAny {...options} />;
+}
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
@@ -31,6 +60,7 @@ function useDocTOC() {
     canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? (
       <DocItemTOCDesktop />
     ) : undefined;
+
   return {
     hidden,
     mobile,
@@ -40,16 +70,24 @@ function useDocTOC() {
 
 export default function DocItemLayout({ children }: Props): JSX.Element {
   const docTOC = useDocTOC();
-  const { frontMatter } = useDoc();
-  
+  const { frontMatter, metadata } = useDoc();
+
   // 使用类型断言解决 TypeScript 错误
-  const { hide_comment: hideComment, sku, type: docType } = frontMatter as any;
-  
-  const location = useLocation()
+  const {
+    hide_comment: hideComment,
+    sku,
+    type: docType,
+  } = frontMatter as any;
+
+  const location = useLocation();
+  const isRoboticsDoc = Boolean(
+    (metadata as { source?: string }).source?.startsWith('@site/docs/Robotics/'),
+  );
+
   useEffect(() => {
     judgeHomePath();
   }, [location.pathname]);
-  
+
   return (
     <div className="row">
       {/* 添加 Head 组件用于动态 meta 标签 */}
@@ -57,19 +95,32 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         {sku && <meta name="docsearch:sku_tag" content={sku} />}
         {docType && <meta name="docsearch:doc_type_tag" content={docType} />}
       </Head>
-      
+
       {/* 添加数据属性到静态 HTML 元素 */}
-      <div 
-        className={clsx('col', !docTOC.hidden && styles.docItemCol)}
+      <div
+        className={clsx(
+          'col',
+          !docTOC.hidden && styles.docItemCol,
+        )}
         data-sku={sku || ''}
         data-doc-type={docType || ''}
       >
         <DocVersionBanner />
         <div className={styles.docItemContainer}>
-          <article>
+          <article className={clsx(isRoboticsDoc && 'robotics-doc')}>
             <DocBreadcrumbs />
             <DocVersionBadge />
-            {docTOC.mobile}
+
+            {docTOC.mobile && (
+              <>
+                {docTOC.mobile}
+
+                <div className={styles.mobileCopyPageButton}>
+                  <StableCopyPageButton key={location.pathname} />
+                </div>
+              </>
+            )}
+
             <DocItemContent>{children}</DocItemContent>
             <DocItemFooter />
           </article>
@@ -78,7 +129,15 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         {!hideComment && <Comment />}
       </div>
       <TopNav></TopNav>
-      {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
+      {docTOC.desktop && (
+        <div className="col col--3">
+          <div className={styles.copyPageButtonWrapper}>
+            <StableCopyPageButton key={location.pathname} />
+          </div>
+
+          {docTOC.desktop}
+        </div>
+      )}
     </div>
   );
 }

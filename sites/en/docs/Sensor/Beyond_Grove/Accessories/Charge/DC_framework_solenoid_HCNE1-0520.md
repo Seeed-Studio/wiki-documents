@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/DC_framework_solenoid_HCNE1-0520/
 ---
 This 12-Volt DC framework solenoid is great for projects! These types of solenoid are often used for automatic door locks,vending machines,robot etc. However, they work great for almost any project requiring a DC solenoid.

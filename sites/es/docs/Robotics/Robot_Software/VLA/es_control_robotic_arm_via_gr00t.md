@@ -11,7 +11,7 @@ last_update:
   date: 6/16/2025
   author: Youjiang
 createdAt: '2025-06-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/es/control_robotic_arm_via_gr00t/
 ---
 

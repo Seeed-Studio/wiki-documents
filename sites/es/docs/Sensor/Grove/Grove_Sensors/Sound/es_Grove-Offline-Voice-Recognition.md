@@ -10,7 +10,7 @@ last_update:
   date: 01/02/2024
   author: Allen
 createdAt: '2024-01-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Grove-Offline-Voice-Recognition/
 ---
 

@@ -19,7 +19,7 @@ last_update:
   date: 2/04/2026
   author: Jiayu Zhan(Jack)
 createdAt: '2026-02-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-12'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_agora_convo_client/
 ---
 

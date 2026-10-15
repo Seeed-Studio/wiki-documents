@@ -8,7 +8,7 @@ last_update:
   date: 11/5/2024
   author: Citric
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/cn/build_watcher_development_environment/
 ---
 

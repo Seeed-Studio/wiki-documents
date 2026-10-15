@@ -9,7 +9,7 @@ last_update:
   date: 1/31/2023
   author: shuxu hu
 createdAt: '2023-02-01'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/Grove_IoT_Starter_Kits_Powered_by_AWS/
 ---
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_IoT_Starter_Kits_Powered_by_AWS/img/Aws_logo.jpg)

@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'módulos'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: modules
+link:
+  type: generated-index
+  slug: modules
+  title: módulos
+  description: Sobre todos os módulos do reCamera

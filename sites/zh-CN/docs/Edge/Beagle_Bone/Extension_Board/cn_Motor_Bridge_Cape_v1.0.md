@@ -10,7 +10,7 @@ last_update:
   date: 1/10/2022
   author: jianjing Huang
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Motor_Bridge_Cape_v1.0/
 ---
 

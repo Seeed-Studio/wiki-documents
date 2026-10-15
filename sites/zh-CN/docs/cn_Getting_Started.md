@@ -7,7 +7,7 @@ last_update:
   date: 08/30/2024
   author: Matthew
 createdAt: '2023-11-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/Getting_Started/
 ---
 

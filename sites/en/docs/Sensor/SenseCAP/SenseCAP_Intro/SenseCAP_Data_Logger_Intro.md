@@ -9,7 +9,7 @@ last_update:
   date: 07/24/2024
   author: Frank
 createdAt: '2023-07-20'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/SenseCAP_Data_Logger_Intro/
 ---
 

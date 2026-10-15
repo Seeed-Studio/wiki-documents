@@ -13,10 +13,9 @@ last_update:
   author: Carla
 sidebar_position: 0
 createdAt: '2024-08-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-07-13'
 url: https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -66,31 +65,17 @@ The XIAO RA4M1 integrates Renesas' RA4M1 chip (32-bit ARM® Cortex®-M4 MCU up t
 | **Working Temperature** | -20°C~70°C |
 | **Dimensions** | 21×17.8 mm |
 
-### Hardware Overview
+## Hardware Overview
 
 Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of Seeed Studio XIAO RA4M1.
 
-<!-- 硬件相关 -->
+### Front
 
-<!-- 引脚等的定义 -->
-<table>
- <tr>
-     <th>XIAO RA4M1 front indication diagram</th>
- </tr>
-    <tr>
-        <br />
-        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-components.png" style={{width:380, height:'auto'}}/></div>
-        <br />
-    </tr>
-    <tr>
-        <th>XIAO RA4M1 Pin List</th>
-    </tr>
-    <tr>
-        <br />
-        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-pinout.png" style={{width:880, height:'auto'}}/></div>
-        <br />
-    </tr>
-</table>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 ## **Pin Map**
 | XIAO Pin        | Function         | Chip Pin  | Alternate Functions                  | Description                          | Arduino Name |
@@ -117,7 +102,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 | D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |       |
 | D17             | CRX0             | P102      | AN020,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |       |
 | D18             | CTX0             | P103      | AN019                               | GPIO, SPI ,ADC,UART                  |       |
-| ADC_BAT         |                  | P400      |                                     | Read the BAT voltage value           |       |
+| ADC_BAT         |                  | P015      |                                     | Read the BAT voltage value           |       |
 | Reset           |                  | RES       |                                     | RESET                                |       |
 | Boot            |                  | P201      |                                     | Enter Boot Mode                      |       |
 | RGB LED         |                  | P112      |                                     | RGB LED                              |    20   |
@@ -266,7 +251,7 @@ void loop() {
 
 Is it possible to read the battery voltage without extra components? Yes, with the XIAO RA4M1, it’s easier than ever. In previous XIAO family members, such as the [XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage), reading the battery voltage required manually connecting to A0 with a resistor.
 
-But with the XIAO RA4M1, this process is simplified. You can now directly use the `BAT_DET_PIN/P105` pin to read the battery voltage level, streamlining your design and development. Just remember to set the `BAT_READ_EN/P400` pin to high, as it’s necessary to enable battery level reading.
+But with the XIAO RA4M1, this process is simplified. You can now directly use the `BAT_DET_PIN/P015` pin to read the battery voltage level, streamlining your design and development. Just remember to set the `BAT_READ_EN/P400` pin to high, as it’s necessary to enable battery level reading.
 
 - **Step 1.** Harware Preparation
 
@@ -354,7 +339,7 @@ void loop() {
 - **📄[Schematic]** [XIAO RA4M1 Schematic](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO%20RA4M1%20V1.01_SCH_PDF_260114%20.pdf.pdf )
 - **🗃️[PCB Design Files]** [XIAO RA4M1 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/202003977_XIAO%20RA4M1%20v1.01_SCH&PCB_260114.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 ## Troubleshooting
 

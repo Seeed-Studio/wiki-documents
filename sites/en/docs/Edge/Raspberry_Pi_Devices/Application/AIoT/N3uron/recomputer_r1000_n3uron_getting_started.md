@@ -11,7 +11,7 @@ last_update:
   date: 07/08/2023
   author: Kasun Thushara
 createdAt: '2023-07-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/recomputer_r1000_n3uron/
 ---
 

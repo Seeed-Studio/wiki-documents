@@ -10,7 +10,7 @@ last_update:
   date: 6/6/2023
   author: Stephen Lo
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/grove_voc_gas_sensor_sgp40/
 ---
 

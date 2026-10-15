@@ -544,8 +544,18 @@ const wishRender = (isMobile) => {
 					visible={isSuccessModalOpen}
 					onClose={() => setIsSuccessModalOpen(false)}
 					title="Submission successful"
-					content="Thank you for your wish! We have received your idea! And if it has been accepted, the assignment will be on our <a href='https://github.com/orgs/Seeed-Studio/projects/6' target='_blank'>GitHub Project Tracking page</a>	! 
-"
+					content={
+						<>
+							{'Thank you for your wish! We have received your idea! And if it has been accepted, the assignment will be on our '}
+							<a
+								href="https://github.com/orgs/Seeed-Studio/projects/6"
+								target="_blank"
+							>
+								GitHub Project Tracking page
+							</a>
+							{'     ! \n'}
+						</>
+					}
 				/>
 			</div>
 		</div>

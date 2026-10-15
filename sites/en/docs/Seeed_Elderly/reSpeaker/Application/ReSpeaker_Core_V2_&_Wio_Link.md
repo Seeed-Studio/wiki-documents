@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: jianjing Huang
 createdAt: '2023-02-02'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-25'
 url: https://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/
 ---
 

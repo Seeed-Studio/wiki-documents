@@ -13,7 +13,7 @@ last_update:
   date: 1/27/2026
   author: Brandy
 createdAt: '2026-01-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-27'
 url: https://wiki.seeedstudio.com/xiao_nrf54l15_zigbee/
 ---
 

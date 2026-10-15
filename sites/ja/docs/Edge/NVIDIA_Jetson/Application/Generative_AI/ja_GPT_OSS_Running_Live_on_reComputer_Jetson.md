@@ -13,7 +13,7 @@ last_update:
   date: 08/14/2025
   author: Youjiang
 createdAt: '2025-09-10'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/ja/deploy_gptoss_on_jetson/
 ---
 

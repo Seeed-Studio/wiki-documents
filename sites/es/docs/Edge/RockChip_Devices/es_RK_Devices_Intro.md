@@ -8,11 +8,11 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /rockchip-devices
 sku: 110110110,110110205,102110919,102110918,113060086,102111005,102111098
 last_update:
-  date: 9/3/2026
+  date: 3/9/2026
   author: Nolan Chen
-createdAt: '2026-3-9'
-updatedAt: '2026-03-09'
-url: https://wiki.seeedstudio.com/es/raspberry-pi-devices/
+createdAt: 2026-3-9
+updatedAt: '2026-04-03'
+url: https://wiki.seeedstudio.com/es/rockchip-devices/
 ---
 
 ## Introducción
@@ -546,10 +546,10 @@ Herramienta de programación basada en flujos para conectar hardware y servicios
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/HA_interface.PNG" style={{width:250, height:150}}/></td>
       </tr>
       <tr>
-        <td><a href="https://wiki.seeedstudio.com/es/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/"><strong>📚 Learn More</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/es/yolov8_on_ai_box_for_fall_climbing_tracking/"><strong>📚 Learn More</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/es/gun_detection_with_frigate_nvr_on_r2000/"><strong>📚 Learn More</strong></a></td>
-        <td ><a href="https://wiki.seeedstudio.com/es/r2000_series_frigate_and_home_assistant/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/"><strong>📚 Más información</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/yolov8_on_ai_box_for_fall_climbing_tracking/"><strong>📚 Más información</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/gun_detection_with_frigate_nvr_on_r2000/"><strong>📚 Más información</strong></a></td>
+        <td ><a href="https://wiki.seeedstudio.com/es/r2000_series_frigate_and_home_assistant/"><strong>📚 Más información</strong></a></td>
       </tr>
     </tbody>
   </table>
@@ -573,10 +573,10 @@ Herramienta de programación basada en flujos para conectar hardware y servicios
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/detection.gif" style={{width:400, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td><a href="https://wiki.seeedstudio.com/es/zoneminder_on_recomputer/"><strong>📚 Learn More</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/es/clip_application_on_rpi5_with_ai_kit/" ><strong>📚 Learn More</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/es/real-time-ocr/"><strong>📚 Learn More</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/es/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/" ><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/zoneminder_on_recomputer/"><strong>📚 Más información</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/clip_application_on_rpi5_with_ai_kit/" ><strong>📚 Más información</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/real-time-ocr/"><strong>📚 Más información</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/" ><strong>📚 Más información</strong></a></td>
       </tr>
     </tbody>
   </table>
@@ -598,8 +598,8 @@ Herramienta de programación basada en flujos para conectar hardware y servicios
         <td><img src="https://files.seeedstudio.com/wiki/distributed-inference/distributed_llama.gif" style={{width:500, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td><a href="https://wiki.seeedstudio.com/es/deploy_deepseek_on_raspberry_pi_ai_box/" ><strong>📚 Learn More</strong></a></td>
-        <td ><a href="https://wiki.seeedstudio.com/es/distributed_inference_of_deepseek_model_on_raspberrypi/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/deploy_deepseek_on_raspberry_pi_ai_box/" ><strong>📚 Más información</strong></a></td>
+        <td ><a href="https://wiki.seeedstudio.com/es/distributed_inference_of_deepseek_model_on_raspberrypi/"><strong>📚 Más información</strong></a></td>
       </tr>
     </tbody>
   </table>

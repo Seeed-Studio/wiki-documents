@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'reCamera 2002 シリーズ'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reCamera_basic_getting_start
+link:
+  type: generated-index
+  slug: recamera_servies_getting_start
+  title: reCamera 2002 シリーズ入門
+  description: reCamera 2002 シリーズのクイックスタートガイド。

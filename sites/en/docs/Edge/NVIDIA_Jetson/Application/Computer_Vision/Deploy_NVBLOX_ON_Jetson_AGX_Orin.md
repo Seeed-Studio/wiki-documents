@@ -18,10 +18,10 @@ image: https://files.seeedstudio.com/wiki/other/page-nvblox.jpg
 slug: /deploy_nvblox_jetson_agx_orin
 sku: 101090144,100020039
 last_update:
-  date: 2026-01-20T00:00:00.000Z
+  date: 2026-01-20
   author: Dayu
 createdAt: '2026-01-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-17'
 url: https://wiki.seeedstudio.com/deploy_nvblox_jetson_agx_orin/
 ---
 
@@ -53,7 +53,7 @@ This makes it particularly valuable for edge AI applications where hardware cons
 
 ## Prerequisites
 
-- **[reComputer J50](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)** (Jetson AGX Orin) with JetPack 6.2
+- **[reComputer J50](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html)** (Jetson AGX Orin) with JetPack 6.2.1
 - Orbbec RGB-D Camera 📷
 - Mobile robot chassis (optional) 🤖
 - [ROS2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/) environment installed

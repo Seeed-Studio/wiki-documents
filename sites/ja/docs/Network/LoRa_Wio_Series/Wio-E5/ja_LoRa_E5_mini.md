@@ -12,7 +12,7 @@ last_update:
   date: 01/15/2026
   author: David Du
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-19'
 url: https://wiki.seeedstudio.com/ja/LoRa_E5_mini/
 ---
 <!-- ![](https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/113990939_preview-07.png) -->

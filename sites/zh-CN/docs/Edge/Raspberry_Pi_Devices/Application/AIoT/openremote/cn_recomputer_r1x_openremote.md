@@ -11,7 +11,7 @@ last_update:
   date: 9/30/2025
   author: Kasun Thushara
 createdAt: '2025-09-28'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-20'
 url: https://wiki.seeedstudio.com/cn/openremote_r1x00/
 ---
 

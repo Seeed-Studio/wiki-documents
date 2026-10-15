@@ -9,7 +9,7 @@ last_update:
   date: 2/17/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/
 ---
 

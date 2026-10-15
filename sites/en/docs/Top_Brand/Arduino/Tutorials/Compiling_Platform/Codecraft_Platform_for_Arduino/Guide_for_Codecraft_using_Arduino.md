@@ -11,7 +11,7 @@ last_update:
   date: 2/15/2023
   author: jianjing Huang
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-12'
 url: https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/
 ---
 

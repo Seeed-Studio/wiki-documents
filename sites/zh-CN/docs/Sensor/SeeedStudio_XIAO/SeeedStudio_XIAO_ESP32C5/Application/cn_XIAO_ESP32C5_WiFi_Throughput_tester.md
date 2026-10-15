@@ -10,7 +10,7 @@ last_update:
   date: 1/16/2026
   author: Zeller
 createdAt: '2026-01-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-19'
 url: https://wiki.seeedstudio.com/cn/xaio_esp32c5_wifi_throughput_tester/
 ---
 

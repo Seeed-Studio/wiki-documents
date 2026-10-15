@@ -6,7 +6,7 @@ slug: /wio_terminal_faq
 date: 1/31/2024
 author: Seraphina
 createdAt: '2024-07-23'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/wio_terminal_faq/
 ---
 

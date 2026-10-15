@@ -1,6 +1,6 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご体験ください。
-title: reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 DoA and VAD
+description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声キャプチャを備えたプロフェッショナルな円形マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット工学、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を体験してください。
+title: reSpeaker XVF3800 USB Mic Array と XIAO ESP32S3 を用いた DoA および VAD
 keywords:
   - reSpeaker
   - XIAO
@@ -12,13 +12,13 @@ last_update:
   date: 1/23/2025
   author: Kasun Thushara
 createdAt: '2026-01-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-15'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_doa_vad/
 ---
 
-## はじめに
+## はじめに 
 
-ReSpeaker XVF3800は、リアルタイム音声インテリジェンスを必要とする組み込みアプリケーション向けに設計された、XMOS XVF3800ベースのマルチマイクロフォン音声処理ソリューションです。XVF3800は内部で音声活動検出（VAD）と到来方向（DoA）を計算し、音声が存在するタイミングとその発生方向を示します。これらの推論結果は、リソースベースのコマンドを使用してI2C経由でホストMCUから直接アクセスでき、ホストで生の音声を処理することなく、ウェイクオンボイス、音源定位、方向認識フィードバックなどの機能を実現できます。
+ReSpeaker XVF3800 は、XMOS XVF3800 をベースとしたマルチマイク音声処理ソリューションで、リアルタイムの音声インテリジェンスを必要とする組み込みアプリケーション向けに設計されています。XVF3800 は内部で Voice Activity Detection (VAD) と Direction of Arrival (DoA) を計算し、音声が存在するタイミングとその発生方向を示します。これらの推論結果は、リソースベースのコマンドを使用して I2C 経由でホスト MCU から直接アクセスできるため、ホスト側で生のオーディオを処理することなく、音声起動、音源位置推定、方向認識フィードバックなどの機能を実現できます。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
@@ -31,10 +31,12 @@ ReSpeaker XVF3800は、リアルタイム音声インテリジェンスを必要
 
 
 :::note
-このコードをサポートするファームウェアは `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` です。まず最初にフラッシュしてください。
+このコードをサポートするファームウェアは `respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k_test5.bin` と `application_xvf3800_i2s_master_v1.0.8_48k.bin` です。そのため、必ず最初にこれらをフラッシュしてください。
+
+ファームウェア v1.0.7 を使用している場合は、`GPO_SERVICER_RESID_DOA` を 19 に変更してください。
 :::
 
-## Arduino コード
+## Arduino コード 
 
 ```cpp
 #include <Wire.h>
@@ -43,7 +45,7 @@ ReSpeaker XVF3800は、リアルタイム音声インテリジェンスを必要
 
 #define GPO_SERVICER_RESID            20
 #define GPO_SERVICER_RESID_LED_EFFECT 12
-#define GPO_SERVICER_RESID_DOA        19
+#define GPO_SERVICER_RESID_DOA        18
 #define GPO_DOA_READ_NUM_BYTES        4
 
 void setup() {
@@ -158,7 +160,7 @@ void write_led_effect(uint8_t effect) {
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しております。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

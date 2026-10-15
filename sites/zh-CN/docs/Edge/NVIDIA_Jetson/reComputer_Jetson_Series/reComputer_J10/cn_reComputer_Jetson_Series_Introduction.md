@@ -8,9 +8,11 @@ last_update:
   date: 01/03/2023
   author: w0x7ce
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_Introduction/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # reComputer for Jetson 系列介绍
 
@@ -192,6 +194,13 @@ reComputer for Jetson 系列是基于 NVIDIA 先进 AI 嵌入式系统构建的�
 ## 资源
 
 - **[PDF]** [NVIDIA Jetson 设备和载板对比](https://files.seeedstudio.com/wiki/reComputer/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

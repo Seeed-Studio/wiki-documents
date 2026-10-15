@@ -9,7 +9,7 @@ last_update:
   date: 04/26/2023
   author: Citric
 createdAt: '2023-04-26'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/Wio-Lite-AI-Getting-Started/
 ---
 

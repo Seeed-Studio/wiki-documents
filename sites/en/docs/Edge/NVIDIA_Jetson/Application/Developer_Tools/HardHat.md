@@ -12,7 +12,7 @@ last_update:
   date: 01/04/2023
   author: Bill
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/HardHat/
 ---
 

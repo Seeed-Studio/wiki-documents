@@ -9,7 +9,7 @@ last_update:
   date: 6/10/2025
   author: Zeno
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/cn/how_to_connect_sensecap_s210x_to_datacake_via_ttn/
 ---
 

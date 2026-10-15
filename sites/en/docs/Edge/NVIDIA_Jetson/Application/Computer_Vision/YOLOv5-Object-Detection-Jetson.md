@@ -12,7 +12,7 @@ last_update:
   date: 01/04/2023
   author: w0x7ce
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2023-11-28'
 url: https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 2/22/2023
   author: jianjing Huang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/
 ---
 

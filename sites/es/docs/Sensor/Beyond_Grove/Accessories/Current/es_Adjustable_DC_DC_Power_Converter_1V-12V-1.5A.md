@@ -10,7 +10,7 @@ last_update:
   date: 1/13/2023
   author: jianjing Huang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/
 ---
 

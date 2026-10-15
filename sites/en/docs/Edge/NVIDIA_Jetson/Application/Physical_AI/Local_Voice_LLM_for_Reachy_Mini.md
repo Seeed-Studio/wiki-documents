@@ -8,7 +8,7 @@ last_update:
   date: 01/06/2026
   author: youjiang
 createdAt: '2026-01-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-22'
 url: https://wiki.seeedstudio.com/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/
 ---
 

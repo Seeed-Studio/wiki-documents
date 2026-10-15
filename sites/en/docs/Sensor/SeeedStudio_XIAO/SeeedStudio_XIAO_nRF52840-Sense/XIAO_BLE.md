@@ -7,15 +7,15 @@ image: https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg
 slug: /XIAO_BLE
 sku: 102010448, 102010469, 102010632, 102010631, 102010672, 102010694, 101991463, 101991465
 last_update:
-  date: 2024-11-28T03:15:24.000Z
+  date: 9/16/2026
   author: Clara
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/XIAO_BLE/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Getting Started with Seeed Studio XIAO nRF52840 Series
 
@@ -216,130 +216,189 @@ Bluetooth Mesh/NFC</td>
 ## Hardware overview
 
 <Tabs>
-<TabItem  value="52540(Sense)" label="XIAO nRF52840/XIAO nRF52840 Sense" default>
+<TabItem value="nRF52840" label="XIAO nRF52840" default>
 
-<table align="center">
-  <tr>
-    <th>XIAO nRF52840/XIAO nRF52840 Sense front indication diagram</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/front-pinout-4.jpg" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-    <th>XIAO nRF52840/XIAO nRF52840 Sense back indication diagram</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/back-pinout-5.jpg" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-    <th>XIAO nRF52840/XIAO nRF52840 Sense Pin List</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/pinout2.png" style={{width:1000, height:'auto'}}/></div></td>
-  </tr>
-</table>
+### XIAO nRF52840 Front
 
- **Pin Map**
-| XIAO Pin                 | Function         | Chip Pin                          | Description                          |Arduino Name |     
-| :---------------------: | :-------------: | :-------:                      | :-------------------------------------- | :-------:   |
-| 5V                      | VBUS             |                               | Power Input/Output                       |           |
-| GND                     |                  |                               |                                          |           |
-| 3V3                     | 3V3_OUT          |                              | Power Output                             |            |
-| D0                      | Analog          | P0.02                        | GPIO, AIN0                                |       0      |
-| D1                      | Analog          | P0.03                        | GPIO, AIN1                               |       1       |
-| D2                      | Analog          | P0.28                        | GPIO, AIN4                                |        2     |
-| D3                      | Analog          | P0.29                        | GPIO, AIN5                               |       3     |
-| D4                      | Analog,SDA       | P0.04                         | GPIO, I2C Data, AIN2                      |     4      |
-| D5                      | Analog,SCL       | P0.05                         | GPIO, I2C Clock, AIN3                     |     5       |
-| D6                      | TX               | P1.11                         | GPIO, UART Transmit                      |     7/6        |
-| D7                      | RX               | P1.12                         | GPIO, UART Receive                       |     8/7       |
-| D8                      | SPI_SCK          | P1.13                         | GPIO, SPI Clock                          |      9/8    |
-| D9                      | SPI_MISO         | P1.14                         | GPIO, SPI Data                           |     10/9     |
-| D10                     | SPI_MOSI         | P1.15                         | GPIO, SPI Data                           |       11/10   |
-| NFC1                    |                  | P0.09                         | NFC                                      |          |
-| NFC2                    |                  | P0.10                         | NFC                                      |          |
-| Reset                   |                  | P0.18                         | RESET                                    |          |
-| ADC_BAT                 |                  | P0.14                         | Read the BAT voltage value               |          |
-| 6 DOF IMU_PWR           |                  | P1.08                         | power switch of the 6D module            |          |
-| 6 DOF IMU__INT1         |                  | P0.11                         | Interrupt signal pin of the 6D module    |          |
-| PDM Microphone_DATA     |                  | P0.16                         | PDM audio data input pin                 |          |
-| PDM Microphone_CLK      |                  | P1.00                         | PDM audio clock output pin               |          |
-| RF Switch Port Select   |                  | P2.05                         | Switch onboard antenna                   |          |
-| RF Switch Power         |                  | P2.03                         | Power                                    |          |
-| CHARGE_LED              |                  | P0.17                         | CHG-LED_Red                              |          |
-| USER_LED_R              |                  | P0.26                         | User-controlled red RGB LED pin          |     11     |
-| USER_LED_B              |                  | P0.06                         | User-controlled blue RGB LED pin         |     13/12     |
-| USER_LED_G              |                  | P0.30                         | User-controlled green RGB LED pin        |      12/13    |
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
- </TabItem>
- <TabItem value="52840Plus" label="XIAO nRF52840 Plus/XIAO nRF52840 Sense Plus" default>
+### XIAO nRF52840 Back
 
- <table align="center">
-  <tr>
-    <th>XIAO nRF52840 Plus front indication diagram</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/plus_front.png" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-    <th>XIAO nRF52840 Plus back indication diagram</th>
-  </tr>
-    <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/plus_back.png" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-    <th>XIAO nRF52840 Plus Pin List</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/plus_pinout.png" style={{width:1000, height:'auto'}}/></div></td>
-  </tr>
-  
- </table>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-| XIAO Pin                 | Function             | Chip Pin  | Alternate Functions | Description                              |Arduino Name |   
-| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- |:-------:   |
-| 5V                      | VBUS                 |           |                    | Power Input/Output                       |       |
-| GND                     |                      |           |                    |                                          |       |
-| 3V3                     | 3V3_OUT              |           |                    | Power Output                             |       |
-| D0                      | Analog              | P0.02     |                    | GPIO, ADC                                |    0      |
-| D1                      | Analog              | P0.03     |                    | GPIO, ADC                                |    1      |
-| D2                      | Analog              | P0.28     |                    | GPIO, ADC                                |    2      |
-| D3                      | Analog              | P0.29     |                    | GPIO, ADC                                |    3      |
-| D4                      | Analog,SDA           | P0.04     |                    | GPIO, I2C Data, ADC                      |    4      |
-| D5                      | Analog,SCL           | P0.05     |                    | GPIO, I2C Clock, ADC                     |    5      |
-| D6                      | TX                   | P1.11     |                    | GPIO, UART Transmit                      | 7/6        |
-| D7                      | RX                   | P1.12     |                    | GPIO, UART Receive                       | 8/7       |
-| D8                      | SPI_SCK              | P1.13     |                    | GPIO, SPI Clock                          |  9/8    |
-| D9                      | SPI_MISO             | P1.14     |                    | GPIO, SPI Data                           | 10/9     |
-| D10                     | SPI_MOSI             | P1.15     |                    | GPIO, SPI Data                           | 11/10   |
-| D11                     | I2S_SD               | P0.15     |                    | GPIO, I2S, ADC                           |      |
-| D12                     | I2S_SCK              | P0.19     |                    | GPIO,I2S, ADC                            |      |
-| D13                     | I2S_WS               | P1.01     |                    | GPIO, I2S  ADC                           |      |
-| D14                     | RX1                  | P0.09     | NFC1               | GPIO, UART Receive, ADC                  |      |
-| D15                     | TX1                  | P0.10     | NFC2               | GPIO, UART Transmit, ADC                 |      |
-| D16                     | BAT                  | P0.31     |                    | GPIO                                     |      |
-| D17                     | SCK1                 | P1.03     |                    | GPIO, SPI                                |      |
-| D18                     | MISO1                | P1.05     |                    | GPIO, SPI                                |      |
-| D19                     | MOSI1                | P1.07     |                    | GPIO, SPI                                |      |
-| ADC_BAT                 |                      | P0.14     |                    | Read the BAT voltage value               |      |
-| 6 DOF IMU_PWR           |                      | P1.08     |                    | power switch of the 6D module            |      |
-| 6 DOF IMU__INT1         |                      | P0.11     |                    | Interrupt signal pin of the 6D module    |      |
-| PDM Microphone_DATA     |                      | P0.16     |                    | PDM audio data input pin                 |      |
-| PDM Microphone_CLK      |                      | P1.00     |                    | PDM audio clock output pin               |      |
-| Reset                   |                      | P0.18     |                    | RESET                                    |      |
-| RF Switch Port Select   |                      | P2.05     |                    | Switch onboard antenna                   |      |
-| RF Switch Power         |                      | P2.03     |                    | Power                                    |      |
-| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |      |
-| USER_LED_R              |                      | P0.26     |                    | User-controlled red RGB LED pin          | 11     |
-| USER_LED_B              |                      | P0.06     |                    | User-controlled blue RGB LED pin         | 13/12     |
-| USER_LED_G              |                      | P0.30     |                    | User-controlled green RGB LED pin        |  12/13    |
+**Pin Map**
+
+| XIAO Pin                 | Function         | Chip Pin      | Description                                          | Arduino Name |
+| :---------------------: | :-------------: | :-------:     | :-------------------------------------------------- | :-------:    |
+| 5V                      | VBUS             |               | Power Input/Output                                   |              |
+| GND                     |                  |               |                                                      |              |
+| 3V3                     | 3V3_OUT          |               | Power Output                                         |              |
+| D0                      | Analog           | P0.02         | GPIO, AIN0                                           | 0            |
+| D1                      | Analog           | P0.03         | GPIO, AIN1                                           | 1            |
+| D2                      | Analog           | P0.28         | GPIO, AIN4                                           | 2            |
+| D3                      | Analog           | P0.29         | GPIO, AIN5                                           | 3            |
+| D4                      | Analog, SDA      | P0.04         | GPIO, I2C Data, AIN2                                 | 4            |
+| D5                      | Analog, SCL      | P0.05         | GPIO, I2C Clock, AIN3                                | 5            |
+| D6                      | TX               | P1.11         | GPIO, UART Transmit                                  | 7/6          |
+| D7                      | RX               | P1.12         | GPIO, UART Receive                                   | 8/7          |
+| D8                      | SPI_SCK          | P1.13         | GPIO, SPI Clock                                      | 9/8          |
+| D9                      | SPI_MISO         | P1.14         | GPIO, SPI Data                                       | 10/9         |
+| D10                     | SPI_MOSI         | P1.15         | GPIO, SPI Data                                       | 11/10        |
+| NFC1                    |                  | P0.09         | NFC                                                  |              |
+| NFC2                    |                  | P0.10         | NFC                                                  |              |
+| Reset                   |                  | P0.18         | RESET                                                |              |
+| ADC_BAT                 | READ_BAT_ENABLE  | P0.14         | Enable control for battery voltage reading           |              |
+| RF Switch Port Select   |                  | P2.05         | Switch onboard antenna                               |              |
+| RF Switch Power         |                  | P2.03         | Power                                                |              |
+| CHARGE_LED              |                  | P0.17         | CHG-LED_Red                                          |              |
+| USER_LED_R              |                  | P0.26         | User-controlled red RGB LED pin                      | 11           |
+| USER_LED_B              |                  | P0.06         | User-controlled blue RGB LED pin                     | 13/12        |
+| USER_LED_G              |                  | P0.30         | User-controlled green RGB LED pin                    | 12/13        |
 
 </TabItem>
+<TabItem value="nRF52840Plus" label="XIAO nRF52840 Plus">
 
+### XIAO nRF52840 Plus Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Plus_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF52840 Plus Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Plus_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+**Pin Map**
+
+| XIAO Pin                 | Function             | Chip Pin  | Alternate Functions | Description                              | Arduino Name |
+| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- | :-------:    |
+| 5V                      | VBUS                 |           |                    | Power Input/Output                       |              |
+| GND                     |                      |           |                    |                                          |              |
+| 3V3                     | 3V3_OUT              |           |                    | Power Output                             |              |
+| D0                      | Analog              | P0.02     |                    | GPIO, ADC                                | 0            |
+| D1                      | Analog              | P0.03     |                    | GPIO, ADC                                | 1            |
+| D2                      | Analog              | P0.28     |                    | GPIO, ADC                                | 2            |
+| D3                      | Analog              | P0.29     |                    | GPIO, ADC                                | 3            |
+| D4                      | Analog, SDA          | P0.04     |                    | GPIO, I2C Data, ADC                      | 4            |
+| D5                      | Analog, SCL          | P0.05     |                    | GPIO, I2C Clock, ADC                     | 5            |
+| D6                      | TX                   | P1.11     |                    | GPIO, UART Transmit                      | 7/6          |
+| D7                      | RX                   | P1.12     |                    | GPIO, UART Receive                       | 8/7          |
+| D8                      | SPI_SCK              | P1.13     |                    | GPIO, SPI Clock                          | 9/8          |
+| D9                      | SPI_MISO             | P1.14     |                    | GPIO, SPI Data                           | 10/9         |
+| D10                     | SPI_MOSI             | P1.15     |                    | GPIO, SPI Data                           | 11/10        |
+| D11                     | I2S_SD               | P0.15     |                    | GPIO, I2S, ADC                           |              |
+| D12                     | I2S_SCK              | P0.19     |                    | GPIO, I2S, ADC                           |              |
+| D13                     | I2S_WS               | P1.01     |                    | GPIO, I2S, ADC                           |              |
+| D14                     | RX1                  | P0.09     | NFC1               | GPIO, UART Receive, ADC                  |              |
+| D15                     | TX1                  | P0.10     | NFC2               | GPIO, UART Transmit, ADC                 |              |
+| D16                     | AIN7_BAT             | P0.31     |                    | Battery voltage ADC read pin             |              |
+| D17                     | SCK1                 | P1.03     |                    | GPIO, SPI                                |              |
+| D18                     | MISO1                | P1.05     |                    | GPIO, SPI                                |              |
+| D19                     | MOSI1                | P1.07     |                    | GPIO, SPI                                |              |
+| ADC_BAT                 | READ_BAT_ENABLE      | P0.14     |                    | Enable control for battery voltage reading |              |
+| Reset                   |                      | P0.18     |                    | RESET                                    |              |
+| RF Switch Port Select   |                      | P2.05     |                    | Switch onboard antenna                   |              |
+| RF Switch Power         |                      | P2.03     |                    | Power                                    |              |
+| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |              |
+| USER_LED_R              |                      | P0.26     |                    | User-controlled red RGB LED pin          | 11           |
+| USER_LED_B              |                      | P0.06     |                    | User-controlled blue RGB LED pin         | 13/12        |
+| USER_LED_G              |                      | P0.30     |                    | User-controlled green RGB LED pin        | 12/13        |
+
+</TabItem>
+<TabItem value="nRF52840Sense" label="XIAO nRF52840 Sense">
+
+### XIAO nRF52840 Sense Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF52840 Sense Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+**Pin Map**
+
+| XIAO Pin                 | Function         | Chip Pin      | Description                                          | Arduino Name |
+| :---------------------: | :-------------: | :-------:     | :-------------------------------------------------- | :-------:    |
+| 5V                      | VBUS             |               | Power Input/Output                                   |              |
+| GND                     |                  |               |                                                      |              |
+| 3V3                     | 3V3_OUT          |               | Power Output                                         |              |
+| D0                      | Analog           | P0.02         | GPIO, AIN0                                           | 0            |
+| D1                      | Analog           | P0.03         | GPIO, AIN1                                           | 1            |
+| D2                      | Analog           | P0.28         | GPIO, AIN4                                           | 2            |
+| D3                      | Analog           | P0.29         | GPIO, AIN5                                           | 3            |
+| D4                      | Analog, SDA      | P0.04         | GPIO, I2C Data, AIN2                                 | 4            |
+| D5                      | Analog, SCL      | P0.05         | GPIO, I2C Clock, AIN3                                | 5            |
+| D6                      | TX               | P1.11         | GPIO, UART Transmit                                  | 7/6          |
+| D7                      | RX               | P1.12         | GPIO, UART Receive                                   | 8/7          |
+| D8                      | SPI_SCK          | P1.13         | GPIO, SPI Clock                                      | 9/8          |
+| D9                      | SPI_MISO         | P1.14         | GPIO, SPI Data                                       | 10/9         |
+| D10                     | SPI_MOSI         | P1.15         | GPIO, SPI Data                                       | 11/10        |
+| NFC1                    |                  | P0.09         | NFC                                                  |              |
+| NFC2                    |                  | P0.10         | NFC                                                  |              |
+| Reset                   |                  | P0.18         | RESET                                                |              |
+| ADC_BAT                 | READ_BAT_ENABLE  | P0.14         | Enable control for battery voltage reading           |              |
+| 6 DOF IMU_PWR           |                  | P1.08         | Power switch of the 6D module                        |              |
+| 6 DOF IMU__INT1         |                  | P0.11         | Interrupt signal pin of the 6D module                |              |
+| PDM Microphone_DATA     |                  | P0.16         | PDM audio data input pin                             |              |
+| PDM Microphone_CLK      |                  | P1.00         | PDM audio clock output pin                           |              |
+| RF Switch Port Select   |                  | P2.05         | Switch onboard antenna                               |              |
+| RF Switch Power         |                  | P2.03         | Power                                                |              |
+| CHARGE_LED              |                  | P0.17         | CHG-LED_Red                                          |              |
+| USER_LED_R              |                  | P0.26         | User-controlled red RGB LED pin                      | 11           |
+| USER_LED_B              |                  | P0.06         | User-controlled blue RGB LED pin                     | 13/12        |
+| USER_LED_G              |                  | P0.30         | User-controlled green RGB LED pin                    | 12/13        |
+
+</TabItem>
+<TabItem value="nRF52840SensePlus" label="XIAO nRF52840 Sense Plus">
+
+### XIAO nRF52840 Sense Plus Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_Plus_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF52840 Sense Plus Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_Plus_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+**Pin Map**
+
+| XIAO Pin                 | Function             | Chip Pin  | Alternate Functions | Description                              | Arduino Name |
+| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- | :-------:    |
+| 5V                      | VBUS                 |           |                    | Power Input/Output                       |              |
+| GND                     |                      |           |                    |                                          |              |
+| 3V3                     | 3V3_OUT              |           |                    | Power Output                             |              |
+| D0                      | Analog              | P0.02     |                    | GPIO, ADC                                | 0            |
+| D1                      | Analog              | P0.03     |                    | GPIO, ADC                                | 1            |
+| D2                      | Analog              | P0.28     |                    | GPIO, ADC                                | 2            |
+| D3                      | Analog              | P0.29     |                    | GPIO, ADC                                | 3            |
+| D4                      | Analog, SDA          | P0.04     |                    | GPIO, I2C Data, ADC                      | 4            |
+| D5                      | Analog, SCL          | P0.05     |                    | GPIO, I2C Clock, ADC                     | 5            |
+| D6                      | TX                   | P1.11     |                    | GPIO, UART Transmit                      | 7/6          |
+| D7                      | RX                   | P1.12     |                    | GPIO, UART Receive                       | 8/7          |
+| D8                      | SPI_SCK              | P1.13     |                    | GPIO, SPI Clock                          | 9/8          |
+| D9                      | SPI_MISO             | P1.14     |                    | GPIO, SPI Data                           | 10/9         |
+| D10                     | SPI_MOSI             | P1.15     |                    | GPIO, SPI Data                           | 11/10        |
+| D11                     | I2S_SD               | P0.15     |                    | GPIO, I2S, ADC                           |              |
+| D12                     | I2S_SCK              | P0.19     |                    | GPIO, I2S, ADC                           |              |
+| D13                     | I2S_WS               | P1.01     |                    | GPIO, I2S, ADC                           |              |
+| D14                     | RX1                  | P0.09     | NFC1               | GPIO, UART Receive, ADC                  |              |
+| D15                     | TX1                  | P0.10     | NFC2               | GPIO, UART Transmit, ADC                 |              |
+| D16                     | AIN7_BAT             | P0.31     |                    | Battery voltage ADC read pin             |              |
+| D17                     | SCK1                 | P1.03     |                    | GPIO, SPI                                |              |
+| D18                     | MISO1                | P1.05     |                    | GPIO, SPI                                |              |
+| D19                     | MOSI1                | P1.07     |                    | GPIO, SPI                                |              |
+| ADC_BAT                 | READ_BAT_ENABLE      | P0.14     |                    | Enable control for battery voltage reading |              |
+| 6 DOF IMU_PWR           |                      | P1.08     |                    | Power switch of the 6D module            |              |
+| 6 DOF IMU__INT1         |                      | P0.11     |                    | Interrupt signal pin of the 6D module    |              |
+| PDM Microphone_DATA     |                      | P0.16     |                    | PDM audio data input pin                 |              |
+| PDM Microphone_CLK      |                      | P1.00     |                    | PDM audio clock output pin               |              |
+| Reset                   |                      | P0.18     |                    | RESET                                    |              |
+| RF Switch Port Select   |                      | P2.05     |                    | Switch onboard antenna                   |              |
+| RF Switch Power         |                      | P2.03     |                    | Power                                    |              |
+| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |              |
+| USER_LED_R              |                      | P0.26     |                    | User-controlled red RGB LED pin          | 11           |
+| USER_LED_B              |                      | P0.06     |                    | User-controlled blue RGB LED pin         | 13/12        |
+| USER_LED_G              |                      | P0.30     |                    | User-controlled green RGB LED pin        | 12/13        |
+
+</TabItem>
 </Tabs>
-
-
-
 
 
 ## Two Arduino Libraries
@@ -584,7 +643,7 @@ Here , We would like to express our special thanks to the author for providing t
 
 ## Battery Charging current
 
-The battery charging current is selectable as 50mA or 100mA, where you can set **Pin13** as high or low to change it to 50mA or 100mA. The low current charging current is at the input model set up as HIGH LEVEL and the high current charging current is at the output model set up as LOW LEVEL.
+The battery charging current can be set to approximately 50 mA or 100 mA using P0.13. Configure P0.13 as a high-impedance input with no pull-up or pull-down to select 50 mA, or as an output driven LOW to select 100 mA. These values apply during the constant-current charging phase; the actual charging current decreases as the battery approaches full charge.
 
 **Low Charging Current**
 
@@ -645,9 +704,11 @@ You can first try to **reset** the board by clicking the "Reset Button" once. If
 
 ### Q3: What are the considerations when using XIAO nRF52840 (Sense) for battery charging?
 
-When P0.14 (D14) turns off the ADC function at a high level of 3.3V, P0.31 will be at the input voltage limit of 3.6V. There is a risk of burning out the P0.31 pin.
+In the XIAO nRF52840 Sense battery circuit, **P0.14** is the **READ_BAT_ENABLE** control pin and **P0.31** is the **AIN7_BAT** ADC read pin for measuring battery voltage.
 
-Currently for this issue, we recommend that users do not turn off the ADC function of P0.14 (D14) or set P0.14 (D14) to high during battery charging.
+When P0.14 is set HIGH, the battery voltage reading path is disabled and P0.31 may reach the input voltage limit of 3.6V, posing a risk of damaging the P0.31 pin. To safely read battery voltage, set P0.14 LOW (to enable the reading path) and then read the ADC value on P0.31.
+
+We recommend that users always keep P0.14 set LOW when reading battery voltage, and avoid setting P0.14 HIGH during battery charging.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/14.png" alt="pir" width={800} height="auto" /></p>
 
@@ -671,11 +732,11 @@ For more details, check the PMIC datasheet: [BQ25100](https://www.ti.com/lit/ds/
 **Hardware Design**
 - **📄[Datasheet]** [Nordic nRF52840 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
 - **📄[Datasheet]** [Flash P25Q16H-UXH-IR Datasheet](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
-- **📄[Schematic]** [XIAO nRF52840 Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
+- **📄[Schematic]** [XIAO nRF52840 Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Res/260828_XIAO_nRF52840.pdf)
 - **🗃️[PCB Design Files]** 
-  - [XIAO nRF52840 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
+  - [XIAO nRF52840 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-BLE/Res/260828_Seeed_Studio_XIAO_nRF52840_v1.2.zip)
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[Pinout Diagram]** [XIAO nRF52840 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx )
 
@@ -690,12 +751,12 @@ For more details, check the PMIC datasheet: [BQ25100](https://www.ti.com/lit/ds/
 - **📄[Datasheet]** [Flash-P25Q16H-UXH-IR Datasheet](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
 - **📄[Datasheet]** [Charger IC-BQ25101 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/BQ25101.pdf )
 - **📄[Datasheet]** [IMU-LSM6DS3TR Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/ST_LSM6DS3TR_Datasheet.pdf )
-- **📄[Datasheet]** [Mic-MSM261D3526H1CPM Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/mic-MSM261D3526H1CPM-ENG.pdf )
+- **📄[Datasheet]** [Mic-WMM7035DTTJ0](https://files.seeedstudio.com/wiki/XIAO-BLE/mic_WMM7035DTTJ0_Datasheet.pdf.pdf)
 - **📄[Schematic]** [XIAO nRF52840 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
 - **🗃️[PCB Design Files]** 
   - [XIAO nRF52840 Sense KiCad Project](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[Pinout Diagram]** [XIAO nRF52840 Sense Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Senese-pinout_sheet.xlsx )
 
@@ -718,11 +779,18 @@ For more details, check the PMIC datasheet: [BQ25100](https://www.ti.com/lit/ds/
   - [XIAO Plus Base （with bottom pad lead out） KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip )
   - [XIAO Plus Base （without bottom pad lead out） KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
 **Mechanical Design**
 - **🗃️[2D Dimensions]** [XIAO nRF52840 Sense Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Course Resources
 

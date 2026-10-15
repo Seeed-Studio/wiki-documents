@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-description: Cómo usar Entrenamiento (Detección de Objetos)
-title: Entrenamiento - Detección de Objetos
+description: Crea, entrena, prueba y despliega un modelo personalizado de detección de objetos en SenseCraft AI utilizando flujos de trabajo de entrenamiento rápido o de recopilación de imágenes.
+title: Entrenamiento de detección de objetos con SenseCraft AI
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/1.9.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-training-object-detection
 aliases:
@@ -9,55 +9,60 @@ aliases:
 last_update:
   date: 11/27/2024
   author: qiuyu wei
-createdAt: '2025-09-03'
-updatedAt: '2026-03-04'
+createdAt: '2024-11-27'
+updatedAt: '2026-08-14'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/
 ---
 
-# Tipo de entrenamiento - Detección de Objetos
+# Entrenar un modelo de detección de objetos con SenseCraft AI
 
-## Características de la detección de objetos
+## Funciones de la detección de objetos
 
-La Plataforma Seeed SenseCraft AI es una herramienta de entrenamiento de IA eficiente diseñada para tareas de detección de objetos. Construida sobre el avanzado **modelo de detección de objetos YOLO - World**, ofrece dos métodos de entrenamiento convenientes:
+La plataforma Seeed SenseCraft AI es una herramienta eficiente de entrenamiento de IA diseñada para tareas de detección de objetos. Basada en el avanzado **modelo de detección de objetos YOLO - World**, ofrece dos métodos de entrenamiento prácticos:
 
-- **Entrenamiento Rápido**
+- **Entrenamiento rápido**
 
-Características: No se requieren datos de imagen. Simplemente ingrese el nombre del objetivo para generar rápidamente un modelo de detección de objetos de una sola clase.
-Ventajas: Ideal para escenarios sencillos, permitiendo la creación y despliegue rápido de modelos.
+Características: No se requieren datos de imagen. Simplemente introduce el nombre del objetivo para generar rápidamente un modelo de detección de objetos de una sola clase.
+Ventajas: Ideal para escenarios sencillos, permitiendo una creación y despliegue de modelos rápidos.
 
-- **Entrenamiento con Recolección de Imágenes**
+- **Entrenamiento con recopilación de imágenes**
 
-Características: Combina el nombre del objetivo con datos de imagen cargados para el entrenamiento.
+Características: Combina el nombre del objetivo con los datos de imagen cargados para el entrenamiento.
 
-Ventajas: Aprovecha datos de imagen diversos para mejorar significativamente la precisión de detección del modelo generado, haciéndolo adecuado para aplicaciones que requieren alta precisión.
+Ventajas: Aprovecha datos de imagen diversos para mejorar significativamente la precisión de detección del modelo generado, lo que lo hace adecuado para aplicaciones que requieren alta precisión.
 
-Con estos dos métodos, la plataforma SenseCraft atiende diversas necesidades de entrenamiento de modelos de detección de objetos, simplificando las complejidades del desarrollo de IA mientras asegura tanto usabilidad como precisión.
+Con estos dos métodos, la plataforma SenseCraft cubre diversas necesidades de entrenamiento de modelos de detección de objetos, simplificando la complejidad del desarrollo de IA y garantizando al mismo tiempo usabilidad y precisión.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/2.0.png" style={{width:750, height:'auto'}}/></div>
 
-## Entrenamiento Rápido
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_training#/training" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>Open SenseCraft AI Training 🖱️</font></span></strong>
+    </a>
+</div><br />
 
-Crearemos una demostración simple para **reconocer humanos**. La función de entrenamiento rápido aprovecha las siguientes características principales del modelo de detección de objetos YOLO – World:
+## Entrenamiento rápido
 
-La función de entrenamiento rápido utiliza las fortalezas de YOLO para crear eficientemente modelos de detección de una sola clase. Al combinar pesos preentrenados, semántica de texto y extracción eficiente de características, genera un modelo personalizado, como para "humano", sin requerir datos de imagen.
-ç
+Crearemos una demostración sencilla para **reconocer personas**. La función de entrenamiento rápido aprovecha las siguientes características principales del modelo de detección de objetos YOLO – World:
+
+La función de entrenamiento rápido utiliza las fortalezas de YOLO para crear de forma eficiente modelos de detección de una sola clase. Al combinar pesos preentrenados, semántica de texto y extracción eficiente de características, genera un modelo a medida, por ejemplo para "human", sin necesidad de datos de imagen.
 
 ### Paso 1. Determinar el nombre del objeto
 
-Ingrese el nombre del objetivo en el cuadro de texto. Luego haga clic en **'Iniciar Entrenamiento'**.
+Introduce el nombre del objetivo en el cuadro de texto. Luego haz clic en **'Start Training'**.
 
 :::tip
-¡La sesión de entrenamiento durará 1-3 minutos, así que tenga paciencia!
+La sesión de entrenamiento durará de 1 a 3 minutos, ¡así que ten paciencia!
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/2.1.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Paso 2. Entrenar y cargar modelos
 
-Después de completar el entrenamiento del modelo, el modelo será desplegado y se seleccionará Grove Vision AI (V2) para el despliegue. Luego elija el puerto serie correcto para conectarse, y finalmente espere pacientemente 1-3 minutos hasta saber que el entrenamiento del modelo está completo.
+Tras completar el entrenamiento del modelo, este se desplegará y se seleccionará Grove Vision AI (V2) para el despliegue. Luego elige el puerto serie correcto para conectarte y, por último, espera pacientemente de 1 a 3 minutos hasta que el entrenamiento del modelo haya finalizado.
 
 :::caution
-Actualmente la selección de dispositivo en Detección de Objetos solo puede soportar **Grove Vision AI (V2)**.
+Actualmente, la selección de dispositivo en Object Detection solo puede admitir **Grove Vision AI (V2)**.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/2.2.png" style={{width:1000, height:'auto'}}/></div>
@@ -66,61 +71,67 @@ Actualmente la selección de dispositivo en Detección de Objetos solo puede sop
 
 ### Demostración de resultados
 
-Después de completar los pasos anteriores, el modelo será desplegado y ejecutado exitosamente, pero se debe tener cuidado con la configuración del **Umbral de Confianza** y el **valor del Umbral IoU**, que afectarán la capacidad de reconocimiento del modelo.
+Tras completar los pasos anteriores, el modelo se desplegará y ejecutará correctamente, pero es necesario prestar atención a la configuración de **Confidence Threshold** y **IoU Threshold value**, ya que afectarán a la capacidad de reconocimiento del modelo.
 
 :::tip
-**Umbral de Confianza:** La puntuación mínima de confianza que debe tener un modelo para considerar una detección válida, filtrando predicciones de baja confianza.
+**Confidence Threshold:** La puntuación mínima de confianza que debe tener un modelo para considerar una detección como válida, filtrando las predicciones de baja confianza.
 
-**Umbral IoU:** El valor mínimo de Intersección sobre Unión (IoU) requerido para clasificar una caja delimitadora predicha como un verdadero positivo, asegurando precisión en la medición de superposición entre cajas predichas y de verdad fundamental.
+**IoU Threshold:** El valor mínimo de Intersección sobre Unión (IoU) requerido para clasificar una caja delimitadora predicha como un verdadero positivo, garantizando precisión en la medición de solapamiento entre las cajas predicha y real.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/2.4.png" style={{width:800, height:'auto'}}/></div>
 
-## Entrenamiento con Recolección de Imágenes
+## Entrenamiento con recopilación de imágenes
 
-Haremos una demostración que **reconoce auriculares**. Basado en el modelo de detección de objetos YOLO – World, puede personalizar el entrenamiento para texto e imagen, lo que puede mejorar la precisión de detección del modelo generado.
+Haremos una demostración que **reconoce auriculares**. Basándote en el modelo de detección de objetos YOLO – World, puedes personalizar el entrenamiento para texto e imagen, lo que puede mejorar la precisión de detección del modelo generado.
 
 ### Paso 1. Determinar el nombre del objeto
 
-Primero ingrese el nombre del objetivo en el cuadro de texto y luego seleccione **Grove Vision AI (V2)** para conectar.
+Primero introduce el nombre del objetivo en el cuadro de texto y luego selecciona **Grove Vision AI (V2)** para conectarte.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/3.2.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-Si la conexión es exitosa, aparecerá una vista previa en vivo de la cámara en el cuadro de la derecha.
+Si la conexión es correcta, aparecerá una vista previa en vivo de la cámara en el cuadro de la derecha.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/3.3.png" style={{width:1000, height:'auto'}}/></div>
 
-### Paso 2. Capturar Imagen
+### Paso 2. Capturar imagen
 
-Luego apunte la cámara al objeto objetivo y haga clic en **'Capturar'**, luego enmarque el objeto objetivo con un cuadro rojo y finalmente haga clic en **'Confirmar'**.
+Luego apunta la cámara al objeto objetivo y haz clic en **'Capture'**, después encuadra el objeto objetivo con un recuadro rojo y, por último, haz clic en **'Confirm'**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/3.4.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-Cuanto más material de imagen, mejor será el reconocimiento del modelo.
+Cuanto más material de imagen haya, mejor será el reconocimiento del modelo.
 :::
 
 ### Paso 3. Entrenar y cargar modelos
 
-Haga clic en **'Entrenamiento'** y luego espere pacientemente a que el modelo termine de entrenar.
+Haz clic en **'Training'** y luego espera pacientemente a que el modelo termine de entrenarse.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/3.5.png" style={{width:1000, height:'auto'}}/></div>
 
-Y finalmente es momento del despliegue del modelo.
+Y por último llega el momento del despliegue del modelo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/3.6.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Demostración de resultados
 
-Una vez que se completen los pasos anteriores, el modelo será entrenado y desplegado exitosamente.
+Una vez completados los pasos anteriores, el modelo se habrá entrenado y desplegado correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/3.7.gif" style={{width:1000, height:'auto'}}/></div>
 
-## Soporte Técnico y Discusión de Productos
+## Guías relacionadas
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+- [Entrenar un modelo de clasificación con SenseCraft AI](/es/sensecraft-ai/tutorials/sensecraft-ai-training-classification/)
+- [Explorar la plataforma SenseCraft AI](/es/sensecraft-ai/overview/)
+- [Explorar el centro de documentación de SenseCraft AI](/es/sensecraft-ai/sensecraft-ai-main/)
+
+## Soporte técnico y debate sobre productos
+
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

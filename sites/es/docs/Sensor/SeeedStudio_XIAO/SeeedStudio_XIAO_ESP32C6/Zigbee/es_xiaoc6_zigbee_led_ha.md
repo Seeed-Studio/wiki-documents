@@ -7,7 +7,7 @@ last_update:
   date: 01/21/2025
   author: Citric
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/xiaoc6_zigbee_led_ha/
 ---
 

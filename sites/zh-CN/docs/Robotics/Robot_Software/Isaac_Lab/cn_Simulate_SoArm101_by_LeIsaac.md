@@ -10,7 +10,7 @@ last_update:
   date: 8/4/2025
   author: LiShanghang
 createdAt: '2025-08-01'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/simulate_soarm101_by_leisaac/
 ---
 
@@ -171,7 +171,7 @@ python scripts/environments/teleoperation/replay.py \
 cd ..
 git clone https://github.com/huggingface/lerobot.git
 cd lerobot
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install -e .
 ```

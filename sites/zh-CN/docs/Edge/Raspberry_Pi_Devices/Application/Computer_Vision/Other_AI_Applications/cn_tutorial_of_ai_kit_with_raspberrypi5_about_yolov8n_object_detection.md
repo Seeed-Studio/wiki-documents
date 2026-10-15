@@ -13,7 +13,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2024-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-17'
 url: https://wiki.seeedstudio.com/cn/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/
 ---
 

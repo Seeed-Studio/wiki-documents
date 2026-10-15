@@ -9,7 +9,7 @@ last_update:
   date: 1/31/2023
   author: Kewei Li
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/ja/SenseCAP-Vision-AI-Get-Started/
 ---
 

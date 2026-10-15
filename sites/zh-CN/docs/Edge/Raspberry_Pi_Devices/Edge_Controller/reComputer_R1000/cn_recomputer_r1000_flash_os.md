@@ -12,7 +12,7 @@ last_update:
   date: 10/25/2024
   author: Parker Hu
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/recomputer_r1000_flash_OS/
 ---
 # reComputer R1000 Raspbian 操作系统刷写到 eMMC

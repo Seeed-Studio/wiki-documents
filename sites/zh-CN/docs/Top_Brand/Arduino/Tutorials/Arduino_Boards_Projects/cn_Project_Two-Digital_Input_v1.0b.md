@@ -10,7 +10,7 @@ last_update:
   date: 2/15/2023
   author: jianjing Huang
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/Project_Two-Digital_Input_v1.0b/
 ---
 

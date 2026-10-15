@@ -1,0 +1,5 @@
+position: 7 # float position is supported
+label: 'その他のコミュニティファームウェア'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: other_community_firmware

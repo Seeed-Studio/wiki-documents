@@ -9,7 +9,7 @@ last_update:
   date: 10/12/2024
   author: Jason
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/grove_line_follower/
 ---
 

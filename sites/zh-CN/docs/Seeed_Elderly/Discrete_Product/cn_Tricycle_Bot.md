@@ -10,7 +10,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-05-12'
 url: https://wiki.seeedstudio.com/cn/Tricycle_Bot/
 ---
 
@@ -223,7 +223,7 @@ Grove Base Cape for BeagleBone v2 是一个适用于 BeagleBone 平台的 Grove 
   <img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/5.jpg" width="50%" height="50%" />
 </div>
 
-1. [组装三轮车机器人。](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introdutions)
+1. [组装三轮车机器人。](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introductions)
 2. 将 Grove 模块固定在侧板和顶部板上。
 3. 将 Grove 蜂鸣器连接到 Base Shield 的 **D4**，Grove 超声波测距传感器连接到 **D5**，LED 灯条连接到 **D6**。
 4. 完成组装！

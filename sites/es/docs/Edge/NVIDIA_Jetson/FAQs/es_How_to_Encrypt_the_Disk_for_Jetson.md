@@ -11,7 +11,7 @@ last_update:
   date: 10/11/2025
   author: Dayu
 createdAt: '2025-08-06'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-13'
 url: https://wiki.seeedstudio.com/es/how_to_encrypt_the_disk_for_jetson/
 ---
 

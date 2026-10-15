@@ -13,7 +13,7 @@ last_update:
   date: 05/7/2024
   author: ZhuYaoHui
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/es/a_loam/
 ---
 # Cómo ejecutar A-LOAM 3D SLAM en reComputer

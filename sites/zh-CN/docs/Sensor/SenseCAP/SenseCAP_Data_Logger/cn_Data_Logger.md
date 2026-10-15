@@ -10,7 +10,7 @@ last_update:
   date: 4/12/2023
   author: Yvonne
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/ja/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/
 ---
 

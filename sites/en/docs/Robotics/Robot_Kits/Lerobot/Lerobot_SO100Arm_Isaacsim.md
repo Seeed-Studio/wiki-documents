@@ -12,7 +12,7 @@ last_update:
   date: 01/16/2025
   author: ZhuYaoHui
 createdAt: '2025-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/lerobot_so100m_isaacsim/
 ---
 
@@ -74,7 +74,7 @@ The 3D printed parts and table clamps are not included in the product. However, 
 
 ## Prerequisites
 
-  1. [Be familiar with our Lerobot SO100Arm basic usage tutorial](/lerobot_so100m).
+  1. [Be familiar with our Lerobot SO100Arm basic usage tutorial](/lerobot_so100m_new).
   2. [Install Isaac Sim according to the tutorial](https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_workstation.html)
   3. [Complete the Installation and Configuration of ROS2 According to the Tutorial](https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_ros.html)
 
@@ -88,7 +88,7 @@ The 3D printed parts and table clamps are not included in the product. However, 
     cd lerobot
   ```
 
-  Ensure that you have installed the [Lerobot environment according to the tutorial](/lerobot_so100m)
+  Ensure that you have installed the [Lerobot environment according to the tutorial](/lerobot_so100m_new)
   
 ## Import the URDF into Isaac Sim
 

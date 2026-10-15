@@ -11,7 +11,7 @@ last_update:
   date: 03/01/2023
   author: gunengyu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Grove-Time_of_Flight_Distance_Sensor-VL53L0X/
 ---
 

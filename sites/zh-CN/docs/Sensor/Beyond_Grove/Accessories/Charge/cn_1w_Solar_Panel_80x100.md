@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/1w_Solar_Panel_80x100/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/solarb.jpg)

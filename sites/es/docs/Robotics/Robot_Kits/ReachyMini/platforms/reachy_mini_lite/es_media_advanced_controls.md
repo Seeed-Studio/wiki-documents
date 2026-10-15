@@ -1,5 +1,5 @@
 ---
-description: Controles avanzados de medios para Reachy Mini Lite, incluyendo ajustes de cámara mediante OpenCV y GStreamer v4l2src, además de la configuración de micrófono y altavoz.
+description: Controles avanzados de medios para Reachy Mini Lite, incluyendo ajustes de cámara mediante OpenCV y GStreamer v4l2src, además de configuración de micrófono y altavoz.
 title: Controles avanzados de medios
 slug: /reachymini_platforms_reachy_mini_lite_media_advanced_controls
 keywords:
@@ -16,10 +16,9 @@ last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-05-19'
 url: https://wiki.seeedstudio.com/es/reachymini_platforms_reachy_mini_lite_media_advanced_controls/
 ---
 
@@ -31,21 +30,9 @@ Esta página describe ajustes avanzados para afinar la cámara y el sistema de s
 
 La cámara Raspberry Pi está montada en un adaptador CSI-a-USB y el sistema la detecta como una cámara UVC. Se puede acceder a ella directamente desde cualquier programa capaz de abrir un dispositivo de cámara.
 
-### Windows y macOS
+### Acceso a la cámara
 
-Actualmente, el backend predeterminado para estas plataformas es OpenCV. Los parámetros se pueden configurar en el [código](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_opencv.py):
-
-```python
-self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self._resolution.value[0])
-self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self._resolution.value[1])
-
-# Example camera control settings:
-# self.cap.set(cv2.CAP_PROP_BRIGHTNESS, 0.5)
-# self.cap.set(cv2.CAP_PROP_CONTRAST, 0.5)
-# self.cap.set(cv2.CAP_PROP_SATURATION, 64)
-```
-
-Consulta la sección de Linux más abajo para ver una lista de parámetros disponibles.
+El daemon gestiona el hardware de la cámara y expone los fotogramas mediante un endpoint IPC local o streaming WebRTC. El código del lado del cliente lee los fotogramas a través de MediaManager usando el backend LOCAL o WEBRTC.
 
 ### Linux
 

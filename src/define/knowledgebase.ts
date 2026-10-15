@@ -1,4 +1,4 @@
-export type Locale = 'en' | 'cn' | 'ja' | 'es';
+export type Locale = 'en' | 'cn' | 'ja' | 'es' | 'pt-br';
 
 export type TagType =
   | 'Frequent'
@@ -122,6 +122,18 @@ const TAG_LABELS: Record<Locale, Record<TagType, string>> = {
     Project: 'Proyecto',
     Tech_Support: 'Soporte técnico',
   },
+  'pt-br': {
+    Frequent: 'Destaque',
+    Sensing: 'Sensoriamento',
+    MCU: 'MCU',
+    SBC: 'SBC',
+    X86: 'X86',
+    Edge: 'Edge',
+    Network: 'Rede',
+    Cloud: 'Nuvem',
+    Project: 'Projeto',
+    Tech_Support: 'Suporte técnico',
+  },
 };
 
 const FILTER_COPY: Record<Locale, FilterCopy> = {
@@ -151,6 +163,14 @@ const FILTER_COPY: Record<Locale, FilterCopy> = {
     countLabel: (count) =>
       count === 1 ? '1 resultado' : `${count} resultados`,
     ariaLabel: 'Cambiar entre OR y AND para las etiquetas seleccionadas',
+    or: 'OR',
+    and: 'AND',
+  },
+  'pt-br': {
+    title: 'Filtros',
+    countLabel: (count) =>
+      count === 1 ? '1 resultado' : `${count} resultados`,
+    ariaLabel: 'Alternar entre OR e AND para as tags selecionadas',
     or: 'OR',
     and: 'AND',
   },
@@ -192,6 +212,15 @@ const PAGE_COPY: Record<Locale, PageCopy> = {
     noResultTitle: 'Sin resultados por ahora',
     seeMoreLabel: 'Ver más',
     filters: FILTER_COPY.es,
+  },
+  'pt-br': {
+    headerTitle: 'Central de ajuda',
+    headerDescription:
+      'Bem-vindo. Aqui você encontra perguntas frequentes, guias de solução de problemas e atalhos para os canais de suporte da Seeed Studio.',
+    searchPlaceholder: 'Pesquise produtos, palavras-chave ou problemas…',
+    noResultTitle: 'Ainda não há resultados',
+    seeMoreLabel: 'Ver mais',
+    filters: FILTER_COPY['pt-br'],
   },
 };
 
@@ -885,6 +914,182 @@ const SECTIONS: Record<Locale, KnowledgebaseSection[]> = {
           links: [
             {
               label: 'Abrir discusión en GitHub',
+              url: 'https://github.com/Seeed-Studio/wiki-documents/discussions/69',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  'pt-br': [
+    {
+      cards: [
+        {
+          preview: 'knowledge_base1.png',
+          source: 'https://wiki.seeedstudio.com/pt-br/reTerminal-new_FAQ',
+          tags: ['Edge', 'SBC'],
+          links: [
+            {
+              label: 'Como solucionar o problema de tela preta no reTerminal',
+              url: 'https://wiki.seeedstudio.com/pt-br/reterminal_black_screen',
+            },
+            {
+              label:
+                'Como gravar Raspberry Pi OS, Ubuntu 64 bits ou outro sistema no eMMC',
+              url: 'https://wiki.seeedstudio.com/pt-br/flash_different_os_to_emmc',
+            },
+            {
+              label:
+                'Como fazer login via SSH no Raspberry Pi OS/Ubuntu ou outro sistema por Wi-Fi/Ethernet',
+              url: 'https://wiki.seeedstudio.com/pt-br/log_rpios_use_ssh_over_wifi_ethernet',
+            },
+          ],
+        },
+        {
+          preview: 'knowledge_base2.png',
+          source: 'https://wiki.seeedstudio.com/pt-br/XIAO_FAQ',
+          tags: ['Sensing', 'MCU'],
+          links: [
+            {
+              label: 'Como verificar a voltagem da bateria',
+              url: 'https://wiki.seeedstudio.com/pt-br/check_battery_voltage',
+            },
+            {
+              label: 'Observação sobre a alocação de IO do XIAO ESP32C3',
+              url: 'https://wiki.seeedstudio.com/pt-br/exp32c3_d9_d6_d8',
+            },
+            {
+              label:
+                'O que fazer quando o upload falha / o programa apresenta comportamento anormal / a porta do dispositivo não é encontrada',
+              url: 'https://wiki.seeedstudio.com/pt-br/noport_upload_fails',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      cards: [
+        {
+          preview: 'knowledge_base3.png',
+          source: 'https://wiki.seeedstudio.com/pt-br/ODYSSEY_FAQ',
+          tags: ['Edge', 'SBC', 'X86'],
+          links: [
+            {
+              label: 'Reinstalar o Windows original',
+              url: 'https://wiki.seeedstudio.com/pt-br/reinstall_the_Original_Windows',
+            },
+            {
+              label:
+                'Solução de problemas relacionados ao BIOS (WiFi/Bluetooth/Ventoinha/Ligação automática/Boot Guard/GPIO)',
+              url: 'https://wiki.seeedstudio.com/pt-br/Troubleshooting_BIOS-Related_Issues',
+            },
+            {
+              label:
+                'O Arduino IDE não reconhece o microcontrolador integrado no ODYSSEY X86J4105/X86J4125',
+              url: 'https://wiki.seeedstudio.com/pt-br/not_recognize-onboard-microcontroller',
+            },
+          ],
+        },
+        {
+          preview: 'knowledge_base4.png',
+          source: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ',
+          tags: ['Edge'],
+          links: [
+            {
+              label:
+                'O espaço restante no eMMC do reComputer é de apenas cerca de 2 GB. Como resolver o problema de espaço insuficiente?',
+              url: 'https://wiki.seeedstudio.com/pt-br/solution_of_insufficient_space',
+            },
+            {
+              label:
+                'Solução de problemas de instalação para placas NVIDIA Jetson',
+              url: 'https://wiki.seeedstudio.com/pt-br/Troubleshooting_Installation',
+            },
+          ],
+        },
+        {
+          preview: 'knowledge_base5.png',
+          source: 'https://wiki.seeedstudio.com/pt-br/FAQs_For_openWrt',
+          tags: ['Network'],
+          links: [
+            {
+              label:
+                'Como reparar meu dispositivo quando aparece "Read Only Root filesystem"?',
+              url: 'https://wiki.seeedstudio.com/pt-br/change_default_gateway_IP',
+            },
+            {
+              label:
+                'O que fazer se eu tiver a placa Dual Gigabit Ethernet Carrier Board versão não-CM4 e conectar um CM4 sem eMMC?',
+              url: 'https://wiki.seeedstudio.com/pt-br/use_a_CM4_witout_eMMC',
+            },
+          ],
+        },
+        {
+          preview: 'knowledge_base6.png',
+          source: 'https://wiki.seeedstudio.com/pt-br/wio_terminal_faq',
+          tags: ['Sensing', 'MCU'],
+          links: [
+            {
+              label:
+                'Como evitar a perda do programa após reiniciar o Wio Terminal várias vezes?',
+              url: 'https://wiki.seeedstudio.com/pt-br/Program_loss_by_repeated_power',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: 'Suporte técnico',
+      description: 'Canais oficiais de suporte da Seeed Studio',
+      cards: [
+        {
+          heading: 'Troca de ideias',
+          description:
+            'Participe de discussões sobre produtos, compartilhe experiências e obtenha ajuda da comunidade e dos especialistas técnicos.',
+          preview: 'tech_support1.png',
+          tags: ['Tech_Support'],
+          links: [
+            {
+              label: 'Visitar o fórum da comunidade',
+              url: 'https://forum.seeedstudio.com/',
+            },
+          ],
+        },
+        {
+          heading: 'Suporte especializado',
+          description:
+            'Obtenha suporte profissional por e-mail e ajuda direta de nossos especialistas enviando seus problemas de produto.',
+          preview: 'tech_support2.png',
+          tags: ['Tech_Support'],
+          links: [
+            {
+              label: 'Contatar o suporte técnico',
+              url: 'https://www.seeedstudio.com/contacts',
+            },
+          ],
+        },
+        {
+          heading: 'Conversa em grupo',
+          description:
+            'Participe do nosso canal ativo no Discord para conversar em tempo real com a equipe da Seeed Studio.',
+          preview: 'tech_support3.png',
+          tags: ['Tech_Support'],
+          links: [
+            {
+              label: 'Entrar no servidor do Discord',
+              url: 'https://discord.gg/eWkprNDMU7',
+            },
+          ],
+        },
+        {
+          heading: 'Sugestões para o Wiki',
+          description:
+            'Colabore com nossa equipe de desenvolvimento do wiki compartilhando feedback e ideias de melhoria para o site.',
+          preview: 'tech_support4.png',
+          tags: ['Tech_Support'],
+          links: [
+            {
+              label: 'Abrir discussão no GitHub',
               url: 'https://github.com/Seeed-Studio/wiki-documents/discussions/69',
             },
           ],

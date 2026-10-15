@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2023-03-06'
 url: https://wiki.seeedstudio.com/IoT-into-the-wild-contest/
 ---
 # IoT Into the Wild Contest for Sustainable Planet 2022

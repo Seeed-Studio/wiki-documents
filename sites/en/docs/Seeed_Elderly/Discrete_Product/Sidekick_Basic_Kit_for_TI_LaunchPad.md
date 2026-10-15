@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-02'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/Sidekick_Basic_Kit_for_TI_LaunchPad/
 ---
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_TI_LaunchPad/img/Sidekick_Basic_Kit_for_TI_LaunchPad_product_view_1200_s.jpg)

@@ -118,7 +118,18 @@ function IndexForm() {
         visible={isSuccessModalOpen}
         onClose={() => setIsSuccessModalOpen(false)}
         title="Submission successful"
-        content="We are appreciated your kindness helping! Our manager Matthew(<a href='mailto:opensource@seeed.cc' target='_blank'>opensource@seeed.cc</a>) will contact you soon enough!  "
+        content={
+          <>
+            {'We are appreciated your kindness helping! Our manager Matthew('}
+            <a
+              href="mailto:opensource@seeed.cc"
+              target="_blank"
+            >
+              opensource@seeed.cc
+            </a>
+            {') will contact you soon enough!  '}
+          </>
+        }
       />
     </div>
   )

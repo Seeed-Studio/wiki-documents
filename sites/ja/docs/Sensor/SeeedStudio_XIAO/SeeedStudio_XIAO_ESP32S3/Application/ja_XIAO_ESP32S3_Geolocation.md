@@ -10,7 +10,7 @@ last_update:
   date: 06/14/2023
   author: Citric
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-29'
 url: https://wiki.seeedstudio.com/ja/geolocation_tracker_with_XIAO_ESP32S3/
 ---
 

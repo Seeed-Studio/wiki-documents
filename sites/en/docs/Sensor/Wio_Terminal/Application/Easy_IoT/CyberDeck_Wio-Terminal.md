@@ -6,7 +6,7 @@ last_update:
   date: 12/09/2024
   author: Eric Pan
 createdAt: '2024-12-09'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/CyberDeck_Wio-Terminal/
 ---
 

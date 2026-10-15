@@ -7,14 +7,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /xiao_esp32c5_getting_started
 last_update:
-  date: 11/26/2025
+  date: 7/9/2026
   author: Zeller
   sidebar_position: 0
 createdAt: '2025-12-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/ja/xiao_esp32c5_getting_started/
 ---
-
 ## はじめに
 
 <div class="table-center">
@@ -86,17 +85,17 @@ url: https://wiki.seeedstudio.com/ja/xiao_esp32c5_getting_started/
         </tr>
         <tr>
             <th>オンボードボタン</th>
-            <td>Reset / Boot Button</td>
-            <td>Reset / Boot Button</td>
-            <td>Reset / Boot Button</td>
-            <td>Reset button / Boot button</td>
+            <td>Reset / Boot ボタン</td>
+            <td>Reset / Boot ボタン</td>
+            <td>Reset / Boot ボタン</td>
+            <td>Reset ボタン / Boot ボタン</td>
         </tr>
         <tr>
-            <th>オンボードLED</th>
-            <td>Charge / USER LED</td>
-            <td>Charge / USER LED</td>
-            <td>Charge LED</td>
-            <td>Charge / USER LED</td>
+            <th>オンボード LED</th>
+            <td>充電 / USER LED</td>
+            <td>充電 / USER LED</td>
+            <td>充電 LED</td>
+            <td>充電 / USER LED</td>
         </tr>
         <tr>
             <th>バッテリー充電チップ</th>
@@ -116,56 +115,50 @@ url: https://wiki.seeedstudio.com/ja/xiao_esp32c5_getting_started/
 - **優れた RF 性能:** 外部 RF アンテナを搭載
 - **バッテリー充電チップ:** リチウムバッテリーの充放電管理をサポート
 - **豊富なオンチップリソース:** 384 KB オンチップ SRAM、320 KB ROM
-- **超小型サイズ:** 親指ほどの大きさ（21x17.8mm）の XIAO シリーズクラシックフォームファクタで、ウェアラブルデバイスや小型プロジェクトに最適
+- **超小型サイズ:** 親指ほどの大きさ（21×17.8 mm）の XIAO シリーズクラシックフォームファクタで、ウェアラブルデバイスや小型プロジェクトに最適
 - **信頼性の高いセキュリティ機能**: AES-128/256、SHA ファミリハッシュ、HMAC、専用デジタル署名ペリフェラル、および Secure Boot (V2) をサポートする暗号ハードウェアアクセラレータ
-- **豊富なインターフェース**: 1×I2C、1×SPI、2×UART、最大 11×GPIO（PWM 対応）、5×ADC チャネル、および JTAG（裏面パッド）のボンディングパッドインターフェース
+- **豊富なインターフェース**: 1×I2C、1×SPI、2×UART、最大 11×GPIO（PWM 対応）、5×ADC チャンネル、および JTAG（裏面パッド）のボンディングパッドインターフェース
 - 片面実装コンポーネント、表面実装設計
 
 ## ハードウェア概要
 
-<table align="center">
- <tr>
-     <th>XIAO ESP32-C5 表示図</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/front.png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32-C5 ピン一覧</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/PinList_1.png" style={{width:1000, height:'auto'}}/></div></td>
- </tr>
-</table>
+### 表面
 
- ## **ピンマップ**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### 裏面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+## ピンマップ
+
 | XIAO ピン              | 機能       | チップピン | 代替機能                    | 説明                          |
 | :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
-| 5V                     | VBUS       |           |                          | 電源入力/出力                |
+| 5V                     | VBUS       |           |                          | 電源入力/出力                 |
 | GND                    |            |           |                          |                              |
-| 3V3                    | 3V3_OUT    |           |                          | 電源出力                     |
-| D0                     | Analog     | GPIO1     | LP_UART_DSRN, LP_GPIO1   | GPIO、ADC                    |
+| 3V3                    | 3V3_OUT    |           |                          | 電源出力                      |
+| D0                     | アナログ   | GPIO1     | LP_UART_DSRN, LP_GPIO1   | GPIO、ADC                    |
 | D1                     |            | GPIO0     | LP_UART_DTRN, LP_GPIO0   | GPIO                         |
 | D2                     |            | GPIO25    |                          | GPIO                         |
 | D3                     |            | GPIO7     | SDIO_DATA1               | GPIO                         |
-| D4                     | SDA        | GPIO23    |                          | GPIO、I2C データ             |
-| D5                     | SCL        | GPIO24    |                          | GPIO、I2C クロック           |
-| D6                     | TX         | GPIO11    |                          | GPIO、UART 送信              |
-| D7                     | RX         | GPIO12    |                          | GPIO、UART 受信              |
-| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO、SPI クロック           |
-| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO、SPI データ             |
-| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO、SPI データ             |
+| D4                     | SDA        | GPIO23    |                          | GPIO、I2C データ              |
+| D5                     | SCL        | GPIO24    |                          | GPIO、I2C クロック            |
+| D6                     | TX         | GPIO11    |                          | GPIO、UART 送信               |
+| D7                     | RX         | GPIO12    |                          | GPIO、UART 受信               |
+| D8                     | SCK        | GPIO8     |                          | GPIO、SPI クロック            |
+| D9                     | MISO       | GPIO9     |                          | GPIO、SPI データ              |
+| D10                    | MOSI       | GPIO10    |                          | GPIO、SPI データ              |
 | MTDO                   |            | GPIO5     | LP_UART_TXD, LP_GPIO5    | JTAG                         |
 | MTDI                   |            | GPIO3     | LP_I2C_SCL, LP_GPIO3     | JTAG、ADC                    |
 | MTCK                   |            | GPIO4     | LP_UART_RXD, LP_GPIO4    | JTAG、ADC                    |
 | MTMS                   |            | GPIO2     | LP_I2C_SDA, LP_GPIO2     | JTAG、ADC                    |
-| ADC_BAT                |            | GPIO6    |                          | BAT 電圧値を読み取る         |
-| ADC_CRL                |            | GPIO26    |                          | 省電力のため測定回路を制御（有効/無効）する |
+| ADC_BAT                |            | GPIO6    |                          | BAT 電圧値の読み取り          |
+| ADC_CRL                |            | GPIO26    |                          | 省電力のために測定回路を制御（有効/無効）します。   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
-| Boot                   |            | GPIO28    |                          | ブートモードに入る           |
-| U.FL-R-SMT1            |            | LNA_IN    |                          | UFL アンテナ                 |
-| CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_Red                  |
-| USER_LED               |            | GPIO27    |                          | User Light_Yellow            |
+| Boot                   |            | GPIO28    |                          | ブートモードに入る            |
+| U.FL-R-SMT1            |            | LNA_IN    |                          | UFL アンテナ                  |
+| CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_赤                   |
+| USER_LED               |            | GPIO27    |                          | ユーザーライト_黄             |
 ## はじめに
 
 XIAO ESP32-C5 をすばやく使い始められるように、以下のハードウェアおよびソフトウェアの準備を読んで、XIAO を準備してください。
@@ -174,7 +167,7 @@ XIAO ESP32-C5 をすばやく使い始められるように、以下のハード
 
 次のものを用意する必要があります：
 
-- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
+- 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html)
 - 1 x コンピュータ
 - 1 x USB Type-C ケーブル
 
@@ -209,29 +202,29 @@ XIAO ESP32-C5 に推奨される開発ツールは Arduino IDE です。その�
 初めて Arduino を使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 :::
 
-- **ステップ 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
+- **Step 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
       <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
   </div>
   <br></br>
 
-- **ステップ 2.** Arduino アプリケーションを起動します。
-- **ステップ 3.**  BOARDS MANAGER を開き -> **esp32** を検索 -> バージョン 3.3.5 以上をインストールします
+- **Step 2.** Arduino アプリケーションを起動します。
+- **Step 3.**  BOARDS MANAGER を開き -> **esp32** を検索 -> バージョン 3.3.5 以上をインストールします
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
 ### プログラムを書き込む
 
-以下では、点灯プログラムを例として説明します
+以下では、点灯プログラムを例として説明します。
 
-**ステップ 1.** **XIAO_ESP32C5** と PORT を選択します。PORT が分からない場合は、XIAO_ESP3-2C5 を抜き差しして確認してください。
+**Step 1.** **XIAO_ESP32C5** と PORT を選択します。PORT が分からない場合は、XIAO_ESP3-2C5 を挿し直したり抜き差しして確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
 **ステップ 2.** スケッチにコードを貼り付けます
 
-**LED_BUILTIN** は、開発ボード上の **L LED** に対応します。
+**LED_BUILTIN** は、開発ボード上の **L LED** に対応しています。
 
 ```cpp
 void setup() {
@@ -251,21 +244,21 @@ void loop() {
 }
 ```
 
-**ステップ 3.** クリックしてアップロードします
+**ステップ 3.** クリックしてアップロード
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
 動作デモ：
 
-プログラムをアップロードすると、L インジケータライトが 1 秒間隔で点滅し、同時にシリアルモニタには LED ON と LED OFF が表示されます。
+プログラムをアップロードすると、L インジケータランプが 1 秒間隔で点滅し、同時にシリアルモニタには LED ON と LED OFF が出力されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/uoload_2.png" style={{width:800, height:'auto'}}/></div>
 
 ## ディープスリープモード
 
-XIAO ESP32-C5 には、ディープスリープおよびウェイクアップ機能が搭載されています。この例では、ピン **D0** のハイレベルトリガを利用して、ディープスリープからデバイスをウェイクアップします。<br/>
-これはハードウェアが、さまざまな回路設計に対応するためにハイレベルおよびローレベルトリガの両方をサポートしており、設定可能なオプションであることに注意してください。
+XIAO ESP32-C5 にはディープスリープおよびウェイクアップ機能が搭載されています。この例では、ピン **D0** の High レベルトリガにより、ディープスリープからデバイスをウェイクアップします。<br/>
+これはハードウェアが High レベルと Low レベルの両方のトリガをサポートしており、さまざまな回路設計に対応できるよう、設定可能なオプションであることに注意してください。
 
 ```cpp
 #define WAKEUP_PIN D0 // LP_GPIO1
@@ -313,7 +306,7 @@ void setup(){
 void loop(){}
 ```
 
-XIAO がディープスリープに入る前に、十分に素早くシリアルモニタをオンにできれば、下図のようなメッセージ出力を確認できます。これは、XIAO が現在**スリープ状態**であることを意味します。その後、ボタンを押すことで状態を確認し、起動させることもできます。また、デバイスがウェイクアップしたかどうかを確認するために、**L LED** のオン・オフ状態を観察することもできます。一度ウェイクアップすると、点滅動作を示します。
+XIAO がディープスリープに入る前に素早くシリアルモニタを起動できれば、下図のようなメッセージ出力を確認できます。これは XIAO が現在**スリープ状態**であることを意味します。その後、ボタンを押すことで状態を確認し、起動させることもできます。また、デバイスがウェイクアップしたかどうかを確認するために、**L LED** のオン・オフ状態を観察することもできます。ウェイクアップすると、点滅動作を示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -332,13 +325,13 @@ XIAO ESP32-C5 は、3.7V リチウムバッテリーを電源入力として使�
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_wiring.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-はんだ付けの際には、正極と負極を短絡させてバッテリーや機器を損傷させないよう十分注意してください。
+はんだ付けの際には、正極と負極を短絡させてバッテリーや機器を損傷しないよう十分注意してください。
 :::
 
 **バッテリー使用上の注意：**
 
 1. 規格を満たした認定バッテリーを使用してください。
-2. バッテリー使用中でも、XIAO はデータケーブルを介してコンピュータデバイスに接続できます。XIAO には保護回路チップが内蔵されているため、安全にご使用いただけます。
+2. バッテリー使用中でも、XIAO はデータケーブルを介してコンピュータ機器に接続できます。XIAO には保護回路チップが内蔵されているため、安全にご使用いただけます。
 3. XIAO ESP32-C5 がバッテリーで給電されている場合、**C LED** が点灯します。これを基準として、充電管理が行われているかどうかを判断できます。
 
 ### バッテリー電圧の確認
@@ -373,8 +366,8 @@ void loop() {
 - **`analogReadMilliVolts(BAT_Voltage_Read)`**
 
   - この関数は、`BAT_VOLT_PIN` ピンから現在のアナログ電圧を読み取り、ミリボルト（mV）単位の較正済み電圧値を返すために使用されます。
-  - 従来の `analogRead()` が生の ADC 値のみを提供するのとは異なり、`analogReadMilliVolts()` はチップに組み込まれた工場出荷時のキャリブレーションパラメータを自動的に適用します。これにより、電圧測定の精度が向上し、線形性が改善され、手動での ADC から電圧への変換が不要になります。
-  - 電圧サンプリング処理中は、`for` ループを通じて**16 回の繰り返しサンプリング**が行われ、その結果が加算されます。複数回サンプリングを行う目的は、瞬間的なノイズや離散誤差を抑制し、測定の安定性を高めることです。最後に、累積値をサンプル数（16）で割ることで、より平滑で信頼性の高い平均電圧値を得ます。
+  - 従来の `analogRead()` が生の ADC 値のみを提供するのとは異なり、`analogReadMilliVolts()` はチップに組み込まれた工場出荷時の較正パラメータを自動的に適用します。これにより、より高い精度と電圧測定の直線性が得られ、手動での ADC から電圧への変換が不要になります。
+  - 電圧サンプリング処理中は、`for` ループを通じて**16 回の繰り返しサンプリング**が行われ、その結果が加算されます。複数回サンプリングを行う目的は、一時的なノイズや離散誤差を抑制し、測定の安定性を向上させることです。最後に、累積値をサンプル数（16）で割ることで、より平滑で信頼性の高い平均電圧値を得ます。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
@@ -388,8 +381,9 @@ void loop() {
 - **📄[データシート]** [Espressif ESP32-C5 Datasheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf )
 - **📄[回路図]** [XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf )
 - **🗃️[PCB 設計ファイル]** [XIAO ESP32-C5 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip )
-- **🗃️[PCB 設計ライブラリ]** 
- - [XIAO シリーズ KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **🗃️[PCB ライブラリ]** 
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip)
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[ピン配置図]** [XIAO ESP32-C5 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/XIAO_ESP32C5_Pinout.xlsx )
 
 **メカニカル設計**
@@ -397,7 +391,7 @@ void loop() {
 
 ## 技術サポート & 製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

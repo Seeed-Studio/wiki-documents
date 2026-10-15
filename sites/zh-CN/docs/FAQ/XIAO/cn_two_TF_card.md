@@ -6,7 +6,7 @@ last_update:
   date: 2023/6/30
   author: cheng.tang
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/two_TF_card/
 ---
 问：这会不会产生冲突？

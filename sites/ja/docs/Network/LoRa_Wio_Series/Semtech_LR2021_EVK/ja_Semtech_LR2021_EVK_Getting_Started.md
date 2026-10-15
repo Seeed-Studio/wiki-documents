@@ -11,7 +11,7 @@ last_update:
   date: 12/30/2025
   author: David Du
 createdAt: '2026-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-05'
 url: https://wiki.seeedstudio.com/ja/semtech_lr2021_evk_getting_started/
 ---
 

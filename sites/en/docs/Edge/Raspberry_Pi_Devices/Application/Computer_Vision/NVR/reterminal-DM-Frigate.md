@@ -13,7 +13,7 @@ last_update:
   date: 8/25/2023
   author: Kasun Thushara
 createdAt: '2023-08-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/reterminal-DM-Frigate/
 ---
 

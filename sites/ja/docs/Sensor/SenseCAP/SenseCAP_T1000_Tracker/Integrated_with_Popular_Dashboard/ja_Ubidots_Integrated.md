@@ -9,7 +9,7 @@ last_update:
   date: 8/16/2023
   author: Jessie
 createdAt: '2023-08-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_Ubidots_TTS/
 ---
 

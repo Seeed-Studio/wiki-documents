@@ -9,7 +9,7 @@ sku: 101990962
 date: 11/26/2025
 author: Twelve
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101/
 ---
 

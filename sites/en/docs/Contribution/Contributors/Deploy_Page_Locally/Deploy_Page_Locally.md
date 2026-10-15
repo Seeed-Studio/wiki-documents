@@ -9,7 +9,7 @@ last_update:
   date: 3/14/2023
   author: Matthew
 createdAt: '2023-03-14'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/Deploy_Page_Locally/
 ---
 

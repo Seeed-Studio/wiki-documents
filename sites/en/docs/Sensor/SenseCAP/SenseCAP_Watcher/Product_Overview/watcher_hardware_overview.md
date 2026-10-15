@@ -8,7 +8,7 @@ last_update:
   date: 10/18/2024
   author: Citric, Djair
 createdAt: '2024-10-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/watcher_hardware_overview/
 ---
 

@@ -10,10 +10,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sense_filesystem
 last_update:
-  date: 09/15/2024
+  date: 08/06/2026
   author: Priyanshu Roy
 createdAt: '2022-11-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/
 ---
 

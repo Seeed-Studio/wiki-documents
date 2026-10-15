@@ -9,7 +9,7 @@ last_update:
   date: 03/01/2023
   author: Matthew
 createdAt: '2023-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2024-09-01'
 url: https://wiki.seeedstudio.com/Contribution-Guide/
 ---
 

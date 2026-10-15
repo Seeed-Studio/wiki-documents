@@ -12,7 +12,7 @@ last_update:
   date: 6/16/2025
   author: Jiahao Li
 createdAt: '2025-06-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-17'
 url: https://wiki.seeedstudio.com/ja/real-time-ocr/
 ---
 

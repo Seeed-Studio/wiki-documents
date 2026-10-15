@@ -10,7 +10,7 @@ last_update:
   date: 1/11/2023
   author: jianjing Huang
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-08-05'
 url: https://wiki.seeedstudio.com/es/Grove-Starter-Kit-for-Raspberry-Pi-Pico/
 ---
 
@@ -405,7 +405,7 @@ Ahora deberías ver la temperatura y la humedad mostradas en la pantalla OLED, s
 
 **Paso 2.** Conecta el Grove 16x2 LCD (Blanco sobre Azul) al puerto I2C1 del Grove Shield.
 
-**Paso 3.** Conecta el Grove Sensor de Temperatura y Humedad V2.0 (DHT20) al puerto D18 del Grove Shield.
+**Paso 3.** Conecta el Grove Sensor de Temperatura y Humedad V2.0 (DHT20) al puerto I2C0 del Grove Shield.
 
 **Paso 4.** Inserta el Grove Shield en la Pi Pico.
 
@@ -450,7 +450,7 @@ while True:
    - [DHT20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht/DHT20.py)
    - [lcd1602.py](https://files.seeedstudio.com/wiki/Grove-16x2_LCD--White_on_Blue/lcd1602.py)
 
-3. Abre **DHT20.py** en Thonny IDE, haz clic en `File -> Save As -> MicroPython device` y guarda el archivo con el nombre **DHT20.py** en tu dispositivo.
+3. Abre **DHT20.py** en Thonny IDE, haz clic en `File -> Save As -> MicroPython device` y guarda el archivo con el nombre **dht20.py** en tu dispositivo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/saveas.png" style={{width:750, height:'auto'}}/></div>
 

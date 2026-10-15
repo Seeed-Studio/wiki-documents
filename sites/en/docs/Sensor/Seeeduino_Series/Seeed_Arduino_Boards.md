@@ -9,7 +9,7 @@ last_update:
   date: 02/02/2023
   author: w0x7ce
 createdAt: '2023-02-01'
-updatedAt: '2026-03-03'
+updatedAt: '2025-04-27'
 url: https://wiki.seeedstudio.com/Seeed_Arduino_Boards/
 ---
 

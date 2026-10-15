@@ -13,7 +13,7 @@ last_update:
   date: 2025/06/18
   author: ZhuYaohui
 createdAt: '2025-06-19'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-28'
 url: https://wiki.seeedstudio.com/es/slamtec/
 ---
 

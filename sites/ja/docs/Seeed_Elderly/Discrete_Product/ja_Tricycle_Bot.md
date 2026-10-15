@@ -10,7 +10,7 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-05-12'
 url: https://wiki.seeedstudio.com/ja/Tricycle_Bot/
 ---
 
@@ -228,7 +228,7 @@ Grove Base Cape for BeagleBone v2 は、BeagleBone プラットフォーム用�
   <img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/5.jpg" width="50%" height="50%" />
 </div>
 
-1. [三輪ロボットを組み立てます。](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introdutions)
+1. [三輪ロボットを組み立てます。](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introductions)
 2. Grove モジュールを側面と上部プレートに固定します。
 3. Grove Buzzer を **D4**、Grove Ultrasonic Ranger を **D5**、LED ストリップを **D6** に Base Shield 経由で接続します。
 4. 完成です！

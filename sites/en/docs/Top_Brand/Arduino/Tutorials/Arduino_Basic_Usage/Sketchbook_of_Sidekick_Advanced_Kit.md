@@ -8,7 +8,7 @@ last_update:
   author: w0x7ce
 no_comments: false
 createdAt: '2023-02-01'
-updatedAt: '2026-03-03'
+updatedAt: '2023-09-14'
 url: https://wiki.seeedstudio.com/Sketchbook_of_Sidekick_Advanced_Kit/
 ---
 

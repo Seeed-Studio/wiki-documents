@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'ソフトウェアドキュメント'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_software
+link:
+  type: generated-index
+  slug: recamera_software_docs
+  title: reCamera 基本ソフトウェア開発ドキュメント
+  description: reCamera は起動後すぐに使用できるデバイスです。安定した reCamera OS を搭載しており、ファームウェアの OTA アップデートをサポートしています。さらに、Node-RED と SenseCraft AI プラットフォームが統合されており、より簡単にデプロイできる体験を提供します。この統合により、初心者の開発者には Node-RED ノードに基づくモジュール式プログラミング体験を提供します。上級開発者向けには、Linux ベースの本格的な開発環境や Python による柔軟な開発も可能です。JavaScript、C/C++、Python、Linux OS、buildroot に精通した開発者の方々はもちろん、ギーク、学生、初心者の皆様にも、さらなる開発やアプリケーションの探求にご参加いただければ幸いです。

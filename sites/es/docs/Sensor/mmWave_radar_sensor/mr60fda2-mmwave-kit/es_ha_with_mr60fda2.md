@@ -5,14 +5,14 @@ keywords:
   - mmwave
   - radar
   - MR60FDA2
-image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
+image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp
 slug: /ha_with_mr60fda2
 sidebar_position: 1
 last_update:
   date: 10/15/2024
   author: Spencer
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-05-12'
 url: https://wiki.seeedstudio.com/es/ha_with_mr60fda2/
 ---
 
@@ -39,7 +39,7 @@ Esta guía tiene como objetivo proporcionar un tutorial claro y completo para in
          <th>Sensor mmWave MR60FDA2</th>
       </tr>
       <tr>
-         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:360, height:'auto', "border-radius": '6px'}}/></div></td>
+         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp" style={{width:360, height:'auto', "border-radius": '6px'}}/></div></td>
       </tr>
       <tr>
          <td>

@@ -12,7 +12,7 @@ last_update:
   author: Zeller
   sidebar_position: 9
 createdAt: '2025-12-25'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-31'
 url: https://wiki.seeedstudio.com/cn/xiao_ra4m1_micropython/
 ---
 

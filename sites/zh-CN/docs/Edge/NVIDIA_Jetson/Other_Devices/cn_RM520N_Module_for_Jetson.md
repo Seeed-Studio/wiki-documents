@@ -12,7 +12,7 @@ last_update:
   date: 11/25/2025
   author: Youjiang
 createdAt: '2025-11-25'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-25'
 url: https://wiki.seeedstudio.com/cn/rm520n_module_for_jetson/
 ---
 

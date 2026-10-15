@@ -7,7 +7,7 @@ last_update:
   date: 03/14/2024
   author: Kazuhiro Ozuchi
 createdAt: '2024-03-29'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/cn/neqto_engine_for_linux_recomputer/
 ---
 

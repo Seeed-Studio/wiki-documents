@@ -9,7 +9,7 @@ last_update:
   date: 01/11/2024
   author: LynnL4
 createdAt: '2023-12-29'
-updatedAt: '2026-03-03'
+updatedAt: '2024-01-11'
 url: https://wiki.seeedstudio.com/ModelAssistant_Tutorials_Datasets/
 ---
 

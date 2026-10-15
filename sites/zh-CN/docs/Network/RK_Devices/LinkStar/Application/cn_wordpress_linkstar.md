@@ -11,7 +11,7 @@ last_update:
   date: 2023/6/8
   author: Kasun Thushara
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/wordpress_linkstar/
 ---
 # 简化网页开发，完美组合 - Linkstar 和 WordPress

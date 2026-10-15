@@ -9,7 +9,7 @@ last_update:
   date: 1/31/2023
   author: shuxu hu
 createdAt: '2023-02-01'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-26'
 url: https://wiki.seeedstudio.com/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/
 ---
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_seeeduino_wiki_cover.JPG)

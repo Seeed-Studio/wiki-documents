@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'ハードウェアと仕様'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reCamera_basic_getting_start
+link:
+  type: generated-index
+  slug: recamera_basicardware_and_specs
+  title: reCamera Basic ハードウェアと仕様
+  description: 学びたい製品の種類を選択してください。

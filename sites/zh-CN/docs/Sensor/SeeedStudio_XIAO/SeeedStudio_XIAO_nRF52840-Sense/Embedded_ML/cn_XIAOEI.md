@@ -10,7 +10,7 @@ last_update:
   date: 04/11/2023
   author: Citric
 createdAt: '2023-11-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/XIAOEI/
 ---
 

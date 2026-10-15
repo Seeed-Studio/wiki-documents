@@ -13,21 +13,26 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/
 ---
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-</div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 The reComputer Industrial R21xx, powered by Raspberry Pi CM5, is an adaptable edge AI computer  with AI capabilities. It features comprehensive industrial interfaces **(2x Ethernet, 4xUSB, 2x RS485, 2x RS232, 2x CAN FD, 4x DI and 4x DO)** and flexible wireless connectivity options (4G/5G, LoRa®, Wi-Fi/BLE), making it ideal for diverse industrial applications.
 
 The reComputer Industrial R21xx series is ideal for use in industrial AI applications. It can be used in aspects such as data acquisition and process monitoring, automation and robot control, intelligent manufacturing, and industrial communication and networking. With its small size, flexibility, low cost, and programmability, it provides strong support for automation & IoT system and more.
+
+:::note
+Available customization options: logo branding, packaging, and firmware flashing.
+:::
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
+</div>
 
 ## Features
 
@@ -50,7 +55,7 @@ The reComputer Industrial R21xx series is ideal for use in industrial AI applica
 
 - On-chip Wi-Fi
 - On-chip BLE
-- Mini-PCIe: LTE, USB LoRa®, USB Zigbee
+- Mini-PCIe: LTE, USB LoRa®
 - M.2 KEY-B: 4G/5G
 
 **Rich Interfaces**
@@ -80,8 +85,8 @@ The reComputer Industrial R21xx series is ideal for use in industrial AI applica
       </tr>
       <tr>
         <td>**Product Series**</td>
-        <td>R20xx-12</td>
-        <td>R20xx-10</td>
+        <td>R21xx-12</td>
+        <td>R21xx-10</td>
       </tr>
       <tr>
         <td> **CPU** </td>
@@ -142,22 +147,26 @@ The reComputer Industrial R21xx series is ideal for use in industrial AI applica
       </tr>
       <tr>
         <td> RS485 </td>
-        <td colspan="3"> 3x RS485(Isolated) </td>
+        <td colspan="3"> 2x RS485(Isolated) </td>
       </tr>
       <tr>
         <td> RS232 </td>
-        <td colspan="3"> 1x RS232(Isolated) </td>
+        <td colspan="3"> 2x RS232(Isolated) </td>
+      </tr>
+      <tr>
+        <td> CAN </td>
+        <td colspan="3"> 2x CAN(Isolated) </td>
       </tr>
       <tr>
         <td rowspan="2"> DI </td>
-        <td colspan="3"> 8 x Isolated DI Ports </td>
+        <td colspan="3"> 4 x Isolated DI Ports </td>
       </tr>
       <tr>
         <td colspan="3"> Input Voltage: 5~24V DC </td>
       </tr>
       <tr>
         <td rowspan="2"> DO </td>
-        <td colspan="3"> 8 x Isolated DO Ports </td>
+        <td colspan="3"> 4 x Isolated DO Ports </td>
       </tr>
       <tr>
         <td colspan="3"> Output Voltage: Below 60V DC </td>
@@ -217,10 +226,6 @@ The reComputer Industrial R21xx series is ideal for use in industrial AI applica
       <tr>
         <td>4G/5G Cellular</td>
         <td colspan="2">4G LTE/5G*</td>
-      </tr>
-      <tr>
-        <td>Zigbee</td>
-        <td colspan="2">USB Zigbee*</td>
       </tr>
       <tr>
         <td colspan="3">**Standards**</td>
@@ -424,7 +429,6 @@ The reComputer Industrial R21xx does not come with a power button by default, an
 | **SIM Card Slot**   | supports Nano SIM Card                                                            |
 | **M.2 M-KEY Slot**  | 1x 2280 for M.2 NVMe SSD ; 1x 2280 for AI Accelerator                             |
 | **M.2 B-KEY Slot**  | 1x for 5G/4G LTE                                                                  |
-| **mini PCIe Slot**  | 1x for 4G LTE/LoRa/Zigbee                                                         |
 | **Buzzer**          | 1                                                                                 |
 | **Reset Button**    | 1                                                                                 |
 
@@ -891,7 +895,7 @@ The M.2 M-KEY 2280 slot on the reComputer Industrial R2000 is designed to accomm
 ### Mini-PCIe Slot
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.11_mini-pcie__slot_1.png" style={{width:800, height:'auto'}}/></div>
-The MiniPCIe slot on the reComputer Industrial R2000 is designed to accommodate devices such as 4G LTE, USB LoRaWAN®, and USB Zigbee.
+The MiniPCIe slot on the reComputer Industrial R2000 is designed to accommodate devices such as 4G LTE, USB LoRaWAN®.
 
 ### Reset Hole
 
@@ -928,6 +932,10 @@ The reComputer Industrial R2000 features 2x native HDMI interface from CM5, supp
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.16_rtc_1.png" style={{width:200, height:'auto'}}/></div>
 The reComputer Industrial R2000 features an RTC circuit that powered by the capacitor, enabling it to maintain timekeeping functionality even in the event of power loss.
+
+:::note
+When using the RTC, if the device suddenly loses power, you need to wait until the RTC is fully discharged before reconnecting power and restarting. If it is not fully discharged, the device may fail to meet the restart condition and may not start up properly.
+:::
 
 ### Watchdog
 
@@ -979,18 +987,6 @@ Here is the accessories and optional modules list:
         <td>LoRa® Antenna</td>
         <td>LoRa Antenna Kit - 868-915 MHz</td>
         <td>110061501</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Zigbee Module</td>
-        <td>Mini-PCIe USB Zigbee Module</td>
-        <td>110992005</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Zigbee Antenna</td>
-        <td>Zigbee Antenna Kit for reComputer R</td>
-        <td>110061641</td>
       </tr>
       <tr>
         <td rowspan="8">4G antenna with 4G module for 4G function, GPS antenna with 4G module for GPS function</td>
@@ -1072,7 +1068,7 @@ Here is the accessories and optional modules list:
   </table>
 </div>
 
-The reComputer Industrial R21xx mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. Additionally, 4G module and LoRa® module shouldn't be used at the same time, can not plug in two LoRa® modules on board.
+The reComputer Industrial R21xx mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module and LoRa® module using the USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol. Additionally, 4G module and LoRa® module shouldn't be used at the same time, can not plug in two LoRa® modules on board.
 
 > Note
 > Can not plug in 2 LoRa® modules on board.
@@ -1090,21 +1086,14 @@ The reComputer Industrial R21xx mainboard features one M.2 B-KEY Slot  and one M
 The reComputer Industrial R21xx mainboard features one M.2 B-KEY Slot, supporting a 4G/5G module using the USB protocol. The EC25 4G module from Quectel has been fully tested to be compatible with the reComputer Industrial R21xx.
 
 > Note
-> Please note that if you require 4G/5G functionality, it is necessary to purchase the corresponding 4G module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa®/Zigbee Module and Antenna".
+> Please note that if you require 4G/5G functionality, it is necessary to purchase the corresponding 4G module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa® Module and Antenna".
 
 ### LoRa® Module  
 
 The Mini-PCIe slot supports LoRa® module using the USB and SPI protocol.  The WM1302 module from Seeed Studio has been fully tested to be compatible with the reComputer Industrial R2000.
 
 > Note
-> Please note that if you require LoRa® functionality, it is necessary to purchase the corresponding LoRa® module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa®/Zigbee Module and Antenna".
-
-### Zigbee Module
-
-The Mini-PCIe slot offer support for Zigbee modules utilizing the USB protocol, allowing for seamless integration of Zigbee functionality into compatible devices. This feature enables efficient communication and control within Zigbee networks, enhancing the versatility and connectivity of the system. With the Mini-PCIe slot available for Zigbee modules, users have the flexibility to implement diverse applications for enhanced reliability.
-
-> Note  
-> Please note that if you require Zigbee functionality, it is necessary to purchase the corresponding Zigbee module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa®/Zigbee Module and Antenna".
+> Please note that if you require LoRa® functionality, it is necessary to purchase the corresponding LoRa® module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa® Module and Antenna".
 
 ### SSD
 
@@ -1144,6 +1133,17 @@ For UPS function please contact us for more information, and the alarm signal is
 ## Additional Resources
 
 - [reComputer Industrial R21xx Flyer](https://files.seeedstudio.com/wiki/raspberry-pi/Seeed_Raspberry_Pi_Flyer.pdf)
+
+
+
+## Resources
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Tech Support & Product Discussion
 

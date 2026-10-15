@@ -10,7 +10,7 @@ last_update:
   date: 5/31/2023
   author: Thomas
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-05-30'
 url: https://wiki.seeedstudio.com/cn/SenseCAP_Indicator_DALL-E/
 ---
 # **SenseCAP Indicator X DALL·E**

@@ -13,7 +13,7 @@ last_update:
   date: 2/27/2024
   author: Xabier Fernández and Kasun Thushara
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/reTerminalDM_N3uron_Get_Start/
 ---
 

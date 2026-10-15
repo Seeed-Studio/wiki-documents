@@ -1,38 +1,48 @@
 ---
-description: This article is a brief introduction to the main page of SenseCraft AI.
-title: Overview
+description: Explore pretrained models, custom training, deployment, live preview, and model output workflows in SenseCraft AI for supported edge AI devices.
+title: 'SenseCraft AI: Train and Deploy Edge AI Models'
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
 slug: /sensecraft-ai/overview
 aliases:
   - /sensecraft_ai_overview
 sidebar_position: 1
 last_update:
-  date: 11/28/2024
+  date: 08/06/2026
   author: Citric
 createdAt: '2024-11-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/sensecraft-ai/overview/
 ---
 
-# SenseCraft AI Overview
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.png" style={{width:1000, height:'auto'}}/></div>
+# SenseCraft AI: Train and Deploy Edge AI Models
 
 SenseCraft AI is an all-in-one platform designed to empower developers and creators in building and deploying AI projects with ease. The website offers a wide range of tools and features to streamline the AI development process, making it accessible to users with varying levels of expertise. In this wiki, we will explore the main sections of the SenseCraft AI website, providing an overview of their key features and functionalities.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/home?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_home" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>One-Click Direct 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Home
 
-The home page of SenseCraft AI serves as the central hub, providing users with an overview of the platform's main functionalities. The navigation bar at the top of the page features five main sections: **Home**, **Pretrained Models**, **Training**, **Vision Workspace**, and **About SenseCraft AI**.
+The home page of SenseCraft AI serves as the central hub, providing users with an overview of the platform's main functionalities. The navigation bar at the top of the page features four main sections: **Home**, **Applications**, **Models**, and **Community**.
+
+- **Home** – Platform landing page.
+- **Applications** – Browse the **Application Square** for ready-to-use apps, or manage your own under **My Applications** (including **Create New Applications** and **Create New Workspace for reCamera**).
+- **Models** – Houses the **Model Library** (pretrained models), per-device **Workspace**, **Training** (Image Classification Detection, Audio Classification Detection, Image Object Detection), and **My Models** (with **Add Model**).
+- **Community** – Connect with other SenseCraft AI users and contributors.
 
 The primary focus of the home page is the **Start your journey: Deploy a pretrained Model** section, which guides users through a step-by-step process to deploy a pre-trained model using Seeed Studio hardware. The process is divided into three main steps:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}>
+  <img
+    src="https://sensecraft-wiki-static.oss-us-east-1.aliyuncs.com/seeed-studio-wiki-statics/sensecraft-ai/overview/sensecraft-ai-home-gesture-detection-170dd1cd.webp"
+    alt="SenseCraft AI home page showing the Gesture Detection workflow from model discovery through deployment and sensor output before a device is connected"
+    style={{width:950, maxWidth:'100%', height:'auto'}}
+  />
+</div>
 
 1. Select a pre-trained model from the model repository.
 1. Deploy and preview the model's results in real-time using the "Deploy and Preview Vision" feature.
@@ -46,13 +56,13 @@ Lastly, the home page showcases the "Sharing Vision AI Models" feature, which en
 
 ## User Account
 
-[SenseCraft AI](https://sensecraft.seeed.cc/ai/#/model) is an open platform that allows users to browse all public AI models and Home pages without logging in. You need to sign up and sign in only when you need to deploy a model, or share your own model.
+[SenseCraft AI](https://sensecraft.seeed.cc/ai/model?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_model_library) is an open platform that allows users to browse all public AI models and Home pages without logging in. You need to sign up and sign in only when you need to deploy a model, or share your own model.
 
-[SenseCraft AI](https://sensecraft.seeed.cc/ai/#/model) and [SenseCraft Data Platform](https://sensecap.seeed.cc/portal/#/login) ( original SenseCAP Cloud Platform) are both software services provided by seeed studio for users, users only need to sign up for an account on any one of the platforms, and then they can use the same account to sign in on both platforms.
+[SenseCraft AI](https://sensecraft.seeed.cc/ai/model?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_ai_model_library) and [SenseCraft Data Platform](https://sensecap.seeed.cc/portal/?utm_source=seeedstudio_wiki&utm_medium=referral&utm_campaign=wiki_to_sensecraft&utm_content=sensecraft_data_portal#/login) ( original SenseCAP Cloud Platform) are both software services provided by seeed studio for users, users only need to sign up for an account on any one of the platforms, and then they can use the same account to sign in on both platforms.
 
 ### Sign up
 
-1. Enter your name and valid email,and then click **get capcha**
+1. Enter your name and valid email,and then click **get captcha**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/1.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -84,7 +94,7 @@ The validity period of the verification code is 10min, please complete the reset
 
 ### Change password
 
-1. Visist user account page and click "Change your password" button.
+1. Visit user account page and click "Change your password" button.
 
 2. Enter the old password and new password to change password.
 
@@ -175,8 +185,8 @@ SenseCraft AI is a platform that supports content co-creation for developers and
 - Model Name
 - Model Excerpt: A simple description of the model
 - Model Introduction：detailed description of the model
-- Model Deployment Perparation：Pre-requisite for model deployment, not required
-- Supported Device:Choose which device the model will be deployed on, currently the platform supports Jetson devices, XIAO ESPS3, etc.
+- Model Deployment Preparation：Pre-requisite for model deployment, not required
+- Supported Device:Choose which device the model will be deployed on, currently the platform supports Jetson devices, XIAO ESP32-S3, etc.
 - Model Inference Example Image ：Upload an image of the model's inference results
 
 2. Click next when the information is completed.
@@ -190,7 +200,7 @@ SenseCraft AI is a platform that supports content co-creation for developers and
 | --- | --- |
 | Model Format | 1 The correct format for the model<br />2 Option:ONNX, Tensor RT, Pytorch<br />3 Platform will support more model formats |
 | Task | 1 The task type of the model<br />2 Option:Detection,Classification,Segment,Pose |
-| AI Framework | 1 The AI framework of the model<br />2 Option:YOLOV5,YOLOV8,FOMO,ModileNetV2,PFLD<br />3 Platform will support more AI framwork |
+| AI Framework | 1 The AI framework of the model<br />2 Option:YOLOV5,YOLOV8,FOMO,MobileNetV2,PFLD<br />3 Platform will support more AI framework |
 | Classes | 1 Classes or labels that the model categorizes for a specific task or problem<br />2 Please make sure the class id and class name matches correctly. |
 | Model File | Upload a model file in the format of your choice. |
 | Model Precision | 1 model precision<br />2 Option:Int8,Float16,Float32 |
@@ -220,15 +230,15 @@ Users have all the permissions to operate their own models.
 
 **Edit Model**:Allow to modify all information of the model.
 
-## Vision Workspace
+## Workspace
 
-The Vision Workspace section of SenseCraft AI is dedicated to device-specific operations and deployment of trained models. It provides a seamless interface for users to integrate their custom models with various hardware devices and preview the results in real-time. Currently, the supported devices include Grove Vision AI V2, XIAO ESP32S3 Sense, NVIDIA Jetson, and reCamera.
+The Workspace section of SenseCraft AI is dedicated to device-specific operations and deployment of trained models. It provides a seamless interface for users to integrate their custom models with various hardware devices and preview the results in real-time. Currently, the supported devices include Grove Vision AI V2, XIAO ESP32S3 Sense, NVIDIA Jetson, and reCamera.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/9.png" style={{width:400, height:'auto'}}/></div>
 
 ### Model Deployment and Preview
 
-Once a user has successfully uploaded a trained model, they can navigate to the device-specific page within the Vision Workspace. Under the "Process" section, users can observe the real-time detection feed from the connected device, allowing them to preview the model's performance in action.
+Once a user has successfully uploaded a trained model, they can navigate to the device-specific page within the Workspace. Under the "Process" section, users can observe the real-time detection feed from the connected device, allowing them to preview the model's performance in action.
 
 This real-time preview feature is particularly valuable as it enables users to assess the model's accuracy and effectiveness in detecting objects within the device's video stream. Users can visually inspect the bounding boxes, labels, and confidence scores generated by the model, providing immediate feedback on its performance.
 
@@ -236,7 +246,7 @@ This real-time preview feature is particularly valuable as it enables users to a
 
 ### Model Fine-tuning
 
-In addition to real-time preview, the Vision Workspace also offers the capability to fine-tune the model's confidence threshold parameter. This feature allows users to adjust the model's sensitivity to object detection, enabling them to strike a balance between precision and recall.
+In addition to real-time preview, the Workspace also offers the capability to fine-tune the model's confidence threshold parameter. This feature allows users to adjust the model's sensitivity to object detection, enabling them to strike a balance between precision and recall.
 
 By manipulating the confidence threshold, users can control the model's behavior in terms of detecting objects. A higher confidence threshold will result in the model being more selective, only detecting objects with a high degree of certainty. Conversely, a lower confidence threshold will make the model more sensitive, detecting objects even with lower confidence scores.
 
@@ -246,9 +256,9 @@ This fine-tuning capability empowers users to adapt the model to their specific 
 
 ### Output and Application Development
 
-The Vision Workspace goes beyond model deployment and preview by providing users with the tools to quickly prototype and develop applications using the trained models. The "Output" section offers a range of options for users to interact with the model's results and integrate them into their desired applications.
+The Workspace goes beyond model deployment and preview by providing users with the tools to quickly prototype and develop applications using the trained models. The "Output" section offers a range of options for users to interact with the model's results and integrate them into their desired applications.
 
-Taking the XIAO ESP32S3 Sense as an example, the Vision Workspace supports various communication protocols and interfaces, such as MQTT, GPIO, and Serial Port. These options enable users to seamlessly transmit the model's output to other systems, trigger actions based on object detection, or perform further processing on the detected results.
+Taking the XIAO ESP32S3 Sense as an example, the Workspace supports various communication protocols and interfaces, such as MQTT, GPIO, and Serial Port. These options enable users to seamlessly transmit the model's output to other systems, trigger actions based on object detection, or perform further processing on the detected results.
 
 By offering these output options, SenseCraft AI simplifies the process of integrating the trained models into practical applications. Users can quickly experiment with different communication methods and develop prototypes that leverage the object detection capabilities of their models.
 
@@ -257,6 +267,13 @@ For instance, a user could utilize the MQTT output to send real-time object dete
 The Serial Port output provides a straightforward way to establish communication between the device and other systems, enabling users to transmit the model's results for further processing or visualization.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/12.png" style={{width:1000, height:'auto'}}/></div>
+
+## Related guides
+
+- [SenseCraft AI documentation center](/sensecraft-ai/sensecraft-ai-main/)
+- [Train an image classification model](/sensecraft-ai/tutorials/sensecraft-ai-training-classification/)
+- [Train an object detection model](/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/)
+- [Get started with SenseCraft Data Platform](/cloud/sensecraft-data/sensecraft-data-platform/overview/)
 
 ## Tech Support & Product Discussion
 

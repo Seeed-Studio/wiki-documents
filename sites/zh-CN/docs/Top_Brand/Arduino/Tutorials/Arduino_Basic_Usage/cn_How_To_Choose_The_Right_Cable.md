@@ -8,7 +8,7 @@ last_update:
   author: w0x7ce
 no_comments: false
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/How_To_Choose_The_Right_Cable/
 ---
 <!-- ---

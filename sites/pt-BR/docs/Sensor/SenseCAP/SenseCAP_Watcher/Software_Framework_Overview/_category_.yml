@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'Visão Geral da Estrutura de Software'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: 'watcher_software_framework_overview'
+link:
+  type: generated-index
+  slug: watcher_software_framework_overview
+  title: Visão Geral da Estrutura de Software do Watcher
+  description: Esta seção se concentra na estrutura de software do Watcher, incluindo como implantar localmente os serviços de IA do Watcher, o fluxo de tarefas e mais.

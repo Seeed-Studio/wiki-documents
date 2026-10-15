@@ -14,7 +14,7 @@ last_update:
   date: 10/10/2024
   author: Lidayu
 createdAt: '2024-10-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/
 ---
 # How to Use Orbbec Depth Cameras on reComputer with ROS

@@ -9,7 +9,7 @@ last_update:
   date: 8/13/2025
   author: Kasun Thushara
 createdAt: '2023-08-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-24'
 url: https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/
 ---
 

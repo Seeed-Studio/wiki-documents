@@ -10,7 +10,7 @@ last_update:
   date: 8/25/2023
   author: Jessie
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/cn/SenseCAP_T1000_Tracker_Akenza/
 ---
 

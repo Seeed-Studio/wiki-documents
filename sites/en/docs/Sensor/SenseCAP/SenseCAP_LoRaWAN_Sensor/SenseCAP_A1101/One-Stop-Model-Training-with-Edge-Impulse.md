@@ -10,7 +10,7 @@ last_update:
   date: 3/31/2023
   author: Yvonne
 createdAt: '2023-04-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/
 ---
 

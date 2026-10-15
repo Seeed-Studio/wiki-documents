@@ -237,16 +237,16 @@ module.exports = (async () => {
     // metadata like html lang. For example, if your site is Chinese, you may want
     // to replace "en" with "zh-Hans".
     i18n: {
-      defaultLocale: 'en',
-      locales: ['en'],
+      defaultLocale: 'cn',
+      locales: ['cn'],
       path: 'i18n',
       localeConfigs: {
-        en: {
-          label: 'English',
+        cn: {
+          label: '简体中文',
           direction: 'ltr',
-          htmlLang: 'en-US',
+          htmlLang: 'zh-CN',
           calendar: 'gregory',
-          path: 'en',
+          path: 'cn',
         },
       },
     },
@@ -289,7 +289,7 @@ module.exports = (async () => {
               ],
 
               editUrl:
-                'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/zh-CN/docs/',
+                'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/zh-CN/',
             };
 
             return base;
@@ -367,8 +367,44 @@ module.exports = (async () => {
         })(),
       ],
       
-      'docusaurus-plugin-image-zoom',
+      path.resolve(__dirname, '../../plugins/image-zoom'),
+      [
+        path.resolve(__dirname, '../../plugins/respeaker-faq-index'),
+        { locale: 'zh-CN' },
+      ],
       'docusaurus-plugin-sass',
+      [
+        'docusaurus-plugin-copy-page-button',
+        {
+          injectButton: false,
+          enabledActions: ['copy', 'view', 'chatgpt', 'claude', 'gemini'],
+          labels: {
+            button: {
+              label: '复制页面',
+            },
+            copy: {
+              title: '复制为 Markdown',
+              description: '将本页内容复制为 Markdown',
+            },
+            view: {
+              title: '以 Markdown 查看',
+              description: '以 Markdown 格式查看本页内容',
+            },
+            chatgpt: {
+              title: '在 ChatGPT 中打开',
+              description: '将本页内容作为上下文发送到 ChatGPT',
+            },
+            claude: {
+              title: '在 Claude 中打开',
+              description: '将本页内容作为上下文发送到 Claude',
+            },
+            gemini: {
+              title: '在 Gemini 中打开',
+              description: '将本页内容作为上下文发送到 Gemini',
+            },
+          },
+        },
+      ],
     ],
 
     themeConfig:
@@ -597,15 +633,22 @@ module.exports = (async () => {
               className: 'navbar_doc_right_items',
             },
             {
-              to: 'https://sensecraft.seeed.cc/ai/#/home',
-              label: 'SenseCraft AI',
+              type: 'dropdown',
+              label: 'AI 平台',
               position: 'right',
-              className: 'navbar_doc_right_items',
-            },
-            {
-              href: 'https://sensecraft.seeed.cc/ai/#/home',
-              position: 'right',
-              className: 'header-SSCMA',
+              className: 'navbar_doc_right_items ai-platform-dropdown',
+              items: [
+                {
+                  label: 'SenseCraft AI',
+                  to: 'https://sensecraft.seeed.cc/ai/#/home',
+                  className: 'ai-platform-menu-item sensecraft-ai-menu-item',
+                },
+                {
+                  label: 'reComputer AI Lab',
+                  to: 'https://sensecraft.seeed.cc/ai-lab',
+                  className: 'ai-platform-menu-item recomputer-ai-lab-menu-item',
+                },
+              ],
             },
             {
               href: 'https://github.com/Seeed-Studio/wiki-documents',
@@ -726,18 +769,20 @@ module.exports = (async () => {
         },
         contextualSearch: true,
         typesense: {
-          typesenseCollectionName: 'wiki_platform_test_1767765204',
+          typesenseCollectionName: 'wiki_platform_aliases_v1',
           typesenseServerConfig: {
             nodes: [
               {
                 host: 'search.seeedstudio.com',
+                port: 443,
                 protocol: 'https',
               },
             ],
-            apiKey: 'z1DHV8drOZizrn9TSlf0U9QgNENgBxGR',
+            apiKey: 'Wq4m3wi2ltwebP1v7bYlmkTGBcu31kHe',
           },
           typesenseSearchParameters: {
-            query_by: 'hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
+            query_by: 'product_aliases,resolved_category,hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
+            query_by_weights: '10,6,4,3,2,1',
           },
           transformSearchParameters: (
             /** @type {string} */ inputString,
@@ -748,6 +793,7 @@ module.exports = (async () => {
               return {
                 ...searchParameters,
                 query_by: 'sku_tag',
+                query_by_weights: '1',   
                 query: inputString,
                 // filter_by: 'doc_type_tag:=gettingstarted && !doc_type_tag:=project',
               };

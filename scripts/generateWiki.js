@@ -12,21 +12,38 @@ const SITE_DOCS_ROOT = {
   cn: path.join(rootDir, 'sites', 'zh-CN', 'docs'),
   ja: path.join(rootDir, 'sites', 'ja', 'docs'),
   es: path.join(rootDir, 'sites', 'es', 'docs'),
+  pt: path.join(rootDir, 'sites', 'pt-BR', 'docs'),
 };
 
 const excludedPaths = [
   path.join(docsDirectory, 'Seeed_Elderly', 'weekly_wiki'), // weekly wiki 的历史目录
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
+  path.join(docsDirectory, 'FAQ', 'respeaker'), // 9.2 排除 respeaker FAQ目录
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro'), // 9.21 排除 reCamera_Pro 目录
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'Courses', 'reBot_Arm_Tutorial'), // 9.17 排除 reBot_Arm_Tutorial 目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'reComputer_Jetson_Series', 'reComputer_Rugged_J40', 'reComputer_Rugged_J40_Getting_Started.md'), //3.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', '_Flash_Watcher_Agent_Firmware.md'), //3.4
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot.md'), //8.17
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'faqs', 'FAQs.md'), //8.19
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Data_Logger', 'SenseCAP_Combo', 'Get_Started_with_SenseCAP_Combo.md'), //8.23
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Hardware_Usage', 'GPIO_Usage.md'), //8.25
+  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Secondary_Development', 'reCamera_Pro_RKNN_Model_Conversion.md'), //8.28
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Custom_Motion_Training.md'), //9.7
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Jetson_Environment.md'), //9.7
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Official_Policies.md'), //9.7
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'T1000-E', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_t1000e.md'), //9.19
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L1', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l1.md'), //9.19
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L2', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l2.md'), //9.19
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Generative_AI', 'Jetson_LLM_Deployment_Guide.md'), //9.25
+  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'faq', 'sensecraft_robotics_common_issues.md'), //9.24
+  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'faq', 'sensecraft_robotics_data_collection_configuration_recommendation.md'), //9.24
+  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'sensecraft_robotics_overview.md'), //9.24
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
-const LANG_DIR = { cn: 'zh-CN', ja: 'ja', es: 'es' };
-const LANG_PREFIX = { cn: 'cn_', ja: 'ja_', es: 'es_' };
+const LANG_DIR = { cn: 'zh-CN', ja: 'ja', es: 'es', pt: 'pt-BR' };
+const LANG_PREFIX = { cn: 'cn_', ja: 'ja_', es: 'es_', pt: 'pt_' };
 
 // 提取标题：首个 H1 或 frontmatter.title
 function extractTitle(fileContent) {
@@ -105,7 +122,7 @@ function processDirectory(directory) {
 processDirectory(docsDirectory);
 
 // 在语言目录查找标题：同路径 或 同目录前缀文件
-function getLocalizedTitle(item, lang /* 'cn'|'ja'|'es' */) {
+function getLocalizedTitle(item, lang /* 'cn'|'ja'|'es'|'pt' */) {
   const langDir = LANG_DIR[lang];
   const prefix = LANG_PREFIX[lang];
 
@@ -123,7 +140,7 @@ function getLocalizedTitle(item, lang /* 'cn'|'ja'|'es' */) {
   let t = tryReadTitle(abs1md) || tryReadTitle(abs1mdx);
   if (t) return t;
 
-  // 2) 同一相对目录 + 语言前缀文件名（cn_/ja_/es_）
+  // 2) 同一相对目录 + 语言前缀文件名（cn_/ja_/es_/pt_）
   const dir = path.dirname(relPath);
   const base = path.basename(relPath);
   const abs2md  = path.join(localizedDocsRoot, dir, `${prefix}${base}.md`);
@@ -176,9 +193,11 @@ const latestDocsWithI18n = latestDocs.map((it) => {
   const tCN = getLocalizedTitle(it, 'cn');
   const tJA = getLocalizedTitle(it, 'ja');
   const tES = getLocalizedTitle(it, 'es');
+  const tPT = getLocalizedTitle(it, 'pt');
   if (tCN) out.title_cn = tCN;
   if (tJA) out.title_ja = tJA;
   if (tES) out.title_es = tES;
+  if (tPT) out.title_pt = tPT;
   delete out.relPath;
   return out;
 });
@@ -193,4 +212,4 @@ for (let i = 0; i < latestDocsWithI18n.length; i += 2) {
 const wikiContent = `const docList = ${JSON.stringify(docList2D, null, 2)};\n\nexport default docList;`;
 fs.writeFileSync(wikiFilePath, wikiContent);
 
-console.log('wiki.js 生成成功：已从 sites/zh-CN/docs、sites/ja/docs、sites/es/docs 补全 title_cn/title_ja/title_es。');
+console.log('wiki.js 生成成功：已从 sites/zh-CN/docs、sites/ja/docs、sites/es/docs、sites/pt-BR/docs 补全 title_cn/title_ja/title_es/title_pt。');

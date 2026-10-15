@@ -12,7 +12,7 @@ last_update:
   date: 2025-4-23
   author: Youjiang
 createdAt: '2025-04-23'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/xiaopi/
 ---
 

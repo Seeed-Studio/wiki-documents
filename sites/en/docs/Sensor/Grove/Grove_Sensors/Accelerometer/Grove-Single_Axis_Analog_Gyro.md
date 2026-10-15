@@ -9,7 +9,7 @@ last_update:
   date: 1/29/2023
   author: jianjing Huang
 createdAt: '2023-01-29'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-26'
 url: https://wiki.seeedstudio.com/Grove-Single_Axis_Analog_Gyro/
 ---
 

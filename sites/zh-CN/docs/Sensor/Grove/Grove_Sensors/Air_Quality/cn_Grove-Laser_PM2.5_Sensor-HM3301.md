@@ -10,7 +10,7 @@ last_update:
   date: 1/20/2023
   author: jianjing huang
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-Laser_PM2.5_Sensor-HM3301/
 ---
 

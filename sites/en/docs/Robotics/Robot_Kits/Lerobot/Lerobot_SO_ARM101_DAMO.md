@@ -14,10 +14,9 @@ last_update:
   date: 1/12/2026
   author: LiShanghang
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2026-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-12'
 url: https://wiki.seeedstudio.com/lerobot_soarm101_Rynnbot_Developer_Kit/
 ---
 

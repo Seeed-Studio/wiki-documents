@@ -10,7 +10,7 @@ last_update:
   date: 05/09/2024
   author: Citric
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/ja/xiao_idf/
 ---
 

@@ -7,7 +7,7 @@ last_update:
   date: 08/18/2024
   author: Isaac, Djair Guilherme
 createdAt: '2023-08-10'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_project_circuitpython/
 ---
 

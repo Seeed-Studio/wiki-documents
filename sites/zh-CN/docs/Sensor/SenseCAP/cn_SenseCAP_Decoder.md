@@ -1,29 +1,29 @@
 ---
-description: SenseCAP 解码器
+description: SenseCAP_Decoder
 title: SenseCAP 解码器
 keywords:
   - SenseCAP_Decoder
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Decoder
 last_update:
-  date: 1/26/2026
+  date: 3/12/2026
   author: Janet
 createdAt: '2023-08-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/cn/SenseCAP_Decoder/
 ---
 
-SenseCAP 解码器用于解码从 SenseCAP LoRaWAN® 设备发送的 LoRaWAN 消息。解码后，用户的应用程序将获得更友好和可读的消息。
+SenseCAP 解码器用于解码由 SenseCAP LoRaWAN® 设备发送的 LoRaWAN 消息。解码后，用户的应用程序将获得更加友好且易于阅读的消息。
 
 ### SenseCAP T1000 追踪器
 
-[**SenseCAP T1000**](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) 是一款紧凑的 LoRaWAN® 追踪器，利用 GNSS/Wi-Fi/蓝牙进行精确的室内外位置追踪。它具有自适应地理能力、本地数据存储和令人印象深刻的数月电池续航。此外，它还配备了温度、光线和运动传感器，使其非常适合各种基于位置的应用。
+[**SenseCAP T1000**](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) 是一款紧凑型 LoRaWAN® 追踪器，利用 GNSS/Wi-Fi/Bluetooth 实现精确的室内与室外位置追踪。它具备自适应地理能力、本地数据存储以及长达数月的电池续航。此外，它还配备温度、光照和运动传感器，非常适合多种基于位置的应用场景。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️ </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️ </font></span></strong>
     </a>
 </div>
 
@@ -31,7 +31,7 @@ SenseCAP 解码器用于解码从 SenseCAP LoRaWAN® 设备发送的 LoRaWAN 消
 
 <details>
 
-<summary>适用于 TTN（ChirpStack V4）</summary>
+<summary>适用于 TTN(ChirpStack V4)</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -49,10 +49,6 @@ function decodeUplink (input) {
         decoded.messages.push({fport: fport, payload: bytesString})
         return { data: decoded }
     }
-    if (fport !== 5) {
-        decoded.valid = false
-        return { data: decoded }
-    }
     let measurement = messageAnalyzed(originMessage)
     if (measurement.length === 0) {
         decoded.valid = false
@@ -76,7 +72,6 @@ function decodeUplink (input) {
             decoded.messages.push(elements)
         }
     }
-    // decoded.messages = measurement
     return { data: decoded }
 }
 
@@ -99,7 +94,6 @@ function messageAnalyzed (messageValue) {
 
 function unpack (messageValue) {
     let frameArray = []
-
     for (let i = 0; i < messageValue.length; i++) {
         let remainMessage = messageValue
         let dataId = remainMessage.substring(0, 2).toUpperCase()
@@ -108,148 +102,93 @@ function unpack (messageValue) {
         let packageLen
         switch (dataId) {
             case '01':
-                packageLen = 94
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 94)
+                messageValue = remainMessage.substring(94)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '02':
-                packageLen = 32
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 32)
+                messageValue = remainMessage.substring(32)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '03':
-                packageLen = 64
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 64)
+                messageValue = remainMessage.substring(64)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '04':
-                packageLen = 20
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 20)
+                messageValue = remainMessage.substring(20)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '05':
-                packageLen = 10
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 10)
+                messageValue = remainMessage.substring(10)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '06':
-                packageLen = 44
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 44)
+                messageValue = remainMessage.substring(44)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '07':
-                packageLen = 84
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 84)
+                messageValue = remainMessage.substring(84)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '08':
-                packageLen = 70
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 70)
+                messageValue = remainMessage.substring(70)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '09':
-                packageLen = 36
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 36)
+                messageValue = remainMessage.substring(36)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '0A':
-                packageLen = 76
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 76)
+                messageValue = remainMessage.substring(76)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '0B':
-                packageLen = 62
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 62)
+                messageValue = remainMessage.substring(62)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '0C':
-                packageLen = 2
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
                 break
             case '0D':
-                packageLen = 10
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 10)
+                messageValue = remainMessage.substring(10)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '0E':
                 packageLen = getInt(remainMessage.substring(8, 10)) * 2 + 10
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
                 dataValue = remainMessage.substring(2, 8) + remainMessage.substring(10, packageLen)
                 messageValue = remainMessage.substring(packageLen)
                 dataObj = {
@@ -257,34 +196,50 @@ function unpack (messageValue) {
                 }
                 break
             case '0F':
-                packageLen = 34
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 34)
+                messageValue = remainMessage.substring(34)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '10':
-                packageLen = 26
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                dataValue = remainMessage.substring(2, 26)
+                messageValue = remainMessage.substring(26)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
                 break
             case '11':
-                packageLen = 28
-                if (remainMessage.length < packageLen) {
-                    return frameArray
+                dataValue = remainMessage.substring(2, 28)
+                messageValue = remainMessage.substring(28)
+                dataObj = {
+                    'dataId': dataId, 'dataValue': dataValue
                 }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
+                break
+            case '1A':
+                dataValue = remainMessage.substring(2, 56)
+                messageValue = remainMessage.substring(56)
+                dataObj = {
+                    'dataId': dataId, 'dataValue': dataValue
+                }
+                break
+            case '1B':
+                dataValue = remainMessage.substring(2, 96)
+                messageValue = remainMessage.substring(96)
+                dataObj = {
+                    'dataId': dataId, 'dataValue': dataValue
+                }
+                break
+            case '1C':
+                dataValue = remainMessage.substring(2, 82)
+                messageValue = remainMessage.substring(82)
+                dataObj = {
+                    'dataId': dataId, 'dataValue': dataValue
+                }
+                break
+            case '1D':
+                dataValue = remainMessage.substring(2, 40)
+                messageValue = remainMessage.substring(40)
                 dataObj = {
                     'dataId': dataId, 'dataValue': dataValue
                 }
@@ -308,8 +263,7 @@ function deserialize (dataId, dataValue) {
     let groupId = 0
     let shardFlag = {}
     let payload = ''
-    let result = []
-    let dataArr = []
+    let motionId = ''
     switch (dataId) {
         case '01':
             measurementArray = getUpShortInfo(dataValue)
@@ -365,59 +319,65 @@ function deserialize (dataId, dataValue) {
             break
         case '06':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            motionId = getMotionId(dataValue.substring(6, 8))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '4197', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Longitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
-                {measurementId: '4198', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Latitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
-                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(32, 36), 10)},
-                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Light', measurementValue: getSensorValue(dataValue.substring(36, 40))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(40, 42))}
+                {measurementId: '4200', timestamp: collectTime, motionId: motionId, type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '4197', timestamp: collectTime, motionId: motionId, type: 'Longitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
+                {measurementId: '4198', timestamp: collectTime, motionId: motionId, type: 'Latitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
+                {measurementId: '4097', timestamp: collectTime, motionId: motionId, type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(32, 36), 10)},
+                {measurementId: '4199', timestamp: collectTime, motionId: motionId, type: 'Light', measurementValue: getSensorValue(dataValue.substring(36, 40))},
+                {measurementId: '3000', timestamp: collectTime, motionId: motionId, type: 'Battery', measurementValue: getBattery(dataValue.substring(40, 42))}
             ]
             break
         case '07':
             eventList = getEventStatus(dataValue.substring(0, 6))
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            motionId = getMotionId(dataValue.substring(6, 8))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5001', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Wi-Fi Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
-                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(72, 76), 10)},
-                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Light', measurementValue: getSensorValue(dataValue.substring(76, 80))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(80, 82))}
+                {measurementId: '4200', timestamp: collectTime, motionId: motionId, type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5001', timestamp: collectTime, motionId: motionId, type: 'Wi-Fi Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
+                {measurementId: '4097', timestamp: collectTime, motionId: motionId, type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(72, 76), 10)},
+                {measurementId: '4199', timestamp: collectTime, motionId: motionId, type: 'Light', measurementValue: getSensorValue(dataValue.substring(76, 80))},
+                {measurementId: '3000', timestamp: collectTime, motionId: motionId, type: 'Battery', measurementValue: getBattery(dataValue.substring(80, 82))}
             ]
             break
         case '08':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            motionId = getMotionId(dataValue.substring(6, 8))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5002', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'BLE Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
-                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(58, 62), 10)},
-                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Light', measurementValue: getSensorValue(dataValue.substring(62, 66))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(66, 68))}
+                {measurementId: '4200', timestamp: collectTime, motionId: motionId, type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5002', timestamp: collectTime, motionId: motionId, type: 'BLE Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
+                {measurementId: '4097', timestamp: collectTime, motionId: motionId, type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(58, 62), 10)},
+                {measurementId: '4199', timestamp: collectTime, motionId: motionId, type: 'Light', measurementValue: getSensorValue(dataValue.substring(62, 66))},
+                {measurementId: '3000', timestamp: collectTime, motionId: motionId, type: 'Battery', measurementValue: getBattery(dataValue.substring(66, 68))}
             ]
             break
         case '09':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            motionId = getMotionId(dataValue.substring(6, 8))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '4197', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Longitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
-                {measurementId: '4198', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Latitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(32, 34))}
+                {measurementId: '4200', timestamp: collectTime, motionId: motionId, type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '4197', timestamp: collectTime, motionId: motionId, type: 'Longitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
+                {measurementId: '4198', timestamp: collectTime, motionId: motionId, type: 'Latitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
+                {measurementId: '3000', timestamp: collectTime, motionId: motionId, type: 'Battery', measurementValue: getBattery(dataValue.substring(32, 34))}
             ]
             break
         case '0A':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            motionId = getMotionId(dataValue.substring(6, 8))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5001', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Wi-Fi Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(72, 74))}
+                {measurementId: '4200', timestamp: collectTime, motionId, type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5001', timestamp: collectTime, motionId, type: 'Wi-Fi Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
+                {measurementId: '3000', timestamp: collectTime, motionId, type: 'Battery', measurementValue: getBattery(dataValue.substring(72, 74))}
             ]
             break
         case '0B':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            motionId = getMotionId(dataValue.substring(6, 8))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5002', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'BLE Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(58, 60))},
+                {measurementId: '4200', timestamp: collectTime, motionId, type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5002', timestamp: collectTime, motionId, type: 'BLE Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
+                {measurementId: '3000', timestamp: collectTime, motionId, type: 'Battery', measurementValue: getBattery(dataValue.substring(58, 60))},
             ]
             break
         case '0D':
@@ -454,10 +414,11 @@ function deserialize (dataId, dataValue) {
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
             shardFlag = getShardFlag(dataValue.substring(26, 28))
             groupId = getInt(dataValue.substring(28, 32))
+            motionId = getMotionId(dataValue.substring(6, 8))
             measurementArray.push({
                 measurementId: '4200',
                 timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
+                motionId,
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
@@ -467,42 +428,43 @@ function deserialize (dataId, dataValue) {
             measurementArray.push({
                 measurementId: '4097',
                 timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
+                motionId,
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
                 type: 'Air Temperature',
-                measurementValue: '' + getSensorValue(dataValue.substring(16, 20), 10)
+                measurementValue: getSensorValue(dataValue.substring(16, 20), 10)
             })
             measurementArray.push({
                 measurementId: '4199',
                 timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
+                motionId,
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
                 type: 'Light',
-                measurementValue: '' + getSensorValue(dataValue.substring(20, 24))
+                measurementValue: getSensorValue(dataValue.substring(20, 24))
             })
             measurementArray.push({
                 measurementId: '3000',
                 timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
+                motionId,
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
                 type: 'Battery',
-                measurementValue: '' + getBattery(dataValue.substring(24, 26))
+                measurementValue: getBattery(dataValue.substring(24, 26))
             })
             break
         case '10':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
             shardFlag = getShardFlag(dataValue.substring(18, 20))
             groupId = getInt(dataValue.substring(20, 24))
+            motionId = getMotionId(dataValue.substring(6, 8))
             measurementArray.push({
                 measurementId: '4200',
                 timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
+                motionId,
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
@@ -512,12 +474,12 @@ function deserialize (dataId, dataValue) {
             measurementArray.push({
                 measurementId: '3000',
                 timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
+                motionId,
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
                 type: 'Battery',
-                measurementValue: '' + getBattery(dataValue.substring(16, 18))
+                measurementValue: getBattery(dataValue.substring(16, 18))
             })
             break
         case '11':
@@ -525,8 +487,8 @@ function deserialize (dataId, dataValue) {
             measurementArray.push({
                 measurementId: '3576',
                 timestamp: collectTime,
-                type: 'Positing Status',
-                measurementValue: '' + getPositingStatus(dataValue.substring(0, 2))
+                type: 'Positioning Status',
+                measurementValue: getPositingStatus(dataValue.substring(0, 2))
             })
             measurementArray.push({
                 timestamp: collectTime,
@@ -539,7 +501,7 @@ function deserialize (dataId, dataValue) {
                     timestamp: collectTime,
                     measurementId: '4097',
                     type: 'Air Temperature',
-                    measurementValue: '' + getSensorValue(dataValue.substring(16, 20), 10)
+                    measurementValue: getSensorValue(dataValue.substring(16, 20), 10)
                 })
             }
             if (!isNaN(parseFloat(getSensorValue(dataValue.substring(20, 24))))) {
@@ -547,14 +509,112 @@ function deserialize (dataId, dataValue) {
                     timestamp: collectTime,
                     measurementId: '4199',
                     type: 'Light',
-                    measurementValue: '' + getSensorValue(dataValue.substring(20, 24))
+                    measurementValue: getSensorValue(dataValue.substring(20, 24))
                 })
             }
             measurementArray.push({
                 timestamp: collectTime,
                 measurementId: '3000',
                 type: 'Battery',
-                measurementValue: '' + getBattery(dataValue.substring(24, 26))
+                measurementValue: getBattery(dataValue.substring(24, 26))
+            })
+            break
+        case '1A':
+            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            motionId = getMotionId(dataValue.substring(6, 8))
+            measurementArray = [
+                {measurementId: '4200', timestamp: collectTime, motionId, type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '4197', timestamp: collectTime, motionId, type: 'Longitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
+                {measurementId: '4198', timestamp: collectTime, motionId, type: 'Latitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
+                {measurementId: '4097', timestamp: collectTime, motionId, type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(32, 36), 10)},
+                {measurementId: '4199', timestamp: collectTime, motionId, type: 'Light', measurementValue: getSensorValue(dataValue.substring(36, 40))},
+                {measurementId: '4210', timestamp: collectTime, motionId, type: 'AccelerometerX', measurementValue: getSensorValue(dataValue.substring(40, 44))},
+                {measurementId: '4211', timestamp: collectTime, motionId, type: 'AccelerometerY', measurementValue: getSensorValue(dataValue.substring(44, 48))},
+                {measurementId: '4212', timestamp: collectTime, motionId, type: 'AccelerometerZ', measurementValue: getSensorValue(dataValue.substring(48, 52))},
+                {measurementId: '3000', timestamp: collectTime, motionId, type: 'Battery', measurementValue: getBattery(dataValue.substring(52, 54))},
+            ]
+            break
+        case '1B':
+            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            motionId = getMotionId(dataValue.substring(6, 8))
+            measurementArray = [
+                {measurementId: '4200', timestamp: collectTime, motionId, type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5001', timestamp: collectTime, motionId, type: 'Wi-Fi Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
+                {measurementId: '4097', timestamp: collectTime, motionId, type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(72, 76), 10)},
+                {measurementId: '4199', timestamp: collectTime, motionId, type: 'Light', measurementValue: getSensorValue(dataValue.substring(76, 80))},
+                {measurementId: '4210', timestamp: collectTime, motionId, type: 'AccelerometerX', measurementValue: getSensorValue(dataValue.substring(80, 84))},
+                {measurementId: '4211', timestamp: collectTime, motionId, type: 'AccelerometerY', measurementValue: getSensorValue(dataValue.substring(84, 88))},
+                {measurementId: '4212', timestamp: collectTime, motionId, type: 'AccelerometerZ', measurementValue: getSensorValue(dataValue.substring(88, 92))},
+                {measurementId: '3000', timestamp: collectTime, motionId, type: 'Battery', measurementValue: getBattery(dataValue.substring(92, 94))}
+            ]
+            break
+        case '1C':
+            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            motionId = getMotionId(dataValue.substring(6, 8))
+            measurementArray = [
+                {measurementId: '4200', timestamp: collectTime, motionId, type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5002', timestamp: collectTime, motionId, type: 'BLE Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
+                {measurementId: '4097', timestamp: collectTime, motionId, type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(58, 62), 10)},
+                {measurementId: '4199', timestamp: collectTime, motionId, type: 'Light', measurementValue: getSensorValue(dataValue.substring(62, 66))},
+                {measurementId: '4210', timestamp: collectTime, motionId, type: 'AccelerometerX', measurementValue: getSensorValue(dataValue.substring(66, 70))},
+                {measurementId: '4211', timestamp: collectTime, motionId, type: 'AccelerometerY', measurementValue: getSensorValue(dataValue.substring(70, 74))},
+                {measurementId: '4212', timestamp: collectTime, motionId, type: 'AccelerometerZ', measurementValue: getSensorValue(dataValue.substring(74, 78))},
+                {measurementId: '3000', timestamp: collectTime, motionId, type: 'Battery', measurementValue: getBattery(dataValue.substring(78, 80))}
+            ]
+            break
+        case '1D':
+            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
+            measurementArray.push({
+                measurementId: '3576',
+                timestamp: collectTime,
+                type: 'Positioning Status',
+                measurementValue: getPositingStatus(dataValue.substring(0, 2))
+            })
+            measurementArray.push({
+                timestamp: collectTime,
+                measurementId: '4200',
+                type: 'Event Status',
+                measurementValue: getEventStatus(dataValue.substring(2, 8))
+            })
+            if (!isNaN(parseFloat(getSensorValue(dataValue.substring(16, 20), 10)))) {
+                measurementArray.push({
+                    timestamp: collectTime,
+                    measurementId: '4097',
+                    type: 'Air Temperature',
+                    measurementValue: getSensorValue(dataValue.substring(16, 20), 10)
+                })
+            }
+            if (!isNaN(parseFloat(getSensorValue(dataValue.substring(20, 24))))) {
+                measurementArray.push({
+                    timestamp: collectTime,
+                    measurementId: '4199',
+                    type: 'Light',
+                    measurementValue: getSensorValue(dataValue.substring(20, 24))
+                })
+            }
+            measurementArray.push({
+                timestamp: collectTime,
+                measurementId: '4210',
+                type: 'AccelerometerX',
+                measurementValue: getSensorValue(dataValue.substring(24, 28))
+            })
+            measurementArray.push({
+                timestamp: collectTime,
+                measurementId: '4211',
+                type: 'AccelerometerY',
+                measurementValue: getSensorValue(dataValue.substring(28, 32))
+            })
+            measurementArray.push({
+                timestamp: collectTime,
+                measurementId: '4212',
+                type: 'AccelerometerZ',
+                measurementValue: getSensorValue(dataValue.substring(32, 36))
+            })
+            measurementArray.push({
+                timestamp: collectTime,
+                measurementId: '3000',
+                type: 'Battery',
+                measurementValue: getBattery(dataValue.substring(36, 38))
             })
             break
     }
@@ -566,6 +626,39 @@ function getMotionId (str) {
 }
 
 function getPositingStatus (str) {
+    let status = getInt(str)
+    switch (status) {
+        case 0:
+            return {id:status, statusName:"locate successful."}
+        case 1:
+            return {id:status, statusName:"The GNSS scan timed out."}
+        case 2:
+            return {id:status, statusName:"The Wi-Fi scan timed out."}
+        case 3:
+            return {id:status, statusName:"The Wi-Fi + GNSS scan timed out."}
+        case 4:
+            return {id:status, statusName:"The GNSS + Wi-Fi scan timed out."}
+        case 5:
+            return {id:status, statusName:"The Bluetooth scan timed out."}
+        case 6:
+            return {id:status, statusName:"The Bluetooth + Wi-Fi scan timed out."}
+        case 7:
+            return {id:status, statusName:"The Bluetooth + GNSS scan timed out."}
+        case 8:
+            return {id:status, statusName:"The Bluetooth + Wi-Fi + GNSS scan timed out."}
+        case 9:
+            return {id:status, statusName:"Location Server failed to parse the GNSS location."}
+        case 10:
+            return {id:status, statusName:"Location Server failed to parse the Wi-Fi location."}
+        case 11:
+            return {id:status, statusName:"Location Server failed to parse the Bluetooth location."}
+        case 12:
+            return {id:status, statusName:"Failed to parse location due to the poor accuracy."}
+        case 13:
+            return {id:status, statusName:"Time synchronization failed."}
+        case 14:
+            return {id:status, statusName:"Failed due to the old Almanac."}
+    }
     return getInt(str)
 }
 
@@ -703,7 +796,7 @@ function loraWANV2DataFormat (str, divisor = 1) {
             }
         })
         str2 = parseInt(reverseArr.join(''), 2) + 1
-        return '-' + str2 / divisor
+        return parseFloat('-' + str2 / divisor)
     }
     return parseInt(str2, 2) / divisor
 }
@@ -780,830 +873,6 @@ function getInt (str) {
 }
 
 function getEventStatus (str) {
-    // return getInt(str)
-    let bitStr = getByteArray(str)
-    let bitArr = []
-    for (let i = 0; i < bitStr.length; i++) {
-        bitArr[i] = bitStr.substring(i, i + 1)
-    }
-    bitArr = bitArr.reverse()
-    let event = []
-    for (let i = 0; i < bitArr.length; i++) {
-        if (bitArr[i] !== '1') {
-            continue
-        }
-        switch (i){
-            case 0:
-                event.push({id:1, eventName:"Start moving event."})
-                break
-            case 1:
-                event.push({id:2, eventName:"End movement event."})
-                break
-            case 2:
-                event.push({id:3, eventName:"Motionless event."})
-                break
-            case 3:
-                event.push({id:4, eventName:"Shock event."})
-                break
-            case 4:
-                event.push({id:5, eventName:"Temperature event."})
-                break
-            case 5:
-                event.push({id:6, eventName:"Light event."})
-                break
-            case 6:
-                event.push({id:7, eventName:"SOS event."})
-                break
-            case 7:
-                event.push({id:8, eventName:"Press once event."})
-                break
-        }
-    }
-    return event
-}
-
-function getByteArray (str) {
-    let bytes = []
-    for (let i = 0; i < str.length; i += 2) {
-        bytes.push(str.substring(i, i + 2))
-    }
-    return toBinary(bytes)
-}
-
-function getWorkingMode (workingMode) {
-    return getInt(workingMode)
-}
-
-function getPositioningStrategy (strategy) {
-    return getInt(strategy)
-}
-
-function getUTCTimestamp(str){
-    return parseInt(loraWANV2PositiveDataFormat(str)) * 1000
-}
-
-function loraWANV2PositiveDataFormat (str, divisor = 1) {
-    let strReverse = bigEndianTransform(str)
-    let str2 = toBinary(strReverse)
-    return parseInt(str2, 2) / divisor
-}
-```
-
-</details>
-
-<details>
-
-<summary>适用于 Helium</summary>
-
-```cpp
-function Decoder (bytes, port) {
-    const bytesString = bytes2HexString(bytes)
-    const originMessage = bytesString.toLocaleUpperCase()
-    const fport = parseInt(port)
-    const decoded = {
-        valid: true,
-        err: 0,
-        payload: bytesString,
-        messages: []
-    }
-
-    if (fport === 199 || fport === 192) {
-        decoded.messages.push({fport: fport, payload: bytesString})
-        return { data: decoded }
-    }
-    if (fport !== 5) {
-        decoded.valid = false
-        return { data: decoded }
-    }
-
-    let measurement = messageAnalyzed(originMessage)
-    if (measurement.length === 0) {
-        decoded.valid = false
-        return { data: decoded }
-    }
-
-    for (let message of measurement) {
-        if (message.length === 0) {
-            continue
-        }
-        let elements = []
-        for (let element of message) {
-            if (element.errorCode) {
-                decoded.err = element.errorCode
-                decoded.errMessage = element.error
-            } else {
-                elements.push(element)
-            }
-        }
-        if (elements.length > 0) {
-            decoded.messages.push(elements)
-        }
-    }
-    // decoded.messages = measurement
-    return { data: decoded }
-}
-
-function messageAnalyzed (messageValue) {
-    try {
-        let frames = unpack(messageValue)
-        let measurementResultArray = []
-        for (let i = 0; i < frames.length; i++) {
-            let item = frames[i]
-            let dataId = item.dataId
-            let dataValue = item.dataValue
-            let measurementArray = deserialize(dataId, dataValue)
-            measurementResultArray.push(measurementArray)
-        }
-        return measurementResultArray
-    } catch (e) {
-        return e.toString()
-    }
-}
-
-function unpack (messageValue) {
-    let frameArray = []
-
-    for (let i = 0; i < messageValue.length; i++) {
-        let remainMessage = messageValue
-        let dataId = remainMessage.substring(0, 2).toUpperCase()
-        let dataValue
-        let dataObj = {}
-        let packageLen
-        switch (dataId) {
-            case '01':
-                packageLen = 94
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '02':
-                packageLen = 32
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '03':
-                packageLen = 64
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '04':
-                packageLen = 20
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '05':
-                packageLen = 10
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '06':
-                packageLen = 44
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '07':
-                packageLen = 84
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '08':
-                packageLen = 70
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '09':
-                packageLen = 36
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '0A':
-                packageLen = 76
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '0B':
-                packageLen = 62
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '0C':
-                packageLen = 2
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                break
-            case '0D':
-                packageLen = 10
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '0E':
-                packageLen = getInt(remainMessage.substring(8, 10)) * 2 + 10
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, 8) + remainMessage.substring(10, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '0F':
-                packageLen = 34
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '10':
-                packageLen = 26
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            case '11':
-                packageLen = 28
-                if (remainMessage.length < packageLen) {
-                    return frameArray
-                }
-                dataValue = remainMessage.substring(2, packageLen)
-                messageValue = remainMessage.substring(packageLen)
-                dataObj = {
-                    'dataId': dataId, 'dataValue': dataValue
-                }
-                break
-            default:
-                return frameArray
-        }
-        if (dataValue.length < 2) {
-            break
-        }
-        frameArray.push(dataObj)
-    }
-    return frameArray
-}
-
-function deserialize (dataId, dataValue) {
-    let measurementArray = []
-    let eventList = []
-    let measurement = {}
-    let collectTime = 0
-    let groupId = 0
-    let shardFlag = {}
-    let payload = ''
-    let result = []
-    let dataArr = []
-    switch (dataId) {
-        case '01':
-            measurementArray = getUpShortInfo(dataValue)
-            measurementArray.push(...getMotionSetting(dataValue.substring(30, 40)))
-            measurementArray.push(...getStaticSetting(dataValue.substring(40, 46)))
-            measurementArray.push(...getShockSetting(dataValue.substring(46, 52)))
-            measurementArray.push(...getTempSetting(dataValue.substring(52, 72)))
-            measurementArray.push(...getLightSetting(dataValue.substring(72, 92)))
-            break
-        case '02':
-            measurementArray = getUpShortInfo(dataValue)
-            break
-        case '03':
-            measurementArray.push(...getMotionSetting(dataValue.substring(0, 10)))
-            measurementArray.push(...getStaticSetting(dataValue.substring(10, 16)))
-            measurementArray.push(...getShockSetting(dataValue.substring(16, 22)))
-            measurementArray.push(...getTempSetting(dataValue.substring(22, 42)))
-            measurementArray.push(...getLightSetting(dataValue.substring(42, 62)))
-            break
-        case '04':
-            let interval = 0
-            let workMode = getInt(dataValue.substring(0, 2))
-            let heartbeatInterval = getMinsByMin(dataValue.substring(4, 8))
-            let periodicInterval = getMinsByMin(dataValue.substring(8, 12))
-            let eventInterval = getMinsByMin(dataValue.substring(12, 16))
-            switch (workMode) {
-                case 0:
-                    interval = heartbeatInterval
-                    break
-                case 1:
-                    interval = periodicInterval
-                    break
-                case 2:
-                    interval = eventInterval
-                    break
-            }
-            measurementArray = [
-                {measurementId: '3940', type: 'Work Mode', measurementValue: workMode},
-                {measurementId: '3942', type: 'Heartbeat Interval', measurementValue: heartbeatInterval},
-                {measurementId: '3943', type: 'Periodic Interval', measurementValue: periodicInterval},
-                {measurementId: '3944', type: 'Event Interval', measurementValue: eventInterval},
-                {measurementId: '3941', type: 'SOS Mode', measurementValue: getSOSMode(dataValue.substring(16, 18))},
-                {measurementId: '3900', type: 'Uplink Interval', measurementValue: interval}
-            ]
-            break;
-        case '05':
-            measurementArray = [
-                {measurementId: '3000', type: 'Battery', measurementValue: getBattery(dataValue.substring(0, 2))},
-                {measurementId: '3940', type: 'Work Mode', measurementValue: getWorkingMode(dataValue.substring(2, 4))},
-                {measurementId: '3965', type: 'Positioning Strategy', measurementValue: getPositioningStrategy(dataValue.substring(4, 6))},
-                {measurementId: '3941', type: 'SOS Mode', measurementValue: getSOSMode(dataValue.substring(6, 8))}
-            ]
-            break
-        case '06':
-            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
-            measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '4197', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Longitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
-                {measurementId: '4198', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Latitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
-                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(32, 36), 10)},
-                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Light', measurementValue: getSensorValue(dataValue.substring(36, 40))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(40, 42))}
-            ]
-            break
-        case '07':
-            eventList = getEventStatus(dataValue.substring(0, 6))
-            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
-            measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5001', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Wi-Fi Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
-                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(72, 76), 10)},
-                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Light', measurementValue: getSensorValue(dataValue.substring(76, 80))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(80, 82))}
-            ]
-            break
-        case '08':
-            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
-            measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5002', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'BLE Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
-                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(58, 62), 10)},
-                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Light', measurementValue: getSensorValue(dataValue.substring(62, 66))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(66, 68))}
-            ]
-            break
-        case '09':
-            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
-            measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '4197', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Longitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
-                {measurementId: '4198', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Latitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(32, 34))}
-            ]
-            break
-        case '0A':
-            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
-            measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5001', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Wi-Fi Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(72, 74))}
-            ]
-            break
-        case '0B':
-            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
-            measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5002', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'BLE Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(58, 60))},
-            ]
-            break
-        case '0D':
-            let errorCode = getInt(dataValue)
-            let error = ''
-            switch (errorCode) {
-                case 1:
-                    error = 'FAILED TO OBTAIN THE UTC TIMESTAMP'
-                    break
-                case 2:
-                    error = 'ALMANAC TOO OLD'
-                    break
-                case 3:
-                    error = 'DOPPLER ERROR'
-                    break
-            }
-            measurementArray.push({errorCode, error})
-            break
-        case '0E':
-            shardFlag = getShardFlag(dataValue.substring(0, 2))
-            groupId = getInt(dataValue.substring(2, 6))
-            payload = dataValue.substring(6)
-            measurement = {
-                measurementId: '6152',
-                groupId: groupId,
-                index: shardFlag.index,
-                count: shardFlag.count,
-                type: 'gnss-ng payload',
-                measurementValue: payload
-            }
-            measurementArray.push(measurement)
-            break
-        case '0F':
-            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
-            shardFlag = getShardFlag(dataValue.substring(26, 28))
-            groupId = getInt(dataValue.substring(28, 32))
-            measurementArray.push({
-                measurementId: '4200',
-                timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
-                groupId: groupId,
-                index: shardFlag.index,
-                count: shardFlag.count,
-                type: 'Event Status',
-                measurementValue: getEventStatus(dataValue.substring(0, 6))
-            })
-            measurementArray.push({
-                measurementId: '4097',
-                timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
-                groupId: groupId,
-                index: shardFlag.index,
-                count: shardFlag.count,
-                type: 'Air Temperature',
-                measurementValue: '' + getSensorValue(dataValue.substring(16, 20), 10)
-            })
-            measurementArray.push({
-                measurementId: '4199',
-                timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
-                groupId: groupId,
-                index: shardFlag.index,
-                count: shardFlag.count,
-                type: 'Light',
-                measurementValue: '' + getSensorValue(dataValue.substring(20, 24))
-            })
-            measurementArray.push({
-                measurementId: '3000',
-                timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
-                groupId: groupId,
-                index: shardFlag.index,
-                count: shardFlag.count,
-                type: 'Battery',
-                measurementValue: '' + getBattery(dataValue.substring(24, 26))
-            })
-            break
-        case '10':
-            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
-            shardFlag = getShardFlag(dataValue.substring(18, 20))
-            groupId = getInt(dataValue.substring(20, 24))
-            measurementArray.push({
-                measurementId: '4200',
-                timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
-                groupId: groupId,
-                index: shardFlag.index,
-                count: shardFlag.count,
-                type: 'Event Status',
-                measurementValue: getEventStatus(dataValue.substring(0, 6))
-            })
-            measurementArray.push({
-                measurementId: '3000',
-                timestamp: collectTime,
-                motionId: getMotionId(dataValue.substring(6, 8)),
-                groupId: groupId,
-                index: shardFlag.index,
-                count: shardFlag.count,
-                type: 'Battery',
-                measurementValue: '' + getBattery(dataValue.substring(16, 18))
-            })
-            break
-        case '11':
-            collectTime = getUTCTimestamp(dataValue.substring(8, 16))
-            measurementArray.push({
-                measurementId: '3576',
-                timestamp: collectTime,
-                type: 'Positing Status',
-                measurementValue: '' + getPositingStatus(dataValue.substring(0, 2))
-            })
-            measurementArray.push({
-                timestamp: collectTime,
-                measurementId: '4200',
-                type: 'Event Status',
-                measurementValue: getEventStatus(dataValue.substring(2, 8))
-            })
-            if (!isNaN(parseFloat(getSensorValue(dataValue.substring(16, 20), 10)))) {
-                measurementArray.push({
-                    timestamp: collectTime,
-                    measurementId: '4097',
-                    type: 'Air Temperature',
-                    measurementValue: '' + getSensorValue(dataValue.substring(16, 20), 10)
-                })
-            }
-            if (!isNaN(parseFloat(getSensorValue(dataValue.substring(20, 24))))) {
-                measurementArray.push({
-                    timestamp: collectTime,
-                    measurementId: '4199',
-                    type: 'Light',
-                    measurementValue: '' + getSensorValue(dataValue.substring(20, 24))
-                })
-            }
-            measurementArray.push({
-                timestamp: collectTime,
-                measurementId: '3000',
-                type: 'Battery',
-                measurementValue: '' + getBattery(dataValue.substring(24, 26))
-            })
-            break
-    }
-    return measurementArray
-}
-
-function getMotionId (str) {
-    return getInt(str)
-}
-
-function getPositingStatus (str) {
-    return getInt(str)
-}
-
-function getUpShortInfo (messageValue) {
-    return [
-        {
-            measurementId: '3000', type: 'Battery', measurementValue: getBattery(messageValue.substring(0, 2))
-        }, {
-            measurementId: '3502', type: 'Firmware Version', measurementValue: getSoftVersion(messageValue.substring(2, 6))
-        }, {
-            measurementId: '3001', type: 'Hardware Version', measurementValue: getHardVersion(messageValue.substring(6, 10))
-        }, {
-            measurementId: '3940', type: 'Work Mode', measurementValue: getWorkingMode(messageValue.substring(10, 12))
-        }, {
-            measurementId: '3965', type: 'Positioning Strategy', measurementValue: getPositioningStrategy(messageValue.substring(12, 14))
-        }, {
-            measurementId: '3942', type: 'Heartbeat Interval', measurementValue: getMinsByMin(messageValue.substring(14, 18))
-        }, {
-            measurementId: '3943', type: 'Periodic Interval', measurementValue: getMinsByMin(messageValue.substring(18, 22))
-        }, {
-            measurementId: '3944', type: 'Event Interval', measurementValue: getMinsByMin(messageValue.substring(22, 26))
-        }, {
-            measurementId: '3945', type: 'Sensor Enable', measurementValue: getInt(messageValue.substring(26, 28))
-        }, {
-            measurementId: '3941', type: 'SOS Mode', measurementValue: getSOSMode(messageValue.substring(28, 30))
-        }
-    ]
-}
-
-function getMotionSetting (str) {
-    return [
-        {measurementId: '3946', type: 'Motion Enable', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3947', type: 'Any Motion Threshold', measurementValue: getSensorValue(str.substring(2, 6), 1)},
-        {measurementId: '3948', type: 'Motion Start Interval', measurementValue: getMinsByMin(str.substring(6, 10))},
-    ]
-}
-
-function getStaticSetting (str) {
-    return [
-        {measurementId: '3949', type: 'Static Enable', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3950', type: 'Device Static Timeout', measurementValue: getMinsByMin(str.substring(2, 6))}
-    ]
-}
-
-function getShockSetting (str) {
-    return [
-        {measurementId: '3951', type: 'Shock Enable', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3952', type: 'Shock Threshold', measurementValue: getInt(str.substring(2, 6))}
-    ]
-}
-
-function getTempSetting (str) {
-    return [
-        {measurementId: '3953', type: 'Temp Enable', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3954', type: 'Event Temp Interval', measurementValue: getMinsByMin(str.substring(2, 6))},
-        {measurementId: '3955', type: 'Event Temp Sample Interval', measurementValue: getSecondsByInt(str.substring(6, 10))},
-        {measurementId: '3956', type: 'Temp ThMax', measurementValue: getSensorValue(str.substring(10, 14), 10)},
-        {measurementId: '3957', type: 'Temp ThMin', measurementValue: getSensorValue(str.substring(14, 18), 10)},
-        {measurementId: '3958', type: 'Temp Warning Type', measurementValue: getInt(str.substring(18, 20))}
-    ]
-}
-
-function getLightSetting (str) {
-    return [
-        {measurementId: '3959', type: 'Light Enable', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3960', type: 'Event Light Interval', measurementValue: getMinsByMin(str.substring(2, 6))},
-        {measurementId: '3961', type: 'Event Light Sample Interval', measurementValue: getSecondsByInt(str.substring(6, 10))},
-        {measurementId: '3962', type: 'Light ThMax', measurementValue: getSensorValue(str.substring(10, 14), 10)},
-        {measurementId: '3963', type: 'Light ThMin', measurementValue: getSensorValue(str.substring(14, 18), 10)},
-        {measurementId: '3964', type: 'Light Warning Type', measurementValue: getInt(str.substring(18, 20))}
-    ]
-}
-
-function getShardFlag (str) {
-    let bitStr = getByteArray(str)
-    return {
-        count: parseInt(bitStr.substring(0, 4), 2),
-        index: parseInt(bitStr.substring(4), 2)
-    }
-}
-
-function getBattery (batteryStr) {
-    return loraWANV2DataFormat(batteryStr)
-}
-function getSoftVersion (softVersion) {
-    return `${loraWANV2DataFormat(softVersion.substring(0, 2))}.${loraWANV2DataFormat(softVersion.substring(2, 4))}`
-}
-function getHardVersion (hardVersion) {
-    return `${loraWANV2DataFormat(hardVersion.substring(0, 2))}.${loraWANV2DataFormat(hardVersion.substring(2, 4))}`
-}
-
-function getSecondsByInt (str) {
-    return getInt(str)
-}
-
-function getMinsByMin (str) {
-    return getInt(str)
-}
-
-function getSensorValue (str, dig) {
-    if (str === '8000') {
-        return null
-    } else {
-        return loraWANV2DataFormat(str, dig)
-    }
-}
-
-function bytes2HexString (arrBytes) {
-    var str = ''
-    for (var i = 0; i < arrBytes.length; i++) {
-        var tmp
-        var num = arrBytes[i]
-        if (num < 0) {
-            tmp = (255 + num + 1).toString(16)
-        } else {
-            tmp = num.toString(16)
-        }
-        if (tmp.length === 1) {
-            tmp = '0' + tmp
-        }
-        str += tmp
-    }
-    return str
-}
-function loraWANV2DataFormat (str, divisor = 1) {
-    let strReverse = bigEndianTransform(str)
-    let str2 = toBinary(strReverse)
-    if (str2.substring(0, 1) === '1') {
-        let arr = str2.split('')
-        let reverseArr = arr.map((item) => {
-            if (parseInt(item) === 1) {
-                return 0
-            } else {
-                return 1
-            }
-        })
-        str2 = parseInt(reverseArr.join(''), 2) + 1
-        return '-' + str2 / divisor
-    }
-    return parseInt(str2, 2) / divisor
-}
-
-function bigEndianTransform (data) {
-    let dataArray = []
-    for (let i = 0; i < data.length; i += 2) {
-        dataArray.push(data.substring(i, i + 2))
-    }
-    return dataArray
-}
-
-function toBinary (arr) {
-    let binaryData = arr.map((item) => {
-        let data = parseInt(item, 16)
-            .toString(2)
-        let dataLength = data.length
-        if (data.length !== 8) {
-            for (let i = 0; i < 8 - dataLength; i++) {
-                data = `0` + data
-            }
-        }
-        return data
-    })
-    return binaryData.toString().replace(/,/g, '')
-}
-
-function getSOSMode (str) {
-    return loraWANV2DataFormat(str)
-}
-
-function getMacAndRssiObj (pair) {
-    let pairs = []
-    if (pair.length % 14 === 0) {
-        for (let i = 0; i < pair.length; i += 14) {
-            let mac = getMacAddress(pair.substring(i, i + 12))
-            if (mac) {
-                let rssi = getInt8RSSI(pair.substring(i + 12, i + 14))
-                pairs.push({mac: mac, rssi: rssi})
-            } else {
-                continue
-            }
-        }
-    }
-    return pairs
-}
-
-function getMacAddress (str) {
-    if (str.toLowerCase() === 'ffffffffffff') {
-        return null
-    }
-    let macArr = []
-    for (let i = 1; i < str.length; i++) {
-        if (i % 2 === 1) {
-            macArr.push(str.substring(i - 1, i + 1))
-        }
-    }
-    let mac = ''
-    for (let i = 0; i < macArr.length; i++) {
-        mac = mac + macArr[i]
-        if (i < macArr.length - 1) {
-            mac = mac + ':'
-        }
-    }
-    return mac
-}
-
-function getInt8RSSI (str) {
-    return loraWANV2DataFormat(str)
-}
-
-function getInt (str) {
-    return parseInt(str, 16)
-}
-
-function getEventStatus (str) {
-    // return getInt(str)
     let bitStr = getByteArray(str)
     let bitArr = []
     for (let i = 0; i < bitStr.length; i++) {
@@ -3338,13 +2607,13 @@ exports.handler = async (event) => {
 
 #### 解码器
 
-[**SenseCAP T2000 追踪器**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html)是一款工业级 LoRaWAN® 资产追踪器，支持 GNSS、蓝牙和 Wi-Fi 定位，可在室内外环境中提供可靠的追踪功能。它具有 IP67 防护等级，内置 3 轴加速度计用于检测运动状态，以及防拆按钮，当设备被移除时会触发最高优先级警报。T2000-A 和 T2000-B 支持长效电池供电，而太阳能供电的 T2000-C 配备可充电电池，确保持续的户外使用，使该系列产品成为长期免维护资产追踪的理想选择。
+[**SenseCAP T2000 Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html)，一款工业级 LoRaWAN® 资产追踪器，支持 GNSS、蓝牙和 Wi-Fi 定位，可在室内和室外环境中实现可靠追踪。它具备 IP67 防护等级，内置 3 轴加速度计用于检测运动状态，并配备防拆按钮，当设备被移除时会触发最高优先级报警。T2000-A 和 T2000-B 支持长续航电池供电，而采用太阳能供电并配备可充电电池的 T2000-C 可确保持续的户外使用，使该系列非常适合长期、免维护的资产追踪。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 </font></span></strong>
     </a>
 </div>
 <br />
@@ -5529,15 +4798,15 @@ exports.handler = async (event) => {
 
 ### Wio Tracker 1110 开发板
 
-[Wio Tracker 1110 开发板](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html)基于 [Wio-WM1110 无线模块](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html)，集成了 [Semtech 的 LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa® 收发器和用于地理定位的多用途射频前端，是一个用户友好的基于 LoRa 的跟踪开发平台。
+[Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) 基于 [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html)，集成了 [Semtech's LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa® 收发器和多用途射频前端用于地理定位，是一款用户友好的、基于 LoRa 的追踪开发平台。
 
-Wio Tracker 1110 开发板具有紧凑的尺寸和丰富的接口，配备了板载天线，便于部署。它支持 Arduino 开发环境和 LoRaWAN 协议栈，非常适合跟踪相关的物联网项目。
+凭借其小巧的尺寸和丰富的接口，Wio Tracker 1110 Dev Board 方便地配备了板载天线，便于部署。它支持 Arduino 开发环境和 LoRaWAN 协议栈，非常适合与追踪相关的物联网项目。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png" alt="pir" width={700} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 </font></span></strong>
     </a>
 </div>
 
@@ -7468,13 +6737,13 @@ function loraWANV2PositiveDataFormat(str) {
 
 ### SenseCAP S210X LoRaWAN 传感器
 
-[SenseCAP S210X](https://www.seeedstudio.com/catalogsearch/result/?q=s210x) 是一系列无线 LoRaWAN® 传感器。它可以在城市场景中覆盖 2 公里的传输范围，在视距场景中覆盖 10 公里，同时在传输过程中保持较低的功耗。配合可更换电池，支持长达 10 年的使用寿命，以及工业级 IP66 外壳。它支持 -40 ~ 85℃ 的工作温度，可以在恶劣环境中部署。SenseCAP S210X 兼容 LoRaWAN® V1.0.3 协议，可与 LoRaWAN® 网关配合使用。
+[SenseCAP S210X](https://www.seeedstudio.com/catalogsearch/result/?q=s210x) 是一系列无线 LoRaWAN® 传感器。它在城市场景中可覆盖 2km 的传输范围，在视距场景中可覆盖 10km 的传输范围，同时在传输过程中保持较低的功耗。配合可更换电池，可支持长达 10 年的使用寿命，以及工业级 IP66 外壳。它支持 -40 ~ 85℃ 的工作温度，可部署在恶劣环境中。SenseCAP S210X 兼容 LoRaWAN® V1.0.3 协议，并可与 LoRaWAN® 网关配合工作。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/111_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -9140,27 +8409,27 @@ exports.handler = async (event) => {
 
 </details>
 
-### SenseCAP S2100 数据记录器
+### SenseCAP S2100 数据记录仪
 
-[SenseCAP S2100 数据记录器](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)是一款多功能设备，可连接 MODBUS-RTU RS485/模拟/GPIO 传感器，轻松将数据传输到 LoRaWAN 网络。凭借其 LoRa 和 IP66 设计，该设备具有令人印象深刻的稳定性和可靠性，能够覆盖长距离传输范围，同时保持超低功耗。它非常适合户外使用，可由电池供电或连接到 12V 外部电源以获得更大的灵活性。当连接到 12V 电源时，可更换的内置电池充当备用电源。此外，S2100 数据记录器针对 OTA 进行了优化，内置蓝牙，使设置和更新快速简单。最重要的是，S2110 转换器使 S2100 数据记录器能够连接到 Grove 传感器，使其成为 DIY 工业级 LoRaWAN 传感器和小规模部署的绝佳选择。
+[SenseCAP S2100 Data Logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) 是一款多功能设备，可连接 MODBUS-RTU RS485/模拟/ GPIO 传感器，从而轻松将数据传输到 LoRaWAN 网络。凭借其 LoRa 和 IP66 设计，该设备具有出色的稳定性和可靠性，在保持超低功耗的同时还能覆盖较长的传输距离。它非常适合户外使用，可以由电池供电，也可以连接到 12V 外部电源以获得更大的灵活性。连接 12V 电源时，可更换的内置电池将作为备用电源。此外，S2100 数据记录仪内置蓝牙，并针对 OTA 进行了优化，使得设置和更新快速而简单。更重要的是，S2110 转换器使 S2100 数据记录仪能够连接到 Grove 传感器，使其成为 DIY 工业级 LoRaWAN 传感器和小规模部署的绝佳选择。
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/Data_Logger/1.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
 #### 解码器
 
-<!-- Code -->
+<!-- 代码 -->
 
 import Tabs2 from '@theme/Tabs';
 import TabItem2 from '@theme/TabItem';
 
 <Tabs2>
-<TabItem2 value="For TTN" label="适用于 TTN">
+<TabItem2 value="For TTN" label="For TTN">
 
 <details>
 
@@ -9781,7 +9050,7 @@ function decodeUplink (input, port) {
 </details>
 
 </TabItem2>
-<TabItem2 value="For Helium" label="适用于 Helium">
+<TabItem2 value="For Helium" label="For Helium">
 
 <details>
 
@@ -10405,13 +9674,13 @@ function bytes2HexString (arrBytes) {
 
 ### SenseCAP S2120 8 合 1 气象传感器
 
-[SenseCAP S2120 8 合 1 LoRaWAN 气象传感器](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html)可测量空气温度、湿度、风速、风向、降雨量、光照强度、紫外线指数和大气压力。它具有超低功耗、可靠性能、内置蓝牙和应用服务，支持 OTA 配置和远程设备管理，实现了低维护成本。它支持多种应用场景，如后院、花园、智慧农业、气象学、智慧城市等。
+[SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html) 可测量空气温度、湿度、风速、风向、降雨量、光照强度、UV 指数和气压。凭借超低功耗、可靠性能、内置蓝牙以及用于 OTA 配置和远程设备管理的应用服务，它实现了低维护成本。它支持后院、花园、智慧农业、气象、智慧城市等多种场景应用。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/f/o/font_5.png" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -10423,7 +9692,7 @@ import Tabs3 from '@theme/Tabs';
 import TabItem3 from '@theme/TabItem';
 
 <Tabs3>
-<TabItem3 value="For TTN" label="适用于 TTN">
+<TabItem3 value="For TTN" label="For TTN">
 
 <details>
 
@@ -10886,7 +10155,7 @@ function bytes2HexString (arrBytes) {
 </details>
 
 </TabItem3>
-<TabItem3 value="For Helium" label="适用于 Helium">
+<TabItem3 value="For Helium" label="For Helium">
 
 <details>
 
@@ -11510,13 +10779,13 @@ function Decoder (bytes, port) {
 
 ### SenseCAP A1101 - LoRaWAN 视觉 AI 传感器
 
-[SenseCAP A1101 - LoRaWAN 视觉 AI 传感器](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) 是一款支持 TinyML 边缘 AI 的智能图像传感器。它支持多种 AI 模型，如图像识别、人员计数、目标检测、仪表识别等。它还支持使用 TensorFlow Lite 训练模型。
+[SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) 是一款支持 TinyML 边缘 AI 的智能图像传感器。它支持多种 AI 模型，例如图像识别、人数统计、目标检测、仪表识别等。同时也支持使用 TensorFlow Lite 训练模型。
 
 <div align="center"><img width ={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101990962-a1101-first-new-10.17.jpg"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -11528,7 +10797,7 @@ import Tabs4 from '@theme/Tabs';
 import TabItem4 from '@theme/TabItem';
 
 <Tabs4>
-<TabItem4 value="For TTN" label="适用于 TTN">
+<TabItem4 value="For TTN" label="For TTN">
 
 <details>
 
@@ -11888,7 +11157,7 @@ function decodeUplink (input) {
 </details>
 
 </TabItem4>
-<TabItem4 value="For Helium" label="适用于 Helium">
+<TabItem4 value="For Helium" label="For Helium">
 
 <details>
 
@@ -12572,32 +11841,32 @@ function toBinary (arr) {
 
 ##### 准备工作
 
-在配置解码器之前，请根据产品手册正确设置您的传感器和网关，然后连接到您需要的 LoRaWAN 网络服务器。
+在配置解码器之前，请根据产品手册正确设置传感器和网关，然后连接到你所需的 LoRaWAN 网络服务器。
 
 我们以 The Things Stack 为例，请按照以下步骤配置解码器：
 
-##### 配置载荷解码器
+##### 配置 Payload 解码器
 
-- 导航到您设备的 `Payload Formats` 选项卡。
-- 为 `Payload Format` 选择 `Custom`
+- 进入设备的 `Payload Formats` 选项卡。
+- 在 `Payload Format` 中选择 `Custom`
 - 将 `decoder.js` 的全部内容复制并粘贴到 `decoder` 文本区域。
 - 点击 `save payload functions`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/decoder-use.png" alt="pir" width={800} height="auto" /></p>
 
-##### 检查解码消息
+##### 检查解码后的消息
 
-您可以先使用示例载荷测试解码脚本。
+你可以先使用示例 payload 测试解码脚本。
 
-为此，将原始数据包（如 `01 01 10 98 53 00 00 01 02 10 A8 7A 00 00 AF 51`）复制到 `Payload` 文本输入框中，并根据设备手册选择 `FPort`，然后点击 `Test` 按钮。您将在下方看到成功解析的 JSON 结构。
+为此，将类似 `01 01 10 98 53 00 00 01 02 10 A8 7A 00 00 AF 51` 的原始数据包复制到 `Payload` 文本输入框中，并根据设备手册选择 `FPort`，然后点击 `Test` 按钮。你将在下方看到成功解析的 JSON 结构。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/test-decoder.png" alt="pir" width={800} height="auto" /></p>
 
-然后让我们看看脚本的神奇之处。我们导航到 `Live Data` 选项卡，您可以展开任何上传的消息来检查载荷中的 `Event Fields`。这些字段正是由脚本填充的。
+接下来让我们看看脚本的神奇之处。我们进入 `Live Data` 选项卡，你可以展开任意已上传的消息，查看 payload 中的 `Event Fields`。这些字段正是由脚本填充的。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/check-data.png" alt="pir" width={800} height="auto" /></p>
 
-如果您使用 TTN 的 MQTT Data API 订阅消息，您也将获得解析的 JSON 载荷字段。
+如果你通过 TTN 的 MQTT Data API 订阅消息，你也会获得已解析的 JSON payload 字段。
 
 ```cpp
 Client mosq-TCSlhYcKaRCn3cIePE received PUBLISH (d0, q0, r0, m0, 'lorawan868/devices/2cf7f12010700041/up', ... (719 bytes))
@@ -12606,4 +11875,4 @@ lorawan868/devices/2cf7f12010700041/up {"app_id":"lorawan868","dev_id":"2cf7f120
 
 ### 资源
 
-[SenseCAP 解码器](https://github.com/Seeed-Solution/SenseCAP-Decoder)
+[SenseCAP Decoder](https://github.com/Seeed-Solution/SenseCAP-Decoder)

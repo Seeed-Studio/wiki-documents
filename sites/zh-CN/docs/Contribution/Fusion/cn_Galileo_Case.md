@@ -10,7 +10,7 @@ last_update:
   date: 2023/1/13
   author: shuxu hu
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Galileo_Case/
 ---
 

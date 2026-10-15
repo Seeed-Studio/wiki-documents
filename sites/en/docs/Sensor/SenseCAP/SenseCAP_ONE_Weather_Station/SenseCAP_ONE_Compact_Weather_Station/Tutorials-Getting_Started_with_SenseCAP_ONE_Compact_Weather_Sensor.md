@@ -7,10 +7,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 sku: 101990787,101990693,101990784,101990902,101990961,101991022,101991021,101991023,101991024,101991044,101991102,101991050,101991232,101991141
 last_update:
-  date: 12/25/2025
-  author: Janet
+  date: 03/18/2026
+  author: Kian
 createdAt: '2023-04-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-06-16'
 url: https://wiki.seeedstudio.com/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor/
 ---
 # Getting Started with SenseCAP ONE Compact Weather Sensor
@@ -27,8 +27,6 @@ url: https://wiki.seeedstudio.com/Getting_Started_with_SenseCAP_ONE_Compact_Weat
 
 ### Device Interface Introduction
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image3.png" /></div>
-
 There are two connectors at the bottom of the device.
 
 - USB Type-C interface allows you to connect your computer with a normal USB Type-C cable to the device for configuration.
@@ -36,6 +34,44 @@ There are two connectors at the bottom of the device.
 - The main data interface can be connected to the M12 8-pin cable, supporting multiple bus protocols
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image4.png" /></div>
+
+#### V1 vs V2 Weather Stations
+
+V1 and V2 weather stations can be identified by **the SKU on the white label** or by the base design.
+
+Additionally, the USB Type-C port is located differently: on V1, it is on the same side as the white label, while on V2, it is on the opposite side.
+
+:::tip
+The following weather stations have been updated to V2: S500, S700 and S1000.
+:::
+
+| Product Name | V1 SKU    | V2 SKU    |
+| -----------  | --------  | --------- |
+| S200         |    None   | 101991044 |
+| S500         | 101990693 | 101991021 |
+| S600-A       |    None   | 101991232 |
+| S700         | 101990787 | 101991022 |
+| S700-A       |    None   | 101991050 |
+| S700-B       |    None   | 101991102 |
+| S700-C       |    None   | 101991141 |
+| S800         |    None   | 101991023 |
+| S900         | 101990784 |    None   |
+| S1000        | 101990902 | 101991024 |
+
+:::info
+- What's the difference between SenseCAP ONE V2 and V1?
+  - Software function unchanged, V2 is fully compatible to replace V1.
+  - Partial performance optimization, such as wind measurement.
+  - The RS422/RS232 interface is deleted.
+:::
+
+#### V1 Device Interface Layout
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/V1.png" /></div>
+
+#### V2 Device Interface Layout
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image3_V2.png" /></div>
 
 ### Connect with USB Cable
 
@@ -50,6 +86,13 @@ The device adopts an M12 8-pin connector, the different colored pins provide pow
 When working with the RS-485, you can connect only 4 wires (not using a heating function), and the rest can be individually wrapped with tape to prevent short circuit
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image7.png" /></div>
+Below is the wiring schematic for the M12  connector for your reference.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/M12_connector_faces_p1_p2.png" /></div>
+
+The image below is a wiring definition diagram.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/wiring-definition.png" /></div>
 
 The holes of the cable and the pins of the device connector must be aligned when the cable is plugged in.
 

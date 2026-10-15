@@ -13,7 +13,7 @@ last_update:
   date: 3/18/2025
   author: Kasun Thushara
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-25'
 url: https://wiki.seeedstudio.com/es/raspberry_pi_4g_lte_hat_mbim/
 ---
 

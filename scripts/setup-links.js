@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const sites = ['en', 'zh-CN', 'ja', 'es'];
+const sites = ['en', 'zh-CN', 'ja', 'es', 'pt-BR'];
 const links = ['src', 'static'];
 
 function rmForce(p) {

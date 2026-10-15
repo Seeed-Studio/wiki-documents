@@ -3,14 +3,16 @@
  * -----------------------
  * Displays download links and file metadata for selected Jetson products and L4T versions.
  * Data is sourced from an external JSON file (L4TData.json).
- * 
+ *
  * Requirements:
  * - User must select a product and L4T version from the state (managed by Zustand via useJetsonStore).
  * - If either product or L4T is not selected or data is missing, an instructional message is shown.
  */
 
 import React from 'react';
-import { Col, Row } from 'antd';
+import { useLocation } from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { Col, Row, Tag } from 'antd';
 import { useJetsonStore } from '@site/src/stores/useJetsonStore';
 import L4TData from "@site/src/data/jetson/L4TData.json"
 
@@ -19,6 +21,26 @@ import L4TData from "@site/src/data/jetson/L4TData.json"
  * based on the selected product and L4T version.
  */
 import Admonition from '@theme/Admonition';
+
+const normalizeLang = (lang = 'en') => {
+  const l = String(lang).toLowerCase();
+
+  if (l === 'cn' || l.startsWith('zh')) return 'zh';
+  if (l.startsWith('ja')) return 'ja';
+  if (l.startsWith('es')) return 'es';
+  if (l.startsWith('pt')) return 'pt';
+  if (l.startsWith('en')) return 'en';
+
+  return 'en';
+};
+
+const getLangFromPathname = (pathname = '/') => {
+  if (pathname.startsWith('/pt-br')) return 'pt';
+  if (pathname.startsWith('/cn')) return 'zh';
+  if (pathname.startsWith('/ja')) return 'ja';
+  if (pathname.startsWith('/es')) return 'es';
+  return null;
+};
 
 const cmpVersions = (a, b) => {
     const toNums = v => String(v).match(/\d+/g)?.map(Number) ?? [];
@@ -32,17 +54,27 @@ const cmpVersions = (a, b) => {
     return 0;
   };
 
-  
-  export const OneDriveLink = ({ lang = 'en' }) => {
+
+  export const OneDriveLink = ({ lang }) => {
     const product = useJetsonStore(state => state.product);
     const l4t = useJetsonStore(state => state.l4t);
-  
+    const { i18n } = useDocusaurusContext();
+    const location = useLocation();
+
+    const detectedLang =
+      lang ||
+      getLangFromPathname(location.pathname || '/') ||
+      i18n.currentLocale;
+    const currentLang = normalizeLang(detectedLang);
+
     const content = {
       en: {
         missingSelection: "Finish the selection first, or corresponding information is missing.",
         link: "Link",
         file: "File",
         sha256: "SHA256",
+        latest: "latest",
+        stable: "stable",
         dangerTitle: "Warning",
         dangerBody: (
           <>
@@ -58,6 +90,8 @@ const cmpVersions = (a, b) => {
         link: "链接",
         file: "文件",
         sha256: "SHA256",
+        latest: "最新",
+        stable: "稳定版",
         dangerTitle: "警告",
         dangerBody: (
           <>
@@ -73,6 +107,8 @@ const cmpVersions = (a, b) => {
         link: "リンク",
         file: "ファイル",
         sha256: "SHA256",
+        latest: "最新",
+        stable: "安定版",
         dangerTitle: "警告",
         dangerBody: (
           <>
@@ -88,6 +124,8 @@ const cmpVersions = (a, b) => {
         link: "Enlace",
         file: "Archivo",
         sha256: "SHA256",
+        latest: "más reciente",
+        stable: "estable",
         dangerTitle: "Advertencia",
         dangerBody: (
           <>
@@ -98,20 +136,45 @@ const cmpVersions = (a, b) => {
           </>
         ),
       },
+      pt: {
+        missingSelection: "Conclua a seleção primeiro ou as informações correspondentes estão ausentes.",
+        link: "Link",
+        file: "Arquivo",
+        sha256: "SHA256",
+        latest: "mais recente",
+        stable: "estável",
+        dangerTitle: "Aviso",
+        dangerBody: (
+          <>
+            Se você estiver usando um módulo <strong>Orin NX 16GB/8GB</strong>,{" "}
+            <strong>não ative o modo MAXN SUPER</strong>.<br />
+            A capacidade de resfriamento do <strong>J4011/J4012</strong> é insuficiente para suportá-lo,
+            e forçar esse modo pode resultar em <strong>danos permanentes</strong> ao módulo.
+          </>
+        ),
+      },
     };
-  
-    const texts = content[lang] || content.en;
-  
+
+    const texts = content[currentLang] || content.en;
+
     const obj = getL4TData(product, l4t);
     if (!obj.product || !obj.l4t) {
       return <p>{texts.missingSelection}</p>;
     }
-  
+
+    const stableFilename = obj.stableFilename || obj.filename;
+    const showStableMetadata =
+      Boolean(obj.mirrorlink) && stableFilename && stableFilename !== obj.filename;
+    const stableSha256 = obj.stableSha256 || (showStableMetadata ? 'TBD' : obj.sha256);
+    const downloadRowStyle = { marginBottom: 12 };
+    const metadataStackStyle = { display: 'flex', flexDirection: 'column', gap: 8 };
+    const metadataLineStyle = { display: 'flex', alignItems: 'flex-start', gap: 4, lineHeight: 1.6 };
+
     const warnProducts = ['j4012classic', 'j4011classic', 'j4012industrial', 'j4011industrial'];
     // 如需阈值为 36.4.3 请改成 '36.4.3'
     const showDanger =
     cmpVersions(l4t, '36.4.0') > 0 && typeof product === 'string' && warnProducts.includes(product.toLowerCase());
-  
+
     return (
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginLeft: 20 }}>
         {showDanger && (
@@ -119,28 +182,42 @@ const cmpVersions = (a, b) => {
             {texts.dangerBody}
           </Admonition>
         )}
-  
-        <Row>
-          <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.link}</p></Col>
-          <Col span={4}><a href={obj.mainlink}>OneDrive1</a></Col>
+
+        <Row align="middle" style={downloadRowStyle}>
+          <Col span={3}><p style={{ fontWeight: 'bold', margin: 0 }}>{texts.link}</p></Col>
+          <Col span={5}>
+            <a href={obj.mainlink}>OneDrive1</a> <Tag color="blue">{texts.latest}</Tag>
+          </Col>
           {obj.mirrorlink && (
-            <Col span={4}><a href={obj.mirrorlink}>OneDrive2</a></Col>
+            <Col span={5}>
+              <a href={obj.mirrorlink}>OneDrive2</a> <Tag color="green">{texts.stable}</Tag>
+            </Col>
           )}
         </Row>
-  
-        <Row>
-          <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.file}</p></Col>
-          <Col><span>{obj.filename}</span></Col>
+
+        <Row align="top" style={downloadRowStyle}>
+          <Col span={3}><p style={{ fontWeight: 'bold', margin: 0 }}>{texts.file}</p></Col>
+          <Col style={metadataStackStyle}>
+            <div style={metadataLineStyle}><Tag color="blue">{texts.latest}</Tag><span>{obj.filename}</span></div>
+            {showStableMetadata && (
+              <div style={metadataLineStyle}><Tag color="green">{texts.stable}</Tag><span>{stableFilename}</span></div>
+            )}
+          </Col>
         </Row>
-  
-        <Row>
-          <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.sha256}</p></Col>
-          <Col><span>{obj.sha256}</span></Col>
+
+        <Row align="top">
+          <Col span={3}><p style={{ fontWeight: 'bold', margin: 0 }}>{texts.sha256}</p></Col>
+          <Col style={metadataStackStyle}>
+            <div style={metadataLineStyle}><Tag color="blue">{texts.latest}</Tag><span style={{ whiteSpace: 'pre-line' }}>{obj.sha256}</span></div>
+            {showStableMetadata && (
+              <div style={metadataLineStyle}><Tag color="green">{texts.stable}</Tag><span style={{ whiteSpace: 'pre-line' }}>{stableSha256}</span></div>
+            )}
+          </Col>
         </Row>
       </div>
     );
   };
-  
+
 
 
 /**
@@ -163,6 +240,8 @@ export const getL4TData = (product, l4t) => {
         "filename": "",
         "foldername": "",
         "sha256": "",
+        "stableFilename": "",
+        "stableSha256": "",
     }
     return L4TData.find(item => item.product === product && item.l4t === l4t) || emptyObj;
 }

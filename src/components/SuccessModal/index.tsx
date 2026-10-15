@@ -6,8 +6,8 @@ import styles from './styles.module.scss';
 interface SuccessModalProps {
   visible: boolean;
   onClose: () => void;
-  title?: string;
-  content?: string;
+  title?: React.ReactNode;
+  content?: React.ReactNode;
 }
 
 const SuccessModal: React.FC<SuccessModalProps> = ({
@@ -28,11 +28,11 @@ const SuccessModal: React.FC<SuccessModalProps> = ({
     >
       <div className={styles.successContent}>
         <div className={styles.successIcon}>
-          <CheckCircleOutlined  style={{fontSize: 64}}/>
+          <CheckCircleOutlined  style={{fontSize: 60,width: 60,height: 60}} />
         </div>
         <div className={styles.successText}>
-          <div className={styles.successTitle} dangerouslySetInnerHTML={{ __html: title }} />
-          <div className={styles.successBody} dangerouslySetInnerHTML={{ __html: content }} />
+          <div className={styles.successTitle}>{title}</div>
+          <div className={styles.successBody}>{content}</div>
         </div>
       </div>
     </Modal>

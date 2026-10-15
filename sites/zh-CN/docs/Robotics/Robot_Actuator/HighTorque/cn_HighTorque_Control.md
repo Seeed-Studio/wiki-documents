@@ -12,7 +12,7 @@ last_update:
   date: 11/19/2025
   author: Tienjuiwong
 createdAt: '2025-11-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-08-02'
 url: https://wiki.seeedstudio.com/cn/hightorque_control/
 ---
 
@@ -165,7 +165,7 @@ sudo modprobe can_dev
 sudo ip link set can0 down
 
 # Configure CAN interface parameters
-sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 type can bitrate 1000000
 
 # Start interface
 sudo ip link set can0 up

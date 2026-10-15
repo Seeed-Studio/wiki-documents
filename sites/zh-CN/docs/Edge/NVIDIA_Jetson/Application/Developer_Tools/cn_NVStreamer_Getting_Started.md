@@ -11,7 +11,7 @@ last_update:
   date: 7/24/2024
   author: ZhuYaoHui
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-22'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_nvstreamer/
 ---
 # 如何在reComputer上使用Jetson平台服务的NVStreamer进行RTSP流传输

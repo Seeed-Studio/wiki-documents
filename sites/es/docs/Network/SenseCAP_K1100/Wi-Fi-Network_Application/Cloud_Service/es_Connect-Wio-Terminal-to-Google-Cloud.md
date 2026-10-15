@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2025-06-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/es/Connect-Wio-Terminal-to-Google-Cloud/
 ---
 # Conectar Wio Terminal a Google Cloud IoT Core

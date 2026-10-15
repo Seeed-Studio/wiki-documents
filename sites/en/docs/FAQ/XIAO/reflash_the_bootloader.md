@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2023-07-06'
 url: https://wiki.seeedstudio.com/reflash_the_bootloader/
 ---
 You can simply connect the board to a PC via **USB Type-C** and reflash the bootloader with factory firmware by using **ESP RF Test Tool**.

@@ -1,4 +1,4 @@
-position: 6 # float position is supported 
+position: 7 # float position is supported 
 label: 'Semtech LR2021 EVK'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
@@ -7,4 +7,4 @@ link:
   type: generated-index
   slug: semtech_lr2021_evk_class
   title: Semtech LR2021 EVK
-  description: Semtech LR2021 EVK製品ドキュメント。
+  description: Semtech LR2021 EVK 製品ドキュメント。

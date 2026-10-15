@@ -12,7 +12,7 @@ last_update:
   date: 1/9/2026
   author: Janet
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-09'
 url: https://wiki.seeedstudio.com/es/get_started_with_lorawan_tracker/
 ---
 

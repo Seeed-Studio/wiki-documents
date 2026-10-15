@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: Overview
-description: Quick start guide for SenseCraft Data Platform — manage your SenseCAP devices and visualize sensor data with a secure and reliable cloud platform.
+title: SenseCraft Data Platform Quick Start
+description: Create an account, bind a SenseCAP device, and view sensor data in SenseCraft Data Platform with this step-by-step quick-start guide.
 keywords:
   - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -12,7 +12,7 @@ last_update:
   date: 06/06/2025
   author: Matthew
 createdAt: '2023-03-01'
-updatedAt: '2026-03-03'
+updatedAt: '2026-08-13'
 url: https://wiki.seeedstudio.com/cloud/sensecraft-data/sensecraft-data-platform/overview/
 ---
 
@@ -22,6 +22,8 @@ url: https://wiki.seeedstudio.com/cloud/sensecraft-data/sensecraft-data-platform
 **Notice:**  
 Starting from 2025, **SenseCAP Portal** has been officially renamed to **SenseCraft Data Platform**. The functionality remains the same, with ongoing enhancements to better support AIoT and multi-sensor scenarios.
 :::
+
+This guide covers account setup, app access, device binding, and sensor-data verification.
 
 How to work with SenseCraft Data Platform? Let’s go!
 
@@ -60,11 +62,30 @@ Install `SenseCraft App` and log in.
 ## Bind Device
 
 Each SenseCAP device has a label on the enclosure as shown in the figure below. The EUI is the unique code of a SenseCAP device. The Key is an encryption field, and it can be ignored.
-On the SenseCAP App main page, click the “Bind” button, then scan the QR code to bind the device.
 
 ![](https://sensecap-docs.seeed.cc/images/sensecap_portal/label.jpg)
+
+
+On the SenseCAP App main page, click the “Bind” button, then scan the QR code to bind the device.
+
+<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview1.png" /></div>
+
+On the SenseCAP Platform, go to the Dashboard page and click **Bind Device**.
+
+<div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview2.png" /></div>
+
+Enter the device EUI and KEY to complete the binding.
+
+<div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview3.png" /></div>
 
 ## Check Data
 
 Log in to `SenseCraft Data Platform`, check the device status and basic information in the “Device/Sensor Node” section, and view the sensor data in the “Data/Table” section.
-![](https://sensecap-docs.seeed.cc/images/sensecap_portal/data_overview.jpg)
+
+<div align="left"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCraft_Data_Platform/Overview/SenseCAP-Platform-overview4.png" /></div>
+
+## Related guides
+
+- [Manage gateways and sensor nodes](/sensecraft-data-platform/tutorials/device-management/)
+- [Monitor device status and sensor data in the Dashboard](/sensecraft-data-platform/tutorials/dashboard/)
+- [Make your first SenseCraft Data Platform HTTP API request](/sensecraft-data-platform/api/http-api/quick-start/)

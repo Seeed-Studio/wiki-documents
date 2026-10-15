@@ -9,7 +9,7 @@ last_update:
   date: 8/5/2024
   author: Frank
 createdAt: '2024-08-05'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-29'
 url: https://wiki.seeedstudio.com/Raspberry_Pi_as_a_NAS/
 ---
 

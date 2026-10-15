@@ -11,7 +11,7 @@ last_update:
   date: 01/11/2022
   author: gunengyu
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Use_Socket_to_connect_to_the_forum/
 ---
 Socket 几乎是整个网络通信的基础。在这个项目中，我们将使用 Socket 连接到指定的服务器，从互联网获取其信息。您可以在互联网上搜索许多支持 telnet 协议的服务器。通过连接到这些服务器，您可以浏览网页和论坛，甚至在终端中阅读字符动画！

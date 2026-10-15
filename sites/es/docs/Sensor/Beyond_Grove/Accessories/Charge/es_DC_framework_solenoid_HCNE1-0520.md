@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/DC_framework_solenoid_HCNE1-0520/
 ---
 Este solenoide de marco DC de 12 voltios es excelente para proyectos. Estos tipos de solenoide se utilizan a menudo para cerraduras automáticas de puertas, máquinas expendedoras, robots, etc. Sin embargo, funcionan muy bien para casi cualquier proyecto que requiera un solenoide DC.

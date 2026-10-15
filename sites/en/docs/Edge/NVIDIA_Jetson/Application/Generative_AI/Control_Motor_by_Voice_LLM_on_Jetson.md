@@ -14,7 +14,7 @@ last_update:
   date: 08/19/2025
   author: Youjiang
 createdAt: '2025-08-19'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-25'
 url: https://wiki.seeedstudio.com/control_motor_by_voice_llm_on_jetson/
 ---
 

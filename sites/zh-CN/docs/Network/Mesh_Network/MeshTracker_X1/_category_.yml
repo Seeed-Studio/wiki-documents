@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'MeshTracker X1 系列'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wio_tracker_x1_node
+link:
+  type: generated-index
+  slug: meshtracker_x1_node
+  title: MeshTracker X1 节点
+  description: MeshTracker X1 Meshtastic 节点

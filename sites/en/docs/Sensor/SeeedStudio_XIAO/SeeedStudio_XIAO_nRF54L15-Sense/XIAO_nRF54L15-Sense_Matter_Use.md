@@ -12,7 +12,7 @@ last_update:
   author: Jason
 sidebar_position: 0
 createdAt: '2025-09-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-12'
 url: https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/
 ---
 

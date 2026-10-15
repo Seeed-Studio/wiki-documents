@@ -11,7 +11,7 @@ last_update:
   date: 10/13/2023
   author: Corey Thompson
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/Edgebox-rpi-200-ignition-edge/
 ---
 # Edgebox RPI 200 开始使用 Ignition Edge

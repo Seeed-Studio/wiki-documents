@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona tutoriales de ensamblaje y puesta en marcha para el Robot Bípedo con Ruedas Mini StackForce, así como materiales de aprendizaje y enlaces necesarios para su desarrollo.
-title: Robot Bípedo con Ruedas Mini StackForce
+description: Este wiki proporciona tutoriales de ensamblaje y puesta en marcha para el StackForce Mini Wheeled Legged Robot, así como materiales de aprendizaje y enlaces necesarios para su desarrollo.
+title: Inicio rápido de Mini Wheeled Legged
 keywords:
   - StackForce
   - Robótica
@@ -10,10 +10,9 @@ last_update:
   date: 12/8/2025
   author: LiShanghang
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-12-10'
-updatedAt: '2026-03-04'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/
 ---
 
@@ -51,6 +50,8 @@ El robot incluye un modelo cinemático de cuerpo completo y un algoritmo de auto
 - **Documentación para la plataforma de desarrollo de robótica ligera StackForce:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
 
 - **Proyectos de robots de código abierto para la plataforma de desarrollo de robótica ligera StackForce:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
+
+- **Aprendizaje de teoría y código del robot con ruedas y patas StackForce Mini** [https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md](https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md)
 
 ## Características Principales
 

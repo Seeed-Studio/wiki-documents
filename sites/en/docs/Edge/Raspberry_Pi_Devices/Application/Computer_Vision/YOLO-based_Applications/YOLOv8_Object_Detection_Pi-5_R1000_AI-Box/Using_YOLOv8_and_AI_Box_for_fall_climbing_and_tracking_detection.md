@@ -13,7 +13,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-07-29'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-04'
 url: https://wiki.seeedstudio.com/yolov8_on_ai_box_for_fall_climbing_tracking/
 ---
 
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/yolov8_on_ai_box_for_fall_climbing_tracking/
 
 ## Introduction
 
-This project will guide you on how to use the [reComputed AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) or [reComputed Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) to implement fall detection, climbing detection, and tracking detection using the YOLOv8 model.
+This project will guide you on how to use the [reComputer AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) or [reComputer Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) to implement fall detection, climbing detection, and tracking detection using the YOLOv8 model.
 
 
 ## Hardware prepare

@@ -11,7 +11,7 @@ last_update:
   date: 5/16/2023
   author: Stephen Lo
 createdAt: '2023-05-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/grove-nfc-st25dv64/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 08/14/2024
   author: Jason
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf52840_with_platform_io/
 ---
 

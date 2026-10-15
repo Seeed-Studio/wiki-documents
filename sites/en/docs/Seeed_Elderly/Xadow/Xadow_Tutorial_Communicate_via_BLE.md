@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-26'
 url: https://wiki.seeedstudio.com/Xadow_Tutorial_Communicate_via_BLE/
 ---
 Have you ever thought this scene: Open phone, I can see the current barometric pressure or motion acceleration. the Xadow module can help you achieve this.

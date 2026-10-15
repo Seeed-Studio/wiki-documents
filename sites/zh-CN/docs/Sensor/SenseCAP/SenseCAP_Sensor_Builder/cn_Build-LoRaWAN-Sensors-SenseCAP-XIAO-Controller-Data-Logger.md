@@ -8,7 +8,7 @@ last_update:
   date: 11/20/2023
   author: Matthew
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger/
 ---
 

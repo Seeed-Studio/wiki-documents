@@ -11,7 +11,7 @@ last_update:
   date: 04/17/2023
   author: Lakshantha
 createdAt: '2023-04-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/reComputer_A607_Flash_System/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 12/22/2023
   author: Jessie
 createdAt: '2023-12-22'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/flash_to_wio_tracker/
 ---
 

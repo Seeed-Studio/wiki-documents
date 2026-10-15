@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2025
   author: Matthew
 createdAt: '2023-07-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-07-27'
 url: https://wiki.seeedstudio.com/ja/Grove_Sensor_Intro/
 ---
 
@@ -85,7 +85,7 @@ Grove センサーには、温度センサー、湿度センサー、光セン�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 今すぐ購入</font></span></strong></a>
-    <a class="get_one_now_item" href="/ja/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
+    <a class="get_one_now_item" href="/ja/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
 #### Grove - 温度 & 湿度センサー Pro (DHT22)

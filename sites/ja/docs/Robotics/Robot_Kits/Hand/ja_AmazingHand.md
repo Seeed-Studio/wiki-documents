@@ -1,6 +1,6 @@
 ---
-description: 低コスト、オープンソース、8自由度、3Dプリント可能なロボットハンド「AmazingHand」を構築・制御する。
-title: AmazingHand
+description: 低コストでオープンソース、8自由度で3Dプリント可能なロボットハンド「AmazingHand」を構築し、制御します。
+title: AmazingHand クイックスタート
 keywords:
   - Lerobot
   - Huggingface
@@ -17,7 +17,7 @@ last_update:
   date: 9/10/2025
   author: TienjuiWong
 createdAt: '2025-09-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/hand_amazinghand/
 ---
 

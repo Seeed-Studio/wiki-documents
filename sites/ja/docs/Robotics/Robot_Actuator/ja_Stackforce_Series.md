@@ -1,6 +1,6 @@
 ---
-description: このwikiはStackforceシリーズモーターのチュートリアルを提供します。
-title: Stackforce シリーズモーター
+description: この Wiki では、Stackforce シリーズモーターのチュートリアルを提供します。
+title: Stackforce
 keywords:
   - actuator
   - motor
@@ -11,10 +11,9 @@ last_update:
   date: 12/25/2025
   author: Li Shanghang
 translation:
-  skip:
-    - zh-CN
-createdAt: '2025-11-27'
-updatedAt: '2026-03-03'
+  skip: [zh-CN]
+createdAt: '2025-11-26'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/stackforce_series/
 ---
 

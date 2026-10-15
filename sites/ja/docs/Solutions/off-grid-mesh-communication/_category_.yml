@@ -1,0 +1,10 @@
+position: 6
+label: 'オフグリッド・メッシュ通信'
+collapsible: true
+collapsed: true
+className: _hazard-response
+link:
+  type: generated-index
+  slug: off-grid-mesh-communication
+  title: オフグリッド・メッシュ通信
+  description: 通信網のない現場向けのオフグリッド・メッシュ通信。

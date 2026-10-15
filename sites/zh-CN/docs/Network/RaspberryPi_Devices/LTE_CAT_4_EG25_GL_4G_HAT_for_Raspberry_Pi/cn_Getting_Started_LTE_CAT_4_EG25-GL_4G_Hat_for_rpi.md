@@ -15,7 +15,7 @@ last_update:
   date: 2024/10/12
   author: Kasun Thushara
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/getting_started_raspberry_pi_4g_lte_hat/
 ---
 

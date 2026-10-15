@@ -10,7 +10,7 @@ last_update:
   date: 1/6/2023
   author: jianjing Huang
 createdAt: '2023-01-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-Ear-clip_Heart_Rate_Sensor/
 ---
 

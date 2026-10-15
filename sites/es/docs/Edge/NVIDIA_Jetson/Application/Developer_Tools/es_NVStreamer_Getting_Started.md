@@ -11,7 +11,7 @@ last_update:
   date: 7/24/2024
   author: ZhuYaoHui
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/getting_started_with_nvstreamer/
 ---
 # Cómo Usar NVStreamer para Transmisión RTSP en reComputer con Jetson Platform Services

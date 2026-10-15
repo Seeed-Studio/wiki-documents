@@ -1,6 +1,6 @@
 ---
 description: This wiki provides the assembly and debugging tutorial for the Lekiwi and realizes data collection and training within the Lerobot framework.
-title: Lekiwi in Lerobot
+title: SO-Arm with Lekiwi
 keywords:
   - Lerobot
   - Huggingface
@@ -13,10 +13,9 @@ last_update:
   date: 11/12/2025
   author: Li shanghang
 translation:
-  skip:
-    - zh-CN
+  skip: [zh-CN]
 createdAt: '2025-05-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/lerobot_lekiwi/
 ---
 
@@ -101,13 +100,13 @@ Seeed Studio is only responsible for the quality of the hardware itself. The tut
 
 - Ubuntu 22.04  
 - CUDA 12+  
-- Python 3.10  
+- Python 3.12
 - Torch 2.6  
 
 **For Jetson Orin:**
 
 - Jetson JetPack 6.0+
-- Python 3.10  
+- Python 3.12
 - Torch 2.6  
 
 **For Raspberry Pi:**
@@ -161,7 +160,7 @@ Copy paste in your shell: `source ~/.bashrc` or for Mac: `source ~/.bash_profile
 ### 3. Create and activate a fresh conda environment for lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 ```
 
 Then activate your conda environment (do this each time you open a shell to use lerobot!):
@@ -209,7 +208,7 @@ Copy paste in your shell: `source ~/.bashrc` or for Mac: `source ~/.bash_profile
 ### 3. Create and activate a fresh conda environment for lerobot
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 ```
 
 Then activate your conda environment (do this each time you open a shell to use lerobot!):

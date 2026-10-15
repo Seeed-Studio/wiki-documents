@@ -12,7 +12,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2024-11-29'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-17'
 url: https://wiki.seeedstudio.com/cn/benchmark_of_multistream_inference_on_raspberrypi5_with_hailo8/
 ---
 

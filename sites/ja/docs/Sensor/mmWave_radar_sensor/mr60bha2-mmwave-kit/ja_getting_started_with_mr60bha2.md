@@ -13,7 +13,7 @@ last_update:
   date: 08/19/2024
   author: Spencer
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-02'
 url: https://wiki.seeedstudio.com/ja/getting_started_with_mr60bha2_mmwave_kit/
 ---
 

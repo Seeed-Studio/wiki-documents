@@ -9,7 +9,7 @@ last_update:
   date: 12/30/2022
   author: shuxu hu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/Grove-Gas_Sensor/
 ---
 

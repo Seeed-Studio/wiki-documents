@@ -1,0 +1,10 @@
+position: 1
+label: 'IA de visión y vídeo'
+collapsible: true
+collapsed: true
+className: _ai-perception
+link:
+  type: generated-index
+  slug: intelligent-video-analytics
+  title: IA de visión y vídeo
+  description: Soluciones de análisis de visión y vídeo en dispositivos edge.

@@ -11,7 +11,7 @@ last_update:
   date: 01/11/2022
   author: gunengyu
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/LAN_Communications/
 ---
 

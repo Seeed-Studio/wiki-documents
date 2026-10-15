@@ -11,7 +11,7 @@ last_update:
   date: 03/14/2025
   author: qiuyu wei, Citric
 createdAt: '2024-11-11'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/iot_button_for_esphome/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 2023/1/13
   author: shuxu hu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/K1100_SenseCAP_to_grafana/
 ---
 # 通过 Node-RED 将 SenseCAP 连接到 Grafana

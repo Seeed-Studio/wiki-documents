@@ -1,5 +1,5 @@
 // getting Started Wiki dropdown data
-/** @typedef {'en' | 'cn' | 'ja' | 'es'} Locale */
+/** @typedef {'en' | 'cn' | 'ja' | 'es' | 'pt-br'} Locale */
 const BASE_STARTED_LIST = [
   {
     title: 'SenseCAP',
@@ -210,6 +210,33 @@ const BASE_STARTED_LIST = [
       },
     ],
   },
+  {
+    title: 'SenseCraft',
+    img: 'sensecraft',
+    link: '/Cloud/',
+    children: [
+      {
+        title: 'SenseCraft AI',
+        link: '/sensecraft-ai/sensecraft-ai-main/',
+      },
+      {
+        title: 'CodeCraft',
+        link: '/codecraft/codecraft-overview/',
+      },
+      {
+        title: 'SenseCraft Robotics',
+        link: '/Cloud/#sensecraft-robotics',
+      },
+      {
+        title: 'SenseCraft Data Platform',
+        link: '/cloud/sensecraft-data/sensecraft-data-platform/overview/',
+      },
+      {
+        title: 'SenseCraft App',
+        link: '/sensecraft-app/overview/',
+      },
+    ],
+  },
 ];
 // Explore & Learn dropdown data
 const BASE_EXPLORE_LIST = [
@@ -340,6 +367,10 @@ const BASE_EXPLORE_LIST = [
             link: '/sscma/',
           },
           {
+            title: 'CodeCraft',
+            link: '/codecraft/codecraft-overview/',
+          },
+          {
             title: 'Edge Impulse',
             link:
               '/edgeimpulse/',
@@ -391,7 +422,7 @@ const BASE_EXPLORE_LIST = [
   {
     title: '矽递科技Wiki文档平台',
     img: 'language',
-    link: 'https://wiki.seeedstudio.com/cn/Getting_Started/',
+    link: 'https://wiki.seeedstudio.com/Getting_Started/',
     children: [
       {
         title: 'Wiki SeeedStudio (English)',
@@ -408,6 +439,10 @@ const BASE_EXPLORE_LIST = [
       {
         title: 'Wiki SeeedStudio (Español)',
         link: 'https://wiki.seeedstudio.com/es/Getting_Started/',
+      },
+      {
+        title: 'Wiki SeeedStudio (Português - Brasil)',
+        link: 'https://wiki.seeedstudio.com/pt-br/Getting_Started/',
       },
     ],
   },
@@ -461,6 +496,7 @@ const NAV_LABEL_I18N = {
     'SenseCAP Sensors Builder': 'SenseCAP 传感器构建器',
     'SenseCAP Tracker T1000': 'SenseCAP 追踪器 T1000',
     'SenseCraft AI Platform': 'SenseCraft AI 平台',
+    'SenseCraft Data Platform': 'SenseCraft 数据平台',
     'SenseCraft-HomeAssistant User Manual': 'SenseCraft-HomeAssistant 用户手册',
     'Single Board Computer': '单板计算机',
     'Software': '软件',
@@ -522,6 +558,8 @@ const NAV_LABEL_I18N = {
     'SenseCAP Sensors Builder': 'SenseCAP センサービルダー',
     'SenseCAP Tracker T1000': 'SenseCAP トラッカー T1000',
     'SenseCraft AI Platform': 'SenseCraft AI プラットフォーム',
+    'SenseCraft App': 'SenseCraft アプリ',
+    'SenseCraft Data Platform': 'SenseCraft データプラットフォーム',
     'SenseCraft-HomeAssistant User Manual': 'SenseCraft-HomeAssistant ユーザーマニュアル',
     'Single Board Computer': 'シングルボードコンピュータ',
     'Software': 'ソフトウェア',
@@ -535,7 +573,6 @@ const NAV_LABEL_I18N = {
     'reComputer Jetson Industrial Series': 'reComputer Jetson 産業シリーズ',
     'reComputer Jetson Series': 'reComputer Jetson シリーズ',
     'reServer Jetson Industrial': 'reServer Jetson 産業シリーズ',
-    '矽递科技Wiki文档平台': 'Seeed Wiki ドキュメントプラットフォーム',
   },
   es: {
     'Animal Husbandry': 'Ganadería',
@@ -597,7 +634,67 @@ const NAV_LABEL_I18N = {
     'reComputer Jetson Industrial Series': 'Serie industrial reComputer Jetson',
     'reComputer Jetson Series': 'Serie reComputer Jetson',
     'reServer Jetson Industrial': 'reServer Jetson industrial',
-    '矽递科技Wiki文档平台': 'Plataforma de documentación de Seeed Wiki',
+  },
+  'pt-br': {
+    'Animal Husbandry': 'Pecuária',
+    'Arduino Kits withs Courses': 'Kits e cursos de Arduino',
+    'Arduino Official': 'Arduino oficial',
+    'Arduino Shields': 'Shields para Arduino',
+    'Awaken Your Home': 'Transforme sua casa',
+    'Carrier Boards': 'Placas carrier',
+    'Course & Workshop': 'Cursos e workshops',
+    'Edge AI Solutions': 'Soluções de Edge AI',
+    'Edge Controller': 'Controlador de borda',
+    'Enhance Deep Learning Model': 'Aprimore modelos de deep learning',
+    'Explore easilist ML everywhere': 'Explore o ML mais fácil em qualquer lugar',
+    'Extend Home Assistant with LoRaWAN device': 'Expanda o Home Assistant com dispositivos LoRaWAN',
+    'Farming': 'Agricultura',
+    'Generative AI': 'IA generativa',
+    'Grove Accessories': 'Acessórios Grove',
+    'Grove Network': 'Rede Grove',
+    'Grove Sensors': 'Sensores Grove',
+    'Hardware': 'Hardware',
+    'Healthcare': 'Saúde',
+    'Home Assistant Official devices': 'Dispositivos oficiais do Home Assistant',
+    'Home Assistant Projects': 'Projetos com Home Assistant',
+    'Human-Machine Interaction': 'Interação homem-máquina',
+    'Industrial': 'Industrial',
+    'LinkStar Router Series': 'Série de roteadores LinkStar',
+    'MCU Board': 'Placa MCU',
+    'Micro:Bit Kits': 'Kits micro:bit',
+    'Mini PC': 'Mini PC',
+    'Modules for TinyML': 'Módulos para TinyML',
+    'Object Recognition': 'Reconhecimento de objetos',
+    'Open Source': 'Código aberto',
+    'Platforms for TinyML': 'Plataformas para TinyML',
+    'Popular Add-ons': 'Complementos populares',
+    'Raspberry Pi Official': 'Raspberry Pi oficial',
+    'Retail': 'Varejo',
+    'Seeed powered Home Assistant Applications': 'Aplicações de Home Assistant com tecnologia Seeed',
+    'Seeed-powered Home Assistant Devices': 'Dispositivos Home Assistant com tecnologia Seeed',
+    'Seeed Studio XIAO Series': 'Série Seeed Studio XIAO',
+    'SenseCAP Data Logger': 'Data Logger SenseCAP',
+    'SenseCAP Decoder': 'Decodificador SenseCAP',
+    'SenseCAP Gateway': 'Gateway SenseCAP',
+    'SenseCAP Indicator': 'Indicador SenseCAP',
+    'SenseCAP Integration for Home Assistant': 'Integração SenseCAP para Home Assistant',
+    'SenseCAP LoRaWAN Sensors': 'Sensores LoRaWAN SenseCAP',
+    'SenseCAP Sensors Builder': 'Construtor de sensores SenseCAP',
+    'SenseCAP Tracker T1000': 'Rastreador SenseCAP T1000',
+    'SenseCraft AI Platform': 'Plataforma SenseCraft AI',
+    'SenseCraft-HomeAssistant User Manual': 'Manual do usuário do SenseCraft-HomeAssistant',
+    'Single Board Computer': 'Computador de placa única',
+    'Software': 'Software',
+    'Sound Recognition': 'Reconhecimento de som',
+    'TinyML Courses': 'Cursos de TinyML',
+    'TinyMl': 'TinyML',
+    'Transportation': 'Transporte',
+    'Wio Tracker 1110 Dev Board': 'Placa de desenvolvimento Wio Tracker 1110',
+    'Workshop': 'Workshop',
+    'mmWave Radar Sensor': 'Sensor de radar mmWave',
+    'reComputer Jetson Industrial Series': 'Série industrial reComputer Jetson',
+    'reComputer Jetson Series': 'Série reComputer Jetson',
+    'reServer Jetson Industrial': 'reServer Jetson industrial',
   },
 };
 

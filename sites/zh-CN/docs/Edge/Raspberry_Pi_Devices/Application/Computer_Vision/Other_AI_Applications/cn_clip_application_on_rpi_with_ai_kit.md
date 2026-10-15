@@ -12,7 +12,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2024-07-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-17'
 url: https://wiki.seeedstudio.com/cn/clip_application_on_rpi5_with_ai_kit/
 ---
 

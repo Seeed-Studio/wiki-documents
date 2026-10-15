@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'reCamera HQ POE'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reCamera_hq_poe_getting_start
+link:
+  type: generated-index
+  slug: recamera_hq_poe_getting_start
+  title: reCamera HQ POE クイックスタート
+  description: reCamera HQ POE のクイックスタートガイド。

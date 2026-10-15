@@ -9,7 +9,7 @@ last_update:
   date: 1/16/2023
   author: jianjing Huang
 createdAt: '2023-02-21'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/Xadow_IO_pin_mapping/
 ---
 <!-- ---

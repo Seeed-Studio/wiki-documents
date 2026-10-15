@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'reCamera Baise 入门指南'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reCamera_basic_getting_start
+link:
+  type: generated-index
+  slug: recamera_basic_getting_start
+  title: reCamera 基础入门指南
+  description: 请选择你想要了解的类型。

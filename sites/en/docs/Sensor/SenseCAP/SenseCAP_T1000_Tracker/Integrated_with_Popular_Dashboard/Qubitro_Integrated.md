@@ -9,7 +9,7 @@ last_update:
   date: 8/15/2023
   author: Jessie
 createdAt: '2023-08-16'
-updatedAt: '2026-03-03'
+updatedAt: '2023-10-26'
 url: https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Qubitro_TTS/
 ---
 

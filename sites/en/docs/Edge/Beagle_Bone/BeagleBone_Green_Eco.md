@@ -10,7 +10,7 @@ last_update:
   date: 9/18/2025
   author: Atom Yang
 createdAt: '2023-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/getting_started_with_seeedstudio_beaglebone_green_eco/
 ---
 

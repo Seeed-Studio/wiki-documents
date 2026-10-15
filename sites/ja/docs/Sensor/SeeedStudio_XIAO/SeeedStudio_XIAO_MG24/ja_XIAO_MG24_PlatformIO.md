@@ -10,7 +10,7 @@ last_update:
   author: Jason
   sidebar_position: 5
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/ja/xiao_mg24_with_platform_io/
 ---
 

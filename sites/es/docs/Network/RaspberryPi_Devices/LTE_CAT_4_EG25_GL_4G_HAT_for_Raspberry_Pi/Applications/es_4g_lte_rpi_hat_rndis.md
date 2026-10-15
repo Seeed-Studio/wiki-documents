@@ -13,7 +13,7 @@ last_update:
   date: 3/17/2025
   author: Kasun Thushara
 createdAt: '2025-06-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/raspberry_pi_4g_lte_hat_rndis/
 ---
 
