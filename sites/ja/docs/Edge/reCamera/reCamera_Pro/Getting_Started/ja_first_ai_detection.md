@@ -11,7 +11,7 @@ slug: /recamera_pro_getting_started
 sku: 10003420
 sidebar_position: 1
 last_update:
-  date: 09/21/2026
+  date: 10/15/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/ja/recamera_pro_getting_started/
 createdAt: '2026-09-23'
@@ -28,6 +28,12 @@ updatedAt: '2026-09-23'
 4. [AI 検出が動作していることを確認する](#4-confirm-ai-detection-is-working)
 
 {/* TODO(verify): add a "detection success" screenshot showing the live preview with a bounding box overlaid on a person, and confirm which model ships preloaded on current firmware and which firmware versions this first-login flow applies to. */}
+
+## ガイド動画
+
+作業を始める前に、このクイックスタート動画でセットアップ全体の流れをご確認ください：
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/cQpdKcCFZys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 1. ハードウェアを接続する
 
