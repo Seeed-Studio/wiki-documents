@@ -8,7 +8,7 @@ keywords:
   - 具身智能
   - 课程
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_18
+slug: /robotics/rebot_physical_ai_course_chapter_18
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -17,7 +17,7 @@ last_update:
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-09'
 updatedAt: '2026-10-09'
-url: https://wiki.seeedstudio.com/cn/rebot_physical_ai_course_chapter_18/
+url: https://wiki.seeedstudio.com/cn/robotics/rebot_physical_ai_course_chapter_18/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -42,7 +42,7 @@ import 'katex/dist/katex.min.css';
 
 ### 本阶段需要的硬件
 
-本阶段需要准备的硬件如下。全部阶段的完整清单见 [第 3 章](/cn/rebot_physical_ai_course_chapter_3/)。
+本阶段需要准备的硬件如下。全部阶段的完整清单见 [第 3 章](/cn/robotics/rebot_physical_ai_course_chapter_3/)。
 
 **主控单元**
 

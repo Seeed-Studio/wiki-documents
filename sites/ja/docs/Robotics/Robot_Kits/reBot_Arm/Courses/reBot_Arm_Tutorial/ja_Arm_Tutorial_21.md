@@ -10,7 +10,7 @@ keywords:
   - VLA
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_21
+slug: /robotics/rebot_physical_ai_course_chapter_21
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -19,7 +19,7 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-24'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_21/
+url: https://wiki.seeedstudio.com/ja/robotics/rebot_physical_ai_course_chapter_21/
 ---
 
 import '/src/css/rebot-wiki-style.css';

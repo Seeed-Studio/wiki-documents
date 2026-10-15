@@ -6848,280 +6848,280 @@
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_1": [
+  "/robotics/rebot_physical_ai_course_chapter_1": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_2": [
+  "/robotics/rebot_physical_ai_course_chapter_2": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_3": [
+  "/robotics/rebot_physical_ai_course_chapter_3": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_4": [
+  "/robotics/rebot_physical_ai_course_chapter_4": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_5": [
+  "/robotics/rebot_physical_ai_course_chapter_5": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_6": [
+  "/robotics/rebot_physical_ai_course_chapter_6": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_7": [
+  "/robotics/rebot_physical_ai_course_chapter_7": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_8": [
+  "/robotics/rebot_physical_ai_course_chapter_8": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_9": [
+  "/robotics/rebot_physical_ai_course_chapter_9": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_10": [
+  "/robotics/rebot_physical_ai_course_chapter_10": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_11": [
+  "/robotics/rebot_physical_ai_course_chapter_11": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_12": [
+  "/robotics/rebot_physical_ai_course_chapter_12": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_13": [
+  "/robotics/rebot_physical_ai_course_chapter_13": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_14": [
+  "/robotics/rebot_physical_ai_course_chapter_14": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_15": [
+  "/robotics/rebot_physical_ai_course_chapter_15": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_16": [
+  "/robotics/rebot_physical_ai_course_chapter_16": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_17": [
+  "/robotics/rebot_physical_ai_course_chapter_17": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_18": [
+  "/robotics/rebot_physical_ai_course_chapter_18": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_19": [
+  "/robotics/rebot_physical_ai_course_chapter_19": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_20": [
+  "/robotics/rebot_physical_ai_course_chapter_20": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_21": [
+  "/robotics/rebot_physical_ai_course_chapter_21": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_22": [
+  "/robotics/rebot_physical_ai_course_chapter_22": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_23": [
+  "/robotics/rebot_physical_ai_course_chapter_23": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_24": [
+  "/robotics/rebot_physical_ai_course_chapter_24": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_25": [
+  "/robotics/rebot_physical_ai_course_chapter_25": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_26": [
+  "/robotics/rebot_physical_ai_course_chapter_26": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_27": [
+  "/robotics/rebot_physical_ai_course_chapter_27": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_28": [
+  "/robotics/rebot_physical_ai_course_chapter_28": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_29": [
+  "/robotics/rebot_physical_ai_course_chapter_29": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_30": [
+  "/robotics/rebot_physical_ai_course_chapter_30": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_31": [
+  "/robotics/rebot_physical_ai_course_chapter_31": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_32": [
+  "/robotics/rebot_physical_ai_course_chapter_32": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_33": [
+  "/robotics/rebot_physical_ai_course_chapter_33": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_34": [
+  "/robotics/rebot_physical_ai_course_chapter_34": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_35": [
+  "/robotics/rebot_physical_ai_course_chapter_35": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_36": [
+  "/robotics/rebot_physical_ai_course_chapter_36": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_37": [
+  "/robotics/rebot_physical_ai_course_chapter_37": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_38": [
+  "/robotics/rebot_physical_ai_course_chapter_38": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_chapter_39": [
+  "/robotics/rebot_physical_ai_course_chapter_39": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/rebot_physical_ai_course_introduction": [
+  "/robotics/rebot_physical_ai_course_introduction": [
     "cn",
     "en",
     "es",

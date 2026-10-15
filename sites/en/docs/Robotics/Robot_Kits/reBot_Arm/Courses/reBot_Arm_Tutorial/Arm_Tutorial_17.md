@@ -10,7 +10,7 @@ keywords:
   - Data Iteration
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_17
+slug: /robotics/rebot_physical_ai_course_chapter_17
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -19,7 +19,7 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_17/
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_17/
 ---
 
 import '/src/css/rebot-wiki-style.css';
