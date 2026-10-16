@@ -8,10 +8,10 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
-  author: Michelle Huang
+  date: 10/16/2026
+  author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-28'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/
 ---
 
@@ -45,7 +45,7 @@ Se você clicou em `Erase Flash` mas não houve resposta, clique em `Enter DFU` 
 
 Se você vir "Flashing erase firmware:100%", o dispositivo foi apagado com sucesso.
 
-<p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
 #### Gravar Firmware
 
@@ -133,7 +133,7 @@ O disco desaparecerá após o firmware ser gravado com sucesso. O dispositivo se
 
 ### Ligar o dispositivo
 
-Pressione o botão para ligá-lo. O LED acenderá e haverá uma melodia descendente.
+Pressione o botão para ligá-lo. O LED acenderá e haverá uma melodia ascendente.
 
 ### Desligar o dispositivo
 
@@ -330,13 +330,17 @@ Então "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instal
 <Tabs>
 <TabItem value="pypi" label="Instalando a partir do PyPI">
 
-Este é o método recomendado, para instalar a versão mais recente:
+Este é o método recomendado.
+
+<Tabs>
+<TabItem value="windows" label="Windows">
 
 ```
-pip3 install --user adafruit-nrfutil
+python -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
 ```
 
-Verifique o caminho de instalação:
+Se `adafruit-nrfutil` não for reconhecido, verifique o caminho de instalação:
 
 ```
 python -m pip show adafruit-nrfutil
@@ -346,10 +350,41 @@ Este é o local de instalação:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuários Windows, talvez seja necessário adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Em seguida, adicione-o conforme a seguir:
+Talvez seja necessário adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Em seguida, adicione-o conforme a seguir:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+Se `adafruit-nrfutil` não for reconhecido, adicione o diretório de scripts de usuário do Python (`bin` no seu diretório pessoal) ao PATH.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+Instale `adafruit-nrfutil` com o pipx:
+
+```
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
+```
+
+No Fedora, use `sudo dnf install pipx` em vez do apt. Reabra o terminal e, em seguida, verifique:
+
+```
+adafruit-nrfutil version
+```
+
+</TabItem>
+</Tabs>
 
 </TabItem>
 
@@ -374,7 +409,7 @@ python3 setup.py install
 Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a flag `--user`:
 
 ```
-pip3 install -r --user requirements.txt
+pip3 install --user -r requirements.txt
 python3 setup.py install
 ```
 
@@ -429,7 +464,7 @@ Por favor, altere COMXX para o número da sua porta COM. Por exemplo, se o seu d
 - **Para outros**:
 
 ```
-adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
