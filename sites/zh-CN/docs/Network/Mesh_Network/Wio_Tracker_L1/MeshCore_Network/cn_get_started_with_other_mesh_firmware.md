@@ -8,10 +8,10 @@ slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 3
 last_update:
-  date: 09/03/2026
+  date: 10/16/2026
   author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-18'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 ---
 
@@ -204,7 +204,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置蜂鸣器
 
-点击用户按钮四次来控制蜂鸣器的开启或关闭。
+点击用户按钮三次来控制蜂鸣器的开启或关闭。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/User.png" alt="pir" width={500} height="auto" /></p>
 
