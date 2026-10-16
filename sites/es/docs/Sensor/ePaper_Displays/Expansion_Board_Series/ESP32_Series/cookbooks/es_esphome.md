@@ -750,6 +750,10 @@ display:
 
 <br></br>
 
+:::note Versión de ESPHome
+Los ejemplos de Spectra™ 6 de 7.3" usan el componente `epaper_spi` incluido en ESPHome 2026.1 y posteriores, incluido el modelo `7.3in-Spectra-E6`.
+:::
+
 ***Los siguientes son tipos de pantallas con conector de 50 pines:***
 
 <Tabs>
@@ -792,13 +796,6 @@ font:
     size: 24
 
 captive_portal:
-
-external_components:
-  - source:
-      type: git
-      url: https://github.com/esphome/esphome/
-      ref: 2025.10.5
-    components: [ epaper_spi, display ]
 
 spi:
   clk_pin: GPIO7
@@ -1554,13 +1551,6 @@ wifi:
     password: "zxPMBtCEWonm"
 
 captive_portal:
-
-external_components:
-  - source:
-      type: git
-      url: https://github.com/esphome/esphome/
-      ref: 2025.10.5
-    components: [ epaper_spi, display ]
 
 spi:
   clk_pin: GPIO7
@@ -2362,13 +2352,6 @@ wifi:
 
 captive_portal:
 
-external_components:
-  - source:
-      type: git
-      url: https://github.com/esphome/esphome/
-      ref: 2025.10.5
-    components: [ epaper_spi, display ]
-
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -3148,13 +3131,6 @@ wifi:
     password: "zxPMBtCEWonm"
 
 captive_portal:
-
-external_components:
-  - source:
-      type: git
-      url: https://github.com/esphome/esphome/
-      ref: 2025.10.5
-    components: [ epaper_spi, display ]
 
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
