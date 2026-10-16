@@ -73,7 +73,7 @@ const accessories = [
   ssd({
     id: 'ssd-256',
     name: 'NVMe M.2 PCIe Gen3x4 2280 Internal SSD — 256GB',
-    image: `${IMG_BASE}/s/BMU89Dn0UB`,
+    image: `${IMG_BASE}/s/exM9c2MVs1`,
     capacity: '256GB',
     formFactor: '2280',
     sku: '112990246',
