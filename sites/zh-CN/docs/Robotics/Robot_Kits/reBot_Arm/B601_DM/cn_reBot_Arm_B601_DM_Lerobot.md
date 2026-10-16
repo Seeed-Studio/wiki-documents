@@ -842,7 +842,6 @@ lerobot-teleoperate \
 :::danger
 遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
 :::
-Add camera bracket installation video, Soarm dual‑arm video
 </TabItem>
 
 <TabItem value="camera-mount" label="摄像头支架">

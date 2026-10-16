@@ -1,6 +1,6 @@
 ---
 description: Complete guide to Bimanual SO-ARM training with LeRobot.
-title: SO-Arm Bimanual-Teleopertaion
+title: SO-Arm Bimanual-Teleoperation
 keywords:
   - Lerobot
   - SO-ARM
