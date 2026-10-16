@@ -21,12 +21,9 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM Pinocchio & MeshCat
-
-<RebotDmDocNav />
 
 <div align="center">
     <img width={800}
@@ -329,7 +326,7 @@ sudo chmod 666 /dev/can0
 ```
 
 :::
-<details>
+<details className="rebot-demo-details">
 <summary>Debugging Tools (use only when an exception occurs)</summary>
 
 **Single Motor Control Console (`0x01damiao_test.py`)**

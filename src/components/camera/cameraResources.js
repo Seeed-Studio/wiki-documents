@@ -45,7 +45,7 @@ export const wikiResources = [
   wiki('setup', sensingBoardList, `${boards}J501_Mini/Robotics_J501_Mini_Hardware_Interfaces_Usage.md`, gmslGuideLinks.roboticsJ501Mini, 'SG-series setup on Robotics J501 Mini', 'Mini carrier extension port and SG-series overlays.'),
   wiki('setup', ['sg3s-f'], `${boards}J501/Hardware_Interfaces_Usage.md`, gmslGuideLinks.industrialJ501, 'SG3S-F on reServer Industrial J501', 'GMSL extension-board wiring and capture configuration.'),
   wiki('setup', ['zed-x', 'zed-x-mini', 'zed-x-one-gs'], `${vision}ZED_X_GMSL_Cameras_on_reComputer_Robotics.mdx`, gmslGuideLinks.zed, 'ZED X-series setup on reComputer Robotics', 'Series-level guide; full walkthrough uses J50 Mini. A single One GS does not produce stereo depth.'),
-  wiki('setup', [...graspCameras, 'et-s231-90'], `${arms}Courses/reBot_Arm_Tutorial/Arm_Tutorial_03.md`, '/rebot_physical_ai_course_chapter_3/', 'reBot course: camera and hardware selection', 'Equipment list for the Physical AI course, not a camera-driver tutorial.'),
+  wiki('setup', [...graspCameras, 'et-s231-90'], `${arms}Courses/reBot_Arm_Tutorial/Arm_Tutorial_03.md`, '/robotics/rebot_physical_ai_course_chapter_3/', 'reBot course: camera and hardware selection', 'Equipment list for the Physical AI course, not a camera-driver tutorial.'),
 
   wiki('applications', csi, `${sensor}CSI_Camera.md`, '/csi_camera_on_ros/', 'Multiple CSI cameras with ROS', 'reComputer J30/J40, JetPack 5.x and ROS Noetic.'),
   wiki('applications', ['camera-v2', 'imx219-130', 'hq-cm-jetson'], `${vision}DashCamNet-with-Jetson-Xavier-NX-Multicamera.md`, '/DashCamNet-with-Jetson-Xavier-NX-Multicamera/', 'Multi-camera object detection with DashCamNet', 'Jetson Xavier NX example using the listed CSI cameras.'),

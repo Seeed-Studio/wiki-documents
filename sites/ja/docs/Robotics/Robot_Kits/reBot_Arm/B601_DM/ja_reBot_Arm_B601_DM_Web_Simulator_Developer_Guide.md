@@ -28,12 +28,9 @@ import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM Digital Twin & Control Stack
-
-<RebotDmDocNav />
 
 <div align="center">
     <img width={800}
@@ -101,7 +98,7 @@ Web シミュレータ自体はハードウェアに直接接続しません。�
 ls /dev/ttyACM*
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>期待される出力</summary>
 
 ```text
@@ -226,7 +223,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm doctor
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>期待される出力（概要）</summary>
 
 ```text
@@ -384,7 +381,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start sim
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>期待される出力</summary>
 
 ```text
@@ -483,7 +480,7 @@ source scripts/source_rebotarm_env.sh
 このスクリプトは、順に ROS2（`/opt/ros/jazzy/setup.bash`）、Python venv（`.venv/bin/activate`）、cmeel のパス（Pinocchio の C 拡張）、およびワークスペース（`install/setup.bash`）を読み込みます。
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>コアモジュールに関する注意</b>（クリックして展開）</summary>
 
 **server.js — Node.js スタティックサーバー**
@@ -584,7 +581,7 @@ web rebot-llm.js
 
 </details>
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>ROS2 インターフェース概要</b>（クリックして展開）</summary>
 
 Web シミュレータが購読およびパブリッシュする主要な ROS2 インターフェースを以下に示します。デフォルトのネームスペースは `rebotarm` です。
@@ -684,7 +681,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>期待される出力</summary>
 
 ```text
@@ -802,7 +799,7 @@ rosbridge の WebSocket アドレスは、Web ページの「ROS2 Bridge」パ�
 
 ページは、入力ボックスが空の場合に最後に保存されたアドレスの読み込みを試みます。デフォルトを変更するか、Web の接続パネルで実際のアドレスを直接入力してください。
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>主要ファイルクイックリファレンス</b>（クリックで展開）</summary>
 
 | ファイル | 用途 |

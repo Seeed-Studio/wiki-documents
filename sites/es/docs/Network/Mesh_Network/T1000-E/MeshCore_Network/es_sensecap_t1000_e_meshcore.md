@@ -8,10 +8,10 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
-  author: Michelle Huang
+  date: 10/16/2026
+  author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-28'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/
 ---
 
@@ -45,7 +45,7 @@ Si has hecho clic en `Erase Flash` pero no hay respuesta, haz clic en `Enter DFU
 
 Si ves "Flashing erase firmware:100%", el dispositivo se ha borrado correctamente.
 
-<p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
 #### Flashear firmware
 
@@ -133,7 +133,7 @@ El disco desaparecerá después de que el firmware se haya flasheado correctamen
 
 ### Encender el dispositivo
 
-Pulsa el botón para encenderlo. El LED se encenderá y sonará una melodía descendente.
+Pulsa el botón para encenderlo. El LED se encenderá y sonará una melodía ascendente.
 
 ### Apagar el dispositivo
 
@@ -330,13 +330,17 @@ Entonces deberían aparecer "Python xxx" y "pip xxx". Si no es así, intenta ins
 <Tabs>
 <TabItem value="pypi" label="Instalación desde PyPI">
 
-Este es el método recomendado para instalar la última versión:
+Este es el método recomendado.
+
+<Tabs>
+<TabItem value="windows" label="Windows">
 
 ```
-pip3 install --user adafruit-nrfutil
+python -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
 ```
 
-Comprueba la ruta de instalación:
+Si `adafruit-nrfutil` no se reconoce, comprueba la ruta de instalación:
 
 ```
 python -m pip show adafruit-nrfutil
@@ -346,10 +350,41 @@ Esta es la ubicación de instalación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuarios de Windows, es posible que necesites añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se indica a continuación:
+Es posible que necesites añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se indica a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+Si `adafruit-nrfutil` no se reconoce, añade el directorio de scripts de usuario de Python (`bin` en tu directorio personal) a tu PATH.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+Instala `adafruit-nrfutil` con pipx:
+
+```
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
+```
+
+En Fedora, usa `sudo dnf install pipx` en lugar de apt. Vuelve a abrir la terminal y luego verifica:
+
+```
+adafruit-nrfutil version
+```
+
+</TabItem>
+</Tabs>
 
 </TabItem>
 
@@ -374,7 +409,7 @@ python3 setup.py install
 Si obtienes errores de permisos al ejecutar `pip3 install`, tu `pip3` es antiguo o está configurado para intentar instalar en los directorios del sistema. En ese caso, usa la opción `--user`:
 
 ```
-pip3 install -r --user requirements.txt
+pip3 install --user -r requirements.txt
 python3 setup.py install
 ```
 
@@ -429,7 +464,7 @@ Por favor cambia COMXX por tu número de puerto COM. Por ejemplo, si tu disposit
 - **Para otros**:
 
 ```
-adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>

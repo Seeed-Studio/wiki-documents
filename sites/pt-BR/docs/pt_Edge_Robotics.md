@@ -61,7 +61,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/pt-br/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS com LeRobot</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS com Pinocchio</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>SDK de Motor do reBot-RS</b></div></a>
-        <a className="step-card" href="/pt-br/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>VLA sem código: plataforma SenseCraft Robotics</b></div></a>
+        <a className="step-card" href="/pt-br/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>VLA sem código: Plataforma SenseCraft Robotics</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -77,8 +77,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Curso</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/pt-br/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para Iniciantes</b></div></a>
-        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>Curso DLI: Pipeline VLA Sim-to-Real</b></div></a>
+        <a className="step-card" href="/pt-br/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para Iniciantes</b></div></a>
+        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>Curso DLI: Pipeline VLA do Sim-para-o-Real</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -112,7 +112,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/pt-br/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Início Rápido do reBot-DM</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM com LeRobot</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM com Pinocchio</b></div></a>
-        <a className="step-card" href="/pt-br/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>VLA sem código: plataforma SenseCraft Robotics</b></div></a>
+        <a className="step-card" href="/pt-br/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>VLA sem código: Plataforma SenseCraft Robotics</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -127,7 +127,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Curso</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/pt-br/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para Iniciantes</b></div></a>
+        <a className="step-card" href="/pt-br/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para Iniciantes</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -159,16 +159,16 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Início Rápido &amp; Ferramentas</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/pt-br/lerobot_so100m_new/"><span className="step-index">1</span><div><b>Início Rápido SO100 / SO101</b></div></a>
+        <a className="step-card" href="/pt-br/lerobot_so100m_new/"><span className="step-index">1</span><div><b>Início Rápido do SO100 / SO101</b></div></a>
         <a className="step-card" href="/pt-br/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Ferramenta de Depuração de Servo</b></div></a>
-        <a className="step-card" href="/pt-br/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>Ferramenta de Dataset SO-Arm</b></div></a>
+        <a className="step-card" href="/pt-br/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>Ferramenta de Dataset do SO-Arm</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Aplicações</h4>
       <div className="learning-steps">
         <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 e NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Treinamento SO-ARM de Dois Braços</b></div></a>
+        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Treinamento de SO-ARM de Dois Braços</b></div></a>
         <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM com Mão Hábil Amazing Hand</b></div></a>
         <a className="step-card" href="/pt-br/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>Simulação LeIsaac</b></div></a>
         <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Aprendizado por Reforço no Isaac Lab</b></div></a>
@@ -181,11 +181,11 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="amazinghand" className="product-card amazinghand product-card--cover">
   <summary className="product-head">
-    <h3>Mão robótica AmazingHand</h3>
+    <h3>Mão Hábil AmazingHand</h3>
   </summary>
   <div className="product-body">
     <div className="learning-steps">
-      <a className="step-card" href="/pt-br/hand_amazinghand/"><span className="step-index">1</span><div><b>Guia de início do AmazingHand</b></div></a>
+      <a className="step-card" href="/pt-br/hand_amazinghand/"><span className="step-index">1</span><div><b>Início Rápido da AmazingHand</b></div></a>
       <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">2</span><div><b>SO-ARM com AmazingHand</b></div></a>
     </div>
   </div>
@@ -200,7 +200,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="reachy-path-grid">
       <div className="mini-track">
         <h4>Início Rápido</h4>
-        <a href="/pt-br/reachymini_platforms_reachy_mini_get_started/">Início Rápido do Reachy Mini (Wireless)</a>
+        <a href="/pt-br/reachymini_platforms_reachy_mini_get_started/">Início Rápido do Reachy Mini (Sem Fio)</a>
         <a href="/pt-br/reachymini_platforms_reachy_mini_lite_get_started/">Início Rápido do Reachy Mini Lite</a>
       </div>
       <div className="mini-track">
@@ -229,7 +229,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="stackforce" className="product-card stackforce product-card--cover">
   <summary className="product-head">
-    <h3>Robô StackForce Mini com Rodas e Pernas</h3>
+    <h3>Robô Mini StackForce com Rodas e Pernas</h3>
   </summary>
   <div className="product-body">
     <div className="learning-steps">
@@ -287,8 +287,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <h4>Outros Motores de Junta</h4>
         <a href="/pt-br/myactuator_series/">Série MyActuator X</a>
         <a href="/pt-br/hightorque_series/">Série HighTorque / SDK</a>
-        <a href="/pt-br/hightorque_getting_started/">Primeiros passos do HighTorque</a>
-        <a href="/pt-br/hightorque_control/">Controle de motores HighTorque</a>
+        <a href="/pt-br/hightorque_getting_started/">Introdução ao HighTorque</a>
+        <a href="/pt-br/hightorque_control/">Controle de Motor HighTorque</a>
         <a href="/pt-br/stackforce_series/">Série Stackforce</a>
       </div>
       <div>
@@ -325,7 +325,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     </div>
     <div className="resource-columns">
       <div><h4>Ecossistema ROS</h4><a href="/pt-br/installing_ros1/">Instalação do ROS 1</a><a href="/pt-br/install_ros2_humble/">Instalação do ROS 2</a><a href="/pt-br/install_isaacros/">Instalação do Isaac ROS</a><a href="/pt-br/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/pt-br/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
-      <div><h4>NVIDIA Isaac</h4><a href="/pt-br/install_isaaclab/">Instalação do Isaac Lab</a><a href="/pt-br/training_soarm101_policy_with_isaacLab/">Aprendizado por Reforço do SO Arm 101</a><a href="/pt-br/simulate_soarm101_by_leisaac/">Braço Robótico SO Arm 101 com Isaac Sim</a></div>
+      <div><h4>NVIDIA Isaac</h4><a href="/pt-br/install_isaaclab/">Instalação do Isaac Lab</a><a href="/pt-br/training_soarm101_policy_with_isaacLab/">Aprendizado por Reforço SO Arm 101</a><a href="/pt-br/simulate_soarm101_by_leisaac/">Braço Robótico SO Arm 101 com Isaac Sim</a></div>
       <div><h4>PX4 / VLA</h4><a href="/pt-br/control_px4_with_recomputer_jetson/">PX4 e Jetson</a><a href="/pt-br/object_tracking_with_reComputer_jetson_and_pX4/">Rastreamento de Objetos com PX4</a><a href="/pt-br/control_robotic_arm_via_gr00t/">StarAI e NVIDIA GR00T</a></div>
     </div>
   </section>

@@ -26,12 +26,9 @@ import '/src/css/rebot-wiki-style.css';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS クイックスタート
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
@@ -392,7 +389,7 @@ sudo ip link set can0 up
 ドライバーインストール後に PCAN デバイスのファームウェアが正しくない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、復旧手順に従ってください。
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN ファームウェアのダウンロード＆ドライバー修復手順 - Ubuntu</summary>
 
 Ubuntu ユーザーはこのガイドを参照してください
@@ -451,8 +448,7 @@ sudo apt install -y \
     make \
     libpopt-dev \
     can-utils \
-    ethtool \
-    nvidia-l4t-kernel-headers
+    ethtool
 ```
 
 現在のカーネルヘッダーディレクトリが存在することを確認します：
@@ -632,7 +628,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 ドライバインストール後に PCAN デバイスのファームウェアが正しくない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、復旧手順に従ってください。
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN ファームウェアのダウンロード &amp; ドライバ修復手順 - macOS</summary>
 
 MAC ユーザーはこのガイドを参照してください
@@ -678,7 +674,7 @@ USB を挿し直します。
 ドライバをインストールしてもデバイスマネージャーで **PCAN-USB** が検出されない場合は、以下のセクションを展開し、PCAN ファームウェアをダウンロードして、復旧手順に従ってください。
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN ファームウェアのダウンロード &amp; ドライバ修復手順 - Windows</summary>
 

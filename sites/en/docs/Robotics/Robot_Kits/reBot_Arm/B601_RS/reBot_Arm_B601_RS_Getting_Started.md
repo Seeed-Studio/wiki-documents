@@ -26,12 +26,9 @@ import '/src/css/rebot-wiki-style.css';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS Quick Start
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
@@ -392,7 +389,7 @@ sudo ip link set can0 up
 If the PCAN device has incorrect firmware after driver installation, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN Firmware Download &amp; Driver Repair Steps - Ubuntu</summary>
 
 Ubuntu users please refer to this guide
@@ -451,8 +448,7 @@ sudo apt install -y \
     make \
     libpopt-dev \
     can-utils \
-    ethtool \
-    nvidia-l4t-kernel-headers
+    ethtool
 ```
 
 Verify that the current kernel headers directory exists:
@@ -632,7 +628,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 If the PCAN device has incorrect firmware after driver installation, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN Firmware Download &amp; Driver Repair Steps - macOS</summary>
 
 MAC users please refer to this guide
@@ -678,7 +674,7 @@ Download [PEAK-System_Driver-Setup.zip](https://files.seeedstudio.com/wiki/robot
 If **PCAN-USB** is not detected in Device Manager after installing the driver, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN Firmware Download &amp; Driver Repair Steps - Windows</summary>
 

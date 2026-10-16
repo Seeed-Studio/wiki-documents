@@ -1,17 +1,17 @@
 ---
 description: "Capítulo 29 del Curso de Introducción a la IA Física de Seeed: práctica de agarre visual autónomo con el reBot Arm: instalación del SDK de la cámara RGB-D y del repositorio de agarre, ejecución de los programas de agarre y agarre‑y‑colocación, compensación de posición y una pista opcional de agarre con nubes de puntos usando GraspNet."
-title: Capítulo 29 - Agarre Visual Autónomo con reBot Arm
+title: Capítulo 29 - Agarre visual autónomo con reBot Arm
 hide_title: true
 keywords:
   - reBot
-  - Brazo robótico
-  - Agarre visual
-  - Cámara RGB-D
-  - Calibración mano-ojo
+  - Robotic Arm
+  - Visual Grasping
+  - RGB-D Camera
+  - Hand-Eye Calibration
   - GraspNet
-  - Curso
+  - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_29
+slug: /robotics/rebot_physical_ai_course_chapter_29
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -20,7 +20,7 @@ last_update:
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-08'
 updatedAt: '2026-10-08'
-url: https://wiki.seeedstudio.com/es/rebot_physical_ai_course_chapter_29/
+url: https://wiki.seeedstudio.com/es/robotics/rebot_physical_ai_course_chapter_29/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -48,7 +48,7 @@ import 'katex/dist/katex.min.css';
 
 ## 29.1 Resumen del capítulo
 
-Este capítulo utiliza la demo de agarre visual del reBot Arm como caso de estudio para construir un sistema completo de agarre visual robótico.
+Este capítulo utiliza la demo de agarre visual del reBot Arm como caso de estudio para construir un sistema completo de agarre visual con robot.
 
 Resultado final: el brazo observa el área de trabajo mediante una cámara RGB-D, reconoce el objeto objetivo con un modelo de detección, calcula la posición espacial del objetivo a partir de la profundidad y controla el brazo para agarrarlo y colocarlo automáticamente.
 
@@ -76,7 +76,7 @@ Esta práctica cubre:
 
 - Conecta la cámara de profundidad al host mediante USB 3.0.
 - Conecta el adaptador USB2CAN al bus CAN del brazo.
-- Confirma que la alimentación de 24 V, la cámara y el brazo estén bien conectados.
+- Confirma que la alimentación de 24 V, la cámara y el brazo estén todos conectados de forma segura.
 - Configura los permisos:
 
     ```text
@@ -90,7 +90,7 @@ Esta práctica cubre:
 
 ### Paso 1: Clonar el repositorio de agarre visual
 
-- Se recomienda usar el repositorio oficial Seeed-Projects; solo contiene la parte de agarre visual y el SDK de control del brazo debe instalarse por separado.
+- Se recomienda usar el repositorio oficial Seeed-Projects; contiene solo la parte de agarre visual, y el SDK de control del brazo debe instalarse por separado.
 
     ```bash
     git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
@@ -115,7 +115,7 @@ pip install -e .
 cd ../..
 ```
 
-- Si `pip install -e .` muestra `Multiple top-level packages discovered in a flat-layout`, añade una detección explícita de paquetes en `reBotArm_control_py/pyproject.toml` y vuelve a ejecutar `pip install -e .`:
+- Si `pip install -e .` muestra `Multiple top-level packages discovered in a flat-layout`, añade detección explícita de paquetes en `reBotArm_control_py/pyproject.toml` y vuelve a ejecutar `pip install -e .`:
 
     ```toml
     [build-system]
@@ -130,7 +130,7 @@ cd ../..
 
 ### Paso 4. Configurar el modelo de brazo
 
-- En `/rebot_grasp/sdk/reBotArm_control_py/config/`, localiza el `rebotarm.yaml` del brazo. Establece `hardware_yaml:` para que coincida con el modelo de brazo; el programa cargará entonces los parámetros de hardware de los motores correspondientes.
+- En `/rebot_grasp/sdk/reBotArm_control_py/config/`, busca el `rebotarm.yaml` del brazo. Establece `hardware_yaml:` para que coincida con el modelo de brazo; el programa cargará entonces los parámetros de hardware de los motores correspondientes.
 
     ```text
     # reBotArm global config
@@ -171,7 +171,7 @@ cd ../..
             git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
             ```
 
-        - Al instalar desde el código fuente, primero usa CMake para compilar la extensión nativa y asegúrate de que `install/lib` contenga `pyorbbecsdk*.so` y la biblioteca compartida de Orbbec; luego ejecuta `pip install -e .`.
+        - Al instalar desde el código fuente, primero usa CMake para compilar la extensión nativa y asegúrate de que `install/lib` contenga `pyorbbecsdk*.so` y la biblioteca compartida de Orbbec, luego ejecuta `pip install -e .`.
         - Nota: si todos los intentos anteriores fallan, consulta la documentación oficial de Orbbec.
         - **Verificar la instalación**
 
@@ -195,11 +195,11 @@ cd ../..
 ## 29.4 Instalación de la cámara RGB-D
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-01.png" alt="Hand-eye calibration AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-01.png" alt="Diagrama de instalación y calibración de cámara RGB-D fija ojo-a-mano" />
 </div>
 
 <div className="image-frame">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-02.png" alt="Hand-eye calibration AX = XB" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-29/ch29-02.png" alt="Montaje de cámara en el efector final ojo-en-mano y paneles de calibración" />
 </div>
 
 
@@ -212,11 +212,11 @@ cd ../..
 `scripts/main.py` — el programa principal de agarre, una canalización completa de agarre visual:
 
 - Inicializar la cámara RGB-D y confirmar que el flujo de imagen está disponible
-- Habilitar el brazo y el efector final, y moverse a la posición de altura previa
+- Habilitar el brazo y el efector final, moverse a la posición de pre-altura
 - Vista previa en tiempo real de la cámara + detección YOLO y segmentación por instancias
 - Estimar la orientación del efector final a partir del eje corto del OBB; estimar la altura de agarre a partir del cuantil de profundidad
 - Pulsar `G` para congelar el fotograma; calcular la pose objetivo del brazo mediante la transformación mano-ojo
-- El brazo se mueve al punto de preagarre -> desciende -> cierra el efector final -> eleva -> vuelve a la posición previa
+- El brazo se mueve al punto de pre-agarre -> desciende -> cierra el efector final -> eleva -> vuelve a la posición previa
 
     ```text
     python scripts/main.py
@@ -224,7 +224,7 @@ cd ../..
 
 ### Programa de agarre y colocación
 
-`scripts/set.py` — programa de agarre y colocación: agarra un plátano y lo coloca en una caja.
+`scripts/set.py` — programa de agarre y colocación: agarrar un plátano y colocarlo en una caja.
 
 - Inicializar la cámara y el brazo; moverse a la pre‑posición
 - Vista previa en tiempo real de la cámara + detección YOLO y segmentación por instancias
@@ -239,7 +239,7 @@ cd ../..
 
 ### Compensación de posición
 
-Si después de la calibración la precisión de agarre del brazo no es suficiente, abre `config/default.yaml` y ajusta los valores de `X (adelante/atrás), Y (izquierda/derecha), Z (arriba/abajo)` en `calibration.hand_eye_compensation_m` para compensar la posición.
+Si después de la calibración la precisión de agarre del brazo no es suficiente, abre `config/default.yaml` y ajusta los valores de `X (adelante/atrás), Y (izquierda/derecha), Z (arriba/abajo)` en `calibration.hand_eye_compensation_m` para la compensación de posición.
 
 ```yaml
 ------------------------------------
@@ -264,13 +264,13 @@ calibration:
 
 GraspNet responde principalmente: dado la forma 3D del objeto, ¿dónde debería agarrar el robot y con qué pose?
 
-GraspNet es un método de agarre robótico basado en nubes de puntos; más precisamente, un marco de generación y evaluación de poses de agarre en 6 GDL para nubes de puntos 3D. En pocas palabras, la nube de puntos es “los datos del mundo 3D que ve el robot”, y GraspNet es “cómo el robot encuentra la mejor pose de agarre a partir de esos datos 3D”.
+GraspNet es un método de agarre robótico basado en nubes de puntos; más precisamente, un marco de generación y evaluación de poses de agarre de 6 GDL para nubes de puntos 3D. En pocas palabras, la nube de puntos es “los datos del mundo 3D que ve el robot”, y GraspNet es “cómo el robot encuentra la mejor pose de agarre a partir de esos datos 3D”.
 
 Entrada: datos RGB-D -> nube de puntos -> GraspNet -> pose de agarre
 
-Salida: una pose de agarre en 6 GDL $G=(x,y,z,R)$, que incluye:
+Salida: una pose de agarre de 6 GDL $G=(x,y,z,R)$, que incluye:
 
-- Posición, a dónde debe ir el efector final del brazo:
+- Posición, adónde debe ir el efector final del brazo:
 
     ```text
     x,y,z
@@ -282,26 +282,26 @@ Salida: una pose de agarre en 6 GDL $G=(x,y,z,R)$, que incluye:
     roll,pitch,yaw
     ```
 
-- Finalmente, indicarle al brazo: agarra desde esta dirección
+- Finalmente decirle al brazo: agarra desde esta dirección
 
 ### Configurar GraspNet
 
 Para estimar con mayor precisión las poses de agarre de los objetos, este proyecto adapta [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) para mejorar el rendimiento de agarre del brazo.
 
-Las extensiones `pointnet2` / `knn` de GraspNet necesitan un compilador CUDA. Antes de empezar, confirma que se encuentra `nvcc` y que su versión de CUDA coincide con la usada para compilar PyTorch:
+Las extensiones `pointnet2` / `knn` de GraspNet necesitan un compilador CUDA. Antes de empezar, confirma que se encuentra `nvcc` y que su versión de CUDA coincide con la versión con la que se compiló PyTorch:
 
 ```bash
 nvcc --version
 python -c "import torch; print(torch.__version__, torch.version.cuda)"
 ```
 
-Si falta `nvcc` o su versión de CUDA difiere de `torch.version.cuda`, instala el compilador CUDA que coincida con la versión de CUDA de PyTorch. Por ejemplo, cuando PyTorch muestra `13.0`:
+Si falta `nvcc` o su versión de CUDA difiere de `torch.version.cuda`, instala el compilador CUDA que coincida con la versión CUDA de PyTorch. Por ejemplo, cuando PyTorch muestra `13.0`:
 
 ```bash
 conda install -c nvidia cuda-nvcc=13.0
 ```
 
-Las dos deben coincidir; de lo contrario, al compilar `pointnet2` / `knn` aparecerá `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`.
+Los dos deben coincidir; de lo contrario, al compilar `pointnet2` / `knn` aparecerá `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`.
 
 ```bash
 cd sdk
@@ -333,13 +333,13 @@ pip install .
 cd ../../..
 ```
 
-Tres problemas a tener en cuenta antes de empezar:
+Tres trampas que vale la pena conocer antes de empezar:
 
 | Síntoma | Qué hacer |
 | :--- | :--- |
-| `python setup.py install` genera errores de versión de CUDA/PyTorch | Usa `pip install . --no-build-isolation` para que la extensión reutilice el PyTorch y CUDA que ya están en el entorno conda |
-| La compilación informa `fatal error: cusparse.h: No such file or directory` | Ejecuta `find $CONDA_PREFIX -name cusparse.h` y añade ese directorio a `CPATH` / `CPLUS_INCLUDE_PATH`; con el `cuda-toolkit` de conda suele ser `$CONDA_PREFIX/targets/x86_64-linux/include`, no la ruta de pip `nvidia/cu13/include` anterior |
-| Una advertencia sobre el nombre del paquete `sklearn` | El `sed` anterior lo renombra a `scikit-learn`. Mantén el pin `numpy==1.23.4` a menos que cambie la pila de dependencias, porque `transforms3d==0.3.1` sigue usando alias de NumPy como `np.float` |
+| `python setup.py install` genera errores de versión de CUDA/PyTorch | Usa `pip install . --no-build-isolation` para que la extensión reutilice la versión de PyTorch y CUDA que ya está en el entorno conda |
+| La compilación informa `fatal error: cusparse.h: No such file or directory` | Ejecuta `find $CONDA_PREFIX -name cusparse.h` y añade ese directorio a `CPATH` / `CPLUS_INCLUDE_PATH`; con el `cuda-toolkit` de conda suele ser `$CONDA_PREFIX/targets/x86_64-linux/include`, no la ruta de pip `nvidia/cu13/include` de arriba |
+| Una advertencia sobre el nombre del paquete `sklearn` | El `sed` anterior lo renombra a `scikit-learn`. Mantén el pin `numpy==1.23.4` a menos que cambie la pila de dependencias, porque `transforms3d==0.3.1` todavía usa alias de NumPy como `np.float` |
 
 #### Configurar el modelo preentrenado
 
@@ -361,14 +361,14 @@ Tres problemas a tener en cuenta antes de empezar:
 ### Ejecución y depuración
 
 1. Demo de estimación con cámara de GraspNet — `scripts/graspnet_camera_demo.py`
-- Sin conectar el brazo, ejecuta la estimación de agarre 6D de GraspNet usando solo la cámara RGB-D. El script mantiene una vista previa en vivo de la cámara, usa la caja de YOLO para seleccionar la región objetivo y filtra los agarres factibles dentro de ese bbox a partir de los candidatos de toda la escena de GraspNet. Pulsa `G` o `Space` para inferir el fotograma actual, `R` para reanudar la vista previa en vivo, `Q` o `Esc` para salir. Tras la inferencia, visualiza la nube de puntos y los candidatos de agarre mediante Open3D.
+- Sin conectar el brazo, ejecuta la estimación de agarre 6D de GraspNet usando solo la cámara RGB-D. El script mantiene una vista previa en vivo de la cámara, usa la caja de YOLO para seleccionar la región objetivo y filtra los agarres factibles dentro de ese bbox a partir de los candidatos de toda la escena de GraspNet. Pulsa `G` o `Space` para inferir el fotograma actual, `R` para reanudar la vista previa en vivo, `Q` o `Esc` para salir. Después de la inferencia, visualiza la nube de puntos y los candidatos de agarre mediante Open3D.
 
     ```bash
     python scripts/graspnet_camera_demo.py
     ```
 
 2. Programa de agarre con brazo de GraspNet — `scripts/grasp.py`
-- Basado en las estimaciones de `graspnet_camera_demo.py`, controla la ejecución del brazo: YOLO selecciona el objetivo, GraspNet produce una pose de agarre 6D, la calibración mano-ojo la transforma al marco base del brazo, luego se comprueba la alcanzabilidad por IK y se ejecutan pre-agarre/agarre/retirada. Durante la depuración, es preferible `--dry-run` para imprimir solo las poses objetivo y el filtrado de candidatos.
+- Basado en las estimaciones de `graspnet_camera_demo.py`, controla la ejecución del brazo: YOLO selecciona el objetivo, GraspNet produce una pose de agarre 6D, la calibración mano-ojo la transforma al marco base del brazo, luego se comprueba la alcanzabilidad por IK y se ejecutan pre-grasp/grasp/retirada. Durante la depuración, es preferible `--dry-run` para imprimir solo las poses objetivo y el filtrado de candidatos.
 
     ```bash
     python scripts/grasp.py --dry-run

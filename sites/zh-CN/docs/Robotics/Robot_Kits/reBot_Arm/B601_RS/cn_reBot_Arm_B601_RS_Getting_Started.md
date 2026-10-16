@@ -25,12 +25,9 @@ import '/src/css/rebot-wiki-style.css';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS 快速入门
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
@@ -388,7 +385,7 @@ sudo ip link set can0 up
 电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN 固件下载与驱动修复步骤 - Ubuntu</summary>
 
@@ -407,7 +404,7 @@ Ubuntu 用户请参考本指南
 ```text
 scp flash_pcan.sh pcan_canable_hw.bin seeed@你的Ubuntu的IP:~/Downloads/
 ```
-或者直接拖进优盘再插到 Ubuntu 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+或者直接拖进优盘再插到 Ubuntu 上复制过去，都行——只要最后落在 `~/Downloads`、`~/下载`、当前目录，或者 `/tmp` 里任意一个，脚本都能自动找到。
 
 4.执行：
 
@@ -443,8 +440,7 @@ sudo apt install -y \
     make \
     libpopt-dev \
     can-utils \
-    ethtool \
-    nvidia-l4t-kernel-headers
+    ethtool
 ```
 确认当前内核头文件目录存在：
 ```bash
@@ -597,7 +593,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN 固件下载与驱动修复步骤 - macOS</summary>
 
@@ -617,7 +613,7 @@ MAC 用户请参考本指南
 scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
 ```
 
-或者直接拖进优盘再插到 MAC 上复制过去，都行——只要最后落在 、当前目录，或者 里任意一个，脚本都能自动找到。~/Downloads~/下载/tmp
+或者直接拖进优盘再插到 MAC 上复制过去，都行——只要最后落在 `~/Downloads`、`~/下载`、当前目录，或者 `/tmp` 里任意一个，脚本都能自动找到。
 
 4.执行：
 
@@ -643,7 +639,7 @@ scp flash_pcan.sh pcan_canable_hw.bin seeed@你的MAC的IP:~/Downloads/
 电脑安装驱动后，发现pcan设备固件错误，请展开以下内容，下载 PCAN 固件并按照步骤进行修复。
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN 固件下载与驱动修复步骤 - Windows</summary>
 

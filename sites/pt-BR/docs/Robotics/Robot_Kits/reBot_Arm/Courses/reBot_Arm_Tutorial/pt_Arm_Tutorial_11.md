@@ -1,5 +1,5 @@
 ---
-description: Capítulo 11 do Curso para Iniciantes em IA Física da Seeed — configuração do ambiente, calibração dos braços seguidor e líder, mapeamento de juntas, segurança na teleoperação, início da teleoperação mestre‑escravo, frequência de controle e latência, e prática hands-on.
+description: Capítulo 11 do Curso para Iniciantes em IA Física da Seeed — configuração do ambiente, calibração dos braços seguidor e líder, mapeamento de juntas, segurança na teleoperação, início da teleoperação mestre‑escravo, frequência de controle e latência, e prática guiada.
 title: Capítulo 11 - Calibração de Líder e Seguidor e Teleoperação
 hide_title: true
 keywords:
@@ -11,7 +11,7 @@ keywords:
   - Follower Arm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_11
+slug: /robotics/rebot_physical_ai_course_chapter_11
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -20,7 +20,7 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_11/
+url: https://wiki.seeedstudio.com/pt-br/robotics/rebot_physical_ai_course_chapter_11/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -32,9 +32,7 @@ import '/src/css/rebot-wiki-style.css';
     <span className="eyebrow">Estágio 3 · Capítulo 11 · Prática</span>
     <h2>11. Calibração de Líder e Seguidor e Teleoperação</h2>
     <p>
-      Capítulo 11 do Curso para Iniciantes em IA Física da Seeed — configuração do ambiente,
-      calibração dos braços seguidor e líder, mapeamento de juntas, segurança na teleoperação,
-      início da teleoperação mestre-escravo, frequência de controle e latência, e prática hands-on.
+      Capítulo 11 do Curso para Iniciantes em IA Física da Seeed — configuração do ambiente, calibração dos braços seguidor e líder, mapeamento de juntas, segurança na teleoperação, início da teleoperação mestre‑escravo, frequência de controle e latência, e prática guiada.
     </p>
     <div className="hero-actions">
       <a href="#environment">Ambiente</a>
@@ -44,12 +42,12 @@ import '/src/css/rebot-wiki-style.css';
   </div>
 </section>
 
-## 11.1 Desembalagem, Fiação e Fixação do Braço
+## 11.1 Desembalar, Conectar e Montar o Braço
 
 <section id="unboxing" className="section-card">
   <div className="section-title">
     <span>Configuração</span>
-    <h2>11.1 Desembalagem, Fiação e Fixação do Braço</h2>
+    <h2>11.1 Desembalar, Conectar e Montar o Braço</h2>
   </div>
 
 - **reBot DM**
@@ -62,19 +60,19 @@ import '/src/css/rebot-wiki-style.css';
 
 <div className="sensecraft-banner">
   <div className="sensecraft-banner__copy">
-    <span className="sensecraft-banner__badge">⚡ VLA sem código · Sem configurar ambiente</span>
-    <p className="sensecraft-banner__title">Sem configurar nada: use o reBot Arm e o LeRobot em um único app</p>
-    <p className="sensecraft-banner__lead">O SenseCraft Robotics é a plataforma sem código da Seeed para o SO-ARM101, reBot Arm 102 + B601-RS e B601-DM. Conecte os braços, calibre, colete demonstrações, treine e execute a inferência em uma interface guiada.</p>
+    <span className="sensecraft-banner__badge">⚡ VLA sem código · Sem configuração de ambiente</span>
+    <p className="sensecraft-banner__title">Ignore a configuração — execute o reBot Arm e o LeRobot a partir de um único app</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics é a plataforma sem código da Seeed para o SO-ARM101, reBot Arm 102 + B601-RS e B601-DM. Conecte os braços, calibre, colete demonstrações, treine e execute inferência a partir de uma interface guiada — sem ambiente Python, sem terminal.</p>
     <ul className="sensecraft-banner__points">
-      <li>✅ Fluxo guiado de 6 etapas</li>
-      <li>✅ Treinamento na nuvem</li>
-      <li>✅ Cliente Windows / macOS</li>
+      <li>✅ Fluxo de trabalho guiado em 6 etapas</li>
+      <li>✅ Treinamento em nuvem — sem GPU local</li>
+      <li>✅ Cliente para Windows / macOS</li>
       <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
     </ul>
   </div>
   <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir para o SenseCraft Robotics ↗</a>
-    <a className="sensecraft-banner__link" href="/pt-br/sensecraft_robotics/">Guia do software</a>
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir para SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/pt-br/sensecraft_robotics/">Guia de software</a>
   </div>
 </div>
 
@@ -92,7 +90,7 @@ Supondo que você já tenha criado um ambiente virtual no Estágio 2, em seguida
 Lembre-se: todas as etapas subsequentes devem ser executadas dentro do ambiente virtual e do ambiente `lerobot`.
 :::
 
-**Passo 1:** Clonar o repositório Seeed LeRobot
+**Etapa 1:** Clonar o repositório Seeed LeRobot
 
 ```bash
 mkdir ~/rebot_lerobot
@@ -100,7 +98,7 @@ cd ~/rebot_lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git
 ```
 
-**Passo 2:** Entrar no ambiente virtual e instalar o LeRobot e os plugins do reBot
+**Etapa 2:** Entrar no ambiente virtual e instalar LeRobot e plugins do reBot
 
 ```bash
 conda create -y -n rebot_arm python=3.12
@@ -113,7 +111,7 @@ pip install lerobot-robot-seeed-b601
 pip install motorbridge
 ```
 
-**Passo 3:** Instalar ffmpeg (dependência de codec de vídeo)
+**Etapa 3:** Instalar ffmpeg (dependência de codec de vídeo)
 
 ```bash
 conda install ffmpeg -c conda-forge
@@ -130,9 +128,9 @@ conda install ffmpeg=7.1.1 -c conda-forge
 
 - Você pode verificar via `ffmpeg -encoders | grep svtav1` se o codificador libsvtav1 é suportado.
 
-**Passo 4:** Configuração especial para dispositivos NVIDIA Jetson (ignore este passo em um PC comum)
+**Etapa 4:** Configuração especial para dispositivos NVIDIA Jetson (ignore esta etapa em um PC comum)
 
-Para dispositivos Jetson JetPack 6.0+ (certifique-se de ter instalado PyTorch-gpu e Torchvision compatíveis com Jetson antes deste passo):
+Para dispositivos Jetson JetPack 6.0+ (certifique-se de ter instalado PyTorch-gpu e Torchvision compatíveis com Jetson antes desta etapa):
 
 ```bash
 # Install OpenCV and other dependencies via conda (Jetson JetPack 6.0+ only)
@@ -147,7 +145,7 @@ conda uninstall numpy
 pip3 install numpy==1.26.0
 ```
 
-**Passo 5:** Verificar se a GPU do PyTorch está disponível
+**Etapa 5:** Verificar se o PyTorch GPU está disponível
 
 ```bash
 python3
@@ -224,7 +222,7 @@ Exemplo de saída:
 can2  # Could also be can0, can1, or other CAN number
 ```
 
-O número da porta usado em todos os comandos subsequentes do seguidor deve corresponder à saída aqui.
+O número da porta usado em todos os comandos subsequentes do seguidor deve corresponder ao resultado exibido aqui.
 
 :::warning
 Se o seu Jetson não tiver o [PCAN driver installed](https://wiki.seeedstudio.com/pt-br/rebot_b601_rs_getting_started/#software-setup-and-calibration-workflow), a comunicação ficará persistentemente anormal.
@@ -246,7 +244,7 @@ Se o seu Jetson não tiver o [PCAN driver installed](https://wiki.seeedstudio.co
 - `joint_ranges` (limites de junta) vêm do arquivo de configuração `config_rebot_arm_102_leader.py`, não dos dados de calibração.
 - Se uma junta parecer sempre presa perto de um limite, verifique primeiro a configuração de `joint_ranges`.
 - As direções das juntas são definidas no arquivo de configuração; se as direções não corresponderem, modifique a configuração em vez de recalibrar.
-- O Líder reBot 102 usa um módulo USB-para-UART, geralmente mapeado para `/dev/ttyUSB*`.
+- O Líder reBot 102 usa um módulo USB‑para‑UART, geralmente mapeado para `/dev/ttyUSB*`.
 - Use `ls /dev/ttyUSB*` para ver o número real da porta.
 
 Na primeira conexão, você pode receber um erro informando que a porta serial `/dev/ttyACM0` não pode ser encontrada — isso ocorre porque o `brltty` está ocupando a porta. Siga estes passos:
@@ -271,7 +269,7 @@ lerobot-calibrate \
     --teleop.id=rebot_arm_102_leader
 ```
 
-Mantenha-o parado e pressione <kbd>Enter</kbd> até a calibração ser concluída.
+Mantenha-o parado e pressione <kbd>Enter</kbd> até que a calibração seja concluída.
 
 </section>
 
@@ -298,7 +296,7 @@ Mantenha-o parado e pressione <kbd>Enter</kbd> até a calibração ser concluíd
   </div>
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-04.png" alt="Diretrizes de segurança para teleoperação" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-04.png" alt="Teleoperation safety guidelines" />
 </div>
 
 </section>
@@ -312,7 +310,7 @@ Mantenha-o parado e pressione <kbd>Enter</kbd> até a calibração ser concluíd
   </div>
 
 :::danger As mesmas regras de segurança se aplicam a todos os cenários de movimento do braço!
-Durante a teleoperação, se os cabos de alimentação se soltarem, a conexão de energia estiver ruim ou os cabos de sinal se desconectarem, você deve primeiro parar o código, retornar o braço à sua posição inicial zero, então reconectar a alimentação e reiniciar o programa — para evitar que corrupção de dados faça o braço sair de controle e crie perigo.
+Durante a teleoperação, se cabos de alimentação se soltarem, a conexão de energia estiver ruim ou cabos de sinal se desconectarem, você deve primeiro parar o código, retornar o braço à sua posição inicial zero, então reconectar a alimentação e reiniciar o programa — para evitar que corrupção de dados faça o braço sair de controle e crie perigo.
 :::
 
 **Teleoperação DM** — primeiro conceda permissões às portas seriais:
@@ -373,27 +371,27 @@ lerobot-teleoperate \
 
 Se a teleoperação parece "responsiva" depende de duas coisas: quantos loops o circuito de encaminhamento executa por segundo (frequência) e quanto atraso existe entre a sua mão e o braço (latência).
 
-### De onde vem a latência? Por que ela é inevitável?
+### De Onde Vem a Latência? Por Que Ela é Inevitável?
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-11/ch11-05.png" alt="Latency sources" />
 </div>
 
-### O que é a frequência de controle? Ela pode ser configurada?
+### O Que é a Frequência de Controle? Ela Pode Ser Configurada?
 
-O loop de teleoperação é, por padrão, **60 Hz** — completando 60 loops por segundo de "ler Leader → mapear → enviar CAN → ler de volta"; cada loop tem um orçamento de tempo de 16,7 ms. Essa frequência pode ser ajustada por meio do parâmetro `fps` da configuração de teleoperação, mas tenha duas coisas em mente:
+O loop de teleoperação é, por padrão, **60 Hz** — completando 60 loops por segundo de "ler o Leader → mapear → enviar CAN → ler de volta"; cada loop tem um orçamento de tempo de 16,7 ms. Essa frequência pode ser ajustada por meio do parâmetro `fps` da configuração de teleoperação, mas tenha duas coisas em mente:
 
 - **O limite superior é determinado pelo tempo do circuito de hardware, não pelo software.** A cadeia acima por si só leva mais de dez milissegundos por loop, então o limite superior prático para este hardware é em torno de 60–100 Hz. Configurar acima disso é inútil: a frequência real não aumentará, e você só verá avisos de estouro de período.
 - **60 Hz já está muito acima do necessário.** Os movimentos conscientes humanos mais rápidos são apenas 5–10 Hz; 60 Hz é como tirar dez instantâneos de cada pequeno movimento, então a densidade de amostragem cobre totalmente a largura de banda da mão.
 
 </section>
 
-## 11.9 Prática Guiada
+## 11.9 Prática Hands-On
 
 <section id="practice" className="section-card">
   <div className="section-title">
     <span>Prática</span>
-    <h2>11.9 Prática Guiada: Agarrar, Transportar e Posicionar</h2>
+    <h2>11.9 Prática Hands-On: Agarrar, Transportar e Posicionar</h2>
   </div>
 
 A teleoperação é estável, mas "conseguir se mover" e "conseguir trabalhar" ainda exigem prática deliberada. A qualidade dos dados no Capítulo 13 depende da sua proficiência atual. Pratique em três níveis:

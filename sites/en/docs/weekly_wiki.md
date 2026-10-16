@@ -40,7 +40,7 @@ Find and compare cameras for Jetson-based reComputer and reServer devices. Filte
 
 Four new chapters cover coordinate frames and transformations, forward and inverse kinematics, Jacobians, and trajectory planning. The final chapter brings these concepts into practice using Pinocchio and MeshCat with the reBot Arm.
 
-**New chapters:** [23 — Coordinate Systems](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_23/) · [24 — Kinematics and Jacobian](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_24/) · [25 — Trajectory Planning](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_25/) · [26 — Pinocchio and MeshCat](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_26/).
+**New chapters:** [23 — Coordinate Systems](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_23/) · [24 — Kinematics and Jacobian](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_24/) · [25 — Trajectory Planning](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_25/) · [26 — Pinocchio and MeshCat](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_26/).
 
 </div>
 
@@ -52,7 +52,7 @@ Four new chapters cover coordinate frames and transformations, forward and inver
 
 The latest stage introduces RGB-D sensing, 3D perception, object detection, and hand-eye calibration. It then moves into hands-on visual grasping with the reBot Arm and an optional voice and multimodal interaction project using reSpeaker.
 
-**New chapters:** [27 — Robot Vision](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_27/) · [28 — Object Detection and Calibration](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_28/) · [29 — Autonomous Visual Grasping](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_29/) · [30 — Voice and Multimodal Interaction](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_30/).
+**New chapters:** [27 — Robot Vision](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_27/) · [28 — Object Detection and Calibration](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_28/) · [29 — Autonomous Visual Grasping](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_29/) · [30 — Voice and Multimodal Interaction](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_30/).
 
 </div>
 

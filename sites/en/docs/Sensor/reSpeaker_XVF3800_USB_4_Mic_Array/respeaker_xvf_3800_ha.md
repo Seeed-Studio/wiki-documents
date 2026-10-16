@@ -83,39 +83,32 @@ The installtion guide is [Here](https://wiki.seeedstudio.com/respeaker_xvf3800_i
 
 ## Prepare ReSpeaker XMOS XVF3800 with XIAO ESP32S3
 
-Go to **Home Assistant > Settings > Add-ons**.
+Go to **Home Assistant > Settings > Apps**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Click **Add-on Store** (usually at the bottom right)
+Click **Install app** (usually at the bottom right)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Under **Official add-ons**, search for and install **ESPHome Device Builder**.
+Under **App Store**, search for and install **ESPHome Device Builder**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-After installation, click **Start** to run the ESPHome add-on.
+Click **Install** to install the ESPHome add-on.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_Start.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_Start_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Enable **Start on Boot, Watchdog, and Show in Sidebar** for easier access.
 
 From the Home Assistant sidebar, go to **ESPHome Builder**.
 
 Click **+ NEW DEVICE**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_new.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_newdevice_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
+Select your new device entry and click **Import from file**.
 
-When prompted, click **SKIP** – we’ll create the configuration manually.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
-
-Select your new device entry and click **EDIT**.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 Replace the content with your custom **YAML configuration**
 
@@ -125,17 +118,17 @@ You can Found the YAML file from [Here](https://github.com/formatBCE/Respeaker-X
 
 Once your YAML is saved, click **INSTALL**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_yaml.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_yaml_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Choose **Manual Download**
+Choose **Advanced opinions** and **Download firmware binary**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 Wait for the firmware to compile.
 
 Download the generated .bin firmware file to your computer.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 Connect the **ESP32-S3** board (with XVF3800 connected) to your PC using a **USB Type-C cable**.
 

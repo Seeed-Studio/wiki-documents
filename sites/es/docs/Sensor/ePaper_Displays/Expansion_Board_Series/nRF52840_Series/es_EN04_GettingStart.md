@@ -1,6 +1,6 @@
 ---
-description: Primeros pasos con XIAO ePaper Display Board(nRF52840) - EN04
-title: Primeros pasos con EN04
+description: Introducción a XIAO ePaper Display Board(nRF52840) - EN04
+title: Introducción a EN04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
@@ -8,17 +8,17 @@ sidebar_position: 1
 slug: /epaper_EN04
 sku: 100003489,E25120101
 last_update:
-  date: 11/25/2025
-  author: Allen
+  date: 10/8/2026
+  author: Nemo
 createdAt: '2025-09-25'
-updatedAt: '2026-08-14'
+updatedAt: '2026-10-08'
 url: https://wiki.seeedstudio.com/es/epaper_EN04/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Primeros pasos con XIAO ePaper Display Board - EN04
+# Introducción a XIAO ePaper Display Board - EN04
 
 <div class="table-center">
 <table align="center">
@@ -38,13 +38,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compatible tanto con pantallas ePaper de **24 pines** como de **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de alimentación, CI de carga integrado, función NFC y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos de ePaper de bajo consumo, como señalización digital, etiquetas electrónicas y paneles de información portátiles.
+Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compatible con pantallas ePaper de **24 pines** y **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de alimentación, CI de carga integrado y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos ePaper de bajo consumo, como señalización digital, etiquetas electrónicas y paneles de información portátiles.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### Características
 
 - **Impulsada por XIAO nRF52840 Plus:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible.
-- **Compatibilidad versátil de pantalla:** Compatible con una amplia gama de pantallas ePaper, admitiendo interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
-- **Conector de batería con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro de consumo.
+- **Compatibilidad versátil de pantallas:** Compatible con una amplia gama de pantallas ePaper, admitiendo interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
+- **Conector BAT con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
 - **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para acelerar proyectos y funciones personalizables.
 
 ### Especificaciones
@@ -127,45 +129,40 @@ Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compati
             <td>Encendido/Apagado de alimentación de la batería</td>
         </tr>
         <tr>
-            <th>Botón</th>
-            <td>1x Botón de reinicio<br />3x Botón de usuario</td>
-            <td>/</td>
-            <td>/</td>
-        </tr>
-        <tr>
             <th>Puerto de extensión IO</th>
             <td>/</td>
             <td>conexión de otros controladores</td>
             <td>conexión de sensores adicionales</td>
         </tr>
+        <tr>
+            <th>Puerto de extensión IO</th>
+            <td>/</td>
+            <td>connection of others controller</td>
+            <td>connection of additional sensors</td>
+        </tr>
     </tbody>
 </table>
 
+
 ### Aplicaciones
 
-- **Panel de control para hogar inteligente**: Muestra información en tiempo real como actualizaciones del clima, eventos del calendario y notificaciones de varios dispositivos del hogar inteligente.
+- **Panel de control para hogar inteligente**: Muestra información en tiempo real como actualizaciones meteorológicas, eventos del calendario y notificaciones de varios dispositivos del hogar inteligente.
 - **Monitorización de energía**: Muestra datos de consumo energético de contadores inteligentes, ayudando a los propietarios a seguir y gestionar su uso de energía de forma más eficiente.
 - **Alertas de seguridad**: Muestra alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
-- **Pantalla de termostato inteligente**: Muestra los niveles de temperatura y humedad, así como los ajustes de control de tu termostato inteligente.
+- **Pantalla de termostato inteligente**: Muestra niveles de temperatura y humedad, así como los ajustes de control de tu termostato inteligente.
 - **Marco de fotos digital**: Crea un marco de fotos digital con WiFi que pueda mostrar imágenes desde tu red de hogar inteligente.
 
 ## Descripción general del hardware
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
-<!-- :::tip
-
-This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC functionality.
-
-::: -->
-
-### ePaper compatible
+### Pantallas ePaper compatibles
 
 #### Conector de 24 pines
 
 - [Pantalla ePaper de 1,54 pulgadas - Monocromo 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Pantalla ePaper de 2,13 pulgadas - Flexible monocromo 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [Pantalla ePaper de 2,13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [Pantalla ePaper de 2,13 pulgadas - Monocromo 122x250](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)
+- [Pantalla ePaper de 2,13 pulgadas - Cuádruple color 122x250](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
 - [Pantalla ePaper de 2,9 pulgadas - Monocromo 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
 - [Pantalla ePaper de 2,9 pulgadas - Cuádruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
 - [Pantalla ePaper de 4,2 pulgadas - Monocromo 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
@@ -174,14 +171,14 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 - [Pantalla ePaper de 7,5 pulgadas - Monocromo 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [Pantalla ePaper de 7,5 pulgadas - Tricolor 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Al utilizar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
+Al usar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
 
-- Para pantallas ePaper de 24 pines → ajusta el jumper a 24 Pin
+- Para pantallas ePaper de 24 pines → ajusta el jumper a 24 pines
 
-⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Comprueba siempre la posición del jumper antes de encender.
+⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Verifica siempre la posición del jumper antes de encender.
 
 :::
 
@@ -189,92 +186,22 @@ Al utilizar la XIAO ePaper Display Board, asegúrate de configurar el jumper seg
 
 - [ePaper Spectra6 de 7,3 pulgadas](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
-:::tip
-Al utilizar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
-- Para pantallas ePaper de 50 pines → ajusta el jumper a 50 Pin
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.png" style={{width:800, height:'auto'}}/></div>
 
-⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Comprueba siempre la posición del jumper antes de encender.
+:::tip
+Al usar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
+
+- Para pantallas ePaper de 50 pines → ajusta el jumper a 50 pines
+
+⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Verifica siempre la posición del jumper antes de encender.
 
 :::
 
-## Descripción general del software
+### Botones de usuario
 
-### Instalar la biblioteca Seeed GFX
+La EN04 incorpora tres botones programables por el usuario que pueden utilizarse para diversas funciones de control. Todos los botones son activos en bajo: leen LOW cuando se presionan y HIGH cuando se sueltan.
 
-:::tip
-Esta biblioteca tiene la misma función que la biblioteca TFT y no es compatible con ella. Si has instalado la biblioteca TFT u otras bibliotecas de visualización similares, desinstálalas primero.
-:::
-
-Descarga e instala la biblioteca Seeed GFX desde GitHub.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
-
-<div align="center">
-<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Haz clic aquí para descargar</button></p>
-</a>
-</div>
-
-Desplázate hacia abajo y abre este enlace.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
-
-Selecciona tu tipo de dispositivo y se generará algo de código. Copia ese código y lo usaremos más tarde.
-
-:::tip
-Si haces una elección incorrecta, la pantalla no mostrará nada.
-
-Así que asegúrate del tipo de tus dispositivos o componentes.
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/6.jpg" style={{width:800, height:'auto'}}/></div>
-
-Después de descargar la biblioteca, ve a **Sketch** -> **Include Library** -> **Add .ZIP Library** y selecciona la biblioteca descargada.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
-
-Hay 4 ejemplos básicos, abre un ejemplo básico que te guste:
-
-1. Bitmap: Muestra una imagen de mapa de bits.
-2. Clock: Muestra un reloj.
-3. Clock_digital: Muestra un reloj digital.
-4. Shape: Muestra palabras y formas de diferentes tamaños.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
-
-## Primeros pasos
-
-Aquí usamos una pantalla de 7,5 pulgadas como ejemplo. Los pasos son los mismos para todas las pantallas de 24 pines; la única diferencia es seleccionar el tamaño de pantalla adecuado en el controlador.
-
-Crea un **nuevo archivo "driver.h"** y pega ese código en él. El código debería ser como:
-
-```cpp
-#define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
-#define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
-```
-
-Después de eso, ve a **Tools** -> **Board** -> **Seeed XIAO nRF52840 Plus** y **Tools** -> **Port** -> **Select the port your board is connected to**. Luego haz clic en **Upload** para cargar el código.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
-
-¡Ahora verás la respuesta en tu pantalla de epaper! A continuación se muestran los resultados de los ejemplos de Helloworld. (Si no aparece nada, haz clic en el botón de reinicio)
-
-:::tip
-⚠️ Nota: Orientación del cable de ePaper
-Al conectar la pantalla ePaper a la XIAO ePaper Display Board, asegúrate de que el cable FPC esté insertado en la dirección correcta.
-
-⚠️ ¡No inviertas el conector! Insertar el cable al revés puede hacer que el ePaper no muestre nada o incluso dañar la pantalla/placa.
-La imagen siguiente muestra la conexión correcta:
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.jpg" style={{width:500, height:'auto'}}/></div>
-
-### Botones de usuario en XIAO ePaper Display Board(nRF52840) - EN04
-
-La EN04 incluye tres botones programables por el usuario que se pueden utilizar para varios propósitos de control. Esta sección muestra cómo leer los estados de los botones y responder a las pulsaciones usando Arduino.
-
-En la EN04, los tres botones están conectados a la XIAO nRF52840 Plus:
+En la EN04, los tres botones están conectados al XIAO nRF52840 Plus de la siguiente manera:
 
 <table>
   <thead>
@@ -286,87 +213,136 @@ En la EN04, los tres botones están conectados a la XIAO nRF52840 Plus:
   </thead>
   <tbody>
     <tr>
-      <th>GPIO2_D1/A1</th>
-      <th>GPIO3_D2/A2</th>
-      <th>GPIO5_D4/A4</th>
+      <td>D1 / A1</td>
+      <td>D2 / A2</td>
+      <td>D4 / A4</td>
     </tr>
   </tbody>
 </table>
 
+:::note
+Los botones de usuario son programables y pueden configurarse para diversas funciones, como cambio de página, selección de modo o activación de acciones específicas en tu proyecto ePaper.
+:::
 
-Todos los botones son activos en bajo, lo que significa que leen LOW cuando se presionan y HIGH cuando se sueltan.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:500, height:'auto'}}/></div>
 
-Ejemplo básico de lectura de botones
+### Conector de batería
 
-Este ejemplo muestra cómo detectar pulsaciones de botones e imprimir mensajes en el monitor serie.
+La EN04 está equipada con un conector de batería JST de 2,0 mm y un CI de carga integrado, lo que la hace adecuada para proyectos ePaper de bajo consumo alimentados por batería.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:600, height:'auto'}}/></div>
 
-<br></br>
+## Introducción con Arduino
+
+### Instalar la librería Seeed GFX2
+
+Todos los ejemplos de ePaper para la EN04 se basan en la librería de Arduino **Seeed_GFX2**, que es compatible con todas las pantallas ePaper enumeradas en la sección [Supported ePaper Displays](#Pantallas-ePaper-compatibles). Los ejemplos siguientes utilizan la **pantalla ePaper monocroma de 7,5 pulgadas (800 x 480)** como ejemplo.
+
+**Paso 1. Descargar la librería Seeed_GFX2**
+
+Visita el [repositorio de Seeed_GFX2 en GitHub](https://github.com/Seeed-Studio/Seeed_GFX2), haz clic en el botón verde **Code** y selecciona **Download ZIP** para guardar la librería en tu ordenador.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/14.png" style={{width:800, height:'auto'}}/></div>
+
+**Paso 2. Añadir la librería al IDE de Arduino**
+
+Abre el IDE de Arduino, navega a **Sketch → Include Library → Add .ZIP Library...** y selecciona el archivo ZIP que acabas de descargar.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/15.png" style={{width:800, height:'auto'}}/></div>
+
+### Configurar y grabar el programa
+
+1. Navega a **File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → nRF52840 Series → XIAO ePaper Display Board - EN04 → 7.5-inch ePaper - Monochrome 800x480 → HelloWorld**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:300, height:'auto'}}/></div>
+
+2. En **Tools → Board**, selecciona **Seeed XIAO nRF52840 Plus**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:800, height:'auto'}}/></div>
+
+3. Conecta la placa mediante USB Type-C, selecciona el puerto serie correspondiente y haz clic en **Upload**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:800, height:'auto'}}/></div>
+
+:::note
+Las rutas de ejemplo anteriores usan la pantalla monocroma de 7,5 pulgadas como ejemplo. Para otras pantallas compatibles, simplemente elige la carpeta que coincida con el modelo de tu pantalla en **XIAO ePaper Display Board - EN04**: cada pantalla se entrega con ejemplos de **HelloWorld**, **Bitmap** y **Custom_Demo** (excepto la Tri-Color de 7,5 pulgadas, que se entrega con **HelloWorld** y **Custom_Demo**).
+:::
+
+## Descripción general del software
+
+#### Ejemplo básico de lectura de botones
+
+Este ejemplo muestra cómo detectar las pulsaciones de los tres botones e imprimir mensajes en el monitor serie.
 
 ```cpp
-// Define button pin (GPIO2 corresponds to Arduino digital pin 2)
-const int KEY_PIN = 2;
+#include <Adafruit_TinyUSB.h> // Required for Serial on the Seeed nRF52 Boards core
+
+// Button pin definitions (verified on hardware)
+// KEY1 = D1 / A1 / P0.03
+// KEY2 = D2 / A2 / P0.28
+// KEY3 = D4 / A4 / P0.04
+const int KEY1_PIN = 1;
+const int KEY2_PIN = 2;
+const int KEY3_PIN = 4;
 
 void setup() {
-  // Initialize serial port (baud rate 9600, nRF52840 compatible with default Serial)
+  // Initialize serial port
   Serial.begin(9600);
-  // Wait for serial port initialization to complete (for nRF52840 Bluetooth module serial buffer)
   while (!Serial) delay(10);
 
-  // Configure button pin as input mode with internal pull-up resistor enabled
+  // Configure all button pins as input with internal pull-up
   // Pin is HIGH when not pressed, LOW when pressed
-  pinMode(KEY_PIN, INPUT_PULLUP);
+  pinMode(KEY1_PIN, INPUT_PULLUP);
+  pinMode(KEY2_PIN, INPUT_PULLUP);
+  pinMode(KEY3_PIN, INPUT_PULLUP);
 
-  Serial.println("nRF52840 Button Detection Program Started");
-  Serial.println("Press the button connected to GPIO2 to see output...");
+  Serial.println("nRF52840 Three-Button Detection Program Started");
+  Serial.println("Press KEY1 / KEY2 / KEY3 to see output...");
+}
+
+// Helper function: check if a button is pressed (with debounce)
+bool isButtonPressed(int pin) {
+  if (digitalRead(pin) == LOW) {
+    delay(50); // debounce
+    if (digitalRead(pin) == LOW) {
+      // Wait for release to prevent repeated triggers
+      while (digitalRead(pin) == LOW) {
+        delay(10);
+      }
+      return true;
+    }
+  }
+  return false;
 }
 
 void loop() {
-  // Read button state (INPUT_PULLUP mode: LOW = pressed, HIGH = not pressed)
-  int keyState = digitalRead(KEY_PIN);
-
-  // Detect if button is pressed (low level)
-  if (keyState == LOW) {
-    // 50ms delay for debounce handling (avoids false triggers from mechanical button bounce)
-    delay(50);
-    // Read state again to confirm (ensure stable press)
-    if (digitalRead(KEY_PIN) == LOW) {
-      // Print specified content via serial port
-      Serial.println("Hello. This is key1");
-
-      // Wait for button release (prevent repeated printing during long press)
-      while (digitalRead(KEY_PIN) == LOW) {
-        delay(10); // Short delay to reduce CPU usage
-      }
-    }
+  if (isButtonPressed(KEY1_PIN)) {
+    Serial.println("Hello. This is KEY1");
+  }
+  if (isButtonPressed(KEY2_PIN)) {
+    Serial.println("Hello. This is KEY2");
+  }
+  if (isButtonPressed(KEY3_PIN)) {
+    Serial.println("Hello. This is KEY3");
   }
 
-  // Short delay in main loop for performance optimization
   delay(10);
 }
 ```
 
-### Batería de usuario en XIAO ePaper Display Board(nRF52840) - EN04
+#### Ejemplo de lectura de voltaje de batería
 
-Cuando funcione con alimentación por batería:
-
-- El dispositivo entrará automáticamente en modo de bajo consumo entre las actualizaciones
-
-- La duración de la batería depende de la frecuencia de actualización (normalmente 3 meses con una carga completa y la configuración predeterminada)
-
-- El dispositivo mostrará un icono de batería baja en la esquina superior derecha cuando el nivel de batería sea inferior al 20%
+Este ejemplo muestra cómo leer el voltaje de la batería e imprimirlo en el monitor serie.
 
 :::tip
-Si quieres escribir algo de código por tu cuenta para leer el voltaje de la batería, será más preciso añadir un retardo de 10 ms antes de la función analogRead().
+Si quieres escribir tu propio código para leer el voltaje de la batería, será más preciso añadir un retardo de 10 ms antes de la función analogRead().
 :::
 
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.jpg" style={{width:600, height:'auto'}}/></div>
-
 ```cpp
-#define VOLTAGE_PIN A0 //GPIO1
-#define ADC_ENABLE_PIN A5 //GPIO6
+#include <Adafruit_TinyUSB.h> // Required for Serial on the Seeed nRF52 Boards core
+
+#define VOLTAGE_PIN A0 //P0.02
+#define ADC_ENABLE_PIN A5 //P0.05
 
 void setup() {
   Serial.begin(115200);
@@ -391,7 +367,37 @@ void loop() {
 }
 ```
 
+## Solución de problemas
 
+**P1: La pantalla ePaper no muestra nada después de encenderla.**
+
+- **El kit DIY no tiene firmware preinstalado.** El XIAO EN04 DIY Kit no se entrega con firmware de ePaper; una pantalla en blanco o negra al primer encendido es normal.
+- **Comprueba la orientación del cable FPC.** Asegúrate de que el cable FPC de la ePaper esté insertado en la dirección correcta. Invertir el conector puede causar una pantalla en blanco y puede dañar la pantalla.
+- **Pulsa el botón RESET.** Después de cargar el firmware o conectar la alimentación, pulsa una vez el botón de reset para forzar una actualización de la pantalla.
+
+**P2: La pantalla muestra contenido ilegible o una actualización parcial.**
+
+- **Verifica la configuración del jumper.** La EN04 es compatible tanto con pantallas ePaper de 24 pines como de 50 pines; el jumper debe coincidir con el tipo de pantalla. Ajústalo a 24 Pin para pantallas de 24 pines y a 50 Pin para pantallas de 50 pines.
+- **Confirma la selección del modelo de pantalla.** En tu ejemplo de Arduino, asegúrate de haber seleccionado exactamente el modelo de pantalla (tamaño y tipo de color). Elegir el modelo incorrecto provocará un renderizado incorrecto.
+- **Espera a una actualización completa.** Las pantallas ePaper utilizan un ciclo de actualización completo; los efectos parciales o de ghosting durante la actualización son normales y desaparecerán una vez que el ciclo se complete.
+
+**P3: La placa no se enciende cuando se usa la batería.**
+
+- **Comprueba el interruptor de encendido.** Desliza el interruptor de alimentación de la batería a la posición ON; la placa no tomará energía de la batería cuando el interruptor esté apagado.
+- **Verifica la polaridad del conector JST.** Asegúrate de que el conector de batería JST de 2,0 mm esté conectado con la polaridad correcta. Invertir la polaridad de la batería puede dañar el hardware. Verifica las marcas +/− del conector antes de conectar la batería.
+- **Carga la batería.** Si la batería está completamente descargada, la placa puede no arrancar. Conecta USB Type-C para cargar la batería e inténtalo de nuevo.
+
+**P4: Seeedash Firmware Flasher no puede detectar la placa.**
+
+- **Pulsa el botón RESET.** Con la placa conectada por USB, pulsa y suelta el botón RESET para volver a enumerar el puerto USB y luego intenta detectarla de nuevo.
+- **Usa un cable USB con capacidad de datos.** Algunos cables USB solo proporcionan alimentación y no admiten transferencia de datos. Cambia a un cable de datos que sepas que funciona correctamente.
+- **Comprueba el puerto USB.** Prueba con otro puerto USB de tu ordenador; algunos puertos pueden tener problemas de alimentación o de controladores.
+
+**P5: La carga desde Arduino IDE falla.**
+
+- **Selecciona la placa correcta.** Ve a **Tools** → **Board** y asegúrate de que **Seeed XIAO nRF52840 Plus** esté seleccionada. No elijas otras variantes de placas XIAO.
+- **Selecciona el puerto correcto.** Ve a **Tools** → **Port** y elige el puerto serie correspondiente a tu placa. Si no aparece ningún puerto, comprueba tu cable USB y la conexión.
+- **Entra en modo bootloader si es necesario.** Si la carga falla de forma constante, pulsa dos veces el botón RESET para entrar en modo bootloader, luego vuelve a seleccionar el puerto e intenta cargar de nuevo.
 
 ## Recursos
 - **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
@@ -399,7 +405,7 @@ void loop() {
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

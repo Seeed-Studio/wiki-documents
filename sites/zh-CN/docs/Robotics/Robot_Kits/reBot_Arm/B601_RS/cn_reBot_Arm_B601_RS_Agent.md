@@ -22,9 +22,6 @@ updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/cn/wrc_demo_tutorial/
 ---
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
-
-<RebotRsDocNav />
 
 # reBot Arm B601-RS 具身 Agent 设计框架
 
@@ -37,6 +34,22 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <img src="https://img.shields.io/badge/Camera-RGB--D-green.svg" alt="Camera" />
   <img src="https://img.shields.io/badge/Brain-VLM-purple.svg" alt="VLM Brain" />
 </p>
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1057521963559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
   <strong>环境配置 → 模型下载 → LLM 切换 → 手眼标定 → demo 运行 → 故障排查</strong>
