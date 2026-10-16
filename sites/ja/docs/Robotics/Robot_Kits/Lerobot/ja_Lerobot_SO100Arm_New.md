@@ -1292,6 +1292,26 @@ rerun のバージョンをダウングレードすることで、この問題�
 
 </details>
 
+<details className="content-details">
+
+<summary>カメラマウントの取り付けと使用</summary>
+
+**カメラマウントの取り付け**
+
+カメラの位置を固定して、クリーンなデータ収集を実現します。多角度の自由調整に対応し、俯瞰 + 手首、俯瞰 + 側面などのビューに対応します。一般的な USB カメラや、D435i、D405、Gemini 2 などの深度カメラに対応し、SO-ARM101 や reBot などのロボットアームにも対応します。データ収集実験ボックスと組み合わせて使用でき、ダウンロードしたデータセットとモデルをそのまま再利用できます。
+
+<div class="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/2r3tvA7oJ_c" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10&reBot-B601-p-7003.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+</a></div>
+
+</details>
+
 </section>
 
 ## データセットの記録

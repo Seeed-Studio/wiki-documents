@@ -1292,6 +1292,26 @@ You can downgrade the rerun version to resolve the issue.
 
 </details>
 
+<details className="content-details">
+
+<summary>Camera Mount Installation and Usage</summary>
+
+**Camera Mount Installation**
+
+Fix the camera position for clean data collection. It supports free multi-angle adjustment, including top-down + wrist and top-down + side views. It works with regular USB cameras and depth cameras such as D435i, D405, and Gemini 2. Compatible with SO-ARM101 and reBot robotic arms. It can be used with the data collection experiment box, and you can reuse downloaded datasets and models out of the box.
+
+<div class="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/2r3tvA7oJ_c" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10&reBot-B601-p-7003.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Buy Now 🖱️</font></span></strong>
+</a></div>
+
+</details>
+
 </section>
 
 ## Record Dataset
