@@ -27,7 +27,7 @@ url: https://wiki.seeedstudio.com/cn/jetson_fisheye_surround_view_demo/
 
 ## 介绍
 
-本演示在 **NVIDIA Jetson AGX Thor** 上运行一个**四摄像头鱼眼环视**流水线。底盘周围的四个摄像头经过标定并拼接为实时的**俯视图（BEV）**。占用图提示底盘运动，YOLO-World 用于定位抓取目标，VLM 用于生成场景描述。
+此演示在 **NVIDIA Jetson AGX Thor** 上运行一个 **四摄像头鱼眼环视** 流水线。底盘周围的四个摄像头经过标定并拼接为实时 **鸟瞰图（BEV）**。占用图提示底盘运动，YOLO-World 用于定位抓取目标，VLM 用于对场景进行描述。
 
 {/* <div align="center">
   <img width={900}
@@ -42,13 +42,13 @@ url: https://wiki.seeedstudio.com/cn/jetson_fisheye_surround_view_demo/
 
 - **图像顶部** = 车辆前方
 - **图像中心** = 车辆车身
-- 摄像头朝向**前、后、左、右**
+- 摄像头朝向 **前、后、左、右**
 
 :::note
-YOLO 回答**目标在哪里**。VLM 回答**场景是什么样**。占用图是二维地面提示，而不是 LiDAR 地图。
+YOLO 回答 **目标在哪里**。VLM 回答 **场景是什么样的**。占用图是二维地面提示，而不是 LiDAR 地图。
 :::
 
-本演示已在 **reComputer Robotics J601** 上验证。
+此演示已在 **reComputer Robotics J601** 上验证。
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
@@ -90,7 +90,7 @@ YOLO 回答**目标在哪里**。VLM 回答**场景是什么样**。占用图是
 ## 关键特性
 
 - 使用 CUDA OpenCV 进行 GPU 拼接
-- 通过网页进行内参、外参和拼接缝标定
+- 通过 Web 进行内参、外参和拼接缝标定
 - 在一个共享 BEV 上运行占用图、YOLO-World 和 VLM
 - 已在 **Jetson AGX Thor** / **reComputer Robotics J601** 上验证
 
@@ -100,34 +100,34 @@ YOLO 回答**目标在哪里**。VLM 回答**场景是什么样**。占用图是
 
 - **reComputer Robotics J601**（Jetson AGX Thor）
 - **四个 [Sensing SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html) GMSL2 鱼眼摄像头**
-- **一根 [Mini-Fakra 四合一线缆](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)**，让四个摄像头共享一个 GMSL 端口
+- **一根 [Mini-Fakra 4 合 1 线缆](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)**，使四个摄像头共享一个 GMSL 端口
 - 一个显示器或远程桌面会话
 - 如果从另一台电脑打开标定页面，需要网络访问
 
 可选：
 
-- 一个移动底盘，如果你想使用占用图进行运动辅助
-- 一台机械臂，如果你想使用 YOLO 目标位置进行抓取辅助
+- 一个移动底盘，如果你希望使用占用图进行运动辅助
+- 一台机械臂，如果你希望使用 YOLO 目标位置进行抓取辅助
 
 ### 软件
 
 - 适用于 J601 的、带 GMSL 驱动支持的 JetPack
 - 支持 CUDA 的 OpenCV，用于实时拼接
-- 用于网页标定 UI 的 Python 环境
+- 用于 Web 标定 UI 的 Python 环境
 - YOLO-World 和可选 VLM 模型依赖
 
 ## 硬件连接
 
-在标定前，将四个 Sensing GMSL2 鱼眼摄像头连接到 **reComputer Robotics J601** 上的**一个 Mini-Fakra GMSL 端口**。J601 有两个 Mini-Fakra 接口（最多支持八个 GMSL2 摄像头）。本演示使用**一个 GMSL 端口**和一根四合一 Mini-Fakra 线缆。
+在标定前，将四个 Sensing GMSL2 鱼眼摄像头连接到 **reComputer Robotics J601** 上的 **一个 Mini-Fakra GMSL 端口**。J601 有两个 Mini-Fakra 接口（最多支持八个 GMSL2 摄像头）。本演示使用 **一个 GMSL 端口** 和一根 4 合 1 Mini-Fakra 线缆。
 
 1. 通过 XT30 直流输入为 J601 板供电。
 2. 如果你在使用 GMSL 扩展板，先将其插在摄像头扩展排针上。
-3. 将 Mini-Fakra 四合一线缆插入**一个 Mini-Fakra GMSL 端口**。
+3. 将 Mini-Fakra 4 合 1 线缆插入 **一个 Mini-Fakra GMSL 端口**。
 4. 将四个 Sensing 鱼眼摄像头连接到该线缆的四个 Fakra 端。
-5. 将摄像头安装在底盘周围，使其朝向**前、后、左、右**。
-6. 如需在板子上观看实时 BEV 窗口，可选连接一个 HDMI 显示器。
+5. 将摄像头安装在底盘周围，使其朝向 **前、后、左、右**。
+6. 如需在板子上观看实时 BEV 窗口，可选连接 HDMI 显示器。
 
-关于在 J601 上启用 GMSL，请参阅 [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j601_interfaces_usage/)。
+关于在 J601 上启用 GMSL，请参阅 [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/cn/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)。
 
 <div align="center">
   <img width={900}
@@ -138,18 +138,18 @@ YOLO 回答**目标在哪里**。VLM 回答**场景是什么样**。占用图是
 摄像头连接完成后，确认 `/dev/video*` 节点以及在 `config/camera_profile.json` 中的映射。参见 [Step 1. Check Camera Mapping](#step-1-check-camera-mapping)。
 :::
 
-## 安装与设置
+## 安装与配置
 
-### 步骤 1. 克隆仓库
+### Step 1. Clone the Repository
 
 ```bash
 git clone https://github.com/xbs0325/j601-surround-demo.git
 cd j601-surround-demo
 ```
 
-### 步骤 2. 构建 CUDA OpenCV
+### Step 2. Build CUDA OpenCV
 
-在运行实时环视演示之前，确保已安装支持 CUDA 的 OpenCV。
+在运行实时环视演示之前，请确保已安装支持 CUDA 的 OpenCV。
 
 ```bash
 cd ~/j601-surround-demo
@@ -158,21 +158,21 @@ source scripts/env_opencv_cuda.sh
 python3 -c "import cv2; print(cv2.__version__, cv2.cuda.getCudaEnabledDeviceCount())"
 ```
 
-如果设置正确，CUDA 设备数量应为 `1`。
+如果配置正确，CUDA 设备数量应为 `1`。
 
-### 步骤 3. 安装网页标定依赖
+### Step 3. Install Web Calibration Dependencies
 
-标定网页 UI 依赖于 `aiortc` 和相关 Python 包。
+标定 Web UI 依赖于 `aiortc` 和相关 Python 包。
 
 ```bash
 ./scripts/install_web_deps.sh
 ```
 
 :::tip
-在 Ubuntu 24.04 上，不要将 `pip3 install -r requirements.txt` 直接安装到系统 Python 中。该项目将拼接环境与感知模型环境分开。
+在 Ubuntu 24.04 上，不要对系统 Python 直接运行 `pip3 install -r requirements.txt`。本项目将拼接环境与感知模型环境分开。
 :::
 
-### 步骤 4. 安装感知依赖
+### Step 4. Install Perception Dependencies
 
 要启用 YOLO-World 抓取辅助和 VLM 场景理解，请运行：
 
@@ -185,9 +185,9 @@ python3 -c "import cv2; print(cv2.__version__, cv2.cuda.getCudaEnabledDeviceCoun
 
 ## 使用方法
 
-先对四个摄像头进行标定，然后再启动实时环视演示。**不要**同时运行两者；它们需要独占摄像头访问。
+先对四个摄像头进行标定，然后再启动实时环视演示。请 **不要** 同时运行两者；它们需要独占摄像头访问。
 
-### 步骤 1. 检查摄像头映射
+### Step 1. Check Camera Mapping
 
 摄像头设备映射定义在：
 
@@ -202,9 +202,9 @@ config/camera_profile.json
 - `left`: `/dev/video3`
 - `right`: `/dev/video1`
 
-在标定前确认这些设备节点。演示运行后，你可以通过遮挡**前**摄像头进行再次确认：BEV 图像的**顶部**应变暗。如果前后颠倒，请在配置文件中更改设备映射。不要为此编辑标定结果文件。
+在标定前确认这些设备节点。演示运行后，你可以通过遮挡 **前** 摄像头进行再次确认：BEV 图像的 **顶部** 应该变暗。如果前后颠倒，请在配置文件中更改设备映射。不要为此修改标定结果文件。
 
-### 步骤 2. 打开网页标定 UI
+### Step 2. Open the Calibration Web UI
 
 启动标定服务：
 
@@ -238,7 +238,7 @@ http://<board-ip>:8787/
 
 将棋盘格放在两个摄像头视野的重叠区域。当两个视野都检测到棋盘格并显示就绪状态时，系统即可优化该拼接缝。
 
-### 步骤 3. 运行演示
+### Step 3. Run the Demo
 
 标定完成后，启动环视演示：
 
@@ -300,27 +300,27 @@ http://<board-ip>:8787/
 
 因此，YOLO 可以报告近似的二维目标位置，例如方向、前向距离和横向偏移，以辅助抓取。
 
-结果仍然是**地平面近似**。它不是 6 自由度抓取位姿，不应被视为精确操作的真实标注。
+结果仍然是 **地面平面近似**。它不是 6 自由度抓取位姿，不应被视为精确操作的真实值。
 
 ## 注意事项与限制
 
-- 本演示提供的是**感知辅助**。它**不会**向底盘或机械臂发送控制指令
-- **YOLO** 仅用于定位目标以辅助抓取；它本身不会闭合抓取控制环
-- **VLM** 输出用于**场景理解**，而不是用于坐标
-- 占用图是**二维地面提示**，不是 LiDAR SLAM 地图
-- 实时拼接面向**支持 CUDA 的 Jetson AGX Thor**
-- 仅 CPU 模式适合用于调试，但不推荐用于实时部署
+- 本演示提供的是 **感知辅助**，**不会** 向底盘或机械臂发送控制指令
+- **YOLO** 仅用于定位目标以辅助抓取，本身不会闭合抓取控制环
+- **VLM** 输出用于 **场景理解**，而不是用于坐标
+- 占用图是 **二维地面提示**，不是 LiDAR SLAM 地图
+- 实时拼接面向 **支持 CUDA 的 Jetson AGX Thor**
+- 仅 CPU 模式适合用于调试，但不推荐用于在线部署
 
 ## 资源
 
 - [演示视频](https://www.youtube.com/watch?v=o0NTeeLV4Vk)
-- [reComputer Robotics J601 入门指南](https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/)
-- [Robotics J601 硬件接口使用](https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j601_interfaces_usage/)
+- [reComputer Robotics J601 入门指南](https://wiki.seeedstudio.com/cn/jetson/recomputer_robotics_j601/getting_started/)
+- [Robotics J601 硬件接口使用](https://wiki.seeedstudio.com/cn/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)
 - [GitHub](https://github.com/xbs0325/j601-surround-demo)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
