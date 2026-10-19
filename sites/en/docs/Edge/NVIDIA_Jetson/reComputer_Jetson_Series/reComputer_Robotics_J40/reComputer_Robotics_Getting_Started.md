@@ -11,10 +11,10 @@ image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomp
 slug: /recomputer_robotics_j401_getting_started
 sku: 100071398, 114110310, 100026552
 last_update:
-  date: 08/06/2025
+  date: 10/19/2026
   author: Zibo
 createdAt: '2025-08-06'
-updatedAt: '2026-09-28'
+updatedAt: '2026-10-19'
 url: https://wiki.seeedstudio.com/recomputer_robotics_j401_getting_started/
 ---
 <div style={{ textAlign: "justify" }}>
@@ -248,26 +248,26 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBbvOytYiQ5TpwiSraaD3npAWKrVW26hNoB5R1Kk8nOURk">Download</a></td>
-      <td>A03A986E94177FCC4841B8FC675CE11D</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBwi3AQXJiaTZiPQaKocDSkAciLsok9znKGnAPczuZ_IfY?e=S2v5QV">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>c63d1219531245abecc7bbdcafc73d34<br />f75547454c7af85de40f08396a87e5ee</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCumgxDQ7-SQ4c-zNL1Lv6fAXSGGswfK5E2RX-AQGQt_Hc">Download</a></td>
-      <td>FA6D75598A1B68CB98BA46378A43AE35</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB8NF028_DESZJ9WwSg2Q34AVCNXeZFkwJi8pbvCOcX4cI?e=Zahpfm">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>5d1f3cd28eb44ca60132c87ccce5acaf<br />806ee945b486df9061a34de73fbb582b</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAcA60i9AaiS7uPpL0EDCEYAcP_CYT1i_Uo6IXvO8hpOSQ">Download</a></td>
-      <td>021ADA2CFD34E9C876F57E50C3448B3C</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAakIBc6l2wS7qKAy-1ZeHPAbTtT8XLYaIgITvBGy8vezo?e=mPygXS">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>e7f0c8e6b578d411f81122879f92c766<br />6adfada5ed493a4cc458dc169ca8c1b7</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB-xhKB8WtjT7NNVuoLnQAGAcHwWMrE39VgAwN6zHG7E1Q">Download</a></td>
-      <td>EEC7CA6A46487F307B77A9AA24FE4B91</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBnWlTaU6nIQLDOcM2KRQM6AQ6A-ODC8DnWFKRSfW8vRmc?e=1AAVH8">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>b08cbdad8ab6e50222146d3175a9d262<br />7d499bf1d67cfaf69cc737b5bfa9e33a</td>
     </tr>
     <tr>
       <td rowSpan={4}>7.2</td>
