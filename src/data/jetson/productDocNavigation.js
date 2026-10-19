@@ -35,3 +35,26 @@ export const ruggedJ401DocNav = {
     activePaths: ['/jetson/recomputer_rugged_j401/industrial_vision/'],
   },
 };
+
+const ROBOTICS_J601_GETTING_STARTED = '/jetson/recomputer_robotics_j601/getting_started/';
+
+export const roboticsJ601DocNav = {
+  ariaLabel: 'reComputer Robotics J601 documentation',
+  items: [
+    {
+      to: ROBOTICS_J601_GETTING_STARTED,
+      label: 'Quick Start',
+      hint: 'Overview & flash',
+    },
+    {
+      to: '/jetson/recomputer_robotics_j601/hardware_and_interface_usage/',
+      label: 'Hardware & I/O',
+      hint: 'Interfaces & expansion',
+    },
+  ],
+  application: {
+    to: `${ROBOTICS_J601_GETTING_STARTED}#applications`,
+    label: 'Application',
+    hint: 'Perception & sensor fusion',
+  },
+};
