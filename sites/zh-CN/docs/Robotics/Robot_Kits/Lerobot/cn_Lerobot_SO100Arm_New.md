@@ -1236,6 +1236,26 @@ Camera #0:
 :::
 
 </details>
+
+<details className="content-details">
+
+<summary>摄像头支架安装与使用</summary>
+
+【摄像头支架安装】
+
+固定摄像头位置，让数据干净采集，支持多角度自由调节，支持俯视 + 腕部、俯视 + 侧视等视角，支持普通 USB 相机，深度相机 D435i、D405、Gemini 2 等深度相机的使用，支持 SO-ARM101 和 reBot 等机械臂，可搭配数采实验盒进行使用，并复用下载数据集和模型，开箱使用。
+
+<div class="video-container">
+<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1HzYs6bEdH&p=1&autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://e.tb.cn/h.jbKAUs3BmOBVLXr?tk=KXmMTHMHwek" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+</a></div>
+
+</details>
+
 </section>
 
 ## 数据集制作与采集

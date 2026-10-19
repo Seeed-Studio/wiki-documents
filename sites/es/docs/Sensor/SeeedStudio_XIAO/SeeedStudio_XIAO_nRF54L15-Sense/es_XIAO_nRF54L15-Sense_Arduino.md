@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_6.webp
 slug: /xiao_nrf54l15_sense_arduino
 last_update:
-  date: 4/22/2026
+  date: 10/15/2026
   author: Zeller
 createdAt: '2025-04-22'
 updatedAt: '2026-04-24'
@@ -23,11 +23,11 @@ Un agradecimiento especial al desarrollador **[lolren](https://github.com/lolren
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/lolren/nrf54-arduino-core" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Repositorio de lolren</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> repositorio de lolren</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-## Introducción
+## Primeros pasos
 
 ### Preparación de hardware
 
@@ -64,7 +64,7 @@ Antes de comenzar, prepara el hardware XIAO nRF54L15 o XIAO nRF54L15 Sense.
 Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-- **Paso 1.** Descarga e instala la versión estable de Arduino IDE de acuerdo con tu sistema operativo.
+- **Paso 1.** Descarga e instala la versión estable del Arduino IDE de acuerdo con tu sistema operativo.
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
       <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
@@ -116,7 +116,7 @@ Los pines digitales son interfaces del MCU para leer y escribir niveles lógicos
 
 ### Preparación de hardware
 
-Necesitas preparar el XIAO nRF54L15 Sense y los dispositivos Grove.
+Necesitas preparar el XIAO nRF54L15 Sense y dispositivos Grove.
 
 <table align="center">
   <tr>
@@ -183,7 +183,7 @@ Conecta el Grove – Chainable RGB LED al Pin 0 del Seeed Studio Grove Base for 
 
 ## UART
 
-UART es un protocolo de comunicación asíncrono half-dúplex, comúnmente utilizado para depuración de dispositivos, salida de registros y transmisión de datos. El XIAO nRF54L15 proporciona un conjunto de pines UART. Esta sección demuestra el uso de UART mediante la impresión de datos por serie.
+UART es un protocolo de comunicación asíncrono half-dúplex, comúnmente utilizado para depuración de dispositivos, salida de registros y transmisión de datos. El XIAO nRF54L15 proporciona un conjunto de pines UART. Esta sección demuestra el uso de UART mediante la impresión de datos serie.
 
 ### Preparación de hardware
 
@@ -192,7 +192,7 @@ Necesitas preparar el XIAO nRF54L15 y el dispositivo CH340.
 <table align="center">
  <tr>
         <th>Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>CH340G USB to Serial (TTL) Module&Adapter</th>
+        <th>Módulo y adaptador CH340G USB a Serial (TTL)</th>
  </tr>
  <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -217,12 +217,12 @@ Necesitas preparar el XIAO nRF54L15 y el dispositivo CH340.
 En el XIAO nRF54L15, D6 y D7 corresponden respectivamente a los pines TX y RX. En el archivo de redefinición de pines de lolren, D6 y D7 se definen como **PIN_SERIAL1_RX** y **PIN_SERIAL1_TX**. Los puertos serie disponibles para usar son **Serial1** o **Serial2**.
 
 :::tip
-Si no estás familiarizado con la distribución de pines del XIAO nRF54L15, haz clic en [XIAO nRF54L15 Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#hardware-overview) para comprobarla.
+Si no estás familiarizado con la distribución de pines de la XIAO nRF54L15, haz clic en [XIAO nRF54L15 Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#hardware-overview) para comprobarla.
 :::
 
 :::caution
 No utilices `PIN_SERIAL1_RX` y `PIN_SERIAL1_TX` para `Serial` (puerto serie USB).
-Esto interrumpirá los canales predeterminados de descarga y depuración, y puede provocar un fallo en la grabación del programa (mal funcionamiento de SWD/CDC).
+Esto interrumpirá los canales predeterminados de descarga y depuración, y puede provocar fallos en la grabación del programa (mal funcionamiento de SWD/CDC).
 :::
 
 ```c
@@ -273,7 +273,7 @@ Cableado
 </table>
 :::
 
-Abre cualquier herramienta de monitor serie, configura la velocidad en baudios a 115200 y podrás observar los datos de salida.
+Abre cualquier herramienta de monitor serie, ajusta la velocidad en baudios a 115200 y podrás observar los datos de salida.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_5.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -283,7 +283,7 @@ Los pines analógicos se utilizan para leer señales de voltaje continuas a trav
 
 ### Preparación de hardware
 
-Necesitas preparar el XIAO nRF54L15 Sense y dispositivos Grove.
+Necesitas preparar la XIAO nRF54L15 Sense y dispositivos Grove.
 
 <table align="center">
  <tr>
@@ -317,10 +317,10 @@ Necesitas preparar el XIAO nRF54L15 Sense y dispositivos Grove.
 
 ### Software
 
-Hay cuatro grupos de pines analógicos en el XIAO nRF54L15, a saber, de A0 a A3. En la redefinición de pines proporcionada por lolren, estos pines se definen como PIN_A0 a PIN_A3.
+Hay cuatro grupos de pines analógicos en la XIAO nRF54L15, a saber, de A0 a A3. En la redefinición de pines proporcionada por lolren, estos pines se definen como PIN_A0 a PIN_A3.
 
 :::tip
-Si no estás familiarizado con la distribución de pines del XIAO nRF54L15, haz clic en [XIAO nRF54L15 Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#hardware-overview) para comprobarla.
+Si no estás familiarizado con la distribución de pines de la XIAO nRF54L15, haz clic en [XIAO nRF54L15 Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#hardware-overview) para comprobarla.
 :::
 
 ```c
@@ -356,11 +356,11 @@ Gira la perilla y el Monitor Serie de Arduino imprimirá el valor de lectura del
 
 ## I2C
 
-I2C es un protocolo de comunicación serie síncrono que permite la comunicación multidispositivo entre dispositivos maestro y esclavo a través de la línea de reloj SCL y la línea de datos SDA. El XIAO nRF54L15 / Sense proporciona dos conjuntos de interfaces I2C. Esta sección demuestra las funciones de I2C controlando la pantalla OLED en la Expansion Board Base for XIAO.
+I2C es un protocolo de comunicación serie síncrono que permite la comunicación multidispositivo entre dispositivos maestro y esclavo a través de la línea de reloj SCL y la línea de datos SDA. La XIAO nRF54L15 / Sense proporciona dos conjuntos de interfaces I2C. Esta sección demuestra las funciones de I2C controlando la pantalla OLED en la Expansion Board Base for XIAO.
 
 ### Preparación de hardware
 
-Necesitas preparar el XIAO nRF54L15 Sense y dispositivos con interfaces I2C.
+Necesitas preparar la XIAO nRF54L15 Sense y dispositivos con interfaces I2C.
 
 <div class="table-center">
  <table align="center">
@@ -389,11 +389,11 @@ Necesitas preparar el XIAO nRF54L15 Sense y dispositivos con interfaces I2C.
 
 ### Software
 
-En el XIAO nRF54L15, D4 y D5 sirven como los pines SCL y SDA respectivamente.
+En la XIAO nRF54L15, D4 y D5 sirven como los pines SDA y SCL respectivamente.
 En el framework de lolren, el pin D4 se redefine como **PIN_WIRE_SCL**, y el pin D5 se redefine como **PIN_WIRE_SDA**.
 
 :::tip
-Si no estás familiarizado con la distribución de pines del XIAO nRF54L15, haz clic en [XIAO nRF54L15 Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#hardware-overview) para comprobarla.
+Si no estás familiarizado con la distribución de pines de la XIAO nRF54L15, haz clic en [XIAO nRF54L15 Pin List](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#hardware-overview) para comprobarla.
 :::
 
 ```c
@@ -428,11 +428,11 @@ Después de cargar el programa, las frases "Hello World!" y "XIAO nRF54L15!" se 
 
 ## SPI
 
-SPI es un protocolo de comunicación serie síncrono y full-dúplex. Generalmente utiliza cuatro cables — reloj SCK, MOSI, MISO y CS — para lograr una transmisión de datos de alta velocidad entre dispositivos maestro y esclavo. En comparación con I2C, SPI ofrece una mayor velocidad de transmisión, menor latencia y una comunicación más simple y directa. Sin embargo, requiere más pines, y cada dispositivo esclavo suele ocupar una línea de selección de chip independiente. Se utiliza comúnmente para conectar periféricos de alta velocidad como memorias Flash, tarjetas SD, pantallas LCD/OLED, módulos ADC/DAC y sensores de alta velocidad. Esta sección demuestra el uso de SPI conectando una pantalla de papel electrónico.
+SPI es un protocolo de comunicación serie síncrono y full-dúplex. Generalmente utiliza cuatro cables — reloj SCK, MOSI, MISO y CS — para lograr una transmisión de datos de alta velocidad entre dispositivos maestro y esclavo. En comparación con I2C, SPI ofrece una mayor velocidad de transmisión, menor latencia y una comunicación más simple y directa. Sin embargo, requiere más pines, y cada dispositivo esclavo suele ocupar una línea de selección de chip independiente. Se utiliza comúnmente para conectar periféricos de alta velocidad como memorias Flash, tarjetas SD, pantallas LCD/OLED, módulos ADC/DAC y sensores de alta velocidad. Esta sección demuestra el uso de SPI conectando una pantalla de tinta electrónica.
 
 ### Preparación de hardware
 
-Necesitas preparar un XIAO nRF54L15 y un dispositivo que admita comunicación SPI.
+Necesitas preparar una XIAO nRF54L15 y un dispositivo que admita comunicación SPI.
 
  <table align="center">
   <tr>
@@ -548,7 +548,7 @@ Después de cargar el programa, `Hello XIAO nRF54L15` se mostrará en la pantall
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_6.jpg" style={{width:800, height:'auto'}}/></div>
 
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
 - P1: Al cargar el programa, aparece un mensaje indicando que no hay ruta para py.
 

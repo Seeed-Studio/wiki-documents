@@ -8,10 +8,10 @@ slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 3
 last_update:
-  date: 09/03/2026
+  date: 10/16/2026
   author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-18'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/
 ---
 
@@ -204,7 +204,7 @@ Puedes ir a la APP `Position Settings` para activar el GPS. O puedes ir a la pá
 
 ### Configurar zumbador
 
-Haz clic en el botón de usuario cuatro veces para controlar el encendido o apagado del zumbador.
+Haz clic en el botón de usuario tres veces para controlar el encendido o apagado del zumbador.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/User.png" alt="pir" width={500} height="auto" /></p>
 

@@ -8,10 +8,10 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
-  author: Michelle Huang
+  date: 10/16/2026
+  author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-28'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/
 ---
   
@@ -45,7 +45,7 @@ If you have clicked `Erase Flash` but there is no response, click `Enter DFU` ag
 
 If you see "Flashing erase firmware:100%", the device has been successfully erased.
 
-<p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
 #### Flash Firmware
 
@@ -133,7 +133,7 @@ The disk will disappear after the firmware is successfully flashed. The device w
 
 ### Power on the device
 
-Press the button to turn it on. The LED will be on and there is a descending melody.
+Press the button to turn it on. The LED will be on and there is an ascending melody.
 
 ### Power off the device
 
@@ -330,13 +330,17 @@ Then "Python xxx" and "pip xxx" should appear. If it does not, please try instal
 <Tabs>
 <TabItem value="pypi" label="Installing from PyPI">
 
-This is recommended method, to install latest version:
+This is the recommended method.
+
+<Tabs>
+<TabItem value="windows" label="Windows">
 
 ```
-pip3 install --user adafruit-nrfutil
+python -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
 ```
 
-Check the installation path:
+If `adafruit-nrfutil` is not recognized, check the installation path:
 
 ```
 python -m pip show adafruit-nrfutil
@@ -346,10 +350,41 @@ This is the installation location:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-For window user, you may need to add the  path manually. Copy the installation location showed in the last step. Then add it as followed:
+You may need to add the path manually. Copy the installation location showed in the last step. Then add it as followed:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+If `adafruit-nrfutil` is not recognized, add the Python user scripts directory (`bin` under your home directory) to your PATH.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+Install `adafruit-nrfutil` with pipx:
+
+```
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
+```
+
+On Fedora, use `sudo dnf install pipx` instead of apt. Reopen your terminal, then verify:
+
+```
+adafruit-nrfutil version
+```
+
+</TabItem>
+</Tabs>
 
 </TabItem>
 
@@ -374,7 +409,7 @@ python3 setup.py install
 If you get permission errors when running `pip3 install`, your `pip3` is older or is set to try to install in the system directories. In that case use the `--user` flag:
 
 ```
-pip3 install -r --user requirements.txt
+pip3 install --user -r requirements.txt
 python3 setup.py install
 ```
 
@@ -429,7 +464,7 @@ Please change COMXX to your com number. For example, if your device is on com6, 
 - **For others**:
 
 ```
-adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>

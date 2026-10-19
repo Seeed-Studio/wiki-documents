@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-15 17:21:21 (北京时间)
-// 多语言页面: 2572 个
+// 生成时间: 2026-10-19 11:16:14 (北京时间)
+// 多语言页面: 2574 个
 
 (function() {
   'use strict';
@@ -4272,6 +4272,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_qr_code_barcode": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_sdk_setup": [
     "cn",
     "en",
@@ -5295,6 +5302,13 @@
     "pt"
   ],
   "/meshcore_ai_image_transmission_t1000e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/t1000e_meshcore_contact_sharing_companion_repeat": [
     "cn",
     "en",
     "es",

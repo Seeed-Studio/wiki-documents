@@ -1,5 +1,5 @@
 ---
-description: Experimente o poder do ReSpeaker XVF3800 USB 4-Mic Array — uma avançada matriz circular de microfones com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Combinado com o compacto XIAO ESP32S3, oferece controle de voz de alto desempenho para dispositivos inteligentes, robótica e aplicações de IoT. Junte-se a nós enquanto demonstramos a integração perfeita com o Home Assistant para controlar dispositivos usando comandos de voz.
+description: Experimente o poder do ReSpeaker XVF3800 USB 4-Mic Array — uma avançada matriz circular de microfones com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Em conjunto com o compacto XIAO ESP32S3, oferece controle de voz de alto desempenho para dispositivos inteligentes, robótica e aplicações de IoT. Junte-se a nós enquanto demonstramos a integração perfeita com o Home Assistant para controlar dispositivos usando comandos de voz.
 title: Controle de Voz para Casa Inteligente com Home Assistant e reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -12,15 +12,15 @@ last_update:
   date: 9/17/2025
   author: Kasun Thushara
 createdAt: '2025-07-31'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_xiao_home_assistant/
 ---
 
 ## Visão geral
 
-Converse com espaços inteligentes com o novo **ReSpeaker XMOS XVF3800 com XIAO ESP32S3** para acender as luzes, aumentar o som ou até perguntar sobre o clima usando a voz
+Converse com espaços inteligentes com o novo **ReSpeaker XMOS XVF3800 com XIAO ESP32S3** para acender ou apagar as luzes, aumentar o som ou até perguntar sobre o clima usando a voz
 
-Neste capítulo usaremos o ReSpeaker XMOS XVF3800 com XIAO ESP32S3 HA Voice Assistant para conectar o Sonoff smart switch e realizar o controle por voz do interruptor de luz.
+Neste capítulo usaremos o ReSpeaker XMOS XVF3800 com XIAO ESP32S3 HA Voice Assistant para conectar o interruptor inteligente Sonoff e realizar o controle por voz do interruptor de luz.
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -68,54 +68,47 @@ Neste capítulo usaremos o ReSpeaker XMOS XVF3800 com XIAO ESP32S3 HA Voice Assi
 ## Atualização de firmware
 
 Para obter a melhor experiência de reprodução, precisamos atualizar o firmware XMOS para
-Baixe o firmware aqui. No seu computador, conecte o ReSpeaker XMOS XVF3800 com XIAO ESP32S3 e execute o em nosso guia:
+Baixe o firmware aqui. No seu computador, conecte o ReSpeaker XMOS XVF3800 com XIAO ESP32S3 e execute o procedimento em nosso guia:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
 :::note
-A matriz de microfones XVF3800 precisa de um MCLK de 12,288 MHz para funcionar, mas o ESPHome (usado no Home Assistant) não consegue gerá-lo devido a limitações da API. Este firmware faz com que o XVF3800 atue como mestre I2S, para que ele possa gerar seus próprios clocks sem precisar de MCLK do ESP32.
+A matriz de microfones XVF3800 precisa de um MCLK de 12,288 MHz para funcionar, mas o ESPHome (usado no Home Assistant) não consegue gerá-lo devido a limitações da API. Este firmware faz com que o XVF3800 atue como mestre I2S, para que ele possa gerar seus próprios clocks sem precisar do MCLK do ESP32.
 Nosso firmware corrige essa limitação, para que o microfone funcione corretamente com o Home Assistant.
 :::
 
-Você pode baixar o firmware a partir [daqui](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
+Você pode baixar o firmware [aqui](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
 
-O guia de instalação está [aqui](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#update-firmware)
+O guia de instalação está [aqui](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#atualizar-firmware)
 
-## Prepare o ReSpeaker XMOS XVF3800 com XIAO ESP32S3
+## Preparar o ReSpeaker XMOS XVF3800 com XIAO ESP32S3
 
-Vá para **Home Assistant > Settings > Add-ons**.
+Vá para **Home Assistant > Settings > Apps**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Clique em **Add-on Store** (geralmente no canto inferior direito)
+Clique em **Install app** (geralmente no canto inferior direito)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Em **Official add-ons**, procure e instale **ESPHome Device Builder**.
+Em **App Store**, procure e instale **ESPHome Device Builder**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Após a instalação, clique em **Start** para executar o add-on ESPHome.
+Clique em **Install** para instalar o add-on ESPHome.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_Start.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_Start_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Ative **Start on Boot, Watchdog e Show in Sidebar** para facilitar o acesso.
 
 Na barra lateral do Home Assistant, vá para **ESPHome Builder**.
 
 Clique em **+ NEW DEVICE**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_new.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_newdevice_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
+Selecione a entrada do seu novo dispositivo e clique em **Import from file**.
 
-Quando solicitado, clique em **SKIP** – criaremos a configuração manualmente.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
-
-Selecione a nova entrada do dispositivo e clique em **EDIT**.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 Substitua o conteúdo pela sua **configuração YAML** personalizada
 
@@ -125,17 +118,17 @@ Você pode encontrar o arquivo YAML [aqui](https://github.com/formatBCE/Respeake
 
 Depois que o seu YAML for salvo, clique em **INSTALL**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_yaml.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_yaml_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Escolha **Manual Download**
+Escolha **Advanced opinions** e **Download firmware binary**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 Aguarde a compilação do firmware.
 
 Baixe o arquivo de firmware .bin gerado para o seu computador.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 Conecte a placa **ESP32-S3** (com o XVF3800 conectado) ao seu PC usando um **cabo USB Tipo-C**.
 
@@ -167,16 +160,16 @@ Clique em **CONFIGURE** e depois em **Submit** para finalizar a configuração.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_discover.PNG" alt="pir" width={800} height="auto" /></p>
 
-## Adicione seu dispositivo inteligente
+## Adicionar seu dispositivo inteligente
 
 Configure o dispositivo **Sonoff BASICR2** de acordo com o manual do usuário do fabricante. Você precisará criar uma conta eWELink.
 
-### Instalar HACS
+### Instalar o HACS
 
 Se ainda não estiver instalado, siga o guia oficial para configurar o [**Home Assistant Community Store**](https://hacs.xyz/docs/use/):
 
 Abra o **HACS** na barra lateral.
-Pesquise por **Sonoff LAN** na seção Search.
+Pesquise por **Sonoff LAN** na seção de busca.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_HACS.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -203,17 +196,17 @@ Depois de conectado com sucesso, você verá as entidades associadas listadas em
 ## Assistente de voz com Nabu Cloud
 
 Nesta demonstração, estamos mostrando como se conectar ao **Home Assistant Cloud (Nabu Casa)** usando a voz. A configuração é simples e você pode aproveitar um **teste gratuito de um mês** para explorar todas as suas capacidades.
-Com a **palavra de ativação** integrada: “Okay Nabu”, você pode acionar comandos de voz com facilidade e **integrar-se perfeitamente** com dispositivos e serviços **em qualquer lugar, a qualquer momento** — tudo isso sem configurações complexas.
+Com a **palavra de ativação** integrada: “Okay Nabu”, você pode acionar comandos de voz com facilidade e **integrar perfeitamente** dispositivos e serviços **em qualquer lugar, a qualquer momento** — tudo isso sem configurações complexas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice.PNG" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice_nabu.PNG" alt="pir" width={800} height="auto" /></p>
 
-## Descrição YAML
+## Descrição do YAML
 
 ### WiFi
 
-Esta seção configura como seu dispositivo se conecta ao Wi‑Fi.
+Esta seção configura como o seu dispositivo se conecta ao Wi-Fi.
 
 ```yml
 wifi:
@@ -222,7 +215,7 @@ wifi:
 ```
 
 - **ssid & password**: Obtidos do seu arquivo secrets.yaml para que sua senha não fique visível em texto simples.
-- **Events**: Executa ações quando o Wi‑Fi conecta ou desconecta:
+- **Eventos**: Executa ações quando o Wi‑Fi conecta ou desconecta:
   - on_connect:
     - Interrompe a configuração BLE improv.
     - Executa o script control_leds (efeito de LED para Wi‑Fi conectado).
@@ -232,7 +225,7 @@ wifi:
 
 ### Barramento I²C
 
-I²C é uma linha de comunicação que permite ao seu ESP32 se comunicar com outros chips como o microfone ou o codec de áudio.
+I²C é uma linha de comunicação que permite ao seu ESP32 se comunicar com outros chips, como o microfone ou o codec de áudio.
 
 ```yml
 i2c:
@@ -243,7 +236,7 @@ i2c:
   frequency: 100kHz
 ```
 
-- **id**: Um nome para referenciar este barramento em outros lugares.
+- **id**: Um nome para fazer referência a este barramento em outros lugares.
 - **sda** / scl: Pinos usados para dados e clock.
 - **scan**: Verifica os dispositivos conectados na inicialização.
 - **frequency**: Velocidade de comunicação (100kHz é o padrão).
@@ -370,7 +363,7 @@ Interruptores são “botões” controlados por software no Home Assistant. Ele
 ```
 
 - Acompanha o status do alarme.
-- Executa o script de LED quando ligado/desligado.
+- Executa o script de LED quando liga/desliga.
 
 ### Sensores
 
@@ -1315,7 +1308,7 @@ script:
 
 - Cada animação (respiração, arco-íris, cometa, cintilação, tique do temporizador, exibição de volume, feixe de LED) tem seu próprio script.
 - Torna o sistema modular e fácil de manter.
-- Acionados periodicamente por led_animation_interval ou pelo controlador central.
+- Acionado periodicamente por led_animation_interval ou pelo controlador central.
 
 | Estado do Dispositivo   | Efeito de LED          |
 |------------------------|----------------------|
@@ -1327,7 +1320,7 @@ script:
 | Assistente de Voz ouvindo             | Feixe roxo brilhante  |
 | Assistente de Voz pensando            | Respiração roxa       |
 | Assistente de Voz respondendo         | Cometa roxo           |
-| Erro do Assistente de Voz             | Respiração vermelha   |
+| Assistente de Voz erro                | Respiração vermelha   |
 | Assistente de Voz inativo             | LEDs desligados       |
 | Temporizador tocando   | Respiração roxa rápida|
 | Mudança de volume      | Exibição temporária   |
@@ -1343,7 +1336,7 @@ script:
      - **qual cor** (valores R, G, B)
      - **quão rápido** (velocidade).
 
-   Se a inicialização falhar → `led_set_effect` é chamado com effect = *breathe*, color = vermelho.
+   Se a inicialização falhar → `led_set_effect` é chamado com effect = *breathe*, cor = vermelho.
 
 2. **Controlador Central (loop de intervalo)**
 
@@ -1468,7 +1461,7 @@ i2s_audio:
 - GPIO43: Pino por onde os dados de áudio do microfone entram.
 - Taxa de amostragem 48 kHz, 32 bits: Gravação de alta qualidade (estéreo, 2 canais).
 - adc_type: external: Usa o codec externo (não o ADC interno do ESP32).
-- i2s_mode: secondary: ESP32 segue o clock do codec (modo escravo).
+- i2s_mode: secondary: O ESP32 segue o clock do codec (modo escravo).
 
 ```yml
 microphone:
@@ -1488,7 +1481,7 @@ microphone:
 
 - Envia áudio para o alto-falante via codec (DAC AIC3104).
 - GPIO44: Pino por onde o áudio digital sai.
-- 48 kHz, estéreo de 32 bits: Reprodução de alta qualidade.
+- 48 kHz, 32 bits estéreo: Reprodução de alta qualidade.
 - buffer_duration 100ms: Mantém o áudio suave (evita falhas).
 - timeout: never: Mantém o canal do alto-falante ativo (não será desligado).
 
@@ -1567,9 +1560,9 @@ media_player:
 - Endereço i2c: 0x2C
 - ID: respeaker
 - Interruptor de Mudo do Microfone: Atualiza a cada 1 segundo, reproduz som ao alternar.
-- Relato de Versão DFU: Informa o firmware a cada 120s.
+- Relato de Versão DFU: Reporta o firmware a cada 120s.
 - Sensor de Direção do Feixe: Acompanha o feixe de voz (apenas interno).
-- Gerenciamento de Firmware: Faz flash automático do firmware XVF3800 se necessário.
+- Gerenciamento de Firmware: Faz flash automático do firmware do XVF3800 se necessário.
 
 ```yml
 respeaker_xvf3800:
@@ -1640,7 +1633,7 @@ Detecta suas palavras de ativação (como “Okay Nabu”) e inicia o assistente
 - Reproduz som de ativação (se habilitado).
 - Inicia o assistente de voz para comandos.
 
-### Assistente de voz
+### Assistente de Voz
 
 ```yml
 voice_assistant:
@@ -1680,12 +1673,12 @@ Controla o comportamento e as interações do seu assistente de voz (VA).
   - Atualiza os LEDs.
   - Reduz as atualizações de LED para a cada 5 segundos para o temporizador em contagem.
 
-## Agradecimentos especiais
+## Agradecimentos Especiais
 
 Gostaríamos de agradecer ao FormatBCE por criar este incrível arquivo YAML para o Seeed Studio ReSpeaker XVF3800.
 Apoie-o no seu [GitHub](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
 
-## Suporte técnico e discussão de produtos
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
