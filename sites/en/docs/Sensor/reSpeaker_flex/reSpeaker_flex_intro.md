@@ -115,6 +115,7 @@ When both the 3.5mm audio jack and the speaker are connected at the same time, i
 |--------------------|------------|
 | **Main Audio Processor** | XMOS XVF3800 (firmware v3.2.1), handles all audio DSP including AEC, beamforming, DoA, and noise suppression |
 | **Audio Codec** | TLV320AIC3104, handles audio conversion and DAC output |
+| **Amplifier** |TPA3139D2  , Class D amplifer |
 | **FPC Mic Array Interface** | 24-pin FPC connector with locking latch, supports up to 8-mic arrays with 2 GPIO lines |
 | **USB-C Port** | UAC 2.0 audio, DFU firmware upgrade, and power |
 | **PH2.0 Port** | Locking latch connector; provides the same UAC 2.0 audio and DFU support as the USB-C port |
