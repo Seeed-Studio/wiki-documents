@@ -39,6 +39,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'faq', 'sensecraft_robotics_common_issues.md'), //9.24
   path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'faq', 'sensecraft_robotics_data_collection_configuration_recommendation.md'), //9.24
   path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'sensecraft_robotics_overview.md'), //9.24
+
+  path.join(docsDirectory, 'Network', 'Mesh_Network', 'MeshPager_X2', 'x2_node.md'), //占位文档，暂时没更新内容
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
