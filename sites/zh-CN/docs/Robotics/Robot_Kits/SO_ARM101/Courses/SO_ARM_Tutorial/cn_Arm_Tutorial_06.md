@@ -223,7 +223,7 @@ SO100 用户：SO100 与 SO101 代码兼容 —— 直接使用同样的 `so101_
 
 <div className="video-container">
 <iframe
-  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/hbW6eFYkHTg?si=jKdpTyI8wRC-iHxO" title="youtube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+  loading="lazy" width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV1k6UUBFEw4&p=1&autoplay=0" title="youtube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
 
 :::tip

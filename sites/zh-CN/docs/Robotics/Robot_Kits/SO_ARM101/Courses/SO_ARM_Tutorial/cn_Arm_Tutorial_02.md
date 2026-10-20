@@ -118,7 +118,7 @@ SO-ARM101 套件分为两个版本，结构相同，区别在于舵机扭矩与�
 
 | 产品 | SO-ARM100 套件 | SO-ARM101 套件 |
 | :--- | :--- | :--- |
-| **购买链接** | [Bazaar](https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html) | [Bazaar](https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html) |
+| **购买链接** | [Bazaar](https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html) | [淘宝](https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84) |
 | **自由度** | 5 + 夹爪 | 5 + 夹爪 |
 | **执行器** | 每臂飞特 STS3215 总线舵机 ×6 | 每臂飞特 STS3215 总线舵机 ×6 |
 | **通信方式** | TTL 串行总线，经 USB 舵机控制板 | TTL 串行总线，经 USB 舵机控制板 |

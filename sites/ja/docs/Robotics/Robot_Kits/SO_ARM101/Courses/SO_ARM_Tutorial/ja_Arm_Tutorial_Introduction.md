@@ -91,7 +91,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 本コースは SO-ARM100 / SO-ARM101 リーダー・フォロワーアームキットを実践プラットフォームとして、ロボットアーム理論・ロボット学習理論・実機演習を組み合わせて進めます。コースのアウトラインは以下の通りです：
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM100 / SO-ARM101 キット" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/Intro_en.png" alt="コースのアウトライン" />
 </div>
 
 </section>

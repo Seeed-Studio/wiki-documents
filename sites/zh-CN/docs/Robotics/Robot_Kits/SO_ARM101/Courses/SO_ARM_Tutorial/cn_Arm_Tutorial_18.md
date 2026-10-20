@@ -56,12 +56,15 @@ import '/src/css/rebot-wiki-style.css';
 
 | 硬件 | 购买 | 数量 |
 | :--- | :---: | :---: |
-| [SO-ARM101 套件（主臂 + 从臂）](https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html) | 🛒 | 1 |
-| 32 × 32 mm USB 相机 | - | 2 |
+| [SO-ARM101 套件（主臂 + 从臂 + 2个摄像头及支架）](https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84) | 🛒 | 1 |
 
 在之前的章节里，你已经在 SO-ARM 上用 **ACT（Action Chunking with Transformers）** 等策略完成了"看图输出关节动作"的模仿学习。这类方法通常为**单一任务**而训练：模型只学会"把红方块放进盒子"这一种行为，换任务就要重新采数据、重新训练。
 
 本章引入 **VLA（视觉 - 语言 - 动作）** 的核心思想：让机器人不仅会"看"，还能"理解"自然语言指令，并让同一个策略网络覆盖多个任务。
+
+<div className="image-frame">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-01cn.jpg" alt="VLA 总览" />
+</div>
 
 <a id="overview"></a>
 
@@ -78,7 +81,7 @@ import '/src/css/rebot-wiki-style.css';
 ---
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18/ch18-01.png" alt="VLA 总览" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-02cn.jpg" alt="视觉、语言与动作" />
 </div>
 
 在 VLA 框架中，三种模态各有明确分工：
@@ -100,7 +103,7 @@ VLA 与纯视觉策略的关键区别：**语言成为条件变量。** 训练�
 ---
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18/ch18-03.png" alt="VLM 与 VLA" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-03cn.jpg" alt="VLM 与 VLA" />
 </div>
 
 | 维度 | VLM（视觉 - 语言模型） | VLA（视觉 - 语言 - 动作） |
@@ -121,7 +124,7 @@ Isaac GR00T 在架构上复用了 VLM 能力：一个 VLM 骨干网络编码图�
 ---
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18/ch18-04.png" alt="ACT 与 VLA" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-04cn.jpg" alt="ACT 与 VLA" />
 </div>
 
 你之前遇到的 ACT 与本章的 VLA 同属模仿学习（行为克隆）家族，但设计目标不同：
@@ -150,7 +153,7 @@ GR00T N1.5 通过官方支持的 `so100_dualcam` 数据配置与 `new_embodiment
 ---
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18/ch18-05.png" alt="语言条件机器人任务" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-05cn.jpg" alt="语言条件机器人任务" />
 </div>
 
 语言条件任务的标准形式：
@@ -188,7 +191,7 @@ GR00T N1.5 通过官方支持的 `so100_dualcam` 数据配置与 `new_embodiment
 ---
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18/ch18-06.png" alt="单任务、多任务与泛化" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-06cn.jpg" alt="单任务、多任务与泛化" />
 </div>
 
 | 训练范式 | 描述 | 适用场景 |
@@ -213,7 +216,7 @@ VLA 语境中的"泛化"有几个层次 —— 不要混淆：
 ---
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18/ch18-07.png" alt="连续动作与动作 token" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-07cn.jpg" alt="连续动作与动作 token" />
 </div>
 
 机器人控制命令有两种主流表示：
@@ -250,7 +253,7 @@ action_tokens = [tok_42, tok_17, tok_89, ...]
 ---
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-18/ch18-08.png" alt="VLA 的能力与局限" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-18cn/ch18-08cn.jpg" alt="VLA 的能力与局限" />
 </div>
 
 ### 能力

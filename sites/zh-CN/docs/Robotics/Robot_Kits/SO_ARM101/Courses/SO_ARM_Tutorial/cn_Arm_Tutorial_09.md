@@ -54,7 +54,7 @@ import '/src/css/rebot-wiki-style.css';
 - 数据采集、训练、推理三套代码怎么共用同一套机械臂控制逻辑？
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-10/ch10-01.png" alt="重复造轮子" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-10cn/ch10-01cn.jpg" alt="重复造轮子" />
 </div>
 
 如果人人都重新造轮子，机器人学习就永远是少数实验室的游戏。LeRobot 正是 Hugging Face 为解决这些问题而构建的开源框架 —— 它用 PyTorch 实现了经过验证的模仿学习算法（ACT、SmolVLA、GR00T 等），定义了标准的机器人数据集格式，并提供了从遥操作、数据采集到训练与真机部署的完整命令行工具链。SO-ARM 本身就是与 LeRobot 一同诞生的参考低成本硬件 —— 两者是彼此设计的。
@@ -69,7 +69,7 @@ import '/src/css/rebot-wiki-style.css';
 - 答案是主从遥操作：用一条结构相同、轻巧灵活的示教臂作为"输入设备" —— 人动主臂，从臂实时跟随。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-10/ch10-02.png" alt="主臂与从臂" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-10cn/ch10-02cn.jpg" alt="主臂与从臂" />
 </div>
 
 - **主臂（Leader / 示教臂）**：人握着动的臂。它**只读位置** —— 实时读取自己的关节角并发给电脑。它不需要输出力，所以可以用同款 STS3215 舵机轻载运行，人手搬动的关节还配了更小的减速比。
@@ -97,7 +97,7 @@ LeRobot 的第一条设计原则：框架不认识任何具体硬件，只定义
 一句话区分：**Robot 管"干"，Teleoperator 管"读"。**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-10/ch10-03.png" alt="插件架构" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-10cn/ch10-03cn.jpg" alt="插件架构" />
 </div>
 
 ---

@@ -91,7 +91,7 @@ Gira en torno a <strong>SO-ARM100 / SO-ARM101</strong>, el brazo robótico líde
 Este curso usa los kits líder-seguidor SO-ARM100 / SO-ARM101 como plataformas prácticas, combinando teoría de brazos robóticos, teoría del aprendizaje en robótica y práctica con hardware real. El esquema del curso es el siguiente:
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="Kit SO-ARM100 / SO-ARM101" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/Intro_en.png" alt="Esquema del curso" />
 </div>
 
 </section>

@@ -88,7 +88,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 本课程以 SO-ARM100 / SO-ARM101 主从臂套件为实践平台，结合机械臂理论、机器人学习理论与真机实践。课程大纲如下：
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM100 / SO-ARM101 套件" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/Intro_cn.png" alt="课程大纲" />
 </div>
 
 <a id="structure"></a>

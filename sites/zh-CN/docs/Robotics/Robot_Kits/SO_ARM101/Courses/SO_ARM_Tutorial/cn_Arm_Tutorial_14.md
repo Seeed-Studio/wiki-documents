@@ -58,7 +58,7 @@ import '/src/css/rebot-wiki-style.css';
 ACT 的名字就是它的全部设计哲学：**Action Chunking + Transformer（序列建模器）**。本章剩余部分拆解这两个词。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-01.png" alt="ACT" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-15cn/ch15-01cn.jpg" alt="ACT" />
 </div>
 
 ---
@@ -93,7 +93,7 @@ ACT 的输出**不是**下一个动作，而是整整一块动作序列（Action
 在 LeRobot 的 ACT 默认配置中，k（chunk size）通常为 100 —— 一次推理给出未来约 100 个时间步的完整动作计划。这回应了第 8 章埋下的伏笔：**动作分块不是抽象的优化技巧，它就是 ACT 的天然输出形式。**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-02.png" alt="ACT 输入与输出" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-15cn/ch15-02cn.jpg" alt="ACT 输入与输出" />
 </div>
 
 ---
@@ -115,7 +115,7 @@ ACT 的输出**不是**下一个动作，而是整整一块动作序列（Action
 解码器拿着编码器的理解，**一次性生成未来 k 步的动作序列**。它不是一条一条往外吐动作，而是像写乐谱一样一口气写完整段"未来动作" —— 这就是动作分块内部高度连贯的根本原因。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-03.png" alt="ACT 内部结构" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-15cn/ch15-03cn.jpg" alt="ACT 内部结构" />
 </div>
 
 ---
@@ -133,7 +133,7 @@ ACT 的车间二和车间三都是 Transformer，那 Transformer 到底是什么
 3. **编码器与解码器：一个理解，一个生成。** 编码器把输入的零件序列融合成"对当前局面的理解"；解码器拿着这个理解生成新的输出零件序列 —— 翻译里是目标语言句子，ACT 里是未来动作序列。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-04.png" alt="Transformer" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-15cn/ch15-04cn.jpg" alt="Transformer" />
 </div>
 
 ---
@@ -149,7 +149,7 @@ ACT 的车间二和车间三都是 Transformer，那 Transformer 到底是什么
 一句话总结：**ResNet 负责"看得清"，Transformer 编码器负责"想得明"，Transformer 解码器负责"规划得连贯"** —— 驱动力都是注意力。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-05.png" alt="ACT 中的注意力" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-15cn/ch15-05cn.jpg" alt="ACT 中的注意力" />
 </div>
 
 ---
@@ -187,7 +187,7 @@ CVAE 的作用不是把人规约成唯一正确答案，而是承认：给定当
 关系是：**预测的分块可以很长，但每次只信任开头一小段。**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-06.png" alt="动作分块与动作视界" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-15cn/ch15-06cn.jpg" alt="动作分块与动作视界" />
 </div>
 
 为什么不把 100 步全执行完？因为预测越远越不可靠 —— 环境会变、物体可能被碰，到后半段，模型"假设的局面"早已偏离现实。**开环执行太长 = 闭着眼睛开车。** 视界越小，模型越频繁"睁眼复查"，对扰动越鲁棒；但太小又丢掉分块带来的平滑。
@@ -208,7 +208,7 @@ CVAE 的作用不是把人规约成唯一正确答案，而是承认：给定当
 - **防线二：时间集成解决不连续。**
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-07.png" alt="ACT 的两道防线" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-15cn/ch15-07cn.jpg" alt="ACT 的两道防线" />
 </div>
 
 ---
@@ -236,7 +236,7 @@ CVAE 的作用不是把人规约成唯一正确答案，而是承认：给定当
 同样重要的是知道它做不到什么：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-15/ch15-08.png" alt="ACT 能力边界" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-15cn/ch15-08cn.jpg" alt="ACT 能力边界" />
 </div>
 
 </div>

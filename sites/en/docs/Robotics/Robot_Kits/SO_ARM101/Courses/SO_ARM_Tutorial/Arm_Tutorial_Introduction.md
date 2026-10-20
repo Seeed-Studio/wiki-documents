@@ -90,7 +90,7 @@ It is built around <strong>SO-ARM100 / SO-ARM101</strong>, the open-source leade
 This course uses the SO-ARM100 / SO-ARM101 leader-follower kits as practical platforms, combining robotic arm theory, robotics learning theory, and real hardware practice. The course outline is as follows:
 
 <div className="image-frame" style={{margin: '0.5rem 0'}}>
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM100 / SO-ARM101 kit" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/Intro_en.png" alt="Course outline" />
 </div>
 
 </section>

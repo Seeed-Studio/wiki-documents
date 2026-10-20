@@ -89,7 +89,7 @@ lerobot-calibrate \
 
 <div className="video-container">
 <iframe
-  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+  loading="lazy" width="900" height="600" src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV1w6UUBcEGR&p=1&autoplay=0" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
 
 :::tip

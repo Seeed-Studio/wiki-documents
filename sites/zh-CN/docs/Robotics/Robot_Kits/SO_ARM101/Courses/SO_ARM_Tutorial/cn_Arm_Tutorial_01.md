@@ -73,13 +73,13 @@ import '/src/css/rebot-wiki-style.css';
 的系统。一套机器人系统通常可以抽象为：
 
 <div className="image-frame">
-  <img width={500} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-01.png" alt="机器人系统抽象" />
+  <img width={500} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-01cn/ch01-01cn.jpg" alt="机器人系统抽象" />
 </div>
 
 例如，一台桌面抓取机器人需要完成以下过程：
 
 <div className="image-frame">
-  <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-02.png" alt="桌面抓取机器人流程" />
+  <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-01cn/ch01-02cn.jpg" alt="桌面抓取机器人流程" />
 </div>
 
 因此，机器人不仅要"能动"，还要能形成持续运转的闭环。
@@ -105,7 +105,7 @@ import '/src/css/rebot-wiki-style.css';
 机械臂可以简单理解为：
 
 <div className="image-frame">
-  <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-03.png" alt="机械臂" />
+  <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-01cn/ch01-03cn.jpg" alt="机械臂" />
 </div>
 
 机械臂与人臂有相似之处，但并不需要模仿人体解剖结构 —— 它的关节数量、布置方式和工作空间是根据任务需求设计的。
@@ -122,7 +122,7 @@ import '/src/css/rebot-wiki-style.css';
 因此，三维空间中的物体最多有 6 个自由度。
 
 <div className="image-frame">
-  <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-04.png" alt="6 个自由度" />
+  <img width={560} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-01cn/ch01-04cn.jpg" alt="6 个自由度" />
 </div>
 
 六自由度机械臂通常可以在三维空间中同时控制末端执行器的位置与姿态。本课程使用的 SO-ARM100 / SO-ARM101 用 6 个总线舵机驱动 5 个臂关节加 1 个夹爪 —— 5 个旋转自由度足以覆盖桌面抓取任务的各个点位，夹爪则提供"抓取 / 松开"这一自由度。
@@ -143,7 +143,7 @@ import '/src/css/rebot-wiki-style.css';
   <div>
     <h4 style={{margin: '0 0 0.25rem'}}>传统程序控制</h4>
     <div className="image-frame" style={{margin: '0.5rem 0'}}>
-      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-05.png" alt="传统程序控制" />
+      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-01cn/ch01-05cn.jpg" alt="传统程序控制" />
     </div>
     <p>适合固定位置、固定流程、重复性任务。</p>
   </div>
@@ -151,7 +151,7 @@ import '/src/css/rebot-wiki-style.css';
   <div>
     <h4 style={{margin: '0 0 0.25rem'}}>模仿学习</h4>
     <div className="image-frame" style={{margin: '0.5rem 0'}}>
-      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-06.png" alt="模仿学习" />
+      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-01cn/ch01-06cn.jpg" alt="模仿学习" />
     </div>
     <p>由人先遥操作机械臂完成任务，再让模型从演示数据中学习。适合抓取、整理、持续作业类任务。</p>
   </div>
@@ -159,7 +159,7 @@ import '/src/css/rebot-wiki-style.css';
   <div>
     <h4 style={{margin: '0 0 0.25rem'}}>VLA</h4>
     <div className="image-frame" style={{margin: '0.5rem 0'}}>
-      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-1/ch1-07.png" alt="VLA" />
+      <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-01cn/ch01-07cn.jpg" alt="VLA" />
     </div>
     <p>VLA 利用视觉、语言和动作信息，让机械臂根据自然语言完成任务。</p>
   </div>

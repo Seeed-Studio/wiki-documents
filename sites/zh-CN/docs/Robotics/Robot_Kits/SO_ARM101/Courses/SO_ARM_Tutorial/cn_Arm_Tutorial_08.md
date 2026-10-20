@@ -47,7 +47,7 @@ import '/src/css/rebot-wiki-style.css';
 
 | 硬件 | 购买 | 数量 |
 | :--- | :---: | :---: |
-| [reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html) | 🛒 | 1 |
+| [reComputer Robotics J4012](https://detail.tmall.com/item.htm?id=1007628222742&mi_id=0000L8eD-KMxtF0PXaT0MiYt5P7LUTbfX1vS7err0e_zxeU&skuId=6197625203847&spm=a1z10.1-b-s.w4004-25931066406.20.543d262eey8njQ) | 🛒 | 1 |
 
 另外还需要一台台式机或笔记本:Ubuntu 22.04、CUDA 12+，训练建议 12GB 显存以上的 NVIDIA GPU 与 16GB 以上内存。
 
@@ -55,8 +55,7 @@ import '/src/css/rebot-wiki-style.css';
 
 | 硬件 | 购买 | 数量 |
 | :--- | :---: | :---: |
-| [SO-ARM101 套件（主臂 + 从臂）](https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html) | 🛒 | 1 |
-| 32 × 32 mm USB 相机 | - | 2 |
+| [SO-ARM101 套件（主臂 + 从臂 + 2个摄像头及支架）](https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84) | 🛒 | 1 |
 | 鼠标垫 / 桌垫 | - | 1 |
 
 <a id="overview"></a>
@@ -72,7 +71,7 @@ import '/src/css/rebot-wiki-style.css';
 **这就是传统程序控制的根本困境：真实世界连续变化，而 if-else 是离散的。** 你无法穷举世界的所有状态。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-01.png" alt="传统程序控制的困境" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-09cn/ch09-01cn.jpg" alt="传统程序控制的困境" />
 </div>
 
 **让机械臂以这种方式习得技能，正是机器人学习（Robot Learning）要解决的问题。** 而本阶段要学的模仿学习，是其中最成熟、最容易落到真机上的一条路。
@@ -86,7 +85,7 @@ import '/src/css/rebot-wiki-style.css';
 继续之前，把两种控制方式并排放在一起看清楚：
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-02.png" alt="规则控制与学习控制对比" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-09cn/ch09-02cn.jpg" alt="规则控制与学习控制对比" />
 </div>
 
 :::note
@@ -102,13 +101,13 @@ import '/src/css/rebot-wiki-style.css';
 ### 什么是模仿学习
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-03.png" alt="模仿学习" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-09cn/ch09-03cn.jpg" alt="模仿学习" />
 </div>
 
 ### 什么是行为克隆
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-04.png" alt="行为克隆" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-09cn/ch09-04cn.jpg" alt="行为克隆" />
 </div>
 
 ---
@@ -126,7 +125,7 @@ import '/src/css/rebot-wiki-style.css';
 具体到 SO-ARM：观测是两个相机的图像，状态是从臂的 6 个关节读数（5 个关节 + 夹爪），动作是接下来要下发的 6 个目标关节值。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-05.png" alt="观测、状态与动作" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-09cn/ch09-05cn.jpg" alt="观测、状态与动作" />
 </div>
 
 ---
@@ -139,7 +138,7 @@ import '/src/css/rebot-wiki-style.css';
 - **动作分块**：一次预测一串动作。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-06.png" alt="单步动作与动作分块" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-09cn/ch09-06cn.jpg" alt="单步动作与动作分块" />
 </div>
 
 当然，动作分块不是越长越好。预测得太远，环境可能在执行中途变化（比如物体被碰了一下），而机械臂还在执行"过时"的动作。真实系统采用折中方案：开环执行一小段，再重新观测、重新预测。
@@ -157,7 +156,7 @@ import '/src/css/rebot-wiki-style.css';
 - 训练时模型见过的所有（观测, 动作）样本对构成一个**数据分布**。推理时，如果机械臂遇到的图像与状态落在这个分布内，模型通常表现良好；一旦越出分布，模型的输出就失去了依据，行为不可预测。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-07.png" alt="数据分布" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-09cn/ch09-07cn.jpg" alt="数据分布" />
 </div>
 
 由此得到几条非常实用的推论：
@@ -179,7 +178,7 @@ import '/src/css/rebot-wiki-style.css';
 ---
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-08.png" alt="模仿学习三阶段" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-09cn/ch09-08cn.jpg" alt="模仿学习三阶段" />
 </div>
 
 ### 训练：离线学习
@@ -215,7 +214,7 @@ import '/src/css/rebot-wiki-style.css';
 ---
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-9/ch9-09.png" alt="模仿学习的优势与局限" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-09cn/ch09-09cn.jpg" alt="模仿学习的优势与局限" />
 </div>
 
 </div>

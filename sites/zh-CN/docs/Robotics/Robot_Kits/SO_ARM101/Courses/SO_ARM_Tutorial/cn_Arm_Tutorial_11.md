@@ -75,7 +75,7 @@ import '/src/css/rebot-wiki-style.css';
 图像走 USB、关节数据走串行总线 —— 两路数据天然在不同时刻到达电脑。LeRobot 为每帧数据打时间戳，从而把"同一时刻"的图像、状态、动作对齐到同一行。
 
 <div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-12/ch12-01.png" alt="时间戳与同步" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1cn/chapter-12cn/ch12-01cn.jpg" alt="时间戳与同步" />
 </div>
 
 ---
