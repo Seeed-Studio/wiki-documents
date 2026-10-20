@@ -1,5 +1,5 @@
 ---
-description: reComputer Robotics J401 是一款为高级机器人应用设计的高性能边缘 AI 载板。它支持在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano 和 Orin NX 模块，提供高达 157 TOPS 的 AI 算力。该板卡提供丰富的连接选项，包括双千兆以太网、多路 USB 3.2 接口、CAN、用于 5G/Wi-Fi/BT 模块的 M.2 插槽，以及可选的 GMSL2 摄像头支持。预装 JetPack 6，可确保机器人开发的无缝部署。其坚固设计支持宽温工作范围，并配备预装的带风扇散热片。搭建流程包括使用兼容的 Ubuntu 主机 PC 将 JetPack OS 刷写到 NVMe SSD 上，然后进行硬件配置和接口使用。文档为开发者提供了详细的硬件规格、机械图纸和技术资源，并提供社区与技术支持渠道以便排障和交流。
+description: reComputer Robotics J401 是一款为高级机器人应用设计的高性能边缘 AI 载板。它支持在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano 和 Orin NX 模块，提供高达 157 TOPS 的 AI 算力。该载板提供丰富的连接选项，包括双千兆以太网、多路 USB 3.2 接口、CAN、用于 5G/Wi-Fi/BT 模块的 M.2 插槽，以及可选的 GMSL2 摄像头支持。预装 JetPack 6，确保机器人开发的无缝部署。其坚固设计支持宽温工作范围，并配备预装的带风扇散热片。搭建流程包括使用兼容的 Ubuntu 主机电脑将 JetPack OS 刷写到 NVMe SSD 上，然后进行硬件配置和接口使用。文档为开发者提供了详细的硬件规格、机械图纸和技术资源，以及用于故障排查和讨论的社区与技术支持渠道。
 title: reComputer Robotics 入门指南
 tags:
   - J401-Robotics 载板
@@ -11,14 +11,14 @@ image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomp
 slug: /recomputer_robotics_j401_getting_started
 sku: 100071398, 114110310, 100026552
 last_update:
-  date: 08/06/2025
+  date: 10/19/2026
   author: Zibo
 createdAt: '2025-08-06'
-updatedAt: '2026-09-28'
+updatedAt: '2026-10-19'
 url: https://wiki.seeedstudio.com/cn/recomputer_robotics_j401_getting_started/
 ---
 <div style={{ textAlign: "justify" }}>
-reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专为高级机器人应用设计。它兼容在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano/Orin NX 模块，可提供高达 157 TOPS 的 AI 性能。板载丰富的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 接口、CAN、GMSL2（通过可选扩展板）、I2C 和 UART——可作为强大的机器人“大脑”，用于处理来自各类传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保系统可无缝部署。​
+reComputer Robotics J401 是一款紧凑型高性能边缘 AI 载板，专为高级机器人应用设计。兼容在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano/Orin NX 模块，可提供高达 157 TOPS 的 AI 性能。其配备丰富的连接选项——包括双千兆以太网接口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 接口、CAN、GMSL2（通过可选扩展板）、I2C 和 UART——可作为强大的机器人“大脑”，用于处理来自各类传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保无缝部署。​
 </div>
 
 <div align="center">
@@ -30,17 +30,17 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
 <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 </a></div>
 
-<!-- Buy links -->
+<!-- 购买链接 -->
 
 ## 特性
 
 - **坚固的硬件设计**：紧凑型高性能边缘 AI 计算机，搭载在 Super/MAXN 模式下运行的 NVIDIA® Jetson™ Orin™ NX 16GB 模块，提供高达 157 TOPS 的 AI 性能。
-- **面向机器人的多种接口**：包括双 RJ45、用于 5G/Wi-Fi/BT 模块的 M.2 插槽、6 路 USB 3.2、2 路 CAN、GMSL2（需额外购买）、I2C 和 UART，可作为强大的机器人“大脑”。
+- **面向机器人的多种接口**：包括双 RJ45、用于 5G/Wi-Fi/BT 模块的 M.2 插槽、6x USB 3.2、2x CAN、GMSL2（需额外购买）、I2C 和 UART，可作为强大的机器人“大脑”。
 - **软件配置**：预装 JetPack 6.2 和 Linux BSP，实现无缝部署。
 - **应用与优势**：非常适合自主机器人的快速开发，借助开箱即用的接口和优化的 AI 框架，加速产品上市时间。
 - **宽工作范围**：在 25W 模式下可在 -20°C 至 60°C 范围内可靠运行，在 40W 模式下可在 -20°C 至 50°C 范围内可靠运行。
 
-## 规格参数
+## 规格
 
 ### 载板规格
 
@@ -74,7 +74,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     <tr>
       <th rowSpan="13">I/O</th>
       <td>USB</td>
-      <td>6x USB 3.2 Type-A（5Gbps）；<br />1x USB 3.0 Type-C（Host/DP 1.4）；<br />1x USB 2.0 Type-C（Device 模式/调试）</td>
+      <td>6x USB 3.2 Type-A（5Gbps）；<br />1x USB 3.0 Type-C（Host/DP 1.4）；<br />1x USB 2.0 Type-C（设备模式/调试）</td>
     </tr>
     <tr>
       <td>摄像头</td>
@@ -106,14 +106,14 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC 2-pin；<br />1x RTC 插座</td>
+      <td>1x RTC 2 针；<br />1x RTC 插座</td>
     </tr>
     <tr>
       <td>LED</td>
       <td>3x LED（PWR、ACT 和用户 LED）</td>
     </tr>
     <tr>
-      <td>针孔按键</td>
+      <td>针孔按钮</td>
       <td>1x PWR；<br />1x RESET</td>
     </tr>
     <tr>
@@ -147,7 +147,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     </tr>
     <tr>
       <th rowSpan="1">工作温度</th>
-      <td colSpan="2">-20℃~60℃（25W 模式）；<br />-20℃~55℃（40W 模式）；<br />-20℃~50℃（MAXN 模式）；<br />（搭配 reComputer Robotics 散热片和风扇）</td>
+      <td colSpan="2">-20℃~60℃（25W 模式）；<br />-20℃~55℃（40W 模式）；<br />-20℃~50℃（MAXN 模式）；<br />（搭配 reComputer Robotics 带风扇散热片）</td>
     </tr>
     <tr>
       <th rowSpan="1">质保</th>
@@ -185,7 +185,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
 
 ### 前置准备
 
-- Ubuntu 主机 PC
+- Ubuntu 主机电脑
 - reComputer Robotics
 - NVIDIA® Jetson Orin™ Nano/NX 模块
 - USB Type-C 数据传输线
@@ -199,7 +199,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack 版本 </td>
-        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑） </td>
+        <td class="dbon" colspan="4"> Ubuntu 版本（主机电脑）</td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -230,7 +230,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
 
 ### 准备 Jetpack 镜像
 
-在这里，我们需要根据所使用的 Jetson 模块，在 Ubuntu PC 上下载对应的系统镜像：
+在这里，我们需要根据所使用的 Jetson 模块，在 Ubuntu 主机上下载对应的系统镜像：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -248,26 +248,26 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBbvOytYiQ5TpwiSraaD3npAWKrVW26hNoB5R1Kk8nOURk">Download</a></td>
-      <td>A03A986E94177FCC4841B8FC675CE11D</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBwi3AQXJiaTZiPQaKocDSkAciLsok9znKGnAPczuZ_IfY?e=S2v5QV">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>c63d1219531245abecc7bbdcafc73d34<br />f75547454c7af85de40f08396a87e5ee</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCumgxDQ7-SQ4c-zNL1Lv6fAXSGGswfK5E2RX-AQGQt_Hc">Download</a></td>
-      <td>FA6D75598A1B68CB98BA46378A43AE35</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB8NF028_DESZJ9WwSg2Q34AVCNXeZFkwJi8pbvCOcX4cI?e=Zahpfm">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>5d1f3cd28eb44ca60132c87ccce5acaf<br />806ee945b486df9061a34de73fbb582b</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAcA60i9AaiS7uPpL0EDCEYAcP_CYT1i_Uo6IXvO8hpOSQ">Download</a></td>
-      <td>021ADA2CFD34E9C876F57E50C3448B3C</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAakIBc6l2wS7qKAy-1ZeHPAbTtT8XLYaIgITvBGy8vezo?e=mPygXS">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>e7f0c8e6b578d411f81122879f92c766<br />6adfada5ed493a4cc458dc169ca8c1b7</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB-xhKB8WtjT7NNVuoLnQAGAcHwWMrE39VgAwN6zHG7E1Q">Download</a></td>
-      <td>EEC7CA6A46487F307B77A9AA24FE4B91</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBnWlTaU6nIQLDOcM2KRQM6AQ6A-ODC8DnWFKRSfW8vRmc?e=1AAVH8">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>b08cbdad8ab6e50222146d3175a9d262<br />7d499bf1d67cfaf69cc737b5bfa9e33a</td>
     </tr>
     <tr>
       <td rowSpan={4}>7.2</td>
@@ -291,7 +291,7 @@ reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAU2JC-fRK_GfqDy8ureIs1o?e=hYSAit">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAU2JC-fRK_GfqDy8ureIs1o?e=hYSAit">下载</a></td>
       <td>f09b3465e7de1032f625ae0f816a2f3c<br />fa2a470ee5fdd215840375529a8771db</td>
     </tr>
   </tbody>
@@ -305,7 +305,7 @@ JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等�
 :::info
 为了验证已下载固件的完整性，您可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与本 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
 :::
 
 ### 进入强制恢复模式
@@ -326,7 +326,7 @@ JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等�
 
 **步骤 2.** 连接电源线，为载板上电。
 
-**步骤 3.** 使用 USB Type-C 数据传输线将开发板连接到 Ubuntu 主机电脑。
+**步骤 3.** 使用 USB Type-C 数据线将开发板连接到 Ubuntu 主机电脑。
 
 **步骤 4.** 在 Linux 主机电脑上打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据您使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
 
@@ -369,7 +369,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 刷写命令可能会运行 2-10 分钟。
 :::
 
-**步骤 3：** 将 Robotics J401 连接到显示器，可使用 PD 转 HDMI 转接器连接到支持 HDMI 输入的显示器，或使用 PD 线直接连接到支持 PD 输入的显示器，并完成初始配置设置：
+**步骤 3：** 使用 PD 转 HDMI 转接器将 Robotics J401 连接到支持 HDMI 输入的显示器，或使用 PD 线直接连接到支持 PD 输入的显示器，并完成初始配置设置：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -382,7 +382,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 ## 硬件接口使用
 
 :::info
-如果您想进一步了解硬件接口的详细规格和使用方法，请参考[本 wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage)。
+如果您想进一步了解硬件接口的详细规格和使用方法，请参考[本 wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#接口使用)。
 :::
 
 ## 资源
@@ -398,7 +398,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
