@@ -8,10 +8,10 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
-  author: Michelle Huang
+  date: 10/16/2026
+  author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-28'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/
 ---
 
@@ -45,7 +45,7 @@ USB ケーブルでデバイスをコンピュータに接続します。
 
 "Flashing erase firmware:100%" と表示されたら、デバイスは正常に消去されています。
 
-<p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
 #### ファームウェア書き込み
 
@@ -133,7 +133,7 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 ### デバイスの電源オン
 
-ボタンを押して電源を入れます。LED が点灯し、下降するメロディーが鳴ります。
+ボタンを押して電源を入れます。LED が点灯し、上昇するメロディーが鳴ります。
 
 ### デバイスの電源オフ
 
@@ -330,13 +330,17 @@ python -m pip --version
 <Tabs>
 <TabItem value="pypi" label="PyPI からインストール">
 
-これは推奨される方法で、最新バージョンをインストールできます。
+これは推奨される方法です。
+
+<Tabs>
+<TabItem value="windows" label="Windows">
 
 ```
-pip3 install --user adafruit-nrfutil
+python -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
 ```
 
-インストールパスを確認します。
+`adafruit-nrfutil` が認識されない場合は、インストールパスを確認してください。
 
 ```
 python -m pip show adafruit-nrfutil
@@ -346,10 +350,41 @@ python -m pip show adafruit-nrfutil
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Windowsユーザーは、パスを手動で追加する必要がある場合があります。前のステップで表示されたインストール場所をコピーし、次のように追加します。
+パスを手動で追加する必要がある場合があります。前のステップで表示されたインストール場所をコピーし、次のように追加します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+`adafruit-nrfutil` が認識されない場合は、Python のユーザースクリプトディレクトリ（ホームディレクトリ配下の `bin`）を PATH に追加してください。
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+pipx で `adafruit-nrfutil` をインストールします。
+
+```
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
+```
+
+Fedora では、apt の代わりに `sudo dnf install pipx` を使用します。ターミナルを開き直してから、次のコマンドで確認します。
+
+```
+adafruit-nrfutil version
+```
+
+</TabItem>
+</Tabs>
 
 </TabItem>
 
@@ -374,7 +409,7 @@ python3 setup.py install
 `pip3 install` 実行時に権限エラーが発生する場合、`pip3` が古いか、システムディレクトリにインストールしようとしている可能性があります。その場合は `--user` フラグを使用してください。
 
 ```
-pip3 install -r --user requirements.txt
+pip3 install --user -r requirements.txt
 python3 setup.py install
 ```
 
@@ -429,7 +464,7 @@ COMXX を自分のCOM番号に変更してください。例えば、デバイ�
 - **その他のOSの場合**:
 
 ```
-adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>

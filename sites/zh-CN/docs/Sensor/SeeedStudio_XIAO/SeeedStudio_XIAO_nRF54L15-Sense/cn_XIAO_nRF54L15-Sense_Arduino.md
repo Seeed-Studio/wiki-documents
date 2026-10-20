@@ -1,5 +1,5 @@
 ---
-description: 本文基于开发者 lolren 为 nRF54L15 编写的 Arduino 内核开发，旨在为 XIAO nRF54L15 用户在 Arduino IDE 上进行开发提供参考教程。
+description: 本文基于开发者 lolren 为 nRF54L15 编写的 Arduino 内核开发，旨在为 XIAO nRF54L15 用户在 Arduino IDE 上开发提供参考教程。
 title: 适用于 Seeed Studio XIAO nRF54L15 的 Arduino
 keywords:
   - nRF54L15
@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_6.webp
 slug: /xiao_nrf54l15_sense_arduino
 last_update:
-  date: 4/22/2026
+  date: 10/15/2026
   author: Zeller
 createdAt: '2025-04-22'
 updatedAt: '2026-04-24'
@@ -61,13 +61,13 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_arduino/
 ### 软件
 
 :::tip
-如果这是你第一次使用 Arduino，我们强烈建议你参考[Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是你第一次使用 Arduino，我们强烈建议你参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
 - **步骤 1.** 根据你的操作系统下载并安装稳定版本的 Arduino IDE。
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
-      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong></a>
   </div>
   <br></br>
 
@@ -77,7 +77,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_arduino/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/arduino_1.png" style={{width:400, height:'auto'}}/></div><br/>
 
-  在 Additional Boards Manager URLs 字段中添加用于支持 XIAO nRF54L15 的 URL。
+  在 Additional Boards Manager URLs 字段中添加 XIAO nRF54L15 支持的 URL。
 
 ```js
 https://raw.githubusercontent.com/lolren/nrf54-arduino-core/main/package_nrf54l15clean_index.json
@@ -110,7 +110,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light3.gif" style={{width:400, height:'auto'}}/></div>
 
-## 数字接口
+## 数字 IO
 
 数字引脚是 MCU 用于读写高/低电平逻辑的接口，可以获取外部数据并控制外设。本节通过实现 LED 的开关控制和 PWM 呼吸灯效果来说明数字引脚的功能。
 
@@ -177,7 +177,7 @@ void loop() {
 
 ### 结果
 
-将 Grove – Chainable RGB LED 连接到 Seeed Studio Grove Base for XIAO 的 0 号引脚。Grove – Chainable RGB LED 将呈现闪烁和渐亮渐暗的呼吸效果。
+将 Grove – Chainable RGB LED 连接到 Seeed Studio Grove Base for XIAO 的 Pin 0。Grove – Chainable RGB LED 将呈现闪烁和渐亮渐暗的呼吸效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_2.gif" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -252,7 +252,7 @@ void loop() {
 <table align="center">
  <tr>
      <th>XIAO nRF54L15</th>
-     <th>CH340G USB 转串口 (TTL) 模块与适配器</th>
+     <th>CH340G USB 转串口（TTL）模块与适配器</th>
  </tr>
   <tr>
      <th>RX</th>
@@ -288,7 +288,7 @@ void loop() {
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO nRF54L15 Sense</th>
-     <th>Grove-旋转角度传感器</th>
+     <th>Grove-Rotary Angle Sensor </th>
      <th>Seeed Studio Grove Base for XIAO </th>
  </tr>
  <tr>
@@ -346,7 +346,7 @@ void loop() {
 
 ### 结果
 
-将 Grove-旋转角度传感器连接到 Seeed Studio Grove Base for XIAO。
+将 Grove-Rotary Angle Sensor 连接到 Seeed Studio Grove Base for XIAO。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/arduino_5.jpg" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -389,8 +389,8 @@ I2C 是一种同步串行通信协议，它通过 SCL 时钟线和 SDA 数据线
 
 ### 软件
 
-在 XIAO nRF54L15 上，D4 和 D5 分别作为 SCL 和 SDA 引脚。
-在 lolren 框架中，引脚 D4 被重定义为 **PIN_WIRE_SCL**，引脚 D5 被重定义为 **PIN_WIRE_SDA**。
+在 XIAO nRF54L15 上，D4 和 D5 分别作为 SDA 和 SCL 引脚。
+在 lolren 框架中，引脚 D4 被重新定义为 **PIN_WIRE_SCL**，引脚 D5 被重新定义为 **PIN_WIRE_SDA**。
 
 :::tip
 如果你不熟悉 XIAO nRF54L15 的引脚分布，请点击 [XIAO nRF54L15 Pin List](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#硬件概述) 查看。
@@ -428,7 +428,7 @@ void loop(void) {
 
 ## SPI
 
-SPI 是一种同步串行、全双工通信协议。它通常使用四根线——SCK 时钟、MOSI、MISO 和 CS——在主从设备之间实现高速数据传输。与 I2C 相比，SPI 具有更高的传输速率、更低的延迟以及更简单直观的通信方式。但它需要更多的引脚，每个从设备通常占用一条独立的片选线。它常用于连接 Flash 存储器、SD 卡、LCD/OLED 显示屏、ADC/DAC 模块和高速传感器等高速外设。本节通过连接一块电子纸显示屏来演示 SPI 的用法。
+SPI 是一种同步串行、全双工通信协议。它通常使用四根线——SCK 时钟、MOSI、MISO 和 CS——在主从设备之间实现高速数据传输。与 I2C 相比，SPI 具有更高的传输速率、更低的延迟以及更简单直观的通信方式。但它需要更多的引脚，每个从设备通常占用一条独立的片选线。SPI 常用于连接 Flash 存储器、SD 卡、LCD/OLED 显示屏、ADC/DAC 模块和高速传感器等高速外设。本节通过连接一块电子纸显示屏来演示 SPI 的用法。
 
 ### 硬件准备
 
@@ -558,7 +558,7 @@ void loop() {
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

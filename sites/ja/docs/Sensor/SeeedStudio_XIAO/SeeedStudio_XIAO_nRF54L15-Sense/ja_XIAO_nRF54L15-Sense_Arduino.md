@@ -1,6 +1,6 @@
 ---
 description: この記事は、開発者 lolren によって作成された nRF54L15 向け Arduino コアに基づいて作成されており、XIAO nRF54L15 ユーザーが Arduino IDE 上で開発するための参考チュートリアルを提供することを目的としています。
-title: Seeed Studio XIAO nRF54L15 向け Arduino
+title: Arduino for Seeed Studio XIAO nRF54L15
 keywords:
   - nRF54L15
   - xiao
@@ -8,18 +8,18 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_6.webp
 slug: /xiao_nrf54l15_sense_arduino
 last_update:
-  date: 4/22/2026
+  date: 10/15/2026
   author: Zeller
 createdAt: '2025-04-22'
 updatedAt: '2026-04-24'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_arduino/
 ---
 
-この記事は、Arduino プラットフォーム上での XIAO nRF54L15 Sense をベースに作成されています。
+この記事は、Arduino プラットフォーム上で XIAO nRF54L15 Sense を用いて作成されています。
 
 ## 謝辞
 
-nRF54L15 チップ向けの Arduino 対応サポートを提供してくださった開発者 **[lolren](https://github.com/lolren)** 氏に特別な感謝を表します。これにより、Arduino エコシステム上での XIAO nRF54L15 の開発と実用的な応用が可能になりました。また、関連するオープンソースエコロジー構築への継続的な取り組みと貢献にも感謝いたします。
+nRF54L15 チップ向けの Arduino 対応を提供してくださった開発者 **[lolren](https://github.com/lolren)** 氏に特別な感謝を表します。これにより、Arduino エコシステム上での XIAO nRF54L15 の開発と実用的な応用が可能になりました。また、関連するオープンソースエコロジー構築への継続的な取り組みと貢献にも感謝いたします。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/lolren/nrf54-arduino-core" target="_blank" rel="noopener noreferrer">
@@ -61,7 +61,7 @@ nRF54L15 チップ向けの Arduino 対応サポートを提供してくださ�
 ### ソフトウェア
 
 :::tip
-初めて Arduino を使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
+Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 :::
 
 - **Step 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
@@ -112,7 +112,7 @@ void loop() {
 
 ## デジタル
 
-デジタルピンは、High/Low の論理レベルを読み書きするための MCU インターフェースであり、外部データの取得や周辺機器の制御に使用されます。本セクションでは、LED のオン・オフ制御と PWM によるブリージングライト効果を実装することで、デジタルピンの機能を説明します。
+デジタルピンは、High/Low の論理レベルを読み書きするための MCU インターフェースであり、外部データの取得や周辺機器の制御を行うことができます。本セクションでは、LED のオン・オフ制御と PWM によるブリージングライト効果を実装することで、デジタルピンの機能を説明します。
 
 ### ハードウェアの準備
 
@@ -177,7 +177,7 @@ void loop() {
 
 ### 結果
 
-Grove – Chainable RGB LED を Seeed Studio Grove Base for XIAO の Pin 0 に接続します。Grove – Chainable RGB LED は点滅と徐々に暗くなるブリージング効果を示します。
+Seeed Studio Grove Base for XIAO の Pin 0 に Grove – Chainable RGB LED を接続します。Grove – Chainable RGB LED は点滅と徐々に暗くなるブリージング効果を示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_2.gif" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -214,7 +214,7 @@ XIAO nRF54L15 と CH340 デバイスを用意する必要があります。
 
 ### ソフトウェア
 
-XIAO nRF54L15 では、D6 と D7 はそれぞれ TX と RX ピンに対応しています。lolren によるピン再定義ファイルでは、D6 と D7 は **PIN_SERIAL1_RX** と **PIN_SERIAL1_TX** として定義されています。使用可能なシリアルポートは **Serial1** または **Serial2** です。
+XIAO nRF54L15 では、D6 と D7 はそれぞれ TX と RX ピンに対応しています。lolren によるピン再定義ファイルでは、D6 と D7 は **PIN_SERIAL1_RX** および **PIN_SERIAL1_TX** として定義されています。使用可能なシリアルポートは **Serial1** または **Serial2** です。
 
 :::tip
 XIAO nRF54L15 のピン配置に慣れていない場合は、[XIAO nRF54L15 Pin List](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#ハードウェア概要) をクリックして確認してください。
@@ -279,7 +279,7 @@ void loop() {
 
 ## アナログ
 
-アナログピンは、ADC を介して連続した電圧信号を読み取るために使用されます。可変抵抗器、フォトレジスタ、温度検出用サーミスタ、アナロググレースケールセンサ、赤外線センサなど、さまざまなセンサを接続できます。本セクションでは、可変抵抗ノブの調整値を読み取ることでアナログピンの機能をデモンストレーションします。
+アナログピンは、ADC を介して連続した電圧信号を読み取るために使用されます。可変抵抗器、フォトレジスタ、温度検出用サーミスタ、アナロググレースケールセンサ、赤外線センサなど、さまざまなセンサを接続できます。このセクションでは、可変抵抗ノブの調整値を読み取ることで、アナログピンの機能をデモンストレーションします。
 
 ### ハードウェアの準備
 
@@ -356,7 +356,7 @@ Grove-Rotary Angle Sensor を Seeed Studio Grove Base for XIAO に接続しま�
 
 ## I2C
 
-I2C は同期式シリアル通信プロトコルで、SCL クロックラインと SDA データラインを介してマスタデバイスとスレーブデバイス間のマルチデバイス通信を可能にします。XIAO nRF54L15 / Sense は 2 組の I2C インターフェースを提供します。本セクションでは、Expansion Board Base for XIAO 上の OLED ディスプレイを制御することで I2C の機能をデモンストレーションします。
+I2C は同期式シリアル通信プロトコルで、SCL クロックラインと SDA データラインを介して、マスタデバイスとスレーブデバイス間のマルチデバイス通信を可能にします。XIAO nRF54L15 / Sense は 2 組の I2C インターフェースを提供します。このセクションでは、Expansion Board Base for XIAO 上の OLED ディスプレイを制御することで、I2C の機能をデモンストレーションします。
 
 ### ハードウェアの準備
 
@@ -389,7 +389,7 @@ XIAO nRF54L15 Sense と、I2C インターフェースを備えたデバイス�
 
 ### ソフトウェア
 
-XIAO nRF54L15 では、D4 と D5 がそれぞれ SCL と SDA ピンとして機能します。
+XIAO nRF54L15 では、D4 と D5 がそれぞれ SDA と SCL ピンとして機能します。
 lolren フレームワークでは、ピン D4 は **PIN_WIRE_SCL**、ピン D5 は **PIN_WIRE_SDA** として再定義されています。
 
 :::tip
@@ -422,13 +422,13 @@ void loop(void) {
 
 ### 結果
 
-プログラムを書き込むと、Expansion Board Base for XIAO 上に「Hello World!」と「XIAO nRF54L15!」というフレーズが表示されます。
+プログラムを書き込むと、Expansion Board Base for XIAO 上に "Hello World!" と "XIAO nRF54L15!" の文字が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_4.jpg" style={{width:800, height:'auto'}}/></div><br/>
 
 ## SPI
 
-SPI は同期式シリアルかつフルデュプレックスの通信プロトコルです。一般的に SCK クロック、MOSI、MISO、CS の 4 本の配線を使用して、マスタデバイスとスレーブデバイス間で高速なデータ転送を実現します。I2C と比較して、SPI はより高い伝送速度、低いレイテンシ、よりシンプルで分かりやすい通信が特徴です。しかし、より多くのピンを必要とし、各スレーブデバイスは通常、独立したチップセレクトラインを占有します。Flash メモリ、SD カード、LCD/OLED ディスプレイ、ADC/DAC モジュール、高速センサなどの高速ペリフェラルの接続によく使用されます。本セクションでは、電子ペーパーディスプレイを接続することで SPI の使用方法をデモンストレーションします。
+SPI は同期式シリアルかつフルデュプレックスの通信プロトコルです。一般的に SCK クロック、MOSI、MISO、CS の 4 本の配線を使用して、マスタデバイスとスレーブデバイス間で高速なデータ転送を実現します。I2C と比較して、SPI はより高い伝送速度、低いレイテンシ、よりシンプルで分かりやすい通信が特徴です。しかし、より多くのピンを必要とし、各スレーブデバイスは通常、独立したチップセレクトラインを占有します。Flash メモリ、SD カード、LCD/OLED ディスプレイ、ADC/DAC モジュール、高速センサなどの高速ペリフェラルの接続によく使用されます。このセクションでは、電子ペーパーディスプレイを接続することで SPI の使い方をデモンストレーションします。
 
 ### ハードウェアの準備
 
@@ -544,13 +544,13 @@ void loop() {
 
 ### 結果
 
-プログラムを書き込むと、`Hello XIAO nRF54L15` が電子ペーパー画面に表示されます。
+プログラムを書き込むと、電子ペーパー画面に `Hello XIAO nRF54L15` が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## FAQ
 
-- Q1: プログラムを書き込む際に、py のパスがないというメッセージが表示されます。
+- Q1: プログラムを書き込む際に、py のパスがないというプロンプトが表示されます。
 
 - A: C:\Users\yourname\AppData\Local\Arduino15\packages\nrf54l15clean\hardware\nrf54l15clean\0.6.27\platform.txt を開きます。
   - `tools.python3.cmd.windows=py` を `tools.python3.cmd.windows=python` に変更します。
@@ -558,7 +558,7 @@ void loop() {
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

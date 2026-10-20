@@ -77,7 +77,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Course</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Beginner Course</b></div></a>
+        <a className="step-card" href="/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Beginner Course</b></div></a>
         <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>DLI Course: Sim-to-Real VLA Pipeline</b></div></a>
       </div>
     </div>
@@ -127,7 +127,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Course</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Beginner Course</b></div></a>
+        <a className="step-card" href="/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Beginner Course</b></div></a>
       </div>
     </div>
     <div className="learning-group">

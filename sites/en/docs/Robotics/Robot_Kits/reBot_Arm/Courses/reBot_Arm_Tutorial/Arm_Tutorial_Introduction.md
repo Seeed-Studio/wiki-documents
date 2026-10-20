@@ -11,7 +11,7 @@ keywords:
   - Course
   - Tutorial
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_introduction
+slug: /robotics/rebot_physical_ai_course_introduction
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -20,7 +20,7 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-10-09'
-url: https://wiki.seeedstudio.com/rebot_physical_ai_course_introduction/
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_introduction/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -104,7 +104,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
 ### Stage 1: Basic Concepts and Equipment Preparation
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_1">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_1">
     <span className="course-index">1</span>
     <div className="course-path-copy">
       <strong>Getting to Know Robots and Physical AI</strong>
@@ -112,7 +112,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_2">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_2">
     <span className="course-index">2</span>
     <div className="course-path-copy">
       <strong>Getting to Know reBot Arm Hardware and the Open-Source Project</strong>
@@ -120,7 +120,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory &amp; Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_3">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_3">
     <span className="course-index">3</span>
     <div className="course-path-copy">
       <strong>Hardware Selection for Subsequent Courses</strong>
@@ -133,7 +133,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
 ### Stage 2: Robotic Arm Assembly and Basic Control
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_4">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_4">
     <span className="course-index">4</span>
     <div className="course-path-copy">
       <strong>Fundamentals of Robotic Arms and Joint Actuators</strong>
@@ -141,7 +141,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_5">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_5">
     <span className="course-index">5</span>
     <div className="course-path-copy">
       <strong>CAN Bus and Motor Communication</strong>
@@ -149,7 +149,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_6">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_6">
     <span className="course-index">6</span>
     <div className="course-path-copy">
       <strong>Assembly, Power Supply, and First Power-On</strong>
@@ -157,7 +157,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_7">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_7">
     <span className="course-index">7</span>
     <div className="course-path-copy">
       <strong>MotorBridge Motor Control Library</strong>
@@ -165,7 +165,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_8">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_8">
     <span className="course-index">8</span>
     <div className="course-path-copy">
       <strong>Controlling reBot Arm Using Python SDK</strong>
@@ -178,7 +178,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
 ### Stage 3: Imitation Learning and LeRobot
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_9">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_9">
     <span className="course-index">9</span>
     <div className="course-path-copy">
       <strong>Foundations of Robot Learning and Imitation Learning</strong>
@@ -186,7 +186,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory &amp; Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_10">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_10">
     <span className="course-index">10</span>
     <div className="course-path-copy">
       <strong>LeRobot and reBot Arm System Architecture</strong>
@@ -194,7 +194,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_11">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_11">
     <span className="course-index">11</span>
     <div className="course-path-copy">
       <strong>Leader and Follower Calibration and Teleoperation</strong>
@@ -202,7 +202,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_12">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_12">
     <span className="course-index">12</span>
     <div className="course-path-copy">
       <strong>Robot Datasets and Task Design</strong>
@@ -210,7 +210,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_13">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_13">
     <span className="course-index">13</span>
     <div className="course-path-copy">
       <strong>Camera Configuration and LeRobot Data Collection</strong>
@@ -218,7 +218,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_14">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_14">
     <span className="course-index">14</span>
     <div className="course-path-copy">
       <strong>Dataset Structure and Quality Inspection</strong>
@@ -226,7 +226,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory &amp; Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_15">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_15">
     <span className="course-index">15</span>
     <div className="course-path-copy">
       <strong>ACT Model and Action Chunking</strong>
@@ -234,7 +234,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_16">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_16">
     <span className="course-index">16</span>
     <div className="course-path-copy">
       <strong>Training Your First ACT Policy</strong>
@@ -242,7 +242,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_17">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_17">
     <span className="course-index">17</span>
     <div className="course-path-copy">
       <strong>Real-Robot Inference, Evaluation, and Data Iteration</strong>
@@ -255,7 +255,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
 ### Stage 4: VLA and Isaac GR00T
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_18">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_18">
     <span className="course-index">18</span>
     <div className="course-path-copy">
       <strong>Multimodal Learning and VLA Basics</strong>
@@ -263,7 +263,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_19">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_19">
     <span className="course-index">19</span>
     <div className="course-path-copy">
       <strong>Robot Embodiment and GR00T System Architecture</strong>
@@ -271,7 +271,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_20">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_20">
     <span className="course-index">20</span>
     <div className="course-path-copy">
       <strong>Preparing the reBot VLA Dataset</strong>
@@ -279,7 +279,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_21">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_21">
     <span className="course-index">21</span>
     <div className="course-path-copy">
       <strong>Fine-tuning the reBot Arm with Isaac GR00T</strong>
@@ -287,7 +287,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_22">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_22">
     <span className="course-index">22</span>
     <div className="course-path-copy">
       <strong>GR00T Inference and Real-Robot Deployment</strong>
@@ -300,7 +300,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
 ### Stage 5: Robot Arm Mathematics and Motion Control
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_23">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_23">
     <span className="course-index">23</span>
     <div className="course-path-copy">
       <strong>Robot Arm Mathematical Foundations and Coordinate Systems</strong>
@@ -308,7 +308,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_24">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_24">
     <span className="course-index">24</span>
     <div className="course-path-copy">
       <strong>Forward Kinematics, Inverse Kinematics, and the Jacobian</strong>
@@ -316,7 +316,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_25">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_25">
     <span className="course-index">25</span>
     <div className="course-path-copy">
       <strong>Trajectory Planning and Robot Arm Control</strong>
@@ -324,7 +324,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_26">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_26">
     <span className="course-index">26</span>
     <div className="course-path-copy">
       <strong>Pinocchio and MeshCat</strong>
@@ -337,7 +337,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
 ### Stage 6: Robot Vision and Autonomous Grasping
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_27">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_27">
     <span className="course-index">27</span>
     <div className="course-path-copy">
       <strong>Robot Vision and 3D Perception</strong>
@@ -345,7 +345,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_28">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_28">
     <span className="course-index">28</span>
     <div className="course-path-copy">
       <strong>Object Detection and Hand-Eye Calibration</strong>
@@ -353,7 +353,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_29">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_29">
     <span className="course-index">29</span>
     <div className="course-path-copy">
       <strong>reBot Arm Autonomous Visual Grasping</strong>
@@ -361,7 +361,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_30">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_30">
     <span className="course-index">30</span>
     <div className="course-path-copy">
       <strong>Voice and Multimodal Interaction</strong>
@@ -374,7 +374,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
 ### Stage 7: ROS2 and Robot System Integration
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_31">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_31">
     <span className="course-index">31</span>
     <div className="course-path-copy">
       <strong>ROS2 Communication and Robot Software Architecture</strong>
@@ -382,7 +382,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_32">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_32">
     <span className="course-index">32</span>
     <div className="course-path-copy">
       <strong>URDF, TF, and Robot Models</strong>
@@ -390,7 +390,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_33">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_33">
     <span className="course-index">33</span>
     <div className="course-path-copy">
       <strong>reBot Arm ROS2 Integration</strong>
@@ -398,7 +398,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_34">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_34">
     <span className="course-index">34</span>
     <div className="course-path-copy">
       <strong>MoveIt2 Motion Planning</strong>
@@ -411,7 +411,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
 ### Stage 8: MuJoCo and Isaac Sim Robot Arm Simulation
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_35">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_35">
     <span className="course-index">35</span>
     <div className="course-path-copy">
       <strong>Robot Simulation Basics and Platform Introduction</strong>
@@ -419,7 +419,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_36">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_36">
     <span className="course-index">36</span>
     <div className="course-path-copy">
       <strong>Running the reBot Arm in MuJoCo</strong>
@@ -427,7 +427,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_37">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_37">
     <span className="course-index">37</span>
     <div className="course-path-copy">
       <strong>Kinematics and Trajectory Control in MuJoCo</strong>
@@ -435,7 +435,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Theory &amp; Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_38">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_38">
     <span className="course-index">38</span>
     <div className="course-path-copy">
       <strong>Running the reBot Arm in Isaac Sim</strong>
@@ -443,7 +443,7 @@ This course uses the reBot Arm B601-DM and B601-RS as practical platforms, combi
     </div>
     <span className="course-tag">Practice</span>
   </a>
-  <a className="course-path-item" href="/rebot_physical_ai_course_chapter_39">
+  <a className="course-path-item" href="/robotics/rebot_physical_ai_course_chapter_39">
     <span className="course-index">39</span>
     <div className="course-path-copy">
       <strong>Synchronizing the Real and Simulated Arms</strong>

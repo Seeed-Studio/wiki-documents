@@ -8,10 +8,10 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
-  author: Michelle Huang
+  date: 10/16/2026
+  author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-28'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 ---
 
@@ -45,7 +45,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 如果你看到 "Flashing erase firmware:100%"，说明设备已成功擦除。
 
-<p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
 #### 烧录固件
 
@@ -133,7 +133,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 
 ### 启动设备
 
-按下按键开机。LED 会亮起，并播放一个下降的提示音。
+按下按键开机。LED 会亮起，并播放一个上升的提示音。
 
 ### 关闭设备
 
@@ -330,13 +330,17 @@ python -m pip --version
 <Tabs>
 <TabItem value="pypi" label="通过 PyPI 安装">
 
-这是推荐的方法，用于安装最新版本：
+这是推荐的方法。
+
+<Tabs>
+<TabItem value="windows" label="Windows">
 
 ```
-pip3 install --user adafruit-nrfutil
+python -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
 ```
 
-检查安装路径：
+如果无法识别 `adafruit-nrfutil`，请检查安装路径：
 
 ```
 python -m pip show adafruit-nrfutil
@@ -346,10 +350,41 @@ python -m pip show adafruit-nrfutil
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-对于 Windows 用户，你可能需要手动添加路径。复制上一步显示的安装位置，然后按如下方式添加：
+你可能需要手动添加路径。复制上一步显示的安装位置，然后按如下方式添加：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+如果无法识别 `adafruit-nrfutil`，请将 Python 用户脚本目录（主目录下的 `bin`）添加到 PATH。
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+使用 pipx 安装 `adafruit-nrfutil`：
+
+```
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
+```
+
+在 Fedora 上，请使用 `sudo dnf install pipx` 代替 apt。重新打开终端，然后验证：
+
+```
+adafruit-nrfutil version
+```
+
+</TabItem>
+</Tabs>
 
 </TabItem>
 
@@ -374,7 +409,7 @@ python3 setup.py install
 如果在运行 `pip3 install` 时遇到权限错误，说明你的 `pip3` 版本较旧或被设置为尝试安装到系统目录。这种情况下请使用 `--user` 参数：
 
 ```
-pip3 install -r --user requirements.txt
+pip3 install --user -r requirements.txt
 python3 setup.py install
 ```
 
@@ -429,7 +464,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 - **对于其他系统**：
 
 ```
-adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>

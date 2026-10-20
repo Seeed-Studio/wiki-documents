@@ -862,6 +862,30 @@ lerobot-teleoperate \
 ```
 
 </TabItem>
+
+<TabItem value="camera-mount" label="Soporte de cámara">
+
+**Instalación del soporte de cámara**
+
+Fija la posición de la cámara para una recopilación de datos limpia. Admite ajuste libre de múltiples ángulos, incluidas las vistas superior + muñeca y superior + lateral. Compatible con cámaras USB normales y cámaras de profundidad como D435i, D405 y Gemini 2. Admite brazos robóticos SO-ARM101 y reBot. Se puede usar con la caja de experimentos de recopilación de datos y reutilizar conjuntos de datos y modelos descargados listos para usar.
+
+<div class="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/2r3tvA7oJ_c" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10&reBot-B601-p-7003.html" target="_blank" rel="noopener noreferrer">
+    <span>Comprar ahora</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
+</TabItem>
 </Tabs>
 
 ## Recopilación de conjuntos de datos
