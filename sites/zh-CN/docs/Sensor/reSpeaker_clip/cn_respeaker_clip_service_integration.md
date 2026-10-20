@@ -1,5 +1,5 @@
 ---
-description: 通过设备适配器、应用生命周期管理、API 路由和适用于生产环境的状态处理，将 reSpeaker Clip 集成到现有的 Python 服务中。
+description: 通过设备适配器、应用生命周期管理、API 路由以及适用于生产环境的状态处理，将 reSpeaker Clip 集成到现有的 Python 服务中。
 title: 将 reSpeaker Clip 集成到你的服务中
 keywords:
   - reSpeaker Clip
@@ -21,11 +21,11 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_service_integration/
 
 # 将 reSpeaker Clip 集成到你的服务中
 
-本指南展示如何将 reSpeaker Clip 作为受管音频源添加到现有的 Python 服务中。它聚焦于集成边界：一个设备适配器、一个长连接、一个小的 API 表面，以及清晰的状态归属。
+本指南展示如何将 reSpeaker Clip 作为受管音频源添加到现有的 Python 服务中。它聚焦于集成边界：一个设备适配器、一个长连接、小而清晰的 API 表面，以及明确的状态归属。
 
-> **reSpeaker Clip 是一个输入源。** `ClipClient` 负责设备通信，`ClipService` 将其适配到你的应用，而你的服务继续拥有处理和业务逻辑的所有权。
+> **reSpeaker Clip 是一个输入源。** `ClipClient` 负责设备通信，`ClipService` 将其适配到你的应用中，而你的服务继续拥有处理和业务逻辑的所有权。
 
-关于传输配置、完整的 `ClipClient` API、AT 命令和文件传输协议，请参阅 [reSpeaker Clip Basic SDK Guide](/cn/respeaker_clip_basic_sdk_guide)。本页不会重新解释 BLE/GATT、帧格式、CRC 处理或 CLI 工具。
+关于传输配置、完整的 `ClipClient` API、AT 命令以及文件传输协议，请参阅 [reSpeaker Clip Basic SDK Guide](/cn/respeaker_clip_basic_sdk_guide)。本页不会重新解释 BLE/GATT、帧格式、CRC 处理或 CLI 工具。
 
 ## 集成方法
 
@@ -40,14 +40,14 @@ url: https://wiki.seeedstudio.com/cn/respeaker_clip_service_integration/
 
 ## 开始之前
 
-本指南假设你已经可以在自己的机器上与一个 Clip 通信。在继续之前，请确保你可以：
+本指南假设你已经可以在自己的机器上与 Clip 通信。在继续之前，请确保你可以：
 
 - 安装 reSpeaker Clip Python SDK 并连接到一个 Clip；
 - 启动和停止一次录音；
 - 列出已完成的会话；
 - 成功下载一段录音。
 
-如果上述任一项失败，请先暂停，并完成 [reSpeaker Clip Basic SDK Guide](/cn/respeaker_clip_basic_sdk_guide)。Basic SDK Guide 是传输配置、设备命令和文件传输细节的权威来源；本指南通过链接引用它，而不是重复内容。
+如果上述任一项失败，请先暂停，完成 [reSpeaker Clip Basic SDK Guide](/cn/respeaker_clip_basic_sdk_guide)。Basic SDK Guide 是传输配置、设备命令和文件传输细节的权威来源；本指南通过链接引用它，而不是重复内容。
 
 ## 选择合适的 reSpeaker Clip 指南
 
@@ -55,80 +55,84 @@ reSpeaker Clip 文档按开发层次组织。先从 **Getting Started** 开始�
 
 <div className="row">
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_58]      href="/cn/respeaker_clip/"
+    <a
+      href="/cn/respeaker_clip/"
       aria-label="Open the reSpeaker Clip Getting Started guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-    <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
         alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>产品概览、硬件设置和首次使用工作流。</p>
-        </div>
-      </a>
-    </div>
+      </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-  <a [LINE_77]      href="/cn/respeaker_clip_basic_sdk_guide/"
-    aria-label="Open the reSpeaker Clip Basic SDK guide"
+    <a
+      href="/cn/respeaker_clip_basic_sdk_guide/"
+      aria-label="Open the reSpeaker Clip Basic SDK guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-    src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
-      alt=""
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+        alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>在不更改固件的情况下控制设备、管理录音并下载音频。</p>
-        </div>
-        </a>
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>在不更改固件的情况下控制设备、管理录音并下载音频。</p>
       </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_96]      href="/cn/respeaker_clip_service_integration/"
-  aria-label="Open the reSpeaker Clip Service Integration guide"
-    aria-current="page"
+    <a
+      href="/cn/respeaker_clip_service_integration/"
+      aria-label="Open the reSpeaker Clip Service Integration guide"
+      aria-current="page"
       className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
-    alt=""
-      style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
-        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>通过适配器和 API 路由，将 reSpeaker Clip 添加到一个长时间运行的 Python 服务中。</p>
-      </div>
-        </a>
-        </div>
-
-    <div className="col col--6 margin-bottom--lg">
-  <a [LINE_116]      href="/cn/respeaker_clip_firmware_quick_start/"
-      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
-  className="card shadow--md respeaker-clip-nav-card"
-    style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-      <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
-      alt=""
-    style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
       />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+      <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>通过适配器和 API 路由，将 reSpeaker Clip 添加到一个长时间运行的 Python 服务中。</p>
+      </div>
+    </a>
+  </div>
+
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/cn/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%'}}>
         <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>构建、烧录、调试并自定义设备端行为。</p>
       </div>
-      </a>
-        </div>
-        </div>
+    </a>
+  </div>
+</div>
 
-    ## 将 reSpeaker Clip 作为音频源添加到你的现有服务中
+## 将 reSpeaker Clip 作为音频源添加到你的现有服务中
 
 按照以下步骤，将设备适配器连接到现有的 FastAPI 服务。
 
@@ -136,51 +140,47 @@ reSpeaker Clip 文档按开发层次组织。先从 **Getting Started** 开始�
 
 假设你的服务已经有一个接收音频文件的函数：
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```python
-
+async def process_audio(path: Path) -> dict:
     # your existing processing pipeline
-
+    ...
 ```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+
+现有的上传路由已经调用了该函数：
+
 ```python
 @app.post("/audio")
-
+async def upload_audio(file: UploadFile):
     path = await save_upload(file)
-
+    return await process_audio(path)
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+Clip 集成应生成一个普通的本地音频文件，并调用相同的 `process_audio()` 函数。处理流程应与音频采集设备保持独立。
 
+将该函数封装到 Clip 数据摄取路由所使用的服务对象中：
 
+```python
 # audio_service.py
 from pathlib import Path
 
 
-
+class AudioService:
     def __init__(self, recordings_dir: Path):
         self.recordings_dir = recordings_dir
         self.recordings_dir.mkdir(parents=True, exist_ok=True)
 
     async def process(self, path: Path) -> dict:
-
+        return await process_audio(path)
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+### 步骤 2：构建适配器
 
+仅封装此集成所需的操作：连接、断开连接、开始、停止和下载。
+
+```python
 # clip_service.py
-
-
+from __future__ import annotations
+from pathlib import Path
 
 from clip import ClipClient, ClipError
 
@@ -196,7 +196,7 @@ class ClipStateError(Exception):
 class ClipService:
     """Application-level adapter over a single long-lived ClipClient."""
 
-
+    def __init__(self, transport, *, command_timeout: float = 10.0):
         self._client = ClipClient(transport, command_timeout=command_timeout)
         self._connected = False
         self._active_session: str | None = None
@@ -205,7 +205,7 @@ class ClipService:
         await self._client.connect()
         self._connected = True
 
-
+    async def disconnect(self) -> None:
         if self._connected:
             await self._client.disconnect()
             self._connected = False
@@ -219,7 +219,7 @@ class ClipService:
             session_id = await self._client.start_recording(mode)
         except ClipError as exc:
             raise ClipUnavailable("Clip could not start recording") from exc
-
+        if not session_id:
             raise ClipStateError("Clip did not return a session id")
         self._active_session = session_id
         return session_id
@@ -232,7 +232,7 @@ class ClipService:
         session_id = self._active_session
         try:
             await self._client.stop_recording()
-
+        except ClipError as exc:
             raise ClipUnavailable("Clip could not stop recording") from exc
         self._active_session = None
         return session_id
@@ -252,7 +252,7 @@ class ClipService:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_service_lifecycle_v2.png" alt="Service lifecycle for reSpeaker Clip integration" width={900} height="auto" /></p>
 
-将连接绑定到 FastAPI 的 lifespan，这样它在启动时打开一次，在停止时关闭一次：
+将连接绑定到 FastAPI 的 lifespan，这样它会在启动时打开一次，在停止时关闭一次：
 
 ```python
 # main.py
@@ -284,7 +284,7 @@ app = FastAPI(lifespan=lifespan)
 
 ### 步骤 4：添加路由
 
-为开始、停止以及接收完整录音创建端点：
+为开始、停止以及摄取已完成录音创建端点：
 
 ```http
 POST /clip/recordings/start
@@ -363,9 +363,9 @@ curl -X POST "http://localhost:8000/clip/recordings/stop"
 curl -X POST "http://localhost:8000/clip/sessions/<session_id>/ingest"
 ```
 
-开始和停止的响应应包含相同的 `session_id`。接收（ingest）响应应包含由你现有的 `AudioService` 流水线返回的文件。
+开始和停止的响应应包含相同的 `session_id`。摄取的响应应包含由你现有的 `AudioService` 流水线返回的文件。
 
-## BLE 断开和命令超时恢复
+## BLE 断连与命令超时恢复 {#ble-disconnect-and-command-timeout-recovery}
 
 上面的适配器只覆盖了正常路径。一个长时间运行的服务还必须处理两种故障：
 
@@ -384,7 +384,7 @@ curl -X POST "http://localhost:8000/clip/sessions/<session_id>/ingest"
 - **优雅关闭**：在关闭客户端之前取消并等待后台任务完成；关闭后不会再调度重连。
 - **仅使用公共 API**：掉线检测使用 `ClipClient.is_connected`；恢复使用 `ClipClient.status()`。不添加新的 SDK API。
 
-> **BLE 订阅清理。** 当前 SDK 的 `BleTransport.disconnect()` 在链路已断开时会跳过底层 Bleak 客户端，因此 BlueZ 会保留该客户端的通知订阅。随后使用同一个 transport 对象重连时，每条通知都会被投递两次（包括命令响应和文件帧），下载会因 `received FILE_START before previous file ended` 而失败。参考实现中的 `_close_link()` 在 transport 断开之后调用底层客户端的公共 `disconnect()` 来释放订阅。UDP 传输不受影响。
+> **BLE 订阅清理。** 当前 SDK 的 `BleTransport.disconnect()` 在链路已断开时会跳过底层 Bleak 客户端，因此 BlueZ 会保留该客户端的通知订阅。随后使用同一个传输对象重连时，每条通知都会被投递两次（包括命令响应和文件帧），下载会因 `received FILE_START before previous file ended` 而失败。参考实现中的 `_close_link()` 在传输层断开之后调用底层客户端的公共 `disconnect()` 来释放订阅。UDP 传输不受影响。
 
 > **启动竞态。** 固件可以在音频线程发布会话 ID 之前，用 `ok` 和空的 `data` 来响应 `AT+START`。`start_recording()` 会轮询 `status()` 以获取该 ID，而不是把正在进行的录音视为启动失败。
 
@@ -738,33 +738,33 @@ class ClipService:
             self._active_session = None
 ```
 
-应用代码和路由无需更改：`ClipService(transport)` 的调用形式保持不变。初始连接期间的失败仍然会向外传播；后台恢复仅覆盖服务成功启动之后发生的中断。
+应用代码和路由无需更改：`ClipService(transport)` 的调用形式保持不变。初始连接期间的失败仍然会向外传播；后台恢复仅覆盖服务成功启动之后发生的掉线。
 
 ### 验证
 
 下面的行为已在一台通过 BLE 连接的物理 Clip 上完成验证：
 
-- **链路丢失**：在从主机强制断开 BLE 连接后，后台任务会在下一次健康检查周期中检测到并重新连接；恢复后命令可以正常工作。
-- **命令超时**：在注入一次 `CommandTimeoutError` 后，旧连接会被关闭，失败的命令会重新执行一次，并且适配器会恢复。
+- **链路丢失**：在从主机强制断开 BLE 连接后，后台任务会在下一次健康检查周期中检测到该断开并重新连接；恢复后命令可以正常工作。
+- **命令超时**：在注入一次 `CommandTimeoutError` 后，旧链路会被关闭，失败的命令只执行一次，并且适配器会恢复。
 - **退避序列**：连续连接失败时会依次等待 1、2、4、8、16、30 和 30 秒；一旦成功，等待时间会重置为 1 秒。
-- **录音恢复**：设备在中断期间会持续录音；重连后 `_active_session` 会通过 `status()` 恢复。当设备空闲时，本地会话状态会被清除。
-- **并发性**：在重连期间，业务请求会快速失败并返回 `ClipUnavailable`（映射为 `503`），而不是一直等待。连接锁可以防止命令跨越连接或断开过程。
+- **录音恢复**：设备在掉线期间会持续录音；重连后 `_active_session` 会通过 `status()` 恢复。当设备空闲时，本地会话状态会被清除。
+- **并发性**：在重连期间，业务请求会以 `ClipUnavailable` 快速失败（映射为 `503`），而不是一直等待。连接锁可以防止命令跨越连接或断开过程。
 - **关闭**：后台任务退出后，不会再调度新的重连尝试。
 - **恢复后的下载**：在重连后下载的会话可以通过长度和 CRC32 校验。
 
-## 长时间运行服务的生产环境注意事项
+## 长时间运行服务的生产注意事项
 
-当集成以服务形式运行时，请保持连接、错误和工作流状态的显式管理。
+当集成以服务形式运行时，请保持连接、错误和工作流状态是显式的。
 
 ### 适配器边界
 
-将所有 `ClipClient` 调用都放在 `ClipService` 内部。适配器负责连接访问、录音命令、下载以及 SDK 错误翻译；它不负责处理、存储或其他业务逻辑。
+将所有 `ClipClient` 调用保持在 `ClipService` 内部。适配器拥有连接访问、录音命令、下载以及 SDK 错误转换；它不负责处理、存储或其他业务逻辑。
 
-适配器之上的代码应使用诸如 `session_id` 和应用异常等应用层概念，而不是传输层、AT 命令或文件传输的细节。
+适配器之上的代码应使用诸如 `session_id` 和应用异常等应用概念，而不是传输、AT 命令或文件传输等细节。
 
 ### 客户端复用
 
-将一个物理 Clip 映射为一个长生命周期的 `ClipClient` 和一个 `ClipService`。由于固件没有请求 ID，`ClipClient` 会串行化命令。对于多个设备，在 `ClipManager` 中按设备 ID 为各个 `ClipService` 实例建立键值映射。
+将一个物理 Clip 映射到一个长生命周期的 `ClipClient` 和一个 `ClipService`。由于固件没有请求 ID，`ClipClient` 会串行化命令。对于多个设备，在 `ClipManager` 中按设备 ID 为 `ClipService` 实例建立键。
 
 ### 连接生命周期
 
@@ -778,13 +778,13 @@ async def start():
         await clip.start_recording()
 ```
 
-这会在每次调用时重新连接，并在请求之间丢失活动会话。连接应由应用生命周期持有；各个请求复用该连接。
+这会在每次调用时重新连接，并在请求之间丢失活动会话。应用的生命周期拥有连接；请求只是复用它。
 
 ### 错误边界
 
-在 `ClipService` 内部将 SDK 异常转换为应用异常，然后在路由边界将其映射为 HTTP 响应。
+在 `ClipService` 内部将 SDK 异常转换为应用异常，然后在路由边界将它们映射到 HTTP 响应。
 
-一个简单的映射示例（用于说明，不是 SDK 强制要求）：
+一个简单的映射示例（用于说明，而非 SDK 强制要求）：
 
 | 应用条件 | HTTP 状态码 |
 | --- | --- |
@@ -793,21 +793,21 @@ async def start():
 | 设备命令失败 | `502` |
 | 客户端请求错误 | `400` |
 
-具体状态码取决于应用本身。适配器之外的代码应依赖 `ClipUnavailable` 和 `ClipStateError`，而不是 SDK 异常。
+具体状态码取决于应用。适配器之外的代码应依赖 `ClipUnavailable` 和 `ClipStateError`，而不是 SDK 异常。
 
-### 重连
+### 重新连接
 
-在发生设备错误时，将设备标记为不可用，并重新连接或重新创建传输层。命令超时要求在下一条命令之前完成重连，因为传输层已无法再关联响应。将失败暴露为 `ClipUnavailable`，然后从后台任务或下一次请求中执行重连。完整实现（包含连接锁、后台健康检查、指数退避和会话恢复）参见 [BLE 断连和命令超时恢复](#BLE-断连和命令超时恢复)。
+在发生设备错误时，将设备标记为不可用，并重新连接或重新创建传输层。命令超时需要在下一条命令之前重新连接，因为传输层无法再关联响应。将故障暴露为 `ClipUnavailable`，然后从后台任务或下一次请求中重新连接。完整实现（包含连接锁、后台健康检查、指数退避和会话恢复）请参见 [BLE 断连与命令超时恢复](#ble-disconnect-and-command-timeout-recovery)。
 
 ### 幂等性
 
-HTTP 重试、工作进程重试和重启可能会多次提交同一个 `session_id`。在处理之前检查持久化状态。
+HTTP 重试、工作进程重试和重启可能会多次提交相同的 `session_id`。在处理之前检查持久化状态。
 
 在数据库中跟踪每个会话：
 
 | `session_id` | `downloaded` | `processed` | `result_id` | `created_at` |
 | --- | --- | --- | --- | --- |
-| 唯一设备会话 | 下载状态 | 流水线状态 | 结果引用 | 首次接收时间 |
+| 唯一设备会话 | 下载状态 | 流水线状态 | 结果引用 | 首次摄取时间 |
 
 ```python
 async def ingest_clip_session(session_id: str):
@@ -826,25 +826,25 @@ async def ingest_clip_session(session_id: str):
 
 ### 状态归属
 
-将设备状态与工作流状态分离：
+将设备状态与工作流状态分开：
 
 | 状态 | 所有者 | 示例值 |
 | --- | --- | --- |
 | Clip 状态 | 设备集成层（`ClipService`） | 已连接、录音中、会话可用、可下载 |
-| 工作流状态 | 应用/作业层 | 导入中、处理中、已完成、失败 |
+| 工作流状态 | 应用/作业层 | 摄取中、处理中、已完成、失败 |
 
 不要将这两个状态机折叠到一个字段中。会话在其应用工作流仍在运行时就可以被下载。
 
 ## 后续步骤
 
-在适配器工作正常之后，请继续将设备集成与任何应用特定的处理逻辑分离。相关页面：
+在适配器工作之后，继续将设备集成与任何特定于应用的处理分离。相关页面：
 
 - [reSpeaker Clip Basic SDK Guide](/cn/respeaker_clip_basic_sdk_guide) — 设备协议、`ClipClient` API、BLE/UDP 传输、文件传输
 - [Getting Started with the reSpeaker Clip Firmware SDK](/cn/respeaker_clip_firmware_quick_start) — 当你需要修改设备端固件而不是集成 SDK 时
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -3,8 +3,8 @@ description: Integra reSpeaker Clip en un servicio de Python existente con un ad
 title: Integra reSpeaker Clip en tu servicio
 keywords:
   - reSpeaker Clip
-  - integración de servicios
-  - servicio de Python
+  - integración de servicio
+  - servicio Python
   - FastAPI
   - fuente de audio
   - adaptador de dispositivo
@@ -23,7 +23,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_clip_service_integration/
 
 Esta guía muestra cómo añadir reSpeaker Clip como una fuente de audio gestionada a un servicio de Python existente. Se centra en el límite de integración: un adaptador de dispositivo, una conexión de larga duración, una pequeña superficie de API y una propiedad de estado clara.
 
-> **reSpeaker Clip es una fuente de entrada.** `ClipClient` gestiona la comunicación con el dispositivo, `ClipService` lo adapta a tu aplicación y tu servicio mantiene la propiedad del procesamiento y la lógica de negocio.
+> **reSpeaker Clip es una fuente de entrada.** `ClipClient` gestiona la comunicación con el dispositivo, `ClipService` la adapta a tu aplicación y tu servicio mantiene la propiedad del procesamiento y la lógica de negocio.
 
 Para la configuración del transporte, la API completa de `ClipClient`, los comandos AT y el protocolo de transferencia de archivos, consulta la [Guía básica del SDK de reSpeaker Clip](/es/respeaker_clip_basic_sdk_guide). Esta página no vuelve a explicar BLE/GATT, formatos de trama, manejo de CRC ni herramientas de CLI.
 
@@ -35,8 +35,8 @@ Mantén el dispositivo detrás de un adaptador estrecho y envía las grabaciones
 
 1. Crea un `ClipService` para cada dispositivo físico.
 2. Conéctalo durante el arranque de la aplicación y desconéctalo durante el apagado.
-3. Expón solo las operaciones de grabación que tu servicio necesita.
-4. Pasa los archivos de audio completados al flujo de procesamiento existente.
+3. Expón solo las operaciones de grabación que tu servicio necesite.
+4. Pasa los archivos de audio completados a la canalización de procesamiento existente.
 
 ## Antes de empezar
 
@@ -47,140 +47,140 @@ Esta guía asume que ya puedes comunicarte con un Clip en tu propia máquina. An
 - listar sesiones completadas;
 - descargar una grabación correctamente.
 
-Si alguna de estas acciones falla, detente aquí y completa primero la [Guía básica del SDK de reSpeaker Clip](/es/respeaker_clip_basic_sdk_guide). La Guía básica del SDK es la fuente de referencia para la configuración del transporte, los comandos del dispositivo y los detalles de la transferencia de archivos; esta guía se enlaza a ella en lugar de repetirla.
+Si cualquiera de estos pasos falla, detente aquí y completa primero la [Guía básica del SDK de reSpeaker Clip](/es/respeaker_clip_basic_sdk_guide). La Guía básica del SDK es la fuente de referencia para la configuración del transporte, los comandos del dispositivo y los detalles de la transferencia de archivos; esta guía se enlaza a ella en lugar de repetirla.
 
 ## Elige la guía adecuada de reSpeaker Clip
 
-La documentación de reSpeaker Clip está organizada por capa de desarrollo. Comienza con **Getting Started** para la configuración del producto y los flujos de trabajo normales. Usa el **Basic SDK** cuando una aplicación host necesite controlar el dispositivo o descargar grabaciones. Continúa con **Service Integration** cuando un servicio de larga duración necesite poseer la conexión con el dispositivo y exponer APIs. Usa el **Firmware SDK** solo cuando necesites cambiar el comportamiento en el lado del dispositivo, los protocolos o el procesamiento de audio.
+La documentación de reSpeaker Clip está organizada por capa de desarrollo. Comienza con **Getting Started** para la configuración del producto y los flujos de trabajo normales. Usa el **Basic SDK** cuando una aplicación host necesite controlar el dispositivo o descargar grabaciones. Continúa con **Service Integration** cuando un servicio de larga ejecución necesite poseer la conexión del dispositivo y exponer APIs. Usa el **Firmware SDK** solo cuando necesites cambiar el comportamiento del lado del dispositivo, los protocolos o el procesamiento de audio.
 
 <div className="row">
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_58]      href="/es/respeaker_clip/"
+    <a
+      href="/es/respeaker_clip/"
       aria-label="Open the reSpeaker Clip Getting Started guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-    <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_getting_started.png"
         alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
+      />
       <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Getting Started</h3>
         <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Descripción general del producto, configuración de hardware y flujos de primera utilización.</p>
-        </div>
-      </a>
-    </div>
+      </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-  <a [LINE_77]      href="/es/respeaker_clip_basic_sdk_guide/"
-    aria-label="Open the reSpeaker Clip Basic SDK guide"
+    <a
+      href="/es/respeaker_clip_basic_sdk_guide/"
+      aria-label="Open the reSpeaker Clip Basic SDK guide"
       className="card shadow--md respeaker-clip-nav-card"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-    src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
-      alt=""
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_basic_sdk.png"
+        alt=""
         style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-      <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Controla el dispositivo, gestiona las grabaciones y descarga audio sin cambiar el firmware.</p>
-        </div>
-        </a>
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Basic SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Controla el dispositivo, gestiona las grabaciones y descarga audio sin cambiar el firmware.</p>
       </div>
+    </a>
+  </div>
 
   <div className="col col--6 margin-bottom--lg">
-    <a [LINE_96]      href="/es/respeaker_clip_service_integration/"
-  aria-label="Open the reSpeaker Clip Service Integration guide"
-    aria-current="page"
+    <a
+      href="/es/respeaker_clip_service_integration/"
+      aria-label="Open the reSpeaker Clip Service Integration guide"
+      aria-current="page"
       className="card shadow--md respeaker-clip-nav-card respeaker-clip-nav-card--active"
       style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
+    >
       <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
-    alt=""
-      style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
-        />
-        <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
-        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
-      <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Añade reSpeaker Clip a un servicio de Python de larga duración mediante un adaptador y rutas de API.</p>
-      </div>
-        </a>
-        </div>
-
-    <div className="col col--6 margin-bottom--lg">
-  <a [LINE_116]      href="/es/respeaker_clip_firmware_quick_start/"
-      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
-  className="card shadow--md respeaker-clip-nav-card"
-    style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
-      >
-      <img
-      src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
-      alt=""
-    style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_service_integration.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
       />
-        <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
-        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
-        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Compila, flashea, depura y personaliza el comportamiento en el lado del dispositivo.</p>
+      <div style={{position: 'absolute', top: '50%', right: '4%', left: '54%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Service Integration</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Añade reSpeaker Clip a un servicio de Python de larga ejecución mediante un adaptador y rutas de API.</p>
       </div>
-      </a>
-        </div>
-        </div>
+    </a>
+  </div>
 
-    ## Añade reSpeaker Clip como fuente de audio a tu servicio existente
+  <div className="col col--6 margin-bottom--lg">
+    <a
+      href="/es/respeaker_clip_firmware_quick_start/"
+      aria-label="Open the reSpeaker Clip Firmware SDK quick start"
+      className="card shadow--md respeaker-clip-nav-card"
+      style={{position: 'relative', display: 'block', overflow: 'hidden', borderRadius: '18px', color: '#172033', textDecoration: 'none'}}
+    >
+      <img
+        src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-style/respeaker_clip_nav_firmware_sdk.png"
+        alt=""
+        style={{display: 'block', width: '100%', aspectRatio: '2.5 / 1', objectFit: 'cover'}}
+      />
+      <div style={{position: 'absolute', top: '50%', right: '5%', left: '49%', transform: 'translateY(-50%)'}}>
+        <h3 style={{margin: '0 0 0.4rem', fontSize: '1.05rem'}}>Firmware SDK</h3>
+        <p style={{margin: 0, fontSize: '0.78rem', lineHeight: 1.45}}>Compila, flashea, depura y personaliza el comportamiento del lado del dispositivo.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+## Añade reSpeaker Clip como fuente de audio a tu servicio existente
 
 Sigue los pasos a continuación para conectar el adaptador de dispositivo a un servicio FastAPI existente.
 
-### Paso 1: Preparar el flujo de procesamiento
+### Paso 1: Preparar la canalización
 
 Supón que tu servicio ya tiene una función que acepta un archivo de audio:
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
 ```python
-
+async def process_audio(path: Path) -> dict:
     # your existing processing pipeline
-
+    ...
 ```
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+
+Una ruta de carga existente ya llama a esta función:
+
 ```python
 @app.post("/audio")
-
+async def upload_audio(file: UploadFile):
     path = await save_upload(file)
-
+    return await process_audio(path)
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+La integración de Clip debe generar un archivo de audio local estándar y llamar a la misma función `process_audio()`. El procesamiento debe seguir siendo independiente del dispositivo de captura.
 
+Encapsula esta función en el objeto de servicio utilizado por la ruta de ingesta de Clip:
 
+```python
 # audio_service.py
 from pathlib import Path
 
 
-
+class AudioService:
     def __init__(self, recordings_dir: Path):
         self.recordings_dir = recordings_dir
         self.recordings_dir.mkdir(parents=True, exist_ok=True)
 
     async def process(self, path: Path) -> dict:
-
+        return await process_audio(path)
 ```
 
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
-__CODE_LINE_PLH__
+### Paso 2: Crear el adaptador
 
+Encapsula únicamente las operaciones que necesita esta integración: conectar, desconectar, iniciar, detener y descargar.
+
+```python
 # clip_service.py
-
-
+from __future__ import annotations
+from pathlib import Path
 
 from clip import ClipClient, ClipError
 
@@ -196,7 +196,7 @@ class ClipStateError(Exception):
 class ClipService:
     """Application-level adapter over a single long-lived ClipClient."""
 
-
+    def __init__(self, transport, *, command_timeout: float = 10.0):
         self._client = ClipClient(transport, command_timeout=command_timeout)
         self._connected = False
         self._active_session: str | None = None
@@ -205,7 +205,7 @@ class ClipService:
         await self._client.connect()
         self._connected = True
 
-
+    async def disconnect(self) -> None:
         if self._connected:
             await self._client.disconnect()
             self._connected = False
@@ -219,7 +219,7 @@ class ClipService:
             session_id = await self._client.start_recording(mode)
         except ClipError as exc:
             raise ClipUnavailable("Clip could not start recording") from exc
-
+        if not session_id:
             raise ClipStateError("Clip did not return a session id")
         self._active_session = session_id
         return session_id
@@ -232,7 +232,7 @@ class ClipService:
         session_id = self._active_session
         try:
             await self._client.stop_recording()
-
+        except ClipError as exc:
             raise ClipUnavailable("Clip could not stop recording") from exc
         self._active_session = None
         return session_id
@@ -246,7 +246,7 @@ class ClipService:
             raise ClipUnavailable("Clip could not download the recording") from exc
 ```
 
-### Paso 3: Vincular ciclo de vida
+### Paso 3: Vincular el ciclo de vida
 
 Crea el adaptador durante el arranque de FastAPI, guárdalo en el estado de la aplicación y desconéctalo durante el apagado.
 
@@ -340,7 +340,7 @@ async def ingest_session(session_id: str, request: Request):
     return {"session_id": session_id, "files": ingested}
 ```
 
-### Paso 5: Registrar router
+### Paso 5: Registrar el router
 
 Importa el router en `main.py` y regístralo después de crear la aplicación FastAPI:
 
@@ -353,7 +353,7 @@ app.include_router(router)
 
 La integración ahora consta de `main.py`, `routes.py`, `clip_service.py` y `audio_service.py` en el paquete de tu aplicación.
 
-### Paso 6: Verificar API
+### Paso 6: Verificar la API
 
 Inicia el servicio y luego llama a las rutas en orden:
 
@@ -363,14 +363,14 @@ curl -X POST "http://localhost:8000/clip/recordings/stop"
 curl -X POST "http://localhost:8000/clip/sessions/<session_id>/ingest"
 ```
 
-Las respuestas de inicio y parada deben contener el mismo `session_id`. La respuesta de ingestión debe contener los archivos devueltos por tu canalización existente de `AudioService`.
+Las respuestas de inicio y parada deben contener el mismo `session_id`. La respuesta de ingestión debe contener los archivos devueltos por tu canalización `AudioService` existente.
 
-## Recuperación de desconexión BLE y tiempo de espera de comandos
+## Recuperación de desconexión BLE y tiempo de espera de comandos {#ble-disconnect-and-command-timeout-recovery}
 
 El adaptador anterior solo cubre el caso ideal. Un servicio de larga ejecución también debe manejar dos fallos:
 
 - **Pérdida de enlace**: el dispositivo se sale del alcance, entra en suspensión, el adaptador Bluetooth del host se reinicia o lo toma otra aplicación.
-- **Tiempo de espera de comando**: el dispositivo no responde antes de la fecha límite. El protocolo de firmware no tiene ID de solicitud, por lo que el transporte no puede correlacionar una respuesta tardía con el siguiente comando. Por lo tanto, un tiempo de espera requiere una reconexión en lugar de un reintento directo.
+- **Tiempo de espera de comando**: el dispositivo no responde antes del plazo. El protocolo de firmware no tiene ID de solicitud, por lo que el transporte no puede correlacionar una respuesta tardía con el siguiente comando. Por lo tanto, un tiempo de espera requiere una reconexión en lugar de un reintento directo.
 
 Esta sección proporciona una implementación de referencia que reemplaza directamente `clip_service.py`. Mantiene la interfaz `connect()`, `disconnect()`, `start_recording()`, `stop_recording()` y `download_session()` y añade recuperación automática.
 
@@ -380,7 +380,7 @@ Esta sección proporciona una implementación de referencia que reemplaza direct
 - **Comprobación de estado en segundo plano**: cada `health_check_interval` segundos la tarea comprueba `ClipClient.is_connected`. Una operación de negocio que detecta una caída o tiempo de espera despierta la tarea inmediatamente mediante un evento.
 - **Retroceso exponencial acotado**: las esperas comienzan en 1 segundo, se duplican en cada intento fallido y se detienen en 30 segundos. Cada intento de conexión tiene su propio límite de 30 segundos. Una conexión correcta restablece el retroceso.
 - **Sin repetición de comandos**: un inicio, parada o descarga fallidos solo generan `ClipUnavailable`. Es posible que el dispositivo ya haya ejecutado el comando y solo se haya perdido la respuesta; repetirlo podría crear una grabación o transferencia duplicada.
-- **Sonda de disponibilidad tras la reconexión**: el adaptador llama una vez a `status()`. Si el dispositivo sigue grabando y devuelve un `session_id`, restaura `_active_session`; de lo contrario, borra el estado de sesión local. Esto cubre tanto "la grabación continuó durante la caída" como "se perdió la respuesta de parada".
+- **Sonda de preparación tras la reconexión**: el adaptador llama una vez a `status()`. Si el dispositivo sigue grabando y devuelve un `session_id`, restaura `_active_session`; de lo contrario, borra el estado de sesión local. Esto cubre tanto "la grabación continuó durante la caída" como "se perdió la respuesta de parada".
 - **Apagado elegante**: se cancela y espera la tarea en segundo plano antes de cerrar el cliente; no se programa ninguna reconexión después del apagado.
 - **Solo API pública**: la detección de caídas usa `ClipClient.is_connected`; la recuperación usa `ClipClient.status()`. No se añade ninguna API nueva al SDK.
 
@@ -396,7 +396,7 @@ Esta sección proporciona una implementación de referencia que reemplaza direct
 | `health_check_interval` | `2.0` | Segundos entre comprobaciones de `is_connected` en segundo plano |
 | `reconnect_initial_delay` | `1.0` | Espera antes del primer intento de reconexión, en segundos |
 | `reconnect_max_delay` | `30.0` | Límite superior del retroceso, en segundos |
-| `reconnect_attempt_timeout` | `30.0` | Límite para un intento de conexión y su sonda de disponibilidad, en segundos |
+| `reconnect_attempt_timeout` | `30.0` | Límite para un intento de conexión y su sonda de preparación, en segundos |
 
 ### Implementación de referencia completa
 
@@ -745,8 +745,8 @@ El código de la aplicación y las rutas no cambian: `ClipService(transport)` ma
 El comportamiento siguiente se verificó con un Clip físico a través de BLE:
 
 - **Pérdida de enlace**: después de forzar una desconexión BLE desde el host, la tarea en segundo plano la detecta en el siguiente ciclo de comprobación de estado y se vuelve a conectar; los comandos funcionan después de la recuperación.
-- **Timeout de comando**: después de inyectar un `CommandTimeoutError`, el enlace antiguo se cierra, el comando que falló se ejecuta una vez y el adaptador se recupera.
-- **Secuencia de backoff**: los fallos de conexión consecutivos esperan 1, 2, 4, 8, 16, 30 y 30 segundos; un éxito restablece la espera a 1 segundo.
+- **Tiempo de espera de comando**: después de inyectar un `CommandTimeoutError`, el enlace antiguo se cierra, el comando que falló se ejecuta una vez y el adaptador se recupera.
+- **Secuencia de retroceso**: los fallos de conexión consecutivos esperan 1, 2, 4, 8, 16, 30 y 30 segundos; un éxito restablece la espera a 1 segundo.
 - **Recuperación de grabación**: el dispositivo sigue grabando durante la caída; después de reconectar, `_active_session` se restaura desde `status()`. Cuando el dispositivo está inactivo, el estado de sesión local se borra.
 - **Concurrencia**: mientras se reconecta, las solicitudes de negocio fallan rápidamente con `ClipUnavailable` (mapeado a `503`) en lugar de esperar. El bloqueo de conexión evita que los comandos crucen una conexión o desconexión.
 - **Apagado**: la tarea en segundo plano sale y no se programan más intentos de reconexión.
@@ -754,19 +754,19 @@ El comportamiento siguiente se verificó con un Clip físico a través de BLE:
 
 ## Consideraciones de producción para un servicio de larga ejecución
 
-Mantén explícitos el estado de conexión, de error y de flujo de trabajo cuando la integración se ejecuta como un servicio.
+Mantén explícitos el estado de conexión, de error y de flujo de trabajo cuando la integración se ejecute como un servicio.
 
 ### Límite del adaptador
 
 Mantén todas las llamadas a `ClipClient` dentro de `ClipService`. El adaptador es propietario del acceso a la conexión, los comandos de grabación, las descargas y la traducción de errores del SDK; no es propietario del procesamiento, el almacenamiento u otra lógica de negocio.
 
-El código por encima del adaptador debe usar conceptos de aplicación como `session_id` y excepciones de aplicación en lugar de detalles de transporte, comandos AT o transferencia de archivos.
+El código por encima del adaptador debe usar conceptos de la aplicación como `session_id` y excepciones de la aplicación en lugar de detalles de transporte, comandos AT o transferencia de archivos.
 
 ### Reutilización del cliente
 
-Asocia un Clip físico a un `ClipClient` de larga vida y a un `ClipService`. Como el firmware no tiene ID de solicitud, `ClipClient` serializa los comandos. Para varios dispositivos, indexa las instancias de `ClipService` por ID de dispositivo en un `ClipManager`.
+Asocia un Clip físico a un `ClipClient` de larga vida y a un `ClipService`. Debido a que el firmware no tiene ID de solicitud, `ClipClient` serializa los comandos. Para varios dispositivos, indexa las instancias de `ClipService` por ID de dispositivo en un `ClipManager`.
 
-### Vida útil de la conexión
+### Duración de la conexión
 
 Un error común es abrir el dispositivo dentro del manejador de la solicitud:
 
@@ -778,11 +778,11 @@ async def start():
         await clip.start_recording()
 ```
 
-Esto vuelve a conectar en cada llamada y pierde la sesión activa entre solicitudes. La vida útil de la aplicación es la propietaria de la conexión; las solicitudes la reutilizan.
+Esto vuelve a conectar en cada llamada y pierde la sesión activa entre solicitudes. El ciclo de vida de la aplicación es el propietario de la conexión; las solicitudes la reutilizan.
 
 ### Límite de errores
 
-Traduce las excepciones del SDK en excepciones de aplicación dentro de `ClipService`, y luego mapéalas a respuestas HTTP en el límite de la ruta.
+Traduce las excepciones del SDK en excepciones de la aplicación dentro de `ClipService`, y luego asígnalas a respuestas HTTP en el límite de la ruta.
 
 Un ejemplo sencillo de mapeo (ilustrativo, no un mandato del SDK):
 
@@ -791,23 +791,23 @@ Un ejemplo sencillo de mapeo (ilustrativo, no un mandato del SDK):
 | Clip no disponible | `503` |
 | Estado de dispositivo no válido | `409` |
 | Fallo en el comando del dispositivo | `502` |
-| Solicitud de cliente incorrecta | `400` |
+| Solicitud incorrecta del cliente | `400` |
 
-Los códigos exactos son específicos de la aplicación. El código fuera del adaptador debe depender de `ClipUnavailable` y `ClipStateError`, no de excepciones del SDK.
+Los códigos exactos dependen de la aplicación. El código fuera del adaptador debe depender de `ClipUnavailable` y `ClipStateError`, no de excepciones del SDK.
 
 ### Reconexión
 
-Ante un error de dispositivo, marca el dispositivo como no disponible y vuelve a conectar o recrea el transporte. Un timeout de comando requiere reconexión antes del siguiente comando porque el transporte ya no puede correlacionar respuestas. Expón el fallo como `ClipUnavailable`, y luego reconecta desde una tarea en segundo plano o desde la siguiente solicitud. Consulta [BLE Disconnect and Command Timeout Recovery](#BLE-Disconnect-and-Command-Timeout-Recovery) para una implementación completa con un bloqueo de conexión, comprobaciones de estado en segundo plano, backoff exponencial y recuperación de sesión.
+Ante un error del dispositivo, márcalo como no disponible y vuelve a conectar o recrea el transporte. Un tiempo de espera de comando requiere reconexión antes del siguiente comando porque el transporte ya no puede correlacionar respuestas. Expón el fallo como `ClipUnavailable` y luego vuelve a conectar desde una tarea en segundo plano o desde la siguiente solicitud. Consulta [Recuperación de desconexión BLE y tiempo de espera de comandos](#ble-disconnect-and-command-timeout-recovery) para ver una implementación completa con bloqueo de conexión, comprobaciones de estado en segundo plano, retroceso exponencial y recuperación de sesión.
 
 ### Idempotencia
 
-Las reintentos HTTP, las reintentos de workers y los reinicios pueden enviar el mismo `session_id` más de una vez. Comprueba el estado persistente antes de procesarlo.
+Las reintentos HTTP, los reintentos de workers y los reinicios pueden enviar el mismo `session_id` más de una vez. Comprueba el estado persistente antes de procesarlo.
 
 Haz un seguimiento de cada sesión en tu base de datos:
 
 | `session_id` | `downloaded` | `processed` | `result_id` | `created_at` |
 | --- | --- | --- | --- | --- |
-| Sesión de dispositivo única | Estado de descarga | Estado del pipeline | Referencia de resultado | Momento de primera ingesta |
+| Sesión de dispositivo única | Estado de descarga | Estado de la canalización | Referencia al resultado | Momento de la primera ingestión |
 
 ```python
 async def ingest_clip_session(session_id: str):
@@ -839,12 +839,12 @@ No colapses ambas máquinas de estados en un solo campo. Una sesión puede desca
 
 Después de que el adaptador esté funcionando, mantén la integración del dispositivo separada de cualquier procesamiento específico de la aplicación. Páginas relacionadas:
 
-- [reSpeaker Clip Basic SDK Guide](/es/respeaker_clip_basic_sdk_guide) — protocolo del dispositivo, API de `ClipClient`, transporte BLE/UDP, transferencia de archivos
+- [reSpeaker Clip Basic SDK Guide](/es/respeaker_clip_basic_sdk_guide) — protocolo del dispositivo, `ClipClient` API, transporte BLE/UDP, transferencia de archivos
 - [Getting Started with the reSpeaker Clip Firmware SDK](/es/respeaker_clip_firmware_quick_start) — cuando necesites modificar el firmware del lado del dispositivo en lugar de integrar el SDK
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
