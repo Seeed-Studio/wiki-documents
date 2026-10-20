@@ -127,7 +127,7 @@ YOLO 回答**目标在哪里**。VLM 回答**场景是什么样**。占用图是
 5. 将摄像头安装在底盘周围，使其朝向**前、后、左、右**。
 6. 如需在板子上观看实时 BEV 窗口，可选连接一个 HDMI 显示器。
 
-关于在 J601 上启用 GMSL，请参阅 [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j601_interfaces_usage/)。
+关于在 J601 上启用 GMSL，请参阅 [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/cn/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)。
 
 <div align="center">
   <img width={900}
@@ -314,8 +314,8 @@ http://<board-ip>:8787/
 ## 资源
 
 - [演示视频](https://www.youtube.com/watch?v=o0NTeeLV4Vk)
-- [reComputer Robotics J601 入门指南](https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/)
-- [Robotics J601 硬件接口使用](https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j601_interfaces_usage/)
+- [reComputer Robotics J601 入门指南](https://wiki.seeedstudio.com/cn/jetson/recomputer_robotics_j601/getting_started/)
+- [Robotics J601 硬件接口使用](https://wiki.seeedstudio.com/cn/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)
 - [GitHub](https://github.com/xbs0325/j601-surround-demo)
 
 ## 技术支持与产品讨论

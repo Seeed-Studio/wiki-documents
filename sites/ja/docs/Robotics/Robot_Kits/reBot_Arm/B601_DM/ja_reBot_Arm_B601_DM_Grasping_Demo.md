@@ -125,6 +125,26 @@ conda activate rebotarm
 
 :::
 
+:::warning すぐに PyTorch を検証する
+`environment.yml` は `ultralytics` / `torchaudio` の依存関係を通じて PyTorch を自動的にインストールします。ネットワークの問題でインストールが中断されると、PyTorch が**警告なく欠落**したままになり、エラーは `main.py` を実行したとき初めて現れます。環境を作成した直後に検証してください：
+
+```bash
+python -c "import torch; print(torch.__version__, torch.__file__)"
+```
+
+- パスは `.../miniforge3/envs/rebotarm/...`（conda 環境内）と表示されるはずです。`ModuleNotFoundError` が出る場合、またはパスが `~/.local/...`（ユーザーディレクトリ）を指している場合は、インストールが不完全か、誤った場所に入っています。次を実行してください：
+
+```bash
+pip install --force-reinstall torch torchvision
+```
+
+- NVIDIA GPU がある場合は、CUDA が利用可能であることも確認してください：
+
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+:::
+
 
 ### Step 3. ロボットアーム制御ライブラリをインストールする
 
@@ -215,6 +235,14 @@ pip install pyrealsense2
 python -c "import pyrealsense2; print('pyrealsense2 OK')"
 ```
 
+:::warning USB 3.x ポートを使用する
+D405 / D435i は USB 3.0/3.2 ポート（通常は青色）に接続する必要があります。USB 2.0 ポートに接続した場合の典型的な症状は、**システムがデバイスを認識し、`pipeline.start()` も成功するのに、フレームが一向に届かない**（`Frame didn't arrive within ...`）ことです。次のコマンドでネゴシエートされた速度を確認してください：
+
+```bash
+lsusb -t   # カメラの行は 5000M と表示されるはずです。480M の場合は USB 2.0 ポートにフォールバックしているため、ポートを変更してください
+```
+:::
+
 システム側で完全な RealSense ツールキットや udev ルールが必要な場合は、RealSense SDK の公式ドキュメントを参照して `librealsense2` をインストールしてください。
 
 
@@ -235,20 +263,71 @@ python -c "import pyrealsense2; print('pyrealsense2 OK')"
 
 物体に対してより高精度な把持姿勢推定を実現するために、本プロジェクトでは [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) を適用し、ロボットアームの把持性能を向上させています。
 
-GraspNet の `pointnet2` / `knn` 拡張は CUDA コンパイラを必要とします。開始する前に、現在の環境で `nvcc` が利用可能であること、および `nvcc` が報告する CUDA バージョンが PyTorch のビルドに使用された CUDA バージョンと一致していることを確認してください：
+この環境を初めて設定するとき、`environment.yml` の `torchaudio` 項目は通常、PyTorch も一緒にインストールします。欠落している場合（または CPU 版だけがインストールされている場合）は、以下の手順に従って CUDA 対応の PyTorch を明示的にインストールし、検証してください。GraspNet の `pointnet2` / `knn` 拡張は、バージョンの一致する PyTorch と CUDA コンパイラに依存します。すべての手順を終えてからビルドしてください。
+
+**Step 1: GPU を確認する**
+
+```bash
+nvidia-smi
+```
+
+NVIDIA GPU が表示された場合のみ続行してください。NVIDIA GPU がない場合は PyTorch の CPU 版しか使えず、GraspNet の CUDA オペレータはビルドも実行もできません。
+
+**Step 2: PyTorch を確認 / インストールする**
+
+まず、現在の環境に PyTorch がすでに存在するかを確認します：
+
+```bash
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
+```
+
+- インストール済みで、`torch.cuda.is_available()` が `True` と表示される場合は、インストールをスキップして Step 3 に進みます。
+- `ModuleNotFoundError` が出る場合（未インストール）、または `torch.version.cuda` が `None` の場合（CPU 版がインストールされている）は、以下のように CUDA 版をインストールします。CUDA 13.0 を例にします：
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
+```
+
+`--index-url` の CUDA バージョンは GPU に合わせて選んでください：
+
+| GPU | 推奨する PyTorch の CUDA ビルド |
+| --- | --- |
+| RTX 50 シリーズ（Blackwell、例：RTX 5070 / 5090） | `cu128` 以降（例：`cu130`） |
+| RTX 40 / 30 シリーズ（Ada / Ampere） | `cu121` または `cu118` |
+| NVIDIA GPU なし | `cpu`（CPU のみ。GraspNet は動作しません） |
+
+**Step 3: PyTorch に一致する CUDA コンパイラをインストールする**
+
+`pointnet2` / `knn` はローカルの CUDA 拡張です。ビルド時に `nvcc --version` が報告する CUDA バージョンは `torch.version.cuda` と一致している必要があります。一致しないと、ビルドは `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` で失敗します。まず両方のバージョンを確認してください：
 
 ```bash
 nvcc --version
-python -c "import torch; print(torch.__version__, torch.version.cuda)"
+python -c "import torch; print(torch.version.cuda)"
 ```
 
-もし `nvcc` が存在しない、または `nvcc` が報告する CUDA バージョンが `torch.version.cuda` と一致しない場合は、現在の PyTorch CUDA バージョンに一致する CUDA コンパイラをインストールしてください。たとえば、PyTorch が `13.0` と表示している場合：
+`torch.version.cuda` が `13.0` と表示される場合を例に、conda 環境の中に一致するコンパイラをインストールします：
 
 ```bash
-conda install -c nvidia cuda-nvcc=13.0
+conda install -c nvidia cuda-nvcc=13.0 cuda-cudart-dev=13.0
+
+which nvcc       # $CONDA_PREFIX/bin/nvcc を指していること。/usr/bin/nvcc ではないこと
+nvcc --version   # torch.version.cuda と一致すること
 ```
 
-代わりに、現在の `nvcc` バージョンに一致する PyTorch ビルドをインストールすることもできます。2 つのバージョンは一致している必要があり、一致しない場合は `pointnet2` / `knn` のビルド時に `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` というエラーで失敗します。
+`cuda-nvcc` はコンパイラを、`cuda-cudart-dev` は `targets/x86_64-linux/include` 配下の CUDA ヘッダを提供します。両方とも必要です。conda 環境を有効化すると `$CONDA_PREFIX/bin` がシステムパスより前に置かれるため、conda の `nvcc` がシステムの古い `nvcc`（たとえば Ubuntu リポジトリの CUDA 11.5）より自動的に優先されます。システムの CUDA をアンインストールする必要はありません。
+
+:::warning
+古いシステムの `nvcc` に合わせて PyTorch をダウングレードしないでください。古い CUDA リリースは、使用中の GPU アーキテクチャをサポートしない場合があります（CUDA 11.5 がサポートするのは最大 sm_86 までです。RTX 40 シリーズには CUDA 11.8 以降、RTX 50 シリーズには CUDA 12.8 以降が必要です）。また、古い PyTorch ビルドは、新しい ultralytics リリースなど、このプロジェクトの他の依存関係と互換性がない場合があります。
+:::
+
+**Step 4: 検証する**
+
+```bash
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
+nvcc --version
+```
+
+両方の CUDA バージョンが一致し、`torch.cuda.is_available()` が `True` と表示されれば、PyTorch の設定は完了です。CUDA オペレータのビルドを続けられます。
 
 ```bash
 cd sdk
@@ -259,11 +338,14 @@ cd graspnet-baseline
 pip install open3d tensorboard Pillow tqdm
 
 # Configure CUDA build paths before building the local operators.
+# 注意：ヘッダとライブラリのパスには conda の cuda-toolkit の targets ディレクトリを使ってください。
+# pip 版の nvidia/cu13 ディレクトリを混ぜないでください（conda の nvcc とバージョンが一致しないとビルドエラーになります）。
 export CUDA_HOME=$CONDA_PREFIX
 export TORCH_CUDA_ARCH_LIST="12.0"
-export CPATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPATH
-export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPLUS_INCLUDE_PATH
-export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+export CPATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPATH
+export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=$CONDA_PREFIX/targets/x86_64-linux/lib:$CONDA_PREFIX/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=$CONDA_PREFIX/targets/x86_64-linux/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 
 # Build CUDA operators
 cd pointnet2
@@ -285,7 +367,7 @@ cd ../../..
 :::
 
 :::tip
-ビルド時に `fatal error: cusparse.h: No such file or directory` というエラーが出る場合は、`find $CONDA_PREFIX -name cusparse.h` を実行し、`cusparse.h` を含むディレクトリを `CPATH` / `CPLUS_INCLUDE_PATH` に追加してください。CUDA ヘッダが conda の `cuda-toolkit` 由来の場合、パスは通常 `$CONDA_PREFIX/targets/x86_64-linux/include` であり、上記に示した pip の `nvidia/cu13/include` パスではありません。
+ビルド時に `fatal error: cusparse.h: No such file or directory` というエラーが出る場合は、`find $CONDA_PREFIX -name cusparse.h` を実行し、`cusparse.h` を含むディレクトリを `CPATH` / `CPLUS_INCLUDE_PATH` に追加してください（conda の `cuda-toolkit` では通常 `$CONDA_PREFIX/targets/x86_64-linux/include` です）。`'__NV_IS_DEVICE' was not declared in this scope` のようなヘッダ関連のエラーが出る場合は、通常、pip 版の `nvidia/cu13` ヘッダと conda の `nvcc` のバージョンを混在させていることが原因です。上記の conda `targets` パスに切り替えて再ビルドしてください。
 :::
 
 :::tip
@@ -297,6 +379,8 @@ cd ../../..
 graspnet-baseline 公式リポジトリから公式 GraspNet 学習済み重みを [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view)、[Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A) からダウンロードし、ダウンロードした `checkpoint-rs.tar` を次の場所に配置します：
 
 ```bash
+mkdir -p ~/rebot_grasp/sdk/graspnet-baseline/checkpoints
+
 sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
 ```
 
@@ -567,10 +651,11 @@ cd ../knn
 pip install . --no-build-isolation
 ```
 
-検証：
+検証（`pointnet2_utils` / `knn_modules` はソースディレクトリからトップレベルモジュールとしてインポートされます。これは `models/` でのインポート方法でもあります。把持スクリプトはソースディレクトリを `sys.path` に自動的に追加します）：
 
 ```bash
-python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
+cd sdk/graspnet-baseline
+python -c "import sys; sys.path[:0]=['pointnet2','knn']; import pointnet2_utils, knn_modules; print('import works')"
 ```
 
 ### 5. 現在のグラフィックスカードで GraspNet を実行する際の CUDA アーキテクチャ非互換
