@@ -71,7 +71,11 @@ const sidebars = {
                 id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/reComputer_Robotics_J601_Getting_Started',
                 label: 'Getting Started',
               },
-              'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
+              {
+                type: 'doc',
+                id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
+                label: 'Hardware & I/O',
+              },
             ],
           },
           'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',

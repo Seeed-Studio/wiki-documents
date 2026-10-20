@@ -461,8 +461,8 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 
 ### 1. Ruído anormal alto ocorre imediatamente após a partida do motor
 
-- Esse problema geralmente acontece quando a calibração de parâmetros é acionada acidentalmente durante a configuração do ID, o que sobrescreve parâmetros predefinidos de fábrica, como a inércia do motor. Use **DM_Tools_v.1.8.0.1.exe (somente Windows)** disponível em:
-https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
+- Esse problema geralmente acontece quando a calibração de parâmetros é acionada acidentalmente durante a configuração do ID, o que sobrescreve parâmetros predefinidos de fábrica, como a inércia do motor. Use **DMTool-v2.1.9.4.exe (somente Windows)** disponível em:
+https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool-v2.1.9.4.exe
 Exporte os parâmetros completos de um motor intacto do mesmo modelo por meio do software host, importe esses parâmetros para a unidade com defeito, atualize o respectivo CAN ID, salve os parâmetros gravados e, em seguida, prossiga com a calibração do ponto zero.
 
 <div align="center">
@@ -480,4 +480,4 @@ Exporte os parâmetros completos de um motor intacto do mesmo modelo por meio do
 
 ### 2. Todos os motores compartilham IDs CAN idênticos
 
-- Ao realizar a calibração do ponto zero por meio do **DM_Tools_v.1.8.0.1.exe (somente Windows)**, evite clicar nos botões Read ou Set ao lado do campo CAN ID. A interface de depuração se comunica pelo barramento CAN; clicar em Set unificará o CAN ID de todos os motores conectados ao CANBUS.
+- Ao realizar a calibração do ponto zero por meio do **DMTool-v2.1.9.4.exe (somente Windows)**, evite clicar nos botões Read ou Set ao lado do campo CAN ID. A interface de depuração se comunica pelo barramento CAN; clicar em Set unificará o CAN ID de todos os motores conectados ao CANBUS.

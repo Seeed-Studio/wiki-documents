@@ -4,6 +4,9 @@
 
 const K = 'Robotics/Robot_Kits';
 
+// Grupo de salto para o curso de iniciantes na barra lateral do produto SO-ARM101.
+const soArmCourseLink = require('./soarm-course-sidebar').courseLink();
+
 const backToRobotics = () => ({
   type: 'ref',
   id: 'pt_Edge_Robotics',
@@ -218,12 +221,13 @@ const sidebars = {
       collapsible: false,
       collapsed: false,
       items: [
-        `${K}/Lerobot/pt_Complete_Guide_to_Double-Arm_SO-ARM_Training`,
+        `${K}/Lerobot/pt_Complete_Guide_to_Bimanual_SO-ARM_Training`,
         `${K}/Lerobot/pt_SOARM101_XIAO_MicroROS_Wireless_Teleoperation`,
         `${K}/Lerobot/pt_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor`,
         `${K}/Lerobot/pt_Lerobot_SO_ARM101_DAMO`,
       ],
     },
+    soArmCourseLink,
   ],
 
   LekiwiSidebar: [

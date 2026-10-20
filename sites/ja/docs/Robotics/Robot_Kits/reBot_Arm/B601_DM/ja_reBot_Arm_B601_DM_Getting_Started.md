@@ -461,8 +461,8 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 
 ### 1. モータ起動直後に大きな異常音が発生する
 
-- この問題は通常、ID 設定中に誤ってパラメータキャリブレーションがトリガーされ、モータ慣性などの工場出荷時のプリセットパラメータが上書きされることで発生します。以下から入手できる **DM_Tools_v.1.8.0.1.exe（Windows 専用）** を使用してください：
-https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
+- この問題は通常、ID 設定中に誤ってパラメータキャリブレーションがトリガーされ、モータ慣性などの工場出荷時のプリセットパラメータが上書きされることで発生します。以下から入手できる **DMTool-v2.1.9.4.exe（Windows 専用）** を使用してください：
+https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool-v2.1.9.4.exe
 ホストソフトウェアを介して、同一モデルの正常なモータから完全なパラメータをエクスポートし、それらのパラメータを不具合のあるユニットにインポートし、対応する CAN ID を更新して書き込んだパラメータを保存した後、ゼロ点キャリブレーションを実行します。
 
 <div align="center">
@@ -480,4 +480,4 @@ https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1
 
 ### 2. すべてのモータが同一の CAN ID を共有している
 
-- **DM_Tools_v.1.8.0.1.exe（Windows 専用）** を使用してゼロ点キャリブレーションを行う際は、CAN ID フィールド横の Read または Set ボタンをクリックしないでください。デバッグインターフェースは CAN バス経由で通信しており、Set をクリックすると CANBUS に接続されているすべてのモータの CAN ID が同一に設定されてしまいます。
+- **DMTool-v2.1.9.4.exe（Windows 専用）** を使用してゼロ点キャリブレーションを行う際は、CAN ID フィールド横の Read または Set ボタンをクリックしないでください。デバッグインターフェースは CAN バス経由で通信しており、Set をクリックすると CANBUS に接続されているすべてのモータの CAN ID が同一に設定されてしまいます。

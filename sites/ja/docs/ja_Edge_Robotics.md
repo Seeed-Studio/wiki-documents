@@ -175,6 +175,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card optional" href="/ja/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
+    <div className="learning-group">
+      <h4>コース</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/ja/robotics/soarm_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>初心者向けコース</b></div></a>
+      </div>
+    </div>
   </div>
 </details>
 

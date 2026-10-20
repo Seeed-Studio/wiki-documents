@@ -1,6 +1,6 @@
 ---
-description: Complete guide to double-arm SO-ARM training with LeRobot.
-title: SO-Arm Dual-Teleopertaion
+description: Complete guide to Bimanual SO-ARM training with LeRobot.
+title: SO-Arm Bimanual-Teleoperation
 keywords:
   - Lerobot
   - SO-ARM
@@ -22,11 +22,11 @@ updatedAt: '2026-09-16'
 
 import Link from '@docusaurus/Link';
 
-# Complete Guide to Double-Arm SO-ARM Training
+# Complete Guide to Bimanual SO-ARM Training
 
 ## Introduction
 
-This guide walks through the complete pipeline for training a dual-arm SO-ARM robotic system with LeRobot. It covers hardware setup, arm calibration, dual-arm teleoperation, dataset recording and management, ACT policy training, and real-robot deployment. By following these steps, you can collect demonstration data with two leader arms and two follower arms, train an imitation-learning policy, and deploy it on the real robot.
+This guide walks through the complete pipeline for training a bimanual SO-ARM robotic system with LeRobot. It covers hardware setup, arm calibration, bimanual teleoperation, dataset recording and management, ACT policy training, and real-robot deployment. By following these steps, you can collect demonstration data with two leader arms and two follower arms, train an imitation-learning policy, and deploy it on the real robot.
 
 First, connect the wires as follows.
 
@@ -41,6 +41,12 @@ First, connect the wires as follows.
 The follower arm type is `so101_follower`, and the leader arm type is `so101_leader` (in LeRobot, `so100_leader` and `so101_leader` share the same implementation).
 
 ---
+
+Bimanual Collaboration Demo Video:
+
+<div class="video-container">
+<iframe width="900" height="500" src="https://www.youtube.com/embed/Y_P0BmlM7VI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html" target="_blank">
@@ -134,7 +140,7 @@ cp $CAL_DIR/so101_leader/my_awesome_leader_arm4.json \
 
 ---
 
-## 2. Dual-Arm Teleoperation
+## 2. Bimanual Teleoperation
 
 ### 2.1 Without Camera
 

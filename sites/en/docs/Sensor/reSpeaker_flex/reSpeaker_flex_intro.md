@@ -93,13 +93,17 @@ The system supports two interchangeable microphone array configurations: a **cir
 
 - **Dual USB connectivity**: USB-C port and PH2.0 locking port both support UAC 2.0 audio and DFU firmware upgrade
 
-- **On-board speaker amplifier**: Supports driving 10W 4 Ohms speakers via JST connector, with 3.5mm AUX headphone output
-
 - **XIAO ESP32S3 support (optional)**: Solder-on module adds Wi-Fi/Bluetooth, with I2S and I2C buses wired directly to XVF3800 for wireless control and audio forwarding
 
 - **Firmware flexibility**: Dual USB firmware variants (2-channel and 6-channel), I2S firmware, DFU upgrade via dfu-util, and configuration persistence across power cycles
 
 - **Python SDK**: Adjustable recording format, volume, algorithm parameters, and channel routing via Python
+
+- **On-board speaker amplifier**: Supports driving 10W 4 Ohms speakers via JST connector, with 3.5mm AUX headphone output
+
+:::note
+When both the 3.5mm audio jack and the speaker are connected at the same time, it play only through the 3.5mm audio jack
+:::
 
 ## Main Components
 
@@ -144,7 +148,6 @@ The system supports two interchangeable microphone array configurations: a **cir
 | Component / Feature | Description |
 |--------------------|------------|
 | **Microphones** | 4× PDM MEMS microphones with 33 mm spacing arranged in a linear layout |
-| **Pickup Pattern** | Front-facing pickup pattern of approximately 180°, with rear sound suppressed |
 | **Interface** | FPC connector; cable can be routed from the side or rear |
 | **Mounting** | 2 × M3 mounting holes |
 
