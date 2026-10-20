@@ -641,7 +641,7 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 
 #rebot-rs {
-  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png');
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp');
 }
 #rebot-rs .product-head h3 {
   max-width: none;

@@ -7,7 +7,7 @@ keywords:
   - Robotic Arm
   - rebot arm
   - Robot
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 slug: /rebot_arm_b601_rs_lerobot
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" />
 </div>
 
 <div className="rebot-buy-button-group">
