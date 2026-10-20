@@ -38,7 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 é compatível com displays ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e quadros de informação portáteis.
+Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 suporta displays ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e quadros de informação portáteis.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -46,7 +46,7 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 é compatível c
 
 - **Alimentada por XIAO nRF52840 Plus:** Funciona imediatamente quando conectada a um display ePaper compatível.
 - **Suporte versátil a displays:** Compatível com uma ampla variedade de telas ePaper, suportando interfaces de 24 pinos e 50 pinos, com comutação fácil por meio de jumpers.
-- **Conector BAT com chave:** Oferece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
+- **Conector BAT com chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
 - **Botões fáceis de usar:** Inclui 1 botão de reset e 3 botões programáveis pelo usuário, oferecendo flexibilidade para acelerar projetos e funções personalizáveis.
 
 ### Especificações
@@ -86,7 +86,7 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 é compatível c
   </tbody>
 </table>
 
-### Guia de seleção de placas ePaper
+### Guia de seleção de placa ePaper
 
 <table>
     <thead>
@@ -119,7 +119,7 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 é compatível c
         <tr>
             <th>Conector de bateria</th>
             <td>JST 2,0mm</td>
-            [LINE121]            <td>/</td>
+            <td>/</td>
             <td>JST 2,0mm</td>
         </tr>
         <tr>
@@ -156,7 +156,7 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de display EN04 é compatível c
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
-### Displays ePaper compatíveis
+### Displays ePaper suportados
 
 #### Conector de 24 pinos
 
@@ -224,19 +224,19 @@ Na EN04, os três botões estão conectados ao XIAO nRF52840 Plus da seguinte fo
 Os botões de usuário são programáveis e podem ser configurados para várias funções, como troca de página, seleção de modo ou acionamento de ações específicas no seu projeto com ePaper.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:700, height:'auto'}}/></div>
 
 ### Conector de bateria
 
 A EN04 está equipada com um conector de bateria JST 2,0 mm e um CI de carregamento integrado, tornando-a adequada para projetos ePaper de baixo consumo alimentados por bateria.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:700, height:'auto'}}/></div>
 
 ## Introdução ao Arduino
 
 ### Instalar a biblioteca Seeed GFX2
 
-Todos os exemplos de ePaper para a EN04 são baseados na biblioteca Arduino **Seeed_GFX2**, que oferece suporte a todos os displays ePaper listados na seção [Supported ePaper Displays](#supported-epaper-displays). Os exemplos abaixo usam o **ePaper monocromático de 7,5 polegadas (800 x 480)** como exemplo.
+Todos os exemplos de ePaper para a EN04 são baseados na biblioteca Arduino **Seeed_GFX2**, que oferece suporte a todos os displays ePaper listados na seção [Supported ePaper Displays](#Supported-ePaper-Displays). Os exemplos abaixo usam o **ePaper monocromático de 7,5 polegadas (800 x 480)** como exemplo.
 
 **Passo 1. Baixar a biblioteca Seeed_GFX2**
 
@@ -254,15 +254,15 @@ Abra a Arduino IDE, navegue até **Sketch → Include Library → Add .ZIP Libra
 
 1. Navegue até **File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → nRF52840 Series → XIAO ePaper Display Board - EN04 → 7.5-inch ePaper - Monochrome 800x480 → HelloWorld**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:800, height:'auto'}}/></div>
 
 2. Em **Tools → Board**, selecione **Seeed XIAO nRF52840 Plus**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:400, height:'auto'}}/></div>
 
 3. Conecte a placa via USB Type-C, selecione a porta serial correspondente e clique em **Upload**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:300, height:'auto'}}/></div>
 
 :::note
 Os caminhos de exemplo acima usam o display monocromático de 7,5 polegadas como exemplo. Para outros displays compatíveis, basta escolher a pasta que corresponde ao modelo da sua tela em **XIAO ePaper Display Board - EN04** — cada tela é fornecida com os exemplos **HelloWorld**, **Bitmap** e **Custom_Demo** (exceto o modelo Tri-Color de 7,5 polegadas, que vem com **HelloWorld** e **Custom_Demo**).
@@ -369,7 +369,7 @@ void loop() {
 
 ## Solução de problemas
 
-**P1: A tela de ePaper não mostra nada após ligar.**
+**P1: A tela ePaper não mostra nada após ligar.**
 
 - **O kit DIY não possui firmware pré-instalado.** O XIAO EN04 DIY Kit não é fornecido com firmware de ePaper — uma tela em branco ou preta na primeira energização é normal.
 - **Verifique a orientação do cabo FPC.** Certifique-se de que o cabo FPC do ePaper esteja inserido na direção correta. Inverter o conector pode causar tela em branco e pode danificar o display.
@@ -377,13 +377,13 @@ void loop() {
 
 **P2: O display mostra conteúdo embaralhado ou atualização parcial.**
 
-- **Verifique a configuração do jumper.** A EN04 é compatível com displays de ePaper de 24 pinos e 50 pinos — o jumper deve corresponder ao tipo da sua tela. Defina como 24 Pin para telas de 24 pinos e 50 Pin para telas de 50 pinos.
+- **Verifique a configuração do jumper.** A EN04 é compatível com displays ePaper de 24 pinos e 50 pinos — o jumper deve corresponder ao tipo da sua tela. Defina como 24 Pin para telas de 24 pinos e 50 Pin para telas de 50 pinos.
 - **Confirme a seleção do modelo de tela.** No seu exemplo do Arduino, certifique-se de ter selecionado exatamente o modelo de tela (tamanho e tipo de cor). Escolher o modelo errado causará renderização incorreta.
-- **Aguarde uma atualização completa.** Displays de ePaper usam um ciclo de atualização completa — efeitos parciais ou de ghosting durante a atualização são normais e desaparecerão quando o ciclo for concluído.
+- **Aguarde uma atualização completa.** Displays ePaper usam um ciclo de atualização completa — efeitos parciais ou de ghosting durante a atualização são normais e desaparecerão quando o ciclo for concluído.
 
 **P3: A placa não liga quando usa bateria.**
 
-- **Verifique o interruptor de alimentação.** Deslize o interruptor de alimentação da bateria para a posição ON — a placa não consumirá energia da bateria quando o interruptor estiver desligado.
+- **Verifique a chave de alimentação.** Deslize a chave de alimentação da bateria para a posição ON — a placa não consumirá energia da bateria quando a chave estiver desligada.
 - **Verifique a polaridade do conector JST.** Certifique-se de que o conector de bateria JST 2,0 mm esteja conectado com a polaridade correta. A polaridade invertida da bateria pode danificar o hardware. Verifique as marcações +/− do conector antes de conectar a bateria.
 - **Carregue a bateria.** Se a bateria estiver totalmente descarregada, a placa pode não iniciar. Conecte o USB Type-C para carregar a bateria e tente novamente.
 
@@ -395,7 +395,7 @@ void loop() {
 
 **P5: O upload pela Arduino IDE falha.**
 
-- **Selecione a placa correta.** Vá em **Tools** → **Board** e certifique-se de que **Seeed XIAO nRF52840 Plus** esteja selecionada. Não escolha outras variantes de placa XIAO.
+- **Selecione a placa correta.** Vá em **Tools** → **Board** e certifique-se de que **Seeed XIAO nRF52840 Plus** esteja selecionada. Não escolha outras variantes de placas XIAO.
 - **Selecione a porta correta.** Vá em **Tools** → **Port** e escolha a porta serial correspondente à sua placa. Se nenhuma porta aparecer, verifique o cabo USB e a conexão.
 - **Entre no modo bootloader se necessário.** Se o upload falhar continuamente, pressione duas vezes o botão RESET para entrar no modo bootloader, depois selecione novamente a porta e tente fazer o upload.
 
