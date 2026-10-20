@@ -125,7 +125,7 @@ R^\top R &= I && \text{(orthonormal)} \\
 \end{aligned}
 $$
 
-<details>
+<details className="rebot-demo-details">
 <summary><strong>Worked micro-example: reading a 4x4 transform</strong></summary>
 
 $$

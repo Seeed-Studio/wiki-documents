@@ -326,7 +326,7 @@ sudo chmod 666 /dev/can0
 ```
 
 :::
-<details>
+<details className="rebot-demo-details">
 <summary>Ferramentas de depuração (use apenas quando ocorrer uma exceção)</summary>
 
 **Console de Controle de Motor Único (`0x01damiao_test.py`)**

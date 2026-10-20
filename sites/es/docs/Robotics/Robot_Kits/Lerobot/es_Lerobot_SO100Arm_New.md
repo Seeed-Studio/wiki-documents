@@ -1292,6 +1292,26 @@ Puedes hacer un downgrade de la versión de rerun para resolver el problema.
 
 </details>
 
+<details className="content-details">
+
+<summary>Instalación y uso del soporte de cámara</summary>
+
+**Instalación del soporte de cámara**
+
+Fija la posición de la cámara para una recopilación de datos limpia. Admite ajuste libre de múltiples ángulos, incluidas las vistas superior + muñeca y superior + lateral. Compatible con cámaras USB normales y cámaras de profundidad como D435i, D405 y Gemini 2. Admite brazos robóticos SO-ARM101 y reBot. Se puede usar con la caja de experimentos de recopilación de datos y reutilizar conjuntos de datos y modelos descargados listos para usar.
+
+<div class="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/2r3tvA7oJ_c" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10&reBot-B601-p-7003.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Comprar ahora 🖱️</font></span></strong>
+</a></div>
+
+</details>
+
 </section>
 
 ## Grabar conjunto de datos

@@ -7,48 +7,89 @@ keywords:
   - Jetson
   - Carrier Board
   - Robotics
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
+image: https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg
+slug: /jetson/recomputer_robotics_j601/getting_started
+aliases:
+  - /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 08/28/2026
+  date: 10/19/2026
   author: haochen
 createdAt: '2026-04-24'
-updatedAt: '2026-08-28'
-url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
+updatedAt: '2026-10-19'
+url: https://wiki.seeedstudio.com/pt-br/jetson/recomputer_robotics_j601/getting_started/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import J601DemoGrid from '@site/src/components/jetson/J601DemoGrid';
+import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
+import {roboticsJ601DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 # Introdução ao reComputer Robotics J601
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg"/>
+<JetsonProductDocNav {...roboticsJ601DocNav} />
+
+<div className="jetson-product-page">
+
+<section className="jetson-product-hero">
+  <div>
+    <span className="jetson-product-eyebrow">Robótica e IA física · NVIDIA Jetson AGX Thor</span>
+    <h2>Conecte percepção e controle em uma única placa carrier de robótica</h2>
+    <p>A placa carrier reComputer Robotics J601 aceita os módulos NVIDIA Jetson AGX Thor T5000 e T4000 para percepção com várias câmeras, fusão de sensores e desenvolvimento de IA incorporada. Ela combina Ethernet de alta velocidade, expansão de câmeras GMSL2 e I/O de robótica isolada com a plataforma de software Jetson.</p>
+    <div className="jetson-product-actions">
+      <a className="jetson-product-button" href="https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thortm-T5000-T4000.html" target="_blank" rel="noopener noreferrer">Comprar · Placa carrier J601 ↗</a>
+      <a className="jetson-product-button jetson-product-button--secondary" href="#flash-jetpack">Começar com o JetPack ↓</a>
+    </div>
+  </div>
+  <div className="jetson-product-hero-media">
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_01.jpg" alt="Placa carrier reComputer Robotics J601 para módulos NVIDIA Jetson AGX Thor" />
+  </div>
+</section>
+
+<div className="jetson-product-fact-grid">
+  <div className="jetson-product-fact"><strong>Até 2070 TFLOPS</strong><span>Desempenho de IA com um módulo Jetson AGX Thor T5000</span></div>
+  <div className="jetson-product-fact"><strong>Até 4× 10GbE</strong><span>Quatro portas RJ45 com T5000; três com T4000</span></div>
+  <div className="jetson-product-fact"><strong>Até 8× GMSL2</strong><span>Entrada de várias câmeras por meio de duas placas de expansão GMSL</span></div>
+  <div className="jetson-product-fact"><strong>19–48 V CC</strong><span>Entrada de ampla faixa por um conector de alimentação XT30</span></div>
 </div>
 
-O reComputer J601 é uma placa carrier de borda de IA compacta, porém poderosa, para Jetson AGX Thor, oferecendo até 2070 TFLOPS. Projetada para desenvolvimento e produção, ela possui M.2 Key E/M/B, 4x 10Gb RJ45, 4×USB 3.2, HDMI 2.1, 8×GMSL e vários IOs, garantindo integração perfeita. Pode servir como o cérebro de um robô humanoide. Com suporte a frameworks de LLM e IA Física como NVIDIA Isaac, Hugging Face, PyTorch e ROS2/1, faz a ponte entre IA e robótica. Com processamento em tempo real otimizado, executa visão computacional, transformers e modelos multimodais, liberando IA avançada para dispositivos de borda.
+## Escolha a configuração Jetson
 
-## Recursos
+A J601 é uma **placa carrier**. Selecione um módulo Jetson AGX Thor compatível, um SSD NVMe e uma solução de refrigeração para o seu conjunto. Os nomes J6015 e J6014 identificam as configurações específicas do módulo e os pacotes BSP usados neste guia.
 
-- Suporta módulos **NVIDIA Jetson AGX Thor T5000 e T4000**
-- Até **2070 TFLOPS** de desempenho de IA
-- Até **4x portas 10GbE RJ45**
-- **4x portas USB 3.2 Type-A** com até 10Gbps
-- Saída de vídeo **HDMI 2.1**
-- **M.2 Key M** para SSD PCIe Gen 4 NVMe 2280
-- **M.2 Key E** para módulos Wi-Fi M.2 2230
-- **M.2 Key B** para módulos 4G/5G
-- Até **8x câmeras GMSL2** por meio de dois conectores Mini-Fakra e placas de extensão GMSL
-- I/O para robótica incluindo CAN isolado, RS-232/422/485, I2C, I2S, GPI e GPO
-- Entrada DC de ampla faixa **19V a 48V** através de XT30
-- Plataforma de software: **JetPack 7.1**
+<div className="jetson-product-variant-grid">
+  <article className="jetson-product-variant-card">
+    <span className="jetson-product-variant-badge">Configuração T5000</span>
+    <h3>reComputer Robotics J6015</h3>
+    <p>Use o BSP T5000 para a configuração com quatro portas 10GbE ativas e quatro interfaces CAN isoladas.</p>
+    <div className="jetson-product-variant-metrics"><span>AGX Thor T5000</span><span>4× 10GbE</span><span>4× CAN FD</span></div>
+  </article>
+  <article className="jetson-product-variant-card">
+    <span className="jetson-product-variant-badge">Configuração T4000</span>
+    <h3>reComputer Robotics J6014</h3>
+    <p>Use o BSP T4000 para a configuração com três portas 10GbE ativas e duas interfaces CAN isoladas.</p>
+    <div className="jetson-product-variant-metrics"><span>AGX Thor T4000</span><span>3× 10GbE</span><span>2× CAN FD</span></div>
+  </article>
+</div>
+
+Módulos compatíveis: [NVIDIA Jetson AGX Thor T5000](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T5000-Module-p-6938.html) e [NVIDIA Jetson AGX Thor T4000](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T4000-Module-p-6939.html).
+
+## Por que o reComputer Robotics J601
+
+<div className="jetson-product-feature-grid">
+  <div className="jetson-product-feature"><strong>Percepção com várias câmeras</strong><span>As placas de expansão GMSL aceitam até oito câmeras GMSL2 para percepção surround e fusão de sensores.</span></div>
+  <div className="jetson-product-feature"><strong>Rede de alta velocidade</strong><span>Até quatro conexões RJ45 10GbE transportam dados entre sensores, nós de computação e sistemas de desenvolvimento.</span></div>
+  <div className="jetson-product-feature"><strong>I/O de robótica</strong><span>CAN FD isolado, RS-232/422/485, I2C, I2S e I/O digital conectam controladores, sensores e atuadores.</span></div>
+  <div className="jetson-product-feature"><strong>Expansão modular</strong><span>M.2 Key M aceita um SSD NVMe 2280; Key E e Key B aceitam módulos compatíveis de Wi-Fi/Bluetooth e 4G/5G.</span></div>
+  <div className="jetson-product-feature"><strong>Conectividade de desenvolvimento</strong><span>Quatro portas USB 3.2 Type-A e HDMI 2.1 conectam periféricos e um monitor, com portas USB-C separadas para depuração e recuperação.</span></div>
+  <div className="jetson-product-feature"><strong>Fluxos de IA física</strong><span>Desenvolva no Jetson com frameworks como NVIDIA Isaac, ROS, PyTorch e Hugging Face, seguindo os requisitos de plataforma de cada um.</span></div>
+</div>
 
 ## Especificações
 
-<div class="table-center">
+<div className="jetson-product-table-wrap">
 <table>
+  <thead><tr><th scope="col">Interface / Propriedade</th><th scope="col">Placa carrier J601</th></tr></thead>
   <tbody>
     <tr>
       <td>Compatibilidade de módulo</td>
@@ -132,119 +173,136 @@ O reComputer J601 é uma placa carrier de borda de IA compacta, porém poderosa,
 
 ## Visão geral do hardware
 
-| **Vista lateral 1** |
-|:---------:|
-| ![fig1](https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_04.jpg) |
-| **Vista lateral 2** |
-| ![fig2](https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_05.jpg) |
-| **Vista inferior** |
-| ![fig3](https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_06.jpg) |
-
-## Gravar JetPack
-
-Aqui, mostraremos como gravar o JetPack em um SSD NVMe conectado ao reComputer Robotics J6014 / J6015. Ambos os dispositivos usam a placa carrier J601, e o procedimento de gravação é o mesmo.
-
-### Módulo compatível
-
-- [Módulo NVIDIA Jetson T4000](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T4000-Module-p-6939.html)
-- [Módulo NVIDIA Jetson T5000](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-T5000-Module-p-6938.html)
-
-### Pré-requisitos
-
-- PC host com Ubuntu
-- reComputer Robotics J6014 ou J6015
-- SSD interno NVMe M.2 2280
-- Cabo de transmissão de dados USB Type-C
-- Pelo menos 220 GB de armazenamento livre no PC host
-
-:::info
-Recomendamos usar um host físico com Ubuntu em vez de uma máquina virtual. O Seeed Jetson DevelopTool também oferece suporte ao Windows por meio do WSL2, mas um host Ubuntu nativo proporciona a experiência de gravação mais confiável.
-
-<table style={{textAlign: 'center'}}>
-  <tbody>
-    <tr>
-        <td  rowspan="2"> Versão do JetPack </td>
-        <td class="dbon" colspan="3"> Versão do Ubuntu (computador host) </td>
-    </tr>
-    <tr>
-        <td > 20.04 </td>
-        <td > 22.04 </td>
-        <td > 24.04 </td>
-    </tr>
-    <tr>
-        <td >JetPack 7.1</td>
-        <td > </td>
-        <td > ✅ </td>
-        <td > ✅ </td>
-    </tr>
-  </tbody>
-</table>
-
-:::
-
-### Escolher um método de gravação
-
-Selecione abaixo o fluxo de trabalho gráfico do Seeed Jetson DevelopTool ou o fluxo de trabalho via linha de comando.
-
-<Tabs groupId="j601-flashing-method">
-
-<TabItem value="software" label="Gravação por software" default>
-
-O Seeed Jetson DevelopTool oferece um fluxo de trabalho gráfico guiado que faz o download, verifica, extrai e grava o firmware sem exigir comandos de BSP. Instale a ferramenta seguindo o [guia de instalação do Seeed Jetson DevelopTool](/pt-br/jetson_developtool_installation).
-
-#### Tutorial em vídeo
-
-<div class="video-container">
-<iframe width="1071" height="803" src="https://www.youtube.com/embed/O2rlSOdYujE" title="Flash Jetpack for reCompurer J601 by Jetson Develop Tool!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_04.jpg" alt="Vista lateral 1 do reComputer Robotics J601 · conectores da placa carrier" loading="lazy" />
+    <figcaption>Vista lateral 1 · Conectores da placa carrier</figcaption>
+  </figure>
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_05.jpg" alt="Vista lateral 2 do reComputer Robotics J601 · interfaces adicionais" loading="lazy" />
+    <figcaption>Vista lateral 2 · Interfaces adicionais</figcaption>
+  </figure>
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_06.jpg" alt="Vista inferior do reComputer Robotics J601 · slots de expansão e layout da placa" loading="lazy" />
+    <figcaption>Vista inferior · Slots de expansão e layout da placa</figcaption>
+  </figure>
 </div>
 
-#### Fluxo de trabalho de gravação por software
+| Indicador | Cor | Função |
+| --- | --- | --- |
+| PWR | Verde | Indicador de alimentação |
+| SSD | Verde | Indicador de atividade de armazenamento |
+| USR | RGB | LED de status controlável pelo usuário |
 
-<details>
+Para pinagem, fiação, testes de interface e controle do LED RGB, abra [Hardware e I/O](/jetson/recomputer_robotics_j601/hardware_and_interface_usage/).
 
-<summary> Passo a passo </summary>
+## Gravar o JetPack {#flash-jetpack}
 
-**Passo 1.** Inicie o Seeed Jetson DevelopTool e abra o **Flash Center**. Selecione **reComputer J601** e **JetPack 7.1 (L4T 38.4.0)**.
-
-<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_07.jpg"/></div>
-
-**Passo 2.** Conecte o PC host à **porta de gravação USB 3.0 Type-C**. Pressione e segure o botão **RECOVERY**, conecte a fonte de alimentação DC de 19V a 48V através do XT30 e solte o botão após dois segundos.
-
-<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_08.jpg"/></div>
-
-**Passo 3.** Clique em **Detect Device**. Confirme que o módulo Jetson conectado foi detectado (por exemplo, **AGX Thor T5000**) e clique em **Next**.
-
-<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_09.jpg"/></div>
-
-**Passo 4.** Clique em **Download / Prepare BSP**. A ferramenta faz o download do firmware, verifica o checksum SHA256 e extrai o BSP automaticamente.
-
-<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_10.jpg"/></div>
-
-**Passo 5.** Clique em **Start Flash** e aguarde até que a interface informe que a gravação foi concluída. Não desconecte a fonte de alimentação nem o cabo USB durante esse processo.
+Este fluxo instala o **JetPack 7.1 (L4T 38.4.0)** em um SSD NVMe na placa carrier J601. Escolha o BSP do módulo instalado: **J6015 para T5000** ou **J6014 para T4000**.
 
 :::caution
-A gravação apaga os dados no SSD NVMe de destino. Faça backup dos dados importantes antes de começar.
+A gravação apaga os dados do SSD NVMe de destino. Faça backup dos dados importantes antes de começar e mantenha a alimentação e o USB conectados até a gravação terminar.
 :::
 
-**Passo 6.** Conecte o reComputer Robotics J601 a um monitor HDMI e conclua a configuração inicial do sistema.
+<div className="jetson-product-step-flow">
 
-<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">1</span>
+  <div className="jetson-product-step-content">
+    <h3>Prepare o equipamento</h3>
+    <p className="jetson-product-step-label">Etapa 1 · Prepare o host Ubuntu e o hardware de destino</p>
+
+Prepare o seguinte equipamento:
+
+- Placa carrier J601 com um módulo Jetson AGX Thor T5000 ou T4000 e refrigeração adequada
+- SSD NVMe M.2 2280 instalado no slot Key M
+- Fonte de 19–48 V CC conectada pelo XT30
+- PC host Ubuntu **22.04 ou 24.04** físico com **pelo menos 220 GB** de armazenamento livre
+- Cabo de **dados** USB Type-C
+- Monitor HDMI, teclado e mouse para a primeira inicialização
+
+:::tip
+Um host Ubuntu nativo oferece a experiência de gravação mais confiável. O Seeed Jetson DevelopTool também oferece suporte ao Windows pelo WSL2; siga o [guia de instalação](/jetson_developtool_installation/) para preparar o host.
+:::
+
+  </div>
+</section>
+
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">2</span>
+  <div className="jetson-product-step-content">
+    <h3>Entre no modo Force Recovery</h3>
+    <p className="jetson-product-step-label">Etapa 2 · Conecte o J4 e confirme o módulo instalado</p>
+
+1. Com a placa desligada, conecte o PC host à **porta USB 3.0 Type-C de recuperação/gravação (J4)**. A porta USB 2.0 Type-C de depuração (J3) é um conector separado.
+2. Mantenha **RECOVERY** pressionado.
+3. Conecte a fonte de 19–48 V CC pelo XT30.
+4. Solte **RECOVERY** após dois segundos.
+5. Execute o comando a seguir no host Ubuntu:
+
+```bash
+lsusb
+```
+
+| Configuração | Módulo | ID USB de recuperação esperado |
+| --- | --- | --- |
+| J6015 | AGX Thor T5000 | `0955:7026 NVIDIA Corp.` |
+| J6014 | AGX Thor T4000 | `0955:7226 NVIDIA Corp.` |
+
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_03.jpg" alt="Conexões da porta USB-C de gravação e do botão de recuperação da J601" loading="lazy" />
+
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg" alt="Saída do lsusb no host Ubuntu enquanto uma J601 está no modo Force Recovery" loading="lazy" />
+
+Se o ID esperado não aparecer, verifique o cabo de dados e a porta de recuperação e repita a sequência antes de continuar.
+
+  </div>
+</section>
+
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">3</span>
+  <div className="jetson-product-step-content">
+    <h3>Prepare o BSP correspondente</h3>
+    <p className="jetson-product-step-label">Etapa 3 · Escolha a gravação por software ou por linha de comando</p>
+
+<Tabs groupId="j601-flashing-method">
+<TabItem value="software" label="Gravação por software" default>
+
+Instale e inicie o [Seeed Jetson DevelopTool](/jetson_developtool_installation/) e prepare o firmware:
+
+1. Abra o **Flash Center** e selecione **reComputer J601** e **JetPack 7.1 (L4T 38.4.0)**.
+
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_07.jpg" alt="Flash Center do Jetson DevelopTool com reComputer J601 selecionado" loading="lazy" />
+
+2. Confirme a fiação de recuperação da etapa 2.
+
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_08.jpg" alt="Conexões de alimentação e USB da J601 para o Jetson DevelopTool" loading="lazy" />
+
+3. Clique em **Detect Device**, confirme o módulo instalado e clique em **Next**.
+
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_09.jpg" alt="Jetson DevelopTool detectando o módulo AGX Thor" loading="lazy" />
+
+4. Clique em **Download / Prepare BSP**. A ferramenta baixa o firmware, verifica o checksum SHA-256 e extrai o pacote.
+
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_10.jpg" alt="Jetson DevelopTool baixando e preparando o BSP da J601" loading="lazy" />
+
+<details>
+<summary>Assistir ao tutorial de gravação com o Jetson DevelopTool</summary>
+
+<div className="video-container" style={{paddingBottom: '56.25%'}}>
+  <iframe src="https://www.youtube.com/embed/O2rlSOdYujE" title="Gravar o JetPack no reComputer J601 com o Seeed Jetson DevelopTool" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+</div>
 
 </details>
 
 </TabItem>
-
 <TabItem value="command-line" label="Gravação via linha de comando">
 
-Baixe e grave a imagem JetPack que corresponde ao módulo Jetson na sua placa. Ambos os produtos usam a mesma placa carrier J601; selecione a aba para o seu módulo:
+Baixe o pacote BSP **específico do módulo** abaixo. O arquivo é grande; o download pode levar cerca de 60 minutos. Espere o download terminar antes de extraí-lo.
 
 <Tabs groupId="j601-thor-module">
-
 <TabItem value="t5000" label="AGX Thor T5000 (J6015)" default>
 
-#### Preparar a imagem JetPack
-
-<div class="table-center">
+<div className="jetson-product-table-wrap">
 <table style={{textAlign: 'center', tableLayout: 'fixed', width: '100%'}}>
   <colgroup>
     <col style={{width: '18%'}} />
@@ -258,7 +316,7 @@ Baixe e grave a imagem JetPack que corresponde ao módulo Jetson na sua placa. A
       <th>Versão do JetPack</th>
       <th>Módulo Jetson</th>
       <th>Produto</th>
-      <th>Link para download</th>
+      <th>Link de download</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -276,65 +334,10 @@ Baixe e grave a imagem JetPack que corresponde ao módulo Jetson na sua placa. A
 </table>
 </div>
 
-:::danger
-O arquivo de imagem JetPack é grande e pode levar cerca de 60 minutos para ser baixado. Aguarde o término do download antes de extrair o arquivo compactado.
-:::
-
-Para verificar o firmware baixado, execute `sha256sum <file>` no host Ubuntu e compare o resultado com o valor SHA256 na tabela.
-
-#### Entrar no modo Force Recovery
-
-:::info
-Antes de gravar, certifique-se de que a placa esteja em modo Force Recovery.
-:::
-
-**Passo 1.** Conecte o PC host com Ubuntu à **porta de gravação USB 3.0 Type-C** usando um cabo de dados USB Type-C.
-
-<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_03.jpg"/></div>
-
-**Passo 2.** Pressione e segure o botão **RECOVERY**.
-
-**Passo 3.** Conecte a fonte de alimentação (19 V a 48 V CC através do conector XT30).
-
-**Passo 4.** Solte o botão **RECOVERY** após dois segundos.
-
-**Passo 5.** No PC host, execute `lsusb`. A seguinte entrada confirma que a placa está em Force Recovery Mode:
-
-- **0955:7026 NVIDIA Corp.**
-
-<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
-
-#### Gravar no Jetson
-
-**Passo 1.** Extraia a imagem baixada:
-
-```bash
-cd <path-to-image>
-sudo tar xpf mfi_recomputer-thor-carrier-j6015-7.1-38.4.0-YYYY-MM-DD.tar.gz
-```
-
-**Passo 2.** Grave o JetPack no SSD NVMe:
-
-```bash
-cd mfi_recomputer-thor-carrier-j6015
-sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --showlogs --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t264_nvme.xml -S 80GiB --network usb0 recomputer-thor-carrier-j6015 external
-```
-
-O comando de gravação geralmente leva de 2 a 10 minutos. A saída a seguir indica uma gravação bem-sucedida:
-
-<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
-
-**Passo 3.** Conecte o reComputer Robotics J6015 a um monitor HDMI e conclua a configuração inicial do sistema.
-
-<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
-
 </TabItem>
-
 <TabItem value="t4000" label="AGX Thor T4000 (J6014)">
 
-#### Preparar a imagem do JetPack
-
-<div class="table-center">
+<div className="jetson-product-table-wrap">
 <table style={{textAlign: 'center', tableLayout: 'fixed', width: '100%'}}>
   <colgroup>
     <col style={{width: '18%'}} />
@@ -348,7 +351,7 @@ O comando de gravação geralmente leva de 2 a 10 minutos. A saída a seguir ind
       <th>Versão do JetPack</th>
       <th>Módulo Jetson</th>
       <th>Produto</th>
-      <th>Link para download</th>
+      <th>Link de download</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -366,101 +369,178 @@ O comando de gravação geralmente leva de 2 a 10 minutos. A saída a seguir ind
 </table>
 </div>
 
-:::danger
-O arquivo de imagem do JetPack é grande e pode levar cerca de 60 minutos para ser baixado. Aguarde o término do download antes de extrair o arquivo compactado.
-:::
+</TabItem>
+</Tabs>
 
-Para verificar o firmware baixado, execute `sha256sum <file>` no host Ubuntu e compare o resultado com o valor SHA256 na tabela.
+No host Ubuntu, verifique o arquivo baixado e compare o resultado completo com o checksum do seu módulo:
 
-#### Entrar em Force Recovery Mode
+```bash
+sha256sum <downloaded-archive.tar.gz>
+```
 
-:::info
-Antes de gravar, certifique-se de que a placa esteja em Force Recovery Mode.
-:::
+</TabItem>
+</Tabs>
 
-**Passo 1.** Conecte o PC host com Ubuntu à **porta de gravação USB 3.0 Type-C** usando um cabo de dados USB Type-C.
+  </div>
+</section>
 
-<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_03.jpg"/></div>
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">4</span>
+  <div className="jetson-product-step-content">
+    <h3>Grave o SSD NVMe</h3>
+    <p className="jetson-product-step-label">Etapa 4 · Use o mesmo método de gravação e a mesma seleção de módulo</p>
 
-**Passo 2.** Pressione e segure o botão **RECOVERY**.
+<Tabs groupId="j601-flashing-method">
+<TabItem value="software" label="Gravação por software" default>
 
-**Passo 3.** Conecte a fonte de alimentação (19 V a 48 V CC através do conector XT30).
+Clique em **Start Flash** no Jetson DevelopTool e aguarde a interface informar sucesso. Mantenha a fonte de alimentação e o cabo de dados USB conectados durante todo o processo.
 
-**Passo 4.** Solte o botão **RECOVERY** após dois segundos.
+</TabItem>
+<TabItem value="command-line" label="Gravação via linha de comando">
 
-**Passo 5.** No PC host, execute `lsusb`. A seguinte entrada confirma que a placa está em Force Recovery Mode:
+Extraia o arquivo no host Ubuntu e execute o comando do módulo instalado. Substitua `YYYY-MM-DD` pela data no nome do arquivo baixado.
 
-- **0955:7226 NVIDIA Corp.**
+<Tabs groupId="j601-thor-module">
+<TabItem value="t5000" label="AGX Thor T5000 (J6015)" default>
 
-<div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/Getting_Start/robotics_j601_carrier_board_getting_started_02.jpg"/></div>
+```bash
+cd <path-to-image>
+sudo tar xpf mfi_recomputer-thor-carrier-j6015-7.1-38.4.0-YYYY-MM-DD.tar.gz
+cd mfi_recomputer-thor-carrier-j6015
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --showlogs --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t264_nvme.xml -S 80GiB --network usb0 recomputer-thor-carrier-j6015 external
+```
 
-#### Gravar no Jetson
-
-**Passo 1.** Extraia a imagem baixada:
+</TabItem>
+<TabItem value="t4000" label="AGX Thor T4000 (J6014)">
 
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_recomputer-thor-carrier-j6014-7.1-38.4.0-YYYY-MM-DD.tar.gz
-```
-
-**Passo 2.** Grave o JetPack no SSD NVMe:
-
-```bash
 cd mfi_recomputer-thor-carrier-j6014
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --showlogs --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t264_nvme.xml -S 80GiB --network usb0 recomputer-thor-carrier-j6014 external
 ```
 
-O comando de gravação geralmente leva de 2 a 10 minutos. A saída a seguir indica uma gravação bem-sucedida:
-
-<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
-
-**Passo 3.** Conecte o reComputer Robotics J6014 a um monitor HDMI e conclua a configuração inicial do sistema.
-
-<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
-
 </TabItem>
-
 </Tabs>
 
-⚙️ **Todos os arquivos `.dts` e outros códigos-fonte das placas carrier Jetson da Seeed podem ser baixados em** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra).
+O comando de gravação costuma levar de 2 a 10 minutos. Aguarde o terminal informar que a gravação foi concluída com sucesso.
+
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png" alt="Exemplo de saída do terminal após uma gravação bem-sucedida do Jetson" loading="lazy" />
 
 </TabItem>
-
 </Tabs>
 
-:::info
-Conclua a **Configuração do Sistema** de acordo com suas necessidades após a primeira inicialização.
-:::
+  </div>
+</section>
 
-Para uso detalhado das interfaces, consulte [Uso das interfaces de hardware do Robotics J601](/pt-br/recomputer_jetson_robotics_j601_interfaces_usage).
+<section className="jetson-product-step-item">
+  <span className="jetson-product-step-number">5</span>
+  <div className="jetson-product-step-content">
+    <h3>Conclua a primeira inicialização</h3>
+    <p className="jetson-product-step-label">Etapa 5 · Configure o Ubuntu e verifique as interfaces</p>
 
-## O que você pode fazer com o J601?
+Conecte o monitor HDMI, o teclado e o mouse e conclua a configuração inicial do sistema Ubuntu. Se a tela de configuração não aparecer depois da gravação, desligue e ligue a placa depois que a ferramenta informar sucesso.
 
-Depois de gravar o JetPack, explore os wikis de demonstração abaixo para ver o que você pode construir no reComputer Robotics J601. Esses cards são gerados automaticamente a partir dos wikis publicados de **Aplicações** Jetson e **Outros dispositivos** que mencionam **J601** ou **Jetson Thor**.
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png" alt="Exemplo da tela de configuração da primeira inicialização do Ubuntu no Jetson" loading="lazy" />
 
-<J601DemoGrid />
+Continue em [Hardware e I/O](/jetson/recomputer_robotics_j601/hardware_and_interface_usage/) para verificar os periféricos, ou explore a [demo de percepção](#applications). As fontes de device tree e BSP da placa carrier da Seeed estão disponíveis em [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra).
 
-## Recursos
+  </div>
+</section>
 
-- [Folha de dados da placa carrier reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_J601_datasheet.pdf)
-- [Esquemático da placa carrier reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20J601%20Carrier%20Board_V1.0_SCH_260612.pdf)
-- [Arquivo 3D do reComputer J601](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_J601.stp)
-- [Catálogo de produtos Seeed NVIDIA Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Casos de sucesso Seeed NVIDIA Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson AGX One Pager](https://files.seeedstudio.com/wiki/reComputer-Jetson/seeed_jetson_agx_new_series.pdf)
-- [Código-fonte do BSP Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
-- [Página do produto da placa carrier reComputer J601](https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html)
-
-## Suporte técnico
-
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível.
-
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+## Aplicações {#applications}
+
+Comece com um exemplo de percepção por câmera e LiDAR para o reComputer Robotics J601.
+
+<div className="jetson-product-application-grid">
+  <article className="jetson-product-application-card">
+    <a className="jetson-product-application-cover" href="https://github.com/jjjadand/recomputer-j601-bev-demo" target="_blank" rel="noopener noreferrer" aria-label="Abrir o repositório da demo de percepção com várias câmeras e LiDAR da J601">
+      <img src="https://img.youtube.com/vi/gFFaiGvRdtg/hqdefault.jpg" alt="Prévia em vídeo da demo de percepção por câmera e LiDAR da J601" loading="lazy" />
+    </a>
+    <div className="jetson-product-application-body">
+      <div className="jetson-product-application-labels" aria-label="Recursos da aplicação"><span>Detecção</span><span>Fusão de sensores</span><span>BEV</span></div>
+      <h3><a href="https://github.com/jjjadand/recomputer-j601-bev-demo" target="_blank" rel="noopener noreferrer">Percepção com várias câmeras e LiDAR</a></h3>
+      <p>Reproduz seis fluxos de câmera e dados de LiDAR enquanto o Jetson executa detecção com TensorRT, segmentação de estrada, fusão geométrica em visão aérea e mapeamento local alinhado à pose, com visualizações sincronizadas no navegador.</p>
+    </div>
+  </article>
+</div>
+
+### Assistir à demo de percepção
+
+<div className="video-container" style={{paddingBottom: '56.25%'}}>
+  <iframe src="https://www.youtube.com/embed/gFFaiGvRdtg" title="Demo de percepção com várias câmeras e LiDAR do reComputer J601" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+</div>
+
+<div className="jetson-product-actions">
+  <a className="jetson-product-button" href="https://github.com/jjjadand/recomputer-j601-bev-demo" target="_blank" rel="noopener noreferrer">Obter a demo e o guia de implantação ↗</a>
+  <a className="jetson-product-button jetson-product-button--secondary" href="https://youtu.be/gFFaiGvRdtg" target="_blank" rel="noopener noreferrer">Assistir no YouTube ↗</a>
+</div>
+
+O repositório documenta a validação em **JetPack 7.2 / L4T R39.2, CUDA 13.2 e TensorRT 10.16.2**. Siga as instruções de ambiente e implantação dele; o pacote de gravação **JetPack 7.1** desta página é uma linha de base de software separada. Compile os engines TensorRT no dispositivo de destino para as versões de software instaladas.
+
+A demo usa dados nuScenes gravados e fusão geométrica de câmera/LiDAR. O mapa local usa poses fornecidas pelo conjunto de dados; a precisão da segmentação no nuScenes não foi avaliada. Consulte o repositório para as condições de validação e as licenças do conjunto de dados e dos modelos.
+
+## Recursos {#resources}
+
+Use estes recursos para integração da placa, projeto mecânico e desenvolvimento do BSP.
+
+<div className="jetson-product-resource-grid">
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_J601_datasheet.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">PDF</span>
+    <span className="jetson-product-resource-copy"><strong>Datasheet da placa carrier</strong><small>Pinagem dos conectores, limites elétricos e especificações da placa</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20J601%20Carrier%20Board_V1.0_SCH_260612.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">SCH</span>
+    <span className="jetson-product-resource-copy"><strong>Esquema da placa carrier</strong><small>Circuitos e roteamento de sinais da J601 V1.0</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_J601.stp" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">3D</span>
+    <span className="jetson-product-resource-copy"><strong>Modelo mecânico 3D</strong><small>Modelo STEP para montagem e planejamento do gabinete</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">GIT</span>
+    <span className="jetson-product-resource-copy"><strong>Código-fonte do Linux_for_Tegra</strong><small>Fontes do BSP Jetson da Seeed e da device tree</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thortm-T5000-T4000.html" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">SHOP</span>
+    <span className="jetson-product-resource-copy"><strong>Placa carrier J601</strong><small>Opções de compra da placa carrier Jetson AGX Thor</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">PDF</span>
+    <span className="jetson-product-resource-copy"><strong>Catálogo de produtos Jetson</strong><small>Veja os produtos NVIDIA Jetson da Seeed</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">CASE</span>
+    <span className="jetson-product-resource-copy"><strong>Casos de sucesso Jetson</strong><small>Exemplos de implantação em aplicações de IA de borda</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+  <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/wiki/reComputer-Jetson/seeed_jetson_agx_new_series.pdf" target="_blank" rel="noopener noreferrer">
+    <span className="jetson-product-resource-icon" aria-hidden="true">PDF</span>
+    <span className="jetson-product-resource-copy"><strong>Resumo de uma página do Jetson AGX</strong><small>Visão geral da plataforma Jetson AGX da Seeed</small></span>
+    <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
+  </a>
+</div>
+
+## Suporte técnico e discussão sobre o produto
+
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível.
+
+<div className="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" className="button_forum" aria-label="Fórum da comunidade Seeed"></a>
+<a href="https://www.seeedstudio.com/contacts" className="button_email" aria-label="Falar com o suporte da Seeed"></a>
+</div>
+
+<div className="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" className="button_discord" aria-label="Comunidade Discord da Seeed"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion" aria-label="Discussão de produtos da wiki"></a>
+</div>
+
 </div>

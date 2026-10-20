@@ -276,7 +276,7 @@ sudo ip link set can0 up    # Bring up can0
 
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>Ferramentas de depuração (usar apenas quando ocorrer uma exceção)</summary>
 
 **Console de motor único — Robostride RS06 (`0x01rs06_test.py`)**

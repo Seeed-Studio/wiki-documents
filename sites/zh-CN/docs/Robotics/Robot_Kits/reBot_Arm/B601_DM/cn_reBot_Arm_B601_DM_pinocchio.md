@@ -328,7 +328,7 @@ sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/can0
 ```
 :::
-<details>
+<details className="rebot-demo-details">
 <summary>调试用工具（仅异常情况使用）</summary>
 
 **单电机控制台 (`0x01damiao_test.py`)**

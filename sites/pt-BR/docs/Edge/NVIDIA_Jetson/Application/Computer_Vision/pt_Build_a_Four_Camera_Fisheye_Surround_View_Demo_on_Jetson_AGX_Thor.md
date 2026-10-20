@@ -127,7 +127,7 @@ Conecte quatro câmeras olho de peixe Sensing GMSL2 a **uma porta Mini-Fakra GMS
 5. Monte as câmeras ao redor do chassi de forma que apontem para **frente, trás, esquerda e direita**.
 6. Opcionalmente conecte um monitor HDMI se quiser assistir à janela BEV ao vivo na placa.
 
-Para inicialização do GMSL no J601, consulte [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_robotics_j601_interfaces_usage/).
+Para inicialização do GMSL no J601, consulte [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/pt-br/jetson/recomputer_robotics_j601/hardware_and_interface_usage/).
 
 <div align="center">
   <img width={900}
@@ -314,8 +314,8 @@ O resultado ainda é uma **aproximação no plano do solo**. Não é uma pose de
 ## Recursos
 
 - [Vídeo de demonstração](https://www.youtube.com/watch?v=o0NTeeLV4Vk)
-- [Primeiros passos com o reComputer Robotics J601](https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/)
-- [Uso das interfaces de hardware do Robotics J601](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_robotics_j601_interfaces_usage/)
+- [Primeiros passos com o reComputer Robotics J601](https://wiki.seeedstudio.com/pt-br/jetson/recomputer_robotics_j601/getting_started/)
+- [Uso das interfaces de hardware do Robotics J601](https://wiki.seeedstudio.com/pt-br/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)
 - [GitHub](https://github.com/xbs0325/j601-surround-demo)
 
 ## Suporte técnico e discussão sobre o produto

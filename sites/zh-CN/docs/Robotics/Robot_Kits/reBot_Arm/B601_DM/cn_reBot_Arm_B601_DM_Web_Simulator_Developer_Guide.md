@@ -101,7 +101,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 ```bash
 ls /dev/ttyACM*
 ```
-<details>
+<details className="rebot-demo-details">
 <summary>预期输出</summary>
 
 ```text
@@ -226,7 +226,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm doctor
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>预期输出（摘要）</summary>
 
 ```text
@@ -386,7 +386,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start sim
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>预期输出</summary>
 
 ```text
@@ -486,7 +486,7 @@ source scripts/source_rebotarm_env.sh
 该脚本按顺序加载 ROS2（`/opt/ros/jazzy/setup.bash`）、Python venv（`.venv/bin/activate`）、cmeel 路径（Pinocchio 的 C 扩展）和工作空间（`install/setup.bash`）。
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>核心模块说明</b>（点击展开）</summary>
 
 
@@ -588,7 +588,7 @@ const jointDefs = [
 
 </details>
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>ROS2 接口一览</b>（点击展开）</summary>
 
 
@@ -688,7 +688,7 @@ ros2 launch rebotarm_agent rebotarm_mcp.launch.py motion_mode:=allow
 cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
-<details>
+<details className="rebot-demo-details">
 <summary>预期输出</summary>
 
 ```text
@@ -806,7 +806,7 @@ rosbridge WebSocket 地址由用户在网页「ROS2 桥接」面板手动输入�
 
 网页会在输入框为空时尝试加载上次保存的地址。修改默认值或直接在网页连接面板手动输入实际地址即可。
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>关键文件速查</b>（点击展开）</summary>
 
 

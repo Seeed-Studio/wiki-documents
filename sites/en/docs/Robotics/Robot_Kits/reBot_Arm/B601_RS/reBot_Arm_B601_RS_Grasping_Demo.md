@@ -239,6 +239,26 @@ The terminal prompt shows `rebotarm`, indicating that this environment is active
 
 If you want to use a different environment name, replace `rebotarm` in the command with your own name.
 
+:::warning Verify PyTorch immediately
+`environment.yml` installs PyTorch automatically through the `ultralytics` / `torchaudio` dependencies. If the installation is interrupted by a network issue, PyTorch may be **silently missing**, and the error only appears when you run `main.py`. Verify it right after creating the environment:
+
+```bash
+python -c "import torch; print(torch.__version__, torch.__file__)"
+```
+
+- The path should show `.../miniforge3/envs/rebotarm/...` (inside the conda environment). If it raises `ModuleNotFoundError`, or the path points to `~/.local/...` (user directory), the installation is incomplete or misplaced — run:
+
+```bash
+pip install --force-reinstall torch torchvision
+```
+
+- With an NVIDIA GPU, also confirm CUDA is available:
+
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+:::
+
 </div>
 </section>
 <section className="rebot-step-item">
@@ -378,6 +398,14 @@ RealSense cameras depend on `pyrealsense2`. Usually you can install it directly 
 pip install pyrealsense2
 python -c "import pyrealsense2; print('pyrealsense2 OK')"
 ```
+
+:::warning Use a USB 3.x port
+The D405 / D435i must be plugged into a USB 3.0/3.2 port (usually blue). If plugged into a USB 2.0 port, the typical symptom is: **the system recognizes the device and `pipeline.start()` succeeds, but frames never arrive** (`Frame didn't arrive within ...`). Check the negotiated speed with:
+
+```bash
+lsusb -t   # the camera line should show 5000M; 480M means it fell back to a USB 2.0 port — switch ports
+```
+:::
 
 If your system needs the full RealSense toolchain or udev rules, follow the [official librealsense documentation](https://github.com/realsenseai/librealsense).
 
@@ -643,20 +671,71 @@ The default Python SDK / OBB route does not require GraspNet. Follow these steps
 
 You do not need GraspNet for `scripts/main.py` or `scripts/ordinary_grasp_pipeline.py`. Configure it only when you want to run `scripts/graspnet_camera_demo.py` or `scripts/grasp.py`, which require GraspNet, CUDA-enabled PyTorch, the PointNet2/knn CUDA operators, and a pretrained checkpoint.
 
-The GraspNet `pointnet2` / `knn` extensions require a CUDA compiler. Before starting, make sure the active environment can find `nvcc`, and check that the CUDA version reported by `nvcc` matches the CUDA version used to build PyTorch:
+When configuring this environment for the first time, the `torchaudio` entry in `environment.yml` usually installs PyTorch along with it. If it is missing (or only the CPU build was installed), follow the steps below to explicitly install and verify a CUDA-enabled PyTorch. The GraspNet `pointnet2` / `knn` extensions depend on PyTorch and a CUDA compiler with a matching version — finish all steps before building.
+
+**Step 1: Confirm your GPU**
+
+```bash
+nvidia-smi
+```
+
+Continue only if an NVIDIA GPU is listed. Without an NVIDIA GPU you can only use the CPU build of PyTorch, and the GraspNet CUDA operators cannot be built or run.
+
+**Step 2: Check / install PyTorch**
+
+First check whether PyTorch already exists in the current environment:
+
+```bash
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
+```
+
+- If it is installed and `torch.cuda.is_available()` prints `True`, skip the installation and go to Step 3.
+- If it raises `ModuleNotFoundError` (not installed), or `torch.version.cuda` is `None` (CPU build installed), install the CUDA build as shown below. Take CUDA 13.0 as an example:
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
+```
+
+Pick the CUDA version in `--index-url` based on your GPU:
+
+| GPU | Recommended PyTorch CUDA build |
+| --- | --- |
+| RTX 50 series (Blackwell, e.g. RTX 5070 / 5090) | `cu128` or newer (e.g. `cu130`) |
+| RTX 40 / 30 series (Ada / Ampere) | `cu121` or `cu118` |
+| No NVIDIA GPU | `cpu` (CPU only, GraspNet will not run) |
+
+**Step 3: Install the CUDA compiler matching your PyTorch**
+
+`pointnet2` / `knn` are local CUDA extensions: the CUDA version reported by `nvcc --version` must match `torch.version.cuda` when building, otherwise the build fails with `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`. Check both versions first:
 
 ```bash
 nvcc --version
-python -c "import torch; print(torch.__version__, torch.version.cuda)"
+python -c "import torch; print(torch.version.cuda)"
 ```
 
-If `nvcc` is missing, or if the CUDA version reported by `nvcc` does not match `torch.version.cuda`, install a CUDA compiler that matches your current PyTorch CUDA version. For example, if PyTorch reports `13.0`:
+Take `torch.version.cuda` showing `13.0` as an example, and install the matching compiler inside the conda environment:
 
 ```bash
-conda install -c nvidia cuda-nvcc=13.0
+conda install -c nvidia cuda-nvcc=13.0 cuda-cudart-dev=13.0
+
+which nvcc       # should point to $CONDA_PREFIX/bin/nvcc, not /usr/bin/nvcc
+nvcc --version   # should match torch.version.cuda
 ```
 
-You can also install a PyTorch build that matches your current `nvcc` version instead. The two versions must match, otherwise building `pointnet2` / `knn` will fail with `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`.
+`cuda-nvcc` provides the compiler and `cuda-cudart-dev` provides the CUDA headers under `targets/x86_64-linux/include`; both are required. Once the conda environment is activated, `$CONDA_PREFIX/bin` precedes the system paths, so the conda `nvcc` automatically shadows the old system one (for example CUDA 11.5 from the Ubuntu repositories) — there is no need to uninstall the system CUDA.
+
+:::warning
+Do not downgrade PyTorch to match an old system `nvcc`: old CUDA releases may not support your GPU architecture (CUDA 11.5 supports at most sm_86; RTX 40 series requires CUDA 11.8+ and RTX 50 series requires CUDA 12.8+), and old PyTorch builds may be incompatible with other project dependencies such as recent ultralytics releases.
+:::
+
+**Step 4: Verify**
+
+```bash
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
+nvcc --version
+```
+
+When both CUDA versions match and `torch.cuda.is_available()` prints `True`, the PyTorch setup is complete and you can continue building the CUDA operators.
 
 ```bash
 cd sdk
@@ -667,11 +746,14 @@ cd graspnet-baseline
 pip install open3d tensorboard Pillow tqdm
 
 # Configure CUDA build paths before building the local operators.
+# Note: use the conda cuda-toolkit targets directory for headers/libraries;
+# do not mix in the pip nvidia/cu13 directory (a version mismatch with conda nvcc causes build errors).
 export CUDA_HOME=$CONDA_PREFIX
 export TORCH_CUDA_ARCH_LIST="12.0"
-export CPATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPATH
-export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPLUS_INCLUDE_PATH
-export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+export CPATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPATH
+export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=$CONDA_PREFIX/targets/x86_64-linux/lib:$CONDA_PREFIX/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=$CONDA_PREFIX/targets/x86_64-linux/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 
 # Build CUDA operators
 cd pointnet2
@@ -693,7 +775,7 @@ Note: If you follow the official graspnet-baseline repository documentation and 
 :::
 
 :::tip
-If building fails with `fatal error: cusparse.h: No such file or directory`, run `find $CONDA_PREFIX -name cusparse.h` and make sure the directory that contains `cusparse.h` is included in `CPATH` / `CPLUS_INCLUDE_PATH`. If you installed CUDA headers from conda `cuda-toolkit`, the include path is usually `$CONDA_PREFIX/targets/x86_64-linux/include` instead of the pip `nvidia/cu13/include` path shown above.
+If building fails with `fatal error: cusparse.h: No such file or directory`, run `find $CONDA_PREFIX -name cusparse.h` and add the directory containing `cusparse.h` to `CPATH` / `CPLUS_INCLUDE_PATH` (with conda `cuda-toolkit` this is usually `$CONDA_PREFIX/targets/x86_64-linux/include`). If you get header-related errors such as `'__NV_IS_DEVICE' was not declared in this scope`, they are usually caused by mixing the pip `nvidia/cu13` headers with the conda `nvcc` version — switch to the conda `targets` paths above and rebuild.
 :::
 
 :::tip
@@ -705,6 +787,8 @@ In addition, older GraspNet API dependencies may still use the deprecated `sklea
 Download the official GraspNet pretrained weights from the graspnet-baseline official repository [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A), then place `checkpoint-rs.tar` at:
 
 ```bash
+mkdir -p ~/rebot_grasp/sdk/graspnet-baseline/checkpoints
+
 sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
 ```
 
@@ -808,10 +892,11 @@ cd ../knn
 pip install . --no-build-isolation
 ```
 
-Verify:
+Verify (`pointnet2_utils` / `knn_modules` are imported as top-level modules from the source directories, which is also how `models/` imports them; the grasping scripts add the source directories to `sys.path` automatically):
 
 ```bash
-python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
+cd sdk/graspnet-baseline
+python -c "import sys; sys.path[:0]=['pointnet2','knn']; import pointnet2_utils, knn_modules; print('import works')"
 ```
 
 <h4>5. CUDA architecture compatibility issues on newer GPUs when running GraspNet</h4>

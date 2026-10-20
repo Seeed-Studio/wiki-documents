@@ -276,7 +276,7 @@ sudo ip link set can0 up    # Bring up can0
 
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>デバッグツール（異常発生時のみ使用）</summary>
 
 **単一モーターコンソール — Robostride RS06（`0x01rs06_test.py`）**

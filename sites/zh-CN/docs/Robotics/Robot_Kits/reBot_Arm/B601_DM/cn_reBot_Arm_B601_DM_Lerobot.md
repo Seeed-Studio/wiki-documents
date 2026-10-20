@@ -842,6 +842,28 @@ lerobot-teleoperate \
 :::danger
 遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
 :::
+</TabItem>
+
+<TabItem value="camera-mount" label="摄像头支架">
+
+【摄像头支架安装】
+
+固定摄像头位置，让数据干净采集，支持多角度自由调节，支持俯视 + 腕部、俯视 + 侧视等视角，支持普通 USB 相机，深度相机 D435i、D405、Gemini 2 等深度相机的使用，支持 SO-ARM101 和 reBot 等机械臂，可搭配数采实验盒进行使用，并复用下载数据集和模型，开箱使用。
+
+<div class="video-container">
+<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1HzYs6bEdH&p=1&autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://e.tb.cn/h.jbKAUs3BmOBVLXr?tk=KXmMTHMHwek" target="_blank" rel="noopener noreferrer">
+    <span>立即购买</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 </TabItem>
 </Tabs>

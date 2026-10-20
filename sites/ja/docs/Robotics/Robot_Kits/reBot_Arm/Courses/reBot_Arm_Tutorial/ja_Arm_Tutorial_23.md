@@ -125,7 +125,7 @@ R^\top R &= I && \text{(orthonormal)} \\
 \end{aligned}
 $$
 
-<details>
+<details className="rebot-demo-details">
 <summary><strong>ミクロな例題：4x4 変換行列の読み取り</strong></summary>
 
 $$
