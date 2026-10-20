@@ -240,11 +240,13 @@ Open the Arduino IDE, navigate to **Sketch → Include Library → Add .ZIP Libr
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/Arduino_IDE_01.png" style={{width:800, height:'auto'}}/></div>
 
-2. In **Tools → Board**, select **Seeed XIAO nRF52840 Plus**.
+2. If you have not set up the XIAO nRF52840 board support yet, open **Tools → Board → Boards Manager...**, search for **Seeed nRF52 Boards** and install it — note this is the regular **Seeed nRF52 Boards** package, **not** *Seeed nRF52 mbed-enabled Boards*. For detailed setup instructions, refer to the [XIAO BLE Software Setup guide](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup).
+
+3. In **Tools → Board**, select **Seeed XIAO nRF52840 Plus**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:400, height:'auto'}}/></div>
 
-3. Connect the board via USB Type-C, select the corresponding serial port, and click **Upload**. Once the upload completes, the ePaper will refresh and display the demo.
+4. Connect the board via USB Type-C, select the corresponding serial port, and click **Upload**. Once the upload completes, the ePaper will refresh and display the demo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/2.png" style={{width:300, height:'auto'}}/></div>
 
