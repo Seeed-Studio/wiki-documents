@@ -4,6 +4,9 @@
 
 const K = 'Robotics/Robot_Kits';
 
+// SO-ARM101 产品侧边栏的入门课程跳转分组。
+const soArmCourseLink = require('./soarm-course-sidebar').courseLink();
+
 const backToRobotics = () => ({
   type: 'ref',
   id: 'cn_Edge_Robotics',
@@ -252,6 +255,7 @@ const sidebars = {
         `${K}/Lerobot/cn_Lerobot_SO_ARM101_DAMO`,
       ],
     },
+    soArmCourseLink,
   ],
 
   LekiwiSidebar: [

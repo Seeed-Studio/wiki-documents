@@ -2,6 +2,7 @@
 
 const roboticsSidebars = require('./robotics-sidebar');
 const rebotRsDmSidebars = require('./rebot-course-sidebar');
+const soArmCourseSidebars = require('./soarm-course-sidebar');
 const jetsonSidebars = require('./jetson-sidebar');
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
@@ -4998,6 +4999,7 @@ const sidebars = {
 
   ...roboticsSidebars,
   ...rebotRsDmSidebars,
+  ...soArmCourseSidebars,
   ...jetsonSidebars,
 
 };
