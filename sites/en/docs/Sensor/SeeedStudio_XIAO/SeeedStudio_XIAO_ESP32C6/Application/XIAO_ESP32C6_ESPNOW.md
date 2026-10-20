@@ -278,7 +278,7 @@ void espnow_deinit(){
 
 #### Resolution Part1 Code
 
-The include librarise
+The include libraries
 
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`
