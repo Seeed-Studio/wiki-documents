@@ -4,6 +4,9 @@
 
 const K = 'Robotics/Robot_Kits';
 
+// Beginner course jump group for the SO-ARM101 product sidebar.
+const soArmCourseLink = require('./soarm-course-sidebar').courseLink();
+
 const backToRobotics = () => ({
   type: 'ref',
   id: 'Edge_Robotics',
@@ -223,6 +226,7 @@ const sidebars = {
         `${K}/Lerobot/Lerobot_SO_ARM101_DAMO`,
       ],
     },
+    soArmCourseLink,
   ],
 
   LekiwiSidebar: [
