@@ -132,7 +132,7 @@ reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
     <tr>
       <td>I2C</td>
       <td>2x I2C 4-Pin GH 1.25 排针</td>
-    </tr]
+    </tr>
     <tr>
       <td>风扇</td>
       <td>1x 4-Pin 风扇接口（5V PWM）；<br />1x 4-Pin 风扇接口（12V PWM）</td>

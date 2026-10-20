@@ -382,7 +382,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 ## ハードウェアインターフェースの使用
 
 :::info
-ハードウェアインターフェースの詳細な仕様や使用方法についてさらに知りたい場合は、[この wiki](https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/#インターフェースの使用) を参照してください。
+ハードウェアインターフェースの詳細な仕様や使用方法についてさらに知りたい場合は、[この wiki](https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/#インターフェースの使用方法) を参照してください。
 :::
 
 ## リソース
