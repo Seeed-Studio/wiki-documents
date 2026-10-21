@@ -69,7 +69,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS 与 ROS2</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 控制系统</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web控制系统：真机与 MuJoCo</b></div></a>
         <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
       </div>
     </div>
@@ -119,7 +119,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/cn/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM 与 ROS2</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 控制系统</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web控制系统：真机与 MuJoCo</b></div></a>
       </div>
     </div>
     <div className="learning-group">
