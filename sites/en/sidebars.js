@@ -4246,6 +4246,44 @@ const sidebars = {
         'Contribution/Fusion/Service_for_Fusion_PCB',
       ],
     },
+    {
+      type: 'category',
+      label: 'Light Customization',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/Service_for_Fusion_Light_Customization',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'One-Stop Services',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/Service_for_Fusion_One_Stop',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'PCBA Testing Solutions',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/Service_for_Fusion_PCBA_Testing_Solutions',
+        'Contribution/Fusion/Service_for_Fusion_PCBA_Functional_Test',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Manufacturing Preparation',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/Service_for_Fusion_Manufacturing_Documents',
+        'Contribution/Fusion/Service_for_Fusion_Sample_Validation',
+      ],
+    },
     // END OF Fusion
     {
       type: 'doc',
