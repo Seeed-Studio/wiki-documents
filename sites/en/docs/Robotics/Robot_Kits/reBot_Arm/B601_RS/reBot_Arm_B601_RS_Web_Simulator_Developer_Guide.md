@@ -1,6 +1,6 @@
 ---
 description: This developer guide introduces the web console, ROS 2, RobStride/SocketCAN, MuJoCo simulation, visual grasping, and LLM/MCP Agent installation, runtime, and secondary development workflow of the ReBot Arm Digital Twin & Control Stack for B601-RS.
-title: reBot-RS Web Control System: Real Robot & MuJoCo
+title: "reBot-RS Web Control System: Real Robot & MuJoCo"
 keywords:
   - reBot Arm
   - B601-RS
