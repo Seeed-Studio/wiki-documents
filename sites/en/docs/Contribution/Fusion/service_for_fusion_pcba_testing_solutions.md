@@ -4,10 +4,10 @@ title: Seeed Fusion PCBA Testing Solutions Guide
 keywords:
   - Seeed_Fusion
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Service_for_Fusion_PCBA_Testing_Solutions
+slug: /service_for_fusion_pcba_testing_solutions
 last_update:
   date: 10/21/2026
-  author: shuxu hu
+  author: Xi Lin
 ---
 
 Seeed Fusion provides functional, electrical performance, and reliability testing for PCBAs, along with firmware flashing and custom test fixture development. Testing can be included in a PCBA manufacturing project or requested separately for existing boards.
@@ -65,7 +65,7 @@ Design documents help the engineering team understand the board''s structure, in
 
 The Testing Only form requires two groups of files: Gerber files and schematics in one upload, and test requirements in the other. Product photos are currently optional on the form. A PRD can provide additional product context for the engineering team. Refer to [Fusion Testing Solutions](https://www.seeedstudio.com/fusion-testing-solutions.html) for current submission and file format requirements.
 
-For projects involving firmware flashing or functional testing, the relevant documents also need to specify the firmware version, connection details, operating steps, and expected results. For more detail, see the [Seeed Fusion Guide to Preparing PCBA Functional Test Requirements](https://wiki.seeedstudio.com/Service_for_Fusion_PCBA_Functional_Test/).
+For projects involving firmware flashing or functional testing, the relevant documents also need to specify the firmware version, connection details, operating steps, and expected results. For more detail, see the [Seeed Fusion Guide to Preparing PCBA Functional Test Requirements](https://wiki.seeedstudio.com/service_for_fusion_pcba_functional_test/).
 
 PCBA Production + Testing requests are submitted through the [Fusion PCB/PCBA order page](https://www.seeedstudio.com/fusion_pcb.html). Manufacturing and assembly file requirements are covered in the [Seeed Fusion PCB & PCBA Service Guide](https://wiki.seeedstudio.com/Service_for_Fusion_PCB/).
 

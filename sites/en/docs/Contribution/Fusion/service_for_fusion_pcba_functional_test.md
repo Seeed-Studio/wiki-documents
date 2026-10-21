@@ -4,17 +4,17 @@ title: Seeed Fusion Guide to Preparing PCBA Functional Test Requirements
 keywords:
   - Seeed_Fusion
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Service_for_Fusion_PCBA_Functional_Test
+slug: /service_for_fusion_pcba_functional_test
 last_update:
   date: 10/21/2026
-  author: shuxu hu
+  author: Xi Lin
 ---
 
 PCBA functional testing uses defined operations and measurements to check whether an assembled board performs as intended. Test requirements describe what to test, the conditions and procedures, and the pass/fail criteria. They provide the manufacturing team with the information needed to carry out the tests.
 
 This guide is for customers requesting PCBA functional testing from Seeed Fusion. Specific tests and methods are confirmed based on the product design and project requirements.
 
-This guide focuses on writing test requirements. For the design files and product information needed to request testing or a custom fixture, see the [Seeed Fusion PCBA Testing Solutions Guide](https://wiki.seeedstudio.com/Service_for_Fusion_PCBA_Testing_Solutions/) and the service resources linked below.
+This guide focuses on writing test requirements. For the design files and product information needed to request testing or a custom fixture, see the [Seeed Fusion PCBA Testing Solutions Guide](https://wiki.seeedstudio.com/service_for_fusion_pcba_testing_solutions/) and the service resources linked below.
 
 ## What Functional Testing Covers
 

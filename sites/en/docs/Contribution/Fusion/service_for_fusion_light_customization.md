@@ -4,10 +4,10 @@ title: Seeed Fusion Light Customization Service Guide
 keywords:
   - Seeed_Fusion
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Service_for_Fusion_Light_Customization
+slug: /service_for_fusion_light_customization
 last_update:
   date: 10/21/2026
-  author: shuxu hu
+  author: Xi Lin
 ---
 
 Seeed Fusion offers logo, packaging, firmware, and accessory customization for standard Seeed hardware products. These options help adapt products to your brand, application, or deployment requirements.

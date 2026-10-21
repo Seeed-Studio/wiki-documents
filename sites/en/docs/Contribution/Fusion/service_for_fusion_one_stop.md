@@ -4,10 +4,10 @@ title: Seeed Fusion One-Stop Manufacturing and Delivery Guide
 keywords:
   - Seeed_Fusion
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Service_for_Fusion_One_Stop
+slug: /service_for_fusion_one_stop
 last_update:
   date: 10/21/2026
-  author: shuxu hu
+  author: Xi Lin
 ---
 
 Seeed Fusion''s one-stop service brings together manufacturing, customization, warehousing, order fulfillment, and sales channel support. It helps hardware teams move from design files and production requirements to product delivery.
@@ -32,19 +32,19 @@ Warehousing covers product storage and inventory management. Order fulfillment c
 
 At the start of a project, the manufacturing team reviews the product requirements and production documents to assess the work involved. Documents may include a bill of materials (BOM), Gerber files, mechanical drawings, and other product files. The documents required depend on the project scope.
 
-For an explanation of these documents and their uses, see the [Seeed Fusion Guide to Preparing Manufacturing Documents](https://wiki.seeedstudio.com/Service_for_Fusion_Manufacturing_Documents/). PCB and PCBA file formats and submission requirements are covered in the [Seeed Fusion PCB & PCBA Service Guide](https://wiki.seeedstudio.com/Service_for_Fusion_PCB/).
+For an explanation of these documents and their uses, see the [Seeed Fusion Guide to Preparing Manufacturing Documents](https://wiki.seeedstudio.com/service_for_fusion_manufacturing_documents/). PCB and PCBA file formats and submission requirements are covered in the [Seeed Fusion PCB & PCBA Service Guide](https://wiki.seeedstudio.com/Service_for_Fusion_PCB/).
 
 ### Manufacturing and Validation
 
 Manufacturing includes material sourcing, assembly, and the relevant testing. For projects involving new product introduction, pilot production, or volume production, the preparation and validation activities are confirmed according to the design and manufacturing requirements.
 
-For the validation priorities at the sample and pilot production stages, see the [Seeed Fusion Guide to Sample Validation and Pilot Production](https://wiki.seeedstudio.com/Service_for_Fusion_Sample_Validation/). For functional testing and test fixture requirements, see the [Seeed Fusion PCBA Testing Solutions Guide](https://wiki.seeedstudio.com/Service_for_Fusion_PCBA_Testing_Solutions/).
+For the validation priorities at the sample and pilot production stages, see the [Seeed Fusion Guide to Sample Validation and Pilot Production](https://wiki.seeedstudio.com/service_for_fusion_sample_validation/). For functional testing and test fixture requirements, see the [Seeed Fusion PCBA Testing Solutions Guide](https://wiki.seeedstudio.com/service_for_fusion_pcba_testing_solutions/).
 
 ### Product Customization
 
 Projects that need to meet specific branding or application requirements can include logo customization, packaging customization, firmware flashing, or accessory changes.
 
-For light customization options based on standard Seeed products and the sample approval process, see the [Seeed Fusion Light Customization Service Guide](https://wiki.seeedstudio.com/Service_for_Fusion_Light_Customization/).
+For light customization options based on standard Seeed products and the sample approval process, see the [Seeed Fusion Light Customization Service Guide](https://wiki.seeedstudio.com/service_for_fusion_light_customization/).
 
 ### Warehousing and Regional Inventory
 

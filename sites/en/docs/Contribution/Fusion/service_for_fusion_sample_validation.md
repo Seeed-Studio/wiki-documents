@@ -4,10 +4,10 @@ title: Seeed Fusion Guide to Sample Validation and Pilot Production
 keywords:
   - Seeed_Fusion
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Service_for_Fusion_Sample_Validation
+slug: /service_for_fusion_sample_validation
 last_update:
   date: 10/21/2026
-  author: shuxu hu
+  author: Xi Lin
 ---
 
 Sample validation checks whether a product design meets its intended requirements. Pilot production validates the production process, assembly procedures, and test methods in preparation for mass production.
@@ -88,9 +88,9 @@ The following guides explain the purpose and content of the relevant documents a
 
 | Guide | What it covers |
 | --- | --- |
-| [Seeed Fusion Guide to Preparing Manufacturing Documents](https://wiki.seeedstudio.com/Service_for_Fusion_Manufacturing_Documents/) | PCB/PCBA, mechanical, packaging, firmware, and test documents, including their purposes and how they relate to one another. |
-| [Seeed Fusion Guide to Preparing PCBA Functional Test Requirements](https://wiki.seeedstudio.com/Service_for_Fusion_PCBA_Functional_Test/) | What to test, test conditions, operating steps, expected results, and pass/fail criteria. |
-| [Seeed Fusion One-Stop Manufacturing and Delivery Guide](https://wiki.seeedstudio.com/Service_for_Fusion_One_Stop/) | The scope of manufacturing, customization, warehousing, and fulfillment services, and how they connect. |
+| [Seeed Fusion Guide to Preparing Manufacturing Documents](https://wiki.seeedstudio.com/service_for_fusion_manufacturing_documents/) | PCB/PCBA, mechanical, packaging, firmware, and test documents, including their purposes and how they relate to one another. |
+| [Seeed Fusion Guide to Preparing PCBA Functional Test Requirements](https://wiki.seeedstudio.com/service_for_fusion_pcba_functional_test/) | What to test, test conditions, operating steps, expected results, and pass/fail criteria. |
+| [Seeed Fusion One-Stop Manufacturing and Delivery Guide](https://wiki.seeedstudio.com/service_for_fusion_one_stop/) | The scope of manufacturing, customization, warehousing, and fulfillment services, and how they connect. |
 
 For PCB and PCBA file formats, templates, and submission requirements, see the [Seeed Fusion PCB & PCBA Service Guide](https://wiki.seeedstudio.com/Service_for_Fusion_PCB/).
 

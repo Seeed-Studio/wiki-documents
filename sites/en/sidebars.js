@@ -4252,7 +4252,7 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
-        'Contribution/Fusion/Service_for_Fusion_Light_Customization',
+        'Contribution/Fusion/service_for_fusion_light_customization',
       ],
     },
     {
@@ -4261,7 +4261,7 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
-        'Contribution/Fusion/Service_for_Fusion_One_Stop',
+        'Contribution/Fusion/service_for_fusion_one_stop',
       ],
     },
     {
@@ -4270,8 +4270,8 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
-        'Contribution/Fusion/Service_for_Fusion_PCBA_Testing_Solutions',
-        'Contribution/Fusion/Service_for_Fusion_PCBA_Functional_Test',
+        'Contribution/Fusion/service_for_fusion_pcba_testing_solutions',
+        'Contribution/Fusion/service_for_fusion_pcba_functional_test',
       ],
     },
     {
@@ -4280,8 +4280,8 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
-        'Contribution/Fusion/Service_for_Fusion_Manufacturing_Documents',
-        'Contribution/Fusion/Service_for_Fusion_Sample_Validation',
+        'Contribution/Fusion/service_for_fusion_manufacturing_documents',
+        'Contribution/Fusion/service_for_fusion_sample_validation',
       ],
     },
     // END OF Fusion

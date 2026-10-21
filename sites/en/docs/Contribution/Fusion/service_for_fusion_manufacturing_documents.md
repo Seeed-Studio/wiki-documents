@@ -4,10 +4,10 @@ title: Seeed Fusion Guide to Preparing Manufacturing Documents
 keywords:
   - Seeed_Fusion
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Service_for_Fusion_Manufacturing_Documents
+slug: /service_for_fusion_manufacturing_documents
 last_update:
   date: 10/21/2026
-  author: shuxu hu
+  author: Xi Lin
 ---
 
 Manufacturing documents describe a product''s materials, drawings, assembly, and testing requirements. They support quotations, procurement, production, and inspection. This guide is for projects based on customer designs. It explains the purpose of common manufacturing documents and how they relate to one another.
@@ -22,7 +22,7 @@ The documents required depend on the manufacturing work included in the project.
 | Firmware flashing and functional testing | Firmware and Test Documents |
 | Checking information across multiple files | Document Consistency and Version Information |
 
-For logo, packaging, or other light customization based on standard Seeed products, see the [Seeed Fusion Light Customization Service Guide](https://wiki.seeedstudio.com/Service_for_Fusion_Light_Customization/). Open the relevant product page from the [Light Customization service page](https://www.seeedstudio.com/fusion_branding_firmware.html) to check the documents needed for the selected options.
+For logo, packaging, or other light customization based on standard Seeed products, see the [Seeed Fusion Light Customization Service Guide](https://wiki.seeedstudio.com/service_for_fusion_light_customization/). Open the relevant product page from the [Light Customization service page](https://www.seeedstudio.com/fusion_branding_firmware.html) to check the documents needed for the selected options.
 
 ## PCB and PCBA Documents
 
@@ -84,7 +84,7 @@ When a manufacturing project includes firmware flashing or functional testing, t
 
 Test firmware supports checks during production. Shipping firmware is used to operate the product after delivery. If these differ, the documents need to identify each version and its purpose so they are not mixed up during flashing, testing, or pre-shipment checks.
 
-For detailed guidance on writing test requirements, see the [Seeed Fusion Guide to Preparing PCBA Functional Test Requirements](https://wiki.seeedstudio.com/Service_for_Fusion_PCBA_Functional_Test/).
+For detailed guidance on writing test requirements, see the [Seeed Fusion Guide to Preparing PCBA Functional Test Requirements](https://wiki.seeedstudio.com/service_for_fusion_pcba_functional_test/).
 
 ## Document Consistency and Version Information
 
