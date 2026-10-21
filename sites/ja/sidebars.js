@@ -4241,6 +4241,44 @@ const sidebars = {
         'Contribution/Fusion/ja_Service_for_Fusion_PCB',
       ],
     },
+    {
+      type: 'category',
+      label: 'ライトカスタマイズ',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/ja_service_for_fusion_light_customization',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'ワンストップサービス',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/ja_service_for_fusion_one_stop',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'PCBA テストソリューション',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/ja_service_for_fusion_pcba_testing_solutions',
+        'Contribution/Fusion/ja_service_for_fusion_pcba_functional_test',
+      ],
+    },
+    {
+      type: 'category',
+      label: '製造準備',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/ja_service_for_fusion_manufacturing_documents',
+        'Contribution/Fusion/ja_service_for_fusion_sample_validation',
+      ],
+    },
     // END OF Fusion
     {
       type: 'doc',
