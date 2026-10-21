@@ -4243,6 +4243,44 @@ const sidebars = {
         'Contribution/Fusion/cn_Service_for_Fusion_PCB',
       ],
     },
+    {
+      type: 'category',
+      label: '轻定制',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/cn_service_for_fusion_light_customization',
+      ],
+    },
+    {
+      type: 'category',
+      label: '一站式服务',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/cn_service_for_fusion_one_stop',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'PCBA 测试解决方案',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/cn_service_for_fusion_pcba_testing_solutions',
+        'Contribution/Fusion/cn_service_for_fusion_pcba_functional_test',
+      ],
+    },
+    {
+      type: 'category',
+      label: '制造准备',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/cn_service_for_fusion_manufacturing_documents',
+        'Contribution/Fusion/cn_service_for_fusion_sample_validation',
+      ],
+    },
     // END OF Fusion
     {
       type: 'doc',
