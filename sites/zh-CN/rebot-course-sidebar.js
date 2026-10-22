@@ -14,30 +14,6 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
-// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
-// keeps the beginner-course jump that every product's Course group starts with.
-const courseItems = () => [
-  {
-    type: 'ref',
-    id: `${C}/cn_Arm_Tutorial_Introduction`,
-    label: '入门课程',
-  },
-  {
-    type: 'ref',
-    id: PAPER_READING,
-    label: '论文精读',
-  },
-];
-
-const courseLink = (items = courseItems()) => ({
-  type: 'category',
-  label: '课程',
-  className: 'robotics-section-title',
-  collapsed: false,
-  collapsible: false,
-  items,
-});
-
 // 课程自己的独立侧边栏（浏览课程页面时展开）。
 const courseSidebar = () => [
   backToRobotics(),
@@ -252,7 +228,7 @@ const sidebars = {
     },
   ],
 
-  // reBot-RS：快速上手与 SDK / 应用 / 课程（跳转到课程）。
+  // reBot-RS：快速上手与 SDK / 应用。
   RebotRsSidebar: [
     backToRobotics(),
     {
@@ -283,13 +259,9 @@ const sidebars = {
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS 与 Agent Claw' },
       ],
     },
-    courseLink([
-      ...courseItems(),
-      { type: 'link', label: 'DLI 课程：Sim-to-Real VLA 全流程', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
-    ])
   ],
 
-  // reBot-DM：快速上手与 SDK / 应用 / 课程（跳转到课程）。
+  // reBot-DM：快速上手与 SDK / 应用。
   RebotDmSidebar: [
     backToRobotics(),
     {
@@ -318,7 +290,6 @@ const sidebars = {
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web 控制系统' },
       ],
     },
-    courseLink(),
   ],
 
 };

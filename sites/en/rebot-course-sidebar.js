@@ -5,33 +5,12 @@
 const C = 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial';
 const RS = 'Robotics/Robot_Kits/reBot_Arm/B601_RS';
 const DM = 'Robotics/Robot_Kits/reBot_Arm/B601_DM';
-const PAPER_READING = 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_Getting_Started';
 
 const backToRobotics = () => ({
   type: 'ref',
   id: 'Edge_Robotics',
   label: '<-Back to Robotics',
   className: 'sideboard_calss',
-});
-
-// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
-// keeps the beginner-course jump that every product's Course group starts with.
-const courseItems = () => [
-  {
-    type: 'ref',
-    id: `${C}/Arm_Tutorial_Introduction`,
-    label: 'Beginner Course',
-  },
-  { type: 'ref', id: PAPER_READING, label: 'Paper Deep-Dive' },
-];
-
-const courseLink = (items = courseItems()) => ({
-  type: 'category',
-  label: 'Course',
-  className: 'robotics-section-title',
-  collapsed: false,
-  collapsible: false,
-  items,
 });
 
 // The course's own standalone sidebar (opened when browsing course pages).
@@ -320,7 +299,7 @@ const sidebars = {
     }
   ],
 
-  // reBot-RS: Quick Start & SDK / Applications / Course (jumps to course).
+  // reBot-RS: Quick Start & SDK / Applications.
   RebotRsSidebar: [
     backToRobotics(),
     {
@@ -351,13 +330,9 @@ const sidebars = {
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Agent`, label: 'reBot-RS with Agent Claw' },
       ],
     },
-    courseLink([
-      ...courseItems(),
-      { type: 'link', label: 'DLI Course: Sim-to-Real VLA Pipeline', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
-    ])
   ],
 
-  // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
+  // reBot-DM: Quick Start & SDK / Applications.
   RebotDmSidebar: [
     backToRobotics(),
     {
@@ -386,7 +361,6 @@ const sidebars = {
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web Control System' },
       ],
     },
-    courseLink(),
   ],
 
 };
