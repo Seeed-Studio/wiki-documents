@@ -452,7 +452,7 @@ MAC アドレスの `最後の 4 桁` がデバイス ID です。
 </TabItem>
 
 <TabItem value="22" label="シリアルツール経由">
-[LINE_148]Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
+[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。<br/>
 
  `Open Serial Monitor` をクリックし、デバイスを PC に接続してシリアルログを確認し、キーワード `using nodenum` を探します。
 

@@ -188,7 +188,7 @@ function postprocessDocument(translatedContent, lineMetadata, totalLines) {
     let translatedLine = translatedLines[i];
 
     // 移除行号标记
-    translatedLine = translatedLine.replace(/^\[LINE_\d+\]/, '');
+    translatedLine = translatedLine.replace(/^\[LINE_\d+(?:\]|>)/, '');
 
     // 处理空行
     if (translatedLine.includes('[EMPTY_LINE]')) {
