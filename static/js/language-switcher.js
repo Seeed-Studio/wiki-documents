@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-19 11:16:14 (北京时间)
-// 多语言页面: 2574 个
+// 生成时间: 2026-10-21 17:41:49 (北京时间)
+// 多语言页面: 2605 个
 
 (function() {
   'use strict';
@@ -437,7 +437,49 @@
     "ja",
     "pt"
   ],
+  "/service_for_fusion_light_customization": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_manufacturing_documents": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_one_stop": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Service_for_Fusion_PCB": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_pcba_functional_test": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_pcba_testing_solutions": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_sample_validation": [
     "cn",
     "en",
     "es",
@@ -1360,14 +1402,14 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started": [
+  "/jetson/recomputer_robotics_j601/getting_started": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recomputer_jetson_robotics_j601_interfaces_usage": [
+  "/jetson/recomputer_robotics_j601/hardware_and_interface_usage": [
     "cn",
     "en",
     "es",
@@ -1704,6 +1746,13 @@
     "pt"
   ],
   "/jetpack_7_2_unified_platform_iso_sbsa": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/accessories-selection-guide": [
     "cn",
     "en",
     "es",
@@ -3881,6 +3930,13 @@
     "pt"
   ],
   "/recamera_onvif": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_firgate": [
     "cn",
     "en",
     "es",
@@ -7143,6 +7199,167 @@
     "pt"
   ],
   "/robotics/rebot_physical_ai_course_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_4": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_5": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_6": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_7": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_8": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_9": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_10": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_11": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_12": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_13": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_14": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_15": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_16": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_17": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_18": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_19": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_20": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_21": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_22": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_introduction": [
     "cn",
     "en",
     "es",

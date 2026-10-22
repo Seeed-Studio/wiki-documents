@@ -172,6 +172,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card optional" href="/cn/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
+    <div className="learning-group">
+      <h4>课程</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/robotics/soarm_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
+      </div>
+    </div>
   </div>
 </details>
 
