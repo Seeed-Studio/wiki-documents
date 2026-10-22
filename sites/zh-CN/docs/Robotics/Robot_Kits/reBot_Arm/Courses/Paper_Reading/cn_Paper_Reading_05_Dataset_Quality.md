@@ -81,17 +81,23 @@ import '/src/css/paper-reading-style.css';
 |Parquet 表|每帧的数值：state、action、时间戳、索引|列式存储，读"第 3 关节的全部取值"不必加载整个文件|
 |meta 元信息|结构定义、统计量、任务、episode 索引|加载器和训练程序先读它，才知道怎么解释前两者|
 
+---
+
 ## 时间戳与数据同步
 
 - 图像走 USB、关节数据走 CAN，两路数据到达电脑的时间天然有先后。LeRobot 给每帧数据打上**时间戳**，以此把"同一时刻"的图像、状态、动作对齐成一行。
 
 ![数据集结构与质量检查：时间戳与数据同步（配图 1）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/dataset-quality-01-timestamp-sync.png)
 
+---
+
 ## 数据集总体质量判断
 
 判断一份数据集能不能进训练，看四个维度：
 
 ![数据集结构与质量检查：数据集总体质量判断（配图 2）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/dataset-quality-02-quality-checklist.png)
+
+---
 
 ## 回放与图像检查
 
@@ -106,6 +112,8 @@ import '/src/css/paper-reading-style.css';
 - 动作与画面同步：夹爪闭合的瞬间，画面里正是夹爪碰到方块
 
 - 开头在标准起始姿态，结尾达成结束条件
+
+---
 
 ## 发现问题处理汇总
 

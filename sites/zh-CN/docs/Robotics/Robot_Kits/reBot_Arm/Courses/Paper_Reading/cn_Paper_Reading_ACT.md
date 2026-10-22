@@ -149,6 +149,8 @@ import '/src/css/paper-reading-style.css';
 
 ![ACT：Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware 基于低成本硬件学习细粒度双手操作（配图 12）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-12.png)
 
+---
+
 ## 摘要
 
 ![ACT：摘要（配图 03）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-03.png)
@@ -168,6 +170,8 @@ ACT 的核心思路就是 **Action Chunking（动作分块）**。相比每次�
 熟悉大语言模型和计算机视觉的同学应该知道，Transformer 非常擅长处理“序列关系”的神经网络：它不仅关心机器人当前应该做什么，还能够学习一段动作之间的前后联系。
 
 **ACT = 让机器人一次思考并预测“一小段动作”，而不是只考虑下一步。**
+
+---
 
 ## 引言
 
@@ -213,9 +217,13 @@ Action Chunking 还有一个好处：它可以更好地处理人类示范中的�
 
 最终，这套系统只使用大约 **10 分钟、约 50 条人类示范轨迹**，就能够让机器人学习 6 种真实世界中的精细操作任务，例如打开半透明调料杯、安装电池等，其中部分任务的成功率可以达到 **80%～90%**。
 
+---
+
 ## 相关工作
 
 这一部分作者列举了早期的各种克隆学习方案，以及他们的不足之处，有兴趣的可以读一下，不过对于本教程学习目标来说，可以跳过该部分。
+
+---
 
 ## ALOHA——低成本双臂遥操作系统
 
@@ -250,6 +258,8 @@ ALOHA 最核心的设计之一，是使用 **Leader\-Follower** 的方式进行�
 ![ACT：摄像头、数据采集和最终能力（配图 01）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-01.png)
 
 作者把这些任务大致分成三类：
+
+---
 
 ## 动作分块（Action Chunking）与时间集成（Temporal Ensembling）
 

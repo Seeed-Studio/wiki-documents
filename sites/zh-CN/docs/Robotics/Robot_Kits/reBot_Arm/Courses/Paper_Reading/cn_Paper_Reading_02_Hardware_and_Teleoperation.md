@@ -1,6 +1,6 @@
 ---
 description: "手把手复现准备：电脑与 reBot Arm 硬件清单、LeRobot 环境安装、相机与 CAN 配置，以及主从臂遥操作练习。"
-title: 论文复现平台准备
+title: 软件设置和硬件
 hide_title: true
 keywords:
   - reBot
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-hardware-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 手把手复现</span>
-  <h1 id="paper-reading-hardware-title">论文复现平台准备</h1>
+  <h1 id="paper-reading-hardware-title">软件设置和硬件</h1>
   <p className="paper-reading-lead">准备好硬件与环境，打通主从臂遥操作链路，为后续数据采集、模型训练和论文复现做好准备。</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>硬件清单</li>
@@ -58,18 +58,18 @@ import '/src/css/paper-reading-style.css';
 | 所需硬件 | 链接 | 数量 | 备注 |
 | --- | --- | :---: | --- |
 | 台式机或笔记本 | 自备 | 1 | Ubuntu 22.04 原生系统；RTX 4080 及以上显卡，显存 12 GB 及以上；运行内存 16 GB 及以上。 |
-| NVIDIA Jetson AGX Thor 128G | [淘宝](https://detail.tmall.com/item.htm?id=957845742837) | 1 | 与电脑方案二选一。 |
+| NVIDIA Jetson AGX Thor 128G | <a className="paper-reading-product-link" href="https://www.seeedstudio.com/NVIDIAr-Jetson-AGX-Thortm-Developer-Kit-Bundle.html"><img className="paper-reading-product-image" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/i/m/image__5.png" alt="NVIDIA Jetson AGX Thor 开发套件" loading="lazy" width="128" height="104" /><span>NVIDIA Jetson AGX Thor 开发套件</span></a> | 1 | 与电脑方案二选一。 |
 
 ### reBot Arm 硬件准备
 
 | 所需硬件 | 链接 | 数量 | 备注 |
 | --- | --- | :---: | --- |
-| reBot Arm B601 DM / RS | [DM 机械臂（带电源、木工夹）](https://detail.tmall.com/item.htm?id=1042412233386)<br />[RS 机械臂（带电源、木工夹）](https://detail.tmall.com/item.htm?id=1057521963559) | 1 | DM / RS 二选一，作为 Follower 臂。 |
-| reBot Arm 102 Leader 臂 | [reBot Arm 102（带电源）](https://detail.tmall.com/item.htm?id=1049936833505) | 1 | 用于主从臂遥操作。 |
-| 720P 单目腕部相机 | [UVC 单目相机](https://item.taobao.com/item.htm?id=617129515352) | 1 | 安装在机械臂腕部。 |
-| 1080P 海康相机 | [1080P 定焦](https://item.taobao.com/item.htm?id=644467575802) | 1 | 用于固定视角拍摄。 |
+| reBot Arm B601 DM / RS | <a className="paper-reading-product-link" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html"><img className="paper-reading-product-image" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/i/m/img_v3_0210p_aea42523-221d-4fb4-8730-9cb074a081ag_2.jpg" alt="reBot Arm B601-DM 组装套装" loading="lazy" width="128" height="104" /><span>B601-DM 组装套装</span></a><br /><a className="paper-reading-product-link" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html"><img className="paper-reading-product-image" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/e/2/e26062401-gallery-2.jpg" alt="reBot Arm B601-RS 组装套装" loading="lazy" width="128" height="104" /><span>B601-RS 组装套装</span></a> | 1 | DM / RS 二选一，作为 Follower 臂。在套装选项中选择对应电源与桌面夹具。 |
+| reBot Arm 102 Leader 臂 | <a className="paper-reading-product-link" href="https://www.seeedstudio.com/Star-Arm-102-p-6765.html"><img className="paper-reading-product-image" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/7/-/7-100004723-star-arm-102.jpg" alt="Star Arm 102 主臂" loading="lazy" width="128" height="104" /><span>Star Arm 102 主臂</span></a><br /><a className="paper-reading-product-link" href="https://www.seeedstudio.com/AC-DC-Power-Adapter-DC5521-Male-12V-2A-1500mm-p-6839.html"><img className="paper-reading-product-image" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/-/1-313000002-ac-dc-power-adapter.jpg" alt="12 V / 2 A 电源适配器" loading="lazy" width="128" height="104" /><span>12 V / 2 A 电源适配器</span></a> | 1 | 用于主从臂遥操作。主臂与电源为独立商品。 |
+| RGB USB Camera-100°-720P（腕部视角） | <a className="paper-reading-product-link" href="https://www.seeedstudio.com/Camera-Module-OV9732-1MP-100-USB2-0-USB2-0-L38-W38-H16-05mm-p-6982.html"><img className="paper-reading-product-image" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100079619-gallery_img_1_1.png" alt="RGB USB Camera-100°-720P 相机本体" loading="lazy" width="128" height="104" /><span>RGB USB Camera-100°-720P</span></a> | 1 | 安装在机械臂腕部。 |
+| RGB USB Camera-100°-720P（固定视角） | <a className="paper-reading-product-link" href="https://www.seeedstudio.com/Camera-Module-OV9732-1MP-100-USB2-0-USB2-0-L38-W38-H16-05mm-p-6982.html"><img className="paper-reading-product-image" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100079619-gallery_img_1_1.png" alt="RGB USB Camera-100°-720P 相机本体" loading="lazy" width="128" height="104" /><span>RGB USB Camera-100°-720P</span></a> | 1 | 用于固定外部视角拍摄，与腕部相机使用同一型号。 |
 | 腕部相机支架 | [相机支架模型与说明](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/README.md) | 1 | 需要自行打印；没有打印机的可以联系客服咨询赠送。 |
-| 海康相机俯拍支架 | [单支架 + 万向环拍 + 直播俯拍（通用）](https://item.taobao.com/item.htm?id=797067194359) | 1 | 固定俯拍相机的位置与角度。 |
+| 第三人称相机支架 | <a className="paper-reading-product-link" href="https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10%26reBot-B601-p-7003.html"><img className="paper-reading-product-image" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/0/100006505-gallery_img_1.jpg" alt="第三人称桌面相机支架" loading="lazy" width="128" height="104" /><span>适用于 SO-101 与 reBot B601 的相机支架</span></a> | 1 | 固定外部相机的位置与角度。 |
 
 <div className="paper-reading-callout">
 
@@ -88,6 +88,8 @@ import '/src/css/paper-reading-style.css';
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/platform_preparation/seeed-sandbox.jpg" alt="Seeed 专属实验沙箱与 reBot Arm 机械臂实物" loading="lazy" />
   <figcaption>Seeed 专属实验沙箱（可选）</figcaption>
 </figure>
+
+---
 
 ## 环境安装
 
@@ -110,6 +112,8 @@ import '/src/css/paper-reading-style.css';
 | SO-ARM101 | [串口、校准与遥操作](/cn/lerobot_so100m_new/#遥操作) | [添加摄像头](/cn/lerobot_so100m_new/#添加摄像头) |
 | reBot Arm DM | [软件配置与校准流程](/cn/rebot_b601_dm_getting_started/#软件配置与校准流程) | [添加摄像头](/cn/rebot_arm_b601_dm_lerobot/#添加摄像头) |
 | reBot Arm RS | [软件配置与校准流程](/cn/rebot_b601_rs_getting_started/#软件配置与校准流程) | [添加摄像头](/cn/rebot_arm_b601_rs_lerobot/#添加摄像头) |
+
+---
 
 ## 主从臂设置
 
@@ -141,6 +145,8 @@ import '/src/css/paper-reading-style.css';
 
 - **上限由硬件回路耗时决定。** 这套硬件的链路跑一圈本身就需要十几毫秒，实用上限大约在 60–100 Hz。设得更高，实际频率也未必能跟上，可能出现周期超时警告。具体以所用硬件和配置的运行结果为准。
 - **60 Hz 已能满足本节的手动操作练习。** 对于抓取、搬运、放置这类动作，稳定的采样与执行节奏比单纯提高频率更重要。
+
+---
 
 ## 实操练习：抓取、搬运、放置
 

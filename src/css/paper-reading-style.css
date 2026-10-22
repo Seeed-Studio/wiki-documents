@@ -28,10 +28,19 @@
   color: var(--paper-accent);
 }
 
+.hands-on-reproduction-page .tabs {
+  --ifm-tabs-color-active: var(--paper-accent);
+  --ifm-tabs-color-active-border: var(--paper-accent);
+}
+
 .paper-reading-page h1,
 .paper-reading-page h2 {
   color: var(--paper-text);
   line-height: 1.45;
+}
+
+.paper-reading-page > h2 {
+  color: var(--paper-accent);
 }
 
 .paper-reading-page p:last-child {
@@ -139,6 +148,81 @@
   box-shadow: 0 4px 16px #20352b0d;
 }
 
+.paper-reading-directory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+  margin: 1.2rem 0 1.8rem;
+}
+
+.paper-reading-directory-panel {
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--paper-border);
+  border-radius: 16px;
+  background: var(--paper-surface);
+}
+
+.paper-reading-directory-panel h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.45rem;
+}
+
+.paper-reading-directory-panel h3 {
+  margin: 1.2rem 0 0.4rem;
+  color: var(--paper-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.paper-reading-directory-panel > p {
+  color: var(--paper-muted);
+  font-size: 0.9rem;
+}
+
+.paper-reading-directory-list {
+  margin: 0;
+  padding-inline-start: 1.5rem;
+}
+
+.paper-reading-directory-list li {
+  margin: 0.3rem 0;
+  padding-inline-start: 0.2rem;
+}
+
+.paper-reading-directory-list li::marker {
+  color: var(--paper-accent);
+}
+
+.paper-reading-directory-list a {
+  display: block;
+  padding: 0.2rem 0;
+  color: var(--paper-accent);
+  overflow-wrap: anywhere;
+}
+
+.paper-reading-update-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--paper-border);
+  border-radius: 999px;
+  background: var(--paper-intro);
+  color: var(--paper-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.paper-reading-update-badge svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+}
+
 .paper-reading-support {
   display: flex;
   align-items: center;
@@ -210,6 +294,29 @@
   margin: 1.5rem 0;
 }
 
+.hands-on-reproduction-page .paper-reading-product-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  max-width: 11rem;
+  margin: 0.4rem 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.hands-on-reproduction-page .paper-reading-product-image {
+  display: block;
+  width: 128px;
+  height: 104px;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 4px;
+  border: 1px solid var(--paper-border);
+  border-radius: 8px;
+  background: #fff;
+}
+
 .paper-reading-figure img {
   display: block;
   width: 100%;
@@ -252,7 +359,8 @@ html[data-theme='dark'] .paper-reading-page.hands-on-reproduction-page {
 }
 
 @media (max-width: 600px) {
-  .paper-reading-resources {
+  .paper-reading-resources,
+  .paper-reading-directory {
     grid-template-columns: minmax(0, 1fr);
   }
 }

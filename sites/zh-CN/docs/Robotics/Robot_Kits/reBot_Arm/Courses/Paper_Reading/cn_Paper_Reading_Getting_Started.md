@@ -25,16 +25,24 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-16'
-updatedAt: '2026-10-21'
+updatedAt: '2026-10-22'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_getting_started/
 ---
 
 import '/src/css/paper-reading-style.css';
 
 <div className="paper-reading-page">
+
+  <aside className="paper-reading-support" aria-label="支持开源项目">
+    <div>
+      <strong>免费课程，开源同行</strong>
+      <p>本课程完全免费，如果想对我们的付出给予鼓励，请帮我们的开源机械臂点上你的小星星！</p>
+    </div>
+    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ 在 GitHub 点亮 Star</a>
+  </aside>
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
@@ -48,29 +56,60 @@ import '/src/css/paper-reading-style.css';
     </ul>
   </section>
 
-  <section className="paper-reading-learning" aria-labelledby="paper-reading-learning-title">
-    <h2 id="paper-reading-learning-title">开始学习</h2>
-    <p>第一章将以我们 wiki 的 LeRobot 版本教程为例，带领大家完成 <strong>ACT 的训练和部署</strong>，其他的论文复现可以沿用该流程来复现。另外，你也可以使用 HF 官方的 LeRobot 及对应教程。</p>
-    <div className="paper-reading-resources">
-      <a className="paper-reading-resource" href="/cn/robotics_page/">
-        <span className="paper-reading-resource-label">SEEED WIKI</span>
-        <strong>Seeed 机器人教程 <span aria-hidden="true">→</span></strong>
-        <span>从 Wiki 教程开始，学习 ACT 训练与部署。</span>
-      </a>
-      <a className="paper-reading-resource" href="https://huggingface.co/docs/lerobot/main/en/rebot_b601" target="_blank" rel="noopener noreferrer">
-        <span className="paper-reading-resource-label">HUGGING FACE</span>
-        <strong>LeRobot 官方教程 <span aria-hidden="true">↗</span></strong>
-        <span>支持 ReBot 全系列，跟随官方教程完成数据采集、训练与部署，动手复现具身智能论文。</span>
-      </a>
-    </div>
-  </section>
+  <div className="paper-reading-directory">
+    <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-hands-on-title">
+      <h2 id="paper-reading-hands-on-title">手把手复现</h2>
+      <p>从平台准备、数据采集入手，手把手完成 ACT 的训练与部署，再学习如何从 ACT 切换到其他策略，逐步掌握不同算法的复现流程。</p>
+      <ol className="paper-reading-directory-list">
+        <li><a href="/cn/robotics/paper_reading_hardware_and_teleoperation/">软件设置和硬件</a></li>
+        <li><a href="/cn/robotics/hands_on_task_design/">设计第一个模仿学习任务</a></li>
+        <li><a href="/cn/robotics/hands_on_camera_recording/">相机配置与数据录制</a></li>
+        <li><a href="/cn/robotics/hands_on_dataset_quality/">数据集结构与质量检查</a></li>
+        <li><a href="/cn/robotics/hands_on_act_training/">训练 ACT 模型</a></li>
+        <li><a href="/cn/robotics/hands_on_act_deployment/">部署 ACT 模型</a></li>
+        <li><a href="/cn/robotics/hands_on_algorithm_switching/">从 ACT 切换到其他策略（reBot / SO101）</a></li>
+      </ol>
+    </section>
 
-  <aside className="paper-reading-support" aria-label="支持开源项目">
-    <div>
-      <strong>免费课程，开源同行</strong>
-      <p>本课程完全免费，如果想对我们的付出给予鼓励，请帮我们的开源机械臂点上你的小星星！</p>
-    </div>
-    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ 在 GitHub 点亮 Star</a>
-  </aside>
+    <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-papers-title">
+      <h2 id="paper-reading-papers-title">论文精读</h2>
+      <p>从模仿学习基础策略到视觉语言动作模型，按主题阅读论文。</p>
+      <h3>第一部分：模仿学习基础策略</h3>
+      <ul className="paper-reading-directory-list">
+        <li><a href="/cn/robotics/paper_reading_act/">ACT 论文精读</a></li>
+      </ul>
+      <h3>第二部分：轻量级 VLA</h3>
+      <ul className="paper-reading-directory-list">
+        <li><a href="/cn/robotics/paper_reading_smolvla/">SmolVLA 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_evo1/">Evo-1 论文精读</a></li>
+      </ul>
+      <h3>第三部分：π 系列机器人基础模型</h3>
+      <ul className="paper-reading-directory-list">
+        <li><a href="/cn/robotics/paper_reading_pi0/">π0 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_pi0_fast/">FAST / π0-FAST 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_pi05/">π0.5 论文精读</a></li>
+      </ul>
+      <h3>第四部分：主流通用 VLA</h3>
+      <ul className="paper-reading-directory-list">
+        <li><a href="/cn/robotics/paper_reading_gr00t_n1/">GR00T N1 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_eo1/">EO-1 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_wall_oss/">WALL-OSS 论文精读</a></li>
+      </ul>
+      <h3>第五部分：世界模型与 Video-Action</h3>
+      <span className="paper-reading-update-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+          <path d="M3 12a9 9 0 0 1 15.36-6.36L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.36 6.36L3 16M8 16H3v5" />
+        </svg>
+        持续更新
+      </span>
+      <h3>第六部分：统一评测与研究总结</h3>
+      <span className="paper-reading-update-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+          <path d="M3 12a9 9 0 0 1 15.36-6.36L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.36 6.36L3 16M8 16H3v5" />
+        </svg>
+        持续更新
+      </span>
+    </section>
+  </div>
 
 </div>

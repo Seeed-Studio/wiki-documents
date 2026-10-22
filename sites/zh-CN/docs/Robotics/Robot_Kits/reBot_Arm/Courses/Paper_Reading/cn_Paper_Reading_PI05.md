@@ -108,6 +108,8 @@ import '/src/css/paper-reading-style.css';
 
     ---
 
+---
+
 ## 引言
 
 ![π0.5 论文精读：3. 引言（image-00）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-00.png)
@@ -174,6 +176,8 @@ import '/src/css/paper-reading-style.css';
 
     
 
+---
+
 ## 相关工作
 
 ![π0.5 论文精读：4. 相关工作（image-01）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-01.png)
@@ -187,6 +191,8 @@ import '/src/css/paper-reading-style.css';
 - **开放世界机器人系统：** 已有系统能在新环境完成抓取等基础任务。本文扩展到多步骤整理，但“新家庭”主要意味着新布局、背景和物体，并不意味着任务类型全部未见过。
 
     
+
+---
 
 ## π0\.5 的机器人与数据平台
 

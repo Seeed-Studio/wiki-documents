@@ -176,14 +176,13 @@ const sidebars = {
       collapsed: false,
       collapsible: false,
       items: [
-        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_02_Hardware_and_Teleoperation', label: '论文复现平台准备' },
+        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_02_Hardware_and_Teleoperation', label: '软件设置和硬件' },
         { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_03_Task_Design', label: '设计第一个模仿学习任务' },
         { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_04_Camera_and_Recording', label: '相机配置与数据录制' },
         { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_05_Dataset_Quality', label: '数据集结构与质量检查' },
         { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_06_ACT_Training', label: '训练 ACT 模型' },
         { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_07_ACT_Deployment', label: '部署 ACT 模型' },
-        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_08_Algorithm_Switching', label: 'reBot：从 ACT 切换到其他策略' },
-        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_SO101_Algorithm_Switching', label: 'SO101：从 ACT 切换到其他策略' },
+        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_08_Algorithm_Switching', label: '从 ACT 切换到其他策略（reBot / SO101）' },
       ],
     },
     {
