@@ -13,10 +13,10 @@ aliases:
   - /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
 sku: 100060965
 last_update:
-  date: 10/19/2026
+  date: 10/22/2026
   author: haochen
 createdAt: '2026-04-24'
-updatedAt: '2026-10-19'
+updatedAt: '2026-10-22'
 url: https://wiki.seeedstudio.com/jetson/recomputer_robotics_j601/getting_started/
 ---
 
@@ -449,6 +449,15 @@ Continue with [Hardware & I/O](/jetson/recomputer_robotics_j601/hardware_and_int
 </section>
 
 </div>
+
+:::tip Optional: Explore Other Jetson Carrier Boards
+After completing setup, you can explore firmware downloads and flashing instructions for other Seeed Jetson carrier boards.
+
+<div className="jetson-product-actions">
+  <a className="jetson-product-button jetson-product-button--secondary" href="/flash/jetpack_to_selected_product/" target="_blank" rel="noopener noreferrer">Browse Other Jetson Flashing Guides ↗</a>
+</div>
+
+:::
 
 ## Applications
 
