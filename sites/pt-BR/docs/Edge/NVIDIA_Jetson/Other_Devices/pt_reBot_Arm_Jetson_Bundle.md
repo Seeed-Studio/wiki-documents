@@ -313,7 +313,7 @@ Em seguida, abra `https://motorbridge.github.io/motorbridge-studio/` no seu nave
   >
     <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
       <img
-        src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+        src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp"
         alt="Integração do reBot Arm B601-RS com ROS2"
         style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
       />

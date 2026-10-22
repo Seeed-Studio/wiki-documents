@@ -57,7 +57,7 @@ J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 |
 
 **Sistema Windows en PC**
 
-- Descarga las [herramientas de depuración Damiao](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe).
+- Descarga las [herramientas de depuración Damiao](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool-v2.1.9.4.exe).
 - Descarga las [herramientas USB2CAN](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/USB2CAN_2.0.0.3.exe)
 
 ### Conectar el circuito al PC

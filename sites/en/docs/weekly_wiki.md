@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/12/2026
+  date: 10/19/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-10-12'
+updatedAt: '2026-10-19'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,73 +18,145 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 12th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 19th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Jetson Camera Selection Guide](https://wiki.seeedstudio.com/jetson/camera-selection-guide/)
+### [Getting Started with XIAO STM32C5](https://wiki.seeedstudio.com/xiao_stm32c5_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/1/114992260_-preview-19.png" alt="Jetson-compatible CSI camera" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/xiao_stm32c5.png" alt="Seeed Studio XIAO STM32C5 development board" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Find and compare cameras for Jetson-based reComputer and reServer devices. Filter by platform, application, camera interface, resolution, and working distance, then compare two models and check their specifications and setup guides.
+Explore the XIAO STM32C5 through six new guides covering initial setup, pin multiplexing, CAN FD communication, and practical peripheral projects. The series also explains how to develop with STM32CubeIDE and MicroPython, including examples with an IMU, servo motors, and CAN-connected devices.
+
+**Core guides:** [Getting Started](https://wiki.seeedstudio.com/xiao_stm32c5_getting_started/) · [Pin Multiplexing](https://wiki.seeedstudio.com/xiao_stm32c5_pin_multiplexing/) · [CAN FD Usage](https://wiki.seeedstudio.com/xiao_stm32c5_canfd_usage/).
+
+**Development and applications:** [STM32CubeIDE](https://wiki.seeedstudio.com/xiao_stm32c5_with_stm32cubeide/) · [MicroPython](https://wiki.seeedstudio.com/xiao_stm32c5_with_micropython/) · [Application Examples](https://wiki.seeedstudio.com/xiao_stm32c5_application/).
 
 </div>
 
-### Seeed Physical AI Beginner's Course — Robot Arm Mathematics and Control (Chapters 23–26)
+### [Seeed Physical AI Beginner's Course — ROS2 and Motion Planning (Chapters 31–34)](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_31/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24/ch24-01.png" alt="Robot arm kinematics and coordinate systems" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-31/ch31-01.png" alt="ROS2 communication and robot software architecture" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Four new chapters cover coordinate frames and transformations, forward and inverse kinematics, Jacobians, and trajectory planning. The final chapter brings these concepts into practice using Pinocchio and MeshCat with the reBot Arm.
+Four new chapters introduce ROS2 nodes and communication interfaces, URDF robot descriptions, TF transformations, and the software architecture of a robotic arm. Hands-on sections show how to integrate the reBot Arm with ROS2 and plan movements using MoveIt 2.
 
-**New chapters:** [23 — Coordinate Systems](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_23/) · [24 — Kinematics and Jacobian](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_24/) · [25 — Trajectory Planning](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_25/) · [26 — Pinocchio and MeshCat](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_26/).
+**New chapters:** [31 — ROS2 Communication](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_31/) · [32 — URDF and TF](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_32/) · [33 — reBot Arm ROS2 Integration](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_33/) · [34 — MoveIt 2 Motion Planning](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_34/).
 
 </div>
 
-### Seeed Physical AI Beginner's Course — Robot Vision and Autonomous Grasping (Chapters 27–30)
+### [Seeed Physical AI Beginner's Course — Robot Simulation (Chapters 35–39)](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_35/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01.png" alt="Robot vision and 3D perception" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-35/ch35-01.png" alt="Robot simulation and digital twin concepts" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The latest stage introduces RGB-D sensing, 3D perception, object detection, and hand-eye calibration. It then moves into hands-on visual grasping with the reBot Arm and an optional voice and multimodal interaction project using reSpeaker.
+The next five chapters move from simulation fundamentals to working with the reBot Arm in MuJoCo and NVIDIA Isaac Sim. They cover kinematics, trajectory control, simulated robot setup, and real-to-simulation joint-state synchronization.
 
-**New chapters:** [27 — Robot Vision](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_27/) · [28 — Object Detection and Calibration](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_28/) · [29 — Autonomous Visual Grasping](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_29/) · [30 — Voice and Multimodal Interaction](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_30/).
+**New chapters:** [35 — Simulation Basics](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_35/) · [36 — reBot Arm in MuJoCo](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_36/) · [37 — MuJoCo Kinematics and Trajectories](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_37/) · [38 — reBot Arm in Isaac Sim](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_38/) · [39 — Real-to-Sim Synchronization](https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_39/).
+
+</div>
+
+### [reCamera Pro Full BSP Development Guides](https://wiki.seeedstudio.com/recamera_pro_bsp_source_overview/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" alt="reCamera Pro development documentation" width={400} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+A new Full BSP guide series explains how to work with the reCamera Pro source package, from preparing a build environment and creating firmware images to flashing and debugging a device. Advanced topics cover system customization, product services, OTA releases, and video, audio, and NPU development.
+
+**Source and firmware workflow:** [Source Overview](https://wiki.seeedstudio.com/recamera_pro_bsp_source_overview/) · [Download and Extract](https://wiki.seeedstudio.com/recamera_pro_bsp_download/) · [Build Environment](https://wiki.seeedstudio.com/recamera_pro_bsp_build_environment/) · [Complete Firmware Build](https://wiki.seeedstudio.com/recamera_pro_bsp_full_build/) · [Flashing and Boot](https://wiki.seeedstudio.com/recamera_pro_bsp_flash_boot/) · [Device Debugging](https://wiki.seeedstudio.com/recamera_pro_bsp_device_debug/) · [Troubleshooting](https://wiki.seeedstudio.com/recamera_pro_bsp_troubleshooting/).
+
+**Customization and deployment:** [System Customization](https://wiki.seeedstudio.com/recamera_pro_bsp_system_customization/) · [Application Integration](https://wiki.seeedstudio.com/recamera_pro_bsp_app_integration/) · [Product Services](https://wiki.seeedstudio.com/recamera_pro_bsp_services/) · [OTA and Releases](https://wiki.seeedstudio.com/recamera_pro_bsp_ota_release/).
+
+**Media, AI, and reference:** [AI and NPU](https://wiki.seeedstudio.com/recamera_pro_ai_npu_development/) · [Video and ISP](https://wiki.seeedstudio.com/recamera_pro_video_isp_development/) · [Audio Development](https://wiki.seeedstudio.com/recamera_pro_audio_development/) · [SDK Reference](https://wiki.seeedstudio.com/recamera_pro_sdk_reference/) · [Source Review and Known Issues](https://wiki.seeedstudio.com/recamera_pro_sdk_source_notes/).
+
+</div>
+
+### [reCamera Pro QR Code and Barcode Recognition](https://wiki.seeedstudio.com/recamera_pro_qr_code_barcode/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" alt="reCamera Pro QR code and barcode recognition guide" width={400} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Learn how to build and deploy a QR code and barcode recognition application on reCamera Pro. The guide covers device services, live video access, and connection options using the device directly or a Windows or Linux proxy.
+
+</div>
+
+### [reSpeaker XVF3800 USB Audio Bridge with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_xvf3800_i2s_usb_bridge/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="reSpeaker XVF3800 connected to XIAO ESP32S3" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide introduces Arduino firmware that uses XIAO ESP32S3 as a USB audio and control bridge for reSpeaker XVF3800. It explains the build settings, USB device interfaces, stereo recording and playback tests, and control communication over I2C.
+
+</div>
+
+### [Extend Your MeshCore Network with T1000-E: Contact Sharing and Companion Repeat](https://wiki.seeedstudio.com/t1000e_meshcore_contact_sharing_companion_repeat/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/application/t1000e-meshcore-hero.png" alt="SenseCAP T1000-E MeshCore contact sharing and repeat mode" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Explore how three SenseCAP Card Tracker T1000-E devices can share MeshCore contacts and extend a communication path using Companion Repeat Mode. The walkthrough covers radio configuration, contact sharing through the Public Channel, message relay tests, and practical limitations.
+
+</div>
+
+### [Private On-Premise Transcription for reSpeaker Clip — Selection, Deployment and Measured Data](https://wiki.seeedstudio.com/solutions/clip-private-transcription/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reference-design/clip_private_transcription/panel-transcript-detail-zh-20261009-a9a0f4d1.jpg" alt="Private transcription reference design dashboard" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Four new voice AI reference designs cover private transcription with reSpeaker Clip, in-store speech capture, hands-free warehouse operations, and local voice control for Home Assistant. Each explains the hardware choices, deployment workflow, available interfaces, and measured performance or operating limitations.
+
+**New reference designs:** [Private reSpeaker Clip Transcription](https://wiki.seeedstudio.com/solutions/clip-private-transcription/) · [Retail Voice Transcription](https://wiki.seeedstudio.com/solutions/retail-voice/) · [Voice-Controlled Warehouse Management](https://wiki.seeedstudio.com/solutions/voice-warehouse-management/) · [Home Assistant Local Voice Control](https://wiki.seeedstudio.com/solutions/home-assistant-local-voice/).
+
+</div>
+
+### [BLE + LoRaWAN Indoor and Outdoor Positioning: Build, Deploy, and Measured Results](https://wiki.seeedstudio.com/solutions/indoor-outdoor-positioning-ble-lorawan/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reference-design/indoor_positioning_ble_lorawan/map-indoor-22a6ee12.png" alt="Indoor and outdoor positioning reference design" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Three new industrial and IoT reference designs explain how to track assets across indoor and outdoor spaces, monitor agricultural environments through LoRaWAN, and unify industrial data protocols on an edge gateway. They include hardware selection, deployment steps, integration interfaces, and operating considerations.
+
+**New reference designs:** [BLE and LoRaWAN Positioning](https://wiki.seeedstudio.com/solutions/indoor-outdoor-positioning-ble-lorawan/) · [Agricultural Environment Monitoring](https://wiki.seeedstudio.com/solutions/agri-env-monitoring/) · [Industrial Multi-Protocol Data Hub](https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/).
+
+</div>
+
+### [Edge Assembly Inspection: Missing Parts, Dimensions, Modbus and MQTT](https://wiki.seeedstudio.com/solutions/edge-assembly-inspection/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reference-design/edge_inspection_assembly/overlay-defect-1-13424b53.jpg" alt="Edge AI assembly inspection reference design" width={500} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Seven new edge vision reference designs cover inspection, parking management, license plate recognition, security alerts, and retail people-flow analysis. They document deployment requirements, interfaces, and measured results, with clear boundaries for applications that require site-specific validation.
+
+**New reference designs:** [Assembly Inspection](https://wiki.seeedstudio.com/solutions/edge-assembly-inspection/) · [Surface Defect Inspection](https://wiki.seeedstudio.com/solutions/edge-surface-defect-inspection/) · [License Plate Recognition](https://wiki.seeedstudio.com/solutions/edge-license-plate-recognition/) · [Parking Entry/Exit Counting](https://wiki.seeedstudio.com/solutions/edge-parking-counting/) · [Parking Occupancy Detection](https://wiki.seeedstudio.com/solutions/edge-parking-occupancy/) · [Edge Security Alerting](https://wiki.seeedstudio.com/solutions/edge-security/) · [Retail People-Flow Heatmap](https://wiki.seeedstudio.com/solutions/retail-heatmap-grafana/).
 
 </div>
 
 ## Existing Wiki Updated
 
-### [Interactive Jetson Product Selection Guide](https://wiki.seeedstudio.com/jetson-product-selection-guide/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.webp" alt="Jetson carrier board" width={800} height="auto" /></p>
+### [Upgrade Software Packages for Jetson](https://wiki.seeedstudio.com/upgrade_software_packages_for_jetson/)
 
 <div style={{ textAlign: "justify" }}>
 
-The Jetson product selection guide now has a redesigned interactive tool for filtering systems and carrier boards by hardware requirements. Select configurations, inspect specifications, and compare two products side by side.
+The updated FAQ explains how to install application packages without replacing Seeed-specific Jetson drivers. It now includes repair instructions for systems affected by unintended NVIDIA L4T package upgrades on JetPack 5.1.3 and JetPack 6.2, with version checks and recovery steps.
 
 </div>
 
-### [Getting Started with reComputer Rugged J40](https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/)
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J40" width={800} height="auto" /></p>
+### [Camera Usage for Sense Version](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/)
 
 <div style={{ textAlign: "justify" }}>
 
-The refreshed guide introduces reComputer Rugged J40 configurations, industrial interfaces, and JetPack setup. It highlights the IP66 fanless design, M12 connectivity, and PoE camera support for edge AI applications in demanding environments.
-
-</div>
-
-### [reBot Arm B601-RS Visual Grasping Demo](https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The updated tutorial brings together two visual grasping workflows for the B601-RS robotic arm, including YOLO-based object detection and a ROS 2-based approach. It covers RGB-D camera setup, calibration, and practical grasping workflows.
+The XIAO ESP32S3 Sense camera tutorial now includes OV5640 autofocus setup across camera capture and streaming examples. It also refreshes the handheld-camera project with clearer microSD card options when using the XIAO Round Display, including a workflow that does not require cutting the J3 connection.
 
 </div>
 
@@ -239,5 +311,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.9.14th](/Seeed_Elderly/weekly_wiki/2026/wiki260914)
 - [weekly wiki on 2026.9.21st](/Seeed_Elderly/weekly_wiki/2026/wiki260921)
 - [weekly wiki on 2026.9.28th](/Seeed_Elderly/weekly_wiki/2026/wiki260928)
+- [weekly wiki on 2026.10.12th](/Seeed_Elderly/weekly_wiki/2026/wiki261012)
 
 </details>

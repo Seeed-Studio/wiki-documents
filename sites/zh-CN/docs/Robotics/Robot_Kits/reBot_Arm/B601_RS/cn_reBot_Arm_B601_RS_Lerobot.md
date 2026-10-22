@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" />
 </div>
 
 <div className="rebot-buy-button-group">

@@ -71,7 +71,11 @@ const sidebars = {
                 id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/ja_reComputer_Robotics_J601_Getting_Started',
                 label: 'はじめに',
               },
-              'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/ja_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
+              {
+                type: 'doc',
+                id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/ja_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
+                label: 'ハードウェアと I/O',
+              },
             ],
           },
           'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/ja_reComputer_A203_Flash_System',
@@ -272,6 +276,7 @@ const sidebars = {
       items: [
       'Edge/NVIDIA_Jetson/ja_Jetson_Product_Selection_Guide',
       'Edge/NVIDIA_Jetson/ja_Jetson_Camera_Selection_Guide',
+      'Edge/NVIDIA_Jetson/ja_Jetson_Accessories_Selection_Guide',
       'Edge/NVIDIA_Jetson/ja_Flash_Jetpack',
       'Edge/NVIDIA_Jetson/ja_Jetson_Debug_Guide',
       { type: 'link', label: 'reComputer Jetson for Beginners', href: 'https://sensecraft.seeed.cc/ai-lab/en/tutorials/j/introduction' },

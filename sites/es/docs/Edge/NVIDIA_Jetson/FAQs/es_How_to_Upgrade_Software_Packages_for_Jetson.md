@@ -1,30 +1,112 @@
 ---
-description: Esta es una FAQ sobre el uso de OTA o actualizaciones incrementales que pueden llevar a inestabilidad del sistema y riesgos de seguridad, por lo que se recomienda realizar actualizaciones completas de ROM para mantener la seguridad y estabilidad del sistema, evitando actualizaciones parciales.
-title: Actualizar Paquetes de Software para Jetson
+description: Este FAQ explica cómo actualizar el software de Jetson sin reemplazar los controladores de la carrier board de Seeed, y cómo reparar JetPack 5.1.3 o JetPack 6.2 después de una actualización errónea de nvidia-l4t.
+title: Actualizar paquetes de software para Jetson
 keywords:
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /upgrade_software_packages_for_jetson
 last_update:
-  date: 2/11/2025
-  author: Youjiang
-createdAt: '2025-09-03'
-updatedAt: '2025-09-03'
+  date: 10/16/2026
+  author: Youjiang/Dayu
+createdAt: '2025-02-11'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/es/upgrade_software_packages_for_jetson/
 ---
 
-#### ¿Cómo puedo actualizar paquetes de software si me dijiste que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?
+#### ¿Cómo puedo actualizar los paquetes de software si me dijeron que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?
 
-R: Primero, es importante entender que las **actualizaciones OTA (Over the Air)/incrementales/parciales** pueden potencialmente dañar tu SO, ya que permiten a los usuarios actualizar solo un subconjunto de paquetes. Este enfoque puede llevar a desajustes de dependencias, inestabilidad del sistema y parches de seguridad perdidos, aumentando en última instancia el riesgo de fallas de software o vulnerabilidades. Además, gestionar actualizaciones parciales a menudo requiere intervención manual, lo cual puede ser propenso a errores. Por el contrario, las **actualizaciones completas de ROM/completas** aseguran que todos los paquetes y dependencias se actualicen juntos, manteniendo la compatibilidad y estabilidad del sistema. Al aplicar parches de seguridad y correcciones de errores en todo el sistema, las actualizaciones completas ayudan a mantener el sistema seguro y consistente, reduciendo la probabilidad de conflictos. Aunque las actualizaciones completas pueden requerir más tiempo, generalmente se consideran más seguras y confiables a largo plazo. Para nuestros dispositivos Jetson, lanzamos JetPacks después de que NVIDIA lance los suyos (lo mismo aplica para lanzamientos de controladores y ensamblar tu propio JetPack), lo cual asegura un sistema más estable y seguro comparado con actualizar usando apt. Si te preocupa el software desactualizado y quieres actualizar paquetes específicos, aquí tienes algunas opciones:
+R: No ejecutes `sudo apt upgrade` ni `sudo apt full-upgrade` en una imagen Jetson de Seeed. Una actualización normal de aplicaciones está bien, pero una actualización no supervisada de NVIDIA puede reemplazar el kernel, el device tree y los paquetes de controladores `nvidia-l4t` de Seeed por paquetes estándar de NVIDIA. El dispositivo podría dejar de arrancar o los periféricos de la carrier board podrían dejar de funcionar.
 
-1. Si estás seguro de que tu paquete de software no depende de paquetes del sistema, ejecuta "sudo apt-get install `<Tu_Paquete>`" para actualizar el paquete.
-2. Para la mayoría del software de código abierto, descarga el archivo fuente y compílalo tú mismo.
-3. Espera el nuevo lanzamiento de JetPack.
+Para los paquetes de aplicaciones que no dependen de `nvidia-l4t`, instala solo el paquete que necesitas:
+
+```bash
+sudo apt update
+sudo apt-get install <your-package>
+```
+
+Para la mayoría del software de código abierto, otra opción segura es descargar el código fuente y compilarlo tú mismo. Una imagen completa de BSP de Seeed o JetPack sigue siendo la forma preferida de actualizar juntos el kernel, el bootloader y los controladores de la carrier board.
+
+## Reparar una actualización errónea de nvidia-l4t
+
+Hay paquetes de reparación disponibles para las dos versiones de JetPack que aún no contienen la protección de apt:
+
+| JetPack | Jetson Linux | Paquete de reparación |
+| --- | --- | --- |
+| JetPack 5.1.3 | R35.5.0 | [seeed-jetson-linux-r35.5.0-bsp_fix-bundle-1.zip](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBHzK-usznrT72e9lsjdzvnAZf8tB1ohV93_-vjlazshYQ?e=ljS4tL) |
+| JetPack 6.2 | R36.4.3 | [seeed-jetson-linux-r36.4.3-bsp_fix-bundle.zip](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCTqH9GsRQWSI-PhfPuJeycAR_oaUGvZc7jBTgcMMWS-fc?e=jV1YJF) |
+
+JetPack 7 y firmware posteriores de Seeed ya mantienen los paquetes de kernel y controladores de NVIDIA, por lo que `apt` no puede reemplazarlos por error. No hay paquete de reparación para esas versiones. Si un sistema con JetPack 7 o posterior ya está dañado, vuelve a flashear la imagen correspondiente de Seeed.
+
+:::caution
+Ejecuta la reparación en el propio Jetson y usa solo el paquete que coincida con `cat /etc/nv_tegra_release`. El script restaura los paquetes de kernel y controladores de Seeed. No instala el paquete de bootloader a menos que añadas explícitamente `--with-bootloader`.
+:::
+
+### JetPack 5.1.3 / L4T R35.5.0
+
+Confirma primero la versión:
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+La primera línea debe contener `R35 (release), REVISION: 5`. Descarga `seeed-jetson-linux-r35.5.0-bsp_fix-bundle-1.zip`, cópialo al Jetson y ejecuta:
+
+```bash
+unzip -o seeed-jetson-linux-r35.5.0-bsp_fix-bundle-1.zip
+cd seeed-jetson-linux-r35.5.0-bsp-bundle
+sudo ./seeed-linux-bsp-repair.sh
+sudo reboot
+```
+
+Añade `--with-bootloader` solo cuando el propio bootloader deba ser reparado. Después de reiniciar, comprueba los paquetes restaurados:
+
+```bash
+dpkg -l nvidia-l4t-kernel nvidia-l4t-kernel-dtbs nvidia-l4t-kernel-headers nvidia-l4t-display-kernel
+cat /etc/nv_boot_control.conf
+dpkg --audit
+```
+
+Los cuatro paquetes deberían estar instalados o retenidos, y sus versiones deberían contener `+seeed1`. `dpkg --audit` no debería imprimir nada. El registro de reparación es `/var/log/seeed-linux-bsp-r35.5.0-repair.log`.
+
+### JetPack 6.2 / L4T R36.4.3
+
+Confirma primero la versión:
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+La salida debe contener `R36` y `REVISION: 4.3`. Descarga `seeed-jetson-linux-r36.4.3-bsp_fix-bundle.zip`, cópialo al Jetson y ejecuta:
+
+```bash
+unzip -o seeed-jetson-linux-r36.4.3-bsp_fix-bundle.zip
+cd seeed-jetson-linux-r36.4.3-bsp-bundle
+sudo ./seeed-linux-bsp-repair.sh
+sudo reboot
+```
+
+Si el script no puede identificar la carrier board, detente y vuelve a ejecutarlo con el nombre del producto de Seeed:
+
+```bash
+sudo ./seeed-linux-bsp-repair.sh --board recomputer-orin-super-j401
+```
+
+Sustituye `recomputer-orin-super-j401` por el nombre de la carrier de Seeed o del producto que se está reparando. Usa `--auto` solo cuando el nombre de la placa detectada ya sea correcto y el comando deba ejecutarse sin interacción. Añade `--with-bootloader` solo cuando se requiera la reparación del firmware. El paquete de reparación R36.4.3 no contiene un capsule de bootloader para Orin Super, así que comprueba el módulo y el firmware antes de usar esa opción en hardware Orin Super.
+
+Después de reiniciar, comprueba:
+
+```bash
+dpkg -l nvidia-l4t-kernel nvidia-l4t-kernel-dtbs nvidia-l4t-kernel-headers nvidia-l4t-kernel-oot-modules nvidia-l4t-display-kernel
+uname -r
+dpkg --audit
+```
+
+Las versiones de los paquetes deberían contener `+seeed1`, y `uname -r` debería informar `5.15.148-tegra`. El registro de reparación es `/var/log/seeed-linux-bsp-r36.4.3-repair.log`, y la copia de seguridad del script es `/opt/nvidia/l4t-packages/seeed-r36.4.3-repair-backup`.
 
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

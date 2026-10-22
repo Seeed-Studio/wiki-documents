@@ -809,7 +809,7 @@ mini.media.push_audio_sample(numpy_chunk)
 <details>
 <summary><strong>El seguimiento de cara se siente lento.</strong></summary>
 
-[LINE_28>El rendimiento depende en gran medida de las condiciones de iluminación. Asegúrate de que la cara esté bien iluminada. El backend LOCAL (GStreamer IPC) proporciona la latencia más baja para aplicaciones en el dispositivo.
+El rendimiento depende en gran medida de las condiciones de iluminación. Asegúrate de que la cara esté bien iluminada. El backend LOCAL (GStreamer IPC) proporciona la latencia más baja para aplicaciones en el dispositivo.
 
 </details>
 

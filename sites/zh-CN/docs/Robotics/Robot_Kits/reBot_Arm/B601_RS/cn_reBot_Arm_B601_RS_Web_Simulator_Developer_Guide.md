@@ -1,6 +1,6 @@
 ---
 description: 本教程面向开发者，介绍 ReBot Arm 数字孪生与控制系统 — B601-RS 的网页控制台、ROS 2、RobStride/SocketCAN、MuJoCo 仿真、视觉抓取与 LLM/MCP Agent 的安装、运行和二次开发流程。
-title: B601-RS Web控制器
+title: reBot-RS Web控制系统：真机与 MuJoCo
 keywords:
   - reBot Arm
   - B601-RS
@@ -12,7 +12,7 @@ keywords:
   - MuJoCo
   - LLM
   - MCP
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 slug: /rebot_arm_b601_rs_web_simulator_developer_guide
 last_update:
   date: 2026-08-24
@@ -32,7 +32,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 # reBot Arm B601-RS 数字孪生与控制系统
 
 <p align="center">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </p>
 
 <div className="rebot-buy-button-group">

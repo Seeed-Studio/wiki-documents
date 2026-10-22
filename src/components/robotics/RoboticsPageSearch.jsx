@@ -50,7 +50,7 @@ function SearchMiniRobots() {
       <span className="robotics-search-mini-float robotics-search-mini-float--rs">
         <img
           className="robotics-search-mini robotics-search-mini--rs"
-          src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+          src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp"
           alt=""
           width={5507}
           height={4035}
