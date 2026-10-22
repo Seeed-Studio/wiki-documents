@@ -884,25 +884,39 @@ uv run python example/sim/traj_sim.py
 <span className="rebot-step-number">S4</span>
 <div className="rebot-step-content">
 <h4>Ferramenta de Visualização</h4>
-<p className="rebot-step-label">Demonstração de Simulação 4 · sim/visualizer.py</p>
+<p className="rebot-step-label">Demonstração de Simulação 4 · viz_test.py</p>
 
-[LINE_101>Wrapper de visualizador MeshCat, fornecendo uma interface unificada de exibição do robô.
+Com base na visualização do MeshCat e na cinemática inversa, o braço robótico simulado desenha gradualmente um coração e escreve "LOVE" acima dele.
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_MeshCat_LOVE.png" alt="Resultado do desenho do coração e LOVE com viz_test.py" />
+</div>
 
 **Principais recursos**:
 
-- Carrega o modelo URDF e exibe o robô
-- Desenha caminhos de polilinha 3D (referência/real)
-- Exibe a pose alvo da IK (eixos tricolores + esfera)
-- Suporta reprodução de animação de trajetória de juntas
+- Carregar o modelo URDF e exibir o movimento do braço robótico
+- Resolver a cinemática inversa ponto a ponto, percorrendo os caminhos do coração e das letras
+- A linha cinza mostra o caminho ideal e a linha vermelha mostra progressivamente a trajetória simulada do efetuador final
+- Entre os traços das letras, o deslocamento é feito com a caneta levantada e nenhuma linha de conexão é desenhada
+- Exibir o erro máximo de posição após concluir o desenho
 
-**Exemplo de uso**:
+**Como executar**:
 
-```python
-from example.sim.visualizer import Visualizer
-viz = Visualizer()
-viz.update(q)  # Update robot pose
-viz.draw_path(points, "path_name", color)  # Draw path
+Execute a partir do diretório raiz do projeto:
+
+```bash
+uv run python viz_test.py
 ```
+
+**Passos**:
+
+1. Abra no navegador a URL do MeshCat exibida no terminal.
+2. Volte ao terminal e pressione Enter para começar a desenhar o coração e LOVE.
+3. Após concluir o desenho, arraste no navegador para ver o resultado de diferentes ângulos.
+4. Pressione Enter novamente para sair do programa.
+
+A trajetória vermelha é calculada pela cinemática direta do modelo de simulação e não representa medições do robô real.
 
 </div>
 </section>

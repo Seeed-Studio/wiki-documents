@@ -886,25 +886,39 @@ uv run python example/sim/traj_sim.py
 <span className="rebot-step-number">S4</span>
 <div className="rebot-step-content">
 <h4>可視化ツール</h4>
-<p className="rebot-step-label">シミュレーションデモ 4 · sim/visualizer.py</p>
+<p className="rebot-step-label">シミュレーションデモ 4 · viz_test.py</p>
 
-MeshCat ビジュアライザのラッパーで、統一されたロボット表示インターフェースを提供します。
+MeshCat の可視化と逆運動学に基づき、シミュレーション上のロボットアームがハートを徐々に描き、その上に「LOVE」と書きます。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_MeshCat_LOVE.png" alt="viz_test.py によるハートと LOVE の描画結果" />
+</div>
 
 **主な機能**：
 
-- URDF モデルを読み込み、ロボットを表示
-- 3D ポリライン経路（参照/実際）を描画
-- IK 目標姿勢（三色軸 + 球）を表示
-- 関節軌道アニメーションの再生をサポート
+- URDF モデルを読み込み、ロボットアームの動作を表示
+- 逆運動学を点ごとに解き、ハートと文字の経路に沿って移動
+- 灰色の線は理想経路を示し、赤い線はシミュレーション上のエンドエフェクタ軌跡を段階的に表示
+- 文字の画と画の間はペンを上げて移動し、接続線は描画しない
+- 描画完了後に最大位置誤差を出力
 
-**使用例**：
+**実行コマンド**：
 
-```python
-from example.sim.visualizer import Visualizer
-viz = Visualizer()
-viz.update(q)  # Update robot pose
-viz.draw_path(points, "path_name", color)  # Draw path
+プロジェクトのルートディレクトリで実行します。
+
+```bash
+uv run python viz_test.py
 ```
+
+**操作手順**：
+
+1. ブラウザで、ターミナルに表示された MeshCat の URL を開きます。
+2. ターミナルに戻り、Enter キーを押してハートと LOVE の描画を開始します。
+3. 描画完了後、ブラウザ上でドラッグし、さまざまな角度から結果を確認します。
+4. もう一度 Enter キーを押してプログラムを終了します。
+
+赤い軌跡はシミュレーションモデルの順運動学で計算されたものであり、実機の測定結果を表すものではありません。
 
 </div>
 </section>
