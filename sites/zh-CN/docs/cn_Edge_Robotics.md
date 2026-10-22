@@ -159,12 +159,6 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card optional" href="/cn/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
-    <div className="learning-group">
-      <h4>课程</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/cn/robotics/soarm_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
-      </div>
-    </div>
   </div>
 </details>
 
@@ -272,6 +266,13 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <span className="course-compatibility" aria-label="适用机械臂">
           <span className="course-compatibility-badge">reBot-rs</span>
           <span className="course-compatibility-badge">reBot-dm</span>
+        </span>
+      </a>
+      <a className="step-card" href="/cn/robotics/soarm_physical_ai_course_introduction/">
+        <span className="step-index">🎓</span>
+        <div><b>入门课程</b></div>
+        <span className="course-compatibility" aria-label="适用机械臂">
+          <span className="course-compatibility-badge">SO101</span>
         </span>
       </a>
       <a className="step-card" href="/cn/robotics/paper_reading_getting_started/">

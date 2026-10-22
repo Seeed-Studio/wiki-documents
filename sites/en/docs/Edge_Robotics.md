@@ -162,12 +162,6 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card optional" href="/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
-    <div className="learning-group">
-      <h4>Course</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/robotics/soarm_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Beginner Course</b></div></a>
-      </div>
-    </div>
   </div>
 </details>
 
@@ -274,6 +268,13 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <span className="course-compatibility" aria-label="Supported robotic arms">
           <span className="course-compatibility-badge">reBot-rs</span>
           <span className="course-compatibility-badge">reBot-dm</span>
+        </span>
+      </a>
+      <a className="step-card" href="/robotics/soarm_physical_ai_course_introduction/">
+        <span className="step-index">🎓</span>
+        <div><b>Beginner Course</b></div>
+        <span className="course-compatibility" aria-label="Supported robotic arms">
+          <span className="course-compatibility-badge">SO101</span>
         </span>
       </a>
       <a className="step-card" href="/robotics/paper_reading_getting_started/">
