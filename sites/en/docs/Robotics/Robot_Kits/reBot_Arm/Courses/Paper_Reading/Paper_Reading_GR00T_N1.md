@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Data pyramid</li>
     <li>Flow matching</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2503.14734" target="_blank" rel="noopener noreferrer" aria-label="Read the GR00T N1 paper on arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Read the paper</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## GR00T N1.7: Adaptation and Fine-Tuning

@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Embodied reasoning</li>
     <li>Robot control</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2508.21112" target="_blank" rel="noopener noreferrer" aria-label="Read the EO-1 paper on arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Read the paper</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## Prerequisites: Inputs and Outputs
