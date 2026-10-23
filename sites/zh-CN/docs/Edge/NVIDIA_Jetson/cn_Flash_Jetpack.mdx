@@ -1,18 +1,18 @@
 ---
-description: 使用 Jetpack 将 BSP 刷写到所选产品。本页面目前仅包含部分产品。
-title: 使用 Jetpack 将 BSP 刷写到指定 Jetson
+description: 使用 Jetpack 将 BSP 刷写到选定产品。本页面目前仅包含部分产品。
+title: 使用 Jetpack 将 BSP 刷写到选定 Jetson
 keywords:
   - jetson
   - flash
   - jetapck
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash/jetpack_to_selected_product
-sku: E2025032601,114110314,110110191,100020039,114110311,114110327,102111001,114993489,110110146,114110247,E24081601,100003716,100006184
+sku: E2025032601,114110314,110110191,100020039,114110311,114110327,102111001,114993489,110110146,114110247,E24081601,100003716,100006184,100046979,100002634
 last_update:
-  date: 08/11/2026
+  date: 10/22/2026
   author: robotics group
 createdAt: '2025-06-27'
-updatedAt: '2026-08-12'
+updatedAt: '2026-10-22'
 url: https://wiki.seeedstudio.com/cn/flash/jetpack_to_selected_product/
 ---
 
@@ -22,6 +22,8 @@ import { PrepareRequirementsMini,PrepareRequirementsRobotics, PrepareRequirement
          PrepareRequirementsSuper,PrepareRequirementsClassic,PrepareRequirementsReserver,ExtractAndFlash} from '@site/src/components/jetson/FlashCodeBlock'; 
 import { ProductSelect } from '@site/src/components/jetson/JetsonSelect';
 import { RecoveryRobotics, RecoveryMini, RecoverySuper, RecoveryClassic, RecoveryIndustrial, RecoveryReserver, RecoveryJ501, RecoveryJ501Mini, RecoveryJ501Robotics} from '@site/src/components/jetson/FlashCodeBlock'; 
+import {PrepareRequirementsRugged, RecoveryRugged} from '@site/src/components/jetson/FlashCodeBlock';
+import {productOptions as sharedProductOptions} from '@site/src/components/jetson/productData';
 
 <style>
 {`
@@ -39,114 +41,119 @@ import { RecoveryRobotics, RecoveryMini, RecoverySuper, RecoveryClassic, Recover
 
 
 export const productOptions = [
+  ...sharedProductOptions
+    .filter(({value}) => value.endsWith('rugged'))
+    .map(({value, label, l4t, img, interfaceUsage}) => ({
+      value, label, l4t, img, interfaceUsage: interfaceUsage.en,
+    })),
   { 
     value: 'j4012s', 
-    label: 'reComputer Super J4012', 
+    label: 'reComputer Super J4012 (Orin NX 16GB)',
     l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/',
   },
   { 
     value: 'j4011s', 
-    label: 'reComputer Super J4011', 
+    label: 'reComputer Super J4011 (Orin NX 8GB)',
     l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-8g.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/',
   },
   { 
     value: 'j3011s', 
-    label: 'reComputer Super J3011', 
+    label: 'reComputer Super J3011 (Orin Nano 8GB)',
     l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-8g.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/',
   },
   { 
     value: 'j3010s', 
-    label: 'reComputer Super J3010', 
+    label: 'reComputer Super J3010 (Orin Nano 4GB)',
     l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-4g.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/'
   },
   { 
     value: 'j4012mini', 
-    label: 'reComputer mini J4012', 
+    label: 'reComputer mini J4012 (Orin NX 16GB)',
     l4t: ["36.4.3", "36.3.0", "35.5.0"],
     img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/'
   },
   { 
     value: 'j4011mini', 
-    label: 'reComputer mini J4011', 
+    label: 'reComputer mini J4011 (Orin NX 8GB)',
     l4t: ["36.4.3", "36.3.0", "35.5.0"],
     img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/'
   },
   { 
     value: 'j3011mini', 
-    label: 'reComputer mini J3011', 
+    label: 'reComputer mini J3011 (Orin Nano 8GB)',
     l4t: ["36.4.3","36.3.0", "35.5.0"],
     img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/'
   },
   { 
     value: 'j3010mini', 
-    label: 'reComputer mini J3010', 
+    label: 'reComputer mini J3010 (Orin Nano 4GB)',
     l4t: ["36.4.3","36.3.0", "35.5.0"],
     img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/'
   },
   { 
     value: 'j4012robotics', 
-    label: 'reComputer robotics J4012', 
+    label: 'reComputer robotics J4012 (Orin NX 16GB)',
     l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage:~:text=to%20your%20needs.-,Interfaces%20Usage%E2%80%8B,interfaces%20of%20the%20Robotics%20J401%20board%20and%20how%20to%20use%20them.,-M.2%20Key'
   },
   { 
     value: 'j4011robotics', 
-    label: 'reComputer robotics J4011', 
+    label: 'reComputer robotics J4011 (Orin NX 8GB)',
     l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage:~:text=to%20your%20needs.-,Interfaces%20Usage%E2%80%8B,interfaces%20of%20the%20Robotics%20J401%20board%20and%20how%20to%20use%20them.,-M.2%20Key'
   },
   { 
     value: 'j3011robotics', 
-    label: 'reComputer robotics J3011', 
+    label: 'reComputer robotics J3011 (Orin Nano 8GB)',
     l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage:~:text=to%20your%20needs.-,Interfaces%20Usage%E2%80%8B,interfaces%20of%20the%20Robotics%20J401%20board%20and%20how%20to%20use%20them.,-M.2%20Key'
   },
   { 
     value: 'j3010robotics', 
-    label: 'reComputer robotics J3010', 
+    label: 'reComputer robotics J3010 (Orin Nano 4GB)',
     l4t: ["39.2.0","36.4.3"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage:~:text=to%20your%20needs.-,Interfaces%20Usage%E2%80%8B,interfaces%20of%20the%20Robotics%20J401%20board%20and%20how%20to%20use%20them.,-M.2%20Key'
   },
   {
     value: 'j4012classic', 
-    label: 'reComputer J4012 / reComputer J4012B', 
+    label: 'reComputer J4012 / reComputer J4012B (Orin NX 16GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j4011classic', 
-    label: 'reComputer J4011 / reComputer J4011B', 
+    label: 'reComputer J4011 / reComputer J4011B (Orin NX 8GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j3011classic', 
-    label: 'reComputer J3011 / reComputer J3011B', 
+    label: 'reComputer J3011 / reComputer J3011B (Orin Nano 8GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j3010classic', 
-    label: 'reComputer J3010 / reComputer J3010B', 
+    label: 'reComputer J3010 / reComputer J3010B (Orin Nano 4GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/'
@@ -167,28 +174,28 @@ export const productOptions = [
   },
   { 
     value: 'j4012industrial', 
-    label: 'reComputer industrial J4012 ', 
+    label: 'reComputer industrial J4012 (Orin NX 16GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j4011industrial', 
-    label: 'reComputer industrial J4011', 
+    label: 'reComputer industrial J4011 (Orin NX 8GB)',
     l4t: ["39.2.0","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j3011industrial', 
-    label: 'reComputer industrial J3011', 
+    label: 'reComputer industrial J3011 (Orin Nano 8GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'
   },
   { 
     value: 'j3010industrial', 
-    label: 'reComputer industrial J3010', 
+    label: 'reComputer industrial J3010 (Orin Nano 4GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/'
@@ -209,28 +216,28 @@ export const productOptions = [
   },
   { 
     value: 'j4012reserver', 
-    label: 'reServer industrial J4012', 
+    label: 'reServer industrial J4012 (Orin NX 16GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110247-reserver-industrial-j4012-first.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reserver_industrial_hardware_interface_usage/'
   },
   { 
     value: 'j4011reserver', 
-    label: 'reServer industrial J4011', 
+    label: 'reServer industrial J4011 (Orin NX 8GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110248-reserver-industrial-j4011-first.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reserver_industrial_hardware_interface_usage/'
   },
   { 
     value: 'j3011reserver', 
-    label: 'reServer industrial J3011', 
+    label: 'reServer industrial J3011 (Orin Nano 8GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110249-reserver-industrial-j3011-first_1.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reserver_industrial_hardware_interface_usage/'
   },
   { 
     value: 'j3010reserver', 
-    label: 'reServer industrial J3010', 
+    label: 'reServer industrial J3010 (Orin Nano 4GB)',
     l4t: ["39.2.0","36.4.3","36.4.0","36.3.0", "35.5.0", "35.3.1"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110250-reserver-industrial-j3010-first.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/cn/reserver_industrial_hardware_interface_usage/'
@@ -286,7 +293,7 @@ export const productOptions = [
       <span style={{fontSize: '2.2rem', fontWeight: 800}}>烧录 Jetson Linux</span>
     </h1>
     <p style={{margin: '0.75rem auto 0', maxWidth: '60ch', fontSize: '1.05rem', color: 'var(--ifm-font-color-base)', opacity: 0.92}}>
-      为所有 Seeed Studio Jetson 设备提供精简的烧录流程。请选择你的产品，并按照下方的引导步骤进行操作。
+      为所有 Seeed Studio Jetson 设备提供精简的烧录流程。请选择你的产品，并按照下方的引导步骤操作。
     </p>
   </div>
 </div>
@@ -318,9 +325,9 @@ export const productOptions = [
   }}>
     <div className="alert__heading" style={{display: 'flex', alignItems: 'center'}}>
       <span style={{fontSize: '1.5rem', marginRight: '0.5rem'}}>🚀</span>
-      JetPack 6.2，带 MAXN 超级模式
+      JetPack 6.2，支持 MAXN 超级模式
     </div>
-    <p>现已为 Orin Nano 和 Orin NX 模组提供增强的性能配置。<a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">了解更多</a></p>
+    <p>现已为 Orin Nano 和 Orin NX 模组提供增强性能配置。<a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">了解更多</a></p>
     <div className="margin-top--md" style={{display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap'}}>
       <a href="https://seeedstudio88-my.sharepoint.com/:w:/r/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B152BF560-D35A-4895-86B9-26D71EF7F578%7D&file=Jetson%20BSP%20release%20note.docx&action=default&mobileredirect=true&DefaultItemOpen=1" target="_blank" rel="noopener noreferrer"
         style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.55rem', height: '44px', padding: '0 18px', borderRadius: '999px', background: 'linear-gradient(135deg, #6fbf3a 0%, #5aaa28 100%)', color: '#fff', fontSize: '0.95rem', fontWeight: 700, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.18)', boxShadow: '0 10px 24px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06) inset', whiteSpace: 'nowrap', lineHeight: 1}}>
@@ -360,6 +367,7 @@ export const productOptions = [
   <div className="card__body">
     <PrepareRequirementsMini />
     <PrepareRequirementsRobotics />
+    <PrepareRequirementsRugged />
     <PrepareRequirementsSuper />
     <PrepareRequirementsClassic />
     <PrepareRequirementsIndustrial />
@@ -375,6 +383,7 @@ export const productOptions = [
 <div className="card margin-bottom--lg" style={{borderLeft: '4px solid #8b5cf6'}}>
   <div className="card__body">
     <RecoveryRobotics />
+    <RecoveryRugged />
     <RecoveryMini />
     <RecoverySuper /> 
     <RecoveryClassic />
@@ -392,7 +401,7 @@ export const productOptions = [
   <div className="card__body">
     <div className="admonition admonition-info">
       <div className="admonition-content">
-        <p><strong>在你的主机电脑上安装所需的烧录依赖：</strong></p>
+        <p><strong>在主机电脑上安装所需的烧录依赖：</strong></p>
       </div>
     </div>
 
@@ -449,7 +458,7 @@ export const productOptions = [
   </div>
 </div>
 
-## 🚀 解压与烧录
+## 🚀 解压并烧录
 
 <div className="card margin-bottom--lg" style={{
   borderLeft: '4px solid #8dc21f', 
@@ -470,7 +479,7 @@ export const productOptions = [
         <h3>🚀 入门指南</h3>
       </div>
       <div className="card__body">
-        <p>面向初学者的完整 Jetson 开发指南，包含实用示例和教程。</p>
+        <p>面向初学者的 Jetson 开发完整指南，包含实用示例和教程。</p>
       </div>
       <div className="card__footer">
         <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" target="_blank" rel="noopener noreferrer"
