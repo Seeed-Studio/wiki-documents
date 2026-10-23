@@ -750,6 +750,10 @@ display:
 
 <br></br>
 
+:::note ESPHome 版本
+7.3 英寸 Spectra™ 6 示例使用 ESPHome 2026.1 及之后版本自带的 `epaper_spi` 组件（含 `7.3in-Spectra-E6` 型号）。
+:::
+
 ***以下是 50 针连接器屏幕类型：***
 
 <Tabs>
@@ -792,13 +796,6 @@ font:
     size: 24
 
 captive_portal:
-
-external_components:
-  - source:
-      type: git
-      url: https://github.com/esphome/esphome/
-      ref: 2025.10.5
-    components: [ epaper_spi, display ]
 
 spi:
   clk_pin: GPIO7
@@ -1554,13 +1551,6 @@ wifi:
     password: "zxPMBtCEWonm"
 
 captive_portal:
-
-external_components:
-  - source:
-      type: git
-      url: https://github.com/esphome/esphome/
-      ref: 2025.10.5
-    components: [ epaper_spi, display ]
 
 spi:
   clk_pin: GPIO7
@@ -2362,13 +2352,6 @@ wifi:
 
 captive_portal:
 
-external_components:
-  - source:
-      type: git
-      url: https://github.com/esphome/esphome/
-      ref: 2025.10.5
-    components: [ epaper_spi, display ]
-
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -3148,13 +3131,6 @@ wifi:
     password: "zxPMBtCEWonm"
 
 captive_portal:
-
-external_components:
-  - source:
-      type: git
-      url: https://github.com/esphome/esphome/
-      ref: 2025.10.5
-    components: [ epaper_spi, display ]
 
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
