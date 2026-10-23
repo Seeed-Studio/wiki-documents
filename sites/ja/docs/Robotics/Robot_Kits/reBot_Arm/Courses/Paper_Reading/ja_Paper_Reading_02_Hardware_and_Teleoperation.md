@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page hands-on-reproduction-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-hardware-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
   <h1 id="paper-reading-hardware-title">ハードウェアとソフトウェアのセットアップ</h1>
   <p className="paper-reading-lead">ハードウェアとソフトウェアを準備し、リーダー・フォロワー型テレオペレーションを構築して、データ収集、モデル学習、論文再現の準備を整えます。</p>
   <ul className="paper-reading-badges" aria-label="In this guide">

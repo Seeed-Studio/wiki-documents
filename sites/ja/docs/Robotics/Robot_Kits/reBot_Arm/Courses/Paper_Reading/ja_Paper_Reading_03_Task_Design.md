@@ -37,7 +37,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page hands-on-reproduction-page">
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-task_design-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
   <h1 id="hands-on-task_design-title">タスク設計とデモンストレーション計画</h1>
   <p className="paper-reading-lead">エピソード、開始および終了条件、一貫したデモンストレーションを定義し、その後、5 点サンプリングを用いて完全なピック・アンド・プレースタスクを収集します。</p>
   <ul className="paper-reading-badges" aria-label="In this guide">

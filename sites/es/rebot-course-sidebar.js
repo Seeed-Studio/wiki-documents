@@ -5,6 +5,7 @@
 const C = 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial';
 const RS = 'Robotics/Robot_Kits/reBot_Arm/B601_RS';
 const DM = 'Robotics/Robot_Kits/reBot_Arm/B601_DM';
+const P = 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading';
 
 const backToRobotics = () => ({
   type: 'ref',
@@ -159,6 +160,91 @@ const sidebars = {
 
   // Standalone course sidebar.
   RebotCourseSidebar: courseSidebar(),
+
+  PaperReadingSidebar: [
+    backToRobotics(),
+    { type: 'doc', id: `${P}/es_Paper_Reading_Getting_Started`, label: 'Primeros pasos' },
+    {
+      type: 'category',
+      label: 'Despliegue práctico',
+      className: 'robotics-section-title robotics-course-sidebar hands-on-reproduction-sidebar',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        { type: 'doc', id: `${P}/es_Paper_Reading_02_Hardware_and_Teleoperation`, label: 'Configuración de Hardware y Software' },
+        { type: 'doc', id: `${P}/es_Paper_Reading_03_Task_Design`, label: 'Diseño de tareas y planificación de demostraciones' },
+        { type: 'doc', id: `${P}/es_Paper_Reading_04_Camera_and_Recording`, label: 'Recopilación de datos multivista' },
+        { type: 'doc', id: `${P}/es_Paper_Reading_05_Dataset_Quality`, label: 'Calidad de Datos: Estructura, Sincronización y Validación' },
+        { type: 'doc', id: `${P}/es_Paper_Reading_06_ACT_Training`, label: 'Entrenamiento del modelo ACT' },
+        { type: 'doc', id: `${P}/es_Paper_Reading_07_ACT_Deployment`, label: 'Despliegue en Robot y Evaluación del Rendimiento' },
+        { type: 'doc', id: `${P}/es_Paper_Reading_08_Algorithm_Switching`, label: 'Cambio de Políticas y Ejecución de Tareas' },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Análisis profundos de artículos',
+      className: 'robotics-section-title robotics-course-sidebar paper-reading-sidebar',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        {
+          type: 'category',
+          label: 'Parte 1 · Fragmentación de acciones y políticas multitarea',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: `${P}/es_Paper_Reading_ACT`, label: 'ACT — Manipulación Bimanual de Bajo Costo' },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Parte 2 · Modelos VLA ligeros y despliegue eficiente',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: `${P}/es_Paper_Reading_SMOLVLA`, label: 'SmolVLA — Modelos de Visión-Lenguaje-Acción Asequibles' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_EVO1`, label: 'Evo-1 — VLA ligero' },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Parte 3 · Modelos fundacionales robóticos π',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: `${P}/es_Paper_Reading_PI0`, label: 'π₀ — Control Robótico de Propósito General' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_PI0_FAST`, label: 'π₀-FAST — Tokenización de acciones eficiente' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_PI05`, label: 'π₀.₅ — Generalización en Mundo Abierto' },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Parte 4 · VLA generalista y adaptación entre morfologías',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: `${P}/es_Paper_Reading_GR00T_N1`, label: 'NVIDIA GR00T — Adaptación y Fine-Tuning' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_EO1`, label: 'EO-1 — Preentrenamiento Multimodal Intercalado' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_WALL_OSS`, label: 'WALL-OSS — Razonamiento Encarnado y Control de Robots' },
+          ],
+        },
+        {
+          type: 'html',
+          className: 'robotics-section-title',
+          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">Parte 5 · Modelos de mundo y aprendizaje de video-acción</span>',
+        },
+        {
+          type: 'html',
+          className: 'robotics-section-title',
+          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">Parte 6 · Evaluación unificada y resumen de investigación</span>',
+        },
+      ],
+    },
+  ],
 
   // reBot-RS: Quick Start & SDK / Applications / Course (jumps to course).
   RebotRsSidebar: [

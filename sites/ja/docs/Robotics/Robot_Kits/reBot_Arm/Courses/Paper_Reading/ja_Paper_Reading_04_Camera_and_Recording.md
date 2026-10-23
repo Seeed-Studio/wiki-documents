@@ -37,7 +37,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page hands-on-reproduction-page">
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-camera_recording-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
   <h1 id="hands-on-camera_recording-title">マルチビュー・データ収集</h1>
   <p className="paper-reading-lead">1 台または 2 台のカメラを設定し、デバイスを識別して、LeRobot デモンストレーションを記録し、データセットを可視化・再生し、エピソードを追加または削除します。</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">

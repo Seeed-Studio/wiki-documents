@@ -265,7 +265,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <a className="step-card" href="/pt-br/robotics/rebot_physical_ai_course_introduction/">
         <span className="step-index">🎓</span>
         <div><b>Curso para Iniciantes</b></div>
-        <span className="course-compatibility" aria-label="Supported robotic arms">
+        <span className="course-compatibility" aria-label="Braços robóticos compatíveis">
           <span className="course-compatibility-badge">reBot-rs</span>
           <span className="course-compatibility-badge">reBot-dm</span>
         </span>
@@ -273,14 +273,14 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <a className="step-card" href="/pt-br/robotics/soarm_physical_ai_course_introduction/">
         <span className="step-index">🎓</span>
         <div><b>Curso para Iniciantes</b></div>
-        <span className="course-compatibility" aria-label="Supported robotic arms">
+        <span className="course-compatibility" aria-label="Braços robóticos compatíveis">
           <span className="course-compatibility-badge">SO101</span>
         </span>
       </a>
       <a className="step-card" href="/pt-br/robotics/paper_reading_getting_started/">
         <span className="step-index">📄</span>
         <div><b>Análise Detalhada de Artigos</b></div>
-        <span className="course-compatibility" aria-label="Supported robotic arms">
+        <span className="course-compatibility" aria-label="Braços robóticos compatíveis">
           <span className="course-compatibility-badge">reBot-rs</span>
           <span className="course-compatibility-badge">reBot-dm</span>
           <span className="course-compatibility-badge">SO101</span>
@@ -289,7 +289,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer">
         <span className="step-index">📘</span>
         <div><b>Do Simulado ao Real com NVIDIA Isaac</b></div>
-        <span className="course-compatibility" aria-label="Supported robotic arms">
+        <span className="course-compatibility" aria-label="Braços robóticos compatíveis">
           <span className="course-compatibility-badge">reBot-rs</span>
         </span>
       </a>

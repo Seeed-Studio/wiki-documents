@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-evo1-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-evo1-title">Evo-1 — 軽量 VLA</h1>
   <p className="paper-reading-lead">Evo-1: セマンティックアライメントを維持した軽量 Vision-Language-Action モデル</p>
   <ul className="paper-reading-badges" aria-label="In this guide">

@@ -37,7 +37,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page hands-on-reproduction-page">
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_training-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
   <h1 id="hands-on-act_training-title">ACT モデルの学習</h1>
   <p className="paper-reading-lead">ACT の学習を設定し、ジョブを起動して、loss と GPU 使用率をモニタリングし、中断した学習を再開し、チェックポイントを管理します。</p>
   <ul className="paper-reading-badges" aria-label="In this guide">

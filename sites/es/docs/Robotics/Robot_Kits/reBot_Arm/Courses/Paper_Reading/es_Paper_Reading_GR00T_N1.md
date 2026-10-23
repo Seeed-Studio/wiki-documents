@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-gr00t_n1-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DE ARTÍCULOS</span>
   <h1 id="paper-reading-gr00t_n1-title">NVIDIA GR00T — Adaptation &amp; Fine-Tuning</h1>
   <p className="paper-reading-lead">GR00T N1: Un modelo base abierto para robots humanoides generalistas</p>
   <ul className="paper-reading-badges" aria-label="In this guide">

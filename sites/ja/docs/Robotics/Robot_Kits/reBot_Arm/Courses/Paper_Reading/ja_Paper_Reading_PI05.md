@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi05-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-pi05-title">π₀.₅ — オープンワールド汎化</h1>
   <p className="paper-reading-lead">π0.5: オープンワールド汎化を備えた Vision-Language-Action モデル</p>
   <ul className="paper-reading-badges" aria-label="In this guide">

@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-eo1-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DE ARTÍCULOS</span>
   <h1 id="paper-reading-eo1-title">EO-1 — Preentrenamiento Multimodal Intercalado</h1>
   <p className="paper-reading-lead">EO-1: Un modelo fundacional encarnado unificado y abierto para el control general de robots</p>
   <ul className="paper-reading-badges" aria-label="In this guide">

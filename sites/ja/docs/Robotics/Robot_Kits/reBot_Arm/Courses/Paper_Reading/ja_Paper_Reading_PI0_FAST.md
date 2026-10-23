@@ -38,9 +38,9 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0_fast-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-pi0_fast-title">π₀-FAST — Efficient Action Tokenization</h1>
-  <p className="paper-reading-lead">FAST: Efficient Action Tokenization for Vision-Language-Action Models</p>
+  <p className="paper-reading-lead">FAST: Vision-Language-Action モデルのための効率的なアクショントークナイゼーション</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>アクショントークナイゼーション</li>
     <li>DCT</li>

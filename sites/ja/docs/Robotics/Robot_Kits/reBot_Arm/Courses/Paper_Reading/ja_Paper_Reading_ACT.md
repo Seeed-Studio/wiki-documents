@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-act-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-act-title">ACT — 低コスト両腕マニピュレーション</h1>
   <p className="paper-reading-lead">低コストハードウェアによる精密な両腕マニピュレーションの学習</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">

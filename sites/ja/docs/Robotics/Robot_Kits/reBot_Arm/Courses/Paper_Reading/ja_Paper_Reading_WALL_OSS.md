@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-wall_oss-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-wall_oss-title">WALL-OSS — エンボディド推論とロボット制御</h1>
   <p className="paper-reading-lead">VLM をエンボディド空間へと駆動する</p>
   <ul className="paper-reading-badges" aria-label="In this guide">

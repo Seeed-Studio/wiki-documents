@@ -1,6 +1,6 @@
 ---
-description: "Explore cutting-edge Physical AI research, break down key models and algorithms with Seeed robotic arms"
-title: "Physical AI Paper Deep-Dive & Hands-on Deployment"
+description: "Explore pesquisas de ponta em Physical AI, destrinche modelos e algoritmos-chave com braços robóticos da Seeed"
+title: "Análise detalhada de artigos sobre Physical AI e implantação prática"
 hide_title: true
 keywords:
   - reBot
@@ -41,12 +41,12 @@ import '/src/css/paper-reading-style.css';
       <strong>Cursos gratuitos, juntos em código aberto</strong>
       <p>Este curso é totalmente gratuito. Para apoiar nosso trabalho, dê uma estrela para o nosso braço robótico open source!</p>
     </div>
-    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Star on GitHub</a>
+    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Dar estrela no GitHub</a>
   </aside>
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">Physical AI Paper Deep-Dive &amp; Hands-on Deployment</h1>
+    <h1 id="paper-reading-title">Análise detalhada de artigos sobre Physical AI e implantação prática</h1>
     <p className="paper-reading-lead">Explore pesquisas de ponta em Physical AI, destrinche modelos e algoritmos-chave com braços robóticos da Seeed</p>
     <p>Um <strong>curso que será sempre gratuito</strong>, cuidadosamente desenvolvido pela equipe de AI Robotics da SeeedStudio, combinado com o <strong>braço robótico reBot 100% open source, disponível para uso comercial e reprodução</strong>. Conclua o curso e torne-se o próximo especialista em robótica!</p>
     <ul className="paper-reading-badges" aria-label="Course features">
@@ -58,7 +58,7 @@ import '/src/css/paper-reading-style.css';
 
   <div className="paper-reading-directory">
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-hands-on-title">
-      <h2 id="paper-reading-hands-on-title">Hands-on Deployment</h2>
+      <h2 id="paper-reading-hands-on-title">Implantação prática</h2>
       <p>Comece com a preparação da plataforma e a coleta de dados, siga os passos para treinar e implantar o ACT, depois aprenda a alternar do ACT para outras políticas e domine gradualmente o fluxo de reprodução para diferentes algoritmos.</p>
       <ol className="paper-reading-directory-list">
         <li><a href="/pt-br/robotics/paper_reading_hardware_and_teleoperation/">Configuração de Hardware &amp; Software</a></li>
@@ -72,7 +72,7 @@ import '/src/css/paper-reading-style.css';
     </section>
 
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-papers-title">
-      <h2 id="paper-reading-papers-title">Paper Deep-Dives</h2>
+      <h2 id="paper-reading-papers-title">Análises detalhadas de artigos</h2>
       <p>Leia artigos por tópico, desde políticas básicas de aprendizado por imitação até modelos de visão-linguagem-ação.</p>
       <h3>Parte 1 · Action Chunking &amp; Políticas Multi-Tarefa</h3>
       <ul className="paper-reading-directory-list">
