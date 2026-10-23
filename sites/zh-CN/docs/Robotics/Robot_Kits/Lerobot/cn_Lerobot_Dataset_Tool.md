@@ -21,6 +21,12 @@ url: https://wiki.seeedstudio.com/cn/lerobot_dataset_tool/
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" />
 </div>
 
+<div className="get-one-now-panel">
+  <a className="get-one-now-button" href="https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84" target="_blank" rel="noopener noreferrer">
+    立即购买 SO-ARM101 套件 / Get One Now 🖱️
+  </a>
+</div>
+
 | **跟随臂 Viola** | **领导臂 Violin** | **跟随臂 Cello** |
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.png) |
