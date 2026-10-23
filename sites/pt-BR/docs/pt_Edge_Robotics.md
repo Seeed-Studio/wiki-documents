@@ -51,7 +51,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="rebot-rs" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>Braço Robótico reBot-RS</h3>
+    <h3>reBot-RS Robotic Arm</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
@@ -67,18 +67,11 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Aplicações</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS com Pega Visual</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS com apreensão visual</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS com ROS2</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS com Isaac Sim</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de Controle Web do reBot-RS: Robô Real e MuJoCo</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de Controle Web do reBot-RS: Robô Real &amp; MuJoCo</b></div></a>
         <a className="step-card" href="/pt-br/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS com Agent Claw</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>Curso</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/pt-br/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para Iniciantes</b></div></a>
-        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>Curso DLI: Pipeline VLA do Sim-para-o-Real</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -93,7 +86,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">Adaptador de robô LeRobot</a>
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperador LeRobot</a>
         <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">Demo de pega visual</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">Demo de apreensão visual</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">Coleção de suportes de câmera</a>
       </div>
     </div>
@@ -103,7 +96,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="rebot-dm" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>Braço Robótico reBot-DM</h3>
+    <h3>reBot-DM Robotic Arm</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
@@ -118,16 +111,10 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Aplicações</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>Pega Visual do reBot-DM</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>Apreensão visual do reBot-DM</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM com ROS2</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM com Isaac Sim</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de Controle Web do reBot-DM: Robô Real e MuJoCo</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>Curso</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/pt-br/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para Iniciantes</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de Controle Web do reBot-DM: Robô Real &amp; MuJoCo</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -143,7 +130,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">Adaptador de robô LeRobot</a>
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperador LeRobot</a>
         <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">Demo de pega visual</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">Demo de apreensão visual</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">Coleção de suportes de câmera</a>
       </div>
     </div>
@@ -153,7 +140,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="soarm" className="product-card soarm product-card--cover">
   <summary className="product-head">
-    <h3>Braço Robótico SO100 / SO101</h3>
+    <h3>SO100 / SO101 Robotic Arm</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
@@ -168,17 +155,11 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>Aplicações</h4>
       <div className="learning-steps">
         <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 e NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Treinamento de SO-ARM de Dois Braços</b></div></a>
-        <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM com Mão Hábil Amazing Hand</b></div></a>
+        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Treinamento de SO-ARM de dois braços</b></div></a>
+        <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM com mão hábil Amazing Hand</b></div></a>
         <a className="step-card" href="/pt-br/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>Simulação LeIsaac</b></div></a>
-        <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Aprendizado por Reforço no Isaac Lab</b></div></a>
+        <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Aprendizado por reforço no Isaac Lab</b></div></a>
         <a className="step-card optional" href="/pt-br/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>Curso</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/pt-br/robotics/soarm_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para Iniciantes</b></div></a>
       </div>
     </div>
   </div>
@@ -272,6 +253,49 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 </details>
 
 
+  <section id="courses" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Aprendizado</span>
+        <h2>Cursos</h2>
+      </div>
+      <p>Uma série de cursos gratuitos escritos e compartilhados pela equipe de Robótica da Seeed.</p>
+    </div>
+    <div className="learning-steps">
+      <a className="step-card" href="/pt-br/robotics/rebot_physical_ai_course_introduction/">
+        <span className="step-index">🎓</span>
+        <div><b>Curso para Iniciantes</b></div>
+        <span className="course-compatibility" aria-label="Braços robóticos compatíveis">
+          <span className="course-compatibility-badge">reBot-rs</span>
+          <span className="course-compatibility-badge">reBot-dm</span>
+        </span>
+      </a>
+      <a className="step-card" href="/pt-br/robotics/soarm_physical_ai_course_introduction/">
+        <span className="step-index">🎓</span>
+        <div><b>Curso para Iniciantes</b></div>
+        <span className="course-compatibility" aria-label="Braços robóticos compatíveis">
+          <span className="course-compatibility-badge">SO101</span>
+        </span>
+      </a>
+      <a className="step-card" href="/pt-br/robotics/paper_reading_getting_started/">
+        <span className="step-index">📄</span>
+        <div><b>Análise Detalhada de Artigos</b></div>
+        <span className="course-compatibility" aria-label="Braços robóticos compatíveis">
+          <span className="course-compatibility-badge">reBot-rs</span>
+          <span className="course-compatibility-badge">reBot-dm</span>
+          <span className="course-compatibility-badge">SO101</span>
+        </span>
+      </a>
+      <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer">
+        <span className="step-index">📘</span>
+        <div><b>Do Simulado ao Real com NVIDIA Isaac</b></div>
+        <span className="course-compatibility" aria-label="Braços robóticos compatíveis">
+          <span className="course-compatibility-badge">reBot-rs</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
     </RotatingProductShowcase>
   </section>
 
@@ -286,21 +310,21 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="resource-columns">
       <div>
         <h4>Motores de Junta reBot</h4>
-        <a href="/pt-br/damiao_series/">Série Damiao DM43</a>
+        <a href="/pt-br/damiao_series/">Damiao DM43 Series</a>
         <a href="/pt-br/robstride_control/">RobStride Control</a>
       </div>
       <div>
         <h4>Outros Motores de Junta</h4>
-        <a href="/pt-br/myactuator_series/">Série MyActuator X</a>
-        <a href="/pt-br/hightorque_series/">Série HighTorque / SDK</a>
+        <a href="/pt-br/myactuator_series/">MyActuator X Series</a>
+        <a href="/pt-br/hightorque_series/">HighTorque Series / SDK</a>
         <a href="/pt-br/hightorque_getting_started/">Introdução ao HighTorque</a>
         <a href="/pt-br/hightorque_control/">Controle de Motor HighTorque</a>
-        <a href="/pt-br/stackforce_series/">Série Stackforce</a>
+        <a href="/pt-br/stackforce_series/">Stackforce Series</a>
       </div>
       <div>
         <h4>Servos</h4>
         <a href="/pt-br/feetech_servo/">Servo Feetech STS3215</a>
-        <a href="/pt-br/fashionstar_servo/">Série Fashionstar</a>
+        <a href="/pt-br/fashionstar_servo/">Fashionstar Series</a>
       </div>
     </div>
   </section>
@@ -314,7 +338,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <p>Para preensão visual, SLAM, interação por voz e percepção do estado do robô.</p>
     </div>
     <div className="resource-columns">
-      <div><h4>LiDAR</h4><a href="/pt-br/robosense_lidar/">RoboSense</a><a href="/pt-br/mid360/">Livox MID360</a><a href="/pt-br/a_loam/">Algoritmo A-LOAM</a><a href="/pt-br/slamtec/">Série Slamtec</a></div>
+      <div><h4>LiDAR</h4><a href="/pt-br/robosense_lidar/">RoboSense</a><a href="/pt-br/mid360/">Livox MID360</a><a href="/pt-br/a_loam/">Algoritmo A-LOAM</a><a href="/pt-br/slamtec/">Slamtec Series</a></div>
       <div><h4>Câmeras</h4><a href="/pt-br/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/pt-br/orbbec_gemini_335lg/">Câmera de Profundidade Gemini 335Lg</a><a href="/pt-br/orbbec_gemini336">Câmera de Profundidade Gemini 336</a><a href="/pt-br/sensing_gmsl_cameras">Câmera SENSING GMSL2</a><a href="/pt-br/ac1">RoboSense AC1</a><a href="/pt-br/orbbec_depth_camera_on_ros/">Orbbec e ROS</a><a href="/pt-br/orb_slam3_orbbec_gemini2/">ORB-SLAM3 e Gemini2</a><a href="/pt-br/csi_camera_on_ros/">Câmera CSI no Jetson</a><a href="/pt-br/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
       <div><h4>Voz</h4><a href="/pt-br/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/pt-br/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a></div>
       <div><h4>IMU</h4><a href="/pt-br/hexfellow_y200/">HEXFELLOW Y200</a><a href="/pt-br/wheeltec_imu/">WHEELTEC IMU</a></div>

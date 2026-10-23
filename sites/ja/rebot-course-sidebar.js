@@ -5,31 +5,13 @@
 const C = 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial';
 const RS = 'Robotics/Robot_Kits/reBot_Arm/B601_RS';
 const DM = 'Robotics/Robot_Kits/reBot_Arm/B601_DM';
+const P = 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading';
 
 const backToRobotics = () => ({
   type: 'ref',
   id: 'ja_Edge_Robotics',
   label: '<-ロボティクスに戻る',
   className: 'sideboard_calss',
-});
-
-// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
-// keeps the beginner-course jump that every product's Course group starts with.
-const courseItems = () => [
-  {
-    type: 'ref',
-    id: `${C}/ja_Arm_Tutorial_Introduction`,
-    label: '入門コース',
-  },
-];
-
-const courseLink = (items = courseItems()) => ({
-  type: 'category',
-  label: 'コース',
-  className: 'robotics-section-title',
-  collapsed: false,
-  collapsible: false,
-  items,
 });
 
 // The course's own standalone sidebar (opened when browsing course pages).
@@ -160,6 +142,91 @@ const sidebars = {
   // Standalone course sidebar.
   RebotCourseSidebar: courseSidebar(),
 
+  PaperReadingSidebar: [
+    backToRobotics(),
+    { type: 'doc', id: `${P}/ja_Paper_Reading_Getting_Started`, label: 'はじめに' },
+    {
+      type: 'category',
+      label: 'ハンズオンデプロイ',
+      className: 'robotics-section-title robotics-course-sidebar hands-on-reproduction-sidebar',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        { type: 'doc', id: `${P}/ja_Paper_Reading_02_Hardware_and_Teleoperation`, label: 'ハードウェアとソフトウェアのセットアップ' },
+        { type: 'doc', id: `${P}/ja_Paper_Reading_03_Task_Design`, label: 'タスク設計とデモンストレーション計画' },
+        { type: 'doc', id: `${P}/ja_Paper_Reading_04_Camera_and_Recording`, label: 'マルチビュー・データ収集' },
+        { type: 'doc', id: `${P}/ja_Paper_Reading_05_Dataset_Quality`, label: 'データ品質：構造、同期、検証' },
+        { type: 'doc', id: `${P}/ja_Paper_Reading_06_ACT_Training`, label: 'ACT モデルの学習' },
+        { type: 'doc', id: `${P}/ja_Paper_Reading_07_ACT_Deployment`, label: 'オンロボットデプロイと性能評価' },
+        { type: 'doc', id: `${P}/ja_Paper_Reading_08_Algorithm_Switching`, label: 'ポリシー切り替えとタスク実行' },
+      ],
+    },
+    {
+      type: 'category',
+      label: '論文徹底解説',
+      className: 'robotics-section-title robotics-course-sidebar paper-reading-sidebar',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        {
+          type: 'category',
+          label: 'パート 1 · アクションチャンク化 & マルチタスクポリシー',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: `${P}/ja_Paper_Reading_ACT`, label: 'ACT — 低コスト両腕マニピュレーション' },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'パート 2 · 軽量 VLA モデル & 効率的なデプロイ',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: `${P}/ja_Paper_Reading_SMOLVLA`, label: 'SmolVLA — 手頃な Vision-Language-Action モデル' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_EVO1`, label: 'Evo-1 — 軽量 VLA' },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'パート 3 · π ロボット基盤モデル',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: `${P}/ja_Paper_Reading_PI0`, label: 'π₀ — 汎用ロボット制御' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_PI0_FAST`, label: 'π₀-FAST — 効率的なアクショントークナイゼーション' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_PI05`, label: 'π₀.₅ — オープンワールド汎化' },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'パート 4 · ジェネラリスト VLA & クロスエンボディメント適応',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: `${P}/ja_Paper_Reading_GR00T_N1`, label: 'NVIDIA GR00T — 適応とファインチューニング' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_EO1`, label: 'EO-1 — インタリーブ型マルチモーダル事前学習' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_WALL_OSS`, label: 'WALL-OSS — エンボディド推論とロボット制御' },
+          ],
+        },
+        {
+          type: 'html',
+          className: 'robotics-section-title',
+          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">パート 5 · ワールドモデル &amp; ビデオ・アクション学習</span>',
+        },
+        {
+          type: 'html',
+          className: 'robotics-section-title',
+          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">パート 6 · 統一評価 &amp; 研究サマリー</span>',
+        },
+      ],
+    },
+  ],
+
   // reBot-RS: Quick Start & SDK / Applications / Course (jumps to course).
   RebotRsSidebar: [
     backToRobotics(),
@@ -191,13 +258,9 @@ const sidebars = {
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS と Agent Claw' },
       ],
     },
-    courseLink([
-      ...courseItems(),
-      { type: 'link', label: 'DLI コース: Sim-to-Real VLA パイプライン', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
-    ])
   ],
 
-  // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
+  // reBot-DM: Quick Start & SDK / Applications.
   RebotDmSidebar: [
     backToRobotics(),
     {
@@ -226,7 +289,6 @@ const sidebars = {
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web 制御システム：実機と MuJoCo' },
       ],
     },
-    courseLink(),
   ],
 
 };
