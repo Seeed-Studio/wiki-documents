@@ -1,0 +1,13 @@
+{
+  "before_prose_words": 3381,
+  "after_prose_words": 2623,
+  "prose_reduction_percent": 22.4,
+  "code_blocks_preserved": 12,
+  "artwork_sha256": {
+    "jetson-mtp-cover-en.png": "ea70e475c254beea9c7767448a30771d9d4fda7dfd81cc100da82241a9428759",
+    "prefill-vs-decode-en.png": "68ba5f7172dace8bfe61de66736921890878b12a778a7bab213c4ae19fc67483",
+    "autoregressive-vs-mtp-en.png": "d312a08027c995ae56240316646879d4f05f52f88faefbb58354d2459421c5e1",
+    "autoregressive-token-generation-en.png": "53353df61aacbc369cd655425d654ee9afec1ec5d5f5921eaa9f4d15af6657e2",
+    "jetson-voice-assistant-pipeline-en.png": "9358cd7b0afd474464acda53556fac2b30864264ace3f5ca1cedd1be6b26ed22"
+  }
+}

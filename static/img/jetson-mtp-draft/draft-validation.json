@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-23",
+  "revision": "Source-note style; documentation links instead of installation walkthroughs",
+  "title": "Speed Up llama.cpp on NVIDIA Jetson AGX Orin with MTP",
+  "description": "Enable Multi-Token Prediction in llama.cpp on NVIDIA Jetson AGX Orin. Follow Qwen3.5-4B setup steps and compare MTP ON/OFF benchmark results.",
+  "slug": "/jetson/accelerate_llm_inference_mtp",
+  "url": "https://wiki.seeedstudio.com/jetson/accelerate_llm_inference_mtp/",
+  "draft": true,
+  "author": "zibo",
+  "introduction_preserved": true,
+  "image_order_preserved": true,
+  "rendered_images": 7,
+  "images": [
+    {
+      "url": "https://files.seeedstudio.com/wiki/Jetson/Application/jetson-mtp-cover-en.png",
+      "alt": "NVIDIA Jetson illustration with Qwen3.5-4B, llama.cpp, and an MTP token-flow graphic."
+    },
+    {
+      "url": "https://files.seeedstudio.com/wiki/Jetson/Application/mtp_vs.gif",
+      "alt": "MTP OFF on the left and MTP ON on the right generating Fibonacci code with Qwen3.5-4B on Jetson AGX Orin."
+    },
+    {
+      "url": "https://files.seeedstudio.com/wiki/Jetson/Application/mtp_demo.gif",
+      "alt": "Video-based ROI tracking on the left, with MTP OFF and ON crowd-analysis results in the center and right panels."
+    },
+    {
+      "url": "https://files.seeedstudio.com/wiki/Jetson/Application/autoregressive-token-generation-en.png",
+      "alt": "Autoregressive decoding adds each generated token to the context before predicting the next."
+    },
+    {
+      "url": "https://files.seeedstudio.com/wiki/Jetson/Application/prefill-vs-decode-en.png",
+      "alt": "Prefill processes the prompt on the left; decode generates output tokens step by step on the right."
+    },
+    {
+      "url": "https://files.seeedstudio.com/wiki/Jetson/Application/autoregressive-vs-mtp-en.png",
+      "alt": "Standard decoding on the left; MTP candidate drafting and target-model verification on the right."
+    },
+    {
+      "url": "https://files.seeedstudio.com/wiki/Jetson/Application/jetson-voice-assistant-pipeline-en.png",
+      "alt": "Voice-assistant pipeline from speech recognition through a local LLM to speech synthesis."
+    }
+  ],
+  "visible_figure_captions": 0,
+  "shell_blocks_syntax_checked": 1,
+  "mdx_compile": "passed",
+  "render": "Isolated server render; no full site build",
+  "word_count": 1783,
+  "link_checks": [
+    {
+      "url": "https://arxiv.org/abs/2404.19737",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/speculative.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md",
+      "status": 200
+    },
+    {
+      "url": "https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/zibochen6/edge-crowd-agent",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/zibochen6/edge-crowd-agent#start-on-jetson",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/zibochen6/edge-crowd-agent#record-off-and-on",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/zibochen6/edge-crowd-agent#benchmarks-and-measured-latency",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/zibochen6/edge-crowd-agent/blob/main/docs/measurements/behavior-v3-fast.json",
+      "status": 200
+    },
+    {
+      "url": "https://www.jetson-ai-lab.com/tutorials/speculative-decoding/",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/tree/master/tools/server/bench/speed-bench",
+      "status": 200
+    }
+  ]
+}
