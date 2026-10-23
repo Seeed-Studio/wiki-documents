@@ -24,6 +24,8 @@ import { useJetsonStore } from '@site/src/stores/useJetsonStore';
 import { getL4TData } from '@site/src/components/jetson/DownloadLink';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
+const RUGGED_PRODUCTS = ['j4012rugged', 'j3011rugged'];
+
 const normalizeLang = (lang = 'en') => {
   const l = String(lang).toLowerCase();
 
@@ -801,7 +803,7 @@ export const VerifySHA256 = ({ lang }) => {
     <>
       <p>{texts.verifySha256Intro}</p>
       <CodeBlock language="bash">
-        {`sha256sum mfi_xxxx.tar.gz 
+        {RUGGED_PRODUCTS.includes(product) ? `sha256sum ${filename}` : `sha256sum mfi_xxxx.tar.gz
 # ${texts.forExample}
 # sha256sum ${filename}`}
       </CodeBlock>
@@ -944,6 +946,56 @@ export const RecoveryMini = ({ lang }) => {
           alt={texts.lsusbResult}
         />
       </div>
+    </div>
+  );
+};
+
+export const PrepareRequirementsRugged = ({ lang }) => {
+  const product = useJetsonStore(state => state.product);
+  const texts = useLocalizedTexts(lang);
+  if (!RUGGED_PRODUCTS.includes(product)) return null;
+
+  return (
+    <div>
+      <ul>
+        <li>{texts.ubuntuHost} (Ubuntu 20.04, JetPack 5.1.3 / L4T 35.5.0)</li>
+        <li>{product === 'j4012rugged' ? 'reComputer Rugged J4012 (Orin NX 16GB)' : 'reComputer Rugged J3011 (Orin Nano 8GB)'}</li>
+        <li>19–48 V DC power supply</li>
+        <li>{texts.usbTypeC}</li>
+        <li>HDMI display, keyboard, and mouse for initial setup</li>
+      </ul>
+      <p>{texts.hostRecommendationText}</p>
+    </div>
+  );
+};
+
+export const RecoveryRugged = ({ lang }) => {
+  const product = useJetsonStore(state => state.product);
+  const texts = useLocalizedTexts(lang);
+  if (!RUGGED_PRODUCTS.includes(product)) return null;
+
+  return (
+    <div>
+      <p>{texts.recoveryModeNote}</p>
+      <img
+        src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg"
+        alt="Recovery button and DEVICE USB port on reComputer Rugged J40"
+        width={360}
+        style={{maxWidth: '100%', height: 'auto'}}
+      />
+      <ol>
+        <li>{texts.connectUsbTypeCDevice}</li>
+        <li>{texts.classicJ501PressRecovery} (<strong>REC</strong>)</li>
+        <li>{texts.powerUpCarrier}</li>
+        <li>{texts.releaseForceCovery}</li>
+      </ol>
+      <p>{texts.afterRecoveryMode}</p>
+      <CodeBlock language="bash">lsusb</CodeBlock>
+      <p>{texts.recoveryModeIds}</p>
+      <p>
+        {product === 'j4012rugged' ? texts.orinNx16gb : texts.orinNano8gb}{' '}
+        <code>{product === 'j4012rugged' ? '0955:7323' : '0955:7523'}</code> NVIDIA Corp.
+      </p>
     </div>
   );
 };
@@ -2127,7 +2179,8 @@ export const ExtractAndFlash = ({ lang }) => {
   const l4t = useJetsonStore(state => state.l4t);
   const obj = getL4TData(product, l4t);
   const filename = obj?.filename || 'mfi_xxxx.tar.gz';
-  const foldername = obj?.foldername || 'mfi_xxxx';
+  const isRugged = RUGGED_PRODUCTS.includes(product);
+  const foldername = obj?.foldername || (isRugged ? '<extracted-bsp-directory>' : 'mfi_xxxx');
   const texts = useLocalizedTexts(lang);
 
   return (
@@ -2137,7 +2190,8 @@ export const ExtractAndFlash = ({ lang }) => {
       </p>
 
       <CodeBlock language="bash">
-        {`cd ${texts.pathToImage}
+        {isRugged ? `cd ${texts.pathToImage}
+sudo tar xpf ${filename}` : `cd ${texts.pathToImage}
 sudo tar xpf  mfi_xxxx.tar.gz
 # ${texts.forExample}
 # sudo tar xpf ${filename}`}
@@ -2147,8 +2201,13 @@ sudo tar xpf  mfi_xxxx.tar.gz
         <strong>{texts.step2Flash}</strong> {texts.executeFlashCommand}
       </p>
 
+      {isRugged && (
+        <p>Replace <code>&lt;extracted-bsp-directory&gt;</code> with the extracted directory that contains <code>tools/kernel_flash/l4t_initrd_flash.sh</code>.</p>
+      )}
+
       <CodeBlock language="bash">
-        {`cd mfi_xxxx
+        {isRugged ? `cd ${foldername}
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs` : `cd mfi_xxxx
 # ${texts.forExample}
 # cd ${foldername}
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs`}
