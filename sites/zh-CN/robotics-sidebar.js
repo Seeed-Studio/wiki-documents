@@ -192,6 +192,18 @@ const sidebars = {
         { type: 'ref', id: `${K}/Humanoid/Atom-S/cn_Atom-S`, label: '小型人形机器人', className: 'sideboard_calss' },
       ]
     },
+    {
+      type: 'category',
+      label: '课程',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/reBot_Arm_Tutorial/cn_Arm_Tutorial_Introduction`, label: '入门课程' },
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_Getting_Started`, label: '论文精读' },
+        { type: 'link', label: 'Sim-to-Real with NVIDIA Isaac', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+      ],
+    },
     asReferences(actuatorCategory),
     asReferences(sensorCategory),
     asReferences(softwareCategory),

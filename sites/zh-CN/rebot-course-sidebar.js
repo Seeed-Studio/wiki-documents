@@ -5,31 +5,13 @@
 const C = 'Robotics/Robot_Kits/reBot_Arm/Courses/reBot_Arm_Tutorial';
 const RS = 'Robotics/Robot_Kits/reBot_Arm/B601_RS';
 const DM = 'Robotics/Robot_Kits/reBot_Arm/B601_DM';
+const PAPER_READING = 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_Getting_Started';
 
 const backToRobotics = () => ({
   type: 'ref',
   id: 'cn_Edge_Robotics',
   label: '<-返回机器人页面',
   className: 'sideboard_calss',
-});
-
-// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
-// keeps the beginner-course jump that every product's Course group starts with.
-const courseItems = () => [
-  {
-    type: 'ref',
-    id: `${C}/cn_Arm_Tutorial_Introduction`,
-    label: '入门课程',
-  },
-];
-
-const courseLink = (items = courseItems()) => ({
-  type: 'category',
-  label: '课程',
-  className: 'robotics-section-title',
-  collapsed: false,
-  collapsible: false,
-  items,
 });
 
 // 课程自己的独立侧边栏（浏览课程页面时展开）。
@@ -160,7 +142,93 @@ const sidebars = {
   // 独立课程侧边栏。
   RebotCourseSidebar: courseSidebar(),
 
-  // reBot-RS：快速上手与 SDK / 应用 / 课程（跳转到课程）。
+  PaperReadingSidebar: [
+    backToRobotics(),
+    { type: 'doc', id: PAPER_READING, label: '快速开始' },
+    {
+      type: 'category',
+      label: '手把手复现',
+      className: 'robotics-section-title robotics-course-sidebar hands-on-reproduction-sidebar',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_02_Hardware_and_Teleoperation', label: '软件设置和硬件' },
+        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_03_Task_Design', label: '设计第一个模仿学习任务' },
+        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_04_Camera_and_Recording', label: '相机配置与数据录制' },
+        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_05_Dataset_Quality', label: '数据集结构与质量检查' },
+        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_06_ACT_Training', label: '训练 ACT 模型' },
+        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_07_ACT_Deployment', label: '部署 ACT 模型' },
+        { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_08_Algorithm_Switching', label: '从 ACT 切换到其他策略（reBot / SO101）' },
+      ],
+    },
+    {
+      type: 'category',
+      label: '论文精读',
+      className: 'robotics-section-title robotics-course-sidebar paper-reading-sidebar',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        {
+          type: 'category',
+          label: '第一部分：模仿学习基础策略',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_ACT', label: 'ACT 论文精读' },
+          ],
+        },
+        {
+          type: 'category',
+          label: '第二部分：轻量级 VLA',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_SMOLVLA', label: 'SmolVLA 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_EVO1', label: 'Evo-1 论文精读' },
+          ],
+        },
+        // 已迁移文章使用分类；尚无文章的部分保留标题。
+        {
+          type: 'category',
+          label: '第三部分：π 系列机器人基础模型',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_PI0', label: 'π0 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_PI0_FAST', label: 'FAST / π0-FAST 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_PI05', label: 'π0.5 论文精读' },
+          ],
+        },
+        {
+          type: 'category',
+          label: '第四部分：主流通用 VLA',
+          className: 'robotics-section-title',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_GR00T_N1', label: 'GR00T N1 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_EO1', label: 'EO-1 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_WALL_OSS', label: 'WALL-OSS 论文精读' },
+          ],
+        },
+        {
+          type: 'html',
+          className: 'robotics-section-title',
+          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">第五部分：世界模型与 Video-Action</span>',
+        },
+        {
+          type: 'html',
+          className: 'robotics-section-title',
+          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">第六部分：统一评测与研究总结</span>',
+        },
+      ],
+    },
+  ],
+
+  // reBot-RS：快速上手与 SDK / 应用。
   RebotRsSidebar: [
     backToRobotics(),
     {
@@ -191,13 +259,9 @@ const sidebars = {
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS 与 Agent Claw' },
       ],
     },
-    courseLink([
-      ...courseItems(),
-      { type: 'link', label: 'DLI 课程：Sim-to-Real VLA 全流程', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
-    ])
   ],
 
-  // reBot-DM：快速上手与 SDK / 应用 / 课程（跳转到课程）。
+  // reBot-DM：快速上手与 SDK / 应用。
   RebotDmSidebar: [
     backToRobotics(),
     {
@@ -226,7 +290,6 @@ const sidebars = {
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web控制系统：真机与 MuJoCo' },
       ],
     },
-    courseLink(),
   ],
 
 };
