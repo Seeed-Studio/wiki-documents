@@ -40,7 +40,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLEMENTACIÓN PRÁCTICA</span>
   <h1 id="hands-on-act_training-title">Entrenamiento del modelo ACT</h1>
   <p className="paper-reading-lead">Configura el entrenamiento de ACT, inicia una ejecución, supervisa la pérdida y el uso de la GPU, reanuda entrenamientos interrumpidos y gestiona los checkpoints.</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Configuración de entrenamiento</li>
     <li>Pérdida y uso de la GPU</li>
     <li>Reanudar entrenamiento</li>

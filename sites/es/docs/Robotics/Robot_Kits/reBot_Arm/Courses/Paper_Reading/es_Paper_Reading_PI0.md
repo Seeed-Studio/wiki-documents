@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DEL ARTÍCULO</span>
   <h1 id="paper-reading-pi0-title">π₀ — Control Robótico de Propósito General</h1>
   <p className="paper-reading-lead">π0: Un modelo de flujo Visión-Lenguaje-Acción para control robótico general</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Modelos fundacionales para robots</li>
     <li>Experto en acciones</li>
     <li>Flow matching</li>
@@ -51,17 +51,17 @@ import '/src/css/paper-reading-style.css';
 
 π0 utiliza el modelo visión-lenguaje PaliGemma pre-entrenado como backbone semántico y añade un experto en acciones de aproximadamente 300M parámetros. El conditional flow matching genera fragmentos de acción continuos, mientras que el pre-entrenamiento a gran escala entre distintos robots y el post-entrenamiento de alta calidad en tareas adaptan el mismo modelo a sistemas de un solo brazo, bimanuales y móviles.
 
-![π0 Paper Deep-Dive: π0 Paper Deep-Dive (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-00.png)
+![π0 Análisis en profundidad: π0 Análisis en profundidad (imagen 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-00.png)
 
 ## Requisitos previos
 ### ¿Qué es un modelo Visión-Lenguaje-Acción?
-![π0 Paper Deep-Dive: 1.1 What Is a Vision-Language-Action Model? (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-12-en.png)
+![π0 Análisis en profundidad: 1.1 ¿Qué es un modelo Visión-Lenguaje-Acción? (imagen 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-12-en.png)
 
 ### Acciones discretas autorregresivas y fragmentos continuos
-![π0 Paper Deep-Dive: 1.2 Autoregressive Discrete Actions and Continuous Chunks (image-18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-18-en.png)
+![π0 Análisis en profundidad: 1.2 Acciones discretas autorregresivas y fragmentos continuos (imagen 18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-18-en.png)
 
 ### Entrenamiento, inferencia y evaluación
-![π0 Paper Deep-Dive: 1.3 Training, Inference, and Evaluation (image-16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-16-en.png)
+![π0 Análisis en profundidad: 1.3 Entrenamiento, inferencia y evaluación (imagen 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-16-en.png)
 
 ---
 
@@ -87,7 +87,7 @@ La evaluación abarca tres configuraciones: prompting directo, seguimiento de in
 ---
 
 ## Introducción
-![π0 Paper Deep-Dive: 3. Introduction (image-07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-07-en.png)
+![π0 Análisis en profundidad: 3. Introducción (imagen 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-07-en.png)
 
 ### Párrafo 1: La generalidad requiere experiencia física
 - **Idea principal:** La IA sobresale en tareas especializadas como la predicción de estructuras de proteínas y la generación de imágenes, pero las personas siguen siendo mucho más generales a través de entornos, restricciones, lenguaje y eventos inesperados. Los LLM y VLM se benefician de un pre-entrenamiento diverso, pero no adquieren por sí mismos experiencia de interacción física.
@@ -96,7 +96,7 @@ La evaluación abarca tres configuraciones: prompting directo, seguimiento de in
 
 - **Preparación para el método:** Los modelos robóticos generalistas necesitan tanto semántica de internet como datos físicos de robots.
 
-![π0 Paper Deep-Dive: Paragraph 1: Generality Requires Physical Experience (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-08-en.png)
+![π0 Análisis en profundidad: Párrafo 1: La generalidad requiere experiencia física (imagen 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-08-en.png)
 
 ### Párrafo 2: Por qué los modelos fundacionales encajan con la robótica
 - **Idea principal:** Los modelos generalistas agrupan datos de otras tareas, robots e incluso fuentes no robóticas, reduciendo la escasez de datos de una sola tarea. La diversidad también puede cubrir más escenas, errores y recuperaciones, mejorando la robustez.
@@ -105,7 +105,7 @@ La evaluación abarca tres configuraciones: prompting directo, seguimiento de in
 
 - **Preparación para el método:** Pre-entrenar ampliamente y luego usar prompting o fine-tuning en lugar de entrenar cada tarea desde cero.
 
-![π0 Paper Deep-Dive: Paragraph 2: Why Foundation Models Fit Robotics (image-11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-11-en.png)
+![π0 Análisis en profundidad: Párrafo 2: Por qué los modelos fundacionales encajan con la robótica (imagen 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-11-en.png)
 
 ### Párrafo 3: Tres cuellos de botella
 - **Idea principal:** Las políticas generalistas necesitan suficiente escala, una arquitectura que fusione datos heterogéneos y exprese acciones precisas, y una selección de datos y recetas de entrenamiento adecuadas.
@@ -114,7 +114,7 @@ La evaluación abarca tres configuraciones: prompting directo, seguimiento de in
 
 - **Preparación para el método:** π0 aborda por separado los datos, la arquitectura y el entrenamiento.
 
-![π0 Paper Deep-Dive: Paragraph 3: Three Bottlenecks (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-02-en.png)
+![π0 Análisis en profundidad: Párrafo 3: Tres cuellos de botella (imagen 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-02-en.png)
 
 ### Párrafo 4: La respuesta arquitectónica
 - **Idea principal:** Inicializar desde un VLM, entrenar conjuntamente a través de distintas morfologías, usar fragmentos de acción y flow matching para control continuo, y añadir un experto en acciones para extender el backbone hacia un generador de acciones.
@@ -123,7 +123,7 @@ La evaluación abarca tres configuraciones: prompting directo, seguimiento de in
 
 - **Preparación para el método:** Las secciones 5 y 6 desarrollan el conjunto de datos entre diferentes morfologías y el experto en acciones.
 
-![π0 Paper Deep-Dive: Paragraph 4: The Architectural Answer (image-14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-14-en.png)
+![π0 Análisis en profundidad: Párrafo 4: La respuesta arquitectónica (imagen 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-14-en.png)
 
 ### Párrafo 5: La receta de entrenamiento
 - **Idea principal:** El pre-/post-entrenamiento se reparten el trabajo. Entrenar solo con éxitos pulidos aporta poca experiencia de errores o recuperación; usar solo datos amplios pero de menor calidad puede no producir una ejecución eficiente. El pre-entrenamiento amplía la experiencia y el post-entrenamiento moldea el comportamiento preferido.
@@ -132,7 +132,7 @@ La evaluación abarca tres configuraciones: prompting directo, seguimiento de in
 
 - **Preparación para los experimentos:** Comparar el uso directo del modelo pre-entrenado, el entrenamiento desde cero y el fine-tuning después del pre-entrenamiento.
 
-![π0 Paper Deep-Dive: Paragraph 5: The Training Recipe (image-13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-13-en.png)
+![π0 Análisis en profundidad: Párrafo 5: La receta de entrenamiento (imagen 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-13-en.png)
 
 ### Párrafo 6: Alcance de las contribuciones y la evaluación
 - **Idea principal:** Las contribuciones incluyen una arquitectura generalista basada en VLM con flow matching y un estudio empírico de recetas de pre-/post-entrenamiento. La política admite prompting en lenguaje natural, fine-tuning para tareas posteriores e instrucciones intermedias de un VLM de alto nivel.
@@ -166,7 +166,7 @@ La evaluación abarca tres configuraciones: prompting directo, seguimiento de in
 
 4. Admitir control diestro de hasta 50 Hz.
 
-![π0 Paper Deep-Dive: 5.1 Design Goals and Components (image-15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-15.png)
+![π0 Análisis en profundidad: 5.1 Objetivos de diseño y componentes (imagen 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-15.png)
 
 | Categoría de plataforma | Entradas de imagen | Espacio de estado / acción |
 |---|---|---|
@@ -209,7 +209,7 @@ Las etiquetas de lenguaje incluyen tareas completas y segmentos cortos, normalme
 
 ### Sensores, recopilación y capacidades
 #### Composición de los datos
-![π0 Paper Deep-Dive: Data Composition (image-06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-06.png)
+![π0 Análisis en profundidad: Composición de los datos (imagen 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-06.png)
 
 - Los datos internos contienen 903M pasos de tiempo: 106M de robots de un solo brazo y 797M de robots bimanuales.
 
@@ -224,7 +224,7 @@ Las etiquetas de lenguaje incluyen tareas completas y segmentos cortos, normalme
 - El post-entrenamiento por tarea va desde unas cinco horas para tareas simples hasta 100 horas o más para las tareas más difíciles.
 
 #### Prompting directo
-![π0 Paper Deep-Dive: Direct Prompting (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-03.png)
+![π0 Análisis en profundidad: Prompting directo (imagen 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-03.png)
 
 El artículo compara π0, OpenVLA, Octo y π0-small sin inicialización VLM en doblar camisetas, limpieza de mesa fácil y difícil, embolsado de compras y sacar tostadas de una tostadora:
 
@@ -239,7 +239,7 @@ El artículo compara π0, OpenVLA, Octo y π0-small sin inicialización VLM en d
 **Precaución:** OpenVLA y Octo no se entrenan durante el mismo número de épocas que el π0 completo. La comparación de paridad aborda parcialmente la equidad computacional, pero la comparación de modelos completos no está estrictamente igualada en cómputo.
 
 #### Post-entrenamiento en nuevas tareas
-![π0 Paper Deep-Dive: Post-Training on New Tasks (image-17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-17.png)
+![π0 Análisis en profundidad: Post-entrenamiento en nuevas tareas (imagen 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-17.png)
 
 Las nuevas tareas incluyen apilar cuencos, doblar toallas, meter un recipiente de comida en un microondas, reemplazar un rollo de papel de cocina y cargar cajones con Franka. Cada método se promedia en diez ensayos por tarea:
 
@@ -252,9 +252,9 @@ Las nuevas tareas incluyen apilar cuencos, doblar toallas, meter un recipiente d
 - Las ganancias no son monótonas en todas las escalas de datos. Para cargar el microondas, la configuración de cinco horas está cerca de la línea base, mientras que la configuración de una hora muestra una ventaja mayor.
 
 #### Tareas complejas de horizonte largo
-![π0 Paper Deep-Dive: Complex Long-Horizon Tasks (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-04.png)
+![π0 Análisis en profundidad: Tareas complejas de horizonte largo (imagen 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-04.png)
 
-![π0 Paper Deep-Dive: Complex Long-Horizon Tasks (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-09.png)
+![π0 Análisis en profundidad: Tareas complejas de horizonte largo (imagen 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-09.png)
 
 Estas tareas duran unos 5–20 minutos y combinan docenas de agarres, apilados, extendidos y comportamientos de plegado. El pre-entrenamiento más el post-entrenamiento supera la mitad de la puntuación máxima en todas las tareas ilustradas y generalmente vence a entrenar desde cero o usar directamente la política pre-entrenada. Los beneficios son especialmente evidentes en tareas difíciles.
 
@@ -279,7 +279,7 @@ Con $H=1$, esto se reduce a predicción de un solo paso. Un $H$ grande ejecutado
 El relleno hasta 18 dimensiones es una interfaz de entrenamiento. Solo las dimensiones válidas de un robot específico se envían a su controlador.
 
 ### Conditional Flow Matching: del ruido a acciones continuas
-![π0 Paper Deep-Dive: 6.2 Conditional Flow Matching: From Noise to Continuous Actions (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-01-en.png)
+![π0 Análisis en profundidad: 6.2 Conditional Flow Matching: del ruido a acciones continuas (imagen 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-01-en.png)
 
 ### Una interfaz compartida sin borrar las diferencias entre plataformas
 Los robots difieren en el número de cámaras, dimensiones de estado y dimensiones y significados de las acciones. π0 usa ranuras de tamaño fijo:
@@ -301,10 +301,10 @@ Dos expertos procesan distintas modalidades:
 Los pesos son separados pero intercambian información mediante la auto-atención del Transformer. Por lo tanto, las acciones pueden depender del lenguaje y las imágenes sin convertir todo el VLM en una red solo de acciones.
 
 ### Combinar pre-entrenamiento y post-entrenamiento
-![π0 Paper Deep-Dive: 6.4 Combining Pre-Training and Post-Training (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-05-en.png)
+![π0 Análisis en profundidad: 6.4 Combinar pre-entrenamiento y post-entrenamiento (imagen 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-05-en.png)
 
 ### La red completa de π0
-![π0 Paper Deep-Dive: 6.5 The Complete π0 Network (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-10.png)
+![π0 Análisis en profundidad: 6.5 La red completa de π0 (imagen 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-10.png)
 
 #### Entradas de imagen y lenguaje
 El codificador SigLIP de PaliGemma convierte cada imagen RGB en tokens visuales, y las instrucciones tokenizadas entran con ellas en el experto VLM más grande. La figura de la arquitectura resume aproximadamente 400M de parámetros de SigLIP y 2,6B de parámetros de Gemma.

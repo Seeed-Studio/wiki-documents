@@ -14,25 +14,6 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
-// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
-// keeps the beginner-course jump that every product's Course group starts with.
-const courseItems = () => [
-  {
-    type: 'ref',
-    id: `${C}/ja_Arm_Tutorial_Introduction`,
-    label: '入門コース',
-  },
-];
-
-const courseLink = (items = courseItems()) => ({
-  type: 'category',
-  label: 'コース',
-  className: 'robotics-section-title',
-  collapsed: false,
-  collapsible: false,
-  items,
-});
-
 // The course's own standalone sidebar (opened when browsing course pages).
 const courseSidebar = () => [
   backToRobotics(),
@@ -277,13 +258,9 @@ const sidebars = {
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Agent`, label: 'reBot-RS と Agent Claw' },
       ],
     },
-    courseLink([
-      ...courseItems(),
-      { type: 'link', label: 'DLI コース: Sim-to-Real VLA パイプライン', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
-    ])
   ],
 
-  // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
+  // reBot-DM: Quick Start & SDK / Applications.
   RebotDmSidebar: [
     backToRobotics(),
     {
@@ -312,7 +289,6 @@ const sidebars = {
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web 制御システム：実機と MuJoCo' },
       ],
     },
-    courseLink(),
   ],
 
 };

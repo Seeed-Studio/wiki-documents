@@ -10,7 +10,7 @@ keywords:
   - B601-DM
   - B601-RS
   - ロボットアーム
-  - Physical AI
+  - フィジカル AI
   - コース
   - チュートリアル
   - SO101
@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-wall_oss-title">WALL-OSS — エンボディド推論とロボット制御</h1>
   <p className="paper-reading-lead">VLM をエンボディド空間へと駆動する</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>アクションセマンティクス</li>
     <li>連続制御</li>
     <li>Uni-CoT</li>
@@ -102,7 +102,7 @@ Next decision: F and I are present → place V
 著者らは、ベースラインと比較して強力な指示追従、推論、長時間地平マニピュレーションを報告し、VLM からエンボディド基盤モデルへのスケーラブルな道筋を提示しています。
 
 ### コメント
-![WALL-OSS Paper Deep-Dive: Commentary (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-00-en.png)
+![WALL-OSS 論文ディープダイブ: コメント (画像 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-00-en.png)
 
 ---
 
@@ -139,11 +139,11 @@ Next decision: F and I are present → place V
 ### 共有アテンションと分離された特徴処理
 **問題：** 視覚と言語の知識を保持しつつアクションを強く条件付けするには、完全共有パラメータと独立パラメータの間でトレードオフがあります。**直感：** 共有アテンションを通じて情報を交換し、その後、特徴カテゴリごとに分離されたフィードフォワードネットワークで処理します。
 
-![WALL-OSS Paper Deep-Dive: 4.1 Shared Attention, Separate Feature Processing (fig02-architecture-paradigms)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig02-architecture-paradigms.png)
+![WALL-OSS 論文ディープダイブ: 4.1 共有アテンションと分離された特徴処理 (fig02-architecture-paradigms)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig02-architecture-paradigms.png)
 
 **論文：** Qwen2.5-VL-3B がバックボーンです。Mixture-of-Experts 設計により、視覚と言語の特徴は vision-language FFN に、アクション特徴は action FFN に静的にルーティングされます。自己注意によりモダリティ間の情報を交換し、FFN が処理を専門化します。
 
-![WALL-OSS Paper Deep-Dive: 4.1 Shared Attention, Separate Feature Processing (fig03-wall-oss-architecture)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig03-wall-oss-architecture.png)
+![WALL-OSS 論文ディープダイブ: 4.1 共有アテンションと分離された特徴処理 (fig03-wall-oss-architecture)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig03-wall-oss-architecture.png)
 
 | パス | 入力と処理 | 出力と形状 |
 |---|---|---|
@@ -154,7 +154,7 @@ Next decision: F and I are present → place V
 
 **説明用の静的ルーティングの形式化であり、論文中の追加アルゴリズムではありません：**
 
-![WALL-OSS Paper Deep-Dive: 4.1 Shared Attention, Separate Feature Processing (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-03-en.png)
+![WALL-OSS 論文ディープダイブ: 4.1 共有アテンションと分離された特徴処理 (画像 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-03-en.png)
 
 qᵢ は位置 i におけるアテンション後の特徴であり、幅 D を持ちます。両方の分岐は下流の表現において互換性が必要ですが、幅や射影は報告されていません。i は系列インデックス、D は単位を持たない特徴数です。学習された softmax / top-k ゲーティングとは異なり、この分岐は新たに推定されたエキスパート確率ではなく、特徴カテゴリによって選択されます。
 
@@ -167,7 +167,7 @@ qᵢ は位置 i におけるアテンション後の特徴であり、幅 D を
 
 **5 ページ目の方程式（記号の衝突を避けるために名称を変更）：**
 
-![WALL-OSS Paper Deep-Dive: 4.2 Inspiration: Discrete Actions and Embodied QA (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-02.png)
+![WALL-OSS 論文ディープダイブ: 4.2 インスピレーション：離散アクションと Embodied QA (画像 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-02.png)
 
 A∈ℝᵀˣᵈ は提示された軌道、C=(V,L) はビジョンとインストラクションを含みます。yⱼ はテキストトークン j、zₖ はアクショントークン k、`<j` / `<k` は既存のプレフィックスです。θ は VL パスをパラメータ化し、pθ は次トークン確率です。λᵥ と λᴅ は単位を持たない重みです。K はエンコードされた長さであり、固定の報告値ではありません。
 
@@ -184,7 +184,7 @@ FAST は効率的なアクショントークナイゼーション手法です。
 
 **5 ページ目の方程式（方向を保ったまま進行度 τ を改名）：**
 
-![WALL-OSS Paper Deep-Dive: 4.3 Integration: Generate Continuous Actions from Noise (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-01.png)
+![WALL-OSS 論文ディープダイブ: 4.3 統合：ノイズから連続アクションを生成 (画像 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-01.png)
 
 A はクリーンなアクション、ε は同じ形状のガウスノイズ、A^τ はノイズ付きの T × d 配列です。h は VL エンコーディング、φ は連続経路のパラメータ、vφ は場です。τ は単位を持たない生成進行度、ρ はスケジュール、w は重み関数、λᴄ は損失重みです。期待値はデータ、ノイズ、時間にわたります。場の「速度」は生成空間における方向であり、自動的にモータ速度を意味するわけではありません。
 
@@ -194,14 +194,14 @@ A はクリーンなアクション、ε は同じ形状のガウスノイズ、
 
 **説明用の逆向きオイラー更新であり、論文で指定されたソルバではありません：**
 
-![WALL-OSS Paper Deep-Dive: 4.3 Integration: Generate Continuous Actions from Noise (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-04.png)
+![WALL-OSS 論文ディープダイブ: 4.3 統合：ノイズから連続アクションを生成 (画像 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-04.png)
 
 Δτ は単位を持ちません。0.2 から開始し、方向 −0.8、Δτ=−0.1 とすると 0.28 となり、0.6 に近づきます。完全な配列が一括で更新され、1 回の内部更新が 1 ロボットステップであるとは限りません。
 
 **注意：** 一般的な非線形 ρ では経路の導関数に ρ′(τ) が現れますが、論文では直接 ε−A と書かれています。この例は線形経路に限定されており、未公開のスケジュール、時間分布、ソルバ、反復回数を推定してはいけません。また、この方程式は図 3 のロボット状態を省略記法で扱っており、これは状態が存在しないことを意味しません。
 
 ### 2 つの主なステージと 2 つの統合フェーズ
-![WALL-OSS Paper Deep-Dive: 4.4 Two Main Stages, with Two Integration Phases (fig04-training-inference)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig04-training-inference.png)
+![WALL-OSS 論文ディープダイブ: 4.4 2 つの主なステージと 2 つの統合フェーズ (fig04-training-inference)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig04-training-inference.png)
 
 **論文：** 既存の VLM 事前学習の後、WALL-OSS は Inspiration と Integration を用います。Integration には freeze フェーズと unfreeze フェーズがあり、元のバックボーン事前学習は新たに設計された第 3 のステージではありません。
 
@@ -218,11 +218,11 @@ A はクリーンなアクション、ε は同じ形状のガウスノイズ、
 ### Uni-CoT：完全な推論か直接実行か
 **問題：** 類似した画像が異なる進行度を表すことがあり、別個のプランナーは制御から切り離される可能性があります。**直感：** 1 つのモデル内でレベルをまたぐ関係を学習し、中間推論なしのサンプルも含めることで、複雑な挙動と直接的な挙動の両方をサポートします。
 
-![WALL-OSS Paper Deep-Dive: 4.5 Uni-CoT: Full Reasoning or Direct Execution (fig06c-block-spell)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06c-block-spell.png)
+![WALL-OSS 論文ディープダイブ: 4.5 Uni-CoT：完全な推論か直接実行か (fig06c-block-spell)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06c-block-spell.png)
 
 **6 ページ目の目的関数（ノイズとの衝突を避けるために記号を改名）：**
 
-![WALL-OSS Paper Deep-Dive: 4.5 Uni-CoT: Full Reasoning or Direct Execution (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-05.png)
+![WALL-OSS 論文ディープダイブ: 4.5 Uni-CoT：完全な推論か直接実行か (画像 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-05.png)
 
 Θ は統一モデルのパラメータを含み、G はアクションを予測し、Q は Embodied な回答を予測します。V はビジョン、L はインストラクション、R はオプションの推論、A∈ℝᵀˣᵈ はターゲットアクション、Y は QA ラベル、λ は単位を持たないバランス係数です。アクション損失はステージの目的関数に従い、VQA 損失は回答を評価します。G の内部ノイズ／時間条件付けはここでは抽象化されています。
 
@@ -255,7 +255,7 @@ Inference:
 
 ## データとプラットフォーム：理解と実行
 ### 3 つのソース
-![WALL-OSS Paper Deep-Dive: 5.1 Three Sources (fig05-data-composition)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig05-data-composition.png)
+![WALL-OSS 論文ディープダイブ: 5.1 3 つのソース (fig05-data-composition)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig05-data-composition.png)
 
 | ソース | 図 5 の構成比 | 内容と役割 |
 |---|---|---|
@@ -282,7 +282,7 @@ v1 では、完全なプラットフォームモデル、カメラ台数／解�
 
 ## 実験：理解、推論、アクション
 ### タスク、ファインチューニング、評価条件
-![WALL-OSS Paper Deep-Dive: 6.1 Tasks, Fine-Tuning, and Evaluation Conditions (fig06a-single-instruction-tasks)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06a-single-instruction-tasks.png)
+![WALL-OSS 論文ディープダイブ: 6.1 タスク、ファインチューニング、評価条件 (fig06a-single-instruction-tasks)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06a-single-instruction-tasks.png)
 
 | タスク | 主なテスト | 5.1.1 のデモ数 | 事前学習／ファインチューニングの境界 |
 |---|---|---|---|
@@ -319,7 +319,7 @@ v1 では、完全なプラットフォームモデル、カメラ台数／解�
 **注意：** ゼロショットはタスク固有のファインチューニングを除外するのであって、ロボット／マルチモーダル事前学習を除外するわけではありません。これらは完全成功の割合ではなく、平均進捗スコアです。図 7 は本文で引用されている 2 つのグループを別々には示していないため、これらの数値は文章に基づくものと見なされます。
 
 ### 精度と長いホライズン：タスク依存の向上
-![WALL-OSS Paper Deep-Dive: 6.4 Precision and Long Horizons: Task-Dependent Gains (fig07-id-ood-results)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig07-id-ood-results.png)
+![WALL-OSS 論文ディープダイブ: 6.4 精度と長いホライズン：タスク依存の向上 (fig07-id-ood-results)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig07-id-ood-results.png)
 
 **図の解釈：** WALL-OSS は、スペリング、テーブルセッティング、寝室の片付けで示されたベースラインを上回っています。ID のゴミタスクの棒は WALL-OSS と π0 の両方が上限に達し、一方でカップ配置では π0 の方が高くなっています。棒グラフの正確な値は印刷されておらず、視覚的にも推定しません。
 
@@ -327,7 +327,7 @@ v1 では、完全なプラットフォームモデル、カメラ台数／解�
 
 **注意：** 文章中の成功率と図 7 のタスク進捗はラベルが異なり、直接置き換え可能ではありません。図では、DP の ID ゴミ進捗と WALL-OSS の OOD ゴミ進捗はおおよそ 4 分の 3 に見えます。v1 は両者の関係を説明しておらず、結合した平均成功率は推定しません。
 
-![WALL-OSS Paper Deep-Dive: 6.4 Precision and Long Horizons: Task-Dependent Gains (fig06b-long-horizon-tasks)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06b-long-horizon-tasks.png)
+![WALL-OSS 論文ディープダイブ: 6.4 精度と長いホライズン：タスク依存の向上 (fig06b-long-horizon-tasks)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06b-long-horizon-tasks.png)
 
 **論文：** テーブルセッティングと寝室の片付けは 5 ステージを超え、平均継続時間はそれぞれ 3 分超と 5 分超です。ファインチューニングはアクション／サブタスクを組み合わせ、長いタスクの学習データのうちサブタスクにラベル付けされているのは 1% のみです。推論時には、行動前にサブタスクを生成します。ベースラインは、食器を重複して置いたり、もう一方のテーブルセッティングを見落としたり、衣類が視界から消えるとループしたりします。
 

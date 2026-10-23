@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-pi0-title">π₀ — 汎用ロボット制御</h1>
   <p className="paper-reading-lead">π0: 汎用ロボット制御のためのビジョン・言語・アクションフローモデル</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>ロボット基盤モデル</li>
     <li>アクションエキスパート</li>
     <li>フローマッチング</li>
@@ -51,17 +51,17 @@ import '/src/css/paper-reading-style.css';
 
 π0 は、意味的バックボーンとして事前学習済みの PaliGemma ビジョン・言語モデルを用い、およそ 3 億パラメータのアクションエキスパートを追加します。条件付きフローマッチングによって連続アクションチャンクを生成し、大規模なクロスロボット事前学習と高品質なタスク事後学習によって、同一モデルを単腕・双腕・モバイルシステムへ適応させます。
 
-![π0 Paper Deep-Dive: π0 Paper Deep-Dive (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-00.png)
+![π0 論文ディープダイブ: π0 論文ディープダイブ (画像 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-00.png)
 
 ## 前提知識
 ### ビジョン・言語・アクションモデルとは？
-![π0 Paper Deep-Dive: 1.1 What Is a Vision-Language-Action Model? (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-12-en.png)
+![π0 論文ディープダイブ: 1.1 ビジョン・言語・アクションモデルとは？ (画像 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-12-en.png)
 
 ### 自回帰的な離散アクションと連続チャンク
-![π0 Paper Deep-Dive: 1.2 Autoregressive Discrete Actions and Continuous Chunks (image-18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-18-en.png)
+![π0 論文ディープダイブ: 1.2 自回帰的な離散アクションと連続チャンク (画像 18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-18-en.png)
 
 ### 学習・推論・評価
-![π0 Paper Deep-Dive: 1.3 Training, Inference, and Evaluation (image-16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-16-en.png)
+![π0 論文ディープダイブ: 1.3 学習・推論・評価 (画像 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-16-en.png)
 
 ---
 
@@ -87,7 +87,7 @@ import '/src/css/paper-reading-style.css';
 ---
 
 ## 序論
-![π0 Paper Deep-Dive: 3. Introduction (image-07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-07-en.png)
+![π0 論文ディープダイブ: 3. 序論 (画像 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-07-en.png)
 
 ### 段落 1：汎用性には物理的経験が必要
 - **主張の要点：** AI はタンパク質構造予測や画像生成のような専門的タスクでは優れていますが、環境・制約・言語・予期せぬ出来事にまたがる汎用性では、人間の方がはるかに優れています。LLM や VLM は多様な事前学習の恩恵を受けますが、それ自体として物理的インタラクションの経験を獲得するわけではありません。
@@ -96,7 +96,7 @@ import '/src/css/paper-reading-style.css';
 
 - **手法へのつなぎ：** ジェネラリストロボットモデルには、インターネット上の意味情報と物理ロボットのデータの両方が必要です。
 
-![π0 Paper Deep-Dive: Paragraph 1: Generality Requires Physical Experience (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-08-en.png)
+![π0 論文ディープダイブ: 段落 1：汎用性には物理的経験が必要 (画像 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-08-en.png)
 
 ### 段落 2：なぜ基盤モデルがロボティクスに適しているのか
 - **主張の要点：** ジェネラリストモデルは、他のタスク・ロボット・さらには非ロボットソースからもデータを集約し、単一タスクのデータ不足を緩和します。多様性によって、より多くのシーン・エラー・リカバリをカバーでき、ロバスト性が向上します。
@@ -105,7 +105,7 @@ import '/src/css/paper-reading-style.css';
 
 - **手法へのつなぎ：** 広く事前学習し、その後は各タスクをゼロから学習するのではなく、プロンプトやファインチューニングを用います。
 
-![π0 Paper Deep-Dive: Paragraph 2: Why Foundation Models Fit Robotics (image-11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-11-en.png)
+![π0 論文ディープダイブ: 段落 2：なぜ基盤モデルがロボティクスに適しているのか (画像 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-11-en.png)
 
 ### 段落 3：3 つのボトルネック
 - **主張の要点：** ジェネラリストポリシーには、十分なスケール、異種データを統合し精密なアクションを表現できるアーキテクチャ、そして適切なデータ選択と学習レシピが必要です。
@@ -114,7 +114,7 @@ import '/src/css/paper-reading-style.css';
 
 - **手法へのつなぎ：** π0 はデータ・アーキテクチャ・学習をそれぞれ個別に扱います。
 
-![π0 Paper Deep-Dive: Paragraph 3: Three Bottlenecks (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-02-en.png)
+![π0 論文ディープダイブ: 段落 3：3 つのボトルネック (画像 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-02-en.png)
 
 ### 段落 4：アーキテクチャ上の解答
 - **主張の要点：** VLM から初期化し、複数のエンボディメントにまたがって共同学習し、連続制御のためにアクションチャンクとフローマッチングを用い、バックボーンをアクション生成器へ拡張するアクションエキスパートを追加します。
@@ -123,7 +123,7 @@ import '/src/css/paper-reading-style.css';
 
 - **手法へのつなぎ：** セクション 5 と 6 で、クロスエンボディメントデータセットとアクションエキスパートを展開します。
 
-![π0 Paper Deep-Dive: Paragraph 4: The Architectural Answer (image-14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-14-en.png)
+![π0 論文ディープダイブ: 段落 4：アーキテクチャ上の解答 (画像 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-14-en.png)
 
 ### 段落 5：学習レシピ
 - **主張の要点：** 事前学習と事後学習は役割分担をします。洗練された成功例だけで学習すると、ミスやリカバリの経験がほとんど得られません。一方で、広範だが品質の低いデータだけを用いると、効率的な実行が得られない可能性があります。事前学習は経験を広げ、事後学習は望ましい振る舞いを形作ります。
@@ -132,7 +132,7 @@ import '/src/css/paper-reading-style.css';
 
 - **実験へのつなぎ：** 事前学習済みモデルの直接利用、ゼロからの学習、事前学習後のファインチューニングを比較します。
 
-![π0 Paper Deep-Dive: Paragraph 5: The Training Recipe (image-13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-13-en.png)
+![π0 論文ディープダイブ: 段落 5：学習レシピ (画像 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-13-en.png)
 
 ### 段落 6：貢献と評価範囲
 - **主張の要点：** 貢献には、VLM ベースのフローマッチング汎用アーキテクチャと、事前／事後学習レシピの実証的研究が含まれます。このポリシーは、言語プロンプティング、下流タスクへのファインチューニング、高レベル VLM からの中間指示に対応します。
@@ -166,7 +166,7 @@ import '/src/css/paper-reading-style.css';
 
 4. 最大 50 Hz で巧みな制御をサポートすること。
 
-![π0 Paper Deep-Dive: 5.1 Design Goals and Components (image-15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-15.png)
+![π0 論文ディープダイブ: 5.1 設計目標と構成要素 (画像 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-15.png)
 
 | プラットフォームカテゴリ | 画像入力 | 状態／アクション空間 |
 |---|---|---|
@@ -209,7 +209,7 @@ Multi-platform teleoperation + open robot data + internet image-text pre-trainin
 
 ### センサー、収集方法、および能力
 #### データ構成
-![π0 Paper Deep-Dive: Data Composition (image-06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-06.png)
+![π0 論文ディープダイブ: データ構成 (画像 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-06.png)
 
 - 内部データは903Mタイムステップを含み、そのうち106Mが単腕ロボット、797Mが両腕ロボットからのものです。
 
@@ -224,7 +224,7 @@ Multi-platform teleoperation + open robot data + internet image-text pre-trainin
 - タスクのポストトレーニング時間は、単純なタスクで約5時間から、最も難しいタスクでは100時間以上に及びます。
 
 #### 直接プロンプト
-![π0 Paper Deep-Dive: Direct Prompting (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-03.png)
+![π0 論文ディープダイブ: 直接プロンプト (画像 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-03.png)
 
 論文では、シャツ折りたたみ、簡単および難しいテーブル片付け、食料品の袋詰め、トースターからトーストを取り出すタスクについて、π0、OpenVLA、Octo、および VLM 初期化なしの π0-small を比較しています：
 
@@ -239,7 +239,7 @@ Multi-platform teleoperation + open robot data + internet image-text pre-trainin
 **注意:** OpenVLA と Octo はフル π0 と同じエポック数では学習されていません。パリティ比較は計算資源の公平性を部分的には扱っていますが、フルモデルの比較は厳密には計算量が一致していません。
 
 #### 新しいタスクでのポストトレーニング
-![π0 Paper Deep-Dive: Post-Training on New Tasks (image-17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-17.png)
+![π0 論文ディープダイブ: 新しいタスクでのポストトレーニング (画像 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-17.png)
 
 新しいタスクには、ボウル積み重ね、タオル折りたたみ、食品コンテナを電子レンジに入れること、ペーパータオルロールの交換、Franka での引き出しへの積み込みが含まれます。各手法はタスクごとに10回の試行の平均です：
 
@@ -252,9 +252,9 @@ Multi-platform teleoperation + open robot data + internet image-text pre-trainin
 - 利得はすべてのデータスケールで単調に増加するわけではありません。電子レンジへの積み込みでは、5時間設定はベースラインに近い一方、1時間設定ではより大きな優位性が見られます。
 
 #### 複雑な長時間タスク
-![π0 Paper Deep-Dive: Complex Long-Horizon Tasks (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-04.png)
+![π0 論文ディープダイブ: 複雑な長時間タスク (画像 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-04.png)
 
-![π0 Paper Deep-Dive: Complex Long-Horizon Tasks (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-09.png)
+![π0 論文ディープダイブ: 複雑な長時間タスク (画像 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-09.png)
 
 これらのタスクは約5〜20分続き、数十回の把持、積み重ね、塗り広げ、折りたたみ動作を組み合わせます。事前学習とポストトレーニングを組み合わせると、図示されたすべてのタスクで最大スコアの半分を超え、一般にゼロからの学習や事前学習ポリシーの直接使用よりも優れた結果となります。特に難しいタスクで利点が顕著です。
 
@@ -279,7 +279,7 @@ $H=1$ では、これは単一ステップ予測に帰着します。大きな $
 18次元へのパディングは学習インターフェースです。各ロボットの有効な次元だけが、そのコントローラに送られます。
 
 ### Conditional Flow Matching: ノイズから連続アクションへ
-![π0 Paper Deep-Dive: 6.2 Conditional Flow Matching: From Noise to Continuous Actions (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-01-en.png)
+![π0 論文ディープダイブ: 6.2 Conditional Flow Matching: ノイズから連続アクションへ (画像 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-01-en.png)
 
 ### プラットフォーム差を消さない共有インターフェース
 ロボットはカメラ数、状態次元数、行動次元数とその意味が異なります。π0 は固定サイズのスロットを使用します：
@@ -301,10 +301,10 @@ $H=1$ では、これは単一ステップ予測に帰着します。大きな $
 重みは分離されていますが、Transformer の自己注意を通じて情報をやり取りします。これにより、VLM 全体を行動専用ネットワークに変換することなく、行動が言語と画像に依存できるようになります。
 
 ### 事前学習とポストトレーニングの統合
-![π0 Paper Deep-Dive: 6.4 Combining Pre-Training and Post-Training (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-05-en.png)
+![π0 論文ディープダイブ: 6.4 事前学習とポストトレーニングの統合 (画像 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-05-en.png)
 
 ### π0 ネットワーク全体像
-![π0 Paper Deep-Dive: 6.5 The Complete π0 Network (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-10.png)
+![π0 論文ディープダイブ: 6.5 π0 ネットワーク全体像 (画像 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-10.png)
 
 #### 画像と言語の入力
 PaliGemma の SigLIP エンコーダは各 RGB 画像を視覚トークンに変換し、トークナイズされた指示はそれらとともにより大きな VLM エキスパートに入力されます。アーキテクチャ図は、おおよそ4億の SigLIP パラメータと26億の Gemma パラメータを要約しています。

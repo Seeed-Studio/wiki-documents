@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISE DETALHADA DE ARTIGO</span>
   <h1 id="paper-reading-pi05-title">π₀.₅ — Generalização em Mundo Aberto</h1>
   <p className="paper-reading-lead">π0.5: um Modelo Visão-Linguagem-Ação com Generalização em Mundo Aberto</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Generalização em mundo aberto</li>
     <li>Dados heterogêneos</li>
     <li>Controle hierárquico</li>
@@ -61,7 +61,7 @@ Um VLA recebe imagens, texto de tarefa e estado do robô e produz ações de con
 
 ### De Ações Diretas à Seleção de Subtarefas
 
-![π0.5 Paper Deep-Dive: 1.2 From Direct Actions to Subtask Selection (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-08-en.png)
+![π0.5 Análise detalhada: 1.2 De Ações Diretas à Seleção de Subtarefas (imagem 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-08-en.png)
 
 Mapear “limpar a cozinha” diretamente para movimentos de juntas combina decidir o que fazer com decidir como se mover. Tarefas mais longas tornam as transições mais difíceis.
 
@@ -112,7 +112,7 @@ Os experimentos sugerem que a transferência entre essas fontes de conhecimento 
 
 ## Introdução
 
-![π0.5 Paper Deep-Dive: 3. Introduction (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-00-en.png)
+![π0.5 Análise detalhada: 3. Introdução (imagem 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-00-en.png)
 
 ### Parágrafo 1: Ambientes Desconhecidos São Difíceis
 
@@ -122,7 +122,7 @@ Os experimentos sugerem que a transferência entre essas fontes de conhecimento 
 
 - **Configuração:** A receita de treinamento deve cobrir vários níveis de capacidade.
 
-![π0.5 Paper Deep-Dive: Paragraph 1: Unfamiliar Environments Are Difficult (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-10-en.png)
+![π0.5 Análise detalhada: Parágrafo 1: Ambientes Desconhecidos São Difíceis (imagem 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-10-en.png)
 
 ### Parágrafo 2: Por Que Usar Experiências Diferentes?
 
@@ -132,7 +132,7 @@ Os experimentos sugerem que a transferência entre essas fontes de conhecimento 
 
 - **Configuração:** VLAs fornecem uma interface compartilhada para imagens, texto e ações.
 
-![π0.5 Paper Deep-Dive: Paragraph 2: Why Use Different Experiences? (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-03-en.png)
+![π0.5 Análise detalhada: Parágrafo 2: Por Que Usar Experiências Diferentes? (imagem 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-03-en.png)
 
 ### Parágrafo 3: Um Framework de Treinamento Conjunto
 
@@ -142,7 +142,7 @@ Os experimentos sugerem que a transferência entre essas fontes de conhecimento 
 
 - **Configuração:** Introduzir o π0.5 e sua composição de dados.
 
-![π0.5 Paper Deep-Dive: Paragraph 3: A Co-Training Framework (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-12-en.png)
+![π0.5 Análise detalhada: Parágrafo 3: Um Framework de Treinamento Conjunto (imagem 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-12-en.png)
 
 ### Parágrafo 4: A Receita de Dados
 
@@ -152,7 +152,7 @@ Os experimentos sugerem que a transferência entre essas fontes de conhecimento 
 
 - **Configuração:** Demonstrar comportamento de 10–15 minutos em casas desconhecidas e depois ablar as fontes. O valor de 97,6% é uma proporção de amostras, não de duração.
 
-![π0.5 Paper Deep-Dive: Paragraph 4: The Data Recipe (image-07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-07-en.png)
+![π0.5 Análise detalhada: Parágrafo 4: A Receita de Dados (imagem 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-07-en.png)
 
 ### Parágrafo 5: Execução Hierárquica
 
@@ -162,7 +162,7 @@ Os experimentos sugerem que a transferência entre essas fontes de conhecimento 
 
 - **Configuração:** Explicar como diferentes fontes apoiam o julgamento de cena e o controle.
 
-![π0.5 Paper Deep-Dive: Paragraph 5: Hierarchical Execution (image-11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-11-en.png)
+![π0.5 Análise detalhada: Parágrafo 5: Execução Hierárquica (imagem 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-11-en.png)
 
 ### Parágrafo 6: Contribuições e Validação
 
@@ -180,7 +180,7 @@ Os experimentos sugerem que a transferência entre essas fontes de conhecimento 
 
 ## Trabalhos Relacionados
 
-![π0.5 Paper Deep-Dive: 4. Related Work (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-01-en.png)
+![π0.5 Análise detalhada: 4. Trabalhos Relacionados (imagem 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-01-en.png)
 
 - **Políticas generalistas de robôs:** Trabalhos anteriores ampliam a cobertura de tarefas e cenas, mas muitos testes permanecem próximos às condições de treinamento. Este artigo enfatiza tarefas domésticas em múltiplas etapas em casas desconhecidas.
 
@@ -200,7 +200,7 @@ Os experimentos sugerem que a transferência entre essas fontes de conhecimento 
 
 **Artigo:** Duas plataformas móveis bimanuais são usadas, visando um único modelo que possa arrumar e limpar casas diferentes.
 
-![π0.5 Paper Deep-Dive: 5.1 Goals and Components (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-05.png)
+![π0.5 Análise detalhada: 5.1 Objetivos e Componentes (imagem 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-05.png)
 
 | Componente | Configuração e papel |
 |---|---|
@@ -249,7 +249,7 @@ Current images + state + subtask s → Action chunk A
 
 Aqui, s é um texto como “pegar o travesseiro”, e A é uma sequência de controle. Na fatorização do artigo, ações de baixo nível dependem da subtarefa em vez de depender diretamente da instrução geral.
 
-![π0.5 Paper Deep-Dive: 6.1 Select the Current Subtask First (image-06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-06.png)
+![π0.5 Análise detalhada: 6.1 Selecione Primeiro a Subtarefa Atual (imagem 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-06.png)
 
 Um travesseiro no chão pode levar a “pegá-lo”, seguido de “colocá-lo na cabeceira da cama”. Se a escolha de alto nível estiver errada, movimentos precisos ainda podem executar a tarefa errada. Abrir e fechar gavetas repetidamente é uma falha observada.
 
@@ -273,7 +273,7 @@ A geração conjunta de blocos não elimina a necessidade de realimentação. O 
 
 ### O que Cada Fonte de Dados Adiciona
 
-![π0.5 Paper Deep-Dive: 6.3 What Each Data Source Adds (image-13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-13.png)
+![π0.5 Análise detalhada: 6.3 O que Cada Fonte de Dados Adiciona (imagem 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-13.png)
 
 | Dados | Oportunidade de aprendizado |
 |---|---|
@@ -288,9 +288,9 @@ Essas fontes treinam um único modelo; a execução não percorre os conjuntos d
 
 **Limite de evidência:** Remover dados de outros robôs reduz o desempenho em tarefas domésticas controladas. Remover dados da web não causa queda estatisticamente significativa nesse grupo de teste, mas piora o acompanhamento de instruções com objetos desconhecidos e o julgamento de alto nível. Fontes diferentes não são igualmente importantes em todo teste.
 
-![π0.5 Paper Deep-Dive: 6.3 What Each Data Source Adds (image-14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-14.png)
+![π0.5 Análise detalhada: 6.3 O que Cada Fonte de Dados Adiciona (imagem 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-14.png)
 
-![π0.5 Paper Deep-Dive: 6.3 What Each Data Source Adds (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-09.png)
+![π0.5 Análise detalhada: 6.3 O que Cada Fonte de Dados Adiciona (imagem 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-09.png)
 
 ### Conectando as Duas Etapas de Treinamento
 
@@ -349,7 +349,7 @@ Inference: observations + overall task → subtask text
 
 A maioria das figuras principais apresenta **pontuações de conclusão de tarefa**, não taxas de sucesso de tarefa completa. Normalmente há cerca de dez tentativas por política por tarefa, ou aproximadamente 40 nas quatro tarefas controladas; algumas tentativas canceladas são excluídas. Dishes-to-sink tem oito pontos possíveis, concedidos separadamente para pegar e colocar. Metade da pontuação não significa que metade das tentativas tenha sido totalmente bem-sucedida.
 
-![π0.5 Paper Deep-Dive: 6.5 Complete Network, Experiments, and Boundaries (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-02.png)
+![π0.5 Análise detalhada: 6.5 Rede Completa, Experimentos e Limites (imagem 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-02.png)
 
 O artigo demonstra comportamentos de 10–15 minutos, enquanto muitas tarefas em casas reais avaliadas quantitativamente duram cerca de 2–5 minutos. Não confunda as duas coisas. Maçanetas desconhecidas, portas difíceis, oclusão, decisões de alto nível repetidas, preferências complexas e memória entre cômodos continuam sendo desafios. O trabalho valida comportamentos úteis em novas casas, em vez da conclusão confiável de todas as tarefas domésticas.
 
@@ -388,7 +388,7 @@ Then select another subtask, such as “put the plate in the sink,” from the u
 **Atenção:** Isto compara caminhos de execução. O π0 original também demonstra tarefas longas; ele não se limita a operações de etapa única. π0.5 adiciona seleção explícita de subtarefas dentro do mesmo modelo.
 
 ### O que os experimentos sustentam?
-![π0.5 Paper Deep-Dive: 7.3 What Do the Experiments Support? (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-04.png)
+![π0.5 Análise detalhada: 7.3 O que os experimentos sustentam? (imagem 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-04.png)
 
 **Artigo:** Sob o mesmo conjunto de dados de robô e etapas semelhantes, a receita completa de π0.5 supera π0 e π0-FAST+Flow nas casas controladas desconhecidas testadas. Este último já combina FAST e flow matching, mas usa apenas dados de ações de robô e carece de raciocínio de alto nível. Mudar apenas o treinamento de ação é insuficiente para igualar o π0.5 completo.
 

@@ -10,7 +10,7 @@ keywords:
   - B601-DM
   - B601-RS
   - ロボットアーム
-  - Physical AI
+  - フィジカル AI
   - コース
   - チュートリアル
   - SO101
@@ -87,7 +87,7 @@ GR00T N1 も同じ問いに答えます：
 
 ACT は通常、デモから 1 つのロボットとタスクファミリーを学習します。GR00T N1 は、特定の実ロボットに適応する前に、複数のロボット、人間の動画、合成データから一般的な事前知識を獲得しようとします。
 
-![GR00T N1 Paper Deep-Dive: 1.1 From ACT to GR00T N1: The Learning Loop Is the Same (image-11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-11-en.png)
+![GR00T N1 論文ディープダイブ: 1.1 ACT から GR00T N1 へ：学習ループは同じ (画像 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-11-en.png)
 
 
 ACT は 1 つの具体的なスキルから始めますが、GR00T N1 はまず複数のボディとタスクにまたがる基盤を学習し、その後で現在のロボットの使い方を学習します。
@@ -119,7 +119,7 @@ Robot structure
 
 ### VLA、アクションチャンク、フローマッチング
 
-![GR00T N1 Paper Deep-Dive: 1.3 VLA, Action Chunking, and Flow Matching (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-09-en.png)
+![GR00T N1 論文ディープダイブ: 1.3 VLA、アクションチャンク、フローマッチング (画像 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-09-en.png)
 
 
 **VLA** は、タスク言語を視覚ポリシーの入力に追加します。言語は、どのオブジェクトを操作するか、どこへ運ぶべきか、振る舞いが要求と一致しているかを特定するものであり、装飾的なコンテキストではありません。
@@ -172,7 +172,7 @@ GR00T N1 は、デュアルシステム VLA アーキテクチャを備えたヒ
 
 ### データピラミッド
 
-![GR00T N1 Paper Deep-Dive: 3.2 The Data Pyramid (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-12.png)
+![GR00T N1 論文ディープダイブ: 3.2 データピラミッド (画像 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-12.png)
 
 | レベル | データ | 相対量 | ロボットとの関係 |
 |---|---|---|---|
@@ -192,7 +192,7 @@ GR00T N1 は、デュアルシステム VLA アーキテクチャを備えたヒ
 
 ### System 2 は理解し、System 1 は行動する
 
-![GR00T N1 Paper Deep-Dive: 4.1 System 2 Understands; System 1 Acts (image-17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-17.png)
+![GR00T N1 論文ディープダイブ: 4.1 System 2 は理解し、System 1 は行動する (画像 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-17.png)
 
 このアーキテクチャは、認知科学からデュアルシステムのアナロジーを借りています：
 
@@ -210,7 +210,7 @@ System 2 は NVIDIA L40 上で約 10 Hz で動作し、一方アクションシ�
 
 ### 異なるロボットを 1 つの DiT に接続する
 
-![GR00T N1 Paper Deep-Dive: 4.2 Connecting Different Robots to One DiT (image-13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-13.png)
+![GR00T N1 論文ディープダイブ: 4.2 異なるロボットを 1 つの DiT に接続する (画像 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-13.png)
 
 モジュールには 2 種類あります：
 
@@ -283,7 +283,7 @@ GR00T N1 は、2 つの方法でアクションに類似した教師信号を追
 
 **潜在アクション**は、正確な関節角度ではなく、視覚的な変化から離散的な行動コードを学習します。左に動かす、把持する、押すといった概念です。
 
-![GR00T N1 Paper Deep-Dive: 5.1 Using Videos without Robot Actions (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-01.png)
+![GR00T N1 論文ディープダイブ: 5.1 ロボットアクションのない動画の利用 (画像 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-01.png)
 
 これらは具現化をまたいで共有できます。人間の手とロボットグリッパは関節構造が異なりますが、どちらも画像の中で物体を左に動かすことができます。
 
@@ -303,11 +303,11 @@ Observation_t + Observation_(t+1)
 
 動画生成は実際のロボット画像から始め、言語プロンプトを変化させてタスク、物体位置、軌道を合成します。これらが **ニューラルトラジェクトリ** です。
 
-![GR00T N1 Paper Deep-Dive: 5.2 Neural Trajectories and Simulation: More Variation from Fewer Demonstrations (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-00.png)
+![GR00T N1 論文ディープダイブ: 5.2 ニューラルトラジェクトリとシミュレーション：少ないデモからより多くのバリエーション (画像 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-00.png)
 
 著者らは、88.4 時間の社内テレオペレーションを 827.3 時間の生成動画へと、ほぼ 10 倍に拡張しています。生成では物体を物理的に不可能な動きで移動させたり、接触を歪めたり、ロボットを変形させたりすることがあるため、潜在アクションや IDM による教師付けの前に、言語モデルとルールベースのフィルタで低品質サンプルを除去します。
 
-![GR00T N1 Paper Deep-Dive: 5.2 Neural Trajectories and Simulation: More Variation from Fewer Demonstrations (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-08.png)
+![GR00T N1 論文ディープダイブ: 5.2 ニューラルトラジェクトリとシミュレーション：少ないデモからより多くのバリエーション (画像 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-08.png)
 
 一方シミュレーションは、物理エンジン内で実行されます。DexMimicGen のような手法は、物体中心のデモンストレーションを新しいシーンへリターゲットし、およそ 78 万本、約 6,500 時間分のシミュレーション軌道を生成します。
 
@@ -323,9 +323,9 @@ Observation_t + Observation_(t+1)
 
 テレオペレーションデータは、Manus、VIVE、Apple Vision Pro、Leap Motion などのデバイスから取得され、ロボットへリターゲットされます。
 
-![GR00T N1 Paper Deep-Dive: 5.3 Pre-Training and Post-Training (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-05.png)
+![GR00T N1 論文ディープダイブ: 5.3 事前学習とポストトレーニング (画像 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-05.png)
 
-![GR00T N1 Paper Deep-Dive: 5.3 Pre-Training and Post-Training (image-15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-15-en.png)
+![GR00T N1 論文ディープダイブ: 5.3 事前学習とポストトレーニング (画像 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-15-en.png)
 
 
 ポストトレーニングは、ゼロからの学習でも、任意のロボットをいきなりゼロショット制御することでもありません。基盤モデルを、対象のカメラ構成、状態、アクションインターフェース、およびタスクに適応させるプロセスです。
@@ -349,7 +349,7 @@ GR00T-N1-2B の事前学習には、約 50,000 時間分の H100 GPU 時間が�
 
 シミュレーションと実機テストでは、学習タスクへの単なる当てはまりではなく、限られたデータでの事前学習済み事前知識と適応を検証します。
 
-![GR00T N1 Paper Deep-Dive: 6.1 How Is Effectiveness Tested? (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-10.png)
+![GR00T N1 論文ディープダイブ: 6.1 効果はどのように検証されるか？ (画像 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-10.png)
 
 シミュレーションベンチマークには次が含まれます：
 
@@ -363,7 +363,7 @@ GR00T-N1-2B の事前学習には、約 50,000 時間分の H100 GPU 時間が�
 
 実機 GR-1 テストには、ピックアンドプレース、可動物体、産業用マニピュレーション、マルチロボット協調が含まれます。
 
-![GR00T N1 Paper Deep-Dive: 6.1 How Is Effectiveness Tested? (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-03.png)
+![GR00T N1 論文ディープダイブ: 6.1 効果はどのように検証されるか？ (画像 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-03.png)
 
 主な比較対象は BC-Transformer と Diffusion Policy です。GR00T N1 は、サイズやアーキテクチャだけでなく、異種クロスエンボディメント事前学習という点でも異なるため、結果にはデータと学習方法の影響も反映されています。
 
@@ -379,7 +379,7 @@ GR00T-N1-2B の事前学習には、約 50,000 時間分の H100 GPU 時間が�
 
 
 
-![GR00T N1 Paper Deep-Dive: 6.2 Do Priors Help with Little Data? (image-16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-16.png)
+![GR00T N1 論文ディープダイブ: 6.2 事前知識は少ないデータで役立つか？ (画像 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-16.png)
 
 実務的な含意は次のとおりです：
 
@@ -391,13 +391,13 @@ GR00T-N1-2B の事前学習には、約 50,000 時間分の H100 GPU 時間が�
 
 アブレーションでは、実データのみ、潜在アクションでラベル付けした生成動画、IDM 疑似アクション付き生成動画を比較します。
 
-![GR00T N1 Paper Deep-Dive: 6.3 Do Neural Trajectories Improve Real Behavior? (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-02.png)
+![GR00T N1 論文ディープダイブ: 6.3 ニューラルトラジェクトリは実機挙動を改善するか？ (画像 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-02.png)
 
 合成軌道は一部のタスクを改善し、IDM はしばしば潜在コードよりも実際のアクション空間に直接結び付きます。ただし、生成を増やせば自動的に良くなるわけではありません。物理的な誤りや疑似ラベルのバイアスも学習に入り込むためです。
 
 著者らはまた、事前学習済みモデルで自発的な左手から右手への受け渡しが観測される一方で、狭いタスクへのポストトレーニング後にはそれが消えてしまうことも報告しています。
 
-![GR00T N1 Paper Deep-Dive: 6.3 Do Neural Trajectories Improve Real Behavior? (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-04.png)
+![GR00T N1 論文ディープダイブ: 6.3 ニューラルトラジェクトリは実機挙動を改善するか？ (画像 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-04.png)
 
 これは **破滅的忘却（catastrophic forgetting）** を示しています。焦点を絞ったファインチューニングは、対象タスクのスコアを上げる一方で、より広範な事前学習済み能力を上書きしてしまうことがあります。
 

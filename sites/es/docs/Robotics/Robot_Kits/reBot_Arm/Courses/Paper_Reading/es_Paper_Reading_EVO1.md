@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS DETALLADO DEL PAPER</span>
   <h1 id="paper-reading-evo1-title">Evo-1 — VLA ligero</h1>
   <p className="paper-reading-lead">Evo-1: modelo ligero de Visión-Lenguaje-Acción con alineación semántica preservada</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>VLA ligero</li>
     <li>Alineación semántica</li>
     <li>Cross-attention</li>
@@ -249,7 +249,7 @@ Las ganancias de RoboTwin se concentran en Click Alarmclock: 77% / 58% para fác
 **Precaución:** Las líneas base de Meta-World y LIBERO provienen de artículos o reproducciones existentes, y las líneas base de RoboTwin de su artículo oficial; no todos los métodos fueron reentrenados de forma uniforme aquí. La Tabla 1 etiqueta SmolVLA como 2.25B, mientras que la Tabla 2 de eficiencia usa 0.45B. La discrepancia no se explica completamente, así que no las trates como una configuración idéntica.
 
 ### Sistema real: dos vistas RGB y ángulos articulares absolutos
-![Evo-1: 5.2 Real System: Two RGB Views and Absolute Joint Angles (Figure 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-10.png)
+![Evo-1: 5.2 Sistema real: dos vistas RGB y ángulos articulares absolutos (Figura 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-10.png)
 
 | Elemento | Configuración en el artículo |
 |---|---|
@@ -262,7 +262,7 @@ Las ganancias de RoboTwin se concentran en Click Alarmclock: 77% / 58% para fác
 *Fuente: página 6 y páginas 14–15. La resolución bruta de la cámara, las duraciones de las demostraciones y el mapeo completo del campo de la pinza no se informan explícitamente. 448 × 448 es el tamaño de entrada del modelo.*
 
 ### Rendimiento en el mundo real y eficiencia de inferencia
-![Evo-1: 5.3 Real-World Performance and Inference Efficiency (Figure 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-05.png)
+![Evo-1: 5.3 Rendimiento en el mundo real y eficiencia de inferencia (Figura 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-05.png)
 
 | Tarea | Criterio de éxito en el artículo | Éxito de Evo-1 |
 |---|---|---|
@@ -289,7 +289,7 @@ Evo-1 tiene la inferencia más rápida y el mayor éxito promedio en esta compar
 **Precaución:** 30 Hz es la frecuencia de registro de demostraciones; 16.4 Hz es la frecuencia de inferencia en GPU; 50 es el horizonte de predicción. Estos describen etapas diferentes. La latencia completa percepción–comunicación–ejecución no se informa, por lo que 16.4 Hz no debe describirse como la frecuencia final de control del robot.
 
 ### Generalización: distractores y cambios de posición en una tarea
-![Evo-1: 5.4 Generalization: Distractors and Position Changes in One Task (Figure 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-07.png)
+![Evo-1: 5.4 Generalización: distractores y cambios de posición en una tarea (Figura 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-07.png)
 
 La prueba de generalización usa colocación de lata en caja con 20 ensayos por perturbación. Los autores definen estos cambios como fuera de la distribución de entrenamiento.
 
@@ -311,16 +311,16 @@ El suplemento también muestra un SO-100 recogiendo un bloque pequeño y colocá
 
 ## Ablaciones y límites de la evidencia
 ### ¿Ayuda el condicionamiento persistente?
-![Evo-1: 6.1 Does Persistent Conditioning Help? (Figure 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-09.png)
+![Evo-1: 6.1 ¿Ayuda el condicionamiento persistente? (Figura 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-09.png)
 
 **Artículo:** Los módulos A, B, C y D alcanzan 92.3%, 89.0%, 87.0% y 84.0%. A supera a B por 3.3 puntos porcentuales y se elige para el modelo final.
 
 **Interpretación:** Esto respalda leer repetidamente las mismas características intermedias imagen-texto y de estado. Los autores atribuyen la ganancia a un condicionamiento más continuo, pero el experimento compara cuatro diseños completos en lugar de aislar cada factor. No muestra que la autoatención sea generalmente perjudicial ni que la fusión de características en múltiples capas sea siempre inferior.
 
 ### ¿Ayuda el entrenamiento en dos etapas?
-![Evo-1: 6.2 Does Two-Stage Training Help? (Figure 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-08.png)
+![Evo-1: 6.2 ¿Ayuda el entrenamiento en dos etapas? (Figura 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-08.png)
 
-![Evo-1: 6.2 Does Two-Stage Training Help? (Figure 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-01.png)
+![Evo-1: 6.2 ¿Ayuda el entrenamiento en dos etapas? (Figura 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-01.png)
 
 **Artículo:** El entrenamiento en dos etapas gana en los cuatro grupos de dificultad, promediando 80.6% frente a 71.4%, una ganancia de 9.2 puntos. El entrenamiento en una etapa actualiza todos los módulos inmediatamente; el entrenamiento en dos etapas congela primero el backbone y luego ajusta conjuntamente.
 

@@ -57,7 +57,7 @@ import '/src/css/paper-reading-style.css';
 
     - 人間がアームをテレオペレーションし、その間にシステムがカメラの観測と実行されたアクションを記録します。これらのデモを使ってモデルを学習させることで、後から人間のオペレータなしで画像から行動できるようになります。
 
-![ACT: What Is Imitation Learning? (Figure 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-07-en.png)
+![ACT: 模倣学習とは？ (図 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-07-en.png)
 
 #### 観測：ロボットが見ている世界
 
@@ -83,7 +83,7 @@ import '/src/css/paper-reading-style.css';
 
     - グリッパの目標開き具合。
 
-![ACT: Action: What the Robot Is Commanded to Do (Figure 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-09-en.png)
+![ACT: アクション：ロボットに与えられる指令 (図 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-09-en.png)
 
 ### 単一ステップアクションとアクションチャンク
 
@@ -103,13 +103,13 @@ import '/src/css/paper-reading-style.css';
 
     - **より滑らかで一貫した動き。**
 
-![ACT: Action Chunks: Predict a Sequence at Once (Figure 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-05-en.png)
+![ACT: アクションチャンク：一度にシーケンスを予測 (図 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-05-en.png)
 
 チャンクは長ければよいというものではありません。実行中に物体が動くと、遠い将来の予測は古くなってしまう可能性があります。実用的なシステムでは、チャンクの一部をオープンループで実行し、その後で観測と予測を再度行うことでバランスを取ります。
 
 ### 学習、推論、評価
 
-![ACT: Training, Inference, and Evaluation (Figure 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-04-en.png)
+![ACT: 学習、推論、評価 (図 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-04-en.png)
 
 #### 学習：オフライン学習
 
@@ -147,13 +147,13 @@ import '/src/css/paper-reading-style.css';
 
 論文の背景：この軽量な模倣学習アルゴリズムは、畳み込みネットワークと Transformer を組み合わせたもので、2023 年にスタンフォード大学とバークレー大学の合同チームによって発表されました。実験プラットフォームは 6 自由度の ALOHA 両腕テレオペレーションシステムであり、2 つのグリッパに単眼カメラ、さらに俯瞰の単眼グローバルカメラを備えています。
 
-![ACT: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware (Figure 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-12.png)
+![ACT: 低コストなハードウェアによる精密な両腕操作の学習 (図 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-12.png)
 
 ---
 
 ## 要約
 
-![ACT: Abstract (Figure 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-03.png)
+![ACT: 要約 (図 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-03.png)
 
 - 説明：
 
@@ -201,7 +201,7 @@ ACT：**現在の観測 → 次の k ステップ分のアクション**。
 
 **Transformer による Action Chunking: ACT**
 
-![ACT: Introduction (Figure 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-02-en.png)
+![ACT: 序論 (図 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-02-en.png)
 
 - **パラグラフ 5：2つの貢献は、低コストのテレオペレーションプラットフォームと ACT アルゴリズムです。**
 
@@ -229,7 +229,7 @@ ACT は、アクションチャンク、Transformer、CVAE、時間的アンサ�
 
 ### 設計目標とハードウェア
 
-![ACT: Design Goals and Hardware (Figure 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-14.png)
+![ACT: 設計目標とハードウェア (図 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-14.png)
 
 著者らは、精密操作を支援しつつ、一般的な研究室での再現のハードルを下げるために、5つの設計原則を定義しています。
 
@@ -255,7 +255,7 @@ ALOHA は、高価な産業用アームの代わりに、**ViperX 6-DoF** アー
 
 ALOHA は、**一般的な RGB カメラ4台** を用いてデモンストレーションを記録します：
 
-![ACT: Cameras, Data Collection, and Capabilities (Figure 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-01.png)
+![ACT: カメラ、データ収集、および能力 (図 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-01.png)
 
 著者らはタスクを大きく3つのカテゴリに分類しています：
 
@@ -263,7 +263,7 @@ ALOHA は、**一般的な RGB カメラ4台** を用いてデモンストレー
 
 ## Action Chunking と時間的アンサンブル
 
-![ACT: Transformer-Based Action Chunking and Temporal Ensembling (Figure 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-15.png)
+![ACT: Transformer-Based Action Chunking と時間的アンサンブル (図 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-15.png)
 
 ### Action Chunking：短いシーケンスを予測する
 
@@ -271,7 +271,7 @@ ALOHA は、**一般的な RGB カメラ4台** を用いてデモンストレー
 
 **1つの行動ではなく、連続した将来シーケンスを予測します。** `chunk_size = 4` の場合、単一ステップ方策は `t=0→a0, t=1→a1, t=2→a2, t=3→a3` のように意思決定しますが、ACT は `t=0` において `[a0,a1,a2,a3]` を予測します。このシーケンスが **アクションチャンク** です。方策は `πθ(at|st)` から、チャンク長 `k` を用いた `πθ(at:t+k|st)` へと変わります。
 
-![ACT: Action Chunking: Think Through a Short Sequence Rather Than One Step at a Time (Figure 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-00-en.png)
+![ACT: アクションチャンク：一歩ずつではなく、短い系列として考える (図 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-00-en.png)
 
 直感的には、その場しのぎで毎瞬間を決めるのではなく、短いシーケンスとして考えるということです。電池を挿入するとき、人は自然に「接近 → 整列 → 挿入」を、1ミリ単位の修正の長い羅列ではなく、一貫した動きとしてまとめます。チャンク化は、その構造をロボットに教えます。
 
@@ -303,7 +303,7 @@ ACT は短い将来シーケンスを予測しますが、**その実行中に�
 > 
 > 
 
-![ACT: Temporal Ensembling (Figure 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-08-en.png)
+![ACT: 時間的アンサンブル (図 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-08-en.png)
 
 最新の予測だけに従うと、動きが急に飛ぶことがあります。重み付き平均は実行を滑らかにします。これは主に2つの問題に対処します：
 
@@ -358,7 +358,7 @@ Go straight through the middle
 
 ### ACT における CVAE の動作
 
-![ACT: How the CVAE Works in ACT (Figure 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-11-en.png)
+![ACT: ACT における CVAE の動作 (図 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-11-en.png)
 
 CVAE には2つの主要コンポーネントがあります：
 
@@ -402,9 +402,9 @@ Robot State + Action Sequence
 
 ### 完全な ACT ネットワーク
 
-![ACT: The Complete ACT Network (Figure 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-13.png)
+![ACT: 完全な ACT ネットワーク (図 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-13.png)
 
-![ACT: The Complete ACT Network (Figure 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-06-en.png)
+![ACT: 完全な ACT ネットワーク (図 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-06-en.png)
 
 関節位置とデモンストレーションされたアクションチャンクはまず CVAE エンコーダに入力され、デモンストレーションスタイルの違いを表現し、ガウス分布パラメータ $\mu,\sigma$ と潜在スタイル変数 $z$ を生成します。このエンコーダは、カメラ画像ではなく、関節状態と行動シーケンスを処理します。
 
@@ -440,6 +440,6 @@ $k\times14$
 
 これで ACT パイプラインが 1 つにつながりました：
 
-![ACT: The Complete ACT Network (Figure 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-10-en.png)
+![ACT: 完全な ACT ネットワーク (図 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-10-en.png)
 
 </div>

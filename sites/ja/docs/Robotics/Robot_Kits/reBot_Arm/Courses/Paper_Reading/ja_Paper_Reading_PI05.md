@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-pi05-title">π₀.₅ — オープンワールド汎化</h1>
   <p className="paper-reading-lead">π0.5: オープンワールド汎化を備えた Vision-Language-Action モデル</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>オープンワールド汎化</li>
     <li>異種データ</li>
     <li>階層型制御</li>
@@ -61,7 +61,7 @@ VLA は画像、タスク文、ロボット状態を受け取り、制御行動�
 
 ### 直接行動からサブタスク選択へ
 
-![π0.5 Paper Deep-Dive: 1.2 From Direct Actions to Subtask Selection (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-08-en.png)
+![π0.5 論文ディープダイブ: 1.2 直接行動からサブタスク選択へ (画像 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-08-en.png)
 
 「キッチンを片付けて」を関節の動きに直接マッピングすると、「何をするか」と「どう動くか」の決定が混ざってしまいます。タスクが長くなるほど、遷移は難しくなります。
 
@@ -112,7 +112,7 @@ Observe again → Put the plate in the sink → Transport action chunk
 
 ## 序論
 
-![π0.5 Paper Deep-Dive: 3. Introduction (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-00-en.png)
+![π0.5 論文ディープダイブ: 3. 序論 (画像 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-00-en.png)
 
 ### 段落 1: 不慣れな環境は難しい
 
@@ -122,7 +122,7 @@ Observe again → Put the plate in the sink → Transport action chunk
 
 - **前提:** 学習レシピは、複数レベルの能力をカバーする必要があります。
 
-![π0.5 Paper Deep-Dive: Paragraph 1: Unfamiliar Environments Are Difficult (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-10-en.png)
+![π0.5 論文ディープダイブ: 段落 1: 不慣れな環境は難しい (画像 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-10-en.png)
 
 ### 段落 2: なぜ異なる経験を使うのか？
 
@@ -132,7 +132,7 @@ Observe again → Put the plate in the sink → Transport action chunk
 
 - **前提:** VLA は画像、テキスト、行動のための共通インターフェースを提供します。
 
-![π0.5 Paper Deep-Dive: Paragraph 2: Why Use Different Experiences? (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-03-en.png)
+![π0.5 論文ディープダイブ: 段落 2: なぜ異なる経験を使うのか？ (画像 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-03-en.png)
 
 ### 段落 3: 共同学習フレームワーク
 
@@ -142,7 +142,7 @@ Observe again → Put the plate in the sink → Transport action chunk
 
 - **前提:** π0.5 とそのデータ構成を導入します。
 
-![π0.5 Paper Deep-Dive: Paragraph 3: A Co-Training Framework (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-12-en.png)
+![π0.5 論文ディープダイブ: 段落 3: 共同学習フレームワーク (画像 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-12-en.png)
 
 ### 段落 4: データレシピ
 
@@ -152,7 +152,7 @@ Observe again → Put the plate in the sink → Transport action chunk
 
 - **前提:** 見知らぬ家で 10〜15 分の振る舞いを実演し、その後ソースをアブレーションします。97.6% という数字は時間ではなくサンプルの比率です。
 
-![π0.5 Paper Deep-Dive: Paragraph 4: The Data Recipe (image-07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-07-en.png)
+![π0.5 論文ディープダイブ: 段落 4: データレシピ (画像 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-07-en.png)
 
 ### 段落 5: 階層的実行
 
@@ -162,7 +162,7 @@ Observe again → Put the plate in the sink → Transport action chunk
 
 - **前提:** 異なるソースがどのようにシーン判断と制御を支えるかを説明します。
 
-![π0.5 Paper Deep-Dive: Paragraph 5: Hierarchical Execution (image-11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-11-en.png)
+![π0.5 論文ディープダイブ: 段落 5: 階層的実行 (画像 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-11-en.png)
 
 ### 段落 6: 貢献と検証
 
@@ -180,7 +180,7 @@ Observe again → Put the plate in the sink → Transport action chunk
 
 ## 関連研究
 
-![π0.5 Paper Deep-Dive: 4. Related Work (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-01-en.png)
+![π0.5 論文ディープダイブ: 4. 関連研究 (画像 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-01-en.png)
 
 - **汎用ロボットポリシー:** 先行研究はタスクとシーンのカバレッジを広げていますが、多くのテストは依然として訓練条件に近いままです。本論文は、未知の家庭におけるマルチステージの家庭内タスクを強調します。
 
@@ -200,7 +200,7 @@ Observe again → Put the plate in the sink → Transport action chunk
 
 **論文:** 2 台の移動型両腕プラットフォームを用い、異なる家庭を片付け・掃除できる 1 つのモデルを目指します。
 
-![π0.5 Paper Deep-Dive: 5.1 Goals and Components (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-05.png)
+![π0.5 論文ディープダイブ: 5.1 目標と構成要素 (画像 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-05.png)
 
 | 構成要素 | 構成と役割 |
 |---|---|
@@ -249,7 +249,7 @@ Current images + state + subtask s → Action chunk A
 
 ここで、s は「枕を拾う」のようなテキストであり、A は制御シーケンスです。論文の因数分解では、低レベルアクションは全体の指示に直接依存するのではなく、サブタスクに依存します。
 
-![π0.5 Paper Deep-Dive: 6.1 Select the Current Subtask First (image-06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-06.png)
+![π0.5 論文ディープダイブ: 6.1 まず現在のサブタスクを選択する (画像 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-06.png)
 
 床にある枕は「拾う」というサブタスクを促し、その後に「ベッドの頭側に置く」が続くかもしれません。高レベルの選択が誤っていると、動き自体が正確でも、誤ったタスクを実行してしまいます。引き出しを何度も開け閉めしてしまうのが観測された失敗例の 1 つです。
 
@@ -273,7 +273,7 @@ Current images + state + subtask s → Action chunk A
 
 ### 各データソースがもたらすもの
 
-![π0.5 Paper Deep-Dive: 6.3 What Each Data Source Adds (image-13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-13.png)
+![π0.5 論文ディープダイブ: 6.3 各データソースがもたらすもの (画像 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-13.png)
 
 | データ | 学習機会 |
 |---|---|
@@ -288,9 +288,9 @@ Current images + state + subtask s → Action chunk A
 
 **エビデンスの境界：** 他ロボットのデータを除くと、統制された家庭内タスクでの性能が低下します。Web データを除いても、そのテスト群では統計的に有意な低下は見られませんが、未知の物体に対する指示追従や高レベル判断は悪化します。すべてのテストにおいて、各ソースが同じ重要度というわけではありません。
 
-![π0.5 Paper Deep-Dive: 6.3 What Each Data Source Adds (image-14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-14.png)
+![π0.5 論文ディープダイブ: 6.3 各データソースがもたらすもの (画像 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-14.png)
 
-![π0.5 Paper Deep-Dive: 6.3 What Each Data Source Adds (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-09.png)
+![π0.5 論文ディープダイブ: 6.3 各データソースがもたらすもの (画像 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-09.png)
 
 ### 2 つの学習ステージをつなぐ
 
@@ -349,7 +349,7 @@ Inference: observations + overall task → subtask text
 
 ほとんどの主要な図は**タスク完了スコア**を報告しており、タスク全体の成功率ではありません。通常、1つのタスクにつき1つのポリシーあたり約10回の試行があり、4つの制御タスク全体ではおおよそ40回です。一部のキャンセルされた試行は除外されています。Dishes-to-sink には8つの得点可能なポイントがあり、ピックとプレースで別々に与えられます。スコアが半分だからといって、試行の半分がタスク全体として成功したことを意味するわけではありません。
 
-![π0.5 Paper Deep-Dive: 6.5 Complete Network, Experiments, and Boundaries (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-02.png)
+![π0.5 論文ディープダイブ: 6.5 ネットワーク全体、実験、および限界 (画像 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-02.png)
 
 この論文は10〜15分の振る舞いを実演していますが、多くの定量評価された実在家庭タスクは約2〜5分しか続きません。この2つを混同しないでください。見慣れない取っ手、開けにくいドア、オクルージョン、繰り返される高レベルの意思決定、複雑な嗜好、部屋をまたぐ記憶といった点は依然として課題です。この研究は、新しい家庭環境で有用な振る舞いを実証しているのであって、すべての家事を確実に完遂できることを示しているわけではありません。
 
@@ -388,7 +388,7 @@ Then select another subtask, such as “put the plate in the sink,” from the u
 **注意：** ここでは実行経路を比較しています。元の π0 も長いタスクを実演しており、単一ステップの操作に限定されているわけではありません。π0.5 は、同じモデル内に明示的なサブタスク選択を追加しています。
 
 ### 実験は何を裏付けているか？
-![π0.5 Paper Deep-Dive: 7.3 What Do the Experiments Support? (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-04.png)
+![π0.5 論文ディープダイブ: 7.3 実験は何を裏付けているか？ (画像 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-04.png)
 
 **論文：** 同じロボットデータセットと類似のステップ数のもとで、π0.5 の完全なレシピは、テストされた見慣れない制御環境の家庭において、π0 および π0-FAST+Flow を上回ります。後者もすでに FAST と flow matching を組み合わせていますが、ロボット行動データのみを使用しており、高レベル推論を欠いています。行動学習だけを変更しても、完全な π0.5 に匹敵することはできません。
 

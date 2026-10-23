@@ -10,7 +10,7 @@ keywords:
   - B601-DM
   - B601-RS
   - ロボットアーム
-  - Physical AI
+  - フィジカル AI
   - コース
   - チュートリアル
   - SO101
@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-eo1-title">EO-1 — インタリーブ型マルチモーダル事前学習</h1>
   <p className="paper-reading-lead">EO-1: 汎用ロボット制御のためのオープンな統一身体性基盤モデル</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>統一された Physical AI モデル</li>
     <li>インタリーブ学習</li>
     <li>身体性推論</li>
@@ -89,22 +89,22 @@ EO-1 は EO-Data1.5M 上で、自己回帰デコーディングとフローマ�
 
 ## 序論と関連研究：なぜインタリーブするのか？
 ### 序論の 7 つの主要パラグラフ
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-12-en.png)
+![EO-1 論文ディープダイブ: 3.1 序論の 7 つの主要パラグラフ (画像 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-12-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-08-en.png)
+![EO-1 論文ディープダイブ: 3.1 序論の 7 つの主要パラグラフ (画像 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-08-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-18-en.png)
+![EO-1 論文ディープダイブ: 3.1 序論の 7 つの主要パラグラフ (画像 18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-18-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-01-en.png)
+![EO-1 論文ディープダイブ: 3.1 序論の 7 つの主要パラグラフ (画像 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-01-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-11-en.png)
+![EO-1 論文ディープダイブ: 3.1 序論の 7 つの主要パラグラフ (画像 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-11-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-04-en.png)
+![EO-1 論文ディープダイブ: 3.1 序論の 7 つの主要パラグラフ (画像 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-04-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-15-en.png)
+![EO-1 論文ディープダイブ: 3.1 序論の 7 つの主要パラグラフ (画像 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-15-en.png)
 
 ### 先行研究との関係
-![EO-1 Paper Deep-Dive: 3.2 Relationship to Earlier Work (image-17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-17-en.png)
+![EO-1 論文ディープダイブ: 3.2 先行研究との関係 (画像 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-17-en.png)
 
 ---
 
@@ -112,7 +112,7 @@ EO-1 は EO-Data1.5M 上で、自己回帰デコーディングとフローマ�
 ### モダリティ固有インターフェースを持つ共有処理
 テキストは「何を」「なぜ」を扱い、アクションは動きを指定します。どちらも同じ物体、目標、進捗に依存しています。EO-1 は、計画と制御の分離を減らすために、事前学習済みバックボーンを共有します。
 
-![EO-1 Paper Deep-Dive: 4.1 Shared Processing with Modality-Specific Interfaces (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-05.png)
+![EO-1 論文ディープダイブ: 4.1 モダリティ固有インターフェースを持つ共有処理 (画像 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-05.png)
 
 **論文：** Qwen2.5-VL から初期化されたデコーダ専用 Transformer は、画像・動画用の視覚エンコーダとテキスト用のトークナイザを保持します。状態とノイズ付きアクションは、共有特徴空間へ射影されます。
 
@@ -136,7 +136,7 @@ EO-1 は EO-Data1.5M 上で、自己回帰デコーディングとフローマ�
 ### テキストは逐次生成し、アクションはチャンクとしてノイズ除去
 自己回帰は、既存のコンテキストから次のテキストトークンを予測します：
 
-![EO-1 Paper Deep-Dive: 4.2 Generate Text Sequentially, Denoise Actions as a Chunk (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-00.png)
+![EO-1 論文ディープダイブ: 4.2 テキストは逐次生成し、アクションはチャンクとしてノイズ除去 (画像 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-00.png)
 
 `w_j` はトークン `j`、`c_j` はその前にあるマルチモーダルコンテキストです。**例：** 「next, pick up」の後に、モデルは「the tomato」を予測し、その際に過去の画像やアクション履歴も利用します。
 
@@ -144,7 +144,7 @@ EO-1 は EO-Data1.5M 上で、自己回帰デコーディングとフローマ�
 
 学習では、真のアクションとガウスノイズを混合します：
 
-![EO-1 Paper Deep-Dive: 4.2 Generate Text Sequentially, Denoise Actions as a Chunk (image-06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-06.png)
+![EO-1 論文ディープダイブ: 4.2 テキストは逐次生成し、アクションはチャンクとしてノイズ除去 (画像 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-06.png)
 
 `A` と標準ガウス `Z` はどちらも形状 `16 × d_a` を持ちます。`τ∈[0,1]` は内部のノイズ除去進捗であり、秒数ではありません。0 ならノイズ、1 ならデータです。論文では、よりノイズの大きい段階を重視する Beta 分布からサンプリングします。
 
@@ -152,13 +152,13 @@ EO-1 は EO-Data1.5M 上で、自己回帰デコーディングとフローマ�
 
 **学習目的（式 (2) を保持）：**
 
-![EO-1 Paper Deep-Dive: 4.2 Generate Text Sequentially, Denoise Actions as a Chunk (image-16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-16.png)
+![EO-1 論文ディープダイブ: 4.2 テキストは逐次生成し、アクションはチャンクとしてノイズ除去 (画像 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-16.png)
 
 `Vθ` は共有モデルとフローヘッドによって予測される更新場、`θ` は学習可能パラメータ、`C` は先行するマルチモーダルコンテキストです。ノルムは配列全体を比較し、期待値はサンプリングされた進捗にわたって平均します。`L_AR` はテキストのクロスエントロピーであり、両項の重みは 1 です。この例で書かれているアクションのターゲットは `Z−A=−0.8` です。
 
 **推論（式 (1) を保持）：**
 
-![EO-1 Paper Deep-Dive: 4.2 Generate Text Sequentially, Denoise Actions as a Chunk (image-13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-13.png)
+![EO-1 論文ディープダイブ: 4.2 テキストは逐次生成し、アクションはチャンクとしてノイズ除去 (画像 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-13.png)
 
 `Âτ` は新たなノイズから初期化された推定値であり、`δ` は積分ステップです。本文では 0 から 1 まで積分し、10 回の更新を用います。**イラスト：** 10 回の等間隔更新なら `δ=0.1` となり、実行周期ではなく内部ステップを表します。
 
@@ -187,7 +187,7 @@ EO-1 はテキストと行動を生成し、将来のカメラ画像や状態は
 ### インタリーブされた Rectifying Sampling：履歴はクリーン、現在の行動はノイズ付き
 現在の行動を学習するにはノイズが必要ですが、その後のテキストは完了した行動に条件付けされるべきです。過去の行動をノイズ付きのままにすると、実際に実行された履歴とのミスマッチが生じます。
 
-![EO-1 Paper Deep-Dive: 4.4 Interleaved Rectifying Sampling: Clean History, Noisy Current Actions (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-03.png)
+![EO-1 論文ディープダイブ: 4.4 インタリーブされた Rectifying Sampling：履歴はクリーン、現在の行動はノイズ付き (画像 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-03.png)
 
 **論文:** インタリーブされた rectifying sampling は、`N` 個の行動セグメントを持つシーケンスを、行動境界で `N+1` 個の学習用プレフィックスに分割します。履歴中の行動はクリーンであり、現在生成中の行動のみがノイズ付きです。
 
@@ -229,7 +229,7 @@ Image₁ / Text₁ → Action₁ → Image₂ / Text₂ → Action₂ → Image�
 **注意:** 軌跡、QA サンプル、トークンは異なる単位であり、動作回数として単純に加算することはできません。EO-Data1.5M は学習コーパス全体ではなく、完全なインタリーブシーケンスもその一部にすぎません。
 
 ### パイプライン：多様なシーンを保持し、その後に推論を追加
-![EO-1 Paper Deep-Dive: 5.2 Pipeline: Preserve Diverse Scenes, Then Add Reasoning (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-02.png)
+![EO-1 論文ディープダイブ: 5.2 パイプライン：多様なシーンを保持し、その後に推論を追加 (画像 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-02.png)
 
 **論文:** 視覚的な動画特徴をクラスタリングし、クラスタごとにサンプリングして、繰り返しシーンを減らすために手動で確認します。動画をサブタスクに分割し、モデルと人手で行動記述を作成し、テンプレートベースの質問を構築し、候補回答を生成し、それらを手動で選択または書き換え、最後にルールと文言をクリーンアップします。
 
@@ -238,7 +238,7 @@ Image₁ / Text₁ → Action₁ → Image₂ / Text₂ → Action₂ → Image�
 **説明:** 1 つの把持記録から、「何をつかむか」「どこにアプローチするか」「配置が成功したかどうか」に答えることができます。これらのアノテーションは、あらゆる可能な行動を探索した結果ではなく、デモンストレーションから得られたものです。
 
 ### 3 種類のインタリーブ形式はどのように QA と行動を結びつけるか
-![EO-1 Paper Deep-Dive: 5.3 How Three Interleaved Formats Connect Question Answering and Actions (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-09.png)
+![EO-1 論文ディープダイブ: 5.3 3 種類のインタリーブ形式はどのように QA と行動を結びつけるか (画像 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-09.png)
 
 | 形式 | 接続 | 学習の焦点 |
 |---|---|---|
@@ -278,18 +278,18 @@ Image₁ / Text₁ → Action₁ → Image₂ / Text₂ → Action₂ → Image�
 **注意:** 長期ホライゾンスコアは、サブタスク指示の下での完了率を平均したものであり、1 つの包括的な指示からのフルタスク自律成功率ではありません。また、「箱から出してすぐ（out of the box）」という表現も、そのエンボディメントが事前学習に一切含まれていなかったことを意味するわけではありません。
 
 ### 推論は行動を改善するか？
-![EO-1 Paper Deep-Dive: 6.3 Does Reasoning Improve Actions? (image-07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-07.png)
+![EO-1 論文ディープダイブ: 6.3 推論は行動を改善するか？ (画像 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-07.png)
 
 EO-1 は三目並べ、画像参照に基づく並べ替え、サンドイッチ作り、ステーキ調理でそれぞれ `0.76, 0.79, 0.84, 0.55` を記録しています。三目並べのベースラインは π0 が `0.24`、GR00T-N1.5 が `0.36` であり、この設定において盤面判断と配置の統合がより良いことを示唆します。
 
 これらのタスクには、800 件の並べ替えデモと 450 件の三目並べサンプルという特化データとファインチューニングが用いられています。ベースラインは外部の GPT-4o プランナーとコントローラを組み合わせる一方で、EO-1 は統一されたデコーダを用います。結果は、個々のコンポーネント単体やゼロショットの新タスク学習ではなく、システム全体と学習手法の有効性を支持するものです。
 
 ### 汎化とデータの役割
-![EO-1 Paper Deep-Dive: 6.4 Generalization and the Role of Data (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-10.png)
+![EO-1 論文ディープダイブ: 6.4 汎化とデータの役割 (画像 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-10.png)
 
 視覚・言語・行動の変動に対する達成スコアはそれぞれ `0.72, 0.79, 0.67` で、全体では `0.73` です。行動の変動は主に物体の位置、ロボットの視点、物体インスタンスを変えるものであり、任意の未知スキルを変えるものではありません。テキストと図中のタスク総数は一致していないため、Figure 9 の「18 Tasks」は論文全体の試行回数としては扱いません。
 
-![EO-1 Paper Deep-Dive: 6.4 Generalization and the Role of Data (image-14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-14.png)
+![EO-1 論文ディープダイブ: 6.4 汎化とデータの役割 (画像 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-14.png)
 
 4 つの構成が比較されています：`fast` は完全自己回帰型の FAST 行動、`base` は制御データのみで学習された連続フロー・マッチング付きの共有バックボーン、`llava` は汎用の画像‐テキスト指示を追加したもの、`interleaved` は関連するインタリーブドデータを追加したものです。
 

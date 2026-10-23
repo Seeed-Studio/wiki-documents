@@ -40,7 +40,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · DESPLIEGUE PRÁCTICO</span>
   <h1 id="hands-on-act_deployment-title">Despliegue en Robot &amp; Evaluación del Rendimiento</h1>
   <p className="paper-reading-lead">Ejecuta ACT en un robot real, comprende el preprocesamiento y la ejecución de fragmentos de acciones, mide el éxito y mejora los datos analizando los fallos.</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Inferencia en robot</li>
     <li>Ejecución de fragmentos de acciones</li>
     <li>Evaluación</li>

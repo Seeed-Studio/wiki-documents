@@ -53,7 +53,7 @@ import '/src/css/paper-reading-style.css';
 
 **Fonte de leitura:** O PDF original, Seções I–VII e Apêndices A–E, seguindo a estrutura do mergulho profundo em π0 anterior. A numeração de páginas se refere às páginas físicas do PDF de 19 páginas, de onde as figuras são extraídas. Derivações adicionais e exemplos numéricos são marcados como explicações em vez de atribuídos ao artigo.
 
-![FAST / π0-FAST Paper Deep-Dive: FAST / π0-FAST Paper Deep-Dive (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-08.png)
+![FAST / π0-FAST Análise detalhada: FAST / π0-FAST Análise detalhada (imagem 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-08.png)
 
 ## Pré-requisitos
 ### VLAs e Tokenização de Ações
@@ -77,7 +77,7 @@ $\mathcal T$ é o tokenizador, $z_k$ um ID de token de ação, $V$ o tamanho do 
 **Cuidado:** Um ID de token não é um ângulo de junta. Um token FAST não precisa corresponder a um instante de tempo, junta ou ação completa. Gere a sequência primeiro, depois decodifique-a para um bloco contínuo.
 
 ### Quantização Pontual, Flow Matching do π0 e FAST
-![FAST / π0-FAST Paper Deep-Dive: 1.2 Pointwise Binning, π0 Flow Matching, and FAST (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-04-en.png)
+![FAST / π0-FAST Análise detalhada: 1.2 Quantização Pontual, Flow Matching do π0 e FAST (imagem 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-04-en.png)
 
 
 A quantização convencional quantiza de forma independente cada instante de tempo e dimensão de ação. Uma configuração comum discutida no artigo usa 256 intervalos uniformes:
@@ -113,7 +113,7 @@ A transformada discreta do cosseno (DCT) expressa uma trajetória como component
 
 **Artigo:** A Tabela I reduz um bloco de camiseta de um segundo, 50 Hz, 14D de 700 tokens pontuais para uma média de 53 tokens FAST. A decodificação ainda produz 50 × 14 ações; o controle do robô não se torna “53 tokens por segundo”.
 
-![FAST / π0-FAST Paper Deep-Dive: 1.2 Pointwise Binning, π0 Flow Matching, and FAST (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-05.png)
+![FAST / π0-FAST Análise detalhada: 1.2 Quantização Pontual, Flow Matching do π0 e FAST (imagem 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-05.png)
 
 *Figura 2: predições da mesma spline cúbica em diferentes densidades de amostragem. Amarelo é quantização pontual; verde é DCT. A escala de cores inferior vai de amarelo claro a roxo conforme a contagem de amostras $H$ aumenta de 25 para 800. Da Figura 3 original, página 3 do PDF.*
 
@@ -157,7 +157,7 @@ Combinado com a abordagem de VLA do π0, FAST escala para 10.000 horas de dados 
 ---
 
 ## Introdução
-![FAST / π0-FAST Paper Deep-Dive: 3. Introduction (01-tokenization-bottleneck)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/01-tokenization-bottleneck-en.png)
+![FAST / π0-FAST Análise detalhada: 3. Introdução (01-tokenization-bottleneck)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/01-tokenization-bottleneck-en.png)
 
 ### Parágrafo 1: Localizar o Gargalo na Tokenização
 - **Ponto principal:** Grandes Transformers podem aprender comportamento de robô do zero ou usar pré-treinamento imagem-texto, mas as ações precisam ser tokenizadas. A quantização pontual tem dificuldades em tarefas hábeis de alta taxa porque copiar valores recentes correlacionados alcança baixa perda e pode prender o aprendizado em um ótimo local ruim.
@@ -166,7 +166,7 @@ Combinado com a abordagem de VLA do π0, FAST escala para 10.000 horas de dados 
 
 - **Configuração:** A Seção IV estuda a densidade de amostragem com interpolação sintética; a Seção V propõe compressão.
 
-![FAST / π0-FAST Paper Deep-Dive: Paragraph 1: Locate the Bottleneck in Tokenization (02-compress-then-predict)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/02-compress-then-predict-en.png)
+![FAST / π0-FAST Análise detalhada: Parágrafo 1: Localizar o Gargalo na Tokenização (02-compress-then-predict)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/02-compress-then-predict-en.png)
 
 ### Parágrafo 2: Comprimir Primeiro, Prever Depois
 - **Ponto principal:** Inspirado pela tokenização em linguagem, o FAST usa DCT para sinais contínuos de robôs. A predição padrão do próximo token então aprende tarefas que antes falhavam e oferece suporte a uma política DROID usada por meio de linguagem em cenários inéditos.
@@ -175,7 +175,7 @@ Combinado com a abordagem de VLA do π0, FAST escala para 10.000 horas de dados 
 
 - **Configuração:** A Seção V-B apresenta o algoritmo, e a Seção VI avalia tarefas reais e a generalização do DROID.
 
-![FAST / π0-FAST Paper Deep-Dive: Paragraph 2: Compress First, Predict Second (03-universal-tokenizer-and-scaling)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/03-universal-tokenizer-and-scaling-en.png)
+![FAST / π0-FAST Análise detalhada: Parágrafo 2: Comprimir Primeiro, Prever Depois (03-universal-tokenizer-and-scaling)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/03-universal-tokenizer-and-scaling-en.png)
 
 ### Parágrafo 3: Tokenização Universal e Políticas em Grande Escala
 - **Ponto principal:** O FAST+ aprende um vocabulário a partir de um milhão de sequências cobrindo braços únicos, bimanual, móvel e interfaces e frequências de controle variadas. O π0-FAST escala a autorregressão para 10.000 horas com menos tempo de treinamento do que a comparação em estilo de difusão.
@@ -214,7 +214,7 @@ Os objetivos são comprimir ações em alta taxa mantendo trajetórias finas, re
 
 **Artigo:** Todos os pesos de política são ajustados por fine-tuning. Cada imagem é codificada separadamente, depois os tokens visuais são concatenados. O tamanho da imagem e a codificação de estado textual são especificados no Apêndice C em vez de inferidos do π0.
 
-![FAST / π0-FAST Paper Deep-Dive: 5.1 Goals and Components (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-01.png)
+![FAST / π0-FAST Análise detalhada: 5.1 Objetivos e Componentes (imagem 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-01.png)
 
 | Tarefa / cenário | Plataforma e taxa de controle | Capacidade testada |
 |---|---|---|
@@ -292,14 +292,14 @@ Estes resultados de um segundo reproduzem a Tabela I. A compressão é a contage
 **Limite das evidências:** Implantações em Berkeley, Stanford e na University of Washington são demonstrações qualitativas adicionais sem taxas de sucesso reportadas. Zero-shot significa nenhum treinamento adicional para o novo cenário de implantação, não ausência de treinamento DROID. O treinamento de vocabulário FAST+ também inclui dados de tarefas reais de avaliação, então a Figura 6 não mostra tanto o tokenizador quanto a política completamente desconhecendo todas as tarefas.
 
 #### Comparando tokenizadores
-![FAST / π0-FAST Paper Deep-Dive: Comparing Tokenizers (image-06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-06.png)
+![FAST / π0-FAST Análise detalhada: Comparando tokenizadores (imagem 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-06.png)
 
 Em bussing de mesa a 20 Hz e dobra de camiseta a 50 Hz, o agrupamento pontual (pointwise binning) faz pouco progresso, enquanto FAST e FAST+ aprendem políticas úteis. FSQ reforça o valor da compressão, mas geralmente fica atrás do FAST nessas tarefas de destreza. O FAST+ universal fica próximo ao FAST específico de dataset, apoiando seu uso como padrão.
 
 **Cuidado:** A figura faz a média de pontuações de tarefas diferentes, portanto não é uma taxa de sucesso média uniforme. As barras de erro também limitam conclusões sobre pequenas diferenças entre barras semelhantes.
 
 #### Comparação em um único dataset com π0
-![FAST / π0-FAST Paper Deep-Dive: Single-Dataset Comparison with π0 (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-09.png)
+![FAST / π0-FAST Análise detalhada: Comparação em um único dataset com π0 (imagem 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-09.png)
 
 - Em datasets menores como LIBERO e dobra de camiseta, os autores julgam o desempenho comparável.
 
@@ -310,13 +310,13 @@ Em bussing de mesa a 20 Hz e dobra de camiseta a 50 Hz, o agrupamento pontual (p
 **Explicação:** Teacher forcing calcula perdas para posições de saída em paralelo durante o treinamento; a inferência autoregressiva permanece sequencial. Treinamento mais rápido e inferência mais lenta podem coexistir. Esses resultados não estabelecem superioridade autoregressiva universal.
 
 #### Generalistas em larga escala e comparação com computação equivalente
-![FAST / π0-FAST Paper Deep-Dive: Large-Scale Generalists and Compute-Matched Comparison (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-02.png)
+![FAST / π0-FAST Análise detalhada: Generalistas em larga escala e comparação com computação equivalente (imagem 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-02.png)
 
 π0-FAST tem desempenho geral semelhante ao π0 em dobra, bussing, ensacamento, torrada e lavanderia. Tarefas individuais variam; torrada não sustenta uma afirmação de superioridade universal do FAST. O π0-FAST avaliado usa cerca de um quinto das horas de GPU.
 
 **Cuidado:** A Seção VI-F descreve de forma ampla a comparação zero-shot, mas o Apêndice E especifica fine-tuning de tarefa de alta qualidade para lavanderia após pré-treinamento em larga escala. Ensacamento e torrada usam modelos pré-treinados diretamente. Nem toda tarefa da Figura 6 está livre de fine-tuning específico de tarefa.
 
-![FAST / π0-FAST Paper Deep-Dive: Large-Scale Generalists and Compute-Matched Comparison (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-10.png)
+![FAST / π0-FAST Análise detalhada: Generalistas em larga escala e comparação com computação equivalente (imagem 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-10.png)
 
 A equiparação de computação apoia de forma mais direta a convergência mais rápida: FAST tem uma média geral mais alta e ganhos claros em bussing/ensacamento, embora ainda fique atrás em torrada. Isso é evidência de eficiência de treinamento, não de capacidade final mais forte em toda tarefa.
 
@@ -378,7 +378,7 @@ A primeira dimensão constante precisa de apenas um coeficiente constante difere
 #### Por que DCT sozinha é insuficiente
 DCT ainda produz $HD$ coeficientes reais. Tokenizar cada um separadamente não encurta a sequência, e coeficientes próximos de zero criam rótulos repetidos. FAST portanto adiciona quantização e BPE.
 
-![FAST / π0-FAST Paper Deep-Dive: Why DCT Alone Is Insufficient (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-00.png)
+![FAST / π0-FAST Análise detalhada: Por que DCT sozinha é insuficiente (imagem 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-00.png)
 
 #### Normalização por percentil por dimensão
 **Artigo:** Mapear os percentis 1 e 99 de cada dimensão dos dados de treinamento para $-1$ e $1$, reduzindo diferenças de escala e a influência de outliers.
@@ -436,7 +436,7 @@ BPE aprende combinações frequentes de símbolos adjacentes e as adiciona a um 
 
 **Distinção importante:** Arredondar coeficientes é com perda; BPE é sem perda na sequência de inteiros quantizados. As posições de zero são preservadas e comprimidas, não removidas. Caso contrário, a transformação inversa perderia suas localizações de frequência e dimensão.
 
-![FAST / π0-FAST Paper Deep-Dive: 4. BPE Merges Common Integer Subsequences (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-03.png)
+![FAST / π0-FAST Análise detalhada: 4. BPE mescla subsequências inteiras comuns (imagem 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-03.png)
 
 **Lendo a ablação:** Sem BPE, a DCT ainda concentra informação e supera o binning ponto a ponto, mas tokens de zero repetidos diluem a supervisão e adicionam etapas de decodificação. O desempenho cai em ambas as tarefas reais, apoiando contribuições separadas da DCT e do BPE.
 
@@ -476,7 +476,7 @@ Multiple robots, action spaces, and control rates
 
 O vocabulário aprende padrões comuns de coeficientes e zeros, não semântica de câmera ou o controlador cinemático completo de um robô. Uma nova política ainda precisa de dados de imagem, linguagem, estado e ação para aprender o que fazer. Tokenização universal e controle generalista são níveis diferentes.
 
-![FAST / π0-FAST Paper Deep-Dive: A Universal Vocabulary with FAST+ (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-12.png)
+![FAST / π0-FAST Análise detalhada: Um Vocabulário Universal com FAST+ (imagem 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-12.png)
 
 **Lendo a figura:** FAST+ comprime formas, dimensões e frequências variadas. A Seção VI-C chama os testes de dados não vistos, enquanto a Tabela III inclui versões de plataformas/tarefas também nomeadas no treinamento. “Não visto” é, portanto, mantido no nível de divisão de dados do artigo, não estendido a todas as categorias de robôs.
 
@@ -538,7 +538,7 @@ $\widehat X\approx\begin{bmatrix}
 A segunda dimensão original é $[0,0.1,0.2,0.3]$; a reconstrução preserva sua forma crescente com pequenos erros. A decodificação BPE não adiciona mudança a $Q$: a quantização causa o erro. Estes são valores normalizados, não diretamente radianos ou milímetros.
 
 #### Verificar Compressão e Reconstrução em Conjunto
-![FAST / π0-FAST Paper Deep-Dive: Check Compression and Reconstruction Together (image-07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-07.png)
+![FAST / π0-FAST Análise detalhada: Verificar Compressão e Reconstrução em Conjunto (imagem 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-07.png)
 
 **Lendo a figura:** FSQ aprendido pode ser eficaz em baixa precisão e com pouquíssimos tokens. Em maior precisão, o erro de FAST diminui mais com a contagem de tokens e se adequa melhor às tarefas de controle fino testadas. A sequência mais curta não é automaticamente a melhor representação de trajetória.
 

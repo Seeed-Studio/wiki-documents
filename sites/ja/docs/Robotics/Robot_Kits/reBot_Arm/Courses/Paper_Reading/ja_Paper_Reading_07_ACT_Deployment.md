@@ -10,7 +10,7 @@ keywords:
   - B601-DM
   - B601-RS
   - ロボットアーム
-  - Physical AI
+  - フィジカル AI
   - コース
   - チュートリアル
   - SO101
@@ -40,7 +40,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
   <h1 id="hands-on-act_deployment-title">オンロボットデプロイと性能評価</h1>
   <p className="paper-reading-lead">ACT を実ロボット上で動かし、前処理とアクションチャンクの実行を理解し、成功を測定し、失敗を分析してデータを改善します。</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>オンロボット推論</li>
     <li>アクションチャンクの実行</li>
     <li>評価</li>

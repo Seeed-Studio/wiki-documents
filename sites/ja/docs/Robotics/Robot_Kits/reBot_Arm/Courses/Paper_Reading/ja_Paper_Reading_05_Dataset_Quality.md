@@ -10,7 +10,7 @@ keywords:
   - B601-DM
   - B601-RS
   - ロボットアーム
-  - Physical AI
+  - フィジカル AI
   - コース
   - チュートリアル
   - SO101

@@ -10,7 +10,7 @@ keywords:
   - B601-DM
   - B601-RS
   - ロボットアーム
-  - Physical AI
+  - フィジカル AI
   - コース
   - チュートリアル
   - SO101
@@ -53,7 +53,7 @@ import '/src/css/paper-reading-style.css';
 
 **読書ソース:** 元の PDF のセクション I–VII と付録 A–E を、直前の π0 ディープダイブと同じ構成に従って読みます。ページ番号は 19 ページの PDF の物理ページを指し、そこから図を抜き出しています。追加の導出や数値例は、論文に帰属させるのではなく、解説として明示します。
 
-![FAST / π0-FAST Paper Deep-Dive: FAST / π0-FAST Paper Deep-Dive (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-08.png)
+![FAST / π0-FAST 論文ディープダイブ: FAST / π0-FAST 論文ディープダイブ (画像 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-08.png)
 
 ## 前提知識
 ### VLA とアクショントークナイゼーション
@@ -77,7 +77,7 @@ $\mathcal T$ はトークナイザ、$z_k$ はアクショントークン ID、$
 **注意:** トークン ID は関節角ではありません。FAST トークンは、1 タイムステップ、1 関節、あるいは 1 つの完全なアクションに対応している必要はありません。まず系列を生成し、その後で連続チャンクにデコードします。
 
 ### ポイントワイズビニング、π0 フローマッチング、FAST
-![FAST / π0-FAST Paper Deep-Dive: 1.2 Pointwise Binning, π0 Flow Matching, and FAST (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-04-en.png)
+![FAST / π0-FAST 論文ディープダイブ: 1.2 ポイントワイズビニング、π0 フローマッチング、FAST (画像 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-04-en.png)
 
 
 従来のビニングは、各タイムステップとアクション次元を独立に量子化します。論文で議論されている一般的な構成では、256 個の一様ビンを用います：
@@ -113,7 +113,7 @@ Continuous chunk → frequency coefficients → quantization → frequency-first
 
 **論文:** 表 I では、1 秒・50 Hz・14 次元の T シャツチャンクを、700 個のポイントワイズトークンから平均 53 個の FAST トークンに削減しています。デコード後も 50 × 14 個のアクションが得られるため、ロボット制御が「1 秒あたり 53 トークン」になるわけではありません。
 
-![FAST / π0-FAST Paper Deep-Dive: 1.2 Pointwise Binning, π0 Flow Matching, and FAST (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-05.png)
+![FAST / π0-FAST 論文ディープダイブ: 1.2 ポイントワイズビニング、π0 フローマッチング、FAST (画像 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-05.png)
 
 *図 2: 同じ 3 次スプラインを異なるサンプリング密度で予測した結果。黄色がポイントワイズビニング、緑が DCT です。下のカラースケールは、サンプル数 $H$ が 25 から 800 に増えるにつれて、淡い黄色から紫に変化します。元の図 3（PDF 3 ページ目）から引用。*
 
@@ -157,7 +157,7 @@ FAST+ は 100 万本の実機ロボットアクション系列で学習された
 ---
 
 ## 序論
-![FAST / π0-FAST Paper Deep-Dive: 3. Introduction (01-tokenization-bottleneck)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/01-tokenization-bottleneck-en.png)
+![FAST / π0-FAST 論文ディープダイブ: 3. 序論 (01-tokenization-bottleneck)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/01-tokenization-bottleneck-en.png)
 
 ### 第 1 段落: トークナイゼーションにおけるボトルネックの特定
 - **主なポイント:** 大規模 Transformer は、ロボット挙動をゼロから学習することも、画像と言語の事前学習を利用することもできますが、アクションはトークナイズされなければなりません。ポイントワイズビニングは、相関した直近の値をコピーするだけで損失を低く抑えられてしまうため、巧緻な高レートタスクでは苦戦し、学習が悪い局所最適に閉じ込められ得ます。
@@ -166,7 +166,7 @@ FAST+ は 100 万本の実機ロボットアクション系列で学習された
 
 - **設定:** セクション IV では合成補間を用いてサンプリング密度を検証し、セクション V では圧縮を提案する。
 
-![FAST / π0-FAST Paper Deep-Dive: Paragraph 1: Locate the Bottleneck in Tokenization (02-compress-then-predict)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/02-compress-then-predict-en.png)
+![FAST / π0-FAST 論文ディープダイブ: 第 1 段落: トークナイゼーションにおけるボトルネックの特定 (02-compress-then-predict)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/02-compress-then-predict-en.png)
 
 ### 段落 2: まず圧縮し、その後予測する
 - **要点:** 言語のトークナイゼーションから着想を得て、FAST は連続ロボット信号に DCT を用いる。標準的な次トークン予測により、これまで失敗していたタスクを学習し、未知の設定で言語を通じて利用される DROID ポリシーをサポートする。
@@ -175,7 +175,7 @@ FAST+ は 100 万本の実機ロボットアクション系列で学習された
 
 - **設定:** セクション V-B でアルゴリズムを示し、セクション VI で実タスクと DROID の汎化を評価する。
 
-![FAST / π0-FAST Paper Deep-Dive: Paragraph 2: Compress First, Predict Second (03-universal-tokenizer-and-scaling)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/03-universal-tokenizer-and-scaling-en.png)
+![FAST / π0-FAST 論文ディープダイブ: 段落 2: まず圧縮し、その後予測する (03-universal-tokenizer-and-scaling)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/03-universal-tokenizer-and-scaling-en.png)
 
 ### 段落 3: ユニバーサルなトークナイゼーションと大規模ポリシー
 - **要点:** FAST+ は、単腕・両腕・モバイル、および多様な制御インターフェースと周波数を含む 100 万本のシーケンスから語彙を学習する。π0-FAST は、拡散型の比較手法よりも短い学習時間で、自己回帰を 1 万時間までスケールさせる。
@@ -214,7 +214,7 @@ FAST はアクション処理の手法であり、新しいテレオペレーシ
 
 **論文:** すべてのポリシー重みはファインチューニングされる。各画像は個別にエンコードされ、その後ビジュアルトークンが連結される。画像サイズとテキスト状態エンコーディングは π0 から推測されるのではなく、付録 C で指定されている。
 
-![FAST / π0-FAST Paper Deep-Dive: 5.1 Goals and Components (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-01.png)
+![FAST / π0-FAST 論文ディープダイブ: 5.1 目標と構成要素 (画像 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-01.png)
 
 | タスク / セッティング | プラットフォームと制御レート | テストされる能力 |
 |---|---|---|
@@ -292,14 +292,14 @@ DROID は 1 枚の外部画像と 1 枚の手首画像を用いる。学習で�
 **エビデンスの境界：** Berkeley、Stanford、University of Washington でのデプロイは、成功率が報告されていない追加の定性的デモンストレーションです。ゼロショットとは、新しいデプロイ環境に対して追加の学習を行わないことを意味し、DROID の学習を行わないという意味ではありません。FAST+ の語彙学習には、実際の評価タスクからのデータも含まれているため、図 6 はトークナイザとポリシーの両方がすべてのタスクに完全に不慣れな状態を示しているわけではありません。
 
 #### トークナイザの比較
-![FAST / π0-FAST Paper Deep-Dive: Comparing Tokenizers (image-06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-06.png)
+![FAST / π0-FAST 論文ディープダイブ: トークナイザの比較 (画像 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-06.png)
 
 20 Hz のテーブル片付けと 50 Hz の T シャツ折り畳みでは、pointwise binning はほとんど進歩しない一方で、FAST と FAST+ は有用なポリシーを学習します。FSQ は圧縮の価値を裏付けますが、これらの巧緻なタスクでは一般に FAST に劣ります。Universal FAST+ はデータセット固有の FAST に近く、デフォルトとしての利用を支持しています。
 
 **注意：** この図は異なるタスクのスコアを平均しているため、一様な平均成功率ではありません。エラーバーも、似たようなバー同士の小さな差についての結論を制限します。
 
 #### 単一データセットでの π0 との比較
-![FAST / π0-FAST Paper Deep-Dive: Single-Dataset Comparison with π0 (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-09.png)
+![FAST / π0-FAST 論文ディープダイブ: 単一データセットでの π0 との比較 (画像 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-09.png)
 
 - LIBERO や T シャツ折り畳みのような小規模データセットでは、著者らは性能を同程度と判断しています。
 
@@ -310,13 +310,13 @@ DROID は 1 枚の外部画像と 1 枚の手首画像を用いる。学習で�
 **説明：** Teacher forcing は学習時に出力位置ごとの損失を並列に計算しますが、自己回帰推論は依然として逐次的です。学習が高速で推論が低速という状況は両立し得ます。これらの結果は、自己回帰モデルの普遍的な優位性を確立するものではありません。
 
 #### 大規模ジェネラリストと計算量を揃えた比較
-![FAST / π0-FAST Paper Deep-Dive: Large-Scale Generalists and Compute-Matched Comparison (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-02.png)
+![FAST / π0-FAST 論文ディープダイブ: 大規模ジェネラリストと計算量を揃えた比較 (画像 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-02.png)
 
 π0-FAST は、folding、bussing、bagging、toast、laundry 全体で π0 と同程度の総合性能を示します。個々のタスクではばらつきがあり、toast については FAST の普遍的な優位性を主張できる結果にはなっていません。評価された π0-FAST は、GPU 時間が π0 の約 5 分の 1 です。
 
 **注意：** VI-F はゼロショット比較を大まかに説明していますが、付録 E では、大規模事前学習後に laundry に対して高品質なタスク微調整を行っていると明記されています。bagging と toast では事前学習済みモデルを直接使用しています。図 6 のすべてのタスクが、タスク固有の微調整なしというわけではありません。
 
-![FAST / π0-FAST Paper Deep-Dive: Large-Scale Generalists and Compute-Matched Comparison (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-10.png)
+![FAST / π0-FAST 論文ディープダイブ: 大規模ジェネラリストと計算量を揃えた比較 (画像 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-10.png)
 
 計算量を揃えた比較は、より直接的に高速な収束を裏付けます：FAST は全体平均が高く、bussing/bagging で明確な利得を示す一方で、toast では依然として遅れを取っています。これは、すべてのタスクで最終的な能力がより強いというよりも、学習効率の高さの証拠です。
 
@@ -378,7 +378,7 @@ C\approx\begin{bmatrix}
 #### DCT だけでは不十分な理由
 DCT は依然として $HD$ 個の実数係数を生成します。各係数を個別にトークン化しても系列は短くならず、ゼロ付近の係数は繰り返しラベルを生み出します。そのため FAST は量子化と BPE を追加します。
 
-![FAST / π0-FAST Paper Deep-Dive: Why DCT Alone Is Insufficient (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-00.png)
+![FAST / π0-FAST 論文ディープダイブ: DCT だけでは不十分な理由 (画像 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-00.png)
 
 #### 次元ごとのパーセンタイル正規化
 **論文：** 各学習データ次元の第 1 パーセンタイルと第 99 パーセンタイルをそれぞれ $-1$ と $1$ に写像し、スケール差と外れ値の影響を軽減します。
@@ -436,7 +436,7 @@ BPE は頻出する隣接シンボルの組み合わせを学習し、それら�
 
 **重要な違い：** 係数の丸めはロスありですが、BPE は量子化後の整数列に対してロスレスです。ゼロの位置は削除されず、保持されたまま圧縮されます。そうでなければ逆変換で周波数や次元の位置情報が失われてしまいます。
 
-![FAST / π0-FAST Paper Deep-Dive: 4. BPE Merges Common Integer Subsequences (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-03.png)
+![FAST / π0-FAST 論文ディープダイブ: 4. BPE は共通の整数部分列をマージする (画像 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-03.png)
 
 **アブレーションの読み方：** BPE がなくても DCT は情報を集中させ、ポイントワイズなビニングより優れていますが、ゼロトークンの繰り返しが教師信号を薄め、デコードステップを増やします。実タスクの両方で性能が低下しており、DCT と BPE がそれぞれ独立に貢献していることを支持しています。
 
@@ -476,7 +476,7 @@ Multiple robots, action spaces, and control rates
 
 この語彙は係数パターンやゼロの共通性を学習するのであって、カメラのセマンティクスやロボットの完全な運動学コントローラを学習するわけではありません。新しいポリシーは依然として、何をすべきかを学ぶために画像・言語・状態・行動データを必要とします。ユニバーサルなトークナイズと汎用制御は別レベルの話です。
 
-![FAST / π0-FAST Paper Deep-Dive: A Universal Vocabulary with FAST+ (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-12.png)
+![FAST / π0-FAST 論文ディープダイブ: FAST+ によるユニバーサルな語彙 (画像 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-12.png)
 
 **図の読み方：** FAST+ は多様な形状・次元・周波数を圧縮します。VI-C ではテストを未観測データと呼んでいますが、Table III には学習時にも名前が挙がるプラットフォーム／タスクのバージョンが含まれています。したがって「未観測」は論文のデータ分割レベルで維持されているのであり、すべてのロボットカテゴリにまで拡張されているわけではありません。
 
@@ -538,7 +538,7 @@ $\widehat X\approx\begin{bmatrix}
 元の第 2 次元は $[0,0.1,0.2,0.3]$ であり、再構成はその増加する形状を小さな誤差付きで保持しています。BPE デコードは $Q$ に変更を加えず、誤差は量子化によって生じます。これらは正規化された値であり、そのままラジアンやミリメートルではありません。
 
 #### 圧縮と再構成をまとめて確認する
-![FAST / π0-FAST Paper Deep-Dive: Check Compression and Reconstruction Together (image-07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-07.png)
+![FAST / π0-FAST 論文ディープダイブ: 圧縮と再構成をまとめて確認する (画像 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-07.png)
 
 **図の読み方：** 学習された FSQ は、低精度かつごく少数のトークンでも有効になりえます。より高精度では、FAST の誤差はトークン数とともにより大きく減少し、テストされた精密制御タスクにより適しています。最短の列が、軌道表現として自動的に最良になるわけではありません。
 

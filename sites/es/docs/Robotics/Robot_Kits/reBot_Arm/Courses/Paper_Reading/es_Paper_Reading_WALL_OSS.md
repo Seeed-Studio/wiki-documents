@@ -102,7 +102,7 @@ Presentamos WALL-OSS, un modelo fundacional encarnado de extremo a extremo que u
 Los autores reportan un fuerte seguimiento de instrucciones, razonamiento y manipulación de largo horizonte en comparación con las líneas base, presentando una ruta escalable desde los VLM hacia modelos fundacionales encarnados.
 
 ### Comentarios
-![WALL-OSS Paper Deep-Dive: Commentary (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-00-en.png)
+![WALL-OSS Análisis en profundidad: Comentarios (imagen 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-00-en.png)
 
 ---
 
@@ -139,11 +139,11 @@ Estos corresponden a las páginas 1–3. Tres párrafos tienen subtítulos Gap; 
 ### Atención compartida, procesamiento de características separado
 **Problema:** Conservar el conocimiento visión-lenguaje mientras se condicionan estrechamente las acciones implica compensaciones entre parámetros totalmente compartidos e independientes. **Intuición:** Intercambiar información mediante atención compartida y luego procesar categorías de características con redes feed-forward separadas.
 
-![WALL-OSS Paper Deep-Dive: 4.1 Shared Attention, Separate Feature Processing (fig02-architecture-paradigms)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig02-architecture-paradigms.png)
+![WALL-OSS Análisis en profundidad: 4.1 Atención compartida, procesamiento de características separado (fig02-architecture-paradigms)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig02-architecture-paradigms.png)
 
 **Artículo:** Qwen2.5-VL-3B es la columna vertebral. Un diseño de mezcla de expertos enruta estáticamente las características visión-lenguaje a una FFN de visión-lenguaje y las características de acción a una FFN de acción. La auto-atención intercambia información entre modalidades; las FFN especializan el procesamiento.
 
-![WALL-OSS Paper Deep-Dive: 4.1 Shared Attention, Separate Feature Processing (fig03-wall-oss-architecture)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig03-wall-oss-architecture.png)
+![WALL-OSS Análisis en profundidad: 4.1 Atención compartida, procesamiento de características separado (fig03-wall-oss-architecture)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig03-wall-oss-architecture.png)
 
 | Ruta | Entrada y procesamiento | Salida y forma |
 |---|---|---|
@@ -154,7 +154,7 @@ Estos corresponden a las páginas 1–3. Tres párrafos tienen subtítulos Gap; 
 
 **Formalización ilustrativa de enrutamiento estático, no un algoritmo adicional del artículo:**
 
-![WALL-OSS Paper Deep-Dive: 4.1 Shared Attention, Separate Feature Processing (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-03-en.png)
+![WALL-OSS Análisis en profundidad: 4.1 Atención compartida, procesamiento de características separado (imagen 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-03-en.png)
 
 qᵢ es la característica posterior a la atención en la posición i, de anchura D. Ambas ramas necesitan representaciones posteriores compatibles, pero las anchuras/proyecciones no se indican. i es un índice de secuencia y D un conteo de características sin unidad. A diferencia del gating aprendido con softmax/top-k, la rama se elige por categoría de característica, no por una probabilidad de experto recién estimada.
 
@@ -167,7 +167,7 @@ qᵢ es la característica posterior a la atención en la posición i, de anchur
 
 **Ecuaciones de la página 5, con símbolos renombrados para evitar colisiones:**
 
-![WALL-OSS Paper Deep-Dive: 4.2 Inspiration: Discrete Actions and Embodied QA (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-02.png)
+![WALL-OSS Análisis en profundidad: 4.2 Inspiración: Acciones Discretas y QA Incorporado (imagen 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-02.png)
 
 A∈ℝᵀˣᵈ es la trayectoria demostrada; C=(V,L) contiene visión e instrucción. yⱼ es el token de texto j, zₖ el token de acción k, y `<j`/`<k` los prefijos existentes. θ parametriza la ruta VL; pθ es la probabilidad del siguiente token. λᵥ y λᴅ son pesos sin unidad. K es longitud codificada, no un valor fijo reportado.
 
@@ -184,7 +184,7 @@ Las secuencias QA y FAST de verdad de terreno supervisan la ruta VLM reutilizada
 
 **Ecuaciones de la página 5, renombrando el progreso τ preservando la dirección:**
 
-![WALL-OSS Paper Deep-Dive: 4.3 Integration: Generate Continuous Actions from Noise (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-01.png)
+![WALL-OSS Análisis en profundidad: 4.3 Integración: Generar Acciones Continuas desde Ruido (imagen 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-01.png)
 
 A es la acción limpia, ε ruido gaussiano de la misma forma, y A^τ el arreglo ruidoso T × d. h es la codificación VL, φ parámetros de la ruta continua, y vφ el campo. τ es progreso de generación sin unidad, ρ el calendario, w una función de ponderación, y λᴄ el peso de la pérdida. Las esperanzas cubren datos, ruido y tiempo. La “velocidad” del campo es dirección en el espacio de generación, no automáticamente velocidad del motor.
 
@@ -194,14 +194,14 @@ A es la acción limpia, ε ruido gaussiano de la misma forma, y A^τ el arreglo 
 
 **Actualización inversa de Euler ilustrativa, no un solucionador especificado en el artículo:**
 
-![WALL-OSS Paper Deep-Dive: 4.3 Integration: Generate Continuous Actions from Noise (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-04.png)
+![WALL-OSS Análisis en profundidad: 4.3 Integración: Generar Acciones Continuas desde Ruido (imagen 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-04.png)
 
 Δτ no tiene unidad. Empezando en 0.2 con dirección −0.8 y Δτ=−0.1 se obtiene 0.28, más cerca de 0.6. El arreglo completo se actualiza junto; una actualización interna no es un paso de robot.
 
 **Precaución:** Un ρ no lineal general introduciría ρ′(τ) en la derivada de la ruta, mientras que el artículo escribe directamente ε−A. El ejemplo se restringe a una ruta lineal; no se infiere ningún calendario inédito, distribución temporal, solucionador ni conteo de iteraciones. La ecuación también abrevia el estado del robot de la Figura 3, lo que no significa que el estado esté ausente.
 
 ### Dos Etapas Principales, con Dos Fases de Integración
-![WALL-OSS Paper Deep-Dive: 4.4 Two Main Stages, with Two Integration Phases (fig04-training-inference)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig04-training-inference.png)
+![WALL-OSS Análisis en profundidad: 4.4 Dos Etapas Principales, con Dos Fases de Integración (fig04-training-inference)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig04-training-inference.png)
 
 **Artículo:** Tras el preentrenamiento VLM existente, WALL-OSS usa Inspiración e Integración. Integración tiene fases de congelar y descongelar; el preentrenamiento original del backbone no es una tercera etapa recién diseñada.
 
@@ -218,11 +218,11 @@ Las etapas cambian representación, objetivo y parámetros entrenables en lugar 
 ### Uni-CoT: Razonamiento Completo o Ejecución Directa
 **Problema:** Imágenes similares pueden representar progresos diferentes, mientras que planificadores separados pueden desconectarse del control. **Intuición:** Aprender relaciones entre niveles en un solo modelo e incluir muestras sin razonamiento intermedio, apoyando tanto comportamiento complejo como directo.
 
-![WALL-OSS Paper Deep-Dive: 4.5 Uni-CoT: Full Reasoning or Direct Execution (fig06c-block-spell)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06c-block-spell.png)
+![WALL-OSS Análisis en profundidad: 4.5 Uni-CoT: Razonamiento Completo o Ejecución Directa (fig06c-block-spell)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06c-block-spell.png)
 
 **Objetivo de la página 6, con símbolos renombrados para evitar colisiones de ruido:**
 
-![WALL-OSS Paper Deep-Dive: 4.5 Uni-CoT: Full Reasoning or Direct Execution (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-05.png)
+![WALL-OSS Análisis en profundidad: 4.5 Uni-CoT: Razonamiento Completo o Ejecución Directa (imagen 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/image-05.png)
 
 Θ contiene parámetros del modelo unificado; G predice acciones y Q respuestas incorporadas. V es visión, L instrucción, R razonamiento opcional, A∈ℝᵀˣᵈ acciones objetivo, Y etiquetas de QA, y λ un equilibrio sin unidad. La pérdida de acción sigue el objetivo de la etapa; la pérdida de VQA evalúa respuestas. El acondicionamiento interno de ruido/tiempo de G se abstrae aquí.
 
@@ -255,7 +255,7 @@ Inference:
 
 ## Datos y plataformas: comprensión y ejecución
 ### Tres fuentes
-![WALL-OSS Paper Deep-Dive: 5.1 Three Sources (fig05-data-composition)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig05-data-composition.png)
+![WALL-OSS Análisis en profundidad: 5.1 Tres fuentes (fig05-data-composition)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig05-data-composition.png)
 
 | Fuente | Proporción en la Figura 5 | Contenido y función |
 |---|---|---|
@@ -282,7 +282,7 @@ Los autores describen particiones estratificadas de validación/prueba por escen
 
 ## Experimentos: comprensión, razonamiento y acciones
 ### Tareas, ajuste fino y condiciones de evaluación
-![WALL-OSS Paper Deep-Dive: 6.1 Tasks, Fine-Tuning, and Evaluation Conditions (fig06a-single-instruction-tasks)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06a-single-instruction-tasks.png)
+![WALL-OSS Análisis en profundidad: 6.1 Tareas, ajuste fino y condiciones de evaluación (fig06a-single-instruction-tasks)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06a-single-instruction-tasks.png)
 
 | Tarea | Prueba principal | Demostraciones en 5.1.1 | Frontera entre pre-entrenamiento / ajuste fino |
 |---|---|---|---|
@@ -319,7 +319,7 @@ Una tercera parte independiente evalúa a ciegas usando documentos de entorno, e
 **Precaución:** Zero-shot excluye el ajuste fino específico de tarea, no el pre-entrenamiento robótico/multimodal. Estas son puntuaciones medias de progreso, no fracciones de éxito completo. La Figura 7 no muestra estos dos grupos por separado, a pesar de la cita en el texto, por lo que los números se atribuyen a la prosa.
 
 ### Precisión y horizontes largos: ganancias dependientes de la tarea
-![WALL-OSS Paper Deep-Dive: 6.4 Precision and Long Horizons: Task-Dependent Gains (fig07-id-ood-results)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig07-id-ood-results.png)
+![WALL-OSS Análisis en profundidad: 6.4 Precisión y horizontes largos: ganancias dependientes de la tarea (fig07-id-ood-results)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig07-id-ood-results.png)
 
 **Interpretación de la figura:** WALL-OSS supera a las líneas base mostradas en deletreo, puesta de mesa y ordenado de dormitorio. Su barra de residuos ID y la de π0 alcanzan la parte superior, mientras que π0 es mayor en colocación de tazas. Los valores exactos de las barras no están impresos y no se infieren visualmente.
 
@@ -327,7 +327,7 @@ Una tercera parte independiente evalúa a ciegas usando documentos de entorno, e
 
 **Precaución:** Las tasas de éxito en prosa y el progreso de tareas de la Figura 7 están etiquetados de forma diferente y no son directamente intercambiables. El progreso de residuos ID de DP y el progreso de residuos OOD de WALL-OSS parecen aproximadamente de tres cuartos en la figura. La v1 no explica la relación, por lo que no se infiere ningún éxito medio combinado.
 
-![WALL-OSS Paper Deep-Dive: 6.4 Precision and Long Horizons: Task-Dependent Gains (fig06b-long-horizon-tasks)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06b-long-horizon-tasks.png)
+![WALL-OSS Análisis en profundidad: 6.4 Precisión y horizontes largos: ganancias dependientes de la tarea (fig06b-long-horizon-tasks)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/wall_oss/fig06b-long-horizon-tasks.png)
 
 **Artículo:** La puesta de mesa y el ordenado de dormitorio superan las cinco etapas, con duraciones medias de más de tres y cinco minutos. El ajuste fino combina acciones/subtareas, con solo el 1% de los datos de entrenamiento de tareas largas etiquetados por subtareas; la inferencia genera subtareas antes de actuar. Las líneas base repiten utensilios, omiten la otra puesta de mesa o entran en bucle cuando la ropa sale de la vista.
 

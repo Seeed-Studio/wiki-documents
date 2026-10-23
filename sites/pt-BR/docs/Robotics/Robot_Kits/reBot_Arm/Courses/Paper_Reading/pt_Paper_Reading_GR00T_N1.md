@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISE DETALHADA DE ARTIGO</span>
   <h1 id="paper-reading-gr00t_n1-title">NVIDIA GR00T — Adaptação &amp; Fine-Tuning</h1>
   <p className="paper-reading-lead">GR00T N1: Um modelo de base aberto para robôs humanóides generalistas</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Robôs humanóides</li>
     <li>Arquitetura de sistema duplo</li>
     <li>Pirâmide de dados</li>
@@ -87,7 +87,7 @@ GR00T N1 ainda responde à mesma pergunta:
 
 Normalmente, o ACT aprende um robô e uma família de tarefas a partir de demonstrações. O GR00T N1 busca pré-conhecimentos gerais a partir de múltiplos robôs, vídeos humanos e dados sintéticos antes de se adaptar a um robô real específico.
 
-![GR00T N1 Paper Deep-Dive: 1.1 From ACT to GR00T N1: The Learning Loop Is the Same (image-11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-11-en.png)
+![GR00T N1 Análise detalhada: 1.1 De ACT para GR00T N1: O Loop de Aprendizado é o Mesmo (imagem 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-11-en.png)
 
 
 O ACT começa com uma habilidade concreta; o GR00T N1 primeiro aprende uma base entre corpos e tarefas, depois aprende a usar o robô atual.
@@ -119,7 +119,7 @@ Um único Franka, um sistema bimanual e um humanóide GR-1 têm diferentes dimen
 
 ### VLA, Agrupamento de Ações e Flow Matching
 
-![GR00T N1 Paper Deep-Dive: 1.3 VLA, Action Chunking, and Flow Matching (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-09-en.png)
+![GR00T N1 Análise detalhada: 1.3 VLA, Agrupamento de Ações e Flow Matching (imagem 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-09-en.png)
 
 
 Uma **VLA** adiciona linguagem de tarefa às entradas de política visual. A linguagem identifica qual objeto manipular, para onde ele deve ir e se o comportamento corresponde ao pedido; não é contexto decorativo.
@@ -172,7 +172,7 @@ O artigo, portanto, pergunta não apenas como projetar uma política, mas també
 
 ### A Pirâmide de Dados
 
-![GR00T N1 Paper Deep-Dive: 3.2 The Data Pyramid (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-12.png)
+![GR00T N1 Análise detalhada: 3.2 A Pirâmide de Dados (imagem 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-12.png)
 
 | Nível | Dados | Quantidade relativa | Relação com o robô |
 |---|---|---|---|
@@ -192,7 +192,7 @@ Dados de robôs reais: como este corpo deve executá-las
 
 ### Sistema 2 Entende; Sistema 1 Age
 
-![GR00T N1 Paper Deep-Dive: 4.1 System 2 Understands; System 1 Acts (image-17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-17.png)
+![GR00T N1 Análise detalhada: 4.1 Sistema 2 Entende; Sistema 1 Age (imagem 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-17.png)
 
 A arquitetura toma emprestada uma analogia de sistema duplo da cognição:
 
@@ -210,7 +210,7 @@ O Sistema 2 opera a cerca de 10 Hz em uma NVIDIA L40, enquanto o sistema de aç�
 
 ### Conectando Diferentes Robôs a um Único DiT
 
-![GR00T N1 Paper Deep-Dive: 4.2 Connecting Different Robots to One DiT (image-13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-13.png)
+![GR00T N1 Análise detalhada: 4.2 Conectando Diferentes Robôs a um Único DiT (imagem 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-13.png)
 
 Existem dois tipos de módulos:
 
@@ -283,7 +283,7 @@ GR00T N1 adiciona supervisão semelhante a ações de duas maneiras.
 
 **Ações latentes** aprendem códigos comportamentais discretos a partir de mudanças visuais, em vez de ângulos de juntas exatos: conceitos como mover para a esquerda, agarrar ou empurrar.
 
-![GR00T N1 Paper Deep-Dive: 5.1 Using Videos without Robot Actions (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-01.png)
+![GR00T N1 Análise detalhada: 5.1 Usando Vídeos sem Ações de Robô (imagem 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-01.png)
 
 Essas ações podem abranger diferentes corpos: mãos humanas e garras de robôs têm juntas diferentes, mas ambas podem mover um objeto para a esquerda na imagem.
 
@@ -303,11 +303,11 @@ Ações latentes se assemelham a um vocabulário comportamental sem unidade; as 
 
 A geração de vídeo começa a partir de imagens reais de robôs e varia prompts de linguagem para sintetizar tarefas, posições de objetos e trajetórias. Estas são **trajetórias neurais**.
 
-![GR00T N1 Paper Deep-Dive: 5.2 Neural Trajectories and Simulation: More Variation from Fewer Demonstrations (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-00.png)
+![GR00T N1 Análise detalhada: 5.2 Trajetórias neurais e simulação: mais variação a partir de menos demonstrações (imagem 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-00.png)
 
 Os autores expandem 88,4 horas de teleoperação interna para 827,3 horas de vídeo gerado, quase dez vezes mais. A geração pode mover objetos de forma impossível, distorcer contatos ou deformar o robô, então filtros baseados em modelo de linguagem e em regras removem amostras de baixa qualidade antes que ações latentes ou IDM forneçam supervisão.
 
-![GR00T N1 Paper Deep-Dive: 5.2 Neural Trajectories and Simulation: More Variation from Fewer Demonstrations (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-08.png)
+![GR00T N1 Análise detalhada: 5.2 Trajetórias neurais e simulação: mais variação a partir de menos demonstrações (imagem 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-08.png)
 
 A simulação, por sua vez, é executada em um motor de física. Métodos como DexMimicGen redirecionam demonstrações centradas em objetos para novas cenas, produzindo cerca de 780.000 trajetórias simuladas, aproximadamente 6.500 horas.
 
@@ -323,9 +323,9 @@ A simulação, por sua vez, é executada em um motor de física. Métodos como D
 
 Os dados de teleoperação vêm de Manus, VIVE, Apple Vision Pro, Leap Motion e outros dispositivos, redirecionados para os robôs.
 
-![GR00T N1 Paper Deep-Dive: 5.3 Pre-Training and Post-Training (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-05.png)
+![GR00T N1 Análise detalhada: 5.3 Pré-treinamento e pós-treinamento (imagem 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-05.png)
 
-![GR00T N1 Paper Deep-Dive: 5.3 Pre-Training and Post-Training (image-15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-15-en.png)
+![GR00T N1 Análise detalhada: 5.3 Pré-treinamento e pós-treinamento (imagem 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-15-en.png)
 
 
 Pós-treinamento não é nem treinar do zero nem controle imediato zero-shot de robôs arbitrários. Ele adapta a base a uma configuração de câmera, estado, interface de ação e tarefa-alvo.
@@ -349,7 +349,7 @@ O pré-treinamento do GR00T-N1-2B usa cerca de 50.000 horas de GPU H100. O conju
 
 Testes em simulação e no mundo físico examinam priors de pré-treinamento e adaptação com dados limitados, em vez de apenas ajustar tarefas de treinamento.
 
-![GR00T N1 Paper Deep-Dive: 6.1 How Is Effectiveness Tested? (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-10.png)
+![GR00T N1 Análise detalhada: 6.1 Como a eficácia é testada? (imagem 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-10.png)
 
 Os benchmarks de simulação incluem:
 
@@ -363,7 +363,7 @@ Os benchmarks de simulação incluem:
 
 Testes reais com o GR-1 incluem pega-e-coloca, objetos articulados, manipulação industrial e cooperação multi-robô.
 
-![GR00T N1 Paper Deep-Dive: 6.1 How Is Effectiveness Tested? (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-03.png)
+![GR00T N1 Análise detalhada: 6.1 Como a eficácia é testada? (imagem 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-03.png)
 
 As principais comparações são BC-Transformer e Diffusion Policy. GR00T N1 difere não apenas em tamanho e arquitetura, mas em pré-treinamento heterogêneo entre encarnações, então os resultados refletem também os dados e o treinamento.
 
@@ -379,7 +379,7 @@ O pós-treinamento em simulação usa 30, 100 ou 300 demonstrações por tarefa.
 
 
 
-![GR00T N1 Paper Deep-Dive: 6.2 Do Priors Help with Little Data? (image-16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-16.png)
+![GR00T N1 Análise detalhada: 6.2 Priors ajudam com poucos dados? (imagem 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-16.png)
 
 A implicação prática é:
 
@@ -391,13 +391,13 @@ A implicação prática é:
 
 Ablations comparam apenas dados reais, vídeos gerados rotulados com ações latentes e vídeos gerados com pseudo-ações de IDM.
 
-![GR00T N1 Paper Deep-Dive: 6.3 Do Neural Trajectories Improve Real Behavior? (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-02.png)
+![GR00T N1 Análise detalhada: 6.3 Trajetórias neurais melhoram o comportamento real? (imagem 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-02.png)
 
 Trajetórias sintéticas melhoram algumas tarefas, com IDM frequentemente se conectando de forma mais direta a espaços de ação reais do que códigos latentes. Mais geração não é automaticamente melhor: erros físicos e viés de pseudo-rótulos também entram no treinamento.
 
 Os autores também observam passagens espontâneas de mão esquerda para direita em um modelo pré-treinado que podem desaparecer após um pós-treinamento focado em tarefas estreitas.
 
-![GR00T N1 Paper Deep-Dive: 6.3 Do Neural Trajectories Improve Real Behavior? (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-04.png)
+![GR00T N1 Análise detalhada: 6.3 Trajetórias neurais melhoram o comportamento real? (imagem 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t_n1/image-04.png)
 
 Isso ilustra o **esquecimento catastrófico**: um ajuste fino focado pode elevar a pontuação-alvo enquanto sobrescreve capacidades mais amplas pré-treinadas.
 

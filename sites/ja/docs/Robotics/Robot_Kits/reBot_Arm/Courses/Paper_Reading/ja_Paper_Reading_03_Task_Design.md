@@ -40,7 +40,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
   <h1 id="hands-on-task_design-title">タスク設計とデモンストレーション計画</h1>
   <p className="paper-reading-lead">エピソード、開始および終了条件、一貫したデモンストレーションを定義し、その後、5 点サンプリングを用いて完全なピック・アンド・プレースタスクを収集します。</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>エピソード</li>
     <li>タスク設計</li>
     <li>5 点サンプリング</li>
@@ -150,11 +150,11 @@ import '/src/css/paper-reading-style.css';
 
 1. ザリガニを黒い箱の中に置きます。箱の底を両面テープで固定し、動かないようにします。カメラとアームは固定し、照明も変えないでください。
 
-![Design Your First Imitation Learning Task: Example Demonstration Collection (Figure 1)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-01-task-scene.png)
+![最初の模倣学習タスクを設計する: デモンストレーション収集の例 (図 1)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-01-task-scene.png)
 
 2. 図示された 5 つのポイントにザリガニを置いてデモンストレーションを収集します。1 → 2 → 3 → 4 → 5 の順に 1 周し、10 周行います。
 
-![Design Your First Imitation Learning Task: Example Demonstration Collection (Figure 2)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-02-five-point-sampling.png)
+![最初の模倣学習タスクを設計する: デモンストレーション収集の例 (図 2)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-02-five-point-sampling.png)
 
 - 初心者は、十分な練習のために物体をどこに置けばよいかで悩みがちです。ランダムに配置すると、すべての例が小さな領域に集中してモデルが他の場所を把持できなくなったり、練習が偏って一部の位置だけ頻繁に練習され、他の位置は一度も見られなかったりします。これは、見慣れた試験問題だけを復習して、問題が変わった途端に迷子になるようなものです。または、ロボットに 1 種類のスナックだけを見せておいて、いきなりビュッフェに連れて行くようなものです。次のような、簡単で体系的な方法を使いましょう。
 
@@ -168,31 +168,31 @@ import '/src/css/paper-reading-style.css';
 
 1. 初期姿勢
 
-![Design Your First Imitation Learning Task: Example Demonstration Collection (Figure 3)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-03-start-pose.jpg)
+![最初の模倣学習タスクを設計する: デモンストレーション収集の例 (図 3)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-03-start-pose.jpg)
 
 2. 物体を把持する
 
 - ザリガニの真上に移動します。中心に合わせ、毎回同じ接近高さを保ちます。
 
-![Design Your First Imitation Learning Task: Example Demonstration Collection (Figure 4)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-04-approach-object.jpg)
+![最初の模倣学習タスクを設計する: デモンストレーション収集の例 (図 4)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-04-approach-object.jpg)
 
 - グリッパを開きます。ザリガニの上に十分なクリアランスを確保することで、指を開く際にザリガニに当たって位置がずれるのを防ぎます。
 
-![Design Your First Imitation Learning Task: Example Demonstration Collection (Figure 5)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-05-open-gripper.jpg)
+![最初の模倣学習タスクを設計する: デモンストレーション収集の例 (図 5)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-05-open-gripper.jpg)
 
 - 一定の力と速度で把持します。
 
-![Design Your First Imitation Learning Task: Example Demonstration Collection (Figure 6)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-06-grasp-object.jpg)
+![最初の模倣学習タスクを設計する: デモンストレーション収集の例 (図 6)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-06-grasp-object.jpg)
 
 3. 物体を配置する
 
 - 黒い箱の中心の真上に移動します。
 
-![Design Your First Imitation Learning Task: Example Demonstration Collection (Figure 7)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-07-move-to-box.jpg)
+![最初の模倣学習タスクを設計する: デモンストレーション収集の例 (図 7)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-07-move-to-box.jpg)
 
 - グリッパを一定の速度で開き、アームを持ち上げます。ザリガニは箱の中に収まるはずです。
 
-![Design Your First Imitation Learning Task: Example Demonstration Collection (Figure 8)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-08-release-object.jpg)
+![最初の模倣学習タスクを設計する: デモンストレーション収集の例 (図 8)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/task-design-08-release-object.jpg)
 
 - 配置後、アームを初期姿勢に戻します。
 

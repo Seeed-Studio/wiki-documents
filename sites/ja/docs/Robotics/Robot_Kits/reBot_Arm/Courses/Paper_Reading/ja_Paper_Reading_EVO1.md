@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
   <h1 id="paper-reading-evo1-title">Evo-1 — 軽量 VLA</h1>
   <p className="paper-reading-lead">Evo-1: セマンティックアライメントを維持した軽量 Vision-Language-Action モデル</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>軽量 VLA</li>
     <li>セマンティックアライメント</li>
     <li>クロスアテンション</li>
@@ -148,7 +148,7 @@ Evo-1 は 7 億 7,000 万パラメータで、Meta-World と RoboTwin におい�
 
 クロスアテンションでは、クエリ Q はアクションが知る必要のある内容を表し、キー K はそのクエリにマッチし、バリュー V は取得された内容を提供する。**論文：** 第 14 層の画像テキスト特徴と状態を連結して K と V とし、ノイズ付きアクション表現を Q とする。すべてのアクション層は同じ条件付けソースを読む。
 
-![Evo-1: 4.2 Integration: Read the Same Context at Every Layer (Figure 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-12.png)
+![Evo-1: 4.2 統合：すべての層で同じコンテキストを読む (図 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-12.png)
 
 | 設計 | 接続 | 最終設計との差分 |
 |---|---|---|
@@ -159,7 +159,7 @@ Evo-1 は 7 億 7,000 万パラメータで、Meta-World と RoboTwin におい�
 
 **説明用の標準的なアテンション方程式であり、論文で新たに提案された損失ではない：**
 
-![Evo-1: 4.2 Integration: Read the Same Context at Every Layer (Figure 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-13.png)
+![Evo-1: 4.2 統合：すべての層で同じコンテキストを読む (図 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-13.png)
 
 50 個のアクション位置と M 個の条件トークンがあるとき、1 つのヘッドは `Q: 50 × d_k`、`K: M × d_k`、`V: M × d_v` を持ち、その出力は `50 × d_v` となる。`d_k` と `d_v` はヘッド幅である。Softmax は各クエリに対する M 個のマッチを正規化する。これらは説明用の記号であり、論文ではその具体的な値は完全には報告されていない。
 
@@ -174,7 +174,7 @@ Evo-1 は 7 億 7,000 万パラメータで、Meta-World と RoboTwin におい�
 
 **論文の式 (3)：**
 
-![Evo-1: 4.3 Action Expert: Generate a Chunk with Flow Matching (Figure 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-03.png)
+![Evo-1: 4.3 アクションエキスパート：Flow Matching でチャンクを生成する (図 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-03.png)
 
 `t` は観測時刻、`A_t` はその時刻から始まる実演チャンク、`ε` は同じ形状のノイズ、`τ` はロボット時間とは異なる内部生成進行度である。両方の配列はデフォルトで `50 × 24` である。無次元の `τ` は Beta 分布からサンプリングされ、`[0.02, 0.98]` に制限される。Beta 分布のパラメータは特定されていない。
 
@@ -182,7 +182,7 @@ Evo-1 は 7 億 7,000 万パラメータで、Meta-World と RoboTwin におい�
 
 **式 (4)：サンプリング元を省略して表記：**
 
-![Evo-1: 4.3 Action Expert: Generate a Chunk with Flow Matching (Figure 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-00.png)
+![Evo-1: 4.3 アクションエキスパート：Flow Matching でチャンクを生成する (図 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-00.png)
 
 `θ` は学習可能パラメータ、`z_t` は画像・テキスト特徴、`s_t` は固有感覚状態を表す。`v_θ` は時間条件付きの予測速度場、`u` はターゲット生成方向であり、どちらもアクションチャンクと同じ形状を持つ。二乗ノルムは、実演アクションとノイズ付きサンプルに対する期待値の下で、すべての要素にわたる方向誤差を比較する。元の式ではネットワークの引数から時間条件が省略されているが、ここではテキスト中の「時間条件付き速度場」という記述に合わせて `τ` を明示している。
 
@@ -192,7 +192,7 @@ Evo-1 は 7 億 7,000 万パラメータで、Meta-World と RoboTwin におい�
 
 **離散更新の例示：**
 
-![Evo-1: 4.3 Action Expert: Generate a Chunk with Flow Matching (Figure 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-04.png)
+![Evo-1: 4.3 アクションエキスパート：Flow Matching でチャンクを生成する (図 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-04.png)
 
 `X^τ` は現在の推定値、`Δτ` は無次元の内部ステップサイズである。この Euler 更新は速度場を説明するものであり、論文に記載された完全な推論アルゴリズムではない。**例：** 値が `0.2`、予測方向が `0.8`、ステップが `0.1` のとき、更新後は `0.28` となる。
 
@@ -249,7 +249,7 @@ RoboTwin の向上は Click Alarmclock に集中しており、easy / hard で 7
 **注意:** Meta-World と LIBERO のベースラインは論文または既存の再現実装に由来し，RoboTwin のベースラインは公式論文に由来します；ここではすべての手法が一様に再学習されているわけではありません。表1では SmolVLA を 2.25B としている一方で，効率に関する表2では 0.45B を使用しています。この不一致は十分には説明されていないため，同一構成として扱わないでください。
 
 ### 実機システム：2 つの RGB ビューと絶対関節角
-![Evo-1: 5.2 Real System: Two RGB Views and Absolute Joint Angles (Figure 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-10.png)
+![Evo-1: 5.2 実機システム：2 つの RGB ビューと絶対関節角 (図 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-10.png)
 
 | 項目 | 論文での設定 |
 |---|---|
@@ -262,7 +262,7 @@ RoboTwin の向上は Click Alarmclock に集中しており、easy / hard で 7
 *出典：6 ページおよび 14–15 ページ。生のカメラ解像度，デモの長さ，および完全なグリッパーフィールドのマッピングは明示的には報告されていません。448 × 448 がモデルの入力サイズです。*
 
 ### 実世界での性能と推論効率
-![Evo-1: 5.3 Real-World Performance and Inference Efficiency (Figure 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-05.png)
+![Evo-1: 5.3 実世界での性能と推論効率 (図 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-05.png)
 
 | タスク | 論文での成功基準 | Evo-1 の成功率 |
 |---|---|---|
@@ -289,7 +289,7 @@ Evo-1 はこの比較において最も高速な推論と最高の平均成功�
 **注意:** 30 Hz はデモ記録の周波数，16.4 Hz は GPU 推論の周波数，50 は予測ホライズンです。これらは異なる段階を表します。知覚–通信–実行を含む全体のレイテンシは報告されていないため，16.4 Hz を最終的なロボット制御レートとして説明してはなりません。
 
 ### 汎化：1 つのタスクにおけるディストラクタと位置変化
-![Evo-1: 5.4 Generalization: Distractors and Position Changes in One Task (Figure 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-07.png)
+![Evo-1: 5.4 汎化：1 つのタスクにおけるディストラクタと位置変化 (図 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-07.png)
 
 汎化テストでは，缶から箱への配置タスクを用い，各摂動につき 20 試行を行います。著者らは，これらの変化を学習分布の外側と定義しています。
 
@@ -311,16 +311,16 @@ Evo-1 はこの比較において最も高速な推論と最高の平均成功�
 
 ## アブレーションと証拠の境界
 ### 持続的コンディショニングは有効か？
-![Evo-1: 6.1 Does Persistent Conditioning Help? (Figure 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-09.png)
+![Evo-1: 6.1 持続的コンディショニングは有効か？ (図 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-09.png)
 
 **論文:** モジュール A, B, C, D はそれぞれ 92.3%, 89.0%, 87.0%, 84.0% を達成します。A は B を 3.3 パーセントポイント上回り，最終モデルとして選択されています。
 
 **解釈:** これは，同じ中間の画像・テキスト特徴と状態を繰り返し読み込むことを支持しています。著者らはこの利得を，より連続的なコンディショニングによるものとしていますが，実験は 4 つの完全な設計を比較しており，すべての要因を切り分けているわけではありません。自己注意が一般的に有害であるとか，多層特徴融合が常に劣ることを示しているわけではありません。
 
 ### 2 段階学習は有効か？
-![Evo-1: 6.2 Does Two-Stage Training Help? (Figure 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-08.png)
+![Evo-1: 6.2 2 段階学習は有効か？ (図 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-08.png)
 
-![Evo-1: 6.2 Does Two-Stage Training Help? (Figure 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-01.png)
+![Evo-1: 6.2 2 段階学習は有効か？ (図 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/evo1/image-01.png)
 
 **論文:** 2 段階学習は 4 つの難易度グループすべてで勝利し，平均 80.6% に対して 71.4% と，9.2 ポイントの利得があります。1 段階学習ではすべてのモジュールを即座に更新し，2 段階学習ではまずバックボーンを固定し，その後に共同でファインチューニングします。
 

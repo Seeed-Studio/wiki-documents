@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISE DETALHADA DE ARTIGO</span>
   <h1 id="paper-reading-eo1-title">EO-1 — Pré-treinamento Multimodal Intercalado</h1>
   <p className="paper-reading-lead">EO-1: Um Modelo Fundamental Incorporado Aberto e Unificado para Controle Geral de Robôs</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Modelo unificado de IA física</li>
     <li>Aprendizado intercalado</li>
     <li>Raciocínio incorporado</li>
@@ -89,22 +89,22 @@ EO-1 é treinado em EO-Data1.5M usando decodificação autoregressiva e denoisin
 
 ## Introdução e Trabalhos Relacionados: Por que Intercalar?
 ### Os Sete Principais Parágrafos da Introdução
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-12-en.png)
+![EO-1 Análise detalhada: 3.1 Os Sete Principais Parágrafos da Introdução (imagem 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-12-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-08-en.png)
+![EO-1 Análise detalhada: 3.1 Os Sete Principais Parágrafos da Introdução (imagem 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-08-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-18-en.png)
+![EO-1 Análise detalhada: 3.1 Os Sete Principais Parágrafos da Introdução (imagem 18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-18-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-01-en.png)
+![EO-1 Análise detalhada: 3.1 Os Sete Principais Parágrafos da Introdução (imagem 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-01-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-11-en.png)
+![EO-1 Análise detalhada: 3.1 Os Sete Principais Parágrafos da Introdução (imagem 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-11-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-04-en.png)
+![EO-1 Análise detalhada: 3.1 Os Sete Principais Parágrafos da Introdução (imagem 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-04-en.png)
 
-![EO-1 Paper Deep-Dive: 3.1 The Introduction's Seven Main Paragraphs (image-15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-15-en.png)
+![EO-1 Análise detalhada: 3.1 Os Sete Principais Parágrafos da Introdução (imagem 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-15-en.png)
 
 ### Relação com Trabalhos Anteriores
-![EO-1 Paper Deep-Dive: 3.2 Relationship to Earlier Work (image-17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-17-en.png)
+![EO-1 Análise detalhada: 3.2 Relação com Trabalhos Anteriores (imagem 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-17-en.png)
 
 ---
 
@@ -112,7 +112,7 @@ EO-1 é treinado em EO-Data1.5M usando decodificação autoregressiva e denoisin
 ### Processamento Compartilhado com Interfaces Específicas de Modalidade
 Texto aborda o que e por quê, enquanto ações especificam movimento. Ambos dependem dos mesmos objetos, objetivos e progresso. EO-1 compartilha um backbone pré-treinado para reduzir a separação entre planejamento e controle.
 
-![EO-1 Paper Deep-Dive: 4.1 Shared Processing with Modality-Specific Interfaces (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-05.png)
+![EO-1 Análise detalhada: 4.1 Processamento Compartilhado com Interfaces Específicas de Modalidade (imagem 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-05.png)
 
 **Artigo:** Um Transformer apenas decodificador inicializado a partir de Qwen2.5-VL mantém o codificador visual para imagens/vídeo e o tokenizer para texto. Estado e ações ruidosas são projetados no espaço de recursos compartilhado.
 
@@ -136,7 +136,7 @@ As saídas se ramificam em uma **cabeça de LM**, que prediz tokens de texto, e 
 ### Gerar Texto Sequencialmente, Remover Ruído das Ações em Bloco
 Autoregressão prediz o próximo token de texto a partir do contexto existente:
 
-![EO-1 Paper Deep-Dive: 4.2 Generate Text Sequentially, Denoise Actions as a Chunk (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-00.png)
+![EO-1 Análise detalhada: 4.2 Gerar Texto Sequencialmente, Remover Ruído das Ações em Bloco (imagem 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-00.png)
 
 `w_j` é o token `j`, e `c_j` seu contexto multimodal precedente. **Exemplo:** depois de “em seguida, pegue”, o modelo prediz “o tomate”, usando também imagens anteriores e histórico de ações.
 
@@ -144,7 +144,7 @@ Ações usam flow matching: repetidamente prever como atualizar um array aleató
 
 O treinamento mistura ações verdadeiras e ruído Gaussiano:
 
-![EO-1 Paper Deep-Dive: 4.2 Generate Text Sequentially, Denoise Actions as a Chunk (image-06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-06.png)
+![EO-1 Análise detalhada: 4.2 Gerar Texto Sequencialmente, Remover Ruído das Ações em Bloco (imagem 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-06.png)
 
 `A` e o Gaussiano padrão `Z` têm ambos forma `16 × d_a`. `τ∈[0,1]` é progresso interno de denoising, não segundos. Zero dá ruído, um dá dados; o artigo amostra de uma distribuição Beta enfatizando estágios mais ruidosos.
 
@@ -152,13 +152,13 @@ O treinamento mistura ações verdadeiras e ruído Gaussiano:
 
 **Objetivo de treinamento, preservando a Equação (2):**
 
-![EO-1 Paper Deep-Dive: 4.2 Generate Text Sequentially, Denoise Actions as a Chunk (image-16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-16.png)
+![EO-1 Análise detalhada: 4.2 Gerar Texto Sequencialmente, Remover Ruído das Ações em Bloco (imagem 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-16.png)
 
 `Vθ` é o campo de atualização previsto pelo modelo compartilhado e pela cabeça de flow, `θ` parâmetros treináveis, e `C` contexto multimodal precedente. A norma compara arrays completos, e a expectativa faz a média do progresso amostrado. `L_AR` é entropia cruzada de texto; ambos os termos têm peso um. A meta de ação escrita no exemplo é `Z−A=−0.8`.
 
 **Inferência, preservando a Equação (1):**
 
-![EO-1 Paper Deep-Dive: 4.2 Generate Text Sequentially, Denoise Actions as a Chunk (image-13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-13.png)
+![EO-1 Análise detalhada: 4.2 Gerar Texto Sequencialmente, Remover Ruído das Ações em Bloco (imagem 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-13.png)
 
 `Âτ` é a estimativa inicializada a partir de ruído novo; `δ` é um passo de integração. O texto integra de zero a um e usa dez atualizações. **Ilustração:** dez atualizações iguais dariam `δ=0.1`, um passo interno em vez de um período de execução.
 
@@ -187,7 +187,7 @@ EO-1 gera texto e ações, não imagens de câmera futuras ou estado. O ambiente
 ### Amostragem retificadora intercalada: histórico limpo, ações atuais ruidosas
 Treinar a ação atual requer ruído, mas o texto posterior deve condicionar em ações concluídas. Manter ações passadas ruidosas cria uma incompatibilidade com o histórico executado.
 
-![EO-1 Paper Deep-Dive: 4.4 Interleaved Rectifying Sampling: Clean History, Noisy Current Actions (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-03.png)
+![EO-1 Análise detalhada: 4.4 Amostragem retificadora intercalada: histórico limpo, ações atuais ruidosas (imagem 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-03.png)
 
 **Artigo:** A amostragem retificadora intercalada divide uma sequência com `N` segmentos de ação em `N+1` prefixos de treinamento nos limites de ação. As ações históricas são limpas; a ação que está sendo gerada no momento é ruidosa.
 
@@ -229,7 +229,7 @@ A implementação relata cinco épocas de pré‑treinamento, comprimento médio
 **Cuidado:** Trajetórias, amostras de QA e tokens são unidades diferentes e não podem ser somadas como contagens de operação. EO-Data1.5M não é todo o corpus de treinamento, e sequências intercaladas completas são apenas um subconjunto.
 
 ### Pipeline: preservar cenas diversas e depois adicionar raciocínio
-![EO-1 Paper Deep-Dive: 5.2 Pipeline: Preserve Diverse Scenes, Then Add Reasoning (image-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-02.png)
+![EO-1 Análise detalhada: 5.2 Pipeline: preservar cenas diversas e depois adicionar raciocínio (imagem 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-02.png)
 
 **Artigo:** Agrupar recursos visuais de vídeo, amostrar por cluster e inspecionar manualmente para reduzir cenas repetidas. Segmentar vídeos em subtarefas, criar descrições de ações com modelos e humanos, construir perguntas baseadas em templates, gerar respostas candidatas, selecioná‑las ou reescrevê‑las manualmente e, em seguida, limpar regras e redação.
 
@@ -238,7 +238,7 @@ Tarefas temporais incluem senso comum físico, planejamento, descrições de ví
 **Explicação:** Um registro de agarrar pode responder o que agarrar, onde se aproximar e se o posicionamento teve sucesso. Essas anotações vêm de demonstrações, não da exploração de todas as ações possíveis.
 
 ### Como três formatos intercalados conectam perguntas‑respostas e ações
-![EO-1 Paper Deep-Dive: 5.3 How Three Interleaved Formats Connect Question Answering and Actions (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-09.png)
+![EO-1 Análise detalhada: 5.3 Como três formatos intercalados conectam perguntas‑respostas e ações (imagem 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-09.png)
 
 | Formato | Conexão | Foco de aprendizado |
 |---|---|---|
@@ -278,18 +278,18 @@ O fine‑tuning de longo prazo usa 150 demonstrações por tarefa por 25 épocas
 **Cuidado:** As pontuações de longo prazo fazem a média da conclusão sob instruções de subtarefa; elas não são sucesso autônomo de tarefa completa a partir de uma única instrução geral. “Pronto para uso” também não implica que a corporificação estivesse ausente do pré‑treinamento.
 
 ### O raciocínio melhora as ações?
-![EO-1 Paper Deep-Dive: 6.3 Does Reasoning Improve Actions? (image-07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-07.png)
+![EO-1 Análise detalhada: 6.3 O raciocínio melhora as ações? (imagem 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-07.png)
 
 EO-1 obtém pontuações de `0.76, 0.79, 0.84, 0.55` em jogo da velha, rearranjo por referência de imagem, preparo de sanduíche e preparo de bife. As linhas de base de jogo da velha são π0 em `0.24` e GR00T-N1.5 em `0.36`, apoiando melhor integração de julgamento de tabuleiro e posicionamento neste cenário.
 
 Essas tarefas usam dados especializados e fine‑tuning: 800 demonstrações de rearranjo e 450 amostras de jogo da velha. As linhas de base combinam um planejador GPT-4o externo com controladores, enquanto EO-1 usa um decodificador unificado. Os resultados apoiam a abordagem completa de sistema/treinamento, não um componente isolado ou aprendizado de nova tarefa em zero‑shot.
 
 ### Generalização e o Papel dos Dados
-![EO-1 Paper Deep-Dive: 6.4 Generalization and the Role of Data (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-10.png)
+![EO-1 Análise detalhada: 6.4 Generalização e o Papel dos Dados (imagem 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-10.png)
 
 As pontuações de conclusão sob variações visuais, de linguagem e de ação são `0.72, 0.79, 0.67`, com `0.73` no geral. As variações de ação mudam principalmente posições de objetos, pontos de vista do robô e instâncias de objetos, não habilidades inéditas arbitrárias. O texto e as figuras divergem quanto ao total de tarefas, portanto os “18 Tasks” da Figura 9 não são tratados como uma contagem de experimentos para todo o artigo.
 
-![EO-1 Paper Deep-Dive: 6.4 Generalization and the Role of Data (image-14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-14.png)
+![EO-1 Análise detalhada: 6.4 Generalização e o Papel dos Dados (imagem 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/eo1/image-14.png)
 
 Quatro configurações são comparadas: `fast`, ações FAST totalmente autoregressivas; `base`, um backbone compartilhado com continuous flow matching treinado apenas em dados de controle; `llava`, adicionando instruções genéricas de imagem-texto; e `interleaved`, adicionando dados intercalados relevantes.
 

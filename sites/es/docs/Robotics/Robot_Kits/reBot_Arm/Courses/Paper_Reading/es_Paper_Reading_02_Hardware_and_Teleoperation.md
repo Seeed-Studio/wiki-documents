@@ -8,17 +8,17 @@ keywords:
   - B601-RS
   - SO101
   - LeRobot
-  - Teleoperation
-  - Paper Deep-Dive
-  - Robotic Arm
-  - Physical AI
-  - Course
+  - Teleoperación
+  - Análisis en profundidad de artículo
+  - Brazo robótico
+  - IA física
+  - Curso
   - Tutorial
   - SO-ARM101
   - Hugging Face
-  - Arm
-  - Robotics
-  - Hands-on Deployment
+  - Brazo
+  - Robótica
+  - Despliegue práctico
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /robotics/paper_reading_hardware_and_teleoperation
 displayed_sidebar: PaperReadingSidebar
@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · DESPLIEGUE PRÁCTICO</span>
   <h1 id="paper-reading-hardware-title">Configuración de Hardware &amp; Software</h1>
   <p className="paper-reading-lead">Prepara el hardware y el software, establece la teleoperación líder–seguidor y prepárate para la recopilación de datos, el entrenamiento de modelos y la reproducción del artículo.</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Lista de comprobación de hardware</li>
     <li>Configuración del entorno</li>
     <li>Configuración líder–seguidor</li>

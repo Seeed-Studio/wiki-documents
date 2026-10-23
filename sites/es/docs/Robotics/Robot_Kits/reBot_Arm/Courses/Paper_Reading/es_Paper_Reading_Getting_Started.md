@@ -7,17 +7,17 @@ keywords:
   - B601-DM
   - B601-RS
   - SO101
-  - Robotic Arm
-  - Physical AI
-  - Course
+  - Brazo robótico
+  - IA física
+  - Curso
   - Tutorial
   - SO-ARM101
   - LeRobot
   - Hugging Face
-  - Arm
-  - Robotics
-  - Paper Deep-Dive
-  - Hands-on Deployment
+  - Brazo
+  - Robótica
+  - Análisis en profundidad de artículo
+  - Despliegue práctico
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /robotics/paper_reading_getting_started
 displayed_sidebar: PaperReadingSidebar
@@ -36,7 +36,7 @@ import '/src/css/paper-reading-style.css';
 
 <div className="paper-reading-page">
 
-  <aside className="paper-reading-support" aria-label="Support the open-source project">
+  <aside className="paper-reading-support" aria-label="Apoyar el proyecto de código abierto">
     <div>
       <strong>Cursos gratuitos, juntos en código abierto</strong>
       <p>Este curso es completamente gratuito. Para apoyar nuestro trabajo, ¡dale una estrella a nuestro brazo robótico de código abierto!</p>
@@ -49,7 +49,7 @@ import '/src/css/paper-reading-style.css';
     <h1 id="paper-reading-title">Análisis profundo de artículos sobre Physical AI y despliegue práctico</h1>
     <p className="paper-reading-lead">Explora la investigación más avanzada en Physical AI, desglosa modelos y algoritmos clave con brazos robóticos de Seeed</p>
     <p>Un <strong>curso que siempre será gratuito</strong>, cuidadosamente desarrollado por el equipo de SeeedStudio AI Robotics, junto con el <strong>brazo robótico reBot 100% de código abierto, disponible para uso comercial y reproducción</strong>. ¡Complétalo y conviértete en la próxima persona experta en robótica!</p>
-    <ul className="paper-reading-badges" aria-label="Course features">
+    <ul className="paper-reading-badges" aria-label="Características del curso">
       <li>Siempre gratuito</li>
       <li>100% código abierto · Uso comercial</li>
       <li>Práctico · Reproducible</li>

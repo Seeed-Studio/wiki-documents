@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISE DETALHADA DE ARTIGO</span>
   <h1 id="paper-reading-smolvla-title">SmolVLA — Modelos de Visão-Linguagem-Ação Acessíveis</h1>
   <p className="paper-reading-lead">SmolVLA: um modelo de visão-linguagem-ação para robótica acessível e eficiente</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>VLA leve</li>
     <li>Dados da comunidade</li>
     <li>Flow matching</li>
@@ -51,16 +51,16 @@ import '/src/css/paper-reading-style.css';
 
 ## Pré-requisitos
 ### VLMs e VLAs
-![SmolVLA: VLMs and VLAs (Figure 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-09-en.png)
+![SmolVLA: VLMs e VLAs (Figura 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-09-en.png)
 
 ### Ações de Único Passo e Blocos de Ação
-![SmolVLA: Single-Step Actions and Action Chunks (Figure 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-02-en.png)
+![SmolVLA: Ações de Único Passo e Blocos de Ação (Figura 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-02-en.png)
 
 ### O que é Flow Matching?
-![SmolVLA: What Is Flow Matching? (Figure 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-11-en.png)
+![SmolVLA: O que é Flow Matching? (Figura 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-11-en.png)
 
 ### Inferência Síncrona e Assíncrona
-![SmolVLA: Synchronous and Asynchronous Inference (Figure 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-03-en.png)
+![SmolVLA: Inferência Síncrona e Assíncrona (Figura 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-03-en.png)
 
 ---
 
@@ -73,7 +73,7 @@ SmolVLA é um VLA pequeno, eficiente e orientado por dados da comunidade. Ele re
 
 O artigo também apresenta uma pilha de inferência assíncrona que separa percepção e predição de ação da execução. O robô prevê seu próximo bloco enquanto executa o atual. Apesar do seu tamanho, o SmolVLA compete com VLAs aproximadamente dez vezes maiores. Os autores avaliam tarefas em simulação e em robôs reais e disponibilizam código, modelos pré-treinados e dados de treinamento.
 
-![SmolVLA: 2. Abstract (Figure 21)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-21.png)
+![SmolVLA: 2. Resumo (Figura 21)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-21.png)
 
 ---
 
@@ -102,7 +102,7 @@ Action Chunk
 
 **Como imagens, linguagem e estado entram no VLM**
 
-![SmolVLA: 3. SmolVLA's Lightweight Architecture and Complete Network (Figure 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-13-en.png)
+![SmolVLA: 3. Arquitetura Leve e Rede Completa do SmolVLA (Figura 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-13-en.png)
 
 **Por que manter apenas 64 tokens visuais por quadro?**
 
@@ -175,11 +175,11 @@ Noisy Actions → Cross-Attention
 
 **Flow matching no SmolVLA**
 
-![SmolVLA: 3. SmolVLA's Lightweight Architecture and Complete Network (Figure 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-15-en.png)
+![SmolVLA: 3. Arquitetura Leve e Rede Completa do SmolVLA (Figura 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-15-en.png)
 
 **Fluxo completo de treinamento e inferência**
 
-![SmolVLA: 3. SmolVLA's Lightweight Architecture and Complete Network (Figure 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-12-en.png)
+![SmolVLA: 3. Arquitetura Leve e Rede Completa do SmolVLA (Figura 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-12-en.png)
 
 - O modelo principal tem cerca de 450 milhões de parâmetros, incluindo aproximadamente 100 milhões no especialista em ações. Durante o treinamento, o VLM é congelado e apenas o especialista em ações é treinado.
 
@@ -204,7 +204,7 @@ Noisy Actions → Cross-Attention
 - Essas coleções desconectadas são “ilhas de dados”. Apenas concatenar arquivos não as torna utilizáveis para pré-treinamento.
 
 ### Quanto Dado da Comunidade é Usado?
-![SmolVLA: How Much Community Data Is Used? (Figure 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-08.png)
+![SmolVLA: Quanto Dado da Comunidade é Usado? (Figura 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-08.png)
 
 - A seleção considera tipo de robô, número de episódios, qualidade geral e cobertura de quadros.
 
@@ -277,14 +277,14 @@ A_t = [a_t, a_t+1, ... , a_t+n]
 ### RobotClient e PolicyServer
 - SmolVLA separa dois papéis:
 
-| Component | Responsibility |
+| Componente | Responsabilidade |
 |---|---|
 | RobotClient | Capturar imagens, ler estado, manter a fila de ações e executar ações. |
 | PolicyServer | Receber observações, executar o SmolVLA e retornar um novo bloco de ação. |
 
 - RobotClient solicita novas ações antes que a fila atual se esgote, acionando a inferência de forma assíncrona.
 
-![SmolVLA: RobotClient and PolicyServer (Figure 20)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-20.png)
+![SmolVLA: RobotClient e PolicyServer (Figura 20)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-20.png)
 
 - A sequência é:
 

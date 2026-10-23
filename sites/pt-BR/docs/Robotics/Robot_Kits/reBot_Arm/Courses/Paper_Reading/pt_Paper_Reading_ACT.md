@@ -57,7 +57,7 @@ import '/src/css/paper-reading-style.css';
 
     - Uma pessoa teleopera o braço enquanto o sistema registra observações das câmeras e as ações executadas. Essas demonstrações treinam um modelo que depois pode agir a partir de imagens sem um operador humano.
 
-![ACT: What Is Imitation Learning? (Figure 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-07-en.png)
+![ACT: O que é aprendizado por imitação? (Figura 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-07-en.png)
 
 #### Observação: o mundo que o robô vê
 
@@ -83,7 +83,7 @@ import '/src/css/paper-reading-style.css';
 
     - Abertura alvo da garra.
 
-![ACT: Action: What the Robot Is Commanded to Do (Figure 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-09-en.png)
+![ACT: Ação: o que é comandado ao robô (Figura 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-09-en.png)
 
 ### Ações de passo único e blocos de ações
 
@@ -103,13 +103,13 @@ import '/src/css/paper-reading-style.css';
 
     - **Movimento mais suave e coerente.**
 
-![ACT: Action Chunks: Predict a Sequence at Once (Figure 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-05-en.png)
+![ACT: Blocos de ações: prever uma sequência de uma vez (Figura 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-05-en.png)
 
 Blocos mais longos nem sempre são melhores. Se um objeto se mover durante a execução, previsões distantes podem ficar desatualizadas. Sistemas práticos equilibram isso executando parte de um bloco em malha aberta, depois observando e prevendo novamente.
 
 ### Treinamento, inferência e avaliação
 
-![ACT: Training, Inference, and Evaluation (Figure 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-04-en.png)
+![ACT: Treinamento, inferência e avaliação (Figura 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-04-en.png)
 
 #### Treinamento: aprendizado offline
 
@@ -147,13 +147,13 @@ Autores: Tony Z. Zhao¹, Vikash Kumar³, Sergey Levine², Chelsea Finn¹. Afilia
 
 Contexto do artigo: publicado em 2023 por uma equipe conjunta de Stanford e Berkeley, este algoritmo leve de aprendizado por imitação combina redes convolucionais e Transformers. A plataforma experimental é o sistema de teleoperação bimanual ALOHA de seis DoF, com câmeras monoculares nos dois garras e uma câmera monocular global superior.
 
-![ACT: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware (Figure 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-12.png)
+![ACT: Aprendizado de manipulação bimanual detalhada com hardware de baixo custo (Figura 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-12.png)
 
 ---
 
 ## Resumo
 
-![ACT: Abstract (Figure 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-03.png)
+![ACT: Resumo (Figura 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-03.png)
 
 - Explicação:
 
@@ -201,7 +201,7 @@ A arquitetura usa um **Transformer** para sequências de ações e um **VAE cond
 
 **Fragmentação de ações com Transformers: ACT.**
 
-![ACT: Introduction (Figure 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-02-en.png)
+![ACT: Introdução (Figura 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-02-en.png)
 
 - **Parágrafo 5: as duas contribuições são uma plataforma de teleoperação de baixo custo e o algoritmo ACT.**
 
@@ -229,7 +229,7 @@ Esta seção revisa abordagens anteriores de clonagem comportamental e suas limi
 
 ### Objetivos de Projeto e Hardware
 
-![ACT: Design Goals and Hardware (Figure 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-14.png)
+![ACT: Objetivos de Projeto e Hardware (Figura 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-14.png)
 
 Os autores definem cinco princípios de projeto para dar suporte à manipulação fina enquanto reduzem a barreira de reprodução em laboratórios comuns.
 
@@ -255,7 +255,7 @@ Isso é um **mapeamento no espaço de juntas**, com várias vantagens:
 
 ALOHA registra as demonstrações usando **quatro câmeras RGB comuns**:
 
-![ACT: Cameras, Data Collection, and Capabilities (Figure 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-01.png)
+![ACT: Câmeras, Coleta de Dados e Capacidades (Figura 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-01.png)
 
 Os autores agrupam amplamente as tarefas em três categorias:
 
@@ -263,7 +263,7 @@ Os autores agrupam amplamente as tarefas em três categorias:
 
 ## Fragmentação de Ações e Ensemble Temporal
 
-![ACT: Transformer-Based Action Chunking and Temporal Ensembling (Figure 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-15.png)
+![ACT: Transformer-Based Fragmentação de Ações e Ensemble Temporal (Figura 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-15.png)
 
 ### Fragmentação de Ações: Prever uma Sequência Curta
 
@@ -271,7 +271,7 @@ O aprendizado por imitação convencional prevê uma próxima ação a partir do
 
 **Prever uma sequência contínua de futuro em vez de uma única ação.** Com `chunk_size = 4`, uma política de passo único toma decisões em `t=0→a0, t=1→a1, t=2→a2, t=3→a3`; o ACT prevê `[a0,a1,a2,a3]` em `t=0`. Essa sequência é um **fragmento de ação**. A política muda de `πθ(at|st)` para `πθ(at:t+k|st)`, onde `k` é o comprimento do fragmento.
 
-![ACT: Action Chunking: Think Through a Short Sequence Rather Than One Step at a Time (Figure 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-00-en.png)
+![ACT: Segmentação de ações: pensar em uma sequência curta em vez de um passo de cada vez (Figura 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-00-en.png)
 
 A intuição é considerar uma sequência curta em vez de improvisar a cada instante. Ao inserir uma bateria, as pessoas naturalmente organizam “aproximar → alinhar → inserir” como um movimento coerente, em vez de uma longa lista de correções de um milímetro. A fragmentação ensina essa estrutura ao robô.
 
@@ -303,7 +303,7 @@ Em vez de selecionar apenas uma, o ACT faz uma **combinação ponderada das prev
 > 
 > 
 
-![ACT: Temporal Ensembling (Figure 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-08-en.png)
+![ACT: Ensemble Temporal (Figura 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-08-en.png)
 
 Seguir apenas a previsão mais recente pode causar saltos bruscos. A média ponderada suaviza a execução. Ela aborda principalmente dois problemas:
 
@@ -358,7 +358,7 @@ Isso motiva o **autoencoder variacional condicional (CVAE)**.
 
 ### Como o CVAE Funciona no ACT
 
-![ACT: How the CVAE Works in ACT (Figure 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-11-en.png)
+![ACT: Como o CVAE Funciona no ACT (Figura 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-11-en.png)
 
 O CVAE tem dois componentes principais:
 
@@ -402,9 +402,9 @@ As imagens ainda entram na política ACT que prevê ações. Assim:
 
 ### A Rede Completa do ACT
 
-![ACT: The Complete ACT Network (Figure 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-13.png)
+![ACT: A Rede Completa do ACT (Figura 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-13.png)
 
-![ACT: The Complete ACT Network (Figure 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-06-en.png)
+![ACT: A Rede Completa do ACT (Figura 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-06-en.png)
 
 As posições das juntas e o fragmento de ação demonstrado entram primeiro no codificador CVAE para representar diferenças no estilo da demonstração, produzindo parâmetros Gaussianos $\mu,\sigma$ e uma variável de estilo latente $z$. Esse codificador processa estados de juntas e sequências de ações em vez de imagens de câmera.
 
@@ -440,6 +440,6 @@ Lembre-se dos papéis separadamente:
 
 O pipeline do ACT agora se encaixa:
 
-![ACT: The Complete ACT Network (Figure 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-10-en.png)
+![ACT: A Rede Completa do ACT (Figura 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/act/image-10-en.png)
 
 </div>

@@ -8,7 +8,7 @@ keywords:
   - B601-RS
   - SO101
   - ロボットアーム
-  - Physical AI
+  - フィジカル AI
   - コース
   - チュートリアル
   - SO-ARM101
@@ -36,7 +36,7 @@ import '/src/css/paper-reading-style.css';
 
 <div className="paper-reading-page">
 
-  <aside className="paper-reading-support" aria-label="Support the open-source project">
+  <aside className="paper-reading-support" aria-label="オープンソースプロジェクトを支援">
     <div>
       <strong>無料コースを、オープンソースでみんなと一緒に</strong>
       <p>このコースは完全に無料です。私たちの活動を応援するために、オープンソースのロボットアームにスターを付けてください！</p>
@@ -49,7 +49,7 @@ import '/src/css/paper-reading-style.css';
     <h1 id="paper-reading-title">Physical AI 論文徹底解説 &amp; ハンズオンデプロイ</h1>
     <p className="paper-reading-lead">最先端のPhysical AI研究を探索し、Seeedロボットアームで主要なモデルとアルゴリズムを分解して学ぶ</p>
     <p><strong>永遠に無料のコース</strong>を、SeeedStudio AI Robotics チームが丁寧に開発し、<strong>商用利用・再現が可能な 100% オープンソースの reBot ロボットアーム</strong>と組み合わせました。やり切って、次のロボティクスエキスパートになりましょう！</p>
-    <ul className="paper-reading-badges" aria-label="Course features">
+    <ul className="paper-reading-badges" aria-label="コースの特徴">
       <li>ずっと無料</li>
       <li>100% オープンソース · 商用利用可</li>
       <li>ハンズオン · 再現可能</li>

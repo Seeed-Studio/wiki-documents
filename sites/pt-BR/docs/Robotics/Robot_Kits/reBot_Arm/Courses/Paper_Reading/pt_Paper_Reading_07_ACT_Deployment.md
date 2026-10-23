@@ -40,7 +40,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLANTAÇÃO PRÁTICA</span>
   <h1 id="hands-on-act_deployment-title">Implantação no Robô e Avaliação de Desempenho</h1>
   <p className="paper-reading-lead">Execute ACT em um robô real, entenda o pré-processamento e a execução de blocos de ações, meça o sucesso e melhore os dados analisando as falhas.</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Inferência no robô</li>
     <li>Execução de blocos de ações</li>
     <li>Avaliação</li>

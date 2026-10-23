@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 Este guia usa **ACT → Diffusion para agarrar um bloco preto** como exemplo. Conclua primeiro a montagem, calibração, teleoperação e o treinamento e deploy do ACT. Mantenha a configuração de hardware funcional e treine a nova política no conjunto de dados da mesma plataforma.
 
-![Workflow for Switching from ACT to Other Policies](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/algorithm-switching-01-switch-map-en.png)
+![Fluxo de trabalho para trocar do ACT para outras políticas](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/algorithm-switching-01-switch-map-en.png)
 
 ## Ambiente e Plataforma
 
@@ -171,7 +171,7 @@ lerobot-train \
 | `output_dir` / `job_name` | Use novos nomes; o `policy.path` de deploy deve apontar para a saída correspondente. |
 | `batch_size` / `steps` | Comece com 8 / 100000 e depois ajuste para a VRAM e o desempenho no robô. |
 
-![Diffusion Image Cropping Settings](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/algorithm-switching-02-crop-explained-en.png)
+![Configurações de recorte de imagem para Diffusion](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/hands_on_reproduction/algorithm-switching-02-crop-explained-en.png)
 
 Ao otimizar recorte ou redimensionamento, mantenha o processamento de imagem consistente entre treinamento e deploy. Referências de configuração: [Seeed Diffusion](https://github.com/Seeed-Projects/lerobot/blob/0f392484458cb5ebca0310c0c4c47390a31c80ed/src/lerobot/policies/diffusion/configuration_diffusion.py) · [LeRobot v0.4.4 Diffusion](https://github.com/huggingface/lerobot/blob/v0.4.4/src/lerobot/policies/diffusion/configuration_diffusion.py).
 

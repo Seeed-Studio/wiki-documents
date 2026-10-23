@@ -11,6 +11,6 @@ translation:
 
 import {Redirect} from '@docusaurus/router';
 
-<Redirect to="/robotics/hands_on_algorithm_switching/" />
+<Redirect to="/ja/robotics/hands_on_algorithm_switching/" />
 
 [統合されたポリシー切り替えガイドに進む](/ja/robotics/hands_on_algorithm_switching/)

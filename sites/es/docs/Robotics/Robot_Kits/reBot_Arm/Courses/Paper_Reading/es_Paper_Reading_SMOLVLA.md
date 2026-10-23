@@ -41,7 +41,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DE ARTÍCULOS</span>
   <h1 id="paper-reading-smolvla-title">SmolVLA — Modelos de Visión-Lenguaje-Acción Asequibles</h1>
   <p className="paper-reading-lead">SmolVLA: un modelo de visión-lenguaje-acción para robótica asequible y eficiente</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>VLA ligero</li>
     <li>Datos de la comunidad</li>
     <li>Flow matching</li>
@@ -51,16 +51,16 @@ import '/src/css/paper-reading-style.css';
 
 ## Requisitos previos
 ### VLM y VLA
-![SmolVLA: VLMs and VLAs (Figure 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-09-en.png)
+![SmolVLA: VLM y VLA (Figura 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-09-en.png)
 
 ### Acciones de un solo paso y fragmentos de acción
-![SmolVLA: Single-Step Actions and Action Chunks (Figure 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-02-en.png)
+![SmolVLA: Acciones de un solo paso y fragmentos de acción (Figura 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-02-en.png)
 
 ### ¿Qué es Flow Matching?
-![SmolVLA: What Is Flow Matching? (Figure 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-11-en.png)
+![SmolVLA: ¿Qué es Flow Matching? (Figura 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-11-en.png)
 
 ### Inferencia síncrona y asíncrona
-![SmolVLA: Synchronous and Asynchronous Inference (Figure 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-03-en.png)
+![SmolVLA: Inferencia síncrona y asíncrona (Figura 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-03-en.png)
 
 ---
 
@@ -73,7 +73,7 @@ SmolVLA es un VLA pequeño, eficiente y basado en datos de la comunidad. Reduce 
 
 El artículo también introduce una pila de inferencia asíncrona que separa la percepción y la predicción de acciones de la ejecución. El robot predice su siguiente fragmento mientras ejecuta el actual. A pesar de su tamaño, SmolVLA compite con VLA aproximadamente diez veces más grandes. Los autores evalúan tareas en simulación y con robots reales, y publican el código, los modelos preentrenados y los datos de entrenamiento.
 
-![SmolVLA: 2. Abstract (Figure 21)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-21.png)
+![SmolVLA: 2. Resumen (Figura 21)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-21.png)
 
 ---
 
@@ -102,7 +102,7 @@ Action Chunk
 
 **Cómo entran las imágenes, el lenguaje y el estado en el VLM**
 
-![SmolVLA: 3. SmolVLA's Lightweight Architecture and Complete Network (Figure 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-13-en.png)
+![SmolVLA: 3. Arquitectura ligera y red completa de SmolVLA (Figura 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-13-en.png)
 
 **¿Por qué conservar solo 64 tokens visuales por fotograma?**
 
@@ -175,11 +175,11 @@ Noisy Actions → Cross-Attention
 
 **Flow matching en SmolVLA**
 
-![SmolVLA: 3. SmolVLA's Lightweight Architecture and Complete Network (Figure 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-15-en.png)
+![SmolVLA: 3. Arquitectura ligera y red completa de SmolVLA (Figura 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-15-en.png)
 
 **Flujo de trabajo completo de entrenamiento e inferencia**
 
-![SmolVLA: 3. SmolVLA's Lightweight Architecture and Complete Network (Figure 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-12-en.png)
+![SmolVLA: 3. Arquitectura ligera y red completa de SmolVLA (Figura 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-12-en.png)
 
 - El modelo principal tiene alrededor de 450 millones de parámetros, incluidos aproximadamente 100 millones en el experto en acciones. Durante el entrenamiento, el VLM se congela y se entrena el experto en acciones.
 
@@ -204,7 +204,7 @@ Noisy Actions → Cross-Attention
 - Estas colecciones desconectadas son “islas de datos”. Concatenar archivos por sí solo no las hace utilizables para el preentrenamiento.
 
 ### ¿Cuántos datos de la comunidad se usan?
-![SmolVLA: How Much Community Data Is Used? (Figure 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-08.png)
+![SmolVLA: ¿Cuántos datos de la comunidad se usan? (Figura 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-08.png)
 
 - La selección tiene en cuenta el tipo de robot, el número de episodios, la calidad general y la cobertura de fotogramas.
 
@@ -284,7 +284,7 @@ A_t = [a_t, a_t+1, ... , a_t+n]
 
 - RobotClient solicita nuevas acciones antes de que la cola actual se vacíe, activando la inferencia de forma asíncrona.
 
-![SmolVLA: RobotClient and PolicyServer (Figure 20)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-20.png)
+![SmolVLA: RobotClient y PolicyServer (Figura 20)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-20.png)
 
 - La secuencia es:
 
@@ -302,7 +302,7 @@ New chunk arrives
 Merge or update the action queue
 ```
 
-![SmolVLA: RobotClient and PolicyServer (Figure 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-17.png)
+![SmolVLA: RobotClient y PolicyServer (Figura 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-17.png)
 
 ### El umbral g controla cuándo predecir
 - El artículo usa `g ∈ [0,1]`. RobotClient solicita otro fragmento cuando la proporción de acción restante cae por debajo de `g`:
@@ -323,7 +323,7 @@ Merge or update the action queue
 
 - El artículo ilustra la compensación con `g = 0.7`: consumir parte de la cola antigua y luego solicitar el siguiente fragmento pronto. Esto reduce los huecos sin ejecutar el modelo en cada paso.
 
-![SmolVLA: Threshold g Controls When to Predict (Figure 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-05.png)
+![SmolVLA: El umbral g controla cuándo predecir (Figura 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-05.png)
 
 - En efecto, `g` reserva tiempo de inferencia. Los modelos más lentos o mayores retrasos de red requieren solicitudes más tempranas.
 
@@ -337,9 +337,9 @@ Merge or update the action queue
 ---
 
 ## Configuración experimental
-![SmolVLA: 6. Experimental Setup (Figure 22)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-22-en.png)
+![SmolVLA: 6. Configuración experimental (Figura 22)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-22-en.png)
 
-![SmolVLA: 6. Experimental Setup (Figure 19)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-19.png)
+![SmolVLA: 6. Configuración experimental (Figura 19)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-19.png)
 
 Configuración de entrenamiento
 
@@ -363,7 +363,7 @@ Configuración de entrenamiento
 ## Resultados
 **Simulación**
 
-![SmolVLA: 7. Results (Figure 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-10.png)
+![SmolVLA: 7. Results (Figura 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-10.png)
 
 En LIBERO:
 
@@ -379,13 +379,13 @@ En LIBERO:
 
 **Resultados de transferencia SO101**
 
-![SmolVLA: 7. Results (Figure 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-00.png)
+![SmolVLA: 7. Results (Figura 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-00.png)
 
 - El preentrenamiento comunitario usa principalmente datos de SO100, sin datos de SO101. Tras el ajuste fino en tareas SO101, SmolVLA sigue superando a ACT, lo que demuestra adaptación a otra plataforma.
 
 **Qué aporta el preentrenamiento comunitario**
 
-![SmolVLA: 7. Results (Figure 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-04.png)
+![SmolVLA: 7. Results (Figura 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-04.png)
 
 - Pasar de entrenamiento de una sola tarea a entrenamiento multitarea eleva el éxito promedio de 40.0 a 51.7.
 
@@ -409,7 +409,7 @@ Average completion time: 13.75 seconds → 9.70 seconds
 Tasks completed in a fixed time: 9 → 19
 ```
 
-![SmolVLA: 7. Results (Figure 18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-18.png)
+![SmolVLA: 7. Results (Figura 18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-18.png)
 
 - Con tasas de éxito promedio similares, la inferencia asíncrona completa pick-and-place aproximadamente un 30% más rápido y más que duplica las tareas completadas dentro de un intervalo fijo.
 
@@ -434,7 +434,7 @@ Tasks completed in a fixed time: 9 → 19
 - Impedir que los tokens de acción vean acciones futuras mejora el rendimiento en este experimento, lo que sugiere que la direccionalidad temporal explícita es útil.
 
 ### Flow Matching y regresión directa
-![SmolVLA: Flow Matching and Direct Regression (Figure 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-06.png)
+![SmolVLA: Flow Matching y regresión directa (Figura 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-06.png)
 
 - La principal ventaja de Flow Matching aparece en tareas de horizonte largo, donde el éxito aumenta de 38 a 53.
 
@@ -449,19 +449,19 @@ Los autores comparan:
 
 Con cross-attention, el prefijo alcanza 80.3 de éxito promedio frente a 73.3 para el sufijo. Por lo tanto, el modelo final suministra el estado al VLM junto con imágenes y lenguaje.
 
-![SmolVLA: Where Should State Enter? (Figure 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-16.png)
+![SmolVLA: ¿Dónde debería entrar el estado? (Figura 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-16.png)
 
 La variante de self-attention pura no muestra la misma tendencia. La conclusión respaldada es que el estado como prefijo funciona mejor en el diseño condicionado por VLM elegido, en lugar de ser universalmente superior para toda arquitectura de atención.
 
 ### ¿Qué tan largo debe ser un fragmento de acción?
-![SmolVLA: How Long Should an Action Chunk Be? (Figure 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-14.png)
+![SmolVLA: ¿Qué tan largo debe ser un fragmento de acción? (Figura 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-14.png)
 
 - Fragmentos muy cortos infrautilizan la estructura de secuencia. Fragmentos muy largos son más difíciles de predecir y pueden fomentar una ejecución en bucle abierto excesivamente larga.
 
 - El artículo identifica 10–50 como un equilibrio útil, en lugar de tratar lo más largo como siempre mejor.
 
 ### Predecir 50 pasos no significa ejecutar 50
-![SmolVLA: Predicting 50 Steps Does Not Mean Executing 50 (Figure 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-01.png)
+![SmolVLA: Predecir 50 pasos no significa ejecutar 50 (Figura 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-01.png)
 
 - El modelo puede predecir 50 pasos pero ejecutar solo 10 antes de observar de nuevo, combinando coherencia de secuencia con retroalimentación del entorno.
 
@@ -485,6 +485,6 @@ La variante de self-attention pura no muestra la misma tendencia. La conclusión
 ---
 
 ## Resumen
-![SmolVLA: 10. Summary (Figure 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-07-en.png)
+![SmolVLA: 10. Summary (Figura 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-07-en.png)
 
 </div>

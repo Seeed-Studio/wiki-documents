@@ -16,7 +16,7 @@ keywords:
   - SO101
   - SO-ARM101
   - Hugging Face
-  - Arm
+  - Braço
   - Robótica
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /robotics/hands_on_camera_recording
@@ -40,7 +40,7 @@ import '/src/css/paper-reading-style.css';
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLANTAÇÃO PRÁTICA</span>
   <h1 id="hands-on-camera_recording-title">Coleta de Dados Multi-View</h1>
   <p className="paper-reading-lead">Configure uma ou duas câmeras, identifique dispositivos, grave demonstrações LeRobot, visualize e reproduza conjuntos de dados e adicione ou remova episódios.</p>
-  <ul className="paper-reading-badges" aria-label="In this guide">
+  <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Configuração de câmera</li>
     <li>Gravação de dados</li>
     <li>Visualização e reprodução</li>
