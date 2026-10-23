@@ -163,6 +163,18 @@ const sidebars = {
         { type: 'ref', id: `${K}/Humanoid/Atom-S/ja_Atom-S`, label: 'ヒューマノイドロボット', className: 'sideboard_calss' },
       ]
     },
+    {
+      type: 'category',
+      label: 'コース',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_Introduction`, label: '初心者向けコース' },
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/Paper_Reading/ja_Paper_Reading_Getting_Started`, label: '論文ディープダイブ' },
+        { type: 'link', label: 'NVIDIA Isaac による Sim-to-Real', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+      ],
+    },
     asReferences(actuatorCategory),
     asReferences(sensorCategory),
     asReferences(softwareCategory),
