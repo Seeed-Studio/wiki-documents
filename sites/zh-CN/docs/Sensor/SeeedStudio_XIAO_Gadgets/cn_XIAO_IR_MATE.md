@@ -324,21 +324,22 @@ remote_receiver:
   dump: raw # Keep for learning or debugging other infrared codes
   rmt_symbols: 96
 
-# Gree Climate Control
+# Climate control for a Gree AC. Swap `platform: gree` for another ESPHome
+# climate IR platform (for example daikin, midea, toshiba) and update `id` / `model`.
 climate:
   - platform: gree
     name: "Gree Air Conditioner" # The name displayed in Home Assistant
     id: gree_ac    # Internal ID used by ESPHome, for touch button control
+    transmitter_id: default_ir_transmitter
+    receiver_id: default_ir_receiver
     # --- Required configuration for the gree platform ---
-    model: "yan"   # [IMPORTANT] This is a required parameter. Gree has multiple infrared protocols.
-                   # You may need to try the following values to find the one that suits your air conditioner:
+    model: "yan"   # Required. Gree has multiple infrared protocols.
+                   # Try these values to match your air conditioner:
                    # "generic", "yan", "yaa", "yac", "yac1fb9", "yx1ff", "yag"
                    # "yan" is a common starting point.
-    # Optional configuration:
-    # sensor: my_temperature_sensor_id # If you have an external temperature sensor
     supports_cool: true
-    supports_heat: true # If your Gree AC does not support heating, set to false
-    # Note: According to the documentation, the gree platform does not seem to support receiver_id to sync the state from the original remote
+    supports_heat: true # Set to false if this AC has no heating mode
+    icon: "mdi:air-conditioner"
 
 binary_sensor:
   - platform: gpio
@@ -533,9 +534,9 @@ interval:
 </Details>
 
 3. **自定义你的配置**
-      - **Wi-Fi**：如果你不使用 `!secret` 文件，请取消注释 `wifi:` 部分，并将 `Your_WiFi_SSID` 和 `Your_WiFi_Password` 替换为你自己的 Wi-Fi 信息。
-      - **选择正确的空调协议**：这是最关键的一步！示例中使用的是 `platform: gree`。如果你的空调不是格力，请将其替换为你品牌对应的平台。如何查找支持的品牌？请访问 [ESPHome Climate Components](https://esphome.io/components/climate/index.html) 页面，其中列出了所有支持的品牌及其平台名称（例如 `daikin`、`midea`、`panasonic_ac` 等）。
-          - 选择对应的平台后，你可能还需要根据该平台的文档，对 `model` 或支持的模式等参数进行微调。
+      - **Wi-Fi**：本示例从 `secrets.yaml` 读取 `wifi_ssid` / `wifi_password`。若要直接写在配置里，把 `!secret` 行替换成你的 SSID 和密码即可。
+      - **选择正确的空调协议**：示例已经包含带 `platform: gree` 的 `climate:` 块，并通过 `transmitter_id` 接到 `remote_transmitter`。如果空调是其他品牌，把平台名改成对应值（例如 `daikin`、`midea`、`toshiba`），同时改好 `id` / `model`。支持的品牌见 [ESPHome Climate Components](https://esphome.io/components/climate/index.html)。
+      - **红外发射与 RGB 灯**：两者都使用 ESP32-C3 的 RMT。如果发射器没有启动，保留 `climate` 和 `remote_transmitter` 作为空调控制路径；`light:` 块只是可选的状态指示。
 4. **编译并烧录**
       - 保存你的 YAML 配置。
       - 通过 USB 线将 XIAO IR Mate 连接到运行 HA 的电脑。
