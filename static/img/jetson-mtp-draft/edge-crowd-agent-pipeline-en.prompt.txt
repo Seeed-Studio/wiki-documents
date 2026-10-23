@@ -1,0 +1,43 @@
+Create one polished, accurate English technical pipeline infographic for a Seeed Studio Wiki article about Edge Crowd Agent on NVIDIA Jetson AGX Orin. This is a STATIC EXPLANATORY DIAGRAM, not a screenshot and not a performance chart. Wide landscape canvas around 1800x1200, crisp readable text, generous whitespace. White / very pale blue background, dark navy text, restrained teal-blue accents, amber for the trigger and green for saved outputs. Modern flat rounded cards with clear arrows, small camera/person/ROI/database/brain/report line icons. Professional documentation style, no 3D, no photorealism, no fake console, no company logos.
+
+Exact title at top: "Edge Crowd Agent Pipeline".
+Build a very clear THREE-ROW top-to-bottom pipeline, with each row read left to right. Use stage numbers 1 to 8. Layout and connections:
+ROW 1 (label "VIDEO DETECTION") contains four cards across:
+1 "Video input", secondary "Prerecorded clip · continuous processing", icon video with walking-person outlines.
+arrow ->
+2 "Detect & track", secondary "YOLO11n + ByteTrack", icon bounding boxes and track IDs.
+arrow ->
+3 "Count people in ROI", secondary "Current occupancy", icon polygon with three person markers.
+arrow ->
+4 "Threshold reached?", secondary "≥ 5 people for 1.5 s", amber diamond or amber-tinted card.
+A small dashed loop FROM card 4 back toward card 3, with label "No · keep monitoring". A solid arrow exits card 4 downward labeled "Yes".
+
+ROW 2 (label "EVENT & LOCAL LLM") uses a clear left-to-right sequence of three larger cards with generous room:
+5 "Freeze event", secondary "Counts · tracks · timestamp", and a small lower line "Save snapshot + JSON + SQLite".
+arrow labeled "Structured evidence" ->
+6 "Choose local tools", secondary "Qwen3.5-4B · llama.cpp", small label "Validated JSON tool plan".
+arrow ->
+7 "Create alert & notify", secondary "Local alert + console notification", small tag "Tool results".
+Make the Yes connector from the row-1 threshold card route outside the right edge of the row, then across a reserved empty corridor between rows and into the LEFT input of card 5. No connector should cross a card, label, or another edge. Make arrow direction unambiguous.
+
+ROW 3 has the final stage in a wide central panel:
+8 "Analyze & save report", secondary "Event evidence + real tool results → LLM assessment → Markdown report".
+Connect card 7 downward to stage 8 with an arrow labeled "Real tool results". Add three small readable report section chips inside stage 8: "Assessment", "Dwell & movement", "Response". Add one tiny unobtrusive note beside the output: "Brief tracks do not establish intent or prolonged loitering."
+
+Add a tasteful compact TWO-MODE INSET attached visually to the LLM region (cards 6 and 8), not to video detection. Heading "MTP changes LLM decoding". Two parallel illustrative mini-rows:
+"MTP OFF" followed by "Generate one token at a time" and a simple serial token sequence.
+"MTP ON" followed by "Draft candidates → verify → accept" and a batched token diagram with checks.
+A small note below the inset: "Select one mode per run".
+Use the exact phrase "Same event for fair ON/OFF benchmarks" as a small footer near that inset.
+
+CRITICAL FACTS AND ACCURACY:
+- The LLM receives structured numerical / tracking evidence, not video pixels. Do not draw a direct camera-to-LLM arrow.
+- Trigger concerns current group occupancy sustained for 1.5 seconds, never cumulative entries or a per-person dwell-time threshold.
+- Freeze and persist event evidence BEFORE LLM processing.
+- Tool plan precedes actual local alert and console notification; actual tool results are supplied for the report stage; report is actually saved.
+- ON/OFF are alternative decoding settings of one local LLM, NOT two simultaneously running models.
+- MTP affects both LLM tool planning and LLM report generation, never YOLO, tracking or database writes.
+- This is a video demo, do NOT label the input "live camera".
+- Do not include invented speed numbers, cloud services, external messaging, identity or danger detection.
+- All prose is English, preserve the ≥ sign, spell Qwen3.5-4B and ByteTrack exactly.
+- Text must be readable when the image is placed 1000 pixels wide in a wiki. Prefer sparse layout and accurate arrows to extra decoration. No captions like "Figure 1", no watermark.
