@@ -1,6 +1,6 @@
 ---
 description: Este guia de desenvolvedor apresenta o console web, ROS 2, RobStride/SocketCAN, simulação MuJoCo, preensão visual e instalação, execução e fluxo de trabalho de desenvolvimento secundário do Agente LLM/MCP da pilha de Gêmeo Digital & Controle do reBot Arm para o B601-RS.
-title: B601-RS com Controlador Web
+title: "Sistema de Controle Web do reBot-RS: Robô Real e MuJoCo"
 keywords:
   - reBot Arm
   - B601-RS
@@ -32,7 +32,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 # reBot Arm B601-RS Gêmeo Digital & Pilha de Controle
 
 <p align="center">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </p>
 
 <div className="rebot-buy-button-group">

@@ -20,6 +20,12 @@ updatedAt: '2026-09-16'
 
 Lerobot 中 SO-ARM 的舵机调试工具
 
+<div className="get-one-now-panel">
+  <a className="get-one-now-button" href="https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84" target="_blank" rel="noopener noreferrer">
+    立即购买 SO-ARM101 套件 / Get One Now 🖱️
+  </a>
+</div>
+
 ## 简介
 
 舵机调试工具（Seeed_RoboController）是一款面向 Lerobot/SO-ARM 机械臂的图形化调试工具。通过该工具，你可以快速检测舵机状态、重新校准舵机 ID、写入中位值、单点控制舵机以及管理机械臂校准文件，从而更方便地完成主臂与从臂的组装、调试与维护。

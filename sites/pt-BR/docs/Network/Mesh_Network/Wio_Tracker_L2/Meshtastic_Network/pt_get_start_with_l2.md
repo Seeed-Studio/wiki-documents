@@ -37,7 +37,7 @@ Selecione o dispositivo de destino como `Seeed Wio Tracker L2` e escolha o firmw
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
-[LINE_39>Ligue o dispositivo, clique em `Enter DFU Mode`, haverá uma porta serial chamada `Tracker L2`, clique nela e conecte.
+Ligue o dispositivo, clique em `Enter DFU Mode`, haverá uma porta serial chamada `Tracker L2`, clique nela e conecte.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/StartFlash.png" alt="pir" width={800} height="auto" /></p>
 

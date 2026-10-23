@@ -852,23 +852,37 @@ uv run python example/sim/traj_sim.py
 <span className="rebot-step-number">S4</span>
 <div className="rebot-step-content">
 <h4>可视化工具</h4>
-<p className="rebot-step-label">仿真 Demo 4 · sim/visualizer.py</p>
+<p className="rebot-step-label">仿真 Demo 4 · viz_test.py</p>
 
-MeshCat 可视化器封装，提供统一的机器人显示接口。
+基于 MeshCat 可视化与逆运动学，让仿真机械臂逐步绘制爱心，并在上方书写 LOVE。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_MeshCat_LOVE.png" alt="viz_test.py 绘制爱心与 LOVE 的效果" />
+</div>
 
 **主要功能**：
-- 加载 URDF 模型并显示机器人
-- 绘制 3D 折线路径（参考/实际）
-- 显示 IK 目标位姿（三色轴+球体）
-- 支持关节轨迹动画播放
+- 加载 URDF 模型，显示机械臂运动
+- 逐点求解逆运动学，沿爱心和字母路径移动
+- 灰线显示理想路径，红线逐步显示仿真末端轨迹
+- 字母笔画之间抬笔移动，不绘制连接线
+- 绘制完成后输出最大位置误差
 
-**使用示例**：
-```python
-from example.sim.visualizer import Visualizer
-viz = Visualizer()
-viz.update(q)  # 更新机器人位姿
-viz.draw_path(points, "path_name", color)  # 绘制路径
+**运行方式**：
+
+在项目根目录执行：
+
+```bash
+uv run python viz_test.py
 ```
+
+**操作步骤**：
+1. 在浏览器打开终端打印的 MeshCat 地址。
+2. 回到终端，按回车开始绘制爱心和 LOVE。
+3. 绘制结束后，可拖动浏览器视角查看结果。
+4. 再次按回车退出程序。
+
+红色轨迹由仿真模型的正运动学计算得到，不代表实机测量结果。
 
 </div>
 </section>
