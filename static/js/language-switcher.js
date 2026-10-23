@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-21 17:41:49 (北京时间)
-// 多语言页面: 2605 个
+// 生成时间: 2026-10-22 18:00:36 (北京时间)
+// 多语言页面: 2623 个
 
 (function() {
   'use strict';
@@ -18254,6 +18254,78 @@
     "ja",
     "es",
     "pt"
+  ],
+  "/robotics/hands_on_so101_algorithm_switching": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_smolvla": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_evo1": [
+    "cn",
+    "en"
+  ],
+  "/robotics/hands_on_camera_recording": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_act": [
+    "cn",
+    "en"
+  ],
+  "/robotics/hands_on_dataset_quality": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_getting_started": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_wall_oss": [
+    "cn",
+    "en"
+  ],
+  "/robotics/hands_on_act_deployment": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_hardware_and_teleoperation": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_gr00t_n1": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_pi0_fast": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_pi05": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_pi0": [
+    "cn",
+    "en"
+  ],
+  "/robotics/hands_on_act_training": [
+    "cn",
+    "en"
+  ],
+  "/robotics/hands_on_task_design": [
+    "cn",
+    "en"
+  ],
+  "/robotics/paper_reading_eo1": [
+    "cn",
+    "en"
+  ],
+  "/robotics/hands_on_algorithm_switching": [
+    "cn",
+    "en"
   ]
 };
 

@@ -75,13 +75,6 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </div>
     </div>
     <div className="learning-group">
-      <h4>Course</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Beginner Course</b></div></a>
-        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>DLI Course: Sim-to-Real VLA Pipeline</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
       <h4>Open-Source Resources</h4>
       <div className="rebot-resource-list">
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">reBot-RS hardware collection</a>
@@ -122,12 +115,6 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM with ROS2</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM with Isaac Sim</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web Control System: Real Robot & MuJoCo</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>Course</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Beginner Course</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -173,12 +160,6 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac Simulation</b></div></a>
         <a className="step-card" href="/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab Reinforcement Learning</b></div></a>
         <a className="step-card optional" href="/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>Course</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/robotics/soarm_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Beginner Course</b></div></a>
       </div>
     </div>
   </div>
@@ -271,6 +252,49 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
   </div>
 </details>
 
+
+  <section id="courses" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Learning</span>
+        <h2>Courses</h2>
+      </div>
+      <p>A series of free courses written and shared by the Seeed Robotics team.</p>
+    </div>
+    <div className="learning-steps">
+      <a className="step-card" href="/robotics/rebot_physical_ai_course_introduction/">
+        <span className="step-index">🎓</span>
+        <div><b>Beginner Course</b></div>
+        <span className="course-compatibility" aria-label="Supported robotic arms">
+          <span className="course-compatibility-badge">reBot-rs</span>
+          <span className="course-compatibility-badge">reBot-dm</span>
+        </span>
+      </a>
+      <a className="step-card" href="/robotics/soarm_physical_ai_course_introduction/">
+        <span className="step-index">🎓</span>
+        <div><b>Beginner Course</b></div>
+        <span className="course-compatibility" aria-label="Supported robotic arms">
+          <span className="course-compatibility-badge">SO101</span>
+        </span>
+      </a>
+      <a className="step-card" href="/robotics/paper_reading_getting_started/">
+        <span className="step-index">📄</span>
+        <div><b>Paper Deep-Dive</b></div>
+        <span className="course-compatibility" aria-label="Supported robotic arms">
+          <span className="course-compatibility-badge">reBot-rs</span>
+          <span className="course-compatibility-badge">reBot-dm</span>
+          <span className="course-compatibility-badge">SO101</span>
+        </span>
+      </a>
+      <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer">
+        <span className="step-index">📘</span>
+        <div><b>Sim-to-Real with NVIDIA Isaac</b></div>
+        <span className="course-compatibility" aria-label="Supported robotic arms">
+          <span className="course-compatibility-badge">reBot-rs</span>
+        </span>
+      </a>
+    </div>
+  </section>
 
     </RotatingProductShowcase>
   </section>
