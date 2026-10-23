@@ -69,15 +69,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS 与 ROS2</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 控制系统</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web控制系统：真机与 MuJoCo</b></div></a>
         <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>课程</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/cn/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
-        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>DLI 课程：Sim-to-Real VLA 全流程</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -119,13 +112,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/cn/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM 与 ROS2</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 控制系统</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>课程</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/cn/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web控制系统：真机与 MuJoCo</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -263,6 +250,49 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
   </div>
 </details>
 
+
+  <section id="courses" className="section-block compact-section">
+    <div className="section-title-row">
+      <div>
+        <span className="section-kicker">Learning</span>
+        <h2>课程</h2>
+      </div>
+      <p>系列免费课程，由 Seeed 机器人团队撰写并分享。</p>
+    </div>
+    <div className="learning-steps">
+      <a className="step-card" href="/cn/robotics/rebot_physical_ai_course_introduction/">
+        <span className="step-index">🎓</span>
+        <div><b>入门课程</b></div>
+        <span className="course-compatibility" aria-label="适用机械臂">
+          <span className="course-compatibility-badge">reBot-rs</span>
+          <span className="course-compatibility-badge">reBot-dm</span>
+        </span>
+      </a>
+      <a className="step-card" href="/cn/robotics/soarm_physical_ai_course_introduction/">
+        <span className="step-index">🎓</span>
+        <div><b>入门课程</b></div>
+        <span className="course-compatibility" aria-label="适用机械臂">
+          <span className="course-compatibility-badge">SO101</span>
+        </span>
+      </a>
+      <a className="step-card" href="/cn/robotics/paper_reading_getting_started/">
+        <span className="step-index">📄</span>
+        <div><b>论文精读</b></div>
+        <span className="course-compatibility" aria-label="适用机械臂">
+          <span className="course-compatibility-badge">reBot-rs</span>
+          <span className="course-compatibility-badge">reBot-dm</span>
+          <span className="course-compatibility-badge">SO101</span>
+        </span>
+      </a>
+      <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer">
+        <span className="step-index">📘</span>
+        <div><b>Sim-to-Real with NVIDIA Isaac</b></div>
+        <span className="course-compatibility" aria-label="适用机械臂">
+          <span className="course-compatibility-badge">reBot-rs</span>
+        </span>
+      </a>
+    </div>
+  </section>
 
     </RotatingProductShowcase>
   </section>

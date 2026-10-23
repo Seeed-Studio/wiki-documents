@@ -164,7 +164,9 @@ export const ProductSelect = ({ children, options, lang }) => {
       }}>
         <Image 
           width={600}
+          wrapperStyle={{maxWidth: '100%'}}
           src={imgUrl}
+          alt={selectedProduct?.label || ''}
         />
         <Select
           options={options}

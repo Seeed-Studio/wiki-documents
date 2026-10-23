@@ -70,7 +70,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>ビジュアルグラスピングによる reBot-RS</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>ROS2 を用いた reBot-RS</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>Isaac Sim を用いた reBot-RS</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 制御システム</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 制御システム：実機と MuJoCo</b></div></a>
         <a className="step-card" href="/ja/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>Agent Claw を用いた reBot-RS</b></div></a>
       </div>
     </div>
@@ -121,7 +121,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM ビジュアルグラスプ</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>ROS2 を用いた reBot-DM</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>Isaac Sim を用いた reBot-DM</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 制御システム</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 制御システム：実機と MuJoCo</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -173,6 +173,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac シミュレーション</b></div></a>
         <a className="step-card" href="/ja/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab 強化学習</b></div></a>
         <a className="step-card optional" href="/ja/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>コース</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/ja/robotics/soarm_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>初心者向けコース</b></div></a>
       </div>
     </div>
   </div>

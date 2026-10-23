@@ -641,7 +641,7 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 
 #rebot-rs {
-  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png');
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp');
 }
 #rebot-rs .product-head h3 {
   max-width: none;
@@ -797,6 +797,33 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 .step-card.optional .step-index { background: #64748b; }
 .step-card.optional em { color: #475569; background: #e2e8f0; border-color: rgba(100, 116, 139, 0.28); }
+
+.robotics-page .robotics-courses .step-card {
+  border: 1.5px solid color-mix(in srgb, var(--rp-accent) 38%, var(--rp-border-strong));
+}
+.robotics-page .robotics-courses .step-card:hover,
+.robotics-page .robotics-courses .step-card:focus-visible {
+  border-color: var(--rp-accent);
+}
+
+.course-compatibility {
+  grid-area: tag;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+.course-compatibility-badge {
+  padding: 0.28rem 0.58rem;
+  border: 1px solid var(--rp-accent-border);
+  border-radius: 999px;
+  background: var(--rp-accent-soft);
+  color: var(--rp-text);
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
 
 /* Grouped learning lists inside reBot product cards */
 .learning-group + .learning-group { margin-top: 1.15rem; }
@@ -1163,6 +1190,28 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 .rotating-showcase .rotating-product-card-inner > .rotating-product-side {
   display: none;
+}
+.rotating-product-card-inner > .robotics-courses {
+  display: none;
+  margin: 1rem 0 0;
+}
+.rotating-product-card[data-expanded='true'] .rotating-product-card-inner > .robotics-courses {
+  display: block;
+}
+.robotics-courses .section-title-row {
+  margin-bottom: 0.75rem;
+}
+.robotics-courses .section-kicker {
+  display: none;
+}
+.robotics-courses .section-title-row h2 {
+  font-size: 1.15rem;
+}
+.robotics-courses .section-title-row p {
+  font-size: 0.82rem;
+}
+.robotics-courses .learning-steps {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
 }
 .rotating-showcase .rotating-product-card[data-expanded='true'] {
   display: block;

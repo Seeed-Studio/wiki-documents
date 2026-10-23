@@ -10,7 +10,7 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 自由度
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 slug: /rebot_b601_rs_getting_started
 translation:
   skip: [zh-CN]
@@ -31,7 +31,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" />
 </div>
 
 <div className="rebot-buy-button-group">

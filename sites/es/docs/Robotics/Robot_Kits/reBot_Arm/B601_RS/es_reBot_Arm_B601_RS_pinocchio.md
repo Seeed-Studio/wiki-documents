@@ -9,7 +9,7 @@ keywords:
   - LeRobot
   - Cinemática
   - Robostride
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 slug: /rebot_arm_b601_rs_pinocchio_meshcat
 sku: 100019336
 last_update:
@@ -29,7 +29,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -886,25 +886,39 @@ uv run python example/sim/traj_sim.py
 <span className="rebot-step-number">S4</span>
 <div className="rebot-step-content">
 <h4>Herramienta de visualización</h4>
-<p className="rebot-step-label">Demostración de simulación 4 · sim/visualizer.py</p>
+<p className="rebot-step-label">Demostración de simulación 4 · viz_test.py</p>
 
-[LINE_126>Wrapper del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.
+Basado en la visualización de MeshCat y la cinemática inversa, el brazo robótico simulado dibuja gradualmente un corazón y escribe "LOVE" encima de él.
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_MeshCat_LOVE.png" alt="Resultado del dibujo del corazón y LOVE con viz_test.py" />
+</div>
 
 **Funciones principales**:
 
-- Cargar el modelo URDF y mostrar el robot
-- Dibujar trayectorias polilínea 3D (referencia/real)
-- Mostrar la pose objetivo de CI (ejes de tres colores + esfera)
-- Admitir reproducción de animación de trayectorias articulares
+- Cargar el modelo URDF y mostrar el movimiento del brazo robótico
+- Resolver la cinemática inversa punto por punto, avanzando por las trayectorias del corazón y las letras
+- La línea gris muestra la trayectoria ideal y la línea roja muestra de forma progresiva la trayectoria simulada del efector final
+- Entre los trazos de las letras, el desplazamiento se hace con el lápiz levantado y no se dibujan líneas de conexión
+- Mostrar el error de posición máximo al finalizar el dibujo
 
-**Ejemplo de uso**:
+**Comando de ejecución**:
 
-```python
-from example.sim.visualizer import Visualizer
-viz = Visualizer()
-viz.update(q)  # Update robot pose
-viz.draw_path(points, "path_name", color)  # Draw path
+Ejecuta desde el directorio raíz del proyecto:
+
+```bash
+uv run python viz_test.py
 ```
+
+**Pasos**:
+
+1. Abre en el navegador la URL de MeshCat que aparece en la terminal.
+2. Vuelve a la terminal y pulsa Enter para empezar a dibujar el corazón y LOVE.
+3. Cuando termine el dibujo, arrastra en el navegador para ver el resultado desde distintos ángulos.
+4. Pulsa Enter de nuevo para salir del programa.
+
+La trayectoria roja se calcula con la cinemática directa del modelo de simulación y no representa mediciones del robot real.
 
 </div>
 </section>

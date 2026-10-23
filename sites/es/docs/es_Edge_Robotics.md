@@ -70,7 +70,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/es/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS con agarre visual</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS con ROS2</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS con Isaac Sim</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de control web de reBot-RS</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de control web de reBot-RS: robot real y MuJoCo</b></div></a>
         <a className="step-card" href="/es/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS con Agent Claw</b></div></a>
       </div>
     </div>
@@ -121,7 +121,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/es/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>Agarre visual de reBot-DM</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM con ROS2</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM con Isaac Sim</b></div></a>
-        <a className="step-card" href="/es/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de control web de reBot-DM</b></div></a>
+        <a className="step-card" href="/es/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de control web de reBot-DM: robot real y MuJoCo</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -173,6 +173,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/es/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>Simulación LeIsaac</b></div></a>
         <a className="step-card" href="/es/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Aprendizaje por refuerzo con Isaac Lab</b></div></a>
         <a className="step-card optional" href="/es/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>Curso</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/es/robotics/soarm_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para principiantes</b></div></a>
       </div>
     </div>
   </div>

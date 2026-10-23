@@ -1,6 +1,6 @@
 ---
 description: Esta guía para desarrolladores presenta la consola web, ROS 2, RobStride/SocketCAN, la simulación MuJoCo, el agarre visual y la instalación, ejecución y flujo de trabajo de desarrollo secundario del Agente LLM/MCP del ReBot Arm Digital Twin & Control Stack para el B601-RS.
-title: B601-RS con controlador web
+title: "Sistema de control web de reBot-RS: robot real y MuJoCo"
 keywords:
   - reBot Arm
   - B601-RS
@@ -32,7 +32,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 # reBot Arm B601-RS Digital Twin & Control Stack
 
 <p align="center">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </p>
 
 <div className="rebot-buy-button-group">
