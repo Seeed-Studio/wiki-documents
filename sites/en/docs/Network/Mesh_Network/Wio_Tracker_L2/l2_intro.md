@@ -9,10 +9,10 @@ slug: /meshtastic_wio_tracker_l2_intro
 sku: 100029766
 sidebar_position: 0
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-11'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/
 ---
 
@@ -107,7 +107,7 @@ The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtast
   </tr>
     <tr>
     <td colspan="1" rowspan="3">**Audio**</td>
-    <td colspan="1">I2S Codec: ES8311</td>
+    <td colspan="1">I2S Codec</td>
   </tr>
   <tr>
     <td colspan="1">MIC</td>
@@ -121,7 +121,7 @@ The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtast
   </tr>
     <tr>
     <td colspan="1">**Dimension**</td>
-    <td colspan="1">(Antenna folded) L: 87.5 cm, W: 69 cm, H: 26.6 cm</td>
+    <td colspan="1">(Antenna folded) L: 87.5 mm, W: 69 mm, H: 26.6 mm</td>
   </tr>
   <tr>
     <td colspan="1">**Device Weight**</td>
