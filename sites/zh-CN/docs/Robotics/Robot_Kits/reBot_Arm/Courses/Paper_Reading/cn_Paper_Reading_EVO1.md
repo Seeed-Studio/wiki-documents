@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>交叉注意力</li>
     <li>两阶段训练</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2511.04555" target="_blank" rel="noopener noreferrer" aria-label="在 arXiv 阅读 Evo-1 论文原文">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>阅读论文原文</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## 先验知识：从理解指令到输出动作

@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>BPE compression</li>
     <li>Autoregressive policies</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2501.09747" target="_blank" rel="noopener noreferrer" aria-label="Read the FAST paper on arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Read the paper</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 **Relationship to π0:** The paper is titled FAST; π0-FAST is the policy trained using it. FAST is a tokenization method, FAST+ a pre-trained universal action tokenizer, and π0-FAST an autoregressive VLA using this representation. It shares the PaliGemma backbone approach with π0 but changes action generation; it is not merely a compression preprocessor added to π0's flow-matching expert.

@@ -74,18 +74,26 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </div>
     </div>
     <div className="learning-group">
+      <h4>课程</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
+        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>DLI 课程：Sim-to-Real VLA 全流程</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>常用资源</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS" target="_blank" rel="noopener noreferrer">reBot-RS 硬件资料合集</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">reBot-RS 机械臂描述文件（URDF / Mesh）</a>
-        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS 数字孪生 / Web 控制系统</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
-        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
-        <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
-        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">LeRobot robot adapter</a>
-        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot teleoperator adapter</a>
-        <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">视觉抓取 Demo</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">reBot-RS 机械臂描述与仿真模型（URDF / MJCF / Mesh）</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/README_zh.md" target="_blank" rel="noopener noreferrer">相机支架合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS/3D_Printed_Parts/Soft_Gripper" target="_blank" rel="noopener noreferrer">柔性夹爪套装（RS / DM 共用）</a>
+        <a href="https://motorbridge.seeedstudio.com/" target="_blank" rel="noopener noreferrer">MotorBridge 电机 SDK 与调试指南</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README_zh.md" target="_blank" rel="noopener noreferrer">reBot-RS 硬件资料与物料清单（BOM）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/reBot_B601_RS_v1.0_20260625.step" target="_blank" rel="noopener noreferrer">reBot-RS 整机 STEP 模型（v1.0）</a>
+        <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS 数字孪生 / Web 控制系统</a>
+        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Pinocchio 运动学与控制代码</a>
+        <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">LeRobot 从臂适配器（B601）</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot 主臂遥操作适配器（102）</a>
       </div>
     </div>
   </div>
@@ -116,19 +124,26 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </div>
     </div>
     <div className="learning-group">
+      <h4>课程</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>入门课程</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>常用资源</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM" target="_blank" rel="noopener noreferrer">reBot-DM 硬件资料合集</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">reBot-DM 机械臂描述文件（URDF / Mesh）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">reBot-DM 机械臂描述与仿真模型（URDF / MJCF / Mesh）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/README_zh.md" target="_blank" rel="noopener noreferrer">相机支架合集</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper" target="_blank" rel="noopener noreferrer">柔性夹爪套装（RS / DM 共用）</a>
+        <a href="https://motorbridge.seeedstudio.com/" target="_blank" rel="noopener noreferrer">MotorBridge 电机 SDK 与调试指南</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/readme_zh.md" target="_blank" rel="noopener noreferrer">reBot-DM 硬件资料与物料清单（BOM）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/reBot_B601_DM_v1.1_20260625.step" target="_blank" rel="noopener noreferrer">reBot-DM 整机 STEP 模型（v1.1）</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">reBot-DM 真机性能测试</a>
         <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">reBot-DM 数字孪生 / Web 控制系统</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm" target="_blank" rel="noopener noreferrer">reBot-DevArm 总仓库</a>
-        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Python SDK</a>
+        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Pinocchio 运动学与控制代码</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">ROS2 控制器</a>
-        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">LeRobot robot adapter</a>
-        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot teleoperator adapter</a>
-        <a href="https://github.com/Seeed-Projects/reBot-Isaacsim" target="_blank" rel="noopener noreferrer">Isaac Sim</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm-Grasp" target="_blank" rel="noopener noreferrer">视觉抓取 Demo</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/camera-mounts/README_zh.md" target="_blank" rel="noopener noreferrer">相机支架合集</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">LeRobot 从臂适配器（B601）</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">LeRobot 主臂遥操作适配器（102）</a>
       </div>
     </div>
   </div>
