@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Flow matching</li>
     <li>Cross-embodiment training</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2410.24164" target="_blank" rel="noopener noreferrer" aria-label="Read the pi0 paper on arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Read the paper</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 π0 uses the pre-trained PaliGemma vision-language model as a semantic backbone and adds an approximately 300M-parameter action expert. Conditional flow matching generates continuous action chunks, while large-scale cross-robot pre-training and high-quality task post-training adapt the same model to single-arm, bimanual, and mobile systems.

@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Uni-CoT</li>
     <li>エンボディド QA</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2509.11766" target="_blank" rel="noopener noreferrer" aria-label="arXiv で WALL-OSS の論文を読む">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>論文を読む</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## 前提知識：ゴールと実行をつなぐ

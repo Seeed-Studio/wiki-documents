@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Uni-CoT</li>
     <li>QA encarnado</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2509.11766" target="_blank" rel="noopener noreferrer" aria-label="Leer el artículo de WALL-OSS en arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Leer el artículo</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## Requisitos previos: conectar objetivos con ejecución

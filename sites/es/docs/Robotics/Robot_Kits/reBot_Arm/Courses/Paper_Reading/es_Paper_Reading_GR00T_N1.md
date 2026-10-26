@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Pirámide de datos</li>
     <li>Flow matching</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2503.14734" target="_blank" rel="noopener noreferrer" aria-label="Leer el artículo de GR00T N1 en arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Leer el artículo</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## GR00T N1.7: Adaptación y Fine-Tuning

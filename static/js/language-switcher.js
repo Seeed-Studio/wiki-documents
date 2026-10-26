@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-23 13:57:38 (北京时间)
-// 多语言页面: 2623 个
+// 生成时间: 2026-10-26 11:06:10 (北京时间)
+// 多语言页面: 2625 个
 
 (function() {
   'use strict';
@@ -969,6 +969,13 @@
     "pt"
   ],
   "/vnc_for_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/accelerate_llm_inference_mtp": [
     "cn",
     "en",
     "es",
@@ -4378,6 +4385,13 @@
     "pt"
   ],
   "/recamera_pro_wifi_access": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_frigate": [
     "cn",
     "en",
     "es",

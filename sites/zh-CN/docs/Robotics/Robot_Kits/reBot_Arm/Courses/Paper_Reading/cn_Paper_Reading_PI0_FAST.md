@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>BPE 压缩</li>
     <li>自回归策略</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2501.09747" target="_blank" rel="noopener noreferrer" aria-label="在 arXiv 阅读 FAST 论文原文">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>阅读论文原文</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 **与上一篇 π0 的关系：** 本文正式题目是 FAST，π0\-FAST 是其中训练出的策略模型。FAST 是动作分词方法；FAST\+ 是预先训练好的通用动作分词器；π0\-FAST 是使用这类分词器进行自回归动作预测的 VLA。它与原 π0 共享 PaliGemma 视觉语言骨干路线，但动作生成机制发生了变化，不能理解为给原来的流匹配动作专家增加一个压缩前处理。

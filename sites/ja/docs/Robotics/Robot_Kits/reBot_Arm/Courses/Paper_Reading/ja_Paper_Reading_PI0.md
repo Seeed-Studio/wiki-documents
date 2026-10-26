@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>フローマッチング</li>
     <li>クロスエンボディメント学習</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2410.24164" target="_blank" rel="noopener noreferrer" aria-label="arXiv で π0 の論文を読む">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>論文を読む</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 π0 は、意味的バックボーンとして事前学習済みの PaliGemma ビジョン・言語モデルを用い、およそ 3 億パラメータのアクションエキスパートを追加します。条件付きフローマッチングによって連続アクションチャンクを生成し、大規模なクロスロボット事前学習と高品質なタスク事後学習によって、同一モデルを単腕・双腕・モバイルシステムへ適応させます。
