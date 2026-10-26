@@ -1,1 +1,0 @@
-Edge Crowd Agent pipeline from video detection and ROI alerts to local LLM tools and reports, with MTP ON/OFF decoding.
