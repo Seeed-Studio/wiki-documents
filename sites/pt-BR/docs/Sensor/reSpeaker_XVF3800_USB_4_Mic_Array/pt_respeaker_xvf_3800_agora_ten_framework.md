@@ -285,6 +285,8 @@ A atualização de firmware é uma etapa obrigatória e é fortemente recomendad
 
 #### Opcional: Alternar para FlowSpeech TTS
 
+Use a extensão compatível com a API pública v1 do [PR do provedor #1](https://github.com/Seeed-Projects/seeed-respeaker-agora-tenframework/pull/1); essa atualização ainda aguarda integração no projeto. Ela exige uma chave de API de desenvolvedor, uma assinatura paga Basic, Pro ou Scale ativa e créditos disponíveis. A extensão cria um trabalho em `/api/v1/tts/jobs`, consulta o estado em intervalos de pelo menos cinco segundos, baixa o WAV sem credenciais de API e extrai as amostras PCM. O áudio começa após o download completo, não durante a geração. Reserve tempo suficiente; cancelar a reprodução local não cancela o trabalho no servidor. Consulte o [guia da API pública](https://flowspeech.io/docs/public-api).
+
 A extensão FlowSpeech gera áudio PCM de 24 kHz, mono e 16 bits, e pode ser conectada diretamente ao nó `tts` deste exemplo. Abra `agents/examples/voice-assistant/tenapp/property.json` e substitua o nó chamado `tts` por:
 
 ```json
@@ -294,6 +296,8 @@ A extensão FlowSpeech gera áudio PCM de 24 kHz, mono e 16 bits, e pode ser con
   "addon": "flowspeech_tts_python",
   "extension_group": "tts",
   "property": {
+    "total_timeout": 600.0,
+    "max_retries": 2,
     "dump": false,
     "dump_path": "./",
     "params": {
