@@ -1,6 +1,28 @@
 const docList = [
   [
     {
+      "path": "/jetson/accelerate_llm_inference_mtp",
+      "image": "https://files.seeedstudio.com/wiki/Jetson/Application/jetson-mtp-cover-en.png",
+      "title": "Speed Up llama.cpp on NVIDIA Jetson AGX Orin with MTP",
+      "date": "2026-10-23",
+      "title_cn": "使用 MTP 加速 NVIDIA Jetson AGX Orin 上的 llama.cpp",
+      "title_ja": "NVIDIA Jetson AGX Orin 上の llama.cpp を MTP で高速化",
+      "title_es": "Acelera llama.cpp en NVIDIA Jetson AGX Orin con MTP",
+      "title_pt": "Acelere o llama.cpp no NVIDIA Jetson AGX Orin com MTP"
+    },
+    {
+      "path": "/recamera_firgate",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
+      "title": "Integrate reCamera into Frigate",
+      "date": "2026-10-18T00:00:00.000Z",
+      "title_cn": "将 reCamera 集成到 Frigate 中",
+      "title_ja": "reCamera を Frigate に統合する",
+      "title_es": "Integrar reCamera en Frigate",
+      "title_pt": "Integrar a reCamera ao Frigate"
+    }
+  ],
+  [
+    {
       "path": "/t1000e_meshcore_contact_sharing_companion_repeat",
       "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/application/t1000e-meshcore-hero.png",
       "title": "Extend Your MeshCore Network with T1000-E: Contact Sharing and Companion Repeat",
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "SO-ARM101 トレーニングガイド",
       "title_es": "Guía de entrenamiento SO-ARM101",
       "title_pt": "Guia de Treinamento SO-ARM101"
-    }
-  ],
-  [
-    {
-      "path": "/ai_robotics_deploy_tensorrt_model_connect_on_jetson",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100003716-gallery_img_1_1.jpg",
-      "title": "Deploy TensorRT-Model-Connect on Jetson AGX Orin",
-      "date": "2026-09-20",
-      "title_cn": "在 Jetson AGX Orin 上部署 TensorRT-Model-Connect",
-      "title_ja": "Jetson AGX Orin に TensorRT-Model-Connect をデプロイする",
-      "title_es": "Implementar TensorRT-Model-Connect en Jetson AGX Orin",
-      "title_pt": "Implantar TensorRT-Model-Connect no Jetson AGX Orin"
-    },
-    {
-      "path": "/jetson/recomputer_rugged_j401/industrial_vision",
-      "image": "https://files.seeedstudio.com/wiki/rugged/rugged_banner.png",
-      "title": "reComputer Rugged J401 for Industrial Vision",
-      "date": "2026-09-20",
-      "title_cn": "面向工业视觉的 reComputer Rugged J401",
-      "title_ja": "産業用ビジョン向け reComputer Rugged J401",
-      "title_es": "reComputer Rugged J401 para Visión Industrial",
-      "title_pt": "reComputer Rugged J401 para Visão Industrial"
     }
   ]
 ];
