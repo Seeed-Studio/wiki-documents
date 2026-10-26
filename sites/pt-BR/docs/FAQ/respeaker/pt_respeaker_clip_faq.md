@@ -10,7 +10,7 @@ keywords:
   - reSpeaker Clip documentation
   - live transcription
   - mechanical drawing
-createdAt: '2026-09-03'
+createdAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_clip_faq/
 updatedAt: '2026-09-03'
 ---
@@ -36,22 +36,22 @@ Esta página contém respostas verificadas para o reSpeaker Clip. Cada resposta 
 
 **Última verificação:** 2026-09-01
 
-Comece pela página atual de Introdução ao ReSpeaker Clip (Getting Started). Use o guia Basic SDK para controle no host e transferência de gravações, e use o guia Firmware Development apenas ao alterar o firmware no lado do dispositivo. A URL antiga `/respeaker_clip_getting_started/` está obsoleta e não deve ser adicionada aos favoritos.
+Comece pela página atual de Getting Started do ReSpeaker Clip. Use o guia Basic SDK para controle no host e transferência de gravações, e use o guia Firmware Development apenas ao alterar o firmware no lado do dispositivo. A URL antiga `/respeaker_clip_getting_started/` está obsoleta e não deve ser adicionada aos favoritos.
 
 **Pré-requisitos:**
 
 - Identificar se a tarefa é uso normal do produto, integração de SDK no host ou desenvolvimento de firmware do dispositivo
 
-1. Abra Getting Started para configuração, fluxos de trabalho do aplicativo, especificações e a lista atual de recursos.
+1. Abra Getting Started para configuração, fluxos de trabalho do app, especificações e a lista atual de recursos.
 2. Abra o guia Basic SDK para controlar gravações, gerenciar sessões ou transferir arquivos via BLE ou Wi-Fi.
 3. Abra o guia Firmware Development apenas para compilar, gravar, depurar ou alterar o comportamento no lado do dispositivo.
 4. Se um link salvo ainda falhar, substitua-o pela URL atual correspondente do Wiki antes de relatar uma indisponibilidade de documentação.
 
 **Critérios de sucesso:**
 
-- O guia atual selecionado é carregado e cobre a camada pretendida de produto, SDK no host ou desenvolvimento de firmware
+- O guia atual selecionado carrega e cobre a camada pretendida de produto, SDK no host ou desenvolvimento de firmware
 
-**Observações:**
+**Notas:**
 
 - Alguns recursos em Getting Started ainda estão explicitamente marcados como `Coming soon`; um guia publicado não implica que todos os artefatos mecânicos ou de firmware tenham sido publicados.
 
@@ -67,16 +67,16 @@ Comece pela página atual de Introdução ao ReSpeaker Clip (Getting Started). U
 
 **Última verificação:** 2026-09-01
 
-Sim, como parte de um protótipo com host e nuvem. O exemplo oficial de Live STT transmite áudio do microfone a partir de firmware do Clip com suporte a RTC via BLE, converte enunciados de fala concluídos em texto por meio de um provedor externo de STT e exibe a transcrição em um navegador. Isso não está documentado como transcrição autônoma no próprio dispositivo.
+Sim, como parte de um protótipo com host e nuvem. O exemplo oficial Live STT transmite áudio de microfone a partir de firmware do Clip com suporte a RTC via BLE, converte enunciados de fala concluídos em texto por meio de um provedor STT externo e exibe a transcrição em um navegador. Isso não está documentado como transcrição autônoma no próprio dispositivo.
 
 **Pré-requisitos:**
 
-- Firmware do ReSpeaker Clip com suporte a transmissão em tempo real (RTC)
+- Firmware do ReSpeaker Clip com suporte a transmissão ao vivo RTC
 - Python 3.10 ou posterior e um adaptador BLE funcional
-- Acesso à rede e uma chave de API para o provedor de STT usado pelo exemplo oficial
+- Acesso à rede e uma chave de API para o provedor STT usado pelo exemplo oficial
 
-1. Siga o guia oficial do aplicativo Live STT e instale seus requisitos de Python.
-2. Conecte-se ao ReSpeaker Clip via BLE e insira a chave do provedor de STT nas configurações do aplicativo.
+1. Siga o guia oficial do aplicativo Live STT e instale seus requisitos Python.
+2. Conecte-se ao ReSpeaker Clip via BLE e insira a chave do provedor STT nas configurações do aplicativo.
 3. Selecione `Start Streaming`, fale e aguarde cada enunciado concluído aparecer na transcrição do navegador.
 4. Meça a latência e a precisão da transcrição no ambiente acústico pretendido antes de tratar o protótipo como um recurso de acessibilidade.
 
@@ -85,10 +85,10 @@ Sim, como parte de um protótipo com host e nuvem. O exemplo oficial de Live STT
 - A sessão RTC é iniciada via BLE e os enunciados falados aparecem como texto em tempo real no navegador
 - A latência e a precisão testadas são registradas para o ambiente e idioma pretendidos
 
-**Observações:**
+**Notas:**
 
 - Live STT usa BLE para o fluxo de áudio RTC; o caminho via Wi-Fi documentado é para fluxos de trabalho de gravar-e-processar, não para Live STT.
-- O exemplo público depende de um serviço externo de transcrição e não foi apresentado como um dispositivo médico ou assistivo certificado. Analise privacidade, conectividade, latência e comportamento em falhas para a implantação real.
+- O exemplo público depende de um serviço de transcrição externo e não foi apresentado como um dispositivo médico ou assistivo certificado. Analise privacidade, conectividade, latência e comportamento em falhas para a implantação real.
 
 **Referências:**
 
@@ -116,7 +116,7 @@ Um desenho mecânico com identificação de revisão não está publicado no mom
 
 - O projeto mecânico é baseado em um desenho oficial com identificação de revisão ou em medições verificadas da revisão exata de produção
 
-**Observações:**
+**Notas:**
 
 - Esta é uma resposta sensível ao tempo sobre o status de publicação e deve ser verificada novamente quando a tabela de recursos mudar.
 - A ausência de um desenho público não estabelece que não exista nenhum arquivo mecânico interno.
@@ -124,6 +124,59 @@ Um desenho mecânico com identificação de revisão não está publicado no mom
 **Referências:**
 
 - [ReSpeaker Clip specifications and resources](https://wiki.seeedstudio.com/pt-br/respeaker_clip/)
+
+## Produto e negócios {#product-and-business}
+
+### O app do reSpeaker Clip exige uma assinatura mensal e posso usar OpenAI ou meus próprios modelos STT e LLM auto-hospedados? {#app-subscription-and-custom-providers}
+
+**Aplica-se a:** usuários do app reSpeaker Clip que escolhem entre a assinatura reSpeaker AI e seu próprio provedor STT/LLM, na versão atual do app
+
+**Última verificação:** 2026-10-26
+
+Não. A assinatura é opcional. Você pode executar o app inteiramente em serviços STT e LLM que você mesmo configurar — incluindo um modelo auto-hospedado exposto em um Base URL — e esse caminho não consome nenhuma cota do reSpeaker AI. A assinatura opcional reSpeaker AI é para usuários que preferem não gerenciar credenciais e cobrança de provedores.
+
+Na página AI CONFIG do app, o serviço STT recebe Provider, Base URL, API key e Language; o serviço LLM recebe uma API key, Base URL e Model Name. Ambos fornecem uma ação Test Connection, de modo que um serviço hospedado na OpenAI ou um modelo que você mesmo hospede pode ser verificado antes do uso, desde que exponha uma API compatível.
+
+| Plano | China continental | Exterior | Minutos de IA | Notas |
+| --- | --- | --- | --- | --- |
+| Bônus de ativação do dispositivo | ¥0 | $0 | 300 uma vez | Uma vez por conta, dispositivo e conta de pagamento; válido por 180 dias |
+| Lite | ¥19/mês ou ¥179/ano | $4.99/mês ou $49.99/ano | 300/mês | Nível pago mais baixo |
+| Pro | ¥59/mês ou ¥649/ano | $12.99/mês ou $129/ano | 1.200/mês | Principal nível recomendado |
+| Max | ¥115/mês ou ¥1.249/ano | $23.99/mês ou $249/ano | 2.400/mês | Fila de processamento com alta prioridade |
+| Pacote adicional | ¥9/100 min; ¥25/300 min | $1.99/100 min; $4.99/300 min | 100 ou 300 | Apenas para assinantes ativos; válido até o fim do ciclo mensal atual |
+
+Um minuto de IA da plataforma cobre uma transcrição mais um resumo básico dessa gravação.
+
+**Pré-requisitos:**
+
+- O app reSpeaker Clip com a página AI CONFIG e um dispositivo gravando para testar
+- Para o caminho de provedor personalizado: o Base URL e a API key do provedor, ou um endpoint auto-hospedado acessível a partir do telefone
+- Para o caminho com assinatura: uma conta reSpeaker com um plano ou o bônus de ativação do dispositivo
+
+1. Abra AI CONFIG no app e verifique as entradas STT Service e LLM Service.
+2. Para STT, insira Provider, Base URL, API key e Language, toque em Test Connection e depois em Save Configuration.
+3. Para o LLM, insira a API key, o Base URL e o Model Name, toque em Test Connection e depois em Save Configuration.
+4. Processe uma gravação e confirme que tanto a transcrição quanto o resumo vêm do provedor configurado.
+5. Para usar a assinatura reSpeaker AI em vez disso, selecione o serviço de IA da plataforma no app; a transcrição e o resumo então consomem os minutos de IA do plano.
+
+**Critérios de sucesso:**
+
+- Test Connection é aprovado para os serviços STT e LLM
+- Uma gravação de teste é transcrita e resumida por meio do provedor configurado
+- No caminho com provedor personalizado, nenhuma cota do reSpeaker AI é consumida
+
+**Notas:**
+
+- Planos, cotas e preços são os de 2026-10-26. O app mostra o preço atual e qualquer variação regional, e preços e cotas podem mudar.
+- A cota da assinatura mensal não é acumulável. Um pacote adicional é válido apenas até o fim do ciclo mensal atual e também não é acumulável. Cancelar a renovação automática mantém o plano utilizável até o fim do período pago.
+- No caminho com provedor personalizado, a plataforma não mede o uso; cobranças, limites de taxa e disponibilidade do provedor são de sua responsabilidade.
+- Um endpoint auto-hospedado deve ser acessível a partir do telefone e expor uma API compatível; a ação Test Connection deve ser aprovada antes que o serviço possa ser usado.
+- Uma opção mais simples de LLM auto-implantado está planejada para uma versão futura. Até lá, um LLM auto-hospedado já pode ser configurado por meio dos campos personalizados Base URL e Model Name.
+
+**Referências:**
+
+- [reSpeaker Clip Getting Started (AI CONFIG, STT and LLM provider settings)](https://wiki.seeedstudio.com/pt-br/respeaker_clip/)
+- [reSpeaker Clip Live STT application guide](https://wiki.seeedstudio.com/pt-br/respeaker_clip_python_build_app/)
 
 <!-- RESPEAKER_FAQ_AUTO_END -->
 
