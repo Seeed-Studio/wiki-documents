@@ -9,11 +9,11 @@ slug: /get_started_with_meshcore_solar_node
 sku: 114993633,114993643
 sidebar_position: 1
 last_update:
-  date: 8/17/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/
-updatedAt: '2026-09-30'
+updatedAt: '2026-10-26'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -596,6 +596,17 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
 When you have completed the above steps, then you can [flash the application firmware](https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/#flash-erase).
+
+### Device not responding or detected via USB
+
+If your Solar Node P1-Pro suddenly becomes unresponsive, with only the green LED lighting up and the device not being recognized via USB, try the following:
+
+1. Disconnect the USB cable and keep the solar panel away from sunlight.
+2. Carefully remove the back cover and batteries, avoiding short circuits.
+3. Leave the batteries removed for some time.
+4. Reinstall the batteries and check whether the device starts and can be recognized via USB.
+
+If the issue persists, please contact technical support.
 
 ### Signal Quality
 
