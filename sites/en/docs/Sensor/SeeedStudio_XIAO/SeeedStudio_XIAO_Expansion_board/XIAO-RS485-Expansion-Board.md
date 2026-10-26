@@ -108,6 +108,10 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ### Connection Schematic
 
+- The XIAO RS-485 Expansion Board V1.2 uses the TP8485E-SR transceiver. The RS-485 signals map to the XIAO pins as follows: `RS485_TX` to D4, `RS485_RX` to D5, and `RS485_DE` to D2.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/rs485_v1.2_sch_1.png" style={{width:700, height:'auto'}}/></div>
+<br/>
 <div class="table-center">
   <table align="center">
     <tr>
@@ -119,9 +123,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   </table>
 </div>
 
-- The XIAO RS-485 Expansion Board V1.2 uses the TP8485E-SR transceiver. The RS-485 signals map to the XIAO pins as follows: `RS485_TX` to D4, `RS485_RX` to D5, and `RS485_DE` to D2.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/rs485_v1.2_sch_1.png" style={{width:700, height:'auto'}}/></div>
+- **5V OUT/IN switch**: Controls the direction of power at the 5V terminal. Set it to `OUT` when this board supplies 5V to another device, or to `IN` when this board receives 5V through the terminal. 
+- **120R switch**: Set it to `ON` to connect the onboard 120 Ω termination resistor across the RS-485 A and B lines, or to `NC` to disconnect it. For long cable runs, enable termination at the two physical ends of the bus; leave it disconnected on intermediate boards.
+- **INT**: Reserved interrupt connection.
 
 :::tip
 
@@ -370,7 +374,7 @@ void loop() {
 <br/>
 
 - **📄[Schematic]** [Seeed Studio XIAO-RS485-Expansion-Board Schematic V1.1](https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/Seeed_Studio_XIAO_RS485_Expansion_Board.pdf)
-- **🗃️[KiCad Schematic]** [Seeed Studio XIAO-RS485-Expansion-Board V1.1 SCH](https://files.seeedstudio.com/wiki/Seeed_Studio_XIAO_RS485_Expansion_Board.kicad_sch)
+- **🗃️[KiCad Schematic]** [Seeed Studio XIAO-RS485-Expansion-Board V1.1 SCH](https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/Seeed_Studio_XIAO_RS485_Expansion_Board.kicad_sch)
 
 ## Tech Support & Product Discussion
 
