@@ -410,6 +410,7 @@ const sidebars = {
           label: 'Generative AI',
           customProps: { communityCategory: 'gen' },
           items: [
+            'Edge/NVIDIA_Jetson/Application/Generative_AI/Accelerate_LLM_Inference_with_MTP_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/Finetune_LLM_by_Llama_Factory_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/Local_RAG_based_on_Jetson_with_LlamaIndex',
