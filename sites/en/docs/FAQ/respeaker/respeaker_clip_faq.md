@@ -125,6 +125,59 @@ A revision-labeled mechanical drawing is not currently published. The official G
 
 - [ReSpeaker Clip specifications and resources](https://wiki.seeedstudio.com/respeaker_clip/)
 
+## Product & Business {#product-and-business}
+
+### Does the reSpeaker Clip app require a monthly subscription, and can I use OpenAI or my own self-hosted STT and LLM models? {#app-subscription-and-custom-providers}
+
+**Applies to:** reSpeaker Clip app users choosing between the reSpeaker AI subscription and their own STT/LLM provider, on the current app release
+
+**Last verified:** 2026-10-26
+
+No. A subscription is optional. You can run the app entirely on STT and LLM services that you configure yourself — including a self-hosted model exposed at a Base URL — and that path consumes no reSpeaker AI quota. The optional reSpeaker AI subscription is for users who would rather not manage provider credentials and billing.
+
+In the app's AI CONFIG page, the STT service takes Provider, Base URL, API key, and Language; the LLM service takes an API key, Base URL, and Model Name. Both provide a Test Connection action, so an OpenAI-hosted service or a model you host yourself can be checked before use as long as it exposes a compatible API.
+
+| Plan | China mainland | Overseas | AI minutes | Notes |
+| --- | --- | --- | --- | --- |
+| Device activation bonus | ¥0 | $0 | 300 one-time | Once per account, device, and payment account; valid 180 days |
+| Lite | ¥19/month or ¥179/year | $4.99/month or $49.99/year | 300/month | Lowest paid tier |
+| Pro | ¥59/month or ¥649/year | $12.99/month or $129/year | 1,200/month | Main recommended tier |
+| Max | ¥115/month or ¥1,249/year | $23.99/month or $249/year | 2,400/month | High-priority processing queue |
+| Top-up pack | ¥9/100 min; ¥25/300 min | $1.99/100 min; $4.99/300 min | 100 or 300 | Active subscribers only; valid until the current monthly cycle ends |
+
+One platform AI minute covers one transcription plus one basic summary of that recording.
+
+**Prerequisites:**
+
+- The reSpeaker Clip app with the AI CONFIG page, and a device recording to test with
+- For the custom-provider path: the provider's Base URL and API key, or a self-hosted endpoint reachable from the phone
+- For the subscription path: a reSpeaker account with a plan or the device activation bonus
+
+1. Open AI CONFIG in the app and check the STT Service and LLM Service entries.
+2. For STT, enter Provider, Base URL, API key, and Language, tap Test Connection, then Save Configuration.
+3. For the LLM, enter the API key, Base URL, and Model Name, tap Test Connection, then Save Configuration.
+4. Process one recording and confirm that both the transcript and the summary come from the configured provider.
+5. To use the reSpeaker AI subscription instead, select the platform AI service in the app; transcription and summarization then consume the plan's AI minutes.
+
+**Success criteria:**
+
+- Test Connection passes for both the STT and LLM services
+- A test recording is transcribed and summarized through the configured provider
+- On the custom-provider path, no reSpeaker AI quota is consumed
+
+**Notes:**
+
+- Plans, quotas, and prices are as of 2026-10-26. The app shows the current price and any regional variation, and prices and quotas may change.
+- Monthly subscription quota does not roll over. A top-up pack is valid only until the current monthly cycle ends and does not roll over either. Cancelling auto-renew keeps the plan usable until the end of the paid period.
+- On the custom-provider path the platform does not meter usage; provider charges, rate limits, and availability are your responsibility.
+- A self-hosted endpoint must be reachable from the phone and expose a compatible API; the Test Connection action must pass before the service can be used.
+- A simpler self-deployed LLM option is planned for a later release. Until then, a self-hosted LLM can already be configured through the custom Base URL and Model Name fields.
+
+**References:**
+
+- [reSpeaker Clip Getting Started (AI CONFIG, STT and LLM provider settings)](https://wiki.seeedstudio.com/respeaker_clip/)
+- [reSpeaker Clip Live STT application guide](https://wiki.seeedstudio.com/respeaker_clip_python_build_app/)
+
 <!-- RESPEAKER_FAQ_AUTO_END -->
 
 ## Tech Support & Product Discussion
