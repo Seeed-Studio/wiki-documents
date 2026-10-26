@@ -22,6 +22,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'FAQ', 'respeaker'), // 9.2 排除 respeaker FAQ目录
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro'), // 9.21 排除 reCamera_Pro 目录
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'Courses', 'reBot_Arm_Tutorial'), // 9.17 排除 reBot_Arm_Tutorial 目录
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'Courses', 'Paper_Reading'), // 10.22 排除 Paper_Reading 目录
+  path.join(docsDirectory, 'Contribution', 'Fusion'), // 10.21 排除 Fusion 目录
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'SO_ARM101', 'Courses', 'SO_ARM_Tutorial'), // 10.19 排除 SO_ARM_Tutorial 目录
 
   // 排除指定文档
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot.md'), //8.17
