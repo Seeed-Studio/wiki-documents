@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>クロスアテンション</li>
     <li>2 段階学習</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2511.04555" target="_blank" rel="noopener noreferrer" aria-label="arXiv で Evo-1 の論文を読む">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>論文を読む</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## 前提知識：インストラクションからアクションへ

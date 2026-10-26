@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Compressão BPE</li>
     <li>Políticas autorregressivas</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2501.09747" target="_blank" rel="noopener noreferrer" aria-label="Ler o artigo do FAST no arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Ler o artigo</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 **Relação com π0:** O artigo se chama FAST; π0-FAST é a política treinada usando-o. FAST é um método de tokenização, FAST+ um tokenizador de ações universal pré-treinado, e π0-FAST um VLA autorregressivo usando essa representação. Ele compartilha com o π0 a abordagem de backbone PaliGemma, mas muda a geração de ações; não é apenas um pré-processador de compressão adicionado ao especialista de flow matching do π0.

@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Cross-attention</li>
     <li>Entrenamiento en dos etapas</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2511.04555" target="_blank" rel="noopener noreferrer" aria-label="Leer el artículo de Evo-1 en arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Leer el artículo</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## Requisitos previos: De instrucciones a acciones
