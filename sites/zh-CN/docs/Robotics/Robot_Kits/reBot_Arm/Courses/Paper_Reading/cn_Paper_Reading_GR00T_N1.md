@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>数据金字塔</li>
     <li>流匹配</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2503.14734" target="_blank" rel="noopener noreferrer" aria-label="在 arXiv 阅读 GR00T N1 论文原文">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>阅读论文原文</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## 先验知识

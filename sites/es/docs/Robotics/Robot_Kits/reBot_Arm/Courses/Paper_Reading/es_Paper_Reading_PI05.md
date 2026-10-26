@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Control jerárquico</li>
     <li>Entrenamiento conjunto</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener noreferrer" aria-label="Leer el artículo de π0.5 en arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Leer el artículo</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## Requisitos previos

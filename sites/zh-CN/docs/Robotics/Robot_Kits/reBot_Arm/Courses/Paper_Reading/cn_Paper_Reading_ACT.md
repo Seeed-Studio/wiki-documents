@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>动作分块</li>
     <li>时间集成</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2304.13705" target="_blank" rel="noopener noreferrer" aria-label="在 arXiv 阅读 ACT 论文原文">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>阅读论文原文</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## 先验知识

@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>階層型制御</li>
     <li>共同学習（Co-training）</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener noreferrer" aria-label="arXiv で π0.5 の論文を読む">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>論文を読む</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## 前提知識

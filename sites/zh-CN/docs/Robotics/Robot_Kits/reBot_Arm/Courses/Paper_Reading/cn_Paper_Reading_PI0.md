@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>流匹配</li>
     <li>跨本体训练</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2410.24164" target="_blank" rel="noopener noreferrer" aria-label="在 arXiv 阅读 π0 论文原文">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>阅读论文原文</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 π0 以预训练视觉语言模型 PaliGemma 为语义骨干，增加一个约 3 亿参数的动作专家，用条件流匹配一次生成连续动作块，再通过大规模跨机器人预训练和高质量任务后训练，让同一个模型适配多种单臂、双臂及移动机器人。

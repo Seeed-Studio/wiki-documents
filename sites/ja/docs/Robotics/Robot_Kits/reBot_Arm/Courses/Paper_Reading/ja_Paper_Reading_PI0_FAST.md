@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>BPE 圧縮</li>
     <li>自回帰ポリシー</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2501.09747" target="_blank" rel="noopener noreferrer" aria-label="arXiv で FAST の論文を読む">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>論文を読む</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 **π0 との関係:** 論文のタイトルは FAST であり、π0-FAST はそれを用いて学習されたポリシーです。FAST はトークナイゼーション手法、FAST+ は事前学習済みの汎用アクショントークナイザ、π0-FAST はこの表現を用いる自回帰 VLA です。π0 と同様に PaliGemma バックボーン手法を共有しますが、アクション生成を変更しており、π0 のフローマッチングエキスパートに単に圧縮用の前処理を追加しただけのものではありません。

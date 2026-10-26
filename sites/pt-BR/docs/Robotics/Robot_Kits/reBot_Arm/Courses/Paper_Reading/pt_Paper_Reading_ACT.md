@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Segmentação de ações</li>
     <li>Combinação temporal</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2304.13705" target="_blank" rel="noopener noreferrer" aria-label="Ler o artigo do ACT no arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Ler o artigo</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## Pré-requisitos

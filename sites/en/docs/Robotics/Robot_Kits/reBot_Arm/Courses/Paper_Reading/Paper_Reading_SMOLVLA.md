@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Flow matching</li>
     <li>Asynchronous inference</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2506.01844" target="_blank" rel="noopener noreferrer" aria-label="Read the SmolVLA paper on arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Read the paper</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## Prerequisites

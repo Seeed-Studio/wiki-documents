@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>データピラミッド</li>
     <li>フローマッチング</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2503.14734" target="_blank" rel="noopener noreferrer" aria-label="arXiv で GR00T N1 の論文を読む">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>論文を読む</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 ## GR00T N1.7: 適応とファインチューニング

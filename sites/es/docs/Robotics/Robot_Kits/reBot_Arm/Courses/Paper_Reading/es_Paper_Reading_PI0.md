@@ -47,6 +47,11 @@ import '/src/css/paper-reading-style.css';
     <li>Flow matching</li>
     <li>Entrenamiento entre diferentes morfologías</li>
   </ul>
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2410.24164" target="_blank" rel="noopener noreferrer" aria-label="Leer el artículo de π0 en arXiv">
+    <span className="paper-reading-source-tag">arXiv</span>
+    <span>Leer el artículo</span>
+    <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+  </a>
 </section>
 
 π0 utiliza el modelo visión-lenguaje PaliGemma pre-entrenado como backbone semántico y añade un experto en acciones de aproximadamente 300M parámetros. El conditional flow matching genera fragmentos de acción continuos, mientras que el pre-entrenamiento a gran escala entre distintos robots y el post-entrenamiento de alta calidad en tareas adaptan el mismo modelo a sistemas de un solo brazo, bimanuales y móviles.
