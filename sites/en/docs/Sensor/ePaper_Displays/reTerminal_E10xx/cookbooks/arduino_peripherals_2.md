@@ -294,7 +294,7 @@ Put the back cover back on and tighten all screws. The RTC is now battery-backed
 
 ### Full Sketch: RTC_PCF8563
 
-The complete sketch is available in the repository: [`examples/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/RTC_PCF8563/RTC_PCF8563.ino).
+The complete sketch is available in the repository: [`examples/base/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/RTC_PCF8563/RTC_PCF8563.ino).
 
 <details>
 <summary>Click to expand the full RTC_PCF8563.ino code</summary>
@@ -821,7 +821,7 @@ The ESP32-S3 supports several power states. The two most useful for battery-powe
 
 ### Full Sketch: LowPower_DeepSleep
 
-The complete sketch is available in the repository: [`examples/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/LowPower_DeepSleep/LowPower_DeepSleep.ino).
+The complete sketch is available in the repository: [`examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino).
 
 <details>
 <summary>Click to expand the full LowPower_DeepSleep.ino code</summary>
@@ -1018,7 +1018,7 @@ The sketch uses the ESP-IDF 5.x PDM-RX API (`driver/i2s_pdm.h`) which is only av
 
 ### Full Sketch: MicRecordToSD
 
-The complete sketch is available in the repository: [`examples/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/MicRecordToSD/MicRecordToSD.ino).
+The complete sketch is available in the repository: [`examples/base/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/MicRecordToSD/MicRecordToSD.ino).
 
 <details>
 <summary>Click to expand the full MicRecordToSD.ino code</summary>
@@ -1540,7 +1540,7 @@ The touch controller shares the same I2C bus (GPIO19/GPIO20) with the PCF8563 RT
 
 ### Full Sketch: E1003_TouchDraw
 
-The complete sketch is available in the repository: [`examples/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/E1003_TouchDraw).
+The complete sketch is available in the repository: [`examples/base/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/base/E1003_TouchDraw).
 
 <details>
 <summary>Click to expand the full E1003_TouchDraw.ino code</summary>
