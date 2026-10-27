@@ -8,10 +8,10 @@ slug: /sensecap_t1000_e
 sku: 114993369
 sidebar_position: 2
 last_update:
-  date: 09/01/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2024-07-24'
-updatedAt: '2026-09-29'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -405,6 +405,16 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
  Press and hold the button, then connect the charging cable.
 
 ## Troubleshooting
+
+### Firmware Update Failed / OTA Recovery
+
+If your SenseCAP Card Tracker T1000-E becomes unresponsive after a firmware update and the green LED stays solid on, the device is stuck in DFU mode. Try the following:
+
+1. Force a reboot to exit DFU mode: press and hold the button, then connect the charging cable.
+2. After the reboot, check whether the device starts normally. If not, follow [Step 1: Enter DFU mode](#step-1-enter-dfu-mode) to enter DFU mode manually — press and hold the device button, then **quickly** connect the charging cable twice. When a disk named `T1000-E` appears, follow the [Flash Firmware](#flash-firmware) guide to reinstall the appropriate application firmware.
+3. If the device still cannot be recovered and a DFU serial port is available, follow [Device bricked](#device-bricked) to re-flash the bootloader, then reinstall the application firmware.
+
+If the device cannot enter DFU mode or be detected by your computer, please contact technical support.
 
 ### Device never turns on
 
