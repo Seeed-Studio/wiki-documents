@@ -8,6 +8,7 @@ const {
   canReplaceFrontMatter,
   replaceFrontMatter,
 } = require('./frontmatter-incremental');
+const { protectCurrencyPrices } = require('./markdown-currency');
 
 // 使用 js-yaml 解析 Front Matter（若不可用，则回退正则）
 let yaml;
@@ -856,6 +857,13 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
       // 最后一步再恢复行号/缩进，并把代码块整行原样回写
       translatedContent = postprocessDocument(translatedContent, lineMetadata, totalLines);
+
+      // 只对明确的 Markdown 表格美元价格进行转义，不改变模型输出及其他公式。
+      const currencyResult = protectCurrencyPrices(translatedContent);
+      translatedContent = currencyResult.text;
+      if (currencyResult.fixes > 0) {
+        console.log(`💵 自动保护了${currencyResult.fixes}个美元价格标记`);
+      }
 
       // 验证翻译结果（针对最终文本）
       const issues = validateTranslation(text, translatedContent);
