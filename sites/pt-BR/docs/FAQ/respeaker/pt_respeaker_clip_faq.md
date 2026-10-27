@@ -139,11 +139,11 @@ Na página AI CONFIG do app, o serviço STT recebe Provider, Base URL, API key e
 
 | Plano | China continental | Exterior | Minutos de IA | Notas |
 | --- | --- | --- | --- | --- |
-| Bônus de ativação do dispositivo | ¥0 | $0 | 300 uma vez | Uma vez por conta, dispositivo e conta de pagamento; válido por 180 dias |
-| Lite | ¥19/mês ou ¥179/ano | $4.99/mês ou $49.99/ano | 300/mês | Nível pago mais baixo |
-| Pro | ¥59/mês ou ¥649/ano | $12.99/mês ou $129/ano | 1.200/mês | Principal nível recomendado |
-| Max | ¥115/mês ou ¥1.249/ano | $23.99/mês ou $249/ano | 2.400/mês | Fila de processamento com alta prioridade |
-| Pacote adicional | ¥9/100 min; ¥25/300 min | $1.99/100 min; $4.99/300 min | 100 ou 300 | Apenas para assinantes ativos; válido até o fim do ciclo mensal atual |
+| Bônus de ativação do dispositivo | ¥0 | \$0 | 300 uma vez | Uma vez por conta, dispositivo e conta de pagamento; válido por 180 dias |
+| Lite | ¥19/mês ou ¥179/ano | \$4.99/mês ou \$49.99/ano | 300/mês | Nível pago mais baixo |
+| Pro | ¥59/mês ou ¥649/ano | \$12.99/mês ou \$129/ano | 1.200/mês | Principal nível recomendado |
+| Max | ¥115/mês ou ¥1.249/ano | \$23.99/mês ou \$249/ano | 2.400/mês | Fila de processamento com alta prioridade |
+| Pacote adicional | ¥9/100 min; ¥25/300 min | \$1.99/100 min; \$4.99/300 min | 100 ou 300 | Apenas para assinantes ativos; válido até o fim do ciclo mensal atual |
 
 Um minuto de IA da plataforma cobre uma transcrição mais um resumo básico dessa gravação.
 
