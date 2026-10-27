@@ -139,11 +139,11 @@ In the app's AI CONFIG page, the STT service takes Provider, Base URL, API key, 
 
 | Plan | China mainland | Overseas | AI minutes | Notes |
 | --- | --- | --- | --- | --- |
-| Device activation bonus | ¥0 | $0 | 300 one-time | Once per account, device, and payment account; valid 180 days |
-| Lite | ¥19/month or ¥179/year | $4.99/month or $49.99/year | 300/month | Lowest paid tier |
-| Pro | ¥59/month or ¥649/year | $12.99/month or $129/year | 1,200/month | Main recommended tier |
-| Max | ¥115/month or ¥1,249/year | $23.99/month or $249/year | 2,400/month | High-priority processing queue |
-| Top-up pack | ¥9/100 min; ¥25/300 min | $1.99/100 min; $4.99/300 min | 100 or 300 | Active subscribers only; valid until the current monthly cycle ends |
+| Device activation bonus | ¥0 | \$0 | 300 one-time | Once per account, device, and payment account; valid 180 days |
+| Lite | ¥19/month or ¥179/year | \$4.99/month or \$49.99/year | 300/month | Lowest paid tier |
+| Pro | ¥59/month or ¥649/year | \$12.99/month or \$129/year | 1,200/month | Main recommended tier |
+| Max | ¥115/month or ¥1,249/year | \$23.99/month or \$249/year | 2,400/month | High-priority processing queue |
+| Top-up pack | ¥9/100 min; ¥25/300 min | \$1.99/100 min; \$4.99/300 min | 100 or 300 | Active subscribers only; valid until the current monthly cycle ends |
 
 One platform AI minute covers one transcription plus one basic summary of that recording.
 
