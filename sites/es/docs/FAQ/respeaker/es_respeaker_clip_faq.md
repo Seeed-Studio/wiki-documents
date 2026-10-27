@@ -139,11 +139,11 @@ En la página AI CONFIG de la app, el servicio STT requiere Provider, Base URL, 
 
 | Plan | China continental | Extranjero | Minutos de IA | Notas |
 | --- | --- | --- | --- | --- |
-| Bono de activación del dispositivo | ¥0 | $0 | 300 una sola vez | Una vez por cuenta, dispositivo y cuenta de pago; válido 180 días |
-| Lite | ¥19/mes o ¥179/año | $4.99/mes o $49.99/año | 300/mes | Nivel de pago más bajo |
-| Pro | ¥59/mes o ¥649/año | $12.99/mes o $129/año | 1,200/mes | Nivel principal recomendado |
-| Max | ¥115/mes o ¥1,249/año | $23.99/mes o $249/año | 2,400/mes | Cola de procesamiento de alta prioridad |
-| Paquete de recarga | ¥9/100 min; ¥25/300 min | $1.99/100 min; $4.99/300 min | 100 o 300 | Solo suscriptores activos; válido hasta que termine el ciclo mensual actual |
+| Bono de activación del dispositivo | ¥0 | \$0 | 300 una sola vez | Una vez por cuenta, dispositivo y cuenta de pago; válido 180 días |
+| Lite | ¥19/mes o ¥179/año | \$4.99/mes o \$49.99/año | 300/mes | Nivel de pago más bajo |
+| Pro | ¥59/mes o ¥649/año | \$12.99/mes o \$129/año | 1,200/mes | Nivel principal recomendado |
+| Max | ¥115/mes o ¥1,249/año | \$23.99/mes o \$249/año | 2,400/mes | Cola de procesamiento de alta prioridad |
+| Paquete de recarga | ¥9/100 min; ¥25/300 min | \$1.99/100 min; \$4.99/300 min | 100 o 300 | Solo suscriptores activos; válido hasta que termine el ciclo mensual actual |
 
 Un minuto de IA de la plataforma cubre una transcripción más un resumen básico de esa grabación.
 
