@@ -28,6 +28,24 @@ import TabItem from '@theme/TabItem';
 
 # LeRobot における SO-ARM100 と SO-ARM101 ロボットアーム入門
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ コード不要 · 環境構築不要</span>
+    <p className="sensecraft-banner__title">セットアップをスキップして — reBot Arm と LeRobot を 1 つのアプリから実行</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics は、SO-ARM101、reBot Arm 102 + B601-RS および B601-DM 向けの Seeed のノーコードプラットフォームです。アームを接続し、キャリブレーションを行い、デモを収集し、ガイド付きインターフェースから学習と推論を実行できます — Python 環境もターミナルも不要です。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 ステップのガイド付きワークフロー</li>
+      <li>✅ クラウド学習 — ローカル GPU 不要</li>
+      <li>✅ Windows / macOS クライアント</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">SenseCraft Robotics へ移動 ↗</a>
+    <a className="sensecraft-banner__link" href="/ja/sensecraft_robotics/">ソフトウェアガイド</a>
+  </div>
+</div>
+
 <div className="rebot-page">
 
 <section className="doc-hero">
@@ -194,24 +212,6 @@ SO101 の公式アップデートに伴い、SO100 は今後サポートされ�
 </details>
 
 </section>
-
-<div className="sensecraft-banner">
-  <div className="sensecraft-banner__copy">
-    <span className="sensecraft-banner__badge">⚡ コード不要 · 環境構築不要</span>
-    <p className="sensecraft-banner__title">セットアップをスキップして — reBot Arm と LeRobot を 1 つのアプリから実行</p>
-    <p className="sensecraft-banner__lead">SenseCraft Robotics は、SO-ARM101、reBot Arm 102 + B601-RS および B601-DM 向けの Seeed のノーコードプラットフォームです。アームを接続し、キャリブレーションを行い、デモを収集し、ガイド付きインターフェースから学習と推論を実行できます — Python 環境もターミナルも不要です。</p>
-    <ul className="sensecraft-banner__points">
-      <li>✅ 6 ステップのガイド付きワークフロー</li>
-      <li>✅ クラウド学習 — ローカル GPU 不要</li>
-      <li>✅ Windows / macOS クライアント</li>
-      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
-    </ul>
-  </div>
-  <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">SenseCraft Robotics へ移動 ↗</a>
-    <a className="sensecraft-banner__link" href="/ja/sensecraft_robotics/">ソフトウェアガイド</a>
-  </div>
-</div>
 
 ## 初期システム環境
 
@@ -1192,7 +1192,6 @@ Orbbec 単体カメラテスト + 標準カメラテスト：
 <details className="content-details">
 
 <summary> 通常のカメラを使用する場合 </summary>
-
 
 
 :::tip
