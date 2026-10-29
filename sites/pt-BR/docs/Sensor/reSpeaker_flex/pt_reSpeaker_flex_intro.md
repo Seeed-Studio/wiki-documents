@@ -1,5 +1,5 @@
 ---
-description: reSpeaker Flex é um poderoso sistema de voz modular com XMOS XVF3800, com arrays de 4 microfones circulares e lineares intercambiáveis para captura de áudio precisa em 360° ou direcional — perfeito para robótica e dispositivos inteligentes.
+description: O reSpeaker Flex é um poderoso sistema de voz modular com XMOS XVF3800, com arrays de 4 microfones circulares e lineares intercambiáveis para captura de áudio precisa em 360° ou direcional — perfeito para robótica e dispositivos inteligentes.
 title: Introdução ao reSpeaker Flex
 keywords:
   - reSpeaker flex
@@ -83,7 +83,7 @@ O sistema suporta duas configurações intercambiáveis de array de microfones: 
 
 ## Recursos
 
-- **Design modular dividido**: placa principal e placa do array de microfones são fisicamente separadas, conectadas via cabo flat FPC para posicionamento flexível em qualquer gabinete de produto
+- **Design modular dividido**: placa principal e placa do array de microfones são fisicamente separadas, conectadas por cabo flat FPC para posicionamento flexível em qualquer chassi de produto
 
 - **Opções de configuração de microfones**: alterne entre array circular de 4 microfones (captação em 360°, espaçamento de 44 mm) ou array linear de 4 microfones (diretividade frontal de 180°, espaçamento de 33 mm) usando a mesma placa principal
 
@@ -99,7 +99,7 @@ O sistema suporta duas configurações intercambiáveis de array de microfones: 
 
 - **SDK em Python**: formato de gravação, volume, parâmetros de algoritmo e roteamento de canais ajustáveis via Python
 
-- **Amplificador de alto-falante integrado**: suporta acionamento de alto‑falantes de 10 W 4 Ohms via conector JST, com saída de fone de ouvido AUX de 3,5 mm
+- **Amplificador de alto‑falante onboard**: suporta acionamento de alto‑falantes de 10 W 4 Ohms via conector JST, com saída de fone de ouvido AUX de 3,5 mm
 
 :::note
 Quando o conector de áudio de 3,5 mm e o alto‑falante estão conectados ao mesmo tempo, o áudio é reproduzido apenas pelo conector de áudio de 3,5 mm
@@ -113,22 +113,23 @@ Quando o conector de áudio de 3,5 mm e o alto‑falante estão conectados ao me
 
 | Componente / Recurso | Descrição |
 |--------------------|------------|
-| **Processador de áudio principal** | XMOS XVF3800 (firmware v3.2.1), lida com todo o DSP de áudio incluindo AEC, beamforming, DoA e supressão de ruído |
+| **Processador de áudio principal** | XMOS XVF3800 (firmware v3.2.1), realiza todo o DSP de áudio incluindo AEC, beamforming, DoA e supressão de ruído |
 | **Codec de áudio** | TLV320AIC3104, realiza conversão de áudio e saída DAC |
-| **Interface do array de microfones FPC** | Conector FPC de 24 pinos com trava, suporta arrays de até 8 microfones com 2 linhas GPIO |
-| **Porta USB-C** | Áudio UAC 2.0, atualização de firmware DFU e alimentação |
+| **Amplificador** |TPA3139D2  , amplificador Classe D |
+| **Interface do array de microfones FPC** | Conector FPC de 24 pinos com trava, suporta arrays de até 8 microfones com 2 linhas de GPIO |
+| **Porta USB‑C** | Áudio UAC 2.0, atualização de firmware DFU e alimentação |
 | **Porta PH2.0** | Conector com trava; fornece o mesmo áudio UAC 2.0 e suporte DFU que a porta USB‑C |
-| **Conector AUX de 3,5 mm** | Saída lateral de fone de ouvido acionada pelo DAC integrado |
-| **Conector JST para alto-falante** | Conector vertical que aciona alto‑falantes de até 10 W a 4Ω; ilha de solda preservada para conexão de alto‑falante cabeado |
+| **Conector AUX de 3,5 mm** | Saída de fone de ouvido lateral acionada pelo DAC onboard |
+| **Conector JST para alto‑falante** | Conector vertical que aciona alto‑falantes de até 10 W em 4Ω; ilhas de solda preservadas para conexão de alto‑falante cabeado |
 | **Terminal de alimentação externa** | Fornece 12 V para todo o sistema e suporta cargas de alto‑falante de 10 W (prioridade P1) |
 | **Botão RST** | Reset de hardware para o XVF3800 |
-| **Botão SafeMode (Boot)** | Mantenha pressionado durante a energização para entrar em modo de segurança para recuperação de firmware |
-| **LED PWR** | Indicador verde de alimentação ligada |
-| **Ilha de depuração (Debug Pad)** | Ilha reservada para XMOS XTAG4 (não soldada de fábrica) |
+| **Botão SafeMode (Boot)** | Mantenha pressionado durante a energização para entrar em modo seguro para recuperação de firmware |
+| **LED PWR** | Indicador verde de ligado |
+| **Pad de depuração** | Pad reservado para XMOS XTAG4 (não soldado de fábrica) |
 | **Headers de IO do XMOS 3800** | Pinos/ilhas expostos para I2C, I2S, 5V/GND, pinos de alto‑falante e IO restante do XVF3800 |
-| **Orifícios de fixação** | 4 × orifícios de montagem M3 |
+| **Orifícios de fixação** | 4 × furos de montagem M3 |
 | **XIAO ESP32S3** | Suporta soldagem do XIAO ESP32S3 quando usado como dispositivo host |
-| **GPIO do XIAO ESP32S3** | GPIO restante pode ser usado para IO e expansão de periféricos |
+| **GPIO do XIAO ESP32S3** | GPIO restante pode ser usado para expansão de IO e periféricos |
 
 ### Placa do array circular
 
@@ -139,7 +140,7 @@ Quando o conector de áudio de 3,5 mm e o alto‑falante estão conectados ao me
 | **Microfones** | 4× microfones PDM MEMS com espaçamento de 44 mm dispostos em layout circular |
 | **Padrão de captação** | Captura de áudio omnidirecional em 360° |
 | **Interface** | Conector FPC para a placa principal |
-| **Fixação** | 3 × orifícios de montagem M3 para fixação em gabinete ou carcaça |
+| **Fixação** | 3 × furos de montagem M3 para fixação em gabinete ou carcaça |
 
 ### Placa do array linear
 
@@ -149,7 +150,7 @@ Quando o conector de áudio de 3,5 mm e o alto‑falante estão conectados ao me
 |--------------------|------------|
 | **Microfones** | 4× microfones PDM MEMS com espaçamento de 33 mm dispostos em layout linear |
 | **Interface** | Conector FPC; o cabo pode ser roteado pela lateral ou pela parte traseira |
-| **Fixação** | 2 × orifícios de montagem M3 |
+| **Fixação** | 2 × furos de montagem M3 |
 
 
 
@@ -160,13 +161,13 @@ Quando o conector de áudio de 3,5 mm e o alto‑falante estão conectados ao me
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/header_pinout.jpg" alt="pir" width={800} height="auto" /></p>
 
-A placa principal do reSpeaker Flex inclui uma área dedicada para soldagem de um módulo Seeed Studio XIAO ESP32S3, habilitando conectividade Wi‑Fi e Bluetooth além do pipeline de processamento de áudio do XVF3800. Os SKUs que incluem XIAO (-C4-1 e -L4-1) são enviados com esse módulo já montado; os SKUs básicos (-C4-0 e -L4-0) deixam essa área sem população.
+A placa principal do reSpeaker Flex inclui uma área dedicada para soldagem de um módulo Seeed Studio XIAO ESP32S3, habilitando conectividade Wi‑Fi e Bluetooth sobre o pipeline de processamento de áudio do XVF3800. Os SKUs que incluem XIAO (-C4-1 e -L4-1) são enviados com esse módulo já montado; os SKUs básicos (-C4-0 e -L4-0) deixam essa área sem população.
 Quando o XIAO está instalado, as seguintes conexões são feitas entre ele e o XVF3800:
 
 - **Barramento I2S** — barramento duplo (reprodução e gravação) com BCLK, MCLK e LRCLK compartilhados para streaming de áudio em ambas as direções
 - **Barramento I2C** — para leitura e escrita de parâmetros de configuração do XVF3800 a partir do XIAO
 - **Linha RST** — o XIAO pode acionar um reset de hardware no XVF3800 por meio de um pino de IO dedicado
-- **IO restante do XIAO** — disponibilizado em headers/ilhas de pinos identificados para expansão pelo usuário
+- **IO restante do XIAO** — disponibilizado em headers/pads de pinos identificados para expansão pelo usuário
 
 ### Header de pinos
 
@@ -180,32 +181,32 @@ A interface do array de microfones FPC é um conector de 24 pinos, passo de 0,5 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/24_fpc_cable.png" alt="pir" width={600} height="auto" /></p>
 
-| Pino | Nome do sinal | Tipo | Descrição da função | Notas |
+| Pin | Nome do Sinal | Tipo | Descrição da Função | Notas |
 |-----|------------|------|----------------------|-------|
-| 1 | MIC_VDD | Alimentação | Alimentação dos microfones | Fonte de 3,3 V |
-| 2 | MIC_VDD | Alimentação | Alimentação dos microfones | Pino duplo para maior estabilidade de alimentação |
+| 1 | MIC_VDD | Alimentação | Fonte de alimentação do microfone | Alimentação de 3,3 V |
+| 2 | MIC_VDD | Alimentação | Fonte de alimentação do microfone | Pino duplo para maior estabilidade de energia |
 | 3 | GND | GND | Terra de retorno de alimentação | GND de alimentação |
-| 4 | MIC_CLK | Out | Sinal de clock global | Sinal principal, 2–4 MHz |
-| 5 | GND | GND | Terra de blindagem do clock | Terra dedicado para o clock |
-| 6 | MIC_D1 | In | Linha de dados 1 | Microfone CH1 |
+| 4 | MIC_CLK | Saída | Sinal de clock global | Sinal principal, 2–4 MHz |
+| 5 | GND | GND | Terra de blindagem do clock | Terra dedicada para o clock |
+| 6 | MIC_D1 | Entrada | Linha de dados 1 | Microfone CH1 |
 | 7 | GND | GND | Terra de isolamento de D1 | |
-| 8 | MIC_D2 | In | Linha de dados 2 | Microfone CH2 |
+| 8 | MIC_D2 | Entrada | Linha de dados 2 | Microfone CH2 |
 | 9 | GND | GND | Terra de isolamento de D2 | |
-| 10 | MIC_D3 | In | Linha de dados 3 | Microfone CH3 |
+| 10 | MIC_D3 | Entrada | Linha de dados 3 | Microfone CH3 |
 | 11 | GND | GND | Terra de isolamento de D3 | |
-| 12 | MIC_D4 | In | Linha de dados 4 | Microfone CH4 |
+| 12 | MIC_D4 | Entrada | Linha de dados 4 | Microfone CH4 |
 | 13 | GND | GND | Terra de isolamento de D4 | |
-| 14 | MIC_D5 | In | Linha de dados 5 | Microfone CH5 |
+| 14 | MIC_D5 | Entrada | Linha de dados 5 | Microfone CH5 |
 | 15 | GND | GND | Terra de isolamento de D5 | |
-| 16 | MIC_D6 | In | Linha de dados 6 | Microfone CH6 |
+| 16 | MIC_D6 | Entrada | Linha de dados 6 | Microfone CH6 |
 | 17 | GND | GND | Terra de isolamento de D6 | |
-| 18 | MIC_D7 | In | Linha de dados 7 | Microfone CH7 |
+| 18 | MIC_D7 | Entrada | Linha de dados 7 | Microfone CH7 |
 | 19 | GND | GND | Terra de isolamento de D7 | |
-| 20 | MIC_D8 | In | Linha de dados 8 | Microfone CH8 |
+| 20 | MIC_D8 | Entrada | Linha de dados 8 | Microfone CH8 |
 | 21 | GND | GND | Terra de isolamento de D8 | |
-| 22 | GPIO_1 | I/O | Entrada/saída de uso geral | Função de expansão |
-| 23 | GPIO_2 | I/O | Entrada/saída de uso geral | Função de expansão |
-| 24 | GND | GND | Terra de blindagem dos GPIO | Absorve ruído dos GPIO |
+| 22 | GPIO_1 | E/S | Entrada/saída de uso geral | Função de expansão |
+| 23 | GPIO_2 | E/S | Entrada/saída de uso geral | Função de expansão |
+| 24 | GND | GND | Terra de blindagem do GPIO | Absorve o ruído do GPIO |
 
 ## Introdução
 
@@ -225,13 +226,13 @@ Para garantir desempenho ideal de captação de voz e operação adequada dos al
 
 #### Reset
 
-O botão de reset (RST) fornece um reset de hardware para o reSpeaker Flex quando pressionado; ele reinicia o chip e reinicializa o sistema desde o começo, como em um ciclo completo de energia.
+O botão de reset (RST) fornece um reset de hardware para o reSpeaker Flex quando pressionado; ele reinicia o chip e reinicializa o sistema desde o início, como em um ciclo completo de energia.
 
 #### Conexão do alto-falante
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/speaker-connection .jpg" alt="pir" width={600} height="auto" /></p>
 
-Aqui você pode ver como conectar alto-falantes usando o conector de fone de ouvido AUX de 3,5 mm ou a interface JST de alto-falante onboard, dependendo da sua preferência de saída de áudio.
+Aqui você pode ver como conectar alto-falantes usando o conector de fone de ouvido AUX de 3,5 mm ou a interface de alto-falante JST onboard, dependendo da sua preferência de saída de áudio.
 
 #### Conexão FPC
 
@@ -243,11 +244,11 @@ Antes de conectar o cabo FPC, identifique o lado dos contatos e o lado do refor�
 
 Abra a aba de travamento no Conector MIC, insira o cabo FPC com a orientação correta e feche a aba para fixar a conexão.
 
-#### Modo de segurança
+#### Modo de Segurança
 
 **Safe Mode** é um modo especial de recuperação no **reSpeaker Flex** que permite gravar firmware via **USB DFU** ou I2C para dispositivos como o **ESP32**.
 
-Se você já tiver gravado o **firmware I2S** e quiser voltar para o **firmware USB**, pode entrar no **Safe Mode** e regravar o firmware USB usando **USB DFU**.
+Se você já tiver gravado o **firmware I2S** e quiser voltar para o **firmware USB**, você pode entrar no **Safe Mode** e regravar o firmware USB usando **USB DFU**.
 
 :::note
 
@@ -257,7 +258,7 @@ Se você já tiver gravado o **firmware I2S** e quiser voltar para o **firmware 
   - Não oferece suporte a I2C DFU.
 - Firmware I2S
   - Suporta I2C DFU.
-  - Permite atualizações de firmware pela interface I2C.
+  - Permite atualizações de firmware através da interface I2C.
   - Não oferece suporte a USB DFU.
 - Firmware Safe Mode
   - Armazenado na partição Factory.
@@ -276,7 +277,7 @@ Se você já tiver gravado o **firmware I2S** e quiser voltar para o **firmware 
 
 - **Desligue** completamente o dispositivo.
 - **Pressione e segure o botão Boot**.
-- Enquanto mantém o **botão Boot pressionado, reconecte a alimentação.**
+- Enquanto mantém pressionado o **botão Boot, reconecte a alimentação.**
 Use a ferramenta de linha de comando DFU util para verificar as partições DFU; consulte a seção **Install DFU Util** abaixo para mais detalhes.
 
 ### Atualizar firmware
@@ -293,17 +294,17 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="USB" label="USB">
 
-O firmware USB é projetado para uso com sistemas operacionais host como **Windows, Linux e macOS** ao se comunicar por meio da interface de hardware USB.
+O firmware USB é projetado para uso com sistemas operacionais host como **Windows, Linux e macOS** ao se comunicar através da interface de hardware USB.
 Você pode explorar esses arquivos de firmware neste link
 
-| Firmware                         | Canais | Observações                                                   |
-|----------------------------------|--------|---------------------------------------------------------------|
-| respeaker_flex_ua-io16-6ch-cir.bin | 6 canais | 16 kHz, 6 canais usando matriz de microfones circular         |
-| respeaker_flex_ua-io16-6ch-lin.bin | 6 canais | 16 kHz, 6 canais usando matriz de microfones linear           |
-| respeaker_flex_ua-io16-cir.bin     | 2 canais | 16 kHz, 2 canais de saída usando matriz de microfones circular    |
-| respeaker_flex_ua-io16-lin.bin     | 2 canais | 16 kHz, 2 canais de saída usando matriz de microfones linear      |
-| respeaker_flex_ua-io48-cir.bin     | 2 canais | 48 kHz, 2 canais de saída usando matriz de microfones circular    |
-| respeaker_flex_ua-io48-lin.bin     | 2 canais | 48 kHz, 2 canais de saída usando matriz de microfones linear      |
+| Firmware                         | Canais | Notas                                                   |
+|----------------------------------|--------|---------------------------------------------------------|
+| respeaker_flex_ua-io16-6ch-cir.bin | 6 Canais | 16 kHz, 6 canais usando matriz de microfones circular   |
+| respeaker_flex_ua-io16-6ch-lin.bin | 6 Canais | 16 kHz, 6 canais usando matriz de microfones linear     |
+| respeaker_flex_ua-io16-cir.bin     | 2 Canais | 16 kHz, 2 canais de saída usando matriz de microfones circular          |
+| respeaker_flex_ua-io16-lin.bin     | 2 Canais | 16 kHz, 2 canais de saída usando matriz de microfones linear            |
+| respeaker_flex_ua-io48-cir.bin     | 2 Canais | 48 kHz, 2 canais de saída usando matriz de microfones circular          |
+| respeaker_flex_ua-io48-lin.bin     | 2 Canais | 48 kHz, 2 canais de saída usando matriz de microfones linear            |
 
 Conecte o reSpeaker Flex ao seu PC via cabo USB. Observe que você precisa usar a porta XMOS USB-C (próxima ao botão RST) para gravar o firmware da XMOS.
 
@@ -311,14 +312,14 @@ Conecte o reSpeaker Flex ao seu PC via cabo USB. Observe que você precisa usar 
 
  <TabItem value="I2S" label="I2S">
 
-O firmware I2S é destinado ao uso quando o dispositivo está conectado a um microcontrolador host como o XIAO ESP32S3. Nessa configuração, os dados de voz são transmitidos usando o protocolo I2S. O arquivo de firmware **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** está disponível aqui. Este firmware oferece suporte a áudio de 2 canais com profundidade de 32 bits a uma taxa de amostragem de 16 kHz.
+O firmware I2S é destinado ao uso quando o dispositivo está conectado a um microcontrolador host como o XIAO ESP32S3. Nessa configuração, os dados de voz são transmitidos usando o protocolo I2S. O arquivo de firmware **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** está disponível aqui. Este firmware suporta áudio de 2 canais com profundidade de 32 bits a uma taxa de amostragem de 16 kHz.
 
-| Firmware                                      | Canais | Observações                                                     |
-|-----------------------------------------------|--------|-----------------------------------------------------------------|
-| respeaker_flex_inthost-lr16-cir-i2c.bin      | 2 canais | 16 kHz, saída estéreo, matriz de microfones circular   |
-| respeaker_flex_inthost-lr16-lin-i2c.bin      | 2 canais | 16 kHz, saída estéreo, matriz de microfones linear|
-| respeaker_flex_inthost-lr48-cir-i2c.bin      | 2 canais | 48 kHz, saída estéreo, matriz de microfones circular|
-| respeaker_flex_inthost-lr48-lin-i2c.bin      | 2 canais | 48 kHz, saída estéreo, matriz de microfones linear|
+| Firmware                                      | Canais | Notas                                                     |
+|-----------------------------------------------|--------|-----------------------------------------------------------|
+| respeaker_flex_inthost-lr16-cir-i2c.bin      | 2 Canais | 16 kHz, saída estéreo, matriz de microfones circular   |
+| respeaker_flex_inthost-lr16-lin-i2c.bin      | 2 Canais | 16 kHz, saída estéreo, matriz de microfones linear|
+| respeaker_flex_inthost-lr48-cir-i2c.bin      | 2 Canais | 48 kHz, saída estéreo, matriz de microfones circular|
+| respeaker_flex_inthost-lr48-lin-i2c.bin      | 2 Canais | 48 kHz, saída estéreo, matriz de microfones linear|
 
 Conecte o reSpeaker Flex ao seu PC via cabo USB. Observe que você precisa usar a porta XMOS USB-C (próxima ao botão RST) para gravar o firmware da XMOS.
 
@@ -338,7 +339,7 @@ Conecte o reSpeaker Flex ao seu PC via cabo USB. Observe que você precisa usar 
 - Adicione o caminho para `dfu-util.exe` à variável de sistema `Path`:  
   `My Computer > Properties > Advanced > Environment Variables > Path`
 
-- Abra o **Command Prompt** (`cmd`) e verifique a instalação:
+- Abra o **Prompt de Comando** (`cmd`) e verifique a instalação:
 
 ```bash
 dfu-util -V
@@ -460,8 +461,8 @@ Baixe o repositório completo de firmware do GitHub aqui reSpeaker Flex XVF 3800
    - **Host**: `Windows WASAPI`
    - **Recording Device**: `reSpeaker XVF3800 Flex`
    - **Channels**: `2 (Stereo)`
-   - **Sample Rate**: `16000 Hz` (tanto para o **Project** quanto para o **Default Sample Rate**)
-   - **Formato de amostra**: `16-bit`
+   - **Sample Rate**: `16000 Hz` (para **Project** e **Default Sample Rate**)
+   - **Sample Format**: `16-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/audacity_setting_2.png" alt="pir" width={600} height="auto" /></p>
 
@@ -487,9 +488,9 @@ Baixe o repositório completo de firmware do GitHub aqui reSpeaker Flex XVF 3800
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac3.png" alt="pir" width={600} height="auto"/></p>
 
 - **Recording Device**: `reSpeaker 3800 Flex`
-- **Canais**: `2 (Stereo)`
-- **Taxa de amostragem**: `16000 Hz` (para **Project** e **Default Sample Rate**)
-- **Formato de amostra**: `16-bit`
+- **Channels**: `2 (Stereo)`
+- **Sample Rate**: `16000 Hz` (para **Project** e **Default Sample Rate**)
+- **Sample Format**: `16-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac4.png" alt="pir" width={600} height="auto"/></p>
 
@@ -502,7 +503,7 @@ Baixe o repositório completo de firmware do GitHub aqui reSpeaker Flex XVF 3800
 
 <TabItem value="linux" label="Raspberry Pi / Linux">
 
-### Gravação no Raspberry Pi (Linha de comando)
+### Gravação no Raspberry Pi (linha de comando)
 
 1. **Encontrar o número da placa de som**:
 
@@ -528,13 +529,13 @@ arecord -D plughw:3,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 
 ---
 
-3. **Ajustando o volume do reSpeaker XVF3800 no ALSA**
+3. **Ajustar o volume do reSpeaker XVF3800 no ALSA**
 
 ```bash
 alsamixer
 ```
 
-No alsamixer, use as setas esquerda/direita para navegar até o dispositivo de som correto. Use a seta para cima para aumentar o volume.
+No alsamixer, use as teclas de seta esquerda/direita para navegar até o dispositivo de som correto. Use a tecla de seta para cima para aumentar o volume.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/alsa.png" alt="pir" width={600} height="auto"/></p>
 
@@ -596,13 +597,13 @@ Usando os scripts Python fornecidos, você pode:
 * Obter dados de VAD (Voice Activity Detection)
 * Controlar os LEDs onboard
 * Controlar o pipeline de processamento de voz
-* Comunicar-se diretamente com o dispositivo XMOS
+* Se comunicar diretamente com o dispositivo XMOS
 
 **Requisitos do sistema**
 
 As seguintes dependências são necessárias para usar a interface de controle em Python:
 
-* Python 3.6 ou posterior
+* Python 3.6 ou superior
 * Biblioteca Python `pyusb`
 * Biblioteca de sistema `libusb`
 
@@ -631,12 +632,12 @@ python xvf_host.py [options] command [value(s)...]
 
 **Opções de comando**
 
-| Opção         | Descrição                                             |
+| Option         | Description                                           |
 | -------------- | ----------------------------------------------------- |
-| `-l`, `--list` | Lista todos os comandos suportados com informações detalhadas |
-| `--vid`        | Define o USB Vendor ID (padrão: `0x2886`)            |
-| `--pid`        | Define o USB Product ID (padrão: `0x001A`)           |
-| `--values`     | Fornece valores para comandos de escrita (opcional)  |
+| `-l`, `--list` | List all supported commands with detailed information |
+| `--vid`        | Set USB Vendor ID (default: `0x2886`)                 |
+| `--pid`        | Set USB Product ID (default: `0x001A`)                |
+| `--values`     | Provide values for write commands (optional)          |
 
 ---
 
@@ -672,7 +673,7 @@ Obtém o valor atual de Direction of Arrival (DOA) detectado pelo array de micro
 
 ## Solução de problemas
 
-### A reprodução de som na saída do alto-falante não é suficiente?
+### A reprodução pelo alto-falante não é suficiente?
 
 Se o volume de saída do alto-falante do **reSpeaker Flex** estiver muito baixo no Linux, talvez seja necessário ajustar os **níveis do mixer ALSA** para a placa de som XVF3800. Siga as etapas abaixo para aumentar o volume de saída.
 
@@ -691,7 +692,7 @@ Se o volume de saída do alto-falante do **reSpeaker Flex** estiver muito baixo 
 2. Use as **setas para cima/baixo** para destacar a placa de som **XVF3800 Flex**.
 3. Pressione **Enter** para confirmar a seleção.
 
-**Passo 3: Ajustar o volume do PCM-1**
+**Passo 3: Ajustar o volume de PCM-1**
 
 1. Use as **setas esquerda/direita** para navegar até **PCM-1**.
 2. Use a **seta para cima** para aumentar o nível de volume até **100%**.
@@ -719,10 +720,19 @@ Você pode então abrir o **pavucontrol** e aumentar o volume de saída além de
 
 ### Não é possível usar como dispositivo de som no Windows após gravar o firmware?
 
-Abra o menu Iniciar e digite Device manager. Encontre os dispositivos reSpeaker Flex relacionados, clique com o botão direito neles e selecione Uninstall devices. Depois disso, reinicie o dispositivo (desconecte e reconecte o USB) e o Windows irá reinstalar o driver de placa de som correto para ele.
+Abra o menu Iniciar e digite Device manager. Encontre os dispositivos relacionados ao reSpeaker Flex, clique com o botão direito neles e selecione Uninstall devices. Depois disso, reinicie o dispositivo (desconecte e reconecte o USB) e o Windows irá reinstalar o driver de placa de som correto para ele.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
+### O reSpeaker Flex pode ser alimentado por 12V enquanto está conectado a um PC via USB?
+
+Sim. O reSpeaker Flex suporta entrada de alimentação DC de 12V simultânea e conexão USB-C a um PC. A entrada de 12V alimenta o dispositivo, enquanto o USB-C fornece a interface de áudio USB (UAC) e de controle.
+
+Testamos essa configuração usando uma fonte de alimentação de 12V/2A conectada ao terminal de entrada de 12V e um cabo USB-C conectado a um PC. Reproduzimos música com sucesso através de um Mono Enclosed Speaker (4Ω, 5W) conectado ao reSpeaker Flex.
+
+### Se eu fornecer 12V pelo terminal e usar USB apenas para dados (UAC + controle), o USB ainda precisa de VBUS (5V) para enumerar?
+
+ Não. Quando o reSpeaker Flex é alimentado pela entrada de 12V, o VBUS (5V) do USB não é necessário para a enumeração. Você pode conectar o USB a um PC para áudio UAC e controle enquanto alimenta o dispositivo com 12V.
 
 ## Recursos
 
@@ -735,9 +745,9 @@ Abra o menu Iniciar e digite Device manager. Encontre os dispositivos reSpeaker 
 
 
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

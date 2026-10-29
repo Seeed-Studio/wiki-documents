@@ -1,5 +1,5 @@
 ---
-description: reSpeaker Flex 是一款强大的模块化语音系统，基于 XMOS XVF3800，配备可互换的环形与线性 4 麦克风阵列，可实现精确的 360° 或定向音频采集——非常适合机器人和智能设备。
+description: reSpeaker Flex 是一款强大的模块化语音系统，采用 XMOS XVF3800，配备可互换的环形和线性 4 麦克风阵列，可实现精确的 360° 或定向音频采集——非常适合机器人和智能设备。
 title: reSpeaker Flex 入门指南
 keywords:
   - reSpeaker flex
@@ -18,8 +18,8 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_introduction/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
-reSpeaker Flex 是一款采用分体式架构的模块化语音处理系统，基于 XMOS XVF3800 处理器，专为机器人和智能交互终端设计。与传统的一体化麦克风阵列不同，Flex 将核心处理板与麦克风阵列板分离，两者通过柔性 FPC 软排线连接，使阵列可以嵌入产品外壳内部的任意物理位置，同时将处理电路放置在其他位置。
-该系统支持两种可互换的麦克风阵列配置：用于全向 360° 采集的**环形 4 麦阵列**，以及用于前向定向拾音并抑制后方的**线性 4 麦阵列**。两块阵列板均通过标准化的 24 针 FPC 接口连接到同一核心板，系统可在 USB（UAC 2.0 即插即用）或 I2S 模式下工作，以便嵌入式集成。可选的 XIAO ESP32S3 模块可焊接到核心板上，用于无线连接和扩展控制。
+reSpeaker Flex 是一款基于 XMOS XVF3800 处理器构建的模块化、分体式架构语音处理系统，专为机器人和智能交互终端设计。与传统的一体化麦克风阵列不同，Flex 将核心处理板与麦克风阵列板分离，两者通过柔性 FPC 软排线连接，使阵列可以嵌入产品外壳内的任意物理位置，而将处理电子部分放置在其他位置。
+该系统支持两种可互换的麦克风阵列配置：用于全向 360° 采集的**环形 4 麦阵列**，以及用于正前方定向拾音并抑制后方的**线性 4 麦阵列**。两块阵列板都通过标准化的 24 针 FPC 接口连接到同一核心板，系统可在 USB（UAC 2.0 即插即用）或 I2S 模式下运行，以便嵌入式集成。可选的 XIAO ESP32S3 模块可以焊接到核心板上，以实现无线连接和扩展控制。
 
 ### 环形麦克风系列
 
@@ -87,7 +87,7 @@ reSpeaker Flex 是一款采用分体式架构的模块化语音处理系统，�
 
 - **多种麦克风配置选择**：在同一核心板上可切换环形 4 麦阵列（360° 拾音，44mm 间距）或线性 4 麦阵列（180° 前向指向性，33mm 间距）
 
-- **XMOS XVF3800 音频处理**：集成完整的 AEC、AGC、DoA、多通道波束成形、VAD、噪声抑制和去混响算法
+- **XMOS XVF3800 音频处理**：完整支持 AEC、AGC、DoA、多通道波束成形、VAD、噪声抑制和混响消除
 
 - **双工作模式**：USB UAC 2.0，可与 PC 和 SBC 即插即用；I2S 模式用于直接嵌入式集成
 
@@ -99,10 +99,10 @@ reSpeaker Flex 是一款采用分体式架构的模块化语音处理系统，�
 
 - **Python SDK**：可通过 Python 调整录音格式、音量、算法参数和通道路由
 
-- **板载功放**：通过 JST 接口支持驱动 10W 4 欧姆扬声器，并提供 3.5mm AUX 耳机输出
+- **板载扬声器功放**：通过 JST 接口支持驱动 10W 4 欧姆扬声器，并提供 3.5mm AUX 耳机输出
 
 :::note
-当 3.5mm 音频插孔和扬声器同时连接时，音频仅会通过 3.5mm 音频插孔输出。
+当 3.5mm 音频插孔和扬声器同时连接时，只会通过 3.5mm 音频插孔输出
 :::
 
 ## 主要组件
@@ -115,10 +115,11 @@ reSpeaker Flex 是一款采用分体式架构的模块化语音处理系统，�
 |--------------------|------------|
 | **主音频处理器** | XMOS XVF3800（固件 v3.2.1），负责所有音频 DSP，包括 AEC、波束成形、DoA 和噪声抑制 |
 | **音频编解码器** | TLV320AIC3104，负责音频转换和 DAC 输出 |
-| **FPC 麦克风阵列接口** | 24 针带锁扣 FPC 连接器，支持最多 8 麦阵列和 2 路 GPIO 线 |
-| **USB-C 接口** | UAC 2.0 音频、DFU 固件升级及供电 |
+| **功放** |TPA3139D2  ，D 类功放 |
+| **FPC 麦克风阵列接口** | 24 针带锁扣的 FPC 连接器，支持最多 8 麦阵列和 2 路 GPIO 线 |
+| **USB-C 接口** | UAC 2.0 音频、DFU 固件升级和供电 |
 | **PH2.0 接口** | 带锁扣连接器；提供与 USB-C 接口相同的 UAC 2.0 音频和 DFU 支持 |
-| **3.5 mm AUX 插孔** | 侧向出线耳机输出，由板载 DAC 驱动 |
+| **3.5 mm AUX 插孔** | 由板载 DAC 驱动的侧向耳机输出 |
 | **扬声器 JST 接口** | 直立安装连接器，可驱动最高 10W、4Ω 扬声器；保留焊盘以便硬连线扬声器连接 |
 | **外部电源端子** | 为整个系统提供 12V 供电并支持 10W 扬声器负载（P1 优先级） |
 | **RST 按钮** | XVF3800 的硬件复位按钮 |
@@ -127,7 +128,7 @@ reSpeaker Flex 是一款采用分体式架构的模块化语音处理系统，�
 | **调试焊盘** | 预留 XMOS XTAG4 焊盘（出厂未焊接） |
 | **XMOS 3800 IO 排针** | 引出 I2C、I2S、5V/GND、扬声器引脚及其余 XVF3800 IO 的排针/焊盘 |
 | **安装孔** | 4 × M3 安装孔 |
-| **XIAO ESP32S3** | 当作为主控设备使用时，支持焊接 XIAO ESP32S3 |
+| **XIAO ESP32S3** | 当其作为主机设备使用时，支持焊接 XIAO ESP32S3 |
 | **XIAO ESP32S3 GPIO** | 剩余 GPIO 可用于 IO 和外设扩展 |
 
 ### 环形阵列板
@@ -138,7 +139,7 @@ reSpeaker Flex 是一款采用分体式架构的模块化语音处理系统，�
 |--------------------|------------|
 | **麦克风** | 4× PDM MEMS 麦克风，44 mm 间距，环形排布 |
 | **拾音模式** | 360° 全向音频采集 |
-| **接口** | 连接到核心板的 FPC 连接器 |
+| **接口** | 连接到核心板的 FPC 接口 |
 | **安装** | 3 × M3 安装孔，用于固定在外壳或机箱上 |
 
 ### 线性阵列板
@@ -148,7 +149,7 @@ reSpeaker Flex 是一款采用分体式架构的模块化语音处理系统，�
 | 组件 / 特性 | 描述 |
 |--------------------|------------|
 | **麦克风** | 4× PDM MEMS 麦克风，33 mm 间距，线性排布 |
-| **接口** | FPC 连接器；排线可从侧面或背面走线 |
+| **接口** | FPC 接口；排线可从侧面或背面走线 |
 | **安装** | 2 × M3 安装孔 |
 
 
@@ -160,13 +161,13 @@ reSpeaker Flex 是一款采用分体式架构的模块化语音处理系统，�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/header_pinout.jpg" alt="pir" width={800} height="auto" /></p>
 
-reSpeaker Flex 核心板预留了 Seeed Studio XIAO ESP32S3 模块的专用焊接焊盘，可在 XVF3800 音频处理链路之上增加 Wi-Fi 和 Bluetooth 连接功能。包含 XIAO 的 SKU（-C4-1 和 -L4-1）会预装该模块；基础 SKU（-C4-0 和 -L4-0）则保留焊盘未焊接。
+reSpeaker Flex 核心板预留了专用焊盘，可焊接 Seeed Studio XIAO ESP32S3 模块，在 XVF3800 音频处理链路之上增加 Wi-Fi 和 Bluetooth 连接能力。包含 XIAO 的 SKU（-C4-1 和 -L4-1）出厂已预装该模块；基础 SKU（-C4-0 和 -L4-0）则保留焊盘未焊接。
 当安装 XIAO 后，它与 XVF3800 之间会建立如下连接：
 
-- **I2S 总线** — 双总线（播放和录音），共享 BCLK、MCLK 和 LRCLK，用于双向音频流传输
-- **I2C 总线** — 供 XIAO 读取和写入 XVF3800 的配置参数
+- **I2S 总线** — 双总线（播放和录制），共享 BCLK、MCLK 和 LRCLK，用于双向音频流传输
+- **I2C 总线** — 供 XIAO 读取和写入 XVF3800 配置参数
 - **RST 线** — XIAO 可通过专用 IO 引脚对 XVF3800 进行硬件复位
-- **剩余 XIAO IO** — 引出到带标签的排针/焊盘，供用户扩展使用
+- **剩余 XIAO IO** — 引出到带标签的排针/焊盘，供用户扩展
 
 ### 排针
 
@@ -176,14 +177,14 @@ reSpeaker Flex 核心板预留了 Seeed Studio XIAO ESP32S3 模块的专用焊�
 
 ### 24 FPC 线缆
 
-FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包装盒中附带的 20cm FPC 软排线已按此连接器进行钥匙位设计。
+FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包装盒中附带的 20cm FPC 软排线已按此连接器进行键控设计。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/24_fpc_cable.png" alt="pir" width={600} height="auto" /></p>
 
-| 引脚 | 信号名称 | 类型 | 功能描述 | 备注 |
+| Pin | Signal Name | Type | Function Description | Notes |
 |-----|------------|------|----------------------|-------|
 | 1 | MIC_VDD | Power | 麦克风电源 | 3.3V 供电 |
-| 2 | MIC_VDD | Power | 麦克风电源 | 双引脚以增强供电稳定性 |
+| 2 | MIC_VDD | Power | 麦克风电源 | 双引脚以增强电源稳定性 |
 | 3 | GND | GND | 电源回流地 | 电源地 |
 | 4 | MIC_CLK | Out | 全局时钟信号 | 核心信号，2–4 MHz |
 | 5 | GND | GND | 时钟屏蔽地 | 时钟专用地 |
@@ -211,7 +212,7 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 
 ### 硬件准备
 
-- USB Type-C 线缆
+- USB Type-c 线缆
 - 主机电脑或 Raspberry Pi
 
 ### 软件准备
@@ -219,13 +220,13 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 ### 开箱即用
 
 :::note
-为确保最佳的语音拾取性能以及音频算法的正常运行，请确保设备背面的麦克风端口（Mic Inlet / Sound Hole）朝向声源。麦克风端口位于印有 Seeed Studio 标志的一侧。
+为确保最佳的语音拾取性能以及音频算法的正常运行，请确保设备背面的麦克风端口（Mic Inlet / Sound Hole）朝向声源。麦克风端口位于印有 Seeed Studio 标志的一侧。 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/array_mic_inlet.jpg" alt="pir" width={800} height="auto" /></p>
 :::
 
 #### 复位
 
-当按下复位（RST）按钮时，会对 reSpeaker Flex 执行一次硬件复位，它会从最开始重新启动芯片并重新初始化系统，就像完整的断电重启一样。
+复位（RST）按钮在按下时为 reSpeaker Flex 提供硬件复位，它会重新启动芯片并从最开始重新初始化系统，就像一次完整的断电重启。
 
 #### 扬声器连接
 
@@ -237,7 +238,7 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/fpc-cable-orientation.png" alt="pir" width={600} height="auto" /></p>
 
-在连接 FPC 线缆之前，先确认接触面和加固面。在将线缆插入 MIC 连接器时，确保裸露的接触面朝向连接器内部的金属触点，而加固面朝外。
+在连接 FPC 线缆之前，先确认接触面和加固片的一侧。将线缆插入 MIC 连接器时，请确保裸露的接触面朝向连接器内部的金属触点，而加固片一侧朝外。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/fpc-cable-connection.png" alt="pir" width={600} height="auto" /></p>
 
@@ -245,9 +246,9 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 
 #### 安全模式
 
-**Safe Mode** 是 **reSpeaker Flex** 上的一种特殊恢复模式，它允许你通过 **USB DFU** 或 I2C（例如用于 **ESP32** 等设备）来烧录固件。
+**Safe Mode** 是 **reSpeaker Flex** 上的一种特殊恢复模式，它允许你通过 **USB DFU** 或 I2C（如 **ESP32** 等设备）来烧录固件。
 
-如果你之前已经烧录了 **I2S 固件**，并且想切换回 **USB 固件**，可以进入 **Safe Mode**，然后使用 **USB DFU** 重新烧录 USB 固件。
+如果你之前已经烧录了 **I2S 固件**，并希望切换回 **USB 固件**，可以进入 **Safe Mode**，然后使用 **USB DFU** 重新烧录 USB 固件。
 
 :::note
 
@@ -268,7 +269,7 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 
 **在以下情况下使用 Safe Mode**
 
-- 你的固件**工作不正常**（例如，**USB 未被识别**）。
+- 你的固件**工作异常**（例如，**USB 无法被识别**）。
 - 你需要**重新烧录新固件**，但当前固件**没有响应**。
 - 你**不小心烧录了错误的固件**，希望恢复设备。
 
@@ -281,7 +282,7 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 
 ### 更新固件
 
-在官方 GitHub 仓库中提供了三个固件版本。你可以根据应用需求选择并烧录合适的固件。更多详情和下载请参考 Github [链接](https://github.com/respeaker/reSpeaker_Flex)
+官方 GitHub 仓库中提供了三个固件版本。你可以根据应用需求选择并烧录合适的固件。更多详情和下载，请参考 Github [链接](https://github.com/respeaker/reSpeaker_Flex)
 
 :::note
 请确保你需要下载整个仓库。
@@ -298,12 +299,12 @@ USB 固件适用于通过 USB 硬件接口与 **Windows、Linux 和 macOS** 等�
 
 | Firmware                         | Channels | Notes                                                   |
 |----------------------------------|----------|---------------------------------------------------------|
-| respeaker_flex_ua-io16-6ch-cir.bin | 6 Channels | 16 kHz，使用环形麦克风阵列的 6 通道             |
-| respeaker_flex_ua-io16-6ch-lin.bin | 6 Channels | 16 kHz，使用线性麦克风阵列的 6 通道               |
-| respeaker_flex_ua-io16-cir.bin     | 2 Channels | 16 kHz，使用环形麦克风阵列的 2 通道输出          |
-| respeaker_flex_ua-io16-lin.bin     | 2 Channels | 16 kHz，使用线性麦克风阵列的 2 通道输出            |
-| respeaker_flex_ua-io48-cir.bin     | 2 Channels | 48 kHz，使用环形麦克风阵列的 2 通道输出          |
-| respeaker_flex_ua-io48-lin.bin     | 2 Channels | 48 kHz，使用线性麦克风阵列的 2 通道输出            |
+| respeaker_flex_ua-io16-6ch-cir.bin | 6 Channels | 16 kHz，6 通道，使用环形麦克风阵列             |
+| respeaker_flex_ua-io16-6ch-lin.bin | 6 Channels | 16 kHz，6 通道，使用线性麦克风阵列               |
+| respeaker_flex_ua-io16-cir.bin     | 2 Channels | 16 kHz，2 通道输出，使用环形麦克风阵列          |
+| respeaker_flex_ua-io16-lin.bin     | 2 Channels | 16 kHz，2 通道输出，使用线性麦克风阵列            |
+| respeaker_flex_ua-io48-cir.bin     | 2 Channels | 48 kHz，2 通道输出，使用环形麦克风阵列          |
+| respeaker_flex_ua-io48-lin.bin     | 2 Channels | 48 kHz，2 通道输出，使用线性麦克风阵列            |
 
 通过 USB 线缆将 reSpeaker Flex 连接到你的电脑。请注意，你需要使用 XMOS 的 USB-C 接口（靠近 RST 按钮）来烧录 XMOS 固件。
 
@@ -338,7 +339,7 @@ I2S 固件适用于设备连接到 XIAO ESP32S3 等微控制器主机时使用�
 - 将 `dfu-util.exe` 的路径添加到系统的 `Path` 变量中：  
   `My Computer > Properties > Advanced > Environment Variables > Path`
 
-- 打开 **Command Prompt**（`cmd`）并验证安装：
+- 打开 **命令提示符**（`cmd`）并验证安装：
 
 ```bash
 dfu-util -V
@@ -346,7 +347,7 @@ dfu-util -V
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/image.png" alt="pir" width={600} height="auto"/></p>
 
-- 连接 reSpeaker Flex 并检查设备是否被检测到：
+- 连接 reSpeaker Flex 并检查设备是否被识别：
 
 ```bash
 dfu-util -l
@@ -363,7 +364,7 @@ dfu-util -l
   - 选择 `reSpeaker XVF3800 Flex`  
   - 安装 **WinUSB** 驱动  
   - 对设备进行断电重启  
-  - 再次运行 `dfu-util -l` 以确认检测情况。
+  - 再次运行 `dfu-util -l` 以确认设备已被识别。
 
 </TabItem>
 
@@ -375,7 +376,7 @@ dfu-util -l
 brew install dfu-util
 ```
 
-- 检查设备是否被检测到：
+- 检查设备是否被识别：
 
 ```bash
 dfu-util -l
@@ -407,7 +408,7 @@ Found DFU: [2886:001a] ver=0202, devnum=3, cfg=1, intf=4, path="2-1.1.4", alt=0,
 sudo apt install dfu-util
 ```
 
-- 连接 XVF3800 并检查是否被检测到：
+- 连接 XVF3800 并检查识别情况：
 
 ```bash
 sudo dfu-util -l
@@ -434,13 +435,13 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 
 ### 烧录固件
 
-在此处从 GitHub 下载完整的固件仓库 reSpeaker Flex XVF 3800
+从 GitHub 下载完整固件仓库：reSpeaker Flex XVF 3800
 
 - 运行以下命令来烧录固件
 
   - dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
-- 在 Linux 上，以 sudo 运行
+- 在 Linux 上，使用 sudo 运行
 
   - sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
@@ -457,16 +458,16 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/audacity_setting.png" alt="pir" width={600} height="auto" /></p>
 
 3. 设置：
-   - **Host**：`Windows WASAPI`
-   - **Recording Device**：`reSpeaker XVF3800 Flex`
-   - **Channels**：`2 (Stereo)`
-   - **Sample Rate**：`16000 Hz`（用于 **Project** 和 **Default Sample Rate**）
-   - **采样格式**: `16-bit`
+   - **Host**: `Windows WASAPI`
+   - **Recording Device**: `reSpeaker XVF3800 Flex`
+   - **Channels**: `2 (Stereo)`
+   - **Sample Rate**: `16000 Hz`（用于 **Project** 和 **Default Sample Rate**）
+   - **Sample Format**: `16-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/audacity_setting_2.png" alt="pir" width={600} height="auto" /></p>
 
 1. 点击 **OK**
-2. 一切就绪——开始录音！
+2. 一切就绪——开始录音吧！
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/windw3.png" alt="pir" width={600} height="auto"/></p>
 
@@ -474,7 +475,7 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 
 <TabItem value="macos" label="macOS">
 
-### 设置 Audacity（macOS）
+### 配置 Audacity（macOS）
 
 1. 打开 **Audacity**
 2. 进入 **Audio Setup** 并将 **Recording Device** 选择为 **reSpeaker 3800 Flex**
@@ -514,11 +515,11 @@ arecord -l
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/arecord.png" alt="pir" width={600} height="auto"/></p>
 
- 在此示例中，**声卡编号为 3**
+ 在这个例子中，**声卡编号是 3**
 
 ---
 
-2. **录制音频（5 秒）**：
+2. **录音（5 秒）**：
 
 ```bash
 arecord -D plughw:3,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
@@ -528,7 +529,7 @@ arecord -D plughw:3,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 
 ---
 
-3. **在 ALSA 中为 reSpeaker XVF3800 调整音量**
+3. **在 ALSA 中调整 reSpeaker XVF3800 的音量**
 
 ```bash
 alsamixer
@@ -538,7 +539,7 @@ alsamixer
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/alsa.png" alt="pir" width={600} height="auto"/></p>
 
-4. **播放**：
+4. **回放**：
 
 ```bash
 aplay -D plughw:3,0 output.wav
@@ -548,7 +549,7 @@ aplay -D plughw:3,0 output.wav
 
 1. **安装 Pi-Apps（如果尚未安装）**
 
-在 Raspberry Pi 上打开终端。运行以下命令安装 Pi-Apps
+在 Raspberry Pi 上打开终端。运行以下命令来安装 Pi-Apps
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
@@ -584,7 +585,7 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 调参允许用户配置内置音频算法的参数，并与 XMOS 芯片直接通信。
 
-我们提供了专用的 Python 控制接口，用于参数配置和设备交互。
+提供了专用的 Python 控制接口，用于参数配置和设备交互。
 
 
 [**Python Control Directory**](https://github.com/respeaker/reSpeaker_Flex/tree/main/python_control)
@@ -596,7 +597,7 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 * 获取 VAD（语音活动检测）数据
 * 控制板载 LED
 * 控制语音处理流水线
-* 与 XMOS 设备直接通信
+* 直接与 XMOS 设备通信
 
 **系统要求**
 
@@ -631,7 +632,7 @@ python xvf_host.py [options] command [value(s)...]
 
 **命令选项**
 
-| 选项           | 描述                                                   |
+| Option         | Description                                           |
 | -------------- | ----------------------------------------------------- |
 | `-l`, `--list` | 列出所有支持的命令及其详细信息                        |
 | `--vid`        | 设置 USB Vendor ID（默认：`0x2886`）                  |
@@ -668,13 +669,13 @@ python xvf_host.py VERSION
 python xvf_host.py DOA_VALUE
 ```
 
-获取麦克风阵列当前检测到的 DOA（到达方向）数值。
+获取麦克风阵列检测到的当前到达方向（DOA）数值。
 
 ## 故障排查
 
-### 扬声器输出的播放声音不够大？
+### 扬声器输出的回放声音不够大？
 
-如果 **reSpeaker Flex** 在 Linux 上的扬声器输出音量太小，你可能需要为 XVF3800 声卡调整 **ALSA 混音器级别**。请按照以下步骤提高输出音量。
+如果 **reSpeaker Flex** 在 Linux 上的扬声器输出音量太小，你可能需要调整 XVF3800 声卡的 **ALSA 混音器电平**。按照以下步骤提高输出音量。
 
 **步骤 1：打开 ALSA Mixer**
 
@@ -687,13 +688,13 @@ python xvf_host.py DOA_VALUE
 
 **步骤 2：选择 XVF3800 Flex 声卡**
 
-1. 按 **F6** 打开声卡选择菜单。
-2. 使用 **上下方向键** 高亮选择 **XVF3800 Flex** 声卡。
-3. 按 **Enter** 确认选择。
+1. 按下 **F6** 打开声卡选择菜单。
+2. 使用 **上下方向键** 选中 **XVF3800 Flex** 声卡。
+3. 按下 **Enter** 确认选择。
 
 **步骤 3：调整 PCM-1 音量**
 
-1. 使用 **左右方向键** 导航到 **PCM-1**。
+1. 使用 **左右方向键** 移动到 **PCM-1**。
 2. 使用 **上方向键** 将音量提升到 **100%**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
@@ -709,7 +710,7 @@ python xvf_host.py DOA_VALUE
 
 **步骤 5：附加选项（使用 PulseAudio）**
 
-如果在调整 ALSA 级别后仍然无法清晰听到声音，可以尝试安装 **PulseAudio Volume Control** 以进行更精细的音量调节：
+如果在调整 ALSA 电平后仍然无法清晰听到声音，可以尝试安装 **PulseAudio Volume Control** 以进行更精细的音量调节：
 
 ```bash
 sudo apt install pavucontrol -y
@@ -717,12 +718,21 @@ sudo apt install pavucontrol -y
 
 然后你可以打开 **pavucontrol**，在需要时将输出音量提高到 100% 以上。
 
-### 刷写固件后在 Windows 中无法作为声卡使用？
+### 在刷写固件后，无法在 Windows 中作为声音设备使用？
 
-打开开始菜单并输入 Device manager。找到与 reSpeaker Flex 相关的设备，右键点击并选择 Uninstall devices。之后，重启设备（USB 拔插），Windows 会为其重新安装正确的声卡驱动。
+打开开始菜单并输入 Device manager。找到与 reSpeaker Flex 相关的设备，右键点击它们并选择 Uninstall devices。之后，重启设备（USB 拔插），Windows 会为其重新安装正确的声卡驱动。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
+### reSpeaker Flex 通过 USB 连接到电脑时，可以使用 12V 供电吗？
+
+可以。reSpeaker Flex 支持同时使用 12V 直流电源输入和 USB-C 与电脑连接。12V 输入为设备供电，而 USB-C 提供 USB 音频（UAC）和控制接口。
+
+我们已经测试过这种配置：使用 12V/2A 电源连接到 12V 输入端子，并使用 USB-C 线连接到电脑。我们成功通过连接到 reSpeaker Flex 的单声道封闭式扬声器（4Ω，5W）播放音乐。
+
+### 如果我通过端子提供 12V 供电，并仅使用 USB 进行数据传输（UAC + 控制），USB 仍然需要 VBUS（5V）才能枚举吗？
+
+ 不需要。当 reSpeaker Flex 通过 12V 输入端子供电时，USB VBUS（5V）在枚举时不是必需的。你可以在使用 12V 为设备供电的同时，将 USB 连接到电脑以进行 UAC 音频和控制。
 
 ## 资源
 
@@ -737,7 +747,7 @@ sudo apt install pavucontrol -y
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供了多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
