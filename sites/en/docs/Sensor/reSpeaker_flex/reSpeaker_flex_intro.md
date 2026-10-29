@@ -724,6 +724,15 @@ Open the start menu and type Device manager. Find  related reSpeaker Flex device
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
+### Can reSpeaker Flex be powered by 12V while connected to a PC via USB?
+
+Yes. reSpeaker Flex supports simultaneous 12V DC power input and USB-C connection to a PC. The 12V input powers the device, while USB-C provides the USB audio (UAC) and control interface.
+
+We have tested this configuration using a 12V/2A power supply connected to the 12V input terminal and a USB-C cable connected to a PC. We successfully played music through a Mono Enclosed Speaker (4Ω, 5W) connected to reSpeaker Flex.
+
+### If I supply 12V through the terminal and use USB for data only (UAC + control), does USB still need VBUS (5V) to enumerate?
+
+ No. When reSpeaker Flex is powered through the 12V input terminal, USB VBUS (5V) is not required for enumeration. You can connect USB to a PC for UAC audio and control while powering the device with 12V.
 
 ## Resources
 
