@@ -1,6 +1,6 @@
 ---
-description: "A deep dive into π0.5's joint training on multiple data sources, hierarchical action generation, generalization to unfamiliar homes, and differences from π0."
-title: "π₀.₅ — Open-World Generalization"
+description: "How to run Pi0.5 on reBot Arm & SO-ARM101: a paper deep-dive into pi0.5 multi-source joint training, hierarchical action generation, open-world generalization and differences from pi0."
+title: "How to Run Pi0.5 on reBot Arm & SO-ARM101"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi05-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-pi05-title">π₀.₅ — Open-World Generalization</h1>
+  <h1 id="paper-reading-pi05-title">How to Run Pi0.5 on reBot Arm & SO-ARM101</h1>
   <p className="paper-reading-lead">π0.5: a Vision-Language-Action Model with Open-World Generalization</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Open-world generalization</li>

@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for Stackforce series motors.
+description: "Complete guide to StackForce robotic actuators: series overview, wiring, CAN communication and control examples for wheeled and legged robots."
 title: Stackforce
 keywords:
   - actuator

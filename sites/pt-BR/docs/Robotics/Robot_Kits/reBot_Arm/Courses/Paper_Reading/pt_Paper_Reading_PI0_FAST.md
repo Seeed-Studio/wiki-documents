@@ -1,6 +1,6 @@
 ---
-description: "Um mergulho profundo no DCT do FAST, quantização de coeficientes, compressão BPE, tokenizador de ações universal e política de ações autorregressiva."
-title: "π₀-FAST — Tokenização de Ações Eficiente"
+description: "Como executar Pi0-FAST no reBot Arm e no SO-ARM101: análise da tokenização de ações do FAST — DCT, quantização de coeficientes, compressão BPE e a política de ações autorregressiva."
+title: "Como executar Pi0-FAST no reBot Arm e no SO-ARM101"
 hide_title: true
 keywords:
   - Mergulho Profundo em Artigo
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0_fast-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · MERGULHO PROFUNDO EM ARTIGO</span>
-  <h1 id="paper-reading-pi0_fast-title">π₀-FAST — Tokenização de Ações Eficiente</h1>
+  <h1 id="paper-reading-pi0_fast-title">Como executar Pi0-FAST no reBot Arm e no SO-ARM101</h1>
   <p className="paper-reading-lead">FAST: Tokenização de Ações Eficiente para Modelos Visão-Linguagem-Ação</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Tokenização de ações</li>

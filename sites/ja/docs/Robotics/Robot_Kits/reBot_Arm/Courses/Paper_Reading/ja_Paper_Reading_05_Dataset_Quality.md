@@ -1,6 +1,6 @@
 ---
 description: "LeRobot の動画、Parquet、メタ構造を理解し、時間同期、画像品質、デモンストレーションの完全性を確認します。"
-title: "データ品質：構造、同期、検証"
+title: "ロボット学習のデータセット品質を検証する方法"
 hide_title: true
 keywords:
   - ハンズオンデプロイ
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-dataset_quality-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
-  <h1 id="hands-on-dataset_quality-title">データ品質：構造、同期、検証</h1>
+  <h1 id="hands-on-dataset_quality-title">ロボット学習のデータセット品質を検証する方法</h1>
   <p className="paper-reading-lead">LeRobot の動画、Parquet、メタデータファイルを理解し、そのうえで時間同期、画像品質、デモンストレーションの完全性を確認します。</p>
   <ul className="paper-reading-badges" aria-label="このガイドで学ぶこと">
     <li>データセット構造</li>

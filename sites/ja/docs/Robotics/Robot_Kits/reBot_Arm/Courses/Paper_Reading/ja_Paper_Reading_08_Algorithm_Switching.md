@@ -1,6 +1,6 @@
 ---
 description: "すでに ACT が動作している reBot または SO101 プラットフォーム上で新しいポリシーを学習・デプロイし、タブでプラットフォームごとのコマンドを切り替え、Diffusion、SmolVLA、π ポリシーの設定および評価ワークフローを学びます。"
-title: "ポリシー切り替えとタスク実行"
+title: "reBot Arm でポリシーを切り替える方法"
 hide_title: true
 keywords:
   - ハンズオンデプロイ
@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-algorithm-switching-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
-  <h1 id="hands-on-algorithm-switching-title">ポリシー切り替えとタスク実行</h1>
+  <h1 id="hands-on-algorithm-switching-title">reBot Arm でポリシーを切り替える方法</h1>
   <p className="paper-reading-lead">動作中の ACT プラットフォームとそのデータセットを再利用して新しいポリシーを学習・デプロイし、その性能をロボット上で比較します。reBot-RS、reBot-DM、SO-ARM 101 向けのコマンドを用意しています。</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>Diffusion</li>

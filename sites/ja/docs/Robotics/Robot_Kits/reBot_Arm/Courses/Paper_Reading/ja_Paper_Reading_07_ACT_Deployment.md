@@ -1,6 +1,6 @@
 ---
 description: "ACT モデルを実ロボットで推論実行し、前処理とアクションチャンク実行を理解し、成功率を評価し、失敗ケースを使ってデータを改善します。"
-title: "オンロボットデプロイと性能評価"
+title: "reBot Arm で ACT をデプロイして評価する方法"
 hide_title: true
 keywords:
   - ハンズオンデプロイ
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_deployment-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
-  <h1 id="hands-on-act_deployment-title">オンロボットデプロイと性能評価</h1>
+  <h1 id="hands-on-act_deployment-title">reBot Arm で ACT をデプロイして評価する方法</h1>
   <p className="paper-reading-lead">ACT を実ロボット上で動かし、前処理とアクションチャンクの実行を理解し、成功を測定し、失敗を分析してデータを改善します。</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>オンロボット推論</li>

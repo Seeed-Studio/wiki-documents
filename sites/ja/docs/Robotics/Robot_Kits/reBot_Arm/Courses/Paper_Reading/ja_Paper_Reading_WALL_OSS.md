@@ -1,6 +1,6 @@
 ---
-description: "WALL-OSS の action-semantic 事前学習、連続アクション flow matching、Uni-CoT、およびエンボディドな質問応答と制御実験を詳細に解説します。"
-title: "WALL-OSS — エンボディド推論とロボット制御"
+description: "reBot Arm と SO-ARM101 で WALL-OSS を動かす方法：アクション意味論的事前学習、連続アクションのフローマッチング、Uni-CoT、身体化質問応答と制御を論文精読します。"
+title: "reBot Arm と SO-ARM101 で WALL-OSS を動かす方法"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-wall_oss-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-wall_oss-title">WALL-OSS — エンボディド推論とロボット制御</h1>
+  <h1 id="paper-reading-wall_oss-title">reBot Arm と SO-ARM101 で WALL-OSS を動かす方法</h1>
   <p className="paper-reading-lead">VLM をエンボディド空間へと駆動する</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>アクションセマンティクス</li>

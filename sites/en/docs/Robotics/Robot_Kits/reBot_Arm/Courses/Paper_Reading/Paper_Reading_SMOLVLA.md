@@ -1,6 +1,6 @@
 ---
-description: "A deep dive into SmolVLA's lightweight architecture, community-data pre-training, asynchronous inference, experimental results, and ablation analysis."
-title: "SmolVLA — Affordable Vision-Language-Action Models"
+description: "How to run SmolVLA on reBot Arm & SO-ARM101: a paper deep-dive into the lightweight SmolVLA architecture, community-data pre-training, asynchronous inference and ablations."
+title: "How to Run SmolVLA on reBot Arm & SO-ARM101"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-smolvla-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-smolvla-title">SmolVLA — Affordable Vision-Language-Action Models</h1>
+  <h1 id="paper-reading-smolvla-title">How to Run SmolVLA on reBot Arm & SO-ARM101</h1>
   <p className="paper-reading-lead">SmolVLA: A vision-language-action model for affordable and efficient robotics</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Lightweight VLA</li>

@@ -1,6 +1,6 @@
 ---
 description: 配置单路或双路相机，查找设备，录制 LeRobot 数据集，完成可视化、回放、补录与数据删除。
-title: 相机配置与数据录制
+title: 如何在 reBot Arm 上录制多视角示教数据
 hide_title: true
 keywords:
   - 手把手复现
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-camera_recording-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 手把手复现</span>
-  <h1 id="hands-on-camera_recording-title">相机配置与数据录制</h1>
+  <h1 id="hands-on-camera_recording-title">如何在 reBot Arm 上录制多视角示教数据</h1>
   <p className="paper-reading-lead">配置单路或双路相机，查找设备，录制 LeRobot 数据集，完成可视化、回放、补录与数据删除。</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>相机配置</li>

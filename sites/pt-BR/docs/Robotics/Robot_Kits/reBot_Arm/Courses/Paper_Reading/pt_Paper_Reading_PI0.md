@@ -1,6 +1,6 @@
 ---
-description: "Um mergulho profundo no backbone visão-linguagem do π0, especialista em ações, conditional flow matching, pré-treinamento entre diferentes corpos robóticos e pós-treinamento de tarefas."
-title: "π₀ — Controle Robótico de Uso Geral"
+description: "Como executar Pi0 no reBot Arm e no SO-ARM101: análise do backbone visão-linguagem do pi0, o especialista de ações, o flow matching condicional e o pré-treinamento multi-corpo."
+title: "Como executar Pi0 no reBot Arm e no SO-ARM101"
 hide_title: true
 keywords:
   - Análise Detalhada de Artigo
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISE DETALHADA DE ARTIGO</span>
-  <h1 id="paper-reading-pi0-title">π₀ — Controle Robótico de Uso Geral</h1>
+  <h1 id="paper-reading-pi0-title">Como executar Pi0 no reBot Arm e no SO-ARM101</h1>
   <p className="paper-reading-lead">π0: Um Modelo de Fluxo Visão-Linguagem-Ação para Controle Robótico Geral</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Modelos fundamentais para robôs</li>

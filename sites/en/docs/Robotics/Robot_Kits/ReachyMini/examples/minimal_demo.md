@@ -1,5 +1,6 @@
 ---
 description: Minimal example showing how to move Reachy Mini's head and antennas in a simple oscillating pattern.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Minimal Demo
 slug: /reachymini_examples_minimal_demo
 keywords:

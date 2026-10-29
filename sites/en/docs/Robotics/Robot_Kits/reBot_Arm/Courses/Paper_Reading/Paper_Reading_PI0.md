@@ -1,6 +1,6 @@
 ---
-description: "A deep dive into π0's vision-language backbone, action expert, conditional flow matching, cross-embodiment pre-training, and task post-training."
-title: "π₀ — General-Purpose Robot Control"
+description: "How to run Pi0 on reBot Arm & SO-ARM101: a paper deep-dive into the pi0 vision-language backbone, action expert, conditional flow matching and cross-embodiment pre-training."
+title: "How to Run Pi0 on reBot Arm & SO-ARM101"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-pi0-title">π₀ — General-Purpose Robot Control</h1>
+  <h1 id="paper-reading-pi0-title">How to Run Pi0 on reBot Arm & SO-ARM101</h1>
   <p className="paper-reading-lead">π0: A Vision-Language-Action Flow Model for General Robot Control</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Robot foundation models</li>

@@ -1,6 +1,6 @@
 ---
 description: "Cargar un modelo ACT para inferencia en un robot real, comprender el preprocesamiento y la ejecución de fragmentos de acciones, evaluar las tasas de éxito y mejorar los datos utilizando casos de fallo."
-title: "Despliegue en Robot y Evaluación del Rendimiento"
+title: "Cómo desplegar y evaluar ACT en reBot Arm"
 hide_title: true
 keywords:
   - Despliegue Práctico
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_deployment-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · DESPLIEGUE PRÁCTICO</span>
-  <h1 id="hands-on-act_deployment-title">Despliegue en Robot &amp; Evaluación del Rendimiento</h1>
+  <h1 id="hands-on-act_deployment-title">Cómo desplegar y evaluar ACT en reBot Arm</h1>
   <p className="paper-reading-lead">Ejecuta ACT en un robot real, comprende el preprocesamiento y la ejecución de fragmentos de acciones, mide el éxito y mejora los datos analizando los fallos.</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Inferencia en robot</li>

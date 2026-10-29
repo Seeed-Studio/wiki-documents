@@ -1,5 +1,5 @@
 ---
-title: "ポリシー切り替えとタスク実行"
+title: "SO-ARM101 でポリシーを切り替える方法"
 description: "SO101 のポリシー切り替えチュートリアルは、共有の reBot / SO101 チュートリアルに統合されました。"
 hide_title: true
 unlisted: true

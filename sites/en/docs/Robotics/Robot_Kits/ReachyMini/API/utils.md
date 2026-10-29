@@ -1,5 +1,6 @@
 ---
 description: Complete API reference for Reachy Mini utils including interpolation functions, hardware configuration, rerun visualization, and core utilities.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Utils API Reference
 slug: /reachymini_api_utils
 keywords:

@@ -1,6 +1,6 @@
 ---
 description: "Prepare-se para a reprodução prática: checklists de hardware do computador e do reBot Arm, instalação do ambiente LeRobot, configuração de câmera e CAN, e prática de teleoperação líder–seguidor."
-title: "Configuração de Hardware e Software"
+title: "Como configurar o hardware e a teleoperação do reBot Arm"
 hide_title: true
 keywords:
   - reBot
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-hardware-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLANTAÇÃO PRÁTICA</span>
-  <h1 id="paper-reading-hardware-title">Configuração de Hardware &amp; Software</h1>
+  <h1 id="paper-reading-hardware-title">Como configurar o hardware e a teleoperação do reBot Arm</h1>
   <p className="paper-reading-lead">Prepare o hardware e o software, estabeleça a teleoperação líder–seguidor e fique pronto para coleta de dados, treinamento de modelos e reprodução do artigo.</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Checklist de hardware</li>

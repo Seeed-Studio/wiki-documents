@@ -1,6 +1,6 @@
 ---
-description: 精读 FAST 的 DCT、系数量化、BPE 压缩、通用动作分词器与自回归动作策略。
-title: FAST / π0-FAST 论文精读
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 Pi0-FAST：论文精读 FAST 动作分词——DCT 变换、系数量化、BPE 压缩与自回归动作策略。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 Pi0-FAST
 hide_title: true
 keywords:
   - 论文精读
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0_fast-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-pi0_fast-title">FAST：高效动作分词与 π0-FAST</h1>
+  <h1 id="paper-reading-pi0_fast-title">如何在 reBot Arm 与 SO-ARM101 上运行 Pi0-FAST</h1>
   <p className="paper-reading-lead">FAST: Efficient Action Tokenization for Vision-Language-Action Models</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>动作分词</li>

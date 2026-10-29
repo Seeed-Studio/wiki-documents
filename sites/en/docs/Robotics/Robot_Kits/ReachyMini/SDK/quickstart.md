@@ -1,5 +1,6 @@
 ---
 description: Quickstart guide for Reachy Mini covering prerequisites, daemon setup, and your first robot script.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Quickstart Guide
 slug: /reachymini_sdk_quickstart
 keywords:

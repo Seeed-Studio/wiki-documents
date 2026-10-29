@@ -1,6 +1,6 @@
 ---
-description: 精读 EO-1 的共享骨干、交错视觉文本动作学习、具身推理数据与机器人控制实验。
-title: EO-1 论文精读
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 EO-1：论文精读 EO-1 共享骨干网络、视觉-文本-动作交错学习、具身推理数据与机器人控制实验。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 EO-1
 hide_title: true
 keywords:
   - 论文精读
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-eo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-eo1-title">EO-1：统一具身推理与机器人控制</h1>
+  <h1 id="paper-reading-eo1-title">如何在 reBot Arm 与 SO-ARM101 上运行 EO-1</h1>
   <p className="paper-reading-lead">EO-1: An Open Unified Embodied Foundation Model for General Robot Control</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>统一具身模型</li>

@@ -1,5 +1,5 @@
 ---
-description: Complete guide to Bimanual SO-ARM training with LeRobot.
+description: "How to train a bimanual (dual-arm) SO-ARM policy with LeRobot: calibrate four arms, teleoperate, record datasets, train ACT and deploy on the real robots."
 title: SO-Arm Bimanual-Teleoperation
 keywords:
   - Lerobot

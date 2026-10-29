@@ -1,5 +1,5 @@
 ---
-title: 从 ACT 切换到其他策略（reBot / SO101）
+title: 如何在 SO-ARM101 上切换策略
 description: SO101 策略切换教程已合并至 reBot / SO101 通用教程。
 hide_title: true
 unlisted: true

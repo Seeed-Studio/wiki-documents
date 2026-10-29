@@ -1,6 +1,6 @@
 ---
 description: "Projete sua primeira tarefa de aprendizado por imitação em torno de episódios, condições de início e parada e consistência das demonstrações; em seguida, conclua amostragem de cinco pontos e demonstrações de pega-e-coloca."
-title: "Planejamento de Projeto de Tarefa e Demonstração"
+title: "Como projetar tarefas e demonstrações para aprendizado por imitação"
 hide_title: true
 keywords:
   - Implantação prática
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-task_design-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLANTAÇÃO PRÁTICA</span>
-  <h1 id="hands-on-task_design-title">Planejamento de Projeto de Tarefa e Demonstração</h1>
+  <h1 id="hands-on-task_design-title">Como projetar tarefas e demonstrações para aprendizado por imitação</h1>
   <p className="paper-reading-lead">Defina episódios, condições de início e parada e demonstrações consistentes; em seguida, use amostragem de cinco pontos para coletar uma tarefa completa de pega-e-coloca.</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Episódio</li>

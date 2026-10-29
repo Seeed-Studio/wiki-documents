@@ -1,6 +1,6 @@
 ---
-description: "GR00T N1 のデュアルシステムアーキテクチャ、データピラミッド、フローマッチングによるアクションチャンク、事前学習、およびロボット適応についての詳細な解説。"
-title: "NVIDIA GR00T — 適応とファインチューニング"
+description: "reBot Arm と SO-ARM101 で NVIDIA GR00T N1 を動かす方法：GR00T N1 のデュアルシステムアーキテクチャ、データピラミッド、フローマッチングのアクションチャンク、ロボット適応を論文精読します。"
+title: "reBot Arm と SO-ARM101 で NVIDIA GR00T N1 を動かす方法"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-gr00t_n1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-gr00t_n1-title">NVIDIA GR00T — 適応とファインチューニング</h1>
+  <h1 id="paper-reading-gr00t_n1-title">reBot Arm と SO-ARM101 で NVIDIA GR00T N1 を動かす方法</h1>
   <p className="paper-reading-lead">GR00T N1: 汎用ヒューマノイドロボットのためのオープンな基盤モデル</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>ヒューマノイドロボット</li>

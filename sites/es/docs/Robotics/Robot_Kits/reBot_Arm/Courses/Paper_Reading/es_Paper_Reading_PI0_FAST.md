@@ -1,6 +1,6 @@
 ---
-description: "Un análisis en profundidad del DCT de FAST, la cuantización de coeficientes, la compresión BPE, el tokenizador de acciones universal y la política de acciones autoregresiva."
-title: "π₀-FAST — Tokenización de acciones eficiente"
+description: "Cómo ejecutar Pi0-FAST en reBot Arm y SO-ARM101: análisis de la tokenización de acciones de FAST — DCT, cuantización de coeficientes, compresión BPE y la política de acciones autorregresiva."
+title: "Cómo ejecutar Pi0-FAST en reBot Arm y SO-ARM101"
 hide_title: true
 keywords:
   - Análisis en profundidad de artículos
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0_fast-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DE ARTÍCULOS</span>
-  <h1 id="paper-reading-pi0_fast-title">π₀-FAST — Tokenización de acciones eficiente</h1>
+  <h1 id="paper-reading-pi0_fast-title">Cómo ejecutar Pi0-FAST en reBot Arm y SO-ARM101</h1>
   <p className="paper-reading-lead">FAST: Tokenización de acciones eficiente para modelos Visión-Lenguaje-Acción</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Tokenización de acciones</li>

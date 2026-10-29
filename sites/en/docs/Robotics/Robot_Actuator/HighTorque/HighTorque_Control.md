@@ -1,5 +1,5 @@
 ---
-description: This wiki provides HighTorque Motor Control Complete Guide
+description: "HighTorque actuator control complete guide: MIT mode, position/velocity modes, CAN commands and Python SDK examples for robotic arm joints."
 title: HighTorque Motor SDK
 keywords:
   - actuator

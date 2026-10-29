@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for Damiao series motors.
+description: "Complete guide to DM (Damiao) joint actuators for robotic arms: motor series overview, control modes, CAN communication and Python SDK usage with Seeed robotics kits."
 title: Damiao
 keywords:
   - actuator

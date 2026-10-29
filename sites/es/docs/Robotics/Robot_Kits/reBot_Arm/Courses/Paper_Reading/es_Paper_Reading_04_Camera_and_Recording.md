@@ -1,6 +1,6 @@
 ---
 description: "Configura una o dos cámaras, encuentra dispositivos, graba datasets de LeRobot y visualiza, reproduce, añade y elimina datos."
-title: "Recopilación de datos multivista"
+title: "Cómo grabar demostraciones multivista en reBot Arm"
 hide_title: true
 keywords:
   - Despliegue práctico
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-camera_recording-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · DESPLIEGUE PRÁCTICO</span>
-  <h1 id="hands-on-camera_recording-title">Recopilación de datos multivista</h1>
+  <h1 id="hands-on-camera_recording-title">Cómo grabar demostraciones multivista en reBot Arm</h1>
   <p className="paper-reading-lead">Configura una o dos cámaras, identifica dispositivos, graba demostraciones de LeRobot, visualiza y reproduce datasets, y añade o elimina episodios.</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Configuración de la cámara</li>

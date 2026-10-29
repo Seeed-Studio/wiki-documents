@@ -1,6 +1,6 @@
 ---
 description: "Treine e faça o deploy de novas políticas em uma plataforma reBot ou SO101 que já esteja executando ACT, alterne os comandos da plataforma usando abas e aprenda os fluxos de configuração e avaliação para políticas Diffusion, SmolVLA e π."
-title: "Troca de Políticas & Execução de Tarefas"
+title: "Como trocar de política no reBot Arm"
 hide_title: true
 keywords:
   - Implantação prática
@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-algorithm-switching-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLANTAÇÃO PRÁTICA</span>
-  <h1 id="hands-on-algorithm-switching-title">Troca de Políticas &amp; Execução de Tarefas</h1>
+  <h1 id="hands-on-algorithm-switching-title">Como trocar de política no reBot Arm</h1>
   <p className="paper-reading-lead">Reutilize uma plataforma ACT funcional e seu conjunto de dados para treinar e fazer o deploy de uma nova política e, em seguida, compare o desempenho no robô. Os comandos são fornecidos para reBot-RS, reBot-DM e SO-ARM 101.</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Diffusion</li>

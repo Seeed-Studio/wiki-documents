@@ -1,6 +1,6 @@
 ---
 description: "Configure uma ou duas câmeras, encontre dispositivos, grave conjuntos de dados LeRobot e visualize, reproduza, adicione e exclua dados."
-title: "Coleta de Dados Multi-View"
+title: "Como gravar demonstrações multivista no reBot Arm"
 hide_title: true
 keywords:
   - Implantação prática
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-camera_recording-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLANTAÇÃO PRÁTICA</span>
-  <h1 id="hands-on-camera_recording-title">Coleta de Dados Multi-View</h1>
+  <h1 id="hands-on-camera_recording-title">Como gravar demonstrações multivista no reBot Arm</h1>
   <p className="paper-reading-lead">Configure uma ou duas câmeras, identifique dispositivos, grave demonstrações LeRobot, visualize e reproduza conjuntos de dados e adicione ou remova episódios.</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Configuração de câmera</li>

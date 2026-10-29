@@ -1,6 +1,6 @@
 ---
 description: "Prepare for hands-on reproduction: computer and reBot Arm hardware checklists, LeRobot environment installation, camera and CAN configuration, and leader–follower teleoperation practice."
-title: "Hardware & Software Setup"
+title: "How to Set Up reBot Arm Hardware and Teleoperation"
 hide_title: true
 keywords:
   - reBot
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-hardware-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
-  <h1 id="paper-reading-hardware-title">Hardware &amp; Software Setup</h1>
+  <h1 id="paper-reading-hardware-title">How to Set Up reBot Arm Hardware and Teleoperation</h1>
   <p className="paper-reading-lead">Prepare the hardware and software, establish leader–follower teleoperation, and get ready for data collection, model training, and paper reproduction.</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Hardware checklist</li>

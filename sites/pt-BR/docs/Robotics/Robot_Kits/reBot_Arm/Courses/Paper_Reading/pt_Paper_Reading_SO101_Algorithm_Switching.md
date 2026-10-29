@@ -1,5 +1,5 @@
 ---
-title: "Mudança de Política e Execução de Tarefas"
+title: "Como trocar de política no SO-ARM101"
 description: "O tutorial de mudança de política do SO101 foi mesclado no tutorial compartilhado do reBot / SO101."
 hide_title: true
 unlisted: true

@@ -1,6 +1,6 @@
 ---
 description: "Design your first imitation learning task around episodes, starting and stopping conditions, and demonstration consistency, then complete five-point sampling and pick-and-place demonstrations."
-title: "Task Design & Demonstration Planning"
+title: "How to Design Tasks and Demos for Imitation Learning"
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-task_design-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
-  <h1 id="hands-on-task_design-title">Task Design &amp; Demonstration Planning</h1>
+  <h1 id="hands-on-task_design-title">How to Design Tasks and Demos for Imitation Learning</h1>
   <p className="paper-reading-lead">Define episodes, starting and stopping conditions, and consistent demonstrations, then use five-point sampling to collect a complete pick-and-place task.</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Episode</li>

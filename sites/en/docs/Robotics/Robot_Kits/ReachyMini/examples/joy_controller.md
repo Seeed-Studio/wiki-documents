@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating how to control Reachy Mini's head yaw angle using a joystick (PS4 or Xbox controller) for intuitive real-time control.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Joystick Controller
 slug: /reachymini_examples_joy_controller
 keywords:

@@ -1,6 +1,6 @@
 ---
-description: 精读 π0 的视觉语言骨干、动作专家、条件流匹配、跨本体预训练与任务后训练。
-title: π0 论文精读
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 Pi0：论文精读 pi0 视觉-语言骨干网络、动作专家、条件流匹配与跨本体预训练。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 Pi0
 hide_title: true
 keywords:
   - 论文精读
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-pi0-title">π0：基于流匹配的通用机器人控制</h1>
+  <h1 id="paper-reading-pi0-title">如何在 reBot Arm 与 SO-ARM101 上运行 Pi0</h1>
   <p className="paper-reading-lead">π0: A Vision-Language-Action Flow Model for General Robot Control</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>机器人基础模型</li>

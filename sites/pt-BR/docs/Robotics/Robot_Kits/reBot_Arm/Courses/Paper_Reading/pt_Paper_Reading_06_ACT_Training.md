@@ -1,6 +1,6 @@
 ---
 description: "Defina parâmetros de treinamento do ACT, inicie o treinamento, monitore a loss e o status da GPU, retome treinamentos interrompidos e gerencie checkpoints."
-title: "Treinamento de Modelo ACT"
+title: "Como treinar ACT no reBot Arm"
 hide_title: true
 keywords:
   - Implantação prática
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_training-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLANTAÇÃO PRÁTICA</span>
-  <h1 id="hands-on-act_training-title">Treinamento de Modelo ACT</h1>
+  <h1 id="hands-on-act_training-title">Como treinar ACT no reBot Arm</h1>
   <p className="paper-reading-lead">Configure o treinamento do ACT, inicie uma execução, monitore a loss e o uso de GPU, retome treinamentos interrompidos e gerencie checkpoints.</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Configuração de treinamento</li>
