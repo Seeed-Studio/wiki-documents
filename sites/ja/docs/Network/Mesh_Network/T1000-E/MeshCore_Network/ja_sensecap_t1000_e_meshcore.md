@@ -1,5 +1,5 @@
 ---
-description: Meshcore 用 SenseCAP Card Tracker T1000-E の使用を開始します。デバイスのインストール、ファームウェア書き込み、デバイス接続について案内します。
+description: Meshcore 用 SenseCAP Card Tracker T1000-E の使用を開始します。デバイスの取り付け、ファームウェアの書き込み、デバイス接続について案内します。
 title: MeshCore を使い始める
 keywords:
   - Tracker
@@ -8,14 +8,14 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 10/16/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-10-16'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/
 ---
 
-## ファームウェア書き込み
+## ファームウェアの書き込み
 
 ### 方法1 Web Flasher 経由
 
@@ -47,7 +47,7 @@ USB ケーブルでデバイスをコンピュータに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
-#### ファームウェア書き込み
+#### ファームウェアの書き込み
 
 `Enter DFU Mode` をクリックし、「nRF xxx」または「TinyUSB」という名前のシリアルポートを選択します。その後、`Flash` をクリックしてシリアルポートを選択します。
 
@@ -101,7 +101,7 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 ファームウェアが正常に書き込まれるとディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
 
-#### ファームウェア書き込み
+#### ファームウェアの書き込み
 
 最新のファームウェアバージョンを選択します。
 
@@ -111,7 +111,7 @@ UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareUF2.png" alt="pir" width={800} height="auto" /></p>
 
-DFU モードに手動で入ります：デバイスのボタンを押し続け、**素早く** 充電ケーブルを 2 回接続します。緑色の LED が点灯し続けます。
+DFU モードに手動で入ることを試します：デバイスのボタンを押し続け、**素早く** 充電ケーブルを 2 回接続します。緑色の LED が点灯し続けます。
 
 :::warning
 DFU モードに正常に入るには、この操作を素早く行う必要があります。複数回試す必要があるかもしれません。
@@ -133,11 +133,11 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 ### デバイスの電源オン
 
-ボタンを押して電源を入れます。LED が点灯し、上昇するメロディーが鳴ります。
+ボタンを押して電源を入れます。LED が点灯し、上昇音のメロディーが鳴ります。
 
 ### デバイスの電源オフ
 
-ボタンを 3 秒間押し続けて電源を切ります。LED が消灯し、下降するメロディーが鳴ります。
+ボタンを 3 秒間押して電源を切ります。LED が消灯し、下降音のメロディーが鳴ります。
 
 :::tip
 ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
@@ -151,14 +151,14 @@ Google Store または Apple Store からダウンロードします。または
 
 ### アプリ経由で接続
 
-`Connect` をクリックし、対象デバイスを選択します。デフォルトのデバイス ID は `Meshcore-MAC Address` です。MAC アドレスはデバイスの背面で確認できます。
+`Connect` をクリックし、対象デバイスを選択します。デフォルトのデバイス ID は `Meshcore-MAC Address` です。MAC アドレスはデバイス背面で確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DeviceConnectAn.png" alt="pir" width={600} height="auto" /></p>
 
 デフォルトの PIN コード `123456` を入力し、`Pair` をクリックしてデバイスに接続します。
 
 :::tip
-接続に失敗した場合は、スマートフォンの Bluetooth リストを開き、そのデバイスを `forget` または `Unpair` してから、再度接続をお試しください。
+接続に失敗した場合は、スマートフォンの Bluetooth リストを開き、そのデバイスを `forget` または `Unpair` してから、再度接続を試してください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Unpair.jpg" alt="pir" width={300} height="auto" /></p>
 :::
 
@@ -185,7 +185,7 @@ Google Store または Apple Store からダウンロードします。または
 
 ### LoRa の設定
 
-メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、あなたの地域に応じて設定する必要があります。
+メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、お住まいの地域に応じて設定する必要があります。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
@@ -196,11 +196,11 @@ Google Store または Apple Store からダウンロードします。または
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|未設定|N/A|N/A|N/A|
-|US|アメリカ合衆国|902.0 - 928.0|100|30|
-|EU_868|欧州連合 868 MHz|869.4 - 869.65|10|27|
+|UNSET|Unset|N/A|N/A|N/A|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868 MHz|869.4 - 869.65|10|27|
 
-これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の[LoRa パラメータ](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-一般)の設定を続けることができます。
+これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の[LoRa parameter](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-一般)を設定し続けることができます。
 
 ### GPS の設定
 
@@ -214,10 +214,10 @@ APP の `Position Settings` に移動して GPS を有効にできます。
 
 |Button Action|Description|
 |--|--|
-|Press for 3s|電源オン/オフ|
-|Double-click|ブロードキャスト広告|
-|Triple-click|ブザー切り替え|
-|Quadruple-click|GPS 切り替え|
+|Press for 3s|Power on/off|
+|Double-click|broadcast advert|
+|Triple-click|Buzzer switch|
+|Quadruple-click|GPS switch|
 
 ## メッセージ送信
 
@@ -227,10 +227,10 @@ APP の `Position Settings` に移動して GPS を有効にできます。
 
 ### アドバタイズ
 
-MeshCoreでは、自分の名前、位置情報、および公開暗号鍵を手動でブロードキャストできます。これらの情報にはなりすまし防止のために署名も付与されます。アドバタイズボタンをクリックすると、そのデータがLoRa経由でブロードキャストされます。MeshCoreではこれをAdvertと呼びます。アドバタイズには「ゼロホップ」と「フラッド」の2つの方法があります。
+MeshCoreでは、自分の名前、位置情報、および公開暗号鍵を手動でブロードキャストできます。これらはなりすましを防ぐために署名されています。アドバタイズボタンをクリックすると、そのデータがLoRa経由でブロードキャストされます。MeshCoreではこれをAdvertと呼びます。アドバタイズには「ゼロホップ」と「フラッド」の2つの方法があります。
 
 - **Zero hop** は、自分のアドバタイズが届く範囲の相手に一度だけ送信され、それで終了することを意味します。
-- **Flooded** は、一度送信されたアドバタイズが、それを受信したすべてのリピーターによって再送信されることを意味します。
+- **Flooded** は、一度送信された後、それを受信したすべてのリピーターによって再送信されることを意味します。
 
 アプリからアドバタイズを送信できます。また、デバイスのアドバタイズページから直接送信することもできます。
 
@@ -256,23 +256,33 @@ import TabItem from '@theme/TabItem';
 
 ## トラブルシューティング
 
+### ファームウェア更新の失敗 / OTAリカバリ
+
+SenseCAP Card Tracker T1000-Eがファームウェア更新後に反応しなくなり、緑色LEDが点灯しっぱなしの場合、デバイスはDFUモードで停止しています。次の手順をお試しください。
+
+1. DFUモードを終了するために強制再起動します：ボタンを押し続けたまま、充電ケーブルを接続します。
+2. 再起動後、デバイスが正常に起動するか確認します。起動しない場合は、手動でDFUモードに入ります — デバイスのボタンを押し続けたまま、**素早く**充電ケーブルを2回接続します。この操作は数回試す必要があるかもしれません。`T1000-E`という名前のディスクが表示されたら、[Firmware Flashing](#firmware-flashing) ガイドに従って、適切なアプリケーションファームウェアを再インストールしてください。
+3. それでもデバイスを復旧できず、DFUシリアルポートが利用可能な場合は、[Device bricked](#device-bricked) に従ってブートローダーを書き込み直し、その後アプリケーションファームウェアを再インストールしてください。
+
+デバイスがDFUモードに入れない、またはPCに認識されない場合は、テクニカルサポートにお問い合わせください。
+
 ### デバイスの電源が入らない
 
-- デバイスを1〜2時間充電する
+- デバイスを1〜2時間充電します
 
-- 充電ケーブルを交換する
+- 充電ケーブルを交換します
 
  - それでも改善しない場合は、デバイスのボタンを押し続けたまま充電ケーブルを接続し、PCにディスクが表示されるか確認してください。表示された場合は、[こちらをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-the-bootloader)してブートローダーを再インストールしてください。
 
 ### デバイスがブートループに陥る
 
-**現象:**
+**説明：**
 
 デバイスが繰り返し再起動し、シリアルポートが接続と切断を繰り返します。
 
-**解決方法:**
+**解決方法：**
 
-- ステップ1: 手動でDFUモードに入ることを試します。デバイスのボタンを押し続けたまま、**素早く**充電ケーブルを2回接続します。緑色のLEDが点灯し続けます。
+- ステップ1：手動でDFUモードに入ることを試します。デバイスのボタンを押し続けたまま、**素早く**充電ケーブルを2回接続します。緑色LEDが点灯しっぱなしになります。
 
 :::note
 DFUモードに正常に入るには、この操作を素早く行う必要があります。複数回試す必要があるかもしれません。
@@ -280,33 +290,33 @@ DFUモードに正常に入るには、この操作を素早く行う必要が�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-- ステップ2: フラッシュを消去する
+- ステップ2：フラッシュを消去します
 
-- ステップ3: ファームウェアを書き込む
+- ステップ3：ファームウェアを書き込みます
 
-### デバイスがブリックした
+### デバイスがブリックした場合
 
 #### 説明
 
 デバイスが反応せず、LEDも点灯せず、アプリとペアリングできません。
 
-**1) デバイスがDFUモードに入ることはできるが、その場合はブートローダーの書き込みを試してください。**
+**1) デバイスがまだDFUモードに入れる場合は、ブートローダーの書き込みを試してください。**
 
 #### ブートローダーを書き込む
 
-- [ブートローダーダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
+- [ブートローダーのダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash%20bootloader.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを必ず確認し、書き込み中に**絶対に**ケーブルを抜かないでください。
+ブートローダーを書き込む際は、ケーブル接続が安定していることを必ず確認し、書き込み処理中に**絶対に**ケーブルを抜かないでください。
 :::
 
-**ステップ1: Adafruit-nrfutil のインストール**
+**ステップ1：Adafruit-nrfutil のインストール**
 
-Windowsユーザーは、「Win」キーと「R」キーを押し、ポップアップウィンドウに「cmd」と入力して「Enter」を押します。これでコマンドラインを開くことができます。 
+Windowsユーザーは、「Win」キーと「r」キーを押し、ポップアップウィンドウに「cmd」と入力して「Enter」を押します。これでコマンドラインを開くことができます。 
 
 Macユーザーは、「Command」キーと「Space」キーを押してSpotlightを開き、「termial」と入力して「Return」を押します。これでコマンドラインを開くことができます。 
 
@@ -325,7 +335,7 @@ python --version
 python -m pip --version
 ```
 
-その後、「Python xxx」と「pip xxx」が表示されるはずです。表示されない場合は、Pythonを再インストールしてください。
+その後、「Python xxx」と「pip xxx」が表示されるはずです。表示されない場合は、Pythonを再インストールしてみてください。
 
 <Tabs>
 <TabItem value="pypi" label="PyPI からインストール">
@@ -346,11 +356,11 @@ adafruit-nrfutil version
 python -m pip show adafruit-nrfutil
 ```
 
-こちらがインストール場所です。
+これはインストール場所の例です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-パスを手動で追加する必要がある場合があります。前のステップで表示されたインストール場所をコピーし、次のように追加します。
+パスを手動で追加する必要がある場合があります。前の手順で表示されたインストール場所をコピーし、次のように追加します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -363,13 +373,13 @@ python3 -m pip install --user adafruit-nrfutil
 adafruit-nrfutil version
 ```
 
-`adafruit-nrfutil` が認識されない場合は、Python のユーザースクリプトディレクトリ（ホームディレクトリ配下の `bin`）を PATH に追加してください。
+`adafruit-nrfutil` が認識されない場合は、Pythonユーザースクリプトディレクトリ（ホームディレクトリ配下の `bin`）をPATHに追加してください。
 
 </TabItem>
 
 <TabItem value="linux" label="Linux">
 
-pipx で `adafruit-nrfutil` をインストールします。
+pipx を使って `adafruit-nrfutil` をインストールします。
 
 ```
 sudo apt install pipx
@@ -377,7 +387,7 @@ pipx install adafruit-nrfutil
 pipx ensurepath
 ```
 
-Fedora では、apt の代わりに `sudo dnf install pipx` を使用します。ターミナルを開き直してから、次のコマンドで確認します。
+Fedoraでは、apt の代わりに `sudo dnf install pipx` を使用してください。ターミナルを再起動し、次を確認します。
 
 ```
 adafruit-nrfutil version
@@ -390,30 +400,30 @@ adafruit-nrfutil version
 
 <TabItem value="sou" label="ソースからインストール">
 
-PyPiでのインストールに問題がある場合や、このツールを変更したい場合はこの方法を使用します。まずこのリポジトリをクローンし、そのフォルダに移動します。
+PyPiでのインストールに問題がある場合や、ツールを変更したい場合はこの方法を使用します。まずこのリポジトリをクローンし、そのフォルダに移動します。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意: 以下のコマンドでは `python3` を使用していますが、Windowsの場合は、Python 3.x のインストールでも実行ファイル名が python.exe のままなので、`python` に変更する必要があるかもしれません。
+注意：以下のコマンドでは `python3` を使用していますが、Windowsの場合は `python` に変更する必要があるかもしれません。これは、Windows版のPython 3.xの実行ファイル名が依然としてpython.exeであるためです。
 
-ホームディレクトリのユーザースペースにインストールするには:
+ホームディレクトリ内のユーザースペースにインストールするには：
 
 ```
 pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-`pip3 install` 実行時に権限エラーが発生する場合、`pip3` が古いか、システムディレクトリにインストールしようとしている可能性があります。その場合は `--user` フラグを使用してください。
+`pip3 install` 実行時にパーミッションエラーが発生する場合、`pip3` が古いか、システムディレクトリにインストールしようとしている可能性があります。その場合は `--user` フラグを使用してください。
 
 ```
 pip3 install --user -r requirements.txt
 python3 setup.py install
 ```
 
-システムディレクトリにインストールしたい場合（一般的には非推奨）:
+システムディレクトリにインストールしたい場合（一般的には非推奨）：
 
 ```
 sudo pip3 install -r requirements.txt
@@ -436,32 +446,32 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 </TabItem>
 </Tabs>
 
-**ステップ2: ポート番号を確認する**
+**ステップ2：ポート番号を確認する**
 
 デバイスをPCに接続し、ポート番号を確認します。
 
-Windowsユーザーの場合の例:
+Windowsユーザーの場合の例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-Macユーザーの場合の例:
+Macユーザーの場合の例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**ステップ3: ブートローダーを書き込む**
+**ステップ3：ブートローダーを書き込む**
 
-ターミナルまたはコマンドプロンプトで、ブートローダーのzipパッケージをダウンロードしたディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに合った正しいポートに置き換えてください。
+ターミナルまたはコマンドプロンプトで、ブートローダーのzipパッケージをダウンロードしたディレクトリに移動し、次のコマンドを実行します。その際、デバイスに対応する正しいポートに置き換えてください。
 
-- **Windows の場合**:
+- **Windows の場合**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
-COMXX を自分のCOM番号に変更してください。例えば、デバイスがCOM6の場合、コマンドを次のように変更します。
+COMXX をお使いのCOM番号に変更してください。例えば、デバイスがcom6の場合、コマンドを次のように変更します。
 
 `adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- 一部のデバイスは、このコマンドを入力した後にポート番号が変わることがあります。そのため、インストールに失敗した場合は、再度ポート番号を確認してください。
+ 一部のデバイスは、このコマンドを入力した後にポート番号が変わることがあります。そのため、インストールに失敗した場合は、もう一度ポート番号を確認してください。
 
-- **その他のOSの場合**:
+- **その他のOSの場合**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
@@ -469,26 +479,26 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-上記の手順が完了したら、[ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#firmware-flashing)してアプリケーションファームウェアを書き込んでください。
+上記の手順が完了したら、[こちらをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#firmware-flashing)してアプリケーションファームウェアを書き込んでください。
 
-**2) デバイスがDFUモードに入れないが、シリアルポートは検出できる場合**
+**2) デバイスがDFUモードに入れないが、シリアルポートは検出できる場合。**
 
-- シリアルポートツールを開きます。
+- シリアルポートツールを開きます
 
 - ボーレートを `1200` に設定します。
 
 - デバイスを接続します。
-   接続するとライトが一瞬点滅します。ライトが点灯し続けるまで繰り返し試してください。ライトが点灯し続ける状態になれば、デバイスがDFUモードに戻ったことを意味します。その後、[ブートローダー](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-the-bootloader) -> [フラッシュ消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-erase) -> [ファームウェア書き込み](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-firmware) の順に実行します。
+   接続するとライトが一瞬点滅します。ライトが点灯したままになるまでこれを繰り返してください。これはデバイスがDFUモードに戻れたことを意味します。その後、[bootloader](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-the-bootloader) -> [Erase flash](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-erase) -> [flash the firmware](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-firmware) の順に書き込みを行います。
 
-**3) デバイスがDFUモードに入れず、シリアルポートも表示されない場合**
+**3) デバイスがDFUモードに入れず、シリアルポートも表示されない**
 
-- デバイスのボタンを押し続けたまま充電ケーブルを接続します。PCにディスクが表示された後、シリアルポートが見える場合があります。
+- デバイスボタンを押し続けたまま、充電ケーブルを接続します。PCにディスクがポップアップ表示されたら、シリアルポートが見える場合があります。
 
-- それでも改善しない場合は、充電ケーブルを外し、バッテリーが完全に放電するまで数日間デバイスを放置してから、再度充電ケーブルを接続し、ペアリングを試してください。
+- それでもうまくいかない場合は、充電ケーブルを外し、バッテリーが完全に放電するまで数日間デバイスを放置してから、充電ケーブルを接続し直して再度ペアリングを試してください。
 
-**4) 上記のいずれの手順でも解決しない場合は、テクニカルサポート support@sensecapmx.com までご連絡ください。**
+**4) 上記のいずれの手順でも解決しない場合は、テクニカルサポート（support@sensecapmx.com）までご連絡ください。**
 
-### ファームウェア書き込みに失敗する
+### ファームウェアの書き込みに失敗する
 
 - **シリアルポートでデータを受信しない**
 
@@ -509,14 +519,14 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
  - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。 
  - シリアルポートのログがしばらく流れた後に停止します。
 
- これは、デバイスが次の状態にあるときに、メッセージ送信プロセスが完了していない、設定中である……などの状況で、手動かつ強制的に再起動または電源オフしたことが原因である可能性があります。
+ これは、メッセージ送信処理が完了していない、設定中である、などの状態のときに、手動で強制的に再起動または電源オフしたことが原因である可能性があります。
 
  #### トラブルシューティング
 
- [flash-erase](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-erase) を実行します。 
+[flash-erase](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-erase) を実行します。 
 
  ### 工場出荷時リセット
-デフォルト設定に戻したい場合は、工場出荷時リセットを行うことができます。工場出荷時リセットを行う方法は 2 つあります。
+デフォルト設定に戻したい場合は、工場出荷時リセットを行うことができます。工場出荷時リセットを行う方法は2つあります。
 
 - デバイスを [Flash erase](https://wiki.seeedstudio.com/ja/sensecap_t1000_e_meshcore/#flash-erase) します。その後、最新のファームウェアを書き込みます。
 
@@ -525,13 +535,13 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 ### 信号品質
 
-  - **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
+  - **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB より高い値で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
 
-  - **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。 
+  - **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm より高い値で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。 
 
-      最良の信号効果を得るために、開けた障害物のないエリアで、干渉が最小限となる環境でデバイスを使用してください。
+      最良の信号状態を得るために、干渉が最小限で開けた障害物のない場所でデバイスを使用してください。
 
-### Pogo ピン定義
+### ポゴピン定義
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
 

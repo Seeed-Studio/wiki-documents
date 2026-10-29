@@ -9,11 +9,11 @@ slug: /get_started_with_meshcore_solar_node
 sku: 114993633,114993643
 sidebar_position: 1
 last_update:
-  date: 8/17/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/es/get_started_with_meshcore_solar_node/
-updatedAt: '2026-10-08'
+updatedAt: '2026-10-26'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -26,14 +26,14 @@ updatedAt: '2026-10-08'
 <br></br>
 
 :::danger note
-Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo podría quedar inutilizable.
+Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo podría quedar inservible.
 1. No ha finalizado el proceso de transmisión de mensajes
 2. Está siendo configurado
 :::
 
 ## Flasheo de firmware
 
-### Método 1 vía Web Flasher
+### Método 1 mediante Web Flasher
 
 Conecta tu dispositivo al ordenador con un cable USB. Asegúrate de que el cable admite transmisión de datos. 
 
@@ -51,7 +51,7 @@ Elige `Repeater`. Si quieres flashear otro firmware, por favor [haz clic aquí](
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
-#### Borrado de la Flash
+#### Borrado de Flash
 
 Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "Solar Node" o "TinyUSB serial". Luego haz clic en `Erase Flash` y elige el puerto serie.
 
@@ -126,7 +126,7 @@ Elige `Repeater`. Si quieres flashear otro firmware, por favor [haz clic aquí](
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
-#### Borrado de la Flash
+#### Borrado de Flash
 
 Descarga el archivo UF2.
 
@@ -136,7 +136,7 @@ Haz doble clic en el botón RST para entrar manualmente en el modo DFU. Verás q
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco emergente.
+Arrastra el archivo UF2 descargado al disco que ha aparecido.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseDr.png" alt="pir" width={800} height="auto" /></p>
 
@@ -156,7 +156,7 @@ Haz doble clic en el botón RST para entrar manualmente en el modo DFU. Verás q
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco emergente.
+Arrastra el archivo UF2 descargado al disco que ha aparecido.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
@@ -171,27 +171,27 @@ Antes del despliegue formal, primero prueba y configura el nodo.
 #### Ensamblar el dispositivo
 
 :::danger note
-Dado que el dispositivo se utilizará en exteriores durante períodos prolongados, evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para evitar la acumulación de agua. Además, asegúrate de que todos los tornillos estén bien apretados y la tapa correctamente instalada. Para una protección impermeable mejorada, también puedes considerar aplicar medidas de sellado adicionales.
+Dado que el dispositivo se utilizará en exteriores durante períodos prolongados, evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para evitar la acumulación de agua. Además, asegúrate de que todos los tornillos estén bien apretados y la tapa esté correctamente instalada. Para una protección impermeable mejorada, también puedes considerar aplicar medidas de sellado adicionales.
 :::
 
-- **Lista de partes**
+- **Lista de piezas**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
 
-- Paso 1: Conecta la parte 1 a la parte inferior del dispositivo usando arandelas y tornillos.
+- Paso 1: Conecta la pieza 1 a la parte inferior del dispositivo usando arandelas y tornillos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 2: Conecta la rótula universal (parte 2) y el soporte (parte 3) con tornillos.
+- Paso 2: Conecta la rótula universal (pieza 2) y el soporte (pieza 3) con tornillos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 3: Conecta el cable RF (parte 4) y la antena (parte 5).
+- Paso 3: Conecta el cable RF (pieza 4) y la antena (pieza 5).
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -209,7 +209,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 6: Afloja los tornillos, ajusta la rótula universal a la posición adecuada y luego aprieta los tornillos.
+- Paso 6: Afloja los tornillos, ajusta la rótula a la posición adecuada y luego aprieta los tornillos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -228,7 +228,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 :::tip
 Cuando necesites instalar o reemplazar la batería, usa una batería `Button-top` 18650(3.6V).
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-La versión P1-Pro tiene batería y módulo GPS integrados; para la versión P1, el usuario necesita instalar la batería y el módulo GPS manualmente si es necesario.
+La versión P1-Pro tiene batería y módulo GPS integrados; para la versión P1, el usuario necesita instalar manualmente la batería y el módulo GPS si es necesario.
 :::
 
 
@@ -248,7 +248,7 @@ La versión P1-Pro tiene batería y módulo GPS integrados; para la versión P1,
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-Asegúrate de que la carcasa esté correctamente montada y que los tornillos estén bien apretados para mantener la integridad de impermeabilidad del dispositivo.
+Asegúrate de que la carcasa esté correctamente montada y los tornillos bien apretados para mantener la estanqueidad del dispositivo.
 :::
 
 #### (Opcional) Actualizar antena
@@ -263,7 +263,7 @@ El dispositivo se enciende tan pronto como se aplica alimentación: al conectar 
 
 Para confirmar que el dispositivo se ha encendido correctamente, utiliza cualquiera de estos dos métodos fiables:
 
-1. Aproximadamente 16 segundos después de encender, el LED TX parpadea una vez: después del arranque, el dispositivo envía automáticamente un anuncio y el LED TX parpadea en el momento de la transmisión, indicando que el dispositivo está encendido.
+1. Aproximadamente 16 segundos después del encendido, el LED TX parpadea una vez: después del arranque, el dispositivo envía automáticamente un anuncio y el LED TX parpadea en el momento de la transmisión, indicando que el dispositivo está encendido.
 2. O abre `https://meshcore.io/flasher`, haz clic en Console, conéctate al dispositivo por serie y envía el comando `ver`. Si se devuelve una cadena de versión válida, el dispositivo se ha encendido correctamente y el firmware se está ejecutando con normalidad.
 
 El LED TX solo parpadea cuando el propio Solar Node transmite datos LoRa (por ejemplo, al enviar un anuncio). La recepción de datos no enciende el LED TX. El color del LED TX depende de la versión de firmware (consulta "Firmware Version Differences" arriba): v1.12.0–v1.14.0 = azul, v1.14.1–v1.15.0 = blanco, v1.16.0 y posteriores = azul.
@@ -271,7 +271,7 @@ El LED TX solo parpadea cuando el propio Solar Node transmite datos LoRa (por ej
 :::tip
 **Botón de encendido (encendido/apagado)**
 
-MeshCore v1.14.0 y anteriores no admiten encender/apagar manteniendo pulsado el botón de encendido. Para encender, aplica alimentación (USB / batería / solar: cualquier fuente única es suficiente para hacerlo funcionar). El dispositivo no se puede apagar con el botón de encendido; este es el comportamiento normal para estas versiones de firmware, no un fallo del botón.
+MeshCore v1.14.0 y anteriores no admiten encender/apagar manteniendo pulsado el botón de encendido. Para encender, aplica alimentación (USB / batería / solar; cualquier fuente única es suficiente para hacerlo funcionar). El dispositivo no se puede apagar con el botón de encendido; este es el comportamiento normal para estas versiones de firmware, no un fallo del botón.
 
 MeshCore v1.14.1 y posteriores admiten el botón de encendido, de la siguiente manera:
 
@@ -285,7 +285,7 @@ Nota: la acción de encender/apagar en sí no enciende ningún LED indicador; el
 - **Botón de encendido**: encendido/apagado (compatible desde v1.14.1).
 - **Botón de reinicio**: reinicia el dispositivo / entra en modo DFU o Bootloader.
 
-Por favor, no confundas mantener pulsado el botón de encendido con hacer doble clic en el botón de reinicio.
+No confundas mantener pulsado el botón de encendido con hacer doble clic en el botón de reinicio.
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/blinkingonetime.mp4" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
@@ -298,7 +298,7 @@ Por favor, no confundas mantener pulsado el botón de encendido con hacer doble 
 
 Cuando MeshCore se flashea en un dispositivo LoRa por primera vez, es necesario configurar la frecuencia del dispositivo servidor para que utilice la frecuencia que es legal en tu país o región.
 
-[Haz clic aquí](https://config.meshcore.io/) para configurar el repetidor.
+[Click here](https://config.meshcore.io/) para configurar el repetidor.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -328,9 +328,9 @@ Haz clic en "send advert" para permitir que otros dispositivos Meshcore vean est
 
 Al hacer clic en **Send Advert**, el Solar Node realiza activamente una transmisión LoRa (TX), por lo que el LED TX de la versión de firmware correspondiente debería parpadear brevemente:
 
-- v1.12.0 ~ v1.14.0: el LED azul parpadea
-- v1.14.1 ~ v1.15.x: el LED blanco parpadea
-- v1.16.0 y posteriores: el LED azul parpadea
+- v1.12.0 ~ v1.14.0: parpadea el LED azul
+- v1.14.1 ~ v1.15.x: parpadea el LED blanco
+- v1.16.0 y posteriores: parpadea el LED azul
 
 El LED TX indica que el propio Solar Node está transmitiendo datos LoRa (TX). No es un indicador de recepción (RX).
 
@@ -351,19 +351,19 @@ Además, puedes ajustar el intervalo de difusión de anuncios:
 - **Advert interval**: el intervalo de envío del anuncio Local / de cero saltos. El rango del intervalo es de 60 a 240 minutos.
 - **Flood advert interval**: el intervalo de envío del anuncio Flood. El rango del intervalo es de 3 a 168 horas.
 
-El periodo real de anuncio depende de la versión actual del firmware y de la configuración guardada en el dispositivo, así que por favor consulta siempre los valores reales de `Advert interval` y `Flood advert interval` en la página de configuración. Si un intervalo se establece en `0`, el anuncio automático correspondiente se desactiva.
+El periodo real de anuncio depende de la versión actual del firmware y de la configuración guardada en el dispositivo, así que consulta siempre los valores reales de `Advert interval` y `Flood advert interval` en la página de configuración. Si un intervalo se establece en `0`, el anuncio automático correspondiente se desactiva.
 
-**Nota:** Desde MeshCore v1.16.0, el intervalo predeterminado de Flood advert se ha cambiado de 12 horas a 47 horas. Por lo tanto, no recomendamos verificar el dispositivo esperando al anuncio automático. Para verificar TX y el LED, haz clic en **Send Advert** para activar de forma manual una transmisión LoRa.
+**Nota:** Desde MeshCore v1.16.0, el intervalo Flood advert predeterminado se ha cambiado de 12 horas a 47 horas. Por lo tanto, no recomendamos verificar el dispositivo esperando el anuncio automático. Para verificar TX y el LED, haz clic en **Send Advert** para activar de forma activa una transmisión LoRa (TX).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
 ### Configurar ruta
 
-Antes de añadir el repetidor a tu ruta, es posible que necesites usar el repetidor para enviar primero un anuncio. El repetidor envía anuncios automáticamente a intervalos regulares según el `Advert interval` y el `Flood advert interval` guardados en el dispositivo. Los intervalos dependen de la versión de firmware y de la configuración actual del dispositivo, y pueden ser de varias horas. Recomendamos hacer clic en **Send Advert** para activarlo inmediatamente en lugar de esperar al anuncio automático.
+Antes de añadir el repetidor a tu ruta, puede que necesites usar el repetidor para enviar primero un anuncio. El repetidor envía anuncios automáticamente a intervalos regulares según los valores de `Advert interval` y `Flood advert interval` guardados en el dispositivo. Los intervalos dependen de la versión de firmware y de la configuración actual del dispositivo, y pueden ser de varias horas. Recomendamos hacer clic en **Send Advert** para activarlo inmediatamente en lugar de esperar al anuncio automático.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
-Puedes configurar manualmente la ruta de envío de mensajes. Conecta tu dispositivo compañero Bluetooth a la app de tu teléfono. Abre una ventana de mensaje privado. Luego puedes elegir el repetidor detectado para formar tu ruta.
+Puedes configurar manualmente la ruta de envío de mensajes. Conecta tu dispositivo compañero Bluetooth a la app de tu teléfono. Abre una ventana de mensaje privado. Entonces podrás elegir el repetidor detectado para formar tu ruta.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -377,9 +377,9 @@ El repetidor MeshCore no vuelve a enviar cada paquete LoRa que recibe.
 - **Caso 1**: Un Companion envía datos → el Solar Node los recibe (RX) → no se necesita respuesta ni reenvío → el Solar Node no realiza un TX → el LED de TX no parpadea. Esto es normal.
 - **Caso 2**: El Solar Node recibe datos → se necesita una respuesta o reenvío → el Solar Node realiza un TX LoRa → el LED de TX parpadea en el color de la versión de firmware correspondiente.
 
-Que el Solar Node reciba correctamente datos LoRa no significa que el LED de TX vaya a parpadear. El LED de TX solo indica que el propio Solar Node está transmitiendo datos LoRa.
+Que el Solar Node reciba datos LoRa correctamente no significa que el LED de TX vaya a parpadear. El LED de TX solo indica que el propio Solar Node está transmitiendo datos LoRa.
 
-Por ejemplo, cuando solo hay un Companion y un Solar Node Repeater en la red, después de que el Companion envía datos, el Solar Node puede recibir el paquete correctamente sin necesidad de volver a enviarlo. En este caso, no ver parpadear el LED de TX no puede utilizarse para juzgar directamente que el Repeater es anormal.
+Por ejemplo, cuando solo hay un Companion y un Solar Node Repeater en la red, después de que el Companion envía datos, el Solar Node puede recibir el paquete correctamente sin necesidad de volver a enviarlo. En este caso, no ver parpadear el LED de TX no puede utilizarse para juzgar directamente que el Repeater es anómalo.
 :::
 
 ## Verificar que el dispositivo funciona correctamente
@@ -397,7 +397,7 @@ Para verificar correctamente que el repetidor está funcionando, sigue los dos p
 
 ### Paso 1: Verificar el TX del Solar Node
 
-1. Conecta el Solar Node mediante USB.
+1. Conecta el Solar Node por USB.
 2. Abre la página de configuración de MeshCore: [https://config.meshcore.io/](https://config.meshcore.io/).
 3. Haz clic en **Send Advert**.
 4. Observa el LED de TX en el Solar Node.
@@ -421,21 +421,21 @@ Si el ping tiene éxito, ambas direcciones de la comunicación se verifican al m
 
 Cuando el Solar Node envía la respuesta al ping, el LED de TX debería parpadear brevemente en el color de la versión de firmware correspondiente.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-6.png" alt="Verify Solar Node repeater with Ping from another MeshCore device" width={700} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-6.png" alt="Verificar el repetidor Solar Node con Ping desde otro dispositivo MeshCore" width={700} height="auto" /></p>
 
 :::note
 El LED de TX no es un indicador de RX. Si el Solar Node solo recibe un paquete sin necesidad de responder o reenviar, es posible que el LED no parpadee en absoluto.
 :::
 
 :::tip
-No recomendamos esperar al anuncio automático para verificar si el dispositivo funciona, porque el intervalo de anuncio puede ser muy largo. Usa **Send Advert** para activar un TX de inmediato.
+No recomendamos esperar al anuncio automático para verificar si el dispositivo funciona, porque el intervalo de anuncio puede ser muy largo. Usa **Send Advert** para activar un TX de forma inmediata.
 :::
 
 :::note
 La app móvil se usa principalmente con un dispositivo Companion, no directamente con un Repeater. El propio repetidor no se comportará como un accesorio de teléfono conectado por Bluetooth normal.
 :::
 
-Si el comportamiento del LED y el estado de la conexión USB coinciden con la descripción anterior, esto normalmente indica un comportamiento de repetidor normal.
+Si el comportamiento del LED y el estado de la conexión USB coinciden con la descripción anterior, esto suele indicar un comportamiento normal del repetidor.
 
 ## Preguntas frecuentes (FAQ)
 
@@ -443,7 +443,7 @@ Si el comportamiento del LED y el estado de la conexión USB coinciden con la de
 
 - Motivo 
 
-Esto suele estar causado por un fallo al flashear el firmware. Al flashear el firmware, mantén una conexión estable. 
+Esto suele deberse a un fallo al flashear el firmware. Al flashear el firmware, mantén una conexión estable. 
 
 - Solución de problemas
 
@@ -457,7 +457,7 @@ El dispositivo no responde, no hay LED, no se puede emparejar con tu App.
 
 **1) El dispositivo aún puede entrar en modo DFU, entonces intenta flashear el bootloader**.
 
-#### Flashear el Bootloader
+#### Flashear el bootloader
 
 - [Descarga del bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
@@ -469,7 +469,7 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 Para usuarios de Windows, presiona la tecla "Win" y la tecla "r", luego introduce "cmd" en la ventana emergente y pulsa "Enter". Esto puede abrir la línea de comandos. 
 
-Para usuarios de Mac, presiona la tecla "Command" y la tecla "Space", para que puedas abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto puede abrir la línea de comandos. 
+Para usuarios de Mac, presiona la tecla "Command" y la tecla "Space", de modo que puedas abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto puede abrir la línea de comandos. 
 
 **Requisitos previos**
 
@@ -507,7 +507,7 @@ Esta es la ubicación de instalación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuarios de Windows, es posible que tengas que añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se indica a continuación:
+Para usuarios de Windows, puede que necesites añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se indica a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -522,7 +522,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Nota: los siguientes comandos usan `python3`, sin embargo, si estás en Windows, puede que tengas que cambiarlo a `python` ya que la instalación de python 3.x en Windows sigue usando el nombre python.exe
+Nota: los siguientes comandos usan `python3`, sin embargo, si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de python 3.x en Windows sigue usando el nombre python.exe
 
 Para instalar en el espacio de usuario en tu directorio personal:
 
@@ -573,7 +573,7 @@ Para usuarios de Mac, por ejemplo:
 
 **Paso 3: Flashear el bootloader**
 
-En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
+En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto de tu dispositivo:
 
 - **Para Windows**:
 
@@ -597,19 +597,30 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 Cuando hayas completado los pasos anteriores, entonces podrás [flashear el firmware de la aplicación](https://wiki.seeedstudio.com/es/get_started_with_meshcore_solar_node/#flash-erase).
 
+### El dispositivo no responde o no se detecta por USB
+
+Si tu Solar Node P1-Pro de repente deja de responder, con solo el LED verde encendido y el dispositivo sin ser reconocido por USB, prueba lo siguiente:
+
+1. Desconecta el cable USB y mantén el panel solar alejado de la luz solar.
+2. Retira con cuidado la tapa trasera y las baterías, evitando cortocircuitos.
+3. Deja las baterías retiradas durante un tiempo.
+4. Vuelve a instalar las baterías y comprueba si el dispositivo se inicia y puede ser reconocido por USB.
+
+Si el problema persiste, ponte en contacto con el soporte técnico.
+
 ### Calidad de la señal
 
 - **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
 
 - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
 
-      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta, sin obstrucciones y con interferencias mínimas.
+      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con la mínima interferencia posible.
 
 ### Corriente de carga
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
-La corriente máxima de carga del Xiao nRF-52840 Plus es de 200 mA. El chip de gestión de carga CN3165 es de 0,99 A. Así que la corriente máxima de carga es de 1 A.
+La corriente máxima de carga de Xiao nRF-52840 Plus es de 200 mA. El chip de gestión de carga CN3165 es de 0,99 A. Por lo tanto, la corriente máxima de carga es de 1 A.
 
 ### ¿Por qué mi Solar Node parpadea en blanco en lugar de azul al enviar datos?
 
@@ -623,12 +634,12 @@ Un destello blanco en v1.14.1 ~ v1.15.x no indica un fallo de hardware.
 
 ### ¿Por qué no puedo apagar el dispositivo manteniendo pulsado el botón de encendido?
 
-La pulsación prolongada del botón de encendido para encender/apagar es compatible desde MeshCore v1.14.1. En v1.14.0 y anteriores, mantener pulsado el botón de encendido no tiene respuesta, y este es el comportamiento normal de esa versión de firmware.
+La función de mantener pulsado el botón de encendido para encender/apagar es compatible desde MeshCore v1.14.1. En v1.14.0 y anteriores, mantener pulsado el botón de encendido no tiene respuesta, y este es el comportamiento normal de esa versión de firmware.
 
 ### ¿Por qué mi Solar Node no ha parpadeado durante mucho tiempo?
 
 - El LED TX solo parpadea cuando el propio Solar Node realiza una transmisión LoRa.
-- La recepción (RX) no necesariamente activa el LED TX.
+- RX no necesariamente activa el LED TX.
 - El Repeater no reenvía todos los paquetes que recibe.
 - El intervalo de anuncio automático puede ser muy largo.
 - Desde la v1.16.0, el intervalo de anuncio Flood predeterminado es de 47 horas.

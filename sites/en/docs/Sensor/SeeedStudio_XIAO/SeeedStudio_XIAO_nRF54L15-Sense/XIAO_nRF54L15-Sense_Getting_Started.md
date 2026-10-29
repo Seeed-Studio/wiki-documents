@@ -8,7 +8,7 @@ keywords:
   - XIAO
   - nRF54L15
 last_update:
-  date: 7/2/2025
+  date: 10/28/2026
   author: Jason
 sidebar_position: 0
 createdAt: '2025-07-28'
@@ -1426,8 +1426,8 @@ int main(void)
 
 **Hardware Design**
 - **📄[Datasheet]** [Nordic nRF54L15 Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
-- **📄[Schematic]** [XIAO nRF54L15 Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf )
-- **🗃️[PCB Design Files]** [XIAO nRF54L15 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip )
+- **📄[Schematic]** [XIAO nRF54L15 Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004629_XIAO_nRF54L15_V1.2_SCH_260605.pdf.pdf )
+- **🗃️[PCB Design Files]** [XIAO nRF54L15 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004629_XIAO_nRF54L15_V1.2_SCH_&PCB_260605.zip )
 - **🗃️[PCB Design Libraries]** 
   - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
@@ -1440,9 +1440,9 @@ int main(void)
 
 **Hardware Design**
 - **📄[Datasheet]** [Nordic nRF54L15 Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
-- **📄[Schematic]** [XIAO nRF54L15 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf )
+- **📄[Schematic]** [XIAO nRF54L15 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004618_XIAO_nRF54L15_Sense_V1.2_SCH_260605.pdf.pdf )
 - **🗃️[PCB Design Files]** 
-  - [XIAO nRF54L15 Sense KiCad Project](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip )
+  - [XIAO nRF54L15 Sense KiCad Project](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004618_XIAO%20nRF54L15_Sense_V1.2_SCH_&_PCB_260605.zip )
   - [XIAO nRF54L15 Sense Flux.ai Project](https://www.flux.ai/seeedstudio/seeed-studio-xiao-nrf54l15-sense )
 - **🗃️[PCB Design Libraries]** 
   - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )

@@ -2,6 +2,7 @@
 
 const roboticsSidebars = require('./robotics-sidebar');
 const rebotCourseSidebars = require('./rebot-course-sidebar');
+const soArmCourseSidebars = require('./soarm-course-sidebar');
 const jetsonSidebars = require('./jetson-sidebar');
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
@@ -4239,6 +4240,44 @@ const sidebars = {
         'Contribution/Fusion/es_Service_for_Fusion_PCB',
       ],
     },
+    {
+      type: 'category',
+      label: 'Personalización ligera',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/es_service_for_fusion_light_customization',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Servicios integrales',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/es_service_for_fusion_one_stop',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Soluciones de pruebas de PCBA',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/es_service_for_fusion_pcba_testing_solutions',
+        'Contribution/Fusion/es_service_for_fusion_pcba_functional_test',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Preparación para la fabricación',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/es_service_for_fusion_manufacturing_documents',
+        'Contribution/Fusion/es_service_for_fusion_sample_validation',
+      ],
+    },
     // END OF Fusion
     {
       type: 'doc',
@@ -4995,6 +5034,7 @@ const sidebars = {
 
   ...roboticsSidebars,
   ...rebotCourseSidebars,
+  ...soArmCourseSidebars,
   ...jetsonSidebars,
 };
 

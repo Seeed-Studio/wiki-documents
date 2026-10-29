@@ -20,7 +20,11 @@ url: https://wiki.seeedstudio.com/cn/lerobot_soarm101_Rynnbot_Developer_Kit/
 
 # 基于 LeRobot 的 SO-ARM101-乐云具身智能平台适配套件入门教程
 
-
+<div className="get-one-now-panel">
+  <a className="get-one-now-button" href="https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84" target="_blank" rel="noopener noreferrer">
+    立即购买 SO-ARM101 套件 / Get One Now 🖱️
+  </a>
+</div>
 
 ## Citation
 

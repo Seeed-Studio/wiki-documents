@@ -71,7 +71,11 @@ const sidebars = {
                 id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/cn_reComputer_Robotics_J601_Getting_Started',
                 label: '入门指南',
               },
-              'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/cn_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
+              {
+                type: 'doc',
+                id: 'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/cn_Robotics_J601_carrierboard_Hardware_Interfaces_Usage',
+                label: '硬件与接口',
+              },
             ],
           },
           'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/cn_reComputer_A203_Flash_System',
@@ -272,6 +276,7 @@ const sidebars = {
       items: [
       'Edge/NVIDIA_Jetson/cn_Jetson_Product_Selection_Guide',
       'Edge/NVIDIA_Jetson/cn_Jetson_Camera_Selection_Guide',
+      'Edge/NVIDIA_Jetson/cn_Jetson_Accessories_Selection_Guide',
       'Edge/NVIDIA_Jetson/cn_Flash_Jetpack',
       'Edge/NVIDIA_Jetson/cn_Jetson_Debug_Guide',
       { type: 'link', label: 'reComputer Jetson for Beginners', href: 'https://sensecraft.seeed.cc/ai-lab/en/tutorials/j/introduction' },
@@ -405,6 +410,7 @@ const sidebars = {
           label: '生成式 AI',
           customProps: { communityCategory: 'gen' },
           items: [
+            'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Accelerate_LLM_Inference_with_MTP_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Finetune_LLM_by_Llama_Factory_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Local_RAG_based_on_Jetson_with_LlamaIndex',

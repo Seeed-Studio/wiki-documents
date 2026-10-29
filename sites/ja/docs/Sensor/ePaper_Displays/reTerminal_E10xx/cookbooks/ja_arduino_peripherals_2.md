@@ -294,7 +294,7 @@ CR1220 電池を **プラス（+）側が上** になるようにホルダーに
 
 ### 完全なスケッチ: RTC_PCF8563
 
-完全なスケッチはリポジトリで利用できます：[`examples/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/RTC_PCF8563/RTC_PCF8563.ino)。
+完全なスケッチはリポジトリで利用できます：[`examples/base/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/RTC_PCF8563/RTC_PCF8563.ino)。
 
 <details>
 <summary>クリックして RTC_PCF8563.ino の完全なコードを展開</summary>
@@ -821,7 +821,7 @@ ESP32-S3 は複数の電源状態をサポートしています。バッテリ�
 
 ### フルスケッチ：LowPower_DeepSleep
 
-完全なスケッチはリポジトリで入手できます：[`examples/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/LowPower_DeepSleep/LowPower_DeepSleep.ino)。
+完全なスケッチはリポジトリで入手できます：[`examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino)。
 
 <details>
 <summary>クリックして LowPower_DeepSleep.ino の全コードを展開</summary>
@@ -1018,7 +1018,7 @@ reTerminal E1001 / E1002 / E1003 には、オンボードの **PDM（Pulse Densi
 
 ### 完全なスケッチ：MicRecordToSD
 
-完全なスケッチはリポジトリで入手できます：[`examples/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/MicRecordToSD/MicRecordToSD.ino)。
+完全なスケッチはリポジトリで入手できます：[`examples/base/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/MicRecordToSD/MicRecordToSD.ino)。
 
 <details>
 <summary>クリックして MicRecordToSD.ino の全コードを展開</summary>
@@ -1540,7 +1540,7 @@ reTerminal E1003 には、I2C 接続の **GT911** 静電容量式タッチコン
 
 ### フルスケッチ: E1003_TouchDraw
 
-完全なスケッチはリポジトリで入手できます：[`examples/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/E1003_TouchDraw)。
+完全なスケッチはリポジトリで入手できます：[`examples/base/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/base/E1003_TouchDraw)。
 
 <details>
 <summary>クリックして E1003_TouchDraw.ino の全コードを展開</summary>

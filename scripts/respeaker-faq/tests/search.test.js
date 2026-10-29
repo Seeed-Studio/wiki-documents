@@ -156,8 +156,8 @@ test('sortResults is deterministic (tie broken by product label then question)',
   );
 });
 
-test('integration: real index has 30 items and every URL uses slug+anchor', () => {
-  assert.strictEqual(REAL_INDEX.items.length, 30);
+test('integration: real index has 31 items and every URL uses slug+anchor', () => {
+  assert.strictEqual(REAL_INDEX.items.length, 31);
   for (const item of REAL_INDEX.items) {
     assert.match(item.url, /^\/[a-z0-9_]+#[a-z0-9-]+$/, item.id);
     assert.ok(item.question);

@@ -1,6 +1,6 @@
 ---
-description: Introdução ao SenseCAP Card Tracker T1000-E para Meshcore. Guia para instalação do dispositivo, gravação de firmware e conexão do dispositivo.
-title: Introdução ao MeshCore
+description: Comece a usar o SenseCAP Card Tracker T1000-E para Meshcore. Guia para instalação do dispositivo, gravação de firmware e conexão do dispositivo.
+title: Comece a usar o MeshCore
 keywords:
   - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.webp
@@ -8,10 +8,10 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 10/16/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-10-16'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/
 ---
 
@@ -140,7 +140,7 @@ Pressione o botão para ligá-lo. O LED acenderá e haverá uma melodia ascenden
 Pressione o botão por 3 s para desligá-lo. O LED apagará e haverá uma melodia descendente.
 
 :::tip
-Se o dispositivo não responder quando você pressionar o botão, carregue-o primeiro. Não use carregador de carga rápida.
+Se o dispositivo não responder quando você pressionar o botão, por favor carregue-o primeiro. Não use carregador de carga rápida.
 :::
 
 ### Obter o APP
@@ -185,7 +185,7 @@ Se a conexão falhar, abra a lista de Bluetooth do seu telefone e `forget` ou `U
 
 ### Configurar o LoRa
 
-Para começar a se comunicar pela malha, você deve definir sua região. Essa configuração controla qual faixa de frequência seu dispositivo usa e deve ser ajustada de acordo com sua localização regional.
+Para começar a se comunicar pela malha, você deve definir sua região. Esta configuração controla qual faixa de frequência seu dispositivo usa e deve ser definida de acordo com sua localização regional.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
@@ -194,30 +194,30 @@ Em seguida, reinicie o dispositivo, caso contrário a configuração não terá 
 
 **Lista de Regiões**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**Código da Região**|**Descrição**|**Faixa de Frequência (MHz)**|**Duty Cycle (%)**|**Limite de Potência (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Unset|N/A|N/A|N/A|
-|US|United States|902.0 - 928.0|100|30|
-|EU_868|European Union 868 MHz|869.4 - 869.65|10|27|
+|UNSET|Não definido|N/A|N/A|N/A|
+|US|Estados Unidos|902.0 - 928.0|100|30|
+|EU_868|União Europeia 868 MHz|869.4 - 869.65|10|27|
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando qualquer [parâmetro LoRa](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general) para atender às suas necessidades.
 
 ### Configurar GPS
 
-Se você quiser usar o GPS, ative-o.
+Se você quiser usar o GPS, por favor ative-o. 
 
-Você pode ir ao APP em `Position Settings` para ativar o GPS. 
+Você pode ir em `Position Settings` no APP para ativar o GPS. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/GPSConfig.png" alt="pir" width={300} height="auto" /></p>
 
 ### Botão
 
-|Button Action|Description|
+|Ação do Botão|Descrição|
 |--|--|
-|Press for 3s|Power on/off|
-|Double-click|broadcast advert|
-|Triple-click|Buzzer switch|
-|Quadruple-click|GPS switch|
+|Pressionar por 3 s|Ligar/desligar|
+|Clique duplo|Transmitir anúncio|
+|Clique triplo|Interruptor do buzzer|
+|Clique quádruplo|Interruptor do GPS|
 
 ## Transmissão de mensagens
 
@@ -232,7 +232,7 @@ MeshCore permite que você transmita manualmente seu nome, posição e chave pú
 - **Zero hop** significa que seu anúncio é transmitido para qualquer pessoa que possa ouvi-lo, e é só isso.
 - **Flooded** significa que ele é transmitido e depois repetido por todos os repetidores que o ouvirem.
 
-Você pode enviar anúncios no APP. Você também pode enviar anúncios diretamente na página de anúncio do dispositivo.
+Você pode enviar anúncios no APP. Você também pode enviar anúncios diretamente na página de anúncios do dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Advert.png" alt="pir" width={300} height="auto" /></p>
 
@@ -256,33 +256,43 @@ import TabItem from '@theme/TabItem';
 
 ## Solução de problemas
 
+### Falha na atualização de firmware / Recuperação por OTA
+
+Se o seu SenseCAP Card Tracker T1000-E ficar sem resposta após uma atualização de firmware e o LED verde permanecer aceso continuamente, o dispositivo está preso no modo DFU. Tente o seguinte:
+
+1. Force uma reinicialização para sair do modo DFU: pressione e segure o botão e, em seguida, conecte o cabo de carregamento.
+2. Após a reinicialização, verifique se o dispositivo inicia normalmente. Caso contrário, entre no modo DFU manualmente — pressione e segure o botão do dispositivo e, em seguida, conecte **rapidamente** o cabo de carregamento duas vezes; isso pode exigir várias tentativas. Quando um disco chamado `T1000-E` aparecer, siga o guia [Firmware Flashing](#firmware-flashing) para reinstalar o firmware de aplicativo apropriado.
+3. Se o dispositivo ainda não puder ser recuperado e uma porta serial DFU estiver disponível, siga [Device bricked](#device-bricked) para regravar o bootloader e, em seguida, reinstale o firmware de aplicativo.
+
+Se o dispositivo não conseguir entrar no modo DFU ou não for detectado pelo seu computador, entre em contato com o suporte técnico.
+
 ### Dispositivo nunca liga
 
-- Carregue o dispositivo por 1~2 horas
+- Carregue o dispositivo por 1 a 2 horas
 
 - Troque o cabo de carregamento
 
- - Se ainda não funcionar, pressione e segure o botão do dispositivo e, em seguida, conecte o cabo de carregamento, veja se um disco aparece no seu PC. Se isso acontecer, [clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-the-bootloader) para reinstalar o bootloader.
+ - Se ainda não funcionar, pressione e segure o botão do dispositivo e, em seguida, conecte o cabo de carregamento, veja se um disco aparece ou não no seu PC. Se aparecer, [clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-the-bootloader) para reinstalar o bootloader.
 
 ### Dispositivo preso em loop de inicialização
 
 **Descrição:**
 
-O dispositivo irá reiniciar repetidamente, e a porta serial conecta e desconecta repetidamente.
+O dispositivo irá reiniciar repetidamente, e a porta serial irá conectar e desconectar repetidamente.
 
 **Solução:**
 
-- Passo 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e **rapidamente** conecte o cabo de carregamento duas vezes, o LED verde ficará aceso continuamente.
+- Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte **rapidamente** o cabo de carregamento duas vezes, o LED verde ficará continuamente aceso.
 
 :::note
-Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
+Para entrar com sucesso no modo DFU, você precisa realizar essa operação rapidamente. Talvez seja necessário tentar várias vezes.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-- Passo 2: Apagar a Flash
+- Etapa 2: Apagar a Flash
 
-- Passo 3: Gravar o firmware
+- Etapa 3: Gravar o firmware
 
 ### Dispositivo brickado
 
@@ -304,18 +314,18 @@ O dispositivo não responde, nenhum LED, não é possível parear com o seu App.
 Quando estiver gravando o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
 :::
 
-**Passo 1: Instalação do Adafruit-nrfutil**
+**Etapa 1: Instalação do Adafruit-nrfutil**
 
 Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e clique em "Enter". Isso abrirá a linha de comando. 
 
-Para usuários Mac, pressione a tecla "Command" e a tecla "Space", assim você pode abrir o Spotlight. Depois digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
+Para usuários Mac, pressione a tecla "Command" e a tecla "Space", assim você pode abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
 
 **Pré-requisitos**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-Verifique na sua linha de comando se o python e o pip foram instalados com sucesso.
+Verifique na sua linha de comando se o Python e o pip foram instalados com sucesso.
 
 ```
 python --version
@@ -350,7 +360,7 @@ Este é o local de instalação:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Talvez seja necessário adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Em seguida, adicione-o conforme a seguir:
+Talvez você precise adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Em seguida, adicione-o conforme a seguir:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -363,13 +373,13 @@ python3 -m pip install --user adafruit-nrfutil
 adafruit-nrfutil version
 ```
 
-Se `adafruit-nrfutil` não for reconhecido, adicione o diretório de scripts de usuário do Python (`bin` no seu diretório pessoal) ao PATH.
+Se `adafruit-nrfutil` não for reconhecido, adicione o diretório de scripts de usuário do Python (`bin` no seu diretório pessoal) ao seu PATH.
 
 </TabItem>
 
 <TabItem value="linux" label="Linux">
 
-Instale `adafruit-nrfutil` com o pipx:
+Instale `adafruit-nrfutil` com pipx:
 
 ```
 sudo apt install pipx
@@ -377,7 +387,7 @@ pipx install adafruit-nrfutil
 pipx ensurepath
 ```
 
-No Fedora, use `sudo dnf install pipx` em vez do apt. Reabra o terminal e, em seguida, verifique:
+No Fedora, use `sudo dnf install pipx` em vez de apt. Reabra o seu terminal e, em seguida, verifique:
 
 ```
 adafruit-nrfutil version
@@ -397,7 +407,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez precise alterá-lo para `python`, já que a instalação do python 3.x no Windows ainda usa o nome python.exe
+Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez precise alterá-lo para `python`, já que a instalação do Python 3.x no Windows ainda usa o nome python.exe
 
 Para instalar no espaço do usuário no seu diretório pessoal:
 
@@ -406,7 +416,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a flag `--user`:
+Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a opção `--user`:
 
 ```
 pip3 install --user -r requirements.txt
@@ -420,7 +430,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-Para gerar um binário executável independente da ferramenta (Windows e MacOS), execute estes comandos:
+Para gerar um binário executável autônomo da ferramenta (Windows e MacOS), execute estes comandos:
 
 ```
 pip3 install pyinstaller
@@ -436,7 +446,7 @@ Copie ou mova-o para outro lugar para sua conveniência, como um diretório no s
 </TabItem>
 </Tabs>
 
-**Passo 2: Verifique o número da sua porta**
+**Etapa 2: Verifique o número da sua porta**
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
@@ -446,9 +456,9 @@ Para usuários Windows, por exemplo:
 Para usuários Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Passo 3: Gravar o bootloader**
+**Etapa 3: Gravar o bootloader**
 
-No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo pela porta correta do seu dispositivo:
+No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo a porta correta do seu dispositivo:
 
 - **Para Windows**:
 
@@ -459,7 +469,7 @@ Por favor, altere COMXX para o número da sua porta COM. Por exemplo, se o seu d
 
 `adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- Alguns dispositivos irão mudar o número da porta depois que você inserir este comando. Portanto, se a instalação falhar, verifique o número da porta novamente.
+ Alguns dispositivos irão alterar o número da porta após você inserir este comando. Portanto, se a instalação falhar, verifique o número da porta novamente.
 
 - **Para outros**:
 
@@ -469,7 +479,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Quando você tiver concluído as etapas acima, então [clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#firmware-flashing) para gravar o firmware do aplicativo.
+Quando você tiver concluído as etapas acima, então [clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#firmware-flashing) para gravar o firmware de aplicativo.
 
 **2) O dispositivo não consegue entrar no modo DFU, mas a porta serial pode ser detectada**.
 
@@ -478,23 +488,23 @@ Quando você tiver concluído as etapas acima, então [clique aqui](https://wiki
 - Defina a taxa de transmissão para `1200`.
 
 - Conecte o dispositivo.
-   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU, então grave o [bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [apague a flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) -> [grave o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-firmware)
+   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU, então grave o [bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Erase flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) -> [flash the firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-firmware)
 
 **3) O dispositivo não consegue entrar no modo DFU e nenhuma porta serial é exibida**
 
-- pressione e segure o botão do dispositivo e, em seguida, conecte o cabo de carregamento. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
+- mantenha pressionado o botão do dispositivo e, em seguida, conecte o cabo de carregamento. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
 
-- Se ainda não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, depois conecte o cabo de carregamento e tente parear novamente.
+- Se ainda assim não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, depois conecte o cabo de carregamento e tente pareá-lo novamente.
 
-**4) Se nenhuma das etapas acima funcionar, entre em contato com o suporte técnico: support@sensecapmx.com**
+**4) Se nenhum dos passos acima funcionar, entre em contato com o suporte técnico: support@sensecapmx.com**
 
-### Falha na gravação do firmware
+### Falha ao gravar o firmware
 
 - **Nenhum dado recebido na porta serial**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- Verifique se o dispositivo está no modo DFU, a luz verde ficará acesa continuamente quando o dispositivo estiver no modo DFU.
+ Verifique se o dispositivo está no modo DFU, a luz verde ficará constante quando o dispositivo estiver no modo DFU.
 
 - **Não é possível abrir a porta serial**
 
@@ -506,19 +516,19 @@ Quando você tiver concluído as etapas acima, então [clique aqui](https://wiki
 
  #### Descrição
 
- - Após o dispositivo ligar, ele irá desligar ou reiniciar automaticamente depois de um tempo. 
- - O log da porta serial roda por um tempo e depois para.
+ - Após ligar o dispositivo, ele desligará ou reiniciará automaticamente depois de um tempo. 
+ - O log da porta serial é executado por um tempo e depois para.
 
- This is possibly caused by manually and forcely rebooting or turning off the device when the device is in the following states:not finishing the messages transmission process, being configured......
+ Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando o dispositivo está nos seguintes estados: sem concluir o processo de transmissão de mensagens, sendo configurado......
 
  #### Solução de problemas
 
-Perform a [flash-erase](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase). 
+Execute um [flash-erase](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase). 
 
  ### Restauração de fábrica
-Se você quiser restaurar as configurações padrão, pode fazer a restauração de fábrica. Há dois métodos para você realizar a restauração de fábrica.
+Se você quiser restaurar as configurações padrão, pode fazer a restauração de fábrica. Há dois métodos para você fazer a restauração de fábrica.
 
-- [Flash erase](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) o dispositivo. Em seguida, regrave o firmware mais recente.
+- Faça o [Flash erase](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) no dispositivo. Em seguida, grave novamente o firmware mais recente.
 
 - Clique no botão `Factory Reset` no App. O dispositivo será reiniciado automaticamente com a configuração de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Reset.png" alt="pir" width={400} height="auto" /></p>
@@ -527,11 +537,11 @@ Se você quiser restaurar as configurações padrão, pode fazer a restauração
 
   - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica baixo desempenho.
 
-  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo baixo desempenho. 
+  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado com baixo desempenho. 
 
-      Para obter o melhor efeito de sinal, utilize o dispositivo em uma área aberta, desobstruída e com interferência mínima.
+      Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
-### Definição do pino pogo
+### Definição do Pogo Pin
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
 
