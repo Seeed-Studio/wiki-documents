@@ -1,6 +1,7 @@
 ---
 description: エッジゲートウェイ上の産業マルチプロトコルデータハブ：OPC UA、Modbus TCP/RTU、BACnet/IP、MQTTを1つの点位モデルに統合し、バージョン付きMQTT契約で読み書き、北向きは断線時にディスクへ蓄積して再送
 title: '産業マルチプロトコルデータハブ：機器選定・導入・実測データ'
+sidebar_label: '産業マルチプロトコルデータハブ'
 keywords:
   - industrial protocol gateway
   - multi-protocol data hub
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/industrial-protocol-gateway/
 generated_from: sensecraft-solutions@multi_protocol_gateway
 ---
