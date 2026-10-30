@@ -153,12 +153,14 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 ## アームの接続
 
-> **安全に関する注意：**
-> JST、XT30、その他のケーブルを接続・取り外しする前に、必ず電源を切ってください。すべてのケーブルが正しく接続されていることを確認してから電源を入れてください。
-> B601 RS と B601 DM は外観が似ています。必ず見分けてください。
+:::warning
+**安全に関する注意：**
+JST、XT30、その他のケーブルを接続・取り外しする前に、必ず電源を切ってください。すべてのケーブルが正しく接続されていることを確認してから電源を入れてください。
+B601 RS と B601 DM は外観が似ています。必ず見分けてください。
+:::
 
 
-### 2.1 reBot Arm 102（リーダーアーム）の取り付けと接続
+### reBot Arm 102（リーダーアーム）の取り付けと接続
 
 
 
@@ -181,7 +183,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   2. アダプタを電源タップに接続してアームの電源を入れます。
 
 
-### 2.2 B601 DM（フォロワーアーム）の取り付けと接続
+### B601 DM（フォロワーアーム）の取り付けと接続
 
 ![B601 DM cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
 

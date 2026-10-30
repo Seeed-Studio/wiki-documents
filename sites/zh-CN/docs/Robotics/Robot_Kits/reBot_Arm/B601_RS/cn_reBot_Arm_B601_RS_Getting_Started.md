@@ -171,12 +171,14 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 ## 连接机械臂
 
-> **安全提示：**
-> 连接或拆卸 JST、XT30 等线束前，必须先断开电源。确认所有线束连接正确后，再接通电源。
-> B601RS与B601DM外观相近,请注意区分
+:::warning
+**安全提示：**
+连接或拆卸 JST、XT30 等线束前，必须先断开电源。确认所有线束连接正确后，再接通电源。
+B601RS与B601DM外观相近,请注意区分
+:::
 
 
-### 2.1 固定和连接 reBot Arm 102（主臂）
+### 固定和连接 reBot Arm 102（主臂）
 
 
 
@@ -197,7 +199,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 ---
 
-### 2.2 固定和连接 B601 RS（从臂）
+### 固定和连接 B601 RS（从臂）
 ![连接 B601 RS 线束](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.webp)
 
 #### 步骤 4：固定 B601 RS

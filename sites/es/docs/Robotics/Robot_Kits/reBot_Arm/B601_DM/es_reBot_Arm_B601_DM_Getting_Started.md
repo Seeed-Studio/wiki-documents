@@ -153,12 +153,14 @@ Video del tutorial de cableado:
 
 ## Conectar los brazos
 
-> **Aviso de seguridad:**
-> Desconecta la alimentación antes de conectar o desconectar cables JST, XT30 u otros cables. Enciende la alimentación solo después de confirmar que todos los cables están conectados correctamente.
-> El B601 RS y el B601 DM se parecen. Asegúrate de distinguirlos.
+:::warning
+**Aviso de seguridad:**
+Desconecta la alimentación antes de conectar o desconectar cables JST, XT30 u otros cables. Enciende la alimentación solo después de confirmar que todos los cables están conectados correctamente.
+El B601 RS y el B601 DM se parecen. Asegúrate de distinguirlos.
+:::
 
 
-### 2.1 Montar y conectar el reBot Arm 102 (brazo líder)
+### Montar y conectar el reBot Arm 102 (brazo líder)
 
 
 
@@ -181,7 +183,7 @@ Las conexiones constan de dos rutas:
   2. Conecta el adaptador a la regleta para encender el brazo.
 
 
-### 2.2 Montar y conectar el B601 DM (brazo seguidor)
+### Montar y conectar el B601 DM (brazo seguidor)
 
 ![Conexión de cables del B601 DM](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
 

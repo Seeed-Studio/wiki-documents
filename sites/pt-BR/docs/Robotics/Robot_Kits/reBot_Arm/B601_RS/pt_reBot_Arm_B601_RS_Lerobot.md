@@ -280,7 +280,7 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 > B601 RS e B601 DM são visualmente semelhantes. Certifique-se de distingui-los.
 
 
-### 2.1 Montar e Conectar o reBot Arm 102 (Braço Líder)
+### Montar e Conectar o reBot Arm 102 (Braço Líder)
 
 ![Montagem e conexão do reBot Arm 102 (braço líder)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
 
@@ -301,7 +301,7 @@ As conexões consistem em dois caminhos:
 
 ---
 
-### 2.2 Montar e Conectar o B601 RS (Braço Seguidor)
+### Montar e Conectar o B601 RS (Braço Seguidor)
 ![Conexão de cabos do B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
 
 #### Etapa 4: Montar o B601 RS

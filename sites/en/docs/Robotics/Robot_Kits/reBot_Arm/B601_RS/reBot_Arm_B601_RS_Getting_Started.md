@@ -171,12 +171,14 @@ Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cabl
 
 ## Connect the Arms
 
-> **Safety notice:**
-> Disconnect the power before connecting or disconnecting JST, XT30, or other cables. Turn the power on only after confirming that all cables are connected correctly.
-> B601 RS and B601 DM look similar. Make sure you distinguish between them.
+:::warning
+**Safety notice:**
+Disconnect the power before connecting or disconnecting JST, XT30, or other cables. Turn the power on only after confirming that all cables are connected correctly.
+B601 RS and B601 DM look similar. Make sure you distinguish between them.
+:::
 
 
-### 2.1 Mount and Connect the reBot Arm 102 (Leader Arm)
+### Mount and Connect the reBot Arm 102 (Leader Arm)
 
 ![Mounting and connecting the reBot Arm 102 (leader arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
 
@@ -197,7 +199,7 @@ The connections consist of two paths:
 
 ---
 
-### 2.2 Mount and Connect the B601 RS (Follower Arm)
+### Mount and Connect the B601 RS (Follower Arm)
 ![B601 RS cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
 
 #### Step 4: Mount the B601 RS

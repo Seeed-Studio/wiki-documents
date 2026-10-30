@@ -158,7 +158,7 @@ Vídeo tutorial de fiação:
 > B601 RS e B601 DM são semelhantes. Certifique-se de distingui-los.
 
 
-### 2.1 Montar e Conectar o reBot Arm 102 (Braço Líder)
+### Montar e Conectar o reBot Arm 102 (Braço Líder)
 
 
 
@@ -181,7 +181,7 @@ As conexões consistem em dois caminhos:
   2. Conecte o adaptador à régua de energia para ligar o braço.
 
 
-### 2.2 Montar e Conectar o B601 DM (Braço Seguidor)
+### Montar e Conectar o B601 DM (Braço Seguidor)
 
 ![Conexão de cabos do B601 DM](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
 
