@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini の前提条件、デーモン設定、最初のロボットスクリプトをカバーするクイックスタートガイドです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: クイックスタートガイド
 slug: /reachymini_sdk_quickstart
 keywords:

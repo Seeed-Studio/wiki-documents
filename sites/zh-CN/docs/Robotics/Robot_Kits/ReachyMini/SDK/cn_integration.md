@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini集成和应用指南，涵盖应用构建、JavaScript SDK、HTTP/WebSocket API以及AI实验技巧。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 集成与应用
 slug: /reachymini_sdk_integration
 keywords:

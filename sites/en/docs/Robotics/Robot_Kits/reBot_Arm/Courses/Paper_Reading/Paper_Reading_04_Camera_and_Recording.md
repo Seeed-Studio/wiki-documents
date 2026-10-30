@@ -1,6 +1,6 @@
 ---
 description: "Configure one or two cameras, find devices, record LeRobot datasets, and visualize, replay, add, and delete data."
-title: "Multi-View Data Collection"
+title: "How to Record Multi-View Demonstrations on reBot Arm"
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-camera_recording-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
-  <h1 id="hands-on-camera_recording-title">Multi-View Data Collection</h1>
+  <h1 id="hands-on-camera_recording-title">How to Record Multi-View Demonstrations on reBot Arm</h1>
   <p className="paper-reading-lead">Configure one or two cameras, identify devices, record LeRobot demonstrations, visualize and replay datasets, and add or remove episodes.</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Camera setup</li>

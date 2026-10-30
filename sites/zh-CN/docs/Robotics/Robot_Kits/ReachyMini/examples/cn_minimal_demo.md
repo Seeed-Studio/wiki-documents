@@ -1,5 +1,6 @@
 ---
 description: 最小示例展示如何在简单的振荡模式中移动Reachy Mini的头部和天线。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 最小演示
 slug: /reachymini_examples_minimal_demo
 keywords:

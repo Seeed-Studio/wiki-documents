@@ -1,5 +1,5 @@
 ---
-description: このwikiは、Isaac ROS Visual SLAMを使用するためのステップバイステップガイドを提供します。
+description: "Jetson 上の NVIDIA Isaac ROS で Visual SLAM を実行する方法：セットアップ、カメラ設定、3D 再構築、ライブトラッキング。"
 title: Isaac ROS Visual SLAM
 keywords:
   - NVIDIA

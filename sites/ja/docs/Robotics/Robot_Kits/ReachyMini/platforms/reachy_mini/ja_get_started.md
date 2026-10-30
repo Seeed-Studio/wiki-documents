@@ -1,5 +1,6 @@
 ---
 description: 組み立て手順、初回起動、Wi‑Fi 設定、システム更新、および SSH アクセスを含む Reachy Mini Wireless のセットアップガイドです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini Wireless セットアップガイド
 slug: /reachymini_platforms_reachy_mini_get_started
 keywords:

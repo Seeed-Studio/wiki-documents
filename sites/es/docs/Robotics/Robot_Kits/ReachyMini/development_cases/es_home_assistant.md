@@ -1,5 +1,6 @@
 ---
 description: Integración de Reachy Mini con Home Assistant. Instala la integración oficial vía HACS para autodescubrimiento por LAN, monitorización de sensores y blueprints de automatización.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-home.webp
 title: Integración con Home Assistant
 slug: /reachymini_development_cases_home_assistant
 keywords:

@@ -1,6 +1,6 @@
 ---
-description: "π0.5 の複数データソースでの共同学習、階層的な行動生成、未知の家庭への汎化、および π0 との違いを深掘りします。"
-title: "π₀.₅ — オープンワールド汎化"
+description: "reBot Arm と SO-ARM101 で Pi0.5 を動かす方法：pi0.5 のマルチソース共同訓練、階層的アクション生成、オープンワールド汎化、pi0 との違いを論文精読します。"
+title: "reBot Arm と SO-ARM101 で Pi0.5 を動かす方法"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi05-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-pi05-title">π₀.₅ — オープンワールド汎化</h1>
+  <h1 id="paper-reading-pi05-title">reBot Arm と SO-ARM101 で Pi0.5 を動かす方法</h1>
   <p className="paper-reading-lead">π0.5: オープンワールド汎化を備えた Vision-Language-Action モデル</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>オープンワールド汎化</li>

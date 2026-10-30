@@ -1,6 +1,6 @@
 ---
-description: "EO-1 の共有バックボーン、インタリーブされた視覚・テキスト・アクション学習、身体性推論データ、およびロボット制御実験を詳しく解説します。"
-title: "EO-1 — インタリーブ型マルチモーダル事前学習"
+description: "reBot Arm と SO-ARM101 で EO-1 を動かす方法：EO-1 の共有バックボーン、視覚-テキスト-アクションのインターリーブ学習、身体推論データ、ロボット制御実験を論文精読します。"
+title: "reBot Arm と SO-ARM101 で EO-1 を動かす方法"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-eo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-eo1-title">EO-1 — インタリーブ型マルチモーダル事前学習</h1>
+  <h1 id="paper-reading-eo1-title">reBot Arm と SO-ARM101 で EO-1 を動かす方法</h1>
   <p className="paper-reading-lead">EO-1: 汎用ロボット制御のためのオープンな統一身体性基盤モデル</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>統一された Physical AI モデル</li>

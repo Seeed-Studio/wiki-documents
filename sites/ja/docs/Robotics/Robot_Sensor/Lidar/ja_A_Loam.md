@@ -1,5 +1,5 @@
 ---
-description: このwikiでは、RoboSense RS32 LiDARセンサーを使用してreComputer Jetson上でA-LOAMアルゴリズムをセットアップし、実行するための詳細な手順を提供します。
+description: "Jetson で A-LOAM LiDAR SLAM を実行する方法：ソースからビルドし、rosbag を再生して、ロボットナビゲーション用の点群マップを生成します。"
 title: A-LOAM 3D SLAMの実行
 keywords:
   - A-LOAM

@@ -1,6 +1,6 @@
 ---
 description: 在已跑通 ACT 的 reBot 或 SO101 平台上训练并部署新策略，通过标签切换各平台的命令，了解 Diffusion、SmolVLA 与 π 系列的配置及评估流程。
-title: 从 ACT 切换到其他策略（reBot / SO101）
+title: 如何在 reBot Arm 上切换策略
 hide_title: true
 keywords:
   - 手把手复现
@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-algorithm-switching-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 手把手复现</span>
-  <h1 id="hands-on-algorithm-switching-title">从 ACT 切换到其他策略（reBot / SO101）</h1>
+  <h1 id="hands-on-algorithm-switching-title">如何在 reBot Arm 上切换策略</h1>
   <p className="paper-reading-lead">复用已跑通 ACT 的平台和数据集，训练并部署新策略，再通过真机评估比较效果。命令按 reBot-RS、reBot-DM 和 SO101 分别展示。</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>Diffusion</li>

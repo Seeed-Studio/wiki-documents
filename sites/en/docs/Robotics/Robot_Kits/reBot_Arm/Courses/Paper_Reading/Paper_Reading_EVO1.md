@@ -1,6 +1,6 @@
 ---
-description: "A deep dive into Evo-1's multimodal backbone, cross-attention, flow-matching action expert, two-stage training, and experimental boundaries."
-title: "Evo-1 — Lightweight VLA"
+description: "How to run Evo-1 on reBot Arm & SO-ARM101: a paper deep-dive into the lightweight Evo-1 VLA backbone, cross-attention, flow-matching action expert and two-stage training."
+title: "How to Run Evo-1 on reBot Arm & SO-ARM101"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-evo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-evo1-title">Evo-1 — Lightweight VLA</h1>
+  <h1 id="paper-reading-evo1-title">How to Run Evo-1 on reBot Arm & SO-ARM101</h1>
   <p className="paper-reading-lead">Evo-1: Lightweight Vision-Language-Action Model with Preserved Semantic Alignment</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Lightweight VLA</li>

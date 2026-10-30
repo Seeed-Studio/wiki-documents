@@ -1,6 +1,6 @@
 ---
-description: 精读 π0.5 的多源数据联合训练、分层动作生成、陌生家庭泛化及其与 π0 的区别。
-title: π0.5 论文精读
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 Pi0.5：论文精读 pi0.5 多源联合训练、分层动作生成、开放世界泛化与 pi0 的差异。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 Pi0.5
 hide_title: true
 keywords:
   - 论文精读
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi05-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-pi05-title">π0.5：面向开放世界泛化的视觉语言动作模型</h1>
+  <h1 id="paper-reading-pi05-title">如何在 reBot Arm 与 SO-ARM101 上运行 Pi0.5</h1>
   <p className="paper-reading-lead">π0.5: a Vision-Language-Action Model with Open-World Generalization</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>开放世界泛化</li>

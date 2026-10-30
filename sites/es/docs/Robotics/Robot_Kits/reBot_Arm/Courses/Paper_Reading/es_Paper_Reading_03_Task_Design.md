@@ -1,6 +1,6 @@
 ---
 description: "Diseña tu primera tarea de aprendizaje por imitación en torno a episodios, condiciones de inicio y parada, y coherencia en las demostraciones; luego completa muestreos de cinco puntos y demostraciones de recogida y colocación."
-title: "Diseño de tareas y planificación de demostraciones"
+title: "Cómo diseñar tareas y demos para el aprendizaje por imitación"
 hide_title: true
 keywords:
   - Implementación práctica
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-task_design-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLEMENTACIÓN PRÁCTICA</span>
-  <h1 id="hands-on-task_design-title">Diseño de tareas y planificación de demostraciones</h1>
+  <h1 id="hands-on-task_design-title">Cómo diseñar tareas y demos para el aprendizaje por imitación</h1>
   <p className="paper-reading-lead">Define episodios, condiciones de inicio y parada, y demostraciones coherentes; luego utiliza muestreo de cinco puntos para recopilar una tarea completa de recogida y colocación.</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Episodio</li>

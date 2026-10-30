@@ -1,6 +1,6 @@
 ---
-description: "A deep dive into ACT's imitation learning foundations, the ALOHA bimanual teleoperation system, action chunking, temporal ensembling, and CVAE network."
-title: "ACT — Low-Cost Bimanual Manipulation"
+description: "How to run ACT on reBot Arm & SO-ARM101: a paper deep-dive into ACT imitation learning, the ALOHA bimanual teleoperation system, action chunking, temporal ensembling and the CVAE network."
+title: "How to Run ACT on reBot Arm & SO-ARM101"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-act-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-act-title">ACT — Low-Cost Bimanual Manipulation</h1>
+  <h1 id="paper-reading-act-title">How to Run ACT on reBot Arm & SO-ARM101</h1>
   <p className="paper-reading-lead">Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Imitation learning</li>

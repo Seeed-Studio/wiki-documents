@@ -1,5 +1,6 @@
 ---
 description: Guide for using AI coding agents to build Reachy Mini apps, pointing to the AGENTS.md documentation for AI agents to understand SDK patterns and best practices.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini_vibe/reachymini_1.webp
 title: Vibe Code with Your Agent
 slug: /reachymini_vibe-code-with-your-agent
 keywords:

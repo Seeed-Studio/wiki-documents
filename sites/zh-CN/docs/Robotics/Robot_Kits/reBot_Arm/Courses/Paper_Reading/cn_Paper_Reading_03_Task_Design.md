@@ -1,6 +1,6 @@
 ---
 description: 从 Episode、起止条件和示范一致性出发，设计首个模仿学习任务，完成五点采样与抓取放置示范。
-title: 设计第一个模仿学习任务
+title: 如何设计模仿学习任务与示教
 hide_title: true
 keywords:
   - 手把手复现
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-task_design-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 手把手复现</span>
-  <h1 id="hands-on-task_design-title">设计第一个模仿学习任务</h1>
+  <h1 id="hands-on-task_design-title">如何设计模仿学习任务与示教</h1>
   <p className="paper-reading-lead">从 Episode、起止条件和示范一致性出发，设计首个模仿学习任务，完成五点采样与抓取放置示范。</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>Episode</li>

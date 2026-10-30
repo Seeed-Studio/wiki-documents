@@ -1,5 +1,6 @@
 ---
 description: Guía de flujo de trabajo de desarrollo para Reachy Mini inalámbrico que cubre acceso SSH, opciones multiplataforma, edición remota y métodos eficientes de prueba de código.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Flujo de Trabajo de Desarrollo para Reachy Mini Inalámbrico
 slug: /reachymini_platforms_reachy_mini_development_workflow
 keywords:

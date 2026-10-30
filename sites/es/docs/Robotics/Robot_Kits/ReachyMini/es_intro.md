@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini es un robot expresivo y de código abierto creado para hackers y desarrolladores de IA. Incluye tienda de aplicaciones, SDK de Python y múltiples opciones de plataforma.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini
 slug: /reachymini_intro
 keywords:

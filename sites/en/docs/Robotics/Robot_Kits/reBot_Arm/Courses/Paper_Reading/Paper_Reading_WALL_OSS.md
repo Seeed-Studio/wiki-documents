@@ -1,6 +1,6 @@
 ---
-description: "A deep dive into WALL-OSS's action-semantic pre-training, continuous-action flow matching, Uni-CoT, and embodied question-answering and control experiments."
-title: "WALL-OSS — Embodied Reasoning & Robot Control"
+description: "How to run WALL-OSS on reBot Arm & SO-ARM101: a paper deep-dive into action-semantic pre-training, continuous-action flow matching, Uni-CoT and embodied question answering and control."
+title: "How to Run WALL-OSS on reBot Arm & SO-ARM101"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-wall_oss-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-wall_oss-title">WALL-OSS — Embodied Reasoning &amp; Robot Control</h1>
+  <h1 id="paper-reading-wall_oss-title">How to Run WALL-OSS on reBot Arm & SO-ARM101</h1>
   <p className="paper-reading-lead">Igniting VLMs toward the Embodied Space</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Action semantics</li>

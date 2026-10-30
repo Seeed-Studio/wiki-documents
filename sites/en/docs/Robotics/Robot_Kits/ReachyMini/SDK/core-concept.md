@@ -1,5 +1,6 @@
 ---
 description: Core concepts and architecture documentation for Reachy Mini covering coordinate systems, safety limits, motor modes, and software architecture.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Core Concepts & Architecture
 slug: /reachymini_sdk_core-concept
 keywords:

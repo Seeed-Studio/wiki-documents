@@ -1,6 +1,6 @@
 ---
-description: "Seeed Studio 免费论文精读与手把手复现课程，串联机器人基础知识、LeRobot 数据采集、ACT 训练部署与视觉语言动作模型（VLA）论文解析。"
-title: 快速开始
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 Physical AI 论文：Seeed 论文精读系列逐篇拆解 Pi0、Pi0.5、GR00T、ACT、SmolVLA 等模型，并配合 LeRobot 带你动手复现。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 Physical AI 论文
 hide_title: true
 keywords:
   - reBot
@@ -46,7 +46,7 @@ import '/src/css/paper-reading-style.css';
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">论文精读 · 快速开始</h1>
+    <h1 id="paper-reading-title">如何在 reBot Arm 与 SO-ARM101 上运行 Physical AI 论文</h1>
     <p className="paper-reading-lead">跨专业学习机器人，刚读研想做技术储备，准备找工作增加知识面，想要做自己的项目加速落地，不用到处收集资料啦！</p>
     <p>SeeedStudio AI Robotics团队精心打磨的<strong>永远免费课程</strong>，配合<strong>100%完全开源可商用、可复现的reBot机械臂</strong>。学完这个，你就是下一个大佬！</p>
     <ul className="paper-reading-badges" aria-label="课程特点">
@@ -55,6 +55,24 @@ import '/src/css/paper-reading-style.css';
       <li>动手实践 · 可复现</li>
     </ul>
   </section>
+
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ 免代码 · 免配环境</span>
+    <p className="sensecraft-banner__title">不想装环境、不想写代码？一个软件就能跑 reBot Arm 与 LeRobot</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics 是 Seeed 面向 SO-ARM101、reBot Arm 102 + B601-RS / B601-DM 的免代码平台。在引导式界面里完成设备连接、标定、数据采集、模型训练与推理验证 —— 不需要配 Python 环境，也不需要敲命令行。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 步引导式流程</li>
+      <li>✅ 云端训练 · 本地无需 GPU</li>
+      <li>✅ Windows / macOS 客户端</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/zh?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">前往 SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/cn/sensecraft_robotics/">软件使用教程</a>
+  </div>
+</div>
 
   <div className="paper-reading-directory">
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-hands-on-title">

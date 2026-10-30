@@ -1,5 +1,5 @@
 ---
-description: 本 wiki 提供达妙系列电机的教程。
+description: "机械臂用 DM（达妙）关节执行器完整指南：电机系列概览、控制模式、CAN 通信，以及在 Seeed 机器人套件中使用 Python SDK。"
 title: 达妙系列电机
 keywords:
   - actuator

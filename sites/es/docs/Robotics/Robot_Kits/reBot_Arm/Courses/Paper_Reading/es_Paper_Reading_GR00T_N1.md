@@ -1,6 +1,6 @@
 ---
-description: "Un análisis en profundidad de la arquitectura de doble sistema de GR00T N1, la pirámide de datos, los fragmentos de acción con flow-matching, el preentrenamiento y la adaptación al robot."
-title: "NVIDIA GR00T — Adaptación y Fine-Tuning"
+description: "Cómo ejecutar NVIDIA GR00T N1 en reBot Arm y SO-ARM101: análisis de la arquitectura de doble sistema de GR00T N1, la pirámide de datos, los chunks de acciones por flow matching y la adaptación robótica."
+title: "Cómo ejecutar NVIDIA GR00T N1 en reBot Arm y SO-ARM101"
 hide_title: true
 keywords:
   - Análisis en profundidad de artículo
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-gr00t_n1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DE ARTÍCULOS</span>
-  <h1 id="paper-reading-gr00t_n1-title">NVIDIA GR00T — Adaptation &amp; Fine-Tuning</h1>
+  <h1 id="paper-reading-gr00t_n1-title">Cómo ejecutar NVIDIA GR00T N1 en reBot Arm y SO-ARM101</h1>
   <p className="paper-reading-lead">GR00T N1: Un modelo base abierto para robots humanoides generalistas</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Robots humanoides</li>

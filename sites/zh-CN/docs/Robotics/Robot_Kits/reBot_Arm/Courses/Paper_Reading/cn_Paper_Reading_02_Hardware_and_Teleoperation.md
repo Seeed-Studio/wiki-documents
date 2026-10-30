@@ -1,6 +1,6 @@
 ---
 description: "手把手复现准备：电脑与 reBot Arm 硬件清单、LeRobot 环境安装、相机与 CAN 配置，以及主从臂遥操作练习。"
-title: 软件设置和硬件
+title: 如何搭建 reBot Arm 硬件与遥操作
 hide_title: true
 keywords:
   - reBot
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-hardware-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 手把手复现</span>
-  <h1 id="paper-reading-hardware-title">软件设置和硬件</h1>
+  <h1 id="paper-reading-hardware-title">如何搭建 reBot Arm 硬件与遥操作</h1>
   <p className="paper-reading-lead">准备好硬件与环境，打通主从臂遥操作链路，为后续数据采集、模型训练和论文复现做好准备。</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>硬件清单</li>

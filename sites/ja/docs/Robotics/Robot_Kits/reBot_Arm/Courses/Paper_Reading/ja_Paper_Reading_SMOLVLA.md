@@ -1,6 +1,6 @@
 ---
-description: "SmolVLA の軽量アーキテクチャ、コミュニティデータによる事前学習、非同期推論、実験結果、およびアブレーション解析を詳しく解説します。"
-title: "SmolVLA — 手頃な Vision-Language-Action モデル"
+description: "reBot Arm と SO-ARM101 で SmolVLA を動かす方法：軽量な SmolVLA アーキテクチャ、コミュニティデータの事前学習、非同期推論、アブレーションを論文精読します。"
+title: "reBot Arm と SO-ARM101 で SmolVLA を動かす方法"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-smolvla-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-smolvla-title">SmolVLA — 手頃な Vision-Language-Action モデル</h1>
+  <h1 id="paper-reading-smolvla-title">reBot Arm と SO-ARM101 で SmolVLA を動かす方法</h1>
   <p className="paper-reading-lead">SmolVLA: 手頃で効率的なロボットのための vision-language-action モデル</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>軽量 VLA</li>

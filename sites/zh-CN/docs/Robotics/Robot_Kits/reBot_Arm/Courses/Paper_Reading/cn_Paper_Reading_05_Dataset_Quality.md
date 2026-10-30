@@ -1,6 +1,6 @@
 ---
 description: 理解 LeRobot 的视频、Parquet 与 meta 结构，检查时间同步、图像质量和示范完整性。
-title: 数据集结构与质量检查
+title: 如何校验机器人学习数据集质量
 hide_title: true
 keywords:
   - 手把手复现
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-dataset_quality-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 手把手复现</span>
-  <h1 id="hands-on-dataset_quality-title">数据集结构与质量检查</h1>
+  <h1 id="hands-on-dataset_quality-title">如何校验机器人学习数据集质量</h1>
   <p className="paper-reading-lead">理解 LeRobot 的视频、Parquet 与 meta 结构，检查时间同步、图像质量和示范完整性。</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>数据集结构</li>

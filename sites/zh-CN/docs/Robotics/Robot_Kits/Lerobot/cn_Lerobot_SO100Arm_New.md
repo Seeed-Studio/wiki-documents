@@ -25,6 +25,24 @@ import TabItem from '@theme/TabItem';
 
 # 基于 LeRobot 的 SO-ARM100 / SO-ARM101 机械臂入门教程
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ 免代码 · 免配环境</span>
+    <p className="sensecraft-banner__title">不想装环境、不想写代码？一个软件就能跑 reBot Arm 与 LeRobot</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics 是 Seeed 面向 SO-ARM101、reBot Arm 102 + B601-RS / B601-DM 的免代码平台。在引导式界面里完成设备连接、标定、数据采集、模型训练与推理验证 —— 不需要配 Python 环境，也不需要敲命令行。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 步引导式流程</li>
+      <li>✅ 云端训练 · 本地无需 GPU</li>
+      <li>✅ Windows / macOS 客户端</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/zh?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">前往 SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/cn/sensecraft_robotics/">软件使用教程</a>
+  </div>
+</div>
+
 <div className="rebot-page">
 
 <section className="doc-hero">
@@ -140,76 +158,29 @@ import TabItem from '@theme/TabItem';
   <div className="section-title">
     <span>3D Printing</span>
     <h2>3D 打印参考参数</h2>
-    <p>根据打印机平台选择 STL 文件，并按推荐参数打印结构件。</p>
+    <p>套件版结构件的推荐打印参数与 STL 下载。</p>
   </div>
 
 <details className="content-details">
-<summary>点击查看 3D 打印参考参数</summary>
+<summary>点击查看打印参数与下载</summary>
 
-:::caution
-随着2025年4月28日官方发布 SO101，SO100 将不再支持打印指导，但源文件仍可在我们的 [Makerworld](https://makerworld.com/zh/models/908660) 找到。不过，对于之前购买了SO100 的用户，教程和安装方法以及代码依然兼容。SO101 的打印件也完全兼容 SO100 的电机套件安装。
-:::
+**推荐打印参数**(已在常见 FDM 打印机上测试):
 
-**第一步：选择打印机**
+- 材料:PLA+
+- 喷嘴 / 层高:0.4mm 喷嘴 + 0.2mm 层高,或 0.6mm 喷嘴 + 0.4mm 层高
+- 填充率:15%
+- 支撑:全域支撑,忽略大于 45° 的斜面;水平向螺孔内不加支撑
 
-提供的 STL 文件可以直接在许多 FDM 打印机上打印。以下是经过测试并推荐的设置，但其他设置也可能适用。
+**下载与打印:**
 
-- 材料：PLA+
-- 喷嘴直径与精度：0.4mm 喷嘴直径，层高 0.2mm，或 0.6mm 喷嘴直径，层高 0.4mm。
-- 填充密度：15%
+Leader 与 Follower 的全部零件已合并在同一个 STL 文件中,并按最小化支撑方向排布,下载后直接打印即可:
 
-**第二步：设置打印机**
+[下载 SO-ARM101 打印文件(soarm101.stl)](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl)
 
-- 确保打印机已校准且打印床水平调整正确，具体操作请参考打印机说明书。
-- 清洁打印床，确保无灰尘或油污。如果使用水或其他液体清洁打印床，请确保彻底干燥。
-- 如果打印机建议，使用标准胶棒在打印区域涂抹一层薄薄的均匀胶水，避免结块或涂抹不均。
-- 按照打印机说明书装载打印机耗材（线材）。
-- 确保打印机设置与上述推荐参数匹配（大多数打印机有多种设置选项，请选择最接近的）。
-- 设置支撑：支撑应设置为“处处需要”，但忽略与水平面小于 45 度的倾斜面。
-- 水平轴方向的螺丝孔内不应有支撑结构。
-
-**第三步：打印零件**
-
-所有关于 Leader 或 Follower 的零件都已经排版好，方便 3D 打印，且朝 Z 轴正方向摆放，以最小化支撑需求。
-
-- 对于打印床尺寸为 220mm x 220mm（如 Ender）的打印机，请打印以下文件：
-
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-- 对于打印床尺寸为 205mm x 250mm（如 Prusa/Up）的打印机，请打印以下文件：
-
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
-
-**第四步：打印柔性夹和摄像头支架插件（可选）**
-
-如果你希望让机械臂具备抓取柔软、易碎或形状不规则物体的能力，可以选择打印柔性夹爪来替换默认的刚性夹爪。如果需要安装摄像头，也可以一并打印摄像头支架插件。打印文件可在 [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) 仓库中获取。
-
-打印材料说明：
-
-- 两个夹爪：使用 **TPU** 材料打印
-- 其他零件：使用 **PLA** 材料打印
+**可选:** 打印柔性夹爪(TPU 指夹)或摄像头支架插件,文件在 [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) 仓库。
 
 </details>
 </section>
-
-<div className="sensecraft-banner">
-  <div className="sensecraft-banner__copy">
-    <span className="sensecraft-banner__badge">⚡ 免代码 · 免配环境</span>
-    <p className="sensecraft-banner__title">不想装环境、不想写代码？一个软件就能跑 reBot Arm 与 LeRobot</p>
-    <p className="sensecraft-banner__lead">SenseCraft Robotics 是 Seeed 面向 SO-ARM101、reBot Arm 102 + B601-RS / B601-DM 的免代码平台。在引导式界面里完成设备连接、标定、数据采集、模型训练与推理验证 —— 不需要配 Python 环境，也不需要敲命令行。</p>
-    <ul className="sensecraft-banner__points">
-      <li>✅ 6 步引导式流程</li>
-      <li>✅ 云端训练 · 本地无需 GPU</li>
-      <li>✅ Windows / macOS 客户端</li>
-      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
-    </ul>
-  </div>
-  <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/zh?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">前往 SenseCraft Robotics ↗</a>
-    <a className="sensecraft-banner__link" href="/cn/sensecraft_robotics/">软件使用教程</a>
-  </div>
-</div>
 
 ## 初始系统环境
 

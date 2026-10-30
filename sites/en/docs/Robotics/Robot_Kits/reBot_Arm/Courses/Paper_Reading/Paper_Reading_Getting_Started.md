@@ -1,6 +1,6 @@
 ---
-description: "Explore cutting-edge Physical AI research, break down key models and algorithms with Seeed robotic arms"
-title: "Physical AI Paper Deep-Dive & Hands-on Deployment"
+description: "How to run Physical AI papers on reBot Arm & SO-ARM101: a Seeed paper deep-dive series that breaks down Pi0, Pi0.5, GR00T, ACT, SmolVLA and more, then walks you through hands-on reproduction with LeRobot."
+title: "How to Run Physical AI Papers on reBot Arm & SO-ARM101"
 hide_title: true
 keywords:
   - reBot
@@ -46,7 +46,7 @@ import '/src/css/paper-reading-style.css';
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">Physical AI Paper Deep-Dive &amp; Hands-on Deployment</h1>
+    <h1 id="paper-reading-title">How to Run Physical AI Papers on reBot Arm & SO-ARM101</h1>
     <p className="paper-reading-lead">Explore cutting-edge Physical AI research, break down key models and algorithms with Seeed robotic arms</p>
     <p>A <strong>course that will always be free</strong>, carefully developed by the SeeedStudio AI Robotics team, paired with the <strong>100% open-source reBot robotic arm, available for commercial use and reproduction</strong>. Complete it and become the next robotics expert!</p>
     <ul className="paper-reading-badges" aria-label="Course features">
@@ -55,6 +55,24 @@ import '/src/css/paper-reading-style.css';
       <li>Hands-on · Reproducible</li>
     </ul>
   </section>
+
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ No-code · No environment setup</span>
+    <p className="sensecraft-banner__title">Skip the setup — run the reBot Arm and LeRobot from one app</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics is Seeed's no-code platform for the SO-ARM101, reBot Arm 102 + B601-RS and B601-DM. Connect the arms, calibrate, collect demonstrations, train and run inference from a guided interface — no Python environment, no terminal.</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6-step guided workflow</li>
+      <li>✅ Cloud training — no local GPU</li>
+      <li>✅ Windows / macOS client</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Go to SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/sensecraft_robotics/">Software guide</a>
+  </div>
+</div>
 
   <div className="paper-reading-directory">
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-hands-on-title">

@@ -1,5 +1,5 @@
 ---
-description: Primeros pasos con Atom-S.
+description: "Cómo empezar con el robot humanoide Atom-S: desembalaje, encendido, primer arranque, movimientos básicos y configuración del software."
 title: Guía rápida de Atom-S
 keywords:
   - Humanoid

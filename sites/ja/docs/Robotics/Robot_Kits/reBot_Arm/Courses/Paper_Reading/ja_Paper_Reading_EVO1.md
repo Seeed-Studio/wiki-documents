@@ -1,6 +1,6 @@
 ---
-description: "Evo-1 のマルチモーダルバックボーン、クロスアテンション、フローマッチング型アクションエキスパート、2 段階学習、および実験的な限界についての詳細な解説。"
-title: "Evo-1 — 軽量 VLA"
+description: "reBot Arm と SO-ARM101 で Evo-1 を動かす方法：軽量 VLA の Evo-1 バックボーン、クロスアテンション、フローマッチングのアクションエキスパート、2 段階訓練を論文精読します。"
+title: "reBot Arm と SO-ARM101 で Evo-1 を動かす方法"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-evo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-evo1-title">Evo-1 — 軽量 VLA</h1>
+  <h1 id="paper-reading-evo1-title">reBot Arm と SO-ARM101 で Evo-1 を動かす方法</h1>
   <p className="paper-reading-lead">Evo-1: セマンティックアライメントを維持した軽量 Vision-Language-Action モデル</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>軽量 VLA</li>

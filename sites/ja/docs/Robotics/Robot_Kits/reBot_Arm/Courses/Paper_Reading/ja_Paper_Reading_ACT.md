@@ -1,6 +1,6 @@
 ---
-description: "ACT の模倣学習の基礎、ALOHA 両腕テレオペレーションシステム、アクションチャンク、時間アンサンブル、CVAE ネットワークを深く掘り下げます。"
-title: "ACT — 低コスト両腕マニピュレーション"
+description: "reBot Arm と SO-ARM101 で ACT を動かす方法：ACT の模倣学習、ALOHA 双腕テレオペレーションシステム、アクションチャンキング、時間的アンサンブル、CVAE ネットワークを論文精読します。"
+title: "reBot Arm と SO-ARM101 で ACT を動かす方法"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-act-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-act-title">ACT — 低コスト両腕マニピュレーション</h1>
+  <h1 id="paper-reading-act-title">reBot Arm と SO-ARM101 で ACT を動かす方法</h1>
   <p className="paper-reading-lead">低コストハードウェアによる精密な両腕マニピュレーションの学習</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>模倣学習</li>

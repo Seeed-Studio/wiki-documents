@@ -1,6 +1,6 @@
 ---
-description: "Un análisis en profundidad del entrenamiento conjunto de π0.5 en múltiples fuentes de datos, la generación jerárquica de acciones, la generalización a hogares desconocidos y las diferencias con π0."
-title: "π₀.₅ — Generalización en Mundo Abierto"
+description: "Cómo ejecutar Pi0.5 en reBot Arm y SO-ARM101: análisis del entrenamiento conjunto multi-fuente de pi0.5, la generación jerárquica de acciones, la generalización en mundo abierto y las diferencias con pi0."
+title: "Cómo ejecutar Pi0.5 en reBot Arm y SO-ARM101"
 hide_title: true
 keywords:
   - Análisis en profundidad del artículo
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi05-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DEL ARTÍCULO</span>
-  <h1 id="paper-reading-pi05-title">π₀.₅ — Generalización en Mundo Abierto</h1>
+  <h1 id="paper-reading-pi05-title">Cómo ejecutar Pi0.5 en reBot Arm y SO-ARM101</h1>
   <p className="paper-reading-lead">π0.5: un modelo Visión-Lenguaje-Acción con generalización en mundo abierto</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Generalización en mundo abierto</li>

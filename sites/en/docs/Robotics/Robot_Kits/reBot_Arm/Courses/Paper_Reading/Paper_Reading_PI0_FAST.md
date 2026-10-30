@@ -1,6 +1,6 @@
 ---
-description: "A deep dive into FAST's DCT, coefficient quantization, BPE compression, universal action tokenizer, and autoregressive action policy."
-title: "π₀-FAST — Efficient Action Tokenization"
+description: "How to run Pi0-FAST on reBot Arm & SO-ARM101: a paper deep-dive into FAST action tokenization — DCT, coefficient quantization, BPE compression and the autoregressive action policy."
+title: "How to Run Pi0-FAST on reBot Arm & SO-ARM101"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0_fast-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-pi0_fast-title">π₀-FAST — Efficient Action Tokenization</h1>
+  <h1 id="paper-reading-pi0_fast-title">How to Run Pi0-FAST on reBot Arm & SO-ARM101</h1>
   <p className="paper-reading-lead">FAST: Efficient Action Tokenization for Vision-Language-Action Models</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Action tokenization</li>

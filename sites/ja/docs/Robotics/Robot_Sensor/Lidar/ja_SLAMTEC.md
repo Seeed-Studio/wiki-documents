@@ -1,5 +1,5 @@
 ---
-description: Slamtec LiDAR製品と使用ドキュメントの紹介。
+description: "SLAMTEC LiDAR 製品の紹介：モデル比較、配線、ロボットのマッピングとナビゲーション向けの使用ドキュメント。"
 title: Slamtec LiDAR シリーズ
 keywords:
   - LiDAR

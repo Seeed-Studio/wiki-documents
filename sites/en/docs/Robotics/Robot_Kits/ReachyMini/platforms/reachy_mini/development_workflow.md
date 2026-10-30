@@ -1,5 +1,6 @@
 ---
 description: Development workflow guide for wireless Reachy Mini covering SSH access, cross-platform options, remote editing, and efficient code testing methods.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Development Workflow for Wireless Reachy Mini
 slug: /reachymini_platforms_reachy_mini_development_workflow
 keywords:

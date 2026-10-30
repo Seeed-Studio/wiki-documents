@@ -1,6 +1,6 @@
 ---
-description: 精读 Evo-1 的多模态骨干、交叉注意力、流匹配动作专家、两阶段训练与实验边界。
-title: Evo-1 论文精读
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 Evo-1：论文精读轻量级 Evo-1 VLA 骨干网络、交叉注意力、流匹配动作专家与两阶段训练。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 Evo-1
 hide_title: true
 keywords:
   - 论文精读
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-evo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-evo1-title">Evo-1：保留语义对齐的轻量 VLA</h1>
+  <h1 id="paper-reading-evo1-title">如何在 reBot Arm 与 SO-ARM101 上运行 Evo-1</h1>
   <p className="paper-reading-lead">Evo-1: Lightweight Vision-Language-Action Model with Preserved Semantic Alignment</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>轻量 VLA</li>

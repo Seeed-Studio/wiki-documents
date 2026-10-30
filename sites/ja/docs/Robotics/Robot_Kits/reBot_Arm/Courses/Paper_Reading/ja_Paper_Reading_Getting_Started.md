@@ -1,6 +1,6 @@
 ---
-description: "最先端のPhysical AI研究を探索し、Seeedロボットアームで主要なモデルとアルゴリズムを分解して学ぶ"
-title: "Physical AI 論文徹底解説 & ハンズオンデプロイ"
+description: "reBot Arm と SO-ARM101 で Physical AI 論文を動かす方法：Pi0、Pi0.5、GR00T、ACT、SmolVLA などのモデルを Seeed 論文精読シリーズで解説し、LeRobot でハンズオン再現します。"
+title: "reBot Arm と SO-ARM101 で Physical AI 論文を動かす方法"
 hide_title: true
 keywords:
   - reBot
@@ -46,7 +46,7 @@ import '/src/css/paper-reading-style.css';
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">Physical AI 論文徹底解説 &amp; ハンズオンデプロイ</h1>
+    <h1 id="paper-reading-title">reBot Arm と SO-ARM101 で Physical AI 論文を動かす方法</h1>
     <p className="paper-reading-lead">最先端のPhysical AI研究を探索し、Seeedロボットアームで主要なモデルとアルゴリズムを分解して学ぶ</p>
     <p><strong>永遠に無料のコース</strong>を、SeeedStudio AI Robotics チームが丁寧に開発し、<strong>商用利用・再現が可能な 100% オープンソースの reBot ロボットアーム</strong>と組み合わせました。やり切って、次のロボティクスエキスパートになりましょう！</p>
     <ul className="paper-reading-badges" aria-label="コースの特徴">
@@ -55,6 +55,24 @@ import '/src/css/paper-reading-style.css';
       <li>ハンズオン · 再現可能</li>
     </ul>
   </section>
+
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ コード不要 · 環境構築不要</span>
+    <p className="sensecraft-banner__title">セットアップをスキップして — reBot Arm と LeRobot を 1 つのアプリから実行</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics は、SO-ARM101、reBot Arm 102 + B601-RS および B601-DM 向けの Seeed のノーコードプラットフォームです。アームを接続し、キャリブレーションを行い、デモを収集し、ガイド付きインターフェースから学習と推論を実行できます — Python 環境もターミナルも不要です。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 ステップのガイド付きワークフロー</li>
+      <li>✅ クラウド学習 — ローカル GPU 不要</li>
+      <li>✅ Windows / macOS クライアント</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">SenseCraft Robotics へ移動 ↗</a>
+    <a className="sensecraft-banner__link" href="/ja/sensecraft_robotics/">ソフトウェアガイド</a>
+  </div>
+</div>
 
   <div className="paper-reading-directory">
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-hands-on-title">

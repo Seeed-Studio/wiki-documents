@@ -1,5 +1,5 @@
 ---
-description: このwikiはIsaac Labをインストールするためのステップバイステップガイドを提供します。
+description: "Jetson と Ubuntu に NVIDIA Isaac Lab をインストールする手順：前提条件、conda のセットアップ、インストール、ロボット学習向けの動作確認。"
 title: Isaac Labのインストール
 keywords:
   - NVIDIA

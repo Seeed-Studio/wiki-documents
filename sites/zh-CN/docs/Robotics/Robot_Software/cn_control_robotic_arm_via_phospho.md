@@ -1,5 +1,5 @@
 ---
-description: '--'
+description: "如何通过 Phospho 与 LeRobot 控制机械臂：搭建基于浏览器的平台、连接机械臂、遥操作，并运行模仿学习流程。"
 title: Phospho教程
 keywords:
   - NVIDIA Jetson

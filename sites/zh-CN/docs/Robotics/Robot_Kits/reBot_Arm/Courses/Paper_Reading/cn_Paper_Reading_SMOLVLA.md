@@ -1,6 +1,6 @@
 ---
-description: 精读 SmolVLA 的轻量架构、社区数据预训练、异步推理、实验结果与消融分析。
-title: SmolVLA 论文精读
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 SmolVLA：论文精读轻量级 SmolVLA 架构、社区数据预训练、异步推理与消融实验。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 SmolVLA
 hide_title: true
 keywords:
   - 论文精读
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-smolvla-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-smolvla-title">SmolVLA：面向低成本机器人的视觉语言动作模型</h1>
+  <h1 id="paper-reading-smolvla-title">如何在 reBot Arm 与 SO-ARM101 上运行 SmolVLA</h1>
   <p className="paper-reading-lead">SmolVLA: A vision-language-action model for affordable and efficient robotics</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>轻量 VLA</li>

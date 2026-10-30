@@ -1,6 +1,6 @@
 ---
 description: 加载 ACT 模型进行真机推理，理解预处理与动作块执行，评估成功率并通过失败场景迭代数据。
-title: 部署 ACT 模型
+title: 如何在 reBot Arm 上部署与评估 ACT
 hide_title: true
 keywords:
   - 手把手复现
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_deployment-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 手把手复现</span>
-  <h1 id="hands-on-act_deployment-title">部署 ACT 模型</h1>
+  <h1 id="hands-on-act_deployment-title">如何在 reBot Arm 上部署与评估 ACT</h1>
   <p className="paper-reading-lead">加载 ACT 模型进行真机推理，理解预处理与动作块执行，评估成功率并通过失败场景迭代数据。</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>真机推理</li>

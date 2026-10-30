@@ -1,6 +1,6 @@
 ---
-description: 精读 GR00T N1 的双系统架构、数据金字塔、流匹配动作块、预训练与机器人适配。
-title: GR00T N1 论文精读
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 NVIDIA GR00T N1：论文精读 GR00T N1 双系统架构、数据金字塔、流匹配动作分块与机器人适配。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 NVIDIA GR00T N1
 hide_title: true
 keywords:
   - 论文精读
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-gr00t_n1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-gr00t_n1-title">GR00T N1：通用人形机器人开放基础模型</h1>
+  <h1 id="paper-reading-gr00t_n1-title">如何在 reBot Arm 与 SO-ARM101 上运行 NVIDIA GR00T N1</h1>
   <p className="paper-reading-lead">GR00T N1: An Open Foundation Model for Generalist Humanoid Robots</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>人形机器人</li>
