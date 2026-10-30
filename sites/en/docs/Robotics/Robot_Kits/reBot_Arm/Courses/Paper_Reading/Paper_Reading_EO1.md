@@ -1,6 +1,6 @@
 ---
-description: "A deep dive into EO-1's shared backbone, interleaved vision-text-action learning, embodied reasoning data, and robot-control experiments."
-title: "EO-1 — Interleaved Multimodal Pre-Training"
+description: "How to run EO-1 on reBot Arm & SO-ARM101: a paper deep-dive into EO-1 shared backbone, interleaved vision-text-action learning, embodied reasoning data and robot-control experiments."
+title: "How to Run EO-1 on reBot Arm & SO-ARM101"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-eo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-eo1-title">EO-1 — Interleaved Multimodal Pre-Training</h1>
+  <h1 id="paper-reading-eo1-title">How to Run EO-1 on reBot Arm & SO-ARM101</h1>
   <p className="paper-reading-lead">EO-1: An Open Unified Embodied Foundation Model for General Robot Control</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Unified Physical AI model</li>

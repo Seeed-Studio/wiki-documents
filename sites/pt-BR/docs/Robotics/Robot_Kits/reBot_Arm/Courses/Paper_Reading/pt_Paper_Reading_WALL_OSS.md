@@ -1,6 +1,6 @@
 ---
-description: "Um mergulho profundo no pré-treinamento semântico de ações do WALL-OSS, no flow matching de ações contínuas, no Uni-CoT e em experimentos de perguntas-e-respostas incorporadas e controle."
-title: "WALL-OSS — Raciocínio Incorporado & Controle de Robôs"
+description: "Como executar WALL-OSS no reBot Arm e no SO-ARM101: análise do pré-treinamento semântico de ações, o flow matching de ações contínuas, o Uni-CoT e os experimentos de perguntas e respostas encarnadas e controle."
+title: "Como executar WALL-OSS no reBot Arm e no SO-ARM101"
 hide_title: true
 keywords:
   - Análise Detalhada de Artigo
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-wall_oss-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISE DETALHADA DE ARTIGO</span>
-  <h1 id="paper-reading-wall_oss-title">WALL-OSS — Raciocínio Incorporado &amp; Controle de Robôs</h1>
+  <h1 id="paper-reading-wall_oss-title">Como executar WALL-OSS no reBot Arm e no SO-ARM101</h1>
   <p className="paper-reading-lead">Impulsionando VLMs em direção ao Espaço Incorporado</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Semântica de ações</li>

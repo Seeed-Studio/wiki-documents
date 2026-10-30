@@ -1,6 +1,6 @@
 ---
-description: "Un análisis en profundidad del backbone multimodal de Evo-1, la cross-attention, el experto de acciones basado en flow-matching, el entrenamiento en dos etapas y los límites experimentales."
-title: "Evo-1 — VLA ligero"
+description: "Cómo ejecutar Evo-1 en reBot Arm y SO-ARM101: análisis del backbone VLA ligero de Evo-1, la atención cruzada, el experto de acciones por flow matching y el entrenamiento en dos etapas."
+title: "Cómo ejecutar Evo-1 en reBot Arm y SO-ARM101"
 hide_title: true
 keywords:
   - Análisis detallado del paper
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-evo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS DETALLADO DEL PAPER</span>
-  <h1 id="paper-reading-evo1-title">Evo-1 — VLA ligero</h1>
+  <h1 id="paper-reading-evo1-title">Cómo ejecutar Evo-1 en reBot Arm y SO-ARM101</h1>
   <p className="paper-reading-lead">Evo-1: modelo ligero de Visión-Lenguaje-Acción con alineación semántica preservada</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>VLA ligero</li>

@@ -1,5 +1,5 @@
 ---
-description: reComputer Jetson プラットフォームで Orbbec Gemini2 を使用する方法を説明します。
+description: "reComputer Jetson で Orbbec Gemini 2 3D カメラを使う方法：ドライバーのセットアップ、SDK のインストール、ロボット知覚向けの深度と RGB ストリーミング。"
 title: Orbbec Gemini2 3D カメラ
 keywords:
   - Jetson

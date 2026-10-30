@@ -1,5 +1,6 @@
 ---
 description: Exemplo que demonstra como exibir o fluxo de vídeo do Reachy Mini e fazer o robô olhar para onde você clica no quadro.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Olhar para a imagem
 slug: /reachymini_examples_look_at
 keywords:

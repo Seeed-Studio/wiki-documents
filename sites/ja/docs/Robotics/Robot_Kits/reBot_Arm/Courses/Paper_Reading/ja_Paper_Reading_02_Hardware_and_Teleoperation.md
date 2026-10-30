@@ -1,6 +1,6 @@
 ---
 description: "ハンズオンでの再現に備えるために、コンピュータとreBot Armのハードウェアチェックリスト、LeRobot環境のインストール、カメラとCANの設定、リーダー・フォロワー型テレオペレーションの練習を行います。"
-title: "ハードウェアとソフトウェアのセットアップ"
+title: "reBot Arm のハードウェアとテレオペレーションをセットアップする方法"
 hide_title: true
 keywords:
   - reBot
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-hardware-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
-  <h1 id="paper-reading-hardware-title">ハードウェアとソフトウェアのセットアップ</h1>
+  <h1 id="paper-reading-hardware-title">reBot Arm のハードウェアとテレオペレーションをセットアップする方法</h1>
   <p className="paper-reading-lead">ハードウェアとソフトウェアを準備し、リーダー・フォロワー型テレオペレーションを構築して、データ収集、モデル学習、論文再現の準備を整えます。</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>ハードウェアチェックリスト</li>

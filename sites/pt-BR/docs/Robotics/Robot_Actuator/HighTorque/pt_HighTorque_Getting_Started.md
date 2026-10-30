@@ -1,5 +1,5 @@
 ---
-description: Introdução ao HighTorque Motors
+description: "Como começar com os atuadores robóticos HighTorque: configuração do hardware, fiação, conexão CAN e os primeiros comandos de movimento."
 title: HighTorque Software
 keywords:
   - actuator

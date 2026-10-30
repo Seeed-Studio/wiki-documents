@@ -1,5 +1,6 @@
 ---
 description: Guía de mantenimiento de rótulas esféricas para Reachy Mini que cubre la limpieza y reengrase de las rótulas de la plataforma Stewart para restaurar un funcionamiento suave y silencioso.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Mantenimiento de rótulas esféricas
 slug: /reachymini_troubleshooting_spherical_joints_maintenance
 keywords:

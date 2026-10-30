@@ -28,6 +28,24 @@ import TabItem from '@theme/TabItem';
 
 # LeRobot における SO-ARM100 と SO-ARM101 ロボットアーム入門
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ コード不要 · 環境構築不要</span>
+    <p className="sensecraft-banner__title">セットアップをスキップして — reBot Arm と LeRobot を 1 つのアプリから実行</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics は、SO-ARM101、reBot Arm 102 + B601-RS および B601-DM 向けの Seeed のノーコードプラットフォームです。アームを接続し、キャリブレーションを行い、デモを収集し、ガイド付きインターフェースから学習と推論を実行できます — Python 環境もターミナルも不要です。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 ステップのガイド付きワークフロー</li>
+      <li>✅ クラウド学習 — ローカル GPU 不要</li>
+      <li>✅ Windows / macOS クライアント</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">SenseCraft Robotics へ移動 ↗</a>
+    <a className="sensecraft-banner__link" href="/ja/sensecraft_robotics/">ソフトウェアガイド</a>
+  </div>
+</div>
+
 <div className="rebot-page">
 
 <section className="doc-hero">
@@ -142,76 +160,30 @@ Seeed Studio はキットのハードウェア品質に責任を負います。�
   <div className="section-title">
     <span>3D プリント</span>
     <h2>3D プリントガイド</h2>
-    <p>キット版アームを組み立てる前に、適切な STL ファイルとプリント設定を選択してください。</p>
+    <p>キット版アームの推奨プリント設定と STL ダウンロード。</p>
   </div>
 
 <details className="content-details">
-<summary>3D プリントパラメータを表示</summary>
+<summary>プリント設定とダウンロードを表示</summary>
 
-:::caution
-SO101 の公式アップデートに伴い、SO100 は今後サポートされず、公式に従ってソースファイルは削除されますが、ソースファイルは引き続き当社の [Makerworld](https://makerworld.com/zh/models/908660) で見つけることができます。ただし、以前に SO100 を購入したユーザー向けには、チュートリアルとインストール方法は引き続き互換性があります。SO101 のプリントは、SO100 のモーターキットの取り付けと完全に互換性があります。
-:::
+**推奨プリント設定**(一般的な FDM プリンターでテスト済み):
 
-**ステップ 1：プリンターを選ぶ**
+- 材料:PLA+
+- ノズル / 積層:0.4mm ノズル + 0.2mm 積層、または 0.6mm ノズル + 0.4mm 積層
+- 充填率:15%
+- サポート:全面(45° を超える斜面は無視)。水平方向のネジ穴にはサポートを入れない
 
-提供されている STL ファイルは、多くの FDM プリンターですぐに印刷できるようになっています。以下はテスト済みで推奨される設定ですが、他の設定でも動作する場合があります。
+**ダウンロードとプリント:**
 
-- 材料：PLA+
-- ノズル径と精度：0.4mm ノズル径で 0.2mm レイヤー高さ、または 0.6mm ノズルで 0.4mm レイヤー高さ。
-- インフィル密度：15%
+Leader と Follower の全パーツは 1 つの STL ファイルにまとめられており、サポート最小化の向きに配置済みです。そのままダウンロードしてプリントしてください:
 
-**ステップ 2：プリンターをセットアップする**
+[SO-ARM101 プリントファイル(soarm101.stl)をダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl)
 
-- プリンターがキャリブレーションされており、プリンター固有の手順に従ってベッドレベリングが正しく行われていることを確認します。
-- プリントベッドを清掃し、ほこりや油分がない状態にします。水やその他の液体でベッドを清掃した場合は、ベッドを乾かしてください。
-- プリンターが推奨している場合は、標準的なスティックのりを使用し、ベッドのプリント領域全体に薄く均一に塗布します。ダマやムラのある塗布は避けてください。
-- プリンター固有の手順に従ってフィラメントをロードします。
-- プリンター設定が上記の推奨設定と一致していることを確認します（多くのプリンターには複数の設定があるため、最も近いものを選択してください）。
-- サポートは「すべて」に設定しますが、水平方向から 45 度を超える傾斜は無視します。
-- 水平軸を持つネジ穴の中にはサポートが入らないようにします。
-
-**ステップ 3：パーツを印刷する**
-
-リーダーまたはフォロワー用のすべてのパーツは、簡単に 3D プリントできるよう、単一ファイルにまとめられており、サポートを最小限にするために z 方向が上になるよう正しく向きを揃えています。
-
-- ベッドサイズが 220mm×220mm（Ender など）のプリンターの場合、次のファイルを印刷します：
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-
-- ベッドサイズが 205mm × 250mm（Prusa/Up など）のプリンターの場合：
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
-
-**ステップ 4：ソフトグリッパーとカメラマウントブラケットインサートを印刷する（オプション）**
-
-ロボットアームに柔らかい物体、壊れやすい物体、不規則な形状の物体を把持させたい場合は、デフォルトの剛性グリッパーの代わりにソフトグリッパーを印刷できます。カメラを取り付ける必要がある場合は、カメラマウントブラケットインサートも印刷できます。プリントファイルは [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) リポジトリで入手できます。
-
-印刷材料に関する指示：
-
-- 2 本のグリッパーフィンガー：**TPU** 材料で印刷してください
-- その他のパーツ：**PLA** 材料でプリントします
+**オプション:** ソフトグリッパ(TPU フィンガー)やカメラマウントインサートをプリントする場合は [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) リポジトリを参照してください。
 
 </details>
 
 </section>
-
-<div className="sensecraft-banner">
-  <div className="sensecraft-banner__copy">
-    <span className="sensecraft-banner__badge">⚡ コード不要 · 環境構築不要</span>
-    <p className="sensecraft-banner__title">セットアップをスキップして — reBot Arm と LeRobot を 1 つのアプリから実行</p>
-    <p className="sensecraft-banner__lead">SenseCraft Robotics は、SO-ARM101、reBot Arm 102 + B601-RS および B601-DM 向けの Seeed のノーコードプラットフォームです。アームを接続し、キャリブレーションを行い、デモを収集し、ガイド付きインターフェースから学習と推論を実行できます — Python 環境もターミナルも不要です。</p>
-    <ul className="sensecraft-banner__points">
-      <li>✅ 6 ステップのガイド付きワークフロー</li>
-      <li>✅ クラウド学習 — ローカル GPU 不要</li>
-      <li>✅ Windows / macOS クライアント</li>
-      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
-    </ul>
-  </div>
-  <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">SenseCraft Robotics へ移動 ↗</a>
-    <a className="sensecraft-banner__link" href="/ja/sensecraft_robotics/">ソフトウェアガイド</a>
-  </div>
-</div>
 
 ## 初期システム環境
 
@@ -1192,7 +1164,6 @@ Orbbec 単体カメラテスト + 標準カメラテスト：
 <details className="content-details">
 
 <summary> 通常のカメラを使用する場合 </summary>
-
 
 
 :::tip

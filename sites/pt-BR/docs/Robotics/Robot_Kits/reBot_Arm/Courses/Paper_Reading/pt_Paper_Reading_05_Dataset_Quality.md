@@ -1,6 +1,6 @@
 ---
 description: "Entenda a estrutura de vídeo, Parquet e metadados do LeRobot e verifique a sincronização temporal, a qualidade das imagens e a completude das demonstrações."
-title: "Qualidade dos Dados: Estrutura, Sincronização e Validação"
+title: "Como validar a qualidade do dataset para robótica"
 hide_title: true
 keywords:
   - Implantação prática
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-dataset_quality-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLANTAÇÃO PRÁTICA</span>
-  <h1 id="hands-on-dataset_quality-title">Qualidade dos Dados: Estrutura, Sincronização &amp; Validação</h1>
+  <h1 id="hands-on-dataset_quality-title">Como validar a qualidade do dataset para robótica</h1>
   <p className="paper-reading-lead">Entenda os arquivos de vídeo, Parquet e metadados do LeRobot e, em seguida, verifique a sincronização temporal, a qualidade das imagens e a completude das demonstrações.</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Estrutura do dataset</li>

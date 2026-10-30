@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini 用のダンス、感情、またはカスタムデータセットを含むデータセットから記録された動きを再生する方法を示す例です。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 記録された動き
 slug: /reachymini_examples_recorded_moves
 keywords:

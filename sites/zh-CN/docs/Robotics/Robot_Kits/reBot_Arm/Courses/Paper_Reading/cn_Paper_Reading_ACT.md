@@ -1,6 +1,6 @@
 ---
-description: 精读 ACT 的模仿学习基础、ALOHA 双臂遥操作系统、动作分块、时间集成与 CVAE 网络。
-title: ACT 论文精读
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 ACT：论文精读 ACT 模仿学习、ALOHA 双臂遥操作系统、动作分块、时间集成与 CVAE 网络。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 ACT
 hide_title: true
 keywords:
   - 论文精读
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-act-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-act-title">ACT：低成本双臂精细操作</h1>
+  <h1 id="paper-reading-act-title">如何在 reBot Arm 与 SO-ARM101 上运行 ACT</h1>
   <p className="paper-reading-lead">Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>模仿学习</li>

@@ -1,6 +1,6 @@
 ---
-description: 精读 WALL-OSS 的动作语义预训练、连续动作流匹配、Uni-CoT 与具身问答及控制实验。
-title: WALL-OSS 论文精读
+description: "如何在 reBot Arm 与 SO-ARM101 上运行 WALL-OSS：论文精读动作语义预训练、连续动作流匹配、Uni-CoT 与具身问答和控制实验。"
+title: 如何在 reBot Arm 与 SO-ARM101 上运行 WALL-OSS
 hide_title: true
 keywords:
   - 论文精读
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-wall_oss-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-wall_oss-title">WALL-OSS：将视觉语言模型连接到具身动作</h1>
+  <h1 id="paper-reading-wall_oss-title">如何在 reBot Arm 与 SO-ARM101 上运行 WALL-OSS</h1>
   <p className="paper-reading-lead">Igniting VLMs toward the Embodied Space</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>动作语义</li>

@@ -1,6 +1,6 @@
 ---
 description: "エピソード、開始および終了条件、デモンストレーションの一貫性を中心に、最初の模倣学習タスクを設計し、その後、5 点サンプリングとピック・アンド・プレースのデモンストレーションを完了します。"
-title: "タスク設計とデモンストレーション計画"
+title: "模倣学習のタスクとデモを設計する方法"
 hide_title: true
 keywords:
   - ハンズオンデプロイ
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-task_design-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
-  <h1 id="hands-on-task_design-title">タスク設計とデモンストレーション計画</h1>
+  <h1 id="hands-on-task_design-title">模倣学習のタスクとデモを設計する方法</h1>
   <p className="paper-reading-lead">エピソード、開始および終了条件、一貫したデモンストレーションを定義し、その後、5 点サンプリングを用いて完全なピック・アンド・プレースタスクを収集します。</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>エピソード</li>

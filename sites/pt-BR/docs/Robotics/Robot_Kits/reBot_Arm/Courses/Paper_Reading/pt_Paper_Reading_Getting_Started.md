@@ -1,6 +1,6 @@
 ---
-description: "Explore pesquisas de ponta em Physical AI, destrinche modelos e algoritmos-chave com braços robóticos da Seeed"
-title: "Análise detalhada de artigos sobre Physical AI e implantação prática"
+description: "Como executar papers de Physical AI no reBot Arm e no SO-ARM101: a série de leitura de papers da Seeed destrincha Pi0, Pi0.5, GR00T, ACT, SmolVLA e outros, e guia você na reprodução prática com LeRobot."
+title: "Como executar papers de Physical AI no reBot Arm e no SO-ARM101"
 hide_title: true
 keywords:
   - reBot
@@ -46,7 +46,7 @@ import '/src/css/paper-reading-style.css';
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">Análise detalhada de artigos sobre Physical AI e implantação prática</h1>
+    <h1 id="paper-reading-title">Como executar papers de Physical AI no reBot Arm e no SO-ARM101</h1>
     <p className="paper-reading-lead">Explore pesquisas de ponta em Physical AI, destrinche modelos e algoritmos-chave com braços robóticos da Seeed</p>
     <p>Um <strong>curso que será sempre gratuito</strong>, cuidadosamente desenvolvido pela equipe de AI Robotics da SeeedStudio, combinado com o <strong>braço robótico reBot 100% open source, disponível para uso comercial e reprodução</strong>. Conclua o curso e torne-se o próximo especialista em robótica!</p>
     <ul className="paper-reading-badges" aria-label="Recursos do curso">
@@ -55,6 +55,24 @@ import '/src/css/paper-reading-style.css';
       <li>Mão na massa · Reproduzível</li>
     </ul>
   </section>
+
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ No-code · Sem configuração de ambiente</span>
+    <p className="sensecraft-banner__title">Pule a configuração — execute o reBot Arm e o LeRobot a partir de um único aplicativo</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics é a plataforma no-code da Seeed para o SO-ARM101, reBot Arm 102 + B601-RS e B601-DM. Conecte os braços, calibre, colete demonstrações, treine e execute inferência a partir de uma interface guiada — sem ambiente Python, sem terminal.</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ Fluxo de trabalho guiado em 6 etapas</li>
+      <li>✅ Treinamento em nuvem — sem GPU local</li>
+      <li>✅ Cliente para Windows / macOS</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir para SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/pt-br/sensecraft_robotics/">Guia de software</a>
+  </div>
+</div>
 
   <div className="paper-reading-directory">
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-hands-on-title">

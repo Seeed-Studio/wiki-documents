@@ -1,6 +1,6 @@
 ---
-description: "π0 のビジョン・言語バックボーン、アクションエキスパート、条件付きフローマッチング、クロスエンボディメント事前学習、およびタスク事後学習を詳細に解説します。"
-title: "π₀ — 汎用ロボット制御"
+description: "reBot Arm と SO-ARM101 で Pi0 を動かす方法：pi0 のビジョン-言語バックボーン、アクションエキスパート、条件付きフローマッチング、クロスエンボディメント事前学習を論文精読します。"
+title: "reBot Arm と SO-ARM101 で Pi0 を動かす方法"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-pi0-title">π₀ — 汎用ロボット制御</h1>
+  <h1 id="paper-reading-pi0-title">reBot Arm と SO-ARM101 で Pi0 を動かす方法</h1>
   <p className="paper-reading-lead">π0: 汎用ロボット制御のためのビジョン・言語・アクションフローモデル</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>ロボット基盤モデル</li>

@@ -1,5 +1,6 @@
 ---
 description: Folha de dados de hardware do Reachy Mini Lite incluindo dimensões, graus de liberdade, especificações dos motores, câmera, matriz de microfones e componentes eletrônicos.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Folha de Dados de Hardware do Reachy Mini Lite
 slug: /reachymini_platforms_reachy_mini_lite_hardware
 keywords:

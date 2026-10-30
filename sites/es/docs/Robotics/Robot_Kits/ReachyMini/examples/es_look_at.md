@@ -1,5 +1,6 @@
 ---
 description: Ejemplo que muestra cómo visualizar la transmisión de video desde Reachy Mini y hacer que el robot mire donde haces clic en el fotograma.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Mirar la imagen
 slug: /reachymini_examples_look_at
 keywords:

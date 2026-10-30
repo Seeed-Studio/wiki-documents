@@ -1,5 +1,6 @@
 ---
 description: Motion API reference for Reachy Mini covering move base classes, goto moves, and recorded moves.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Motion API
 slug: /reachymini_api_motion
 keywords:

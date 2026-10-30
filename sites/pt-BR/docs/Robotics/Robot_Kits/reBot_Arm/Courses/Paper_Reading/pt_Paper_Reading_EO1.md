@@ -1,6 +1,6 @@
 ---
-description: "Um mergulho profundo no backbone compartilhado do EO-1, no aprendizado intercalado visão-texto-ação, nos dados de raciocínio incorporado e nos experimentos de controle de robôs."
-title: "EO-1 — Pré-treinamento Multimodal Intercalado"
+description: "Como executar EO-1 no reBot Arm e no SO-ARM101: análise do backbone compartilhado do EO-1, o aprendizado intercalado visão-texto-ação, os dados de raciocínio encarnado e os experimentos de controle robótico."
+title: "Como executar EO-1 no reBot Arm e no SO-ARM101"
 hide_title: true
 keywords:
   - Análise Detalhada de Artigo
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-eo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISE DETALHADA DE ARTIGO</span>
-  <h1 id="paper-reading-eo1-title">EO-1 — Pré-treinamento Multimodal Intercalado</h1>
+  <h1 id="paper-reading-eo1-title">Como executar EO-1 no reBot Arm e no SO-ARM101</h1>
   <p className="paper-reading-lead">EO-1: Um Modelo Fundamental Incorporado Aberto e Unificado para Controle Geral de Robôs</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Modelo unificado de IA física</li>

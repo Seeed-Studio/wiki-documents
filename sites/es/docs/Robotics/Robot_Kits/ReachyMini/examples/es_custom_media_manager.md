@@ -1,5 +1,6 @@
 ---
 description: Ejemplo que demuestra cómo desactivar el gestor de medios integrado y acceder directamente a la cámara y al micrófono usando OpenCV y sounddevice para canalizaciones personalizadas.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Gestor de Medios Personalizado
 slug: /reachymini_examples_custom_media_manager
 keywords:

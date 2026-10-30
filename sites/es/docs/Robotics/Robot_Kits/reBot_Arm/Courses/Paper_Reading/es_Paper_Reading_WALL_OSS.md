@@ -1,6 +1,6 @@
 ---
-description: "Un análisis en profundidad del pre-entrenamiento semántico de acciones de WALL-OSS, el flow matching de acciones continuas, Uni-CoT y los experimentos de preguntas-respuestas y control encarnados."
-title: "WALL-OSS — Razonamiento Encarnado y Control de Robots"
+description: "Cómo ejecutar WALL-OSS en reBot Arm y SO-ARM101: análisis del pre-entrenamiento semántico de acciones, el flow matching de acciones continuas, Uni-CoT y los experimentos de control y respuesta encarnada."
+title: "Cómo ejecutar WALL-OSS en reBot Arm y SO-ARM101"
 hide_title: true
 keywords:
   - Análisis en profundidad de artículos
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-wall_oss-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DE ARTÍCULOS</span>
-  <h1 id="paper-reading-wall_oss-title">WALL-OSS — Razonamiento Encarnado y Control de Robots</h1>
+  <h1 id="paper-reading-wall_oss-title">Cómo ejecutar WALL-OSS en reBot Arm y SO-ARM101</h1>
   <p className="paper-reading-lead">Impulsando los VLM hacia el espacio encarnado</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Semántica de acciones</li>

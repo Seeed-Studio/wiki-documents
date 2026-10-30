@@ -1,6 +1,6 @@
 ---
 description: "Carregue um modelo ACT para inferência em robô real, entenda o pré-processamento e a execução de blocos de ações, avalie taxas de sucesso e melhore os dados usando casos de falha."
-title: "Implantação no Robô e Avaliação de Desempenho"
+title: "Como implantar e avaliar ACT no reBot Arm"
 hide_title: true
 keywords:
   - Implantação prática
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_deployment-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · IMPLANTAÇÃO PRÁTICA</span>
-  <h1 id="hands-on-act_deployment-title">Implantação no Robô e Avaliação de Desempenho</h1>
+  <h1 id="hands-on-act_deployment-title">Como implantar e avaliar ACT no reBot Arm</h1>
   <p className="paper-reading-lead">Execute ACT em um robô real, entenda o pré-processamento e a execução de blocos de ações, meça o sucesso e melhore os dados analisando as falhas.</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Inferência no robô</li>

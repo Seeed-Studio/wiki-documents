@@ -1,5 +1,6 @@
 ---
 description: Complete API reference for Reachy Mini apps including core app classes, app management, app information, app assistant, and app sources.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Apps API Reference
 slug: /reachymini_api_apps
 keywords:

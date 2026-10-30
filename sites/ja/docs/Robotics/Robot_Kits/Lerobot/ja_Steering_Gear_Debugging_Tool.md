@@ -1,5 +1,5 @@
 ---
-description: Lerobot における SO-ARM 用ステアリングギアデバッグツール。
+description: "Seeed_RoboController ツールで SO-ARM サーボをデバッグする方法：サーボの検出、ID の修正、中立値の書き込み、Windows・Ubuntu・Mac でのステータス読み取り。"
 title: SO-Arm デバッグツール
 keywords:
   - Lerobot

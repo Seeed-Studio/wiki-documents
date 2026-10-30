@@ -1,6 +1,6 @@
 ---
 description: "Entrena y despliega nuevas políticas en una plataforma reBot o SO101 que ya esté ejecutando ACT, cambia los comandos de plataforma usando pestañas y aprende los flujos de configuración y evaluación para las políticas Diffusion, SmolVLA y π."
-title: "Cambio de Políticas y Ejecución de Tareas"
+title: "Cómo cambiar de política en reBot Arm"
 hide_title: true
 keywords:
   - Despliegue práctico
@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-algorithm-switching-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · DESPLIEGUE PRÁCTICO</span>
-  <h1 id="hands-on-algorithm-switching-title">Cambio de Políticas &amp; Ejecución de Tareas</h1>
+  <h1 id="hands-on-algorithm-switching-title">Cómo cambiar de política en reBot Arm</h1>
   <p className="paper-reading-lead">Reutiliza una plataforma ACT funcional y su conjunto de datos para entrenar y desplegar una nueva política, y luego compara el rendimiento en el robot. Se proporcionan comandos para reBot-RS, reBot-DM y SO-ARM 101.</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>Diffusion</li>

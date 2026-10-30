@@ -1,6 +1,6 @@
 ---
-description: "Un análisis en profundidad de la arquitectura ligera de SmolVLA, el preentrenamiento con datos de la comunidad, la inferencia asíncrona, los resultados experimentales y el análisis de ablación."
-title: "SmolVLA — Modelos de Visión-Lenguaje-Acción Asequibles"
+description: "Cómo ejecutar SmolVLA en reBot Arm y SO-ARM101: análisis de la arquitectura ligera de SmolVLA, el pre-entrenamiento con datos comunitarios, la inferencia asincrónica y las abalizaciones."
+title: "Cómo ejecutar SmolVLA en reBot Arm y SO-ARM101"
 hide_title: true
 keywords:
   - Análisis en profundidad de artículos
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-smolvla-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DE ARTÍCULOS</span>
-  <h1 id="paper-reading-smolvla-title">SmolVLA — Modelos de Visión-Lenguaje-Acción Asequibles</h1>
+  <h1 id="paper-reading-smolvla-title">Cómo ejecutar SmolVLA en reBot Arm y SO-ARM101</h1>
   <p className="paper-reading-lead">SmolVLA: un modelo de visión-lenguaje-acción para robótica asequible y eficiente</p>
   <ul className="paper-reading-badges" aria-label="En esta guía">
     <li>VLA ligero</li>

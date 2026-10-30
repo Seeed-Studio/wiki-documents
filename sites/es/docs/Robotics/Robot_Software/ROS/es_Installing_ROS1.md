@@ -1,5 +1,5 @@
 ---
-description: Esta wiki proporciona la instalación de ROS1 en reComputer.
+description: "Cómo instalar ROS1 en reComputer Jetson: configuración de los repositorios, pasos de instalación y configuración del entorno para desarrollo de robots."
 title: Instalar ROS1
 keywords:
   - ROS1

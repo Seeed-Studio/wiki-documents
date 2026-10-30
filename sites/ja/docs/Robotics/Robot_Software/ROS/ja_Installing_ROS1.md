@@ -1,5 +1,5 @@
 ---
-description: このwikiはreComputerにROS1をインストールする方法を提供します。
+description: "reComputer Jetson に ROS1 をインストールする方法：リポジトリの設定、インストール手順、ロボット開発向けの環境構成。"
 title: ROS1のインストール
 keywords:
   - ROS1

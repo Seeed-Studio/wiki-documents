@@ -1,6 +1,6 @@
 ---
 description: "Understand LeRobot's video, Parquet, and meta structure, and check time synchronization, image quality, and demonstration completeness."
-title: "Data Quality: Structure, Synchronization & Validation"
+title: "How to Validate Dataset Quality for Robot Learning"
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-dataset_quality-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
-  <h1 id="hands-on-dataset_quality-title">Data Quality: Structure, Synchronization &amp; Validation</h1>
+  <h1 id="hands-on-dataset_quality-title">How to Validate Dataset Quality for Robot Learning</h1>
   <p className="paper-reading-lead">Understand LeRobot video, Parquet, and metadata files, then check time synchronization, image quality, and complete demonstrations.</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Dataset structure</li>

@@ -1,5 +1,6 @@
 ---
 description: Exemplo que demonstra como reproduzir movimentos gravados a partir de conjuntos de dados, incluindo danças, emoções ou conjuntos de dados personalizados para o Reachy Mini.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Movimentos Gravados
 slug: /reachymini_examples_recorded_moves
 keywords:

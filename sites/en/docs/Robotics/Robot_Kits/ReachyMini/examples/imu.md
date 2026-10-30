@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating how to access IMU sensor data including accelerometer, gyroscope, quaternion orientation, and temperature from wireless Reachy Mini.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: IMU Example
 slug: /reachymini_examples_imu
 keywords:

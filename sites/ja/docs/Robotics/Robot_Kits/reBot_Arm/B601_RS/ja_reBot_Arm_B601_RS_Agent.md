@@ -1,5 +1,6 @@
 ---
 description: wrc_demo 操作ガイド：reBot Arm B601-RS のビジュアル把持デモのための完全な手順 — 環境構築、モデルのダウンロード、LLM の切り替え、ハンドアイキャリブレーション、デモの実行、トラブルシューティング。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 title: B601-RS と Agent Claw
 keywords:
   - wrc_demo

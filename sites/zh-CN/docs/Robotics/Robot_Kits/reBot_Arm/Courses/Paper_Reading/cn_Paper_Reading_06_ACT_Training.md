@@ -1,6 +1,6 @@
 ---
 description: 设置 ACT 训练参数，启动训练，查看 Loss 和 GPU 状态，恢复中断训练并管理 Checkpoint。
-title: 训练 ACT 模型
+title: 如何在 reBot Arm 上训练 ACT
 hide_title: true
 keywords:
   - 手把手复现
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_training-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 手把手复现</span>
-  <h1 id="hands-on-act_training-title">训练 ACT 模型</h1>
+  <h1 id="hands-on-act_training-title">如何在 reBot Arm 上训练 ACT</h1>
   <p className="paper-reading-lead">设置 ACT 训练参数，启动训练，查看 Loss 和 GPU 状态，恢复中断训练并管理 Checkpoint。</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>训练配置</li>

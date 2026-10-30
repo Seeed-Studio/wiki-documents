@@ -1,5 +1,6 @@
 ---
 description: Exemplo que demonstra como controlar o ângulo de guinada da cabeça do Reachy Mini usando um joystick (controle de PS4 ou Xbox) para um controle intuitivo em tempo real.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Controlador de Joystick
 slug: /reachymini_examples_joy_controller
 keywords:

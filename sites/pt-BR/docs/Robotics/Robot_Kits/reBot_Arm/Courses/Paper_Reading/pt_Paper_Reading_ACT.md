@@ -1,6 +1,6 @@
 ---
-description: "Um mergulho profundo nos fundamentos de aprendizado por imitação do ACT, no sistema de teleoperação bimanual ALOHA, em segmentação de ações, combinação temporal e na rede CVAE."
-title: "ACT — Manipulação Bimanual de Baixo Custo"
+description: "Como executar ACT no reBot Arm e no SO-ARM101: análise profunda do aprendizado por imitação do ACT, o sistema de teleoperação bimanual ALOHA, o chunking de ações, o ensemble temporal e a rede CVAE."
+title: "Como executar ACT no reBot Arm e no SO-ARM101"
 hide_title: true
 keywords:
   - Análise Detalhada de Artigo
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-act-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISE DETALHADA DE ARTIGO</span>
-  <h1 id="paper-reading-act-title">ACT — Manipulação Bimanual de Baixo Custo</h1>
+  <h1 id="paper-reading-act-title">Como executar ACT no reBot Arm e no SO-ARM101</h1>
   <p className="paper-reading-lead">Aprendizado de Manipulação Bimanual em Detalhe com Hardware de Baixo Custo</p>
   <ul className="paper-reading-badges" aria-label="Neste guia">
     <li>Aprendizado por imitação</li>

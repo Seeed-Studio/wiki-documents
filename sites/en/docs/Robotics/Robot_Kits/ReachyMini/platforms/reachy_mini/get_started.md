@@ -1,5 +1,6 @@
 ---
 description: Setup guide for Reachy Mini Wireless including assembly instructions, first boot, Wi-Fi configuration, system update, and SSH access.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini Wireless Setup Guide
 slug: /reachymini_platforms_reachy_mini_get_started
 keywords:

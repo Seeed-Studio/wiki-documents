@@ -1,5 +1,5 @@
 ---
-description: このwikiは、ROS2 humbleをインストールするためのステップバイステップガイドを提供します。
+description: "Ubuntu と Jetson に ROS 2 Humble をインストールする手順：リポジトリの設定、インストール、ワークスペースの作成、最初のノード。"
 title: ROS2 Humbleのインストール
 keywords:
   - NVIDIA

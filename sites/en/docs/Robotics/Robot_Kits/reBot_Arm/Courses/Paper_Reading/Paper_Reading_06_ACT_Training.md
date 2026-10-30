@@ -1,6 +1,6 @@
 ---
 description: "Set ACT training parameters, start training, monitor loss and GPU status, resume interrupted training, and manage checkpoints."
-title: "ACT Model Training"
+title: "How to Train ACT on reBot Arm"
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_training-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
-  <h1 id="hands-on-act_training-title">ACT Model Training</h1>
+  <h1 id="hands-on-act_training-title">How to Train ACT on reBot Arm</h1>
   <p className="paper-reading-lead">Configure ACT training, launch a run, monitor loss and GPU usage, resume interrupted training, and manage checkpoints.</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Training configuration</li>

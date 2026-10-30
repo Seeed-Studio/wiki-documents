@@ -1,5 +1,6 @@
 ---
 description: Comprehensive development guide for AI agents to assist users in building Reachy Mini applications, covering SDK essentials, REST API, platform compatibility, and best practices.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini Development Guide for AI Agents
 slug: /reachymini_agents
 keywords:

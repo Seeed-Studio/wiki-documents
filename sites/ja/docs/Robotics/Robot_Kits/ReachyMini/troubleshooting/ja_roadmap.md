@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini のロードマップ。最近のアップデート、今後の機能、モバイルアプリや Vibe コーディングスペースを含む将来の開発重点領域を示します。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini ロードマップ
 slug: /reachymini_troubleshooting_roadmap
 keywords:

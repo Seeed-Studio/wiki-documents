@@ -1,6 +1,6 @@
 ---
 description: "Load an ACT model for real-robot inference, understand preprocessing and action-chunk execution, evaluate success rates, and improve data using failure cases."
-title: "On-Robot Deployment & Performance Evaluation"
+title: "How to Deploy and Evaluate ACT on reBot Arm"
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_deployment-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
-  <h1 id="hands-on-act_deployment-title">On-Robot Deployment &amp; Performance Evaluation</h1>
+  <h1 id="hands-on-act_deployment-title">How to Deploy and Evaluate ACT on reBot Arm</h1>
   <p className="paper-reading-lead">Run ACT on a real robot, understand preprocessing and action-chunk execution, measure success, and improve data by analyzing failures.</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>On-robot inference</li>

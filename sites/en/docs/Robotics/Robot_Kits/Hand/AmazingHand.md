@@ -1,5 +1,6 @@
 ---
 description: Build and control the AmazingHand, a low-cost, open-source, 8-DOF, 3D-printable robotic hand.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: AmazingHand Quick Start
 keywords:
   - Lerobot

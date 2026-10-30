@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece um tutorial para motores da série Stackforce.
+description: "Guia completo dos atuadores robóticos StackForce: visão geral da série, fiação, comunicação CAN e exemplos de controle para robôs com rodas e com pernas."
 title: Stackforce
 keywords:
   - actuator

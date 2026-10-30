@@ -1,6 +1,6 @@
 ---
 description: "1 台または 2 台のカメラを設定し、デバイスを検出して、LeRobot データセットを記録し、データの可視化、再生、追加、削除を行います。"
-title: "マルチビュー・データ収集"
+title: "reBot Arm でマルチビューのデモを録画する方法"
 hide_title: true
 keywords:
   - ハンズオンデプロイ
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-camera_recording-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
-  <h1 id="hands-on-camera_recording-title">マルチビュー・データ収集</h1>
+  <h1 id="hands-on-camera_recording-title">reBot Arm でマルチビューのデモを録画する方法</h1>
   <p className="paper-reading-lead">1 台または 2 台のカメラを設定し、デバイスを識別して、LeRobot デモンストレーションを記録し、データセットを可視化・再生し、エピソードを追加または削除します。</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>カメラのセットアップ</li>

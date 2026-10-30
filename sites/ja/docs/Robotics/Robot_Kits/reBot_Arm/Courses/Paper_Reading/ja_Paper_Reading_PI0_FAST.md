@@ -1,6 +1,6 @@
 ---
-description: "FAST の DCT、係数量子化、BPE 圧縮、汎用アクショントークナイザ、自回帰アクションポリシーを深掘りします。"
-title: "π₀-FAST — 効率的なアクショントークナイゼーション"
+description: "reBot Arm と SO-ARM101 で Pi0-FAST を動かす方法：FAST のアクショントークナイゼーション——DCT、係数量子化、BPE 圧縮、自己回帰型アクションポリシーを論文精読します。"
+title: "reBot Arm と SO-ARM101 で Pi0-FAST を動かす方法"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0_fast-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-pi0_fast-title">π₀-FAST — Efficient Action Tokenization</h1>
+  <h1 id="paper-reading-pi0_fast-title">reBot Arm と SO-ARM101 で Pi0-FAST を動かす方法</h1>
   <p className="paper-reading-lead">FAST: Vision-Language-Action モデルのための効率的なアクショントークナイゼーション</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>アクショントークナイゼーション</li>

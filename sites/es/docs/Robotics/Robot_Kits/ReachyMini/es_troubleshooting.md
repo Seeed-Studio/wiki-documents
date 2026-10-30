@@ -1,5 +1,6 @@
 ﻿---
 description: Guía completa de resolución de problemas y FAQ para Reachy Mini que cubre problemas frecuentes, montaje, conexión, hardware, SDK y mensajes de error.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Resolución de problemas y FAQ
 slug: /reachymini_troubleshooting
 keywords:

@@ -1,5 +1,5 @@
 ---
-description: 双臂 SO-ARM 训练完整指南。
+description: "如何用 LeRobot 训练双臂 SO-ARM 策略：校准四条机械臂、遥操作、录制数据集、训练 ACT，并部署到真实机器人。"
 title: SO-Arm 双臂玩法
 keywords:
   - Lerobot

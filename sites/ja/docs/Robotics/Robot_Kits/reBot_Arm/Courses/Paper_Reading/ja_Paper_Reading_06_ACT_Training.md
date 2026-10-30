@@ -1,6 +1,6 @@
 ---
 description: "ACT の学習パラメータを設定し、学習を開始して、loss と GPU ステータスをモニタリングし、中断した学習を再開し、チェックポイントを管理します。"
-title: "ACT モデルの学習"
+title: "reBot Arm で ACT を訓練する方法"
 hide_title: true
 keywords:
   - ハンズオンデプロイ
@@ -38,7 +38,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-act_training-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · ハンズオンデプロイ</span>
-  <h1 id="hands-on-act_training-title">ACT モデルの学習</h1>
+  <h1 id="hands-on-act_training-title">reBot Arm で ACT を訓練する方法</h1>
   <p className="paper-reading-lead">ACT の学習を設定し、ジョブを起動して、loss と GPU 使用率をモニタリングし、中断した学習を再開し、チェックポイントを管理します。</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
     <li>学習設定</li>

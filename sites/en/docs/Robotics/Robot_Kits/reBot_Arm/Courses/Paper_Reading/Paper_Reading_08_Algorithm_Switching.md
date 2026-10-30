@@ -1,6 +1,6 @@
 ---
 description: "Train and deploy new policies on a reBot or SO101 platform already running ACT, switch platform commands using tabs, and learn the configuration and evaluation workflows for Diffusion, SmolVLA, and π policies."
-title: "Policy Switching & Task Execution"
+title: "How to Switch Policies on reBot Arm"
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
 
 <section className="paper-reading-intro" aria-labelledby="hands-on-algorithm-switching-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · HANDS-ON DEPLOYMENT</span>
-  <h1 id="hands-on-algorithm-switching-title">Policy Switching &amp; Task Execution</h1>
+  <h1 id="hands-on-algorithm-switching-title">How to Switch Policies on reBot Arm</h1>
   <p className="paper-reading-lead">Reuse a working ACT platform and its dataset to train and deploy a new policy, then compare performance on the robot. Commands are provided for reBot-RS, reBot-DM, and SO-ARM 101.</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Diffusion</li>
