@@ -1,11 +1,12 @@
 ---
 description: Cuenta entradas y salidas en aparcamientos con tus cámaras de barrera existentes y publica en tiempo real las plazas libres — hardware, despliegue, interfaces y datos medidos en hosts Jetson y RK
 title: Conteo de vehículos en entradas/salidas de aparcamientos — Selección, despliegue y datos medidos
+sidebar_label: 'Parking Vehicle Counting'
 keywords:
   - conteo de vehículos en aparcamientos
   - conteo de entradas y salidas
   - plazas de aparcamiento libres
-  - señal de guiado de aparcamiento
+  - panel de guiado de aparcamiento
   - contador de cruce de línea
   - Jetson Orin Nano
   - RK3588
@@ -19,18 +20,18 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/es/solutions/edge-parking-counting/
 generated_from: sensecraft-solutions@76f6c0f
 ---
 
 :::caution[Antes de usarla]
-Un conjunto utiliza una cámara y cubre una entrada. El conteo se basa en los vehículos que cruzan una línea dibujada en la imagen; los vehículos que quedan ocultos o que no cruzan la línea no se cuentan.
+Un conjunto usa una cámara y cubre una entrada. El conteo se basa en los vehículos que cruzan una línea dibujada en la imagen; los vehículos que quedan ocultos o no cruzan la línea no se cuentan.
 :::
 
 ## Qué hace esta solución
 
-Conoce cuántas plazas quedan sin enterrar lazos en cada carril ni instalar contadores en la barrera. Tras el despliegue, dibujas una línea de conteo sobre la imagen en un navegador; cada vehículo que la cruza cuenta como entrada o salida, y los vehículos dentro y las plazas libres se publican en tiempo real en tu broker MQTT, listos para accionar un panel de plazas libres o un sistema de aparcamiento. Se adapta a aparcamientos de centros comerciales y oficinas, así como a accesos de campus y fábricas.
+Conoce cuántas plazas quedan sin enterrar lazos en cada carril ni instalar contadores en la barrera. Tras el despliegue dibujas una línea de conteo sobre la imagen en un navegador; cada vehículo que la cruza cuenta como entrada o salida, y los vehículos dentro y las plazas libres se publican en tiempo real en tu broker MQTT, listos para accionar un panel de plazas libres o un sistema de aparcamiento. Se adapta a aparcamientos de centros comerciales y oficinas, así como a accesos de campus y fábricas.
 
 - Paquete de despliegue (Docker Compose y configuración): [github.com/suharvest/sensecraft-solutions](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_parking_counting)
 - Selección y despliegue: [página de diseño de referencia](https://www.seeed.cc/solutions/reference-designs/parking-entry-exit-counting)
@@ -52,7 +53,7 @@ Conoce cuántas plazas quedan sin enterrar lazos en cada carril ni instalar cont
             </div>
             <div class="info-content">
                 <h3>Cuenta en el cruce</h3>
-                <p>En un reComputer J30 Serie, los 41 cruces se contaron en la dirección correcta; consulta "Rendimiento y datos medidos".</p>
+                <p>En un reComputer J30 Serie se contaron los 41 cruces en la dirección correcta; consulta "Rendimiento y datos medidos".</p>
             </div>
         </li>
         <li class="info-item">
@@ -61,7 +62,7 @@ Conoce cuántas plazas quedan sin enterrar lazos en cada carril ni instalar cont
             </div>
             <div class="info-content">
                 <h3>Usa las cámaras que ya tienes</h3>
-                <p>Las cámaras de red RTSP existentes en la barrera se conectan directamente; sin lazos, sin cambios en la barrera.</p>
+                <p>Las cámaras de red RTSP existentes en la barrera se conectan directamente; sin lazos ni cambios en la barrera.</p>
             </div>
         </li>
         <li class="info-item">
@@ -85,10 +86,10 @@ La propia página de vista previa en el navegador del host de conteo: la línea 
 </div>
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_parking_counting/panel-counting-2-after-20261009-fd76361b.jpg" alt="El mismo vehículo después de cruzar: las salidas de hoy pasan a 24, 0/120 dentro"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_parking_counting/panel-counting-2-after-20261009-fd76361b.jpg" alt="El mismo vehículo tras cruzar: las salidas de hoy pasan a 24, 0/120 dentro"/>
 </div>
 
-Las dos capturas de pantalla están separadas por 3 s. La entrada es un clip de prueba sintético (una imagen de vehículo moviéndose adelante y atrás sobre un fondo gris), no imágenes reales del sitio.
+Las dos capturas están separadas 3 s. La entrada es un clip de prueba sintético (una imagen de vehículo moviéndose adelante y atrás sobre un fondo gris), no imágenes reales del sitio.
 
 ## Hardware necesario
 
@@ -100,8 +101,8 @@ Tres elementos en el sitio: la cámara de la barrera, un host de conteo y un bro
 
 | | Host de conteo | Velocidad medida | Elígelo cuando |
 |---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 Serie (J3011)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin Nano, JetPack 6.2 | 30 fps | Los vehículos pasan a velocidad normal |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 Serie (J4012)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX, JetPack 6.2 | Mismo paquete que J30 | El host también ejecuta otros modelos |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin Nano, JetPack 6.2 | 30 fps | Los vehículos pasan a velocidad normal |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Jetson Orin NX, JetPack 6.2 | Mismo paquete que J30 | El host también ejecuta otros modelos |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 Serie](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>NPU integrada | 30 fps | Tráfico a velocidad normal, la prioridad es el coste |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 Serie](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>NPU integrada | alrededor de 3 fps | Barreras donde los vehículos reducen la velocidad o se detienen |
 
@@ -114,12 +115,12 @@ El host de conteo, la cámara y el broker MQTT comparten una LAN o pueden alcanz
 ### 1. Montar la cámara
 
 :::tip[Los vehículos deben cruzar completamente la línea]
-Fija la cámara sobre el carril de forma que los vehículos entren por un lado de la imagen y salgan por el otro. En un host RK3588 un vehículo tiene que permanecer a la vista alrededor de la línea durante aproximadamente 1 s o más para contarse de forma fiable, lo que se adapta a accesos con barrera.
+Fija la cámara sobre el carril de forma que los vehículos entren por un lado de la imagen y salgan por el otro. En un host RK3588 un vehículo tiene que permanecer a la vista alrededor de la línea durante unos 1 s o más para contarse de forma fiable, lo que encaja con accesos con barrera.
 :::
 
 ### 2. Instalar el software: tres pasos
 
-Los pasos por dispositivo están en la página de diseño de referencia; esto es el resumen.
+Los pasos por dispositivo están en la página de diseño de referencia; esto es el esquema general.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/parking-entry-exit-counting" target="_blank">
@@ -127,22 +128,22 @@ Los pasos por dispositivo están en la página de diseño de referencia; esto es
     </a>
 </div><br />
 
-1. **Despliega el host de conteo**: introduce la dirección RTSP de la cámara, el broker MQTT y el número total de plazas; el despliegue comprueba las bibliotecas de tiempo de ejecución de la placa.
+1. **Despliega el host de conteo**: introduce la dirección RTSP de la cámara, el broker MQTT y el número total de plazas; el despliegue comprueba las bibliotecas de ejecución de la placa.
 2. **Dibuja la línea de conteo**: arrastra la línea en la página de vista previa, elige qué lado significa "entrada" y guarda.
-3. **Comprueba**: después de que un vehículo cruce, el conteo de entradas o salidas en la página de vista previa sube en uno y llega un registro de cruce por MQTT.
+3. **Comprueba**: tras cruzar un vehículo, el conteo de entradas o salidas en la página de vista previa sube en uno y llega un registro de cruce por MQTT.
 
 ## Interfaces
 
-Los conteos se envían por MQTT a tu broker; el estado usa HTTP.
+Los conteos van por MQTT a tu broker; el estado usa HTTP.
 
-- **Señal de plazas libres / sistema de aparcamiento**: suscríbete al tema de estado del aparcamiento y lee las plazas libres; cambia a "Full" cuando sea cero.
+- **Panel de plazas libres / sistema de aparcamiento**: suscríbete al tema de estado del aparcamiento y lee las plazas libres; cambia a "Full" cuando llegue a cero.
 - **Estadísticas de tráfico**: suscríbete al tema de cruces y cuenta por dirección y tipo de vehículo.
 - **Varias entradas**: despliega un conjunto por entrada y súmalos por ID de sitio aguas arriba.
 
 | Tema / puerto | Contenido |
 |---|---|
-| MQTT `<site>/parking/<entrance>/crossing` | Uno por cruce: dirección (entrada / salida), tipo de vehículo, confianza, vehículos dentro y plazas libres después del cruce |
-| MQTT `<site>/parking/<entrance>/occupancy` | Vehículos dentro, plazas totales, plazas libres, entradas y salidas de hoy; se envía después de cada cruce |
+| MQTT `<site>/parking/<entrance>/crossing` | Uno por cruce: dirección (entrada / salida), tipo de vehículo, confianza, vehículos dentro y plazas libres tras el cruce |
+| MQTT `<site>/parking/<entrance>/occupancy` | Vehículos dentro, plazas totales, plazas libres, entradas y salidas de hoy; se envía tras cada cruce |
 | HTTP 8080 `/preview` | Vista previa en navegador: imagen, línea de conteo, conteos dentro y libres |
 | HTTP 8099 `/healthz` | Si están llegando fotogramas y la tasa de procesamiento |
 
@@ -150,13 +151,13 @@ Los conteos se envían por MQTT a tu broker; el estado usa HTTP.
 
 ### Conteos y velocidad de procesamiento
 
-| Dispositivo | Entrada | Velocidad de procesamiento | Resultado del conteo |
+| Dispositivo | Entrada | Velocidad de procesamiento | Resultado de conteo |
 |---|---|---|---|
 | reComputer J30 Serie (Orin Nano) | 640×360, 30 fps | 29,98 fps, análisis por fotograma p50 3,6 ms (medido) | Los 41 cruces contados, todas las direcciones correctas (medido) |
 | reComputer RK3576 Serie | 640×360, 30 fps | 30,0 fps, CPU del contenedor 14,9 %, memoria 95 MiB (medido) | 19 eventos de cruce: 9 entradas, 10 salidas (medido) |
 | reComputer RK3588 Serie | 1280×720, 5 fps | 3,0 fps, análisis por fotograma p50 17,8 ms (medido) | 107 eventos de cruce (medido) |
 
-Todas las entradas son un clip de prueba sintético: una imagen de vehículo cruzando adelante y atrás sobre un fondo gris. El RK3588 procesa alrededor de 3 fps, por debajo de la entrada de 5 fps, por lo que un vehículo tiene que permanecer cerca de la línea durante aproximadamente 1 s o más.
+Todas las entradas son un clip de prueba sintético: una imagen de vehículo cruzando adelante y atrás sobre un fondo gris. El RK3588 procesa unos 3 fps, por debajo de los 5 fps de entrada, así que un vehículo tiene que permanecer cerca de la línea durante unos 1 s o más.
 
 Reproducir: `sensecraft-solutions/solutions/edge_parking_counting` (paquete de despliegue) con el clip sintético `count-synthetic-120s.mp4`
 
@@ -169,15 +170,15 @@ Reproducir: `sensecraft-solutions/solutions/edge_parking_counting` (paquete de d
 
 Parámetros que afectan al conteo (paquete de despliegue `config/counting*.json`):
 
-- `counting.line` / `in_side`: posición de la línea y qué lado cuenta como "in"; cámbialos en la página de vista previa después del despliegue.
-- `counting.min_track_frames`: un vehículo debe ser rastreado durante al menos 3 fotogramas consecutivos antes de contarse, por lo que a bajas tasas de fotogramas necesita permanecer más tiempo en el campo de visión.
+- `counting.line` / `in_side`: posición de la línea y qué lado cuenta como "entrada"; cámbialos en la página de vista previa después del despliegue.
+- `counting.min_track_frames`: un vehículo debe ser rastreado durante al menos 3 fotogramas consecutivos antes de contarse, por lo que a bajas tasas de fotogramas debe permanecer más tiempo en el campo de visión.
 - `counting.capacity`: plazas totales; plazas libres = total − vehículos dentro.
 
 ### Degradaciones conocidas
 
-- **Pegado de cola y oclusión en paralelo**: cuando las distancias de seguimiento son inferiores a 1 m o dos vehículos cruzan simultáneamente lado a lado, las cajas delimitadoras pueden fusionarse u ocultarse, provocando conteos por debajo de lo real o vectores de dirección invertidos. Se recomiendan separadores físicos de carril.
-- **Interferencia de peatones y bicicletas**: el modelo está entrenado en vehículos motorizados. Cruces peatonales densos o motocicletas que pasan muy cerca de un coche pueden fragmentar los ID de seguimiento.
-- **Velocidad y fotogramas de seguimiento**: cruzar la línea de conteo requiere al menos 3 fotogramas rastreados. Los carriles de acceso deben tener un límite de velocidad recomendado ≤ 15 km/h; los pasos de autoservicio a alta velocidad pueden provocar conteos omitidos.
+- **Pegado al vehículo delantero y oclusión en paralelo**: Cuando las distancias de seguimiento son inferiores a 1 m o dos vehículos cruzan simultáneamente lado a lado, las cajas delimitadoras pueden fusionarse u ocultarse, causando subconteos o vectores de dirección invertidos. Se recomiendan separadores físicos de carril.
+- **Interferencia de peatones y bicicletas**: El modelo está entrenado en vehículos motorizados. Cruces peatonales densos o motocicletas que pasan muy cerca de un coche pueden fragmentar los ID de seguimiento.
+- **Velocidad y fotogramas de seguimiento**: Cruzar la línea de conteo requiere al menos 3 fotogramas rastreados. Los carriles de acceso deben tener un límite de velocidad recomendado ≤ 15 km/h; los pasos de vehículos a alta velocidad pueden causar conteos perdidos.
 
 ## Fuentes de datos y recursos
 
