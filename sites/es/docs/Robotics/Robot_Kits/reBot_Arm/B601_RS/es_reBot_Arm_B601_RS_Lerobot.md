@@ -273,6 +273,58 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 </section>
 </div>
 
+## Conectar los brazos
+
+> **Aviso de seguridad:**
+> Desconecta la alimentación antes de conectar o desconectar cables JST, XT30 u otros cables. Enciende la alimentación solo después de confirmar que todos los cables están conectados correctamente.
+> B601 RS y B601 DM tienen un aspecto similar. Asegúrate de distinguirlos.
+
+
+### 2.1 Montar y conectar reBot Arm 102 (brazo líder)
+
+![Montaje y conexión de reBot Arm 102 (brazo líder)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+
+#### Paso 1: Montar reBot Arm 102
+Utiliza sargentos de carpintero para fijar reBot Arm 102 a una mesa plana. Empuja suavemente la base para confirmar que no se mueve.
+
+#### Paso 2: Conectar los cables
+Las conexiones constan de dos rutas:
+
+* **Ruta de señal (brazo -> cable USB-C -> ordenador)**
+  1. Prepara un cable USB-C para conectar el brazo al ordenador (**aún no lo conectes al ordenador; conéctalo cuando llegues al enlace del puerto serie y busques dispositivos**).
+
+* **Ruta de alimentación (brazo -> fuente de alimentación de 12 V 2 A -> regleta)** 
+  1. Conecta el **adaptador de alimentación de 12 V 2 A** al conector de alimentación del brazo.
+  2. Conecta el adaptador a la regleta para encender el brazo.
+
+
+
+---
+
+### 2.2 Montar y conectar el B601 RS (brazo seguidor)
+![Conexión de cables del B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
+
+#### Paso 4: Montar el B601 RS
+Utiliza sargentos en C para fijar el B601 RS a una mesa plana. Gira suavemente el brazo hacia la izquierda y la derecha para confirmar que la base no se mueve.
+
+#### Paso 5: Conectar los cables
+Asegúrate de que la alimentación esté desconectada antes de empezar. Las conexiones constan de dos rutas:
+
+* **Ruta de señal (brazo -> placa de separación de señal -> USB-CAN -> ordenador)**
+  1. Utiliza un cable XT30 2+2 para conectar la base del brazo al módulo de separación de señal.
+  2. Corta el cable de 2 pines. Conecta un extremo al módulo de separación de señal; conecta el cable rojo del otro extremo a H en el USB-CAN y el cable negro a L.
+  3. Conecta un extremo del USB-CAN al ordenador a través del cable de extensión USB (**aún no lo conectes al ordenador; conéctalo cuando el enlace del puerto serie esté listo y busques dispositivos**).
+
+* **Ruta de alimentación (brazo -> placa de separación de señal -> fuente de alimentación de 48 V 12,5 A -> toma de corriente)**
+  1. Utiliza un cable XT30 2+2 para conectar la base del brazo al módulo de separación de señal.
+  2. Utiliza el cable de alimentación XT30 para conectar el módulo de separación de señal a la fuente de alimentación de 48 V 12,5 A.
+  3. Conecta la fuente de alimentación a la toma de corriente. Después de confirmar que el brazo está fijado, los cables son correctos y el área circundante está despejada, enciende la alimentación.
+
+![Conectar la alimentación al B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp)
+
+
+---
+
 ## Calibrar el brazo robótico
 
 <!-- <div class="video-container">

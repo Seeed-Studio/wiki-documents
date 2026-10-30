@@ -277,6 +277,57 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 </div>
 
 
+## 连接机械臂
+
+> **安全提示：**
+> 连接或拆卸 JST、XT30 等线束前，必须先断开电源。确认所有线束连接正确后，再接通电源。
+> B601RS 与 B601DM 外观相近，请注意区分。
+
+
+### 2.1 固定和连接 reBot Arm 102（主臂）
+
+
+
+#### 步骤 1：固定 reBot Arm 102
+使用木工夹将 reBot Arm 102 固定在平整桌面上，轻轻推动确认底座不移动。
+
+#### 步骤 2：连接线束
+
+接线分为两条链路：
+
+* **信号链路（机械臂 -> USB-C 线 -> 电脑）**
+  1. 准备 USB-C 线连接机械臂与电脑（**先暂不插电脑端，等进入串口绑定环节后再连接扫描**）。
+
+* **供电链路（机械臂 -> 12V 2A 电源 -> 插板 -> 上电）**
+  1. 将 **12V 2A 电源适配器**连接到机械臂的电源接口。
+  2. 将适配器接入插板，完成上电。
+
+![固定和连接 reBot Arm 102（主臂）](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+
+---
+
+### 2.2 固定和连接 B601 DM（从臂）
+![连接 B601 DM 线束](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp)
+
+#### 步骤 3：固定 B601 DM
+使用 G 型夹将 B601 DM 固定在稳定、平整的桌面上。固定后，轻轻左右转动机械臂，确认底座不会移动。
+
+#### 步骤 4：连接线束
+开始前确保电源断电。接线分为两条链路：
+
+* **信号链路（机械臂 -> 信号/电源分离板 -> USB-CAN 驱动板 -> 电脑）**
+  1. 用 XT30 2+2 线连接底部第一颗电机与信号/电源分离板。
+  2. 用 2-pin JST 线连接信号/电源分离板与 USB-CAN 驱动板。
+  3. 用 3-pin JST 线连接底部第一颗电机与 USB-CAN 驱动板（此为调试线，可以不接）。
+  4. 准备 USB-C 数据线连接 USB-CAN 驱动板与电脑（**先暂不插电脑端，等进入串口绑定环节后再连接并扫描串口**）。
+
+* **供电链路（机械臂 -> 信号/电源分离板 -> 24V 电源适配器 -> 插座 -> 上电）**
+  1. 用 XT30 2+2 线连接底部第一颗电机与信号/电源分离板。
+  2. 将信号/电源分离板连接至 **24V 电源适配器**。
+  3. 将电源适配器接入插座。确认机械臂固定、线束正确且周围无障碍后，再打开电源。
+
+![连接 B601 DM（从臂）](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
+
 ## 校准机械臂
 
 <div class="video-container">
