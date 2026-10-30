@@ -1,6 +1,7 @@
 ---
 description: 在养老、照护与居家场景里搭一套本地跌倒告警：需要哪些设备、怎么部署、有哪些接口，以及七台设备上的实测数据
 title: 端侧 AI 跌倒检测方案：搭建、部署与实测数据
+sidebar_label: '端侧 AI 跌倒检测'
 keywords:
   - 跌倒检测
   - 摔倒检测
@@ -22,7 +23,7 @@ last_update:
   date: 09/01/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-01'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-fall-detection/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -163,9 +164,9 @@ generated_from: sensecraft-solutions@cbbfa60
 | | 检测主机 | 一台接几路 | 什么时候选它 |
 |---|---|---:|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera 2002 / Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>摄像头与算力一体 | 1 | 一个房间，最快跑通一条告警 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3576 / RK3588](https://www.seeedstudio.com/reComputer-RK3588-40-p-6818.html) | 1 | 已经在用瑞芯微板卡 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3576 / RK3588](https://www.seeedstudio.com/reComputer-RK3588-40-p-6818.html) | 1–3 / 5 | 已经在用瑞芯微板卡；RK3576 原生优化实测 3 路，通用保底 1 路 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html) | 16 | 需要一台管很多路 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Orin Nano / Orin NX | 7 / 8 | 多个房间，并想留升级余量 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J3011 / Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Orin Nano / Orin NX | 7 / 8 | 多个房间，并想留升级余量 |
 
 路数由加速器实测吞吐折算（见下文「路数折算」）。
 
@@ -181,8 +182,8 @@ generated_from: sensecraft-solutions@cbbfa60
 
 | | 告警主机 | 检测器跑在哪 | 什么时候选它 |
 |---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011（Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>检测器、告警服务、broker 与控制台都在一台 Jetson 上 | 同机，首次部署时构建 TensorRT 引擎 | 摄像头已经有了、现场还没有网关。三档里单机可带路数最多 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>同一套栈，更大的姿态模型 | 同机，用 YOLO11m 而非 YOLO11s | 房间数超过一台 J3011 能看的，或者想要更大的姿态模型。同一个套餐，部署表单里的另一个选项 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011（Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>检测器、告警服务、broker 与控制台都在一台 Jetson 上 | 同机，首次部署时构建 TensorRT 引擎 | 摄像头已经有了、现场还没有网关。三档里单机可带路数最多 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>同一套栈，更大的姿态模型 | 同机，用 YOLO11m 而非 YOLO11s | 房间数超过一台 J3011 能看的，或者想要更大的姿态模型。同一个套餐，部署表单里的另一个选项 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>无风扇工业机箱 | 同机，HEF 已编译下发 | 主机要装进机柜或弱电井：无风扇、宽温、DIN 导轨或壁挂 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>一体化 AI 摄像头；告警服务放到你已有的机器上 | 摄像头上 | 现场还没有摄像头，或者摄像头已经在做检测。告警服务由人工拉起——部署表单里没有「自备网关」这个设备类别 |
 
@@ -438,7 +439,7 @@ RK 的 INT8 用 240 帧 GMDCSA 标定过，在未参与标定的帧上每帧检�
 
 #### 路数折算
 
-「推理上限路数」= 聚合吞吐 ÷ 15 FPS，只算加速器，是理论天花板。「建议路数」在此基础上打了折——RK 上实测的端到端吞吐只有推理上限的 28%–44%，因为 RTSP 解码、跟踪、状态机和 MQTT 也要占用 CPU 与内存带宽。在板上其他业务未停的情况下，实测端到端吞吐 RK3588 约 8.6 FPS、RK3576 约 4.9 FPS。
+「推理上限路数」= 聚合吞吐 ÷ 15 FPS，只算加速器，是理论天花板。「建议路数」在此基础上打了折——在默认通用 Python 容器链路下，由于 CPU 软缩放转色与应用开销，实测端到端吞吐 RK3588 约 8.6 FPS、RK3576 约 4.9 FPS（通用定级为 1 路）。而在采用 RGA 硬件自适应缩放（improcess）与 C++ 原生计算底座直通优化的生产基座链路下，INT8 量化实测突破该瓶颈，**RK3576 达到稳定 3 路（15 FPS 连续运行零丢帧），RK3588 达到 5 路**。
 
 **Hailo-8 16 路实测前提与视频解码约束**：Hailo-8 在 R2000 上的 16 路建议路数，是在输入为 **640×640 视频流**（每路 15 FPS）的条件下测得。由于 reComputer R2000 系列主机缺乏多路并发硬件视频解码能力，纯依靠 CPU 软件解码 1080p 视频流至多承载 2–4 路即达 CPU 瓶颈。实地落地接入多路已有摄像头时，必须将前端摄像头配置为输出辅码流（Sub-stream，推荐 640×480 或 640×360）送入主机分析，避免 CPU 软解饱和导致丢帧。
 
@@ -450,7 +451,7 @@ RK 的 INT8 用 240 帧 GMDCSA 标定过，在未参与标定的帧上每帧检�
 |---|---|---|---|---|
 | reCamera 2002 | YOLO11n-Pose | INT8 | 摄像头 NPU | 从 console 当作摄像头 app 安装 |
 | reComputer J30 / J40 | YOLO11s（Orin Nano）/ YOLO11m（Orin NX） | FP16 | TensorRT | 引擎在**设备上现场构建**——与该 GPU 架构和 TensorRT 版本绑定，无法预编译下发。Orin Nano 实测：YOLO11s 461 秒 |
-| reComputer RK3576 / RK3588 | YOLO11n-Pose | FP16 | RKNN Lite | `.rknn` 按板卡下发；为 RK3588 编译的模型在 RK3576 上跑不了 |
+| reComputer RK3576 / RK3588 | YOLO11n-Pose | INT8 | vb-runtime（librknnrt） | `.rknn` 按板卡下发；为 RK3588 编译的模型在 RK3576 上跑不了 |
 | reComputer R2000 系列（R2035-12，Hailo-8） | YOLOv8s-Pose | INT8 | GStreamer + `hailonet` | 官方预编译 HEF，按固定摘要校验 |
 
 Hailo 部署锁定 **HailoRT 4.21**：GStreamer 插件、用户库和内核驱动三者必须同版本，加速器不能被其他进程占用。

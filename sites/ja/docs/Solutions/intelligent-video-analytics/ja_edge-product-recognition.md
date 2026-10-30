@@ -1,6 +1,7 @@
 ---
 description: エッジ商品認識の構築、導入方法、実測データと実装詳細
 title: 'エッジ商品認識：構築・導入・実測結果'
+sidebar_label: 'エッジ商品認識'
 keywords:
   - edge product recognition
   - checkout product recognition without barcode
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-product-recognition/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -115,7 +116,7 @@ generated_from: sensecraft-solutions@cbbfa60
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8、26 TOPS）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>検出器は NPU、埋め込みは 4 つの A76 コア | 両段階：検出 9.04 ms、crop あたりの埋め込み 91.95 ms | 検出と埋め込みの両方に実測データが必要な場合 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>検出器は Rockchip NPU、埋め込みは CPU または NPU | 検出器のボックス一致 99.85%、56.7 ms。埋め込みを NPU に載せた 20 SKU の棚リプレイで、検出から結果送信まで p50 924 ms | すでに Rockchip ボードを運用している場合、またはカメラが棚を向く場合。RK3576 は同じツールチェーンです |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) または [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>TensorRT 経路、検出と埋め込みはどちらも GPU | J4012：検出 5.18 ms、crop あたりの埋め込み 4.23 ms。2956 フレームのレジのリプレイでフレーム落ち 0 | すでに Jetson を運用している場合、またはチェーン全体を 1 台で動かしたい場合 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) または [reComputer Super J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>TensorRT 経路、検出と埋め込みはどちらも GPU | J4012：検出 5.18 ms、crop あたりの埋め込み 4.23 ms。2956 フレームのレジのリプレイでフレーム落ち 0 | すでに Jetson を運用している場合、またはチェーン全体を 1 台で動かしたい場合 |
 
 数値はいずれもその行のハードウェアでの実測です。
 

@@ -1,6 +1,7 @@
 ---
 description: Supermarket product recognition on the edge — a single-class detector, an embedding gallery that registers a new SKU from photographs instead of a training run, what hardware it needs, how it is deployed, the measured per-board data, and implementation details for engineers
 title: 'Edge Product Recognition: Build, Deploy, and Measured Results'
+sidebar_label: 'Edge Product Recognition'
 keywords:
   - edge product recognition
   - checkout product recognition without barcode
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/edge-product-recognition/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -115,7 +116,7 @@ Four things per site: a camera, a recognition host, a console host, and an x86_6
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8, 26 TOPS)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Detector on the NPU, embedder on the four A76 cores | Both stages: 9.04 ms detection, 91.95 ms per crop embedding | You need measured data for both detection and embedding |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Detector on the Rockchip NPU, embedder on the CPU or the NPU | Detector at 99.85% box agreement and 56.7 ms; with the embedder on the NPU, a 20-SKU shelf replay published results at 924 ms p50 from detection | You already run Rockchip boards, or the camera faces a shelf. RK3576 uses the same toolchain |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) or [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>TensorRT path, detector and embedder on the GPU | J4012: 5.18 ms detection, 4.23 ms per crop embedding; 2956-frame checkout replay with 0 dropped frames | You already run Jetson, or want the whole chain on one machine |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) or [reComputer Super J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>TensorRT path, detector and embedder on the GPU | J4012: 5.18 ms detection, 4.23 ms per crop embedding; 2956-frame checkout replay with 0 dropped frames | You already run Jetson, or want the whole chain on one machine |
 
 All figures are measured on the hardware in that row.
 

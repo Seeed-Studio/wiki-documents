@@ -1,6 +1,7 @@
 ---
 description: 用一句话控制 Home Assistant 里的灯和家电、语音在本地识别：需要哪些设备、怎么部署、有哪些接口，以及 reComputer J40 上的实测数据
 title: Home Assistant 本地语音控制方案：选型、部署与实测数据
+sidebar_label: 'Home Assistant 本地语音控制'
 keywords:
   - Home Assistant 本地语音
   - Home Assistant 语音助手
@@ -19,7 +20,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/home-assistant-local-voice/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -98,7 +99,7 @@ Home Assistant 语音助手里的一次对话：说「把客厅灯打开」，�
 | 设备 | 承担什么 | 说明 |
 |---|---|---|
 | ARM64 Linux 主机（64 位系统，8 GB 内存） | 运行 Home Assistant | 一户一台 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> [reComputer J40 系列（J4012，Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) | 本地语音识别和语音合成 | 首次启动下载语音模型，预留至少 30 GB 磁盘 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> [reComputer Super J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) | 本地语音识别和语音合成 | 首次启动下载语音模型，预留至少 30 GB 磁盘 |
 | Home Assistant Connect ZBT-2 | 接入 Zigbee 设备 | 插在 Home Assistant 主机的 USB 口 |
 | Home Assistant Voice 预览版 | 房间里的语音终端：听指令、播报回复 | 每个房间一台 |
 | SONOFF SNZB Zigbee 传感器（可选） | 采集温湿度等状态 | 经 ZBT-2 接入 |

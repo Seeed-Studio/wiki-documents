@@ -1,6 +1,7 @@
 ---
 description: Sync reSpeaker Clip recordings to your own reComputer host for speaker-labelled transcripts — hardware, deployment, interfaces and measured data on Jetson Orin NX and RK3576
 title: Private On-Premise Transcription for reSpeaker Clip — Selection, Deployment and Measured Data
+sidebar_label: 'reSpeaker Clip Transcription'
 keywords:
   - private transcription
   - on-premise speech to text
@@ -18,7 +19,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/clip-private-transcription/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -100,8 +101,8 @@ Two things on site: a reSpeaker Clip and one transcription host.
 
 | | Transcription host | Single Audio Turnaround<br />(30 s Chinese two-speaker) | Shift-End Batch Capacity<br />(10 badges uploading at once) | Choose it when |
 |---|---|---:|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 Series (J4012)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX 16GB, JetPack 6.2 | **1.2 s** | **~3.5 s total time**<br />(queue wait < 3.5 s) | Flagship choice for 10~50 badges; 16GB unified memory allows local 8B LLM summarization & compliance auditing |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110144-recomputer-j3011-front.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 Series (J3011)](https://www.seeedstudio.com/reComputer-J3011-p-5585.html)<br/>Jetson Orin Nano 8GB, JetPack 6.2 | **1.3 s** | **~4.1 s total time**<br />(queue wait < 4.1 s) | Mainstream cost-effective choice for 5~20 badges; identical user experience, VRAM footprint only 486 MB |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Jetson Orin NX 16GB, JetPack 6.2 | **1.2 s** | **~3.5 s total time**<br />(queue wait < 3.5 s) | Flagship choice for 10~50 badges; 16GB unified memory allows local 8B LLM summarization & compliance auditing |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin Nano 8GB, JetPack 6.2 | **1.3 s** | **~4.1 s total time**<br />(queue wait < 4.1 s) | Mainstream cost-effective choice for 5~20 badges; identical user experience, VRAM footprint only 486 MB |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3588_box.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 Series (8 GB)](https://www.seeedstudio.com/reComputer-AIA-A801-p-5942.html)<br/>RK3588 3-Core NPU | **3.0 s** | **~14.5 s total time**<br />(3 parallel pipelines) | Mid-size workstation choice for 5~15 badges; 3 independent NPU cores run 3 parallel workers |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 Series (8 GB)](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>On-board NPU | **4.6 s** | ~46 s total time<br />(single worker queue) | Low-cost option for 1~3 badges; peak RSS only 442 MB (W4A16), ideal for private clinics and counseling rooms |
 
