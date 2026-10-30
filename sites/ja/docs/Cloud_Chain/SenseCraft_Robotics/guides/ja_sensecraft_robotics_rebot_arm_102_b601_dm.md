@@ -41,7 +41,7 @@ updatedAt: '2026-09-24'
 
 ### 1.1 ハードウェア
 
-![Hardware list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-1-hardware-list-dm-en.webp)
+![Hardware list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-1-hardware-list-dm-en.png)
 
 > アームは組み立て、固定、給電し、USB 接続されている必要があります。組み立てが完了していない場合は、[ステップ 1：アームの組み立て](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/#%E7%AC%AC%E4%B8%80%E6%AD%A5%E7%BB%84%E8%A3%85%E6%9C%BA%E6%A2%B0%E8%87%82) を参照してください。
 
@@ -147,7 +147,7 @@ updatedAt: '2026-09-24'
 
 ### 2.2 B601 DM（フォロワーアーム）の取り付けと接続
 
-![B601 DM cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp)
+![B601 DM cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
 
 #### ステップ 3：B601 DM を取り付ける
 
