@@ -160,54 +160,26 @@ A Seeed Studio é responsável pela qualidade de hardware do kit. O tutorial de 
   <div className="section-title">
     <span>Impressão 3D</span>
     <h2>Guia de impressão 3D</h2>
-    <p>Escolha os arquivos STL e as configurações de impressão corretos antes de montar uma versão em kit do braço.</p>
+    <p>Configurações de impressão e download do STL para a versão em kit do braço.</p>
   </div>
 
 <details className="content-details">
-<summary>Ver parâmetros de impressão 3D</summary>
+<summary>Ver configurações e download</summary>
 
-:::caution
-Após a atualização oficial do SO101, o SO100 não terá mais suporte e os arquivos-fonte serão excluídos conforme o oficial, mas os arquivos-fonte ainda podem ser encontrados em nosso [Makerworld](https://makerworld.com/zh/models/908660). No entanto, para usuários que já compraram o SO100, os tutoriais e métodos de instalação continuam compatíveis. A impressão do SO101 é totalmente compatível com a instalação do kit de motor do SO100.
-:::
-
-**Passo 1: Escolha uma impressora**
-
-Os arquivos STL fornecidos estão prontos para impressão em muitas impressoras FDM. Abaixo estão as configurações testadas e sugeridas, embora outras também possam funcionar.
+**Configurações de impressão recomendadas** (testadas em impressoras FDM comuns):
 
 - Material: PLA+
-- Diâmetro do bico e precisão: bico de 0,4 mm com altura de camada de 0,2 mm ou bico de 0,6 mm com altura de camada de 0,4 mm.
-- Densidade de preenchimento: 15%
+- Bico / altura de camada: bico de 0.4mm com camada de 0.2mm, ou bico de 0.6mm com camada de 0.4mm
+- Preenchimento: 15%
+- Suportes: em toda parte, ignorando inclinações acima de 45°; sem suportes nos furos de parafuso horizontais
 
-**Passo 2: Configure a impressora**
+**Baixar e imprimir:**
 
-- Certifique-se de que a impressora esteja calibrada e que o nivelamento da mesa esteja corretamente ajustado usando as instruções específicas da impressora.
-- Limpe a mesa de impressão, certificando-se de que esteja livre de poeira ou gordura. Se limpar a mesa com água ou outro líquido, seque-a.
-- Se a sua impressora recomendar, use um bastão de cola padrão e aplique uma camada fina e uniforme de cola em toda a área de impressão da mesa. Evite acúmulos ou aplicação irregular.
-- Carregue o filamento da impressora usando as instruções específicas da impressora.
-- Certifique-se de que as configurações da impressora correspondam às sugeridas acima (a maioria das impressoras possui múltiplas configurações, então escolha as que mais se aproximam).
-- Configure para suportes em todos os lugares, mas ignore inclinações maiores que 45 graus em relação à horizontal.
-- Não deve haver suportes nos furos de parafuso com eixos horizontais.
+Todas as peças do Leader e do Follower estão empacotadas em um único arquivo STL, já orientadas para minimizar os suportes — basta baixar e imprimir:
 
-**Passo 3: Imprima as peças**
+[Baixar o arquivo de impressão do SO-ARM101 (soarm101.stl)](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl)
 
-Todas as peças para o líder ou seguidor já estão contidas em um único arquivo, prontas para impressão 3D fácil, corretamente orientadas com o eixo z para cima para minimizar suportes.
-
-- Para tamanhos de mesa de impressão de 220mm x 220mm (como a Ender), imprima estes arquivos:
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-
-- Para tamanhos de mesa de impressão de 205mm x 250mm (como a Prusa/Up):
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
-
-**Passo 4: Imprima o Soft Gripper e o inserto do suporte de montagem da câmera (opcional)**
-
-Se você quiser que o braço robótico consiga agarrar objetos macios, frágeis ou de formato irregular, pode imprimir um soft gripper para substituir a garra rígida padrão. Você também pode imprimir o inserto do suporte de montagem da câmera se precisar montar uma câmera. Os arquivos de impressão estão disponíveis no repositório [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git).
-
-Instruções sobre material de impressão:
-
-- Dois dedos da garra: imprimir com material **TPU**
-- Outras partes: imprima com material **PLA**
+**Opcional:** imprima uma garra macia (dedos de TPU) ou o inserto do suporte de câmera — arquivos no repositório [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git).
 
 </details>
 
