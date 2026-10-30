@@ -160,54 +160,26 @@ Seeed Studio is responsible for the hardware quality of the kit. The software tu
   <div className="section-title">
     <span>3D Printing</span>
     <h2>3D Printing Guide</h2>
-    <p>Choose the right STL files and print settings before assembling a kit version of the arm.</p>
+    <p>Print settings and the STL download for the kit version of the arm.</p>
   </div>
 
 <details className="content-details">
-<summary>View 3D printing parameters</summary>
+<summary>View print settings and download</summary>
 
-:::caution
-Following the official update of SO101, SO100 will no longer support it and the source files will be deleted as per the official, but the source files can still be found in our [Makerworld](https://makerworld.com/zh/models/908660). However, for users who have previously purchased SO100, the tutorials and installation methods remain compatible. The print of SO101 is fully compatible with the motor kit installation of SO100.
-:::
-
-**Step 1: Choose a printer**
-
-The STL files provided are ready to print on many FDM printers. Below are the tested and suggested settings though others may work.
+**Recommended print settings** (tested on common FDM printers):
 
 - Material: PLA+
-- Nozzle Diameter and Precision: 0.4mm nozzle diameter at 0.2mm layer height or 0.6mm nozzle at 0.4mm layer height.
-- Infill Density: 15%
+- Nozzle / layer height: 0.4mm nozzle at 0.2mm layer height, or 0.6mm nozzle at 0.4mm layer height
+- Infill: 15%
+- Supports: everywhere, ignoring slopes steeper than 45°; no supports in horizontal screw holes
 
-**Step 2: Set up the printer**
+**Download and print:**
 
-- Ensure that the printer is calibrated and the bed level is correctly set using the printer specific instructions.
-- Clean the print bed, making sure it is free from dust, or grease. If cleaning the bed using water, or other liquid, dry the bed.
-- If your printer recommends it, use a standard glue stick and apply a thin, even layer of glue across the print area of the bed. Avoid clumping or uneven application.
-- Load the printer filament using printer specific instructions.
-- Ensure the printer settings match the ones suggested above (most printers have multiple settings so choose the ones that most closely match).
-- Set for supports everywhere but ignore slopes greater than 45 degrees to the horizontal.
-- There should be no supports in the screw holes with horizontal axes.
+All Leader and Follower parts are packed in a single STL file, already oriented to minimize supports — just download and print:
 
-**Step 3: Print the parts**
+[Download the SO-ARM101 print file (soarm101.stl)](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl)
 
-All the parts for the leader or follower are for easy 3D printing already contained in a single file, correctly orientated for z upwards to minimize supports.
-
-- For printer bed sizes of 220mmx220mm (such as the Ender), print these files:
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-
-- For printer bed sizes of 205mm x 250mm (such as the Prusa/Up):
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
-
-**Step 4: Print the Soft Gripper and Camera Mount Bracket Insert (Optional)**
-
-If you want the robotic arm to be able to grasp soft, fragile, or irregularly shaped objects, you can print a soft gripper to replace the default rigid gripper. You can also print the camera mount bracket insert if you need to mount a camera. The print files are available in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
-
-Printing material instructions:
-
-- Two gripper fingers: print with **TPU** material
-- Other parts: print with **PLA** material
+**Optional:** print a soft gripper (TPU fingers) or the camera mount insert — files in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
 
 </details>
 
