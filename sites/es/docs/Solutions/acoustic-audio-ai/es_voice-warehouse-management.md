@@ -1,9 +1,10 @@
 ---
-description: "Ejecutar un sistema de gestión de almacén por voz en hardware perimetral: qué dispositivos necesitas, cómo el puente MCP conecta el habla con el inventario, cómo desplegar cada uno de los cinco niveles y resultados de pruebas de carga medidos en un dispositivo de la serie reComputer R2000"
-title: 'Gestión de almacén por voz en hardware perimetral: construcción, despliegue y resultados medidos'
+description: Ejecutar un sistema de gestión de almacén por voz en hardware perimetral: qué dispositivos necesitas, cómo el puente MCP conecta el habla con el inventario, cómo desplegar cada uno de los cinco niveles y resultados de pruebas de carga medidos en un dispositivo reComputer R2000 series
+title: 'Gestión de Almacén por Voz en Hardware Edge: Construcción, Despliegue y Resultados Medidos'
+sidebar_label: 'Gestión de almacén por voz'
 keywords:
   - sistema de gestión de almacén controlado por voz
-  - WMS perimetral
+  - WMS en el edge
   - inventario de almacén MCP
   - gestión de inventario manos libres
   - asistente de voz sin conexión
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/es/solutions/voice-warehouse-management/
 generated_from: sensecraft-solutions@smart_warehouse
 ---
@@ -32,9 +33,9 @@ Esto es una ayuda para el operador, no un libro de inventario certificado. La RE
 
 ## Qué hace esta solución
 
-Un operador en el muelle de recepción dice "registrar 10 cajas de manzanas". El SenseCAP Watcher en la estantería lo escucha y se escribe un registro de entrada de stock en la base de datos del almacén en una pasarela reComputer en el mismo edificio. Pregunta "cuántas manzanas quedan" y la respuesta se devuelve por voz. Sin teclear, sin menús, las manos permanecen en la mercancía.
+Un operador en el muelle de recepción dice "entrar en stock 10 cajas de manzanas". El SenseCAP Watcher en la estantería lo escucha y se escribe un registro de entrada de stock en la base de datos del almacén en un gateway reComputer en el mismo edificio. Si pregunta "cuántas manzanas quedan", la respuesta se devuelve por voz. Sin teclear, sin menús, las manos permanecen en la mercancía.
 
-Diseñado para ubicaciones donde las transacciones ocurren lejos de un teclado: muelles de recepción, pasillos de estanterías, cabinas de montacargas y pequeños almacenes que nunca adoptaron un WMS porque la formación costaba más de lo que ahorraba.
+Diseñada para ubicaciones donde las transacciones ocurren lejos de un teclado: muelles de recepción, pasillos de estanterías, cabinas de carretillas elevadoras y pequeños almacenes que nunca adoptaron un WMS porque la formación costaba más de lo que ahorraba.
 
 - Implementación de código abierto: [github.com/suharvest/warehouse_system](https://github.com/suharvest/warehouse_system)
 - Elegir una configuración y desplegar: [página de diseño de referencia](https://www.seeed.cc/solutions/reference-designs/smart_warehouse)
@@ -62,7 +63,7 @@ El habla y la base de datos se conectan mediante **MCP (Model Context Protocol)*
             </div>
             <div class="info-content">
                 <h3>Los datos se quedan en el sitio</h3>
-                <p>La base de datos del almacén se ejecuta en una pasarela reComputer en el sitio. El Nivel 3 también mantiene el reconocimiento, el LLM y la síntesis en las instalaciones y no llama a ningún servicio externo después del despliegue.</p>
+                <p>La base de datos del almacén se ejecuta en un gateway reComputer en el sitio. El Nivel 3 también mantiene el reconocimiento, el LLM y la síntesis en las instalaciones y no llama a ningún servicio externo después del despliegue.</p>
             </div>
         </li>
         <li class="info-item">
@@ -71,7 +72,7 @@ El habla y la base de datos se conectan mediante **MCP (Model Context Protocol)*
             </div>
             <div class="info-content">
                 <h3>Código abierto, se conecta a tu ERP/WMS</h3>
-                <p>El sistema de almacén es de código abierto. Conectar un sistema existente significa mapear su interfaz de datos al mismo conjunto de herramientas MCP, del orden de unas pocas docenas de líneas de código de mapeo.</p>
+                <p>El sistema de almacén es de código abierto. Conectar un sistema existente significa mapear su interfaz de datos a las mismas herramientas MCP, del orden de unas pocas docenas de líneas de código de mapeo.</p>
             </div>
         </li>
         <li class="info-item">
@@ -88,10 +89,10 @@ El habla y la base de datos se conectan mediante **MCP (Model Context Protocol)*
 
 ### Qué muestra el panel
 
-Tras una locución, el resultado aparece en el panel de la pasarela. La página de inventario lista la cantidad actual y el último movimiento de cada artículo:
+Tras una locución, el resultado aparece en el panel del gateway. La página de inventario lista la cantidad actual y el último movimiento de cada artículo:
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_warehouse/dashboard-657fc403.png" alt="Panel de almacén: stock actual por artículo, último movimiento y estado"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_warehouse/dashboard-657fc403.png" alt="Panel del almacén: stock actual por artículo, último movimiento y estado"/>
 </div>
 
 La página de transacciones lista cada entrada y salida de stock con número de lote, operador y origen (voz o REST):
@@ -100,10 +101,10 @@ La página de transacciones lista cada entrada y salida de stock con número de 
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_warehouse/records-944f9e33.png" alt="Historial de transacciones: número de lote, cantidad, operador y origen por registro"/>
 </div>
 
-La lista de operadores se mantiene en la página de usuarios, y la verificación facial la utiliza como referencia:
+La lista de operadores se mantiene en la página de usuarios, y la verificación facial la comprueba contra ella:
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_warehouse/users-8e30f2d0.png" alt="Página de usuarios: la lista de operadores y permisos que la verificación facial utiliza como referencia"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_warehouse/users-8e30f2d0.png" alt="Página de usuarios: la lista de operadores y permisos contra los que comprueba la verificación facial"/>
 </div>
 
 ## Qué hardware necesitas
@@ -112,21 +113,21 @@ Tres roles de dispositivo. Cuáles compres depende de dónde se permita ejecutar
 
 **① Terminal de voz: SenseCAP Watcher.** Necesario en todos los niveles, uno por puesto de trabajo. Tiene dos procesadores: el ESP32 ejecuta el agente de voz Xiaozhi (palabra de activación, grabación, streaming, cliente MCP), y el Himax WE2 ejecuta el firmware de reconocimiento facial para la verificación del operador.
 
-**② Pasarela perimetral.** Ejecuta el sistema de almacén y, en los niveles autoalojados, también el endpoint MCP. Determina si el reconocimiento facial puede trasladarse a la pasarela y cuántos puestos puede atender un solo host.
+**② Gateway perimetral.** Ejecuta el sistema de almacén y, en los niveles autoalojados, también el endpoint MCP. Determina si el reconocimiento facial puede trasladarse al gateway y cuántos puestos puede atender un solo host.
 
-**③ Host de IA en las instalaciones.** Solo necesario cuando el reconocimiento, el LLM y la síntesis deben permanecer todos en las instalaciones.
+**③ Host de IA en las instalaciones.** Solo es necesario cuando el reconocimiento, el LLM y la síntesis deben permanecer todos en las instalaciones.
 
 | | Modelo | Rol en este diseño | Cuándo elegirlo |
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991275-sensecap-watcher-w1-b_1.jpg" alt="SenseCAP Watcher" width="110" /> | [SenseCAP Watcher](https://www.seeedstudio.com/SenseCAP-Watcher-W1-B-p-5980.html) | Terminal de voz, cliente MCP, reconocimiento facial en el dispositivo | Siempre, uno por puesto |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html) | Pasarela perimetral que ejecuta el sistema de almacén | Los datos de inventario se quedan en el sitio, hasta 20 operadores, reconocimiento facial en el Watcher |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image_6.jpg" alt="reComputer Industrial R2135-12" width="110" /> | [reComputer Industrial R2135-12](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html) | Pasarela perimetral con un acelerador Hailo-8 | Más de 20 operadores, o se requiere detección de vida |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) | Una sola caja que ejecuta el sistema de almacén, el reconocimiento facial y un servicio de voz autoalojado | 2–3 puestos comparten un host |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html) | Gateway perimetral que ejecuta el sistema de almacén | Los datos de inventario se quedan en el sitio, hasta 20 operadores, reconocimiento facial en el Watcher |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image_6.jpg" alt="reComputer Industrial R2135-12" width="110" /> | [reComputer Industrial R2135-12](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html) | Gateway perimetral con un acelerador Hailo-8 | Más de 20 operadores, o se requiere detección de vida |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) | Una sola caja que ejecuta el sistema de almacén, el reconocimiento facial y un servicio de voz autoalojado | 2–3 puestos comparten un host |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-100032662--recomputer-robotics-j5012-with-gmsl_1__1.jpg" alt="reComputer Robotics J5011" width="110" /> | [reComputer Robotics J5011](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html) | LLM y voz en las instalaciones, sin llamadas a servicios externos | La instalación debe permanecer sin conexión |
 
-El Watcher almacena como máximo **20** plantillas faciales en el dispositivo. Más allá de 20 operadores, el reconocimiento tiene que trasladarse a la pasarela: hasta 20, elige el R1125; por encima de 20, elige el R2135 con Hailo-8.
+El Watcher almacena como máximo **20** plantillas faciales en el dispositivo. Más allá de 20 operadores, el reconocimiento tiene que trasladarse al gateway: hasta 20, elige el R1125; por encima de 20, elige el R2135 con Hailo-8.
 
-Otros requisitos previos: el Watcher **solo se conecta a Wi‑Fi de 2,4 GHz** (un SSID solo de 5 GHz no aparece en el escaneo de aprovisionamiento), y la pasarela debe estar en la misma LAN. El prechequeo de despliegue del Nivel 3 verifica el runtime de contenedores de NVIDIA y alrededor de **10 GB** de espacio libre en disco (modelos de voz más archivos del motor LLM).
+Otros requisitos previos: el Watcher **solo se conecta a Wi‑Fi de 2,4 GHz** (un SSID solo de 5 GHz no aparece en el escaneo de aprovisionamiento), y el gateway debe estar en la misma LAN. El pre-chequeo de despliegue del Nivel 3 verifica el runtime de contenedores de NVIDIA y alrededor de **10 GB** de espacio libre en disco (modelos de voz más archivos del motor LLM).
 
 ### Límites de selección negativa
 
@@ -140,10 +141,10 @@ Tres pasos: montar y flashear el Watcher, iniciar los contenedores en la pasarel
 ### Paso 1: montar el Watcher
 
 :::tip[Montarlo en el puesto de trabajo]
-Monta el Watcher en el muelle de recepción, el pasillo de estanterías o la cabina de la carretilla elevadora, donde los operarios realmente registran la entrada y salida de existencias. Si se monta en la oficina, obliga a los operarios a recordar las cantidades y caminar hasta allí para introducirlas.
+Monta el Watcher en el muelle de recepción, el pasillo de estanterías o la cabina de la carretilla elevadora, donde los operarios realmente registran las existencias de entrada y salida. Si se monta en la oficina, obliga a los operarios a recordar las cantidades y desplazarse hasta allí para introducirlas.
 :::
 
-El flasheo se realiza por USB-C; el dispositivo se enumera como un puente WCH USB-UART (`0x1a86:0x55d2`). Dos imágenes de firmware, una por procesador: el agente de voz Xiaozhi va en el ESP32, el firmware de reconocimiento facial en el Himax WE2.
+El flasheo se realiza por USB-C; el dispositivo se enumera como un puente WCH USB-UART (`0x1a86:0x55d2`). Dos imágenes de firmware, una por procesador: el agente de voz Xiaozhi va en el ESP32 y el firmware de reconocimiento facial en el Himax WE2.
 
 ### Paso 2: levantar la pasarela
 
@@ -176,11 +177,11 @@ Dos superficies de integración:
 | Panel + REST API | `http://GATEWAY_IP:2125` | Lista de inventario, historial de transacciones, estado de conexión del agente |
 | Comprobación de estado | `http://GATEWAY_IP:2125/health` | `200` una vez que el servicio de almacén está listo |
 | Endpoint MCP | `18004` | Operaciones de inventario publicadas como herramientas MCP |
-| Base de datos de inventario | SQLite en `/data/warehouse.db` en el volumen `warehouse_data` | Montar o volcar para un trabajo BI/ERP externo |
+| Base de datos de inventario | SQLite en `/data/warehouse.db` en el volumen `warehouse_data` | Montar o volcar para un trabajo externo de BI/ERP |
 | Servidor de voz | WebSocket `18000`, consola de administración `18003` | Flujo de audio del Watcher (niveles 2B y 3) |
-| IA local | `8000` EdgeLLM (compatible con OpenAI), `8621` OpenVoiceStream | Completados de chat; reconocimiento, síntesis y huella de voz (nivel 3) |
+| IA local | `8000` EdgeLLM (compatible con OpenAI), `8621` OpenVoiceStream | Completado de chat; reconocimiento, síntesis y huella de voz (nivel 3) |
 
-El acceso está delimitado por rol de clave de API y por inquilino. Una clave VIEW en un endpoint de escritura devuelve `403`; las lecturas y escrituras entre inquilinos devuelven ambas `403`. Ambas se midieron; consulta "Rendimiento y datos medidos".
+El acceso se delimita por rol de clave de API y por inquilino. Una clave VIEW en un endpoint de escritura devuelve `403`; las lecturas y escrituras entre inquilinos devuelven ambas `403`. Ambas se midieron; consulta "Rendimiento y datos medidos".
 
 ## Rendimiento y datos medidos
 
@@ -203,9 +204,9 @@ Las imágenes locales están construidas para JetPack 6.2 / TensorRT 10.3.
 - `BUSINESS_RATE_LIMIT`: límite de velocidad para stock-out y otros endpoints de negocio, por defecto 600 solicitudes/minuto, contado por identidad autenticada (clave de API / sesión) y por IP de origen solo cuando no hay identidad disponible. Los límites anti-enumeración en registro, recuperación de contraseña y verificación de dispositivo cuentan por IP.
 - Número de lote `batch_no`: formato `YYYYMMDD-NNN`, asignado de forma atómica, por lo que las escrituras de stock-in concurrentes se serializan.
 
-### Mediciones de la REST API de almacén
+### Mediciones de la REST API del almacén
 
-Dispositivo: reComputer R2000 serie (arm64) ejecutando el contenedor de almacén. Condiciones: 60 s por nivel, 1 almacén, 50 materiales sembrados, backend SQLite; las solicitudes viajan sobre un enlace WAN Tailscale.
+Dispositivo: reComputer R2000 serie (arm64) ejecutando el contenedor de almacén. Condiciones: 60 s por nivel, 1 almacén, 50 materiales sembrados, backend SQLite; las solicitudes viajan a través de un enlace WAN Tailscale.
 
 | Operación | Nivel | Resultado |
 |---|---|---|
@@ -213,8 +214,8 @@ Dispositivo: reComputer R2000 serie (arm64) ejecutando el contenedor de almacén
 | `GET /api/materials/list` | concurrencia 20 | p95 824 ms, p99 5.3 s, 0% errores |
 | `GET /api/materials/list` | concurrencia 50 | p95 5.5 s, p99 8.7 s, 0% errores |
 | `POST /api/materials/stock-in` | concurrencia 5 / 10 / 20 | 0% errores en los tres niveles; 1481 lotes creados, 0 números de lote duplicados; p95 634 ms – 4.96 s |
-| `POST /api/materials/stock-out` | concurrencia 10 / 20 / 50, dos claves de API compartiendo una IP de salida | 0 HTTP 429 dentro del valor por defecto de 600 solicitudes/minuto; unas 5–6 solicitudes/s por identidad |
-| Interrupción del servicio | unos 10 req/s de tráfico de consulta, 34 s de interrupción por un reinicio de contenedor | 100% de las solicitudes fallan durante la interrupción, sin colas ni reintentos; recuperación completa en unos 1 s, sin acumulación, sin datos sucios |
+| `POST /api/materials/stock-out` | concurrencia 10 / 20 / 50, dos claves de API compartiendo una IP de salida | 0 HTTP 429 dentro del valor por defecto de 600 solicitudes/minuto; alrededor de 5–6 solicitudes/s por identidad |
+| Interrupción del servicio | alrededor de 10 solicitudes/s de tráfico de consulta, 34 s de interrupción por un reinicio de contenedor | 100% de las solicitudes fallan durante la interrupción, sin colas ni reintentos; recuperación completa en alrededor de 1 s, sin acumulación, sin datos corruptos |
 | Aislamiento por rol e inquilino | 4 sondeos de un solo disparo | 4/4 como se esperaba: escritura con clave VIEW `403`, lectura `200`; escritura entre inquilinos `403`, lectura `403` |
 
 Reproducir: `runs/2026-09-05-load/`, `evaluation/runs/2026-09-06-a2-retest/results.md`
@@ -223,21 +224,21 @@ Reproducir: `runs/2026-09-05-load/`, `evaluation/runs/2026-09-06-a2-retest/resul
 
 | Dispositivo | Modelo | Rendimiento | Condiciones |
 |---|---|---|---|
-| reComputer Robotics J5011 | EdgeLLM Qwen3.5-4B | unos 16 tokens/s | Cifra de referencia, sin registro de ejecución adjunto |
+| reComputer Robotics J5011 | EdgeLLM Qwen3.5-4B | alrededor de 16 tokens/s | Cifra de referencia, sin registro de ejecución adjunto |
 
 ### Degradación conocida
 
 - **La latencia de consulta de inventario se degrada a partir de concurrencia 20.** El p95 sube de 404 ms en concurrencia 10 a 824 ms en 20 y 5.5 s en 50, lo cual es demasiado lento para uso interactivo.
-- **La REST API no tiene cola offline.** Las solicitudes enviadas durante una interrupción de red o servicio fallan y no se reintentan; la reconexión y el backoff solo cubren el canal WebSocket de voz MCP. Mitigaciones: mantener disponible la red de la pasarela (priorizar cableado, alimentación por SAI, servicio y clientes en la misma LAN) para que la ventana de indisponibilidad se reduzca al tiempo de reinicio del dispositivo; o añadir una cola de escritura en el lado del cliente que reproduzca en orden tras reconectar y desduplique por número de lote (la cola del lado del cliente no está implementada).
+- **La REST API no tiene cola offline.** Las solicitudes enviadas durante una interrupción de red o servicio fallan y no se reintentan; la reconexión y el backoff solo cubren el canal WebSocket de voz MCP. Mitigaciones: mantener disponible la red de la pasarela (priorizar cableado, alimentación con SAI, servicio y clientes en la misma LAN) para que la ventana de indisponibilidad se reduzca al tiempo de reinicio del dispositivo; o añadir una cola de escritura en el lado del cliente que reproduzca en orden tras reconectar y elimine duplicados por número de lote (la cola en el lado del cliente no está implementada).
 
 ### Próximos pasos
 
-- Ejecutar las pruebas de carga de la REST API de almacén en la pasarela reComputer R1125-10.
+- Ejecutar las pruebas de carga de la REST API del almacén en la pasarela reComputer R1125-10.
 
 ## Fuentes de datos y recursos
 
 - Cifras de pruebas de carga, condiciones de prueba y límites conocidos: upstream `sensecraft-solutions@smart_warehouse` `description.md`, "Measured Boundaries" y "Known Limitations".
-- Rendimiento del LLM local (unos 16 tokens/s, reComputer Robotics J5011): la sección "Preset: Tier 3 · Premium" del `guide.md` upstream.
+- Rendimiento del LLM local (alrededor de 16 tokens/s, reComputer Robotics J5011): la sección "Preset: Tier 3 · Premium" del `guide.md` upstream.
 - Roles de dispositivos, composición de niveles y requisitos de acelerador: `intro.device_catalog` e `intro.presets` en el `solution.yaml` upstream.
 - Código fuente del sistema de almacén: [github.com/suharvest/warehouse_system](https://github.com/suharvest/warehouse_system).
 - Imágenes de producto: catálogo de productos de Seeed Studio (media-cdn.seeedstudio.com).
