@@ -1,5 +1,5 @@
 ---
-description: Concentrador de datos industrial multiprotocolo en un gateway de borde: fuentes OPC UA, Modbus TCP/RTU, BACnet/IP y MQTT unificadas en un único modelo de puntos, leídas y controladas mediante un único contrato MQTT versionado, con almacenamiento y reenvío hacia el norte
+description: Concentrador de datos industrial multiprotocolo en un gateway de borde - fuentes OPC UA, Modbus TCP/RTU, BACnet/IP y MQTT unificadas en un único modelo de puntos, leídas y controladas mediante un único contrato MQTT versionado, con almacenamiento y reenvío hacia el norte
 title: 'Concentrador de Datos Industrial Multiprotocolo: Hardware, Despliegue y Resultados Medidos'
 sidebar_label: 'Concentrador Industrial Multiprotocolo'
 keywords:
@@ -197,7 +197,7 @@ tu sitio y descárgala.
 4. **Confirma los puntos**: solo los candidatos confirmados se convierten en puntos gestionados. Donde el descubrimiento sea incompleto o
    no esté disponible, introduce los puntos a mano.
 5. **Verifica la calidad antes de conceder acceso de escritura**: comprueba primero los valores en vivo y la calidad por punto en la página Points.
-   6. **Configura el servicio de datos**: el broker integrado y, opcionalmente, el publicador hacia el norte.
+6. **Configura el servicio de datos**: el broker integrado y, opcionalmente, el publicador hacia el norte.
 
 Dificultad **intermedia**, unos **15 minutos** hasta una consola en ejecución; incorporar el primer controlador y
 comprobar la calidad de sus datos lleva más tiempo.
@@ -208,10 +208,10 @@ Los datos salen del host a través de tres interfaces:
 
 - **Operadores**: la consola del navegador en HTTP **8280**: gestión de fuentes, la tabla de puntos, recibos de
   comandos, gestión de plugins.
-  - **Sistemas in situ (SCADA, plataforma energética, tu propio servicio)**: suscríbete al broker integrado en
+- **Sistemas in situ (SCADA, plataforma energética, tu propio servicio)**: suscríbete al broker integrado en
   **1883**. La telemetría de puntos llega bajo `missionpack/v1/{gateway}/points/{point_id}`, con temas de presencia,
   comandos y recibos bajo el mismo contrato.
-  - **Sistemas en la nube o centrales**: habilita la publicación hacia el norte a un broker externo en **8883**. La telemetría
+- **Sistemas en la nube o centrales**: habilita la publicación hacia el norte a un broker externo en **8883**. La telemetría
   se agrupa en lotes con QoS 1, la salud por fuente y el estado de última voluntad se conservan, y un latido QoS 0 se ejecuta
   en paralelo. **La imagen publicada actualmente no tiene publicador hacia el norte.**
 
@@ -230,7 +230,6 @@ colisionar.
 
 El sobre hacia el norte es `missionpack.northbound.v1`:
 
-__CODE_LINE_PLH__
 ```json
 {
   "schema_version": "missionpack.northbound.v1",

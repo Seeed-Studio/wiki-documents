@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-26 11:06:10 (北京时间)
-// 多语言页面: 2625 个
+// 生成时间: 2026-10-30 17:51:56 (北京时间)
+// 多语言页面: 2627 个
 
 (function() {
   'use strict';
@@ -16855,6 +16855,13 @@
     "ja",
     "pt"
   ],
+  "/solutions/crayfish-behavior-recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/crowd-flow-monitoring": [
     "cn",
     "en",
@@ -16933,6 +16940,13 @@
     "pt"
   ],
   "/solutions/jetson-crowd-tracking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/rehab-posture-analysis": [
     "cn",
     "en",
     "es",

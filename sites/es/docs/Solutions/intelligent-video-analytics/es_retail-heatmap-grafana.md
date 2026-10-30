@@ -1,5 +1,5 @@
 ---
-description: Creación de un mapa de calor local de flujo de personas para tiendas y espacios de exposición: qué dispositivos necesitas, cómo desplegarlo, qué interfaces expone y tasas de fotogramas medidas en tres dispositivos
+description: Creación de un mapa de calor local de flujo de personas para tiendas y espacios de exposición - qué dispositivos necesitas, cómo desplegarlo, qué interfaces expone y tasas de fotogramas medidas en tres dispositivos
 title: 'Mapa de calor de flujo de personas en retail: construcción, despliegue y resultados medidos'
 sidebar_label: 'Mapa de calor de flujo de personas en retail'
 keywords:

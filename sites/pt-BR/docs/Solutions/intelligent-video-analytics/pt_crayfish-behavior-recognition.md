@@ -33,7 +33,7 @@ Este é um sistema assistivo de monitoramento e alerta precoce para aquicultura,
 
 ### Arquitetura e Topologia do Sistema
 
-![Aquaculture Crayfish Behavior Recognition Architecture](https://files.seeedstudio.com/ReferenceDesign/landpage_asset/crayfish_behavior_recognition/architecture-en-5ac111ce.png)
+![Arquitetura de reconhecimento de comportamento de lagostim em aquicultura](https://files.seeedstudio.com/ReferenceDesign/landpage_asset/crayfish_behavior_recognition/architecture-en-5ac111ce.png)
 
 São necessários dois elementos: a câmera de borda com IA monitorando o tanque e o dashboard recebendo eventos. Tudo é executado localmente na câmera por meio de protocolos IoT padrão, sem servidores centralizados com GPU.
 

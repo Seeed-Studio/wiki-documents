@@ -1,5 +1,5 @@
 ---
-description: Sincroniza las grabaciones de reSpeaker Clip con tu propio host reComputer para obtener transcripciones con etiquetas de hablante: hardware, despliegue, interfaces y datos medidos en Jetson Orin NX y RK3576
+description: Sincroniza las grabaciones de reSpeaker Clip con tu propio host reComputer para obtener transcripciones con etiquetas de hablante - hardware, despliegue, interfaces y datos medidos en Jetson Orin NX y RK3576
 title: Transcripción privada local para reSpeaker Clip — Selección, despliegue y datos medidos
 sidebar_label: 'reSpeaker Clip Transcription'
 keywords:

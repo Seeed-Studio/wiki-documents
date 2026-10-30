@@ -1,5 +1,5 @@
 ---
-description: Reconocimiento de productos de supermercado en el edge: un detector de una sola clase, una galería de embeddings que registra un nuevo SKU a partir de fotografías en lugar de una ejecución de entrenamiento, qué hardware necesita, cómo se despliega, los datos medidos por placa y detalles de implementación para ingenieros
+description: Reconocimiento de productos de supermercado en el edge - un detector de una sola clase, una galería de embeddings que registra un nuevo SKU a partir de fotografías en lugar de una ejecución de entrenamiento, qué hardware necesita, cómo se despliega, los datos medidos por placa y detalles de implementación para ingenieros
 title: 'Reconocimiento de Productos en el Edge: Construcción, Despliegue y Resultados Medidos'
 sidebar_label: 'Edge Product Recognition'
 keywords:

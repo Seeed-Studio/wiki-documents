@@ -1,5 +1,5 @@
 ---
-description: Control de acceso facial para una puerta sin personal: qué hardware necesitas, cómo desplegarlo, qué interfaces expone y tiempos medidos de activación de la biblioteca de rostros, apertura de puerta y rechazos
+description: Control de acceso facial para una puerta sin personal - qué hardware necesitas, cómo desplegarlo, qué interfaces expone y tiempos medidos de activación de la biblioteca de rostros, apertura de puerta y rechazos
 title: 'Acceso Facial para Tienda No Atendida: Hardware, Distribución de la Biblioteca de Rostros y Límites Medidos'
 sidebar_label: 'Acceso Facial para Tienda No Atendida'
 keywords:
@@ -311,8 +311,6 @@ Condiciones: en las dos filas de persona no registrada la biblioteca contiene so
 | Evento de reconocimiento a lectura de pin GPIO | p50 1.448 ms, p95 2.709 ms (n=22) | reCamera Pro, eventos de reconocimiento sintéticos inyectados, lectura por sysfs, sin circuito externo; un límite superior en un eslabón de la ruta de software, acción de la puerta no incluida |
 | Servicio de reconocimiento, un fotograma: caja de cara + veredicto de liveness + embedding de 512 d | 24-26 ms de tiempo de servidor, 30.3 ms p50 sobre HTTP (12 peticiones) | reComputer J40 Series (Orin NX 16 GB, JetPack 6), un fotograma de un flujo RTSP 1280x720 |
 | Primer arranque del servicio de reconocimiento | Motores TensorRT construidos en la caja en 61 s + 62 s + 73 s; el endpoint de salud responde 214 s después del arranque | reComputer J40 Series (Orin NX 16 GB, JetPack 6) |
-| Recognition service, one frame: face box + liveness verdict + 512-d embedding | 24-26 ms server time, 30.3 ms p50 over HTTP (12 requests) | reComputer J40 Series (Orin NX 16 GB, JetPack 6), one frame off a 1280x720 RTSP stream |
-| Recognition service first start | TensorRT engines built on the box in 61 s + 62 s + 73 s; health endpoint answers 214 s after start | reComputer J40 Series (Orin NX 16 GB, JetPack 6) |
 
 La lectura de `gpio130` en la reCamera Pro es uno de los pines UART4 M0 del puerto de expansión reconfigurado como GPIO — de la familia de 3,3 V, no una de las dos salidas nativas de 12–21 V de la placa.
 

@@ -1,5 +1,5 @@
 ---
-description: Control de consignas de supervisión para HVAC central en una pasarela perimetral (edge gateway): un modelo de punto único sobre OPC UA, Modbus y BACnet/IP más un medidor de energía SDM630, predicción de consignas con KNN y una ruta de escritura que verifica cada escritura leyendo de nuevo el punto
+description: Control de consignas de supervisión para HVAC central en una pasarela perimetral (edge gateway) - un modelo de punto único sobre OPC UA, Modbus y BACnet/IP más un medidor de energía SDM630, predicción de consignas con KNN y una ruta de escritura que verifica cada escritura leyendo de nuevo el punto
 title: 'Control de Consignas de HVAC en una Pasarela Perimetral: Hardware, Despliegue y Resultados Medidos'
 sidebar_label: 'Control de HVAC en Edge Gateway'
 keywords:
@@ -309,6 +309,6 @@ El modelo de predicción es KNN, entrenado con el propio historial de operación
 - **Capturas de la consola** — capturas de pantalla originales del software empaquetado ejecutándose contra los
   propios simuladores de protocolo del paquete. La configuración del simulador, el host de captura y las sumas de comprobación se
   registran en `gallery/ATTRIBUTION.md` del paquete. No se incluye ningún recurso, marca de terceros ni imagen de stock.
-  - **Diagrama de arquitectura** — dibujado a partir de un IR de arquitectura estructurada;
+- **Diagrama de arquitectura** — dibujado a partir de un IR de arquitectura estructurada;
   trabajo original, sin arte de terceros.
 

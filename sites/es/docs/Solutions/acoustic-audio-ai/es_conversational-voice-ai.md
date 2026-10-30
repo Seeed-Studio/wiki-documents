@@ -1,5 +1,5 @@
 ---
-description: Crear un terminal de voz interrumpible en un dispositivo perimetral: qué placas y micrófono necesitas, qué interfaces expone, la matriz de compatibilidad idioma × dispositivo y los resultados medidos de ASR/TTS en RK3576
+description: Crear un terminal de voz interrumpible en un dispositivo perimetral - qué placas y micrófono necesitas, qué interfaces expone, la matriz de compatibilidad idioma × dispositivo y los resultados medidos de ASR/TTS en RK3576
 title: 'IA de voz conversacional interrumpible en el Edge: creación, despliegue y resultados medidos'
 sidebar_label: 'IA de voz conversacional'
 keywords:

@@ -177,7 +177,7 @@ Os campos do formulário de cada etapa e os pacotes de aplicação estão na pá
     </a>
     </div><br />
 
-    Resumo:
+Resumo:
 
 1. **Fazer o deploy do serviço** — deployment em Docker, seja na máquina que executa a ferramenta de deployment ou via SSH para um dispositivo na rede da planta. O formulário carrega o transporte do medidor, o endpoint OPC UA, os limites de segurança, o modo de controle e os limiares de alarme.
 2. **Abrir o console** — criar o primeiro administrador e confirmar que ambas as fontes estão online com suas contagens de pontos esperadas. O assistente de acesso solicita endereço e intervalo de polling por protocolo:
@@ -186,7 +186,7 @@ Os campos do formulário de cada etapa e os pacotes de aplicação estão na pá
    <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/access-wizard-step1-en-7a3d57a8.png" alt="Primeira etapa do assistente de acesso: escolha o protocolo, preencha o endereço e o intervalo de polling"/>
    </div>
 
-   3. **Comissionar** — registrar o medidor, executar previsões em modo observe, injetar falhas de propósito e só então habilitar escritas. Antes que um lote seja enviado, confirme na página de seleção exatamente quais pontos ele cobre:
+3. **Comissionar** — registrar o medidor, executar previsões em modo observe, injetar falhas de propósito e só então habilitar escritas. Antes que um lote seja enviado, confirme na página de seleção exatamente quais pontos ele cobre:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_hvac_control/batch-select-en-9bd95ba4.png" alt="Seleção de envio em lote: os pontos cobertos por este lote e seus valores atuais"/>
@@ -196,7 +196,7 @@ Os campos do formulário de cada etapa e os pacotes de aplicação estão na pá
 
 A estimativa até um console em execução com leitura de pontos é de cerca de **60 minutos**. O comissionamento leva mais tempo, porque inclui um ciclo completo de ocupação com previsões em modo observe revisadas por quem opera a planta.
 
-  :::caution[O que a imagem publicada cobre]
+:::caution[O que a imagem publicada cobre]
 A imagem publicada `missionpack-knn:v1.6.5` **não** inclui o template SDM630, o coordenador de rollback nem o envelope de alarme. Na v1.6.5 as subetapas de modo observe ainda se aplicam; as subetapas de medidor, rollback e alarme não podem ser concluídas.
 :::
 
@@ -221,9 +221,9 @@ Tudo o que o deployment expõe fica atrás de uma porta HTTP no host do gateway.
 
 Os logs do contêiner fazem rotação em 10 MB com quatro backups (`docker logs missionpack_knn`). Exporte o trilho de auditoria de comandos, o journal de rollback e o histórico de alarmes antes que expirem.
 
-  ### Escopo do protocolo southbound
+### Escopo do protocolo southbound
 
-  Todos os pontos ficam em um único registro, limitado a **2.000 pontos**, dos quais no máximo **50 podem ser graváveis**. Os 10 pontos do medidor SDM630 são somente leitura; eles contam para os 2.000 e não para os 50.
+Todos os pontos ficam em um único registro, limitado a **2.000 pontos**, dos quais no máximo **50 podem ser graváveis**. Os 10 pontos do medidor SDM630 são somente leitura; eles contam para os 2.000 e não para os 50.
 
 | Transporte | Papel | Restrições |
 |---|---|---|
@@ -284,31 +284,3 @@ O modelo de previsão é KNN, treinado no próprio histórico operacional do pr�
 - **Dados históricos de operação** — fornecidos pelo site que faz o deployment. Nada é distribuído com o pacote, e nenhum conjunto de dados público é usado ou exigido.
 - **Capturas do console** — capturas de tela originais do software empacotado em execução contra os próprios simuladores de protocolo do pacote. A configuração do simulador, o host de captura e os checksums são registrados em `gallery/ATTRIBUTION.md` do pacote. Nenhum ativo de terceiros, marca registrada ou imagem de stock é incluído.
 - **Diagrama de arquitetura** — desenhado a partir de um IR de arquitetura estruturado; trabalho original, sem arte de terceiros.
-
-- **Write-back verification is off by default**: the prediction-run config (created in the console) must state `"rollback": { "enabled": true, "settle_seconds": 2.5 }` explicitly; a config without a `rollback` section is treated as `enabled: false`.
-- **`settle_seconds`** (0–30, default 1.0) **must be longer than the source's sampling interval**, or the readback sees the pre-write value and reports a mismatch that does not exist.
-
-### Known degradation
-
-- **The prediction rate has a structural ceiling (not fixed)**: the prediction loop sleeps a fixed interval after each cycle, so its rate is `1/(1.0 + t_cycle)`. At 2,000 points `t_cycle` is about **0.119 s**, which puts the ceiling near **0.894 cycle/s**, below the 0.90 gate the soak test requires.
-- **Only Modbus writes are verified by readback**: a BACnet output has no write priority available and is skipped.
-- **Byte order**: until checked against the meter's own display, meter points are decoded with the vendor-default (big-endian) word order and may be wrong.
-
-### Next steps
-
-- Read/write with independent readback against real OPC UA, Modbus TCP, Modbus RTU (USB-to-RS-485) and BACnet/IP devices on a reComputer R10 series or reTerminal DM.
-- A 72-hour unattended run on the same target hosts, with network, broker, process and device recovery drills during the run.
-
-## Data and asset sources
-
-- **SDM630 register map** — Eastron's published Modbus protocol document (Modbus V2 register map, IEEE-754
-  float32 input registers). Addresses follow that document; the big-endian byte and word order is the
-  vendor default.
-- **Historical operation data** — supplied by the deploying site. Nothing is distributed with the package,
-  and no public dataset is used or required.
-- **Console captures** — original screen captures of the packaged software running against the
-  package's own protocol simulators. The simulator configuration, capture host and checksums are
-  recorded in the package's `gallery/ATTRIBUTION.md`. No third-party asset, brand mark or stock image is
-  included.
-- **Architecture diagram** — drawn from a structured architecture IR; original
-  work, no third-party art.

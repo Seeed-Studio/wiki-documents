@@ -1,5 +1,5 @@
 ---
-description: Clasificación de residuos en el dispositivo en el punto de entrega: un disparo, una imagen, ocho clases de material y la categoría china de eliminación en cuatro vías por MQTT, con una devolución de llamada GPIO para una compuerta. Hardware, esquema de despliegue, contratos de salida y todos los límites medidos.
+description: Clasificación de residuos en el dispositivo en el punto de entrega - un disparo, una imagen, ocho clases de material y la categoría china de eliminación en cuatro vías por MQTT, con una devolución de llamada GPIO para una compuerta. Hardware, esquema de despliegue, contratos de salida y todos los límites medidos.
 title: 'Clasificación de Residuos en el Borde: Clases de Material, la Categoría China en Cuatro Vías y MQTT'
 sidebar_label: 'Edge Waste Sorting'
 keywords:

@@ -1,5 +1,5 @@
 ---
-description: Crea un sistema local de alertas de zona restringida, cruce de línea y merodeo para una planta, almacén o puerta de sala de servidores: qué hardware necesitas, cómo desplegarlo, qué interfaces expone y los tiempos y el rendimiento medidos en tres hosts.
+description: Crea un sistema local de alertas de zona restringida, cruce de línea y merodeo para una planta, almacén o puerta de sala de servidores - qué hardware necesitas, cómo desplegarlo, qué interfaces expone y los tiempos y el rendimiento medidos en tres hosts.
 title: "Alertas de seguridad en el borde: zonas restringidas, cruce de línea y merodeo en el borde"
 sidebar_label: 'Edge Security Alerting'
 keywords:
