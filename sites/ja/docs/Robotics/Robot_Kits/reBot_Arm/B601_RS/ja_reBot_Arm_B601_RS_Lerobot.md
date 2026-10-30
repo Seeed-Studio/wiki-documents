@@ -289,10 +289,24 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
 </div>
 
-#### ステップ 1: reBot Arm 102 を取り付ける
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>reBot Arm 102 を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 1</p>
+
 木工用クランプを使用して、reBot Arm 102 を平らなテーブルトップに固定します。土台を軽く押して、動かないことを確認します。
 
-#### ステップ 2: ケーブルを接続する
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 2</p>
+
 接続は 2 つの経路で構成されます。
 
 * **信号経路（アーム -> USB-C ケーブル -> コンピュータ）**
@@ -306,16 +320,35 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
 
 ---
 
+</div>
+</section>
+
+</div>
+
 ### B601 RS（フォロワーアーム）の取り付けと接続
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
 </div>
 
-#### ステップ 4: B601 RS を取り付ける
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>B601 RS を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 4</p>
+
 G クランプを使用して、B601 RS を平らなテーブルトップに固定します。アームを左右に軽く回転させ、土台が動かないことを確認します。
 
-#### ステップ 5: ケーブルを接続する
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 5</p>
+
 作業を始める前に、必ず電源が切れていることを確認してください。接続は 2 つの経路で構成されます。
 
 * **信号経路（アーム -> 信号分離ボード -> USB-CAN -> コンピュータ）**
@@ -335,6 +368,11 @@ G クランプを使用して、B601 RS を平らなテーブルトップに固�
 
 
 ---
+
+</div>
+</section>
+
+</div>
 
 ## ロボットアームをキャリブレーションする
 
@@ -515,6 +553,7 @@ RealSense D405 は、テーブルトップロボットマニピュレーショ�
 RealSense D435i は、深度センシング、RGB 画像、および IMU を組み合わせており、3D 再構成、SLAM、ロボットによる環境認識などの中距離～近距離アプリケーションに適しています。
 
 <div className="rebot-step-flow">
+<div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
   <div className="rebot-step-content">
@@ -668,6 +707,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -696,6 +737,7 @@ lerobot-teleoperate \
 
 Gemini 336 は Gemini 330 シリーズの新しいメンバーです。Gemini 335 の優れた深度性能を受け継ぎつつ、反射の多い屋内エリア、高ダイナミックシーンの暗部、明るい屋外環境における深度画像品質をさらに向上させています。ロボットアプリケーション向けには、認識、自己位置推定、マニピュレーションなどのタスクに対して、より安定した高品質な深度データを提供できます。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -849,6 +891,8 @@ lerobot-find-cameras orbbec
 
 </div>
 </section>
+</div>
+
 </div>
 
 </TabItem>

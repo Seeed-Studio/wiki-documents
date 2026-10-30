@@ -290,10 +290,23 @@ B601RS 与 B601DM 外观相近，请注意区分。
 
 
 
-#### 步骤 1：固定 reBot Arm 102
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>固定 reBot Arm 102</h4>
+      <p className="rebot-step-label">第 1 步</p>
+
 使用木工夹将 reBot Arm 102 固定在平整桌面上，轻轻推动确认底座不移动。
 
-#### 步骤 2：连接线束
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>连接线束</h4>
+      <p className="rebot-step-label">第 2 步</p>
 
 接线分为两条链路：
 
@@ -311,16 +324,35 @@ B601RS 与 B601DM 外观相近，请注意区分。
 
 ---
 
+</div>
+</section>
+
+</div>
+
 ### 固定和连接 B601 DM（从臂）
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp" />
 </div>
 
-#### 步骤 3：固定 B601 DM
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>固定 B601 DM</h4>
+      <p className="rebot-step-label">第 3 步</p>
+
 使用 G 型夹将 B601 DM 固定在稳定、平整的桌面上。固定后，轻轻左右转动机械臂，确认底座不会移动。
 
-#### 步骤 4：连接线束
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>连接线束</h4>
+      <p className="rebot-step-label">第 4 步</p>
+
 开始前确保电源断电。接线分为两条链路：
 
 * **信号链路（机械臂 -> 信号/电源分离板 -> USB-CAN 驱动板 -> 电脑）**
@@ -337,6 +369,11 @@ B601RS 与 B601DM 外观相近，请注意区分。
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## 校准机械臂
@@ -479,6 +516,7 @@ RealSense D405 是一款短距离双目深度相机，专为高精度近距离�
 
 RealSense D435i 集成了深度感知、RGB 成像以及 IMU，适用于中近距离应用，例如 3D 重建、SLAM 以及机器人环境感知。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -634,6 +672,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -662,6 +702,7 @@ lerobot-teleoperate \
 
 Gemini 336 是 Gemini 330 系列的新成员。它继承了 Gemini 335 强大的深度性能，并在室内反光区域、高动态场景中的暗区以及户外强光环境下进一步提升了深度成像质量。在机器人应用中，可为感知、定位和操作等任务提供更稳定、更高质量的深度数据。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -818,6 +859,8 @@ lerobot-find-cameras orbbec
 
 </div>
 </section>
+</div>
+
 </div>
 
 

@@ -185,10 +185,24 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
 </div>
 
-#### ステップ 1: reBot Arm 102 を取り付ける
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>reBot Arm 102 を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 1</p>
+
 木工用クランプを使用して、reBot Arm 102 を平らなテーブルトップに固定します。土台を軽く押して、動かないことを確認します。
 
-#### ステップ 2: ケーブルを接続する
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 2</p>
+
 接続は 2 つの経路で構成されます。
 
 * **信号経路（アーム -> USB-C ケーブル -> コンピュータ）**
@@ -202,16 +216,35 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
 
 ---
 
+</div>
+</section>
+
+</div>
+
 ### B601 RS（フォロワーアーム）の取り付けと接続
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
 </div>
 
-#### ステップ 4: B601 RS を取り付ける
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>B601 RS を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 4</p>
+
 G クランプを使用して、B601 RS を平らなテーブルトップに固定します。アームを左右に軽く回転させ、土台が動かないことを確認します。
 
-#### ステップ 5: ケーブルを接続する
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 5</p>
+
 作業を始める前に、必ず電源が切れていることを確認してください。接続は 2 つの経路で構成されます。
 
 * **信号経路（アーム -> 信号分離ボード -> USB-CAN -> コンピュータ）**
@@ -238,6 +271,11 @@ G クランプを使用して、B601 RS を平らなテーブルトップに固�
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## MotorBridge を使ってアームをキャリブレーションし、初回動作を完了する
@@ -274,6 +312,7 @@ Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-A
 
 以下の手順に従って Miniforge をインストールし、reBot 開発用の分離された Python 環境を作成します。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -897,4 +936,6 @@ DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9
 
 </div>
 </section>
+</div>
+
 </div>

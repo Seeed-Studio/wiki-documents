@@ -185,10 +185,24 @@ B601 RS and B601 DM look similar. Make sure you distinguish between them.
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
 </div>
 
-#### Step 1: Mount the reBot Arm 102
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Mount the reBot Arm 102</h4>
+      <p className="rebot-step-label">Step 1</p>
+
 Use woodworking clamps to secure the reBot Arm 102 to a flat tabletop. Gently push the base to confirm that it does not move.
 
-#### Step 2: Connect the Cables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Connect the Cables</h4>
+      <p className="rebot-step-label">Step 2</p>
+
 The connections consist of two paths:
 
 * **Signal path (arm -> USB-C cable -> computer)**
@@ -202,16 +216,35 @@ The connections consist of two paths:
 
 ---
 
+</div>
+</section>
+
+</div>
+
 ### Mount and Connect the B601 RS (Follower Arm)
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
 </div>
 
-#### Step 4: Mount the B601 RS
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Mount the B601 RS</h4>
+      <p className="rebot-step-label">Step 4</p>
+
 Use G-clamps to secure the B601 RS to a flat tabletop. Gently rotate the arm left and right to confirm that the base does not move.
 
-#### Step 5: Connect the Cables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>Connect the Cables</h4>
+      <p className="rebot-step-label">Step 5</p>
+
 Make sure the power is disconnected before starting. The connections consist of two paths:
 
 * **Signal path (arm -> signal separation board -> USB-CAN -> computer)**
@@ -238,6 +271,11 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## Use MotorBridge to Calibrate the Arm and Complete the First Run
@@ -274,6 +312,7 @@ If you purchased a pre-assembled kit, tell the agent during the motor ID step: "
 
 Follow these steps in order to install Miniforge and create an isolated Python environment for reBot development.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -897,4 +936,6 @@ First select `rebot-arm-robstride` under **Robot Model** in [MotorBridge Studio]
 
 </div>
 </section>
+</div>
+
 </div>

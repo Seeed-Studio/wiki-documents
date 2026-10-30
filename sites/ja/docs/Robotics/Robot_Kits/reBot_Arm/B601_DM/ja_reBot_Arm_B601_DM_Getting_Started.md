@@ -164,11 +164,23 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
 
 
 
-#### ステップ 1：reBot Arm 102 を取り付ける
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>reBot Arm 102 を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 1</p>
 
 木工用クランプを使用して、reBot Arm 102 を平らなテーブルトップに固定します。ベースを軽く押して、動かないことを確認します。
 
-#### ステップ 2：ケーブルを接続する
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 2</p>
 
 <div align="center">
     <img width={800}
@@ -185,6 +197,10 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
   1. **12 V 2 A 電源アダプタ**をアームの電源コネクタに接続します。
   2. アダプタを電源タップに接続してアームの電源を入れます。
 
+</div>
+</section>
+
+</div>
 
 ### B601 DM（フォロワーアーム）の取り付けと接続
 
@@ -193,11 +209,23 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png" />
 </div>
 
-#### ステップ 3：B601 DM を取り付ける
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>B601 DM を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 3</p>
 
 G クランプを使用して、B601 DM を安定した平らなテーブルトップに固定します。固定後、アームを左右に軽く回転させ、ベースが動かないことを確認します。
 
-#### ステップ 4：ケーブルを接続する
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 4</p>
 
 作業を始める前に、必ず電源が切れていることを確認してください。接続は次の 2 つの経路で構成されます。
 
@@ -215,6 +243,11 @@ G クランプを使用して、B601 DM を安定した平らなテーブルト�
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## ステップ 2：モーター ID のリセット
@@ -358,6 +391,7 @@ Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-
 
 以下の手順に従って Miniforge をインストールし、reBot 開発用の分離された Python 環境を作成します。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -521,6 +555,8 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 
 </div>
 </section>
+</div>
+
 </div>
 
 ## FAQ

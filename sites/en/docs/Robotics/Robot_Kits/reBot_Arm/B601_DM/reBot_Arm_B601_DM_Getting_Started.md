@@ -164,11 +164,23 @@ B601 RS and B601 DM look similar. Make sure you distinguish between them.
 
 
 
-#### Step 1: Mount the reBot Arm 102
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Mount the reBot Arm 102</h4>
+      <p className="rebot-step-label">Step 1</p>
 
 Use woodworking clamps to secure the reBot Arm 102 to a flat tabletop. Gently push the base to confirm that it does not move.
 
-#### Step 2: Connect the Cables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Connect the Cables</h4>
+      <p className="rebot-step-label">Step 2</p>
 
 <div align="center">
     <img width={800}
@@ -185,6 +197,10 @@ The connections consist of two paths:
   1. Connect the **12 V 2 A power adapter** to the arm's power connector.
   2. Connect the adapter to the power strip to power on the arm.
 
+</div>
+</section>
+
+</div>
 
 ### Mount and Connect the B601 DM (Follower Arm)
 
@@ -193,11 +209,23 @@ The connections consist of two paths:
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png" />
 </div>
 
-#### Step 3: Mount the B601 DM
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>Mount the B601 DM</h4>
+      <p className="rebot-step-label">Step 3</p>
 
 Use G-clamps to secure the B601 DM to a stable, flat tabletop. After securing it, gently rotate the arm left and right to confirm that the base does not move.
 
-#### Step 4: Connect the Cables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Connect the Cables</h4>
+      <p className="rebot-step-label">Step 4</p>
 
 Make sure the power is disconnected before starting. The connections consist of two paths:
 
@@ -215,6 +243,11 @@ Make sure the power is disconnected before starting. The connections consist of 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## Step 2: Reset Motors ID
@@ -358,6 +391,7 @@ Please refer to the video and text tutorial. Before controlling the robotic arm,
 
 Follow these steps in order to install Miniforge and create an isolated Python environment for reBot development.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -521,6 +555,8 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 
 </div>
 </section>
+</div>
+
 </div>
 
 ## FAQ

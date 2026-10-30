@@ -286,11 +286,23 @@ El B601 RS y el B601 DM se parecen. Asegúrate de distinguirlos.
 
 
 
-#### Paso 1: Montar el reBot Arm 102
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Montar el reBot Arm 102</h4>
+      <p className="rebot-step-label">Paso 1</p>
 
 Utiliza sargentos para madera para fijar el reBot Arm 102 a una mesa plana. Empuja suavemente la base para confirmar que no se mueve.
 
-#### Paso 2: Conectar los cables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Conectar los cables</h4>
+      <p className="rebot-step-label">Paso 2</p>
 
 <div align="center">
     <img width={800}
@@ -307,6 +319,10 @@ Las conexiones constan de dos rutas:
   1. Conecta el **adaptador de alimentación de 12 V 2 A** al conector de alimentación del brazo.
   2. Conecta el adaptador a la regleta para encender el brazo.
 
+</div>
+</section>
+
+</div>
 
 ### Montar y conectar el B601 DM (brazo seguidor)
 
@@ -315,11 +331,23 @@ Las conexiones constan de dos rutas:
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png" />
 </div>
 
-#### Paso 3: Montar el B601 DM
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>Montar el B601 DM</h4>
+      <p className="rebot-step-label">Paso 3</p>
 
 Utiliza sargentos en C para fijar el B601 DM a una mesa estable y plana. Después de fijarlo, gira suavemente el brazo hacia la izquierda y la derecha para confirmar que la base no se mueve.
 
-#### Paso 4: Conectar los cables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Conectar los cables</h4>
+      <p className="rebot-step-label">Paso 4</p>
 
 Asegúrate de que la alimentación esté desconectada antes de empezar. Las conexiones constan de dos rutas:
 
@@ -337,6 +365,11 @@ Asegúrate de que la alimentación esté desconectada antes de empezar. Las cone
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## Calibrar el brazo robótico
@@ -482,6 +515,7 @@ La RealSense D405 es una cámara estéreo de profundidad de corto alcance diseñ
 
 La RealSense D435i combina percepción de profundidad, imagen RGB y una IMU, lo que la hace adecuada para aplicaciones de rango medio a corto, como reconstrucción 3D, SLAM y percepción del entorno robótico.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -636,6 +670,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -664,6 +700,7 @@ proporcionando flujos sincronizados de RGB y profundidad con una alineación pre
 
 Gemini 336 es un nuevo miembro de la serie Gemini 330. Hereda el sólido rendimiento de profundidad de Gemini 335 y mejora aún más la calidad de la imagen de profundidad en áreas interiores reflectantes, regiones oscuras en escenas de alto rango dinámico y entornos exteriores brillantes. Para aplicaciones de robótica, puede proporcionar datos de profundidad más estables y de alta calidad para tareas como percepción, localización y manipulación.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -819,6 +856,8 @@ Luego confirma el `serial` real y actualiza `serial_number_or_name` en tu comand
 
 </div>
 </section>
+</div>
+
 </div>
 
 </TabItem>

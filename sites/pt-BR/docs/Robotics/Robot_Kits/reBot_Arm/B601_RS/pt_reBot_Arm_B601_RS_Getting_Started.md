@@ -183,10 +183,24 @@ Em seguida, conecte o módulo USB-para-CAN, a placa divisora de energia e sinal,
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
 </div>
 
-#### Etapa 1: Montar o reBot Arm 102
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Montar o reBot Arm 102</h4>
+      <p className="rebot-step-label">Etapa 1</p>
+
 Use grampos de marcenaria para fixar o reBot Arm 102 em uma superfície de mesa plana. Empurre levemente a base para confirmar que ela não se move.
 
-#### Etapa 2: Conectar os Cabos
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Conectar os Cabos</h4>
+      <p className="rebot-step-label">Etapa 2</p>
+
 As conexões consistem em dois caminhos:
 
 * **Caminho de sinal (braço -> cabo USB-C -> computador)**
@@ -200,16 +214,35 @@ As conexões consistem em dois caminhos:
 
 ---
 
+</div>
+</section>
+
+</div>
+
 ### Montar e Conectar o B601 RS (Braço Seguidor)
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
 </div>
 
-#### Etapa 4: Montar o B601 RS
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Montar o B601 RS</h4>
+      <p className="rebot-step-label">Etapa 4</p>
+
 Use grampos em G para fixar o B601 RS em uma superfície de mesa plana. Gire suavemente o braço para a esquerda e para a direita para confirmar que a base não se move.
 
-#### Etapa 5: Conectar os Cabos
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>Conectar os Cabos</h4>
+      <p className="rebot-step-label">Etapa 5</p>
+
 Certifique-se de que a alimentação esteja desconectada antes de começar. As conexões consistem em dois caminhos:
 
 * **Caminho de sinal (braço -> placa de separação de sinal -> USB-CAN -> computador)**
@@ -236,6 +269,11 @@ Consulte o vídeo e o tutorial em texto. Antes de controlar o braço robótico, 
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## Use o MotorBridge para Calibrar o Braço e Concluir a Primeira Execução
@@ -272,6 +310,7 @@ Se você comprou um kit pré-montado, diga ao agente durante a etapa de ID do mo
 
 Siga estas etapas na ordem para instalar o Miniforge e criar um ambiente Python isolado para o desenvolvimento com o reBot.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -895,4 +934,6 @@ Primeiro selecione `rebot-arm-robstride` em **Robot Model** no [MotorBridge Stud
 
 </div>
 </section>
+</div>
+
 </div>

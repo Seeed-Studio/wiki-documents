@@ -287,10 +287,24 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
 </div>
 
-#### Etapa 1: Montar o reBot Arm 102
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Montar o reBot Arm 102</h4>
+      <p className="rebot-step-label">Etapa 1</p>
+
 Use grampos de marcenaria para fixar o reBot Arm 102 em uma superfície de mesa plana. Empurre levemente a base para confirmar que ela não se move.
 
-#### Etapa 2: Conectar os Cabos
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Conectar os Cabos</h4>
+      <p className="rebot-step-label">Etapa 2</p>
+
 As conexões consistem em dois caminhos:
 
 * **Caminho de sinal (braço -> cabo USB-C -> computador)**
@@ -304,16 +318,35 @@ As conexões consistem em dois caminhos:
 
 ---
 
+</div>
+</section>
+
+</div>
+
 ### Montar e Conectar o B601 RS (Braço Seguidor)
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
 </div>
 
-#### Etapa 4: Montar o B601 RS
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Montar o B601 RS</h4>
+      <p className="rebot-step-label">Etapa 4</p>
+
 Use grampos em G para fixar o B601 RS em uma superfície de mesa plana. Gire suavemente o braço para a esquerda e para a direita para confirmar que a base não se move.
 
-#### Etapa 5: Conectar os Cabos
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>Conectar os Cabos</h4>
+      <p className="rebot-step-label">Etapa 5</p>
+
 Certifique-se de que a alimentação esteja desconectada antes de começar. As conexões consistem em dois caminhos:
 
 * **Caminho de sinal (braço -> placa de separação de sinal -> USB-CAN -> computador)**
@@ -333,6 +366,11 @@ Certifique-se de que a alimentação esteja desconectada antes de começar. As c
 
 
 ---
+
+</div>
+</section>
+
+</div>
 
 ## Calibrar o braço robótico
 
@@ -513,6 +551,7 @@ A RealSense D405 é uma câmera estéreo de profundidade de curto alcance projet
 A RealSense D435i combina detecção de profundidade, imagem RGB e um IMU, tornando-a adequada para aplicações de médio a curto alcance, como reconstrução 3D, SLAM e percepção de ambiente robótico.
 
 <div className="rebot-step-flow">
+<div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
   <div className="rebot-step-content">
@@ -666,6 +705,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -694,6 +735,7 @@ fornecendo fluxos sincronizados de RGB e profundidade com alinhamento preciso de
 
 Gemini 336 é um novo membro da série Gemini 330. Ele herda o forte desempenho de profundidade do Gemini 335 e melhora ainda mais a qualidade de imagem de profundidade em áreas internas reflexivas, regiões escuras em cenas de alta dinâmica e ambientes externos claros. Para aplicações de robótica, ele pode fornecer dados de profundidade mais estáveis e de alta qualidade para tarefas como percepção, localização e manipulação.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -847,6 +889,8 @@ Em seguida, confirme o `serial` real e atualize `serial_number_or_name` no seu c
 
 </div>
 </section>
+</div>
+
 </div>
 
 </TabItem>

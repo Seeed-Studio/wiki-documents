@@ -167,10 +167,23 @@ B601RS 与 B601DM 外观相近，请注意区分。
 
 
 
-#### 步骤 1：固定 reBot Arm 102
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>固定 reBot Arm 102</h4>
+      <p className="rebot-step-label">第 1 步</p>
+
 使用木工夹将 reBot Arm 102 固定在平整桌面上，轻轻推动确认底座不移动。
 
-#### 步骤 2：连接线束
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>连接线束</h4>
+      <p className="rebot-step-label">第 2 步</p>
 
 接线分为两条链路：
 
@@ -188,16 +201,35 @@ B601RS 与 B601DM 外观相近，请注意区分。
 
 ---
 
+</div>
+</section>
+
+</div>
+
 ### 固定和连接 B601 DM（从臂）
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp" />
 </div>
 
-#### 步骤 3：固定 B601 DM
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>固定 B601 DM</h4>
+      <p className="rebot-step-label">第 3 步</p>
+
 使用 G 型夹将 B601 DM 固定在稳定、平整的桌面上。固定后，轻轻左右转动机械臂，确认底座不会移动。
 
-#### 步骤 4：连接线束
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>连接线束</h4>
+      <p className="rebot-step-label">第 4 步</p>
+
 开始前确保电源断电。接线分为两条链路：
 
 * **信号链路（机械臂 -> 信号/电源分离板 -> USB-CAN 驱动板 -> 电脑）**
@@ -214,6 +246,11 @@ B601RS 与 B601DM 外观相近，请注意区分。
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## 第二步：写入电机ID及零点
@@ -363,6 +400,7 @@ B601RS 与 B601DM 外观相近，请注意区分。
 
 按照正确的先后顺序操作，即可安装 Miniforge 并为 reBot 创建独立的 Python 环境。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -523,6 +561,8 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 
 </div>
 </section>
+</div>
+
 </div>
 
 

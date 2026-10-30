@@ -182,10 +182,24 @@ B601RS与B601DM外观相近,请注意区分
 
 
 
-#### 步骤 1：固定 reBot Arm 102
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>固定 reBot Arm 102</h4>
+      <p className="rebot-step-label">第 1 步</p>
+
 使用木工夹将 reBot Arm 102 固定在平整桌面上，轻轻推动确认底座不移动。
 
-#### 步骤 2：连接线束
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>连接线束</h4>
+      <p className="rebot-step-label">第 2 步</p>
+
 接线分为两条链路：
 
 * **信号链路（机械臂 -> USB-C 线 -> 电脑）**
@@ -202,16 +216,35 @@ B601RS与B601DM外观相近,请注意区分
 
 ---
 
+</div>
+</section>
+
+</div>
+
 ### 固定和连接 B601 RS（从臂）
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.webp" />
 </div>
 
-#### 步骤 4：固定 B601 RS
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>固定 B601 RS</h4>
+      <p className="rebot-step-label">第 4 步</p>
+
 使用 G 型夹将 B601 RS 固定在平整桌面上，轻轻左右转动确认底座不移动。
 
-#### 步骤 5：连接线束
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>连接线束</h4>
+      <p className="rebot-step-label">第 5 步</p>
+
 开始前确保电源断电。接线分为两条链路：
 
 * **信号链路（机械臂 -> 信号分离板 -> USB-CAN -> 电脑）**
@@ -239,6 +272,11 @@ B601RS与B601DM外观相近,请注意区分
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1MEJV6TELk&p=1&autoplay=0&muted=1" title="Bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## 使用 MotorBridge 平台校准机械臂并完成首次运行
@@ -271,6 +309,7 @@ B601RS与B601DM外观相近,请注意区分
 
 按照正确的先后顺序操作，即可安装 Miniforge 并为 reBot 创建独立的 Python 环境。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -880,6 +919,8 @@ reBot Arm B601-RS 的大多数示例使用 MIT 模式运行。
 
 </div>
 </section>
+
+</div>
 
 ## 常见问题
 

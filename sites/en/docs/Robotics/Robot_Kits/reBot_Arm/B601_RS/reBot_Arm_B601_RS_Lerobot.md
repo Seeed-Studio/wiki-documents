@@ -289,10 +289,24 @@ B601 RS and B601 DM look similar. Make sure you distinguish between them.
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
 </div>
 
-#### Step 1: Mount the reBot Arm 102
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Mount the reBot Arm 102</h4>
+      <p className="rebot-step-label">Step 1</p>
+
 Use woodworking clamps to secure the reBot Arm 102 to a flat tabletop. Gently push the base to confirm that it does not move.
 
-#### Step 2: Connect the Cables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Connect the Cables</h4>
+      <p className="rebot-step-label">Step 2</p>
+
 The connections consist of two paths:
 
 * **Signal path (arm -> USB-C cable -> computer)**
@@ -306,16 +320,35 @@ The connections consist of two paths:
 
 ---
 
+</div>
+</section>
+
+</div>
+
 ### Mount and Connect the B601 RS (Follower Arm)
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
 </div>
 
-#### Step 4: Mount the B601 RS
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Mount the B601 RS</h4>
+      <p className="rebot-step-label">Step 4</p>
+
 Use G-clamps to secure the B601 RS to a flat tabletop. Gently rotate the arm left and right to confirm that the base does not move.
 
-#### Step 5: Connect the Cables
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>Connect the Cables</h4>
+      <p className="rebot-step-label">Step 5</p>
+
 Make sure the power is disconnected before starting. The connections consist of two paths:
 
 * **Signal path (arm -> signal separation board -> USB-CAN -> computer)**
@@ -335,6 +368,11 @@ Make sure the power is disconnected before starting. The connections consist of 
 
 
 ---
+
+</div>
+</section>
+
+</div>
 
 ## Calibrate the Robotic Arm
 
@@ -515,6 +553,7 @@ The RealSense D405 is a short-range stereo depth camera designed for high-precis
 The RealSense D435i combines depth sensing, RGB imaging, and an IMU, making it suitable for mid- to close-range applications such as 3D reconstruction, SLAM, and robotic environment perception.
 
 <div className="rebot-step-flow">
+<div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
   <div className="rebot-step-content">
@@ -668,6 +707,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -696,6 +737,7 @@ providing synchronized RGB and depth streams with precise depth-to-color alignme
 
 Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -849,6 +891,8 @@ Then confirm the actual `serial` and update `serial_number_or_name` in your comm
 
 </div>
 </section>
+</div>
+
 </div>
 
 </TabItem>
