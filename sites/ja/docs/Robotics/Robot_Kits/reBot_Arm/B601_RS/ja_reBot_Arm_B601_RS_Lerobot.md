@@ -284,7 +284,10 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
 
 ### reBot Arm 102（リーダーアーム）の取り付けと接続
 
-![Mounting and connecting the reBot Arm 102 (leader arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
 
 #### ステップ 1: reBot Arm 102 を取り付ける
 木工用クランプを使用して、reBot Arm 102 を平らなテーブルトップに固定します。土台を軽く押して、動かないことを確認します。
@@ -304,7 +307,10 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
 ---
 
 ### B601 RS（フォロワーアーム）の取り付けと接続
-![B601 RS cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
+</div>
 
 #### ステップ 4: B601 RS を取り付ける
 G クランプを使用して、B601 RS を平らなテーブルトップに固定します。アームを左右に軽く回転させ、土台が動かないことを確認します。
@@ -322,7 +328,10 @@ G クランプを使用して、B601 RS を平らなテーブルトップに固�
   2. 電源用 XT30 ケーブルを使用して、信号分離モジュールと 48 V 12.5 A 電源を接続します。
   3. 電源をコンセントに接続します。アームがしっかり固定されていること、ケーブルが正しいこと、周囲が安全であることを確認したうえで、電源を入れます。
 
-![Connecting power to the B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp" />
+</div>
 
 
 ---

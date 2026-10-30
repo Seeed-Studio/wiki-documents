@@ -282,7 +282,10 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 
 ### Montar e Conectar o reBot Arm 102 (Braço Líder)
 
-![Montagem e conexão do reBot Arm 102 (braço líder)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
 
 #### Etapa 1: Montar o reBot Arm 102
 Use grampos de marcenaria para fixar o reBot Arm 102 em uma superfície de mesa plana. Empurre levemente a base para confirmar que ela não se move.
@@ -302,7 +305,10 @@ As conexões consistem em dois caminhos:
 ---
 
 ### Montar e Conectar o B601 RS (Braço Seguidor)
-![Conexão de cabos do B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
+</div>
 
 #### Etapa 4: Montar o B601 RS
 Use grampos em G para fixar o B601 RS em uma superfície de mesa plana. Gire suavemente o braço para a esquerda e para a direita para confirmar que a base não se move.
@@ -320,7 +326,10 @@ Certifique-se de que a alimentação esteja desconectada antes de começar. As c
   2. Use o cabo de alimentação XT30 para conectar o módulo de separação de sinal à fonte de alimentação 48 V 12,5 A.
   3. Conecte a fonte de alimentação à tomada. Depois de confirmar que o braço está fixado, os cabos estão corretos e a área ao redor está livre, ligue a alimentação.
 
-![Conectando a alimentação ao B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp" />
+</div>
 
 
 ---

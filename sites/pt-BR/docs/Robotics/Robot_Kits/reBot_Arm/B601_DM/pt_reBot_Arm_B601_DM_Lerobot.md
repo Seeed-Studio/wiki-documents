@@ -290,7 +290,10 @@ Use grampos de marcenaria para fixar o reBot Arm 102 em uma superfície de mesa 
 
 #### Etapa 2: Conectar os Cabos
 
-![Montagem e conexão do reBot Arm 102 (braço líder)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
 
 
 As conexões consistem em dois caminhos:
@@ -305,7 +308,10 @@ As conexões consistem em dois caminhos:
 
 ### Montar e Conectar o B601 DM (Braço Seguidor)
 
-![Conexão de cabos do B601 DM](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png" />
+</div>
 
 #### Etapa 3: Montar o B601 DM
 
@@ -326,7 +332,10 @@ Certifique-se de que a alimentação esteja desconectada antes de começar. As c
   2. Conecte a placa de separação de sinal/alimentação ao **adaptador de energia 24 V**.
   3. Conecte o adaptador de energia à tomada. Depois de confirmar que o braço está fixado, os cabos estão corretos e a área ao redor está livre, ligue a alimentação.
 
-![Conectando o B601 DM (braço seguidor)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
 
 ## Calibrar o Braço Robótico
 

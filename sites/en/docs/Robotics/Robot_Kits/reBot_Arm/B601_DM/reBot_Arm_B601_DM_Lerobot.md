@@ -292,7 +292,10 @@ Use woodworking clamps to secure the reBot Arm 102 to a flat tabletop. Gently pu
 
 #### Step 2: Connect the Cables
 
-![Mounting and connecting the reBot Arm 102 (leader arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
 
 
 The connections consist of two paths:
@@ -307,7 +310,10 @@ The connections consist of two paths:
 
 ### Mount and Connect the B601 DM (Follower Arm)
 
-![B601 DM cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png" />
+</div>
 
 #### Step 3: Mount the B601 DM
 
@@ -328,7 +334,10 @@ Make sure the power is disconnected before starting. The connections consist of 
   2. Connect the signal/power separation board to the **24 V power adapter**.
   3. Connect the power adapter to the outlet. After confirming that the arm is secured, the cables are correct, and the surrounding area is clear, turn on the power.
 
-![Connecting the B601 DM (follower arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
 
 ## Calibrate the Robotic Arm
 

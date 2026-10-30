@@ -180,7 +180,10 @@ B601 RS and B601 DM look similar. Make sure you distinguish between them.
 
 ### Mount and Connect the reBot Arm 102 (Leader Arm)
 
-![Mounting and connecting the reBot Arm 102 (leader arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
 
 #### Step 1: Mount the reBot Arm 102
 Use woodworking clamps to secure the reBot Arm 102 to a flat tabletop. Gently push the base to confirm that it does not move.
@@ -200,7 +203,10 @@ The connections consist of two paths:
 ---
 
 ### Mount and Connect the B601 RS (Follower Arm)
-![B601 RS cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
+</div>
 
 #### Step 4: Mount the B601 RS
 Use G-clamps to secure the B601 RS to a flat tabletop. Gently rotate the arm left and right to confirm that the base does not move.
@@ -218,7 +224,10 @@ Make sure the power is disconnected before starting. The connections consist of 
   2. Use the power XT30 cable to connect the signal separation module to the 48 V 12.5 A power supply.
   3. Connect the power supply to the outlet. After confirming that the arm is secured, the cables are correct, and the surrounding area is clear, turn on the power.
 
-![Connecting power to the B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp" />
+</div>
 
 
 ---

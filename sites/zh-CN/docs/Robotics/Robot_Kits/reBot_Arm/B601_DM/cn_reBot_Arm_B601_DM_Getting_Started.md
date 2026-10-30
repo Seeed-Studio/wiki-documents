@@ -181,12 +181,18 @@ B601RS 与 B601DM 外观相近，请注意区分。
   1. 将 **12V 2A 电源适配器**连接到机械臂的电源接口。
   2. 将适配器接入插板，完成上电。
 
-![固定和连接 reBot Arm 102（主臂）](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
 
 ---
 
 ### 固定和连接 B601 DM（从臂）
-![连接 B601 DM 线束](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp" />
+</div>
 
 #### 步骤 3：固定 B601 DM
 使用 G 型夹将 B601 DM 固定在稳定、平整的桌面上。固定后，轻轻左右转动机械臂，确认底座不会移动。
@@ -205,7 +211,10 @@ B601RS 与 B601DM 外观相近，请注意区分。
   2. 将信号/电源分离板连接至 **24V 电源适配器**。
   3. 将电源适配器接入插座。确认机械臂固定、线束正确且周围无障碍后，再打开电源。
 
-![连接 B601 DM（从臂）](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
 
 ## 第二步：写入电机ID及零点
 

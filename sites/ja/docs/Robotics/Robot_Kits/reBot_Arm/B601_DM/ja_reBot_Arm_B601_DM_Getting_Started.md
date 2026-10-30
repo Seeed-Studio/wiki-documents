@@ -170,7 +170,10 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
 
 #### ステップ 2：ケーブルを接続する
 
-![Mounting and connecting the reBot Arm 102 (leader arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
 
 
 接続は次の 2 つの経路で構成されます。
@@ -185,7 +188,10 @@ B601 RS と B601 DM は外観が似ています。必ず見分けてください
 
 ### B601 DM（フォロワーアーム）の取り付けと接続
 
-![B601 DM cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png" />
+</div>
 
 #### ステップ 3：B601 DM を取り付ける
 
@@ -206,7 +212,10 @@ G クランプを使用して、B601 DM を安定した平らなテーブルト�
   2. 信号/電源分離ボードを **24 V 電源アダプタ**に接続します。
   3. 電源アダプタをコンセントに接続します。アームが確実に固定されていること、ケーブルが正しいこと、周囲が安全であることを確認したうえで、電源を入れます。
 
-![Connecting the B601 DM (follower arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
 
 ## ステップ 2：モーター ID のリセット
 
