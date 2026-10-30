@@ -1,5 +1,6 @@
 ﻿---
 description: 综合故障排除指南和常见问题解答，涵盖Reachy Mini的常见问题、组装、连接、硬件、SDK和错误消息。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 故障排除与常见问题
 slug: /reachymini_troubleshooting
 keywords:
