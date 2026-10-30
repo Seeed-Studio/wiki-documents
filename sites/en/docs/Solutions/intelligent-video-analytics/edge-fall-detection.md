@@ -1,6 +1,7 @@
 ---
 description: Building a local fall-alert system for elder care, assisted living and home care — what devices you need, how to deploy it, which interfaces it exposes, and measured data across seven devices
 title: 'On-Device AI Fall Detection: Build, Deploy, and Measured Results'
+sidebar_label: 'On-Device AI Fall Detection'
 keywords:
   - fall detection system
   - fall alert
@@ -22,7 +23,7 @@ last_update:
   date: 09/01/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-01'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/edge-fall-detection/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -163,9 +164,9 @@ Two things are on site: the camera that produces the picture, and the host that 
 | | Detector host | Streams per unit | When to pick it |
 |---|---|---:|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera 2002 / Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>Camera and compute in one unit | 1 | One room, the fastest way to get a single alert working |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3576 / RK3588](https://www.seeedstudio.com/reComputer-RK3588-40-p-6818.html) | 1 | Already standardized on Rockchip boards |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3576 / RK3588](https://www.seeedstudio.com/reComputer-RK3588-40-p-6818.html) | 1–3 / 5 | Already standardized on Rockchip boards; RK3576 natively optimized delivers 3 streams, baseline 1 stream |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html) | 16 | Need one box to handle many streams |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Orin Nano / Orin NX | 7 / 8 | Multiple rooms, and want headroom to grow |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J3011 / Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Orin Nano / Orin NX | 7 / 8 | Multiple rooms, and want headroom to grow |
 
 Stream counts are derived from measured accelerator throughput (see "Stream counts" below).
 
@@ -181,8 +182,8 @@ Three things: whatever produces the detection events, one host that decides what
 
 | | Alarm host | Detector runs | When to pick it |
 |---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Detector, alarm service, broker and console on one Jetson | On this box, TensorRT engine built on first deploy | The cameras exist and the site has no gateway yet. Takes the most streams of the three packages |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Same stack, larger pose model | On this box, YOLO11m instead of YOLO11s | More rooms than one J3011 can watch, or a larger pose model is wanted. Same package, a different option in the deploy form |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Detector, alarm service, broker and console on one Jetson | On this box, TensorRT engine built on first deploy | The cameras exist and the site has no gateway yet. Takes the most streams of the three packages |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Same stack, larger pose model | On this box, YOLO11m instead of YOLO11s | More rooms than one J3011 can watch, or a larger pose model is wanted. Same package, a different option in the deploy form |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Fanless industrial enclosure | On this box, pre-compiled HEF | The host goes in a cabinet or a riser: fanless, wide temperature, DIN rail or wall mount |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>All-in-one AI camera; the alarm service goes on a machine you already have | On the camera | There are no cameras yet, or the cameras are already detecting. The alarm service is brought up by hand — the deploy form has no device class for a gateway you supply |
 
@@ -440,7 +441,7 @@ Reproduce: [`evaluation/`](https://github.com/suharvest/edgefallkit/tree/main/ev
 
 #### Stream counts
 
-"Inference-bound streams" = aggregate throughput ÷ 15 FPS. It counts the accelerator only and is a theoretical ceiling. "Recommended streams" discounts that — end-to-end throughput measured on RK reaches only 28%–44% of the inference ceiling, because RTSP decode, tracking, the state machine and MQTT also consume CPU and memory bandwidth. With other workloads still running on the board, end-to-end throughput measured about 8.6 FPS on RK3588 and about 4.9 FPS on RK3576.
+"Inference-bound streams" = aggregate throughput ÷ 15 FPS. It counts the accelerator only and is a theoretical ceiling. "Recommended streams" discounts that — under the standard generic Python container pipeline, CPU software resizing/colorspace conversion and application overhead limit end-to-end throughput to ~8.6 FPS on RK3588 and ~4.9 FPS on RK3576 (baseline 1 stream). Under the production vision base with RGA hardware adaptive scaling (improcess) and native C++ direct zero-copy runtime, INT8 quantization breaks through this bottleneck: **RK3576 sustains 3 streams (15 FPS continuous with 0 frame drops), and RK3588 sustains 5 streams**.
 
 **Hailo-8 16-Stream Test Conditions and Host Video Decoding**: The recommended 16 streams on the Hailo-8 R2000 were measured using **640×640 input video streams** at 15 FPS. Because the reComputer R2000 Series host lacks multi-channel hardware video decoding, software decoding 1080p streams will choke the CPU at roughly 2–4 streams. For real multi-camera deployments, cameras must be set to deliver lower-resolution sub-streams (recommended 640×480 or 640×360) to prevent CPU decoding bottlenecks.
 
@@ -452,7 +453,7 @@ Every platform runs the same 640² pose model family. What differs is the runtim
 |---|---|---|---|---|
 | reCamera 2002 | YOLO11n-Pose | INT8 | Camera NPU | Installed from the console as a camera app |
 | reComputer J30 / J40 | YOLO11s (Orin Nano) / YOLO11m (Orin NX) | FP16 | TensorRT | Engine is **built on the device** — tied to that GPU architecture and TensorRT version, so it cannot ship prebuilt. Measured on Orin Nano: 461 s for YOLO11s |
-| reComputer RK3576 / RK3588 | YOLO11n-Pose | FP16 | RKNN Lite | `.rknn` ships per board; a model compiled for RK3588 will not load on RK3576 |
+| reComputer RK3576 / RK3588 | YOLO11n-Pose | INT8 | vb-runtime (librknnrt) | `.rknn` ships per board; a model compiled for RK3588 will not load on RK3576 |
 | reComputer R2000 Series (R2035-12, Hailo-8) | YOLOv8s-Pose | INT8 | GStreamer + `hailonet` | Official prebuilt HEF, verified against a fixed digest |
 
 The Hailo deployment is locked to **HailoRT 4.21**: GStreamer plugin, user library and kernel driver must all match, and no other process may hold the accelerator.

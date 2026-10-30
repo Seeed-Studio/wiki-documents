@@ -1,6 +1,7 @@
 ---
 description: Control the lights and appliances in Home Assistant by voice with speech recognised locally — hardware, deployment, interfaces and measured data on a reComputer J40
 title: Home Assistant Local Voice Control — Selection, Deployment and Measured Data
+sidebar_label: 'Home Assistant Local Voice'
 keywords:
   - Home Assistant local voice
   - Home Assistant voice assistant
@@ -19,7 +20,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/home-assistant-local-voice/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -98,7 +99,7 @@ Four things on site: the Home Assistant host, the voice host, a Zigbee coordinat
 | Device | Role | Notes |
 |---|---|---|
 | ARM64 Linux host (64-bit OS, 8 GB RAM) | Runs Home Assistant | One per home |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> [reComputer J40 Series (J4012, Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) | Local speech recognition and synthesis | Downloads the voice models on first start; keep at least 30 GB of disk free |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> [reComputer Super J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) | Local speech recognition and synthesis | Downloads the voice models on first start; keep at least 30 GB of disk free |
 | Home Assistant Connect ZBT-2 | Brings in Zigbee devices | Plugs into a USB port of the Home Assistant host |
 | Home Assistant Voice Preview Edition | Voice terminal in the room: listens and plays replies | One per room |
 | SONOFF SNZB Zigbee sensors (optional) | Temperature, humidity and other states | Join through the ZBT-2 |

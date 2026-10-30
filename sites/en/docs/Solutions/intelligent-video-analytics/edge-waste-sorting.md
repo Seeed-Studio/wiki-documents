@@ -1,6 +1,7 @@
 ---
 description: On-device waste sorting at the drop-off point — one trigger, one image, eight material classes and the Chinese four-way disposal category over MQTT, with a GPIO callback for a flap. Hardware, deployment outline, output contracts and the full measured boundaries.
 title: 'Edge Waste Sorting: Material Classes, the Chinese Four-Way Category and MQTT'
+sidebar_label: 'Edge Waste Sorting'
 keywords:
   - waste sorting
   - waste classification edge AI
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/edge-waste-sorting/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -112,8 +113,8 @@ Three things at the drop point: a trigger, a camera, a host. With reCamera or re
 
 | | Sorting host | Accelerator | Classifier as deployed | Open-vocabulary track | When to choose it |
 |---|---|---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Entry AI host | Orin GPU | EfficientNet-Lite0 224², TensorRT FP16 | Not offered | One drop point, baseline classifier only |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>High-performance AI host | Orin GPU | EfficientNet-Lite0 224², TensorRT FP16 | Offered (the only device class that offers it) | You expect to add item classes later without retraining |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Entry AI host | Orin GPU | EfficientNet-Lite0 224², TensorRT FP16 | Not offered | One drop point, baseline classifier only |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>High-performance AI host | Orin GPU | EfficientNet-Lite0 224², TensorRT FP16 | Offered (the only device class that offers it) | You expect to add item classes later without retraining |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Fanless industrial box | Hailo-8 | EfficientNet-Lite0 224², INT8 HEF | Not offered | A camera is already there and the host goes in a cabinet; the HEF is compiled off-device and downloaded at deploy time, and the Hailo runtime versions must match |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 Series](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Cost-effective edge board | RK3588 NPU | EfficientNet-Lite0 224², INT8 | Not offered | A camera is already there, lowest hardware cost, host in the bin housing or a kiosk; the model is converted off-device and no engine is built on the device |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002 (SG2002)](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>All-in-one smart camera | The camera's own TPU | EfficientNet-Lite0 224², BF16 | Not offered | No camera at the drop point yet, lowest hardware cost; the classifier runs on the camera, no separate host |
