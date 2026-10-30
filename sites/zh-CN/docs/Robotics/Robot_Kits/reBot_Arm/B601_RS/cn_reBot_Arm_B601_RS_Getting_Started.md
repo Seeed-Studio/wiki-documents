@@ -817,4 +817,309 @@ reBot Arm B601-RS 的大多数示例使用 MIT 模式运行。
 
 </div>
 </section>
+
+## 常见问题
+
+
+### 购买与选型
+
+<details className="content-details">
+<summary>reBot DM 和 RS 有什么区别？该怎么选？</summary>
+
+两者都是 6 轴开源机械臂，核心差别在电机方案：**DM 版采用达妙（DM）准直驱电机，RS 版采用灵足（Robstride）行星减速电机**。官方定位 RS 为第二代方案，控制更稳、定位更准、负载略高；DM 版本用户多、资料生态成熟。选购建议：已经在用达妙生态、或需要兼容现有达妙代码/上位机，继续选 DM；追求更稳定控制和更高负载，选 RS。
+
+</details>
+
+<details className="content-details">
+<summary>reBot 在哪里购买？官方淘宝链接是什么？</summary>
+
+- reBot Arm B601-DM 淘宝套件：https://e.tb.cn/h.RPhIHJUc4p9jhvI?tk=1WACg3iJ5lk
+- reBot Arm B601-RS 淘宝套件：https://e.tb.cn/h.RwJvpoc6dx5irCM?tk=cfZGgOx0guz
+- 海外/美国用户：https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html （预售）
+- 官方开源仓库（含 BOM、图纸）：https://github.com/Seeed-Projects/reBot-DevArm
+
+</details>
+
+<details className="content-details">
+<summary>DM/RS机械臂 接电池怎么办？</summary>
+
+DM\RS机械臂接电池需要额外的稳压模块以及电路设计，对于电流浪涌和反向电动势，可以给购买我们的RS泄放模块https://www.seeedstudio.com/Rebotic-Bleeder-Module-for-reBot-Arm-B601-RS-p-6987.html DM叠放模块https://www.seeedstudio.com/Rebotic-Power-Discharge-Module-for-reBot-Arm-B601-DM-p-6988.html
+
+</details>
+
+<details className="content-details">
+<summary>reBot 推荐什么相机？腕部/顶部怎么装？</summary>
+
+相机支持单目、Realsense和Orbbec的深度、双目相机，可以在这里打印相机支架https://github.com/Seeed-Projects/reBot-DevArm/#-optional-hardware
+
+</details>
+
+<details className="content-details">
+<summary>reBot 用的电机具体是什么型号？</summary>
+
+- B601-DM：达妙 **DM4310（24V）** 和 **DM4340P（24V）**（注意是 4340P，普通 4340 装不上）。
+- B601-RS：灵足 **RS00 / RS06** 等型号，底部关节可换 **RS04**。
+- 减速比等详细参数见各电机厂商手册（达妙/灵足官方文档）。
+
+</details>
+
+<details className="content-details">
+<summary>底座尺寸是多少？怎么固定在桌面上？</summary>
+
+底座尺寸和固定孔位见开源文件 `01_BASE_Plate.step`：https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware 。桌面固定推荐 6 寸 G 型夹；也可自行设计转接板固定在铝型材或移动平台上。
+
+</details>
+
+<details className="content-details">
+<summary>小配件（导轨滚珠、英标转换头、相机连接件）去哪买？</summary>
+
+- 夹爪导轨滚珠等标准件参数见 BOM：https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/readme_zh.md
+- 相机支架/连接件：官方提供 3D 打印文件，自行打印或找打印服务。
+
+</details>
+
+<details className="content-details">
+<summary>柔性夹爪有卖吗？文件在哪？</summary>
+
+官方柔性夹爪的打印件开源在 GitHub（[搜索 `softgripper`](https://github.com/Seeed-Projects/reBot-DevArm/#diy-soft-finger)）；RS 版柔性夹爪可找客服咨询购买。夹爪扭矩受限时可换柔性夹爪、力矩给大，兼顾速度与夹持稳定性。
+
+</details>
+
+<details className="content-details">
+<summary>机械臂能换成别的末端（如智元灵巧手）吗？</summary>
+
+可以，需要自行做转接：J6 末端给夹爪的线已集成 24V 供电和 CAN，智元 O10 等灵巧手供电与 CAN 是分开的，**加一块转接板把信号和电源合并**即可对接；注意核对供电电流和 CAN ID 是否冲突。
+
+</details>
+
+### 售后与 SN 码
+
+<details className="content-details">
+<summary>机械臂/驱动板坏了怎么申请售后？</summary>
+
+联系淘宝店铺客服（矽递科技Seeed Studio 天猫店）走售后流程；群内可 @官方技术支持（如小小应用工程师）先做故障定位。售后通常需要你提供 **SN 码**：位置在机械臂底座或包装盒上，拍照发给客服即可。驱动板、舵机等人为损坏或超保情况可能需付费维修。
+
+</details>
+
+<details className="content-details">
+<summary>收到货少发/漏发了配件怎么办？</summary>
+
+先核对 BOM 清单，确认缺失后联系淘宝客服补发（如电源、垫片、螺丝、支架等均有补发记录）。发货前建议拍摄开箱视频留证。
+
+</details>
+
+### 教程与资料
+
+<details className="content-details">
+<summary>官方的教程、wiki、视频合集在哪里？</summary>
+
+- **DM 版上手 Wiki**：[/cn/rebot_b601_dm_getting_started/](/cn/rebot_b601_dm_getting_started/)
+- **RS 版上手 Wiki**：[/cn/rebot_b601_rs_getting_started/](/cn/rebot_b601_rs_getting_started/)
+- **RS 版 LeRobot 教程**：[/cn/rebot_arm_b601_rs_lerobot/](/cn/rebot_arm_b601_rs_lerobot/)
+- **GitHub 主仓库（BOM/图纸/SDK/教程索引）**：https://github.com/Seeed-Projects/reBot-DevArm
+40章节从0开始的手把手课程 [/cn/robotics/rebot_physical_ai_course_introduction/](/cn/robotics/rebot_physical_ai_course_introduction/)
+手把手带你复现论文理论+实践 [/cn/robotics/rebot_physical_ai_course_introduction/](/cn/robotics/rebot_physical_ai_course_introduction/) 
+reBot仿真体验页面 https://seeed-projects.github.io/reBot_RS_Sim/ 
+无码化体验的sensecraft平台教程 [/cn/sensecraft_robotics/](/cn/sensecraft_robotics/)
+- **B站视频课**：组装 https://b23.tv/MkMnfqN ；ID 写入与零点校准 https://b23.tv/ApfFH0X ；校准及上手 https://b23.tv/FMvvQRI
+- 视觉抓取 Demo 教程：[/cn/rebot_arm_b601_dm_grasping_demo/](/cn/rebot_arm_b601_dm_grasping_demo/)
+- Pinocchio/Meshcat 仿真：[/cn/rebot_arm_b601_dm_pinocchio_meshcat/](/cn/rebot_arm_b601_dm_pinocchio_meshcat/)
+
+</details>
+
+<details className="content-details">
+<summary>组装需要准备哪些工具？</summary>
+
+内六角扳手、十字螺丝刀、剪刀；最后接 USB-CAN 时需一把小一字螺丝刀。建议备一套精密电动螺丝刀。打印件材质推荐 **PLA+，填充 15%**（夹爪等受力件可提高填充）。
+
+</details>
+
+<details className="content-details">
+<summary>机械臂的 URDF / 三维模型 / STEP 文件在哪？</summary>
+
+- RS URDF：https://github.com/Seeed-Projects/reBotArm_control_py/tree/main/urdf/RS/urdf
+- RS 模型/图纸说明：https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README_zh.md
+- DM 3D 打印件：https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/3D_Printed_Parts
+- 第三方实时控制库（含 IK）：https://github.com/xensedyl/rebotarm_control_rt
+
+</details>
+
+<details className="content-details">
+<summary>想用 LeRobot 跑 reBot，支持吗？</summary>
+
+支持。现在 reBot 601 已直接使用 LeRobot 官方接口（`rebot_b601_follower`），安装官方 LeRobot 后即可校准、遥操作、采集与训练；RS 版适配跟进中，参考 RS 的 LeRobot 教程页。
+
+</details>
+
+<details className="content-details">
+<summary>想用 reBot 跑 VLA（如 π0.5）可以吗？</summary>
+
+可以，群内已有 B601-RS 跑 VLA 的实践，推荐 π0.5 或 LeRobot 支持的主流策略；摄像头建议一个腕部 + 一个全局视角，具体见 RS LeRobot wiki 页面。
+
+</details>
+
+<details className="content-details">
+<summary>如何删除已采集的某条数据集 episode？</summary>
+
+使用 lerobot-edit-dataset 工具：
+`lerobot-edit-dataset --repo_id rebot_b601/grab_cube_v1 --operation.type delete_episodes --operation.episode_indices "要删除的序号"`。
+
+</details>
+
+<details className="content-details">
+<summary>官网/文档打不开或找不到页面怎么办？</summary>
+
+优先看 wiki 的 FAQ 章节（DM getting started 页底部）；motorbridge 相关文档：https://motorbridge.github.io/motorbridge-studio/ 。若页面失效，可在群里反馈，官方会更新。
+
+</details>
+
+### 组装与硬件
+
+<details className="content-details">
+<summary>组装顺序有什么建议？能装一半先测试吗？</summary>
+
+建议**分模块逐步测试**：底座装好后先测底座电机转动，再继续往上装；舵机/电机 ID 写入和零点校准要在正式固定前完成，否则返工麻烦。跟着 B 站组装视频逐课走，官方推荐先校准舵机再组装（线材还没被压住，更容易操作）。
+
+</details>
+
+<details className="content-details">
+<summary>校准/ID 写入的流程是什么？</summary>
+
+DM 版：用 **motorbridge 网页端**连接 USB-CAN → 使能电机 → 写入零点/校准（关节 1 未归零时先检查使能是否成功、1 号电机是否绿灯）；也可用达妙官方 DM-Tools 上位机（Windows/Linux）。RS 版：见 [/cn/rebot_b601_rs_getting_started/](/cn/rebot_b601_rs_getting_started/) 第 4 节"写入零点和调试"。回零位时有轻微响声/UI 显示异常属已知问题，不影响使用。
+
+</details>
+
+<details className="content-details">
+<summary>机械臂和电脑之间怎么连线？线材型号？</summary>
+
+- DM 版：机械臂 → USB2CAN/FDCAN 模块 → 电脑 USB。CAN 线为 **GH 1.25** 端子。
+- CAN 模块需注意终端电阻 120Ω 拨码位置；PCAN 驱动安装教程在 wiki 内。
+- 官方套件附带的线材与驱动板用于单电机调试（灵足上位机/改寄存器参数），日常使用不需要单独接。
+
+</details>
+
+<details className="content-details">
+<summary>机器人的电机需要多大扭矩？安全扭矩是多少？</summary>
+
+参考电机额定扭矩即可（DM4340 约 3Nm 量级，具体以厂商手册为准）4 号关节末端负载不大，原装电机够用；长时间超载会触发电机过温/过载保护。
+
+</details>
+
+<details className="content-details">
+<summary>电机方向反了 / ID 重复 / 电机不响应怎么处理？</summary>
+
+- 方向反：用 DM-Tools（达妙）或灵足上位机修改电机方向参数。
+- ID 冲突（如报 `Missing motor IDs`、1 号变 6 号）：重新用调试工具逐个扫描并改写 ID。
+- J3/J4 等关节不响应：先检查对应线束是否松动/接触不良（DM 版常见 4-5 号电机连接线问题），再排查驱动板。
+
+</details>
+
+<details className="content-details">
+<summary>夹爪上电后超出限位、一直全开或角度异常怎么办？</summary>
+
+夹爪掉出过限位后需要**重新调零**：断电，将夹爪摆到闭合中位，再上电重新执行零点写入。若网页端只能识别部分关节，先确认 CAN 通信和供电正常。
+
+</details>
+
+<details className="content-details">
+<summary>增加/更换电器件：泄放模块、相机支架、腕部支架通用吗？</summary>
+
+32×32 UVC 腕部相机支架 DM/RS 通用；RS 与 DM 的 3D 打印件大部分通用但电机侧不通用（灵足 vs 达妙）。Gemini 相机支架需联系客服补发对应型号支架。
+
+</details>
+
+### 软件与环境
+
+<details className="content-details">
+<summary>需要什么系统？Windows 能用吗？</summary>
+
+**LeRobot 遥操作/采集/训练强烈建议 Ubuntu（20.04/22.04）**；Windows 仅适合调试（DM-Tools 上位机）和部分校准场景，问题较多。不建议用虚拟机/WSL 跑真机（USB 透传和实时性都有坑）。Mac 可跑控制脚本，但 ROS2/Jazzy 建议 Docker 方案并做好网络映射。
+
+</details>
+
+<details className="content-details">
+<summary>Python 环境怎么配？装什么依赖？</summary>
+
+按 LeRobot 官方文档创建 conda 环境（Python 3.10），安装对应版本 PyTorch（需与 CUDA 匹配）；DM 版还需 motorbridge 及其驱动。Jetson 设备用 SDK Manager 烧录对应 JetPack 与 PyTorch 即可。遇到环境问题，把完整报错发给 AI/群里排查，比盲试快。
+
+</details>
+
+<details className="content-details">
+<summary>可以用云 GPU 训练吗？</summary>
+
+可以。官方推荐 SenseCraft Robotics 平台（新用户送积分，可直接跑 ACT）：https://sensecraft.seeed.cc/zh/robotics ；也可用 AutoDL、Featurize 等租用平台，按小时计费。
+
+</details>
+
+<details className="content-details">
+<summary>训练机械臂需要什么电脑配置？</summary>
+
+Ubuntu 系统 + NVIDIA 显卡（建议 RTX 3080 及以上，6GB 显存起步可跑 ACT）；训练时不要用虚拟机。显存越大越从容，π0.5 等大模型需要 24GB+。
+
+</details>
+
+### 通信与控制
+
+<details className="content-details">
+<summary>reBot 支持 ROS2 吗？控制频率多少？</summary>
+
+支持：官方 ROS2 控制器 https://github.com/Seeed-Projects/reBotArmController_ROS2 ；Python SDK：https://github.com/Seeed-Projects/reBotArm_control_py 。LeRobot 下实测控制频率约 70Hz，受图像传输、leader 臂速率等因素影响。
+
+</details>
+
+<details className="content-details">
+<summary>能实现阻抗控制/导纳控制吗？</summary>
+
+rebot 目前官方示例以位置/速度/力矩（MIT）模式为主，笛卡尔空间阻抗控制尚未内置；做力控/柔顺控制需自行开发，导纳/阻抗控制一般需要加装力传感器。DM 电机支持 MIT 模式，可在代码层面做力矩控制。
+
+</details>
+
+<details className="content-details">
+<summary>达妙调试工具在哪下载？支持 Linux 吗？</summary>
+
+DM-Tools 上位机（Windows/Linux 版）从达妙官方渠道获取；Ubuntu 下可用 motorbridge 网页端替代。USB-CAN 模块闪红灯属正常状态，以能否扫描到电机为准。
+
+</details>
+
+<details className="content-details">
+<summary>可以用 VR / 手柄遥操作吗？</summary>
+
+可以。群内已有 VR 遥操作 rebot 的实践（掉力矩问题可通过固件/参数改善）；也可用两个 reBot 做主从（一个当 leader），或参考开源手柄控制项目。
+
+</details>
+
+### 训练与部署
+
+<details className="content-details">
+<summary>采集数据、训练策略的完整流程是什么？</summary>
+
+遥操作示教采集 → 数据集整理（LeRobot 格式）→ 训练 ACT/π0.5 等策略 → 部署推理。可参考 RS LeRobot 教程页与 SenseCraft Robotics 平台文档；ACT 简单任务一般 4 万步左右、数据 50 组以上效果明显。
+
+</details>
+
+<details className="content-details">
+<summary>双臂 ACT 怎么复现？</summary>
+
+参考官方双 SO-ARM 训练教程（reBot 同理）：[/cn/lerobot_double_arm_so_arm_training/](/cn/lerobot_double_arm_so_arm_training/) 。需要两套主从臂、足够的数据量与 GPU 资源。
+
+</details>
+
+### 故障排查
+
+<details className="content-details">
+<summary>机械臂运动到目标位置后抖动/异响怎么办？</summary>
+
+- 抖动：降低 KP（如 KP=50、KD=4）或套用官方默认参数模板；轨迹规划速度适当提高反而更平滑。
+- 异响：区分电机定子正常声与结构件干涉；J3 噪音偏大先拍视频听声判断，必要时联系售后。
+- 上电"哒"的一声继电器响属正常；电源保险丝一般不会跳。
+
+</details>
+
+<details className="content-details">
+<summary>通信突然中断、"connection error"、电机失能怎么办？</summary>
+
+依次排查：USB/ CAN 线是否松动（DM 版 4-5 号电机连接线是高发点）→ 是否 USB HUB 供电/带宽不足（相机不要接扩展坞）→ 驱动是否安装（PCAN/PCAN 驱动）→ 电源电压是否跌落。故障复现时拍视频/截图报给官方技术支持。
+
+</details>
+
 </div>
