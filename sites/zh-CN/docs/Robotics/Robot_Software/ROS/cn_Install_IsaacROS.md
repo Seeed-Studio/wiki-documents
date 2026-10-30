@@ -1,5 +1,5 @@
 ---
-description: 本维基提供了安装 Isaac ROS 的分步指南。
+description: "在 Jetson 上安装 NVIDIA Isaac ROS 的分步指南：环境准备、Docker 配置、安装，以及运行第一个推理节点。"
 title: 安装 Isaac ROS
 keywords:
   - NVIDIA

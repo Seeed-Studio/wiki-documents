@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini のダッシュボード Web インターフェース、アプリ管理、および Python SDK クイックスタートを網羅した使用ガイド。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini の使用方法
 slug: /reachymini_platforms_reachy_mini_usage
 keywords:

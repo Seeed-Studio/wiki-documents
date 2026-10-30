@@ -1,5 +1,6 @@
 ---
 description: 示例演示如何显示Reachy Mini的视频流并让机器人看向您在帧上点击的位置。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 看图像
 slug: /reachymini_examples_look_at
 keywords:

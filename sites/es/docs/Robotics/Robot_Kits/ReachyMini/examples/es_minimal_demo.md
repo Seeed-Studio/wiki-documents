@@ -1,5 +1,6 @@
 ---
 description: Ejemplo mínimo que muestra cómo mover la cabeza y las antenas de Reachy Mini en un patrón oscilante simple.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Demo mínima
 slug: /reachymini_examples_minimal_demo
 keywords:

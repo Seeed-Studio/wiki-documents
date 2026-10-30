@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini のマイクアレイからの音声録音と、録音時間を設定して WAV ファイルに保存する方法を示すサンプルです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: サウンド録音
 slug: /reachymini_examples_sound_record
 keywords:

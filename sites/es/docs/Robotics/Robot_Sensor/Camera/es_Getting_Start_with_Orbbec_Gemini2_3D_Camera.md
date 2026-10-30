@@ -1,5 +1,5 @@
 ---
-description: Mostrar a las personas cómo usar Orbbec Gemini2 en la plataforma reComputer Jetson.
+description: "Cómo usar la cámara 3D Orbbec Gemini 2 con reComputer Jetson: configuración del controlador, instalación del SDK y streaming de profundidad y RGB para percepción robótica."
 title: Cámara 3D Orbbec Gemini2
 keywords:
   - Jetson

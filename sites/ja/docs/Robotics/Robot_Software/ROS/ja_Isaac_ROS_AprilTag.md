@@ -1,5 +1,5 @@
 ---
-description: このwikiは、Isaac ROS AprilTagを使用するためのステップバイステップガイドを提供します。
+description: "Jetson 上の NVIDIA Isaac ROS で AprilTag を検出する方法：セットアップ、検出パイプラインの実行、ロボット知覚向けのポーズ利用。"
 title: Isaac ROS AprilTag
 keywords:
   - NVIDIA

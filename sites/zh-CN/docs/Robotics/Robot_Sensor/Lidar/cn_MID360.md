@@ -1,5 +1,5 @@
 ---
-description: 本文档提供了在 reComputer J30/40 上使用 ROS 安装和设置 MID360 LiDAR 的分步指南。
+description: "如何在 Jetson 上通过 ROS 使用 Livox MID360 激光雷达：驱动配置、点云可视化，以及面向机器人建图与 SLAM 的集成。"
 title: 使用 ROS 配置 Mid360
 keywords:
   - Jetson Nano

@@ -1,5 +1,5 @@
 ---
-description: 展示如何在 reComputer Jetson 平台上使用 Orbbec Gemini 335Lg。
+description: "如何在 reComputer Jetson 上使用 Orbbec Gemini 2 3D 相机：驱动配置、SDK 安装，以及面向机器人感知的深度与 RGB 数据流。"
 title: Orbbec Gemini2 3D 相机入门指南
 keywords:
   - Jetson

@@ -1,5 +1,5 @@
 ---
-description: 介绍思岚激光雷达的上手使用及产品资料。
+description: "SLAMTEC（思岚）激光雷达产品介绍：型号对比、接线，以及面向机器人建图与导航的使用文档。"
 title: 思岚激光雷达
 keywords:
   - 激光雷达

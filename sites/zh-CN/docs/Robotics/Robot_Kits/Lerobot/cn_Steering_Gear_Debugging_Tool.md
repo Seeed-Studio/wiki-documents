@@ -1,5 +1,5 @@
 ---
-description: Lerobot 中 SO-ARM 的舵机调试工具。
+description: "如何用 Seeed_RoboController 工具调试 SO-ARM 舵机：检测舵机、修正 ID、写入中位值，并在 Windows、Ubuntu 和 Mac 上读取状态。"
 title: SO-Arm 舵机调试工具
 keywords:
   - Lerobot

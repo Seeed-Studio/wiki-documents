@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona un tutorial para los motores de la serie Damiao.
+description: "Guía completa de actuadores de articulación DM (Damiao) para brazos robóticos: descripción de la serie de motores, modos de control, comunicación CAN y uso del SDK de Python con los kits de robótica de Seeed."
 title: Damiao
 keywords:
   - actuador

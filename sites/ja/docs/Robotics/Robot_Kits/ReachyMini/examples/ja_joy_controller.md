@@ -1,5 +1,6 @@
 ---
 description: ジョイスティック（PS4 または Xbox コントローラ）を使用して Reachy Mini の頭部ヨー角を直感的かつリアルタイムに制御する方法を示すサンプルです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: ジョイスティックコントローラ
 slug: /reachymini_examples_joy_controller
 keywords:

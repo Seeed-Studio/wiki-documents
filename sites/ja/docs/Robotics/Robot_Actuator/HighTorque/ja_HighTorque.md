@@ -1,5 +1,5 @@
 ---
-description: このドキュメントでは、HighTorque シリーズモーターのクイックスタート方法を紹介します。
+description: "ロボットアーム向け HighTorque アクチュエータ入門：開梱、配線、電源要件、初回電源投入と簡単な動作確認。"
 title: HighTorque SDK
 keywords:
   - ジョイントモジュール

@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini工具完整API参考，包括插值函数、硬件配置、Rerun可视化和核心工具。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 工具API参考
 slug: /reachymini_api_utils
 keywords:

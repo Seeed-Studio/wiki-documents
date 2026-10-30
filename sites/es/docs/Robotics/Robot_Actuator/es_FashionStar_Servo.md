@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona un tutorial para los servomotores FashionStar.
+description: "Guía completa de servos de bus serie FashionStar: modelos y especificaciones, cableado, configuración de ID, control de posición/velocidad/par y ejemplos en Python para brazos robóticos."
 title: FashionStar
 keywords:
   - actuador
