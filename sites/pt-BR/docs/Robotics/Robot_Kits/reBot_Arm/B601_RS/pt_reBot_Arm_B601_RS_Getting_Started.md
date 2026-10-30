@@ -169,6 +169,58 @@ Em seguida, conecte o módulo USB-para-CAN, a placa divisora de energia e sinal,
 <iframe width="900" height="600" src="https://www.youtube.com/embed/y6GfyjJf9cA?si=fbkTdCW3nsamFYbE" title="Instalação do gripper flexível" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+## Conectar os Braços
+
+> **Aviso de segurança:**
+> Desconecte a alimentação antes de conectar ou desconectar cabos JST, XT30 ou outros cabos. Ligue a alimentação somente depois de confirmar que todos os cabos estão conectados corretamente.
+> B601 RS e B601 DM são visualmente semelhantes. Certifique-se de distingui-los.
+
+
+### 2.1 Montar e Conectar o reBot Arm 102 (Braço Líder)
+
+![Montagem e conexão do reBot Arm 102 (braço líder)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+
+#### Etapa 1: Montar o reBot Arm 102
+Use grampos de marcenaria para fixar o reBot Arm 102 em uma superfície de mesa plana. Empurre levemente a base para confirmar que ela não se move.
+
+#### Etapa 2: Conectar os Cabos
+As conexões consistem em dois caminhos:
+
+* **Caminho de sinal (braço -> cabo USB-C -> computador)**
+  1. Prepare um cabo USB-C para conectar o braço ao computador (**ainda não o conecte ao computador; conecte-o quando chegar à vinculação da porta serial e à varredura de dispositivos**).
+
+* **Caminho de alimentação (braço -> fonte de alimentação 12 V 2 A -> régua de energia)**
+  1. Conecte o **adaptador de energia 12 V 2 A** ao conector de alimentação do braço.
+  2. Conecte o adaptador à régua de energia para ligar o braço.
+
+
+
+---
+
+### 2.2 Montar e Conectar o B601 RS (Braço Seguidor)
+![Conexão de cabos do B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
+
+#### Etapa 4: Montar o B601 RS
+Use grampos em G para fixar o B601 RS em uma superfície de mesa plana. Gire suavemente o braço para a esquerda e para a direita para confirmar que a base não se move.
+
+#### Etapa 5: Conectar os Cabos
+Certifique-se de que a alimentação esteja desconectada antes de começar. As conexões consistem em dois caminhos:
+
+* **Caminho de sinal (braço -> placa de separação de sinal -> USB-CAN -> computador)**
+  1. Use um cabo XT30 2+2 para conectar a base do braço ao módulo de separação de sinal.
+  2. Corte o cabo de 2 pinos. Conecte uma extremidade ao módulo de separação de sinal; conecte o fio vermelho na outra extremidade ao H no USB-CAN e o fio preto ao L.
+  3. Conecte uma extremidade do USB-CAN ao computador por meio do cabo de extensão USB (**ainda não o conecte ao computador; conecte-o quando a vinculação da porta serial estiver pronta e fizer a varredura de dispositivos**).
+
+* **Caminho de alimentação (braço -> placa de separação de sinal -> fonte de alimentação 48 V 12,5 A -> tomada)**
+  1. Use um cabo XT30 2+2 para conectar a base do braço ao módulo de separação de sinal.
+  2. Use o cabo de alimentação XT30 para conectar o módulo de separação de sinal à fonte de alimentação 48 V 12,5 A.
+  3. Conecte a fonte de alimentação à tomada. Depois de confirmar que o braço está fixado, os cabos estão corretos e a área ao redor está livre, ligue a alimentação.
+
+![Conectando a alimentação ao B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp)
+
+
+---
+
 Você deve ter concluído a preparação preliminar para a montagem do braço robótico seguindo o vídeo. Em seguida, apresentaremos as etapas para gravar os IDs dos motores e calibrar o braço robótico.
 
 Consulte o vídeo e o tutorial em texto. Antes de controlar o braço robótico, você precisa redefinir o ponto zero novamente.

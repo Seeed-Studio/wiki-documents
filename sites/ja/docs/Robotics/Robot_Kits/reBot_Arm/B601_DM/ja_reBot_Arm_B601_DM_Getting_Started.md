@@ -151,6 +151,61 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <iframe width="900" height="600" src="https://www.youtube.com/embed/y6GfyjJf9cA?si=fbkTdCW3nsamFYbE" title="Flexible gripper installation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+## アームの接続
+
+> **安全に関する注意：**
+> JST、XT30、その他のケーブルを接続・取り外しする前に、必ず電源を切ってください。すべてのケーブルが正しく接続されていることを確認してから電源を入れてください。
+> B601 RS と B601 DM は外観が似ています。必ず見分けてください。
+
+
+### 2.1 reBot Arm 102（リーダーアーム）の取り付けと接続
+
+
+
+#### ステップ 1：reBot Arm 102 を取り付ける
+
+木工用クランプを使用して、reBot Arm 102 を平らなテーブルトップに固定します。ベースを軽く押して、動かないことを確認します。
+
+#### ステップ 2：ケーブルを接続する
+
+![Mounting and connecting the reBot Arm 102 (leader arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+
+
+接続は次の 2 つの経路で構成されます。
+
+* **信号経路（アーム -> USB-C ケーブル -> コンピュータ）**
+  1. アームとコンピュータを接続するための USB-C ケーブルを用意します（**まだコンピュータには接続しないでください。シリアルポートのバインドとデバイススキャンの段階で接続します**）。
+
+* **電源経路（アーム -> 12 V 2 A 電源アダプタ -> 電源タップ -> 通電）**
+  1. **12 V 2 A 電源アダプタ**をアームの電源コネクタに接続します。
+  2. アダプタを電源タップに接続してアームの電源を入れます。
+
+
+### 2.2 B601 DM（フォロワーアーム）の取り付けと接続
+
+![B601 DM cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
+
+#### ステップ 3：B601 DM を取り付ける
+
+G クランプを使用して、B601 DM を安定した平らなテーブルトップに固定します。固定後、アームを左右に軽く回転させ、ベースが動かないことを確認します。
+
+#### ステップ 4：ケーブルを接続する
+
+作業を始める前に、必ず電源が切れていることを確認してください。接続は次の 2 つの経路で構成されます。
+
+* **信号経路（アーム -> 信号/電源分離ボード -> USB-CAN ドライバボード -> コンピュータ）**
+  1. XT30 2+2 ケーブルを使用して、一番下の第 1 モータと信号/電源分離ボードを接続します。
+  2. 2 ピン JST ケーブルを使用して、信号/電源分離ボードと USB-CAN ドライバボードを接続します。
+  3. 3 ピン JST ケーブルを使用して、一番下の第 1 モータと USB-CAN ドライバボードを接続します（これはデバッグ用ケーブルであり、未接続のままでも構いません）。
+  4. USB-C データケーブルを用意し、USB-CAN ドライバボードとコンピュータを接続します（**まだコンピュータには接続しないでください。シリアルポートのバインドとデバイススキャンの段階で接続します**）。
+
+* **電源経路（アーム -> 信号/電源分離ボード -> 24 V 電源アダプタ -> コンセント -> 通電）**
+  1. XT30 2+2 ケーブルを使用して、一番下の第 1 モータと信号/電源分離ボードを接続します。
+  2. 信号/電源分離ボードを **24 V 電源アダプタ**に接続します。
+  3. 電源アダプタをコンセントに接続します。アームが確実に固定されていること、ケーブルが正しいこと、周囲が安全であることを確認したうえで、電源を入れます。
+
+![Connecting the B601 DM (follower arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
+
 ## ステップ 2：モーター ID のリセット
 
 :::tip

@@ -169,6 +169,58 @@ Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cabl
 <iframe width="900" height="600" src="https://www.youtube.com/embed/y6GfyjJf9cA?si=fbkTdCW3nsamFYbE" title="Flexible gripper installation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+## Connect the Arms
+
+> **Safety notice:**
+> Disconnect the power before connecting or disconnecting JST, XT30, or other cables. Turn the power on only after confirming that all cables are connected correctly.
+> B601 RS and B601 DM look similar. Make sure you distinguish between them.
+
+
+### 2.1 Mount and Connect the reBot Arm 102 (Leader Arm)
+
+![Mounting and connecting the reBot Arm 102 (leader arm)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+
+#### Step 1: Mount the reBot Arm 102
+Use woodworking clamps to secure the reBot Arm 102 to a flat tabletop. Gently push the base to confirm that it does not move.
+
+#### Step 2: Connect the Cables
+The connections consist of two paths:
+
+* **Signal path (arm -> USB-C cable -> computer)**
+  1. Prepare a USB-C cable to connect the arm to the computer (**do not plug it into the computer yet; connect it when you reach serial-port binding and scan for devices**).
+
+* **Power path (arm -> 12 V 2 A power supply -> power strip)**
+  1. Connect the **12 V 2 A power adapter** to the arm's power connector.
+  2. Connect the adapter to the power strip to power on the arm.
+
+
+
+---
+
+### 2.2 Mount and Connect the B601 RS (Follower Arm)
+![B601 RS cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
+
+#### Step 4: Mount the B601 RS
+Use G-clamps to secure the B601 RS to a flat tabletop. Gently rotate the arm left and right to confirm that the base does not move.
+
+#### Step 5: Connect the Cables
+Make sure the power is disconnected before starting. The connections consist of two paths:
+
+* **Signal path (arm -> signal separation board -> USB-CAN -> computer)**
+  1. Use an XT30 2+2 cable to connect the arm base to the signal separation module.
+  2. Cut the 2-pin cable. Connect one end to the signal separation module; connect the red wire on the other end to H on the USB-CAN and the black wire to L.
+  3. Connect one end of the USB-CAN to the computer through the USB extension cable (**do not plug it into the computer yet; connect it when serial-port binding is ready and scan for devices**).
+
+* **Power path (arm -> signal separation board -> 48 V 12.5 A power supply -> outlet)**
+  1. Use an XT30 2+2 cable to connect the arm base to the signal separation module.
+  2. Use the power XT30 cable to connect the signal separation module to the 48 V 12.5 A power supply.
+  3. Connect the power supply to the outlet. After confirming that the arm is secured, the cables are correct, and the surrounding area is clear, turn on the power.
+
+![Connecting power to the B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp)
+
+
+---
+
 You should have completed the preliminary preparation for the robotic arm assembly by following the video. Next, we will introduce the steps for writing motor IDs and calibrating the robotic arm.
 
 Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.

@@ -151,6 +151,61 @@ Vídeo tutorial de fiação:
 <iframe width="900" height="600" src="https://www.youtube.com/embed/y6GfyjJf9cA?si=fbkTdCW3nsamFYbE" title="Flexible gripper installation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+## Conectar os Braços
+
+> **Aviso de segurança:**
+> Desconecte a alimentação antes de conectar ou desconectar cabos JST, XT30 ou outros cabos. Ligue a alimentação somente depois de confirmar que todos os cabos estão conectados corretamente.
+> B601 RS e B601 DM são semelhantes. Certifique-se de distingui-los.
+
+
+### 2.1 Montar e Conectar o reBot Arm 102 (Braço Líder)
+
+
+
+#### Etapa 1: Montar o reBot Arm 102
+
+Use grampos de marcenaria para fixar o reBot Arm 102 em uma superfície de mesa plana. Empurre suavemente a base para confirmar que ela não se move.
+
+#### Etapa 2: Conectar os Cabos
+
+![Montagem e conexão do reBot Arm 102 (braço líder)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp)
+
+
+As conexões consistem em dois caminhos:
+
+* **Caminho de sinal (braço -> cabo USB-C -> computador)**
+  1. Prepare um cabo USB-C para conectar o braço ao computador (**ainda não o conecte ao computador; conecte quando chegar à vinculação da porta serial e à varredura de dispositivos**).
+
+* **Caminho de alimentação (braço -> adaptador de energia 12 V 2 A -> régua de energia -> ligar)**
+  1. Conecte o **adaptador de energia 12 V 2 A** ao conector de alimentação do braço.
+  2. Conecte o adaptador à régua de energia para ligar o braço.
+
+
+### 2.2 Montar e Conectar o B601 DM (Braço Seguidor)
+
+![Conexão de cabos do B601 DM](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
+
+#### Etapa 3: Montar o B601 DM
+
+Use grampos em G para fixar o B601 DM em uma superfície de mesa estável e plana. Depois de fixá-lo, gire suavemente o braço para a esquerda e para a direita para confirmar que a base não se move.
+
+#### Etapa 4: Conectar os Cabos
+
+Certifique-se de que a alimentação esteja desconectada antes de começar. As conexões consistem em dois caminhos:
+
+* **Caminho de sinal (braço -> placa de separação de sinal/alimentação -> placa driver USB-CAN -> computador)**
+  1. Use um cabo XT30 2+2 para conectar o primeiro motor na base à placa de separação de sinal/alimentação.
+  2. Use o cabo JST de 2 pinos para conectar a placa de separação de sinal/alimentação à placa driver USB-CAN.
+  3. Use o cabo JST de 3 pinos para conectar o primeiro motor na base à placa driver USB-CAN (este é um cabo de depuração e pode ser deixado desconectado).
+  4. Prepare um cabo de dados USB-C para conectar a placa driver USB-CAN ao computador (**ainda não o conecte ao computador; conecte quando chegar à vinculação da porta serial e à varredura de dispositivos**).
+
+* **Caminho de alimentação (braço -> placa de separação de sinal/alimentação -> adaptador de energia 24 V -> tomada -> ligar)**
+  1. Use um cabo XT30 2+2 para conectar o primeiro motor na base à placa de separação de sinal/alimentação.
+  2. Conecte a placa de separação de sinal/alimentação ao **adaptador de energia 24 V**.
+  3. Conecte o adaptador de energia à tomada. Depois de confirmar que o braço está fixado, os cabos estão corretos e a área ao redor está livre, ligue a alimentação.
+
+![Conectando o B601 DM (braço seguidor)](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp)
+
 ## Passo 2: Redefinir IDs dos Motores
 
 :::tip
