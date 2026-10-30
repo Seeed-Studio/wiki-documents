@@ -2655,11 +2655,11 @@ macOS：
 <details className="content-details">
 <summary>SO-ARM101 在哪里购买？官方链接是什么？</summary>
 
-- 淘宝套件（SO-ARM100/101，含飞特舵机）：https://e.tb.cn/h.TIJ1zNXihBEKryj?tk=FZ3geR8dgOc
-- 套件（SO-ARM100/101 边缘部署版）：https://e.tb.cn/h.hjAMlhf1Ecu3Gxm?tk=ayVT42813jp
-- SO-ARM101 套件：https://e.tb.cn/h.8omacUsSQKYTHmt?tk=R45uTT4pIVX
-- 海外：https://www.seeedstudio.com/ （搜 SO-ARM）
-- 官方 GitHub（BOM/STL/URDF）：https://github.com/TheRobotStudio/SO-ARM100
+- [淘宝套件（SO-ARM100/101，含飞特舵机）](https://e.tb.cn/h.TIJ1zNXihBEKryj?tk=FZ3geR8dgOc)
+- [套件（SO-ARM100/101 边缘部署版）](https://e.tb.cn/h.hjAMlhf1Ecu3Gxm?tk=ayVT42813jp)
+- [SO-ARM101 套件](https://e.tb.cn/h.8omacUsSQKYTHmt?tk=R45uTT4pIVX)
+- [海外购买（搜 SO-ARM）](https://www.seeedstudio.com/)
+- [官方 GitHub（BOM/STL/URDF）](https://github.com/TheRobotStudio/SO-ARM100)
 套件已包含飞特舵机，**不需要单独购买舵机**；控制板/电源等也随套件提供（单独购买控制板可找客服或淘宝链接）。
 
 </details>
@@ -2667,7 +2667,7 @@ macOS：
 <details className="content-details">
 <summary>SO-ARM101 的舵机是什么型号？</summary>
 
-按关节不同使用飞特 STS3215 系列舵机（如 C001/C044/C046 等不同减速比版本，夹爪为 C001 虚拟舵机）。具体每个关节对应的型号与规格参数见 wiki：[/cn/lerobot_so100m_new/](/cn/lerobot_so100m_new/)#规格参数 。
+按关节不同使用飞特 STS3215 系列舵机（如 C001/C044/C046 等不同减速比版本，夹爪为 C001 虚拟舵机）。具体每个关节对应的型号与规格参数见 [wiki 规格参数章节](/cn/lerobot_so100m_new/)。
 
 </details>
 
@@ -2677,7 +2677,7 @@ macOS：
 - 腕部：**32×32mm UVC 免驱摄像头模组**（淘宝搜"32*32 uvc 相机"即可）。
 - 全局：普通 USB 摄像头即可，FOV 90° 左右够用，位置看摆放高度调整；Pro 版自带腕部单目。
 - 用深度相机不是必须的（RGB 已够训练），深度相机主要放在全局视角。
-- 官方打印件支持 32×32 UVC 模块：https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional
+- [官方打印件支持 32×32 UVC 模块](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional)
 
 </details>
 
@@ -2717,12 +2717,12 @@ macOS：
 <details className="content-details">
 <summary>官方教程、wiki 和视频在哪里？</summary>
 
-- **新版中文 Wiki（推荐入口）**：[/cn/lerobot_so100m_new/](/cn/lerobot_so100m_new/)
-- 旧版 wiki（部分章节仍有参考价值）：https://wiki.seeedstudio.com/cn/lerobot_so100m/
-- 官方 B 站视频（SO101 教程一站通系列）：https://www.bilibili.com/video/BV1k6UUBFEw4/
-- 组装视频：https://b23.tv/1QjfQbm
-- 同济子豪兄保姆级教程（飞书）：https://zihao-ai.feishu.cn/wiki/space/7589642043471924447
-- 官方 GitHub（STL/URDF/Simulation）：https://github.com/TheRobotStudio/SO-ARM100
+- [新版中文 Wiki（推荐入口）](/cn/lerobot_so100m_new/)
+- [旧版 wiki（部分章节仍有参考价值）](https://wiki.seeedstudio.com/cn/lerobot_so100m/)
+- [官方 B 站视频（SO101 教程一站通系列）](https://www.bilibili.com/video/BV1k6UUBFEw4/)
+- [组装视频](https://b23.tv/1QjfQbm)
+- [同济子豪兄保姆级教程（飞书）](https://zihao-ai.feishu.cn/wiki/space/7589642043471924447)
+- [官方 GitHub（STL/URDF/Simulation）](https://github.com/TheRobotStudio/SO-ARM100)
 
 </details>
 
@@ -2736,8 +2736,8 @@ macOS：
 <details className="content-details">
 <summary>URDF / STEP / 三维模型在哪下载？</summary>
 
-- URDF：https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101
-- 整体 STEP/STL：https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl
+- [URDF](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101)
+- [整体 STEP/STL](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl)
 - 官方打印件与视频不一致时，以 Individual 目录里的版本为准。
 
 </details>
@@ -2746,9 +2746,9 @@ macOS：
 <summary>仿真/Isaac Sim/Isaac Lab 怎么跑 SO-ARM101？</summary>
 
 - Isaac Lab 训练 SO-ARM101 策略：/training_soarm101_policy_with_isaacLab/
-- Isaac Sim 导入：[/lerobot_so100m_isaacsim/](/lerobot_so100m_isaacsim/)
-- LeIsaac 仿真：[/simulate_soarm101_by_leisaac/](/simulate_soarm101_by_leisaac/)
-- 开源 LeIsaac 仓库：https://github.com/LightwheelAI/leisaac
+- [Isaac Sim 导入](/lerobot_so100m_isaacsim/)
+- [LeIsaac 仿真](/simulate_soarm101_by_leisaac/)
+- [开源 LeIsaac 仓库](https://github.com/LightwheelAI/leisaac)
 
 </details>
 
@@ -2756,9 +2756,9 @@ macOS：
 <summary>有 MoveIt2 / ROS2 的包吗？</summary>
 
 有第三方开源包（非官方维护）：
-- https://github.com/Tavish9/any4lerobot
-- https://github.com/holmsslk/so-arm-moveit-hardware
-- https://github.com/ZhuYaoHui1998/so_arm100_moveit （含正逆解接口）
+- [Tavish9/any4lerobot](https://github.com/Tavish9/any4lerobot)
+- [holmsslk/so-arm-moveit-hardware](https://github.com/holmsslk/so-arm-moveit-hardware)
+- [ZhuYaoHui1998/so_arm100_moveit（含正逆解接口）](https://github.com/ZhuYaoHui1998/so_arm100_moveit)
 注意 5+1 自由度传入 MoveIt2 可能出现 timeout、逆解无解（臂长构型受限）。
 
 </details>
@@ -2766,14 +2766,14 @@ macOS：
 <details className="content-details">
 <summary>逆运动学代码有吗？为什么解不出来？</summary>
 
-SO-ARM101 只有 5+1 自由度且无腕部俯仰，很多位姿在运动学上无解。LeRobot 的模仿学习路线不依赖逆解（直接输出关节角度）；若做 MoveIt2/IK 场景，建议用 StarAI 等 6/7 轴方案。参考实现：https://github.com/Pavankv92/lerobot_ws
+SO-ARM101 只有 5+1 自由度且无腕部俯仰，很多位姿在运动学上无解。LeRobot 的模仿学习路线不依赖逆解（直接输出关节角度）；若做 MoveIt2/IK 场景，建议用 StarAI 等 6/7 轴方案。参考实现：[Pavankv92/lerobot_ws](https://github.com/Pavankv92/lerobot_ws)
 
 </details>
 
 <details className="content-details">
 <summary>有 hil-serl 强化学习教程吗？</summary>
 
-官方文档：https://huggingface.co/docs/lerobot/hilserl 。群内也有人跑通，参考 B 站/群分享。
+官方文档：[HIL-SERL 文档](https://huggingface.co/docs/lerobot/hilserl)。群内也有人跑通，参考 B 站/群分享。
 
 </details>
 
@@ -2787,7 +2787,7 @@ SO-ARM101 只有 5+1 自由度且无腕部俯仰，很多位姿在运动学上�
 <details className="content-details">
 <summary>云服务器能训练吗？没有显卡怎么办？</summary>
 
-可以，用 SenseCraft Robotics 云端平台训练/部署：https://sensecraft.seeed.cc/zh/robotics ；也可租 AutoDL/Featurize 等平台，LeRobot 数据集上传 HuggingFace 或直接 scp 到训练机。
+可以，用 [SenseCraft Robotics 云端平台](https://sensecraft.seeed.cc/zh/robotics) 训练/部署；也可租 AutoDL/Featurize 等平台，LeRobot 数据集上传 HuggingFace 或直接 scp 到训练机。
 
 </details>
 
@@ -2855,7 +2855,7 @@ SO-ARM 使用舵机，不适合做真正的重力补偿/力矩控制（子豪兄
 <details className="content-details">
 <summary>夹爪能换吗？能装三爪/柔性夹爪/灵巧手吗？</summary>
 
-可以，改末端连接件即可（网上有开源的三爪/柔性夹爪模型）。官方柔性夹爪成品：https://www.seeedstudio.com/SO-ARM-Pro101-Flexible-Gripper-3D-p-6990.html 。装灵巧手需要自己改代码适配（LeRobot 未集成 AmazingHand 等）。
+可以，改末端连接件即可（网上有开源的三爪/柔性夹爪模型）。官方柔性夹爪成品：[SO-ARM Pro101 柔性夹爪](https://www.seeedstudio.com/SO-ARM-Pro101-Flexible-Gripper-3D-p-6990.html)。装灵巧手需要自己改代码适配（LeRobot 未集成 AmazingHand 等）。
 
 </details>
 
@@ -2926,7 +2926,7 @@ rerun 左侧栏右键 → 添加视角/添加摄像头视图即可，不是硬�
 <details className="content-details">
 <summary>可以用手机/其他摄像头采集吗？</summary>
 
-可以，LeRobot 支持多种摄像头源（含手机 IP 摄像头），参考官方文档：https://github.com/huggingface/lerobot/blob/main/docs/source/cameras.mdx 。注意分辨率/延迟。
+可以，LeRobot 支持多种摄像头源（含手机 IP 摄像头），参考官方文档：[LeRobot 相机文档](https://github.com/huggingface/lerobot/blob/main/docs/source/cameras.mdx)。注意分辨率/延迟。
 
 </details>
 
@@ -2964,7 +2964,7 @@ Ubuntu + NVIDIA 显卡（建议 RTX 3080 以上；8GB 显存可跑 ACT 推理，
 <details className="content-details">
 <summary>能用语音控制吗？能做强化学习吗？</summary>
 
-语音控制可以：VLA 路线（如 wam）或"ASR + 技能库（skills）Agent 调用"两条路。强化学习有社区实践（SO-ARM101 + HIL-SERL），参考 B 站教程 https://www.bilibili.com/video/BV1BsMqzgExn/ 。
+语音控制可以：VLA 路线（如 wam）或"ASR + 技能库（skills）Agent 调用"两条路。强化学习有社区实践（SO-ARM101 + HIL-SERL），参考 [B 站教程](https://www.bilibili.com/video/BV1BsMqzgExn/)。
 
 </details>
 
@@ -2988,7 +2988,7 @@ Ubuntu + NVIDIA 显卡（建议 RTX 3080 以上；8GB 显存可跑 ACT 推理，
 <details className="content-details">
 <summary>飞特舵机调试工具怎么用？</summary>
 
-FD Debug 下载：https://gitee.com/ftservo/fddebug/tree/master （建议 1.9.8.5 版本），波特率 **1000000**，扫描即可看到所有舵机；可改 ID、方向、PID、中位。只操作某一个舵机时记得断开其他舵机连线。
+FD Debug 下载：[Gitee 仓库](https://gitee.com/ftservo/fddebug/tree/master)（建议 1.9.8.5 版本），波特率 **1000000**，扫描即可看到所有舵机；可改 ID、方向、PID、中位。只操作某一个舵机时记得断开其他舵机连线。
 
 </details>
 

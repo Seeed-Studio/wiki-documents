@@ -833,24 +833,24 @@ reBot Arm B601-RS 的大多数示例使用 MIT 模式运行。
 <details className="content-details">
 <summary>reBot 在哪里购买？官方淘宝链接是什么？</summary>
 
-- reBot Arm B601-DM 淘宝套件：https://e.tb.cn/h.RPhIHJUc4p9jhvI?tk=1WACg3iJ5lk
-- reBot Arm B601-RS 淘宝套件：https://e.tb.cn/h.RwJvpoc6dx5irCM?tk=cfZGgOx0guz
-- 海外/美国用户：https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html （预售）
-- 官方开源仓库（含 BOM、图纸）：https://github.com/Seeed-Projects/reBot-DevArm
+- [reBot Arm B601-DM 淘宝套件](https://e.tb.cn/h.RPhIHJUc4p9jhvI?tk=1WACg3iJ5lk)
+- [reBot Arm B601-RS 淘宝套件](https://e.tb.cn/h.RwJvpoc6dx5irCM?tk=cfZGgOx0guz)
+- [海外/美国用户（预售）](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
+- [官方开源仓库（含 BOM、图纸）](https://github.com/Seeed-Projects/reBot-DevArm)
 
 </details>
 
 <details className="content-details">
 <summary>DM/RS机械臂 接电池怎么办？</summary>
 
-DM\RS机械臂接电池需要额外的稳压模块以及电路设计，对于电流浪涌和反向电动势，可以给购买我们的RS泄放模块https://www.seeedstudio.com/Rebotic-Bleeder-Module-for-reBot-Arm-B601-RS-p-6987.html DM叠放模块https://www.seeedstudio.com/Rebotic-Power-Discharge-Module-for-reBot-Arm-B601-DM-p-6988.html
+DM\RS机械臂接电池需要额外的稳压模块以及电路设计，对于电流浪涌和反向电动势，可以购买我们的 [RS 泄放模块](https://www.seeedstudio.com/Rebotic-Bleeder-Module-for-reBot-Arm-B601-RS-p-6987.html) 和 [DM 叠放模块](https://www.seeedstudio.com/Rebotic-Power-Discharge-Module-for-reBot-Arm-B601-DM-p-6988.html)
 
 </details>
 
 <details className="content-details">
 <summary>reBot 推荐什么相机？腕部/顶部怎么装？</summary>
 
-相机支持单目、Realsense和Orbbec的深度、双目相机，可以在这里打印相机支架https://github.com/Seeed-Projects/reBot-DevArm/#-optional-hardware
+相机支持单目、Realsense和Orbbec的深度、双目相机，可以在这里 [打印相机支架](https://github.com/Seeed-Projects/reBot-DevArm/#-optional-hardware)
 
 </details>
 
@@ -866,14 +866,14 @@ DM\RS机械臂接电池需要额外的稳压模块以及电路设计，对于电
 <details className="content-details">
 <summary>底座尺寸是多少？怎么固定在桌面上？</summary>
 
-底座尺寸和固定孔位见开源文件 `01_BASE_Plate.step`：https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware 。桌面固定推荐 6 寸 G 型夹；也可自行设计转接板固定在铝型材或移动平台上。
+底座尺寸和固定孔位见开源文件 [`01_BASE_Plate.step`](https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware)。桌面固定推荐 6 寸 G 型夹；也可自行设计转接板固定在铝型材或移动平台上。
 
 </details>
 
 <details className="content-details">
 <summary>小配件（导轨滚珠、英标转换头、相机连接件）去哪买？</summary>
 
-- 夹爪导轨滚珠等标准件参数见 BOM：https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/readme_zh.md
+- [夹爪导轨滚珠等标准件参数见 BOM](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/readme_zh.md)
 - 相机支架/连接件：官方提供 3D 打印文件，自行打印或找打印服务。
 
 </details>
@@ -913,17 +913,17 @@ DM\RS机械臂接电池需要额外的稳压模块以及电路设计，对于电
 <details className="content-details">
 <summary>官方的教程、wiki、视频合集在哪里？</summary>
 
-- **DM 版上手 Wiki**：[/cn/rebot_b601_dm_getting_started/](/cn/rebot_b601_dm_getting_started/)
-- **RS 版上手 Wiki**：[/cn/rebot_b601_rs_getting_started/](/cn/rebot_b601_rs_getting_started/)
-- **RS 版 LeRobot 教程**：[/cn/rebot_arm_b601_rs_lerobot/](/cn/rebot_arm_b601_rs_lerobot/)
-- **GitHub 主仓库（BOM/图纸/SDK/教程索引）**：https://github.com/Seeed-Projects/reBot-DevArm
-40章节从0开始的手把手课程 [/cn/robotics/rebot_physical_ai_course_introduction/](/cn/robotics/rebot_physical_ai_course_introduction/)
-手把手带你复现论文理论+实践 [/cn/robotics/rebot_physical_ai_course_introduction/](/cn/robotics/rebot_physical_ai_course_introduction/) 
-reBot仿真体验页面 https://seeed-projects.github.io/reBot_RS_Sim/ 
-无码化体验的sensecraft平台教程 [/cn/sensecraft_robotics/](/cn/sensecraft_robotics/)
-- **B站视频课**：组装 https://b23.tv/MkMnfqN ；ID 写入与零点校准 https://b23.tv/ApfFH0X ；校准及上手 https://b23.tv/FMvvQRI
-- 视觉抓取 Demo 教程：[/cn/rebot_arm_b601_dm_grasping_demo/](/cn/rebot_arm_b601_dm_grasping_demo/)
-- Pinocchio/Meshcat 仿真：[/cn/rebot_arm_b601_dm_pinocchio_meshcat/](/cn/rebot_arm_b601_dm_pinocchio_meshcat/)
+- [DM 版上手 Wiki](/cn/rebot_b601_dm_getting_started/)
+- [RS 版上手 Wiki](/cn/rebot_b601_rs_getting_started/)
+- [RS 版 LeRobot 教程](/cn/rebot_arm_b601_rs_lerobot/)
+- [GitHub 主仓库（BOM/图纸/SDK/教程索引）](https://github.com/Seeed-Projects/reBot-DevArm)
+[40章节从0开始的手把手课程](/cn/robotics/rebot_physical_ai_course_introduction/)
+[手把手带你复现论文理论+实践](/cn/robotics/rebot_physical_ai_course_introduction/) 
+[reBot 仿真体验页面](https://seeed-projects.github.io/reBot_RS_Sim/) 
+[无码化体验的 SenseCraft 平台教程](/cn/sensecraft_robotics/)
+- **B 站视频课**：[组装](https://b23.tv/MkMnfqN) · [ID 写入与零点校准](https://b23.tv/ApfFH0X) · [校准及上手](https://b23.tv/FMvvQRI)
+- [视觉抓取 Demo 教程](/cn/rebot_arm_b601_dm_grasping_demo/)
+- [Pinocchio/Meshcat 仿真](/cn/rebot_arm_b601_dm_pinocchio_meshcat/)
 
 </details>
 
@@ -937,10 +937,10 @@ reBot仿真体验页面 https://seeed-projects.github.io/reBot_RS_Sim/
 <details className="content-details">
 <summary>机械臂的 URDF / 三维模型 / STEP 文件在哪？</summary>
 
-- RS URDF：https://github.com/Seeed-Projects/reBotArm_control_py/tree/main/urdf/RS/urdf
-- RS 模型/图纸说明：https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README_zh.md
-- DM 3D 打印件：https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/3D_Printed_Parts
-- 第三方实时控制库（含 IK）：https://github.com/xensedyl/rebotarm_control_rt
+- [RS URDF](https://github.com/Seeed-Projects/reBotArm_control_py/tree/main/urdf/RS/urdf)
+- [RS 模型/图纸说明](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README_zh.md)
+- [DM 3D 打印件](https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/3D_Printed_Parts)
+- [第三方实时控制库（含 IK）](https://github.com/xensedyl/rebotarm_control_rt)
 
 </details>
 
@@ -969,7 +969,7 @@ reBot仿真体验页面 https://seeed-projects.github.io/reBot_RS_Sim/
 <details className="content-details">
 <summary>官网/文档打不开或找不到页面怎么办？</summary>
 
-优先看 wiki 的 FAQ 章节（DM getting started 页底部）；motorbridge 相关文档：https://motorbridge.github.io/motorbridge-studio/ 。若页面失效，可在群里反馈，官方会更新。
+优先看 wiki 的 FAQ 章节（DM getting started 页底部）；[motorbridge 相关文档](https://motorbridge.github.io/motorbridge-studio/)。若页面失效，可在群里反馈，官方会更新。
 
 </details>
 
@@ -1047,7 +1047,7 @@ DM 版：用 **motorbridge 网页端**连接 USB-CAN → 使能电机 → 写入
 <details className="content-details">
 <summary>可以用云 GPU 训练吗？</summary>
 
-可以。官方推荐 SenseCraft Robotics 平台（新用户送积分，可直接跑 ACT）：https://sensecraft.seeed.cc/zh/robotics ；也可用 AutoDL、Featurize 等租用平台，按小时计费。
+可以。官方推荐 [SenseCraft Robotics 平台](https://sensecraft.seeed.cc/zh/robotics)（新用户送积分，可直接跑 ACT）；也可用 AutoDL、Featurize 等租用平台，按小时计费。
 
 </details>
 
@@ -1063,7 +1063,7 @@ Ubuntu 系统 + NVIDIA 显卡（建议 RTX 3080 及以上，6GB 显存起步可�
 <details className="content-details">
 <summary>reBot 支持 ROS2 吗？控制频率多少？</summary>
 
-支持：官方 ROS2 控制器 https://github.com/Seeed-Projects/reBotArmController_ROS2 ；Python SDK：https://github.com/Seeed-Projects/reBotArm_control_py 。LeRobot 下实测控制频率约 70Hz，受图像传输、leader 臂速率等因素影响。
+支持：[官方 ROS2 控制器](https://github.com/Seeed-Projects/ReBotArmController_ROS2) 与 [Python SDK](https://github.com/Seeed-Projects/ReBotArm_control_py)。LeRobot 下实测控制频率约 70Hz，受图像传输、leader 臂速率等因素影响。
 
 </details>
 
