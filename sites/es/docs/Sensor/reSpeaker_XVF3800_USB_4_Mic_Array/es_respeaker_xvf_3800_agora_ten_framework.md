@@ -285,6 +285,8 @@ La actualización de firmware es un paso obligatorio y se recomienda encarecidam
 
 #### Opcional: Cambiar a FlowSpeech TTS
 
+Usa la extensión compatible con la API pública v1 del [PR del proveedor #1](https://github.com/Seeed-Projects/seeed-respeaker-agora-tenframework/pull/1); esta actualización sigue pendiente de integración. Requiere una clave de API para desarrolladores, una suscripción de pago Basic, Pro o Scale activa y créditos disponibles. La extensión crea un trabajo en `/api/v1/tts/jobs`, consulta su estado con intervalos de al menos cinco segundos, descarga el WAV sin credenciales de API y extrae las muestras PCM. El audio empieza después de completar la descarga, no durante la generación. Reserva tiempo suficiente; cancelar la reproducción local no cancela el trabajo en el servidor. Consulta la [guía de la API pública](https://flowspeech.io/docs/public-api).
+
 La extensión FlowSpeech genera audio PCM de 24 kHz, mono y 16 bits, y se puede conectar directamente al nodo `tts` de este ejemplo. Abre `agents/examples/voice-assistant/tenapp/property.json` y reemplaza el nodo llamado `tts` por:
 
 ```json
@@ -294,6 +296,8 @@ La extensión FlowSpeech genera audio PCM de 24 kHz, mono y 16 bits, y se puede 
   "addon": "flowspeech_tts_python",
   "extension_group": "tts",
   "property": {
+    "total_timeout": 600.0,
+    "max_retries": 2,
     "dump": false,
     "dump_path": "./",
     "params": {
