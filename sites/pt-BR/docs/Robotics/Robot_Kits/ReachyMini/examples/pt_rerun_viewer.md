@@ -1,5 +1,6 @@
 ---
 description: Exemplo que demonstra a utilidade Rerun para visualização em tempo real e registro do estado do Reachy Mini em modo complacente com compensação de gravidade.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Visualizador Rerun
 slug: /reachymini_examples_rerun_viewer
 keywords:

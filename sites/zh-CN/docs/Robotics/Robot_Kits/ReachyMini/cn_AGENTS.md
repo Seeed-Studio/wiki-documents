@@ -1,5 +1,6 @@
 ---
 description: 为AI代理提供的Reachy Mini应用开发综合指南，涵盖SDK要点、REST API、平台兼容性和最佳实践。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 面向AI代理的Reachy Mini开发指南
 slug: /reachymini_agents
 keywords:

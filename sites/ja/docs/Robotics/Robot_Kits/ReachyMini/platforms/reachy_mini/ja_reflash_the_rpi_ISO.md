@@ -1,5 +1,6 @@
 ---
 description: Linux、macOS、Windows 上で rpiboot と bmaptool を使用して、Reachy Mini の CM4 に ReachyMiniOS イメージを書き込み直すためのエキスパート向けガイド。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Raspberry Pi OS イメージを書き込み直す
 slug: /reachymini_platforms_reachy_mini_reflash_the_rpi_iso
 keywords:

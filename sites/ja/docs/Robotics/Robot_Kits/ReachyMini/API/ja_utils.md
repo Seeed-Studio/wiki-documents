@@ -1,5 +1,6 @@
 ---
 description: 補間関数、ハードウェア構成、Rerun による可視化、およびコアユーティリティを含む Reachy Mini utils の完全な API リファレンス。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Utils API リファレンス
 slug: /reachymini_api_utils
 keywords:

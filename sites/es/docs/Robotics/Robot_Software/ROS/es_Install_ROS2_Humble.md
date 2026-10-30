@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona una guía paso a paso para instalar ROS2 humble.
+description: "Guía paso a paso para instalar ROS 2 Humble en Ubuntu y Jetson: configuración del repositorio, instalación, creación del workspace y primeros nodos."
 title: Instalar ROS2 Humble
 keywords:
   - NVIDIA

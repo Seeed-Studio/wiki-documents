@@ -1,5 +1,6 @@
 ---
 description: 示例演示Reachy Mini头部和天线移动到目标姿态的不同插值方法（linear、minjerk、ease_in_out、cartoon）。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Goto插值 playground
 slug: /reachymini_examples_goto_interpolation_playground
 keywords:

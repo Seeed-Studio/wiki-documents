@@ -1,5 +1,6 @@
 ---
 description: このチュートリアルでは、ロボットアーム reBot Arm B601-DM 上で、運動学解析と可視化のために Pinocchio と MeshCat を使用する方法を紹介します。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 title: B601-DM と Pinocchio
 keywords:
   - Pinocchio

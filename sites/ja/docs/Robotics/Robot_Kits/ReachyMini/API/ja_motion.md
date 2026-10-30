@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini のモーションシステムにおける基底クラス、goto モーション、および記録モーションを網羅した Motion API リファレンス。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Motion API
 slug: /reachymini_api_motion
 keywords:

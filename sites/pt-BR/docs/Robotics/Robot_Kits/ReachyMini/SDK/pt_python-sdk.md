@@ -1,5 +1,6 @@
 ---
 description: Referência completa do SDK em Python para o Reachy Mini, cobrindo controle de movimento, câmera, IMU, gravação e reprodução de áudio e opções de backend de mídia.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Referência do SDK em Python
 slug: /reachymini_sdk_python-sdk
 keywords:

@@ -1,5 +1,6 @@
 ---
 description: Guia avançado para regravar a imagem ReachyMiniOS no CM4 do Reachy Mini usando rpiboot e bmaptool em Linux, macOS e Windows.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Regravar a imagem do Raspberry Pi OS
 slug: /reachymini_platforms_reachy_mini_reflash_the_rpi_iso
 keywords:

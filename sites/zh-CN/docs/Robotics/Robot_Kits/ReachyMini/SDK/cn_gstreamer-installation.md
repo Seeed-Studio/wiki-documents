@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini全面GStreamer安装指南，涵盖Linux、macOS和Windows上的GStreamer安装，包括用于视频和音频流的WebRTC插件设置。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: GStreamer安装
 slug: /reachymini_sdk_gstreamer-installation
 keywords:

@@ -1,6 +1,6 @@
 ---
 description: "reBot Arm と SO-ARM101 で Physical AI 論文を動かす方法：Pi0、Pi0.5、GR00T、ACT、SmolVLA などのモデルを Seeed 論文精読シリーズで解説し、LeRobot でハンズオン再現します。"
-title: "reBot Arm で Physical AI 論文を動かす方法"
+title: "reBot Arm と SO-ARM101 で Physical AI 論文を動かす方法"
 hide_title: true
 keywords:
   - reBot
@@ -46,7 +46,7 @@ import '/src/css/paper-reading-style.css';
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">reBot Arm で Physical AI 論文を動かす方法</h1>
+    <h1 id="paper-reading-title">reBot Arm と SO-ARM101 で Physical AI 論文を動かす方法</h1>
     <p className="paper-reading-lead">最先端のPhysical AI研究を探索し、Seeedロボットアームで主要なモデルとアルゴリズムを分解して学ぶ</p>
     <p><strong>永遠に無料のコース</strong>を、SeeedStudio AI Robotics チームが丁寧に開発し、<strong>商用利用・再現が可能な 100% オープンソースの reBot ロボットアーム</strong>と組み合わせました。やり切って、次のロボティクスエキスパートになりましょう！</p>
     <ul className="paper-reading-badges" aria-label="コースの特徴">

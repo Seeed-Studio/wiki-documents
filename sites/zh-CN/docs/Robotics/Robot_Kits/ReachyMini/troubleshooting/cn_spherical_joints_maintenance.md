@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini球形关节维护指南，涵盖Stewart平台的球形关节清洁和重新润滑，以恢复平稳、安静的运行。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 球形关节维护
 slug: /reachymini_troubleshooting_spherical_joints_maintenance
 keywords:

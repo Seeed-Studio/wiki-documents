@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini の寸法、自由度、モーター仕様、カメラ、マイクアレイ、および電子部品を含む、完全なハードウェアデータシートです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini ハードウェアデータシート
 slug: /reachymini_platforms_reachy_mini_hardware
 keywords:
