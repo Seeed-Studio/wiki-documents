@@ -10,10 +10,10 @@ slug: /sensecap_meshtracker_x1_meshcore
 sku: 100087698
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
-  author: Michelle Huang
+  date: 10/30/2026
+  author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-20'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/
 ---
 
@@ -267,26 +267,36 @@ For example, the device ID of the device below would be `A0D4`
 
 ### How to reboot the device
 
- Press and hold the button, then connect the charging cable，release the button immediately.
+ Press and hold the button, then connect the charging cable, release the button immediately.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260818150011.gif" alt="pir" width={300} height="auto" /></p>
 
  :::note
-  Press and hold the button, then connect the charging cable，keep holding for more than 3s will force the device into DFU mode.
+  Press and hold the button, then connect the charging cable, keep holding for more than 3s will force the device into DFU mode.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
-   If you want to get out of DFU mode, just ress and hold the button, then connect the charging cable，release the button immediately.
+   If you want to get out of DFU mode, just press and hold the button, then connect the charging cable, release the button immediately.
 
  :::
 
 ## Troubleshooting
 
+### Firmware Update Failed / OTA Recovery
+
+If your SenseCAP MeshTracker X1 fails to start, becomes unresponsive, or the white ⚪️ LED stays solid on after a firmware update, the device may be stuck in DFU mode. Try the following:
+
+1. Force a reboot to exit DFU mode: disconnect the USB charging cable, press and hold the device button, connect the USB charging cable, and release the button immediately. Do not keep holding the button — holding it for more than 3 seconds after connecting the cable will force the device back into DFU mode.
+2. Check whether the device starts normally. If not, connect the device to your computer with a USB data cable and follow the [Firmware Flashing](#firmware-flashing) guide to enter DFU mode, erase the flash, and reinstall the MeshCore firmware.
+3. If the device still cannot be recovered, follow [Bootloader Installation](#bootloader-installation) to re-flash the bootloader, then reinstall the application firmware.
+
+Do not force a reboot or unplug the USB cable while the firmware is being erased or flashed. If the device cannot enter DFU mode or be detected by your computer, please contact technical support.
+
 ### Device never turns on
 
 - Use a known working USB cable to `charge the device` continuously for 1–2 hours to ensure the battery has sufficient power to wake up the system.
 
-- If the device still does not respond after charging, `perform a hard reset` as follows: Unplug the USB cable. Press and hold the button, then plug in the USB cable while keeping the button pressed. Hold for approximately 3 seconds, then release it. This forces a system reset.
+- If the device still does not respond after charging, `perform a hard reset` as follows: Unplug the USB cable. Press and hold the button, then plug in the USB cable and release the button immediately. This forces a system reset.
 
  - If still no luck, Connect a USB cable to a computer. Hold the device button, then connect the device to the computer, see whether or not the a disk pop out in your PC. If so, re-install the bootloader
 
@@ -298,7 +308,7 @@ The device will restart repeatedly, and the serial port connects and disconnects
 
 **Solution:**
 
-- Step 1: Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the charging cable twice
+- Step 1: Try to enter DFU mode manually: press and hold the device button, then **quickly** connect the device with the computer via USB cable, keep holding the button until a white ⚪️ LED turned on.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
@@ -400,7 +410,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#flash-firmware) to flash the application firmware.
+When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#firmware-flashing) to flash the application firmware.
 
 
 **2) Device can not enter DFU mode, but the serial port can be detected**.
@@ -410,7 +420,7 @@ When you have completed the above steps, then you can follow this [step](https:/
 - Set the baud rate to `1200`.
 
 - Connect the device.
-   The light will flash briefly when you connect it. Keep trying this until the light stays on, which means the device can go back to DFU mode, then [flash bootloader](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#bootloader-installation) -> [erase flash](https://wiki.seeedstudio.sensecap_meshtracker_x1_meshcore/#firmware-flashing) -> [flash the firmware](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#firmware-flashing).
+   The light will flash briefly when you connect it. Keep trying this until the light stays on, which means the device can go back to DFU mode, then [flash bootloader](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#bootloader-installation) -> [erase flash](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#firmware-flashing) -> [flash the firmware](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/#firmware-flashing).
 
 **3) Device can not enter DFU mode, and no serial port display**
 
