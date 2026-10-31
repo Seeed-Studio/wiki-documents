@@ -370,6 +370,28 @@ You will see the following output if the flashing process is successful
 The flash command may run for 2-10 minutes.
 :::
 
+:::tip Host PC with a ZFS root filesystem
+If the flash stops at the NFS mount step with `mount.nfs: access denied by server while mounting [fc00:1:1:0::1]:/.../rootfs`, check whether the Ubuntu host was installed with ZFS as the root filesystem. The flash script creates temporary NFS exports with `exportfs -o`, and the Linux NFS server cannot derive a filesystem id (`fsid`) for ZFS datasets, so the export looks successful on the host but the Jetson is refused when it mounts the rootfs. This is not specific to the J501; it affects any Jetson flashed with `l4t_initrd_flash.sh` from a ZFS host.
+
+Add permanent exports with an explicit `fsid` to `/etc/exports` on the host before running the flash command (replace `<path-to-image>/mfi_xxxx` with your extracted directory, keep the IPv6 range without square brackets and no space before the parenthesis):
+
+```bash
+<path-to-image>/mfi_xxxx/rootfs fc00:1:1::/48(rw,nohide,insecure,no_subtree_check,async,no_root_squash,fsid=1)
+<path-to-image>/mfi_xxxx/tools/kernel_flash/images fc00:1:1::/48(rw,nohide,insecure,no_subtree_check,async,no_root_squash,fsid=2)
+```
+
+Then apply them and confirm that both exports are listed:
+
+```bash
+sudo chmod 755 <path-to-image>/mfi_xxxx/rootfs <path-to-image>/mfi_xxxx/tools/kernel_flash/images
+sudo chown root:root <path-to-image>/mfi_xxxx/rootfs <path-to-image>/mfi_xxxx/tools/kernel_flash/images
+sudo systemctl restart nfs-kernel-server
+sudo exportfs -rav
+```
+
+The script's cleanup step removes and recreates the exports with `exportfs -o` on every run, so the flash may still fail unless `enable_nfs_for_folder()` in `tools/kernel_flash/l4t_network_flash.func` is changed to write `/etc/exports` with `fsid=` and call `exportfs -ra`. A tested version of that function, together with the full root-cause analysis, is in [wiki-documents#4148](https://github.com/Seeed-Studio/wiki-documents/issues/4148). Alternatively, flash from a host whose root filesystem is ext4.
+:::
+
 **Step 3:** Connect the J501 to a display using the HDMI connector on the board and finish the initial configuration setup:
 
 <div align="center">
