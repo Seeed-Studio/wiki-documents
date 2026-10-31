@@ -273,6 +273,103 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 </section>
 </div>
 
+## Conectar os Braços
+
+> **Aviso de segurança:**
+> Desconecte a alimentação antes de conectar ou desconectar cabos JST, XT30 ou outros cabos. Ligue a alimentação somente depois de confirmar que todos os cabos estão conectados corretamente.
+> B601 RS e B601 DM são semelhantes. Certifique-se de distingui-los.
+
+
+### Montar e Conectar o reBot Arm 102 (Braço Líder)
+
+
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Montar o reBot Arm 102</h4>
+      <p className="rebot-step-label">Etapa 1</p>
+
+Use grampos de marcenaria para fixar o reBot Arm 102 em uma superfície de mesa plana. Empurre suavemente a base para confirmar que ela não se move.
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Conectar os Cabos</h4>
+      <p className="rebot-step-label">Etapa 2</p>
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
+
+
+As conexões consistem em dois caminhos:
+
+* **Caminho de sinal (braço -> cabo USB-C -> computador)**
+  1. Prepare um cabo USB-C para conectar o braço ao computador (**ainda não o conecte ao computador; conecte quando chegar à vinculação da porta serial e à varredura de dispositivos**).
+
+* **Caminho de alimentação (braço -> adaptador de energia 12 V 2 A -> régua de energia -> ligar)**
+  1. Conecte o **adaptador de energia 12 V 2 A** ao conector de alimentação do braço.
+  2. Conecte o adaptador à régua de energia para ligar o braço.
+
+</div>
+</section>
+
+</div>
+
+### Montar e Conectar o B601 DM (Braço Seguidor)
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>Montar o B601 DM</h4>
+      <p className="rebot-step-label">Etapa 3</p>
+
+Use grampos em G para fixar o B601 DM em uma superfície de mesa estável e plana. Depois de fixá-lo, gire suavemente o braço para a esquerda e para a direita para confirmar que a base não se move.
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Conectar os Cabos</h4>
+      <p className="rebot-step-label">Etapa 4</p>
+
+Certifique-se de que a alimentação esteja desconectada antes de começar. As conexões consistem em dois caminhos:
+
+* **Caminho de sinal (braço -> placa de separação de sinal/alimentação -> placa driver USB-CAN -> computador)**
+  1. Use um cabo XT30 2+2 para conectar o primeiro motor na base à placa de separação de sinal/alimentação.
+  2. Use o cabo JST de 2 pinos para conectar a placa de separação de sinal/alimentação à placa driver USB-CAN.
+  3. Use o cabo JST de 3 pinos para conectar o primeiro motor na base à placa driver USB-CAN (este é um cabo de depuração e pode ser deixado desconectado).
+  4. Prepare um cabo de dados USB-C para conectar a placa driver USB-CAN ao computador (**ainda não o conecte ao computador; conecte quando chegar à vinculação da porta serial e à varredura de dispositivos**).
+
+* **Caminho de alimentação (braço -> placa de separação de sinal/alimentação -> adaptador de energia 24 V -> tomada -> ligar)**
+  1. Use um cabo XT30 2+2 para conectar o primeiro motor na base à placa de separação de sinal/alimentação.
+  2. Conecte a placa de separação de sinal/alimentação ao **adaptador de energia 24 V**.
+  3. Conecte o adaptador de energia à tomada. Depois de confirmar que o braço está fixado, os cabos estão corretos e a área ao redor está livre, ligue a alimentação.
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
+
+</div>
+</section>
+
+</div>
+
 ## Calibrar o Braço Robótico
 
 <div class="video-container">
@@ -416,6 +513,7 @@ A RealSense D405 é uma câmera estéreo de profundidade de curto alcance projet
 
 A RealSense D435i combina detecção de profundidade, imagem RGB e um IMU, tornando-a adequada para aplicações de médio a curto alcance, como reconstrução 3D, SLAM e percepção de ambiente robótico.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -570,6 +668,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -598,6 +698,7 @@ fornecendo fluxos sincronizados de RGB e profundidade com alinhamento preciso de
 
 Gemini 336 é um novo membro da série Gemini 330. Ela herda o forte desempenho de profundidade da Gemini 335 e melhora ainda mais a qualidade de imagem de profundidade em áreas internas reflexivas, regiões escuras em cenas de alta dinâmica e ambientes externos claros. Para aplicações de robótica, pode fornecer dados de profundidade mais estáveis e de alta qualidade para tarefas como percepção, localização e manipulação.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -753,6 +854,8 @@ Em seguida, confirme o `serial` real e atualize `serial_number_or_name` no seu c
 
 </div>
 </section>
+</div>
+
 </div>
 
 </TabItem>

@@ -169,12 +169,113 @@ Luego conecta el módulo USB-a-CAN, la placa divisora de alimentación y señal,
 <iframe width="900" height="600" src="https://www.youtube.com/embed/y6GfyjJf9cA?si=fbkTdCW3nsamFYbE" title="Flexible gripper installation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+## Conectar los brazos
+
+:::warning
+**Aviso de seguridad:**
+Desconecta la alimentación antes de conectar o desconectar cables JST, XT30 u otros cables. Enciende la alimentación solo después de confirmar que todos los cables están conectados correctamente.
+B601 RS y B601 DM tienen un aspecto similar. Asegúrate de distinguirlos.
+:::
+
+
+### Montar y conectar reBot Arm 102 (brazo líder)
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Montar reBot Arm 102</h4>
+      <p className="rebot-step-label">Paso 1</p>
+
+Utiliza sargentos de carpintero para fijar reBot Arm 102 a una mesa plana. Empuja suavemente la base para confirmar que no se mueve.
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Conectar los cables</h4>
+      <p className="rebot-step-label">Paso 2</p>
+
+Las conexiones constan de dos rutas:
+
+* **Ruta de señal (brazo -> cable USB-C -> ordenador)**
+  1. Prepara un cable USB-C para conectar el brazo al ordenador (**aún no lo conectes al ordenador; conéctalo cuando llegues al enlace del puerto serie y busques dispositivos**).
+
+* **Ruta de alimentación (brazo -> fuente de alimentación de 12 V 2 A -> regleta)** 
+  1. Conecta el **adaptador de alimentación de 12 V 2 A** al conector de alimentación del brazo.
+  2. Conecta el adaptador a la regleta para encender el brazo.
+
+
+
+---
+
+</div>
+</section>
+
+</div>
+
+### Montar y conectar el B601 RS (brazo seguidor)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Montar el B601 RS</h4>
+      <p className="rebot-step-label">Paso 4</p>
+
+Utiliza sargentos en C para fijar el B601 RS a una mesa plana. Gira suavemente el brazo hacia la izquierda y la derecha para confirmar que la base no se mueve.
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>Conectar los cables</h4>
+      <p className="rebot-step-label">Paso 5</p>
+
+Asegúrate de que la alimentación esté desconectada antes de empezar. Las conexiones constan de dos rutas:
+
+* **Ruta de señal (brazo -> placa de separación de señal -> USB-CAN -> ordenador)**
+  1. Utiliza un cable XT30 2+2 para conectar la base del brazo al módulo de separación de señal.
+  2. Corta el cable de 2 pines. Conecta un extremo al módulo de separación de señal; conecta el cable rojo del otro extremo a H en el USB-CAN y el cable negro a L.
+  3. Conecta un extremo del USB-CAN al ordenador a través del cable de extensión USB (**aún no lo conectes al ordenador; conéctalo cuando el enlace del puerto serie esté listo y busques dispositivos**).
+
+* **Ruta de alimentación (brazo -> placa de separación de señal -> fuente de alimentación de 48 V 12,5 A -> toma de corriente)**
+  1. Utiliza un cable XT30 2+2 para conectar la base del brazo al módulo de separación de señal.
+  2. Utiliza el cable de alimentación XT30 para conectar el módulo de separación de señal a la fuente de alimentación de 48 V 12,5 A.
+  3. Conecta la fuente de alimentación a la toma de corriente. Después de confirmar que el brazo está fijado, los cables son correctos y el área circundante está despejada, enciende la alimentación.
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp" />
+</div>
+
+
+---
+
 Deberías haber completado la preparación preliminar para el montaje del brazo robótico siguiendo el video. A continuación, presentaremos los pasos para escribir los ID de los motores y calibrar el brazo robótico.
 
 Consulta el video y el tutorial en texto. Antes de controlar el brazo robótico, debes restablecer el punto cero nuevamente.
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## Usa MotorBridge para calibrar el brazo y completar la primera ejecución
@@ -211,6 +312,7 @@ Si compraste un kit preensamblado, dile al agente durante el paso de ID del moto
 
 Sigue estos pasos en orden para instalar Miniforge y crear un entorno aislado de Python para el desarrollo con reBot.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -834,4 +936,6 @@ Primero selecciona `rebot-arm-robstride` en **Robot Model** en [MotorBridge Stud
 
 </div>
 </section>
+</div>
+
 </div>

@@ -243,6 +243,7 @@ const sidebars = {
 
   SoArm101Sidebar: [
     backToRobotics(),
+    soArmCourseLink,
     {
       type: 'category',
       label: '快速开始与工具',
@@ -267,7 +268,6 @@ const sidebars = {
         `${K}/Lerobot/cn_Lerobot_SO_ARM101_DAMO`,
       ],
     },
-    soArmCourseLink,
   ],
 
   LekiwiSidebar: [

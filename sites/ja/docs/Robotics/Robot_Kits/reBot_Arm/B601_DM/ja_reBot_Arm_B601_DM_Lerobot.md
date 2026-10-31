@@ -273,6 +273,105 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 </section>
 </div>
 
+## アームの接続
+
+:::warning
+**安全に関する注意：**
+JST、XT30、その他のケーブルを接続・取り外しする前に、必ず電源を切ってください。すべてのケーブルが正しく接続されていることを確認してから電源を入れてください。
+B601 RS と B601 DM は外観が似ています。必ず見分けてください。
+:::
+
+
+### reBot Arm 102（リーダーアーム）の取り付けと接続
+
+
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>reBot Arm 102 を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 1</p>
+
+木工用クランプを使用して、reBot Arm 102 を平らなテーブルトップに固定します。ベースを軽く押して、動かないことを確認します。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 2</p>
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
+
+
+接続は次の 2 つの経路で構成されます。
+
+* **信号経路（アーム -> USB-C ケーブル -> コンピュータ）**
+  1. アームとコンピュータを接続するための USB-C ケーブルを用意します（**まだコンピュータには接続しないでください。シリアルポートのバインドとデバイススキャンの段階で接続します**）。
+
+* **電源経路（アーム -> 12 V 2 A 電源アダプタ -> 電源タップ -> 通電）**
+  1. **12 V 2 A 電源アダプタ**をアームの電源コネクタに接続します。
+  2. アダプタを電源タップに接続してアームの電源を入れます。
+
+</div>
+</section>
+
+</div>
+
+### B601 DM（フォロワーアーム）の取り付けと接続
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>B601 DM を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 3</p>
+
+G クランプを使用して、B601 DM を安定した平らなテーブルトップに固定します。固定後、アームを左右に軽く回転させ、ベースが動かないことを確認します。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 4</p>
+
+作業を始める前に、必ず電源が切れていることを確認してください。接続は次の 2 つの経路で構成されます。
+
+* **信号経路（アーム -> 信号/電源分離ボード -> USB-CAN ドライバボード -> コンピュータ）**
+  1. XT30 2+2 ケーブルを使用して、一番下の第 1 モータと信号/電源分離ボードを接続します。
+  2. 2 ピン JST ケーブルを使用して、信号/電源分離ボードと USB-CAN ドライバボードを接続します。
+  3. 3 ピン JST ケーブルを使用して、一番下の第 1 モータと USB-CAN ドライバボードを接続します（これはデバッグ用ケーブルであり、未接続のままでも構いません）。
+  4. USB-C データケーブルを用意し、USB-CAN ドライバボードとコンピュータを接続します（**まだコンピュータには接続しないでください。シリアルポートのバインドとデバイススキャンの段階で接続します**）。
+
+* **電源経路（アーム -> 信号/電源分離ボード -> 24 V 電源アダプタ -> コンセント -> 通電）**
+  1. XT30 2+2 ケーブルを使用して、一番下の第 1 モータと信号/電源分離ボードを接続します。
+  2. 信号/電源分離ボードを **24 V 電源アダプタ**に接続します。
+  3. 電源アダプタをコンセントに接続します。アームが確実に固定されていること、ケーブルが正しいこと、周囲が安全であることを確認したうえで、電源を入れます。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
+
+</div>
+</section>
+
+</div>
+
 ## ロボットアームをキャリブレーションする
 
 <div class="video-container">
@@ -416,6 +515,7 @@ RealSense D405 は、テーブルトップロボットマニピュレーショ�
 
 RealSense D435i は、深度センシング、RGB 画像、および IMU を組み合わせており、3D 再構成、SLAM、ロボットによる環境認識などの中距離〜近距離アプリケーションに適しています。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -570,6 +670,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -598,6 +700,7 @@ lerobot-teleoperate \
 
 Gemini 336 は Gemini 330 シリーズの新しいメンバーです。Gemini 335 の優れた深度性能を受け継ぎつつ、反射の多い屋内エリア、高ダイナミックシーンの暗部、明るい屋外環境における深度画像品質をさらに向上させています。ロボット用途においては、認識、自己位置推定、マニピュレーションなどのタスクに対して、より安定した高品質な深度データを提供できます。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -753,6 +856,8 @@ lerobot-find-cameras orbbec
 
 </div>
 </section>
+</div>
+
 </div>
 
 </TabItem>

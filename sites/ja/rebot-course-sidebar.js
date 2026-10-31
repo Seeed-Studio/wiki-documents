@@ -232,6 +232,30 @@ const sidebars = {
     backToRobotics(),
     {
       type: 'category',
+      label: 'コース',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/ja_Arm_Tutorial_Introduction`,
+      label: '初心者向けコース',
+    },
+    {
+      type: 'ref',
+      id: `${P}/ja_Paper_Reading_Getting_Started`,
+      label: '論文ディープダイブ',
+    },
+    {
+      type: 'link',
+      label: 'NVIDIA Isaac による Sim-to-Real',
+      href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac',
+    },
+      ],
+    },
+    {
+      type: 'category',
       label: 'クイックスタート & SDK',
       className: 'robotics-section-title',
       collapsed: false,
@@ -263,6 +287,25 @@ const sidebars = {
   // reBot-DM: Quick Start & SDK / Applications.
   RebotDmSidebar: [
     backToRobotics(),
+    {
+      type: 'category',
+      label: 'コース',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/ja_Arm_Tutorial_Introduction`,
+      label: '初心者向けコース',
+    },
+    {
+      type: 'ref',
+      id: `${P}/ja_Paper_Reading_Getting_Started`,
+      label: '論文ディープダイブ',
+    },
+      ],
+    },
     {
       type: 'category',
       label: 'クイックスタート & SDK',

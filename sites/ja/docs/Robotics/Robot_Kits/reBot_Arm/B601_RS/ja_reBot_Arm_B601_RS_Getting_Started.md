@@ -169,12 +169,113 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <iframe width="900" height="600" src="https://www.youtube.com/embed/y6GfyjJf9cA?si=fbkTdCW3nsamFYbE" title="フレキシブルグリッパーの取り付け" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+## アームの接続
+
+:::warning
+**安全上の注意:**
+JST、XT30、その他のケーブルを接続・取り外しする前に、必ず電源を切ってください。すべてのケーブルが正しく接続されていることを確認してから電源を入れてください。
+B601 RS と B601 DM は外観が似ています。必ず見分けてください。
+:::
+
+
+### reBot Arm 102（リーダーアーム）の取り付けと接続
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>reBot Arm 102 を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 1</p>
+
+木工用クランプを使用して、reBot Arm 102 を平らなテーブルトップに固定します。土台を軽く押して、動かないことを確認します。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 2</p>
+
+接続は 2 つの経路で構成されます。
+
+* **信号経路（アーム -> USB-C ケーブル -> コンピュータ）**
+  1. アームとコンピュータを接続する USB-C ケーブルを用意します（**まだコンピュータには接続しないでください。シリアルポートのバインドとデバイススキャンの段階で接続します**）。
+
+* **電源経路（アーム -> 12 V 2 A 電源 -> 電源タップ）**
+  1. **12 V 2 A 電源アダプタ**をアームの電源コネクタに接続します。
+  2. アダプタを電源タップに接続してアームの電源を入れます。
+
+
+
+---
+
+</div>
+</section>
+
+</div>
+
+### B601 RS（フォロワーアーム）の取り付けと接続
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>B601 RS を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 4</p>
+
+G クランプを使用して、B601 RS を平らなテーブルトップに固定します。アームを左右に軽く回転させ、土台が動かないことを確認します。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 5</p>
+
+作業を始める前に、必ず電源が切れていることを確認してください。接続は 2 つの経路で構成されます。
+
+* **信号経路（アーム -> 信号分離ボード -> USB-CAN -> コンピュータ）**
+  1. XT30 2+2 ケーブルを使用して、アームのベースと信号分離モジュールを接続します。
+  2. 2 ピンケーブルを切断します。一方の端を信号分離モジュールに接続し、もう一方の端の赤い線を USB-CAN の H に、黒い線を L に接続します。
+  3. USB 延長ケーブルを介して USB-CAN の一方の端をコンピュータに接続します（**まだコンピュータには接続しないでください。シリアルポートのバインド準備ができてデバイススキャンを行う段階で接続します**）。
+
+* **電源経路（アーム -> 信号分離ボード -> 48 V 12.5 A 電源 -> コンセント）**
+  1. XT30 2+2 ケーブルを使用して、アームのベースと信号分離モジュールを接続します。
+  2. 電源用 XT30 ケーブルを使用して、信号分離モジュールと 48 V 12.5 A 電源を接続します。
+  3. 電源をコンセントに接続します。アームがしっかり固定されていること、ケーブルが正しいこと、周囲が安全であることを確認したうえで、電源を入れます。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp" />
+</div>
+
+
+---
+
 ここまでの動画に従って、ロボットアーム組み立ての事前準備は完了しているはずです。次に、モーター ID の書き込みとロボットアームのキャリブレーション手順を紹介します。
 
 ビデオとテキストチュートリアルを参照してください。ロボットアームを制御する前に、ゼロ点をもう一度リセットする必要があります。
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## MotorBridge を使ってアームをキャリブレーションし、初回動作を完了する
@@ -211,6 +312,7 @@ Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-A
 
 以下の手順に従って Miniforge をインストールし、reBot 開発用の分離された Python 環境を作成します。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -834,4 +936,6 @@ DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib motorbridge-gateway --bind 127.0.0.1:9
 
 </div>
 </section>
+</div>
+
 </div>

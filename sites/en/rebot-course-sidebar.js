@@ -304,6 +304,30 @@ const sidebars = {
     backToRobotics(),
     {
       type: 'category',
+      label: 'Course',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/Arm_Tutorial_Introduction`,
+      label: 'Beginner Course',
+    },
+    {
+      type: 'ref',
+      id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_Getting_Started',
+      label: 'Paper Deep-Dive',
+    },
+    {
+      type: 'link',
+      label: 'Sim-to-Real with NVIDIA Isaac',
+      href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac',
+    },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Quick Start & SDK',
       className: 'robotics-section-title',
       collapsed: false,
@@ -335,6 +359,25 @@ const sidebars = {
   // reBot-DM: Quick Start & SDK / Applications.
   RebotDmSidebar: [
     backToRobotics(),
+    {
+      type: 'category',
+      label: 'Course',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/Arm_Tutorial_Introduction`,
+      label: 'Beginner Course',
+    },
+    {
+      type: 'ref',
+      id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_Getting_Started',
+      label: 'Paper Deep-Dive',
+    },
+      ],
+    },
     {
       type: 'category',
       label: 'Quick Start & SDK',
