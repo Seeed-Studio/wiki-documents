@@ -94,6 +94,11 @@ const courseLink = () => ({
       id: `${C}/ja_Arm_Tutorial_Introduction`,
       label: '入門コース',
     },
+    {
+      type: 'ref',
+      id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/ja_Paper_Reading_Getting_Started',
+      label: '論文ディープダイブ',
+    },
   ],
 });
 
