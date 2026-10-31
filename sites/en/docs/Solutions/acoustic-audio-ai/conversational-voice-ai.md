@@ -1,6 +1,7 @@
 ---
 description: Building an interruptible voice terminal on an edge device — which boards and microphone you need, which interfaces it exposes, the language × device support matrix, and measured RK3576 ASR/TTS results
 title: 'Interruptible Conversational Voice AI on the Edge: Build, Deploy, and Measured Results'
+sidebar_label: 'Conversational Voice AI'
 keywords:
   - conversational voice AI
   - barge-in voice assistant
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/conversational-voice-ai/
 generated_from: sensecraft-solutions@aa522af
 ---
@@ -102,8 +103,8 @@ Four things on site: a microphone array, a speaker and a voice host; if conversa
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>Rockchip NPU, Qwen3-ASR W8A8 + Matcha | Chinese, English | Lowest-cost host for the full local speech stack; the measured data under "Performance and measured data" comes from this board |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Rockchip NPU, adds Kokoro RKNN for TTS | All 30 | You need the 28 languages beyond Chinese and English, or plan to add an RK1828 card for local conversation later |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Qwen3-ASR int4 + Matcha on the GPU | All 30 | The host also runs other AI workloads and needs GPU headroom. Do not run a local 4B model on it |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Speech plus Qwen3.5-4B on the same host | All 30 | Conversation text must not leave the site |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Qwen3-ASR int4 + Matcha on the GPU | All 30 | The host also runs other AI workloads and needs GPU headroom. Do not run a local 4B model on it |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Speech plus Qwen3.5-4B on the same host | All 30 | Conversation text must not leave the site |
 
 reComputer R2000 series also runs a CPU speech stack (sherpa-onnx, English only); it is not offered in the configurator on the reference design page yet. It does not support Chinese, and ASR and TTS share four CPU cores.
 

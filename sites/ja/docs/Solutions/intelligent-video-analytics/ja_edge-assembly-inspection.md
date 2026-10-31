@@ -1,6 +1,7 @@
 ---
 description: エッジ組立検査の構築、機器、出力契約と実測データ
 title: 'エッジ組立検査：欠品、寸法、Modbus、MQTT'
+sidebar_label: 'エッジ組立検査'
 keywords:
   - assembly inspection
   - missing part detection
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-assembly-inspection/
 generated_from: sensecraft-solutions@edge_inspection_assembly
 ---
@@ -132,8 +133,8 @@ DeepPCB 検証画像に対する検出器の出力：
 
 | | 検査ホスト | アクセラレータ | 配備時の検出器 | 実測ストリーム数 | 選択する場面 |
 |---|---|---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>単一ステーションホスト | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 1 ストリーム、67 h 連続稼働 | 1 ステーション |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>複数ステーション集約ホスト | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 8 安定 / 12 劣化 / 24 失敗 | 1 台で複数ステーションを処理する場合。精度と速度のデータはこのモジュールで実測 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>単一ステーションホスト | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 1 ストリーム、67 h 連続稼働 | 1 ステーション |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>複数ステーション集約ホスト | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 8 安定 / 12 劣化 / 24 失敗 | 1 台で複数ステーションを処理する場合。精度と速度のデータはこのモジュールで実測 |
 
 ストリーム容量：各ストリーム 640²、10 fps、各段階 5 分、全掃引を 2 回実行し、試験中は MQTT と Modbus を無効化しました。両方の出力を有効にすると処理できるストリーム数は 8 を下回ります。
 

@@ -1,6 +1,7 @@
 ---
 description: エッジ機器で音声倉庫管理を動かす方法——必要な機器、MCPブリッジで音声と在庫をつなぐ方法、5段階の構成の導入、reComputer R2000シリーズで実測した負荷試験の結果
 title: 'エッジ機器による音声倉庫管理：構築・導入・実測結果'
+sidebar_label: '音声操作倉庫管理'
 keywords:
   - voice controlled warehouse management system
   - edge WMS
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/voice-warehouse-management/
 generated_from: sensecraft-solutions@smart_warehouse
 ---
@@ -121,7 +122,7 @@ generated_from: sensecraft-solutions@smart_warehouse
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991275-sensecap-watcher-w1-b_1.jpg" alt="SenseCAP Watcher" width="110" /> | [SenseCAP Watcher](https://www.seeedstudio.com/SenseCAP-Watcher-W1-B-p-5980.html) | 音声端末、MCPクライアント、オンデバイス顔認証 | 必須。ステーションごとに1台 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html) | 倉庫システムを実行するエッジゲートウェイ | 在庫データを現場に置く、作業者20人以下、顔認証はWatcherで実行 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image_6.jpg" alt="reComputer Industrial R2135-12" width="110" /> | [reComputer Industrial R2135-12](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html) | Hailo-8アクセラレータ搭載エッジゲートウェイ | 作業者が20人を超える場合、またはライブネス検知が必要な場合 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) | 倉庫システム、顔認証、セルフホスト音声サービスを1台で実行 | 2〜3ステーションで1台を共有する場合 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) | 倉庫システム、顔認証、セルフホスト音声サービスを1台で実行 | 2〜3ステーションで1台を共有する場合 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-100032662--recomputer-robotics-j5012-with-gmsl_1__1.jpg" alt="reComputer Robotics J5011" width="110" /> | [reComputer Robotics J5011](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html) | オンプレミスLLMと音声処理、外部サービス呼び出しなし | 施設をオフラインで運用する必要がある場合 |
 
 Watcherが端末内に保存できる顔テンプレートは最大**20**件です。作業者が20人を超える場合は認識をゲートウェイ側に移す必要があるため、20人以下ならR1125、20人を超えるならHailo-8搭載のR2135を選びます。

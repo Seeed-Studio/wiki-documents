@@ -1,6 +1,7 @@
 ---
 description: Multi-protocol industrial data hub on an edge gateway — OPC UA, Modbus TCP/RTU, BACnet/IP and MQTT sources unified into one point model, read and controlled through one versioned MQTT contract, with northbound store-and-forward
 title: 'Industrial Multi-Protocol Data Hub: Hardware, Deployment, and Measured Results'
+sidebar_label: 'Industrial Multi-Protocol Hub'
 keywords:
   - industrial protocol gateway
   - multi-protocol data hub
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/
 generated_from: sensecraft-solutions@multi_protocol_gateway
 ---
@@ -33,9 +34,14 @@ This is a **protocol integration and data-hub layer**, not a certified control o
 
 ## What this solution does
 
-A building, energy or equipment-management integrator arrives on site and finds the data already exists — behind an OPC UA controller, a Modbus meter, a BACnet/IP air handler and an MQTT sensor gateway, four different addressing schemes and four different failure modes. This solution puts all four into **one point registry on one edge host**, and gives the system above a single MQTT read/write contract. On a new site you connect the controllers and map the points; the protocol layer stays as it is.
+A building, energy or equipment-management integrator arrives on site and finds the data already exists —
+behind an OPC UA controller, a Modbus meter, a BACnet/IP air handler and an MQTT sensor gateway, four
+different addressing schemes and four different failure modes. This solution puts all four into **one point
+registry on one edge host**, and gives the system above a single MQTT read/write contract. On a new site you
+connect the controllers and map the points; the protocol layer stays as it is.
 
-Deploy the container, add a source, let discovery propose candidates, confirm the points you want, verify their quality, then publish them — locally on port 1883, northbound to a cloud broker on 8883, or both.
+Deploy the container, add a source, let discovery propose candidates, confirm the points you want, verify
+their quality, then publish them — locally on port 1883, northbound to a cloud broker on 8883, or both.
 
 - Selection and deployment: [reference design page](https://www.seeed.cc/solutions/reference-designs/multi_protocol_gateway)
 
@@ -82,7 +88,8 @@ Deploy the container, add a source, let discovery propose candidates, confirm th
 
 ### What the console shows
 
-The Access page lists each configured source with its live runtime state — after the first controller is wired, this is the page that says whether it really connected:
+The Access page lists each configured source with its live runtime state — after the first controller is
+wired, this is the page that says whether it really connected:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/multi_protocol_gateway/access-list-en-9837244f.png" alt="Access page: protocol, address and live runtime state for each source"/>
@@ -106,11 +113,17 @@ The gateway comes in a rugged industrial DIN-rail enclosure that clips directly 
 
 ## What hardware you need
 
-Two things: the field devices that are already installed, and one host that can reach each of their networks.
+Two things: the field devices that are already installed, and one host that can reach each of their
+networks.
 
-**① Field devices** — whatever already speaks OPC UA, Modbus (TCP or RTU), BACnet/IP or MQTT. Nothing on the plant side is replaced. What you must have per source: the OPC UA endpoint and credentials; the Modbus unit id, register map, byte and word order; a network interface on the BACnet subnet with broadcasts reaching it; and, for MQTT, an explicit topic-to-point mapping. Modbus RTU additionally needs a USB-to-RS-485 adapter unless the host carries RS-485 on board.
+**① Field devices** — whatever already speaks OPC UA, Modbus (TCP or RTU), BACnet/IP or MQTT. Nothing on
+the plant side is replaced. What you must have per source: the OPC UA endpoint and credentials; the Modbus
+unit id, register map, byte and word order; a network interface on the BACnet subnet with broadcasts
+reaching it; and, for MQTT, an explicit topic-to-point mapping. Modbus RTU additionally needs a
+USB-to-RS-485 adapter unless the host carries RS-485 on board.
 
-**② The data-hub host** — a plain Docker host, x86-64 or arm64, that decides which field interfaces you get without an adapter and whether anyone can operate the system without a laptop on site:
+**② The data-hub host** — a plain Docker host, x86-64 or arm64, that decides which field interfaces you get
+without an adapter and whether anyone can operate the system without a laptop on site:
 
 | | Host | On-board field I/O | When to choose it |
 |---|---|---|---|
@@ -118,9 +131,14 @@ Two things: the field devices that are already installed, and one host that can 
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1100" width="110" /> | [reComputer R1100 Series](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html)<br/>CM4-based IoT gateway and controller | RS-485, RS-232, DI/DO, Gigabit Ethernet, CAN | The site has RS-232 devices or DI/DO dry contacts as well |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image1.jpeg" alt="reTerminal DM" width="110" /> | [reTerminal DM Series](https://www.seeedstudio.com/reTerminal-DM-p-5616.html)<br/>10.1-inch HMI with the same services | RS-485, CAN, Ethernet (CM4104032 variant adds RS-232, DI/DO, terminal block) | No permanent computer in the plant room; setup and daily checks happen on the device |
 
-The software point ceiling is the same on all three: **2,000 points, 50 of them writable**, enforced in code. A 2,000-point workload did not pass the capacity test on the R1000's CM4-class platform (2 GB configuration, tested on a development board), so pick the R1100 or reTerminal DM at that scale; for smaller R1000 deployments there is no measured point count yet. eMMC size decides how much northbound outage spool and command-receipt history stays on the box; the service itself needs about 4 GB free.
+The software point ceiling is the same on all three: **2,000 points, 50 of them writable**, enforced in code.
+A 2,000-point workload did not pass the capacity test on the R1000's CM4-class platform (2 GB configuration,
+tested on a development board), so pick the R1100 or reTerminal DM at that scale; for smaller R1000
+deployments there is no measured point count yet. eMMC size decides how much northbound
+outage spool and command-receipt history stays on the box; the service itself needs about 4 GB free.
 
-Other prerequisites: Docker Engine 20.10 or newer, ports 8280 and 1883 free (or pick unused ones before deploying), and network reachability from the host to every protocol network.
+Other prerequisites: Docker Engine 20.10 or newer, ports 8280 and 1883 free (or pick unused ones before
+deploying), and network reachability from the host to every protocol network.
 
 ### Negative Selection Boundaries
 
@@ -156,7 +174,8 @@ Other prerequisites: Docker Engine 20.10 or newer, ports 8280 and 1883 free (or 
 
 ### Two: install the software and bring the first source in
 
-The per-device steps and application packages are on the reference design page; pick a configuration for your site and download.
+The per-device steps and application packages are on the reference design page; pick a configuration for
+your site and download.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/multi_protocol_gateway" target="_blank">
@@ -164,29 +183,41 @@ The per-device steps and application packages are on the reference design page; 
     </a>
 </div><br />
 
-1. **Deploy** — the local target installs onto the machine running SenseCraft Solution; the remote target installs over SSH onto a reComputer R2000 series or reTerminal DM on the controller network.
+1. **Deploy** — the local target installs onto the machine running SenseCraft Solution; the remote target
+   installs over SSH onto a reComputer R2000 series or reTerminal DM on the controller network.
 2. **Create the first administrator** — no registration token is required on first run.
-3. **Add a source** — OPC UA, Modbus, BACnet/IP or MQTT, then run discovery where it is available: OPC UA browsing, Modbus TCP unit scanning, BACnet Who-Is, MQTT topic observation. Each produces **candidates**. The wizard asks for address and poll interval per protocol:
+3. **Add a source** — OPC UA, Modbus, BACnet/IP or MQTT, then run discovery where it is available: OPC UA
+   browsing, Modbus TCP unit scanning, BACnet Who-Is, MQTT topic observation. Each produces **candidates**.
+   The wizard asks for address and poll interval per protocol:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/multi_protocol_gateway/access-wizard-step1-en-7a3d57a8.png" alt="Access wizard step one: choose the protocol, fill in the address and poll interval"/>
 </div>
 
-4. **Confirm points** — only confirmed candidates become managed points. Where discovery is incomplete or unavailable, enter points by hand.
-5. **Verify quality before granting write access** — check live values and per-point quality on the Points page first.
+4. **Confirm points** — only confirmed candidates become managed points. Where discovery is incomplete or
+   unavailable, enter points by hand.
+5. **Verify quality before granting write access** — check live values and per-point quality on the Points
+   page first.
 6. **Configure the data service** — the embedded broker, and optionally the northbound publisher.
 
-Difficulty **intermediate**, about **15 minutes** to a running console; bringing in the first controller and checking its data quality takes longer.
+Difficulty **intermediate**, about **15 minutes** to a running console; bringing in the first controller and
+checking its data quality takes longer.
 
 ## Available interfaces
 
 Data leaves the host through three interfaces:
 
-- **Operators** — the browser console on HTTP **8280**: source management, the point table, command receipts, plugin management.
-- **On-site systems (SCADA, energy platform, your own service)** — subscribe to the embedded broker on **1883**. Point telemetry arrives under `missionpack/v1/{gateway}/points/{point_id}`, with presence, command and receipt topics on the same contract.
-- **Cloud or central systems** — enable northbound publishing to an external broker on **8883**. Telemetry is batched at QoS 1, per-source health and last-will status are retained, and a QoS 0 heartbeat runs alongside. **The currently published image has no northbound publisher.**
+- **Operators** — the browser console on HTTP **8280**: source management, the point table, command
+  receipts, plugin management.
+- **On-site systems (SCADA, energy platform, your own service)** — subscribe to the embedded broker on
+  **1883**. Point telemetry arrives under `missionpack/v1/{gateway}/points/{point_id}`, with presence,
+  command and receipt topics on the same contract.
+- **Cloud or central systems** — enable northbound publishing to an external broker on **8883**. Telemetry
+  is batched at QoS 1, per-source health and last-will status are retained, and a QoS 0 heartbeat runs
+  alongside. **The currently published image has no northbound publisher.**
 
-`{gateway}` is the gateway id you set at deploy time, so several hubs can publish to one broker without colliding.
+`{gateway}` is the gateway id you set at deploy time, so several hubs can publish to one broker without
+colliding.
 
 ### The topic contract
 
@@ -220,12 +251,16 @@ The northbound envelope is `missionpack.northbound.v1`:
 }
 ```
 
-**`source_revision` and `point_revision`**: the revision changes when a point is re-mapped, which tells a configuration change apart from a field value change. A consumer that does not check them joins data from before and after a configuration change into one series.
+**`source_revision` and `point_revision`**: the revision changes when a point is re-mapped, which tells a
+configuration change apart from a field value change. A consumer that does not check them joins data from
+before and after a configuration change into one series.
 
 Two limits of the contract:
 
-- **The protocol is MissionPack v1; this release is not Sparkplug B compatible**, so a Sparkplug host application needs a translation step.
-- **Plain MQTT is telemetry-only.** Enable TLS and an authorised control identity before allowing remote commands.
+- **The protocol is MissionPack v1; this release is not Sparkplug B compatible**, so a Sparkplug host
+  application needs a translation step.
+- **Plain MQTT is telemetry-only.** Enable TLS and an authorised control identity before allowing remote
+  commands.
 
 ### Southbound protocol scope
 
@@ -287,7 +322,10 @@ The runtime is distributed as a container image (x86-64 and arm64) from `sensecr
 
 ## Data and asset sources
 
-- **Measured results** — load from the four-protocol simulator, on a reComputer R2000 series (arm64) and a Linux x86_64 workstation, upstream commits `b5fe4cc` and `f831bae`. Reproduced from the upstream package's own `description.md`; the raw run records live with the upstream project.
-- **Product images and links** — Seeed product catalogue (`media-cdn.seeedstudio.com`), SKUs matching the bundles on the reference design page.
-- **Architecture diagram** — drawn from the upstream `solution.yaml` topology; it is a schematic of device composition, not a screenshot.
+- **Measured results** — load from the four-protocol simulator, on a reComputer R2000 series (arm64) and a Linux x86_64 workstation, upstream commits `b5fe4cc` and `f831bae`. Reproduced from the upstream package's own
+  `description.md`; the raw run records live with the upstream project.
+- **Product images and links** — Seeed product catalogue (`media-cdn.seeedstudio.com`), SKUs matching the
+  bundles on the reference design page.
+- **Architecture diagram** — drawn from the upstream `solution.yaml` topology; it is a
+  schematic of device composition, not a screenshot.
 - The runtime container image is distributed from `sensecraft-missionpack.seeed.cn`, not from this wiki.

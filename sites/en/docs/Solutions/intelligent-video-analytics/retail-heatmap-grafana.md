@@ -1,6 +1,7 @@
 ---
 description: Building a local people-flow heatmap for stores and exhibition spaces — what devices you need, how to deploy it, which interfaces it exposes, and measured frame rates on three devices
 title: 'Retail People-Flow Heatmap: Build, Deploy, and Measured Results'
+sidebar_label: 'Retail People-Flow Heatmap'
 keywords:
   - people flow heatmap
   - footfall analytics
@@ -24,7 +25,7 @@ last_update:
   date: 09/17/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/retail-heatmap-grafana/
 generated_from: sensecraft-solutions@recamera_heatmap_grafana
 ---
@@ -114,7 +115,7 @@ Three things: a camera that sees the floor, something that detects people, and o
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>camera and compute in one, 4K | Detection + tracking + counting | Farther away, large coverage, where distant people still need enough pixels to box |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 series](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>the same preset also supports reComputer RK3576 series | Detection host | You already run Rockchip boards; video decode runs in hardware |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrial-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer R2000 series (R2035-12, Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html) | Detection host | A fanless industrial box for a cabinet or a utility closet |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 series (J4012)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>and reComputer J50 series | Detection host | Several cameras on one host |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>and reComputer J50 series | Detection host | Several cameras on one host |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-113991334--recomputer-r1125-10-45font.jpg" alt="reComputer R1100" width="110" /> | [reComputer R1100 series (R1124-10)](https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html) | Dashboard backend | No always-on computer on site to run the dashboard |
 
 Other prerequisites: Docker on the backend machine, at least 2 GB of free disk, ports 1883, 3000, 8080 and 8086 free, and cameras and backend on the same network segment so ONVIF camera discovery works.

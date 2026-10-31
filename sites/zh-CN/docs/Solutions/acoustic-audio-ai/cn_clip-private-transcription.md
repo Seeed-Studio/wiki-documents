@@ -1,6 +1,7 @@
 ---
 description: 把 reSpeaker Clip 的录音同步到自有 reComputer 主机上转写并分清说话人：需要哪些设备、怎么部署、有哪些接口，以及 Jetson Orin NX 与 RK3576 上的实测数据
 title: reSpeaker Clip 本地私有化转写方案：选型、部署与实测数据
+sidebar_label: 'reSpeaker Clip 本地私有转写'
 keywords:
   - 私有化转写
   - 本地语音转写
@@ -20,7 +21,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/clip-private-transcription/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -102,8 +103,8 @@ reSpeaker Clip 录下的会谈、问诊、门店对话，经蓝牙同步到你�
 
 | | 转写主机 | 实测单录音用时<br />(30秒中文双人) | 集中交班承载能力<br />(10枚工牌同时回传) | 什么时候选它 |
 |---|---|---:|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 系列（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX 16GB，JetPack 6.2 | **1.2 秒** | **约 3.5 秒全转完**<br />(排队延迟 < 3.5 秒) | 推荐旗舰配置，服务 10~50 枚工牌；16GB 显存可兼顾本地 8B 大模型对话摘要与质检 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110144-recomputer-j3011-front.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 系列（J3011）](https://www.seeedstudio.com/reComputer-J3011-p-5585.html)<br/>Jetson Orin Nano 8GB，JetPack 6.2 | **1.3 秒** | **约 4.1 秒全转完**<br />(排队延迟 < 4.1 秒) | 主流性价比配置，服务 5~20 枚工牌；体验与 J40 基本一致，显存占用仅 486 MB |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Jetson Orin NX 16GB，JetPack 6.2 | **1.2 秒** | **约 3.5 秒全转完**<br />(排队延迟 < 3.5 秒) | 推荐旗舰配置，服务 10~50 枚工牌；16GB 显存可兼顾本地 8B 大模型对话摘要与质检 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin Nano 8GB，JetPack 6.2 | **1.3 秒** | **约 4.1 秒全转完**<br />(排队延迟 < 4.1 秒) | 主流性价比配置，服务 5~20 枚工牌；体验与 J40 基本一致，显存占用仅 486 MB |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3588_box.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 系列（8 GB）](https://www.seeedstudio.com/reComputer-AIA-A801-p-5942.html)<br/>RK3588 3-Core NPU | **3.0 秒** | **约 14.5 秒全转完**<br />(3 个并行流水线) | 中型工作站配置，服务 5~15 枚工牌；3 个独立 NPU 核心原生支持 3 个 Worker 硬件并行 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 系列（8 GB）](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>板载 NPU | **4.6 秒** | 约 46 秒全转完<br />(单 Worker 顺序排队) | 极低成本方案，服务 1~3 枚工牌；峰值内存仅 442 MB，适合小微独立诊室按序处理 |
 
