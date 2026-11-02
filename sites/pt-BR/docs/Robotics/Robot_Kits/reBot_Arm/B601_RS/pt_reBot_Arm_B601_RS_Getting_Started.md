@@ -171,9 +171,11 @@ Em seguida, conecte o módulo USB-para-CAN, a placa divisora de energia e sinal,
 
 ## Conectar os Braços
 
-> **Aviso de segurança:**
-> Desconecte a alimentação antes de conectar ou desconectar cabos JST, XT30 ou outros cabos. Ligue a alimentação somente depois de confirmar que todos os cabos estão conectados corretamente.
-> B601 RS e B601 DM são visualmente semelhantes. Certifique-se de distingui-los.
+:::warning
+**Aviso de segurança:**
+Desconecte a alimentação antes de conectar ou desconectar cabos JST, XT30 ou outros cabos. Ligue a alimentação somente depois de confirmar que todos os cabos estão conectados corretamente.
+B601 RS e B601 DM são visualmente semelhantes. Certifique-se de distingui-los.
+:::
 
 
 ### Montar e Conectar o reBot Arm 102 (Braço Líder)
