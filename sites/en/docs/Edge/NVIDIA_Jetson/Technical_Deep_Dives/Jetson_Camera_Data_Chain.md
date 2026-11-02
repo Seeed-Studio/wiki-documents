@@ -14,6 +14,9 @@ keywords:
   - argus
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /jetson_camera_data_chain
+last_update:
+  date: 11/02/2026
+  author: youjiang
 ---
 
 **Architecture analysis and real-device experiments based on reComputer Classic J3010 + Sony IMX219**

@@ -10,6 +10,9 @@ keywords:
   - uefi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /jetson_jetpack_l4t_ubuntu_kernel_uefi
+last_update:
+  date: 11/02/2026
+  author: youjiang
 ---
 
 When you first start working with Jetson, there is one question almost everyone runs into: **How many "system versions" does Jetson actually have?**

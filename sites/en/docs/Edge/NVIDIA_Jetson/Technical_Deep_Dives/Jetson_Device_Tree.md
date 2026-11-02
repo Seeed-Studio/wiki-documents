@@ -12,6 +12,9 @@ tags:
   - bsp
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /jetson_device_tree
+last_update:
+  date: 11/02/2026
+  author: youjiang
 ---
 
 In the previous two articles, we walked through the complete boot process of a Jetson from power-on to Ubuntu using the UART boot log:

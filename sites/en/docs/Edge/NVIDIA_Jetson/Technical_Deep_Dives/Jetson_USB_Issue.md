@@ -12,6 +12,9 @@ keywords:
   - carrier board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /jetson_usb
+last_update:
+  date: 11/02/2026
+  author: youjiang
 ---
 
 In this article, let's talk about a very common and easy-to-get-wrong problem on Jetson: **USB.**

@@ -12,6 +12,9 @@ keywords:
   - l4t
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /jetson_boot_log_analysis
+last_update:
+  date: 11/02/2026
+  author: youjiang
 ---
 
 In the previous article, we introduced **JetPack, Jetson Linux / L4T, Ubuntu, Kernel, and UEFI** and what each of them is.
