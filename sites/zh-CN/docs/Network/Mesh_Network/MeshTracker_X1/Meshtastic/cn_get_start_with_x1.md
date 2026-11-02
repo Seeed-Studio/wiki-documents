@@ -9,10 +9,10 @@ slug: /x1_get_started_for_meshtastic
 sku: 100087698
 sidebar_position: 1
 last_update:
-  date: 7/13/2026
+  date: 10/30/2026
   author: Michelle Huang
 createdAt: '2026-07-13'
-updatedAt: '2026-09-22'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -466,7 +466,7 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 
 ### 如何重启设备
 
-按住按键不放，然后连接充电线。
+按住按键不放，然后连接充电线，并立即松开按键。
 
 ### 温度读数精度
 
@@ -477,6 +477,16 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 你可以通过 [Power Consumption Table](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK) 来计算功耗。该设备配备了高电压电池。当电池电量较低时，会加速放电过程。该设备配备了高电压电池。当电池电量较低时，会加速放电过程。因此你会注意到，当电池电量较低时，设备的耗电速度会非常快。
 
 ## 故障排查
+
+### 固件更新失败 / OTA 恢复
+
+如果 SenseCAP MeshTracker X1 在固件更新后无法启动、没有响应，或白色 ⚪️ LED 保持常亮，设备可能卡在 DFU 模式。请尝试以下操作：
+
+1. 强制重启以退出 DFU 模式：断开 USB 充电线，按住设备按键，连接 USB 充电线，然后立即松开按键。不要持续按住按键——连接充电线后按住超过 3 秒会强制设备重新进入 DFU 模式。
+2. 检查设备是否正常启动。如果没有，请使用 USB 数据线将设备连接到电脑，按照[步骤 1：进入 DFU 模式](#步骤-1进入-dfu-模式)操作，然后执行[步骤 2：擦除 Flash](#步骤-2擦除-flash)和[步骤 3：刷写固件](#步骤-3刷写固件)，重新安装 Meshtastic 固件。
+3. 如果设备仍然无法恢复，请按照 [Bootloader 安装](#bootloader-安装)重新烧录 bootloader，然后再安装应用固件。
+
+在固件擦除或刷写过程中，不要强制重启或拔出 USB 线。如果设备无法进入 DFU 模式或无法被电脑识别，请联系技术支持。
 
 ### 设备无法开机
 

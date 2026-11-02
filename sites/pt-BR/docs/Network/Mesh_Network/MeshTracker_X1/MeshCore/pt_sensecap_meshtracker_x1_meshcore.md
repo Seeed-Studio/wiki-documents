@@ -10,10 +10,10 @@ slug: /sensecap_meshtracker_x1_meshcore
 sku: 100087698
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
+  date: 10/30/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-20'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/
 ---
 
@@ -282,11 +282,21 @@ Por exemplo, o ID do dispositivo abaixo seria `A0D4`
 
 ## Solução de problemas
 
+### Falha na atualização de firmware / Recuperação por OTA
+
+Se o seu SenseCAP MeshTracker X1 não iniciar, não responder ou o LED branco ⚪️ permanecer aceso continuamente após uma atualização de firmware, o dispositivo pode estar preso no modo DFU. Tente o seguinte:
+
+1. Force uma reinicialização para sair do modo DFU: desconecte o cabo de carregamento USB, pressione e segure o botão do dispositivo, conecte o cabo de carregamento USB e solte o botão imediatamente. Não continue segurando o botão — segurá-lo por mais de 3 segundos depois de conectar o cabo forçará o dispositivo a entrar novamente no modo DFU.
+2. Verifique se o dispositivo inicia normalmente. Caso contrário, conecte o dispositivo ao computador com um cabo de dados USB e siga o guia de [Gravação de firmware](#gravação-de-firmware) para entrar no modo DFU, apagar a flash e reinstalar o firmware MeshCore.
+3. Se o dispositivo ainda não puder ser recuperado, siga [Instalação do bootloader](#instalação-do-bootloader) para gravar novamente o bootloader e, em seguida, reinstale o firmware do aplicativo.
+
+Não force uma reinicialização nem desconecte o cabo USB enquanto o firmware estiver sendo apagado ou gravado. Se o dispositivo não conseguir entrar no modo DFU ou não for detectado pelo computador, entre em contato com o suporte técnico.
+
 ### Dispositivo nunca liga
 
 - Use um cabo USB em bom estado para `carregar o dispositivo` continuamente por 1–2 horas para garantir que a bateria tenha energia suficiente para acordar o sistema.
 
-- Se o dispositivo ainda não responder após o carregamento, `execute um hard reset` da seguinte forma: desconecte o cabo USB. Pressione e segure o botão e, em seguida, conecte o cabo USB mantendo o botão pressionado. Segure por aproximadamente 3 segundos e depois solte. Isso força uma reinicialização do sistema.
+- Se o dispositivo ainda não responder após o carregamento, `execute um hard reset` da seguinte forma: desconecte o cabo USB. Pressione e segure o botão, conecte o cabo USB e solte o botão imediatamente. Isso força uma reinicialização do sistema.
 
  - Se ainda não funcionar, conecte um cabo USB a um computador. Mantenha o botão do dispositivo pressionado e conecte o dispositivo ao computador, veja se um disco aparece no seu PC. Se aparecer, reinstale o bootloader
 
@@ -298,7 +308,7 @@ O dispositivo irá reiniciar repetidamente, e a porta serial irá conectar e des
 
 **Solução:**
 
-- Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte o cabo de carregamento **rapidamente** duas vezes
+- Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte **rapidamente** o dispositivo ao computador via cabo USB, mantendo o botão pressionado até que um LED branco ⚪️ acenda.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
@@ -400,7 +410,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#gravação-do-firmware) para gravar o firmware do aplicativo.
+Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#gravação-de-firmware) para gravar o firmware do aplicativo.
 
 
 **2) O dispositivo não consegue entrar no modo DFU, mas a porta serial pode ser detectada**.
@@ -410,7 +420,7 @@ Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https
 - Defina a taxa de transmissão para `1200`.
 
 - Conecte o dispositivo.
-   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU; então [grave o bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#instalação-do-bootloader) -> [apague a flash](https://wiki.seeedstudio.sensecap_meshtracker_x1_meshcore/#gravação-do-firmware) -> [grave o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#gravação-do-firmware).
+   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU; então [grave o bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#instalação-do-bootloader) -> [apague a flash](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#gravação-de-firmware) -> [grave o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_meshtracker_x1_meshcore/#gravação-de-firmware).
 
 **3) O dispositivo não consegue entrar no modo DFU e nenhuma porta serial é exibida**
 
