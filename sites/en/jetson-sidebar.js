@@ -307,6 +307,19 @@ const sidebars = {
           'Edge/NVIDIA_Jetson/JetPack_7_2/Deploy_TensorRT_Edge-LLM_on_Jetpack7.2',
         ],
       },
+      {
+        type: 'category',
+        label: 'Technical Deep Dives',
+        collapsed: true,
+        collapsible: true,
+        items: [
+          'Edge/NVIDIA_Jetson/Technical_Deep_Dives/JetPack_L4T_Ubuntu_Kernel_UEFI',
+          'Edge/NVIDIA_Jetson/Technical_Deep_Dives/Jetson_Boot_Log_Analysis',
+          'Edge/NVIDIA_Jetson/Technical_Deep_Dives/Jetson_Device_Tree',
+          'Edge/NVIDIA_Jetson/Technical_Deep_Dives/Jetson_USB_Issue',
+          'Edge/NVIDIA_Jetson/Technical_Deep_Dives/Jetson_Camera_Data_Chain',
+        ],
+      },
       ],
     },
     {
