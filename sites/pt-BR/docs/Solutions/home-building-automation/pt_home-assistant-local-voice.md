@@ -1,11 +1,12 @@
 ---
-description: Controle as luzes e os eletrodomésticos no Home Assistant por voz com reconhecimento de fala local — hardware, implantação, interfaces e dados medidos em um reComputer J40
+description: Controle as luzes e os aparelhos no Home Assistant por voz com reconhecimento de fala local — hardware, implantação, interfaces e dados medidos em um reComputer J40
 title: Controle de Voz Local no Home Assistant — Seleção, Implantação e Dados Medidos
+sidebar_label: 'Home Assistant Local Voice'
 keywords:
-  - voz local Home Assistant
-  - assistente de voz Home Assistant
-  - controle de voz para casa inteligente
-  - reconhecimento de fala local
+  - Home Assistant local voice
+  - Home Assistant voice assistant
+  - smart home voice control
+  - local speech recognition
   - Wyoming
   - Home Assistant Voice
   - Zigbee
@@ -19,7 +20,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/pt-br/solutions/home-assistant-local-voice/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -30,11 +31,11 @@ Comandos de voz em chinês e inglês. A integração oficial Xiaomi Home para Ho
 
 ## O que esta solução faz
 
-Traga as luzes, cortinas, ar-condicionado e sensores Zigbee de uma casa para o Home Assistant e controle tudo com uma frase. Diga "ligar a luz da sala" e o Home Assistant executa localmente e responde que a luz está ligada. O reconhecimento e a síntese de fala rodam em um reComputer J40 local, então o áudio falado não é enviado para um serviço de fala em nuvem. Serve para salas e quartos, e para integradores de casas inteligentes que entregam sistemas nas casas dos clientes.
+Traga as luzes, cortinas, ar-condicionado e sensores Zigbee de uma casa para o Home Assistant e controle tudo com uma frase. Diga "ligar a luz da sala" e o Home Assistant executa localmente e responde que a luz está ligada. O reconhecimento e a síntese de fala rodam em um reComputer J40 local, então o áudio falado não é enviado para um serviço de fala em nuvem. Serve para salas de estar e quartos, e para integradores de casas inteligentes que entregam sistemas nas casas dos clientes.
 
 - Pacote de implantação (Docker Compose e modelo de configuração do Home Assistant): [github.com/suharvest/sensecraft-solutions](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/home_assistant_whole_home)
 - Código-fonte do mecanismo de voz: [github.com/Seeed-Solution/openvoicestream](https://github.com/Seeed-Solution/openvoicestream)
-- Seleção e implantação: [página de design de referência](https://www.seeed.cc/solutions/reference-designs/home-assistant-local-voice-hub)
+- Seleção e implantação: [página de reference design](https://www.seeed.cc/solutions/reference-designs/home-assistant-local-voice-hub)
 
 <div class="info-section">
     <ul class="info-list">
@@ -79,7 +80,7 @@ Traga as luzes, cortinas, ar-condicionado e sensores Zigbee de uma casa para o H
 
 ### Em um dispositivo real
 
-Uma interação no assistente de voz do Home Assistant: o "ligar a luz da sala" falado (em chinês) é reconhecido pelo serviço de voz local, o Home Assistant executa e responde que a luz está ligada, e o cartão da luz da sala à direita acende.
+Uma interação no assistente de voz do Home Assistant: o comando falado "ligar a luz da sala" (em chinês) é reconhecido pelo serviço de voz local, o Home Assistant o executa e responde que a luz está ligada, e o cartão da luz da sala à direita acende.
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/home_assistant_whole_home/voice-light-on-zh-20261008-a03bf773.jpg" alt="Assistente de voz do Home Assistant: ligar a luz da sala, a luz está ligada"/>
@@ -93,12 +94,12 @@ As luzes, cortinas, ar-condicionado e sensores nas capturas de tela são disposi
 
 ## Hardware necessário
 
-Quatro elementos no local: o host do Home Assistant, o host de voz, um coordenador Zigbee e um terminal de voz.
+Quatro itens no local: o host do Home Assistant, o host de voz, um coordenador Zigbee e um terminal de voz.
 
 | Dispositivo | Função | Observações |
 |---|---|---|
 | Host ARM64 Linux (SO 64 bits, 8 GB de RAM) | Executa o Home Assistant | Um por casa |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> [reComputer J40 Series (J4012, Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) | Reconhecimento e síntese de fala locais | Faz o download dos modelos de voz na primeira inicialização; mantenha pelo menos 30 GB de disco livre |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> [reComputer Super J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) | Reconhecimento e síntese de fala locais | Faz download dos modelos de voz na primeira inicialização; mantenha pelo menos 30 GB de disco livre |
 | Home Assistant Connect ZBT-2 | Integra dispositivos Zigbee | Conecta a uma porta USB do host do Home Assistant |
 | Home Assistant Voice Preview Edition | Terminal de voz no cômodo: escuta e reproduz respostas | Um por cômodo |
 | Sensores Zigbee SONOFF SNZB (opcional) | Temperatura, umidade e outros estados | Entram via ZBT-2 |
@@ -115,7 +116,7 @@ O reComputer J40 executa apenas o serviço de voz, então ele pode ficar em um r
 
 ### 2. Instale o software: três etapas
 
-As etapas por dispositivo estão na página de design de referência; aqui está o resumo.
+As etapas por dispositivo estão na página de reference design; isto é o resumo.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/home-assistant-local-voice-hub" target="_blank">
@@ -124,7 +125,7 @@ As etapas por dispositivo estão na página de design de referência; aqui está
 </div><br />
 
 1. **Host do Home Assistant**: implante o Home Assistant com as frases de comando em chinês, inglês e japonês incluídas e o modelo de cômodos/dispositivos.
-2. **Host de voz**: implante o serviço de voz no reComputer J40; ele baixa os modelos na primeira inicialização, depois o reconhecimento e a síntese rodam no dispositivo.
+2. **Host de voz**: implante o serviço de voz no reComputer J40; ele faz download dos modelos na primeira inicialização, depois o reconhecimento e a síntese rodam no dispositivo.
 3. **Conecte e verifique**: adicione a integração Wyoming Protocol no Home Assistant apontando para as duas portas do reComputer J40, selecione-a como fala-para-texto e texto-para-fala do assistente, depois diga "ligar a luz da sala" para um terminal de voz e confirme que a luz acende.
 
 ## Interfaces
@@ -133,7 +134,7 @@ O serviço de voz é oferecido ao Home Assistant via Wyoming Protocol; toda a ou
 
 - **Home Assistant**: adicione a integração Wyoming Protocol; `seeed-local-voice` aparece como fala-para-texto e texto-para-fala no assistente de voz.
 - **Apple Home / Siri**: a ponte HomeKit do Home Assistant sincroniza os dispositivos com o iPhone.
-- **Seu próprio sistema**: leia e escreva estados de dispositivos pela própria API do Home Assistant.
+- **Seu próprio sistema**: leia e escreva estados de dispositivos por meio da própria API do Home Assistant.
 
 | Porta | Máquina | Conteúdo |
 |---|---|---|
@@ -181,7 +182,7 @@ Configurações que afetam os resultados:
 
 ### Degradações conhecidas
 
-- **Divergência de alias e formulação de entidade**: A correspondência de intenções depende dos nomes e aliases das entidades. Se uma frase falada divergir significativamente do alias de entidade configurado no Home Assistant, o texto pode ser transcrito corretamente sem disparar uma automação.
+- **Divergência de alias de entidade e formulação**: A correspondência de intenções depende dos nomes e aliases das entidades. Se uma frase falada divergir significativamente do alias de entidade configurado no Home Assistant, o texto pode ser transcrito corretamente sem disparar uma automação.
 - **Intenções compostas e sequenciais**: O pipeline é ajustado para controle residencial com uma única intenção; solicitações compostas (por exemplo, "ligar o ar-condicionado e fechar as persianas até a metade") devem ser emitidas como comandos separados.
 - **Concorrência de voz em múltiplos clientes**: Um único host J4012 atende confortavelmente de 1 a 3 endpoints de satélites de voz; entradas de fala longas e simultâneas de vários cômodos podem causar um leve aumento no tempo até o primeiro token.
 

@@ -1,6 +1,7 @@
 ---
 description: Inspeção de defeitos em superfícies de aço no dispositivo — seis classes de defeitos, um veredito OK/NG entregue ao CLP via Modbus TCP e ao MES via MQTT, em um Jetson Orin ou um reComputer série R2000 com um Hailo-8. Hardware, visão geral da implantação, contratos de saída e dados medidos.
 title: 'Inspeção de Defeitos de Superfície na Borda: Seis Classes, Modbus e MQTT'
+sidebar_label: 'Inspeção de Defeitos de Superfície na Borda'
 keywords:
   - inspeção de defeitos de superfície
   - detecção de defeitos em tiras de aço
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/pt-br/solutions/edge-surface-defect-inspection/
 generated_from: sensecraft-solutions@edge_inspection_surface
 ---
@@ -33,14 +34,14 @@ Os pesos NEU-DET pré-empacotados (ONNX / HEF) servem como benchmarks de referê
 
 ## O que esta solução faz
 
-Uma câmera fixa observa a tira de aço ou uma peça. O dispositivo decide quadro a quadro se a superfície tem um defeito e envia o veredito OK/NG por dois caminhos ao mesmo tempo: uma bobina Modbus TCP que um CLP pode travar, e uma mensagem JSON MQTT por quadro contendo todas as caixas de detecção naquele quadro.
+Uma câmera fixa observa a tira de aço ou uma peça. O dispositivo decide quadro a quadro se a superfície tem um defeito e envia o veredito OK/NG por dois caminhos ao mesmo tempo: uma bobina Modbus TCP que um CLP pode travar, e uma mensagem JSON MQTT por quadro contendo cada caixa de detecção naquele quadro.
 
 - **Seis classes de defeitos** — crazing, inclusion, patches, pitted surface, rolled-in scale, scratches.
 - **A detecção, a regra OK/NG e ambas as saídas rodam no dispositivo.** As imagens permanecem no dispositivo. O broker MQTT, o servidor Modbus TCP e uma página de depuração somente leitura rodam no mesmo host.
 - **Opções de detector e acelerador.** No Jetson: YOLOX-Tiny (padrão), D-FINE-S ou RT-DETRv2-S; no reComputer série R2000 (Hailo-8): YOLOX-Tiny INT8.
 
 - Código-fonte do empacotamento e guia de implantação: [sensecraft-solutions / solutions/edge_inspection_surface](https://github.com/suharvest/sensecraft-solutions/tree/main/solutions/edge_inspection_surface)
-- Escolhendo uma configuração e implantando: [página de design de referência](https://www.seeed.cc/solutions/reference-designs/edge_inspection_surface)
+- Escolhendo uma configuração e implantando: [página de reference design](https://www.seeed.cc/solutions/reference-designs/edge_inspection_surface)
 
 <div class="info-section">
     <ul class="info-list">
@@ -50,7 +51,7 @@ Uma câmera fixa observa a tira de aço ou uma peça. O dispositivo decide quadr
             </div>
             <div class="info-content">
                 <h3>Pronto para rodar no dispositivo</h3>
-                <p>Instale o pacote de aplicativo em um reComputer série J30 / J40 e ele roda; a primeira implantação leva cerca de 40 minutos. Medido no Orin NX 16GB: da captura do quadro à escrita da bobina P50 9,3 ms, nenhuma das 3000 amostras acima de 20 ms.</p>
+                <p>Instale o pacote de aplicativo em um reComputer série J30 / J40 e ele roda; a primeira implantação leva cerca de 40 minutos. Medido em Orin NX 16GB: da captura do quadro à escrita da bobina P50 9,3 ms, nenhuma das 3000 amostras acima de 20 ms.</p>
             </div>
         </li>
         <li class="info-item">
@@ -68,7 +69,7 @@ Uma câmera fixa observa a tira de aço ou uma peça. O dispositivo decide quadr
             </div>
             <div class="info-content">
                 <h3>Sua própria câmera, CLP e MES</h3>
-                <p>Qualquer câmera RTSP. O CLP lê bobinas e registradores diretamente na unidade 1 Modbus TCP e o MES assina via MQTT, sem middleware.</p>
+                <p>Qualquer câmera RTSP. O CLP lê bobinas e registradores diretamente na unidade Modbus TCP 1 e o MES assina via MQTT, sem middleware.</p>
             </div>
         </li>
         <li class="info-item">
@@ -87,10 +88,10 @@ Uma câmera fixa observa a tira de aço ou uma peça. O dispositivo decide quadr
 
 O pacote não inclui nenhuma imagem derivada de conjunto de dados. Seu único recurso é um diagrama desenhado para esta solução (caminho de dados, nomes de dispositivos, nomes de protocolos e números de porta), sem fotografias e sem saída do detector.
 
-Para ver a saída do detector, abra a página de depuração incluída no seu próprio vídeo: `/preview.mjpg` na porta 8080 desenha as caixas em um stream MJPEG ao vivo, e `/events` lista veredictos recentes.
+Para ver a saída do detector, abra a página de depuração incluída com suas próprias filmagens: `/preview.mjpg` na porta 8080 desenha as caixas em um stream MJPEG ao vivo, e `/events` lista os veredictos recentes.
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_inspection_surface/defect-overlay-pair-1cfaeb5a.jpg" alt="Comparação de sobreposição de detecção de inferência em tempo real de defeitos em superfície de aço"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_inspection_surface/defect-overlay-pair-1cfaeb5a.jpg" alt="Comparação de sobreposição de detecção em tempo real de defeitos em superfície de aço"/>
 </div>
 
 ## De que hardware você precisa
@@ -103,24 +104,23 @@ Duas coisas no local: uma câmera e um host.
 
 | | Host | Streams medidos | Quando escolhê-lo |
 |---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011](https://www.seeedstudio.com/reComputer-J3011-p-5590.html) (Jetson Orin Nano 8GB)<br/>Host de entrada para uma única câmera | 1–2 estáveis | Uma câmera, sensível a custo. Medido captura→bobina P50 10,56 ms |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) (Jetson Orin NX 16GB)<br/>O host medido | 8 estáveis | Mais de uma câmera; todos os dados abaixo foram medidos neste host |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110191.jpg" alt="reComputer Industrial J4012" width="110" /> | [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) (Orin NX 16GB, sem ventoinha) | igual ao J4012 | O host vai em um quadro de controle; mesmo módulo e runtime, gabinete diferente |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html) (Jetson Orin Nano 8GB)<br/>Host de entrada para uma única câmera | 1–2 estáveis | Uma câmera, sensível a custo. Captura→bobina medida P50 10,56 ms |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) (Jetson Orin NX 16GB)<br/>O host medido | 8 estáveis | Mais de uma câmera; todos os dados abaixo foram medidos neste host |
 
-Um terceiro host é o **reComputer série R2000 com um Hailo-8**. Existem etapas de implantação para ele; o configurador ainda não o inclui.
+Um terceiro host é o **reComputer série R2000 com um Hailo-8**. Existem etapas de implantação para ele; o configurador ainda não o lista.
 
-A capacidade de streams foi medida no Orin NX 16GB, 640² / 10 FPS por stream: **8 estáveis, 12 degradando, 24 falhando**. A partir de 12 streams, a vazão total permanece em 110–112 FPS: o contexto do acelerador não é thread-safe e a inferência roda em série, então mais computação não adiciona streams.
+A capacidade de streams foi medida em Orin NX 16GB, 640² / 10 FPS por stream: **8 estáveis, 12 degradando, 24 falhando**. A partir de 12 streams, a vazão total permanece em 110–112 FPS: o contexto do acelerador não é thread-safe e a inferência roda em série, então mais computação não adiciona streams.
 
-Você também precisa de um CLP ou controlador de linha na mesma rede que possa atuar como mestre Modbus TCP (opcional; o mapa de registradores é fixo na unidade 1), e alimentação elétrica próxima à linha ou no quadro. A cadeia principal não precisa de acesso à internet.
+Você também precisa de um CLP ou controlador de linha na mesma rede que possa atuar como mestre Modbus TCP (opcional; o mapa de registradores é fixo na unidade 1), e alimentação elétrica próxima à linha ou no painel. A cadeia principal não precisa de acesso à internet.
 
 ### Limites de Seleção Negativa
 
 - **Concorrência e limite de memória**: Se conectar mais de 2 câmeras industriais ou encadear modelos de classificação de defeitos, evite o J3011 de 8GB. Escolha o J4012 de 16GB para evitar OOM no buffer de vídeo.
-- **Compatibilidade de operadores**: No reComputer R2000 com Hailo-8, operadores ONNX personalizados não padronizados e não suportados pelo Hailo irão fazer fallback para a CPU do host, adicionando latência significativa.
+- **Compatibilidade de operadores**: No reComputer R2000 com Hailo-8, operadores ONNX personalizados não padronizados não suportados pelo Hailo irão fazer fallback para a CPU do host, adicionando latência significativa.
 
 ## Como implantar no local
 
-Fixe primeiro a câmera e a iluminação, depois instale o software.
+Primeiro fixe a câmera e a iluminação, depois instale o software.
 
 ### Um: instale primeiro o hardware, a câmera e a luz
 
@@ -131,12 +131,12 @@ Os dados de treinamento vêm de um conjunto de dados sob uma condição de ilumi
 Requisitos de enquadramento:
 
 1. **Os defeitos devem ocupar uma parte utilizável do quadro 640×640.** Em um campo de visão amplo, um arranhão tem poucos pixels de largura, e os dados de precisão abaixo não se aplicam.
-2. **Montagem fixa.** Reapontar ou refocar muda a escala assumida pelas medições.
+2. **Montagem fixa.** Reapontar ou refocar altera a escala assumida pelas medições.
 3. **Taxa de linha configurada em 10 FPS.** O runtime pode ir mais rápido; a precisão e a latência foram medidas em 10 FPS.
 
 ### Dois: instale o software
 
-As etapas por dispositivo estão na página de design de referência; esta seção lista o fluxo.
+As etapas por dispositivo estão na página de reference design; esta seção lista o fluxo.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/edge_inspection_surface" target="_blank">
@@ -144,8 +144,8 @@ As etapas por dispositivo estão na página de design de referência; esta seç�
     </a>
 </div><br />
 
-1. **Escolha uma configuração** — quantas câmeras por host, e se o host fica ao lado da linha ou em um quadro. Essas duas respostas decidem o módulo e o gabinete.
-2. **Instale o pacote de aplicativo** — imagem de contêiner, modelo e o limiar de score congelado (0,35) estão todos no pacote. No Jetson a primeira implantação constrói o engine TensorRT no dispositivo, medido em **291 s** no Orin NX 16GB + TensorRT 10.3; o engine é vinculado à arquitetura da GPU e à versão do TensorRT e não é distribuído separadamente. O reComputer série R2000 baixa um HEF INT8, sem build na placa.
+1. **Escolha uma configuração** — quantas câmeras por host, e se o host fica ao lado da linha ou em um painel. Essas duas respostas definem o módulo e o gabinete.
+2. **Instale o pacote de aplicativo** — imagem de contêiner, modelo e o limiar de score congelado (0,35) estão todos no pacote. No Jetson a primeira implantação constrói o engine TensorRT no dispositivo, medido em **291 s** em Orin NX 16GB + TensorRT 10.3; o engine é vinculado à arquitetura da GPU e à versão do TensorRT e não é distribuído separadamente. O reComputer série R2000 baixa um HEF INT8, sem build na placa.
 3. **Preencha a configuração** — URL RTSP, `device_name` e `stream_id` (para diferenciar as fontes quando várias linhas compartilham um broker ou um host executa várias câmeras), taxa de quadros da fonte, ID de unidade Modbus e, no Jetson, o **Detector Track**: YOLOX-Tiny (padrão, com dados medidos), D-FINE-S ou RT-DETRv2-S. O limiar de score vem em três etapas, 0,25 / 0,35 / 0,45; 0,35 é o valor de implantação, calibrado para YOLOX.
 4. **Verifique** — abra `/preview.mjpg` na porta 8080 e confirme que as caixas aparecem no seu próprio vídeo; depois verifique o tempo de inferência, a latência captura→bobina e os contadores MQTT / Modbus em `/healthz`.
 
@@ -156,7 +156,7 @@ Reserve **40 minutos** para a primeira implantação. No Orin, a maior parte é 
 Todos os dados são servidos pelo próprio host de inspeção: Modbus TCP 502, MQTT 1883, HTTP 8080. Não há etapa em nuvem na cadeia principal.
 
 - **CLP ou controlador de linha** — leia diretamente a unidade Modbus TCP 1. A bobina 0 é NG, a bobina 1 é OK, mutuamente exclusivas. Os registradores são atualizados de forma atômica **antes** de a bobina ser escrita, então, quando o CLP vê a bobina mudar, os HR 0–7 já contêm a classe, contagem de defeitos, caixa primária e heartbeat do mesmo quadro. Faça polling dos registradores primeiro e use a bobina como gatilho.
-- **MES ou historiador** — assine `<device-name>/inspection/<stream-id>/results`. Um JSON por quadro, com veredito, motivo, contagem de defeitos e todas as caixas daquele quadro em um único payload. Com vários streams em um host, esta é a única fonte por stream: o Modbus mantém apenas o último veredito escrito.
+- **MES ou historiador** — assine `<device-name>/inspection/<stream-id>/results`. Um JSON por quadro, com veredito, motivo, contagem de defeitos e todas as caixas naquele quadro em um único payload. Com vários streams em um host, esta é a única fonte por stream: o Modbus mantém apenas o último veredito escrito.
 - **Notebook de comissionamento ou dashboard de chão de fábrica** — a porta 8080 serve `/preview.mjpg` (MJPEG com caixas), `/healthz` (tempo de inferência, latência captura→bobina, contadores MQTT e Modbus) e `/events` (vereditos recentes), somente leitura.
 
 `<device-name>` e `<stream-id>` são definidos nas etapas de implantação; `stream_id` também está no payload, então o código a jusante não precisa analisar o tópico.
@@ -190,7 +190,7 @@ Cada mensagem MQTT é validada em relação ao schema do contrato no caminho de 
 | reComputer J30 series (J3011, Orin Nano 8GB) | YOLOX-Tiny 640², TensorRT 10.3 FP16 | 105,2 FPS (cálculo puro 198,5 FPS, GPU 5,03 ms) | 9,999 FPS com 0 descartados quando limitado a 10 FPS; 75,3 FPS sem limitação | P50 10,56 / P95 10,82 / P99 11,10 ms; cadência estável, 18,2 W MAXN |
 | reComputer R2000 series + Hailo-8 | YOLOX-Tiny 640², HailoRT INT8 HEF | Hardware 106,75 FPS (`hailortcli run`, latência de hardware 8,47 ms); aplicação 91,49 FPS (P50 10,93 ms, P95 13,19 ms) | 46,14 FPS sem limitação | P50 11,61 / P95 14,99 / P99 16,63 ms |
 
-Condições: a entrada é um vídeo sintético montado a partir de 290 imagens de validação em 640×640 / 10 FPS, sem continuidade temporal entre quadros. Os números do detector no Orin são 500 chamadas `detect()` em 60 quadros pré-decodificados, incluindo letterbox, execução e NMS na CPU; a execução do engine é cerca de 5,0–5,6 ms (cerca de 178–198 FPS) disso. Sem limitação, a captura→bobina P50 sobe para 35,90 ms (J4012) / 41,3 ms (J3011); os ~26–30 ms extras são enfileiramento em uma fila de profundidade 2. As medições da aplicação Hailo foram feitas em bare metal, não no contêiner, RSS cerca de 126 MB.
+Condições: a entrada é um vídeo sintético montado a partir de 290 imagens de validação em 640×640 / 10 FPS, sem continuidade temporal entre quadros. Os números do detector Orin são 500 chamadas `detect()` em 60 quadros pré-decodificados, incluindo letterbox, execução e NMS na CPU; a execução do engine é cerca de 5,0–5,6 ms (cerca de 178–198 FPS) disso. Sem limitação, a captura→bobina P50 sobe para 35,90 ms (J4012) / 41,3 ms (J3011); os ~26–30 ms extras são enfileiramento em uma fila de profundidade 2. As medições da aplicação Hailo foram feitas em bare metal, não no contêiner, RSS cerca de 126 MB.
 
 | Nível multi-stream | Streams | FPS por stream | Descartados | Latência P95 |
 |---|---:|---:|---:|---:|
@@ -210,13 +210,13 @@ Reproduzir: `solutions/edge_inspection_surface/evaluation/runs/2026-09-05-m2-ori
 | Recall no limiar 0,6 | 0,5807 | FN 214 → 296, quadros totalmente perdidos 7 → 39 (13,4%); a precisão sobe para 0,865 |
 | Recall no limiar 0,9 | 0,0241 | 273 de 290 quadros não produzem nada (94%); recall de crazing e rolled-in scale 0 |
 | TensorRT FP16 vs CPU onnxruntime, caixa a caixa | Diferença de mAP50 0,0003 | 643 pares correspondentes, IoU médio 0,9972 (mín 0,8311), diferença média de score 0,0011; o veredito de nenhum quadro mudou |
-| mAP50, reComputer R2000 series + Hailo-8, INT8 HEF | **0,7091** | As mesmas 290 imagens; referência na CPU 0,7574, −0,0483 |
-| Taxa de correspondência de caixas Hailo vs referência na CPU | 86,66% | 523 de 684 caixas corresponderam com IoU ≥ 0,5 |
+| mAP50, reComputer R2000 series + Hailo-8, INT8 HEF | **0,7091** | As mesmas 290 imagens; referência CPU 0,7574, −0,0483 |
+| Taxa de correspondência de caixas Hailo vs referência CPU | 86,66% | 523 de 684 caixas corresponderam com IoU ≥ 0,5 |
 | mAP50, emulador Hailo Dataflow Compiler, INT8 nível-1 (build enviado) | 0,7266 | 20 imagens de validação / 45 caixas, CPU no mesmo subconjunto 0,7228; não diretamente comparável com as linhas de 290 imagens |
 
-Conjunto de dados: NEU6 (uma cópia re-hospedada de NEU-DET, licença no final da página), dividido 70/15/15 agrupado por fonte para que quadros adjacentes de uma faixa nunca cruzem uma divisão. As linhas de limiar são pós-filtros de uma única passagem, não testes separados.
+Conjunto de dados: NEU6 (uma cópia re-hospedada de NEU-DET, licença no final da página), dividido 70/15/15 agrupado por fonte para que quadros adjacentes de uma faixa nunca cruzem uma divisão. As linhas de limiar são pós-filtros de uma passagem, não testes separados.
 
-AP50 por classe a partir da mesma passagem:
+AP50 por classe da mesma passagem:
 
 | Classe | Caixas | AP50 | Recall em 0,35 |
 |---|---:|---:|---:|
@@ -237,7 +237,7 @@ Reproduzir: `solutions/edge_inspection_surface/evaluation/runs/`
 | D-FINE-S | 0,7499 | 0,4956 / 0,8017 | **0/290** |
 | RT-DETRv2-S | 0,7317 | 0,4575 / 0,7847 | 1/290 |
 
-Condições: referência CPU onnxruntime, não um número de dispositivo; as mesmas 290 imagens de validação, entrada estática 640×640 batch-1, uma seed por track. O limiar 0,35 é calibrado na distribuição de score `obj × cls` do YOLOX; os scores do DETR são distribuídos de forma diferente, daí o P/R desequilibrado. Em precisão combinada (P ≈ 0,81–0,87), o recall do D-FINE fica 2–7 pontos acima do YOLOX e os quadros totalmente perdidos caem de 38 para 20.
+Condições: referência CPU onnxruntime, não um número de dispositivo; as mesmas 290 imagens de validação, entrada estática 640×640 batch-1, uma semente por track. O limiar 0,35 é calibrado na distribuição de score `obj × cls` do YOLOX; os scores do DETR são distribuídos de forma diferente, daí o P/R desequilibrado. Em precisão combinada (P ≈ 0,81–0,87), o recall do D-FINE fica 2–7 pontos acima do YOLOX e os quadros totalmente perdidos caem de 38 para 20.
 
 Reproduzir: `solutions/edge_inspection_surface/evaluation/runs/`
 
@@ -248,10 +248,10 @@ Reproduzir: `solutions/edge_inspection_surface/evaluation/runs/`
 | Pixel AUROC | **0,8752** | DeepPCB divisão OK/anomalia `pcb`: 205 OK val + 213 OK teste + 213 defeito teste |
 | Pixel AUPRO (FPR ≤ 0,30) | 0,6494 | Mesma execução, 1177 regiões de defeito conectadas |
 | Image AUROC | **0,5201** | Mesma execução; 0,5 é acaso |
-| Recall em classes de defeito não vistas (leave-one-out, nível de pixel/região) | 0,225 – 0,955 | Grande variação por classe (open 0,955, spur 0,225) |
+| Recall em classes de defeito não vistas (leave-one-out, nível pixel/região) | 0,225 – 0,955 | Grande variação por classe (open 0,955, spur 0,225) |
 | Sobrecarga de latência dual-path (detector + EfficientAD, referência CPU) | +139 ms P95 por quadro | queue=2, timeout 500 ms (padrões do pacote); 120/120 quadros mesclados |
 
-A pontuação em nível de pixel/região é utilizável, em nível de imagem não é: doze maneiras de reduzir o mapa de calor a um único score todas dão Image AUROC 0,495–0,530. O conjunto OK acima (templates escaneados) e o conjunto de defeitos (fotos de placas reais) vêm de fontes diferentes.
+A pontuação em nível de pixel/região é utilizável, em nível de imagem não é: doze maneiras de reduzir o mapa de calor a um único score dão todas Image AUROC 0,495–0,530. O conjunto OK acima (templates escaneados) e o conjunto de defeitos (fotos de placas reais) vêm de fontes diferentes.
 
 Reproduzir: `solutions/edge_inspection_surface/evaluation/runs/`
 
@@ -259,9 +259,9 @@ Reproduzir: `solutions/edge_inspection_surface/evaluation/runs/`
 
 | Item | Valor | Condições |
 |---|---|---|
-| Construção do engine TensorRT no dispositivo | 291 s | reComputer J40 series, JetPack 6.2, TensorRT 10.3, YOLOX-Tiny 640² FP16, shape estático |
+| Build do engine TensorRT no dispositivo | 291 s | reComputer J40 series, JetPack 6.2, TensorRT 10.3, YOLOX-Tiny 640² FP16, shape estático |
 | Imagem Jetson | 375 MB | TensorRT e CUDA do host são montados no contêiner, não empacotados na imagem |
-| Pegada adicional no reComputer R2000 series | cerca de 452 MB | imagem de runtime de 443 MB + 8,9 MB HEF + config |
+| Pegada adicional no reComputer R2000 series | cerca de 452 MB | imagem de runtime 443 MB + 8,9 MB HEF + config |
 
 ### Tempos de execução e parâmetros principais
 
@@ -270,32 +270,32 @@ Reproduzir: `solutions/edge_inspection_surface/evaluation/runs/`
 | reComputer J30 / J40 series | YOLOX-Tiny 640² (opcional D-FINE-S, RT-DETRv2-S) | FP16 | TensorRT 10.3 | Engine construída no dispositivo no primeiro deploy (medido 291 s), vinculada à arquitetura da GPU e à versão do TensorRT, não distribuída separadamente |
 | reComputer R2000 series + Hailo-8 | YOLOX-Tiny 640² | INT8 | HailoRT 4.21.0 | HEF compilado fora do dispositivo com Dataflow Compiler 3.31.0 em `optimization_level=1`, baixado no momento do deploy |
 
-D-FINE-S e RT-DETRv2-S estão disponíveis apenas em Jetson: o Hailo Dataflow Compiler 3.31.0 não oferece suporte aos seus operadores de deformable-attention (`GridSample`, `GatherElements`, `TopK`).
+D-FINE-S e RT-DETRv2-S estão disponíveis apenas em Jetson: o Hailo Dataflow Compiler 3.31.0 não oferece suporte aos seus operadores de atenção deformável (`GridSample`, `GatherElements`, `TopK`).
 
-- `min_score`: valor de deploy **0.35**; a etapa de deploy oferece 0.25 / 0.35 / 0.45
+- `min_score`: valor de deploy **0,35**; a etapa de deploy oferece 0,25 / 0,35 / 0,45
 - `min_defects`: padrão 1; um frame com pelo menos essa quantidade de detecções é NG
 - `anomaly.enabled`: padrão `false`; `anomaly_score` é um campo MQTT separado e não entra no `verdict` de nível superior
 
 ### Degradações conhecidas
 
-- Mude a iluminação e os números acima deixam de se aplicar: o modelo foi treinado e avaliado sob a iluminação de um único dataset.
-- O AP50 de crazing é 0,30–0,36 em todas as três arquiteturas (YOLOX 0,360, D-FINE 0,302, RT-DETRv2 0,310) e não se move com limiar ou cabeça de detecção; uma linha cujo defeito principal é crazing precisa de re-treinamento em suas próprias imagens.
+- Mude a iluminação e os números acima deixam de se aplicar: o modelo foi treinado e avaliado sob a iluminação de um único conjunto de dados.
+- O AP50 de crazing é 0,30–0,36 em todas as três arquiteturas (YOLOX 0,360, D-FINE 0,302, RT-DETRv2 0,310) e não se move com limiar ou cabeça do detector; uma linha cujo defeito principal é crazing precisa de retreinamento em suas próprias imagens.
 - INT8 na reComputer R2000 series perde 0,0483 mAP50; as maiores perdas são nas duas classes mais fracas (crazing AP50 0,3873, rolled-in_scale 0,4483).
 - O teto de streams está no loop de inferência: a partir de 12 streams o throughput total permanece em 110–112 FPS; o contexto do acelerador não é thread-safe e a inferência roda em série, então mais computação não adiciona streams.
-- Todos os streams compartilham um bloco único de registradores Modbus, e o último verdict prevalece; os resultados por stream vêm do MQTT.
-- Os scores de anomalia em nível de imagem estão próximos do acaso. Antes de ativar `anomaly.enabled`, colete suas próprias imagens OK com a câmera de inspeção real e recalibre `anomaly.threshold` nelas.
+- Todos os streams compartilham um único bloco de registradores Modbus, e o último veredito prevalece; os resultados por stream vêm do MQTT.
+- As pontuações de anomalia em nível de imagem estão próximas do acaso. Antes de ativar `anomaly.enabled`, colete suas próprias imagens OK com a câmera de inspeção real e recalibre `anomaly.threshold` nelas.
 
 ### Próximas etapas
 
-- Reexecutar a comparação de detectores com três seeds por trilha para confirmar a vantagem de recall do D-FINE-S em precisão equivalente.
+- Reexecute a comparação de detectores com três seeds por trilha para confirmar a vantagem de recall do D-FINE-S em precisão equivalente.
 
 ## Fontes de dados e assets {#data-and-asset-sources}
 
-- **NEU-DET (Northeastern University surface defect database), via cópia no Roboflow** — dados de treinamento e validação para o detector base fornecido e fonte dos números de acurácia acima. Pesos de modelo pré-convertidos são hospedados no CDN oficial para avaliação do reference design e verificação do pipeline de ponta a ponta. Deploys em produção devem re-treinar modelos em imagens reais da linha para corresponder às peças-alvo e às condições de iluminação.
-- **DeepPCB** —— [github.com/tangsanli5201/DeepPCB](https://github.com/tangsanli5201/DeepPCB), licença MIT. Usado apenas pela trilha opcional de anomalia não supervisionada, e distinto do NEU-DET. A licença MIT permite redistribuição e uso comercial e exige que o aviso de copyright acompanhe cópias e trabalhos derivados.
-- **YOLOX** —— [github.com/Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX), Apache-2.0. O backbone de detecção padrão, escolhido em vez de Ultralytics para evitar termos AGPL. Nenhum código ou peso da Ultralytics é usado em qualquer parte desta solução.
-- **D-FINE** —— [github.com/Peterande/D-FINE](https://github.com/Peterande/D-FINE), Apache-2.0, e **RT-DETRv2** —— [github.com/lyuwenyu/RT-DETR](https://github.com/lyuwenyu/RT-DETR), Apache-2.0. As duas trilhas opcionais de detecção, ajustadas apenas a partir de seus checkpoints licenciados sob COCO. Nenhum peso treinado em Objects365 é baixado ou distribuído, já que o próprio upstream declara que essa licença é não confirmada. Fixação de licença e commit está em `tracks/detector/PROVENANCE.md`.
+- **NEU-DET (Northeastern University surface defect database), via cópia do Roboflow** — dados de treinamento e validação para o detector base enviado e a fonte dos números de acurácia acima. Pesos de modelo pré-convertidos são hospedados no CDN oficial para avaliação do design de referência e verificação do pipeline de ponta a ponta. Deploys de produção devem retreinar modelos em imagens reais da linha para corresponder às peças-alvo e às condições de iluminação.
+- **DeepPCB** —— [github.com/tangsanli5201/DeepPCB](https://github.com/tangsanli5201/DeepPCB), licença MIT. Usado apenas pela trilha opcional de anomalia não supervisionada e distinto do NEU-DET. A licença MIT permite redistribuição e uso comercial e exige que o aviso de direitos autorais acompanhe cópias e trabalhos derivados.
+- **YOLOX** —— [github.com/Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX), Apache-2.0. O backbone de detecção padrão, escolhido em vez do Ultralytics para evitar termos AGPL. Nenhum código ou peso do Ultralytics é usado em qualquer parte desta solução.
+- **D-FINE** —— [github.com/Peterande/D-FINE](https://github.com/Peterande/D-FINE), Apache-2.0, e **RT-DETRv2** —— [github.com/lyuwenyu/RT-DETR](https://github.com/lyuwenyu/RT-DETR), Apache-2.0. As duas trilhas opcionais de detecção, ajustadas apenas a partir de seus checkpoints licenciados sob COCO. Nenhum peso treinado em Objects365 é baixado ou distribuído, já que o próprio upstream declara que essa licença não está confirmada. Fixação de licença e commit está em `tracks/detector/PROVENANCE.md`.
 - **anomalib EfficientAD-S** —— Apache-2.0, incluindo seus pesos de teacher pré-treinados (`tracks/anomaly/PROVENANCE.md`, anomalib `lib/v2.6.0`).
-- **Diagrama de arquitetura** —— desenhado a partir do catálogo de dispositivos do pacote e das interfaces de saída; não contém conteúdo de dataset.
+- **Diagrama de arquitetura** —— desenhado a partir do catálogo de dispositivos do pacote e das interfaces de saída; não contém conteúdo de conjunto de dados.
 
-O código de runtime é Apache-2.0. Os pesos fornecidos servem como baselines de avaliação; deploys em produção devem re-treinar com dados específicos do local.
+O código de runtime é Apache-2.0. Os pesos enviados servem como baselines de avaliação; deploys de produção devem ser retreinados com dados específicos do local.
