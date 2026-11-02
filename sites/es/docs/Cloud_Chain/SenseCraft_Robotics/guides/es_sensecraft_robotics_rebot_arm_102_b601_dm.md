@@ -41,7 +41,7 @@ Este tutorial está organizado en el orden de configuración de hardware y opera
 
 ### 1.1 Hardware
 
-![Lista de hardware](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-1-hardware-list-dm-en.webp)
+![Lista de hardware](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/01-1-hardware-list-dm-en.png)
 
 > Los brazos deben estar ensamblados, montados, alimentados y conectados por USB. Si el ensamblaje no está completo, consulta [Paso 1: Ensamblar el brazo](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/#%E7%AC%AC%E4%B8%80%E6%AD%A5%E7%BB%84%E8%A3%85%E6%9C%BA%E6%A2%B0%E8%87%82).
 
@@ -147,7 +147,7 @@ Las conexiones constan de dos rutas:
 
 ### 2.2 Montar y conectar el B601 DM (brazo seguidor)
 
-![Conexión de cables del B601 DM](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.webp)
+![Conexión de cables del B601 DM](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png)
 
 #### Paso 3: Montar el B601 DM
 

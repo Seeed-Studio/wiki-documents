@@ -233,6 +233,30 @@ const sidebars = {
     backToRobotics(),
     {
       type: 'category',
+      label: '课程',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/cn_Arm_Tutorial_Introduction`,
+      label: '入门课程',
+    },
+    {
+      type: 'ref',
+      id: `${PAPER_READING}`,
+      label: '论文精读',
+    },
+    {
+      type: 'link',
+      label: 'Sim-to-Real with NVIDIA Isaac',
+      href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac',
+    },
+      ],
+    },
+    {
+      type: 'category',
       label: '快速上手与 SDK',
       className: 'robotics-section-title',
       collapsed: false,
@@ -264,6 +288,25 @@ const sidebars = {
   // reBot-DM：快速上手与 SDK / 应用。
   RebotDmSidebar: [
     backToRobotics(),
+    {
+      type: 'category',
+      label: '课程',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/cn_Arm_Tutorial_Introduction`,
+      label: '入门课程',
+    },
+    {
+      type: 'ref',
+      id: `${PAPER_READING}`,
+      label: '论文精读',
+    },
+      ],
+    },
     {
       type: 'category',
       label: '快速上手与 SDK',

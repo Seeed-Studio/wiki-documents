@@ -232,6 +232,30 @@ const sidebars = {
     backToRobotics(),
     {
       type: 'category',
+      label: 'Curso',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/es_Arm_Tutorial_Introduction`,
+      label: 'Curso para principiantes',
+    },
+    {
+      type: 'ref',
+      id: `${P}/es_Paper_Reading_Getting_Started`,
+      label: 'Análisis profundo de artículos',
+    },
+    {
+      type: 'link',
+      label: 'De simulación a realidad con NVIDIA Isaac',
+      href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac',
+    },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Inicio rápido y SDK',
       className: 'robotics-section-title',
       collapsed: false,
@@ -263,6 +287,25 @@ const sidebars = {
   // reBot-DM: Quick Start & SDK / Applications.
   RebotDmSidebar: [
     backToRobotics(),
+    {
+      type: 'category',
+      label: 'Curso',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/es_Arm_Tutorial_Introduction`,
+      label: 'Curso para principiantes',
+    },
+    {
+      type: 'ref',
+      id: `${P}/es_Paper_Reading_Getting_Started`,
+      label: 'Análisis profundo de artículos',
+    },
+      ],
+    },
     {
       type: 'category',
       label: 'Inicio rápido y SDK',

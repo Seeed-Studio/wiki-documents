@@ -43,7 +43,7 @@ This tutorial is organized in the order of hardware setup and software operation
 ## 1. Preparation
 
 ### 1.1 Hardware
-![Hardware list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/01-1-hardware-list-rs-en.webp)
+![Hardware list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/01-1-hardware-list-rs-en.png)
 
 > The arms must be assembled, mounted, powered, and connected to USB. If assembly is not complete, refer to [Step 1: Assemble the Arm](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/).
 
@@ -144,7 +144,7 @@ The connections consist of two paths:
 ---
 
 ### 2.2 Mount and Connect the B601 RS (Follower Arm)
-![B601 RS cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.webp)
+![B601 RS cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
 
 #### Step 4: Mount the B601 RS
 Use G-clamps to secure the B601 RS to a flat tabletop. Gently rotate the arm left and right to confirm that the base does not move.

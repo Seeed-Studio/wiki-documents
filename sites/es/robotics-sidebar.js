@@ -215,6 +215,7 @@ const sidebars = {
 
   SoArm101Sidebar: [
     backToRobotics(),
+    soArmCourseLink,
     {
       type: 'category',
       label: 'Inicio rápido y herramientas',
@@ -239,7 +240,6 @@ const sidebars = {
         `${K}/Lerobot/es_Lerobot_SO_ARM101_DAMO`,
       ],
     },
-    soArmCourseLink,
   ],
 
   LekiwiSidebar: [
