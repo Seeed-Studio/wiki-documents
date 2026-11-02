@@ -1,5 +1,5 @@
 ---
-description: Com base na análise de arquitetura e em experimentos em dispositivo real com reComputer Classic J3010 + Sony IMX219, explicar como a Jetson Camera funciona ao longo de toda a cadeia de dados Sensor → MIPI CSI-2 → NVCSI → VI → ISP, e comparar os dois caminhos de captura: V4L2 RAW e Argus ISP.
+description: Com base na análise de arquitetura e em experimentos em dispositivo real com reComputer Classic J3010 + Sony IMX219, explicar como a Jetson Camera funciona ao longo de toda a cadeia de dados Sensor → MIPI CSI-2 → NVCSI → VI → ISP, e comparar os dois caminhos de captura - V4L2 RAW e Argus ISP.
 title: Jetson Camera
 keywords:
   - jetson

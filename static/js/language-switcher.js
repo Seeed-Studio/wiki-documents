@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-02 11:12:10 (北京时间)
-// 多语言页面: 2627 个
+// 生成时间: 2026-11-02 16:57:52 (北京时间)
+// 多语言页面: 2632 个
 
 (function() {
   'use strict';
@@ -2229,6 +2229,41 @@
     "pt"
   ],
   "/reServer_J2032_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_jetpack_l4t_ubuntu_kernel_uefi": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_boot_log_analysis": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_camera_data_chain": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_device_tree": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_usb": [
     "cn",
     "en",
     "es",

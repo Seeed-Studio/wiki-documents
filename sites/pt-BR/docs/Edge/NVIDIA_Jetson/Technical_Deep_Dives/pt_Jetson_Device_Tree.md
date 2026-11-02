@@ -1,5 +1,5 @@
 ---
-description: Explicar o papel da Device Tree na plataforma Jetson: como o Linux sabe qual hardware está conectado em uma carrier board, por que o hardware pode parar de funcionar após trocar a carrier board, as diferenças entre DTS/DTSI/DTB/DTBO e por que as carrier boards da Seeed Studio precisam do próprio BSP.
+description: Explicar o papel da Device Tree na plataforma Jetson - como o Linux sabe qual hardware está conectado em uma carrier board, por que o hardware pode parar de funcionar após trocar a carrier board, as diferenças entre DTS/DTSI/DTB/DTBO e por que as carrier boards da Seeed Studio precisam do próprio BSP.
 title: Device Tree no Jetson
 tags:
   - jetson
