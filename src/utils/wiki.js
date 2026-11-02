@@ -1,6 +1,28 @@
 const docList = [
   [
     {
+      "path": "/solutions/crayfish-behavior-recognition",
+      "image": "https://files.seeedstudio.com/ReferenceDesign/landpage_asset/crayfish_behavior_recognition/cover-10d95d7f.png",
+      "title": "Aquaculture Crayfish Behavior Recognition: 4-Stage Pipeline and Edge Benchmarks",
+      "date": "2026-10-30",
+      "title_cn": "水产小龙虾争斗识别：4 级漏斗流水线与端侧实测性能",
+      "title_ja": "水産ザリガニ争闘行動認識：4段階ファネルパイプラインとエッジ実測性能",
+      "title_es": "Reconocimiento de Comportamiento de Cangrejo de Río en Acuicultura: Canalización de 4 Etapas y Benchmarks en el Borde",
+      "title_pt": "Reconhecimento de Comportamento de Lagostim em Aquicultura: Pipeline em 4 Estágios e Benchmarks na Borda"
+    },
+    {
+      "path": "/solutions/rehab-posture-analysis",
+      "image": "https://files.seeedstudio.com/ReferenceDesign/landpage_asset/rehab_posture_analysis/cover-93765b27.png",
+      "title": "Edge AI Rehabilitation Posture Analysis: 33-Keypoint Pose and Clinical Kinematics",
+      "date": "2026-10-30",
+      "title_cn": "边缘 AI 康复姿态与动作分析：33 关键点与临床运动学评估",
+      "title_ja": "エッジ AI リハビリ姿勢・動作分析：33キーポイント骨格と臨床運動力学評価",
+      "title_es": "Análisis de Postura para Rehabilitación con Edge AI: Pose de 33 Puntos Clave y Cinemática Clínica",
+      "title_pt": "Análise de Postura para Reabilitação com IA de Borda: Pose de 33 Pontos-Chave e Cinemática Clínica"
+    }
+  ],
+  [
+    {
       "path": "/jetson/accelerate_llm_inference_mtp",
       "image": "https://files.seeedstudio.com/wiki/Jetson/Application/jetson-mtp-cover-en.png",
       "title": "Speed Up llama.cpp on NVIDIA Jetson AGX Orin with MTP",
@@ -95,7 +117,7 @@ const docList = [
       "date": "2026-10-09",
       "title_cn": "视频车位占用检测方案：选型、部署与实测数据",
       "title_ja": "カメラによる駐車スペース検知：選定・導入・実測データ",
-      "title_es": "Detección de ocupación de aparcamiento basada en cámara — Selección, despliegue y datos medidos",
+      "title_es": "Detección de Ocupación de Aparcamiento Basada en Cámara — Selección, Despliegue y Datos Medidos",
       "title_pt": "Detecção de Ocupação de Estacionamento Baseada em Câmera — Seleção, Implantação e Dados Medidos"
     },
     {
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "reBot Arm 102 + B601 DM トレーニングガイド",
       "title_es": "Guía de entrenamiento reBot Arm 102 + B601 DM",
       "title_pt": "Guia de Treinamento reBot Arm 102 + B601 DM"
-    }
-  ],
-  [
-    {
-      "path": "/sensecraft_robotics_rebot_arm_102_b601_rs",
-      "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/00-task-overview-rs-en.webp",
-      "title": "reBot Arm 102 + B601 RS Training Guide",
-      "date": "2026-09-24",
-      "title_cn": "reBot Arm 102 + B601 RS 训练指南",
-      "title_ja": "reBot Arm 102 + B601 RS トレーニングガイド",
-      "title_es": "Guía de entrenamiento de reBot Arm 102 + B601 RS",
-      "title_pt": "Guia de Treinamento reBot Arm 102 + B601 RS"
-    },
-    {
-      "path": "/sensecraft_robotics_so_arm101",
-      "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/00-task-overview-soarm-en.webp",
-      "title": "SO-ARM101 Training Guide",
-      "date": "2026-09-24",
-      "title_cn": "SO-ARM101 训练指南",
-      "title_ja": "SO-ARM101 トレーニングガイド",
-      "title_es": "Guía de entrenamiento SO-ARM101",
-      "title_pt": "Guia de Treinamento SO-ARM101"
     }
   ]
 ];

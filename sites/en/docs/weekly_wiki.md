@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/26/2026
+  date: 11/02/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-10-26'
+updatedAt: '2026-11-02'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,123 +18,75 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 26th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 2nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [SO-ARM Physical AI Beginner's Course](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_introduction/)
+### [Aquaculture Crayfish Behavior Recognition: 4-Stage Pipeline and Edge Benchmarks](https://wiki.seeedstudio.com/solutions/crayfish-behavior-recognition/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp" alt="SO-ARM100 and SO-ARM101 open-source robotic arm kit" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/crayfish_behavior_recognition/cover-10d95d7f.png" alt="Edge AI aquaculture crayfish behavior recognition reference design" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-A complete 22-chapter beginner course walks through SO-ARM hardware, assembly, servo control, and imitation learning with LeRobot. It then moves into dual-arm workflows, VLA dataset preparation, Isaac GR00T fine-tuning, and no-code training with SenseCraft Robotics.
-
-**Start here:** [Course Introduction](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_introduction/).
-
-**Stage 1 — Foundations (Chapters 1–3):** [1 — Robots and Physical AI](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_1/) · [2 — Hardware and Open-Source Project](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_2/) · [3 — Hardware Selection](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_3/).
-
-**Stage 2 — Setup and assembly (Chapters 4–7):** [4 — Robotic Arms and Bus Servos](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_4/) · [5 — Software Environment](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_5/) · [6 — Motor Setup and Assembly](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_6/) · [7 — Servo Debugging](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_7/).
-
-**Stage 3 — LeRobot and imitation learning (Chapters 8–12):** [8 — Robot and Imitation Learning](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_8/) · [9 — LeRobot and SO-ARM Architecture](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_9/) · [10 — Calibration and Teleoperation](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_10/) · [11 — Datasets and Task Design](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_11/) · [12 — Camera Setup and Data Collection](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_12/).
-
-**Stage 3 — Training and evaluation (Chapters 13–17):** [13 — Dataset Quality Inspection](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_13/) · [14 — ACT and Action Chunking](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_14/) · [15 — Training an ACT Policy](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_15/) · [16 — On-Robot Inference and Evaluation](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_16/) · [17 — Double-Arm Training](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_17/).
-
-**Stage 4 — VLA workflows (Chapters 18–22):** [18 — VLA Fundamentals](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_18/) · [19 — Robot Embodiment and GR00T](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_19/) · [20 — Preparing VLA Data](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_20/) · [21 — Isaac GR00T Fine-Tuning](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_21/) · [22 — No-Code VLA with SenseCraft](https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_chapter_22/).
+This edge AI aquaculture reference design introduces a four-stage pipeline for monitoring crayfish behavior and detecting potential fighting events. The guide covers camera placement, deployment with `solution-cli`, MQTT and WebSocket telemetry, and reported on-device benchmarks.
 
 </div>
 
-### [Physical AI Paper Deep-Dive & Hands-on Deployment](https://wiki.seeedstudio.com/robotics/paper_reading_getting_started/)
+### [Edge AI Rehabilitation Posture Analysis: 33-Keypoint Pose and Clinical Kinematics](https://wiki.seeedstudio.com/solutions/rehab-posture-analysis/)
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="Open-source reBot Arm hardware featured in the Physical AI paper and deployment course" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This new series connects Physical AI research with practical robot-learning workflows, from hardware preparation and demonstration collection to ACT training, on-robot evaluation, and policy switching. Nine additional deep-dives examine the architecture, training methods, and limitations of leading VLA and imitation-learning approaches.
-
-**Course overview:** [Getting Started](https://wiki.seeedstudio.com/robotics/paper_reading_getting_started/).
-
-**Hands-on guides:** [Hardware and Teleoperation](https://wiki.seeedstudio.com/robotics/paper_reading_hardware_and_teleoperation/) · [Task Design](https://wiki.seeedstudio.com/robotics/hands_on_task_design/) · [Multi-View Data Collection](https://wiki.seeedstudio.com/robotics/hands_on_camera_recording/) · [Dataset Quality](https://wiki.seeedstudio.com/robotics/hands_on_dataset_quality/) · [ACT Training](https://wiki.seeedstudio.com/robotics/hands_on_act_training/) · [On-Robot Deployment](https://wiki.seeedstudio.com/robotics/hands_on_act_deployment/) · [Policy Switching](https://wiki.seeedstudio.com/robotics/hands_on_algorithm_switching/).
-
-**Paper deep-dives:** [ACT](https://wiki.seeedstudio.com/robotics/paper_reading_act/) · [EO-1](https://wiki.seeedstudio.com/robotics/paper_reading_eo1/) · [Evo-1](https://wiki.seeedstudio.com/robotics/paper_reading_evo1/) · [NVIDIA GR00T](https://wiki.seeedstudio.com/robotics/paper_reading_gr00t_n1/) · [π₀](https://wiki.seeedstudio.com/robotics/paper_reading_pi0/) · [π₀.₅](https://wiki.seeedstudio.com/robotics/paper_reading_pi05/) · [π₀-FAST](https://wiki.seeedstudio.com/robotics/paper_reading_pi0_fast/) · [SmolVLA](https://wiki.seeedstudio.com/robotics/paper_reading_smolvla/) · [WALL-OSS](https://wiki.seeedstudio.com/robotics/paper_reading_wall_oss/).
-
-</div>
-
-### [Connect reCamera Pro to Frigate](https://wiki.seeedstudio.com/recamera_pro_frigate/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/guides/frigate/frigate_stream_test_ok.png" alt="reCamera Pro RTSP stream validated in Frigate" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/rehab_posture_analysis/cover-93765b27.png" alt="33-keypoint edge AI rehabilitation posture analysis reference design" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Two new guides show how to connect reCamera devices to the Frigate video-management platform over RTSP. The reCamera Pro guide uses its built-in streaming controls, while the reCamera 2002 guide covers Node-RED, a C++ RTSP publisher, and an ONVIF application before adding the camera in Frigate.
-
-**New guides:** [reCamera Pro](https://wiki.seeedstudio.com/recamera_pro_frigate/) · [reCamera 2002 Series](https://wiki.seeedstudio.com/recamera_firgate/).
-
-</div>
-
-### [Jetson Accessories Selection Guide](https://wiki.seeedstudio.com/jetson/accessories-selection-guide/)
-
-<div style={{ textAlign: "justify" }}>
-
-Use the new interactive selector to filter tested SSD, Wi-Fi, and 4G accessories for Jetson-based reComputer and reServer devices. It supports side-by-side comparisons, interface and compatibility details, and purchase links where available.
-
-</div>
-
-### [Speed Up llama.cpp on NVIDIA Jetson AGX Orin with MTP](https://wiki.seeedstudio.com/jetson/accelerate_llm_inference_mtp/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-mtp-cover-en.png" alt="Multi-Token Prediction in llama.cpp on NVIDIA Jetson AGX Orin" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide explains Multi-Token Prediction (MTP) and how to enable it in llama.cpp on Jetson AGX Orin with Qwen3.5-4B. It includes setup instructions, MTP-on versus MTP-off performance comparisons, and a local crowd-monitoring example.
-
-</div>
-
-### [Seeed Fusion One-Stop Manufacturing and Delivery Guide](https://wiki.seeedstudio.com/service_for_fusion_one_stop/)
-
-<div style={{ textAlign: "justify" }}>
-
-Six new Seeed Fusion guides explain the steps between design readiness and production delivery. They cover manufacturing-file preparation, sample validation, PCBA testing, light customization, and the scope of one-stop manufacturing, fulfillment, and delivery services.
-
-**New service guides:** [One-Stop Manufacturing and Delivery](https://wiki.seeedstudio.com/service_for_fusion_one_stop/) · [Light Customization](https://wiki.seeedstudio.com/service_for_fusion_light_customization/) · [Manufacturing Documents](https://wiki.seeedstudio.com/service_for_fusion_manufacturing_documents/) · [PCBA Functional Test Requirements](https://wiki.seeedstudio.com/service_for_fusion_pcba_functional_test/) · [PCBA Testing Solutions](https://wiki.seeedstudio.com/service_for_fusion_pcba_testing_solutions/) · [Sample Validation and Pilot Production](https://wiki.seeedstudio.com/service_for_fusion_sample_validation/).
+This assistive rehabilitation reference design uses a 33-keypoint pose model to measure joint range of motion and flag movement compensation patterns. It covers edge deployment, model extensions, WebSocket and MQTT integration, and evaluation benchmarks; it is not a certified medical diagnostic tool.
 
 </div>
 
 ## Existing Wiki Updated
 
-### [Getting Started with reComputer Robotics J601](https://wiki.seeedstudio.com/jetson/recomputer_robotics_j601/getting_started/)
+### [reBot Arm B601 Setup and LeRobot Guides](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/)
 
 <div style={{ textAlign: "justify" }}>
 
-The reComputer Robotics J601 guides have been substantially reorganized with clearer AGX Thor configuration choices, recovery-mode and JetPack flashing steps, and an integrated perception-demo walkthrough. The Hardware & I/O reference also expands USB verification, GMSL camera, and peripheral-interface instructions.
+The B601-RS and B601-DM Quick Start and LeRobot guides now include illustrated leader-and-follower arm mounting, wiring steps, and safety checks. The Chinese SO-ARM100/101 guide also gains 44 community Q&As covering hardware, software setup, calibration, data collection, and training.
 
-**Updated guides:** [Getting Started](https://wiki.seeedstudio.com/jetson/recomputer_robotics_j601/getting_started/) · [Hardware & I/O](https://wiki.seeedstudio.com/jetson/recomputer_robotics_j601/hardware_and_interface_usage/).
+**Updated English guides:** [B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) · [B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/) · [B601-RS with LeRobot](https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/) · [B601-DM with LeRobot](https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/).
+
+**Chinese Guide:** [SO-ARM100/101 with LeRobot — Expanded FAQ](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/).
 
 </div>
 
-### [Integrate reSpeaker Clip into Your Service](https://wiki.seeedstudio.com/respeaker_clip_service_integration/)
+### [Industrial Edge Solution Deployment Guides](https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/)
 
 <div style={{ textAlign: "justify" }}>
 
-The Python service integration guide now includes a complete BLE disconnect and command-timeout recovery example. It covers connection health checks, background reconnection, operation serialization, configuration, and recovery verification for long-running services.
+Three existing engineering references have been substantially expanded with clearer hardware deployment guidance, interfaces, and operating boundaries. The updates explain multi-protocol data collection over MQTT, HVAC setpoint write-and-readback verification, and face-access library deployment with security and licensing considerations.
+
+**Updated guides:** [Industrial Multi-Protocol Data Hub](https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/) · [HVAC Setpoint Control](https://wiki.seeedstudio.com/solutions/hvac-setpoint-control/) · [Unmanned Store Face Access](https://wiki.seeedstudio.com/solutions/unmanned-store-face-access/).
 
 </div>
 
-### [Getting Started with EN04 and EN05 ePaper Boards](https://wiki.seeedstudio.com/epaper_en05/)
+### [Mesh Device Firmware and Recovery Guides](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/)
 
 <div style={{ textAlign: "justify" }}>
 
-The EN04 and EN05 beginner guides now provide more complete display selection, Arduino and Seeed GFX2 setup, button examples, and troubleshooting instructions. The revised walkthroughs help readers move from hardware setup to a working ePaper demo.
+New recovery and troubleshooting sections cover failed firmware updates, DFU/UF2 recovery, and unresponsive devices across four Mesh hardware families. The instructions are integrated into the relevant MeshCore and Meshtastic getting-started guides.
 
-**Updated guides:** [EN04](https://wiki.seeedstudio.com/epaper_EN04/) · [EN05](https://wiki.seeedstudio.com/epaper_en05/).
+**MeshTracker X1:** [MeshCore](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/) · [Meshtastic](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/).
+
+**SenseCAP T1000-E:** [MeshCore](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/) · [Meshtastic](https://wiki.seeedstudio.com/sensecap_t1000_e/).
+
+**Wio Tracker L1:** [MeshCore](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/) · [Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/).
+
+**SenseCAP Solar Node P1-Pro:** [MeshCore](https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/) · [Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/).
 
 </div>
 
-### [Getting Started with reComputer Rugged J40](https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/)
+### [reSpeaker USB 4-Mic Array XVF3000 v3.0/v3.2](https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/)
 
 <div style={{ textAlign: "justify" }}>
 
-The flashing instructions now include firmware package choices for the Orin NX 16 GB and Orin Nano 8 GB configurations, along with clearer extraction and flashing navigation. These additions help readers select the correct BSP before deploying their Rugged J40 device.
+The microphone-array guide now covers both XVF3000 v3.0 and v3.2. It clarifies the additional speaker noise-floor filtering in v3.2 and updates the shared hardware, setup, and ROS-related guidance.
 
 </div>
 
@@ -291,5 +243,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.9.28th](/Seeed_Elderly/weekly_wiki/2026/wiki260928)
 - [weekly wiki on 2026.10.12th](/Seeed_Elderly/weekly_wiki/2026/wiki261012)
 - [weekly wiki on 2026.10.19th](/Seeed_Elderly/weekly_wiki/2026/wiki261019)
+- [weekly wiki on 2026.10.26th](/Seeed_Elderly/weekly_wiki/2026/wiki261026)
 
 </details>

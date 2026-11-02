@@ -94,6 +94,11 @@ const courseLink = () => ({
       id: `${C}/cn_Arm_Tutorial_Introduction`,
       label: '入门课程',
     },
+    {
+      type: 'ref',
+      id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_Getting_Started',
+      label: '论文精读',
+    },
   ],
 });
 

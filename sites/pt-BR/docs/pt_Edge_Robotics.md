@@ -75,13 +75,6 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </div>
     </div>
     <div className="learning-group">
-      <h4>Curso</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/pt-br/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para iniciantes</b></div></a>
-        <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer"><span className="step-index">📘</span><div><b>Curso DLI: pipeline VLA do simulado ao real</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
       <h4>Recursos comuns</h4>
       <div className="rebot-resource-list">
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">Descrição do reBot-RS e modelos de simulação (URDF / MJCF / Mesh)</a>
@@ -122,12 +115,6 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM com ROS2</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM com Isaac Sim</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de controle web do reBot-DM: robô real &amp; MuJoCo</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>Curso</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/pt-br/robotics/rebot_physical_ai_course_introduction/"><span className="step-index">🎓</span><div><b>Curso para iniciantes</b></div></a>
       </div>
     </div>
     <div className="learning-group">

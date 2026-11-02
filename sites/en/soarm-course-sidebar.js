@@ -95,6 +95,11 @@ const courseLink = () => ({
       id: `${C}/Arm_Tutorial_Introduction`,
       label: 'Beginner Course',
     },
+    {
+      type: 'ref',
+      id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_Getting_Started',
+      label: 'Paper Deep-Dive',
+    },
   ],
 });
 

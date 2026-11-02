@@ -2437,7 +2437,7 @@ macOS：
   <div className="section-title">
     <span>FAQ</span>
     <h2>FAQ</h2>
-    <p>这里集中整理串口、舵机、ffmpeg、数据集、相机与训练评估中最常见的问题。</p>
+    <p>这里集中整理串口、舵机、ffmpeg、数据集、相机与训练评估中最常见的问题，并收录购买选型、组装调试、训练部署等社区高频问答。</p>
   </div>
 
 <div className="notice-grid">
@@ -2648,6 +2648,363 @@ macOS：
 {`pip install datasets==2.19`}
 </CodeBlock>
   </details>
+
+
+### 购买与选型
+
+<details className="content-details">
+<summary>SO-ARM101 在哪里购买？官方链接是什么？</summary>
+
+- [淘宝套件（SO-ARM100/101，含飞特舵机）](https://e.tb.cn/h.TIJ1zNXihBEKryj?tk=FZ3geR8dgOc)
+- [套件（SO-ARM100/101 边缘部署版）](https://e.tb.cn/h.hjAMlhf1Ecu3Gxm?tk=ayVT42813jp)
+- [SO-ARM101 套件](https://e.tb.cn/h.8omacUsSQKYTHmt?tk=R45uTT4pIVX)
+- [海外购买（搜 SO-ARM）](https://www.seeedstudio.com/)
+- [官方 GitHub（BOM/STL/URDF）](https://github.com/TheRobotStudio/SO-ARM100)
+套件已包含飞特舵机，**不需要单独购买舵机**；控制板/电源等也随套件提供（单独购买控制板可找客服或淘宝链接）。
+
+</details>
+
+<details className="content-details">
+<summary>SO-ARM101 的舵机是什么型号？</summary>
+
+按关节不同使用飞特 STS3215 系列舵机（如 C001/C044/C046 等不同减速比版本，夹爪为 C001 虚拟舵机）。具体每个关节对应的型号与规格参数见 [wiki 规格参数章节](/cn/lerobot_so100m_new/)。
+
+</details>
+
+<details className="content-details">
+<summary>腕部/全局摄像头怎么选？尺寸多大？</summary>
+
+- 腕部：**32×32mm UVC 免驱摄像头模组**（淘宝搜"32*32 uvc 相机"即可）。
+- 全局：普通 USB 摄像头即可，FOV 90° 左右够用，位置看摆放高度调整；Pro 版自带腕部单目。
+- 用深度相机不是必须的（RGB 已够训练），深度相机主要放在全局视角。
+- [官方打印件支持 32×32 UVC 模块](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional)
+
+</details>
+
+<details className="content-details">
+<summary>想组双臂，需要再买什么？</summary>
+
+再买一套同款即可，**主从臂没有左右手区别**；两台臂可以接同一台电脑（注意区分串口）。双臂协作教程：[/cn/lerobot_double_arm_so_arm_training/](/cn/lerobot_double_arm_so_arm_training/)
+
+</details>
+
+<details className="content-details">
+<summary>SO-ARM101  / reBot 怎么选？</summary>
+
+- SO-ARM101：成本低、生态最成熟（LeRobot 官方适配），适合入门具身智能与模仿学习；5+1 自由度做逆运动学时有较多无解/虚解情况，工业级应用受限。
+- reBot：关节电机方案，负载/精度更高，面向更专业的应用开发。
+纯入门、想低成本跑通 LeRobot 全流程：选 SO-ARM101。
+
+</details>
+
+<details className="content-details">
+<summary>一定要配 Jetson 吗？普通电脑可以吗？</summary>
+
+不必须。LeRobot 只要有满足要求的 Ubuntu 电脑 + 摄像头即可采集；Jetson 适合没有 NVIDIA 显卡/Ubuntu 环境的用户（官方会预装好环境，步骤更少），也适合做边缘部署。
+
+</details>
+
+<details className="content-details">
+<summary>电源和海外使用问题</summary>
+
+套件电源为宽压输入 5-12V 的板子，随附多国插头，海外加转换插头即可用。注意：**主臂（leader）与从臂（follower）电源规格不同**，接反会导致电机红灯闪烁、不工作——接线前务必核对标签。
+
+</details>
+
+
+### 教程与资料
+
+<details className="content-details">
+<summary>官方教程、wiki 和视频在哪里？</summary>
+
+- [新版中文 Wiki（推荐入口）](/cn/lerobot_so100m_new/)
+- [旧版 wiki（部分章节仍有参考价值）](https://wiki.seeedstudio.com/cn/lerobot_so100m/)
+- [官方 B 站视频（SO101 教程一站通系列）](https://www.bilibili.com/video/BV1k6UUBFEw4/)
+- [组装视频](https://b23.tv/1QjfQbm)
+- [同济子豪兄保姆级教程（飞书）](https://zihao-ai.feishu.cn/wiki/space/7589642043471924447)
+- [官方 GitHub（STL/URDF/Simulation）](https://github.com/TheRobotStudio/SO-ARM100)
+
+</details>
+
+<details className="content-details">
+<summary>组装说明书/视频按什么顺序看？</summary>
+
+先校准舵机再组装（否则舵机线被压住很难插拔）→ 组装 → 机械臂校准 → 遥操作。新版教程的组装章节与原版通用；B 站"SO101 教程一站通"系列按编号顺序看即可（中位校准写 ID → 组装 → 添加摄像头 → 场景搭建与数据采集 → 训练 → 推理）。
+
+</details>
+
+<details className="content-details">
+<summary>URDF / STEP / 三维模型在哪下载？</summary>
+
+- [URDF](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101)
+- [整体 STEP/STL](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl)
+- 官方打印件与视频不一致时，以 Individual 目录里的版本为准。
+
+</details>
+
+<details className="content-details">
+<summary>仿真/Isaac Sim/Isaac Lab 怎么跑 SO-ARM101？</summary>
+
+- Isaac Lab 训练 SO-ARM101 策略：/training_soarm101_policy_with_isaacLab/
+- [Isaac Sim 导入](/lerobot_so100m_isaacsim/)
+- [LeIsaac 仿真](/simulate_soarm101_by_leisaac/)
+- [开源 LeIsaac 仓库](https://github.com/LightwheelAI/leisaac)
+
+</details>
+
+<details className="content-details">
+<summary>有 MoveIt2 / ROS2 的包吗？</summary>
+
+有第三方开源包（非官方维护）：
+- [Tavish9/any4lerobot](https://github.com/Tavish9/any4lerobot)
+- [holmsslk/so-arm-moveit-hardware](https://github.com/holmsslk/so-arm-moveit-hardware)
+- [ZhuYaoHui1998/so_arm100_moveit（含正逆解接口）](https://github.com/ZhuYaoHui1998/so_arm100_moveit)
+注意 5+1 自由度传入 MoveIt2 可能出现 timeout、逆解无解（臂长构型受限）。
+
+</details>
+
+<details className="content-details">
+<summary>逆运动学代码有吗？为什么解不出来？</summary>
+
+SO-ARM101 只有 5+1 自由度且无腕部俯仰，很多位姿在运动学上无解。LeRobot 的模仿学习路线不依赖逆解（直接输出关节角度）；若做 MoveIt2/IK 场景，建议用 StarAI 等 6/7 轴方案。参考实现：[Pavankv92/lerobot_ws](https://github.com/Pavankv92/lerobot_ws)
+
+</details>
+
+<details className="content-details">
+<summary>有 hil-serl 强化学习教程吗？</summary>
+
+官方文档：[HIL-SERL 文档](https://huggingface.co/docs/lerobot/hilserl)。群内也有人跑通，参考 B 站/群分享。
+
+</details>
+
+<details className="content-details">
+<summary>怎么用 OpenClaw / 大模型控制 SO-ARM101？</summary>
+
+参考官方 wiki：[/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/](/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/) 。VLM/VLA 控制可行，但动作接口需要自己写。
+
+</details>
+
+<details className="content-details">
+<summary>云服务器能训练吗？没有显卡怎么办？</summary>
+
+可以，用 [SenseCraft Robotics 云端平台](https://sensecraft.seeed.cc/zh/robotics) 训练/部署；也可租 AutoDL/Featurize 等平台，LeRobot 数据集上传 HuggingFace 或直接 scp 到训练机。
+
+</details>
+
+
+### 组装与硬件
+
+<details className="content-details">
+<summary>散件组装难吗？需要哪些工具？</summary>
+
+新手可完成（约 2 小时），需要十字螺丝刀、内六角、剪刀，建议配电动螺丝刀。打印件推荐 PLA+ 打印，填充 30% 左右（不放心硬度可加到 30%+）；官方 STL 直接打印即可。
+
+</details>
+
+<details className="content-details">
+<summary>组装/拆装后需要重新校准吗？</summary>
+
+需要。拆装、换舵机、换电脑后都要重新做**舵机中位校准 + 机械臂校准**；舵机 ID 和零点写入的是电机内部，换电脑（同一套臂）不需要重写 ID。
+
+</details>
+
+<details className="content-details">
+<summary>舵机 ID 怎么写？写错了怎么办？</summary>
+
+- 用飞特调试工具（FD Debug）或 LeRobot 的 `lerobot-setup-motors` / 校准脚本写入；舵机按顺序逐个接线，**按对应次数回车/确认即可完成编号**。
+- ID 冲突常见报错 `Missing motor IDs` 或 1 号/6 号电机重复——用飞特上位机逐个扫描后重设 ID。
+- 夹爪舵机（6 号/C001）识别不到，多半是 ID 被误改，按教程重新设定即可。
+
+</details>
+
+<details className="content-details">
+<summary>舵机校准中位怎么操作？校准后数值回绕到 0 怎么办？</summary>
+
+断电后手动把每个关节掰到**行程中位**（组装教程图示位置），再上电执行中位校准；数值在 4095→0 之间回绕属正常现象，重新做中位校准即可消除异常。新版 LeRobot 已取消腕部（wrist_roll）校准显示，只显示 5 个电机属正常。
+
+</details>
+
+<details className="content-details">
+<summary>通信失败、`no status packet`、ConnectionError 怎么排查？</summary>
+
+按顺序检查：① 舵机线是否松动/接触不良（尤其 4-5 号电机之间的短线，是高发点）② 电源是否正常（主从臂电源别接反）③ 串口是否选对（/dev/ttyACM0 或 1，两台臂注意区分）④ 舵机固件/ID 是否正常。重接线后仍报错，拍视频/截图给官方技术支持。
+
+</details>
+
+<details className="content-details">
+<summary>电机/舵机发烫、有异味或声音异常怎么办？</summary>
+
+SO-ARM 外壳与齿轮为塑料件，长时间高负载工作会发热，注意环境散热别堵住电机；可用飞特 SDK 读取电机温度监控。
+
+</details>
+
+<details className="content-details">
+<summary>能测夹持力/把从臂阻力反馈给主臂吗？</summary>
+
+可以二次开发：飞特舵机 SDK 能读取电流值，可据此做力反馈/柔性控制；原厂固件不直接提供力控接口。想加力学传感器需自行改装，并注意对 VLA 数据的影响。
+
+</details>
+
+<details className="content-details">
+<summary>能做重力补偿吗？</summary>
+
+SO-ARM 使用舵机，不适合做真正的重力补偿/力矩控制（子豪兄建议：要重力补偿用 reBot，不要用 SO-ARM）。系统辨识也无法在舵机固件层做电机参数辨识。
+
+</details>
+
+<details className="content-details">
+<summary>夹爪能换吗？能装三爪/柔性夹爪/灵巧手吗？</summary>
+
+可以，改末端连接件即可（网上有开源的三爪/柔性夹爪模型）。官方柔性夹爪成品：[SO-ARM Pro101 柔性夹爪](https://www.seeedstudio.com/SO-ARM-Pro101-Flexible-Gripper-3D-p-6990.html)。装灵巧手需要自己改代码适配（LeRobot 未集成 AmazingHand 等）。
+
+</details>
+
+<details className="content-details">
+<summary>摄像头怎么装？采集时放哪里？</summary>
+
+腕部用 32×32 UVC 支架固定在夹爪侧面（打印件见 GitHub）；采集时推荐**侧方 + 正前上方 45°** 双视角，效果最佳；没有夹爪固定位可用支架/热熔胶粘在从臂上。用普通 USB 摄像头即可满足模仿学习。
+
+</details>
+
+
+### 软件与环境
+
+<details className="content-details">
+<summary>必须用 Ubuntu 吗？Windows / 虚拟机 / WSL 可以吗？</summary>
+
+强烈建议 **Ubuntu 20.04/22.04 原生系统**（22.04 兼容性最好）。Windows 下串口/驱动问题多（"修复 bug 的时间远超过学习时间"）；虚拟机/WSL 因 USB 透传和实时性问题不建议用于真机采集；Mac 可跑部分流程（校准/遥操可行，参考子豪兄文档），ROS2 建议 Docker 并映射网络。
+
+</details>
+
+<details className="content-details">
+<summary>环境安装和报错处理有什么建议？</summary>
+
+按新版 wiki 的安装章节一步步来（conda 创建 Python 3.10 环境 + 对应 CUDA 的 PyTorch）；报错先查 wiki 底部 FAQ，再带完整报错截图进群。常见坑：`ValueError: No valid stream found`（查 wiki FAQ / 升级固件）、`teleop.type command not found`（命令格式/空格问题）、`FileNotFoundError`（路径/URDF 未下载）。
+
+</details>
+
+<details className="content-details">
+<summary>校准命令和校准文件在哪里？</summary>
+
+- follower：`python -m lerobot.calibrate --robot.type=so101_follower --robot.port=/dev/ttyACM0 --robot.id=my_awesome_follower_arm`
+- leader：`python -m lerobot.calibrate --teleop.type=so101_leader --teleop.port=/dev/tty.usbmodem... --teleop.id=my_awesome_leader_arm`
+- 校准文件：`~/.cache/huggingface/lerobot/calibration/teleoperators/so101_leader/my_awesome_leader_arm.json`（robot 目录下同理）。校准异常时删掉本地校准文件重新校准。
+
+</details>
+
+<details className="content-details">
+<summary>校准后遥操作跑偏/不动怎么办？</summary>
+
+① 重新做中位校准（最常见原因）② 检查电压/供电 ③ 确认没有跑校准 ID 的脚本把 ID 改乱 ④ 拍跑偏视频发给技术支持定位。
+
+</details>
+
+
+### 遥操作与数据采集
+
+<details className="content-details">
+<summary>一个 episode 怎么录？按键怎么操作？</summary>
+
+LeRobot record 时：采完一条按**右箭头**结束 episode → 出现 reset environment 提示时收拾场景（5 秒）→ 再按右箭头开始下一条；按左箭头可重录当前条，Esc 退出。所有 episode 视频会存在同一个 MP4 文件里（新版本行为）。
+
+</details>
+
+<details className="content-details">
+<summary>数据要采多少组才够训练？</summary>
+
+经验值：简单抓取任务 **40-50 组**够用（不同位置每 10 组换一次，共 5 个位置）；训练效果差优先加数据、提多样性（位置/光照/背景变化）。50 组以内抓取成功率低，通常是数据量/质量不足。
+
+</details>
+
+<details className="content-details">
+<summary>两个摄像头采集时 rerun 只显示一路画面？</summary>
+
+rerun 左侧栏右键 → 添加视角/添加摄像头视图即可，不是硬件问题。
+
+</details>
+
+<details className="content-details">
+<summary>可以用手机/其他摄像头采集吗？</summary>
+
+可以，LeRobot 支持多种摄像头源（含手机 IP 摄像头），参考官方文档：[LeRobot 相机文档](https://github.com/huggingface/lerobot/blob/main/docs/source/cameras.mdx)。注意分辨率/延迟。
+
+</details>
+
+<details className="content-details">
+<summary>想用别人的数据集训练自己的臂可以吗？</summary>
+
+不推荐直接混用：相机位置、校准、场景都不同，效果会打折；最好自己采集。做数据增强（Cosmos transfer）在 SO101 上变形/穿模明显，且算力需求大（25 秒合成数据在 Jetson 上要 3-4 小时），不建议新手尝试。
+
+</details>
+
+
+### 训练与部署
+
+<details className="content-details">
+<summary>训练需要什么配置？</summary>
+
+Ubuntu + NVIDIA 显卡（建议 RTX 3080 以上；8GB 显存可跑 ACT 推理，训练建议 12GB+）。大模型（π0.5/GR00T 等）需要 24GB+ 或云端多卡。训练务必不装虚拟机、别用 WSL。
+
+</details>
+
+<details className="content-details">
+<summary>ACT 训练多少步/多久？效果不好怎么调？</summary>
+
+简单任务约 4 万步、50 组数据可见效（社区经验：16G 显存 2-3 小时）；效果差依次排查：数据量/多样性 → 光照与场景变化 → 训练步数（loss 未明显下降则加步数）→ 推理方式（上异步推理）。训练 5 万步仍"几乎起不来"属不正常，先回查数据采集质量。
+
+</details>
+
+<details className="content-details">
+<summary>部署 π0.5 需要先微调吗？</summary>
+
+需要。用自己机械臂/场景采集的数据微调后再部署，直接套用官方权重效果差；微调数据量参考 50-100 组。
+
+</details>
+
+<details className="content-details">
+<summary>能用语音控制吗？能做强化学习吗？</summary>
+
+语音控制可以：VLA 路线（如 wam）或"ASR + 技能库（skills）Agent 调用"两条路。强化学习有社区实践（SO-ARM101 + HIL-SERL），参考 [B 站教程](https://www.bilibili.com/video/BV1BsMqzgExn/)。
+
+</details>
+
+<details className="content-details">
+<summary>训练好的模型文件怎么从云服务器拿回来？</summary>
+
+用 scp 传到本地或另一台服务器，或先上传到 OSS/OBS 等对象存储再下载；checkpoint 在 `outputs/train/<task>/checkpoints/last/pretrained_model`。
+
+</details>
+
+<details className="content-details">
+<summary>推理时机械臂抖动/一卡一卡怎么办？</summary>
+
+① 用异步推理（async inference） ② 检查推理频率与动作序列长度 ③ diffusion policy 本身较吃算力，性能不足会卡 ④ 降低摄像头分辨率/帧率。抖动是 SO-ARM 舵机方案的常见现象，可在飞特上位机里**最小启动力设 0、I 参数设 0、P 值调小**，或在代码 robot 目录 so101 中调参。
+
+</details>
+
+
+### 通信与控制
+
+<details className="content-details">
+<summary>飞特舵机调试工具怎么用？</summary>
+
+FD Debug 下载：[Gitee 仓库](https://gitee.com/ftservo/fddebug/tree/master)（建议 1.9.8.5 版本），波特率 **1000000**，扫描即可看到所有舵机；可改 ID、方向、PID、中位。只操作某一个舵机时记得断开其他舵机连线。
+
+</details>
+
+<details className="content-details">
+<summary>SO-ARM101 支持 ROS2/MoveIt 吗？EE link 是哪个？</summary>
+
+支持第三方 ROS2/MoveIt 包（见问题 13）。末端 link 在 MoveIt 里拖动确认：`moving_jaw` 为动爪，`fixed_gripper` 为定爪侧的末端参考。
+
+</details>
+
+<details className="content-details">
+<summary>夹爪开到极限位置就断开连接是什么原因？</summary>
+
+已知现象：SO-ARM101 夹爪到极限位置时可能触发保护/断连，避免长时间顶到极限或降低夹爪力矩；频繁复现可检查舵机固件与供电。
+
+</details>
 
 :::tip
 如果仍遇到无法解决的软件或环境依赖问题，可以在 [LeRobot 平台](https://github.com/huggingface/lerobot) 或 [LeRobot Discord 频道](https://discord.gg/8TnwDdjFGU) 反馈。
