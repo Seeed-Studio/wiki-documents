@@ -1,6 +1,6 @@
 ---
-description: This developer guide introduces the web console, ROS 2, RobStride/SocketCAN, MuJoCo simulation, visual grasping, and LLM/MCP Agent installation, runtime, and secondary development workflow of the ReBot Arm Digital Twin & Control Stack for B601-RS.
-title: "reBot-RS Web Control System: Real Robot & MuJoCo"
+description: Set up the B601-RS web console with the current hardware and simulation namespaces, MuJoCo visual grasping, the default DeepSeek Agent, and Arm102 Leader teleoperation with calibration and recovery steps.
+title: "reBot-RS Web Control: MuJoCo, DeepSeek & Leader Teleoperation"
 keywords:
   - reBot Arm
   - B601-RS
@@ -12,15 +12,17 @@ keywords:
   - MuJoCo
   - LLM
   - MCP
+  - DeepSeek
+  - Leader Teleoperation
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web_rs/rebot_rs_web_simulator_en.png
 slug: /rebot_arm_b601_rs_web_simulator_developer_guide
 last_update:
-  date: 2026-08-24
+  date: 2026-11-03
   author: Yang-Ci
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-13'
-updatedAt: '2026-09-29'
+updatedAt: '2026-11-03'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_web_simulator_developer_guide/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -50,7 +52,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0" />
     </a>
-    <img src="https://img.shields.io/badge/ROS2-Jazzy-blue.svg" alt="ROS2 Jazzy" />
+    <img src="https://img.shields.io/badge/ROS2-Jazzy-blue.svg" alt="ROS 2 Jazzy" />
     <img src="https://img.shields.io/badge/Node.js-18%2B-green.svg" alt="Node.js 18+" />
     <img src="https://img.shields.io/badge/Three.js-r128-orange.svg" alt="Three.js r128" />
     <img src="https://img.shields.io/badge/Version-v1.0.0-brightgreen.svg" alt="Version v1.0.0" />
@@ -58,10 +60,12 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 </p>
 
 <p align="center">
-  <strong>Three.js visualization · ROS 2 · SocketCAN · MuJoCo simulation · LLM/MCP control</strong>
+  <strong>Three.js visualization · ROS 2 · MuJoCo simulation · DeepSeek/MCP · Leader teleoperation</strong>
 </p>
 
-The reBot Arm B601-RS Digital Twin & Control Stack integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, and an optional LLM/MCP grasping agent. This guide explains how to install, launch, and develop on the full system.
+The reBot Arm B601-RS Digital Twin & Control Stack integrates a Three.js web console, a ROS 2 real-robot driver, an RS-specific MuJoCo dynamics scene, vision detection, trajectory and inverse kinematics, a natural-language Agent using DeepSeek by default, and Arm102 Leader teleoperation. This guide follows the current project through installation, simulation, web control, Agent setup, and leader/follower operation.
+
+The real robot uses `/rebot_arm_rs`; simulation uses `/rebot_arm_rs_sim`. Users of older versions should first run `git pull --ff-only` in the project directory to update the repository, then update custom scripts, ROS interface prefixes, and Agent configuration and restart the controller, rosbridge, and web console. Changing the web target selector does not configure the backend namespace.
 
 <GitHubStarButton owner="Yang-Ci" repo="ReBot_Arm_DigitalTwin_RS" />
 
@@ -81,7 +85,7 @@ The reBot Arm B601-RS Digital Twin & Control Stack integrates a Three.js web con
 
 4. **Real-robot and simulation namespace isolation**
 
-   The real robot uses `/rebotarm` by default and simulation uses `/rebotarm_rs`. The same web console can switch control targets, and you can run the real robot and Fake Driver at the same time to compare interfaces.
+   The real robot uses `/rebot_arm_rs` by default and simulation uses `/rebot_arm_rs_sim`. The same web console can switch control targets, and you can run the real robot and Fake Driver at the same time to compare interfaces.
 
 5. **RS-specific MuJoCo scene**
 
@@ -97,7 +101,11 @@ The reBot Arm B601-RS Digital Twin & Control Stack integrates a Three.js web con
 
 8. **Visual grasping and LLM/MCP Agent**
 
-   The simulation scene provides red, blue, and yellow objects with overhead detection, IK, grasping, lift validation, and placing support. MCP tools can be used independently or connected to a large language model to call structured robot operations through natural language.
+   The simulation scene provides red, blue, and yellow objects with overhead detection, IK, grasping, lift validation, and placing support. The natural-language entry point defaults to DeepSeek `deepseek-flash`; MCP tools can also be called independently.
+
+9. **Arm102 Leader teleoperation**
+
+   The leader connects to USB/UART on the ROS host. The web console handles scanning, preview, unlocking, calibration, and sessions; the ROS controller handles mapping, speed limits, control ownership, and timeout holds. Relative following is the default, with optional gripper following and rebasing after a pause.
 
 ## Wiring and Network Notes
 
@@ -271,7 +279,7 @@ If the web console and ROS 2/Agent are not on the same machine, change the proxy
 
 ## Launching the Project
 
-<Tabs defaultValue="web" groupId="launch-mode" queryString>
+<Tabs defaultValue="sim" groupId="launch-mode" queryString>
 
 <TabItem value="web" label="Pure web demo">
 
@@ -311,7 +319,7 @@ cd ~/ReBot_Arm_DigitalTwin_RS
 ./rebotarm start web
 ```
 
-Open `http://localhost:3002`, select the control target "RS Simulation (`/rebotarm_rs`)", and enter `ws://localhost:9090` as the ROS WebSocket.
+Open `http://localhost:3002`, select the control target "RS Simulation (`/rebot_arm_rs_sim`)", and enter `ws://localhost:9090` as the ROS WebSocket.
 
 Common simulation options:
 
@@ -361,7 +369,7 @@ Start the web console and rosbridge in terminal 2:
 ./rebotarm start web
 ```
 
-Open `http://localhost:3002` and select "RS Real Robot (`/rebotarm`)". For the first test, follow this order:
+Open `http://localhost:3002` and select "RS Real Robot (`/rebot_arm_rs`)". For the first test, follow this order:
 
 1. Check that the web console reports connected, the arm status is normal, and there are no motor errors.
 2. Click enable.
@@ -386,8 +394,8 @@ export REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE
 
 This script starts:
 
-- the real robot `/rebotarm`;
-- the Fake Driver `/rebotarm_rs`;
+- the real robot `/rebot_arm_rs`;
+- the Fake Driver `/rebot_arm_rs_sim`;
 - rosbridge `9090`.
 
 It is used to compare interfaces, joint directions, and status. It does not start the full MuJoCo stack, vision, Agent, or web server. Confirm the namespace selected in the web console again before sending commands.
@@ -395,6 +403,104 @@ It is used to compare interfaces, joint directions, and status. It does not star
 </TabItem>
 
 </Tabs>
+
+## Leader Teleoperation
+
+### Connection and Installation
+
+The Arm102 / 102-LD Leader connects by USB serial to the **Ubuntu host running ROS 2**. If ROS runs in a VM, pass the leader USB device through to that VM. A COM port on the browser computer cannot replace a serial port on the ROS host.
+
+```text
+Arm102 Leader (servo IDs 0–6, UART 1 Mbps)
+  -> ROS host USB serial / leader_worker.py
+  -> LeaderTeleop: calibration, mapping, sessions, and status
+  -> RS controller: control ownership, speed limits, and timeout holds
+  -> Fake Driver / MuJoCo, or SocketCAN can0 / RS follower
+```
+
+Complete the base installation first. Stop the old controller, simulation, and rosbridge, then install the Leader dependencies and rebuild the interfaces:
+
+```bash
+cd ~/ReBot_Arm_DigitalTwin_RS
+bash scripts/setup_rs_leader.sh
+```
+
+The script reuses the ROS Python virtual environment, installs `motorbridge-smart-servo==0.0.4` and `pyserial==3.5`, and rebuilds `rebotarm_msgs` and `rebotarmcontroller`. The full LeRobot training environment is unnecessary for this feature. Restart the controller, rosbridge, and web console, then hard-refresh the browser.
+
+Check in a new terminal:
+
+```bash
+cd ~/ReBot_Arm_DigitalTwin_RS
+source scripts/rs_env.sh
+python -c 'from motorbridge_smart_servo import FashionStarServo; from serial.tools import list_ports; print([(p.device, p.description) for p in list_ports.comports()])'
+ros2 interface show rebotarm_msgs/srv/LeaderControl
+```
+
+Use `/dev/ttyUSB0`, `/dev/ttyACM0`, or a stable `/dev/serial/by-id/...` path. For a permissions error, run the following command and log in again before retrying:
+
+```bash
+sudo usermod -aG dialout "$USER"
+```
+
+### Verify the Workflow in Simulation
+
+Run in two separate terminals:
+
+```bash
+# Terminal 1
+./rebotarm start rs_sim
+```
+
+```bash
+# Terminal 2
+./rebotarm start web
+```
+
+Select ROS control mode and “RS simulation (`/rebot_arm_rs_sim`)”, then connect to rosbridge. In the “Leader teleoperation” card, clear any old port, click “Scan leader”, and select `mock`; you can also enter `mock` directly in the port field. Follow the connection, unlocking, calibration, and following steps below, then test pause, resume, and stop.
+
+Only the Fake Driver permits `mock`; real RS hardware rejects it. Mock mode verifies the UI, mapping, and session workflow. It does not validate the real serial link, joint directions, or hardware safety.
+
+### Connect, Calibrate, and Begin Following
+
+For hardware tests, launch `/rebot_arm_rs` and the web console using the real-robot instructions. Enable the follower, confirm it is `IDLE`, and enable the ROS control lock. Stop trajectories, hand following, and gravity compensation; return the gripper to position hold. Do not run a separate LeRobot teleoperation process accessing the same `can0`.
+
+1. **Scan and connect.** Scan serial ports on the ROS host in the “Leader teleoperation” card. A complete leader responds with all seven servo IDs `0–6`. Select the device and click “Connect”, or enter its serial path manually.
+2. **Check the read-only preview.** The Arm102 / 102-LD model, seven angles, sample rate, and delay appear while the follower holds its current pose. Drag to rotate; use the wheel or a two-finger gesture to zoom. “Reset view” changes only the displayed view.
+3. **Unlock and calibrate leader zero.** Support the leader, click “Unlock leader”, place it at the [Arm102 calibration pose](/rebot_arm_b601_rs_lerobot/), and close its gripper. Check “Leader is at reference zero with gripper closed”, then click “Confirm and set leader zero”. Move each axis slightly and verify the J1–J6 directions and J7 finger-ring opening against the preview.
+4. **Set initial parameters.** Set target speed to `0.1 rad/s`, clear “Follow gripper”, and leave “Absolute follow” unchecked. The current hardware Leader speed range is `0.05–1.0 rad/s`, independent of the ordinary web joint speed setting.
+5. **Start relative following.** Click “Start following”. Relative mode establishes offsets from the two arms' starting poses; the follower should not jump to the leader's absolute pose on the first frame. Start with small J6 movements, then check J1–J5 directions, feedback, and limits individually.
+6. **Test pause and resume.** Move the leader after clicking “Pause and hold”; the follower should hold. In relative mode, “Resume” rebases the arms at their current poses rather than catching up with movements made during the pause.
+7. **Release control before testing the gripper.** Click “Stop and release control” and confirm that ordinary sliders work again. After validating all six axes, start another session with gripper following enabled and check its opening direction and endpoints with small movements.
+
+:::warning Leader calibration and follower zero
+
+“Confirm and set leader zero” calibrates the Arm102 Leader. The RS `set_zero` service rewrites follower motor zero points. Do not use follower zeroing to correct the leader preview or following offset. Absolute following requires the arms to be aligned first; the controller rejects excessive pose differences. Keep the default relative mode for initial use.
+
+:::
+
+### Pause, Stop, and Connection Recovery
+
+- **Pause and hold:** the follower holds its current pose while the session retains control. Relative mode rebases when resumed.
+- **Stop and release control:** following ends and the follower holds its current pose. Sliders, trajectories, gravity compensation, safe homing, and disable become available after release. Neither pause nor stop directly removes motor torque.
+- **Stale samples, leader USB removal, or browser heartbeat timeout:** the controller stops advancing targets and holds; the UI reports a fault or stale data. Reconnection does not resume following automatically. Check the connection, recalibrate, and explicitly start again.
+- **Another page owns the session:** stop and release control on the original page. If it closed unexpectedly, wait for the heartbeat timeout to release the session.
+
+Initial hardware acceptance should include USB removal, browser disconnection, leader movement while paused, and slider recovery after stopping. The project includes mock and control-policy tests; the real Leader → RS hardware link still requires on-site acceptance.
+
+### Following Rate and Speed Limits
+
+Leader UART sampling targets `60 Hz`; the actual rate depends on serial read time. Each valid new sample updates the target. The hardware MIT loop follows the latest target at `125 Hz` with speed limits and cached gravity feedforward, without adding the ordinary web target's second-order smoothing or jerk filter. The follower can still lag when the leader moves faster than the selected speed limit.
+
+Leader following uses separate `leader_mit_kp` / `leader_mit_kd` gains and `v_des=0` for the six axes. Pause or stop restores ordinary hold gains. The gripper reference speed is `min(6 × teleoperation speed, leader_gripper_velocity_limit)`, currently capped at `3 rad/s` by configuration. Joint limits, feedback timeouts, and the session watchdog remain active. See “Key Control Parameters” below for the configuration location.
+
+### Inspect Leader Status
+
+```bash
+source scripts/rs_env.sh
+ros2 topic echo /rebot_arm_rs/leader/status --once
+```
+
+For simulation, use `/rebot_arm_rs_sim/leader/status`. Check `state`, `calibrated`, `following`, `paused`, `sample_hz`, `sample_age`, and `angles_deg`. Displayed leader angles are in degrees; `targets_rad` contains the six follower joint targets in radians.
 
 ## Unified Command Line
 
@@ -498,15 +604,25 @@ Web console or Agent
 
 | Mode | Namespace | Web model source |
 | --- | --- | --- |
-| RS real robot | `/rebotarm` | Real-robot `/joint_states` feedback |
-| RS simulation | `/rebotarm_rs` | Uses the actual MuJoCo state first |
+| RS real robot | `/rebot_arm_rs` | Real-robot `/joint_states` feedback |
+| RS simulation | `/rebot_arm_rs_sim` | Uses the actual MuJoCo state first |
 
-After switching modes, the web console recreates the rosbridge client and interface paths according to the target namespace.
+After switching modes, the web console recreates the rosbridge client and interface paths according to the target namespace. Simulation mirrors the actual MuJoCo state by default; hardware mode shows measured feedback and a translucent target model.
+
+Use these read-only commands to check the available targets:
+
+```bash
+source scripts/rs_env.sh
+ros2 topic list | grep /rebot_arm_rs
+ros2 service list | grep /rebot_arm_rs
+```
+
+Check the complete prefix: `/rebot_arm_rs` is hardware and `/rebot_arm_rs_sim` is simulation. The presence of `rs` alone does not identify the target.
 
 ### Joints and Gripper
 
 - J1-J6 are controlled in radians, with limits consistent with the RS URDF.
-- The web speed range is `0.05-1.50 rad/s` with a default of `1.2 rad/s`.
+- The real-robot web joint speed limit ranges from `0.05–1.50 rad/s`; start at `0.2–0.4 rad/s`. This panel is hidden in simulation. Leader teleoperation has a separate speed setting; begin at `0.1 rad/s`.
 - J1-J6 use `30 ms` slider damping and a `1 deg` input dead zone by default; the final position is committed forcefully when you release the slider.
 - J7/the gripper is shown as opening width on the web, with a range of `0-71.5 mm`.
 - The gripper is converted to the RS motor range `0-5 rad` when publishing, and ROS feedback is converted back to millimeters.
@@ -540,7 +656,7 @@ The RS real-robot action server uses continuous monotone cubic Hermite position/
 
 ### Gravity Compensation
 
-RS gravity compensation starts from the currently measured pose and switches in MIT joint by joint, so the zero pose is not mistaken for the target. Repeated starts are idempotent; stopping keeps the last measured position.
+RS gravity compensation starts from the measured pose and smoothly transitions gains. Repeated starts are idempotent; stopping holds the last measured position. The gripper defaults to low-resistance movement assistance and returns to position hold when compensation stops. Remove held objects and keep fingers clear before starting; stop compensation before trajectories, grasping, or Leader following.
 
 Web joint, TCP, trajectory, and gripper commands are rejected during gravity compensation. Related services:
 
@@ -552,76 +668,78 @@ Web joint, TCP, trajectory, and gripper commands are rejected during gravity com
 
 ## ROS 2 Interfaces
 
-The examples below use the real-robot `/rebotarm`. For simulation, replace the prefix with `/rebotarm_rs`.
+The examples below use the real-robot `/rebot_arm_rs`. For simulation, replace the prefix with `/rebot_arm_rs_sim`.
 
 ### Status Topics
 
 | Topic | Type | Description |
 | --- | --- | --- |
-| `/rebotarm/joint_states` | `sensor_msgs/msg/JointState` | Unified six-axis and gripper status |
-| `/rebotarm/joints/<name>/state` | `rebotarm_msgs/msg/JointMotorState` | Single-motor position, velocity, torque, and status code |
-| `/rebotarm/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | Raw gripper motor status |
-| `/rebotarm/control_target` | `sensor_msgs/msg/JointState` | Final target from the web console or action layer |
-| `/rebotarm/control_reference` | `sensor_msgs/msg/JointState` | ROS sample of the 125 Hz online trajectory reference; `effort` carries the reference acceleration |
-| `/rebotarm/arm_status` | `rebotarm_msgs/msg/ArmStatus` | Enable state, mode, state machine, and error codes |
+| `/rebot_arm_rs/joint_states` | `sensor_msgs/msg/JointState` | Unified six-axis and gripper status |
+| `/rebot_arm_rs/joints/<name>/state` | `rebotarm_msgs/msg/JointMotorState` | Single-motor position, velocity, torque, and status code |
+| `/rebot_arm_rs/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | Raw gripper motor status |
+| `/rebot_arm_rs/control_target` | `sensor_msgs/msg/JointState` | Final target from the web console or action layer |
+| `/rebot_arm_rs/control_reference` | `sensor_msgs/msg/JointState` | ROS sample of the 125 Hz online trajectory reference; `effort` carries the reference acceleration |
+| `/rebot_arm_rs/arm_status` | `rebotarm_msgs/msg/ArmStatus` | Enable state, mode, state machine, and error codes |
+| `/rebot_arm_rs/leader/status` | `rebotarm_msgs/msg/LeaderStatus` | Leader connection, calibration, session, angles, and sample status |
 
 ### Low-Level Command Topics
 
 | Topic | Type | Description |
 | --- | --- | --- |
-| `/rebotarm/joints/<joint1..joint6>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Default joint command from the web console for the real robot |
-| `/rebotarm/joints/<joint1..joint6>/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Position-velocity command |
-| `/rebotarm/gripper/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | RS gripper MIT command |
-| `/rebotarm/gripper/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Gripper position-velocity command |
-| `/rebotarm/mujoco/target_pose` | `geometry_msgs/msg/PoseStamped` | TCP target pose |
+| `/rebot_arm_rs/joints/<joint1..joint6>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | Default joint command from the web console for the real robot |
+| `/rebot_arm_rs/joints/<joint1..joint6>/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Position-velocity command |
+| `/rebot_arm_rs/gripper/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | RS gripper MIT command |
+| `/rebot_arm_rs/gripper/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | Gripper position-velocity command |
+| `/rebot_arm_rs/mujoco/target_pose` | `geometry_msgs/msg/PoseStamped` | TCP target pose |
 
-Before publishing low-level commands yourself, check `arm_status.state_machine`. Do not preempt control during `GRAVITY_COMP`, `SAFE_HOMING`, or trajectory execution.
+Before publishing low-level commands yourself, check `arm_status.state_machine`. Do not preempt control during `GRAVITY_COMP`, `SAFE_HOMING`, trajectory execution, or an active Leader session.
 
 ### Services
 
 | Service | Type | Description |
 | --- | --- | --- |
-| `/rebotarm/enable` | `std_srvs/srv/Trigger` | Enable the arm |
-| `/rebotarm/disable` | `std_srvs/srv/Trigger` | Safely disable; homes first when necessary |
-| `/rebotarm/safe_home` | `std_srvs/srv/Trigger` | Safe homing with validation |
-| `/rebotarm/set_zero` | `rebotarm_msgs/srv/SetZero` | Write the motor zero point; use with caution |
-| `/rebotarm/gravity_compensation/start` | `std_srvs/srv/Trigger` | Start gravity compensation |
-| `/rebotarm/gravity_compensation/stop` | `std_srvs/srv/Trigger` | Stop gravity compensation |
-| `/rebotarm/gravity_compensation/status` | `std_srvs/srv/Trigger` | Query gravity compensation status |
-| `/rebotarm/move_to_pose_ik` | `rebotarm_msgs/srv/MoveToPoseIK` | Pose IK solving |
-| `/rebotarm/gripper/set` | `rebotarm_msgs/srv/SetGripper` | Gripper position control |
-| `/rebotarm/gripper/open` | `rebotarm_msgs/srv/GripperCommand` | Open the gripper |
-| `/rebotarm/gripper/close` | `rebotarm_msgs/srv/GripperCommand` | Close the gripper |
+| `/rebot_arm_rs/leader/control` | `rebotarm_msgs/srv/LeaderControl` | Scan, connect, unlock, calibrate, follow, and manage sessions |
+| `/rebot_arm_rs/enable` | `std_srvs/srv/Trigger` | Enable the arm |
+| `/rebot_arm_rs/disable` | `std_srvs/srv/Trigger` | Safely disable; homes first when necessary |
+| `/rebot_arm_rs/safe_home` | `std_srvs/srv/Trigger` | Safe homing with validation |
+| `/rebot_arm_rs/set_zero` | `rebotarm_msgs/srv/SetZero` | Write the motor zero point; use with caution |
+| `/rebot_arm_rs/gravity_compensation/start` | `std_srvs/srv/Trigger` | Start gravity compensation |
+| `/rebot_arm_rs/gravity_compensation/stop` | `std_srvs/srv/Trigger` | Stop gravity compensation |
+| `/rebot_arm_rs/gravity_compensation/status` | `std_srvs/srv/Trigger` | Query gravity compensation status |
+| `/rebot_arm_rs/move_to_pose_ik` | `rebotarm_msgs/srv/MoveToPoseIK` | Pose IK solving |
+| `/rebot_arm_rs/gripper/set` | `rebotarm_msgs/srv/SetGripper` | Gripper position control |
+| `/rebot_arm_rs/gripper/open` | `rebotarm_msgs/srv/GripperCommand` | Open the gripper |
+| `/rebot_arm_rs/gripper/close` | `rebotarm_msgs/srv/GripperCommand` | Close the gripper |
 
 Example:
 
 ```bash
 source scripts/rs_env.sh
-ros2 service call /rebotarm/gravity_compensation/status std_srvs/srv/Trigger '{}'
-ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger '{}'
+ros2 service call /rebot_arm_rs/gravity_compensation/status std_srvs/srv/Trigger '{}'
+ros2 service call /rebot_arm_rs/safe_home std_srvs/srv/Trigger '{}'
 ```
 
 ### Actions
 
 | Action | Type | Description |
 | --- | --- | --- |
-| `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | Joint trajectory |
-| `/rebotarm/gripper/command` | `control_msgs/action/GripperCommand` | Gripper action |
-| `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | Cartesian pose motion |
+| `/rebot_arm_rs/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | Joint trajectory |
+| `/rebot_arm_rs/gripper/command` | `control_msgs/action/GripperCommand` | Gripper action |
+| `/rebot_arm_rs/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | Cartesian pose motion |
 
 ### MuJoCo and Vision Interfaces
 
 | Interface | Type/Use |
 | --- | --- |
-| `/rebotarm_rs/mujoco/joint_states` | Actual MuJoCo joint states |
-| `/rebotarm_rs/mujoco/object_states` | Scene object states as JSON |
-| `/rebotarm_rs/mujoco/overhead_rgb/image_raw` | Overhead RGB camera |
-| `/rebotarm_rs/vision/color_blocks/detections` | Color object detection JSON |
-| `/rebotarm_rs/mujoco/reset` | Reset the simulation |
-| `/rebotarm_rs/mujoco/record/start` | Start recording |
-| `/rebotarm_rs/mujoco/record/stop` | Stop recording |
-| `/rebotarm_rs/mujoco/record/replay` | Replay a recording |
-| `/rebotarm_rs/mujoco/record/clear` | Clear recordings |
+| `/rebot_arm_rs_sim/mujoco/joint_states` | Actual MuJoCo joint states |
+| `/rebot_arm_rs_sim/mujoco/object_states` | Scene object states as JSON |
+| `/rebot_arm_rs_sim/mujoco/overhead_rgb/image_raw` | Overhead RGB camera |
+| `/rebot_arm_rs_sim/vision/color_blocks/detections` | Color object detection JSON |
+| `/rebot_arm_rs_sim/mujoco/reset` | Reset the simulation |
+| `/rebot_arm_rs_sim/mujoco/record/start` | Start recording |
+| `/rebot_arm_rs_sim/mujoco/record/stop` | Stop recording |
+| `/rebot_arm_rs_sim/mujoco/record/replay` | Replay a recording |
+| `/rebot_arm_rs_sim/mujoco/record/clear` | Clear recordings |
 
 ## Visual Grasping
 
@@ -633,9 +751,9 @@ Troubleshoot visual grasping:
 
 ```bash
 source scripts/rs_env.sh
-ros2 topic echo /rebotarm_rs/vision/color_blocks/detections --once
-ros2 topic echo /rebotarm_rs/mujoco/object_states --once
-ros2 service list | grep rebotarm_rs
+ros2 topic echo /rebot_arm_rs_sim/vision/color_blocks/detections --once
+ros2 topic echo /rebot_arm_rs_sim/mujoco/object_states --once
+ros2 service list | grep /rebot_arm_rs_sim/
 ```
 
 If the gripper closes but does not lift the object:
@@ -646,47 +764,102 @@ If the gripper closes but does not lift the object:
 - review the contact stability and physical lift validation results in the logs;
 - avoid starting multiple grasping or IK requests at the same time.
 
-## LLM/MCP Text Control
+## DeepSeek / MCP Text Control
 
-### Architecture
+### Roles of the Three Services
 
 ```text
 Web rebot-llm.js
   -> Node.js /api/llm/chat
-  -> Text Agent (default :8082)
-  -> MCP Server (default :8081/mcp)
+  -> Text Agent (:8082, default DeepSeek deepseek-flash)
+  -> MCP Server (:8081/mcp, bound to a target namespace)
   -> ROS 2 service/action/topic
 ```
 
-The LLM understands natural language, and the MCP layer constrains intention into structured tool calls. Without an LLM configuration, the MCP detection, IK, joint, gripper, and grasping tools can still be called directly.
+The web server, MCP Server, and Text Agent are separate processes. Full `rs_sim` starts the MCP Server by default. “Connect AI assistant” only checks and connects to the Text Agent; it cannot start the Python service on Ubuntu. MCP clients can call the tools directly without an LLM.
 
-### Start the Text Agent
+### Start the Default DeepSeek Agent
 
-The full simulation starts the MCP Agent by default. To enable the natural-language entry point, open another terminal:
+Start full simulation and the web console, then run in a third terminal:
 
 ```bash
 cd ~/ReBot_Arm_DigitalTwin_RS
-export DASHSCOPE_API_KEY='your-key'
-export REBOTARM_LLM_MODEL='qwen-plus'
+export DEEPSEEK_API_KEY='your-key'
 ./scripts/start_rs_text_agent.sh
 ```
 
-Default addresses:
+Current source defaults:
 
-```text
-MCP Server: http://127.0.0.1:8081/mcp
-Dashboard:  http://localhost:8082
+| Setting | Default / usage |
+|---|---|
+| LLM endpoint | `https://api.deepseek.com` |
+| Model | `deepseek-flash` |
+| DeepSeek key | `DEEPSEEK_API_KEY` |
+| MCP tools endpoint | `http://127.0.0.1:8081/mcp` |
+| Text Agent / Dashboard | `http://localhost:8082` |
+| Default target namespace | `/rebot_arm_rs_sim` |
+
+Previously exported `REBOTARM_LLM_BASE_URL`, `REBOTARM_LLM_MODEL`, or `REBOTARM_LLM_API_KEY` values override the defaults. Clear old values or explicitly set the intended configuration before using default DeepSeek. Keep real keys in server-side environment variables or uncommitted local configuration.
+
+After `[text-agent-http] listening on http://0.0.0.0:8082/` appears, check:
+
+```bash
+curl http://127.0.0.1:8082/health
 ```
 
-On the web console you can:
+Expected response:
 
-- query arm and ROS status;
-- open or close the gripper;
-- check whether a target pose is reachable;
-- move to a specified pose;
-- grasp an object of a specified color.
+```json
+{"ok": true, "service": "rebotarm-text-agent"}
+```
 
-Before enabling motion tools in a real-robot environment, explicitly check the Agent's motion permission and namespace. The natural-language entry point cannot bypass the arm backend safety state machine or replace the physical emergency stop.
+This confirms HTTP reachability. Click “Connect AI assistant” and send a read-only query to verify model authentication and the MCP link. Then try motion commands in simulation:
+
+```text
+Query the arm status
+Detect the colored blocks on the table
+Open the gripper
+Move to X=0.30 Y=0 Z=0.30
+Grasp the red block
+Return safely to zero
+```
+
+MCP `pick_color` holds the object after a successful grasp. The web “Grasp into storage” button runs a separate workflow with different placement behavior.
+
+### Change the Model or Backend Address
+
+To use another OpenAI-compatible service, set all three values in the Text Agent terminal and restart it:
+
+```bash
+export REBOTARM_LLM_BASE_URL='https://<provider-host>/v1'
+export REBOTARM_LLM_MODEL='<model-id>'
+export REBOTARM_LLM_API_KEY='<api-key>'
+./scripts/start_rs_text_agent.sh
+```
+
+Replace the placeholders with values from your provider. `REBOTARM_MCP_URL` selects the MCP endpoint used by the Text Agent.
+
+If the web server and Agent run on different machines, update `REBOTARM_TEXT_AGENT_URL` and `REBOTARM_MCP_URL` in `reBotArm_simulator-RS/.env` to the backend addresses, then restart the web server. If only the browser is remote and all three services remain on the same Ubuntu host, keep the proxy addresses local.
+
+### Check MCP Namespace and Motion Permissions
+
+The simulation script starts MCP with `arm_namespace:=rebot_arm_rs_sim motion_mode:=allow`. A manually launched MCP Server defaults to `motion_mode:=locked`. Switching the web target does not restart MCP or change its namespace. When a startup script reuses an existing service on `8081`, check that service's target too.
+
+For real-robot inspection, stop the previous MCP service and launch it separately with motion locked:
+
+```bash
+source scripts/rs_env.sh
+ros2 launch rebotarm_agent rebotarm_mcp.launch.py \
+  arm_namespace:=rebot_arm_rs motion_mode:=locked
+```
+
+The Text Agent selects its tools service by MCP URL; the actual target namespace comes from that MCP service's launch arguments. Restart the Text Agent against the newly launched service:
+
+```bash
+REBOTARM_MCP_URL=http://127.0.0.1:8081/mcp ./scripts/start_rs_text_agent.sh
+```
+
+Verify read-only status first, then follow the backend motion-permission workflow. Natural-language control cannot bypass the safety state machine. Stop and release an active Leader session before calling Agent motion tools.
 
 ## Key Control Parameters
 
@@ -704,11 +877,14 @@ control:
   arm_control_mode: mit
   mit_kp: [80, 150, 150, 50, 50, 50]
   mit_kd: [5, 10, 10, 5, 4, 4]
+  leader_mit_kp: [50, 50, 50, 30, 50, 50]
+  leader_mit_kd: [3, 5, 5, 3, 4, 4]
+  leader_gripper_velocity_limit: 3.0
   stream_acceleration_limit: 4.0
   stream_jerk_limit: 30.0
   stream_natural_frequency: 8.0
 gravity_compensation:
-  kp: 2.0
+  kp: 1.5
   kd: 1.0
 ```
 
@@ -729,9 +905,9 @@ Other default frequencies:
 Before adjusting gains, record all of the following at the same time:
 
 ```text
-/rebotarm/control_target
-/rebotarm/control_reference
-/rebotarm/joint_states
+/rebot_arm_rs/control_target
+/rebot_arm_rs/control_reference
+/rebot_arm_rs/joint_states
 ```
 
 If the target is discontinuous, check the web input layer; if the reference is discontinuous, check the online trajectory; if the reference is continuous but feedback overshoots, check MIT gains, load, friction, current, and temperature rise; only check feedback filtering and rosbridge arrival intervals when the web animation alone is jittery.
@@ -797,6 +973,19 @@ Keep both copies in sync when modifying them and check Linux filename case.
 | `rebotarm_mujoco_rs/task_server.py` | Tasks, recording, and replay |
 | `rebotarm_mujoco_rs/launch/mujoco_rs.launch.py` | Launch parameters |
 
+### Modify Leader Mapping and Control
+
+| File | Purpose |
+|---|---|
+| `reBotArm_simulator-RS/public/js/ros/rebot-leader-ui.js` | Namespaced service calls, status subscription, and browser heartbeat |
+| `reBotArm_simulator-RS/public/js/ros/leader-model.js` | Arm102 model display and angle mapping |
+| `rebotarm_ros2_RS/src/rebotarmcontroller/rebotarmcontroller/leader_worker.py` | UART sampling and calibration in a separate process |
+| `rebotarm_ros2_RS/src/rebotarmcontroller/rebotarmcontroller/leader_teleop.py` | ROS services, status, and leader/follower mapping integration |
+| `rebotarm_ros2_RS/src/rebotarmcontroller/rebotarmcontroller/leader_policy.py` | Mapping, sample validity, and session policy |
+| `rebotarm_ros2_RS/src/rebotarmcontroller/rebotarmcontroller/hardware_manager.py` | Hardware ownership, MIT following, speed limits, and hold |
+
+Leader model assets live in `reBotArm_simulator-RS/public/models/leader-arm102/`. Model display directions and follower control mapping are maintained separately; do not change hardware direction parameters to fix the preview. Validate mock mode, timeouts, pause/resume, and control release before low-speed, single-axis hardware acceptance.
+
 ### Extend MCP Tools
 
 The MCP Server is located at:
@@ -826,6 +1015,9 @@ node --check reBotArm_simulator-RS/public/js/rebot-sim.js
 node --check reBotArm_simulator-RS/public/js/ros/rebot-ros-client.js
 node --check reBotArm_simulator-RS/public/js/ros/rebot-ros-ui.js
 node --check reBotArm_simulator-RS/public/js/rebot-llm.js
+node --check reBotArm_simulator-RS/public/js/ros/rebot-leader-ui.js
+node --check reBotArm_simulator-RS/public/js/ros/leader-model.js
+node reBotArm_simulator-RS/scripts/ros-namespaces.test.js
 ```
 
 Runtime checks:
@@ -833,9 +1025,9 @@ Runtime checks:
 ```bash
 ./rebotarm status
 ros2 node list
-ros2 topic list | grep rebotarm
-ros2 service list | grep rebotarm
-ros2 action list | grep rebotarm
+ros2 topic list | grep /rebot_arm_rs
+ros2 service list | grep /rebot_arm_rs
+ros2 action list | grep /rebot_arm_rs
 ```
 
 ## FAQ
@@ -871,7 +1063,7 @@ Confirm that rosbridge listens on `0.0.0.0:9090` and that the WebSocket address 
 
 Check in order:
 
-1. The web console is on the RS real robot `/rebotarm`.
+1. The web console is on the RS real robot `/rebot_arm_rs`.
 2. The ROS WebSocket is connected.
 3. The web control lock is enabled.
 4. The arm is enabled.
@@ -923,22 +1115,24 @@ If the arm is not near the zero pose, the controller performs safe homing first 
 Confirm that the full `rs_sim` is running in `physics` mode, then check:
 
 ```bash
-ros2 topic echo /rebotarm_rs/mujoco/overhead_rgb/image_raw --once
-ros2 topic echo /rebotarm_rs/vision/color_blocks/detections --once
-ros2 topic echo /rebotarm_rs/mujoco/object_states --once
+ros2 topic echo /rebot_arm_rs_sim/mujoco/overhead_rgb/image_raw --once
+ros2 topic echo /rebot_arm_rs_sim/vision/color_blocks/detections --once
+ros2 topic echo /rebot_arm_rs_sim/mujoco/object_states --once
 ```
 
 If the button shows that a task is queued, wait for the current serial action to finish and do not start multiple grasping requests repeatedly.
 
-### 9. The LLM assistant fails to connect
+### 9. The AI Assistant Cannot Connect or Reports a Missing Key
 
-Confirm that the Text Agent is started:
+Set `DEEPSEEK_API_KEY` in the third terminal and start the Text Agent, then check:
 
 ```bash
-./scripts/start_rs_text_agent.sh
+ss -ltnp | grep 8082
+curl http://127.0.0.1:8082/health
+ss -ltnp | grep 8081
 ```
 
-Check `REBOTARM_TEXT_AGENT_URL` and `REBOTARM_MCP_URL` in `reBotArm_simulator-RS/.env`. The web console checks the backend through `/api/llm/health`. Do not write API keys into web source code or commit them to the repository.
+`ECONNREFUSED 127.0.0.1:8082` means the web server cannot reach the Text Agent. Check `REBOTARM_TEXT_AGENT_URL` in `reBotArm_simulator-RS/.env`; use the Agent host address for a deployment across machines and restart the web server. If health checks pass but chat fails, inspect the key, old `REBOTARM_LLM_*` overrides, model, and MCP logs. The web `/api/llm/health` check does not replace an actual model call.
 
 ### 10. The page still shows an old version after modifying the front end
 
@@ -951,6 +1145,19 @@ The RS web console includes Service Worker/PWA support. First use `Ctrl+Shift+R`
 - Run `./setup.sh --check` to see the missing items.
 - Confirm that `numpy`, `scipy`, `mujoco`, `pinocchio`, `motorbridge`, and `fastmcp` can be imported in `rebotarm_ros2_RS/.venv`.
 - Back up user files before deleting or resetting them, and do not solve build problems with destructive commands.
+
+### 12. Leader Scanning, Calibration, or Following Fails
+
+| Symptom | Check |
+|---|---|
+| Waiting for ROS leader service | Rebuild `rebotarm_msgs` / `rebotarmcontroller`, restart the controller and rosbridge, check the namespace, and hard-refresh the page |
+| No serial port / probe timed out | USB connection to the ROS host or VM passthrough, power, `dialout` permissions, and other processes occupying the port |
+| Missing servo IDs | All seven IDs `0–6` should respond; check wiring, power, and `1 Mbps` baud rate |
+| uncalibrated / samples stale | Reconnect for preview, unlock and calibrate again; inspect Hz and delay rather than relaxing timeouts |
+| follower is busy | Stop trajectories, hand following, and gravity compensation; restore enabled `IDLE` and gripper position hold |
+| absolute poses differ | Use default relative mode first; absolute mode requires aligned poses |
+| browser heartbeat timed out | Check page closure, network loss, or background throttling; recalibrate and explicitly start again |
+| Leader model fails to load | Check local `public/models/leader-arm102/urdf/leader.urdf` and `meshes/` assets, then hard-refresh |
 
 ## Quick Command Table
 
@@ -965,8 +1172,11 @@ The RS web console includes Service Worker/PWA support. First use `Ctrl+Shift+R`
 ./rebotarm start web
 
 # Natural-language Agent
-export DASHSCOPE_API_KEY='your-key'
+export DEEPSEEK_API_KEY='your-key'
 ./scripts/start_rs_text_agent.sh
+
+# Optional Leader dependencies and interfaces (stop old controller and rosbridge first)
+bash scripts/setup_rs_leader.sh
 
 # RS real robot
 sudo ip link set can0 type can bitrate 1000000
@@ -986,4 +1196,5 @@ REBOTARM_RS_HARDWARE_CONFIRM=I_UNDERSTAND_RS_WILL_MOVE ./rebotarm start rs
 - URDFLoader: https://github.com/gkjohnson/urdf-loaders
 - MuJoCo: https://mujoco.readthedocs.io/
 - Model Context Protocol: https://modelcontextprotocol.io/
-- B601-RS project documentation: `README.md`, `USER_MANUAL_ZH.md`, `DEVELOPER_GUIDE_ZH.md`, `DATA_FLOW_RS_ZH.md`
+- [Current B601-RS project](https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS)
+- B601-RS project documentation: `README.md`, `USER_MANUAL_ZH.md`, `DEVELOPER_GUIDE_ZH.md`, `DATA_FLOW_RS_ZH.md`, `LEADER_TELEOP_TEST_ZH.md`
