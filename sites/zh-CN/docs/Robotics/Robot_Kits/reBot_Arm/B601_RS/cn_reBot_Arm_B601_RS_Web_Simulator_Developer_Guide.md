@@ -278,6 +278,29 @@ MOTORBRIDGE_WS_TOKEN=
 
 </div>
 </section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+
+      #### 步骤 5（可选）：配置并启动默认 DeepSeek Agent
+
+      <p className="rebot-step-label">第 5 步（可选）</p>
+
+如需使用网页自然语言助手，先按下文“项目启动”在终端 1 启动完整仿真（`./rebotarm start rs_sim`），在终端 2 启动网页（`./rebotarm start web`），再在第三个终端配置 API Key 并启动 Agent：
+
+```bash
+cd ~/ReBot_Arm_DigitalTwin_RS
+export DEEPSEEK_API_KEY='替换成你的 Key'
+./scripts/start_rs_text_agent.sh
+```
+
+默认使用 DeepSeek `deepseek-flash`，无需额外指定模型。若已配置过其他模型，请先检查旧的 `REBOTARM_LLM_*` 环境变量，避免覆盖默认设置。API Key 只在服务端配置，不要提交到仓库。
+
+看到 `[text-agent-http] listening on http://0.0.0.0:8082/` 后，在网页点击“连接 AI 助手”，先发送“查询机械臂状态”验证连接。模型切换、健康检查和故障排查见下文“DeepSeek / MCP 文本控制”。
+
+</div>
+</section>
 </div>
 
 ## 项目启动

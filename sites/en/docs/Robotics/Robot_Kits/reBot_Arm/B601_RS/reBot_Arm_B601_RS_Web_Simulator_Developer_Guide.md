@@ -275,6 +275,29 @@ If the web console and ROS 2/Agent are not on the same machine, change the proxy
 
 </div>
 </section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+
+      #### Step 5 (Optional): Configure and start the default DeepSeek Agent
+
+      <p className="rebot-step-label">Step 5 (Optional)</p>
+
+To use the web natural-language assistant, follow “Launching the Project” below to start full simulation in terminal 1 (`./rebotarm start rs_sim`) and the web console in terminal 2 (`./rebotarm start web`). Then configure the API key and start the Agent in a third terminal:
+
+```bash
+cd ~/ReBot_Arm_DigitalTwin_RS
+export DEEPSEEK_API_KEY='your-key'
+./scripts/start_rs_text_agent.sh
+```
+
+The default model is DeepSeek `deepseek-flash`; no model override is needed. If you previously configured another model, check old `REBOTARM_LLM_*` environment variables so they do not override the defaults. Configure the API key only on the server and keep it out of the repository.
+
+After `[text-agent-http] listening on http://0.0.0.0:8082/` appears, click “Connect AI assistant” in the web console and send “Query the arm status” to verify the connection. See “DeepSeek / MCP Text Control” below for model switching, health checks, and troubleshooting.
+
+</div>
+</section>
 </div>
 
 ## Launching the Project
