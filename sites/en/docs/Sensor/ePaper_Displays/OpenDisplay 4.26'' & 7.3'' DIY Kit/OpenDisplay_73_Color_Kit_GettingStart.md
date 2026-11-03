@@ -185,7 +185,7 @@ Encryption ships **off**. In the Toolbox → More options, set Encryption to **L
 
 ### py-opendisplay
 
-For custom Python projects, install with pip install py-opendisplay — [py-opendisplay](httpshttps://github.com/OpenDisplay/py-opendisplay)
+For custom Python projects, install with pip install py-opendisplay — [py-opendisplay](https://github.com/OpenDisplay/py-opendisplay)
 
 ### Battery life
 
