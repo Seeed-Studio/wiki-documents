@@ -2474,3 +2474,55 @@ html[data-theme='dark'] .paper-reading-sidebar {
   --course-nav-hover: #253f30;
   --course-nav-active: #2c4d39;
 }
+
+/* Robotics landing-page title: Montserrat subset, SIL OFL 1.1 (see fonts/OFL-Montserrat.txt). */
+@font-face {
+  font-family: 'RoboticsTitle';
+  src: url(data:font/woff2;base64,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) format('woff2');
+  font-weight: 400;
+  font-display: block;
+}
+
+.robotics-page-title {
+  --rp-title-ink: #101114;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 0.22em;
+  color: transparent;
+  font-family: 'RoboticsTitle', 'Arial Black', sans-serif;
+  font-size: clamp(2.7rem, 6.4vw, 6.9rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  background-image: linear-gradient(
+    90deg,
+    var(--rp-title-ink) 0%,
+    var(--rp-title-ink) 38%,
+    #eb473d 53%,
+    #cb9551 69%,
+    #7668ce 84%,
+    #2563eb 100%
+  );
+  background-position: 0% 50%;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition:
+    background-position 0.48s cubic-bezier(0.4, 0, 0.2, 1),
+    letter-spacing 0.48s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.48s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.48s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.robotics-page-title:hover {
+  background-position: 100% 50%;
+  letter-spacing: -0.052em;
+  filter: drop-shadow(0 12px 24px rgba(37, 99, 235, 0.12));
+  transform: translateY(-0.035em);
+}
+
+html[data-theme='dark'] .robotics-page-title {
+  --rp-title-ink: #faf9f6;
+}
