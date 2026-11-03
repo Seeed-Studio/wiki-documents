@@ -58,7 +58,7 @@ import '/src/css/paper-reading-style.css';
 
 ![π0 论文精读：π0 论文精读（image-00）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-00.png)
 
-## 先验知识
+## 预备知识
 ### 什么是视觉\-语言\-动作模型
 ![π0 论文精读：1.1 什么是视觉-语言-动作模型（image-12）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0/image-12.png)
 
