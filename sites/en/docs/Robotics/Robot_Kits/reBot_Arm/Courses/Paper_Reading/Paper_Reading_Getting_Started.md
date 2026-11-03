@@ -95,6 +95,7 @@ import '/src/css/paper-reading-style.css';
       <h3>Part 1 · Action Chunking &amp; Multi-Task Policies</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/robotics/paper_reading_act/">ACT — Low-Cost Bimanual Manipulation</a></li>
+        <li><a href="/robotics/paper_reading_multi_task_dit/">LBM / MultiTask DiT — Multitask Pretraining</a></li>
       </ul>
       <h3>Part 2 · Lightweight VLA Models &amp; Efficient Deployment</h3>
       <ul className="paper-reading-directory-list">
