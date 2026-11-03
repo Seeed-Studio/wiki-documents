@@ -215,6 +215,11 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_ACT",
               "label": "ACT — Low-Cost Bimanual Manipulation"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_MULTI_TASK_DIT",
+              "label": "LBM / MultiTask DiT — Multitask Pretraining"
             }
           ]
         },

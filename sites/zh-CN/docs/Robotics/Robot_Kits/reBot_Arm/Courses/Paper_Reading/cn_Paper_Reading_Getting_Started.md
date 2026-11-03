@@ -95,6 +95,7 @@ import '/src/css/paper-reading-style.css';
       <h3>第一部分：模仿学习基础策略</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/cn/robotics/paper_reading_act/">ACT 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_multi_task_dit/">LBM / MultiTask DiT 论文精读</a></li>
       </ul>
       <h3>第二部分：轻量级 VLA</h3>
       <ul className="paper-reading-directory-list">

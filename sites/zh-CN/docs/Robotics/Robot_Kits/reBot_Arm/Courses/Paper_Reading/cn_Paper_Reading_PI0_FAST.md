@@ -60,7 +60,7 @@ import '/src/css/paper-reading-style.css';
 
 ![FAST / π0-FAST 论文精读：FAST / π0-FAST 论文精读（image-08）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi0_fast/image-08.png)
 
-## 先验知识
+## 预备知识
 ### 什么是视觉\-语言\-动作模型与动作分词
 **解释：** 视觉\-语言\-动作模型（Vision\-Language\-Action Model，VLA）把“看到的场景”和“听懂的任务”转换成机器人控制指令。以折 T 恤为例，图像说明衣服和夹爪的位置，语言说明要折衣服，本体状态说明手臂当前姿态，模型输出未来一段手臂与夹爪动作。
 

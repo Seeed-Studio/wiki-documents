@@ -176,6 +176,7 @@ const sidebars = {
           collapsible: false,
           items: [
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_ACT', label: 'ACT 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_MULTI_TASK_DIT', label: 'LBM / MultiTask DiT 论文精读' },
           ],
         },
         {
