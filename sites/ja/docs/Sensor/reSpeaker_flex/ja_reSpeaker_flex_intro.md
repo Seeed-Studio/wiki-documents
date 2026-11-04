@@ -1,5 +1,5 @@
 ---
-description: reSpeaker Flex は XMOS XVF3800 を搭載した強力なモジュラー音声システムで、円形および直線型の交換可能な 4 マイクアレイにより、ロボットやスマートデバイスに最適な、高精度な 360° または指向性オーディオキャプチャを実現します。
+description: reSpeaker Flex は XMOS XVF3800 を搭載した強力なモジュラー音声システムで、円形および線形の交換可能な 4 マイクアレイにより、ロボットやスマートデバイスに最適な、高精度な 360° または指向性オーディオキャプチャを実現します。
 title: reSpeaker Flex 入門ガイド
 keywords:
   - reSpeaker flex
@@ -18,8 +18,8 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
-reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジュラー型・分離アーキテクチャの音声処理システムで、ロボットやインテリジェントインタラクション端末向けに特別に設計されています。従来の一体型マイクアレイとは異なり、Flex ではコア処理ボードとマイクアレイボードが分離されており、両者は柔軟な FPC フラットケーブルで接続されます。これにより、マイクアレイを製品筐体内の任意の物理位置に組み込みつつ、処理用エレクトロニクスを別の場所に配置することができます。
-本システムは 2 種類の交換可能なマイクアレイ構成をサポートします。全方位 360° 収音用の**円形 4 マイクアレイ**と、背面抑圧付きの前方指向性収音を行う**直線型 4 マイクアレイ**です。どちらのボードも標準化された 24 ピン FPC インターフェースを介して同じコアボードに接続され、システムは USB（UAC 2.0 プラグアンドプレイ）または I2S モードで動作し、組み込み統合が可能です。オプションとして、コアボード上に XIAO ESP32S3 モジュールをはんだ付けすることで、ワイヤレス接続と拡張制御機能を追加できます。
+reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジュラー型・分離アーキテクチャの音声処理システムで、ロボットやインテリジェントインタラクション端末向けに特別に設計されています。従来の一体型マイクアレイとは異なり、Flex ではコア処理ボードとマイクアレイボードが分離されており、両者は柔軟な FPC フラットケーブルで接続されます。これにより、マイクアレイを製品筐体内の任意の物理位置に組み込む一方で、処理用エレクトロニクスは別の場所に配置することができます。
+本システムは 2 種類の交換可能なマイクアレイ構成をサポートします。全方位 360° 収音用の**円形 4 マイクアレイ**と、背面抑圧付きの前方指向性収音を行う**線形 4 マイクアレイ**です。どちらのボードも標準化された 24 ピン FPC インターフェースを介して同じコアボードに接続され、システムは USB（UAC 2.0 プラグアンドプレイ）または I2S モードで動作し、組み込み統合が可能です。オプションとして XIAO ESP32S3 モジュールをコアボード上にはんだ付けすることで、ワイヤレス接続と拡張制御機能を追加できます。
 
 ### 円形マイクシリーズ
 
@@ -51,7 +51,7 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
   </tr>
 </table>
 
-### 直線型マイクシリーズ
+### 線形マイクシリーズ
 
 <table align="center">
   <tr>
@@ -83,17 +83,17 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 
 ## 特長
 
-- **分離型モジュラー設計**：コアボードとマイクアレイボードが物理的に分離されており、FPC フラットケーブルで接続することで、任意の製品シャーシ内に柔軟に配置可能
+- **分離型モジュラーデザイン**：コアボードとマイクアレイボードが物理的に分離されており、FPC フラットケーブルで接続することで、任意の製品シャーシ内に柔軟に配置可能
 
-- **マイク構成の選択肢**：同一のコアボードを使用し、円形 4 マイクアレイ（360° 収音、44mm 間隔）または直線型 4 マイクアレイ（180° 前方指向性、33mm 間隔）を交換して使用可能
+- **マイク構成の選択肢**：同一のコアボードを使用し、円形 4 マイクアレイ（360° 収音、44mm 間隔）または線形 4 マイクアレイ（180° 前方指向性、33mm 間隔）を交換して使用可能
 
-- **XMOS XVF3800 オーディオ処理**：AEC、AGC、DoA、多チャンネルビームフォーミング、VAD、ノイズ抑圧、残響除去などのフル機能を搭載
+- **XMOS XVF3800 オーディオ処理**：AEC、AGC、DoA、多チャンネルビームフォーミング、VAD、ノイズ抑圧、残響除去などのフル機能 DSP を搭載
 
 - **2 つの動作モード**：PC や SBC とプラグアンドプレイで接続できる USB UAC 2.0、組み込み統合向けの I2S モード
 
-- **デュアル USB 接続**：USB-C ポートと PH2.0 ロック式ポートの両方が、UAC 2.0 オーディオおよび DFU ファームウェアアップグレードに対応
+- **デュアル USB 接続**：USB-C ポートと PH2.0 ロッキングポートの両方が UAC 2.0 オーディオおよび DFU ファームウェアアップグレードに対応
 
-- **XIAO ESP32S3 対応（オプション）**：はんだ付けモジュールにより Wi-Fi/Bluetooth を追加し、I2S および I2C バスが XVF3800 に直接配線されることで、ワイヤレス制御およびオーディオ転送が可能
+- **XIAO ESP32S3 対応（オプション）**：はんだ付けモジュールにより Wi-Fi/Bluetooth を追加し、I2S および I2C バスを XVF3800 に直接配線してワイヤレス制御とオーディオ転送を実現
 
 - **柔軟なファームウェア**：2 チャンネル版と 6 チャンネル版の 2 種類の USB ファームウェア、I2S ファームウェア、dfu-util による DFU アップグレード、電源再投入後も保持される設定
 
@@ -102,7 +102,7 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 - **オンボードスピーカーアンプ**：JST コネクタ経由で 10W 4Ω スピーカーを駆動可能で、3.5mm AUX ヘッドホン出力も搭載
 
 :::note
-3.5mm オーディオジャックとスピーカーの両方を同時に接続した場合、3.5mm オーディオジャックからのみ再生されます。
+3.5mm オーディオジャックとスピーカーの両方を同時に接続した場合、音声は 3.5mm オーディオジャックからのみ再生されます。
 :::
 
 ## 主なコンポーネント
@@ -114,22 +114,22 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 | コンポーネント / 機能 | 説明 |
 |--------------------|------------|
 | **メインオーディオプロセッサ** | XMOS XVF3800（ファームウェア v3.2.1）。AEC、ビームフォーミング、DoA、ノイズ抑圧など、すべてのオーディオ DSP を処理 |
-| **オーディオコーデック** | TLV320AIC3104。オーディオ変換および DAC 出力を処理 |
+| **オーディオコーデック** | TLV320AIC3104。オーディオ変換および DAC 出力を担当 |
 | **アンプ** |TPA3139D2  、Class D アンプ |
-| **FPC マイクアレイインターフェース** | ロックラッチ付き 24 ピン FPC コネクタ。最大 8 マイクアレイと 2 本の GPIO ラインをサポート |
+| **FPC マイクアレイインターフェース** | ロッキングラッチ付き 24 ピン FPC コネクタ。2 本の GPIO ラインを備え、最大 8 マイクアレイに対応 |
 | **USB-C ポート** | UAC 2.0 オーディオ、DFU ファームウェアアップグレード、および電源供給 |
-| **PH2.0 ポート** | ロックラッチ付きコネクタ。USB-C ポートと同じ UAC 2.0 オーディオおよび DFU を提供 |
+| **PH2.0 ポート** | ロッキングラッチ付きコネクタ。USB-C ポートと同じ UAC 2.0 オーディオおよび DFU 機能を提供 |
 | **3.5 mm AUX ジャック** | オンボード DAC から駆動されるサイド出力ヘッドホンジャック |
-| **スピーカー JST コネクタ** | 最大 10W、4Ω のスピーカーを駆動可能な垂直実装コネクタ。スピーカーを直結するためのはんだパッドも用意 |
+| **スピーカー JST コネクタ** | 最大 10W、4Ω のスピーカーを駆動する縦型実装コネクタ。スピーカーを直結するためのはんだパッドも用意 |
 | **外部電源端子** | システム全体に 12V を供給し、10W スピーカー負荷をサポート（P1 優先） |
 | **RST ボタン** | XVF3800 用ハードウェアリセット |
-| **SafeMode（ブート）ボタン** | 電源投入時に押し続けることで、ファームウェアリカバリ用のセーフモードに入る |
+| **SafeMode（ブート）ボタン** | 電源投入時に押し続けると、ファームウェアリカバリ用のセーフモードで起動 |
 | **PWR LED** | 電源オンを示す緑色インジケータ |
 | **デバッグパッド** | XMOS XTAG4 用の予備パッド（工場出荷時は未はんだ付け） |
 | **XMOS 3800 IO ヘッダ** | I2C、I2S、5V/GND、スピーカーピン、および残りの XVF3800 IO を引き出したピンヘッダ／パッド |
-| **取付穴** | 4 × M3 取付穴 |
+| **取付穴** | M3 取付穴 × 4 |
 | **XIAO ESP32S3** | ホストデバイスとして使用する際に XIAO ESP32S3 をはんだ付け可能 |
-| **XIAO ESP32S3 GPIO** | 残りの GPIO は IO および周辺機器拡張に使用可能 |
+| **XIAO ESP32S3 GPIO** | 残りの GPIO は IO や周辺機器拡張に利用可能 |
 
 ### 円形アレイボード
 
@@ -137,20 +137,20 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 
 | コンポーネント / 機能 | 説明 |
 |--------------------|------------|
-| **マイク** | 44 mm 間隔で円形に配置された 4× PDM MEMS マイク |
+| **マイク** | 44mm 間隔で円形に配置された 4× PDM MEMS マイク |
 | **収音パターン** | 360° 全方位オーディオキャプチャ |
 | **インターフェース** | コアボードへの FPC コネクタ |
-| **取付** | エンクロージャや筐体への固定用 3 × M3 取付穴 |
+| **取付** | エンクロージャや筐体への固定用 M3 取付穴 × 3 |
 
-### 直線型アレイボード
+### 線形アレイボード
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_linear.jpg" alt="pir" width={800} height="auto" /></p>
 
 | コンポーネント / 機能 | 説明 |
 |--------------------|------------|
-| **マイク** | 33 mm 間隔で直線状に配置された 4× PDM MEMS マイク |
+| **マイク** | 33mm 間隔で直線状に配置された 4× PDM MEMS マイク |
 | **インターフェース** | FPC コネクタ。ケーブルは側面または背面から配線可能 |
-| **取付** | 2 × M3 取付穴 |
+| **取付** | M3 取付穴 × 2 |
 
 
 
@@ -161,13 +161,13 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/header_pinout.jpg" alt="pir" width={800} height="auto" /></p>
 
-reSpeaker Flex コアボードには、Seeed Studio XIAO ESP32S3 モジュールをはんだ付けするための専用フットプリントが用意されており、XVF3800 のオーディオ処理パイプラインに Wi-Fi および Bluetooth 接続機能を追加できます。XIAO を含む SKU（-C4-1 および -L4-1）では、このモジュールがあらかじめ実装されて出荷されます。ベース SKU（-C4-0 および -L4-0）では、このフットプリントは未実装のままです。
-XIAO が実装されている場合、XIAO と XVF3800 の間には次の接続が行われます。
+reSpeaker Flex コアボードには、Seeed Studio XIAO ESP32S3 モジュールをはんだ付けするための専用フットプリントが用意されており、XVF3800 のオーディオ処理パイプラインに Wi-Fi および Bluetooth 接続機能を追加できます。XIAO を含む SKU（-C4-1 および -L4-1）では、このモジュールがあらかじめ実装されています。ベース SKU（-C4-0 および -L4-0）では、このフットプリントは未実装のままです。
+XIAO を実装した場合、XIAO と XVF3800 の間には次の接続が行われます。
 
-- **I2S バス** — 再生および録音用のデュアルバスで、BCLK、MCLK、LRCLK を共有し、双方向のオーディオストリーミングを実現
+- **I2S バス** — 再生および録音用のデュアルバスで、双方向のオーディオストリーミングのために BCLK、MCLK、LRCLK を共有
 - **I2C バス** — XIAO から XVF3800 の設定パラメータを読み書きするために使用
 - **RST ライン** — XIAO は専用 IO ピンを介して XVF3800 にハードウェアリセットをかけることが可能
-- **残りの XIAO IO** — ユーザー拡張用にラベル付きピンヘッダ／パッドとして引き出し
+- **残りの XIAO IO** — ユーザー拡張用にラベル付きピンヘッダ／パッドへ引き出し
 
 ### ピンヘッダ
 
@@ -177,14 +177,14 @@ XIAO が実装されている場合、XIAO と XVF3800 の間には次の接続�
 
 ### 24 FPC ケーブル
 
-FPC マイクアレイインターフェースは、ロックラッチ付きの 24 ピン、0.5mm ピッチコネクタで、同梱されている 20cm の FPC フラットケーブルはこのコネクタにキーイングされています。
+FPC マイクアレイインターフェースは、ロッキングラッチ付きの 24 ピン・0.5mm ピッチコネクタで、同梱の 20cm FPC フラットケーブルはこのコネクタにキーイングされています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/24_fpc_cable.png" alt="pir" width={600} height="auto" /></p>
 
 | Pin | Signal Name | Type | Function Description | Notes |
 |-----|------------|------|----------------------|-------|
-| 1 | MIC_VDD | Power | マイク電源 | 3.3V 電源 |
-| 2 | MIC_VDD | Power | マイク電源 | 電源安定性向上のためのデュアルピン |
+| 1 | MIC_VDD | Power | マイク用電源 | 3.3V 電源 |
+| 2 | MIC_VDD | Power | マイク用電源 | 電源安定性向上のためのデュアルピン |
 | 3 | GND | GND | 電源リターン GND | 電源 GND |
 | 4 | MIC_CLK | Out | グローバルクロック信号 | コア信号、2–4 MHz |
 | 5 | GND | GND | クロックシールド用 GND | クロック専用 GND |
@@ -206,14 +206,14 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
 | 21 | GND | GND | D8 アイソレーション GND | |
 | 22 | GPIO_1 | I/O | 汎用入出力 | 拡張機能 |
 | 23 | GPIO_2 | I/O | 汎用入出力 | 拡張機能 |
-| 24 | GND | GND | GPIO シールド用 GND | GPIO ノイズ吸収 |
+| 24 | GND | GND | GPIO シールド用 GND | GPIO ノイズを吸収 |
 
 ## 入門ガイド
 
 ### ハードウェアの準備
 
-- USB Type-c ケーブル
-- ホストコンピュータまたは Raspberry Pi
+- USB Type-C ケーブル
+- ホストコンピュータ または Raspberry Pi
 
 ### ソフトウェアの準備
 
@@ -232,7 +232,7 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/speaker-connection .jpg" alt="pir" width={600} height="auto" /></p>
 
-ここでは、オーディオ出力の好みに応じて、3.5mm AUX ヘッドホンジャックまたはオンボード JST スピーカーインターフェースのいずれかを使用してスピーカーを接続する方法を示します。
+ここでは、オーディオ出力の好みに応じて、3.5mm AUX ヘッドホンジャックまたはオンボード JST スピーカーインターフェースのいずれかを使用してスピーカーを接続する方法を示しています。
 
 #### FPC 接続
 
@@ -242,11 +242,21 @@ FPC ケーブルを接続する前に、接点側と補強板側を確認して�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/fpc-cable-connection.png" alt="pir" width={600} height="auto" /></p>
 
-MIC Connector のロックタブを開き、正しい向きで FPC ケーブルを挿入し、タブを閉じて接続を固定します。
+FPC ケーブルを接続するには、まず電源を切断します。MIC Connector のロックタブをそっと持ち上げ、ケーブルを正しい向きで挿入し、タブを閉じる前に確実に奥まで差し込まれていることを確認してください。
+
+FPC ケーブルを取り外すには、まず電源を切断します。MIC Connector のロックタブをそっと持ち上げます。タブが完全に開いたら、過度な力を加えずにケーブルをまっすぐ慎重に引き抜いてください。
+
+:::note
+
+FPC ケーブルやコネクタの損傷を防ぐため、次の注意事項を守ってください：
+- **過度な曲げを避ける**：特にコネクタ付近で、FPC ケーブルを鋭く曲げたり、繰り返し折り曲げたり、強く引っ張ったりしないでください。
+- **ロックタブは丁寧に扱う**：ケーブルを挿入または取り外しする前に、必ずロックタブを開いてください。タブが閉じたままケーブルを無理に出し入れしないでください。
+
+:::
 
 #### セーフモード
 
-**Safe Mode** は **reSpeaker Flex** 上の特別なリカバリモードで、**USB DFU** または **ESP32** のようなデバイス向けに I2C を介してファームウェアを書き込むことができます。
+**Safe Mode** は **reSpeaker Flex** 上の特別なリカバリモードで、**USB DFU** または **ESP32** などのデバイス向けに I2C を介してファームウェアを書き込むことができます。
 
 以前に **I2S ファームウェア** を書き込んでいて、**USB ファームウェア** に戻したい場合は、**Safe Mode** に入って **USB DFU** を使用して USB ファームウェアを書き直すことができます。
 
@@ -258,7 +268,7 @@ MIC Connector のロックタブを開き、正しい向きで FPC ケーブル�
   - I2C DFU はサポートしません。
 - I2S ファームウェア
   - I2C DFU をサポートします。
-  - I2C インターフェースを介したファームウェア更新が可能です。
+  - I2C インターフェース経由でファームウェア更新が可能です。
   - USB DFU はサポートしません。
 - Safe Mode ファームウェア
   - Factory パーティションに保存されています。
@@ -270,19 +280,19 @@ MIC Connector のロックタブを開き、正しい向きで FPC ケーブル�
 **次のような場合に Safe Mode を使用します**
 
 - ファームウェアが**正しく動作していない**（例：**USB が認識されない**）場合。
-- 現在のファームウェアが**応答しない**ため、**新しいファームウェアを書き込み直す**必要がある場合。
+- **新しいファームウェアを書き込みたい**が、現在のファームウェアが**応答しない**場合。
 - **誤ったファームウェアを書き込んでしまい**、デバイスを復旧したい場合。
 
  **Safe Mode に入る方法**
 
 - デバイスの電源を**完全にオフ**にします。
-- **Boot ボタンを押し続けます**。
+- **Boot ボタンを押し続けます。**
 - **Boot ボタンを押したまま、電源を再接続します。**
 DFU util コマンドラインツールを使用して DFU パーティションを確認します。詳細については、以下の **Install DFU Util** セクションを参照してください。
 
 ### ファームウェアの更新
 
-公式 GitHub リポジトリには 3 つのファームウェアバージョンが用意されています。用途に応じて適切なファームウェアを選択して書き込むことができます。詳細およびダウンロードについては、Github の [Link](https://github.com/respeaker/reSpeaker_Flex) を参照してください。
+公式 GitHub リポジトリには 3 種類のファームウェアが用意されています。用途に応じて適切なファームウェアを選択して書き込むことができます。詳細およびダウンロードについては、Github の [Link](https://github.com/respeaker/reSpeaker_Flex) を参照してください。
 
 :::note
 リポジトリ全体をダウンロードする必要があることに注意してください。
@@ -294,8 +304,8 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="USB" label="USB">
 
-USB ファームウェアは、USB ハードウェアインターフェースを介して通信する際に、**Windows、Linux、macOS** などのホスト OS で使用することを目的としています。
-これらのファームウェアファイルはこのリンクから確認できます
+USB ファームウェアは、USB ハードウェアインターフェースを介して通信する際に、**Windows、Linux、macOS** などのホスト OS で使用することを想定しています。
+これらのファームウェアファイルはこのリンクから確認できます。
 
 | Firmware                         | Channels | Notes                                                   |
 |----------------------------------|----------|---------------------------------------------------------|
@@ -347,7 +357,7 @@ dfu-util -V
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/image.png" alt="pir" width={600} height="auto"/></p>
 
-- reSpeaker Flex を接続し、デバイス検出を確認します：
+- reSpeaker Flex を接続し、デバイスが検出されるか確認します：
 
 ```bash
 dfu-util -l
@@ -364,13 +374,13 @@ dfu-util -l
   - `reSpeaker XVF3800 Flex` を選択します。  
   - **WinUSB** ドライバをインストールします。  
   - デバイスの電源を入れ直します。  
-  - `dfu-util -l` を再度実行して検出を確認します。
+  - `dfu-util -l` を再度実行し、検出を確認します。
 
 </TabItem>
 
  <TabItem value="macos" label="macOS">
 
-- Homebrew を使用して dfu-util をインストールします：
+- Homebrew を使って dfu-util をインストールします：
 
 ```bash
 brew install dfu-util
@@ -382,7 +392,7 @@ brew install dfu-util
 dfu-util -l
 ```
 
-**期待される出力：**
+**想定される出力：**
 
 ```
 dfu-util -l
@@ -408,13 +418,13 @@ Found DFU: [2886:001a] ver=0202, devnum=3, cfg=1, intf=4, path="2-1.1.4", alt=0,
 sudo apt install dfu-util
 ```
 
-- XVF3800 を接続し、検出を確認します：
+- XVF3800 を接続し、認識を確認します：
 
 ```bash
 sudo dfu-util -l
 ```
 
-**期待される出力：**
+**期待される出力:**
 
 ```bash
 pi@raspberrypi:~ $ sudo dfu-util -l
@@ -435,7 +445,7 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 
 ### ファームウェアを書き込む
 
-GitHub から完全なファームウェアリポジトリをここからダウンロードしてください reSpeaker Flex XVF 3800
+GitHub から完全なファームウェアリポジトリをダウンロードしてください：reSpeaker Flex XVF 3800
 
 - 次のコマンドを実行してファームウェアを書き込みます
 
@@ -515,7 +525,7 @@ arecord -l
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/arecord.png" alt="pir" width={600} height="auto"/></p>
 
- この場合、**カード番号は 3 です**
+ この場合、**カード番号は 3** です
 
 ---
 
@@ -561,8 +571,8 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 3. **オーディオ入力と出力を設定します**
 
-- ツールバーの "Audio Setup" をクリックします。
-- ドロップダウンメニューから "Audio Settings" を選択します。
+- ツールバーの「Audio Setup」をクリックします。
+- ドロップダウンメニューから「Audio Settings」を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/raspberry-audiopy-1.PNG" alt="pir" width={600} height="auto"/></p>
 
@@ -574,7 +584,7 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/raspberry-audiopy.PNG" alt="pir" width={600} height="auto"/></p>
 
-4. **音声を録音および再生します**
+4. **音声の録音と再生**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/raspberry-audiopy-3.PNG" alt="pir" width={600} height="auto"/></p>
 
@@ -583,9 +593,9 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 ## パラメータをどのようにチューニングしますか？
 
-チューニングにより、ユーザーは内蔵オーディオアルゴリズムのパラメータを設定し、XMOS チップと直接通信することができます。
+チューニングにより、内蔵オーディオアルゴリズムのパラメータを設定し、XMOS チップと直接通信することができます。
 
-パラメータ設定とデバイスとの対話のために、専用の Python 制御インターフェースが提供されています。
+パラメータ設定とデバイスとのやり取りのために、専用の Python 制御インターフェースが提供されています。
 
 
 [**Python Control Directory**](https://github.com/respeaker/reSpeaker_Flex/tree/main/python_control)
@@ -673,7 +683,7 @@ python xvf_host.py DOA_VALUE
 
 ## トラブルシューティング
 
-### スピーカー出力からの再生音量が十分でない場合は？
+### スピーカー出力からの再生音が十分に大きくありませんか？
 
 Linux で **reSpeaker Flex** のスピーカー出力音量が小さすぎる場合、XVF3800 サウンドカードの **ALSA ミキサーレベル** を調整する必要があるかもしれません。出力音量を上げるには、以下の手順に従ってください。
 
@@ -718,34 +728,34 @@ sudo apt install pavucontrol -y
 
 その後、**pavucontrol** を開き、必要に応じて出力音量を 100% を超えて上げることができます。
 
-### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できない場合は？
+### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できませんか？
 
-スタートメニューを開き、「Device manager」と入力します。関連する reSpeaker Flex デバイスを見つけて右クリックし、Uninstall devices を選択します。その後、デバイスを再起動します（USB を抜き差しします）。すると Windows が正しいサウンドカードドライバを再インストールします。
+スタートメニューを開き、「Device manager」と入力します。関連する reSpeaker Flex デバイスを見つけて右クリックし、Uninstall devices を選択します。その後、デバイスを再起動します（USB を抜き差しします）。すると Windows が正しいサウンドカードドライバーを再インストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
-### reSpeaker Flex を PC と USB 接続している間、12V で給電できますか？
+### reSpeaker Flex は、PC と USB 接続した状態で 12V から給電できますか？
 
-はい。reSpeaker Flex は 12V DC 電源入力と PC への USB-C 接続を同時にサポートします。12V 入力はデバイスに電力を供給し、USB-C は USB オーディオ（UAC）と制御インターフェースを提供します。
+はい。reSpeaker Flex は、12V DC 電源入力と PC への USB-C 接続を同時にサポートします。12V 入力はデバイスに電力を供給し、USB-C は USB オーディオ（UAC）と制御インターフェースを提供します。
 
-この構成は、12V 入力端子に 12V/2A 電源を接続し、PC に USB-C ケーブルを接続してテストしました。reSpeaker Flex に接続された Mono Enclosed Speaker（4Ω, 5W）を通して音楽を正常に再生できました。
+この構成について、12V 入力端子に 12V/2A 電源を接続し、PC に USB-C ケーブルを接続してテストしました。reSpeaker Flex に接続した Mono Enclosed Speaker（4Ω, 5W）を通して音楽を正常に再生できました。
 
-### 端子から 12V を供給し、USB をデータ専用（UAC + 制御）のみに使用する場合でも、USB が列挙されるには VBUS（5V）が必要ですか？
+### 端子から12Vを供給し、USBはデータ専用（UAC + 制御）で使用する場合でも、USBの列挙にはVBUS（5V）が必要ですか？
 
- いいえ。reSpeaker Flex が 12V 入力端子から給電されている場合、列挙には USB VBUS（5V）は必要ありません。デバイスに 12V で給電しながら、UAC オーディオと制御のために USB を PC に接続できます。
+ いいえ。reSpeaker Flex が12V入力端子から給電されている場合、USBの列挙にはUSB VBUS（5V）は不要です。デバイスには12Vで電源を供給しつつ、USBをPCに接続してUACオーディオおよび制御に使用できます。
 
 ## リソース
 
-- [reSpeaker Flex XVF3800 Circular 2D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_2d.dxf)
-- [reSpeaker Flex XVF3800 Linear 2D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear_2d.dxf)
-- [reSpeaker Flex XVF3800 Core Board 2D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate_2d.dxf)
-- [reSpeaker Flex XVF3800 Circular 3D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
-- [reSpeaker Flex XVF3800 Linear 3D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
-- [reSpeaker Flex XVF3800 Core Board 3D File](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
+- [reSpeaker Flex XVF3800 円形 2D ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_2d.dxf)
+- [reSpeaker Flex XVF3800 直線型 2D ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear_2d.dxf)
+- [reSpeaker Flex XVF3800 コアボード 2D ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate_2d.dxf)
+- [reSpeaker Flex XVF3800 円形 3D ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
+- [reSpeaker Flex XVF3800 直線型 3D ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
+- [reSpeaker Flex XVF3800 コアボード 3D ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
 
 
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 

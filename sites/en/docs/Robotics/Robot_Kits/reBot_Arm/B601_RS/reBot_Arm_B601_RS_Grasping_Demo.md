@@ -12,12 +12,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif
 slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
-  date: 2026-09-10
+  date: 2026-11-04
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-09-30'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -226,7 +226,16 @@ cd rebot_grasp
   <span className="rebot-step-number">2</span>
 <div className="rebot-step-content">
 
-#### Step 2. Create and configure the conda environment
+#### Step 2. Create the environment and choose PyTorch for your hardware
+
+Complete these three phases in order: create the base environment, install PyTorch for your hardware, and install the project dependencies.
+
+<div className="rebot-step-flow rebot-step-flow--substeps">
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2.1</span>
+<div className="rebot-step-content">
+
+##### Create the base environment
 
 ```bash
 conda env create -f environment.yml -n rebotarm
@@ -234,30 +243,106 @@ conda activate rebotarm
 ```
 
 :::note Expected result
-The terminal prompt shows `rebotarm`, indicating that this environment is active and subsequent dependencies will be installed into it.
+The terminal prompt shows `rebotarm`, indicating that the environment is active. PyTorch is not installed yet; continue with the next two phases.
 :::
 
-If you want to use a different environment name, replace `rebotarm` in the command with your own name.
+To use a different environment name, replace `rebotarm` in both commands above. For an existing environment, activate it and run `conda env update -n rebotarm -f environment.yml` to update the base dependencies. This command does not remove existing pip packages.
 
-:::warning Verify PyTorch immediately
-`environment.yml` installs PyTorch automatically through the `ultralytics` / `torchaudio` dependencies. If the installation is interrupted by a network issue, PyTorch may be **silently missing**, and the error only appears when you run `main.py`. Verify it right after creating the environment:
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2.2</span>
+<div className="rebot-step-content">
+
+##### Install PyTorch for your hardware
+
+Both tabs use the same compatible package versions; only the download index differs. The current version file specifies PyTorch 2.9.1, torchvision 0.24.1, and torchaudio 2.9.1 for the Python 3.10, Ubuntu x86_64 environment used in this tutorial.
+
+<Tabs groupId="rebot-pytorch-backend" defaultValue="cpu">
+<TabItem value="cpu" label="CPU (no NVIDIA GPU)">
+
+Use this option for computers with Intel / AMD integrated graphics, or to verify the basic workflow on CPU first.
 
 ```bash
-python -c "import torch; print(torch.__version__, torch.__file__)"
+python -m pip install -r requirements-pytorch.txt --index-url https://download.pytorch.org/whl/cpu
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA available:', torch.cuda.is_available())"
 ```
 
-- The path should show `.../miniforge3/envs/rebotarm/...` (inside the conda environment). If it raises `ModuleNotFoundError`, or the path points to `~/.local/...` (user directory), the installation is incomplete or misplaced — run:
+:::note Expected result
+The PyTorch path points inside the active Conda environment. `CUDA available: False` is expected.
+:::
 
-```bash
-pip install --force-reinstall torch torchvision
+Keep the following setting in `config/default.yaml`:
+
+```yaml
+yolo:
+  device: "cpu"
 ```
 
-- With an NVIDIA GPU, also confirm CUDA is available:
+:::tip Supported workflow
+The basic YOLO / OBB workflow can run on CPU. Inference speed depends on the model and your computer. This project's GraspNet CUDA operators require an NVIDIA GPU, so skip the GraspNet advanced module below.
+:::
+
+</TabItem>
+<TabItem value="nvidia" label="NVIDIA GPU (CUDA)">
+
+Confirm that the driver recognizes your GPU before installing CUDA-enabled PyTorch. The example below uses the CUDA 12.8 build, which requires support from both your GPU architecture and driver:
 
 ```bash
-python -c "import torch; print(torch.cuda.is_available())"
+nvidia-smi
+python -m pip install -r requirements-pytorch.txt --index-url https://download.pytorch.org/whl/cu128
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA build:', torch.version.cuda); print('CUDA available:', torch.cuda.is_available())"
+```
+
+:::note Expected result
+`nvidia-smi` lists your GPU, the PyTorch path points inside the active Conda environment, and `CUDA available: True` is printed. After verifying this, select GPU 0 in `config/default.yaml`:
+
+```yaml
+yolo:
+  device: "0"
 ```
 :::
+
+:::tip Choose a CUDA build
+Use the [official PyTorch version list](https://pytorch.org/get-started/previous-versions/) to choose a build that supports your GPU, driver, and Python version. Do not choose solely by GPU series or the CUDA number displayed by `nvidia-smi`.
+
+If you need a different PyTorch version, update all three compatible versions in `requirements-pytorch.txt` and the download index together. Standard YOLO inference uses prebuilt wheels and does not require a separate CUDA Toolkit installation. A matching CUDA compiler is needed when building the GraspNet extensions.
+:::
+
+If CUDA is unavailable, check your driver, GPU architecture, and selected wheel, or follow the CPU tab to verify the basic workflow.
+
+</TabItem>
+</Tabs>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2.3</span>
+<div className="rebot-step-content">
+
+##### Install and verify the project dependencies
+
+After completing either hardware option, run the following from the project root:
+
+```bash
+python -m pip install -r requirements.txt -c requirements-pytorch.txt
+python -m pip check
+python -c "import torch, torchvision, torchaudio, cv2; from ultralytics import YOLO; from calibration.aruco_pose import ArUcoDetector; ArUcoDetector(); print('Vision dependencies OK:', cv2.__version__)"
+```
+
+:::note Expected result
+`pip check` prints `No broken requirements found.`, and the verification command prints `Vision dependencies OK` without import errors. Complete these checks before installing the robotic arm and camera SDKs.
+:::
+
+:::tip Installation failures
+`-c requirements-pytorch.txt` constrains the compatible PyTorch package versions. Keep this argument and do not add `--upgrade`. If pip fails, review the final error and retry the corresponding phase. Activating a Conda environment does not mean that all dependencies were installed successfully.
+
+Install only the standard OpenCV package specified in `requirements.txt`. The project's ArUco APIs are available in version 4.7; do not install additional OpenCV wheels alongside it. CLIP is installed from the Ultralytics Git repository, so Git must be available on your system. Loading YOLOE for the first time may also download model weights.
+:::
+
+</div>
+</section>
+</div>
 
 </div>
 </section>
@@ -274,9 +359,9 @@ pip install -e .
 cd ../..
 ```
 
-If `pip install -e .` reports `Multiple top-level packages discovered in a flat-layout`, add explicit package discovery to `pyproject.toml` in `reBotArm_control_py`, then run `pip install -e .` again:
+If running pip install -e . gives 'Multiple top-level packages discovered in a flat-layout', please add an explicit package discovery configuration in reBotArm_control_py's pyproject.toml, and then run pip install -e . again:
 
-```toml
+```bash
 [tool.setuptools.packages.find]
 include = ["reBotArm_control_py*"]
 ```
@@ -299,7 +384,8 @@ The visual grasping programs read this SDK configuration and automatically selec
 
 This project supports RGB-D depth cameras such as Orbbec Gemini 2 and RealSense D435i / D405. Install the SDK that matches your camera; if your environment can already import the camera driver, you can skip this step.
 
-**Orbbec Gemini 2**
+<Tabs groupId="rebot-depth-camera" defaultValue="orbbec">
+<TabItem value="orbbec" label="Orbbec Gemini 2">
 
 The Orbbec Gemini 2 depth camera depends on `pyorbbecsdk`, the Python wrapper for Orbbec SDK v2. Prefer installing the prebuilt Python package first.
 
@@ -390,7 +476,8 @@ If both installation methods fail, refer to the official Orbbec documentation be
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
 ```
 
-**RealSense D435i / D405**
+</TabItem>
+<TabItem value="realsense" label="RealSense D435i / D405">
 
 RealSense cameras depend on `pyrealsense2`. Usually you can install it directly with pip:
 
@@ -398,6 +485,8 @@ RealSense cameras depend on `pyrealsense2`. Usually you can install it directly 
 pip install pyrealsense2
 python -c "import pyrealsense2; print('pyrealsense2 OK')"
 ```
+
+If your system needs the full RealSense toolchain or udev rules, follow the [official librealsense documentation](https://github.com/realsenseai/librealsense).
 
 :::warning Use a USB 3.x port
 The D405 / D435i must be plugged into a USB 3.0/3.2 port (usually blue). If plugged into a USB 2.0 port, the typical symptom is: **the system recognizes the device and `pipeline.start()` succeeds, but frames never arrive** (`Frame didn't arrive within ...`). Check the negotiated speed with:
@@ -407,7 +496,8 @@ lsusb -t   # the camera line should show 5000M; 480M means it fell back to a USB
 ```
 :::
 
-If your system needs the full RealSense toolchain or udev rules, follow the [official librealsense documentation](https://github.com/realsenseai/librealsense).
+</TabItem>
+</Tabs>
 
 :::note Expected result
 The matching verification command prints `pyorbbecsdk OK` or `pyrealsense2 OK` without a `ModuleNotFoundError`.
@@ -462,7 +552,9 @@ rebot_grasp/
 ├── sdk/
 │   ├── pyorbbecsdk/              # Orbbec SDK Python wrapper (source installation)
 │   └── reBotArm_control_py/      # reBot Arm SDK
-└── environment.yml               # Recommended conda environment file
+├── requirements-pytorch.txt      # Compatible versions installed from the CPU / CUDA index
+├── requirements.txt              # Project dependencies installed after PyTorch
+└── environment.yml               # Base Conda environment
 ```
 
 ### 7. Hand-Eye Calibration
@@ -671,7 +763,14 @@ The default Python SDK / OBB route does not require GraspNet. Follow these steps
 
 You do not need GraspNet for `scripts/main.py` or `scripts/ordinary_grasp_pipeline.py`. Configure it only when you want to run `scripts/graspnet_camera_demo.py` or `scripts/grasp.py`, which require GraspNet, CUDA-enabled PyTorch, the PointNet2/knn CUDA operators, and a pretrained checkpoint.
 
-When configuring this environment for the first time, the `torchaudio` entry in `environment.yml` usually installs PyTorch along with it. If it is missing (or only the CPU build was installed), follow the steps below to explicitly install and verify a CUDA-enabled PyTorch. The GraspNet `pointnet2` / `knn` extensions depend on PyTorch and a CUDA compiler with a matching version — finish all steps before building.
+The GraspNet `pointnet2` / `knn` extensions require a CUDA compiler. Before starting, confirm that `nvcc` is available in the current environment and compare its CUDA version with the version used to build PyTorch:
+
+```bash
+nvcc --version
+python -c "import torch; print(torch.__version__, torch.version.cuda)"
+```
+
+PyTorch is installed separately in Step 2 of the basic installation. GraspNet requires an NVIDIA GPU and working CUDA support; skip this section if you followed the CPU option. Complete the checks below before configuring the compiler.
 
 **Step 1: Confirm your GPU**
 
@@ -679,30 +778,15 @@ When configuring this environment for the first time, the `torchaudio` entry in 
 nvidia-smi
 ```
 
-Continue only if an NVIDIA GPU is listed. Without an NVIDIA GPU you can only use the CPU build of PyTorch, and the GraspNet CUDA operators cannot be built or run.
+The driver must recognize your NVIDIA GPU. Installing the CUDA Toolkit alone does not enable Intel / AMD integrated graphics to run this project's CUDA operators.
 
-**Step 2: Check / install PyTorch**
-
-First check whether PyTorch already exists in the current environment:
+**Step 2: Confirm PyTorch CUDA support**
 
 ```bash
 python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
 ```
 
-- If it is installed and `torch.cuda.is_available()` prints `True`, skip the installation and go to Step 3.
-- If it raises `ModuleNotFoundError` (not installed), or `torch.version.cuda` is `None` (CPU build installed), install the CUDA build as shown below. Take CUDA 13.0 as an example:
-
-```bash
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
-```
-
-Pick the CUDA version in `--index-url` based on your GPU:
-
-| GPU | Recommended PyTorch CUDA build |
-| --- | --- |
-| RTX 50 series (Blackwell, e.g. RTX 5070 / 5090) | `cu128` or newer (e.g. `cu130`) |
-| RTX 40 / 30 series (Ada / Ampere) | `cu121` or `cu118` |
-| No NVIDIA GPU | `cpu` (CPU only, GraspNet will not run) |
+If `torch.cuda.is_available()` prints `True`, continue to the next step. If PyTorch is missing, `torch.version.cuda` is `None`, or CUDA is unavailable, return to Step 2 of the basic installation and complete the NVIDIA installation and verification. When switching between CPU and CUDA builds, remove the old build before reinstalling.
 
 **Step 3: Install the CUDA compiler matching your PyTorch**
 
@@ -713,10 +797,10 @@ nvcc --version
 python -c "import torch; print(torch.version.cuda)"
 ```
 
-Take `torch.version.cuda` showing `13.0` as an example, and install the matching compiler inside the conda environment:
+Take `torch.version.cuda` showing `12.8` as an example, and install the matching compiler inside the conda environment:
 
 ```bash
-conda install -c nvidia cuda-nvcc=13.0 cuda-cudart-dev=13.0
+conda install -c nvidia cuda-nvcc=12.8 cuda-cudart-dev=12.8
 
 which nvcc       # should point to $CONDA_PREFIX/bin/nvcc, not /usr/bin/nvcc
 nvcc --version   # should match torch.version.cuda
@@ -749,7 +833,7 @@ pip install open3d tensorboard Pillow tqdm
 # Note: use the conda cuda-toolkit targets directory for headers/libraries;
 # do not mix in the pip nvidia/cu13 directory (a version mismatch with conda nvcc causes build errors).
 export CUDA_HOME=$CONDA_PREFIX
-export TORCH_CUDA_ARCH_LIST="12.0"
+export TORCH_CUDA_ARCH_LIST="$(python -c 'import torch; major, minor = torch.cuda.get_device_capability(); print(f"{major}.{minor}")')"
 export CPATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPATH
 export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPLUS_INCLUDE_PATH
 export LIBRARY_PATH=$CONDA_PREFIX/targets/x86_64-linux/lib:$CONDA_PREFIX/lib:$LIBRARY_PATH
@@ -849,12 +933,14 @@ Running `python scripts/grasp.py` starts the full GraspNet robotic grasping flow
 
 <h4>1. <code>ModuleNotFoundError: No module named 'motorbridge'</code></h4>
 
-This usually means the robotic arm SDK dependencies are not installed in the current Python environment. Please check:
+This means the robotic arm SDK dependencies are not installed in the current Python environment. `conda env update` updates only the base environment; install the project dependencies separately. Run the following from the project root:
 
 ```bash
 conda activate rebotarm
 conda env update -n rebotarm -f environment.yml
-cd sdk/reBotArm_control_py && pip install -e .
+# Complete the PyTorch installation in basic installation Step 2 first.
+python -m pip install -r requirements.txt -c requirements-pytorch.txt
+cd sdk/reBotArm_control_py && python -m pip install -e .
 ```
 
 <h4>2. Pressing <code>G</code> does not execute grasping</h4>
